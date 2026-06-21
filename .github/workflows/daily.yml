@@ -1,0 +1,40 @@
+name: 每日更新Linux新闻
+
+on:
+  schedule:
+    # 每天北京时间 08:00 运行（UTC 00:00）
+    - cron: '0 0 * * *'
+  # 允许手动触发（方便第一次测试）
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write   # 允许推送文件
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安装依赖
+        run: pip install feedparser openai
+
+      - name: 运行抓取+翻译脚本
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: python scripts/fetch_and_translate.py
+
+      - name: 提交并推送生成的网站
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/ scripts/cache.json
+          git diff --cached --quiet || git commit -m "🤖 自动更新: $(date -u '+%Y-%m-%d')"
+          git push
