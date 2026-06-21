@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Linux新闻抓取+翻译脚本
-每天自动从RSS源读取Linux新闻，抓取原文正文，用DeepSeek API翻译成中文，生成静态网站。
+每天自动从RSS源读取Linux新闻，抓取原文正文，用DeepSeek API翻译成中文，生成静态网站
 """
 
 import os
@@ -221,7 +221,7 @@ def categorize(article):
 # ── 共用 CSS（首页 + 详情页复用）────────────────────────────────────────────
 
 COMMON_CSS = """
-  :root {
+  :root {{
     --bg:        #0f1117;
     --surface:   #1a1d27;
     --border:    #2a2d3a;
@@ -230,48 +230,48 @@ COMMON_CSS = """
     --accent:    #38bdf8;
     --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
     --font-body: 'Inter', system-ui, sans-serif;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
     background: var(--bg); color: var(--text);
     font-family: var(--font-body); font-size: 15px; line-height: 1.7;
-  }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
+  }}
+  a {{ color: var(--accent); text-decoration: none; }}
+  a:hover {{ text-decoration: underline; }}
 
   /* Header */
-  header {
+  header {{
     border-bottom: 1px solid var(--border);
     padding: 20px 0;
     background: linear-gradient(180deg, #0d1520 0%, var(--bg) 100%);
-  }
-  .header-inner {
+  }}
+  .header-inner {{
     max-width: 1100px; margin: 0 auto; padding: 0 24px;
     display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
-  }
-  .logo {
+  }}
+  .logo {{
     font-family: var(--font-mono); font-size: 20px; font-weight: 700;
     color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
-  }
-  .logo:hover { text-decoration: none; }
-  .logo span { color: var(--muted); font-weight: 400; }
-  .tagline { color: var(--muted); font-size: 13px; flex: 1; }
-  .update-time {
+  }}
+  .logo:hover {{ text-decoration: none; }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
     font-family: var(--font-mono); font-size: 12px; color: var(--muted);
     background: var(--surface); border: 1px solid var(--border);
     padding: 4px 10px; border-radius: 4px;
-  }
+  }}
 
   /* Footer */
-  footer {
+  footer {{
     border-top: 1px solid var(--border); padding: 24px;
     text-align: center; font-size: 12px; color: var(--muted);
-  }
-  footer a { color: var(--muted); }
+  }}
+  footer a {{ color: var(--muted); }}
 
-  @media (max-width: 600px) {
-    .header-inner { flex-direction: column; gap: 8px; }
-  }
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
 """
 
 # ── 详情页生成 ────────────────────────────────────────────────────────────────
@@ -302,24 +302,24 @@ def build_article_page(art, today):
 {COMMON_CSS}
 
   /* Article page */
-  .article-wrap {
+  .article-wrap {{
     max-width: 780px; margin: 0 auto; padding: 40px 24px 80px;
-  }
-  .back-link {
+  }}
+  .back-link {{
     display: inline-flex; align-items: center; gap: 6px;
     font-family: var(--font-mono); font-size: 13px; color: var(--muted);
     margin-bottom: 32px;
-  }
-  .back-link:hover { color: var(--accent); text-decoration: none; }
+  }}
+  .back-link:hover {{ color: var(--accent); text-decoration: none; }}
 
-  .article-meta {
+  .article-meta {{
     display: flex; align-items: center; gap: 10px;
     font-size: 12px; margin-bottom: 16px;
-  }
-  .tag {
+  }}
+  .tag {{
     padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 11px;
     background: {color}20; color: {color};
-  }
+  }}
   .source {{ color: var(--muted); }}
 
   h1 {{
