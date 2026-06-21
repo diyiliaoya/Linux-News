@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KDE Plasma 6.7 发布：带来每显示器独立桌面，复活 Oxygen 主题 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0f1117;
+    --surface:   #1a1d27;
+    --border:    #2a2d3a;
+    --text:      #e2e8f0;
+    --muted:     #8892a4;
+    --accent:    #38bdf8;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+  }}
+  a {{ color: var(--accent); text-decoration: none; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    background: linear-gradient(180deg, #0d1520 0%, var(--bg) 100%);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 20px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+  }}
+  .logo:hover {{ text-decoration: none; }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 4px 10px; border-radius: 4px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+  }}
+  footer a {{ color: var(--muted); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 40px 24px 80px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 32px;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 16px;
+  }
+  .tag {
+    padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 11px;
+    background: #3b82f620; color: #3b82f6;
+  }
+  .source { color: var(--muted); }
+
+  h1 {
+    font-size: 26px; font-weight: 700; line-height: 1.35;
+    color: var(--text); margin-bottom: 20px;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0; padding: 14px 18px;
+    font-size: 14px; color: var(--muted); line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .article-body {
+    font-size: 15px; line-height: 1.9; color: #c8d8e8;
+  }
+  .article-body p {
+    margin-bottom: 18px;
+  }
+
+  .article-footer {
+    margin-top: 40px; padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-block;
+    background: var(--accent); color: #0f1117;
+    font-weight: 600; font-size: 13px;
+    padding: 8px 18px; border-radius: 5px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: opacity .15s;
+  }
+  .btn-original:hover { opacity: .85; text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年06月21日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>KDE Plasma 6.7 发布：带来每显示器独立桌面，复活 Oxygen 主题</h1>
+
+  <div class="article-summary">KDE Plasma 6.7 正式发布，实现了用户期盼已久的每显示器独立虚拟桌面功能。此外，经典 Oxygen 主题回归，支持同时使用 ICC 色彩配置文件与 HDR，并针对 Intel GPU 进行了性能优化。系统托盘新增麦克风测试按钮，可显示后台运行的 Flatpak 应用。该版本还引入了统一的 Union 主题（实验性），并纪念已故的长期支持者 Eric Laffoon。</div>
+
+  <div class="article-body"><p>KDE Plasma 6.7 发布：带来每显示器独立桌面，复活 Oxygen 主题 - OMG! Ubuntu</p><p>KDE Plasma 6.7 已正式发布，带来了许多用户期盼数十年的功能：每屏幕独立的虚拟桌面。</p><p>此次稳定更新还复活了一个经典的 KDE 主题，支持同时使用 HDR 和 ICC 配置文件，并包含一系列可用性、界面和性能优化。</p><p>该版本献给 Eric Laffoon，一位长期支持 KDE 的贡献者，他于 2026 年 5 月去世。</p><p>基于 Ubuntu 的 KDE Neon 和滚动发行版（如 Arch）的用户将在未来几天内安装 Plasma 6.7。Kubuntu 26.04 LTS 用户应在未来几周内查看 Kubuntu Backports PPA，因为新版本通常会在那里提供。</p><p>KDE Plasma 6.7 有哪些新功能？</p><p>每屏幕独立虚拟桌面</p><p>最长期的功能请求终于在 Plasma 6.7 中实现——尽管花了将近 20 年时间！</p><p>此前，切换虚拟桌面会将所有连接的显示器同时移动到同一个工作区。在 Plasma 6.7 中，每个连接的显示器可以显示独立的虚拟桌面。在一个显示器上切换工作区不会影响其他显示器。</p><p>Intel GPU 性能提升</p><p>Plasma 的窗口合成器 KWin 现在默认对集成 Intel GPU（使用 Intel i915 和 Xe 驱动程序）启用硬件覆盖平面。这将帮助兼容的应用和游戏降低功耗并提升性能。</p><p>对于全屏窗口，直接扫描输出现在仅在确实能节省功耗时应用，而非无条件使用。此外，在高分辨率显示器上运行 CPU 渲染应用时，合成器的 CPU 使用率降低了高达 70%。</p><p>从系统托盘测试麦克风</p><p>包含开关和测试按钮</p><p>Plasma 6.7 在系统托盘的音频控制中添加了麦克风音量测试按钮，让你可以调整灵敏度并录制一段音频进行回放——方便在加入通话前确认声音正常，而不是在会议中途才发现问题……</p><p>在系统托盘中查看后台应用</p><p>在 GNOME 上，你可以通过打开菜单来了解 Flatpak 应用是否在后台运行（经授权）。而在 Plasma 上，此前并不容易判断——直到现在。</p><p>Plasma 6.7 现在使用系统托盘来显示那些通过“后台应用”门户在主窗口未打开或不可见时运行（例如音乐播放器）的 Flatpak 应用。应用的图标会出现在系统托盘中，点击即可恢复应用。</p><p>同时使用 ICC 配置文件与 HDR</p><p>Plasma 6.7 不再强迫你在 ICC 色彩配置文件支持与 HDR 内容之间做出选择。两者现在可以协同工作。</p><p>AMD 笔记本电脑用户还获得了一个新选项，可以控制屏幕颜色在极低亮度下是否偏红——这是某些面板的硬件行为。</p><p>经典 KDE 主题回归</p><p>一股（抱歉）清新的空气？</p><p>如果你曾在 KDE 4.x 时代使用过它，并喜爱那种光泽的蓝色美学，那么深吸一口气，挥拳庆祝吧——因为 Oxygen，即 KDE 4 的默认主题，已经复活并更新以适配 Plasma 6。</p><p>Oxygen 的浅色变体 Air 也一同回归，同时还有经典的 KDE 4 Air 和 Horos 壁纸。两者的全局主题包含浅色、深色和黄昏变体，并附带大量修复和调整，如自适应透明度以及对不同面板位置的支持。</p><p>随着今年晚些时候 KDE 30 周年纪念的到来，看到对过去主题的怀旧之情得以展现，真是太好了。</p><p>统一主题即将到来</p><p>Plasma 6.7 包含了统一主题的首次公开发布，该主题未来将使 Plasma、QtQuick 和 QtWidgets 应用能够使用统一的 CSS 进行重新样式化，而非像现在这样各自为政。</p><p>目前该主题仅覆盖 QtQuick 样式，且默认未启用。</p><p>要尝试它，请安装相应的包（名称可能因发行版而异），然后在“系统设置 &gt; 颜色与主题 &gt; 应用程序样式”中设置为“Union”。你需要重启应用以使主题生效，其外观将与 Breeze 相似——</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/06/kde-plasma-6-7-released" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

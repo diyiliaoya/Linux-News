@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Firefox 152 发布：全新设置的界面与奇特的标签页静音方式 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0f1117;
+    --surface:   #1a1d27;
+    --border:    #2a2d3a;
+    --text:      #e2e8f0;
+    --muted:     #8892a4;
+    --accent:    #38bdf8;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+  }}
+  a {{ color: var(--accent); text-decoration: none; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    background: linear-gradient(180deg, #0d1520 0%, var(--bg) 100%);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 20px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+  }}
+  .logo:hover {{ text-decoration: none; }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 4px 10px; border-radius: 4px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+  }}
+  footer a {{ color: var(--muted); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 40px 24px 80px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 32px;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 16px;
+  }
+  .tag {
+    padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 11px;
+    background: #3b82f620; color: #3b82f6;
+  }
+  .source { color: var(--muted); }
+
+  h1 {
+    font-size: 26px; font-weight: 700; line-height: 1.35;
+    color: var(--text); margin-bottom: 20px;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0; padding: 14px 18px;
+    font-size: 14px; color: var(--muted); line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .article-body {
+    font-size: 15px; line-height: 1.9; color: #c8d8e8;
+  }
+  .article-body p {
+    margin-bottom: 18px;
+  }
+
+  .article-footer {
+    margin-top: 40px; padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-block;
+    background: var(--accent); color: #0f1117;
+    font-weight: 600; font-size: 13px;
+    padding: 8px 18px; border-radius: 5px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: opacity .15s;
+  }
+  .btn-original:hover { opacity: .85; text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年06月21日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Firefox 152 发布：全新设置的界面与奇特的标签页静音方式</h1>
+
+  <div class="article-summary">Mozilla 发布了 Firefox 152，带来了重新设计的设置页面，提供更清晰的分类和导航，并移除了“常规”页面。新版本还引入了一种奇特的方式：在地址栏输入“mute”、“shush”或“sssh”即可静音所有播放音频的标签页。此外，分享链接更便捷，支持从标签页右键菜单复制链接，并新增“发送标签页”工具栏按钮。Linux 和 Windows 用户还可从标签页上下文菜单复制链接。更新还包含多项安全修复和开发者功能。</div>
+
+  <div class="article-body"><p>Firefox 152 发布：全新设置的界面与奇特的标签页静音方式 - OMG! Ubuntu</p><p>Mozilla 发布了 Firefox 152，带来了重新设计且更快捷的网页内容分享方式——此外，还有一种奇特的方式来静音嘈杂的标签页。</p><p>该更新自今日（2026 年 6 月 15 日）起在 Windows、macOS 和 Linux 上可用，同时也适用于 Android 和 iOS（移动版本具有不同功能，本文不涉及）。</p><p>Firefox 152 的主要变化是重新设计的设置页面。我们早就知道这一变化，因为 Mozilla 已经预告了一年多。该公司表示，新外观提供了“简化的组织、更清晰的分组以及改进的导航，便于自定义”。</p><p>由于许多用户觉得在浏览器设置中翻找令人望而生畏且困惑（尤其是随着更多自定义选项的添加），这是一次受欢迎的刷新。好的设计既关乎清晰和逻辑，也关乎美观。</p><p>但请提前警告你的肌肉记忆，因为“常规”页面已被移除，其选项已移至相关区域，如隐私与安全、搜索等。如果你找不到某个设置，可以使用搜索栏来定位。</p><p>Firefox 152 中的设置页面在视觉上与即将推出的 Firefox Nova 重新设计相关联，后者也采用了大量圆角、带有细边框的卡片、渐变和空白区域。</p><p>Firefox 152 还有什么新功能？</p><p>分享链接稍微更容易了</p><p>Firefox 152 现在可以更轻松地在隐私浏览窗口中选择性禁用跟踪器拦截。如果网页的某个元素或部分因跟踪器被拦截而显示异常或无法加载（例如新闻故事中的 Instagram 嵌入内容），这一功能非常有用。</p><p>Linux 和 Windows 用户现在可以从标签页上下文菜单中复制链接（右键点击标签页，鼠标移至“复制链接”），而无需先聚焦该标签页。当选中多个标签页时，此功能也有效，因此你可以一次性复制所有选中的链接。</p><p>Firefox 还引入了一个“发送标签页”工具栏按钮，尽管默认未启用。要添加它，请前往“更多工具 &gt; 自定义工具栏”，然后从按钮面板中将其拖到工具栏上。</p><p>想知道 Firefox 152 中那种“奇特”的标签页静音新方式是什么吗？浏览器允许你在地址栏中输入——是的，输入——“mute”、“shush”或“sssh”，然后会显示一个按钮，点击即可静音所有打开的 Firefox 窗口中正在播放音频的标签页。</p><p>我通常不会让一堆音频同时播放，而且伸手去按键盘上的静音或暂停媒体键总体上会更快。有选择总是好的——尤其是那些能让你扮演图书管理员角色的选择……</p><p>（顺便提一下），Firefox 152 为克罗地亚语、英语（英国）、格鲁吉亚语、波斯语、斯洛文尼亚语、塔吉克语、塔米尔语、藏语、土耳其语、威尔士语和科萨语的下载版本内置了拼写检查词典。</p><p>Firefox 152 中的其他变化</p><p>在某些网站（如 WordPress）上编辑文本时，新增了“粘贴为纯文本”选项</p><p>从 Firefox 拖到桌面的图片现在能可靠保存</p><p>在多显示器设置中，Firefox 会在 Firefox 所在的显示器上打开新窗口</p><p>使用键盘或鼠标以更小的增量进行缩放</p><p>如果源标签页已关闭，PDF 下载会在后台标签页中打开</p><p>从右到左文本的箭头键选择现在按正确方向移动</p><p>WebAuthn 相关来源请求以在多个域上使用通行密钥</p><p>此外，还有一系列常见的网页兼容性和开发者相关改进。它增加了对 Web 通知的操作按钮支持，支持了 CSS 属性 overscroll-behavior，并为 Pointer Lock API 添加了 unadjustedMovement 选项，以便网站可以获取“原始鼠标移动数据”。</p><p>另外，还有一批新的安全修复，以保护我们的集体网页浏览安全。</p><p>本次更新没有新增 AI 功能，但 Firefox 新的智能浏览模式仍在开发中。你可以通过翻转相关的 about:config 值（搜索“Smart Window”找到它）来作为测试版功能进行测试。</p><p>如何更新到新版本的 Firefox？</p><p>你可以从官方网站下载适用于 Windows、macOS 和 Linux 的 Firefox 152，提供 Intel/AMD 和 ARM64 设备的构建版本。</p><p>如果你已经在使用 Firefox，请以与上次更新相同的方式更新到最新版本——在大多数情况下是自动更新。</p><p>在 Windows 和 macOS 上，你也可以通过“帮助 &gt; 关于 Firefox”手动检查更新。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/06/firefox-152-released" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>发行版发布：EasyOS 7.4 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0f1117;
+    --surface:   #1a1d27;
+    --border:    #2a2d3a;
+    --text:      #e2e8f0;
+    --muted:     #8892a4;
+    --accent:    #38bdf8;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+  }}
+  a {{ color: var(--accent); text-decoration: none; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    background: linear-gradient(180deg, #0d1520 0%, var(--bg) 100%);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 20px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+  }}
+  .logo:hover {{ text-decoration: none; }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 4px 10px; border-radius: 4px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+  }}
+  footer a {{ color: var(--muted); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 40px 24px 80px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 32px;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 16px;
+  }
+  .tag {
+    padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 11px;
+    background: #3b82f620; color: #3b82f6;
+  }
+  .source { color: var(--muted); }
+
+  h1 {
+    font-size: 26px; font-weight: 700; line-height: 1.35;
+    color: var(--text); margin-bottom: 20px;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0; padding: 14px 18px;
+    font-size: 14px; color: var(--muted); line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .article-body {
+    font-size: 15px; line-height: 1.9; color: #c8d8e8;
+  }
+  .article-body p {
+    margin-bottom: 18px;
+  }
+
+  .article-footer {
+    margin-top: 40px; padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-block;
+    background: var(--accent); color: #0f1117;
+    font-weight: 600; font-size: 13px;
+    padding: 8px 18px; border-radius: 5px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: opacity .15s;
+  }
+  .btn-original:hover { opacity: .85; text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年06月21日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">DistroWatch</span>
+  </div>
+
+  <h1>发行版发布：EasyOS 7.4</h1>
+
+  <div class="article-summary">Barry Kauler 宣布推出 EasyOS 7.4，这是一个里程碑版本，专注于完善经典软件选项、提供 X11 支持、修复 ROX-Filer 文件管理器并改进视频播放。新版本用 SMPlayer 和 VIDplay 替换了问题较多的 Celluloid 媒体播放器，用 YRadio 替换了 StreamTuner2 网络电台播放器，并新增了 Symphytum 数据库应用。此外，还修复和改进了 EasyCast 屏幕录像、DropboxGUI 文件管理器、光驱处理及 pBurn 刻录工具等多个实用程序。</div>
+
+  <div class="article-body"><p>发行版发布：EasyOS 7.4（DistroWatch.com 新闻）</p><p>Barry Kauler 已宣布推出 EasyOS 7.4。新版本专注于完善经典软件选项，提供 X11 支持，修复 ROX-Filer 文件管理器，并通过将 Celluloid 替换为 SMPlayer 来改进视频播放。</p><p>“7.4 版本是一个‘里程碑’版本，巩固了 EasyOS 对‘传统’软件架构的支持，包括 Xlibre X.Org 服务器和 GTK2-ng。我们承诺持续支持、更新和增强基于 GTK2 的应用程序，包括 ROX-Filer——该文件管理器已进行了许多修复和改进，例如内存泄漏修复、前进/后退历史按钮以及视频缩略图。我们继续完善和优化内置的软件包集合，一如既往地包含‘厨房水槽’。例如，我们将问题较多的 Celluloid 媒体播放器替换为 SMPlayer 和 VIDplay（一款基于 Chromium 的视频播放器）。其他改进包括将 StreamTuner2 网络电台播放器替换为 YRadio。内置‘厨房水槽’意味着我们希望内置的应用程序能满足 99% 用户的需求。一个细分领域是简单的数据库应用程序；这一空白现在由 Symphytum 填补。大量实用程序已得到修复和改进，包括 EasyCast 屏幕录像、DropboxGUI（dropbox.com 文件管理器）、改进的光驱处理以及 pBurn CD/DVD 刻录工具的修复。此处不再一一列举。”</p><p>更多信息可在发布公告中找到。</p><p>近期相关新闻与版本发布：</p><p>- 发行版发布：EasyOS 7.4</p><p>- 发行版发布：EasyOS 7.1</p><p>- 发行版发布：EasyOS 7.0</p><p>- 发行版发布：EasyOS 6.5</p><p>- 发行版发布：EasyOS 6.0</p><p>- 发行版发布：EasyOS 5.7</p><p>EasyOS 是一款实验性 Linux 发行版，采用了 Puppy Linux 首创的许多技术和软件包格式。该发行版具有名为 Easy Containers 的自定义容器技术，可以在容器中运行应用程序或整个桌面环境。软件包、桌面设置、网络和共享功能均集成其中。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://distrowatch.com/12874" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

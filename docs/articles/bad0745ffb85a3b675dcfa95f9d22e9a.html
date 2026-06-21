@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mesa 26.2 为 X11/XWayland 合并 Vulkan 呈现时序支持 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0f1117;
+    --surface:   #1a1d27;
+    --border:    #2a2d3a;
+    --text:      #e2e8f0;
+    --muted:     #8892a4;
+    --accent:    #38bdf8;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+  }}
+  a {{ color: var(--accent); text-decoration: none; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    background: linear-gradient(180deg, #0d1520 0%, var(--bg) 100%);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 20px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+  }}
+  .logo:hover {{ text-decoration: none; }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 4px 10px; border-radius: 4px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+  }}
+  footer a {{ color: var(--muted); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 40px 24px 80px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 32px;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 16px;
+  }
+  .tag {
+    padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 11px;
+    background: #8b5cf620; color: #8b5cf6;
+  }
+  .source { color: var(--muted); }
+
+  h1 {
+    font-size: 26px; font-weight: 700; line-height: 1.35;
+    color: var(--text); margin-bottom: 20px;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0; padding: 14px 18px;
+    font-size: 14px; color: var(--muted); line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .article-body {
+    font-size: 15px; line-height: 1.9; color: #c8d8e8;
+  }
+  .article-body p {
+    margin-bottom: 18px;
+  }
+
+  .article-footer {
+    margin-top: 40px; padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-block;
+    background: var(--accent); color: #0f1117;
+    font-weight: 600; font-size: 13px;
+    padding: 8px 18px; border-radius: 5px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: opacity .15s;
+  }
+  .btn-original:hover { opacity: .85; text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年06月21日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">桌面环境</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Mesa 26.2 为 X11/XWayland 合并 Vulkan 呈现时序支持</h1>
+
+  <div class="article-summary">Mesa 26.2 的 Vulkan 窗口系统集成代码现已支持 X11 和 XWayland 下的 VK_EXT_present_timing 扩展。该扩展有助于减少游戏卡顿、降低输入延迟并优化帧率控制。此前 Wayland 已支持此功能，但 X11/XWayland 一直缺失。经过 Valve 工程师数月开发与代码审查，该支持已合并，将随 Mesa 26.2 于八月发布，惠及 Steam Play 及 Linux 游戏用户。</div>
+
+  <div class="article-body"><p>Mesa 26.2 为 X11/XWayland 合并 Vulkan 呈现时序支持 - Phoronix</p><p>Mesa 26.2 为 X11/XWayland 合并 Vulkan 呈现时序支持</p><p>发布于 2026 年 6 月 21 日上午 08:49（美国东部时间）。</p><p>Mesa 的 Vulkan 窗口系统集成（WSI）代码现已支持 X11 和 XWayland 下的“VK_EXT_present_timing”呈现时序扩展。</p><p>Vulkan 呈现时序支持有助于避免游戏卡顿，通过更好地调度渲染帧在显示器上的出现时机，并借助该扩展接收先前呈现时间的反馈，从而优化帧率控制。简而言之，Vulkan 呈现时序对于减少卡顿、降低输入延迟/控制以及帧率节奏至关重要。自去年起，Mesa 在 Wayland 下的呈现时序支持已经完成，但一直未在 X11/XWayland 上实现。</p><p>几个月前，Valve 的 Linux 团队工程师 Hans-Kristian Arntzen 开始为 Vulkan WSI 代码的 X11 后端及基础 XWayland 支持开发呈现时序功能。经过四个月的代码审查，这一基础 X11/XWayland 呈现时序支持现已合并。该支持将出现在 Mesa 26.2 版本中（预计八月发布），对于在 X11/XWayland 上使用 Steam Play 或进行 Linux 游戏的用户来说，这是一项利好。</p><p>开源 NVIDIA NVK Vulkan 驱动现已支持 DLSS</p><p>Mesa 26.2 为直接显示模式引入 VK_GOOGLE_display_timing 支持</p><p>面向 Panfrost/PanVK 驱动的新“KRAID”编译器已合并至 Mesa</p><p>KRAID 正被开发为现代 Arm Mali 图形的新编译器</p><p>Mesa 26.0.8 发布，为该系列画上句号</p><p>Arm Mali G1 Pro 现已支持开源 PanVK 和 Panfrost 驱动</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>Arch Linux 现认为恶意软件事件已受控：受影响软件包超过 1500 个</p><p>Arch Linux AUR 遭遇新一轮更复杂的恶意软件攻击</p><p>Linux 历经六年工作、360+ 补丁后终于移除 strncpy API</p><p>俄语垃圾信息与脏话正困扰 Arch Linux AUR</p><p>AMD 开启面向 Linux 友好的 Ryzen AI Halo 开发者平台预购</p><p>Linux 7.1 发布：新 NTFS 驱动、Panther Lake 的 Intel FRED、更快的 Arc 显卡</p><p>systemd 261 发布，带来新的 systemd-sysinstall 操作系统安装器、IMDSD 和 Storagectl</p><p>Linux 7.2 优化：移动两行代码后 EXT4 和 XFS 的 IOPS 提升 5%</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Mesa-26.2-X11-Present-Timing" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

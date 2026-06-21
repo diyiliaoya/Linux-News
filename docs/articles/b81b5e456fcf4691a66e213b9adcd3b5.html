@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BSD 发布：FreeBSD 15.1 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0f1117;
+    --surface:   #1a1d27;
+    --border:    #2a2d3a;
+    --text:      #e2e8f0;
+    --muted:     #8892a4;
+    --accent:    #38bdf8;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+  }}
+  a {{ color: var(--accent); text-decoration: none; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    background: linear-gradient(180deg, #0d1520 0%, var(--bg) 100%);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 20px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+  }}
+  .logo:hover {{ text-decoration: none; }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 4px 10px; border-radius: 4px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+  }}
+  footer a {{ color: var(--muted); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 40px 24px 80px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 32px;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 16px;
+  }
+  .tag {
+    padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 11px;
+    background: #3b82f620; color: #3b82f6;
+  }
+  .source { color: var(--muted); }
+
+  h1 {
+    font-size: 26px; font-weight: 700; line-height: 1.35;
+    color: var(--text); margin-bottom: 20px;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0; padding: 14px 18px;
+    font-size: 14px; color: var(--muted); line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .article-body {
+    font-size: 15px; line-height: 1.9; color: #c8d8e8;
+  }
+  .article-body p {
+    margin-bottom: 18px;
+  }
+
+  .article-footer {
+    margin-top: 40px; padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-block;
+    background: var(--accent); color: #0f1117;
+    font-weight: 600; font-size: 13px;
+    padding: 8px 18px; border-radius: 5px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: opacity .15s;
+  }
+  .btn-original:hover { opacity: .85; text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年06月21日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">DistroWatch</span>
+  </div>
+
+  <h1>BSD 发布：FreeBSD 15.1</h1>
+
+  <div class="article-summary">FreeBSD 15.1 正式发布，这是 stable/15 分支的第二个版本。主要亮点包括：基于 Linux 7.0 的无线网络驱动更新、云镜像支持首次启动时自动更新基础系统包、新增内核调度器启动时选择功能、C23 语言标准支持取得重大进展、Unicode 更新至 17.0.0 并新增 4803 个字符。此版本特别纪念长期合作者 Peter G. Neumann。</div>
+
+  <div class="article-body"><p>Colin Percival 宣布发布 FreeBSD 15.1，这是 FreeBSD 最新稳定分支的第二个版本：</p><p>FreeBSD 发布工程团队很高兴地宣布 FreeBSD 15.1-RELEASE 现已可用。这是 stable/15 分支的第二个版本。主要亮点包括：iwlwifi(4) 及其他基于 LinuxKPI 的无线网络驱动现已基于 Linux 7.0；使用打包基础系统的 FreeBSD 云镜像现在包含 pkg(8)，并支持首次启动时自动更新基础系统包；新增 kern.sched.name 可调参数，允许在启动时选择内核调度器；对 C 语言 C23 版本的完整支持取得了重大进展；Unicode 支持已更新至 Unicode 17.0.0 和 CLDR 48，新增 4803 个字符。FreeBSD 项目将 FreeBSD 15.1-RELEASE 献给 Peter G. Neumann 的纪念，他是 FreeBSD 开发者在基于能力的安全方面的长期合作者……</p><p>更多信息请参阅。</p><p>FreeBSD-15.1-RELEASE-amd64-disc1.iso</p><p>FreeBSD-15.1-RELEASE-amd64-memstick.img</p><p>FreeBSD-15.1-RELEASE-arm64-aarch64-disc1.iso</p><p>FreeBSD-15.1-RELEASE-arm64-aarch64-memstick.img</p><p>近期相关新闻与发布：</p><p>BSD 发布：FreeBSD 15.1</p><p>BSD 发布：FreeBSD 14.4</p><p>BSD 发布：FreeBSD 15.0</p><p>开发版发布：FreeBSD 15.0-RC1</p><p>开发版发布：FreeBSD 15.0-BETA1</p><p>BSD 发布：FreeBSD 14.3</p><p>FreeBSD 是一个类 UNIX 操作系统，支持 i386、amd64、IA-64、arm、MIPS、powerpc、ppc64、PC-98 和 UltraSPARC 平台，基于加州大学伯克利分校的“4.4BSD-Lite”版本，并包含一些“4.4BSD-Lite2”增强功能。它还间接基于 William Jolitz 将加州大学伯克利分校的“Net/2”移植到 i386 的成果，即“386BSD”，尽管现在仅剩极少量 386BSD 代码。FreeBSD 被全球的企业、互联网服务提供商、研究人员、计算机专业人士、学生和家庭用户用于工作、教育和娱乐。FreeBSD 附带超过 20000 个软件包（预编译软件）。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://distrowatch.com/12875" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>谷歌Gemini部分查明现代华硕笔记本Linux启动时间过长的问题 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0f1117;
+    --surface:   #1a1d27;
+    --border:    #2a2d3a;
+    --text:      #e2e8f0;
+    --muted:     #8892a4;
+    --accent:    #38bdf8;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+  }}
+  a {{ color: var(--accent); text-decoration: none; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    background: linear-gradient(180deg, #0d1520 0%, var(--bg) 100%);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 20px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+  }}
+  .logo:hover {{ text-decoration: none; }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 4px 10px; border-radius: 4px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+  }}
+  footer a {{ color: var(--muted); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 40px 24px 80px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 32px;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 16px;
+  }
+  .tag {
+    padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 11px;
+    background: #6b728020; color: #6b7280;
+  }
+  .source { color: var(--muted); }
+
+  h1 {
+    font-size: 26px; font-weight: 700; line-height: 1.35;
+    color: var(--text); margin-bottom: 20px;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0; padding: 14px 18px;
+    font-size: 14px; color: var(--muted); line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .article-body {
+    font-size: 15px; line-height: 1.9; color: #c8d8e8;
+  }
+  .article-body p {
+    margin-bottom: 18px;
+  }
+
+  .article-footer {
+    margin-top: 40px; padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-block;
+    background: var(--accent); color: #0f1117;
+    font-weight: 600; font-size: 13px;
+    padding: 8px 18px; border-radius: 5px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: opacity .15s;
+  }
+  .btn-original:hover { opacity: .85; text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年06月21日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>谷歌Gemini部分查明现代华硕笔记本Linux启动时间过长的问题</h1>
+
+  <div class="article-summary">谷歌Gemini 3.5 Flash模型帮助一位Linux用户诊断其华硕ROG Strix G16 G614笔记本启动时间长达36秒的问题。问题根源在于华硕固件在启动时使触摸板的GPIO线保持断言状态，导致内核启动阻塞。Gemini协助提出了一个DMI怪癖补丁来绕过该固件行为，大幅缩短启动时间。尽管AI对根本原因的判断略有偏差（实际可能与图形相关），但补丁有望合入主线内核。</div>
+
+  <div class="article-body"><p>谷歌的Gemini部分查明现代华硕笔记本Linux启动时间过长的问题 - Phoronix</p><p>谷歌的Gemini部分查明现代华硕笔记本Linux启动时间过长的问题</p><p>发布于2026年6月21日美国东部时间上午6:43。</p><p>谷歌Antigravity与Gemini 3.5 Flash模型帮助一位Linux用户解决了其笔记本内核启动耗时约36秒的问题——对于配备AMD Ryzen 9处理器和32GB内存的高端笔记本而言，这显然不正常。最终这又是设备固件问题的一个案例，但目前一个Linux内核补丁正在等待合入，以解决华硕ROG Strix G16 G614笔记本上的该问题，同时关于让供应商提供适当固件修复的讨论仍在进行中。</p><p>这款现代华硕ROG Strix G16 G614笔记本遇到了严重的启动延迟。30秒以上的启动时间对于任何现代Intel或AMD笔记本来说都不应该出现。根据AI辅助的内核邮件列表帖子，启动缓慢归因于华硕固件在启动时使触摸板的其中一个GPIO线保持断言状态，这导致了严重的启动时间问题。遇到此问题的Marco Scardovi解释了他的笔记本情况：</p><p>“在这些笔记本上，固件在启动时使触摸板的ActiveBoth GPIO线保持断言状态（逻辑低电平）。根据启动时的初始状态逻辑，一个被断言为低电平的ActiveBoth中断会被重放一次以同步其初始状态，这会在探测路径中同步调用处理程序。在这些笔记本上，该中断处理程序运行缓慢或挂起，因此同步调用会阻塞约36秒，导致启动停滞。”</p><p>现在借助Gemini 3.5 Flash，有一个DMI怪癖补丁正在等待合入，以绕过华硕ROG Strix G16 G614笔记本上这种古怪的固件行为，从而避免漫长的启动时间。应用该补丁后，Linux内核启动时间大幅下降，达到了AMD Ryzen 9笔记本应有的水平。</p><p>在邮件列表的代码审查中，看起来AI对根本原因的判断略有偏差。根据ACPI转储，问题似乎与图形触发GPIO问题有关，而非触摸板相关。无论如何，关于让华硕/AMD提供适当固件修复的讨论仍在进行中，同时这个内核补丁仍有可能被合入主线，供那些没有更新BIOS的用户使用。</p><p>Apple M3在三年后启动Linux，以及Linux 7.2中的其他SoC更新</p><p>ARCTIC风扇控制器，更多华硕和华擎主板在Linux 7.2中获得传感器监控</p><p>Linux 7.2 EDAC驱动为Diamond Rapids、Nova Lake H做准备</p><p>实验性、逆向工程及AI辅助的Rust驱动面向现代DisplayLink硬件</p><p>Linux 7.2电源管理新增硬件支持，同时移除AMD Elan</p><p>Linux 7.2移除对40多年历史的Hercules单色ISA显卡驱动</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动等主题。他还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Arch Linux现在认为恶意软件事件已得到控制：超过1500个受影响软件包</p><p>Arch Linux AUR遭遇又一波更复杂的恶意软件攻击</p><p>Linux经过六年工作和360多个补丁，终于淘汰了strncpy API</p><p>俄罗斯垃圾信息和脏话现在困扰着Arch Linux AUR</p><p>AMD开放对Linux友好的Ryzen AI Halo开发者平台的预购</p><p>Linux 7.1发布：新NTFS驱动、Panther Lake的Intel FRED、更快的Arc图形</p><p>systemd 261发布，带有新的systemd-sysinstall OS安装程序、IMDSD和Storagectl</p><p>Linux 7.2优化显示，移动两行代码后EXT4和XFS的IOPS提升5%</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由</p><p>所有使用的商标均为其各自所有者的财产</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Gemini-ASUS-Laptop-Boot-Time" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

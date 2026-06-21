@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guncrypt 是 Halfbrick Studio 的首款 PC 游戏，也支持 Linux — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0f1117;
+    --surface:   #1a1d27;
+    --border:    #2a2d3a;
+    --text:      #e2e8f0;
+    --muted:     #8892a4;
+    --accent:    #38bdf8;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+  }}
+  a {{ color: var(--accent); text-decoration: none; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    background: linear-gradient(180deg, #0d1520 0%, var(--bg) 100%);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 20px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+  }}
+  .logo:hover {{ text-decoration: none; }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 4px 10px; border-radius: 4px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+  }}
+  footer a {{ color: var(--muted); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 40px 24px 80px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 32px;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 16px;
+  }
+  .tag {
+    padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 11px;
+    background: #6b728020; color: #6b7280;
+  }
+  .source { color: var(--muted); }
+
+  h1 {
+    font-size: 26px; font-weight: 700; line-height: 1.35;
+    color: var(--text); margin-bottom: 20px;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0; padding: 14px 18px;
+    font-size: 14px; color: var(--muted); line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .article-body {
+    font-size: 15px; line-height: 1.9; color: #c8d8e8;
+  }
+  .article-body p {
+    margin-bottom: 18px;
+  }
+
+  .article-footer {
+    margin-top: 40px; padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-block;
+    background: var(--accent); color: #0f1117;
+    font-weight: 600; font-size: 13px;
+    padding: 8px 18px; border-radius: 5px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: opacity .15s;
+  }
+  .btn-original:hover { opacity: .85; text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年06月21日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Guncrypt 是 Halfbrick Studio 的首款 PC 游戏，也支持 Linux</h1>
+
+  <div class="article-summary">Halfbrick Studio 以《Jetpack Joyride》《Fruit Ninja》等手游闻名，其首款 PC 游戏《Guncrypt》是一款基于子弹排序机制的 rogue-like 地牢爬行者。游戏包含三种枪械、60 多种子弹和 80 多种遗物，支持组合与重排弹匣。塔罗牌和诅咒等级系统增加了策略深度。作者在 Nobara Linux 上通过 Steam Play 运行了演示版，无需额外文件即可流畅游玩。正式版尚无发售日期，但原生 Linux 版本正在开发中。</div>
+
+  <div class="article-body"><p>Guncrypt 是 Halfbrick Studio 的首款 PC 游戏，也支持 Linux</p><p>如果你喜欢 rogue-like 游戏，这款可能值得在 Linux 上入手。</p><p>Halfbrick Studio 最近联系了我们，他们兴奋地展示了最新项目《Guncrypt》，这是一款围绕按正确顺序装填子弹而非追逐更好装备的地牢爬行者。</p><p>如果这个名字听起来耳熟，他们正是《Jetpack Joyride》《Fruit Ninja》和《Dan the Man》等一系列热门手游的开发商。</p><p>在游戏中，武器系统包含三种枪械、超过 60 种子弹类型和 80 种遗物类型，你可以根据自身玩法风格组合它们来改变游戏体验。先装填普通子弹再装填火焰子弹，与先装填火焰子弹再装填普通子弹，效果截然不同。将两种子弹融合以获得新的组合效果，或者在房间之间重新排列整个弹匣，如果当前配置不奏效的话。</p><p>完成教程后的最初几分钟游戏画面。</p><p>塔罗牌在每次闯关之间为你的初始装备提供被动加成，而诅咒等级则在关卡不再具有威胁时，通过五个层级进一步增加难度。所有这些都发生在四个程序生成的地牢楼层中，每层都有独特的敌人、危险以及等待在尽头的 Boss。</p><p>在深入之前先了解一些背景信息。</p><p>我在我的 Nobara Linux 系统上运行了《Guncrypt》的演示版，游戏无需下载任何额外文件即可运行。这只是 Steam Play 利用 Proton 让游戏在这个非原生配置上运行。</p><p>无论如何，开场过场动画奠定了背景。Guncrypt 镇曾经是一个安静富裕的小镇，直到一个邪恶巫师出现，诅咒了它并偷走了所有人的灵魂，导致镇民们忙于互相争吵而无暇行动（听起来像时事）。结果任务就落到了玩家头上。</p><p>然后是教程，这对我来说是个意外，因为我习惯了 WASD 移动。这里完全没有这种操作；相反，我必须按住左键并拖动来移动我的枪手，同时射击他面前的任何东西。</p><p>进入游戏后，我与一些 NPC 互动，比如铁匠，然后进入了一个地穴，立刻看到了任务列表，其中一些任务可见。主要任务是揭开邪恶巫师施加诅咒背后的谜团。</p><p>开始一次闯关并被击败。</p><p>我进入了一个地牢，直接进入战斗，躲避敌人的同时留意房间之间的装填计时器。在一次让我吃尽苦头的闯关结束时，我看到了一个记分板，上面显示了我死亡时的楼层、使用的子弹以及各种评分标准的详细列表。</p><p>我解锁的一些东西。</p><p>子弹拾取机制类似。我一度遇到了三个选项，选择了闪电弹，这是一种 110 伤害的子弹，在装填时向敌人释放闪电。在游戏稍后部分，海盗“达斯蒂”给了我炸弹，这是一种有用的右键能力，用于炸毁敌人和障碍物。</p><p>安息吧达斯蒂，铁壳怪抓住了你。</p><p>截至撰写本文时，《Guncrypt》尚未公布发售日期或价格。Steam 页面仅将其列为“即将推出”。与此同时，你可以尝试演示版，它在我的测试系统上运行良好。</p><p>最后，原生 Linux 版本也正在开发中，将在正式版发布后不久推出。</p><p>查看 Guncrypt（Steam）</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。</p><p>ArmSoM Sige6 是首款放弃 Rockchip 改用 Allwinner 的 Sige 板卡</p><p>Canonical 的新 AI 工具希望你对 Ubuntu 说话而不是打字</p><p>Epic Games 构建了自己的 Git 替代方案来处理大文件</p><p>在 AUR 恶意软件泛滥之后，Yay v13 让你编写自己的安全网脚本</p><p>Commodore 的新翻盖手机跳过 Android，采用基于 Linux 的 Sailfish OS</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 周刊新闻通讯，你可以学习有用的 Linux 技巧、发现应用程序、探索新发行版，并随时了解 Linux 世界的最新动态</p><p>太好了！您已成功订阅。</p><p>欢迎回来！您已</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/guncrypt-demo-review/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

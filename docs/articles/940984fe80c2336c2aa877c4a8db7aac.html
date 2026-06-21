@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PorteuX 2.7 发布 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0f1117;
+    --surface:   #1a1d27;
+    --border:    #2a2d3a;
+    --text:      #e2e8f0;
+    --muted:     #8892a4;
+    --accent:    #38bdf8;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+  }}
+  a {{ color: var(--accent); text-decoration: none; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    background: linear-gradient(180deg, #0d1520 0%, var(--bg) 100%);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 20px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+  }}
+  .logo:hover {{ text-decoration: none; }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 4px 10px; border-radius: 4px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+  }}
+  footer a {{ color: var(--muted); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 40px 24px 80px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 32px;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 16px;
+  }
+  .tag {
+    padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 11px;
+    background: #3b82f620; color: #3b82f6;
+  }
+  .source { color: var(--muted); }
+
+  h1 {
+    font-size: 26px; font-weight: 700; line-height: 1.35;
+    color: var(--text); margin-bottom: 20px;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0; padding: 14px 18px;
+    font-size: 14px; color: var(--muted); line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .article-body {
+    font-size: 15px; line-height: 1.9; color: #c8d8e8;
+  }
+  .article-body p {
+    margin-bottom: 18px;
+  }
+
+  .article-footer {
+    margin-top: 40px; padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-block;
+    background: var(--accent); color: #0f1117;
+    font-weight: 600; font-size: 13px;
+    padding: 8px 18px; border-radius: 5px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: opacity .15s;
+  }
+  .btn-original:hover { opacity: .85; text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年06月21日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">DistroWatch</span>
+  </div>
+
+  <h1>PorteuX 2.7 发布</h1>
+
+  <div class="article-summary">PorteuX 2.7 正式发布，这是基于 Slackware 的便携 Linux 发行版。新版本带来了多项重大更新，包括 GCC 16.1.0、FFmpeg 8.1.1、KDE Plasma 6.7.0、GNOME 50.2 和 Qt 6.11.1 等上游组件升级。此外，构建标志和剥离优化提升了性能并缩小了模块体积，NTFS 驱动也更新为更快的 ntfs-plus。该版本提供 Cinnamon、GNOME、KDE Plasma、LXDE、LXQt、MATE 和 Xfce 共七种桌面环境，不含浏览器但内置应用商店。</div>
+
+  <div class="article-body"><p>PorteuX 项目已发布新版本 2.7。该版本包含多个桌面环境的更新，包括 GNOME、COSMIC 和 Plasma。</p><p>“首先，对长时间的延迟表示歉意。之前存在一些上游问题阻碍了稳定的 PorteuX 发布，最显著的是 ntfs3 内核驱动，现已更新为新的 ntfs-plus 驱动，该驱动速度更快，希望也更可靠。请注意，任何使用 ntfs3 在 NTFS 分区上创建的符号链接都需要重新生成。此版本带来了许多激动人心的变化，包括一轮大规模的构建标志和剥离优化，以实现更好的性能和更小的模块，以及许多重大的上游更新，例如 GCC 16.1.0、FFmpeg 8.1.1、KDE Plasma 6.7.0、GNOME 50.2 和 Qt 6.11.1。除此之外，构建流水线也进行了多项改进。”</p><p>更新、修复和其他更改的列表可在以下位置找到：</p><p>porteux-2.7-current-cinnamon-6.6.8-x86_64.iso</p><p>porteux-2.7-current-cosmic-1.0.16-x86_64.iso</p><p>porteux-2.7-current-gnome-50.2-x86_64.iso</p><p>porteux-2.7-current-kde-6.7.0-x86_64.iso</p><p>porteux-v2.7-current-lxde-0.11.1-x86_64.iso</p><p>porteux-2.7-current-lxqt-2.4.0-x86_64.iso</p><p>porteux-2.7-current-mate-1.28.2-x86_64.iso</p><p>porteux-2.7-current-xfce-4.20-x86_64.iso</p><p>近期相关新闻和发布：</p><p>Distribution Release: PorteuX 2.7</p><p>Distribution Release: PorteuX 2.5</p><p>Distribution Release: PorteuX 2.4</p><p>Distribution Release: PorteuX 2.2</p><p>Distribution Release: PorteuX 2.1</p><p>Distribution Release: PorteuX 2.0</p><p>PorteuX 是一款基于 Slackware Linux 的发行版，受 Slax 和 Porteus 启发，免费向公众提供。其主要目标是快速、小巧、便携（可从 U 盘运行）、模块化，并可选择不可变。它已预配置为基本使用，为七种桌面环境（Cinnamon、GNOME、KDE Plasma、LXDE、LXQt、MATE 和 Xfce）中的每一种都提供了轻量级应用程序。不包含浏览器，但提供了一个应用商店，用于下载任何 mo</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://distrowatch.com/12878" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

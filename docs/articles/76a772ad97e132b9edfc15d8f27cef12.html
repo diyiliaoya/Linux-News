@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>发行版发布：Home Assistant OS (HAOS) 18.0 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0f1117;
+    --surface:   #1a1d27;
+    --border:    #2a2d3a;
+    --text:      #e2e8f0;
+    --muted:     #8892a4;
+    --accent:    #38bdf8;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+  }}
+  a {{ color: var(--accent); text-decoration: none; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    background: linear-gradient(180deg, #0d1520 0%, var(--bg) 100%);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 20px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+  }}
+  .logo:hover {{ text-decoration: none; }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 4px 10px; border-radius: 4px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+  }}
+  footer a {{ color: var(--muted); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 40px 24px 80px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 32px;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 16px;
+  }
+  .tag {
+    padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 11px;
+    background: #3b82f620; color: #3b82f6;
+  }
+  .source { color: var(--muted); }
+
+  h1 {
+    font-size: 26px; font-weight: 700; line-height: 1.35;
+    color: var(--text); margin-bottom: 20px;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0; padding: 14px 18px;
+    font-size: 14px; color: var(--muted); line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .article-body {
+    font-size: 15px; line-height: 1.9; color: #c8d8e8;
+  }
+  .article-body p {
+    margin-bottom: 18px;
+  }
+
+  .article-footer {
+    margin-top: 40px; padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-block;
+    background: var(--accent); color: #0f1117;
+    font-weight: 600; font-size: 13px;
+    padding: 8px 18px; border-radius: 5px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: opacity .15s;
+  }
+  .btn-original:hover { opacity: .85; text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年06月21日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">DistroWatch</span>
+  </div>
+
+  <h1>发行版发布：Home Assistant OS (HAOS) 18.0</h1>
+
+  <div class="article-summary">Home Assistant OS (HAOS) 18.0 正式发布，这是一个重大更新，适用于所有平台。主要变化包括：Linux 内核从 6.12 升级至 6.18，Docker 升级至 v29.5.3 并附带 containerd v2.2.4，Buildroot 更新至 2025.02.14。磁盘映像闪存速度显著提升，默认交换空间大小现在有上限以避免内存极端情况下的问题，Raspberry Pi 引导加载程序固件可直接从 Home Assistant 更新。建议所有用户升级。</div>
+
+  <div class="article-body"><p>发行版发布：Home Assistant OS (HAOS) 18.0</p><p>Home Assistant OS（简称 HAOS）已升级至 18.0 版本。HAOS 是一个独立开发的、基于 Linux 的操作系统，针对运行 Home Assistant（一款开源家庭自动化工具）进行了优化。它适用于多种流行平台，包括 Raspberry Pi 和 ODROID，以及通用的 x86_64 和 AArch64 系统。</p><p>Home Assistant OS 18.0 是一个重大版本，为所有平台带来了显著更新。所有目标的 Linux 内核已从 6.12 更新至 6.18，Docker 已升级至 v29.5.3 并附带 containerd v2.2.4，底层 Buildroot 已更新至 2025.02.14。磁盘映像的闪存速度现在显著加快，默认交换空间大小现在有上限，以避免在内存极低或极高系统上出现问题，并且 Raspberry Pi 引导加载程序固件现在可以直接从 Home Assistant 更新。建议所有用户升级。Raspberry Pi 引导加载程序（EEPROM）固件现在可以直接从 Home Assistant OS 检查和更新。Home Assistant Core 2026.7.0 还将将该固件作为更新实体暴露。请注意，只有在系统从 SD 卡启动时，或者通常是在 Raspberry Pi 5 以及带有 CM5 的 Home Assistant Yellow 上，才能更新固件。</p><p>以上信息发布于项目 GitHub 页面。</p><p>haos_generic-x86-64-18.0.img.xz</p><p>haos_generic-aarch64-18.0.img.xz</p><p>近期相关新闻与发布</p><p>发行版发布：Home Assistant OS (HAOS) 18.0</p><p>Home Assistant OS (HAOS) 是一个独立开发的、基于 Linux 的操作系统，针对运行 Home Assistant（一款开源家庭自动化工具）进行了优化。它专注于本地控制和隐私。HAOS 使用 Docker 作为其容器引擎，并将 Home Assistant Supervisor 作为容器部署。Home Assistant Supervisor 反过来使用 Docker 容器引擎来控制 Home Assistant Core 和应用程序（位于独立容器中）。该产品适用于多种单板计算机，例如 Rasp...</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://distrowatch.com/12877" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

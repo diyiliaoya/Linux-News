@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canonical 新 AI 工具：让你与 Ubuntu 对话而非打字 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0f1117;
+    --surface:   #1a1d27;
+    --border:    #2a2d3a;
+    --text:      #e2e8f0;
+    --muted:     #8892a4;
+    --accent:    #38bdf8;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+  }}
+  a {{ color: var(--accent); text-decoration: none; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    background: linear-gradient(180deg, #0d1520 0%, var(--bg) 100%);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 20px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+  }}
+  .logo:hover {{ text-decoration: none; }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 4px 10px; border-radius: 4px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+  }}
+  footer a {{ color: var(--muted); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 40px 24px 80px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 32px;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 16px;
+  }
+  .tag {
+    padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 11px;
+    background: #3b82f620; color: #3b82f6;
+  }
+  .source { color: var(--muted); }
+
+  h1 {
+    font-size: 26px; font-weight: 700; line-height: 1.35;
+    color: var(--text); margin-bottom: 20px;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0; padding: 14px 18px;
+    font-size: 14px; color: var(--muted); line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .article-body {
+    font-size: 15px; line-height: 1.9; color: #c8d8e8;
+  }
+  .article-body p {
+    margin-bottom: 18px;
+  }
+
+  .article-footer {
+    margin-top: 40px; padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-block;
+    background: var(--accent); color: #0f1117;
+    font-weight: 600; font-size: 13px;
+    padding: 8px 18px; border-radius: 5px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: opacity .15s;
+  }
+  .btn-original:hover { opacity: .85; text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年06月21日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Canonical 新 AI 工具：让你与 Ubuntu 对话而非打字</h1>
+
+  <div class="article-summary">Canonical 推出名为 Myna 的 AI 语音转文字工具，完全在本地硬件上运行，无需联网。该工具将随 Ubuntu 26.10 首发，基于 GNOME on Wayland 构建，采用按键通话机制，支持三种大小的语音模型，可适配 NVIDIA GPU、Intel NPU 或 CPU。音频数据仅暂存于内存缓冲区，会话结束后即丢弃。目前项目仍在早期开发阶段，Canonical 正征求用户反馈。</div>
+
+  <div class="article-body"><p>Canonical 新 AI 工具：让你与 Ubuntu 对话而非打字</p><p>Myna 完全在本地硬件上运行，将随 Ubuntu 26.10 首发。</p><p>今年四月，Canonical 的 Jon Seager 阐述了 Ubuntu 中处理 AI 的框架。该框架将功能分为两类：一类是静默改进现有使用的隐式功能，另一类是你会有意主动调用的显式功能。当时，Jon 将语音转文字和文字转语音作为隐式功能的示例之一。几周后，这一拼图中的一块以 Myna 的形式出现。</p><p>虽然该工具仍处于开发早期，但计划随 Ubuntu 26.10（预计十月发布）首次亮相。</p><p>AI 驱动的无障碍功能</p><p>Canonical Ubuntu 桌面工程总监 Jean-Baptiste Lallement 发布了公告，称语音听写已成为现代平台的常见功能。</p><p>对于 Ubuntu 26.10，Myna 的初始版本预计将是一个基于 GNOME on Wayland 的桌面听写工具，采用按键通话机制来控制麦克风何时接收输入。使用时，按住热键、说话、然后松开。一个小活动指示器会在监听时显示，转录的文本会出现在听写开始时光标所在的位置。</p><p>识别过程发生在一个名为 Canonical Inference Snap 的沙盒化组件内部，该组件管理会话，而一个音频处理模块处理麦克风拾取的内容，在将其送入模型之前进行降噪和分块。</p><p>该 Snap 旨在携带三种大小的语音模型，以及匹配运行 Myna 硬件的运行时环境——无论是 NVIDIA GPU、Intel NPU，还是仅 CPU。</p><p>在你大喊“我的数据会被发送到云端服务器！”之前，请注意：语音识别将在本地进行，一旦安装了相应的模型，就不需要互联网连接。</p><p>此外，文本只有在最终确定后才会出现，因此你不会看到像某些助手显示实时字幕那样闪烁的半成品单词。音频数据也不会保留，它存储在一个小型内存缓冲区中，会话结束后立即丢弃。</p><p>像密码字段听写、唤醒词、持续监听、语音助手、语音命令、翻译、说话人识别和自动语言检测等功能目前均不支持。</p><p>这些功能都尚未锁定。该仓库目前仅包含一个许可证、一个 README 文件以及一个存放文档和架构规范的文件夹。</p><p>根据过去功能在 Ubuntu 临时版本中的发布方式，我们可能会在 Ubuntu 26.10 的每日构建中看到 Myna。</p><p>你还应该知道，Canonical 正在 Myna 规范最终确定前征求反馈，特别是来自已在 Linux 上依赖听写或辅助工具的用户。</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。</p><p>ArmSoM Sige6 是首款弃用 Rockchip 改用 Allwinner 的 Sige 主板</p><p>Guncrypt 是 Halfbrick Studio 的首款 PC 游戏，也支持 Linux</p><p>Epic Games 构建了自己的 Git 替代方案以处理大文件</p><p>在 AUR 恶意软件泛滥之后，Yay v13 让你编写自己的安全网</p><p>Commodore 新款翻盖手机弃用 Android，改用基于 Linux 的 Sailfish OS</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周通讯，你可以学习有用的 Linux 技巧、发现应用、探索新发行版，并随时了解 Linux 世界的最新动态</p><p>太棒了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅 It's FOSS。</p><p>您的链接已过期。</p><p>成功！请查看您的电子邮件，获取用于登录的魔法链接。</p><p>成功！您的账单信息已更新。</p><p>您的账单未更新。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/myna-ai-speech-to-text-tool/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Firefox免费VPN取消数据限制，提供28个服务器位置 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0f1117;
+    --surface:   #1a1d27;
+    --border:    #2a2d3a;
+    --text:      #e2e8f0;
+    --muted:     #8892a4;
+    --accent:    #38bdf8;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+  }}
+  a {{ color: var(--accent); text-decoration: none; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    background: linear-gradient(180deg, #0d1520 0%, var(--bg) 100%);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 20px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+  }}
+  .logo:hover {{ text-decoration: none; }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 4px 10px; border-radius: 4px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+  }}
+  footer a {{ color: var(--muted); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 40px 24px 80px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 32px;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 16px;
+  }
+  .tag {
+    padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 11px;
+    background: #10b98120; color: #10b981;
+  }
+  .source { color: var(--muted); }
+
+  h1 {
+    font-size: 26px; font-weight: 700; line-height: 1.35;
+    color: var(--text); margin-bottom: 20px;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0; padding: 14px 18px;
+    font-size: 14px; color: var(--muted); line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .article-body {
+    font-size: 15px; line-height: 1.9; color: #c8d8e8;
+  }
+  .article-body p {
+    margin-bottom: 18px;
+  }
+
+  .article-footer {
+    margin-top: 40px; padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-block;
+    background: var(--accent); color: #0f1117;
+    font-weight: 600; font-size: 13px;
+    padding: 8px 18px; border-radius: 5px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: opacity .15s;
+  }
+  .btn-original:hover { opacity: .85; text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年06月21日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">软件应用</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Firefox免费VPN取消数据限制，提供28个服务器位置</h1>
+
+  <div class="article-summary">Firefox内置的免费VPN暂时取消每月数据限制，并将可用服务器位置从5个扩展到28个，活动持续至2026年8月31日。新增服务器覆盖澳大利亚、奥地利、比利时等21个国家。活动结束后，免费账户将恢复50GB月数据限制和较少的服务器位置。该VPN目前在美国、英国、法国、德国和加拿大可用，需登录Mozilla账户启用，无需额外插件。</div>
+
+  <div class="article-body"><p>Firefox的免费内置VPN取消了每月数据限制——但仅限到2026年8月31日。</p><p>该VPN临时扩展了可用于代理浏览流量的VPN服务器位置列表，从当前的5个位置增加到更丰富的28个。</p><p>活动期间额外增加的服务器位置包括：澳大利亚、奥地利、比利时、保加利亚、智利、哥伦比亚、丹麦、芬兰、爱尔兰、意大利、马来西亚、墨西哥、荷兰、新西兰、挪威、葡萄牙、新加坡、南非、西班牙、瑞典和泰国。</p><p>5月发布的版本增加了从VPN服务器列表中选择的选项（尽管该功能尚未对所有人启用），当位置比速度更重要时，这非常方便（Firefox VPN默认选择最快的VPN服务器，通常是最近的那个）。</p><p>从9月1日起，Firefox VPN将恢复为免费账户每月50GB的数据限制和较少的服务器位置。这个限时促销活动旨在激发用户对付费Mozilla VPN服务功能的兴趣。</p><p>Firefox内置VPN在美国、英国、法国、德国和加拿大免费提供。只需登录（免费）Mozilla账户即可启用，无需额外的附加组件或扩展；它已内置于桌面版Firefox中。</p><p>Firefox VPN是仅限浏览器的VPN，但确实包含按站点例外功能，可以防止你设置的特定网站的流量被重定向，如果你不想为了访问需要真实位置的内容而反复开关VPN，这非常方便。</p><p>前提是你居住在支持的地区，并且Mozilla已授予你访问权限。在我使用的4台设备上（位于英国），只有一台设备上提供了Firefox VPN。作为渐进式推出，访问权限由服务器端控制。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/06/firefox-vpn-unlimited-data-promotion" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

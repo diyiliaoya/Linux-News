@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUR恶意软件泛滥后，Yay v13让你编写自己的安全网 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0f1117;
+    --surface:   #1a1d27;
+    --border:    #2a2d3a;
+    --text:      #e2e8f0;
+    --muted:     #8892a4;
+    --accent:    #38bdf8;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+  }}
+  a {{ color: var(--accent); text-decoration: none; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    background: linear-gradient(180deg, #0d1520 0%, var(--bg) 100%);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 20px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+  }}
+  .logo:hover {{ text-decoration: none; }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 4px 10px; border-radius: 4px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+  }}
+  footer a {{ color: var(--muted); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 40px 24px 80px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 32px;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 16px;
+  }
+  .tag {
+    padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 11px;
+    background: #3b82f620; color: #3b82f6;
+  }
+  .source { color: var(--muted); }
+
+  h1 {
+    font-size: 26px; font-weight: 700; line-height: 1.35;
+    color: var(--text); margin-bottom: 20px;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0; padding: 14px 18px;
+    font-size: 14px; color: var(--muted); line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .article-body {
+    font-size: 15px; line-height: 1.9; color: #c8d8e8;
+  }
+  .article-body p {
+    margin-bottom: 18px;
+  }
+
+  .article-footer {
+    margin-top: 40px; padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-block;
+    background: var(--accent); color: #0f1117;
+    font-weight: 600; font-size: 13px;
+    padding: 8px 18px; border-radius: 5px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: opacity .15s;
+  }
+  .btn-original:hover { opacity: .85; text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年06月21日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>AUR恶意软件泛滥后，Yay v13让你编写自己的安全网</h1>
+
+  <div class="article-summary">Arch Linux的AUR（Arch用户软件仓库）近期遭遇多波恶意软件攻击，超过1500个软件包被入侵。流行的AUR助手Yay发布v13版本，新增基于Lua的钩子和配置功能，允许用户编写脚本自动化安全审查。同时，PKGBUILD最后修改时间戳现在直接显示在搜索结果和升级菜单中，帮助用户识别潜在风险包。Yay v13旨在从用户层面应对AUR的安全挑战。</div>
+
+  <div class="article-body"><p>AUR恶意软件泛滥后，Yay v13让你编写自己的安全网</p><p>该版本引入了基于Lua的钩子，同时提供更简单的方式查看PKGBUILD最近一次修改的时间。</p><p>你可能已经知道，AUR最近经历了一段艰难时期，在Arch开发者能够控制局面之前，超过1500个软件包在三波独立的恶意软件攻击中遭到入侵。</p><p>流行的Arch Linux AUR助手旨在从用户层面解决这一混乱局面，引入了新功能，使你在安装前更容易发现风险包，并让你能够自动化审查工作。</p><p>让我们来看看吧！🤓</p><p>检测恶意包的新工具</p><p>新的PKGBUILD最后修改时间戳现在显示在方括号内。</p><p>搜索结果、yogurt提示和升级菜单现在都带有这些时间戳，显示软件包的PKGBUILD上次修改后过去了多久。这让你提前了解哪些包在安装前可能值得仔细检查。</p><p>Yay的维护者澄清说，这个数字本身并不能说明什么。上周编辑过的东西并不自动危险，多年未动的东西也不自动安全。</p><p>这只是一个额外的信号，供你在决定安装前权衡。</p><p>另一个主要新增功能是支持基于Lua的钩子和配置，让你可以编写脚本控制Yay在安装和升级流程不同阶段的行为。现在你可以在以下位置放置一个文件：</p><p>$XDG_CONFIG_HOME/yay/init.lua</p><p>~/.config/yay/init.lua</p><p>Yay会直接从该文件中读取设置和钩子。</p><p>如果完全省略该文件，则不会运行任何与Lua相关的内容。</p><p>原有的配置也不会消失，它位于Lua配置之上并可以覆盖已有设置，而你在命令行传递的标志则优先于其他所有配置。</p><p>其中一个新钩子在升级过程中间触发，当Yay已经确定需要升级哪些包但尚未将包排除屏幕展示给你时生效。</p><p>另外两个钩子在实际安装运行之前生效，只是触发顺序晚于前一个钩子。</p><p>另一个钩子在PKGBUILD被获取后立即触发，足够早地在你看到任何菜单之前中止安装。当makepkg --verifysource完成拉取和检查源代码后，另一个钩子触发，此时脚本可以查看PKGBUILD及其下载的实际文件，仍然在安装之前。</p><p>除此之外，v13版本还增加了用于过滤搜索结果和在包安装完成后执行操作的钩子。其余部分主要是清理工作，例如恢复缺失的区域设置文件，并且ALPM执行器获得了适当的日志回调和新的Debug方法。</p><p>你可以在你的Arch Linux或基于Arch的系统上通过从AUR克隆并使用makepkg构建来运行Yay：</p><p>git clone https://aur.archlinux.org/yay.git</p><p>cd yay &amp;&amp; makepkg -si</p><p>一个热爱开源软件、定制PC组装、赛车运动以及探索这个世界无限可能的极客。</p><p>ArmSoM Sige6是首款放弃瑞芯微转向全志的Sige板卡</p><p>Guncrypt是Halfbrick Studio的首款PC游戏，也支持Linux</p><p>Canonical的新AI工具希望你对Ubuntu说话而不是打字</p><p>Epic Games构建了自己的Git替代方案用于处理大文件</p><p>Commodore的新翻盖手机跳过Android，采用基于Linux的Sailfish OS</p><p>成为更好的Linux用户</p><p>通过FOSS周刊通讯，你可以学习有用的Linux技巧，发现应用程序，探索新的发行版，并随时了解Linux世界的最新动态</p><p>太好了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅It's FOSS。</p><p>您的链接已过期。</p><p>成功！请检查您的电子邮件以获取用于登录的魔法链接。</p><p>成功！您的账单信息已更新。</p><p>您的账单未更新。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/yay-v13-release/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

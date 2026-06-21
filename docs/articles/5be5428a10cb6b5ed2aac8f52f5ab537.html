@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ArmSoM Sige6：首款弃用瑞芯微、改用全志的Sige系列开发板 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0f1117;
+    --surface:   #1a1d27;
+    --border:    #2a2d3a;
+    --text:      #e2e8f0;
+    --muted:     #8892a4;
+    --accent:    #38bdf8;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+  }}
+  a {{ color: var(--accent); text-decoration: none; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+    background: linear-gradient(180deg, #0d1520 0%, var(--bg) 100%);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 20px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+  }}
+  .logo:hover {{ text-decoration: none; }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 4px 10px; border-radius: 4px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+  }}
+  footer a {{ color: var(--muted); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 40px 24px 80px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 32px;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 16px;
+  }
+  .tag {
+    padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 11px;
+    background: #6b728020; color: #6b7280;
+  }
+  .source { color: var(--muted); }
+
+  h1 {
+    font-size: 26px; font-weight: 700; line-height: 1.35;
+    color: var(--text); margin-bottom: 20px;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0; padding: 14px 18px;
+    font-size: 14px; color: var(--muted); line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .article-body {
+    font-size: 15px; line-height: 1.9; color: #c8d8e8;
+  }
+  .article-body p {
+    margin-bottom: 18px;
+  }
+
+  .article-footer {
+    margin-top: 40px; padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-block;
+    background: var(--accent); color: #0f1117;
+    font-weight: 600; font-size: 13px;
+    padding: 8px 18px; border-radius: 5px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: opacity .15s;
+  }
+  .btn-original:hover { opacity: .85; text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年06月21日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>ArmSoM Sige6：首款弃用瑞芯微、改用全志的Sige系列开发板</h1>
+
+  <div class="article-summary">ArmSoM Sige6是首款采用全志A733芯片的Sige系列单板计算机，配备3 TOPS NPU、Wi-Fi 6和最高16GB LPDDR5内存。该板针对AI推理、边缘计算、云计算和迷你PC等场景设计，解决了SBC市场在AI硬件、内存类型和功耗方面的三大痛点。支持4K@60fps视频解码、PCIe 3.0 M.2接口和PoE以太网，预计2025年8月上市。</div>
+
+  <div class="article-body"><p>ArmSoM Sige6是首款弃用瑞芯微、改用全志的Sige系列开发板</p><p>ArmSoM Sige6是首款弃用瑞芯微、改用全志的Sige系列开发板</p><p>搭载全志A733处理器，这款单板计算机配备3 TOPS NPU、Wi-Fi 6和最高16GB LPDDR5内存。</p><p>ArmSoM以设计和制造开发板及嵌入式解决方案而闻名，产品覆盖多媒体、物联网、AI和工业应用等多个领域。我们曾在It's FOSS上介绍过他们的几款产品，总体而言它们一直是不错的选择。其旗舰SBC产品线是Sige系列，此前所有型号均搭载瑞芯微芯片。</p><p>Sige6是首款打破这一传统的产品，将瑞芯微换成了全志芯片，瞄准AI推理、边缘计算、云计算和迷你PC构建等应用场景。</p><p>📝 ArmSoM Sige6：关键规格</p><p>Sige6运行在全志A733上，这是一款12纳米八核芯片，包含两个2.0GHz的Cortex-A76核心和六个1.8GHz的Cortex-A55核心。ArmSoM选择这款SoC是因为他们需要解决几个问题。</p><p>他们指出了SBC市场的三大空白：要么完全跳过AI硬件，要么将其作为昂贵的附加组件；入门级和中端产品往往停留在老旧的LPDDR4或DDR3内存上；而那些足够强大、能避免这些缺陷的板卡又往往功耗过高，不适合始终在线的工作场景。</p><p>A733在不过度削减性能的前提下，完美覆盖了这三点，甚至还有余力。</p><p>接下来看GPU，它采用Imagination BXM-4-64 MC1，支持OpenGL ES 3.2、Vulkan 1.3和OpenCL 3.0，此外还有一个用于AI加速工作负载的NPU。</p><p>内存方面，提供2GB到16GB的LPDDR5选项。存储方面，提供32GB、64GB和128GB的eMMC选项。</p><p>其他规格包括：</p><p>视频解码：H.265/VP9/AVS2最高4K@60fps；H.264最高4K@30fps</p><p>视频编码：H.264/H.265最高4K@30fps</p><p>显示输出：1个HDMI 2.0、1个DisplayPort 1.2（通过USB Type-C）、1个4通道MIPI DSI</p><p>摄像头接口：1个2通道 + 1个4通道MIPI CSI</p><p>存储扩展：microSD卡槽、M.2 Key M（PCIe 3.0 x4）</p><p>网络：1个千兆以太网（支持PoE）、Wi-Fi 6、蓝牙5.4、外部天线接口</p><p>USB：1个USB 2.0、1个USB 3.1、1个USB Type-C（支持DP和PD）</p><p>音频：1个音频插孔、1个HP-OUT</p><p>其他接口：GPIO、UART、SPI、I2C、PWM</p><p>操作系统：Debian、Android 13；Armbian（第三方）</p><p>凭借3 TOPS NPU和最高4K@60fps的硬件视频解码能力，Sige6可以处理边缘端的轻量级AI推理，以及媒体服务器和数字标牌等工作负载。</p><p>M.2插槽配备PCIe 3.0，为高速NVMe存储提供了空间；支持PoE的以太网端口也使其非常适合网络设备构建。</p><p>此外，ArmSoM还承诺Sige6将持续生产至2030年，这对于任何在长期运行环境中部署该设备的人来说都值得注意。</p><p>🛒 购买ArmSoM Sige6</p><p>你需要等到2025年8月才能拿到手，届时Sige6将在官方商店以及速卖通、淘宝等第三方零售商处发售。</p><p>对于批量订单，他们需要通过电子邮件联系公司。</p><p>这款单板计算机让树莓派5相形见绌</p><p>抛开标题党不谈，ArmSom Sige7实际上是一款令人印象深刻的设备。</p><p>一位热爱开源软件、定制PC组装、赛车运动并探索世界无限可能的极客。</p><p>Guncrypt是Halfbrick Studio的首款PC游戏，也支持Linux</p><p>Canonical的新AI工具让你用语音代替打字与Ubuntu交互</p><p>Epic Games构建了自己的Git替代方案来处理大文件</p><p>在AUR恶意软件泛滥之后，Yay v13让你编写自己的安全网脚本</p><p>Commodore的新翻盖手机弃用Android，改用基于Linux的Sailfish OS</p><p>成为更好的Linux用户</p><p>通过FOSS周刊，你可以学习有用的Linux技巧、发现应用程序、探索新发行版，并随时了解Linux世界的最新动态</p><p>太好了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅It's FOSS。</p><p>您的链接已过期。</p><p>成功！请查看您的电子邮件，获取用于登录的魔法链接。</p><p>成功！您的账单信息已更新。</p><p>您的账单未更新。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/armsom-sige6-launched-with-allwinner-soc/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
