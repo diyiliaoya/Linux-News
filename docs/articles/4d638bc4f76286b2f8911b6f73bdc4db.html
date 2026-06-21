@@ -7,52 +7,59 @@
 <style>
 
   :root {{
-    --bg:        #0f1117;
-    --surface:   #1a1d27;
-    --border:    #2a2d3a;
-    --text:      #e2e8f0;
-    --muted:     #8892a4;
-    --accent:    #38bdf8;
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
     --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-    --font-body: 'Inter', system-ui, sans-serif;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
   }}
   * {{ box-sizing: border-box; margin: 0; padding: 0; }}
   body {{
     background: var(--bg); color: var(--text);
     font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
   }}
-  a {{ color: var(--accent); text-decoration: none; }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
   a:hover {{ text-decoration: underline; }}
 
   /* Header */
   header {{
     border-bottom: 1px solid var(--border);
-    padding: 20px 0;
-    background: linear-gradient(180deg, #0d1520 0%, var(--bg) 100%);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
   }}
   .header-inner {{
     max-width: 1100px; margin: 0 auto; padding: 0 24px;
     display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
   }}
   .logo {{
-    font-family: var(--font-mono); font-size: 20px; font-weight: 700;
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
     color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
   }}
-  .logo:hover {{ text-decoration: none; }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
   .logo span {{ color: var(--muted); font-weight: 400; }}
   .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
   .update-time {{
     font-family: var(--font-mono); font-size: 12px; color: var(--muted);
     background: var(--surface); border: 1px solid var(--border);
-    padding: 4px 10px; border-radius: 4px;
+    padding: 5px 12px; border-radius: 6px;
   }}
 
   /* Footer */
   footer {{
-    border-top: 1px solid var(--border); padding: 24px;
+    border-top: 1px solid var(--border); padding: 32px 24px;
     text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
   }}
   footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
 
   @media (max-width: 600px) {{
     .header-inner {{ flex-direction: column; gap: 8px; }}
@@ -61,58 +68,69 @@
 
   /* Article page */
   .article-wrap {
-    max-width: 780px; margin: 0 auto; padding: 40px 24px 80px;
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
   }
   .back-link {
     display: inline-flex; align-items: center; gap: 6px;
     font-family: var(--font-mono); font-size: 13px; color: var(--muted);
-    margin-bottom: 32px;
+    margin-bottom: 36px;
+    transition: color .2s;
   }
   .back-link:hover { color: var(--accent); text-decoration: none; }
 
   .article-meta {
     display: flex; align-items: center; gap: 10px;
-    font-size: 12px; margin-bottom: 16px;
+    font-size: 12px; margin-bottom: 20px;
   }
   .tag {
-    padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 11px;
-    background: #10b98120; color: #10b981;
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
-  .source { color: var(--muted); }
+  .source { color: var(--muted); font-family: var(--font-mono); }
 
   h1 {
-    font-size: 26px; font-weight: 700; line-height: 1.35;
-    color: var(--text); margin-bottom: 20px;
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
   }
 
   .article-summary {
-    background: var(--surface); border-left: 3px solid var(--accent);
-    border-radius: 0 6px 6px 0; padding: 14px 18px;
-    font-size: 14px; color: var(--muted); line-height: 1.7;
-    margin-bottom: 32px;
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
   }
 
   .article-body {
-    font-size: 15px; line-height: 1.9; color: #c8d8e8;
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
   }
   .article-body p {
-    margin-bottom: 18px;
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
   }
 
   .article-footer {
-    margin-top: 40px; padding-top: 24px;
+    margin-top: 48px; padding-top: 28px;
     border-top: 1px solid var(--border);
     display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
   }
   .btn-original {
-    display: inline-block;
-    background: var(--accent); color: #0f1117;
-    font-weight: 600; font-size: 13px;
-    padding: 8px 18px; border-radius: 5px;
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
     text-decoration: none; font-family: var(--font-mono);
-    transition: opacity .15s;
+    transition: transform .15s, box-shadow .15s;
   }
-  .btn-original:hover { opacity: .85; text-decoration: none; }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
   .note { font-size: 12px; color: var(--muted); }
 </style>
 </head>

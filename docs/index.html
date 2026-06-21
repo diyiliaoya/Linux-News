@@ -8,52 +8,59 @@
 <style>
 
   :root {{
-    --bg:        #0f1117;
-    --surface:   #1a1d27;
-    --border:    #2a2d3a;
-    --text:      #e2e8f0;
-    --muted:     #8892a4;
-    --accent:    #38bdf8;
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
     --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-    --font-body: 'Inter', system-ui, sans-serif;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
   }}
   * {{ box-sizing: border-box; margin: 0; padding: 0; }}
   body {{
     background: var(--bg); color: var(--text);
     font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
   }}
-  a {{ color: var(--accent); text-decoration: none; }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
   a:hover {{ text-decoration: underline; }}
 
   /* Header */
   header {{
     border-bottom: 1px solid var(--border);
-    padding: 20px 0;
-    background: linear-gradient(180deg, #0d1520 0%, var(--bg) 100%);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
   }}
   .header-inner {{
     max-width: 1100px; margin: 0 auto; padding: 0 24px;
     display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
   }}
   .logo {{
-    font-family: var(--font-mono); font-size: 20px; font-weight: 700;
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
     color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
   }}
-  .logo:hover {{ text-decoration: none; }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
   .logo span {{ color: var(--muted); font-weight: 400; }}
   .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
   .update-time {{
     font-family: var(--font-mono); font-size: 12px; color: var(--muted);
     background: var(--surface); border: 1px solid var(--border);
-    padding: 4px 10px; border-radius: 4px;
+    padding: 5px 12px; border-radius: 6px;
   }}
 
   /* Footer */
   footer {{
-    border-top: 1px solid var(--border); padding: 24px;
+    border-top: 1px solid var(--border); padding: 32px 24px;
     text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
   }}
   footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
 
   @media (max-width: 600px) {{
     .header-inner {{ flex-direction: column; gap: 8px; }}
@@ -62,68 +69,78 @@
 
   /* Stats */
   .stats-bar {
-    max-width: 1100px; margin: 16px auto 0; padding: 0 24px;
-    display: flex; gap: 24px; font-size: 13px; color: var(--muted);
+    max-width: 1100px; margin: 20px auto 0; padding: 0 24px;
+    display: flex; gap: 28px; font-size: 13px; color: var(--muted);
+    font-family: var(--font-mono);
   }
-  .stats-bar strong { color: var(--text); }
+  .stats-bar strong { color: var(--accent); font-size: 16px; font-weight: 700; }
 
   /* Main */
-  main { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }
+  main { max-width: 1100px; margin: 0 auto; padding: 36px 24px 80px; }
 
   /* Section */
-  .category-section { margin-bottom: 48px; }
+  .category-section { margin-bottom: 56px; }
   .section-title {
-    font-family: var(--font-mono); font-size: 13px; font-weight: 600;
-    letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
-    border-bottom: 1px solid var(--border); padding-bottom: 10px;
-    margin-bottom: 20px; display: flex; align-items: center; gap: 10px;
+    font-family: var(--font-mono); font-size: 12px; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-dim);
+    border-bottom: 2px solid var(--border); padding-bottom: 12px;
+    margin-bottom: 24px; display: flex; align-items: center; gap: 10px;
   }
   .count {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 10px; padding: 1px 8px; font-size: 11px;
+    background: var(--bg); border: 1px solid var(--border);
+    border-radius: 12px; padding: 2px 10px; font-size: 11px;
     color: var(--muted); text-transform: none; letter-spacing: 0;
   }
 
   /* Grid */
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 18px;
   }
 
   /* Card */
   .card {
     background: var(--surface); border: 1px solid var(--border);
-    border-radius: 8px; padding: 18px 20px;
-    display: flex; flex-direction: column; gap: 10px;
-    transition: border-color .15s, transform .15s;
+    border-radius: 12px; padding: 22px 24px;
+    display: flex; flex-direction: column; gap: 12px;
+    transition: border-color .2s, transform .2s, box-shadow .2s;
+    position: relative; overflow: hidden;
   }
-  .card:hover { border-color: #3a4a6a; transform: translateY(-2px); }
-  .card-meta { display: flex; align-items: center; gap: 8px; font-size: 12px; }
-  .tag { padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 11px; }
-  .source { color: var(--muted); }
-  .card-title { font-size: 15px; font-weight: 600; line-height: 1.4; }
-  .card-title a { color: var(--text); text-decoration: none; }
+  .card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 3px; background: linear-gradient(90deg, transparent, var(--accent-dim), transparent);
+    opacity: 0; transition: opacity .2s;
+  }
+  .card:hover { border-color: var(--accent-dim); transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,.3); }
+  .card:hover::before { opacity: 1; }
+  .card-meta { display: flex; align-items: center; gap: 8px; font-size: 11px; }
+  .tag { padding: 3px 9px; border-radius: 5px; font-weight: 600; font-size: 11px; letter-spacing: .03em; border: 1px solid transparent; }
+  .source { color: var(--muted); font-family: var(--font-mono); font-size: 11px; }
+  .card-title { font-size: 16px; font-weight: 700; line-height: 1.45; }
+  .card-title a { color: var(--text); text-decoration: none; transition: color .2s; }
   .card-title a:hover { color: var(--accent); }
-  .card-summary { font-size: 13px; color: var(--muted); line-height: 1.6; flex: 1; }
+  .card-summary { font-size: 13px; color: #9daabd; line-height: 1.65; flex: 1; }
 
   /* Actions */
-  .card-actions { display: flex; align-items: center; gap: 14px; margin-top: 4px; }
+  .card-actions { display: flex; align-items: center; gap: 16px; margin-top: 6px; padding-top: 12px; border-top: 1px solid var(--border); }
   .btn-detail {
     font-size: 12px; font-family: var(--font-mono);
-    background: var(--accent); color: #0f1117;
-    padding: 3px 10px; border-radius: 4px; font-weight: 600;
-    text-decoration: none; transition: opacity .15s;
+    background: var(--accent); color: #0a0c14;
+    padding: 4px 14px; border-radius: 6px; font-weight: 600;
+    text-decoration: none; transition: transform .15s, box-shadow .15s;
   }
-  .btn-detail:hover { opacity: .85; text-decoration: none; }
+  .btn-detail:hover { transform: translateY(-1px); box-shadow: 0 2px 12px rgba(77,196,240,.25); text-decoration: none; }
   .read-more {
     font-size: 12px; color: var(--muted);
     text-decoration: none; font-family: var(--font-mono);
+    transition: color .2s;
   }
   .read-more:hover { color: var(--accent); }
 
   @media (max-width: 600px) {
     .grid { grid-template-columns: 1fr; }
+    .card { padding: 16px 18px; }
   }
 </style>
 </head>
@@ -149,10 +166,10 @@
         <h2 class="section-title">发行版 <span class="count">12</span></h2>
         <div class="grid">
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#3b82f620;color:#3b82f6">发行版</span>
-            <span class="source">OMG! Ubuntu</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">OMG! Ubuntu</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/2e3bda7afe545bf0382806e9b4181076.html">Ubuntu 风味版现在必须发布 Beta 版本才能正式推出</a>
           </h2>
@@ -164,10 +181,10 @@
         </article>
 
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#3b82f620;color:#3b82f6">发行版</span>
-            <span class="source">OMG! Ubuntu</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">OMG! Ubuntu</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/cf895c75046fccc2b1cebcb9f392ba38.html">Firefox 152 发布：全新设置的界面与奇特的标签页静音方式</a>
           </h2>
@@ -179,10 +196,10 @@
         </article>
 
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#3b82f620;color:#3b82f6">发行版</span>
-            <span class="source">OMG! Ubuntu</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">OMG! Ubuntu</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/adb8b6ab3c5d28959b7403acbf667d59.html">KDE Plasma 6.7 发布：带来每显示器独立桌面，复活 Oxygen 主题</a>
           </h2>
@@ -194,10 +211,10 @@
         </article>
 
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#3b82f620;color:#3b82f6">发行版</span>
-            <span class="source">It's FOSS News</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">It's FOSS News</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/d9a3115d0d0fb8be7e527615a00275d7.html">Canonical 新 AI 工具：让你与 Ubuntu 对话而非打字</a>
           </h2>
@@ -209,10 +226,10 @@
         </article>
 
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#3b82f620;color:#3b82f6">发行版</span>
-            <span class="source">It's FOSS News</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">It's FOSS News</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/bd9d764085d89f88c36add29e47bf4bf.html">Epic Games 构建自有 Git 替代方案以处理大型文件</a>
           </h2>
@@ -224,10 +241,10 @@
         </article>
 
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#3b82f620;color:#3b82f6">发行版</span>
-            <span class="source">It's FOSS News</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">It's FOSS News</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/2cd083e84ce92007fa33b6882f728f08.html">AUR恶意软件泛滥后，Yay v13让你编写自己的安全网</a>
           </h2>
@@ -239,10 +256,10 @@
         </article>
 
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#3b82f620;color:#3b82f6">发行版</span>
-            <span class="source">DistroWatch</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">DistroWatch</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/940984fe80c2336c2aa877c4a8db7aac.html">PorteuX 2.7 发布</a>
           </h2>
@@ -254,10 +271,10 @@
         </article>
 
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#3b82f620;color:#3b82f6">发行版</span>
-            <span class="source">DistroWatch</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">DistroWatch</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/76a772ad97e132b9edfc15d8f27cef12.html">发行版发布：Home Assistant OS (HAOS) 18.0</a>
           </h2>
@@ -269,10 +286,10 @@
         </article>
 
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#3b82f620;color:#3b82f6">发行版</span>
-            <span class="source">DistroWatch</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">DistroWatch</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/28a3c0d224f48c87f8a565a25cd9b9dd.html">发行版发布：Univention Corporate Server 5.2-6</a>
           </h2>
@@ -284,10 +301,10 @@
         </article>
 
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#3b82f620;color:#3b82f6">发行版</span>
-            <span class="source">DistroWatch</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">DistroWatch</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/b81b5e456fcf4691a66e213b9adcd3b5.html">BSD 发布：FreeBSD 15.1</a>
           </h2>
@@ -299,10 +316,10 @@
         </article>
 
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#3b82f620;color:#3b82f6">发行版</span>
-            <span class="source">DistroWatch</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">DistroWatch</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/6febc9627fbf4ab54328201344f64ffb.html">发行版发布：EasyOS 7.4</a>
           </h2>
@@ -314,10 +331,10 @@
         </article>
 
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#3b82f620;color:#3b82f6">发行版</span>
-            <span class="source">Linux Today</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">Linux Today</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/6267b5593c1a0bb56b435c1ba161146d.html">Nitrux 6.1 发布，搭载 Linux Kernel 7.0 与 Hyprland 0.55</a>
           </h2>
@@ -333,10 +350,10 @@
         <h2 class="section-title">桌面环境 <span class="count">2</span></h2>
         <div class="grid">
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#8b5cf620;color:#8b5cf6">桌面环境</span>
-            <span class="source">OMG! Ubuntu</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#8b5cf61a;color:#8b5cf6;border-color:#8b5cf630">桌面环境</span>
+             <span class="source">OMG! Ubuntu</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/5aa9f221a20d87d0d2fc7cafb5eeb683.html">Audacity 4.0 Beta 让你测试其全新（更美观的）Qt 界面</a>
           </h2>
@@ -348,10 +365,10 @@
         </article>
 
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#8b5cf620;color:#8b5cf6">桌面环境</span>
-            <span class="source">Phoronix</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#8b5cf61a;color:#8b5cf6;border-color:#8b5cf630">桌面环境</span>
+             <span class="source">Phoronix</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/bad0745ffb85a3b675dcfa95f9d22e9a.html">Mesa 26.2 为 X11/XWayland 合并 Vulkan 呈现时序支持</a>
           </h2>
@@ -367,10 +384,10 @@
         <h2 class="section-title">软件应用 <span class="count">5</span></h2>
         <div class="grid">
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#10b98120;color:#10b981">软件应用</span>
-            <span class="source">OMG! Ubuntu</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#10b9811a;color:#10b981;border-color:#10b98130">软件应用</span>
+             <span class="source">OMG! Ubuntu</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/025920263967a02b5edd5c857db057c3.html">Firefox免费VPN取消数据限制，提供28个服务器位置</a>
           </h2>
@@ -382,10 +399,10 @@
         </article>
 
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#10b98120;color:#10b981">软件应用</span>
-            <span class="source">Linux Today</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#10b9811a;color:#10b981;border-color:#10b98130">软件应用</span>
+             <span class="source">Linux Today</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/67ce3d270f6abbb78adc7b66728257f0.html">Firefox 将于今年晚些时候迎来全新外观</a>
           </h2>
@@ -397,10 +414,10 @@
         </article>
 
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#10b98120;color:#10b981">软件应用</span>
-            <span class="source">Linux Today</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#10b9811a;color:#10b981;border-color:#10b98130">软件应用</span>
+             <span class="source">Linux Today</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/4d638bc4f76286b2f8911b6f73bdc4db.html">PELADN WO4 5600H 迷你PC：系列介绍</a>
           </h2>
@@ -412,10 +429,10 @@
         </article>
 
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#10b98120;color:#10b981">软件应用</span>
-            <span class="source">Linux Today</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#10b9811a;color:#10b981;border-color:#10b98130">软件应用</span>
+             <span class="source">Linux Today</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/6ead4a886f5663256283add7d980c041.html">Vivaldi 浏览器 8.0 推出全新统一设计与布局预设</a>
           </h2>
@@ -427,10 +444,10 @@
         </article>
 
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#10b98120;color:#10b981">软件应用</span>
-            <span class="source">Linux Today</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#10b9811a;color:#10b981;border-color:#10b98130">软件应用</span>
+             <span class="source">Linux Today</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/bbe03ab71ceb5fa9c7b7ee31f0bb3946.html">2026年值得使用的11款开源WYSIWYG编辑器</a>
           </h2>
@@ -446,10 +463,10 @@
         <h2 class="section-title">其他 <span class="count">6</span></h2>
         <div class="grid">
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#6b728020;color:#6b7280">其他</span>
-            <span class="source">It's FOSS News</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#a78bfa1a;color:#a78bfa;border-color:#a78bfa30">其他</span>
+             <span class="source">It's FOSS News</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/5be5428a10cb6b5ed2aac8f52f5ab537.html">ArmSoM Sige6：首款弃用瑞芯微、改用全志的Sige系列开发板</a>
           </h2>
@@ -461,10 +478,10 @@
         </article>
 
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#6b728020;color:#6b7280">其他</span>
-            <span class="source">It's FOSS News</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#a78bfa1a;color:#a78bfa;border-color:#a78bfa30">其他</span>
+             <span class="source">It's FOSS News</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/8cce01368a9204e4e8561d069f68016a.html">Guncrypt 是 Halfbrick Studio 的首款 PC 游戏，也支持 Linux</a>
           </h2>
@@ -476,10 +493,10 @@
         </article>
 
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#6b728020;color:#6b7280">其他</span>
-            <span class="source">Phoronix</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#a78bfa1a;color:#a78bfa;border-color:#a78bfa30">其他</span>
+             <span class="source">Phoronix</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/e2ac2f680a4ff1c6c7078864b1d3c27d.html">谷歌Gemini部分查明现代华硕笔记本Linux启动时间过长的问题</a>
           </h2>
@@ -491,10 +508,10 @@
         </article>
 
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#6b728020;color:#6b7280">其他</span>
-            <span class="source">Phoronix</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#a78bfa1a;color:#a78bfa;border-color:#a78bfa30">其他</span>
+             <span class="source">Phoronix</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/73635ed7c6e6a3505abeebcde9de0d65.html">Linux 7.2 开始为 NVIDIA “Blackwell-Next” 做准备</a>
           </h2>
@@ -506,10 +523,10 @@
         </article>
 
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#6b728020;color:#6b7280">其他</span>
-            <span class="source">Phoronix</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#a78bfa1a;color:#a78bfa;border-color:#a78bfa30">其他</span>
+             <span class="source">Phoronix</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/bc212c42ec16e4f2aaa231e1eed1e827.html">Linux的KUnit终于支持JUnit输出</a>
           </h2>
@@ -521,10 +538,10 @@
         </article>
 
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#6b728020;color:#6b7280">其他</span>
-            <span class="source">Phoronix</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:#a78bfa1a;color:#a78bfa;border-color:#a78bfa30">其他</span>
+             <span class="source">Phoronix</span>
+           </div>
           <h2 class="card-title">
             <a href="articles/f2b05e8f6c4ef27078a25b043a6f9ade.html">Broadcom 正在开发 VMware 虚拟机与 Hypervisor 之间的零拷贝缓冲区共享功能</a>
           </h2>
