@@ -222,52 +222,59 @@ def categorize(article):
 
 COMMON_CSS = """
   :root {{
-    --bg:        #0f1117;
-    --surface:   #1a1d27;
-    --border:    #2a2d3a;
-    --text:      #e2e8f0;
-    --muted:     #8892a4;
-    --accent:    #38bdf8;
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
     --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-    --font-body: 'Inter', system-ui, sans-serif;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
   }}
   * {{ box-sizing: border-box; margin: 0; padding: 0; }}
   body {{
     background: var(--bg); color: var(--text);
     font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
   }}
-  a {{ color: var(--accent); text-decoration: none; }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
   a:hover {{ text-decoration: underline; }}
 
   /* Header */
   header {{
     border-bottom: 1px solid var(--border);
-    padding: 20px 0;
-    background: linear-gradient(180deg, #0d1520 0%, var(--bg) 100%);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
   }}
   .header-inner {{
     max-width: 1100px; margin: 0 auto; padding: 0 24px;
     display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
   }}
   .logo {{
-    font-family: var(--font-mono); font-size: 20px; font-weight: 700;
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
     color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
   }}
-  .logo:hover {{ text-decoration: none; }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
   .logo span {{ color: var(--muted); font-weight: 400; }}
   .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
   .update-time {{
     font-family: var(--font-mono); font-size: 12px; color: var(--muted);
     background: var(--surface); border: 1px solid var(--border);
-    padding: 4px 10px; border-radius: 4px;
+    padding: 5px 12px; border-radius: 6px;
   }}
 
   /* Footer */
   footer {{
-    border-top: 1px solid var(--border); padding: 24px;
+    border-top: 1px solid var(--border); padding: 32px 24px;
     text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
   }}
   footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
 
   @media (max-width: 600px) {{
     .header-inner {{ flex-direction: column; gap: 8px; }}
@@ -286,7 +293,7 @@ def build_article_page(art, today):
         "发行版":   "#3b82f6",
         "桌面环境": "#8b5cf6",
         "软件应用": "#10b981",
-        "其他":     "#6b7280",
+        "其他":     "#a78bfa",
     }
     color   = cat_colors.get(art.get("category", "其他"), "#6b7280")
     cat     = art.get("category", "其他")
@@ -303,58 +310,69 @@ def build_article_page(art, today):
 
   /* Article page */
   .article-wrap {{
-    max-width: 780px; margin: 0 auto; padding: 40px 24px 80px;
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
   }}
   .back-link {{
     display: inline-flex; align-items: center; gap: 6px;
     font-family: var(--font-mono); font-size: 13px; color: var(--muted);
-    margin-bottom: 32px;
+    margin-bottom: 36px;
+    transition: color .2s;
   }}
   .back-link:hover {{ color: var(--accent); text-decoration: none; }}
 
   .article-meta {{
     display: flex; align-items: center; gap: 10px;
-    font-size: 12px; margin-bottom: 16px;
+    font-size: 12px; margin-bottom: 20px;
   }}
   .tag {{
-    padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 11px;
-    background: {color}20; color: {color};
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: {color}1a; color: {color};
+    border: 1px solid {color}30;
   }}
-  .source {{ color: var(--muted); }}
+  .source {{ color: var(--muted); font-family: var(--font-mono); }}
 
   h1 {{
-    font-size: 26px; font-weight: 700; line-height: 1.35;
-    color: var(--text); margin-bottom: 20px;
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
   }}
 
   .article-summary {{
-    background: var(--surface); border-left: 3px solid var(--accent);
-    border-radius: 0 6px 6px 0; padding: 14px 18px;
-    font-size: 14px; color: var(--muted); line-height: 1.7;
-    margin-bottom: 32px;
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
   }}
 
   .article-body {{
-    font-size: 15px; line-height: 1.9; color: #c8d8e8;
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
   }}
   .article-body p {{
-    margin-bottom: 18px;
+    margin-bottom: 22px;
+  }}
+  .article-body p:first-child::first-letter {{
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
   }}
 
   .article-footer {{
-    margin-top: 40px; padding-top: 24px;
+    margin-top: 48px; padding-top: 28px;
     border-top: 1px solid var(--border);
     display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
   }}
   .btn-original {{
-    display: inline-block;
-    background: var(--accent); color: #0f1117;
-    font-weight: 600; font-size: 13px;
-    padding: 8px 18px; border-radius: 5px;
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
     text-decoration: none; font-family: var(--font-mono);
-    transition: opacity .15s;
+    transition: transform .15s, box-shadow .15s;
   }}
-  .btn-original:hover {{ opacity: .85; text-decoration: none; }}
+  .btn-original:hover {{ transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }}
   .note {{ font-size: 12px; color: var(--muted); }}
 </style>
 </head>
@@ -405,7 +423,7 @@ def build_index(articles, today):
         "发行版":   "#3b82f6",
         "桌面环境": "#8b5cf6",
         "软件应用": "#10b981",
-        "其他":     "#6b7280",
+        "其他":     "#a78bfa",
     }
 
     categories = {}
@@ -419,10 +437,10 @@ def build_index(articles, today):
         detail   = f"articles/{art['id']}.html"
         return f"""
         <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:{color}20;color:{color}">{art['category']}</span>
-            <span class="source">{escape_html(art['source'])}</span>
-          </div>
+           <div class="card-meta">
+             <span class="tag" style="background:{color}1a;color:{color};border-color:{color}30">{art['category']}</span>
+             <span class="source">{escape_html(art['source'])}</span>
+           </div>
           <h2 class="card-title">
             <a href="{detail}">{escape_html(art['title_zh'])}</a>
           </h2>
@@ -457,68 +475,78 @@ def build_index(articles, today):
 
   /* Stats */
   .stats-bar {{
-    max-width: 1100px; margin: 16px auto 0; padding: 0 24px;
-    display: flex; gap: 24px; font-size: 13px; color: var(--muted);
+    max-width: 1100px; margin: 20px auto 0; padding: 0 24px;
+    display: flex; gap: 28px; font-size: 13px; color: var(--muted);
+    font-family: var(--font-mono);
   }}
-  .stats-bar strong {{ color: var(--text); }}
+  .stats-bar strong {{ color: var(--accent); font-size: 16px; font-weight: 700; }}
 
   /* Main */
-  main {{ max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }}
+  main {{ max-width: 1100px; margin: 0 auto; padding: 36px 24px 80px; }}
 
   /* Section */
-  .category-section {{ margin-bottom: 48px; }}
+  .category-section {{ margin-bottom: 56px; }}
   .section-title {{
-    font-family: var(--font-mono); font-size: 13px; font-weight: 600;
-    letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
-    border-bottom: 1px solid var(--border); padding-bottom: 10px;
-    margin-bottom: 20px; display: flex; align-items: center; gap: 10px;
+    font-family: var(--font-mono); font-size: 12px; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-dim);
+    border-bottom: 2px solid var(--border); padding-bottom: 12px;
+    margin-bottom: 24px; display: flex; align-items: center; gap: 10px;
   }}
   .count {{
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 10px; padding: 1px 8px; font-size: 11px;
+    background: var(--bg); border: 1px solid var(--border);
+    border-radius: 12px; padding: 2px 10px; font-size: 11px;
     color: var(--muted); text-transform: none; letter-spacing: 0;
   }}
 
   /* Grid */
   .grid {{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 18px;
   }}
 
   /* Card */
   .card {{
     background: var(--surface); border: 1px solid var(--border);
-    border-radius: 8px; padding: 18px 20px;
-    display: flex; flex-direction: column; gap: 10px;
-    transition: border-color .15s, transform .15s;
+    border-radius: 12px; padding: 22px 24px;
+    display: flex; flex-direction: column; gap: 12px;
+    transition: border-color .2s, transform .2s, box-shadow .2s;
+    position: relative; overflow: hidden;
   }}
-  .card:hover {{ border-color: #3a4a6a; transform: translateY(-2px); }}
-  .card-meta {{ display: flex; align-items: center; gap: 8px; font-size: 12px; }}
-  .tag {{ padding: 2px 8px; border-radius: 4px; font-weight: 500; font-size: 11px; }}
-  .source {{ color: var(--muted); }}
-  .card-title {{ font-size: 15px; font-weight: 600; line-height: 1.4; }}
-  .card-title a {{ color: var(--text); text-decoration: none; }}
+  .card::before {{
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 3px; background: linear-gradient(90deg, transparent, var(--accent-dim), transparent);
+    opacity: 0; transition: opacity .2s;
+  }}
+  .card:hover {{ border-color: var(--accent-dim); transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,.3); }}
+  .card:hover::before {{ opacity: 1; }}
+  .card-meta {{ display: flex; align-items: center; gap: 8px; font-size: 11px; }}
+  .tag {{ padding: 3px 9px; border-radius: 5px; font-weight: 600; font-size: 11px; letter-spacing: .03em; border: 1px solid transparent; }}
+  .source {{ color: var(--muted); font-family: var(--font-mono); font-size: 11px; }}
+  .card-title {{ font-size: 16px; font-weight: 700; line-height: 1.45; }}
+  .card-title a {{ color: var(--text); text-decoration: none; transition: color .2s; }}
   .card-title a:hover {{ color: var(--accent); }}
-  .card-summary {{ font-size: 13px; color: var(--muted); line-height: 1.6; flex: 1; }}
+  .card-summary {{ font-size: 13px; color: #9daabd; line-height: 1.65; flex: 1; }}
 
   /* Actions */
-  .card-actions {{ display: flex; align-items: center; gap: 14px; margin-top: 4px; }}
+  .card-actions {{ display: flex; align-items: center; gap: 16px; margin-top: 6px; padding-top: 12px; border-top: 1px solid var(--border); }}
   .btn-detail {{
     font-size: 12px; font-family: var(--font-mono);
-    background: var(--accent); color: #0f1117;
-    padding: 3px 10px; border-radius: 4px; font-weight: 600;
-    text-decoration: none; transition: opacity .15s;
+    background: var(--accent); color: #0a0c14;
+    padding: 4px 14px; border-radius: 6px; font-weight: 600;
+    text-decoration: none; transition: transform .15s, box-shadow .15s;
   }}
-  .btn-detail:hover {{ opacity: .85; text-decoration: none; }}
+  .btn-detail:hover {{ transform: translateY(-1px); box-shadow: 0 2px 12px rgba(77,196,240,.25); text-decoration: none; }}
   .read-more {{
     font-size: 12px; color: var(--muted);
     text-decoration: none; font-family: var(--font-mono);
+    transition: color .2s;
   }}
   .read-more:hover {{ color: var(--accent); }}
 
   @media (max-width: 600px) {{
     .grid {{ grid-template-columns: 1fr; }}
+    .card {{ padding: 16px 18px; }}
   }}
 </style>
 </head>
