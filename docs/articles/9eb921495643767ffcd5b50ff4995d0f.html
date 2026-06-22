@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 风味版现在必须发布 Beta 版本才能正式推出 — Linux 中文速报</title>
+<title>早期AMD GCN GPU改进恢复能力——又一项Valve主导的Linux改进 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 风味版现在必须发布 Beta 版本才能正式推出</h1>
+  <h1>早期AMD GCN GPU改进恢复能力——又一项Valve主导的Linux改进</h1>
 
-  <div class="article-summary">Ubuntu 宣布了一项重要政策更新，要求所有 Ubuntu 风味版必须发布 Beta 版本，不再允许例外。此前，错过 Beta 截止日期的风味版仍可申请一次性豁免，但 Ubuntu 26.04 LTS 周期中，使用 UKUI 桌面的 Ubuntu Kylin 在错过 Beta 窗口后仍发布了正式版，这促使了政策收紧。Canonical 的 Oliver Reiche 在邮件列表中表示，只有按时提交 Beta 版本的风味版才能获得官方正式发布资格。对用户而言，这意味着更稳定的发布版本，因为 Beta 版本冻结了快照，便于更广泛的测试，且 Beta 与正式版之间的包差异将仅限于 Bug 修复。</div>
+  <div class="article-summary">Valve的开源Linux图形驱动团队正在为早期AMD GCN GPU（特别是GFX8 IP块）引入软重置支持，以改善GPU挂起后的恢复过程。该功能允许仅重置图形IP块而不丢失VRAM内容，相比现有方案有显著优势。目前针对Polaris、Fiji等硬件，未来可能扩展到更老的GCN 1.0 GPU。</div>
 
-  <div class="article-body"><p>Ubuntu 风味版现在必须发布 Beta 版本才能正式推出 - OMG! Ubuntu</p><p>Ubuntu 宣布了一项“重要政策更新”，要求所有 Ubuntu 风味版必须发布 Beta 版本，无一例外。</p><p>大多数风味版每六个月都会顺利达到 Beta 里程碑。但在此之前，错过截止日期的风味版仍可申请一次性豁免。</p><p>在 Ubuntu 26.04 LTS 周期中，这种情况就发生在 Ubuntu Kylin 身上——这是一款面向中国用户、使用 UKUI 桌面的衍生版本。它错过了 Beta 窗口，但仍然发布了最终正式版。</p><p>这种情况将不再发生。要获得官方稳定版本，风味版现在必须与其他所有风味版同时发布 Beta 版本，正如 Canonical 的 Oliver Reiche 在邮件列表公告中所说：</p><p>“为确保每个风味版都为最终发布做好充分准备，请注意，除非风味版已按预定时间表成功提交 Beta 版本，否则将不被考虑进行官方发布。”</p><p>对于风味版的用户来说，这有一个明显的好处：在四月或十月到来时，发布版本将更加稳定。</p><p>每日构建版本也允许测试，但往往每天都在变化（并且主要面向同一小部分热心用户）。Beta 版本则冻结一个快照并为其命名，因此更广泛的用户群体可以测试相同的构建、组件和软件包集合。</p><p>根据公告，Beta 版本与最终发布版本之间的包差异应最小化，并仅限于 Bug 修复（不过也有官方机制允许后期添加功能，即功能冻结例外）。</p><p>但将 Beta 版本作为硬性要求，意味着风味版开发者将确切知道哪些 Bug 需要修复，以及何时修复。</p><p>你认为这一澄清会改善现状，还是对较小的风味版团队过于严格——其中一些团队正努力吸引和留住贡献者？请在评论区告诉我。</p></div>
+  <div class="article-body"><p>早期AMD GCN GPU正在改进GPU恢复过程，以应对挂起情况。这是Valve的开源Linux图形驱动团队为老旧AMD GPU带来的又一项改进。</p><p>Valve Linux开源GPU驱动团队的Timur Kristóf近期负责了多项早期GCN GPU的改进，特别是将GCN 1.0和GCN 1.1 GPU默认迁移到AMDGPU驱动，而非之前的Radeon驱动。他主导的最新工作是启用GFX IP块的软重置支持。</p><p>这一初始的GFX IP块软重置支持针对AMD“GFX8”图形IP，涵盖Polaris、Fiji、Tonga和Carrizo硬件。但Timur向Phoronix表示，他也在考虑为更老的GCN硬件实现此功能，因此可能追溯到GCN 1.0也能享受更好的重置体验。</p><p>重新设计AMDGPU重置处理：</p><p>“IP块软重置是一种仅重置GPU中一个IP块的方法，无需重置整个GPU或丢失VRAM内容。目前该功能已在多个IP块上实现，但实际上仅在Carrizo和Stoney上作为ASIC重置代码的一部分使用，并且会失败。</p><p>从ASIC重置代码路径中删除失效的代码。同时删除check_soft_reset()和pre/post_soft_reset()，这些函数相当无用且冗余（详情见提交信息）。</p><p>改为将IP块软重置作为GPU恢复方法。其工作方式类似于ring重置，但会影响属于该IP块的所有ring。例如，GFX IP块软重置将影响所有图形和计算ring。当作业超时时调用此方法。尝试最小化对非违规作业的影响，然后备份所有受影响ring的内容，执行硬件特定的软重置，最后恢复ring。为此，我还包含了Alex的一些补丁，这些补丁是为pipe重置编写的，也解决了IP块软重置的一些问题。</p><p>最后，修复GFX8上的软重置实现，确保其在所有GFX8芯片上正常工作。具体来说，修复重置后计算ring挂起的问题，以及重置后功耗增加的问题等。解决这些问题后，在GFX8上启用新的GPU恢复方法。”</p><p>能够仅重置图形IP块而不丢失VRAM内容，相比现状将是一个重大胜利。Valve Linux团队的其他成员帮助创建了一个Vulkan测试用例，通过故意让命令处理器挂起来触发硬重置。</p><p>希望GFX8重置功能能尽快完善并进入主线AMDGPU驱动，并且不久后GFX IP软重置支持能扩展到更老的Radeon GPU。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/06/ubuntu-flavours-mandatory-beta-release" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/AMD-Early-GCN-Better-Recovery" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

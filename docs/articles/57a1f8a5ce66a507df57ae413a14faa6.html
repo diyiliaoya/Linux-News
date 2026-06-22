@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 风味版现在必须发布 Beta 版本才能正式推出 — Linux 中文速报</title>
+<title>zlib-rs 0.6.4 发布：修复 Intel Raptor Lake 崩溃问题，引入 SIMD 优化 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 风味版现在必须发布 Beta 版本才能正式推出</h1>
+  <h1>zlib-rs 0.6.4 发布：修复 Intel Raptor Lake 崩溃问题，引入 SIMD 优化</h1>
 
-  <div class="article-summary">Ubuntu 宣布了一项重要政策更新，要求所有 Ubuntu 风味版必须发布 Beta 版本，不再允许例外。此前，错过 Beta 截止日期的风味版仍可申请一次性豁免，但 Ubuntu 26.04 LTS 周期中，使用 UKUI 桌面的 Ubuntu Kylin 在错过 Beta 窗口后仍发布了正式版，这促使了政策收紧。Canonical 的 Oliver Reiche 在邮件列表中表示，只有按时提交 Beta 版本的风味版才能获得官方正式发布资格。对用户而言，这意味着更稳定的发布版本，因为 Beta 版本冻结了快照，便于更广泛的测试，且 Beta 与正式版之间的包差异将仅限于 Bug 修复。</div>
+  <div class="article-summary">zlib-rs 0.6.4 稳定版发布，修复了 Intel Raptor Lake 平台因特定 MOVB 指令模式导致的内存损坏崩溃问题，并解决了 AArch64 上 Adler32 实现的差一错误。新版本还通过 VNNI ILP 技巧优化了标准 AVX-512 性能，在 AMD Zen 5 上表现更佳，同时为 LoongArch64 引入了优化的 CRC32 实现。</div>
 
-  <div class="article-body"><p>Ubuntu 风味版现在必须发布 Beta 版本才能正式推出 - OMG! Ubuntu</p><p>Ubuntu 宣布了一项“重要政策更新”，要求所有 Ubuntu 风味版必须发布 Beta 版本，无一例外。</p><p>大多数风味版每六个月都会顺利达到 Beta 里程碑。但在此之前，错过截止日期的风味版仍可申请一次性豁免。</p><p>在 Ubuntu 26.04 LTS 周期中，这种情况就发生在 Ubuntu Kylin 身上——这是一款面向中国用户、使用 UKUI 桌面的衍生版本。它错过了 Beta 窗口，但仍然发布了最终正式版。</p><p>这种情况将不再发生。要获得官方稳定版本，风味版现在必须与其他所有风味版同时发布 Beta 版本，正如 Canonical 的 Oliver Reiche 在邮件列表公告中所说：</p><p>“为确保每个风味版都为最终发布做好充分准备，请注意，除非风味版已按预定时间表成功提交 Beta 版本，否则将不被考虑进行官方发布。”</p><p>对于风味版的用户来说，这有一个明显的好处：在四月或十月到来时，发布版本将更加稳定。</p><p>每日构建版本也允许测试，但往往每天都在变化（并且主要面向同一小部分热心用户）。Beta 版本则冻结一个快照并为其命名，因此更广泛的用户群体可以测试相同的构建、组件和软件包集合。</p><p>根据公告，Beta 版本与最终发布版本之间的包差异应最小化，并仅限于 Bug 修复（不过也有官方机制允许后期添加功能，即功能冻结例外）。</p><p>但将 Beta 版本作为硬性要求，意味着风味版开发者将确切知道哪些 Bug 需要修复，以及何时修复。</p><p>你认为这一澄清会改善现状，还是对较小的风味版团队过于严格——其中一些团队正努力吸引和留住贡献者？请在评论区告诉我。</p></div>
+  <div class="article-body"><p>zlib-rs 0.6.4 发布：修复 Intel Raptor Lake 崩溃问题，引入 SIMD 优化 - Phoronix</p><p>zlib-rs 0.6.4 发布：修复 Intel Raptor Lake 崩溃问题，引入 SIMD 优化</p><p>发布于 2026 年 6 月 21 日下午 3:33（美国东部时间）</p><p>作为上周关于 Firefox 采用 zlib-rs 以及该基于 Rust 的 Zlib 实现获得显著上游改进的文章的后续，zlib-rs 0.6.4 版本现已发布，包含了所有这些最新增强功能。</p><p>Zlib-rs 0.6.4 于今日发布，是该 Rust Zlib 实现的最新稳定版本。该实现因其用 Rust 编写所带来的内存安全能力，以及在大规模场景下出色的 Zlib 压缩/解压性能，持续获得广泛采用。</p><p>正如近期 Trifecta Tech Foundation 博客文章所报道的，Zlib-rs 在过去一年中一直受到 Intel Raptor Lake 稳定性问题的困扰。该问题归根结底是一种特定的 MOVB 指令模式，在 Raptor Lake 平台上可能因内存损坏而触发错误。Zlib-rs 0.6.4 对此进行了规避，同时更新的 LLVM Clang 编译器代码也提供了相应的规避措施。</p><p>Zlib-rs 0.6.4 还修复了 AArch64 上 Adler32 实现中的一个差一错误，该错误曾导致校验和不正确。此问题不影响标量实现或 x86_64 上的 AVX2/AVX-512 实现，仅影响 AArch64 NEON 代码路径，原因是整数溢出。</p><p>Zlib-rs 0.6.4 还为标准 AVX-512 采用了一种 VNNI ILP 技巧，至少在 AMD Zen 5 处理器上显示出略微更好的性能。此外，LoongArch64 上引入了优化的 CRC32 实现，同时还有 CI 改进以及其他多项变更。</p><p>有关 Zlib-rs 0.6.4 的下载链接及该 Rust Zlib 实现更新的更多信息，请访问：</p><p>GIMP v0.54（1996 年版本，使用 Motif 工具包）现已通过 Flatpak 打包，可在现代 Linux 桌面上运行</p><p>pkgcli：PackageKit 的现代化、更友好的命令行界面</p><p>OpenJPH 0.28：借助新的 AVX2 优化，高吞吐量 JPEG2000 性能提升高达 1.9 倍</p><p>OpenCV 5.0 发布：重写 DNN 引擎，内置 LLM 和 VLM 支持</p><p>Blender 5.2 LTS 进入 Beta 阶段，带来新功能</p><p>AI 驱动的安全披露、NVIDIA Vera 及 Linux 7.1 特性——一个激动人心的五月</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>Linux 终于移除了 strncpy API，历时六年，涉及 360 多个补丁</p><p>Arch Linux AUR 再次遭受更复杂的恶意软件攻击</p><p>俄罗斯垃圾信息和脏话正困扰 Arch Linux AUR</p><p>systemd 261 发布：包含新的 systemd-sysinstall 操作系统安装程序、IMDSD 和 Storagectl</p><p>Linux 7.1 发布：新的 NTFS 驱动、面向 Panther Lake 的 Intel FRED、更快的 Arc 显卡</p><p>Linux 7.2 优化：仅移动两行代码，EXT4 和 XFS 的 IOPS 提升 5%</p><p>Firefox 152 现已可用：默认内置 JPEG-XL 支持，现代化设置界面</p><p>Epic Games 宣布开源版本控制系统 Lore</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权 © 2004 - 2026 由</p><p>所有商标均为其各自所有者财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/06/ubuntu-flavours-mandatory-beta-release" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/zlib-rs-0.6.4" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
