@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Audacity 4.0 Beta 让你测试其全新（更美观的）Qt 界面 — Linux 中文速报</title>
+<title>Xfce Wayland 合成器迎来首个预览/Alpha 版本 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #8b5cf61a; color: #8b5cf6;
-    border: 1px solid #8b5cf630;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">桌面环境</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Audacity 4.0 Beta 让你测试其全新（更美观的）Qt 界面</h1>
+  <h1>Xfce Wayland 合成器迎来首个预览/Alpha 版本</h1>
 
-  <div class="article-summary">Audacity 4.0 首个公开测试版发布，带来了数十年来最大的界面变革：从 wxWidgets 迁移至 Qt。新版 UI 更现代化，并引入频谱编辑、可定制工作区、多项目支持、云端保存等功能。但底层音频引擎仍基于旧代码库，通过 au3wrap 模块连接新前端。测试版稳定性不足，建议备份项目后再尝试。</div>
+  <div class="article-summary">经过半年的开发，Xfce 桌面环境的 Wayland 合成器 Xfwl4 发布了首个 Alpha 预览版本。该项目由 Brian Tarricone 主导，目标是在 Wayland 上尽可能复现 Xfce 在 X 服务器上的体验，使用户几乎察觉不到差异。当前版本存在一些功能限制，如缺少屏幕边距、工作区设置对话框无法使用、鼠标和触摸板设置对话框不可用等。</div>
 
-  <div class="article-body"><p>Audacity 4.0 Beta 让你测试其全新（更美观的）Qt 界面 - OMG! Ubuntu</p><p>Audacity 4 的首个公开测试版于本月发布，带来了这款标志性开源音频编辑器数十年来最大的设计变革。</p><p>该音频编辑器的界面自项目启动以来一直基于 wxWidgets 构建，现在则运行在 Qt 上。不过，处理文件 I/O、项目存储和内置效果的音频引擎仍使用旧代码库，通过一个名为 au3wrap 的模块连接到新前端。</p><p>从某种意义上说，Audacity 4 拥有全新外观，但它仍基于相同的核心引擎代码库（尽管经过了精简和清理）。GitHub 更新日志将其描述为使用 Qt 的“从头重写”，但这仅涉及 UI——这并非一个全新的 Audacity。</p><p>不过，这确实是一次重大更新。新外观（及其新标志）在很大程度上回应了关于 Audacity 看起来过时的批评。</p><p>不仅仅是新外观</p><p>除了视觉变化，还有许多新功能和改进值得探索。</p><p>频谱编辑与更可定制的 UI</p><p>重新设计的包络工具通过拖放和重塑控件处理增益曲线；频谱编辑让你直接在频谱图中选择频率区域，以便对特定频段应用效果；新的元数据编辑器可在导出前处理曲目标题、艺术家等标签。</p><p>前导录音功能也首次亮相（以前称为“插入与滚动”）。这让你可以在不影响后续内容的情况下录制音频的某个部分。</p><p>正在处理多个项目？现在它们可以同时保持打开状态，并且你可以在项目之间复制片段。Nyquist 和 VST3 插件在所有平台上均受支持，macOS 上支持 AudioUnits，Linux 上支持 LV2。</p><p>此外，还有通过 Audio.com 实现的内置云端保存（除非你禁用欢迎对话框，否则它会不断提醒你），一些新的布局选项（可自定义的工作区、彩色片段等），以及一个用于管理项目的新仪表板。</p><p>Audacity 3.x 兼容性如何？</p><p>Audacity 4.0 的新标志</p><p>你可以在 Audacity 4 中打开 Audacity 3 的项目文件，片段、轨道和标签将完整保留。没有迹象表明反向操作可行；考虑到变化之大，更安全的做法是假设 Audacity 4 的项目文件无法在 3.x 中打开。</p><p>如果你计划在 4.0 中尝试 3.x 项目并进行更改后保存，请记住这一点。请务必备份你的项目。</p><p>Audacity 3.x 的许多功能已包含在 4.0（Beta 2）中。</p><p>速度轨道、LADSPA 插件和 Vamp 分析器已被移除。目前尚未说明它们是否会在稳定版发布前回归。如果你需要这些功能，请继续使用稳定且受维护的 3.x 分支。</p><p>Audacity 3.7.1 与 4.0 Beta 一同发布。这是一个维护版本，修复了多声道 FLAC 文件导入、效果预设加载，以及在 Linux 上提供了在 HiDPI 显示器上显示效果更好的 wxGTK 界面。</p><p>我可以测试 Audacity 4.0 Beta 吗？</p><p>你可以从官方网站或项目 GitHub 页面下载适用于 Windows、macOS 和 Linux 的 Audacity 4.0.0 Beta 2。对于后者，有一个 Intel/AMD 64 位 AppImage 可供尝试，但没有 ARM64 版本（Windows 版有一个）。</p><p>作为测试版，无法保证稳定性。我只是为了截几张图而随便探索了一下，就遇到了几次严重崩溃，因此这个版本不适合处理任何你无法承受损失的内容。</p><p>但主要功能已经就绪，而且看起来不错——问题是，它们听起来是否合你心意？请在评论中告诉我。</p></div>
+  <div class="article-body"><p>Xfce Wayland 合成器迎来首个预览/Alpha 版本 - Phoronix</p><p>Xfce Wayland 合成器迎来首个预览/Alpha 版本</p><p>发布于 2026 年 6 月 22 日上午 10:37（美国东部时间）</p><p>在过去的半年里，Xfwl4 作为 Xfce 桌面环境的 Wayland 合成器一直在开发中。本周末发布了 Xfwl4 的首个预览版本，以 Alpha 形式呈现。</p><p>Xfwl4 的这个首个版本被描述为“已准备好进行更广泛的使用，尽管当然会存在错误和缺失的功能。请将其视为一个 Alpha 版本。”</p><p>Brian Tarricone 在 Xfce 项目的赞助下领导了 Xfwl4 的开发。Xfwl4 的最终目标是：“xfwl4 的最终目标是尽可能接近在 X 服务器上运行的 Xfce 桌面的行为。理想情况下，用户可以在两者之间切换，甚至不知道有差异。当然，实际上它不会那么无缝，并且还有更多工作要做，以尽可能接近这一理想状态。至少，这是第一个扎实的尝试。”</p><p>当前已知的一些功能限制包括：缺少屏幕边距、工作区设置对话框无法使用、鼠标和触摸板设置对话框无法使用、Xfdesktop 的最小化窗口图标视图、面板中的分页缩略图、启动时无法恢复窗口位置或工作区，以及其他早期限制。</p><p>关于 Xfwl4 首个预览版本的更多详情，请参阅 Brian 的博客。</p><p>Flatpak 1.18 发布，集成 AMD ROCm</p><p>广泛使用的 libinput 因任意根代码执行漏洞而更新</p><p>COSMIC 现已实现 Wayland 指针约束，以提供更好的游戏体验</p><p>COSMIC 桌面的磨砂玻璃效果带来 Windows Aero 风格</p><p>FreeRDP 3.25 添加实验性 AV1 支持</p><p>LXQt 2.4 发布，包含更多 Wayland 修复/改进</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动程序等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>Linux 终于经过六年工作和 360+ 补丁后淘汰了 strncpy API</p><p>Arch Linux AUR 再次遭受更复杂的恶意软件攻击</p><p>俄罗斯垃圾邮件和脏话正在困扰 Arch Linux AUR</p><p>systemd 261 发布，包含新的 systemd-sysinstall 操作系统安装程序、IMDSD 和 Storagectl</p><p>Linux 7.1 发布：新的 NTFS 驱动程序、适用于 Panther Lake 的 Intel FRED、更快的 Arc 显卡</p><p>开源 NVIDIA NVK Vulkan 驱动程序现已支持 DLSS</p><p>Linux 7.2 优化：移动两行代码后，EXT4 和 XFS 的 IOPS 提升 5%</p><p>Firefox 152 现已可用，默认内置 JPEG-XL 支持，现代化设置界面</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/06/audacity-4-0-beta" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Xfwl4-First-Release" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

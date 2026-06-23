@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Audacity 4.0 Beta 让你测试其全新（更美观的）Qt 界面 — Linux 中文速报</title>
+<title>Steam Machine 正式发布，售价 1049 至 1428 美元 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #8b5cf61a; color: #8b5cf6;
-    border: 1px solid #8b5cf630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">桌面环境</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Audacity 4.0 Beta 让你测试其全新（更美观的）Qt 界面</h1>
+  <h1>Steam Machine 正式发布，售价 1049 至 1428 美元</h1>
 
-  <div class="article-summary">Audacity 4.0 首个公开测试版发布，带来了数十年来最大的界面变革：从 wxWidgets 迁移至 Qt。新版 UI 更现代化，并引入频谱编辑、可定制工作区、多项目支持、云端保存等功能。但底层音频引擎仍基于旧代码库，通过 au3wrap 模块连接新前端。测试版稳定性不足，建议备份项目后再尝试。</div>
+  <div class="article-summary">Valve 于 2026 年 6 月 22 日公布了搭载 SteamOS Linux 的客厅 PC——Steam Machine 的定价。受内存和存储价格上涨影响，该设备定价偏高。基础 512GB 型号售价 1049 美元（含 Steam 手柄为 1128 美元），2TB 型号售价 1349 美元，顶级配置含手柄为 1428 美元。设备采用半定制 AMD Zen 4 APU，性能号称是 Steam Deck 的六倍，支持 4K 60 FPS 游戏。Valve 将采用随机预订流程应对需求。</div>
 
-  <div class="article-body"><p>Audacity 4.0 Beta 让你测试其全新（更美观的）Qt 界面 - OMG! Ubuntu</p><p>Audacity 4 的首个公开测试版于本月发布，带来了这款标志性开源音频编辑器数十年来最大的设计变革。</p><p>该音频编辑器的界面自项目启动以来一直基于 wxWidgets 构建，现在则运行在 Qt 上。不过，处理文件 I/O、项目存储和内置效果的音频引擎仍使用旧代码库，通过一个名为 au3wrap 的模块连接到新前端。</p><p>从某种意义上说，Audacity 4 拥有全新外观，但它仍基于相同的核心引擎代码库（尽管经过了精简和清理）。GitHub 更新日志将其描述为使用 Qt 的“从头重写”，但这仅涉及 UI——这并非一个全新的 Audacity。</p><p>不过，这确实是一次重大更新。新外观（及其新标志）在很大程度上回应了关于 Audacity 看起来过时的批评。</p><p>不仅仅是新外观</p><p>除了视觉变化，还有许多新功能和改进值得探索。</p><p>频谱编辑与更可定制的 UI</p><p>重新设计的包络工具通过拖放和重塑控件处理增益曲线；频谱编辑让你直接在频谱图中选择频率区域，以便对特定频段应用效果；新的元数据编辑器可在导出前处理曲目标题、艺术家等标签。</p><p>前导录音功能也首次亮相（以前称为“插入与滚动”）。这让你可以在不影响后续内容的情况下录制音频的某个部分。</p><p>正在处理多个项目？现在它们可以同时保持打开状态，并且你可以在项目之间复制片段。Nyquist 和 VST3 插件在所有平台上均受支持，macOS 上支持 AudioUnits，Linux 上支持 LV2。</p><p>此外，还有通过 Audio.com 实现的内置云端保存（除非你禁用欢迎对话框，否则它会不断提醒你），一些新的布局选项（可自定义的工作区、彩色片段等），以及一个用于管理项目的新仪表板。</p><p>Audacity 3.x 兼容性如何？</p><p>Audacity 4.0 的新标志</p><p>你可以在 Audacity 4 中打开 Audacity 3 的项目文件，片段、轨道和标签将完整保留。没有迹象表明反向操作可行；考虑到变化之大，更安全的做法是假设 Audacity 4 的项目文件无法在 3.x 中打开。</p><p>如果你计划在 4.0 中尝试 3.x 项目并进行更改后保存，请记住这一点。请务必备份你的项目。</p><p>Audacity 3.x 的许多功能已包含在 4.0（Beta 2）中。</p><p>速度轨道、LADSPA 插件和 Vamp 分析器已被移除。目前尚未说明它们是否会在稳定版发布前回归。如果你需要这些功能，请继续使用稳定且受维护的 3.x 分支。</p><p>Audacity 3.7.1 与 4.0 Beta 一同发布。这是一个维护版本，修复了多声道 FLAC 文件导入、效果预设加载，以及在 Linux 上提供了在 HiDPI 显示器上显示效果更好的 wxGTK 界面。</p><p>我可以测试 Audacity 4.0 Beta 吗？</p><p>你可以从官方网站或项目 GitHub 页面下载适用于 Windows、macOS 和 Linux 的 Audacity 4.0.0 Beta 2。对于后者，有一个 Intel/AMD 64 位 AppImage 可供尝试，但没有 ARM64 版本（Windows 版有一个）。</p><p>作为测试版，无法保证稳定性。我只是为了截几张图而随便探索了一下，就遇到了几次严重崩溃，因此这个版本不适合处理任何你无法承受损失的内容。</p><p>但主要功能已经就绪，而且看起来不错——问题是，它们听起来是否合你心意？请在评论中告诉我。</p></div>
+  <div class="article-body"><p>Steam Machine 正式发布，售价 1049 至 1428 美元 - Phoronix</p><p>Steam Machine 正式发布，售价 1049 至 1428 美元</p><p>2026 年 6 月 22 日下午 1:33（美国东部时间）</p><p>Valve 今天终于公布了搭载 SteamOS Linux 的客厅 PC——Steam Machine 的定价。由于内存和存储价格持续承压，Steam Machine 的定价处于高端水平。</p><p>这款 6 英寸的 AMD/Linux 驱动立方体设备专为 Steam 游戏打造，512GB 型号起售价为 1049 美元（含 Steam 手柄为 1128 美元），2TB 型号最高售价为 1349 美元，顶级配置含 Steam 手柄为 1428 美元。需要提醒的是，Steam Machine 采用半定制 AMD Zen 4 APU，配备 6 核 12 线程、RDNA3 28 计算单元、16GB DDR5 系统内存和 8GB GDDR6 显存。</p><p>Valve 宣称 Steam Machine 的性能是 Steam Deck 的六倍，能够在启用 FSR 的情况下实现 4K 60 FPS 游戏，并具备所有其他典型的 PC 游戏/游戏主机功能。</p><p>为应对预期的高需求，同时库存有限，Valve 将采用随机预订流程。从 6 月 25 日起，预购队列将进行一次随机排序。</p><p>SteamOS 3.8.10 稳定版发布，更新 Arch、支持 Steam Machine 并以 Wayland 桌面为默认</p><p>Valve 开发者发布针对 RADV 驱动的新 AMD Anti-Lag 实现</p><p>延迟后的 2026 年 5 月 Steam 调查：Linux 略低于 4%</p><p>SteamOS 3.8.6 Beta 发布，初步原生支持 AMD HDMI VRR</p><p>VKD3D-Proton 合并 Vulkan 描述符堆支持</p><p>长期领先的 AMD Linux GPU 驱动开发者现已加入 Valve 工作</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。他还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Linux 终于淘汰 strncpy API，历时六年、超过 360 个补丁</p><p>Arch Linux AUR 再次遭受更复杂的恶意软件攻击</p><p>俄语垃圾信息与脏话正困扰 Arch Linux AUR</p><p>systemd 261 发布，包含新的 systemd-sysinstall 操作系统安装程序、IMDSD 和 Storagectl</p><p>Linux 7.1 发布：新 NTFS 驱动、Panther Lake 的 Intel FRED、更快的 Arc 显卡</p><p>开源 NVIDIA NVK Vulkan 驱动现已支持 DLSS</p><p>Linux 7.2 优化：仅移动两行代码，EXT4 和 XFS 的 IOPS 提升 5%</p><p>Firefox 152 现已发布，默认内置 JPEG-XL 支持，现代化设置界面</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/06/audacity-4-0-beta" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Steam-Machine-1049" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

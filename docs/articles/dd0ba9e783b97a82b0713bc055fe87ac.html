@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Audacity 4.0 Beta 让你测试其全新（更美观的）Qt 界面 — Linux 中文速报</title>
+<title>Miracle-wm 桌面新增焦点模糊与夜间护眼模式 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #8b5cf61a; color: #8b5cf6;
-    border: 1px solid #8b5cf630;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">桌面环境</span>
+    <span class="tag">发行版</span>
     <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Audacity 4.0 Beta 让你测试其全新（更美观的）Qt 界面</h1>
+  <h1>Miracle-wm 桌面新增焦点模糊与夜间护眼模式</h1>
 
-  <div class="article-summary">Audacity 4.0 首个公开测试版发布，带来了数十年来最大的界面变革：从 wxWidgets 迁移至 Qt。新版 UI 更现代化，并引入频谱编辑、可定制工作区、多项目支持、云端保存等功能。但底层音频引擎仍基于旧代码库，通过 au3wrap 模块连接新前端。测试版稳定性不足，建议备份项目后再尝试。</div>
+  <div class="article-summary">基于 Wayland 的平铺窗口管理器 Miracle-wm 发布新版本，新增焦点模糊效果（对未聚焦窗口应用高斯模糊）和夜间护眼模式（根据时间自动调节屏幕色温）。此外，新版本实现了更多 Wayland 协议扩展，原生支持截图工具和屏幕共享，并修复了多个问题。开发者计划年底发布 1.0 正式版。</div>
 
-  <div class="article-body"><p>Audacity 4.0 Beta 让你测试其全新（更美观的）Qt 界面 - OMG! Ubuntu</p><p>Audacity 4 的首个公开测试版于本月发布，带来了这款标志性开源音频编辑器数十年来最大的设计变革。</p><p>该音频编辑器的界面自项目启动以来一直基于 wxWidgets 构建，现在则运行在 Qt 上。不过，处理文件 I/O、项目存储和内置效果的音频引擎仍使用旧代码库，通过一个名为 au3wrap 的模块连接到新前端。</p><p>从某种意义上说，Audacity 4 拥有全新外观，但它仍基于相同的核心引擎代码库（尽管经过了精简和清理）。GitHub 更新日志将其描述为使用 Qt 的“从头重写”，但这仅涉及 UI——这并非一个全新的 Audacity。</p><p>不过，这确实是一次重大更新。新外观（及其新标志）在很大程度上回应了关于 Audacity 看起来过时的批评。</p><p>不仅仅是新外观</p><p>除了视觉变化，还有许多新功能和改进值得探索。</p><p>频谱编辑与更可定制的 UI</p><p>重新设计的包络工具通过拖放和重塑控件处理增益曲线；频谱编辑让你直接在频谱图中选择频率区域，以便对特定频段应用效果；新的元数据编辑器可在导出前处理曲目标题、艺术家等标签。</p><p>前导录音功能也首次亮相（以前称为“插入与滚动”）。这让你可以在不影响后续内容的情况下录制音频的某个部分。</p><p>正在处理多个项目？现在它们可以同时保持打开状态，并且你可以在项目之间复制片段。Nyquist 和 VST3 插件在所有平台上均受支持，macOS 上支持 AudioUnits，Linux 上支持 LV2。</p><p>此外，还有通过 Audio.com 实现的内置云端保存（除非你禁用欢迎对话框，否则它会不断提醒你），一些新的布局选项（可自定义的工作区、彩色片段等），以及一个用于管理项目的新仪表板。</p><p>Audacity 3.x 兼容性如何？</p><p>Audacity 4.0 的新标志</p><p>你可以在 Audacity 4 中打开 Audacity 3 的项目文件，片段、轨道和标签将完整保留。没有迹象表明反向操作可行；考虑到变化之大，更安全的做法是假设 Audacity 4 的项目文件无法在 3.x 中打开。</p><p>如果你计划在 4.0 中尝试 3.x 项目并进行更改后保存，请记住这一点。请务必备份你的项目。</p><p>Audacity 3.x 的许多功能已包含在 4.0（Beta 2）中。</p><p>速度轨道、LADSPA 插件和 Vamp 分析器已被移除。目前尚未说明它们是否会在稳定版发布前回归。如果你需要这些功能，请继续使用稳定且受维护的 3.x 分支。</p><p>Audacity 3.7.1 与 4.0 Beta 一同发布。这是一个维护版本，修复了多声道 FLAC 文件导入、效果预设加载，以及在 Linux 上提供了在 HiDPI 显示器上显示效果更好的 wxGTK 界面。</p><p>我可以测试 Audacity 4.0 Beta 吗？</p><p>你可以从官方网站或项目 GitHub 页面下载适用于 Windows、macOS 和 Linux 的 Audacity 4.0.0 Beta 2。对于后者，有一个 Intel/AMD 64 位 AppImage 可供尝试，但没有 ARM64 版本（Windows 版有一个）。</p><p>作为测试版，无法保证稳定性。我只是为了截几张图而随便探索了一下，就遇到了几次严重崩溃，因此这个版本不适合处理任何你无法承受损失的内容。</p><p>但主要功能已经就绪，而且看起来不错——问题是，它们听起来是否合你心意？请在评论中告诉我。</p></div>
+  <div class="article-body"><p>焦点模糊、夜间护眼模式加入 Miracle-wm 桌面 - OMG! Ubuntu</p><p>基于 Wayland 的合成器 Miracle-wm 发布了新版本，它内置了 i3/Sway 风格的平铺窗口管理器。</p><p>开发者 Matthew Kosarek 是 Canonical 的工程师，他在业余时间开发这个以键盘驱动的用户体验。他表示，2026 年 4 月版本中引入的插件系统“每天都在变得更好”。</p><p>现在，插件可以使用两次分离式高斯模糊着色器，为单个未聚焦窗口设置模糊效果。这有助于提供视觉提示，让你更专注于当前窗口。</p><p>新版本利用输出着色器能力，将屏幕色调调整为橙色，减少蓝光发射。该功能按计划运行，从下午 6 点到早上 8 点生效。</p><p>此外，还实现了额外的 Wayland 协议扩展。这些扩展为 Miracle-wm 提供了对截图工具等流行实用程序的开箱即用支持，而 xdg-desktop-portal-wlr 则打开了屏幕共享管道。</p><p>Kosarek 在以下 YouTube 视频中演示了许多新功能：</p><p>Miracle-wm 的最新变更集展示</p><p>Miracle-wm 0.10.0 中的其他变更和修复：</p><p>- GTK4 工具，用于告知配置是否存在错误</p><p>- miraclemsg 调试覆盖层，显示窗口和输入区域信息</p><p>- 插件自动从 ~/.config/miracle-wm/plugins 加载</p><p>- WasmEdge 的 LLVM 不再与导致黑屏的问题冲突</p><p>- 现在，即使未在配置中列出，显示器也可正常使用</p><p>Miracle-wm 计划在今年年底发布其至关重要的 1.0 版本。</p><p>在 Ubuntu 上安装 Miracle-wm：</p><p>sudo snap install miracle-wm --classic</p><p>适用于 Ubuntu 25.10 或 26.04 LTS——PPA 不再支持 Ubuntu 24.04 LTS。</p><p>要使用它，请退出当前会话，然后从 Ubuntu 登录屏幕右下角的齿轮中选择“Miracle”会话。</p><p>要退出 Miracle-wm，可以按相应快捷键。</p><p>然而，Miracle-wm 并非传统的桌面环境，而仅仅是一个合成器。你需要手动编写文本配置文件来定义偏好，并安装额外的包来获取面板、启动器和小程序。</p><p>关于如何操作以及具体步骤的完整细节，请查阅相关文档。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/06/audacity-4-0-beta" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/06/miracle-wm-focus-blue-nightlight" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

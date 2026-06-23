@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Audacity 4.0 Beta 让你测试其全新（更美观的）Qt 界面 — Linux 中文速报</title>
+<title>在Ubuntu上通过‘BudsLink’控制AirPods和Galaxy Buds — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #8b5cf61a; color: #8b5cf6;
-    border: 1px solid #8b5cf630;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">桌面环境</span>
+    <span class="tag">发行版</span>
     <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Audacity 4.0 Beta 让你测试其全新（更美观的）Qt 界面</h1>
+  <h1>在Ubuntu上通过‘BudsLink’控制AirPods和Galaxy Buds</h1>
 
-  <div class="article-summary">Audacity 4.0 首个公开测试版发布，带来了数十年来最大的界面变革：从 wxWidgets 迁移至 Qt。新版 UI 更现代化，并引入频谱编辑、可定制工作区、多项目支持、云端保存等功能。但底层音频引擎仍基于旧代码库，通过 au3wrap 模块连接新前端。测试版稳定性不足，建议备份项目后再尝试。</div>
+  <div class="article-summary">BudsLink是一款GTK4/libadwaita Linux应用，让用户在Ubuntu等Linux发行版上直接控制蓝牙耳机的电池电量、主动降噪（ANC）、环境音模式等功能，无需使用手机应用。它支持Apple AirPods、Samsung Galaxy Buds、Sony耳机等设备，并提供GNOME Shell扩展、KDE Plasma小程序等桌面集成选项。该软件免费开源，可通过Flathub安装。</div>
 
-  <div class="article-body"><p>Audacity 4.0 Beta 让你测试其全新（更美观的）Qt 界面 - OMG! Ubuntu</p><p>Audacity 4 的首个公开测试版于本月发布，带来了这款标志性开源音频编辑器数十年来最大的设计变革。</p><p>该音频编辑器的界面自项目启动以来一直基于 wxWidgets 构建，现在则运行在 Qt 上。不过，处理文件 I/O、项目存储和内置效果的音频引擎仍使用旧代码库，通过一个名为 au3wrap 的模块连接到新前端。</p><p>从某种意义上说，Audacity 4 拥有全新外观，但它仍基于相同的核心引擎代码库（尽管经过了精简和清理）。GitHub 更新日志将其描述为使用 Qt 的“从头重写”，但这仅涉及 UI——这并非一个全新的 Audacity。</p><p>不过，这确实是一次重大更新。新外观（及其新标志）在很大程度上回应了关于 Audacity 看起来过时的批评。</p><p>不仅仅是新外观</p><p>除了视觉变化，还有许多新功能和改进值得探索。</p><p>频谱编辑与更可定制的 UI</p><p>重新设计的包络工具通过拖放和重塑控件处理增益曲线；频谱编辑让你直接在频谱图中选择频率区域，以便对特定频段应用效果；新的元数据编辑器可在导出前处理曲目标题、艺术家等标签。</p><p>前导录音功能也首次亮相（以前称为“插入与滚动”）。这让你可以在不影响后续内容的情况下录制音频的某个部分。</p><p>正在处理多个项目？现在它们可以同时保持打开状态，并且你可以在项目之间复制片段。Nyquist 和 VST3 插件在所有平台上均受支持，macOS 上支持 AudioUnits，Linux 上支持 LV2。</p><p>此外，还有通过 Audio.com 实现的内置云端保存（除非你禁用欢迎对话框，否则它会不断提醒你），一些新的布局选项（可自定义的工作区、彩色片段等），以及一个用于管理项目的新仪表板。</p><p>Audacity 3.x 兼容性如何？</p><p>Audacity 4.0 的新标志</p><p>你可以在 Audacity 4 中打开 Audacity 3 的项目文件，片段、轨道和标签将完整保留。没有迹象表明反向操作可行；考虑到变化之大，更安全的做法是假设 Audacity 4 的项目文件无法在 3.x 中打开。</p><p>如果你计划在 4.0 中尝试 3.x 项目并进行更改后保存，请记住这一点。请务必备份你的项目。</p><p>Audacity 3.x 的许多功能已包含在 4.0（Beta 2）中。</p><p>速度轨道、LADSPA 插件和 Vamp 分析器已被移除。目前尚未说明它们是否会在稳定版发布前回归。如果你需要这些功能，请继续使用稳定且受维护的 3.x 分支。</p><p>Audacity 3.7.1 与 4.0 Beta 一同发布。这是一个维护版本，修复了多声道 FLAC 文件导入、效果预设加载，以及在 Linux 上提供了在 HiDPI 显示器上显示效果更好的 wxGTK 界面。</p><p>我可以测试 Audacity 4.0 Beta 吗？</p><p>你可以从官方网站或项目 GitHub 页面下载适用于 Windows、macOS 和 Linux 的 Audacity 4.0.0 Beta 2。对于后者，有一个 Intel/AMD 64 位 AppImage 可供尝试，但没有 ARM64 版本（Windows 版有一个）。</p><p>作为测试版，无法保证稳定性。我只是为了截几张图而随便探索了一下，就遇到了几次严重崩溃，因此这个版本不适合处理任何你无法承受损失的内容。</p><p>但主要功能已经就绪，而且看起来不错——问题是，它们听起来是否合你心意？请在评论中告诉我。</p></div>
+  <div class="article-body"><p>在Ubuntu上通过‘BudsLink’控制AirPods和Galaxy Buds - OMG! Ubuntu</p><p>这是一款Linux应用，让你对来自Apple、Sony、Samsung和Nothing等品牌的蓝牙耳机拥有更多控制权——电池电量、主动降噪（ANC）等，全部无需使用手机应用。</p><p>大多数蓝牙音频设备在Ubuntu及其他Linux发行版上‘即插即用’可用于听音频，但仅此而已。将AirPods或Galaxy Buds与你的桌面配对后，你会发现无法调整你付费购买的所有设备端功能。</p><p>BudsLink是一款GTK4/libadwaita应用，能够做到这一点。它让你在Linux桌面上控制耳机功能，无需启动Android或iOS应用。它直接通过BlueZ（Ubuntu使用的默认蓝牙音频栈）与支持的设备通信。</p><p>表面上与去年我写过的某款应用类似，但BudsLink功能更全面，覆盖更广泛的硬件，并提供桌面集成选项。</p><p>访问高级音频设备功能</p><p>主界面、设备概览和AirPods Pro的设置</p><p>大多数可穿戴蓝牙音频设备都有电池，因此了解它们的电量很重要。BudsLink的主要吸引力在于显示每只耳机的电池电量以及充电盒的电量报告（在支持此功能的设备上）。</p><p>需要明确的是，BudsLink并未得到其支持的任何设备公司的认可或支持。</p><p>它还允许你——取决于设备——启用主动降噪和环境音模式、升频以及对话感知（可选在你开始说话时自动降低音量）。</p><p>通过入耳检测或手势实现媒体暂停和恢复，以及按钮配置也包含在内，如果你的设备支持，你还可以定义均衡器预设。</p><p>它支持哪些设备？</p><p>每款设备提供不同的设置</p><p>目前支持的硬件涵盖大多数Apple AirPods和Beats型号、一系列Sony音频穿戴设备、Samsung Galaxy Buds以及Nothing/CMF耳机和头戴式耳机。</p><p>不过，它仍在活跃开发中，并不断添加对新设备的支持——最近新增了Sony WH-XB900N，而Pixel Buds的支持将在下一个版本中推出。</p><p>无需应用的面板集成</p><p>这就是BudsLink真正巧妙的地方。它可以作为D-Bus服务运行，将设备信息暴露给你的系统，一系列配套的桌面集成可以接入这些信息。</p><p>通过一个单独的包，提供了GNOME Shell扩展、KDE Plasma小程序（和桌面小部件）以及Cinnamon小程序。目前，该包处于测试阶段，你需要从GitHub下载并运行一个脚本。</p><p>附加组件和小程序很好，但不是必需的，因为应用本身可以独立运行。但如果你更愿意从任务栏或桌面面板启用ANC而无需打开主应用，它们正是让这个工具区别于其他替代方案的关键。</p><p>在Ubuntu上安装BudsLink</p><p>这是一款免费、开源软件，可通过Flathub获取。</p><p>要在Ubuntu上安装它，你需要先安装Flatpak并启用Flathub仓库，然后在终端中运行：</p><p>flatpak install flathub io.github.maniacx.BudsLink</p><p>或者，如果你使用的是Ubuntu 26.04 LTS并且喜欢图形界面，可以从仓库安装Bazaar。它让你可以浏览、安装、管理和更新从Flathub安装的Flatpak应用。运行以下命令即可获得桌面应用：</p><p>sudo apt install bazaar</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/06/audacity-4-0-beta" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/06/budslink-airpods-galaxy-buds-linux" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

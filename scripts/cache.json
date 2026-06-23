@@ -317,5 +317,137 @@
     "title_zh": "高通为HP EliteBook X G2q X2 Elite笔记本电脑发布Linux补丁",
     "summary_zh": "高通工程师近日发布了针对HP EliteBook X G2q笔记本电脑的Linux支持补丁，该机型搭载Snapdragon X2 Elite SoC。补丁实现了Adreno图形、HDMI输出、USB Type-C、eDP、NVMe SSD、WiFi、键盘和触摸板等大部分功能，但集成摄像头尚未支持。该支持依赖于尚未合并的Linux内核补丁，有望在Linux v7.3内核中完成。",
     "fulltext_zh": "高通为HP EliteBook X G2q X2 Elite笔记本电脑发布Linux补丁 - Phoronix\n高通为HP EliteBook X G2q X2 Elite笔记本电脑发布Linux补丁\n发布于2026年6月21日上午10:38 EDT。\n上个月，高通工程师发布了在Linux上支持联想Yoga Slim 7x Gen11 Snapdragon X2笔记本电脑的补丁。本周末，高通又发布了一组新补丁，用于支持搭载Snapdragon X2 Elite SoC的HP EliteBook X G2q笔记本电脑型号。\nHP EliteBook X G2q有Snapdragon X2 Plus和X2 Elite两种型号，后者现在通过高通工程师Jason Pettit提交的待定补丁获得了Linux支持。\n他们在实际硬件上实现了Linux支持，并使大部分功能正常工作，包括Adreno图形、HDMI输出、USB Type-C、内部eDP、NVMe SSD、WiFi、键盘和触摸板以及其他功能。集成摄像头是少数尚未支持的功能之一，这与近期其他Snapdragon X2 Linux笔记本电脑的启用情况类似。\nHP EliteBook X G2q配备14英寸WUXGA显示屏，基础型号标配512GB存储和24GB内存，但最高可支持64GB内存，并预装Microsoft Windows 11 Pro。在当前环境下，HP EliteBook X G2q基础型号售价为3,885美元，且该型号为X2 Plus版本，不受这些补丁支持。X2 Elite版本搭载高通Snapdragon X2E-84-100和32GB内存，售价4,586美元；而搭载X2E-90-100和64GB内存的旗舰型号售价则高达6,337美元以上。\n此HP EliteBook X G2q的支持依赖于其他尚未合并的Linux内核补丁。我们将看到这一切能否在今年晚些时候的Linux v7.3内核中完成。无论如何，Snapdragon X2 Linux笔记本电脑的进展比Apple Silicon方面更快——后者Linux终于能在Apple M3上启动，但由于缺乏GPU支持和其他功能，目前尚无法供任何实际终端用户使用。\nGoogle的Gemini部分解决了现代华硕笔记本电脑上Linux启动时间过长的问题\nApple M3在三年后终于能在Linux上启动，Linux 7.2中还有其他SoC更新\nARCTIC风扇控制器，更多华硕和华擎主板在Linux 7.2中获得传感器监控\nLinux 7.2 EDAC驱动程序为Diamond Rapids和Nova Lake H做准备\n实验性、逆向工程和AI辅助的Rust驱动程序面向现代DisplayLink硬件\nLinux 7.2电源管理新增硬件支持，同时移除AMD Elan\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动程序等主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\nLinux在经过六年工作和360多个补丁后终于淘汰了strncpy API\nArch Linux AUR再次遭受更复杂的恶意软件攻击\n俄罗斯垃圾邮件和脏话正在困扰Arch Linux AUR\nsystemd 261发布，包含新的systemd-sysinstall OS安装程序、IMDSD和Storagectl\nLinux 7.1发布：新NTFS驱动程序、Panther Lake的Intel FRED、更快的Arc Graphics\nLinux 7.2优化显示，通过移动两行代码使EXT4和XFS的IOPS提升+5%\nFirefox 152现已发布，默认内置JPEG-XL支持，现代化设置界面\nEpic Games宣布Lore开源版本控制系统\n在享受无广告浏览的同时，\n单页文章查看\n法律声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "dd0ba9e783b97a82b0713bc055fe87ac": {
+    "id": "dd0ba9e783b97a82b0713bc055fe87ac",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/06/miracle-wm-focus-blue-nightlight",
+    "title_en": "Focus blur, nightlight added to Miracle-wm desktop",
+    "summary_en": "A new version of miracle-wm, the Wayland compositor built on&#160;Mir with an i3/Sway style tiling window manager, has been released. Developer Matthew Kosarek, a Canonical engineer developing this keyboard-driven UX in his free time, says the new v0.10.0 release sees the plugin system introduced in the April 2026 release &#8220;getting better and better everyday&#8221;. Plugins can now be used to set a blur effect on individual unfocused windows using a two-pass separable Gaussian blur shader. ",
+    "pub_date": "Tue, 23 Jun 2026 00:32:00 +0000",
+    "title_zh": "Miracle-wm 桌面新增焦点模糊与夜间护眼模式",
+    "summary_zh": "基于 Wayland 的平铺窗口管理器 Miracle-wm 发布新版本，新增焦点模糊效果（对未聚焦窗口应用高斯模糊）和夜间护眼模式（根据时间自动调节屏幕色温）。此外，新版本实现了更多 Wayland 协议扩展，原生支持截图工具和屏幕共享，并修复了多个问题。开发者计划年底发布 1.0 正式版。",
+    "fulltext_zh": "焦点模糊、夜间护眼模式加入 Miracle-wm 桌面 - OMG! Ubuntu\n\n基于 Wayland 的合成器 Miracle-wm 发布了新版本，它内置了 i3/Sway 风格的平铺窗口管理器。\n\n开发者 Matthew Kosarek 是 Canonical 的工程师，他在业余时间开发这个以键盘驱动的用户体验。他表示，2026 年 4 月版本中引入的插件系统“每天都在变得更好”。\n\n现在，插件可以使用两次分离式高斯模糊着色器，为单个未聚焦窗口设置模糊效果。这有助于提供视觉提示，让你更专注于当前窗口。\n\n新版本利用输出着色器能力，将屏幕色调调整为橙色，减少蓝光发射。该功能按计划运行，从下午 6 点到早上 8 点生效。\n\n此外，还实现了额外的 Wayland 协议扩展。这些扩展为 Miracle-wm 提供了对截图工具等流行实用程序的开箱即用支持，而 xdg-desktop-portal-wlr 则打开了屏幕共享管道。\n\nKosarek 在以下 YouTube 视频中演示了许多新功能：\n\nMiracle-wm 的最新变更集展示\n\nMiracle-wm 0.10.0 中的其他变更和修复：\n\n- GTK4 工具，用于告知配置是否存在错误\n- miraclemsg 调试覆盖层，显示窗口和输入区域信息\n- 插件自动从 ~/.config/miracle-wm/plugins 加载\n- WasmEdge 的 LLVM 不再与导致黑屏的问题冲突\n- 现在，即使未在配置中列出，显示器也可正常使用\n\nMiracle-wm 计划在今年年底发布其至关重要的 1.0 版本。\n\n在 Ubuntu 上安装 Miracle-wm：\n\nsudo snap install miracle-wm --classic\n\n适用于 Ubuntu 25.10 或 26.04 LTS——PPA 不再支持 Ubuntu 24.04 LTS。\n\n要使用它，请退出当前会话，然后从 Ubuntu 登录屏幕右下角的齿轮中选择“Miracle”会话。\n\n要退出 Miracle-wm，可以按相应快捷键。\n\n然而，Miracle-wm 并非传统的桌面环境，而仅仅是一个合成器。你需要手动编写文本配置文件来定义偏好，并安装额外的包来获取面板、启动器和小程序。\n\n关于如何操作以及具体步骤的完整细节，请查阅相关文档。"
+  },
+  "5aa3e0cff7f723e2a3ee5c8c3db92a0c": {
+    "id": "5aa3e0cff7f723e2a3ee5c8c3db92a0c",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/06/budslink-airpods-galaxy-buds-linux",
+    "title_en": "Control AirPods & Galaxy Buds on Ubuntu with ‘BudsLink’",
+    "summary_en": "BudsLink is a Linux app giving you more control over Bluetooth earbuds from the likes of Apple, Sony, Samsung and Nothing – battery levels, active noise cancellation (ANC) and more, all without needing to use a mobile app. Most Bluetooth audio devices &#8216;just work&#8217; on Ubuntu and other Linux distributions for listening to audio, but that&#8217;s about it. Pair AirPods or Galaxy Buds with your desktop and you&#8217;ll find you can&#8217;t adjust all of the on-device features you paid for",
+    "pub_date": "Mon, 22 Jun 2026 19:28:14 +0000",
+    "title_zh": "在Ubuntu上通过‘BudsLink’控制AirPods和Galaxy Buds",
+    "summary_zh": "BudsLink是一款GTK4/libadwaita Linux应用，让用户在Ubuntu等Linux发行版上直接控制蓝牙耳机的电池电量、主动降噪（ANC）、环境音模式等功能，无需使用手机应用。它支持Apple AirPods、Samsung Galaxy Buds、Sony耳机等设备，并提供GNOME Shell扩展、KDE Plasma小程序等桌面集成选项。该软件免费开源，可通过Flathub安装。",
+    "fulltext_zh": "在Ubuntu上通过‘BudsLink’控制AirPods和Galaxy Buds - OMG! Ubuntu\n\n这是一款Linux应用，让你对来自Apple、Sony、Samsung和Nothing等品牌的蓝牙耳机拥有更多控制权——电池电量、主动降噪（ANC）等，全部无需使用手机应用。\n\n大多数蓝牙音频设备在Ubuntu及其他Linux发行版上‘即插即用’可用于听音频，但仅此而已。将AirPods或Galaxy Buds与你的桌面配对后，你会发现无法调整你付费购买的所有设备端功能。\n\nBudsLink是一款GTK4/libadwaita应用，能够做到这一点。它让你在Linux桌面上控制耳机功能，无需启动Android或iOS应用。它直接通过BlueZ（Ubuntu使用的默认蓝牙音频栈）与支持的设备通信。\n\n表面上与去年我写过的某款应用类似，但BudsLink功能更全面，覆盖更广泛的硬件，并提供桌面集成选项。\n\n访问高级音频设备功能\n\n主界面、设备概览和AirPods Pro的设置\n\n大多数可穿戴蓝牙音频设备都有电池，因此了解它们的电量很重要。BudsLink的主要吸引力在于显示每只耳机的电池电量以及充电盒的电量报告（在支持此功能的设备上）。\n\n需要明确的是，BudsLink并未得到其支持的任何设备公司的认可或支持。\n\n它还允许你——取决于设备——启用主动降噪和环境音模式、升频以及对话感知（可选在你开始说话时自动降低音量）。\n\n通过入耳检测或手势实现媒体暂停和恢复，以及按钮配置也包含在内，如果你的设备支持，你还可以定义均衡器预设。\n\n它支持哪些设备？\n\n每款设备提供不同的设置\n\n目前支持的硬件涵盖大多数Apple AirPods和Beats型号、一系列Sony音频穿戴设备、Samsung Galaxy Buds以及Nothing/CMF耳机和头戴式耳机。\n\n不过，它仍在活跃开发中，并不断添加对新设备的支持——最近新增了Sony WH-XB900N，而Pixel Buds的支持将在下一个版本中推出。\n\n无需应用的面板集成\n\n这就是BudsLink真正巧妙的地方。它可以作为D-Bus服务运行，将设备信息暴露给你的系统，一系列配套的桌面集成可以接入这些信息。\n\n通过一个单独的包，提供了GNOME Shell扩展、KDE Plasma小程序（和桌面小部件）以及Cinnamon小程序。目前，该包处于测试阶段，你需要从GitHub下载并运行一个脚本。\n\n附加组件和小程序很好，但不是必需的，因为应用本身可以独立运行。但如果你更愿意从任务栏或桌面面板启用ANC而无需打开主应用，它们正是让这个工具区别于其他替代方案的关键。\n\n在Ubuntu上安装BudsLink\n\n这是一款免费、开源软件，可通过Flathub获取。\n\n要在Ubuntu上安装它，你需要先安装Flatpak并启用Flathub仓库，然后在终端中运行：\n\nflatpak install flathub io.github.maniacx.BudsLink\n\n或者，如果你使用的是Ubuntu 26.04 LTS并且喜欢图形界面，可以从仓库安装Bazaar。它让你可以浏览、安装、管理和更新从Flathub安装的Flatpak应用。运行以下命令即可获得桌面应用：\n\nsudo apt install bazaar"
+  },
+  "50f9d3f355bfc75e6462c58ed7a6ce75": {
+    "id": "50f9d3f355bfc75e6462c58ed7a6ce75",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/USB4STREAM-In-Linux-7.2",
+    "title_en": "USB4STREAM Merged For Linux 7.2 To Quickly Send Data Between USB4 Connected Systems",
+    "summary_en": "As part of today's USB/Thunderbolt subsystem updates for the ongoing Linux 7.2 kernel merge window, USB4STREAM was merged as a nifty and exciting addition to opening up some interesting USB4 connnectivity use-cases for high speed, low latency data transfers...",
+    "pub_date": "Mon, 22 Jun 2026 17:00:00 -0400",
+    "title_zh": "USB4STREAM 合并至 Linux 7.2，用于在 USB4 连接的系统间快速传输数据",
+    "summary_zh": "USB4STREAM 协议已合并至 Linux 7.2 内核，允许通过 USB4/Thunderbolt 在主机间高速、低延迟地传输原始数据包。该功能不仅支持快速文件传输，还可用于网络摄像头共享等创新场景。该协议由英特尔开发，已于 2026 年 6 月 22 日提交并获 Linus Torvalds 批准合并。",
+    "fulltext_zh": "USB4STREAM 合并至 Linux 7.2，用于在 USB4 连接的系统间快速传输数据 - Phoronix\nUSB4STREAM 合并至 Linux 7.2，用于在 USB4 连接的系统间快速传输数据\n发布于 2026 年 6 月 22 日下午 5:00（美国东部时间）\n\n作为今天内核合并窗口期间 USB/Thunderbolt 子系统更新的一部分，USB4STREAM 被合并，这是一项巧妙且令人兴奋的补充，为高速、低延迟数据传输开辟了一些有趣的 USB4 连接用例。\n\n早在五月，Phoronix 就率先报道了英特尔正在为 Linux 开发 USB4STREAM 协议，这是一种通过 USB4/Thunderbolt 在主机之间传输原始数据包的“超级简单”方式。\n\nUSB4STREAM 不仅开启了系统间的快速文件传输，还可用于其他高速用途，例如系统间的网络摄像头共享以及任何其他原始数据传输。任何使用读/写操作的应用程序都可以与这些新设备交互，从而开辟一系列创新用途。\n\n正如我在五月所指出的，USB4STREAM 支持已准备就绪进入 Linux 7.2，事实也确实如此。它于今天作为 USB/Thunderbolt 变更的一部分被提交，并且已合并到 Git 主线，未受到 Linus Torvalds 的任何反对。\n\n此外还包括其他常规 Thunderbolt 更新，改进了 Thunderbolt 的多显示器 DisplayPort 隧道分配，以及新的 AMD Promontory 21 芯片组 xHCI 控制器温度驱动程序，该驱动程序部分由 OpenAI 的编码代理创建。\n\nOneXPlayer 配置驱动程序已合并至 Linux 7.2，以及其他新硬件支持\n\n高通为 HP EliteBook X G2q X2 Elite 笔记本电脑发布 Linux 补丁\n\n谷歌的 Gemini 部分解决了现代华硕笔记本电脑上 Linux 启动时间过长的问题\n\nApple M3 在三年后启动 Linux，以及 Linux 7.2 中的其他 SoC 更新\n\nARCTIC 风扇控制器、更多华硕和华擎主板在 Linux 7.2 中获得传感器监控支持\n\nLinux 7.2 EDAC 驱动程序为 Diamond Rapids、Nova Lake H 做准备\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动程序和其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nLinux 经过六年努力终于消除了 strncpy API，涉及 360 多个补丁\n\nArch Linux AUR 再次遭受更复杂的恶意软件攻击\n\n俄罗斯垃圾邮件和脏话现在困扰着 Arch Linux AUR\n\nsystemd 261 发布，包含新的 systemd-sysinstall 操作系统安装程序、IMDSD 和 Storagectl\n\nLinux 7.1 发布：新的 NTFS 驱动程序、适用于 Panther Lake 的 Intel FRED、更快的 Arc 显卡\n\n开源 NVIDIA NVK Vulkan 驱动程序现在支持 DLSS\n\nLinux 7.2 优化显示，通过移动两行代码，EXT4 和 XFS 的 IOPS 提升 +5%\n\nFirefox 152 现已可用，默认内置 JPEG-XL 支持，现代化设置界面\n\n虽然提供无广告浏览，\n单页文章查看\n法律声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026\n使用的所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "b21bc6e6f9f2472b207a7b4f64e697cf": {
+    "id": "b21bc6e6f9f2472b207a7b4f64e697cf",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Intel-Optimization-Zone-1.1",
+    "title_en": "Intel Optimization Zone 1.1 Lays Out Tuning Recommendations For More Workloads",
+    "summary_en": "Back in March Intel announced the Optimization Zone as a new initiative for helping server administrators and developers better maximize the performance of different workloads running on Intel hardware. Out today is the Intel Optimization Zone 1.1 release with more workloads now covered for squeezing out the most performance on Intel CPUs...",
+    "pub_date": "Mon, 22 Jun 2026 14:45:09 -0400",
+    "title_zh": "Intel Optimization Zone 1.1 为更多工作负载提供调优建议",
+    "summary_zh": "Intel 发布了 Optimization Zone 1.1 版本，新增了对 Apache Cassandra、TensorFlow、Envoy、SciKit-Learn、zlib-accel 和 SIMULIA PowerFLOW 等工作负载的调优建议，旨在帮助服务器管理员和开发者更好地发挥 Intel 硬件的性能。该版本主要针对 Xeon 处理器，部分桌面处理器也能受益。Intel 通过集中式仓库提供这些指南，方便用户获取。",
+    "fulltext_zh": "Intel Optimization Zone 1.1 为更多工作负载提供调优建议 - Phoronix\nIntel Optimization Zone 1.1 为更多工作负载提供调优建议\n发布于 2026 年 6 月 22 日 下午 02:45 EDT。\n\nIntel 推出了 Optimization Zone 作为一项新举措，旨在帮助服务器管理员和开发者更好地最大化在 Intel 硬件上运行的不同工作负载的性能。今天发布的 Intel Optimization Zone 1.1 版本涵盖了更多工作负载，以便在 Intel CPU 上榨取最佳性能。\n\nIntel Optimization Zone 1.1 现已可用，涵盖了在 Intel 硬件上以优化方式运行额外工作负载的内容，主要针对 Xeon 处理器，但在某些情况下，Intel 桌面处理器也可能受益。新增的工作负载包括：使用 QuickAssist (QAT) 的 Apache Cassandra、针对不同 AI 用例的 TensorFlow 的 AMX 加速、优化 Envoy TCP 代理性能、SciKit-Learn 优化、在 Xeon CPU 上用于透明压缩的 zlib-accel，以及在 Intel Xeon 6 P-core 处理器上的 SIMULIA PowerFLOW。\n\nIntel 通过这个集中式仓库提供这些调优指南，方便用户访问，这比之前分散在不同 Intel 资源中、不易查找的文档要好得多。不过，希望未来能有更多工作，使这些性能优化在主流 Linux 发行版中默认启用。\n\n如果这些工作负载对您或您的组织有相关性，并且运行在 Intel 硬件上，更新后的 Intel Optimization Zone 1.1 可在 Intel 网站上获取。\n\nIntel TDX 现在更加实用，能够在不重启的情况下应用重要更新\nIntel Compute Runtime 现在宣传对 Nova Lake 的早期支持，并引入实验性“LEO”\nIntel Performance Skills：利用 AI 进行 Linux 性能优化的新开源项目\nIntel 终止 BigDL 开发：一项开源 AI/LLM 项目被砍掉\nIntel Thermald 2.5.12 发布……初步支持 ARM\nIntel 的 Open Image Denoise 2.5 为 GPU 带来显著的性能提升\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他。\n\nLinux 终于消除了 strncpy API，经过六年工作和 360 多个补丁\nArch Linux AUR 再次遭受更复杂的恶意软件攻击\n俄罗斯垃圾邮件和脏话现在困扰着 Arch Linux AUR\nsystemd 261 发布，包含新的 systemd-sysinstall 操作系统安装程序、IMDSD 和 Storagectl\nLinux 7.1 发布：新的 NTFS 驱动、针对 Panther Lake 的 Intel FRED、更快的 Arc 图形\n开源 NVIDIA NVK Vulkan 驱动现在支持 DLSS\nLinux 7.2 优化：移动两行代码后，EXT4 和 XFS 的 IOPS 提升 5%\nFirefox 152 现已可用，默认内置 JPEG-XL 支持，现代化的设置界面\n\n虽然提供无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "1e4da9570ec61b12b861a4cab97d4698": {
+    "id": "1e4da9570ec61b12b861a4cab97d4698",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Steam-Machine-1049",
+    "title_en": "Steam Machine Launches, Priced $1049 To $1428 USD",
+    "summary_en": "Valve today finally revealed pricing on their SteamOS Linux-powered Steam Machine living room PC. Given the ongoing RAM and storage pricing pressure, the Steam Machine pricing comes in at the high-end...",
+    "pub_date": "Mon, 22 Jun 2026 13:33:59 -0400",
+    "title_zh": "Steam Machine 正式发布，售价 1049 至 1428 美元",
+    "summary_zh": "Valve 于 2026 年 6 月 22 日公布了搭载 SteamOS Linux 的客厅 PC——Steam Machine 的定价。受内存和存储价格上涨影响，该设备定价偏高。基础 512GB 型号售价 1049 美元（含 Steam 手柄为 1128 美元），2TB 型号售价 1349 美元，顶级配置含手柄为 1428 美元。设备采用半定制 AMD Zen 4 APU，性能号称是 Steam Deck 的六倍，支持 4K 60 FPS 游戏。Valve 将采用随机预订流程应对需求。",
+    "fulltext_zh": "Steam Machine 正式发布，售价 1049 至 1428 美元 - Phoronix\nSteam Machine 正式发布，售价 1049 至 1428 美元\n2026 年 6 月 22 日下午 1:33（美国东部时间）\nValve 今天终于公布了搭载 SteamOS Linux 的客厅 PC——Steam Machine 的定价。由于内存和存储价格持续承压，Steam Machine 的定价处于高端水平。\n这款 6 英寸的 AMD/Linux 驱动立方体设备专为 Steam 游戏打造，512GB 型号起售价为 1049 美元（含 Steam 手柄为 1128 美元），2TB 型号最高售价为 1349 美元，顶级配置含 Steam 手柄为 1428 美元。需要提醒的是，Steam Machine 采用半定制 AMD Zen 4 APU，配备 6 核 12 线程、RDNA3 28 计算单元、16GB DDR5 系统内存和 8GB GDDR6 显存。\nValve 宣称 Steam Machine 的性能是 Steam Deck 的六倍，能够在启用 FSR 的情况下实现 4K 60 FPS 游戏，并具备所有其他典型的 PC 游戏/游戏主机功能。\n为应对预期的高需求，同时库存有限，Valve 将采用随机预订流程。从 6 月 25 日起，预购队列将进行一次随机排序。\nSteamOS 3.8.10 稳定版发布，更新 Arch、支持 Steam Machine 并以 Wayland 桌面为默认\nValve 开发者发布针对 RADV 驱动的新 AMD Anti-Lag 实现\n延迟后的 2026 年 5 月 Steam 调查：Linux 略低于 4%\nSteamOS 3.8.6 Beta 发布，初步原生支持 AMD HDMI VRR\nVKD3D-Proton 合并 Vulkan 描述符堆支持\n长期领先的 AMD Linux GPU 驱动开发者现已加入 Valve 工作\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。他还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\nLinux 终于淘汰 strncpy API，历时六年、超过 360 个补丁\nArch Linux AUR 再次遭受更复杂的恶意软件攻击\n俄语垃圾信息与脏话正困扰 Arch Linux AUR\nsystemd 261 发布，包含新的 systemd-sysinstall 操作系统安装程序、IMDSD 和 Storagectl\nLinux 7.1 发布：新 NTFS 驱动、Panther Lake 的 Intel FRED、更快的 Arc 显卡\n开源 NVIDIA NVK Vulkan 驱动现已支持 DLSS\nLinux 7.2 优化：仅移动两行代码，EXT4 和 XFS 的 IOPS 提升 5%\nFirefox 152 现已发布，默认内置 JPEG-XL 支持，现代化设置界面\n在享受无广告浏览的同时，\n单页文章查看\n法律声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "2a4778d6d4dbada3ca7053e8c1565474": {
+    "id": "2a4778d6d4dbada3ca7053e8c1565474",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/bcachefs-1386",
+    "title_en": "Benchmarking Bcachefs 1.38.6: The First Release No Longer \"Experimental\"",
+    "summary_en": "Released last week was Bcachefs 1.38.6 with a host of performance improvements to this out-of-tree, copy-on-write file-system. Given all the performance improvements and this being the first release since Kent Overstreet dropped the \"experimental\" flag on the file-system, I decided to fire up some benchmarks looking at how the Bcachefs file-system performance has changed with this new version.",
+    "pub_date": "Mon, 22 Jun 2026 11:30:00 -0400",
+    "title_zh": "Bcachefs 1.38.6 基准测试：首个不再标记为“实验性”的版本",
+    "summary_zh": "Bcachefs 1.38.6 是首个移除“实验性”标签的正式版本，带来了大量性能改进。本文通过在同一系统上对比 1.38.6 与 1.38.5 版本的基准测试，展示了该文件系统在设备/数据管理、纠删码优化及其他性能优化方面的提升。测试基于 AMD Ryzen Threadripper 9980X 工作站和 Samsung 9100 PRO NVMe SSD，使用默认挂载选项。",
+    "fulltext_zh": "Bcachefs 1.38.6 基准测试：首个不再标记为“实验性”的版本 - Phoronix\n\nBcachefs 1.38.6 基准测试：首个不再标记为“实验性”的版本\n发布于 2026 年 6 月 22 日美国东部时间上午 11:30。\n\n上周发布的 Bcachefs 1.38.6 版本带来了大量性能改进，这是一个树外、写时复制文件系统。鉴于所有性能改进以及这是 Kent Overstreet 移除文件系统“实验性”标记后的首个版本，我决定启动一些基准测试，看看 Bcachefs 文件系统性能在新版本中发生了怎样的变化。\n\n1.38.6 版本移除了文件系统的实验性标签，改进了设备/数据管理，优化了纠删码，并在先前版本的基础上进行了多种其他性能优化。关于新 Bcachefs 1.38.6 变更的详细信息，可通过 Kent Overstreet 的发布公告获取。\n\nBcachefs 仍在 Linux 内核源码树之外进行开发，但提供了 DKMS 包，便于在现代 Linux 发行版上轻松部署。为了本次测试，我在同一系统上比较了 Bcachefs 1.38.6 与之前的 Bcachefs 1.38.5 版本，以观察性能的演变。\n\n一旦 Linux 7.2 合并窗口关闭，并且 Bcachefs 也支持 Linux 7.2，我将带来一些针对 Bcachefs 与 Btrfs、EXT4、F2FS 和 XFS 等文件系统的最新对比基准测试。开源文件系统生态系统中持续涌现大量改进。\n\n在今天的测试中，使用了一台运行 Ubuntu 25.10 的 AMD Ryzen Threadripper 9980X 工作站，并采用了来自上游 Bcachefs 仓库的官方 Bcachefs 1.38.5 和 1.38.6 包。两次测试中，Bcachefs 均使用默认挂载选项进行了全新格式化和挂载。所有 Bcachefs 基准测试均使用 Samsung 9100 PRO 1TB NVMe SSD。除了此 Bcachefs 版本对比外，软件或硬件状态未做其他更改。\n\n缓存感知调度为 AMD Zen 5 在 PostgreSQL、Valkey 和网络性能方面带来显著提升\n\nLinux 6.6 LTS 到 Linux 7.1 基准测试：AMD Threadripper 三年内性能提升 13%\n\nGCC 16 生成的二进制文件比 GCC 15 更快，与 LLVM Clang 22 竞争激烈\n\nLinux 7.1 特性：新 NTFS 驱动、新 Intel + AMD 硬件、性能优化与现代化\n\nGCC 16 编译器在性能上比 GCC 15 带来可观提升\n\nLinux 7.1 在早期基准测试中整体表现良好\n\n在享受无广告浏览的同时，\n单页文章视图\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "b4fe5c20e6b948368c19c2afb4e4e212": {
+    "id": "b4fe5c20e6b948368c19c2afb4e4e212",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Xfwl4-First-Release",
+    "title_en": "Xfce Wayland Compositor Sees First Preview/Alpha Release",
+    "summary_en": "Over the past half-year, Xfwl4 has been developed as a Wayland compositor for the Xfce desktop environment. Released this weekend was the first preview release of Xfwl4 in alpha form...",
+    "pub_date": "Mon, 22 Jun 2026 10:37:10 -0400",
+    "title_zh": "Xfce Wayland 合成器迎来首个预览/Alpha 版本",
+    "summary_zh": "经过半年的开发，Xfce 桌面环境的 Wayland 合成器 Xfwl4 发布了首个 Alpha 预览版本。该项目由 Brian Tarricone 主导，目标是在 Wayland 上尽可能复现 Xfce 在 X 服务器上的体验，使用户几乎察觉不到差异。当前版本存在一些功能限制，如缺少屏幕边距、工作区设置对话框无法使用、鼠标和触摸板设置对话框不可用等。",
+    "fulltext_zh": "Xfce Wayland 合成器迎来首个预览/Alpha 版本 - Phoronix\nXfce Wayland 合成器迎来首个预览/Alpha 版本\n发布于 2026 年 6 月 22 日上午 10:37（美国东部时间）\n\n在过去的半年里，Xfwl4 作为 Xfce 桌面环境的 Wayland 合成器一直在开发中。本周末发布了 Xfwl4 的首个预览版本，以 Alpha 形式呈现。\n\nXfwl4 的这个首个版本被描述为“已准备好进行更广泛的使用，尽管当然会存在错误和缺失的功能。请将其视为一个 Alpha 版本。”\n\nBrian Tarricone 在 Xfce 项目的赞助下领导了 Xfwl4 的开发。Xfwl4 的最终目标是：“xfwl4 的最终目标是尽可能接近在 X 服务器上运行的 Xfce 桌面的行为。理想情况下，用户可以在两者之间切换，甚至不知道有差异。当然，实际上它不会那么无缝，并且还有更多工作要做，以尽可能接近这一理想状态。至少，这是第一个扎实的尝试。”\n\n当前已知的一些功能限制包括：缺少屏幕边距、工作区设置对话框无法使用、鼠标和触摸板设置对话框无法使用、Xfdesktop 的最小化窗口图标视图、面板中的分页缩略图、启动时无法恢复窗口位置或工作区，以及其他早期限制。\n\n关于 Xfwl4 首个预览版本的更多详情，请参阅 Brian 的博客。\n\nFlatpak 1.18 发布，集成 AMD ROCm\n广泛使用的 libinput 因任意根代码执行漏洞而更新\nCOSMIC 现已实现 Wayland 指针约束，以提供更好的游戏体验\nCOSMIC 桌面的磨砂玻璃效果带来 Windows Aero 风格\nFreeRDP 3.25 添加实验性 AV1 支持\nLXQt 2.4 发布，包含更多 Wayland 修复/改进\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动程序等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nLinux 终于经过六年工作和 360+ 补丁后淘汰了 strncpy API\nArch Linux AUR 再次遭受更复杂的恶意软件攻击\n俄罗斯垃圾邮件和脏话正在困扰 Arch Linux AUR\nsystemd 261 发布，包含新的 systemd-sysinstall 操作系统安装程序、IMDSD 和 Storagectl\nLinux 7.1 发布：新的 NTFS 驱动程序、适用于 Panther Lake 的 Intel FRED、更快的 Arc 显卡\n开源 NVIDIA NVK Vulkan 驱动程序现已支持 DLSS\nLinux 7.2 优化：移动两行代码后，EXT4 和 XFS 的 IOPS 提升 5%\nFirefox 152 现已可用，默认内置 JPEG-XL 支持，现代化设置界面\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "8413e487c5997e00b1ab706ccf42701b": {
+    "id": "8413e487c5997e00b1ab706ccf42701b",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/plex-lifetime-pass-jumps-to-750-jellyfin-responds-with-0-price-increase/",
+    "title_en": "Plex Lifetime Pass Jumps to $750, Jellyfin Responds with $0 Price Increase",
+    "summary_en": "Plex raises its Lifetime Pass price to $750, prompting Jellyfin to maintain its $0 pricing strategy. Discover the implications for streaming services.\nThe post Plex Lifetime Pass Jumps to $750, Jellyfin Responds with $0 Price Increase appeared first on Linux Today.",
+    "pub_date": "Mon, 22 Jun 2026 07:16:21 +0000",
+    "title_zh": "Plex终身通行证涨至750美元，Jellyfin以0美元涨价回应",
+    "summary_zh": "Plex将其终身通行证价格大幅上调至750美元，而开源替代方案Jellyfin则坚持免费策略，未做任何价格调整。这一对比凸显了流媒体服务领域商业与开源模式的分化，用户面临成本与功能之间的权衡。",
+    "fulltext_zh": "Plex将其终身通行证价格上调至750美元，此举促使Jellyfin维持其0美元的定价策略。探索这对流媒体服务的影响。\n\n该文章《Plex Lifetime Pass Jumps to $750, Jellyfin Responds with $0 Price Increase》最初发表于Linux Today。"
+  },
+  "d07cb0d502d9b8a603530ac15148499b": {
+    "id": "d07cb0d502d9b8a603530ac15148499b",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/how-to-install-openclaw-on-ubuntu-26-04/",
+    "title_en": "How to Install OpenClaw on Ubuntu 26.04",
+    "summary_en": "Discover the step-by-step guide to install OpenClaw on Ubuntu 26.04. Simplify your setup process with our comprehensive instructions and tips.\nThe post How to Install OpenClaw on Ubuntu 26.04 appeared first on Linux Today.",
+    "pub_date": "Mon, 22 Jun 2026 07:13:37 +0000",
+    "title_zh": "如何在 Ubuntu 26.04 上安装 OpenClaw",
+    "summary_zh": "本文提供了在 Ubuntu 26.04 上安装 OpenClaw 的详细分步指南，涵盖从系统准备到安装完成的完整流程，并附有实用技巧，帮助用户简化配置过程。",
+    "fulltext_zh": "了解在 Ubuntu 26.04 上安装 OpenClaw 的分步指南。通过我们全面的说明和技巧，简化您的设置过程。\n\n本文《如何在 Ubuntu 26.04 上安装 OpenClaw》首发于 Linux Today。"
+  },
+  "9e955597c4ea2f610ce6f1b7a18d7743": {
+    "id": "9e955597c4ea2f610ce6f1b7a18d7743",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/wines-vkd3d-2-0-brings-direct3d-12-to-vulkan-updates/",
+    "title_en": "Wine’s VKD3D 2.0 Brings Direct3D 12 to Vulkan Updates",
+    "summary_en": "Explore the latest updates in Wine's VKD3D 2.0, which brings Direct3D 12 capabilities to Vulkan, revolutionizing gaming experiences on Linux platforms.\nThe post Wine’s VKD3D 2.0 Brings Direct3D 12 to Vulkan Updates appeared first on Linux Today.",
+    "pub_date": "Mon, 22 Jun 2026 07:12:02 +0000",
+    "title_zh": "Wine 的 VKD3D 2.0 为 Vulkan 带来 Direct3D 12 更新",
+    "summary_zh": "Wine 的 VKD3D 2.0 版本发布，将 Direct3D 12 功能引入 Vulkan，显著提升了 Linux 平台上的游戏体验。该更新通过改进图形兼容性和性能，为 Linux 用户带来了更流畅的 Windows 游戏运行支持。",
+    "fulltext_zh": "探索 Wine 的 VKD3D 2.0 最新更新，该版本将 Direct3D 12 功能引入 Vulkan，彻底改变了 Linux 平台上的游戏体验。\n\n本文最初发表于 Linux Today。"
+  },
+  "bb159e41c5edf3a0672b056bd4326111": {
+    "id": "bb159e41c5edf3a0672b056bd4326111",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/biwin-black-opal-nv7400-1tb-m-2-pcie-4-0-nvme-ssd-review/",
+    "title_en": "Biwin Black Opal NV7400 1TB M.2 PCIe 4.0 NVMe SSD Review",
+    "summary_en": "Uncover the capabilities of the Biwin Black Opal NV7400 1TB M.2 PCIe 4.0 NVMe SSD. Our comprehensive review highlights its speed, efficiency, and overall performance.\nThe post Biwin Black Opal NV7400 1TB M.2 PCIe 4.0 NVMe SSD Review appeared first on Linux Today.",
+    "pub_date": "Mon, 22 Jun 2026 07:09:45 +0000",
+    "title_zh": "Biwin Black Opal NV7400 1TB M.2 PCIe 4.0 NVMe SSD 评测",
+    "summary_zh": "本文对Biwin Black Opal NV7400 1TB M.2 PCIe 4.0 NVMe固态硬盘进行了全面评测，重点展示了其速度、效率及整体性能表现，帮助用户了解这款SSD的实际能力。",
+    "fulltext_zh": "揭示Biwin Black Opal NV7400 1TB M.2 PCIe 4.0 NVMe固态硬盘的性能潜力。我们的全面评测重点展示了其速度、效率及整体性能表现。\n\n该文章最初发表于Linux Today。"
+  },
+  "83f1f326924a26f2e61770f00fc84c97": {
+    "id": "83f1f326924a26f2e61770f00fc84c97",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/witr-a-tool-that-explains-why-a-linux-process-is-running/",
+    "title_en": "witr: A Tool That Explains Why a Linux Process Is Running",
+    "summary_en": "Uncover the reasons behind active Linux processes with Witr. This powerful tool simplifies process management, making it easier to optimize your system performance.\nThe post witr: A Tool That Explains Why a Linux Process Is Running appeared first on Linux Today.",
+    "pub_date": "Mon, 22 Jun 2026 07:08:17 +0000",
+    "title_zh": "witr：一款解释Linux进程为何运行的工具",
+    "summary_zh": "Witr是一款强大的Linux工具，能够揭示活跃进程背后的运行原因，简化进程管理，帮助用户优化系统性能。本文介绍了该工具的核心功能及其在系统管理中的实用价值。",
+    "fulltext_zh": "使用Witr揭示活跃Linux进程背后的原因。这款强大的工具简化了进程管理，使优化系统性能变得更加容易。\n本文“witr：一款解释Linux进程为何运行的工具”最初发表于Linux Today。"
   }
 }
