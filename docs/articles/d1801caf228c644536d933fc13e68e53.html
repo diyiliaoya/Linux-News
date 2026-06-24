@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DistroWatch 周刊，第 1178 期 — Linux 中文速报</title>
+<title>DeviceTree-ACPI混合模式提议：改善Snapdragon笔记本的Linux支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>DistroWatch 周刊，第 1178 期</h1>
+  <h1>DeviceTree-ACPI混合模式提议：改善Snapdragon笔记本的Linux支持</h1>
 
-  <div class="article-summary">本期 DistroWatch 周刊报道了 Arch Linux 的 AUR 仓库再次遭受攻击、Fedora 用户增长但贡献者退休、Ubuntu 计划为 26.10 版本加入语音识别功能、Canonical 更新测试版政策、以及为何应避免使用不可变桌面系统等新闻。此外还介绍了 KDE Plasma 6.7 的亮点、AUR 被攻破的意义、以及针对新手推荐的友好发行版等问答内容。</div>
+  <div class="article-summary">前Red Hat工程师Hans de Goede提出DeviceTree-ACPI混合模式，旨在改善高通Snapdragon X系列笔记本的Linux支持。当前Linux依赖Device Tree而非ACPI，而Windows 11 on Arm使用ACPI但表不完善。混合模式允许部分利用ACPI信息，已在联想ThinkPad T14s Gen 6上成功移除键盘和触摸板的Device Tree描述。该提案有望推动未来Snapdragon笔记本实现纯ACPI启动。</div>
 
-  <div class="article-body"><p>DistroWatch 周刊，第 1178 期 (DistroWatch.com 新闻)</p><p>DistroWatch.com 由以下赞助</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW 周刊 / 评测存档</p><p>访客评分与评论</p><p>按评分排序的项目排名</p><p>播客、新闻通讯与评测</p><p>跨发行版比较软件包</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停产的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与窍门专栏</p><p>误解与误区专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>发行版可视化家族树</p><p>常见问题解答</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>Ubuntu 计划加入语音转文字功能</p><p>Ubuntu 更新关于 Ubuntu 变体测试版和最终版的政策</p><p>避免使用不可变桌面的理由</p><p>Arch 用户软件仓库再次遭受攻击</p><p>Fedora 用户增长，贡献者退休</p><p>Slackware 终于将 Plasma 更新至版本 6</p><p>Arch Linux 报告 AUR 仓库中的恶意事件</p><p>开发者复活基于 Arch 的 Antergos 发行版</p><p>Asahi Linux 项目警告双启动用户不要升级到 MacOS 27</p><p>Ubuntu MATE 的未来</p><p>易于使用的 PBX - 托管或自管理</p><p>Linux 电话系统</p><p>免费在线聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程工作应用：iOS 或 Android</p><p>免费视频会议</p><p>3CX 的 VoIP / PBX 操作指南</p><p>不要被抓住，制定灾难恢复计划！</p><p>必备的在线聊天报告与统计</p><p>导致通话欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成对比</p><p>3CX StartUP 的 5 个杀手级功能</p><p>不要成为“那种人”第 1 卷：保持复杂凭证</p><p>不要成为“那种人”第 2 卷：通话欺诈</p><p>不要成为“那种人”第 3 卷：4 大安全提示</p><p>不要成为“那种人”第 4 卷：监控您的实例</p><p>红帽周五五件事 - 2026 年 6 月 19 日</p><p>Ubuntu 周刊 948</p><p>全循环每周新闻</p><p>不合逻辑的冲动 ISO</p><p>最新新闻与更新</p><p>新闻过滤选项</p><p>DistroWatch 周刊，第 1178 期</p><p>新闻：Arch 回应更多 AUR 攻击，Fedora 社区增长，避免使用不可变桌面的理由，Ubuntu 26.10 将获得语音识别，Canonical 更新测试版政策，KDE Plasma 6.7 亮点</p><p>问答：AUR 被攻破意味着什么？</p><p>上周发布：EasyOS 7.4, FreeBSD 15.1, Univention 5.2-6, Home Assistant OS 18.0, PorteuX 2.7</p><p>种子角：TUXEDO OS</p><p>民意调查：从 AUR 安装软件</p><p>网站新闻：服务器宕机</p><p>在本周刊中阅读更多内容...</p><p>Security Onion 是一款基于 Oracle Linux 的专用安全导向 Linux 发行版。它是一个免费且开放的平台，用于威胁狩猎、企业安全监控和日志管理。它包含用于警报、仪表板、狩猎、PCAP、检测和案例管理的自定义界面。它还包含其他工具，例如 osquery（一种使用 SQL 查询探索和监控操作系统数据的工具）、CyberChef（一种用于加密、编码、压缩和数据分析的 Web 应用程序）、Elasticsearch（一种数据搜索引擎）、Logstash（一种数据收集和处理引擎）、Kibana（一种用于 Elasticsearch 的数据可视化插件）、Suricata（一种入侵检测和防御系统）以及 Zeek（一种软件网络分析框架）。</p><p>技巧与窍门：创建、删除、修改和忽略别名</p><p>问答：拆分与合并文件</p><p>问答：适用于旧硬件的发行版</p><p>问答：为新手推荐友好的发行版以及为什么 Linux 发行版是免费的</p><p>问答：Ubuntu 软件包的来源</p><p>问答：家庭用最小化聊天室</p><p>技巧与窍门：如何在 Linux 中按多个条件查找文件</p><p>技巧与窍门：使用 Anbox 在 GNU/Linux 上运行 Android 应用程序</p><p>技巧与窍门：在 Ubuntu 下回退到旧内核</p><p>问答：运行具有自动更新的发行版</p><p>版权所有 © 2001 - 2026 Atea Ataroa Limited。保留所有权利。</p></div>
+  <div class="article-body"><p>DeviceTree-ACPI混合模式提议：改善Snapdragon笔记本的Linux支持 - Phoronix</p><p>DeviceTree-ACPI混合模式提议：改善Snapdragon笔记本的Linux支持</p><p>发布于2026年6月23日美国东部时间上午11:23。</p><p>多年来在Red Hat工作期间，Hans de Goede以推动众多出色的Linux笔记本改进而闻名，这些改进惠及AMD/Intel x86_64硬件。Hans去年离职，转而推进其开源/Linux支持工作。今天他提出了一项重要的新补丁系列供审议，该补丁有可能显著改善高通Snapdragon X系列笔记本的Linux支持，并为未来Snapdragon笔记本在Linux上的更好支持提供重要指标。</p><p>Hans de Goede发布了一份关于新补丁系列的征求意见稿（RFC），该补丁实现了他所谓的DeviceTree-ACPI混合模式。Linux上的高通Snapdragon X1/X2笔记本一直仅依赖Device Tree来实现系统支持，而非ACPI，这与Linux上大多数Arm单板计算机类似。与此同时，Windows 11 on Arm一直使用ACPI，但当前的ACPI表对Linux而言不完善，因此未被使用。但Hans提议采用DeviceTree-ACPI混合模式，至少可以部分利用ACPI信息。</p><p>Hans在RFC补丁系列的开头写道：</p><p>“目前，一旦内核启动时加载了填充的DT，arch/arm64代码就会设置acpi_disabled=1，导致整个ACPI子系统被禁用。对于WoA Snapdragon笔记本——其出厂Windows操作系统实际上使用这些表启动——这并不一定是可取的。</p><p>至少解析ACPI表并使ACPI fwnodes可供设备驱动程序使用可能仍然有意义。我称之为DT-ACPI混合模式。</p><p>目前这主要是一个实验，也可能是加速在当前可用的Snapdragon笔记本上运行Linux的一种方法。</p><p>在当前笔记本上，由于ACPI表中缺少某些信息，Linux无法使用ACPI启动。人们正在努力改变这一现状，以便未来的WoA Snapdragon笔记本能够仅使用ACPI启动Linux，而无需Devicetree。”</p><p>最后一句尤其令人兴奋，预示着未来高通Snapdragon驱动的笔记本在Linux上可能仅使用ACPI，而不再依赖Device Tree。考虑到目前为所有不同的Snapdragon X/X2笔记本创建、测试并上游提交DT的艰辛，这将是一个巨大的胜利。</p><p>这种DT-ACPI混合模式对现有的Snapdragon笔记本非常有趣，它至少可以实现：在通过Device Tree启动的当前系统中探索ACPI表；让Linux设备驱动程序在通过DT启动时仍能访问某些有用的ACPI数据；以及在可能的领域利用ACPI。Hans的邮件列表帖子详细介绍了其中一些领域。</p><p>随着今天发布的补丁，它已经在一定程度上生效：Hans测试了一台联想ThinkPad T14s Gen 6，并成功移除了键盘和触摸板的Device Tree描述，转而由ACPI实例化它们。它成功了！</p><p>这种DT-ACPI混合模式将走向何方，以及它可能以何种形式进入主线Linux内核，这将非常有趣。目前，想了解更多信息的人可以查看Linux内核邮件列表。与此同时，我非常期待未来Snapdragon笔记本在Linux上可能实现纯ACPI启动，摆脱DT的混乱局面。</p><p>“令人作呕”的Linux sched_ext源代码在Linus Torvalds投诉后重构</p><p>Linux 7.2在AMD EPYC Sorano上展现出一些意外且不错的性能提升</p><p>Linux 7.2 sched_ext继续推进子调度器支持</p><p>Linux的KUnit终于支持JUnit输出</p><p>Linux经过六年努力、360多个补丁后终于淘汰了strncpy API</p><p>Linux 7.2移除了最后一个优化的MD5实现</p><p>Michael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富L</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12879" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/DT-ACPI-Hybrid-Mode-Linux" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

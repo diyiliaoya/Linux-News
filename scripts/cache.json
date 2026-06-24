@@ -449,5 +449,148 @@
     "title_zh": "witr：一款解释Linux进程为何运行的工具",
     "summary_zh": "Witr是一款强大的Linux工具，能够揭示活跃进程背后的运行原因，简化进程管理，帮助用户优化系统性能。本文介绍了该工具的核心功能及其在系统管理中的实用价值。",
     "fulltext_zh": "使用Witr揭示活跃Linux进程背后的原因。这款强大的工具简化了进程管理，使优化系统性能变得更加容易。\n本文“witr：一款解释Linux进程为何运行的工具”最初发表于Linux Today。"
+  },
+  "331e3202c26d14cd17f6cf61867e16d3": {
+    "id": "331e3202c26d14cd17f6cf61867e16d3",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/06/cosmic-desktop-update-system-monitor",
+    "title_en": "COSMIC desktop update adds new system monitor app",
+    "summary_en": "A new update to System76&#8217;s COSMIC desktop is now rolling out with a new system monitoring tool and a fresh set of fixes and fine-tuning. COSMIC Epoch 1.1.0 also sees the developers behind the Rust-based desktop opting to &#8220;[increment] the minor version regularly in order to allow for mid-release patch versions if necessary&#8221;. The biggest new feature is COSMIC Monitor, a native system monitoring tool built using the same Iced toolkit and widget set the rest of the desktop&#8217;s ",
+    "pub_date": "Tue, 23 Jun 2026 22:05:04 +0000",
+    "title_zh": "COSMIC 桌面更新新增系统监视器应用",
+    "summary_zh": "System76 的 COSMIC 桌面发布 Epoch 1.1.0 更新，主要新增了原生系统监视工具 COSMIC Monitor，该工具基于 Iced 工具包构建，将取代 GNOME 系统监视器。此外，更新还修复了长时间运行导致的 CPU 占用上升问题，支持递归扫描自定义壁纸目录、通过配置文件命名固定工作区，并实现了 pointer-warp-v1 Wayland 协议。其他改进包括排序图标优化、键盘导航增强、MIME 类型图标扩充等。Pop!_OS 24.04 LTS 用户可通过常规更新获取。",
+    "fulltext_zh": "COSMIC 桌面更新新增系统监视器应用 - OMG! Ubuntu\nSystem76 的 COSMIC 桌面现已推出新更新，包含一款新的系统监视工具以及一系列修复和微调。\n\nCOSMIC Epoch 1.1.0 还标志着这款基于 Rust 的桌面背后的开发者决定“定期递增次要版本号，以便在必要时为中间版本提供补丁版本”。\n\n最大的新功能是 COSMIC Monitor，这是一款原生系统监视工具，使用与其他桌面核心应用相同的 Iced 工具包和小部件集构建。它将取代基于 GTK 的 GNOME 系统监视器，但用户仍可继续安装和使用后者。\n\nCOSMIC Monitor（前景），GNOME 系统监视器（背景）\n\n每个版本都会带来一系列针对桌面、底层组件和核心应用的错误修复和功能改进。在 COSMIC 1.1.0 中，值得注意的变化包括“防止长时间运行会话中逐渐变慢和 CPU 使用率上升”。\n\n排序图标表示活动模式\n\n现已支持递归扫描自定义壁纸目录，你可以通过配置文件命名固定工作区，并且系统实现了 pointer-warp-v1 Wayland 协议。\n\n排序操作的图标（之前使用 unicode，但如果桌面字体发生变化，图标也会改变）已启用，键盘导航功能得到增强，MIME 类型应用处理得到改进，以便文件在兼容应用中打开。\n\n更多 MIME 类型图标被添加到标准 COSMIC 图标集中，以帮助用户更好地区分文件。新增了 PDF、ePub、可执行文件以及各种流行的编码、开发和编程文档的图标，包括其他类型。\n\n其他变化包括修复了输入和输出音量匹配时 OSD 不显示的问题，处理了 openvpn 导入中的非文件 URL，以及通过 XDG Portals 实现了“屏幕录制对话框中更好的输出排列”。\n\nEpoch 1.1.0 中（众多）新 MIME 类型图标的一部分\n\nCOSMIC Epoch 1.1.0 现已可用。如果你使用的是 Pop!_OS 24.04 LTS，你将通过常规软件更新收到所有更改（事实上，你可能已经收到了——Epoch 只是将它们整合在一起供打包者使用）。\n\n适用于 Ubuntu 26.04 LTS 的非官方 COSMIC PPA 应该会很快更新。"
+  },
+  "3426920e7e7a136d282d8df049756634": {
+    "id": "3426920e7e7a136d282d8df049756634",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/pinevoice-smart-speaker/",
+    "title_en": "PINE64's Smart Speaker is a Home Assistant Powered Alternative to Amazon Echo",
+    "summary_en": "It is powered by a RISC-V chip, has a hardware mic mute switch, and costs $49.99.",
+    "pub_date": "Tue, 23 Jun 2026 15:46:32 GMT",
+    "title_zh": "PINE64智能音箱：基于Home Assistant的Amazon Echo替代品",
+    "summary_zh": "PINE64推出了一款名为PineVoice的智能音箱，售价49.99美元，采用RISC-V芯片，配备硬件麦克风静音开关。该设备专为Home Assistant设计，作为语音卫星设备运行，支持本地唤醒词检测，无需云端处理音频。它拥有双麦克风阵列、内置扬声器、物理音量按钮和LED指示灯环，通过USB-C接口供电和数据传输。目前仍处于早期开发阶段，可能存在一些小问题。",
+    "fulltext_zh": "PINE64智能音箱：基于Home Assistant的Amazon Echo替代品\n\nPINE64智能音箱：基于Home Assistant的Amazon Echo替代品\n\n它采用RISC-V芯片，配备硬件麦克风静音开关，售价49.99美元。\n\n自2015年首款PINE A64单板计算机在Kickstarter上众筹以来，PINE64一直致力于打造价格亲民的ARM和RISC-V硬件。这家社区驱动的公司随后推出了诸如PinePhone、ROCK系列单板计算机以及Ox64 RISC-V板等设备。如今，他们正进军智能音箱领域，选择走Home Assistant路线，而非捆绑Alexa或Google Assistant。\n\nPINE64指出，该设备仍处于早期开发阶段，可能存在一些小问题。\n\nPineVoice专为Home Assistant设计，作为语音卫星设备而非通用智能音箱，其动力来自BL808 SoC。这是一款RISC-V系统级芯片，集成了480 MHz的64位主核心、150 MHz的32位核心以及一个用于低功耗蓝牙和Wi-Fi 4的网络核心。\n\n在内存方面，PINE64配备了64 MiB的DDR2 DRAM和16 MiB的XSPI NOR闪存用于存储，无线连接通过低功耗蓝牙和Wi-Fi 4实现。\n\n唤醒词检测在本地运行，目前使用“Okay Home Assistant”作为唤醒词，而非通过云服务器路由音频。固件采用MicroPython编写，这是Home Assistant语音接口与PineVoice等卫星设备通信的方式。\n\n双麦克风阵列负责音频采集，内置扬声器通过物理按钮控制音量输出，硬件开关用于麦克风静音。中央LED指示灯环显示PineVoice的当前状态，据称这些灯光模式可替代大多数操作和状态下的语音回复。\n\n整个设备尺寸为65毫米×65毫米×66毫米，通过单个USB-C接口连接，同时处理供电和数据传输。\n\nPineVoice现已现货供应，Pine Store社区价为49.99美元，其他渠道零售价为59.99美元。包装内含一根USB-A转USB-C数据线（1米长），PINE64为该设备提供一年保修。\n\n此外，PineVoice固件的源代码可在GitHub上找到，规格表则可在PINE64的文档页面上查阅。\n\nArmSoM Sige6是首款放弃Rockchip改用Allwinner的Sige板\n\nArmSoM Sige6是首款放弃Rockchip改用Allwinner的Sige板\n\n搭载Allwinner A733，该单板计算机配备3 TOPS NPU、Wi-Fi 6以及高达16 GB的LPDDR5内存。\n\n一个热爱开源软件、定制PC组装、赛车运动以及探索世界无限可能的极客。\n\nUbuntu ARM64系统内核补丁期间无需重启\n\nArmSoM Sige6是首款放弃Rockchip改用Allwinner的Sige板\n\nGuncrypt是Halfbrick Studio的首款PC游戏，同样支持Linux\n\nCanonical的新AI工具让你与Ubuntu对话而非打字\n\nEpic Games自建Git替代方案用于处理大文件\n\n成为更好的Linux用户\n\n通过FOSS周刊，你将学到实用的Linux技巧，发现应用程序，探索新发行版，并随时了解Linux世界的最新动态\n\n太好了！您已成功注册。\n\n欢迎回来！您已成功登录。\n\n您已成功订阅It's FOSS。\n\n您的链接已过期。\n\n成功！请查看您的邮箱，获取用于登录的魔法链接。\n\n成功！您的账单信息已更新。\n\n您的账单未更新。"
+  },
+  "2a4601c8133230ff19ebb885064a2f14": {
+    "id": "2a4601c8133230ff19ebb885064a2f14",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/arm64-livepatching-on-ubuntu/",
+    "title_en": "No More Reboots During Kernel Patching for ARM64 Systems on Ubuntu",
+    "summary_en": "Canonical's Livepatch finally extends to the platform in Ubuntu 26.04 LTS and Ubuntu Core 26.",
+    "pub_date": "Tue, 23 Jun 2026 12:35:24 GMT",
+    "title_zh": "Ubuntu ARM64 系统内核补丁无需再重启",
+    "summary_zh": "Canonical 宣布其 Livepatch 功能终于扩展至 ARM64 平台，用户可在 Ubuntu 26.04 LTS 和 Ubuntu Core 26 上无需重启即可修补 Linux 内核。此前该功能仅适用于 AMD64 系统。Livepatch 通过内存中应用补丁，减少停机时间，尤其适合云和边缘部署场景。个人用户可免费使用最多五台机器。",
+    "fulltext_zh": "Ubuntu ARM64 系统内核补丁无需再重启\nUbuntu ARM64 系统内核补丁无需再重启\nCanonical 的 Livepatch 终于扩展至 Ubuntu 26.04 LTS 和 Ubuntu Core 26 平台。\n现在可以在 ARM64 系统上修补 Linux 内核，而无需强制重启。这一功能在 AMD64 机器上已实现多年，但此前用户没有等效选项。\n该功能面向用户开放，如果这听起来耳熟，那是因为 Canonical 之前已经提及过。第一次是在今年四月发布时，第二次是在某个场合。\n我们现在报道此事，是因为他们发布了相关说明，解释了为准备这一功能所付出的努力。\n相关工作始于 2023 年，当时公司进行了一项差距分析（即研究缺失的部分），评估 ARM64 支持内核实时修补所需的条件，结果并不乐观。\n问题在于上游 ARM64 内核缺乏一个稳定的实现，而实时修补依赖该功能来判断何时可以安全地在运行中的内核中替换代码。\n编译器工具链也未就绪，当时所有相关组件都缺少稳定的 ARM64 支持。随着处理器在云和边缘部署中变得越来越普遍，相关工作在 2024 年及今年持续推进。\n上游内核维护者、硬件厂商以及 Canonical 自己的工程师必须共同努力来填补这些空白。\n目前，ARM64 Livepatch 客户端已经在 Canonical 的测试环境中为 Ubuntu 26.04 LTS 和 Ubuntu Core 26 应用补丁。\n为什么要使用 Livepatch？\n某个 bug 曾阻止我在虚拟机上启用 Livepatch。\nLivepatch 是 Canonical 订阅服务的一部分，该订阅捆绑了安全修补、支持和合规工具，同时通过修补关键和高严重性漏洞来覆盖内核。\n如果你只是想试用，无需支付任何费用，因为 Canonical 为个人使用提供最多五台机器的免费 Livepatch。这足以覆盖大多数家庭设置和小型服务器集群，无需提供支付信息。\n真正的优势体现在管理多台机器时：无需安排停机时间来修补内核漏洞，Livepatch 会在内存中应用修复，并让管理员自行决定每台机器的更新时间。\n不过，它并不能完全替代补丁，因为 Livepatch 只涉及内核。\nCanonical 仍然建议定期重启，因为长时间运行会累积内存泄漏和其他状态问题，而实时补丁无法清除这些问题。\n如果你是一个经常重启机器的桌面用户，这些都不重要，因为 Livepatch 是为那些重启意味着实际停机时间和成本超支风险的系统而设计的。\n一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。\nPINE64 的智能音箱是 Home Assistant 驱动的 Amazon Echo 替代品\nArmSoM Sige6 是首款弃用 Rockchip 改用 Allwinner 的 Sige 主板\nGuncrypt 是 Halfbrick Studio 的首款 PC 游戏，也支持 Linux\nCanonical 的新 AI 工具让你与 Ubuntu 对话而非打字\nEpic Games 构建了自己的 Git 替代方案来处理大文件\n成为更好的 Linux 用户\n通过 FOSS 周刊，你可以学习有用的 Linux 技巧、发现应用程序、探索新发行版，并了解 Linux 世界的最新动态\n太好了！您已成功注册。\n欢迎回来！您已成功登录。\n您已成功订阅 It's FOSS。\n您的链接已过期。\n成功！请检查您的电子邮件以获取登录的魔法链接。\n成功！您的账单信息已更新。\n您的账单未更新。"
+  },
+  "1042e595cc9668cc188b188d0d4ce8fa": {
+    "id": "1042e595cc9668cc188b188d0d4ce8fa",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-Sched-Ext-Restructured",
+    "title_en": "\"Disgusting\" Linux sched_ext Source Code Restructured Following Complaint By Linus Torvalds",
+    "summary_en": "Last week the main set of sched_ext changes were merged for Linux 7.2 that included continued work on sub-scheduler support. While Linus Torvalds didn't object to any of the features being worked on for this extensible scheduler framework that relies on user-space BPF programs, he was frustrated by the layout of the new C source files and remarked, \"please don't do this disgusting thing...proper hierarchical filesystems have been available since 1965.\"..",
+    "pub_date": "Tue, 23 Jun 2026 20:23:09 -0400",
+    "title_zh": "Linus Torvalds 批评后，“令人作呕”的 Linux sched_ext 源代码被重构",
+    "summary_zh": "Linus Torvalds 对 Linux 7.2 中 sched_ext 调度框架的源代码布局表示强烈不满，批评其使用文件名前缀而非子目录来组织文件的行为“令人作呕”。他合并了代码但表示抗议。随后，开发者提交了补丁，将 sched_ext 文件重组到子目录中，Torvalds 已合并该重构。",
+    "fulltext_zh": "\"令人作呕\"的 Linux sched_ext 源代码在 Linus Torvalds 批评后被重构 - Phoronix\n\n上周，sched_ext 的主要更改集被合并到 Linux 7.2 中，其中包括对子调度器支持的持续工作。虽然 Linus Torvalds 并未反对这个依赖用户空间 BPF 程序的可扩展调度框架正在开发的任何功能，但他对新 C 源文件的布局感到不满，并评论道：“请不要做这种令人作呕的事情……自 1965 年以来，合适的层次化文件系统就已经可用了。”\n\nLinus Torvalds 不喜欢上周 sched_ext 拉取请求中，多个新的以特定前缀命名的 C 代码和头文件被直接放在 kernel/sched 目录下，而不是创建一个新的子目录来避免给众多单个文件添加前缀。\n\nTorvalds 合并了代码，但评论道：\n\n\">  create mode 100644 kernel/sched/ext_arena.c\n>  create mode 100644 kernel/sched/ext_arena.h\n>  create mode 100644 kernel/sched/ext_cid.c\n>  create mode 100644 kernel/sched/ext_cid.h\n>  create mode 100644 kernel/sched/ext_types.h\n\n请不要做这种令人作呕的事情。\n我们使用子目录是有原因的：它用于将文件分组并分隔开来。\n使用名称前缀而不是目录是令人作呕且错误的。如果你有这么多杂乱的 sched-ext 文件，它绝对应该被清理干净，而不是这种一团糟的样子。\n我已经拉取了这些代码，但这是在我抗议的情况下。自 1965 年以来，合适的层次化文件系统就已经可用了。”\n\n作为回应，今天早些时候发布了一个补丁，用于重组 sched_ext 的源代码树，使用子目录而不是在通用调度器目录中散布一堆以 ext_ 开头的文件。\n\nLinus Torvalds 已经合并了重构 sched_ext 文件的代码。"
+  },
+  "94c95bea0f5f7397c24489dc4de5d8cc": {
+    "id": "94c95bea0f5f7397c24489dc4de5d8cc",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/COSMIC-Epoch-1.1",
+    "title_en": "COSMIC Epoch 1.1 Released With COSMIC-Monitor, Compositor Improvements",
+    "summary_en": "System76 today released COSMIC Epoch 1.1 as the newest feature release as well as being their first time bumping the minor version number since the December release of COSMIC 1.0...",
+    "pub_date": "Tue, 23 Jun 2026 16:49:04 -0400",
+    "title_zh": "COSMIC Epoch 1.1 发布，带来 COSMIC-Monitor 与合成器改进",
+    "summary_zh": "System76 发布了 COSMIC Epoch 1.1，这是自 COSMIC 1.0 以来首次次版本号更新。新版本引入了 COSMIC-Monitor 作为 GNOME System Monitor 的替代品，并改进了 Wayland 合成器 COSMIC-Comp，支持平铺异常、固定工作区命名、分离 logind 与 systemd 等功能。此外，背景处理支持递归扫描自定义壁纸目录，文件管理器新增 Page-Up/Page-Down 键支持，终端避免重复读取系统主题。",
+    "fulltext_zh": "COSMIC Epoch 1.1 发布，带来 COSMIC-Monitor 与合成器改进 - Phoronix\nCOSMIC Epoch 1.1 发布，带来 COSMIC-Monitor 与合成器改进\n发布于 2026 年 6 月 23 日下午 4:49（美国东部时间）。\n\nSystem76 今天发布了 COSMIC Epoch 1.1，这是最新的功能版本，也是自 2025 年 12 月 COSMIC 1.0 发布以来首次提升次版本号。\n\n这个基于 Rust 的开源桌面环境背后的开发者现在计划定期递增次版本号，以便根据需要发布中间补丁版本。COSMIC Epoch 1.1 的新增功能是 COSMIC-Monitor，作为 GNOME System Monitor 的预期替代品，它很快将在 Pop!_OS 存档中替换后者，因为 COSMIC-Monitor 在系统监控需求方面已经足够完善。\n\n作为 COSMIC 桌面的 Wayland 合成器组件，COSMIC-Comp 现在支持平铺异常、固定工作区命名、将 logind 与 systemd 分离，以及各种其他修复。\n\nCOSMIC 背景处理现在会递归扫描自定义壁纸目录。同时，COSMIC 文件管理器现在支持 Page-Up 和 Page-Down 键。COSMIC-Term 终端现在也将避免在每次菜单栏渲染时从磁盘重新读取系统主题。\n\n关于新 COSMIC Epoch 1.1 桌面版本的更多详情，请参见：\nXfce Wayland 合成器迎来首个预览/Alpha 版本\nFlatpak 1.18 发布，集成 AMD ROCm\n广泛使用的 libinput 因任意根代码执行漏洞而更新\nCOSMIC 桌面现已实现 Wayland 指针约束，以提升游戏体验\nCOSMIC 桌面的磨砂玻璃效果带来 Windows Aero 风格\nFreeRDP 3.25 新增实验性 AV1 支持\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\nLinux 经过六年努力、360 多个补丁后终于淘汰了 strncpy API\n俄罗斯垃圾信息与脏话正困扰 Arch Linux AUR\nsystemd 261 发布，带来新的 systemd-sysinstall 操作系统安装器、IMDSD 和 Storagectl\n开源 NVIDIA NVK Vulkan 驱动现已支持 DLSS\nFirefox 152 发布，默认内置 JPEG-XL 支持，现代化设置界面\nLinux 7.2 优化通过移动两行代码为 EXT4 和 XFS 带来 +5% IOPS\nEpic Games 宣布开源版本控制系统 Lore\nGoogle 的 Gemini 部分解决了现代华硕笔记本电脑上 Linux 启动时间过长的问题\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权 © 2004 - 2026\n所有商标均为其各自所有者财产。保留所有权利。"
+  },
+  "a28f4b3ec13d4b4d17cf333bbd4b9936": {
+    "id": "a28f4b3ec13d4b4d17cf333bbd4b9936",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/BASIC09-LLVM-Front-End",
+    "title_en": "BASIC09 Programming Language Front-End Developed For LLVM",
+    "summary_en": "The 46-year-old BASIC09 programming language has new compiler support with a front-end having been developed for the LLVM compiler stack. BASIC09 was developed in 1980 for the Motorola 6809 CPU running with the OS-9 operating system. With this LLVM compiler front-end, you can write BASIC09 code for modern software and hardware...",
+    "pub_date": "Tue, 23 Jun 2026 15:28:14 -0400",
+    "title_zh": "BASIC09 编程语言前端为 LLVM 开发完成",
+    "summary_zh": "46 岁的 BASIC09 编程语言迎来了新的编译器支持，其前端已为 LLVM 编译器栈开发完成。BASIC09 最初于 1980 年为运行 OS-9 操作系统的 Motorola 6809 CPU 设计。借助这个 LLVM 编译器前端，开发者可以为现代软件和硬件编写 BASIC09 代码。开源开发者 Boisy Gene Pitre 宣布了该前端，并探讨将其上游合并到 LLVM 代码库的可能性。该编译器能够进行词法分析、语法分析、构建 AST、执行语义检查，并生成 LLVM IR。不过，LLVM 开发者表示，这种 80 年代的 niche 语言不符合 LLVM 添加新语言的标准。",
+    "fulltext_zh": "BASIC09 编程语言前端为 LLVM 开发完成 - Phoronix\nBASIC09 编程语言前端为 LLVM 开发完成\n2026 年 6 月 23 日下午 3:28 EDT。\n\n已有 46 年历史的 BASIC09 编程语言获得了新的编译器支持，其前端已为 LLVM 编译器栈开发完成。BASIC09 于 1980 年为运行 OS-9 操作系统的 Motorola 6809 CPU 设计。借助这个 LLVM 编译器前端，你可以为现代软件和硬件编写 BASIC09 代码。\n\n开源开发者 Boisy Gene Pitre 今天向 LLVM 开发者宣布了他的 BASIC09 前端，并询问将其上游合并到 LLVM 代码库的可能性。这个名为“basic09c”的编译器能够对 BASIC09 代码进行词法分析和语法分析，构建正确的抽象语法树（AST），执行语义检查，并生成 LLVM IR 供各种不同的 LLVM 后端使用。它不依赖于任何 Motorola 6809 特定支持或 OS-9。\n\nBoisy Gene Pitre 在关于这个 BASIC09 前端的说明中写道：\n\n“BASIC09 是一种结构化的 BASIC 方言，用于 OS-9/6809 和 OS-9/68K 系统，尤其是 Tandy Color Computer 生态系统。它拥有过程、类型化变量、数组、控制流以及一种编译模型，使其成为通过现代编译器基础设施进行保存的合理候选。\n\n我的目标是通过将现有 BASIC09 程序降级为 LLVM IR 来保存和编译它们。从长远来看，这可能使 BASIC09 程序能够面向多个后端，而不仅仅是历史上的 6809 系统。\n\n这项工作始于 MC6809/OS-9 实验的背景下，但我已将编译器前端与后端特定工作分离。前端应该能够独立存在。”\n\n虽然这在技术层面很有趣，并且是 LLVM 的又一个前端，但不要指望它会进入 Linux 内核主线。LLVM 开发者 Eli Friedman 对今天的公告回应道：“很高兴听到你发现 LLVM 对构建编译器很有用。话虽如此，一种来自 80 年代的 niche 编程语言永远无法满足我们在 LLVM 中添加新语言的标准。”\n\n同样，知名 LLVM 开发者 Nikita Popov 表示，该项目可以独立存在，只需将 LLVM 作为库链接即可。\n\nRust PNG 图像解码器现在更快：惠及 Chrome、GNOME 等\nEpic Games 宣布 Lore 开源版本控制系统\nGit 2.55-rc0 发布，默认启用 Rust\n轻量级 Pragtical 代码编辑器添加 SDL GPU 后端\nRedis 8.8 发布，新增数组数据结构及更多性能优化\nKernelScript：一种用于内核定制和应用优化的编程语言\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他。\n\nLinux 终于经过六年工作和 360 多个补丁后淘汰了 strncpy API\n俄罗斯垃圾信息和脏话现在困扰 Arch Linux AUR\nsystemd 261 发布，附带新的 systemd-sysinstall 操作系统安装程序、IMDSD 和 Storagectl\n开源 NVIDIA NVK Vulkan 驱动现已支持 DLSS\nFirefox 152 现已可用，默认内置 JPEG-XL 支持，现代化设置界面\nLinux 7.2 优化通过移动两行代码为 EXT4 和 XFS 带来 +5% IOPS\nEpic Games 宣布 Lore 开源版本控制系统\nGoogle 的 Gemini 部分解决了现代华硕笔记本上 Linux 启动时间过长的问题\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "eb1e11376d01df579608d8a86333f162": {
+    "id": "eb1e11376d01df579608d8a86333f162",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.2--EPYC-Sorano-Network",
+    "title_en": "Linux 7.2 Showing Some Unexpected & Nice Performance Gains On AMD EPYC Sorano",
+    "summary_en": "While the Linux 7.2 merge window doesn't wrap up until this weekend as the feature cut-off for new material, I have already begun some early benchmarks of the code currently staged for this next version of the Linux kernel. Linux 7.2 already was looking quite exciting with cache aware scheduling and other exciting new features while an unexpected surprise in my early testing this week was seeing some local network/socket performance improvements...",
+    "pub_date": "Tue, 23 Jun 2026 12:22:15 -0400",
+    "title_zh": "Linux 7.2 在 AMD EPYC Sorano 上展现出一些意外且显著的性能提升",
+    "summary_zh": "Linux 7.2 内核在 AMD EPYC 8005 \"Sorano\" 服务器上展现出意外的网络性能提升，尤其是本地 TCP 和 QUIC 测试表现优异，延迟降低。性能提升可能源于内核中 poll 代码从 free_page() 切换到 kmalloc() API，从而改善了可扩展性。功耗方面也有所下降。这些改进是通用性的，预计在其他硬件上也会有所体现。",
+    "fulltext_zh": "Linux 7.2 在 AMD EPYC Sorano 上展现出一些意外且显著的性能提升 - Phoronix\nLinux 7.2 在 AMD EPYC Sorano 上展现出一些意外且显著的性能提升\n2026年6月23日 美国东部时间下午12:22\n合并窗口要到本周末才结束，作为新功能特性的截止点，但我已经开始对当前为这个下一版 Linux 内核暂存的代码进行一些早期基准测试。Linux 7.2 已经因缓存感知调度和其他令人兴奋的新特性而显得相当引人注目，而本周早期测试中的一个意外惊喜是看到了一些本地网络/套接字性能的改进。\n我用于评估 Linux 7.2 内核早期性能的第一个系统是一台搭载全新 AMD EPYC 8005 \"Sorano\" 系列处理器的服务器，具体来说是旗舰级的 84 核/168 线程 Zen 5 处理器。Linux 7.2 在 EPYC Sorano 上表现良好，我很快会提供内核性能的完整概览，以及其他硬件上的基准测试，但在这篇初步文章中，意外的惊喜是发现本地主机网络性能有了显著提升。\n再次提醒，请继续关注合并窗口结束后更全面的 Linux 7.2 基准测试，而今天先简要探讨一下让我感到惊讶的网络性能提升。\n在将 Linux 7.1 稳定版与截至 6 月 21 日的 Linux 7.2 Git 版本进行比较时，测试这台 EPYC Sorano 服务器的本地主机性能时，意外地发现了一些令人愉快的改进，测试工具是 xfr，一款基于 Rust 的现代 iperf3 替代品：\nTCP 性能提升非常显著。UDP 性能与 Linux 7.1 相比没有变化。\n在 Linux 7.2 开发版内核上运行的 xfr QUIC 测试相比 Linux 7.1 稳定版也显示出不错的改进。这对 AMD EPYC 8005 \"Sorano\" 面向电信、边缘计算、云存储等环境来说是个好消息。在接下来的测试中，看看这些改进是否同样适用于其他硬件，将会很有趣。\n除了 xfr 之外，Sockperf 网络套接字基准测试也显示 Linux 7.2 的延迟更低。\n对于 Linux 7.2 中这些意外改进的一个可能解释，在运行 stress-ng 内核微基准测试时浮出水面。Linux 7.2 Git 版本的 poll 性能比 Linux 7.1 稳定版快了数倍。\n在内核中实现 poll 的地方，Linux 7.2 进行了调整，将 poll 代码从 free_page() 切换到了 kmalloc() API。这一改动没有注意到任何性能数字上的变化，但确实表明使用 kmalloc API 会提供更好的可扩展性，而这正是我们在这些基准测试中可能看到的。这是一个通用性的改进，并非 AMD 或 EPYC 特有，因此我们应该也能在其他硬件上看到收益。\n同样重要的是，发现 AMD EPYC 8635P CPU 在 Linux 7.2 上取得这些基准测试胜利的同时，功耗并没有增加，反而比 Linux 7.1 略有降低。\n无论如何，请继续关注合并窗口结束后更多的 Linux 7.2 内核基准测试，而目前这只是本周在尝试使用这个开发中的 Linux 内核测试全新 AMD EPYC Sorano 时遇到的第一个意外惊喜。\n“令人作呕的” Linux sched_ext 源代码在 Linus Torvalds 投诉后进行了重构\nDeviceTree-ACPI 混合模式提议用于改善 Snapdragon 笔记本电脑上的 Linux 支持\nLinux 7.2 sched_ext 继续推进子调度器支持\nLinux 的 KUnit 终于支持 JUnit 输出\nLinux 经过六年工作和 360 多个补丁，终于消除了 strncpy API\nLinux 7.2 移除了最后一个优化的 MD5 实现\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 也是 Phor"
+  },
+  "d1801caf228c644536d933fc13e68e53": {
+    "id": "d1801caf228c644536d933fc13e68e53",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/DT-ACPI-Hybrid-Mode-Linux",
+    "title_en": "DeviceTree-ACPI Hybrid Mode Proposed For Improving Linux Support On Snapdragon Laptops",
+    "summary_en": "Over the years while working at Red Hat, Hans de Goede was known for driving many wonderful Linux laptop improvements benefiting AMD/Intel x86_64 hardware. Hans left Red Hat last year and ended up joining Qualcomm to advance their open-source/Linux support. Today he is out with a significant new patch series for consideration that has the potential of significantly improving the Qualcomm Snapdragon X Series laptop Linux support and also important indicators for better Snapdragon laptop support o",
+    "pub_date": "Tue, 23 Jun 2026 11:23:51 -0400",
+    "title_zh": "DeviceTree-ACPI混合模式提议：改善Snapdragon笔记本的Linux支持",
+    "summary_zh": "前Red Hat工程师Hans de Goede提出DeviceTree-ACPI混合模式，旨在改善高通Snapdragon X系列笔记本的Linux支持。当前Linux依赖Device Tree而非ACPI，而Windows 11 on Arm使用ACPI但表不完善。混合模式允许部分利用ACPI信息，已在联想ThinkPad T14s Gen 6上成功移除键盘和触摸板的Device Tree描述。该提案有望推动未来Snapdragon笔记本实现纯ACPI启动。",
+    "fulltext_zh": "DeviceTree-ACPI混合模式提议：改善Snapdragon笔记本的Linux支持 - Phoronix\nDeviceTree-ACPI混合模式提议：改善Snapdragon笔记本的Linux支持\n发布于2026年6月23日美国东部时间上午11:23。\n\n多年来在Red Hat工作期间，Hans de Goede以推动众多出色的Linux笔记本改进而闻名，这些改进惠及AMD/Intel x86_64硬件。Hans去年离职，转而推进其开源/Linux支持工作。今天他提出了一项重要的新补丁系列供审议，该补丁有可能显著改善高通Snapdragon X系列笔记本的Linux支持，并为未来Snapdragon笔记本在Linux上的更好支持提供重要指标。\n\nHans de Goede发布了一份关于新补丁系列的征求意见稿（RFC），该补丁实现了他所谓的DeviceTree-ACPI混合模式。Linux上的高通Snapdragon X1/X2笔记本一直仅依赖Device Tree来实现系统支持，而非ACPI，这与Linux上大多数Arm单板计算机类似。与此同时，Windows 11 on Arm一直使用ACPI，但当前的ACPI表对Linux而言不完善，因此未被使用。但Hans提议采用DeviceTree-ACPI混合模式，至少可以部分利用ACPI信息。\n\nHans在RFC补丁系列的开头写道：\n“目前，一旦内核启动时加载了填充的DT，arch/arm64代码就会设置acpi_disabled=1，导致整个ACPI子系统被禁用。对于WoA Snapdragon笔记本——其出厂Windows操作系统实际上使用这些表启动——这并不一定是可取的。\n至少解析ACPI表并使ACPI fwnodes可供设备驱动程序使用可能仍然有意义。我称之为DT-ACPI混合模式。\n目前这主要是一个实验，也可能是加速在当前可用的Snapdragon笔记本上运行Linux的一种方法。\n在当前笔记本上，由于ACPI表中缺少某些信息，Linux无法使用ACPI启动。人们正在努力改变这一现状，以便未来的WoA Snapdragon笔记本能够仅使用ACPI启动Linux，而无需Devicetree。”\n\n最后一句尤其令人兴奋，预示着未来高通Snapdragon驱动的笔记本在Linux上可能仅使用ACPI，而不再依赖Device Tree。考虑到目前为所有不同的Snapdragon X/X2笔记本创建、测试并上游提交DT的艰辛，这将是一个巨大的胜利。\n\n这种DT-ACPI混合模式对现有的Snapdragon笔记本非常有趣，它至少可以实现：在通过Device Tree启动的当前系统中探索ACPI表；让Linux设备驱动程序在通过DT启动时仍能访问某些有用的ACPI数据；以及在可能的领域利用ACPI。Hans的邮件列表帖子详细介绍了其中一些领域。\n\n随着今天发布的补丁，它已经在一定程度上生效：Hans测试了一台联想ThinkPad T14s Gen 6，并成功移除了键盘和触摸板的Device Tree描述，转而由ACPI实例化它们。它成功了！\n\n这种DT-ACPI混合模式将走向何方，以及它可能以何种形式进入主线Linux内核，这将非常有趣。目前，想了解更多信息的人可以查看Linux内核邮件列表。与此同时，我非常期待未来Snapdragon笔记本在Linux上可能实现纯ACPI启动，摆脱DT的混乱局面。\n\n“令人作呕”的Linux sched_ext源代码在Linus Torvalds投诉后重构\nLinux 7.2在AMD EPYC Sorano上展现出一些意外且不错的性能提升\nLinux 7.2 sched_ext继续推进子调度器支持\nLinux的KUnit终于支持JUnit输出\nLinux经过六年努力、360多个补丁后终于淘汰了strncpy API\nLinux 7.2移除了最后一个优化的MD5实现\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富L"
+  },
+  "d34202bcfb6d21fb347c377d1ffde712": {
+    "id": "d34202bcfb6d21fb347c377d1ffde712",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/best-linux-distros-for-developers-in-2026/",
+    "title_en": "Best Linux Distros for Developers in 2026",
+    "summary_en": "Uncover the best Linux distributions for developers in 2026. Find the ideal environment to boost your coding efficiency and project management skills.\nThe post Best Linux Distros for Developers in 2026 appeared first on Linux Today.",
+    "pub_date": "Tue, 23 Jun 2026 14:49:56 +0000",
+    "title_zh": "2026年开发者最佳Linux发行版",
+    "summary_zh": "本文介绍了2026年最适合开发者的Linux发行版，帮助开发者找到提升编码效率和项目管理能力的理想环境。文章涵盖了各发行版的特点与适用场景，为不同需求的开发者提供选型参考。",
+    "fulltext_zh": "探索2026年最适合开发者的Linux发行版。找到理想的环境，提升你的编码效率和项目管理技能。\n\n本文《2026年开发者最佳Linux发行版》首发于Linux Today。"
+  },
+  "5c9191052e0b5cc1d54db6d52eda1d6e": {
+    "id": "5c9191052e0b5cc1d54db6d52eda1d6e",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/valkey-9-1-in-memory-data-store-released-with-database-level-acls/",
+    "title_en": "Valkey 9.1 In-Memory Data Store Released with Database-Level ACLs",
+    "summary_en": "Explore Valkey 9.1, the latest In-Memory Data Store, now with advanced database-level ACLs. Enhance your data security and streamline access control effortlessly.\nThe post Valkey 9.1 In-Memory Data Store Released with Database-Level ACLs appeared first on Linux Today.",
+    "pub_date": "Tue, 23 Jun 2026 14:48:16 +0000",
+    "title_zh": "Valkey 9.1 内存数据存储发布，新增数据库级ACL",
+    "summary_zh": "Valkey 9.1 作为最新版内存数据存储正式发布，引入了数据库级访问控制列表（ACL），显著提升了数据安全性与访问管理效率。该版本旨在简化权限配置流程，为用户提供更精细化的安全控制能力。",
+    "fulltext_zh": "探索Valkey 9.1，最新版内存数据存储，现已支持高级数据库级ACL。轻松增强数据安全性并简化访问控制。\n\nValkey 9.1 内存数据存储发布，新增数据库级ACL一文首发于Linux Today。"
+  },
+  "6a3069df983642a559b13adda4d2b079": {
+    "id": "6a3069df983642a559b13adda4d2b079",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/phosh-0-55-gnome-based-mobile-shell-released-with-syncthing-quick-settings/",
+    "title_en": "Phosh 0.55 GNOME-Based Mobile Shell Released with Syncthing Quick Settings",
+    "summary_en": "Explore Phosh 0.55, the new GNOME-based mobile shell, now with integrated Syncthing quick settings for effortless file synchronization on your device.\nThe post Phosh 0.55 GNOME-Based Mobile Shell Released with Syncthing Quick Settings appeared first on Linux Today.",
+    "pub_date": "Tue, 23 Jun 2026 14:43:14 +0000",
+    "title_zh": "Phosh 0.55 基于 GNOME 的移动界面发布，新增 Syncthing 快速设置",
+    "summary_zh": "Phosh 0.55 版本发布，作为基于 GNOME 的移动界面，本次更新集成了 Syncthing 快速设置功能，使用户能够更便捷地在设备间同步文件。该版本进一步优化了移动设备上的操作体验。",
+    "fulltext_zh": "探索 Phosh 0.55，这款全新的基于 GNOME 的移动界面，现已集成 Syncthing 快速设置，让您设备上的文件同步变得轻松自如。\n\n该文章《Phosh 0.55 GNOME-Based Mobile Shell Released with Syncthing Quick Settings》最初发表于 Linux Today。"
+  },
+  "58a78c97d9641d90976131d414525ef9": {
+    "id": "58a78c97d9641d90976131d414525ef9",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/apache-netbeans-30-ide-released-with-jdk-21-as-new-baseline/",
+    "title_en": "Apache NetBeans 30 IDE Released with JDK 21 as New Baseline",
+    "summary_en": "Discover the latest features of Apache NetBeans 30 IDE, now with JDK 21 as the new baseline. Enhance your development experience today!\nThe post Apache NetBeans 30 IDE Released with JDK 21 as New Baseline appeared first on Linux Today.",
+    "pub_date": "Tue, 23 Jun 2026 14:41:13 +0000",
+    "title_zh": "Apache NetBeans 30 IDE 发布，以 JDK 21 作为新基线",
+    "summary_zh": "Apache NetBeans 30 IDE 正式发布，此次更新将 JDK 21 作为新的基线版本，带来多项新特性，旨在提升开发者的编程体验。",
+    "fulltext_zh": "探索 Apache NetBeans 30 IDE 的最新特性，现在以 JDK 21 作为新基线。立即提升您的开发体验！\n本文首发于 Linux Today。"
+  },
+  "5a0e61b07b2b2c3f4356158974cf4ce0": {
+    "id": "5a0e61b07b2b2c3f4356158974cf4ce0",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/shelly-2-3-1-gui-package-manager-for-arch-linux-improves-notifications/",
+    "title_en": "Shelly 2.3.1 GUI Package Manager for Arch Linux Improves Notifications",
+    "summary_en": "Explore the latest Shelly 2.3.1 GUI Package Manager for Arch Linux, now with enhanced notifications to streamline your package management tasks efficiently.\nThe post Shelly 2.3.1 GUI Package Manager for Arch Linux Improves Notifications appeared first on Linux Today.",
+    "pub_date": "Tue, 23 Jun 2026 14:38:59 +0000",
+    "title_zh": "Shelly 2.3.1：Arch Linux的GUI包管理器改进通知功能",
+    "summary_zh": "Shelly 2.3.1 是专为 Arch Linux 设计的图形化包管理器，最新版本增强了通知功能，使用户能更高效地管理软件包。该更新旨在简化包管理任务，提升用户体验。",
+    "fulltext_zh": "探索最新版的 Shelly 2.3.1 GUI 包管理器（适用于 Arch Linux），现在通过增强的通知功能，让您的包管理任务更加高效流畅。\n\n该文章《Shelly 2.3.1 GUI Package Manager for Arch Linux Improves Notifications》最初发表于 Linux Today。"
   }
 }

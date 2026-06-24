@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DistroWatch 周刊，第 1178 期 — Linux 中文速报</title>
+<title>Linus Torvalds 批评后，“令人作呕”的 Linux sched_ext 源代码被重构 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>DistroWatch 周刊，第 1178 期</h1>
+  <h1>Linus Torvalds 批评后，“令人作呕”的 Linux sched_ext 源代码被重构</h1>
 
-  <div class="article-summary">本期 DistroWatch 周刊报道了 Arch Linux 的 AUR 仓库再次遭受攻击、Fedora 用户增长但贡献者退休、Ubuntu 计划为 26.10 版本加入语音识别功能、Canonical 更新测试版政策、以及为何应避免使用不可变桌面系统等新闻。此外还介绍了 KDE Plasma 6.7 的亮点、AUR 被攻破的意义、以及针对新手推荐的友好发行版等问答内容。</div>
+  <div class="article-summary">Linus Torvalds 对 Linux 7.2 中 sched_ext 调度框架的源代码布局表示强烈不满，批评其使用文件名前缀而非子目录来组织文件的行为“令人作呕”。他合并了代码但表示抗议。随后，开发者提交了补丁，将 sched_ext 文件重组到子目录中，Torvalds 已合并该重构。</div>
 
-  <div class="article-body"><p>DistroWatch 周刊，第 1178 期 (DistroWatch.com 新闻)</p><p>DistroWatch.com 由以下赞助</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW 周刊 / 评测存档</p><p>访客评分与评论</p><p>按评分排序的项目排名</p><p>播客、新闻通讯与评测</p><p>跨发行版比较软件包</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停产的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与窍门专栏</p><p>误解与误区专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>发行版可视化家族树</p><p>常见问题解答</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>Ubuntu 计划加入语音转文字功能</p><p>Ubuntu 更新关于 Ubuntu 变体测试版和最终版的政策</p><p>避免使用不可变桌面的理由</p><p>Arch 用户软件仓库再次遭受攻击</p><p>Fedora 用户增长，贡献者退休</p><p>Slackware 终于将 Plasma 更新至版本 6</p><p>Arch Linux 报告 AUR 仓库中的恶意事件</p><p>开发者复活基于 Arch 的 Antergos 发行版</p><p>Asahi Linux 项目警告双启动用户不要升级到 MacOS 27</p><p>Ubuntu MATE 的未来</p><p>易于使用的 PBX - 托管或自管理</p><p>Linux 电话系统</p><p>免费在线聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程工作应用：iOS 或 Android</p><p>免费视频会议</p><p>3CX 的 VoIP / PBX 操作指南</p><p>不要被抓住，制定灾难恢复计划！</p><p>必备的在线聊天报告与统计</p><p>导致通话欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成对比</p><p>3CX StartUP 的 5 个杀手级功能</p><p>不要成为“那种人”第 1 卷：保持复杂凭证</p><p>不要成为“那种人”第 2 卷：通话欺诈</p><p>不要成为“那种人”第 3 卷：4 大安全提示</p><p>不要成为“那种人”第 4 卷：监控您的实例</p><p>红帽周五五件事 - 2026 年 6 月 19 日</p><p>Ubuntu 周刊 948</p><p>全循环每周新闻</p><p>不合逻辑的冲动 ISO</p><p>最新新闻与更新</p><p>新闻过滤选项</p><p>DistroWatch 周刊，第 1178 期</p><p>新闻：Arch 回应更多 AUR 攻击，Fedora 社区增长，避免使用不可变桌面的理由，Ubuntu 26.10 将获得语音识别，Canonical 更新测试版政策，KDE Plasma 6.7 亮点</p><p>问答：AUR 被攻破意味着什么？</p><p>上周发布：EasyOS 7.4, FreeBSD 15.1, Univention 5.2-6, Home Assistant OS 18.0, PorteuX 2.7</p><p>种子角：TUXEDO OS</p><p>民意调查：从 AUR 安装软件</p><p>网站新闻：服务器宕机</p><p>在本周刊中阅读更多内容...</p><p>Security Onion 是一款基于 Oracle Linux 的专用安全导向 Linux 发行版。它是一个免费且开放的平台，用于威胁狩猎、企业安全监控和日志管理。它包含用于警报、仪表板、狩猎、PCAP、检测和案例管理的自定义界面。它还包含其他工具，例如 osquery（一种使用 SQL 查询探索和监控操作系统数据的工具）、CyberChef（一种用于加密、编码、压缩和数据分析的 Web 应用程序）、Elasticsearch（一种数据搜索引擎）、Logstash（一种数据收集和处理引擎）、Kibana（一种用于 Elasticsearch 的数据可视化插件）、Suricata（一种入侵检测和防御系统）以及 Zeek（一种软件网络分析框架）。</p><p>技巧与窍门：创建、删除、修改和忽略别名</p><p>问答：拆分与合并文件</p><p>问答：适用于旧硬件的发行版</p><p>问答：为新手推荐友好的发行版以及为什么 Linux 发行版是免费的</p><p>问答：Ubuntu 软件包的来源</p><p>问答：家庭用最小化聊天室</p><p>技巧与窍门：如何在 Linux 中按多个条件查找文件</p><p>技巧与窍门：使用 Anbox 在 GNU/Linux 上运行 Android 应用程序</p><p>技巧与窍门：在 Ubuntu 下回退到旧内核</p><p>问答：运行具有自动更新的发行版</p><p>版权所有 © 2001 - 2026 Atea Ataroa Limited。保留所有权利。</p></div>
+  <div class="article-body"><p>&quot;令人作呕&quot;的 Linux sched_ext 源代码在 Linus Torvalds 批评后被重构 - Phoronix</p><p>上周，sched_ext 的主要更改集被合并到 Linux 7.2 中，其中包括对子调度器支持的持续工作。虽然 Linus Torvalds 并未反对这个依赖用户空间 BPF 程序的可扩展调度框架正在开发的任何功能，但他对新 C 源文件的布局感到不满，并评论道：“请不要做这种令人作呕的事情……自 1965 年以来，合适的层次化文件系统就已经可用了。”</p><p>Linus Torvalds 不喜欢上周 sched_ext 拉取请求中，多个新的以特定前缀命名的 C 代码和头文件被直接放在 kernel/sched 目录下，而不是创建一个新的子目录来避免给众多单个文件添加前缀。</p><p>Torvalds 合并了代码，但评论道：</p><p>&quot;&gt;  create mode 100644 kernel/sched/ext_arena.c</p><p>&gt;  create mode 100644 kernel/sched/ext_arena.h</p><p>&gt;  create mode 100644 kernel/sched/ext_cid.c</p><p>&gt;  create mode 100644 kernel/sched/ext_cid.h</p><p>&gt;  create mode 100644 kernel/sched/ext_types.h</p><p>请不要做这种令人作呕的事情。</p><p>我们使用子目录是有原因的：它用于将文件分组并分隔开来。</p><p>使用名称前缀而不是目录是令人作呕且错误的。如果你有这么多杂乱的 sched-ext 文件，它绝对应该被清理干净，而不是这种一团糟的样子。</p><p>我已经拉取了这些代码，但这是在我抗议的情况下。自 1965 年以来，合适的层次化文件系统就已经可用了。”</p><p>作为回应，今天早些时候发布了一个补丁，用于重组 sched_ext 的源代码树，使用子目录而不是在通用调度器目录中散布一堆以 ext_ 开头的文件。</p><p>Linus Torvalds 已经合并了重构 sched_ext 文件的代码。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12879" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-Sched-Ext-Restructured" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

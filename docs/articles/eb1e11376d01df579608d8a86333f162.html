@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DistroWatch 周刊，第 1178 期 — Linux 中文速报</title>
+<title>Linux 7.2 在 AMD EPYC Sorano 上展现出一些意外且显著的性能提升 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>DistroWatch 周刊，第 1178 期</h1>
+  <h1>Linux 7.2 在 AMD EPYC Sorano 上展现出一些意外且显著的性能提升</h1>
 
-  <div class="article-summary">本期 DistroWatch 周刊报道了 Arch Linux 的 AUR 仓库再次遭受攻击、Fedora 用户增长但贡献者退休、Ubuntu 计划为 26.10 版本加入语音识别功能、Canonical 更新测试版政策、以及为何应避免使用不可变桌面系统等新闻。此外还介绍了 KDE Plasma 6.7 的亮点、AUR 被攻破的意义、以及针对新手推荐的友好发行版等问答内容。</div>
+  <div class="article-summary">Linux 7.2 内核在 AMD EPYC 8005 &quot;Sorano&quot; 服务器上展现出意外的网络性能提升，尤其是本地 TCP 和 QUIC 测试表现优异，延迟降低。性能提升可能源于内核中 poll 代码从 free_page() 切换到 kmalloc() API，从而改善了可扩展性。功耗方面也有所下降。这些改进是通用性的，预计在其他硬件上也会有所体现。</div>
 
-  <div class="article-body"><p>DistroWatch 周刊，第 1178 期 (DistroWatch.com 新闻)</p><p>DistroWatch.com 由以下赞助</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW 周刊 / 评测存档</p><p>访客评分与评论</p><p>按评分排序的项目排名</p><p>播客、新闻通讯与评测</p><p>跨发行版比较软件包</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停产的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与窍门专栏</p><p>误解与误区专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>发行版可视化家族树</p><p>常见问题解答</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>Ubuntu 计划加入语音转文字功能</p><p>Ubuntu 更新关于 Ubuntu 变体测试版和最终版的政策</p><p>避免使用不可变桌面的理由</p><p>Arch 用户软件仓库再次遭受攻击</p><p>Fedora 用户增长，贡献者退休</p><p>Slackware 终于将 Plasma 更新至版本 6</p><p>Arch Linux 报告 AUR 仓库中的恶意事件</p><p>开发者复活基于 Arch 的 Antergos 发行版</p><p>Asahi Linux 项目警告双启动用户不要升级到 MacOS 27</p><p>Ubuntu MATE 的未来</p><p>易于使用的 PBX - 托管或自管理</p><p>Linux 电话系统</p><p>免费在线聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程工作应用：iOS 或 Android</p><p>免费视频会议</p><p>3CX 的 VoIP / PBX 操作指南</p><p>不要被抓住，制定灾难恢复计划！</p><p>必备的在线聊天报告与统计</p><p>导致通话欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成对比</p><p>3CX StartUP 的 5 个杀手级功能</p><p>不要成为“那种人”第 1 卷：保持复杂凭证</p><p>不要成为“那种人”第 2 卷：通话欺诈</p><p>不要成为“那种人”第 3 卷：4 大安全提示</p><p>不要成为“那种人”第 4 卷：监控您的实例</p><p>红帽周五五件事 - 2026 年 6 月 19 日</p><p>Ubuntu 周刊 948</p><p>全循环每周新闻</p><p>不合逻辑的冲动 ISO</p><p>最新新闻与更新</p><p>新闻过滤选项</p><p>DistroWatch 周刊，第 1178 期</p><p>新闻：Arch 回应更多 AUR 攻击，Fedora 社区增长，避免使用不可变桌面的理由，Ubuntu 26.10 将获得语音识别，Canonical 更新测试版政策，KDE Plasma 6.7 亮点</p><p>问答：AUR 被攻破意味着什么？</p><p>上周发布：EasyOS 7.4, FreeBSD 15.1, Univention 5.2-6, Home Assistant OS 18.0, PorteuX 2.7</p><p>种子角：TUXEDO OS</p><p>民意调查：从 AUR 安装软件</p><p>网站新闻：服务器宕机</p><p>在本周刊中阅读更多内容...</p><p>Security Onion 是一款基于 Oracle Linux 的专用安全导向 Linux 发行版。它是一个免费且开放的平台，用于威胁狩猎、企业安全监控和日志管理。它包含用于警报、仪表板、狩猎、PCAP、检测和案例管理的自定义界面。它还包含其他工具，例如 osquery（一种使用 SQL 查询探索和监控操作系统数据的工具）、CyberChef（一种用于加密、编码、压缩和数据分析的 Web 应用程序）、Elasticsearch（一种数据搜索引擎）、Logstash（一种数据收集和处理引擎）、Kibana（一种用于 Elasticsearch 的数据可视化插件）、Suricata（一种入侵检测和防御系统）以及 Zeek（一种软件网络分析框架）。</p><p>技巧与窍门：创建、删除、修改和忽略别名</p><p>问答：拆分与合并文件</p><p>问答：适用于旧硬件的发行版</p><p>问答：为新手推荐友好的发行版以及为什么 Linux 发行版是免费的</p><p>问答：Ubuntu 软件包的来源</p><p>问答：家庭用最小化聊天室</p><p>技巧与窍门：如何在 Linux 中按多个条件查找文件</p><p>技巧与窍门：使用 Anbox 在 GNU/Linux 上运行 Android 应用程序</p><p>技巧与窍门：在 Ubuntu 下回退到旧内核</p><p>问答：运行具有自动更新的发行版</p><p>版权所有 © 2001 - 2026 Atea Ataroa Limited。保留所有权利。</p></div>
+  <div class="article-body"><p>Linux 7.2 在 AMD EPYC Sorano 上展现出一些意外且显著的性能提升 - Phoronix</p><p>Linux 7.2 在 AMD EPYC Sorano 上展现出一些意外且显著的性能提升</p><p>2026年6月23日 美国东部时间下午12:22</p><p>合并窗口要到本周末才结束，作为新功能特性的截止点，但我已经开始对当前为这个下一版 Linux 内核暂存的代码进行一些早期基准测试。Linux 7.2 已经因缓存感知调度和其他令人兴奋的新特性而显得相当引人注目，而本周早期测试中的一个意外惊喜是看到了一些本地网络/套接字性能的改进。</p><p>我用于评估 Linux 7.2 内核早期性能的第一个系统是一台搭载全新 AMD EPYC 8005 &quot;Sorano&quot; 系列处理器的服务器，具体来说是旗舰级的 84 核/168 线程 Zen 5 处理器。Linux 7.2 在 EPYC Sorano 上表现良好，我很快会提供内核性能的完整概览，以及其他硬件上的基准测试，但在这篇初步文章中，意外的惊喜是发现本地主机网络性能有了显著提升。</p><p>再次提醒，请继续关注合并窗口结束后更全面的 Linux 7.2 基准测试，而今天先简要探讨一下让我感到惊讶的网络性能提升。</p><p>在将 Linux 7.1 稳定版与截至 6 月 21 日的 Linux 7.2 Git 版本进行比较时，测试这台 EPYC Sorano 服务器的本地主机性能时，意外地发现了一些令人愉快的改进，测试工具是 xfr，一款基于 Rust 的现代 iperf3 替代品：</p><p>TCP 性能提升非常显著。UDP 性能与 Linux 7.1 相比没有变化。</p><p>在 Linux 7.2 开发版内核上运行的 xfr QUIC 测试相比 Linux 7.1 稳定版也显示出不错的改进。这对 AMD EPYC 8005 &quot;Sorano&quot; 面向电信、边缘计算、云存储等环境来说是个好消息。在接下来的测试中，看看这些改进是否同样适用于其他硬件，将会很有趣。</p><p>除了 xfr 之外，Sockperf 网络套接字基准测试也显示 Linux 7.2 的延迟更低。</p><p>对于 Linux 7.2 中这些意外改进的一个可能解释，在运行 stress-ng 内核微基准测试时浮出水面。Linux 7.2 Git 版本的 poll 性能比 Linux 7.1 稳定版快了数倍。</p><p>在内核中实现 poll 的地方，Linux 7.2 进行了调整，将 poll 代码从 free_page() 切换到了 kmalloc() API。这一改动没有注意到任何性能数字上的变化，但确实表明使用 kmalloc API 会提供更好的可扩展性，而这正是我们在这些基准测试中可能看到的。这是一个通用性的改进，并非 AMD 或 EPYC 特有，因此我们应该也能在其他硬件上看到收益。</p><p>同样重要的是，发现 AMD EPYC 8635P CPU 在 Linux 7.2 上取得这些基准测试胜利的同时，功耗并没有增加，反而比 Linux 7.1 略有降低。</p><p>无论如何，请继续关注合并窗口结束后更多的 Linux 7.2 内核基准测试，而目前这只是本周在尝试使用这个开发中的 Linux 内核测试全新 AMD EPYC Sorano 时遇到的第一个意外惊喜。</p><p>“令人作呕的” Linux sched_ext 源代码在 Linus Torvalds 投诉后进行了重构</p><p>DeviceTree-ACPI 混合模式提议用于改善 Snapdragon 笔记本电脑上的 Linux 支持</p><p>Linux 7.2 sched_ext 继续推进子调度器支持</p><p>Linux 的 KUnit 终于支持 JUnit 输出</p><p>Linux 经过六年工作和 360 多个补丁，终于消除了 strncpy API</p><p>Linux 7.2 移除了最后一个优化的 MD5 实现</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 也是 Phor</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12879" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.2--EPYC-Sorano-Network" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

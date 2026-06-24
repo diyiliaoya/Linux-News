@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DistroWatch 周刊，第 1178 期 — Linux 中文速报</title>
+<title>Ubuntu ARM64 系统内核补丁无需再重启 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>DistroWatch 周刊，第 1178 期</h1>
+  <h1>Ubuntu ARM64 系统内核补丁无需再重启</h1>
 
-  <div class="article-summary">本期 DistroWatch 周刊报道了 Arch Linux 的 AUR 仓库再次遭受攻击、Fedora 用户增长但贡献者退休、Ubuntu 计划为 26.10 版本加入语音识别功能、Canonical 更新测试版政策、以及为何应避免使用不可变桌面系统等新闻。此外还介绍了 KDE Plasma 6.7 的亮点、AUR 被攻破的意义、以及针对新手推荐的友好发行版等问答内容。</div>
+  <div class="article-summary">Canonical 宣布其 Livepatch 功能终于扩展至 ARM64 平台，用户可在 Ubuntu 26.04 LTS 和 Ubuntu Core 26 上无需重启即可修补 Linux 内核。此前该功能仅适用于 AMD64 系统。Livepatch 通过内存中应用补丁，减少停机时间，尤其适合云和边缘部署场景。个人用户可免费使用最多五台机器。</div>
 
-  <div class="article-body"><p>DistroWatch 周刊，第 1178 期 (DistroWatch.com 新闻)</p><p>DistroWatch.com 由以下赞助</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW 周刊 / 评测存档</p><p>访客评分与评论</p><p>按评分排序的项目排名</p><p>播客、新闻通讯与评测</p><p>跨发行版比较软件包</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停产的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与窍门专栏</p><p>误解与误区专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>发行版可视化家族树</p><p>常见问题解答</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>Ubuntu 计划加入语音转文字功能</p><p>Ubuntu 更新关于 Ubuntu 变体测试版和最终版的政策</p><p>避免使用不可变桌面的理由</p><p>Arch 用户软件仓库再次遭受攻击</p><p>Fedora 用户增长，贡献者退休</p><p>Slackware 终于将 Plasma 更新至版本 6</p><p>Arch Linux 报告 AUR 仓库中的恶意事件</p><p>开发者复活基于 Arch 的 Antergos 发行版</p><p>Asahi Linux 项目警告双启动用户不要升级到 MacOS 27</p><p>Ubuntu MATE 的未来</p><p>易于使用的 PBX - 托管或自管理</p><p>Linux 电话系统</p><p>免费在线聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程工作应用：iOS 或 Android</p><p>免费视频会议</p><p>3CX 的 VoIP / PBX 操作指南</p><p>不要被抓住，制定灾难恢复计划！</p><p>必备的在线聊天报告与统计</p><p>导致通话欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成对比</p><p>3CX StartUP 的 5 个杀手级功能</p><p>不要成为“那种人”第 1 卷：保持复杂凭证</p><p>不要成为“那种人”第 2 卷：通话欺诈</p><p>不要成为“那种人”第 3 卷：4 大安全提示</p><p>不要成为“那种人”第 4 卷：监控您的实例</p><p>红帽周五五件事 - 2026 年 6 月 19 日</p><p>Ubuntu 周刊 948</p><p>全循环每周新闻</p><p>不合逻辑的冲动 ISO</p><p>最新新闻与更新</p><p>新闻过滤选项</p><p>DistroWatch 周刊，第 1178 期</p><p>新闻：Arch 回应更多 AUR 攻击，Fedora 社区增长，避免使用不可变桌面的理由，Ubuntu 26.10 将获得语音识别，Canonical 更新测试版政策，KDE Plasma 6.7 亮点</p><p>问答：AUR 被攻破意味着什么？</p><p>上周发布：EasyOS 7.4, FreeBSD 15.1, Univention 5.2-6, Home Assistant OS 18.0, PorteuX 2.7</p><p>种子角：TUXEDO OS</p><p>民意调查：从 AUR 安装软件</p><p>网站新闻：服务器宕机</p><p>在本周刊中阅读更多内容...</p><p>Security Onion 是一款基于 Oracle Linux 的专用安全导向 Linux 发行版。它是一个免费且开放的平台，用于威胁狩猎、企业安全监控和日志管理。它包含用于警报、仪表板、狩猎、PCAP、检测和案例管理的自定义界面。它还包含其他工具，例如 osquery（一种使用 SQL 查询探索和监控操作系统数据的工具）、CyberChef（一种用于加密、编码、压缩和数据分析的 Web 应用程序）、Elasticsearch（一种数据搜索引擎）、Logstash（一种数据收集和处理引擎）、Kibana（一种用于 Elasticsearch 的数据可视化插件）、Suricata（一种入侵检测和防御系统）以及 Zeek（一种软件网络分析框架）。</p><p>技巧与窍门：创建、删除、修改和忽略别名</p><p>问答：拆分与合并文件</p><p>问答：适用于旧硬件的发行版</p><p>问答：为新手推荐友好的发行版以及为什么 Linux 发行版是免费的</p><p>问答：Ubuntu 软件包的来源</p><p>问答：家庭用最小化聊天室</p><p>技巧与窍门：如何在 Linux 中按多个条件查找文件</p><p>技巧与窍门：使用 Anbox 在 GNU/Linux 上运行 Android 应用程序</p><p>技巧与窍门：在 Ubuntu 下回退到旧内核</p><p>问答：运行具有自动更新的发行版</p><p>版权所有 © 2001 - 2026 Atea Ataroa Limited。保留所有权利。</p></div>
+  <div class="article-body"><p>Ubuntu ARM64 系统内核补丁无需再重启</p><p>Ubuntu ARM64 系统内核补丁无需再重启</p><p>Canonical 的 Livepatch 终于扩展至 Ubuntu 26.04 LTS 和 Ubuntu Core 26 平台。</p><p>现在可以在 ARM64 系统上修补 Linux 内核，而无需强制重启。这一功能在 AMD64 机器上已实现多年，但此前用户没有等效选项。</p><p>该功能面向用户开放，如果这听起来耳熟，那是因为 Canonical 之前已经提及过。第一次是在今年四月发布时，第二次是在某个场合。</p><p>我们现在报道此事，是因为他们发布了相关说明，解释了为准备这一功能所付出的努力。</p><p>相关工作始于 2023 年，当时公司进行了一项差距分析（即研究缺失的部分），评估 ARM64 支持内核实时修补所需的条件，结果并不乐观。</p><p>问题在于上游 ARM64 内核缺乏一个稳定的实现，而实时修补依赖该功能来判断何时可以安全地在运行中的内核中替换代码。</p><p>编译器工具链也未就绪，当时所有相关组件都缺少稳定的 ARM64 支持。随着处理器在云和边缘部署中变得越来越普遍，相关工作在 2024 年及今年持续推进。</p><p>上游内核维护者、硬件厂商以及 Canonical 自己的工程师必须共同努力来填补这些空白。</p><p>目前，ARM64 Livepatch 客户端已经在 Canonical 的测试环境中为 Ubuntu 26.04 LTS 和 Ubuntu Core 26 应用补丁。</p><p>为什么要使用 Livepatch？</p><p>某个 bug 曾阻止我在虚拟机上启用 Livepatch。</p><p>Livepatch 是 Canonical 订阅服务的一部分，该订阅捆绑了安全修补、支持和合规工具，同时通过修补关键和高严重性漏洞来覆盖内核。</p><p>如果你只是想试用，无需支付任何费用，因为 Canonical 为个人使用提供最多五台机器的免费 Livepatch。这足以覆盖大多数家庭设置和小型服务器集群，无需提供支付信息。</p><p>真正的优势体现在管理多台机器时：无需安排停机时间来修补内核漏洞，Livepatch 会在内存中应用修复，并让管理员自行决定每台机器的更新时间。</p><p>不过，它并不能完全替代补丁，因为 Livepatch 只涉及内核。</p><p>Canonical 仍然建议定期重启，因为长时间运行会累积内存泄漏和其他状态问题，而实时补丁无法清除这些问题。</p><p>如果你是一个经常重启机器的桌面用户，这些都不重要，因为 Livepatch 是为那些重启意味着实际停机时间和成本超支风险的系统而设计的。</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。</p><p>PINE64 的智能音箱是 Home Assistant 驱动的 Amazon Echo 替代品</p><p>ArmSoM Sige6 是首款弃用 Rockchip 改用 Allwinner 的 Sige 主板</p><p>Guncrypt 是 Halfbrick Studio 的首款 PC 游戏，也支持 Linux</p><p>Canonical 的新 AI 工具让你与 Ubuntu 对话而非打字</p><p>Epic Games 构建了自己的 Git 替代方案来处理大文件</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 周刊，你可以学习有用的 Linux 技巧、发现应用程序、探索新发行版，并了解 Linux 世界的最新动态</p><p>太好了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅 It's FOSS。</p><p>您的链接已过期。</p><p>成功！请检查您的电子邮件以获取登录的魔法链接。</p><p>成功！您的账单信息已更新。</p><p>您的账单未更新。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12879" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/arm64-livepatching-on-ubuntu/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
