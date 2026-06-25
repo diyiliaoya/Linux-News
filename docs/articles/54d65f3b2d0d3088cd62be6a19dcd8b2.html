@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>在Ubuntu上通过‘BudsLink’控制AirPods和Galaxy Buds — Linux 中文速报</title>
+<title>Pine64 为 Home Assistant 爱好者推出 50 美元智能音箱 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
+    <span class="tag">软件应用</span>
     <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>在Ubuntu上通过‘BudsLink’控制AirPods和Galaxy Buds</h1>
+  <h1>Pine64 为 Home Assistant 爱好者推出 50 美元智能音箱</h1>
 
-  <div class="article-summary">BudsLink是一款GTK4/libadwaita Linux应用，让用户在Ubuntu等Linux发行版上直接控制蓝牙耳机的电池电量、主动降噪（ANC）、环境音模式等功能，无需使用手机应用。它支持Apple AirPods、Samsung Galaxy Buds、Sony耳机等设备，并提供GNOME Shell扩展、KDE Plasma小程序等桌面集成选项。该软件免费开源，可通过Flathub安装。</div>
+  <div class="article-summary">开源硬件制造商 Pine64 推出了一款售价 50 美元的智能音箱 PineVoice，基于 RISC-V 芯片，运行开源软件。该设备围绕 Bouffalo Lab BL606P RISC-V SoC 构建，集成 Wi-Fi、蓝牙 5.0 和 Zigbee 无线接口，配备双麦克风阵列和扬声器，支持本地唤醒词检测。它运行阿里巴巴的开源 YoC 平台和 Wyoming Satellite 协议，可作为本地麦克风和扬声器用于自托管的 Home Assistant 系统。尽管规格较低（32 MiB pSRAM、16 MiB 闪存），但价格与 Amazon Echo Dot 相当，且专注于本地开源网络。</div>
 
-  <div class="article-body"><p>在Ubuntu上通过‘BudsLink’控制AirPods和Galaxy Buds - OMG! Ubuntu</p><p>这是一款Linux应用，让你对来自Apple、Sony、Samsung和Nothing等品牌的蓝牙耳机拥有更多控制权——电池电量、主动降噪（ANC）等，全部无需使用手机应用。</p><p>大多数蓝牙音频设备在Ubuntu及其他Linux发行版上‘即插即用’可用于听音频，但仅此而已。将AirPods或Galaxy Buds与你的桌面配对后，你会发现无法调整你付费购买的所有设备端功能。</p><p>BudsLink是一款GTK4/libadwaita应用，能够做到这一点。它让你在Linux桌面上控制耳机功能，无需启动Android或iOS应用。它直接通过BlueZ（Ubuntu使用的默认蓝牙音频栈）与支持的设备通信。</p><p>表面上与去年我写过的某款应用类似，但BudsLink功能更全面，覆盖更广泛的硬件，并提供桌面集成选项。</p><p>访问高级音频设备功能</p><p>主界面、设备概览和AirPods Pro的设置</p><p>大多数可穿戴蓝牙音频设备都有电池，因此了解它们的电量很重要。BudsLink的主要吸引力在于显示每只耳机的电池电量以及充电盒的电量报告（在支持此功能的设备上）。</p><p>需要明确的是，BudsLink并未得到其支持的任何设备公司的认可或支持。</p><p>它还允许你——取决于设备——启用主动降噪和环境音模式、升频以及对话感知（可选在你开始说话时自动降低音量）。</p><p>通过入耳检测或手势实现媒体暂停和恢复，以及按钮配置也包含在内，如果你的设备支持，你还可以定义均衡器预设。</p><p>它支持哪些设备？</p><p>每款设备提供不同的设置</p><p>目前支持的硬件涵盖大多数Apple AirPods和Beats型号、一系列Sony音频穿戴设备、Samsung Galaxy Buds以及Nothing/CMF耳机和头戴式耳机。</p><p>不过，它仍在活跃开发中，并不断添加对新设备的支持——最近新增了Sony WH-XB900N，而Pixel Buds的支持将在下一个版本中推出。</p><p>无需应用的面板集成</p><p>这就是BudsLink真正巧妙的地方。它可以作为D-Bus服务运行，将设备信息暴露给你的系统，一系列配套的桌面集成可以接入这些信息。</p><p>通过一个单独的包，提供了GNOME Shell扩展、KDE Plasma小程序（和桌面小部件）以及Cinnamon小程序。目前，该包处于测试阶段，你需要从GitHub下载并运行一个脚本。</p><p>附加组件和小程序很好，但不是必需的，因为应用本身可以独立运行。但如果你更愿意从任务栏或桌面面板启用ANC而无需打开主应用，它们正是让这个工具区别于其他替代方案的关键。</p><p>在Ubuntu上安装BudsLink</p><p>这是一款免费、开源软件，可通过Flathub获取。</p><p>要在Ubuntu上安装它，你需要先安装Flatpak并启用Flathub仓库，然后在终端中运行：</p><p>flatpak install flathub io.github.maniacx.BudsLink</p><p>或者，如果你使用的是Ubuntu 26.04 LTS并且喜欢图形界面，可以从仓库安装Bazaar。它让你可以浏览、安装、管理和更新从Flathub安装的Flatpak应用。运行以下命令即可获得桌面应用：</p><p>sudo apt install bazaar</p></div>
+  <div class="article-body"><p>Pine64 为 Home Assistant 爱好者推出 50 美元智能音箱 - OMG! Ubuntu</p><p>开源硬件制造商 Pine64 推出了一款售价 50 美元的智能音箱，该音箱在 RISC-V 芯片上运行开源软件。</p><p>（此前称为 PineVox）围绕 Bouffalo Lab BL606P RISC-V SoC 构建，集成了 Wi-Fi、蓝牙 5.0 和 Zigbee 无线接口。</p><p>它配备双麦克风阵列和扬声器，支持“本地唤醒词检测”，顶部按钮可实现静音（带 LED 指示灯）、启动/停止和音量调节。</p><p>出厂固件基于阿里巴巴的开源 YoC 平台，并运行 Wyoming Satellite 协议，该协议将设备转变为自托管、基于 Linux 的 Home Assistant 系统的本地麦克风和扬声器。</p><p>Home Assistant 可作为 Snap 包运行在 Ubuntu Core 上。</p><p>虽然 Pine64 表示这使用了 Wyoming 协议，但该协议已被弃用。开发者建议使用 Linux Voice Assistant。</p><p>仅配备 32 MiB 嵌入式 pSRAM 内存、16 MiB 闪存和 128 KiB ROM 存储，这些规格可能听起来微不足道——尽管在当前 AI 热潮下已算慷慨——但这是一款嵌入式设备，而非藏在香薰扩散器中的完整 PC。</p><p>PineVoice 并非全能型智能音箱。</p><p>PineVoice 并非竞争对手，它处于早期开发阶段，早期用户将遇到小问题和性能问题。未来的固件更新应能逐步解决这些问题，但像 Pine64 的所有产品一样，你购买的并非消费级产品。</p><p>时尚的工业设计并非 Pine64 的招牌，功能完善的软件也不是。该公司专注于价格：目标是提供廉价、开放友好的硬件，在开发者和爱好者手中，这些硬件可以发展成可行（尽管仍属小众）的产品。</p><p>烙铁也遵循同样的模式。</p><p>售价 50 美元，与 Amazon Echo Dot（第 5 代）和已停产的 Google Nest Mini 价格相当。与那些依赖云生态系统的专有消费设备不同，PineVoice 专为本地开源网络而构建。</p><p>感兴趣吗？你可以在 Pine64 商店以 49.99 美元的价格购买 PineVoice。它附带 USB 线缆、快速入门指南和 30 天保修——以及你试图让它做点什么时获得的周末乐趣。</p><p>也许是我个人看法，但它的设计有点……怎么说呢。放在某人浴室的架子上也不会显得突兀。对于一款智能音箱来说，低调的设计确实有道理。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/06/budslink-airpods-galaxy-buds-linux" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/06/pine64-pinevoice-riscv-smart-speaker-launch" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

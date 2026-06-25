@@ -592,5 +592,159 @@
     "title_zh": "Shelly 2.3.1：Arch Linux的GUI包管理器改进通知功能",
     "summary_zh": "Shelly 2.3.1 是专为 Arch Linux 设计的图形化包管理器，最新版本增强了通知功能，使用户能更高效地管理软件包。该更新旨在简化包管理任务，提升用户体验。",
     "fulltext_zh": "探索最新版的 Shelly 2.3.1 GUI 包管理器（适用于 Arch Linux），现在通过增强的通知功能，让您的包管理任务更加高效流畅。\n\n该文章《Shelly 2.3.1 GUI Package Manager for Arch Linux Improves Notifications》最初发表于 Linux Today。"
+  },
+  "b652dcaffe91545b7f52151b405b7e5e": {
+    "id": "b652dcaffe91545b7f52151b405b7e5e",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/06/ubuntu-livepatch-arm64",
+    "title_en": "Ubuntu brings Livepatch to arm64 for rebootless kernel updates",
+    "summary_en": "Canonical has brought&#160;Livepatch to Arm64 devices for the first time, allowing Ubuntu systems on Arm hardware to apply critical kernel security patches without a full reboot. Livepatch is one of Ubuntu&#8217;s best hidden security features – it&#8217;s not enabled by default, requires Ubuntu Pro – as it allows kernel security updates to be applied in memory while your system is running. Normally, a restart is needed. Perfect if you&#8217;re a bit lazy running a task or workload you don&#8217",
+    "pub_date": "Wed, 24 Jun 2026 22:10:00 +0000",
+    "title_zh": "Ubuntu 将 Livepatch 引入 arm64，实现免重启内核更新",
+    "summary_zh": "Canonical 首次将 Livepatch 功能引入 Arm64 设备，使运行在 Arm 硬件上的 Ubuntu 系统能够在不重启的情况下应用关键内核安全补丁。Livepatch 是 Ubuntu 隐藏的安全特性之一，需通过 Ubuntu Pro 启用。该功能此前在 arm64 架构上因堆栈跟踪支持不足和工具链缺失而难以实现，经过 Canonical、内核维护者、硬件厂商和超大规模云服务商多年的协作才得以完成。目前支持的 arm64 内核变体包括 Arm 服务器、云和始终在线硬件。但需注意，Livepatch 仅更新内核，常规软件包仍需通过标准流程更新，且 Canonical 建议定期重启。",
+    "fulltext_zh": "Ubuntu 将 Livepatch 引入 arm64，实现免重启内核更新 - OMG! Ubuntu\n\nCanonical 首次将 Livepatch 功能引入 Arm64 设备，使运行在 Arm 硬件上的 Ubuntu 系统能够在不完全重启的情况下应用关键内核安全补丁。\n\nLivepatch 是 Ubuntu 最隐蔽的安全特性之一——它默认未启用，需要 Ubuntu Pro——因为它允许在系统运行时在内存中应用内核安全更新。通常情况下，这需要重启。\n\n如果你有点懒，或者正在运行不想被打断的任务或工作负载，这非常完美。\n\nLivepatch 现已首次在 Ubuntu 26.04 LTS 及更高版本上可用于 Arm64 设备——不过让一切正常工作并非易事。\n\n“实时”打补丁需要内核知道何时可以安全地将运行中的代码替换为修补后的版本。这依赖于堆栈跟踪，而 arm64 对此支持不佳。用于在 arm64 上构建和比较补丁的工具链也同样缺乏。\n\n这需要 Canonical、内核维护者、硬件厂商和超大规模云服务商之间多年的协作努力才得以实现。\n\n我可以在树莓派上使用 Ubuntu 的 Livepatch 吗？\n\n如果你在树莓派上运行 Ubuntu 26.04 LTS，你将无法使用 Livepatch。\n\nUbuntu 的树莓派版本运行在树莓派内核上，这是一种内核变体，不在 Livepatch 支持的列表之中。\n\n受支持的 arm64 内核变体包括：\n\nArm 驱动的服务器、云和始终在线硬件是 Livepatch 的用武之地，确保关键和高严重性的 CVE（那些可能需要非计划重启才能应用的漏洞）能够在不宕机的情况下原地修补。\n\n“这一增强将加强那些不每天或每周进行安全维护的系统的安全性，并为致力于符合《网络弹性法案》（CRA）的组织提供运营优势，”Canonical 的 Rajan Patel 写道。\n\n不过，这并非完全无需动手的安全方案。Livepatch 仅更新内核。常规软件包（如 OpenSSL 等）仍需通过标准更新流程进行维护。Canonical 也建议定期重启。\n\n在 Ubuntu 26.04 LTS 上启用 Livepatch\n\n要使用 Livepatch，你需要一个 Ubuntu Pro 账户，个人使用最多五台机器免费。Ubuntu 26.04 LTS 用户可以通过桌面端的软件更新器或在无头设置、服务器和云上通过命令行启用它。"
+  },
+  "54d65f3b2d0d3088cd62be6a19dcd8b2": {
+    "id": "54d65f3b2d0d3088cd62be6a19dcd8b2",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/06/pine64-pinevoice-riscv-smart-speaker-launch",
+    "title_en": "Pine64 launch $50 smart speaker for Home Assistant tinkerers",
+    "summary_en": "Open-hardware manufacturer Pine64 has launched a $50 smart speaker that runs open-source software on a RISC-V chip. PineVoice (previously known as PineVox) is built around a Bouffalo Lab BL606P RISC-V SoC with integrated Wi-Fi, Bluetooth 5.0 and Zigbee radio interfaces. It&#8217;s equipped with dual microphone array and speaker with support for &#8216;local wake word detection&#8217;, and top-mounted buttons allow you to mute (with LED indicator), start/stop and adjust volume. The factory-shippe",
+    "pub_date": "Wed, 24 Jun 2026 14:24:41 +0000",
+    "title_zh": "Pine64 为 Home Assistant 爱好者推出 50 美元智能音箱",
+    "summary_zh": "开源硬件制造商 Pine64 推出了一款售价 50 美元的智能音箱 PineVoice，基于 RISC-V 芯片，运行开源软件。该设备围绕 Bouffalo Lab BL606P RISC-V SoC 构建，集成 Wi-Fi、蓝牙 5.0 和 Zigbee 无线接口，配备双麦克风阵列和扬声器，支持本地唤醒词检测。它运行阿里巴巴的开源 YoC 平台和 Wyoming Satellite 协议，可作为本地麦克风和扬声器用于自托管的 Home Assistant 系统。尽管规格较低（32 MiB pSRAM、16 MiB 闪存），但价格与 Amazon Echo Dot 相当，且专注于本地开源网络。",
+    "fulltext_zh": "Pine64 为 Home Assistant 爱好者推出 50 美元智能音箱 - OMG! Ubuntu\n开源硬件制造商 Pine64 推出了一款售价 50 美元的智能音箱，该音箱在 RISC-V 芯片上运行开源软件。\n（此前称为 PineVox）围绕 Bouffalo Lab BL606P RISC-V SoC 构建，集成了 Wi-Fi、蓝牙 5.0 和 Zigbee 无线接口。\n它配备双麦克风阵列和扬声器，支持“本地唤醒词检测”，顶部按钮可实现静音（带 LED 指示灯）、启动/停止和音量调节。\n出厂固件基于阿里巴巴的开源 YoC 平台，并运行 Wyoming Satellite 协议，该协议将设备转变为自托管、基于 Linux 的 Home Assistant 系统的本地麦克风和扬声器。\nHome Assistant 可作为 Snap 包运行在 Ubuntu Core 上。\n虽然 Pine64 表示这使用了 Wyoming 协议，但该协议已被弃用。开发者建议使用 Linux Voice Assistant。\n仅配备 32 MiB 嵌入式 pSRAM 内存、16 MiB 闪存和 128 KiB ROM 存储，这些规格可能听起来微不足道——尽管在当前 AI 热潮下已算慷慨——但这是一款嵌入式设备，而非藏在香薰扩散器中的完整 PC。\nPineVoice 并非全能型智能音箱。\nPineVoice 并非竞争对手，它处于早期开发阶段，早期用户将遇到小问题和性能问题。未来的固件更新应能逐步解决这些问题，但像 Pine64 的所有产品一样，你购买的并非消费级产品。\n时尚的工业设计并非 Pine64 的招牌，功能完善的软件也不是。该公司专注于价格：目标是提供廉价、开放友好的硬件，在开发者和爱好者手中，这些硬件可以发展成可行（尽管仍属小众）的产品。\n烙铁也遵循同样的模式。\n售价 50 美元，与 Amazon Echo Dot（第 5 代）和已停产的 Google Nest Mini 价格相当。与那些依赖云生态系统的专有消费设备不同，PineVoice 专为本地开源网络而构建。\n感兴趣吗？你可以在 Pine64 商店以 49.99 美元的价格购买 PineVoice。它附带 USB 线缆、快速入门指南和 30 天保修——以及你试图让它做点什么时获得的周末乐趣。\n也许是我个人看法，但它的设计有点……怎么说呢。放在某人浴室的架子上也不会显得突兀。对于一款智能音箱来说，低调的设计确实有道理。"
+  },
+  "6db17451b318c8715292e7059aa29eb4": {
+    "id": "6db17451b318c8715292e7059aa29eb4",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12881",
+    "title_en": "Distribution Release: KaOS 2026.06",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The KaOS project has announced the launch of KaOS 2026.06 which completes the distribution's shift to the Dinit init software. \"After almost three years of preparation and close the a year of trials, building, testing and rebuilding, KaOS is proud to present to you a first stable ISO....",
+    "pub_date": "",
+    "title_zh": "KaOS 2026.06 发布",
+    "summary_zh": "KaOS 项目宣布推出 KaOS 2026.06，标志着发行版全面转向 Dinit 初始化系统。经过近三年准备和一年测试，首个完全基于 Dinit 的稳定 ISO 镜像发布。KaOS 现使用 Dinit、turnstile、seatd 进行系统启动、席位和服务管理，但仍保留精简版 systemd 用于 udev 和 tmpfiles。显示管理器改用 greetd 与 tuigreet，取代 sddm。ISO 镜像默认搭载 Niri/Noctalia 桌面，而非 Plasma。用户仍可从仓库安装 Plasma 桌面。",
+    "fulltext_zh": "发行版发布：KaOS 2026.06\n\nKaOS 项目已宣布推出 KaOS 2026.06，该版本完成了发行版向 Dinit 初始化软件的迁移。\n\n“经过近三年的准备以及大约一年的试验、构建、测试和重建，KaOS 自豪地向您呈现首个完全基于 Dinit 的稳定 ISO 镜像。对于那些对这些变更原因感兴趣的人，请阅读《systemd 与 KaOS 的未来》。脱离 systemd 作为初始化系统的迁移现已完成。KaOS 现在使用 Dinit、turnstile、seatd 进行系统启动、席位和服务管理。这并不意味着系统完全摆脱了 systemd，一个大幅精简的 systemd 仍主要用于 udev 和 tmpfiles（在可预见的未来将保持这种状态，其他用于 udev 和 tmpfiles 的选项将进行评估）。Elogind 仍在被使用，但并非用于系统登录，而纯粹是为了实现功能性的 polkit。一个新的显示管理器也已投入使用，greetd 与 tuigreet 已取代 sddm。Greetd 与 seatd 完全集成，因此在新设置中更适合 KaOS。您不会在此 ISO 镜像中找到 Plasma 或 Kwin，取而代之的是基于 Niri/Noctalia 的系统。”\n\n希望在 KaOS 上继续运行 Plasma 的用户仍可从发行版仓库安装该桌面环境。更多信息请参阅 KaOS-DINIT-2026.06-x86_64.iso。\n\n近期相关新闻与发布：\n发行版发布：KaOS 2026.06\n发行版发布：KaOS 2026.02\n发行版发布：KaOS 2025.09\n发行版发布：KaOS 2025.05\n发行版发布：KaOS 2025.01\n发行版发布：KaOS 2024.09\n\nKaOS 是一款桌面 Linux 发行版，搭载最新版本的 Noctalia 桌面环境、Calligra 办公套件以及其他使用 Qt 工具包的流行软件应用。它受 Arch Linux 启发，但开发者构建自己的软件包，这些软件包可从内部仓库获取。KaOS 采用滚动发布开发模式，并专为 64 位计算机系统构建。\n\nhttps://groups.google.c"
+  },
+  "61ba9e1e326f6de267b1c49d6d6658d0": {
+    "id": "61ba9e1e326f6de267b1c49d6d6658d0",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12880",
+    "title_en": "Distribution Release: SteamOS 3.8.10",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  SteamOS, an Arch-based Linux distribution developed by Valve Corporation, has been updated to version 3.8.10. The new release comes with an updated base system and a large number of improvements and bug fixes: \"SteamOS 3.8.10 has just been released for all users with the following changes: updated Arch....",
+    "pub_date": "",
+    "title_zh": "SteamOS 3.8.10 发行版发布",
+    "summary_zh": "Valve 公司发布了基于 Arch Linux 的 SteamOS 3.8.10 版本。该版本更新了系统基础，增加了对即将推出的 Steam Machine 硬件的初步支持，支持通过连接的 Steam 手柄唤醒睡眠状态，显著提升了高速网络下的系统更新速度，并改进了游戏模式下的屏幕投射支持。此外，还修复了多项问题，包括部分游戏中的下拉菜单不显示、特定 Steam Deck LCD 型号触控板过于敏感、远程播放时视频输出冻结、游戏录制时特定设置下的会话崩溃，以及某些游戏窗口位置错误或关闭时导致会话崩溃等。",
+    "fulltext_zh": "发行版发布：SteamOS 3.8.10\n\n由 Valve 公司开发的基于 Arch 的 Linux 发行版 SteamOS 已更新至 3.8.10 版本。新版本带来了更新的系统基础以及大量改进和错误修复：\n\n“SteamOS 3.8.10 现已面向所有用户发布，包含以下变更：更新了 Arch 系统基础；初步支持即将推出的 Steam Machine 硬件；增加了通过连接的 Steam 手柄从睡眠状态唤醒的功能；显著提升了高速网络连接下未来系统更新的速度；改进了游戏模式下的屏幕投射支持（例如 OBS/Discord）；修复了部分游戏中下拉菜单不显示的问题；修复了某些早期 Steam Deck LCD 型号触控板过于灵敏的问题；改进了对尝试在外部查看器中打开 PDF 文件的游戏的支持；修复了使用远程播放时视频输出可能冻结的问题；修复了使用游戏录制功能且设置特定‘最大视频高度’时可能出现的会话崩溃问题；修复了影响某些游戏（如《海绵宝宝：潮涌争霸》）的窗口位置不正确的问题；修复了关闭某些游戏（如《星球大战 绝地：幸存者》和《星空》）导致会话崩溃的问题……\n\n完整变更列表请参见相关页面。\n\nsteamdeck-oobe-repair-20260618.10-3.8.10.img.bz2\n\n近期相关新闻与版本发布：\n发行版发布：SteamOS 3.8.10\n开发版发布：SteamOS 2.0 预览版\n开发版发布：SteamOS 1.0 Beta 更新 153\n开发版发布：SteamOS 1.0 Beta 更新 145\n开发版发布：SteamOS 1.0 Beta 更新 105\n开发版发布：SteamOS 1.0 Beta\n\nSteamOS 是由美国视频游戏开发商、发行商及数字发行公司 Valve 公司开发的基于 Arch 的 Linux 发行版。它搭载了 Valve 自家的视频游戏商店 Steam，并且是 Valve 系列游戏硬件（包括 Steam Deck、Steam Machine 和 Steam Frame）的默认 Linux 发行版。该发行版还支持部分第三方手持设备。"
+  },
+  "bb83249cbb2ce167bd246901b0d51d39": {
+    "id": "bb83249cbb2ce167bd246901b0d51d39",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.2-MM",
+    "title_en": "MGLRU Improvement Yielding Nice Gains On Linux 7.2: MongoDB 30~100% Higher Throughput",
+    "summary_en": "The many memory management \"MM\" related improvements were recently merged to Git for the Linux 7.2 kernel. As typical most kernel cycles, some of the low-level improvements can yield nice efficiency wins and better performance in different areas...",
+    "pub_date": "Wed, 24 Jun 2026 17:19:23 -0400",
+    "title_zh": "MGLRU改进为Linux 7.2带来显著收益：MongoDB吞吐量提升30%~100%",
+    "summary_zh": "Linux 7.2内核合并了大量内存管理（MM）改进，其中MGLRU的回收循环和脏回写处理优化效果显著。在MongoDB等负载下，使用NVMe存储时吞吐量提升30%，慢速I/O场景下甚至可达100%。其他改进包括更高效释放0阶页面、DAMON暂停恢复支持、KASAN加速、mmap_miss命中计数收紧等。",
+    "fulltext_zh": "MGLRU改进为Linux 7.2带来显著收益：MongoDB吞吐量提升30%~100% - Phoronix\n\nMGLRU改进为Linux 7.2带来显著收益：MongoDB吞吐量提升30%~100%\n发布于2026年6月24日下午5:19 EDT。\n\n大量内存管理（MM）相关改进近期已合并到内核的Git仓库中。与大多数内核周期一样，一些底层改进可以在不同领域带来可观的效率提升和更好的性能。\n\n我发现Linux 7.2内核的MM特性变更中最有趣的项目包括：\n- MGLRU的回收循环和脏回写处理。该补丁系列在MongoDB配合YCSB等负载下可带来高达30%的性能提升。在慢速I/O场景下，某些基准测试（如MongoDB）甚至可能获得100%的增益，而30%的提升是在NVMe存储下测得的。来自改进MGLRU回收循环和脏folio处理的基准测试结果相当惊人。看看其他工作负载能否从这一改进中受益将非常有趣。\n- 通过更高效地批量释放连续的order-0页面，实现更快的0阶页面释放。这反过来解决了去年在vmalloc性能中注意到的一些性能回归问题。主要受益于vfree()和冻结页面的释放。\n- 支持在不丢失当前状态的情况下暂停和恢复DAMON。\n- 扩展DAMON以监控除访问之外的一般数据属性。\n- 通过移除无效的栈和页表标记来加速内核地址消毒器（KASAN）。\n- 收紧mmap_miss命中计数，显著减少同步mmap预读I/O，并减少稀疏随机和跨步内存访问工作负载的执行时间和读取的GB数。这显示出一些显著的改进。\n- 统一folio中匿名和共享内存交换的分配与计费，以提供更好的同步和增强的性能。\n\n关于Linux 7.2众多MM变更的更多详细信息，请参见已合并到Git的主分支。\n\nLinux 7.2防止伪造性能数据失控\nLinux 7.2准备支持IMA和EVM后量子ML-DSA签名\n“令人作呕”的Linux sched_ext源代码在Linus Torvalds投诉后重构\nLinux 7.2在AMD EPYC Sorano上展现出一些意外且不错的性能提升\n提出DeviceTree-ACPI混合模式以改善Snapdragon笔记本的Linux支持\nLinux 7.2 sched_ext继续推进子调度器支持\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动等主题。Michael也是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他。\n\nLinux在六年工作和360多个补丁后终于淘汰了strncpy API\nsystemd 261发布，包含新的systemd-sysinstall OS安装程序、IMDSD和Storagectl\n开源NVIDIA NVK Vulkan驱动现已支持DLSS\n“令人作呕”的Linux sched_ext源代码在Linus Torvalds投诉后重构\nGoogle的Gemini部分解决了现代ASUS笔记本上Linux启动时间过长的问题\nEpic Games宣布Lore开源版本控制系统\nSteam Machine发布，售价1049美元至1428美元\nClaude AI协助修复影响众多笔记本的多年AMD Radeon Linux显示错误\n\n享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "2258c46cbb519fe713024a38f97cba2d": {
+    "id": "2258c46cbb519fe713024a38f97cba2d",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.2-NTFS3",
+    "title_en": "NTFS3 Driver Sees Bug Fixes & Minor Improvements With Linux 7.2",
+    "summary_en": "While the new NTFS file-system driver merged for  Linux 7.1 and has seen more improvements for Linux 7.2, for now at least the NTFS3 kernel driver continues to be maintained with new fixes and improvements. NTFS3 is the driver that was upstreamed to the Linux kernel a few years ago back during the pandemic by Paragon Software...",
+    "pub_date": "Wed, 24 Jun 2026 14:11:00 -0400",
+    "title_zh": "NTFS3 驱动在 Linux 7.2 中获得错误修复与小幅改进",
+    "summary_zh": "Linux 7.2 中合并的 NTFS3 内核驱动更新以小幅错误修复为主，包括越界读取修复、编译器警告修复及其他底层改动。新增功能包括防止栈溢出的保护机制、额外验证、清除有效数据长度之外的陈旧页缓存等。Paragon Software 的 Konstantin Komarov 继续维护该驱动，目前尚无将其从内核中移除的计划。",
+    "fulltext_zh": "NTFS3 驱动在 Linux 7.2 中获得错误修复与小幅改进 - Phoronix\nNTFS3 驱动在 Linux 7.2 中获得错误修复与小幅改进\n发布于 2026 年 6 月 24 日下午 2:11（美国东部时间）\n\n新的 NTFS 文件系统驱动已合并到 Linux 7.1 中，并在 Linux 7.2 中获得了更多改进。至少目前，NTFS3 内核驱动仍在持续维护，并带来了新的修复和改进。该驱动是几年前在疫情期间被上游合并到 Linux 内核中的。\n\n由于新的 NTFS 驱动仍在证明自身价值，目前没有立即将 NTFS3 从 Linux 内核中移除的计划。Paragon Software 的 Konstantin Komarov 继续维护这个 Linux 内核的 NTFS 读写驱动。对于 Linux 7.2，主要是小幅错误修复，从越界读取到编译器警告修复，以及其他大多属于常规性质的改动。\n\n新增内容包括防止可能栈溢出的保护机制、额外的验证、清除超出有效数据长度的陈旧页缓存，以及其他底层改动。\n\n今天为 Linux 7.2 合并的 NTFS3 内核驱动更改的完整列表可通过以下链接查看：\n\nF2FS 在 Linux 7.2 中集成 FSERROR 报告，减少内存占用\nEROFS 在 Linux 7.2 中更好地处理大型稀疏 AI 数据集，实现更高效的 I/O\nexFAT 文件系统在 Linux 7.2 中通过 IOmap 转换获得更好性能\n新的 NTFS 驱动在 Linux 7.2 中获得加固与修复，支持 Windows 原生符号链接\nEXT4 重构快速提交处理并加快目录哈希计算\nBcachefs 工具 1.38.6 带来多项性能改进\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nLinux 经过六年工作和 360 多个补丁，终于淘汰了 strncpy API\nsystemd 261 发布，带来新的 systemd-sysinstall 操作系统安装程序、IMDSD 和 Storagectl\n开源 NVIDIA NVK Vulkan 驱动现已支持 DLSS\nLinus Torvalds 投诉后，“令人作呕”的 Linux sched_ext 源代码被重构\nGoogle 的 Gemini 部分解决了现代华硕笔记本电脑上 Linux 启动时间过长的问题\nEpic Games 宣布 Lore 开源版本控制系统\nSteam Machine 发布，售价 1049 美元至 1428 美元\nClaude AI 协助修复影响众多笔记本电脑的多年 AMD Radeon Linux 显示错误\n\n享受无广告浏览，单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "0101d43132975b131c27edfdb8a44ed2": {
+    "id": "0101d43132975b131c27edfdb8a44ed2",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.2-F2FS",
+    "title_en": "F2FS Integrates FSERROR Reporting, Reduces Memory Footprint In Linux 7.2",
+    "summary_en": "The Flash-Friendly File-System (F2FS) changes have landed for Linux 7.2...",
+    "pub_date": "Wed, 24 Jun 2026 12:48:12 -0400",
+    "title_zh": "F2FS 集成 FSERROR 报告功能，在 Linux 7.2 中减少内存占用",
+    "summary_zh": "Linux 7.2 中，F2FS 文件系统集成了 FSERROR 错误报告框架，实现了 I/O 错误报告标准化。同时，通过移除运行验证用的内存数据结构（如内存块位图和 SIT 版本位图），显著降低了内存占用。此外，还支持每 I/O 写入流、FDP 流映射等优化。",
+    "fulltext_zh": "F2FS 集成 FSERROR 报告功能，在 Linux 7.2 中减少内存占用 - Phoronix\nF2FS 集成 FSERROR 报告功能，在 Linux 7.2 中减少内存占用\n发布于 2026 年 6 月 24 日 美国东部时间下午 12:48。\n\n闪存友好文件系统（F2FS）的变更已合入 Linux 7.2。\n\nLinux 7.2 中 F2FS 最显著的变更之一是 FSERROR 错误报告支持。FSERROR 框架在 Linux 7.0 中被合并，用于处理通用 I/O 错误报告，该功能在 Linux 文件系统中可以通用，而无需每个文件系统自行实现报告机制。现在，随着 Linux 7.2 的发布，F2FS 已加入 FSERROR 阵营，实现了 I/O 错误报告的标准化。\n\nLinux 7.2 中的 F2FS 还通过还原用于运行验证的内存数据结构，减少了使用该文件系统的内存占用。此外，还有各种其他改进。F2FS 现在支持对直接写入操作遵循每 I/O 写入流，将数据写入映射到 FDP 流，以及其他优化。\n\n内存块位图在存在十年后被移除，但在此期间开发者从未发现任何内存损坏的报告案例，因此它只是在浪费内存。内存中的 SIT 版本位图在 F2FS 中也存在了大约十年，同样未证明有任何实际价值，因此也被移除以节省内存。\n\n关于 F2FS 功能变更以及针对这一闪存优化文件系统的各种错误修复的更多详细信息，可通过已合入 Linux 7.2 的补丁获取。\n\nNTFS3 驱动在 Linux 7.2 中获得错误修复与小幅改进\nEROFS 在 Linux 7.2 中更好地处理大型稀疏 AI 数据集，I/O 更高效\nexFAT 文件系统在 Linux 7.2 中通过 IOmap 转换获得更好性能\n新 NTFS 驱动获得加固与修复，Linux 7.2 支持 Windows 原生符号链接\nEXT4 重构快速提交处理并加速目录哈希计算\nBcachefs 工具 1.38.6 带来多项性能改进\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\nLinux 历经六年工作、360 多个补丁，终于淘汰 strncpy API\nsystemd 261 发布，带来全新 systemd-sysinstall 操作系统安装程序、IMDSD 和 Storagectl\n开源 NVIDIA NVK Vulkan 驱动现已支持 DLSS\n“令人作呕”的 Linux sched_ext 源代码在 Linus Torvalds 投诉后重构\nGoogle 的 Gemini 部分解决了现代华硕笔记本电脑上 Linux 启动时间过长的问题\nEpic Games 宣布 Lore 开源版本控制系统\nSteam Machine 发布，售价 1049 至 1428 美元\nClaude AI 协助修复影响众多笔记本电脑的多年 AMD Radeon Linux 显示错误\n\n在享受无广告浏览的同时，\n单页文章查看\n法律声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者财产。保留所有权利。"
+  },
+  "42cff57ca570bd8931b93aa014f4a667": {
+    "id": "42cff57ca570bd8931b93aa014f4a667",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/silverstone-rm32",
+    "title_en": "SilverStone RM32 3U Server Chassis + 1000W Extreme 1000Rz Platinum PSU",
+    "summary_en": "For those with limited rack space and wanting to assemble a high-end server/workstation, the SilverStone RM32 provides a lot of opportunities in being a 3U rackmount chassis that can accommodate an E-ATX or SSI-EEB motherboard, up to a 360mm liquid cooling radiator, and up to four full-size expansion cards all within 3U height requirements. Paired with the SilverStone Extreme 1000Rz Platinum 1000W PSU, you can patch a lot into 5.25 inches.",
+    "pub_date": "Wed, 24 Jun 2026 11:30:05 -0400",
+    "title_zh": "SilverStone RM32 3U服务器机箱 + 1000W Extreme 1000Rz 铂金电源评测",
+    "summary_zh": "SilverStone RM32是一款3U机架式服务器机箱，支持E-ATX或SSI-EEB主板、360mm水冷散热器及四张全高扩展卡，适合有限机架空间的高端服务器/工作站组装。搭配SilverStone Extreme 1000Rz Platinum 1000W SFX电源，提供PCIe Gen5支持与全模组设计。评测指出电源线材在Threadripper主板上略短，需使用延长线。",
+    "fulltext_zh": "SilverStone RM32 3U服务器机箱 + 1000W Extreme 1000Rz 铂金电源评测 - Phoronix\nSilverStone RM32 3U服务器机箱 + 1000W Extreme 1000Rz 铂金电源\n2026年6月24日上午11:30 EDT。\n\n对于机架空间有限且希望组装高端服务器/工作站的用户，SilverStone RM32提供了诸多可能性：它是一款3U机架式机箱，可容纳E-ATX或SSI-EEB主板、最大360mm水冷散热器以及最多四张全高扩展卡，全部满足3U高度要求。搭配SilverStone Extreme 1000Rz Platinum 1000W电源，你可以在5.25英寸空间内集成大量硬件。\n\nSilverStone最近寄送了其RM32 3U机架式服务器机箱的评测样品。这是一款不错的紧凑型替代方案，此前评测过SilverStone RM4A 4U服务器机箱，后者也是这家传奇机箱制造商推出的新款服务器/工作站机箱之一。SilverStone RM32可容纳最大SSI-EEB主板、SFX-L或2U CPRS冗余电源、四个全高PCIe扩展槽以及最大360mm水冷散热器。\n\nSilverStone RM32前面板可安装三个120mm进风风扇，也可在此处安装水冷散热器。后部出风支持最多两个60mm风扇。\n\n该服务器机箱的前面板I/O包括一个USB Type-C接口和两个USB 3.0接口。\n\nRM32上的四个扩展槽通过在一个可拆卸金属笼内旋转实现，该金属笼位于此3U服务器机箱内。RM32附带一根PCIe 5.0 x16延长/转接线，用于将显卡或其他外设连接至主板。\n\n由于扩展槽笼和整体3U高度限制，如果使用CPU散热器风扇，其高度必须为110mm或更小；如果CPU散热器区域与PCIe转接线冲突，则必须满足86mm高度要求。扩展笼可处理宽度最大17mm的PCIe扩展卡（使用SFX-L电源时），或宽度最大162mm（使用2U冗余电源时）。无论哪种情况，均支持长度最大360mm的扩展卡。\n\nSilverStone RM32可容纳最多五个2.5英寸存储驱动器，或三个2.5英寸驱动器加两个3.5英寸驱动器的组合。\n\n为服务器供电方面，机箱可容纳SFX/SFX-L电源或2U CPRS冗余电源。SilverStone提供了其新款Extreme 1000Rz Platinum 1000W电源作为本次服务器搭建的一部分。SilverStone Extreme 1000Rz Platinum SFX电源配备PCIe Gen5 12V 2x6 PCIe连接器支持、92mm风扇，并采用全模组设计。支持两个CPU 4+4P连接器、一个12V-2x6 PCIe Gen 5连接器、四个PCIe 6+2P连接器以及其他外设连接器。\n\nSilverStone Extreme 1000Rz Platinum 1000W电源在其小巧体积内性能非常强大。不过，在布线至AMD Ryzen Threadripper主板设置时，线缆略显短促，我最终不得不使用24针和双CPU 8针电源延长线来适应布线需求。\n\n对于不想将此3U服务器机箱安装到机架中，而是希望独立放置或直立使用的用户，SilverStone RAC-CF4-440是一个可选套件，提供机箱脚垫以及用于其机架式机箱的把手适配器。\n\nSilverStone RM51：大型服务器与工作站的优秀5U机箱\nSilverStone RM42-502 + IceGem 240P：打造出色的4U水冷机架式方案\nRosewill RSV-4310：对最佳性价比4U服务器机箱之一的有用改进\n使用SilverStone CS381搭建Linux HTPC/存储服务器\nSilverStone机箱存储系列CS350\nSilverStone Petit PT13 Mini-ITX机箱\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "1fccf0c03a2c1cb771fd8c55df002e49": {
+    "id": "1fccf0c03a2c1cb771fd8c55df002e49",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMDGPU-Linux-Gamma-2.4-2.6",
+    "title_en": "New AMD Linux Patches Expose Gamma 2.4 + Gamma 2.6 Curves",
+    "summary_en": "In addition to AMD engineers being busy rolling out HDMI 2.1 for their open-source Linux driver at long last, another notable display-related improvement on the way to their AMDGPU kernel graphics driver is exposing the Gamma 2.4 and Gamma 2.6 curves support...",
+    "pub_date": "Wed, 24 Jun 2026 10:22:00 -0400",
+    "title_zh": "新的 AMD Linux 补丁暴露 Gamma 2.4 和 Gamma 2.6 曲线",
+    "summary_zh": "AMD 工程师发布了新的 Linux 补丁，为 AMDGPU 内核图形驱动添加了 Gamma 2.4 和 Gamma 2.6 曲线支持。这些曲线源自上个月在法国举行的 Display Next Hackfest 2026 上的需求，Gamma 2.4 常用于影视行业以提升对比度和观看体验，Gamma 2.6 则是数字影院和电影制作的官方标准。补丁还包括两者的逆曲线，预计将随 Linux v7.3 内核推出。",
+    "fulltext_zh": "新的 AMD Linux 补丁暴露 Gamma 2.4 和 Gamma 2.6 曲线 - Phoronix\n新的 AMD Linux 补丁暴露 Gamma 2.4 和 Gamma 2.6 曲线\n发布于 2026 年 6 月 24 日上午 10:22（美国东部时间）。\n\nAMD 工程师终于忙于为其开源 Linux 驱动推出 HDMI 2.1 支持，与此同时，另一个显著的显示相关改进正在进入他们的 AMDGPU 内核图形驱动——暴露 Gamma 2.4 和 Gamma 2.6 曲线支持。\n\n源于上个月在法国举行的 Display Next Hackfest 2026，来自未指明方对在 Linux 下看到 AMD 硬件暴露其 gamma 2.4 和 2.6 曲线表示了兴趣。昨天发送的补丁使这一目标在 AMDGPU Linux 驱动中成为现实。\n\nAMDGPU 驱动目前暴露了标准的 gamma 2.2 支持，这是标准的 gamma 曲线。Gamma 2.4 在电影和电视行业中很流行，用于在客厅环境中提供更高的对比度和观看体验。Gamma 2.6 是数字影院和电影制作的官方标准，以其更深的阴影和饱和度实现更好的影院再现。\n\n通过昨天发送的补丁，AMDGPU Linux 驱动暴露了 Gamma 2.4 和 Gamma 2.6，以及它们的逆曲线。这是一个直接的添加，为现代 AMD 图形处理器添加了 Gamma 2.4 和 Gamma 2.6 支持，并有望在今年晚些时候被纳入 Linux v7.3 内核。\n\n面向 ATI R300 时代 GPU 的开源驱动在 2026 年看到改进的 Power Mac 支持\nAMD 更新 ROCDXG 以在 WSL 上提供更好的 ROCm 体验\n早期 AMD GCN GPU 看到改进的 GPU 恢复——另一个 Valve 主导的 Linux 改进\nClaude AI 协助修复影响众多笔记本电脑的多年 AMD Radeon Linux 显示错误\nMesa 26.2 为新的、后 Strix-Halo RDNA 3.5 图形准备的 AMD GFX1156\nAMDGPU Linux 驱动为 HDMI 2.1 合规性测试做准备\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nLinux 最终在六年工作和 360+ 补丁后消除了 strncpy API\nsystemd 261 发布，带有新的 systemd-sysinstall 操作系统安装程序、IMDSD 和 Storagectl\n开源 NVIDIA NVK Vulkan 驱动现在支持 DLSS\n“令人作呕的” Linux sched_ext 源代码在 Linus Torvalds 投诉后重构\nGoogle 的 Gemini 部分解决了现代 ASUS 笔记本电脑上漫长的 Linux 启动时间问题\nEpic Games 宣布 Lore 开源版本控制系统\nSteam Machine 发布，售价 1049 至 1428 美元\nClaude AI 协助修复影响众多笔记本电脑的多年 AMD Radeon Linux 显示错误\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "7105548e3619b0effc70d666df6f647f": {
+    "id": "7105548e3619b0effc70d666df6f647f",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/mx-linux-25-2-released-with-linux-7-0-ahs-kernel/",
+    "title_en": "MX Linux 25.2 Released with Linux 7.0 AHS Kernel",
+    "summary_en": "Discover the latest features of MX Linux 25.2, now powered by the Linux 7.0 AHS Kernel. Experience enhanced performance and stability today.\nThe post MX Linux 25.2 Released with Linux 7.0 AHS Kernel appeared first on Linux Today.",
+    "pub_date": "Wed, 24 Jun 2026 10:29:53 +0000",
+    "title_zh": "MX Linux 25.2 发布，搭载 Linux 7.0 AHS 内核",
+    "summary_zh": "MX Linux 25.2 正式发布，此次更新采用了 Linux 7.0 AHS 内核，为用户带来更强的性能与稳定性提升。本文简要介绍了该版本的核心特性。",
+    "fulltext_zh": "探索 MX Linux 25.2 的最新特性，该版本现已由 Linux 7.0 AHS 内核驱动。立即体验增强的性能与稳定性。\n\n本文首发于 Linux Today。"
+  },
+  "46ed85579e30efa12755bbcae92b4c04": {
+    "id": "46ed85579e30efa12755bbcae92b4c04",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/mkvtoolnix-99-0-mkv-manipulation-tool-improves-the-mkvtoolnix-gui-mkvmerge/",
+    "title_en": "MKVToolNix 99.0 MKV Manipulation Tool Improves the MKVToolNix GUI, mkvmerge",
+    "summary_en": "Explore MKVToolNix 99.0, the ultimate MKV manipulation tool with a refined GUI and mkvmerge. Elevate your video editing capabilities effortlessly.\nThe post MKVToolNix 99.0 MKV Manipulation Tool Improves the MKVToolNix GUI, mkvmerge appeared first on Linux Today.",
+    "pub_date": "Wed, 24 Jun 2026 10:24:50 +0000",
+    "title_zh": "MKVToolNix 99.0 MKV 处理工具改进 MKVToolNix GUI 与 mkvmerge",
+    "summary_zh": "MKVToolNix 99.0 版本发布，作为一款强大的 MKV 处理工具，该版本对 MKVToolNix 图形用户界面（GUI）以及 mkvmerge 组件进行了优化，提升了视频编辑的便捷性与效率。",
+    "fulltext_zh": "探索 MKVToolNix 99.0，这款终极 MKV 处理工具拥有经过优化的 GUI 和 mkvmerge 组件，让您轻松提升视频编辑能力。\n\n该文章 MKVToolNix 99.0 MKV 处理工具改进 MKVToolNix GUI、mkvmerge 最初发布于 Linux Today。"
+  },
+  "6a4e5c4e9d5c303052eaa61fdc67da4c": {
+    "id": "6a4e5c4e9d5c303052eaa61fdc67da4c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/22-best-free-c-c-ides-and-editors-for-linux-in-2026/",
+    "title_en": "22 Best Free C/C++ IDEs and Editors for Linux in 2026",
+    "summary_en": "Explore the top 22 free C/C++ IDEs and editors for Linux in 2026. Find the perfect tools to elevate your programming skills and streamline your workflow.\nThe post 22 Best Free C/C++ IDEs and Editors for Linux in 2026 appeared first on Linux Today.",
+    "pub_date": "Wed, 24 Jun 2026 10:21:57 +0000",
+    "title_zh": "2026年Linux平台22款最佳免费C/C++ IDE与编辑器",
+    "summary_zh": "本文介绍了2026年Linux平台上22款最佳的免费C/C++集成开发环境（IDE）与编辑器，涵盖从轻量级编辑器到功能完备的IDE，帮助开发者根据项目需求选择合适工具，提升编程效率与工作流程。",
+    "fulltext_zh": "探索2026年Linux平台上22款最佳的免费C/C++ IDE与编辑器。找到完美的工具，以提升您的编程技能并简化工作流程。\n该文章最初发表于Linux Today。"
+  },
+  "22020bbef023af322efadc29213b8f0c": {
+    "id": "22020bbef023af322efadc29213b8f0c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/mx-linux-25-2-infinity-released-with-linux-kernel-7-0-based-on-debian-13-5/",
+    "title_en": "MX Linux 25.2 “Infinity” Released with Linux Kernel 7.0, Based on Debian 13.5",
+    "summary_en": "Discover MX Linux 25.2 \"Infinity,\" featuring Linux Kernel 7.0 and based on Debian 13.5. Experience enhanced performance and stability today.\nThe post MX Linux 25.2 “Infinity” Released with Linux Kernel 7.0, Based on Debian 13.5 appeared first on Linux Today.",
+    "pub_date": "Wed, 24 Jun 2026 10:16:59 +0000",
+    "title_zh": "MX Linux 25.2 “Infinity” 发布，搭载 Linux Kernel 7.0，基于 Debian 13.5",
+    "summary_zh": "MX Linux 25.2 “Infinity” 正式发布，基于 Debian 13.5，并采用 Linux Kernel 7.0，带来更强的性能与稳定性提升。",
+    "fulltext_zh": "探索 MX Linux 25.2 “Infinity”，它搭载了 Linux Kernel 7.0，并基于 Debian 13.5。立即体验增强的性能与稳定性。\n\n该文章最初发表于 Linux Today。"
+  },
+  "5db07ed3c3cce79fc562ae79f2b22e1e": {
+    "id": "5db07ed3c3cce79fc562ae79f2b22e1e",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/linuxiac-weekly-wrap-up-week-21-2026-may-18-24/",
+    "title_en": "Linuxiac Weekly Wrap-Up: Week 21, 2026 (May 18 – 24)",
+    "summary_en": "Stay updated with the latest in Linux! Explore the highlights and key events from the Linuxiac Weekly Wrap-Up for May 18-24, 2026.\nThe post Linuxiac Weekly Wrap-Up: Week 21, 2026 (May 18 – 24) appeared first on Linux Today.",
+    "pub_date": "Wed, 24 Jun 2026 10:14:22 +0000",
+    "title_zh": "Linuxiac 每周回顾：2026年第21周（5月18日-24日）",
+    "summary_zh": "本文是Linuxiac对2026年5月18日至24日这一周的Linux新闻汇总，涵盖了该周内Linux社区的重要事件与亮点，帮助读者快速了解最新动态。",
+    "fulltext_zh": "随时掌握Linux最新动态！探索Linuxiac每周回顾中2026年5月18日至24日的亮点与关键事件。\n\n该文章《Linuxiac 每周回顾：2026年第21周（5月18日-24日）》首发于Linux Today。"
   }
 }

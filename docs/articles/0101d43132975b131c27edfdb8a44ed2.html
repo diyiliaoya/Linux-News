@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Guncrypt 是 Halfbrick Studio 的首款 PC 游戏，也支持 Linux — Linux 中文速报</title>
+<title>F2FS 集成 FSERROR 报告功能，在 Linux 7.2 中减少内存占用 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Guncrypt 是 Halfbrick Studio 的首款 PC 游戏，也支持 Linux</h1>
+  <h1>F2FS 集成 FSERROR 报告功能，在 Linux 7.2 中减少内存占用</h1>
 
-  <div class="article-summary">Halfbrick Studio 以《Jetpack Joyride》《Fruit Ninja》等手游闻名，其首款 PC 游戏《Guncrypt》是一款基于子弹排序机制的 rogue-like 地牢爬行者。游戏包含三种枪械、60 多种子弹和 80 多种遗物，支持组合与重排弹匣。塔罗牌和诅咒等级系统增加了策略深度。作者在 Nobara Linux 上通过 Steam Play 运行了演示版，无需额外文件即可流畅游玩。正式版尚无发售日期，但原生 Linux 版本正在开发中。</div>
+  <div class="article-summary">Linux 7.2 中，F2FS 文件系统集成了 FSERROR 错误报告框架，实现了 I/O 错误报告标准化。同时，通过移除运行验证用的内存数据结构（如内存块位图和 SIT 版本位图），显著降低了内存占用。此外，还支持每 I/O 写入流、FDP 流映射等优化。</div>
 
-  <div class="article-body"><p>Guncrypt 是 Halfbrick Studio 的首款 PC 游戏，也支持 Linux</p><p>如果你喜欢 rogue-like 游戏，这款可能值得在 Linux 上入手。</p><p>Halfbrick Studio 最近联系了我们，他们兴奋地展示了最新项目《Guncrypt》，这是一款围绕按正确顺序装填子弹而非追逐更好装备的地牢爬行者。</p><p>如果这个名字听起来耳熟，他们正是《Jetpack Joyride》《Fruit Ninja》和《Dan the Man》等一系列热门手游的开发商。</p><p>在游戏中，武器系统包含三种枪械、超过 60 种子弹类型和 80 种遗物类型，你可以根据自身玩法风格组合它们来改变游戏体验。先装填普通子弹再装填火焰子弹，与先装填火焰子弹再装填普通子弹，效果截然不同。将两种子弹融合以获得新的组合效果，或者在房间之间重新排列整个弹匣，如果当前配置不奏效的话。</p><p>完成教程后的最初几分钟游戏画面。</p><p>塔罗牌在每次闯关之间为你的初始装备提供被动加成，而诅咒等级则在关卡不再具有威胁时，通过五个层级进一步增加难度。所有这些都发生在四个程序生成的地牢楼层中，每层都有独特的敌人、危险以及等待在尽头的 Boss。</p><p>在深入之前先了解一些背景信息。</p><p>我在我的 Nobara Linux 系统上运行了《Guncrypt》的演示版，游戏无需下载任何额外文件即可运行。这只是 Steam Play 利用 Proton 让游戏在这个非原生配置上运行。</p><p>无论如何，开场过场动画奠定了背景。Guncrypt 镇曾经是一个安静富裕的小镇，直到一个邪恶巫师出现，诅咒了它并偷走了所有人的灵魂，导致镇民们忙于互相争吵而无暇行动（听起来像时事）。结果任务就落到了玩家头上。</p><p>然后是教程，这对我来说是个意外，因为我习惯了 WASD 移动。这里完全没有这种操作；相反，我必须按住左键并拖动来移动我的枪手，同时射击他面前的任何东西。</p><p>进入游戏后，我与一些 NPC 互动，比如铁匠，然后进入了一个地穴，立刻看到了任务列表，其中一些任务可见。主要任务是揭开邪恶巫师施加诅咒背后的谜团。</p><p>开始一次闯关并被击败。</p><p>我进入了一个地牢，直接进入战斗，躲避敌人的同时留意房间之间的装填计时器。在一次让我吃尽苦头的闯关结束时，我看到了一个记分板，上面显示了我死亡时的楼层、使用的子弹以及各种评分标准的详细列表。</p><p>我解锁的一些东西。</p><p>子弹拾取机制类似。我一度遇到了三个选项，选择了闪电弹，这是一种 110 伤害的子弹，在装填时向敌人释放闪电。在游戏稍后部分，海盗“达斯蒂”给了我炸弹，这是一种有用的右键能力，用于炸毁敌人和障碍物。</p><p>安息吧达斯蒂，铁壳怪抓住了你。</p><p>截至撰写本文时，《Guncrypt》尚未公布发售日期或价格。Steam 页面仅将其列为“即将推出”。与此同时，你可以尝试演示版，它在我的测试系统上运行良好。</p><p>最后，原生 Linux 版本也正在开发中，将在正式版发布后不久推出。</p><p>查看 Guncrypt（Steam）</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。</p><p>ArmSoM Sige6 是首款放弃 Rockchip 改用 Allwinner 的 Sige 板卡</p><p>Canonical 的新 AI 工具希望你对 Ubuntu 说话而不是打字</p><p>Epic Games 构建了自己的 Git 替代方案来处理大文件</p><p>在 AUR 恶意软件泛滥之后，Yay v13 让你编写自己的安全网脚本</p><p>Commodore 的新翻盖手机跳过 Android，采用基于 Linux 的 Sailfish OS</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 周刊新闻通讯，你可以学习有用的 Linux 技巧、发现应用程序、探索新发行版，并随时了解 Linux 世界的最新动态</p><p>太好了！您已成功订阅。</p><p>欢迎回来！您已</p></div>
+  <div class="article-body"><p>F2FS 集成 FSERROR 报告功能，在 Linux 7.2 中减少内存占用 - Phoronix</p><p>F2FS 集成 FSERROR 报告功能，在 Linux 7.2 中减少内存占用</p><p>发布于 2026 年 6 月 24 日 美国东部时间下午 12:48。</p><p>闪存友好文件系统（F2FS）的变更已合入 Linux 7.2。</p><p>Linux 7.2 中 F2FS 最显著的变更之一是 FSERROR 错误报告支持。FSERROR 框架在 Linux 7.0 中被合并，用于处理通用 I/O 错误报告，该功能在 Linux 文件系统中可以通用，而无需每个文件系统自行实现报告机制。现在，随着 Linux 7.2 的发布，F2FS 已加入 FSERROR 阵营，实现了 I/O 错误报告的标准化。</p><p>Linux 7.2 中的 F2FS 还通过还原用于运行验证的内存数据结构，减少了使用该文件系统的内存占用。此外，还有各种其他改进。F2FS 现在支持对直接写入操作遵循每 I/O 写入流，将数据写入映射到 FDP 流，以及其他优化。</p><p>内存块位图在存在十年后被移除，但在此期间开发者从未发现任何内存损坏的报告案例，因此它只是在浪费内存。内存中的 SIT 版本位图在 F2FS 中也存在了大约十年，同样未证明有任何实际价值，因此也被移除以节省内存。</p><p>关于 F2FS 功能变更以及针对这一闪存优化文件系统的各种错误修复的更多详细信息，可通过已合入 Linux 7.2 的补丁获取。</p><p>NTFS3 驱动在 Linux 7.2 中获得错误修复与小幅改进</p><p>EROFS 在 Linux 7.2 中更好地处理大型稀疏 AI 数据集，I/O 更高效</p><p>exFAT 文件系统在 Linux 7.2 中通过 IOmap 转换获得更好性能</p><p>新 NTFS 驱动获得加固与修复，Linux 7.2 支持 Windows 原生符号链接</p><p>EXT4 重构快速提交处理并加速目录哈希计算</p><p>Bcachefs 工具 1.38.6 带来多项性能改进</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。</p><p>Linux 历经六年工作、360 多个补丁，终于淘汰 strncpy API</p><p>systemd 261 发布，带来全新 systemd-sysinstall 操作系统安装程序、IMDSD 和 Storagectl</p><p>开源 NVIDIA NVK Vulkan 驱动现已支持 DLSS</p><p>“令人作呕”的 Linux sched_ext 源代码在 Linus Torvalds 投诉后重构</p><p>Google 的 Gemini 部分解决了现代华硕笔记本电脑上 Linux 启动时间过长的问题</p><p>Epic Games 宣布 Lore 开源版本控制系统</p><p>Steam Machine 发布，售价 1049 至 1428 美元</p><p>Claude AI 协助修复影响众多笔记本电脑的多年 AMD Radeon Linux 显示错误</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有商标均为其各自所有者财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/guncrypt-demo-review/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.2-F2FS" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

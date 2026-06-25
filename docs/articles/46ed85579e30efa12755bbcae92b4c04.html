@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>在Ubuntu上通过‘BudsLink’控制AirPods和Galaxy Buds — Linux 中文速报</title>
+<title>MKVToolNix 99.0 MKV 处理工具改进 MKVToolNix GUI 与 mkvmerge — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Linux Today</span>
   </div>
 
-  <h1>在Ubuntu上通过‘BudsLink’控制AirPods和Galaxy Buds</h1>
+  <h1>MKVToolNix 99.0 MKV 处理工具改进 MKVToolNix GUI 与 mkvmerge</h1>
 
-  <div class="article-summary">BudsLink是一款GTK4/libadwaita Linux应用，让用户在Ubuntu等Linux发行版上直接控制蓝牙耳机的电池电量、主动降噪（ANC）、环境音模式等功能，无需使用手机应用。它支持Apple AirPods、Samsung Galaxy Buds、Sony耳机等设备，并提供GNOME Shell扩展、KDE Plasma小程序等桌面集成选项。该软件免费开源，可通过Flathub安装。</div>
+  <div class="article-summary">MKVToolNix 99.0 版本发布，作为一款强大的 MKV 处理工具，该版本对 MKVToolNix 图形用户界面（GUI）以及 mkvmerge 组件进行了优化，提升了视频编辑的便捷性与效率。</div>
 
-  <div class="article-body"><p>在Ubuntu上通过‘BudsLink’控制AirPods和Galaxy Buds - OMG! Ubuntu</p><p>这是一款Linux应用，让你对来自Apple、Sony、Samsung和Nothing等品牌的蓝牙耳机拥有更多控制权——电池电量、主动降噪（ANC）等，全部无需使用手机应用。</p><p>大多数蓝牙音频设备在Ubuntu及其他Linux发行版上‘即插即用’可用于听音频，但仅此而已。将AirPods或Galaxy Buds与你的桌面配对后，你会发现无法调整你付费购买的所有设备端功能。</p><p>BudsLink是一款GTK4/libadwaita应用，能够做到这一点。它让你在Linux桌面上控制耳机功能，无需启动Android或iOS应用。它直接通过BlueZ（Ubuntu使用的默认蓝牙音频栈）与支持的设备通信。</p><p>表面上与去年我写过的某款应用类似，但BudsLink功能更全面，覆盖更广泛的硬件，并提供桌面集成选项。</p><p>访问高级音频设备功能</p><p>主界面、设备概览和AirPods Pro的设置</p><p>大多数可穿戴蓝牙音频设备都有电池，因此了解它们的电量很重要。BudsLink的主要吸引力在于显示每只耳机的电池电量以及充电盒的电量报告（在支持此功能的设备上）。</p><p>需要明确的是，BudsLink并未得到其支持的任何设备公司的认可或支持。</p><p>它还允许你——取决于设备——启用主动降噪和环境音模式、升频以及对话感知（可选在你开始说话时自动降低音量）。</p><p>通过入耳检测或手势实现媒体暂停和恢复，以及按钮配置也包含在内，如果你的设备支持，你还可以定义均衡器预设。</p><p>它支持哪些设备？</p><p>每款设备提供不同的设置</p><p>目前支持的硬件涵盖大多数Apple AirPods和Beats型号、一系列Sony音频穿戴设备、Samsung Galaxy Buds以及Nothing/CMF耳机和头戴式耳机。</p><p>不过，它仍在活跃开发中，并不断添加对新设备的支持——最近新增了Sony WH-XB900N，而Pixel Buds的支持将在下一个版本中推出。</p><p>无需应用的面板集成</p><p>这就是BudsLink真正巧妙的地方。它可以作为D-Bus服务运行，将设备信息暴露给你的系统，一系列配套的桌面集成可以接入这些信息。</p><p>通过一个单独的包，提供了GNOME Shell扩展、KDE Plasma小程序（和桌面小部件）以及Cinnamon小程序。目前，该包处于测试阶段，你需要从GitHub下载并运行一个脚本。</p><p>附加组件和小程序很好，但不是必需的，因为应用本身可以独立运行。但如果你更愿意从任务栏或桌面面板启用ANC而无需打开主应用，它们正是让这个工具区别于其他替代方案的关键。</p><p>在Ubuntu上安装BudsLink</p><p>这是一款免费、开源软件，可通过Flathub获取。</p><p>要在Ubuntu上安装它，你需要先安装Flatpak并启用Flathub仓库，然后在终端中运行：</p><p>flatpak install flathub io.github.maniacx.BudsLink</p><p>或者，如果你使用的是Ubuntu 26.04 LTS并且喜欢图形界面，可以从仓库安装Bazaar。它让你可以浏览、安装、管理和更新从Flathub安装的Flatpak应用。运行以下命令即可获得桌面应用：</p><p>sudo apt install bazaar</p></div>
+  <div class="article-body"><p>探索 MKVToolNix 99.0，这款终极 MKV 处理工具拥有经过优化的 GUI 和 mkvmerge 组件，让您轻松提升视频编辑能力。</p><p>该文章 MKVToolNix 99.0 MKV 处理工具改进 MKVToolNix GUI、mkvmerge 最初发布于 Linux Today。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/06/budslink-airpods-galaxy-buds-linux" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.linuxtoday.com/blog/mkvtoolnix-99-0-mkv-manipulation-tool-improves-the-mkvtoolnix-gui-mkvmerge/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

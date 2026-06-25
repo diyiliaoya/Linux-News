@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>在Ubuntu上通过‘BudsLink’控制AirPods和Galaxy Buds — Linux 中文速报</title>
+<title>NTFS3 驱动在 Linux 7.2 中获得错误修复与小幅改进 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>在Ubuntu上通过‘BudsLink’控制AirPods和Galaxy Buds</h1>
+  <h1>NTFS3 驱动在 Linux 7.2 中获得错误修复与小幅改进</h1>
 
-  <div class="article-summary">BudsLink是一款GTK4/libadwaita Linux应用，让用户在Ubuntu等Linux发行版上直接控制蓝牙耳机的电池电量、主动降噪（ANC）、环境音模式等功能，无需使用手机应用。它支持Apple AirPods、Samsung Galaxy Buds、Sony耳机等设备，并提供GNOME Shell扩展、KDE Plasma小程序等桌面集成选项。该软件免费开源，可通过Flathub安装。</div>
+  <div class="article-summary">Linux 7.2 中合并的 NTFS3 内核驱动更新以小幅错误修复为主，包括越界读取修复、编译器警告修复及其他底层改动。新增功能包括防止栈溢出的保护机制、额外验证、清除有效数据长度之外的陈旧页缓存等。Paragon Software 的 Konstantin Komarov 继续维护该驱动，目前尚无将其从内核中移除的计划。</div>
 
-  <div class="article-body"><p>在Ubuntu上通过‘BudsLink’控制AirPods和Galaxy Buds - OMG! Ubuntu</p><p>这是一款Linux应用，让你对来自Apple、Sony、Samsung和Nothing等品牌的蓝牙耳机拥有更多控制权——电池电量、主动降噪（ANC）等，全部无需使用手机应用。</p><p>大多数蓝牙音频设备在Ubuntu及其他Linux发行版上‘即插即用’可用于听音频，但仅此而已。将AirPods或Galaxy Buds与你的桌面配对后，你会发现无法调整你付费购买的所有设备端功能。</p><p>BudsLink是一款GTK4/libadwaita应用，能够做到这一点。它让你在Linux桌面上控制耳机功能，无需启动Android或iOS应用。它直接通过BlueZ（Ubuntu使用的默认蓝牙音频栈）与支持的设备通信。</p><p>表面上与去年我写过的某款应用类似，但BudsLink功能更全面，覆盖更广泛的硬件，并提供桌面集成选项。</p><p>访问高级音频设备功能</p><p>主界面、设备概览和AirPods Pro的设置</p><p>大多数可穿戴蓝牙音频设备都有电池，因此了解它们的电量很重要。BudsLink的主要吸引力在于显示每只耳机的电池电量以及充电盒的电量报告（在支持此功能的设备上）。</p><p>需要明确的是，BudsLink并未得到其支持的任何设备公司的认可或支持。</p><p>它还允许你——取决于设备——启用主动降噪和环境音模式、升频以及对话感知（可选在你开始说话时自动降低音量）。</p><p>通过入耳检测或手势实现媒体暂停和恢复，以及按钮配置也包含在内，如果你的设备支持，你还可以定义均衡器预设。</p><p>它支持哪些设备？</p><p>每款设备提供不同的设置</p><p>目前支持的硬件涵盖大多数Apple AirPods和Beats型号、一系列Sony音频穿戴设备、Samsung Galaxy Buds以及Nothing/CMF耳机和头戴式耳机。</p><p>不过，它仍在活跃开发中，并不断添加对新设备的支持——最近新增了Sony WH-XB900N，而Pixel Buds的支持将在下一个版本中推出。</p><p>无需应用的面板集成</p><p>这就是BudsLink真正巧妙的地方。它可以作为D-Bus服务运行，将设备信息暴露给你的系统，一系列配套的桌面集成可以接入这些信息。</p><p>通过一个单独的包，提供了GNOME Shell扩展、KDE Plasma小程序（和桌面小部件）以及Cinnamon小程序。目前，该包处于测试阶段，你需要从GitHub下载并运行一个脚本。</p><p>附加组件和小程序很好，但不是必需的，因为应用本身可以独立运行。但如果你更愿意从任务栏或桌面面板启用ANC而无需打开主应用，它们正是让这个工具区别于其他替代方案的关键。</p><p>在Ubuntu上安装BudsLink</p><p>这是一款免费、开源软件，可通过Flathub获取。</p><p>要在Ubuntu上安装它，你需要先安装Flatpak并启用Flathub仓库，然后在终端中运行：</p><p>flatpak install flathub io.github.maniacx.BudsLink</p><p>或者，如果你使用的是Ubuntu 26.04 LTS并且喜欢图形界面，可以从仓库安装Bazaar。它让你可以浏览、安装、管理和更新从Flathub安装的Flatpak应用。运行以下命令即可获得桌面应用：</p><p>sudo apt install bazaar</p></div>
+  <div class="article-body"><p>NTFS3 驱动在 Linux 7.2 中获得错误修复与小幅改进 - Phoronix</p><p>NTFS3 驱动在 Linux 7.2 中获得错误修复与小幅改进</p><p>发布于 2026 年 6 月 24 日下午 2:11（美国东部时间）</p><p>新的 NTFS 文件系统驱动已合并到 Linux 7.1 中，并在 Linux 7.2 中获得了更多改进。至少目前，NTFS3 内核驱动仍在持续维护，并带来了新的修复和改进。该驱动是几年前在疫情期间被上游合并到 Linux 内核中的。</p><p>由于新的 NTFS 驱动仍在证明自身价值，目前没有立即将 NTFS3 从 Linux 内核中移除的计划。Paragon Software 的 Konstantin Komarov 继续维护这个 Linux 内核的 NTFS 读写驱动。对于 Linux 7.2，主要是小幅错误修复，从越界读取到编译器警告修复，以及其他大多属于常规性质的改动。</p><p>新增内容包括防止可能栈溢出的保护机制、额外的验证、清除超出有效数据长度的陈旧页缓存，以及其他底层改动。</p><p>今天为 Linux 7.2 合并的 NTFS3 内核驱动更改的完整列表可通过以下链接查看：</p><p>F2FS 在 Linux 7.2 中集成 FSERROR 报告，减少内存占用</p><p>EROFS 在 Linux 7.2 中更好地处理大型稀疏 AI 数据集，实现更高效的 I/O</p><p>exFAT 文件系统在 Linux 7.2 中通过 IOmap 转换获得更好性能</p><p>新的 NTFS 驱动在 Linux 7.2 中获得加固与修复，支持 Windows 原生符号链接</p><p>EXT4 重构快速提交处理并加快目录哈希计算</p><p>Bcachefs 工具 1.38.6 带来多项性能改进</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Linux 经过六年工作和 360 多个补丁，终于淘汰了 strncpy API</p><p>systemd 261 发布，带来新的 systemd-sysinstall 操作系统安装程序、IMDSD 和 Storagectl</p><p>开源 NVIDIA NVK Vulkan 驱动现已支持 DLSS</p><p>Linus Torvalds 投诉后，“令人作呕”的 Linux sched_ext 源代码被重构</p><p>Google 的 Gemini 部分解决了现代华硕笔记本电脑上 Linux 启动时间过长的问题</p><p>Epic Games 宣布 Lore 开源版本控制系统</p><p>Steam Machine 发布，售价 1049 美元至 1428 美元</p><p>Claude AI 协助修复影响众多笔记本电脑的多年 AMD Radeon Linux 显示错误</p><p>享受无广告浏览，单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/06/budslink-airpods-galaxy-buds-linux" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.2-NTFS3" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

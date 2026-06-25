@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Guncrypt 是 Halfbrick Studio 的首款 PC 游戏，也支持 Linux — Linux 中文速报</title>
+<title>MGLRU改进为Linux 7.2带来显著收益：MongoDB吞吐量提升30%~100% — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Guncrypt 是 Halfbrick Studio 的首款 PC 游戏，也支持 Linux</h1>
+  <h1>MGLRU改进为Linux 7.2带来显著收益：MongoDB吞吐量提升30%~100%</h1>
 
-  <div class="article-summary">Halfbrick Studio 以《Jetpack Joyride》《Fruit Ninja》等手游闻名，其首款 PC 游戏《Guncrypt》是一款基于子弹排序机制的 rogue-like 地牢爬行者。游戏包含三种枪械、60 多种子弹和 80 多种遗物，支持组合与重排弹匣。塔罗牌和诅咒等级系统增加了策略深度。作者在 Nobara Linux 上通过 Steam Play 运行了演示版，无需额外文件即可流畅游玩。正式版尚无发售日期，但原生 Linux 版本正在开发中。</div>
+  <div class="article-summary">Linux 7.2内核合并了大量内存管理（MM）改进，其中MGLRU的回收循环和脏回写处理优化效果显著。在MongoDB等负载下，使用NVMe存储时吞吐量提升30%，慢速I/O场景下甚至可达100%。其他改进包括更高效释放0阶页面、DAMON暂停恢复支持、KASAN加速、mmap_miss命中计数收紧等。</div>
 
-  <div class="article-body"><p>Guncrypt 是 Halfbrick Studio 的首款 PC 游戏，也支持 Linux</p><p>如果你喜欢 rogue-like 游戏，这款可能值得在 Linux 上入手。</p><p>Halfbrick Studio 最近联系了我们，他们兴奋地展示了最新项目《Guncrypt》，这是一款围绕按正确顺序装填子弹而非追逐更好装备的地牢爬行者。</p><p>如果这个名字听起来耳熟，他们正是《Jetpack Joyride》《Fruit Ninja》和《Dan the Man》等一系列热门手游的开发商。</p><p>在游戏中，武器系统包含三种枪械、超过 60 种子弹类型和 80 种遗物类型，你可以根据自身玩法风格组合它们来改变游戏体验。先装填普通子弹再装填火焰子弹，与先装填火焰子弹再装填普通子弹，效果截然不同。将两种子弹融合以获得新的组合效果，或者在房间之间重新排列整个弹匣，如果当前配置不奏效的话。</p><p>完成教程后的最初几分钟游戏画面。</p><p>塔罗牌在每次闯关之间为你的初始装备提供被动加成，而诅咒等级则在关卡不再具有威胁时，通过五个层级进一步增加难度。所有这些都发生在四个程序生成的地牢楼层中，每层都有独特的敌人、危险以及等待在尽头的 Boss。</p><p>在深入之前先了解一些背景信息。</p><p>我在我的 Nobara Linux 系统上运行了《Guncrypt》的演示版，游戏无需下载任何额外文件即可运行。这只是 Steam Play 利用 Proton 让游戏在这个非原生配置上运行。</p><p>无论如何，开场过场动画奠定了背景。Guncrypt 镇曾经是一个安静富裕的小镇，直到一个邪恶巫师出现，诅咒了它并偷走了所有人的灵魂，导致镇民们忙于互相争吵而无暇行动（听起来像时事）。结果任务就落到了玩家头上。</p><p>然后是教程，这对我来说是个意外，因为我习惯了 WASD 移动。这里完全没有这种操作；相反，我必须按住左键并拖动来移动我的枪手，同时射击他面前的任何东西。</p><p>进入游戏后，我与一些 NPC 互动，比如铁匠，然后进入了一个地穴，立刻看到了任务列表，其中一些任务可见。主要任务是揭开邪恶巫师施加诅咒背后的谜团。</p><p>开始一次闯关并被击败。</p><p>我进入了一个地牢，直接进入战斗，躲避敌人的同时留意房间之间的装填计时器。在一次让我吃尽苦头的闯关结束时，我看到了一个记分板，上面显示了我死亡时的楼层、使用的子弹以及各种评分标准的详细列表。</p><p>我解锁的一些东西。</p><p>子弹拾取机制类似。我一度遇到了三个选项，选择了闪电弹，这是一种 110 伤害的子弹，在装填时向敌人释放闪电。在游戏稍后部分，海盗“达斯蒂”给了我炸弹，这是一种有用的右键能力，用于炸毁敌人和障碍物。</p><p>安息吧达斯蒂，铁壳怪抓住了你。</p><p>截至撰写本文时，《Guncrypt》尚未公布发售日期或价格。Steam 页面仅将其列为“即将推出”。与此同时，你可以尝试演示版，它在我的测试系统上运行良好。</p><p>最后，原生 Linux 版本也正在开发中，将在正式版发布后不久推出。</p><p>查看 Guncrypt（Steam）</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。</p><p>ArmSoM Sige6 是首款放弃 Rockchip 改用 Allwinner 的 Sige 板卡</p><p>Canonical 的新 AI 工具希望你对 Ubuntu 说话而不是打字</p><p>Epic Games 构建了自己的 Git 替代方案来处理大文件</p><p>在 AUR 恶意软件泛滥之后，Yay v13 让你编写自己的安全网脚本</p><p>Commodore 的新翻盖手机跳过 Android，采用基于 Linux 的 Sailfish OS</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 周刊新闻通讯，你可以学习有用的 Linux 技巧、发现应用程序、探索新发行版，并随时了解 Linux 世界的最新动态</p><p>太好了！您已成功订阅。</p><p>欢迎回来！您已</p></div>
+  <div class="article-body"><p>MGLRU改进为Linux 7.2带来显著收益：MongoDB吞吐量提升30%~100% - Phoronix</p><p>MGLRU改进为Linux 7.2带来显著收益：MongoDB吞吐量提升30%~100%</p><p>发布于2026年6月24日下午5:19 EDT。</p><p>大量内存管理（MM）相关改进近期已合并到内核的Git仓库中。与大多数内核周期一样，一些底层改进可以在不同领域带来可观的效率提升和更好的性能。</p><p>我发现Linux 7.2内核的MM特性变更中最有趣的项目包括：</p><p>- MGLRU的回收循环和脏回写处理。该补丁系列在MongoDB配合YCSB等负载下可带来高达30%的性能提升。在慢速I/O场景下，某些基准测试（如MongoDB）甚至可能获得100%的增益，而30%的提升是在NVMe存储下测得的。来自改进MGLRU回收循环和脏folio处理的基准测试结果相当惊人。看看其他工作负载能否从这一改进中受益将非常有趣。</p><p>- 通过更高效地批量释放连续的order-0页面，实现更快的0阶页面释放。这反过来解决了去年在vmalloc性能中注意到的一些性能回归问题。主要受益于vfree()和冻结页面的释放。</p><p>- 支持在不丢失当前状态的情况下暂停和恢复DAMON。</p><p>- 扩展DAMON以监控除访问之外的一般数据属性。</p><p>- 通过移除无效的栈和页表标记来加速内核地址消毒器（KASAN）。</p><p>- 收紧mmap_miss命中计数，显著减少同步mmap预读I/O，并减少稀疏随机和跨步内存访问工作负载的执行时间和读取的GB数。这显示出一些显著的改进。</p><p>- 统一folio中匿名和共享内存交换的分配与计费，以提供更好的同步和增强的性能。</p><p>关于Linux 7.2众多MM变更的更多详细信息，请参见已合并到Git的主分支。</p><p>Linux 7.2防止伪造性能数据失控</p><p>Linux 7.2准备支持IMA和EVM后量子ML-DSA签名</p><p>“令人作呕”的Linux sched_ext源代码在Linus Torvalds投诉后重构</p><p>Linux 7.2在AMD EPYC Sorano上展现出一些意外且不错的性能提升</p><p>提出DeviceTree-ACPI混合模式以改善Snapdragon笔记本的Linux支持</p><p>Linux 7.2 sched_ext继续推进子调度器支持</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动等主题。Michael也是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他。</p><p>Linux在六年工作和360多个补丁后终于淘汰了strncpy API</p><p>systemd 261发布，包含新的systemd-sysinstall OS安装程序、IMDSD和Storagectl</p><p>开源NVIDIA NVK Vulkan驱动现已支持DLSS</p><p>“令人作呕”的Linux sched_ext源代码在Linus Torvalds投诉后重构</p><p>Google的Gemini部分解决了现代ASUS笔记本上Linux启动时间过长的问题</p><p>Epic Games宣布Lore开源版本控制系统</p><p>Steam Machine发布，售价1049美元至1428美元</p><p>Claude AI协助修复影响众多笔记本的多年AMD Radeon Linux显示错误</p><p>享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/guncrypt-demo-review/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.2-MM" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
