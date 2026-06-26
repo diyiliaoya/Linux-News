@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PorteuX 2.7 发布 — Linux 中文速报</title>
+<title>Coreboot 26.06 带来对 Intel Nova Lake、AMD Strix Halo 及 31 块新主板的支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>PorteuX 2.7 发布</h1>
+  <h1>Coreboot 26.06 带来对 Intel Nova Lake、AMD Strix Halo 及 31 块新主板的支持</h1>
 
-  <div class="article-summary">PorteuX 2.7 正式发布，这是基于 Slackware 的便携 Linux 发行版。新版本带来了多项重大更新，包括 GCC 16.1.0、FFmpeg 8.1.1、KDE Plasma 6.7.0、GNOME 50.2 和 Qt 6.11.1 等上游组件升级。此外，构建标志和剥离优化提升了性能并缩小了模块体积，NTFS 驱动也更新为更快的 ntfs-plus。该版本提供 Cinnamon、GNOME、KDE Plasma、LXDE、LXQt、MATE 和 Xfce 共七种桌面环境，不含浏览器但内置应用商店。</div>
+  <div class="article-summary">Coreboot 26.06 作为最新季度功能版本发布，新增对 Intel Nova Lake 和 AMD Strix Halo 的初步支持，并加入 31 块新主板。该版本还改进了旧款 Intel 平台的启动性能、支持 Zstd 解压缩、运行时控制 In-Band ECC，以及 AMD 平台的 ROM Armor 2 和 A/B 恢复基础设施。Qualcomm 的 Calypso SoC 也获得支持，用于即将推出的 Google Chromebook。</div>
 
-  <div class="article-body"><p>PorteuX 项目已发布新版本 2.7。该版本包含多个桌面环境的更新，包括 GNOME、COSMIC 和 Plasma。</p><p>“首先，对长时间的延迟表示歉意。之前存在一些上游问题阻碍了稳定的 PorteuX 发布，最显著的是 ntfs3 内核驱动，现已更新为新的 ntfs-plus 驱动，该驱动速度更快，希望也更可靠。请注意，任何使用 ntfs3 在 NTFS 分区上创建的符号链接都需要重新生成。此版本带来了许多激动人心的变化，包括一轮大规模的构建标志和剥离优化，以实现更好的性能和更小的模块，以及许多重大的上游更新，例如 GCC 16.1.0、FFmpeg 8.1.1、KDE Plasma 6.7.0、GNOME 50.2 和 Qt 6.11.1。除此之外，构建流水线也进行了多项改进。”</p><p>更新、修复和其他更改的列表可在以下位置找到：</p><p>porteux-2.7-current-cinnamon-6.6.8-x86_64.iso</p><p>porteux-2.7-current-cosmic-1.0.16-x86_64.iso</p><p>porteux-2.7-current-gnome-50.2-x86_64.iso</p><p>porteux-2.7-current-kde-6.7.0-x86_64.iso</p><p>porteux-v2.7-current-lxde-0.11.1-x86_64.iso</p><p>porteux-2.7-current-lxqt-2.4.0-x86_64.iso</p><p>porteux-2.7-current-mate-1.28.2-x86_64.iso</p><p>porteux-2.7-current-xfce-4.20-x86_64.iso</p><p>近期相关新闻和发布：</p><p>Distribution Release: PorteuX 2.7</p><p>Distribution Release: PorteuX 2.5</p><p>Distribution Release: PorteuX 2.4</p><p>Distribution Release: PorteuX 2.2</p><p>Distribution Release: PorteuX 2.1</p><p>Distribution Release: PorteuX 2.0</p><p>PorteuX 是一款基于 Slackware Linux 的发行版，受 Slax 和 Porteus 启发，免费向公众提供。其主要目标是快速、小巧、便携（可从 U 盘运行）、模块化，并可选择不可变。它已预配置为基本使用，为七种桌面环境（Cinnamon、GNOME、KDE Plasma、LXDE、LXQt、MATE 和 Xfce）中的每一种都提供了轻量级应用程序。不包含浏览器，但提供了一个应用商店，用于下载任何 mo</p></div>
+  <div class="article-body"><p>Coreboot 26.06 带来对 Intel Nova Lake、AMD Strix Halo 及 31 块新主板的支持 - Phoronix</p><p>Coreboot 26.06 带来对 Intel Nova Lake、AMD Strix Halo 及 31 块新主板的支持</p><p>发布于 2026 年 6 月 25 日晚上 8:39（美国东部时间）。</p><p>Coreboot 26.06 今日发布，作为该软件项目的最新季度功能版本，为越来越多的平台提供开源系统固件支持。</p><p>Coreboot（曾用名 LinuxBIOS）随着每次新版本的发布，在新硬件和旧硬件平台上都变得越来越可行。</p><p>在 Intel Nova Lake 于未来几个月首次亮相之前，Coreboot 26.06 已通过 Intel 工程师的努力提供了初步的 Nova Lake SoC 支持。结合 Intel FSP 模块，初步的 Nova Lake 支持已就位，搭配了功能完善的参考板和一些早期的 Google 工作。同时，对于当前一代的 Intel Panther Lake SoC，现在支持 UFS 内联加密以及各种其他功能。Panther Lake SoC 继续专注于相关的 Google Chromebook 设备。</p><p>Coreboot 26.06 还为旧款 Intel 平台带来了改进、启动性能增强、以及 Intel FSP 2.0 驱动中的 Zstd 解压缩功能。In-Band ECC 现在可以在运行时进行控制，等等。</p><p>在 AMD 方面，Coreboot 26.06 提供了对 Ryzen AI Max 300 系列（Strix Halo）的初步支持。针对 Strix Halo 的各种更改已基于现有的 Ryzen AI 300 系列 Strix Point 支持上游到 Coreboot。不过目前，Coreboot 仅支持 AMD Maple 参考板作为唯一的 Strix Halo 目标。</p><p>Coreboot 中的 AMD 支持也得到了广泛改进，现在支持 ROM Armor 2，并具备用于 BIOS 加载失败的 A/B 恢复基础设施。</p><p>Qualcomm 也上游了他们的 Calypso SoC 支持，作为针对即将推出的 Google Chromebook 的 Snapdragon X 适配。</p><p>Coreboot 26.06 新增的主板包括：</p><p>- AMD Crater（用于 V2000A SoC）</p><p>- AMD Jaguar（用于 Faegan SoC）</p><p>- AMD Maple（用于 Strix Halo SoC）</p><p>- ASRock H370M-ITX/ac</p><p>- ASRock Z87 Extreme6</p><p>- ASUS Maximus VI EXTREME</p><p>- ASUS Maximus VI FORMULA</p><p>- ASUS Maximus VI HERO</p><p>- ASUS Maximus VII IMPACT</p><p>- ASUS Maximus VI IMPACT</p><p>- ASUS Maximus VII RANGER</p><p>- ASUS PRIME H610M-K D4</p><p>- Framework Laptop 13（Intel Core Ultra Series 1）</p><p>- Framework Laptop 13 Pro（Intel Core Ultra Series 3）</p><p>- Lenovo ThinkPad X61 / X61s</p><p>- Star Labs Byte Mk I（Ryzen 7 5800U）</p><p>- Star Labs StarBook Mk VI（Ryzen 7 5800U）</p><p>共 31 块新主板！诚然，其中许多是参考板和 Google Chromebook 设计。但也有各种 ASUS 主板、较新的 Framework 笔记本电脑，以及更多 System76 和 Star Labs 硬件。</p><p>关于今天 Coreboot 26.06 版本的更多详情，请参阅：</p><p>Framework Computer 在为其现代 Intel 驱动笔记本电脑的 Coreboot 支持方面取得进展</p><p>3mdeb 在 Ryzen MSI 主板的 Coreboot + AMD openSIL 移植方面持续取得进展</p><p>3mdeb 在 Ryzen AM5 主板上让更多 AMD openSIL 和 Coreboot 功能正常工作</p><p>Coreboot 在等待三年多后终于来到 AMD Ryzen 驱动的 Star Labs StarBook MK VI</p><p>Coreboot 26.03 发布，支持 Intel Panther Lake</p><p>3mdeb 在 AMD Ryzen AM5 主板移植 Coreboot + openSIL 方面取得进展</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>Linux 在六年工作和 360 多个补丁后终于消除了 strncpy API</p><p>systemd 261 发布，带有新的 systemd-sysinstall 操作系统安装程序、IMDSD 和 Storagectl</p><p>“令人厌恶的” Linux sched_ext 源代码在 Linus Torvalds 投诉后重构</p><p>开源 NVIDIA NVK Vulkan 驱动现在支持 DLSS</p><p>Google 的 Gemini 部分解决了现代 ASUS 笔记本电脑上漫长的 Linux 启动时间问题</p><p>Epic Games 宣布</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12878" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Coreboot-26.06-Released" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

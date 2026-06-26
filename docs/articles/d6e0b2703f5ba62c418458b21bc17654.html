@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PorteuX 2.7 发布 — Linux 中文速报</title>
+<title>DXVK 3.0 发布：采用 DXBC-SPIRV 进行着色器编译，默认启用描述符堆 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>PorteuX 2.7 发布</h1>
+  <h1>DXVK 3.0 发布：采用 DXBC-SPIRV 进行着色器编译，默认启用描述符堆</h1>
 
-  <div class="article-summary">PorteuX 2.7 正式发布，这是基于 Slackware 的便携 Linux 发行版。新版本带来了多项重大更新，包括 GCC 16.1.0、FFmpeg 8.1.1、KDE Plasma 6.7.0、GNOME 50.2 和 Qt 6.11.1 等上游组件升级。此外，构建标志和剥离优化提升了性能并缩小了模块体积，NTFS 驱动也更新为更快的 ntfs-plus。该版本提供 Cinnamon、GNOME、KDE Plasma、LXDE、LXQt、MATE 和 Xfce 共七种桌面环境，不含浏览器但内置应用商店。</div>
+  <div class="article-summary">DXVK 3.0 正式发布，这是基于 Vulkan API 实现 Direct3D 8/9/10/11 的重大版本更新。新版本使用 DXBC-SPIRV 替代传统着色器翻译代码，修复了多项渲染问题并提升编译效率；同时默认启用 Vulkan 描述符堆（VK_EXT_descriptor_heap）。此外还引入了帧率限制器、共享资源增强等改进，并需要 Vulkan 1.4 驱动支持。</div>
 
-  <div class="article-body"><p>PorteuX 项目已发布新版本 2.7。该版本包含多个桌面环境的更新，包括 GNOME、COSMIC 和 Plasma。</p><p>“首先，对长时间的延迟表示歉意。之前存在一些上游问题阻碍了稳定的 PorteuX 发布，最显著的是 ntfs3 内核驱动，现已更新为新的 ntfs-plus 驱动，该驱动速度更快，希望也更可靠。请注意，任何使用 ntfs3 在 NTFS 分区上创建的符号链接都需要重新生成。此版本带来了许多激动人心的变化，包括一轮大规模的构建标志和剥离优化，以实现更好的性能和更小的模块，以及许多重大的上游更新，例如 GCC 16.1.0、FFmpeg 8.1.1、KDE Plasma 6.7.0、GNOME 50.2 和 Qt 6.11.1。除此之外，构建流水线也进行了多项改进。”</p><p>更新、修复和其他更改的列表可在以下位置找到：</p><p>porteux-2.7-current-cinnamon-6.6.8-x86_64.iso</p><p>porteux-2.7-current-cosmic-1.0.16-x86_64.iso</p><p>porteux-2.7-current-gnome-50.2-x86_64.iso</p><p>porteux-2.7-current-kde-6.7.0-x86_64.iso</p><p>porteux-v2.7-current-lxde-0.11.1-x86_64.iso</p><p>porteux-2.7-current-lxqt-2.4.0-x86_64.iso</p><p>porteux-2.7-current-mate-1.28.2-x86_64.iso</p><p>porteux-2.7-current-xfce-4.20-x86_64.iso</p><p>近期相关新闻和发布：</p><p>Distribution Release: PorteuX 2.7</p><p>Distribution Release: PorteuX 2.5</p><p>Distribution Release: PorteuX 2.4</p><p>Distribution Release: PorteuX 2.2</p><p>Distribution Release: PorteuX 2.1</p><p>Distribution Release: PorteuX 2.0</p><p>PorteuX 是一款基于 Slackware Linux 的发行版，受 Slax 和 Porteus 启发，免费向公众提供。其主要目标是快速、小巧、便携（可从 U 盘运行）、模块化，并可选择不可变。它已预配置为基本使用，为七种桌面环境（Cinnamon、GNOME、KDE Plasma、LXDE、LXQt、MATE 和 Xfce）中的每一种都提供了轻量级应用程序。不包含浏览器，但提供了一个应用商店，用于下载任何 mo</p></div>
+  <div class="article-body"><p>DXVK 3.0 发布：采用 DXBC-SPIRV 进行着色器编译，默认启用描述符堆 - Phoronix</p><p>DXVK 3.0 发布：采用 DXBC-SPIRV 进行着色器编译，默认启用描述符堆</p><p>2026年6月25日，美国东部时间下午4:29。</p><p>Philip Rebohle 今天宣布发布 DXVK 3.0，这是基于 Vulkan API 的 Direct3D 8/9/10/11 实现的最新重大功能版本，用于 Wine 和 Valve 的 Steam Play（Proton）。</p><p>DXVK 3.0 的一大变化是现在使用 DXBC-SPIRV 进行着色器编译，以取代传统的着色器翻译代码。DXBC-SPIRV 是一个基于 SSA 的编译器，适用于 D3D SM 5.1+，同样由 DXVK 开发者开发。这个新的着色器编译器应能修复许多渲染问题，生成的代码比原生翻译的 SPIR-V 更紧凑，并且着色器编译完全卸载到工作线程，从而有助于缩短游戏加载时间。</p><p>DXVK 3.0 的另一大变化是，在支持的 Vulkan API 驱动上，现在默认使用 Vulkan 描述符堆（VK_EXT_descriptor_heap）。</p><p>DXVK 3.0 还带来了许多 Direct3D 改进、共享资源增强、帧率限制器支持，以及各种其他错误修复和改进。相应地，DXVK 3.0 现在需要 Vulkan 1.4 驱动级别支持。</p><p>关于 DXVK 3.0 版本的下载和更多详细信息，请访问相关页面。</p><p>Godot 4.7 发布，支持 HDR 输出</p><p>Crown Engine 0.63 恢复其 OpenGL 渲染器以支持旧硬件</p><p>O3DE 26.05 发布，引入新的开放粒子系统及其他引擎改进</p><p>开源“low_latency_layer”为 Linux 上的 AMD 和 Intel GPU 带来 Reflex 和 Anti-Lag 2 支持</p><p>FEX 2605 带来性能改进及初步的 Snapdragon X2 Elite 修复</p><p>Linux 即将支持 ASUS ROG RAIKIRI II：一款 160 美元的高端游戏手柄</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，致力于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他。</p><p>Linux 最终在六年工作和 360 多个补丁后消除了 strncpy API</p><p>systemd 261 发布，引入新的 systemd-sysinstall 操作系统安装程序、IMDSD 和 Storagectl</p><p>“令人厌恶的”Linux sched_ext 源代码在 Linus Torvalds 投诉后进行了重构</p><p>开源 NVIDIA NVK Vulkan 驱动现已支持 DLSS</p><p>Google 的 Gemini 部分解决了现代华硕笔记本电脑上 Linux 启动时间过长的问题</p><p>Epic Games 宣布 Lore 开源版本控制系统</p><p>Steam Machine 发布，售价 1049 至 1428 美元</p><p>Claude AI 协助修复了影响众多笔记本电脑的多年 AMD Radeon Linux 显示错误</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12878" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/DXVK-3.0-Release" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
