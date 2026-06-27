@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Linux用户免费获取！Brave Origin对其他人售价59.99美元 — Linux 中文速报</title>
+<title>在 Ubuntu 26.04 上为 Apache 创建自签名 SSL 证书 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">Linux Today</span>
   </div>
 
-  <h1>Linux用户免费获取！Brave Origin对其他人售价59.99美元</h1>
+  <h1>在 Ubuntu 26.04 上为 Apache 创建自签名 SSL 证书</h1>
 
-  <div class="article-summary">Brave推出精简版浏览器Brave Origin，移除了AI助手、奖励计划、加密钱包和VPN，但保留了广告和跟踪器拦截功能。该浏览器通常售价59.99美元（一次性许可，支持Windows、Android、macOS和iOS），但Linux用户可免费使用，无需注册账户。测试显示其性能与完整版Brave相当，在Speedometer基准测试中得分接近。</div>
+  <div class="article-summary">本文介绍了如何在 Ubuntu 26.04 上为 Apache 创建自签名 SSL 证书，通过简单易懂的步骤帮助用户提升网站安全性。</div>
 
-  <div class="article-body"><p>Linux用户免费获取！Brave Origin对其他人售价59.99美元</p><p>Brave Origin移除了AI、奖励、钱包和VPN，但广告和跟踪器拦截功能对Origin用户保持不变。</p><p>这是一款精简版浏览器，专为那些几乎从不使用公司打包的大部分功能的用户打造。它去掉了AI助手、奖励计划、加密钱包和VPN，但保留了广告和跟踪器拦截功能。</p><p>不要被这一点误导，以为这是个半成品浏览器；你仍然可以获得常规安全升级、Chromium特定补丁以及常规浏览器更新。</p><p>不过，对于大多数用户来说，Brave Origin售价59.99美元，是一次性许可购买，可在Windows、Android、macOS和iOS上使用。然而，在电脑上运行Linux发行版的用户无需支付一分钱，也无需注册账户。</p><p>本月早些时候宣布Origin时，Brave解释道：</p><p>他们构建Brave Origin是为了响应用户的请求，这些用户希望支持Brave在网络隐私和开源广告拦截方面的行业领先工作，而无需管理或移除他们不感兴趣使用的功能。</p><p>我想亲自看看Brave Origin到底是什么，同时将其与他们的旗舰产品进行比较。那么，你愿意和我一起探索吗？🤓</p><p>这是它的功能</p><p>Origin首先向我展示的是内置在初始设置中的选择：付费购买许可以支持Brave，或者因为我使用的是Linux而免费继续。我选择了免费，紧接着是常规的首次设置屏幕。</p><p>首先是将其设置为默认浏览器的提示。</p><p>接下来是请求从其他浏览器导入设置，提供从Brave在系统上找到的任何浏览器中导入书签、扩展和保存的密码的选项。</p><p>之后是崩溃或冻结报告对话框；基本上是一些遥测数据，当Origin在使用中出现异常行为时会发送给Brave。</p><p>很高兴看到它默认是禁用的。</p><p>这些是初始设置过程中向我询问的全部内容，然后我就立即开始浏览了。</p><p>默认搜索引擎是Google，与其他任何Brave安装一样，不过如果你更喜欢像DuckDuckGo这样的其他搜索引擎，也可以更换。</p><p>我在测试期间保持了默认设置，它表现良好。搜索“Linux”甚至在新闻结果中拉取了来自高域名权威网站（如BBC和Google自己的博客）的最新报道。</p><p>广告拦截器也表现得相当不错！它无需我进行任何配置就能完成工作。在YouTube上播放视频时，它仅在一个页面上就捕获了16个跟踪器和广告，并且指纹保护默认开启。</p><p>页面也没有因此感觉被破坏或精简。</p><p>一个精简的Brave Origin安装在虚拟机上的Speedometer得分（左），旁边是定制版Vivaldi安装在裸机上的得分（右）。</p><p>在我的测试环境（Ubuntu 26.04 LTS虚拟机）中运行Origin，它在没有安装任何扩展或主题的情况下得分23.0。</p><p>作为对比，我在日常使用的Fedora Workstation 44（非虚拟机环境）上的Vivaldi安装上运行了相同的测试，得分为23.2，非常接近，可以说是平局。</p><p>虽然很容易说这证明了Origin极其轻量，但Speedometer主要测量Web应用程序的响应速度，而现代虚拟机在实际性能上几乎与真实硬件一样快。</p><p>由于这两个测试是在完全不同的操作系统上运行的，这种接近的平局主要表明两个浏览器以相同的基本速度处理Web代码。要真正证明Origin更轻量，我需要在完全相同的设置下对它们进行并排测试。</p><p>在撰写本文时，我没有机会这样做。</p><p>为什么不用Brave浏览器？</p><p>Brave浏览器（左）和Brave Origin（右）。</p><p>嗯，常规的Brave浏览器已经几乎完成了Origin所做的所有事情，而且还有更多功能。开箱即用，它捆绑了以下功能：</p><p>Brave奖励（同时也带来了Brave广告）</p><p>以及Web3域名支持</p><p>Web D</p></div>
+  <div class="article-body"><p>了解如何在 Ubuntu 26.04 上为 Apache 创建自签名 SSL 证书。按照我们易于遵循的说明，提升您网站的安全性。</p><p>该文章《在 Ubuntu 26.04 上为 Apache 创建自签名 SSL 证书》最初出现在 Linux Today 上。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/brave-origin-linux/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.linuxtoday.com/blog/create-a-self-signed-ssl-certificate-for-apache-on-ubuntu-26-04/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

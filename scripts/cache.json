@@ -812,5 +812,137 @@
     "title_zh": "Academy Software Foundation 宣布成立“Wayland for Artists 工作组”",
     "summary_zh": "Academy Software Foundation 与视觉特效协会技术委员会联合成立了“Wayland for Artists 工作组”，旨在推动 Linux 桌面从 X11 向 Wayland 过渡时，确保视觉特效和动画艺术家获得流畅体验。工作组将关注图形平板支持、窗口管理、输入焦点、键绑定、桌面定制、远程访问、GPU 加速、色彩管理、HDR 显示及商业/开源/内部应用兼容性等关键领域。",
     "fulltext_zh": "Academy Software Foundation 宣布成立“Wayland for Artists 工作组”\n\nAcademy Software Foundation 宣布成立“Wayland for Artists 工作组”\n2026年6月25日下午2点12分（美国东部时间）\n\n致力于推动视觉特效/电影行业及其他领域开源项目（如 OpenVDB、OpenMoonRay、Open Shading Language 等）的 Academy Software Foundation，宣布成立一个新的工作组，以帮助艺术家更好地采用 Wayland。\n\nAcademy Software Foundation 与视觉特效协会技术委员会共同组建了“Wayland for Artists 工作组”，就 Linux 上 Wayland 相关事宜展开合作。该工作组将成为一个行业范围的论坛，围绕视觉特效和动画行业进行变革，确保 Wayland 能够良好地服务于专业视觉特效和动画艺术家。\n\n随着越来越多的 Linux 桌面工作从 X11 迁移到 Wayland，Wayland for Artists 工作组正致力于确保艺术家能够平滑过渡，且功能和特性上不出现任何缺口。\n\n“Wayland for Artists 工作组将探索可能受到影响的多个行业特定领域，包括图形平板支持、窗口管理、输入焦点、键绑定、桌面定制、远程访问解决方案、GPU 加速、色彩管理、高动态范围显示，以及与商业、开源和内部应用的兼容性。”\n\n关于此 Wayland for Artists 工作组的更多详情，请参阅：\nMiracle-WM 基于 Mir 的 Wayland 合成器计划今年晚些时候发布 v1.0\nWayland 的 Weston 16 Alpha 带来 HDR 改进和 Vulkan 渲染器修复\nWine Wayland 驱动引入 Alpha 修饰符支持以实现透明度处理\nWayland 协议 1.49 发布，改进多 GPU 支持及 Windows BT.2100\nMir 2.27 发布，包含更多 Wayland Rust 代码\nGoogle 的 ANGLE 合并 Wayland 支持，解除 Chromium 嵌入式框架在 Wayland 上的阻塞\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 同时也是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nLinux 终于经过六年工作和 360 多个补丁后移除了 strncpy API\nsystemd 261 发布，带来新的 systemd-sysinstall 操作系统安装程序、IMDSD 和 Storagectl\nLinus Torvalds 投诉后，“令人厌恶的”Linux sched_ext 源代码被重构\n开源 NVIDIA NVK Vulkan 驱动现已支持 DLSS\nGoogle 的 Gemini 部分解决了现代华硕笔记本电脑上 Linux 启动时间过长的问题\nEpic Games 宣布 Lore 开源版本控制系统\nSteam Machine 发布，售价 1049 至 1428 美元\nClaude AI 协助修复影响众多笔记本电脑的多年 AMD Radeon Linux 显示错误\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "aca83f9f3113e057df9a255075af5a23": {
+    "id": "aca83f9f3113e057df9a255075af5a23",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/06/ubuntu-26-10-snapshot-2-released",
+    "title_en": "Ubuntu 26.10 Snapshot 2 is out (with a ‘breaking change’)",
+    "summary_en": "Ubuntu 26.10 Snapshot 2 is available to download, the second of four snapshots planned for the &#8216;Stonking Stingray&#8217; development cycle ahead of a stable release in October. As with the first snapshot, there&#8217;s not a lot &#8220;new&#8221; stuff to see or test out, so unless you&#8217;re a developer or an avid bug hunter there&#8217;s little reason to rush off and try it. Canonical&#8217;s Utkarsh Gupta, announcing the release on Ubuntu&#8217;s developer mailing list, warns of a &#8",
+    "pub_date": "Fri, 26 Jun 2026 14:52:49 +0000",
+    "title_zh": "Ubuntu 26.10 Snapshot 2 发布（含一项“破坏性变更”）",
+    "summary_zh": "Ubuntu 26.10 的第二个快照版本 Snapshot 2 已发布，这是稳定版发布前四个快照中的第二个。本次更新没有太多新功能，主要面向开发者和 Bug 猎人。Canonical 警告了一项“破坏性变更”：Ubuntu cdimage 服务器布局已统一，桌面版镜像的 URL 路径发生变化，从顶级目录移至命名子文件夹，每日构建的 URL 也相应调整。快照是自动化构建的“一次性制品”，适合测试，但普通用户建议使用每日构建。",
+    "fulltext_zh": "Ubuntu 26.10 Snapshot 2 已发布，这是“Stonking Stingray”开发周期中计划在 10 月稳定版发布前推出的四个快照中的第二个。\n\n与第一个快照一样，这里没有太多“新”东西可看或测试，因此除非你是开发者或狂热的 Bug 猎人，否则没什么理由急着去尝试。\n\nCanonical 的 Utkarsh Gupta 在 Ubuntu 开发者邮件列表中宣布该版本时，警告了一项“破坏性变更”——别慌：它不在镜像本身，而是访问镜像的 URL。\n\n过去几周，Ubuntu cdimage 服务器布局已统一。Ubuntu 桌面版发行版已被移至一个命名子文件夹，以匹配 Ubuntu 官方衍生版所采用的方式。重定向处理了现有链接（因此本质上没有破坏任何东西）。\n\n以前，Ubuntu 桌面版镜像位于顶级目录：\nhttps://cdimage.ubuntu.com/releases/24.04/\n\n现在它们位于命名文件夹中：\nhttps://cdimage.ubuntu.com/ubuntu/releases/24.04/\n\n衍生版没有实质变化，因为它们一直位于命名的顶级文件夹中：\nhttps://cdimage.ubuntu.com/xubuntu/releases/24.04/\n\n但真正“破坏”的是每日构建所使用的 URL，因为 Canonical 选择对指向它们的链接实施重定向。\n\n这些链接不再位于：\ncdimage.ubuntu.com/daily-live\n\n而是位于：\ncdimage.ubuntu.com/ubuntu/stonking/daily-live\n\n衍生版的 URL 也发生了变化，增加了一个系列中间层，对于本周期来说是“stonking”。\n\nUbuntu 月度快照面向谁？\n\nUbuntu 的月度快照并非传统的 alpha 版本（该发行版已于 2013 年停止使用）。Ubuntu 的工程师将其描述为“一次性制品”（原文如此），因为它们是 Canonical 新的自动化镜像构建流水线生成的自动冻结版本。\n\n快照没有经过同等程度的人工质量保证，但其准时性为贡献者提供了一个软目标来测试变更，也让 Canonical 有机会对新系统进行压力测试。\n\n如果你是最终用户（而非开发者），并且只是想测试，最好获取每日构建——它们更新鲜。\n\nUbuntu 26.10 Snapshot 3 预计于 7 月 30 日发布。如果你确实安装了 Snapshot 2，只需在更新到来时安装它们，即可跟随开发浪潮。\n\n面向用户的变化将在未来几个月内到来，包括 GNOME 51 桌面 alpha 版，以及 Ubuntu 计划中的 AI 功能中的第一个——在任何文本字段中进行语音输入。\n\n从 Ubuntu cdimage 服务器（使用新 URL）下载 Ubuntu 26.10 Snapshot 2。"
+  },
+  "c834d11659e654c6cca16a001d1a5aec": {
+    "id": "c834d11659e654c6cca16a001d1a5aec",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/brave-origin-linux/",
+    "title_en": "Linux Users Get This For Free! Brave Origin Costs $59.99 For Everyone Else",
+    "summary_en": "Brave strips out AI, Rewards, Wallet, and VPN, but ad and tracker blocking stay intact for Origin users.",
+    "pub_date": "Thu, 25 Jun 2026 04:34:48 GMT",
+    "title_zh": "Linux用户免费获取！Brave Origin对其他人售价59.99美元",
+    "summary_zh": "Brave推出精简版浏览器Brave Origin，移除了AI助手、奖励计划、加密钱包和VPN，但保留了广告和跟踪器拦截功能。该浏览器通常售价59.99美元（一次性许可，支持Windows、Android、macOS和iOS），但Linux用户可免费使用，无需注册账户。测试显示其性能与完整版Brave相当，在Speedometer基准测试中得分接近。",
+    "fulltext_zh": "Linux用户免费获取！Brave Origin对其他人售价59.99美元\n\nBrave Origin移除了AI、奖励、钱包和VPN，但广告和跟踪器拦截功能对Origin用户保持不变。\n\n这是一款精简版浏览器，专为那些几乎从不使用公司打包的大部分功能的用户打造。它去掉了AI助手、奖励计划、加密钱包和VPN，但保留了广告和跟踪器拦截功能。\n\n不要被这一点误导，以为这是个半成品浏览器；你仍然可以获得常规安全升级、Chromium特定补丁以及常规浏览器更新。\n\n不过，对于大多数用户来说，Brave Origin售价59.99美元，是一次性许可购买，可在Windows、Android、macOS和iOS上使用。然而，在电脑上运行Linux发行版的用户无需支付一分钱，也无需注册账户。\n\n本月早些时候宣布Origin时，Brave解释道：\n\n他们构建Brave Origin是为了响应用户的请求，这些用户希望支持Brave在网络隐私和开源广告拦截方面的行业领先工作，而无需管理或移除他们不感兴趣使用的功能。\n\n我想亲自看看Brave Origin到底是什么，同时将其与他们的旗舰产品进行比较。那么，你愿意和我一起探索吗？🤓\n\n这是它的功能\n\nOrigin首先向我展示的是内置在初始设置中的选择：付费购买许可以支持Brave，或者因为我使用的是Linux而免费继续。我选择了免费，紧接着是常规的首次设置屏幕。\n\n首先是将其设置为默认浏览器的提示。\n\n接下来是请求从其他浏览器导入设置，提供从Brave在系统上找到的任何浏览器中导入书签、扩展和保存的密码的选项。\n\n之后是崩溃或冻结报告对话框；基本上是一些遥测数据，当Origin在使用中出现异常行为时会发送给Brave。\n\n很高兴看到它默认是禁用的。\n\n这些是初始设置过程中向我询问的全部内容，然后我就立即开始浏览了。\n\n默认搜索引擎是Google，与其他任何Brave安装一样，不过如果你更喜欢像DuckDuckGo这样的其他搜索引擎，也可以更换。\n\n我在测试期间保持了默认设置，它表现良好。搜索“Linux”甚至在新闻结果中拉取了来自高域名权威网站（如BBC和Google自己的博客）的最新报道。\n\n广告拦截器也表现得相当不错！它无需我进行任何配置就能完成工作。在YouTube上播放视频时，它仅在一个页面上就捕获了16个跟踪器和广告，并且指纹保护默认开启。\n\n页面也没有因此感觉被破坏或精简。\n\n一个精简的Brave Origin安装在虚拟机上的Speedometer得分（左），旁边是定制版Vivaldi安装在裸机上的得分（右）。\n\n在我的测试环境（Ubuntu 26.04 LTS虚拟机）中运行Origin，它在没有安装任何扩展或主题的情况下得分23.0。\n\n作为对比，我在日常使用的Fedora Workstation 44（非虚拟机环境）上的Vivaldi安装上运行了相同的测试，得分为23.2，非常接近，可以说是平局。\n\n虽然很容易说这证明了Origin极其轻量，但Speedometer主要测量Web应用程序的响应速度，而现代虚拟机在实际性能上几乎与真实硬件一样快。\n\n由于这两个测试是在完全不同的操作系统上运行的，这种接近的平局主要表明两个浏览器以相同的基本速度处理Web代码。要真正证明Origin更轻量，我需要在完全相同的设置下对它们进行并排测试。\n\n在撰写本文时，我没有机会这样做。\n\n为什么不用Brave浏览器？\n\nBrave浏览器（左）和Brave Origin（右）。\n\n嗯，常规的Brave浏览器已经几乎完成了Origin所做的所有事情，而且还有更多功能。开箱即用，它捆绑了以下功能：\n\nBrave奖励（同时也带来了Brave广告）\n\n以及Web3域名支持\n\nWeb D"
+  },
+  "81f37069d14906bd299f33ce7359bb24": {
+    "id": "81f37069d14906bd299f33ce7359bb24",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Shotcut-26.6-Released",
+    "title_en": "Shotcut 26.6 Released With HDR Improvements, Vulkan Display On Linux",
+    "summary_en": "Shotcut 26.6 is out today as the newest major feature release for this popular cross-platform, open-source video editing solution...",
+    "pub_date": "Fri, 26 Jun 2026 20:10:03 -0400",
+    "title_zh": "Shotcut 26.6 发布：HDR 改进与 Linux 上的 Vulkan 显示",
+    "summary_zh": "跨平台开源视频编辑软件 Shotcut 发布 26.6 版本，重点改进了高动态范围（HDR）显示支持，新增 HDR 预览窗口、时间线属性中的动态范围数据、GPU 模式转换 HDR 及导出 HDR 功能。此外，该版本还改进了插件，通过 --experimental 启动选项激活新滤镜 UI 生成器，新增 RNNoise 音频滤镜，并在 Linux 上支持 Vulkan 显示。依赖方面升级至 FFmpeg 8.1.2 和 MLT 7.40 框架，并修复了数十个 bug。",
+    "fulltext_zh": "Shotcut 26.6 发布：HDR 改进与 Linux 上的 Vulkan 显示 - Phoronix\nShotcut 26.6 发布：HDR 改进与 Linux 上的 Vulkan 显示\n发布于 2026 年 6 月 26 日 晚上 8:10 EDT。\n\nShotcut 26.6 今日发布，作为这款流行的跨平台开源视频编辑解决方案的最新主要功能版本。\n\nShotcut 26.6 持续改进其高动态范围（HDR）显示支持，并处理来自相机和游戏录制的 HDR 内容。现在 Shotcut 26.6 新增了 HDR 预览窗口、时间线属性中的动态范围数据、使用 GPU 处理模式转换为 HDR、增加了导出 HDR 的支持，以及其他改进。\n\nShotcut 26.6 版本还对其各种插件进行了多项改进，\"--experimental\" 启动 CLI 选项现在激活了新的滤镜 UI 生成器，新增了 RNNoise 音频滤镜，并且通过显示模式设置，现在可以在 Linux 上选择 Vulkan。\n\nShotcut 26.6 还转向使用 FFmpeg 8.1.2、MLT 7.40 框架以及其他依赖项更新。此外还有数十个 bug 修复。\n\n有关今日 Shotcut 26.6 功能版本的下载和更多详情，请访问。\n\nAMD 为 FFmpeg DNN 滤镜贡献 ONNX Runtime 后端\nShotcut 26.6 Beta 带来大量修复、OpenFX 和 VST2 插件支持\nZrythm 2.0 Alpha 发布，用 C++ 和 Qt/QML 重写数字音频工作站\nLinux 声音子系统也因 AI/LLM 驱动而迎来大量修复\nFFmpeg 引入用于 APV 视频的 Vulkan 加速解码\nFFmpeg 引入 Apple ProRes RAW 的 Vulkan 加速视频\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他。\n\nLinux 最终在六年工作和 360+ 补丁后淘汰 strncpy API\nsystemd 261 发布，带有新的 systemd-sysinstall 操作系统安装程序、IMDSD 和 Storagectl\n“令人作呕”的 Linux sched_ext 源代码在 Linus Torvalds 投诉后重构\n开源 NVIDIA NVK Vulkan 驱动现在支持 DLSS\nGoogle 的 Gemini 部分解决了现代华硕笔记本上 Linux 启动时间过长的问题\nSteam Machine 发布，售价 1049 至 1428 美元\nClaude AI 协助修复影响众多笔记本的多年 AMD Radeon Linux 显示 bug\nGCC 编译器的一行 x86 修改为现代 Intel/AMD CPU 带来 +12% 基准测试提升\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "af819ba8c22f23af123eea3e8510dbe7": {
+    "id": "af819ba8c22f23af123eea3e8510dbe7",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Intel-HDR-Over-DP-MST",
+    "title_en": "New Intel Linux Driver Patches Enable HDR Over DP MST Connections",
+    "summary_en": "One of the limitations of the Intel Linux driver's high dynamic range (HDR) display support is that it currently doesn't work for any DisplayPort Multi-Stream Transport \"DP MST\" connections, such as for daisy chaining monitors or multi-monitor docking stations. But the good news is patches are being worked on to address this Intel Linux kernel display driver shortcoming...",
+    "pub_date": "Fri, 26 Jun 2026 14:21:59 -0400",
+    "title_zh": "新英特尔Linux驱动补丁启用DP MST连接的HDR支持",
+    "summary_zh": "英特尔Linux驱动的高动态范围（HDR）显示支持目前无法用于DisplayPort多流传输（DP MST）连接，如显示器菊花链或多显示器扩展坞。谷歌的Gil Dekel发布了补丁，通过新增约60行代码，使HDR在DP MST上工作。该工作来不及进入Linux v7.2，但有望在v7.3周期中准备就绪。",
+    "fulltext_zh": "新英特尔Linux驱动补丁启用DP MST连接的HDR支持 - Phoronix\n新英特尔Linux驱动补丁启用DP MST连接的HDR支持\n发布于2026年6月26日下午2:21 EDT。\n\n英特尔Linux驱动的高动态范围（HDR）显示支持的一个限制是，它目前无法用于任何DisplayPort多流传输（DP MST）连接，例如用于显示器菊花链或多显示器扩展坞。但好消息是，正在开发补丁以解决这个英特尔Linux内核显示驱动的短板。\n\n谷歌的Gil Dekel本周一直在发布补丁，以使HDR通过DP MST在英特尔驱动上工作。今天已经是该工作的第二版修订，以修复原始补丁发布中的一些问题。\n\n通过新增约60行代码，就可以在DP MST连接上启用HDR。这项工作来不及进入Linux v7.2，但希望能在v7.3周期中准备就绪。\n\n英特尔ANV Vulkan驱动现在默认启用描述符堆\n英特尔ISPC 1.31为Nova Lake带来新目标，实验性PowerPC 64位支持\n英特尔优化区1.1为更多工作负载提出调优建议\n英特尔TDX现在更实用，无需重启即可应用重要更新\n英特尔计算运行时现在宣传对Nova Lake的早期支持，引入实验性“LEO”\n英特尔性能技能：利用AI进行Linux性能优化的新开源项目\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动等主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nLinux终于在六年工作和360多个补丁后消除了strncpy API\nsystemd 261发布，带有新的systemd-sysinstall操作系统安装程序、IMDSD和Storagectl\nLinus Torvalds投诉后，“令人作呕”的Linux sched_ext源代码被重构\n开源NVIDIA NVK Vulkan驱动现在支持DLSS\n谷歌Gemini部分解决了现代华硕笔记本上Linux启动时间过长的问题\nSteam Machine发布，售价1049至1428美元\nClaude AI协助修复影响众多笔记本的多年AMD Radeon Linux显示错误\nGCC编译器的一行x86更改使现代英特尔/AMD CPU基准测试提升+12%\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "99160409618f57b626ac003be05d994d": {
+    "id": "99160409618f57b626ac003be05d994d",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/nvidia-vera-gb10",
+    "title_en": "How NVIDIA GB10 CPU Performance Compares To Vera",
+    "summary_en": "Since delivering NVIDIA Vera CPU benchmarks one month ago and follow-ups like how the ARM Linux server performance has evolved in 8 years or how Vera compares to Ampere Altra that is still quite common in the marketplace, another frequent discussion point and inquiry is about the performance of NVIDIA Vera relative to NVIDIA's GB10 chip. For those curious about the per-core performance and the like, here are some benchmarks of the GB10 up against those initial Vera results.",
+    "pub_date": "Fri, 26 Jun 2026 11:50:52 -0400",
+    "title_zh": "NVIDIA GB10 CPU性能与Vera对比",
+    "summary_zh": "本文对比了NVIDIA GB10芯片与Vera CPU的性能差异。Vera采用88个自研Olympus核心（176线程），功耗450W；GB10则使用10个Cortex-X925和10个Cortex-A725核心，功耗140W。文章基于相同工作负载和Linux 6.17内核环境，测试了单线程、多线程及每核心多线程性能，旨在为关注桌面/工作站GB10与高端服务器Vera之间原始吞吐量差异的用户提供参考。",
+    "fulltext_zh": "NVIDIA GB10 CPU性能与Vera对比 - Phoronix\nNVIDIA GB10 CPU性能与Vera对比\n发布于2026年6月26日美国东部时间上午11:50。\n\nNVIDIA Vera CPU基准测试\n一个月前，以及后续文章如\nARM Linux服务器性能在8年间的演变\nVera与Ampere Altra的对比\n（后者在市场上仍相当常见），另一个频繁讨论和询问的话题是NVIDIA Vera与NVIDIA GB10芯片的性能对比。对于那些好奇每核心性能等方面的人来说，以下是GB10与那些初始Vera结果的基准测试对比。\n\nVera采用NVIDIA自研的Olympus CPU定制核心，而NVIDIA GB10则依赖十个Cortex-X925核心和十个Cortex-A725核心，相比之下Vera拥有88个Olympus核心和176个线程。GB10配备128GB LPDDR5x内存，SoC额定功耗为140W，而Vera为450W。这些芯片设计用途不同，但量化每核心性能差异的好奇心依然存在。\n\n本文展示了此前发布的Vera CPU相关基准测试，与NVIDIA GB10在相同工作负载和类似Ubuntu软件环境（Linux 6.17内核）下的对比结果。这些GB10基准测试全部使用\n\n测试考察了单线程性能、多线程性能以及用于参考的每核心多线程性能。由于在最初的Vera基准测试中无法记录CPU功耗数据，本轮测试没有进行功耗对比。这些数据主要供参考，如果你想知道GB10桌面/工作站与高端Vera服务器芯片在原始吞吐量上的对比，或者只是好奇Olympus核心与ARM Cortex IP在每核心基础上的表现。\n\nRISC-V CPU性能五年提升8倍：SiFive HiFive Unmatched到SpacemiT K3\nARM Linux服务器性能八年几何均值提升超7倍，NVIDIA Vera CPU提升高达15倍\nAMD EPYC 8635P \"Sorano\"基准测试：EPYC 8004服务器的重大升级机会\nIntel Xeon 6+ 与 Intel Ethernet E835 发布\nAMD发布Radeon RX 9070 GRE、Ryzen AI Max PRO 400系列\nNVIDIA Vera CPU基准测试：Olympus核心带来ARM有史以来最佳性能\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "7fae9d3754d5147dddb626492b3c6736": {
+    "id": "7fae9d3754d5147dddb626492b3c6736",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.2-x86-Platform-Drivers",
+    "title_en": "More AMD Zen 6 Prepping, Many ASUS / Lenovo / HP Laptop Improvements For Linux 7.2",
+    "summary_en": "The many x86 platform driver changes have now been merged for the in-development Linux 7.2 kernel. As usual it's mostly made up of driver enhancements for benefiting modern AMD Ryzen (AI) and Intel Core (Ultra) laptops...",
+    "pub_date": "Fri, 26 Jun 2026 09:53:02 -0400",
+    "title_zh": "更多AMD Zen 6准备，大量华硕/联想/惠普笔记本改进为Linux 7.2",
+    "summary_zh": "Linux 7.2内核合并了大量x86平台驱动更新，重点支持AMD Zen 6处理器（包括HFI排名表v3和PMC驱动新SoC），以及Intel Nova Lake。华硕新增ROG Strix G16等机型支持及Keystone加密狗；惠普Omen 16等设备获得WMI驱动更新；联想新增CPU/GPU可调属性和电池充电限制。此外还涵盖Qualcomm、微软Surface、OneXPlayer等平台改进。",
+    "fulltext_zh": "更多AMD Zen 6准备，大量华硕/联想/惠普笔记本改进为Linux 7.2 - Phoronix\n更多AMD Zen 6准备，大量华硕/联想/惠普笔记本改进为Linux 7.2\n发布于2026年6月26日美国东部时间上午9:53。\n\n大量x86平台驱动变更现已合并到正在开发中的内核。与往常一样，这些变更主要由针对现代AMD Ryzen（AI）和Intel Core（Ultra）笔记本的驱动增强组成。\n\n从AMD的变更开始，AMD硬件反馈接口（HFI）驱动现在支持第三版排名表。新的排名表版本用于即将推出的AMD CPU，并支持动态排名。这很可能是为即将到来的Zen 6处理器准备的。\n\nAMD电源管理控制器（PMC）驱动增加了对Family 1Ah Model 80H SoC的支持。同样是为了Zen 6。AMD PMC驱动还为某些联想笔记本添加了一个变通方案，以延迟挂起，从而避免挂起到空闲（s2idle）后的键盘和盖子开关问题。\n\n在Intel方面，Intel PMC驱动引入了Nova Lake支持。\n\nLinux 7.2中的ASUS Armoury驱动增加了对ASUS ROG Strix G16 2025（G614PR）、ROG Zephyrus G14 2023（GA402NJ）、ROG Zephyrus G14 2025（GA403UM）和TUF Gaming F16（FX608JPR）的支持。ASUS WMI驱动还增加了对ASUS Keystone加密狗的支持，这是一种类似NFC的物理加密狗，可插入兼容的华硕笔记本。\n\n在惠普方面，HP WMI驱动增加了对Omen 16-ap0xxx（主板ID 8D26）和主板ID 8B2F的支持。Intel HID驱动还增加了对HP ProBook x360 440 G1五键阵列的支持。\n\n对于联想硬件，Linux 7.2现在提供了更多CPU可调属性，以及新增的GPU可调属性和WMI电池充电限制功能。\n\n在AArch64方面，新增了qcom-hamoa-ec驱动，用于Qualcomm Hamoa、Purwa和Glymur SoC上的嵌入式控制器（EC）。\n\nMicrosoft Surface平台驱动增加了对Surface Pro 12英寸的支持。OneXPlayer EC驱动也已就绪，支持OneXPlayer Super X掌机。\n\n最后，Uniwill笔记本驱动（现常用于TUXEDO Computers笔记本）在Linux 7.2中支持了电池充电模式。\n\nLinux 7.2的x86平台驱动变更完整列表可通过以下链接查看：\nLinux 7.2为Wacom W9000触控屏新增驱动\nLinux 8250/16550 UART串行驱动在2026年迎来现代化改造\nGCC编译器中出现新的Hygon Model 8“苏州”x86 CPU支持\nUSB4STREAM已合并到Linux 7.2，用于在USB4连接的系统间快速发送数据\nOneXPlayer配置驱动已合并到Linux 7.2，同时还有其他新硬件\nQualcomm发布针对HP EliteBook X G2q X2 Elite笔记本的Linux补丁\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\nLinux在六年工作和360多个补丁后终于消除了strncpy API\nsystemd 261发布，包含新的systemd-sysinstall操作系统安装程序、IMDSD和Storagectl\nLinus Torvalds投诉后，“令人作呕”的Linux sched_ext源代码被重构\n开源NVIDIA NVK Vulkan驱动现已支持DLSS\nGoogle的Gemini部分解决了现代华硕笔记本上漫长的Linux启动时间问题\nSteam Machine发布，售价1049美元至1428美元\nClaude AI协助修复了影响大量笔记本的多年AMD Radeon Linux显示错误\nGCC编译器的一行x86修改为现代Intel/AMD CPU带来了+12%的基准测试胜利\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "91c8bc99e8dcdb25fc1cdda531f0d670": {
+    "id": "91c8bc99e8dcdb25fc1cdda531f0d670",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/PoC-Per-Background-GNOME",
+    "title_en": "Experimental Code Enables Per-Monitor Backgrounds For GNOME Shell",
+    "summary_en": "One of the limitations of GNOME's current multi-monitor handling is that the same background is used across the displays. For those that want to enjoy per-monitor background selection, some experimental / proof-of-concept code is now working to allow such per-monitor backgrounds to work with the modern GNOME desktop...",
+    "pub_date": "Fri, 26 Jun 2026 09:25:12 -0400",
+    "title_zh": "实验性代码为GNOME Shell启用每显示器独立壁纸",
+    "summary_zh": "GNOME Shell 当前在多显示器环境下只能使用同一张壁纸。开源开发者 Gianluca Masci 提交了实验性概念验证代码，通过架构改动实现每台显示器独立设置壁纸，并附带配置工具。该代码尚未合并到上游，但已托管在 GitHub 上，开发过程有 AI 辅助。",
+    "fulltext_zh": "实验性代码为GNOME Shell启用每显示器独立壁纸 - Phoronix\n实验性代码为GNOME Shell启用每显示器独立壁纸\n发布于2026年6月26日美国东部时间上午9:25。\n\nGNOME当前多显示器处理的一个限制是，所有显示器使用相同的壁纸。对于那些希望享受每显示器独立壁纸选择的人来说，一些实验性/概念验证代码现在已能工作，允许在现代GNOME桌面上实现每显示器独立壁纸。\n\n开源开发者兼Phoronix读者Gianluca Masci来信分享了他为GNOME Shell启用每显示器独立壁纸的概念验证工作。这为GNOME Shell内独立、每显示器的壁纸带来了必要的架构变更。\n\n作为这项工作的一部分，还有一个用于GNOME Shell处理每显示器壁纸选择的配置工具。\n\n该工作尚未达到上游合并请求的阶段，但目前概念验证代码托管在\n此GitHub仓库\n中，包含所有细节。此开发也被标注为AI辅助创作。\n\nGNOME基金会宣布奖学金计划首批参与者\nGNOME文件预览器终于切换到GTK4，新增深色模式\nGNOME Circle反对AI垃圾内容，Resources应用进入GNOME孵化器\nGTK引入对齐功能以改善分数缩放体验\nGNOME Commander 2.0发布，基于Rust和GTK4重写\nGNOME 51可能最终用“Resources”应用替换系统工具\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动及其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nLinux在六年工作、360多个补丁后终于淘汰strncpy API\nsystemd 261发布，包含新的systemd-sysinstall OS安装程序、IMDSD和Storagectl\n“令人作呕”的Linux sched_ext源代码在Linus Torvalds投诉后重构\n开源NVIDIA NVK Vulkan驱动现已支持DLSS\nGoogle的Gemini部分解决了现代华硕笔记本上Linux启动时间过长的问题\nSteam Machine发布，售价1049至1428美元\nClaude AI协助修复影响众多笔记本的多年AMD Radeon Linux显示错误\nGCC编译器的一行x86修改为现代Intel/AMD CPU带来+12%的基准测试提升\n\n虽然拥有无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者财产。保留所有权利。"
+  },
+  "e23ade945b234572cecd9f0dcfb62756": {
+    "id": "e23ade945b234572cecd9f0dcfb62756",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/the-quiet-clause-that-may-save-linux-from-age%e2%80%91verification-laws/",
+    "title_en": "The Quiet Clause That May Save Linux From Age‑Verification Laws",
+    "summary_en": "Discover the hidden clause that could protect Linux from age-verification laws. Explore how this legal nuance may safeguard open-source software.\nThe post The Quiet Clause That May Save Linux From Age‑Verification Laws appeared first on Linux Today.",
+    "pub_date": "Fri, 26 Jun 2026 07:17:42 +0000",
+    "title_zh": "可能使Linux免受年龄验证法影响的低调条款",
+    "summary_zh": "本文探讨了一项可能保护Linux免受年龄验证法影响的法律条款。该条款作为法律中的细微之处，有望为开源软件提供豁免或保护，使其免于承担严格的年龄验证义务。文章分析了这一条款如何运作及其对Linux社区和开源生态的潜在意义。",
+    "fulltext_zh": "发现可能保护Linux免受年龄验证法影响的隐藏条款。探索这一法律细微之处如何保障开源软件的安全。\n\n这篇文章《可能使Linux免受年龄验证法影响的低调条款》最初出现在Linux Today上。"
+  },
+  "dfdcae32ba108b1c9ecaee61e2151c0e": {
+    "id": "dfdcae32ba108b1c9ecaee61e2151c0e",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/pipewire-1-6-6-improves-the-pulse-server-volume-initialization-in-filter-graph/",
+    "title_en": "PipeWire 1.6.6 Improves the Pulse Server, Volume Initialization in Filter Graph",
+    "summary_en": "Discover the enhancements in PipeWire 1.6.6, featuring improved Pulse Server functionality and optimized volume initialization in the filter graph.\nThe post PipeWire 1.6.6 Improves the Pulse Server, Volume Initialization in Filter Graph appeared first on Linux Today.",
+    "pub_date": "Fri, 26 Jun 2026 07:09:00 +0000",
+    "title_zh": "PipeWire 1.6.6 改进 Pulse 服务器与滤镜图中的音量初始化",
+    "summary_zh": "PipeWire 1.6.6 版本发布，主要增强了 Pulse 服务器功能，并优化了滤镜图中的音量初始化过程，提升了音频处理的稳定性和性能。",
+    "fulltext_zh": "探索 PipeWire 1.6.6 的增强功能，包括改进的 Pulse 服务器功能以及滤镜图中优化的音量初始化。\n\n该文章 PipeWire 1.6.6 改进 Pulse 服务器与滤镜图中的音量初始化 首次出现在 Linux Today 上。"
+  },
+  "6f63e4fb1c288a4266c531f02582c540": {
+    "id": "6f63e4fb1c288a4266c531f02582c540",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/aerynos-gets-linux-7-0-cosmic-1-0-13-and-kde-plasma-6-6-5/",
+    "title_en": "AerynOS Gets Linux 7.0, COSMIC 1.0.13, and KDE Plasma 6.6.5",
+    "summary_en": "AerynOS has been upgraded to Linux 7.0, COSMIC 1.0.13, and KDE Plasma 6.6.5. Learn about the exciting new features and improvements now!\nThe post AerynOS Gets Linux 7.0, COSMIC 1.0.13, and KDE Plasma 6.6.5 appeared first on Linux Today.",
+    "pub_date": "Fri, 26 Jun 2026 07:06:28 +0000",
+    "title_zh": "AerynOS 迎来 Linux 7.0、COSMIC 1.0.13 和 KDE Plasma 6.6.5",
+    "summary_zh": "AerynOS 已升级至 Linux 7.0、COSMIC 1.0.13 和 KDE Plasma 6.6.5，带来众多新功能和改进。本文介绍了这些更新的亮点，包括性能提升、界面优化和稳定性增强，为用户提供更流畅的体验。",
+    "fulltext_zh": "AerynOS 已升级至 Linux 7.0、COSMIC 1.0.13 和 KDE Plasma 6.6.5。立即了解这些激动人心的新功能和改进！\n\n该文章 AerynOS Gets Linux 7.0, COSMIC 1.0.13, and KDE Plasma 6.6.5 最早出现在 Linux Today 上。"
+  },
+  "4c7918b0690883cae8ac0b3fa84557a6": {
+    "id": "4c7918b0690883cae8ac0b3fa84557a6",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/create-a-self-signed-ssl-certificate-for-apache-on-ubuntu-26-04/",
+    "title_en": "Create a Self-Signed SSL Certificate for Apache on Ubuntu 26.04",
+    "summary_en": "Learn how to create a self-signed SSL certificate for Apache on Ubuntu 26.04. Boost your site's security with our easy-to-follow instructions.\nThe post Create a Self-Signed SSL Certificate for Apache on Ubuntu 26.04 appeared first on Linux Today.",
+    "pub_date": "Fri, 26 Jun 2026 07:04:59 +0000",
+    "title_zh": "在 Ubuntu 26.04 上为 Apache 创建自签名 SSL 证书",
+    "summary_zh": "本文介绍了如何在 Ubuntu 26.04 上为 Apache 创建自签名 SSL 证书，通过简单易懂的步骤帮助用户提升网站安全性。",
+    "fulltext_zh": "了解如何在 Ubuntu 26.04 上为 Apache 创建自签名 SSL 证书。按照我们易于遵循的说明，提升您网站的安全性。\n\n该文章《在 Ubuntu 26.04 上为 Apache 创建自签名 SSL 证书》最初出现在 Linux Today 上。"
+  },
+  "ca21cff331bb1f970170fe3be716839f": {
+    "id": "ca21cff331bb1f970170fe3be716839f",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/create-a-chat-server-in-linux-and-5-other-terminal-tricks/",
+    "title_en": "Create a Chat Server in Linux and 5 Other Terminal Tricks",
+    "summary_en": "Learn to set up a chat server on Linux and uncover five powerful terminal tricks that will streamline your workflow and improve your command line skills.\nThe post Create a Chat Server in Linux and 5 Other Terminal Tricks appeared first on Linux Today.",
+    "pub_date": "Fri, 26 Jun 2026 07:03:15 +0000",
+    "title_zh": "在Linux中创建聊天服务器及5个其他终端技巧",
+    "summary_zh": "本文介绍了如何在Linux上搭建一个聊天服务器，并分享了五个实用的终端技巧，帮助用户提升命令行效率和工作流程。这些技巧涵盖从基础配置到高级操作，适合Linux用户优化日常使用体验。",
+    "fulltext_zh": "学习如何在Linux上搭建一个聊天服务器，并发现五个强大的终端技巧，这些技巧将简化你的工作流程并提升你的命令行技能。\n\n该文章《在Linux中创建聊天服务器及5个其他终端技巧》最初出现在Linux Today上。"
   }
 }
