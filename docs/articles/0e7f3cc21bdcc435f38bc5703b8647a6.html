@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 将 Livepatch 引入 arm64，实现免重启内核更新 — Linux 中文速报</title>
+<title>KDE Plasma 6.7.2 将修复 KWin 最常见崩溃，Plasma 6.8 在弹出 CD 时不再崩溃 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 将 Livepatch 引入 arm64，实现免重启内核更新</h1>
+  <h1>KDE Plasma 6.7.2 将修复 KWin 最常见崩溃，Plasma 6.8 在弹出 CD 时不再崩溃</h1>
 
-  <div class="article-summary">Canonical 首次将 Livepatch 功能引入 Arm64 设备，使运行在 Arm 硬件上的 Ubuntu 系统能够在不重启的情况下应用关键内核安全补丁。Livepatch 是 Ubuntu 隐藏的安全特性之一，需通过 Ubuntu Pro 启用。该功能此前在 arm64 架构上因堆栈跟踪支持不足和工具链缺失而难以实现，经过 Canonical、内核维护者、硬件厂商和超大规模云服务商多年的协作才得以完成。目前支持的 arm64 内核变体包括 Arm 服务器、云和始终在线硬件。但需注意，Livepatch 仅更新内核，常规软件包仍需通过标准流程更新，且 Canonical 建议定期重启。</div>
+  <div class="article-summary">KDE Plasma 6.7.2 将于七月发布，修复了 KWin 在多显示器可变刷新率下的最常见崩溃，并改进了 Chromium 应用的全屏视频播放性能。Plasma 6.8 则修复了从 Dolphin 或 Audex 弹出音频 CD 时可能发生的崩溃，并为 NVIDIA GPU 默认启用三重缓冲。此外，Plasma 6.8 还引入了手动切换的壁纸幻灯片功能。</div>
 
-  <div class="article-body"><p>Ubuntu 将 Livepatch 引入 arm64，实现免重启内核更新 - OMG! Ubuntu</p><p>Canonical 首次将 Livepatch 功能引入 Arm64 设备，使运行在 Arm 硬件上的 Ubuntu 系统能够在不完全重启的情况下应用关键内核安全补丁。</p><p>Livepatch 是 Ubuntu 最隐蔽的安全特性之一——它默认未启用，需要 Ubuntu Pro——因为它允许在系统运行时在内存中应用内核安全更新。通常情况下，这需要重启。</p><p>如果你有点懒，或者正在运行不想被打断的任务或工作负载，这非常完美。</p><p>Livepatch 现已首次在 Ubuntu 26.04 LTS 及更高版本上可用于 Arm64 设备——不过让一切正常工作并非易事。</p><p>“实时”打补丁需要内核知道何时可以安全地将运行中的代码替换为修补后的版本。这依赖于堆栈跟踪，而 arm64 对此支持不佳。用于在 arm64 上构建和比较补丁的工具链也同样缺乏。</p><p>这需要 Canonical、内核维护者、硬件厂商和超大规模云服务商之间多年的协作努力才得以实现。</p><p>我可以在树莓派上使用 Ubuntu 的 Livepatch 吗？</p><p>如果你在树莓派上运行 Ubuntu 26.04 LTS，你将无法使用 Livepatch。</p><p>Ubuntu 的树莓派版本运行在树莓派内核上，这是一种内核变体，不在 Livepatch 支持的列表之中。</p><p>受支持的 arm64 内核变体包括：</p><p>Arm 驱动的服务器、云和始终在线硬件是 Livepatch 的用武之地，确保关键和高严重性的 CVE（那些可能需要非计划重启才能应用的漏洞）能够在不宕机的情况下原地修补。</p><p>“这一增强将加强那些不每天或每周进行安全维护的系统的安全性，并为致力于符合《网络弹性法案》（CRA）的组织提供运营优势，”Canonical 的 Rajan Patel 写道。</p><p>不过，这并非完全无需动手的安全方案。Livepatch 仅更新内核。常规软件包（如 OpenSSL 等）仍需通过标准更新流程进行维护。Canonical 也建议定期重启。</p><p>在 Ubuntu 26.04 LTS 上启用 Livepatch</p><p>要使用 Livepatch，你需要一个 Ubuntu Pro 账户，个人使用最多五台机器免费。Ubuntu 26.04 LTS 用户可以通过桌面端的软件更新器或在无头设置、服务器和云上通过命令行启用它。</p></div>
+  <div class="article-body"><p>KDE Plasma 6.7.2 将修复 KWin 最常见崩溃，Plasma 6.8 在弹出 CD 时不再崩溃 - Phoronix</p><p>KDE Plasma 6.7.2 将修复 KWin 最常见崩溃，Plasma 6.8 在弹出 CD 时不再崩溃</p><p>发布于 2026 年 6 月 27 日，美国东部时间上午 6:29。</p><p>本周 Plasma 6.7 稳定版刚刚发布，针对将于七月推出的 Plasma 6.7.2 已经积累了大量修复。此外，作为下一个转向纯 Wayland 的桌面版本，Plasma 6.8 也有更多功能改进和修复。</p><p>本周 Plasma 发布了最新一期，其中一些最有趣的亮点包括：</p><p>Plasma 6.8 引入了设置壁纸幻灯片的功能，这些幻灯片不会自动切换，而是需要通过桌面右键菜单或全局键盘快捷键手动操作。</p><p>即将推出的 Plasma 6.7.2 将修复当前最常见的 KWin 崩溃。该崩溃与多显示器设置下的可变刷新率有关。更多详情请见。</p><p>Plasma 6.7.2 还将修复 KDE 信息中心在尝试显示某些 NVIDIA GPU 信息时可能崩溃的问题。</p><p>除了崩溃修复外，Plasma 6.7.2 的这次更新还将改善基于 Chromium 的应用的全屏视频播放性能。</p><p>与此同时，Plasma 6.8 修复了一个可能发生的崩溃，该崩溃出现在从 Dolphin 或 Audex 弹出音频 CD 之后。</p><p>Plasma 6.8 现在还为 NVIDIA GPU 默认启用了三重缓冲，因为各种其他错误已得到修复。</p><p>更多关于这些有趣变化的详情，请参阅：</p><p>KDE Plasma 6.7.1 发布，包含首批错误修复</p><p>KDE Plasma 6.8 让多显示器配置更简单</p><p>KDE Plasma 6.7 发布，支持每屏幕虚拟桌面和 Wayland 改进</p><p>KDE Plasma 6.7 在即将发布前进行最后时刻修复</p><p>KDE KWin 补丁旨在优化游戏延迟，以更好地与 Windows 竞争</p><p>KDE Plasma 6.8 将确保你在游戏时不会错过低电量通知</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>Linux 经过六年工作和 360 多个补丁，终于淘汰了 strncpy API</p><p>systemd 261 发布，包含新的 systemd-sysinstall 操作系统安装程序、IMDSD 和 Storagectl</p><p>Linus Torvalds 投诉后，“令人作呕”的 Linux sched_ext 源代码被重构</p><p>开源 NVIDIA NVK Vulkan 驱动现已支持 DLSS</p><p>Google 的 Gemini 部分解决了现代华硕笔记本电脑上 Linux 启动时间过长的问题</p><p>Steam Machine 发布，售价 1049 至 1428 美元</p><p>GCC 编译器的一行 x86 更改使现代 Intel/AMD CPU 的基准测试成绩提升 12%</p><p>来自 1996 年、使用 Motif 工具包的 GIMP v0.54 现已通过 Flatpak 打包，适用于现代 Linux 桌面</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/06/ubuntu-livepatch-arm64" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/KDE-Plasma-This-Week-Crashes" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

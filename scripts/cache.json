@@ -944,5 +944,60 @@
     "title_zh": "在Linux中创建聊天服务器及5个其他终端技巧",
     "summary_zh": "本文介绍了如何在Linux上搭建一个聊天服务器，并分享了五个实用的终端技巧，帮助用户提升命令行效率和工作流程。这些技巧涵盖从基础配置到高级操作，适合Linux用户优化日常使用体验。",
     "fulltext_zh": "学习如何在Linux上搭建一个聊天服务器，并发现五个强大的终端技巧，这些技巧将简化你的工作流程并提升你的命令行技能。\n\n该文章《在Linux中创建聊天服务器及5个其他终端技巧》最初出现在Linux Today上。"
+  },
+  "af0954959a21f905cb16e42d9baed479": {
+    "id": "af0954959a21f905cb16e42d9baed479",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Nourish-Wayland-Compositor",
+    "title_en": "Nourish: A New Wayland Compositor Powered By Vulkan With Infinite Scrolling/Panning",
+    "summary_en": "The newest Wayland compositor on the block is Nourish, it's a Vulkan-powered and its unique selling point is offering \"infinite\" zooming and panning to in effect provide an infinite workspace...",
+    "pub_date": "Sat, 27 Jun 2026 20:52:23 -0400",
+    "title_zh": "Nourish：一款基于Vulkan、支持无限滚动/平移的全新Wayland合成器",
+    "summary_zh": "Nourish是一款全新的Wayland合成器，采用Vulkan API进行渲染，并支持旧硬件的OpenGL ES回退。其独特卖点是提供“无限”缩放和平移功能，实现不受屏幕尺寸限制的无限工作空间。该合成器已通过开源AMD/Intel GPU驱动及官方NVIDIA驱动测试，利用Wayland分数缩放协议确保缩放精度和无模糊效果。其Wayland底层基于Rust编写的y5库，并整合了Smithay、WGPU、Iced等项目代码。二进制包已可用于Fedora Linux。",
+    "fulltext_zh": "Nourish: 一款基于Vulkan、支持无限滚动/平移的全新Wayland合成器 - Phoronix\n\nNourish: 一款基于Vulkan、支持无限滚动/平移的全新Wayland合成器\n发布于2026年6月27日 美国东部时间晚上8点52分。\n\n最新的Wayland合成器是Nourish，它基于Vulkan驱动，其独特卖点是提供“无限”缩放和平移功能，从而实际上实现无限工作空间。\n\nNourish被设计为“一款不限制你屏幕尺寸的Linux桌面”。它专注于现代化，使用Vulkan API进行渲染，但也可以回退到OpenGL ES以支持旧硬件。该合成器已通过开源AMD和Intel GPU驱动以及官方NVIDIA驱动的测试。\n\nNourish利用Wayland分数缩放协议作为其缩放功能的一部分，以帮助保持精度和无模糊效果。在Wayland方面，y5作为用Rust编写的Wayland合成器，为Nourish承担了繁重的工作，而y5又利用了Smithay、WGPU、Iced及其他项目的代码。\n\n想了解更多关于Nourish Wayland合成器信息的人，可以通过以下链接——包括一些展示Nourish运行效果的炫酷视觉资料。二进制包已可用于Fedora Linux。\n\n学院软件基金会宣布成立“Wayland艺术家工作组”\n\n基于Mir的Wayland合成器Miracle-WM计划今年晚些时候发布v1.0版本\n\nWayland的Weston 16 Alpha带来HDR改进和Vulkan渲染器修复\n\nWine Wayland驱动为透明度处理引入Alpha修饰符支持\n\nWayland Protocols 1.49发布，改进了多GPU支持并引入Windows BT.2100\n\nMir 2.27发布，包含更多Wayland Rust代码\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael也是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\nLinux终于在六年工作和360多个补丁后淘汰了strncpy API\n\nsystemd 261发布，包含新的systemd-sysinstall OS安装程序、IMDSD和Storagectl\n\n“令人厌恶的”Linux sched_ext源代码在Linus Torvalds投诉后重构\n\n开源NVIDIA NVK Vulkan驱动现已支持DLSS\n\nGoogle的Gemini部分解决了现代ASUS笔记本上Linux启动时间过长的问题\n\nSteam Machine发布，售价1049美元至1428美元\n\nGCC编译器的一行x86更改使现代Intel/AMD CPU的基准测试性能提升12%\n\n来自1996年、使用Motif工具包的GIMP v0.54现已为现代Linux桌面提供Flatpak版本\n\n在享受无广告浏览的同时，\n\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权 © 2004 - 2026 由\n\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "a1a463c2d5d4df7bd2d0f2a6589a168c": {
+    "id": "a1a463c2d5d4df7bd2d0f2a6589a168c",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Reserved-THP-Linux",
+    "title_en": "Reserved THP Feature Proposed For Linux To Combine The Best Of HugeTLB & THP",
+    "summary_en": "Linux kernel developer and Bytedance engineer Qi Zheng sent out a request for comments (RFC) patch series on a new feature called Reserved THP to combine the best of HugeTLB and THP kernel functionality...",
+    "pub_date": "Sat, 27 Jun 2026 12:50:00 -0400",
+    "title_zh": "Reserved THP 特性提议：为 Linux 融合 HugeTLB 与 THP 的优势",
+    "summary_zh": "Linux 内核开发者、字节跳动工程师 Qi Zheng 提出了名为 Reserved THP 的新特性，旨在结合 HugeTLB 和透明大页（THP）的优势。HugeTLB 支持内存预留和保证分配，但不支持交换；THP 与核心内存管理紧密集成且支持交换，但缺乏预留和保证分配。Reserved THP 允许通过 madvise() 等方式预留和消费大页，同时支持交换，解决了热升级场景中 HugeTLB 内存浪费的问题。该提议已以 RFC 补丁系列形式发布。",
+    "fulltext_zh": "Reserved THP 特性提议：为 Linux 融合 HugeTLB 与 THP 的优势\n\nLinux 内核开发者、字节跳动工程师 Qi Zheng 发送了一份请求评论（RFC）补丁系列，介绍了一项名为 Reserved THP 的新特性，旨在结合 HugeTLB 和 THP 内核功能的最佳部分。\n\n字节跳动一直在研究 Reserved THP，将其作为在 Linux 内核中统一 HugeTLB 和透明大页（THP）支持以实现内核大页的潜在垫脚石或目标。HugeTLB 具有诸如预留和保证在预留池内分配等优点，但不支持交换。与此同时，THP 不支持预留且分配不保证，但与核心内存管理代码集成更紧密，并能处理交换。\n\nQi Zheng 在提出 Reserved THP 的想法时解释了自己的经验：\n\n“在我们的内部场景中，由于热升级需求，用户进程需要预留两倍的 HugeTLB 内存。例如，如果进程需要 16GB 的 HugeTLB，则在热升级期间需要额外 16GB 来满足内存分配。升级后，旧进程退出并释放 16GB 的 HugeTLB。因此，在大多数情况下，额外的 16GB HugeTLB 被浪费了。\n一个直接的想法是使用 HugeTLB CMA 特性，总共预留 32GB 的 hugetlb_cma。在正常操作期间，消耗 16GB，剩余的 16GB 可由其他进程使用。在热升级期间，我们可以尝试迁移其他进程使用的内存，以分配所需的额外 16GB HugeTLB。这可能有效，但仍需要预留 32GB 内存。\n我们还发现，在热升级期间，旧进程的 HugeTLB 中约有 10GB 实际上是冷内存，理论上可以回收。在极端情况下，我们可以只预留 22GB 内存，并在热升级期间回收剩余的 10GB。但不幸的是，HugeTLB 目前不支持交换，而且支持它似乎相当困难。\n因此，我们想知道是否可以引入‘reserved THP’，即可以预留的 THP。它可以通过 madvise() 等方法消耗，而正常内存分配无法消耗它。这可以实现类似于 HugeTLB 的效果。而且由于它是 THP，它可以相对容易地支持交换特性，从而完美解决上述问题。”\n\n在过去几年中，内核社区曾讨论过统一 THP 和 HugeTLB，但至今两者仍各自独立。\n\n想了解更多关于此 Reserved THP 提议的人可以通过此 LKML 补丁系列进行了解。"
+  },
+  "4abf4088f26e7d90400f71edee5043ac": {
+    "id": "4abf4088f26e7d90400f71edee5043ac",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-MD-RAID5-Scalability-Work",
+    "title_en": "Linux MD RAID5 Seeing Scalability Improvements Up To 17%",
+    "summary_en": "Posted to the Linux kernel mailing list this week was a new patch series working on scalability enhancements to the MD RAID5 software RAID code. Up to a 10~17% improvement was observed in some configurations with these RAID5 scalability patches...",
+    "pub_date": "Sat, 27 Jun 2026 07:17:06 -0400",
+    "title_zh": "Linux MD RAID5 可扩展性提升高达 17%",
+    "summary_zh": "本周 Linux 内核邮件列表发布了一个新补丁系列，旨在增强 MD RAID5 软件 RAID 代码的可扩展性。在多核多磁盘配置下，这些补丁带来了 10% 到 17% 的性能提升。补丁由 Hiroshi Nishida 提交，共 8 个，重点减少了每条纹和条纹缓存的争用。基准测试显示，在默认单线程模式下无回归，随着工作线程增加，性能增益最高可达 17%。",
+    "fulltext_zh": "Linux MD RAID5 可扩展性提升高达 17% - Phoronix\nLinux MD RAID5 可扩展性提升高达 17%\n发布于 2026 年 6 月 27 日，美国东部时间上午 7:17。\n本周 Linux 内核邮件列表发布了一个新的补丁系列，致力于增强 MD RAID5 软件 RAID 代码的可扩展性。在某些配置下，这些 RAID5 可扩展性补丁观察到了高达 10% 到 17% 的性能提升。\nHiroshi Nishida 发布了这八个补丁，它们是“低风险”的更改，用于增强 MD RAID5，尤其是在具有许多 CPU 核心和许多磁盘作为 RAID 阵列一部分的系统上。主要关注点之一是减少每条纹和条纹缓存的争用。\nHiroshi Nishida 在补丁说明信中提供的基准测试显示，从中性到一些非常显著的改进，特别是在 RAID5 条纹处理工作线程性能方面：\n他进一步阐述了发现：\n“在默认的单处理线程（group_thread_cnt = 0）下，该系列补丁是中性的（无回归）。随着工作线程的增加，增益逐渐增长，在 group_thread_cnt = 4 附近达到峰值，整体混合工作负载大约提升 10-17%；在 gtc = 8 时，写密集型工作负载继续获得增益，而读密集型高并发情况已饱和。（每次运行的变异系数为 1%，随机写入测试除外，约为 5-9%，来自冷启动的第一次运行。）”\n那些拥有多核、多磁盘 RAID5 阵列 Linux 设置的用户可以查看这个优化补丁系列，它正在等待代码审查。\nKSMBD 在 Linux 7.2 中添加了 SMB2 压缩支持\nNTFS3 驱动程序在 Linux 7.2 中获得了错误修复和微小改进\nF2FS 在 Linux 7.2 中集成了 FSERROR 报告，减少了内存占用\nEROFS 在 Linux 7.2 中更好地处理大型稀疏 AI 数据集，实现更高效的 I/O\nexFAT 文件系统在 Linux 7.2 中通过 IOmap 转换获得了更好的性能\n新的 NTFS 驱动程序在 Linux 7.2 中进行了加固和修复，支持 Windows 原生符号链接\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动程序等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\nLinux 经过六年工作和 360 多个补丁，终于消除了 strncpy API\nsystemd 261 发布，带有新的 systemd-sysinstall 操作系统安装程序、IMDSD 和 Storagectl\n“令人厌恶的”Linux sched_ext 源代码在 Linus Torvalds 投诉后进行了重构\n开源 NVIDIA NVK Vulkan 驱动程序现在支持 DLSS\nGoogle 的 Gemini 部分解决了现代华硕笔记本电脑上 Linux 启动时间过长的问题\nSteam Machine 发布，售价 1049 至 1428 美元\nGCC 编译器的一行 x86 更改使现代 Intel/AMD CPU 的基准测试性能提升 12%\n来自 1996 年、带有 Motif 工具包的 GIMP v0.54 现已为现代 Linux 桌面提供 Flatpak 版本\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "dd512bc230df01b7bcf0fd668bf3def2": {
+    "id": "dd512bc230df01b7bcf0fd668bf3def2",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/GNOME-Newelle-Image-Gen",
+    "title_en": "GNOME AI Assistant Adds Image Generation Support",
+    "summary_en": "In development over the past three years has been Newelle as a GNOME-aligned AI virtual assistant. Out this week is Newelle 1.4.5 and it now adds AI image generation support and a redesigned chat interface...",
+    "pub_date": "Sat, 27 Jun 2026 06:43:29 -0400",
+    "title_zh": "GNOME AI 助手新增图像生成支持",
+    "summary_zh": "经过三年开发，GNOME 生态的 AI 虚拟助手 Newelle 发布 1.4.5 版本，新增基于 Stable Diffusion 的 AI 图像生成功能，并支持云端模型（OpenAI、Pollinations、OpenRouter）。同时重新设计了更紧凑的聊天界面，Flatpak 版本还加入了 STDIO MCP 服务器支持、更好的工具懒加载及其他修复。",
+    "fulltext_zh": "GNOME AI 助手新增图像生成支持 - Phoronix\nGNOME AI 助手新增图像生成支持\n发布于 2026 年 6 月 27 日 上午 06:43 美国东部时间。\n\n过去三年中，Newelle 作为一款与 GNOME 对齐的 AI 虚拟助手一直在开发中。本周发布的 Newelle 1.4.5 新增了 AI 图像生成支持，并重新设计了聊天界面。\n\nNewelle 1.4.5 现在通过 stablediffusion.cpp 或云端模型（如果为 Newelle 进行了配置）提供集成的 AI 图像生成支持。如果需要，该集成还可用于图像编辑功能。用于图像生成的云端模型支持 OpenAI、Pollinations 和 OpenRouter。\n\n此次 Newelle AI 助手更新还重新设计了聊天界面，使其 UI 更加紧凑。Newelle 的 Flatpak 版本还增加了 STDIO MCP 服务器支持、更好的工具懒加载以及其他修复。\n\nNewelle 1.4.5 可从以下地址下载。想了解更多关于 Newelle 1.4.5 以及本周其他 GNOME 程序改进的用户，可以查看新发布的 COSMIC 的新系统监视器看起来非常流畅、实验性代码为 GNOME Shell 启用每显示器背景、GNOME 基金会宣布首批奖学金计划参与者、GNOME 文件预览器终于切换到 GTK4 并增加深色模式、GNOME Circle 对 AI 垃圾内容采取立场，Resources 应用进入 GNOME 孵化器、GTK 引入对齐功能以改善分数缩放体验。\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：Linux 经过六年努力终于消除 strncpy API，涉及 360+ 补丁、systemd 261 发布，新增 systemd-sysinstall 操作系统安装器、IMDSD 和 Storagectl、\"令人作呕的\" Linux sched_ext 源代码在 Linus Torvalds 投诉后重构、开源 NVIDIA NVK Vulkan 驱动现已支持 DLSS、Google 的 Gemini 部分解决了现代华硕笔记本电脑上 Linux 启动时间过长的问题、Steam Machine 发布，售价 1049 至 1428 美元、GCC 编译器的一行 x86 修改为现代 Intel/AMD CPU 带来 +12% 的基准测试提升、来自 1996 年使用 Motif 工具包的 GIMP v0.54 现已为现代 Linux 桌面打包为 Flatpak。\n\n在享受无广告浏览、单页文章查看的同时，请注意法律免责声明、隐私政策、Cookies。\n\n版权所有 © 2004 - 2026 由 Phoronix Media 所有。\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "0e7f3cc21bdcc435f38bc5703b8647a6": {
+    "id": "0e7f3cc21bdcc435f38bc5703b8647a6",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/KDE-Plasma-This-Week-Crashes",
+    "title_en": "KDE Plasma 6.7.2 To Fix KWin's Most Common Crash, Plasma 6.8 To Not Crash When Ejecting CDs",
+    "summary_en": "While Plasma 6.7.1 was just released this week following the recent stable debut of Plasma 6.7, there are already a number of fixes piling up for Plasma 6.7.2 due out in July. Plus more feature work and fixes for Plasma 6.8 as the next desktop version going Wayland-only...",
+    "pub_date": "Sat, 27 Jun 2026 06:29:00 -0400",
+    "title_zh": "KDE Plasma 6.7.2 将修复 KWin 最常见崩溃，Plasma 6.8 在弹出 CD 时不再崩溃",
+    "summary_zh": "KDE Plasma 6.7.2 将于七月发布，修复了 KWin 在多显示器可变刷新率下的最常见崩溃，并改进了 Chromium 应用的全屏视频播放性能。Plasma 6.8 则修复了从 Dolphin 或 Audex 弹出音频 CD 时可能发生的崩溃，并为 NVIDIA GPU 默认启用三重缓冲。此外，Plasma 6.8 还引入了手动切换的壁纸幻灯片功能。",
+    "fulltext_zh": "KDE Plasma 6.7.2 将修复 KWin 最常见崩溃，Plasma 6.8 在弹出 CD 时不再崩溃 - Phoronix\nKDE Plasma 6.7.2 将修复 KWin 最常见崩溃，Plasma 6.8 在弹出 CD 时不再崩溃\n发布于 2026 年 6 月 27 日，美国东部时间上午 6:29。\n\n本周 Plasma 6.7 稳定版刚刚发布，针对将于七月推出的 Plasma 6.7.2 已经积累了大量修复。此外，作为下一个转向纯 Wayland 的桌面版本，Plasma 6.8 也有更多功能改进和修复。\n\n本周 Plasma 发布了最新一期，其中一些最有趣的亮点包括：\n\nPlasma 6.8 引入了设置壁纸幻灯片的功能，这些幻灯片不会自动切换，而是需要通过桌面右键菜单或全局键盘快捷键手动操作。\n\n即将推出的 Plasma 6.7.2 将修复当前最常见的 KWin 崩溃。该崩溃与多显示器设置下的可变刷新率有关。更多详情请见。\n\nPlasma 6.7.2 还将修复 KDE 信息中心在尝试显示某些 NVIDIA GPU 信息时可能崩溃的问题。\n\n除了崩溃修复外，Plasma 6.7.2 的这次更新还将改善基于 Chromium 的应用的全屏视频播放性能。\n\n与此同时，Plasma 6.8 修复了一个可能发生的崩溃，该崩溃出现在从 Dolphin 或 Audex 弹出音频 CD 之后。\n\nPlasma 6.8 现在还为 NVIDIA GPU 默认启用了三重缓冲，因为各种其他错误已得到修复。\n\n更多关于这些有趣变化的详情，请参阅：\nKDE Plasma 6.7.1 发布，包含首批错误修复\nKDE Plasma 6.8 让多显示器配置更简单\nKDE Plasma 6.7 发布，支持每屏幕虚拟桌面和 Wayland 改进\nKDE Plasma 6.7 在即将发布前进行最后时刻修复\nKDE KWin 补丁旨在优化游戏延迟，以更好地与 Windows 竞争\nKDE Plasma 6.8 将确保你在游戏时不会错过低电量通知\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nLinux 经过六年工作和 360 多个补丁，终于淘汰了 strncpy API\nsystemd 261 发布，包含新的 systemd-sysinstall 操作系统安装程序、IMDSD 和 Storagectl\nLinus Torvalds 投诉后，“令人作呕”的 Linux sched_ext 源代码被重构\n开源 NVIDIA NVK Vulkan 驱动现已支持 DLSS\nGoogle 的 Gemini 部分解决了现代华硕笔记本电脑上 Linux 启动时间过长的问题\nSteam Machine 发布，售价 1049 至 1428 美元\nGCC 编译器的一行 x86 更改使现代 Intel/AMD CPU 的基准测试成绩提升 12%\n来自 1996 年、使用 Motif 工具包的 GIMP v0.54 现已通过 Flatpak 打包，适用于现代 Linux 桌面\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
   }
 }

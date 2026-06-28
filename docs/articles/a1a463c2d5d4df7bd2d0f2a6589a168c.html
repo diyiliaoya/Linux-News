@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 将 Livepatch 引入 arm64，实现免重启内核更新 — Linux 中文速报</title>
+<title>Reserved THP 特性提议：为 Linux 融合 HugeTLB 与 THP 的优势 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 将 Livepatch 引入 arm64，实现免重启内核更新</h1>
+  <h1>Reserved THP 特性提议：为 Linux 融合 HugeTLB 与 THP 的优势</h1>
 
-  <div class="article-summary">Canonical 首次将 Livepatch 功能引入 Arm64 设备，使运行在 Arm 硬件上的 Ubuntu 系统能够在不重启的情况下应用关键内核安全补丁。Livepatch 是 Ubuntu 隐藏的安全特性之一，需通过 Ubuntu Pro 启用。该功能此前在 arm64 架构上因堆栈跟踪支持不足和工具链缺失而难以实现，经过 Canonical、内核维护者、硬件厂商和超大规模云服务商多年的协作才得以完成。目前支持的 arm64 内核变体包括 Arm 服务器、云和始终在线硬件。但需注意，Livepatch 仅更新内核，常规软件包仍需通过标准流程更新，且 Canonical 建议定期重启。</div>
+  <div class="article-summary">Linux 内核开发者、字节跳动工程师 Qi Zheng 提出了名为 Reserved THP 的新特性，旨在结合 HugeTLB 和透明大页（THP）的优势。HugeTLB 支持内存预留和保证分配，但不支持交换；THP 与核心内存管理紧密集成且支持交换，但缺乏预留和保证分配。Reserved THP 允许通过 madvise() 等方式预留和消费大页，同时支持交换，解决了热升级场景中 HugeTLB 内存浪费的问题。该提议已以 RFC 补丁系列形式发布。</div>
 
-  <div class="article-body"><p>Ubuntu 将 Livepatch 引入 arm64，实现免重启内核更新 - OMG! Ubuntu</p><p>Canonical 首次将 Livepatch 功能引入 Arm64 设备，使运行在 Arm 硬件上的 Ubuntu 系统能够在不完全重启的情况下应用关键内核安全补丁。</p><p>Livepatch 是 Ubuntu 最隐蔽的安全特性之一——它默认未启用，需要 Ubuntu Pro——因为它允许在系统运行时在内存中应用内核安全更新。通常情况下，这需要重启。</p><p>如果你有点懒，或者正在运行不想被打断的任务或工作负载，这非常完美。</p><p>Livepatch 现已首次在 Ubuntu 26.04 LTS 及更高版本上可用于 Arm64 设备——不过让一切正常工作并非易事。</p><p>“实时”打补丁需要内核知道何时可以安全地将运行中的代码替换为修补后的版本。这依赖于堆栈跟踪，而 arm64 对此支持不佳。用于在 arm64 上构建和比较补丁的工具链也同样缺乏。</p><p>这需要 Canonical、内核维护者、硬件厂商和超大规模云服务商之间多年的协作努力才得以实现。</p><p>我可以在树莓派上使用 Ubuntu 的 Livepatch 吗？</p><p>如果你在树莓派上运行 Ubuntu 26.04 LTS，你将无法使用 Livepatch。</p><p>Ubuntu 的树莓派版本运行在树莓派内核上，这是一种内核变体，不在 Livepatch 支持的列表之中。</p><p>受支持的 arm64 内核变体包括：</p><p>Arm 驱动的服务器、云和始终在线硬件是 Livepatch 的用武之地，确保关键和高严重性的 CVE（那些可能需要非计划重启才能应用的漏洞）能够在不宕机的情况下原地修补。</p><p>“这一增强将加强那些不每天或每周进行安全维护的系统的安全性，并为致力于符合《网络弹性法案》（CRA）的组织提供运营优势，”Canonical 的 Rajan Patel 写道。</p><p>不过，这并非完全无需动手的安全方案。Livepatch 仅更新内核。常规软件包（如 OpenSSL 等）仍需通过标准更新流程进行维护。Canonical 也建议定期重启。</p><p>在 Ubuntu 26.04 LTS 上启用 Livepatch</p><p>要使用 Livepatch，你需要一个 Ubuntu Pro 账户，个人使用最多五台机器免费。Ubuntu 26.04 LTS 用户可以通过桌面端的软件更新器或在无头设置、服务器和云上通过命令行启用它。</p></div>
+  <div class="article-body"><p>Reserved THP 特性提议：为 Linux 融合 HugeTLB 与 THP 的优势</p><p>Linux 内核开发者、字节跳动工程师 Qi Zheng 发送了一份请求评论（RFC）补丁系列，介绍了一项名为 Reserved THP 的新特性，旨在结合 HugeTLB 和 THP 内核功能的最佳部分。</p><p>字节跳动一直在研究 Reserved THP，将其作为在 Linux 内核中统一 HugeTLB 和透明大页（THP）支持以实现内核大页的潜在垫脚石或目标。HugeTLB 具有诸如预留和保证在预留池内分配等优点，但不支持交换。与此同时，THP 不支持预留且分配不保证，但与核心内存管理代码集成更紧密，并能处理交换。</p><p>Qi Zheng 在提出 Reserved THP 的想法时解释了自己的经验：</p><p>“在我们的内部场景中，由于热升级需求，用户进程需要预留两倍的 HugeTLB 内存。例如，如果进程需要 16GB 的 HugeTLB，则在热升级期间需要额外 16GB 来满足内存分配。升级后，旧进程退出并释放 16GB 的 HugeTLB。因此，在大多数情况下，额外的 16GB HugeTLB 被浪费了。</p><p>一个直接的想法是使用 HugeTLB CMA 特性，总共预留 32GB 的 hugetlb_cma。在正常操作期间，消耗 16GB，剩余的 16GB 可由其他进程使用。在热升级期间，我们可以尝试迁移其他进程使用的内存，以分配所需的额外 16GB HugeTLB。这可能有效，但仍需要预留 32GB 内存。</p><p>我们还发现，在热升级期间，旧进程的 HugeTLB 中约有 10GB 实际上是冷内存，理论上可以回收。在极端情况下，我们可以只预留 22GB 内存，并在热升级期间回收剩余的 10GB。但不幸的是，HugeTLB 目前不支持交换，而且支持它似乎相当困难。</p><p>因此，我们想知道是否可以引入‘reserved THP’，即可以预留的 THP。它可以通过 madvise() 等方法消耗，而正常内存分配无法消耗它。这可以实现类似于 HugeTLB 的效果。而且由于它是 THP，它可以相对容易地支持交换特性，从而完美解决上述问题。”</p><p>在过去几年中，内核社区曾讨论过统一 THP 和 HugeTLB，但至今两者仍各自独立。</p><p>想了解更多关于此 Reserved THP 提议的人可以通过此 LKML 补丁系列进行了解。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/06/ubuntu-livepatch-arm64" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Reserved-THP-Linux" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

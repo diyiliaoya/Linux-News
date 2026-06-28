@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 将 Livepatch 引入 arm64，实现免重启内核更新 — Linux 中文速报</title>
+<title>Linux MD RAID5 可扩展性提升高达 17% — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 将 Livepatch 引入 arm64，实现免重启内核更新</h1>
+  <h1>Linux MD RAID5 可扩展性提升高达 17%</h1>
 
-  <div class="article-summary">Canonical 首次将 Livepatch 功能引入 Arm64 设备，使运行在 Arm 硬件上的 Ubuntu 系统能够在不重启的情况下应用关键内核安全补丁。Livepatch 是 Ubuntu 隐藏的安全特性之一，需通过 Ubuntu Pro 启用。该功能此前在 arm64 架构上因堆栈跟踪支持不足和工具链缺失而难以实现，经过 Canonical、内核维护者、硬件厂商和超大规模云服务商多年的协作才得以完成。目前支持的 arm64 内核变体包括 Arm 服务器、云和始终在线硬件。但需注意，Livepatch 仅更新内核，常规软件包仍需通过标准流程更新，且 Canonical 建议定期重启。</div>
+  <div class="article-summary">本周 Linux 内核邮件列表发布了一个新补丁系列，旨在增强 MD RAID5 软件 RAID 代码的可扩展性。在多核多磁盘配置下，这些补丁带来了 10% 到 17% 的性能提升。补丁由 Hiroshi Nishida 提交，共 8 个，重点减少了每条纹和条纹缓存的争用。基准测试显示，在默认单线程模式下无回归，随着工作线程增加，性能增益最高可达 17%。</div>
 
-  <div class="article-body"><p>Ubuntu 将 Livepatch 引入 arm64，实现免重启内核更新 - OMG! Ubuntu</p><p>Canonical 首次将 Livepatch 功能引入 Arm64 设备，使运行在 Arm 硬件上的 Ubuntu 系统能够在不完全重启的情况下应用关键内核安全补丁。</p><p>Livepatch 是 Ubuntu 最隐蔽的安全特性之一——它默认未启用，需要 Ubuntu Pro——因为它允许在系统运行时在内存中应用内核安全更新。通常情况下，这需要重启。</p><p>如果你有点懒，或者正在运行不想被打断的任务或工作负载，这非常完美。</p><p>Livepatch 现已首次在 Ubuntu 26.04 LTS 及更高版本上可用于 Arm64 设备——不过让一切正常工作并非易事。</p><p>“实时”打补丁需要内核知道何时可以安全地将运行中的代码替换为修补后的版本。这依赖于堆栈跟踪，而 arm64 对此支持不佳。用于在 arm64 上构建和比较补丁的工具链也同样缺乏。</p><p>这需要 Canonical、内核维护者、硬件厂商和超大规模云服务商之间多年的协作努力才得以实现。</p><p>我可以在树莓派上使用 Ubuntu 的 Livepatch 吗？</p><p>如果你在树莓派上运行 Ubuntu 26.04 LTS，你将无法使用 Livepatch。</p><p>Ubuntu 的树莓派版本运行在树莓派内核上，这是一种内核变体，不在 Livepatch 支持的列表之中。</p><p>受支持的 arm64 内核变体包括：</p><p>Arm 驱动的服务器、云和始终在线硬件是 Livepatch 的用武之地，确保关键和高严重性的 CVE（那些可能需要非计划重启才能应用的漏洞）能够在不宕机的情况下原地修补。</p><p>“这一增强将加强那些不每天或每周进行安全维护的系统的安全性，并为致力于符合《网络弹性法案》（CRA）的组织提供运营优势，”Canonical 的 Rajan Patel 写道。</p><p>不过，这并非完全无需动手的安全方案。Livepatch 仅更新内核。常规软件包（如 OpenSSL 等）仍需通过标准更新流程进行维护。Canonical 也建议定期重启。</p><p>在 Ubuntu 26.04 LTS 上启用 Livepatch</p><p>要使用 Livepatch，你需要一个 Ubuntu Pro 账户，个人使用最多五台机器免费。Ubuntu 26.04 LTS 用户可以通过桌面端的软件更新器或在无头设置、服务器和云上通过命令行启用它。</p></div>
+  <div class="article-body"><p>Linux MD RAID5 可扩展性提升高达 17% - Phoronix</p><p>Linux MD RAID5 可扩展性提升高达 17%</p><p>发布于 2026 年 6 月 27 日，美国东部时间上午 7:17。</p><p>本周 Linux 内核邮件列表发布了一个新的补丁系列，致力于增强 MD RAID5 软件 RAID 代码的可扩展性。在某些配置下，这些 RAID5 可扩展性补丁观察到了高达 10% 到 17% 的性能提升。</p><p>Hiroshi Nishida 发布了这八个补丁，它们是“低风险”的更改，用于增强 MD RAID5，尤其是在具有许多 CPU 核心和许多磁盘作为 RAID 阵列一部分的系统上。主要关注点之一是减少每条纹和条纹缓存的争用。</p><p>Hiroshi Nishida 在补丁说明信中提供的基准测试显示，从中性到一些非常显著的改进，特别是在 RAID5 条纹处理工作线程性能方面：</p><p>他进一步阐述了发现：</p><p>“在默认的单处理线程（group_thread_cnt = 0）下，该系列补丁是中性的（无回归）。随着工作线程的增加，增益逐渐增长，在 group_thread_cnt = 4 附近达到峰值，整体混合工作负载大约提升 10-17%；在 gtc = 8 时，写密集型工作负载继续获得增益，而读密集型高并发情况已饱和。（每次运行的变异系数为 1%，随机写入测试除外，约为 5-9%，来自冷启动的第一次运行。）”</p><p>那些拥有多核、多磁盘 RAID5 阵列 Linux 设置的用户可以查看这个优化补丁系列，它正在等待代码审查。</p><p>KSMBD 在 Linux 7.2 中添加了 SMB2 压缩支持</p><p>NTFS3 驱动程序在 Linux 7.2 中获得了错误修复和微小改进</p><p>F2FS 在 Linux 7.2 中集成了 FSERROR 报告，减少了内存占用</p><p>EROFS 在 Linux 7.2 中更好地处理大型稀疏 AI 数据集，实现更高效的 I/O</p><p>exFAT 文件系统在 Linux 7.2 中通过 IOmap 转换获得了更好的性能</p><p>新的 NTFS 驱动程序在 Linux 7.2 中进行了加固和修复，支持 Windows 原生符号链接</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动程序等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>Linux 经过六年工作和 360 多个补丁，终于消除了 strncpy API</p><p>systemd 261 发布，带有新的 systemd-sysinstall 操作系统安装程序、IMDSD 和 Storagectl</p><p>“令人厌恶的”Linux sched_ext 源代码在 Linus Torvalds 投诉后进行了重构</p><p>开源 NVIDIA NVK Vulkan 驱动程序现在支持 DLSS</p><p>Google 的 Gemini 部分解决了现代华硕笔记本电脑上 Linux 启动时间过长的问题</p><p>Steam Machine 发布，售价 1049 至 1428 美元</p><p>GCC 编译器的一行 x86 更改使现代 Intel/AMD CPU 的基准测试性能提升 12%</p><p>来自 1996 年、带有 Motif 工具包的 GIMP v0.54 现已为现代 Linux 桌面提供 Flatpak 版本</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/06/ubuntu-livepatch-arm64" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-MD-RAID5-Scalability-Work" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
