@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AerynOS 迎来 Linux 7.0、COSMIC 1.0.13 和 KDE Plasma 6.6.5 — Linux 中文速报</title>
+<title>Linux 7.2-rc1 发布：“情况看起来相当正常”，同时引入 AMDGPU HDMI 2.1 FRL、AMD ISP4 和 CAS — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #8b5cf61a; color: #8b5cf6;
-    border: 1px solid #8b5cf630;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">桌面环境</span>
-    <span class="source">Linux Today</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>AerynOS 迎来 Linux 7.0、COSMIC 1.0.13 和 KDE Plasma 6.6.5</h1>
+  <h1>Linux 7.2-rc1 发布：“情况看起来相当正常”，同时引入 AMDGPU HDMI 2.1 FRL、AMD ISP4 和 CAS</h1>
 
-  <div class="article-summary">AerynOS 已升级至 Linux 7.0、COSMIC 1.0.13 和 KDE Plasma 6.6.5，带来众多新功能和改进。本文介绍了这些更新的亮点，包括性能提升、界面优化和稳定性增强，为用户提供更流畅的体验。</div>
+  <div class="article-summary">Linux 7.2-rc1 已发布，标志着合并窗口关闭。该版本引入了多项新特性，包括缓存感知调度、USB4STREAM、NTFS 驱动修复、strncpy API 的移除、ARCTIC 风扇控制器驱动、AMD ISP4 驱动以及 AMDGPU HDMI 2.1 FRL 的初步支持。Linus Torvalds 表示情况看起来正常，尽管 AMD 头文件占用了三分之一的补丁。Linux 7.2 稳定版预计在八周后发布，将驱动 Fedora 45 和 Ubuntu 26.10。</div>
 
-  <div class="article-body"><p>AerynOS 已升级至 Linux 7.0、COSMIC 1.0.13 和 KDE Plasma 6.6.5。立即了解这些激动人心的新功能和改进！</p><p>该文章 AerynOS Gets Linux 7.0, COSMIC 1.0.13, and KDE Plasma 6.6.5 最早出现在 Linux Today 上。</p></div>
+  <div class="article-body"><p>Linux 7.2-rc1 发布：“情况看起来相当正常”，同时引入 AMDGPU HDMI 2.1 FRL、AMD ISP4 和 CAS - Phoronix</p><p>Linux 7.2-rc1 发布：“情况看起来相当正常”，同时引入 AMDGPU HDMI 2.1 FRL、AMD ISP4 和 CAS</p><p>2026 年 6 月 28 日下午 4:04 EDT。</p><p>正如预期，Linux 7.2-rc1 在不久前发布，标志着合并窗口的结束。现在将进入大约八周的测试期，之后 Linux 7.2 稳定版将发布，进而为 Fedora 45 和 Ubuntu 26.10 等系统提供支持。</p><p>Linux 7.2 合并了许多新特性，包括缓存感知调度、各种其他性能优化、英特尔创新的 USB4STREAM 功能、Linux 7.1 中新的 NTFS 驱动修复、经过六年工作后 strncpy API 的移除、新的 ARCTIC 风扇控制器驱动、AMD ISP4 驱动的引入，以及 AMDGPU HDMI 2.1 FRL 支持的初步工作。我详细的 Linux 7.2 特性概述将在未来几天内发布。Linux 7.2 的代码量已超过 4300 万行。</p><p>Linus Torvalds 写道：</p><p>“两周过去了，合并窗口已经关闭。这个版本的情况看起来相当正常（敲木头），我在下面附上了我的合并短日志，因为我们显然有太多更改无法逐一列出。</p><p>统计数据看起来相当正常，尽管另一个 AMD 头文件转储意味着三分之一的补丁只是各种 AMD GPU 寄存器定义。</p><p>这本身并不罕见，如果你忽略那部分，其余部分看起来也相当正常：略超过一半的补丁是驱动程序（即使不考虑那个 AMD 寄存器转储，其他 GPU 驱动更改也出现了，但里面各种东西都有一点），其余部分则是常见的架构更新、工具、文档和核心内核更新。”</p><p>接下来我将开始进行更多的 Linux 7.2 内核性能基准测试。</p><p>Linux 7.3 将引入带有 AMD GPU 驱动支持的 DRM“颜色格式”属性</p><p>Linux 淘汰旧驱动、AI 检测漏洞及其他 Q2 内核亮点</p><p>Linux 7.2 内核树代码量超过 4300 万行</p><p>为 Linux 提出的保留 THP 特性，旨在结合 HugeTLB 和 THP 的最佳优势</p><p>Linux 7.2 修复了 PCIe 设备可能被无意限制到 2.5 GT/s 的问题</p><p>Linux 7.2 移除了古老的 PROFIBUS 驱动：1998 年从 SCO Unix 移植，多年未用</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>Linux 经过六年工作和 360+ 补丁后终于移除了 strncpy API</p><p>“令人厌恶的”Linux sched_ext 源代码在 Linus Torvalds 投诉后进行了重构</p><p>Google 的 Gemini 部分解决了现代华硕笔记本电脑上 Linux 启动时间过长的问题</p><p>Steam Machine 发布，售价 1049 美元至 1428 美元</p><p>GCC 编译器的一行 x86 更改为现代英特尔/AMD CPU 带来了 +12% 的基准测试胜利</p><p>来自 1996 年、使用 Motif 工具包的 GIMP v0.54 现已为现代 Linux 桌面打包为 Flatpak</p><p>Linux 缓存感知调度扩展以实现更佳性能：MySQL 中提升高达 360%</p><p>Linux 7.2 Staging 仍在努力驯服 Realtek RTL8723BS“野兽驱动”</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/aerynos-gets-linux-7-0-cosmic-1-0-13-and-kde-plasma-6-6-5/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.2-rc1-Released" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
