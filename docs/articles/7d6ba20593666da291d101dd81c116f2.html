@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu ARM64 系统内核补丁无需再重启 — Linux 中文速报</title>
+<title>Wine 11.12 发布，带来 Wayland 分数缩放及其他 Wayland 增强 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu ARM64 系统内核补丁无需再重启</h1>
+  <h1>Wine 11.12 发布，带来 Wayland 分数缩放及其他 Wayland 增强</h1>
 
-  <div class="article-summary">Canonical 宣布其 Livepatch 功能终于扩展至 ARM64 平台，用户可在 Ubuntu 26.04 LTS 和 Ubuntu Core 26 上无需重启即可修补 Linux 内核。此前该功能仅适用于 AMD64 系统。Livepatch 通过内存中应用补丁，减少停机时间，尤其适合云和边缘部署场景。个人用户可免费使用最多五台机器。</div>
+  <div class="article-summary">Wine 11.12 于 2026 年 6 月 29 日发布，主要新增 Wayland 驱动对分数缩放的支持，使用户在高分辨率显示器上获得更佳的 UI 缩放体验，并支持每显示器独立分数缩放。此外，该版本还捆绑了 FFmpeg 的 libswresample 和 libswscale 库，更新 Mono 引擎至 11.2，重写了 MSXML 中的 XSLPattern 解析器，并修复了 27 个已知错误，涉及 Corel 产品安装、Microsoft Office 2007、游戏及 Microsoft Money 97 崩溃等问题。</div>
 
-  <div class="article-body"><p>Ubuntu ARM64 系统内核补丁无需再重启</p><p>Ubuntu ARM64 系统内核补丁无需再重启</p><p>Canonical 的 Livepatch 终于扩展至 Ubuntu 26.04 LTS 和 Ubuntu Core 26 平台。</p><p>现在可以在 ARM64 系统上修补 Linux 内核，而无需强制重启。这一功能在 AMD64 机器上已实现多年，但此前用户没有等效选项。</p><p>该功能面向用户开放，如果这听起来耳熟，那是因为 Canonical 之前已经提及过。第一次是在今年四月发布时，第二次是在某个场合。</p><p>我们现在报道此事，是因为他们发布了相关说明，解释了为准备这一功能所付出的努力。</p><p>相关工作始于 2023 年，当时公司进行了一项差距分析（即研究缺失的部分），评估 ARM64 支持内核实时修补所需的条件，结果并不乐观。</p><p>问题在于上游 ARM64 内核缺乏一个稳定的实现，而实时修补依赖该功能来判断何时可以安全地在运行中的内核中替换代码。</p><p>编译器工具链也未就绪，当时所有相关组件都缺少稳定的 ARM64 支持。随着处理器在云和边缘部署中变得越来越普遍，相关工作在 2024 年及今年持续推进。</p><p>上游内核维护者、硬件厂商以及 Canonical 自己的工程师必须共同努力来填补这些空白。</p><p>目前，ARM64 Livepatch 客户端已经在 Canonical 的测试环境中为 Ubuntu 26.04 LTS 和 Ubuntu Core 26 应用补丁。</p><p>为什么要使用 Livepatch？</p><p>某个 bug 曾阻止我在虚拟机上启用 Livepatch。</p><p>Livepatch 是 Canonical 订阅服务的一部分，该订阅捆绑了安全修补、支持和合规工具，同时通过修补关键和高严重性漏洞来覆盖内核。</p><p>如果你只是想试用，无需支付任何费用，因为 Canonical 为个人使用提供最多五台机器的免费 Livepatch。这足以覆盖大多数家庭设置和小型服务器集群，无需提供支付信息。</p><p>真正的优势体现在管理多台机器时：无需安排停机时间来修补内核漏洞，Livepatch 会在内存中应用修复，并让管理员自行决定每台机器的更新时间。</p><p>不过，它并不能完全替代补丁，因为 Livepatch 只涉及内核。</p><p>Canonical 仍然建议定期重启，因为长时间运行会累积内存泄漏和其他状态问题，而实时补丁无法清除这些问题。</p><p>如果你是一个经常重启机器的桌面用户，这些都不重要，因为 Livepatch 是为那些重启意味着实际停机时间和成本超支风险的系统而设计的。</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。</p><p>PINE64 的智能音箱是 Home Assistant 驱动的 Amazon Echo 替代品</p><p>ArmSoM Sige6 是首款弃用 Rockchip 改用 Allwinner 的 Sige 主板</p><p>Guncrypt 是 Halfbrick Studio 的首款 PC 游戏，也支持 Linux</p><p>Canonical 的新 AI 工具让你与 Ubuntu 对话而非打字</p><p>Epic Games 构建了自己的 Git 替代方案来处理大文件</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 周刊，你可以学习有用的 Linux 技巧、发现应用程序、探索新发行版，并了解 Linux 世界的最新动态</p><p>太好了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅 It's FOSS。</p><p>您的链接已过期。</p><p>成功！请检查您的电子邮件以获取登录的魔法链接。</p><p>成功！您的账单信息已更新。</p><p>您的账单未更新。</p></div>
+  <div class="article-body"><p>Wine 11.12 发布，带来 Wayland 分数缩放及其他 Wayland 增强 - Phoronix</p><p>Wine 11.12 发布，带来 Wayland 分数缩放及其他 Wayland 增强</p><p>2026 年 6 月 29 日，美国东部时间下午 5:05。</p><p>Wine 11.12 未能保持双周发布节奏，上周五未能推出，但今天成功发布。Wine 11.12 为其 Wayland 驱动带来了分数缩放支持及其他多项增强。</p><p>自 Wine 11.11 发布后合并的一项令人兴奋的功能是 Wine 11.12 的 Wayland 分数缩放支持，可在当今高分辨率/高密度显示器上提供更佳的 UI 缩放体验，而无需通过 X11/XWayland。这一支持还允许用户为每台显示器设置不同的分数缩放比例。</p><p>Wine 11.12 的 Wine Wayland 驱动还带来了一些修复，例如确保主显示器矩形位于 0x0 位置、为 WineWayland 队列分配名称，以及在 wl_display_create_queue_with_name 中使用进程名以方便调试。</p><p>Wine 11.12 还捆绑了来自 FFmpeg 项目的 libswresample 和 libswscale 库，将 Mono 引擎更新至 Mono 11.2，并在 MSXML 中重新实现了 XSLPattern 解析器。</p><p>Wine 11.12 修复了 27 个已知错误，涉及多个 Corel 产品安装程序、图形问题、Microsoft Office 2007，以及各种其他游戏和应用程序修复。Wine 11.12 甚至修复了 Microsoft Money 97 的崩溃问题，以及一个可追溯到 2009 年的关于 Slingplayer 视频调谐向导失败的错误报告。</p><p>Wine 11.12 的下载及更多关于此开发快照的详细信息（通往 Wine 12.0 之路）请参见：</p><p>Wine Wayland 实现分数缩放支持</p><p>Wine-Staging 11.11 发布，在上游基础上包含 289 个补丁</p><p>Wine 11.11 发布，带来 Wayland 改进</p><p>Wine-Staging 11.10 修复了 14 年之久的错误，并修复了某些游戏过暗的问题</p><p>Wine 11.10 发布，带来 VKD3D 2.0、改进的 VBScript 兼容性</p><p>VKD3D 2.0 发布，用于 Wine 基于 Vulkan 的 Direct3D 12 实现</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>“令人作呕”的 Linux sched_ext 源代码在 Linus Torvalds 投诉后重构</p><p>Google 的 Gemini 部分解决了现代华硕笔记本电脑上 Linux 启动时间过长的问题</p><p>Steam Machine 发布，售价 1049 至 1428 美元</p><p>GCC 编译器的一行 x86 修改为现代 Intel/AMD CPU 带来 +12% 的基准测试胜利</p><p>COSMIC 的新系统监视器看起来非常流畅</p><p>Nourish：一款由 Vulkan 驱动、支持无限滚动/平移的新 Wayland 合成器</p><p>Linux 缓存感知调度扩展带来更佳性能：MySQL 性能提升高达 360%</p><p>Linux 7.2 Staging 仍在努力驯服 Realtek RTL8723BS“驱动野兽”</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/arm64-livepatching-on-ubuntu/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Wine-11.12-Released" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

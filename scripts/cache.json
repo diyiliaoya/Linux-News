@@ -1109,5 +1109,148 @@
     "title_zh": "CachyOS 2026年6月版发布：带来更多性能优化",
     "summary_zh": "CachyOS 2026年6月版发布，为这款基于Arch Linux、以开箱即用性能著称的发行版带来多项新优化。包括Python构建采用扩展的PGO（配置文件引导优化）、新的GCC补丁以提升性能、修复OpenBLAS包中的回归问题等。此外，新增CachyOS Hyprland Noctalia桌面选项，用Resources应用替代GNOME系统监视器，并改进了CachyOS-Welcome应用。",
     "fulltext_zh": "CachyOS 2026年6月版发布：带来更多性能优化 - Phoronix\nCachyOS 2026年6月版发布：带来更多性能优化\n发布于2026年6月28日美国东部时间上午10:49。\n\nCachyOS今日发布了这款基于Arch Linux的发行版的新功能版本，该发行版以卓越的开箱即用性能著称。\n\nCachyOS 2026年6月版带来了新的性能优化，包括其Python构建采用扩展的PGO（配置文件引导优化）以提升性能，携带了一个新的GCC补丁以帮助提升性能，修复了其OpenBLAS包中因近期Phoronix基准测试而出现的回归问题，以及其他优化。\n\nCachyOS 2026年6月版还新增了CachyOS Hyprland Noctalia桌面选项，GNOME系统监视器已被Resources应用取代，CachyOS-Welcome应用也进行了多项改进，此外还有大量各种修复。\n\n关于这款面向爱好者/游戏玩家优化的Linux发行版今日ISO更新的下载和更多详情，请访问：\n\nMageia 10发布：延续Mandrake传统的Linux发行版\nQSOE v0.1发布：受QNX启发的RISC-V操作系统\nKDE Plasma 6桌面终于登陆Slackware\nHaiku OS现已支持AVX-512及其他硬件改进\nReactOS“开源Windows”达到可运行《半条命》的里程碑\nAlpine Linux 3.24改进安装体验，新增COSMIC桌面选项\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动等主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nLinux终于消除了strncpy API：历时六年、超过360个补丁\n“令人作呕的”Linux sched_ext源代码在Linus Torvalds投诉后重构\nGoogle的Gemini部分解决了现代华硕笔记本上Linux启动时间过长的问题\nSteam Machine发布，售价1049至1428美元\nGCC编译器的一行x86更改使现代Intel/AMD CPU基准测试提升12%\n1996年采用Motif工具包的GIMP v0.54现已通过Flatpak适配现代Linux桌面\nLinux缓存感知调度扩展以实现更佳性能：MySQL性能提升高达360%\nLinux 7.2 Staging仍在努力驯服Realtek RTL8723BS“野兽级驱动”\n\n享受无广告浏览\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "7a4523714ea5eeea66aed6e51ce481a4": {
+    "id": "7a4523714ea5eeea66aed6e51ce481a4",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/purism-librem-16/",
+    "title_en": "You Can Spend Up to $11,944 on Purism's Librem 16 Linux Laptop",
+    "summary_en": "The laptop starts at $2,899 and scales up to an eye-watering $11,944 for a custom config.",
+    "pub_date": "Mon, 29 Jun 2026 10:18:32 GMT",
+    "title_zh": "Purism的Librem 16 Linux笔记本电脑最高售价可达11,944美元",
+    "summary_zh": "Purism发布了Librem 16笔记本电脑，起售价为2,899美元，定制配置最高可达11,944美元。该机型是Librem 15的直接继任者，搭载第13代英特尔酷睿i7-13700处理器（10核16线程），集成显卡，最高支持64GB DDR4内存和16TB存储。预装PureOS系统，配备硬件级隐私开关，可切断摄像头、麦克风和无线通信。",
+    "fulltext_zh": "Purism的Librem 16 Linux笔记本电脑最高售价可达11,944美元\n\n该笔记本电脑起售价为2,899美元，定制配置最高可达令人瞠目的11,944美元。\n\n自从为Librem 15成功众筹超过50万美元以来，Purism已成为一家面向隐私和Linux爱好者的知名硬件制造商。该公司注册为公益企业，致力于维护用户的隐私、安全和自由，即使这与股东利润最大化相冲突。这一理念贯穿其产品线，如Liberty Phone、Librem系列手机以及后量子密码学硬件。\n\n就在最近，他们发布了Librem 16笔记本电脑，定位为Librem 15的直接继任者，并在性能和扩展性上相比Librem 14有所提升。\n\n📝 Librem 16：关键规格\n\nLibrem 16的核心是第13代英特尔酷睿i7-13700处理器，这是一款10核16线程的芯片。其性能核心最高睿频可达4.9GHz，能效核心最高为3.6GHz。遗憾的是，该机型没有独立显卡，仅由英特尔集成显卡负责显示输出。内存方面，配备两个DDR4 SO-DIMM插槽，最大支持64GB。存储方面，有两个M.2插槽，支持NVMe和SATA驱动器，最大总容量为16TB。\n\n预装的操作系统是PureOS，这是Purism自有的Linux发行版，获得了自由软件基金会的认可，不含任何遥测或广告。固件也遵循相同理念，Librem 16采用了coreboot和英特尔管理引擎的禁用版本。此外，还有三个硬件级开关：一个用于切断摄像头和麦克风，另一个用于切断无线和蓝牙；两者均可手动拨动关闭。\n\n其余规格包括：\n- 1个USB-C端口（USB 3.2 Gen 2，支持DisplayPort Alt Mode和最高100W的USB-PD），1个USB-A端口（USB 3.2 Gen 2），1个HDMI 2.0端口，1个存储卡读卡器，以及一个3.5mm复合音频插孔。\n- 1个RJ45千兆以太网端口，英特尔AX200 Wi-Fi 6（带两根天线），以及蓝牙。\n- 一个3芯54.2Wh电池组，额定电压11.55V，容量4.7Ah。\n\nLibrem 16提供三种预配置档次，外加一个自选配置选项，供需要按需定制规格的用户选择。\n- 基础版售价2,899美元，配备16GB内存和500GB存储。\n- 进阶版售价3,699美元，内存升级至32GB，存储升级至2TB。\n- 高端版售价5,299美元，配备64GB内存和两块8TB驱动器共16TB存储。\n\n如果这些都不合适，自选配置选项允许用户独立选择内存、两个存储插槽、无线网卡、反拦截服务以及保修期限。将所有选项推到最高值，最终总价高达11,944美元。\n\n无论如何，所有配置均在10个工作日内发货。反拦截服务（249美元）和延长三年保修（399美元）可作为附加选项提供。\n\n预装Linux的笔记本电脑从未如此便宜。而Purism拥有硬件级别的隐私角度，因此这些笔记本电脑并非普通大众（像我这样的人）所能负担。\n\n一个热爱开源软件、定制PC组装、赛车运动并探索这个世界无限可能的极客。\n\nTerramaster F4-425 Pro：一款对已有坚实NAS的硬件升级\nLinux用户免费获得此功能！Brave Origin对其他人售价59.99美元\nPINE64的智能音箱是亚马逊Echo的Home Assistant驱动替代品\nUbuntu上ARM64系统内核补丁无需重启\nArmSoM Sige6是首款弃用瑞芯微改用全志的Sige板卡\n\n成为更好的Linux用户\n通过FOSS周刊通讯，您将学到有用的Linux技巧，发现应用程序，探索新发行版，并随时了解Linux世界的最新动态。\n\n太好了！您已成功注册。\n欢迎回来！您已成功登录。\n您已成功订阅It's FOSS。\n您的链接已过期。\n成功！请检查您的电子邮件以获取登录的魔法链接。\n成功！您的账单信息已更新。\n您的账单未更新。"
+  },
+  "3ba44be41dd392ed07765c6295a34650": {
+    "id": "3ba44be41dd392ed07765c6295a34650",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12887",
+    "title_en": "Distribution Release: Kali Linux 2026.2",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The Kali Linux project has released a new snapshot of the security- and forensics-focused distribution. The project's 2026.2 release includes several upgrades: \"It's the final week of Q2, and Kali Linux 2026.2 is here - right on schedule. We have been heads down since our last release, and....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Kali Linux 2026.2",
+    "summary_zh": "Kali Linux 2026.2 正式发布，这是专注于安全与取证领域的 Linux 发行版的最新快照。本次更新带来了桌面环境升级至 GNOME 50 和 KDE Plasma 6.6、辅助脚本一致性改进、APT 格式迁移至 sources.list.d、虚拟机启动优化、重启警告、内核保持 6.19 版本并支持提前体验 7.0、构建脚本变更以及新增多个工具包。",
+    "fulltext_zh": "发行版发布：Kali Linux 2026.2\n\nLinux 项目已发布其专注于安全与取证领域的发行版的新快照。该项目的 2026.2 版本包含多项升级：\n\n“这是第二季度的最后一周，Kali Linux 2026.2 如期而至。自上次发布以来，我们一直埋头工作，现在准备分享我们的成果。本次发布融合了桌面刷新、基础设施改进以及生活质量方面的变化，相信大家会喜欢。自 2026.1 版本（3 月发布）以来的变更日志摘要如下：桌面环境——升级至 GNOME 50 和 KDE Plasma 6.6；辅助脚本一致性——对启动服务的少量启动项进行一致性调整；APT 格式——告别 sources.list，改用 sources.list.d/kali.source；虚拟机启动优化——更小的 initrd 加上更快的启动时间，让虚拟机用户更满意；重启警告——请注意，polkit 和 xrdp 的升级需要重启系统；Kali 内核即将到来——目前仍使用 6.19 版本，并介绍如何提前获取 7.0 版本；构建脚本即将更新——提前告知即将到来的变更；新工具——一如既往，新增了多种闪亮的新软件包（共 9 个）。”\n\n更多信息请参阅：\nkali-linux-2026.2-installer-amd64.iso\nkali-linux-2026.2-installer-netinst-amd64.iso\n\n近期相关新闻与发布：\n发行版发布：Kali Linux 2026.2\n发行版发布：Kali Linux 2026.1\n发行版发布：Kali Linux 2025.4\n发行版发布：Kali Linux 2025.3\n发行版发布：Kali Linux 2025.2\n发行版发布：Kali Linux 2025.1a\n\nKali Linux（原名 BackTrack）是一款基于 Debian 的发行版，包含一系列安全与取证工具。它提供及时的安全更新、对 ARM 架构的支持、四种流行的桌面环境选择，以及无缝升级到更新版本的能力。\n\nKali Linux（原名 BackTrack）\nhttps://www.kali.org/\nhttps://forums.kali.org/\n替代用户论坛\nhttps://www.kali.org/kali-linux-documentati"
+  },
+  "0bad1b1d6c0901a3dcdae1c267525fdb": {
+    "id": "0bad1b1d6c0901a3dcdae1c267525fdb",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12886",
+    "title_en": "Distribution Release: Mageia 10",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The Mageia project has released a new version, Mageia 10, which brings updates to the project's package management tools, welcome screen and CPU requirements. \"We increase hardware requirements for 32bit systems, you will require a CPU with SSE2 features. You will find that extension for the packages and....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Mageia 10",
+    "summary_zh": "Mageia 项目发布了新版本 10，带来了软件包管理工具、欢迎屏幕和 CPU 要求的更新。32 位系统现在需要支持 SSE2 的 CPU，ISO 镜像名称中的架构标识从 i586 改为 i686。由于许多软件项目正在放弃 32 位支持，该架构的支持不如 x86_64 系统完整。开发团队在视觉吸引力和磁盘空间使用之间取得了平衡，为主背景选择了多种分辨率，并优化了文件大小。屏保采用 3840×2160 分辨率和 JXL 格式，在 2K 和 4K 显示器上表现出色，同时保持与 Mageia 9 相似的磁盘占用。",
+    "fulltext_zh": "发行版发布：Mageia 10\n\nMageia 项目已发布新版本 10，该版本带来了项目软件包管理工具、欢迎屏幕和 CPU 要求的更新。\n\n“我们提高了 32 位系统的硬件要求，您将需要一颗支持 SSE2 特性的 CPU。您会发现，软件包的扩展名以及 ISO 镜像名称中的架构部分已从 i586 变更为 i686。此外，由于大多数软件项目正在放弃 32 位支持，您可能会发现该架构的支持不如 x86_64 系统完整。我们的工作室和开发团队努力在视觉吸引力和磁盘空间使用之间找到最佳平衡。像往常一样，我们为主背景选择了一系列分辨率，以适应各种显示器，并且我们还利用仓库中的工具优化了它们的大小。对于主要的屏保，我们选择了 3840×2160 的图像尺寸和 JXL 格式，使它们在现代 2K 甚至 4K 显示器上表现出色，同时保持与 Mageia 9 中包含的屏保相似的磁盘空间占用，而 Mageia 9 使用的是较低分辨率和 JPG 格式。”\n\n更多信息请参阅：\nMageia-10-Live-Plasma-x86_64.iso\nMageia-10-Live-GNOME-x86_64.iso\nMageia-10-Live-Xfce-x86_64.iso\n\n近期相关新闻与发布：\n发行版发布：Mageia 10\n开发版发布：Mageia 10 RC1\n开发版发布：Mageia 10 Beta 1\n开发版发布：Mageia 10 Alpha 1\n发行版发布：Mageia 9\n开发版发布：Mageia 9 RC1\n\nMageia 是 Mandriva Linux 的一个分支，由这家广受欢迎的法国 Linux 发行版的前员工和贡献者于 2010 年 9 月创建。与商业实体 Mandriva 不同，Mageia 是一个社区项目和非营利组织，其目标是开发一个基于 Linux 的自由操作系统。\n\nhttps://www.mageia.org/\nhttps://www.mageia.org/mailman/\nhttps://forums.mageia.org/\n替代用户论坛\nhttps://wiki.mageia.org/\nhttps://mageia.org/en/downloads/"
+  },
+  "7d6ba20593666da291d101dd81c116f2": {
+    "id": "7d6ba20593666da291d101dd81c116f2",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Wine-11.12-Released",
+    "title_en": "Wine 11.12 Released With Wayland Fractional Scaling & Other Wayland Enhancements",
+    "summary_en": "Wine 11.12 fell off the bi-weekly release rhythm with not making it out last Friday, but it managed to ship today. Wine 11.12 brings fractional scaling support to its Wayland driver and various other enhancements...",
+    "pub_date": "Mon, 29 Jun 2026 17:05:30 -0400",
+    "title_zh": "Wine 11.12 发布，带来 Wayland 分数缩放及其他 Wayland 增强",
+    "summary_zh": "Wine 11.12 于 2026 年 6 月 29 日发布，主要新增 Wayland 驱动对分数缩放的支持，使用户在高分辨率显示器上获得更佳的 UI 缩放体验，并支持每显示器独立分数缩放。此外，该版本还捆绑了 FFmpeg 的 libswresample 和 libswscale 库，更新 Mono 引擎至 11.2，重写了 MSXML 中的 XSLPattern 解析器，并修复了 27 个已知错误，涉及 Corel 产品安装、Microsoft Office 2007、游戏及 Microsoft Money 97 崩溃等问题。",
+    "fulltext_zh": "Wine 11.12 发布，带来 Wayland 分数缩放及其他 Wayland 增强 - Phoronix\nWine 11.12 发布，带来 Wayland 分数缩放及其他 Wayland 增强\n2026 年 6 月 29 日，美国东部时间下午 5:05。\nWine 11.12 未能保持双周发布节奏，上周五未能推出，但今天成功发布。Wine 11.12 为其 Wayland 驱动带来了分数缩放支持及其他多项增强。\n自 Wine 11.11 发布后合并的一项令人兴奋的功能是 Wine 11.12 的 Wayland 分数缩放支持，可在当今高分辨率/高密度显示器上提供更佳的 UI 缩放体验，而无需通过 X11/XWayland。这一支持还允许用户为每台显示器设置不同的分数缩放比例。\nWine 11.12 的 Wine Wayland 驱动还带来了一些修复，例如确保主显示器矩形位于 0x0 位置、为 WineWayland 队列分配名称，以及在 wl_display_create_queue_with_name 中使用进程名以方便调试。\nWine 11.12 还捆绑了来自 FFmpeg 项目的 libswresample 和 libswscale 库，将 Mono 引擎更新至 Mono 11.2，并在 MSXML 中重新实现了 XSLPattern 解析器。\nWine 11.12 修复了 27 个已知错误，涉及多个 Corel 产品安装程序、图形问题、Microsoft Office 2007，以及各种其他游戏和应用程序修复。Wine 11.12 甚至修复了 Microsoft Money 97 的崩溃问题，以及一个可追溯到 2009 年的关于 Slingplayer 视频调谐向导失败的错误报告。\nWine 11.12 的下载及更多关于此开发快照的详细信息（通往 Wine 12.0 之路）请参见：\nWine Wayland 实现分数缩放支持\nWine-Staging 11.11 发布，在上游基础上包含 289 个补丁\nWine 11.11 发布，带来 Wayland 改进\nWine-Staging 11.10 修复了 14 年之久的错误，并修复了某些游戏过暗的问题\nWine 11.10 发布，带来 VKD3D 2.0、改进的 VBScript 兼容性\nVKD3D 2.0 发布，用于 Wine 基于 Vulkan 的 Direct3D 12 实现\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n“令人作呕”的 Linux sched_ext 源代码在 Linus Torvalds 投诉后重构\nGoogle 的 Gemini 部分解决了现代华硕笔记本电脑上 Linux 启动时间过长的问题\nSteam Machine 发布，售价 1049 至 1428 美元\nGCC 编译器的一行 x86 修改为现代 Intel/AMD CPU 带来 +12% 的基准测试胜利\nCOSMIC 的新系统监视器看起来非常流畅\nNourish：一款由 Vulkan 驱动、支持无限滚动/平移的新 Wayland 合成器\nLinux 缓存感知调度扩展带来更佳性能：MySQL 性能提升高达 360%\nLinux 7.2 Staging 仍在努力驯服 Realtek RTL8723BS“驱动野兽”\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "4390a73ae9a9fbef9e11b3b7fae51c83": {
+    "id": "4390a73ae9a9fbef9e11b3b7fae51c83",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Bcachefs-1.38.7-Rust-Kernel",
+    "title_en": "Next Bcachefs Release Aims To Include Rust Code In The Kernel Module",
+    "summary_en": "The Bcachefs file-system already makes use of the Rust programming language in the user-space tools for this CoW file-system and they have been planning to make use of Rust within the kernel module too. Beginning in the next Bcachefs release, v1.38.7, they are looking at beginning to include Rust code now in their kernel driver...",
+    "pub_date": "Mon, 29 Jun 2026 15:30:00 -0400",
+    "title_zh": "下一个 Bcachefs 版本计划在内核模块中包含 Rust 代码",
+    "summary_zh": "Bcachefs 文件系统计划在即将发布的 v1.38.7 版本中，首次在内核模块中引入 Rust 代码。最初这将是一个软依赖，但使用 Rust 会带来 DKMS 构建的挑战，因为 Rust 缺乏稳定的 ABI，需要匹配内核编译所用的 Rustc 版本及相关工具。因此，Bcachefs 未来将更倾向于通过发行版二进制包分发内核模块，而非 DKMS 构建。",
+    "fulltext_zh": "下一个 Bcachefs 版本计划在内核模块中包含 Rust 代码 - Phoronix\n下一个 Bcachefs 版本计划在内核模块中包含 Rust 代码\n发布于 2026 年 6 月 29 日下午 3:30（美国东部时间）。\n\nBcachefs 文件系统已经在用户空间工具中使用了 Rust 编程语言，并且他们一直计划在内核模块中也使用 Rust。从下一个 Bcachefs 版本 v1.38.7 开始，他们希望开始在其内核驱动中包含 Rust 代码。\n\n几天前刚刚发布了一些不错的改进，而其主要开发者 Kent Overstreet 已经在为 Bcachefs 1.38.7 规划重大变化。在今天的一篇文章中，他概述了 Bcachefs 1.38.7 的计划，这将是第一个开始在内核 Bcachefs 模块中包含 Rust 的版本。最初这将是一个软依赖，同时他们将处理部署流程并搭建相关基础设施。\n\n在 Bcachefs 内核模块中使用 Rust 的计划确实使 Bcachefs 作为树外模块的处理变得复杂。Kent Overstreet 指出了使用动态内核模块系统（DKMS）构建 Rust 模块所面临的挑战。对于大多数用户来说，DKMS 构建 Rust 模块“不切实际”，因为安装的 Rustc 版本需要与编译内核所用的版本匹配，这是由于 Rust 缺乏稳定的 ABI。\n\n此外，还需要安装相同的 Rust stdlib 源码、bindgen CLI 版本，并且内核构建中的一些 Rust 工件也必须存在。因此，Bcachefs 最终计划面向更常规的发行版二进制包来提供内核模块，而不是继续使用 DKMS 构建。这对于任何其他包含树外 Rust 内核模块的项目来说，都将是一个类似的挑战。\n\n关于 Bcachefs 内核模块中 Rust 代码计划的更多细节，可通过今天的以下文章了解：\nLinux MD RAID5 可扩展性提升高达 17%\nKSMBD 在 Linux 7.2 中添加 SMB2 压缩支持\nNTFS3 驱动在 Linux 7.2 中获得错误修复和微小改进\nF2FS 集成 FSERROR 报告，在 Linux 7.2 中减少内存占用\nLinux 7.2 中的 EROFS 更好地处理大型稀疏 AI 数据集，I/O 更高效\nexFAT 文件系统在 Linux 7.2 中通过 IOmap 转换获得更好性能\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\n“令人厌恶的”Linux sched_ext 源代码在 Linus Torvalds 投诉后重构\nGoogle 的 Gemini 部分解决了现代华硕笔记本电脑上 Linux 启动时间过长的问题\nSteam Machine 发布，售价 1049 至 1428 美元\nGCC 编译器的一行 x86 更改使现代 Intel/AMD CPU 的基准测试成绩提升 12%\nCOSMIC 的新系统监视器看起来非常流畅\nNourish：一个由 Vulkan 驱动的新型 Wayland 合成器，支持无限滚动/平移\nLinux 缓存感知调度扩展带来更好性能：MySQL 中提升高达 360%\nLinux 7.2 Staging 仍在努力驯服 Realtek RTL8723BS“驱动野兽”\n\n在享受无广告浏览的同时，\n单页文章查看\n法律声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "352e2d7a00ab6dbf8df5d200e150f669": {
+    "id": "352e2d7a00ab6dbf8df5d200e150f669",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Git-2.55-Released",
+    "title_en": "Git 2.55 Released With Rust Support Enabled By Default, <em>git history fixup</em>",
+    "summary_en": "Git 2.55 is out today as the latest stable update to this distributed version control system...",
+    "pub_date": "Mon, 29 Jun 2026 13:50:00 -0400",
+    "title_zh": "Git 2.55 发布：默认启用 Rust 支持，新增 git history fixup",
+    "summary_zh": "Git 2.55 作为分布式版本控制系统的最新稳定版发布，默认启用 Rust 支持（仍可通过 NO_RUST 选项禁用），并改进了增量多包索引的 repack 操作。新增的 git history fixup 子命令允许用户直接将暂存的更改合并到较早的提交中，无需交互式变基，但该功能仍被视为实验性。",
+    "fulltext_zh": "Git 2.55 发布：默认启用 Rust 支持，新增 git history fixup - Phoronix\nGit 2.55 默认启用 Rust 支持，新增 git history fixup\n发布于 2026 年 6 月 29 日美国东部时间下午 01:50。\n\nGit 2.55 今日发布，作为这款分布式版本控制系统的最新稳定更新。\n\n在此之前，Git 世界中的 Rust 代码在构建时是可选加入的。而在 Git 2.55 中，Rust 代码虽然仍是可选的，但现已默认启用。从 Git 2.55 开始，除非使用 \"NO_RUST\" 选项明确禁用，否则构建时将默认启用 Rust 支持。不过，Git 3.0 或之后的某个版本可能会强制要求 Rust 支持。\n\nGit 2.55 还进一步改进了增量多包索引的 repack 操作，新增了 git history fixup 子命令，可更轻松地修复之前暂存的提交，以及多项其他底层改进。git history fixup 允许用户直接将暂存的更改合并到较早的提交中，无需经过交互式变基。不过，该子命令在 Git 2.55 中仍被视为实验性功能。\n\nGit 2.55 的完整变更列表可通过今日的公告查看。此外，Phoronix 网站也提供了 Git 2.55 主要变更的概述。\n\nZLUDA v6 让 PhysX 在 AMD GPU 上运行良好，但失去商业资助\nBASIC09 编程语言前端为 LLVM 开发\nRust PNG 图像解码器现在更快：惠及 Chrome、GNOME 等\nEpic Games 宣布 Lore 开源版本控制系统\nGit 2.55-rc0 发布：默认启用 Rust\n轻量级 Pragtical 代码编辑器添加 SDL GPU 后端\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\n\"令人作呕的\" Linux sched_ext 源代码在 Linus Torvalds 投诉后重构\nGoogle 的 Gemini 部分解决了现代华硕笔记本电脑上 Linux 启动时间过长的问题\nSteam Machine 发布，售价 1049 至 1428 美元\nGCC 编译器的一行 x86 修改为现代 Intel/AMD CPU 带来 +12% 的基准测试提升\nCOSMIC 的新系统监视器看起来非常流畅\nNourish：一款由 Vulkan 驱动、支持无限滚动/平移的新 Wayland 合成器\nLinux 缓存感知调度扩展带来更佳性能：MySQL 性能提升高达 360%\nLinux 7.2 Staging 仍在努力驯服 Realtek RTL8723BS \"驱动野兽\"\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "178d371beb3ccf9382022405173a10a4": {
+    "id": "178d371beb3ccf9382022405173a10a4",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/linux-72-threadripper",
+    "title_en": "Linux 7.2 On Threadripper Shows Some Nice I/O Improvements & Faster Poll, Some Regressions",
+    "summary_en": "I have begun testing out Linux 7.2 on more hardware following the winding down of the merge window and culminating with yesterday's Linux 7.2-rc1 release. Today's tests are looking at how Linux 7.2 in its early development state is comparing to Linux 7.1 stable on AMD Ryzen Threadripper.",
+    "pub_date": "Mon, 29 Jun 2026 12:50:23 -0400",
+    "title_zh": "Linux 7.2 在 Threadripper 上展现不错的 I/O 改进与更快的轮询，以及一些回归",
+    "summary_zh": "Linux 7.2 早期开发版本在 AMD Ryzen Threadripper 平台上进行了基准测试，与稳定版 Linux 7.1 相比，显示出显著的 I/O 改进和更快的轮询性能，但也出现了一些性能回归。测试平台为 96 核 Threadripper PRO 9995WX 工作站，使用相同 Kconfig 配置。Linux 7.2 稳定版预计于 8 月发布，将驱动 Ubuntu 26.10 和 Fedora 45 等系统。",
+    "fulltext_zh": "Linux 7.2 On Threadripper Shows Some Nice I/O Improvements & Faster Poll, Some Regressions - Phoronix\n\nLinux 7.2 On Threadripper Shows Some Nice I/O Improvements & Faster Poll, Some Regressions\n\n2026年6月29日 美国东部时间下午12:50\n\n在合并窗口逐渐收尾并最终于昨天发布 Linux 7.2-rc1 之后，我已经开始在更多硬件上进行测试。今天的测试着眼于 Linux 7.2 在其早期开发阶段与 AMD Ryzen Threadripper 上的稳定版 Linux 7.1 相比表现如何。\n\n上周末，我使用截至6月27日的 Git 状态对 Linux 7.1 稳定版和 Linux 7.2 进行了基准测试。两个内核版本在相同系统上使用了相同的标准 Kconfig 配置。该系统是一台 Threadripper HEDT 桌面/工作站，配备 96 核 AMD Ryzen Threadripper PRO 9995WX、ASUS PRO WS TRX50-SAGE WIFI 主板、4 x 32GB DDR5-6400 内存、2TB Corsair MP700 PRO NVMe 固态硬盘以及 Radeon AI PRO R9700 显卡。\n\n两次基准测试运行之间唯一的区别是更换了 Linux 7.1 和 7.2 Git 内核，以观察新内核的性能影响。Linux 7.2 稳定版将于 8 月发布，并将驱动 Ubuntu 26.10 和 Fedora 45 等系统。\n\nIntel Core Ultra X7 Panther Lake 在 Linux 7.1 上的性能\n\n缓存感知调度在 AMD Zen 5 上为 PostgreSQL、Valkey 和网络性能带来显著提升\n\nLinux 6.6 LTS 到 Linux 7.1 基准测试：三年间 AMD Threadripper 性能提升 13%\n\nGCC 16 生成的二进制文件比 GCC 15 更快，与 LLVM Clang 22 形成竞争态势\n\nLinux 7.1 特性：新 NTFS 驱动、新 Intel + AMD 硬件、性能优化与现代化\n\nGCC 16 编译器相比 GCC 15 带来可观的性能提升\n\n在享受无广告浏览的同时，\n\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026\n\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "6ddef25bc91e0ea7604b532b43a05593": {
+    "id": "6ddef25bc91e0ea7604b532b43a05593",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Microsoft-Preview-WSL-WSLC",
+    "title_en": "Microsoft Announces Public Preview For Linux Containers On WSL",
+    "summary_en": "Microsoft today shipped the first public preview of WSL Containers \"WSLC\" as their latest extension of the Windows Subsystem for Linux on Windows 11...",
+    "pub_date": "Mon, 29 Jun 2026 11:49:29 -0400",
+    "title_zh": "微软宣布WSL上Linux容器的公开预览版",
+    "summary_zh": "微软发布了WSL Containers（WSLC）的公开预览版，这是Windows Subsystem for Linux的最新扩展，支持在Windows 11上原生构建、运行和管理Linux容器。预览版提供容器生命周期管理、多种网络选项、GPU支持、C++和C#/WinRT SDK集成等功能。微软还改进了WSL，包括默认使用VirtIOFS文件系统以提升2倍性能、网络优化和内存回收改进。",
+    "fulltext_zh": "微软宣布WSL上Linux容器的公开预览版 - Phoronix\n微软宣布WSL上Linux容器的公开预览版\n发布于2026年6月29日美国东部时间上午11:49。\n\n微软今天发布了WSL Containers“WSLC”的第一个公开预览版，作为Windows 11上Windows Subsystem for Linux的最新扩展。\n\nWSL Containers为WSL带来了原生的Linux容器体验，用于通过命令行工具构建、运行和管理Linux容器。WSLC预览版提供了容器生命周期管理的全部功能、多种网络选项、GPU支持从第一天起即可使用、C++和C#/WinRT的SDK集成，以及其他工具和功能。\n\nWSL Containers公开预览版是今天发布的一部分。\n\n还有一篇关于WSL Containers支持的博文，重点介绍了这一功能，其优势涵盖从云原生工作负载到更简便的WSL测试和部署。博文指出，微软正在进行更多WSL改进，包括将VirtIOFS切换为WSL容器的新默认文件系统，性能提升高达2倍。此外还有网络改进和更好的内存回收。\n\nLinux终于为14年前的微软Surface RT平板电脑添加了电池/充电器驱动程序\n微软宣布推出Windows版Coreutils：源自Rust Coreutils\n新补丁让微软Surface Pro 9 5G在Linux下更有用\n微软发布Azure Linux 3.0.20260506，包含大量安全修复\nWindows版WireGuard达到v1.0\n微软将其WSL2内核升级至Linux 6.18 LTS\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立了该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动程序及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\n“令人作呕”的Linux sched_ext源代码在Linus Torvalds投诉后重构\nGoogle的Gemini部分解决了现代华硕笔记本电脑上Linux启动时间过长的问题\nSteam Machine发布，售价1049美元至1428美元\nGCC编译器的一行x86修改为现代Intel/AMD CPU带来+12%的基准测试胜利\nCOSMIC的新系统监视器看起来非常流畅\nNourish：一款由Vulkan驱动的新型Wayland合成器，支持无限滚动/平移\nLinux缓存感知调度扩展带来更佳性能：MySQL中高达360%的提升\nLinux 7.2 Staging仍在努力驯服Realtek RTL8723BS“野兽般的驱动程序”\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "af9f434d459df9f7fe5e1580a13a9930": {
+    "id": "af9f434d459df9f7fe5e1580a13a9930",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/peertube-8-2-video-platform-adds-channel-ownership-transfers/",
+    "title_en": "PeerTube 8.2 Video Platform Adds Channel Ownership Transfers",
+    "summary_en": "Explore PeerTube 8.2's exciting update that introduces channel ownership transfers, empowering users to manage their content more effectively.\nThe post PeerTube 8.2 Video Platform Adds Channel Ownership Transfers appeared first on Linux Today.",
+    "pub_date": "Mon, 29 Jun 2026 08:19:55 +0000",
+    "title_zh": "PeerTube 8.2 视频平台新增频道所有权转移功能",
+    "summary_zh": "PeerTube 8.2 版本发布，引入频道所有权转移功能，使用户能够更有效地管理其内容。这一更新增强了平台的内容管理灵活性，允许用户将频道所有权安全地转移给其他用户。",
+    "fulltext_zh": "探索 PeerTube 8.2 的激动人心的更新，该更新引入了频道所有权转移功能，使用户能够更有效地管理其内容。\n\n这篇文章《PeerTube 8.2 视频平台新增频道所有权转移功能》最初出现在 Linux Today 上。"
+  },
+  "c1904babb1cc2c62f5e4dede7e85ba24": {
+    "id": "c1904babb1cc2c62f5e4dede7e85ba24",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/bosgame-m7-core-ultra-9-285h-running-linux-bios/",
+    "title_en": "Bosgame M7 Core Ultra 9 285H running Linux – BIOS",
+    "summary_en": "Discover the capabilities of the Bosgame M7 Core Ultra 9 285H running Linux. Explore BIOS settings and optimize your system for peak performance.\nThe post Bosgame M7 Core Ultra 9 285H running Linux – BIOS appeared first on Linux Today.",
+    "pub_date": "Mon, 29 Jun 2026 08:14:31 +0000",
+    "title_zh": "Bosgame M7 Core Ultra 9 285H 运行 Linux – BIOS",
+    "summary_zh": "本文介绍了 Bosgame M7 Core Ultra 9 285H 在 Linux 系统下的运行能力，重点探讨了 BIOS 设置，并指导用户如何优化系统以实现最佳性能。",
+    "fulltext_zh": "探索 Bosgame M7 Core Ultra 9 285H 在 Linux 系统下的运行能力。深入了解 BIOS 设置，并优化您的系统以实现最佳性能。\n该文章 Bosgame M7 Core Ultra 9 285H 运行 Linux – BIOS 首次出现在 Linux Today 上。"
+  },
+  "1a5dd4c359677c4e5ddcbef1010ff85e": {
+    "id": "1a5dd4c359677c4e5ddcbef1010ff85e",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/almalinux-doubles-down-with-two-releases-on-one-day/",
+    "title_en": "AlmaLinux Doubles Down With Two Releases on One Day",
+    "summary_en": "Discover AlmaLinux's commitment to innovation with two major releases on the same day, enhancing stability and performance for users worldwide.\nThe post AlmaLinux Doubles Down With Two Releases on One Day appeared first on Linux Today.",
+    "pub_date": "Mon, 29 Jun 2026 08:10:34 +0000",
+    "title_zh": "AlmaLinux 一日双发，加倍投入",
+    "summary_zh": "AlmaLinux 在同一天发布两个主要版本，彰显其对创新的承诺，旨在为全球用户提升稳定性和性能。",
+    "fulltext_zh": "发现 AlmaLinux 对创新的承诺：同一天发布两个主要版本，为全球用户增强稳定性和性能。\n\n该文章 AlmaLinux Doubles Down With Two Releases on One Day 首次出现在 Linux Today 上。"
+  },
+  "da5ceb6e27ca9536030dba01660e3565": {
+    "id": "da5ceb6e27ca9536030dba01660e3565",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/libreoffice-outlines-new-web-and-mobile-strategy/",
+    "title_en": "LibreOffice Outlines New Web and Mobile Strategy",
+    "summary_en": "Uncover the details of LibreOffice's outlined strategy for web and mobile, focusing on enhanced features and user accessibility. Get the latest insights now.\nThe post LibreOffice Outlines New Web and Mobile Strategy appeared first on Linux Today.",
+    "pub_date": "Mon, 29 Jun 2026 08:06:29 +0000",
+    "title_zh": "LibreOffice 概述新的 Web 与移动端战略",
+    "summary_zh": "LibreOffice 公布了其针对 Web 和移动端的新战略，重点在于增强功能与提升用户可访问性。本文详细介绍了该战略的核心内容，旨在让用户在不同平台上获得更流畅的办公体验。",
+    "fulltext_zh": "深入了解 LibreOffice 针对 Web 和移动端所概述的战略细节，该战略聚焦于增强功能与提升用户可访问性。立即获取最新见解。\n\n本文《LibreOffice Outlines New Web and Mobile Strategy》最初发表于 Linux Today。"
+  },
+  "83d4a41470f2b3a77bb39e9aff8413bb": {
+    "id": "83d4a41470f2b3a77bb39e9aff8413bb",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/netplan-configure-static-ip-address-and-dns-on-ubuntu-26-04/",
+    "title_en": "Netplan: Configure Static IP Address and DNS on Ubuntu 26.04",
+    "summary_en": "Learn how to configure a static IP address and DNS settings on Ubuntu 26.04 using Netplan. Enhance your network stability with our step-by-step guide.\nThe post Netplan: Configure Static IP Address and DNS on Ubuntu 26.04 appeared first on Linux Today.",
+    "pub_date": "Mon, 29 Jun 2026 08:04:50 +0000",
+    "title_zh": "Netplan：在Ubuntu 26.04上配置静态IP地址和DNS",
+    "summary_zh": "本文介绍了如何使用Netplan在Ubuntu 26.04上配置静态IP地址和DNS设置，通过分步指南帮助用户增强网络稳定性。",
+    "fulltext_zh": "学习如何使用Netplan在Ubuntu 26.04上配置静态IP地址和DNS设置。通过我们的分步指南增强您的网络稳定性。\n该文章《Netplan：在Ubuntu 26.04上配置静态IP地址和DNS》首次出现在Linux Today上。"
   }
 }

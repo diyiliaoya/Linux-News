@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu ARM64 系统内核补丁无需再重启 — Linux 中文速报</title>
+<title>发行版发布：Kali Linux 2026.2 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">DistroWatch</span>
   </div>
 
-  <h1>Ubuntu ARM64 系统内核补丁无需再重启</h1>
+  <h1>发行版发布：Kali Linux 2026.2</h1>
 
-  <div class="article-summary">Canonical 宣布其 Livepatch 功能终于扩展至 ARM64 平台，用户可在 Ubuntu 26.04 LTS 和 Ubuntu Core 26 上无需重启即可修补 Linux 内核。此前该功能仅适用于 AMD64 系统。Livepatch 通过内存中应用补丁，减少停机时间，尤其适合云和边缘部署场景。个人用户可免费使用最多五台机器。</div>
+  <div class="article-summary">Kali Linux 2026.2 正式发布，这是专注于安全与取证领域的 Linux 发行版的最新快照。本次更新带来了桌面环境升级至 GNOME 50 和 KDE Plasma 6.6、辅助脚本一致性改进、APT 格式迁移至 sources.list.d、虚拟机启动优化、重启警告、内核保持 6.19 版本并支持提前体验 7.0、构建脚本变更以及新增多个工具包。</div>
 
-  <div class="article-body"><p>Ubuntu ARM64 系统内核补丁无需再重启</p><p>Ubuntu ARM64 系统内核补丁无需再重启</p><p>Canonical 的 Livepatch 终于扩展至 Ubuntu 26.04 LTS 和 Ubuntu Core 26 平台。</p><p>现在可以在 ARM64 系统上修补 Linux 内核，而无需强制重启。这一功能在 AMD64 机器上已实现多年，但此前用户没有等效选项。</p><p>该功能面向用户开放，如果这听起来耳熟，那是因为 Canonical 之前已经提及过。第一次是在今年四月发布时，第二次是在某个场合。</p><p>我们现在报道此事，是因为他们发布了相关说明，解释了为准备这一功能所付出的努力。</p><p>相关工作始于 2023 年，当时公司进行了一项差距分析（即研究缺失的部分），评估 ARM64 支持内核实时修补所需的条件，结果并不乐观。</p><p>问题在于上游 ARM64 内核缺乏一个稳定的实现，而实时修补依赖该功能来判断何时可以安全地在运行中的内核中替换代码。</p><p>编译器工具链也未就绪，当时所有相关组件都缺少稳定的 ARM64 支持。随着处理器在云和边缘部署中变得越来越普遍，相关工作在 2024 年及今年持续推进。</p><p>上游内核维护者、硬件厂商以及 Canonical 自己的工程师必须共同努力来填补这些空白。</p><p>目前，ARM64 Livepatch 客户端已经在 Canonical 的测试环境中为 Ubuntu 26.04 LTS 和 Ubuntu Core 26 应用补丁。</p><p>为什么要使用 Livepatch？</p><p>某个 bug 曾阻止我在虚拟机上启用 Livepatch。</p><p>Livepatch 是 Canonical 订阅服务的一部分，该订阅捆绑了安全修补、支持和合规工具，同时通过修补关键和高严重性漏洞来覆盖内核。</p><p>如果你只是想试用，无需支付任何费用，因为 Canonical 为个人使用提供最多五台机器的免费 Livepatch。这足以覆盖大多数家庭设置和小型服务器集群，无需提供支付信息。</p><p>真正的优势体现在管理多台机器时：无需安排停机时间来修补内核漏洞，Livepatch 会在内存中应用修复，并让管理员自行决定每台机器的更新时间。</p><p>不过，它并不能完全替代补丁，因为 Livepatch 只涉及内核。</p><p>Canonical 仍然建议定期重启，因为长时间运行会累积内存泄漏和其他状态问题，而实时补丁无法清除这些问题。</p><p>如果你是一个经常重启机器的桌面用户，这些都不重要，因为 Livepatch 是为那些重启意味着实际停机时间和成本超支风险的系统而设计的。</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。</p><p>PINE64 的智能音箱是 Home Assistant 驱动的 Amazon Echo 替代品</p><p>ArmSoM Sige6 是首款弃用 Rockchip 改用 Allwinner 的 Sige 主板</p><p>Guncrypt 是 Halfbrick Studio 的首款 PC 游戏，也支持 Linux</p><p>Canonical 的新 AI 工具让你与 Ubuntu 对话而非打字</p><p>Epic Games 构建了自己的 Git 替代方案来处理大文件</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 周刊，你可以学习有用的 Linux 技巧、发现应用程序、探索新发行版，并了解 Linux 世界的最新动态</p><p>太好了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅 It's FOSS。</p><p>您的链接已过期。</p><p>成功！请检查您的电子邮件以获取登录的魔法链接。</p><p>成功！您的账单信息已更新。</p><p>您的账单未更新。</p></div>
+  <div class="article-body"><p>发行版发布：Kali Linux 2026.2</p><p>Linux 项目已发布其专注于安全与取证领域的发行版的新快照。该项目的 2026.2 版本包含多项升级：</p><p>“这是第二季度的最后一周，Kali Linux 2026.2 如期而至。自上次发布以来，我们一直埋头工作，现在准备分享我们的成果。本次发布融合了桌面刷新、基础设施改进以及生活质量方面的变化，相信大家会喜欢。自 2026.1 版本（3 月发布）以来的变更日志摘要如下：桌面环境——升级至 GNOME 50 和 KDE Plasma 6.6；辅助脚本一致性——对启动服务的少量启动项进行一致性调整；APT 格式——告别 sources.list，改用 sources.list.d/kali.source；虚拟机启动优化——更小的 initrd 加上更快的启动时间，让虚拟机用户更满意；重启警告——请注意，polkit 和 xrdp 的升级需要重启系统；Kali 内核即将到来——目前仍使用 6.19 版本，并介绍如何提前获取 7.0 版本；构建脚本即将更新——提前告知即将到来的变更；新工具——一如既往，新增了多种闪亮的新软件包（共 9 个）。”</p><p>更多信息请参阅：</p><p>kali-linux-2026.2-installer-amd64.iso</p><p>kali-linux-2026.2-installer-netinst-amd64.iso</p><p>近期相关新闻与发布：</p><p>发行版发布：Kali Linux 2026.2</p><p>发行版发布：Kali Linux 2026.1</p><p>发行版发布：Kali Linux 2025.4</p><p>发行版发布：Kali Linux 2025.3</p><p>发行版发布：Kali Linux 2025.2</p><p>发行版发布：Kali Linux 2025.1a</p><p>Kali Linux（原名 BackTrack）是一款基于 Debian 的发行版，包含一系列安全与取证工具。它提供及时的安全更新、对 ARM 架构的支持、四种流行的桌面环境选择，以及无缝升级到更新版本的能力。</p><p>Kali Linux（原名 BackTrack）</p><p>https://www.kali.org/</p><p>https://forums.kali.org/</p><p>替代用户论坛</p><p>https://www.kali.org/kali-linux-documentati</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/arm64-livepatching-on-ubuntu/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://distrowatch.com/12887" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

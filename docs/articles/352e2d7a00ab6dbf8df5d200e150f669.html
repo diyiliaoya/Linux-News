@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu ARM64 系统内核补丁无需再重启 — Linux 中文速报</title>
+<title>Git 2.55 发布：默认启用 Rust 支持，新增 git history fixup — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu ARM64 系统内核补丁无需再重启</h1>
+  <h1>Git 2.55 发布：默认启用 Rust 支持，新增 git history fixup</h1>
 
-  <div class="article-summary">Canonical 宣布其 Livepatch 功能终于扩展至 ARM64 平台，用户可在 Ubuntu 26.04 LTS 和 Ubuntu Core 26 上无需重启即可修补 Linux 内核。此前该功能仅适用于 AMD64 系统。Livepatch 通过内存中应用补丁，减少停机时间，尤其适合云和边缘部署场景。个人用户可免费使用最多五台机器。</div>
+  <div class="article-summary">Git 2.55 作为分布式版本控制系统的最新稳定版发布，默认启用 Rust 支持（仍可通过 NO_RUST 选项禁用），并改进了增量多包索引的 repack 操作。新增的 git history fixup 子命令允许用户直接将暂存的更改合并到较早的提交中，无需交互式变基，但该功能仍被视为实验性。</div>
 
-  <div class="article-body"><p>Ubuntu ARM64 系统内核补丁无需再重启</p><p>Ubuntu ARM64 系统内核补丁无需再重启</p><p>Canonical 的 Livepatch 终于扩展至 Ubuntu 26.04 LTS 和 Ubuntu Core 26 平台。</p><p>现在可以在 ARM64 系统上修补 Linux 内核，而无需强制重启。这一功能在 AMD64 机器上已实现多年，但此前用户没有等效选项。</p><p>该功能面向用户开放，如果这听起来耳熟，那是因为 Canonical 之前已经提及过。第一次是在今年四月发布时，第二次是在某个场合。</p><p>我们现在报道此事，是因为他们发布了相关说明，解释了为准备这一功能所付出的努力。</p><p>相关工作始于 2023 年，当时公司进行了一项差距分析（即研究缺失的部分），评估 ARM64 支持内核实时修补所需的条件，结果并不乐观。</p><p>问题在于上游 ARM64 内核缺乏一个稳定的实现，而实时修补依赖该功能来判断何时可以安全地在运行中的内核中替换代码。</p><p>编译器工具链也未就绪，当时所有相关组件都缺少稳定的 ARM64 支持。随着处理器在云和边缘部署中变得越来越普遍，相关工作在 2024 年及今年持续推进。</p><p>上游内核维护者、硬件厂商以及 Canonical 自己的工程师必须共同努力来填补这些空白。</p><p>目前，ARM64 Livepatch 客户端已经在 Canonical 的测试环境中为 Ubuntu 26.04 LTS 和 Ubuntu Core 26 应用补丁。</p><p>为什么要使用 Livepatch？</p><p>某个 bug 曾阻止我在虚拟机上启用 Livepatch。</p><p>Livepatch 是 Canonical 订阅服务的一部分，该订阅捆绑了安全修补、支持和合规工具，同时通过修补关键和高严重性漏洞来覆盖内核。</p><p>如果你只是想试用，无需支付任何费用，因为 Canonical 为个人使用提供最多五台机器的免费 Livepatch。这足以覆盖大多数家庭设置和小型服务器集群，无需提供支付信息。</p><p>真正的优势体现在管理多台机器时：无需安排停机时间来修补内核漏洞，Livepatch 会在内存中应用修复，并让管理员自行决定每台机器的更新时间。</p><p>不过，它并不能完全替代补丁，因为 Livepatch 只涉及内核。</p><p>Canonical 仍然建议定期重启，因为长时间运行会累积内存泄漏和其他状态问题，而实时补丁无法清除这些问题。</p><p>如果你是一个经常重启机器的桌面用户，这些都不重要，因为 Livepatch 是为那些重启意味着实际停机时间和成本超支风险的系统而设计的。</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。</p><p>PINE64 的智能音箱是 Home Assistant 驱动的 Amazon Echo 替代品</p><p>ArmSoM Sige6 是首款弃用 Rockchip 改用 Allwinner 的 Sige 主板</p><p>Guncrypt 是 Halfbrick Studio 的首款 PC 游戏，也支持 Linux</p><p>Canonical 的新 AI 工具让你与 Ubuntu 对话而非打字</p><p>Epic Games 构建了自己的 Git 替代方案来处理大文件</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 周刊，你可以学习有用的 Linux 技巧、发现应用程序、探索新发行版，并了解 Linux 世界的最新动态</p><p>太好了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅 It's FOSS。</p><p>您的链接已过期。</p><p>成功！请检查您的电子邮件以获取登录的魔法链接。</p><p>成功！您的账单信息已更新。</p><p>您的账单未更新。</p></div>
+  <div class="article-body"><p>Git 2.55 发布：默认启用 Rust 支持，新增 git history fixup - Phoronix</p><p>Git 2.55 默认启用 Rust 支持，新增 git history fixup</p><p>发布于 2026 年 6 月 29 日美国东部时间下午 01:50。</p><p>Git 2.55 今日发布，作为这款分布式版本控制系统的最新稳定更新。</p><p>在此之前，Git 世界中的 Rust 代码在构建时是可选加入的。而在 Git 2.55 中，Rust 代码虽然仍是可选的，但现已默认启用。从 Git 2.55 开始，除非使用 &quot;NO_RUST&quot; 选项明确禁用，否则构建时将默认启用 Rust 支持。不过，Git 3.0 或之后的某个版本可能会强制要求 Rust 支持。</p><p>Git 2.55 还进一步改进了增量多包索引的 repack 操作，新增了 git history fixup 子命令，可更轻松地修复之前暂存的提交，以及多项其他底层改进。git history fixup 允许用户直接将暂存的更改合并到较早的提交中，无需经过交互式变基。不过，该子命令在 Git 2.55 中仍被视为实验性功能。</p><p>Git 2.55 的完整变更列表可通过今日的公告查看。此外，Phoronix 网站也提供了 Git 2.55 主要变更的概述。</p><p>ZLUDA v6 让 PhysX 在 AMD GPU 上运行良好，但失去商业资助</p><p>BASIC09 编程语言前端为 LLVM 开发</p><p>Rust PNG 图像解码器现在更快：惠及 Chrome、GNOME 等</p><p>Epic Games 宣布 Lore 开源版本控制系统</p><p>Git 2.55-rc0 发布：默认启用 Rust</p><p>轻量级 Pragtical 代码编辑器添加 SDL GPU 后端</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。</p><p>&quot;令人作呕的&quot; Linux sched_ext 源代码在 Linus Torvalds 投诉后重构</p><p>Google 的 Gemini 部分解决了现代华硕笔记本电脑上 Linux 启动时间过长的问题</p><p>Steam Machine 发布，售价 1049 至 1428 美元</p><p>GCC 编译器的一行 x86 修改为现代 Intel/AMD CPU 带来 +12% 的基准测试提升</p><p>COSMIC 的新系统监视器看起来非常流畅</p><p>Nourish：一款由 Vulkan 驱动、支持无限滚动/平移的新 Wayland 合成器</p><p>Linux 缓存感知调度扩展带来更佳性能：MySQL 性能提升高达 360%</p><p>Linux 7.2 Staging 仍在努力驯服 Realtek RTL8723BS &quot;驱动野兽&quot;</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/arm64-livepatching-on-ubuntu/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Git-2.55-Released" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
