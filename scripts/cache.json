@@ -1252,5 +1252,148 @@
     "title_zh": "Netplan：在Ubuntu 26.04上配置静态IP地址和DNS",
     "summary_zh": "本文介绍了如何使用Netplan在Ubuntu 26.04上配置静态IP地址和DNS设置，通过分步指南帮助用户增强网络稳定性。",
     "fulltext_zh": "学习如何使用Netplan在Ubuntu 26.04上配置静态IP地址和DNS设置。通过我们的分步指南增强您的网络稳定性。\n该文章《Netplan：在Ubuntu 26.04上配置静态IP地址和DNS》首次出现在Linux Today上。"
+  },
+  "a28f6c1b70559f75d9c15bd69f4dd26b": {
+    "id": "a28f6c1b70559f75d9c15bd69f4dd26b",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/06/what-is-myna-ubuntu-ai-dictation",
+    "title_en": "Ubuntu’s ‘Myna’ project lets you talk instead of type – what is it?",
+    "summary_en": "Ubuntu is working on speech-to-text AI transcription so you can talk to type. It's powered by project Myna. Here's how it'll work and why it's adding it.\nYou're reading Ubuntu&#8217;s &#8216;Myna&#8217; project lets you talk instead of type – what is it?, a blog post from OMG! Ubuntu. Do not reproduce elsewhere without permission.",
+    "pub_date": "Tue, 30 Jun 2026 16:27:08 +0000",
+    "title_zh": "Ubuntu的‘Myna’项目让你用说代替打字——它是什么？",
+    "summary_zh": "Ubuntu正在推出名为Myna的AI语音转文字工具，计划在Ubuntu 26.10中发布。用户可通过快捷键启动，在本地运行开源模型，语音数据不上传云端。该工具专注于基础听写功能，而非语音助手或桌面控制，旨在提升Linux系统的听写体验，尤其对无障碍访问有重要意义。",
+    "fulltext_zh": "什么是Myna？Ubuntu新AI听写工具详解\n\nUbuntu今年正在添加AI功能，创始人Mark Shuttleworth希望该发行版能成为‘智能体’时代的操作系统。但宏大的抱负始于微小的种子，而第一颗播下的种子是一款名为Myna的语音转文字工具。\n\n距离发布还有4个月（它将在2026年10月推出的Ubuntu 26.10中首次亮相）。\n\n它不需要任何额外操作（它将是一个键盘快捷键，按下后即可避免使用键盘）。\n\n一款由AI驱动的‘轻量级语音转文字应用’。你按下热键，对着电脑说话，就像变魔术一样，你的话就会在屏幕上打出文字。Canonical的工程副总裁表示，在任何你可以打字的文本字段中，你都可以用说话来输入（或者，就我而言，是说话）。\n\n耶，AI。为什么打字现在不酷了？\n\nSeager在Ubuntu峰会上的回答是：\n\n‘为什么你要像动物一样对你的智能体打字，而不是直接跟它说话？’\n\n我打字很优雅，谢谢！\n\n很好，因为当你嘴里塞满甜甜圈口述邮件时，你需要用你的手指去退格删除音频转录模型认为你说的内容。不过，没人能在密码字段中使用听写功能。那太蠢了。\n\n这不是一个融合到GNOME面板中的对话式聊天机器人，也不是一个翻查你root权限的 creepy ‘副驾驶’。这是由语音识别模型驱动的语音听写。Linux上对像样听写功能的需求已经持续了几十年。现在，Canonical准备真正实现它。\n\nSam Altman会用我的声音来训练他的Cylon机器人或其他东西吗？\n\n你的声音不会去任何地方。Ubuntu将使用一个本地的、开源的模型，在你的设备上本地运行。没有云端AI服务。你的麦克风只有在按下相关热键时才会唤醒，音频在内存中处理后就会被丢弃。至少，计划是这样的。\n\n目前这还只是目标和示意图（因此我开头用了关于种子的华丽比喻）。它详细描述了流程：一个沙盒化的组件处理音频，而Myna则管理时间和地点。\n\nCanonical的示意图来自……\n\n啊，所以我没法测试这个。\n\n现在还不行（但时间在流逝）。Canonical一直在收集那些已经在其他地方使用听写工具的用户反馈，以帮助调整具体细节。所以还有时间喊叫，如果喊叫是你的风格的话，而且如果你经常使用听写功能，那很可能就是。\n\n那么，这是一个伪装成旗舰功能的 niche 功能。\n\n没有人会为了好玩而对着终端口述shell命令（这种新鲜感大概只能持续4分10秒）。但对于长篇文字来说，语音转文字被那些喜欢自己声音的人、以及说话比打字快的人所使用。\n\n除了风险投资人边坐板凳边写提案的场景外，真正的提升在于无障碍访问。Ubuntu上的文字转语音工具向来不以出色著称。如果AI热潮能让它们得到改进，那挺好的，对吧？\n\n如果我不说英语，它还能用吗？\n\n语言覆盖范围将取决于Myna所连接的模型。Canonical一直在关注一些模型，其中一些确实提供多语言版本。10月份再来问我吧。\n\n但它不是语音助手，对吧？\n\n对——这是有意为之。语音命令、桌面控制、唤醒词和持续监听都不在Myna的范围内（目前如此）。Canonical表示，它希望先专注于把基础功能做好。\n\n那将是头一回。\n\nMyna鸟以模仿人类语言而闻名（惊人地逼真），所以这个名字就是对此的呼应。不过在这里，Myna并不是模仿你，它只是把你的话放到正确的框里，这个名字并没有体现出这种分工，但嘿：这只是一个小问题；Ubuntu会让我选择退出，对吧？\n\n幸运的是，是的。Ubuntu中的AI功能将使用体积过大而无法捆绑在操作系统安装程序中的模型，因此它们将是可移除的Snap包。AI倦怠和‘工作废料’疲劳是真实存在的，所以输入‘sudo snap remove all-the-ai’可能会让人感到畅快。\n\n打字？你确定不是尖叫？\n\n‘Linux上终于有了更好的听写功能’。\n\n‘嘿Myna，天气怎么样/播放mgk/重新订购厕纸’。\n\n在《Myna/minor》节目中，我们讨论各种事物的‘是什么’和‘怎么做’，深入细节，没有炒作和行话。\n\nMyna/minor，懂了吗？不懂？观众真难伺候。"
+  },
+  "f77e252485a804ea92754d3a5d6be411": {
+    "id": "f77e252485a804ea92754d3a5d6be411",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/proton-lumo-2/",
+    "title_en": "Lumo 2.0: Proton's Private Alternative to ChatGPT and Claude Just Got Better",
+    "summary_en": "The Lumo 2.0 Max model reportedly feels just as sharp as the latest offerings from OpenAI and Anthropic.",
+    "pub_date": "Tue, 30 Jun 2026 14:42:23 GMT",
+    "title_zh": "Lumo 2.0：Proton 推出的 ChatGPT 与 Claude 私有替代方案迎来升级",
+    "summary_zh": "Proton 发布了 Lumo 2.0，这是其开源 AI 助手的最新版本。新版本引入了用户可控的记忆功能、带来源引用的实时网络搜索、图像分析编辑与生成能力，以及 AI 模型切换器。Lumo 2.0 Max 模型据称在多项用例中与 OpenAI 和 Anthropic 的最新模型表现相当。",
+    "fulltext_zh": "Lumo 2.0：Proton 推出的 ChatGPT 与 Claude 私有替代方案迎来升级\n\nLumo 2.0 Max 模型据称在性能上与 OpenAI 和 Anthropic 的最新模型不相上下。\n\n（合作伙伴链接）去年上线，让我们得以一窥 Proton 在 AI 助手领域的尝试。我发现这款开源 AI 助手作为新发布的产品，运行得相当不错。\n\n几个月后，Lumo 1.3 为助手带来了加密工作区功能，让我可以将相关聊天、文件和自定义指令整合在一起。我也尝试了这一功能，配合 Proton Drive 集成直接拉取文件，效果很好。\n\n随后，我用 Lumo 为我们的社交媒体构思了一些点子，它表现尚可，尽管有时会完全偏离目标。此外，它无法读取图像，这在我的工作流程中不太理想。\n\n幸运的是，随着最新、最先进的 AI 助手的发布，这一情况正在改变。\n\nLumo 2.0 有哪些新功能？\n\n在此之前，这款猫脸助手并没有真正的记忆能力。它可以保存聊天历史并将相关工作分组到工作区中，但从未在独立对话之间记住关于你的任何信息。\n\n市场上所有主流 AI 聊天机器人早已实现了这一点。Lumo 2.0 改变了这一局面，你现在可以利用用户可控的记忆功能，自行配置 Lumo 从聊天中保留哪些信息。\n\n此外，之前已有的网络搜索功能，在开启后完全依赖模型自身的知识。而 Lumo 2.0 的实现则引入了带来源引用的实时搜索结果，因此关于近期事件的回答应该更加可靠。\n\n另一个被填补的空白是图像功能，现在可以在任何加密的 Lumo 对话中分析、编辑和生成图像。\n\nProton 还在此次发布中包含了多个模型。Proton 的 CEO 兼创始人表示，根据公司内部的用户测试，后者（指 Lumo 2.0 Max 模型）在多项用例中与 OpenAI 和 Anthropic 的最新模型表现相当。\n\n我亲自体验了一番\n\n首先，我问 Lumo 它运行的是哪个版本，想看看它是否了解自己的内部组件构成。之前的 Lumo 版本只是猜测了一番，然后引导我前往 Lumo 的支持页面获取更多信息。\n\n但在 2.0 版本中，我得到了关于此次发布的概述，同时我还注意到了新的 AI 模型切换器，它让我可以在多个模型之间切换，以及通过设置面板开启思考模式。在此之前，Lumo 先介绍了自己的功能：可以根据保存的偏好个性化聊天、完全避开项目聊天，并以零访问加密方式存储所有内容。\n\n开启后，面板显示了一个空的已保存记忆列表，提供了从最近聊天中生成条目或手动添加的选项。我手动添加了一条，告诉 Lumo 我更喜欢事实而非幻觉，清晰而非术语。\n\n升级后的网络搜索\n\n我输入了“加密货币背后的炒作是什么？”，这是一个需要最新信息而非模型已有知识的问题。\n\n起初，它给出了一个关于我所问问题的长篇总结，但内容来自其训练知识。\n\n我再次询问 Lumo，这次用了略有不同的提示：“为什么加密货币现在这么火？”，它在回答前明显进行了网络搜索。随后它返回了一份 2026 年 6 月的分析，涵盖了比特币近期的价格下跌、流入支持加密货币竞选活动的政治资金，以及 DeFi 叙事日益受到关注的情况。\n\n为了支撑这些信息，答案旁边的来源面板引用了权威媒体的报道，如 Business Insider、Forbes、Seeking Alpha 和 Politico。\n\n接着，我上传了官方的 Lumo 2.0 发布横幅，并要求它根据我们首页的链接作为参考，将品牌元素转换为我们自己的品牌风格。Lumo 开始处理……"
+  },
+  "27ffad195b287ac7af12e3d2a8a0c668": {
+    "id": "27ffad195b287ac7af12e3d2a8a0c668",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/linux-foundation-agent-name-service-announcement/",
+    "title_en": "AI Agents Could Get Verified Identities, Courtesy of DNS",
+    "summary_en": "The open standard would tie every agent's identity to certificates and a public transparency log nobody can edit.",
+    "pub_date": "Tue, 30 Jun 2026 08:58:33 GMT",
+    "title_zh": "AI Agent 可通过 DNS 获得验证身份",
+    "summary_zh": "Linux 基金会宣布推出开放标准 ANS（Agent Name System），为 AI Agent 提供基于 DNS 的验证身份。每个 Agent 将获得类似 DNS 的名称和版本号，并通过证书和不可篡改的公开日志记录注册、续期和撤销信息。该标准基于现有 IETF 草案，GoDaddy 已提前部署，使用现有基础设施处理超过 1 亿个 SSL/TLS 证书。",
+    "fulltext_zh": "AI Agent 可通过 DNS 获得验证身份\n\n该开放标准将每个 Agent 的身份与证书和无人能编辑的公开透明日志绑定。\n\nLinux 基金会表示，它计划推出 ANS（Agent Name System），这是一个开放标准，扩展了 AI Agent 证明自身身份的方式。\n\n在实践中，这意味着能够查找一个 Agent，并检查谁在真正运营它、它被授权做什么，以及其代码或历史记录中是否有任何更改。\n\n引用一篇研究论文，Linux 基金会表示，82% 的高管计划在未来一到三年内采用 AI Agent，而大多数高管在 Agent 投入生产运行后，仍然没有可靠的方法来验证或管理它们。\n\n目前，没有任何机制阻止一个 Agent 声称自己是 support-agent.acme.com，因为没有人能够验证这是否属实。\n\n找到正确的 Agent 同样困难。目前没有任何东西能将 Agent 的名称和能力与一个特定的、经过验证的、你可以实际访问的版本关联起来。ANS 旨在同时解决这两个问题。\n\n在 ANS 下注册的每个 Agent 都会获得一个 DNS 风格的名称，并内置版本号，例如 ans://v1.0.0.my-agent.example.com。只有当 Agent 的域名通过与网站获取普通 TLS 证书相同的 DNS 和 ACME 检查后，该名称才会附带一个身份证书。\n\n每次注册、续期或撤销都会被记录在一个防篡改日志（仅可追加的 Merkle 日志）中，因此在这些事件发生后，任何人都无法编辑 Agent 的历史记录。一个名为 Verifier 的独立离线工具可以在无需实时连接注册表的情况下检查这些记录。\n\n在你认为这是他们新发明的东西之前，事实并非如此。GoDaddy 在 Linux 基金会介入前几个月就已经让 ANS 运行起来，它基于现有的 IETF 草案构建。\n\nGoDaddy 的工程师没有从头构建新的证书和 DNS 系统，而是复用了他们已在生产环境中使用的基础设施。这包括处理超过 1 亿个活跃 SSL 和 TLS 证书的同一证书服务，以及他们现有的 DNS 系统。\n\nGitHub 上的 ANS 组织目前托管着八个仓库。主要仓库是 ans，这是一个采用 MIT 许可证的 Go 代码库，实现了整个技术栈，包括注册表、日志记录和验证器，作为任何人都可以运行的工作参考实现。\n\n当然，现在还为时过早，但据报道，只需安装 Go、openssl、curl 和 jq，整个技术栈大约在 60 秒内就能启动。\n\n一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的技术极客。\n\nLumo 2.0：Proton 推出的 ChatGPT 和 Claude 私有替代方案变得更好\n\n你可以在 Purism 的 Librem 16 Linux 笔记本电脑上花费高达 11,944 美元\n\nLinux 用户免费获得此功能！Brave Origin 对其他所有人售价 59.99 美元\n\nPINE64 的智能音箱是 Amazon Echo 的 Home Assistant 驱动替代品\n\nUbuntu 上 ARM64 系统内核补丁期间无需重启\n\n成为更好的 Linux 用户\n\n通过 FOSS 周刊，你可以学习有用的 Linux 技巧、发现应用程序、探索新的发行版，并随时了解 Linux 世界的最新动态\n\n太好了！您已成功注册。\n\n欢迎回来！您已成功登录。\n\n您已成功订阅 It's FOSS。\n\n您的链接已过期。\n\n成功！请检查您的电子邮件以获取用于登录的魔法链接。\n\n成功！您的账单信息已更新。\n\n您的账单未更新。"
+  },
+  "98ffdef6a035d9d4adb7cb8c3ea9446d": {
+    "id": "98ffdef6a035d9d4adb7cb8c3ea9446d",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Q2-2026-Highlights",
+    "title_en": "Performance Optimizations, NVIDIA Vera, Arc Pro B70 & Other Linux Highlights From Q2",
+    "summary_en": "As the last planned article on Phoronix of Q2, here is a look back at what excited readers the most in the second quarter. There were 872 original news articles this quarter as well as 54 Linux hardware reviews / multi-page featured benchmark articles. Here is what excited readers the most over these past three months...",
+    "pub_date": "Tue, 30 Jun 2026 20:24:26 -0400",
+    "title_zh": "性能优化、NVIDIA Vera、Arc Pro B70 及其他 Q2 Linux 亮点",
+    "summary_zh": "本文回顾了2026年第二季度Phoronix上最受读者关注的Linux新闻与硬件评测。亮点包括：Intel Arc Pro B70和NVIDIA Vera CPU的Linux硬件测试、Linux内核持续优化、AWS工程师报告Linux 7.0导致PostgreSQL性能减半、Steam on Linux市场份额在3月飙升并超过macOS两倍、Arch Linux遭遇恶意软件事件影响超1500个包、Linux内核历经六年终于移除strncpy API、ReactOS里程碑式地能运行《半条命》、macOS 27 Beta导致Asahi Linux无法启动，以及Valve开发者改进低显存硬件的Linux游戏体验。",
+    "fulltext_zh": "性能优化、NVIDIA Vera、Arc Pro B70 及其他 Q2 Linux 亮点 - Phoronix\n性能优化、NVIDIA Vera、Arc Pro B70 及其他 Q2 Linux 亮点\n发布于 2026年6月30日 晚上8:24 EDT\n\n作为Phoronix在第二季度的最后一篇计划文章，这里回顾一下过去三个月中最让读者兴奋的内容。本季度共有872篇原创新闻文章，以及54篇Linux硬件评测/多页专题基准测试文章。以下是过去三个月中最受读者关注的内容。\n\n从Intel Arc Pro B70到NVIDIA Vera CPU的Linux硬件测试非常受欢迎。此外，还有各种持续的Linux性能基准测试，涉及软件优化及其他独特主题。在新闻方面，持续的Linux内核优化、内核/邮件列表的争议，以及AI/LLM带来的持续动荡，吸引了本季度众多读者的关注。\n\n如果您喜欢本季度Phoronix上超过900篇的原创文章，请至少在浏览本网站时禁用任何广告拦截器。或者您可以订阅Phoronix Premium，以无广告方式浏览网站、在单页上查看多页文章、使用原生暗色模式及其他功能。通过小费支持也同样感激不尽，以帮助在网页出版这些艰难时期继续维持运营，尤其是Phoronix是由一人独立运营的。本月也是Phoronix创办22周年的纪念。\n\n本季度最受欢迎的新闻包括：\n\nAWS工程师报告Linux 7.0导致PostgreSQL性能减半，但修复可能不易\n一位亚马逊/AWS工程师在周五发出警报，称当前的Linux 7.0开发内核导致PostgreSQL数据库服务器的吞吐量约为先前内核版本的一半。导致PostgreSQL性能减半的罪魁祸首已知，但回滚似乎不太可能发生，目前建议PostgreSQL可能需要进行适配。\n\nSteam on Linux使用量在三月飙升——超过macOS游戏市场份额的两倍\n如果Valve最新的Steam调查月度数据准确，那么Steam on Linux在三月经历了一个非常火爆的月份。Steam on Linux现已超过5%的门槛，并且是Steam on macOS市场份额的两倍以上。\n\nArch Linux现认为恶意软件事件已受控：受影响包超过1500个\n当天开始时，Arch Linux的AUR用户贡献仓库发现有超过400个包被恶意软件入侵。到当天结束时，他们认为所有受影响的提交都已被处理。但最终受影响包的数量超过了1500个。\n\nLinux历经六年工作、360多个补丁后终于移除strncpy API\nLinux 7.2终于从Linux内核中移除了strncpy API。用于复制指定字节数的strncpy()函数早已被弃用，经过六年的工作和数百个补丁，Linux内核中不再有strncpy接口的用户，因此它现在已被移除。\n\nReactOS“开源Windows”达到能够运行《半条命》的里程碑\nReactOS，这个致力于与微软Windows计算机程序和驱动程序二进制兼容的开源操作系统，达到了一个里程碑：能够在这个开源平台上运行经典游戏《半条命》。\n\nmacOS 27 Beta破坏启动Asahi Linux的能力\nAsahi Linux警告其用户不要尝试苹果本周发布的新macOS 27“Golden Gate”测试版。在macOS 27测试版中，Asahi Linux分区不再可见，因此无法启动您的Apple Silicon Linux安装。\n\nValve开发者改进有限显存硬件的Linux游戏体验\nValve Linux图形驱动团队（主要致力于RADV Vulkan驱动）的Natalie Vock提出了一项有趣的新创举：针对Linux内核和KDE的补丁，显著改善了那些运行在有限显存系统上的用户的游戏体验。例如，对于图形……"
+  },
+  "e4dcb7878561932639ce95009097dad6": {
+    "id": "e4dcb7878561932639ce95009097dad6",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/COSMIC-Epoch-1.2",
+    "title_en": "COSMIC Epoch 1.2 Desktop Fixes Flickering Issues For Intel Graphics",
+    "summary_en": "Just a week after the COSMIC Epoch 1.1 release with its slick new system monitor, COSMIC Epoch 1.2 is now available for this Rust-based desktop developed by System76...",
+    "pub_date": "Tue, 30 Jun 2026 18:30:38 -0400",
+    "title_zh": "COSMIC Epoch 1.2 桌面环境修复英特尔显卡闪烁问题",
+    "summary_zh": "System76 开发的 Rust 桌面环境 COSMIC Epoch 1.2 发布，主要修复了英特尔 Meteor Lake 及后续架构显卡的闪烁问题。合成器不再尝试在英特尔核显与 AMD/NVIDIA 独显之间进行 DMA 拷贝，同时修复了工作区概览打开时的闪烁。此外，新增 AVIF 图像支持，并包含多项应用小部件更新和启动器闪烁修复。",
+    "fulltext_zh": "COSMIC Epoch 1.2 桌面环境修复英特尔显卡闪烁问题 - Phoronix\nCOSMIC Epoch 1.2 桌面环境修复英特尔显卡闪烁问题\n发布于 2026 年 6 月 30 日 下午 6:30 EDT\n\n在推出其炫酷的新系统监视器仅一周后，COSMIC Epoch 1.2 现已面向这款由 System76 开发的基于 Rust 的桌面环境发布。\n\nCOSMIC Epoch 1.2 的一个显著变化是对 COSMIC 合成器进行了修改，以修复与较新英特尔显卡相关的一个怪癖。自 Meteor Lake 以来，一些用户报告了闪烁问题，这一问题也延续到了 Arrow Lake 和 Lunar Lake。COSMIC-Workspaces 此前一直采用一种变通方案，而现在合成器已实现了自己的解决方案：在英特尔核显与任何 AMD/NVIDIA 独立显卡（常见于笔记本电脑）之间进行拷贝时，不再尝试从较新的英特尔芯片进行 DMA 拷贝。\n\nCOSMIC 合成器还修复了打开工作区概览时的闪烁问题。与此同时，COSMIC Background 新增了 AVIF 图像支持。COSMIC Epoch 1.2 的其他变化包括应用小部件更新、COSMIC 启动器打开时的闪烁修复，以及各种其他修复。\n\n关于 COSMIC Epoch 1.2 的下载和更多详情，请访问 Phoronix。\n\nVim 补丁提升 GTK3 Wayland 性能：\"重大里程碑\"\nCOSMIC Epoch 1.1 发布，带来 COSMIC-Monitor 和合成器改进\nXfce Wayland 合成器迎来首个预览/Alpha 版本\nFlatpak 1.18 发布，集成 AMD ROCm\n广泛使用的 libinput 因任意 root 代码执行漏洞而更新\nCOSMIC 现已实现 Wayland 指针约束，提升游戏体验\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\n\"令人作呕的\" Linux sched_ext 源代码在 Linus Torvalds 投诉后重构\nRed Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统\nGCC 编译器的一行 x86 修改为现代 Intel/AMD CPU 带来 +12% 基准测试提升\nSteam Machine 发布，售价 1049 至 1428 美元\nCOSMIC 的新系统监视器看起来非常炫酷\nNourish：一款由 Vulkan 驱动、支持无限滚动/平移的新 Wayland 合成器\nLinux 缓存感知调度扩展带来更高性能：MySQL 性能提升高达 360%\nLinux 7.2 暂存区仍在努力驯服 Realtek RTL8723BS \"驱动野兽\"\n\n享受无广告浏览\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由 Phoronix Media 所有\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "aeacbd2621381dc47403928d8eaa1f00": {
+    "id": "aeacbd2621381dc47403928d8eaa1f00",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/GraalVM-Community-25.1.3",
+    "title_en": "GraalVM CE 25.1.3 Gets Native Image \"Hello World\" Program Down To <em>Just</em> 6.5MB",
+    "summary_en": "GraalVM, the advanced JDK focused on ahead-of-time (AOT) Native Image compilation and since last year began shifting focus to more non-Java languages like Python and JavaScript,  is out with its newest community feature release. GraalVM Community Edition 25.1.3 is now available with some interesting changes in tow...",
+    "pub_date": "Tue, 30 Jun 2026 16:11:40 -0400",
+    "title_zh": "GraalVM CE 25.1.3 将 Native Image “Hello World” 程序缩小至仅 6.5MB",
+    "summary_zh": "GraalVM Community Edition 25.1.3 发布，带来了多项新特性，包括支持 JIT 编译的录制与回放、新的反汇编工具、可选常量盲化支持，以及性能与调试改进。最引人注目的是，通过压缩镜像堆元数据和存储，将 Linux AMD64 上的 HelloWorld 程序体积缩小至约 6.5MB。此外，还新增了 Web Image 实验性后端，可将 Java 应用编译为 WebAssembly 模块。",
+    "fulltext_zh": "GraalVM CE 25.1.3 将 Native Image “Hello World” 程序缩小至仅 6.5MB - Phoronix\n\nGraalVM CE 25.1.3 将 Native Image “Hello World” 程序缩小至仅 6.5MB\n发布于 2026年6月30日 下午4:11 EDT。\n\nGraalVM 是一款专注于提前（AOT）Native Image 编译的高级 JDK，自去年起开始将重心转向更多非 Java 语言（如 Python 和 JavaScript）。如今，它迎来了最新的社区功能版本。GraalVM Community Edition 25.1.3 现已发布，带来了一些有趣的变化。\n\nGraalVM 25.1.3 增加了对使用 Graal 编译器录制和回放 JIT 编译的支持，新增了一个反汇编工具，并提供了针对不可信代码的可选常量盲化支持。此外，还有性能改进、调试增强、兼容性提升、Linux 构建默认生成位置无关可执行文件（PIE），以及其他增强功能。同时，作为 JavaScript 实现的 GraalJS 和作为 Python 实现的 GraalPy 也获得了更多语言支持，功能更加丰富。\n\nGraalVM 25.1.3 还引入了 Web Image 作为 GraalVM Native Image 的一个新的实验性后端，可将 Java 应用提前编译为带有 JavaScript 包装器的 WebAssembly 模块。\n\n最让我惊讶的一项变更，是通过进一步压缩来减小 Native Image 体积：\n\n“通过压缩镜像堆元数据和存储（包括模块元数据、运行时动态访问元数据和符号表数据），并对简单的常量 String.format 和 String::formatted 调用进行内联优化，从而减小了 Native Image 体积。这使得 Linux AMD64 上的 HelloWorld 应用体积缩小至约 6.5 MB。”\n\n也就是说，让我惊讶的是，一个基本的“Hello World”程序竟然能缩小到……\n也许是我对其他语言太习惯了，但一个“Hello World”程序生成 6.5MB 的二进制文件？！我很好奇之前 HelloWorld AMD64 Linux 构建的体积有多大，于是翻查了相关活动记录。Graal 的大部分开发工作都在 Oracle 闭门进行，但有人就体积影响提出了公开问题。本次版本中额外的 Native Image 压缩“整体上应能使镜像体积减少约 1-2%。”\n\n“总体而言，与 25.0.x 版本相比，25.1 版本在镜像体积上会有更大的改进，因为我们在这一领域进行了多项较小的优化（有些仍在进行中），这些优化累积起来效果显著。同时，由于更紧凑的表示方式，RSS 也有较小的正面影响。由于 String format 的内联优化，HelloWorld 镜像体积会出现非常大的下降。”\n\n但即便如此，将 HelloWorld 应用缩小到 6.5MB；是我太挑剔，还是对于大多数“hello world”程序来说，这仍然相当臃肿？\n\n关于 GraalVM Community 25.1.3 版本的下载和更多详情，请访问 Phoronix.com。\n\n相关文章：\nGit 2.55 发布，默认启用 Rust 支持\nZLUDA v6 让 PhysX 在 AMD GPU 上运行良好，但失去商业资助\n为 LLVM 开发的 BASIC09 编程语言前端\nRust PNG 图像解码器现在更快：惠及 Chrome、GNOME 等\nEpic Games 宣布开源版本控制系统 Lore\nGit 2.55-rc0 发布，默认启用 Rust\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。他还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\n“令人作呕”的 Linux sched_ext 源代码在 Linus Torvalds 投诉后重构\nRed Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统\nGCC 编译器的一行 x86 更改使现代 Intel/AMD CPU 基准测试提升 +12%\nSteam Machine 发布，售价 1049 至 1428 美元\nCOSMIC 的新系统监视器看起来非常流畅\nNourish：一款由 Vulkan 驱动、支持无限滚动/平移的新 Wayland 合成器"
+  },
+  "3b4491864599d1c9b09c1e0260d56cee": {
+    "id": "3b4491864599d1c9b09c1e0260d56cee",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Fedora-45-Stratis-Storage",
+    "title_en": "Fedora 45 Looks To Finally Offer Install Support For Stratis Storage",
+    "summary_en": "Ever since RHEL deprecated their short-lived Btrfs plans, Red Hat engineers over the past decade have been developing Stratis Storage as their storage management solution leveraging XFS, LUKS, DM, and their Rust-based daemon. While Stratis Storage has been available in Fedora Linux going all the way back to Fedora 28, until now there hasn't been the option of using it for the root file-system on new Fedora installations. Finally with Fedora 45 that may change...",
+    "pub_date": "Tue, 30 Jun 2026 14:00:00 -0400",
+    "title_zh": "Fedora 45 最终计划为 Stratis 存储提供安装支持",
+    "summary_zh": "Fedora 45 可能将首次支持在安装过程中使用 Stratis 存储作为根文件系统。Stratis 是 Red Hat 开发的基于 XFS、LUKS、DM 和 Rust 守护进程的存储管理解决方案，自 Fedora 28 起就已可用，但一直缺乏安装程序支持。Red Hat 工程师 Vojtech Trefny 提交的变更提案将为 Anaconda 安装程序添加 Stratis 支持，允许自动安装或手动分区时将其配置为根文件系统。该提案仍需 Fedora 工程指导委员会投票，若通过，Fedora 45 将正式支持 Stratis 安装。",
+    "fulltext_zh": "Fedora 45 最终计划为 Stratis 存储提供安装支持 - Phoronix\nFedora 45 最终计划为 Stratis 存储提供安装支持\n发布于 2026 年 6 月 30 日下午 2:00（美国东部时间）。\n\n在 RHEL 弃用其短命的 Btrfs 计划后，Red Hat 工程师在过去十年中一直在开发 Stratis 作为其存储管理解决方案，该方案利用 XFS、LUKS、DM 及其基于 Rust 的守护进程。尽管 Stratis 存储早在 Fedora 28 中就已可用，但直到现在，在新安装的 Fedora 系统中仍无法将其用作根文件系统。最终，随着 Fedora 45 的到来，这一情况可能会改变。\n\n一项变更提案已提交，旨在为 Fedora 45 中的 Anaconda 安装程序添加 Stratis 存储支持。该支持将允许通过 Anaconda WebUI 进行自动安装或手动分区，以将 Stratis 存储设置为根文件系统。这项由 Red Hat 工程师 Vojtech Trefny 提交的变更提案将使 Stratis 成为 Fedora 中可引导、受安装程序支持的解决方案。\n\n“这一变更将使 Stratis 成为 Fedora 中可引导、受安装程序支持的解决方案。尽管 Stratis 已在 Fedora 中可用多年，但此变更集成了原生 Kickstart 支持，允许用户将 Stratis 配置为其默认的端到端存储管理实现，适用于主根（/）文件系统和辅助文件系统。\n\nStratis 通过单一统一管理层提供现代存储功能，如精简配置、快照、缓存分层和加密。要实现类似的功能集，通常需要手动叠加多种技术，每种技术都有各自的工具和配置。Stratis 将其简化为单一工具。\n\n尽管 Stratis 自 Fedora 28 起就已可用，但缺乏安装程序支持一直是其采用的主要障碍：用户无法在不使用不受支持的变通方法的情况下将 Stratis 用于根文件系统。此变更移除了这一障碍，使 Stratis 成为与 Btrfs 和 LVM 并列的一流安装选项。”\n\n该提案仍需 Fedora 工程指导委员会（FESCo）投票表决，但如果一切顺利，随着今年晚些时候 Fedora 45 的发布，我们最终将看到基于 Stratis 存储的 Fedora Linux 安装成为现实。最终其采用情况以及它与 Fedora Workstation 中 Btrfs 的对比将值得关注。\n\nFedora 45 考虑为机密计算使用精简版 GRUB 引导加载程序\nFedora 44 RISC-V 镜像发布，包括用于更广泛 RISC-V 硬件支持的新“Omni”内核\nFedora 45 考虑使用 PURL 元数据唯一标识软件包\nFedora 退役其 Deepin 桌面软件包\nFedora 尚未决定 Fedora Linux 45 的 x86_64-v3 软件包\nFedora 44 发布，持续引领 Linux 创新前沿\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动程序及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\n“令人作呕”的 Linux sched_ext 源代码在 Linus Torvalds 投诉后重构\nRed Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统\nGCC 编译器的一行 x86 更改使现代 Intel/AMD CPU 基准测试提升 12%\nSteam Machine 发布，售价 1049 至 1428 美元\nCOSMIC 的新系统监视器看起来非常流畅\nNourish：一款由 Vulkan 驱动、支持无限滚动/平移的新 Wayland 合成器\nLinux 缓存感知调度扩展带来更佳性能：MySQL 性能提升高达 360%\nLinux 7.2 暂存区仍在努力驯服 Realtek RTL8723BS“野兽级驱动程序”\n\n虽然提供无广告浏览，\n单页文章查看\n法律声明"
+  },
+  "4aae0f01e49cc94f29eafd9747d852e0": {
+    "id": "4aae0f01e49cc94f29eafd9747d852e0",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/linux-72-features",
+    "title_en": "Linux 7.2 Features: Cache Aware Scheduling, USB4STREAM, AMD ISP4, AMDGPU HDMI 2.1 FRL",
+    "summary_en": "Linux 7.2 is working toward release in August with its more than 43 million lines in the codebase. With Linux 7.2 there are many new changes in tow as summed up in today's feature overview.",
+    "pub_date": "Tue, 30 Jun 2026 12:20:00 -0400",
+    "title_zh": "Linux 7.2 特性：缓存感知调度、USB4STREAM、AMD ISP4、AMDGPU HDMI 2.1 FRL",
+    "summary_zh": "Linux 7.2 内核即将于 2026 年 8 月发布，代码库超过 4300 万行。主要新特性包括：缓存感知调度优化现代 Intel/AMD CPU 的任务放置；USB4STREAM 实现 USB4/Thunderbolt 系统间数据传输；Apple M3 设备可启动主线内核但尚不可用；AMD ISP4 驱动终于进入主线；AMDGPU 初步支持 HDMI 2.1 FRL；以及防止文件系统泛滥的新指南。此外还有 Intel TDX 运行时更新、Zen 6 准备、MGLRU 改进等众多优化。",
+    "fulltext_zh": "Linux 7.2 特性：缓存感知调度、USB4STREAM、AMD ISP4、AMDGPU HDMI 2.1 FRL - Phoronix\nLinux 7.2 特性：缓存感知调度、USB4STREAM、AMD ISP4、AMDGPU HDMI 2.1 FRL\n发布于 2026 年 6 月 30 日 12:20 PM EDT。\n正在努力于 8 月发布，其代码库超过 4300 万行。Linux 7.2 带来了许多新变化，正如今天的特性概述所总结的那样。\n\nLinux 7.2 中最大的终端用户亮点包括：合并了缓存感知调度，以帮助在现代 Intel/AMD CPU 上进行任务放置；非常实用的 USB4STREAM，用于使用 USB4/Thunderbolt 的系统间数据传输；Apple M3 现在可以在主线内核上启动，但尚不可用；AMD ISP4 驱动终于进入主线；初步的 AMDGPU HDMI 2.1 FRL 支持；以及防止 Linux 内核中文件系统进一步泛滥的新指南。\n\n继续阅读以获取 Linux 7.2 显著变更的更详尽概述。更多 Linux 7.2 内核性能基准测试正在 Phoronix 进行中。\n\nApple M3 设备现在可以使用 Linux 7.2 内核启动，但该支持对终端用户而言尚未达到任何实用阶段。\n\n缓存感知调度已合并，用于改善具有多个最后一级缓存（LLC）域的 CPU 上的任务放置。\n\nIntel TDX 现在支持运行时更新，以便在避免重启/停机的情况下应用重要的安全更新，适用于可信域扩展。\n\n- AMD 在音频协处理器方面正在为其下一代音频 IP 准备“重大设计变更”。\n\n为 Zen 6 做更多准备。\n\nAMD ISP4 驱动已合并，最终实现了 HP ZBook Ultra G1a 笔记本电脑及其他未来高端 AMD Ryzen 笔记本电脑上的网络摄像头功能。\n\nIntel EDAC 驱动为 Diamond Rapids 和 Nova Lake H 做准备。\n\n- ARM64 方面没有太多进展，因为开发者被 AI 驱动的修复所淹没。\n\nRISC-V 减少内核启动开销，并在 Linux RISC-V defconfig 中默认启用 ESWIN SoC 支持。\n\nARM64 NEON 的 CRC64 内联函数现在可在 32 位 ARM 上工作。\n\n继续淘汰 i486 CPU 支持，该支持最初在 Linux 7.1 中被弃用/禁用。\n\n引入 Panther Lake R，作为新的“加固型”Panther Lake SoC 版本。\n\n各种电源管理改进。\n\nLinux 内核优化：\n一个不错的 MGLRU 改进，在使用补丁进行的基准测试中，MongoDB 的吞吐量提高了 30~100%。\n更快的轮询性能和其他加速，在我们的测试中也观察到了一些本地网络加速。\n\n缓存感知调度也可以为不同的处理器和不同的工作负载带来一些不错的改进。\n\n更多分配器优化。\n\n改进了匿名/未命名管道的性能，适用于 shell 管道等。\n\n显著降低容器退出/卸载延迟。\n\n更快的 /proc/filesystems 读取。\n\nAMDGPU HDMI 2.1 FRL 支持，终于实现，朝着上游 AMDGPU 驱动中完整 HDMI 2.1 支持的最终目标迈进。\n\n新的 AMDGPU DC 电源模块。\n\nAMD 继续启用下一代图形 IP。\n\n下一代 NPU 硬件。\n\nIntel 为多个 Crescent Island SKU 做准备。\n\nIntel DRM 背景颜色属性支持。\n\nNouveau 对 NVIDIA GA100 加速器的支持。\n\nNVIDIA 开始为“Blackwell-Next”做准备。\n\n其他各种 DRM 内核图形驱动改进。\n\nBcachefs 1.38.6 基准测试：首个不再标记为“实验性”的版本。\n\nIntel Core Ultra X7 Panther Lake 在 Linux 7.1 上的性能。\n\n缓存感知调度在 AMD Zen 5 上对 PostgreSQL、Valkey、网络性能展现出不错的效果。\n\nLinux 6.6 LTS 到 Linux 7.1 基准测试：三年间 AMD Threadripper 性能提升 13%。\n\nGCC 16 生成的二进制文件比 GCC 15 更快，与 LLVM Clang 22 竞争激烈。\n\nLinux 7.1 特性：新 NTFS 驱动、新 Intel + AMD 硬件、性能优化与现代化。\n\n虽然提供无广告浏览、单页文章查看。\n\n法律免责声明、隐私政策、Cookies。\n\n版权所有 © 2004 - 2026。\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "42d97306f8506a135fb553a9eea7ee1e": {
+    "id": "42d97306f8506a135fb553a9eea7ee1e",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/proxmox-datacenter-manager-1-1-adds-automated-host-installations/",
+    "title_en": "Proxmox Datacenter Manager 1.1 Adds Automated Host Installations",
+    "summary_en": "Proxmox Datacenter Manager 1.1 introduces automated host installations, enhancing your virtualization experience. Learn how to optimize your datacenter management now!\nThe post Proxmox Datacenter Manager 1.1 Adds Automated Host Installations appeared first on Linux Today.",
+    "pub_date": "Tue, 30 Jun 2026 07:29:26 +0000",
+    "title_zh": "Proxmox Datacenter Manager 1.1 新增自动化主机安装功能",
+    "summary_zh": "Proxmox Datacenter Manager 1.1 版本引入了自动化主机安装功能，显著提升了虚拟化体验。该更新旨在优化数据中心管理流程，帮助用户更高效地部署和管理虚拟化环境。",
+    "fulltext_zh": "Proxmox Datacenter Manager 1.1 引入了自动化主机安装功能，增强了您的虚拟化体验。立即了解如何优化您的数据中心管理！\n\n该文章最初发表于 Linux Today。"
+  },
+  "496231845dba53974829f424d23fc332": {
+    "id": "496231845dba53974829f424d23fc332",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/biwin-rs200-ddr5-5600-sodimm-32gb-review-2-x-16gb-tested/",
+    "title_en": "Biwin RS200 DDR5-5600 SODIMM 32GB Review: 2 x 16GB Tested",
+    "summary_en": "Uncover the strengths of Biwin RS200 DDR5-5600 SODIMM 32GB in our comprehensive review. We tested 2 x 16GB modules for superior performance insights.\nThe post Biwin RS200 DDR5-5600 SODIMM 32GB Review: 2 x 16GB Tested appeared first on Linux Today.",
+    "pub_date": "Tue, 30 Jun 2026 07:26:02 +0000",
+    "title_zh": "Biwin RS200 DDR5-5600 SODIMM 32GB 评测：2 x 16GB 实测",
+    "summary_zh": "本文全面评测了Biwin RS200 DDR5-5600 SODIMM 32GB内存套件（2 x 16GB模块），通过实际测试揭示了其在性能方面的优势，为Linux用户提供选购参考。",
+    "fulltext_zh": "在我们的全面评测中，深入揭示了Biwin RS200 DDR5-5600 SODIMM 32GB内存套件的优势。我们对2 x 16GB模块进行了测试，以获取卓越的性能洞察。\n\n该文章《Biwin RS200 DDR5-5600 SODIMM 32GB 评测：2 x 16GB 实测》最初发表于Linux Today。"
+  },
+  "8c6f2886910ba2124ec9e7baef9b8c5b": {
+    "id": "8c6f2886910ba2124ec9e7baef9b8c5b",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/ibm-and-red-hat-launch-5b-open-source-security-project/",
+    "title_en": "IBM and Red Hat Launch $5B Open Source Security Project",
+    "summary_en": "Discover how IBM and Red Hat are investing $5 billion in an open-source security project aimed at enhancing cybersecurity for businesses worldwide.\nThe post IBM and Red Hat Launch $5B Open Source Security Project appeared first on Linux Today.",
+    "pub_date": "Tue, 30 Jun 2026 07:20:49 +0000",
+    "title_zh": "IBM与Red Hat启动50亿美元开源安全项目",
+    "summary_zh": "IBM和Red Hat联合宣布投资50亿美元，启动一项开源安全项目，旨在增强全球企业的网络安全防护能力。该项目将聚焦于开源软件的安全开发、漏洞修复及供应链安全，以应对日益复杂的网络威胁。",
+    "fulltext_zh": "了解IBM和Red Hat如何投资50亿美元于一项开源安全项目，该项目旨在增强全球企业的网络安全防护能力。\n\n本文《IBM与Red Hat启动50亿美元开源安全项目》首发于Linux Today。"
+  },
+  "17f9238668c726c5473a9b1892c78a9c": {
+    "id": "17f9238668c726c5473a9b1892c78a9c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/calibre-9-9-e-book-manager-improves-epub-page-counting/",
+    "title_en": "Calibre 9.9 E-Book Manager Improves EPUB Page Counting",
+    "summary_en": "Explore the latest features of Calibre 9.9 E-Book Manager, including improved EPUB page counting for a seamless digital reading experience.\nThe post Calibre 9.9 E-Book Manager Improves EPUB Page Counting appeared first on Linux Today.",
+    "pub_date": "Tue, 30 Jun 2026 07:18:19 +0000",
+    "title_zh": "Calibre 9.9 电子书管理器改进EPUB页面计数",
+    "summary_zh": "Calibre 9.9 电子书管理器发布最新版本，重点改进了EPUB格式的页面计数功能，为用户带来更流畅的数字阅读体验。此次更新提升了页面计数的准确性，使阅读进度管理更加可靠。",
+    "fulltext_zh": "探索Calibre 9.9电子书管理器的最新功能，包括改进的EPUB页面计数，带来无缝的数字阅读体验。\n\n该文章Calibre 9.9电子书管理器改进EPUB页面计数最初出现在Linux Today上。"
+  },
+  "d931e2d4c2fbf768916c89a4102a01ef": {
+    "id": "d931e2d4c2fbf768916c89a4102a01ef",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/upgrade-rocky-linux-9-to-rocky-linux-10-1/",
+    "title_en": "Upgrade Rocky Linux 9 to Rocky Linux 10.1",
+    "summary_en": "Discover the step-by-step guide to upgrade from Rocky Linux 9 to Rocky Linux 10.1 seamlessly and enhance your system's performance and security.\nThe post Upgrade Rocky Linux 9 to Rocky Linux 10.1 appeared first on Linux Today.",
+    "pub_date": "Tue, 30 Jun 2026 07:15:09 +0000",
+    "title_zh": "升级 Rocky Linux 9 至 Rocky Linux 10.1",
+    "summary_zh": "本文提供了一份详细的分步指南，帮助用户从 Rocky Linux 9 无缝升级到 Rocky Linux 10.1，从而提升系统性能与安全性。",
+    "fulltext_zh": "了解如何通过这份分步指南，从 Rocky Linux 9 无缝升级到 Rocky Linux 10.1，并增强系统的性能与安全性。\n\n该文章《升级 Rocky Linux 9 至 Rocky Linux 10.1》最早出现在 Linux Today 上。"
   }
 }
