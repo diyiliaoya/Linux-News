@@ -1395,5 +1395,148 @@
     "title_zh": "升级 Rocky Linux 9 至 Rocky Linux 10.1",
     "summary_zh": "本文提供了一份详细的分步指南，帮助用户从 Rocky Linux 9 无缝升级到 Rocky Linux 10.1，从而提升系统性能与安全性。",
     "fulltext_zh": "了解如何通过这份分步指南，从 Rocky Linux 9 无缝升级到 Rocky Linux 10.1，并增强系统的性能与安全性。\n\n该文章《升级 Rocky Linux 9 至 Rocky Linux 10.1》最早出现在 Linux Today 上。"
+  },
+  "3d5c5a58f49167a8e6ed246ab1c55393": {
+    "id": "3d5c5a58f49167a8e6ed246ab1c55393",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/07/linux-app-release-roundup-june-2026",
+    "title_en": "Linux App Release Roundup (June 2026)",
+    "summary_en": "June was sweltering, but the summer heat didn’t slow down open-source software developers.  Last month delivered a wave of app updates, including the release of Firefox 152 with its streamlined settings, HandBrake resolved its Linux WebM handling and the Audacity 4.0 beta made a brand-new design available for public scrutiny (mainly of the &#8220;much better&#8221; variety). But underneath those highs – yes, I&#8217;m determined to make this heat theme work – a quiet simmer of smaller maintenanc",
+    "pub_date": "Wed, 01 Jul 2026 22:35:00 +0000",
+    "title_zh": "Linux 应用发布汇总（2026 年 6 月）",
+    "summary_zh": "2026 年 6 月，尽管天气炎热，开源软件开发者并未放慢脚步。本月迎来多款应用更新，包括 MPV 播放器新增观看历史功能、SuperFile 文件管理器实现侧边栏可配置、Shotcut 视频编辑器恢复外接显示器支持并引入 Vulkan 渲染选项、Plank Reloaded 扩展坞增加清空垃圾桶音效，以及 Bazaar 应用商店优化移动端搜索筛选。",
+    "fulltext_zh": "Linux 应用发布汇总（2026 年 6 月） - OMG! Ubuntu\n六月酷热难耐，但夏日的热浪并未减缓开源软件开发者的步伐。\n上个月迎来了一波应用更新，包括：\n- 精简设置的版本发布\n- 解决了 Linux 上 WebM 处理的问题\n- 推出了全新设计供公众审视（主要属于“好多了”的那一类）。\n但在这些高潮之下——是的，我决心让这个炎热主题贯穿始终——一系列较小的维护更新也悄然推出……\n今年早些时候。这是一款基于 MPV 的播放器，拥有沉浸式界面、基本视频功能（字幕、音轨、播放列表）并支持视频调整（亮度、对比度、缩放等）。\n六月到来时新增了一个功能。顾名思义，它会显示你最近观看过的历史记录。在没有打开文件的情况下启动应用，主屏幕现在会有一个图标可直接跳转到该功能。\n此版本还修复了打开新文件时应用不会取消暂停的问题，以及在某些桌面任务栏上出现空标题的问题。该应用新增了乌克兰语和泰米尔语翻译。\n可从 Flathub 安装\nSuperFile 终于让侧边栏可配置了\n终端文件管理器\n我们之前介绍过的，发布了\n值得注意的是，侧边栏部分现在可以显示、隐藏或重新排序，允许你精简侧边栏，只显示你使用的部分。文件预览也更加可靠，因为已迁移到 Bubble Tea v2 库。\n元数据面板现在会显示 Linux 上文件的已解码 inode 标志，并在权限列中添加文件类型字节。\n现在可以检测 ELF、PE 和 Mach-O 可执行文件的二进制架构。失败操作的错误消息也传达了更多细节。\n键功能（默认键）可用于在同一目录中打开额外的文件面板。这补充了其他导航修复，例如在跳转到父目录时保持对当前目录的聚焦。\nSuperFile 还有一个新标志和一个\nSuperFile 1.6.0 可从项目网站获取\nShotcut 恢复了外接显示器支持\nOpenGL 还是 Vulkan？由你决定\n开源视频编辑器\n在其最新稳定版本 v26.6.25 中增加了外接显示器支持。该功能通过\n播放器 > 外接显示器\n菜单访问，允许编辑者在第二块屏幕上显示视频预览。\n此版本还引入了对 OpenFX 和 VST2/LV2 插件的实验性支持。目前集成还很基础：没有自定义插件 UI，所有内容都在 CPU 上运行，并且默认没有捆绑兼容的插件。\nLinux 用户可以访问新的\n设置 > 显示方式 > Vulkan\n选项。这需要重启应用才能生效，但在兼容系统上可能会提升性能。此外，Shotcut Snap 包现在使用 Ubuntu 的原生文件选择器，而不是 Qt 的。\n最后，虽然官方发布说明强调了一项新的 HDR 预览窗口功能，但该功能目前无法在 Linux（或 Windows ARM）上运行。\nShotcut 26.6 现已可从 Snap Store 获取\nPlank Reloaded 增加了清空垃圾桶音效\n，经典的 Plank 扩展坞的复兴版（且支持 Wayland）在六月发布了两个小版本。\n其中较奇特的一个为扩展坞增加了音效。当你清空垃圾桶或将文件拖入其中时，你会听到一个声音（有点像 macOS）。这仅在桌面设置中启用了事件音效时才有效，但这是一个可爱的小点缀。\n扩展坞的日历弹出窗口在关闭时不再抛出 GTK 关键警告，并为非英语区域本地化了 AM/PM 标记。在“焦点跟随鼠标”设置下运行时，扩展坞不再抢夺焦点。\nPlank Reloaded 现已可从项目网站获取\nBazaar 摆好了摊位（依然流畅）\n在 Bazaar 0.8.2 中更轻松地找到自适应应用\nBazaar，这款用于管理 Flatpak 和浏览 Flathub 的流畅 GTK4/libadwaita 前端，在最新版本中获得了一些微小但值得赞赏的 UI 调整。\n一个新的移动端搜索过滤器使得在较窄宽度下（对于窗口平铺设置同样有用）找到适配良好的软件更加容易。"
+  },
+  "9c3d213634b791f4ee3bd9e170160e22": {
+    "id": "9c3d213634b791f4ee3bd9e170160e22",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/07/firefox-vulkan-video-decoding-nvidia",
+    "title_en": "Firefox is adding Vulkan video decoding for Nvidia GPUs",
+    "summary_en": "Firefox is adding hardware-accelerated Vulkan Video decoding, saving Nvidia users on Linux the hassle of manually configuring the&#160;nvidia-vaapi-driver&#160;package. The change will be included in Firefox 153, out July 21, but it will not be enabled by default – not to start with. Instead, users will be able to flip a pair of preferences in about:config to try it out, with the awareness that there may be hiccups and edge cases (especially on devices with hybrid graphics, mentioned further dow",
+    "pub_date": "Wed, 01 Jul 2026 14:10:29 +0000",
+    "title_zh": "Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能",
+    "summary_zh": "Firefox 正在为 Linux 上的 Nvidia GPU 添加基于 Vulkan 的硬件加速视频解码支持，该功能将在 Firefox 153 版本中引入，但默认不会启用。用户需要手动开启两项偏好设置，并确保使用 Nvidia 驱动 595.x 或更高版本。此前 Firefox 在 Linux 上对所有 Nvidia 设备禁用了硬件视频解码，导致用户需要借助社区变通方案。新功能基于 FFmpeg 的 Vulkan 解码支持，不仅适用于 Nvidia，也旨在解决 Arm 和嵌入式 GPU 在 Aarch64 Linux 上缺乏硬件视频解码的问题。",
+    "fulltext_zh": "Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能 - OMG! Ubuntu\nFirefox 正在添加硬件加速解码功能，为 Linux 上的 Nvidia 用户省去手动配置的麻烦。\n该变更将包含在 7 月 21 日发布的 Firefox 153 中，但默认不会启用——至少一开始不会。\n相反，用户需要翻转两项偏好设置才能尝试该功能，同时需注意可能存在卡顿和边缘情况（尤其是在配备混合显卡的设备上，下文会进一步提及）。\n考虑到 Nvidia GPU 性能强大（这绝对是轻描淡写），我很惊讶这项功能之前竟然无法正常工作。原来，Firefox 在 Linux 上对所有 Nvidia 设备禁用了硬件视频解码——一刀切式的做法——因此社区变通方案才成为必要。\n在其代码库中添加原生 Vulkan 视频解码路径意味着不再需要变通方案。\nVulkan Video 是一个跨供应商规范，并非 Nvidia 专属。Firefox 的实现基于 FFmpeg 的 Vulkan 解码支持。\nArm 和嵌入式 GPU 是这项工作的初始目标，旨在解决 Aarch64 Linux 上完全缺乏硬件视频解码的问题。\nNvidia 自家的 DGX Spark（一款运行 Ubuntu 的基于 Arm 的桌面 AI 计算机）目前缺少 Firefox 中的硬件视频解码功能，因为 GB10 芯片不支持 VA-API 或 V4L2。Mozilla 的跟踪工作依赖于这项 Vulkan Video 支持。\n在 Beta 版和 Nightly 版中尝试\n没有可供检查的兼容性列表，因为 Firefox 会在你首次启用时测试 GPU 的 Vulkan 支持，所以唯一知道是否有效的方法就是亲自尝试。\n你需要运行 Nvidia 驱动版本 595.x 或更高版本，以及 Firefox 153 beta（或 nightly 版）。\n然后翻转这些偏好设置：\nmedia.hardware-video-decoding-vulkan.enabled\nmedia.hardware-video-decoding-vulkan.direct-export.enabled\n重启 Firefox，然后播放一个使用你的 GPU 支持加速播放的编解码器的视频（任何 H264 视频都是稳妥的选择）。要检查是否生效，可以使用 about:support 或打开终端并运行：\nMOZ_LOG=\"FFmpegVideo:5\" firefox\n在配备双 GPU（即集成显卡和独立 Nvidia 显卡）的笔记本电脑上，一些用户报告称，启用 Vulkan 视频解码后，独立显卡会不必要地唤醒，导致在播放中切换工作区时出现短暂卡顿。\nMozilla 尚未指明该功能将在哪个 Firefox 版本中默认启用，但即使启用，也会设置“门控”机制，以确保只有拥有兼容 Nvidia 驱动和硬件的用户才能使用。"
+  },
+  "ae36638cfb92f84f3470aa1180fdd73e": {
+    "id": "ae36638cfb92f84f3470aa1180fdd73e",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12888",
+    "title_en": "Distribution Release: ArchBang Linux 010726",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The ArchBANG project has released a new version of ArchBANG Linux with another radical change - it has replaced labwc with the Mango Wayland compositor. The new version, labelled as 010726, comes with both graphical and command-line system installers: \"Pleased to announce the release of ArchBang running the....",
+    "pub_date": "",
+    "title_zh": "发行版发布：ArchBang Linux 010726",
+    "summary_zh": "ArchBang 项目发布了新版本 010726，该版本用 Mango 窗口管理器取代了 labwc Wayland 合成器，并完成了从 FruitBang 到 ArchBang 的品牌重塑。新 ISO 镜像包含最新软件包和 Linux 内核，提供图形化与命令行两种安装方式，其中 arch-browser-installer 仍处于测试阶段，建议仅在虚拟机中测试。",
+    "fulltext_zh": "发行版发布：ArchBang Linux 010726 (DistroWatch.com 新闻)\n\nArchBANG 项目发布了一个新版本的 Linux，并带来了另一项重大变化——它用 Mango 窗口管理器取代了 labwc Wayland 合成器。这个标记为 010726 的新版本同时提供了图形化与命令行系统安装程序：\n\n“很高兴宣布运行 Mango 窗口管理器的 ArchBang 版本发布。这标志着从 FruitBang 到 ArchBang 的全面品牌重塑。一张新的 ISO 镜像已于 7 月 1 日按承诺上传，携带最新的软件包和最新的 Linux 内核。入门指南——点击 waybar 工具栏上的黄色火箭图标即可开始。你所需的大部分内容都可以从该菜单中访问。在 ~/Scripts 目录下，你可以找到一些有用的工具，包括 yay 安装程序和 abi-install（一个 GUI 安装程序，对于终端用户来说是可选的/不需要的，但它会保留）。关于安装程序的说明：arch-browser-installer 仍然是一个进行中的工作，请将其视为测试版，目前仅在虚拟机中测试。abi-install 不会消失；它面向那些对终端不太自信的用户，我们有兴趣继续发展这个想法。下载 ISO 镜像并试用一下。一如既往地欢迎反馈和错误报告。”\n\n更多信息请参阅。\n\n近期相关新闻与发布：\n发行版发布：ArchBang Linux 010726\n发行版发布：ArchBang Linux 100126\n发行版发布：ArchBang Linux 0111\n发行版发布：ArchBang Linux 2012.12\n发行版发布：ArchBang Linux 2012.05\n发行版发布：ArchBang Linux 2011.11\n更多 ArchBANG 新闻...\n\nArchBang Linux 是一款基于 Arch Linux 的轻量级发行版。它使用 labwc Wayland 合成器，运行快速、保持最新，适用于桌面和便携系统。除了 GreenBANG，该项目还开发了一个名为 SwayBang 的发行版，采用 Sway Wayland 合成器。\n\nArchBANG Linux（2025 年曾短暂更名为 GreenBANG Linux）\nhttps://archbang.org/\n\n替代用户论坛\nhttps://archbang.org/guide/\nhttp://sourceforge.net"
+  },
+  "b9cb438db9d09b10204e268a018dd898": {
+    "id": "b9cb438db9d09b10204e268a018dd898",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Fedora-Council-AI-Desktop",
+    "title_en": "Fedora Council Seeks To Shutdown Current Discussions Over AI Developer Desktop",
+    "summary_en": "Stemming from the widely varying views over the recent Fedora proposal for an \"AI Developer Desktop\" catering to running local AI and machine learning workloads in pre-configured environments with a seamless hardware-accelerated experience, the Fedora Council issued a statement this evening to effectively shutdown discussions for now over a Fedora AI Developer Desktop and to pause the Fedora Community Initiatives process...",
+    "pub_date": "Wed, 01 Jul 2026 21:40:00 -0400",
+    "title_zh": "Fedora 委员会寻求终止当前关于 AI 开发者桌面的讨论",
+    "summary_zh": "由于 Fedora 社区对“AI 开发者桌面”提案存在广泛分歧，Fedora 委员会发布声明，决定暂时终止该讨论，并暂停社区倡议流程。委员会认为当前流程无效，提案应通过其他正式途径推进。同时，委员会将制定更开放透明的新机制，以更好地纳入社区意见。",
+    "fulltext_zh": "Fedora 委员会寻求终止当前关于 AI 开发者桌面的讨论 - Phoronix\nFedora 委员会寻求终止当前关于 AI 开发者桌面的讨论\n发布于 2026 年 7 月 1 日 美国东部时间晚上 9:40。\n\n由于近期 Fedora 提出的“AI 开发者桌面”提案引发了广泛不同的观点——该提案旨在提供预配置环境，以无缝的硬件加速体验运行本地 AI 和机器学习工作负载——Fedora 委员会今晚发布了一份声明，实际上终止了当前关于 Fedora AI 开发者桌面的讨论，并暂停了 Fedora 社区倡议流程。\n\n今晚的声明部分内容如下：\n\n“Fedora 委员会希望结束关于 AI 开发者桌面提案的讨论，因为我们得出的结论是，当前的社区倡议流程效率低下，因此这项工作不应通过这一机制提出。\n\n当/如果 AI 桌面工作成熟，它可以遵循我们当前的路径成为官方产品，无论是通过作为 Remix 或其他方式的提案，即首先向委员会提交商标/品牌批准的工单，然后向 FESCo 提交变更提案进行技术审查。在这些步骤完成之前，这仍然是一个独立的探索，而非 Fedora 的官方产品。我们鼓励提案者以及对此工作感兴趣的人，仍然考虑在 Fedora 中并为其开展这项工作。这包括拥有一个开放的空间来讨论工作、举行会议，并与具有相同或类似兴趣的其他团体（如 AI/ML SIG）合作。”\n\nFedora AI 开发者桌面提案引发了广泛的观点分歧，从 NVIDIA 的 CUDA 因其闭源性质是否应属于 Fedora 生态系统，到 AI/大型语言模型的伦理和功耗要求。\n\nFedora 委员会的声明进一步补充道：\n\n“AI 开发者桌面倡议提案突显了社区倡议流程未能成为 Fedora 中一个良好的框架，让新想法得以浮现、获得尊重的反馈，并赢得委员会对符合项目当前和/或未来工作的支持。这是委员会必须解决的问题。\n\n作为第一步，我们希望立即暂停社区倡议流程。正在进行的现有倡议（Fedora Forge、Atomic 和 Fedora Docs 2026）将继续获得委员会的全力支持。它们的基础工作将按计划在当前限定的时间内完成，但围绕它们的行政框架可能会演变。\n\n作为第二步，我们希望制定一种新机制，让委员会能够以开放、透明的方式设定战略方向，并更主动地纳入社区声音。我们认识到，在讨论和决策过程中，我们必须更加开放。”\n\nFedora 委员会的完整声明可在以下链接找到。简而言之，目前不会推进 AI 开发者桌面，而作为附带结果，社区倡议流程将被暂停。\n\nFedora 45 终于计划为 Stratis 存储提供安装支持\nFedora 45 考虑为机密计算精简 GRUB 引导加载程序\nFedora 44 RISC-V 镜像发布，包括用于更广泛 RISC-V 硬件支持的新“Omni”内核\nFedora 45 考虑使用 PURL 元数据唯一标识软件包\nFedora 淘汰其 Deepin 桌面软件包\nFedora 尚未决定 Fedora Linux 45 的 x86_64-v3 软件包\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他。\n\n红帽 ARM 工程师放弃 ARM64 Linux Pe"
+  },
+  "767b4a2496a5c4e265ba9f8e2384027e": {
+    "id": "767b4a2496a5c4e265ba9f8e2384027e",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Steam-Survey-June-2026",
+    "title_en": "Steam On Linux Usage Receded A Bit In June",
+    "summary_en": "Back in March Steam on Linux use shot up to 5.33% as a big 3.1% improvement over February. In April it dropped to 4.52% and then fell to 3.99% in May. Valve just published the Steam Survey numbers for June and it points to another minor setback from the recent all-time high of Steam on Linux...",
+    "pub_date": "Wed, 01 Jul 2026 20:23:25 -0400",
+    "title_zh": "Steam On Linux 使用率在六月略有回落",
+    "summary_zh": "根据 Valve 发布的 Steam 调查数据，2026 年 6 月 Linux 平台 Steam 使用率降至 3.69%，较 5 月下降 0.3%，较 3 月的历史高点下降 1.64%。与此同时，macOS 和 Windows 使用率略有上升。简体中文用户占比大幅增长 2.34% 至 24.19%，通常与中国 Steam 用户基数增长相关的 Linux 使用率会下降。SteamOS 仍占 Linux 游戏玩家的约 23%，AMD CPU 在 Linux 游戏玩家中占比接近 67%。",
+    "fulltext_zh": "Steam On Linux 使用率在六月略有回落 - Phoronix\nSteam On Linux 使用率在六月略有回落\n发布于 2026 年 7 月 1 日 晚上 8:23 EDT。\nSteam on Linux 使用率曾飙升至 5.33%，较二月大幅增长 3.1%。在四月，它…… Valve 刚刚发布了六月的 Steam 调查数据，数据显示 Linux 使用率从近期历史高点再次出现小幅回落。\n六月的 Steam 调查数据显示 Linux 使用率为 3.69%，较五月下降 0.3%。或者较三月的历史高点下降 1.64%。Linux 使用率下降，而 macOS 上升 0.05% 至 2.21%，Windows 上升 0.25% 至 94.1%。\n值得一提的是，在六月的调查中，简体中文用户占比大幅增长 2.34%，达到所有 Steam 用户的 24.19%。通常，当中国 Steam 用户基数大幅增长时，Linux 使用率会相应下降。\nSteamOS 仍占所有 Linux 游戏玩家的约 23%。\nLinux 游戏玩家中 AMD CPU 使用率略低于 67%。Steam Deck 和 Steam Machine 采用 AMD 定制 SoC，而 AMD CPU 在 Linux 游戏玩家/爱好者中普遍受欢迎，部分原因在于该公司在开源方面的声誉。\n想要查看 Steam 调查六月全部统计数据的人可以访问以下链接：\nSteam Machine 发布，售价 1049 至 1428 美元\nSteamOS 3.8.10 稳定版发布，更新了 Arch、Steam Machine 支持及 Wayland 桌面默认设置\nValve 开发者为 RADV 驱动发布新的 AMD Anti-Lag 实现\n2026 年五月 Steam 调查（延迟后）：Linux 略低于 4%\nSteamOS 3.8.6 Beta 版发布，初步原生支持 AMD HDMI VRR\nVKD3D-Proton 合并 Vulkan 描述符堆支持\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\nRed Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统\n“令人作呕”的 Linux sched_ext 源代码在 Linus Torvalds 投诉后重构\nGCC 编译器的一行 x86 修改为现代 Intel/AMD CPU 带来 +12% 基准测试提升\nCOSMIC 的新系统监视器看起来非常流畅\nNourish：一款由 Vulkan 驱动、支持无限滚动/平移的新 Wayland 合成器\nCachyOS 2026 年六月版发布，带来更多性能优化\nLinux 缓存感知调度扩展实现更佳性能：MySQL 性能提升高达 360%\nLinux 7.2 暂存区仍在努力驯服 Realtek RTL8723BS “驱动猛兽”\n在享受无广告浏览的同时，\n单页文章查看\n法律声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "98f751b532f19335c5d5f0a3f4a9fe1a": {
+    "id": "98f751b532f19335c5d5f0a3f4a9fe1a",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/KDE-Linux-June-2026",
+    "title_en": "KDE Linux Introduces \"Developer Mode\" Option, Easier Log Collection",
+    "summary_en": "With the start of the new month comes a new progress report on the KDE Linux distribution for the prior month. Even with KDE developers being busy to ship Plasma 6.7 in June, they still accomplished a lot when it comes to KDE Linux...",
+    "pub_date": "Wed, 01 Jul 2026 17:06:06 -0400",
+    "title_zh": "KDE Linux 引入“开发者模式”选项，简化日志收集",
+    "summary_zh": "KDE Linux 在六月取得了多项进展，包括推出初始“开发者模式”，用户只需在 Konsole 中运行 toggle-developer-mode 即可显示默认隐藏的开发者工具和选项，便于调试。此外，KDE Linux 将 CD 抓取应用切换为 Audex，并改进了 QA/测试基础设施，将 RAW 镜像文件转换为混合 ISO，新增 collect-logs 工具简化日志收集，同时完善了文档。",
+    "fulltext_zh": "KDE Linux 引入“开发者模式”选项，简化日志收集 - Phoronix\nKDE Linux 引入“开发者模式”选项，简化日志收集\n2026年7月1日下午5:06 EDT。\n随着新月的到来，KDE Linux 发行版发布了上个月的进展报告。尽管 KDE 开发者在六月忙于发布 Plasma 6.7，他们在 KDE Linux 方面仍然取得了不少成就。\n\nKDE Linux 推出了初始“开发者模式”，用于显示各种默认隐藏的开发者工具和选项，以简化最终用户体验。只需在 Konsole 中运行 toggle-developer-mode 即可启用这个初始开发者模式。\n\n这种易于激活的开发者模式为非开发者用户提供了简洁干净的体验，他们偶尔可能需要切换额外功能来帮助调试问题。目前，toggle-developer-mode 功能相当基础，但未来可能会在此基础上进一步定制开发者体验。\n\n如果你在2026年还在翻录 CD，KDE Linux 现已切换到 Audex 应用，替代 audiocd-kio 用于 CD 翻录。KDE Linux 开发者已成功将 Audex 打包到 Flathub 上。\n\n六月，KDE Linux 在 QA/测试基础设施方面也取得了更多进展，将 KDE Linux 的 RAW 镜像文件转换为混合 ISO（同时也是有效的 ISO 文件），通过新工具简化日志收集，并改进了文档。collect-logs 工具灵感来自 CachyOS 的 bug 报告脚本，用于轻松收集 kscree-doctor、uptime、/etc/fstab 等命令和常见文件的输出。\n\n关于 KDE Linux 在六月期间改进的更多详情，可参见 KDE 开发者 Nate Graham 的文章。\n\nKDE Plasma 6.7.2 修复了最常见的 KWin 崩溃，改进了 Chromium 视频播放\nKDE Plasma 6.7.2 将修复 KWin 最常见的崩溃，Plasma 6.8 在弹出 CD 时不再崩溃\nKDE Plasma 6.7.1 发布，包含首批错误修复\nKDE Plasma 6.8 让多显示器配置更简单\nKDE Plasma 6.7 发布，支持每屏幕虚拟桌面和 Wayland 改进\nKDE Plasma 6.7 在下周发布前进行了最后时刻的修复\n\nMichael Larabel 是 Phoronix.com 的主要作者，于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过20,000篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\nRed Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统\n“令人作呕”的 Linux sched_ext 源代码在 Linus Torvalds 投诉后重构\nGCC 编译器的一行 x86 修改为现代 Intel/AMD CPU 带来 +12% 基准测试提升\nCOSMIC 的新系统监视器看起来非常流畅\nNourish：一个由 Vulkan 驱动的新型 Wayland 合成器，支持无限滚动/平移\nCachyOS 2026年6月版发布，带来更多性能优化\nLinux 缓存感知调度扩展，性能提升高达360%（MySQL）\nLinux 7.2 Staging 仍在努力驯服 Realtek RTL8723BS “驱动野兽”\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "34b59350cb6813efc93129cd526e6d4d": {
+    "id": "34b59350cb6813efc93129cd526e6d4d",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/System76-Lemur-Pro-Panther-Lake",
+    "title_en": "System76 Launches New Lemur Pro Laptop Powered By Intel Panther Lake",
+    "summary_en": "System76 today announced their new Lemur Pro high-end Linux laptop that is now powered by the Core Ultra Series 3 \"Panther Lake\" SoCs...",
+    "pub_date": "Wed, 01 Jul 2026 14:01:20 -0400",
+    "title_zh": "System76 发布搭载 Intel Panther Lake 的新款 Lemur Pro 笔记本电脑",
+    "summary_zh": "System76 发布了新款高端 Linux 笔记本电脑 Lemur Pro，搭载 Intel Core Ultra Series 3 \"Panther Lake\" SoC，提供 14 英寸和 16 英寸版本，电池续航长达约 18 小时，创下该品牌最长续航记录。基础配置起售价为 1999 美元，可选配最高 32GB 内存和 4TB 存储，预装 Pop!_OS 或 Ubuntu 24.04/26.04 LTS。",
+    "fulltext_zh": "System76 发布搭载 Intel Panther Lake 的新款 Lemur Pro 笔记本电脑 - Phoronix\nSystem76 发布搭载 Intel Panther Lake 的新款 Lemur Pro 笔记本电脑\n2026 年 7 月 1 日下午 2:01 EDT。\nSystem76 今天宣布了其新款 Lemur Pro 高端 Linux 笔记本电脑，该机型现已搭载 Core Ultra Series 3 \"Panther Lake\" SoC。\n新款 Lemur Pro 采用 Panther Lake 处理器，提供 14 英寸和 16 英寸两个版本。这是 System76 有史以来电池续航最长的笔记本电脑，续航时间约为 18 小时。Lemur Pro 最高可配置 32GB 内存和 4TB 存储。\n基础版 Lemur Pro 起售价为 1999 美元，配备 Core Ultra 5 325、32GB 内存、1TB NVMe SSD 和 1 年保修。旗舰级 Intel Core Ultra X7 358H SKU 版本起售价为 2298 美元。\n关于这款预装 Pop!_OS 或 Ubuntu 24.04/26.04 LTS 的新款 Lemur Pro 笔记本电脑的更多详情，请访问\nASUS ROG Strix 笔记本电脑获得驱动修复，解决 Linux 性能相比 Windows 过低的问题\n更多 AMD Zen 6 准备工作，大量 ASUS / Lenovo / HP 笔记本电脑针对 Linux 7.2 的改进\nLinux 7.2 为 Wacom W9000 触控笔触屏添加新驱动\nLinux 8250/16550 UART 串行驱动在 2026 年迎来一些现代化工作\nGCC 编译器中出现新的 Hygon Model 8 \"Suzhou\" x86 CPU 支持\nUSB4STREAM 合并至 Linux 7.2，用于在 USB4 连接的系统间快速发送数据\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\nRed Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统\nLinus Torvalds 投诉后，\"令人作呕的\" Linux sched_ext 源代码被重构\nGCC 编译器的一行 x86 更改使现代 Intel/AMD CPU 基准测试性能提升 12%\nCOSMIC 的新系统监视器看起来非常流畅\nNourish：一款由 Vulkan 驱动、支持无限滚动/平移的新 Wayland 合成器\nCachyOS 2026 年 6 月版本发布，带来更多性能优化\nLinux 缓存感知调度扩展实现更佳性能：MySQL 性能提升高达 360%\nLinux 7.2 Staging 仍在努力驯服 Realtek RTL8723BS \"驱动猛兽\"\n享受无广告浏览时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "ff8df923d59c9167deb81009c0f33ef1": {
+    "id": "ff8df923d59c9167deb81009c0f33ef1",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.3-Faster-Small-Direct",
+    "title_en": "Linux 7.3 To Overcome \"Significant Bottleneck\" For Small I/O With PCIe Gen5 NVMe SSDs",
+    "summary_en": "While the Linux 7.2 feature merge window ended just days ago and the better part of two months now before v7.2 will be released as stable, there are already features beginning to accumulate that will target the Linux 7.3 cycle. The most exciting change I've seen to kick off that dance ahead of Linux 7.3 is addressing a \"significant\" bottleneck affecting small direct I/O performance with speedy storage such as PCIe Gen5 NVMe SSDs...",
+    "pub_date": "Wed, 01 Jul 2026 12:06:06 -0400",
+    "title_zh": "Linux 7.3 将克服 PCIe Gen5 NVMe SSD 小 I/O 的“重大瓶颈”",
+    "summary_zh": "Linux 7.3 将引入一项重要优化，解决 PCIe Gen5 NVMe SSD 在执行 4K 随机读取时遇到的“重大瓶颈”。字节跳动工程师 Fengnan Chang 发现，Linux 内核的 IOmap 框架在直接 I/O 路径中存在显著的软件开销，导致 CPU 花费大量时间在内存分配和状态机上。通过为小规模直接 I/O 设计一条简化路径，4K 随机读取性能从 1.92M IOPS 提升至 2.19M IOPS，EXT4 和 XFS 文件系统在 IO_uring 场景下性能提升高达 10%。该优化已合并至 VFS 子系统的“fvfs-7.3.iomap”分支，预计将在今年晚些时候的 Linux 7.3 周期中提交。",
+    "fulltext_zh": "Linux 7.3 将克服 PCIe Gen5 NVMe SSD 小 I/O 的“重大瓶颈” - Phoronix\nLinux 7.3 将克服 PCIe Gen5 NVMe SSD 小 I/O 的“重大瓶颈”\n发布于 2026 年 7 月 1 日 12:06 PM EDT。\nLinux 7.2 的特性合并窗口几天前刚刚结束，距离 v7.2 稳定版发布还有近两个月的时间，但针对 Linux 7.3 周期的特性已经开始积累。我看到的开启 Linux 7.3 前奏中最令人兴奋的改动，是解决了一个影响快速存储（如 PCIe Gen5 NVMe SSD）小规模直接 I/O 性能的“重大”瓶颈。\n字节跳动工程师 Fengnan Chang 注意到，在 Gen5 NVMe SSD 上执行 4K 随机读取时存在一个“重大瓶颈”。显著的软件开销被追溯到 Linux 内核的 IOmap 框架及其直接 I/O 路径。CPU 最终花费大量时间在内存分配和 IOmap 状态机上。为此，Fengnan Chang 设计了一个简单的直接 I/O 路径，用于在使用 IOmap（例如 EXT4 和 XFS）时处理小规模直接 I/O。\n这个简单的 DIO 路径用于减少 IOmap 开销，当读取请求的 I/O 大小小于或等于 inode 块大小时生效。此外还有其他限制条件，例如 inode 未加密。经过这一创建，在 PCIe Gen5 NVMe SSD 上的测试中，4K 随机读取性能从 1.92M IOPS 跃升至 2.19M IOPS。额外的基准测试显示，在使用 IO_uring 和现代 PCIe Gen5 NVMe SSD 存储时，尤其是在较高队列深度下，EXT4 和 XFS 的性能提升高达 10%。\n这个用于 IOmap 的简单 DIO 路径已合并到 VFS 子系统的“fvfs-7.3.iomap”Git 分支中。由于它现在已被排入 vfs/vfs.git 的“7.3”分支，预计将在今年晚些时候的 Linux 7.3 周期中提交。\n下一个 Bcachefs 版本旨在将 Rust 代码包含在内核模块中\nLinux MD RAID5 可扩展性提升高达 17%\nKSMBD 在 Linux 7.2 中添加了 SMB2 压缩支持\nNTFS3 驱动在 Linux 7.2 中获得了错误修复和微小改进\nF2FS 在 Linux 7.2 中集成了 FSERROR 报告，减少了内存占用\nEROFS 在 Linux 7.2 中更好地处理大型稀疏 AI 数据集，I/O 更高效\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\nRed Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统\n“令人作呕的”Linux sched_ext 源代码在 Linus Torvalds 投诉后重构\nGCC 编译器的一行 x86 修改为现代 Intel/AMD CPU 带来 +12% 的基准测试胜利\nCOSMIC 的新系统监视器看起来非常流畅\nNourish：一个由 Vulkan 驱动、支持无限滚动/平移的新 Wayland 合成器\nCachyOS 2026 年 6 月版本发布，带来更多性能优化\nLinux 缓存感知调度扩展实现更佳性能：MySQL 中提升高达 360%\nLinux 7.2 Staging 仍在努力驯服 Realtek RTL8723BS “野兽级驱动”\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "f5694519be22e7a3c2a6e675838a654c": {
+    "id": "f5694519be22e7a3c2a6e675838a654c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/flathub-now-rejects-ai-assisted-apps-and-submissions/",
+    "title_en": "Flathub Now Rejects AI-Assisted Apps and Submissions",
+    "summary_en": "Flathub has updated its policies, now rejecting AI-assisted apps and submissions. Discover the implications for developers and users alike.\nThe post Flathub Now Rejects AI-Assisted Apps and Submissions appeared first on Linux Today.",
+    "pub_date": "Wed, 01 Jul 2026 07:16:27 +0000",
+    "title_zh": "Flathub 现已拒绝 AI 辅助应用及提交",
+    "summary_zh": "Flathub 更新了其政策，现在拒绝接受 AI 辅助的应用及提交。这一变化对开发者和用户都将产生影响，旨在维护应用商店的质量与安全性。",
+    "fulltext_zh": "Flathub 已更新其政策，现在拒绝接受 AI 辅助的应用及提交。了解这对开发者和用户的影响。\n\n该文章 Flathub Now Rejects AI-Assisted Apps and Submissions 首次出现在 Linux Today 上。"
+  },
+  "5f907ba963b2ec2054746a2346ca1cbe": {
+    "id": "5f907ba963b2ec2054746a2346ca1cbe",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/rocky-linux-10-2-released-with-post-quantum-cryptography-improvements/",
+    "title_en": "Rocky Linux 10.2 Released with Post-Quantum Cryptography Improvements",
+    "summary_en": "Discover the latest features of Rocky Linux 10.2, including enhanced post-quantum cryptography for improved security and performance.\nThe post Rocky Linux 10.2 Released with Post-Quantum Cryptography Improvements appeared first on Linux Today.",
+    "pub_date": "Wed, 01 Jul 2026 07:14:49 +0000",
+    "title_zh": "Rocky Linux 10.2 发布，带来后量子密码学改进",
+    "summary_zh": "Rocky Linux 10.2 正式发布，重点增强了后量子密码学支持，以提升安全性和性能。该版本在加密算法上进行了优化，为应对未来量子计算威胁做好了准备。",
+    "fulltext_zh": "探索 Rocky Linux 10.2 的最新特性，包括增强的后量子密码学，以提升安全性和性能。\n\n该文章 Rocky Linux 10.2 Released with Post-Quantum Cryptography Improvements 首次出现在 Linux Today 上。"
+  },
+  "31cf659c43576a95ac111ddddcd7a157": {
+    "id": "31cf659c43576a95ac111ddddcd7a157",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/fwupd-2-1-4-adds-intel-arc-pro-b65-and-b70-support/",
+    "title_en": "Fwupd 2.1.4 Adds Intel Arc Pro B65 and B70 Support",
+    "summary_en": "Explore Fwupd 2.1.4, which introduces support for Intel Arc Pro B65 and B70, enhancing your system's capabilities and keeping your firmware up to date.\nThe post Fwupd 2.1.4 Adds Intel Arc Pro B65 and B70 Support appeared first on Linux Today.",
+    "pub_date": "Wed, 01 Jul 2026 07:11:47 +0000",
+    "title_zh": "Fwupd 2.1.4 新增对 Intel Arc Pro B65 和 B70 的支持",
+    "summary_zh": "Fwupd 2.1.4 版本发布，新增对 Intel Arc Pro B65 和 B70 显卡的支持，帮助用户提升系统性能并保持固件更新。",
+    "fulltext_zh": "探索 Fwupd 2.1.4，该版本引入了对 Intel Arc Pro B65 和 B70 的支持，增强了系统能力并确保固件保持最新。\n\n该文章最初发表于 Linux Today。"
+  },
+  "60b40931ee6000fcfa73a0b37e43faf8": {
+    "id": "60b40931ee6000fcfa73a0b37e43faf8",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/minisforum-m2-intel-panther-lake-mini-pc-running-linux-power-consumption/",
+    "title_en": "MINISFORUM M2 Intel Panther Lake Mini PC Running Linux: Power Consumption",
+    "summary_en": "Uncover the power consumption details of the MINISFORUM M2 Intel Panther Lake Mini PC running Linux. Learn how it balances performance and efficiency.\nThe post MINISFORUM M2 Intel Panther Lake Mini PC Running Linux: Power Consumption appeared first on Linux Today.",
+    "pub_date": "Wed, 01 Jul 2026 07:09:20 +0000",
+    "title_zh": "MINISFORUM M2 Intel Panther Lake 迷你PC运行Linux：功耗分析",
+    "summary_zh": "本文详细介绍了MINISFORUM M2 Intel Panther Lake迷你PC在Linux系统下的功耗表现，探讨了其在性能与能效之间的平衡。通过实际测试数据，展示了该设备在不同负载下的功耗情况，为追求高效节能的用户提供了参考。",
+    "fulltext_zh": "揭示MINISFORUM M2 Intel Panther Lake迷你PC在运行Linux时的功耗细节。了解它如何在性能与效率之间取得平衡。\n\n该文章最初发表于Linux Today，标题为《MINISFORUM M2 Intel Panther Lake Mini PC Running Linux: Power Consumption》。"
+  },
+  "1af57c3b701af53872aaf1820e12e8d1": {
+    "id": "1af57c3b701af53872aaf1820e12e8d1",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/qemu-may-relax-its-ban-on-ai-generated-contributions/",
+    "title_en": "QEMU May Relax Its Ban on AI-Generated Contributions",
+    "summary_en": "QEMU may reconsider its restrictions on AI-generated contributions, opening doors for innovative advancements in virtualization technology. Discover more.\nThe post QEMU May Relax Its Ban on AI-Generated Contributions appeared first on Linux Today.",
+    "pub_date": "Wed, 01 Jul 2026 07:06:40 +0000",
+    "title_zh": "QEMU 可能放宽对 AI 生成贡献的禁令",
+    "summary_zh": "QEMU 项目正在考虑放宽对 AI 生成代码贡献的限制，这一变化可能为虚拟化技术带来创新突破。该举措旨在适应人工智能在软件开发中的日益普及，同时确保代码质量和项目稳定性。",
+    "fulltext_zh": "QEMU 可能重新考虑其对 AI 生成贡献的限制，为虚拟化技术的创新进步打开大门。了解更多。\n\n该文章《QEMU May Relax Its Ban on AI-Generated Contributions》最初发表于 Linux Today。"
   }
 }

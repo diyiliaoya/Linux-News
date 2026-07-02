@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Agent 可通过 DNS 获得验证身份 — Linux 中文速报</title>
+<title>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">软件应用</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>AI Agent 可通过 DNS 获得验证身份</h1>
+  <h1>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能</h1>
 
-  <div class="article-summary">Linux 基金会宣布推出开放标准 ANS（Agent Name System），为 AI Agent 提供基于 DNS 的验证身份。每个 Agent 将获得类似 DNS 的名称和版本号，并通过证书和不可篡改的公开日志记录注册、续期和撤销信息。该标准基于现有 IETF 草案，GoDaddy 已提前部署，使用现有基础设施处理超过 1 亿个 SSL/TLS 证书。</div>
+  <div class="article-summary">Firefox 正在为 Linux 上的 Nvidia GPU 添加基于 Vulkan 的硬件加速视频解码支持，该功能将在 Firefox 153 版本中引入，但默认不会启用。用户需要手动开启两项偏好设置，并确保使用 Nvidia 驱动 595.x 或更高版本。此前 Firefox 在 Linux 上对所有 Nvidia 设备禁用了硬件视频解码，导致用户需要借助社区变通方案。新功能基于 FFmpeg 的 Vulkan 解码支持，不仅适用于 Nvidia，也旨在解决 Arm 和嵌入式 GPU 在 Aarch64 Linux 上缺乏硬件视频解码的问题。</div>
 
-  <div class="article-body"><p>AI Agent 可通过 DNS 获得验证身份</p><p>该开放标准将每个 Agent 的身份与证书和无人能编辑的公开透明日志绑定。</p><p>Linux 基金会表示，它计划推出 ANS（Agent Name System），这是一个开放标准，扩展了 AI Agent 证明自身身份的方式。</p><p>在实践中，这意味着能够查找一个 Agent，并检查谁在真正运营它、它被授权做什么，以及其代码或历史记录中是否有任何更改。</p><p>引用一篇研究论文，Linux 基金会表示，82% 的高管计划在未来一到三年内采用 AI Agent，而大多数高管在 Agent 投入生产运行后，仍然没有可靠的方法来验证或管理它们。</p><p>目前，没有任何机制阻止一个 Agent 声称自己是 support-agent.acme.com，因为没有人能够验证这是否属实。</p><p>找到正确的 Agent 同样困难。目前没有任何东西能将 Agent 的名称和能力与一个特定的、经过验证的、你可以实际访问的版本关联起来。ANS 旨在同时解决这两个问题。</p><p>在 ANS 下注册的每个 Agent 都会获得一个 DNS 风格的名称，并内置版本号，例如 ans://v1.0.0.my-agent.example.com。只有当 Agent 的域名通过与网站获取普通 TLS 证书相同的 DNS 和 ACME 检查后，该名称才会附带一个身份证书。</p><p>每次注册、续期或撤销都会被记录在一个防篡改日志（仅可追加的 Merkle 日志）中，因此在这些事件发生后，任何人都无法编辑 Agent 的历史记录。一个名为 Verifier 的独立离线工具可以在无需实时连接注册表的情况下检查这些记录。</p><p>在你认为这是他们新发明的东西之前，事实并非如此。GoDaddy 在 Linux 基金会介入前几个月就已经让 ANS 运行起来，它基于现有的 IETF 草案构建。</p><p>GoDaddy 的工程师没有从头构建新的证书和 DNS 系统，而是复用了他们已在生产环境中使用的基础设施。这包括处理超过 1 亿个活跃 SSL 和 TLS 证书的同一证书服务，以及他们现有的 DNS 系统。</p><p>GitHub 上的 ANS 组织目前托管着八个仓库。主要仓库是 ans，这是一个采用 MIT 许可证的 Go 代码库，实现了整个技术栈，包括注册表、日志记录和验证器，作为任何人都可以运行的工作参考实现。</p><p>当然，现在还为时过早，但据报道，只需安装 Go、openssl、curl 和 jq，整个技术栈大约在 60 秒内就能启动。</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的技术极客。</p><p>Lumo 2.0：Proton 推出的 ChatGPT 和 Claude 私有替代方案变得更好</p><p>你可以在 Purism 的 Librem 16 Linux 笔记本电脑上花费高达 11,944 美元</p><p>Linux 用户免费获得此功能！Brave Origin 对其他所有人售价 59.99 美元</p><p>PINE64 的智能音箱是 Amazon Echo 的 Home Assistant 驱动替代品</p><p>Ubuntu 上 ARM64 系统内核补丁期间无需重启</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 周刊，你可以学习有用的 Linux 技巧、发现应用程序、探索新的发行版，并随时了解 Linux 世界的最新动态</p><p>太好了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅 It's FOSS。</p><p>您的链接已过期。</p><p>成功！请检查您的电子邮件以获取用于登录的魔法链接。</p><p>成功！您的账单信息已更新。</p><p>您的账单未更新。</p></div>
+  <div class="article-body"><p>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能 - OMG! Ubuntu</p><p>Firefox 正在添加硬件加速解码功能，为 Linux 上的 Nvidia 用户省去手动配置的麻烦。</p><p>该变更将包含在 7 月 21 日发布的 Firefox 153 中，但默认不会启用——至少一开始不会。</p><p>相反，用户需要翻转两项偏好设置才能尝试该功能，同时需注意可能存在卡顿和边缘情况（尤其是在配备混合显卡的设备上，下文会进一步提及）。</p><p>考虑到 Nvidia GPU 性能强大（这绝对是轻描淡写），我很惊讶这项功能之前竟然无法正常工作。原来，Firefox 在 Linux 上对所有 Nvidia 设备禁用了硬件视频解码——一刀切式的做法——因此社区变通方案才成为必要。</p><p>在其代码库中添加原生 Vulkan 视频解码路径意味着不再需要变通方案。</p><p>Vulkan Video 是一个跨供应商规范，并非 Nvidia 专属。Firefox 的实现基于 FFmpeg 的 Vulkan 解码支持。</p><p>Arm 和嵌入式 GPU 是这项工作的初始目标，旨在解决 Aarch64 Linux 上完全缺乏硬件视频解码的问题。</p><p>Nvidia 自家的 DGX Spark（一款运行 Ubuntu 的基于 Arm 的桌面 AI 计算机）目前缺少 Firefox 中的硬件视频解码功能，因为 GB10 芯片不支持 VA-API 或 V4L2。Mozilla 的跟踪工作依赖于这项 Vulkan Video 支持。</p><p>在 Beta 版和 Nightly 版中尝试</p><p>没有可供检查的兼容性列表，因为 Firefox 会在你首次启用时测试 GPU 的 Vulkan 支持，所以唯一知道是否有效的方法就是亲自尝试。</p><p>你需要运行 Nvidia 驱动版本 595.x 或更高版本，以及 Firefox 153 beta（或 nightly 版）。</p><p>然后翻转这些偏好设置：</p><p>media.hardware-video-decoding-vulkan.enabled</p><p>media.hardware-video-decoding-vulkan.direct-export.enabled</p><p>重启 Firefox，然后播放一个使用你的 GPU 支持加速播放的编解码器的视频（任何 H264 视频都是稳妥的选择）。要检查是否生效，可以使用 about:support 或打开终端并运行：</p><p>MOZ_LOG=&quot;FFmpegVideo:5&quot; firefox</p><p>在配备双 GPU（即集成显卡和独立 Nvidia 显卡）的笔记本电脑上，一些用户报告称，启用 Vulkan 视频解码后，独立显卡会不必要地唤醒，导致在播放中切换工作区时出现短暂卡顿。</p><p>Mozilla 尚未指明该功能将在哪个 Firefox 版本中默认启用，但即使启用，也会设置“门控”机制，以确保只有拥有兼容 Nvidia 驱动和硬件的用户才能使用。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/linux-foundation-agent-name-service-announcement/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/firefox-vulkan-video-decoding-nvidia" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

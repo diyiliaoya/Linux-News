@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DistroWatch 周刊，第 1179 期 — Linux 中文速报</title>
+<title>Linux 7.3 将克服 PCIe Gen5 NVMe SSD 小 I/O 的“重大瓶颈” — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>DistroWatch 周刊，第 1179 期</h1>
+  <h1>Linux 7.3 将克服 PCIe Gen5 NVMe SSD 小 I/O 的“重大瓶颈”</h1>
 
-  <div class="article-summary">本期 DistroWatch 周刊介绍了 COSMIC 桌面环境的新系统监视器、Ubuntu 计划引入语音转文字功能、Ubuntu 更新风味版测试版与最终版发布政策、避免使用不可变桌面的理由、Arch 用户仓库再次遭受攻击、Fedora 用户增长但贡献者退休、Slackware 终于将 Plasma 更新至版本 6、Arch Linux 报告 AUR 仓库恶意事件、开发者复活基于 Arch 的 Antergos 发行版、Asahi Linux 项目警告双启动用户不要升级至 macOS 27 等新闻。此外还包含 PCLinuxOS 2026.05 评测、Xfce 测试新 Wayland 合成器、FreeBSD 开发者邀请提问、发行版切换技巧、U-lite 简介等内容。</div>
+  <div class="article-summary">Linux 7.3 将引入一项重要优化，解决 PCIe Gen5 NVMe SSD 在执行 4K 随机读取时遇到的“重大瓶颈”。字节跳动工程师 Fengnan Chang 发现，Linux 内核的 IOmap 框架在直接 I/O 路径中存在显著的软件开销，导致 CPU 花费大量时间在内存分配和状态机上。通过为小规模直接 I/O 设计一条简化路径，4K 随机读取性能从 1.92M IOPS 提升至 2.19M IOPS，EXT4 和 XFS 文件系统在 IO_uring 场景下性能提升高达 10%。该优化已合并至 VFS 子系统的“fvfs-7.3.iomap”分支，预计将在今年晚些时候的 Linux 7.3 周期中提交。</div>
 
-  <div class="article-body"><p>DistroWatch 周刊，第 1179 期 (DistroWatch.com 新闻)</p><p>DistroWatch.com 由以下赞助</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW 周刊 / 评测存档</p><p>访客评分与评论</p><p>按评分排序的项目排名</p><p>播客、新闻通讯与评测</p><p>跨发行版比较软件包</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停产的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与窍门专栏</p><p>误解与误区专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>发行版可视化族谱</p><p>常见问题解答</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>COSMIC 获得新的系统监视器</p><p>Ubuntu 计划引入语音转文字功能</p><p>Ubuntu 更新关于 Ubuntu 风味版测试版和最终版的发布政策</p><p>避免使用不可变桌面的理由</p><p>Arch 用户仓库再次遭受攻击</p><p>Fedora 用户增长，贡献者退休</p><p>Slackware 终于将 Plasma 更新至版本 6</p><p>Arch Linux 报告 AUR 仓库恶意事件</p><p>开发者复活基于 Arch 的 Antergos 发行版</p><p>Asahi Linux 项目警告双启动用户不要升级至 macOS 27</p><p>易于使用的 PBX - 托管或自管理</p><p>Linux 电话系统</p><p>免费在线聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程办公应用：iOS 或 Android</p><p>免费视频会议</p><p>3CX 的 VoIP / PBX 操作指南</p><p>别被抓住，制定灾难恢复计划！</p><p>必备的在线聊天报告与统计</p><p>导致通话欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成</p><p>3CX StartUP 的 5 个杀手级功能</p><p>别做“那种人”第 1 卷：保持复杂凭证</p><p>别做“那种人”第 2 卷：通话欺诈</p><p>别做“那种人”第 3 卷：4 大安全提示</p><p>别做“那种人”第 4 卷：监控你的实例</p><p>Full Circle 杂志 230 期</p><p>红帽周五五件事 - 2026 年 6 月 26 日</p><p>Ubuntu 每周新闻通讯 949 期</p><p>Full Circle 每周新闻</p><p>Illogical Impulse ISO</p><p>最新新闻与更新</p><p>新闻筛选选项</p><p>DistroWatch 周刊，第 1179 期</p><p>评测：PCLinuxOS 2026.05</p><p>新闻：COSMIC 获得新的系统监视器，Xfce 测试新的 Wayland 合成器，FreeBSD 开发者邀请提问</p><p>问答：切换发行版的技巧</p><p>上周发布：SteamOS 3.8.10，KaOS 2026.06，Drauger OS 7.8，AnduinOS 2.0.0</p><p>Torrent 专区：CachyOS</p><p>意见调查：最喜欢的发布周期？</p><p>网站新闻：捐赠与赞助</p><p>阅读本期更多内容</p><p>DistroWatch Weekly....</p><p>U-lite（原名 Ubuntulite）是一款基于 Ubuntu 的轻量级发行版，旨在老旧和低资源计算机上流畅运行。它附带精心挑选的应用程序，例如 LXDE（采用 Openbox 窗口管理器）、Kazehakase 网络浏览器、Sylpheed 邮件客户端、AbiWord 文字处理器和 Gnumeric 电子表格。与大多数轻量级发行版不同，U-lite 力求开箱即用地提供完整的用户体验。</p><p>技巧与窍门：收集系统信息</p><p>技巧与窍门：让 Falkon 3.1.0 运行起来的旅程及便携式软件包的问题</p><p>问答：从 Live CD 访问加密驱动器</p><p>技巧与窍门：在 Android 手机上运行 Ubuntu Touch</p><p>问答：速度差异</p><p>问答：限制应用程序对特定用户的访问</p><p>问答：捐赠 CPU 资源以帮助 Folding@home</p><p>问答：跨 Linux 发行版运行应用程序</p><p>问答：运行桌面环境的服务器机器</p><p>问答：远程运行桌面应用程序</p><p>版权 © 2001 - 2026 Atea Ataroa Limited。保留所有权利。所有商标均为其各自所有者的财产。</p><p>更改隐私设置</p><p>联系方式、更正与建议：</p><p>bc1qxes3k2wq3uqzr074tkwwjmwfe63z70gwzfu4lx</p><p>lnurl1dp68gurn8ghj7ampd3kx2ar0veekzar0wd5xjtnrdakj7tnhv4kxctttdehhwm30d3h82unvwqhhxarpw3jkc7tzw4ex6cfexyfua2nr</p><p>86fA3qPTeQtNb2k1vLwEQaAp3XxkvvvXt69gSG5LGunXXikK9koPWZaRQgfFPBPWhMgXjPjccy9LA9xRFchPWQAnPvxh5Le</p><p>Patreon.com/distro</p></div>
+  <div class="article-body"><p>Linux 7.3 将克服 PCIe Gen5 NVMe SSD 小 I/O 的“重大瓶颈” - Phoronix</p><p>Linux 7.3 将克服 PCIe Gen5 NVMe SSD 小 I/O 的“重大瓶颈”</p><p>发布于 2026 年 7 月 1 日 12:06 PM EDT。</p><p>Linux 7.2 的特性合并窗口几天前刚刚结束，距离 v7.2 稳定版发布还有近两个月的时间，但针对 Linux 7.3 周期的特性已经开始积累。我看到的开启 Linux 7.3 前奏中最令人兴奋的改动，是解决了一个影响快速存储（如 PCIe Gen5 NVMe SSD）小规模直接 I/O 性能的“重大”瓶颈。</p><p>字节跳动工程师 Fengnan Chang 注意到，在 Gen5 NVMe SSD 上执行 4K 随机读取时存在一个“重大瓶颈”。显著的软件开销被追溯到 Linux 内核的 IOmap 框架及其直接 I/O 路径。CPU 最终花费大量时间在内存分配和 IOmap 状态机上。为此，Fengnan Chang 设计了一个简单的直接 I/O 路径，用于在使用 IOmap（例如 EXT4 和 XFS）时处理小规模直接 I/O。</p><p>这个简单的 DIO 路径用于减少 IOmap 开销，当读取请求的 I/O 大小小于或等于 inode 块大小时生效。此外还有其他限制条件，例如 inode 未加密。经过这一创建，在 PCIe Gen5 NVMe SSD 上的测试中，4K 随机读取性能从 1.92M IOPS 跃升至 2.19M IOPS。额外的基准测试显示，在使用 IO_uring 和现代 PCIe Gen5 NVMe SSD 存储时，尤其是在较高队列深度下，EXT4 和 XFS 的性能提升高达 10%。</p><p>这个用于 IOmap 的简单 DIO 路径已合并到 VFS 子系统的“fvfs-7.3.iomap”Git 分支中。由于它现在已被排入 vfs/vfs.git 的“7.3”分支，预计将在今年晚些时候的 Linux 7.3 周期中提交。</p><p>下一个 Bcachefs 版本旨在将 Rust 代码包含在内核模块中</p><p>Linux MD RAID5 可扩展性提升高达 17%</p><p>KSMBD 在 Linux 7.2 中添加了 SMB2 压缩支持</p><p>NTFS3 驱动在 Linux 7.2 中获得了错误修复和微小改进</p><p>F2FS 在 Linux 7.2 中集成了 FSERROR 报告，减少了内存占用</p><p>EROFS 在 Linux 7.2 中更好地处理大型稀疏 AI 数据集，I/O 更高效</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>Red Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统</p><p>“令人作呕的”Linux sched_ext 源代码在 Linus Torvalds 投诉后重构</p><p>GCC 编译器的一行 x86 修改为现代 Intel/AMD CPU 带来 +12% 的基准测试胜利</p><p>COSMIC 的新系统监视器看起来非常流畅</p><p>Nourish：一个由 Vulkan 驱动、支持无限滚动/平移的新 Wayland 合成器</p><p>CachyOS 2026 年 6 月版本发布，带来更多性能优化</p><p>Linux 缓存感知调度扩展实现更佳性能：MySQL 中提升高达 360%</p><p>Linux 7.2 Staging 仍在努力驯服 Realtek RTL8723BS “野兽级驱动”</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12884" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-Faster-Small-Direct" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
