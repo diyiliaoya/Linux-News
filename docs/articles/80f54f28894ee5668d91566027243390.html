@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能 — Linux 中文速报</title>
+<title>Bottles 64.0 新增 ntsync 支持，助力在 Linux 上运行 Windows 应用 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">软件应用</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Linux Today</span>
   </div>
 
-  <h1>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能</h1>
+  <h1>Bottles 64.0 新增 ntsync 支持，助力在 Linux 上运行 Windows 应用</h1>
 
-  <div class="article-summary">Firefox 正在为 Linux 上的 Nvidia GPU 添加基于 Vulkan 的硬件加速视频解码支持，该功能将在 Firefox 153 版本中引入，但默认不会启用。用户需要手动开启两项偏好设置，并确保使用 Nvidia 驱动 595.x 或更高版本。此前 Firefox 在 Linux 上对所有 Nvidia 设备禁用了硬件视频解码，导致用户需要借助社区变通方案。新功能基于 FFmpeg 的 Vulkan 解码支持，不仅适用于 Nvidia，也旨在解决 Arm 和嵌入式 GPU 在 Aarch64 Linux 上缺乏硬件视频解码的问题。</div>
+  <div class="article-summary">Bottles 64.0 版本引入了 NTSync 支持，使 Linux 用户能够更轻松地运行 Windows 应用程序。这一重大更新为兼容层带来了显著改进，值得关注。</div>
 
-  <div class="article-body"><p>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能 - OMG! Ubuntu</p><p>Firefox 正在添加硬件加速解码功能，为 Linux 上的 Nvidia 用户省去手动配置的麻烦。</p><p>该变更将包含在 7 月 21 日发布的 Firefox 153 中，但默认不会启用——至少一开始不会。</p><p>相反，用户需要翻转两项偏好设置才能尝试该功能，同时需注意可能存在卡顿和边缘情况（尤其是在配备混合显卡的设备上，下文会进一步提及）。</p><p>考虑到 Nvidia GPU 性能强大（这绝对是轻描淡写），我很惊讶这项功能之前竟然无法正常工作。原来，Firefox 在 Linux 上对所有 Nvidia 设备禁用了硬件视频解码——一刀切式的做法——因此社区变通方案才成为必要。</p><p>在其代码库中添加原生 Vulkan 视频解码路径意味着不再需要变通方案。</p><p>Vulkan Video 是一个跨供应商规范，并非 Nvidia 专属。Firefox 的实现基于 FFmpeg 的 Vulkan 解码支持。</p><p>Arm 和嵌入式 GPU 是这项工作的初始目标，旨在解决 Aarch64 Linux 上完全缺乏硬件视频解码的问题。</p><p>Nvidia 自家的 DGX Spark（一款运行 Ubuntu 的基于 Arm 的桌面 AI 计算机）目前缺少 Firefox 中的硬件视频解码功能，因为 GB10 芯片不支持 VA-API 或 V4L2。Mozilla 的跟踪工作依赖于这项 Vulkan Video 支持。</p><p>在 Beta 版和 Nightly 版中尝试</p><p>没有可供检查的兼容性列表，因为 Firefox 会在你首次启用时测试 GPU 的 Vulkan 支持，所以唯一知道是否有效的方法就是亲自尝试。</p><p>你需要运行 Nvidia 驱动版本 595.x 或更高版本，以及 Firefox 153 beta（或 nightly 版）。</p><p>然后翻转这些偏好设置：</p><p>media.hardware-video-decoding-vulkan.enabled</p><p>media.hardware-video-decoding-vulkan.direct-export.enabled</p><p>重启 Firefox，然后播放一个使用你的 GPU 支持加速播放的编解码器的视频（任何 H264 视频都是稳妥的选择）。要检查是否生效，可以使用 about:support 或打开终端并运行：</p><p>MOZ_LOG=&quot;FFmpegVideo:5&quot; firefox</p><p>在配备双 GPU（即集成显卡和独立 Nvidia 显卡）的笔记本电脑上，一些用户报告称，启用 Vulkan 视频解码后，独立显卡会不必要地唤醒，导致在播放中切换工作区时出现短暂卡顿。</p><p>Mozilla 尚未指明该功能将在哪个 Firefox 版本中默认启用，但即使启用，也会设置“门控”机制，以确保只有拥有兼容 Nvidia 驱动和硬件的用户才能使用。</p></div>
+  <div class="article-body"><p>Bottles 64.0 引入了 NTSync 支持，允许 Linux 用户轻松运行 Windows 应用程序。立即了解这一改变游戏规则的更新！</p><p>该文章最初发表于 Linux Today。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/firefox-vulkan-video-decoding-nvidia" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.linuxtoday.com/blog/bottles-64-0-adds-ntsync-support-for-running-windows-apps-on-linux/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

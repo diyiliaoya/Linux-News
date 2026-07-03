@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能 — Linux 中文速报</title>
+<title>厌倦AI垃圾，前微软工程师打造了一款无AI的记事本 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能</h1>
+  <h1>厌倦AI垃圾，前微软工程师打造了一款无AI的记事本</h1>
 
-  <div class="article-summary">Firefox 正在为 Linux 上的 Nvidia GPU 添加基于 Vulkan 的硬件加速视频解码支持，该功能将在 Firefox 153 版本中引入，但默认不会启用。用户需要手动开启两项偏好设置，并确保使用 Nvidia 驱动 595.x 或更高版本。此前 Firefox 在 Linux 上对所有 Nvidia 设备禁用了硬件视频解码，导致用户需要借助社区变通方案。新功能基于 FFmpeg 的 Vulkan 解码支持，不仅适用于 Nvidia，也旨在解决 Arm 和嵌入式 GPU 在 Aarch64 Linux 上缺乏硬件视频解码的问题。</div>
+  <div class="article-summary">一位曾负责Windows任务管理器开发的前微软工程师，因厌倦记事本被塞入AI工具、Markdown支持和云积分等冗余功能，亲手打造了一款仅2.5KB的记事本克隆版TinyRetroPad。它基于Windows内置的RichEdit组件，保留了完整的菜单栏、字体选择、自动换行、状态栏和打印支持，且不含任何遥测功能。该项目代码已开源，旨在提醒用户：文本编辑器的本职就是编辑文本。</div>
 
-  <div class="article-body"><p>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能 - OMG! Ubuntu</p><p>Firefox 正在添加硬件加速解码功能，为 Linux 上的 Nvidia 用户省去手动配置的麻烦。</p><p>该变更将包含在 7 月 21 日发布的 Firefox 153 中，但默认不会启用——至少一开始不会。</p><p>相反，用户需要翻转两项偏好设置才能尝试该功能，同时需注意可能存在卡顿和边缘情况（尤其是在配备混合显卡的设备上，下文会进一步提及）。</p><p>考虑到 Nvidia GPU 性能强大（这绝对是轻描淡写），我很惊讶这项功能之前竟然无法正常工作。原来，Firefox 在 Linux 上对所有 Nvidia 设备禁用了硬件视频解码——一刀切式的做法——因此社区变通方案才成为必要。</p><p>在其代码库中添加原生 Vulkan 视频解码路径意味着不再需要变通方案。</p><p>Vulkan Video 是一个跨供应商规范，并非 Nvidia 专属。Firefox 的实现基于 FFmpeg 的 Vulkan 解码支持。</p><p>Arm 和嵌入式 GPU 是这项工作的初始目标，旨在解决 Aarch64 Linux 上完全缺乏硬件视频解码的问题。</p><p>Nvidia 自家的 DGX Spark（一款运行 Ubuntu 的基于 Arm 的桌面 AI 计算机）目前缺少 Firefox 中的硬件视频解码功能，因为 GB10 芯片不支持 VA-API 或 V4L2。Mozilla 的跟踪工作依赖于这项 Vulkan Video 支持。</p><p>在 Beta 版和 Nightly 版中尝试</p><p>没有可供检查的兼容性列表，因为 Firefox 会在你首次启用时测试 GPU 的 Vulkan 支持，所以唯一知道是否有效的方法就是亲自尝试。</p><p>你需要运行 Nvidia 驱动版本 595.x 或更高版本，以及 Firefox 153 beta（或 nightly 版）。</p><p>然后翻转这些偏好设置：</p><p>media.hardware-video-decoding-vulkan.enabled</p><p>media.hardware-video-decoding-vulkan.direct-export.enabled</p><p>重启 Firefox，然后播放一个使用你的 GPU 支持加速播放的编解码器的视频（任何 H264 视频都是稳妥的选择）。要检查是否生效，可以使用 about:support 或打开终端并运行：</p><p>MOZ_LOG=&quot;FFmpegVideo:5&quot; firefox</p><p>在配备双 GPU（即集成显卡和独立 Nvidia 显卡）的笔记本电脑上，一些用户报告称，启用 Vulkan 视频解码后，独立显卡会不必要地唤醒，导致在播放中切换工作区时出现短暂卡顿。</p><p>Mozilla 尚未指明该功能将在哪个 Firefox 版本中默认启用，但即使启用，也会设置“门控”机制，以确保只有拥有兼容 Nvidia 驱动和硬件的用户才能使用。</p></div>
+  <div class="article-body"><p>厌倦AI垃圾，前微软工程师打造了一款无AI的记事本</p><p>厌倦AI垃圾，前微软工程师打造了一款无AI的记事本</p><p>一位曾负责任务管理器开发的前微软工程师，打造了一款完全可用的2.5KB记事本克隆版，且不附带任何垃圾功能。</p><p>微软在过去几年里，不断给记事本塞入AI工具、Markdown支持和云积分，背离了它原本简单、本地的文本编辑器定位。不登录账户仍可进行基本编辑，但AI功能无法使用。你甚至需要一个微软账户才能查看剩余的月度AI积分。对于一个过去只用来打开文本文件的应用程序来说，这未免太过沉重。</p><p>那位曾负责原始Windows任务管理器的前微软工程师，刚刚证明了这一切都毫无必要。他打造了一款完全可用的记事本克隆版，体积仅约2.5KB。</p><p>Dave并没有从头编写文本编辑器，而是直接借用了操作系统内部已有的组件。这款笔记应用通过封装Windows内置多年的文本编辑组件RichEdit来实现。他使用x86汇编器进行编译，再通过专为小型Windows可执行文件设计的压缩器进一步压缩。生成的程序仍然带有完整的记事本风格菜单栏，涵盖熟悉的选项。</p><p>你还能获得实用的工具，如字体选择器、自动换行、状态栏以及可用的打印支持。另外，显而易见的是，这里没有任何回传数据的遥测管道。</p><p>TinyRetroPad并非凭空出现；Dave基于DTE（一款由另一位开发者采用同样精简方法制作的小型编辑器）构建了它。而DTE本身又源自HelloAssembly（Dave多年前自己编写的一个项目），该项目是在他人对其自身想法的实现基础上扩展而来。</p><p>整个代码库无论多么小巧，都托管在GitHub上。任何人都可以获取代码、进行修改，或者如果愿意挑战，还可以进一步压缩它。</p><p>对Linux用户来说是旧闻</p><p>如果你使用Linux，这一切都不算什么新闻。GNOME默认搭载gedit，KDE默认搭载Kate。两者都不需要AI助手或云账户来打开配置文件。Vim和Emacs多年来一直是Linux编辑生态系统的中流砥柱，而Notepad Next则专门为那些想要Notepad++替代品、又不想通过Wine或非官方Snap包的用户而生。</p><p>Dave所做的，只是给Windows用户提了个醒——Linux用户早已深谙此道：文本编辑器的唯一任务就是编辑文本，之后每添加一个功能，大多都是多余的。</p><p>你可以在Purism的Librem 16上花费高达11,944美元</p><p>你可以在Purism的Librem 16 Linux笔记本上花费高达11,944美元</p><p>这款笔记本起售价为2,899美元，定制配置最高可达令人咋舌的11,944美元。</p><p>一位热爱开源软件、定制PC组装、赛车运动以及探索这个世界无限可能的极客。</p><p>Collabora Office 26.04保持AI可选，并优化了Writer和Calc</p><p>Lumo 2.0：Proton的ChatGPT和Claude私有替代方案刚刚变得更好</p><p>AI代理可能获得经过验证的身份，这要归功于DNS</p><p>你可以在Purism的Librem 16 Linux笔记本上花费高达11,944美元</p><p>Linux用户免费获得这个！Brave Origin对其他人售价59.99美元</p><p>成为更好的Linux用户</p><p>通过FOSS周刊通讯，你可以学习有用的Linux技巧、发现应用程序、探索新发行版，并随时了解Linux世界的最新动态</p><p>太好了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅It's FOSS。</p><p>您的链接已过期。</p><p>成功！请检查您的电子邮件以获取用于登录的魔法链接。</p><p>成功！您的账单信息已更新。</p><p>您的账单未更新。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/firefox-vulkan-video-decoding-nvidia" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/tinyretropad-notepad-clone/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

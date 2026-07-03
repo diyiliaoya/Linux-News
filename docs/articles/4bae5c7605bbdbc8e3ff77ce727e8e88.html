@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能 — Linux 中文速报</title>
+<title>Linux内核开发者再次讨论AI代理归属标注——可能将其移除 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能</h1>
+  <h1>Linux内核开发者再次讨论AI代理归属标注——可能将其移除</h1>
 
-  <div class="article-summary">Firefox 正在为 Linux 上的 Nvidia GPU 添加基于 Vulkan 的硬件加速视频解码支持，该功能将在 Firefox 153 版本中引入，但默认不会启用。用户需要手动开启两项偏好设置，并确保使用 Nvidia 驱动 595.x 或更高版本。此前 Firefox 在 Linux 上对所有 Nvidia 设备禁用了硬件视频解码，导致用户需要借助社区变通方案。新功能基于 FFmpeg 的 Vulkan 解码支持，不仅适用于 Nvidia，也旨在解决 Arm 和嵌入式 GPU 在 Aarch64 Linux 上缺乏硬件视频解码的问题。</div>
+  <div class="article-summary">Linux内核开发者近期再次讨论AI/LLM代理在补丁中的归属标注政策。当前要求使用“Assisted-by”标签并注明模型版本等详细信息，但知名开发者Christian Brauner认为这相当于为AI公司提供免费广告，建议简化或完全取消该要求。内核工程师Jeff Layton已提交补丁提议彻底移除该标签，理由包括遵循率低、信号噪声比差、目的不明确等。Linus Torvalds尚未表态，讨论仍在进行中。</div>
 
-  <div class="article-body"><p>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能 - OMG! Ubuntu</p><p>Firefox 正在添加硬件加速解码功能，为 Linux 上的 Nvidia 用户省去手动配置的麻烦。</p><p>该变更将包含在 7 月 21 日发布的 Firefox 153 中，但默认不会启用——至少一开始不会。</p><p>相反，用户需要翻转两项偏好设置才能尝试该功能，同时需注意可能存在卡顿和边缘情况（尤其是在配备混合显卡的设备上，下文会进一步提及）。</p><p>考虑到 Nvidia GPU 性能强大（这绝对是轻描淡写），我很惊讶这项功能之前竟然无法正常工作。原来，Firefox 在 Linux 上对所有 Nvidia 设备禁用了硬件视频解码——一刀切式的做法——因此社区变通方案才成为必要。</p><p>在其代码库中添加原生 Vulkan 视频解码路径意味着不再需要变通方案。</p><p>Vulkan Video 是一个跨供应商规范，并非 Nvidia 专属。Firefox 的实现基于 FFmpeg 的 Vulkan 解码支持。</p><p>Arm 和嵌入式 GPU 是这项工作的初始目标，旨在解决 Aarch64 Linux 上完全缺乏硬件视频解码的问题。</p><p>Nvidia 自家的 DGX Spark（一款运行 Ubuntu 的基于 Arm 的桌面 AI 计算机）目前缺少 Firefox 中的硬件视频解码功能，因为 GB10 芯片不支持 VA-API 或 V4L2。Mozilla 的跟踪工作依赖于这项 Vulkan Video 支持。</p><p>在 Beta 版和 Nightly 版中尝试</p><p>没有可供检查的兼容性列表，因为 Firefox 会在你首次启用时测试 GPU 的 Vulkan 支持，所以唯一知道是否有效的方法就是亲自尝试。</p><p>你需要运行 Nvidia 驱动版本 595.x 或更高版本，以及 Firefox 153 beta（或 nightly 版）。</p><p>然后翻转这些偏好设置：</p><p>media.hardware-video-decoding-vulkan.enabled</p><p>media.hardware-video-decoding-vulkan.direct-export.enabled</p><p>重启 Firefox，然后播放一个使用你的 GPU 支持加速播放的编解码器的视频（任何 H264 视频都是稳妥的选择）。要检查是否生效，可以使用 about:support 或打开终端并运行：</p><p>MOZ_LOG=&quot;FFmpegVideo:5&quot; firefox</p><p>在配备双 GPU（即集成显卡和独立 Nvidia 显卡）的笔记本电脑上，一些用户报告称，启用 Vulkan 视频解码后，独立显卡会不必要地唤醒，导致在播放中切换工作区时出现短暂卡顿。</p><p>Mozilla 尚未指明该功能将在哪个 Firefox 版本中默认启用，但即使启用，也会设置“门控”机制，以确保只有拥有兼容 Nvidia 驱动和硬件的用户才能使用。</p></div>
+  <div class="article-body"><p>Linux内核开发者再次讨论AI代理归属标注——可能将其移除</p><p>2026年7月2日上午11:11（美国东部时间）</p><p>当AI/LLM代理被用于创建Linux内核补丁时，一段时间以来的政策是应在补丁/提交中使用“Assisted-by”标签进行标注。但本周Linux内核开发者们正在讨论是否修订该政策，或可能将其完全取消。</p><p>知名Linux内核开发者Christian Brauner昨天捅了马蜂窝，他在Linux内核邮件列表中发起了一个话题，旨在简化AI/LLM代理的归属标注。当前Linux内核文档指出，Assisted-by标签不仅应包含LLM/名称，还应包含模型版本及其他详细信息。Brauner辩称：</p><p>“我发现我们的Git历史记录实际上开始有点像一个免费广告平台，为一大堆AI公司及其专有代理和模型做宣传，这让我非常恼火。”</p><p>他还建议，鉴于其缺乏实用性，或许干脆完全取消披露要求。如果不能完全取消使用“Assisted-by”标签的披露要求，他建议将其简化，只需注明所使用的AI/LLM的通用名称，无需任何额外细节。</p><p>作为回应，已有数十条消息表达了其他内核开发者的意见。所有常见的观点都已浮现：有人承认并非所有人都遵循“Assisted-by”指南，有人认为这是对专有/商业LLM的“免费推广”，还有人指出这给阅读补丁消息增加了额外杂乱信息。此外，还缺乏关于AI/LLM使用方式的上下文——它是生成了补丁本身，还是仅协助测试、代码审查或其他用途。</p><p>当然，也有许多人坚决反对在开源开发中使用任何生成式AI。</p><p>想要浏览所有广泛评论的人可以通过以下链接查看。</p><p>除此之外，今天Linux内核工程师Jeff Layton提出了一个单独的提议。他正在采取行动，提交了一个补丁，建议从Linux内核中完全移除LLM / Assisted-by要求。他在补丁消息中给出的理由是：</p><p>“我们在文档中实施这一要求已有数月，但越来越清楚的是，由此产生的信号噪声比非常低。</p><p>1/ 它并未被普遍遵循。虽然许多人确实出于善意尝试标注LLM，但并非所有人都这样做，原因各异。</p><p>2/ 它基本上充当了专有LLM公司的免费广告。</p><p>3/ 我们首先就不清楚为什么要收集这些信息。</p><p>鉴于这些数据充其量是有缺陷的，并且收集目的也不明确，让我们干脆从整个内核中取消对这些标签的要求。”</p><p>Linus Torvalds尚未对这两个话题发表意见。我们将拭目以待，看这场讨论将如何引导完善或移除Linux内核AI/LLM归属标注指南。</p><p>Linux基金会及其他机构推出“Akrites”以保护开源软件免受AI驱动的漏洞利用</p><p>Linux基金会最新的AI努力聚焦于AI资产与数据交换</p><p>Linux固件仓库为AI编码代理做准备</p><p>微软宣布开源“智能终端”</p><p>G7就开源AI、开放权重AI的共同语言达成一致</p><p>GitHub Copilot与Claude Code本周协助解决了图形、WiFi Linux驱动问题</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立了该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他。</p><p>红帽ARM工程师放弃ARM64 Linux个人桌面</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/firefox-vulkan-video-decoding-nvidia" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-AI-Attribution-Again" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

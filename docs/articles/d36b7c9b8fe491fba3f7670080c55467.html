@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能 — Linux 中文速报</title>
+<title>RISC-V RVV向量性能基准测试：SpacemiT K3 SoC — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能</h1>
+  <h1>RISC-V RVV向量性能基准测试：SpacemiT K3 SoC</h1>
 
-  <div class="article-summary">Firefox 正在为 Linux 上的 Nvidia GPU 添加基于 Vulkan 的硬件加速视频解码支持，该功能将在 Firefox 153 版本中引入，但默认不会启用。用户需要手动开启两项偏好设置，并确保使用 Nvidia 驱动 595.x 或更高版本。此前 Firefox 在 Linux 上对所有 Nvidia 设备禁用了硬件视频解码，导致用户需要借助社区变通方案。新功能基于 FFmpeg 的 Vulkan 解码支持，不仅适用于 Nvidia，也旨在解决 Arm 和嵌入式 GPU 在 Aarch64 Linux 上缺乏硬件视频解码的问题。</div>
+  <div class="article-summary">本文对SpacemiT K3 RISC-V SoC的RVV 1.0向量扩展性能进行了初步基准测试。该芯片是首批支持RVA23配置的商用RISC-V芯片之一。测试通过手动禁用相关软件包中的RVV支持来对比性能影响。由于系统级禁用RVV会导致Bianbu 4.0系统因非法指令而无法运行，因此采用了更精细的编译选项调整方法。测试涵盖了多个支持RVV的软件包，但未涉及功耗测量，因为K3 SoC当前未在Linux下暴露功耗指标。</div>
 
-  <div class="article-body"><p>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能 - OMG! Ubuntu</p><p>Firefox 正在添加硬件加速解码功能，为 Linux 上的 Nvidia 用户省去手动配置的麻烦。</p><p>该变更将包含在 7 月 21 日发布的 Firefox 153 中，但默认不会启用——至少一开始不会。</p><p>相反，用户需要翻转两项偏好设置才能尝试该功能，同时需注意可能存在卡顿和边缘情况（尤其是在配备混合显卡的设备上，下文会进一步提及）。</p><p>考虑到 Nvidia GPU 性能强大（这绝对是轻描淡写），我很惊讶这项功能之前竟然无法正常工作。原来，Firefox 在 Linux 上对所有 Nvidia 设备禁用了硬件视频解码——一刀切式的做法——因此社区变通方案才成为必要。</p><p>在其代码库中添加原生 Vulkan 视频解码路径意味着不再需要变通方案。</p><p>Vulkan Video 是一个跨供应商规范，并非 Nvidia 专属。Firefox 的实现基于 FFmpeg 的 Vulkan 解码支持。</p><p>Arm 和嵌入式 GPU 是这项工作的初始目标，旨在解决 Aarch64 Linux 上完全缺乏硬件视频解码的问题。</p><p>Nvidia 自家的 DGX Spark（一款运行 Ubuntu 的基于 Arm 的桌面 AI 计算机）目前缺少 Firefox 中的硬件视频解码功能，因为 GB10 芯片不支持 VA-API 或 V4L2。Mozilla 的跟踪工作依赖于这项 Vulkan Video 支持。</p><p>在 Beta 版和 Nightly 版中尝试</p><p>没有可供检查的兼容性列表，因为 Firefox 会在你首次启用时测试 GPU 的 Vulkan 支持，所以唯一知道是否有效的方法就是亲自尝试。</p><p>你需要运行 Nvidia 驱动版本 595.x 或更高版本，以及 Firefox 153 beta（或 nightly 版）。</p><p>然后翻转这些偏好设置：</p><p>media.hardware-video-decoding-vulkan.enabled</p><p>media.hardware-video-decoding-vulkan.direct-export.enabled</p><p>重启 Firefox，然后播放一个使用你的 GPU 支持加速播放的编解码器的视频（任何 H264 视频都是稳妥的选择）。要检查是否生效，可以使用 about:support 或打开终端并运行：</p><p>MOZ_LOG=&quot;FFmpegVideo:5&quot; firefox</p><p>在配备双 GPU（即集成显卡和独立 Nvidia 显卡）的笔记本电脑上，一些用户报告称，启用 Vulkan 视频解码后，独立显卡会不必要地唤醒，导致在播放中切换工作区时出现短暂卡顿。</p><p>Mozilla 尚未指明该功能将在哪个 Firefox 版本中默认启用，但即使启用，也会设置“门控”机制，以确保只有拥有兼容 Nvidia 驱动和硬件的用户才能使用。</p></div>
+  <div class="article-body"><p>RISC-V RVV向量性能基准测试：SpacemiT K3 SoC - Phoronix</p><p>RISC-V RVV向量性能基准测试：SpacemiT K3 SoC</p><p>2026年7月2日，美国东部时间上午10:10。</p><p>自五月以来，我们一直在对SpacemiT K3 RISC-V SoC进行基准测试，这是首批支持RVA23配置的商用RISC-V芯片之一。SpacemiT K3展示了RISC-V在过去五年中性能的巨大进步，而这款采用X100/A100核心的现代RISC-V SoC的亮点之一，便是支持RISC-V向量扩展“RVV”1.0。本文提供了一些初步基准测试，专门考察RISC-V RVV 1.0在不同支持软件中的性能影响。</p><p>今天的基准测试旨在量化SpacemiT K3 SoC上RISC-V向量RVV 1.0的性能影响。K3上的测试继续在SpacemiT提供的SpacemiT K3 Pico ITX系统上进行，该系统供Phoronix评测。这台16核、16GB内存的系统运行Bianbu 4.0，搭载Linux 6.18内核和GCC 15.2编译器。</p><p>根据kernel.org上关于RISC-V向量支持的文档，/proc/sys/abi/riscv_v_default_allow sysfs接口可用于在运行时切换RISC-V向量支持。这原本是我比较K3上RISC-V向量性能影响的计划。然而，在实践中效果并不理想……</p><p>多年来，在Phoronix上，通过简单地清除CPU ID位来比较大多数软件包的效果一直很简单。原本希望/proc/sys/abi/riscv_v_default_allow也能提供一种直接的RVV比较方式，只需关闭向量支持即可。</p><p>但当禁用“riscv_v_default_allow”时，Bianbu 4.0系统因非法指令而完全无法运行。系统上没有任何二进制文件能够执行。推测Bianbu在其libc构建或其他公共库中依赖某些无条件RVV指令，导致一旦禁用riscv_v_default_allow，系统便无法执行任何操作。</p><p>因此，在硬重启后，比较RISC-V向量性能的方法改为手动禁用相关支持软件包中的RVV支持，方式是通过不同程序的构建选项，或调整其RVV启用补丁，使其在不包含必要位的情况下编译。</p><p>以下是使用或不使用RVV时，不同软件包中RVV 1.0的影响情况。虽然量化RVV使用的功耗影响也很有趣，但遗憾的是，K3 SoC目前未在Linux下暴露任何功耗指标。因此，没有通过sysfs / HWMON / PowerCap或其他接口暴露的功耗指标。我的WattsUp Pro外部功率计正忙于其他系统的外部交流电源监测，因此本文仅关注性能影响。</p><p>Linux 7.2在Threadripper上展现出显著的I/O改进和更快的Poll，以及一些回归问题</p><p>Bcachefs 1.38.6基准测试：首个不再标记为“实验性”的版本</p><p>Intel Core Ultra X7 Panther Lake在Linux 7.1上的性能</p><p>缓存感知调度在AMD Zen 5上为PostgreSQL、Valkey和网络性能带来显著提升</p><p>Linux 6.6 LTS到Linux 7.1基准测试：AMD Threadripper三年间性能提升13%</p><p>GCC 16生成的二进制文件比GCC 15更快，与LLVM Clang 22竞争激烈</p><p>同时提供无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/firefox-vulkan-video-decoding-nvidia" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/review/risc-v-rvv-vector-benchmarks" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

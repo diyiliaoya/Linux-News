@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能 — Linux 中文速报</title>
+<title>发行版发布：Galactic Mandate Linux 99 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">发行版</span>
+    <span class="source">DistroWatch</span>
   </div>
 
-  <h1>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能</h1>
+  <h1>发行版发布：Galactic Mandate Linux 99</h1>
 
-  <div class="article-summary">Firefox 正在为 Linux 上的 Nvidia GPU 添加基于 Vulkan 的硬件加速视频解码支持，该功能将在 Firefox 153 版本中引入，但默认不会启用。用户需要手动开启两项偏好设置，并确保使用 Nvidia 驱动 595.x 或更高版本。此前 Firefox 在 Linux 上对所有 Nvidia 设备禁用了硬件视频解码，导致用户需要借助社区变通方案。新功能基于 FFmpeg 的 Vulkan 解码支持，不仅适用于 Nvidia，也旨在解决 Arm 和嵌入式 GPU 在 Aarch64 Linux 上缺乏硬件视频解码的问题。</div>
+  <div class="article-summary">科幻作家M. R. Richardson宣布发布Galactic Mandate Linux 99。该发行版基于Ubuntu 26.04，搭载Budgie桌面环境和labwc Wayland合成器，新增深度视觉转换、自定义FUI桌面、HUD面板、实时系统遥测、八种书封主题、控制中心等功能，并预装Firefox和OnlyOffice等实用软件。</div>
 
-  <div class="article-body"><p>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能 - OMG! Ubuntu</p><p>Firefox 正在添加硬件加速解码功能，为 Linux 上的 Nvidia 用户省去手动配置的麻烦。</p><p>该变更将包含在 7 月 21 日发布的 Firefox 153 中，但默认不会启用——至少一开始不会。</p><p>相反，用户需要翻转两项偏好设置才能尝试该功能，同时需注意可能存在卡顿和边缘情况（尤其是在配备混合显卡的设备上，下文会进一步提及）。</p><p>考虑到 Nvidia GPU 性能强大（这绝对是轻描淡写），我很惊讶这项功能之前竟然无法正常工作。原来，Firefox 在 Linux 上对所有 Nvidia 设备禁用了硬件视频解码——一刀切式的做法——因此社区变通方案才成为必要。</p><p>在其代码库中添加原生 Vulkan 视频解码路径意味着不再需要变通方案。</p><p>Vulkan Video 是一个跨供应商规范，并非 Nvidia 专属。Firefox 的实现基于 FFmpeg 的 Vulkan 解码支持。</p><p>Arm 和嵌入式 GPU 是这项工作的初始目标，旨在解决 Aarch64 Linux 上完全缺乏硬件视频解码的问题。</p><p>Nvidia 自家的 DGX Spark（一款运行 Ubuntu 的基于 Arm 的桌面 AI 计算机）目前缺少 Firefox 中的硬件视频解码功能，因为 GB10 芯片不支持 VA-API 或 V4L2。Mozilla 的跟踪工作依赖于这项 Vulkan Video 支持。</p><p>在 Beta 版和 Nightly 版中尝试</p><p>没有可供检查的兼容性列表，因为 Firefox 会在你首次启用时测试 GPU 的 Vulkan 支持，所以唯一知道是否有效的方法就是亲自尝试。</p><p>你需要运行 Nvidia 驱动版本 595.x 或更高版本，以及 Firefox 153 beta（或 nightly 版）。</p><p>然后翻转这些偏好设置：</p><p>media.hardware-video-decoding-vulkan.enabled</p><p>media.hardware-video-decoding-vulkan.direct-export.enabled</p><p>重启 Firefox，然后播放一个使用你的 GPU 支持加速播放的编解码器的视频（任何 H264 视频都是稳妥的选择）。要检查是否生效，可以使用 about:support 或打开终端并运行：</p><p>MOZ_LOG=&quot;FFmpegVideo:5&quot; firefox</p><p>在配备双 GPU（即集成显卡和独立 Nvidia 显卡）的笔记本电脑上，一些用户报告称，启用 Vulkan 视频解码后，独立显卡会不必要地唤醒，导致在播放中切换工作区时出现短暂卡顿。</p><p>Mozilla 尚未指明该功能将在哪个 Firefox 版本中默认启用，但即使启用，也会设置“门控”机制，以确保只有拥有兼容 Nvidia 驱动和硬件的用户才能使用。</p></div>
+  <div class="article-body"><p>发行版发布：Galactic Mandate Linux 99 (DistroWatch.com 新闻)</p><p>科幻作家、Galactic Mandate系列科幻小说作者M. R. Richardson宣布发布Galactic Mandate Linux 99。该版本基于Ubuntu 26.04，搭载Budgie桌面环境和labwc Wayland合成器，并包含书封主题、实时系统遥测、主题化应用程序、警报模式、可视化文件工具以及实用的Linux软件：</p><p>&quot;Galactic Mandate Linux 99版本相比早期预览版增加了更深入的视觉转换。系统现在启动进入一个自定义FUI桌面，带有HUD轨道、实时CPU、内存和交换分区读数、与主题关联的书封壁纸、自定义应用启动器，以及一个首次启动导览，解释各个功能的位置。新的控制中心充当该发行版的指挥室。它允许用户在手工制作的Galactic Mandate主题之间切换，预览桌面语言，控制FUI外壳，以及排练或禁用黄色/红色警报效果。主要特性：基于Ubuntu Budgie、Wayland和labwc构建的太空FUI桌面；八个可选的书封主题，配有协调的GTK、图标、壁纸、外壳镀铬、窗口边框、终端颜色和自定义应用调色板；带有实时遥测、时钟、主题标识、书籍标识和购书控制的HUD外壳……&quot;</p><p>请访问项目页面阅读完整发布公告。以下是下载链接：</p><p>galactic-mandate-linux-v99.iso</p><p>近期相关新闻与发布</p><p>发行版发布：Galactic Mandate Linux 99</p><p>更多Galactic Mandate新闻...</p><p>关于Galactic Mandate</p><p>Galactic Mandate Linux是一款基于Ubuntu的Linux发行版，采用Budgie桌面并带有科幻主题。它包含书封主题、实时系统遥测、主题化应用程序、警报模式、可视化文件工具以及实用的Linux软件，例如以Flatpak包形式提供的Firefox和OnlyOffice。该发行版由科幻作家、Galactic Mandate系列小说作者M. R. Richardson开发。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/firefox-vulkan-video-decoding-nvidia" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://distrowatch.com/12889" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能 — Linux 中文速报</title>
+<title>Fedora 45 考虑默认启用 x86_64 Shadow Stack — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能</h1>
+  <h1>Fedora 45 考虑默认启用 x86_64 Shadow Stack</h1>
 
-  <div class="article-summary">Firefox 正在为 Linux 上的 Nvidia GPU 添加基于 Vulkan 的硬件加速视频解码支持，该功能将在 Firefox 153 版本中引入，但默认不会启用。用户需要手动开启两项偏好设置，并确保使用 Nvidia 驱动 595.x 或更高版本。此前 Firefox 在 Linux 上对所有 Nvidia 设备禁用了硬件视频解码，导致用户需要借助社区变通方案。新功能基于 FFmpeg 的 Vulkan 解码支持，不仅适用于 Nvidia，也旨在解决 Arm 和嵌入式 GPU 在 Aarch64 Linux 上缺乏硬件视频解码的问题。</div>
+  <div class="article-summary">Fedora Linux 45 正考虑一项变更提案，默认启用 x86_64 架构的 Shadow Stack（影子栈）保护，以提升现代 Intel 和 AMD 系统的安全性。该功能通过硬件强制保护返回地址，防御面向返回编程（ROP）攻击。默认情况下，动态链接器或静态启动例程将为所有二进制和共享库依赖均支持 Shadow Stack 的进程激活该保护。此变更向后兼容，性能开销极小，并为未来启用完整控制流强制技术（CET）奠定基础。</div>
 
-  <div class="article-body"><p>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能 - OMG! Ubuntu</p><p>Firefox 正在添加硬件加速解码功能，为 Linux 上的 Nvidia 用户省去手动配置的麻烦。</p><p>该变更将包含在 7 月 21 日发布的 Firefox 153 中，但默认不会启用——至少一开始不会。</p><p>相反，用户需要翻转两项偏好设置才能尝试该功能，同时需注意可能存在卡顿和边缘情况（尤其是在配备混合显卡的设备上，下文会进一步提及）。</p><p>考虑到 Nvidia GPU 性能强大（这绝对是轻描淡写），我很惊讶这项功能之前竟然无法正常工作。原来，Firefox 在 Linux 上对所有 Nvidia 设备禁用了硬件视频解码——一刀切式的做法——因此社区变通方案才成为必要。</p><p>在其代码库中添加原生 Vulkan 视频解码路径意味着不再需要变通方案。</p><p>Vulkan Video 是一个跨供应商规范，并非 Nvidia 专属。Firefox 的实现基于 FFmpeg 的 Vulkan 解码支持。</p><p>Arm 和嵌入式 GPU 是这项工作的初始目标，旨在解决 Aarch64 Linux 上完全缺乏硬件视频解码的问题。</p><p>Nvidia 自家的 DGX Spark（一款运行 Ubuntu 的基于 Arm 的桌面 AI 计算机）目前缺少 Firefox 中的硬件视频解码功能，因为 GB10 芯片不支持 VA-API 或 V4L2。Mozilla 的跟踪工作依赖于这项 Vulkan Video 支持。</p><p>在 Beta 版和 Nightly 版中尝试</p><p>没有可供检查的兼容性列表，因为 Firefox 会在你首次启用时测试 GPU 的 Vulkan 支持，所以唯一知道是否有效的方法就是亲自尝试。</p><p>你需要运行 Nvidia 驱动版本 595.x 或更高版本，以及 Firefox 153 beta（或 nightly 版）。</p><p>然后翻转这些偏好设置：</p><p>media.hardware-video-decoding-vulkan.enabled</p><p>media.hardware-video-decoding-vulkan.direct-export.enabled</p><p>重启 Firefox，然后播放一个使用你的 GPU 支持加速播放的编解码器的视频（任何 H264 视频都是稳妥的选择）。要检查是否生效，可以使用 about:support 或打开终端并运行：</p><p>MOZ_LOG=&quot;FFmpegVideo:5&quot; firefox</p><p>在配备双 GPU（即集成显卡和独立 Nvidia 显卡）的笔记本电脑上，一些用户报告称，启用 Vulkan 视频解码后，独立显卡会不必要地唤醒，导致在播放中切换工作区时出现短暂卡顿。</p><p>Mozilla 尚未指明该功能将在哪个 Firefox 版本中默认启用，但即使启用，也会设置“门控”机制，以确保只有拥有兼容 Nvidia 驱动和硬件的用户才能使用。</p></div>
+  <div class="article-body"><p>Fedora 45 考虑默认启用 x86_64 Shadow Stack - Phoronix</p><p>Fedora 45 考虑默认启用 x86_64 Shadow Stack</p><p>2026年7月2日 下午5:17 EDT</p><p>一项针对 Fedora Linux 45 的变更提案正在考虑中，旨在默认启用 x86_64 架构的 Shadow Stack，以提升现代 Intel 和 AMD 系统的安全性。</p><p>该变更提案建议，在 x86_64 架构上，默认对使用 GCC、LLVM Clang 或 Rustc 编译的应用程序/库启用 Shadow Stack 保护。动态链接器或静态启动例程将为所有二进制文件和共享库依赖均支持 Shadow Stack 的进程激活 Shadow Stack。Shadow Stack 由现代 Intel 和 AMD CPU 通过硬件强制实施，有助于抵御面向返回编程（ROP）类型的攻击。</p><p>该变更提案进一步阐述：</p><p>“此变更在 Fedora Linux 45 上，默认对支持 Shadow Stack 的 x86_64 机器启用 Shadow Stack 保护。动态链接器或静态启动例程将为所有二进制文件和共享库依赖均支持 Shadow Stack 的进程激活 Shadow Stack，从而在可能的情况下默认保护进程。Shadow Stack 是 Intel CET（控制流强制技术）中引入的两项控制流强制功能之一，另一项是间接分支跟踪（IBT），旨在通过保护返回地址来防御面向返回编程（ROP）和面向跳转编程（JOP）攻击。本次 Fedora 变更仅涵盖启用 Shadow Stack 支持。默认启用间接分支跟踪不在本次范围之内。</p><p>此变更在大多数情况下向后兼容：自 2018 年起，-fcf-protection 已成为 Fedora 中 redhat-rpm-config 的默认编译时标志，因此大多数二进制文件已使用适当的标记进行构建。因此，应用此变更后，依赖项带有 Shadow Stack 标记的应用程序将透明地获得保护，而在启动时加载任何不符合要求的对象的应用程序将继续在无 Shadow Stack 保护的情况下运行。唯一的新故障模式是，当启用 Shadow Stack 的进程在运行时尝试通过 dlopen 加载不符合要求的共享对象时，会导致 dlopen 错误，错误信息类似于：error: dlopen: /path/to/library.so: rebuild shared object with SHSTK support enabled。”</p><p>使用 Shadow Stack 的性能开销通常非常微小甚至不存在，同时能提供更好的系统安全性。这也为在后续 Fedora Linux 版本中启用间接分支跟踪（IBT）以实现完整的控制流强制技术（CET）保护奠定了基础。</p><p>关于 Fedora 45 Shadow Stack 提案的更多详情，请参见：</p><p>Fedora 委员会寻求终止当前关于 AI 开发者桌面的讨论</p><p>Fedora 45 最终计划为 Stratis 存储提供安装支持</p><p>Fedora 45 考虑为机密计算精简 GRUB 引导加载程序</p><p>Fedora 44 RISC-V 镜像发布，包含新的“Omni”内核以支持更广泛的 RISC-V 硬件</p><p>Fedora 45 考虑使用 PURL 元数据唯一标识软件包</p><p>Fedora 淘汰其 Deepin 桌面软件包</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>Red Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统</p><p>GCC 编译器的一行 x86 修改为现代 Intel/AMD CPU 带来 +12% 的基准测试提升</p><p>COSMIC 的新系统监视器看起来非常流畅</p><p>Nourish：一款由 Vulkan 驱动、支持无限滚动/平移的新型 Wayland 合成器</p><p>CachyOS 2026年6月版发布，带来更多性能优化</p><p>Linux 缓存感知调度扩展，实现更佳性能</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/firefox-vulkan-video-decoding-nvidia" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Fedora-45-Consider-Shadow-Stack" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

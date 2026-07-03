@@ -1538,5 +1538,170 @@
     "title_zh": "QEMU 可能放宽对 AI 生成贡献的禁令",
     "summary_zh": "QEMU 项目正在考虑放宽对 AI 生成代码贡献的限制，这一变化可能为虚拟化技术带来创新突破。该举措旨在适应人工智能在软件开发中的日益普及，同时确保代码质量和项目稳定性。",
     "fulltext_zh": "QEMU 可能重新考虑其对 AI 生成贡献的限制，为虚拟化技术的创新进步打开大门。了解更多。\n\n该文章《QEMU May Relax Its Ban on AI-Generated Contributions》最初发表于 Linux Today。"
+  },
+  "b225207e21c0b25d375c3fb64b088f96": {
+    "id": "b225207e21c0b25d375c3fb64b088f96",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/collabora-office-26-04/",
+    "title_en": "Collabora Office 26.04 Keeps AI Optional and Refines Writer and Calc",
+    "summary_en": "The desktop suite's first major update pulls features from CODE 26.04.",
+    "pub_date": "Thu, 02 Jul 2026 16:41:00 GMT",
+    "title_zh": "Collabora Office 26.04 保持 AI 可选，并优化 Writer 和 Calc",
+    "summary_zh": "Collabora Office 发布首个重大更新 26.04，基于 CODE 26.04 构建。新版本引入可选 AI 助手，用户可自选模型提供商或自托管，AI 不访问文档除非主动授权。Writer 和 Calc 获得多项改进：文档比较工具支持颜色编码，Calc 新增每用户工作表视图、表格设计选项卡和公式错误浮动助手。Impress 支持跟随式演示、幻灯片分组和多种尺寸混合。企业支持将在数周内推出。",
+    "fulltext_zh": "Collabora Office 26.04 保持 AI 可选，并优化 Writer 和 Calc\n\n桌面套件的首个重大更新从 CODE 26.04 中引入了多项功能。\n\nCollabora Productivity 去年进入桌面编辑器市场，推出了基于与 Collabora Online 相同渲染机制但专注于离线使用的办公套件。他们这样做的目的是让用户无论在线还是离线都能获得相同的编辑体验，无需重新学习界面操作方式。其底层仍然是 LibreOffice 代码，但不再使用传统的 VCL 界面，而是采用了 JavaScript、CSS、WebGL 和 Canvas 技术栈。\n\n这种共享代码库意味着 Collabora 产品之间的更新速度很快，这也正是 Collabora Office 的首个重大更新已经从 CODE 26.04 中引入功能的原因。\n\n精炼的文档套件\n\n插图来源：Collabora Productivity。\n\n在没有加载文档的情况下打开三个编辑器中的任意一个，你将进入新的启动屏幕。它会显示带有文件类型图标的最近文档、模板库，并在文件打开后提供 AI 和文档签名等快速访问功能。\n\n这里更大的新增功能是 AI。我知道你已经厌倦了看到其他开源办公套件纷纷染指 AI，但别担心，Collabora 保持了 AI 的可选性。\n\n启用 AI 意味着你可以选择自己的模型提供商、自托管模型，或者选择你已信任的供应商，并输入自己的凭据。Collabora 完全不参与其中，除非你主动将文档交给助手，否则它无法访问你的文档。\n\n启用后，AI 可以在 Writer 中起草和重写文本，在 Calc 中在你手动查找错误之前修复损坏的公式，并在 Impress 中将粗略的笔记转化为实际的幻灯片。它还可以生成图像，并在你没有时间手动浏览文档时进行摘要总结。\n\n至于本次发布的其余部分，Office 26.04 包含了 CODE 26.04 版本带来的所有功能。在 Writer 中，你获得了一个重新设计的文档比较工具，它用颜色编码标记插入、删除和任何移动的内容，同时标注每次更改的修改者和时间。所有这些都可以通过并排视图或修订面板查看。此外，还有新的多页视图、更丰富的样式预览、导航器搜索以及 Markdown 导入/导出功能。\n\nWriter、Calc 和 Impress 也都获得了大量更新。Calc 中的每用户工作表视图允许每个人设置自己的过滤器和布局，而不会影响他人；新的表格设计选项卡带来了合适的表格样式以及计算后的数据透视字段。公式错误现在会显示在单元格上的浮动帮助对话框中，因此你可以检查并修复问题，而无需滚动整个工作表。此外，还新增了一批函数，包括 XLOOKUP、XMATCH、LET 和 LAMBDA。在 Impress 中，跟随式演示允许观众自行向后滚动浏览之前的幻灯片，而不会跳到演示者前面。同样，幻灯片可以分组为章节，单个演示文稿可以混合多种幻灯片尺寸，多显示器支持也比以前更好。你还获得了更好的字体嵌入功能，确保演示文稿在任何地方打开时都能一致渲染。\n\nCollabora Office 26.04 适用于多种平台，包括 Linux、Windows、macOS、Android 和 iOS。\n\n要跟踪开发进度并访问源代码，你可以访问 Collabora 的 GitLab 仓库。\n\n如果你正在寻找企业支持，Collabora 表示他们正在努力，并且本次发布是未来版本的预览。我问了 Collabora Productivity 的首席执行官 Michael Meeks，企业用户，特别是那些希望在 Linux 上部署 Collabora Office 的用户，可以期待什么。他回答说：\n\n“企业现在就可以开始评估这个版本，支持将在几周内推出。他们可以期待更流畅的工作流程、更少的培训需求（得益于与 Collabora Online 共享的更美观且符合人体工学的用户体验）、内置的 AI 支持等等。我们期待企业用户的反馈。”\n\n一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的技术爱好者。"
+  },
+  "923bd0976c50bdcb54f0d5440dae0ca4": {
+    "id": "923bd0976c50bdcb54f0d5440dae0ca4",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/tinyretropad-notepad-clone/",
+    "title_en": "Sick of AI Slop, Former Microsoft Engineer Built a New, AI-less Notepad",
+    "summary_en": "A former Microsoft engineer who was behind Task Manager has built a fully working, 2.5KB Notepad clone that doesn't ship with slop.",
+    "pub_date": "Thu, 02 Jul 2026 11:31:59 GMT",
+    "title_zh": "厌倦AI垃圾，前微软工程师打造了一款无AI的记事本",
+    "summary_zh": "一位曾负责Windows任务管理器开发的前微软工程师，因厌倦记事本被塞入AI工具、Markdown支持和云积分等冗余功能，亲手打造了一款仅2.5KB的记事本克隆版TinyRetroPad。它基于Windows内置的RichEdit组件，保留了完整的菜单栏、字体选择、自动换行、状态栏和打印支持，且不含任何遥测功能。该项目代码已开源，旨在提醒用户：文本编辑器的本职就是编辑文本。",
+    "fulltext_zh": "厌倦AI垃圾，前微软工程师打造了一款无AI的记事本\n厌倦AI垃圾，前微软工程师打造了一款无AI的记事本\n一位曾负责任务管理器开发的前微软工程师，打造了一款完全可用的2.5KB记事本克隆版，且不附带任何垃圾功能。\n微软在过去几年里，不断给记事本塞入AI工具、Markdown支持和云积分，背离了它原本简单、本地的文本编辑器定位。不登录账户仍可进行基本编辑，但AI功能无法使用。你甚至需要一个微软账户才能查看剩余的月度AI积分。对于一个过去只用来打开文本文件的应用程序来说，这未免太过沉重。\n那位曾负责原始Windows任务管理器的前微软工程师，刚刚证明了这一切都毫无必要。他打造了一款完全可用的记事本克隆版，体积仅约2.5KB。\nDave并没有从头编写文本编辑器，而是直接借用了操作系统内部已有的组件。这款笔记应用通过封装Windows内置多年的文本编辑组件RichEdit来实现。他使用x86汇编器进行编译，再通过专为小型Windows可执行文件设计的压缩器进一步压缩。生成的程序仍然带有完整的记事本风格菜单栏，涵盖熟悉的选项。\n你还能获得实用的工具，如字体选择器、自动换行、状态栏以及可用的打印支持。另外，显而易见的是，这里没有任何回传数据的遥测管道。\nTinyRetroPad并非凭空出现；Dave基于DTE（一款由另一位开发者采用同样精简方法制作的小型编辑器）构建了它。而DTE本身又源自HelloAssembly（Dave多年前自己编写的一个项目），该项目是在他人对其自身想法的实现基础上扩展而来。\n整个代码库无论多么小巧，都托管在GitHub上。任何人都可以获取代码、进行修改，或者如果愿意挑战，还可以进一步压缩它。\n对Linux用户来说是旧闻\n如果你使用Linux，这一切都不算什么新闻。GNOME默认搭载gedit，KDE默认搭载Kate。两者都不需要AI助手或云账户来打开配置文件。Vim和Emacs多年来一直是Linux编辑生态系统的中流砥柱，而Notepad Next则专门为那些想要Notepad++替代品、又不想通过Wine或非官方Snap包的用户而生。\nDave所做的，只是给Windows用户提了个醒——Linux用户早已深谙此道：文本编辑器的唯一任务就是编辑文本，之后每添加一个功能，大多都是多余的。\n你可以在Purism的Librem 16上花费高达11,944美元\n你可以在Purism的Librem 16 Linux笔记本上花费高达11,944美元\n这款笔记本起售价为2,899美元，定制配置最高可达令人咋舌的11,944美元。\n一位热爱开源软件、定制PC组装、赛车运动以及探索这个世界无限可能的极客。\nCollabora Office 26.04保持AI可选，并优化了Writer和Calc\nLumo 2.0：Proton的ChatGPT和Claude私有替代方案刚刚变得更好\nAI代理可能获得经过验证的身份，这要归功于DNS\n你可以在Purism的Librem 16 Linux笔记本上花费高达11,944美元\nLinux用户免费获得这个！Brave Origin对其他人售价59.99美元\n成为更好的Linux用户\n通过FOSS周刊通讯，你可以学习有用的Linux技巧、发现应用程序、探索新发行版，并随时了解Linux世界的最新动态\n太好了！您已成功注册。\n欢迎回来！您已成功登录。\n您已成功订阅It's FOSS。\n您的链接已过期。\n成功！请检查您的电子邮件以获取用于登录的魔法链接。\n成功！您的账单信息已更新。\n您的账单未更新。"
+  },
+  "7a4d0163a627993bd8e9adf401726411": {
+    "id": "7a4d0163a627993bd8e9adf401726411",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12891",
+    "title_en": "Distribution Release: Ultramarine Linux 44",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The Ultramarine Linux, a Fedora-based desktop distribution, has published a new release, version 44. The new version includes updates to three of the four desktop environments: \"We have gotten tons of feedback and praise for switching to Plasma as our recommended edition. This release comes with Plasma 6.7,....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Ultramarine Linux 44",
+    "summary_zh": "基于Fedora的桌面发行版Ultramarine Linux发布了第44版。新版本更新了三个桌面环境：Plasma 6.7带来新Union主题引擎、性能改进和大量错误修复；Budgie切换到Wayland，采用SDDM窗口管理器和新蓝牙应用；GNOME版修复了烦人的“窗口已就绪”通知，并默认启用最小化和最大化按钮。",
+    "fulltext_zh": "发行版发布：Ultramarine Linux 44 (DistroWatch.com 新闻)\n\n一款基于Fedora的桌面发行版发布了新版本44。新版本包含四个桌面环境中的三个更新：\n\n“我们收到了大量反馈和赞誉，因为将Plasma作为推荐版本。此版本搭载Plasma 6.7、新的Union主题引擎、性能改进以及大量错误修复。Budgie已切换到Wayland。它现在采用SDDM窗口管理器和一个新的蓝牙应用。这是倒数第二个仍停留在X11的版本，所以我们非常高兴终于将其现代化。如果您从版本43升级，系统会提示您访问并按照其说明操作，出于稳定性原因，我们无法自动将用户过渡到SDDM，但您可以按照我们简单的说明进行切换。我们对GNOME版本进行了一些改进，使其显著更好。最值得注意的是，我们修复了那个烦人的‘窗口已就绪’通知，现在窗口会像在其他版本上一样自动聚焦。我们还默认在每个窗口上启用了最小化和最大化按钮……”\n\n更多信息请参阅：\nultramarine-budgie-44-live-anaconda-x86_64.iso\nultramarine-gnome-44-live-anaconda-x86_64.iso\nultramarine-plasma-44-live-anaconda-x86_64.iso\nultramarine-xfce-44-live-anaconda-x86_64.iso\n\n近期相关新闻与发布：\n发行版发布：Ultramarine Linux 44\n发行版发布：Ultramarine Linux 43\n发行版发布：Ultramarine Linux 42\n发行版发布：Ultramarine Linux 41\n发行版发布：Ultramarine Linux 40\n发行版发布：Ultramarine Linux 39\n更多Ultramarine新闻...\n\n关于Ultramarine Linux\nUltramarine Linux是一款基于Fedora的发行版，包含额外的软件包仓库（如RPM Fusion）并启用了多媒体编解码器。Ultramarine可被视为Korora项目的精神继承者，旨在使Fedora成为更友好的桌面体验。"
+  },
+  "b5d043591cd6ae166491226fd0d45dab": {
+    "id": "b5d043591cd6ae166491226fd0d45dab",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12890",
+    "title_en": "Mobile OS Release: CalyxOS 7.2.2.0",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The CalyxOS team have announced the return of the project to active status and, with it, the launch of version 7.2.2.0 of the mobile operating system. \"CalyxOS 7.2.2.0 is up online. This release will receive all future updates. If you haven’t previously installed 7.2.1.0 (test build) and want....",
+    "pub_date": "",
+    "title_zh": "移动操作系统发布：CalyxOS 7.2.2.0",
+    "summary_zh": "CalyxOS 团队宣布项目恢复活跃状态，并发布 7.2.2.0 版本。该版本将接收所有未来更新，用户需刷机安装。CalyxOS 是一款注重隐私的移动操作系统，基于 Android 去除谷歌服务，改用 microG、F-Droid 和 Aurora 软件中心，并可选装防火墙、Tor 浏览器等隐私保护工具。团队感谢社区支持，并计划处理积压问题。",
+    "fulltext_zh": "移动操作系统发布：CalyxOS 7.2.2.0\n\nCalyxOS 团队宣布项目恢复活跃状态，并随之推出移动操作系统 7.2.2.0 版本。\n\n“CalyxOS 7.2.2.0 已上线。此版本将接收所有未来更新。如果你之前未安装 7.2.1.0（测试版），并希望开始或继续使用 CalyxOS，你需要刷机并安装 7.2.2.0。随着 CalyxOS 发布恢复正常，我们将继续处理其他积压问题。请加入 Matrix 频道了解我们的进展和用户支持。亲爱的 CalyxOS 社区成员，我们很高兴分享 CalyxOS 7.2.2.0 的发布。这意味着 CalyxOS 正式从暂停状态回归！对我们团队来说，恢复 CalyxOS 发布是一段漫长的旅程，我们深深感谢你们在这段旅程中给予的所有支持和团结，尤其是你们与我们共同进行的最新自愿测试。以下我们分享一些重要说明，供计划安装或重新安装 CalyxOS 的用户参考，同时说明我们处理大量积压问题的下一步计划。”\n\n有关新版本、基于 Android 17 的 CalyxOS 8 计划以及基础设施变更的更多信息，请参见项目页面。支持的设备列表和安装选项可在项目页面上找到。\n\nCalyxOS 是一款注重隐私的移动操作系统。该项目提供去谷歌化的 Android 版本，用 microG 替代 Google Play 服务，并使用 F-Droid 和 Aurora 软件中心替代 Google Play 商店。CalyxOS 还可选安装隐私保护工具，例如可阻止或过滤应用的防火墙、Tor 浏览器、K-9 邮件客户端以及用于安全消息和通话的 Signal。"
+  },
+  "7bd23e6335a6914309d2451b0ddcac49": {
+    "id": "7bd23e6335a6914309d2451b0ddcac49",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12889",
+    "title_en": "Distribution Release: Galactic Mandate Linux 99",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  M. R. Richardson, a science fiction writer and author of the Galactic Mandate series of science fiction books, has announced the release of Galactic Mandate Linux 99. Based on Ubuntu 26.04, this release comes with the Budgie desktop and labwc Wayland compositor, and it also includes book-cover themes,....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Galactic Mandate Linux 99",
+    "summary_zh": "科幻作家M. R. Richardson宣布发布Galactic Mandate Linux 99。该发行版基于Ubuntu 26.04，搭载Budgie桌面环境和labwc Wayland合成器，新增深度视觉转换、自定义FUI桌面、HUD面板、实时系统遥测、八种书封主题、控制中心等功能，并预装Firefox和OnlyOffice等实用软件。",
+    "fulltext_zh": "发行版发布：Galactic Mandate Linux 99 (DistroWatch.com 新闻)\n\n科幻作家、Galactic Mandate系列科幻小说作者M. R. Richardson宣布发布Galactic Mandate Linux 99。该版本基于Ubuntu 26.04，搭载Budgie桌面环境和labwc Wayland合成器，并包含书封主题、实时系统遥测、主题化应用程序、警报模式、可视化文件工具以及实用的Linux软件：\n\n\"Galactic Mandate Linux 99版本相比早期预览版增加了更深入的视觉转换。系统现在启动进入一个自定义FUI桌面，带有HUD轨道、实时CPU、内存和交换分区读数、与主题关联的书封壁纸、自定义应用启动器，以及一个首次启动导览，解释各个功能的位置。新的控制中心充当该发行版的指挥室。它允许用户在手工制作的Galactic Mandate主题之间切换，预览桌面语言，控制FUI外壳，以及排练或禁用黄色/红色警报效果。主要特性：基于Ubuntu Budgie、Wayland和labwc构建的太空FUI桌面；八个可选的书封主题，配有协调的GTK、图标、壁纸、外壳镀铬、窗口边框、终端颜色和自定义应用调色板；带有实时遥测、时钟、主题标识、书籍标识和购书控制的HUD外壳……\"\n\n请访问项目页面阅读完整发布公告。以下是下载链接：\ngalactic-mandate-linux-v99.iso\n\n近期相关新闻与发布\n发行版发布：Galactic Mandate Linux 99\n更多Galactic Mandate新闻...\n\n关于Galactic Mandate\nGalactic Mandate Linux是一款基于Ubuntu的Linux发行版，采用Budgie桌面并带有科幻主题。它包含书封主题、实时系统遥测、主题化应用程序、警报模式、可视化文件工具以及实用的Linux软件，例如以Flatpak包形式提供的Firefox和OnlyOffice。该发行版由科幻作家、Galactic Mandate系列小说作者M. R. Richardson开发。"
+  },
+  "368f345d124442d9e7c38c5d5f08ffd2": {
+    "id": "368f345d124442d9e7c38c5d5f08ffd2",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/ReactOS-First-NT6-Syscall",
+    "title_en": "ReactOS Implements First Windows NT6 System Call In Step Toward Vista Compatibility",
+    "summary_en": "The ReactOS project that is striving to be the \"open-source Windows\" with Windows driver and software binary compatibility hit another milestone today.  ReactOS to date has primarily targeted Windows NT 5.2 as the architecture from Windows XP and Windows Server 2003 but with an eye toward Windows NT 6.0 for Windows Vista and later compatibility with software. ReactOS has now landed their first NT6 system call...",
+    "pub_date": "Thu, 02 Jul 2026 20:22:38 -0400",
+    "title_zh": "ReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进一步",
+    "summary_zh": "ReactOS 项目致力于打造“开源 Windows”，实现 Windows 驱动和软件的二进制兼容。近日，该项目实现了首个 NT6 系统调用 NtGetCurrentProcessorNumberEx，标志着向 Windows Vista 及更高版本兼容迈出重要一步。此前 ReactOS 主要针对 Windows NT 5.2 架构，此次新增的 NT6 处理器函数为后续兼容性奠定了基础。",
+    "fulltext_zh": "ReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进一步 - Phoronix\nReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进一步\n2026年7月2日 美国东部时间晚上8点22分。\n致力于打造“开源 Windows”、实现 Windows 驱动和软件二进制兼容的 ReactOS 项目今日迎来了又一个里程碑。迄今为止，ReactOS 主要针对 Windows NT 5.2 架构（即 Windows XP 和 Windows Server 2003 的架构），但同时也着眼于 Windows NT 6.0，以实现对 Windows Vista 及更高版本软件的兼容。现在，ReactOS 已成功实现了首个 NT6 系统调用。\n目前，ReactOS 代码树中已实现了新的 NT6 处理器函数。这反过来也为这个开源项目提供了首个 NT6 系统调用实现。这一小步还包括实现了多种 NT6 处理器函数。\nNtGetCurrentProcessorNumberEx 用于返回调用者当前运行所在逻辑处理器的处理器编号。虽然这不是最令人兴奋的函数，但它是首个 NT6 系统调用，也是这个已坚持三十年的开源项目向前迈进的又一步。\nReactOS 庆祝了这一里程碑。上个月，该项目还庆祝了运行 Valve 公司《半条命》游戏的里程碑。\nMageia 10 发布，延续 Mandrake 传统的 Linux 发行版\nCachyOS 2026年6月版发布，带来更多性能优化\nQSOE v0.1 发布，一款受 QNX 启发的 RISC-V 操作系统\nKDE Plasma 6 桌面终于登陆 Slackware\nHaiku OS 现已启用 AVX-512 支持及其他硬件改进\nReactOS“开源 Windows”达到能够运行《半条命》的里程碑\nMichael Larabel 是 Phoronix.com 的主要作者，并于2004年创立了该网站，专注于丰富 Linux 硬件体验。Michael 已撰写了超过20,000篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。\nRed Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统\nGCC 编译器的一行 x86 修改为现代 Intel/AMD CPU 带来 +12% 的基准测试提升\nCOSMIC 的新系统监视器看起来非常流畅\nNourish：一款由 Vulkan 驱动、支持无限滚动/平移的新 Wayland 合成器\nCachyOS 2026年6月版发布，带来更多性能优化\nLinux 缓存感知调度扩展带来更佳性能：MySQL 性能提升高达 360%\nLinux 7.2 暂存区仍在努力驯服 Realtek RTL8723BS“驱动猛兽”\n微软宣布 WSL 上 Linux 容器的公开预览版\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "d1de3d6e673a1e1a8c3ba9e321c76e67": {
+    "id": "d1de3d6e673a1e1a8c3ba9e321c76e67",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Fedora-45-Consider-Shadow-Stack",
+    "title_en": "Fedora 45 Considering x86_64 Shadow Stack Usage By Default",
+    "summary_en": "A change proposal under consideration for Fedora Linux 45 would enable x86_64 Shadow Stack usage by default in the name of better security on modern Intel and AMD systems...",
+    "pub_date": "Thu, 02 Jul 2026 17:17:35 -0400",
+    "title_zh": "Fedora 45 考虑默认启用 x86_64 Shadow Stack",
+    "summary_zh": "Fedora Linux 45 正考虑一项变更提案，默认启用 x86_64 架构的 Shadow Stack（影子栈）保护，以提升现代 Intel 和 AMD 系统的安全性。该功能通过硬件强制保护返回地址，防御面向返回编程（ROP）攻击。默认情况下，动态链接器或静态启动例程将为所有二进制和共享库依赖均支持 Shadow Stack 的进程激活该保护。此变更向后兼容，性能开销极小，并为未来启用完整控制流强制技术（CET）奠定基础。",
+    "fulltext_zh": "Fedora 45 考虑默认启用 x86_64 Shadow Stack - Phoronix\nFedora 45 考虑默认启用 x86_64 Shadow Stack\n2026年7月2日 下午5:17 EDT\n一项针对 Fedora Linux 45 的变更提案正在考虑中，旨在默认启用 x86_64 架构的 Shadow Stack，以提升现代 Intel 和 AMD 系统的安全性。\n该变更提案建议，在 x86_64 架构上，默认对使用 GCC、LLVM Clang 或 Rustc 编译的应用程序/库启用 Shadow Stack 保护。动态链接器或静态启动例程将为所有二进制文件和共享库依赖均支持 Shadow Stack 的进程激活 Shadow Stack。Shadow Stack 由现代 Intel 和 AMD CPU 通过硬件强制实施，有助于抵御面向返回编程（ROP）类型的攻击。\n该变更提案进一步阐述：\n“此变更在 Fedora Linux 45 上，默认对支持 Shadow Stack 的 x86_64 机器启用 Shadow Stack 保护。动态链接器或静态启动例程将为所有二进制文件和共享库依赖均支持 Shadow Stack 的进程激活 Shadow Stack，从而在可能的情况下默认保护进程。Shadow Stack 是 Intel CET（控制流强制技术）中引入的两项控制流强制功能之一，另一项是间接分支跟踪（IBT），旨在通过保护返回地址来防御面向返回编程（ROP）和面向跳转编程（JOP）攻击。本次 Fedora 变更仅涵盖启用 Shadow Stack 支持。默认启用间接分支跟踪不在本次范围之内。\n此变更在大多数情况下向后兼容：自 2018 年起，-fcf-protection 已成为 Fedora 中 redhat-rpm-config 的默认编译时标志，因此大多数二进制文件已使用适当的标记进行构建。因此，应用此变更后，依赖项带有 Shadow Stack 标记的应用程序将透明地获得保护，而在启动时加载任何不符合要求的对象的应用程序将继续在无 Shadow Stack 保护的情况下运行。唯一的新故障模式是，当启用 Shadow Stack 的进程在运行时尝试通过 dlopen 加载不符合要求的共享对象时，会导致 dlopen 错误，错误信息类似于：error: dlopen: /path/to/library.so: rebuild shared object with SHSTK support enabled。”\n使用 Shadow Stack 的性能开销通常非常微小甚至不存在，同时能提供更好的系统安全性。这也为在后续 Fedora Linux 版本中启用间接分支跟踪（IBT）以实现完整的控制流强制技术（CET）保护奠定了基础。\n关于 Fedora 45 Shadow Stack 提案的更多详情，请参见：\nFedora 委员会寻求终止当前关于 AI 开发者桌面的讨论\nFedora 45 最终计划为 Stratis 存储提供安装支持\nFedora 45 考虑为机密计算精简 GRUB 引导加载程序\nFedora 44 RISC-V 镜像发布，包含新的“Omni”内核以支持更广泛的 RISC-V 硬件\nFedora 45 考虑使用 PURL 元数据唯一标识软件包\nFedora 淘汰其 Deepin 桌面软件包\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\nRed Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统\nGCC 编译器的一行 x86 修改为现代 Intel/AMD CPU 带来 +12% 的基准测试提升\nCOSMIC 的新系统监视器看起来非常流畅\nNourish：一款由 Vulkan 驱动、支持无限滚动/平移的新型 Wayland 合成器\nCachyOS 2026年6月版发布，带来更多性能优化\nLinux 缓存感知调度扩展，实现更佳性能"
+  },
+  "a4d3412dad98d572f50a2e3d5dad4015": {
+    "id": "a4d3412dad98d572f50a2e3d5dad4015",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/EFS-File-System-Removal-Coming",
+    "title_en": "EFS File-System Slated For Removal With Linux 7.3 After 20+ Years Unmaintained",
+    "summary_en": "The EFS file-system was used for non-ISO9660 CD-ROMs and disk partitions on SGI IRIX before IRIX 6.0 switched over to XFS. Inside the Linux kernel has been a read-only EFS file-system driver without a maintainer for 20+ years while for Linux 7.3 it's expected to be removed...",
+    "pub_date": "Thu, 02 Jul 2026 13:39:06 -0400",
+    "title_zh": "EFS文件系统在无人维护20多年后，计划于Linux 7.3中移除",
+    "summary_zh": "EFS文件系统曾用于SGI IRIX系统的非ISO9660 CD-ROM和磁盘分区，但在IRIX 6.0转向XFS后被取代。Linux内核中的EFS只读驱动已超过20年无人维护，尽管有人曾表示愿意接手，但因其仅贡献了基础编译/错误修复且从未实际使用过EFS，内核开发者最终决定移除该驱动。该移除已合入vfs-7.3.efs分支，预计随Linux 7.3发布。",
+    "fulltext_zh": "EFS文件系统计划于Linux 7.3中移除，此前已超过20年无人维护 - Phoronix\nEFS文件系统计划于Linux 7.3中移除，此前已超过20年无人维护\n发布于2026年7月2日美国东部时间下午1:39。\n\nEFS文件系统曾用于SGI IRIX系统（在IRIX 6.0转向XFS之前）的非ISO9660 CD-ROM和磁盘分区。Linux内核中有一个只读的EFS文件系统驱动，但已超过20年没有维护者，而随着Linux 7.3的到来，该驱动预计将被移除。\n\n上个月，我报道过有人主动站出来希望维护EFS文件系统驱动，但该开发者仅对该驱动代码贡献了基本的编译/错误修复。该开发者承认自己也从未实际使用过真正的EFS文件系统。\n\n这引发了上游Linux内核开发者之间的讨论：是让某人接手这个可以说用途极其小众的驱动（尽管此人本人并未实际使用该驱动），还是干脆移除这个过时且无人维护的驱动。Linux内核开发者选择了后者。\n\nChristian Brauner已将EFS文件系统驱动的移除代码合入vfs/vfs.git的vfs-7.3.efs Git分支。随着该代码进入VFS领域并被打上Linux 7.3标签，预计将在今年晚些时候的下一个内核版本中被移除。\n\n“内核中的EFS代码已超过二十年无人维护。它在约三十年前就被IRIX上的XFS取代了。自1999年以来，我再也没有在实际环境中见过EFS文件系统。存在用于读取EFS文件系统的用户空间工具，例如https://github.com/jkbenaim/efsextract。将这个文件系统保留在内核中没有任何好处，只会增加树级变更的维护负担。”\n\n这听起来足以让这个过时的SGI IRIX文件系统驱动在2026年安息了。\n\nLinux 7.3将克服PCIe Gen5 NVMe SSD小I/O的“重大瓶颈”\n下一个Bcachefs版本旨在将Rust代码包含在内核模块中\nLinux MD RAID5的可扩展性提升高达17%\nKSMBD在Linux 7.2中增加了SMB2压缩支持\nNTFS3驱动在Linux 7.2中获得了错误修复和小幅改进\nF2FS在Linux 7.2中集成了FSERROR报告，减少了内存占用\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立了该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动等主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nRed Hat ARM工程师放弃ARM64 Linux个人桌面，回归AMD Ryzen系统\nGCC编译器的一行x86修改为现代Intel/AMD CPU带来了+12%的基准测试胜利\nCOSMIC的新系统监视器看起来非常流畅\nNourish：一款由Vulkan驱动、支持无限滚动/平移的新型Wayland合成器\nCachyOS 2026年6月版发布，带来更多性能优化\nLinux缓存感知调度扩展带来更佳性能：MySQL性能提升高达360%\nLinux 7.2 Staging仍在努力驯服Realtek RTL8723BS“驱动野兽”\n微软宣布WSL上Linux容器的公开预览\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "4bae5c7605bbdbc8e3ff77ce727e8e88": {
+    "id": "4bae5c7605bbdbc8e3ff77ce727e8e88",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-AI-Attribution-Again",
+    "title_en": "Linux Kernel Developers Again Discussing AI Agent Attribution - Potentially Dropping It",
+    "summary_en": "When AI/LLM agents are used in the creation of Linux kernel patches, the policy for a while now has been that it should be specified using an \"Assisted-by\" tag as part of the patches/commits. But Linux kernel developers this week have been discussing whether to revise that policy or to potentially eliminate it...",
+    "pub_date": "Thu, 02 Jul 2026 11:11:00 -0400",
+    "title_zh": "Linux内核开发者再次讨论AI代理归属标注——可能将其移除",
+    "summary_zh": "Linux内核开发者近期再次讨论AI/LLM代理在补丁中的归属标注政策。当前要求使用“Assisted-by”标签并注明模型版本等详细信息，但知名开发者Christian Brauner认为这相当于为AI公司提供免费广告，建议简化或完全取消该要求。内核工程师Jeff Layton已提交补丁提议彻底移除该标签，理由包括遵循率低、信号噪声比差、目的不明确等。Linus Torvalds尚未表态，讨论仍在进行中。",
+    "fulltext_zh": "Linux内核开发者再次讨论AI代理归属标注——可能将其移除\n\n2026年7月2日上午11:11（美国东部时间）\n\n当AI/LLM代理被用于创建Linux内核补丁时，一段时间以来的政策是应在补丁/提交中使用“Assisted-by”标签进行标注。但本周Linux内核开发者们正在讨论是否修订该政策，或可能将其完全取消。\n\n知名Linux内核开发者Christian Brauner昨天捅了马蜂窝，他在Linux内核邮件列表中发起了一个话题，旨在简化AI/LLM代理的归属标注。当前Linux内核文档指出，Assisted-by标签不仅应包含LLM/名称，还应包含模型版本及其他详细信息。Brauner辩称：\n\n“我发现我们的Git历史记录实际上开始有点像一个免费广告平台，为一大堆AI公司及其专有代理和模型做宣传，这让我非常恼火。”\n\n他还建议，鉴于其缺乏实用性，或许干脆完全取消披露要求。如果不能完全取消使用“Assisted-by”标签的披露要求，他建议将其简化，只需注明所使用的AI/LLM的通用名称，无需任何额外细节。\n\n作为回应，已有数十条消息表达了其他内核开发者的意见。所有常见的观点都已浮现：有人承认并非所有人都遵循“Assisted-by”指南，有人认为这是对专有/商业LLM的“免费推广”，还有人指出这给阅读补丁消息增加了额外杂乱信息。此外，还缺乏关于AI/LLM使用方式的上下文——它是生成了补丁本身，还是仅协助测试、代码审查或其他用途。\n\n当然，也有许多人坚决反对在开源开发中使用任何生成式AI。\n\n想要浏览所有广泛评论的人可以通过以下链接查看。\n\n除此之外，今天Linux内核工程师Jeff Layton提出了一个单独的提议。他正在采取行动，提交了一个补丁，建议从Linux内核中完全移除LLM / Assisted-by要求。他在补丁消息中给出的理由是：\n\n“我们在文档中实施这一要求已有数月，但越来越清楚的是，由此产生的信号噪声比非常低。\n1/ 它并未被普遍遵循。虽然许多人确实出于善意尝试标注LLM，但并非所有人都这样做，原因各异。\n2/ 它基本上充当了专有LLM公司的免费广告。\n3/ 我们首先就不清楚为什么要收集这些信息。\n鉴于这些数据充其量是有缺陷的，并且收集目的也不明确，让我们干脆从整个内核中取消对这些标签的要求。”\n\nLinus Torvalds尚未对这两个话题发表意见。我们将拭目以待，看这场讨论将如何引导完善或移除Linux内核AI/LLM归属标注指南。\n\nLinux基金会及其他机构推出“Akrites”以保护开源软件免受AI驱动的漏洞利用\nLinux基金会最新的AI努力聚焦于AI资产与数据交换\nLinux固件仓库为AI编码代理做准备\n微软宣布开源“智能终端”\nG7就开源AI、开放权重AI的共同语言达成一致\nGitHub Copilot与Claude Code本周协助解决了图形、WiFi Linux驱动问题\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立了该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\n红帽ARM工程师放弃ARM64 Linux个人桌面"
+  },
+  "d36b7c9b8fe491fba3f7670080c55467": {
+    "id": "d36b7c9b8fe491fba3f7670080c55467",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/risc-v-rvv-vector-benchmarks",
+    "title_en": "RISC-V RVV Vector Performance Benchmarks With The SpacemiT K3 SoC",
+    "summary_en": "Since May we have been benchmarking the SpacemiT K3 RISC-V SoC as one of the first to market RISC-V chips supporting the RVA23 profile. The SpacemiT K3 has shown how far RISC-V performance has come in the past half decade and one of the promising elements of this modern RISC-V SoC with its X100/A100 cores is supporting the RISC-V Vector Extension \"RVV\" 1.0. In this article are some initial benchmarks looking specifically at the RISC-V RVV 1.0 performance impact in different supported software.",
+    "pub_date": "Thu, 02 Jul 2026 10:10:00 -0400",
+    "title_zh": "RISC-V RVV向量性能基准测试：SpacemiT K3 SoC",
+    "summary_zh": "本文对SpacemiT K3 RISC-V SoC的RVV 1.0向量扩展性能进行了初步基准测试。该芯片是首批支持RVA23配置的商用RISC-V芯片之一。测试通过手动禁用相关软件包中的RVV支持来对比性能影响。由于系统级禁用RVV会导致Bianbu 4.0系统因非法指令而无法运行，因此采用了更精细的编译选项调整方法。测试涵盖了多个支持RVV的软件包，但未涉及功耗测量，因为K3 SoC当前未在Linux下暴露功耗指标。",
+    "fulltext_zh": "RISC-V RVV向量性能基准测试：SpacemiT K3 SoC - Phoronix\nRISC-V RVV向量性能基准测试：SpacemiT K3 SoC\n2026年7月2日，美国东部时间上午10:10。\n自五月以来，我们一直在对SpacemiT K3 RISC-V SoC进行基准测试，这是首批支持RVA23配置的商用RISC-V芯片之一。SpacemiT K3展示了RISC-V在过去五年中性能的巨大进步，而这款采用X100/A100核心的现代RISC-V SoC的亮点之一，便是支持RISC-V向量扩展“RVV”1.0。本文提供了一些初步基准测试，专门考察RISC-V RVV 1.0在不同支持软件中的性能影响。\n今天的基准测试旨在量化SpacemiT K3 SoC上RISC-V向量RVV 1.0的性能影响。K3上的测试继续在SpacemiT提供的SpacemiT K3 Pico ITX系统上进行，该系统供Phoronix评测。这台16核、16GB内存的系统运行Bianbu 4.0，搭载Linux 6.18内核和GCC 15.2编译器。\n根据kernel.org上关于RISC-V向量支持的文档，/proc/sys/abi/riscv_v_default_allow sysfs接口可用于在运行时切换RISC-V向量支持。这原本是我比较K3上RISC-V向量性能影响的计划。然而，在实践中效果并不理想……\n多年来，在Phoronix上，通过简单地清除CPU ID位来比较大多数软件包的效果一直很简单。原本希望/proc/sys/abi/riscv_v_default_allow也能提供一种直接的RVV比较方式，只需关闭向量支持即可。\n但当禁用“riscv_v_default_allow”时，Bianbu 4.0系统因非法指令而完全无法运行。系统上没有任何二进制文件能够执行。推测Bianbu在其libc构建或其他公共库中依赖某些无条件RVV指令，导致一旦禁用riscv_v_default_allow，系统便无法执行任何操作。\n因此，在硬重启后，比较RISC-V向量性能的方法改为手动禁用相关支持软件包中的RVV支持，方式是通过不同程序的构建选项，或调整其RVV启用补丁，使其在不包含必要位的情况下编译。\n以下是使用或不使用RVV时，不同软件包中RVV 1.0的影响情况。虽然量化RVV使用的功耗影响也很有趣，但遗憾的是，K3 SoC目前未在Linux下暴露任何功耗指标。因此，没有通过sysfs / HWMON / PowerCap或其他接口暴露的功耗指标。我的WattsUp Pro外部功率计正忙于其他系统的外部交流电源监测，因此本文仅关注性能影响。\nLinux 7.2在Threadripper上展现出显著的I/O改进和更快的Poll，以及一些回归问题\nBcachefs 1.38.6基准测试：首个不再标记为“实验性”的版本\nIntel Core Ultra X7 Panther Lake在Linux 7.1上的性能\n缓存感知调度在AMD Zen 5上为PostgreSQL、Valkey和网络性能带来显著提升\nLinux 6.6 LTS到Linux 7.1基准测试：AMD Threadripper三年间性能提升13%\nGCC 16生成的二进制文件比GCC 15更快，与LLVM Clang 22竞争激烈\n同时提供无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为各自所有者的财产。保留所有权利。"
+  },
+  "27796a162ee780ce5549ae9bdcf871fd": {
+    "id": "27796a162ee780ce5549ae9bdcf871fd",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/marknote-1-6-wysiwyg-note-taking-app-adds-initial-support-for-sub-folders/",
+    "title_en": "Marknote 1.6 WYSIWYG Note-Taking App Adds Initial Support for Sub-Folders",
+    "summary_en": "Discover Marknote 1.6, the WYSIWYG note-taking app that now supports sub-folders, enhancing your organization and productivity. Try it today!\nThe post Marknote 1.6 WYSIWYG Note-Taking App Adds Initial Support for Sub-Folders appeared first on Linux Today.",
+    "pub_date": "Thu, 02 Jul 2026 07:26:23 +0000",
+    "title_zh": "Marknote 1.6 所见即所得笔记应用新增子文件夹初步支持",
+    "summary_zh": "Marknote 1.6 版本发布，这款所见即所得（WYSIWYG）笔记应用新增了对子文件夹的初步支持，进一步提升了用户的笔记组织效率与生产力。",
+    "fulltext_zh": "发现 Marknote 1.6，这款所见即所得（WYSIWYG）笔记应用现在支持子文件夹，增强了你的组织能力和生产力。立即尝试吧！\n\n该文章 Marknote 1.6 WYSIWYG Note-Taking App Adds Initial Support for Sub-Folders 首次出现在 Linux Today 上。"
+  },
+  "68f87740ee6771c2702aa34a4ed01d19": {
+    "id": "68f87740ee6771c2702aa34a4ed01d19",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/gnome-circle-adopts-ai-policy-and-stops-new-app-submissions/",
+    "title_en": "GNOME Circle Adopts AI Policy and Stops New App Submissions",
+    "summary_en": "Explore GNOME Circle's recent decision to adopt an AI policy, leading to a pause in new app submissions. Learn how this affects the developer ecosystem.\nThe post GNOME Circle Adopts AI Policy and Stops New App Submissions appeared first on Linux Today.",
+    "pub_date": "Thu, 02 Jul 2026 07:23:49 +0000",
+    "title_zh": "GNOME Circle 采纳 AI 政策并暂停新应用提交",
+    "summary_zh": "GNOME Circle 近期决定采纳一项人工智能（AI）政策，并因此暂停接收新的应用提交。此举旨在规范 AI 相关技术的使用，确保项目质量与社区一致性。该政策将对开发者生态系统产生影响，现有应用不受影响，但新应用提交将暂时停止。",
+    "fulltext_zh": "探索 GNOME Circle 近期采纳 AI 政策的决定，该决定导致新应用提交暂停。了解这如何影响开发者生态系统。\n\n该文章 GNOME Circle Adopts AI Policy and Stops New App Submissions 最初出现在 Linux Today 上。"
+  },
+  "d6c772710a9ecad635579e414ecca4ff": {
+    "id": "d6c772710a9ecad635579e414ecca4ff",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/nixos-26-05-yarara-arrives-with-gnome-50-plasma-6-6-and-linux-6-18/",
+    "title_en": "NixOS 26.05 “Yarara” Arrives with GNOME 50, Plasma 6.6, and Linux 6.18",
+    "summary_en": "Discover NixOS 26.05 \"Yarara,\" featuring GNOME 50, Plasma 6.6, and Linux 6.18. Explore the latest enhancements and improvements in this powerful OS.\nThe post NixOS 26.05 “Yarara” Arrives with GNOME 50, Plasma 6.6, and Linux 6.18 appeared first on Linux Today.",
+    "pub_date": "Thu, 02 Jul 2026 07:20:55 +0000",
+    "title_zh": "NixOS 26.05 “Yarara” 发布，搭载 GNOME 50、Plasma 6.6 与 Linux 6.18",
+    "summary_zh": "NixOS 26.05 版本“Yarara”正式发布，带来 GNOME 50、Plasma 6.6 桌面环境以及 Linux 6.18 内核。该版本在系统稳定性、软件包管理和用户体验方面进行了多项改进，进一步巩固了 NixOS 作为可重复构建与声明式配置系统的领先地位。",
+    "fulltext_zh": "探索 NixOS 26.05 “Yarara”，它搭载了 GNOME 50、Plasma 6.6 以及 Linux 6.18 内核。深入了解这一强大操作系统的最新增强与改进。\n\n本文首发于 Linux Today。"
+  },
+  "95ac464f369cdca18bcd2c9b67481e7a": {
+    "id": "95ac464f369cdca18bcd2c9b67481e7a",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/6-best-free-and-open-source-linux-tui-clipboard-managers/",
+    "title_en": "6 Best Free and Open Source Linux TUI Clipboard Managers",
+    "summary_en": "Discover the top 6 free and open-source Linux TUI clipboard managers. Enhance your productivity with these powerful tools designed for efficient clipboard management.\nThe post 6 Best Free and Open Source Linux TUI Clipboard Managers appeared first on Linux Today.",
+    "pub_date": "Thu, 02 Jul 2026 07:16:56 +0000",
+    "title_zh": "6款最佳自由开源Linux TUI剪贴板管理器",
+    "summary_zh": "本文介绍了6款优秀的自由开源Linux终端用户界面（TUI）剪贴板管理器，这些工具专为高效剪贴板管理设计，可显著提升用户生产力。文章详细列举了各工具的特点与优势，帮助用户根据需求选择最适合的剪贴板管理方案。",
+    "fulltext_zh": "发现6款最佳自由开源Linux TUI剪贴板管理器。通过这些专为高效剪贴板管理设计的强大工具，提升您的生产力。\n\n该文章《6 Best Free and Open Source Linux TUI Clipboard Managers》最初发表于Linux Today。"
+  },
+  "80f54f28894ee5668d91566027243390": {
+    "id": "80f54f28894ee5668d91566027243390",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/bottles-64-0-adds-ntsync-support-for-running-windows-apps-on-linux/",
+    "title_en": "Bottles 64.0 Adds ntsync Support for Running Windows Apps on Linux",
+    "summary_en": "Bottles 64.0 introduces NTSync support, allowing Linux users to run Windows applications effortlessly. Learn more about this game-changing update today!\nThe post Bottles 64.0 Adds ntsync Support for Running Windows Apps on Linux appeared first on Linux Today.",
+    "pub_date": "Thu, 02 Jul 2026 07:13:15 +0000",
+    "title_zh": "Bottles 64.0 新增 ntsync 支持，助力在 Linux 上运行 Windows 应用",
+    "summary_zh": "Bottles 64.0 版本引入了 NTSync 支持，使 Linux 用户能够更轻松地运行 Windows 应用程序。这一重大更新为兼容层带来了显著改进，值得关注。",
+    "fulltext_zh": "Bottles 64.0 引入了 NTSync 支持，允许 Linux 用户轻松运行 Windows 应用程序。立即了解这一改变游戏规则的更新！\n\n该文章最初发表于 Linux Today。"
   }
 }

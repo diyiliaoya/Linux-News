@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能 — Linux 中文速报</title>
+<title>ReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进一步 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能</h1>
+  <h1>ReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进一步</h1>
 
-  <div class="article-summary">Firefox 正在为 Linux 上的 Nvidia GPU 添加基于 Vulkan 的硬件加速视频解码支持，该功能将在 Firefox 153 版本中引入，但默认不会启用。用户需要手动开启两项偏好设置，并确保使用 Nvidia 驱动 595.x 或更高版本。此前 Firefox 在 Linux 上对所有 Nvidia 设备禁用了硬件视频解码，导致用户需要借助社区变通方案。新功能基于 FFmpeg 的 Vulkan 解码支持，不仅适用于 Nvidia，也旨在解决 Arm 和嵌入式 GPU 在 Aarch64 Linux 上缺乏硬件视频解码的问题。</div>
+  <div class="article-summary">ReactOS 项目致力于打造“开源 Windows”，实现 Windows 驱动和软件的二进制兼容。近日，该项目实现了首个 NT6 系统调用 NtGetCurrentProcessorNumberEx，标志着向 Windows Vista 及更高版本兼容迈出重要一步。此前 ReactOS 主要针对 Windows NT 5.2 架构，此次新增的 NT6 处理器函数为后续兼容性奠定了基础。</div>
 
-  <div class="article-body"><p>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能 - OMG! Ubuntu</p><p>Firefox 正在添加硬件加速解码功能，为 Linux 上的 Nvidia 用户省去手动配置的麻烦。</p><p>该变更将包含在 7 月 21 日发布的 Firefox 153 中，但默认不会启用——至少一开始不会。</p><p>相反，用户需要翻转两项偏好设置才能尝试该功能，同时需注意可能存在卡顿和边缘情况（尤其是在配备混合显卡的设备上，下文会进一步提及）。</p><p>考虑到 Nvidia GPU 性能强大（这绝对是轻描淡写），我很惊讶这项功能之前竟然无法正常工作。原来，Firefox 在 Linux 上对所有 Nvidia 设备禁用了硬件视频解码——一刀切式的做法——因此社区变通方案才成为必要。</p><p>在其代码库中添加原生 Vulkan 视频解码路径意味着不再需要变通方案。</p><p>Vulkan Video 是一个跨供应商规范，并非 Nvidia 专属。Firefox 的实现基于 FFmpeg 的 Vulkan 解码支持。</p><p>Arm 和嵌入式 GPU 是这项工作的初始目标，旨在解决 Aarch64 Linux 上完全缺乏硬件视频解码的问题。</p><p>Nvidia 自家的 DGX Spark（一款运行 Ubuntu 的基于 Arm 的桌面 AI 计算机）目前缺少 Firefox 中的硬件视频解码功能，因为 GB10 芯片不支持 VA-API 或 V4L2。Mozilla 的跟踪工作依赖于这项 Vulkan Video 支持。</p><p>在 Beta 版和 Nightly 版中尝试</p><p>没有可供检查的兼容性列表，因为 Firefox 会在你首次启用时测试 GPU 的 Vulkan 支持，所以唯一知道是否有效的方法就是亲自尝试。</p><p>你需要运行 Nvidia 驱动版本 595.x 或更高版本，以及 Firefox 153 beta（或 nightly 版）。</p><p>然后翻转这些偏好设置：</p><p>media.hardware-video-decoding-vulkan.enabled</p><p>media.hardware-video-decoding-vulkan.direct-export.enabled</p><p>重启 Firefox，然后播放一个使用你的 GPU 支持加速播放的编解码器的视频（任何 H264 视频都是稳妥的选择）。要检查是否生效，可以使用 about:support 或打开终端并运行：</p><p>MOZ_LOG=&quot;FFmpegVideo:5&quot; firefox</p><p>在配备双 GPU（即集成显卡和独立 Nvidia 显卡）的笔记本电脑上，一些用户报告称，启用 Vulkan 视频解码后，独立显卡会不必要地唤醒，导致在播放中切换工作区时出现短暂卡顿。</p><p>Mozilla 尚未指明该功能将在哪个 Firefox 版本中默认启用，但即使启用，也会设置“门控”机制，以确保只有拥有兼容 Nvidia 驱动和硬件的用户才能使用。</p></div>
+  <div class="article-body"><p>ReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进一步 - Phoronix</p><p>ReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进一步</p><p>2026年7月2日 美国东部时间晚上8点22分。</p><p>致力于打造“开源 Windows”、实现 Windows 驱动和软件二进制兼容的 ReactOS 项目今日迎来了又一个里程碑。迄今为止，ReactOS 主要针对 Windows NT 5.2 架构（即 Windows XP 和 Windows Server 2003 的架构），但同时也着眼于 Windows NT 6.0，以实现对 Windows Vista 及更高版本软件的兼容。现在，ReactOS 已成功实现了首个 NT6 系统调用。</p><p>目前，ReactOS 代码树中已实现了新的 NT6 处理器函数。这反过来也为这个开源项目提供了首个 NT6 系统调用实现。这一小步还包括实现了多种 NT6 处理器函数。</p><p>NtGetCurrentProcessorNumberEx 用于返回调用者当前运行所在逻辑处理器的处理器编号。虽然这不是最令人兴奋的函数，但它是首个 NT6 系统调用，也是这个已坚持三十年的开源项目向前迈进的又一步。</p><p>ReactOS 庆祝了这一里程碑。上个月，该项目还庆祝了运行 Valve 公司《半条命》游戏的里程碑。</p><p>Mageia 10 发布，延续 Mandrake 传统的 Linux 发行版</p><p>CachyOS 2026年6月版发布，带来更多性能优化</p><p>QSOE v0.1 发布，一款受 QNX 启发的 RISC-V 操作系统</p><p>KDE Plasma 6 桌面终于登陆 Slackware</p><p>Haiku OS 现已启用 AVX-512 支持及其他硬件改进</p><p>ReactOS“开源 Windows”达到能够运行《半条命》的里程碑</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于2004年创立了该网站，专注于丰富 Linux 硬件体验。Michael 已撰写了超过20,000篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。</p><p>Red Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统</p><p>GCC 编译器的一行 x86 修改为现代 Intel/AMD CPU 带来 +12% 的基准测试提升</p><p>COSMIC 的新系统监视器看起来非常流畅</p><p>Nourish：一款由 Vulkan 驱动、支持无限滚动/平移的新 Wayland 合成器</p><p>CachyOS 2026年6月版发布，带来更多性能优化</p><p>Linux 缓存感知调度扩展带来更佳性能：MySQL 性能提升高达 360%</p><p>Linux 7.2 暂存区仍在努力驯服 Realtek RTL8723BS“驱动猛兽”</p><p>微软宣布 WSL 上 Linux 容器的公开预览版</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/firefox-vulkan-video-decoding-nvidia" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/ReactOS-First-NT6-Syscall" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

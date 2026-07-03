@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能 — Linux 中文速报</title>
+<title>EFS文件系统在无人维护20多年后，计划于Linux 7.3中移除 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能</h1>
+  <h1>EFS文件系统在无人维护20多年后，计划于Linux 7.3中移除</h1>
 
-  <div class="article-summary">Firefox 正在为 Linux 上的 Nvidia GPU 添加基于 Vulkan 的硬件加速视频解码支持，该功能将在 Firefox 153 版本中引入，但默认不会启用。用户需要手动开启两项偏好设置，并确保使用 Nvidia 驱动 595.x 或更高版本。此前 Firefox 在 Linux 上对所有 Nvidia 设备禁用了硬件视频解码，导致用户需要借助社区变通方案。新功能基于 FFmpeg 的 Vulkan 解码支持，不仅适用于 Nvidia，也旨在解决 Arm 和嵌入式 GPU 在 Aarch64 Linux 上缺乏硬件视频解码的问题。</div>
+  <div class="article-summary">EFS文件系统曾用于SGI IRIX系统的非ISO9660 CD-ROM和磁盘分区，但在IRIX 6.0转向XFS后被取代。Linux内核中的EFS只读驱动已超过20年无人维护，尽管有人曾表示愿意接手，但因其仅贡献了基础编译/错误修复且从未实际使用过EFS，内核开发者最终决定移除该驱动。该移除已合入vfs-7.3.efs分支，预计随Linux 7.3发布。</div>
 
-  <div class="article-body"><p>Firefox 正在为 Nvidia GPU 添加 Vulkan 视频解码功能 - OMG! Ubuntu</p><p>Firefox 正在添加硬件加速解码功能，为 Linux 上的 Nvidia 用户省去手动配置的麻烦。</p><p>该变更将包含在 7 月 21 日发布的 Firefox 153 中，但默认不会启用——至少一开始不会。</p><p>相反，用户需要翻转两项偏好设置才能尝试该功能，同时需注意可能存在卡顿和边缘情况（尤其是在配备混合显卡的设备上，下文会进一步提及）。</p><p>考虑到 Nvidia GPU 性能强大（这绝对是轻描淡写），我很惊讶这项功能之前竟然无法正常工作。原来，Firefox 在 Linux 上对所有 Nvidia 设备禁用了硬件视频解码——一刀切式的做法——因此社区变通方案才成为必要。</p><p>在其代码库中添加原生 Vulkan 视频解码路径意味着不再需要变通方案。</p><p>Vulkan Video 是一个跨供应商规范，并非 Nvidia 专属。Firefox 的实现基于 FFmpeg 的 Vulkan 解码支持。</p><p>Arm 和嵌入式 GPU 是这项工作的初始目标，旨在解决 Aarch64 Linux 上完全缺乏硬件视频解码的问题。</p><p>Nvidia 自家的 DGX Spark（一款运行 Ubuntu 的基于 Arm 的桌面 AI 计算机）目前缺少 Firefox 中的硬件视频解码功能，因为 GB10 芯片不支持 VA-API 或 V4L2。Mozilla 的跟踪工作依赖于这项 Vulkan Video 支持。</p><p>在 Beta 版和 Nightly 版中尝试</p><p>没有可供检查的兼容性列表，因为 Firefox 会在你首次启用时测试 GPU 的 Vulkan 支持，所以唯一知道是否有效的方法就是亲自尝试。</p><p>你需要运行 Nvidia 驱动版本 595.x 或更高版本，以及 Firefox 153 beta（或 nightly 版）。</p><p>然后翻转这些偏好设置：</p><p>media.hardware-video-decoding-vulkan.enabled</p><p>media.hardware-video-decoding-vulkan.direct-export.enabled</p><p>重启 Firefox，然后播放一个使用你的 GPU 支持加速播放的编解码器的视频（任何 H264 视频都是稳妥的选择）。要检查是否生效，可以使用 about:support 或打开终端并运行：</p><p>MOZ_LOG=&quot;FFmpegVideo:5&quot; firefox</p><p>在配备双 GPU（即集成显卡和独立 Nvidia 显卡）的笔记本电脑上，一些用户报告称，启用 Vulkan 视频解码后，独立显卡会不必要地唤醒，导致在播放中切换工作区时出现短暂卡顿。</p><p>Mozilla 尚未指明该功能将在哪个 Firefox 版本中默认启用，但即使启用，也会设置“门控”机制，以确保只有拥有兼容 Nvidia 驱动和硬件的用户才能使用。</p></div>
+  <div class="article-body"><p>EFS文件系统计划于Linux 7.3中移除，此前已超过20年无人维护 - Phoronix</p><p>EFS文件系统计划于Linux 7.3中移除，此前已超过20年无人维护</p><p>发布于2026年7月2日美国东部时间下午1:39。</p><p>EFS文件系统曾用于SGI IRIX系统（在IRIX 6.0转向XFS之前）的非ISO9660 CD-ROM和磁盘分区。Linux内核中有一个只读的EFS文件系统驱动，但已超过20年没有维护者，而随着Linux 7.3的到来，该驱动预计将被移除。</p><p>上个月，我报道过有人主动站出来希望维护EFS文件系统驱动，但该开发者仅对该驱动代码贡献了基本的编译/错误修复。该开发者承认自己也从未实际使用过真正的EFS文件系统。</p><p>这引发了上游Linux内核开发者之间的讨论：是让某人接手这个可以说用途极其小众的驱动（尽管此人本人并未实际使用该驱动），还是干脆移除这个过时且无人维护的驱动。Linux内核开发者选择了后者。</p><p>Christian Brauner已将EFS文件系统驱动的移除代码合入vfs/vfs.git的vfs-7.3.efs Git分支。随着该代码进入VFS领域并被打上Linux 7.3标签，预计将在今年晚些时候的下一个内核版本中被移除。</p><p>“内核中的EFS代码已超过二十年无人维护。它在约三十年前就被IRIX上的XFS取代了。自1999年以来，我再也没有在实际环境中见过EFS文件系统。存在用于读取EFS文件系统的用户空间工具，例如https://github.com/jkbenaim/efsextract。将这个文件系统保留在内核中没有任何好处，只会增加树级变更的维护负担。”</p><p>这听起来足以让这个过时的SGI IRIX文件系统驱动在2026年安息了。</p><p>Linux 7.3将克服PCIe Gen5 NVMe SSD小I/O的“重大瓶颈”</p><p>下一个Bcachefs版本旨在将Rust代码包含在内核模块中</p><p>Linux MD RAID5的可扩展性提升高达17%</p><p>KSMBD在Linux 7.2中增加了SMB2压缩支持</p><p>NTFS3驱动在Linux 7.2中获得了错误修复和小幅改进</p><p>F2FS在Linux 7.2中集成了FSERROR报告，减少了内存占用</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立了该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动等主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>Red Hat ARM工程师放弃ARM64 Linux个人桌面，回归AMD Ryzen系统</p><p>GCC编译器的一行x86修改为现代Intel/AMD CPU带来了+12%的基准测试胜利</p><p>COSMIC的新系统监视器看起来非常流畅</p><p>Nourish：一款由Vulkan驱动、支持无限滚动/平移的新型Wayland合成器</p><p>CachyOS 2026年6月版发布，带来更多性能优化</p><p>Linux缓存感知调度扩展带来更佳性能：MySQL性能提升高达360%</p><p>Linux 7.2 Staging仍在努力驯服Realtek RTL8723BS“驱动野兽”</p><p>微软宣布WSL上Linux容器的公开预览</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/firefox-vulkan-video-decoding-nvidia" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/EFS-File-System-Removal-Coming" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
