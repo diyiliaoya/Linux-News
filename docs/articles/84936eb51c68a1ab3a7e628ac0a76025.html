@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Agent 可通过 DNS 获得验证身份 — Linux 中文速报</title>
+<title>GNOME 51 Alpha 发布，带来众多增强功能 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>AI Agent 可通过 DNS 获得验证身份</h1>
+  <h1>GNOME 51 Alpha 发布，带来众多增强功能</h1>
 
-  <div class="article-summary">Linux 基金会宣布推出开放标准 ANS（Agent Name System），为 AI Agent 提供基于 DNS 的验证身份。每个 Agent 将获得类似 DNS 的名称和版本号，并通过证书和不可篡改的公开日志记录注册、续期和撤销信息。该标准基于现有 IETF 草案，GoDaddy 已提前部署，使用现有基础设施处理超过 1 亿个 SSL/TLS 证书。</div>
+  <div class="article-summary">GNOME 51 Alpha 版本于2026年7月3日发布，标志着向9月稳定版迈进的重要一步。该版本在多个组件中进行了大量改进，包括Epiphany浏览器新增复制URL快捷键、GDM显示管理器兼容KMSCON VT、GNOME Calendar性能优化、GNOME Control Center新增显示选项和触摸板禁用功能、GNOME Maps支持离线地图下载、GNOME Remote Desktop启用AMD显卡硬件加速、GNOME Shell支持vA-API H.264屏幕录制速率控制等。此外，GTK尊重减少动效设置、Loupe图像查看器显示元数据、Nautilus文件管理器提升视图重载性能、Sushi移植到GTK4等改进也值得关注。</div>
 
-  <div class="article-body"><p>AI Agent 可通过 DNS 获得验证身份</p><p>该开放标准将每个 Agent 的身份与证书和无人能编辑的公开透明日志绑定。</p><p>Linux 基金会表示，它计划推出 ANS（Agent Name System），这是一个开放标准，扩展了 AI Agent 证明自身身份的方式。</p><p>在实践中，这意味着能够查找一个 Agent，并检查谁在真正运营它、它被授权做什么，以及其代码或历史记录中是否有任何更改。</p><p>引用一篇研究论文，Linux 基金会表示，82% 的高管计划在未来一到三年内采用 AI Agent，而大多数高管在 Agent 投入生产运行后，仍然没有可靠的方法来验证或管理它们。</p><p>目前，没有任何机制阻止一个 Agent 声称自己是 support-agent.acme.com，因为没有人能够验证这是否属实。</p><p>找到正确的 Agent 同样困难。目前没有任何东西能将 Agent 的名称和能力与一个特定的、经过验证的、你可以实际访问的版本关联起来。ANS 旨在同时解决这两个问题。</p><p>在 ANS 下注册的每个 Agent 都会获得一个 DNS 风格的名称，并内置版本号，例如 ans://v1.0.0.my-agent.example.com。只有当 Agent 的域名通过与网站获取普通 TLS 证书相同的 DNS 和 ACME 检查后，该名称才会附带一个身份证书。</p><p>每次注册、续期或撤销都会被记录在一个防篡改日志（仅可追加的 Merkle 日志）中，因此在这些事件发生后，任何人都无法编辑 Agent 的历史记录。一个名为 Verifier 的独立离线工具可以在无需实时连接注册表的情况下检查这些记录。</p><p>在你认为这是他们新发明的东西之前，事实并非如此。GoDaddy 在 Linux 基金会介入前几个月就已经让 ANS 运行起来，它基于现有的 IETF 草案构建。</p><p>GoDaddy 的工程师没有从头构建新的证书和 DNS 系统，而是复用了他们已在生产环境中使用的基础设施。这包括处理超过 1 亿个活跃 SSL 和 TLS 证书的同一证书服务，以及他们现有的 DNS 系统。</p><p>GitHub 上的 ANS 组织目前托管着八个仓库。主要仓库是 ans，这是一个采用 MIT 许可证的 Go 代码库，实现了整个技术栈，包括注册表、日志记录和验证器，作为任何人都可以运行的工作参考实现。</p><p>当然，现在还为时过早，但据报道，只需安装 Go、openssl、curl 和 jq，整个技术栈大约在 60 秒内就能启动。</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的技术极客。</p><p>Lumo 2.0：Proton 推出的 ChatGPT 和 Claude 私有替代方案变得更好</p><p>你可以在 Purism 的 Librem 16 Linux 笔记本电脑上花费高达 11,944 美元</p><p>Linux 用户免费获得此功能！Brave Origin 对其他所有人售价 59.99 美元</p><p>PINE64 的智能音箱是 Amazon Echo 的 Home Assistant 驱动替代品</p><p>Ubuntu 上 ARM64 系统内核补丁期间无需重启</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 周刊，你可以学习有用的 Linux 技巧、发现应用程序、探索新的发行版，并随时了解 Linux 世界的最新动态</p><p>太好了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅 It's FOSS。</p><p>您的链接已过期。</p><p>成功！请检查您的电子邮件以获取用于登录的魔法链接。</p><p>成功！您的账单信息已更新。</p><p>您的账单未更新。</p></div>
+  <div class="article-body"><p>GNOME 51 Alpha 发布，带来众多增强功能 - Phoronix</p><p>GNOME 51 Alpha 发布，带来众多增强功能</p><p>2026年7月3日，美国东部时间下午6:43。</p><p>为迎接计划于9月发布的稳定版GNOME 51桌面环境，今天标志着GNOME 51 Alpha版本的发布。</p><p>GNOME 51在其众多不同组件中带来了许多变化。在这个阶段，没有哪一项变化特别引人注目，但各种较小的改进为GNOME 50提供了更多的打磨和新增功能。以下是我在GNOME 51 Alpha中注意到的一些变化：</p><p>- Epiphany浏览器新增了复制当前页面URL的键盘快捷键，以及其他改进。</p><p>- GDM显示管理器现在兼容KMSCON VT。此外，现在还有一个GDM设置，用于更改回退会话。</p><p>- GNOME Calendar经过了重新设计，带来了性能改进、渲染优化以及其他内部代码重构。</p><p>- GNOME Control Center重新排列了系统软件/硬件信息页面，新增了显示选项，能够在插入鼠标时禁用触摸板，支持用于WiFi共享的GNOME二维码小部件，以及其他新增功能。</p><p>- GNOME Maps现在支持离线地图下载。</p><p>- GNOME Remote Desktop已修复并启用了AMD显卡驱动程序的硬件加速支持。</p><p>- GNOME Session现在支持使用oo7-portal作为Secret门户的实现。</p><p>- GNOME Shell现在支持vA-API H.264屏幕录制的速率控制。GNOME Shell现在还支持text_input_v3协议的第2版。</p><p>- GTK现在在各个地方尊重减少动效设置，并避免动画。</p><p>- Loupe图像查看器现在可以显示图像元数据中的创建者、版权信息、相机镜头和使用的软件。</p><p>- 对Mutter合成器进行了许多修复。</p><p>- Nautilus文件管理器现在具有增强的视图重载性能，以及其他变化。</p><p>- Sushi已移植到GTK4。</p><p>- XDG Desktop Portal GNOME现在支持输入捕获门户中的会话持久性。</p><p>关于GNOME 51 Alpha版本的更多详细信息，请访问：</p><p>GNOME Mutter GPU重置恢复成为现实</p><p>GNOME AI助手新增图像生成支持</p><p>COSMIC的新系统监视器看起来非常流畅</p><p>实验性代码为GNOME Shell启用每显示器背景</p><p>GNOME基金会宣布奖学金计划首批参与者</p><p>GNOME文件预览器终于切换到GTK4，新增深色模式</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立了该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动程序和其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>Red Hat ARM工程师放弃ARM64 Linux个人桌面，回归AMD Ryzen系统</p><p>COSMIC的新系统监视器看起来非常流畅</p><p>Nourish：一种由Vulkan驱动的新型Wayland合成器，支持无限滚动/平移</p><p>CachyOS 2026年6月版本发布，带来更多性能优化</p><p>Linux缓存感知调度扩展带来更佳性能：MySQL性能提升高达360%</p><p>Linux 7.2 Staging仍在努力驯服Realtek RTL8723BS“野兽级驱动程序”</p><p>微软宣布WSL上Linux容器的公开预览版</p><p>TLAC旨在成为内核级反作弊系统的开源替代方案</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/linux-foundation-agent-name-service-announcement/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/GNOME-51-Alpha" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

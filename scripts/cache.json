@@ -1703,5 +1703,82 @@
     "title_zh": "Bottles 64.0 新增 ntsync 支持，助力在 Linux 上运行 Windows 应用",
     "summary_zh": "Bottles 64.0 版本引入了 NTSync 支持，使 Linux 用户能够更轻松地运行 Windows 应用程序。这一重大更新为兼容层带来了显著改进，值得关注。",
     "fulltext_zh": "Bottles 64.0 引入了 NTSync 支持，允许 Linux 用户轻松运行 Windows 应用程序。立即了解这一改变游戏规则的更新！\n\n该文章最初发表于 Linux Today。"
+  },
+  "fc8347ccef64d2ce12d63fc4dd46b65b": {
+    "id": "fc8347ccef64d2ce12d63fc4dd46b65b",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/07/snap-store-offline-july-2026",
+    "title_en": "Snap Store will be down for maintenance this weekend",
+    "summary_en": "Canonical&#8217;s Snap Store will be shutting down for database maintenance at the weekend, meaning users won&#8217;t be able to install or update snaps until it&#8217;s back online. The planned downtime is expected to last for four hours, starting on Sunday, 5 July 2026 at 22:00 UTC and ending on Monday, 6 July at 02:00 UTC. During the maintenance you will not be able to install or update snaps. If there&#8217;s an app you&#8217;ve been wanting to try, or your IoT or core device runs automated ",
+    "pub_date": "Fri, 03 Jul 2026 16:28:16 +0000",
+    "title_zh": "Snap Store 本周末将停机维护",
+    "summary_zh": "Canonical 的 Snap Store 将于本周末进行数据库维护，预计持续4小时，从2026年7月5日（周日）22:00 UTC 到7月6日（周一）02:00 UTC。期间用户无法安装或更新 snap 包，但已安装的 snap 可正常运行。维护仅影响 Snap Store，不影响标准 Ubuntu 仓库、PPA 或 snapd 守护进程。用户无需操作，服务将在维护完成后自动恢复。",
+    "fulltext_zh": "Snap Store 本周末将停机维护 - OMG! Ubuntu\nCanonical 的 Snap Store 将于本周末关闭以进行数据库维护，这意味着在恢复上线之前，用户将无法安装或更新 snap 包。\n计划停机时间预计持续四小时，从2026年7月5日（周日）22:00 UTC 开始，到2026年7月6日（周一）02:00 UTC 结束。\n维护期间，您将无法安装或更新 snap 包。如果您有一直想尝试的应用，或者您的 IoT 或核心设备在受影响时段内运行自动化任务，请提前做好相应规划。\n为了让规划更轻松，以下表格显示了不同时区的停机时间：\n中欧夏令时 (CEST)\n澳大利亚东部时间 (AEST)\n澳大利亚西部时间 (AWST)\n对大多数人来说，停机时间发生在夜间或凌晨，因此影响微乎其微。但对于美洲地区的用户，停机时间则更为不便。如果您身处该地区并遇到连接 Snap Store 的问题，您就会知道原因。\n当后端数据库离线时，所有与 Snap Store 通信的内容——脚本或自动化系统任务、通过 Ubuntu 26.04 LTS 新功能在 GNOME 概览中进行的更新、安装和搜索——都将失败。\n然而，停机仅影响集中的 Snap Store，不影响标准的 Ubuntu 仓库和 PPA，也不影响 snapd 守护进程以及从其他地方下载的 .snap 包的安装。\n已安装在您设备上的 snap 包将继续正常运行，不会出现任何问题（除非它们与 Snap Store 交互，但这种情况不太可能）。\n“用户无需执行任何操作，服务将在维护完成后自动恢复。”"
+  },
+  "ae2c92be6a76361a779f048ca5efa5c9": {
+    "id": "ae2c92be6a76361a779f048ca5efa5c9",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/07/ubuntu-2604-video-audio-thumbnails-fix",
+    "title_en": "Ubuntu 26.04 LTS has fixed its missing video/audio thumbnails",
+    "summary_en": "If you installed Ubuntu 26.04 LTS and noticed video and music files weren&#8217;t showing image thumbnails in the file manager, a packaging oversight was to blame, not anything you did. It turns out that Ubuntu&#8217;s Default install option (aka minimal install) wasn&#8217;t pulling in the gst-audio-thumbnailer and gst-video-thumbnailer packages which generate media thumbnails when you open a folder full of compatible files. A metapackage doesn&#8217;t contain software itself, just a list of th",
+    "pub_date": "Thu, 02 Jul 2026 21:23:00 +0000",
+    "title_zh": "Ubuntu 26.04 LTS 已修复缺失的视频/音频缩略图问题",
+    "summary_zh": "Ubuntu 26.04 LTS 修复了一个导致文件管理器中视频和音乐文件不显示缩略图的打包疏忽问题。该问题源于最小安装选项未包含新的基于 Rust 的缩略图生成器包（gst-audio-thumbnailer 和 gst-video-thumbnailer）。官方已通过稳定版更新修复，用户也可通过终端命令手动安装缺失包来解决。",
+    "fulltext_zh": "Ubuntu 26.04 LTS 已修复其缺失的视频/音频缩略图问题 - OMG! Ubuntu\n\n如果你注意到视频和音乐文件在文件管理器中不显示图像缩略图，这并非你的操作失误，而是一个打包疏忽。\n\n事实证明，Ubuntu 的“最小安装”选项（即 minimal install）遗漏了 gst-audio-thumbnailer 和 gst-video-thumbnailer 这两个包，它们负责在打开包含兼容文件的文件夹时生成媒体缩略图。\n\n元包本身不包含软件，仅包含需要安装的软件包列表——在此场景下，用于 Ubuntu 桌面体验。\n\n令人困惑的是，两个缩略图生成器都存在于完整安装的元文件中，因此如果你在安装界面选择了“完整安装”，就不会看到空白的默认音乐和视频图标，而是会显示包含封面或视频帧的丰富文件预览。\n\n而且，如果你在安装 Ubuntu 后做的第一件事是从官方仓库安装一堆应用，那么你可能无意中安装了依赖于这些缺失缩略图生成器的软件，从而间接获得了它们。\n\nUbuntu 26.04 将其旧的、基于……的缩略图生成器替换为基于 GStreamer 和 Glycin 的、更新的 Rust 版本。这就是为什么这些新包需要首先被列入相关元文件的原因。\n\n在一份错误报告中，该遗漏被描述为“疏忽而非刻意缩减体积的权衡”，因为这两个包都不大，也不会引入任何额外的依赖。\n\n修复该问题的稳定版更新（SRU）已获批准，并于 6 月底开始推送。如果你保持系统更新，缺失的包现在应该已经自动安装。\n\n如果你在 Ubuntu 26.04 LTS 中仍然看到空白的媒体图标，请打开终端并运行：\n\nsudo apt install gst-audio-thumbnailer gst-video-thumbnailer\n\n然后关闭并重新打开文件管理器，导航到包含与缩略图生成器兼容的视频或音频文件（大多数常见格式）的目录，你应该会在网格视图中看到预览加载。\n\nUbuntu 26.04 LTS 还附带另一个与媒体相关的“问题”，尽管是有意为之。默认图像查看器由于许可限制无法打开 HEIC 图像文件。虽然与此无关，但通过安装缺失的包同样可以解决。"
+  },
+  "97e947f1ad62338a1c6783467204f837": {
+    "id": "97e947f1ad62338a1c6783467204f837",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/GNOME-GPU-Reset-Recovery-2026",
+    "title_en": "GNOME Mutter GPU Reset Recovery Becoming A Reality",
+    "summary_en": "While typically quite rare encountering a GPU reset under Linux in most conditions, currently if encountering one under GNOME your session gets wiped out. But thanks to a Google Summer of Code \"GSoC\" project this year, GNOME's Mutter compositor is finally seeing real GPU reset recovery handling...",
+    "pub_date": "Fri, 03 Jul 2026 20:48:00 -0400",
+    "title_zh": "GNOME Mutter GPU重置恢复功能即将成为现实",
+    "summary_zh": "在Linux系统中，GPU重置虽不常见，但一旦发生，GNOME会话通常会被清空。今年通过Google Summer of Code项目，开发者Toluwaleke Ogundipe正在为GNOME Mutter合成器实现GPU重置恢复功能。目前，Mutter已能在GPU重置后保持会话稳定，窗口正常更新，输入恢复响应，但帧缓冲区重建和桌面背景渲染等问题仍需解决。",
+    "fulltext_zh": "GNOME Mutter GPU重置恢复功能即将成为现实 - Phoronix\nGNOME Mutter GPU重置恢复功能即将成为现实\n发布于2026年7月3日 美国东部时间晚上8:48\n\n虽然在大多数情况下，在Linux下遇到GPU重置的情况相当罕见，但目前在GNOME中一旦发生，你的会话就会被清空。不过，得益于今年Google Summer of Code（GSoC）项目，GNOME的Mutter合成器终于开始实现真正的GPU重置恢复处理。\n\n学生开发者Toluwaleke Ogundipe正在通过OpenGL的GL_EXT_robustness扩展及类似基础设施，为GNOME Mutter开发稳健的GPU重置恢复功能，作为Google Summer of Code的一部分。他发布了一篇详细的博文，概述了迄今为止在GNOME GPU重置恢复方面的工作，并且该功能已经开始生效！\n\nToluwaleke一直在为Mutter中的GPU重置恢复进行适当的集成，目前已达到Mutter合成器能够在GPU重置后幸存，且会话保持稳定的程度。窗口能够正确更新，输入重新变得响应，会话也不会崩溃或冻结。\n\n但仍需解决的问题包括：帧缓冲区重建尚未自动完成，桌面背景渲染不正确，以及一些残留的OpenGL错误。在提交合并请求以期望上游集成之前，这些问题及其他事项仍在处理中。\n\n希望了解更多关于此GNOME Mutter GPU重置恢复工作的人，可以查看当前状态。\n\nGNOME 51 Alpha发布，带来众多增强功能\nGNOME AI助手新增图像生成支持\nCOSMIC的新系统监视器看起来非常流畅\n实验性代码为GNOME Shell启用每显示器背景\nGNOME基金会宣布奖学金计划首批参与者\nGNOME文件预览器终于切换到GTK4，并添加深色模式\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动等主题。Michael也是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nRed Hat ARM工程师放弃ARM64 Linux个人桌面，回归AMD Ryzen系统\nCOSMIC的新系统监视器看起来非常流畅\nNourish：一款由Vulkan驱动、支持无限滚动/平移的新Wayland合成器\nCachyOS 2026年6月版本发布，带来更多性能优化\nLinux缓存感知调度扩展实现更佳性能：MySQL性能提升高达360%\nLinux 7.2暂存区仍在努力驯服Realtek RTL8723BS“驱动猛兽”\n微软宣布WSL上Linux容器的公开预览\nTLAC旨在成为内核级反作弊系统的开源替代方案\n\n虽然拥有无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "84936eb51c68a1ab3a7e628ac0a76025": {
+    "id": "84936eb51c68a1ab3a7e628ac0a76025",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/GNOME-51-Alpha",
+    "title_en": "GNOME 51 Alpha Released With Numerous Enhancements",
+    "summary_en": "In working toward the stable GNOME 51 desktop release due out in September, today marks the alpha release of GNOME 51...",
+    "pub_date": "Fri, 03 Jul 2026 18:43:31 -0400",
+    "title_zh": "GNOME 51 Alpha 发布，带来众多增强功能",
+    "summary_zh": "GNOME 51 Alpha 版本于2026年7月3日发布，标志着向9月稳定版迈进的重要一步。该版本在多个组件中进行了大量改进，包括Epiphany浏览器新增复制URL快捷键、GDM显示管理器兼容KMSCON VT、GNOME Calendar性能优化、GNOME Control Center新增显示选项和触摸板禁用功能、GNOME Maps支持离线地图下载、GNOME Remote Desktop启用AMD显卡硬件加速、GNOME Shell支持vA-API H.264屏幕录制速率控制等。此外，GTK尊重减少动效设置、Loupe图像查看器显示元数据、Nautilus文件管理器提升视图重载性能、Sushi移植到GTK4等改进也值得关注。",
+    "fulltext_zh": "GNOME 51 Alpha 发布，带来众多增强功能 - Phoronix\n\nGNOME 51 Alpha 发布，带来众多增强功能\n2026年7月3日，美国东部时间下午6:43。\n\n为迎接计划于9月发布的稳定版GNOME 51桌面环境，今天标志着GNOME 51 Alpha版本的发布。\n\nGNOME 51在其众多不同组件中带来了许多变化。在这个阶段，没有哪一项变化特别引人注目，但各种较小的改进为GNOME 50提供了更多的打磨和新增功能。以下是我在GNOME 51 Alpha中注意到的一些变化：\n\n- Epiphany浏览器新增了复制当前页面URL的键盘快捷键，以及其他改进。\n- GDM显示管理器现在兼容KMSCON VT。此外，现在还有一个GDM设置，用于更改回退会话。\n- GNOME Calendar经过了重新设计，带来了性能改进、渲染优化以及其他内部代码重构。\n- GNOME Control Center重新排列了系统软件/硬件信息页面，新增了显示选项，能够在插入鼠标时禁用触摸板，支持用于WiFi共享的GNOME二维码小部件，以及其他新增功能。\n- GNOME Maps现在支持离线地图下载。\n- GNOME Remote Desktop已修复并启用了AMD显卡驱动程序的硬件加速支持。\n- GNOME Session现在支持使用oo7-portal作为Secret门户的实现。\n- GNOME Shell现在支持vA-API H.264屏幕录制的速率控制。GNOME Shell现在还支持text_input_v3协议的第2版。\n- GTK现在在各个地方尊重减少动效设置，并避免动画。\n- Loupe图像查看器现在可以显示图像元数据中的创建者、版权信息、相机镜头和使用的软件。\n- 对Mutter合成器进行了许多修复。\n- Nautilus文件管理器现在具有增强的视图重载性能，以及其他变化。\n- Sushi已移植到GTK4。\n- XDG Desktop Portal GNOME现在支持输入捕获门户中的会话持久性。\n\n关于GNOME 51 Alpha版本的更多详细信息，请访问：\nGNOME Mutter GPU重置恢复成为现实\nGNOME AI助手新增图像生成支持\nCOSMIC的新系统监视器看起来非常流畅\n实验性代码为GNOME Shell启用每显示器背景\nGNOME基金会宣布奖学金计划首批参与者\nGNOME文件预览器终于切换到GTK4，新增深色模式\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立了该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动程序和其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nRed Hat ARM工程师放弃ARM64 Linux个人桌面，回归AMD Ryzen系统\nCOSMIC的新系统监视器看起来非常流畅\nNourish：一种由Vulkan驱动的新型Wayland合成器，支持无限滚动/平移\nCachyOS 2026年6月版本发布，带来更多性能优化\nLinux缓存感知调度扩展带来更佳性能：MySQL性能提升高达360%\nLinux 7.2 Staging仍在努力驯服Realtek RTL8723BS“野兽级驱动程序”\n微软宣布WSL上Linux容器的公开预览版\nTLAC旨在成为内核级反作弊系统的开源替代方案\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "5aad1f4d6bdffbbea4ec549ffa819610": {
+    "id": "5aad1f4d6bdffbbea4ec549ffa819610",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/UPower-1.91.3",
+    "title_en": "UPower 1.91.3 Fixes Behavior To Avoid Degrading Your Laptop Battery Faster",
+    "summary_en": "The UPower abstraction layer used for power management on Linux systems, especially laptops and desktops, is out with an important fix today to avoid inadvertently falling back to the laptop battery \"fast\" charging mode on some laptops that in turn could degrade your laptop battery faster...",
+    "pub_date": "Fri, 03 Jul 2026 14:57:11 -0400",
+    "title_zh": "UPower 1.91.3 修复行为以避免加速笔记本电脑电池老化",
+    "summary_zh": "UPower 1.91.3 版本发布，修复了一个重要问题：当用户禁用电池充电阈值功能时，系统会错误地将充电模式默认切换为“快速”充电，而非预期的“标准”模式。快速充电因产生过多热量，长期使用会加速电池老化。开源开发者 Armin Wolf 提交了修复，确保禁用充电阈值后仍优先使用标准充电模式。该版本还包含其他多项错误修复。",
+    "fulltext_zh": "UPower 1.91.3 修复行为以避免加速笔记本电脑电池老化 - Phoronix\nUPower 1.91.3 修复行为以避免加速笔记本电脑电池老化\n发布于 2026 年 7 月 3 日 下午 02:57 EDT\n\n用于 Linux 系统（尤其是笔记本电脑和台式机）电源管理的 UPower 抽象层今天发布了一项重要修复，以避免在某些笔记本电脑上无意中回退到电池“快速”充电模式，从而可能加速电池老化。\n\n问题源于 UPower 在禁用笔记本电脑电池充电阈值功能时，将默认充电类型更改为“快速”。通常默认值应为“标准”，这也是用户通常期望的，除非他们明确选择“快速”充电模式。众所周知，快速充电会因产生过多热量而导致热应力，长期使用会损坏电池单元并降低性能，从而加速电池老化。\n\n感谢开源开发者 Armin Wolf，现在已合并了一项修复，使 UPower 的设备电池处理优先使用“标准”充电而非“快速”充电。再次强调，这种次优行为发生在禁用电池充电阈值功能时，用户可能未意识到在此过程中充电模式被更改为“快速”。\n\n该变更是昨天发布的 UPower 1.91.3 版本中最显著的内容，此外还包括其他几项错误修复。\n\nSystem76 推出搭载 Intel Panther Lake 的新款 Lemur Pro 笔记本电脑\nASUS ROG Strix 笔记本电脑获得驱动修复，解决 Linux 性能远低于 Windows 的问题\n更多 AMD Zen 6 准备工作，大量 ASUS / Lenovo / HP 笔记本电脑改进进入 Linux 7.2\nLinux 7.2 为 Wacom W9000 触控笔触摸屏添加新驱动\nLinux 8250/16550 UART 串行驱动在 2026 年迎来现代化工作\nGCC 编译器中出现新的 Hygon Model 8“Suzhou”x86 CPU 支持\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nRed Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统\nCOSMIC 的新系统监视器看起来非常流畅\nNourish：一款由 Vulkan 驱动、支持无限滚动/平移的新 Wayland 合成器\nCachyOS 2026 年 6 月版本发布，带来更多性能优化\nLinux 缓存感知调度扩展实现更佳性能：MySQL 性能提升高达 360%\nLinux 7.2 Staging 仍在努力驯服 Realtek RTL8723BS“驱动野兽”\n微软宣布 WSL 上 Linux 容器的公开预览\nTLAC 旨在成为内核级反作弊系统的开源替代方案\n\n尽管提供无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者财产。保留所有权利。"
+  },
+  "5784da84a7e435e6b58cfb6709cca0d3": {
+    "id": "5784da84a7e435e6b58cfb6709cca0d3",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Vulkan-1.4.356-Released",
+    "title_en": "Vulkan Adds Extension For OCP's Microscaling MX Formats To Help Machine Learning",
+    "summary_en": "Vulkan 1.4.356 is out today and it's interesting for the lone new extension debuting: VK_EXT_shader_ocp_microscaling_types. The VK_EXT_shader_ocp_microscaling_types is for enabling the Open Compute Project's Microscaling MX data types to help with machine learning workloads with Vulkan...",
+    "pub_date": "Fri, 03 Jul 2026 11:42:42 -0400",
+    "title_zh": "Vulkan 新增扩展支持 OCP 的 Microscaling MX 格式以助力机器学习",
+    "summary_zh": "Vulkan 1.4.356 发布，新增 VK_EXT_shader_ocp_microscaling_types 扩展，支持开放计算项目（OCP）的 Microscaling MX 数据类型，包括 MXFP4、MXFP6、MXFP8 和 MXINT8，旨在提升机器学习工作负载的计算效率并降低内存带宽需求。该扩展由 NVIDIA、三星、Imagination 和 Arm 共同贡献开发。",
+    "fulltext_zh": "Vulkan 新增扩展支持 OCP 的 Microscaling MX 格式以助力机器学习 - Phoronix\nVulkan 新增扩展支持 OCP 的 Microscaling MX 格式以助力机器学习\n发布于 2026 年 7 月 3 日 上午 11:42 美国东部时间。\n\nVulkan 1.4.356 于今日发布，其亮点在于唯一新推出的扩展：VK_EXT_shader_ocp_microscaling_types。该扩展用于启用开放计算项目（Open Compute Project）的 Microscaling MX 数据类型，以帮助 Vulkan 处理机器学习工作负载。\n\n开放计算项目的 Microscaling 格式（MX）包括 MXFP4、MXFP6、MXFP8 和 MXINT8，旨在提升 AI 训练和推理的效率。VK_EXT_shader_ocp_microscaling_types 增加了对 OCP MX 格式规范中定义的浮点类型的支持，但并未提供对微缩放张量或微缩放数据操作的直接支持。\n\n行业需求推动了该扩展的开发，以支持这些新型数据类型，从而实现更高的计算吞吐量和更低的内存带宽需求。NVIDIA、三星、Imagination 和 Arm 共同贡献了 VK_EXT_shader_ocp_microscaling_types 扩展，该扩展在过去几个月中一直在开发中。\n\nVK_EXT_shader_ocp_microscaling_types 的引入是今日发布的主要亮点。"
+  },
+  "d30d78ca8c1eefad8d47f9a64b1c9bc9": {
+    "id": "d30d78ca8c1eefad8d47f9a64b1c9bc9",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Coreboot-openSIL-MSI-Windows",
+    "title_en": "Coreboot + AMD openSIL On MSI Ryzen Motherboard Now Works With Windows 11",
+    "summary_en": "With 3mdeb's Dasharo port of AMD openSIL and Coreboot running on the Gigabyte EPYC motherboard, 3mdeb engineers have been devoting more time to their bring-up of Coreboot+openSIL on the MSI PRO B850-P consumer motherboard for desktop AMD Ryzen. They now even have Microsoft Windows 11 working atop this open-source firmware alternative along with other features implemented...",
+    "pub_date": "Fri, 03 Jul 2026 11:10:43 -0400",
+    "title_zh": "Coreboot + AMD openSIL 在 MSI Ryzen 主板上现已支持 Windows 11",
+    "summary_zh": "3mdeb 团队在 MSI PRO B850-P 消费级主板上持续推进 Coreboot 与 AMD openSIL 的适配工作，现已成功运行 Windows 11，无需任何变通方案。该固件移植还解决了 AMDGPU 驱动错误、集成了 AMD PSP 固件 TPM 支持、EZ Debug LED 支持及 SMBIOS 内存信息报告等功能。这一进展使开源固件更贴近大众用户。",
+    "fulltext_zh": "Coreboot + AMD openSIL 在 MSI Ryzen 主板上现已支持 Windows 11 - Phoronix\nCoreboot + AMD openSIL 在 MSI Ryzen 主板上现已支持 Windows 11\n发布于 2026 年 7 月 3 日 上午 11:10 美国东部时间。\n\n随着 3mdeb 将 AMD openSIL 和 Coreboot 的 Dasharo 移植版本部署到技嘉 EPYC 主板，3mdeb 工程师们投入了更多时间在面向桌面 AMD Ryzen 的 MSI PRO B850-P 消费级主板上推进 Coreboot+openSIL 的适配工作。如今，他们甚至已让微软 Windows 11 在这款开源固件替代方案上成功运行，同时还实现了其他功能。\n\n除了将 Coreboot 和 AMD openSIL 原型引入该主板外，3mdeb 还独立地将固件栈移植到了 MSI PRO B850-P 上，这是一款现代 AMD Ryzen AM5 桌面平台。这使得 MSI PRO B850-P WIFI 成为 Linux 和开源爱好者的特殊/独特主板。\n\n该固件移植近期取得的一些进展包括：解决了此前遇到的 AMDGPU 图形驱动错误、集成了 AMD PSP 固件 TPM 支持、EZ Debug LED 支持、SMBIOS 内存信息报告等。\n\n虽然 Linux 是 3mdeb 的主要关注点，但他们也在测试微软 Windows 11 以解决各种问题。Windows 11 现在可以无需任何变通方案即可在此设置上成功运行。他们还实现了其他固件组件，以确保 Windows 电源管理行为的正确性。\n\n看到 Windows 11 在 Coreboot+openSIL 设置上运行令人欣喜，并且这对于使该固件更适用于大众用户至关重要。\n\n关于这一最新进展的更多详情，请参阅：\n\nCoreboot 26.06 带来对 Intel Nova Lake、AMD Strix Halo 及 31 款新主板的支持\nFramework Computer 在其现代 Intel 笔记本电脑上推进 Coreboot 适配\n3mdeb 持续推进 Coreboot + AMD openSIL 向 Ryzen MSI 主板的移植\n3mdeb 在 Ryzen AM5 主板上让更多 AMD openSIL 和 Coreboot 组件正常工作\nCoreboot 历经三年多等待终登 AMD Ryzen 驱动的 Star Labs StarBook MK VI\nCoreboot 26.03 发布，支持 Intel Panther Lake\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nRed Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统\nCOSMIC 的新系统监视器看起来非常流畅\nNourish：一款由 Vulkan 驱动、支持无限滚动/平移的新型 Wayland 合成器\nCachyOS 2026 年 6 月版发布，带来更多性能优化\nLinux 缓存感知调度扩展带来更佳性能：MySQL 性能提升高达 360%\nLinux 7.2 Staging 仍在努力驯服 Realtek RTL8723BS“驱动猛兽”\n微软宣布 WSL 上 Linux 容器的公开预览版\nTLAC 旨在成为内核级反作弊系统的开源替代方案\n\n尽管提供无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
   }
 }
