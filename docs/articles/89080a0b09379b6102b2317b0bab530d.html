@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Ultramarine Linux 44 — Linux 中文速报</title>
+<title>Ubuntu 将时间同步工具替换为基于 Rust 的版本 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>发行版发布：Ultramarine Linux 44</h1>
+  <h1>Ubuntu 将时间同步工具替换为基于 Rust 的版本</h1>
 
-  <div class="article-summary">基于Fedora的桌面发行版Ultramarine Linux发布了第44版。新版本更新了三个桌面环境：Plasma 6.7带来新Union主题引擎、性能改进和大量错误修复；Budgie切换到Wayland，采用SDDM窗口管理器和新蓝牙应用；GNOME版修复了烦人的“窗口已就绪”通知，并默认启用最小化和最大化按钮。</div>
+  <div class="article-summary">Ubuntu 计划将其默认时间同步客户端从 Chrony 替换为基于 Rust 的 NTP 实现，以提升内存安全性和系统稳定性。Canonical 已成为 Trifecta Tech Foundation 的金牌赞助商，每年提供 4 万欧元资助其内存安全软件项目。新工具将在 Ubuntu 26.10 中提供测试，并计划于 Ubuntu 27.04 中成为默认配置。此举是 Ubuntu 全面拥抱 Rust 语言、逐步“氧化”发行版的一部分。</div>
 
-  <div class="article-body"><p>发行版发布：Ultramarine Linux 44 (DistroWatch.com 新闻)</p><p>一款基于Fedora的桌面发行版发布了新版本44。新版本包含四个桌面环境中的三个更新：</p><p>“我们收到了大量反馈和赞誉，因为将Plasma作为推荐版本。此版本搭载Plasma 6.7、新的Union主题引擎、性能改进以及大量错误修复。Budgie已切换到Wayland。它现在采用SDDM窗口管理器和一个新的蓝牙应用。这是倒数第二个仍停留在X11的版本，所以我们非常高兴终于将其现代化。如果您从版本43升级，系统会提示您访问并按照其说明操作，出于稳定性原因，我们无法自动将用户过渡到SDDM，但您可以按照我们简单的说明进行切换。我们对GNOME版本进行了一些改进，使其显著更好。最值得注意的是，我们修复了那个烦人的‘窗口已就绪’通知，现在窗口会像在其他版本上一样自动聚焦。我们还默认在每个窗口上启用了最小化和最大化按钮……”</p><p>更多信息请参阅：</p><p>ultramarine-budgie-44-live-anaconda-x86_64.iso</p><p>ultramarine-gnome-44-live-anaconda-x86_64.iso</p><p>ultramarine-plasma-44-live-anaconda-x86_64.iso</p><p>ultramarine-xfce-44-live-anaconda-x86_64.iso</p><p>近期相关新闻与发布：</p><p>发行版发布：Ultramarine Linux 44</p><p>发行版发布：Ultramarine Linux 43</p><p>发行版发布：Ultramarine Linux 42</p><p>发行版发布：Ultramarine Linux 41</p><p>发行版发布：Ultramarine Linux 40</p><p>发行版发布：Ultramarine Linux 39</p><p>更多Ultramarine新闻...</p><p>关于Ultramarine Linux</p><p>Ultramarine Linux是一款基于Fedora的发行版，包含额外的软件包仓库（如RPM Fusion）并启用了多媒体编解码器。Ultramarine可被视为Korora项目的精神继承者，旨在使Fedora成为更友好的桌面体验。</p></div>
+  <div class="article-body"><p>Ubuntu 正在将其时间同步工具替换为基于 Rust 的版本 - OMG! Ubuntu</p><p>，这是 NTP（网络时间协议）的 Rust 重写版本，将成为 Ubuntu 的默认时间同步客户端。</p><p>为实现这一目标，Canonical 已成为</p><p>Trifecta Tech Foundation</p><p>的金牌赞助商，该非营利组织致力于内存安全软件项目，Canonical 每年承诺提供 4 万欧元资助其发展。</p><p>目标是让这个基于 Rust 的版本成为 Ubuntu 27.04 的默认时间同步客户端和服务器，并将在今年 10 月发布的 Ubuntu 26.10 中提供测试。</p><p>最终，它还将取代</p><p>用于时间同步的用例，</p><p>Canonical 的 Ubuntu 工程副总裁 Jon Seager 表示。</p><p>你的 Ubuntu 系统通过互联网与时间服务器同步来保持时钟准确。这是通过 NTP（网络时间协议）实现的。这不会改变这一点；目标仍然是保持时间同步。</p><p>Ubuntu 上一次调整其</p><p>时间同步栈是在 25.10 版本中，</p><p>用 Chrony 替换了 systemd-timesyncd，并添加了网络时间安全（NTS）来验证时间服务器——这些更改旨在提升发行版的整体安全性。</p><p>计划切换到</p><p>是出于类似的原因，尽管这次是替换守护进程本身，而不是在其上添加层。Rust 以其内存安全性而闻名——有些人认为被过度炒作。</p><p>Trifecta Tech Foundation 主席 Erik Jonkers 表示，这笔资金将帮助基金会确保其内存安全稳定版中各种项目的长期安全性和可靠性，包括进一步改进</p><p>及其相关组件（如 AppArmor 规则）所需的工作。</p><p>Canonical 与该基金会已有持续的合作关系，曾共同赞助开发了</p><p>25.10 版本采用了这个基于 Rust 的 sudo</p><p>替代品作为系统默认，并延续到今年 4 月发布的 Ubuntu 26.04 LTS 版本。</p><p>Seager 补充说，Canonical 非常</p><p>“兴奋能够深化我们与 Trifecta Tech Foundation 已经富有成效的关系，使这些过渡对整个生态系统变得可行”。</p><p>这一切都是 Ubuntu 更广泛拥抱 Rust 并“氧化”发行版的一部分。</p><p>就像去年 sudo 的切换一样，时间同步的更改在日常使用中不会引起注意。但对于 Canonical 来说，其提供的固有稳定性和安全性优势——无论有些人觉得多么夸大——都值得付出努力，并且通过帮助支付所需工作的费用，也值得付出开销。</p><p>拨打报时电话</p><p>，不过你们中大多数读者可能年纪不够大，不记得那样做了……</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12891" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/ubuntu-ntpd-rs-rust-time-sync" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

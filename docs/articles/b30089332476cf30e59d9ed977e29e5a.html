@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Ultramarine Linux 44 — Linux 中文速报</title>
+<title>4K @ 60 FPS USB视频采集在Linux上终于不再那么棘手 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Ultramarine Linux 44</h1>
+  <h1>4K @ 60 FPS USB视频采集在Linux上终于不再那么棘手</h1>
 
-  <div class="article-summary">基于Fedora的桌面发行版Ultramarine Linux发布了第44版。新版本更新了三个桌面环境：Plasma 6.7带来新Union主题引擎、性能改进和大量错误修复；Budgie切换到Wayland，采用SDDM窗口管理器和新蓝牙应用；GNOME版修复了烦人的“窗口已就绪”通知，并默认启用最小化和最大化按钮。</div>
+  <div class="article-summary">长期以来，在Linux上通过USB进行4K 60 FPS视频采集一直是个痛点，主要原因是许多USB采集卡在尝试达到该规格时会从10 Gbps带宽回退到5 Gbps，导致无法满足需求。但自Linux 6.19内核引入USB_QUIRK_NO_BOS quirks路径后，Elgato 4K X等设备得以稳定工作在10 Gbps，实现4K @ 60 FPS采集。目前，AverMedia Live Gamer Ultra 2.1、ASUS TUF 4K PRO、UGREEN 35871等型号也已确认需要相同quirks。使用最新Linux 7.1内核的用户可正常使用这些设备。</div>
 
-  <div class="article-body"><p>发行版发布：Ultramarine Linux 44 (DistroWatch.com 新闻)</p><p>一款基于Fedora的桌面发行版发布了新版本44。新版本包含四个桌面环境中的三个更新：</p><p>“我们收到了大量反馈和赞誉，因为将Plasma作为推荐版本。此版本搭载Plasma 6.7、新的Union主题引擎、性能改进以及大量错误修复。Budgie已切换到Wayland。它现在采用SDDM窗口管理器和一个新的蓝牙应用。这是倒数第二个仍停留在X11的版本，所以我们非常高兴终于将其现代化。如果您从版本43升级，系统会提示您访问并按照其说明操作，出于稳定性原因，我们无法自动将用户过渡到SDDM，但您可以按照我们简单的说明进行切换。我们对GNOME版本进行了一些改进，使其显著更好。最值得注意的是，我们修复了那个烦人的‘窗口已就绪’通知，现在窗口会像在其他版本上一样自动聚焦。我们还默认在每个窗口上启用了最小化和最大化按钮……”</p><p>更多信息请参阅：</p><p>ultramarine-budgie-44-live-anaconda-x86_64.iso</p><p>ultramarine-gnome-44-live-anaconda-x86_64.iso</p><p>ultramarine-plasma-44-live-anaconda-x86_64.iso</p><p>ultramarine-xfce-44-live-anaconda-x86_64.iso</p><p>近期相关新闻与发布：</p><p>发行版发布：Ultramarine Linux 44</p><p>发行版发布：Ultramarine Linux 43</p><p>发行版发布：Ultramarine Linux 42</p><p>发行版发布：Ultramarine Linux 41</p><p>发行版发布：Ultramarine Linux 40</p><p>发行版发布：Ultramarine Linux 39</p><p>更多Ultramarine新闻...</p><p>关于Ultramarine Linux</p><p>Ultramarine Linux是一款基于Fedora的发行版，包含额外的软件包仓库（如RPM Fusion）并启用了多媒体编解码器。Ultramarine可被视为Korora项目的精神继承者，旨在使Fedora成为更友好的桌面体验。</p></div>
+  <div class="article-body"><p>4K @ 60 FPS USB视频采集在Linux上终于不再那么棘手 - Phoronix</p><p>4K @ 60 FPS USB视频采集在Linux上终于不再那么棘手</p><p>2026年7月4日 上午09:39 EDT</p><p>多年来，我在Linux硬件测试中很少涉足的领域之一是现代USB视频采集，原因在于缺乏这类硬件。我上一次在Linux上进行大量视频采集还是在Hauppauge PCI卡时代。不过事实证明，在Linux下进行4K 60 FPS内容的USB视频采集一直是个痛点，但随着新版Linux内核的出现，这一问题终于得到缓解。</p><p>Phoronix读者Johannes Brüderl来信介绍了这一情况，以及由于Linux内核中新增的quirks路径，情况正在发生改变。他解释说，处理4K 60 FPS视频采集一直“极其复杂”，PCIe卡的支持参差不齐，因为大多数硬件通常缺乏Linux驱动，或者需要逆向工程。而对于USB设备，虽然通常能通过UVC正常工作，但在尝试实现4K 60 FPS录制时，USB视频采集卡仍会遇到问题。</p><p>Linux上的4K USB视频采集卡通常会从10 Gbps带宽回退到5 Gbps，这足以支持4K @ 30 FPS，但无法满足4K @ 60 FPS。</p><p>早在Linux 6.19中，Johannes Brüderl为Elgato 4K X贡献了一个USB_QUIRK_NO_BOS quirks路径，原因是该USB采集设备在BOS描述符请求时挂起，然后回退到5 Gbps。借助这一quirks，该卡保持在10 Gbps运行，能够采集4K @ 60 FPS。</p><p>此后，其他USB视频采集卡也被发现需要相同的quirks，例如AverMedia Live Gamer Ultra 2.1、ASUS TUF 4K PRO、UGREEN 35871和EZXCAP401。对于有兴趣进行4K 60 FPS USB视频采集的用户，可以通过以下链接了解有关该情况和quirks的更多详细信息。如果您拥有这些设备之一，使用最新的上游Linux 7.1内核应该可以正常工作，或者您的USB设备也可能需要此quirks。</p><p>OpenRazer 3.12.4 修复与Linux 7.2的兼容性</p><p>UPower 1.91.3 修复行为以避免加速笔记本电脑电池老化</p><p>System76 推出搭载Intel Panther Lake的新款Lemur Pro笔记本电脑</p><p>ASUS ROG Strix笔记本电脑获得驱动修复，解决Linux性能远低于Windows的问题</p><p>更多AMD Zen 6准备工作，大量ASUS/Lenovo/HP笔记本电脑针对Linux 7.2的改进</p><p>Linux 7.2 新增Wacom W9000触控笔触摸屏驱动</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动等主题。他还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。您可以通过以下方式关注他。</p><p>Red Hat ARM工程师放弃ARM64 Linux个人桌面，回归AMD Ryzen系统</p><p>Rust Coreutils cp因最新不兼容性导致Ubuntu镜像构建失败</p><p>COSMIC的新系统监视器看起来非常流畅</p><p>Nourish：一款由Vulkan驱动、支持无限滚动/平移的新Wayland合成器</p><p>CachyOS 2026年6月版发布，带来更多性能优化</p><p>Linux内核开发者再次讨论AI代理归属问题——可能将其移除</p><p>微软宣布WSL上Linux容器的公开预览版</p><p>TLAC旨在成为内核级反作弊系统的开源替代方案</p><p>虽然提供无广告浏览，</p><p>单页文章查看</p><p>法律免责声明，隐私政策，Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12891" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/4K-60-FPS-USB-Video-Capture" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

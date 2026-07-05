@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Ultramarine Linux 44 — Linux 中文速报</title>
+<title>OpenRazer 3.12.4 修复与 Linux 7.2 的兼容性 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Ultramarine Linux 44</h1>
+  <h1>OpenRazer 3.12.4 修复与 Linux 7.2 的兼容性</h1>
 
-  <div class="article-summary">基于Fedora的桌面发行版Ultramarine Linux发布了第44版。新版本更新了三个桌面环境：Plasma 6.7带来新Union主题引擎、性能改进和大量错误修复；Budgie切换到Wayland，采用SDDM窗口管理器和新蓝牙应用；GNOME版修复了烦人的“窗口已就绪”通知，并默认启用最小化和最大化按钮。</div>
+  <div class="article-summary">OpenRazer 3.12.4 发布，主要修复了与 Linux 7.2 内核的兼容性问题。由于 Linux 7.2 移除了 strncpy API，OpenRazer 将代码中的 strncpy 替换为 strscpy()，以确保正常运行。该版本无新增功能，但为 Razer 外设在 Linux 上的使用提供了持续支持。</div>
 
-  <div class="article-body"><p>发行版发布：Ultramarine Linux 44 (DistroWatch.com 新闻)</p><p>一款基于Fedora的桌面发行版发布了新版本44。新版本包含四个桌面环境中的三个更新：</p><p>“我们收到了大量反馈和赞誉，因为将Plasma作为推荐版本。此版本搭载Plasma 6.7、新的Union主题引擎、性能改进以及大量错误修复。Budgie已切换到Wayland。它现在采用SDDM窗口管理器和一个新的蓝牙应用。这是倒数第二个仍停留在X11的版本，所以我们非常高兴终于将其现代化。如果您从版本43升级，系统会提示您访问并按照其说明操作，出于稳定性原因，我们无法自动将用户过渡到SDDM，但您可以按照我们简单的说明进行切换。我们对GNOME版本进行了一些改进，使其显著更好。最值得注意的是，我们修复了那个烦人的‘窗口已就绪’通知，现在窗口会像在其他版本上一样自动聚焦。我们还默认在每个窗口上启用了最小化和最大化按钮……”</p><p>更多信息请参阅：</p><p>ultramarine-budgie-44-live-anaconda-x86_64.iso</p><p>ultramarine-gnome-44-live-anaconda-x86_64.iso</p><p>ultramarine-plasma-44-live-anaconda-x86_64.iso</p><p>ultramarine-xfce-44-live-anaconda-x86_64.iso</p><p>近期相关新闻与发布：</p><p>发行版发布：Ultramarine Linux 44</p><p>发行版发布：Ultramarine Linux 43</p><p>发行版发布：Ultramarine Linux 42</p><p>发行版发布：Ultramarine Linux 41</p><p>发行版发布：Ultramarine Linux 40</p><p>发行版发布：Ultramarine Linux 39</p><p>更多Ultramarine新闻...</p><p>关于Ultramarine Linux</p><p>Ultramarine Linux是一款基于Fedora的发行版，包含额外的软件包仓库（如RPM Fusion）并启用了多媒体编解码器。Ultramarine可被视为Korora项目的精神继承者，旨在使Fedora成为更友好的桌面体验。</p></div>
+  <div class="article-body"><p>OpenRazer 3.12.4 修复与 Linux 7.2 的兼容性 - Phoronix</p><p>OpenRazer 3.12.4 修复与 Linux 7.2 的兼容性</p><p>发布于 2026 年 7 月 4 日 晚上 8:33（美国东部时间）</p><p>OpenRazer 3.12.4 现已发布，这是针对 Razer 设备的树外非官方 Linux 驱动程序的最新更新。OpenRazer 与 Polychromatic 或其他 GUI 选项配合使用时，能够在 Linux 上为 Razer 游戏外设提供出色的使用体验。</p><p>OpenRazer 3.12.4 没有引入任何炫酷的新功能或新增 Razer 产品支持，其主要变化是启用了对最新 Linux 7.2 Git 内核状态的支持。</p><p>Linux 7.2 在经过多年工作和数百个补丁后，最终移除了 strncpy API，OpenRazer 也必须进行更新，因为其部分代码依赖于 strncpy。OpenRazer 3.12.4 版本现已使用 strscpy() 替代 strncpy()，以实现与 Linux 7.2+ 的兼容。</p><p>这是 OpenRazer 3.12.4 的主要亮点，该版本今日即可下载。</p><p>巧合的是，请继续关注下周一些值得关注的 Razer Linux 新闻……</p><p>4K @ 60 FPS USB 视频采集在 Linux 上终于不再那么棘手</p><p>UPower 1.91.3 修复行为以避免加速笔记本电脑电池老化</p><p>System76 推出搭载 Intel Panther Lake 的新款 Lemur Pro 笔记本电脑</p><p>ASUS ROG Strix 笔记本电脑获得驱动修复，解决 Linux 性能远低于 Windows 的问题</p><p>更多 AMD Zen 6 准备工作，众多 ASUS / Lenovo / HP 笔记本电脑针对 Linux 7.2 的改进</p><p>Linux 7.2 为 Wacom W9000 触控笔触屏添加新驱动</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Red Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统</p><p>Rust Coreutils cp 因最新不兼容性导致 Ubuntu 镜像构建失败</p><p>COSMIC 的新系统监视器看起来非常流畅</p><p>Nourish：一款由 Vulkan 驱动的全新 Wayland 合成器，支持无限滚动/平移</p><p>CachyOS 2026 年 6 月版发布，带来更多性能优化</p><p>Linux 内核开发者再次讨论 AI 代理归属问题——可能将其移除</p><p>微软宣布 WSL 上 Linux 容器的公开预览版</p><p>TLAC 旨在成为内核级反作弊系统的开源替代方案</p><p>虽然拥有无广告浏览，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12891" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/OpenRazer-3.12.4" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

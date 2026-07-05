@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Ultramarine Linux 44 — Linux 中文速报</title>
+<title>FEX 2607 针对尚未发布的 ARM 256 位 SVE2 硬件进行优化 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Ultramarine Linux 44</h1>
+  <h1>FEX 2607 针对尚未发布的 ARM 256 位 SVE2 硬件进行优化</h1>
 
-  <div class="article-summary">基于Fedora的桌面发行版Ultramarine Linux发布了第44版。新版本更新了三个桌面环境：Plasma 6.7带来新Union主题引擎、性能改进和大量错误修复；Budgie切换到Wayland，采用SDDM窗口管理器和新蓝牙应用；GNOME版修复了烦人的“窗口已就绪”通知，并默认启用最小化和最大化按钮。</div>
+  <div class="article-summary">FEX 模拟器发布最新月度功能版本 2607，针对尚未上市的 256 位 SVE2 ARM 处理器优化 AVX 指令处理。该版本改进了 JIT 编译器，开始支持 CUDA thunking（适用于 DGX Spark 等 NVIDIA GB10 系统），并在 Proton/WINE 下引入 Unixlib 支持以解决 DLL 架构限制。</div>
 
-  <div class="article-body"><p>发行版发布：Ultramarine Linux 44 (DistroWatch.com 新闻)</p><p>一款基于Fedora的桌面发行版发布了新版本44。新版本包含四个桌面环境中的三个更新：</p><p>“我们收到了大量反馈和赞誉，因为将Plasma作为推荐版本。此版本搭载Plasma 6.7、新的Union主题引擎、性能改进以及大量错误修复。Budgie已切换到Wayland。它现在采用SDDM窗口管理器和一个新的蓝牙应用。这是倒数第二个仍停留在X11的版本，所以我们非常高兴终于将其现代化。如果您从版本43升级，系统会提示您访问并按照其说明操作，出于稳定性原因，我们无法自动将用户过渡到SDDM，但您可以按照我们简单的说明进行切换。我们对GNOME版本进行了一些改进，使其显著更好。最值得注意的是，我们修复了那个烦人的‘窗口已就绪’通知，现在窗口会像在其他版本上一样自动聚焦。我们还默认在每个窗口上启用了最小化和最大化按钮……”</p><p>更多信息请参阅：</p><p>ultramarine-budgie-44-live-anaconda-x86_64.iso</p><p>ultramarine-gnome-44-live-anaconda-x86_64.iso</p><p>ultramarine-plasma-44-live-anaconda-x86_64.iso</p><p>ultramarine-xfce-44-live-anaconda-x86_64.iso</p><p>近期相关新闻与发布：</p><p>发行版发布：Ultramarine Linux 44</p><p>发行版发布：Ultramarine Linux 43</p><p>发行版发布：Ultramarine Linux 42</p><p>发行版发布：Ultramarine Linux 41</p><p>发行版发布：Ultramarine Linux 40</p><p>发行版发布：Ultramarine Linux 39</p><p>更多Ultramarine新闻...</p><p>关于Ultramarine Linux</p><p>Ultramarine Linux是一款基于Fedora的发行版，包含额外的软件包仓库（如RPM Fusion）并启用了多媒体编解码器。Ultramarine可被视为Korora项目的精神继承者，旨在使Fedora成为更友好的桌面体验。</p></div>
+  <div class="article-body"><p>FEX 2607 针对尚未发布的 ARM 256 位 SVE2 硬件进行优化 - Phoronix</p><p>FEX 2607 针对尚未发布的 ARM 256 位 SVE2 硬件进行优化</p><p>发布于 2026 年 7 月 4 日 下午 03:40 EDT。</p><p>FEX 模拟器允许在 ARM64（AArch64）系统上运行 Linux x86/x86_64 软件，包括用于在 ARM 上进行 Windows 游戏运行的 Wine / Valve 的 Steam Play（Proton）。该模拟器现已推出最新的月度功能版本。这个由 Valve 支持的项目旨在为即将推出的 Steam Frame 及其他更典型的 ARM Linux 系统在 ARM 上运行 x86_64 游戏和其他软件，一直在酝酿更多优化和改进。</p><p>尽管目前尚无 256 位 SVE2 ARM 处理器可用，但 FEX 开发者一直在努力利用 256 位 SVE2 来实现其高级向量扩展（Advanced Vector Extensions），以便以高性能方式正确处理 AVX 指令。</p><p>FEX 2607 还为其 JIT 编译器带来了许多修复和改进。FEX 的另一个进步是开始支持 CUDA thunking，例如供在 DGX Spark 或其他 NVIDIA GB10 系统上使用 FEX 的用户使用。此 CUDA thunking 支持尚未完成，但可能开始适用于 ARM 上某些动态链接的 CUDA x86_64 软件。</p><p>FEX 还开始实现在 Proton/WINE 下的 Unixlib 支持，以克服当前将整个 FEX 构建为 Wine 加载的 DLL 文件所带来的一些挑战和工程限制。通过致力于 Unixlib SO 文件解决方案，未来将能够实现一些改进。</p><p>有关今天 FEX-Emu 2607 版本的下载和更多详细信息，请访问：</p><p>JPEG-XL libjxl 0.12 带来更多性能优化</p><p>Box3D 作为新的开源 3D 物理引擎首次亮相</p><p>Servo 浏览器引擎在每月不到 8000 美元的情况下持续取得巨大进展</p><p>Servo 0.3 发布，演示浏览器变得更加实用</p><p>zlib-rs 0.6.4 发布，修复了 Intel Raptor Lake 崩溃问题并进行了 SIMD 优化</p><p>1996 年使用 Motif 工具包的 GIMP v0.54 现已为现代 Linux 桌面提供 Flatpak 版本</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>Red Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统</p><p>Rust Coreutils cp 因最新不兼容性导致 Ubuntu 镜像构建失败</p><p>COSMIC 的新系统监视器看起来非常流畅</p><p>Nourish：由 Vulkan 驱动的新 Wayland 合成器，支持无限滚动/平移</p><p>CachyOS 2026 年 6 月版本发布，带来更多性能优化</p><p>Linux 内核开发者再次讨论 AI 代理归属问题——可能将其移除</p><p>微软宣布 WSL 上 Linux 容器的公开预览版</p><p>TLAC 旨在成为内核级反作弊系统的开源替代方案</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12891" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/FEX-2607-Emulator" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

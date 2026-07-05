@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Ultramarine Linux 44 — Linux 中文速报</title>
+<title>Linux DRM调度器补丁大幅提升作业提交延迟 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Ultramarine Linux 44</h1>
+  <h1>Linux DRM调度器补丁大幅提升作业提交延迟</h1>
 
-  <div class="article-summary">基于Fedora的桌面发行版Ultramarine Linux发布了第44版。新版本更新了三个桌面环境：Plasma 6.7带来新Union主题引擎、性能改进和大量错误修复；Budgie切换到Wayland，采用SDDM窗口管理器和新蓝牙应用；GNOME版修复了烦人的“窗口已就绪”通知，并默认启用最小化和最大化按钮。</div>
+  <div class="article-summary">一组针对Linux内核DRM调度器的补丁展示了在系统负载较高时显著降低GPU作业提交延迟的潜力。该补丁将内核工作队列替换为kthread_work，在Panthor Arm Mali驱动上实现了高达98%的延迟改善，对防止合成器丢帧等场景非常有利。目前仅Intel Xe和Panthor驱动适配了该补丁，AMDGPU等硬件调度器驱动预计变化不大。</div>
 
-  <div class="article-body"><p>发行版发布：Ultramarine Linux 44 (DistroWatch.com 新闻)</p><p>一款基于Fedora的桌面发行版发布了新版本44。新版本包含四个桌面环境中的三个更新：</p><p>“我们收到了大量反馈和赞誉，因为将Plasma作为推荐版本。此版本搭载Plasma 6.7、新的Union主题引擎、性能改进以及大量错误修复。Budgie已切换到Wayland。它现在采用SDDM窗口管理器和一个新的蓝牙应用。这是倒数第二个仍停留在X11的版本，所以我们非常高兴终于将其现代化。如果您从版本43升级，系统会提示您访问并按照其说明操作，出于稳定性原因，我们无法自动将用户过渡到SDDM，但您可以按照我们简单的说明进行切换。我们对GNOME版本进行了一些改进，使其显著更好。最值得注意的是，我们修复了那个烦人的‘窗口已就绪’通知，现在窗口会像在其他版本上一样自动聚焦。我们还默认在每个窗口上启用了最小化和最大化按钮……”</p><p>更多信息请参阅：</p><p>ultramarine-budgie-44-live-anaconda-x86_64.iso</p><p>ultramarine-gnome-44-live-anaconda-x86_64.iso</p><p>ultramarine-plasma-44-live-anaconda-x86_64.iso</p><p>ultramarine-xfce-44-live-anaconda-x86_64.iso</p><p>近期相关新闻与发布：</p><p>发行版发布：Ultramarine Linux 44</p><p>发行版发布：Ultramarine Linux 43</p><p>发行版发布：Ultramarine Linux 42</p><p>发行版发布：Ultramarine Linux 41</p><p>发行版发布：Ultramarine Linux 40</p><p>发行版发布：Ultramarine Linux 39</p><p>更多Ultramarine新闻...</p><p>关于Ultramarine Linux</p><p>Ultramarine Linux是一款基于Fedora的发行版，包含额外的软件包仓库（如RPM Fusion）并启用了多媒体编解码器。Ultramarine可被视为Korora项目的精神继承者，旨在使Fedora成为更友好的桌面体验。</p></div>
+  <div class="article-body"><p>Linux DRM调度器补丁大幅提升作业提交延迟 - Phoronix</p><p>Linux DRM调度器补丁大幅提升作业提交延迟</p><p>发布于2026年7月4日美国东部时间下午12:21。</p><p>一组针对Linux内核直接渲染管理器（DRM）调度器的补丁——该调度器被不同内核图形驱动共享——展示了在系统运行大量可运行CPU进程时，能够显著降低GPU作业提交延迟的潜力。</p><p>Igalia的Tvrtko Ursulin于周四发送了征求意见（RFC），以应对系统因可运行CPU进程过载而导致高优先级DRM客户端在GPU提交路径中遭遇延迟注入的情况——这是由于DRM调度器使用了内核工作队列。</p><p>提议的补丁将工作队列替换为用于异步任务执行的kthread_work。他们发现这一DRM调度器重构带来了“惊人的改善”：</p><p>Ursulin补充道：“这显然对防止合成器丢帧以及类似场景非常有利。”</p><p>这对Panthor Arm Mali驱动来说非常有前景。目前并非所有使用DRM调度器的驱动都已适配这些RFC补丁，仅Intel Xe和Panthor驱动完成了适配。而AMDGPU驱动及其他将DRM调度器作为硬件调度器使用的驱动，预计不会像上述Panthor数据那样出现显著差异。</p><p>想要了解更多关于这一DRM调度器适配（将工作队列替换为kthread_work）的人，可以在以下链接找到RFC补丁：</p><p>Linux 7.2-rc2 BPF代码正在强化以防范JIT Spraying攻击</p><p>Linux准备淘汰其32位MSR接口</p><p>Infinity调度器旨在成为更好的Linux调度器</p><p>Linux 7.2-rc1发布：“情况看起来相当正常”，同时引入了AMDGPU HDMI 2.1 FRL、AMD ISP4和CAS支持</p><p>Linux 7.3将引入DRM“颜色格式”属性，并附带AMD GPU驱动支持</p><p>Linux淘汰旧驱动、AI检测漏洞及其他Q2内核亮点</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael也是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>Red Hat ARM工程师放弃ARM64 Linux个人桌面，回归AMD Ryzen系统</p><p>Rust Coreutils的cp命令因最新不兼容性导致Ubuntu镜像构建失败</p><p>COSMIC的新系统监视器看起来非常流畅</p><p>Nourish：一款由Vulkan驱动、支持无限滚动/平移的新Wayland合成器</p><p>CachyOS 2026年6月版本发布，带来更多性能优化</p><p>Linux内核开发者再次讨论AI代理归属问题——可能将其移除</p><p>微软宣布WSL上Linux容器的公开预览版</p><p>TLAC旨在成为内核级反作弊系统的开源替代方案</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权 © 2004 - 2026 归</p><p>所有使用的商标均为各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12891" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/DRM-Scheduler-Lower-Job-Submit" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
