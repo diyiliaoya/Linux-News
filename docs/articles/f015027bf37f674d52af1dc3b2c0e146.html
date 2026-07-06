@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 26.04 LTS 已修复缺失的视频/音频缩略图问题 — Linux 中文速报</title>
+<title>ReactOS“开源Windows”项目现已能够运行《半条命2》 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 26.04 LTS 已修复缺失的视频/音频缩略图问题</h1>
+  <h1>ReactOS“开源Windows”项目现已能够运行《半条命2》</h1>
 
-  <div class="article-summary">Ubuntu 26.04 LTS 修复了一个导致文件管理器中视频和音乐文件不显示缩略图的打包疏忽问题。该问题源于最小安装选项未包含新的基于 Rust 的缩略图生成器包（gst-audio-thumbnailer 和 gst-video-thumbnailer）。官方已通过稳定版更新修复，用户也可通过终端命令手动安装缺失包来解决。</div>
+  <div class="article-summary">ReactOS作为开源Windows兼容操作系统，继一个月前成功运行《半条命》后，如今又实现了对《半条命2》的支持。用户使用GeForce GTX 960显卡和NVIDIA 368.61旧版Windows驱动，在ReactOS nightly构建版本上顺利运行该游戏。此外，项目还首次引入了Windows NT6系统调用，向Vista及更高版本兼容迈出第一步。</div>
 
-  <div class="article-body"><p>Ubuntu 26.04 LTS 已修复其缺失的视频/音频缩略图问题 - OMG! Ubuntu</p><p>如果你注意到视频和音乐文件在文件管理器中不显示图像缩略图，这并非你的操作失误，而是一个打包疏忽。</p><p>事实证明，Ubuntu 的“最小安装”选项（即 minimal install）遗漏了 gst-audio-thumbnailer 和 gst-video-thumbnailer 这两个包，它们负责在打开包含兼容文件的文件夹时生成媒体缩略图。</p><p>元包本身不包含软件，仅包含需要安装的软件包列表——在此场景下，用于 Ubuntu 桌面体验。</p><p>令人困惑的是，两个缩略图生成器都存在于完整安装的元文件中，因此如果你在安装界面选择了“完整安装”，就不会看到空白的默认音乐和视频图标，而是会显示包含封面或视频帧的丰富文件预览。</p><p>而且，如果你在安装 Ubuntu 后做的第一件事是从官方仓库安装一堆应用，那么你可能无意中安装了依赖于这些缺失缩略图生成器的软件，从而间接获得了它们。</p><p>Ubuntu 26.04 将其旧的、基于……的缩略图生成器替换为基于 GStreamer 和 Glycin 的、更新的 Rust 版本。这就是为什么这些新包需要首先被列入相关元文件的原因。</p><p>在一份错误报告中，该遗漏被描述为“疏忽而非刻意缩减体积的权衡”，因为这两个包都不大，也不会引入任何额外的依赖。</p><p>修复该问题的稳定版更新（SRU）已获批准，并于 6 月底开始推送。如果你保持系统更新，缺失的包现在应该已经自动安装。</p><p>如果你在 Ubuntu 26.04 LTS 中仍然看到空白的媒体图标，请打开终端并运行：</p><p>sudo apt install gst-audio-thumbnailer gst-video-thumbnailer</p><p>然后关闭并重新打开文件管理器，导航到包含与缩略图生成器兼容的视频或音频文件（大多数常见格式）的目录，你应该会在网格视图中看到预览加载。</p><p>Ubuntu 26.04 LTS 还附带另一个与媒体相关的“问题”，尽管是有意为之。默认图像查看器由于许可限制无法打开 HEIC 图像文件。虽然与此无关，但通过安装缺失的包同样可以解决。</p></div>
+  <div class="article-body"><p>ReactOS“开源Windows”项目现已能够运行《半条命2》 - Phoronix</p><p>ReactOS“开源Windows”项目现已能够运行《半条命2》</p><p>2026年7月5日，美国东部时间上午6:42。</p><p>一个月前，看到开源ReactOS操作系统运行Valve的《半条命》游戏令人兴奋。没想到不到30天后，它也能运行《半条命2》了。</p><p>6月初，ReactOS作为实现Windows软件游戏/应用和驱动二进制兼容性的“开源Windows”平台，已经能够运行《半条命》。当时演示使用的是Intel Sandy Bridge时代的桌面电脑，搭配NVIDIA GeForce 8400GS显卡。</p><p>ReactOS项目本周末分享称，较新的《半条命2》游戏也已在这个有三十年历史的自由软件项目上成功运行。使用ReactOS nightly构建版本，《半条命2》顺利运行，游戏内表现良好。该用户测试使用的是GeForce GTX 960显卡，安装了NVIDIA 368.61旧版Windows驱动，同时还安装了Creative Sound Blaster Audigy Windows驱动。</p><p>ReactOS用户Aotori Hibiki通过YouTube视频展示了《半条命2》的运行情况：</p><p>另外，本周ReactOS还引入了其首个Windows NT6系统调用，这是向Windows Vista及更新版本兼容迈出的第一步。</p><p>ReactOS实现首个Windows NT6系统调用，向Vista兼容迈出一步</p><p>Mageia 10发布，延续Mandrake传统的Linux发行版</p><p>CachyOS 2026年6月版发布，带来更多性能优化</p><p>QSOE v0.1发布，一款受QNX启发的RISC-V操作系统</p><p>KDE Plasma 6桌面终于登陆Slackware</p><p>Haiku OS现已支持AVX-512及其他硬件改进</p><p>Michael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动等主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Red Hat ARM工程师放弃ARM64 Linux个人桌面，回归AMD Ryzen系统</p><p>Rust Coreutils cp因最新不兼容性导致Ubuntu镜像构建失败</p><p>COSMIC的新系统监视器看起来非常流畅</p><p>Nourish：一款由Vulkan驱动的新型Wayland合成器，支持无限滚动/平移</p><p>Linux内核开发者再次讨论AI代理归属问题——可能将其移除</p><p>CachyOS 2026年6月版发布，带来更多性能优化</p><p>Vibe Coded X11服务器用Rust编写，新增Xinerama、FreeBSD支持及其他功能</p><p>TLAC旨在成为内核级反作弊系统的开源替代方案</p><p>虽然提供无广告浏览，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/ubuntu-2604-video-audio-thumbnails-fix" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Half-Life-2-ReactOS" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

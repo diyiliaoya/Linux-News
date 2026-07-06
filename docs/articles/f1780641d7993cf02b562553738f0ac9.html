@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 26.04 LTS 已修复缺失的视频/音频缩略图问题 — Linux 中文速报</title>
+<title>AMD 开始为 Linux 7.3 准备图形驱动变更 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 26.04 LTS 已修复缺失的视频/音频缩略图问题</h1>
+  <h1>AMD 开始为 Linux 7.3 准备图形驱动变更</h1>
 
-  <div class="article-summary">Ubuntu 26.04 LTS 修复了一个导致文件管理器中视频和音乐文件不显示缩略图的打包疏忽问题。该问题源于最小安装选项未包含新的基于 Rust 的缩略图生成器包（gst-audio-thumbnailer 和 gst-video-thumbnailer）。官方已通过稳定版更新修复，用户也可通过终端命令手动安装缺失包来解决。</div>
+  <div class="article-summary">AMD 已开始为 Linux 7.3 内核周期提交图形驱动更新，首批拉取请求包含多项新特性。主要变化包括：为 GFX11 (RDNA3) 和 GFX12 (RDNA4) 硬件实现计算管道重置支持、用户队列 (UserQ) 更新、RAS 更新、从 DisplayID 解析面板类型、DCN 4.2 IP 更新、GFX 11.7 更新，以及 Valve 团队贡献的早期 Radeon GCN GPU 软重置和恢复改进。此外还有 8K 显示面板修复、代码加固和边界检查增强。</div>
 
-  <div class="article-body"><p>Ubuntu 26.04 LTS 已修复其缺失的视频/音频缩略图问题 - OMG! Ubuntu</p><p>如果你注意到视频和音乐文件在文件管理器中不显示图像缩略图，这并非你的操作失误，而是一个打包疏忽。</p><p>事实证明，Ubuntu 的“最小安装”选项（即 minimal install）遗漏了 gst-audio-thumbnailer 和 gst-video-thumbnailer 这两个包，它们负责在打开包含兼容文件的文件夹时生成媒体缩略图。</p><p>元包本身不包含软件，仅包含需要安装的软件包列表——在此场景下，用于 Ubuntu 桌面体验。</p><p>令人困惑的是，两个缩略图生成器都存在于完整安装的元文件中，因此如果你在安装界面选择了“完整安装”，就不会看到空白的默认音乐和视频图标，而是会显示包含封面或视频帧的丰富文件预览。</p><p>而且，如果你在安装 Ubuntu 后做的第一件事是从官方仓库安装一堆应用，那么你可能无意中安装了依赖于这些缺失缩略图生成器的软件，从而间接获得了它们。</p><p>Ubuntu 26.04 将其旧的、基于……的缩略图生成器替换为基于 GStreamer 和 Glycin 的、更新的 Rust 版本。这就是为什么这些新包需要首先被列入相关元文件的原因。</p><p>在一份错误报告中，该遗漏被描述为“疏忽而非刻意缩减体积的权衡”，因为这两个包都不大，也不会引入任何额外的依赖。</p><p>修复该问题的稳定版更新（SRU）已获批准，并于 6 月底开始推送。如果你保持系统更新，缺失的包现在应该已经自动安装。</p><p>如果你在 Ubuntu 26.04 LTS 中仍然看到空白的媒体图标，请打开终端并运行：</p><p>sudo apt install gst-audio-thumbnailer gst-video-thumbnailer</p><p>然后关闭并重新打开文件管理器，导航到包含与缩略图生成器兼容的视频或音频文件（大多数常见格式）的目录，你应该会在网格视图中看到预览加载。</p><p>Ubuntu 26.04 LTS 还附带另一个与媒体相关的“问题”，尽管是有意为之。默认图像查看器由于许可限制无法打开 HEIC 图像文件。虽然与此无关，但通过安装缺失的包同样可以解决。</p></div>
+  <div class="article-body"><p>AMD 开始为 Linux 7.3 准备图形驱动变更 - Phoronix</p><p>AMD 开始为 Linux 7.3 准备图形驱动变更</p><p>发布于 2026 年 7 月 5 日 上午 06:32（美国东部时间）</p><p>继 Intel 开始为 Linux 7.3 提交图形驱动补丁后，本周 AMD 也开始向 DRM-Next 发送其“新内容”的拉取请求，用于 Linux 7.3 内核周期。</p><p>周四，AMD 的 AMDGPU/AMDKFD 维护者 Alex Deucher 发送了首批拉取请求，包含针对 2026 年晚些时候该内核版本的内核图形/计算驱动变更的新特性材料。</p><p>Linux 7.3 中 AMDGPU 和 AMDKFD 的一些早期变更包括：实现计算管道重置支持，以便在 GFX11 (RDNA3) 和 GFX12 (RDNA4) 硬件上遇到问题时重置计算管道。还有用户队列 (UserQ) 更新、RAS 更新、从 DisplayID 解析显示面板类型信息的能力、DCN 4.2 IP 更新、GFX 11.7 更新，以及其他各种更新。此外还有针对 8K 显示面板、背光及其他各种问题的修复。</p><p>该 C 驱动还包含大量代码加固更新，改进了 vBIOS 解析的边界检查，并增加了其他各种边界检查。AMDKFD 驱动也通过 CRIU 边界检查得到了加固。</p><p>此 Linux 7.3 的拉取请求还包括来自 Valve Linux 图形团队 Timur Kristóf 的工作，涉及早期 Radeon GCN GPU 的软重置和 GPU 恢复改进。</p><p>AMDKFD 计算驱动现在还允许应用程序在发生致命错误时选择退出 SIGBUS，以及各种修复。ROCm 已经支持 SIGBUS 处理变更。</p><p>关于这些针对 Linux 7.3 的早期 AMDGPU/AMDKFD 内核驱动变更的更多细节，可以查看完整的补丁列表。预计未来几周内，还会有更多 AMD 图形驱动变更作为 Linux 7.3 的附加特性材料提交到 DRM-Next。</p><p>AMD 发送最新 Linux 补丁用于 RMPOPT 优化</p><p>AMDGPU HDMI 2.1 FRL、旧 GPU 改进及 Q2 其他 AMD Linux 亮点</p><p>AMD Linux 补丁引入新的“低功耗”CPU 核心类型</p><p>AMD 驱动的 Barco MXRT 显卡终于获得 Linux 驱动支持</p><p>AMD ACP7.D/7.E/7.F 驱动在 Linux 7.2 中添加：AMD 音频的“重大设计变更”</p><p>AMD 推出 AI 驱动的 Bash 编码代理</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>Red Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统</p><p>Rust Coreutils cp 因最新不兼容性导致 Ubuntu 镜像构建失败</p><p>COSMIC 的新系统监视器看起来非常流畅</p><p>Nourish：一款由 Vulkan 驱动、支持无限滚动/平移的新 Wayland 合成器</p><p>Linux 内核开发者再次讨论 AI 代理归属问题——可能将其移除</p><p>CachyOS 2026 年 6 月版本发布，带来更多性能优化</p><p>用 Rust 编写的 Vibe Coded X11 服务器增加了 Xinerama、FreeBSD 支持及其他功能</p><p>TLAC 旨在成为内核级反作弊系统的开源替代方案</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/ubuntu-2604-video-audio-thumbnails-fix" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/AMDGPU-AMDKFD-Start-Linux-7.3" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 26.04 LTS 已修复缺失的视频/音频缩略图问题 — Linux 中文速报</title>
+<title>英特尔为搭载 Nova Lake 的笔记本电脑准备 Linux 下的 IPU8 网络摄像头支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 26.04 LTS 已修复缺失的视频/音频缩略图问题</h1>
+  <h1>英特尔为搭载 Nova Lake 的笔记本电脑准备 Linux 下的 IPU8 网络摄像头支持</h1>
 
-  <div class="article-summary">Ubuntu 26.04 LTS 修复了一个导致文件管理器中视频和音乐文件不显示缩略图的打包疏忽问题。该问题源于最小安装选项未包含新的基于 Rust 的缩略图生成器包（gst-audio-thumbnailer 和 gst-video-thumbnailer）。官方已通过稳定版更新修复，用户也可通过终端命令手动安装缺失包来解决。</div>
+  <div class="article-summary">英特尔正在为下一代高端 Nova Lake 笔记本电脑准备 Linux 下的 IPU8 图像处理单元支持。最新内核补丁确认 Nova Lake 将搭载 IPU8，取代 Panther Lake 的 IPU7.5。补丁正逐步进入主线内核，预计在 Linux v7.3 周期合并。IPU8 可能引入更多 AI 功能，但仍依赖用户空间的二进制 blob。</div>
 
-  <div class="article-body"><p>Ubuntu 26.04 LTS 已修复其缺失的视频/音频缩略图问题 - OMG! Ubuntu</p><p>如果你注意到视频和音乐文件在文件管理器中不显示图像缩略图，这并非你的操作失误，而是一个打包疏忽。</p><p>事实证明，Ubuntu 的“最小安装”选项（即 minimal install）遗漏了 gst-audio-thumbnailer 和 gst-video-thumbnailer 这两个包，它们负责在打开包含兼容文件的文件夹时生成媒体缩略图。</p><p>元包本身不包含软件，仅包含需要安装的软件包列表——在此场景下，用于 Ubuntu 桌面体验。</p><p>令人困惑的是，两个缩略图生成器都存在于完整安装的元文件中，因此如果你在安装界面选择了“完整安装”，就不会看到空白的默认音乐和视频图标，而是会显示包含封面或视频帧的丰富文件预览。</p><p>而且，如果你在安装 Ubuntu 后做的第一件事是从官方仓库安装一堆应用，那么你可能无意中安装了依赖于这些缺失缩略图生成器的软件，从而间接获得了它们。</p><p>Ubuntu 26.04 将其旧的、基于……的缩略图生成器替换为基于 GStreamer 和 Glycin 的、更新的 Rust 版本。这就是为什么这些新包需要首先被列入相关元文件的原因。</p><p>在一份错误报告中，该遗漏被描述为“疏忽而非刻意缩减体积的权衡”，因为这两个包都不大，也不会引入任何额外的依赖。</p><p>修复该问题的稳定版更新（SRU）已获批准，并于 6 月底开始推送。如果你保持系统更新，缺失的包现在应该已经自动安装。</p><p>如果你在 Ubuntu 26.04 LTS 中仍然看到空白的媒体图标，请打开终端并运行：</p><p>sudo apt install gst-audio-thumbnailer gst-video-thumbnailer</p><p>然后关闭并重新打开文件管理器，导航到包含与缩略图生成器兼容的视频或音频文件（大多数常见格式）的目录，你应该会在网格视图中看到预览加载。</p><p>Ubuntu 26.04 LTS 还附带另一个与媒体相关的“问题”，尽管是有意为之。默认图像查看器由于许可限制无法打开 HEIC 图像文件。虽然与此无关，但通过安装缺失的包同样可以解决。</p></div>
+  <div class="article-body"><p>英特尔为搭载 Nova Lake 的笔记本电脑准备 Linux 下的 IPU8 网络摄像头支持 - Phoronix</p><p>英特尔为搭载 Nova Lake 的笔记本电脑准备 Linux 下的 IPU8 网络摄像头支持</p><p>发布于 2026 年 7 月 5 日 06:14 AM EDT。</p><p>更多 Linux 内核补丁浮出水面，证实下一代高端 Nova Lake 笔记本电脑将配备 IPU8 图像处理能力。</p><p>当前英特尔 Panther Lake 笔记本电脑可以使用基本的 UVC 兼容网络摄像头，或者高端型号利用英特尔图像处理单元（IPU），在 Panther Lake 上也是如此。自 Alder Lake 时代以来，英特尔 IPU 一直是 Linux 支持的痛点，原因在于用户空间的二进制 blob，并且至少在 IPU7.5 上仍然如此，除非选择 libcamera 的软件 ISP。</p><p>近几个月来，其他补丁已表明英特尔 Nova Lake &quot;NVL&quot; 将配备 IPU8，而本周的最新补丁则明确显示 Nova Lake 确实会带来 IPU8，作为 Panther Lake 的 IPU7.5 的继任者。</p><p>为这些下一代高端笔记本电脑准备了 Nova Lake 摄像头视觉感知 / IPU8 摄像头支持。这些补丁正在逐步进入主线内核，很可能在 Linux v7.3 周期合并。</p><p>这些补丁并未列出英特尔 IPU8 图像处理 IP 的改进之处，但相信我们很快就会从英特尔那里听到相关消息。我发现一个迹象表明，英特尔 IPU8 可能会在图像处理中采用更多“AI”功能，并且不幸的是，仍然依赖用户空间的二进制 blob。</p><p>Linux 7.3 为英特尔 Nova Lake S 添加更多图形 PCI ID</p><p>英特尔为 Linux 7.3 准备更多 Nova Lake 图形/显示启用</p><p>英特尔为 AI 计算扩展 &quot;ACE&quot; 发布初始 GCC 编译器补丁</p><p>英特尔在 Diamond Rapids 中尚未出货前就取消了 AMX-TF32 支持</p><p>USB4STREAM、优化、Jay 及本季度其他热门英特尔 Linux 新闻</p><p>新的英特尔 Linux 驱动程序补丁通过 DP MST 连接启用 HDR</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动程序及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>Red Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统</p><p>Rust Coreutils cp 因最新不兼容性导致 Ubuntu 镜像构建失败</p><p>COSMIC 的新系统监视器看起来非常流畅</p><p>Nourish：一个由 Vulkan 驱动的新型 Wayland 合成器，支持无限滚动/平移</p><p>Linux 内核开发者再次讨论 AI 代理归属问题——可能将其移除</p><p>CachyOS 2026 年 6 月版本发布，带来更多性能优化</p><p>用 Rust 编写的 Vibe Coded X11 服务器增加了 Xinerama、FreeBSD 支持及其他功能</p><p>TLAC 旨在成为内核级反作弊系统的开源替代方案</p><p>尽管提供无广告浏览，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/ubuntu-2604-video-audio-thumbnails-fix" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Intel-IPU8-With-Nova-Lake" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 26.04 LTS 已修复缺失的视频/音频缩略图问题 — Linux 中文速报</title>
+<title>Sipeed新款KVM让AI代理能够查看并控制你的屏幕 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Ubuntu 26.04 LTS 已修复缺失的视频/音频缩略图问题</h1>
+  <h1>Sipeed新款KVM让AI代理能够查看并控制你的屏幕</h1>
 
-  <div class="article-summary">Ubuntu 26.04 LTS 修复了一个导致文件管理器中视频和音乐文件不显示缩略图的打包疏忽问题。该问题源于最小安装选项未包含新的基于 Rust 的缩略图生成器包（gst-audio-thumbnailer 和 gst-video-thumbnailer）。官方已通过稳定版更新修复，用户也可通过终端命令手动安装缺失包来解决。</div>
+  <div class="article-summary">Sipeed推出NanoKVM-Go，一款仅需单根USB-C线缆连接、通过WiFi 6运行的微型KVM设备。它将所有KVM功能暴露为MCP服务器，供PicoClaw和Claude Code等AI代理使用。该设备支持4K 45Hz视频捕获、低延迟，并内置Tailscale实现远程访问。Go+版本还配备3.2TOPS AI处理器和本地屏幕历史记录功能，可搜索长达180天的屏幕内容。众筹起价69美元。</div>
 
-  <div class="article-body"><p>Ubuntu 26.04 LTS 已修复其缺失的视频/音频缩略图问题 - OMG! Ubuntu</p><p>如果你注意到视频和音乐文件在文件管理器中不显示图像缩略图，这并非你的操作失误，而是一个打包疏忽。</p><p>事实证明，Ubuntu 的“最小安装”选项（即 minimal install）遗漏了 gst-audio-thumbnailer 和 gst-video-thumbnailer 这两个包，它们负责在打开包含兼容文件的文件夹时生成媒体缩略图。</p><p>元包本身不包含软件，仅包含需要安装的软件包列表——在此场景下，用于 Ubuntu 桌面体验。</p><p>令人困惑的是，两个缩略图生成器都存在于完整安装的元文件中，因此如果你在安装界面选择了“完整安装”，就不会看到空白的默认音乐和视频图标，而是会显示包含封面或视频帧的丰富文件预览。</p><p>而且，如果你在安装 Ubuntu 后做的第一件事是从官方仓库安装一堆应用，那么你可能无意中安装了依赖于这些缺失缩略图生成器的软件，从而间接获得了它们。</p><p>Ubuntu 26.04 将其旧的、基于……的缩略图生成器替换为基于 GStreamer 和 Glycin 的、更新的 Rust 版本。这就是为什么这些新包需要首先被列入相关元文件的原因。</p><p>在一份错误报告中，该遗漏被描述为“疏忽而非刻意缩减体积的权衡”，因为这两个包都不大，也不会引入任何额外的依赖。</p><p>修复该问题的稳定版更新（SRU）已获批准，并于 6 月底开始推送。如果你保持系统更新，缺失的包现在应该已经自动安装。</p><p>如果你在 Ubuntu 26.04 LTS 中仍然看到空白的媒体图标，请打开终端并运行：</p><p>sudo apt install gst-audio-thumbnailer gst-video-thumbnailer</p><p>然后关闭并重新打开文件管理器，导航到包含与缩略图生成器兼容的视频或音频文件（大多数常见格式）的目录，你应该会在网格视图中看到预览加载。</p><p>Ubuntu 26.04 LTS 还附带另一个与媒体相关的“问题”，尽管是有意为之。默认图像查看器由于许可限制无法打开 HEIC 图像文件。虽然与此无关，但通过安装缺失的包同样可以解决。</p></div>
+  <div class="article-body"><p>Sipeed新款KVM让AI代理能够查看并控制你的屏幕</p><p>NanoKVM-Go通过单根USB-C线缆连接，运行于WiFi 6之上，并将所有KVM功能暴露为MCP服务器，供PicoClaw和Claude Code等AI代理使用。</p><p>多年来，Sipeed一直为创客群体制造小型RISC-V和ARM开发板。如果你曾希望在不支付企业级费用的情况下获得BIOS级别的远程访问权限，那么它的NanoKVM系列应该已经是一个熟悉的名字。</p><p>Sipeed宣布了NanoKVM系列的新成员——NanoKVM-Go。它体积小巧，省去了通常所需的一堆HDMI、USB、以太网和电源线。它仅通过一根USB-C线缆连接目标设备，并通过WiFi 6实现网络连接。仅此而已。</p><p>NanoKVM-Go正在Kickstarter上进行众筹，并已达成筹款目标，在约6000美元的目标基础上筹集了超过13万美元。</p><p>这款微型KVM还在Twitter上引起了不小的轰动，或许是因为它在宣传中使用了“AI原生”这个词。</p><p>没错，Sipeed称其为全球首款“AI原生”KVM，其设计目的是让AI代理能够在硬件层面观看你的屏幕并对其采取行动。很有趣，对吧？</p><p>NanoKVM-Go规格参数</p><p>以下是NanoKVM-Go的主要硬件规格：</p><p>- 单根USB-C线缆，支持视频、音频、键盘/鼠标、电源直通和虚拟磁盘</p><p>- 4K 45Hz捕获，2K 90Hz捕获，1080p下延迟低至60ms</p><p>- 双频WiFi 6，最高速率286Mbps，内置Tailscale用于远程访问</p><p>- KVM功能暴露为MCP服务器，供AI代理使用（例如OpenClaw等AI代理）</p><p>- Go+版本（配备内置3.2TOPS AI处理器和PicoClaw）增加了本地“环境屏幕智能”功能，支持180天可搜索屏幕历史</p><p>该设备定价为Go版89美元，Go+版129美元。但如果你在众筹活动中支持它们，可以分别以69美元和99美元的价格获得。</p><p>NanoKVM-Go上的主USB-C端口通过单根线缆承载视频和音频（通过DisplayPort Alt Mode）、键盘和鼠标模拟、用于挂载操作系统镜像的磁盘模拟，甚至还有虚拟网络接口。一个独立的辅助USB-C端口负责电源直通，这样你的笔记本电脑或手机在长时间会话期间可以保持充电。</p><p>它还为可选的FingerBot配件供电，该配件可以物理按下卡住的电脑电源按钮进行硬重启。是的，你没看错。</p><p>在捕获方面，它支持4K 45Hz或2K 90Hz，Sipeed列出的延迟为1080p60下60ms、2K60下80ms、4K30下100ms。这是通过双频WiFi 6实现的，最高速率286Mbps，并内置Tailscale，因此你无需设置端口转发即可远程访问设备。</p><p>由于它兼容任何支持USB-C DisplayPort Alt Mode的设备，因此涵盖MacBook、Mac mini、任何带有USB-C端口的笔记本电脑、iPhone 15及更新机型、多款Android手机，甚至Steam Deck。</p><p>Sipeed在X上分享的NanoKVM-Go开发板图片</p><p>其内部是一颗未命名的SoC，很可能与现有NanoKVM Pro中使用的Axera Tech AX630C相同。它搭配了双核Cortex-A53和3.2 TOPS NPU。基础版NanoKVM-Go配备256MB内存和16GB eMMC存储，整机在4K30下功耗约为1.6W。</p><p>NanoKVM-Go+将内存翻倍至512MB，并将eMMC提升至64GB，这一切都是为了支持Sipeed所称的“环境屏幕智能”功能——这基本上就是臭名昭著的微软Recall的自家版本。</p><p>它会持续捕获你的屏幕，在本地存储长达180天的历史记录，并允许你稍后通过纯文本进行搜索，所有处理均在设备本地完成，无需云上传或订阅。</p><p>你是否真的想要一台机器记住你屏幕上六个月的所有内容，这取决于你自己，但至少Sipeed将其保留在本地，而不是像微软那样“回传数据”。</p><p>它能用来做什么？</p><p>嗯……远程访问和控制你的设备是最直接的用途。</p><p>通常，你需要在主机系统上安装远程桌面或远程访问解决方案，而</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/ubuntu-2604-video-audio-thumbnails-fix" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/sipeeds-nanokvm-go-crowdfunding/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 26.04 LTS 已修复缺失的视频/音频缩略图问题 — Linux 中文速报</title>
+<title>HW Lab 的 DockFrame 携可更换工具卡登陆 Crowd Supply — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">软件应用</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Ubuntu 26.04 LTS 已修复缺失的视频/音频缩略图问题</h1>
+  <h1>HW Lab 的 DockFrame 携可更换工具卡登陆 Crowd Supply</h1>
 
-  <div class="article-summary">Ubuntu 26.04 LTS 修复了一个导致文件管理器中视频和音乐文件不显示缩略图的打包疏忽问题。该问题源于最小安装选项未包含新的基于 Rust 的缩略图生成器包（gst-audio-thumbnailer 和 gst-video-thumbnailer）。官方已通过稳定版更新修复，用户也可通过终端命令手动安装缺失包来解决。</div>
+  <div class="article-summary">HW Lab 推出模块化 USB-C 集线器 DockFrame，采用 Framework 扩展标准，支持可更换工具卡，兼具工作台工具功能。该设备提供四个开放插槽，兼容 Framework 的扩展卡，并自带电压电流测量、USB 3.0 扩展、可编程电源和原型开发等工具卡。产品注重可修复性，使用螺丝而非胶水固定，目标用户为创客、嵌入式工程师和教育工作者。众筹即将在 Crowd Supply 上线，硬件文件将在众筹结束后开源。</div>
 
-  <div class="article-body"><p>Ubuntu 26.04 LTS 已修复其缺失的视频/音频缩略图问题 - OMG! Ubuntu</p><p>如果你注意到视频和音乐文件在文件管理器中不显示图像缩略图，这并非你的操作失误，而是一个打包疏忽。</p><p>事实证明，Ubuntu 的“最小安装”选项（即 minimal install）遗漏了 gst-audio-thumbnailer 和 gst-video-thumbnailer 这两个包，它们负责在打开包含兼容文件的文件夹时生成媒体缩略图。</p><p>元包本身不包含软件，仅包含需要安装的软件包列表——在此场景下，用于 Ubuntu 桌面体验。</p><p>令人困惑的是，两个缩略图生成器都存在于完整安装的元文件中，因此如果你在安装界面选择了“完整安装”，就不会看到空白的默认音乐和视频图标，而是会显示包含封面或视频帧的丰富文件预览。</p><p>而且，如果你在安装 Ubuntu 后做的第一件事是从官方仓库安装一堆应用，那么你可能无意中安装了依赖于这些缺失缩略图生成器的软件，从而间接获得了它们。</p><p>Ubuntu 26.04 将其旧的、基于……的缩略图生成器替换为基于 GStreamer 和 Glycin 的、更新的 Rust 版本。这就是为什么这些新包需要首先被列入相关元文件的原因。</p><p>在一份错误报告中，该遗漏被描述为“疏忽而非刻意缩减体积的权衡”，因为这两个包都不大，也不会引入任何额外的依赖。</p><p>修复该问题的稳定版更新（SRU）已获批准，并于 6 月底开始推送。如果你保持系统更新，缺失的包现在应该已经自动安装。</p><p>如果你在 Ubuntu 26.04 LTS 中仍然看到空白的媒体图标，请打开终端并运行：</p><p>sudo apt install gst-audio-thumbnailer gst-video-thumbnailer</p><p>然后关闭并重新打开文件管理器，导航到包含与缩略图生成器兼容的视频或音频文件（大多数常见格式）的目录，你应该会在网格视图中看到预览加载。</p><p>Ubuntu 26.04 LTS 还附带另一个与媒体相关的“问题”，尽管是有意为之。默认图像查看器由于许可限制无法打开 HEIC 图像文件。虽然与此无关，但通过安装缺失的包同样可以解决。</p></div>
+  <div class="article-body"><p>HW Lab 的 DockFrame 携可更换工具卡登陆 Crowd Supply</p><p>模块化 USB-C 集线器采用 Framework 的扩展标准，其工具卡可兼作工作台工具。</p><p>众筹是将创意转化为实际产品的最佳方式之一。创作者提出方案，设定筹资目标，由支持者决定是否值得打造。</p><p>虽然大多数众筹项目规模较小，但少数项目会彻底爆发。最初的 Pebble 智能手表在 2012 年寻求 10 万美元资金，最终筹得超过 1000 万美元，并成功出货超过 200 万只手表。</p><p>HW Lab 已经熟悉这条道路。其首款产品——面向游戏玩家和创作者的、可破解的副屏——在 Crowd Supply 上寻求 5250 美元，最终获得 10718 美元，超出目标一倍多。</p><p>现在他们带着一款专注于模块化、可修复的 USB-C 扩展坞的新产品再次回归。</p><p>仅仅是一个通用的 USB-C 集线器？</p><p>DockFrame 是一款围绕 Framework 插槽标准构建的模块化 USB-C 集线器。它没有固定的端口组合，而是提供四个开放插槽，可容纳 Framework 为其笔记本电脑和台式机销售的相同扩展卡。</p><p>该集线器本身通过 USB-C DisplayPort 和 Power Delivery 直通运行，下游端口最高支持 100W 供电。外壳采用注塑成型且为半透明材质，支持 Framework 的 LEGO 兼容螺柱网格底板，因此当四个插槽不够用时，可以将多个单元堆叠起来。</p><p>插入任何 Framework 扩展卡，DockFrame 都会像对待原生设备一样使用它们。这意味着笔记本电脑升级后剩下的任何备用 USB-A、HDMI、以太网或存储卡都不必闲置在抽屉里；它们可以直接插入集线器使用。</p><p>HW Media Lab 也自行构建工具卡。电压/电流/连续性卡可读取直流/交流电压、电流和通断。USB 3.0 扩展卡增加四个 USB 3.0 端口，每个端口支持 5 Gbps 传输速度。可编程电源卡是一款可编程升降压电源，支持最高 100W 的 USB PD 输入。原型开发卡搭载 Seeed Studio XIAO 板和标准 0.1 英寸排针，用于原型开发工作。</p><p>如果这四张卡都不符合你的需求，你可以使用相同的开放插槽标准自行设计扩展卡，或者构建一个自定义主机应用，通过 I2C 与板载 MCU 通信。</p><p>可修复性也是这里的重点，因为 DockFrame 使用螺丝而非胶水固定。创客、嵌入式工程师、教育工作者，以及任何厌倦了将扩展坞、万用表和台式电源作为三个独立盒子的人，都是其目标受众。</p><p>DockFrame 尚未公布正式发布日期或价格。在等待期间，你可以关注其 Crowd Supply 页面，如果想分享反馈，官方产品页面上有一个可填写的表单。</p><p>DockFrame（Crowd Supply）</p><p>所有硬件相关文件，如原理图、布局图、固件和 FreeCAD 外壳文件，应在众筹活动结束后在 GitHub 上提供。你可以通过加入 HW Lab 的 Discord 来跟踪开发进度。</p><p>一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的极客。</p><p>Sipeed 的新款 KVM 希望 AI 代理能查看并控制你的屏幕</p><p>Brave 表示这不是隐私功能，但使用容器有其好处</p><p>Collabora Office 26.04 保持 AI 可选，并优化了 Writer 和 Calc</p><p>厌倦了 AI 垃圾内容，前微软工程师构建了一款无 AI 的新记事本</p><p>Lumo 2.0：Proton 的 ChatGPT 和 Claude 私人替代方案刚刚变得更好</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 周刊，你将学习有用的 Linux 技巧，发现应用程序，探索新发行版，并随时了解 Linux 世界的最新动态</p><p>太好了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅 It's FOSS。</p><p>您的链接已过期。</p><p>成功！请查看您的电子邮件，获取用于登录的魔法链接。</p><p>成功！您的账单信息已更新。</p><p>您的账单未更新。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/ubuntu-2604-video-audio-thumbnails-fix" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/dockframe/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
