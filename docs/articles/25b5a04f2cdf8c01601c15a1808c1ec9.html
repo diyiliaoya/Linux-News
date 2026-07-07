@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 25.10 本周失去安全更新支持 — Linux 中文速报</title>
+<title>Valve 的 Marek Olšák 提交 RADV 代码，在某些 VRS 场景下可实现“性能翻倍” — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 25.10 本周失去安全更新支持</h1>
+  <h1>Valve 的 Marek Olšák 提交 RADV 代码，在某些 VRS 场景下可实现“性能翻倍”</h1>
 
-  <div class="article-summary">Ubuntu 25.10（代号“Questing Quokka”）将于2026年7月9日终止支持，即本周。作为临时版本，其桌面版仅获得9个月更新。终止支持后，系统仍可运行，但将停止接收高影响安全更新和关键错误修复。建议用户直接升级至Ubuntu 26.04 LTS（“Resolute Raccoon”）以继续获取更新。长期使用不受支持的版本存在安全风险，且第三方软件源可能停止支持。</div>
+  <div class="article-summary">长期从事 AMD Linux 图形驱动开发的专家 Marek Olšák 今年早些时候加入 Valve，并专注于 RADV 驱动。他最近为 Mesa 26.2 提交了大幅改进的变速率着色（VRS）代码，部分重写了 VRS 状态逻辑，修复了多个 bug，简化了代码，并在某些情况下使性能翻倍。该工作也惠及基于 Vulkan 的 Direct3D 12 实现 VKD3D，主要受益于 Steam Play（Proton）。</div>
 
-  <div class="article-body"><p>Ubuntu 25.10 支持将于 2026 年 7 月 9 日结束</p><p>“Questing Quokka”于 2026 年 7 月 9 日终止支持——也就是本周。如果你仍在使用它，可以直接升级到 Ubuntu 26.04 LTS 以继续接收更新。</p><p>Ubuntu 25.10 于 2025 年 10 月发布。作为一个“临时版本”，其桌面版仅获得 9 个月的持续更新。Ubuntu 的长期支持版本在桌面上可获得 5 年更新，通过 Ubuntu Pro 订阅还可再延长 5 年。</p><p>当某个版本终止支持时，并不会发生戏剧性变化。你的系统会继续运行。停止的是来自 Canonical 的高影响安全更新和关键错误修复。</p><p>Web 浏览器将继续更新，因为 Snap 软件独立于任何特定发行版或 Ubuntu 版本进行维护，不过底层引擎是通过 apt 更新的，因此使用该引擎中较新变更的应用更新可能无法正常工作。</p><p>长期使用不受支持的 Ubuntu 版本并不明智。没有及时的安全补丁，你会让自己暴露在漏洞利用之下，因为已披露的漏洞就摆在那里，等待被利用……</p><p>第三方软件供应商、PPA 和 APT 仓库通常会停止支持已终止生命周期的 Ubuntu 版本。从长远来看，影响更大的是，Canonical 最终会将系列仓库归档，使得直接查找和安装软件变得更加困难。</p><p>这一变化不太可能影响很多人。</p><p>大多数使用 Ubuntu 的桌面用户、企业和云服务，都会选择长期支持版本。任何安装临时版本的人都会被告知其支持期限。那些不知情的人只需升级到 Ubuntu 26.04 LTS “Resolute Raccoon”。</p><p>升级到 26.04 可以获得更新的内核和硬件栈（以及来自较新版本的定期向后移植），以及更新版本的桌面、软件和库。这还能让你在几年内无需再考虑这些问题。</p><p>还在用 25.10？在评论区说说原因吧。</p></div>
+  <div class="article-body"><p>Valve 的 Marek Olšák 提交 RADV 代码，在某些 VRS 场景下可实现“性能翻倍”</p><p>长期从事 AMD Linux 图形驱动开发的专家 Marek Olšák 今年早些时候加入了 Valve，现在更专注于 RADV 而非 RadeonSI Gallium3D 驱动。他的一些最新工作现已合并到 Mesa 26.2 中。Marek 对变速率着色（VRS）代码进行了大幅重构，在某些情况下可使性能翻倍。</p><p>变速率着色是一项现代图形特性，允许在帧中不太重要的区域降低像素着色率。Marek 部分重写了 Radeon RADV Vulkan 驱动的 VRS 状态代码，修复了一些突出的 bug，提升了性能，同时简化了代码。这项 RADV VRS 工作也惠及 VKD3D——即基于 Vulkan 的 Direct3D 12 API，用于 Steam Play（Proton）等场景。</p><p>Marek 在合并请求中描述了这项令人兴奋的性能优化工作：</p><p>- VRS 作为动态状态或在管线对象中静态启用，不再阻止 VRS 平面着色优化被启用，这可以在这些情况下使性能翻倍。这主要惠及 VKD3D。片段着色器仍需进行平面着色才能获得此收益。</p><p>- 由于 SampleMaskIn 或未启用 MSAA 时启用了样本着色而导致 VRS 被强制禁用，不再禁用 RB+，这可以在这些情况下使性能翻倍，尽管这属于边缘情况，我认为应用程序不太可能遇到。</p><p>- 由于我们在编译时有时能知道 VRS 状态是否会被覆盖，因此在那些情况下，VRS 速率着色器输出现在被移除，同样，逐顶点 VRS 速率输出也不会被添加。</p><p>构成这项工作的 22 个补丁现已纳入计划于 8 月发布的 Mesa 26.2 中。</p><p>RADV 和 RadeonSI 驱动为 AMD GCN 1.0/1.1 GPU 带来新修复</p><p>RADV 默认启用 Vulkan 描述符堆支持</p><p>新的 AMD Linux 补丁暴露 Gamma 2.4 和 Gamma 2.6 曲线</p><p>面向 ATI R300 时代 GPU 的开源驱动在 2026 年获得改进的 Power Mac 支持</p><p>AMD 更新 ROCDXG 以在 WSL 上提供更好的 ROCm 体验</p><p>早期 AMD GCN GPU 获得改进的 GPU 恢复——又一项 Valve 主导的 Linux 改进</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>Red Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统</p><p>ReactOS“开源 Windows”项目现已能够运行《半条命 2》</p><p>Rust Coreutils cp 因最新不兼容性导致 Ubuntu 镜像构建失败</p><p>Linux 内核开发者再次讨论 AI 代理归属——可能将其移除</p><p>CachyOS 2026 年 6 月版本发布，带来更多性能优化</p><p>ReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进</p><p>用 Rust 编写的 Vibe Coded X11 服务器新增 Xinerama、FreeBSD 支持及其他功能</p><p>TLAC 旨在成为内核级反作弊系统的开源替代方案</p><p>虽然提供无广告浏览，</p><p>单页文章查看</p><p>法律声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/ubuntu-2510-eol-july-9-2026" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Marek-Double-VRS-RADV-Perf" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

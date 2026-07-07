@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 25.10 本周失去安全更新支持 — Linux 中文速报</title>
+<title>微软在Mesa 26.2中通过DirectX 12 + HMFT实现初步AV1编码 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 25.10 本周失去安全更新支持</h1>
+  <h1>微软在Mesa 26.2中通过DirectX 12 + HMFT实现初步AV1编码</h1>
 
-  <div class="article-summary">Ubuntu 25.10（代号“Questing Quokka”）将于2026年7月9日终止支持，即本周。作为临时版本，其桌面版仅获得9个月更新。终止支持后，系统仍可运行，但将停止接收高影响安全更新和关键错误修复。建议用户直接升级至Ubuntu 26.04 LTS（“Resolute Raccoon”）以继续获取更新。长期使用不受支持的版本存在安全风险，且第三方软件源可能停止支持。</div>
+  <div class="article-summary">微软工程师在Mesa 26.2代码库中贡献了一项意外的新功能：通过结合DirectX 12和Windows Media Foundation层中的硬件媒体基础转换（HMFT）支持，在GPU上实现加速的AV1视频编码。该实现旨在支持Windows Subsystem for Linux（WSL），目前为原型阶段，仅支持I帧和P帧编码，约900行新代码。</div>
 
-  <div class="article-body"><p>Ubuntu 25.10 支持将于 2026 年 7 月 9 日结束</p><p>“Questing Quokka”于 2026 年 7 月 9 日终止支持——也就是本周。如果你仍在使用它，可以直接升级到 Ubuntu 26.04 LTS 以继续接收更新。</p><p>Ubuntu 25.10 于 2025 年 10 月发布。作为一个“临时版本”，其桌面版仅获得 9 个月的持续更新。Ubuntu 的长期支持版本在桌面上可获得 5 年更新，通过 Ubuntu Pro 订阅还可再延长 5 年。</p><p>当某个版本终止支持时，并不会发生戏剧性变化。你的系统会继续运行。停止的是来自 Canonical 的高影响安全更新和关键错误修复。</p><p>Web 浏览器将继续更新，因为 Snap 软件独立于任何特定发行版或 Ubuntu 版本进行维护，不过底层引擎是通过 apt 更新的，因此使用该引擎中较新变更的应用更新可能无法正常工作。</p><p>长期使用不受支持的 Ubuntu 版本并不明智。没有及时的安全补丁，你会让自己暴露在漏洞利用之下，因为已披露的漏洞就摆在那里，等待被利用……</p><p>第三方软件供应商、PPA 和 APT 仓库通常会停止支持已终止生命周期的 Ubuntu 版本。从长远来看，影响更大的是，Canonical 最终会将系列仓库归档，使得直接查找和安装软件变得更加困难。</p><p>这一变化不太可能影响很多人。</p><p>大多数使用 Ubuntu 的桌面用户、企业和云服务，都会选择长期支持版本。任何安装临时版本的人都会被告知其支持期限。那些不知情的人只需升级到 Ubuntu 26.04 LTS “Resolute Raccoon”。</p><p>升级到 26.04 可以获得更新的内核和硬件栈（以及来自较新版本的定期向后移植），以及更新版本的桌面、软件和库。这还能让你在几年内无需再考虑这些问题。</p><p>还在用 25.10？在评论区说说原因吧。</p></div>
+  <div class="article-body"><p>微软在Mesa 26.2中通过DirectX 12 + HMFT实现初步AV1编码 - Phoronix</p><p>微软在Mesa 26.2中通过DirectX 12 + HMFT实现初步AV1编码</p><p>发布于2026年7月6日美国东部时间晚上8点34分。</p><p>微软工程师对Mesa代码库的最新意外贡献是：通过结合DirectX 12和作为Windows Media Foundation层一部分的硬件媒体基础转换（HMFT）支持，在GPU上实现加速的AV1视频编码。</p><p>这种基于DX12+HMFT的AV1视频编码旨在实现Windows上的跨供应商支持，以服务于微软在Windows Subsystem for Linux（WSL）支持方面的持续野心。</p><p>今天为Mesa 26.2合并的代码提供了一个“原型”实现，足以支持I帧和P帧编码，但在进一步集成之前不支持任何高级功能。这段新的Mesa代码由微软工程师直接开发。</p><p>让这个AV1编码原型运行起来，在Mesa端仅需约900行新代码。感兴趣的人可以查看现已上游合并的代码，该代码属于本季度Mesa 26.2版本的一部分。</p><p>微软宣布WSL上Linux容器的公开预览</p><p>Linux终于为14年前的微软Surface RT平板电脑提供了电池/充电器驱动程序</p><p>微软宣布基于Rust Coreutils的Windows版Coreutils</p><p>新补丁让微软Surface Pro 9 5G在Linux下更有用</p><p>微软发布Azure Linux 3.0.20260506，包含大量安全修复</p><p>Windows版WireGuard达到v1.0</p><p>Michael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael也是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他。</p><p>红帽ARM工程师放弃ARM64 Linux个人桌面，回归AMD Ryzen系统</p><p>ReactOS“开源Windows”项目现已能运行《半条命2》</p><p>Rust Coreutils的cp命令因最新不兼容性导致Ubuntu镜像构建失败</p><p>Linux内核开发者再次讨论AI代理归属问题——可能将其移除</p><p>CachyOS 2026年6月版本发布，带来更多性能优化</p><p>ReactOS实现首个Windows NT6系统调用，向Vista兼容性迈进</p><p>用Rust编写的Vibe Coded X11服务器新增Xinerama、FreeBSD支持及其他功能</p><p>TLAC旨在成为内核级反作弊系统的开源替代方案</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/ubuntu-2510-eol-july-9-2026" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Microsoft-AV1-Encode-DX12-HMFT" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

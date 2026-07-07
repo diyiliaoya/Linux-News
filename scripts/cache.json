@@ -1956,5 +1956,126 @@
     "title_zh": "英特尔为搭载 Nova Lake 的笔记本电脑准备 Linux 下的 IPU8 网络摄像头支持",
     "summary_zh": "英特尔正在为下一代高端 Nova Lake 笔记本电脑准备 Linux 下的 IPU8 图像处理单元支持。最新内核补丁确认 Nova Lake 将搭载 IPU8，取代 Panther Lake 的 IPU7.5。补丁正逐步进入主线内核，预计在 Linux v7.3 周期合并。IPU8 可能引入更多 AI 功能，但仍依赖用户空间的二进制 blob。",
     "fulltext_zh": "英特尔为搭载 Nova Lake 的笔记本电脑准备 Linux 下的 IPU8 网络摄像头支持 - Phoronix\n英特尔为搭载 Nova Lake 的笔记本电脑准备 Linux 下的 IPU8 网络摄像头支持\n发布于 2026 年 7 月 5 日 06:14 AM EDT。\n\n更多 Linux 内核补丁浮出水面，证实下一代高端 Nova Lake 笔记本电脑将配备 IPU8 图像处理能力。\n\n当前英特尔 Panther Lake 笔记本电脑可以使用基本的 UVC 兼容网络摄像头，或者高端型号利用英特尔图像处理单元（IPU），在 Panther Lake 上也是如此。自 Alder Lake 时代以来，英特尔 IPU 一直是 Linux 支持的痛点，原因在于用户空间的二进制 blob，并且至少在 IPU7.5 上仍然如此，除非选择 libcamera 的软件 ISP。\n\n近几个月来，其他补丁已表明英特尔 Nova Lake \"NVL\" 将配备 IPU8，而本周的最新补丁则明确显示 Nova Lake 确实会带来 IPU8，作为 Panther Lake 的 IPU7.5 的继任者。\n\n为这些下一代高端笔记本电脑准备了 Nova Lake 摄像头视觉感知 / IPU8 摄像头支持。这些补丁正在逐步进入主线内核，很可能在 Linux v7.3 周期合并。\n\n这些补丁并未列出英特尔 IPU8 图像处理 IP 的改进之处，但相信我们很快就会从英特尔那里听到相关消息。我发现一个迹象表明，英特尔 IPU8 可能会在图像处理中采用更多“AI”功能，并且不幸的是，仍然依赖用户空间的二进制 blob。\n\nLinux 7.3 为英特尔 Nova Lake S 添加更多图形 PCI ID\n英特尔为 Linux 7.3 准备更多 Nova Lake 图形/显示启用\n英特尔为 AI 计算扩展 \"ACE\" 发布初始 GCC 编译器补丁\n英特尔在 Diamond Rapids 中尚未出货前就取消了 AMX-TF32 支持\nUSB4STREAM、优化、Jay 及本季度其他热门英特尔 Linux 新闻\n新的英特尔 Linux 驱动程序补丁通过 DP MST 连接启用 HDR\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动程序及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nRed Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统\nRust Coreutils cp 因最新不兼容性导致 Ubuntu 镜像构建失败\nCOSMIC 的新系统监视器看起来非常流畅\nNourish：一个由 Vulkan 驱动的新型 Wayland 合成器，支持无限滚动/平移\nLinux 内核开发者再次讨论 AI 代理归属问题——可能将其移除\nCachyOS 2026 年 6 月版本发布，带来更多性能优化\n用 Rust 编写的 Vibe Coded X11 服务器增加了 Xinerama、FreeBSD 支持及其他功能\nTLAC 旨在成为内核级反作弊系统的开源替代方案\n\n尽管提供无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "9bc9b1c0bfb1594aa9ed849a90fa64ed": {
+    "id": "9bc9b1c0bfb1594aa9ed849a90fa64ed",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/return-of-hannah-montana-linux/",
+    "title_en": "Return of The Meme! Hannah Montana Linux Lives Again in 2026",
+    "summary_en": "A curious developer took it upon himself to revive this *iconic* gem.",
+    "pub_date": "Mon, 06 Jul 2026 10:21:12 GMT",
+    "title_zh": "梗图回归！汉娜·蒙塔娜 Linux 在 2026 年重获新生",
+    "summary_zh": "一位好奇的开发者复活了经典的汉娜·蒙塔娜 Linux（HML）发行版。该版本基于 Debian，采用 KDE Plasma 桌面环境，并重新设计了粉色主题、图标和安装器。项目提供标准版和轻量版（使用 LXQt），适合怀旧或低配硬件用户。开发者 Noah 将源代码托管在 GitLab 上，目前版本为 v26.1。",
+    "fulltext_zh": "梗图回归！汉娜·蒙塔娜 Linux 在 2026 年重获新生\n\n一位好奇的开发者亲自复活了这款*标志性*的珍宝。\n\n汉娜·蒙塔娜 Linux（HML）在自由开源软件领域引发了话题，而如今已是 2026 年。由开发者兼 YouTuber 发布的这个重制版让我们大吃一惊。\n\n它结合了 Debian Live 工具和 Calamares 安装器，大部分改造工作都在 KDE Plasma（这里选用的桌面环境）内部完成。\n\n对于不熟悉的人来说，它最初于 2009 年问世，基于 Kubuntu 9.04 和 KDE 4.2，并披上了迪士尼频道标志性的热粉色外衣。\n\n这听起来可能像一场发烧梦，但它是一个真实可用的操作系统，正是这种荒诞让它成为了一款经久不衰的 Linux 梗。\n\n这个 HML 变体基于 Debian 构建，从一开始就启用了非自由软件仓库，以便轻松访问专有硬件驱动。Noah 使用了 Debian 的自定义发行版构建工具以及一些自定义标志来使其运行。\n\n你在这里看到的大部分视觉变化都是克隆 Plasma 资源并手动编辑的结果。\"Hannah Montana\"配色方案是复制了默认方案，仅更改了窗口标题栏和按钮高亮颜色。\n\n壁纸从原始的 2009 年 PNG 文件重建，针对宽屏进行了缩放，并重新创建了闪光效果，汉娜的剪影也被重新粘贴回去。\n\nHML 的主题选项和 Calamares 安装器。\n\n类似地，图标包只包含一个替换图标，用于启动菜单按钮，该图标取自汉娜·蒙塔娜的 Logo。面板的粉色来自一个独立的 Plasma 主题，该主题复制自 Breeze 的 panel 背景 SVG 并重新着色。\n\n所有这些组件都被打包成一个 ISO 文件。\n\n对于安装器，默认的 Debian 安装器被替换为 Calamares，发行版现有的 Calamares 特定资源被重用并重新设计，以匹配 HML 的其余主题。\n\nNoah 没有为这个项目搭建专门的网站，因此你只能使用托管源代码和 ISO 文件的 GitLab 仓库来获取汉娜·蒙塔娜 Linux（撰写本文时为 v26.1）。\n\n顺便一提，主版本并非唯一选择。\n\n一个轻量版将 Plasma 和 SDDM 替换为 LXQt，使 HML 更适合内存受限的老旧硬件。\n\n如果你已经在运行 Plasma，并且只想获得外观而不需要安装整个新操作系统，那么粉色主题有自己的独立仓库。\n\n这主要是一个热情项目，只有时间才能证明 HML 这个新化身能维护多久。如果你只是想尝试一下，看看它能提供什么，那么它非常适合；但如果你打算日常使用，效果可能因人而异。\n\n14 个我仍然怀念的已停更 Linux 发行版\n\n2025 年我仍然怀念的 14 个已停更 Linux 发行版\n\n一些流行的 Linux 发行版没能坚持下来。让我们回顾其中几个！\n\n一个热爱开源软件、定制 PC 组装、赛车运动并探索这个世界无限可能的极客。\n\nSipeed 的新 KVM 希望 AI 代理能查看并控制你的屏幕\n\nHW Lab 的 DockFrame 即将登陆 Crowd Supply，配备可更换工具卡\n\nBrave 表示这不是隐私功能，但使用容器有其好处\n\nCollabora Office 26.04 保持 AI 可选，并优化了 Writer 和 Calc\n\n厌倦了 AI 垃圾，前微软工程师构建了一个无 AI 的新记事本\n\n成为更好的 Linux 用户\n\n通过 FOSS 周刊，你可以学习有用的 Linux 技巧、发现应用、探索新发行版，并随时了解 Linux 世界的最新动态\n\n太棒了！您已成功注册。\n\n欢迎回来！您已成功登录。\n\n您已成功订阅 It's FOSS。\n\n您的链接已过期。\n\n成功！请检查您的邮箱，获取用于登录的魔法链接。\n\n成功！您的账单信息已更新。\n\n您的账单未更新。"
+  },
+  "1bcc18f596aba7fdc6577184eb25826e": {
+    "id": "1bcc18f596aba7fdc6577184eb25826e",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Microsoft-AV1-Encode-DX12-HMFT",
+    "title_en": "Microsoft Lands Initial AV1 Encoding Using DirectX 12 + HMFT Within Mesa 26.2",
+    "summary_en": "The newest, unexpected addition to the Mesa codebase by Microsoft engineers is contributed accelerated AV1 video encoding on the GPU using a combination of DirectX 12 and the Hardware Media Foundation Transform (HMFT) support that is part of the Windows Media Foundation layer...",
+    "pub_date": "Mon, 06 Jul 2026 20:34:05 -0400",
+    "title_zh": "微软在Mesa 26.2中通过DirectX 12 + HMFT实现初步AV1编码",
+    "summary_zh": "微软工程师在Mesa 26.2代码库中贡献了一项意外的新功能：通过结合DirectX 12和Windows Media Foundation层中的硬件媒体基础转换（HMFT）支持，在GPU上实现加速的AV1视频编码。该实现旨在支持Windows Subsystem for Linux（WSL），目前为原型阶段，仅支持I帧和P帧编码，约900行新代码。",
+    "fulltext_zh": "微软在Mesa 26.2中通过DirectX 12 + HMFT实现初步AV1编码 - Phoronix\n微软在Mesa 26.2中通过DirectX 12 + HMFT实现初步AV1编码\n发布于2026年7月6日美国东部时间晚上8点34分。\n微软工程师对Mesa代码库的最新意外贡献是：通过结合DirectX 12和作为Windows Media Foundation层一部分的硬件媒体基础转换（HMFT）支持，在GPU上实现加速的AV1视频编码。\n这种基于DX12+HMFT的AV1视频编码旨在实现Windows上的跨供应商支持，以服务于微软在Windows Subsystem for Linux（WSL）支持方面的持续野心。\n今天为Mesa 26.2合并的代码提供了一个“原型”实现，足以支持I帧和P帧编码，但在进一步集成之前不支持任何高级功能。这段新的Mesa代码由微软工程师直接开发。\n让这个AV1编码原型运行起来，在Mesa端仅需约900行新代码。感兴趣的人可以查看现已上游合并的代码，该代码属于本季度Mesa 26.2版本的一部分。\n微软宣布WSL上Linux容器的公开预览\nLinux终于为14年前的微软Surface RT平板电脑提供了电池/充电器驱动程序\n微软宣布基于Rust Coreutils的Windows版Coreutils\n新补丁让微软Surface Pro 9 5G在Linux下更有用\n微软发布Azure Linux 3.0.20260506，包含大量安全修复\nWindows版WireGuard达到v1.0\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael也是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他。\n红帽ARM工程师放弃ARM64 Linux个人桌面，回归AMD Ryzen系统\nReactOS“开源Windows”项目现已能运行《半条命2》\nRust Coreutils的cp命令因最新不兼容性导致Ubuntu镜像构建失败\nLinux内核开发者再次讨论AI代理归属问题——可能将其移除\nCachyOS 2026年6月版本发布，带来更多性能优化\nReactOS实现首个Windows NT6系统调用，向Vista兼容性迈进\n用Rust编写的Vibe Coded X11服务器新增Xinerama、FreeBSD支持及其他功能\nTLAC旨在成为内核级反作弊系统的开源替代方案\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "650be3cf9b8fe546f6f536c71dfff33d": {
+    "id": "650be3cf9b8fe546f6f536c71dfff33d",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Intel-ANV-Gen125-H265-Encode",
+    "title_en": "Vulkan Video H.264/H.265 Encode Now Working For Intel Alchemist GPUs On Linux",
+    "summary_en": "Earlier this year Vulkan Video encode was disabled on newer generations of Intel graphics hardware due to insufficient testing with the Intel ANV open-source driver. That impacted Gen12.5 graphics and newer - basically Alchemist and anything newer. Now at least Gen12.5 graphics with the likes of the Arc A-Series is seeing H.264 and H.265 encoding re-enabled...",
+    "pub_date": "Mon, 06 Jul 2026 17:04:03 -0400",
+    "title_zh": "Vulkan Video H.264/H.265 编码现已在 Linux 上的 Intel Alchemist GPU 中正常工作",
+    "summary_zh": "由于测试不足，Intel 此前在较新显卡上禁用了 Vulkan Video 编码功能。如今，Igalia 的 Hyunjun Ko 已使 H.264 和 H.265 编码在 Gen12.5 图形架构（如 Arc A 系列）上正常工作，为后续支持 AV1 编码铺平了道路。该修复已合入 Mesa 26.2，Intel ANV 驱动现已正确支持 Alchemist 显卡的 H.264/H.265 编码。",
+    "fulltext_zh": "Vulkan Video H.264/H.265 编码现已在 Linux 上的 Intel Alchemist GPU 中正常工作 - Phoronix\n\nVulkan Video H.264/H.265 编码现已在 Linux 上的 Intel Alchemist GPU 中正常工作\n2026年7月6日 下午5:04 EDT\n\n由于 Intel ANV 开源驱动测试不足，Vulkan Video 编码在较新代次的 Intel 图形硬件上被禁用。这影响了 Gen12.5 及更新的图形架构——基本上就是 Alchemist 及之后的产品。现在，至少 Gen12.5 图形架构（如 Arc A 系列）已重新启用 H.264 和 H.265 编码。\n\n今年早些时候的禁用是由于 Vulkan Video 在 Intel Linux 方面未受到足够关注。Intel 方面主要专注于视频加速 API（VA-API），并将其集成到媒体驱动栈以及 oneVPL 等软件中。ANV 驱动的 Vulkan Video 工作主要来自第三方，如 Red Hat 和 Igalia。\n\nIgalia 的 Hyunjun Ko 现已使 H.264 和 H.265 编码在 Gen12.5 图形架构上正常工作，并在 Intel Arc A750 显卡上进行了测试。这项 H.264/H.265 编码工作是让 Vulkan Video AV1 编码在该硬件上正常工作的基石。\n\n如今，在 Mesa 26.2 中，Intel ANV 已能正确处理 Alchemist 显卡的 H.264/H.265 编码。希望 AV1 编码的支持不会太遥远。\n\nIntel i915 驱动几乎已准备好“良好运行”于 RT Linux 内核（不含显示支持）\nIntel 正在为搭载 Nova Lake 的笔记本电脑准备 Linux 下的 IPU8 网络摄像头支持\nLinux 7.3 为 Intel Nova Lake S 添加更多图形 PCI ID\nIntel 为 Linux 7.3 准备更多 Nova Lake 图形/显示启用工作\nIntel 提交针对 AI 计算扩展“ACE”的初始 GCC 编译器补丁\nIntel 在 Diamond Rapids 尚未出货前就取消了 AMX-TF32 支持\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nRed Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统\nReactOS“开源 Windows”项目现已能运行《半条命2》\nRust Coreutils cp 因最新不兼容性问题导致 Ubuntu 镜像构建失败\nLinux 内核开发者再次讨论 AI 代理归属问题——可能将其移除\nCachyOS 2026年6月版本发布，带来更多性能优化\nReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进一步\n用 Rust 编写的 Vibe Coded X11 服务器新增 Xinerama、FreeBSD 支持及其他功能\nTLAC 旨在成为内核级反作弊系统的开源替代方案\n\n在享受无广告浏览的同时，\n单页文章查看\n法律声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "25b5a04f2cdf8c01601c15a1808c1ec9": {
+    "id": "25b5a04f2cdf8c01601c15a1808c1ec9",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Marek-Double-VRS-RADV-Perf",
+    "title_en": "Marek Olšák At Valve Lands RADV Code That Can \"Double Performance\" With Some VRS Cases",
+    "summary_en": "Longtime AMD Linux graphics driver expert Marek Olšák, who joined Valve earlier this year and now focusing more on RADV rather than the RadeonSI Gallium3D driver, has seen some of his latest work now merged for Mesa 26.2. Marek landed a big overhaul to the variable rate shading (VRS) code that in some cases can double the performance...",
+    "pub_date": "Mon, 06 Jul 2026 14:56:57 -0400",
+    "title_zh": "Valve 的 Marek Olšák 提交 RADV 代码，在某些 VRS 场景下可实现“性能翻倍”",
+    "summary_zh": "长期从事 AMD Linux 图形驱动开发的专家 Marek Olšák 今年早些时候加入 Valve，并专注于 RADV 驱动。他最近为 Mesa 26.2 提交了大幅改进的变速率着色（VRS）代码，部分重写了 VRS 状态逻辑，修复了多个 bug，简化了代码，并在某些情况下使性能翻倍。该工作也惠及基于 Vulkan 的 Direct3D 12 实现 VKD3D，主要受益于 Steam Play（Proton）。",
+    "fulltext_zh": "Valve 的 Marek Olšák 提交 RADV 代码，在某些 VRS 场景下可实现“性能翻倍”\n\n长期从事 AMD Linux 图形驱动开发的专家 Marek Olšák 今年早些时候加入了 Valve，现在更专注于 RADV 而非 RadeonSI Gallium3D 驱动。他的一些最新工作现已合并到 Mesa 26.2 中。Marek 对变速率着色（VRS）代码进行了大幅重构，在某些情况下可使性能翻倍。\n\n变速率着色是一项现代图形特性，允许在帧中不太重要的区域降低像素着色率。Marek 部分重写了 Radeon RADV Vulkan 驱动的 VRS 状态代码，修复了一些突出的 bug，提升了性能，同时简化了代码。这项 RADV VRS 工作也惠及 VKD3D——即基于 Vulkan 的 Direct3D 12 API，用于 Steam Play（Proton）等场景。\n\nMarek 在合并请求中描述了这项令人兴奋的性能优化工作：\n- VRS 作为动态状态或在管线对象中静态启用，不再阻止 VRS 平面着色优化被启用，这可以在这些情况下使性能翻倍。这主要惠及 VKD3D。片段着色器仍需进行平面着色才能获得此收益。\n- 由于 SampleMaskIn 或未启用 MSAA 时启用了样本着色而导致 VRS 被强制禁用，不再禁用 RB+，这可以在这些情况下使性能翻倍，尽管这属于边缘情况，我认为应用程序不太可能遇到。\n- 由于我们在编译时有时能知道 VRS 状态是否会被覆盖，因此在那些情况下，VRS 速率着色器输出现在被移除，同样，逐顶点 VRS 速率输出也不会被添加。\n\n构成这项工作的 22 个补丁现已纳入计划于 8 月发布的 Mesa 26.2 中。\n\nRADV 和 RadeonSI 驱动为 AMD GCN 1.0/1.1 GPU 带来新修复\nRADV 默认启用 Vulkan 描述符堆支持\n新的 AMD Linux 补丁暴露 Gamma 2.4 和 Gamma 2.6 曲线\n面向 ATI R300 时代 GPU 的开源驱动在 2026 年获得改进的 Power Mac 支持\nAMD 更新 ROCDXG 以在 WSL 上提供更好的 ROCm 体验\n早期 AMD GCN GPU 获得改进的 GPU 恢复——又一项 Valve 主导的 Linux 改进\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nRed Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统\nReactOS“开源 Windows”项目现已能够运行《半条命 2》\nRust Coreutils cp 因最新不兼容性导致 Ubuntu 镜像构建失败\nLinux 内核开发者再次讨论 AI 代理归属——可能将其移除\nCachyOS 2026 年 6 月版本发布，带来更多性能优化\nReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进\n用 Rust 编写的 Vibe Coded X11 服务器新增 Xinerama、FreeBSD 支持及其他功能\nTLAC 旨在成为内核级反作弊系统的开源替代方案\n\n虽然提供无广告浏览，\n单页文章查看\n法律声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "9bd5daff45eb7dafdb116d1bae68357d": {
+    "id": "9bd5daff45eb7dafdb116d1bae68357d",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/ryzen-ai-linux-os",
+    "title_en": "Ryzen AI Developer Platform: AMD's Own Linux Distribution Built Atop Debian",
+    "summary_en": "With the AMD Ryzen AI Halo developer platform there is the option of ordering this Ryzen AI Max+ mini PC with either Microsoft Windows 11 or \"Linux OS\". When receiving a AMD Ryzen AI Halo review sample last month, I fully expected it to just be an Ubuntu LTS install with ROCm preloaded. I was quite surprised when powering it up to find that it's an OS called the AMD Ryzen AI Developer Platform 1 \"Rex\" and is based on Debian Linux.",
+    "pub_date": "Mon, 06 Jul 2026 11:00:00 -0400",
+    "title_zh": "Ryzen AI Developer Platform：AMD基于Debian打造的专属Linux发行版",
+    "summary_zh": "AMD推出了名为Ryzen AI Developer Platform 1 \"Rex\"的Linux发行版，基于Debian构建，预装在Ryzen AI Halo开发者PC上。该系统搭载GNOME桌面和Ryzen AI开发者中心，提供图形化界面管理AI开发工具（如ROCm、vLLM、Llama.cpp等）、远程访问、性能设置等功能，旨在为AI开发者提供开箱即用的优化Linux体验。",
+    "fulltext_zh": "Ryzen AI Developer Platform：AMD基于Debian打造的专属Linux发行版 - Phoronix\nRyzen AI Developer Platform：AMD基于Debian打造的专属Linux发行版\n发布于2026年7月6日美国东部时间上午11:00。\n\nAMD Ryzen AI Halo开发者平台\n\n订购这款Ryzen AI Max+迷你PC时，可以选择预装Microsoft Windows 11或“Linux OS”。上个月收到AMD Ryzen AI Halo评测样机时，我本以为它只是预装了Ubuntu LTS和ROCm。开机后却惊讶地发现，它搭载的操作系统名为AMD Ryzen AI Developer Platform 1 \"Rex\"，基于Debian Linux构建。\n\n今天，搭载Ryzen AI Max+ 395 \"Strix Halo\"的Ryzen AI Halo开发者PC的评测解禁。这是一款精美的硬件，尽管Strix Halo发布已逾一年，其性能潜力仍令我着迷。除了评测文章，本文还将分享我对AMD Ryzen AI Developer Platform的初步印象。\n\n原本以为设备只是预装Ubuntu了事，但AMD提供了更完善的开箱即用Linux体验，这让我倍感欣慰。\n\n首次启动基于GNOME的桌面时，会看到“AMD Ryzen AI开发者中心”，它提供图形化界面管理多项功能，例如管理已安装的应用程序（从Llama.cpp、vLLM到ROCm、Node.js等），还能轻松安装VS Code等其他应用。诚然，使用Linux的AI开发者大多熟悉命令行，但对于不习惯命令行的用户，这个图形界面提供了便利。\n\nRyzen AI开发者中心还支持轻松切换软件遥测、调整图形性能设置，以及控制Ryzen AI Halo LED灯带的灯光条。此外，该中心还设有远程访问管理界面，可切换SSH访问及管理各类凭据。\n\n最后，Ryzen AI开发者中心还设有资源区域，提供各种AI开发资源和指南。\n\nRyzen AI Developer Platform预装了ROCm 7.13预览版、AMD的Lemonade Server等应用，以及vLLM、ComfyUI、Llama.cpp、PyTorch等热门AI软件。\n\n基准测试：Ubuntu 26.10 amd64v3软件包的性能优势\n基准测试：CachyOS Linux的BORE调度器性能\n基准测试：不同CachyOS Linux内核版本\nCachyOS在System76 Thelio Major上领先于Arch Linux、Pop!_OS和Ubuntu\nLinux在AMD Ryzen 9 9950X3D2上性能优于Windows 11\nCachyOS Linux性能领先于Ubuntu 26.04 LTS和Fedora Workstation 44\n\n在无广告浏览环境下，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有商标均为各自所有者财产。保留所有权利。"
+  },
+  "2fd97adb2afb3cdc35561dd965a8d62b": {
+    "id": "2fd97adb2afb3cdc35561dd965a8d62b",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/amd-ryzen-ai-halo",
+    "title_en": "AMD Ryzen AI Halo Is An Excellent & Powerful Mini PC With Fully Open-Source Software",
+    "summary_en": "Earlier this year AMD announced the Ryzen AI Halo as their in-house mini PC offering built around their leading Ryzen AI Max+ \"Strix Halo\" platform. After pre-orders began last month, the Ryzen AI Halo is officially beginning to ship this week and over the past few weeks we have been testing it out at Phoronix.",
+    "pub_date": "Mon, 06 Jul 2026 11:00:00 -0400",
+    "title_zh": "AMD Ryzen AI Halo：一款配备完全开源软件的卓越且强大的迷你PC",
+    "summary_zh": "AMD Ryzen AI Halo 是一款专为本地AI开发和推理设计的迷你PC，搭载128GB统一内存的Ryzen AI Max+ 395，可支持高达2000亿参数的大语言模型。该设备采用x86_64架构的Strix Halo平台，可运行Windows 11或Linux，并预装基于Debian的AMD Ryzen AI开发者平台操作系统。配备三个USB-C接口、10 Gbps以太网、WiFi 7、蓝牙5.4及HDMI 2.1b输出，内置2TB PCIe Gen5 NVMe SSD，尺寸仅为150x150x45毫米，重量不足1.2千克，TDP为120瓦。Phoronix评测认为其性能与NVIDIA DGX Spark/GB10相当，且对Linux支持出色。",
+    "fulltext_zh": "AMD Ryzen AI Halo 是一款卓越且强大的迷你PC，配备完全开源软件——Phoronix评测\nAMD Ryzen AI Halo 是一款卓越且强大的迷你PC，配备完全开源软件\n发布于2026年7月6日上午11:00（美国东部时间）\n今年早些时候，AMD发布了Ryzen AI Halo，这是其基于领先的Ryzen AI Max+打造的自主迷你PC产品。\n预购已于上月启动，Ryzen AI Halo本周正式开始发货，过去几周我们一直在Phoronix对其进行测试。\nAMD Ryzen AI Halo 是一款专为本地AI开发和本地推理打造的迷你PC。凭借AMD Ryzen AI Max+ 395的128GB统一内存，它可以支持高达2000亿参数的大语言模型，同时采用非常紧凑且能效出色的设计，性能可与NVIDIA DGX Spark / GB10相媲美。\n由于采用基于x86_64架构的Strix Halo平台，AMD Ryzen AI Halo 可以运行Microsoft Windows 11或Linux。正如今天早些时候单独分享的，该设备在Linux发货时使用的是基于Debian的AMD Ryzen AI开发者平台操作系统。请查看那篇文章了解所有有趣的软件细节。它超出了我对普通Ubuntu安装加ROCm或类似配置的预期。\nAMD将推出采用Ryzen AI Max 400系列“Gorgon Halo”的Ryzen AI Halo版本，但目前发货的是搭载Ryzen AI Max+ 395“Strix Halo”的型号，配备128GB LPDDR5x-8000MT/s统一内存和Radeon 8060S显卡。AMD Ryzen AI Max+ 395已经发布一年多了，但其十六个Zen 5核心和令人印象深刻的Radeon 8060S显卡仍然提供出色的性能。在Phoronix评测Linux硬件的22年历史中，我不记得有哪款CPU/SoC在发布一年后还能像AMD这样让我保持如此深刻的印象和兴趣。\n除了强大的Ryzen AI Max+ 395 SoC本身，Ryzen AI Halo设备还配备三个USB-C接口、基于USB-C的供电、10 Gbps以太网、WiFi 7、蓝牙5.4和一个HDMI 2.1b输出。遗憾的是只有一个HDMI输出，没有专用的DisplayPort接口（USB-C转DisplayPort可用），但至少我们现在开始在AMDGPU驱动端看到HDMI 2.1支持。存储方面配备了一块2TB PCIe Gen5 NVMe SSD。\nAMD Ryzen AI Halo 的尺寸仅为150 x 150 x 45毫米，重量不足1.2千克。该设备的TDP为120瓦。\n重新设计的Thelio Major提升了System76的全AMD、开源Linux工作站\nHP Z6 G5 A 继续在Linux友好型高端工作站中表现出色\nSystem76新款Thelio Mira Linux桌面机运行强劲——搭载AMD Ryzen 9000系列\nSystem76完全重新设计的Thelio桌面机独家预览\nZimaBoard 2：一款有趣的Intel驱动的Linux家庭迷你服务器\nNVIDIA GB10性能与Dell Pro Max GB10对比GH200的表现\n在享受无广告浏览的同时，\n单页文章查看\n法律声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "8614b897a7201b49cba2de5f72a24a17": {
+    "id": "8614b897a7201b49cba2de5f72a24a17",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/nginx-proxy-manager-2-15-brings-debian-13-base-and-security-fixes/",
+    "title_en": "Nginx Proxy Manager 2.15 Brings Debian 13 Base and Security Fixes",
+    "summary_en": "Nginx Proxy Manager 2.15 is here! Explore its Debian 13 foundation and vital security fixes that improve your web management experience.\nThe post Nginx Proxy Manager 2.15 Brings Debian 13 Base and Security Fixes appeared first on Linux Today.",
+    "pub_date": "Mon, 06 Jul 2026 07:22:11 +0000",
+    "title_zh": "Nginx Proxy Manager 2.15 带来 Debian 13 基础与安全修复",
+    "summary_zh": "Nginx Proxy Manager 2.15 版本发布，采用 Debian 13 作为基础系统，并包含多项关键安全修复，旨在提升用户的 Web 管理体验。",
+    "fulltext_zh": "Nginx Proxy Manager 2.15 来了！探索其 Debian 13 基础与重要的安全修复，这些改进将提升您的 Web 管理体验。\n\n该文章 Nginx Proxy Manager 2.15 Brings Debian 13 Base and Security Fixes 最初出现在 Linux Today 上。"
+  },
+  "862db7a25f4853fb22e1b139da018492": {
+    "id": "862db7a25f4853fb22e1b139da018492",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/arch-linux-june-iso-is-out-with-fresh-kernel-and-core-updates/",
+    "title_en": "Arch Linux June ISO Is Out with Fresh Kernel and Core Updates",
+    "summary_en": "The Arch Linux June ISO has been released, bringing a new kernel and vital core updates. Enhance your experience with the latest features and improvements.\nThe post Arch Linux June ISO Is Out with Fresh Kernel and Core Updates appeared first on Linux Today.",
+    "pub_date": "Mon, 06 Jul 2026 07:20:54 +0000",
+    "title_zh": "Arch Linux 六月 ISO 发布：搭载全新内核与核心更新",
+    "summary_zh": "Arch Linux 发布了六月版 ISO 镜像，包含最新内核和关键核心组件更新，为用户带来更优的性能与功能体验。",
+    "fulltext_zh": "Arch Linux 六月 ISO 已正式发布，带来了全新内核与重要的核心更新。通过最新的功能与改进，提升您的使用体验。\n\n本文《Arch Linux June ISO Is Out with Fresh Kernel and Core Updates》最初发表于 Linux Today。"
+  },
+  "0d351099db57f23db72569422a97f256": {
+    "id": "0d351099db57f23db72569422a97f256",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/the-june-2026-issue-of-the-pclinuxos-magazine/",
+    "title_en": "The June 2026 Issue of the PCLinuxOS Magazine",
+    "summary_en": "Discover the June 2026 edition of PCLinuxOS Magazine, packed with expert articles, user tips, and the latest news from the PCLinuxOS ecosystem.\nThe post The June 2026 Issue of the PCLinuxOS Magazine appeared first on Linux Today.",
+    "pub_date": "Mon, 06 Jul 2026 07:19:29 +0000",
+    "title_zh": "《PCLinuxOS杂志》2026年6月刊",
+    "summary_zh": "《PCLinuxOS杂志》2026年6月刊现已发布，内容涵盖专家文章、用户技巧以及PCLinuxOS生态系统的最新动态。本期杂志为Linux爱好者提供了丰富的技术资源和社区资讯。",
+    "fulltext_zh": "探索《PCLinuxOS杂志》2026年6月刊，其中包含专家文章、用户技巧以及PCLinuxOS生态系统的最新新闻。\n\n本文最初发表于Linux Today。"
+  },
+  "d372aa31edbea0e9cc0f2a70fec27489": {
+    "id": "d372aa31edbea0e9cc0f2a70fec27489",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/86box-6-0-brings-big-update-to-the-retro-x86-emulator/",
+    "title_en": "86Box 6.0 Brings Big Update to the Retro x86 Emulator",
+    "summary_en": "Discover the latest features in 86Box 6.0, the premier retro x86 emulator. Experience enhanced performance and new functionalities for nostalgic computing.\nThe post 86Box 6.0 Brings Big Update to the Retro x86 Emulator appeared first on Linux Today.",
+    "pub_date": "Mon, 06 Jul 2026 07:15:00 +0000",
+    "title_zh": "86Box 6.0 为复古 x86 模拟器带来重大更新",
+    "summary_zh": "86Box 6.0 作为领先的复古 x86 模拟器，发布了重大更新，带来了性能提升和新功能，让用户能够体验怀旧计算。该版本增强了模拟精度和兼容性，为经典硬件和软件爱好者提供了更流畅的体验。",
+    "fulltext_zh": "探索 86Box 6.0 的最新功能，这款顶级的复古 x86 模拟器。体验增强的性能和怀旧计算的新功能。\n\n该文章 86Box 6.0 Brings Big Update to the Retro x86 Emulator 最初出现在 Linux Today 上。"
+  },
+  "88ce0120602ebd48347db29c46972520": {
+    "id": "88ce0120602ebd48347db29c46972520",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/minisforum-ms-02-ultra-285hx-running-linux-dual-channel-memory/",
+    "title_en": "Minisforum Ms-02 Ultra 285HX Running Linux – Dual-Channel Memory",
+    "summary_en": "Explore the Minisforum MS-02 Ultra 285HX, equipped with dual-channel memory and Linux compatibility. Perfect for efficient multitasking and seamless performance.\nThe post Minisforum Ms-02 Ultra 285HX Running Linux &#8211; Dual-Channel Memory appeared first on Linux Today.",
+    "pub_date": "Mon, 06 Jul 2026 07:13:41 +0000",
+    "title_zh": "Minisforum MS-02 Ultra 285HX 运行 Linux – 双通道内存",
+    "summary_zh": "本文介绍了 Minisforum MS-02 Ultra 285HX 迷你主机，该设备配备双通道内存并兼容 Linux 系统，能够实现高效多任务处理与流畅性能表现。",
+    "fulltext_zh": "探索 Minisforum MS-02 Ultra 285HX，它配备双通道内存并兼容 Linux 系统。非常适合高效的多任务处理与无缝的性能体验。\n该文章首发于 Linux Today。"
   }
 }
