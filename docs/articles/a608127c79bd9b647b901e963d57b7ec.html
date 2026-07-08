@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>移动操作系统发布：CalyxOS 7.2.2.0 — Linux 中文速报</title>
+<title>Canonical每年投入4万欧元支持Trifecta Tech以Rust化Ubuntu — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>移动操作系统发布：CalyxOS 7.2.2.0</h1>
+  <h1>Canonical每年投入4万欧元支持Trifecta Tech以Rust化Ubuntu</h1>
 
-  <div class="article-summary">CalyxOS 团队宣布项目恢复活跃状态，并发布 7.2.2.0 版本。该版本将接收所有未来更新，用户需刷机安装。CalyxOS 是一款注重隐私的移动操作系统，基于 Android 去除谷歌服务，改用 microG、F-Droid 和 Aurora 软件中心，并可选装防火墙、Tor 浏览器等隐私保护工具。团队感谢社区支持，并计划处理积压问题。</div>
+  <div class="article-summary">Canonical宣布每年向Trifecta Tech Foundation捐赠4万欧元，以支持用Rust语言重写关键系统工具，提升内存安全性。继sudo-rs成功替换经典sudo后，ntpd-rs将成为Ubuntu默认时间同步工具。该工具已在Let's Encrypt生产环境中运行，计划在Ubuntu 27.04中默认启用。此举旨在减少内存安全漏洞，并扩展对PTP、GPSd等功能的支持。</div>
 
-  <div class="article-body"><p>移动操作系统发布：CalyxOS 7.2.2.0</p><p>CalyxOS 团队宣布项目恢复活跃状态，并随之推出移动操作系统 7.2.2.0 版本。</p><p>“CalyxOS 7.2.2.0 已上线。此版本将接收所有未来更新。如果你之前未安装 7.2.1.0（测试版），并希望开始或继续使用 CalyxOS，你需要刷机并安装 7.2.2.0。随着 CalyxOS 发布恢复正常，我们将继续处理其他积压问题。请加入 Matrix 频道了解我们的进展和用户支持。亲爱的 CalyxOS 社区成员，我们很高兴分享 CalyxOS 7.2.2.0 的发布。这意味着 CalyxOS 正式从暂停状态回归！对我们团队来说，恢复 CalyxOS 发布是一段漫长的旅程，我们深深感谢你们在这段旅程中给予的所有支持和团结，尤其是你们与我们共同进行的最新自愿测试。以下我们分享一些重要说明，供计划安装或重新安装 CalyxOS 的用户参考，同时说明我们处理大量积压问题的下一步计划。”</p><p>有关新版本、基于 Android 17 的 CalyxOS 8 计划以及基础设施变更的更多信息，请参见项目页面。支持的设备列表和安装选项可在项目页面上找到。</p><p>CalyxOS 是一款注重隐私的移动操作系统。该项目提供去谷歌化的 Android 版本，用 microG 替代 Google Play 服务，并使用 F-Droid 和 Aurora 软件中心替代 Google Play 商店。CalyxOS 还可选安装隐私保护工具，例如可阻止或过滤应用的防火墙、Tor 浏览器、K-9 邮件客户端以及用于安全消息和通话的 Signal。</p></div>
+  <div class="article-body"><p>Canonical每年投入4万欧元支持Trifecta Tech以Rust化Ubuntu</p><p>ntpd-rs将取代Ubuntu的时间同步工具，就像去年sudo-rs取代经典sudo一样。</p><p>Trifecta Tech Foundation是一家专注于保持关键基础设施软件内存安全的非营利组织。这项新的支持伴随着每年4万欧元的捐款，旨在资助用Rust编写的内存安全系统工具的持续开发。</p><p>Trifecta Tech Foundation在三个领域运营项目：sudo-rs是其迄今为止最知名的成果，但该基金会还致力于zlib-rs以及大多数Linux用户从未想过的其他几个Rust重写项目。</p><p>不要认为Canonical刚刚开始向该基金会捐款；它自2025年以来一直是支持者，共同赞助了sudo-rs的开发，正如你所知，那次合作取得了成功。sudo-rs在25.10版本中成为默认权限提升工具，并在几个月后延续到26.04 LTS版本。</p><p>这项赞助是朝着同一方向迈出的更大一步，是Canonical曾称之为“谨慎但有目的地氧化Ubuntu”努力的一部分。sudo和coreutils已经被Rust替代品替换。这使得时间同步成为下一个前沿领域。</p><p>他们合作的当前阶段正在转向ntpd-rs，这是Canonical希望使其成为Ubuntu默认时间同步客户端和服务器的Rust重写版本。</p><p>Ubuntu用户能从中得到什么？更少的内存安全漏洞，这些漏洞存在于每个Ubuntu安装都依赖的软件中，用于保持其时钟（以及扩展其TLS证书）与互联网其他部分同步。</p><p>ntpd-rs也不是未经测试的实验。Canonical工程副总裁Jon Seager表示，自2024年6月起，它已经在Let's Encrypt的生产环境中运行，此前于两个月前开始了分阶段部署。</p><p>Trifecta还在开发ts2rs，这是精确时间协议（PTP）的内存安全实现，并计划将其功能直接构建到ntpd-rs中。</p><p>Canonical的资金还覆盖功能对等工作。这包括GPSd IP套接字支持、NTP服务器的多线程支持，以及多宿主服务器设置的支持，以缩小ntpd-rs和chrony之间目前存在的差距。</p><p>对于更专业的部署，资金还覆盖了IEEE 802.1AS-2020支持，适用于汽车和联网车辆用例，以及针对提议的客户端-服务器PTP协议的实验性支持。</p><p>安全也是一个重点领域，正在为ntpd-rs构建AppArmor和seccomp配置文件，以匹配chrony已有的隔离级别。同时支持将OpenSSL作为加密提供程序，以满足有严格合规策略的组织需求。</p><p>Canonical将Ubuntu 26.10定为首个重要里程碑，届时ntpd-rs将进入存档，以便人们开始测试。随后是更大的目标：在明年的27.04版本中将ntpd-rs作为Ubuntu的默认时间同步工具。对于你作为普通桌面用户来说，变化不大；这看起来更针对系统管理员而非其他人。</p><p>sudo vs. sudo-rs，哪个适合你？</p><p>sudo vs sudo-rs：你需要知道什么</p><p>sudo-rs即将接管。作为sudo用户，你应该了解关于sudo-rs的这些信息。</p><p>一个热爱开源软件、定制PC组装、赛车运动以及探索这个世界无限可能性的极客。</p><p>哈哈！Microsoft Windows 11上的存储漏洞可能吞噬500 GB磁盘空间</p><p>这款电子纸PDA希望你用键盘和两个小屏幕抛弃智能手机</p><p>你现在可以为Steam Machine制作电子墨水面板</p><p>迷因回归！Hannah Montana Linux在2026年再次复活</p><p>Sipeed的新KVM希望AI代理能查看并控制你的屏幕</p><p>成为更好的Linux用户</p><p>通过FOSS周刊，你可以学习有用的Linux技巧，发现应用程序，探索新发行版，并随时了解Linux世界的最新动态</p><p>太好了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅It's FOSS。</p><p>您的链接已过期。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12890" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/ubuntu-ntpd-rs-push/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

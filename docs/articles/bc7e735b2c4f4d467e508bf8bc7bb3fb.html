@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>移动操作系统发布：CalyxOS 7.2.2.0 — Linux 中文速报</title>
+<title>TUXEDO OS 放弃 Ubuntu，转而基于 Debian Testing — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>移动操作系统发布：CalyxOS 7.2.2.0</h1>
+  <h1>TUXEDO OS 放弃 Ubuntu，转而基于 Debian Testing</h1>
 
-  <div class="article-summary">CalyxOS 团队宣布项目恢复活跃状态，并发布 7.2.2.0 版本。该版本将接收所有未来更新，用户需刷机安装。CalyxOS 是一款注重隐私的移动操作系统，基于 Android 去除谷歌服务，改用 microG、F-Droid 和 Aurora 软件中心，并可选装防火墙、Tor 浏览器等隐私保护工具。团队感谢社区支持，并计划处理积压问题。</div>
+  <div class="article-summary">德国 Linux 硬件公司 TUXEDO 宣布，其定制发行版 TUXEDO OS 将从 Ubuntu LTS 迁移至 Debian Testing 分支。原因包括维护难度增加、Canonical 的战略方向（如 Snap 包强制推广和 AI 功能不透明）以及安全更新缓慢。新系统将默认使用 Btrfs 文件系统，支持自动快照回滚，并提供迁移路径至 Kubuntu。Beta 版本即将发布。</div>
 
-  <div class="article-body"><p>移动操作系统发布：CalyxOS 7.2.2.0</p><p>CalyxOS 团队宣布项目恢复活跃状态，并随之推出移动操作系统 7.2.2.0 版本。</p><p>“CalyxOS 7.2.2.0 已上线。此版本将接收所有未来更新。如果你之前未安装 7.2.1.0（测试版），并希望开始或继续使用 CalyxOS，你需要刷机并安装 7.2.2.0。随着 CalyxOS 发布恢复正常，我们将继续处理其他积压问题。请加入 Matrix 频道了解我们的进展和用户支持。亲爱的 CalyxOS 社区成员，我们很高兴分享 CalyxOS 7.2.2.0 的发布。这意味着 CalyxOS 正式从暂停状态回归！对我们团队来说，恢复 CalyxOS 发布是一段漫长的旅程，我们深深感谢你们在这段旅程中给予的所有支持和团结，尤其是你们与我们共同进行的最新自愿测试。以下我们分享一些重要说明，供计划安装或重新安装 CalyxOS 的用户参考，同时说明我们处理大量积压问题的下一步计划。”</p><p>有关新版本、基于 Android 17 的 CalyxOS 8 计划以及基础设施变更的更多信息，请参见项目页面。支持的设备列表和安装选项可在项目页面上找到。</p><p>CalyxOS 是一款注重隐私的移动操作系统。该项目提供去谷歌化的 Android 版本，用 microG 替代 Google Play 服务，并使用 F-Droid 和 Aurora 软件中心替代 Google Play 商店。CalyxOS 还可选安装隐私保护工具，例如可阻止或过滤应用的防火墙、Tor 浏览器、K-9 邮件客户端以及用于安全消息和通话的 Signal。</p></div>
+  <div class="article-body"><p>TUXEDO OS 放弃 Ubuntu，转而基于 Debian Testing - OMG! Ubuntu</p><p>将 TUXEDO OS 重新基于 Debian，脱离 Ubuntu。</p><p>这家德国 Linux 硬件公司于 2022 年推出该发行版，最初基于 Ubuntu 长期支持（LTS）版本构建，主要目的是通过定制化支持自家硬件，不过该发行版可免费下载并安装在任何机器上。</p><p>为了保持新鲜度，TUXEDO 持续更新网络浏览器、GPU 图形驱动和 Plasma 桌面，但底层 Ubuntu LTS 基础保持不变。</p><p>如今，在采用这一方法近四年后，TUXEDO 决定不再继续。</p><p>为什么 TUXEDO OS 放弃 Ubuntu</p><p>TUXEDO 列举了多个原因，说明为何 Ubuntu 不再适合作为其定制发行版的未来基础。</p><p>首先，是开发工作量。</p><p>随着底层 LTS 堆栈逐渐老化，TUXEDO OS 的“混合更新”方式越来越难以维护。向后移植核心 Qt 包可能与 Ubuntu 仓库中的包发生冲突或导致其损坏。TUXEDO 表示，基于 Ubuntu LTS 的 KDE neon 也遇到了同样的问题。</p><p>用户可能已经注意到速度变慢，因为 TUXEDO OS 仍在使用 KDE Plasma 6.5，尽管最新版本已经发布。此外，迁移到 Ubuntu 26.04 LTS 的日期也尚未确定。</p><p>其次，是 Canonical 本身。</p><p>TUXEDO 对该公司在发行版上的“战略方向”表示担忧，指出作为 Ubuntu 衍生版，它要么必须采纳这些变化，要么设法绕过——例如 Snap 包的情况。</p><p>“将 Snap 打包系统排除在操作系统之外变得越来越困难，因为 Canonical 正越来越多地将应用程序仅以 Snap 包形式分发，同时逐步将传统 DEB 包推向幕后。”</p><p>TUXEDO 还批评了 Canonical 在 Ubuntu 中集成 AI 功能的路线图，称其计划“透明度不足”。此外，它还指出（被认为）向用户推送安全更新的速度缓慢。</p><p>因此，最终选择了 Debian——具体来说是 Debian Testing，而非稳定发布分支。TUXEDO OS 计划跟踪 Debian Testing，为用户提供准滚动更新的体验，更快地获得新软件，并减轻向后移植到陈旧基础的工作负担。</p><p>基于 Debian 的 TUXEDO OS 正在开发中</p><p>“通过迁移到 Debian，TUXEDO OS 获得了显著更高的独立性，同时减少了维护最新软件所需的工作量，”该公司在公告中表示。</p><p>“最终成果是一个稳健的操作系统，明确聚焦于数字主权——无论是对于 TUXEDO 客户，还是在第三方硬件上运行 TUXEDO OS 的用户而言。”</p><p>Ubuntu 本身也是一个基于 Debian 的发行版，因此日常用户体验不太可能发生重大变化。更新仍然通过 Discover 或命令行进行，DEB 包也能正常工作，等等。</p><p>但表面之下将发生更大的变化。</p><p>TUXEDO OS 将默认使用 Btrfs 而非 EXT4。这将与快照程序配合，在软件包更新后自动创建快照，从而轻松回滚。Btrfs 将在新安装中成为默认选项，并在安装程序中预选。</p><p>要使用新版本，需要进行全新安装，因为没有安全或可靠的方法将 Ubuntu 转换为 Debian。对于不希望失去 Ubuntu 优势的现有用户，将提供迁移到 Kubuntu 的“迁移路径”。</p><p>该公司计划在未来几周内分享其他变更的详细信息，包括新的内核发布节奏、“重新设计的视觉主题”以及更新的预装软件集。</p><p>在此之前，基于 Debian 的 TUXEDO OS 测试版即将推出——如果你觉得 Debian + Btrfs + KDE Plasma 的组合听起来不错，敬请期待。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12890" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/slug-tuxedo-os-debian-rebase" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

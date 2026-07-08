@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>移动操作系统发布：CalyxOS 7.2.2.0 — Linux 中文速报</title>
+<title>AMD Linux 显卡驱动致力于清除所有 BUG() 调用 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>移动操作系统发布：CalyxOS 7.2.2.0</h1>
+  <h1>AMD Linux 显卡驱动致力于清除所有 BUG() 调用</h1>
 
-  <div class="article-summary">CalyxOS 团队宣布项目恢复活跃状态，并发布 7.2.2.0 版本。该版本将接收所有未来更新，用户需刷机安装。CalyxOS 是一款注重隐私的移动操作系统，基于 Android 去除谷歌服务，改用 microG、F-Droid 和 Aurora 软件中心，并可选装防火墙、Tor 浏览器等隐私保护工具。团队感谢社区支持，并计划处理积压问题。</div>
+  <div class="article-summary">AMDGPU 内核驱动维护者 Alex Deucher 提交了 30 个补丁，旨在清除 AMD Linux 显卡驱动中所有 BUG() 宏的使用。BUG() 宏在遇到不可恢复条件时会导致内核崩溃，但许多情况实际上可以安全恢复。Deucher 将部分 BUG() 调用降级为警告或错误，使驱动能继续运行而非故意崩溃系统。该清理补丁已在 AMD 图形邮件列表上接受审查。</div>
 
-  <div class="article-body"><p>移动操作系统发布：CalyxOS 7.2.2.0</p><p>CalyxOS 团队宣布项目恢复活跃状态，并随之推出移动操作系统 7.2.2.0 版本。</p><p>“CalyxOS 7.2.2.0 已上线。此版本将接收所有未来更新。如果你之前未安装 7.2.1.0（测试版），并希望开始或继续使用 CalyxOS，你需要刷机并安装 7.2.2.0。随着 CalyxOS 发布恢复正常，我们将继续处理其他积压问题。请加入 Matrix 频道了解我们的进展和用户支持。亲爱的 CalyxOS 社区成员，我们很高兴分享 CalyxOS 7.2.2.0 的发布。这意味着 CalyxOS 正式从暂停状态回归！对我们团队来说，恢复 CalyxOS 发布是一段漫长的旅程，我们深深感谢你们在这段旅程中给予的所有支持和团结，尤其是你们与我们共同进行的最新自愿测试。以下我们分享一些重要说明，供计划安装或重新安装 CalyxOS 的用户参考，同时说明我们处理大量积压问题的下一步计划。”</p><p>有关新版本、基于 Android 17 的 CalyxOS 8 计划以及基础设施变更的更多信息，请参见项目页面。支持的设备列表和安装选项可在项目页面上找到。</p><p>CalyxOS 是一款注重隐私的移动操作系统。该项目提供去谷歌化的 Android 版本，用 microG 替代 Google Play 服务，并使用 F-Droid 和 Aurora 软件中心替代 Google Play 商店。CalyxOS 还可选安装隐私保护工具，例如可阻止或过滤应用的防火墙、Tor 浏览器、K-9 邮件客户端以及用于安全消息和通话的 Signal。</p></div>
+  <div class="article-body"><p>AMD Linux 显卡驱动致力于清除所有 BUG() 调用 - Phoronix</p><p>AMD Linux 显卡驱动致力于清除所有 BUG() 调用</p><p>发布于 2026 年 7 月 7 日 下午 4:53（美国东部时间）</p><p>AMDGPU 内核驱动维护者 Alex Deucher 今天提交了一组 30 个补丁，致力于清除该 Linux 内核显卡驱动中所有 BUG() 宏的使用。</p><p>Linux 的 BUG() 宏是一种在遇到不可恢复条件时使用的崩溃机制。调用 BUG() 会导致执行停止并转储重要的调试信息。但调用 BUG() 可能引发完全的内核恐慌，也可能被攻击者用于恶意目的，例如试图造成拒绝服务攻击。</p><p>Deucher 一直在审查 AMDGPU 中的 BUG() 调用，修改那些驱动没有理由故意崩溃运行中内核且可以恢复的代码。在某些情况下，原本调用 BUG() 的地方可以降级为仅发出警告，或者仅输出错误，但驱动可以安全地继续运行。</p><p>AMDGPU 驱动中现有的大部分 BUG() 用法都已安全调整以避免使用。对于触发 AMDGPU 驱动特定问题的场景，理想情况下系统可以继续运行，而不是因 BUG() 调用而故意崩溃/停止。</p><p>该 BUG() 清理补丁今天已在 AMD 图形邮件列表上接受审查。</p><p>Valve 的 Marek Olšák 提交了 RADV 代码，在某些 VRS 情况下可“使性能翻倍”</p><p>RADV 和 RadeonSI 驱动为 AMD GCN 1.0/1.1 GPU 带来新修复</p><p>RADV 默认启用 Vulkan 描述符堆支持</p><p>新的 AMD Linux 补丁暴露了 Gamma 2.4 和 Gamma 2.6 曲线</p><p>ATI R300 时代 GPU 的开源驱动在 2026 年改进了 Power Mac 支持</p><p>AMD 更新 ROCDXG 以在 WSL 上提供更好的 ROCm 体验</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、显卡驱动及其他主题。Michael 也是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>ReactOS“开源 Windows”项目现已能够运行《半条命 2》</p><p>红帽 ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统</p><p>Rust Coreutils cp 因最新不兼容性导致 Ubuntu 镜像构建失败</p><p>Linux 内核开发者再次讨论 AI 代理归属——可能将其移除</p><p>ReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进</p><p>用 Rust 编写的 Vibe Coded X11 服务器增加了 Xinerama、FreeBSD 支持及其他功能</p><p>TLAC 旨在成为内核级反作弊系统的开源替代方案</p><p>微软宣布 WSL 上 Linux 容器的公开预览</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12890" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/AMDGPU-Clearing-Out-BUGs" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

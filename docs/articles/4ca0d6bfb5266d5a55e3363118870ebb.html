@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>移动操作系统发布：CalyxOS 7.2.2.0 — Linux 中文速报</title>
+<title>NVIDIA 将初始 Rigel CPU 核心支持上游提交至 GCC 编译器 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>移动操作系统发布：CalyxOS 7.2.2.0</h1>
+  <h1>NVIDIA 将初始 Rigel CPU 核心支持上游提交至 GCC 编译器</h1>
 
-  <div class="article-summary">CalyxOS 团队宣布项目恢复活跃状态，并发布 7.2.2.0 版本。该版本将接收所有未来更新，用户需刷机安装。CalyxOS 是一款注重隐私的移动操作系统，基于 Android 去除谷歌服务，改用 microG、F-Droid 和 Aurora 软件中心，并可选装防火墙、Tor 浏览器等隐私保护工具。团队感谢社区支持，并计划处理积压问题。</div>
+  <div class="article-summary">NVIDIA 在确认其 Rosa CPU 及 Rigel 核心细节后，迅速将初始 Rigel CPU 核心支持合并到 GCC 代码库中。Rigel 核心基于 Armv9.2-A，与 Olympus 核心共享 ISA 能力，但使用不同的部件 ID（0x11）。目前尚未包含专门的调优或其他更改，预计将在 GCC 17.1 之前进一步完善。</div>
 
-  <div class="article-body"><p>移动操作系统发布：CalyxOS 7.2.2.0</p><p>CalyxOS 团队宣布项目恢复活跃状态，并随之推出移动操作系统 7.2.2.0 版本。</p><p>“CalyxOS 7.2.2.0 已上线。此版本将接收所有未来更新。如果你之前未安装 7.2.1.0（测试版），并希望开始或继续使用 CalyxOS，你需要刷机并安装 7.2.2.0。随着 CalyxOS 发布恢复正常，我们将继续处理其他积压问题。请加入 Matrix 频道了解我们的进展和用户支持。亲爱的 CalyxOS 社区成员，我们很高兴分享 CalyxOS 7.2.2.0 的发布。这意味着 CalyxOS 正式从暂停状态回归！对我们团队来说，恢复 CalyxOS 发布是一段漫长的旅程，我们深深感谢你们在这段旅程中给予的所有支持和团结，尤其是你们与我们共同进行的最新自愿测试。以下我们分享一些重要说明，供计划安装或重新安装 CalyxOS 的用户参考，同时说明我们处理大量积压问题的下一步计划。”</p><p>有关新版本、基于 Android 17 的 CalyxOS 8 计划以及基础设施变更的更多信息，请参见项目页面。支持的设备列表和安装选项可在项目页面上找到。</p><p>CalyxOS 是一款注重隐私的移动操作系统。该项目提供去谷歌化的 Android 版本，用 microG 替代 Google Play 服务，并使用 F-Droid 和 Aurora 软件中心替代 Google Play 商店。CalyxOS 还可选安装隐私保护工具，例如可阻止或过滤应用的防火墙、Tor 浏览器、K-9 邮件客户端以及用于安全消息和通话的 Signal。</p></div>
+  <div class="article-body"><p>NVIDIA 将初始 Rigel CPU 核心支持上游提交至 GCC 编译器 - Phoronix</p><p>NVIDIA 将初始 Rigel CPU 核心支持上游提交至 GCC 编译器</p><p>发布于 2026 年 7 月 7 日 美国东部时间上午 11:45。</p><p>这并没有花太长时间……就在 NVIDIA 确认了一些基本的 Rosa CPU 细节及其“Rigel”CPU 核心几分钟后，上游 GNU 编译器集合（GCC）代码库中已合并了对 NVIDIA Rigel 核心的初始支持。</p><p>NVIDIA 搭载 Rigel 核心的 Rosa CPU 是搭载 Olympus 核心的 Vera CPU 的继任者。NVIDIA 今天的博客文章确认了 Rigel 内部核心基于 Armv9.2-A 以及其他基本细节。随着这一确认的公布，NVIDIA 编译器工程师 Dhruv Chawla 成功将初始 CPU 目标上游提交至 GCC Git 代码库，用于定位下一代搭载 Rigel 核心的 Rosa CPU。但目前尚未包含任何专门的调优或其他可能稍后到来的更改。Olympus 的相同 ISA 能力及其他属性与 Rigel 共享。在识别 CPU 核心方面，Rigel 现在使用部件 ID 0x11，而 Olympus 为 0x10。GCC 中对 NVIDIA Rigel 的初始支持已通过此提交落地。</p><p>无论如何，很高兴看到在明年 GCC 17 稳定版发布之前，初始的底层支持已经合并到 GCC Git 中。希望在 GCC 17.1 之前，能对这个 Rigel CPU 目标进行进一步的调优。</p><p>NVIDIA 确认了其 Rigel 核心的 Rosa CPU 部分细节</p><p>NVIDIA 610.43.03 Linux 驱动程序发布，包含未指明的修复</p><p>NVIDIA VR-NVL BMC 设备树正在为 OpenBMC 支持而上游提交</p><p>NVIDIA 正在为 Nova 驱动程序开发新的“TLV”固件二进制格式</p><p>Linux 7.2 开始为 NVIDIA“Blackwell-Next”做准备</p><p>Linux 7.2 将添加由 NVIDIA 编写的 ACPI CPPC v4 支持</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动程序及其他主题。Michael 也是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>ReactOS“开源 Windows”项目现已能够运行《半条命 2》</p><p>Red Hat ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统</p><p>Rust Coreutils cp 因最新不兼容性导致 Ubuntu 镜像构建失败</p><p>Linux 内核开发者再次讨论 AI 代理归属——可能将其移除</p><p>ReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进</p><p>用 Rust 编写的 Vibe Coded X11 服务器增加了 Xinerama、FreeBSD 支持及其他功能</p><p>TLAC 旨在成为内核级反作弊系统的开源替代方案</p><p>微软宣布 WSL 上 Linux 容器的公开预览</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12890" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/NVIDIA-Rigel-Upstream-GCC" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
