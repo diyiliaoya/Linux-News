@@ -2242,5 +2242,148 @@
     "title_zh": "Bosgame M7 Core Ultra 9 285H 运行 Linux – 核心解析",
     "summary_zh": "本文介绍了 Bosgame M7 搭载 Core Ultra 9 285H 处理器并运行 Linux 系统的性能表现。文章重点分析了该设备的核心特性与计算能力，展示了其在 Linux 环境下的优化体验。",
     "fulltext_zh": "探索 Bosgame M7 Core Ultra 9 285H 运行 Linux 的强大性能。深入了解其核心特性与性能表现，以实现最佳计算体验。\n\n该文章《Bosgame M7 Core Ultra 9 285H 运行 Linux – 核心解析》首发于 Linux Today。"
+  },
+  "e0687a72c4ef31942b7c5f56d2ed40fe": {
+    "id": "e0687a72c4ef31942b7c5f56d2ed40fe",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/07/linux-mint-wayland-fully-supported",
+    "title_en": "Linux Mint 23 to offer full Wayland support (but X11 is staying)",
+    "summary_en": "Linux Mint says Wayland support in its next release will no longer be considered experimental, but available as a fully-supported option. However, it will continue to provide and support X11, unlike other Linux distributions which have jettisoned the legacy Xorg/X11 display server from their default installations – Ubuntu dropped Xorg support in 25.10. &#8220;We worked really hard on Wayland and we got to the point where it feels solid and the experience is almost on par with X11&#8221;, Clement",
+    "pub_date": "Wed, 08 Jul 2026 16:13:48 +0000",
+    "title_zh": "Linux Mint 23 将提供完整的 Wayland 支持（但 X11 仍会保留）",
+    "summary_zh": "Linux Mint 宣布其下一个版本（Linux Mint 23）中的 Wayland 支持将不再是实验性质，而是作为完全支持的选项提供。不过，与其他发行版不同，Mint 仍将继续提供并支持 X11。Cinnamon 桌面环境在 Wayland 上进行了多项改进，包括窗口大小和位置映射、防焦点窃取、多显示器支持、HiDPI 渲染优化以及硬件加速等。Linux Mint 23 预计于 2026 年底发布，届时将调整发布节奏，每年减少发布次数以给予开发者更多时间开发新功能。",
+    "fulltext_zh": "Linux Mint 23 将提供完整的 Wayland 支持（但 X11 仍会保留） - OMG! Ubuntu\n\nLinux Mint 表示，其下一个版本中的 Wayland 支持将不再被视为实验性质，而是作为完全支持的选项提供。\n\n然而，与其他已从默认安装中移除传统 Xorg/X11 显示服务器的 Linux 发行版不同——例如 Ubuntu 已放弃 Xorg 支持——Mint 将继续提供并支持 X11。\n\n“我们在 Wayland 上付出了巨大努力，现在已经达到了一个稳定且体验几乎与 X11 相当的水平。”\n\n“X11 和 Wayland 都将得到完全支持。”\n\n至于 Wayland 是否会成为 Linux Mint 23 的默认会话，目前尚不清楚。正如我之前报道的，Lefebvre 表示他希望将这个选项“摆上台面”，但并未承诺切换的时间表。\n\nCinnamon 的 Wayland 支持得到改进\n\n实验性标签将被移除\n\nLefebvre 列举了近期对 Cinnamon Wayland 体验所做的一系列改进，他表示这些改进已使其在日常使用中几乎与 X11 持平。\n\n其中包括：Cinnamon on Wayland 现在可以正确映射窗口、小程序和内容菜单的大小与位置；新增了防焦点窃取功能，确保在没有明确用户交互的情况下，输入或点击不会落入其他应用程序。\n\n多显示器设置和硬件 KVM 切换器得到了更好的支持，同时改进的 HiDPI 支持带来了更清晰的文本和图标渲染。硬件加速也已集成到合成器、桌面以及 Wayland 和 XWayland 客户端中。\n\nRoot 应用现在可以在 Wayland 上运行（而非通过 XWayland），并且对窗口进度的支持意味着进度指示器（例如复制操作期间任务栏按钮上的进度条）能够正常工作。\n\n除了 Wayland 之外，下一版本的 Cinnamon 还引入了一个新的 cinnamon-list-windows 命令，用于列出所有打开的窗口及相关数据（如位置、大小、HiDPI 支持等），并支持 systemd 的 graphical-session，以提高与其他发行版的兼容性。\n\nLinux Mint 23 将是下一个主要版本，预计于 2026 年底发布，此前 Linux Mint 的发布流程将发生重大变化。该发行版将每年减少发布次数，以便让开发者有更多时间开发新功能。\n\n你认为 Cinnamon 的 Wayland 支持已经准备好迎接黄金时代了吗？还是你会继续使用 X11？欢迎在评论区告诉我。\n\n在我的 Linux Mint 22.3 安装中，Wayland 会话下的小程序和右键菜单经常出现在右上角，这相当烦人。"
+  },
+  "bba8958d2a0663c2c8e5fa23f8f3f8ca": {
+    "id": "bba8958d2a0663c2c8e5fa23f8f3f8ca",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/tuxedo-os-is-ditching-ubuntu/",
+    "title_en": "TUXEDO OS is Ditching Ubuntu for a Debian Base That Never Goes Stable",
+    "summary_en": "Their dependency on Ubuntu 'snapped' so they are \"testing\" Debian now.",
+    "pub_date": "Wed, 08 Jul 2026 12:02:28 GMT",
+    "title_zh": "TUXEDO OS 弃用 Ubuntu，转向永不进入稳定版的 Debian 基础",
+    "summary_zh": "TUXEDO Computers 宣布其 Linux 发行版 TUXEDO OS 将从 Ubuntu LTS 基础迁移至 Debian 的测试分支（Testing），并永久不跟随 Debian 稳定版。此举源于对 Ubuntu 的 Snap 依赖、老旧基础库、AI 路线图不明确及安全更新缓慢的不满。新系统将默认使用 Btrfs 文件系统和自动快照，并计划进行视觉革新。现有用户需全新安装，迁移指南将在最终版发布前提供。",
+    "fulltext_zh": "TUXEDO OS 弃用 Ubuntu，转向永不进入稳定版的 Debian 基础\n\n他们对 Ubuntu 的依赖“ snapped ”了，所以现在正在“测试” Debian。\n\nTUXEDO Computers 已宣布其 Linux 发行版将从 Ubuntu 迁移，由 Debian 取代其新基础。TUXEDO OS 是每台 TUXEDO 机器的默认选择，但并不局限于其硬件，任何人都可以获取镜像并在自己的电脑上运行。\n\n未来，该发行版将基于 Debian 的测试分支（Testing），而非 Ubuntu LTS 版本，公司称此为“永不进入稳定版”策略。这一转变也是永久性的，TUXEDO OS 将不会跟随下一个 Debian 稳定版。\n\n这一切换背后，也包含了对 Canonical 近期引导 Ubuntu 方向的不满。在宣布重新选型时，他们表示：\n\n通过迁移到 Debian，TUXEDO OS 获得了显著更高的独立性，同时减少了维护最新软件所需的工作量。其结果是一个稳健的操作系统，明确聚焦于数字主权——无论是对于 TUXEDO 客户，还是在第三方硬件上运行 TUXEDO OS 的用户。\n\n来源：TUXEDO Computers\n\nTUXEDO 表示，随着时间推移，老旧的 Ubuntu 基础使得向后移植（backporting）越来越困难，因为较新的依赖项常常缺失或停留在过时版本。当核心库（如 KDE Plasma 所依赖的 Qt）更新并破坏从 Ubuntu 仓库拉取的软件时，情况会变得更糟。\n\nSnap 是另一个痛点，因为 Canonical 不断推进仅以 Snap 形式打包和交付软件，使得 TUXEDO 更难将这些组件排除在发行版之外。\n\n此外，Ubuntu 的 AI 路线图并未提供关于其实际运作方式的明确信息，而缓慢的安全更新则是最后的争议点。\n\n随着 Ubuntu 的退出，Debian 的开发分支 Testing 成为新的基础。新软件包从 Sid（不稳定版）进入 Testing，前提是它们能证明从相同源码构建出一致的结果——这是 Debian 在五月强制实施的要求。\n\n这一切换在底层也已可见，因为 TUXEDO OS 的内部测试版本正在从 Debian 的仓库而非 Ubuntu 的仓库拉取软件包。\n\n不要认为这仅仅是重新选型；TUXEDO Computers 还在着手引入一些重大升级。\n\nBtrfs 将成为新安装的默认文件系统，并搭配 snapper 用于每次更新前的自动快照。这与 openSUSE 多年来使用的设置相同，因此是一个经过验证的解决方案。\n\n他们尚未详细说明内核策略。我的猜测是——在 TUXEDO 确认之前——会更接近 Ubuntu 或 Fedora 的处理方式：快速推送较新内核，而不是为了稳定性而停留在较旧的内核上。\n\n视觉革新也在进行中，不过他们尚未锁定新外观，当前构建仍在新的 Debian 基础上运行旧主题。游戏和企业用例也都在关注之中，具体细节将在稍后分享。\n\n如果你已经在运行基于 Ubuntu 的 TUXEDO OS 3，这里没有直接的升级路径。需要进行全新安装，TUXEDO 表示在最终版本发布前会提供完整的迁移指南。\n\n另外，如果你更愿意留在 Ubuntu 基础上，该公司将提供一条过渡路径到 Ubuntu LTS。\n\n广泛的 Beta 测试阶段将在未来几周内启动，面向非生产环境。预计会根据反馈和沿途出现的任何发布阻塞问题进行调整。\n\n如果你想更全面地了解他们正在筹备的内容，下一届在八月举行的 TUXEDO 活动将是好去处。TUXEDO Computers 团队将在专门的演讲中展示这一新的开发方向。\n\n一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的极客。\n\n哈！微软 Windows 11 的存储漏洞可能吞噬 500 GB 磁盘空间\n这款电子纸 PDA 想让你用键盘和两个小屏幕抛弃智能手机\n现在你可以为 Steam Machine 制作电子墨水面板\nCanon"
+  },
+  "52798da5d5593f6f2a9323556d91af8e": {
+    "id": "52798da5d5593f6f2a9323556d91af8e",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12893",
+    "title_en": "Distribution Release: deepin 25.2.0",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The deepin project has published a new release of its Debian-based distribution. The new version, deepin 25.2.0, includes several desktop improvements and security updates: \"Treeland desktop environment upgrade - Treeland stability and usability have been significantly improved, with over 20 fixes for stability and high-frequency interaction issues; file....",
+    "pub_date": "",
+    "title_zh": "发行版发布：deepin 25.2.0",
+    "summary_zh": "deepin 25.2.0 正式发布，基于 Debian 分支，带来多项桌面改进与安全更新。Treeland 桌面环境显著提升稳定性与可用性，修复超20个高频交互问题；文件管理新增索引配置，用户可灵活平衡搜索速度与资源占用；DDE 任务栏图标拆分模式支持按窗口显示，提升多窗口识别效率。内核更新至6.6和6.18分支，增强底层稳定性和新硬件兼容性，并同步集成 Qt6、PipeWire、initramfs 等基础组件更新及多项安全修复。",
+    "fulltext_zh": "发行版发布：deepin 25.2.0（DistroWatch.com 新闻）\n\n该项目已发布其基于 Debian 的发行版的新版本。新版本 deepin 25.2.0 包含多项桌面改进和安全更新：\n\n\"Treeland 桌面环境升级——Treeland 的稳定性和可用性得到显著提升，针对稳定性和高频交互问题进行了超过20项修复；文件管理和搜索能力升级——新增文件索引配置，允许用户独立控制索引，灵活平衡搜索速度与资源占用；DDE 桌面体验增强——任务栏图标拆分模式现支持按窗口显示图标，提升多窗口场景下的识别效率；内核与安全更新——更新了6.6和6.18内核分支，增强了底层系统的稳定性、安全性和对新硬件的兼容性，同时提升了整体性能；同步集成了系统更新、Qt6、PipeWire、initramfs、虚拟化及其他基础组件更新，并包含多项安全修复，以提高系统稳定性、安全性和长期可维护性。\"\n\n发布公告（链接）提供了更多详细信息。\n\ndeepin-desktop-community-25.2.0-amd64.iso\n\n近期相关新闻与版本\n发行版发布：deepin 25.2.0\n发行版发布：deepin 25.1.0\n发行版发布：deepin 25.0.10\n发行版发布：deepin 25\n开发版发布：deepin 25 Beta\n发行版发布：deepin 23.1\n\ndeepin（原名 Deepin、Linux Deepin、Hiweed GNU/Linux）是一个基于 Debian 的发行版（在2015年底发布的版本15之前基于 Ubuntu），旨在提供优雅、用户友好且可靠的操作系统。它不仅包含开源世界的最佳成果，还创建了基于 Qt 5 工具包的自有桌面环境 DDE（Deepin Desktop Environment）。Deepin 将大量注意力集中在直观的设计上。"
+  },
+  "3f642a4a73cb48f072a0f2dce144f975": {
+    "id": "3f642a4a73cb48f072a0f2dce144f975",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Redox-OS-June-2026",
+    "title_en": "Redox OS Gets GTK3 Backend For Orbital Desktop, Fractional Scaling & USB Gamepads",
+    "summary_en": "The open-source, Rust-based Redox OS platform had a very eventful June with many new features implemented and more software ported over to run on this from-scratch operating system...",
+    "pub_date": "Wed, 08 Jul 2026 14:30:02 -0400",
+    "title_zh": "Redox OS 为 Orbital 桌面环境引入 GTK3 后端、分数缩放与 USB 游戏手柄支持",
+    "summary_zh": "基于 Rust 的开源操作系统 Redox OS 在 6 月取得重大进展，新增多项功能。主要亮点包括：获得 NGI Zero Commons 基金资助以支持虚拟化运行；初步支持 USB 游戏手柄；为 Orbital 桌面开发 GTK3 后端以提升性能并消除 X11 开销；实现分数缩放以适配 HiDPI 显示器；移植 Tcl 编程语言和 Flycast 模拟器；开始优化 EEVDF 调度器；改进路径处理性能等。",
+    "fulltext_zh": "Redox OS 为 Orbital 桌面环境引入 GTK3 后端、分数缩放与 USB 游戏手柄支持 - Phoronix\nRedox OS 为 Orbital 桌面环境引入 GTK3 后端、分数缩放与 USB 游戏手柄支持\n2026年7月8日下午2:30 EDT\n\n开源、基于 Rust 的 Redox OS 平台在6月经历了一个非常繁忙的时期，实现了许多新功能，并将更多软件移植到这个从零开始构建的操作系统上。\n\nRedox OS 今天发布了月度状态报告，介绍了这一创新开源操作系统的新变化和更新。6月的一些亮点包括：\n\n- Redox 获得了 NGI Zero Commons 基金和 NLNet 的资助，用于开发虚拟化 Redox 支持。该工作重点在于让 Redox OS 能够在 Rust-VMM / QEMU 容器内作为 Web 服务器和微服务运行时运行。\n- Redox 初步支持 USB 游戏手柄，具备通用和 Xbox 布局处理能力。此外，Redox 上更多 USB 设备现在也获得了更广泛的兼容性。\n- 为 Redox 的 Orbital 桌面开发了 GTK3 后端，以提升性能、减少错误并消除 X11 开销。\n- Orbital 现在也支持分数缩放，以便更好地适配 HiDPI 显示器。\n- Tcl 编程语言现已移植到 Redox OS。\n- Flycast 模拟器现在可以在 Redox OS 上运行，允许在该平台上运行各种游戏。\n- 开始优化 Redox 的 EEVDF 调度器。\n- 改进了路径处理性能。\n- 其他各种系统增强以及对 Relibc 的改进。\n\n关于这些变化以及 Redox OS 在6月其他改进的更多细节，请访问：\n\nOpenMandriva GitHub 遭破坏 & 恶意软件包推送的破坏企图\nWayland 不再被视为实验性功能，将用于 Linux Mint 下一版 Cinnamon 发布\nReactOS \"开源 Windows\" 项目现已能够运行《半条命2》\nReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进\nMageia 10 发布，延续 Mandrake 传统的 Linux 发行版\nCachyOS 2026年6月版发布，带来更多性能优化\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过20,000篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nReactOS \"开源 Windows\" 项目现已能够运行《半条命2》\nRust Coreutils cp 因最新不兼容性导致 Ubuntu 镜像构建失败\nLinux 内核开发者再次讨论 AI 代理归属问题——可能将其移除\nReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进\n用 Rust 编写的 Vibe Coded X11 服务器新增 Xinerama、FreeBSD 支持及其他功能\n4K @ 60 FPS USB 视频捕获在 Linux 上终于不再那么棘手\nFedora 45 考虑默认启用 x86_64 Shadow Stack\nLinux DRM 调度器补丁大幅提升作业提交延迟\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "a47eeea4a0e4928281b37a1e1b98572f": {
+    "id": "a47eeea4a0e4928281b37a1e1b98572f",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/LibreOffice-26.8-Beta-1",
+    "title_en": "LibreOffice 26.8 Beta Released For Improving This Free Software Office Suite",
+    "summary_en": "The Document Foundation today announced the first beta release of the LibreOffice 26.8 open-source office suite set for its stable debut in August...",
+    "pub_date": "Wed, 08 Jul 2026 12:27:11 -0400",
+    "title_zh": "LibreOffice 26.8 Beta 发布，改进这款自由软件办公套件",
+    "summary_zh": "文档基金会于2026年7月8日发布了LibreOffice 26.8的首个Beta版本，正式版预计于8月稳定发布。新特性包括：Writer支持文档并排比较、快速打开含图片的大文档；Calc新增随机排序命令；Draw支持鼠标滚轮缩放与滚动切换；Chart实验性支持导入和重新导出Microsoft Office创建的Chartex图表类型；Notebookbars背景色可按模块单独着色。",
+    "fulltext_zh": "LibreOffice 26.8 Beta 发布，改进这款自由软件办公套件 - Phoronix\nLibreOffice 26.8 Beta 发布，改进这款自由软件办公套件\n2026年7月8日，美国东部时间下午12:27。\n文档基金会今天宣布了LibreOffice 26.8开源办公套件的首个Beta版本，该版本计划于8月稳定发布。\nLibreOffice 26.8带来的一些新变化亮点包括：\n- 基础设施支持在LibreOffice Writer中并排比较文档。\n- Writer现在可以更快地打开包含图片的大文档。\n- Calc新增了一个随机排序命令，用于打乱单元格区域中的顺序。\n- LibreOffice Draw现在支持交换鼠标滚轮缩放和滚动功能。\n- LibreOffice Chart实验性支持导入和重新导出新的Chartex图表类型，这些图表类型可以在Microsoft Office中创建并保存为OOXML文件。\n- LibreOffice 26.8现在允许每个LibreOffice模块单独设置Notebookbars的背景颜色。\n关于LibreOffice 26.8众多变化的更多细节，请参见正在进行的开发文档。\nLibreOffice 26.8 Beta 1的下载和更多详情，请访问文档基金会QA博客。\nLibreOffice 26.8将在其启动中心添加捐赠横幅\nLibreOffice 26.2发布，带来许多改进\nLibreOffice 26.2去除了“社区”版品牌标识\nLibreOffice 26.2 Beta 1现已可用\nLibreOffice 26.2 Alpha 1发布供测试\n“Rustmaker”合并到LibreOffice 26.2开发中，作为最新的Rust集成\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立了该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动等主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。您可以通过以下方式关注他。\nReactOS“开源Windows”项目现在能够运行《半条命2》\nRust Coreutils的cp命令因最新不兼容性导致Ubuntu镜像构建失败\nLinux内核开发者再次讨论AI代理归属问题——可能将其移除\nReactOS实现了首个Windows NT6系统调用，向Vista兼容性迈进\n用Rust编写的Vibe Coded X11服务器增加了Xinerama、FreeBSD支持及其他功能\n4K @ 60 FPS USB视频捕获在Linux上终于变得不那么棘手\nFedora 45考虑默认启用x86_64 Shadow Stack\nLinux DRM调度器补丁大幅改善作业提交延迟\n在享受无广告浏览的同时，\n单页文章查看\n法律声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "264274c95eeb75a9ddd29ff6823969b6": {
+    "id": "264274c95eeb75a9ddd29ff6823969b6",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/OpenMandriva-Disrupted",
+    "title_en": "OpenMandriva GitHub Disrupted & Nefarious Package Push In Sabotage Attempt",
+    "summary_en": "The OpenMandriva project put out a statement today concerning an attempted distribution sabotage effort. Part of the OpenMandriva GitHub repository was deleted and there was an empty package push made to OpenMandriva's Cooker repository in trying to obsolete all GNOME and COSMIC packages...",
+    "pub_date": "Wed, 08 Jul 2026 12:05:22 -0400",
+    "title_zh": "OpenMandriva GitHub遭破坏，恶意软件包推送企图破坏发行版",
+    "summary_zh": "OpenMandriva项目发布声明称，其GitHub仓库部分内容被删除，且有人向Cooker仓库推送空包，试图废弃所有GNOME和COSMIC软件包。该恶意行为据称由一名贡献者实施，起因是另一名贡献者因不当行为被踢出Matrix聊天频道后滥用管理权限。目前开发者正在恢复被删仓库并处理软件包问题。",
+    "fulltext_zh": "OpenMandriva GitHub遭破坏，恶意软件包推送企图破坏发行版 - Phoronix\nOpenMandriva GitHub遭破坏，恶意软件包推送企图破坏发行版\n2026年7月8日，美国东部时间下午12:05。\n\nOpenMandriva项目今天发布声明，涉及一次针对发行版的蓄意破坏企图。OpenMandriva的GitHub仓库部分内容被删除，并且有人向OpenMandriva的Cooker仓库推送了空包，试图废弃所有GNOME和COSMIC软件包。\n\nOpenMandriva开发者AngryPenguin几分钟前就此次报告的破坏企图发布了声明。他们的GitHub仓库部分内容被删除，而那个空包如果未被发现，可能会导致运行GNOME或COSMIC软件包的OpenMandriva用户出现问题。\n\nOpenMandriva开发者目前正在努力恢复被删除的仓库，并处理软件包废弃的情况。\n\n据报道，这一恶意行为是由一名OpenMandriva贡献者实施的，起因是另一名OpenMandriva贡献者因不当行为被踢出Matrix聊天频道。随后，管理权限被滥用，导致了今天早些时候的这次Linux发行版破坏企图。\n\n有关此情况的更多详情，请参阅：\n\nRedox OS为Orbital桌面环境提供GTK3后端、分数缩放及USB游戏手柄支持\nWayland在Linux Mint的下一个Cinnamon版本中不再被视为实验性功能\nReactOS“开源Windows”项目现已能够运行《半条命2》\nReactOS实现首个Windows NT6系统调用，向Vista兼容性迈进\nMageia 10发布，延续Mandrake传统的Linux发行版\nCachyOS 2026年6月版发布，带来更多性能优化\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael也是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nReactOS“开源Windows”项目现已能够运行《半条命2》\nRust Coreutils的cp命令因最新不兼容性导致Ubuntu镜像构建失败\nLinux内核开发者再次讨论AI代理归属问题——可能将其移除\nReactOS实现首个Windows NT6系统调用，向Vista兼容性迈进\n用Rust编写的Vibe Coded X11服务器新增Xinerama、FreeBSD支持及其他功能\n4K@60 FPS USB视频捕获在Linux上终于不再那么棘手\nFedora 45考虑默认启用x86_64 Shadow Stack\nLinux DRM调度器补丁大幅提升作业提交延迟性能\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "4b4eb4e1f81d31777dbce0365d25e21c": {
+    "id": "4b4eb4e1f81d31777dbce0365d25e21c",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/single-dual-memory-linux",
+    "title_en": "Single vs. Dual Channel Memory Performance With The Intel Core Ultra 7 270K Plus",
+    "summary_en": "Given today's pricing environment around system memory, a Phoronix Premium supporter recently requested some benchmarks to quantify the performance difference from single to dual channel memory. In considering a new computer build, he is contemplating whether to go for a single stick of DDR5 memory until memory prices hopefully subside in the future. For those in a similar boat, here are some benchmarks of single versus dual channel memory on an Intel Core Ultra 7 270K Plus \"Arrow Lake\" desktop.",
+    "pub_date": "Wed, 08 Jul 2026 10:48:06 -0400",
+    "title_zh": "单通道 vs 双通道内存性能：英特尔酷睿Ultra 7 270K Plus",
+    "summary_zh": "本文针对当前内存价格高企的环境，测试了英特尔酷睿Ultra 7 270K Plus平台在单通道与双通道DDR5内存配置下的性能差异。测试使用Crucial Pro DDR5-6400内存，在Ubuntu 26.04系统上运行了多种Linux基准测试，特别关注代码编译性能。结果显示双通道内存显著提升性能，但单通道可作为临时过渡方案。",
+    "fulltext_zh": "单通道 vs 双通道内存性能：英特尔酷睿Ultra 7 270K Plus - Phoronix\n单通道 vs 双通道内存性能：英特尔酷睿Ultra 7 270K Plus\n发布于2026年7月8日美国东部时间上午10:48。\n\n鉴于当前系统内存的价格环境，一位支持者最近请求进行一些基准测试，以量化从单通道到双通道内存的性能差异。在考虑组装新电脑时，他正在犹豫是否先使用单条DDR5内存，希望未来内存价格能够回落。对于有类似处境的人，这里提供了一些在英特尔酷睿Ultra 7 270K Plus \"Arrow Lake\" 桌面平台上单通道与双通道内存的基准测试。\n\n这项测试相当直接，旨在满足一位高级读者关于新电脑组装的请求……即单条DDR5内存是否足以用于新电脑组装，至少作为内存价格回落前的临时方案。该读者特别关注代码编译性能。使用英特尔酷睿Ultra 7 270K Plus，我运行了多种Linux性能基准测试，分别采用单通道和双通道内存配置。\n\n单条内存为Crucial Pro DDR5-6400 CL40 32GB (20CP2K32G64C40U5B)，而双通道配置采用类似的Crucial Pro套装，即2 x 16GB DDR5-6400 CL38 CP16G64C38U5B内存套件。测试使用同一台英特尔酷睿Ultra 7 270K Plus系统，运行Ubuntu 26.04和Linux 7.0内核，除在测试轮次之间更换系统内存外，无其他改动。\n\nDDR5-4800 vs. DDR5-6000 性能对比：AMD Ryzen 7 9850X3D 在300多项基准测试中\n透明大页性能对比：Linux 6.18 LTS 上的 Madvise 与 Always\n重新审视 SNC3 与 HEX 模式性能：英特尔至强6 Granite Rapids\n重新审视 DDR5-6400 与 MRDIMM-8800 性能：英特尔至强6 \"Granite Rapids\"\nDDR5-6400 与 DDR5-4800 R-DIMM 性能对比：Threadripper 9980X / 9970X CPU\nAMD EPYC 4585PX 与 EPYC 4565P 的 DDR5-4800 与 DDR5-5600 性能对比\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "528ac1f38744533951144986678eee0b": {
+    "id": "528ac1f38744533951144986678eee0b",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Intel-Ends-Quantum-Intrinsics",
+    "title_en": "Intel Sunsets Quantum Intrinsics & Other Open-Source Projects This Week",
+    "summary_en": "Intel has formally archived some more of their now-unmaintained open-source projects this week...",
+    "pub_date": "Wed, 08 Jul 2026 09:37:39 -0400",
+    "title_zh": "英特尔本周终止量子内联函数及其他开源项目",
+    "summary_zh": "英特尔本周正式归档了多个不再维护的开源项目，包括量子计算相关的Quantum Intrinsics（基于LLVM/Clang的C++前端）和此前已归档的Quantum Passes。此外，AI领域的OAP-MLLIB（基于Spark MLlib的机器学习加速库）和Go语言优化库FastGo也被终止。尽管AI热潮持续，英特尔仍在削减部分AI开源项目。",
+    "fulltext_zh": "英特尔本周正式归档了更多现已不再维护的开源项目。\n\n尽管英特尔/英特尔实验室继续研究新型量子计算芯片，但其围绕量子处理器的开源软件工作又后退了一步。今年二月，英特尔归档了其Quantum Passes项目，该项目为英特尔量子SDK提供了额外的编译器优化通道。本周，他们归档了开源项目Quantum Intrinsics。\n\n英特尔Quantum Intrinsics为英特尔量子编译器提供了基于C++的前端，并与之前已归档的Quantum Passes配套使用。英特尔Quantum Intrinsics是LLVM/Clang的一个改编版本。近年来，由于英特尔内部重组，Quantum Intrinsics的开发活动已大幅减少。\n\n除了量子计算软件工作的削减，即使在AI热潮中，英特尔也在继续终止一些AI相关的开源项目。此前几个月，他们已经终止了一些AI项目，如BigDL时间序列工具包和IPEX LLM，而如今OAP-MLLIB是最新被归档的项目。\n\nOAP-MLLIB提供了优化的Spark包，用于加速基于Spark MLlib的机器学习算法。OAP-MLLIB利用了英特尔oneAPI数据分析库“oneDAL”，该库与英特尔oneAPI集体通信库“oneCCL”一起已被移交至UXL基金会。OAP-MLLIB同时针对英特尔CPU和GPU能力进行了优化。\n\n本周被终止的还有英特尔FastGo。英特尔FastGo为不同的压缩算法提供了优化的Go编程语言包，旨在英特尔至强服务器处理器上实现最快的Deflate/Zlib/Gzip性能。\n\nVulkan Video H.264/H.265编码现已在Linux上支持英特尔Alchemist GPU\n英特尔i915驱动程序几乎已准备好与RT Linux内核“良好配合”，但无显示支持\n英特尔正在为Nova Lake笔记本准备Linux IPU8网络摄像头支持\nLinux 7.3为英特尔Nova Lake S添加更多图形PCI ID\n英特尔为Linux 7.3准备更多Nova Lake图形/显示启用\n英特尔为AI计算扩展“ACE”发布初始GCC编译器补丁\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动等主题。Michael也是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nReactOS“开源Windows”项目现已能够运行《半条命2》\nRust Coreutils cp因最新不兼容性导致Ubuntu镜像构建失败\nLinux内核开发者再次讨论AI代理归属——可能将其移除\nReactOS实现首个Windows NT6系统调用，向Vista兼容性迈进\n用Vibe编码的X11服务器（Rust编写）添加Xinerama、FreeBSD支持及其他功能\n4K @ 60 FPS USB视频捕获在Linux上终于不再那么麻烦\nFedora 45考虑默认使用x86_64 Shadow Stack\nLinux DRM调度器补丁大幅提升作业提交延迟\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权 © 2004 - 2026 归\n所有商标均为其各自所有者财产。保留所有权利。"
+  },
+  "e0114150213618bac0f0d9a945570bf7": {
+    "id": "e0114150213618bac0f0d9a945570bf7",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/microsoft-brings-linux-like-coreutils-natively-to-windows/",
+    "title_en": "Microsoft Brings Linux-Like Coreutils Natively to Windows",
+    "summary_en": "Learn about Microsoft's innovative move to bring Linux-like Coreutils to Windows, offering users powerful command-line tools for seamless development and operations.\nThe post Microsoft Brings Linux-Like Coreutils Natively to Windows appeared first on Linux Today.",
+    "pub_date": "Wed, 08 Jul 2026 07:11:35 +0000",
+    "title_zh": "微软将类Linux Coreutils原生引入Windows",
+    "summary_zh": "微软宣布将类Linux的Coreutils工具集原生引入Windows系统，为用户提供强大的命令行工具，以支持更流畅的开发与运维体验。此举旨在弥合Windows与Linux之间的差距，让开发者能在Windows环境中直接使用熟悉的Linux命令。",
+    "fulltext_zh": "了解微软的创新举措——将类Linux的Coreutils工具集原生引入Windows，为用户提供强大的命令行工具，实现无缝的开发与运维体验。\n\n该文章《微软将类Linux Coreutils原生引入Windows》最初发表于Linux Today。"
+  },
+  "958936bf7333aa2c25bc3e438602d846": {
+    "id": "958936bf7333aa2c25bc3e438602d846",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/fastfetch-2-64-system-information-tool-adds-hardware-video-codec-detection/",
+    "title_en": "Fastfetch 2.64 System Information Tool Adds Hardware Video Codec Detection",
+    "summary_en": "Discover the latest features of Fastfetch 2.64, including enhanced hardware video codec detection for improved system information insights.\nThe post Fastfetch 2.64 System Information Tool Adds Hardware Video Codec Detection appeared first on Linux Today.",
+    "pub_date": "Wed, 08 Jul 2026 07:10:17 +0000",
+    "title_zh": "Fastfetch 2.64 系统信息工具新增硬件视频编解码器检测功能",
+    "summary_zh": "Fastfetch 2.64 版本发布，新增硬件视频编解码器检测功能，可更深入地获取系统信息。该工具通过识别硬件支持的编解码器，为用户提供更全面的系统洞察。",
+    "fulltext_zh": "探索 Fastfetch 2.64 的最新功能，包括增强的硬件视频编解码器检测，以改进系统信息洞察。\n\n该文章 Fastfetch 2.64 系统信息工具新增硬件视频编解码器检测功能 首次出现在 Linux Today 上。"
+  },
+  "be5d5a05d64eff503f3be3b87c437fdd": {
+    "id": "be5d5a05d64eff503f3be3b87c437fdd",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/giada-1-4-2-open-source-loop-machine-makes-working-with-scenes-smoother/",
+    "title_en": "Giada 1.4.2 Open-Source Loop Machine Makes Working with Scenes Smoother",
+    "summary_en": "Explore Giada 1.4.2, the open-source loop machine designed to streamline your workflow and improve scene handling for music creators.\nThe post Giada 1.4.2 Open-Source Loop Machine Makes Working with Scenes Smoother appeared first on Linux Today.",
+    "pub_date": "Wed, 08 Jul 2026 07:08:50 +0000",
+    "title_zh": "Giada 1.4.2 开源循环机让场景操作更流畅",
+    "summary_zh": "Giada 1.4.2 版本发布，这是一款面向音乐创作者的开源循环机，旨在简化工作流程并改进场景处理功能。新版本提升了场景操作的流畅性，为音乐制作带来更高效的体验。",
+    "fulltext_zh": "探索 Giada 1.4.2，这款开源循环机旨在简化你的工作流程，并改善音乐创作者的场景处理体验。\n\n该文章最初发表于 Linux Today，标题为《Giada 1.4.2 Open-Source Loop Machine Makes Working with Scenes Smoother》。"
+  },
+  "0242e8cd9d5706107e359d0258b35be9": {
+    "id": "0242e8cd9d5706107e359d0258b35be9",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/x-org-is-still-alive-and-just-patched-nine-security-flaws/",
+    "title_en": "X.Org Is Still Alive and Just Patched Nine Security Flaws",
+    "summary_en": "X.Org remains active and vigilant, recently patching nine security vulnerabilities. Stay informed about these important updates for your system's safety.\nThe post X.Org Is Still Alive and Just Patched Nine Security Flaws appeared first on Linux Today.",
+    "pub_date": "Wed, 08 Jul 2026 07:07:16 +0000",
+    "title_zh": "X.Org 依然健在，刚刚修复了九个安全漏洞",
+    "summary_zh": "X.Org 项目依然活跃且保持警惕，近期修复了九个安全漏洞。这些更新对系统安全至关重要，用户应及时关注并应用补丁以防范潜在风险。",
+    "fulltext_zh": "X.Org 依然活跃且保持警惕，近期修复了九个安全漏洞。请及时了解这些重要更新，以保障您的系统安全。\n\n本文《X.Org Is Still Alive and Just Patched Nine Security Flaws》首发于 Linux Today。"
+  },
+  "1171cf05031c4ea4011ea1945ce6f8b1": {
+    "id": "1171cf05031c4ea4011ea1945ce6f8b1",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/t2-linux-26-6-brings-linux-7-0-refined-kde-plasma-desktop-with-flatpak-support/",
+    "title_en": "T2 Linux 26.6 Brings Linux 7.0, Refined KDE Plasma Desktop with Flatpak Support",
+    "summary_en": "Discover T2 Linux 26.6, featuring Linux 7.0 and an enhanced KDE Plasma Desktop with seamless Flatpak support for a superior user experience.\nThe post T2 Linux 26.6 Brings Linux 7.0, Refined KDE Plasma Desktop with Flatpak Support appeared first on Linux Today.",
+    "pub_date": "Wed, 08 Jul 2026 07:04:44 +0000",
+    "title_zh": "T2 Linux 26.6 带来 Linux 7.0、改进的 KDE Plasma 桌面及 Flatpak 支持",
+    "summary_zh": "T2 Linux 26.6 版本发布，集成了 Linux 7.0 内核，并对 KDE Plasma 桌面进行了优化，新增了无缝的 Flatpak 支持，旨在提供更出色的用户体验。",
+    "fulltext_zh": "探索 T2 Linux 26.6，它搭载了 Linux 7.0 内核和增强的 KDE Plasma 桌面，并具备无缝的 Flatpak 支持，带来卓越的用户体验。\n该文章首次出现在 Linux Today 上。"
   }
 }

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Galactic Mandate Linux 99 — Linux 中文速报</title>
+<title>单通道 vs 双通道内存性能：英特尔酷睿Ultra 7 270K Plus — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Galactic Mandate Linux 99</h1>
+  <h1>单通道 vs 双通道内存性能：英特尔酷睿Ultra 7 270K Plus</h1>
 
-  <div class="article-summary">科幻作家M. R. Richardson宣布发布Galactic Mandate Linux 99。该发行版基于Ubuntu 26.04，搭载Budgie桌面环境和labwc Wayland合成器，新增深度视觉转换、自定义FUI桌面、HUD面板、实时系统遥测、八种书封主题、控制中心等功能，并预装Firefox和OnlyOffice等实用软件。</div>
+  <div class="article-summary">本文针对当前内存价格高企的环境，测试了英特尔酷睿Ultra 7 270K Plus平台在单通道与双通道DDR5内存配置下的性能差异。测试使用Crucial Pro DDR5-6400内存，在Ubuntu 26.04系统上运行了多种Linux基准测试，特别关注代码编译性能。结果显示双通道内存显著提升性能，但单通道可作为临时过渡方案。</div>
 
-  <div class="article-body"><p>发行版发布：Galactic Mandate Linux 99 (DistroWatch.com 新闻)</p><p>科幻作家、Galactic Mandate系列科幻小说作者M. R. Richardson宣布发布Galactic Mandate Linux 99。该版本基于Ubuntu 26.04，搭载Budgie桌面环境和labwc Wayland合成器，并包含书封主题、实时系统遥测、主题化应用程序、警报模式、可视化文件工具以及实用的Linux软件：</p><p>&quot;Galactic Mandate Linux 99版本相比早期预览版增加了更深入的视觉转换。系统现在启动进入一个自定义FUI桌面，带有HUD轨道、实时CPU、内存和交换分区读数、与主题关联的书封壁纸、自定义应用启动器，以及一个首次启动导览，解释各个功能的位置。新的控制中心充当该发行版的指挥室。它允许用户在手工制作的Galactic Mandate主题之间切换，预览桌面语言，控制FUI外壳，以及排练或禁用黄色/红色警报效果。主要特性：基于Ubuntu Budgie、Wayland和labwc构建的太空FUI桌面；八个可选的书封主题，配有协调的GTK、图标、壁纸、外壳镀铬、窗口边框、终端颜色和自定义应用调色板；带有实时遥测、时钟、主题标识、书籍标识和购书控制的HUD外壳……&quot;</p><p>请访问项目页面阅读完整发布公告。以下是下载链接：</p><p>galactic-mandate-linux-v99.iso</p><p>近期相关新闻与发布</p><p>发行版发布：Galactic Mandate Linux 99</p><p>更多Galactic Mandate新闻...</p><p>关于Galactic Mandate</p><p>Galactic Mandate Linux是一款基于Ubuntu的Linux发行版，采用Budgie桌面并带有科幻主题。它包含书封主题、实时系统遥测、主题化应用程序、警报模式、可视化文件工具以及实用的Linux软件，例如以Flatpak包形式提供的Firefox和OnlyOffice。该发行版由科幻作家、Galactic Mandate系列小说作者M. R. Richardson开发。</p></div>
+  <div class="article-body"><p>单通道 vs 双通道内存性能：英特尔酷睿Ultra 7 270K Plus - Phoronix</p><p>单通道 vs 双通道内存性能：英特尔酷睿Ultra 7 270K Plus</p><p>发布于2026年7月8日美国东部时间上午10:48。</p><p>鉴于当前系统内存的价格环境，一位支持者最近请求进行一些基准测试，以量化从单通道到双通道内存的性能差异。在考虑组装新电脑时，他正在犹豫是否先使用单条DDR5内存，希望未来内存价格能够回落。对于有类似处境的人，这里提供了一些在英特尔酷睿Ultra 7 270K Plus &quot;Arrow Lake&quot; 桌面平台上单通道与双通道内存的基准测试。</p><p>这项测试相当直接，旨在满足一位高级读者关于新电脑组装的请求……即单条DDR5内存是否足以用于新电脑组装，至少作为内存价格回落前的临时方案。该读者特别关注代码编译性能。使用英特尔酷睿Ultra 7 270K Plus，我运行了多种Linux性能基准测试，分别采用单通道和双通道内存配置。</p><p>单条内存为Crucial Pro DDR5-6400 CL40 32GB (20CP2K32G64C40U5B)，而双通道配置采用类似的Crucial Pro套装，即2 x 16GB DDR5-6400 CL38 CP16G64C38U5B内存套件。测试使用同一台英特尔酷睿Ultra 7 270K Plus系统，运行Ubuntu 26.04和Linux 7.0内核，除在测试轮次之间更换系统内存外，无其他改动。</p><p>DDR5-4800 vs. DDR5-6000 性能对比：AMD Ryzen 7 9850X3D 在300多项基准测试中</p><p>透明大页性能对比：Linux 6.18 LTS 上的 Madvise 与 Always</p><p>重新审视 SNC3 与 HEX 模式性能：英特尔至强6 Granite Rapids</p><p>重新审视 DDR5-6400 与 MRDIMM-8800 性能：英特尔至强6 &quot;Granite Rapids&quot;</p><p>DDR5-6400 与 DDR5-4800 R-DIMM 性能对比：Threadripper 9980X / 9970X CPU</p><p>AMD EPYC 4585PX 与 EPYC 4565P 的 DDR5-4800 与 DDR5-5600 性能对比</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12889" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/review/single-dual-memory-linux" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

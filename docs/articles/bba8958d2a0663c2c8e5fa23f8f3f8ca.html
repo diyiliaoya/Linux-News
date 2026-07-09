@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Galactic Mandate Linux 99 — Linux 中文速报</title>
+<title>TUXEDO OS 弃用 Ubuntu，转向永不进入稳定版的 Debian 基础 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>发行版发布：Galactic Mandate Linux 99</h1>
+  <h1>TUXEDO OS 弃用 Ubuntu，转向永不进入稳定版的 Debian 基础</h1>
 
-  <div class="article-summary">科幻作家M. R. Richardson宣布发布Galactic Mandate Linux 99。该发行版基于Ubuntu 26.04，搭载Budgie桌面环境和labwc Wayland合成器，新增深度视觉转换、自定义FUI桌面、HUD面板、实时系统遥测、八种书封主题、控制中心等功能，并预装Firefox和OnlyOffice等实用软件。</div>
+  <div class="article-summary">TUXEDO Computers 宣布其 Linux 发行版 TUXEDO OS 将从 Ubuntu LTS 基础迁移至 Debian 的测试分支（Testing），并永久不跟随 Debian 稳定版。此举源于对 Ubuntu 的 Snap 依赖、老旧基础库、AI 路线图不明确及安全更新缓慢的不满。新系统将默认使用 Btrfs 文件系统和自动快照，并计划进行视觉革新。现有用户需全新安装，迁移指南将在最终版发布前提供。</div>
 
-  <div class="article-body"><p>发行版发布：Galactic Mandate Linux 99 (DistroWatch.com 新闻)</p><p>科幻作家、Galactic Mandate系列科幻小说作者M. R. Richardson宣布发布Galactic Mandate Linux 99。该版本基于Ubuntu 26.04，搭载Budgie桌面环境和labwc Wayland合成器，并包含书封主题、实时系统遥测、主题化应用程序、警报模式、可视化文件工具以及实用的Linux软件：</p><p>&quot;Galactic Mandate Linux 99版本相比早期预览版增加了更深入的视觉转换。系统现在启动进入一个自定义FUI桌面，带有HUD轨道、实时CPU、内存和交换分区读数、与主题关联的书封壁纸、自定义应用启动器，以及一个首次启动导览，解释各个功能的位置。新的控制中心充当该发行版的指挥室。它允许用户在手工制作的Galactic Mandate主题之间切换，预览桌面语言，控制FUI外壳，以及排练或禁用黄色/红色警报效果。主要特性：基于Ubuntu Budgie、Wayland和labwc构建的太空FUI桌面；八个可选的书封主题，配有协调的GTK、图标、壁纸、外壳镀铬、窗口边框、终端颜色和自定义应用调色板；带有实时遥测、时钟、主题标识、书籍标识和购书控制的HUD外壳……&quot;</p><p>请访问项目页面阅读完整发布公告。以下是下载链接：</p><p>galactic-mandate-linux-v99.iso</p><p>近期相关新闻与发布</p><p>发行版发布：Galactic Mandate Linux 99</p><p>更多Galactic Mandate新闻...</p><p>关于Galactic Mandate</p><p>Galactic Mandate Linux是一款基于Ubuntu的Linux发行版，采用Budgie桌面并带有科幻主题。它包含书封主题、实时系统遥测、主题化应用程序、警报模式、可视化文件工具以及实用的Linux软件，例如以Flatpak包形式提供的Firefox和OnlyOffice。该发行版由科幻作家、Galactic Mandate系列小说作者M. R. Richardson开发。</p></div>
+  <div class="article-body"><p>TUXEDO OS 弃用 Ubuntu，转向永不进入稳定版的 Debian 基础</p><p>他们对 Ubuntu 的依赖“ snapped ”了，所以现在正在“测试” Debian。</p><p>TUXEDO Computers 已宣布其 Linux 发行版将从 Ubuntu 迁移，由 Debian 取代其新基础。TUXEDO OS 是每台 TUXEDO 机器的默认选择，但并不局限于其硬件，任何人都可以获取镜像并在自己的电脑上运行。</p><p>未来，该发行版将基于 Debian 的测试分支（Testing），而非 Ubuntu LTS 版本，公司称此为“永不进入稳定版”策略。这一转变也是永久性的，TUXEDO OS 将不会跟随下一个 Debian 稳定版。</p><p>这一切换背后，也包含了对 Canonical 近期引导 Ubuntu 方向的不满。在宣布重新选型时，他们表示：</p><p>通过迁移到 Debian，TUXEDO OS 获得了显著更高的独立性，同时减少了维护最新软件所需的工作量。其结果是一个稳健的操作系统，明确聚焦于数字主权——无论是对于 TUXEDO 客户，还是在第三方硬件上运行 TUXEDO OS 的用户。</p><p>来源：TUXEDO Computers</p><p>TUXEDO 表示，随着时间推移，老旧的 Ubuntu 基础使得向后移植（backporting）越来越困难，因为较新的依赖项常常缺失或停留在过时版本。当核心库（如 KDE Plasma 所依赖的 Qt）更新并破坏从 Ubuntu 仓库拉取的软件时，情况会变得更糟。</p><p>Snap 是另一个痛点，因为 Canonical 不断推进仅以 Snap 形式打包和交付软件，使得 TUXEDO 更难将这些组件排除在发行版之外。</p><p>此外，Ubuntu 的 AI 路线图并未提供关于其实际运作方式的明确信息，而缓慢的安全更新则是最后的争议点。</p><p>随着 Ubuntu 的退出，Debian 的开发分支 Testing 成为新的基础。新软件包从 Sid（不稳定版）进入 Testing，前提是它们能证明从相同源码构建出一致的结果——这是 Debian 在五月强制实施的要求。</p><p>这一切换在底层也已可见，因为 TUXEDO OS 的内部测试版本正在从 Debian 的仓库而非 Ubuntu 的仓库拉取软件包。</p><p>不要认为这仅仅是重新选型；TUXEDO Computers 还在着手引入一些重大升级。</p><p>Btrfs 将成为新安装的默认文件系统，并搭配 snapper 用于每次更新前的自动快照。这与 openSUSE 多年来使用的设置相同，因此是一个经过验证的解决方案。</p><p>他们尚未详细说明内核策略。我的猜测是——在 TUXEDO 确认之前——会更接近 Ubuntu 或 Fedora 的处理方式：快速推送较新内核，而不是为了稳定性而停留在较旧的内核上。</p><p>视觉革新也在进行中，不过他们尚未锁定新外观，当前构建仍在新的 Debian 基础上运行旧主题。游戏和企业用例也都在关注之中，具体细节将在稍后分享。</p><p>如果你已经在运行基于 Ubuntu 的 TUXEDO OS 3，这里没有直接的升级路径。需要进行全新安装，TUXEDO 表示在最终版本发布前会提供完整的迁移指南。</p><p>另外，如果你更愿意留在 Ubuntu 基础上，该公司将提供一条过渡路径到 Ubuntu LTS。</p><p>广泛的 Beta 测试阶段将在未来几周内启动，面向非生产环境。预计会根据反馈和沿途出现的任何发布阻塞问题进行调整。</p><p>如果你想更全面地了解他们正在筹备的内容，下一届在八月举行的 TUXEDO 活动将是好去处。TUXEDO Computers 团队将在专门的演讲中展示这一新的开发方向。</p><p>一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的极客。</p><p>哈！微软 Windows 11 的存储漏洞可能吞噬 500 GB 磁盘空间</p><p>这款电子纸 PDA 想让你用键盘和两个小屏幕抛弃智能手机</p><p>现在你可以为 Steam Machine 制作电子墨水面板</p><p>Canon</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12889" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/tuxedo-os-is-ditching-ubuntu/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
