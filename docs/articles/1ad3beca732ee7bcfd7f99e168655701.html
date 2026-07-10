@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DistroWatch 周刊，第 1180 期 — Linux 中文速报</title>
+<title>Wayland 1.26 RC1 发布，新增事件以帮助确保正确的指针坐标 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>DistroWatch 周刊，第 1180 期</h1>
+  <h1>Wayland 1.26 RC1 发布，新增事件以帮助确保正确的指针坐标</h1>
 
-  <div class="article-summary">本期 DistroWatch 周刊涵盖了多项 Linux 新闻：Ubuntu 因 Rust 版 cp 命令存在不兼容问题而回退至 GNU cp；Asahi Linux 修复了 macOS 27 启动问题；COSMIC 桌面环境新增系统监视器；Ubuntu 计划引入语音转文字功能，并更新了风味版本的测试版与最终版政策。此外，还讨论了运行 Gentoo 的理由、避免使用不可变桌面的原因、Arch 用户仓库遭受更多攻击、Fedora 用户增长但贡献者退休、Slackware 终于更新 Plasma 至版本 6 等话题。本期还包含 FreeBSD 15.1 的评测、问答栏目以及多项发行版更新。</div>
+  <div class="article-summary">Wayland 1.26 RC1 于 2026 年 7 月 9 日发布，主要新增了 wl_pointer.warp 事件，用于解决客户端在某些场景下无法获取正确指针位置的问题，例如窗口大小变化时鼠标未移动的情况。此外，还添加了 wl_fixes.ack_global_remove 请求以处理竞态条件，并改进了 WAYLAND_DEBUG 时间戳格式。KDE KWin、GNOME Mutter、wlroots 以及 Qt 和 SDL 等工具包已准备就绪。</div>
 
-  <div class="article-body"><p>DistroWatch 周刊，第 1180 期 (DistroWatch.com News)</p><p>DistroWatch.com 由以下赞助</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW 周刊 / 评测存档</p><p>访客评分与评论</p><p>按评分排名的项目</p><p>播客、新闻通讯与评测</p><p>跨发行版比较软件包</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停产的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与窍门专栏</p><p>误解与误区专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>发行版家族树可视化</p><p>常见问题解答</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>Ubuntu 因 Rust 版 cp 命令存在不兼容问题而回退至 GNU cp</p><p>运行 Gentoo 的理由</p><p>Asahi Linux 修复 macOS 27 启动问题</p><p>COSMIC 获得新的系统监视器</p><p>Ubuntu 计划引入语音转文字功能</p><p>Ubuntu 更新关于风味版本测试版与最终版的策略</p><p>避免使用不可变桌面的理由</p><p>Arch 用户仓库遭受更多攻击</p><p>Fedora 用户增长，贡献者退休</p><p>Slackware 终于将 Plasma 更新至版本 6</p><p>易于使用的 PBX - 托管或自管理</p><p>Linux 电话系统</p><p>免费在线聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程工作应用：iOS 或 Android</p><p>免费视频会议</p><p>3CX 提供的 VoIP / PBX 教程</p><p>别被抓住，制定灾难恢复计划！</p><p>必备的在线聊天报告与统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成对比</p><p>3CX StartUP 的五大杀手级功能</p><p>别做“那种人”第1卷：保持复杂凭证</p><p>别做“那种人”第2卷：呼叫欺诈</p><p>别做“那种人”第3卷：四大安全提示</p><p>别做“那种人”第4卷：监控你的实例</p><p>PCLinuxOS 杂志 2026 年 7 月刊</p><p>Red Hat 周五五件事 - 2026 年 7 月 3 日</p><p>Tumbleweed 月度更新 - 2026 年 6 月</p><p>Ubuntu 每周新闻通讯 950</p><p>Full Circle 每周新闻</p><p>Galactic Mandate Linux</p><p>Illogical Impulse ISO</p><p>最新新闻与更新</p><p>新闻筛选选项</p><p>DistroWatch 周刊，第 1180 期</p><p>评测：FreeBSD 15.1 附带安装时桌面环境</p><p>新闻：Asahi 修复 macOS 启动错误，运行 Gentoo 的理由，Ubuntu 回退基于 Rust 的复制命令，Astral 获得 WINE 移植</p><p>问答：运行管理命令的各种工具</p><p>上周发布：Slackel 9.0 &quot;MATE&quot;、Mageia 10、Kali Linux 2026.2、ArchBang Linux 010726、CalyxOS 7.2.2.0、Ultramarine Linux 44</p><p>种子下载专区：Kali Linux、Mageia、Parrot</p><p>民意调查：你最喜欢哪种运行管理命令的方式？</p><p>阅读本期 DistroWatch 周刊的更多内容...</p><p>m0n0wall 是一个旨在创建完整嵌入式防火墙软件包的项目，当与嵌入式 PC 配合使用时，它能够以极低的成本（自由软件）提供商业防火墙设备的所有重要功能（包括易用性）。m0n0wall 基于精简版 FreeBSD，并包含一个 Web 服务器 (thttpd)、PHP 以及其他一些实用工具。整个系统配置存储在一个单独的 XML 文本文件中，以保持透明。m0n0wall 可能是第一个在启动时使用 PHP（而非通常的 shell 脚本）进行配置，并且将整个系统配置存储在 XML 格式中的 UNIX 系统。</p><p>问答：创建交换文件</p><p>误解与误区：ZFS</p><p>问答：将 ISO 文件链接到特定用户</p><p>问答：对缺乏“打磨”感到沮丧</p><p>问答：拆解一个 Linux 发行版</p><p>问答：交换键盘布局中的按键</p><p>问答：Flash 终止支持</p><p>问答：限制特定用户的命令</p><p>技巧与窍门：使用 zedenv 管理启动环境</p><p>问答：在特定时间阻止登录</p><p>版权所有 © 2001 - 2026 Atea Ataroa Limited。保留所有权利。所有商标均为其各自所有者的财产。</p><p>更改隐私设置</p><p>联系方式、更正与建议：</p><p>bc1qxes3k2wq3uqzr074tkwwjmwfe63z70gwzfu4lx</p></div>
+  <div class="article-body"><p>Wayland 1.26 RC1 发布，新增事件以帮助确保正确的指针坐标 - Phoronix</p><p>Wayland 1.26 RC1 发布，新增事件以帮助确保正确的指针坐标</p><p>2026 年 7 月 9 日，美国东部时间上午 11:47。</p><p>Weston 16 即将发布，</p><p>其候选版本已于今天推出，Wayland 1.26 候选版本刚刚发布，除了更典型的错误修复外，还带来了一些值得注意的变化。</p><p>Wayland 1.26 新增了 wl_pointer.warp 事件。wl_pointer.warp 事件的添加旨在解决一个缺陷：目前在 Wayland 中，某些情况下 Wayland 客户端无法获取指针的正确位置信息。开源开发者 YaNing Lu 对此问题解释道：</p><p>“原始的 wl_pointer.button 事件不包含位置信息。在某些场景下，客户端无法获取正确的坐标。例如，当鼠标焦点位于某个按钮上，鼠标未移动但窗口大小发生变化时，客户端无法通过 motion 事件更新位置信息，导致鼠标位置不正确。</p><p>因此，当指针的本地坐标因表面被移动/调整大小/全屏化而发生变化时，应发送此事件。”</p><p>现在，使用 Wayland 1.26+，无需用户发起的 motion 事件即可通知新的（正确）指针位置。KDE KWin、GNOME Mutter 和 wlroots 已有针对此事件的补丁。此外，Qt 和 SDL 等工具包也已准备好实现。</p><p>Wayland 1.26 RC1 还添加了一个新的 wl_fixes.ack_global_remove 请求，以处理可能的竞态条件。WAYLAND_DEBUG 时间戳的格式也得到了改进，使其更易于阅读和与其他日志进行比较。</p><p>有关今天 Wayland 1.26 RC1 发布的更多详细信息，请参见：</p><p>Nourish：一款由 Vulkan 驱动、支持无限滚动/平移的新 Wayland 合成器</p><p>学院软件基金会宣布成立“Wayland 艺术家工作组”</p><p>基于 Mir 的 Wayland 合成器 Miracle-WM 目标今年晚些时候发布 v1.0</p><p>Wayland 的 Weston 16 Alpha 带来 HDR 改进和 Vulkan 渲染器修复</p><p>Wine Wayland 驱动为透明度处理添加 Alpha 修饰符支持</p><p>Wayland 协议 1.49 发布，改进了多 GPU 支持并支持 Windows BT.2100</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>ReactOS“开源 Windows”项目现已能够运行《半条命 2》</p><p>Rust Coreutils 的 cp 命令因最新不兼容性导致 Ubuntu 镜像构建失败</p><p>Linux 内核开发者再次讨论 AI 代理归属问题——可能将其移除</p><p>ReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进</p><p>用 Rust 编写的 Vibe Coded X11 服务器增加了 Xinerama、FreeBSD 支持及其他功能</p><p>4K @ 60 FPS USB 视频捕获在 Linux 上终于变得不那么棘手</p><p>Fedora 45 考虑默认使用 x86_64 Shadow Stack</p><p>Linux DRM 调度器补丁大幅提升作业提交延迟</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12892" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Wayland-1.26-RC1" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Ultramarine Linux 44 — Linux 中文速报</title>
+<title>AMD 在 Linux 上启用 CACP 功能以实现更佳的 OLED 省电效果 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Ultramarine Linux 44</h1>
+  <h1>AMD 在 Linux 上启用 CACP 功能以实现更佳的 OLED 省电效果</h1>
 
-  <div class="article-summary">基于Fedora的桌面发行版Ultramarine Linux发布了第44版。新版本更新了三个桌面环境：Plasma 6.7带来新Union主题引擎、性能改进和大量错误修复；Budgie切换到Wayland，采用SDDM窗口管理器和新蓝牙应用；GNOME版修复了烦人的“窗口已就绪”通知，并默认启用最小化和最大化按钮。</div>
+  <div class="article-summary">AMD 在最新的 AMDGPU DC 显示代码更新中，为 Linux 开源驱动启用了“CACP”（内容自适应对比度与功耗）功能，旨在进一步降低 OLED 显示面板的功耗。该功能属于 AMD 自适应背光管理（ABM）的一部分，已在 Windows 驱动中应用多年。此外，本次更新还启用了面板自刷新（PSR）和面板重放功能，并修复了 8K 模式解析问题。这些补丁预计将进入 Linux v7.3 内核周期。</div>
 
-  <div class="article-body"><p>发行版发布：Ultramarine Linux 44 (DistroWatch.com 新闻)</p><p>一款基于Fedora的桌面发行版发布了新版本44。新版本包含四个桌面环境中的三个更新：</p><p>“我们收到了大量反馈和赞誉，因为将Plasma作为推荐版本。此版本搭载Plasma 6.7、新的Union主题引擎、性能改进以及大量错误修复。Budgie已切换到Wayland。它现在采用SDDM窗口管理器和一个新的蓝牙应用。这是倒数第二个仍停留在X11的版本，所以我们非常高兴终于将其现代化。如果您从版本43升级，系统会提示您访问并按照其说明操作，出于稳定性原因，我们无法自动将用户过渡到SDDM，但您可以按照我们简单的说明进行切换。我们对GNOME版本进行了一些改进，使其显著更好。最值得注意的是，我们修复了那个烦人的‘窗口已就绪’通知，现在窗口会像在其他版本上一样自动聚焦。我们还默认在每个窗口上启用了最小化和最大化按钮……”</p><p>更多信息请参阅：</p><p>ultramarine-budgie-44-live-anaconda-x86_64.iso</p><p>ultramarine-gnome-44-live-anaconda-x86_64.iso</p><p>ultramarine-plasma-44-live-anaconda-x86_64.iso</p><p>ultramarine-xfce-44-live-anaconda-x86_64.iso</p><p>近期相关新闻与发布：</p><p>发行版发布：Ultramarine Linux 44</p><p>发行版发布：Ultramarine Linux 43</p><p>发行版发布：Ultramarine Linux 42</p><p>发行版发布：Ultramarine Linux 41</p><p>发行版发布：Ultramarine Linux 40</p><p>发行版发布：Ultramarine Linux 39</p><p>更多Ultramarine新闻...</p><p>关于Ultramarine Linux</p><p>Ultramarine Linux是一款基于Fedora的发行版，包含额外的软件包仓库（如RPM Fusion）并启用了多媒体编解码器。Ultramarine可被视为Korora项目的精神继承者，旨在使Fedora成为更友好的桌面体验。</p></div>
+  <div class="article-body"><p>AMD 在 Linux 上启用 CACP 功能以实现更佳的 OLED 省电效果 - Phoronix</p><p>AMD 在 Linux 上启用 CACP 功能以实现更佳的 OLED 省电效果</p><p>发布于 2026 年 7 月 9 日，美国东部时间晚上 8:51。</p><p>今天发布的 AMDGPU 显示代码“DC”更新带来了一些值得关注的改进，使现代硬件在 Linux 下受益。</p><p>新一批 AMDGPU DC 代码更新针对其开源 Linux 驱动，带来了一些值得注意的内容，同时还有大量测试用例的添加，以期帮助保持质量并防止未来的回归问题。</p><p>在今天 AMDGPU DC 补丁的变动中，引起我注意的是在 Linux 上启用了“CACP”。据称这有助于 OLED 显示面板在 Linux 上节省更多电量。此处的 CACP 是“内容自适应对比度与功耗”（Content Adaptive Contrast and Power）功能的缩写，属于 AMD 自适应背光管理（ABM）处理的一部分。</p><p>补丁消息或代码注释中并未提供量化相对省电效果的数据。搜索“AMD Content Adaptive Contrast and Power”也没有太多发现。无论如何，看看这是否能为 Linux 下的 OLED 显示面板使用带来显著的省电效果，将会很有趣。</p><p>代码中的一些版权注释反映了 AMD 2022 年的代码，因此这项省电功能似乎早已在其 Windows 驱动中使用。</p><p>今天的 DC 补丁还在 DCN42b 变体上启用了面板自刷新（PSR）和面板重放功能，以针对该特定显示 IP 实现更大的省电效果。IPS 支持在另一个针对 DCN42b 的补丁中作为另一项省电功能被启用……这似乎是今天补丁发布在 Linux 上的一个重点。</p><p>在这些补丁中，还有一个针对 8K 模式解析的修复，适用于显示 EDID 未解析的情况。由于 AMDGPU 的处理方式，某些 8K@120 和 8K@240 时序可能无法通过作为 HDMI 2.1 处理一部分的 DisplayID 扩展块正确解析。新补丁正在修复此问题。</p><p>这些新补丁已经发布。考虑到时间节点，这些补丁很可能会被纳入 Linux v7.3 内核周期。</p><p>AMD Linux 图形驱动致力于清除所有 BUG()</p><p>Valve 的 Marek Olšák 提交的 RADV 代码在某些 VRS 情况下可“使性能翻倍”</p><p>RADV 和 RadeonSI 驱动迎来针对 AMD GCN 1.0/1.1 GPU 的新修复</p><p>RADV 默认启用 Vulkan 描述符堆支持</p><p>新的 AMD Linux 补丁公开了 Gamma 2.4 和 Gamma 2.6 曲线</p><p>面向 ATI R300 时代 GPU 的开源驱动在 2026 年获得改进的 Power Mac 支持</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>ReactOS“开源 Windows”项目现已能够运行《半条命 2》</p><p>Rust Coreutils 的 cp 命令因最新不兼容性导致 Ubuntu 镜像构建失败</p><p>Linux 内核开发者再次讨论 AI 代理归属问题——可能将其移除</p><p>ReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进一步</p><p>用 Rust 编写的 Vibe Coded X11 服务器增加了 Xinerama、FreeBSD 支持及其他功能</p><p>4K @ 60 FPS USB 视频采集在 Linux 上终于变得不那么棘手</p><p>Fedora 45 考虑默认使用 x86_64 Shadow Stack</p><p>Linux DRM 调度器补丁为任务提交延迟带来巨大改进</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12891" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/AMDGPU-DC-Enabling-CACP" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

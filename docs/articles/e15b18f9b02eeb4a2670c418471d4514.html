@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Ultramarine Linux 44 — Linux 中文速报</title>
+<title>提议的Linux补丁：短暂延迟以匹配PCI规范，有望修复若干Bug — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Ultramarine Linux 44</h1>
+  <h1>提议的Linux补丁：短暂延迟以匹配PCI规范，有望修复若干Bug</h1>
 
-  <div class="article-summary">基于Fedora的桌面发行版Ultramarine Linux发布了第44版。新版本更新了三个桌面环境：Plasma 6.7带来新Union主题引擎、性能改进和大量错误修复；Budgie切换到Wayland，采用SDDM窗口管理器和新蓝牙应用；GNOME版修复了烦人的“窗口已就绪”通知，并默认启用最小化和最大化按钮。</div>
+  <div class="article-summary">自2026年2月起，有报告称AMD Ryzen AI Max+“Strix Halo” Framework Desktop在从s2idle恢复时，xHCI控制器失效，导致USB设备丢失。经过数月沟通，AMD Linux工程师Mario Limonciello提出补丁，在D3cold路径中增加10ms延迟以符合PCI规范，从而解决此问题。该补丁仅影响通用Linux PCI驱动代码，已在Framework Desktop上验证有效。</div>
 
-  <div class="article-body"><p>发行版发布：Ultramarine Linux 44 (DistroWatch.com 新闻)</p><p>一款基于Fedora的桌面发行版发布了新版本44。新版本包含四个桌面环境中的三个更新：</p><p>“我们收到了大量反馈和赞誉，因为将Plasma作为推荐版本。此版本搭载Plasma 6.7、新的Union主题引擎、性能改进以及大量错误修复。Budgie已切换到Wayland。它现在采用SDDM窗口管理器和一个新的蓝牙应用。这是倒数第二个仍停留在X11的版本，所以我们非常高兴终于将其现代化。如果您从版本43升级，系统会提示您访问并按照其说明操作，出于稳定性原因，我们无法自动将用户过渡到SDDM，但您可以按照我们简单的说明进行切换。我们对GNOME版本进行了一些改进，使其显著更好。最值得注意的是，我们修复了那个烦人的‘窗口已就绪’通知，现在窗口会像在其他版本上一样自动聚焦。我们还默认在每个窗口上启用了最小化和最大化按钮……”</p><p>更多信息请参阅：</p><p>ultramarine-budgie-44-live-anaconda-x86_64.iso</p><p>ultramarine-gnome-44-live-anaconda-x86_64.iso</p><p>ultramarine-plasma-44-live-anaconda-x86_64.iso</p><p>ultramarine-xfce-44-live-anaconda-x86_64.iso</p><p>近期相关新闻与发布：</p><p>发行版发布：Ultramarine Linux 44</p><p>发行版发布：Ultramarine Linux 43</p><p>发行版发布：Ultramarine Linux 42</p><p>发行版发布：Ultramarine Linux 41</p><p>发行版发布：Ultramarine Linux 40</p><p>发行版发布：Ultramarine Linux 39</p><p>更多Ultramarine新闻...</p><p>关于Ultramarine Linux</p><p>Ultramarine Linux是一款基于Fedora的发行版，包含额外的软件包仓库（如RPM Fusion）并启用了多媒体编解码器。Ultramarine可被视为Korora项目的精神继承者，旨在使Fedora成为更友好的桌面体验。</p></div>
+  <div class="article-body"><p>提议的Linux补丁：短暂延迟以匹配PCI规范，有望修复若干Bug - Phoronix</p><p>提议的Linux补丁：短暂延迟以匹配PCI规范，有望修复若干Bug</p><p>发布于2026年7月9日上午9:35 EDT。</p><p>追溯到今年2月，有一个关于xHCI控制器在从s2idle恢复时失效的Bug报告，该问题出现在使用AMD Ryzen AI Max+“Strix Halo” Framework Desktop时。随后，xHCI控制器后的所有USB设备在恢复时丢失，但通过解绑和重新绑定驱动程序可以在不重启的情况下恢复功能。经过数月的反复沟通，似乎已经找到了解决方案，关键在于PCI规范的一个细微之处——需要短暂等待。</p><p>Framework Computer最初报告了这个Linux内核Bug，一些客户遇到了该问题。AMD Linux工程师Mario Limonciello最终设计了一个补丁，似乎能正确解决某些硬件上xHCI控制器在恢复时丢失的问题。</p><p>PCI规范规定了将功能从D3状态编程到D0状态后，访问前所需的最小恢复时间。PCI规范中明确指出这是10ms的延迟。但Linux内核在D3cold路径中没有任何强制延迟，仅在D3hot路径中有。通过这个即将合入的Linux内核补丁，在D3cold路径中确保了10ms的延迟，从而有望解决此问题。</p><p>Limonciello在内核邮件列表中解释道：</p><p>“有报告称，在某些系统上，xHCI主机控制器在恢复后无法正常工作。这个问题存在一定的失败率，但令人困惑的是，失败率与BIOS预留的VRAM大小相关。</p><p>也就是说，如果VRAM预留较小（例如512MB），则不会出现失败。有些评论提到，VRAM越大，失败率越高。我个人并不完全理解这为何会有影响，但我想提出来，或许能启发其他人。</p><p>各种变通方法有效：</p><p>* 使用传统中断而非MSI</p><p>* 在恢复时重置控制器</p><p>* 在xHCI和显示PCI设备之间创建设备链接依赖（用于设备恢复顺序）</p><p>不过，这些变通方法似乎都没有触及问题的根本。</p><p>我对代码进行了一些追踪，并交叉参考了PCI规范。xHCI控制器在挂起时应处于D3cold状态，因此需要经历D3到D0的转换。PCI规范指出，D3转换需要10ms的延迟。</p><p>然而，对于处于D3cold的端点，我们没有任何强制延迟，只有桥接设备才有。对于端点，我们仅在D3hot中有强制延迟。</p><p>因此，我怀疑在D3cold到D0转换中增加强制延迟将有助于解决此问题，这正是这个补丁系列所做的。”</p><p>这个补丁仅影响通用的Linux PCI驱动代码。从自2月以来跟踪此问题的kernel.org Bug报告来看，该补丁至少在Framework Desktop上修复了此问题。</p><p>Linux 7.3将使禁用Syscall User Dispatch更容易</p><p>Linux 7.3预计将“扁平化选择”以改善游戏及其他场景的调度</p><p>Linux 7.2-rc2发布：“一切看起来非常正常”</p><p>Linux DRM调度器补丁大幅提升作业提交延迟</p><p>Linux 7.2-rc2 BPF代码正在加强以抵御JIT Spray攻击</p><p>Linux准备淘汰其32位MSR接口</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动等主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>ReactOS“开源Windows”项目现已能运行《半条命2》</p><p>Rust Coreutils cp因最新不兼容性导致Ubuntu镜像构建失败</p><p>Linux内核开发者</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12891" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-Delay-D3cold-Patch-Fix" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

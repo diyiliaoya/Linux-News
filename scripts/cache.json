@@ -2385,5 +2385,137 @@
     "title_zh": "T2 Linux 26.6 带来 Linux 7.0、改进的 KDE Plasma 桌面及 Flatpak 支持",
     "summary_zh": "T2 Linux 26.6 版本发布，集成了 Linux 7.0 内核，并对 KDE Plasma 桌面进行了优化，新增了无缝的 Flatpak 支持，旨在提供更出色的用户体验。",
     "fulltext_zh": "探索 T2 Linux 26.6，它搭载了 Linux 7.0 内核和增强的 KDE Plasma 桌面，并具备无缝的 Flatpak 支持，带来卓越的用户体验。\n该文章首次出现在 Linux Today 上。"
+  },
+  "7a4f27927190bfcd7c3c799d196d9614": {
+    "id": "7a4f27927190bfcd7c3c799d196d9614",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/07/claude-desktop-linux-beta",
+    "title_en": "Claude desktop app for Linux enters beta",
+    "summary_en": "Anthropic has released a beta of its Claude desktop app for Linux, launching alongside an apt repo Ubuntu users can add for ongoing updates. According to the official docs, Claude desktop for Linux offers &#8220;the same Chat, Cowork, and Claude Code experience as macOS and Windows: parallel sessions, visual diff review, an integrated terminal and editor, and live app preview&#8221;. However, not all of the app&#8217;s features are yet available. The Linux beta lacks Computer Use, which lets Cla",
+    "pub_date": "Thu, 09 Jul 2026 17:39:07 +0000",
+    "title_zh": "Claude Linux桌面应用进入Beta阶段",
+    "summary_zh": "Anthropic发布了Claude桌面应用的Linux Beta版，同时提供apt仓库供Ubuntu用户安装和更新。该应用提供与macOS和Windows版本相同的Chat、Cowork和Claude Code体验，包括并行会话、可视化差异审查、集成终端和编辑器以及实时应用预览。但部分功能如应用控制和语音听写尚未支持。安装需通过官方apt仓库进行，支持Ubuntu 22.04+和Debian 12+。",
+    "fulltext_zh": "Anthropic发布了其Claude桌面应用的Linux Beta版，同时提供了一个apt仓库供Ubuntu用户添加以获取持续更新。\n\nClaude Linux桌面版提供了“与macOS和Windows版本相同的Chat、Cowork和Claude Code体验：并行会话、可视化差异审查、集成终端和编辑器，以及实时应用预览”。\n\n然而，并非所有应用功能都已可用。例如，让Claude直接控制应用的功能以及语音听写——这两者在macOS和Windows上均已提供。Anthropic表示，应用控制功能将在未来支持Linux；语音听写则未给出具体日期。\n\n在我亲自试用该客户端（基于Electron或类似框架）时，我发现其他一些桌面集成功能无法正常工作。当启用选项时，提示完成通知并未出现，而系统托盘图标虽有“快速提问”选项（一个浮动输入框），但在我的Ubuntu 26.04 LTS桌面上选择后并未打开任何内容。\n\n不喜欢AI聊天机器人？\n我报道此事并非作为推荐，只是告知其存在。我撰写关于Ubuntu可用软件的文章，而这款应用确实已可用于Ubuntu。使用与否，由您自行决定。\n\n作为云服务的前端而非本地AI模型，Claude桌面版无法离线使用，也无需Anthropic账户即可使用。\n\n在此官方Beta版发布之前，许多Linux用户依赖一种将Windows版本文件重新打包以在Linux上运行的非官方方法，以及非官方包装器和针对Claude主网站的网络应用——前提是标准浏览器标签页不够用。\n\n如果您打算将Claude用于编程而非对话，则应通过Claude Code使用官方CLI和API。这可以通过大多数终端访问，或集成到各种支持AI的IDE中，包括……\n\n如何安装Claude Linux桌面版\n该应用适用于64位Intel/AMD和Arm64设备，但在我撰写本文时，尚无可直接使用的DEB包下载。Linux版下载页面上的按钮链接到文档，而文档页面又链接回下载页面。\n\n因此，要试用它，请改用官方Anthropic apt仓库。添加该仓库不仅能让您在Ubuntu 22.04及更高版本（以及Debian 12及更高版本）上安装Claude桌面版，还能确保您随其他系统更新一起获得应用更新。\n\n首先，安装curl，因为Anthropic建议使用它来获取签名密钥：\nsudo apt install curl\n\n然后，获取签名密钥本身：\nsudo curl -fsSLo /usr/share/keyrings/claude-desktop-archive-keyring.asc https://downloads.claude.ai/claude-desktop/key.asc\n\n现在，添加apt仓库：\necho \"deb [signed-by=/usr/share/keyrings/claude-desktop-archive-keyring.asc] https://downloads.claude.ai/claude-desktop/apt/stable stable main\" | sudo tee /etc/apt/sources.list.d/claude-desktop.list\n\n最后，刷新软件包列表并安装Claude：\nsudo apt update && sudo apt install claude-desktop\n\n从应用网格（或您偏好的应用程序菜单）启动Claude。您也可以从终端运行claude-desktop。使用您的Anthropic账户登录即可开始使用。\n\nAnthropic目前尚未为Fedora/RHEL或Arch用户提供等效版本，但表示计划支持更多发行版。\n\n特别感谢Petr提供线索！"
+  },
+  "e29075c60004de4a232abff9fc7f5c1b": {
+    "id": "e29075c60004de4a232abff9fc7f5c1b",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/german-state-ditches-sharepoint/",
+    "title_en": "Another German State Just Kicked Out Microsoft ...Kind Of",
+    "summary_en": "Mecklenburg-Vorpommern has replaced Microsoft SharePoint with Nextcloud for over 5,000 government employees.",
+    "pub_date": "Thu, 09 Jul 2026 09:50:24 GMT",
+    "title_zh": "又一个德国州政府踢走了微软……算是吧",
+    "summary_zh": "德国梅克伦堡-前波美拉尼亚州用Nextcloud替代了微软SharePoint，覆盖5000名政府员工，并计划扩展至50000人。该州还采用OpenProject替代专有项目管理工具，并开发了AI助手。与石勒苏益格-荷尔斯泰因州的合作旨在加强数字主权。德国国家层面也通过主权基础设施框架限制文档格式，推广开源工具。",
+    "fulltext_zh": "又一个德国州政府踢走了微软……算是吧\n\n梅克伦堡-前波美拉尼亚州已用Nextcloud替代了微软SharePoint，覆盖超过5000名政府员工。\n\n梅克伦堡-前波美拉尼亚州\n\n一个自托管的Nextcloud部署\n\n目前已经服务于约5000名员工。\n\n最终，这一数字将扩大到50000名公共部门工作人员，覆盖从部委到市政办公室的各类机构。\n\n该部署正在处理文件共享，接下来还将引入聊天、视频会议和群件工具等功能。现有的实施以及扩展工作由该州的IT服务提供商负责。\n\n该提供商表示，前5000名员工的SharePoint迁移过程顺利，没有出现中断或数据丢失，并进一步补充道：\n\n“与DVZ M-V一起，我们构建了一个如今运行可靠的平台，并且正在逐步扩展。”\n\n以上引文翻译自德语。\n\nNextcloud并非此次开源推进的唯一方面。梅克伦堡-前波美拉尼亚州还使用OpenProject作为专有项目管理工具的替代方案，并构建了自己的行政AI助手。\n\n这个北部州并非孤军奋战。2025年，其财政与数字化部与石勒苏益格-荷尔斯泰因州总理府签署了一项合作协议，专门旨在加强两州的数字主权。\n\n在采用开源解决方案方面，石勒苏益格-荷尔斯泰因州无需过多介绍。\n\n该州的许多政府机构已将其电子邮件系统从微软Exchange和Outlook迁移出来，在整个行政部门强制使用LibreOffice，并预计因此每年节省超过1500万欧元的许可费用。\n\n在国家层面，德国通过主权基础设施框架支持同一方向。该框架将公共行政部门的文档格式限制为两种，排除了微软的格式。\n\n该框架还倾向于使用开源工具和欧洲供应商而非外国供应商，旨在减少供应商锁定，并促进公共行政部门的数字主权。\n\n梅克伦堡-前波美拉尼亚州正在完全切断与微软的联系。SharePoint已被淘汰，但这只是目前实际宣布的范围。\n\n尽管如此，从5000名员工扩展到他们宣称的50000名以上目标是一项艰巨的任务，而两个州协调行动而非各自迁移，它们的联盟可能最终成为其他德国州效仿的榜样。\n\n奥地利部委踢走微软，改用Nextcloud\n\n好消息！奥地利部委踢走微软，改用Nextcloud\n\nBMWET在短短四个月内将1200名员工迁移至主权云。\n\n一个热衷于开源软件、定制PC组装、赛车运动以及探索这个世界无限可能的极客。\n\nTUXEDO OS将放弃Ubuntu，改用永不进入稳定版的Debian基础\n\n哈哈！微软Windows 11的存储漏洞可能吃掉500 GB磁盘空间\n\n这款电子纸PDA希望你用键盘和两个小屏幕抛弃智能手机\n\n你现在可以为Steam Machine制作电子墨水面板\n\nCanonical每年投入40000欧元支持Trifecta Tech以实现Ubuntu的Rust化\n\n成为更好的Linux用户\n\n通过FOSS周刊通讯，你可以学习有用的Linux技巧、发现应用程序、探索新发行版，并随时了解Linux世界的最新动态\n\n太好了！您已成功注册。\n\n欢迎回来！您已成功登录。\n\n您已成功订阅It's FOSS。\n\n您的链接已过期。\n\n成功！请检查您的电子邮件以获取用于登录的魔法链接。\n\n成功！您的账单信息已更新。\n\n您的账单未更新。"
+  },
+  "3c1772883fe106207b6a1740814df0ee": {
+    "id": "3c1772883fe106207b6a1740814df0ee",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMDGPU-DC-Enabling-CACP",
+    "title_en": "AMD Enabling CACP Feature On Linux For Greater OLED Power Savings",
+    "summary_en": "Today's batch of AMDGPU Display Code \"DC\" updates bring a few noteworthy items for benefiting modern hardware under Linux...",
+    "pub_date": "Thu, 09 Jul 2026 20:51:44 -0400",
+    "title_zh": "AMD 在 Linux 上启用 CACP 功能以实现更佳的 OLED 省电效果",
+    "summary_zh": "AMD 在最新的 AMDGPU DC 显示代码更新中，为 Linux 开源驱动启用了“CACP”（内容自适应对比度与功耗）功能，旨在进一步降低 OLED 显示面板的功耗。该功能属于 AMD 自适应背光管理（ABM）的一部分，已在 Windows 驱动中应用多年。此外，本次更新还启用了面板自刷新（PSR）和面板重放功能，并修复了 8K 模式解析问题。这些补丁预计将进入 Linux v7.3 内核周期。",
+    "fulltext_zh": "AMD 在 Linux 上启用 CACP 功能以实现更佳的 OLED 省电效果 - Phoronix\nAMD 在 Linux 上启用 CACP 功能以实现更佳的 OLED 省电效果\n发布于 2026 年 7 月 9 日，美国东部时间晚上 8:51。\n\n今天发布的 AMDGPU 显示代码“DC”更新带来了一些值得关注的改进，使现代硬件在 Linux 下受益。\n\n新一批 AMDGPU DC 代码更新针对其开源 Linux 驱动，带来了一些值得注意的内容，同时还有大量测试用例的添加，以期帮助保持质量并防止未来的回归问题。\n\n在今天 AMDGPU DC 补丁的变动中，引起我注意的是在 Linux 上启用了“CACP”。据称这有助于 OLED 显示面板在 Linux 上节省更多电量。此处的 CACP 是“内容自适应对比度与功耗”（Content Adaptive Contrast and Power）功能的缩写，属于 AMD 自适应背光管理（ABM）处理的一部分。\n\n补丁消息或代码注释中并未提供量化相对省电效果的数据。搜索“AMD Content Adaptive Contrast and Power”也没有太多发现。无论如何，看看这是否能为 Linux 下的 OLED 显示面板使用带来显著的省电效果，将会很有趣。\n\n代码中的一些版权注释反映了 AMD 2022 年的代码，因此这项省电功能似乎早已在其 Windows 驱动中使用。\n\n今天的 DC 补丁还在 DCN42b 变体上启用了面板自刷新（PSR）和面板重放功能，以针对该特定显示 IP 实现更大的省电效果。IPS 支持在另一个针对 DCN42b 的补丁中作为另一项省电功能被启用……这似乎是今天补丁发布在 Linux 上的一个重点。\n\n在这些补丁中，还有一个针对 8K 模式解析的修复，适用于显示 EDID 未解析的情况。由于 AMDGPU 的处理方式，某些 8K@120 和 8K@240 时序可能无法通过作为 HDMI 2.1 处理一部分的 DisplayID 扩展块正确解析。新补丁正在修复此问题。\n\n这些新补丁已经发布。考虑到时间节点，这些补丁很可能会被纳入 Linux v7.3 内核周期。\n\nAMD Linux 图形驱动致力于清除所有 BUG()\nValve 的 Marek Olšák 提交的 RADV 代码在某些 VRS 情况下可“使性能翻倍”\nRADV 和 RadeonSI 驱动迎来针对 AMD GCN 1.0/1.1 GPU 的新修复\nRADV 默认启用 Vulkan 描述符堆支持\n新的 AMD Linux 补丁公开了 Gamma 2.4 和 Gamma 2.6 曲线\n面向 ATI R300 时代 GPU 的开源驱动在 2026 年获得改进的 Power Mac 支持\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nReactOS“开源 Windows”项目现已能够运行《半条命 2》\nRust Coreutils 的 cp 命令因最新不兼容性导致 Ubuntu 镜像构建失败\nLinux 内核开发者再次讨论 AI 代理归属问题——可能将其移除\nReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进一步\n用 Rust 编写的 Vibe Coded X11 服务器增加了 Xinerama、FreeBSD 支持及其他功能\n4K @ 60 FPS USB 视频采集在 Linux 上终于变得不那么棘手\nFedora 45 考虑默认使用 x86_64 Shadow Stack\nLinux DRM 调度器补丁为任务提交延迟带来巨大改进\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "a5584a3850943652eea1a8c1094507f2": {
+    "id": "a5584a3850943652eea1a8c1094507f2",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/aws-graviton5",
+    "title_en": "Graviton5 CPU Benchmarks: 30% Geo Mean Improvement Over Graviton4",
+    "summary_en": "After originally announcing Graviton5 last December, recently AWS finally made the M9g and M9gd instances generally available as the first featuring these new in-house ARM server processors for the EC2 cloud. Graviton5 makes use of Arm Neoverse-V3 cores compared to Neoverse-V2 with Graviton4, support up to 192 cores, and feature a higher 3.3GHz clock speed compared to 2.8GHz on the prior-generation Graviton CPUs. Here is an initial look at how the Graviton5 processor performs over Graviton4.",
+    "pub_date": "Thu, 09 Jul 2026 13:53:00 -0400",
+    "title_zh": "Graviton5 CPU 基准测试：几何平均性能较 Graviton4 提升 30%",
+    "summary_zh": "AWS 近日正式推出基于 Graviton5 处理器的 M9g 和 M9gd 实例，采用 Arm Neoverse-V3 核心，最高 192 核，主频 3.3GHz，支持 DDR5-8800 内存和 PCIe Gen6。Phoronix 的独立基准测试显示，Graviton5 在 16 vCPU 配置下，几何平均性能较 Graviton4 提升约 30%，数据库、Web 应用和机器学习负载分别提升 25% 至 35%。测试在 Ubuntu 26.04 LTS 和 Linux 7.0 内核上进行，M9g 实例按需价格较 M8g 高出约 9%。",
+    "fulltext_zh": "Graviton5 CPU 基准测试：几何平均性能较 Graviton4 提升 30% - Phoronix\nGraviton5 CPU 基准测试：几何平均性能较 Graviton4 提升 30%\n2026 年 7 月 9 日下午 1:53（美国东部时间）\n\n在去年 12 月首次宣布 Graviton5 之后，近日 AWS 终于让 M9g 和 M9gd 实例普遍可用，这些实例是首批采用这些新型自研 ARM 服务器处理器的 EC2 云实例。Graviton5 采用 Arm Neoverse-V3 核心（Graviton4 采用 Neoverse-V2），支持最多 192 个核心，主频高达 3.3GHz，而上一代 Graviton CPU 的主频为 2.8GHz。以下是 Graviton5 处理器相对于 Graviton4 性能的初步观察。\n\nGraviton5 采用 Arm Neoverse-V3 Armv9.2-A 核心，提供 3.3GHz 主频、192 个核心、更大的 L3 缓存、PCIe Gen6 支持，以及相对于基于 Neoverse-V2 的 Graviton4 处理器的其他增强功能，后者已上市两年。与 Graviton4 一样，Graviton5 仍采用 12 通道 DDR5 系统内存，但速度提升至 DDR5-8800，而 Graviton4 为 DDR5-5600。\n\nAmazon Web Services 宣称，搭载 Graviton5 的 M9g 实例相比基于 Graviton4 的 M8g 实例，计算性能提升高达 25%。AWS 还宣称，M9g 在数据库性能上提升高达 30%，Web 应用性能提升高达 35%，机器学习工作负载性能提升高达 35%。出于对 Graviton5 性能的好奇，自从这些新的 EC2 实例正式可用以来，我最近一直在进行一些基准测试。\n\n由于 AWS 未提供任何评测访问权限，测试成本较高，本轮测试仅对比 Graviton4 M8g 与 Graviton5 M9g。希望了解历代 Graviton CPU 基准测试数据的读者，可以查看 Phoronix 上之前的 Graviton1 到 Graviton4 基准测试。对于那些好奇 Graviton5 与云端 AMD EPYC 和 Intel Xeon 相比如何的读者，如果读者兴趣足够支撑云成本，这些基准测试将在未来几周内以 Phoronix 的单独文章形式发布。\n\nM8g Graviton4 和 M9g Graviton5 的基准测试在 Ubuntu 26.04 LTS 上进行，使用 Linux 7.0 内核、GCC 15 以及该当前 Ubuntu LTS 版本的其他默认配置。鉴于 16 vCPU 大小似乎是不同云提供商中最常见的实例/虚拟机大小，本次 M8g 和 M9g 测试采用“4xlarge”规格，为 Graviton4 和 Graviton5 均提供 16 个 vCPU/核心。4xlarge 规格将 16 个 vCPU 与 64GB 内存配对。\n\n在俄亥俄区域，m8g.4xlarge 按需定价为每小时 0.78272 美元。同一区域 m9g.4xlarge 按需定价为每小时 0.71808 美元。在 4xlarge 规格下，选择 Graviton5 而非 Graviton4 需支付约 9% 的溢价。\n\n让我们通过这些完全独立的基准测试，看看 Graviton4 与 Graviton5 在云端 CPU 性能方面的表现。\n\n评估 AMD SEV-SNP 在现代 EPYC 虚拟机上的性能成本\nGoogle Axion CPU 在新 Google Cloud N4A 实例上的性能\nAzure 云中 AMD EPYC HPC 性能的惊人演进\nGoogle Cloud N4D 提供出色的虚拟机性能和性价比，由 AMD EPYC Turin 驱动\nAMD EPYC 9V64H 基准测试：Azure HBv5 的自定义 AMD CPU 配备 HBM3\nAMD EPYC Turin 与 Intel Xeon 6 Granite Rapids 及 Graviton4 在 AWS M8 实例上的基准测试\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "1ad3beca732ee7bcfd7f99e168655701": {
+    "id": "1ad3beca732ee7bcfd7f99e168655701",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Wayland-1.26-RC1",
+    "title_en": "Wayland 1.26 RC1 Released With New Event To Help Ensure Correct Pointer Coordinates",
+    "summary_en": "In addition to Weston 16 nearing release and its release candidate out today, the Wayland 1.26 release candidate was just issued with a few notable changes on top of the more typical bug fixing...",
+    "pub_date": "Thu, 09 Jul 2026 11:47:43 -0400",
+    "title_zh": "Wayland 1.26 RC1 发布，新增事件以帮助确保正确的指针坐标",
+    "summary_zh": "Wayland 1.26 RC1 于 2026 年 7 月 9 日发布，主要新增了 wl_pointer.warp 事件，用于解决客户端在某些场景下无法获取正确指针位置的问题，例如窗口大小变化时鼠标未移动的情况。此外，还添加了 wl_fixes.ack_global_remove 请求以处理竞态条件，并改进了 WAYLAND_DEBUG 时间戳格式。KDE KWin、GNOME Mutter、wlroots 以及 Qt 和 SDL 等工具包已准备就绪。",
+    "fulltext_zh": "Wayland 1.26 RC1 发布，新增事件以帮助确保正确的指针坐标 - Phoronix\nWayland 1.26 RC1 发布，新增事件以帮助确保正确的指针坐标\n2026 年 7 月 9 日，美国东部时间上午 11:47。\nWeston 16 即将发布，\n其候选版本已于今天推出，Wayland 1.26 候选版本刚刚发布，除了更典型的错误修复外，还带来了一些值得注意的变化。\nWayland 1.26 新增了 wl_pointer.warp 事件。wl_pointer.warp 事件的添加旨在解决一个缺陷：目前在 Wayland 中，某些情况下 Wayland 客户端无法获取指针的正确位置信息。开源开发者 YaNing Lu 对此问题解释道：\n“原始的 wl_pointer.button 事件不包含位置信息。在某些场景下，客户端无法获取正确的坐标。例如，当鼠标焦点位于某个按钮上，鼠标未移动但窗口大小发生变化时，客户端无法通过 motion 事件更新位置信息，导致鼠标位置不正确。\n因此，当指针的本地坐标因表面被移动/调整大小/全屏化而发生变化时，应发送此事件。”\n现在，使用 Wayland 1.26+，无需用户发起的 motion 事件即可通知新的（正确）指针位置。KDE KWin、GNOME Mutter 和 wlroots 已有针对此事件的补丁。此外，Qt 和 SDL 等工具包也已准备好实现。\nWayland 1.26 RC1 还添加了一个新的 wl_fixes.ack_global_remove 请求，以处理可能的竞态条件。WAYLAND_DEBUG 时间戳的格式也得到了改进，使其更易于阅读和与其他日志进行比较。\n有关今天 Wayland 1.26 RC1 发布的更多详细信息，请参见：\nNourish：一款由 Vulkan 驱动、支持无限滚动/平移的新 Wayland 合成器\n学院软件基金会宣布成立“Wayland 艺术家工作组”\n基于 Mir 的 Wayland 合成器 Miracle-WM 目标今年晚些时候发布 v1.0\nWayland 的 Weston 16 Alpha 带来 HDR 改进和 Vulkan 渲染器修复\nWine Wayland 驱动为透明度处理添加 Alpha 修饰符支持\nWayland 协议 1.49 发布，改进了多 GPU 支持并支持 Windows BT.2100\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\nReactOS“开源 Windows”项目现已能够运行《半条命 2》\nRust Coreutils 的 cp 命令因最新不兼容性导致 Ubuntu 镜像构建失败\nLinux 内核开发者再次讨论 AI 代理归属问题——可能将其移除\nReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进\n用 Rust 编写的 Vibe Coded X11 服务器增加了 Xinerama、FreeBSD 支持及其他功能\n4K @ 60 FPS USB 视频捕获在 Linux 上终于变得不那么棘手\nFedora 45 考虑默认使用 x86_64 Shadow Stack\nLinux DRM 调度器补丁大幅提升作业提交延迟\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为各自所有者的财产。保留所有权利。"
+  },
+  "e15b18f9b02eeb4a2670c418471d4514": {
+    "id": "e15b18f9b02eeb4a2670c418471d4514",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-Delay-D3cold-Patch-Fix",
+    "title_en": "Proposed Linux Patch For A Brief Delay To Match PCI Spec Will Hopefully Address Some Bugs",
+    "summary_en": "Going back to February there was a bug report around the xHCI controller dieing on resume from s2idle when using an AMD Ryzen AI Max+ \"Strix Halo\" Framework Desktop. In turn all USB devices behind the xHCI controller are lost on resume, but unbinding and binding the driver can restore the functionality without a reboot. After months of back and forth communication, it looks like a solution has been figured out and comes down to a nuance of the PCI spec with needing a brief wait...",
+    "pub_date": "Thu, 09 Jul 2026 09:35:01 -0400",
+    "title_zh": "提议的Linux补丁：短暂延迟以匹配PCI规范，有望修复若干Bug",
+    "summary_zh": "自2026年2月起，有报告称AMD Ryzen AI Max+“Strix Halo” Framework Desktop在从s2idle恢复时，xHCI控制器失效，导致USB设备丢失。经过数月沟通，AMD Linux工程师Mario Limonciello提出补丁，在D3cold路径中增加10ms延迟以符合PCI规范，从而解决此问题。该补丁仅影响通用Linux PCI驱动代码，已在Framework Desktop上验证有效。",
+    "fulltext_zh": "提议的Linux补丁：短暂延迟以匹配PCI规范，有望修复若干Bug - Phoronix\n提议的Linux补丁：短暂延迟以匹配PCI规范，有望修复若干Bug\n发布于2026年7月9日上午9:35 EDT。\n追溯到今年2月，有一个关于xHCI控制器在从s2idle恢复时失效的Bug报告，该问题出现在使用AMD Ryzen AI Max+“Strix Halo” Framework Desktop时。随后，xHCI控制器后的所有USB设备在恢复时丢失，但通过解绑和重新绑定驱动程序可以在不重启的情况下恢复功能。经过数月的反复沟通，似乎已经找到了解决方案，关键在于PCI规范的一个细微之处——需要短暂等待。\nFramework Computer最初报告了这个Linux内核Bug，一些客户遇到了该问题。AMD Linux工程师Mario Limonciello最终设计了一个补丁，似乎能正确解决某些硬件上xHCI控制器在恢复时丢失的问题。\nPCI规范规定了将功能从D3状态编程到D0状态后，访问前所需的最小恢复时间。PCI规范中明确指出这是10ms的延迟。但Linux内核在D3cold路径中没有任何强制延迟，仅在D3hot路径中有。通过这个即将合入的Linux内核补丁，在D3cold路径中确保了10ms的延迟，从而有望解决此问题。\nLimonciello在内核邮件列表中解释道：\n“有报告称，在某些系统上，xHCI主机控制器在恢复后无法正常工作。这个问题存在一定的失败率，但令人困惑的是，失败率与BIOS预留的VRAM大小相关。\n也就是说，如果VRAM预留较小（例如512MB），则不会出现失败。有些评论提到，VRAM越大，失败率越高。我个人并不完全理解这为何会有影响，但我想提出来，或许能启发其他人。\n各种变通方法有效：\n* 使用传统中断而非MSI\n* 在恢复时重置控制器\n* 在xHCI和显示PCI设备之间创建设备链接依赖（用于设备恢复顺序）\n不过，这些变通方法似乎都没有触及问题的根本。\n我对代码进行了一些追踪，并交叉参考了PCI规范。xHCI控制器在挂起时应处于D3cold状态，因此需要经历D3到D0的转换。PCI规范指出，D3转换需要10ms的延迟。\n然而，对于处于D3cold的端点，我们没有任何强制延迟，只有桥接设备才有。对于端点，我们仅在D3hot中有强制延迟。\n因此，我怀疑在D3cold到D0转换中增加强制延迟将有助于解决此问题，这正是这个补丁系列所做的。”\n这个补丁仅影响通用的Linux PCI驱动代码。从自2月以来跟踪此问题的kernel.org Bug报告来看，该补丁至少在Framework Desktop上修复了此问题。\nLinux 7.3将使禁用Syscall User Dispatch更容易\nLinux 7.3预计将“扁平化选择”以改善游戏及其他场景的调度\nLinux 7.2-rc2发布：“一切看起来非常正常”\nLinux DRM调度器补丁大幅提升作业提交延迟\nLinux 7.2-rc2 BPF代码正在加强以抵御JIT Spray攻击\nLinux准备淘汰其32位MSR接口\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动等主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\nReactOS“开源Windows”项目现已能运行《半条命2》\nRust Coreutils cp因最新不兼容性导致Ubuntu镜像构建失败\nLinux内核开发者"
+  },
+  "286dbb79b0cee3d0e116b8f36af25ef8": {
+    "id": "286dbb79b0cee3d0e116b8f36af25ef8",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/ThinkPad-USB-C-Restricted-Mode",
+    "title_en": "Linux Prepares For New USB-C Security Feature On Lenovo ThinkPads",
+    "summary_en": "Newer Lenovo ThinkPad systems feature a security feature called USB-C Security Restricted Mode that is in the process of being wired up for reporting under Linux...",
+    "pub_date": "Thu, 09 Jul 2026 09:02:38 -0400",
+    "title_zh": "Linux 为联想 ThinkPad 准备新的 USB-C 安全功能",
+    "summary_zh": "联想新款 ThinkPad 系统引入了名为 USB-C 安全限制模式的安全功能，该功能允许 USB-C 供电但禁用数据连接，适用于自助服务终端或物理安全环境。Linux 正在通过 ThinkPad ACPI 驱动支持此功能，用户可通过 /sys/devices/platform/thinkpad_acpi/usb_c_security 文件查看其状态。",
+    "fulltext_zh": "Linux 为联想 ThinkPad 准备新的 USB-C 安全功能 - Phoronix\nLinux 为联想 ThinkPad 准备新的 USB-C 安全功能\n发布于 2026 年 7 月 9 日上午 09:02（美国东部时间）。\n\n新款联想 ThinkPad 系统配备了一项名为 USB-C 安全限制模式的安全功能，该功能正在被集成到 Linux 中以便进行报告。\n\n当 USB-C 安全限制模式启用时，供电功能保持开启，但 USB-C 数据连接被禁用。这样既保留了 USB 充电能力，又不允许任何 USB 数据传输。其设计目的是用于自助服务终端类部署或物理安全环境，这些场景下不希望允许任何 USB 数据传输，或需要防范潜在的恶意 USB-C 设备。\n\nUSB-C 安全（USCS）功能正在 Linux 中通过 ThinkPad ACPI 驱动实现切换。在支持此安全功能的兼容新款 ThinkPad 上，可以通过以下方式启用支持：\n\n通过此 Linux 支持，在兼容的 Linux 系统上，该 USB-C 安全功能的当前状态将通过 /sys/devices/platform/thinkpad_acpi/usb_c_security 暴露，用于反映其是启用还是禁用——或者通过检查该文件是否存在来判断你的特定联想系统是否具备此功能。\n\n最新的联想 ThinkPad ACPI 驱动已为此 USB-C 安全功能做好了准备。\n\nPioneer DJM-S11 专业 DJ 混音器将获 Linux 7.3 支持\nUniwill 笔记本驱动为 Linux 7.3 准备多项功能\nOpenRazer 3.12.4 修复与 Linux 7.2 的兼容性\n4K @ 60 FPS USB 视频采集在 Linux 上终于不再那么棘手\nUPower 1.91.3 修复行为以避免加速笔记本电池老化\nSystem76 推出搭载 Intel Panther Lake 的新款 Lemur Pro 笔记本\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nReactOS“开源 Windows”项目现已能够运行《半条命 2》\nRust Coreutils cp 因最新不兼容性导致 Ubuntu 镜像构建失败\nLinux 内核开发者再次讨论 AI 代理归属——可能将其移除\nReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进一步\n用 Rust 编写的 Vibe Coded X11 服务器增加了 Xinerama、FreeBSD 支持及其他功能\n4K @ 60 FPS USB 视频采集在 Linux 上终于不再那么棘手\nFedora 45 考虑默认启用 x86_64 Shadow Stack\nLinux DRM 调度器补丁大幅改善作业提交延迟\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "fa8ef10848c71076e3361ef9b0e072aa": {
+    "id": "fa8ef10848c71076e3361ef9b0e072aa",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/how-to-stop-linux-processes-from-using-excessive-cpu-and-ram/",
+    "title_en": "How to Stop Linux Processes from Using Excessive CPU and RAM",
+    "summary_en": "Learn how to identify and stop Linux processes that drain CPU and RAM resources. Optimize your system's performance with our comprehensive guide.\nThe post How to Stop Linux Processes from Using Excessive CPU and RAM appeared first on Linux Today.",
+    "pub_date": "Thu, 09 Jul 2026 07:24:45 +0000",
+    "title_zh": "如何阻止Linux进程过度使用CPU和RAM",
+    "summary_zh": "本文介绍如何识别并停止消耗大量CPU和RAM资源的Linux进程，通过实用命令和工具优化系统性能，帮助用户有效管理资源占用，提升系统响应速度。",
+    "fulltext_zh": "学习如何识别并停止消耗CPU和RAM资源的Linux进程。通过我们的全面指南优化系统性能。\n本文《如何阻止Linux进程过度使用CPU和RAM》首发于Linux Today。"
+  },
+  "23f335f0b9709d6307596875b07d445d": {
+    "id": "23f335f0b9709d6307596875b07d445d",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/new-http-2-bomb-dos-attack-hits-nginx-apache-iis-envoy-and-pingora/",
+    "title_en": "New HTTP/2 Bomb DoS Attack Hits Nginx, Apache, IIS, Envoy, and Pingora",
+    "summary_en": "Explore the implications of the HTTP/2 Bomb DoS attack on Nginx, Apache, IIS, Envoy, and Pingora. Get essential tips for enhancing your server security.\nThe post New HTTP/2 Bomb DoS Attack Hits Nginx, Apache, IIS, Envoy, and Pingora appeared first on Linux Today.",
+    "pub_date": "Thu, 09 Jul 2026 07:21:36 +0000",
+    "title_zh": "新型HTTP/2炸弹DoS攻击影响Nginx、Apache、IIS、Envoy和Pingora",
+    "summary_zh": "一种名为“HTTP/2炸弹”的新型拒绝服务攻击正在影响包括Nginx、Apache、IIS、Envoy和Pingora在内的主流Web服务器。本文探讨了该攻击的原理及其对服务器安全的影响，并提供了增强服务器防护的关键建议。",
+    "fulltext_zh": "探讨HTTP/2炸弹DoS攻击对Nginx、Apache、IIS、Envoy和Pingora的影响。获取增强服务器安全的关键建议。\n\n该文章《New HTTP/2 Bomb DoS Attack Hits Nginx, Apache, IIS, Envoy, and Pingora》最早出现在Linux Today上。"
+  },
+  "eb4844431cb235dae844ad5445b3db61": {
+    "id": "eb4844431cb235dae844ad5445b3db61",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/blender-5-2-lts-promises-new-fill-tool-and-thin-wall-mode-beta-out-now/",
+    "title_en": "Blender 5.2 LTS Promises New Fill Tool and Thin Wall Mode, Beta Out Now",
+    "summary_en": "Blender 5.2 LTS introduces exciting updates like the Fill Tool and Thin Wall Mode. Check out the beta release and enhance your 3D projects now!\nThe post Blender 5.2 LTS Promises New Fill Tool and Thin Wall Mode, Beta Out Now appeared first on Linux Today.",
+    "pub_date": "Thu, 09 Jul 2026 07:19:34 +0000",
+    "title_zh": "Blender 5.2 LTS 承诺推出新填充工具和薄壁模式，测试版现已发布",
+    "summary_zh": "Blender 5.2 LTS 版本引入了令人兴奋的更新，包括填充工具和薄壁模式。测试版现已发布，可立即用于提升3D项目。",
+    "fulltext_zh": "Blender 5.2 LTS 引入了令人兴奋的更新，如填充工具和薄壁模式。立即查看测试版发布，提升您的3D项目！\n\n该文章 Blender 5.2 LTS 承诺推出新填充工具和薄壁模式，测试版现已发布 最初出现在 Linux Today 上。"
+  },
+  "73aea34f8ed89e95484e35f986766e18": {
+    "id": "73aea34f8ed89e95484e35f986766e18",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/arch-linux-2026-leadership-election-keeps-polyak-in-charge/",
+    "title_en": "Arch Linux 2026 Leadership Election Keeps Polyak in Charge",
+    "summary_en": "Discover the results of the 2026 Arch Linux Leadership Election, where Polyak continues to lead the community. Explore the implications for future developments.\nThe post Arch Linux 2026 Leadership Election Keeps Polyak in Charge appeared first on Linux Today.",
+    "pub_date": "Thu, 09 Jul 2026 07:17:59 +0000",
+    "title_zh": "Arch Linux 2026领导层选举：Polyak继续掌舵",
+    "summary_zh": "Arch Linux 2026年领导层选举结果揭晓，Polyak继续担任社区领导。本文探讨了这一结果对未来发展的影响。",
+    "fulltext_zh": "了解2026年Arch Linux领导层选举的结果，Polyak将继续领导社区。探讨对未来发展的影响。\n\n该文章Arch Linux 2026领导层选举：Polyak继续掌舵首次出现在Linux Today上。"
+  },
+  "fa3a640abefe4501c32ba7b62100eb5e": {
+    "id": "fa3a640abefe4501c32ba7b62100eb5e",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/peladn-wo4-5600h-mini-pc-power-consumption/",
+    "title_en": "PELADN WO4 5600H Mini PC: Power Consumption",
+    "summary_en": "Discover the energy efficiency of the PELADN WO4 5600H Mini PC. Learn how its power consumption impacts performance and your energy bills.\nThe post PELADN WO4 5600H Mini PC: Power Consumption appeared first on Linux Today.",
+    "pub_date": "Thu, 09 Jul 2026 07:14:31 +0000",
+    "title_zh": "PELADN WO4 5600H 迷你PC：功耗解析",
+    "summary_zh": "本文介绍了PELADN WO4 5600H迷你PC的能效表现，分析了其功耗对性能及电费的影响，帮助用户了解这款设备在实际使用中的能耗特点。",
+    "fulltext_zh": "探索PELADN WO4 5600H迷你PC的能效表现。了解其功耗如何影响性能以及您的电费开支。\n该文章最初发表于Linux Today。"
   }
 }
