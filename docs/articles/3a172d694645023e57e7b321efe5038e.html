@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>笑死！微软Windows 11存储漏洞可能吞噬500GB磁盘空间 — Linux 中文速报</title>
+<title>Linux DT补丁为Apple M3 Pro / Max / Ultra提供非常基础的支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>笑死！微软Windows 11存储漏洞可能吞噬500GB磁盘空间</h1>
+  <h1>Linux DT补丁为Apple M3 Pro / Max / Ultra提供非常基础的支持</h1>
 
-  <div class="article-summary">微软Windows 11存在一个存储漏洞，一个名为CapabilityAccessManager.db-wal的日志文件会异常膨胀至超过500GB，占用大量磁盘空间。有用户向微软客服反映此问题，却被告知建议购买新硬盘而非修复漏洞。该问题早在2024年就有报告，但微软直到2025年6月才在预览更新中提及，预计2026年7月才全面修复。</div>
+  <div class="article-summary">Linux 7.2内核已初步支持Apple M3 SoC设备启动，但仅限控制台模式，缺乏图形加速等日常功能。近日，一组新的设备树（DT）补丁扩展了支持范围，使M3 Pro、M3 Max和M3 Ultra设备也能启动主线Linux内核。补丁由Asahi Linux贡献者Janne Grunau提交，涵盖了CPU核心、中断控制器、电源状态、看门狗、串口、引脚控制器、I2C及启动帧缓冲等基础硬件支持。M3 Pro与M3 Max在设计上有所区别，M3 Ultra则与M3 Max共享兼容前缀。这些补丁有望在Linux v7.3周期合入主线。</div>
 
-  <div class="article-body"><p>笑死！微软Windows 11存储漏洞可能吞噬500GB磁盘空间</p><p>一名微软客服代理甚至建议用户购买新硬盘，而不是承认问题的存在。</p><p>我们已经习惯了听到Copilot在Windows机器上占用存储空间、出现在它本不该出现的应用程序中，并且通常对任何喜欢无AI电脑的人来说是个麻烦。</p><p>现在，我们遇到了一个Windows日志文件，它一直在悄悄吞噬人们存储驱动器上的空间，而一名微软客服代理甚至在用户投诉时建议购买新硬盘。</p><p>罪魁祸首是CapabilityAccessManager.db-wal，这是Windows用于跟踪摄像头、麦克风和位置权限请求的数据库的预写日志。它本应保持几兆字节大小，并在大约一个月后自行清除。然而，它却可能膨胀到超过500GB，并藏在一个Windows甚至不允许你打开查看的文件夹中。</p><p>收到购买硬盘建议的用户是Donald Gibson，他在微软的问答论坛上发帖称，他的存储空间膨胀到了111GB，而本应只有40GB左右，全因一个66.5GB的CapabilityAccessManager.db-wal文件吞噬了他221GB硬盘上的宝贵空间。</p><p>当他联系微软支持时，客服代理从未听说过这个漏洞，不得不请主管介入后才回复。结果是建议购买一个新的便携式硬盘，而没有帮助删除这个膨胀的文件。</p><p>这并非过去几个月才出现的新问题，同一文件在另一台机器上膨胀到了513GB，且没有任何文件夹可以解释空间去了哪里。</p><p>该问题直到6月29日才被提及，悄悄附在预览更新的发布说明中，位于“已知问题”部分，而该更新早在六天前就已发布。</p><p>但并非所有人现在都会遇到此问题，因为全面修复预计随2026年7月的更新推出，这距离首次报告出现已过去一年多。</p><p>同一更新还带来了重新设计的开始菜单、新的时间点恢复功能以及对更大本地AI模型的支持，所以微软并非缺少工程工时。</p><p>Brave表示这不是隐私功能</p><p>Brave表示这不是隐私功能，但使用容器有其好处</p><p>Brave浏览器1.92引入了对容器的支持，可隔离每个标签页的Cookie和网站数据。</p><p>一个热爱开源软件、定制PC组装、赛车运动以及探索这个世界无限可能的极客。</p><p>这款电子纸PDA希望您用键盘和两个小屏幕抛弃智能手机</p><p>您现在可以为Steam Machine制作电子墨水面板</p><p>Canonical每年投入40,000欧元支持Trifecta Tech将Ubuntu Rust化</p><p>迷因回归！Hannah Montana Linux在2026年重获新生</p><p>Sipeed的新KVM希望AI代理能查看并控制您的屏幕</p><p>成为更好的Linux用户</p><p>通过FOSS周刊通讯，您将学习有用的Linux技巧、发现应用程序、探索新发行版，并随时了解Linux世界的最新动态</p><p>太好了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅It's FOSS。</p><p>您的链接已过期。</p><p>成功！请检查您的电子邮件以获取魔法链接登录。</p><p>成功！您的账单信息已更新。</p><p>您的账单未更新。</p></div>
+  <div class="article-body"><p>Linux DT补丁为Apple M3 Pro / Max / Ultra提供非常基础的支持 - Phoronix</p><p>Linux DT补丁为Apple M3 Pro / Max / Ultra提供非常基础的支持</p><p>发布于2026年7月10日 06:26 EDT</p><p>上游已合入Linux 7.2内核的是对Apple M3 SoC设备启动Linux的初步支持。但这只是最基础的支持，仅能启动到控制台，尚未提供任何加速图形或其他日常使用M3 Apple设备于Linux上所需的典型功能。现在，这项工作得到了补充：额外的设备树补丁也支持在M3 Pro / Max / Ultra设备上启动Linux。</p><p>继Linux 7.2的Apple M3初步启动支持以及一些针对Apple M4 SoC的初始DT补丁之后，现在有一组设备树补丁正在审查中，旨在让Apple M3 Pro / M3 Max / M3 Ultra硬件能够使用主线Linux内核启动。</p><p>Asahi Linux贡献者Janne Grunau在解释这个M3 Pro/Max/Ultra启动补丁系列时表示：</p><p>“本系列为搭载M3 Pro、Max和Ultra SoC的Apple Silicon设备添加了设备树。M3代设备比其前代M1和M2要少。唯一的非笔记本电脑设备是M3 Ultra Mac Studio。笔记本电脑则是已知的14英寸和16英寸MacBook Pro，现在搭载M3 Pro和M3 Max SoC。核心数较少的M3 Max变体除了内存总线为384位而非完整M3 Max的512位外，还有一个独立的标识符（T6034），因此共有六个笔记本电脑设备树。</p><p>与M1和M2 Pro/Max/Ultra的另一个区别是，M3 Pro是一个独立的SoC设计，而非较小的M3 Max。因此，两种M3 Max变体和M3 Ultra将使用“apple,t6030”作为兼容前缀。在M1和M2代中，Pro、Max和Ultra SoC共享“apple,t6000”/“apple,t6020”作为通用前缀。目前没有已知差异，但M3 Pro和M3 Max之间的关系不如以前那么紧密。</p><p>本系列添加了与v7.2-rc1中基础M3（T8122）相同级别的硬件支持。这包括CPU核心、中断控制器、电源状态、看门狗、串口、引脚控制器、I2C和启动帧缓冲。这旨在作为基础，以便可以同时为所有基于M3的设备添加对其他硬件的支持。”</p><p>对于这些早在2023年11月发布的Apple设备，这是主线Linux支持朝着正确方向迈出的一步。要让Apple M3级别的硬件在Linux上完全可用，具备GPU支持以及所有其他集成设备功能，尤其是对于MacBook笔记本电脑，还需要更长时间。</p><p>感兴趣的人可以通过以下链接找到Apple M3 Pro/Max/Ultra在Linux上的初始设备树工作。如果一切顺利，这些初始DT补丁最早可能在Linux v7.3周期合入主线。</p><p>已发布用于在Linux上启动Apple M4的初始补丁</p><p>Asahi Linux修复了与macOS 27的启动问题，在M3和Apple视频解码方面取得进展</p><p>发布了新的Linux驱动程序，用于在M3 MacBook上启用键盘支持</p><p>Linux最终终止了AppleTalk协议支持</p><p>macOS 27 Beta破坏了启动Asahi Linux的能力</p><p>Linux 7.2将能够在Apple M3 Mac上启动——但对最终用户来说远非实用</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立了该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动程序及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他。</p><p>ReactOS“开源Windows”项目现在能够运行《半条命2》</p><p>Rust Coreutils的cp命令因最新不兼容性导致Ubuntu镜像构建失败</p><p>Linux内核开发者再次讨论AI代理归属问题——可能将其移除</p><p>ReactOS实现了首个Windows NT6系统调用，向Vista兼容性迈进一步</p><p>用Vibe编码的X11服务器（Rust编写）增加了Xinerama、FreeBSD支持及其他功能</p><p>LibreOffice 26.8 Beta</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/windows-11-cam-bug/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-DT-Apple-M3-Pro-Max-Ultra" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

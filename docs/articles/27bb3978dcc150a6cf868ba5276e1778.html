@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>笑死！微软Windows 11存储漏洞可能吞噬500GB磁盘空间 — Linux 中文速报</title>
+<title>Linux 7.3 为现代 AMD APU 启用第二图形管道 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>笑死！微软Windows 11存储漏洞可能吞噬500GB磁盘空间</h1>
+  <h1>Linux 7.3 为现代 AMD APU 启用第二图形管道</h1>
 
-  <div class="article-summary">微软Windows 11存在一个存储漏洞，一个名为CapabilityAccessManager.db-wal的日志文件会异常膨胀至超过500GB，占用大量磁盘空间。有用户向微软客服反映此问题，却被告知建议购买新硬盘而非修复漏洞。该问题早在2024年就有报告，但微软直到2025年6月才在预览更新中提及，预计2026年7月才全面修复。</div>
+  <div class="article-summary">AMD 向 DRM-Next 提交了新一轮 AMDGPU 内核图形驱动和 AMDKFD 内核计算驱动更新，为 Linux 7.3 合并窗口做准备。其中一项关键变化是为基于 GFX11 的 APU（包括 RDNA3 和 RDNA3.5）启用第二图形管道（pipe1）支持。该功能仅适用于使用 F32 微控制器的 GFX11 芯片，有助于改善硬件优先级任务调度和图形工作队列，提升稳定性和性能。此外，更新还包含 PSP 15.0.9、SMU 15.0.9 IP 模块更新、错误修复、RAS 更新以及消除 BUG() 使用的补丁。</div>
 
-  <div class="article-body"><p>笑死！微软Windows 11存储漏洞可能吞噬500GB磁盘空间</p><p>一名微软客服代理甚至建议用户购买新硬盘，而不是承认问题的存在。</p><p>我们已经习惯了听到Copilot在Windows机器上占用存储空间、出现在它本不该出现的应用程序中，并且通常对任何喜欢无AI电脑的人来说是个麻烦。</p><p>现在，我们遇到了一个Windows日志文件，它一直在悄悄吞噬人们存储驱动器上的空间，而一名微软客服代理甚至在用户投诉时建议购买新硬盘。</p><p>罪魁祸首是CapabilityAccessManager.db-wal，这是Windows用于跟踪摄像头、麦克风和位置权限请求的数据库的预写日志。它本应保持几兆字节大小，并在大约一个月后自行清除。然而，它却可能膨胀到超过500GB，并藏在一个Windows甚至不允许你打开查看的文件夹中。</p><p>收到购买硬盘建议的用户是Donald Gibson，他在微软的问答论坛上发帖称，他的存储空间膨胀到了111GB，而本应只有40GB左右，全因一个66.5GB的CapabilityAccessManager.db-wal文件吞噬了他221GB硬盘上的宝贵空间。</p><p>当他联系微软支持时，客服代理从未听说过这个漏洞，不得不请主管介入后才回复。结果是建议购买一个新的便携式硬盘，而没有帮助删除这个膨胀的文件。</p><p>这并非过去几个月才出现的新问题，同一文件在另一台机器上膨胀到了513GB，且没有任何文件夹可以解释空间去了哪里。</p><p>该问题直到6月29日才被提及，悄悄附在预览更新的发布说明中，位于“已知问题”部分，而该更新早在六天前就已发布。</p><p>但并非所有人现在都会遇到此问题，因为全面修复预计随2026年7月的更新推出，这距离首次报告出现已过去一年多。</p><p>同一更新还带来了重新设计的开始菜单、新的时间点恢复功能以及对更大本地AI模型的支持，所以微软并非缺少工程工时。</p><p>Brave表示这不是隐私功能</p><p>Brave表示这不是隐私功能，但使用容器有其好处</p><p>Brave浏览器1.92引入了对容器的支持，可隔离每个标签页的Cookie和网站数据。</p><p>一个热爱开源软件、定制PC组装、赛车运动以及探索这个世界无限可能的极客。</p><p>这款电子纸PDA希望您用键盘和两个小屏幕抛弃智能手机</p><p>您现在可以为Steam Machine制作电子墨水面板</p><p>Canonical每年投入40,000欧元支持Trifecta Tech将Ubuntu Rust化</p><p>迷因回归！Hannah Montana Linux在2026年重获新生</p><p>Sipeed的新KVM希望AI代理能查看并控制您的屏幕</p><p>成为更好的Linux用户</p><p>通过FOSS周刊通讯，您将学习有用的Linux技巧、发现应用程序、探索新发行版，并随时了解Linux世界的最新动态</p><p>太好了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅It's FOSS。</p><p>您的链接已过期。</p><p>成功！请检查您的电子邮件以获取魔法链接登录。</p><p>成功！您的账单信息已更新。</p><p>您的账单未更新。</p></div>
+  <div class="article-body"><p>Linux 7.3 为现代 AMD APU 启用第二图形管道 - Phoronix</p><p>Linux 7.3 为现代 AMD APU 启用第二图形管道</p><p>发布于 2026 年 7 月 10 日上午 09:32（美国东部时间）</p><p>周四，AMD 向 DRM-Next 发送了新一轮 AMDGPU 内核图形驱动和 AMDKFD 内核计算驱动更新，这些更新包含了 Linux 7.3 合并窗口之前的新功能材料。</p><p>本周一个突出的变化是为 GFX11 APU 启用了图形“pipe1”支持。这项工作旨在为基于 GFX11 的现代 APU/SoC（包括 RDNA3 和 RDNA3.5 APU）启用第二图形管道。AMD Linux 工程师 Alex Deucher 在启用说明中解释道：</p><p>“启用 gfx pipe1 硬件支持。此功能仅在使用 F32 微控制器的 gfx11 芯片上可用。使用 RS64 微控制器的芯片无法使用第二 gfx 管道。实际上，这意味着第二管道仅在 APU 上可用。这解释了 Pierre-Eric 之前在 Navi33 上看到的稳定性问题。”</p><p>因此，现在对于 GFX11 APU，每个微引擎（ME）的第二管道正在这些当前的 AMD APU 上启用。这种 pipe1 硬件支持应有助于硬件优先级任务调度和更多图形工作队列，从而提高稳定性和性能。</p><p>除了 GFX11 APU 的 pipe1 支持外，本周的 AMDGPU 功能材料还包括 PSP 15.0.9 和 SMU 15.0.9 IP 模块的更新、各种错误修复、RAS 更新以及其他主要是小的代码更改。此拉取请求还包括一些用于消除 AMD 内核驱动代码中 BUG() 使用的补丁。</p><p>本周针对 Linux 7.3 的 DRM-Next 功能补丁的完整列表可通过以下链接查看：</p><p>AMD 在 Linux 上启用 CACP 功能以实现更大的 OLED 省电效果</p><p>AMD Linux 图形驱动致力于清除所有 BUG()</p><p>Valve 的 Marek Olšák 提交的 RADV 代码在某些 VRS 情况下可使性能翻倍</p><p>RADV 和 RadeonSI 驱动为 AMD GCN 1.0/1.1 GPU 带来新修复</p><p>RADV 默认启用 Vulkan 描述符堆支持</p><p>新的 AMD Linux 补丁暴露了 Gamma 2.4 和 Gamma 2.6 曲线</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>ReactOS“开源 Windows”项目现已能够运行《半条命 2》</p><p>Rust Coreutils cp 因最新不兼容性导致 Ubuntu 镜像构建失败</p><p>Linux 内核开发者再次讨论 AI 代理归属问题——可能将其移除</p><p>ReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进</p><p>用 Rust 编写的 Vibe Coded X11 服务器增加了 Xinerama、FreeBSD 支持及其他功能</p><p>LibreOffice 26.8 Beta 发布，改进了这款自由软件办公套件</p><p>4K @ 60 FPS USB 视频捕获在 Linux 上终于不再那么棘手</p><p>Proton 11.0-1 发布，推动 Valve 的 Steam Play 实现最佳 Linux 体验</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/windows-11-cam-bug/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-Second-Pipe-GFX11-APU" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

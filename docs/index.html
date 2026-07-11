@@ -150,7 +150,7 @@
   <div class="header-inner">
     <a class="logo" href="index.html">$ linux<span>-news</span></a>
     <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
-    <div class="update-time">更新于 2026年07月10日</div>
+    <div class="update-time">更新于 2026年07月11日</div>
   </div>
 </header>
 
@@ -163,8 +163,23 @@
 <main>
 
       <section class="category-section">
-        <h2 class="section-title">发行版 <span class="count">14</span></h2>
+        <h2 class="section-title">发行版 <span class="count">18</span></h2>
         <div class="grid">
+        <article class="card">
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">OMG! Ubuntu</span>
+           </div>
+          <h2 class="card-title">
+            <a href="articles/54624b5eb2c7bd62ca713829ae750409.html">Ubuntu 26.10 在运行22年后将 dbus-daemon 退役为默认</a>
+          </h2>
+          <p class="card-summary">Ubuntu 26.10 将自2004年以来首次更换其 D-Bus 实现，用 dbus-broker 取代 dbus-daemon。这一变化对终端用户几乎无影响，因为 dbus-broker 是即插即用的替代品，使用相同的协议、配置文件和总线策略。新实现采用异步事件驱动设计，能避免消息丢失并加快查找速度。此前因 Ubuntu 政策不允许重复包共存以及 AppArmor 兼容性问题，切换延迟至今。用户可在 Ubuntu 26.04 LTS 上手动安装测试。</p>
+          <div class="card-actions">
+            <a class="btn-detail" href="articles/54624b5eb2c7bd62ca713829ae750409.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.omgubuntu.co.uk/2026/07/ubuntu-26-10-dbus-broker" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </article>
+
         <article class="card">
            <div class="card-meta">
              <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
@@ -228,15 +243,15 @@
         <article class="card">
            <div class="card-meta">
              <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
-             <span class="source">OMG! Ubuntu</span>
+             <span class="source">It's FOSS News</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/89080a0b09379b6102b2317b0bab530d.html">Ubuntu 将时间同步工具替换为基于 Rust 的版本</a>
+            <a href="articles/6e0b12ffd96d4da812931bb5be83158b.html">Linux Mint 现已将 Wayland 视为稳定版</a>
           </h2>
-          <p class="card-summary">Ubuntu 计划将其默认时间同步客户端从 Chrony 替换为基于 Rust 的 NTP 实现，以提升内存安全性和系统稳定性。Canonical 已成为 Trifecta Tech Foundation 的金牌赞助商，每年提供 4 万欧元资助其内存安全软件项目。新工具将在 Ubuntu 26.10 中提供测试，并计划于 Ubuntu 27.04 中成为默认配置。此举是 Ubuntu 全面拥抱 Rust 语言、逐步“氧化”发行版的一部分。</p>
+          <p class="card-summary">Linux Mint 项目宣布，从下一个 Cinnamon 版本开始，Wayland 将不再被视为“实验性”功能，而是与 X11 一同获得完全支持。尽管 Mint 在 Wayland 采用上比 Ubuntu 和 Fedora 等发行版慢得多，但团队通过充分准备确保了稳定性。新版本将带来更清晰的图标、更好的鼠标光标、多显示器改进、硬件加速支持，以及重新设计的屏幕保护程序。此外，Linux Mint 23 已推迟至 2026 年圣诞节发布，以便为 Wayland 集成留出更多时间。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/89080a0b09379b6102b2317b0bab530d.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.omgubuntu.co.uk/2026/07/ubuntu-ntpd-rs-rust-time-sync" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/6e0b12ffd96d4da812931bb5be83158b.html">查看全文翻译</a>
+            <a class="read-more" href="https://itsfoss.com/news/linux-mint-wayland-stable/" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article>
 
@@ -336,12 +351,42 @@
              <span class="source">Phoronix</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/1ad3beca732ee7bcfd7f99e168655701.html">Wayland 1.26 RC1 发布，新增事件以帮助确保正确的指针坐标</a>
+            <a href="articles/d4070e3c1eda83f81f5b4de026b4425b.html">Pop!_OS 为其 COSMIC 桌面环境推出“磨砂玻璃”风格</a>
           </h2>
-          <p class="card-summary">Wayland 1.26 RC1 于 2026 年 7 月 9 日发布，主要新增了 wl_pointer.warp 事件，用于解决客户端在某些场景下无法获取正确指针位置的问题，例如窗口大小变化时鼠标未移动的情况。此外，还添加了 wl_fixes.ack_global_remove 请求以处理竞态条件，并改进了 WAYLAND_DEBUG 时间戳格式。KDE KWin、GNOME Mutter、wlroots 以及 Qt 和 SDL 等工具包已准备就绪。</p>
+          <p class="card-summary">System76 为 Pop!_OS 的 COSMIC 桌面环境开发了“磨砂玻璃”外观，现已面向 Pop!_OS 24.04 用户开放。用户可通过“设置/桌面/外观”下的“风格”选项启用。该功能将在下周 COSMIC 发布新版本后，推广至其他 Linux 发行版。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/1ad3beca732ee7bcfd7f99e168655701.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.phoronix.com/news/Wayland-1.26-RC1" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/d4070e3c1eda83f81f5b4de026b4425b.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.phoronix.com/news/COSMIC-Frosted-Glass-Arrives" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </article>
+
+        <article class="card">
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">Phoronix</span>
+           </div>
+          <h2 class="card-title">
+            <a href="articles/ed6f3e16ad49372d59c67e271d1a683d.html">Wine 11.13 更好地支持输入指针，改进 X11 键盘扫描码映射</a>
+          </h2>
+          <p class="card-summary">Wine 11.13 作为最新的双周开发版发布，改进了输入指针支持，并优化了 X11 的键盘扫描码映射。此外，ARM64EC 平台启用了 FFmpeg 多媒体优化，并修复了 22 个已知错误，涉及《侠盗猎车手：罪恶都市》等游戏及 Adobe Acrobat Pro 7 等应用。</p>
+          <div class="card-actions">
+            <a class="btn-detail" href="articles/ed6f3e16ad49372d59c67e271d1a683d.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.phoronix.com/news/Wine-11.13-Released" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </article>
+
+        <article class="card">
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">Phoronix</span>
+           </div>
+          <h2 class="card-title">
+            <a href="articles/99fad012ea54bdafde1d93e3950d8609.html">KDE Plasma 6.7 X11 vs. Wayland 会话游戏性能对比：CachyOS 上的 NVIDIA</a>
+          </h2>
+          <p class="card-summary">本文对比了在基于 Arch Linux 的 CachyOS 系统上，KDE Plasma 6.7.2 的 X11 与 Wayland 会话在 NVIDIA 显卡下的游戏性能。测试使用搭载 RTX 5090 的 Razer Blade 18 笔记本，运行最新驱动。结果显示 Wayland 会话在多数场景下与 X11 持平或更优，为 Plasma 6.8 移除 X11 支持提供了性能参考。</p>
+          <div class="card-actions">
+            <a class="btn-detail" href="articles/99fad012ea54bdafde1d93e3950d8609.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.phoronix.com/review/plasma-67-wayland-cachyos" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article>
 
@@ -351,12 +396,12 @@
              <span class="source">Linux Today</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/eb4844431cb235dae844ad5445b3db61.html">Blender 5.2 LTS 承诺推出新填充工具和薄壁模式，测试版现已发布</a>
+            <a href="articles/b9d865fbdcd0ae87f39c32dd3c59acdd.html">Star Labs 发布支持 AMD Cezanne 系统的固件 26.06</a>
           </h2>
-          <p class="card-summary">Blender 5.2 LTS 版本引入了令人兴奋的更新，包括填充工具和薄壁模式。测试版现已发布，可立即用于提升3D项目。</p>
+          <p class="card-summary">Star Labs 发布了固件版本 26.06，主要新增对基于 AMD Cezanne 架构系统的支持，提升了兼容性。该更新旨在优化系统性能，用户可立即升级以增强设备能力。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/eb4844431cb235dae844ad5445b3db61.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.linuxtoday.com/blog/blender-5-2-lts-promises-new-fill-tool-and-thin-wall-mode-beta-out-now/" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/b9d865fbdcd0ae87f39c32dd3c59acdd.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.linuxtoday.com/blog/star-labs-releases-firmware-26-06-with-support-for-amd-cezanne-based-systems/" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article>
 
@@ -366,18 +411,33 @@
              <span class="source">Linux Today</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/73aea34f8ed89e95484e35f986766e18.html">Arch Linux 2026领导层选举：Polyak继续掌舵</a>
+            <a href="articles/f1a16148c81ae60224f1882625f48b13.html">Ardour 9.7 DAW 发布：MIDI 编辑功能更强大</a>
           </h2>
-          <p class="card-summary">Arch Linux 2026年领导层选举结果揭晓，Polyak继续担任社区领导。本文探讨了这一结果对未来发展的影响。</p>
+          <p class="card-summary">Ardour 9.7 数字音频工作站（DAW）正式发布，本次更新重点改进了 MIDI 编辑工具，旨在简化工作流程并提升创作效率。新版本为音乐制作人提供了更流畅的 MIDI 编辑体验，进一步优化了音频制作流程。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/73aea34f8ed89e95484e35f986766e18.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.linuxtoday.com/blog/arch-linux-2026-leadership-election-keeps-polyak-in-charge/" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/f1a16148c81ae60224f1882625f48b13.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.linuxtoday.com/blog/ardour-9-7-daw-released-with-better-midi-editing/" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </article>
+
+        <article class="card">
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">Linux Today</span>
+           </div>
+          <h2 class="card-title">
+            <a href="articles/dc3a78bd7e5c87e26cf990024ca07efe.html">Ubuntu 26.10 承诺简化安装与全新上手体验</a>
+          </h2>
+          <p class="card-summary">Ubuntu 26.10 将带来简化的安装流程和全新的用户上手体验，旨在帮助用户轻松入门。该版本通过优化安装步骤和引导过程，降低新用户的使用门槛，提升整体体验。</p>
+          <div class="card-actions">
+            <a class="btn-detail" href="articles/dc3a78bd7e5c87e26cf990024ca07efe.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.linuxtoday.com/blog/ubuntu-26-10-promises-a-simplified-installation-and-new-onboarding-experience/" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article></div>
       </section>
 
       <section class="category-section">
-        <h2 class="section-title">其他 <span class="count">6</span></h2>
+        <h2 class="section-title">其他 <span class="count">3</span></h2>
         <div class="grid">
         <article class="card">
            <div class="card-meta">
@@ -422,56 +482,11 @@
             <a class="btn-detail" href="articles/7595b43bc93b3033004a06697a23f9fe.html">查看全文翻译</a>
             <a class="read-more" href="https://itsfoss.com/news/pocketmage-campaign/" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
-        </article>
-
-        <article class="card">
-           <div class="card-meta">
-             <span class="tag" style="background:#a78bfa1a;color:#a78bfa;border-color:#a78bfa30">其他</span>
-             <span class="source">It's FOSS News</span>
-           </div>
-          <h2 class="card-title">
-            <a href="articles/68430e7e869acd01b9fed9722059df85.html">你现在可以为Steam Machine制作电子墨水面板</a>
-          </h2>
-          <p class="card-summary">Valve悄悄开源了Inkterface项目的设计文件，该项目使用ESP32开发板，为Steam Machine的可更换前面板增加了电子墨水显示屏。项目由Valve员工Wright主导，提供了完整的物料清单、3D打印文件、接线指南和组装教程。面板通过磁吸安装，通过蓝牙连接系统，可显示硬件统计信息。第三方配件厂商也可基于此设计制造新面板。</p>
-          <div class="card-actions">
-            <a class="btn-detail" href="articles/68430e7e869acd01b9fed9722059df85.html">查看全文翻译</a>
-            <a class="read-more" href="https://itsfoss.com/news/inkertface-diy-steam-machine-faceplate/" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
-        </article>
-
-        <article class="card">
-           <div class="card-meta">
-             <span class="tag" style="background:#a78bfa1a;color:#a78bfa;border-color:#a78bfa30">其他</span>
-             <span class="source">Phoronix</span>
-           </div>
-          <h2 class="card-title">
-            <a href="articles/a5584a3850943652eea1a8c1094507f2.html">Graviton5 CPU 基准测试：几何平均性能较 Graviton4 提升 30%</a>
-          </h2>
-          <p class="card-summary">AWS 近日正式推出基于 Graviton5 处理器的 M9g 和 M9gd 实例，采用 Arm Neoverse-V3 核心，最高 192 核，主频 3.3GHz，支持 DDR5-8800 内存和 PCIe Gen6。Phoronix 的独立基准测试显示，Graviton5 在 16 vCPU 配置下，几何平均性能较 Graviton4 提升约 30%，数据库、Web 应用和机器学习负载分别提升 25% 至 35%。测试在 Ubuntu 26.04 LTS 和 Linux 7.0 内核上进行，M9g 实例按需价格较 M8g 高出约 9%。</p>
-          <div class="card-actions">
-            <a class="btn-detail" href="articles/a5584a3850943652eea1a8c1094507f2.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.phoronix.com/review/aws-graviton5" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
-        </article>
-
-        <article class="card">
-           <div class="card-meta">
-             <span class="tag" style="background:#a78bfa1a;color:#a78bfa;border-color:#a78bfa30">其他</span>
-             <span class="source">Phoronix</span>
-           </div>
-          <h2 class="card-title">
-            <a href="articles/286dbb79b0cee3d0e116b8f36af25ef8.html">Linux 为联想 ThinkPad 准备新的 USB-C 安全功能</a>
-          </h2>
-          <p class="card-summary">联想新款 ThinkPad 系统引入了名为 USB-C 安全限制模式的安全功能，该功能允许 USB-C 供电但禁用数据连接，适用于自助服务终端或物理安全环境。Linux 正在通过 ThinkPad ACPI 驱动支持此功能，用户可通过 /sys/devices/platform/thinkpad_acpi/usb_c_security 文件查看其状态。</p>
-          <div class="card-actions">
-            <a class="btn-detail" href="articles/286dbb79b0cee3d0e116b8f36af25ef8.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.phoronix.com/news/ThinkPad-USB-C-Restricted-Mode" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
         </article></div>
       </section>
 
       <section class="category-section">
-        <h2 class="section-title">软件应用 <span class="count">4</span></h2>
+        <h2 class="section-title">软件应用 <span class="count">3</span></h2>
         <div class="grid">
         <article class="card">
            <div class="card-meta">
@@ -479,12 +494,27 @@
              <span class="source">Phoronix</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/3c1772883fe106207b6a1740814df0ee.html">AMD 在 Linux 上启用 CACP 功能以实现更佳的 OLED 省电效果</a>
+            <a href="articles/27bb3978dcc150a6cf868ba5276e1778.html">Linux 7.3 为现代 AMD APU 启用第二图形管道</a>
           </h2>
-          <p class="card-summary">AMD 在最新的 AMDGPU DC 显示代码更新中，为 Linux 开源驱动启用了“CACP”（内容自适应对比度与功耗）功能，旨在进一步降低 OLED 显示面板的功耗。该功能属于 AMD 自适应背光管理（ABM）的一部分，已在 Windows 驱动中应用多年。此外，本次更新还启用了面板自刷新（PSR）和面板重放功能，并修复了 8K 模式解析问题。这些补丁预计将进入 Linux v7.3 内核周期。</p>
+          <p class="card-summary">AMD 向 DRM-Next 提交了新一轮 AMDGPU 内核图形驱动和 AMDKFD 内核计算驱动更新，为 Linux 7.3 合并窗口做准备。其中一项关键变化是为基于 GFX11 的 APU（包括 RDNA3 和 RDNA3.5）启用第二图形管道（pipe1）支持。该功能仅适用于使用 F32 微控制器的 GFX11 芯片，有助于改善硬件优先级任务调度和图形工作队列，提升稳定性和性能。此外，更新还包含 PSP 15.0.9、SMU 15.0.9 IP 模块更新、错误修复、RAS 更新以及消除 BUG() 使用的补丁。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/3c1772883fe106207b6a1740814df0ee.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.phoronix.com/news/AMDGPU-DC-Enabling-CACP" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/27bb3978dcc150a6cf868ba5276e1778.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.phoronix.com/news/Linux-7.3-Second-Pipe-GFX11-APU" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </article>
+
+        <article class="card">
+           <div class="card-meta">
+             <span class="tag" style="background:#10b9811a;color:#10b981;border-color:#10b98130">软件应用</span>
+             <span class="source">Phoronix</span>
+           </div>
+          <h2 class="card-title">
+            <a href="articles/3a172d694645023e57e7b321efe5038e.html">Linux DT补丁为Apple M3 Pro / Max / Ultra提供非常基础的支持</a>
+          </h2>
+          <p class="card-summary">Linux 7.2内核已初步支持Apple M3 SoC设备启动，但仅限控制台模式，缺乏图形加速等日常功能。近日，一组新的设备树（DT）补丁扩展了支持范围，使M3 Pro、M3 Max和M3 Ultra设备也能启动主线Linux内核。补丁由Asahi Linux贡献者Janne Grunau提交，涵盖了CPU核心、中断控制器、电源状态、看门狗、串口、引脚控制器、I2C及启动帧缓冲等基础硬件支持。M3 Pro与M3 Max在设计上有所区别，M3 Ultra则与M3 Max共享兼容前缀。这些补丁有望在Linux v7.3周期合入主线。</p>
+          <div class="card-actions">
+            <a class="btn-detail" href="articles/3a172d694645023e57e7b321efe5038e.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.phoronix.com/news/Linux-DT-Apple-M3-Pro-Max-Ultra" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article>
 
@@ -494,42 +524,12 @@
              <span class="source">Linux Today</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/fa8ef10848c71076e3361ef9b0e072aa.html">如何阻止Linux进程过度使用CPU和RAM</a>
+            <a href="articles/d9c03d0368b5cf19ee5c38ae5aec7b54.html">2026年Linux用户的16款Microsoft Teams替代方案</a>
           </h2>
-          <p class="card-summary">本文介绍如何识别并停止消耗大量CPU和RAM资源的Linux进程，通过实用命令和工具优化系统性能，帮助用户有效管理资源占用，提升系统响应速度。</p>
+          <p class="card-summary">本文为Linux用户推荐了16款Microsoft Teams的替代协作工具，涵盖即时通讯、视频会议、文件共享等功能，帮助团队根据自身需求选择最佳解决方案。这些替代方案包括开源和商业软件，注重隐私、跨平台兼容性和Linux原生支持。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/fa8ef10848c71076e3361ef9b0e072aa.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.linuxtoday.com/blog/how-to-stop-linux-processes-from-using-excessive-cpu-and-ram/" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
-        </article>
-
-        <article class="card">
-           <div class="card-meta">
-             <span class="tag" style="background:#10b9811a;color:#10b981;border-color:#10b98130">软件应用</span>
-             <span class="source">Linux Today</span>
-           </div>
-          <h2 class="card-title">
-            <a href="articles/23f335f0b9709d6307596875b07d445d.html">新型HTTP/2炸弹DoS攻击影响Nginx、Apache、IIS、Envoy和Pingora</a>
-          </h2>
-          <p class="card-summary">一种名为“HTTP/2炸弹”的新型拒绝服务攻击正在影响包括Nginx、Apache、IIS、Envoy和Pingora在内的主流Web服务器。本文探讨了该攻击的原理及其对服务器安全的影响，并提供了增强服务器防护的关键建议。</p>
-          <div class="card-actions">
-            <a class="btn-detail" href="articles/23f335f0b9709d6307596875b07d445d.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.linuxtoday.com/blog/new-http-2-bomb-dos-attack-hits-nginx-apache-iis-envoy-and-pingora/" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
-        </article>
-
-        <article class="card">
-           <div class="card-meta">
-             <span class="tag" style="background:#10b9811a;color:#10b981;border-color:#10b98130">软件应用</span>
-             <span class="source">Linux Today</span>
-           </div>
-          <h2 class="card-title">
-            <a href="articles/fa3a640abefe4501c32ba7b62100eb5e.html">PELADN WO4 5600H 迷你PC：功耗解析</a>
-          </h2>
-          <p class="card-summary">本文介绍了PELADN WO4 5600H迷你PC的能效表现，分析了其功耗对性能及电费的影响，帮助用户了解这款设备在实际使用中的能耗特点。</p>
-          <div class="card-actions">
-            <a class="btn-detail" href="articles/fa3a640abefe4501c32ba7b62100eb5e.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.linuxtoday.com/blog/peladn-wo4-5600h-mini-pc-power-consumption/" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/d9c03d0368b5cf19ee5c38ae5aec7b54.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.linuxtoday.com/blog/16-microsoft-teams-alternatives-for-linux-users-in-2026/" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article></div>
       </section>
@@ -540,15 +540,15 @@
         <article class="card">
            <div class="card-meta">
              <span class="tag" style="background:#8b5cf61a;color:#8b5cf6;border-color:#8b5cf630">桌面环境</span>
-             <span class="source">Phoronix</span>
+             <span class="source">Linux Today</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/e15b18f9b02eeb4a2670c418471d4514.html">提议的Linux补丁：短暂延迟以匹配PCI规范，有望修复若干Bug</a>
+            <a href="articles/05eee9463231e7a7f1d79d2ef56d3a9c.html">KDE迎来30周年，邀你为蛋糕添彩</a>
           </h2>
-          <p class="card-summary">自2026年2月起，有报告称AMD Ryzen AI Max+“Strix Halo” Framework Desktop在从s2idle恢复时，xHCI控制器失效，导致USB设备丢失。经过数月沟通，AMD Linux工程师Mario Limonciello提出补丁，在D3cold路径中增加10ms延迟以符合PCI规范，从而解决此问题。该补丁仅影响通用Linux PCI驱动代码，已在Framework Desktop上验证有效。</p>
+          <p class="card-summary">KDE项目迎来30周年纪念，邀请社区成员分享祝福与回忆，共同为这一特殊时刻增添光彩。文章鼓励用户参与庆祝活动，表达对KDE的喜爱与支持。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/e15b18f9b02eeb4a2670c418471d4514.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.phoronix.com/news/Linux-Delay-D3cold-Patch-Fix" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/05eee9463231e7a7f1d79d2ef56d3a9c.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.linuxtoday.com/blog/kde-turns-30-and-wants-you-to-put-some-icing-on-its-cake/" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article></div>
       </section>

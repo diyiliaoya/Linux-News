@@ -2517,5 +2517,137 @@
     "title_zh": "PELADN WO4 5600H 迷你PC：功耗解析",
     "summary_zh": "本文介绍了PELADN WO4 5600H迷你PC的能效表现，分析了其功耗对性能及电费的影响，帮助用户了解这款设备在实际使用中的能耗特点。",
     "fulltext_zh": "探索PELADN WO4 5600H迷你PC的能效表现。了解其功耗如何影响性能以及您的电费开支。\n该文章最初发表于Linux Today。"
+  },
+  "54624b5eb2c7bd62ca713829ae750409": {
+    "id": "54624b5eb2c7bd62ca713829ae750409",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/07/ubuntu-26-10-dbus-broker",
+    "title_en": "Ubuntu 26.10 retires dbus-daemon after 22 year run as default",
+    "summary_en": "Ubuntu 26.10 is replacing its D-Bus implementation for the first time since 2004, swapping dbus-daemon for dbus-broker – a change end-users are unlikely to notice. Processes on your desktop talk to each other and to the host system using D-Bus, a &#8216;message&#8217; bus. This is what the Ubuntu Dock uses to show unread-count badges for apps, what tells your desktop a USB drive has been plugged in, and so on. Two buses are in play. There&#8217;s aa system bus, shared across the whole device, ha",
+    "pub_date": "Sat, 11 Jul 2026 01:56:33 +0000",
+    "title_zh": "Ubuntu 26.10 在运行22年后将 dbus-daemon 退役为默认",
+    "summary_zh": "Ubuntu 26.10 将自2004年以来首次更换其 D-Bus 实现，用 dbus-broker 取代 dbus-daemon。这一变化对终端用户几乎无影响，因为 dbus-broker 是即插即用的替代品，使用相同的协议、配置文件和总线策略。新实现采用异步事件驱动设计，能避免消息丢失并加快查找速度。此前因 Ubuntu 政策不允许重复包共存以及 AppArmor 兼容性问题，切换延迟至今。用户可在 Ubuntu 26.04 LTS 上手动安装测试。",
+    "fulltext_zh": "Ubuntu 26.10 在运行22年后将 dbus-daemon 退役为默认 - OMG! Ubuntu\n\nUbuntu 26.10 自2004年以来首次更换其 D-Bus 实现，用 dbus-broker 取代 dbus-daemon——这一变化终端用户不太可能注意到。\n\n桌面上的进程通过 D-Bus（一种“消息”总线）相互通信并与主机系统通信。这就是 Ubuntu Dock 用来显示应用未读计数徽标的方式，也是告诉桌面已插入 USB 驱动器的方式，等等。\n\n涉及两条总线：一条是系统总线，在整个设备上共享，处理硬件和后台服务；另一条是用户会话总线，用于处理登录用户的桌面和应用集成。\n\n自22年前首次发布以来，Ubuntu 一直使用 dbus-daemon 作为其默认消息总线。从 Ubuntu 26.10 开始，它将两条总线都切换到 dbus-broker——但区别何在？\n\ndbus-daemon 包是 D-Bus 的参考实现，Ubuntu 自2004年以来一直使用。尽管它稳定且文档完善，但在高负载下可能会静默丢弃消息，并且只能通过逐个扫描来查找消息目标。速度慢。\n\ndbus-broker 包是一个相对较新的版本，采用“异步、事件驱动”的设计从头重写。这意味着即使总线被更多进程填满，也不会丢失消息，查找速度更快。\n\n许多其他桌面 Linux 发行版已经使用了较新的 dbus-broker。Ubuntu 的迁移过程只是由于几个打包原因而花费了更长时间。\n\n首先，Ubuntu 政策不允许两个功能相同的包存在于 main 仓库中。而且，在添加 dbus-broker 之前，main 中的每个包都必须取消对 dbus-daemon 的依赖。GDM（GNOME 登录管理器）是最后一个主要的坚持者。\n\n其次，Ubuntu 的安全限制框架 AppArmor 处理系统 Debian 包子集以及 snap 的 D-Bus 消息。由于 dbus-broker 直到最近才达到与 dbus-daemon 的功能对等，过早切换并不明智。\n\n但随着这两个障碍都已清除，并且短期临时版本为系统更改提供了理想机会，Ubuntu 26.10 全面拥抱 dbus-broker 列车。\n\n不过你不会注意到什么。\n\nDbus-broker 是即插即用的替代品。就像 systemd 的“好处”一样，你根本不会注意到任何变化。Canonical 表示 dbus-broker 使用与 dbus-daemon “相同的协议、相同的配置文件、相同的总线策略”，这意味着应用、桌面环境和其他一切“像以前一样继续工作”。\n\n随着 dbus-broker 在 Ubuntu 26.10 中升级到 main 仓库，旧的 dbus 和 dbus-daemon 包将被降级到 universe 仓库，并且不再预装。如果其他软件（不在 main 中）需要作为依赖项，仍可拉取旧版本。\n\n在实现方面，dbus-broker 包为其系统和用户实例提供 systemd 单元，取代 dbus-daemon 的单元。如果两个包安装在同一系统上，新包优先。\n\n如何在 Ubuntu 26.04 上使用 dbus-broker\n\nUbuntu 一直在计划 D-Bus 升级。虽然它将在 Ubuntu 26.10 中成为新的开箱即用默认设置，但你也可以在 26.04 LTS 上安装它（尽管有明显的警告：你正在进行手动更改，从 universe 仓库拉取包）。\n\n要尝试，只需从仓库安装 dbus-broker（它不在 main 中）：\n\nsudo apt install dbus-broker\n\n重启系统，启动后它就会就位。你可以通过运行以下命令检查：\n\nsystemctl status dbus-broker\n\n你可能会在 26.04 上遇到问题，因为它本不打算在那里成为默认。\n\n要恢复到原始的 dbus 实现，首先确保 dbus 包仍然安装。然后通过 systemd 禁用 dbus-broker：\n\nsudo systemctl disable dbus-broker\nsudo systemctl --user --global disable dbus-broker\n\n和之前一样，重启系统并重新登录，然后注意……你有多没注意到变化？请在评论中告诉我。\n\n这是主要的受支持 Ubuntu 仓库，构成发行版的大部分核心/集成包都存放在这里。包不会无缘无故地待在 main 中。\n\n我"
+  },
+  "6e0b12ffd96d4da812931bb5be83158b": {
+    "id": "6e0b12ffd96d4da812931bb5be83158b",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/linux-mint-wayland-stable/",
+    "title_en": "Linux Mint Now Considers Wayland Stable",
+    "summary_en": "Cinnamon will fully support both X11 and Wayland sessions starting with Mint's next release, due Christmas.",
+    "pub_date": "Fri, 10 Jul 2026 05:04:04 GMT",
+    "title_zh": "Linux Mint 现已将 Wayland 视为稳定版",
+    "summary_zh": "Linux Mint 项目宣布，从下一个 Cinnamon 版本开始，Wayland 将不再被视为“实验性”功能，而是与 X11 一同获得完全支持。尽管 Mint 在 Wayland 采用上比 Ubuntu 和 Fedora 等发行版慢得多，但团队通过充分准备确保了稳定性。新版本将带来更清晰的图标、更好的鼠标光标、多显示器改进、硬件加速支持，以及重新设计的屏幕保护程序。此外，Linux Mint 23 已推迟至 2026 年圣诞节发布，以便为 Wayland 集成留出更多时间。",
+    "fulltext_zh": "Linux Mint 现已将 Wayland 视为稳定版\n\nCinnamon 将在 Mint 的下一个版本（预计圣诞节发布）中完全支持 X11 和 Wayland 会话。\n\n在主流 Linux 发行版中，Linux Mint 一直是个异类，多年来它一步一个脚印地谨慎推进，而 Ubuntu 和 Fedora 等其他发行版早已将 Wayland 设为默认体验。如今，这份耐心正在得到回报，该项目透露，从下一个 Cinnamon 版本开始，Wayland 将不再被视为“实验性”功能。\n\n迟做总比不做好，对吧？\n\n从下一个 Cinnamon 版本开始，X11 和 Wayland 会话都将得到完全支持，但后者不会成为默认会话。Linux Mint 的创始人 Clement Lefebvre 表示，Wayland 的体验现在感觉非常扎实，“几乎与 X11 持平”。\n\n当然，达到这一步比其他发行版花了更长时间，但像 Mint 这样的项目不会在没有做好充分准备的情况下仓促进行如此重大的变更。你将在新版本中看到这些准备工作的成果：更清晰的图标、更好的鼠标光标，以及修复了影响 Slack 和 VS Code 等 Chromium 应用的 bug。\n\n同样，窗口进度功能会在面板的应用按钮中显示 Nemo（文件管理器）的文件/文件夹复制进度，而防焦点窃取功能可防止其他应用在任务中途抢夺你的注意力。\n\n多显示器设置和 KVM 切换器的表现更好了，硬件加速现在贯穿合成器、桌面会话以及 Wayland 和 Xwayland 客户端，包括针对 NVIDIA GPU 的 GBM over EGL。\n\n今年二月，Lefebvre 透露团队正在重新考虑其发布计划，因为每六个月发布一个新版本，同时还要维护 LMDE，导致他们花在测试和发布上的时间比实际构建功能还要多。最终决定已定，Linux Mint 23 被推迟到 2026 年圣诞节，这是该项目主要版本之间最长的间隔。这部分额外时间直接投入到了 Wayland 上。\n\n早些时候，Lefebvre 曾将重新设计的 Cinnamon 屏幕保护程序称为完全支持 Wayland 的最后一块拼图。旧的屏幕保护程序仅作为独立的 GTK 应用在 X11 上运行，位于 Cinnamon 自己的窗口管理器之外。新的屏幕保护程序在 X11 和 Wayland 上均可运行，并由 Cinnamon 自己的合成器原生渲染。\n\n剩余的时间则为用户带来了更多便利。Mint 在五月开始提供 HWE ISO，让用户无需等待 LM 23 发布即可在 LM 22.3 上使用 6.17 等更新的内核。\n\n现在只剩下等待了。基于已经完成的工作，下一个 Linux Mint 版本看起来值得期待。\n\n一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。\n\n另一个德国州刚刚赶走了微软……差不多吧\nTUXEDO OS 正在放弃 Ubuntu，转向永不稳定的 Debian 基础\n哈哈！微软 Windows 11 上的存储 bug 可能吃掉 500 GB 磁盘空间\n这款电子纸 PDA 想让你用键盘和两个小屏幕抛弃智能手机\n你现在可以为 Steam Machine 制作电子墨水面板\n\n成为更好的 Linux 用户\n通过 FOSS 周刊通讯，你可以学习有用的 Linux 技巧、发现应用程序、探索新发行版，并随时了解 Linux 世界的最新动态\n\n太好了！您已成功注册。\n欢迎回来！您已成功登录。\n您已成功订阅 It's FOSS。\n您的链接已过期。\n成功！请检查您的电子邮件以获取用于登录的魔法链接。\n成功！您的账单信息已更新。\n您的账单未更新。"
+  },
+  "d4070e3c1eda83f81f5b4de026b4425b": {
+    "id": "d4070e3c1eda83f81f5b4de026b4425b",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/COSMIC-Frosted-Glass-Arrives",
+    "title_en": "Pop!_OS Rolls Out Its \"Frosted Glass\" Desktop Style For COSMIC",
+    "summary_en": "System76 developers have for the past number of weeks been working on developing a \"frosted glass\" appearance for the COSMIC desktop environment featured on their Pop!_OS Linux distribution. For Pop!_OS users this frosted glass feature is now available and will become more widespread for other Linux distributions once the next COSMIC release is formally tagged...",
+    "pub_date": "Fri, 10 Jul 2026 20:57:00 -0400",
+    "title_zh": "Pop!_OS 为其 COSMIC 桌面环境推出“磨砂玻璃”风格",
+    "summary_zh": "System76 为 Pop!_OS 的 COSMIC 桌面环境开发了“磨砂玻璃”外观，现已面向 Pop!_OS 24.04 用户开放。用户可通过“设置/桌面/外观”下的“风格”选项启用。该功能将在下周 COSMIC 发布新版本后，推广至其他 Linux 发行版。",
+    "fulltext_zh": "Pop!_OS 为其 COSMIC 桌面环境推出“磨砂玻璃”风格 - Phoronix\nPop!_OS 为其 COSMIC 桌面环境推出“磨砂玻璃”风格\n发布于 2026 年 7 月 10 日 美国东部时间晚上 8:57。\n\nSystem76 的开发人员在过去几周里一直致力于为其 Pop!_OS Linux 发行版上的 COSMIC 桌面环境开发一种“磨砂玻璃”外观。对于 Pop!_OS 用户来说，这项磨砂玻璃功能现已可用，并且一旦下一个 COSMIC 版本正式标记，它将在其他 Linux 发行版上得到更广泛的应用。\n\nSystem76 首席执行官 Carl Richell 今天表示，“磨砂玻璃”选项现已面向 Pop!_OS 24.04 用户开放。更新到最新版本后，在“设置/桌面/外观”下的“风格”选项中，现在可以看到“磨砂玻璃”选项。\n\nCOSMIC 开发人员计划在下周标记下一个版本，之后这项磨砂玻璃功能应该会传播到其他 Linux 发行版的 COSMIC 软件包中。\n\n看到 System76 持续在其开源 COSMIC 和 Pop!_OS 项目上投入的精力，效果看起来非常流畅且令人欣喜。\n\nCOSMIC Epoch 1.2 桌面修复了 Intel 显卡的闪烁问题\nVim 补丁提升了 GTK3 Wayland 性能：“重大里程碑”\nCOSMIC Epoch 1.1 发布，带来 COSMIC-Monitor 和合成器改进\nXfce Wayland 合成器迎来首个预览/Alpha 版本\nFlatpak 1.18 发布，集成 AMD ROCm\n广泛使用的 libinput 因任意 root 代码执行漏洞而更新\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 同时也是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nReactOS“开源 Windows”项目现已能够运行《半条命 2》\nRust Coreutils 的 cp 命令因最新不兼容性导致 Ubuntu 镜像构建失败\nLinux 内核开发者再次讨论 AI 代理归属问题——可能将其移除\nReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进\n用 Rust 编写的 Vibe Coded X11 服务器新增 Xinerama、FreeBSD 支持及其他功能\nLibreOffice 26.8 Beta 发布，改进这款自由软件办公套件\n4K @ 60 FPS USB 视频捕获在 Linux 上终于不再那么棘手\nProton 11.0-1 发布，推动 Valve 的 Steam Play 实现最佳 Linux 体验\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "ed6f3e16ad49372d59c67e271d1a683d": {
+    "id": "ed6f3e16ad49372d59c67e271d1a683d",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Wine-11.13-Released",
+    "title_en": "Wine 11.13 Better Supports Input Pointers, Improved Keyboard Scancode Mapping For X11",
+    "summary_en": "Wine 11.13 is out today as the newest bi-weekly development release for this open-source software enabling support for running Windows games and applications on Linux...",
+    "pub_date": "Fri, 10 Jul 2026 20:49:54 -0400",
+    "title_zh": "Wine 11.13 更好地支持输入指针，改进 X11 键盘扫描码映射",
+    "summary_zh": "Wine 11.13 作为最新的双周开发版发布，改进了输入指针支持，并优化了 X11 的键盘扫描码映射。此外，ARM64EC 平台启用了 FFmpeg 多媒体优化，并修复了 22 个已知错误，涉及《侠盗猎车手：罪恶都市》等游戏及 Adobe Acrobat Pro 7 等应用。",
+    "fulltext_zh": "Wine 11.13 更好地支持输入指针，改进 X11 键盘扫描码映射 - Phoronix\nWine 11.13 更好地支持输入指针，改进 X11 键盘扫描码映射\n发布于 2026 年 7 月 10 日晚上 8:49（美国东部时间）。\n\nWine 11.13 今日发布，这是这款支持在 Linux 上运行 Windows 游戏和应用程序的开源软件的最新双周开发版。\n\n在 Wine 11.13 中，输入指针得到了更好的支持，Rémi Bernon 为本版本贡献了多项输入改进。Wine 还持续改进其对 X.Org/X11 的支持，Wine 11.13 优化了 X11 下的键盘扫描码映射。\n\n对于在 ARM 上使用 Wine 的用户，ARM64EC 的多媒体代码现已启用 FFmpeg 优化。\n\n过去两周内修复了 22 个已知错误，涉及《侠盗猎车手：罪恶都市》等游戏以及 Adobe Acrobat Pro 7 和 Sony Acid Pro 7.0 等应用程序。\n\n关于今天发布的 Wine 11.13（通往 Wine 12.0 的版本）的下载和更多详情，请访问\n\nWine 11.12 发布，带来 Wayland 分数缩放及其他 Wayland 增强\nWine Wayland 实现分数缩放支持\nWine-Staging 11.11 发布，在上游基础上包含 289 个补丁\nWine 11.11 发布，带来 Wayland 改进\nWine-Staging 11.10 修复了 14 年的旧错误，并解决了某些游戏过暗的问题\nWine 11.10 发布，带来 VKD3D 2.0 和改进的 VBScript 兼容性\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 也是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nReactOS \"开源 Windows\" 项目现已能够运行《半条命 2》\nRust Coreutils 的 cp 命令因最新不兼容性导致 Ubuntu 镜像构建失败\nLinux 内核开发者再次讨论 AI 代理归属问题——可能将其移除\nReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进一步\n用 Rust 编写的 Vibe Coded X11 服务器新增 Xinerama、FreeBSD 支持及其他功能\nLibreOffice 26.8 Beta 发布，改进这款自由软件办公套件\n4K @ 60 FPS USB 视频采集在 Linux 上终于不再那么棘手\nProton 11.0-1 发布，推动 Valve 的 Steam Play 实现最佳 Linux 体验\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "99fad012ea54bdafde1d93e3950d8609": {
+    "id": "99fad012ea54bdafde1d93e3950d8609",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/plasma-67-wayland-cachyos",
+    "title_en": "KDE Plasma 6.7 X11 vs. Wayland Session Gaming Performance For NVIDIA On CachyOS",
+    "summary_en": "With KDE Plasma 6.7 now having seen a few point releases to further polish this last version with X11 support ahead of Plasma 6.8 going Wayland-only, here are some NVIDIA Linux gaming benchmarks between the X11 and Wayland sessions on Plasma 6.7.2 using the popular Arch Linux based CachyOS.",
+    "pub_date": "Fri, 10 Jul 2026 11:45:15 -0400",
+    "title_zh": "KDE Plasma 6.7 X11 vs. Wayland 会话游戏性能对比：CachyOS 上的 NVIDIA",
+    "summary_zh": "本文对比了在基于 Arch Linux 的 CachyOS 系统上，KDE Plasma 6.7.2 的 X11 与 Wayland 会话在 NVIDIA 显卡下的游戏性能。测试使用搭载 RTX 5090 的 Razer Blade 18 笔记本，运行最新驱动。结果显示 Wayland 会话在多数场景下与 X11 持平或更优，为 Plasma 6.8 移除 X11 支持提供了性能参考。",
+    "fulltext_zh": "KDE Plasma 6.7 X11 vs. Wayland 会话游戏性能对比：CachyOS 上的 NVIDIA - Phoronix\nKDE Plasma 6.7 X11 vs. Wayland 会话游戏性能对比：CachyOS 上的 NVIDIA\n发布于 2026 年 7 月 10 日美国东部时间上午 11:45。\n\n随着 KDE Plasma 6.7 已发布数个次要版本，进一步打磨了这个在 Plasma 6.8 转向纯 Wayland 之前仍支持 X11 的最后一个版本，本文使用基于 Arch Linux 的流行发行版 CachyOS，在 Plasma 6.7.2 上对 X11 和 Wayland 会话进行了 NVIDIA Linux 游戏基准测试。\n\nPlasma 6 在近期的版本中与 Wayland 的配合已相当成熟，Phoronix 之前的基准测试也已表明，KDE Plasma 的 Wayland 会话能够与 X11 会话持平，甚至往往表现更优。在 Plasma 6.8 放弃 X11 会话支持之前，我决定使用 Plasma 6.7.2 和 CachyOS 上可用的最新 NVIDIA 610.43.02 驱动程序，运行一些新的基准测试，以比较 KDE X11 和 Wayland 会话之间的性能。\n\n本轮测试使用了 Razer Blade 18 笔记本，其搭载 NVIDIA GeForce RTX 5090 独立显卡。Razer Blade 18 RZ09-0582 KI8120 v4 配备 Intel Core Ultra 9 290HX Plus 24 核 Arrow Lake CPU、2×16GB DDR5-6400 内存、GeForce RTX 5090 显卡以及一块 2TB 的三星 NVMe SSD。正如其评测中所指出的，Razer Blade 18（2026 款）是 Razer 首款获得 Ubuntu Linux 使用认证的设备。无论对于游戏玩家，还是从事大量代码编译和/或 AI 工作负载的开发者来说，这都是一款强大的移动工作站。\n\n在 Razer Blade 18 上安装了最新的 CachyOS，这款新笔记本运行得相当不错。我随后在默认的 Plasma 6.7.2 Wayland 会话下运行了一系列图形/游戏基准测试，然后在保持其余软件栈不变的情况下，再次在 Plasma 6.7.2 X11 会话下进行了测试。\n\nUbuntu 26.04 为 AMD Radeon Linux 游戏带来增强性能\nUbuntu 26.04 搭配 GNOME 50 为 NVIDIA Linux 游戏带来性能提升\nNVIDIA GeForce NOW 现以 Flatpak 形式原生支持 Linux\nGNOME 与 KDE Plasma Wayland 会话在 Ubuntu 25.04 上超越 Xfce 和 LXQt 的 Linux 游戏性能\nGNOME 48 与 KDE Plasma 6.3 在 Ubuntu 25.04 上为 Linux 游戏提供出色的 Wayland 桌面体验\nNVIDIA R565 对比 Linux 6.13 + Mesa 25.0 Git AMD / Intel 显卡的 Linux 游戏性能\n\n享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "27bb3978dcc150a6cf868ba5276e1778": {
+    "id": "27bb3978dcc150a6cf868ba5276e1778",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.3-Second-Pipe-GFX11-APU",
+    "title_en": "Linux 7.3 Enabling Second Graphics Pipe For Modern AMD APUs",
+    "summary_en": "AMD on Thursday sent out another round of AMDGPU kernel graphics driver and AMDKFD kernel compute driver updates to DRM-Next of new feature material ahead of the Linux 7.3 merge window...",
+    "pub_date": "Fri, 10 Jul 2026 09:32:00 -0400",
+    "title_zh": "Linux 7.3 为现代 AMD APU 启用第二图形管道",
+    "summary_zh": "AMD 向 DRM-Next 提交了新一轮 AMDGPU 内核图形驱动和 AMDKFD 内核计算驱动更新，为 Linux 7.3 合并窗口做准备。其中一项关键变化是为基于 GFX11 的 APU（包括 RDNA3 和 RDNA3.5）启用第二图形管道（pipe1）支持。该功能仅适用于使用 F32 微控制器的 GFX11 芯片，有助于改善硬件优先级任务调度和图形工作队列，提升稳定性和性能。此外，更新还包含 PSP 15.0.9、SMU 15.0.9 IP 模块更新、错误修复、RAS 更新以及消除 BUG() 使用的补丁。",
+    "fulltext_zh": "Linux 7.3 为现代 AMD APU 启用第二图形管道 - Phoronix\nLinux 7.3 为现代 AMD APU 启用第二图形管道\n发布于 2026 年 7 月 10 日上午 09:32（美国东部时间）\n\n周四，AMD 向 DRM-Next 发送了新一轮 AMDGPU 内核图形驱动和 AMDKFD 内核计算驱动更新，这些更新包含了 Linux 7.3 合并窗口之前的新功能材料。\n\n本周一个突出的变化是为 GFX11 APU 启用了图形“pipe1”支持。这项工作旨在为基于 GFX11 的现代 APU/SoC（包括 RDNA3 和 RDNA3.5 APU）启用第二图形管道。AMD Linux 工程师 Alex Deucher 在启用说明中解释道：\n\n“启用 gfx pipe1 硬件支持。此功能仅在使用 F32 微控制器的 gfx11 芯片上可用。使用 RS64 微控制器的芯片无法使用第二 gfx 管道。实际上，这意味着第二管道仅在 APU 上可用。这解释了 Pierre-Eric 之前在 Navi33 上看到的稳定性问题。”\n\n因此，现在对于 GFX11 APU，每个微引擎（ME）的第二管道正在这些当前的 AMD APU 上启用。这种 pipe1 硬件支持应有助于硬件优先级任务调度和更多图形工作队列，从而提高稳定性和性能。\n\n除了 GFX11 APU 的 pipe1 支持外，本周的 AMDGPU 功能材料还包括 PSP 15.0.9 和 SMU 15.0.9 IP 模块的更新、各种错误修复、RAS 更新以及其他主要是小的代码更改。此拉取请求还包括一些用于消除 AMD 内核驱动代码中 BUG() 使用的补丁。\n\n本周针对 Linux 7.3 的 DRM-Next 功能补丁的完整列表可通过以下链接查看：\n\nAMD 在 Linux 上启用 CACP 功能以实现更大的 OLED 省电效果\nAMD Linux 图形驱动致力于清除所有 BUG()\nValve 的 Marek Olšák 提交的 RADV 代码在某些 VRS 情况下可使性能翻倍\nRADV 和 RadeonSI 驱动为 AMD GCN 1.0/1.1 GPU 带来新修复\nRADV 默认启用 Vulkan 描述符堆支持\n新的 AMD Linux 补丁暴露了 Gamma 2.4 和 Gamma 2.6 曲线\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nReactOS“开源 Windows”项目现已能够运行《半条命 2》\nRust Coreutils cp 因最新不兼容性导致 Ubuntu 镜像构建失败\nLinux 内核开发者再次讨论 AI 代理归属问题——可能将其移除\nReactOS 实现首个 Windows NT6 系统调用，向 Vista 兼容性迈进\n用 Rust 编写的 Vibe Coded X11 服务器增加了 Xinerama、FreeBSD 支持及其他功能\nLibreOffice 26.8 Beta 发布，改进了这款自由软件办公套件\n4K @ 60 FPS USB 视频捕获在 Linux 上终于不再那么棘手\nProton 11.0-1 发布，推动 Valve 的 Steam Play 实现最佳 Linux 体验\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "3a172d694645023e57e7b321efe5038e": {
+    "id": "3a172d694645023e57e7b321efe5038e",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-DT-Apple-M3-Pro-Max-Ultra",
+    "title_en": "Linux DT Patches Provide Very Basic Support For Apple M3 Pro / Max / Ultra",
+    "summary_en": "Upstreamed for the Linux 7.2 kernel was initial support for booting Linux on the Apple M3 SoC devices. But just the barebones suppport for booting with not yet any accelerated graphics or other typical function needed for daily use of M3 Apple devices on Linux, just booting to a console. Now this work is complemented by additional Device Tree patches for also booting M3 Pro / Max / Ultra devices on Linux...",
+    "pub_date": "Fri, 10 Jul 2026 06:26:14 -0400",
+    "title_zh": "Linux DT补丁为Apple M3 Pro / Max / Ultra提供非常基础的支持",
+    "summary_zh": "Linux 7.2内核已初步支持Apple M3 SoC设备启动，但仅限控制台模式，缺乏图形加速等日常功能。近日，一组新的设备树（DT）补丁扩展了支持范围，使M3 Pro、M3 Max和M3 Ultra设备也能启动主线Linux内核。补丁由Asahi Linux贡献者Janne Grunau提交，涵盖了CPU核心、中断控制器、电源状态、看门狗、串口、引脚控制器、I2C及启动帧缓冲等基础硬件支持。M3 Pro与M3 Max在设计上有所区别，M3 Ultra则与M3 Max共享兼容前缀。这些补丁有望在Linux v7.3周期合入主线。",
+    "fulltext_zh": "Linux DT补丁为Apple M3 Pro / Max / Ultra提供非常基础的支持 - Phoronix\nLinux DT补丁为Apple M3 Pro / Max / Ultra提供非常基础的支持\n发布于2026年7月10日 06:26 EDT\n上游已合入Linux 7.2内核的是对Apple M3 SoC设备启动Linux的初步支持。但这只是最基础的支持，仅能启动到控制台，尚未提供任何加速图形或其他日常使用M3 Apple设备于Linux上所需的典型功能。现在，这项工作得到了补充：额外的设备树补丁也支持在M3 Pro / Max / Ultra设备上启动Linux。\n继Linux 7.2的Apple M3初步启动支持以及一些针对Apple M4 SoC的初始DT补丁之后，现在有一组设备树补丁正在审查中，旨在让Apple M3 Pro / M3 Max / M3 Ultra硬件能够使用主线Linux内核启动。\nAsahi Linux贡献者Janne Grunau在解释这个M3 Pro/Max/Ultra启动补丁系列时表示：\n“本系列为搭载M3 Pro、Max和Ultra SoC的Apple Silicon设备添加了设备树。M3代设备比其前代M1和M2要少。唯一的非笔记本电脑设备是M3 Ultra Mac Studio。笔记本电脑则是已知的14英寸和16英寸MacBook Pro，现在搭载M3 Pro和M3 Max SoC。核心数较少的M3 Max变体除了内存总线为384位而非完整M3 Max的512位外，还有一个独立的标识符（T6034），因此共有六个笔记本电脑设备树。\n与M1和M2 Pro/Max/Ultra的另一个区别是，M3 Pro是一个独立的SoC设计，而非较小的M3 Max。因此，两种M3 Max变体和M3 Ultra将使用“apple,t6030”作为兼容前缀。在M1和M2代中，Pro、Max和Ultra SoC共享“apple,t6000”/“apple,t6020”作为通用前缀。目前没有已知差异，但M3 Pro和M3 Max之间的关系不如以前那么紧密。\n本系列添加了与v7.2-rc1中基础M3（T8122）相同级别的硬件支持。这包括CPU核心、中断控制器、电源状态、看门狗、串口、引脚控制器、I2C和启动帧缓冲。这旨在作为基础，以便可以同时为所有基于M3的设备添加对其他硬件的支持。”\n对于这些早在2023年11月发布的Apple设备，这是主线Linux支持朝着正确方向迈出的一步。要让Apple M3级别的硬件在Linux上完全可用，具备GPU支持以及所有其他集成设备功能，尤其是对于MacBook笔记本电脑，还需要更长时间。\n感兴趣的人可以通过以下链接找到Apple M3 Pro/Max/Ultra在Linux上的初始设备树工作。如果一切顺利，这些初始DT补丁最早可能在Linux v7.3周期合入主线。\n已发布用于在Linux上启动Apple M4的初始补丁\nAsahi Linux修复了与macOS 27的启动问题，在M3和Apple视频解码方面取得进展\n发布了新的Linux驱动程序，用于在M3 MacBook上启用键盘支持\nLinux最终终止了AppleTalk协议支持\nmacOS 27 Beta破坏了启动Asahi Linux的能力\nLinux 7.2将能够在Apple M3 Mac上启动——但对最终用户来说远非实用\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立了该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动程序及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他。\nReactOS“开源Windows”项目现在能够运行《半条命2》\nRust Coreutils的cp命令因最新不兼容性导致Ubuntu镜像构建失败\nLinux内核开发者再次讨论AI代理归属问题——可能将其移除\nReactOS实现了首个Windows NT6系统调用，向Vista兼容性迈进一步\n用Vibe编码的X11服务器（Rust编写）增加了Xinerama、FreeBSD支持及其他功能\nLibreOffice 26.8 Beta"
+  },
+  "b9d865fbdcd0ae87f39c32dd3c59acdd": {
+    "id": "b9d865fbdcd0ae87f39c32dd3c59acdd",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/star-labs-releases-firmware-26-06-with-support-for-amd-cezanne-based-systems/",
+    "title_en": "Star Labs Releases Firmware 26.06 with Support for AMD Cezanne-Based Systems",
+    "summary_en": "Star Labs has launched Firmware 26.06, bringing improved compatibility for AMD Cezanne-based systems. Elevate your system's capabilities now!\nThe post Star Labs Releases Firmware 26.06 with Support for AMD Cezanne-Based Systems appeared first on Linux Today.",
+    "pub_date": "Fri, 10 Jul 2026 07:10:07 +0000",
+    "title_zh": "Star Labs 发布支持 AMD Cezanne 系统的固件 26.06",
+    "summary_zh": "Star Labs 发布了固件版本 26.06，主要新增对基于 AMD Cezanne 架构系统的支持，提升了兼容性。该更新旨在优化系统性能，用户可立即升级以增强设备能力。",
+    "fulltext_zh": "Star Labs 已推出固件 26.06 版本，为基于 AMD Cezanne 的系统带来了更好的兼容性。立即提升您的系统性能！\n\n该文章《Star Labs Releases Firmware 26.06 with Support for AMD Cezanne-Based Systems》最初发表于 Linux Today。"
+  },
+  "d9c03d0368b5cf19ee5c38ae5aec7b54": {
+    "id": "d9c03d0368b5cf19ee5c38ae5aec7b54",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/16-microsoft-teams-alternatives-for-linux-users-in-2026/",
+    "title_en": "16 Microsoft Teams Alternatives for Linux Users in 2026",
+    "summary_en": "Explore 16 excellent Microsoft Teams alternatives for Linux users in 2026. Find the perfect collaboration solution to meet your team's unique needs.\nThe post 16 Microsoft Teams Alternatives for Linux Users in 2026 appeared first on Linux Today.",
+    "pub_date": "Fri, 10 Jul 2026 07:08:27 +0000",
+    "title_zh": "2026年Linux用户的16款Microsoft Teams替代方案",
+    "summary_zh": "本文为Linux用户推荐了16款Microsoft Teams的替代协作工具，涵盖即时通讯、视频会议、文件共享等功能，帮助团队根据自身需求选择最佳解决方案。这些替代方案包括开源和商业软件，注重隐私、跨平台兼容性和Linux原生支持。",
+    "fulltext_zh": "探索2026年Linux用户的16款优秀Microsoft Teams替代方案。找到满足您团队独特需求的完美协作解决方案。\n\n该文章《16 Microsoft Teams Alternatives for Linux Users in 2026》最初发表于Linux Today。"
+  },
+  "f1a16148c81ae60224f1882625f48b13": {
+    "id": "f1a16148c81ae60224f1882625f48b13",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/ardour-9-7-daw-released-with-better-midi-editing/",
+    "title_en": "Ardour 9.7 DAW Released with Better MIDI Editing",
+    "summary_en": "Explore Ardour 9.7 DAW, now with improved MIDI editing tools designed to streamline your workflow and enhance your creative process.\nThe post Ardour 9.7 DAW Released with Better MIDI Editing appeared first on Linux Today.",
+    "pub_date": "Fri, 10 Jul 2026 07:07:17 +0000",
+    "title_zh": "Ardour 9.7 DAW 发布：MIDI 编辑功能更强大",
+    "summary_zh": "Ardour 9.7 数字音频工作站（DAW）正式发布，本次更新重点改进了 MIDI 编辑工具，旨在简化工作流程并提升创作效率。新版本为音乐制作人提供了更流畅的 MIDI 编辑体验，进一步优化了音频制作流程。",
+    "fulltext_zh": "探索 Ardour 9.7 DAW，它现在配备了改进的 MIDI 编辑工具，旨在简化你的工作流程并增强创作过程。\n\nArdour 9.7 DAW 发布：MIDI 编辑功能更强大一文首发于 Linux Today。"
+  },
+  "05eee9463231e7a7f1d79d2ef56d3a9c": {
+    "id": "05eee9463231e7a7f1d79d2ef56d3a9c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/kde-turns-30-and-wants-you-to-put-some-icing-on-its-cake/",
+    "title_en": "KDE Turns 30 and Wants You to Put Some Icing on Its Cake",
+    "summary_en": "KDE is turning 30! Be part of the celebration and share your thoughts to help us add some icing to this special occasion.\nThe post KDE Turns 30 and Wants You to Put Some Icing on Its Cake appeared first on Linux Today.",
+    "pub_date": "Fri, 10 Jul 2026 07:01:58 +0000",
+    "title_zh": "KDE迎来30周年，邀你为蛋糕添彩",
+    "summary_zh": "KDE项目迎来30周年纪念，邀请社区成员分享祝福与回忆，共同为这一特殊时刻增添光彩。文章鼓励用户参与庆祝活动，表达对KDE的喜爱与支持。",
+    "fulltext_zh": "KDE迎来30周年！加入庆祝活动，分享你的想法，帮助我们为这一特殊时刻增添光彩。\n\n该文章《KDE Turns 30 and Wants You to Put Some Icing on Its Cake》首发于Linux Today。"
+  },
+  "dc3a78bd7e5c87e26cf990024ca07efe": {
+    "id": "dc3a78bd7e5c87e26cf990024ca07efe",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/ubuntu-26-10-promises-a-simplified-installation-and-new-onboarding-experience/",
+    "title_en": "Ubuntu 26.10 Promises a Simplified Installation and New Onboarding Experience",
+    "summary_en": "Experience the simplicity of Ubuntu 26.10 with its new installation features and onboarding process, designed to help users get started effortlessly.\nThe post Ubuntu 26.10 Promises a Simplified Installation and New Onboarding Experience appeared first on Linux Today.",
+    "pub_date": "Fri, 10 Jul 2026 06:59:32 +0000",
+    "title_zh": "Ubuntu 26.10 承诺简化安装与全新上手体验",
+    "summary_zh": "Ubuntu 26.10 将带来简化的安装流程和全新的用户上手体验，旨在帮助用户轻松入门。该版本通过优化安装步骤和引导过程，降低新用户的使用门槛，提升整体体验。",
+    "fulltext_zh": "体验 Ubuntu 26.10 的简洁性，其全新的安装功能和上手流程旨在帮助用户轻松入门。\n\n本文《Ubuntu 26.10 承诺简化安装与全新上手体验》首发于 Linux Today。"
   }
 }
