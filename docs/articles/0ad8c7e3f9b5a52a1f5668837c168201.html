@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 26.10 在运行22年后将 dbus-daemon 退役为默认 — Linux 中文速报</title>
+<title>Mesa的Rusticl现已默认启用Arm Mali Panfrost驱动支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 26.10 在运行22年后将 dbus-daemon 退役为默认</h1>
+  <h1>Mesa的Rusticl现已默认启用Arm Mali Panfrost驱动支持</h1>
 
-  <div class="article-summary">Ubuntu 26.10 将自2004年以来首次更换其 D-Bus 实现，用 dbus-broker 取代 dbus-daemon。这一变化对终端用户几乎无影响，因为 dbus-broker 是即插即用的替代品，使用相同的协议、配置文件和总线策略。新实现采用异步事件驱动设计，能避免消息丢失并加快查找速度。此前因 Ubuntu 政策不允许重复包共存以及 AppArmor 兼容性问题，切换延迟至今。用户可在 Ubuntu 26.04 LTS 上手动安装测试。</div>
+  <div class="article-summary">Mesa的Rusticl OpenCL Rust驱动现已默认启用Panfrost Gallium3D驱动，为Arm Mali图形硬件提供开箱即用的OpenCL支持。此前用户需设置环境变量RUSTICL_ENABLE=panfrost才能启用，Arm工程师Ahmed Hesham提交的代码变更使其成为默认配置。该变更已合入Mesa 26.2，预计8月发布稳定版。</div>
 
-  <div class="article-body"><p>Ubuntu 26.10 在运行22年后将 dbus-daemon 退役为默认 - OMG! Ubuntu</p><p>Ubuntu 26.10 自2004年以来首次更换其 D-Bus 实现，用 dbus-broker 取代 dbus-daemon——这一变化终端用户不太可能注意到。</p><p>桌面上的进程通过 D-Bus（一种“消息”总线）相互通信并与主机系统通信。这就是 Ubuntu Dock 用来显示应用未读计数徽标的方式，也是告诉桌面已插入 USB 驱动器的方式，等等。</p><p>涉及两条总线：一条是系统总线，在整个设备上共享，处理硬件和后台服务；另一条是用户会话总线，用于处理登录用户的桌面和应用集成。</p><p>自22年前首次发布以来，Ubuntu 一直使用 dbus-daemon 作为其默认消息总线。从 Ubuntu 26.10 开始，它将两条总线都切换到 dbus-broker——但区别何在？</p><p>dbus-daemon 包是 D-Bus 的参考实现，Ubuntu 自2004年以来一直使用。尽管它稳定且文档完善，但在高负载下可能会静默丢弃消息，并且只能通过逐个扫描来查找消息目标。速度慢。</p><p>dbus-broker 包是一个相对较新的版本，采用“异步、事件驱动”的设计从头重写。这意味着即使总线被更多进程填满，也不会丢失消息，查找速度更快。</p><p>许多其他桌面 Linux 发行版已经使用了较新的 dbus-broker。Ubuntu 的迁移过程只是由于几个打包原因而花费了更长时间。</p><p>首先，Ubuntu 政策不允许两个功能相同的包存在于 main 仓库中。而且，在添加 dbus-broker 之前，main 中的每个包都必须取消对 dbus-daemon 的依赖。GDM（GNOME 登录管理器）是最后一个主要的坚持者。</p><p>其次，Ubuntu 的安全限制框架 AppArmor 处理系统 Debian 包子集以及 snap 的 D-Bus 消息。由于 dbus-broker 直到最近才达到与 dbus-daemon 的功能对等，过早切换并不明智。</p><p>但随着这两个障碍都已清除，并且短期临时版本为系统更改提供了理想机会，Ubuntu 26.10 全面拥抱 dbus-broker 列车。</p><p>不过你不会注意到什么。</p><p>Dbus-broker 是即插即用的替代品。就像 systemd 的“好处”一样，你根本不会注意到任何变化。Canonical 表示 dbus-broker 使用与 dbus-daemon “相同的协议、相同的配置文件、相同的总线策略”，这意味着应用、桌面环境和其他一切“像以前一样继续工作”。</p><p>随着 dbus-broker 在 Ubuntu 26.10 中升级到 main 仓库，旧的 dbus 和 dbus-daemon 包将被降级到 universe 仓库，并且不再预装。如果其他软件（不在 main 中）需要作为依赖项，仍可拉取旧版本。</p><p>在实现方面，dbus-broker 包为其系统和用户实例提供 systemd 单元，取代 dbus-daemon 的单元。如果两个包安装在同一系统上，新包优先。</p><p>如何在 Ubuntu 26.04 上使用 dbus-broker</p><p>Ubuntu 一直在计划 D-Bus 升级。虽然它将在 Ubuntu 26.10 中成为新的开箱即用默认设置，但你也可以在 26.04 LTS 上安装它（尽管有明显的警告：你正在进行手动更改，从 universe 仓库拉取包）。</p><p>要尝试，只需从仓库安装 dbus-broker（它不在 main 中）：</p><p>sudo apt install dbus-broker</p><p>重启系统，启动后它就会就位。你可以通过运行以下命令检查：</p><p>systemctl status dbus-broker</p><p>你可能会在 26.04 上遇到问题，因为它本不打算在那里成为默认。</p><p>要恢复到原始的 dbus 实现，首先确保 dbus 包仍然安装。然后通过 systemd 禁用 dbus-broker：</p><p>sudo systemctl disable dbus-broker</p><p>sudo systemctl --user --global disable dbus-broker</p><p>和之前一样，重启系统并重新登录，然后注意……你有多没注意到变化？请在评论中告诉我。</p><p>这是主要的受支持 Ubuntu 仓库，构成发行版的大部分核心/集成包都存放在这里。包不会无缘无故地待在 main 中。</p><p>我</p></div>
+  <div class="article-body"><p>Mesa的Rusticl现已默认启用Arm Mali Panfrost驱动支持 - Phoronix</p><p>Mesa的Rusticl现已默认启用Arm Mali Panfrost驱动支持</p><p>发布于2026年7月11日美国东部时间凌晨4:00。</p><p>一位Arm工程师向Mesa上游提交的变更，现已默认启用Panfrost Gallium3D驱动，使其能够与Rusticl驱动配合工作于Arm Mali图形硬件。</p><p>Panfrost Gallium3D驱动此前已能与Rusticl OpenCL Rust驱动协同工作，但至今需要设置环境变量</p><p>RUSTICL_ENABLE=panfrost</p><p>才能实际启用该支持，这与其他一些Rusticl支持尚未经过全面验证并正式化的驱动类似。但在Mesa 26.2的最新代码中，Panfrost已被默认启用Rusticl，无需再使用该覆盖设置。</p><p>Arm工程师Ahmed Hesham提交了</p><p>该变更，现在默认启用Panfrost，为希望在Arm Mali图形硬件上使用现代、开源OpenCL的用户提供更好的开箱即用体验。</p><p>Mesa 26.2稳定版预计于8月发布。</p><p>Rusticl OpenCL驱动在Mesa 26.2中提升硬件利用率</p><p>Valve创建光线追踪检查器“RTI”以进一步优化Linux GPU驱动</p><p>Mesa 26.2合并X11/XWayland的Vulkan呈现时序支持</p><p>开源NVIDIA NVK Vulkan驱动现已支持DLSS</p><p>Mesa 26.2为直接显示模式引入VK_GOOGLE_display_timing支持</p><p>新的“KRAID”编译器已合并至Mesa，用于Panfrost/PanVK驱动</p><p>Michael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael也是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>ReactOS“开源Windows”项目现已能够运行《半条命2》</p><p>Rust Coreutils的cp命令因最新不兼容性导致Ubuntu镜像构建失败</p><p>LibreOffice 26.8 Beta发布，改进这款自由软件办公套件</p><p>Proton 11.0-1发布，推进Valve的Steam Play以实现最佳Linux体验</p><p>4K @ 60 FPS USB视频捕获在Linux上终于不再那么棘手</p><p>Linux DRM调度器补丁大幅改善作业提交延迟</p><p>AMD Linux图形驱动致力于清除所有BUG()</p><p>Pop!_OS为其COSMIC桌面推出“磨砂玻璃”风格</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/ubuntu-26-10-dbus-broker" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Mesa-Rusticl-Panfrost-Default" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

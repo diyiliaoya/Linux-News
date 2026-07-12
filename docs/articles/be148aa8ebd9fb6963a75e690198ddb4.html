@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 26.10 在运行22年后将 dbus-daemon 退役为默认 — Linux 中文速报</title>
+<title>LLVM 合并 x86 LFI“轻量级故障隔离”目标，用于进程内沙箱 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 26.10 在运行22年后将 dbus-daemon 退役为默认</h1>
+  <h1>LLVM 合并 x86 LFI“轻量级故障隔离”目标，用于进程内沙箱</h1>
 
-  <div class="article-summary">Ubuntu 26.10 将自2004年以来首次更换其 D-Bus 实现，用 dbus-broker 取代 dbus-daemon。这一变化对终端用户几乎无影响，因为 dbus-broker 是即插即用的替代品，使用相同的协议、配置文件和总线策略。新实现采用异步事件驱动设计，能避免消息丢失并加快查找速度。此前因 Ubuntu 政策不允许重复包共存以及 AppArmor 兼容性问题，切换延迟至今。用户可在 Ubuntu 26.04 LTS 上手动安装测试。</div>
+  <div class="article-summary">斯坦福大学研究人员为 LLVM 开发了轻量级故障隔离（LFI）编译器和目标，用于高效的原生代码沙箱。此前 AArch64 LFI 目标已上游合并，本周 x86/x86_64 LFI 目标也完成合并。LFI 是一种基于编译器的进程内沙箱方法，旨在以最小性能开销和工程成本，为 C、C++ 和汇编代码提供内存安全保护。相比基于进程的沙箱，LFI 上下文切换仅需数十个周期，速度提升约 100 倍；相比 Wasm 工具链，开销降低 3-10 倍。在 Spec2017 上，完整沙箱仅带来约 7% 的开销（AArch64），仅保护写入时开销为 2%。</div>
 
-  <div class="article-body"><p>Ubuntu 26.10 在运行22年后将 dbus-daemon 退役为默认 - OMG! Ubuntu</p><p>Ubuntu 26.10 自2004年以来首次更换其 D-Bus 实现，用 dbus-broker 取代 dbus-daemon——这一变化终端用户不太可能注意到。</p><p>桌面上的进程通过 D-Bus（一种“消息”总线）相互通信并与主机系统通信。这就是 Ubuntu Dock 用来显示应用未读计数徽标的方式，也是告诉桌面已插入 USB 驱动器的方式，等等。</p><p>涉及两条总线：一条是系统总线，在整个设备上共享，处理硬件和后台服务；另一条是用户会话总线，用于处理登录用户的桌面和应用集成。</p><p>自22年前首次发布以来，Ubuntu 一直使用 dbus-daemon 作为其默认消息总线。从 Ubuntu 26.10 开始，它将两条总线都切换到 dbus-broker——但区别何在？</p><p>dbus-daemon 包是 D-Bus 的参考实现，Ubuntu 自2004年以来一直使用。尽管它稳定且文档完善，但在高负载下可能会静默丢弃消息，并且只能通过逐个扫描来查找消息目标。速度慢。</p><p>dbus-broker 包是一个相对较新的版本，采用“异步、事件驱动”的设计从头重写。这意味着即使总线被更多进程填满，也不会丢失消息，查找速度更快。</p><p>许多其他桌面 Linux 发行版已经使用了较新的 dbus-broker。Ubuntu 的迁移过程只是由于几个打包原因而花费了更长时间。</p><p>首先，Ubuntu 政策不允许两个功能相同的包存在于 main 仓库中。而且，在添加 dbus-broker 之前，main 中的每个包都必须取消对 dbus-daemon 的依赖。GDM（GNOME 登录管理器）是最后一个主要的坚持者。</p><p>其次，Ubuntu 的安全限制框架 AppArmor 处理系统 Debian 包子集以及 snap 的 D-Bus 消息。由于 dbus-broker 直到最近才达到与 dbus-daemon 的功能对等，过早切换并不明智。</p><p>但随着这两个障碍都已清除，并且短期临时版本为系统更改提供了理想机会，Ubuntu 26.10 全面拥抱 dbus-broker 列车。</p><p>不过你不会注意到什么。</p><p>Dbus-broker 是即插即用的替代品。就像 systemd 的“好处”一样，你根本不会注意到任何变化。Canonical 表示 dbus-broker 使用与 dbus-daemon “相同的协议、相同的配置文件、相同的总线策略”，这意味着应用、桌面环境和其他一切“像以前一样继续工作”。</p><p>随着 dbus-broker 在 Ubuntu 26.10 中升级到 main 仓库，旧的 dbus 和 dbus-daemon 包将被降级到 universe 仓库，并且不再预装。如果其他软件（不在 main 中）需要作为依赖项，仍可拉取旧版本。</p><p>在实现方面，dbus-broker 包为其系统和用户实例提供 systemd 单元，取代 dbus-daemon 的单元。如果两个包安装在同一系统上，新包优先。</p><p>如何在 Ubuntu 26.04 上使用 dbus-broker</p><p>Ubuntu 一直在计划 D-Bus 升级。虽然它将在 Ubuntu 26.10 中成为新的开箱即用默认设置，但你也可以在 26.04 LTS 上安装它（尽管有明显的警告：你正在进行手动更改，从 universe 仓库拉取包）。</p><p>要尝试，只需从仓库安装 dbus-broker（它不在 main 中）：</p><p>sudo apt install dbus-broker</p><p>重启系统，启动后它就会就位。你可以通过运行以下命令检查：</p><p>systemctl status dbus-broker</p><p>你可能会在 26.04 上遇到问题，因为它本不打算在那里成为默认。</p><p>要恢复到原始的 dbus 实现，首先确保 dbus 包仍然安装。然后通过 systemd 禁用 dbus-broker：</p><p>sudo systemctl disable dbus-broker</p><p>sudo systemctl --user --global disable dbus-broker</p><p>和之前一样，重启系统并重新登录，然后注意……你有多没注意到变化？请在评论中告诉我。</p><p>这是主要的受支持 Ubuntu 仓库，构成发行版的大部分核心/集成包都存放在这里。包不会无缘无故地待在 main 中。</p><p>我</p></div>
+  <div class="article-body"><p>LLVM 合并 x86 LFI“轻量级故障隔离”目标，用于进程内沙箱 - Phoronix</p><p>LLVM 合并 x86 LFI“轻量级故障隔离”目标，用于进程内沙箱</p><p>发布于 2026 年 7 月 11 日，美国东部时间上午 6:12。</p><p>斯坦福大学的研究人员一直在为 LLVM 开发轻量级故障隔离（LFI）编译器和目标，以实现高效的原生代码沙箱。此前 AArch64 LFI 目标已上游合并，而本周 x86/x86_64 LFI 目标也完成了上游合并，用于这种进程内沙箱方式。</p><p>轻量级故障隔离是一种基于编译器的进程内沙箱方法，旨在提供现有代码的性能和兼容性，同时帮助防御 C、C++ 和汇编代码中的内存安全漏洞等问题。LFI 的目标是“最小化性能开销和工程成本”。</p><p>LFI 源于斯坦福大学的研究，而谷歌等公司一直对该研究感兴趣，希望以最小成本为 C/C++ 代码提供额外的内存安全性。谷歌也因此为 LFI 贡献了工程资源。</p><p>去年的一些关键要点：</p><p>“轻量级故障隔离（LFI）旨在以最小的额外约束支持底层软件沙箱。LFI 摒弃了平台独立性，赋予编译器和运行时最大自由，以利用特定平台的硬件或新颖的优化技术。同时，LFI 尽量紧密遵循现有目标 ABI 和二进制约定（例如 ELF 和 Dwarf 规范），仅作少量调整（例如保留寄存器），以保持与现有代码和工具的兼容性。</p><p>我们当前的 LFI 实现同时支持 ARM64 和 x86-64 处理器。由于 LFI 沙箱是进程内的，沙箱上下文切换仅需数十个周期，通常比基于进程的沙箱快约 100 倍或更多。</p><p>LFI 更贴近底层的方法，相比最先进的 Wasm 工具链，可将沙箱开销降低 3-10 倍。在 Spec2017 上，完整沙箱在 AArch64 上相比原生代码仅产生约 7% 的开销，而仅保护写入时（提供完整性但不提供机密性）开销为 2%。</p><p>LFI 对系统调用/库接口保持中立，因此我们能够通过使用不同的运行时，支持未经修改的库（使用 Linux 系统调用接口）和设备驱动程序。”</p><p>在 AArch64 LFI 目标上游合并到 LLVM 之后，随着现在合并到 LLVM 23，初始的 x86_64 LFI 目标也已就位。</p><p>我们将拭目以待 LFI 的发展方向，以及它最终能获得多少采用，并在为现有 C/C++ 代码提供额外内存安全性方面证明其稳健性。</p><p>LLVM Clang 合并对 NVIDIA Rigel Core 的初始支持，搭配下一代 Rosa CPU</p><p>“我会让 Linux 内核邮件列表燃烧”：知名 LLVM Linux 开发者回归</p><p>LLVM/Clang 为 Hygon x86 CPU 添加初始编译器目标</p><p>LLVM 将提供 Zstd 压缩二进制文件，实现“显著减少”下载量</p><p>为 LLVM 提出的多线程并行编译“MTPC”是个好消息</p><p>谷歌提出 JSIR 作为 JavaScript 的高级 IR</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 也是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>ReactOS“开源 Windows”项目现在能够运行《半条命 2》</p><p>Rust Coreutils cp 因最新不兼容性导致 Ubuntu 镜像构建失败</p><p>LibreOffice 26.8 Beta 发布，改进这款自由软件办公套件</p><p>Proton 11.0-1 发布，推进 Valve 的 Steam Play，带来最佳 Linux 体验</p><p>4K @ 60 FPS USB 视频采集在 Linux 上终于变得不那么棘手</p><p>Linux DRM 调度器补丁</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/ubuntu-26-10-dbus-broker" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/LLVM-x86-LFI-Merged" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

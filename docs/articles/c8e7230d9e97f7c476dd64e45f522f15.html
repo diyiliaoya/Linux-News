@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 26.10 在运行22年后将 dbus-daemon 退役为默认 — Linux 中文速报</title>
+<title>ELM11-Feather：原生支持Lua语言的Feather兼容板 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">软件应用</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Ubuntu 26.10 在运行22年后将 dbus-daemon 退役为默认</h1>
+  <h1>ELM11-Feather：原生支持Lua语言的Feather兼容板</h1>
 
-  <div class="article-summary">Ubuntu 26.10 将自2004年以来首次更换其 D-Bus 实现，用 dbus-broker 取代 dbus-daemon。这一变化对终端用户几乎无影响，因为 dbus-broker 是即插即用的替代品，使用相同的协议、配置文件和总线策略。新实现采用异步事件驱动设计，能避免消息丢失并加快查找速度。此前因 Ubuntu 政策不允许重复包共存以及 AppArmor 兼容性问题，切换延迟至今。用户可在 Ubuntu 26.04 LTS 上手动安装测试。</div>
+  <div class="article-summary">ELM11-Feather是一款基于FPGA的Feather兼容开发板，原生运行Lua语言，无需传统微控制器。它允许用户在Lua、C和VHDL/SystemVerilog三个层面编程，支持23个可配置I/O引脚，售价39美元。该板通过GOWIN FPGA实现双核Lua REPL，并支持完整的硬件栈修改，兼容现有FeatherWing扩展板。BrisbaneSilicon已开启众筹，硬件原理图和固件API将在生产后以MIT许可证发布。</div>
 
-  <div class="article-body"><p>Ubuntu 26.10 在运行22年后将 dbus-daemon 退役为默认 - OMG! Ubuntu</p><p>Ubuntu 26.10 自2004年以来首次更换其 D-Bus 实现，用 dbus-broker 取代 dbus-daemon——这一变化终端用户不太可能注意到。</p><p>桌面上的进程通过 D-Bus（一种“消息”总线）相互通信并与主机系统通信。这就是 Ubuntu Dock 用来显示应用未读计数徽标的方式，也是告诉桌面已插入 USB 驱动器的方式，等等。</p><p>涉及两条总线：一条是系统总线，在整个设备上共享，处理硬件和后台服务；另一条是用户会话总线，用于处理登录用户的桌面和应用集成。</p><p>自22年前首次发布以来，Ubuntu 一直使用 dbus-daemon 作为其默认消息总线。从 Ubuntu 26.10 开始，它将两条总线都切换到 dbus-broker——但区别何在？</p><p>dbus-daemon 包是 D-Bus 的参考实现，Ubuntu 自2004年以来一直使用。尽管它稳定且文档完善，但在高负载下可能会静默丢弃消息，并且只能通过逐个扫描来查找消息目标。速度慢。</p><p>dbus-broker 包是一个相对较新的版本，采用“异步、事件驱动”的设计从头重写。这意味着即使总线被更多进程填满，也不会丢失消息，查找速度更快。</p><p>许多其他桌面 Linux 发行版已经使用了较新的 dbus-broker。Ubuntu 的迁移过程只是由于几个打包原因而花费了更长时间。</p><p>首先，Ubuntu 政策不允许两个功能相同的包存在于 main 仓库中。而且，在添加 dbus-broker 之前，main 中的每个包都必须取消对 dbus-daemon 的依赖。GDM（GNOME 登录管理器）是最后一个主要的坚持者。</p><p>其次，Ubuntu 的安全限制框架 AppArmor 处理系统 Debian 包子集以及 snap 的 D-Bus 消息。由于 dbus-broker 直到最近才达到与 dbus-daemon 的功能对等，过早切换并不明智。</p><p>但随着这两个障碍都已清除，并且短期临时版本为系统更改提供了理想机会，Ubuntu 26.10 全面拥抱 dbus-broker 列车。</p><p>不过你不会注意到什么。</p><p>Dbus-broker 是即插即用的替代品。就像 systemd 的“好处”一样，你根本不会注意到任何变化。Canonical 表示 dbus-broker 使用与 dbus-daemon “相同的协议、相同的配置文件、相同的总线策略”，这意味着应用、桌面环境和其他一切“像以前一样继续工作”。</p><p>随着 dbus-broker 在 Ubuntu 26.10 中升级到 main 仓库，旧的 dbus 和 dbus-daemon 包将被降级到 universe 仓库，并且不再预装。如果其他软件（不在 main 中）需要作为依赖项，仍可拉取旧版本。</p><p>在实现方面，dbus-broker 包为其系统和用户实例提供 systemd 单元，取代 dbus-daemon 的单元。如果两个包安装在同一系统上，新包优先。</p><p>如何在 Ubuntu 26.04 上使用 dbus-broker</p><p>Ubuntu 一直在计划 D-Bus 升级。虽然它将在 Ubuntu 26.10 中成为新的开箱即用默认设置，但你也可以在 26.04 LTS 上安装它（尽管有明显的警告：你正在进行手动更改，从 universe 仓库拉取包）。</p><p>要尝试，只需从仓库安装 dbus-broker（它不在 main 中）：</p><p>sudo apt install dbus-broker</p><p>重启系统，启动后它就会就位。你可以通过运行以下命令检查：</p><p>systemctl status dbus-broker</p><p>你可能会在 26.04 上遇到问题，因为它本不打算在那里成为默认。</p><p>要恢复到原始的 dbus 实现，首先确保 dbus 包仍然安装。然后通过 systemd 禁用 dbus-broker：</p><p>sudo systemctl disable dbus-broker</p><p>sudo systemctl --user --global disable dbus-broker</p><p>和之前一样，重启系统并重新登录，然后注意……你有多没注意到变化？请在评论中告诉我。</p><p>这是主要的受支持 Ubuntu 仓库，构成发行版的大部分核心/集成包都存放在这里。包不会无缘无故地待在 main 中。</p><p>我</p></div>
+  <div class="article-body"><p>ELM11-Feather是一款原生支持Lua语言的Feather兼容板</p><p>它是一款基于FPGA的开发板，允许用户在Lua、C和VHDL/SystemVerilog中编程应用层、驱动层和硬件层，起售价29美元。</p><p>目前市场上大多数微控制器板依赖Python，通常以MicroPython的形式呈现。如果你想要更轻量级的方案，又不愿放弃无需编译、REPL驱动的工作流程，Lua是值得考虑的选择。但大多数微控制器板并非为Lua设计，即使你可以在上面运行Lua。</p><p>这正是总部位于布里斯班的小型半导体公司BrisbaneSilicon试图填补的空白——他们推出了一款原生运行Lua的ELM11-Feather板。实际上，这是该公司原版ELM11的Feather外形尺寸升级版，其众筹活动现已在Crowd Supply上线。</p><p>Lua（应用层）、C（驱动层）、SystemVerilog/VHDL（硬件层），全部集成在一块板上</p><p>GOWIN FPGA（无独立CPU核心，FPGA运行一切）</p><p>23个引脚，每个均可配置为GPIO、PWM、UART、SPI或I²C</p><p>尺寸：22.86 x 64.65 x 4.85 mm（0.9 x 2.54 x 0.191英寸）</p><p>兼容Feather，可与现有FeatherWing扩展板配合使用</p><p>ELM11-Feather售价39美元。</p><p>除了规格参数，架构选择才是亮点。这块板上没有传统的微控制器，而是由GOWIN FPGA完成所有工作，运行双核设置，每个核心上有一个独立的Lua REPL。这就是“巧妙之处”。由于Lua运行在FPGA而非固定MCU上，BrisbaneSilicon可以将整个栈（包括硬件）暴露给用户进行修改。</p><p>23个I/O引脚中的每一个都可以配置为GPIO、PWM、UART、SPI或I²C，与那些固定数量每种接口的板子相比，每个引脚提供了极大的灵活性。该板还配备了1 MB RAM、硬件看门狗、5个用户可编程LED以及一个内置的500 mA锂聚合物充电器（带状态LED），所有这些都集成在Feather紧凑的尺寸（22.86 x 64.65 x 4.85 mm）内，重量仅5.2克。兼容Feather意味着它可以无缝接入现有的FeatherWing扩展板生态系统，无需任何适配。</p><p>全栈可编程性</p><p>BrisbaneSilicon称之为“全栈可编程性”，这也是该板的主要卖点。其理念是同一产品可以在三个独立层面同时扩展：应用层运行Lua，驱动层运行C，硬件层通过可更换的“硬件覆盖层”运行VHDL/SystemVerilog。</p><p>在实践中，这意味着用户可以设计一个自定义硬件模块（例如正交编码器），为其编写C驱动程序，然后通过类似quadrature_encoder_speed()的普通函数将其暴露给Lua脚本。该工作流程无需为每个层面使用单独的工具链，因为BrisbaneSilicon自己的IDE（名为Arvore）旨在统一这三个层面。</p><p>Arvore通过一个界面处理项目创建、上传和扩展Lua API，测试版现已可供下载。对于不想手动安装自定义硬件覆盖层的用户，IDE也提供了配置界面。那些更愿意在命令行完成所有操作的纯粹主义者也不会被排除在外，命令行路径仍然可用。</p><p>BrisbaneSilicon表示，一旦众筹活动结束并开始生产，硬件原理图和固件API都将以MIT许可证发布。</p><p>与同领域其他几款开发板相比：</p><p>Adafruit Feather RP2350（RP2350 + ICE40UP5K）：GPIO和RAM更多，但无原生脚本语言，价格更高</p><p>Adafruit Feather STM32F405：更便宜，但无FPGA且无硬件层可扩展性</p><p>Adafruit HUZZAH32（ESP32）：电池续航更好，但I/O选项少得多，且无脚本到硬件的流水线</p><p>🛒 定价与供货</p><p>ELM11-Feather众筹活动本周在Crowd Supply启动。</p><p>在Crowd Supply上支持该项目</p><p>该板售价39美元。运费尚未公布，BrisbaneSilicon也未给出确切的发货日期。不过该公司表示，已经制造并测试了少量样品。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/ubuntu-26-10-dbus-broker" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/elm11-feather-announcement/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
