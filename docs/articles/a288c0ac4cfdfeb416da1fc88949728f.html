@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>笑死！微软Windows 11存储漏洞可能吞噬500GB磁盘空间 — Linux 中文速报</title>
+<title>DistroWatch 周刊，第 1181 期 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">DistroWatch</span>
   </div>
 
-  <h1>笑死！微软Windows 11存储漏洞可能吞噬500GB磁盘空间</h1>
+  <h1>DistroWatch 周刊，第 1181 期</h1>
 
-  <div class="article-summary">微软Windows 11存在一个存储漏洞，一个名为CapabilityAccessManager.db-wal的日志文件会异常膨胀至超过500GB，占用大量磁盘空间。有用户向微软客服反映此问题，却被告知建议购买新硬盘而非修复漏洞。该问题早在2024年就有报告，但微软直到2025年6月才在预览更新中提及，预计2026年7月才全面修复。</div>
+  <div class="article-summary">本期 DistroWatch 周刊报道了 OpenMandriva 遭遇仓库删除事件、Redox OS 获得 USB 游戏手柄支持、Cinnamon Wayland 会话不再是实验性功能、TUXEDO 从 Ubuntu 基础转向 Debian、Google 锁定第三方应用但不影响去谷歌化的 Android、Ubuntu 因发现 Rust cp 命令不兼容而回退到 GNU cp、运行 Gentoo 的理由、Asahi Linux 修复 macOS 27 启动问题、COSMIC 获得新系统监视器、Ubuntu 计划加入语音转文字功能等新闻。此外还包含 Artix 发行版评测、问答栏目及投票等。</div>
 
-  <div class="article-body"><p>笑死！微软Windows 11存储漏洞可能吞噬500GB磁盘空间</p><p>一名微软客服代理甚至建议用户购买新硬盘，而不是承认问题的存在。</p><p>我们已经习惯了听到Copilot在Windows机器上占用存储空间、出现在它本不该出现的应用程序中，并且通常对任何喜欢无AI电脑的人来说是个麻烦。</p><p>现在，我们遇到了一个Windows日志文件，它一直在悄悄吞噬人们存储驱动器上的空间，而一名微软客服代理甚至在用户投诉时建议购买新硬盘。</p><p>罪魁祸首是CapabilityAccessManager.db-wal，这是Windows用于跟踪摄像头、麦克风和位置权限请求的数据库的预写日志。它本应保持几兆字节大小，并在大约一个月后自行清除。然而，它却可能膨胀到超过500GB，并藏在一个Windows甚至不允许你打开查看的文件夹中。</p><p>收到购买硬盘建议的用户是Donald Gibson，他在微软的问答论坛上发帖称，他的存储空间膨胀到了111GB，而本应只有40GB左右，全因一个66.5GB的CapabilityAccessManager.db-wal文件吞噬了他221GB硬盘上的宝贵空间。</p><p>当他联系微软支持时，客服代理从未听说过这个漏洞，不得不请主管介入后才回复。结果是建议购买一个新的便携式硬盘，而没有帮助删除这个膨胀的文件。</p><p>这并非过去几个月才出现的新问题，同一文件在另一台机器上膨胀到了513GB，且没有任何文件夹可以解释空间去了哪里。</p><p>该问题直到6月29日才被提及，悄悄附在预览更新的发布说明中，位于“已知问题”部分，而该更新早在六天前就已发布。</p><p>但并非所有人现在都会遇到此问题，因为全面修复预计随2026年7月的更新推出，这距离首次报告出现已过去一年多。</p><p>同一更新还带来了重新设计的开始菜单、新的时间点恢复功能以及对更大本地AI模型的支持，所以微软并非缺少工程工时。</p><p>Brave表示这不是隐私功能</p><p>Brave表示这不是隐私功能，但使用容器有其好处</p><p>Brave浏览器1.92引入了对容器的支持，可隔离每个标签页的Cookie和网站数据。</p><p>一个热爱开源软件、定制PC组装、赛车运动以及探索这个世界无限可能的极客。</p><p>这款电子纸PDA希望您用键盘和两个小屏幕抛弃智能手机</p><p>您现在可以为Steam Machine制作电子墨水面板</p><p>Canonical每年投入40,000欧元支持Trifecta Tech将Ubuntu Rust化</p><p>迷因回归！Hannah Montana Linux在2026年重获新生</p><p>Sipeed的新KVM希望AI代理能查看并控制您的屏幕</p><p>成为更好的Linux用户</p><p>通过FOSS周刊通讯，您将学习有用的Linux技巧、发现应用程序、探索新发行版，并随时了解Linux世界的最新动态</p><p>太好了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅It's FOSS。</p><p>您的链接已过期。</p><p>成功！请检查您的电子邮件以获取魔法链接登录。</p><p>成功！您的账单信息已更新。</p><p>您的账单未更新。</p></div>
+  <div class="article-body"><p>DistroWatch 周刊，第 1181 期 (DistroWatch.com 新闻)</p><p>DistroWatch.com 由以下赞助</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW 周刊 / 评测存档</p><p>访客评分与评论</p><p>按评分排序的项目排名</p><p>播客、新闻通讯与评测</p><p>跨发行版比较软件包</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停产的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与窍门专栏</p><p>误解与误区专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>发行版可视化家族树</p><p>常见问题解答</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>OpenMandriva 遭遇发行版破坏未遂事件</p><p>Redox 获得 USB 游戏手柄支持</p><p>Cinnamon Wayland 会话不再是实验性功能</p><p>TUXEDO 从 Ubuntu 基础转向 Debian</p><p>Google 正在锁定第三方应用，但这不影响去谷歌化的 Android</p><p>Ubuntu 在发现 Rust cp 命令不兼容后回退到 GNU cp</p><p>运行 Gentoo 的理由</p><p>Asahi Linux 修复 macOS 27 启动问题</p><p>COSMIC 获得新的系统监视器</p><p>Ubuntu 计划加入语音转文字功能</p><p>易于使用的 PBX - 托管或自管理</p><p>适用于 Linux 的电话系统</p><p>免费在线聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程办公应用：iOS 或 Android</p><p>免费视频会议</p><p>3CX 提供的 VoIP / PBX 操作指南</p><p>不要被抓住，制定灾难恢复计划！</p><p>必备的在线聊天报告与统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成对比</p><p>3CX StartUP 的五大杀手级功能</p><p>别做“那种人” 第1卷：使用复杂凭证</p><p>别做“那种人” 第2卷：呼叫欺诈</p><p>别做“那种人” 第3卷：四大安全提示</p><p>别做“那种人” 第4卷：监控你的实例</p><p>Red Hat 周五五件事 - 2026年7月10日</p><p>Redox 本月动态 - 2026年6月</p><p>Linux Mint 月度新闻 - 2026年6月</p><p>Ubuntu 周刊第951期</p><p>Full Circle 每周新闻</p><p>Galactic Mandate Linux</p><p>LCOS (Lunduke 计算机操作系统)</p><p>最新新闻与更新</p><p>新闻筛选选项</p><p>DistroWatch 周刊，第 1181 期</p><p>评测：Artix 20260419</p><p>新闻：Google 锁定 Android、TUXEDO OS 转向 Debian 基础、Mint 更新 Cinnamon on Wayland、Redox OS 获得 USB 游戏手柄支持、OpenMandriva 从仓库删除中恢复、OSNews 作者对比 Windows 与 Linux</p><p>问答：让迁移到 Linux 更简单</p><p>上周发布：deepin 25.2.0</p><p>种子下载专区：Debian、Debian Edu、deepin</p><p>意见投票：Google 阻止 Android 侧载应用</p><p>在本周 DistroWatch 周刊中阅读更多内容...</p><p>Descent|OS 是一款基于 Debian 的桌面 Linux 发行版，采用传统桌面环境（2.x 系列使用 GNOME 2，后续版本使用 MATE）。该项目的使命是提供任何人都能使用的直观且现代的桌面环境。</p><p>问答：保护用户主目录中的文件</p><p>误解与误区：开源与中央权威</p><p>问答：为什么发行版提供软件包的自定义构建</p><p>误解与误区：sudo</p><p>技巧与窍门：关于软件包签名的一切</p><p>问答：定位便携式软件包</p><p>技巧与窍门：在命令行中处理图像</p><p>技巧与窍门：收集系统信息</p><p>技巧与窍门：用于拯救操作系统和数据文件的工具</p><p>技巧与窍门：验证 ISO 镜像</p><p>版权所有 © 2001 - 2026 Atea Ataroa Limited。保留所有权利。所有商标均为其各自所有者的财产。</p><p>更改隐私设置</p><p>联系方式、更正与建议：</p><p>bc1qxes3k2wq3uqzr074tkwwjmwfe63z70gwzfu4lx</p><p>lnurl1dp68gurn8ghj7ampd3kx2ar0veekzar0wd5xjtnrdakj7tnhv4kxctttdehhwm30d3h82unvwqhhxarpw3jkc7tzw4ex6cfexyfua2nr</p><p>86fA3qPTeQtNb2k1vLwEQaAp3XxkvvvXt69gSG5LGunXXikK9koPWZaRQgfFPBPWhMgXjPjccy9LA9xRFchPWQAnPvxh5Le</p><p>Patreon.com/distrowatch</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/windows-11-cam-bug/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://distrowatch.com/12894" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

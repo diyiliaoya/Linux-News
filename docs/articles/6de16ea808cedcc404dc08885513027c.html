@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>笑死！微软Windows 11存储漏洞可能吞噬500GB磁盘空间 — Linux 中文速报</title>
+<title>Realtek RTL8723BS WiFi Linux 驱动程序针对恶意 WiFi 接入点进行加固 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>笑死！微软Windows 11存储漏洞可能吞噬500GB磁盘空间</h1>
+  <h1>Realtek RTL8723BS WiFi Linux 驱动程序针对恶意 WiFi 接入点进行加固</h1>
 
-  <div class="article-summary">微软Windows 11存在一个存储漏洞，一个名为CapabilityAccessManager.db-wal的日志文件会异常膨胀至超过500GB，占用大量磁盘空间。有用户向微软客服反映此问题，却被告知建议购买新硬盘而非修复漏洞。该问题早在2024年就有报告，但微软直到2025年6月才在预览更新中提及，预计2026年7月才全面修复。</div>
+  <div class="article-summary">本周在 Linux 7.2-rc3 发布前提交的暂存驱动程序修复中，主要对 Realtek RTL8723BS WiFi 驱动程序进行了加固，修复了连接恶意 WiFi 主机时可能出现的越界内存访问问题。这些补丁将在今天合并，并会回溯到现有稳定内核版本。该驱动自 2017 年加入 Linux 内核暂存区以来，一直存在空中 WiFi 数据处理的安全缺陷。</div>
 
-  <div class="article-body"><p>笑死！微软Windows 11存储漏洞可能吞噬500GB磁盘空间</p><p>一名微软客服代理甚至建议用户购买新硬盘，而不是承认问题的存在。</p><p>我们已经习惯了听到Copilot在Windows机器上占用存储空间、出现在它本不该出现的应用程序中，并且通常对任何喜欢无AI电脑的人来说是个麻烦。</p><p>现在，我们遇到了一个Windows日志文件，它一直在悄悄吞噬人们存储驱动器上的空间，而一名微软客服代理甚至在用户投诉时建议购买新硬盘。</p><p>罪魁祸首是CapabilityAccessManager.db-wal，这是Windows用于跟踪摄像头、麦克风和位置权限请求的数据库的预写日志。它本应保持几兆字节大小，并在大约一个月后自行清除。然而，它却可能膨胀到超过500GB，并藏在一个Windows甚至不允许你打开查看的文件夹中。</p><p>收到购买硬盘建议的用户是Donald Gibson，他在微软的问答论坛上发帖称，他的存储空间膨胀到了111GB，而本应只有40GB左右，全因一个66.5GB的CapabilityAccessManager.db-wal文件吞噬了他221GB硬盘上的宝贵空间。</p><p>当他联系微软支持时，客服代理从未听说过这个漏洞，不得不请主管介入后才回复。结果是建议购买一个新的便携式硬盘，而没有帮助删除这个膨胀的文件。</p><p>这并非过去几个月才出现的新问题，同一文件在另一台机器上膨胀到了513GB，且没有任何文件夹可以解释空间去了哪里。</p><p>该问题直到6月29日才被提及，悄悄附在预览更新的发布说明中，位于“已知问题”部分，而该更新早在六天前就已发布。</p><p>但并非所有人现在都会遇到此问题，因为全面修复预计随2026年7月的更新推出，这距离首次报告出现已过去一年多。</p><p>同一更新还带来了重新设计的开始菜单、新的时间点恢复功能以及对更大本地AI模型的支持，所以微软并非缺少工程工时。</p><p>Brave表示这不是隐私功能</p><p>Brave表示这不是隐私功能，但使用容器有其好处</p><p>Brave浏览器1.92引入了对容器的支持，可隔离每个标签页的Cookie和网站数据。</p><p>一个热爱开源软件、定制PC组装、赛车运动以及探索这个世界无限可能的极客。</p><p>这款电子纸PDA希望您用键盘和两个小屏幕抛弃智能手机</p><p>您现在可以为Steam Machine制作电子墨水面板</p><p>Canonical每年投入40,000欧元支持Trifecta Tech将Ubuntu Rust化</p><p>迷因回归！Hannah Montana Linux在2026年重获新生</p><p>Sipeed的新KVM希望AI代理能查看并控制您的屏幕</p><p>成为更好的Linux用户</p><p>通过FOSS周刊通讯，您将学习有用的Linux技巧、发现应用程序、探索新发行版，并随时了解Linux世界的最新动态</p><p>太好了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅It's FOSS。</p><p>您的链接已过期。</p><p>成功！请检查您的电子邮件以获取魔法链接登录。</p><p>成功！您的账单信息已更新。</p><p>您的账单未更新。</p></div>
+  <div class="article-body"><p>Realtek RTL8723BS WiFi Linux 驱动程序针对恶意 WiFi 接入点进行加固 - Phoronix</p><p>Realtek RTL8723BS WiFi Linux 驱动程序针对恶意 WiFi 接入点进行加固</p><p>发布于 2026 年 7 月 12 日，美国东部时间上午 6:15。</p><p>本周在 Linux 7.2-rc3 发布前提交的暂存驱动程序修复，主要对 Realtek RTL8723BS WiFi 驱动程序进行了加固。特别是针对连接“不良”WiFi 主机时出现的越界行为进行了多项修复。</p><p>Alexandru Hossu 一直在解决一系列越界（OOB）内存访问问题，这些问题可能发生在驱动程序迭代来自空中帧的攻击者控制数据时。该驱动程序未能正确验证头部或有效载荷，如果连接到恶意 WiFi 接入点，可能导致多次 OOB 读取/写入。</p><p>这些补丁将在今天合并，赶在 Linux 7.2-rc3 内核发布之前。这些安全修复也将回溯到现有的 Linux 稳定内核版本。这些围绕空中 WiFi 数据处理的的安全缺陷自 2017 年 rtl8723bs 驱动程序被添加到 Linux 内核暂存区以来就一直存在。</p><p>自近十年前进入暂存区以来，Realtek RTL8723BS 驱动程序几乎在每个内核周期都持续进行大量清理工作，其代码复杂性堪称“驱动程序中的猛兽”。Realtek RTL8723BS 是一款支持 802.11 b/g/n 的 SDIO WiFi 芯片组，并支持蓝牙 4.0，多年来已被用于许多不同设备。</p><p>这些针对恶意 WiFi 主机的越界修复是本周暂存驱动程序修复的主要变更内容。</p><p>AF_ALG “噩梦”在 Linux 7.3 中通过新的 Sysctl 旋钮进一步受限</p><p>EHEA 10Gb 以太网驱动程序被 IBM 淘汰，作为过时 POWER 硬件的遗物</p><p>Linux 7.2 暂存区仍在努力驯服 Realtek RTL8723BS “猛兽驱动程序”</p><p>Linux 7.2 带来更多关于 WiFi Aware、WiFi 8 / UHR 及更多网络硬件的工作</p><p>Airoha AN8801R 千兆以太网 PHY 驱动程序即将进入 Linux 7.2</p><p>Linux 7.2 继续弃用 AF_ALG 因其“巨大攻击面”，并取消卸载功能</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 也是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>ReactOS “开源 Windows”项目现已能够运行《半条命 2》</p><p>Pop!_OS 为 COSMIC 推出其“磨砂玻璃”桌面风格</p><p>LibreOffice 26.8 Beta 发布，改进这款自由软件办公套件</p><p>Proton 11.0-1 发布，推进 Valve 的 Steam Play，带来迄今为止最佳的 Linux 体验</p><p>4K @ 60 FPS USB 视频捕获在 Linux 上终于不再那么棘手</p><p>Linux DRM 调度器补丁大幅改善作业提交延迟</p><p>AMD Linux 图形驱动努力清除所有 BUG()</p><p>“我会让 Linux 内核邮件列表燃烧”：著名 LLVM Linux 开发者回归</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/windows-11-cam-bug/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Realtek-RTL8723BS-WiFi-Bad-APs" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
