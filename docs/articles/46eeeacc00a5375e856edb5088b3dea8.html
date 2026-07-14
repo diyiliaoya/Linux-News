@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Claude Linux桌面应用进入Beta阶段 — Linux 中文速报</title>
+<title>新Linux补丁旨在更好地处理多个交换设备 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Claude Linux桌面应用进入Beta阶段</h1>
+  <h1>新Linux补丁旨在更好地处理多个交换设备</h1>
 
-  <div class="article-summary">Anthropic发布了Claude桌面应用的Linux Beta版，同时提供apt仓库供Ubuntu用户安装和更新。该应用提供与macOS和Windows版本相同的Chat、Cowork和Claude Code体验，包括并行会话、可视化差异审查、集成终端和编辑器以及实时应用预览。但部分功能如应用控制和语音听写尚未支持。安装需通过官方apt仓库进行，支持Ubuntu 22.04+和Debian 12+。</div>
+  <div class="article-summary">腾讯的Kairui Song发布了一组Linux内核补丁，旨在改进多交换设备的I/O分发和设计问题。新方案引入公平分配I/O的方式，移除可变优先级列表和全局锁，支持交换分层和分层交换。补丁还重构了交换设备管理的锁定模式，使用per-CPU读写信号量提高可扩展性，解决了全局缓存冲突、优先级反转和轮转不可预测等长期问题。</div>
 
-  <div class="article-body"><p>Anthropic发布了其Claude桌面应用的Linux Beta版，同时提供了一个apt仓库供Ubuntu用户添加以获取持续更新。</p><p>Claude Linux桌面版提供了“与macOS和Windows版本相同的Chat、Cowork和Claude Code体验：并行会话、可视化差异审查、集成终端和编辑器，以及实时应用预览”。</p><p>然而，并非所有应用功能都已可用。例如，让Claude直接控制应用的功能以及语音听写——这两者在macOS和Windows上均已提供。Anthropic表示，应用控制功能将在未来支持Linux；语音听写则未给出具体日期。</p><p>在我亲自试用该客户端（基于Electron或类似框架）时，我发现其他一些桌面集成功能无法正常工作。当启用选项时，提示完成通知并未出现，而系统托盘图标虽有“快速提问”选项（一个浮动输入框），但在我的Ubuntu 26.04 LTS桌面上选择后并未打开任何内容。</p><p>不喜欢AI聊天机器人？</p><p>我报道此事并非作为推荐，只是告知其存在。我撰写关于Ubuntu可用软件的文章，而这款应用确实已可用于Ubuntu。使用与否，由您自行决定。</p><p>作为云服务的前端而非本地AI模型，Claude桌面版无法离线使用，也无需Anthropic账户即可使用。</p><p>在此官方Beta版发布之前，许多Linux用户依赖一种将Windows版本文件重新打包以在Linux上运行的非官方方法，以及非官方包装器和针对Claude主网站的网络应用——前提是标准浏览器标签页不够用。</p><p>如果您打算将Claude用于编程而非对话，则应通过Claude Code使用官方CLI和API。这可以通过大多数终端访问，或集成到各种支持AI的IDE中，包括……</p><p>如何安装Claude Linux桌面版</p><p>该应用适用于64位Intel/AMD和Arm64设备，但在我撰写本文时，尚无可直接使用的DEB包下载。Linux版下载页面上的按钮链接到文档，而文档页面又链接回下载页面。</p><p>因此，要试用它，请改用官方Anthropic apt仓库。添加该仓库不仅能让您在Ubuntu 22.04及更高版本（以及Debian 12及更高版本）上安装Claude桌面版，还能确保您随其他系统更新一起获得应用更新。</p><p>首先，安装curl，因为Anthropic建议使用它来获取签名密钥：</p><p>sudo apt install curl</p><p>然后，获取签名密钥本身：</p><p>sudo curl -fsSLo /usr/share/keyrings/claude-desktop-archive-keyring.asc https://downloads.claude.ai/claude-desktop/key.asc</p><p>现在，添加apt仓库：</p><p>echo &quot;deb [signed-by=/usr/share/keyrings/claude-desktop-archive-keyring.asc] https://downloads.claude.ai/claude-desktop/apt/stable stable main&quot; | sudo tee /etc/apt/sources.list.d/claude-desktop.list</p><p>最后，刷新软件包列表并安装Claude：</p><p>sudo apt update &amp;&amp; sudo apt install claude-desktop</p><p>从应用网格（或您偏好的应用程序菜单）启动Claude。您也可以从终端运行claude-desktop。使用您的Anthropic账户登录即可开始使用。</p><p>Anthropic目前尚未为Fedora/RHEL或Arch用户提供等效版本，但表示计划支持更多发行版。</p><p>特别感谢Petr提供线索！</p></div>
+  <div class="article-body"><p>新Linux补丁旨在更好地处理多个交换设备 - Phoronix</p><p>新Linux补丁旨在更好地处理多个交换设备</p><p>发布于2026年7月13日美国东部时间晚上8点38分。</p><p>对于拥有多个交换设备的Linux系统（例如用于交换分层或分层交换处理）的用户，今天发布的一组Linux内核补丁旨在改善这一状况。</p><p>虽然大多数Phoronix读者可能没有利用多个交换设备，但对于那些拥有更复杂Linux服务器部署的用户来说，腾讯推出了一组有趣的新补丁系列。Kairui Song一直在领导这项工作，旨在更好地将I/O分发到多个交换设备，并在此过程中解决Linux交换处理中的多个突出设计问题。</p><p>Song在今天发布的请求评论（RFC）中指出：</p><p>“本系列引入了一种新方式，可以公平地将I/O分发到多个交换设备，完全摆脱了可变的优先级列表和全局锁，从而移除了全局集群缓存，并允许更自由地进行分配和轮转。这对于交换分层或分层交换尤其有帮助。首先作为RFC发送以供审查，因为分层应该先落地，这可以稍后作为优化进行重基和加入，并且基于本系列还有一些可以改进的项目。我特别考虑了分层和分层思想，使新设计对这些新想法友好，并在本地测试了几种不同的方法。</p><p>作为依赖项，本系列还清理并重新设计了交换设备管理的锁定模式。所有交换设备和新引入的per-CPU读取器优先级队列现在都由一个per-CPU读写信号量保护，以实现更好的可扩展性和更面向未来的设计。</p><p>以前，每个交换设备都有自己的per-CPU集群缓存。为了提高性能，提交1b7e90020eb7（“mm, swap: use percpu cluster as allocation fast path”）将集群缓存移至全局范围，并让每个设备共享相同的全局缓存，这样我们就不必总是触及优先级列表。快速交换分配将只使用每个CPU的集群缓存。当集群缓存中的一个集群耗尽时，设备轮转仍然由优先级列表处理，这会将集群分配与轮转捆绑在一起。它有效，但这种整体设计导致了几个长期存在的问题：</p><p>1) 位于设备选择之上的全局per-CPU集群缓存从根本上与交换分层和分层交换分配等概念冲突。我们需要绕过某些交换设备，因此我们也必须绕过缓存，因为缓存没有稳定的所有权。这将导致非常差的性能。还有其他问题，如优先级反转和设备轮转。这些在交换分层系列中有更详细的描述。</p><p>2) 优先级列表本身需要plist_requeue()来轮转设备以实现循环，这需要持有swap_avail_lock。分配器必须循环：锁定 -&gt; 选择 -&gt; 解锁 -&gt; 分配 -&gt; 锁定 -&gt; 轮转。所有CPU都在同一个全局列表头上竞争，这种设计既不灵活也不健壮。</p><p>3) 轮转被认为是慢路径。避免触及优先级列表的快速/慢路径设计导致了诸如提交9fb749cd15078（“mm, swap: do not perform synchronous discard during allocation”）之类的变通方法，我们无法在触及优先级列表之前稳定地获取实际设备，因此设计是次优的，并且有许多限制。</p><p>4) 我们没有明确的轮转工作规则。循环轮转与集群分配算法紧密捆绑，并且集群耗尽不可预测。我们将有一个大约2M的轮转块大小，但该大小会随时间变化。</p><p>本系列逐步消除了所有这些 issues。”</p><p>那些希望了解更多关于改进Linux多交换设备处理的人可以查看这项有前景的工作。</p><p>重新设计的系统调用入口处理计划用于Linux 7.3</p><p>Linux 7.2-rc3发布：接近“新常态”</p><p>Linux 7.2-rc3带来显示检测改进以帮助某些多GPU系统</p><p>提议的Linux补丁用于更简洁的...</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/claude-desktop-linux-beta" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-Improve-Multi-Swap-Device" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

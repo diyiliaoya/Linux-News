@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Claude Linux桌面应用进入Beta阶段 — Linux 中文速报</title>
+<title>GNOME OS 创建“测试中心”，作为其针对实验性软件的 Apple TestFlight 方案 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Claude Linux桌面应用进入Beta阶段</h1>
+  <h1>GNOME OS 创建“测试中心”，作为其针对实验性软件的 Apple TestFlight 方案</h1>
 
-  <div class="article-summary">Anthropic发布了Claude桌面应用的Linux Beta版，同时提供apt仓库供Ubuntu用户安装和更新。该应用提供与macOS和Windows版本相同的Chat、Cowork和Claude Code体验，包括并行会话、可视化差异审查、集成终端和编辑器以及实时应用预览。但部分功能如应用控制和语音听写尚未支持。安装需通过官方apt仓库进行，支持Ubuntu 22.04+和Debian 12+。</div>
+  <div class="article-summary">GNOME OS 开发团队获得德国 Prototype Fund 资助，正在打造“开发者工具套件”或称“测试中心”，旨在利用 systemd-sysext、Buildstream 等新技术，在基于镜像的现代 Linux 系统中简化实验性应用/库的测试流程。该项目类似 Apple TestFlight 或旧版 Mozilla Labs，目前处于原型阶段。</div>
 
-  <div class="article-body"><p>Anthropic发布了其Claude桌面应用的Linux Beta版，同时提供了一个apt仓库供Ubuntu用户添加以获取持续更新。</p><p>Claude Linux桌面版提供了“与macOS和Windows版本相同的Chat、Cowork和Claude Code体验：并行会话、可视化差异审查、集成终端和编辑器，以及实时应用预览”。</p><p>然而，并非所有应用功能都已可用。例如，让Claude直接控制应用的功能以及语音听写——这两者在macOS和Windows上均已提供。Anthropic表示，应用控制功能将在未来支持Linux；语音听写则未给出具体日期。</p><p>在我亲自试用该客户端（基于Electron或类似框架）时，我发现其他一些桌面集成功能无法正常工作。当启用选项时，提示完成通知并未出现，而系统托盘图标虽有“快速提问”选项（一个浮动输入框），但在我的Ubuntu 26.04 LTS桌面上选择后并未打开任何内容。</p><p>不喜欢AI聊天机器人？</p><p>我报道此事并非作为推荐，只是告知其存在。我撰写关于Ubuntu可用软件的文章，而这款应用确实已可用于Ubuntu。使用与否，由您自行决定。</p><p>作为云服务的前端而非本地AI模型，Claude桌面版无法离线使用，也无需Anthropic账户即可使用。</p><p>在此官方Beta版发布之前，许多Linux用户依赖一种将Windows版本文件重新打包以在Linux上运行的非官方方法，以及非官方包装器和针对Claude主网站的网络应用——前提是标准浏览器标签页不够用。</p><p>如果您打算将Claude用于编程而非对话，则应通过Claude Code使用官方CLI和API。这可以通过大多数终端访问，或集成到各种支持AI的IDE中，包括……</p><p>如何安装Claude Linux桌面版</p><p>该应用适用于64位Intel/AMD和Arm64设备，但在我撰写本文时，尚无可直接使用的DEB包下载。Linux版下载页面上的按钮链接到文档，而文档页面又链接回下载页面。</p><p>因此，要试用它，请改用官方Anthropic apt仓库。添加该仓库不仅能让您在Ubuntu 22.04及更高版本（以及Debian 12及更高版本）上安装Claude桌面版，还能确保您随其他系统更新一起获得应用更新。</p><p>首先，安装curl，因为Anthropic建议使用它来获取签名密钥：</p><p>sudo apt install curl</p><p>然后，获取签名密钥本身：</p><p>sudo curl -fsSLo /usr/share/keyrings/claude-desktop-archive-keyring.asc https://downloads.claude.ai/claude-desktop/key.asc</p><p>现在，添加apt仓库：</p><p>echo &quot;deb [signed-by=/usr/share/keyrings/claude-desktop-archive-keyring.asc] https://downloads.claude.ai/claude-desktop/apt/stable stable main&quot; | sudo tee /etc/apt/sources.list.d/claude-desktop.list</p><p>最后，刷新软件包列表并安装Claude：</p><p>sudo apt update &amp;&amp; sudo apt install claude-desktop</p><p>从应用网格（或您偏好的应用程序菜单）启动Claude。您也可以从终端运行claude-desktop。使用您的Anthropic账户登录即可开始使用。</p><p>Anthropic目前尚未为Fedora/RHEL或Arch用户提供等效版本，但表示计划支持更多发行版。</p><p>特别感谢Petr提供线索！</p></div>
+  <div class="article-body"><p>GNOME OS 创建“测试中心”，作为其针对实验性软件的 Apple TestFlight 方案 - Phoronix</p><p>GNOME OS 创建“测试中心”，作为其针对实验性软件的 Apple TestFlight 方案</p><p>发布于 2026 年 7 月 13 日，美国东部时间上午 6:39。</p><p>从事 GNOME OS 开发的 GNOME 开发者已获得德国 Prototype Fund 的资助，用于打造 GNOME OS“开发者工具套件”（暂定名“测试中心”），以帮助在采用 systemd-sysext、Buildstream 及其他较新技术的现代 Linux 计算环境中测试实验性应用/库。</p><p>在最新一期</p><p>中，这个 GNOME OS“测试中心”被描述为类似于 Apple TestFlight 或旧版 Mozilla Labs，用于在基于镜像的操作系统中测试实验性/开发中软件。Apple TestFlight 是苹果公司的平台，用于在应用正式上架 Apple App Store 之前对 iOS/macOS 应用进行 Beta 测试。</p><p>GNOME OS 测试中心旨在让测试实验性/开发版本软件变得更加容易，同时满足基于镜像的操作系统的约束。这一进展正值越来越多 GNOME 开发者开始使用 GNOME OS 之际。</p><p>该工作目前处于原型阶段，但想了解更多信息的人可以通过</p><p>以及资助页面</p><p>进行了解。</p><p>过去一周，GNOME 方面还看到 Glycin 增加了对 OpenEXR 图像的支持、支持读取 JPEG/PNG/TIFF 图像的像素密度，以及 GLib 的默认网络监控功能得到改进。</p><p>GNOME 引入 ext-background-effect-v1 支持以实现背景模糊效果</p><p>GNOME Mutter GPU 重置恢复功能成为现实</p><p>GNOME 51 Alpha 发布，带来众多增强功能</p><p>GNOME AI 助手新增图像生成支持</p><p>COSMIC 的新系统监视器看起来非常流畅</p><p>实验性代码为 GNOME Shell 启用每个显示器独立背景</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>ReactOS“开源 Windows”项目现已能够运行《半条命 2》</p><p>Pop!_OS 为 COSMIC 推出“磨砂玻璃”桌面风格</p><p>LibreOffice 26.8 Beta 发布，改进这款自由软件办公套件</p><p>Proton 11.0-1 发布，推进 Valve 的 Steam Play，带来最佳 Linux 体验</p><p>Linux 为联想 ThinkPad 的新 USB-C 安全功能做准备</p><p>AMD Linux 图形驱动致力于清除所有 BUG()</p><p>“我会让 Linux 内核邮件列表燃烧”：著名 LLVM Linux 开发者回归</p><p>针对在 Linux 上启动 Apple M4 的初始补丁已发布</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/claude-desktop-linux-beta" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/GNOME-OS-Test-Center" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

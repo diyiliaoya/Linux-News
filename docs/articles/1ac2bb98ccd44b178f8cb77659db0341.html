@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Claude Linux桌面应用进入Beta阶段 — Linux 中文速报</title>
+<title>Graviton5 性能超越 Intel Xeon Granite Rapids，但不及 AMD EPYC Turin — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Claude Linux桌面应用进入Beta阶段</h1>
+  <h1>Graviton5 性能超越 Intel Xeon Granite Rapids，但不及 AMD EPYC Turin</h1>
 
-  <div class="article-summary">Anthropic发布了Claude桌面应用的Linux Beta版，同时提供apt仓库供Ubuntu用户安装和更新。该应用提供与macOS和Windows版本相同的Chat、Cowork和Claude Code体验，包括并行会话、可视化差异审查、集成终端和编辑器以及实时应用预览。但部分功能如应用控制和语音听写尚未支持。安装需通过官方apt仓库进行，支持Ubuntu 22.04+和Debian 12+。</div>
+  <div class="article-summary">AWS 新推出的 Graviton5 处理器在性能上超越了 Intel Xeon Granite Rapids，但相比 AMD EPYC Turin 仍有差距。本文通过对比 m9g.4xlarge（Graviton5）、m8g.4xlarge（Graviton4）、m8a.4xlarge（AMD EPYC Turin）和 m8i.4xlarge（Intel Xeon Granite Rapids）四种实例的基准测试数据，分析了 Graviton5 在 ARM 服务器领域的竞争力。测试在 Ubuntu 26.04 LTS、Linux 7.0 内核和 GCC 15.2 环境下进行，结果显示 Graviton5 在性价比上具有一定优势，但绝对性能仍落后于 AMD EPYC Turin。</div>
 
-  <div class="article-body"><p>Anthropic发布了其Claude桌面应用的Linux Beta版，同时提供了一个apt仓库供Ubuntu用户添加以获取持续更新。</p><p>Claude Linux桌面版提供了“与macOS和Windows版本相同的Chat、Cowork和Claude Code体验：并行会话、可视化差异审查、集成终端和编辑器，以及实时应用预览”。</p><p>然而，并非所有应用功能都已可用。例如，让Claude直接控制应用的功能以及语音听写——这两者在macOS和Windows上均已提供。Anthropic表示，应用控制功能将在未来支持Linux；语音听写则未给出具体日期。</p><p>在我亲自试用该客户端（基于Electron或类似框架）时，我发现其他一些桌面集成功能无法正常工作。当启用选项时，提示完成通知并未出现，而系统托盘图标虽有“快速提问”选项（一个浮动输入框），但在我的Ubuntu 26.04 LTS桌面上选择后并未打开任何内容。</p><p>不喜欢AI聊天机器人？</p><p>我报道此事并非作为推荐，只是告知其存在。我撰写关于Ubuntu可用软件的文章，而这款应用确实已可用于Ubuntu。使用与否，由您自行决定。</p><p>作为云服务的前端而非本地AI模型，Claude桌面版无法离线使用，也无需Anthropic账户即可使用。</p><p>在此官方Beta版发布之前，许多Linux用户依赖一种将Windows版本文件重新打包以在Linux上运行的非官方方法，以及非官方包装器和针对Claude主网站的网络应用——前提是标准浏览器标签页不够用。</p><p>如果您打算将Claude用于编程而非对话，则应通过Claude Code使用官方CLI和API。这可以通过大多数终端访问，或集成到各种支持AI的IDE中，包括……</p><p>如何安装Claude Linux桌面版</p><p>该应用适用于64位Intel/AMD和Arm64设备，但在我撰写本文时，尚无可直接使用的DEB包下载。Linux版下载页面上的按钮链接到文档，而文档页面又链接回下载页面。</p><p>因此，要试用它，请改用官方Anthropic apt仓库。添加该仓库不仅能让您在Ubuntu 22.04及更高版本（以及Debian 12及更高版本）上安装Claude桌面版，还能确保您随其他系统更新一起获得应用更新。</p><p>首先，安装curl，因为Anthropic建议使用它来获取签名密钥：</p><p>sudo apt install curl</p><p>然后，获取签名密钥本身：</p><p>sudo curl -fsSLo /usr/share/keyrings/claude-desktop-archive-keyring.asc https://downloads.claude.ai/claude-desktop/key.asc</p><p>现在，添加apt仓库：</p><p>echo &quot;deb [signed-by=/usr/share/keyrings/claude-desktop-archive-keyring.asc] https://downloads.claude.ai/claude-desktop/apt/stable stable main&quot; | sudo tee /etc/apt/sources.list.d/claude-desktop.list</p><p>最后，刷新软件包列表并安装Claude：</p><p>sudo apt update &amp;&amp; sudo apt install claude-desktop</p><p>从应用网格（或您偏好的应用程序菜单）启动Claude。您也可以从终端运行claude-desktop。使用您的Anthropic账户登录即可开始使用。</p><p>Anthropic目前尚未为Fedora/RHEL或Arch用户提供等效版本，但表示计划支持更多发行版。</p><p>特别感谢Petr提供线索！</p></div>
+  <div class="article-body"><p>Graviton5 性能超越 Intel Xeon Granite Rapids，但不及 AMD EPYC Turin - Phoronix</p><p>Graviton5 性能超越 Intel Xeon Granite Rapids，但不及 AMD EPYC Turin</p><p>发布于 2026 年 7 月 13 日 12:53 PM EDT。</p><p>在 AWS M9g 系列（首批搭载全新 Graviton5 CPU 的实例）近期正式发布后，我最近进行了基准测试，对比了 Graviton4 与 Graviton5 的 CPU 性能。新一代 AWS Graviton 处理器在从 Arm Neoverse-V2 核心升级到 Neoverse-V3 核心、内存从 DDR5-5600 升级到 DDR5-8800 以及其他改进方面，带来了非常可观的代际提升。对于那些想知道 Graviton5 ARM 服务器处理器与 AMD EPYC 和 Intel Xeon 相比如何的人，这里提供来自 Amazon EC2 云的一些额外对比数据点。</p><p>作为上周 m8g.4xlarge 与 m9g.4xlarge 基准测试（在相同 vCPU/核心数下对比 Graviton4 与 Graviton5）的补充，现在这里的数据包括了 m8a.4xlarge 和 m8i.4xlarge，它们是 M 系列 EC2 实例类型中最新搭载 AMD EPYC 和 Intel Xeon 的产品。</p><p>Amazon EC2 M8a 实例搭载 AMD 第五代 EPYC &quot;Turin&quot; 处理器，使用半定制 AMD EPYC 9R45 SKU，M8a 实例的最高频率为 4.5GHz。M8a 的每个 vCPU 对应一个物理 CPU 核心（无 SMT）。M8a 实例使用 DDR5-6400 内存。测试时，m8a.4xlarge 的按需定价为每小时 0.97376 美元，远高于搭载 Graviton5 的新型 m9g.4xlarge 每小时 0.78272 美元的按需定价。</p><p>Amazon EC2 M8i 实例搭载 Intel Xeon 6 Granite Rapids 处理器，即半定制 Intel Xeon 6975P-C。M8i 实例的 Xeon 6 CPU 全核心睿频为 3.9GHz。与 M8g/M9g 和 M8a 实例（每个 vCPU 对应一个物理 CPU 核心）不同，M8i 依赖于物理核心和兄弟线程的混合。因此，m8i.4xlarge 由八个物理 CPU 核心加上其 HT 兄弟线程组成。M8i 实例还使用了 DDR5-7200 内存，尽管 Xeon 6900 系列能够支持 MRDIMM-8800 内存。m8i.4xlarge 的按需每小时定价为 0.84672 美元，比 m8a.4xlarge 实例便宜，但仍高于 m9g.4xlarge，并且物理核心数量只有后者的一半。</p><p>所有这些 4xlarge 实例均配备 64GB 系统内存。我在运行 Ubuntu 26.04 LTS（搭载 Linux 7.0 内核和 GCC 15.2 编译器）的情况下，对所有四种实例类型进行了基准测试。</p><p>让我们看看 Graviton5 与 Intel 和 AMD 当前 x86_64 服务器处理器的性能对比。</p><p>NVIDIA Vera CPU 性能与 Ampere Altra Max 对比</p><p>RISC-V CPU 性能五年内提升 8 倍：SiFive HiFive Unmatched 到 SpacemiT K3</p><p>ARM Linux 服务器性能八年内几何平均值提升超过 7 倍，搭配 NVIDIA Vera CPU 最高提升 15 倍</p><p>AMD EPYC 8635P &quot;Sorano&quot; 基准测试：EPYC 8004 服务器的重大升级机会</p><p>Intel Xeon 6+ 与 Intel Ethernet E835 发布</p><p>AMD 发布 Radeon RX 9070 GRE、Ryzen AI Max PRO 400 系列</p><p>虽然拥有无广告浏览、</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/claude-desktop-linux-beta" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/review/graviton5-epyc-xeon" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

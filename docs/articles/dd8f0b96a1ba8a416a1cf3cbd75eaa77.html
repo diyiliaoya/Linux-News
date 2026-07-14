@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Claude Linux桌面应用进入Beta阶段 — Linux 中文速报</title>
+<title>在白天改变夜灯色温 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
+    <span class="tag">桌面环境</span>
     <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Claude Linux桌面应用进入Beta阶段</h1>
+  <h1>在白天改变夜灯色温</h1>
 
-  <div class="article-summary">Anthropic发布了Claude桌面应用的Linux Beta版，同时提供apt仓库供Ubuntu用户安装和更新。该应用提供与macOS和Windows版本相同的Chat、Cowork和Claude Code体验，包括并行会话、可视化差异审查、集成终端和编辑器以及实时应用预览。但部分功能如应用控制和语音听写尚未支持。安装需通过官方apt仓库进行，支持Ubuntu 22.04+和Debian 12+。</div>
+  <div class="article-summary">Night Light Scheduler 是一款新的 GNOME Shell 扩展，允许用户自定义屏幕色温在一天中的变化。它支持设置最多7个色温值（1500K至6500K），并调整过渡时间（0至120分钟），实现屏幕色温的渐变或快速切换。该扩展兼容 GNOME 46 至 GNOME 50，利用 GNOME 内置色彩偏移功能，无需额外依赖。用户可通过 GNOME Extensions 网站或 Ubuntu 软件源安装。</div>
 
-  <div class="article-body"><p>Anthropic发布了其Claude桌面应用的Linux Beta版，同时提供了一个apt仓库供Ubuntu用户添加以获取持续更新。</p><p>Claude Linux桌面版提供了“与macOS和Windows版本相同的Chat、Cowork和Claude Code体验：并行会话、可视化差异审查、集成终端和编辑器，以及实时应用预览”。</p><p>然而，并非所有应用功能都已可用。例如，让Claude直接控制应用的功能以及语音听写——这两者在macOS和Windows上均已提供。Anthropic表示，应用控制功能将在未来支持Linux；语音听写则未给出具体日期。</p><p>在我亲自试用该客户端（基于Electron或类似框架）时，我发现其他一些桌面集成功能无法正常工作。当启用选项时，提示完成通知并未出现，而系统托盘图标虽有“快速提问”选项（一个浮动输入框），但在我的Ubuntu 26.04 LTS桌面上选择后并未打开任何内容。</p><p>不喜欢AI聊天机器人？</p><p>我报道此事并非作为推荐，只是告知其存在。我撰写关于Ubuntu可用软件的文章，而这款应用确实已可用于Ubuntu。使用与否，由您自行决定。</p><p>作为云服务的前端而非本地AI模型，Claude桌面版无法离线使用，也无需Anthropic账户即可使用。</p><p>在此官方Beta版发布之前，许多Linux用户依赖一种将Windows版本文件重新打包以在Linux上运行的非官方方法，以及非官方包装器和针对Claude主网站的网络应用——前提是标准浏览器标签页不够用。</p><p>如果您打算将Claude用于编程而非对话，则应通过Claude Code使用官方CLI和API。这可以通过大多数终端访问，或集成到各种支持AI的IDE中，包括……</p><p>如何安装Claude Linux桌面版</p><p>该应用适用于64位Intel/AMD和Arm64设备，但在我撰写本文时，尚无可直接使用的DEB包下载。Linux版下载页面上的按钮链接到文档，而文档页面又链接回下载页面。</p><p>因此，要试用它，请改用官方Anthropic apt仓库。添加该仓库不仅能让您在Ubuntu 22.04及更高版本（以及Debian 12及更高版本）上安装Claude桌面版，还能确保您随其他系统更新一起获得应用更新。</p><p>首先，安装curl，因为Anthropic建议使用它来获取签名密钥：</p><p>sudo apt install curl</p><p>然后，获取签名密钥本身：</p><p>sudo curl -fsSLo /usr/share/keyrings/claude-desktop-archive-keyring.asc https://downloads.claude.ai/claude-desktop/key.asc</p><p>现在，添加apt仓库：</p><p>echo &quot;deb [signed-by=/usr/share/keyrings/claude-desktop-archive-keyring.asc] https://downloads.claude.ai/claude-desktop/apt/stable stable main&quot; | sudo tee /etc/apt/sources.list.d/claude-desktop.list</p><p>最后，刷新软件包列表并安装Claude：</p><p>sudo apt update &amp;&amp; sudo apt install claude-desktop</p><p>从应用网格（或您偏好的应用程序菜单）启动Claude。您也可以从终端运行claude-desktop。使用您的Anthropic账户登录即可开始使用。</p><p>Anthropic目前尚未为Fedora/RHEL或Arch用户提供等效版本，但表示计划支持更多发行版。</p><p>特别感谢Petr提供线索！</p></div>
+  <div class="article-body"><p>在白天改变夜灯的色温 - OMG! Ubuntu</p><p>Night Light Scheduler 是一款新的 GNOME Shell 扩展，让你可以控制屏幕在傍晚（或白天）的暖色程度。它提供可自定义的每日计划，并允许你选择或多或少偏橙色的色温（这将减少设备屏幕发出的蓝光）。</p><p>但你所设定的温度在开启后会一直保持不变。它在开始和结束时逐渐过渡，但中间不会变化。</p><p>对大多数人来说，默认行为已经足够。这是一种设置后即可忘记的固定计划。</p><p>但如果你希望屏幕色温在一天中有所变化，Night Light Scheduler 能为你提供这种能力。</p><p>你可以在傍晚早些时候设置较冷的色温，然后每小时逐渐增加暖度，直到睡前达到更深的色调。</p><p>为你的显示器设置最多7个色温值（1500K至6500K），在一天中的特定时间使用（以15分钟为增量），并调整它们之间的过渡时间（0至120分钟）。</p><p>较长的过渡时间能在色温值之间实现微妙、平滑的切换（更难被注意到）。较短的过渡时间意味着色温值之间更快的变化（瞬间完成，但过渡可能显得突兀）。</p><p>计划配置可以导入和导出为可编辑格式。</p><p>Night Light Scheduler 适用于 GNOME 46（Ubuntu 24.04 LTS）至 GNOME 50（Ubuntu 26.04 LTS）。你不需要额外安装任何东西，因为它利用了 GNOME 内置的色彩偏移功能。</p><p>通过浏览器从 GNOME Extensions 网站安装，或者为了更方便，从 Ubuntu 软件源安装该应用并在其中搜索。</p><p>Night Light Scheduler</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/claude-desktop-linux-beta" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/night-light-scheduler-gnome-extension" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

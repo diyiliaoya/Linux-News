@@ -2781,5 +2781,159 @@
     "title_zh": "Realtek RTL8723BS WiFi Linux 驱动程序针对恶意 WiFi 接入点进行加固",
     "summary_zh": "本周在 Linux 7.2-rc3 发布前提交的暂存驱动程序修复中，主要对 Realtek RTL8723BS WiFi 驱动程序进行了加固，修复了连接恶意 WiFi 主机时可能出现的越界内存访问问题。这些补丁将在今天合并，并会回溯到现有稳定内核版本。该驱动自 2017 年加入 Linux 内核暂存区以来，一直存在空中 WiFi 数据处理的安全缺陷。",
     "fulltext_zh": "Realtek RTL8723BS WiFi Linux 驱动程序针对恶意 WiFi 接入点进行加固 - Phoronix\nRealtek RTL8723BS WiFi Linux 驱动程序针对恶意 WiFi 接入点进行加固\n发布于 2026 年 7 月 12 日，美国东部时间上午 6:15。\n本周在 Linux 7.2-rc3 发布前提交的暂存驱动程序修复，主要对 Realtek RTL8723BS WiFi 驱动程序进行了加固。特别是针对连接“不良”WiFi 主机时出现的越界行为进行了多项修复。\nAlexandru Hossu 一直在解决一系列越界（OOB）内存访问问题，这些问题可能发生在驱动程序迭代来自空中帧的攻击者控制数据时。该驱动程序未能正确验证头部或有效载荷，如果连接到恶意 WiFi 接入点，可能导致多次 OOB 读取/写入。\n这些补丁将在今天合并，赶在 Linux 7.2-rc3 内核发布之前。这些安全修复也将回溯到现有的 Linux 稳定内核版本。这些围绕空中 WiFi 数据处理的的安全缺陷自 2017 年 rtl8723bs 驱动程序被添加到 Linux 内核暂存区以来就一直存在。\n自近十年前进入暂存区以来，Realtek RTL8723BS 驱动程序几乎在每个内核周期都持续进行大量清理工作，其代码复杂性堪称“驱动程序中的猛兽”。Realtek RTL8723BS 是一款支持 802.11 b/g/n 的 SDIO WiFi 芯片组，并支持蓝牙 4.0，多年来已被用于许多不同设备。\n这些针对恶意 WiFi 主机的越界修复是本周暂存驱动程序修复的主要变更内容。\nAF_ALG “噩梦”在 Linux 7.3 中通过新的 Sysctl 旋钮进一步受限\nEHEA 10Gb 以太网驱动程序被 IBM 淘汰，作为过时 POWER 硬件的遗物\nLinux 7.2 暂存区仍在努力驯服 Realtek RTL8723BS “猛兽驱动程序”\nLinux 7.2 带来更多关于 WiFi Aware、WiFi 8 / UHR 及更多网络硬件的工作\nAiroha AN8801R 千兆以太网 PHY 驱动程序即将进入 Linux 7.2\nLinux 7.2 继续弃用 AF_ALG 因其“巨大攻击面”，并取消卸载功能\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 也是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\nReactOS “开源 Windows”项目现已能够运行《半条命 2》\nPop!_OS 为 COSMIC 推出其“磨砂玻璃”桌面风格\nLibreOffice 26.8 Beta 发布，改进这款自由软件办公套件\nProton 11.0-1 发布，推进 Valve 的 Steam Play，带来迄今为止最佳的 Linux 体验\n4K @ 60 FPS USB 视频捕获在 Linux 上终于不再那么棘手\nLinux DRM 调度器补丁大幅改善作业提交延迟\nAMD Linux 图形驱动努力清除所有 BUG()\n“我会让 Linux 内核邮件列表燃烧”：著名 LLVM Linux 开发者回归\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "b2c7dc2def415077ee2dc8f257f82cdf": {
+    "id": "b2c7dc2def415077ee2dc8f257f82cdf",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/07/ubuntu-26-04-papers-pdf-viewer-bug-fixes",
+    "title_en": "Ubuntu 26.04 fixes Papers bug that sent PDF links to wrong page",
+    "summary_en": "Ubuntu 26.04 LTS is prepping a bug fix update to Papers, the document viewer that replaced Evince in 25.04, resolving several annoyances – including internal PDF links that jumped to the wrong page. The internal link snafu only occurred in some PDFs, not all, and typically took you to a page one off the actual target. Annoying. The fix stops two separate bits of code that both tried to set the zoom level when links jumped to fit-width or fit-page view. A knock-on quirk also saw the alt + p short",
+    "pub_date": "Mon, 13 Jul 2026 16:31:48 +0000",
+    "title_zh": "Ubuntu 26.04 修复 Papers 中 PDF 链接跳转错误页面的问题",
+    "summary_zh": "Ubuntu 26.04 LTS 正在准备为文档查看器 Papers 发布一个错误修复更新，该更新解决了多个问题，包括内部 PDF 链接跳转到错误页面、快速滚动图像密集型 PDF 和 CBZ 时出现空白页、触控板捏合缩放触发意外滚动、分数缩放系统下的文字抖动以及铅笔图标大小异常等。Papers 50.2 更新将在未来几天作为标准软件更新推送。",
+    "fulltext_zh": "Ubuntu 26.04 LTS 正在为文档查看器 Papers 准备一个错误修复更新，该查看器在 25.04 版本中取代了 Evince。此次更新将解决多个烦人问题——包括内部 PDF 链接跳转到错误页面的问题。\n\n内部链接故障仅出现在部分 PDF 中，并非全部，并且通常会将你带到与实际目标相差一页的位置。这很烦人。修复方案阻止了两段独立的代码同时尝试在链接跳转到适应宽度或适应页面视图时设置缩放级别。\n\n一个连带问题还导致 Alt+左箭头快捷键（用于跳回上一页）在点击有问题的链接后无法返回。\n\n其他问题也得到了解决。\n\n快速滚动图像密集型的 PDF 和 CBZ 文件时，经常会出现空白页飞速掠过的情况，直到你完全停止滚动——不过这只在启用分数缩放时发生。这里，渲染过程中使用的缩放计算是罪魁祸首。\n\n继续与滚动相关的故障，在触控板上使用捏合缩放手势有时会触发意外的滚动——比如直接跳转到文档末尾。根本原因是 GTK 的一个错误，但已经找到了一个解决方法，即在缩放时取消惯性滚动。\n\n分数缩放系统上的文字抖动以及铅笔图标（作为今年早些时候添加的注释工具的一部分）大小异常的问题也得到了修复。更低级别的怪癖和一个安全补丁也包含在内。\n\n如果这些错误中的任何一个曾困扰过你，它们很快就会被解决。Papers 50.2 更新将在未来几天作为标准软件更新推送。无需任何特殊步骤即可获取；一旦准备好安装，软件更新器会通知你。"
+  },
+  "dd8f0b96a1ba8a416a1cf3cbd75eaa77": {
+    "id": "dd8f0b96a1ba8a416a1cf3cbd75eaa77",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/07/night-light-scheduler-gnome-extension",
+    "title_en": "Changing Night Light’s colour temperature during the day",
+    "summary_en": "Night Light Scheduler is a new GNOME Shell extension that lets you control how warm your screen is throughout the evening (or day). GNOME&#8217;s built-in Night Light feature offers a customisable daily schedule, and lets you pick a colour temperature that&#8217;s more or less orange (which will reduce blue light emitted by your device&#8217;s display). But that temperature you set holds the entire time Night Light is switched on. It eases in and out at each end but it never changes in between. ",
+    "pub_date": "Sun, 12 Jul 2026 22:48:00 +0000",
+    "title_zh": "在白天改变夜灯色温",
+    "summary_zh": "Night Light Scheduler 是一款新的 GNOME Shell 扩展，允许用户自定义屏幕色温在一天中的变化。它支持设置最多7个色温值（1500K至6500K），并调整过渡时间（0至120分钟），实现屏幕色温的渐变或快速切换。该扩展兼容 GNOME 46 至 GNOME 50，利用 GNOME 内置色彩偏移功能，无需额外依赖。用户可通过 GNOME Extensions 网站或 Ubuntu 软件源安装。",
+    "fulltext_zh": "在白天改变夜灯的色温 - OMG! Ubuntu\n\nNight Light Scheduler 是一款新的 GNOME Shell 扩展，让你可以控制屏幕在傍晚（或白天）的暖色程度。它提供可自定义的每日计划，并允许你选择或多或少偏橙色的色温（这将减少设备屏幕发出的蓝光）。\n\n但你所设定的温度在开启后会一直保持不变。它在开始和结束时逐渐过渡，但中间不会变化。\n\n对大多数人来说，默认行为已经足够。这是一种设置后即可忘记的固定计划。\n\n但如果你希望屏幕色温在一天中有所变化，Night Light Scheduler 能为你提供这种能力。\n\n你可以在傍晚早些时候设置较冷的色温，然后每小时逐渐增加暖度，直到睡前达到更深的色调。\n\n为你的显示器设置最多7个色温值（1500K至6500K），在一天中的特定时间使用（以15分钟为增量），并调整它们之间的过渡时间（0至120分钟）。\n\n较长的过渡时间能在色温值之间实现微妙、平滑的切换（更难被注意到）。较短的过渡时间意味着色温值之间更快的变化（瞬间完成，但过渡可能显得突兀）。\n\n计划配置可以导入和导出为可编辑格式。\n\nNight Light Scheduler 适用于 GNOME 46（Ubuntu 24.04 LTS）至 GNOME 50（Ubuntu 26.04 LTS）。你不需要额外安装任何东西，因为它利用了 GNOME 内置的色彩偏移功能。\n\n通过浏览器从 GNOME Extensions 网站安装，或者为了更方便，从 Ubuntu 软件源安装该应用并在其中搜索。\n\nNight Light Scheduler"
+  },
+  "0050fa13af8697b0b4aba75890584752": {
+    "id": "0050fa13af8697b0b4aba75890584752",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/chatto-goes-open-source/",
+    "title_en": "Slack Who? This Self-Hosted Chat App Just Went Open Source",
+    "summary_en": "Built by one developer over the past year, Chatto is a team chat solution that can be self-hosted.",
+    "pub_date": "Mon, 13 Jul 2026 13:22:54 GMT",
+    "title_zh": "Slack Who? 这款自托管聊天应用刚刚开源",
+    "summary_zh": "Chatto 是一款由独立开发者用一年时间打造的自托管团队聊天解决方案，现已开源。它支持频道、房间、文件共享、视频嵌入、屏幕共享、端到端加密通话等功能，资源占用低，易于部署。目前尚无桌面或移动客户端，但路线图包含迁移工具、GDPR 数据导出等计划。开发者还计划推出托管服务，运行于欧洲基础设施上，支持自动扩展和夜间备份。",
+    "fulltext_zh": "Slack Who? 这款自托管聊天应用刚刚开源\n\n由一位开发者用过去一年时间打造，Chatto 是一款可以自托管的团队聊天解决方案。\n\n当大多数团队在寻找聊天应用时，首先想到的解决方案通常是 Slack。它以功能丰富、快速和持续更新而闻名，成为全球数百万团队的首选。\n\n但无论它有多好，它并不是开源的。🙃\n\n幸运的是，开源领域并不缺少替代品。\n\nRocket.Chat、Mattermost 和 Zulip 都在希望拥有数据自主权的团队中建立了忠实的追随者。\n\n现在，这个列表里又添了一个新名字：Chatto，而且它仍处于开发周期的早期阶段，稳定的 1.0 版本尚未发布。\n\n在过去的几个月里，Hendrik 一直在开发 Chatto，现在他决定以 Apache-2.0 许可证（某些组件有例外）的形式将该项目完全开源。\n\nChatto 被构建为一种自托管选项，面向那些原本会使用 Slack、Teams 或 Discord 的团队。Hendrik 希望它资源占用轻量、足够简单，管理员只需运行可执行文件即可开始使用。\n\n它涵盖了聊天应用应有的基本功能，包括频道、房间、文件共享、视频嵌入，以及用于精细控制用户访问权限的角色和权限系统。\n\n你还可以获得屏幕共享功能，以及每次语音和视频通话的端到端加密。可加入通话的人数取决于你服务器的容量。\n\n目前没有专门的桌面或移动客户端。路线图将这两项列为可能开发的内容，但它们仍处于探索阶段，这意味着团队还在斟酌是否提供这些客户端。\n\n除了客户端应用，路线图还列出了专门的 Slack 到 Chatto 迁移工具，以及符合 GDPR 标准的数据导出、线程锁定和线程删除等计划中的功能。\n\nHendrik 目前正在开发新的房间类型、带有专用 API 令牌的机器人账户、Chatto 中心集成以及服务器范围的用户封禁。接下来计划的功能包括管理员紧急锁定模式、慢速模式、应用内消息举报和服务器邀请。\n\n对于那些希望跳过自托管的用户，Chatto 的托管服务也即将进入公开测试阶段。它将运行在欧洲拥有的基础设施上，并提供自动扩展和夜间备份等便利功能。\n\n也不必担心供应商锁定问题，因为数据导入和导出都将变得便捷。\n\n最佳开源 Slack 替代品\n用这些开源团队聊天工具告别 Slack\n在这里，我们将介绍一些最佳的开源 Slack 替代品，你可以选择它们与团队进行工作沟通。\n\n喜欢这篇更新吗？支持独立的 Linux 新闻报道\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。请帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。\n一次付费，永久享受\n任意金额，无需承诺\n\n一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的极客。\n\nOpen Book Touch 正在众筹：一款无按键、开硬件的 Kindle 替代品\nELM11-Feather：一款原生支持 Lua 语言的 Feather 兼容板\nLinux Mint 现在认为 Wayland 已稳定\n又一个德国州刚刚赶走了微软…… 算是吧\nTUXEDO OS 正在放弃 Ubuntu，转向永不进入稳定版的 Debian 基础\n\n成为更好的 Linux 用户\n通过 FOSS 每周通讯，你可以学习有用的 Linux 技巧、发现应用程序、探索新发行版，并随时了解 Linux 世界的最新动态\n\n太好了！您已成功注册。\n欢迎回来！您已成功登录。\n您已成功订阅 It's FOSS。\n您的链接已过期。\n成功！请检查您的电子邮件以获取用于登录的魔法链接。\n成功！您的账单信息已更新。\n您的账单未更新。"
+  },
+  "0362fb47720edd067548d3736433f920": {
+    "id": "0362fb47720edd067548d3736433f920",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/open-book-touch-crowdfunding/",
+    "title_en": "Open Book Touch is Crowdfunding: A Buttonless, Open Hardware Answer to Kindle",
+    "summary_en": "It's $149, runs on an ESP32-S3, and skips DRM entirely and lets you skip the Kindle ecosystem.",
+    "pub_date": "Mon, 13 Jul 2026 06:48:17 GMT",
+    "title_zh": "Open Book Touch 开启众筹：一款无按键、开放硬件的 Kindle 替代品",
+    "summary_zh": "Open Book Touch 是一款由开发者 Castillo 推出的开源电子书阅读器，现已登陆 Crowd Supply 众筹平台。它采用 4.26 英寸电子纸触摸屏、ESP32-S3 芯片，完全摒弃 DRM 和 Kindle 生态系统，无需账户即可使用。基础版售价 149 美元，支持 EPUB 和纯文本格式，具备 Wi-Fi 和蓝牙功能，固件基于 MIT 许可证，硬件设计将在发货时开源。该设备强调用户自主权，可拆卸改造，适合拥有自有电子书收藏的读者。",
+    "fulltext_zh": "Open Book Touch 开启众筹：一款无按键、开放硬件的 Kindle 替代品\n\nOpen Book Touch 开启众筹：一款无按键、开放硬件的 Kindle 替代品\n\n售价 149 美元，搭载 ESP32-S3，完全摒弃 DRM，让你摆脱 Kindle 生态系统。\n\n我曾写过关于 Open Book 的文章：这是一款来自开发者 Castillo 的 DIY 开源电子书阅读器项目，理论上你可以自己动手焊接组装。它配备了一块 4.2 英寸的电子纸屏幕、七个用于导航的物理按键，以及那种“只要有烙铁就能自己造一台”的雄心，吸引了一小部分特定用户群体。\n\n六年后的今天，Castillo 带着 Open Book Touch 回归了。它基于相同的理念，但这次更像是一款开箱即用的成品。如果需要，你仍然可以拆开它并根据需求进行修改。这个新项目刚刚在 Crowd Supply 上线，成为对抗大型科技公司围墙花园的一种方式——作为 Kindle 生态系统的开源替代品，这正是许多开源爱好者所青睐的。无需账户、无需 DRM、没有任何“回传”机制。如果你拥有一套不错的电子书收藏，这样的设备值得加入心愿单，至少对我来说是这样。\n\n4.26 英寸电子纸触摸屏，480 × 800 像素，冷暖双色前光\nESP32-S3 双核处理器，Wi-Fi + 低功耗蓝牙\n16 MB 闪存，8 MB PSRAM\n支持 EPUB 和纯文本格式，无 DRM\n存储：microSD 卡槽\nUSB-C 接口，集成锂聚合物电池充电\n尺寸：78 × 120 × 10 毫米，重量约 85 克\n固件采用 MIT 许可证，硬件开源（将在发货时发布）\n\n基础版售价 149 美元，众筹期间还有限量版“作者版”，售价 249 美元。\n\n与旧版相比，最明显的变化就在正面。旧版主板上有方向键、选择键和专用翻页键，而 Open Book Touch 则是一块对称的平板，厚度仅 1 厘米，所有操作都由电容触摸屏完成。这或许就是它被称为 Open Book Touch 的原因。\n\n取消物理按键是合理的，因为这是一款小巧的设备。触摸屏位于一块 4.26 英寸、480 × 800 像素的电子纸面板上，分辨率约为 220 ppi，比同尺寸屏幕预期的更清晰。它本质上是一块 1 位显示屏，翻页时快速、清晰的黑白显示。较慢的 2 位灰度模式则保留给锁屏界面，这样书籍封面或你自己的照片就能呈现更多灰度层次。\n\n前光系统使用了五颗暖色 LED 和五颗冷色 LED，因此你可以选择暖色调用于床上阅读，或冷色调用于白天，而不是被固定在某一种色温。\n\n核心搭载 ESP32-S3，配备 16 MB 闪存和 8 MB PSRAM，这种配置适合在微控制器上解析 EPUB 文件，而非使用完整的 Linux 单板计算机。固件本身基于 ESP-IDF 和 FreeRTOS 上的 C++ 编写，并内置 SQLite 用于静默跟踪你的图书库元数据。\n\n排版也得到了一些关注：两端对齐文本并带有正确的连字符（包含英语、西班牙语、法语和意大利语词典），内嵌抖动处理图像，以及使用开源 Lucida Bright 和 Lucida Sans 字体的位图版本，并带有真正的粗体和斜体字重。\n\n对于一款新设备来说，语言支持相当令人印象深刻。设备内置 GNU Unifont 作为后备字体，覆盖约 70,000 个字形；界面本身已本地化为七种语言，包括阿拉伯语和希伯来语。他们还实现了 Unicode 双向算法，确保从右到左的脚本正确显示，而不是简单地反向渲染。\n\n这里没有 DRM 支持，这是有意为之。书籍通过 microSD 卡或本地 Wi-Fi 加载。你也可以使用 SQLite 管理图书库的元数据。\n\n这里没有配套应用。如果你喜欢在多个设备（如电脑或智能手机）上阅读，这个“特性”也可能带来不便。或许以后会考虑解决这个问题。\n\n800 mAh（最低）锂聚合物电池可用户更换，3D 打印的卡扣式外壳设计便于拆卸，并提供可打印的 CAD 文件。"
+  },
+  "46eeeacc00a5375e856edb5088b3dea8": {
+    "id": "46eeeacc00a5375e856edb5088b3dea8",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-Improve-Multi-Swap-Device",
+    "title_en": "New Linux Patches Aim To Better Handle Multiple Swap Devices",
+    "summary_en": "For those having Linux systems with multiple swap devices, such as for swap tiering or layered swap handling, a set of patches posted today for the Linux kernel are looking to improve the situation...",
+    "pub_date": "Mon, 13 Jul 2026 20:38:08 -0400",
+    "title_zh": "新Linux补丁旨在更好地处理多个交换设备",
+    "summary_zh": "腾讯的Kairui Song发布了一组Linux内核补丁，旨在改进多交换设备的I/O分发和设计问题。新方案引入公平分配I/O的方式，移除可变优先级列表和全局锁，支持交换分层和分层交换。补丁还重构了交换设备管理的锁定模式，使用per-CPU读写信号量提高可扩展性，解决了全局缓存冲突、优先级反转和轮转不可预测等长期问题。",
+    "fulltext_zh": "新Linux补丁旨在更好地处理多个交换设备 - Phoronix\n新Linux补丁旨在更好地处理多个交换设备\n发布于2026年7月13日美国东部时间晚上8点38分。\n\n对于拥有多个交换设备的Linux系统（例如用于交换分层或分层交换处理）的用户，今天发布的一组Linux内核补丁旨在改善这一状况。\n\n虽然大多数Phoronix读者可能没有利用多个交换设备，但对于那些拥有更复杂Linux服务器部署的用户来说，腾讯推出了一组有趣的新补丁系列。Kairui Song一直在领导这项工作，旨在更好地将I/O分发到多个交换设备，并在此过程中解决Linux交换处理中的多个突出设计问题。\n\nSong在今天发布的请求评论（RFC）中指出：\n\n“本系列引入了一种新方式，可以公平地将I/O分发到多个交换设备，完全摆脱了可变的优先级列表和全局锁，从而移除了全局集群缓存，并允许更自由地进行分配和轮转。这对于交换分层或分层交换尤其有帮助。首先作为RFC发送以供审查，因为分层应该先落地，这可以稍后作为优化进行重基和加入，并且基于本系列还有一些可以改进的项目。我特别考虑了分层和分层思想，使新设计对这些新想法友好，并在本地测试了几种不同的方法。\n\n作为依赖项，本系列还清理并重新设计了交换设备管理的锁定模式。所有交换设备和新引入的per-CPU读取器优先级队列现在都由一个per-CPU读写信号量保护，以实现更好的可扩展性和更面向未来的设计。\n\n以前，每个交换设备都有自己的per-CPU集群缓存。为了提高性能，提交1b7e90020eb7（“mm, swap: use percpu cluster as allocation fast path”）将集群缓存移至全局范围，并让每个设备共享相同的全局缓存，这样我们就不必总是触及优先级列表。快速交换分配将只使用每个CPU的集群缓存。当集群缓存中的一个集群耗尽时，设备轮转仍然由优先级列表处理，这会将集群分配与轮转捆绑在一起。它有效，但这种整体设计导致了几个长期存在的问题：\n\n1) 位于设备选择之上的全局per-CPU集群缓存从根本上与交换分层和分层交换分配等概念冲突。我们需要绕过某些交换设备，因此我们也必须绕过缓存，因为缓存没有稳定的所有权。这将导致非常差的性能。还有其他问题，如优先级反转和设备轮转。这些在交换分层系列中有更详细的描述。\n2) 优先级列表本身需要plist_requeue()来轮转设备以实现循环，这需要持有swap_avail_lock。分配器必须循环：锁定 -> 选择 -> 解锁 -> 分配 -> 锁定 -> 轮转。所有CPU都在同一个全局列表头上竞争，这种设计既不灵活也不健壮。\n3) 轮转被认为是慢路径。避免触及优先级列表的快速/慢路径设计导致了诸如提交9fb749cd15078（“mm, swap: do not perform synchronous discard during allocation”）之类的变通方法，我们无法在触及优先级列表之前稳定地获取实际设备，因此设计是次优的，并且有许多限制。\n4) 我们没有明确的轮转工作规则。循环轮转与集群分配算法紧密捆绑，并且集群耗尽不可预测。我们将有一个大约2M的轮转块大小，但该大小会随时间变化。\n\n本系列逐步消除了所有这些 issues。”\n\n那些希望了解更多关于改进Linux多交换设备处理的人可以查看这项有前景的工作。\n\n重新设计的系统调用入口处理计划用于Linux 7.3\nLinux 7.2-rc3发布：接近“新常态”\nLinux 7.2-rc3带来显示检测改进以帮助某些多GPU系统\n提议的Linux补丁用于更简洁的..."
+  },
+  "1ac2bb98ccd44b178f8cb77659db0341": {
+    "id": "1ac2bb98ccd44b178f8cb77659db0341",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/graviton5-epyc-xeon",
+    "title_en": "Graviton5 Outperforming Intel Xeon Granite Rapids But Falls Short Of AMD EPYC Turin",
+    "summary_en": "Following the recent GA of the AWS M9g series as the first instances powered by the new Graviton5 CPUs, I recently ran benchmarks looking at Graviton4 vs. Graviton5 CPU performance. There was very nice generational gains for the new AWS Graviton processors with the shift from Arm Neoverse-V2 to Neoverse-V3 cores and from DDR5-5600 to DDR5-8800 memory, among other improvements. For those wondering how the Graviton5 ARM server processors compare to AMD EPYC and Intel Xeon, here are some additional",
+    "pub_date": "Mon, 13 Jul 2026 12:53:00 -0400",
+    "title_zh": "Graviton5 性能超越 Intel Xeon Granite Rapids，但不及 AMD EPYC Turin",
+    "summary_zh": "AWS 新推出的 Graviton5 处理器在性能上超越了 Intel Xeon Granite Rapids，但相比 AMD EPYC Turin 仍有差距。本文通过对比 m9g.4xlarge（Graviton5）、m8g.4xlarge（Graviton4）、m8a.4xlarge（AMD EPYC Turin）和 m8i.4xlarge（Intel Xeon Granite Rapids）四种实例的基准测试数据，分析了 Graviton5 在 ARM 服务器领域的竞争力。测试在 Ubuntu 26.04 LTS、Linux 7.0 内核和 GCC 15.2 环境下进行，结果显示 Graviton5 在性价比上具有一定优势，但绝对性能仍落后于 AMD EPYC Turin。",
+    "fulltext_zh": "Graviton5 性能超越 Intel Xeon Granite Rapids，但不及 AMD EPYC Turin - Phoronix\nGraviton5 性能超越 Intel Xeon Granite Rapids，但不及 AMD EPYC Turin\n发布于 2026 年 7 月 13 日 12:53 PM EDT。\n\n在 AWS M9g 系列（首批搭载全新 Graviton5 CPU 的实例）近期正式发布后，我最近进行了基准测试，对比了 Graviton4 与 Graviton5 的 CPU 性能。新一代 AWS Graviton 处理器在从 Arm Neoverse-V2 核心升级到 Neoverse-V3 核心、内存从 DDR5-5600 升级到 DDR5-8800 以及其他改进方面，带来了非常可观的代际提升。对于那些想知道 Graviton5 ARM 服务器处理器与 AMD EPYC 和 Intel Xeon 相比如何的人，这里提供来自 Amazon EC2 云的一些额外对比数据点。\n\n作为上周 m8g.4xlarge 与 m9g.4xlarge 基准测试（在相同 vCPU/核心数下对比 Graviton4 与 Graviton5）的补充，现在这里的数据包括了 m8a.4xlarge 和 m8i.4xlarge，它们是 M 系列 EC2 实例类型中最新搭载 AMD EPYC 和 Intel Xeon 的产品。\n\nAmazon EC2 M8a 实例搭载 AMD 第五代 EPYC \"Turin\" 处理器，使用半定制 AMD EPYC 9R45 SKU，M8a 实例的最高频率为 4.5GHz。M8a 的每个 vCPU 对应一个物理 CPU 核心（无 SMT）。M8a 实例使用 DDR5-6400 内存。测试时，m8a.4xlarge 的按需定价为每小时 0.97376 美元，远高于搭载 Graviton5 的新型 m9g.4xlarge 每小时 0.78272 美元的按需定价。\n\nAmazon EC2 M8i 实例搭载 Intel Xeon 6 Granite Rapids 处理器，即半定制 Intel Xeon 6975P-C。M8i 实例的 Xeon 6 CPU 全核心睿频为 3.9GHz。与 M8g/M9g 和 M8a 实例（每个 vCPU 对应一个物理 CPU 核心）不同，M8i 依赖于物理核心和兄弟线程的混合。因此，m8i.4xlarge 由八个物理 CPU 核心加上其 HT 兄弟线程组成。M8i 实例还使用了 DDR5-7200 内存，尽管 Xeon 6900 系列能够支持 MRDIMM-8800 内存。m8i.4xlarge 的按需每小时定价为 0.84672 美元，比 m8a.4xlarge 实例便宜，但仍高于 m9g.4xlarge，并且物理核心数量只有后者的一半。\n\n所有这些 4xlarge 实例均配备 64GB 系统内存。我在运行 Ubuntu 26.04 LTS（搭载 Linux 7.0 内核和 GCC 15.2 编译器）的情况下，对所有四种实例类型进行了基准测试。\n\n让我们看看 Graviton5 与 Intel 和 AMD 当前 x86_64 服务器处理器的性能对比。\n\nNVIDIA Vera CPU 性能与 Ampere Altra Max 对比\nRISC-V CPU 性能五年内提升 8 倍：SiFive HiFive Unmatched 到 SpacemiT K3\nARM Linux 服务器性能八年内几何平均值提升超过 7 倍，搭配 NVIDIA Vera CPU 最高提升 15 倍\nAMD EPYC 8635P \"Sorano\" 基准测试：EPYC 8004 服务器的重大升级机会\nIntel Xeon 6+ 与 Intel Ethernet E835 发布\nAMD 发布 Radeon RX 9070 GRE、Ryzen AI Max PRO 400 系列\n\n虽然拥有无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "90dff212e63bd41ea1982e9b0f14d2f0": {
+    "id": "90dff212e63bd41ea1982e9b0f14d2f0",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/FreeBSD-Desktop-Install-NVIDIA",
+    "title_en": "FreeBSD Desktop Installer Option Working Through NVIDIA Driver Handling, Licensing",
+    "summary_en": "Alfonso Siciliano, who has been one of the FreeBSD developers leading the effort on adding a KDE-based desktop option to the FreeBSD installer, provided an update on recent work around adding integrating this desktop option...",
+    "pub_date": "Mon, 13 Jul 2026 09:21:18 -0400",
+    "title_zh": "FreeBSD桌面安装程序选项正在处理NVIDIA驱动处理与许可问题",
+    "summary_zh": "FreeBSD开发者Alfonso Siciliano正在为FreeBSD安装程序添加基于KDE的桌面选项。继5月实现对Intel和AMD显卡的自动检测后，目前重点转向NVIDIA驱动的处理。由于NVIDIA官方驱动存在不同分支以支持旧版硬件，驱动选择变得复杂。Alfonso提出了自动检测NVIDIA GPU的解决方案，但因许可问题尚未明确，短期内不会集成到bsdinstall中，而是通过菜单让用户选择驱动版本。该桌面安装选项有望随FreeBSD 15.2在12月发布。",
+    "fulltext_zh": "FreeBSD桌面安装程序选项正在处理NVIDIA驱动处理与许可问题 - Phoronix\nFreeBSD桌面安装程序选项正在处理NVIDIA驱动处理与许可问题\n发布于2026年7月13日美国东部时间上午9:21。\n\nAlfonso Siciliano是FreeBSD开发者之一，一直致力于为FreeBSD安装程序添加基于KDE的桌面选项，他提供了关于近期集成该桌面选项工作的最新进展。\n\n继5月完成基于pciconf和fwget数据自动检测Intel和AMD显卡硬件的集成工作后，近期的关注点已转向正确处理NVIDIA FreeBSD驱动支持。特别是，由于官方NVIDIA FreeBSD驱动在旧版驱动支持方面存在不同分支，若想维持对旧版GPU硬件的支持，处理NVIDIA侧的驱动选择并非易事。\n\nAlfonso一直在努力基于NVIDIA支持的芯片组列表提供自动NVIDIA GPU检测。但NVIDIA驱动许可问题尚未完全审查。Alfonso今天在邮件中解释道：\n\n“在6月份，我主要专注于BSDCan。在会议演讲中，我提出了一种自动检测合适NVIDIA GPU驱动的方案，允许安装程序自动检测硬件、安装正确驱动并配置系统。然而，许可问题尚未明确，因此该方案短期内不会集成到bsdinstall中。相反，拥有NVIDIA GPU的用户将通过菜单提示选择要安装的NVIDIA设备驱动版本。”\n\n目前的期望是FreeBSD桌面安装选项能在FreeBSD 15.2发布时准备就绪。FreeBSD 15.2正朝着12月发布稳定版的目标推进。\n\nFreeBSD将其图形驱动端口更新至Linux 6.12 LTS\nFreeBSD 15.1发布，带来更新的WiFi驱动、更好的C23支持及其他改进\nFreeBSD获得资金以启动AI辅助漏洞发现\nFreeBSD 15.1因关键x86错误修复推迟至6月中旬\nFreeBSD 15.1-RC2恢复了对VIA及Zhaoxin CPU的PadLock RNG支持\nFreeBSD基金会执行董事尝试在笔记本电脑上日常使用FreeBSD\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael也是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动基准测试软件的首席开发者。可通过以下方式关注他：\n\nReactOS“开源Windows”项目现已能运行《半条命2》\nPop!_OS为COSMIC推出“磨砂玻璃”桌面风格\nLibreOffice 26.8 Beta发布，改进这款自由软件办公套件\nProton 11.0-1发布，推进Valve的Steam Play，带来最佳Linux体验\nLinux为联想ThinkPad的新USB-C安全功能做准备\nAMD Linux图形驱动正努力清除所有BUG()\n“我要让Linux内核邮件列表燃烧”：著名LLVM Linux开发者回归\n为在Linux上启动Apple M4发布初始补丁\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "fb2a1c359338524b6a0b848f5985f068": {
+    "id": "fb2a1c359338524b6a0b848f5985f068",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/GNOME-OS-Test-Center",
+    "title_en": "GNOME OS Creating \"Test Center\" As Its Take On Apple TestFlight For Experiment Software",
+    "summary_en": "GNOME developers working on GNOME OS have received funding from Germany's Prototype Fund to work on creating the GNOME OS \"Developer Tool Suite\" or also tentatively called their \"Test Center\" to help in testing experimental applications/libraries in a modern Linux computing world with systemd-sysext, Buildstream, and other newer tech...",
+    "pub_date": "Mon, 13 Jul 2026 06:39:11 -0400",
+    "title_zh": "GNOME OS 创建“测试中心”，作为其针对实验性软件的 Apple TestFlight 方案",
+    "summary_zh": "GNOME OS 开发团队获得德国 Prototype Fund 资助，正在打造“开发者工具套件”或称“测试中心”，旨在利用 systemd-sysext、Buildstream 等新技术，在基于镜像的现代 Linux 系统中简化实验性应用/库的测试流程。该项目类似 Apple TestFlight 或旧版 Mozilla Labs，目前处于原型阶段。",
+    "fulltext_zh": "GNOME OS 创建“测试中心”，作为其针对实验性软件的 Apple TestFlight 方案 - Phoronix\nGNOME OS 创建“测试中心”，作为其针对实验性软件的 Apple TestFlight 方案\n发布于 2026 年 7 月 13 日，美国东部时间上午 6:39。\n\n从事 GNOME OS 开发的 GNOME 开发者已获得德国 Prototype Fund 的资助，用于打造 GNOME OS“开发者工具套件”（暂定名“测试中心”），以帮助在采用 systemd-sysext、Buildstream 及其他较新技术的现代 Linux 计算环境中测试实验性应用/库。\n\n在最新一期\n中，这个 GNOME OS“测试中心”被描述为类似于 Apple TestFlight 或旧版 Mozilla Labs，用于在基于镜像的操作系统中测试实验性/开发中软件。Apple TestFlight 是苹果公司的平台，用于在应用正式上架 Apple App Store 之前对 iOS/macOS 应用进行 Beta 测试。\n\nGNOME OS 测试中心旨在让测试实验性/开发版本软件变得更加容易，同时满足基于镜像的操作系统的约束。这一进展正值越来越多 GNOME 开发者开始使用 GNOME OS 之际。\n\n该工作目前处于原型阶段，但想了解更多信息的人可以通过\n以及资助页面\n进行了解。\n\n过去一周，GNOME 方面还看到 Glycin 增加了对 OpenEXR 图像的支持、支持读取 JPEG/PNG/TIFF 图像的像素密度，以及 GLib 的默认网络监控功能得到改进。\n\nGNOME 引入 ext-background-effect-v1 支持以实现背景模糊效果\nGNOME Mutter GPU 重置恢复功能成为现实\nGNOME 51 Alpha 发布，带来众多增强功能\nGNOME AI 助手新增图像生成支持\nCOSMIC 的新系统监视器看起来非常流畅\n实验性代码为 GNOME Shell 启用每个显示器独立背景\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nReactOS“开源 Windows”项目现已能够运行《半条命 2》\nPop!_OS 为 COSMIC 推出“磨砂玻璃”桌面风格\nLibreOffice 26.8 Beta 发布，改进这款自由软件办公套件\nProton 11.0-1 发布，推进 Valve 的 Steam Play，带来最佳 Linux 体验\nLinux 为联想 ThinkPad 的新 USB-C 安全功能做准备\nAMD Linux 图形驱动致力于清除所有 BUG()\n“我会让 Linux 内核邮件列表燃烧”：著名 LLVM Linux 开发者回归\n针对在 Linux 上启动 Apple M4 的初始补丁已发布\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "0ffa395323c069b9da44d24949ad01b6": {
+    "id": "0ffa395323c069b9da44d24949ad01b6",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Rework-Sysclal-Entry-Linux-7.3",
+    "title_en": "Reworked System Call Entry Handling Slated For Linux 7.3",
+    "summary_en": "Stemming from looking at a proposed Linux kernel patch to alter the Linux kernel's system call number handling, veteran Linux kernel developer Thomas Gleixner went down a rabbit hole of the kernel's system call entry handling to make a number of clean-ups and improvements to the code. That rework to the system call entry handling is now expected to land for the Linux 7.3 kernel cycle...",
+    "pub_date": "Mon, 13 Jul 2026 06:17:21 -0400",
+    "title_zh": "重构的系统调用入口处理预计将进入 Linux 7.3",
+    "summary_zh": "资深 Linux 内核开发者 Thomas Gleixner 在审查系统调用编号补丁时，深入研究了系统调用入口处理代码，并进行了多项清理和改进。他发现某些 CPU 架构（如 PowerPC）的内核栈随机化处理存在错误或次优问题，因此统一了所有架构的通用系统调用入口代码，确保栈随机化尽早且正确执行。此外，他还修复了 x86 架构中的一些历史遗留问题。经过测试，这一重构在系统调用密集型工作负载下带来了小幅性能提升。相关补丁已进入 tip/tip.git 的 core/entry 分支，预计将在 Linux 7.3 合并窗口期间提交。",
+    "fulltext_zh": "重构的系统调用入口处理预计将进入 Linux 7.3 - Phoronix\n重构的系统调用入口处理预计将进入 Linux 7.3\n发布于 2026 年 7 月 13 日 上午 6:17 EDT。\n\n源于对一项提议的 Linux 内核补丁的审视——该补丁旨在修改 Linux 内核的系统调用编号处理——资深 Linux 内核开发者 Thomas Gleixner 深入研究了内核的系统调用入口处理代码，并进行了大量清理和改进。这一系统调用入口处理的重构现在预计将进入 Linux 7.3 内核周期。\n\n在审查 Linux 系统调用入口处理代码时，他发现 Linux 内核支持的某些 CPU 架构并未以相同方式处理内核栈随机化。一些架构（如 PowerPC）的栈随机化处理存在“错误”且“次优”。\n\nGleixner 最终调整了所有架构，使其使用通用系统调用入口代码，遵循相同方案，并尽早进行正确的栈随机化。此外，他还修复了代码中的一些“x86 怪异之处”。最终，他的系统调用密集型工作负载基准测试和微基准测试显示，这一重构带来了小幅性能提升。因此，这次系统调用入口处理的重构似乎取得了不错的成果。\n\nGleixner 详细阐述道：\n“那次讨论让我更深入地审视相关代码，像往常一样，发现了许多其他问题。\n1) 栈随机化\nadd_random_kstack_offset() 只能在 enter_from_user_mode() 建立适当状态后调用，因为它会调用可插桩代码。\nPowerPC 在这方面处理错误，而其他架构要么在 enter_from_user_mode() 之后调用，要么在 syscall_enter_from_user_mode() 之后调用。\n后者是次优的，因为随机化发生在所有用户模式入口工作之后。此外，add_random_kstack_offset() 使用了 get/put_cpu_var()，这使得它可用于可抢占代码，但在中断禁用区域调用时，这会造成无谓的开销。\n2) 如上述线程所讨论，仅仅更改 syscall_enter_from_user_mode[_work]() 的函数签名，使其接受一个指向系统调用的指针参数，并在成功时返回 0，这并不直观。此外，这还破坏了跟踪器在将系统调用编号设置为 -1 时的隐式假设。\n3) x86 入口代码存在一些历史积累的怪异之处\n以下系列通过以下方式解决这些问题：\n1) 提供新的 [syscall_]enter_from_user_mode() 变体，这些变体包含栈随机化，并利用新的 add_random_kstack_offset_irqsoff() 变体，避免了 get/put_cpu_var() 开销，并转换了所有使用点\n2) 采纳 Jinjie 的 seccomp 补丁，来自：\nhttps://lore.kernel.org/lkml/\n并处理反馈（重命名 seccomp 函数）\n3) 使 ptrace 和跟踪器相关函数返回布尔值以指示系统调用权限\n4) 处理 x86 怪异之处\n5) 将整个代码树转换为新方案\n这样，所有使用通用系统调用入口代码的架构都遵循相同方案，在正确且尽可能早的位置应用栈随机化，并根据 syscall_enter_from_user_mode[_work]() 的布尔返回值跳过系统调用处理。\n应该没有功能变化，至少没有预期中的变化。\n在 x86_64 上，系统调用入口代码的最终文本大小比更改前略小。\n测试系统调用密集型工作负载和微基准测试显示，总体重构带来了小幅性能提升，但最后一个补丁（旨在使逻辑更易理解）在任一方向上都没有可测量的影响。”\n\n随着这些补丁自昨天起逐步进入 tip/tip.git 的 core/entry Git 分支，预计这些材料将在即将到来的 Linux 7.3 合并窗口期间提交。\n\n新 Linux 补丁旨在更好地处理多个交换设备\nLinux 7.2-rc3 发布：接近“新常态”\nLinux 7.2-rc3 带来显示检测改进"
+  },
+  "d582fa4719ae664f867abcb446976531": {
+    "id": "d582fa4719ae664f867abcb446976531",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/handbrake-1-11-2-video-transcoder-fixes-x265-crash/",
+    "title_en": "HandBrake 1.11.2 Video Transcoder Fixes x265 Crash",
+    "summary_en": "Upgrade to HandBrake 1.11.2 for vital fixes addressing x265 crashes. Experience smoother video transcoding with this latest version.\nThe post HandBrake 1.11.2 Video Transcoder Fixes x265 Crash appeared first on Linux Today.",
+    "pub_date": "Mon, 13 Jul 2026 07:01:16 +0000",
+    "title_zh": "HandBrake 1.11.2 视频转码器修复 x265 崩溃问题",
+    "summary_zh": "HandBrake 1.11.2 版本发布，重点修复了 x265 编码器崩溃的关键问题，为用户带来更流畅的视频转码体验。该更新针对稳定性进行了优化，建议用户升级。",
+    "fulltext_zh": "升级到 HandBrake 1.11.2 以获取针对 x265 崩溃问题的关键修复。体验此最新版本带来的更流畅视频转码。\n\n该文章 HandBrake 1.11.2 视频转码器修复 x265 崩溃问题 首次出现在 Linux Today 上。"
+  },
+  "1d3c863bcabce238f00f1648a6869850": {
+    "id": "1d3c863bcabce238f00f1648a6869850",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/yay-12-6-aur-helper-lands-after-six-months-with-smarter-search/",
+    "title_en": "Yay 12.6 AUR Helper Lands After Six Months with Smarter Search",
+    "summary_en": "Discover the new Yay 12.6 AUR Helper, featuring smarter search capabilities after six months of development. Enhance your AUR experience today!\nThe post Yay 12.6 AUR Helper Lands After Six Months with Smarter Search appeared first on Linux Today.",
+    "pub_date": "Mon, 13 Jul 2026 06:59:47 +0000",
+    "title_zh": "Yay 12.6 AUR Helper 历经六个月开发后发布，带来更智能的搜索功能",
+    "summary_zh": "经过六个月的开发，Yay 12.6 AUR Helper 正式发布，主要带来了更智能的搜索能力，旨在提升用户在 Arch 用户软件仓库（AUR）中的使用体验。",
+    "fulltext_zh": "发现全新的 Yay 12.6 AUR Helper，经过六个月的开发，带来了更智能的搜索功能。立即提升你的 AUR 体验！\n\n本文《Yay 12.6 AUR Helper Lands After Six Months with Smarter Search》最初发表于 Linux Today。"
+  },
+  "bb8a9048db3ad1a01fe9c05dcab867e7": {
+    "id": "bb8a9048db3ad1a01fe9c05dcab867e7",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/cosmic-desktops-big-visual-upgrade-moves-closer-to-release/",
+    "title_en": "COSMIC Desktop’s Big Visual Upgrade Moves Closer to Release",
+    "summary_en": "Get ready for COSMIC Desktop's major visual upgrade! Explore the innovative features that will elevate your desktop experience closer to launch.\nThe post COSMIC Desktop’s Big Visual Upgrade Moves Closer to Release appeared first on Linux Today.",
+    "pub_date": "Mon, 13 Jul 2026 06:58:39 +0000",
+    "title_zh": "COSMIC桌面重大视觉升级接近发布",
+    "summary_zh": "COSMIC桌面环境即将迎来一次重大的视觉升级，带来多项创新功能，旨在提升用户的桌面体验。此次升级已接近正式发布阶段，将为Linux用户带来更现代化、更流畅的界面与交互设计。",
+    "fulltext_zh": "准备好迎接COSMIC桌面的重大视觉升级吧！探索那些将在发布前提升你桌面体验的创新功能。\n\n该文章《COSMIC Desktop’s Big Visual Upgrade Moves Closer to Release》最初发表于Linux Today。"
+  },
+  "8cff5430e1aa96f9a42359f6505c26f3": {
+    "id": "8cff5430e1aa96f9a42359f6505c26f3",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/hyprland-0-55-3-rolls-out-with-a-long-list-of-stability-fixes/",
+    "title_en": "Hyprland 0.55.3 Rolls Out with a Long List of Stability Fixes",
+    "summary_en": "Explore the new Hyprland 0.55.3 release, packed with essential stability fixes designed to improve functionality and reliability for all users.\nThe post Hyprland 0.55.3 Rolls Out with a Long List of Stability Fixes appeared first on Linux Today.",
+    "pub_date": "Mon, 13 Jul 2026 06:57:06 +0000",
+    "title_zh": "Hyprland 0.55.3 发布：带来大量稳定性修复",
+    "summary_zh": "Hyprland 0.55.3 版本正式发布，主要包含一系列关键稳定性修复，旨在提升所有用户的功能体验与系统可靠性。本次更新聚焦于修复已知问题，优化整体性能，确保窗口管理器运行更加流畅稳定。",
+    "fulltext_zh": "探索全新的 Hyprland 0.55.3 版本，该版本包含大量关键的稳定性修复，旨在提升所有用户的功能性与可靠性。\n\n本文《Hyprland 0.55.3 Rolls Out with a Long List of Stability Fixes》最初发表于 Linux Today。"
+  },
+  "ba2ac03a538158b8f06afd39a688b6a1": {
+    "id": "ba2ac03a538158b8f06afd39a688b6a1",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/11-best-free-and-open-source-terminal-based-personal-finance-tools/",
+    "title_en": "11 Best Free and Open Source Terminal-Based Personal Finance Tools",
+    "summary_en": "Discover the 11 best free and open-source terminal-based personal finance tools to manage your finances efficiently and effectively. Explore your options now!\nThe post 11 Best Free and Open Source Terminal-Based Personal Finance Tools appeared first on Linux Today.",
+    "pub_date": "Mon, 13 Jul 2026 06:55:35 +0000",
+    "title_zh": "11款最佳免费开源终端个人理财工具",
+    "summary_zh": "本文介绍了11款基于终端的免费开源个人理财工具，帮助用户高效管理财务。这些工具涵盖记账、预算、投资跟踪等功能，适合喜欢命令行操作的用户。文章详细列出了每款工具的特点和适用场景，为Linux用户提供了实用的理财解决方案。",
+    "fulltext_zh": "发现11款最佳免费开源终端个人理财工具，高效且有效地管理您的财务。立即探索您的选择！\n\n该文章《11款最佳免费开源终端个人理财工具》首发于Linux Today。"
   }
 }

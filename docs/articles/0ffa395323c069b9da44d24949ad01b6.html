@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Claude Linux桌面应用进入Beta阶段 — Linux 中文速报</title>
+<title>重构的系统调用入口处理预计将进入 Linux 7.3 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Claude Linux桌面应用进入Beta阶段</h1>
+  <h1>重构的系统调用入口处理预计将进入 Linux 7.3</h1>
 
-  <div class="article-summary">Anthropic发布了Claude桌面应用的Linux Beta版，同时提供apt仓库供Ubuntu用户安装和更新。该应用提供与macOS和Windows版本相同的Chat、Cowork和Claude Code体验，包括并行会话、可视化差异审查、集成终端和编辑器以及实时应用预览。但部分功能如应用控制和语音听写尚未支持。安装需通过官方apt仓库进行，支持Ubuntu 22.04+和Debian 12+。</div>
+  <div class="article-summary">资深 Linux 内核开发者 Thomas Gleixner 在审查系统调用编号补丁时，深入研究了系统调用入口处理代码，并进行了多项清理和改进。他发现某些 CPU 架构（如 PowerPC）的内核栈随机化处理存在错误或次优问题，因此统一了所有架构的通用系统调用入口代码，确保栈随机化尽早且正确执行。此外，他还修复了 x86 架构中的一些历史遗留问题。经过测试，这一重构在系统调用密集型工作负载下带来了小幅性能提升。相关补丁已进入 tip/tip.git 的 core/entry 分支，预计将在 Linux 7.3 合并窗口期间提交。</div>
 
-  <div class="article-body"><p>Anthropic发布了其Claude桌面应用的Linux Beta版，同时提供了一个apt仓库供Ubuntu用户添加以获取持续更新。</p><p>Claude Linux桌面版提供了“与macOS和Windows版本相同的Chat、Cowork和Claude Code体验：并行会话、可视化差异审查、集成终端和编辑器，以及实时应用预览”。</p><p>然而，并非所有应用功能都已可用。例如，让Claude直接控制应用的功能以及语音听写——这两者在macOS和Windows上均已提供。Anthropic表示，应用控制功能将在未来支持Linux；语音听写则未给出具体日期。</p><p>在我亲自试用该客户端（基于Electron或类似框架）时，我发现其他一些桌面集成功能无法正常工作。当启用选项时，提示完成通知并未出现，而系统托盘图标虽有“快速提问”选项（一个浮动输入框），但在我的Ubuntu 26.04 LTS桌面上选择后并未打开任何内容。</p><p>不喜欢AI聊天机器人？</p><p>我报道此事并非作为推荐，只是告知其存在。我撰写关于Ubuntu可用软件的文章，而这款应用确实已可用于Ubuntu。使用与否，由您自行决定。</p><p>作为云服务的前端而非本地AI模型，Claude桌面版无法离线使用，也无需Anthropic账户即可使用。</p><p>在此官方Beta版发布之前，许多Linux用户依赖一种将Windows版本文件重新打包以在Linux上运行的非官方方法，以及非官方包装器和针对Claude主网站的网络应用——前提是标准浏览器标签页不够用。</p><p>如果您打算将Claude用于编程而非对话，则应通过Claude Code使用官方CLI和API。这可以通过大多数终端访问，或集成到各种支持AI的IDE中，包括……</p><p>如何安装Claude Linux桌面版</p><p>该应用适用于64位Intel/AMD和Arm64设备，但在我撰写本文时，尚无可直接使用的DEB包下载。Linux版下载页面上的按钮链接到文档，而文档页面又链接回下载页面。</p><p>因此，要试用它，请改用官方Anthropic apt仓库。添加该仓库不仅能让您在Ubuntu 22.04及更高版本（以及Debian 12及更高版本）上安装Claude桌面版，还能确保您随其他系统更新一起获得应用更新。</p><p>首先，安装curl，因为Anthropic建议使用它来获取签名密钥：</p><p>sudo apt install curl</p><p>然后，获取签名密钥本身：</p><p>sudo curl -fsSLo /usr/share/keyrings/claude-desktop-archive-keyring.asc https://downloads.claude.ai/claude-desktop/key.asc</p><p>现在，添加apt仓库：</p><p>echo &quot;deb [signed-by=/usr/share/keyrings/claude-desktop-archive-keyring.asc] https://downloads.claude.ai/claude-desktop/apt/stable stable main&quot; | sudo tee /etc/apt/sources.list.d/claude-desktop.list</p><p>最后，刷新软件包列表并安装Claude：</p><p>sudo apt update &amp;&amp; sudo apt install claude-desktop</p><p>从应用网格（或您偏好的应用程序菜单）启动Claude。您也可以从终端运行claude-desktop。使用您的Anthropic账户登录即可开始使用。</p><p>Anthropic目前尚未为Fedora/RHEL或Arch用户提供等效版本，但表示计划支持更多发行版。</p><p>特别感谢Petr提供线索！</p></div>
+  <div class="article-body"><p>重构的系统调用入口处理预计将进入 Linux 7.3 - Phoronix</p><p>重构的系统调用入口处理预计将进入 Linux 7.3</p><p>发布于 2026 年 7 月 13 日 上午 6:17 EDT。</p><p>源于对一项提议的 Linux 内核补丁的审视——该补丁旨在修改 Linux 内核的系统调用编号处理——资深 Linux 内核开发者 Thomas Gleixner 深入研究了内核的系统调用入口处理代码，并进行了大量清理和改进。这一系统调用入口处理的重构现在预计将进入 Linux 7.3 内核周期。</p><p>在审查 Linux 系统调用入口处理代码时，他发现 Linux 内核支持的某些 CPU 架构并未以相同方式处理内核栈随机化。一些架构（如 PowerPC）的栈随机化处理存在“错误”且“次优”。</p><p>Gleixner 最终调整了所有架构，使其使用通用系统调用入口代码，遵循相同方案，并尽早进行正确的栈随机化。此外，他还修复了代码中的一些“x86 怪异之处”。最终，他的系统调用密集型工作负载基准测试和微基准测试显示，这一重构带来了小幅性能提升。因此，这次系统调用入口处理的重构似乎取得了不错的成果。</p><p>Gleixner 详细阐述道：</p><p>“那次讨论让我更深入地审视相关代码，像往常一样，发现了许多其他问题。</p><p>1) 栈随机化</p><p>add_random_kstack_offset() 只能在 enter_from_user_mode() 建立适当状态后调用，因为它会调用可插桩代码。</p><p>PowerPC 在这方面处理错误，而其他架构要么在 enter_from_user_mode() 之后调用，要么在 syscall_enter_from_user_mode() 之后调用。</p><p>后者是次优的，因为随机化发生在所有用户模式入口工作之后。此外，add_random_kstack_offset() 使用了 get/put_cpu_var()，这使得它可用于可抢占代码，但在中断禁用区域调用时，这会造成无谓的开销。</p><p>2) 如上述线程所讨论，仅仅更改 syscall_enter_from_user_mode[_work]() 的函数签名，使其接受一个指向系统调用的指针参数，并在成功时返回 0，这并不直观。此外，这还破坏了跟踪器在将系统调用编号设置为 -1 时的隐式假设。</p><p>3) x86 入口代码存在一些历史积累的怪异之处</p><p>以下系列通过以下方式解决这些问题：</p><p>1) 提供新的 [syscall_]enter_from_user_mode() 变体，这些变体包含栈随机化，并利用新的 add_random_kstack_offset_irqsoff() 变体，避免了 get/put_cpu_var() 开销，并转换了所有使用点</p><p>2) 采纳 Jinjie 的 seccomp 补丁，来自：</p><p>https://lore.kernel.org/lkml/</p><p>并处理反馈（重命名 seccomp 函数）</p><p>3) 使 ptrace 和跟踪器相关函数返回布尔值以指示系统调用权限</p><p>4) 处理 x86 怪异之处</p><p>5) 将整个代码树转换为新方案</p><p>这样，所有使用通用系统调用入口代码的架构都遵循相同方案，在正确且尽可能早的位置应用栈随机化，并根据 syscall_enter_from_user_mode[_work]() 的布尔返回值跳过系统调用处理。</p><p>应该没有功能变化，至少没有预期中的变化。</p><p>在 x86_64 上，系统调用入口代码的最终文本大小比更改前略小。</p><p>测试系统调用密集型工作负载和微基准测试显示，总体重构带来了小幅性能提升，但最后一个补丁（旨在使逻辑更易理解）在任一方向上都没有可测量的影响。”</p><p>随着这些补丁自昨天起逐步进入 tip/tip.git 的 core/entry Git 分支，预计这些材料将在即将到来的 Linux 7.3 合并窗口期间提交。</p><p>新 Linux 补丁旨在更好地处理多个交换设备</p><p>Linux 7.2-rc3 发布：接近“新常态”</p><p>Linux 7.2-rc3 带来显示检测改进</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/claude-desktop-linux-beta" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Rework-Sysclal-Entry-Linux-7.3" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

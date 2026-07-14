@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Claude Linux桌面应用进入Beta阶段 — Linux 中文速报</title>
+<title>Slack Who? 这款自托管聊天应用刚刚开源 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">软件应用</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Claude Linux桌面应用进入Beta阶段</h1>
+  <h1>Slack Who? 这款自托管聊天应用刚刚开源</h1>
 
-  <div class="article-summary">Anthropic发布了Claude桌面应用的Linux Beta版，同时提供apt仓库供Ubuntu用户安装和更新。该应用提供与macOS和Windows版本相同的Chat、Cowork和Claude Code体验，包括并行会话、可视化差异审查、集成终端和编辑器以及实时应用预览。但部分功能如应用控制和语音听写尚未支持。安装需通过官方apt仓库进行，支持Ubuntu 22.04+和Debian 12+。</div>
+  <div class="article-summary">Chatto 是一款由独立开发者用一年时间打造的自托管团队聊天解决方案，现已开源。它支持频道、房间、文件共享、视频嵌入、屏幕共享、端到端加密通话等功能，资源占用低，易于部署。目前尚无桌面或移动客户端，但路线图包含迁移工具、GDPR 数据导出等计划。开发者还计划推出托管服务，运行于欧洲基础设施上，支持自动扩展和夜间备份。</div>
 
-  <div class="article-body"><p>Anthropic发布了其Claude桌面应用的Linux Beta版，同时提供了一个apt仓库供Ubuntu用户添加以获取持续更新。</p><p>Claude Linux桌面版提供了“与macOS和Windows版本相同的Chat、Cowork和Claude Code体验：并行会话、可视化差异审查、集成终端和编辑器，以及实时应用预览”。</p><p>然而，并非所有应用功能都已可用。例如，让Claude直接控制应用的功能以及语音听写——这两者在macOS和Windows上均已提供。Anthropic表示，应用控制功能将在未来支持Linux；语音听写则未给出具体日期。</p><p>在我亲自试用该客户端（基于Electron或类似框架）时，我发现其他一些桌面集成功能无法正常工作。当启用选项时，提示完成通知并未出现，而系统托盘图标虽有“快速提问”选项（一个浮动输入框），但在我的Ubuntu 26.04 LTS桌面上选择后并未打开任何内容。</p><p>不喜欢AI聊天机器人？</p><p>我报道此事并非作为推荐，只是告知其存在。我撰写关于Ubuntu可用软件的文章，而这款应用确实已可用于Ubuntu。使用与否，由您自行决定。</p><p>作为云服务的前端而非本地AI模型，Claude桌面版无法离线使用，也无需Anthropic账户即可使用。</p><p>在此官方Beta版发布之前，许多Linux用户依赖一种将Windows版本文件重新打包以在Linux上运行的非官方方法，以及非官方包装器和针对Claude主网站的网络应用——前提是标准浏览器标签页不够用。</p><p>如果您打算将Claude用于编程而非对话，则应通过Claude Code使用官方CLI和API。这可以通过大多数终端访问，或集成到各种支持AI的IDE中，包括……</p><p>如何安装Claude Linux桌面版</p><p>该应用适用于64位Intel/AMD和Arm64设备，但在我撰写本文时，尚无可直接使用的DEB包下载。Linux版下载页面上的按钮链接到文档，而文档页面又链接回下载页面。</p><p>因此，要试用它，请改用官方Anthropic apt仓库。添加该仓库不仅能让您在Ubuntu 22.04及更高版本（以及Debian 12及更高版本）上安装Claude桌面版，还能确保您随其他系统更新一起获得应用更新。</p><p>首先，安装curl，因为Anthropic建议使用它来获取签名密钥：</p><p>sudo apt install curl</p><p>然后，获取签名密钥本身：</p><p>sudo curl -fsSLo /usr/share/keyrings/claude-desktop-archive-keyring.asc https://downloads.claude.ai/claude-desktop/key.asc</p><p>现在，添加apt仓库：</p><p>echo &quot;deb [signed-by=/usr/share/keyrings/claude-desktop-archive-keyring.asc] https://downloads.claude.ai/claude-desktop/apt/stable stable main&quot; | sudo tee /etc/apt/sources.list.d/claude-desktop.list</p><p>最后，刷新软件包列表并安装Claude：</p><p>sudo apt update &amp;&amp; sudo apt install claude-desktop</p><p>从应用网格（或您偏好的应用程序菜单）启动Claude。您也可以从终端运行claude-desktop。使用您的Anthropic账户登录即可开始使用。</p><p>Anthropic目前尚未为Fedora/RHEL或Arch用户提供等效版本，但表示计划支持更多发行版。</p><p>特别感谢Petr提供线索！</p></div>
+  <div class="article-body"><p>Slack Who? 这款自托管聊天应用刚刚开源</p><p>由一位开发者用过去一年时间打造，Chatto 是一款可以自托管的团队聊天解决方案。</p><p>当大多数团队在寻找聊天应用时，首先想到的解决方案通常是 Slack。它以功能丰富、快速和持续更新而闻名，成为全球数百万团队的首选。</p><p>但无论它有多好，它并不是开源的。🙃</p><p>幸运的是，开源领域并不缺少替代品。</p><p>Rocket.Chat、Mattermost 和 Zulip 都在希望拥有数据自主权的团队中建立了忠实的追随者。</p><p>现在，这个列表里又添了一个新名字：Chatto，而且它仍处于开发周期的早期阶段，稳定的 1.0 版本尚未发布。</p><p>在过去的几个月里，Hendrik 一直在开发 Chatto，现在他决定以 Apache-2.0 许可证（某些组件有例外）的形式将该项目完全开源。</p><p>Chatto 被构建为一种自托管选项，面向那些原本会使用 Slack、Teams 或 Discord 的团队。Hendrik 希望它资源占用轻量、足够简单，管理员只需运行可执行文件即可开始使用。</p><p>它涵盖了聊天应用应有的基本功能，包括频道、房间、文件共享、视频嵌入，以及用于精细控制用户访问权限的角色和权限系统。</p><p>你还可以获得屏幕共享功能，以及每次语音和视频通话的端到端加密。可加入通话的人数取决于你服务器的容量。</p><p>目前没有专门的桌面或移动客户端。路线图将这两项列为可能开发的内容，但它们仍处于探索阶段，这意味着团队还在斟酌是否提供这些客户端。</p><p>除了客户端应用，路线图还列出了专门的 Slack 到 Chatto 迁移工具，以及符合 GDPR 标准的数据导出、线程锁定和线程删除等计划中的功能。</p><p>Hendrik 目前正在开发新的房间类型、带有专用 API 令牌的机器人账户、Chatto 中心集成以及服务器范围的用户封禁。接下来计划的功能包括管理员紧急锁定模式、慢速模式、应用内消息举报和服务器邀请。</p><p>对于那些希望跳过自托管的用户，Chatto 的托管服务也即将进入公开测试阶段。它将运行在欧洲拥有的基础设施上，并提供自动扩展和夜间备份等便利功能。</p><p>也不必担心供应商锁定问题，因为数据导入和导出都将变得便捷。</p><p>最佳开源 Slack 替代品</p><p>用这些开源团队聊天工具告别 Slack</p><p>在这里，我们将介绍一些最佳的开源 Slack 替代品，你可以选择它们与团队进行工作沟通。</p><p>喜欢这篇更新吗？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。请帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无需承诺</p><p>一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的极客。</p><p>Open Book Touch 正在众筹：一款无按键、开硬件的 Kindle 替代品</p><p>ELM11-Feather：一款原生支持 Lua 语言的 Feather 兼容板</p><p>Linux Mint 现在认为 Wayland 已稳定</p><p>又一个德国州刚刚赶走了微软…… 算是吧</p><p>TUXEDO OS 正在放弃 Ubuntu，转向永不进入稳定版的 Debian 基础</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周通讯，你可以学习有用的 Linux 技巧、发现应用程序、探索新发行版，并随时了解 Linux 世界的最新动态</p><p>太好了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅 It's FOSS。</p><p>您的链接已过期。</p><p>成功！请检查您的电子邮件以获取用于登录的魔法链接。</p><p>成功！您的账单信息已更新。</p><p>您的账单未更新。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/claude-desktop-linux-beta" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/chatto-goes-open-source/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

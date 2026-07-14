@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Claude Linux桌面应用进入Beta阶段 — Linux 中文速报</title>
+<title>Ubuntu 26.04 修复 Papers 中 PDF 链接跳转错误页面的问题 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -152,14 +152,14 @@
     <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Claude Linux桌面应用进入Beta阶段</h1>
+  <h1>Ubuntu 26.04 修复 Papers 中 PDF 链接跳转错误页面的问题</h1>
 
-  <div class="article-summary">Anthropic发布了Claude桌面应用的Linux Beta版，同时提供apt仓库供Ubuntu用户安装和更新。该应用提供与macOS和Windows版本相同的Chat、Cowork和Claude Code体验，包括并行会话、可视化差异审查、集成终端和编辑器以及实时应用预览。但部分功能如应用控制和语音听写尚未支持。安装需通过官方apt仓库进行，支持Ubuntu 22.04+和Debian 12+。</div>
+  <div class="article-summary">Ubuntu 26.04 LTS 正在准备为文档查看器 Papers 发布一个错误修复更新，该更新解决了多个问题，包括内部 PDF 链接跳转到错误页面、快速滚动图像密集型 PDF 和 CBZ 时出现空白页、触控板捏合缩放触发意外滚动、分数缩放系统下的文字抖动以及铅笔图标大小异常等。Papers 50.2 更新将在未来几天作为标准软件更新推送。</div>
 
-  <div class="article-body"><p>Anthropic发布了其Claude桌面应用的Linux Beta版，同时提供了一个apt仓库供Ubuntu用户添加以获取持续更新。</p><p>Claude Linux桌面版提供了“与macOS和Windows版本相同的Chat、Cowork和Claude Code体验：并行会话、可视化差异审查、集成终端和编辑器，以及实时应用预览”。</p><p>然而，并非所有应用功能都已可用。例如，让Claude直接控制应用的功能以及语音听写——这两者在macOS和Windows上均已提供。Anthropic表示，应用控制功能将在未来支持Linux；语音听写则未给出具体日期。</p><p>在我亲自试用该客户端（基于Electron或类似框架）时，我发现其他一些桌面集成功能无法正常工作。当启用选项时，提示完成通知并未出现，而系统托盘图标虽有“快速提问”选项（一个浮动输入框），但在我的Ubuntu 26.04 LTS桌面上选择后并未打开任何内容。</p><p>不喜欢AI聊天机器人？</p><p>我报道此事并非作为推荐，只是告知其存在。我撰写关于Ubuntu可用软件的文章，而这款应用确实已可用于Ubuntu。使用与否，由您自行决定。</p><p>作为云服务的前端而非本地AI模型，Claude桌面版无法离线使用，也无需Anthropic账户即可使用。</p><p>在此官方Beta版发布之前，许多Linux用户依赖一种将Windows版本文件重新打包以在Linux上运行的非官方方法，以及非官方包装器和针对Claude主网站的网络应用——前提是标准浏览器标签页不够用。</p><p>如果您打算将Claude用于编程而非对话，则应通过Claude Code使用官方CLI和API。这可以通过大多数终端访问，或集成到各种支持AI的IDE中，包括……</p><p>如何安装Claude Linux桌面版</p><p>该应用适用于64位Intel/AMD和Arm64设备，但在我撰写本文时，尚无可直接使用的DEB包下载。Linux版下载页面上的按钮链接到文档，而文档页面又链接回下载页面。</p><p>因此，要试用它，请改用官方Anthropic apt仓库。添加该仓库不仅能让您在Ubuntu 22.04及更高版本（以及Debian 12及更高版本）上安装Claude桌面版，还能确保您随其他系统更新一起获得应用更新。</p><p>首先，安装curl，因为Anthropic建议使用它来获取签名密钥：</p><p>sudo apt install curl</p><p>然后，获取签名密钥本身：</p><p>sudo curl -fsSLo /usr/share/keyrings/claude-desktop-archive-keyring.asc https://downloads.claude.ai/claude-desktop/key.asc</p><p>现在，添加apt仓库：</p><p>echo &quot;deb [signed-by=/usr/share/keyrings/claude-desktop-archive-keyring.asc] https://downloads.claude.ai/claude-desktop/apt/stable stable main&quot; | sudo tee /etc/apt/sources.list.d/claude-desktop.list</p><p>最后，刷新软件包列表并安装Claude：</p><p>sudo apt update &amp;&amp; sudo apt install claude-desktop</p><p>从应用网格（或您偏好的应用程序菜单）启动Claude。您也可以从终端运行claude-desktop。使用您的Anthropic账户登录即可开始使用。</p><p>Anthropic目前尚未为Fedora/RHEL或Arch用户提供等效版本，但表示计划支持更多发行版。</p><p>特别感谢Petr提供线索！</p></div>
+  <div class="article-body"><p>Ubuntu 26.04 LTS 正在为文档查看器 Papers 准备一个错误修复更新，该查看器在 25.04 版本中取代了 Evince。此次更新将解决多个烦人问题——包括内部 PDF 链接跳转到错误页面的问题。</p><p>内部链接故障仅出现在部分 PDF 中，并非全部，并且通常会将你带到与实际目标相差一页的位置。这很烦人。修复方案阻止了两段独立的代码同时尝试在链接跳转到适应宽度或适应页面视图时设置缩放级别。</p><p>一个连带问题还导致 Alt+左箭头快捷键（用于跳回上一页）在点击有问题的链接后无法返回。</p><p>其他问题也得到了解决。</p><p>快速滚动图像密集型的 PDF 和 CBZ 文件时，经常会出现空白页飞速掠过的情况，直到你完全停止滚动——不过这只在启用分数缩放时发生。这里，渲染过程中使用的缩放计算是罪魁祸首。</p><p>继续与滚动相关的故障，在触控板上使用捏合缩放手势有时会触发意外的滚动——比如直接跳转到文档末尾。根本原因是 GTK 的一个错误，但已经找到了一个解决方法，即在缩放时取消惯性滚动。</p><p>分数缩放系统上的文字抖动以及铅笔图标（作为今年早些时候添加的注释工具的一部分）大小异常的问题也得到了修复。更低级别的怪癖和一个安全补丁也包含在内。</p><p>如果这些错误中的任何一个曾困扰过你，它们很快就会被解决。Papers 50.2 更新将在未来几天作为标准软件更新推送。无需任何特殊步骤即可获取；一旦准备好安装，软件更新器会通知你。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/claude-desktop-linux-beta" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/ubuntu-26-04-papers-pdf-viewer-bug-fixes" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

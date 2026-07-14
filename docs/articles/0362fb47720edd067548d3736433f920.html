@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ELM11-Feather：原生支持Lua语言的Feather兼容板 — Linux 中文速报</title>
+<title>Open Book Touch 开启众筹：一款无按键、开放硬件的 Kindle 替代品 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
+    <span class="tag">其他</span>
     <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>ELM11-Feather：原生支持Lua语言的Feather兼容板</h1>
+  <h1>Open Book Touch 开启众筹：一款无按键、开放硬件的 Kindle 替代品</h1>
 
-  <div class="article-summary">ELM11-Feather是一款基于FPGA的Feather兼容开发板，原生运行Lua语言，无需传统微控制器。它允许用户在Lua、C和VHDL/SystemVerilog三个层面编程，支持23个可配置I/O引脚，售价39美元。该板通过GOWIN FPGA实现双核Lua REPL，并支持完整的硬件栈修改，兼容现有FeatherWing扩展板。BrisbaneSilicon已开启众筹，硬件原理图和固件API将在生产后以MIT许可证发布。</div>
+  <div class="article-summary">Open Book Touch 是一款由开发者 Castillo 推出的开源电子书阅读器，现已登陆 Crowd Supply 众筹平台。它采用 4.26 英寸电子纸触摸屏、ESP32-S3 芯片，完全摒弃 DRM 和 Kindle 生态系统，无需账户即可使用。基础版售价 149 美元，支持 EPUB 和纯文本格式，具备 Wi-Fi 和蓝牙功能，固件基于 MIT 许可证，硬件设计将在发货时开源。该设备强调用户自主权，可拆卸改造，适合拥有自有电子书收藏的读者。</div>
 
-  <div class="article-body"><p>ELM11-Feather是一款原生支持Lua语言的Feather兼容板</p><p>它是一款基于FPGA的开发板，允许用户在Lua、C和VHDL/SystemVerilog中编程应用层、驱动层和硬件层，起售价29美元。</p><p>目前市场上大多数微控制器板依赖Python，通常以MicroPython的形式呈现。如果你想要更轻量级的方案，又不愿放弃无需编译、REPL驱动的工作流程，Lua是值得考虑的选择。但大多数微控制器板并非为Lua设计，即使你可以在上面运行Lua。</p><p>这正是总部位于布里斯班的小型半导体公司BrisbaneSilicon试图填补的空白——他们推出了一款原生运行Lua的ELM11-Feather板。实际上，这是该公司原版ELM11的Feather外形尺寸升级版，其众筹活动现已在Crowd Supply上线。</p><p>Lua（应用层）、C（驱动层）、SystemVerilog/VHDL（硬件层），全部集成在一块板上</p><p>GOWIN FPGA（无独立CPU核心，FPGA运行一切）</p><p>23个引脚，每个均可配置为GPIO、PWM、UART、SPI或I²C</p><p>尺寸：22.86 x 64.65 x 4.85 mm（0.9 x 2.54 x 0.191英寸）</p><p>兼容Feather，可与现有FeatherWing扩展板配合使用</p><p>ELM11-Feather售价39美元。</p><p>除了规格参数，架构选择才是亮点。这块板上没有传统的微控制器，而是由GOWIN FPGA完成所有工作，运行双核设置，每个核心上有一个独立的Lua REPL。这就是“巧妙之处”。由于Lua运行在FPGA而非固定MCU上，BrisbaneSilicon可以将整个栈（包括硬件）暴露给用户进行修改。</p><p>23个I/O引脚中的每一个都可以配置为GPIO、PWM、UART、SPI或I²C，与那些固定数量每种接口的板子相比，每个引脚提供了极大的灵活性。该板还配备了1 MB RAM、硬件看门狗、5个用户可编程LED以及一个内置的500 mA锂聚合物充电器（带状态LED），所有这些都集成在Feather紧凑的尺寸（22.86 x 64.65 x 4.85 mm）内，重量仅5.2克。兼容Feather意味着它可以无缝接入现有的FeatherWing扩展板生态系统，无需任何适配。</p><p>全栈可编程性</p><p>BrisbaneSilicon称之为“全栈可编程性”，这也是该板的主要卖点。其理念是同一产品可以在三个独立层面同时扩展：应用层运行Lua，驱动层运行C，硬件层通过可更换的“硬件覆盖层”运行VHDL/SystemVerilog。</p><p>在实践中，这意味着用户可以设计一个自定义硬件模块（例如正交编码器），为其编写C驱动程序，然后通过类似quadrature_encoder_speed()的普通函数将其暴露给Lua脚本。该工作流程无需为每个层面使用单独的工具链，因为BrisbaneSilicon自己的IDE（名为Arvore）旨在统一这三个层面。</p><p>Arvore通过一个界面处理项目创建、上传和扩展Lua API，测试版现已可供下载。对于不想手动安装自定义硬件覆盖层的用户，IDE也提供了配置界面。那些更愿意在命令行完成所有操作的纯粹主义者也不会被排除在外，命令行路径仍然可用。</p><p>BrisbaneSilicon表示，一旦众筹活动结束并开始生产，硬件原理图和固件API都将以MIT许可证发布。</p><p>与同领域其他几款开发板相比：</p><p>Adafruit Feather RP2350（RP2350 + ICE40UP5K）：GPIO和RAM更多，但无原生脚本语言，价格更高</p><p>Adafruit Feather STM32F405：更便宜，但无FPGA且无硬件层可扩展性</p><p>Adafruit HUZZAH32（ESP32）：电池续航更好，但I/O选项少得多，且无脚本到硬件的流水线</p><p>🛒 定价与供货</p><p>ELM11-Feather众筹活动本周在Crowd Supply启动。</p><p>在Crowd Supply上支持该项目</p><p>该板售价39美元。运费尚未公布，BrisbaneSilicon也未给出确切的发货日期。不过该公司表示，已经制造并测试了少量样品。</p></div>
+  <div class="article-body"><p>Open Book Touch 开启众筹：一款无按键、开放硬件的 Kindle 替代品</p><p>Open Book Touch 开启众筹：一款无按键、开放硬件的 Kindle 替代品</p><p>售价 149 美元，搭载 ESP32-S3，完全摒弃 DRM，让你摆脱 Kindle 生态系统。</p><p>我曾写过关于 Open Book 的文章：这是一款来自开发者 Castillo 的 DIY 开源电子书阅读器项目，理论上你可以自己动手焊接组装。它配备了一块 4.2 英寸的电子纸屏幕、七个用于导航的物理按键，以及那种“只要有烙铁就能自己造一台”的雄心，吸引了一小部分特定用户群体。</p><p>六年后的今天，Castillo 带着 Open Book Touch 回归了。它基于相同的理念，但这次更像是一款开箱即用的成品。如果需要，你仍然可以拆开它并根据需求进行修改。这个新项目刚刚在 Crowd Supply 上线，成为对抗大型科技公司围墙花园的一种方式——作为 Kindle 生态系统的开源替代品，这正是许多开源爱好者所青睐的。无需账户、无需 DRM、没有任何“回传”机制。如果你拥有一套不错的电子书收藏，这样的设备值得加入心愿单，至少对我来说是这样。</p><p>4.26 英寸电子纸触摸屏，480 × 800 像素，冷暖双色前光</p><p>ESP32-S3 双核处理器，Wi-Fi + 低功耗蓝牙</p><p>16 MB 闪存，8 MB PSRAM</p><p>支持 EPUB 和纯文本格式，无 DRM</p><p>存储：microSD 卡槽</p><p>USB-C 接口，集成锂聚合物电池充电</p><p>尺寸：78 × 120 × 10 毫米，重量约 85 克</p><p>固件采用 MIT 许可证，硬件开源（将在发货时发布）</p><p>基础版售价 149 美元，众筹期间还有限量版“作者版”，售价 249 美元。</p><p>与旧版相比，最明显的变化就在正面。旧版主板上有方向键、选择键和专用翻页键，而 Open Book Touch 则是一块对称的平板，厚度仅 1 厘米，所有操作都由电容触摸屏完成。这或许就是它被称为 Open Book Touch 的原因。</p><p>取消物理按键是合理的，因为这是一款小巧的设备。触摸屏位于一块 4.26 英寸、480 × 800 像素的电子纸面板上，分辨率约为 220 ppi，比同尺寸屏幕预期的更清晰。它本质上是一块 1 位显示屏，翻页时快速、清晰的黑白显示。较慢的 2 位灰度模式则保留给锁屏界面，这样书籍封面或你自己的照片就能呈现更多灰度层次。</p><p>前光系统使用了五颗暖色 LED 和五颗冷色 LED，因此你可以选择暖色调用于床上阅读，或冷色调用于白天，而不是被固定在某一种色温。</p><p>核心搭载 ESP32-S3，配备 16 MB 闪存和 8 MB PSRAM，这种配置适合在微控制器上解析 EPUB 文件，而非使用完整的 Linux 单板计算机。固件本身基于 ESP-IDF 和 FreeRTOS 上的 C++ 编写，并内置 SQLite 用于静默跟踪你的图书库元数据。</p><p>排版也得到了一些关注：两端对齐文本并带有正确的连字符（包含英语、西班牙语、法语和意大利语词典），内嵌抖动处理图像，以及使用开源 Lucida Bright 和 Lucida Sans 字体的位图版本，并带有真正的粗体和斜体字重。</p><p>对于一款新设备来说，语言支持相当令人印象深刻。设备内置 GNU Unifont 作为后备字体，覆盖约 70,000 个字形；界面本身已本地化为七种语言，包括阿拉伯语和希伯来语。他们还实现了 Unicode 双向算法，确保从右到左的脚本正确显示，而不是简单地反向渲染。</p><p>这里没有 DRM 支持，这是有意为之。书籍通过 microSD 卡或本地 Wi-Fi 加载。你也可以使用 SQLite 管理图书库的元数据。</p><p>这里没有配套应用。如果你喜欢在多个设备（如电脑或智能手机）上阅读，这个“特性”也可能带来不便。或许以后会考虑解决这个问题。</p><p>800 mAh（最低）锂聚合物电池可用户更换，3D 打印的卡扣式外壳设计便于拆卸，并提供可打印的 CAD 文件。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/elm11-feather-announcement/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/open-book-touch-crowdfunding/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
