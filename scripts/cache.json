@@ -2935,5 +2935,137 @@
     "title_zh": "11款最佳免费开源终端个人理财工具",
     "summary_zh": "本文介绍了11款基于终端的免费开源个人理财工具，帮助用户高效管理财务。这些工具涵盖记账、预算、投资跟踪等功能，适合喜欢命令行操作的用户。文章详细列出了每款工具的特点和适用场景，为Linux用户提供了实用的理财解决方案。",
     "fulltext_zh": "发现11款最佳免费开源终端个人理财工具，高效且有效地管理您的财务。立即探索您的选择！\n\n该文章《11款最佳免费开源终端个人理财工具》首发于Linux Today。"
+  },
+  "b342b3bc051302972e353af024e84b5a": {
+    "id": "b342b3bc051302972e353af024e84b5a",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/07/appmanager-appimage-installer-linux",
+    "title_en": "AppManager installs AppImages on Ubuntu without needing FUSE",
+    "summary_en": "AppImages are designed to be simple. Download one, make it executable and run it. On Ubuntu, though, there&#8217;s an extra step: Ubuntu ships FUSE 3 by default, but some AppImages still need FUSE 2 (libfuse2t64) to run. AppManager is a new(ish) GTK4/Libadwaita app which fixes that particular annoyance by mounting AppImages through&#160;uruntime&#160;instead of FUSE. It handles the usual SquashFS-packed AppImages, plus the newer DwarFS-packed ones too. Double-click an&#160;.AppImage&#160;file an",
+    "pub_date": "Tue, 14 Jul 2026 23:00:22 +0000",
+    "title_zh": "AppManager 在 Ubuntu 上无需 FUSE 即可安装 AppImage",
+    "summary_zh": "AppManager 是一款基于 GTK4/Libadwaita 的新应用，解决了 Ubuntu 上部分 AppImage 需要 FUSE 2 的问题。它通过替代方式挂载 AppImage，支持 SquashFS 和 DwarFS 格式，并提供类似 macOS 的安装流程。用户可拖拽图标安装、导入现有 AppImage、管理启动选项、图标和路径，支持更新检查、命令行参数设置及全局配置。应用本身以 AppImage 形式提供，开源且兼容多数 Linux 发行版。",
+    "fulltext_zh": "AppManager 在 Ubuntu 上无需 FUSE 即可安装 AppImage - OMG! Ubuntu\n\nAppImage 的设计本应简单：下载、赋予可执行权限、运行。但在 Ubuntu 上，却多了一个步骤：Ubuntu 默认搭载 FUSE 3，而部分 AppImage 仍需要 FUSE 2。\n\nAppManager 是一款较新的 GTK4/Libadwaita 应用，它通过替代 FUSE 的方式挂载 AppImage，解决了这一烦人问题。它既能处理常见的 SquashFS 打包的 AppImage，也支持更新的 DwarFS 打包格式。\n\nAppManager 提供了类似 macOS 的安装流程：双击 AppImage 文件，AppManager 会打开一个 macOS 风格的安装界面。将应用图标拖拽到文件夹中，AppManager 就会将文件移动到 ~/Applications 或你选择的目录，并自动创建应用启动器和快捷方式。\n\n如果你设备上已有大量 AppImage，并希望通过此应用移动和集成它们，可以使用导入功能，指向每个 AppImage 或包含它们的文件夹。\n\n为每个应用设置启动选项、图标和路径\n\n你可以单独配置和管理每个应用。作为一款 AppImage 管理器，它的功能远不止提供 macOS 风格的启动器快捷方式创建。它可以通过 Gitlab 或 Github 链接检查并更新 AppImage；你可以设置命令行参数，并选择在每个应用或全局范围内使用“便携式”主目录和配置文件夹。你还可以设置 $PATH 或环境变量。\n\n自定义功能还扩展到应用图标——如果你不喜欢默认图标，可以更换；你还可以编辑应用的启动器关键词，以便在应用菜单和启动器（包括 GNOME Shell 的应用网格）中快速找到它。\n\n全局选项：设置安装文件夹等\n\n为了提升速度（尽管会牺牲磁盘空间），每个应用的列表中都有一个“提取”选项。解压包内容后，在较慢的系统上，大型软件可能会启动得更快一些——不过这一操作很难撤销。\n\n更新可以设置为按计划运行，并下载 zsync 增量补丁而非整个 AppImage（在支持的情况下）。对于偏好终端的用户，AppManager 还附带了一个命令行工具，用于安装和更新应用。\n\n下载并安装 AppManager\n\n我之前曾介绍过类似功能的应用，比如 Gear Lever。与它们不同，AppManager 不依赖 FUSE。这省去了在 Ubuntu 上运行 AppImage 前需要记住安装哪个包的麻烦。\n\nAppManager 是开源的，并且本身也以 AppImage 形式提供。开发者 Arnis K 表示，它几乎可以在任何桌面 Linux 发行版上运行。我在 Ubuntu 上测试时一切正常。\n\n你可以从项目的 GitHub 页面下载它，赋予可执行权限，然后双击打开。按照提示将图标拖拽到文件夹中，再在主窗口中进行配置。\n\n喜欢这个应用？正在使用它？请在下方告诉我。"
+  },
+  "e8f5420bdf4952ef058478c8228359c7": {
+    "id": "e8f5420bdf4952ef058478c8228359c7",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/gnome-test-center-announcement/",
+    "title_en": "GNOME Wants to Let You Test Experimental Features Without Breaking Anything",
+    "summary_en": "Here's how GNOME plans to make testing safer and more accessible for everyone.",
+    "pub_date": "Tue, 14 Jul 2026 15:07:44 GMT",
+    "title_zh": "GNOME 希望让你在不破坏任何东西的情况下测试实验性功能",
+    "summary_zh": "GNOME 正在开发一款名为 Test Center 的新应用，旨在简化实验性软件的测试流程。它提供一站式解决方案，用于安装、运行和移除实验性应用或系统组件。对于应用，开发者提供链接即可安装；对于系统组件，则通过 sysext 以覆盖层方式运行，移除后可恢复原系统状态。该项目是 GNOME OS 开发者工具套件的一部分，自 2026 年 6 月起由德国资金支持。",
+    "fulltext_zh": "GNOME 希望让你在不破坏任何东西的情况下测试实验性功能\n\n以下是 GNOME 计划如何让测试对每个人都更安全、更易用。\n\n目前测试实验性软件是一件麻烦事。你要么等待稳定版发布，要么跳入每日构建的深渊，祈祷整个系统不会砸到你头上。\n\n在像 GNOME OS 这样基于镜像的系统上，情况会更糟，因为基础镜像是只读的，你不能简单地替换一个软件包然后继续。\n\nGNOME 正在用一款名为 Test Center 的新应用来应对这一挑战，这是它正在原型设计的一个应用。\n\n应对测试的新方法\n\n它旨在充当一站式解决方案，用于安装、运行和移除任何实验性内容，无论是应用还是系统本身的组件。\n\n对于应用，你无需再经历寻找 CI 构建产物或手动构建自己的 Flatpak 包的繁琐过程。开发者给你一个链接，你点击它，构建产物就会以实验性标记出现，并自动设置过期时间。\n\n系统组件则通过 sysext 运行，尽管思路是相同的。以家长控制功能为例，它仍处于早期开发阶段，你可以通过 Test Center 获取与该合并请求关联的 sysext，它会以覆盖层而非替换的方式部署到你的系统上。\n\n移除它，你的系统就会恢复到应用实验性更改之前的状态。\n\n此外，系统级测试至今如此混乱是有充分理由的。在常规的基于软件包的发行版上，最接近的做法是将你的更改打包到像 Copr 这样的非官方仓库中，然后让测试者自行从那里安装。\n\n一旦他们安装了，实验性软件包并不会与稳定版并存，而是直接替换掉它们。如果出了问题，你得自己修复。在修复之前，你无法获得正常的更新。\n\n所有这些努力都是 GNOME OS 开发者工具套件的一部分，该项目自 2026 年 6 月起通过德国的 Souveräner Digitalverbund 获得资金支持。Tobias Bernard、Jonas Dreßler 和其他几位开发者在 Modal Collective 旗下从事这项工作。\n\n为基于镜像的系统提供一种更简单的命令行开发者工具分发方式也是同一项目的一部分，不过团队表示更多细节将在另一篇文章中公布。\n\n如果你正在为 GNOME OS 进行开发，并且对当前测试和开发工作流程中令人烦恼的地方有自己的看法，团队希望听到你的意见，你可以通过 GNOME GitLab 或亲自在 GUADEC 上与他们交流。\n\n喜欢这篇更新吗？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。请帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无需承诺\n\n一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的极客。\n\nSlack 算什么？这款自托管聊天应用刚刚开源\n\nOpen Book Touch 正在众筹：一款无按键、开源硬件的 Kindle 替代品\n\nELM11-Feather 是一款原生支持 Lua 的 Feather 兼容板\n\nLinux Mint 现已将 Wayland 视为稳定版\n\n又一个德国州刚刚赶走了微软……差不多吧\n\n成为更好的 Linux 用户\n\n通过 FOSS 每周通讯，你可以学习有用的 Linux 技巧、发现应用、探索新发行版，并随时了解 Linux 世界的最新动态\n\n太棒了！您已成功注册。\n\n欢迎回来！您已成功登录。\n\n您已成功订阅 It's FOSS。\n\n您的链接已过期。\n\n成功！请查看您的电子邮件，获取用于登录的魔法链接。\n\n成功！您的账单信息已更新。\n\n您的账单未更新。"
+  },
+  "ee37773218849e7b0e99f4515a6fac8b": {
+    "id": "ee37773218849e7b0e99f4515a6fac8b",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/OpenCL-3.1-Conformance-Apple",
+    "title_en": "Khronos Lists First Conformant OpenCL 3.1 Implementation: Apple M1/M2 On Asahi Linux With Rusticl",
+    "summary_en": "Back in May OpenCL 3.1 was announced with a focus on AI and HPC workloads. Just over two months later, this incremental update over OpenCL 3.0 now has its first listed conformant OpenCL 3.1 implementation for passing the OpenCL 3.1 conformance test suite cases. It's Apple Silicon M1/M2 graphics running on Asahi Linux with the Mesa Rusticl driver...",
+    "pub_date": "Tue, 14 Jul 2026 21:14:32 -0400",
+    "title_zh": "Khronos 列出首个符合 OpenCL 3.1 标准的实现：运行于 Asahi Linux 的 Apple M1/M2 搭配 Rusticl",
+    "summary_zh": "Khronos 宣布 OpenCL 3.1 发布仅两个多月后，首个通过一致性测试的实现已出现：运行于 Asahi Linux 的 Apple Silicon M1/M2 图形，搭配 Mesa Rusticl 驱动。这一结果颇具戏剧性，因为 Apple 本身不支持 Linux，而是依靠逆向工程团队和开源贡献者。Rusticl 驱动负责人 Karol Herbst 确认了这一消息，并透露 AMD/radeonsi 和 zink 的提交也在推进中。",
+    "fulltext_zh": "Khronos 列出首个符合 OpenCL 3.1 标准的实现：运行于 Asahi Linux 的 Apple M1/M2 搭配 Rusticl - Phoronix\n\nOpenCL 3.1 于 2026 年 7 月 14 日美国东部时间晚上 9:14 发布，重点关注 AI 和 HPC 工作负载。仅仅两个多月后，这一对 OpenCL 3.0 的增量更新就有了首个列出的符合 OpenCL 3.1 标准的实现，该实现通过了 OpenCL 3.1 一致性测试套件。它就是运行于 Asahi Linux 的 Apple Silicon M1/M2 图形，搭配 Mesa Rusticl 驱动。\n\n一个颇为奇特的转折是，首个列出的 OpenCL 3.1 符合标准实现是运行于 Asahi Linux 的 Apple Silicon，搭配 Mesa 的 Rusticl 驱动。当然，Apple 本身并不支持 Linux，而是依靠 Asahi Linux 的逆向工程团队和其他开源贡献者。Rusticl 是一个面向 Mesa Gallium3D 驱动的通用 OpenCL 实现。\n\n领导 Mesa Rusticl 驱动开发的 Red Hat 工程师 Karol Herbst 评论道：\n“哦，是的……截至昨天，rusticl 是首个 OpenCL 3.1 符合标准的实现。\n它在运行 Linux 的 Apple 硬件上正式符合标准，也就是 Asahi Linux。\n我可能想完成其他 3.1 提交，AMD/radeonsi 和 zink 已经在推进中，但仍需修复一些烦人的问题。”\n\n因此，一个颇为奇怪的转折是，运行于 Asahi Linux 的 Apple Silicon M1/M2 图形，搭配最新的 Mesa Rusticl 代码，恰好成为首个列出的实现。\n\n对于长期关注 Linux 桌面领域的人来说，可能还记得十多年前，开源 Linux 图形栈在支持较新 OpenGL 和 OpenCL 版本方面一直落后于主要硬件厂商。\n\nKhronos 发布 glTF 2.1 以让这一 3D 资产标准更好地适用于大型场景\nAV2 v1.0 规范发布，用于下一代视频编码\nOpenCL 3.1.1 发布以解决可能的性能回退\nFlattened Image Tree 1.0 规范用于嵌入式 Linux 系统\nPCIe 8.0 规范草案 0.5 发布，实现 x16 双向 1TB/s 带宽\nOpenCL 3.1 发布以增强 AI 和 HPC 工作负载\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。他还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nPop!_OS 推出其 COSMIC 的“磨砂玻璃”桌面风格\nLibreOffice 26.8 Beta 发布，改进了这款自由软件办公套件\nProton 11.0-1 发布，推进 Valve 的 Steam Play 以实现最佳 Linux 体验\nLinux 为联想 ThinkPad 的新 USB-C 安全功能做准备\nDebian 13.6 发布，包含所有最新安全修复，并回退了 GeoIP 数据库\nAMD Linux 图形驱动致力于清除所有 BUG()\n“我会让 Linux 内核邮件列表燃烧”：著名 LLVM Linux 开发者回归\n启动 Apple M4 的 Linux 初始补丁已发布\n\n在享受无广告浏览的同时，\n单页文章查看\n法律声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "53df997c2797ce8028a1609df80e2569": {
+    "id": "53df997c2797ce8028a1609df80e2569",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/COSMIC-Epoch-1.3",
+    "title_en": "COSMIC Epoch 1.3 Released With New Frosted Glass Option",
+    "summary_en": "For those that were intrigued by the COSMIC desktop's \"Frosted Glass\" effect, it's now available in released form with today's COSMIC Epoch 1.3 release...",
+    "pub_date": "Tue, 14 Jul 2026 18:41:01 -0400",
+    "title_zh": "COSMIC Epoch 1.3 发布，新增磨砂玻璃选项",
+    "summary_zh": "System76 发布了基于 Rust 的 COSMIC 桌面环境 1.3 版本，主要亮点是新增了可选的“磨砂玻璃”效果，用户可通过 COSMIC 设置激活。该版本还包含翻译更新和其他小幅改进。COSMIC Epoch 1.3 已在 Pop!_OS 24.04 上可用，并即将进入其他滚动发行版仓库。",
+    "fulltext_zh": "COSMIC Epoch 1.3 发布，新增磨砂玻璃选项 - Phoronix\nCOSMIC Epoch 1.3 发布，新增磨砂玻璃选项\n2026年7月14日 下午6:41 EDT\n对于那些对 COSMIC 桌面的“磨砂玻璃”效果感兴趣的人来说，随着今天 COSMIC Epoch 1.3 的发布，该功能现已正式可用。\nSystem76 的软件工程师负责开发基于 Rust 的 COSMIC 桌面环境，作为其 Pop!_OS Linux 发行版的一部分，今天正式发布了 COSMIC Epoch 1.3。其主打功能是磨砂玻璃效果，可通过 COSMIC 设置激活。在我看来，这个效果相当不错，许多其他 Phoronix 读者似乎也持相同意见：\nCOSMIC Epoch 1.3 还带来了翻译更新和其他小幅改进，但最大的亮点是可选的磨砂玻璃外观。\nCOSMIC Epoch 1.3 已在 Pop!_OS 24.04 上可用，并应很快进入其他滚动发行版仓库。那些从源码构建的用户可以通过以下链接获取 Epoch 1.3：\nPop!_OS 推出其 COSMIC 的“磨砂玻璃”桌面风格\nCOSMIC Epoch 1.2 桌面修复了 Intel 显卡的闪烁问题\nVim 补丁提升了 GTK3 Wayland 性能：“重大里程碑”\nCOSMIC Epoch 1.1 发布，带来 COSMIC-Monitor 和合成器改进\nXfce Wayland 合成器迎来首个预览/Alpha 版本\nFlatpak 1.18 发布，集成 AMD ROCm\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\nPop!_OS 推出其 COSMIC 的“磨砂玻璃”桌面风格\nLibreOffice 26.8 Beta 发布，改进了这款自由软件办公套件\nProton 11.0-1 发布，推动 Valve 的 Steam Play 实现最佳 Linux 体验\nLinux 为联想 ThinkPad 准备新的 USB-C 安全功能\nDebian 13.6 发布，包含所有最新安全修复，并回退了 GeoIP 数据库\nAMD Linux 图形驱动致力于清除所有 BUG()\n“我将让 Linux 内核邮件列表燃烧”：著名 LLVM Linux 开发者回归\n发布了在 Apple M4 上启动 Linux 的初始补丁\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "da74545f6118e6834429c6b93c505763": {
+    "id": "da74545f6118e6834429c6b93c505763",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/FreeBSD-16-Goes-GPL-Free",
+    "title_en": "FreeBSD 16 Retires The Last Of Its GPL Code From Its Base System",
+    "summary_en": "As of this past week in the FreeBSD source tree for FreeBSD 16, the last of the GNU GPL licensed code from the base system has been retired...",
+    "pub_date": "Tue, 14 Jul 2026 15:38:47 -0400",
+    "title_zh": "FreeBSD 16 从其基础系统中移除最后一部分 GPL 代码",
+    "summary_zh": "FreeBSD 16 的开发取得了重要进展：基础系统中最后一部分 GNU GPL 许可代码已被移除。此前，FreeBSD 安装程序已改用其他实现，而 dialog 工具作为最后一个 GPL 组件，其移除请求于今年二月提出，现已合并到 FreeBSD 16.0 的源代码树中。随着 dialog 的移除，FreeBSD 基础系统中不再包含任何 GNU 代码，GNU 子树也被彻底清除。FreeBSD 16.0 预计于 2027 年 12 月发布。",
+    "fulltext_zh": "FreeBSD 16 从其基础系统中移除最后一部分 GPL 代码 - Phoronix\nFreeBSD 16 从其基础系统中移除最后一部分 GPL 代码\n发布于 2026 年 7 月 14 日 下午 3:38（美国东部时间）\n\n就在上周，FreeBSD 16 的源代码树中，基础系统里最后一部分 GNU GPL 许可代码已被移除。\n\n该实现曾是 FreeBSD 基础系统中最后一部分 GNU GPL 许可软件。FreeBSD 安装程序此前已改用其他实现，而 dialog 工具本身作为最后一个 GPL 组件，现已关闭并退役。\n\n移除 dialog 的请求于今年二月提出，现已合并到将成为 FreeBSD 16.0 的源代码树中。\n\n随着 dialog 的移除，最新的 FreeBSD 代码现已清除了 GNU 子树。由于不再包含任何 GNU 代码，FreeBSD 基础系统的 GNU 子树已被彻底移除。\n\nFreeBSD 16.0 正在逐步推进，预计于 2027 年 12 月发布。"
+  },
+  "a1d25e9db990ee0cfdb240f5abd1b0bb": {
+    "id": "a1d25e9db990ee0cfdb240f5abd1b0bb",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/bosgame-vta-439",
+    "title_en": "BOSGAME VTA-439: A Great, Linux-Friendly Mini PC Powered By AMD Ryzen AI 9 HX 470",
+    "summary_en": "For those that were intrigued by the recent launch of the AMD Ryzen AI Halo developer platform with a very capable mini PC but looking for something more affordable and not needing quite as much horsepower or AI focus, BOSGAME recently launched their VTA-439 mini PC. The BOSGAME VTA-439 is powered by the AMD Ryzen AI 9 HX 470 with Radeon 890M graphics for those wanting still quite a capable mini PC that retails for around $1,049 USD while sporting 32GB of RAM and 1TB NVMe SSD storage.",
+    "pub_date": "Tue, 14 Jul 2026 14:57:06 -0400",
+    "title_zh": "BOSGAME VTA-439：一款搭载AMD Ryzen AI 9 HX 470的出色Linux友好型迷你PC",
+    "summary_zh": "BOSGAME VTA-439是一款搭载AMD Ryzen AI 9 HX 470处理器、Radeon 890M显卡的迷你PC，售价约1049美元，配备32GB DDR5-5600内存和1TB NVMe SSD。该设备拥有双2.5G以太网口、WiFi 7支持、USB4及双DisplayPort/HDMI输出，在Ubuntu 26.04 LTS上运行流畅，Linux兼容性良好。",
+    "fulltext_zh": "BOSGAME VTA-439：一款搭载AMD Ryzen AI 9 HX 470的出色Linux友好型迷你PC 评测 - Phoronix\nBOSGAME VTA-439：一款搭载AMD Ryzen AI 9 HX 470的出色Linux友好型迷你PC\n发布于2026年7月14日下午2:57（美国东部时间）。\n对于那些对近期发布的、功能强大的迷你PC开发者平台感兴趣，但又希望价格更实惠、不需要那么高性能或AI功能的人来说，BOSGAME最近推出了他们的VTA-439迷你PC。BOSGAME VTA-439搭载AMD Ryzen AI 9 HX 470处理器和Radeon 890M显卡，对于仍想要一台性能不错的迷你PC的用户来说，这款设备零售价约为1049美元，配备32GB内存和1TB NVMe SSD存储。\n过去几周，我一直在测试BOSGAME VTA-439这款迷你PC，这也是我首次体验Ryzen AI 400系列硬件，此前两年我在Phoronix上测试的都是Ryzen AI 300系列。虽然同样基于AMD Zen 5 CPU核心和RDNA 3.5显卡，但Ryzen AI 9 HX 470相比Ryzen AI 9 HX 370提升了200MHz的时钟频率，最高可达5.2GHz。HX 470的Radeon 890M集成显卡的GPU加速时钟频率也提升了200MHz。如果你关注Ryzen AI NPU，Ryzen AI 9 HX 470的NPU算力为55 TOPS，而HX 370为50 TOPS。这款Gorgon Point SoC仍像Ryzen AI 9 HX 370 Strix Point一样，拥有12个Zen 5核心/24线程。\nBOSGAME VTA-439搭载Ryzen AI 9 HX 470处理器，配备32GB DDR5-5600系统内存和一块1TB Kingston NVMe SSD。它的性能远不及AMD Ryzen AI Max+“Strix Halo”（如Ryzen AI Halo），但价格仅为后者的四分之一左右，仅需1049美元。\nDDR5-5600内存采用可更换的SO-DIMM双插槽配置，因此可以升级。此外，设备共有三个M.2插槽，存储扩展潜力相当大。\nBOSGAME VTA-439的另一亮点是配备双2.5G以太网端口，并通过RZ717芯片组支持WiFi 7。\nVTA-439迷你PC的前面板I/O端口包括一个支持8K DP输出（60Hz）和100W供电的USB4端口，以及两个USB 3.2 Gen2端口。后面板则有双2.5G以太网端口、支持4K@144Hz的DisplayPort 1.4输出、支持4K@144Hz的HDMI接口以及音频插孔。这台小PC的接口配置相当丰富。\nBOSGAME VTA-439预装Microsoft Windows 11系统，但在Linux上运行同样出色。BOSGAME向Phoronix提供此评测样机时，完全清楚我们将进行Linux硬件测试。我很快会发布这款Ryzen AI 9 HX 470迷你PC在Windows与Linux下的基准测试对比，而今天的文章仅关注其在Ubuntu 26.04 LTS上的性能表现。\n在BOSGAME VTA-439上运行Ubuntu 26.04 LTS非常顺利。鉴于Ryzen AI 400系列只是Ryzen AI 300系列的演进版本，平台方面没有出现任何意外。这款迷你PC运行良好，没有任何问题，有线以太网和WiFi在搭载Linux 7.0内核的Ubuntu 26.04 LTS上均可正常工作。\nAMD Ryzen AI Halo：一款出色的、拥有完全开源软件支持的强大迷你PC\nZimaCube 2：一款借助Linux和英特尔CPU打造的优秀个人云/NAS设备\n重新设计的Thelio Major：System76全AMD开源Linux工作站再升级\nHP Z6 G5 A：Linux友好型高端工作站持续表现出色\nSystem76新款Thelio Mira Linux台式机：搭载AMD Ryzen 9000系列，运行强劲\nSystem76完全重新设计的Thelio台式机独家预览\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "a8ebc7a8534d207447920515def7dad8": {
+    "id": "a8ebc7a8534d207447920515def7dad8",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Blender-5.2-Released",
+    "title_en": "Blender 5.2 LTS Released With Many Great Enhancements",
+    "summary_en": "Blender 5.2 is out today as the newest Long Term Support release for this leading, open-source 3D modeling software...",
+    "pub_date": "Tue, 14 Jul 2026 12:11:04 -0400",
+    "title_zh": "Blender 5.2 LTS 发布，带来众多重大改进",
+    "summary_zh": "Blender 5.2 LTS 作为长期支持版本正式发布，带来了屏幕空间光线追踪管线的全面改进、快速全局光照的优化与提速、EEVEE 渲染器的实例化优化（CPU 瓶颈场景性能提升至两倍）、在线资产库支持，以及新增 Apple、ARRI、Canon 等多家厂商的输入色彩空间。",
+    "fulltext_zh": "Blender 5.2 LTS 发布，带来众多重大改进 - Phoronix\nBlender 5.2 LTS 发布，带来众多重大改进\n2026年7月14日，美国东部时间下午12:11。\n\nBlender 5.2 于今日发布，作为这款领先开源3D建模软件的最新长期支持版本。\n\n得益于其持续的快速开发节奏以及众多组织的持续赞助，Blender 5.2 带来了大量改进。Blender 5.2 LTS 的一些亮点包括：\n\n- Blender 5.2 对其屏幕空间光线追踪管线进行了全面改造，以解决长期存在的可用性问题。\n- Blender 快速全局光照（GI）代码中的几个关键错误已通过更稳健的实现得到解决。快速全局光照在速度和降噪方面也得到了更好的优化。\n- EEVEE 灯光现在支持摄像机射线可见性。\n- EEVEE 现在支持与 Workbench 和 Overlay 相同的实例化优化，使得受 CPU 瓶颈限制、实例化密集的场景速度提升高达两倍。\n- Blender 5.2 现在支持在线资产库，能够注册远程托管的资产库，并在 Blender 中浏览这些资产库，按需下载资产。\n- 新增了针对 Apple、ARRI、Blackmagic Design、Canon 和 Sony 相机的输入色彩空间。\n\n关于 Blender 5.2 LTS 变更的更多详情，请访问\n\n从以下地址下载 Blender 5.2\n\nCPU 和 GPU 数据即将推出。\n\nLinux 基金会的最新尝试：为 AI 代理标准化互联网原生支付\nHFI BIOS 旨在为 RISC-V 提供类似 POST 的开机画面及 BIOS 设置工具\nZlib-rs 0.6.6 发布，支持更新的 Zlib API\nFEX 2607 针对尚未发布的 ARM 256位 SVE2 硬件进行优化\nJPEG-XL libjxl 0.12 带来更多性能优化\nBox3D 作为全新开源3D物理引擎亮相\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过20,000篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nPop!_OS 为其 COSMIC 桌面推出“磨砂玻璃”风格\nLibreOffice 26.8 Beta 发布，改进这款自由软件办公套件\nProton 11.0-1 发布，推进 Valve 的 Steam Play 以提供最佳 Linux 体验\nLinux 为联想 ThinkPad 的新 USB-C 安全功能做准备\nDebian 13.6 发布，包含所有最新安全修复，并回退 GeoIP 数据库\nAMD Linux 图形驱动致力于清除所有 BUG()\n“我会让 Linux 内核邮件列表燃烧”：著名 LLVM Linux 开发者回归\n为在 Linux 上启动 Apple M4 提交初始补丁\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "91a8aac5c5c150bdbd93b1d502e8f743": {
+    "id": "91a8aac5c5c150bdbd93b1d502e8f743",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/proton-drive-native-linux-client-is-finally-in-development/",
+    "title_en": "Proton Drive Native Linux Client Is Finally in Development",
+    "summary_en": "The development of Proton Drive's native Linux client is underway, offering Linux users a seamless and efficient cloud storage solution. Learn more about it!\nThe post Proton Drive Native Linux Client Is Finally in Development appeared first on Linux Today.",
+    "pub_date": "Tue, 14 Jul 2026 07:01:19 +0000",
+    "title_zh": "Proton Drive 原生 Linux 客户端终于开始开发",
+    "summary_zh": "Proton Drive 的原生 Linux 客户端正在开发中，将为 Linux 用户提供无缝、高效的云存储解决方案。该消息由 Linux Today 报道，标志着 Proton 对 Linux 平台支持的进一步扩展。",
+    "fulltext_zh": "Proton Drive 原生 Linux 客户端的开发正在进行中，将为 Linux 用户提供无缝且高效的云存储解决方案。了解更多详情！\n\n该文章最初发表于 Linux Today。"
+  },
+  "3f59b4f59a6484ad052f32ea59201134": {
+    "id": "3f59b4f59a6484ad052f32ea59201134",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/opencv-5-0-computer-vision-library-released-with-rewritten-dnn-engine/",
+    "title_en": "OpenCV 5.0 Computer Vision Library Released with Rewritten DNN Engine",
+    "summary_en": "Explore OpenCV 5.0, featuring a revamped DNN engine that boosts efficiency and expands functionality for advanced computer vision projects.\nThe post OpenCV 5.0 Computer Vision Library Released with Rewritten DNN Engine appeared first on Linux Today.",
+    "pub_date": "Tue, 14 Jul 2026 06:59:12 +0000",
+    "title_zh": "OpenCV 5.0 计算机视觉库发布，重写 DNN 引擎",
+    "summary_zh": "OpenCV 5.0 正式发布，其核心亮点是经过重写的深度神经网络（DNN）引擎，显著提升了效率并扩展了功能，为高级计算机视觉项目提供了更强支持。",
+    "fulltext_zh": "探索 OpenCV 5.0，其特色是经过改进的 DNN 引擎，该引擎提升了效率并扩展了功能，适用于高级计算机视觉项目。\n\n该文章 OpenCV 5.0 计算机视觉库发布，重写 DNN 引擎 最初出现在 Linux Today 上。"
+  },
+  "6582a0d6a34aff212c1b490e6d51dee1": {
+    "id": "6582a0d6a34aff212c1b490e6d51dee1",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/videolan-announces-dav2d-as-an-open-source-and-super-fast-av2-decoder/",
+    "title_en": "VideoLAN Announces dav2d as an Open-Source and Super Fast AV2 Decoder",
+    "summary_en": "VideoLAN unveils dav2d, an open-source AV2 decoder designed for speed and efficiency. Discover how it enhances video playback performance today.\nThe post VideoLAN Announces dav2d as an Open-Source and Super Fast AV2 Decoder appeared first on Linux Today.",
+    "pub_date": "Tue, 14 Jul 2026 06:57:33 +0000",
+    "title_zh": "VideoLAN 宣布 dav2d：一款开源且超快速的 AV2 解码器",
+    "summary_zh": "VideoLAN 发布了 dav2d，这是一款开源、高速且高效的 AV2 解码器，旨在显著提升视频播放性能。该解码器专注于速度优化，为下一代视频编码标准 AV2 提供流畅的播放体验。",
+    "fulltext_zh": "VideoLAN 发布了 dav2d，这是一款为速度和效率设计的开源 AV2 解码器。了解它如何提升当今的视频播放性能。\n\n该文章 VideoLAN Announces dav2d as an Open-Source and Super Fast AV2 Decoder 首次出现在 Linux Today 上。"
+  },
+  "ba1e0d6352550d530132d17e9cad6052": {
+    "id": "ba1e0d6352550d530132d17e9cad6052",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/flatpak-1-18-released-with-amd-compute-interface-support/",
+    "title_en": "Flatpak 1.18 Released with AMD Compute Interface Support",
+    "summary_en": "Flatpak 1.18 is here, introducing AMD Compute Interface support. Learn how this update can optimize your applications and streamline your workflow.\nThe post Flatpak 1.18 Released with AMD Compute Interface Support appeared first on Linux Today.",
+    "pub_date": "Tue, 14 Jul 2026 06:56:23 +0000",
+    "title_zh": "Flatpak 1.18 发布，支持 AMD Compute Interface",
+    "summary_zh": "Flatpak 1.18 正式发布，新增对 AMD Compute Interface 的支持，可优化应用性能并简化工作流程。该版本为 Linux 用户带来更高效的图形计算体验。",
+    "fulltext_zh": "Flatpak 1.18 现已发布，引入了对 AMD Compute Interface 的支持。了解此次更新如何优化您的应用程序并简化您的工作流程。\n\n该文章 Flatpak 1.18 Released with AMD Compute Interface Support 最初出现在 Linux Today 上。"
+  },
+  "b071fc6cad54b247e7428803046372a0": {
+    "id": "b071fc6cad54b247e7428803046372a0",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/firefox-153-lands-vulkan-video-decode-support-big-win-for-linux-nvidia-users/",
+    "title_en": "Firefox 153 Lands Vulkan Video Decode Support, Big Win for Linux NVIDIA Users",
+    "summary_en": "Firefox 153 introduces Vulkan video decode support, a major breakthrough for Linux NVIDIA users, improving video playback and overall performance.\nThe post Firefox 153 Lands Vulkan Video Decode Support, Big Win for Linux NVIDIA Users appeared first on Linux Today.",
+    "pub_date": "Tue, 14 Jul 2026 06:54:29 +0000",
+    "title_zh": "Firefox 153 引入 Vulkan 视频解码支持，Linux NVIDIA 用户迎来重大利好",
+    "summary_zh": "Firefox 153 版本新增对 Vulkan 视频解码的支持，这为 Linux 平台上的 NVIDIA 用户带来了显著提升，改善了视频播放体验和整体性能。该功能标志着浏览器在图形加速方面的重要突破。",
+    "fulltext_zh": "Firefox 153 引入了 Vulkan 视频解码支持，这对 Linux 上的 NVIDIA 用户来说是一项重大突破，提升了视频播放效果和整体性能。\n\n该文章《Firefox 153 Lands Vulkan Video Decode Support, Big Win for Linux NVIDIA Users》最初发表于 Linux Today。"
   }
 }

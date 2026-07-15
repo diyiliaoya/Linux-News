@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>移动操作系统发布：CalyxOS 7.2.2.0 — Linux 中文速报</title>
+<title>Khronos 列出首个符合 OpenCL 3.1 标准的实现：运行于 Asahi Linux 的 Apple M1/M2 搭配 Rusticl — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>移动操作系统发布：CalyxOS 7.2.2.0</h1>
+  <h1>Khronos 列出首个符合 OpenCL 3.1 标准的实现：运行于 Asahi Linux 的 Apple M1/M2 搭配 Rusticl</h1>
 
-  <div class="article-summary">CalyxOS 团队宣布项目恢复活跃状态，并发布 7.2.2.0 版本。该版本将接收所有未来更新，用户需刷机安装。CalyxOS 是一款注重隐私的移动操作系统，基于 Android 去除谷歌服务，改用 microG、F-Droid 和 Aurora 软件中心，并可选装防火墙、Tor 浏览器等隐私保护工具。团队感谢社区支持，并计划处理积压问题。</div>
+  <div class="article-summary">Khronos 宣布 OpenCL 3.1 发布仅两个多月后，首个通过一致性测试的实现已出现：运行于 Asahi Linux 的 Apple Silicon M1/M2 图形，搭配 Mesa Rusticl 驱动。这一结果颇具戏剧性，因为 Apple 本身不支持 Linux，而是依靠逆向工程团队和开源贡献者。Rusticl 驱动负责人 Karol Herbst 确认了这一消息，并透露 AMD/radeonsi 和 zink 的提交也在推进中。</div>
 
-  <div class="article-body"><p>移动操作系统发布：CalyxOS 7.2.2.0</p><p>CalyxOS 团队宣布项目恢复活跃状态，并随之推出移动操作系统 7.2.2.0 版本。</p><p>“CalyxOS 7.2.2.0 已上线。此版本将接收所有未来更新。如果你之前未安装 7.2.1.0（测试版），并希望开始或继续使用 CalyxOS，你需要刷机并安装 7.2.2.0。随着 CalyxOS 发布恢复正常，我们将继续处理其他积压问题。请加入 Matrix 频道了解我们的进展和用户支持。亲爱的 CalyxOS 社区成员，我们很高兴分享 CalyxOS 7.2.2.0 的发布。这意味着 CalyxOS 正式从暂停状态回归！对我们团队来说，恢复 CalyxOS 发布是一段漫长的旅程，我们深深感谢你们在这段旅程中给予的所有支持和团结，尤其是你们与我们共同进行的最新自愿测试。以下我们分享一些重要说明，供计划安装或重新安装 CalyxOS 的用户参考，同时说明我们处理大量积压问题的下一步计划。”</p><p>有关新版本、基于 Android 17 的 CalyxOS 8 计划以及基础设施变更的更多信息，请参见项目页面。支持的设备列表和安装选项可在项目页面上找到。</p><p>CalyxOS 是一款注重隐私的移动操作系统。该项目提供去谷歌化的 Android 版本，用 microG 替代 Google Play 服务，并使用 F-Droid 和 Aurora 软件中心替代 Google Play 商店。CalyxOS 还可选安装隐私保护工具，例如可阻止或过滤应用的防火墙、Tor 浏览器、K-9 邮件客户端以及用于安全消息和通话的 Signal。</p></div>
+  <div class="article-body"><p>Khronos 列出首个符合 OpenCL 3.1 标准的实现：运行于 Asahi Linux 的 Apple M1/M2 搭配 Rusticl - Phoronix</p><p>OpenCL 3.1 于 2026 年 7 月 14 日美国东部时间晚上 9:14 发布，重点关注 AI 和 HPC 工作负载。仅仅两个多月后，这一对 OpenCL 3.0 的增量更新就有了首个列出的符合 OpenCL 3.1 标准的实现，该实现通过了 OpenCL 3.1 一致性测试套件。它就是运行于 Asahi Linux 的 Apple Silicon M1/M2 图形，搭配 Mesa Rusticl 驱动。</p><p>一个颇为奇特的转折是，首个列出的 OpenCL 3.1 符合标准实现是运行于 Asahi Linux 的 Apple Silicon，搭配 Mesa 的 Rusticl 驱动。当然，Apple 本身并不支持 Linux，而是依靠 Asahi Linux 的逆向工程团队和其他开源贡献者。Rusticl 是一个面向 Mesa Gallium3D 驱动的通用 OpenCL 实现。</p><p>领导 Mesa Rusticl 驱动开发的 Red Hat 工程师 Karol Herbst 评论道：</p><p>“哦，是的……截至昨天，rusticl 是首个 OpenCL 3.1 符合标准的实现。</p><p>它在运行 Linux 的 Apple 硬件上正式符合标准，也就是 Asahi Linux。</p><p>我可能想完成其他 3.1 提交，AMD/radeonsi 和 zink 已经在推进中，但仍需修复一些烦人的问题。”</p><p>因此，一个颇为奇怪的转折是，运行于 Asahi Linux 的 Apple Silicon M1/M2 图形，搭配最新的 Mesa Rusticl 代码，恰好成为首个列出的实现。</p><p>对于长期关注 Linux 桌面领域的人来说，可能还记得十多年前，开源 Linux 图形栈在支持较新 OpenGL 和 OpenCL 版本方面一直落后于主要硬件厂商。</p><p>Khronos 发布 glTF 2.1 以让这一 3D 资产标准更好地适用于大型场景</p><p>AV2 v1.0 规范发布，用于下一代视频编码</p><p>OpenCL 3.1.1 发布以解决可能的性能回退</p><p>Flattened Image Tree 1.0 规范用于嵌入式 Linux 系统</p><p>PCIe 8.0 规范草案 0.5 发布，实现 x16 双向 1TB/s 带宽</p><p>OpenCL 3.1 发布以增强 AI 和 HPC 工作负载</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。他还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>Pop!_OS 推出其 COSMIC 的“磨砂玻璃”桌面风格</p><p>LibreOffice 26.8 Beta 发布，改进了这款自由软件办公套件</p><p>Proton 11.0-1 发布，推进 Valve 的 Steam Play 以实现最佳 Linux 体验</p><p>Linux 为联想 ThinkPad 的新 USB-C 安全功能做准备</p><p>Debian 13.6 发布，包含所有最新安全修复，并回退了 GeoIP 数据库</p><p>AMD Linux 图形驱动致力于清除所有 BUG()</p><p>“我会让 Linux 内核邮件列表燃烧”：著名 LLVM Linux 开发者回归</p><p>启动 Apple M4 的 Linux 初始补丁已发布</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12890" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/OpenCL-3.1-Conformance-Apple" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

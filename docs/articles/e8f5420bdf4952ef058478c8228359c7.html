@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>移动操作系统发布：CalyxOS 7.2.2.0 — Linux 中文速报</title>
+<title>GNOME 希望让你在不破坏任何东西的情况下测试实验性功能 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>移动操作系统发布：CalyxOS 7.2.2.0</h1>
+  <h1>GNOME 希望让你在不破坏任何东西的情况下测试实验性功能</h1>
 
-  <div class="article-summary">CalyxOS 团队宣布项目恢复活跃状态，并发布 7.2.2.0 版本。该版本将接收所有未来更新，用户需刷机安装。CalyxOS 是一款注重隐私的移动操作系统，基于 Android 去除谷歌服务，改用 microG、F-Droid 和 Aurora 软件中心，并可选装防火墙、Tor 浏览器等隐私保护工具。团队感谢社区支持，并计划处理积压问题。</div>
+  <div class="article-summary">GNOME 正在开发一款名为 Test Center 的新应用，旨在简化实验性软件的测试流程。它提供一站式解决方案，用于安装、运行和移除实验性应用或系统组件。对于应用，开发者提供链接即可安装；对于系统组件，则通过 sysext 以覆盖层方式运行，移除后可恢复原系统状态。该项目是 GNOME OS 开发者工具套件的一部分，自 2026 年 6 月起由德国资金支持。</div>
 
-  <div class="article-body"><p>移动操作系统发布：CalyxOS 7.2.2.0</p><p>CalyxOS 团队宣布项目恢复活跃状态，并随之推出移动操作系统 7.2.2.0 版本。</p><p>“CalyxOS 7.2.2.0 已上线。此版本将接收所有未来更新。如果你之前未安装 7.2.1.0（测试版），并希望开始或继续使用 CalyxOS，你需要刷机并安装 7.2.2.0。随着 CalyxOS 发布恢复正常，我们将继续处理其他积压问题。请加入 Matrix 频道了解我们的进展和用户支持。亲爱的 CalyxOS 社区成员，我们很高兴分享 CalyxOS 7.2.2.0 的发布。这意味着 CalyxOS 正式从暂停状态回归！对我们团队来说，恢复 CalyxOS 发布是一段漫长的旅程，我们深深感谢你们在这段旅程中给予的所有支持和团结，尤其是你们与我们共同进行的最新自愿测试。以下我们分享一些重要说明，供计划安装或重新安装 CalyxOS 的用户参考，同时说明我们处理大量积压问题的下一步计划。”</p><p>有关新版本、基于 Android 17 的 CalyxOS 8 计划以及基础设施变更的更多信息，请参见项目页面。支持的设备列表和安装选项可在项目页面上找到。</p><p>CalyxOS 是一款注重隐私的移动操作系统。该项目提供去谷歌化的 Android 版本，用 microG 替代 Google Play 服务，并使用 F-Droid 和 Aurora 软件中心替代 Google Play 商店。CalyxOS 还可选安装隐私保护工具，例如可阻止或过滤应用的防火墙、Tor 浏览器、K-9 邮件客户端以及用于安全消息和通话的 Signal。</p></div>
+  <div class="article-body"><p>GNOME 希望让你在不破坏任何东西的情况下测试实验性功能</p><p>以下是 GNOME 计划如何让测试对每个人都更安全、更易用。</p><p>目前测试实验性软件是一件麻烦事。你要么等待稳定版发布，要么跳入每日构建的深渊，祈祷整个系统不会砸到你头上。</p><p>在像 GNOME OS 这样基于镜像的系统上，情况会更糟，因为基础镜像是只读的，你不能简单地替换一个软件包然后继续。</p><p>GNOME 正在用一款名为 Test Center 的新应用来应对这一挑战，这是它正在原型设计的一个应用。</p><p>应对测试的新方法</p><p>它旨在充当一站式解决方案，用于安装、运行和移除任何实验性内容，无论是应用还是系统本身的组件。</p><p>对于应用，你无需再经历寻找 CI 构建产物或手动构建自己的 Flatpak 包的繁琐过程。开发者给你一个链接，你点击它，构建产物就会以实验性标记出现，并自动设置过期时间。</p><p>系统组件则通过 sysext 运行，尽管思路是相同的。以家长控制功能为例，它仍处于早期开发阶段，你可以通过 Test Center 获取与该合并请求关联的 sysext，它会以覆盖层而非替换的方式部署到你的系统上。</p><p>移除它，你的系统就会恢复到应用实验性更改之前的状态。</p><p>此外，系统级测试至今如此混乱是有充分理由的。在常规的基于软件包的发行版上，最接近的做法是将你的更改打包到像 Copr 这样的非官方仓库中，然后让测试者自行从那里安装。</p><p>一旦他们安装了，实验性软件包并不会与稳定版并存，而是直接替换掉它们。如果出了问题，你得自己修复。在修复之前，你无法获得正常的更新。</p><p>所有这些努力都是 GNOME OS 开发者工具套件的一部分，该项目自 2026 年 6 月起通过德国的 Souveräner Digitalverbund 获得资金支持。Tobias Bernard、Jonas Dreßler 和其他几位开发者在 Modal Collective 旗下从事这项工作。</p><p>为基于镜像的系统提供一种更简单的命令行开发者工具分发方式也是同一项目的一部分，不过团队表示更多细节将在另一篇文章中公布。</p><p>如果你正在为 GNOME OS 进行开发，并且对当前测试和开发工作流程中令人烦恼的地方有自己的看法，团队希望听到你的意见，你可以通过 GNOME GitLab 或亲自在 GUADEC 上与他们交流。</p><p>喜欢这篇更新吗？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。请帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无需承诺</p><p>一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的极客。</p><p>Slack 算什么？这款自托管聊天应用刚刚开源</p><p>Open Book Touch 正在众筹：一款无按键、开源硬件的 Kindle 替代品</p><p>ELM11-Feather 是一款原生支持 Lua 的 Feather 兼容板</p><p>Linux Mint 现已将 Wayland 视为稳定版</p><p>又一个德国州刚刚赶走了微软……差不多吧</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周通讯，你可以学习有用的 Linux 技巧、发现应用、探索新发行版，并随时了解 Linux 世界的最新动态</p><p>太棒了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅 It's FOSS。</p><p>您的链接已过期。</p><p>成功！请查看您的电子邮件，获取用于登录的魔法链接。</p><p>成功！您的账单信息已更新。</p><p>您的账单未更新。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12890" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/gnome-test-center-announcement/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
