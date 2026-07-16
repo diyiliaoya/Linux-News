@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 26.10 在运行22年后将 dbus-daemon 退役为默认 — Linux 中文速报</title>
+<title>Linux补丁终于允许通过蓝牙监控Apple Magic Keyboard/Magic Mouse电池 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 26.10 在运行22年后将 dbus-daemon 退役为默认</h1>
+  <h1>Linux补丁终于允许通过蓝牙监控Apple Magic Keyboard/Magic Mouse电池</h1>
 
-  <div class="article-summary">Ubuntu 26.10 将自2004年以来首次更换其 D-Bus 实现，用 dbus-broker 取代 dbus-daemon。这一变化对终端用户几乎无影响，因为 dbus-broker 是即插即用的替代品，使用相同的协议、配置文件和总线策略。新实现采用异步事件驱动设计，能避免消息丢失并加快查找速度。此前因 Ubuntu 政策不允许重复包共存以及 AppArmor 兼容性问题，切换延迟至今。用户可在 Ubuntu 26.04 LTS 上手动安装测试。</div>
+  <div class="article-summary">Linux内核此前仅支持通过USB连接时报告Apple Magic Keyboard和Magic Mouse的电池电量，蓝牙连接时电量显示为0%。开源开发者Alec Hall发布了一组补丁，通过将电池读取操作移至工作队列，解决了蓝牙连接下的电池报告问题，并支持Magic Trackpad 2。补丁目前正在审查中，有望进入主线内核。</div>
 
-  <div class="article-body"><p>Ubuntu 26.10 在运行22年后将 dbus-daemon 退役为默认 - OMG! Ubuntu</p><p>Ubuntu 26.10 自2004年以来首次更换其 D-Bus 实现，用 dbus-broker 取代 dbus-daemon——这一变化终端用户不太可能注意到。</p><p>桌面上的进程通过 D-Bus（一种“消息”总线）相互通信并与主机系统通信。这就是 Ubuntu Dock 用来显示应用未读计数徽标的方式，也是告诉桌面已插入 USB 驱动器的方式，等等。</p><p>涉及两条总线：一条是系统总线，在整个设备上共享，处理硬件和后台服务；另一条是用户会话总线，用于处理登录用户的桌面和应用集成。</p><p>自22年前首次发布以来，Ubuntu 一直使用 dbus-daemon 作为其默认消息总线。从 Ubuntu 26.10 开始，它将两条总线都切换到 dbus-broker——但区别何在？</p><p>dbus-daemon 包是 D-Bus 的参考实现，Ubuntu 自2004年以来一直使用。尽管它稳定且文档完善，但在高负载下可能会静默丢弃消息，并且只能通过逐个扫描来查找消息目标。速度慢。</p><p>dbus-broker 包是一个相对较新的版本，采用“异步、事件驱动”的设计从头重写。这意味着即使总线被更多进程填满，也不会丢失消息，查找速度更快。</p><p>许多其他桌面 Linux 发行版已经使用了较新的 dbus-broker。Ubuntu 的迁移过程只是由于几个打包原因而花费了更长时间。</p><p>首先，Ubuntu 政策不允许两个功能相同的包存在于 main 仓库中。而且，在添加 dbus-broker 之前，main 中的每个包都必须取消对 dbus-daemon 的依赖。GDM（GNOME 登录管理器）是最后一个主要的坚持者。</p><p>其次，Ubuntu 的安全限制框架 AppArmor 处理系统 Debian 包子集以及 snap 的 D-Bus 消息。由于 dbus-broker 直到最近才达到与 dbus-daemon 的功能对等，过早切换并不明智。</p><p>但随着这两个障碍都已清除，并且短期临时版本为系统更改提供了理想机会，Ubuntu 26.10 全面拥抱 dbus-broker 列车。</p><p>不过你不会注意到什么。</p><p>Dbus-broker 是即插即用的替代品。就像 systemd 的“好处”一样，你根本不会注意到任何变化。Canonical 表示 dbus-broker 使用与 dbus-daemon “相同的协议、相同的配置文件、相同的总线策略”，这意味着应用、桌面环境和其他一切“像以前一样继续工作”。</p><p>随着 dbus-broker 在 Ubuntu 26.10 中升级到 main 仓库，旧的 dbus 和 dbus-daemon 包将被降级到 universe 仓库，并且不再预装。如果其他软件（不在 main 中）需要作为依赖项，仍可拉取旧版本。</p><p>在实现方面，dbus-broker 包为其系统和用户实例提供 systemd 单元，取代 dbus-daemon 的单元。如果两个包安装在同一系统上，新包优先。</p><p>如何在 Ubuntu 26.04 上使用 dbus-broker</p><p>Ubuntu 一直在计划 D-Bus 升级。虽然它将在 Ubuntu 26.10 中成为新的开箱即用默认设置，但你也可以在 26.04 LTS 上安装它（尽管有明显的警告：你正在进行手动更改，从 universe 仓库拉取包）。</p><p>要尝试，只需从仓库安装 dbus-broker（它不在 main 中）：</p><p>sudo apt install dbus-broker</p><p>重启系统，启动后它就会就位。你可以通过运行以下命令检查：</p><p>systemctl status dbus-broker</p><p>你可能会在 26.04 上遇到问题，因为它本不打算在那里成为默认。</p><p>要恢复到原始的 dbus 实现，首先确保 dbus 包仍然安装。然后通过 systemd 禁用 dbus-broker：</p><p>sudo systemctl disable dbus-broker</p><p>sudo systemctl --user --global disable dbus-broker</p><p>和之前一样，重启系统并重新登录，然后注意……你有多没注意到变化？请在评论中告诉我。</p><p>这是主要的受支持 Ubuntu 仓库，构成发行版的大部分核心/集成包都存放在这里。包不会无缘无故地待在 main 中。</p><p>我</p></div>
+  <div class="article-body"><p>Linux补丁终于允许通过蓝牙监控Apple Magic Keyboard/Magic Mouse电池 - Phoronix</p><p>Linux补丁终于允许通过蓝牙监控Apple Magic Keyboard/Magic Mouse电池</p><p>发布于2026年7月15日，美国东部时间上午8:54。</p><p>除了在Linux上启用新Apple Silicon SoC支持的持续挑战外，Linux上的Apple外设支持因产品而异，情况好坏参半。现在正在解决的最新功能是，当Apple Magic Mouse和Magic Keyboard通过蓝牙连接时，能够实现电池报告功能。</p><p>Linux已经支持输入设备的电池报告，但限制之一是电池报告仅在通过USB连接时有效……这并不完全有用，因为通过蓝牙无线连接时，电池电量才更为重要。当前的Linux内核版本在通过蓝牙连接Apple设备时会报告0%的电量，这显然毫无帮助。</p><p>开源开发者Alec Hall发布了一组补丁，使Apple Magic Keyboard、Magic Mouse 2和Magic Trackpad 2能够通过蓝牙进行电池报告。Alec在解决这一显著缺陷时解释道：</p><p>“Apple的Magic Keyboard和Magic Trackpad 2 / Magic Mouse 2会向主机报告电池电量，但内核仅通过USB显示该信息；通过蓝牙连接时，power_supply始终显示为0%，尽管这些设备几乎始终通过蓝牙使用。</p><p>两个驱动程序都已经获取电池信息（针对输入报告0x90的GET_REPORT），但仅通过USB进行。在蓝牙上直接启用会导致机器硬锁定：该获取操作在定时器回调（原子上下文）中运行，而uhid传输在hid_hw_request()内休眠。因此，每个驱动程序的补丁在启用蓝牙之前，将获取操作移至工作队列。最后一个补丁教会hid-magicmouse从设备的状态字节中报告充电状态。</p><p>补丁3解释了一个供应商状态字节，其位含义是通过经验确定的；如果审查者偏好，我可以将其重写为报告描述符修复，以暴露HID_BAT_CHARGING。</p><p>已在Magic Keyboard 2021和Magic Trackpad 2上通过BlueZ（uhid）进行了测试。”</p><p>这些补丁目前正在审查中，有望使这些hid-magicmouse和hid-apple驱动程序的改进进入主线Linux内核。</p><p>Linux应对Apple Silicon SoC上混乱的传感器阵列</p><p>Linux DT补丁为Apple M3 Pro / Max / Ultra提供非常基础的支持</p><p>为在Linux上启动Apple M4发布的初始补丁</p><p>Asahi Linux修复与macOS 27的启动问题，M3及Apple视频解码取得进展</p><p>发布的新Linux驱动程序为M3 MacBook启用键盘支持</p><p>Linux最终结束AppleTalk协议支持</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动程序及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>Pop!_OS推出其COSMIC的“磨砂玻璃”桌面风格</p><p>FreeBSD 16从其基础系统中移除最后的GPL代码</p><p>LibreOffice 26.8 Beta发布，改进这款自由软件办公套件</p><p>Proton 11.0-1发布，提升Valve的Steam Play，带来最佳Linux体验</p><p>Debian 13.6发布，包含所有最新安全修复，并回退GeoIP数据库</p><p>Linux为联想ThinkPad上的新USB-C安全功能做准备</p><p>Linus Torvalds重申Linux并非“反AI”也不是“社会战士”项目</p><p>AMD Linux图形驱动程序致力于清除所有BUG()</p><p>尽管提供无广告浏览，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/ubuntu-26-10-dbus-broker" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Apple-Magic-Bluetooth-Battery" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

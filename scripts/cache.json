@@ -3067,5 +3067,148 @@
     "title_zh": "Firefox 153 引入 Vulkan 视频解码支持，Linux NVIDIA 用户迎来重大利好",
     "summary_zh": "Firefox 153 版本新增对 Vulkan 视频解码的支持，这为 Linux 平台上的 NVIDIA 用户带来了显著提升，改善了视频播放体验和整体性能。该功能标志着浏览器在图形加速方面的重要突破。",
     "fulltext_zh": "Firefox 153 引入了 Vulkan 视频解码支持，这对 Linux 上的 NVIDIA 用户来说是一项重大突破，提升了视频播放效果和整体性能。\n\n该文章《Firefox 153 Lands Vulkan Video Decode Support, Big Win for Linux NVIDIA Users》最初发表于 Linux Today。"
+  },
+  "628e46f258b9dc42c3ab008b7aee13d0": {
+    "id": "628e46f258b9dc42c3ab008b7aee13d0",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/07/firefox-two-week-release-cycle",
+    "title_en": "Firefox will update twice as often from September",
+    "summary_en": "Mozilla is changing Firefox’s release schedule from September, with new stable versions planned every two weeks instead of once a month. The faster release cadence will, Mozilla says, make the schedule more predictable and allow features and improvements which are ready to ship to do so sooner. But in its message to developers, Mozilla describes the change as an experiment, one it says it plans to &#8220;closely monitor&#8221; to make sure the impact is positive and, if needed, adjust the speed ",
+    "pub_date": "Wed, 15 Jul 2026 19:36:29 +0000",
+    "title_zh": "Firefox 将从九月起将更新频率翻倍",
+    "summary_zh": "Mozilla 宣布从九月起调整 Firefox 的发布周期，稳定版更新将从每月一次改为每两周一次。此举旨在让发布计划更可预测，并让已就绪的功能更快推送。Mozilla 将此视为一项实验，将监测影响并适时调整。Firefox 154 将是当前周期下的最后一个版本，随后 Firefox 155 于9月1日发布，之后每两周更新一次。尽管节奏加快，未就绪的功能仍会推迟。更快的更新可能帮助 Firefox 与已采用双周更新的 Chromium 系浏览器竞争。现有用户无需任何操作，更新将通过现有渠道自动推送。对于不喜欢频繁更新的用户，Firefox ESR 版本将继续保持较慢的发布节奏，同时定期接收安全更新。Mozilla 表示不会永久维持双周更新，将根据实验结果灵活调整。",
+    "fulltext_zh": "Firefox 将从九月起将更新频率翻倍 - OMG! Ubuntu\nMozilla 将从九月起更改 Firefox 的发布计划，稳定版更新将从每月一次改为每两周一次。\nMozilla 表示，更快的发布节奏将使计划更可预测，并允许已就绪的功能和改进更早推送。\nOMG! Ubuntu Firefox 附加组件\n但在给开发者的消息中，\nMozilla 将这一变化描述为一项实验，并表示计划确保其影响是积极的，并在必要时调整发布速度。\nFirefox 154 计划于8月18日发布，这将是当前计划下的最后一个稳定版本。随后，Firefox 155 计划于9月1日发布，之后新的稳定版将每两周发布一次。\n尽管发布时间表加快，Mozilla 自己的工程师将需要以更快的速度完成工作。尚未就绪的功能将继续开发，直到准备就绪。\n选择更快的发布计划可能有助于 Firefox 在与众多基于 Chromium 的竞争对手（如 Google Chrome）的竞争中保持可见的竞争力，这些浏览器已经采用双周更新节奏。\n推出更多版本会带来更多 Firefox 用户吗？\n该浏览器在主要版本之间已经获得维护更新，因此任何增加都不太可能改变现有用户对更新的看法（因为已经频繁出现“重启 Firefox 以更新”的提示）。这种好处是否会转化为新用户选择 Firefox 而非竞争对手……\n不过用户无需做任何事\n无论你如何获取 Firefox 更新，你都将获得更多更新。\n现有 Firefox 用户无需采取任何操作来跟踪更快的更新计划，因为更新将通过与现在相同的渠道推送。在 Windows 和 macOS 上，这通过浏览器内置的更新系统进行；在 Ubuntu 上，则通过 Snap 或\n对于不太喜欢频繁更新的用户，Mozilla 表示，Firefox 扩展支持版本（ESR）渠道将继续以较慢的节奏发布，主要版本之间间隔更长，这些版本会添加重大新功能或涉及大幅设计变更。\nESR 会定期接收安全更新，因此在保持稳定和保持安全之间无需取舍。\n正如我前面所说，Mozilla 并未承诺永久保持双周发布周期。它计划监测这项实验的结果，并在必要时做出调整——因此这可能还不是定局。\n采用更快的发布计划对 Mozilla 来说是否合理，还是更慢、更稳健的方式更合适？请告诉我你的想法。"
+  },
+  "ba64aaff4eac73cb365bf3486f3d437e": {
+    "id": "ba64aaff4eac73cb365bf3486f3d437e",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/cursor-ignores-critical-flaw/",
+    "title_en": "Cursor AI's Silence on a Critical Flaw Jeopardizes Millions of Users",
+    "summary_en": "The flaw lets any repository auto-execute code on Cursor for Windows, and researchers say the company ignored it.",
+    "pub_date": "Wed, 15 Jul 2026 09:59:20 GMT",
+    "title_zh": "Cursor AI对关键漏洞保持沉默，危及数百万用户",
+    "summary_zh": "安全公司Mindgard披露Cursor AI存在一个未修复的零日漏洞，该漏洞允许恶意仓库在Windows系统上自动执行代码，无需用户交互。漏洞源于Cursor加载项目时解析Git二进制文件的方式，会从工作区中查找并执行git。Mindgard于2025年12月首次报告该漏洞，但Cursor回应迟缓，多次沟通后仍保持沉默，最终Mindgard决定公开。",
+    "fulltext_zh": "Cursor AI对关键漏洞保持沉默，危及数百万用户\n\n该漏洞允许任何仓库在Cursor for Windows上自动执行代码，研究人员称公司对此置之不理。\n\nMindgard昨天刚刚披露了Cursor中一个未修补的零日漏洞，其中被投毒的仓库可以在Windows系统上触发任意代码执行，而开发者无需在自身端进行任何操作。\n\n该漏洞存在于Cursor加载项目时解析Git二进制文件的方式中。Cursor会在多个位置查找git，其中一个位置就是工作区本身。\n\n在仓库的根目录下，项目打开时就会立即运行它。这是因为执行过程被集成到了正常的启动流程中，除非你特意去查找，否则很可能永远不会注意到。\n\nMindgard通过重命名该文件并将其放入测试仓库中证明了这一点。在Cursor中打开该仓库会立即启动它，漏洞会反复生成新的应用实例。\n\n这里你可以看到计算器应用的多个实例被Cursor反复启动。\n\n这并非Cursor不知情的事情。\n\n该漏洞于2025年12月15日首次被报告，随后几个月内又多次跟进。\n\n为了让人回应，他们不得不发布了一篇公开的LinkedIn帖子，请求提供安全联系人。Cursor最终私下回复，将错过HackerOne邀请归咎于自动化故障。\n\n拖延并未就此停止，HackerOne上的漏洞报告被过早关闭，被称为“信息性且超出范围”。Mindgard提出异议，HackerOne重新打开报告，并确认详细信息已送达Cursor。\n\n几天过去了，Cursor的沉默更加明显。2月、3月和4月的更新请求均未得到回应，而在此期间他们正忙于发布新版本。\n\n五个月的猫鼠游戏后，Mindgard最终决定公开。\n\n这只是Cursor Linux构建的一个占位图片。\n\n尽管非常模糊。在与媒体交谈时，Cursor的一位匿名发言人告知他们：\n\n“我可以确认我们正在处理此事，并将相应回复Mindgard。”\n\n对于一个感觉严重程度高出几个数量级的问题，这份声明并不能让人放心。\n\n但我知道什么呢？也许他们有充分的理由忽略这个问题，正在开发某个闪亮的新AI功能。🤷\n\n你知道吗？Windows 11上的一个存储漏洞可能会吞噬磁盘空间。\n\n哈哈！Microsoft Windows 11上的存储漏洞可能吞噬高达500 GB的磁盘空间。\n\n一名微软客户支持代理甚至建议购买新硬盘，而不是承认问题。\n\n喜欢这篇更新吗？支持独立的Linux新闻报道。\n\nIt's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获取5本电子书。\n\n一次付费，永久享受\n\n任意金额，无需承诺\n\n一个对开源软件、定制PC组装、赛车运动以及探索这个世界无限可能性充满热情的极客。\n\nGNOME希望让你在不破坏任何东西的情况下测试实验性功能\n\nSlack算什么？这款自托管聊天应用刚刚开源\n\nOpen Book Touch正在众筹：一款无按钮、开源的Kindle替代品\n\nELM11-Feather是一款原生支持Lua语言的Feather兼容板\n\nLinux Mint现在认为Wayland已稳定\n\n成为更好的Linux用户\n\n通过FOSS周刊通讯，你可以学习有用的Linux技巧、发现应用程序、探索新发行版，并随时了解Linux世界的最新动态\n\n太棒了！您已成功注册。\n\n欢迎回来！您已成功登录。\n\n您已成功订阅It's FOSS。\n\n您的链接已过期。\n\n成功！请检查您的电子邮件以获取用于登录的魔法链接。\n\n成功！您的账单信息已更新。\n\n您的账单未更新。"
+  },
+  "75465216bf94d820a2410e8a190af293": {
+    "id": "75465216bf94d820a2410e8a190af293",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12895",
+    "title_en": "Distribution Release: OSINT VM 2026.5",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Trace Labs has announced the release of OSINT VM 2026.5, the latest version of the project's Debian-based distribution with specialist open-source intelligence (OSINT) tools to help find missing persons and reunite them with their families, designed exclusively to run on virtual machines. Unlike the previous release, which were....",
+    "pub_date": "",
+    "title_zh": "发行版发布：OSINT VM 2026.5",
+    "summary_zh": "Trace Labs 发布了 OSINT VM 2026.5，这是其基于 Debian 的发行版的最新版本，专为虚拟机设计，集成了开源情报（OSINT）工具，旨在帮助寻找失踪人员并与家人团聚。与之前基于 Kali Linux 的版本不同，此版本迁移至 Debian 13，移除了漏洞利用工具包、数据包分析器等非必要工具，专注于 OSINT 收集，从而减小镜像体积并提升控制力。",
+    "fulltext_zh": "发行版发布：OSINT VM 2026.5 (DistroWatch.com 新闻)\nDistroWatch.com 由以下机构赞助\n新闻/观点/评测 ▼\n发布公告\nDW 周刊 / 评测存档\n访客评分与评论\n按评分排名的项目\n播客、新闻通讯与评测\n跨发行版比较软件包\n显示所有发行版的软件包版本\n搜索发行版 - 高级\n已停产的发行版\n教程与学习 ▼\n搜索文章\n问答专栏\n技巧与窍门专栏\n误解与误区专栏\n简化手册页\n其他操作系统\n发行版验证密钥\n发行版家族树可视化\n常见问题解答\n我们的捐赠计划\n小型企业电话系统\nFreeBSD 从基础系统中移除最后一段 GPL 代码\nGNOME OS 引入测试中心\nHaiku 发布六月新闻通讯\nOpenMandriva 关于发行版遭破坏的尝试\nRedox 获得 USB 游戏手柄支持\nCinnamon Wayland 会话不再处于实验阶段\nTUXEDO 从 Ubuntu 基础迁移至 Debian\nGoogle 正在封锁第三方应用，不影响去谷歌化的 Android\nUbuntu 在发现 Rust cp 命令不兼容后恢复使用 GNU cp\n运行 Gentoo 的理由\n易用的 PBX - 托管或自行管理\n适用于 Linux 的电话系统\n免费在线聊天解决方案\n集成呼叫中心软件\n联络中心软件\n远程工作应用：iOS 或 Android\n免费视频会议\n3CX 提供的 VoIP / PBX 操作指南\n别被逮个正着，制定灾难恢复计划！\n必备的在线聊天报告与统计\n导致呼叫欺诈的常见错误\nWhatsApp Business 与 3CX WhatsApp API 集成对比\n3CX StartUP 的五大杀手级功能\n别做“那种人”第1卷：使用复杂凭证\n别做“那种人”第2卷：呼叫欺诈\n别做“那种人”第3卷：四大安全提示\n别做“那种人”第4卷：监控你的实例\nUbuntu 周刊第952期\nHaiku 活动与合同报告，2026年6月\nRed Hat 周五五件事 - 2026年7月10日\n本月在 Redox - 2026年6月\nLinux Mint 月度新闻 - 2026年6月\nFedora 项目播客\nProjets Libres 播客\nFull Circle 每周新闻\nGalactic Mandate Linux\nLCOS (Lunduke 计算机操作系统)\n最新新闻与更新\n新闻过滤选项\n发行版发布：OSINT VM 2026.5\nTrace Labs 宣布发布 2026.5，这是该项目基于 Debian 的发行版的最新版本，配备了专业的开源情报（OSINT）工具，旨在帮助寻找失踪人员并与家人团聚，专为在虚拟机上运行而设计。与之前基于 Kali Linux 的版本不同，最新版本源自 Debian 13：“我们 Trace Labs OSINT VM 团队很高兴宣布发布 Trace Labs OSINT VM 2026.05。此版本将整个底层操作系统从 Kali Linux 迁移至 Debian 13。这一变化减小了整体镜像体积，并通过消除不支持我们使命的工具，使我们能够更紧密地控制最终输出。Trace Labs 的使命是通过众包 OSINT 寻找失踪人员。我们不需要漏洞利用工具包、数据包分析器或端口扫描器来协助这一使命，因为我们依赖的是公开可用的信息。通过从干净的 Debian 基础开始，从我们的 VM 镜像中移除这些工具，使我们能够专注于提供一款专为 OSINT 收集而非混合型 OSINT/红队工具设计的高质量工具。\n更多信息，用户名：osint，密码：osint):\ntl-osint-2026.5-vbox-amd64.ova\ntl-osint-2026.5-vmware-amd64.ova\n近期相关新闻与发布\n发行版发布：OSINT VM 2026.5\n更多 OSINT VM 新闻...\nTrace Labs OSINT VM 是一款基于 Debian 的 Linux 发行版，配备了专业的开源情报（OSINT）工具，旨在帮助寻找失踪人员并与家人团聚。它以一组预构建镜像的形式提供，适用于 VMware 和 Virtual Box 虚拟机。OSINT 工具需要通过辅助脚本单独下载，包括电子邮件搜索（通过社交媒体、泄露信息及其他来源执行电子邮件搜索）、多"
+  },
+  "fafbf147b759943c7d0c212b3abfb961": {
+    "id": "fafbf147b759943c7d0c212b3abfb961",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-ROCm-TheRock-7.14",
+    "title_en": "AMD ROCm 7.14 \"TheRock\" Tech Preview Tagged For Latest AMD GPU Compute Stack",
+    "summary_en": "AMD's software team appears to be busy getting ready for next week's Advancing AI event happening next week in San Francisco. In addition to the release today of the Lemonade 11.0 local AI server, TheRock 7.14 was also tagged as the modern build system for ROCm working on the latest tech preview releases of this open-source AMD GPU compute stack...",
+    "pub_date": "Wed, 15 Jul 2026 20:21:31 -0400",
+    "title_zh": "AMD ROCm 7.14 “TheRock” 技术预览版标记，面向最新AMD GPU计算栈",
+    "summary_zh": "AMD软件团队为下周在旧金山举行的Advancing AI活动做准备，于7月15日标记了ROCm 7.14“TheRock”技术预览版。该版本带来AI训练增强、多种数据类型支持、性能提升（部分AI工作负载如Comfy UI提升10~16%），并持续改进Windows支持及修复多个bug。官方文档尚未更新，但感兴趣的用户可通过GitHub获取。",
+    "fulltext_zh": "AMD ROCm 7.14 “TheRock” 技术预览版标记，面向最新AMD GPU计算栈 - Phoronix\nAMD ROCm 7.14 “TheRock” 技术预览版标记，面向最新AMD GPU计算栈\n发布于2026年7月15日晚上8点21分（美国东部时间）\n\nAMD的软件团队似乎正忙于为下周在旧金山举行的Advancing AI活动做准备。除了今天发布的Lemonade 11.0本地AI服务器外，TheRock 7.14也被标记为ROCm的现代构建系统，用于该开源AMD GPU计算栈的最新技术预览版。\n\nTheRock 7.14于今天被标记，以配合ROCm 7.14技术预览栈。目前尚未发布详细的发布说明，官方文档仍指向ROCm 7.13为最新技术预览版，但无论如何，TheRock 7.14已提前标记，现在可供有兴趣利用最新AMD GPU计算能力的用户使用。\n\n根据我挖掘到的信息，AMD ROCm “TheRock” 7.14带来了针对不同数据类型的AI训练增强，以及多种主要是小幅度的性能提升，但部分AI工作负载（如Comfy UI）的性能提升了10%~16%，并持续改进ROCm对Microsoft Windows的支持。此外，还修复了多个bug，并针对特定Radeon和Instinct硬件进行了不同优化。\n\n希望官方发布说明/文档能尽快发布，但对于渴望尝试最新ROCm技术预览功能的用户，可以通过GitHub获取TheRock 7.14。我们拭目以待下周在旧金山举行的AMD Advancing AI活动上会有哪些更多公告。\n\nAMD发布Lemonade 11.0本地AI服务器，支持文本转语音及其他新功能\nAMD Ryzen AI Halo Box RGB LED驱动程序接近主线内核\nAMD ZenDNN 6.0为加速Ryzen/EPYC CPU推理带来多项改进\nAMD开始为Linux 7.3准备图形驱动更改\nAMD发送最新Linux补丁以优化RMPOPT\nAMDGPU HDMI 2.1 FRL、旧GPU改进及Q2 AMD Linux亮点\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael也是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nPop!_OS为其COSMIC桌面推出“磨砂玻璃”风格\nFreeBSD 16从其基础系统中移除最后GPL代码\nLibreOffice 26.8 Beta发布，改进这款自由软件办公套件\nProton 11.0-1发布，推进Valve的Steam Play以获得最佳Linux体验\nDebian 13.6发布，包含所有最新安全修复，回退GeoIP数据库\nLinux为联想ThinkPad准备新的USB-C安全功能\nLinus Torvalds重申Linux并非“反AI”也不是“社会战士”项目\nAMD Linux图形驱动致力于清除所有BUG()\n\n享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookies\n版权 © 2004 - 2026 由\n所有商标均为其各自所有者财产。保留所有权利。"
+  },
+  "ca4001039d319cc329bc5fffd3b52d71": {
+    "id": "ca4001039d319cc329bc5fffd3b52d71",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Mesa-26.2-rc1-Released",
+    "title_en": "Mesa 26.2-rc1 Released In Ending Feature Work For This Quarter's 3D Graphics Stack",
+    "summary_en": "Mesa 26.2 was branched today from Mesa Git and in turn Mesa 26.3-devel is now open on mainline...",
+    "pub_date": "Wed, 15 Jul 2026 17:10:31 -0400",
+    "title_zh": "Mesa 26.2-rc1 发布，本季度3D图形栈特性开发告一段落",
+    "summary_zh": "Mesa 26.2-rc1 已从 Git 分支发布，标志着本季度特性开发结束，Mesa 26.3-devel 主线已开放。该版本预计于8月发布稳定版，期间将进行每周候选版本迭代。主要更新包括：Intel ANV 和 AMD RADV Vulkan 驱动优化、Vulkan Video 持续改进、KosmicKrisp Vulkan-to-Apple Metal 驱动支持 Vulkan 1.4、Rusticl 增强 OpenCL 支持、NVIDIA NVK 驱动成熟化、Arm Mali Panfrost/PanVK 驱动引入新 KRAID 编译器、AMD GFX12.1 早期支持，以及大量新 Vulkan 扩展合并。此外，旧版 Radeon R600g 和 R300g 驱动也获得了多项修复。",
+    "fulltext_zh": "Mesa 26.2-rc1 发布，本季度3D图形栈特性开发告一段落 - Phoronix\nMesa 26.2-rc1 发布，本季度3D图形栈特性开发告一段落\n发布于2026年7月15日美国东部时间下午5:10。\n今天从 Mesa Git 分支出来，相应地，Mesa 26.3-devel 现在在主线上开放。\nMesa 26.2 正朝着8月的稳定版迈进，在此期间，每周的候选版本已经开始发布。Mesa 26.2 为 Intel ANV 和 AMD RADV Vulkan 驱动带来了多项优化，继续推进 Vulkan Video 工作，KosmicKrisp Vulkan-to-Apple Metal 驱动现已支持 Vulkan 1.4，Rusticl 持续提供更好的 OpenCL 支持，NVIDIA NVK Vulkan 驱动不断成熟，为 Arm Mali Panfrost/PanVK 驱动合并了新的 KRAID 编译器，开展了 AMD GFX12.1 图形支持的早期工作，并合并了多种新的 Vulkan 扩展。就连旧的 Radeon R600g 和 R300g 驱动在 Mesa 26.2 特性开发期间也获得了多项修复。\nMesa 发布说明总结了 Mesa 26.2 的亮点如下：\n- radeonsi 上的 cl_khr_subgroup_rotate\n- iris 上的 cl_khr_subgroup_rotate\n- panvk 上的 VK_EXT_shader_uniform_buffer_unsized_array\n- RADV 上的 VK_KHR_shader_constant_data\n- panvk 上的 VK_EXT_dynamic_rendering_unused_attachments\n- RADV/GFX10+ 和 VEGA10 上的 protectedMemory 支持\n- RADV/GFX11 上的 VK_KHR_performance_query\n- panvk 上的 VK_EXT_conservative_rasterization\n- pvr 上的 shaderImageGatherExtended\n- rusticl 需要静态 C++ stdlib 以解决应用程序使用自身 C++ stdlib 的问题\n- RADV 上的 VK_EXT_pipeline_protected_access\n- panvk 上的 VK_EXT_extended_dynamic_state3\n- panfrost/v9+ 上的 GL_ARB_texture_query_lod\n- RADV 上的 VK_KHR_maintenance11\n- asahi、iris、radeonsi、llvmpipe 和 zink 上 rusticl 的 OpenCL 3.1 支持\n- pvr 上的 VK_KHR_workgroup_memory_explicit_layout\n- pvr 上的 VK_KHR_maintenance5\n- hasvk 上的 VK_KHR_calibrated_timestamps\n- pvr 上的 VK_KHR_present_id\n- pvr 上的 VK_KHR_present_wait\n- hasvk 上的 VK_KHR_present_id2\n- hasvk 上的 VK_KHR_present_wait2\n- RADV 上的 VK_KHR_shader_fma\n- RADV/GFX12 上的 VK_EXT_shader_split_barrier\n- nvk 上的 VK_KHR_shader_fma\n- Panfrost 和 PanVK 上对 G1-Ultra、G1-Premium 和 G1-Pro GPU 的支持\n- nvk 上的 VK_EXT_shader_atomic_float\n- pvr 上的 VK_{KHR,EXT}_index_type_uint8\n- vulkan 运行时中的 VK_EXT_debug_marker\n- NVK 上的 VK_EXT_mesh_shader\n- RADV 上的 VK_KHR_device_fault\n- VK_EXT_present_timing 现在也支持 wsi/x11\n- hasvk 上的 VK_EXT_present_timing\n- anv、hasvk、hk、nvk、panvk、pvr、radv、tu、v3dv 上的 VK_GOOGLE_display_timing（用于 KHR_display，并可选择用于 x11、wayland）\n- RADV 上的 VK_KHR_shader_abort\n- panvk 上的 VK_KHR_shader_fma\n- NVK 上的 VK_NV_shader_atomic_float16_vector\n- panvk 上的 VK_KHR_compute_shader_derivatives\n- pvr 上的 VK_EXT_shader_subgroup_ballot\n- pvr 上的 VK_EXT_shader_subgroup_vote\n- pvr 上的 VK_KHR_shader_subgroup_rotate\n- pvr 上的 VK_KHR_shader_subgroup_uniform_control_flow\n- pvr 上的 VK_EXT_subgroup_size_control\n- panvk 上的 VK_EXT_rasterization_order_attachment_access\n- panvk 上的 VK_ARM_rasterization_order_attachment_access\n- etnaviv/HALF_FLOAT 上的 GL_OES_texture_float\n- etnaviv/HALF_FLOAT 上的 GL_ARB_texture_float\n- NVK 上的 VK_NVX_binary_import\n- panvk 上的 VK_EXT_image_sliced_view_of_3d\n- panvk 上的 VK_EXT_shader_tile_image\n- panvk 上的 VK_KHR_internally_synchronized_queues\n- panvk 上的 VK_KHR_workgroup_memory_explicit_layout\n- pvr 上的 VK_EXT_device_memory_report\n- anv、RADV 上默认启用 VK_EXT_descriptor_heap\n- panvk 上的 VK_EXT_device_address_binding_report\n- RADV/Android 上的 VK_EXT_multisampled_render_to_single_sampled\n- anv 上的 VK_KHR_shader_fma\n- RADV 上的 VK_KHR_extended_flags\n- pvr 上的 VK_EXT_display_surface_counter\n- pvr 上的 VK_EXT_display_control\n- pvr 上的 VK_EXT_direct_mode_display\n- pvr 上的 VK_KHR_surface_maintenance1\n- pvr 上的 VK_EXT_surface_maintenance1\n- pvr 上的 VK_KHR_swapchain_maintenance1\n- pvr 上的 VK_EXT_swapchain_maintenance1\n- pvr 上的 VK_EXT_swapchain_colorspace\n- pvr 上的 VK_EXT_acquire_drm_display\n- pvr 上的 VK_KHR_unified_image_layouts\n- v3dv 上的 VK_KHR_shader_quad_control\n- VK_KHR_sha"
+  },
+  "ed9682e90b8d4cad392806bd53e532e2": {
+    "id": "ed9682e90b8d4cad392806bd53e532e2",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-Lemonade-11.0",
+    "title_en": "AMD Releases Lemonade 11.0 Local AI Server With Text-To-Speech, Other New Features",
+    "summary_en": "Ahead of the AMD Advancing AI event next week, today AMD released Lemonade 11.0 as the latest feature release of their local AI server supporting AMD Ryzen CPUs, AMD Radeon GPUs, and AMD Ryzen AI NPU acceleration...",
+    "pub_date": "Wed, 15 Jul 2026 15:51:32 -0400",
+    "title_zh": "AMD 发布 Lemonade 11.0 本地 AI 服务器，新增文本转语音及其他功能",
+    "summary_zh": "AMD 发布了 Lemonade 11.0，这是其本地 AI 服务器的最新功能版本，支持 AMD Ryzen CPU、Radeon GPU 和 Ryzen AI NPU 加速。新版本引入了基于 OpenMOSS 后端的文本转语音（TTS）功能，支持语音克隆和语音设计模型；新增 3D 生成模态，内置模型查看器；FastFlowLM NPU 后端在 Linux 上实现自动安装；同时支持 ModelScope 作为第二个远程模型注册表。",
+    "fulltext_zh": "AMD 发布 Lemonade 11.0 本地 AI 服务器，新增文本转语音及其他功能 - Phoronix\nAMD 发布 Lemonade 11.0 本地 AI 服务器，新增文本转语音及其他功能\n发布于 2026 年 7 月 15 日 下午 3:51 美国东部时间\n在下周 AMD Advancing AI 活动之前，AMD 今天发布了 Lemonade 11.0，这是其本地 AI 服务器的最新功能版本，支持 AMD Ryzen CPU、AMD Radeon GPU 和 AMD Ryzen AI NPU 加速。\nLemonade 仍然是跨 AMD 硬件在 Windows 和 Linux 上体验本地加速 AI 潜力的绝佳方式。除了作为优秀的 AMD AI 硬件演示工具外，它本身也很有用，同时完全开源并支持最新的大语言模型。\nLemonade 11.0 引入了文本转语音（TTS）支持，使用 OpenMOSS 后端，支持语音克隆和语音设计模型。该 TTS 支持已集成到 Lemonade 用户界面中。\nLemonade 11.0 还引入了一种新的 3D 生成模态，并配有应用内模型查看器。对于 Linux 用户，Lemonade 11.0 的另一个不错改进是 FastFlowLM NPU 后端现在可以在 Linux 上自动安装。\n- 新的 3D 生成模态移植了 Trellis.2 图像到 3D 管道，暴露了 POST /v1/3d/generations 端点和带有应用内模型查看器的 GUI 3D 面板。\n- 文本转语音功能随 OpenMOSS 后端一同到来，包括语音克隆和语音设计模型，以及 GUI 中的专用 TTS 面板。\n- 在 /chat/completions、/completions 或 /responses 上命名 collection.router 模型现在会运行其路由引擎，并通过 x_lemonade_route 主体字段和 x-lemonade-route 头部报告所选路由。\n- ModelScope 现在作为第二个远程模型注册表得到支持，与 Hugging Face 并列，可通过 CLI、API 和桌面应用进行源选择。\n- FastFlowLM NPU 后端现在在 Linux 上自动安装，无需手动安装系统包，并新增了 prefer_system 配置标志。\n关于 Lemonade 11.0 的下载和更多详情，请访问\nAMD ROCm 7.14 \"TheRock\" 技术预览版已标记用于最新 AMD GPU 计算栈\nAMD Ryzen AI Halo Box RGB LED 驱动程序更接近主线内核\nAMD ZenDNN 6.0 为加速 Ryzen/EPYC CPU 上的推理带来诸多改进\nAMD 开始为 Linux 7.3 准备暂存图形驱动程序更改\nAMD 发送最新的 RMPOPT 优化 Linux 补丁\nAMDGPU HDMI 2.1 FRL、旧 GPU 改进及其他 AMD Linux 第二季度亮点\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动程序及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\nPop!_OS 推出其 COSMIC 的 \"磨砂玻璃\" 桌面风格\nFreeBSD 16 从其基础系统中移除最后剩余的 GPL 代码\nLibreOffice 26.8 Beta 发布，旨在改进这款自由软件办公套件\nProton 11.0-1 发布，推进 Valve 的 Steam Play 以获得最佳 Linux 体验\nDebian 13.6 发布，包含所有最新安全修复，并回滚 GeoIP 数据库\nLinux 为联想 ThinkPad 上的新 USB-C 安全功能做准备\nLinus Torvalds 重申 Linux 并非 \"反 AI\" 也不是 \"社会战士\" 项目\nAMD Linux 图形驱动程序致力于清除所有 BUG()\n在享受无广告浏览的同时\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "01b02fecc723673ad855c82dc3f3aed1": {
+    "id": "01b02fecc723673ad855c82dc3f3aed1",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/razer-blade18-windows-linux",
+    "title_en": "Ubuntu 26.04 LTS vs. Windows 11 vs. CachyOS Performance On A $5399 Laptop",
+    "summary_en": "Earlier this month on Phoronix I reviewed the Razer Blade 18 RZ09-0582 as the first laptop Razer is certifying for Linux use via Canonical's hardware certification program for Linux. It offered very nice performance with the Intel Core Ultra 9 290HX Plus and NVIDIA GeForce RTX 5090 graphics albeit costly with a configured price of $5399 USD. That review featured benchmarks on Ubuntu 26.04 LTS but for those wondering about the performance of Ubuntu against Windows 11 on this gaming/AI developer l",
+    "pub_date": "Wed, 15 Jul 2026 12:15:15 -0400",
+    "title_zh": "Ubuntu 26.04 LTS vs. Windows 11 vs. CachyOS 在5399美元笔记本上的性能对比",
+    "summary_zh": "Phoronix 对 Razer Blade 18 RZ09-0582 笔记本进行了性能对比测试，该笔记本搭载 Intel Core Ultra 9 290HX Plus 和 NVIDIA GeForce RTX 5090，售价5399美元。测试比较了 Ubuntu 26.04 LTS、Windows 11 和滚动发行版 CachyOS 的性能表现，均使用官方 NVIDIA 驱动。结果显示不同系统在硬件上的性能差异，CachyOS 使用了更新的内核和驱动。",
+    "fulltext_zh": "Ubuntu 26.04 LTS vs. Windows 11 vs. CachyOS 在5399美元笔记本上的性能对比 - Phoronix\nUbuntu 26.04 LTS vs. Windows 11 vs. CachyOS 在5399美元笔记本上的性能对比\n发布于2026年7月15日美国东部时间下午12:15。\n\n本月早些时候，我在 Phoronix 上评测了 Razer Blade 18 RZ09-0582，这是 Razer 首款通过 Canonical 的 Linux 硬件认证计划认证为 Linux 使用的笔记本电脑。它搭载 Intel Core Ultra 9 290HX Plus 和 NVIDIA GeForce RTX 5090 显卡，性能出色，但配置价格高达5399美元。该评测基于 Ubuntu 26.04 LTS 进行了基准测试，但如果您想知道在这款游戏/AI 开发笔记本上 Ubuntu 与 Windows 11 的性能差异，这里提供了对比基准测试，同时还加入了滚动发行版 CachyOS。\n\n本文包含了 Microsoft Windows 11（Razer 出厂配置）与标准 Ubuntu 26.04 LTS 环境（搭载 Linux 7.0 内核及其他默认软件组件）的基准测试对比。最后，还在同一台笔记本上测试了注重性能的基于 Arch Linux 的 CachyOS 发行版，以了解这款笔记本上更前沿的 Linux 性能表现。\n\n考虑到使用的 NVIDIA GeForce RTX 5090 显卡，所有测试均使用了各发行版仓库中提供的官方 NVIDIA Windows/Linux 驱动。未进行 Nouveau 对比，但针对 GeForce RTX 5090 笔记本 GPU 性能的独立 NVIDIA vs. Nouveau 对比即将推出。\n\n截至上周，滚动更新的 CachyOS 使用了 Linux 7.1 内核、GCC 16.1.1，并已升级至 NVIDIA R610 驱动，而 Windows 11 和 Ubuntu 26.04 仍使用 R595 驱动。\n\n更新后的 Raspberry Pi OS 搭载 Linux 6.18 LTS，带来了一些性能提升\n对 Ubuntu 26.10 amd64v3 软件包进行基准测试\n对 CachyOS Linux 的 BORE 调度器性能进行基准测试\n对不同的 CachyOS Linux 内核变体进行基准测试\nCachyOS 在 System76 Thelio Major 上领先于 Arch Linux、Pop!_OS 和 Ubuntu\nLinux 在 AMD Ryzen 9 9950X3D2 上提供比 Windows 11 更好的性能\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "19bc5b77b0c056d545de38506c7dd8f4": {
+    "id": "19bc5b77b0c056d545de38506c7dd8f4",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Apple-Magic-Bluetooth-Battery",
+    "title_en": "Linux Patches Finally Allow Apple Magic Keyboard/Mouse Battery Monitoring Via Bluetooth",
+    "summary_en": "Besides the ongoing challenges of enabling newer Apple Silicon SoC support on Linux, Apple peripheral support on Linux remains a mixed bag depending on the product as well. The latest functionality now being addressed is for having battery reporting work for the Apple Magic Mouse and Magic Keyboard when connected via Bluetooth...",
+    "pub_date": "Wed, 15 Jul 2026 08:54:47 -0400",
+    "title_zh": "Linux补丁终于允许通过蓝牙监控Apple Magic Keyboard/Magic Mouse电池",
+    "summary_zh": "Linux内核此前仅支持通过USB连接时报告Apple Magic Keyboard和Magic Mouse的电池电量，蓝牙连接时电量显示为0%。开源开发者Alec Hall发布了一组补丁，通过将电池读取操作移至工作队列，解决了蓝牙连接下的电池报告问题，并支持Magic Trackpad 2。补丁目前正在审查中，有望进入主线内核。",
+    "fulltext_zh": "Linux补丁终于允许通过蓝牙监控Apple Magic Keyboard/Magic Mouse电池 - Phoronix\nLinux补丁终于允许通过蓝牙监控Apple Magic Keyboard/Magic Mouse电池\n发布于2026年7月15日，美国东部时间上午8:54。\n\n除了在Linux上启用新Apple Silicon SoC支持的持续挑战外，Linux上的Apple外设支持因产品而异，情况好坏参半。现在正在解决的最新功能是，当Apple Magic Mouse和Magic Keyboard通过蓝牙连接时，能够实现电池报告功能。\n\nLinux已经支持输入设备的电池报告，但限制之一是电池报告仅在通过USB连接时有效……这并不完全有用，因为通过蓝牙无线连接时，电池电量才更为重要。当前的Linux内核版本在通过蓝牙连接Apple设备时会报告0%的电量，这显然毫无帮助。\n\n开源开发者Alec Hall发布了一组补丁，使Apple Magic Keyboard、Magic Mouse 2和Magic Trackpad 2能够通过蓝牙进行电池报告。Alec在解决这一显著缺陷时解释道：\n\n“Apple的Magic Keyboard和Magic Trackpad 2 / Magic Mouse 2会向主机报告电池电量，但内核仅通过USB显示该信息；通过蓝牙连接时，power_supply始终显示为0%，尽管这些设备几乎始终通过蓝牙使用。\n两个驱动程序都已经获取电池信息（针对输入报告0x90的GET_REPORT），但仅通过USB进行。在蓝牙上直接启用会导致机器硬锁定：该获取操作在定时器回调（原子上下文）中运行，而uhid传输在hid_hw_request()内休眠。因此，每个驱动程序的补丁在启用蓝牙之前，将获取操作移至工作队列。最后一个补丁教会hid-magicmouse从设备的状态字节中报告充电状态。\n补丁3解释了一个供应商状态字节，其位含义是通过经验确定的；如果审查者偏好，我可以将其重写为报告描述符修复，以暴露HID_BAT_CHARGING。\n已在Magic Keyboard 2021和Magic Trackpad 2上通过BlueZ（uhid）进行了测试。”\n\n这些补丁目前正在审查中，有望使这些hid-magicmouse和hid-apple驱动程序的改进进入主线Linux内核。\n\nLinux应对Apple Silicon SoC上混乱的传感器阵列\nLinux DT补丁为Apple M3 Pro / Max / Ultra提供非常基础的支持\n为在Linux上启动Apple M4发布的初始补丁\nAsahi Linux修复与macOS 27的启动问题，M3及Apple视频解码取得进展\n发布的新Linux驱动程序为M3 MacBook启用键盘支持\nLinux最终结束AppleTalk协议支持\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动程序及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nPop!_OS推出其COSMIC的“磨砂玻璃”桌面风格\nFreeBSD 16从其基础系统中移除最后的GPL代码\nLibreOffice 26.8 Beta发布，改进这款自由软件办公套件\nProton 11.0-1发布，提升Valve的Steam Play，带来最佳Linux体验\nDebian 13.6发布，包含所有最新安全修复，并回退GeoIP数据库\nLinux为联想ThinkPad上的新USB-C安全功能做准备\nLinus Torvalds重申Linux并非“反AI”也不是“社会战士”项目\nAMD Linux图形驱动程序致力于清除所有BUG()\n\n尽管提供无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "8ab1bf2b502dc911d130c1377c3da11a": {
+    "id": "8ab1bf2b502dc911d130c1377c3da11a",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/how-to-install-woocommerce-ubuntu-26-04/",
+    "title_en": "How to Install WooCommerce Ubuntu 26.04",
+    "summary_en": "Learn how to seamlessly install WooCommerce on Ubuntu 26.04. Follow our detailed guide for a smooth setup and boost your online store today.\nThe post How to Install WooCommerce Ubuntu 26.04 appeared first on Linux Today.",
+    "pub_date": "Wed, 15 Jul 2026 07:12:49 +0000",
+    "title_zh": "如何在 Ubuntu 26.04 上安装 WooCommerce",
+    "summary_zh": "本文详细介绍了如何在 Ubuntu 26.04 系统上无缝安装 WooCommerce，帮助用户快速搭建在线商店。指南涵盖从环境准备到插件配置的完整步骤，确保安装过程顺利，助力电商业务高效启动。",
+    "fulltext_zh": "了解如何在 Ubuntu 26.04 上无缝安装 WooCommerce。按照我们的详细指南进行顺畅设置，立即提升您的在线商店。\n\n该文章《如何在 Ubuntu 26.04 上安装 WooCommerce》最早出现在 Linux Today 上。"
+  },
+  "61492db675638493cc6eabbe53862659": {
+    "id": "61492db675638493cc6eabbe53862659",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/debian-12-bookworm-moves-to-lts-extending-security-support-to-2028/",
+    "title_en": "Debian 12 Bookworm Moves to LTS, Extending Security Support to 2028",
+    "summary_en": "Learn about Debian 12 Bookworm's move to LTS, providing extended security support until 2028. Ensure your systems remain secure and up-to-date.\nThe post Debian 12 Bookworm Moves to LTS, Extending Security Support to 2028 appeared first on Linux Today.",
+    "pub_date": "Wed, 15 Jul 2026 07:08:36 +0000",
+    "title_zh": "Debian 12 Bookworm 进入 LTS 阶段，安全支持延长至 2028 年",
+    "summary_zh": "Debian 12 Bookworm 已正式进入长期支持（LTS）阶段，安全更新支持将延长至 2028 年。用户可继续获得关键安全补丁，确保系统安全与稳定。本文介绍了 LTS 阶段的过渡细节及对用户的影响。",
+    "fulltext_zh": "了解 Debian 12 Bookworm 进入 LTS 阶段的相关信息，该版本将提供延长至 2028 年的安全支持。确保你的系统保持安全与最新状态。\n\n本文《Debian 12 Bookworm Moves to LTS, Extending Security Support to 2028》首发于 Linux Today。"
+  },
+  "b0a926acf14663192cc7f3e30b70a219": {
+    "id": "b0a926acf14663192cc7f3e30b70a219",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/alpine-linux-3-24-brings-cosmic-desktop-to-its-community-repository/",
+    "title_en": "Alpine Linux 3.24 Brings COSMIC Desktop to Its Community Repository",
+    "summary_en": "Discover Alpine Linux 3.24, featuring the COSMIC Desktop in its community repository. Explore enhanced usability and performance for your computing needs.\nThe post Alpine Linux 3.24 Brings COSMIC Desktop to Its Community Repository appeared first on Linux Today.",
+    "pub_date": "Wed, 15 Jul 2026 07:06:14 +0000",
+    "title_zh": "Alpine Linux 3.24 将 COSMIC 桌面环境引入其社区仓库",
+    "summary_zh": "Alpine Linux 3.24 版本发布，新增 COSMIC 桌面环境至社区仓库，提升了系统的易用性和性能，满足用户多样化的计算需求。",
+    "fulltext_zh": "探索 Alpine Linux 3.24，其社区仓库中引入了 COSMIC 桌面环境。体验针对您计算需求而增强的易用性和性能。\n\n该文章 Alpine Linux 3.24 Brings COSMIC Desktop to Its Community Repository 最初发布于 Linux Today。"
+  },
+  "973d513aa63f91a72796b69464e7c788": {
+    "id": "973d513aa63f91a72796b69464e7c788",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/refreshos-3-0-is-for-debian-stable-fans-who-want-kde-plasma-6/",
+    "title_en": "RefreshOS 3.0 Is for Debian Stable Fans Who Want KDE Plasma 6",
+    "summary_en": "Discover RefreshOS 3.0, the perfect choice for Debian Stable enthusiasts seeking the latest KDE Plasma 6 experience. Upgrade your desktop today!\nThe post RefreshOS 3.0 Is for Debian Stable Fans Who Want KDE Plasma 6 appeared first on Linux Today.",
+    "pub_date": "Wed, 15 Jul 2026 07:04:48 +0000",
+    "title_zh": "RefreshOS 3.0：为渴望KDE Plasma 6的Debian Stable粉丝而生",
+    "summary_zh": "RefreshOS 3.0正式发布，专为喜爱Debian Stable稳定性、同时希望体验最新KDE Plasma 6桌面环境的用户打造。该版本在保持Debian坚实基础的同时，集成了前沿的KDE Plasma 6，为用户带来现代化、流畅的桌面体验。",
+    "fulltext_zh": "探索RefreshOS 3.0——这是那些既钟情于Debian Stable稳定性、又渴望获得最新KDE Plasma 6体验的用户的完美选择。立即升级您的桌面吧！\n\n本文《RefreshOS 3.0 Is for Debian Stable Fans Who Want KDE Plasma 6》最初发表于Linux Today。"
+  },
+  "c94ec23ffa2f0a926beac8fee27a2c1f": {
+    "id": "c94ec23ffa2f0a926beac8fee27a2c1f",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/aomedia-officially-releases-av2-codec-after-first-1-0-milestone/",
+    "title_en": "AOMedia Officially Releases AV2 Codec After First 1.0 Milestone",
+    "summary_en": "AOMedia has officially launched the AV2 codec, marking a significant milestone in video compression technology. Discover its features and benefits today.\nThe post AOMedia Officially Releases AV2 Codec After First 1.0 Milestone appeared first on Linux Today.",
+    "pub_date": "Wed, 15 Jul 2026 07:02:00 +0000",
+    "title_zh": "AOMedia 正式发布 AV2 编解码器，达成首个 1.0 里程碑",
+    "summary_zh": "AOMedia 正式发布 AV2 编解码器，标志着视频压缩技术的重要里程碑。该编解码器在效率与性能上实现显著提升，为下一代视频应用奠定基础。",
+    "fulltext_zh": "AOMedia 已正式发布 AV2 编解码器，标志着视频压缩技术的一个重要里程碑。立即了解其特性与优势。\n\n该文章《AOMedia Officially Releases AV2 Codec After First 1.0 Milestone》首发于 Linux Today。"
   }
 }
