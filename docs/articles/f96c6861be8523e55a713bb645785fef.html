@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AppManager 在 Ubuntu 上无需 FUSE 即可安装 AppImage — Linux 中文速报</title>
+<title>事实证明Wayland并非人人所说的输入延迟灾难 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>AppManager 在 Ubuntu 上无需 FUSE 即可安装 AppImage</h1>
+  <h1>事实证明Wayland并非人人所说的输入延迟灾难</h1>
 
-  <div class="article-summary">AppManager 是一款基于 GTK4/Libadwaita 的新应用，解决了 Ubuntu 上部分 AppImage 需要 FUSE 2 的问题。它通过替代方式挂载 AppImage，支持 SquashFS 和 DwarFS 格式，并提供类似 macOS 的安装流程。用户可拖拽图标安装、导入现有 AppImage、管理启动选项、图标和路径，支持更新检查、命令行参数设置及全局配置。应用本身以 AppImage 形式提供，开源且兼容多数 Linux 发行版。</div>
+  <div class="article-summary">一位开发者自制的点击到光子延迟测试设备，对X11、Wayland、VRR及DXVK分支进行了对比测试。结果显示，Wayland与X11的延迟差异极小（仅0.14-0.22毫秒），VRR可降低0.26-0.45毫秒延迟，而真正的延迟元凶是XWayland（增加3.13毫秒）。建议Linux玩家优先使用原生Wayland、开启VRR并安装dxvk-low-latency分支。</div>
 
-  <div class="article-body"><p>AppManager 在 Ubuntu 上无需 FUSE 即可安装 AppImage - OMG! Ubuntu</p><p>AppImage 的设计本应简单：下载、赋予可执行权限、运行。但在 Ubuntu 上，却多了一个步骤：Ubuntu 默认搭载 FUSE 3，而部分 AppImage 仍需要 FUSE 2。</p><p>AppManager 是一款较新的 GTK4/Libadwaita 应用，它通过替代 FUSE 的方式挂载 AppImage，解决了这一烦人问题。它既能处理常见的 SquashFS 打包的 AppImage，也支持更新的 DwarFS 打包格式。</p><p>AppManager 提供了类似 macOS 的安装流程：双击 AppImage 文件，AppManager 会打开一个 macOS 风格的安装界面。将应用图标拖拽到文件夹中，AppManager 就会将文件移动到 ~/Applications 或你选择的目录，并自动创建应用启动器和快捷方式。</p><p>如果你设备上已有大量 AppImage，并希望通过此应用移动和集成它们，可以使用导入功能，指向每个 AppImage 或包含它们的文件夹。</p><p>为每个应用设置启动选项、图标和路径</p><p>你可以单独配置和管理每个应用。作为一款 AppImage 管理器，它的功能远不止提供 macOS 风格的启动器快捷方式创建。它可以通过 Gitlab 或 Github 链接检查并更新 AppImage；你可以设置命令行参数，并选择在每个应用或全局范围内使用“便携式”主目录和配置文件夹。你还可以设置 $PATH 或环境变量。</p><p>自定义功能还扩展到应用图标——如果你不喜欢默认图标，可以更换；你还可以编辑应用的启动器关键词，以便在应用菜单和启动器（包括 GNOME Shell 的应用网格）中快速找到它。</p><p>全局选项：设置安装文件夹等</p><p>为了提升速度（尽管会牺牲磁盘空间），每个应用的列表中都有一个“提取”选项。解压包内容后，在较慢的系统上，大型软件可能会启动得更快一些——不过这一操作很难撤销。</p><p>更新可以设置为按计划运行，并下载 zsync 增量补丁而非整个 AppImage（在支持的情况下）。对于偏好终端的用户，AppManager 还附带了一个命令行工具，用于安装和更新应用。</p><p>下载并安装 AppManager</p><p>我之前曾介绍过类似功能的应用，比如 Gear Lever。与它们不同，AppManager 不依赖 FUSE。这省去了在 Ubuntu 上运行 AppImage 前需要记住安装哪个包的麻烦。</p><p>AppManager 是开源的，并且本身也以 AppImage 形式提供。开发者 Arnis K 表示，它几乎可以在任何桌面 Linux 发行版上运行。我在 Ubuntu 上测试时一切正常。</p><p>你可以从项目的 GitHub 页面下载它，赋予可执行权限，然后双击打开。按照提示将图标拖拽到文件夹中，再在主窗口中进行配置。</p><p>喜欢这个应用？正在使用它？请在下方告诉我。</p></div>
+  <div class="article-body"><p>事实证明Wayland并非人人所说的输入延迟灾难</p><p>事实证明Wayland并非人人所说的输入延迟灾难</p><p>一款自制的点击到光子测试仪对X11、Wayland、VRR以及一个DXVK分支进行了测试，结果出人意料。</p><p>Wayland比X11延迟更差的观点一直在Linux游戏圈流传。一些支持这一说法的数据确实在2025年出现过，当时一位开发者测量了GNOME的Wayland会话与X11的对比，并报告了相当可观的额外延迟。</p><p>一位名为Marco的开发者决定在自己的游戏机上测试同样的问题（以及另外几个问题），他没有使用手机摄像头来计算延迟，而是自制了一个DIY设备来亲自测量。</p><p>数据怎么说？</p><p>简单来说，这是一个DIY设备，它将一个光传感器固定在显示器上，并通过USB模拟鼠标点击。它测量从点击到屏幕上产生相应变化之间的时间，从而得出真实的端到端延迟数据。</p><p>顺便提一下，该测试设备的硬件、固件和分析代码都在GitHub上免费提供。</p><p>测试通过DXVK运行了一款CPU密集型的DirectX 11游戏，使用了RTX 4070 SUPER和一台500 Hz的OLED显示器。他在不同场景下寻找答案：测试X11对比原生Wayland、VRR开启对比关闭、以及DXVK低延迟分支开启对比关闭。他还进行了一组额外测试，比较原生Wayland与XWayland，所有配置均标准化为1440p分辨率。</p><p>结果削弱了网上讨论的许多观点。八个主要测试案例的结果彼此相差在0.72毫秒以内，中位数范围从4.21毫秒到4.93毫秒。X11仅比Wayland快0.14到0.22毫秒，远不足以解释Wayland给人感觉延迟高的名声。开启VRR可将延迟降低0.26到0.45毫秒，并缩小结果分布范围，其效果超过测试中的任何其他因素。在无上限场景中，开启dxvk-low-latency分支后最多可节省0.84毫秒。</p><p>真正的罪魁祸首是XWayland，它比原生Wayland增加了3.13毫秒的延迟，超过其他所有因素的总和。将所有优化叠加在一起（X11、VRR和低延迟分支），与普通的Wayland设置相比，中位数仅降低了0.72毫秒。</p><p>这对Linux玩家意味着什么？</p><p>对于普通Linux玩家来说，教训不是放弃Wayland改用X11。如果显示器支持，请开启VRR；如果设置允许，请安装dxvk-low-latency分支；并确保游戏通过原生Wayland而非XWayland运行。</p><p>我在这里介绍的是Marco所做测试的浓缩摘要，我强烈建议你阅读他的完整文章。他考虑了很多变量，如果逐一列出，你可能会直接关掉这篇文章。😅</p><p>喜欢这篇更新吗？支持独立的Linux新闻报道。</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。请帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获取5本电子书。</p><p>一次性付费，永久享受</p><p>任意金额，无需承诺</p><p>一个热爱开源软件、定制PC组装、赛车运动以及探索这个世界无限可能的极客。</p><p>Vocalinux：将语音转为文本，无需泄露语音数据</p><p>Cursor AI对关键漏洞的沉默危及数百万用户</p><p>GNOME希望让你测试实验性功能而不破坏任何东西</p><p>Slack算什么？这款自托管聊天应用刚刚开源</p><p>Open Book Touch正在众筹：一款无按钮、开源硬件的Kindle替代品</p><p>成为更好的Linux用户</p><p>通过FOSS每周新闻简报，你可以学习有用的Linux技巧、发现应用、探索新发行版，并随时了解Linux世界的最新动态</p><p>太棒了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅It's FOSS。</p><p>您的链接已过期。</p><p>成功！请检查您的邮箱中的魔法链接以登录。</p><p>成功！您的账单信息已更新。</p><p>您的账单未更新。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/appmanager-appimage-installer-linux" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/x11-vs-wayland-input-latency/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AppManager 在 Ubuntu 上无需 FUSE 即可安装 AppImage — Linux 中文速报</title>
+<title>FreeBSD实习生致力于将AMD ROCm移植到BSD世界 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>AppManager 在 Ubuntu 上无需 FUSE 即可安装 AppImage</h1>
+  <h1>FreeBSD实习生致力于将AMD ROCm移植到BSD世界</h1>
 
-  <div class="article-summary">AppManager 是一款基于 GTK4/Libadwaita 的新应用，解决了 Ubuntu 上部分 AppImage 需要 FUSE 2 的问题。它通过替代方式挂载 AppImage，支持 SquashFS 和 DwarFS 格式，并提供类似 macOS 的安装流程。用户可拖拽图标安装、导入现有 AppImage、管理启动选项、图标和路径，支持更新检查、命令行参数设置及全局配置。应用本身以 AppImage 形式提供，开源且兼容多数 Linux 发行版。</div>
+  <div class="article-summary">FreeBSD基金会的一名实习生正在将AMD的ROCm计算栈移植到FreeBSD上，目标至少实现简单的向量加法运算。尽管FreeBSD已移植了AMDGPU DRM内核驱动，但至今缺乏ROCm支持。该项目由Sourojeet Adhikari负责，目前正在编译ROCm开源组件并适配FreeBSD。若成功，未来有望将ROCm推广至其他BSD系统，为GPU计算提供更优选择。</div>
 
-  <div class="article-body"><p>AppManager 在 Ubuntu 上无需 FUSE 即可安装 AppImage - OMG! Ubuntu</p><p>AppImage 的设计本应简单：下载、赋予可执行权限、运行。但在 Ubuntu 上，却多了一个步骤：Ubuntu 默认搭载 FUSE 3，而部分 AppImage 仍需要 FUSE 2。</p><p>AppManager 是一款较新的 GTK4/Libadwaita 应用，它通过替代 FUSE 的方式挂载 AppImage，解决了这一烦人问题。它既能处理常见的 SquashFS 打包的 AppImage，也支持更新的 DwarFS 打包格式。</p><p>AppManager 提供了类似 macOS 的安装流程：双击 AppImage 文件，AppManager 会打开一个 macOS 风格的安装界面。将应用图标拖拽到文件夹中，AppManager 就会将文件移动到 ~/Applications 或你选择的目录，并自动创建应用启动器和快捷方式。</p><p>如果你设备上已有大量 AppImage，并希望通过此应用移动和集成它们，可以使用导入功能，指向每个 AppImage 或包含它们的文件夹。</p><p>为每个应用设置启动选项、图标和路径</p><p>你可以单独配置和管理每个应用。作为一款 AppImage 管理器，它的功能远不止提供 macOS 风格的启动器快捷方式创建。它可以通过 Gitlab 或 Github 链接检查并更新 AppImage；你可以设置命令行参数，并选择在每个应用或全局范围内使用“便携式”主目录和配置文件夹。你还可以设置 $PATH 或环境变量。</p><p>自定义功能还扩展到应用图标——如果你不喜欢默认图标，可以更换；你还可以编辑应用的启动器关键词，以便在应用菜单和启动器（包括 GNOME Shell 的应用网格）中快速找到它。</p><p>全局选项：设置安装文件夹等</p><p>为了提升速度（尽管会牺牲磁盘空间），每个应用的列表中都有一个“提取”选项。解压包内容后，在较慢的系统上，大型软件可能会启动得更快一些——不过这一操作很难撤销。</p><p>更新可以设置为按计划运行，并下载 zsync 增量补丁而非整个 AppImage（在支持的情况下）。对于偏好终端的用户，AppManager 还附带了一个命令行工具，用于安装和更新应用。</p><p>下载并安装 AppManager</p><p>我之前曾介绍过类似功能的应用，比如 Gear Lever。与它们不同，AppManager 不依赖 FUSE。这省去了在 Ubuntu 上运行 AppImage 前需要记住安装哪个包的麻烦。</p><p>AppManager 是开源的，并且本身也以 AppImage 形式提供。开发者 Arnis K 表示，它几乎可以在任何桌面 Linux 发行版上运行。我在 Ubuntu 上测试时一切正常。</p><p>你可以从项目的 GitHub 页面下载它，赋予可执行权限，然后双击打开。按照提示将图标拖拽到文件夹中，再在主窗口中进行配置。</p><p>喜欢这个应用？正在使用它？请在下方告诉我。</p></div>
+  <div class="article-body"><p>FreeBSD实习生致力于将AMD ROCm移植到BSD世界 - Phoronix</p><p>FreeBSD实习生致力于将AMD ROCm移植到BSD世界</p><p>发布于2026年7月16日下午2:00（美国东部时间）</p><p>FreeBSD基金会的一名实习生正在将AMD的ROCm计算栈移植到这一流行的BSD环境中运行。</p><p>尽管FreeBSD采用了从Linux内核移植过来的AMDGPU DRM内核驱动，并持续同步更新Linux内核版本以支持其DRM图形/显示驱动，但FreeBSD至今尚未获得任何ROCm计算支持。AMD传统上在BSD图形驱动支持方面投入甚少——这与长期提供FreeBSD驱动包的NVIDIA截然不同，不过即便在NVIDIA驱动方面，他们也不正式支持FreeBSD上的CUDA。但仍有变通方法可在FreeBSD上使用CUDA，例如通过Linux模拟和Podman容器。</p><p>在最近的FreeBSD开发者峰会上，他们展示了FreeBSD基金会实习生的工作成果，其中Sourojeet Adhikari正在推进AMD ROCm计算栈的移植。目标是至少在FreeBSD上实现ROCm的简单向量加法运算。</p><p>如果能将完整的ROCm/HIP和OpenCL栈移植到FreeBSD上固然很好，但这对于一个实习期来说恐怕遥不可及。</p><p>Sourojeet通过HTML页面分享了一些帖子，概述了他将AMD ROCm引入FreeBSD的工作。他持续在编译不同的ROCm开源组件并将相关修改适配到FreeBSD上取得进展。AMD ROCm在FreeBSD上的这项工作能走多远，以及它最终是否能成为FreeBSD上GPU计算比同样非官方的CUDA支持更好的选择，这将令人关注。一旦ROCm在FreeBSD上运行起来，将AMD ROCm移植到其他BSD系统也会更容易。</p><p>FreeBSD笔记本支持持续改进：WiFi、GPU和音频驱动工作</p><p>FreeBSD 16从其基础系统中移除最后一段GPL代码</p><p>FreeBSD桌面安装程序选项处理NVIDIA驱动及许可问题</p><p>FreeBSD从Linux 6.12 LTS更新其图形驱动移植</p><p>FreeBSD 15.1发布：更新WiFi驱动、改进C23支持及其他优化</p><p>FreeBSD获得资金启动AI辅助漏洞发现</p><p>Michael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael也是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>FreeBSD 16从其基础系统中移除最后一段GPL代码</p><p>Pop!_OS推出COSMIC的“磨砂玻璃”桌面风格</p><p>Linus Torvalds重申Linux并非“反AI”也不是“社会战士”项目</p><p>LibreOffice 26.8 Beta发布：改进这一自由软件办公套件</p><p>Debian 13.6发布：包含所有最新安全修复，回滚GeoIP数据库</p><p>Linux为联想ThinkPad的新USB-C安全功能做准备</p><p>Linux 7.2-rc3为2026年SEGA Dreamcast驱动带来修复</p><p>为在Linux上启动Apple M4发布初始补丁</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/appmanager-appimage-installer-linux" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/FreeBSD-Intern-AMD-ROCm" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>在白天改变夜灯色温 — Linux 中文速报</title>
+<title>Frame：一款完全用x86_64汇编编写的全新X11服务器实现 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">桌面环境</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>在白天改变夜灯色温</h1>
+  <h1>Frame：一款完全用x86_64汇编编写的全新X11服务器实现</h1>
 
-  <div class="article-summary">Night Light Scheduler 是一款新的 GNOME Shell 扩展，允许用户自定义屏幕色温在一天中的变化。它支持设置最多7个色温值（1500K至6500K），并调整过渡时间（0至120分钟），实现屏幕色温的渐变或快速切换。该扩展兼容 GNOME 46 至 GNOME 50，利用 GNOME 内置色彩偏移功能，无需额外依赖。用户可通过 GNOME Extensions 网站或 Ubuntu 软件源安装。</div>
+  <div class="article-summary">Frame是一款完全用x86_64汇编语言编写的X11服务器实现，仅由一个约2.5万行的汇编代码文件构成，不依赖Mesa、FreeType、Xlib甚至libc等外部库，直接通过Linux系统调用、DRM/KMS接口和evdev进行输入输出。该项目由Geir Isene借助Claude Code在过去一个月内创建，旨在提升电池续航。实测显示，空闲时Frame的CPU功耗仅为Xorg的三分之一，窗口管理器和终端几乎不消耗CPU时间。Isene表示该实现已作为日常使用，稳定可靠。</div>
 
-  <div class="article-body"><p>在白天改变夜灯的色温 - OMG! Ubuntu</p><p>Night Light Scheduler 是一款新的 GNOME Shell 扩展，让你可以控制屏幕在傍晚（或白天）的暖色程度。它提供可自定义的每日计划，并允许你选择或多或少偏橙色的色温（这将减少设备屏幕发出的蓝光）。</p><p>但你所设定的温度在开启后会一直保持不变。它在开始和结束时逐渐过渡，但中间不会变化。</p><p>对大多数人来说，默认行为已经足够。这是一种设置后即可忘记的固定计划。</p><p>但如果你希望屏幕色温在一天中有所变化，Night Light Scheduler 能为你提供这种能力。</p><p>你可以在傍晚早些时候设置较冷的色温，然后每小时逐渐增加暖度，直到睡前达到更深的色调。</p><p>为你的显示器设置最多7个色温值（1500K至6500K），在一天中的特定时间使用（以15分钟为增量），并调整它们之间的过渡时间（0至120分钟）。</p><p>较长的过渡时间能在色温值之间实现微妙、平滑的切换（更难被注意到）。较短的过渡时间意味着色温值之间更快的变化（瞬间完成，但过渡可能显得突兀）。</p><p>计划配置可以导入和导出为可编辑格式。</p><p>Night Light Scheduler 适用于 GNOME 46（Ubuntu 24.04 LTS）至 GNOME 50（Ubuntu 26.04 LTS）。你不需要额外安装任何东西，因为它利用了 GNOME 内置的色彩偏移功能。</p><p>通过浏览器从 GNOME Extensions 网站安装，或者为了更方便，从 Ubuntu 软件源安装该应用并在其中搜索。</p><p>Night Light Scheduler</p></div>
+  <div class="article-body"><p>Frame：一款完全用x86_64汇编编写的全新X11服务器实现 - Phoronix</p><p>Frame：一款完全用x86_64汇编编写的全新X11服务器实现</p><p>发布于2026年7月16日晚上8点50分（美国东部时间）。</p><p>此前我们报道过YSERVER，这是一款借助Claude Code用Rust编程语言编写的X11服务器。今天，一位Phoronix读者来信分享了一个更加小众的X11服务器实现，它同样在很大程度上借助了AI/LLM：Frame是一款用纯x86_64汇编编写的X11服务器。</p><p>Frame是一款纯汇编的X11服务器，仅由一个汇编代码文件构成，截至撰写本文时，该文件接近2.5万行汇编代码。它不依赖Mesa、FreeType、Xlib甚至libc等外部库。Frame直接与相应的Linux系统调用、DRM/KMS接口以及用于输入的evdev进行交互。</p><p>Frame是在过去一个月内主要借助Claude Code创建的。其汇编代码的全部内容可以在Geir Isene的仓库中找到。Geir Isene与Claude Code合作完成了这项工作，并在一篇关于Frame的博客文章中详细阐述：</p><p>&quot;所以现在的堆栈是这样的：最底层是Linux内核。内核之上是frame。再往上是窗口管理器tile和信息栏strip。在tile内部运行着终端glass，而glass中运行着裸shell bare。Bolt已从屏幕锁定程序升级为登录管理器，取代了gdm。所有这些都是汇编实现的。整个CHasm项目总共约10万行代码。它所取代的堆栈（gdm、X11、i3、conky、wezterm、zsh）的代码量大约是它的五十倍以上。我这样做是为了延长电池续航。我不确定这台笔记本电脑是否还有风扇在转。除了我之外。</p><p>今天我做了量化测试。在电池供电的空闲状态下，frame和Xorg的功耗相同，因为面板和WiFi才是功耗的主要贡献者。但Xorg在空闲时的CPU占用几乎是frame的三倍。而tile和glass在三分钟的测量时间内CPU占用为零毫秒。桌面完全静止，直到我触碰它。</p><p>但它稳定吗？足够稳定，我每天都在用它，在这上面写这篇博文，只是偶尔会吼两声。当出现故障或我想要某个功能时，我就找我的伙伴Claude，描述我的需求。他从不疲倦，没有偏见，而且事实证明他是一位非常好的老师。我现在对硬件层、光标绘制、GPU交接和事件监听器的了解，远超我原本的计划。&quot;</p><p>这是一个有趣且独特的创作，并且依赖AI/LLM来管理实现X11协议支持所需的大量汇编代码。</p><p>Isene的博客文章提供了更多细节，可以查看全文。</p><p>XWayland 24.1.13发布，修复X.Org代码库中的两个新安全问题</p><p>用Rust编写的Vibe Coded X11服务器新增Xinerama、FreeBSD支持及其他功能</p><p>YSERVER：借助Claude Code用Rust编写的现代X11服务器</p><p>X.Org服务器在六月迎来九项通过AI发现的新安全漏洞</p><p>X.Org Server 21.1.22发布，修复五个新安全漏洞</p><p>X.Org服务器的“Master”分支现已关闭，“Main”分支状态已清理</p><p>Michael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过2万篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael也是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他。</p><p>FreeBSD 16从其基础系统中移除了最后一部分GPL代码</p><p>Pop!_OS为其COSMIC桌面环境推出“磨砂玻璃”桌面风格</p><p>Linus Torvalds重申Linux并非“反AI”也不是“社会战士”项目</p><p>LibreOffice 26.8 Beta发布，改进这款自由软件办公套件</p><p>Debian 13.6发布，包含所有最新安全修复，并回退了GeoIP数据库</p><p>Linux为联想ThinkPad准备新的USB-C安全功能</p><p>Linux 7.2-rc3为2026年的SEGA Dreamcast驱动带来修复</p><p>启动Apple设备的初始补丁已发布</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/night-light-scheduler-gnome-extension" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Frame-X11-Server-Assembly" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

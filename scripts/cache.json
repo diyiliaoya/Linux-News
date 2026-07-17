@@ -3210,5 +3210,148 @@
     "title_zh": "AOMedia 正式发布 AV2 编解码器，达成首个 1.0 里程碑",
     "summary_zh": "AOMedia 正式发布 AV2 编解码器，标志着视频压缩技术的重要里程碑。该编解码器在效率与性能上实现显著提升，为下一代视频应用奠定基础。",
     "fulltext_zh": "AOMedia 已正式发布 AV2 编解码器，标志着视频压缩技术的一个重要里程碑。立即了解其特性与优势。\n\n该文章《AOMedia Officially Releases AV2 Codec After First 1.0 Milestone》首发于 Linux Today。"
+  },
+  "6ed3e7ec58a82501210b165f0f4e15e2": {
+    "id": "6ed3e7ec58a82501210b165f0f4e15e2",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/07/ubuntu-26-04-trash-dialog-cancel-button-fix",
+    "title_en": "Ubuntu 26.04 fixes trash dialog bug that defaulted to cancel",
+    "summary_en": "Ubuntu 26.04 LTS is getting a fix for Nautilus that restores &#8216;Delete&#8217; as the focused button in the trash confirmation dialog, undoing an accidental swap that made &#8216;Cancel&#8217; the focused button instead. That &#8216;unintentional&#8217; focus flip meant you could no longer hit enter to action file deletion for Trash since it instead cancelled it. I&#8217;ve lost count of the times I&#8217;ve assumed I emptied the trash since upgrading to Ubuntu 26.04 LTS, only to find I hadn&",
+    "pub_date": "Thu, 16 Jul 2026 15:06:36 +0000",
+    "title_zh": "Ubuntu 26.04 修复清空回收站对话框默认取消的 Bug",
+    "summary_zh": "Ubuntu 26.04 LTS 修复了一个回收站确认对话框的 Bug，该 Bug 错误地将默认焦点按钮从“删除”改为“取消”，导致用户按回车键时无法清空回收站。该问题由 GNOME 开发者确认是意外更改，修复已合并到上游并打包进 Ubuntu 26.04 LTS，预计在 8 月的 26.04.1 LTS 点发布版中正式生效。",
+    "fulltext_zh": "Ubuntu 26.04 LTS 正在修复一个回收站确认对话框的 Bug，该修复将“删除”恢复为默认聚焦按钮，撤销了之前意外将“取消”设为聚焦按钮的更改。\n\n这一“非故意的”焦点切换意味着，你无法再通过按回车键来执行文件删除操作，因为按回车键反而会取消删除。自从升级到 Ubuntu 26.04 LTS 以来，我已经记不清有多少次以为清空了回收站，结果却发现并没有。\n\n我的肌肉记忆一直难以适应需要明确点击（或切换到）删除按钮的操作。\n\n令人恼火，但幸运的是并非有意为之。GNOME 开发者确认按钮焦点是被意外切换的。\n\n现在，一个修复已经合并到上游（https://gitlab.gnome.org/GNOME/nautilus/-/merge_requests/1872），再次将“删除”设为清空回收站对话框中的默认高亮操作。\n\nUbuntu 已将该修复打包到 26.04 LTS 中，目前位于 proposed 分支进行测试。它应该在 8 月的 26.04.1 LTS 点发布版之前到位，届时从 Ubuntu 24.04 LTS 的升级将正式开放。\n\n从整体来看，这是一个微小的 Bug 修复，鼠标用户可能不会注意到（点击不需要任何焦点）。但对于像我这样习惯按回车键的用户来说，这一改变颠覆了多年养成的操作习惯。\n\n一致性是关键——双关语——有了这个修复，我再也不会意外地让回收站留着一堆垃圾了。"
+  },
+  "f96c6861be8523e55a713bb645785fef": {
+    "id": "f96c6861be8523e55a713bb645785fef",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/x11-vs-wayland-input-latency/",
+    "title_en": "Turns Out Wayland Isn't the Input Lag Disaster Everyone Says it is",
+    "summary_en": "A DIY click-to-photon tester puts X11, Wayland, VRR, and a DXVK fork to the test, with some surprising results.",
+    "pub_date": "Thu, 16 Jul 2026 08:40:19 GMT",
+    "title_zh": "事实证明Wayland并非人人所说的输入延迟灾难",
+    "summary_zh": "一位开发者自制的点击到光子延迟测试设备，对X11、Wayland、VRR及DXVK分支进行了对比测试。结果显示，Wayland与X11的延迟差异极小（仅0.14-0.22毫秒），VRR可降低0.26-0.45毫秒延迟，而真正的延迟元凶是XWayland（增加3.13毫秒）。建议Linux玩家优先使用原生Wayland、开启VRR并安装dxvk-low-latency分支。",
+    "fulltext_zh": "事实证明Wayland并非人人所说的输入延迟灾难\n\n事实证明Wayland并非人人所说的输入延迟灾难\n\n一款自制的点击到光子测试仪对X11、Wayland、VRR以及一个DXVK分支进行了测试，结果出人意料。\n\nWayland比X11延迟更差的观点一直在Linux游戏圈流传。一些支持这一说法的数据确实在2025年出现过，当时一位开发者测量了GNOME的Wayland会话与X11的对比，并报告了相当可观的额外延迟。\n\n一位名为Marco的开发者决定在自己的游戏机上测试同样的问题（以及另外几个问题），他没有使用手机摄像头来计算延迟，而是自制了一个DIY设备来亲自测量。\n\n数据怎么说？\n\n简单来说，这是一个DIY设备，它将一个光传感器固定在显示器上，并通过USB模拟鼠标点击。它测量从点击到屏幕上产生相应变化之间的时间，从而得出真实的端到端延迟数据。\n\n顺便提一下，该测试设备的硬件、固件和分析代码都在GitHub上免费提供。\n\n测试通过DXVK运行了一款CPU密集型的DirectX 11游戏，使用了RTX 4070 SUPER和一台500 Hz的OLED显示器。他在不同场景下寻找答案：测试X11对比原生Wayland、VRR开启对比关闭、以及DXVK低延迟分支开启对比关闭。他还进行了一组额外测试，比较原生Wayland与XWayland，所有配置均标准化为1440p分辨率。\n\n结果削弱了网上讨论的许多观点。八个主要测试案例的结果彼此相差在0.72毫秒以内，中位数范围从4.21毫秒到4.93毫秒。X11仅比Wayland快0.14到0.22毫秒，远不足以解释Wayland给人感觉延迟高的名声。开启VRR可将延迟降低0.26到0.45毫秒，并缩小结果分布范围，其效果超过测试中的任何其他因素。在无上限场景中，开启dxvk-low-latency分支后最多可节省0.84毫秒。\n\n真正的罪魁祸首是XWayland，它比原生Wayland增加了3.13毫秒的延迟，超过其他所有因素的总和。将所有优化叠加在一起（X11、VRR和低延迟分支），与普通的Wayland设置相比，中位数仅降低了0.72毫秒。\n\n这对Linux玩家意味着什么？\n\n对于普通Linux玩家来说，教训不是放弃Wayland改用X11。如果显示器支持，请开启VRR；如果设置允许，请安装dxvk-low-latency分支；并确保游戏通过原生Wayland而非XWayland运行。\n\n我在这里介绍的是Marco所做测试的浓缩摘要，我强烈建议你阅读他的完整文章。他考虑了很多变量，如果逐一列出，你可能会直接关掉这篇文章。😅\n\n喜欢这篇更新吗？支持独立的Linux新闻报道。\n\nIt's FOSS在过去14年里一直帮助人们使用Linux。请帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获取5本电子书。\n\n一次性付费，永久享受\n\n任意金额，无需承诺\n\n一个热爱开源软件、定制PC组装、赛车运动以及探索这个世界无限可能的极客。\n\nVocalinux：将语音转为文本，无需泄露语音数据\n\nCursor AI对关键漏洞的沉默危及数百万用户\n\nGNOME希望让你测试实验性功能而不破坏任何东西\n\nSlack算什么？这款自托管聊天应用刚刚开源\n\nOpen Book Touch正在众筹：一款无按钮、开源硬件的Kindle替代品\n\n成为更好的Linux用户\n\n通过FOSS每周新闻简报，你可以学习有用的Linux技巧、发现应用、探索新发行版，并随时了解Linux世界的最新动态\n\n太棒了！您已成功注册。\n\n欢迎回来！您已成功登录。\n\n您已成功订阅It's FOSS。\n\n您的链接已过期。\n\n成功！请检查您的邮箱中的魔法链接以登录。\n\n成功！您的账单信息已更新。\n\n您的账单未更新。"
+  },
+  "3670f3159fca8eac34ebfe05c0d91df4": {
+    "id": "3670f3159fca8eac34ebfe05c0d91df4",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12896",
+    "title_en": "BSD Release: OPNsense 26.7",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The OPNsense project develops a FreeBSD-based specialist operating system (and a fork of pfSense) designed for firewalls and routers. The latest version of OPNsense is 26.7 which is based on FreeBSD 15.1 and introduces a number of behind-the-scenes changes: \"The first implementation of the new Interface Assignments framework....",
+    "pub_date": "",
+    "title_zh": "BSD 发布：OPNsense 26.7",
+    "summary_zh": "OPNsense 26.7 发布，基于 FreeBSD 15.1，引入了新的接口分配框架以取代旧模块，为未来 API 驱动的接口管理奠定基础。该版本还将出站 NAT 迁移到新的源 NAT 架构，简化了防火墙管理。此外，KEA DHCP 用户现在支持动态 DNS 和 IPv6 前缀委派，提升了现代网络环境的灵活性。",
+    "fulltext_zh": "BSD 发布：OPNsense 26.7\n\n该项目开发了一个基于 FreeBSD 的专用操作系统（也是 pfSense 的一个分支），专为防火墙和路由器设计。OPNsense 的最新版本是 26.7，基于 FreeBSD 15.1，并引入了许多幕后变化：\n\n“新的接口分配框架的首次实现取代了旧模块，并为未来 API 驱动的接口管理奠定了基础。虽然初始版本侧重于功能对等，但后续版本将进一步扩展其能力。延续之前版本中引入的防火墙管理现代化，版本 26.7 通过将出站 NAT 迁移到新的源 NAT 架构，进一步简化了平台。这创造了更一致的管理体验，同时简化了未来的开发。使用 KEA DHCP 的组织受益于扩展的配置能力，包括对动态 DNS 和动态 IPv6 前缀委派的支持，为现代网络环境提供了更大的灵活性。”\n\n更多详情可在项目网站上找到。\n\nOPNsense-26.7-dvd-amd64.iso.bz2\n\n近期相关新闻和发布：\n- BSD 发布：OPNsense 26.7\n- BSD 发布：OPNsense 26.1\n- BSD 发布：OPNsense 25.7\n- BSD 发布：OPNsense 25.1\n- BSD 发布：OPNsense 24.7\n- BSD 发布：OPNsense 24.1\n- 更多 OPNsense 新闻...\n\nOPNsense 是一个基于 FreeBSD 的专用操作系统（也是 pfSense 的一个分支），专为防火墙和路由器设计。它由荷兰的 Deciso B.V. 开发。OPNsense 的一些功能包括正向缓存代理、流量整形、入侵检测、双因素认证和简单的 OpenVPN 客户端设置。该项目对安全的关注带来了许多独特功能，例如可以选择使用 LibreSSL 替代 OpenSSL（可在 GUI 中选择）。OPNsense 还包含一个更新机制，能够及时提供重要的安全更新。\n\nhttps://opn"
+  },
+  "63995a2fe983434e53a567e427a3d5c3": {
+    "id": "63995a2fe983434e53a567e427a3d5c3",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Frame-X11-Server-Assembly",
+    "title_en": "Frame: A New X11 Server Implementation Written Entirely In x86_64 Assembly",
+    "summary_en": "Previously we covered YSERVER as an X11 server written in the Rust programming language with the help of Claude Code. A Phoronix reader wrote in today to share an even more esoteric X11 server implementation that has come about and again written in large part by AI/LLM usage: Frame is an X11 server written in pure x86_64 Assembly...",
+    "pub_date": "Thu, 16 Jul 2026 20:50:00 -0400",
+    "title_zh": "Frame：一款完全用x86_64汇编编写的全新X11服务器实现",
+    "summary_zh": "Frame是一款完全用x86_64汇编语言编写的X11服务器实现，仅由一个约2.5万行的汇编代码文件构成，不依赖Mesa、FreeType、Xlib甚至libc等外部库，直接通过Linux系统调用、DRM/KMS接口和evdev进行输入输出。该项目由Geir Isene借助Claude Code在过去一个月内创建，旨在提升电池续航。实测显示，空闲时Frame的CPU功耗仅为Xorg的三分之一，窗口管理器和终端几乎不消耗CPU时间。Isene表示该实现已作为日常使用，稳定可靠。",
+    "fulltext_zh": "Frame：一款完全用x86_64汇编编写的全新X11服务器实现 - Phoronix\nFrame：一款完全用x86_64汇编编写的全新X11服务器实现\n发布于2026年7月16日晚上8点50分（美国东部时间）。\n此前我们报道过YSERVER，这是一款借助Claude Code用Rust编程语言编写的X11服务器。今天，一位Phoronix读者来信分享了一个更加小众的X11服务器实现，它同样在很大程度上借助了AI/LLM：Frame是一款用纯x86_64汇编编写的X11服务器。\n\nFrame是一款纯汇编的X11服务器，仅由一个汇编代码文件构成，截至撰写本文时，该文件接近2.5万行汇编代码。它不依赖Mesa、FreeType、Xlib甚至libc等外部库。Frame直接与相应的Linux系统调用、DRM/KMS接口以及用于输入的evdev进行交互。\n\nFrame是在过去一个月内主要借助Claude Code创建的。其汇编代码的全部内容可以在Geir Isene的仓库中找到。Geir Isene与Claude Code合作完成了这项工作，并在一篇关于Frame的博客文章中详细阐述：\n\n\"所以现在的堆栈是这样的：最底层是Linux内核。内核之上是frame。再往上是窗口管理器tile和信息栏strip。在tile内部运行着终端glass，而glass中运行着裸shell bare。Bolt已从屏幕锁定程序升级为登录管理器，取代了gdm。所有这些都是汇编实现的。整个CHasm项目总共约10万行代码。它所取代的堆栈（gdm、X11、i3、conky、wezterm、zsh）的代码量大约是它的五十倍以上。我这样做是为了延长电池续航。我不确定这台笔记本电脑是否还有风扇在转。除了我之外。\n\n今天我做了量化测试。在电池供电的空闲状态下，frame和Xorg的功耗相同，因为面板和WiFi才是功耗的主要贡献者。但Xorg在空闲时的CPU占用几乎是frame的三倍。而tile和glass在三分钟的测量时间内CPU占用为零毫秒。桌面完全静止，直到我触碰它。\n\n但它稳定吗？足够稳定，我每天都在用它，在这上面写这篇博文，只是偶尔会吼两声。当出现故障或我想要某个功能时，我就找我的伙伴Claude，描述我的需求。他从不疲倦，没有偏见，而且事实证明他是一位非常好的老师。我现在对硬件层、光标绘制、GPU交接和事件监听器的了解，远超我原本的计划。\"\n\n这是一个有趣且独特的创作，并且依赖AI/LLM来管理实现X11协议支持所需的大量汇编代码。\n\nIsene的博客文章提供了更多细节，可以查看全文。\n\nXWayland 24.1.13发布，修复X.Org代码库中的两个新安全问题\n\n用Rust编写的Vibe Coded X11服务器新增Xinerama、FreeBSD支持及其他功能\n\nYSERVER：借助Claude Code用Rust编写的现代X11服务器\n\nX.Org服务器在六月迎来九项通过AI发现的新安全漏洞\n\nX.Org Server 21.1.22发布，修复五个新安全漏洞\n\nX.Org服务器的“Master”分支现已关闭，“Main”分支状态已清理\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过2万篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael也是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\nFreeBSD 16从其基础系统中移除了最后一部分GPL代码\n\nPop!_OS为其COSMIC桌面环境推出“磨砂玻璃”桌面风格\n\nLinus Torvalds重申Linux并非“反AI”也不是“社会战士”项目\n\nLibreOffice 26.8 Beta发布，改进这款自由软件办公套件\n\nDebian 13.6发布，包含所有最新安全修复，并回退了GeoIP数据库\n\nLinux为联想ThinkPad准备新的USB-C安全功能\n\nLinux 7.2-rc3为2026年的SEGA Dreamcast驱动带来修复\n\n启动Apple设备的初始补丁已发布"
+  },
+  "8fd139b6a59a30931d391f754195b652": {
+    "id": "8fd139b6a59a30931d391f754195b652",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/KDE-Server-SIde-Drop-Shadows",
+    "title_en": "KDE KWin Introduces Support For Server-Side Drop Shadows",
+    "summary_en": "The KDE Plasma 6.8 will be introducing support for server-side drop shadows with the feature recently having been merged to KWin...",
+    "pub_date": "Thu, 16 Jul 2026 17:10:33 -0400",
+    "title_zh": "KDE KWin 引入服务端投影支持",
+    "summary_zh": "KDE Plasma 6.8 将引入服务端投影功能，该功能已合并至 KWin。此功能针对那些既不自行绘制投影、也不请求合成器绘制投影的应用程序窗口，允许强制合成器为这些窗口添加投影。用户可通过新的“窗口管理器绘制标题栏、边框和阴影”窗口规则启用该功能，KWin 还会自动为缺少服务端装饰和客户端投影的 X11 窗口添加投影。",
+    "fulltext_zh": "KDE KWin 引入服务端投影支持 - Phoronix\nKDE KWin 引入服务端投影支持\n发布于 2026 年 7 月 16 日下午 5:10（美国东部时间）。\n\nKDE Plasma 6.8 将引入服务端投影支持，该功能最近已合并至 KWin。\n\nKDE 开发者 Vlad Zahorodnii 今天发表了一篇博客文章，介绍了他近期在 KWin 服务端投影支持方面的工作。此功能针对那些既不自行绘制投影、也不请求合成器绘制投影的应用程序窗口。借助这一新功能，你可以强制合成器为那些缺少投影的窗口添加投影。\n\n在 KDE Plasma 6.8 中，可以通过新的“窗口管理器绘制标题栏、边框和阴影”窗口规则启用此功能。KWin 还会自动为缺少服务端装饰和客户端投影的 X11 窗口添加投影。以下是 Vlad 展示的对比图：左侧为 Discord 无效果状态，右侧为启用服务端投影后的效果。\n\n有关 KDE Plasma 6.8 中此服务端投影功能的更多详情，请参阅：\nKDE 开发者继续为 Plasma 6.8 添加更多功能\nKDE Plasma 6.8 中的 KWin 合成器放弃对桌面 OpenGL 的支持\nKDE Plasma 受任意代码执行影响，可通过“打开新窗口”突破沙箱\nKDE Linux 引入“开发者模式”选项，简化日志收集\nKDE Plasma 6.7.2 修复最常见的 KWin 崩溃问题，改善 Chromium 视频播放\nKDE Plasma 6.7.2 将修复 KWin 最常见的崩溃，Plasma 6.8 在弹出 CD 时不再崩溃\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nFreeBSD 16 从其基础系统中移除最后一部分 GPL 代码\nPop!_OS 为 COSMIC 推出“磨砂玻璃”桌面风格\nLinus Torvalds 重申 Linux 并非“反 AI”也不是“社会战士”项目\nLibreOffice 26.8 Beta 发布，改进这款自由软件办公套件\nDebian 13.6 发布，包含所有最新安全修复，并回退 GeoIP 数据库\nLinux 为联想 ThinkPad 准备新的 USB-C 安全功能\nLinux 7.2-rc3 为 2026 年的 SEGA Dreamcast 驱动带来修复\n针对在 Linux 上启动 Apple M4 的初始补丁已发布\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "20ced92de26d021c12a66af8c9b8680a": {
+    "id": "20ced92de26d021c12a66af8c9b8680a",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-GAIA-0.22",
+    "title_en": "AMD's GAIA Continues Striving To Be Your Ultimate AI Companion For Emails",
+    "summary_en": "Yesterday saw the release of AMD's Lemonade 11.0 local AI server as well as ROCm 7.14 as the first production release built using TheRock. Out today is AMD's GAIA 0.22 software as their latest AI software release in working toward the AMD Advancing AI event next week in California...",
+    "pub_date": "Thu, 16 Jul 2026 16:46:00 -0400",
+    "title_zh": "AMD的GAIA持续致力于成为您的终极AI邮件伴侣",
+    "summary_zh": "AMD发布GAIA 0.22版本，重点增强邮件功能。新版本可追踪待回复邮件和承诺事项，根据用户风格自动起草回复，支持定时任务和附件处理。邮件代理从主进程分离，通过Agent Hub独立运行。该功能仍处于测试阶段，需用户确认后才发送。",
+    "fulltext_zh": "AMD的GAIA持续致力于成为您的终极AI邮件伴侣 - Phoronix\nAMD的GAIA持续致力于成为您的终极AI邮件伴侣\n发布于2026年7月16日下午4:48 EDT\n昨天，AMD发布了\nLemonade 11.0本地AI服务器\n以及ROCm 7.14，这是首个基于TheRock构建的生产版本。\n今天，AMD推出了GAIA 0.22软件，这是其最新的AI软件版本，旨在为下周在加利福尼亚举行的AMD Advancing AI活动做准备。\nAMD的GAIA本地AI应用近期在以下方面做了大量工作：\n允许轻松构建自定义AI代理。\n在GAIA 0.22版本中，邮件功能又迈出了一大步。GAIA 0.22现在可以追踪您正在等待的邮件，以及您在邮件中承诺要做的事情。GAIA 0.22还可以起草与您写作风格相似的邮件回复，支持在特定时间通过cron任务运行邮件提示，以及更多功能。\nGAIA 0.22的公告详细解释了本次发布中所有的邮件集成工作：\n“GAIA v0.22.0是一个围绕邮件代理构建的大型版本。它超越了简单的分类功能：现在可以追踪您正在等待的邮件和您承诺要做的事情，可以按计划发送和延迟处理，起草听起来像您的回复，并处理附件。在代理UI中，邮件已从主进程中移出——您可以从Agent Hub安装它，它作为独立的sidecar运行，这条路径尚处于早期阶段且仍在构建中。在邮件之外，gaia schedule将cron调度引入CLI，代理开始从重复工作中提炼流程，RAG学会了读取Word文档。”\n至于代表您撰写听起来像您写的邮件，发布说明解释道：\n“生成的回复读起来像生成的回复。代理现在会读取您的已发送历史，并推导出您的写作风格——问候语、署名、典型长度和正式程度——然后据此撰写。仅存储推导出的特征，绝不会存储您旧邮件的内容。”\n他们进一步补充说，GAIA的邮件支持“在日常使用中确实有用”，但仍被视为测试版，因为他们仍在完善功能：\n“**邮件代理是测试版，我们正在积极构建它。**它在日常使用中确实有用，但它仍在快速发展，并非所有功能都同样成熟——请将其输出视为需要审阅的草稿，而非值得信赖的决策。未经您的确认，它绝不会发送邮件。最新的部分是通过Agent Hub从代理UI运行它：该路径在此版本中首次推出，仍在稳定中，因此您最可能在此处遇到问题。正在进行重新设计，下一个版本将更好地整合这些功能；在此之前，请预期会有变化。请报告您遇到的问题。”\n对AMD最新GAIA AI软件变化感兴趣的人可以通过以下链接了解更多：\nAMD ROCm 7.14宣布为新的生产版本，支持Ryzen AI 400系列\nAMD ROCm 7.14“TheRock”技术预览版标记为最新的AMD GPU计算栈\nAMD发布Lemonade 11.0本地AI服务器，具备文本转语音及其他新功能\nAMD Ryzen AI Halo Box RGB LED驱动程序更接近主线内核\nAMD ZenDNN 6.0为加速Ryzen/EPYC CPU推理带来多项改进\nAMD开始为Linux 7.3准备图形驱动程序变更\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动程序及其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\nFreeBSD 16从其基础系统中移除了最后剩余的GPL代码\nPop!_OS为COSMIC推出了其“磨砂玻璃”桌面风格\nLinus Torvalds重申Linux并非“反AI”也不是“社会战士”项目\nLibreOffice 26.8 Beta发布，旨在改进这款免费软件"
+  },
+  "d78a3660e1a1851cba2757d226f4dc12": {
+    "id": "d78a3660e1a1851cba2757d226f4dc12",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/FreeBSD-Intern-AMD-ROCm",
+    "title_en": "FreeBSD Intern Working On Porting AMD ROCm To The BSD World",
+    "summary_en": "An intern with the FreeBSD Foundation is working on porting AMD's ROCm compute stack to run on this popular BSD environment...",
+    "pub_date": "Thu, 16 Jul 2026 14:00:00 -0400",
+    "title_zh": "FreeBSD实习生致力于将AMD ROCm移植到BSD世界",
+    "summary_zh": "FreeBSD基金会的一名实习生正在将AMD的ROCm计算栈移植到FreeBSD上，目标至少实现简单的向量加法运算。尽管FreeBSD已移植了AMDGPU DRM内核驱动，但至今缺乏ROCm支持。该项目由Sourojeet Adhikari负责，目前正在编译ROCm开源组件并适配FreeBSD。若成功，未来有望将ROCm推广至其他BSD系统，为GPU计算提供更优选择。",
+    "fulltext_zh": "FreeBSD实习生致力于将AMD ROCm移植到BSD世界 - Phoronix\nFreeBSD实习生致力于将AMD ROCm移植到BSD世界\n发布于2026年7月16日下午2:00（美国东部时间）\n\nFreeBSD基金会的一名实习生正在将AMD的ROCm计算栈移植到这一流行的BSD环境中运行。\n\n尽管FreeBSD采用了从Linux内核移植过来的AMDGPU DRM内核驱动，并持续同步更新Linux内核版本以支持其DRM图形/显示驱动，但FreeBSD至今尚未获得任何ROCm计算支持。AMD传统上在BSD图形驱动支持方面投入甚少——这与长期提供FreeBSD驱动包的NVIDIA截然不同，不过即便在NVIDIA驱动方面，他们也不正式支持FreeBSD上的CUDA。但仍有变通方法可在FreeBSD上使用CUDA，例如通过Linux模拟和Podman容器。\n\n在最近的FreeBSD开发者峰会上，他们展示了FreeBSD基金会实习生的工作成果，其中Sourojeet Adhikari正在推进AMD ROCm计算栈的移植。目标是至少在FreeBSD上实现ROCm的简单向量加法运算。\n\n如果能将完整的ROCm/HIP和OpenCL栈移植到FreeBSD上固然很好，但这对于一个实习期来说恐怕遥不可及。\n\nSourojeet通过HTML页面分享了一些帖子，概述了他将AMD ROCm引入FreeBSD的工作。他持续在编译不同的ROCm开源组件并将相关修改适配到FreeBSD上取得进展。AMD ROCm在FreeBSD上的这项工作能走多远，以及它最终是否能成为FreeBSD上GPU计算比同样非官方的CUDA支持更好的选择，这将令人关注。一旦ROCm在FreeBSD上运行起来，将AMD ROCm移植到其他BSD系统也会更容易。\n\nFreeBSD笔记本支持持续改进：WiFi、GPU和音频驱动工作\nFreeBSD 16从其基础系统中移除最后一段GPL代码\nFreeBSD桌面安装程序选项处理NVIDIA驱动及许可问题\nFreeBSD从Linux 6.12 LTS更新其图形驱动移植\nFreeBSD 15.1发布：更新WiFi驱动、改进C23支持及其他优化\nFreeBSD获得资金启动AI辅助漏洞发现\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael也是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nFreeBSD 16从其基础系统中移除最后一段GPL代码\nPop!_OS推出COSMIC的“磨砂玻璃”桌面风格\nLinus Torvalds重申Linux并非“反AI”也不是“社会战士”项目\nLibreOffice 26.8 Beta发布：改进这一自由软件办公套件\nDebian 13.6发布：包含所有最新安全修复，回滚GeoIP数据库\nLinux为联想ThinkPad的新USB-C安全功能做准备\nLinux 7.2-rc3为2026年SEGA Dreamcast驱动带来修复\n为在Linux上启动Apple M4发布初始补丁\n\n在享受无广告浏览的同时，\n单页文章查看\n法律声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "6f82f3be009bfcba0bceb65a2496a925": {
+    "id": "6f82f3be009bfcba0bceb65a2496a925",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Wayland-1.26-Released",
+    "title_en": "Wayland 1.26 Released With New Pointer Warp Event",
+    "summary_en": "Simon Ser just announced the stable release of the Wayland 1.26 release...",
+    "pub_date": "Thu, 16 Jul 2026 11:58:24 -0400",
+    "title_zh": "Wayland 1.26 发布，新增指针扭曲事件",
+    "summary_zh": "Wayland 1.26 稳定版发布，主要新增 wl_pointer.warp 事件，解决客户端在某些场景下无法获取正确指针位置的问题。此外还添加了 wl_fixes.ack_global_remove 请求以处理全局移除事件的竞态条件，以及 wl_display_remove_socket_fd() 函数用于移除已添加的套接字。调试体验也有所改进，WAYLAND_DEBUG 时间戳现采用 HH:MM:ss.xxx 格式，便于日志阅读和比较。",
+    "fulltext_zh": "Wayland 1.26 发布，新增指针扭曲事件 - Phoronix\nWayland 1.26 发布，新增指针扭曲事件\n2026年7月16日，美国东部时间上午11:58。\n\nSimon Ser 刚刚宣布了 Wayland 1.26 稳定版的发布。\n\nWayland 1.26 最重要的更新是 wl_pointer.warp 事件。该事件的添加旨在解决当前 Wayland 在某些情况下客户端无法获取正确指针位置信息的缺陷。通过 wl_pointer.warp，可以在没有用户发起的指针移动事件的情况下，通知新的指针位置。\n\n曾举例说明：\n“原始的 wl_pointer.button 事件不包含位置信息。在某些场景下，客户端无法获取正确的位置信息。例如，当鼠标焦点位于按钮上且鼠标未移动，但窗口大小发生变化时，客户端无法通过移动事件更新位置信息，导致鼠标位置错误。\n因此，当指针的本地坐标因表面被移动/调整大小/全屏化而发生变化时，应发送此事件。”\n\nWayland 1.26 还新增了 wl_fixes.ack_global_remove 请求，用于解决全局移除事件相关的竞态条件。同时新增了 wl_display_remove_socket_fd() 函数，用于移除之前通过 wl_display_add_socket_fd() 添加的套接字。最后，调试体验也得到了改进，WAYLAND_DEBUG 时间戳现在采用 HH:MM:ss.xxx 格式，使其更易于阅读和在不同日志之间进行比较。\n\n关于 Wayland 1.26 版本的更多详情，请参阅邮件列表公告。\n\nWeston 16.0 合成器发布，带来 HDR 改进和 Vulkan 修复\nWayland 1.26 RC1 发布，新增事件以确保正确的指针坐标\nNourish：一款由 Vulkan 驱动、支持无限滚动/平移的新型 Wayland 合成器\n学院软件基金会宣布成立“Wayland 艺术家工作组”\n基于 Mir 的 Wayland 合成器 Miracle-WM 目标在今年晚些时候发布 v1.0\nWayland 的 Weston 16 Alpha 带来 HDR 改进和 Vulkan 渲染器修复\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他。\n\nFreeBSD 16 从其基础系统中移除了最后一部分 GPL 代码\nPop!_OS 为 COSMIC 推出了“磨砂玻璃”桌面风格\nLinus Torvalds 重申 Linux 并非“反 AI”也不是“社会战士”项目\nLibreOffice 26.8 Beta 发布，旨在改进这款自由软件办公套件\nDebian 13.6 发布，包含所有最新安全修复，并回退了 GeoIP 数据库\nLinux 为联想 ThinkPad 上的新 USB-C 安全功能做准备\nLinux 7.2-rc3 为 2026 年的 SEGA Dreamcast 驱动带来修复\n已提交在 Apple M4 上启动 Linux 的初始补丁\n\n虽然提供无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "4db0af0a29a9468dbc633924657fb1fe": {
+    "id": "4db0af0a29a9468dbc633924657fb1fe",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/minisforum-ms-02-ultra-285hx-running-linux-btrfs/",
+    "title_en": "Minisforum MS-02 Ultra 285HX running Linux – Btrfs",
+    "summary_en": "Unleash the potential of the Minisforum MS-02 Ultra 285HX on Linux with Btrfs. Learn about its capabilities and how it enhances your user experience.\nThe post Minisforum MS-02 Ultra 285HX running Linux &#8211; Btrfs appeared first on Linux Today.",
+    "pub_date": "Thu, 16 Jul 2026 07:04:08 +0000",
+    "title_zh": "Minisforum MS-02 Ultra 285HX 运行 Linux – Btrfs",
+    "summary_zh": "本文介绍了如何在 Linux 系统上利用 Btrfs 文件系统充分发挥 Minisforum MS-02 Ultra 285HX 的潜力，探讨了其功能特性以及如何提升用户体验。",
+    "fulltext_zh": "在 Linux 上借助 Btrfs 释放 Minisforum MS-02 Ultra 285HX 的潜力。了解其功能以及如何增强您的用户体验。\n\n该文章《Minisforum MS-02 Ultra 285HX running Linux – Btrfs》首次出现在 Linux Today 上。"
+  },
+  "589e2f4481706eacc884ab41e924d526": {
+    "id": "589e2f4481706eacc884ab41e924d526",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/nextcloud-marks-10-years-with-hub-26-spring-euro%e2%80%91office-and-expanded-ai/",
+    "title_en": "Nextcloud Marks 10 Years With Hub 26 Spring, Euro‑Office, and Expanded AI",
+    "summary_en": "Nextcloud celebrates 10 years of excellence with Hub 26 Spring, Euro-Office, and expanded AI functionalities. \nThe post Nextcloud Marks 10 Years With Hub 26 Spring, Euro‑Office, and Expanded AI appeared first on Linux Today.",
+    "pub_date": "Thu, 16 Jul 2026 07:02:25 +0000",
+    "title_zh": "Nextcloud 迎来十周年：推出 Hub 26 Spring、Euro-Office 及扩展 AI 功能",
+    "summary_zh": "Nextcloud 庆祝成立十周年，发布 Hub 26 Spring 版本，推出 Euro-Office 办公套件，并扩展了人工智能功能，进一步强化其开源协作平台的竞争力。",
+    "fulltext_zh": "Nextcloud 庆祝成立十周年，推出 Hub 26 Spring、Euro-Office 以及扩展的 AI 功能。\n\n该文章最初发表于 Linux Today。"
+  },
+  "454e10086653e47b32c87cfdaf85a9bf": {
+    "id": "454e10086653e47b32c87cfdaf85a9bf",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/truenas-becomes-red-hat-openshift-certified-for-kubernetes-storage/",
+    "title_en": "TrueNAS Becomes Red Hat OpenShift Certified for Kubernetes Storage",
+    "summary_en": "Learn about TrueNAS's certification with Red Hat OpenShift, providing robust Kubernetes storage solutions that ensure optimal performance and scalability.\nThe post TrueNAS Becomes Red Hat OpenShift Certified for Kubernetes Storage appeared first on Linux Today.",
+    "pub_date": "Thu, 16 Jul 2026 07:00:13 +0000",
+    "title_zh": "TrueNAS 获得 Red Hat OpenShift 认证，用于 Kubernetes 存储",
+    "summary_zh": "TrueNAS 已获得 Red Hat OpenShift 认证，成为其 Kubernetes 存储解决方案。该认证确保了 TrueNAS 在 OpenShift 环境中的最佳性能与可扩展性，为用户提供稳定可靠的存储支持。",
+    "fulltext_zh": "了解 TrueNAS 获得 Red Hat OpenShift 认证的相关信息，该认证提供了强大的 Kubernetes 存储解决方案，确保最佳性能与可扩展性。\n\n该文章 TrueNAS Becomes Red Hat OpenShift Certified for Kubernetes Storage 首次出现在 Linux Today 上。"
+  },
+  "c09ac21311e07ebb7ae6345552aa1cff": {
+    "id": "c09ac21311e07ebb7ae6345552aa1cff",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/cosmic-1-0-16-desktop-adds-openrc-support-for-bluetooth-service-management/",
+    "title_en": "COSMIC 1.0.16 Desktop Adds OpenRC Support for Bluetooth Service Management",
+    "summary_en": "COSMIC 1.0.16 introduces OpenRC support, enhancing Bluetooth service management on your desktop. Stay connected with this essential update!\nThe post COSMIC 1.0.16 Desktop Adds OpenRC Support for Bluetooth Service Management appeared first on Linux Today.",
+    "pub_date": "Thu, 16 Jul 2026 06:58:57 +0000",
+    "title_zh": "COSMIC 1.0.16 桌面版为蓝牙服务管理添加 OpenRC 支持",
+    "summary_zh": "COSMIC 1.0.16 版本引入了对 OpenRC 的支持，增强了桌面环境下的蓝牙服务管理功能。此更新旨在提升用户连接的稳定性和便利性，是桌面体验的重要改进。",
+    "fulltext_zh": "COSMIC 1.0.16 引入了 OpenRC 支持，增强了桌面上的蓝牙服务管理。通过这一重要更新，保持连接畅通！\n\n该文章最初发表于 Linux Today。"
+  },
+  "4a53d02e0f3b2b9afc11d613ed44ab5e": {
+    "id": "4a53d02e0f3b2b9afc11d613ed44ab5e",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/asahi-linux-users-told-to-avoid-macos-27-golden-gate-for-now/",
+    "title_en": "Asahi Linux Users Told to Avoid macOS 27 Golden Gate for Now",
+    "summary_en": "Asahi Linux users are advised to steer clear of macOS 27 Golden Gate due to potential compatibility issues. Stay informed for updates and solutions.\nThe post Asahi Linux Users Told to Avoid macOS 27 Golden Gate for Now appeared first on Linux Today.",
+    "pub_date": "Thu, 16 Jul 2026 06:55:10 +0000",
+    "title_zh": "Asahi Linux 用户被建议暂时避免使用 macOS 27 Golden Gate",
+    "summary_zh": "由于潜在的兼容性问题，Asahi Linux 用户被建议暂时不要升级到 macOS 27 Golden Gate。官方提醒用户关注后续更新和解决方案。",
+    "fulltext_zh": "Asahi Linux 用户被建议暂时避免使用 macOS 27 Golden Gate，因为可能存在兼容性问题。请保持关注以获取更新和解决方案。\n该文章最初发表于 Linux Today。"
   }
 }

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AppManager 在 Ubuntu 上无需 FUSE 即可安装 AppImage — Linux 中文速报</title>
+<title>Ubuntu 26.04 修复清空回收站对话框默认取消的 Bug — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -152,14 +152,14 @@
     <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>AppManager 在 Ubuntu 上无需 FUSE 即可安装 AppImage</h1>
+  <h1>Ubuntu 26.04 修复清空回收站对话框默认取消的 Bug</h1>
 
-  <div class="article-summary">AppManager 是一款基于 GTK4/Libadwaita 的新应用，解决了 Ubuntu 上部分 AppImage 需要 FUSE 2 的问题。它通过替代方式挂载 AppImage，支持 SquashFS 和 DwarFS 格式，并提供类似 macOS 的安装流程。用户可拖拽图标安装、导入现有 AppImage、管理启动选项、图标和路径，支持更新检查、命令行参数设置及全局配置。应用本身以 AppImage 形式提供，开源且兼容多数 Linux 发行版。</div>
+  <div class="article-summary">Ubuntu 26.04 LTS 修复了一个回收站确认对话框的 Bug，该 Bug 错误地将默认焦点按钮从“删除”改为“取消”，导致用户按回车键时无法清空回收站。该问题由 GNOME 开发者确认是意外更改，修复已合并到上游并打包进 Ubuntu 26.04 LTS，预计在 8 月的 26.04.1 LTS 点发布版中正式生效。</div>
 
-  <div class="article-body"><p>AppManager 在 Ubuntu 上无需 FUSE 即可安装 AppImage - OMG! Ubuntu</p><p>AppImage 的设计本应简单：下载、赋予可执行权限、运行。但在 Ubuntu 上，却多了一个步骤：Ubuntu 默认搭载 FUSE 3，而部分 AppImage 仍需要 FUSE 2。</p><p>AppManager 是一款较新的 GTK4/Libadwaita 应用，它通过替代 FUSE 的方式挂载 AppImage，解决了这一烦人问题。它既能处理常见的 SquashFS 打包的 AppImage，也支持更新的 DwarFS 打包格式。</p><p>AppManager 提供了类似 macOS 的安装流程：双击 AppImage 文件，AppManager 会打开一个 macOS 风格的安装界面。将应用图标拖拽到文件夹中，AppManager 就会将文件移动到 ~/Applications 或你选择的目录，并自动创建应用启动器和快捷方式。</p><p>如果你设备上已有大量 AppImage，并希望通过此应用移动和集成它们，可以使用导入功能，指向每个 AppImage 或包含它们的文件夹。</p><p>为每个应用设置启动选项、图标和路径</p><p>你可以单独配置和管理每个应用。作为一款 AppImage 管理器，它的功能远不止提供 macOS 风格的启动器快捷方式创建。它可以通过 Gitlab 或 Github 链接检查并更新 AppImage；你可以设置命令行参数，并选择在每个应用或全局范围内使用“便携式”主目录和配置文件夹。你还可以设置 $PATH 或环境变量。</p><p>自定义功能还扩展到应用图标——如果你不喜欢默认图标，可以更换；你还可以编辑应用的启动器关键词，以便在应用菜单和启动器（包括 GNOME Shell 的应用网格）中快速找到它。</p><p>全局选项：设置安装文件夹等</p><p>为了提升速度（尽管会牺牲磁盘空间），每个应用的列表中都有一个“提取”选项。解压包内容后，在较慢的系统上，大型软件可能会启动得更快一些——不过这一操作很难撤销。</p><p>更新可以设置为按计划运行，并下载 zsync 增量补丁而非整个 AppImage（在支持的情况下）。对于偏好终端的用户，AppManager 还附带了一个命令行工具，用于安装和更新应用。</p><p>下载并安装 AppManager</p><p>我之前曾介绍过类似功能的应用，比如 Gear Lever。与它们不同，AppManager 不依赖 FUSE。这省去了在 Ubuntu 上运行 AppImage 前需要记住安装哪个包的麻烦。</p><p>AppManager 是开源的，并且本身也以 AppImage 形式提供。开发者 Arnis K 表示，它几乎可以在任何桌面 Linux 发行版上运行。我在 Ubuntu 上测试时一切正常。</p><p>你可以从项目的 GitHub 页面下载它，赋予可执行权限，然后双击打开。按照提示将图标拖拽到文件夹中，再在主窗口中进行配置。</p><p>喜欢这个应用？正在使用它？请在下方告诉我。</p></div>
+  <div class="article-body"><p>Ubuntu 26.04 LTS 正在修复一个回收站确认对话框的 Bug，该修复将“删除”恢复为默认聚焦按钮，撤销了之前意外将“取消”设为聚焦按钮的更改。</p><p>这一“非故意的”焦点切换意味着，你无法再通过按回车键来执行文件删除操作，因为按回车键反而会取消删除。自从升级到 Ubuntu 26.04 LTS 以来，我已经记不清有多少次以为清空了回收站，结果却发现并没有。</p><p>我的肌肉记忆一直难以适应需要明确点击（或切换到）删除按钮的操作。</p><p>令人恼火，但幸运的是并非有意为之。GNOME 开发者确认按钮焦点是被意外切换的。</p><p>现在，一个修复已经合并到上游（https://gitlab.gnome.org/GNOME/nautilus/-/merge_requests/1872），再次将“删除”设为清空回收站对话框中的默认高亮操作。</p><p>Ubuntu 已将该修复打包到 26.04 LTS 中，目前位于 proposed 分支进行测试。它应该在 8 月的 26.04.1 LTS 点发布版之前到位，届时从 Ubuntu 24.04 LTS 的升级将正式开放。</p><p>从整体来看，这是一个微小的 Bug 修复，鼠标用户可能不会注意到（点击不需要任何焦点）。但对于像我这样习惯按回车键的用户来说，这一改变颠覆了多年养成的操作习惯。</p><p>一致性是关键——双关语——有了这个修复，我再也不会意外地让回收站留着一堆垃圾了。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/appmanager-appimage-installer-linux" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/ubuntu-26-04-trash-dialog-cancel-button-fix" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

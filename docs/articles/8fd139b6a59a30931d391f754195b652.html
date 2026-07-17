@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AppManager 在 Ubuntu 上无需 FUSE 即可安装 AppImage — Linux 中文速报</title>
+<title>KDE KWin 引入服务端投影支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>AppManager 在 Ubuntu 上无需 FUSE 即可安装 AppImage</h1>
+  <h1>KDE KWin 引入服务端投影支持</h1>
 
-  <div class="article-summary">AppManager 是一款基于 GTK4/Libadwaita 的新应用，解决了 Ubuntu 上部分 AppImage 需要 FUSE 2 的问题。它通过替代方式挂载 AppImage，支持 SquashFS 和 DwarFS 格式，并提供类似 macOS 的安装流程。用户可拖拽图标安装、导入现有 AppImage、管理启动选项、图标和路径，支持更新检查、命令行参数设置及全局配置。应用本身以 AppImage 形式提供，开源且兼容多数 Linux 发行版。</div>
+  <div class="article-summary">KDE Plasma 6.8 将引入服务端投影功能，该功能已合并至 KWin。此功能针对那些既不自行绘制投影、也不请求合成器绘制投影的应用程序窗口，允许强制合成器为这些窗口添加投影。用户可通过新的“窗口管理器绘制标题栏、边框和阴影”窗口规则启用该功能，KWin 还会自动为缺少服务端装饰和客户端投影的 X11 窗口添加投影。</div>
 
-  <div class="article-body"><p>AppManager 在 Ubuntu 上无需 FUSE 即可安装 AppImage - OMG! Ubuntu</p><p>AppImage 的设计本应简单：下载、赋予可执行权限、运行。但在 Ubuntu 上，却多了一个步骤：Ubuntu 默认搭载 FUSE 3，而部分 AppImage 仍需要 FUSE 2。</p><p>AppManager 是一款较新的 GTK4/Libadwaita 应用，它通过替代 FUSE 的方式挂载 AppImage，解决了这一烦人问题。它既能处理常见的 SquashFS 打包的 AppImage，也支持更新的 DwarFS 打包格式。</p><p>AppManager 提供了类似 macOS 的安装流程：双击 AppImage 文件，AppManager 会打开一个 macOS 风格的安装界面。将应用图标拖拽到文件夹中，AppManager 就会将文件移动到 ~/Applications 或你选择的目录，并自动创建应用启动器和快捷方式。</p><p>如果你设备上已有大量 AppImage，并希望通过此应用移动和集成它们，可以使用导入功能，指向每个 AppImage 或包含它们的文件夹。</p><p>为每个应用设置启动选项、图标和路径</p><p>你可以单独配置和管理每个应用。作为一款 AppImage 管理器，它的功能远不止提供 macOS 风格的启动器快捷方式创建。它可以通过 Gitlab 或 Github 链接检查并更新 AppImage；你可以设置命令行参数，并选择在每个应用或全局范围内使用“便携式”主目录和配置文件夹。你还可以设置 $PATH 或环境变量。</p><p>自定义功能还扩展到应用图标——如果你不喜欢默认图标，可以更换；你还可以编辑应用的启动器关键词，以便在应用菜单和启动器（包括 GNOME Shell 的应用网格）中快速找到它。</p><p>全局选项：设置安装文件夹等</p><p>为了提升速度（尽管会牺牲磁盘空间），每个应用的列表中都有一个“提取”选项。解压包内容后，在较慢的系统上，大型软件可能会启动得更快一些——不过这一操作很难撤销。</p><p>更新可以设置为按计划运行，并下载 zsync 增量补丁而非整个 AppImage（在支持的情况下）。对于偏好终端的用户，AppManager 还附带了一个命令行工具，用于安装和更新应用。</p><p>下载并安装 AppManager</p><p>我之前曾介绍过类似功能的应用，比如 Gear Lever。与它们不同，AppManager 不依赖 FUSE。这省去了在 Ubuntu 上运行 AppImage 前需要记住安装哪个包的麻烦。</p><p>AppManager 是开源的，并且本身也以 AppImage 形式提供。开发者 Arnis K 表示，它几乎可以在任何桌面 Linux 发行版上运行。我在 Ubuntu 上测试时一切正常。</p><p>你可以从项目的 GitHub 页面下载它，赋予可执行权限，然后双击打开。按照提示将图标拖拽到文件夹中，再在主窗口中进行配置。</p><p>喜欢这个应用？正在使用它？请在下方告诉我。</p></div>
+  <div class="article-body"><p>KDE KWin 引入服务端投影支持 - Phoronix</p><p>KDE KWin 引入服务端投影支持</p><p>发布于 2026 年 7 月 16 日下午 5:10（美国东部时间）。</p><p>KDE Plasma 6.8 将引入服务端投影支持，该功能最近已合并至 KWin。</p><p>KDE 开发者 Vlad Zahorodnii 今天发表了一篇博客文章，介绍了他近期在 KWin 服务端投影支持方面的工作。此功能针对那些既不自行绘制投影、也不请求合成器绘制投影的应用程序窗口。借助这一新功能，你可以强制合成器为那些缺少投影的窗口添加投影。</p><p>在 KDE Plasma 6.8 中，可以通过新的“窗口管理器绘制标题栏、边框和阴影”窗口规则启用此功能。KWin 还会自动为缺少服务端装饰和客户端投影的 X11 窗口添加投影。以下是 Vlad 展示的对比图：左侧为 Discord 无效果状态，右侧为启用服务端投影后的效果。</p><p>有关 KDE Plasma 6.8 中此服务端投影功能的更多详情，请参阅：</p><p>KDE 开发者继续为 Plasma 6.8 添加更多功能</p><p>KDE Plasma 6.8 中的 KWin 合成器放弃对桌面 OpenGL 的支持</p><p>KDE Plasma 受任意代码执行影响，可通过“打开新窗口”突破沙箱</p><p>KDE Linux 引入“开发者模式”选项，简化日志收集</p><p>KDE Plasma 6.7.2 修复最常见的 KWin 崩溃问题，改善 Chromium 视频播放</p><p>KDE Plasma 6.7.2 将修复 KWin 最常见的崩溃，Plasma 6.8 在弹出 CD 时不再崩溃</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>FreeBSD 16 从其基础系统中移除最后一部分 GPL 代码</p><p>Pop!_OS 为 COSMIC 推出“磨砂玻璃”桌面风格</p><p>Linus Torvalds 重申 Linux 并非“反 AI”也不是“社会战士”项目</p><p>LibreOffice 26.8 Beta 发布，改进这款自由软件办公套件</p><p>Debian 13.6 发布，包含所有最新安全修复，并回退 GeoIP 数据库</p><p>Linux 为联想 ThinkPad 准备新的 USB-C 安全功能</p><p>Linux 7.2-rc3 为 2026 年的 SEGA Dreamcast 驱动带来修复</p><p>针对在 Linux 上启动 Apple M4 的初始补丁已发布</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/appmanager-appimage-installer-linux" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/KDE-Server-SIde-Drop-Shadows" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

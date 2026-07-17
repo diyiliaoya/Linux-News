@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AppManager 在 Ubuntu 上无需 FUSE 即可安装 AppImage — Linux 中文速报</title>
+<title>BSD 发布：OPNsense 26.7 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">DistroWatch</span>
   </div>
 
-  <h1>AppManager 在 Ubuntu 上无需 FUSE 即可安装 AppImage</h1>
+  <h1>BSD 发布：OPNsense 26.7</h1>
 
-  <div class="article-summary">AppManager 是一款基于 GTK4/Libadwaita 的新应用，解决了 Ubuntu 上部分 AppImage 需要 FUSE 2 的问题。它通过替代方式挂载 AppImage，支持 SquashFS 和 DwarFS 格式，并提供类似 macOS 的安装流程。用户可拖拽图标安装、导入现有 AppImage、管理启动选项、图标和路径，支持更新检查、命令行参数设置及全局配置。应用本身以 AppImage 形式提供，开源且兼容多数 Linux 发行版。</div>
+  <div class="article-summary">OPNsense 26.7 发布，基于 FreeBSD 15.1，引入了新的接口分配框架以取代旧模块，为未来 API 驱动的接口管理奠定基础。该版本还将出站 NAT 迁移到新的源 NAT 架构，简化了防火墙管理。此外，KEA DHCP 用户现在支持动态 DNS 和 IPv6 前缀委派，提升了现代网络环境的灵活性。</div>
 
-  <div class="article-body"><p>AppManager 在 Ubuntu 上无需 FUSE 即可安装 AppImage - OMG! Ubuntu</p><p>AppImage 的设计本应简单：下载、赋予可执行权限、运行。但在 Ubuntu 上，却多了一个步骤：Ubuntu 默认搭载 FUSE 3，而部分 AppImage 仍需要 FUSE 2。</p><p>AppManager 是一款较新的 GTK4/Libadwaita 应用，它通过替代 FUSE 的方式挂载 AppImage，解决了这一烦人问题。它既能处理常见的 SquashFS 打包的 AppImage，也支持更新的 DwarFS 打包格式。</p><p>AppManager 提供了类似 macOS 的安装流程：双击 AppImage 文件，AppManager 会打开一个 macOS 风格的安装界面。将应用图标拖拽到文件夹中，AppManager 就会将文件移动到 ~/Applications 或你选择的目录，并自动创建应用启动器和快捷方式。</p><p>如果你设备上已有大量 AppImage，并希望通过此应用移动和集成它们，可以使用导入功能，指向每个 AppImage 或包含它们的文件夹。</p><p>为每个应用设置启动选项、图标和路径</p><p>你可以单独配置和管理每个应用。作为一款 AppImage 管理器，它的功能远不止提供 macOS 风格的启动器快捷方式创建。它可以通过 Gitlab 或 Github 链接检查并更新 AppImage；你可以设置命令行参数，并选择在每个应用或全局范围内使用“便携式”主目录和配置文件夹。你还可以设置 $PATH 或环境变量。</p><p>自定义功能还扩展到应用图标——如果你不喜欢默认图标，可以更换；你还可以编辑应用的启动器关键词，以便在应用菜单和启动器（包括 GNOME Shell 的应用网格）中快速找到它。</p><p>全局选项：设置安装文件夹等</p><p>为了提升速度（尽管会牺牲磁盘空间），每个应用的列表中都有一个“提取”选项。解压包内容后，在较慢的系统上，大型软件可能会启动得更快一些——不过这一操作很难撤销。</p><p>更新可以设置为按计划运行，并下载 zsync 增量补丁而非整个 AppImage（在支持的情况下）。对于偏好终端的用户，AppManager 还附带了一个命令行工具，用于安装和更新应用。</p><p>下载并安装 AppManager</p><p>我之前曾介绍过类似功能的应用，比如 Gear Lever。与它们不同，AppManager 不依赖 FUSE。这省去了在 Ubuntu 上运行 AppImage 前需要记住安装哪个包的麻烦。</p><p>AppManager 是开源的，并且本身也以 AppImage 形式提供。开发者 Arnis K 表示，它几乎可以在任何桌面 Linux 发行版上运行。我在 Ubuntu 上测试时一切正常。</p><p>你可以从项目的 GitHub 页面下载它，赋予可执行权限，然后双击打开。按照提示将图标拖拽到文件夹中，再在主窗口中进行配置。</p><p>喜欢这个应用？正在使用它？请在下方告诉我。</p></div>
+  <div class="article-body"><p>BSD 发布：OPNsense 26.7</p><p>该项目开发了一个基于 FreeBSD 的专用操作系统（也是 pfSense 的一个分支），专为防火墙和路由器设计。OPNsense 的最新版本是 26.7，基于 FreeBSD 15.1，并引入了许多幕后变化：</p><p>“新的接口分配框架的首次实现取代了旧模块，并为未来 API 驱动的接口管理奠定了基础。虽然初始版本侧重于功能对等，但后续版本将进一步扩展其能力。延续之前版本中引入的防火墙管理现代化，版本 26.7 通过将出站 NAT 迁移到新的源 NAT 架构，进一步简化了平台。这创造了更一致的管理体验，同时简化了未来的开发。使用 KEA DHCP 的组织受益于扩展的配置能力，包括对动态 DNS 和动态 IPv6 前缀委派的支持，为现代网络环境提供了更大的灵活性。”</p><p>更多详情可在项目网站上找到。</p><p>OPNsense-26.7-dvd-amd64.iso.bz2</p><p>近期相关新闻和发布：</p><p>- BSD 发布：OPNsense 26.7</p><p>- BSD 发布：OPNsense 26.1</p><p>- BSD 发布：OPNsense 25.7</p><p>- BSD 发布：OPNsense 25.1</p><p>- BSD 发布：OPNsense 24.7</p><p>- BSD 发布：OPNsense 24.1</p><p>- 更多 OPNsense 新闻...</p><p>OPNsense 是一个基于 FreeBSD 的专用操作系统（也是 pfSense 的一个分支），专为防火墙和路由器设计。它由荷兰的 Deciso B.V. 开发。OPNsense 的一些功能包括正向缓存代理、流量整形、入侵检测、双因素认证和简单的 OpenVPN 客户端设置。该项目对安全的关注带来了许多独特功能，例如可以选择使用 LibreSSL 替代 OpenSSL（可在 GUI 中选择）。OPNsense 还包含一个更新机制，能够及时提供重要的安全更新。</p><p>https://opn</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/appmanager-appimage-installer-linux" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://distrowatch.com/12896" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

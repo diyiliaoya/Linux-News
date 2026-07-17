@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AppManager 在 Ubuntu 上无需 FUSE 即可安装 AppImage — Linux 中文速报</title>
+<title>Wayland 1.26 发布，新增指针扭曲事件 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>AppManager 在 Ubuntu 上无需 FUSE 即可安装 AppImage</h1>
+  <h1>Wayland 1.26 发布，新增指针扭曲事件</h1>
 
-  <div class="article-summary">AppManager 是一款基于 GTK4/Libadwaita 的新应用，解决了 Ubuntu 上部分 AppImage 需要 FUSE 2 的问题。它通过替代方式挂载 AppImage，支持 SquashFS 和 DwarFS 格式，并提供类似 macOS 的安装流程。用户可拖拽图标安装、导入现有 AppImage、管理启动选项、图标和路径，支持更新检查、命令行参数设置及全局配置。应用本身以 AppImage 形式提供，开源且兼容多数 Linux 发行版。</div>
+  <div class="article-summary">Wayland 1.26 稳定版发布，主要新增 wl_pointer.warp 事件，解决客户端在某些场景下无法获取正确指针位置的问题。此外还添加了 wl_fixes.ack_global_remove 请求以处理全局移除事件的竞态条件，以及 wl_display_remove_socket_fd() 函数用于移除已添加的套接字。调试体验也有所改进，WAYLAND_DEBUG 时间戳现采用 HH:MM:ss.xxx 格式，便于日志阅读和比较。</div>
 
-  <div class="article-body"><p>AppManager 在 Ubuntu 上无需 FUSE 即可安装 AppImage - OMG! Ubuntu</p><p>AppImage 的设计本应简单：下载、赋予可执行权限、运行。但在 Ubuntu 上，却多了一个步骤：Ubuntu 默认搭载 FUSE 3，而部分 AppImage 仍需要 FUSE 2。</p><p>AppManager 是一款较新的 GTK4/Libadwaita 应用，它通过替代 FUSE 的方式挂载 AppImage，解决了这一烦人问题。它既能处理常见的 SquashFS 打包的 AppImage，也支持更新的 DwarFS 打包格式。</p><p>AppManager 提供了类似 macOS 的安装流程：双击 AppImage 文件，AppManager 会打开一个 macOS 风格的安装界面。将应用图标拖拽到文件夹中，AppManager 就会将文件移动到 ~/Applications 或你选择的目录，并自动创建应用启动器和快捷方式。</p><p>如果你设备上已有大量 AppImage，并希望通过此应用移动和集成它们，可以使用导入功能，指向每个 AppImage 或包含它们的文件夹。</p><p>为每个应用设置启动选项、图标和路径</p><p>你可以单独配置和管理每个应用。作为一款 AppImage 管理器，它的功能远不止提供 macOS 风格的启动器快捷方式创建。它可以通过 Gitlab 或 Github 链接检查并更新 AppImage；你可以设置命令行参数，并选择在每个应用或全局范围内使用“便携式”主目录和配置文件夹。你还可以设置 $PATH 或环境变量。</p><p>自定义功能还扩展到应用图标——如果你不喜欢默认图标，可以更换；你还可以编辑应用的启动器关键词，以便在应用菜单和启动器（包括 GNOME Shell 的应用网格）中快速找到它。</p><p>全局选项：设置安装文件夹等</p><p>为了提升速度（尽管会牺牲磁盘空间），每个应用的列表中都有一个“提取”选项。解压包内容后，在较慢的系统上，大型软件可能会启动得更快一些——不过这一操作很难撤销。</p><p>更新可以设置为按计划运行，并下载 zsync 增量补丁而非整个 AppImage（在支持的情况下）。对于偏好终端的用户，AppManager 还附带了一个命令行工具，用于安装和更新应用。</p><p>下载并安装 AppManager</p><p>我之前曾介绍过类似功能的应用，比如 Gear Lever。与它们不同，AppManager 不依赖 FUSE。这省去了在 Ubuntu 上运行 AppImage 前需要记住安装哪个包的麻烦。</p><p>AppManager 是开源的，并且本身也以 AppImage 形式提供。开发者 Arnis K 表示，它几乎可以在任何桌面 Linux 发行版上运行。我在 Ubuntu 上测试时一切正常。</p><p>你可以从项目的 GitHub 页面下载它，赋予可执行权限，然后双击打开。按照提示将图标拖拽到文件夹中，再在主窗口中进行配置。</p><p>喜欢这个应用？正在使用它？请在下方告诉我。</p></div>
+  <div class="article-body"><p>Wayland 1.26 发布，新增指针扭曲事件 - Phoronix</p><p>Wayland 1.26 发布，新增指针扭曲事件</p><p>2026年7月16日，美国东部时间上午11:58。</p><p>Simon Ser 刚刚宣布了 Wayland 1.26 稳定版的发布。</p><p>Wayland 1.26 最重要的更新是 wl_pointer.warp 事件。该事件的添加旨在解决当前 Wayland 在某些情况下客户端无法获取正确指针位置信息的缺陷。通过 wl_pointer.warp，可以在没有用户发起的指针移动事件的情况下，通知新的指针位置。</p><p>曾举例说明：</p><p>“原始的 wl_pointer.button 事件不包含位置信息。在某些场景下，客户端无法获取正确的位置信息。例如，当鼠标焦点位于按钮上且鼠标未移动，但窗口大小发生变化时，客户端无法通过移动事件更新位置信息，导致鼠标位置错误。</p><p>因此，当指针的本地坐标因表面被移动/调整大小/全屏化而发生变化时，应发送此事件。”</p><p>Wayland 1.26 还新增了 wl_fixes.ack_global_remove 请求，用于解决全局移除事件相关的竞态条件。同时新增了 wl_display_remove_socket_fd() 函数，用于移除之前通过 wl_display_add_socket_fd() 添加的套接字。最后，调试体验也得到了改进，WAYLAND_DEBUG 时间戳现在采用 HH:MM:ss.xxx 格式，使其更易于阅读和在不同日志之间进行比较。</p><p>关于 Wayland 1.26 版本的更多详情，请参阅邮件列表公告。</p><p>Weston 16.0 合成器发布，带来 HDR 改进和 Vulkan 修复</p><p>Wayland 1.26 RC1 发布，新增事件以确保正确的指针坐标</p><p>Nourish：一款由 Vulkan 驱动、支持无限滚动/平移的新型 Wayland 合成器</p><p>学院软件基金会宣布成立“Wayland 艺术家工作组”</p><p>基于 Mir 的 Wayland 合成器 Miracle-WM 目标在今年晚些时候发布 v1.0</p><p>Wayland 的 Weston 16 Alpha 带来 HDR 改进和 Vulkan 渲染器修复</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他。</p><p>FreeBSD 16 从其基础系统中移除了最后一部分 GPL 代码</p><p>Pop!_OS 为 COSMIC 推出了“磨砂玻璃”桌面风格</p><p>Linus Torvalds 重申 Linux 并非“反 AI”也不是“社会战士”项目</p><p>LibreOffice 26.8 Beta 发布，旨在改进这款自由软件办公套件</p><p>Debian 13.6 发布，包含所有最新安全修复，并回退了 GeoIP 数据库</p><p>Linux 为联想 ThinkPad 上的新 USB-C 安全功能做准备</p><p>Linux 7.2-rc3 为 2026 年的 SEGA Dreamcast 驱动带来修复</p><p>已提交在 Apple M4 上启动 Linux 的初始补丁</p><p>虽然提供无广告浏览，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/appmanager-appimage-installer-linux" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Wayland-1.26-Released" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
