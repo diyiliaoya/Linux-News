@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vocalinux 将语音转为文本，且不泄露语音数据 — Linux 中文速报</title>
+<title>FastFlowLM 开发者加入 AMD，助力推动开源 NPU 软件 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Vocalinux 将语音转为文本，且不泄露语音数据</h1>
+  <h1>FastFlowLM 开发者加入 AMD，助力推动开源 NPU 软件</h1>
 
-  <div class="article-summary">Vocalinux 是一款开源的 Linux 语音转文字工具，最新 0.14 beta 版本新增键盘快捷键、远程转录和 Wayland 可靠性改进。它完全本地运行，保护用户语音数据隐私，支持多种语音识别引擎。作者在 Fedora 和 Ubuntu 上测试时遇到启动问题，但认为这是预发布软件的正常风险。用户可通过脚本安装或在线试用。</div>
+  <div class="article-summary">AMD 宣布 FastFlowLM 开源项目的开发者正式加入公司，以加强其在 AI PC 和工作站上的 NPU 推理软件生态。FastFlowLM 专注于在 AMD Ryzen AI NPU 上提供轻量、高效的大语言模型推理体验，其代码采用 MIT 许可证开源。此次加入将助力 AMD 在客户端和工作站 AI 软件领域实现最新模型的即日支持。</div>
 
-  <div class="article-body"><p>Vocalinux 将语音转为文本，且不泄露语音数据</p><p>Vocalinux 将语音转为文本，且不泄露语音数据</p><p>0.14 beta 版本新增了许多升级。</p><p>一款名为 Vocalinux 的开源 Linux 语音转文字工具刚刚发布了其最新版本，带来了一系列改进，涉及键盘快捷键、远程转录和 Wayland 可靠性。</p><p>我们首先介绍最重要的可用性改进。此前，用户在转录过程中只能使用默认的切换或按键通话绑定来录制音频。现在，可以在菜单中设置键盘快捷键，让你能够使用修饰键与任意字母或数字键组合，创建多样化的按键绑定。</p><p>同样，在 GNOME 的 Wayland 会话中，当配置了纯引擎时，文本注入功能再次可用，并且 whisper.cpp 不再默认使用混合 Intel 和 AMD 笔记本电脑上的所有 CPU 核心。</p><p>远程 API 用户也有所收获：远程 API 引擎现在通过兼容 OpenAI 的端点支持 FunASR 和 SenseVoice 模型。</p><p>Vocalinux 的关于对话框和设置菜单。</p><p>我谈到了新的 Vocalinux 版本，但从未完全解释过它是什么。它是一款适用于 Linux 的免费开源语音听写应用。它驻留在系统托盘中，让你可以在桌面、终端、浏览器、IDE、办公应用等几乎所有文本字段中进行听写，只要光标所在位置即可。一切都在本地运行，因此你的语音数据始终保留在你的机器上。</p><p>语音识别引擎的选择也不受限制：你可以选择 whisper.cpp 作为默认选项，其次是 faster-whisper 用于 PyTorch 和 NVIDIA 配置，whisper-tiny 用于轻量级设置，以及 Remote API 用于将任务卸载到网络服务器。</p><p>我尝试测试了这个 beta 版本，看看它提供了什么。我在两个不同的发行版（Fedora Workstation 和 Ubuntu）上运行了它；两次运行的结果都是应用无法通过应用启动器或终端启动。</p><p>在按照一些故障排除步骤操作后，它最终在 Ubuntu 上启动了，但应用无响应，不得不终止。即便如此，我对此并不太沮丧，因为这是预发布软件所伴随的风险。</p><p>你可以通过在网页浏览器上尝试演示来快速上手。当然，这仅供测试用途。</p><p>如果你想在 Linux 计算机上本地运行语音转文字功能，可以通过运行以下脚本安装 Vocalinux：</p><p>在运行脚本之前，请务必验证其内容。</p><p>curl -fsSL https://raw.githubusercontent.com/jatinkrmalik/vocalinux/main/install.sh -o /tmp/vl.sh &amp;&amp; bash /tmp/vl.sh --interactive</p><p>安装完成后，可以运行 vocalinux 或在应用启动器中找到应用图标。如果你在选择引擎时犹豫不决，可以参考相关指南来帮助你做出决定。</p><p>如果你在寻找 Vocalinux 的源代码，它托管在 GitHub 上。</p><p>另外，在非基于 Debian 的发行版（如 Fedora）上运行安装程序时，它会发出一个或两个关于需要手动安装依赖项的警告，请在继续之前注意这一点。</p><p>感谢提供此工具的信息。😄</p><p>喜欢这次更新吗？支持独立的 Linux 新闻报导。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无需承诺</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。</p><p>Linus Torvalds 多年来一直忽视 AI，如今却为其背书</p><p>15 本 O'Reilly Linux 电子书不到 30 美元：从命令行基础到 Kubernetes 的捆绑包</p><p>X（原 Twitter）可能即将开源</p><p>事实证明 Wayland 并非大家所说的输入延迟灾难</p><p>Cursor AI 对关键漏洞的沉默危及数百万用户</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周通讯，你可以学习有用的 Linux 技巧，发现应用程序，探索新发行版。</p></div>
+  <div class="article-body"><p>FastFlowLM 开发者加入 AMD，助力推动开源 NPU 软件 - Phoronix</p><p>FastFlowLM 开发者加入 AMD，助力推动开源 NPU 软件</p><p>2026 年 7 月 17 日，美国东部时间下午 1:20。</p><p>随着 ROCm 7.14 作为基于 TheRock 构建的新生产版本发布，AMD 在下周 AMD Advancing AI 活动前夕还带来了更多开源新闻。</p><p>AMD 今天宣布，FastFlowLM 开源项目的开发者已加入该公司。在今天的一则公告中，他们确认 FastFlowLM 开发者已加入公司：</p><p>“近期，FastFlowLM 团队加入了 AMD，这标志着我们在全栈提升 AI 性能与效率的战略中又迈出了关键一步。FastFlowLM 开发了一套轻量级、高度优化的推理软件流程，能够在基于 AMD 技术的 AI PC 和工作站上直接实现快速、高效的大语言模型和多模态模型性能。”</p><p>长期以来，FastFlowLM 一直专注于 AMD Ryzen AI NPU 的加速，提供类似 ollama 的开发者体验，运行于 Windows 平台。它一直是实际利用 AMD Ryzen AI NPU 的主要方式之一。直到今天的公告之前，我并未意识到 FastFlowLM 的开发者并非 AMD 员工……鉴于他们长期专注于 Ryzen AI 并与之关系密切，我曾以为他们已是 AMD 的一部分，但现在他们正式成为 AMD 的一员。FastFlowLM 公司由学术界研究人员创立，旨在推动 AI/LLM 在并行 NPU 架构上的发展。</p><p>“我们仍然致力于投资这一开放生态系统，并非常激动能够共同构建设备端 AI 的未来。”</p><p>FastFlowLM 已经是开源项目，因此与 AMD 其他开源 AI 工作（从 ROCm 到 Lemonade、GAIA 等）完美契合。这些开发者将加入 AMD AI 团队，专注于客户端和工作站 AI 软件，以及最新模型的即日支持。</p><p>FastFlowLM 代码以 MIT 许可证发布在 GitHub 上。</p><p>AMD 的 GAIA 持续努力成为你的终极 AI 邮件助手</p><p>AMD ROCm 7.14 发布，作为新生产版本，支持 Ryzen AI 400 系列</p><p>AMD ROCm 7.14 “TheRock” 技术预览版标记用于最新 AMD GPU 计算栈</p><p>AMD 发布 Lemonade 11.0 本地 AI 服务器，支持文本转语音及其他新功能</p><p>AMD Ryzen AI Halo Box RGB LED 驱动接近主线内核</p><p>AMD ZenDNN 6.0 为加速 Ryzen/EPYC CPU 上的推理带来诸多改进</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>FreeBSD 16 从其基础系统中移除最后一段 GPL 代码</p><p>Linus Torvalds 重申 Linux 并非“反 AI”也不是“社会战士”项目</p><p>Pop!_OS 为 COSMIC 推出“磨砂玻璃”桌面风格</p><p>Debian 13.6 发布，包含所有最新安全修复，并回退 GeoIP 数据库</p><p>Linux 为联想 ThinkPad 上的新 USB-C 安全功能做准备</p><p>Linux 7.2-rc3 为 2026 年的 SEGA Dreamcast 驱动带来修复</p><p>初始补丁发布，用于在 Linux 上启动 Apple M4</p><p>KDE 开发者继续为 Plasma 6.8 添加更多功能</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/vocalinux-beta-release/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/FastFlowLM-Joins-AMD" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

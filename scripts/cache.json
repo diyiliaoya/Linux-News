@@ -3353,5 +3353,170 @@
     "title_zh": "Asahi Linux 用户被建议暂时避免使用 macOS 27 Golden Gate",
     "summary_zh": "由于潜在的兼容性问题，Asahi Linux 用户被建议暂时不要升级到 macOS 27 Golden Gate。官方提醒用户关注后续更新和解决方案。",
     "fulltext_zh": "Asahi Linux 用户被建议暂时避免使用 macOS 27 Golden Gate，因为可能存在兼容性问题。请保持关注以获取更新和解决方案。\n该文章最初发表于 Linux Today。"
+  },
+  "4c9d58cc8dc19af45996c9fb4a6d68ee": {
+    "id": "4c9d58cc8dc19af45996c9fb4a6d68ee",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/07/flathub-ai-slop-ban-data",
+    "title_en": "Flathub’s AI slop ban looks like it was the right call",
+    "summary_en": "When Flathub banned AI-coded app&#160;submissions last month, some critics warned the platform was denying the future by dismissing a new wave of &#8220;vibe-coded&#8221; software as out-and-out &#8220;slop&#8221;. Well, new data suggests otherwise, as nearly three-quarters of the rejected apps are already dead, existing only a few months. Linux developer Evangelos Paterakis, developer of Tuba, Turntable and others, did the digging, looking at 120 code repositories whose pull requests for inclus",
+    "pub_date": "Fri, 17 Jul 2026 19:53:00 +0000",
+    "title_zh": "Flathub的AI垃圾软件禁令看起来是正确之举",
+    "summary_zh": "Flathub上月实施AI生成软件禁令后，Linux开发者Evangelos Paterakis对120个被拒项目进行了追踪调查。结果显示，73%的被拒项目已停止开发，其中许多甚至删除了源代码。这一数据支持了Flathub的担忧：若不禁用AI生成软件，志愿者审核员将被大量低质量代码淹没。尽管AI工具降低了编程门槛，但缺乏持续维护热情的项目最终沦为数字废墟。",
+    "fulltext_zh": "Flathub的AI垃圾软件禁令看起来是正确之举 - OMG! Ubuntu\n\n上个月，一些批评者警告称，该平台通过将一波新的“氛围编码”软件直接斥为“垃圾软件”，是在拒绝未来。\n\n然而，新数据表明情况恰恰相反：近四分之三被拒绝的应用已经死亡，仅存在了几个月。\n\nLinux开发者Evangelos Paterakis（及其他项目的开发者）进行了深入调查，查看了120个代码仓库——这些仓库因大量使用AI而被拒绝加入Flathub，并被标记为“AI垃圾软件”。\n\n在这些被拒绝的项目中，有88个已不再活跃开发，其中许多甚至完全删除了源代码。仅有32个仍显示出生命迹象，总体废弃率高达73%。\n\n这否定了那种认为用户会急于从AI编码软件的新浪潮中获益、转而涌向其他格式和应用商店的观点——因为事实证明，那些可能被禁令波及的东西，似乎根本没人愿意费心维护。\n\n臀部不会说谎，但统计数据呢……？\n\n这里使用的方法并不严谨或学术化。Paterakis本人在一篇题为《废弃软件的民主化》（副标题绝妙地写着：“我可不想在这片墓地里翻找”）的博文中也承认了这一点。\n\n当然，废弃率并非AI独有（尽管有人可能会说AI的一次性特性可能加剧了这一问题），因为开源项目一直有点像单人业余项目的坟墓——无论是否有聊天机器人帮助编写代码。\n\n我知道，我花了将近16年时间撰写关于那些令人兴奋的新软件或发行版的文章，结果它们往往在年底之前就落满灰尘、无人问津。\n\n但Paterakis的发现并非无的放矢。\n\n它们支持了Flathub认为需要禁令的真正原因：志愿者审核员会被淹没在提交者自己都没读过的海量代码中，还要给那些更乐意用自信的废话回复、而不是执行所要求的修复的机器代理提供反馈。\n\n垃圾代码与懒惰软件\n\n关于什么构成软件垃圾的争论可以持续——对我来说，20个音乐播放器感觉就像是越来越混乱的版本，通过传话游戏代代相传，这差不多算接近了——但我确实看到Thom Holwerda在OSNews上的一番思考。\n\n他说，如果AI工具真的让开发者能够更专注于质量和创新——正如营销宣传让我们相信的那样——去构建以前遥不可及的东西，那么到现在我们理应已经看到一些证据了。\n\n到目前为止，AI产生的大部分东西不过是沙堡的仿制品：简单、快速搭建，然后等待潮水将其带走。番茄钟、笔记工具、本地AI模型的包装器——这些即使是新手程序员也不难创建。\n\n在Linux的海岸上，几乎看不到任何真正复杂或真正独特/新颖的软件被冲上岸。也许，就像AI投资的巨大回报一样，这些软件随时可能出现——只要下一个数据中心上线（或进入轨道，或拴在黑洞上，随便怎样）。\n\n“氛围编码”让将想法变成应用变得更容易、更有趣，但并没有让构思一个想法或保持持续的热情变得更容易。AI是一种工具，像所有工具一样，最好在有扎实技能的基础上使用。\n\nFlathub的志愿者会手动为任何提交者似乎在使用聊天机器人与开发者沟通/回应反馈、或提交自动生成清单的拉取请求添加此标签——这些基本上都是事情没有真正人类参与的迹象。\n\n没有人能通过微波炉加热即食餐成为厨师。但厨师确切知道什么时候微波炉是帮助他们做出美味佳肴的正确工具——AI也是如此。"
+  },
+  "052af6505f655ff079a14e006e1b9173": {
+    "id": "052af6505f655ff079a14e006e1b9173",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/linus-torvalds-on-ai/",
+    "title_en": "Linus Torvalds Spent Years Dismissing AI, Only to Vouch for It",
+    "summary_en": "A chronological look at how Linux's creator went from \"90% marketing\" to telling AI critics to fork the kernel or walk away.",
+    "pub_date": "Fri, 17 Jul 2026 11:20:28 GMT",
+    "title_zh": "Linus Torvalds 多年对 AI 不屑一顾，最终却为其背书",
+    "summary_zh": "Linux 创始人 Linus Torvalds 对 AI 的态度经历了显著转变：从 2023 年称 AI 为“90% 营销”，到 2025 年公开支持“氛围编码”用于学习编程，甚至亲自用 AI 工具开发音频效果工具。他同时维护内核的严格标准，反对将反 LLM 情绪政治化，并在 2026 年内核首次官方支持 AI 辅助代码时，要求人类开发者承担责任。",
+    "fulltext_zh": "Linus Torvalds 多年对 AI 不屑一顾，最终却为其背书\n\nLinus Torvalds 多年对 AI 不屑一顾，最终却为其背书\n\n按时间顺序回顾 Linux 创始人如何从“90% 营销”转变为告诉 AI 批评者要么复刻内核要么走开。\n\n到现在，你一定知道 Linus Torvalds，这位企鹅大军——呃，我是说这个项目的领导者——从不回避直言不讳，尤其是在表达观点时。当他有想法时，Linux 内核邮件列表会听到，我们这些使用 Linux 的人也会听到。过去几年，他对 AI 的看法相当简单：认为它大多是噪音，而且他不感兴趣。\n\n但有些事情发生了变化；Linus 从称 AI 为“90% 营销”转变为公开告诉 Linux 内核项目内部的批评者要么复刻它要么走开。以下是这些年这一变化是如何发生的。\n\n2023 年 12 月在日本开源峰会上，有人直接问 Linus 一个问题：他是否会看到 AI 编写的代码提交到内核？Linus 回答“是”，并猜测这可能已经在小规模发生。他并不特别担心 AI 产生幻觉代码的风险，指出单纯的人为错误本身就会导致大量 bug。“我认为我们在自己犯错方面做得很好。”\n\n四个月后，在西雅图举行的北美开源峰会上，这种好奇心已转变为近乎嘲讽。他开玩笑说自己可能“被 AI 模型取代”，并驳斥了大部分围绕 AI 的炒作，认为那是无稽之谈，建议大家在得出任何真正结论之前先等等。\n\n到 2024 年 10 月，在维也纳开源峰会上接受采访时，Linus 用数字量化了他的怀疑。他称 AI 行业是“90% 营销，10% 现实”，并表示在那改变之前他大多会忽略它。不过他给自己留了个口子，预测真正的用例可能会在五年后出现，一旦炒作消退。\n\n一年后，2025 年 11 月，情况发生了变化。在韩国开源峰会上，Linus 告诉 Dirk 他“支持”AI，不过只针对学习编程的人，而不是任何真正重要的事情。他将其比作小时候从电脑杂志上抄写程序，把“氛围编码”描述为一种低风险的方式，让人们兴奋地在电脑上做“他们可能原本做不到的事情”。\n\n这种开放态度在几个月后变成了一个假期项目：他构建了一个名为“SoundFlow”的音频效果工具，自己编写了部分代码（C 语言部分），然后将 Python 可视化工具交给 Google 的 Antigravity IDE。\n\n即便如此，内核本身仍然禁止 AI。就在宣布该项目之前，他回复了一个关于内核文档中反 LLM 情绪的激烈讨论，反对将这个问题变成政治声明。他的论点是，那些提交真正粗心 AI 补丁的人无论如何都不会标注它们，所以制定旨在抓住这些补丁的规则毫无意义。\n\n个人热情与机构谨慎之间的这种紧张关系在 2026 年 4 月再次显现，当时内核发布了首个官方 AI 辅助代码政策。这些政策范围狭窄但明确：AI 辅助代码仍需满足 GPL-2.0 许可要求；AI 工具不得添加自己的“Signed-off-by”标签；通过新的“AI-assisted”标志提交的内容必须由人类承担责任。\n\n同月，稳定内核维护者 Greg Kroah-Hartman 被发现悄悄运行一个 AI 辅助模糊测试工具，针对一个昵称为“fuzz-ai”的分支中的内核进行测试。\n\n到 2026 年 5 月，围绕内核的 AI 生成活动量本身就成了一个问题。Linus 抱怨一个候选版本因他所谓的无意义拉取请求而膨胀，其中很多是 AI 辅助的 bug 狩猎，在开发周期后期产生了琐碎的修复。他说他会对此更加严格，承诺会“更加挑剔”。\n\n在明尼阿波利斯举行的北美开源峰会主题演讲中，Linus 强烈反驳了另一种 AI 叙事，他认为这种叙事比合作更烦人。"
+  },
+  "7a323d54f4279b5a2186cb3b883b1998": {
+    "id": "7a323d54f4279b5a2186cb3b883b1998",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/oreilly-linux-ebooks-bundle/",
+    "title_en": "15 O'Reilly Linux eBooks for Under $30: A Bundle That Goes From Command Line Basics to Kubernetes",
+    "summary_en": "Don't miss! Pay tiny amount for a Git-to-Kubernetes Linux library of DRM-free eBooks, with part of the purchase going to Code for America.",
+    "pub_date": "Fri, 17 Jul 2026 10:29:41 GMT",
+    "title_zh": "15本O'Reilly Linux电子书不到30美元：从命令行基础到Kubernetes的捆绑包",
+    "summary_zh": "Humble Bundle与O'Reilly合作推出名为“Linux: All the Things”的按需付费Linux电子书合集，包含15本无DRM的PDF和ePUB格式书籍，内容从命令行基础到容器编排。最低支付5.90美元可获得5本书，支付29.50美元以上可解锁全部15本。部分收益将捐赠给非营利组织Code for America。",
+    "fulltext_zh": "15本O'Reilly Linux电子书不到30美元：从命令行基础到Kubernetes的捆绑包\n15本O'Reilly Linux电子书不到30美元：从命令行基础到Kubernetes的捆绑包\n别错过！只需支付少量费用，即可获得一个从Git到Kubernetes的Linux无DRM电子书库，部分购买款项将捐赠给Code for America。\nHumble Bundle和O'Reilly联手推出了一个名为“Linux: All the Things”（合作伙伴链接）的按需付费Linux合集，旨在通过15本电子书带你从基本的命令行操作一路进阶到容器编排。\nO'Reilly无需过多介绍。他们是最值得信赖的技术书籍出版商之一。这个捆绑包精选了他们一些最优秀的Linux书籍，包括《Practical Linux System Administration》，以及一些针对安全测试和Kubernetes的更专业选择。\nHumble Bundle：O'Reilly出品的Linux: All the Things\n所有15本电子书均以无DRM的PDF和ePUB格式提供。这意味着一旦购买，它们就永远属于你。你支付的任何金额都将分配给出版商、Humble以及Code for America——一个致力于让政府服务更简单、更易获取的非营利组织。如果你使用我们的链接，其中一小部分也会归我们所有（请阅读我们的说明）。只是想明确这一点。\n以下是捆绑包中的所有内容：\nLinux Observability with BPF\nLinux System Programming\nPractical Linux System Administration\nUnderstanding the Linux Kernel\nVersion Control with Git\nKubernetes: Up and Running\nNetwork Programmability and Automation\nLearning Modern Linux\nEfficient Linux at the Command Line\n该捆绑包分为两个层级，定价和书籍组合不同。\n第一层：支付5.90美元或更多，获得5本书\n入门层级价格为5.90美元，可获得五本书，内容更偏向Linux内部机制而非初学者材料。\n《Linux Observability with BPF》涵盖使用BPF进行性能分析和网络监控，这类内容适合在排查生产系统问题而非仅仅运行系统时参考。\n《Linux System Programming》和《Understanding the Linux Kernel》则更进一步深入，涵盖系统调用、进程管理以及内核本身的构建方式。\n该层级的另外两本书是Git参考书。《Version Control with Git》专注于在团队中建立高效、以用户为中心的Git工作流程，而《Pocket Git》则是常用Git命令的快速参考指南。\n第二层：支付29.50美元或更多，获得全部15本书\n支付29.50美元或更多即可解锁全部15本书。请注意，更高的层级（34.50美元至49.50美元）并不会增加更多书籍。多出的款项将直接分配给O'Reilly、Humble和Code for America。\n该层级在第一层的基础上增加了两本Git书籍。《Git: The Basics》是为那些对分支和提交仍感模糊的人准备的入门介绍，而《Version Control with Git》则更深入地探讨了协作工作流程和工具。\n这里有一批书籍涵盖核心Linux技能。《Linux: The Ultimate Guide》，为庆祝其20周年现已推出第四版，是一本专为终端设计的命令参考书。《Learning Modern Linux》和《Efficient Linux at the Command Line》在此基础上增加了云原生背景和实用的Shell效率技巧，而《Practical Linux System Administration》则通过实用技巧和日常系统管理实践进行补充。\n《Linux Security and Hardening》涵盖安全测试、渗透测试和道德黑客基础知识，如果你想在别人之前先测试自己的系统，这本书会很有用。\n最后两本书更偏向高级内容，面向DevOps。《Kubernetes: Up and Running》是进入容器编排领域的坚实入门书，而《Network Programmability and Automation》则涵盖如何自动化网络设备，而非逐个手动点击。\n不过，请务必查看这些书籍的版本。有时，这些捆绑包可能包含旧版。\n所有15本书均为无DRM的PDF和ePUB格式，因此它们归你所有，你可以将它们转移到任何你实际阅读的设备上。\n即使这些书中只有几本已经在你的阅读清单上，花29.50美元全部拿下仍然很划算。"
+  },
+  "3280a0259571903aa249c61c0ec0ab17": {
+    "id": "3280a0259571903aa249c61c0ec0ab17",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/x-might-be-going-open-source/",
+    "title_en": "X (Formerly Twitter) is Possibly Going Open Source",
+    "summary_en": "A look at his latest announcement, plus what's actually shipped so far and what's still missing.",
+    "pub_date": "Fri, 17 Jul 2026 07:35:28 GMT",
+    "title_zh": "X（前身为Twitter）可能即将开源",
+    "summary_zh": "埃隆·马斯克宣布，一旦xAI完成安全漏洞内部审查，X的整个代码库将开源，并邀请第三方审查员验证发布代码与实际运行代码的一致性。回顾历史，马斯克曾多次做出类似承诺，但执行情况参差不齐：2023年推荐算法部分开源，2024年Grok模型开源，但Grok 3的六个月开源窗口已关闭却未见发布。此次承诺能否兑现，仍有待观察。",
+    "fulltext_zh": "X（前身为Twitter）可能即将开源\n\nX（前身为Twitter）可能即将开源\n\n看看他最新的公告，以及截至目前实际发布的内容和仍然缺失的部分。\n\n埃隆·马斯克宣布，一旦xAI完成安全漏洞内部审查，X的整个代码库将开源。他表示将毫无保留地发布全部内容。\n\n他们正在邀请第三方审查员，以确认发布的内容与实际运行中的代码相匹配。\n\n“一旦我们完成安全漏洞审查，我们将毫无例外地公开𝕏的整个代码库。此外，我们将邀请第三方审查员检查正在运行的系统，以确认开源代码就是实际运行的代码。……”\n——埃隆·马斯克（@elonmusk）\n\n引入审查员可能是为了应对企业开源发布中一个常见的抱怨：发布的代码与实际部署的代码不一致。\n\n当然，对这一公告的怀疑也如期而至。\n\n一位以将智能手机推向极限而闻名的人，在原推文下回复道：“你不是每隔几个月就这么说吗？这很常见。”\n\n他说得没错。埃隆以前就做出过类似的开源承诺，无论是针对X的代码库还是Grok的模型，但并非所有承诺都兑现了。\n\n一个值得注意的模式\n\nX的透明度推动比Grok更早。2023年3月，在接管该平台后不久，埃隆曾（当时还叫Twitter）在GitHub上发布了推荐算法的部分版本，这是该平台向开放代码库迈出的第一步。\n\n他在2024年3月发推文称，xAI将开源Grok。该公司确实兑现了承诺，在Apache 2.0许可下发布了基础模型的权重和架构。\n\n2025年8月，xAI将其2024年旗舰模型Grok 2的权重上传到了Hugging Face，标注为“Grok 2”。\n\n“Grok 3将在大约6个月内开源。”\n\n这大约是在2026年2月，这个窗口现在已经关闭了几个月，但在Hugging Face上仍没有Grok 3的踪影。\n\n随后，在2026年1月，“为你推荐”信息流排名算法背后的代码也开源了，发布在一个基于Grok的Transformer模型构建的GitHub仓库中。\n\n这个算法确实得到了承诺的更新，在2026年5月进行了一次实质性刷新。而更近一些，在7月15日，也就是X开源公告的同一天，xAI在GitHub上发布了编码代理的Rust源代码和终端界面。\n\n总体来看，记录好坏参半，而非一概糟糕。\n\n“为你推荐”算法得到了承诺的更新，但2023年的算法发布却没有（你可以查看上面链接的仓库），而Grok 3的六个月窗口早在2026年2月就关闭了，却没有任何成果。\n\n让我们看看埃隆的最新承诺会带来什么结果。\n\n喜欢这篇更新吗？支持独立的Linux新闻报道\n\nIt's FOSS在过去14年里一直帮助人们使用Linux。请帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获取5本电子书。\n\n一次付费，永久享受\n\n任意金额，无需承诺\n\n一个对开源软件、定制PC组装、赛车运动以及探索这个世界无限可能性充满热情的书呆子。\n\n林纳斯·托瓦兹多年来一直对AI不屑一顾，如今却为其背书\n\n15本O'Reilly Linux电子书不到30美元：一个从命令行基础到Kubernetes的捆绑包\n\nVocalinux将你的语音转化为文本，无需泄露语音数据\n\n事实证明，Wayland并非大家所说的输入延迟灾难\n\nCursor AI对关键漏洞的沉默危及数百万用户\n\n成为更好的Linux用户\n\n通过FOSS周刊，你可以学习有用的Linux技巧，发现应用程序，探索新的发行版，并随时了解Linux世界的最新动态\n\n太好了！您已成功注册。\n\n欢迎回来！您已成功登录。\n\n您已成功订阅It's FOSS。\n\n您的链接已过期。\n\n成功！请检查您的电子邮件以获取魔法链接进行登录。"
+  },
+  "27b6d30f1f33f1576666360acbfe9149": {
+    "id": "27b6d30f1f33f1576666360acbfe9149",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/vocalinux-beta-release/",
+    "title_en": "Vocalinux Turns Your Speech Into Text Without Giving Away Voice Data",
+    "summary_en": "The 0.14 beta adds many new upgrades.",
+    "pub_date": "Thu, 16 Jul 2026 16:45:44 GMT",
+    "title_zh": "Vocalinux 将语音转为文本，且不泄露语音数据",
+    "summary_zh": "Vocalinux 是一款开源的 Linux 语音转文字工具，最新 0.14 beta 版本新增键盘快捷键、远程转录和 Wayland 可靠性改进。它完全本地运行，保护用户语音数据隐私，支持多种语音识别引擎。作者在 Fedora 和 Ubuntu 上测试时遇到启动问题，但认为这是预发布软件的正常风险。用户可通过脚本安装或在线试用。",
+    "fulltext_zh": "Vocalinux 将语音转为文本，且不泄露语音数据\n\nVocalinux 将语音转为文本，且不泄露语音数据\n\n0.14 beta 版本新增了许多升级。\n\n一款名为 Vocalinux 的开源 Linux 语音转文字工具刚刚发布了其最新版本，带来了一系列改进，涉及键盘快捷键、远程转录和 Wayland 可靠性。\n\n我们首先介绍最重要的可用性改进。此前，用户在转录过程中只能使用默认的切换或按键通话绑定来录制音频。现在，可以在菜单中设置键盘快捷键，让你能够使用修饰键与任意字母或数字键组合，创建多样化的按键绑定。\n\n同样，在 GNOME 的 Wayland 会话中，当配置了纯引擎时，文本注入功能再次可用，并且 whisper.cpp 不再默认使用混合 Intel 和 AMD 笔记本电脑上的所有 CPU 核心。\n\n远程 API 用户也有所收获：远程 API 引擎现在通过兼容 OpenAI 的端点支持 FunASR 和 SenseVoice 模型。\n\nVocalinux 的关于对话框和设置菜单。\n\n我谈到了新的 Vocalinux 版本，但从未完全解释过它是什么。它是一款适用于 Linux 的免费开源语音听写应用。它驻留在系统托盘中，让你可以在桌面、终端、浏览器、IDE、办公应用等几乎所有文本字段中进行听写，只要光标所在位置即可。一切都在本地运行，因此你的语音数据始终保留在你的机器上。\n\n语音识别引擎的选择也不受限制：你可以选择 whisper.cpp 作为默认选项，其次是 faster-whisper 用于 PyTorch 和 NVIDIA 配置，whisper-tiny 用于轻量级设置，以及 Remote API 用于将任务卸载到网络服务器。\n\n我尝试测试了这个 beta 版本，看看它提供了什么。我在两个不同的发行版（Fedora Workstation 和 Ubuntu）上运行了它；两次运行的结果都是应用无法通过应用启动器或终端启动。\n\n在按照一些故障排除步骤操作后，它最终在 Ubuntu 上启动了，但应用无响应，不得不终止。即便如此，我对此并不太沮丧，因为这是预发布软件所伴随的风险。\n\n你可以通过在网页浏览器上尝试演示来快速上手。当然，这仅供测试用途。\n\n如果你想在 Linux 计算机上本地运行语音转文字功能，可以通过运行以下脚本安装 Vocalinux：\n\n在运行脚本之前，请务必验证其内容。\n\ncurl -fsSL https://raw.githubusercontent.com/jatinkrmalik/vocalinux/main/install.sh -o /tmp/vl.sh && bash /tmp/vl.sh --interactive\n\n安装完成后，可以运行 vocalinux 或在应用启动器中找到应用图标。如果你在选择引擎时犹豫不决，可以参考相关指南来帮助你做出决定。\n\n如果你在寻找 Vocalinux 的源代码，它托管在 GitHub 上。\n\n另外，在非基于 Debian 的发行版（如 Fedora）上运行安装程序时，它会发出一个或两个关于需要手动安装依赖项的警告，请在继续之前注意这一点。\n\n感谢提供此工具的信息。😄\n\n喜欢这次更新吗？支持独立的 Linux 新闻报导。\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无需承诺\n\n一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。\n\nLinus Torvalds 多年来一直忽视 AI，如今却为其背书\n\n15 本 O'Reilly Linux 电子书不到 30 美元：从命令行基础到 Kubernetes 的捆绑包\n\nX（原 Twitter）可能即将开源\n\n事实证明 Wayland 并非大家所说的输入延迟灾难\n\nCursor AI 对关键漏洞的沉默危及数百万用户\n\n成为更好的 Linux 用户\n\n通过 FOSS 每周通讯，你可以学习有用的 Linux 技巧，发现应用程序，探索新发行版。"
+  },
+  "e066aac588758aaf3401ccec11030b16": {
+    "id": "e066aac588758aaf3401ccec11030b16",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/DXVK-3.0.2-Released",
+    "title_en": "DXVK 3.0.2 Released With Improved Hang Debugging, Handful Of Game Fixes",
+    "summary_en": "In addition to the initial build of Holo Core as AArch64 Arch Linux for the Steam Frame, another software milestone today in Valve's Linux gaming space is the release of DXVK 3.0.2 for Direct3D 8 / 9 / 10 / 11 APIs implemented over the Vulkan API for running Windows games...",
+    "pub_date": "Fri, 17 Jul 2026 20:46:33 -0400",
+    "title_zh": "DXVK 3.0.2 发布：改进挂起调试功能，附带多款游戏修复",
+    "summary_zh": "DXVK 3.0.2 版本发布，主要改进了 GPU 挂起或驱动崩溃的调试体验，新增环境变量支持以提供更详细的调试信息。该版本还修复了《消逝的光芒：野兽》《碧蓝幻想 Relink》《光环 CE》《守望先锋》和《细胞分裂：混沌理论》等多款游戏的渲染错误、NVIDIA 硬件上的 GPU 挂起问题以及启用 FSR 时的性能回退。",
+    "fulltext_zh": "DXVK 3.0.2 发布：改进挂起调试功能，附带多款游戏修复 - Phoronix\nDXVK 3.0.2 发布：改进挂起调试功能，附带多款游戏修复\n2026年7月17日，美国东部时间晚上8点46分。\n在 Holo Core 作为 AArch64 Arch Linux 为 Steam Frame 构建初始版本之后，Valve 的 Linux 游戏领域今天又迎来了另一个软件里程碑：DXVK 3.0.2 发布，该版本通过 Vulkan API 实现了 Direct3D 8/9/10/11 接口，用于运行 Windows 游戏。\nDXVK 3.0.2 带来了多款游戏的修复，帮助改进了《消逝的光芒：野兽》《碧蓝幻想 Relink》《光环 CE》《守望先锋》和《细胞分裂：混沌理论》。修复范围涵盖渲染错误、NVIDIA 硬件上的偶发性 GPU 挂起，以及启用 FSR 时的性能回退。\n除了少量游戏修复和改进外，DXVK 3.0.2 还提供了更便捷的 GPU 挂起或驱动崩溃调试体验。现在支持环境变量，用于在底层 Vulkan 设备丢失时提供更多关于 GPU 挂起或驱动崩溃的调试信息。对于至少 AMD 和 NVIDIA 的 GPU，这目前应能提供一些有用的调试信息。\n关于新 DXVK 3.0.2 版本的更多详情，请参阅：\nHolo Core 实验性构建发布：为 Valve 的 Steam Frame 打造的 Arch Linux AArch64\nProton 11.0-1 发布：推进 Valve 的 Steam Play，带来最佳 Linux 体验\nLinux 平台 Steam 使用率在六月份略有下降\nSteam Machine 发布，售价 1049 至 1428 美元\nSteamOS 3.8.10 稳定版发布：更新 Arch、支持 Steam Machine 并默认使用 Wayland 桌面\nValve 开发者发布针对 RADV 驱动的新 AMD Anti-Lag 实现\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 同时也是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\nFreeBSD 16 从其基础系统中移除最后一部分 GPL 代码\nLinus Torvalds 重申 Linux 并非“反 AI”也非“社会战士”项目\nPop!_OS 为 COSMIC 推出“磨砂玻璃”桌面风格\nDebian 13.6 发布：包含所有最新安全修复，并回退 GeoIP 数据库\nLinux 为联想 ThinkPad 准备新的 USB-C 安全功能\nLinux 7.2-rc3 为 2026 年的 SEGA Dreamcast 驱动带来修复\n为在 Linux 上启动 Apple M4 提交了初始补丁\nKDE 开发者继续为 Plasma 6.8 添加更多功能\n在享受无广告浏览的同时，\n单页文章查看\n法律声明、隐私政策、Cookies\n版权 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "a2d68d332d206c6dcc6a66f25756d5b1": {
+    "id": "a2d68d332d206c6dcc6a66f25756d5b1",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/noctua-nc-lc1-36",
+    "title_en": "Noctua NL-LC1-36 All-In-One Liquid Cooler",
+    "summary_en": "With reviewing hardware for more than 22 years, when it comes to cooling products there are few brands that can still get me intrigued like Noctua. With their recent launch of the NL-LC1 all-in-one liquid coolers, I decided to try out the Noctua NL-LC1-36 360mm AIO cooler that is working out well for cooling high-end desktop CPUs like the recently launched Ryzen 9 9950X3D2.",
+    "pub_date": "Fri, 17 Jul 2026 13:45:53 -0400",
+    "title_zh": "Noctua NL-LC1-36 一体式水冷散热器",
+    "summary_zh": "Noctua 与 Asetek 合作推出了首款一体式水冷散热器 NL-LC1 系列，本文评测了其中的 360mm 版本 NL-LC1-36。该散热器基于 Asetek Emma V2 平台，搭载 Noctua 定制泵体噪音吸收器和经典 NF-A14x25 G2 风扇，散热性能出色，且噪音极低。它采用 SecuFirm2+ 多平台扣具，支持 AMD AM4/AM5 和 Intel LGA-1700/1851 处理器。与多数竞品不同，NL-LC1 无 RGB 灯效，仅通过标准 PWM 控制，因此在 Linux 下兼容性极佳。缺点是价格较高，360mm 版本售价约 249 美元。",
+    "fulltext_zh": "Noctua NL-LC1-36 一体式水冷散热器评测 - Phoronix\nNoctua NL-LC1-36 一体式水冷散热器\n发布于 2026 年 7 月 17 日下午 1:45（美国东部时间）\n\n从事硬件评测超过 22 年，在散热产品领域，能让我依然保持兴趣的品牌寥寥无几，而 Noctua 是其中之一。随着他们最近推出 NL-LC1 系列一体式水冷散热器，我决定试用 Noctua NL-LC1-36 这款 360mm 规格的 AIO 水冷，它在冷却高端桌面 CPU（例如最新发布的型号）方面表现出色。\n\nNoctua 最近推出了他们的首款一体式水冷散热产品，这是与 Asetek 合作开发的成果。因此，它并非完全由 Noctua 自主研发，而是基于 Asetek Emma V2 平台构建，同时集成了泵体噪音吸收器，并在冷排上采用了 Noctua 传奇般的散热风扇。Noctua NL-LC1 系列目前包含 240mm、360mm 和 420mm 三种规格，其中 NL-LC1-36 是我在过去几周里一直在测试的型号，它配备了 360mm 冷排和三把 Noctua NF-A14x25 G2 风扇。\n\nNoctua NL-LC1 使用了 Noctua 自主研发的定制泵体噪音吸收器，这确实是我用过的噪音最低的一体式水冷散热器之一。\n\n这款基于 Asetek 的水冷平台采用了 Noctua 的 SecuFirm2+ 多平台扣具系统，支持 AMD AM4/AM5 以及 Intel LGA-1700 和 LGA-1851 处理器。Noctua SecuFirm2+ 安装简便，在我使用 AMD AM5 Ryzen 7000/9000 系列处理器进行测试时，没有遇到任何问题。\n\n与市面上绝大多数基于 Asetek 的桌面 PC 一体式水冷散热器不同，Noctua NL-LC1 系列产品没有配备 RGB 灯效。只有黑色的泵体和冷排，以及经典的 Noctua 棕色与米色风扇配色。因此，对于不喜欢 RGB 灯效的用户来说，Noctua NL-LC1 是经典之选。它的泵体和风扇控制仅依赖标准的 PWM 调制。相应地，没有 RGB 灯效和专有的 USB 厂商协议意味着在 Linux 支持方面无需担心。这与那些需要开源社区开发解决方案来控制灯效和泵体/风扇控制的其他 RGB 密集型 AIO 水冷形成了鲜明对比。\n\n不足之处在于，与其他品牌相比，Noctua NL-LC1 散热器的价格偏高。截至撰写本文时，NL-LC1-36 型号的零售价约为 249 美元，来自诸如\n\nARCTIC Freezer 4U-M 散热器（适用于 Ampere Altra 4U 服务器/工作站）\nSilverStone XED120S-WS 为 4U Intel/AMD 工作站和服务器提供强力散热\nSilverStone XE360-SP5 和 XE04-SP5 用于冷却 AMD EPYC 9004/9005 4U 服务器\nNoctua NH-L12Sx77 是一款出色的薄型 CPU 散热器\nArctic Freezer 4U-M 是一款优秀的 4U 散热器，能够冷却高端 AMD 和 Intel CPU\nNoctua NH-U14S 和 NH-D9 风冷散热器适用于 AMD Ryzen Threadripper 7980X\n\n在享受无广告浏览的同时，\n单页文章浏览\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "c74d6421e0dd87f50f2e601e4cd22479": {
+    "id": "c74d6421e0dd87f50f2e601e4cd22479",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/FastFlowLM-Joins-AMD",
+    "title_en": "FastFlowLM Developers Join AMD To Help Push Open-Source NPU Software",
+    "summary_en": "On top of releasing ROCm 7.14 as the new production release of ROCm now built offTheRock, rolling out the Lemonade 11.0 local AI server, and GAIA 0.22, AMD has some more open-source news in the lead up to next week's AMD Advancing AI event...",
+    "pub_date": "Fri, 17 Jul 2026 13:20:38 -0400",
+    "title_zh": "FastFlowLM 开发者加入 AMD，助力推动开源 NPU 软件",
+    "summary_zh": "AMD 宣布 FastFlowLM 开源项目的开发者正式加入公司，以加强其在 AI PC 和工作站上的 NPU 推理软件生态。FastFlowLM 专注于在 AMD Ryzen AI NPU 上提供轻量、高效的大语言模型推理体验，其代码采用 MIT 许可证开源。此次加入将助力 AMD 在客户端和工作站 AI 软件领域实现最新模型的即日支持。",
+    "fulltext_zh": "FastFlowLM 开发者加入 AMD，助力推动开源 NPU 软件 - Phoronix\n\nFastFlowLM 开发者加入 AMD，助力推动开源 NPU 软件\n2026 年 7 月 17 日，美国东部时间下午 1:20。\n\n随着 ROCm 7.14 作为基于 TheRock 构建的新生产版本发布，AMD 在下周 AMD Advancing AI 活动前夕还带来了更多开源新闻。\n\nAMD 今天宣布，FastFlowLM 开源项目的开发者已加入该公司。在今天的一则公告中，他们确认 FastFlowLM 开发者已加入公司：\n\n“近期，FastFlowLM 团队加入了 AMD，这标志着我们在全栈提升 AI 性能与效率的战略中又迈出了关键一步。FastFlowLM 开发了一套轻量级、高度优化的推理软件流程，能够在基于 AMD 技术的 AI PC 和工作站上直接实现快速、高效的大语言模型和多模态模型性能。”\n\n长期以来，FastFlowLM 一直专注于 AMD Ryzen AI NPU 的加速，提供类似 ollama 的开发者体验，运行于 Windows 平台。它一直是实际利用 AMD Ryzen AI NPU 的主要方式之一。直到今天的公告之前，我并未意识到 FastFlowLM 的开发者并非 AMD 员工……鉴于他们长期专注于 Ryzen AI 并与之关系密切，我曾以为他们已是 AMD 的一部分，但现在他们正式成为 AMD 的一员。FastFlowLM 公司由学术界研究人员创立，旨在推动 AI/LLM 在并行 NPU 架构上的发展。\n\n“我们仍然致力于投资这一开放生态系统，并非常激动能够共同构建设备端 AI 的未来。”\n\nFastFlowLM 已经是开源项目，因此与 AMD 其他开源 AI 工作（从 ROCm 到 Lemonade、GAIA 等）完美契合。这些开发者将加入 AMD AI 团队，专注于客户端和工作站 AI 软件，以及最新模型的即日支持。\n\nFastFlowLM 代码以 MIT 许可证发布在 GitHub 上。\n\nAMD 的 GAIA 持续努力成为你的终极 AI 邮件助手\nAMD ROCm 7.14 发布，作为新生产版本，支持 Ryzen AI 400 系列\nAMD ROCm 7.14 “TheRock” 技术预览版标记用于最新 AMD GPU 计算栈\nAMD 发布 Lemonade 11.0 本地 AI 服务器，支持文本转语音及其他新功能\nAMD Ryzen AI Halo Box RGB LED 驱动接近主线内核\nAMD ZenDNN 6.0 为加速 Ryzen/EPYC CPU 上的推理带来诸多改进\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nFreeBSD 16 从其基础系统中移除最后一段 GPL 代码\nLinus Torvalds 重申 Linux 并非“反 AI”也不是“社会战士”项目\nPop!_OS 为 COSMIC 推出“磨砂玻璃”桌面风格\nDebian 13.6 发布，包含所有最新安全修复，并回退 GeoIP 数据库\nLinux 为联想 ThinkPad 上的新 USB-C 安全功能做准备\nLinux 7.2-rc3 为 2026 年的 SEGA Dreamcast 驱动带来修复\n初始补丁发布，用于在 Linux 上启动 Apple M4\nKDE 开发者继续为 Plasma 6.8 添加更多功能\n\n在享受无广告浏览的同时，\n单页文章查看\n法律声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "cd2e4a313103eefb68d09ba0f7e2ae31": {
+    "id": "cd2e4a313103eefb68d09ba0f7e2ae31",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Holo-Core-Experimental-ARM64",
+    "title_en": "Experimental Build Of Holo Core Published: Arch Linux AArch64 For Valve's Steam Frame",
+    "summary_en": "As part of Valve's upcoming Qualcomm-powered Steam Frame headset, Valve has been collaborating with Collabora on the Arch Linux AArch64 base for their platform. Published today are the initial sources and binaries of this \"Holo Core\" base of Arch Linux AArch64 to be used by the Steam Frame...",
+    "pub_date": "Fri, 17 Jul 2026 11:59:22 -0400",
+    "title_zh": "Holo Core 实验性构建发布：面向 Valve Steam Frame 的 Arch Linux AArch64 版本",
+    "summary_zh": "Valve 与 Collabora 合作，为即将推出的高通驱动的 Steam Frame 头显开发了基于 Arch Linux AArch64 的“Holo Core”基础系统。2026年7月17日，该实验性构建的源代码和二进制文件首次发布，旨在让开发者探索这一纯 AArch64 移植版。目前仅包含 Steam Frame 开发所需的数千个软件包，并非完整的 Arch Linux 重建。",
+    "fulltext_zh": "实验性 Holo Core 构建发布：面向 Valve Steam Frame 的 Arch Linux AArch64 版本 - Phoronix\n实验性 Holo Core 构建发布：面向 Valve Steam Frame 的 Arch Linux AArch64 版本\n2026年7月17日，美国东部时间上午11:59。\n作为 Valve 即将推出的高通驱动 Steam Frame 头显的一部分，Valve 一直在与 Collabora 合作，为其平台打造基于 Arch Linux AArch64 的基础系统。今天发布的正是这一“Holo Core”基础系统的初始源代码和二进制文件，该系统基于 Arch Linux AArch64，将用于 Steam Frame。\nCollabora 今天宣布了 Holo Core 的初始二进制文件和源代码，这是 Arch Linux 的一个纯 AArch64 移植版，被用作运行 Steam Frame 的操作系统基础。由于上游 Arch Linux 缺乏官方的 AArch64 支持，这还需要额外的工具链和持续集成（CI）基础设施工作。\n此次 Holo Core 发布的目的是让其他人能够探索这一 Arch Linux AArch64 移植版。除了源代码外，还提供了二进制软件包和一个 Docker 容器。\n这并不是 Arch Linux 针对 AArch64 的完整重建，正如今天博客文章中所解释的：\n“现阶段，我们尚未重建整个世界（即 Arch Linux 仓库中所有可用的软件包）。我们的初始目标是提供 Steam Frame 开发和镜像创建所需的一组软件包。即使仅限于 Arch Linux 软件包的这一子集，包括这些软件包及其运行时和构建依赖项，仍然涉及数千个软件包。”\n感兴趣者可通过以下链接了解更多详情：\nDXVK 3.0.2 发布，改进了挂起调试并修复了多个游戏问题\nProton 11.0-1 发布，推动 Valve 的 Steam Play 实现最佳 Linux 体验\nLinux 上 Steam 使用率在六月份略有下降\nSteam Machine 发布，售价 1049 至 1428 美元\nSteamOS 3.8.10 稳定版发布，更新了 Arch、支持 Steam Machine 并将 Wayland 桌面设为默认\nValve 开发者发布针对 RADV 驱动的新 AMD Anti-Lag 实现\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。他还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\nFreeBSD 16 从其基础系统中移除了最后一部分 GPL 代码\nLinus Torvalds 重申 Linux 并非“反 AI”也不是“社会战士”项目\nPop!_OS 为 COSMIC 推出“磨砂玻璃”桌面风格\nDebian 13.6 发布，包含所有最新安全修复并回滚了 GeoIP 数据库\nLinux 为联想 ThinkPad 的新 USB-C 安全功能做准备\nLinux 7.2-rc3 为 2026 年的 SEGA Dreamcast 驱动带来修复\n为在 Linux 上启动 Apple M4 的初始补丁已发布\nKDE 开发者继续为 Plasma 6.8 添加更多功能\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "4ba3905992fa503744b07a4d734136f3": {
+    "id": "4ba3905992fa503744b07a4d734136f3",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-ACPI-WMI-Driver-ARM64",
+    "title_en": "Linux WMI Driver Gets Ready To Support ACPI-Based ARM64 Laptops",
+    "summary_en": "Linux developer Armin Wolf sent out a set of patches today for enabling AArch64 support for the ACPI Windows Management Instrumentation (WMI) driver to work on AArch64 in no longer being bound to x86/x86_64. This is a step toward the long goal of being able to support modern Windows on ARM laptops via ACPI on Linux...",
+    "pub_date": "Fri, 17 Jul 2026 09:45:50 -0400",
+    "title_zh": "Linux WMI 驱动准备支持基于 ACPI 的 ARM64 笔记本电脑",
+    "summary_zh": "Linux 开发者 Armin Wolf 提交了一组补丁，旨在让 ACPI Windows 管理规范（WMI）驱动支持 AArch64 架构，不再局限于 x86/x86_64。这是实现 Linux 通过 ACPI 支持现代 Windows on ARM 笔记本电脑的重要一步。补丁已在基于 ACPI 的 AArch64 虚拟机上测试通过，有望最终进入上游内核。",
+    "fulltext_zh": "Linux WMI 驱动准备支持基于 ACPI 的 ARM64 笔记本电脑 - Phoronix\nLinux WMI 驱动准备支持基于 ACPI 的 ARM64 笔记本电脑\n发布于 2026 年 7 月 17 日 上午 09:45 美国东部时间。\n\nLinux 开发者 Armin Wolf 今天发送了一组补丁，用于启用 ACPI Windows 管理规范（WMI）驱动对 AArch64 的支持，使其不再局限于 x86/x86_64 架构。这是朝着在 Linux 上通过 ACPI 支持现代 Windows on ARM 笔记本电脑这一长期目标迈出的一步。\n\n回顾大约 2019 年的 aarch64-laptops 项目，当时已知一些 Windows 10 ARM 笔记本电脑像 x86_64 笔记本电脑一样使用了 WMI。多年来，一直有尝试让 Linux WMI 驱动能够在 AArch64（ARM64）上构建，而不仅限于 x86/x86_64 架构，但这些尝试尚未被主线接纳。\n\nArmin Wolf 创建了一组新的补丁，旨在将 WMI 驱动引入 ARM64，以改善 Linux 对现代 ARM 笔记本电脑的支持。他在今天的补丁中解释道：\n\n“aarch64-laptops 项目发现，一些 Windows on ARM 笔记本包含 WMI-ACPI 映射设备（PNP0C14），其工作方式与 x86 上完全相同。然而，由于 WMI 驱动核心仅支持 x86，这些设备目前不受支持。\n\n第一个补丁移除了这一限制，允许 WMI 驱动核心在所有支持 ACPI 的架构上运行。第二个补丁更新了 acpi-video 驱动，以利用对 x86 以外架构的改进支持。最后一个补丁使通用 WMI BMOF 驱动也能支持 aarch64。\n\n所有补丁已在基于 ACPI 的 AArch64 虚拟机上测试，运行良好。”\n\n希望这次对 AArch64 的 WMI 驱动支持能够进入上游内核。\n\n如果你错过了，几周前还有一些其他相关新闻，其中提出了一种 DeviceTree-ACPI 混合模式，用于改善 Linux 上高通骁龙笔记本电脑的支持。文中还提到，未来的 Windows on ARM 骁龙笔记本电脑将理想地仅使用 ACPI，而不需要设备树。\n\nArm Core Local Accelerator 驱动作为加速器的通用接口提交至 Linux\nLinux 计划在 2027 年初淘汰多个旧 ARM 平台\n红帽 ARM 工程师放弃 ARM64 Linux 个人桌面，回归 AMD Ryzen 系统\nLinux 的 ARM64 NEON 内联 CRC64 代码已适配至 32 位 ARM\nAI/LLM 补丁混乱对 ARM64 Linux 内核开发产生影响\nLinux 收到影响众多 Arm CPU 的“严重”漏洞补丁\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nFreeBSD 16 从其基础系统中移除最后一部分 GPL 代码\nLinus Torvalds 重申 Linux 并非“反 AI”也不是“社会战士”项目\nPop!_OS 推出 COSMIC 的“磨砂玻璃”桌面风格\nDebian 13.6 发布，包含所有最新安全修复并回退 GeoIP 数据库\nLinux 为联想 ThinkPad 上的新 USB-C 安全功能做准备\nLinux 7.2-rc3 为 2026 年的 SEGA Dreamcast 驱动带来修复\n为在 Linux 上启动 Apple M4 提交的初始补丁\nKDE 开发者继续为 Plasma 6.8 添加更多功能\n\n在享受无广告浏览的同时，\n单页文章查看\n法律声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "b825002e2964ba1fc518817c25898d9b": {
+    "id": "b825002e2964ba1fc518817c25898d9b",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/ltmnight-sddm-theme-brings-a-modern-aesthetic-and-live-shader-backgrounds-to-your-login-screen/",
+    "title_en": "LTMNight SDDM Theme Brings a Modern Aesthetic and Live Shader Backgrounds to Your Login Screen",
+    "summary_en": "Transform your login experience with the LTMNight SDDM Theme, featuring a sleek modern design and dynamic live shader backgrounds for a fresh look.\nThe post LTMNight SDDM Theme Brings a Modern Aesthetic and Live Shader Backgrounds to Your Login Screen appeared first on Linux Today.",
+    "pub_date": "Fri, 17 Jul 2026 07:33:55 +0000",
+    "title_zh": "LTMNight SDDM 主题为登录界面带来现代美学与动态着色器背景",
+    "summary_zh": "LTMNight SDDM 主题为 Linux 登录界面带来现代美学与动态着色器背景，通过流畅的现代设计和实时着色器背景，让登录体验焕然一新。",
+    "fulltext_zh": "使用 LTMNight SDDM 主题，改变你的登录体验，其采用时尚的现代设计和动态着色器背景，带来焕然一新的视觉效果。\n\n该文章 LTMNight SDDM Theme Brings a Modern Aesthetic and Live Shader Backgrounds to Your Login Screen 最早出现在 Linux Today 上。"
+  },
+  "5e28ea8287310d049296b7be922a6ba5": {
+    "id": "5e28ea8287310d049296b7be922a6ba5",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/bosgame-vta-439-mini-pc-running-linux-introduction/",
+    "title_en": "BOSGAME VTA-439 Mini PC running Linux – Introduction",
+    "summary_en": "Discover the BOSGAME VTA-439 Mini PC, a powerful Linux-based solution designed for efficiency and versatility in your computing needs.\nThe post BOSGAME VTA-439 Mini PC running Linux – Introduction appeared first on Linux Today.",
+    "pub_date": "Fri, 17 Jul 2026 07:32:43 +0000",
+    "title_zh": "BOSGAME VTA-439 Mini PC 运行 Linux – 介绍",
+    "summary_zh": "本文介绍了BOSGAME VTA-439迷你PC，这是一款基于Linux的高效多功能计算解决方案，旨在满足用户对性能与灵活性的需求。",
+    "fulltext_zh": "探索BOSGAME VTA-439迷你PC，这是一款强大的基于Linux的解决方案，专为满足您计算需求中的高效性和多功能性而设计。\n\n本文《BOSGAME VTA-439 Mini PC 运行 Linux – 介绍》首发于Linux Today。"
+  },
+  "3be492e77b949dc48e9ebf469aa3234b": {
+    "id": "3be492e77b949dc48e9ebf469aa3234b",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/peppermintos-releases-new-systemd-free-build-based-on-devuan-excalibur/",
+    "title_en": "PeppermintOS Releases New Systemd-Free Build Based on Devuan Excalibur",
+    "summary_en": "PeppermintOS unveils its new systemd-free version based on Devuan Excalibur. Dive into a fast, efficient OS designed for optimal user experience.\nThe post PeppermintOS Releases New Systemd-Free Build Based on Devuan Excalibur appeared first on Linux Today.",
+    "pub_date": "Fri, 17 Jul 2026 07:29:32 +0000",
+    "title_zh": "PeppermintOS 发布基于 Devuan Excalibur 的无 systemd 新构建版",
+    "summary_zh": "PeppermintOS 推出了基于 Devuan Excalibur 的全新无 systemd 版本，旨在提供快速、高效的操作系统体验，优化用户使用感受。",
+    "fulltext_zh": "PeppermintOS 发布了其基于 Devuan Excalibur 的全新无 systemd 版本。探索这款专为优化用户体验而设计的快速、高效操作系统。\n\n该文章《PeppermintOS Releases New Systemd-Free Build Based on Devuan Excalibur》最初发表于 Linux Today。"
+  },
+  "850d2aa94deef91f21d550119e7399c5": {
+    "id": "850d2aa94deef91f21d550119e7399c5",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/how-to-completely-uninstall-flatpak-on-ubuntu/",
+    "title_en": "How to Completely Uninstall Flatpak on Ubuntu",
+    "summary_en": "Learn how to completely uninstall Flatpak from your Ubuntu system with our step-by-step guide. Ensure a clean removal and reclaim your disk space today.\nThe post How to Completely Uninstall Flatpak on Ubuntu appeared first on Linux Today.",
+    "pub_date": "Fri, 17 Jul 2026 07:27:41 +0000",
+    "title_zh": "如何在Ubuntu上完全卸载Flatpak",
+    "summary_zh": "本文提供了一份详细的步骤指南，帮助你在Ubuntu系统中彻底卸载Flatpak，包括删除相关软件包、清理残留文件和释放磁盘空间，确保系统干净无残留。",
+    "fulltext_zh": "通过我们的分步指南，学习如何从Ubuntu系统中完全卸载Flatpak。确保彻底清除并回收你的磁盘空间。\n\n本文最初发布于Linux Today。"
+  },
+  "979952225b834fc024d4e07c19ff4d7a": {
+    "id": "979952225b834fc024d4e07c19ff4d7a",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/kde-frameworks-6-27-lands-with-core-library-updates/",
+    "title_en": "KDE Frameworks 6.27 Lands with Core Library Updates",
+    "summary_en": "Unveil the advancements in KDE Frameworks 6.27, showcasing essential core library updates designed to elevate your software development projects.\nThe post KDE Frameworks 6.27 Lands with Core Library Updates appeared first on Linux Today.",
+    "pub_date": "Fri, 17 Jul 2026 07:24:52 +0000",
+    "title_zh": "KDE Frameworks 6.27 发布，带来核心库更新",
+    "summary_zh": "KDE Frameworks 6.27 版本正式发布，主要包含一系列核心库的更新，旨在提升软件开发项目的体验。本次更新为开发者提供了更稳定、高效的基础组件支持。",
+    "fulltext_zh": "揭示 KDE Frameworks 6.27 的进步，展示了旨在提升软件开发项目质量的关键核心库更新。\n\n该文章 KDE Frameworks 6.27 Lands with Core Library Updates 最初出现在 Linux Today 上。"
   }
 }

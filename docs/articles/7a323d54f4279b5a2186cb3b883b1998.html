@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vocalinux 将语音转为文本，且不泄露语音数据 — Linux 中文速报</title>
+<title>15本O'Reilly Linux电子书不到30美元：从命令行基础到Kubernetes的捆绑包 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -152,14 +152,14 @@
     <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Vocalinux 将语音转为文本，且不泄露语音数据</h1>
+  <h1>15本O'Reilly Linux电子书不到30美元：从命令行基础到Kubernetes的捆绑包</h1>
 
-  <div class="article-summary">Vocalinux 是一款开源的 Linux 语音转文字工具，最新 0.14 beta 版本新增键盘快捷键、远程转录和 Wayland 可靠性改进。它完全本地运行，保护用户语音数据隐私，支持多种语音识别引擎。作者在 Fedora 和 Ubuntu 上测试时遇到启动问题，但认为这是预发布软件的正常风险。用户可通过脚本安装或在线试用。</div>
+  <div class="article-summary">Humble Bundle与O'Reilly合作推出名为“Linux: All the Things”的按需付费Linux电子书合集，包含15本无DRM的PDF和ePUB格式书籍，内容从命令行基础到容器编排。最低支付5.90美元可获得5本书，支付29.50美元以上可解锁全部15本。部分收益将捐赠给非营利组织Code for America。</div>
 
-  <div class="article-body"><p>Vocalinux 将语音转为文本，且不泄露语音数据</p><p>Vocalinux 将语音转为文本，且不泄露语音数据</p><p>0.14 beta 版本新增了许多升级。</p><p>一款名为 Vocalinux 的开源 Linux 语音转文字工具刚刚发布了其最新版本，带来了一系列改进，涉及键盘快捷键、远程转录和 Wayland 可靠性。</p><p>我们首先介绍最重要的可用性改进。此前，用户在转录过程中只能使用默认的切换或按键通话绑定来录制音频。现在，可以在菜单中设置键盘快捷键，让你能够使用修饰键与任意字母或数字键组合，创建多样化的按键绑定。</p><p>同样，在 GNOME 的 Wayland 会话中，当配置了纯引擎时，文本注入功能再次可用，并且 whisper.cpp 不再默认使用混合 Intel 和 AMD 笔记本电脑上的所有 CPU 核心。</p><p>远程 API 用户也有所收获：远程 API 引擎现在通过兼容 OpenAI 的端点支持 FunASR 和 SenseVoice 模型。</p><p>Vocalinux 的关于对话框和设置菜单。</p><p>我谈到了新的 Vocalinux 版本，但从未完全解释过它是什么。它是一款适用于 Linux 的免费开源语音听写应用。它驻留在系统托盘中，让你可以在桌面、终端、浏览器、IDE、办公应用等几乎所有文本字段中进行听写，只要光标所在位置即可。一切都在本地运行，因此你的语音数据始终保留在你的机器上。</p><p>语音识别引擎的选择也不受限制：你可以选择 whisper.cpp 作为默认选项，其次是 faster-whisper 用于 PyTorch 和 NVIDIA 配置，whisper-tiny 用于轻量级设置，以及 Remote API 用于将任务卸载到网络服务器。</p><p>我尝试测试了这个 beta 版本，看看它提供了什么。我在两个不同的发行版（Fedora Workstation 和 Ubuntu）上运行了它；两次运行的结果都是应用无法通过应用启动器或终端启动。</p><p>在按照一些故障排除步骤操作后，它最终在 Ubuntu 上启动了，但应用无响应，不得不终止。即便如此，我对此并不太沮丧，因为这是预发布软件所伴随的风险。</p><p>你可以通过在网页浏览器上尝试演示来快速上手。当然，这仅供测试用途。</p><p>如果你想在 Linux 计算机上本地运行语音转文字功能，可以通过运行以下脚本安装 Vocalinux：</p><p>在运行脚本之前，请务必验证其内容。</p><p>curl -fsSL https://raw.githubusercontent.com/jatinkrmalik/vocalinux/main/install.sh -o /tmp/vl.sh &amp;&amp; bash /tmp/vl.sh --interactive</p><p>安装完成后，可以运行 vocalinux 或在应用启动器中找到应用图标。如果你在选择引擎时犹豫不决，可以参考相关指南来帮助你做出决定。</p><p>如果你在寻找 Vocalinux 的源代码，它托管在 GitHub 上。</p><p>另外，在非基于 Debian 的发行版（如 Fedora）上运行安装程序时，它会发出一个或两个关于需要手动安装依赖项的警告，请在继续之前注意这一点。</p><p>感谢提供此工具的信息。😄</p><p>喜欢这次更新吗？支持独立的 Linux 新闻报导。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无需承诺</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。</p><p>Linus Torvalds 多年来一直忽视 AI，如今却为其背书</p><p>15 本 O'Reilly Linux 电子书不到 30 美元：从命令行基础到 Kubernetes 的捆绑包</p><p>X（原 Twitter）可能即将开源</p><p>事实证明 Wayland 并非大家所说的输入延迟灾难</p><p>Cursor AI 对关键漏洞的沉默危及数百万用户</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周通讯，你可以学习有用的 Linux 技巧，发现应用程序，探索新发行版。</p></div>
+  <div class="article-body"><p>15本O'Reilly Linux电子书不到30美元：从命令行基础到Kubernetes的捆绑包</p><p>15本O'Reilly Linux电子书不到30美元：从命令行基础到Kubernetes的捆绑包</p><p>别错过！只需支付少量费用，即可获得一个从Git到Kubernetes的Linux无DRM电子书库，部分购买款项将捐赠给Code for America。</p><p>Humble Bundle和O'Reilly联手推出了一个名为“Linux: All the Things”（合作伙伴链接）的按需付费Linux合集，旨在通过15本电子书带你从基本的命令行操作一路进阶到容器编排。</p><p>O'Reilly无需过多介绍。他们是最值得信赖的技术书籍出版商之一。这个捆绑包精选了他们一些最优秀的Linux书籍，包括《Practical Linux System Administration》，以及一些针对安全测试和Kubernetes的更专业选择。</p><p>Humble Bundle：O'Reilly出品的Linux: All the Things</p><p>所有15本电子书均以无DRM的PDF和ePUB格式提供。这意味着一旦购买，它们就永远属于你。你支付的任何金额都将分配给出版商、Humble以及Code for America——一个致力于让政府服务更简单、更易获取的非营利组织。如果你使用我们的链接，其中一小部分也会归我们所有（请阅读我们的说明）。只是想明确这一点。</p><p>以下是捆绑包中的所有内容：</p><p>Linux Observability with BPF</p><p>Linux System Programming</p><p>Practical Linux System Administration</p><p>Understanding the Linux Kernel</p><p>Version Control with Git</p><p>Kubernetes: Up and Running</p><p>Network Programmability and Automation</p><p>Learning Modern Linux</p><p>Efficient Linux at the Command Line</p><p>该捆绑包分为两个层级，定价和书籍组合不同。</p><p>第一层：支付5.90美元或更多，获得5本书</p><p>入门层级价格为5.90美元，可获得五本书，内容更偏向Linux内部机制而非初学者材料。</p><p>《Linux Observability with BPF》涵盖使用BPF进行性能分析和网络监控，这类内容适合在排查生产系统问题而非仅仅运行系统时参考。</p><p>《Linux System Programming》和《Understanding the Linux Kernel》则更进一步深入，涵盖系统调用、进程管理以及内核本身的构建方式。</p><p>该层级的另外两本书是Git参考书。《Version Control with Git》专注于在团队中建立高效、以用户为中心的Git工作流程，而《Pocket Git》则是常用Git命令的快速参考指南。</p><p>第二层：支付29.50美元或更多，获得全部15本书</p><p>支付29.50美元或更多即可解锁全部15本书。请注意，更高的层级（34.50美元至49.50美元）并不会增加更多书籍。多出的款项将直接分配给O'Reilly、Humble和Code for America。</p><p>该层级在第一层的基础上增加了两本Git书籍。《Git: The Basics》是为那些对分支和提交仍感模糊的人准备的入门介绍，而《Version Control with Git》则更深入地探讨了协作工作流程和工具。</p><p>这里有一批书籍涵盖核心Linux技能。《Linux: The Ultimate Guide》，为庆祝其20周年现已推出第四版，是一本专为终端设计的命令参考书。《Learning Modern Linux》和《Efficient Linux at the Command Line》在此基础上增加了云原生背景和实用的Shell效率技巧，而《Practical Linux System Administration》则通过实用技巧和日常系统管理实践进行补充。</p><p>《Linux Security and Hardening》涵盖安全测试、渗透测试和道德黑客基础知识，如果你想在别人之前先测试自己的系统，这本书会很有用。</p><p>最后两本书更偏向高级内容，面向DevOps。《Kubernetes: Up and Running》是进入容器编排领域的坚实入门书，而《Network Programmability and Automation》则涵盖如何自动化网络设备，而非逐个手动点击。</p><p>不过，请务必查看这些书籍的版本。有时，这些捆绑包可能包含旧版。</p><p>所有15本书均为无DRM的PDF和ePUB格式，因此它们归你所有，你可以将它们转移到任何你实际阅读的设备上。</p><p>即使这些书中只有几本已经在你的阅读清单上，花29.50美元全部拿下仍然很划算。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/vocalinux-beta-release/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/oreilly-linux-ebooks-bundle/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

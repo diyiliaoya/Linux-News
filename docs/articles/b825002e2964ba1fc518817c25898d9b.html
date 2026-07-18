@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vocalinux 将语音转为文本，且不泄露语音数据 — Linux 中文速报</title>
+<title>LTMNight SDDM 主题为登录界面带来现代美学与动态着色器背景 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">Linux Today</span>
   </div>
 
-  <h1>Vocalinux 将语音转为文本，且不泄露语音数据</h1>
+  <h1>LTMNight SDDM 主题为登录界面带来现代美学与动态着色器背景</h1>
 
-  <div class="article-summary">Vocalinux 是一款开源的 Linux 语音转文字工具，最新 0.14 beta 版本新增键盘快捷键、远程转录和 Wayland 可靠性改进。它完全本地运行，保护用户语音数据隐私，支持多种语音识别引擎。作者在 Fedora 和 Ubuntu 上测试时遇到启动问题，但认为这是预发布软件的正常风险。用户可通过脚本安装或在线试用。</div>
+  <div class="article-summary">LTMNight SDDM 主题为 Linux 登录界面带来现代美学与动态着色器背景，通过流畅的现代设计和实时着色器背景，让登录体验焕然一新。</div>
 
-  <div class="article-body"><p>Vocalinux 将语音转为文本，且不泄露语音数据</p><p>Vocalinux 将语音转为文本，且不泄露语音数据</p><p>0.14 beta 版本新增了许多升级。</p><p>一款名为 Vocalinux 的开源 Linux 语音转文字工具刚刚发布了其最新版本，带来了一系列改进，涉及键盘快捷键、远程转录和 Wayland 可靠性。</p><p>我们首先介绍最重要的可用性改进。此前，用户在转录过程中只能使用默认的切换或按键通话绑定来录制音频。现在，可以在菜单中设置键盘快捷键，让你能够使用修饰键与任意字母或数字键组合，创建多样化的按键绑定。</p><p>同样，在 GNOME 的 Wayland 会话中，当配置了纯引擎时，文本注入功能再次可用，并且 whisper.cpp 不再默认使用混合 Intel 和 AMD 笔记本电脑上的所有 CPU 核心。</p><p>远程 API 用户也有所收获：远程 API 引擎现在通过兼容 OpenAI 的端点支持 FunASR 和 SenseVoice 模型。</p><p>Vocalinux 的关于对话框和设置菜单。</p><p>我谈到了新的 Vocalinux 版本，但从未完全解释过它是什么。它是一款适用于 Linux 的免费开源语音听写应用。它驻留在系统托盘中，让你可以在桌面、终端、浏览器、IDE、办公应用等几乎所有文本字段中进行听写，只要光标所在位置即可。一切都在本地运行，因此你的语音数据始终保留在你的机器上。</p><p>语音识别引擎的选择也不受限制：你可以选择 whisper.cpp 作为默认选项，其次是 faster-whisper 用于 PyTorch 和 NVIDIA 配置，whisper-tiny 用于轻量级设置，以及 Remote API 用于将任务卸载到网络服务器。</p><p>我尝试测试了这个 beta 版本，看看它提供了什么。我在两个不同的发行版（Fedora Workstation 和 Ubuntu）上运行了它；两次运行的结果都是应用无法通过应用启动器或终端启动。</p><p>在按照一些故障排除步骤操作后，它最终在 Ubuntu 上启动了，但应用无响应，不得不终止。即便如此，我对此并不太沮丧，因为这是预发布软件所伴随的风险。</p><p>你可以通过在网页浏览器上尝试演示来快速上手。当然，这仅供测试用途。</p><p>如果你想在 Linux 计算机上本地运行语音转文字功能，可以通过运行以下脚本安装 Vocalinux：</p><p>在运行脚本之前，请务必验证其内容。</p><p>curl -fsSL https://raw.githubusercontent.com/jatinkrmalik/vocalinux/main/install.sh -o /tmp/vl.sh &amp;&amp; bash /tmp/vl.sh --interactive</p><p>安装完成后，可以运行 vocalinux 或在应用启动器中找到应用图标。如果你在选择引擎时犹豫不决，可以参考相关指南来帮助你做出决定。</p><p>如果你在寻找 Vocalinux 的源代码，它托管在 GitHub 上。</p><p>另外，在非基于 Debian 的发行版（如 Fedora）上运行安装程序时，它会发出一个或两个关于需要手动安装依赖项的警告，请在继续之前注意这一点。</p><p>感谢提供此工具的信息。😄</p><p>喜欢这次更新吗？支持独立的 Linux 新闻报导。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无需承诺</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。</p><p>Linus Torvalds 多年来一直忽视 AI，如今却为其背书</p><p>15 本 O'Reilly Linux 电子书不到 30 美元：从命令行基础到 Kubernetes 的捆绑包</p><p>X（原 Twitter）可能即将开源</p><p>事实证明 Wayland 并非大家所说的输入延迟灾难</p><p>Cursor AI 对关键漏洞的沉默危及数百万用户</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周通讯，你可以学习有用的 Linux 技巧，发现应用程序，探索新发行版。</p></div>
+  <div class="article-body"><p>使用 LTMNight SDDM 主题，改变你的登录体验，其采用时尚的现代设计和动态着色器背景，带来焕然一新的视觉效果。</p><p>该文章 LTMNight SDDM Theme Brings a Modern Aesthetic and Live Shader Backgrounds to Your Login Screen 最早出现在 Linux Today 上。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/vocalinux-beta-release/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.linuxtoday.com/blog/ltmnight-sddm-theme-brings-a-modern-aesthetic-and-live-shader-backgrounds-to-your-login-screen/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

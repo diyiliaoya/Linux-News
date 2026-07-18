@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vocalinux 将语音转为文本，且不泄露语音数据 — Linux 中文速报</title>
+<title>X（前身为Twitter）可能即将开源 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -152,14 +152,14 @@
     <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Vocalinux 将语音转为文本，且不泄露语音数据</h1>
+  <h1>X（前身为Twitter）可能即将开源</h1>
 
-  <div class="article-summary">Vocalinux 是一款开源的 Linux 语音转文字工具，最新 0.14 beta 版本新增键盘快捷键、远程转录和 Wayland 可靠性改进。它完全本地运行，保护用户语音数据隐私，支持多种语音识别引擎。作者在 Fedora 和 Ubuntu 上测试时遇到启动问题，但认为这是预发布软件的正常风险。用户可通过脚本安装或在线试用。</div>
+  <div class="article-summary">埃隆·马斯克宣布，一旦xAI完成安全漏洞内部审查，X的整个代码库将开源，并邀请第三方审查员验证发布代码与实际运行代码的一致性。回顾历史，马斯克曾多次做出类似承诺，但执行情况参差不齐：2023年推荐算法部分开源，2024年Grok模型开源，但Grok 3的六个月开源窗口已关闭却未见发布。此次承诺能否兑现，仍有待观察。</div>
 
-  <div class="article-body"><p>Vocalinux 将语音转为文本，且不泄露语音数据</p><p>Vocalinux 将语音转为文本，且不泄露语音数据</p><p>0.14 beta 版本新增了许多升级。</p><p>一款名为 Vocalinux 的开源 Linux 语音转文字工具刚刚发布了其最新版本，带来了一系列改进，涉及键盘快捷键、远程转录和 Wayland 可靠性。</p><p>我们首先介绍最重要的可用性改进。此前，用户在转录过程中只能使用默认的切换或按键通话绑定来录制音频。现在，可以在菜单中设置键盘快捷键，让你能够使用修饰键与任意字母或数字键组合，创建多样化的按键绑定。</p><p>同样，在 GNOME 的 Wayland 会话中，当配置了纯引擎时，文本注入功能再次可用，并且 whisper.cpp 不再默认使用混合 Intel 和 AMD 笔记本电脑上的所有 CPU 核心。</p><p>远程 API 用户也有所收获：远程 API 引擎现在通过兼容 OpenAI 的端点支持 FunASR 和 SenseVoice 模型。</p><p>Vocalinux 的关于对话框和设置菜单。</p><p>我谈到了新的 Vocalinux 版本，但从未完全解释过它是什么。它是一款适用于 Linux 的免费开源语音听写应用。它驻留在系统托盘中，让你可以在桌面、终端、浏览器、IDE、办公应用等几乎所有文本字段中进行听写，只要光标所在位置即可。一切都在本地运行，因此你的语音数据始终保留在你的机器上。</p><p>语音识别引擎的选择也不受限制：你可以选择 whisper.cpp 作为默认选项，其次是 faster-whisper 用于 PyTorch 和 NVIDIA 配置，whisper-tiny 用于轻量级设置，以及 Remote API 用于将任务卸载到网络服务器。</p><p>我尝试测试了这个 beta 版本，看看它提供了什么。我在两个不同的发行版（Fedora Workstation 和 Ubuntu）上运行了它；两次运行的结果都是应用无法通过应用启动器或终端启动。</p><p>在按照一些故障排除步骤操作后，它最终在 Ubuntu 上启动了，但应用无响应，不得不终止。即便如此，我对此并不太沮丧，因为这是预发布软件所伴随的风险。</p><p>你可以通过在网页浏览器上尝试演示来快速上手。当然，这仅供测试用途。</p><p>如果你想在 Linux 计算机上本地运行语音转文字功能，可以通过运行以下脚本安装 Vocalinux：</p><p>在运行脚本之前，请务必验证其内容。</p><p>curl -fsSL https://raw.githubusercontent.com/jatinkrmalik/vocalinux/main/install.sh -o /tmp/vl.sh &amp;&amp; bash /tmp/vl.sh --interactive</p><p>安装完成后，可以运行 vocalinux 或在应用启动器中找到应用图标。如果你在选择引擎时犹豫不决，可以参考相关指南来帮助你做出决定。</p><p>如果你在寻找 Vocalinux 的源代码，它托管在 GitHub 上。</p><p>另外，在非基于 Debian 的发行版（如 Fedora）上运行安装程序时，它会发出一个或两个关于需要手动安装依赖项的警告，请在继续之前注意这一点。</p><p>感谢提供此工具的信息。😄</p><p>喜欢这次更新吗？支持独立的 Linux 新闻报导。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无需承诺</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。</p><p>Linus Torvalds 多年来一直忽视 AI，如今却为其背书</p><p>15 本 O'Reilly Linux 电子书不到 30 美元：从命令行基础到 Kubernetes 的捆绑包</p><p>X（原 Twitter）可能即将开源</p><p>事实证明 Wayland 并非大家所说的输入延迟灾难</p><p>Cursor AI 对关键漏洞的沉默危及数百万用户</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周通讯，你可以学习有用的 Linux 技巧，发现应用程序，探索新发行版。</p></div>
+  <div class="article-body"><p>X（前身为Twitter）可能即将开源</p><p>X（前身为Twitter）可能即将开源</p><p>看看他最新的公告，以及截至目前实际发布的内容和仍然缺失的部分。</p><p>埃隆·马斯克宣布，一旦xAI完成安全漏洞内部审查，X的整个代码库将开源。他表示将毫无保留地发布全部内容。</p><p>他们正在邀请第三方审查员，以确认发布的内容与实际运行中的代码相匹配。</p><p>“一旦我们完成安全漏洞审查，我们将毫无例外地公开𝕏的整个代码库。此外，我们将邀请第三方审查员检查正在运行的系统，以确认开源代码就是实际运行的代码。……”</p><p>——埃隆·马斯克（@elonmusk）</p><p>引入审查员可能是为了应对企业开源发布中一个常见的抱怨：发布的代码与实际部署的代码不一致。</p><p>当然，对这一公告的怀疑也如期而至。</p><p>一位以将智能手机推向极限而闻名的人，在原推文下回复道：“你不是每隔几个月就这么说吗？这很常见。”</p><p>他说得没错。埃隆以前就做出过类似的开源承诺，无论是针对X的代码库还是Grok的模型，但并非所有承诺都兑现了。</p><p>一个值得注意的模式</p><p>X的透明度推动比Grok更早。2023年3月，在接管该平台后不久，埃隆曾（当时还叫Twitter）在GitHub上发布了推荐算法的部分版本，这是该平台向开放代码库迈出的第一步。</p><p>他在2024年3月发推文称，xAI将开源Grok。该公司确实兑现了承诺，在Apache 2.0许可下发布了基础模型的权重和架构。</p><p>2025年8月，xAI将其2024年旗舰模型Grok 2的权重上传到了Hugging Face，标注为“Grok 2”。</p><p>“Grok 3将在大约6个月内开源。”</p><p>这大约是在2026年2月，这个窗口现在已经关闭了几个月，但在Hugging Face上仍没有Grok 3的踪影。</p><p>随后，在2026年1月，“为你推荐”信息流排名算法背后的代码也开源了，发布在一个基于Grok的Transformer模型构建的GitHub仓库中。</p><p>这个算法确实得到了承诺的更新，在2026年5月进行了一次实质性刷新。而更近一些，在7月15日，也就是X开源公告的同一天，xAI在GitHub上发布了编码代理的Rust源代码和终端界面。</p><p>总体来看，记录好坏参半，而非一概糟糕。</p><p>“为你推荐”算法得到了承诺的更新，但2023年的算法发布却没有（你可以查看上面链接的仓库），而Grok 3的六个月窗口早在2026年2月就关闭了，却没有任何成果。</p><p>让我们看看埃隆的最新承诺会带来什么结果。</p><p>喜欢这篇更新吗？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。请帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获取5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无需承诺</p><p>一个对开源软件、定制PC组装、赛车运动以及探索这个世界无限可能性充满热情的书呆子。</p><p>林纳斯·托瓦兹多年来一直对AI不屑一顾，如今却为其背书</p><p>15本O'Reilly Linux电子书不到30美元：一个从命令行基础到Kubernetes的捆绑包</p><p>Vocalinux将你的语音转化为文本，无需泄露语音数据</p><p>事实证明，Wayland并非大家所说的输入延迟灾难</p><p>Cursor AI对关键漏洞的沉默危及数百万用户</p><p>成为更好的Linux用户</p><p>通过FOSS周刊，你可以学习有用的Linux技巧，发现应用程序，探索新的发行版，并随时了解Linux世界的最新动态</p><p>太好了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅It's FOSS。</p><p>您的链接已过期。</p><p>成功！请检查您的电子邮件以获取魔法链接进行登录。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/vocalinux-beta-release/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/x-might-be-going-open-source/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

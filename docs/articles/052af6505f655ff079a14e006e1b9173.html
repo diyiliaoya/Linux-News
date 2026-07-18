@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vocalinux 将语音转为文本，且不泄露语音数据 — Linux 中文速报</title>
+<title>Linus Torvalds 多年对 AI 不屑一顾，最终却为其背书 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -152,14 +152,14 @@
     <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Vocalinux 将语音转为文本，且不泄露语音数据</h1>
+  <h1>Linus Torvalds 多年对 AI 不屑一顾，最终却为其背书</h1>
 
-  <div class="article-summary">Vocalinux 是一款开源的 Linux 语音转文字工具，最新 0.14 beta 版本新增键盘快捷键、远程转录和 Wayland 可靠性改进。它完全本地运行，保护用户语音数据隐私，支持多种语音识别引擎。作者在 Fedora 和 Ubuntu 上测试时遇到启动问题，但认为这是预发布软件的正常风险。用户可通过脚本安装或在线试用。</div>
+  <div class="article-summary">Linux 创始人 Linus Torvalds 对 AI 的态度经历了显著转变：从 2023 年称 AI 为“90% 营销”，到 2025 年公开支持“氛围编码”用于学习编程，甚至亲自用 AI 工具开发音频效果工具。他同时维护内核的严格标准，反对将反 LLM 情绪政治化，并在 2026 年内核首次官方支持 AI 辅助代码时，要求人类开发者承担责任。</div>
 
-  <div class="article-body"><p>Vocalinux 将语音转为文本，且不泄露语音数据</p><p>Vocalinux 将语音转为文本，且不泄露语音数据</p><p>0.14 beta 版本新增了许多升级。</p><p>一款名为 Vocalinux 的开源 Linux 语音转文字工具刚刚发布了其最新版本，带来了一系列改进，涉及键盘快捷键、远程转录和 Wayland 可靠性。</p><p>我们首先介绍最重要的可用性改进。此前，用户在转录过程中只能使用默认的切换或按键通话绑定来录制音频。现在，可以在菜单中设置键盘快捷键，让你能够使用修饰键与任意字母或数字键组合，创建多样化的按键绑定。</p><p>同样，在 GNOME 的 Wayland 会话中，当配置了纯引擎时，文本注入功能再次可用，并且 whisper.cpp 不再默认使用混合 Intel 和 AMD 笔记本电脑上的所有 CPU 核心。</p><p>远程 API 用户也有所收获：远程 API 引擎现在通过兼容 OpenAI 的端点支持 FunASR 和 SenseVoice 模型。</p><p>Vocalinux 的关于对话框和设置菜单。</p><p>我谈到了新的 Vocalinux 版本，但从未完全解释过它是什么。它是一款适用于 Linux 的免费开源语音听写应用。它驻留在系统托盘中，让你可以在桌面、终端、浏览器、IDE、办公应用等几乎所有文本字段中进行听写，只要光标所在位置即可。一切都在本地运行，因此你的语音数据始终保留在你的机器上。</p><p>语音识别引擎的选择也不受限制：你可以选择 whisper.cpp 作为默认选项，其次是 faster-whisper 用于 PyTorch 和 NVIDIA 配置，whisper-tiny 用于轻量级设置，以及 Remote API 用于将任务卸载到网络服务器。</p><p>我尝试测试了这个 beta 版本，看看它提供了什么。我在两个不同的发行版（Fedora Workstation 和 Ubuntu）上运行了它；两次运行的结果都是应用无法通过应用启动器或终端启动。</p><p>在按照一些故障排除步骤操作后，它最终在 Ubuntu 上启动了，但应用无响应，不得不终止。即便如此，我对此并不太沮丧，因为这是预发布软件所伴随的风险。</p><p>你可以通过在网页浏览器上尝试演示来快速上手。当然，这仅供测试用途。</p><p>如果你想在 Linux 计算机上本地运行语音转文字功能，可以通过运行以下脚本安装 Vocalinux：</p><p>在运行脚本之前，请务必验证其内容。</p><p>curl -fsSL https://raw.githubusercontent.com/jatinkrmalik/vocalinux/main/install.sh -o /tmp/vl.sh &amp;&amp; bash /tmp/vl.sh --interactive</p><p>安装完成后，可以运行 vocalinux 或在应用启动器中找到应用图标。如果你在选择引擎时犹豫不决，可以参考相关指南来帮助你做出决定。</p><p>如果你在寻找 Vocalinux 的源代码，它托管在 GitHub 上。</p><p>另外，在非基于 Debian 的发行版（如 Fedora）上运行安装程序时，它会发出一个或两个关于需要手动安装依赖项的警告，请在继续之前注意这一点。</p><p>感谢提供此工具的信息。😄</p><p>喜欢这次更新吗？支持独立的 Linux 新闻报导。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无需承诺</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。</p><p>Linus Torvalds 多年来一直忽视 AI，如今却为其背书</p><p>15 本 O'Reilly Linux 电子书不到 30 美元：从命令行基础到 Kubernetes 的捆绑包</p><p>X（原 Twitter）可能即将开源</p><p>事实证明 Wayland 并非大家所说的输入延迟灾难</p><p>Cursor AI 对关键漏洞的沉默危及数百万用户</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周通讯，你可以学习有用的 Linux 技巧，发现应用程序，探索新发行版。</p></div>
+  <div class="article-body"><p>Linus Torvalds 多年对 AI 不屑一顾，最终却为其背书</p><p>Linus Torvalds 多年对 AI 不屑一顾，最终却为其背书</p><p>按时间顺序回顾 Linux 创始人如何从“90% 营销”转变为告诉 AI 批评者要么复刻内核要么走开。</p><p>到现在，你一定知道 Linus Torvalds，这位企鹅大军——呃，我是说这个项目的领导者——从不回避直言不讳，尤其是在表达观点时。当他有想法时，Linux 内核邮件列表会听到，我们这些使用 Linux 的人也会听到。过去几年，他对 AI 的看法相当简单：认为它大多是噪音，而且他不感兴趣。</p><p>但有些事情发生了变化；Linus 从称 AI 为“90% 营销”转变为公开告诉 Linux 内核项目内部的批评者要么复刻它要么走开。以下是这些年这一变化是如何发生的。</p><p>2023 年 12 月在日本开源峰会上，有人直接问 Linus 一个问题：他是否会看到 AI 编写的代码提交到内核？Linus 回答“是”，并猜测这可能已经在小规模发生。他并不特别担心 AI 产生幻觉代码的风险，指出单纯的人为错误本身就会导致大量 bug。“我认为我们在自己犯错方面做得很好。”</p><p>四个月后，在西雅图举行的北美开源峰会上，这种好奇心已转变为近乎嘲讽。他开玩笑说自己可能“被 AI 模型取代”，并驳斥了大部分围绕 AI 的炒作，认为那是无稽之谈，建议大家在得出任何真正结论之前先等等。</p><p>到 2024 年 10 月，在维也纳开源峰会上接受采访时，Linus 用数字量化了他的怀疑。他称 AI 行业是“90% 营销，10% 现实”，并表示在那改变之前他大多会忽略它。不过他给自己留了个口子，预测真正的用例可能会在五年后出现，一旦炒作消退。</p><p>一年后，2025 年 11 月，情况发生了变化。在韩国开源峰会上，Linus 告诉 Dirk 他“支持”AI，不过只针对学习编程的人，而不是任何真正重要的事情。他将其比作小时候从电脑杂志上抄写程序，把“氛围编码”描述为一种低风险的方式，让人们兴奋地在电脑上做“他们可能原本做不到的事情”。</p><p>这种开放态度在几个月后变成了一个假期项目：他构建了一个名为“SoundFlow”的音频效果工具，自己编写了部分代码（C 语言部分），然后将 Python 可视化工具交给 Google 的 Antigravity IDE。</p><p>即便如此，内核本身仍然禁止 AI。就在宣布该项目之前，他回复了一个关于内核文档中反 LLM 情绪的激烈讨论，反对将这个问题变成政治声明。他的论点是，那些提交真正粗心 AI 补丁的人无论如何都不会标注它们，所以制定旨在抓住这些补丁的规则毫无意义。</p><p>个人热情与机构谨慎之间的这种紧张关系在 2026 年 4 月再次显现，当时内核发布了首个官方 AI 辅助代码政策。这些政策范围狭窄但明确：AI 辅助代码仍需满足 GPL-2.0 许可要求；AI 工具不得添加自己的“Signed-off-by”标签；通过新的“AI-assisted”标志提交的内容必须由人类承担责任。</p><p>同月，稳定内核维护者 Greg Kroah-Hartman 被发现悄悄运行一个 AI 辅助模糊测试工具，针对一个昵称为“fuzz-ai”的分支中的内核进行测试。</p><p>到 2026 年 5 月，围绕内核的 AI 生成活动量本身就成了一个问题。Linus 抱怨一个候选版本因他所谓的无意义拉取请求而膨胀，其中很多是 AI 辅助的 bug 狩猎，在开发周期后期产生了琐碎的修复。他说他会对此更加严格，承诺会“更加挑剔”。</p><p>在明尼阿波利斯举行的北美开源峰会主题演讲中，Linus 强烈反驳了另一种 AI 叙事，他认为这种叙事比合作更烦人。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/vocalinux-beta-release/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/linus-torvalds-on-ai/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
