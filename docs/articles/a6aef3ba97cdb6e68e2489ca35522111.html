@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>更多华硕主板将在 Linux 7.3 中享受传感器监控功能 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年07月20日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">桌面环境</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>更多华硕主板将在 Linux 7.3 中享受传感器监控功能</h1>
+
+  <div class="article-summary">得益于开源社区的努力，更多华硕桌面主板（包括 Intel Core 和 AMD Ryzen 平台）将在即将发布的 Linux 7.3 内核中获得传感器监控支持。近期提交的补丁为 ASUS EC Sensors 硬件监控驱动新增了多款主板支持，如 ProArt Z690-CREATOR WIFI、ROG STRIX X870E-E GAMING WIFI7 R2、ROG CROSSHAIR X870E HERO 和 ROG Maximus Z790 Hero。这些补丁已进入 hwmon-next 分支，预计将在下个月的 Linux 7.3 合并窗口中被合并。</div>
+
+  <div class="article-body"><p>更多华硕主板将在 Linux 7.3 中享受传感器监控功能 - Phoronix</p><p>更多华硕主板将在 Linux 7.3 中享受传感器监控功能</p><p>发布于 2026 年 7 月 19 日，美国东部时间上午 6:17。</p><p>得益于开源社区的努力，更多面向 Intel Core 和 AMD Ryzen 系统的华硕桌面主板将在 Linux 下实现传感器监控功能。随着即将到来的 Linux 7.3 内核周期，多款额外的华硕主板将能够正常使用传感器监控。</p><p>最近排队等待合并的 ASUS EC Sensors 硬件监控（HWMON）驱动补丁包括为以下主板启用传感器监控：</p><p>- ProArt Z690-CREATOR WIFI</p><p>- ROG STRIX X870E-E GAMING WIFI7 R2</p><p>- ROG CROSSHAIR X870E HERO</p><p>- ROG Maximus Z790 Hero</p><p>这得益于更多 Linux 用户验证了其主板的支持情况。通常，为 ASUS EC Sensors 驱动添加新主板支持只需要少量补丁，用于根据 DMI 信息验证暴露的主板名称，并确认主板上可用的温度、功耗和风扇传感器。</p><p>这些最新的主板添加现已进入 hwmon-next 分支，因此预计将在下个月的 Linux 7.3 合并窗口中被合并。</p><p>截至目前，在 hwmon-next 分支中，ASUS-EC-Sensors 驱动支持的华硕主板完整列表如下：</p><p>* PRIME X670E-PRO WIFI</p><p>* Pro WS TRX50-SAGE WIFI</p><p>* Pro WS TRX50-SAGE WIFI A</p><p>* Pro WS WRX90E-SAGE SE</p><p>* ProArt X570-CREATOR WIFI</p><p>* ProArt X670E-CREATOR WIFI</p><p>* ProArt X870E-CREATOR WIFI</p><p>* ProArt B550-CREATOR</p><p>* ProArt Z690-CREATOR WIFI</p><p>* ROG CROSSHAIR VIII DARK HERO</p><p>* ROG CROSSHAIR VIII HERO (WI-FI)</p><p>* ROG CROSSHAIR VIII FORMULA</p><p>* ROG CROSSHAIR VIII HERO</p><p>* ROG CROSSHAIR VIII IMPACT</p><p>* ROG CROSSHAIR X670E EXTREME</p><p>* ROG CROSSHAIR X670E HERO</p><p>* ROG CROSSHAIR X670E GENE</p><p>* ROG CROSSHAIR X870E HERO</p><p>* ROG MAXIMUS XI HERO</p><p>* ROG MAXIMUS XI HERO (WI-FI)</p><p>* ROG MAXIMUS Z690 FORMULA</p><p>* ROG MAXIMUS Z790 EXTREME</p><p>* ROG MAXIMUS Z790 HERO</p><p>* ROG STRIX B550-E GAMING</p><p>* ROG STRIX B550-I GAMING</p><p>* ROG STRIX B650E-E GAMING WIFI</p><p>* ROG STRIX B650E-I GAMING WIFI</p><p>* ROG STRIX B850-E GAMING WIFI</p><p>* ROG STRIX B850-I GAMING WIFI</p><p>* ROG STRIX X470-F GAMING</p><p>* ROG STRIX X470-I GAMING</p><p>* ROG STRIX X570-E GAMING</p><p>* ROG STRIX X570-E GAMING WIFI II</p><p>* ROG STRIX X570-F GAMING</p><p>* ROG STRIX X570-I GAMING</p><p>* ROG STRIX X670E-E GAMING WIFI</p><p>* ROG STRIX X670E-I GAMING WIFI</p><p>* ROG STRIX X870-F GAMING WIFI</p><p>* ROG STRIX X870-I GAMING WIFI</p><p>* ROG STRIX X870E-E GAMING WIFI</p><p>* ROG STRIX X870E-E GAMING WIFI7 R2</p><p>* ROG STRIX X870E-H GAMING WIFI7</p><p>* ROG STRIX Z390-F GAMING</p><p>* ROG STRIX Z490-F GAMING</p><p>* ROG STRIX Z690-A GAMING WIFI D4</p><p>* ROG STRIX Z690-E GAMING WIFI</p><p>* ROG STRIX Z790-E GAMING WIFI II</p><p>* ROG STRIX Z790-H GAMING WIFI</p><p>* ROG STRIX Z790-I GAMING WIFI</p><p>* ROG ZENITH II EXTREME</p><p>* ROG ZENITH II EXTREME ALPHA</p><p>* TUF GAMING X670E PLUS</p><p>* TUF GAMING X670E PLUS WIFI</p><p>此外，其他一些主板也通过替代的 HWMON 驱动获得支持。我们将关注未来几周是否会有更多主板添加进来，以便进入 Linux 7.3。</p><p>新 Linux 驱动改进对 GETAC 加固型笔记本电脑的支持</p><p>Imagination PowerVR BXM-4-64 GPU 固件为 T-Head TH1520 上游化</p><p>System76 推出新款 Adder Pro 笔记本电脑，配备 NVIDIA GPU、2K OLED 及最高 96GB 内存</p><p>Linux 内核图形驱动提议支持 GlandaGPU：一个开源软 GPU 核心</p><p>Linux 7.2-rc3 为 2026 年的 SEGA Dreamcast 驱动带来修复</p><p>Linux 为联想 ThinkPad 上的新 USB-C 安全功能做准备</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>FreeBSD 16 从其基础系统中移除最后一段 GPL 代码</p><p>Linus Torvalds 重申 Linux 并非“反 AI”也不是“社会斗士”</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-More-ASUS-Sensors" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
