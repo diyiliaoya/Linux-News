@@ -3661,5 +3661,126 @@
     "title_zh": "更多华硕主板将在 Linux 7.3 中享受传感器监控功能",
     "summary_zh": "得益于开源社区的努力，更多华硕桌面主板（包括 Intel Core 和 AMD Ryzen 平台）将在即将发布的 Linux 7.3 内核中获得传感器监控支持。近期提交的补丁为 ASUS EC Sensors 硬件监控驱动新增了多款主板支持，如 ProArt Z690-CREATOR WIFI、ROG STRIX X870E-E GAMING WIFI7 R2、ROG CROSSHAIR X870E HERO 和 ROG Maximus Z790 Hero。这些补丁已进入 hwmon-next 分支，预计将在下个月的 Linux 7.3 合并窗口中被合并。",
     "fulltext_zh": "更多华硕主板将在 Linux 7.3 中享受传感器监控功能 - Phoronix\n更多华硕主板将在 Linux 7.3 中享受传感器监控功能\n发布于 2026 年 7 月 19 日，美国东部时间上午 6:17。\n\n得益于开源社区的努力，更多面向 Intel Core 和 AMD Ryzen 系统的华硕桌面主板将在 Linux 下实现传感器监控功能。随着即将到来的 Linux 7.3 内核周期，多款额外的华硕主板将能够正常使用传感器监控。\n\n最近排队等待合并的 ASUS EC Sensors 硬件监控（HWMON）驱动补丁包括为以下主板启用传感器监控：\n\n- ProArt Z690-CREATOR WIFI\n- ROG STRIX X870E-E GAMING WIFI7 R2\n- ROG CROSSHAIR X870E HERO\n- ROG Maximus Z790 Hero\n\n这得益于更多 Linux 用户验证了其主板的支持情况。通常，为 ASUS EC Sensors 驱动添加新主板支持只需要少量补丁，用于根据 DMI 信息验证暴露的主板名称，并确认主板上可用的温度、功耗和风扇传感器。\n\n这些最新的主板添加现已进入 hwmon-next 分支，因此预计将在下个月的 Linux 7.3 合并窗口中被合并。\n\n截至目前，在 hwmon-next 分支中，ASUS-EC-Sensors 驱动支持的华硕主板完整列表如下：\n\n* PRIME X670E-PRO WIFI\n* Pro WS TRX50-SAGE WIFI\n* Pro WS TRX50-SAGE WIFI A\n* Pro WS WRX90E-SAGE SE\n* ProArt X570-CREATOR WIFI\n* ProArt X670E-CREATOR WIFI\n* ProArt X870E-CREATOR WIFI\n* ProArt B550-CREATOR\n* ProArt Z690-CREATOR WIFI\n* ROG CROSSHAIR VIII DARK HERO\n* ROG CROSSHAIR VIII HERO (WI-FI)\n* ROG CROSSHAIR VIII FORMULA\n* ROG CROSSHAIR VIII HERO\n* ROG CROSSHAIR VIII IMPACT\n* ROG CROSSHAIR X670E EXTREME\n* ROG CROSSHAIR X670E HERO\n* ROG CROSSHAIR X670E GENE\n* ROG CROSSHAIR X870E HERO\n* ROG MAXIMUS XI HERO\n* ROG MAXIMUS XI HERO (WI-FI)\n* ROG MAXIMUS Z690 FORMULA\n* ROG MAXIMUS Z790 EXTREME\n* ROG MAXIMUS Z790 HERO\n* ROG STRIX B550-E GAMING\n* ROG STRIX B550-I GAMING\n* ROG STRIX B650E-E GAMING WIFI\n* ROG STRIX B650E-I GAMING WIFI\n* ROG STRIX B850-E GAMING WIFI\n* ROG STRIX B850-I GAMING WIFI\n* ROG STRIX X470-F GAMING\n* ROG STRIX X470-I GAMING\n* ROG STRIX X570-E GAMING\n* ROG STRIX X570-E GAMING WIFI II\n* ROG STRIX X570-F GAMING\n* ROG STRIX X570-I GAMING\n* ROG STRIX X670E-E GAMING WIFI\n* ROG STRIX X670E-I GAMING WIFI\n* ROG STRIX X870-F GAMING WIFI\n* ROG STRIX X870-I GAMING WIFI\n* ROG STRIX X870E-E GAMING WIFI\n* ROG STRIX X870E-E GAMING WIFI7 R2\n* ROG STRIX X870E-H GAMING WIFI7\n* ROG STRIX Z390-F GAMING\n* ROG STRIX Z490-F GAMING\n* ROG STRIX Z690-A GAMING WIFI D4\n* ROG STRIX Z690-E GAMING WIFI\n* ROG STRIX Z790-E GAMING WIFI II\n* ROG STRIX Z790-H GAMING WIFI\n* ROG STRIX Z790-I GAMING WIFI\n* ROG ZENITH II EXTREME\n* ROG ZENITH II EXTREME ALPHA\n* TUF GAMING X670E PLUS\n* TUF GAMING X670E PLUS WIFI\n\n此外，其他一些主板也通过替代的 HWMON 驱动获得支持。我们将关注未来几周是否会有更多主板添加进来，以便进入 Linux 7.3。\n\n新 Linux 驱动改进对 GETAC 加固型笔记本电脑的支持\nImagination PowerVR BXM-4-64 GPU 固件为 T-Head TH1520 上游化\nSystem76 推出新款 Adder Pro 笔记本电脑，配备 NVIDIA GPU、2K OLED 及最高 96GB 内存\nLinux 内核图形驱动提议支持 GlandaGPU：一个开源软 GPU 核心\nLinux 7.2-rc3 为 2026 年的 SEGA Dreamcast 驱动带来修复\nLinux 为联想 ThinkPad 上的新 USB-C 安全功能做准备\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nFreeBSD 16 从其基础系统中移除最后一段 GPL 代码\nLinus Torvalds 重申 Linux 并非“反 AI”也不是“社会斗士”"
+  },
+  "d51a004c12f3a5108dd64cf3e852581b": {
+    "id": "d51a004c12f3a5108dd64cf3e852581b",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/07/firefox-153-new-containers-feature",
+    "title_en": "Firefox 153 released with container tabs, rounded corners + more",
+    "summary_en": "Mozilla has released Firefox 153 with built-in containers, QR code generation and more quick actions in the address bar. This is the final &#8220;monthly&#8221; stable release before Mozilla moves to a faster release cadence, putting out new stable versions of Firefox every two weeks. On an unrelated note, Firefox has decided to resume activity on X (formerly Twitter) after a year of no activity. Like all updates, you can get this one for Windows, macOS and Linux, as well as for Android and iOS ",
+    "pub_date": "Mon, 20 Jul 2026 22:57:23 +0000",
+    "title_zh": "Firefox 153 发布，带来容器标签页、圆角设计等新特性",
+    "summary_zh": "Mozilla 发布了 Firefox 153，这是采用更快发布节奏前的最后一个“月度”稳定版。新版本内置了容器功能，允许用户在同一网站使用不同账户并限制跨站追踪；支持通过右键标签页生成二维码；改进了 PDF 编辑功能，支持拖拽合并和添加图片作为新页面。Linux 版默认启用了窗口圆角，地址栏新增了更多快捷操作，macOS 支持全屏键盘快捷键，Windows 版支持 HDR 视频播放。",
+    "fulltext_zh": "Firefox 153 发布，带来容器标签页、圆角设计等新特性 - OMG! Ubuntu\n\nMozilla 发布了 Firefox 153，内置容器功能、二维码生成以及地址栏中更多快捷操作。\n\n这是 Mozilla 转向更快发布节奏前的最后一个“月度”稳定版，之后将每两周发布一次新的 Firefox 稳定版。另外值得一提的是，在沉寂一年后，Mozilla 决定恢复在 X（原 Twitter）上的活动。\n\n与所有更新一样，你可以为 Windows、macOS 和 Linux，以及 Android 和 iOS 获取此版本（移动版功能不同，本文不涉及）。\n\nFirefox 内置容器功能\n\n让你的浏览保持分离\n\n容器是 Firefox 153 中最大的新功能。Mozilla 表示，这些容器让你“按容器分离 cookie，从而可以在同一网站上使用不同账户，并限制跨站追踪”。\n\n例如，在同一窗口中同时使用个人和工作社交媒体账户，无需切换不同窗口或安装附加组件来避免账户间的交叉污染。\n\nMozilla 多年来一直提供容器功能。在 Firefox 153 中，核心容器功能已内置。默认设置了四个预配置容器，你也可以自己添加新容器。\n\n创建你自己的容器，设置名称、颜色和图标，然后右键点击（或按住并点击）新标签页按钮，选择一个容器。或者，右键点击现有标签页，选择“在容器标签页中打开”，然后从中选择一个。容器标签页带有颜色编码，并在 URL 栏中显示图标。\n\n如果你喜欢容器，可以前往设置页面进一步减少操作步骤。在那里，你可以找到一个选项，每次按下新标签页按钮时自动打开容器菜单。\n\n二维码和 PDF 增强\n\n在 Firefox 153 中为打开的标签页生成二维码\n\n如果你想通过二维码分享网站（但觉得像 bar.codes 这样的在线二维码生成器太麻烦），Firefox 允许你右键点击标签页，选择“分享 > 生成二维码”来生成一个。不过，请注意，仅用于离线需求，因为在线分享链接仍然方便得多。\n\nMozilla 也在继续完善 Firefox 内置的 PDF 编辑功能集。今年五月，Firefox 增加了 PDF 合并功能，但依赖于文件选择器来选择要合并的 PDF。在 Firefox 153 中，你可以通过将 PDF 拖入侧边栏来合并。你还可以将图片作为新页面添加，这对于添加文档封面和图表非常有用。\n\nLinux 上的圆角设计\n\n四个角都匹配\n\n眼尖的 Linux 用户可能会注意到，Firefox 在 GTK 桌面（如 Ubuntu）上默认启用了窗口底部圆角。多年来你可以手动启用此设置，但现在它默认开启——至少在我尝试的二进制构建中是这样。\n\nOMG! Ubuntu Firefox 附加组件\n\n上周发布，如果你有兴趣可以试试。目前尚未与桌面版功能完全一致（因为通知功能不起作用），因此被标记为实验性。\n\n在打开的标签页上选取颜色，将值复制到剪贴板\n\nFirefox 153 的其他变化包括地址栏中更多的快捷操作。如果你输入“labs”或“experiment”并点击“labs”操作，可以访问 about:labs 页面。要从正在查看的网页中复制颜色，请在地址栏中输入“pick colour”或“eyedropper”，然后使用“pick a colour”操作来获取取色器。\n\n如果网站有权查看你的位置，浏览器现在会通过将相关图标高亮为红色来通知你，以便你知道该权限处于活动状态。这扩展到了搜索结果页面，据 Mozilla 称，此前该功能在此处是隐藏的。\n\n在 macOS 上，Firefox 现在支持 Apple 的全系统全屏键盘快捷键（Control+Command+F），而 Windows 版 Firefox 153 现在支持 HDR 视频播放（在 Windows 本身支持并启用的情况下）。\n\n然而，Mozilla 指出，HDR 目前无法在仅支持“HDR 视频流”的笔记本电脑显示屏上工作，并表示某些以特定方向在智能手机上拍摄的视频可能仍会以 SDR 格式渲染。\n\n桌面版现在支持画中画 API（并非用户……）"
+  },
+  "2673c29762c25c7c550881a93b1da7c1": {
+    "id": "2673c29762c25c7c550881a93b1da7c1",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Intel-Cold-Reset-Recovery-Linux",
+    "title_en": "Cold Reset Recovery Coming Together To Better Help Intel GPUs On Linux",
+    "summary_en": "One of the patch series going through nearly a dozen revisions now is for introducing a cold reset recovery method for the Direct Rendering Manager (DRM) drivers with an initial focus on the Intel Xe kernel graphics driver...",
+    "pub_date": "Mon, 20 Jul 2026 20:35:07 -0400",
+    "title_zh": "冷重置恢复功能逐步完善，助力英特尔GPU在Linux上表现更佳",
+    "summary_zh": "英特尔工程师正在为Linux内核的Direct Rendering Manager (DRM)驱动引入冷重置恢复方法，初始重点针对Intel Xe内核图形驱动。该机制用于处理需要完全设备电源循环才能恢复的硬件错误，特别是电源管理单元（PUNIT）错误，这些错误在热重置和驱动重载后仍可能持续存在。补丁引入了新的DRM楔入恢复方法，并通过uevent通知用户空间，结合udev可执行相应操作。",
+    "fulltext_zh": "冷重置恢复功能逐步完善，助力英特尔GPU在Linux上表现更佳 - Phoronix\n\n冷重置恢复功能逐步完善，助力英特尔GPU在Linux上表现更佳\n发布于2026年7月20日晚上8点35分（美国东部时间）\n\n目前有一组补丁系列已经历近十二次修订，旨在为Direct Rendering Manager (DRM)驱动引入冷重置恢复方法，初始重点针对Intel Xe内核图形驱动。\n\n冷重置恢复用于处理需要完全设备电源循环才能恢复的错误。对于某些特定的硬件错误，可能需要进行冷重置才能完全清除状态，使设备无需经历完整的系统重启/电源循环即可恢复。\n\n当前英特尔工程师致力于此的主要动机是处理电源管理单元（PUNIT）错误，这些错误在热重置和驱动重载后仍可能持续存在，因此需要完全冷重置才能恢复。\n\n该补丁工作向通用DRM代码引入了\nDRM_WEDGE_RECOVERY_COLD_RESET\n作为一种新的DRM楔入恢复方法。DRM核心随后通过uevent通知用户空间需要进行冷重置，并借助udev，可以根据系统情况采取必要的操作。\n\n对内核图形驱动（特别是Xe驱动的初始基础设施）的冷重置恢复主题感兴趣的人，可以在以下补丁中找到相关信息：\n\n英特尔为当前Xeon 6 / Xeon 6+服务器扩展内存选项\n\nUXL的oneDNN 3.13为英特尔Nova Lake准备AVX10.2支持，以及更多英特尔优化\n\n英特尔IGC 2.38.2带来最新一轮图形编译器改进\n\n英特尔Vulkan驱动现已支持H.265 10位视频编码\n\nHiZ平面优化已合并至英特尔Vulkan Linux驱动，带来一定性能提升\n\nIntel-Scaler-vLLM 0.21.0-b1为英特尔GPU上的vLLM提供最新功能\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\n最后一个MPEG-4视觉专利已过期\n\nFreeBSD 16从其基础系统中移除最后一段GPL代码\n\nLinus Torvalds重申Linux并非“反AI”也不是“社会战士”项目\n\nFrame：一个完全用x86_64汇编编写的新X11服务器实现\n\nAMD发布Lemonade 11.0本地AI服务器，支持文本转语音及其他新功能\n\nLinux 7.2-rc3为2026年的SEGA Dreamcast驱动带来修复\n\nUbuntu内核团队警告AMD GPU临时性能回归高达42倍\n\n树莓派5 IOMMU驱动正在为主线Linux内核开发中\n\n在享受无广告浏览的同时，\n\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026 由\n\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "b17029d5f668c6d8fa76cf670eaae98e": {
+    "id": "b17029d5f668c6d8fa76cf670eaae98e",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/NetworkManager-1.58",
+    "title_en": "NetworkManager 1.58 Released With 464XLAT CLAT Support & GENEVE Interface",
+    "summary_en": "NetworkManager 1.58 is out today with the latest feature enhancements for bettering wired and wireless network management on Linux...",
+    "pub_date": "Mon, 20 Jul 2026 16:12:39 -0400",
+    "title_zh": "NetworkManager 1.58 发布，支持 464XLAT CLAT 与 GENEVE 接口",
+    "summary_zh": "NetworkManager 1.58 正式发布，新增对 464XLAT 客户侧转换器（CLAT）的支持，允许 IPv6 单栈网络中的设备访问传统 IPv4 服务；同时新增对 GENEVE 覆盖隧道协议的支持，用于虚拟化流量路由。此外，D-Bus API 和 nmcli 工具现在支持跨重启持久化托管状态，WiFi 连接新增 6GHz 频段支持，并改进了 IWD 后端的省电功能。此版本弃用了 Wireless Extensions 和 dhclient 后端。",
+    "fulltext_zh": "NetworkManager 1.58 发布，支持 464XLAT CLAT 与 GENEVE 接口 - Phoronix\nNetworkManager 1.58 发布，支持 464XLAT CLAT 与 GENEVE 接口\n发布于 2026 年 7 月 20 日 下午 4:12（美国东部时间）\n\nNetworkManager 1.58 今日发布，带来了最新的功能增强，以改善 Linux 上的有线和无线网络管理。\n\nNetworkManager 1.58 新增了对 464XLAT 客户侧转换器（CLAT）的支持，用于创建一个虚拟 IPv4 接口，拦截来自传统应用程序的出站 IPv4 流量，并将其头部转换为 IPv6。464XLAT 旨在帮助 IPv6 过渡，使仅支持 IPv6 网络上的设备仍能访问传统的 IPv4 服务和应用程序。\n\nNetworkManager 1.58 还新增了对 GENEVE 接口的支持，该接口用于通用网络虚拟化封装覆盖隧道协议，作为背板在虚拟机管理程序和虚拟交换机之间路由虚拟化流量。\n\nNetworkManager 的 D-Bus API 和 nmcli 命令行工具现在允许跨重启持久化托管状态。\n\n在 WiFi 方面，WiFi 连接的“band”属性现在支持“6GHz”值。当使用 IWD 后端时，powersave 属性现在也能正常工作。\n\nNetworkManager 1.58 弃用了对 Wireless Extensions 的支持，并默认禁用了该功能。它还移除了对 dhclient 作为 DHCP 后端的支持，该功能已在多个版本中被弃用。\n\n关于 NetworkManager 1.58 的下载和更多详情，请访问 FreeDesktop.org GitLab。\n\nLinux 补丁引入“KNOD”用于将内核网络卸载直接到 AMD GPU\nRealtek RTL8723BS WiFi Linux 驱动程序针对恶意 WiFi 接入点进行了加固\nAF_ALG“噩梦”在 Linux 7.3 中通过新的 Sysctl 控制进一步受限\nEHEA 10Gb 以太网驱动程序被 IBM 淘汰，作为过时 POWER 硬件的遗留物\nLinux 7.2 Staging 仍在努力驯服 Realtek RTL8723BS“驱动野兽”\nLinux 7.2 带来更多关于 WiFi Aware、WiFi 8 / UHR 及更多网络硬件的工作\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动程序及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\n最后一个 MPEG-4 Visual 专利已过期\nFreeBSD 16 从其基础系统中移除了最后一部分 GPL 代码\nLinus Torvalds 重申 Linux 并非“反 AI”也不是“社会战士”项目\nFrame：一个完全用 x86_64 汇编编写的新 X11 服务器实现\nAMD 发布 Lemonade 11.0 本地 AI 服务器，支持文本转语音及其他新功能\nLinux 7.2-rc3 为 2026 年的 SEGA Dreamcast 驱动程序带来修复\nUbuntu 内核团队警告 AMD GPU 临时性能回归高达 42 倍\nRaspberry Pi 5 IOMMU 驱动程序正在为主线 Linux 内核开发\n\n尽管拥有无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "8bbc86865085e452399b55c6d0bb3a16": {
+    "id": "8bbc86865085e452399b55c6d0bb3a16",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Intel-More-Xeon-6-MRDIMMs",
+    "title_en": "Intel Expanding Memory Options For Current Xeon 6 / Xeon 6+ Servers",
+    "summary_en": "With Intel's next-generation Xeon Diamond Rapids processors not slated to launch until next year and with AMD EPYC Venice being right around the corner, Intel announced today that with upcoming BIOS updates they will be expanding the range of RDIMM and MRDIMM memory support for current-generation Xeon 6 and Xeon 6+ processors...",
+    "pub_date": "Mon, 20 Jul 2026 14:47:33 -0400",
+    "title_zh": "英特尔为当前Xeon 6 / Xeon 6+服务器扩展内存选项",
+    "summary_zh": "英特尔宣布将通过即将推出的BIOS更新，为当前一代Xeon 6和Xeon 6+处理器扩展RDIMM和MRDIMM内存支持范围。Xeon 6900P处理器将在2027年第一季度支持Gen 2 MRDIMM（速度限制在8800 MT/s），而Xeon 6700P处理器将在特定SKU上支持8000 MT/s的RDIMM（1DPC配置），相比RDIMM-6400可提升25%内存速度并降低约6%延迟。相关BIOS更新预计在8-9月发布。",
+    "fulltext_zh": "英特尔为当前Xeon 6 / Xeon 6+服务器扩展内存选项 - Phoronix\n英特尔为当前Xeon 6 / Xeon 6+服务器扩展内存选项\n发布于2026年7月20日下午2:47（美国东部时间）。\n\n随着英特尔下一代Xeon Diamond Rapids处理器计划明年发布，而AMD EPYC Venice即将到来，英特尔今天宣布，通过即将推出的BIOS更新，他们将扩展当前一代Xeon 6和Xeon 6+处理器对RDIMM和MRDIMM内存的支持范围。\n\n正如之前Phoronix文章（例如《DDR5-6400 vs. MRDIMM-8800 Performance With Intel Xeon 6 \"Granite Rapids\"》）所示，在内存带宽密集型应用中，使用MRDIMM相比当前一代Intel Xeon和AMD EPYC服务器常见的DDR5-6400，可以带来巨大的性能提升。\n\n这基于第一代MRDIMM-8800内存，而英特尔今天宣布，他们将在2027年第一季度为Xeon 6900P处理器启用Gen 2 MRDIMM支持。虽然Gen 2 MRDIMM预计速度可达12,800 MT/s，但Xeon 6900P处理器的Gen 2 MRDIMM支持仍将限制在8800 MT/s。\n\n英特尔今天内存公告的另一部分是，他们将在特定SKU上为Xeon 6700P处理器提供1DPC配置下8000 MT/s RDIMM的支持。与当前Xeon 6700P处理器使用的RDIMM-6400内存相比，RDIMM-8000内存应为内存密集型工作负载带来显著提升：内存速度提高25%，同时内存延迟降低约6%。针对Xeon 6+和Xeon 6平台的BIOS更新将启用8000 MT/s RDIMM支持。该BIOS更新预计在8月至9月发布。遗憾的是，英特尔尚未向Phoronix等机构提供任何Xeon 6700P系列或Xeon 6+的评测样品用于独立基准测试……因此目前看来，Phoronix可能不会对升级后的RDIMM-8000支持进行基准测试。\n\n通过以下链接了解更多关于Xeon 6/6+即将推出的升级内存选项：\nCold Reset Recovery Coming Together To Better Help Intel GPUs On Linux\nUXL's oneDNN 3.13 Preps For Intel Nova Lake With AVX10.2, More Intel Optimizations\nIntel IGC 2.38.2 Brings Latest Round Of Graphics Compiler Improvements\nIntel Vulkan Driver Now Supports H.265 10-bit Video Encoding\nHiZ Plane Optimization Merged For Intel Vulkan Linux Driver For Some Performance Benefit\nIntel-Scaler-vLLM 0.21.0-b1 Delivers Latest Features For vLLM On Intel GPUs\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动等主题。Michael也是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\nThe Last MPEG-4 Visual Patent Has Expired\nFreeBSD 16 Retires The Last Of Its GPL Code From Its Base System\nLinus Torvalds Reaffirms That Linux Is Not \"Anti-AI\" & Not A \"Social Warrior\" Project\nFrame: A New X11 Server Implementation Written Entirely In x86_64 Assembly\nAMD Releases Lemonade 11.0 Local AI Server With Text-To-Speech, Other New Features\nLinux 7.2-rc3 Bringing Fixes For The SEGA Dreamcast Drivers In 2026\nUbuntu Kernel Team Warns Of Temporary AMD GPU Performance Regression Up To 42x\nRaspberry Pi 5 IOMMU Driver Being Worked On For The Mainline Linux Kernel\n\n虽然提供无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "ecbb5a146c06972dd9dfcc55ef6690ef": {
+    "id": "ecbb5a146c06972dd9dfcc55ef6690ef",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-ROCm-SPIR-V-Reality-2026",
+    "title_en": "AMD Talks Up The Great Opportunities Of SPIR-V IR With ROCm",
+    "summary_en": "While AMD ROCm 7.14 released last week as the first production release built off TheRock, there is already more to look forward to moving into the future with the AMD ROCm stack... In particular, SPIR-V with ROCm becoming a reality for unified binaries that can work across graphics architectures/targets, better portability across GPU hardware, and other improvements to the experience in targeting a unified IR...",
+    "pub_date": "Mon, 20 Jul 2026 12:18:18 -0400",
+    "title_zh": "AMD 畅谈 SPIR-V IR 与 ROCm 的巨大机遇",
+    "summary_zh": "AMD 发布博客文章，介绍 ROCm 中 SPIR-V 支持的现状与未来。ROCm 7.2 及更高版本已具备基础支持，包括 LLVM/Clang 中的 AMD GCN SPIR-V 目标、生产级 SPIRV-LLVM 翻译器及每进程 JIT 缓存。未来计划包括用树内 LLVM SPIR-V 后端替代翻译器、实现包级 JIT 安装、改进调试体验及解决每架构设备库的 SPIR-V 构建问题。统一二进制文件将实现跨 GPU 的即插即用、平坦构建时间与二进制大小、向前兼容及广泛库覆盖，已在 PyTorch 中验证成功。",
+    "fulltext_zh": "AMD 畅谈 SPIR-V IR 与 ROCm 的巨大机遇 - Phoronix\nAMD 畅谈 SPIR-V IR 与 ROCm 的巨大机遇\n2026 年 7 月 20 日 美国东部时间下午 12:18\n\n上周发布的 AMD ROCm 7.14 是基于 TheRock 的首个生产版本，但 AMD ROCm 堆栈的未来已更值得期待……特别是 SPIR-V 与 ROCm 的结合成为现实，这将实现跨图形架构/目标的统一二进制文件、更好的 GPU 硬件可移植性，以及针对统一 IR 体验的其他改进。\n\nSPIR-V 是通常与 Vulkan API 驱动程序关联的中间表示，但也得到其他 Khronos API（如 OpenGL 和 OpenCL）的支持。AMD ROCm 一直在努力支持 ROCm 上的 SPIR-V IR 模型，以减少为每个 GPU 目标构建的需求，并提供更统一的体验。但代价是首次启动时 JIT 延迟更高（当首次为特定 GPU 设备/目标调用内核时），并且需要处理包含编译时架构特定代码的变通方案。\n\nROCm 上的 SPIR-V 已经酝酿了很长时间，也是其 MLIR 策略的一部分。过去几年中，Phoronix 多次报道这一趋势——ROCm 正朝着支持 SPIR-V 的方向发展……\n\nAMD 统一 AI 软件堆栈可能成为重大事件\nAMD ROCm 6.4 为 HIP 添加 SPIR-V 链接支持\nAMD 在 LLVM 中实现对供应商定制 SPIR-V 的支持\nAMD 工程师畅谈 Vulkan/SPIR-V 作为其基于 MLIR 的统一 AI 软件策略的一部分\n以及更多 Phoronix 文章中的内容。\n\nAMD 今天发布了一篇博客文章，概述了 ROCm 中 SPIR-V 支持的当前水平及未来展望。ROCm 7.2 及更高版本已具备基础支持，功能包括 LLVM/Clang 中的 AMD GCN SPIR-V 目标、生产级 SPIRV-LLVM 翻译器路径，以及每进程 JIT 缓存。但未来仍需将树内 LLVM SPIR-V 后端作为默认降级路径来替代翻译器。包级 JIT 安装仍在推进中，同时还需要改进 SPIR-V AMDGCN JIT 路径的调试体验。每架构设备库的 SPIR-V 构建问题也需要解决。\n\n前景令人兴奋：一个 AMD ROCm 二进制文件即可“即插即用”于众多 GPU，实现平坦的构建时间和二进制大小、“免费”的向前兼容性、快速性能以及广泛的库覆盖。ROCm 上的 SPIR-V 堆栈已在 PyTorch 中成功验证。\n\n更多关于 ROCm 上 SPIR-V 堆栈的详细信息，请参阅今天发布的文章。希望我们能在本周晚些时候于加利福尼亚举行的 AMD 推进 AI 活动上听到更多关于其 SPIR-V 工作的消息。\n\nFastFlowLM 开发者加入 AMD 助力推动开源 NPU 软件\nAMD 的 GAIA 继续努力成为您的终极 AI 邮件伴侣\nAMD ROCm 7.14 宣布为新的生产版本，支持 Ryzen AI 400 系列\nAMD ROCm 7.14 “TheRock” 技术预览版标记用于最新 AMD GPU 计算堆栈\nAMD 发布 Lemonade 11.0 本地 AI 服务器，具备文本转语音及其他新功能\nAMD Ryzen AI Halo Box RGB LED 驱动程序更接近主线内核\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动程序及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\n最后一个 MPEG-4 Visual 专利已过期\nFreeBSD 16 从其基础系统中移除最后一段 GPL 代码\nLinus Torvalds 重申 Linux 并非“反 AI”也非“社会斗士”项目\nFrame：一个完全用 x86_64 汇编编写的新 X11 服务器实现\nAMD 发布 Lemonade 11.0 本地 AI 服务器，具备文本转语音及其他新功能\nLinux 7.2-rc3 带来"
+  },
+  "814c20152bd410dc60045b1be7485d7f": {
+    "id": "814c20152bd410dc60045b1be7485d7f",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/GNOME-Security-Changes-2026",
+    "title_en": "GNOME Changes Security Disclosure Policies Due To AI-Generated Reports",
+    "summary_en": "The GNOME project is changing its handling of security reports due to the influx of AI/LLM-generated security findings...",
+    "pub_date": "Mon, 20 Jul 2026 11:55:56 -0400",
+    "title_zh": "GNOME因AI生成报告更改安全披露政策",
+    "summary_zh": "由于AI/LLM生成的安全报告大量涌入，GNOME项目调整了安全披露政策。从下月起，披露窗口将从行业标准的90天缩短至30天。对于禁止AI贡献的项目，安全报告将不再转发，而是直接关闭。此外，自2020年起负责GNOME安全追踪的Red Hat员工Michael Catanzaro因疲惫将于11月卸任，正在寻找接替者。",
+    "fulltext_zh": "GNOME因AI生成报告更改安全披露政策 - Phoronix\nGNOME因AI生成报告更改安全披露政策\n发布于2026年7月20日美国东部时间上午11:55。\n\n由于AI/LLM生成的安全发现大量涌入，GNOME项目正在更改其对安全报告的处理方式。\n\n首先且最值得注意的是，从下个月开始，GNOME将采用30天的披露窗口，而非行业标准的90天。由于大多数GNOME安全问题会在最初一到三周内修复，或者根本不被修复，目前领导GNOME安全工作的Red Hat员工Michael Catanzaro计划将所有未来安全报告的90天披露截止期限缩短至30天。\n\n另一项更改是，对于禁止AI生成内容的项目，安全报告将不再转发给他们。由于如今许多安全报告包含AI/LLM生成的发现，从而违反了各个项目关于禁止AI贡献的政策，这些问题将在追踪器中直接关闭。如果项目维护者希望至少了解这些发现，将会收到通知。\n\n自2020年起在Red Hat负责GNOME安全问题追踪的Michael Catanzaro宣布，他将卸任安全追踪职责。由于对此感到疲惫，他将于11月起停止追踪新报告的安全问题。到12月，这些问题的所有披露截止期限都将到期，他将认为自己的角色已完成。因此，他正在寻找有经验的GNOME社区成员来接替。\n\n关于这些GNOME安全更改的更多详情，请参见：\nGNOME OS安全模式提升系统可靠性\nGNOME OS创建“测试中心”作为其对苹果TestFlight的实验性软件方案\nGNOME引入ext-background-effect-v1支持以实现背景模糊效果\nGNOME Mutter GPU重置恢复功能即将成为现实\nGNOME 51 Alpha版发布，带来众多增强功能\nGNOME AI助手新增图像生成支持\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动及其他主题。Michael也是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\n最后一个MPEG-4 Visual专利已过期\nFreeBSD 16从其基础系统中移除最后一段GPL代码\nLinus Torvalds重申Linux并非“反AI”也不是“社会斗士”项目\nFrame：一个完全用x86_64汇编编写的新X11服务器实现\nAMD发布Lemonade 11.0本地AI服务器，支持文本转语音及其他新功能\nLinux 7.2-rc3为2026年的SEGA Dreamcast驱动程序带来修复\nUbuntu内核团队警告AMD GPU性能暂时性下降高达42倍\nRaspberry Pi 5 IOMMU驱动程序正在为主线Linux内核开发\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "bec32962edf4c163cb48948e1cc62c7d": {
+    "id": "bec32962edf4c163cb48948e1cc62c7d",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/how-to-install-amd-rocm-on-ubuntu-26-04-for-ai-deep-learning/",
+    "title_en": "How to Install AMD ROCm on Ubuntu 26.04 for AI & Deep Learning",
+    "summary_en": "Learn how to seamlessly install AMD ROCm on Ubuntu 26.04, enhancing your capabilities for AI and deep learning projects with this comprehensive tutorial.\nThe post How to Install AMD ROCm on Ubuntu 26.04 for AI &amp; Deep Learning appeared first on Linux Today.",
+    "pub_date": "Mon, 20 Jul 2026 07:30:23 +0000",
+    "title_zh": "如何在 Ubuntu 26.04 上安装 AMD ROCm 以用于 AI 与深度学习",
+    "summary_zh": "本教程详细介绍了如何在 Ubuntu 26.04 上无缝安装 AMD ROCm，从而增强 AI 和深度学习项目的能力。文章涵盖了安装步骤、环境配置及验证方法，帮助用户快速搭建高性能计算平台。",
+    "fulltext_zh": "学习如何通过本综合教程，在 Ubuntu 26.04 上无缝安装 AMD ROCm，从而增强你在 AI 和深度学习项目中的能力。\n\n该文章最初发表于 Linux Today，标题为“How to Install AMD ROCm on Ubuntu 26.04 for AI & Deep Learning”。"
+  },
+  "1fa6a1dad1433719ad91ee493a882a02": {
+    "id": "1fa6a1dad1433719ad91ee493a882a02",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/chrome-closes-another-door-on-classic-ublock-origin/",
+    "title_en": "Chrome Closes Another Door on Classic uBlock Origin",
+    "summary_en": "Discover how Chrome's latest update impacts the classic uBlock Origin extension, limiting its functionality and affecting user experience.\nThe post Chrome Closes Another Door on Classic uBlock Origin appeared first on Linux Today.",
+    "pub_date": "Mon, 20 Jul 2026 07:26:24 +0000",
+    "title_zh": "Chrome 为经典版 uBlock Origin 再关一扇门",
+    "summary_zh": "Chrome 的最新更新进一步限制了经典版 uBlock Origin 扩展的功能，影响了用户的使用体验。这一变化标志着该广告拦截工具在 Chrome 浏览器中的兼容性持续下降。",
+    "fulltext_zh": "了解 Chrome 的最新更新如何影响经典版 uBlock Origin 扩展，限制其功能并影响用户体验。\n\n该文章《Chrome Closes Another Door on Classic uBlock Origin》最初发表于 Linux Today。"
+  },
+  "d36465a1c0080dacf9448b36b2e4790f": {
+    "id": "d36465a1c0080dacf9448b36b2e4790f",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/openzfs-2-4-3-adds-linux-kernel-7-0-compatibility/",
+    "title_en": "OpenZFS 2.4.3 Adds Linux Kernel 7.0 Compatibility",
+    "summary_en": "OpenZFS 2.4.3 now supports Linux Kernel 7.0, bringing enhanced functionality and performance. Learn more about the updates and their benefits for users.\nThe post OpenZFS 2.4.3 Adds Linux Kernel 7.0 Compatibility appeared first on Linux Today.",
+    "pub_date": "Mon, 20 Jul 2026 07:22:33 +0000",
+    "title_zh": "OpenZFS 2.4.3 新增对 Linux 内核 7.0 的支持",
+    "summary_zh": "OpenZFS 2.4.3 版本现已支持 Linux 内核 7.0，带来了增强的功能和性能提升。本文介绍了此次更新的具体内容及其对用户的益处。",
+    "fulltext_zh": "OpenZFS 2.4.3 现已支持 Linux 内核 7.0，带来了增强的功能和性能提升。了解更多关于此次更新及其对用户益处的信息。\n该文章《OpenZFS 2.4.3 Adds Linux Kernel 7.0 Compatibility》首发于 Linux Today。"
+  },
+  "4bf7e5c73f7d6f9ad33a96f0070e2019": {
+    "id": "4bf7e5c73f7d6f9ad33a96f0070e2019",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/yserver-is-a-new-x11-server-for-linux-written-from-scratch-in-rust/",
+    "title_en": "Yserver Is a New X11 Server for Linux Written from Scratch in Rust",
+    "summary_en": "Explore Yserver, the innovative X11 server for Linux, built entirely from scratch using Rust. Elevate your Linux experience with cutting-edge technology.\nThe post Yserver Is a New X11 Server for Linux Written from Scratch in Rust appeared first on Linux Today.",
+    "pub_date": "Mon, 20 Jul 2026 07:20:06 +0000",
+    "title_zh": "Yserver 是一款用 Rust 从头编写的全新 Linux X11 服务器",
+    "summary_zh": "Yserver 是一款专为 Linux 设计的创新 X11 服务器，完全使用 Rust 语言从头构建。它旨在通过前沿技术提升用户的 Linux 体验，标志着 X11 服务器领域的一次重要革新。",
+    "fulltext_zh": "探索 Yserver，这款专为 Linux 设计的创新 X11 服务器，完全使用 Rust 语言从头构建。借助前沿技术，提升您的 Linux 体验。\n\n该文章 Yserver Is a New X11 Server for Linux Written from Scratch in Rust 最初出现在 Linux Today 上。"
+  },
+  "9292f86f1b153169f1618b1292740af6": {
+    "id": "9292f86f1b153169f1618b1292740af6",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/first-look-at-antergos-next-a-modern-revival-of-antergos-linux-with-kde-plasma/",
+    "title_en": "First Look at Antergos NeXT: A Modern Revival of Antergos Linux with KDE Plasma",
+    "summary_en": "Unveil the features of Antergos NeXT, a contemporary take on Antergos Linux with KDE Plasma. Ideal for those looking to elevate their Linux journey.\nThe post First Look at Antergos NeXT: A Modern Revival of Antergos Linux with KDE Plasma appeared first on Linux Today.",
+    "pub_date": "Mon, 20 Jul 2026 07:17:37 +0000",
+    "title_zh": "Antergos NeXT 初探：搭载 KDE Plasma 的 Antergos Linux 现代复兴",
+    "summary_zh": "本文介绍了 Antergos NeXT 的初步印象，这是一款基于 KDE Plasma 桌面环境的现代版 Antergos Linux 发行版。它专为希望提升 Linux 使用体验的用户设计，融合了经典与创新元素。",
+    "fulltext_zh": "探索 Antergos NeXT 的功能特性，这是 Antergos Linux 的一款现代版本，搭载 KDE Plasma 桌面环境。非常适合那些希望提升 Linux 使用体验的用户。\n\n本文《First Look at Antergos NeXT: A Modern Revival of Antergos Linux with KDE Plasma》首发于 Linux Today。"
   }
 }

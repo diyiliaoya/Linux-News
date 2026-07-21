@@ -150,7 +150,7 @@
   <div class="header-inner">
     <a class="logo" href="index.html">$ linux<span>-news</span></a>
     <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
-    <div class="update-time">更新于 2026年07月20日</div>
+    <div class="update-time">更新于 2026年07月21日</div>
   </div>
 </header>
 
@@ -165,6 +165,21 @@
       <section class="category-section">
         <h2 class="section-title">发行版 <span class="count">12</span></h2>
         <div class="grid">
+        <article class="card">
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">OMG! Ubuntu</span>
+           </div>
+          <h2 class="card-title">
+            <a href="articles/d51a004c12f3a5108dd64cf3e852581b.html">Firefox 153 发布，带来容器标签页、圆角设计等新特性</a>
+          </h2>
+          <p class="card-summary">Mozilla 发布了 Firefox 153，这是采用更快发布节奏前的最后一个“月度”稳定版。新版本内置了容器功能，允许用户在同一网站使用不同账户并限制跨站追踪；支持通过右键标签页生成二维码；改进了 PDF 编辑功能，支持拖拽合并和添加图片作为新页面。Linux 版默认启用了窗口圆角，地址栏新增了更多快捷操作，macOS 支持全屏键盘快捷键，Windows 版支持 HDR 视频播放。</p>
+          <div class="card-actions">
+            <a class="btn-detail" href="articles/d51a004c12f3a5108dd64cf3e852581b.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.omgubuntu.co.uk/2026/07/firefox-153-new-containers-feature" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </article>
+
         <article class="card">
            <div class="card-meta">
              <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
@@ -207,21 +222,6 @@
           <div class="card-actions">
             <a class="btn-detail" href="articles/6ed3e7ec58a82501210b165f0f4e15e2.html">查看全文翻译</a>
             <a class="read-more" href="https://www.omgubuntu.co.uk/2026/07/ubuntu-26-04-trash-dialog-cancel-button-fix" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
-        </article>
-
-        <article class="card">
-           <div class="card-meta">
-             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
-             <span class="source">OMG! Ubuntu</span>
-           </div>
-          <h2 class="card-title">
-            <a href="articles/628e46f258b9dc42c3ab008b7aee13d0.html">Firefox 将从九月起将更新频率翻倍</a>
-          </h2>
-          <p class="card-summary">Mozilla 宣布从九月起调整 Firefox 的发布周期，稳定版更新将从每月一次改为每两周一次。此举旨在让发布计划更可预测，并让已就绪的功能更快推送。Mozilla 将此视为一项实验，将监测影响并适时调整。Firefox 154 将是当前周期下的最后一个版本，随后 Firefox 155 于9月1日发布，之后每两周更新一次。尽管节奏加快，未就绪的功能仍会推迟。更快的更新可能帮助 Firefox 与已采用双周更新的 Chromium 系浏览器竞争。现有用户无需任何操作，更新将通过现有渠道自动推送。对于不喜欢频繁更新的用户，Firefox ESR 版本将继续保持较慢的发布节奏，同时定期接收安全更新。Mozilla 表示不会永久维持双周更新，将根据实验结果灵活调整。</p>
-          <div class="card-actions">
-            <a class="btn-detail" href="articles/628e46f258b9dc42c3ab008b7aee13d0.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.omgubuntu.co.uk/2026/07/firefox-two-week-release-cycle" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article>
 
@@ -306,12 +306,27 @@
              <span class="source">Phoronix</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/437d055ba4c33e0eb3f2c96641d0db3f.html">Linux 7.2-rc4 发布：看似“新常态”</a>
+            <a href="articles/b17029d5f668c6d8fa76cf670eaae98e.html">NetworkManager 1.58 发布，支持 464XLAT CLAT 与 GENEVE 接口</a>
           </h2>
-          <p class="card-summary">Linux 7.2 的第四个候选发布版本 rc4 现已推出，用于测试。本周内核修复工作依然繁忙，许多修复由 AI/大语言模型发现。Linus Torvalds 表示，尽管感觉人们开始休假，但数据表明修复数量正常，即“新常态”——大量小规模修复遍布各处。rc4 规模不小，包含一些较大修复（如 can/bcm 的 syzbot 和 sashiko 修复、selftests 新增测试）以及 AMD GPU 的代码移动和注释增加，但整体无异常。该内核预计于 8 月稳定发布。</p>
+          <p class="card-summary">NetworkManager 1.58 正式发布，新增对 464XLAT 客户侧转换器（CLAT）的支持，允许 IPv6 单栈网络中的设备访问传统 IPv4 服务；同时新增对 GENEVE 覆盖隧道协议的支持，用于虚拟化流量路由。此外，D-Bus API 和 nmcli 工具现在支持跨重启持久化托管状态，WiFi 连接新增 6GHz 频段支持，并改进了 IWD 后端的省电功能。此版本弃用了 Wireless Extensions 和 dhclient 后端。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/437d055ba4c33e0eb3f2c96641d0db3f.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.phoronix.com/news/Linux-7.2-rc4-Released" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/b17029d5f668c6d8fa76cf670eaae98e.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.phoronix.com/news/NetworkManager-1.58" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </article>
+
+        <article class="card">
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">Phoronix</span>
+           </div>
+          <h2 class="card-title">
+            <a href="articles/ecbb5a146c06972dd9dfcc55ef6690ef.html">AMD 畅谈 SPIR-V IR 与 ROCm 的巨大机遇</a>
+          </h2>
+          <p class="card-summary">AMD 发布博客文章，介绍 ROCm 中 SPIR-V 支持的现状与未来。ROCm 7.2 及更高版本已具备基础支持，包括 LLVM/Clang 中的 AMD GCN SPIR-V 目标、生产级 SPIRV-LLVM 翻译器及每进程 JIT 缓存。未来计划包括用树内 LLVM SPIR-V 后端替代翻译器、实现包级 JIT 安装、改进调试体验及解决每架构设备库的 SPIR-V 构建问题。统一二进制文件将实现跨 GPU 的即插即用、平坦构建时间与二进制大小、向前兼容及广泛库覆盖，已在 PyTorch 中验证成功。</p>
+          <div class="card-actions">
+            <a class="btn-detail" href="articles/ecbb5a146c06972dd9dfcc55ef6690ef.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.phoronix.com/news/AMD-ROCm-SPIR-V-Reality-2026" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article>
 
@@ -321,33 +336,18 @@
              <span class="source">Linux Today</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/3be492e77b949dc48e9ebf469aa3234b.html">PeppermintOS 发布基于 Devuan Excalibur 的无 systemd 新构建版</a>
+            <a href="articles/bec32962edf4c163cb48948e1cc62c7d.html">如何在 Ubuntu 26.04 上安装 AMD ROCm 以用于 AI 与深度学习</a>
           </h2>
-          <p class="card-summary">PeppermintOS 推出了基于 Devuan Excalibur 的全新无 systemd 版本，旨在提供快速、高效的操作系统体验，优化用户使用感受。</p>
+          <p class="card-summary">本教程详细介绍了如何在 Ubuntu 26.04 上无缝安装 AMD ROCm，从而增强 AI 和深度学习项目的能力。文章涵盖了安装步骤、环境配置及验证方法，帮助用户快速搭建高性能计算平台。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/3be492e77b949dc48e9ebf469aa3234b.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.linuxtoday.com/blog/peppermintos-releases-new-systemd-free-build-based-on-devuan-excalibur/" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
-        </article>
-
-        <article class="card">
-           <div class="card-meta">
-             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
-             <span class="source">Linux Today</span>
-           </div>
-          <h2 class="card-title">
-            <a href="articles/850d2aa94deef91f21d550119e7399c5.html">如何在Ubuntu上完全卸载Flatpak</a>
-          </h2>
-          <p class="card-summary">本文提供了一份详细的步骤指南，帮助你在Ubuntu系统中彻底卸载Flatpak，包括删除相关软件包、清理残留文件和释放磁盘空间，确保系统干净无残留。</p>
-          <div class="card-actions">
-            <a class="btn-detail" href="articles/850d2aa94deef91f21d550119e7399c5.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.linuxtoday.com/blog/how-to-completely-uninstall-flatpak-on-ubuntu/" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/bec32962edf4c163cb48948e1cc62c7d.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.linuxtoday.com/blog/how-to-install-amd-rocm-on-ubuntu-26-04-for-ai-deep-learning/" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article></div>
       </section>
 
       <section class="category-section">
-        <h2 class="section-title">软件应用 <span class="count">4</span></h2>
+        <h2 class="section-title">软件应用 <span class="count">3</span></h2>
         <div class="grid">
         <article class="card">
            <div class="card-meta">
@@ -370,27 +370,12 @@
              <span class="source">Phoronix</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/50490df98b56b8143cf301d87a0f5490.html">FFmpeg 引入最新 AVX-512 优化：像素格式转换速度提升 1.372 倍</a>
+            <a href="articles/8bbc86865085e452399b55c6d0bb3a16.html">英特尔为当前Xeon 6 / Xeon 6+服务器扩展内存选项</a>
           </h2>
-          <p class="card-summary">FFmpeg 多媒体库的最新手工优化代码利用 AVX-512 的 VPERMB 指令，在 RGB24 到 RGBA 像素格式转换中实现了 1.372 倍的性能提升。该优化由知名开发者 Niklas Haas 完成，主要受益于 AMD Zen 4 及更新 CPU、Intel Xeon 等支持 AVX-512 的处理器。</p>
+          <p class="card-summary">英特尔宣布将通过即将推出的BIOS更新，为当前一代Xeon 6和Xeon 6+处理器扩展RDIMM和MRDIMM内存支持范围。Xeon 6900P处理器将在2027年第一季度支持Gen 2 MRDIMM（速度限制在8800 MT/s），而Xeon 6700P处理器将在特定SKU上支持8000 MT/s的RDIMM（1DPC配置），相比RDIMM-6400可提升25%内存速度并降低约6%延迟。相关BIOS更新预计在8-9月发布。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/50490df98b56b8143cf301d87a0f5490.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.phoronix.com/news/FFmpeg-AVX-512-1.372x" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
-        </article>
-
-        <article class="card">
-           <div class="card-meta">
-             <span class="tag" style="background:#10b9811a;color:#10b981;border-color:#10b98130">软件应用</span>
-             <span class="source">Phoronix</span>
-           </div>
-          <h2 class="card-title">
-            <a href="articles/6847dfc3d5e96293537a98e11447acf7.html">搭载骁龙8 Elite的Legion Y700 Gen4平板迎来Linux补丁</a>
-          </h2>
-          <p class="card-summary">联想Legion Y700 Gen4平板电脑（搭载高通骁龙8 Elite芯片）正在获得Linux支持补丁，旨在摆脱Android系统限制并进入主线内核。开源贡献者Pengyu Luo提交了初始设备树补丁，实现了按键、USB、帧缓冲显示等基本功能，但WiFi、蓝牙、摄像头等关键功能尚未支持。目前该设备离主线内核完美运行尚有距离，但有望逐步完善。</p>
-          <div class="card-actions">
-            <a class="btn-detail" href="articles/6847dfc3d5e96293537a98e11447acf7.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.phoronix.com/news/Lenovo-Y700-Gen4-Linux-Patches" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/8bbc86865085e452399b55c6d0bb3a16.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.phoronix.com/news/Intel-More-Xeon-6-MRDIMMs" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article>
 
@@ -400,12 +385,12 @@
              <span class="source">Linux Today</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/5e28ea8287310d049296b7be922a6ba5.html">BOSGAME VTA-439 Mini PC 运行 Linux – 介绍</a>
+            <a href="articles/d36465a1c0080dacf9448b36b2e4790f.html">OpenZFS 2.4.3 新增对 Linux 内核 7.0 的支持</a>
           </h2>
-          <p class="card-summary">本文介绍了BOSGAME VTA-439迷你PC，这是一款基于Linux的高效多功能计算解决方案，旨在满足用户对性能与灵活性的需求。</p>
+          <p class="card-summary">OpenZFS 2.4.3 版本现已支持 Linux 内核 7.0，带来了增强的功能和性能提升。本文介绍了此次更新的具体内容及其对用户的益处。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/5e28ea8287310d049296b7be922a6ba5.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.linuxtoday.com/blog/bosgame-vta-439-mini-pc-running-linux-introduction/" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/d36465a1c0080dacf9448b36b2e4790f.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.linuxtoday.com/blog/openzfs-2-4-3-adds-linux-kernel-7-0-compatibility/" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article></div>
       </section>
@@ -479,18 +464,18 @@
              <span class="source">Phoronix</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/5a62795ac616b8cd669beaa99ea91882.html">最后一项MPEG-4 Visual专利已过期</a>
+            <a href="articles/2673c29762c25c7c550881a93b1da7c1.html">冷重置恢复功能逐步完善，助力英特尔GPU在Linux上表现更佳</a>
           </h2>
-          <p class="card-summary">2026年7月19日，最后一项MPEG-4 Part 2专利在巴西到期，标志着所有MPEG-4 Visual专利正式失效。此前美国和欧盟的相关专利已在近年过期，而巴西的BRPI0109962B1专利是最后一项活跃专利。VIA Licensing Alliance确认了该专利的到期。</p>
+          <p class="card-summary">英特尔工程师正在为Linux内核的Direct Rendering Manager (DRM)驱动引入冷重置恢复方法，初始重点针对Intel Xe内核图形驱动。该机制用于处理需要完全设备电源循环才能恢复的硬件错误，特别是电源管理单元（PUNIT）错误，这些错误在热重置和驱动重载后仍可能持续存在。补丁引入了新的DRM楔入恢复方法，并通过uevent通知用户空间，结合udev可执行相应操作。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/5a62795ac616b8cd669beaa99ea91882.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.phoronix.com/news/Last-MPEG-4-Patent-Expired" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/2673c29762c25c7c550881a93b1da7c1.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.phoronix.com/news/Intel-Cold-Reset-Recovery-Linux" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article></div>
       </section>
 
       <section class="category-section">
-        <h2 class="section-title">桌面环境 <span class="count">4</span></h2>
+        <h2 class="section-title">桌面环境 <span class="count">5</span></h2>
         <div class="grid">
         <article class="card">
            <div class="card-meta">
@@ -513,12 +498,12 @@
              <span class="source">Phoronix</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/a6aef3ba97cdb6e68e2489ca35522111.html">更多华硕主板将在 Linux 7.3 中享受传感器监控功能</a>
+            <a href="articles/814c20152bd410dc60045b1be7485d7f.html">GNOME因AI生成报告更改安全披露政策</a>
           </h2>
-          <p class="card-summary">得益于开源社区的努力，更多华硕桌面主板（包括 Intel Core 和 AMD Ryzen 平台）将在即将发布的 Linux 7.3 内核中获得传感器监控支持。近期提交的补丁为 ASUS EC Sensors 硬件监控驱动新增了多款主板支持，如 ProArt Z690-CREATOR WIFI、ROG STRIX X870E-E GAMING WIFI7 R2、ROG CROSSHAIR X870E HERO 和 ROG Maximus Z790 Hero。这些补丁已进入 hwmon-next 分支，预计将在下个月的 Linux 7.3 合并窗口中被合并。</p>
+          <p class="card-summary">由于AI/LLM生成的安全报告大量涌入，GNOME项目调整了安全披露政策。从下月起，披露窗口将从行业标准的90天缩短至30天。对于禁止AI贡献的项目，安全报告将不再转发，而是直接关闭。此外，自2020年起负责GNOME安全追踪的Red Hat员工Michael Catanzaro因疲惫将于11月卸任，正在寻找接替者。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/a6aef3ba97cdb6e68e2489ca35522111.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.phoronix.com/news/Linux-7.3-More-ASUS-Sensors" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/814c20152bd410dc60045b1be7485d7f.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.phoronix.com/news/GNOME-Security-Changes-2026" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article>
 
@@ -528,12 +513,12 @@
              <span class="source">Linux Today</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/b825002e2964ba1fc518817c25898d9b.html">LTMNight SDDM 主题为登录界面带来现代美学与动态着色器背景</a>
+            <a href="articles/1fa6a1dad1433719ad91ee493a882a02.html">Chrome 为经典版 uBlock Origin 再关一扇门</a>
           </h2>
-          <p class="card-summary">LTMNight SDDM 主题为 Linux 登录界面带来现代美学与动态着色器背景，通过流畅的现代设计和实时着色器背景，让登录体验焕然一新。</p>
+          <p class="card-summary">Chrome 的最新更新进一步限制了经典版 uBlock Origin 扩展的功能，影响了用户的使用体验。这一变化标志着该广告拦截工具在 Chrome 浏览器中的兼容性持续下降。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/b825002e2964ba1fc518817c25898d9b.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.linuxtoday.com/blog/ltmnight-sddm-theme-brings-a-modern-aesthetic-and-live-shader-backgrounds-to-your-login-screen/" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/1fa6a1dad1433719ad91ee493a882a02.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.linuxtoday.com/blog/chrome-closes-another-door-on-classic-ublock-origin/" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article>
 
@@ -543,12 +528,27 @@
              <span class="source">Linux Today</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/979952225b834fc024d4e07c19ff4d7a.html">KDE Frameworks 6.27 发布，带来核心库更新</a>
+            <a href="articles/4bf7e5c73f7d6f9ad33a96f0070e2019.html">Yserver 是一款用 Rust 从头编写的全新 Linux X11 服务器</a>
           </h2>
-          <p class="card-summary">KDE Frameworks 6.27 版本正式发布，主要包含一系列核心库的更新，旨在提升软件开发项目的体验。本次更新为开发者提供了更稳定、高效的基础组件支持。</p>
+          <p class="card-summary">Yserver 是一款专为 Linux 设计的创新 X11 服务器，完全使用 Rust 语言从头构建。它旨在通过前沿技术提升用户的 Linux 体验，标志着 X11 服务器领域的一次重要革新。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/979952225b834fc024d4e07c19ff4d7a.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.linuxtoday.com/blog/kde-frameworks-6-27-lands-with-core-library-updates/" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/4bf7e5c73f7d6f9ad33a96f0070e2019.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.linuxtoday.com/blog/yserver-is-a-new-x11-server-for-linux-written-from-scratch-in-rust/" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </article>
+
+        <article class="card">
+           <div class="card-meta">
+             <span class="tag" style="background:#8b5cf61a;color:#8b5cf6;border-color:#8b5cf630">桌面环境</span>
+             <span class="source">Linux Today</span>
+           </div>
+          <h2 class="card-title">
+            <a href="articles/9292f86f1b153169f1618b1292740af6.html">Antergos NeXT 初探：搭载 KDE Plasma 的 Antergos Linux 现代复兴</a>
+          </h2>
+          <p class="card-summary">本文介绍了 Antergos NeXT 的初步印象，这是一款基于 KDE Plasma 桌面环境的现代版 Antergos Linux 发行版。它专为希望提升 Linux 使用体验的用户设计，融合了经典与创新元素。</p>
+          <div class="card-actions">
+            <a class="btn-detail" href="articles/9292f86f1b153169f1618b1292740af6.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.linuxtoday.com/blog/first-look-at-antergos-next-a-modern-revival-of-antergos-linux-with-kde-plasma/" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article></div>
       </section>
