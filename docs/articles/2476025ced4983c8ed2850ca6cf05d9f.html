@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>这款主题让Discord在Ubuntu上更显和谐 — Linux 中文速报</title>
+<title>GNOME的安全可能因唯一追踪者离职而陷入危机 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>这款主题让Discord在Ubuntu上更显和谐</h1>
+  <h1>GNOME的安全可能因唯一追踪者离职而陷入危机</h1>
 
-  <div class="article-summary">一款名为“Discord GNOME主题”的自定义CSS主题，能让Discord界面更贴近Adwaita和GNOME HIG风格。它适用于Vesktop（基于Discord网页客户端的第三方封装），需配合Vencord模组使用。主题支持自定义字体、透明效果等，但需注意Discord官方可能随时更改UI，且此主题为志愿者维护的非官方项目。</div>
+  <div class="article-summary">自2020年以来，Michael Catanzaro独自负责GNOME的安全问题追踪工作，但他将于2026年12月离职。他呼吁有经验的社区成员接替这一角色，并调整了漏洞报告处理流程：自2026年8月1日起，新报告的披露期限从90天缩短至30天。同时，涉及AI生成的报告将不再转发给禁止AI贡献的项目。</div>
 
-  <div class="article-body"><p>这款主题让Discord在Ubuntu上更显和谐 - OMG! Ubuntu</p><p>Discord虽然支持Linux，但并未花太多心思去融入系统环境，这也是为什么第三方客户端如此流行——尤其因为它们可以应用主题。</p><p>这款主题之所以得名，简单来说，就是因为它的本质：一个自定义主题，将Discord重新设计得更像Adwaita风格，并遵循GNOME HIG（至少尽可能接近Discord CSS所允许的程度）。</p><p>该主题（很大程度上）基于上游Adwaita，因此虽然无法在Ubuntu上实现完美匹配，但比默认界面要协调得多。由于全部采用CSS编写，可以轻松调整和配置。</p><p>（修改版Discord客户端）</p><p>此主题不适用于官方Discord应用，除非你已通过支持主题、插件、隐私选项等的Vencord模组对其进行修补（注意：Vencord无法修改Snap版本的Discord）。</p><p>但该主题的开发者建议在Vesktop中使用它。Vesktop是Discord网页客户端（官方应用本质上也是网页客户端）的重新打包版本，内置了Vencord，并额外进行了优化，还修复了Discord在Linux上屏幕共享时无声的问题。</p><p>Vesktop也是此处的理想选择，因为它提供了使用GNOME风格标题栏的选项。当通过“设置 &gt; Vesktop设置 &gt; ‘Discord标题栏’”启用后，能更好地营造出平台模仿的效果。</p><p>开发者还建议安装Fresher来去除“Nitro”的推销提示，将语言设置为英语（美国）以确保图标匹配正常，如果需要，还可以使用GNOME扩展来渲染透明侧边栏。</p><p>我未能让模糊效果生效，但有一件事你肯定需要：将GNOME Shell扩展“Rounded Window Corners Reborn”设置为“强制圆角”，否则主应用窗口会带有尖锐的边角。</p><p>——Vesktop支持DEB、AppImage、Flatpak、RPM等Linux格式——你可以通过将以下URL粘贴到“设置 &gt; 主题 &gt; 在线主题”中来安装该主题：</p><p>https://raw.githubusercontent.com/ricewind012/discord-gnome-theme/master/gnome.theme.css</p><p>或者下载原始的.css文件到~/.config/vesktop/themes目录。拥有本地副本后，你可以编辑它，例如调整透明效果，或让外观更接近Ubuntu的Yaru主题。</p><p>例如，在主题中添加以下内容：</p><p>--document-font-family: &quot;Ubuntu&quot;, sans-serif;</p><p>--document-font-size: 12pt;</p><p>--monospace-font-family: &quot;Ubuntu Mono&quot;, monospace;</p><p>但如果你是一位狂热的Discord用户，想使用比官方应用更少干扰的替代品，并且不介意看到一个与周围窗口更协调的界面，不妨试试这款主题，看看是否适合你。</p><p>请记住，Discord自身的UI可能会在无预警的情况下进行服务端更改，而且尽管这款主题仍在维护中——不同于你过去可能读到的类似主题——它只是一个非官方的志愿者项目，并非Discord的官方产品。</p></div>
+  <div class="article-body"><p>GNOME的安全可能因唯一追踪者离职而陷入危机</p><p>自2020年以来，Michael Catanzaro一直独自负责GNOME的安全问题追踪工作，但他将于12月离职。</p><p>他将卸任管理GNOME安全问题追踪的职责，自2020年11月起，他基本上独自承担了这一角色，并得到了社区的支持。他将这项工作描述为主要是行政性的，从报告提交的那一刻起跟踪每一份报告，直到问题得到修复或截止日期到期，并请求……</p><p>到2026年11月1日，Michael将停止追踪新报告的安全问题，只关注在此日期之前已在处理中的问题。到12月1日，他预计与该剩余批次相关的所有披露截止日期都将到期，他处理问题的工作也将完成。</p><p>与此同时，他还在改变GNOME处理漏洞报告的整体方式。他指出AI生成的安全提交数量在增加，并表示对于2026年8月1日及之后报告的问题，披露截止日期现在仅为30天，比之前的90天减少了60天。</p><p>那些禁止AI贡献的项目需要注意。任何提交给GNOME安全团队的安全问题，如果涉及AI参与，将不会被转发给这些项目。Michael将改为在GNOME安全团队自己的追踪器中关闭该报告，并直接联系项目维护者，告知他们该报告的存在。</p><p>需要有人站出来</p><p>Michael目前正在寻找接替这一角色的人选，但并非任何人都可以。他希望是一位经验丰富的社区成员，一位已经熟悉项目运作的人来接手。</p><p>他愿意帮助任何接手的人入门，但明确表示这不是适合新手的任务。</p><p>接替者将继承通过表单提交的工作流程，该表单将提交内容发送给安全团队，团队的目标是在两个工作日内确认新报告。</p><p>通过该表单提交的任何内容都会在GitLab上创建一个机密问题，然后分配给相关项目维护者作为主要处理人。</p><p>他们还需要接管追踪GNOME所有安全问题的古老方式，即在GNOME的GitLab实例上维护一个电子表格。该电子表格需要手动更新，每个新报告、修复和披露都按年份和项目分表记录。</p><p>其他Linux项目已经采用了更接近自动化的方式。例如，某个项目会发布可搜索、可过滤的、与CVE ID关联的安全通知。Fedora和Red Hat则通过另一种方式路由追踪，即一个父级错误记录底层缺陷，然后针对每个受影响的包提交单独的追踪错误。</p><p>你可以查看Michael的更多信息。</p><p>喜欢这篇更新吗？支持独立的Linux新闻报道</p><p>It's FOSS 过去14年来一直帮助人们使用Linux。请帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获取5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无需承诺</p><p>一个热爱开源软件、定制PC组装、赛车运动以及探索这个世界无限可能的技术爱好者。</p><p>Linus Torvalds 多年来一直对AI不屑一顾，如今却为其背书</p><p>15本O'Reilly Linux电子书不到30美元：从命令行基础到Kubernetes的捆绑包</p><p>X（前身为Twitter）可能即将开源</p><p>Vocalinux 将你的语音转化为文本，无需交出语音数据</p><p>事实证明，Wayland并非像大家说的那样是输入延迟的灾难</p><p>成为更好的Linux用户</p><p>通过FOSS每周通讯，你可以学习有用的Linux技巧，发现应用程序，探索新的发行版，并随时了解Linux世界的最新动态</p><p>太好了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅It's FOSS。</p><p>您的链接已过期。</p><p>成功！请检查您的电子邮件以获取用于登录的魔法链接。</p><p>成功！您的账单信息已更新。</p><p>您的账单未更新。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/discord-gnome-theme-adwaita-vesktop" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/gnome-security-tracking-limbo/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

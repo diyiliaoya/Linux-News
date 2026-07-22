@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>这款主题让Discord在Ubuntu上更显和谐 — Linux 中文速报</title>
+<title>三个新的 Ubuntu Snap 漏洞被公开——其中一个可追溯至 Ubuntu 16.04 LTS — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>这款主题让Discord在Ubuntu上更显和谐</h1>
+  <h1>三个新的 Ubuntu Snap 漏洞被公开——其中一个可追溯至 Ubuntu 16.04 LTS</h1>
 
-  <div class="article-summary">一款名为“Discord GNOME主题”的自定义CSS主题，能让Discord界面更贴近Adwaita和GNOME HIG风格。它适用于Vesktop（基于Discord网页客户端的第三方封装），需配合Vencord模组使用。主题支持自定义字体、透明效果等，但需注意Discord官方可能随时更改UI，且此主题为志愿者维护的非官方项目。</div>
+  <div class="article-summary">Canonical 公开了三个影响 snapd 的 Snap 安全漏洞。其中两个被评为高影响漏洞，第三个为中等影响，但覆盖了过去十年所有 Ubuntu 版本，可追溯至 Ubuntu 16.04 LTS。CVE-2026-8933 允许本地攻击者提升权限，影响 Ubuntu 22.04 及更高版本。CVE-2026-15226 允许本地攻击者从受限 root 逃逸至非受限 root。CVE-2024-5300 影响 Ubuntu 16.04 及更高版本，允许沙盒应用访问哈希后的用户密码。</div>
 
-  <div class="article-body"><p>这款主题让Discord在Ubuntu上更显和谐 - OMG! Ubuntu</p><p>Discord虽然支持Linux，但并未花太多心思去融入系统环境，这也是为什么第三方客户端如此流行——尤其因为它们可以应用主题。</p><p>这款主题之所以得名，简单来说，就是因为它的本质：一个自定义主题，将Discord重新设计得更像Adwaita风格，并遵循GNOME HIG（至少尽可能接近Discord CSS所允许的程度）。</p><p>该主题（很大程度上）基于上游Adwaita，因此虽然无法在Ubuntu上实现完美匹配，但比默认界面要协调得多。由于全部采用CSS编写，可以轻松调整和配置。</p><p>（修改版Discord客户端）</p><p>此主题不适用于官方Discord应用，除非你已通过支持主题、插件、隐私选项等的Vencord模组对其进行修补（注意：Vencord无法修改Snap版本的Discord）。</p><p>但该主题的开发者建议在Vesktop中使用它。Vesktop是Discord网页客户端（官方应用本质上也是网页客户端）的重新打包版本，内置了Vencord，并额外进行了优化，还修复了Discord在Linux上屏幕共享时无声的问题。</p><p>Vesktop也是此处的理想选择，因为它提供了使用GNOME风格标题栏的选项。当通过“设置 &gt; Vesktop设置 &gt; ‘Discord标题栏’”启用后，能更好地营造出平台模仿的效果。</p><p>开发者还建议安装Fresher来去除“Nitro”的推销提示，将语言设置为英语（美国）以确保图标匹配正常，如果需要，还可以使用GNOME扩展来渲染透明侧边栏。</p><p>我未能让模糊效果生效，但有一件事你肯定需要：将GNOME Shell扩展“Rounded Window Corners Reborn”设置为“强制圆角”，否则主应用窗口会带有尖锐的边角。</p><p>——Vesktop支持DEB、AppImage、Flatpak、RPM等Linux格式——你可以通过将以下URL粘贴到“设置 &gt; 主题 &gt; 在线主题”中来安装该主题：</p><p>https://raw.githubusercontent.com/ricewind012/discord-gnome-theme/master/gnome.theme.css</p><p>或者下载原始的.css文件到~/.config/vesktop/themes目录。拥有本地副本后，你可以编辑它，例如调整透明效果，或让外观更接近Ubuntu的Yaru主题。</p><p>例如，在主题中添加以下内容：</p><p>--document-font-family: &quot;Ubuntu&quot;, sans-serif;</p><p>--document-font-size: 12pt;</p><p>--monospace-font-family: &quot;Ubuntu Mono&quot;, monospace;</p><p>但如果你是一位狂热的Discord用户，想使用比官方应用更少干扰的替代品，并且不介意看到一个与周围窗口更协调的界面，不妨试试这款主题，看看是否适合你。</p><p>请记住，Discord自身的UI可能会在无预警的情况下进行服务端更改，而且尽管这款主题仍在维护中——不同于你过去可能读到的类似主题——它只是一个非官方的志愿者项目，并非Discord的官方产品。</p></div>
+  <div class="article-body"><p>三个新的 Ubuntu Snap 漏洞被公开——其中一个可追溯至 Ubuntu 16.04 LTS - Phoronix</p><p>三个新的 Ubuntu Snap 漏洞被公开——其中一个可追溯至 Ubuntu 16.04 LTS</p><p>发布于 2026 年 7 月 21 日下午 2:02（美国东部时间）。</p><p>Canonical 今天公开了三个影响 snapd 的新 Snap 安全漏洞。其中两个被评为高影响漏洞，第三个被认为是中等影响，但覆盖了过去十年所有 Ubuntu 版本，可追溯至 Ubuntu 16.04 LTS。</p><p>CVE-2026-8933 由 Qualys 发现，允许本地攻击者提升权限。CVE-2026-8933 影响 Ubuntu 22.04 及更高版本的 LTS 版本，其 CVSS3.1 评分被评为高。</p><p>另一个“高”漏洞是 CVE-2026-15226，它允许本地攻击者从受限 root 逃逸至非受限 root。</p><p>第三个影响 Ubuntu 16.04 及更高版本 LTS 的漏洞是 CVE-2024-5300，它允许沙盒应用访问哈希后的用户密码。</p><p>关于这些最新 Ubuntu Snap 安全问题的更多详情，请参见：</p><p>Canonical 正式推出“企业商店”用于离线/气隙 Ubuntu 使用</p><p>Ubuntu 内核团队警告 AMD GPU 性能临时回退高达 42 倍</p><p>Canonical 谈让 Ubuntu for ARM64 成为“真正的一流架构”</p><p>Rust Coreutils cp 因最新不兼容性导致 Ubuntu 镜像构建失败</p><p>Canonical 成为 Trifecta Tech 首个金牌赞助商，用于构建更多 Rust 基础设施</p><p>Ubuntu 26.10 Snapshot 2 发布，用于月度测试</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>最后一个 MPEG-4 Visual 专利已过期</p><p>FreeBSD 16 从其基础系统中移除最后一段 GPL 代码</p><p>Linus Torvalds 重申 Linux 并非“反 AI”也不是“社会斗士”项目</p><p>Frame：一个完全用 x86_64 汇编编写的新 X11 服务器实现</p><p>Firefox 153 发布，支持 Vulkan 视频解码和实验性 JPEG-XL</p><p>AMD 发布 Lemonade 11.0 本地 AI 服务器，具备文本转语音及其他新功能</p><p>Ubuntu 内核团队警告 AMD GPU 性能临时回退高达 42 倍</p><p>树莓派 5 IOMMU 驱动正在为主线 Linux 内核开发中</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/discord-gnome-theme-adwaita-vesktop" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Ubuntu-Snap-Three-More-Vulns" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

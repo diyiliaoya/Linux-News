@@ -150,7 +150,7 @@
   <div class="header-inner">
     <a class="logo" href="index.html">$ linux<span>-news</span></a>
     <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
-    <div class="update-time">更新于 2026年07月21日</div>
+    <div class="update-time">更新于 2026年07月22日</div>
   </div>
 </header>
 
@@ -163,8 +163,23 @@
 <main>
 
       <section class="category-section">
-        <h2 class="section-title">发行版 <span class="count">12</span></h2>
+        <h2 class="section-title">发行版 <span class="count">13</span></h2>
         <div class="grid">
+        <article class="card">
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">OMG! Ubuntu</span>
+           </div>
+          <h2 class="card-title">
+            <a href="articles/7394600c877e3d7c9e43f3c3932f87c7.html">Ubuntu 26.10 将在设置中添加 Ubuntu 认证检查功能</a>
+          </h2>
+          <p class="card-summary">Ubuntu 26.10 将在“设置 &gt; 系统 &gt; 关于”页面新增“检查此电脑是否通过 Ubuntu 认证”选项，用户可通过图形界面而非命令行查询硬件认证状态。该功能会读取 Canonical 硬件 API 的本地缓存结果，避免每次打开都访问服务器。状态包括已认证、未认证、已为其他版本认证、未认证但存在类似认证型号等。用户还可选择定期检查，仅发送硬件信息，不含个人数据。该功能已上传至每日构建版，预计在 10 月中旬稳定版中正式推出。</p>
+          <div class="card-actions">
+            <a class="btn-detail" href="articles/7394600c877e3d7c9e43f3c3932f87c7.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.omgubuntu.co.uk/2026/07/ubuntu-2610-certified-hardware-check" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </article>
+
         <article class="card">
            <div class="card-meta">
              <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
@@ -207,21 +222,6 @@
           <div class="card-actions">
             <a class="btn-detail" href="articles/2109d9e6613a07bfe35284deca01e788.html">查看全文翻译</a>
             <a class="read-more" href="https://www.omgubuntu.co.uk/2026/07/discord-gnome-theme-adwaita-vesktop" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
-        </article>
-
-        <article class="card">
-           <div class="card-meta">
-             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
-             <span class="source">OMG! Ubuntu</span>
-           </div>
-          <h2 class="card-title">
-            <a href="articles/6ed3e7ec58a82501210b165f0f4e15e2.html">Ubuntu 26.04 修复清空回收站对话框默认取消的 Bug</a>
-          </h2>
-          <p class="card-summary">Ubuntu 26.04 LTS 修复了一个回收站确认对话框的 Bug，该 Bug 错误地将默认焦点按钮从“删除”改为“取消”，导致用户按回车键时无法清空回收站。该问题由 GNOME 开发者确认是意外更改，修复已合并到上游并打包进 Ubuntu 26.04 LTS，预计在 8 月的 26.04.1 LTS 点发布版中正式生效。</p>
-          <div class="card-actions">
-            <a class="btn-detail" href="articles/6ed3e7ec58a82501210b165f0f4e15e2.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.omgubuntu.co.uk/2026/07/ubuntu-26-04-trash-dialog-cancel-button-fix" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article>
 
@@ -306,12 +306,12 @@
              <span class="source">Phoronix</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/b17029d5f668c6d8fa76cf670eaae98e.html">NetworkManager 1.58 发布，支持 464XLAT CLAT 与 GENEVE 接口</a>
+            <a href="articles/b088a7e1c46c5c0a70711cec6ece5a13.html">Cryptsetup 2.8.7 发布以应对 Linux 仓促弃用 AF_ALG 的后果</a>
           </h2>
-          <p class="card-summary">NetworkManager 1.58 正式发布，新增对 464XLAT 客户侧转换器（CLAT）的支持，允许 IPv6 单栈网络中的设备访问传统 IPv4 服务；同时新增对 GENEVE 覆盖隧道协议的支持，用于虚拟化流量路由。此外，D-Bus API 和 nmcli 工具现在支持跨重启持久化托管状态，WiFi 连接新增 6GHz 频段支持，并改进了 IWD 后端的省电功能。此版本弃用了 Wireless Extensions 和 dhclient 后端。</p>
+          <p class="card-summary">Cryptsetup 2.8.7 发布，旨在应对 Linux 内核仓促弃用 AF_ALG 接口带来的影响。该版本使 libcryptsetup 能在无 AF_ALG 时回退到用户空间加密库或临时 dm-crypt 映射，但存在算法兼容性问题，如 Adiantum、Serpent、Twofish 等可能缺失。此外还包含密钥环处理、LUKS 卷密钥摘要冲突修复及 Aria/Camellia 加密支持等改进。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/b17029d5f668c6d8fa76cf670eaae98e.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.phoronix.com/news/NetworkManager-1.58" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/b088a7e1c46c5c0a70711cec6ece5a13.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.phoronix.com/news/Cryptsetup-2.8.7-Released" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article>
 
@@ -321,12 +321,27 @@
              <span class="source">Phoronix</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/ecbb5a146c06972dd9dfcc55ef6690ef.html">AMD 畅谈 SPIR-V IR 与 ROCm 的巨大机遇</a>
+            <a href="articles/fec3fcf30b950a4727b3bcd7a9623aaf.html">三个新的 Ubuntu Snap 漏洞被公开——其中一个可追溯至 Ubuntu 16.04 LTS</a>
           </h2>
-          <p class="card-summary">AMD 发布博客文章，介绍 ROCm 中 SPIR-V 支持的现状与未来。ROCm 7.2 及更高版本已具备基础支持，包括 LLVM/Clang 中的 AMD GCN SPIR-V 目标、生产级 SPIRV-LLVM 翻译器及每进程 JIT 缓存。未来计划包括用树内 LLVM SPIR-V 后端替代翻译器、实现包级 JIT 安装、改进调试体验及解决每架构设备库的 SPIR-V 构建问题。统一二进制文件将实现跨 GPU 的即插即用、平坦构建时间与二进制大小、向前兼容及广泛库覆盖，已在 PyTorch 中验证成功。</p>
+          <p class="card-summary">Canonical 公开了三个影响 snapd 的 Snap 安全漏洞。其中两个被评为高影响漏洞，第三个为中等影响，但覆盖了过去十年所有 Ubuntu 版本，可追溯至 Ubuntu 16.04 LTS。CVE-2026-8933 允许本地攻击者提升权限，影响 Ubuntu 22.04 及更高版本。CVE-2026-15226 允许本地攻击者从受限 root 逃逸至非受限 root。CVE-2024-5300 影响 Ubuntu 16.04 及更高版本，允许沙盒应用访问哈希后的用户密码。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/ecbb5a146c06972dd9dfcc55ef6690ef.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.phoronix.com/news/AMD-ROCm-SPIR-V-Reality-2026" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/fec3fcf30b950a4727b3bcd7a9623aaf.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.phoronix.com/news/Ubuntu-Snap-Three-More-Vulns" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </article>
+
+        <article class="card">
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">Phoronix</span>
+           </div>
+          <h2 class="card-title">
+            <a href="articles/8683ca00be14ec61d28e78cfd7eb7fd8.html">Canonical 正式推出“Enterprise Store”，用于离线/气隙 Ubuntu 环境</a>
+          </h2>
+          <p class="card-summary">Canonical 正式宣布推出“Enterprise Store”，旨在帮助企业在离线、气隙或严格互联网控制的环境中更高效地管理 Ubuntu Linux 部署。该工具作为 Ubuntu Pro 订阅的一部分，支持本地软件缓存、高可用性访问、细粒度版本控制等功能，便于在防火墙后部署 Snap、Charm 及其他 Ubuntu 软件。</p>
+          <div class="card-actions">
+            <a class="btn-detail" href="articles/8683ca00be14ec61d28e78cfd7eb7fd8.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.phoronix.com/news/Ubuntu-Enterprise-Store" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article>
 
@@ -336,18 +351,18 @@
              <span class="source">Linux Today</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/bec32962edf4c163cb48948e1cc62c7d.html">如何在 Ubuntu 26.04 上安装 AMD ROCm 以用于 AI 与深度学习</a>
+            <a href="articles/1c60695e2ae2d9c3b764937a8df7f74f.html">Linux Kernel 7.1 正式发布，新特性一览</a>
           </h2>
-          <p class="card-summary">本教程详细介绍了如何在 Ubuntu 26.04 上无缝安装 AMD ROCm，从而增强 AI 和深度学习项目的能力。文章涵盖了安装步骤、环境配置及验证方法，帮助用户快速搭建高性能计算平台。</p>
+          <p class="card-summary">Linux Kernel 7.1 正式发布，带来了多项新功能和改进，旨在提升用户体验。本文概述了该版本的主要亮点，包括性能优化、硬件支持增强以及安全性更新。更多详情请阅读完整报道。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/bec32962edf4c163cb48948e1cc62c7d.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.linuxtoday.com/blog/how-to-install-amd-rocm-on-ubuntu-26-04-for-ai-deep-learning/" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/1c60695e2ae2d9c3b764937a8df7f74f.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.linuxtoday.com/blog/linux-kernel-7-1-officially-released-heres-whats-new/" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article></div>
       </section>
 
       <section class="category-section">
-        <h2 class="section-title">软件应用 <span class="count">3</span></h2>
+        <h2 class="section-title">软件应用 <span class="count">5</span></h2>
         <div class="grid">
         <article class="card">
            <div class="card-meta">
@@ -370,12 +385,12 @@
              <span class="source">Phoronix</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/8bbc86865085e452399b55c6d0bb3a16.html">英特尔为当前Xeon 6 / Xeon 6+服务器扩展内存选项</a>
+            <a href="articles/c6a8aea21013763b1d7df20f761febd7.html">高通为搭载X2 Elite Extreme的华硕Zenbook A16提交Linux补丁</a>
           </h2>
-          <p class="card-summary">英特尔宣布将通过即将推出的BIOS更新，为当前一代Xeon 6和Xeon 6+处理器扩展RDIMM和MRDIMM内存支持范围。Xeon 6900P处理器将在2027年第一季度支持Gen 2 MRDIMM（速度限制在8800 MT/s），而Xeon 6700P处理器将在特定SKU上支持8000 MT/s的RDIMM（1DPC配置），相比RDIMM-6400可提升25%内存速度并降低约6%延迟。相关BIOS更新预计在8-9月发布。</p>
+          <p class="card-summary">高通工程师发布了新的补丁系列，旨在让搭载Snapdragon X2 Elite Extreme处理器的华硕Zenbook A16在Linux上正常运行。该高端ARM笔记本配备18核X2 Elite Extreme SoC、48GB内存和OLED显示屏。补丁支持音频播放、键盘、触摸板、充电、Wi-Fi、蓝牙等功能，视频加速器也将在后续补丁中启用。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/8bbc86865085e452399b55c6d0bb3a16.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.phoronix.com/news/Intel-More-Xeon-6-MRDIMMs" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/c6a8aea21013763b1d7df20f761febd7.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.phoronix.com/news/Qualcomm-Zenbook-A16-X2EE" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article>
 
@@ -385,18 +400,97 @@
              <span class="source">Linux Today</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/d36465a1c0080dacf9448b36b2e4790f.html">OpenZFS 2.4.3 新增对 Linux 内核 7.0 的支持</a>
+            <a href="articles/d1ba7a46a954442fa3bfe567356e8b70.html">DietPi 10.5 为树莓派单板计算机默认启用 KMS/DRM 图形系统</a>
           </h2>
-          <p class="card-summary">OpenZFS 2.4.3 版本现已支持 Linux 内核 7.0，带来了增强的功能和性能提升。本文介绍了此次更新的具体内容及其对用户的益处。</p>
+          <p class="card-summary">DietPi 10.5 版本为树莓派单板计算机默认启用了 KMS/DRM 图形系统，显著提升了图形性能，并带来更流畅的用户交互体验。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/d36465a1c0080dacf9448b36b2e4790f.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.linuxtoday.com/blog/openzfs-2-4-3-adds-linux-kernel-7-0-compatibility/" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/d1ba7a46a954442fa3bfe567356e8b70.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.linuxtoday.com/blog/dietpi-10-5-enables-kms-drm-graphics-system-by-default-for-raspberry-pi-sbcs/" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </article>
+
+        <article class="card">
+           <div class="card-meta">
+             <span class="tag" style="background:#10b9811a;color:#10b981;border-color:#10b98130">软件应用</span>
+             <span class="source">Linux Today</span>
+           </div>
+          <h2 class="card-title">
+            <a href="articles/b96e2459de75988e094de8a0fc6b0cfd.html">Microsoft Secure Boot 密钥过期影响 Linux 生态系统</a>
+          </h2>
+          <p class="card-summary">本文探讨了 Microsoft Secure Boot 密钥过期对 Linux 生态系统的影响，包括系统安全性和兼容性方面的问题。该事件可能影响部分 Linux 系统的启动过程，需要用户或发行版采取相应措施。</p>
+          <div class="card-actions">
+            <a class="btn-detail" href="articles/b96e2459de75988e094de8a0fc6b0cfd.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.linuxtoday.com/blog/microsoft-secure-boot-key-expiration-affects-linux-ecosystem/" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </article>
+
+        <article class="card">
+           <div class="card-meta">
+             <span class="tag" style="background:#10b9811a;color:#10b981;border-color:#10b98130">软件应用</span>
+             <span class="source">Linux Today</span>
+           </div>
+          <h2 class="card-title">
+            <a href="articles/f78e781dddb0ca64096950d5be280a2a.html">8款最佳免费开源Linux个人财务追踪器</a>
+          </h2>
+          <p class="card-summary">本文介绍了8款适用于Linux系统的免费开源个人财务追踪工具，帮助用户有效管理预算、掌控财务状况。这些工具涵盖不同功能特点，适合从简单记账到复杂财务分析的各种需求。</p>
+          <div class="card-actions">
+            <a class="btn-detail" href="articles/f78e781dddb0ca64096950d5be280a2a.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.linuxtoday.com/blog/8-best-free-and-open-source-linux-personal-finance-trackers/" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article></div>
       </section>
 
       <section class="category-section">
-        <h2 class="section-title">其他 <span class="count">5</span></h2>
+        <h2 class="section-title">桌面环境 <span class="count">3</span></h2>
+        <div class="grid">
+        <article class="card">
+           <div class="card-meta">
+             <span class="tag" style="background:#8b5cf61a;color:#8b5cf6;border-color:#8b5cf630">桌面环境</span>
+             <span class="source">It's FOSS News</span>
+           </div>
+          <h2 class="card-title">
+            <a href="articles/2476025ced4983c8ed2850ca6cf05d9f.html">GNOME的安全可能因唯一追踪者离职而陷入危机</a>
+          </h2>
+          <p class="card-summary">自2020年以来，Michael Catanzaro独自负责GNOME的安全问题追踪工作，但他将于2026年12月离职。他呼吁有经验的社区成员接替这一角色，并调整了漏洞报告处理流程：自2026年8月1日起，新报告的披露期限从90天缩短至30天。同时，涉及AI生成的报告将不再转发给禁止AI贡献的项目。</p>
+          <div class="card-actions">
+            <a class="btn-detail" href="articles/2476025ced4983c8ed2850ca6cf05d9f.html">查看全文翻译</a>
+            <a class="read-more" href="https://itsfoss.com/news/gnome-security-tracking-limbo/" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </article>
+
+        <article class="card">
+           <div class="card-meta">
+             <span class="tag" style="background:#8b5cf61a;color:#8b5cf6;border-color:#8b5cf630">桌面环境</span>
+             <span class="source">Phoronix</span>
+           </div>
+          <h2 class="card-title">
+            <a href="articles/cd680d849388537b2fdeba3e48e761c5.html">KDE Plasma 6.7 vs. GNOME Shell 50.3 vs. Xfce 4.20 在 CachyOS 上搭配 NVIDIA 显卡的性能对比</a>
+          </h2>
+          <p class="card-summary">本文对比了在 CachyOS 系统上，使用 NVIDIA GeForce RTX 5090 笔记本显卡时，KDE Plasma 6.7、GNOME Shell 50.3 和 Xfce 4.20 三款桌面环境的图形与游戏性能。测试基于 Razer Blade 18 2026 笔记本，采用默认设置。由于时间有限，仅测试了这三款桌面，其中 Xfce 4.20 使用 X11 协议（Wayland 会话无法正常启动）。结果显示各桌面在默认配置下的性能差异。</p>
+          <div class="card-actions">
+            <a class="btn-detail" href="articles/cd680d849388537b2fdeba3e48e761c5.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.phoronix.com/review/cachyos-desktops-july-2026" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </article>
+
+        <article class="card">
+           <div class="card-meta">
+             <span class="tag" style="background:#8b5cf61a;color:#8b5cf6;border-color:#8b5cf630">桌面环境</span>
+             <span class="source">Linux Today</span>
+           </div>
+          <h2 class="card-title">
+            <a href="articles/5a8641a9cc220c9aa2bce944b228d4d3.html">AppGrid 1.9 KDE Plasma 启动器带来紧凑模式</a>
+          </h2>
+          <p class="card-summary">AppGrid 1.9 为 KDE Plasma 桌面环境带来了全新的紧凑模式，让用户能够以更高效、更有条理的方式启动应用程序，提升日常操作体验。</p>
+          <div class="card-actions">
+            <a class="btn-detail" href="articles/5a8641a9cc220c9aa2bce944b228d4d3.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.linuxtoday.com/blog/appgrid-1-9-kde-plasma-launcher-brings-compact-mode/" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </article></div>
+      </section>
+
+      <section class="category-section">
+        <h2 class="section-title">其他 <span class="count">4</span></h2>
         <div class="grid">
         <article class="card">
            <div class="card-meta">
@@ -455,100 +549,6 @@
           <div class="card-actions">
             <a class="btn-detail" href="articles/27b6d30f1f33f1576666360acbfe9149.html">查看全文翻译</a>
             <a class="read-more" href="https://itsfoss.com/news/vocalinux-beta-release/" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
-        </article>
-
-        <article class="card">
-           <div class="card-meta">
-             <span class="tag" style="background:#a78bfa1a;color:#a78bfa;border-color:#a78bfa30">其他</span>
-             <span class="source">Phoronix</span>
-           </div>
-          <h2 class="card-title">
-            <a href="articles/2673c29762c25c7c550881a93b1da7c1.html">冷重置恢复功能逐步完善，助力英特尔GPU在Linux上表现更佳</a>
-          </h2>
-          <p class="card-summary">英特尔工程师正在为Linux内核的Direct Rendering Manager (DRM)驱动引入冷重置恢复方法，初始重点针对Intel Xe内核图形驱动。该机制用于处理需要完全设备电源循环才能恢复的硬件错误，特别是电源管理单元（PUNIT）错误，这些错误在热重置和驱动重载后仍可能持续存在。补丁引入了新的DRM楔入恢复方法，并通过uevent通知用户空间，结合udev可执行相应操作。</p>
-          <div class="card-actions">
-            <a class="btn-detail" href="articles/2673c29762c25c7c550881a93b1da7c1.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.phoronix.com/news/Intel-Cold-Reset-Recovery-Linux" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
-        </article></div>
-      </section>
-
-      <section class="category-section">
-        <h2 class="section-title">桌面环境 <span class="count">5</span></h2>
-        <div class="grid">
-        <article class="card">
-           <div class="card-meta">
-             <span class="tag" style="background:#8b5cf61a;color:#8b5cf6;border-color:#8b5cf630">桌面环境</span>
-             <span class="source">It's FOSS News</span>
-           </div>
-          <h2 class="card-title">
-            <a href="articles/f96c6861be8523e55a713bb645785fef.html">事实证明Wayland并非人人所说的输入延迟灾难</a>
-          </h2>
-          <p class="card-summary">一位开发者自制的点击到光子延迟测试设备，对X11、Wayland、VRR及DXVK分支进行了对比测试。结果显示，Wayland与X11的延迟差异极小（仅0.14-0.22毫秒），VRR可降低0.26-0.45毫秒延迟，而真正的延迟元凶是XWayland（增加3.13毫秒）。建议Linux玩家优先使用原生Wayland、开启VRR并安装dxvk-low-latency分支。</p>
-          <div class="card-actions">
-            <a class="btn-detail" href="articles/f96c6861be8523e55a713bb645785fef.html">查看全文翻译</a>
-            <a class="read-more" href="https://itsfoss.com/news/x11-vs-wayland-input-latency/" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
-        </article>
-
-        <article class="card">
-           <div class="card-meta">
-             <span class="tag" style="background:#8b5cf61a;color:#8b5cf6;border-color:#8b5cf630">桌面环境</span>
-             <span class="source">Phoronix</span>
-           </div>
-          <h2 class="card-title">
-            <a href="articles/814c20152bd410dc60045b1be7485d7f.html">GNOME因AI生成报告更改安全披露政策</a>
-          </h2>
-          <p class="card-summary">由于AI/LLM生成的安全报告大量涌入，GNOME项目调整了安全披露政策。从下月起，披露窗口将从行业标准的90天缩短至30天。对于禁止AI贡献的项目，安全报告将不再转发，而是直接关闭。此外，自2020年起负责GNOME安全追踪的Red Hat员工Michael Catanzaro因疲惫将于11月卸任，正在寻找接替者。</p>
-          <div class="card-actions">
-            <a class="btn-detail" href="articles/814c20152bd410dc60045b1be7485d7f.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.phoronix.com/news/GNOME-Security-Changes-2026" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
-        </article>
-
-        <article class="card">
-           <div class="card-meta">
-             <span class="tag" style="background:#8b5cf61a;color:#8b5cf6;border-color:#8b5cf630">桌面环境</span>
-             <span class="source">Linux Today</span>
-           </div>
-          <h2 class="card-title">
-            <a href="articles/1fa6a1dad1433719ad91ee493a882a02.html">Chrome 为经典版 uBlock Origin 再关一扇门</a>
-          </h2>
-          <p class="card-summary">Chrome 的最新更新进一步限制了经典版 uBlock Origin 扩展的功能，影响了用户的使用体验。这一变化标志着该广告拦截工具在 Chrome 浏览器中的兼容性持续下降。</p>
-          <div class="card-actions">
-            <a class="btn-detail" href="articles/1fa6a1dad1433719ad91ee493a882a02.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.linuxtoday.com/blog/chrome-closes-another-door-on-classic-ublock-origin/" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
-        </article>
-
-        <article class="card">
-           <div class="card-meta">
-             <span class="tag" style="background:#8b5cf61a;color:#8b5cf6;border-color:#8b5cf630">桌面环境</span>
-             <span class="source">Linux Today</span>
-           </div>
-          <h2 class="card-title">
-            <a href="articles/4bf7e5c73f7d6f9ad33a96f0070e2019.html">Yserver 是一款用 Rust 从头编写的全新 Linux X11 服务器</a>
-          </h2>
-          <p class="card-summary">Yserver 是一款专为 Linux 设计的创新 X11 服务器，完全使用 Rust 语言从头构建。它旨在通过前沿技术提升用户的 Linux 体验，标志着 X11 服务器领域的一次重要革新。</p>
-          <div class="card-actions">
-            <a class="btn-detail" href="articles/4bf7e5c73f7d6f9ad33a96f0070e2019.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.linuxtoday.com/blog/yserver-is-a-new-x11-server-for-linux-written-from-scratch-in-rust/" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
-        </article>
-
-        <article class="card">
-           <div class="card-meta">
-             <span class="tag" style="background:#8b5cf61a;color:#8b5cf6;border-color:#8b5cf630">桌面环境</span>
-             <span class="source">Linux Today</span>
-           </div>
-          <h2 class="card-title">
-            <a href="articles/9292f86f1b153169f1618b1292740af6.html">Antergos NeXT 初探：搭载 KDE Plasma 的 Antergos Linux 现代复兴</a>
-          </h2>
-          <p class="card-summary">本文介绍了 Antergos NeXT 的初步印象，这是一款基于 KDE Plasma 桌面环境的现代版 Antergos Linux 发行版。它专为希望提升 Linux 使用体验的用户设计，融合了经典与创新元素。</p>
-          <div class="card-actions">
-            <a class="btn-detail" href="articles/9292f86f1b153169f1618b1292740af6.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.linuxtoday.com/blog/first-look-at-antergos-next-a-modern-revival-of-antergos-linux-with-kde-plasma/" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article></div>
       </section>

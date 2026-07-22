@@ -3782,5 +3782,137 @@
     "title_zh": "Antergos NeXT 初探：搭载 KDE Plasma 的 Antergos Linux 现代复兴",
     "summary_zh": "本文介绍了 Antergos NeXT 的初步印象，这是一款基于 KDE Plasma 桌面环境的现代版 Antergos Linux 发行版。它专为希望提升 Linux 使用体验的用户设计，融合了经典与创新元素。",
     "fulltext_zh": "探索 Antergos NeXT 的功能特性，这是 Antergos Linux 的一款现代版本，搭载 KDE Plasma 桌面环境。非常适合那些希望提升 Linux 使用体验的用户。\n\n本文《First Look at Antergos NeXT: A Modern Revival of Antergos Linux with KDE Plasma》首发于 Linux Today。"
+  },
+  "7394600c877e3d7c9e43f3c3932f87c7": {
+    "id": "7394600c877e3d7c9e43f3c3932f87c7",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/07/ubuntu-2610-certified-hardware-check",
+    "title_en": "Ubuntu 26.10 will add Ubuntu Certified checking to Settings",
+    "summary_en": "Wondering if your laptop or desktop PC is Ubuntu Certified? Ubuntu 26.10 is adding a new way to check from the Settings app. A new row in Settings > System > About reads &#8220;check if this computer is Ubuntu Certified&#8221;. Clicking it opens a new page that will read the local/cached status from the com.ubuntu.hwctl service (the Canonical hardware API introduced in 2025). Ubuntu&#8217;s has had a command-line way to check certification for a while, using hwlib. In 26.10 (Stonking Stingray), ",
+    "pub_date": "Tue, 21 Jul 2026 22:56:00 +0000",
+    "title_zh": "Ubuntu 26.10 将在设置中添加 Ubuntu 认证检查功能",
+    "summary_zh": "Ubuntu 26.10 将在“设置 > 系统 > 关于”页面新增“检查此电脑是否通过 Ubuntu 认证”选项，用户可通过图形界面而非命令行查询硬件认证状态。该功能会读取 Canonical 硬件 API 的本地缓存结果，避免每次打开都访问服务器。状态包括已认证、未认证、已为其他版本认证、未认证但存在类似认证型号等。用户还可选择定期检查，仅发送硬件信息，不含个人数据。该功能已上传至每日构建版，预计在 10 月中旬稳定版中正式推出。",
+    "fulltext_zh": "Ubuntu 26.10 将在设置中添加 Ubuntu 认证检查功能 - OMG! Ubuntu\n想知道你的笔记本电脑或台式电脑是否\n？Ubuntu 26.10 新增了一种检查方式，位于\n设置 > 系统 > 关于\n页面中，显示“检查此电脑是否通过 Ubuntu 认证”。点击该选项将打开一个新页面，读取来自\nCanonical 硬件 API\n的本地/缓存状态。\nUbuntu 此前已提供命令行方式检查认证，使用\n），现在你可以通过\n图形界面而非终端命令来检查。\n可显示的状态包括：\n已认证\n未认证\n已为其他 Ubuntu 版本认证\n未认证但存在类似认证型号\n此外，还有一个选项可以启用定期 Ubuntu 认证检查。这会向 Canonical 服务器发送你的硬件详细信息以检查认证状态。与 Canonical 所有可选报告功能一样，不会附带任何个人数据。\n该功能会首先读取缓存结果，而不是每次打开时都访问 Canonical 服务器。如果设备\n未认证，但存在相关的认证系统，该页面会提供一个链接，用于查看潜在兼容性的更多详细信息。\n笔记本电脑或台式电脑——许多主流 OEM 厂商都提供此类设备，包括\n——这一变化将使检查你的认证覆盖范围变得更加容易。\n如果你拥有官方 Ubuntu 认证设备，这个新面板可以帮助你了解自己的硬件配置是否与某个认证型号相似。\n设备要作为官方 Ubuntu 认证产品出售，ODM 或 OEM 需要向 Canonical 支付许可费，以针对其搭载的 Ubuntu 版本验证硬件。\n这笔费用涵盖了 Canonical 进行的额外测试和维护工作，有时还包括构建定制 OEM 镜像，并有助于保持更新和硬件支持的持续运行。\n我们大多数人都在没有闪亮“认证”标签的设备上运行 Ubuntu，而且它们运行良好。认证状态并不意味着设备比未认证的设备运行得更好，只是表明 OEM 为测试和持续维护付费，以确保其运行良好。\n本周已上传，因此未来几周内，Ubuntu 26.10 每日构建版本的用户将能看到该功能——在 10 月中旬稳定版发布之前。"
+  },
+  "2476025ced4983c8ed2850ca6cf05d9f": {
+    "id": "2476025ced4983c8ed2850ca6cf05d9f",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/gnome-security-tracking-limbo/",
+    "title_en": "GNOME's Security Might Be in Peril as Lone Tracker Goes Off",
+    "summary_en": "Michael Catanzaro has single-handedly run GNOME security tracking since 2020, but he is leaving in December.",
+    "pub_date": "Tue, 21 Jul 2026 10:17:57 GMT",
+    "title_zh": "GNOME的安全可能因唯一追踪者离职而陷入危机",
+    "summary_zh": "自2020年以来，Michael Catanzaro独自负责GNOME的安全问题追踪工作，但他将于2026年12月离职。他呼吁有经验的社区成员接替这一角色，并调整了漏洞报告处理流程：自2026年8月1日起，新报告的披露期限从90天缩短至30天。同时，涉及AI生成的报告将不再转发给禁止AI贡献的项目。",
+    "fulltext_zh": "GNOME的安全可能因唯一追踪者离职而陷入危机\n\n自2020年以来，Michael Catanzaro一直独自负责GNOME的安全问题追踪工作，但他将于12月离职。\n\n他将卸任管理GNOME安全问题追踪的职责，自2020年11月起，他基本上独自承担了这一角色，并得到了社区的支持。他将这项工作描述为主要是行政性的，从报告提交的那一刻起跟踪每一份报告，直到问题得到修复或截止日期到期，并请求……\n\n到2026年11月1日，Michael将停止追踪新报告的安全问题，只关注在此日期之前已在处理中的问题。到12月1日，他预计与该剩余批次相关的所有披露截止日期都将到期，他处理问题的工作也将完成。\n\n与此同时，他还在改变GNOME处理漏洞报告的整体方式。他指出AI生成的安全提交数量在增加，并表示对于2026年8月1日及之后报告的问题，披露截止日期现在仅为30天，比之前的90天减少了60天。\n\n那些禁止AI贡献的项目需要注意。任何提交给GNOME安全团队的安全问题，如果涉及AI参与，将不会被转发给这些项目。Michael将改为在GNOME安全团队自己的追踪器中关闭该报告，并直接联系项目维护者，告知他们该报告的存在。\n\n需要有人站出来\n\nMichael目前正在寻找接替这一角色的人选，但并非任何人都可以。他希望是一位经验丰富的社区成员，一位已经熟悉项目运作的人来接手。\n\n他愿意帮助任何接手的人入门，但明确表示这不是适合新手的任务。\n\n接替者将继承通过表单提交的工作流程，该表单将提交内容发送给安全团队，团队的目标是在两个工作日内确认新报告。\n\n通过该表单提交的任何内容都会在GitLab上创建一个机密问题，然后分配给相关项目维护者作为主要处理人。\n\n他们还需要接管追踪GNOME所有安全问题的古老方式，即在GNOME的GitLab实例上维护一个电子表格。该电子表格需要手动更新，每个新报告、修复和披露都按年份和项目分表记录。\n\n其他Linux项目已经采用了更接近自动化的方式。例如，某个项目会发布可搜索、可过滤的、与CVE ID关联的安全通知。Fedora和Red Hat则通过另一种方式路由追踪，即一个父级错误记录底层缺陷，然后针对每个受影响的包提交单独的追踪错误。\n\n你可以查看Michael的更多信息。\n\n喜欢这篇更新吗？支持独立的Linux新闻报道\n\nIt's FOSS 过去14年来一直帮助人们使用Linux。请帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获取5本电子书。\n\n一次付费，永久享受\n\n任意金额，无需承诺\n\n一个热爱开源软件、定制PC组装、赛车运动以及探索这个世界无限可能的技术爱好者。\n\nLinus Torvalds 多年来一直对AI不屑一顾，如今却为其背书\n\n15本O'Reilly Linux电子书不到30美元：从命令行基础到Kubernetes的捆绑包\n\nX（前身为Twitter）可能即将开源\n\nVocalinux 将你的语音转化为文本，无需交出语音数据\n\n事实证明，Wayland并非像大家说的那样是输入延迟的灾难\n\n成为更好的Linux用户\n\n通过FOSS每周通讯，你可以学习有用的Linux技巧，发现应用程序，探索新的发行版，并随时了解Linux世界的最新动态\n\n太好了！您已成功注册。\n\n欢迎回来！您已成功登录。\n\n您已成功订阅It's FOSS。\n\n您的链接已过期。\n\n成功！请检查您的电子邮件以获取用于登录的魔法链接。\n\n成功！您的账单信息已更新。\n\n您的账单未更新。"
+  },
+  "b088a7e1c46c5c0a70711cec6ece5a13": {
+    "id": "b088a7e1c46c5c0a70711cec6ece5a13",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Cryptsetup-2.8.7-Released",
+    "title_en": "Cryptsetup 2.8.7 Released To Deal With Fallout Of Linux's Rushed AF_ALG Deprecation",
+    "summary_en": "Linux's cryptsetup for configuring and managing encrypted storage devices is ready with a new version as the developers work to deal with the recent deprecation of the Linux AF_ALG interface...",
+    "pub_date": "Tue, 21 Jul 2026 18:00:00 -0400",
+    "title_zh": "Cryptsetup 2.8.7 发布以应对 Linux 仓促弃用 AF_ALG 的后果",
+    "summary_zh": "Cryptsetup 2.8.7 发布，旨在应对 Linux 内核仓促弃用 AF_ALG 接口带来的影响。该版本使 libcryptsetup 能在无 AF_ALG 时回退到用户空间加密库或临时 dm-crypt 映射，但存在算法兼容性问题，如 Adiantum、Serpent、Twofish 等可能缺失。此外还包含密钥环处理、LUKS 卷密钥摘要冲突修复及 Aria/Camellia 加密支持等改进。",
+    "fulltext_zh": "Cryptsetup 2.8.7 发布以应对 Linux 仓促弃用 AF_ALG 的后果 - Phoronix\nCryptsetup 2.8.7 发布以应对 Linux 仓促弃用 AF_ALG 的后果\n2026年7月21日 下午6:00 EDT\n\n用于配置和管理加密存储设备的 Linux cryptsetup 已推出新版本，开发者正努力应对近期 Linux AF_ALG 接口被弃用的问题。\n\nCryptsetup 一直是 AF_ALG 的用户之一，该接口允许用户空间应用程序直接访问 Linux 内核内部加密 API。但 AF_ALG 的多个方面因安全问题被迅速移除，AF_ALG 因其“巨大的攻击面”而被弃用。对于 Linux 7.3，AF_ALG 将通过新的 sysctl 可调参数进一步被可选地限制。这给 Cryptsetup 等用户空间软件带来了挑战，因为它们长期依赖这个如今被认为安全负担过大的接口。\n\n随着今天 Cryptsetup 2.8.7 的发布，他们已开始调整代码，确保其能在没有 AF_ALG 的情况下生存，并能良好地回退到用户空间加密库。目前用户空间库方法存在一些限制，如 v2.8.7 所述：\n\n“与 Linux 内核 AF_ALG 加密用户空间接口弃用相关的变更：Linux 内核维护者决定弃用 AF_ALG 接口（cryptsetup 大量使用该接口），并计划出于安全原因将其移除（或严格限制）。Libcryptsetup 使用用户空间（主要通过 AF_ALG）处理 LUKS 密钥槽以及其他格式的磁盘元数据。使用 AF_ALG 确保了用户空间和后续内核设备激活时使用相同的算法集。\n\n虽然 libcryptsetup 有回退到用户空间库的概念，但并非在所有情况下都使用。\n在此版本中，libcryptsetup 可以使用用户空间加密库、AF_ALG（如果存在），并在某些情况下（如 LUKS 密钥槽）回退到临时 dm-crypt 映射。最后一个选项需要 root 权限。这确保了即使 AF_ALG 被禁用或受限，大多数操作仍能继续工作。\n\n不幸的是，移除 AF_ALG 可能会导致严重的兼容性问题，如果所需算法（或加密模式）未在用户空间库中实现。一个典型例子是 Adiantum 密码，它仅在内核中实现。此外，像 Serpent 或 Twofish（在 XTS 模式下）等密码在多个用户空间库中缺失。如果 AF_ALG 接口不可用，cryptsetup 的密码基准测试将不再可用。”\n\n除了应对 AF_ALG 的快速消失，Cryptsetup 2.8.7 还带来了密钥环处理变更、处理可能的 LUKS 卷密钥摘要冲突的变更、libgcrypt 后端中的 Aria 和 Camellia 密码支持，以及其他修复。\n\nCryptsetup 2.8.7 可从以下地址下载：\nEFS 文件系统计划在 Linux 7.3 中移除，已超过20年未维护\nLinux 7.3 将克服 PCIe Gen5 NVMe SSD 小 I/O 的“重大瓶颈”\n下一个 Bcachefs 版本计划在内核模块中包含 Rust 代码\nLinux MD RAID5 可扩展性提升高达17%\nKSMBD 在 Linux 7.2 中添加了 SMB2 压缩支持\nNTFS3 驱动在 Linux 7.2 中获得了错误修复和微小改进\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过20,000篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n最后一个 MPEG-4 Visual 专利已过期\nFreeBSD 16 从其基础系统中移除了最后一段 GPL 代码\nLinus Torvalds 重申 Linux 并非“反 AI”也不是“社会战士”项目\nFrame：一个完全用 x86_64 汇编编写的新 X11 服务器实现\nFirefox 153 现已可用"
+  },
+  "fec3fcf30b950a4727b3bcd7a9623aaf": {
+    "id": "fec3fcf30b950a4727b3bcd7a9623aaf",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Ubuntu-Snap-Three-More-Vulns",
+    "title_en": "Three New Ubuntu Snap Vulnerabilities Made Public - One Dates Back To Ubuntu 16.04 LTS",
+    "summary_en": "Canonical today disclosed three new Snap security vulnerabilities affecting snapd. Two are rated high impact vulnerabilities while the third is considered medium but covers all Ubuntu releases of the past decade going back to Ubuntu 16.04 LTS...",
+    "pub_date": "Tue, 21 Jul 2026 14:02:22 -0400",
+    "title_zh": "三个新的 Ubuntu Snap 漏洞被公开——其中一个可追溯至 Ubuntu 16.04 LTS",
+    "summary_zh": "Canonical 公开了三个影响 snapd 的 Snap 安全漏洞。其中两个被评为高影响漏洞，第三个为中等影响，但覆盖了过去十年所有 Ubuntu 版本，可追溯至 Ubuntu 16.04 LTS。CVE-2026-8933 允许本地攻击者提升权限，影响 Ubuntu 22.04 及更高版本。CVE-2026-15226 允许本地攻击者从受限 root 逃逸至非受限 root。CVE-2024-5300 影响 Ubuntu 16.04 及更高版本，允许沙盒应用访问哈希后的用户密码。",
+    "fulltext_zh": "三个新的 Ubuntu Snap 漏洞被公开——其中一个可追溯至 Ubuntu 16.04 LTS - Phoronix\n三个新的 Ubuntu Snap 漏洞被公开——其中一个可追溯至 Ubuntu 16.04 LTS\n发布于 2026 年 7 月 21 日下午 2:02（美国东部时间）。\n\nCanonical 今天公开了三个影响 snapd 的新 Snap 安全漏洞。其中两个被评为高影响漏洞，第三个被认为是中等影响，但覆盖了过去十年所有 Ubuntu 版本，可追溯至 Ubuntu 16.04 LTS。\n\nCVE-2026-8933 由 Qualys 发现，允许本地攻击者提升权限。CVE-2026-8933 影响 Ubuntu 22.04 及更高版本的 LTS 版本，其 CVSS3.1 评分被评为高。\n\n另一个“高”漏洞是 CVE-2026-15226，它允许本地攻击者从受限 root 逃逸至非受限 root。\n\n第三个影响 Ubuntu 16.04 及更高版本 LTS 的漏洞是 CVE-2024-5300，它允许沙盒应用访问哈希后的用户密码。\n\n关于这些最新 Ubuntu Snap 安全问题的更多详情，请参见：\n\nCanonical 正式推出“企业商店”用于离线/气隙 Ubuntu 使用\nUbuntu 内核团队警告 AMD GPU 性能临时回退高达 42 倍\nCanonical 谈让 Ubuntu for ARM64 成为“真正的一流架构”\nRust Coreutils cp 因最新不兼容性导致 Ubuntu 镜像构建失败\nCanonical 成为 Trifecta Tech 首个金牌赞助商，用于构建更多 Rust 基础设施\nUbuntu 26.10 Snapshot 2 发布，用于月度测试\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\n最后一个 MPEG-4 Visual 专利已过期\nFreeBSD 16 从其基础系统中移除最后一段 GPL 代码\nLinus Torvalds 重申 Linux 并非“反 AI”也不是“社会斗士”项目\nFrame：一个完全用 x86_64 汇编编写的新 X11 服务器实现\nFirefox 153 发布，支持 Vulkan 视频解码和实验性 JPEG-XL\nAMD 发布 Lemonade 11.0 本地 AI 服务器，具备文本转语音及其他新功能\nUbuntu 内核团队警告 AMD GPU 性能临时回退高达 42 倍\n树莓派 5 IOMMU 驱动正在为主线 Linux 内核开发中\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "c6a8aea21013763b1d7df20f761febd7": {
+    "id": "c6a8aea21013763b1d7df20f761febd7",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Qualcomm-Zenbook-A16-X2EE",
+    "title_en": "Qualcomm Posts Linux Patches For X2 Elite Extreme Powered ASUS Zenbook A16",
+    "summary_en": "Following recent Linux kernel patches enabling the Snapdragon X2 Elite powered Lenovo Yoga Slim 7x Gen11 and HP EliteBook X G2q X2 Elite laptops to boot outside of Windows 11 on ARM, Qualcomm engineers have now posted a new patch series for getting the X2 Elite Extreme powered ASUS Zenbook A16 working on Linux...",
+    "pub_date": "Tue, 21 Jul 2026 13:49:44 -0400",
+    "title_zh": "高通为搭载X2 Elite Extreme的华硕Zenbook A16提交Linux补丁",
+    "summary_zh": "高通工程师发布了新的补丁系列，旨在让搭载Snapdragon X2 Elite Extreme处理器的华硕Zenbook A16在Linux上正常运行。该高端ARM笔记本配备18核X2 Elite Extreme SoC、48GB内存和OLED显示屏。补丁支持音频播放、键盘、触摸板、充电、Wi-Fi、蓝牙等功能，视频加速器也将在后续补丁中启用。",
+    "fulltext_zh": "高通为搭载X2 Elite Extreme的华硕Zenbook A16提交Linux补丁 - Phoronix\n\n高通为搭载X2 Elite Extreme的华硕Zenbook A16提交Linux补丁\n2026年7月21日下午1:49 EDT\n\n继近期Linux内核补丁使搭载Snapdragon X2 Elite的联想Yoga Slim 7x Gen11和HP EliteBook X G2q X2 Elite笔记本电脑能够在Windows 11 on ARM之外启动后，高通工程师现已发布新的补丁系列，旨在让搭载X2 Elite Extreme的华硕Zenbook A16在Linux上正常工作。\n\n高通公司的Konrad Dybcio提交了这些补丁，使搭载X2 Elite Extreme的Zenbook A16能够在这款配备48GB内存和OLED显示屏的高端ARM笔记本上运行：\n\n“UX3607OA是基于高通Glymur平台的华硕Zenbook A16的一个变体。它搭载18核X2 Elite Extreme SoC、48GiB内存、NVMe存储、2880 x 1800 OLED屏幕，以及其他典型的Glymur平台功能。\n\n其硬件布线相较于14英寸SKU差异很大——较大型号基于系统级封装参考设计，而较小型号则源自更常见的板上芯片基础。\n\n- 音频播放（4个扬声器）\n- 键盘、触摸板、盖子开关\n- 隐私LED（摄像头使用、摄像头遮挡、麦克风静音）\n- 充电、Type-C、Type-A端口\n- 板载SD卡槽（RTS5329）\n- Wi-Fi、蓝牙（QCC2072）\n- 触摸屏在具备该功能的SKU上应能工作，但由于无法接触此类设备，尚未经过测试\n- 华硕目前不提供带PCIe调制解调器的SKU，但如果将来推出，启用该功能应只需进行样板式更改\n\n视频加速器（Iris）也能与正在推进中的补丁配合工作，并将在该补丁落地后单独启用。”\n\n很高兴看到所有主要功能都已就位，并且高通工程师直接致力于为这些笔记本电脑的设备树启用补丁。还有一些SoCCP补丁仍需落地，但预计很快会被合并。关于在Linux上启用这款高端Snapdragon X2 Elite Extreme笔记本华硕Zenbook A16的更多详情，请参见相关链接。\n\n华硕UX3607OA Zenbook A16的起售价为2199美元。\n\nInputPlumber 0.78发布，扩展了硬件支持\n\nLinux的高通加密加速器驱动“有害”且将被禁用：比CPU慢，且存在历史Bug\n\n更多华硕主板将在Linux 7.3上获得正常工作的传感器监控\n\n新Linux驱动改善对GETAC加固笔记本电脑的支持\n\nImagination PowerVR BXM-4-64 GPU固件为T-Head TH1520上游化\n\nSystem76推出新款Adder Pro笔记本，配备NVIDIA GPU、2K OLED及高达96GB内存\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动等主题。Michael也是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\n最后一个MPEG-4 Visual专利已过期\n\nFreeBSD 16从其基础系统中移除了最后一段GPL代码\n\nLinus Torvalds重申Linux并非“反AI”也不是“社会战士”项目\n\nFrame：一个完全用x86_64汇编编写的新X11服务器实现\n\nFirefox 153发布，支持Vulkan视频解码和实验性JPEG-XL\n\nAMD发布Lemonade 11.0本地AI服务器，支持文本转语音及其他新功能\n\nUbuntu内核团队警告临时性AMD GPU性能回归高达42倍\n\n树莓派5 IOMMU驱动正在为主线Linux内核开发中\n\n享受无广告浏览\n单页文章查看\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "cd680d849388537b2fdeba3e48e761c5": {
+    "id": "cd680d849388537b2fdeba3e48e761c5",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/cachyos-desktops-july-2026",
+    "title_en": "KDE Plasma 6.7 vs. GNOME Shell 50.3 vs. Xfce 4.20 On CachyOS With NVIDIA Graphics",
+    "summary_en": "Earlier this month I provided a look at the KDE Plasma 6.7 Wayland vs. X11 session performance for graphics/gaming on CachyOS using NVIDIA GeForce RTX 50 graphics. Since then Phoronix readers -- including some premium supporters -- requested seeing some additional desktops tested with the latest CachyOS packages. So here we are now with seeing how KDE Plasma 6.7 compared to the Wayland-only GNOME Shell 50.3 desktop as well as the X11-based Xfce 4.20 desktop on CachyOS.",
+    "pub_date": "Tue, 21 Jul 2026 12:00:00 -0400",
+    "title_zh": "KDE Plasma 6.7 vs. GNOME Shell 50.3 vs. Xfce 4.20 在 CachyOS 上搭配 NVIDIA 显卡的性能对比",
+    "summary_zh": "本文对比了在 CachyOS 系统上，使用 NVIDIA GeForce RTX 5090 笔记本显卡时，KDE Plasma 6.7、GNOME Shell 50.3 和 Xfce 4.20 三款桌面环境的图形与游戏性能。测试基于 Razer Blade 18 2026 笔记本，采用默认设置。由于时间有限，仅测试了这三款桌面，其中 Xfce 4.20 使用 X11 协议（Wayland 会话无法正常启动）。结果显示各桌面在默认配置下的性能差异。",
+    "fulltext_zh": "KDE Plasma 6.7 vs. GNOME Shell 50.3 vs. Xfce 4.20 在 CachyOS 上搭配 NVIDIA 显卡的性能对比 - Phoronix\n\nKDE Plasma 6.7 vs. GNOME Shell 50.3 vs. Xfce 4.20 在 CachyOS 上搭配 NVIDIA 显卡的性能对比\n发布于 2026 年 7 月 21 日 美国东部时间中午 12:00。\n\n本月早些时候，我介绍了在 CachyOS 上使用 NVIDIA GeForce RTX 50 系列显卡时，KDE Plasma 6.7 的 Wayland 与 X11 会话在图形/游戏方面的性能表现。此后，Phoronix 读者（包括部分用户）要求测试更多桌面环境与最新 CachyOS 软件包的组合。因此，现在我们来看看 KDE Plasma 6.7 与仅支持 Wayland 的 GNOME Shell 50.3 桌面，以及基于 X11 的 Xfce 4.20 桌面在 CachyOS 上的对比情况。\n\n与之前的测试类似，本轮跨桌面 Linux 游戏/图形测试是在 Razer Blade 18 2026 上进行的，这是该公司首款追求 Linux 认证的笔记本电脑。\n\n由于需要归还评测样机且时间有限，桌面对比仅限于 KDE Plasma 6.7.2、GNOME Shell 50.3 和 Xfce 4.20。CachyOS / Arch Linux 确实提供了实验性的 Xfce Wayland 支持，但尝试登录该会话时只出现黑屏。因此，Xfce 4.20 在此次对比中代表 X11 环境。\n\n在比较这些桌面选项时，使用 NVIDIA GeForce RTX 5090 笔记本显卡和 NVIDIA R610 驱动程序进行了一系列 Linux 图形/游戏基准测试。每个桌面的所有设置/配置均保持默认。\n\nRISC-V RVV 向量性能基准测试（使用 SpacemiT K3 SoC）\nLinux 7.2 特性：缓存感知调度、USB4STREAM、AMD ISP4、AMDGPU HDMI 2.1 FRL\nLinux 7.2 在 Threadripper 上显示一些不错的 I/O 改进和更快的轮询，以及一些回归问题\nBcachefs 1.38.6 基准测试：首个不再标记为“实验性”的版本\nIntel Core Ultra X7 Panther Lake 在 Linux 7.1 上的性能表现\n缓存感知调度在 AMD Zen 5 上为 PostgreSQL、Valkey、网络性能带来显著提升\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "8683ca00be14ec61d28e78cfd7eb7fd8": {
+    "id": "8683ca00be14ec61d28e78cfd7eb7fd8",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Ubuntu-Enterprise-Store",
+    "title_en": "Canonical Makes The \"Enterprise Store\" Official For Offline/Air-Gapped Ubuntu Usage",
+    "summary_en": "For months the Enterprise Store \"enterprise-store\" has been mentioned in some Ubuntu documentation and other elements while today it was formally announced by Canonical. The Enterprise Store is for helping to manage Ubuntu Linux deployments particularly within enterprise organizations that may have their computers air-gapped or otherwise strict Internet controls...",
+    "pub_date": "Tue, 21 Jul 2026 11:38:06 -0400",
+    "title_zh": "Canonical 正式推出“Enterprise Store”，用于离线/气隙 Ubuntu 环境",
+    "summary_zh": "Canonical 正式宣布推出“Enterprise Store”，旨在帮助企业在离线、气隙或严格互联网控制的环境中更高效地管理 Ubuntu Linux 部署。该工具作为 Ubuntu Pro 订阅的一部分，支持本地软件缓存、高可用性访问、细粒度版本控制等功能，便于在防火墙后部署 Snap、Charm 及其他 Ubuntu 软件。",
+    "fulltext_zh": "Canonical 正式推出“Enterprise Store”，用于离线/气隙 Ubuntu 环境 - Phoronix\n\nCanonical 正式推出“Enterprise Store”，用于离线/气隙 Ubuntu 环境\n2026年7月21日，美国东部时间上午11:38\n\n几个月来，“Enterprise Store”（企业商店）一直在一些 Ubuntu 文档和其他元素中被提及，而今天 Canonical 正式宣布了它。Enterprise Store 旨在帮助管理 Ubuntu Linux 部署，尤其适用于那些计算机可能处于气隙环境或具有严格互联网控制的企业组织。\n\nEnterprise Store 旨在使软件分发在离线/气隙或存在其他互联网访问限制的环境中更易于管理和扩展。同样适用于受软件版本控制监管且仅允许使用经过验证软件的行业。\n\nEnterprise Store 是 Ubuntu Pro 订阅的一部分，支持本地软件缓存、高可用性访问、细粒度版本控制以及其他功能，帮助 Snaps、Charms 及其他 Ubuntu 软件在防火墙后部署。\n\n对 Canonical 面向 Ubuntu Pro 客户的 Enterprise Store 感兴趣的用户，可以通过今天的公告了解更多信息。\n\n三个新的 Ubuntu Snap 漏洞被公开——其中一个可追溯到 Ubuntu 16.04 LTS\nUbuntu 内核团队警告：AMD GPU 性能临时回退高达 42 倍\nCanonical 致力于让 Ubuntu for ARM64 成为“真正的一等架构”\nRust Coreutils 的 cp 命令因最新不兼容性导致 Ubuntu 镜像构建失败\nCanonical 成为 Trifecta Tech 的首个金牌赞助商，致力于用 Rust 构建更多基础设施\nUbuntu 26.10 Snapshot 2 发布，用于月度测试\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他。\n\n最后一个 MPEG-4 Visual 专利已过期\nFreeBSD 16 从其基础系统中移除最后一段 GPL 代码\nLinus Torvalds 重申 Linux 并非“反 AI”也不是“社会战士”项目\nFrame：一个完全用 x86_64 汇编编写的新 X11 服务器实现\nFirefox 153 发布，支持 Vulkan 视频解码和实验性 JPEG-XL\nAMD 发布 Lemonade 11.0 本地 AI 服务器，支持文本转语音及其他新功能\nUbuntu 内核团队警告：AMD GPU 性能临时回退高达 42 倍\nRaspberry Pi 5 IOMMU 驱动程序正在为主线 Linux 内核开发\n\n享受无广告浏览\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "d1ba7a46a954442fa3bfe567356e8b70": {
+    "id": "d1ba7a46a954442fa3bfe567356e8b70",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/dietpi-10-5-enables-kms-drm-graphics-system-by-default-for-raspberry-pi-sbcs/",
+    "title_en": "DietPi 10.5 Enables KMS/DRM Graphics System by Default for Raspberry Pi SBCs",
+    "summary_en": "Learn about DietPi 10.5's default KMS/DRM graphics system for Raspberry Pi SBCs, offering improved graphics performance and seamless user interaction.\nThe post DietPi 10.5 Enables KMS/DRM Graphics System by Default for Raspberry Pi SBCs appeared first on Linux Today.",
+    "pub_date": "Tue, 21 Jul 2026 07:21:56 +0000",
+    "title_zh": "DietPi 10.5 为树莓派单板计算机默认启用 KMS/DRM 图形系统",
+    "summary_zh": "DietPi 10.5 版本为树莓派单板计算机默认启用了 KMS/DRM 图形系统，显著提升了图形性能，并带来更流畅的用户交互体验。",
+    "fulltext_zh": "了解 DietPi 10.5 为树莓派单板计算机默认启用的 KMS/DRM 图形系统，该系统提供了改进的图形性能和流畅的用户交互。\n\n该文章《DietPi 10.5 Enables KMS/DRM Graphics System by Default for Raspberry Pi SBCs》最初发表于 Linux Today。"
+  },
+  "1c60695e2ae2d9c3b764937a8df7f74f": {
+    "id": "1c60695e2ae2d9c3b764937a8df7f74f",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/linux-kernel-7-1-officially-released-heres-whats-new/",
+    "title_en": "Linux Kernel 7.1 Officially Released, Here’s What’s New",
+    "summary_en": "Linux Kernel 7.1 is here! Uncover the new features and enhancements that will elevate your Linux experience. Read more about the official release now.\nThe post Linux Kernel 7.1 Officially Released, Here’s What’s New appeared first on Linux Today.",
+    "pub_date": "Tue, 21 Jul 2026 07:20:17 +0000",
+    "title_zh": "Linux Kernel 7.1 正式发布，新特性一览",
+    "summary_zh": "Linux Kernel 7.1 正式发布，带来了多项新功能和改进，旨在提升用户体验。本文概述了该版本的主要亮点，包括性能优化、硬件支持增强以及安全性更新。更多详情请阅读完整报道。",
+    "fulltext_zh": "Linux Kernel 7.1 来了！探索那些将提升您 Linux 体验的新特性和增强功能。立即阅读关于正式发布的更多信息。\n\n该文章《Linux Kernel 7.1 正式发布，新特性一览》最初出现在 Linux Today 上。"
+  },
+  "5a8641a9cc220c9aa2bce944b228d4d3": {
+    "id": "5a8641a9cc220c9aa2bce944b228d4d3",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/appgrid-1-9-kde-plasma-launcher-brings-compact-mode/",
+    "title_en": "AppGrid 1.9 KDE Plasma Launcher Brings Compact Mode",
+    "summary_en": "Explore AppGrid 1.9 for KDE Plasma, now with a compact mode. Experience a more efficient and organized way to launch your applications effortlessly.\nThe post AppGrid 1.9 KDE Plasma Launcher Brings Compact Mode appeared first on Linux Today.",
+    "pub_date": "Tue, 21 Jul 2026 07:17:40 +0000",
+    "title_zh": "AppGrid 1.9 KDE Plasma 启动器带来紧凑模式",
+    "summary_zh": "AppGrid 1.9 为 KDE Plasma 桌面环境带来了全新的紧凑模式，让用户能够以更高效、更有条理的方式启动应用程序，提升日常操作体验。",
+    "fulltext_zh": "探索适用于 KDE Plasma 的 AppGrid 1.9，现在新增了紧凑模式。体验一种更高效、更有条理的方式来轻松启动您的应用程序。\n该文章 AppGrid 1.9 KDE Plasma Launcher Brings Compact Mode 首次出现在 Linux Today 上。"
+  },
+  "b96e2459de75988e094de8a0fc6b0cfd": {
+    "id": "b96e2459de75988e094de8a0fc6b0cfd",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/microsoft-secure-boot-key-expiration-affects-linux-ecosystem/",
+    "title_en": "Microsoft Secure Boot Key Expiration Affects Linux Ecosystem",
+    "summary_en": "Learn about the implications of Microsoft Secure Boot key expiration on the Linux ecosystem and how it affects system security and compatibility.\nThe post Microsoft Secure Boot Key Expiration Affects Linux Ecosystem appeared first on Linux Today.",
+    "pub_date": "Tue, 21 Jul 2026 07:15:09 +0000",
+    "title_zh": "Microsoft Secure Boot 密钥过期影响 Linux 生态系统",
+    "summary_zh": "本文探讨了 Microsoft Secure Boot 密钥过期对 Linux 生态系统的影响，包括系统安全性和兼容性方面的问题。该事件可能影响部分 Linux 系统的启动过程，需要用户或发行版采取相应措施。",
+    "fulltext_zh": "了解 Microsoft Secure Boot 密钥过期对 Linux 生态系统的影响，以及它如何影响系统安全性和兼容性。\n\n该文章《Microsoft Secure Boot Key Expiration Affects Linux Ecosystem》最初发表于 Linux Today。"
+  },
+  "f78e781dddb0ca64096950d5be280a2a": {
+    "id": "f78e781dddb0ca64096950d5be280a2a",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/8-best-free-and-open-source-linux-personal-finance-trackers/",
+    "title_en": "8 Best Free and Open Source Linux Personal Finance Trackers",
+    "summary_en": "Discover the 8 best free and open-source Linux personal finance trackers to manage your budget effectively and take control of your finances today.\nThe post 8 Best Free and Open Source Linux Personal Finance Trackers appeared first on Linux Today.",
+    "pub_date": "Tue, 21 Jul 2026 07:12:52 +0000",
+    "title_zh": "8款最佳免费开源Linux个人财务追踪器",
+    "summary_zh": "本文介绍了8款适用于Linux系统的免费开源个人财务追踪工具，帮助用户有效管理预算、掌控财务状况。这些工具涵盖不同功能特点，适合从简单记账到复杂财务分析的各种需求。",
+    "fulltext_zh": "发现8款最佳免费开源Linux个人财务追踪器，助你有效管理预算，掌控个人财务。\n\n本文首发于Linux Today。"
   }
 }

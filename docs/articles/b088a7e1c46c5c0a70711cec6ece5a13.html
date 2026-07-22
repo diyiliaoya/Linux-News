@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>这款主题让Discord在Ubuntu上更显和谐 — Linux 中文速报</title>
+<title>Cryptsetup 2.8.7 发布以应对 Linux 仓促弃用 AF_ALG 的后果 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>这款主题让Discord在Ubuntu上更显和谐</h1>
+  <h1>Cryptsetup 2.8.7 发布以应对 Linux 仓促弃用 AF_ALG 的后果</h1>
 
-  <div class="article-summary">一款名为“Discord GNOME主题”的自定义CSS主题，能让Discord界面更贴近Adwaita和GNOME HIG风格。它适用于Vesktop（基于Discord网页客户端的第三方封装），需配合Vencord模组使用。主题支持自定义字体、透明效果等，但需注意Discord官方可能随时更改UI，且此主题为志愿者维护的非官方项目。</div>
+  <div class="article-summary">Cryptsetup 2.8.7 发布，旨在应对 Linux 内核仓促弃用 AF_ALG 接口带来的影响。该版本使 libcryptsetup 能在无 AF_ALG 时回退到用户空间加密库或临时 dm-crypt 映射，但存在算法兼容性问题，如 Adiantum、Serpent、Twofish 等可能缺失。此外还包含密钥环处理、LUKS 卷密钥摘要冲突修复及 Aria/Camellia 加密支持等改进。</div>
 
-  <div class="article-body"><p>这款主题让Discord在Ubuntu上更显和谐 - OMG! Ubuntu</p><p>Discord虽然支持Linux，但并未花太多心思去融入系统环境，这也是为什么第三方客户端如此流行——尤其因为它们可以应用主题。</p><p>这款主题之所以得名，简单来说，就是因为它的本质：一个自定义主题，将Discord重新设计得更像Adwaita风格，并遵循GNOME HIG（至少尽可能接近Discord CSS所允许的程度）。</p><p>该主题（很大程度上）基于上游Adwaita，因此虽然无法在Ubuntu上实现完美匹配，但比默认界面要协调得多。由于全部采用CSS编写，可以轻松调整和配置。</p><p>（修改版Discord客户端）</p><p>此主题不适用于官方Discord应用，除非你已通过支持主题、插件、隐私选项等的Vencord模组对其进行修补（注意：Vencord无法修改Snap版本的Discord）。</p><p>但该主题的开发者建议在Vesktop中使用它。Vesktop是Discord网页客户端（官方应用本质上也是网页客户端）的重新打包版本，内置了Vencord，并额外进行了优化，还修复了Discord在Linux上屏幕共享时无声的问题。</p><p>Vesktop也是此处的理想选择，因为它提供了使用GNOME风格标题栏的选项。当通过“设置 &gt; Vesktop设置 &gt; ‘Discord标题栏’”启用后，能更好地营造出平台模仿的效果。</p><p>开发者还建议安装Fresher来去除“Nitro”的推销提示，将语言设置为英语（美国）以确保图标匹配正常，如果需要，还可以使用GNOME扩展来渲染透明侧边栏。</p><p>我未能让模糊效果生效，但有一件事你肯定需要：将GNOME Shell扩展“Rounded Window Corners Reborn”设置为“强制圆角”，否则主应用窗口会带有尖锐的边角。</p><p>——Vesktop支持DEB、AppImage、Flatpak、RPM等Linux格式——你可以通过将以下URL粘贴到“设置 &gt; 主题 &gt; 在线主题”中来安装该主题：</p><p>https://raw.githubusercontent.com/ricewind012/discord-gnome-theme/master/gnome.theme.css</p><p>或者下载原始的.css文件到~/.config/vesktop/themes目录。拥有本地副本后，你可以编辑它，例如调整透明效果，或让外观更接近Ubuntu的Yaru主题。</p><p>例如，在主题中添加以下内容：</p><p>--document-font-family: &quot;Ubuntu&quot;, sans-serif;</p><p>--document-font-size: 12pt;</p><p>--monospace-font-family: &quot;Ubuntu Mono&quot;, monospace;</p><p>但如果你是一位狂热的Discord用户，想使用比官方应用更少干扰的替代品，并且不介意看到一个与周围窗口更协调的界面，不妨试试这款主题，看看是否适合你。</p><p>请记住，Discord自身的UI可能会在无预警的情况下进行服务端更改，而且尽管这款主题仍在维护中——不同于你过去可能读到的类似主题——它只是一个非官方的志愿者项目，并非Discord的官方产品。</p></div>
+  <div class="article-body"><p>Cryptsetup 2.8.7 发布以应对 Linux 仓促弃用 AF_ALG 的后果 - Phoronix</p><p>Cryptsetup 2.8.7 发布以应对 Linux 仓促弃用 AF_ALG 的后果</p><p>2026年7月21日 下午6:00 EDT</p><p>用于配置和管理加密存储设备的 Linux cryptsetup 已推出新版本，开发者正努力应对近期 Linux AF_ALG 接口被弃用的问题。</p><p>Cryptsetup 一直是 AF_ALG 的用户之一，该接口允许用户空间应用程序直接访问 Linux 内核内部加密 API。但 AF_ALG 的多个方面因安全问题被迅速移除，AF_ALG 因其“巨大的攻击面”而被弃用。对于 Linux 7.3，AF_ALG 将通过新的 sysctl 可调参数进一步被可选地限制。这给 Cryptsetup 等用户空间软件带来了挑战，因为它们长期依赖这个如今被认为安全负担过大的接口。</p><p>随着今天 Cryptsetup 2.8.7 的发布，他们已开始调整代码，确保其能在没有 AF_ALG 的情况下生存，并能良好地回退到用户空间加密库。目前用户空间库方法存在一些限制，如 v2.8.7 所述：</p><p>“与 Linux 内核 AF_ALG 加密用户空间接口弃用相关的变更：Linux 内核维护者决定弃用 AF_ALG 接口（cryptsetup 大量使用该接口），并计划出于安全原因将其移除（或严格限制）。Libcryptsetup 使用用户空间（主要通过 AF_ALG）处理 LUKS 密钥槽以及其他格式的磁盘元数据。使用 AF_ALG 确保了用户空间和后续内核设备激活时使用相同的算法集。</p><p>虽然 libcryptsetup 有回退到用户空间库的概念，但并非在所有情况下都使用。</p><p>在此版本中，libcryptsetup 可以使用用户空间加密库、AF_ALG（如果存在），并在某些情况下（如 LUKS 密钥槽）回退到临时 dm-crypt 映射。最后一个选项需要 root 权限。这确保了即使 AF_ALG 被禁用或受限，大多数操作仍能继续工作。</p><p>不幸的是，移除 AF_ALG 可能会导致严重的兼容性问题，如果所需算法（或加密模式）未在用户空间库中实现。一个典型例子是 Adiantum 密码，它仅在内核中实现。此外，像 Serpent 或 Twofish（在 XTS 模式下）等密码在多个用户空间库中缺失。如果 AF_ALG 接口不可用，cryptsetup 的密码基准测试将不再可用。”</p><p>除了应对 AF_ALG 的快速消失，Cryptsetup 2.8.7 还带来了密钥环处理变更、处理可能的 LUKS 卷密钥摘要冲突的变更、libgcrypt 后端中的 Aria 和 Camellia 密码支持，以及其他修复。</p><p>Cryptsetup 2.8.7 可从以下地址下载：</p><p>EFS 文件系统计划在 Linux 7.3 中移除，已超过20年未维护</p><p>Linux 7.3 将克服 PCIe Gen5 NVMe SSD 小 I/O 的“重大瓶颈”</p><p>下一个 Bcachefs 版本计划在内核模块中包含 Rust 代码</p><p>Linux MD RAID5 可扩展性提升高达17%</p><p>KSMBD 在 Linux 7.2 中添加了 SMB2 压缩支持</p><p>NTFS3 驱动在 Linux 7.2 中获得了错误修复和微小改进</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过20,000篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>最后一个 MPEG-4 Visual 专利已过期</p><p>FreeBSD 16 从其基础系统中移除了最后一段 GPL 代码</p><p>Linus Torvalds 重申 Linux 并非“反 AI”也不是“社会战士”项目</p><p>Frame：一个完全用 x86_64 汇编编写的新 X11 服务器实现</p><p>Firefox 153 现已可用</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/discord-gnome-theme-adwaita-vesktop" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Cryptsetup-2.8.7-Released" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
