@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：deepin 25.2.0 — Linux 中文速报</title>
+<title>为何你的Ubuntu 26.04对更新保持沉默 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>发行版发布：deepin 25.2.0</h1>
+  <h1>为何你的Ubuntu 26.04对更新保持沉默</h1>
 
-  <div class="article-summary">deepin 25.2.0 正式发布，基于 Debian 分支，带来多项桌面改进与安全更新。Treeland 桌面环境显著提升稳定性与可用性，修复超20个高频交互问题；文件管理新增索引配置，用户可灵活平衡搜索速度与资源占用；DDE 任务栏图标拆分模式支持按窗口显示，提升多窗口识别效率。内核更新至6.6和6.18分支，增强底层稳定性和新硬件兼容性，并同步集成 Qt6、PipeWire、initramfs 等基础组件更新及多项安全修复。</div>
+  <div class="article-summary">Ubuntu 26.04 LTS默认关闭了更新通知托盘图标，导致用户不再收到桌面更新提醒。尽管系统仍会在后台自动安装安全更新，但关闭该功能后用户将完全无法通过桌面获知更新状态。这一设计选择引发争议，用户可通过终端命令手动重新启用图标。文章提醒用户应养成自行检查更新的好习惯。</div>
 
-  <div class="article-body"><p>发行版发布：deepin 25.2.0（DistroWatch.com 新闻）</p><p>该项目已发布其基于 Debian 的发行版的新版本。新版本 deepin 25.2.0 包含多项桌面改进和安全更新：</p><p>&quot;Treeland 桌面环境升级——Treeland 的稳定性和可用性得到显著提升，针对稳定性和高频交互问题进行了超过20项修复；文件管理和搜索能力升级——新增文件索引配置，允许用户独立控制索引，灵活平衡搜索速度与资源占用；DDE 桌面体验增强——任务栏图标拆分模式现支持按窗口显示图标，提升多窗口场景下的识别效率；内核与安全更新——更新了6.6和6.18内核分支，增强了底层系统的稳定性、安全性和对新硬件的兼容性，同时提升了整体性能；同步集成了系统更新、Qt6、PipeWire、initramfs、虚拟化及其他基础组件更新，并包含多项安全修复，以提高系统稳定性、安全性和长期可维护性。&quot;</p><p>发布公告（链接）提供了更多详细信息。</p><p>deepin-desktop-community-25.2.0-amd64.iso</p><p>近期相关新闻与版本</p><p>发行版发布：deepin 25.2.0</p><p>发行版发布：deepin 25.1.0</p><p>发行版发布：deepin 25.0.10</p><p>发行版发布：deepin 25</p><p>开发版发布：deepin 25 Beta</p><p>发行版发布：deepin 23.1</p><p>deepin（原名 Deepin、Linux Deepin、Hiweed GNU/Linux）是一个基于 Debian 的发行版（在2015年底发布的版本15之前基于 Ubuntu），旨在提供优雅、用户友好且可靠的操作系统。它不仅包含开源世界的最佳成果，还创建了基于 Qt 5 工具包的自有桌面环境 DDE（Deepin Desktop Environment）。Deepin 将大量注意力集中在直观的设计上。</p></div>
+  <div class="article-body"><p>以下是为何你的Ubuntu 26.04对更新保持沉默的原因 - OMG! Ubuntu</p><p>已经有一段时间没有就待处理的更新烦扰你了，这背后是有原因的。</p><p>在Ubuntu Discourse上，有人注意到该发行版不再在更新待处理时发出通知——前提是更新通知托盘图标已启用。</p><p>问题在于？这个托盘图标在Ubuntu 26.04中被默认关闭了（且没有提供切换开关）。</p><p>不过，这并不像听起来那么“危险”。</p><p>Ubuntu 26.04默认启用了自动更新，它会在后台安装安全更新——只是你不会被告知而已。但如果你关闭了自动更新，情况就变得棘手了：bug报告指出，你将永远不会通过桌面收到任何更新的通知。</p><p>在我看来这算是一个bug，但它也很好地提醒了我们，无论默认设置如何，保持良好的系统习惯（自行检查更新）至关重要。</p><p>如果你想及时了解更新情况，可以在26.04中重新启用这个托盘图标。</p><p>过去，如果有可用更新，这个图标会定期弹出，但许多人（包括我自己）觉得它很烦人，因为那个窗口常常会抢走焦点。</p><p>Ubuntu 25.10修复了这个问题，通过添加桌面通知和托盘图标来安静地通知更新。</p><p>但那个托盘图标在Ubuntu 26.04 LTS中被默认关闭了。Canonical的Marco Trevisan表示，这“是一个设计选择”，人们可以对此争论，但该托盘图标可以通过以下方式手动重新启用。</p><p>再次强调：Ubuntu 26.04会自动安装更新，你也可以手动操作：运行`apt upgrade`，因为它已经获得了同时升级Deb软件和Snap的能力。</p><p>但那些习惯了被提醒和催促更新的老Ubuntu用户，可能会觉得突然的沉默有点令人不安（或者让人松一口气；无知是福嘛）。</p><p>自己启用那个缺失的图标很简单，只需打开终端运行：</p><p>`gsettings set com.ubuntu.update-notifier show-updates-status-icon true`</p><p>（如前所述，设置中没有提供切换开关）。</p><p>你也可以使用GUI工具`dconf-editor`编辑该值，但很容易不小心改错一个你本不想改的设置，尤其是在使用鼠标滚轮浏览页面时（亲身经历）。</p><p>Ubuntu 26.04从新安装中移除了`update-manager`，以使系统管理不那么晦涩。该工具仍然可以从软件源安装，因此如果你想对更新的安装时间、方式或是否安装有更多控制权，值得把它装上。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12893" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/ubuntu-26-04-update-notifications-disabled" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

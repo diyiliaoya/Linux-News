@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：deepin 25.2.0 — Linux 中文速报</title>
+<title>AMD EPYC Turin 搭配 PCIe 5.0 存储 在 Linux 7.2 上展现出显著性能提升 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：deepin 25.2.0</h1>
+  <h1>AMD EPYC Turin 搭配 PCIe 5.0 存储 在 Linux 7.2 上展现出显著性能提升</h1>
 
-  <div class="article-summary">deepin 25.2.0 正式发布，基于 Debian 分支，带来多项桌面改进与安全更新。Treeland 桌面环境显著提升稳定性与可用性，修复超20个高频交互问题；文件管理新增索引配置，用户可灵活平衡搜索速度与资源占用；DDE 任务栏图标拆分模式支持按窗口显示，提升多窗口识别效率。内核更新至6.6和6.18分支，增强底层稳定性和新硬件兼容性，并同步集成 Qt6、PipeWire、initramfs 等基础组件更新及多项安全修复。</div>
+  <div class="article-summary">本文报道了 AMD 第五代 EPYC Turin 处理器在 Linux 7.2 开发内核下的 I/O 性能表现。通过对比 Linux 7.1 稳定版与 7.2 Git 快照，在配备三星 PM1743 PCIe 5.0 NVMe SSD 的 EPYC 9455P 48 核服务器上进行的基准测试显示，新内核在高速存储场景下带来了明显的性能提升。Linux 7.2 预计于 8 月下旬发布，将成为 Ubuntu 26.10 的默认内核。</div>
 
-  <div class="article-body"><p>发行版发布：deepin 25.2.0（DistroWatch.com 新闻）</p><p>该项目已发布其基于 Debian 的发行版的新版本。新版本 deepin 25.2.0 包含多项桌面改进和安全更新：</p><p>&quot;Treeland 桌面环境升级——Treeland 的稳定性和可用性得到显著提升，针对稳定性和高频交互问题进行了超过20项修复；文件管理和搜索能力升级——新增文件索引配置，允许用户独立控制索引，灵活平衡搜索速度与资源占用；DDE 桌面体验增强——任务栏图标拆分模式现支持按窗口显示图标，提升多窗口场景下的识别效率；内核与安全更新——更新了6.6和6.18内核分支，增强了底层系统的稳定性、安全性和对新硬件的兼容性，同时提升了整体性能；同步集成了系统更新、Qt6、PipeWire、initramfs、虚拟化及其他基础组件更新，并包含多项安全修复，以提高系统稳定性、安全性和长期可维护性。&quot;</p><p>发布公告（链接）提供了更多详细信息。</p><p>deepin-desktop-community-25.2.0-amd64.iso</p><p>近期相关新闻与版本</p><p>发行版发布：deepin 25.2.0</p><p>发行版发布：deepin 25.1.0</p><p>发行版发布：deepin 25.0.10</p><p>发行版发布：deepin 25</p><p>开发版发布：deepin 25 Beta</p><p>发行版发布：deepin 23.1</p><p>deepin（原名 Deepin、Linux Deepin、Hiweed GNU/Linux）是一个基于 Debian 的发行版（在2015年底发布的版本15之前基于 Ubuntu），旨在提供优雅、用户友好且可靠的操作系统。它不仅包含开源世界的最佳成果，还创建了基于 Qt 5 工具包的自有桌面环境 DDE（Deepin Desktop Environment）。Deepin 将大量注意力集中在直观的设计上。</p></div>
+  <div class="article-body"><p>AMD EPYC Turin 搭配 PCIe 5.0 存储 在 Linux 7.2 上展现出显著性能提升 - Phoronix</p><p>AMD EPYC Turin 搭配 PCIe 5.0 存储 在 Linux 7.2 上展现出显著性能提升</p><p>发布于 2026 年 7 月 22 日 中午 12:00（美国东部时间）</p><p>本周早些时候，我们看到了一个令人兴奋的测试：Intel Xe3 图形性能在 Linux 7.2 上借助 Intel Core Ultra Series 3 &quot;Panther Lake&quot; 硬件所取得的提升。而在另一边，对于 AMD 硬件而言，在这个即将到来的内核中，一个值得关注的领域是第五代 EPYC 在搭配高速 PCIe Gen5 NVMe SSD 存储时的 I/O 改进。</p><p>我继续在更多系统上尝试开发内核，总体而言取得了不错的成功。Linux 7.2 正在稳步推进，预计于 8 月下旬发布稳定版，并带来了众多新特性和改动。Linux 7.2 之所以更加重要，是因为它将成为 Ubuntu 26.10 等发行版的默认内核。</p><p>我最新分享的 Linux 7.2 测试，是在一台 AMD EPYC 9455P 48 核服务器上，使用相同的 Kconfig 配置，对 Linux 7.1 稳定版与最新的 Linux 7.2 Git 快照进行基准测试的结果。</p><p>这台 AMD EPYC 9455P 服务器基于相应平台构建，存储方面采用了一块三星 PM1743 MZWLO3T8HCLS-00A07 PCIe 5.0 NVMe 固态硬盘。该 EPYC 9455P 服务器配备了 12 条 64GB DDR5-6000 内存，并以 Ubuntu 26.04 为基础操作系统，运行上述用于对比的 Linux 7.1/7.2 内核。</p><p>Linux 7.2 提升 Intel Panther Lake Xe3 Arc B390 图形性能</p><p>RISC-V RVV 向量性能基准测试（基于 SpacemiT K3 SoC）</p><p>Linux 7.2 特性：缓存感知调度、USB4STREAM、AMD ISP4、AMDGPU HDMI 2.1 FRL</p><p>Linux 7.2 在 Threadripper 上展现一些不错的 I/O 改进与更快的轮询，同时存在一些回归</p><p>Bcachefs 1.38.6 基准测试：首个不再标记为“实验性”的版本</p><p>Intel Core Ultra X7 Panther Lake 在 Linux 7.1 上的性能</p><p>在享受无广告浏览的同时，</p><p>单页文章视图</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12893" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/review/linux-72-epyc-9455p" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

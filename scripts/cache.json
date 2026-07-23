@@ -3914,5 +3914,159 @@
     "title_zh": "8款最佳免费开源Linux个人财务追踪器",
     "summary_zh": "本文介绍了8款适用于Linux系统的免费开源个人财务追踪工具，帮助用户有效管理预算、掌控财务状况。这些工具涵盖不同功能特点，适合从简单记账到复杂财务分析的各种需求。",
     "fulltext_zh": "发现8款最佳免费开源Linux个人财务追踪器，助你有效管理预算，掌控个人财务。\n\n本文首发于Linux Today。"
+  },
+  "3f45577b711ecdac81cc2a05df8ae0f8": {
+    "id": "3f45577b711ecdac81cc2a05df8ae0f8",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/07/ubuntu-26-04-update-notifications-disabled",
+    "title_en": "Here’s why your Ubuntu 26.04 install is quiet about updates",
+    "summary_en": "If Ubuntu 26.04 LTS hasn&#8217;t nagged you about pending updates in a while, there&#8217;s a reason for that. A Launchpad bug report and related discussion on the Ubuntu Discourse noticed that the distro&#8217;s update-manager no longer notifies when updates are pending unless the update notification tray icon is enabled. The rub? That tray icon as turned off in Ubuntu 26.04 (with no toggle in Settings to turn it back on). This is not as &#8220;risky&#8221; as it might sound, though. Ubuntu shi",
+    "pub_date": "Wed, 22 Jul 2026 20:00:05 +0000",
+    "title_zh": "为何你的Ubuntu 26.04对更新保持沉默",
+    "summary_zh": "Ubuntu 26.04 LTS默认关闭了更新通知托盘图标，导致用户不再收到桌面更新提醒。尽管系统仍会在后台自动安装安全更新，但关闭该功能后用户将完全无法通过桌面获知更新状态。这一设计选择引发争议，用户可通过终端命令手动重新启用图标。文章提醒用户应养成自行检查更新的好习惯。",
+    "fulltext_zh": "以下是为何你的Ubuntu 26.04对更新保持沉默的原因 - OMG! Ubuntu\n已经有一段时间没有就待处理的更新烦扰你了，这背后是有原因的。\n在Ubuntu Discourse上，有人注意到该发行版不再在更新待处理时发出通知——前提是更新通知托盘图标已启用。\n问题在于？这个托盘图标在Ubuntu 26.04中被默认关闭了（且没有提供切换开关）。\n不过，这并不像听起来那么“危险”。\nUbuntu 26.04默认启用了自动更新，它会在后台安装安全更新——只是你不会被告知而已。但如果你关闭了自动更新，情况就变得棘手了：bug报告指出，你将永远不会通过桌面收到任何更新的通知。\n在我看来这算是一个bug，但它也很好地提醒了我们，无论默认设置如何，保持良好的系统习惯（自行检查更新）至关重要。\n如果你想及时了解更新情况，可以在26.04中重新启用这个托盘图标。\n过去，如果有可用更新，这个图标会定期弹出，但许多人（包括我自己）觉得它很烦人，因为那个窗口常常会抢走焦点。\nUbuntu 25.10修复了这个问题，通过添加桌面通知和托盘图标来安静地通知更新。\n但那个托盘图标在Ubuntu 26.04 LTS中被默认关闭了。Canonical的Marco Trevisan表示，这“是一个设计选择”，人们可以对此争论，但该托盘图标可以通过以下方式手动重新启用。\n再次强调：Ubuntu 26.04会自动安装更新，你也可以手动操作：运行`apt upgrade`，因为它已经获得了同时升级Deb软件和Snap的能力。\n但那些习惯了被提醒和催促更新的老Ubuntu用户，可能会觉得突然的沉默有点令人不安（或者让人松一口气；无知是福嘛）。\n自己启用那个缺失的图标很简单，只需打开终端运行：\n`gsettings set com.ubuntu.update-notifier show-updates-status-icon true`\n（如前所述，设置中没有提供切换开关）。\n你也可以使用GUI工具`dconf-editor`编辑该值，但很容易不小心改错一个你本不想改的设置，尤其是在使用鼠标滚轮浏览页面时（亲身经历）。\nUbuntu 26.04从新安装中移除了`update-manager`，以使系统管理不那么晦涩。该工具仍然可以从软件源安装，因此如果你想对更新的安装时间、方式或是否安装有更多控制权，值得把它装上。"
+  },
+  "edb59975ee89c6c50656f161aeea8bd7": {
+    "id": "edb59975ee89c6c50656f161aeea8bd7",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/07/raspberry-pi-10-inch-touch-display",
+    "title_en": "Raspberry Pi launch 10-inch Touch Display 2 for $80",
+    "summary_en": "Raspberry Pi has launched a 10-inch version of its Touch Display 2 with a 1200×1920 resolution and 10-point captive touchscreen for $80/£77. 5-inch and 7-inch variants of the Touch Display 2 have been available for a while, but Raspberry Pi&#8217;s Gordon Hollingworth says the new version gives makers a larger, higher resolution screen to use in their projects. Like the smaller versions, the 10.1&#8243; Touch Display 2 uses a portrait orientation by default, where the displays are often used for",
+    "pub_date": "Wed, 22 Jul 2026 14:41:01 +0000",
+    "title_zh": "树莓派推出10英寸触摸显示屏2，售价80美元",
+    "summary_zh": "树莓派发布了新款10.1英寸触摸显示屏2，分辨率为1200×1920，支持10点电容触控，售价80美元。该显示屏默认竖屏显示，适合家庭自动化面板、信息亭、数字标牌等场景。峰值亮度为400尼特，低于5英寸和7英寸版本。值得注意的是，这款新显示屏仅兼容树莓派5，不支持Pi 4及更早型号或Pi Zero系列，因为更高分辨率需要DSI端口的4条数据通道。产品即日起通过授权经销商发售。",
+    "fulltext_zh": "树莓派推出10英寸触摸显示屏2，售价80美元 - OMG! Ubuntu\n\n树莓派发布了一款10英寸版本，分辨率为1200×1920，支持10点电容触控，售价80美元/77英镑。\n\n5英寸和7英寸版本的树莓派触摸显示屏已上市一段时间，但树莓派的Gordon Hollingworth表示，新版本为创客提供了更大、分辨率更高的屏幕，可用于他们的项目中。\n\n与较小版本类似，10.1英寸触摸显示屏2默认采用竖屏方向，这类显示屏常用于家庭自动化面板、信息亭、数字标牌、控制面板等场景。通过在主机操作系统中更改方向，也可以横屏使用。\n\n这款10.1英寸IPS显示屏具有防眩光表面、85度视角、24位RGB色彩，亮度额定为400 cd/m²（400尼特），这意味着大版本的峰值亮度低于5英寸和7英寸型号——这一点值得注意。\n\n10英寸触摸显示屏2仅支持树莓派5\n\n主机树莓派安装在显示屏背面，由树莓派的GPIO引脚供电，并通过DSI端口连接数据（即视频）。\n\n但新款10英寸显示屏不兼容树莓派4及更早型号，也不兼容树莓派Zero系列，因为更高分辨率需要DSI端口具备4条数据通道进行通信。较小版本仅需2条通道，因此支持更早的型号。\n\n“只需两个连接即可将显示屏连接到树莓派：一条用于GPIO引脚的电源线，以及一条用于DSI端口的排线”，产品简介中写道。\n\n尽管它与树莓派5（及其所有变体）以及使用I/O板或类似设备的相关计算模块完全兼容，但它无法与堆叠了附加组件（如主动散热器和M.2/SSD HAT+）的树莓派5配合使用，因为电源和端口不足。\n\n以免有人读到此处认为“我可以花更少的钱买一台32英寸全高清显示器”，请注意——这不是传统显示器：它不通过HDMI连接，没有外壳或支架。树莓派为需要真正显示器的用户销售一款USB供电的显示器。\n\n如果您一直在等待一款更大的官方触摸显示屏用于项目，那么10英寸版本即日起可从树莓派授权经销商处购买，售价为80美元（英国为76.80英镑）。\n\n树莓派承诺将持续生产该产品直至"
+  },
+  "dcd4648c8e578ee26902962043b03143": {
+    "id": "dcd4648c8e578ee26902962043b03143",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/autonomous-intern-2/",
+    "title_en": "Talk to This Glowing Pyramid on Your Desk, and It'll Run Your AI Agent for You",
+    "summary_en": "It's a pyramid-shaped Orange Pi 4 Pro that ships with OpenClaw or Hermes preloaded and now talks back so you get that \"Iron Man\" feel.",
+    "pub_date": "Wed, 22 Jul 2026 11:27:28 GMT",
+    "title_zh": "与桌面上的发光金字塔对话，它将为你运行AI代理",
+    "summary_zh": "Autonomous公司推出Intern 2，一款金字塔形状的桌面AI代理设备。它基于Orange Pi 4 Pro，预装OpenClaw或Hermes框架，支持语音交互、浏览器控制及Telegram/Slack/Discord集成。售价249美元起，可执行邮件管理、GitHub监控等任务，无需终端操作。",
+    "fulltext_zh": "与桌面上的发光金字塔对话，它将为你运行AI代理\n\n与桌面上的发光金字塔对话，它将为你运行AI代理\n\n这是一款金字塔形状的Orange Pi 4 Pro，预装OpenClaw或Hermes，现在还能与你对话，让你获得“钢铁侠”般的感觉。\n\n当OpenClaw在2026年初达到炒作巅峰时，很多人购买了Mac Mini只是为了全天候运行一个代理。\n\n我从不理解为什么人们会花500美元购买一个设备来运行那些仅仅是对商业LLM（如Claude和ChatGPT）进行推理的任务。\n\n但这些“爪子”已经站稳脚跟，人们正在利用它们在专用硬件上运行自己的代理。这就是为什么我们有了围绕这些代理构建的专用硬件。\n\nAutonomous是一家以站立式办公桌和人体工学椅闻名的公司，尽管他们最初是以Robotbase的身份起步，制造个人机器人。\n\n看起来他们某种程度上回归了本源。他们的产品线中有几个“AI硬件”项目，其中包括一个……\n\n但我今天要介绍的设备是一款运行AI代理的桌面伴侣，你可以把它当作办公助手或实习生（无意冒犯实习生）。\n\n该设备名为Intern 2，因为它是六个月前发布的Intern的后续产品。让我们进一步了解它。\n\nIntern 2规格\n\nOrange Pi 4 Pro，8核Allwinner A733（2个Cortex-A76 + 6个Cortex-A55，最高2.0GHz）\n64GB板载存储 + 最高256GB扩展\nWi-Fi 6，蓝牙5.4\n语音交互（双麦克风，拾音距离达3米；5W扬声器）和浏览器控制，外加现有的Telegram/Slack/Discord渠道\n1年保修，30天免费退货\n\nIntern 2起售价为249美元（OpenClaw或Hermes版本），开发者版售价299美元。\n\n基本上，该设备出厂时已预装代理框架。你在结账时选择OpenClaw或Hermes，将设备连接Wi-Fi，添加到Telegram、Slack或Discord群组（WhatsApp稍后通过单独的QR配对步骤添加），它就会开始处理你的收件箱、监控GitHub问题，并执行你交给它的任何多步骤任务，全程无需触碰终端。\n\n我猜你需要进行一些配置来连接你的邮件等，但如果你的主要LLM已经连接到你使用的各种服务，这应该不会太难。\n\n底层的板子是Orange Pi 4 Pro：一颗8核Allwinner A733芯片，两个性能更强的Cortex-A76核心搭配六个能效Cortex-A55核心，以及一个3 TOPS的NPU。这是一种你可以单独购买的板子，所以Intern 2并没有提供或隐藏任何奇特的东西。它只是将常见的SBC硬件包装成看起来不像开发板的样子。\n\n它长什么样？它看起来像一个顶部发光的金字塔。我挺喜欢这个外观。\n\n语音交互是这里的主要卖点。能说话为什么还要打字？托尼·斯塔克作为钢铁侠不就是这样做的吗？\n\nIntern 2增加了双远场麦克风，额定拾音距离达3米，外加一个5W扬声器，所以你可以像与同事（或实习生）交谈一样，直接与放在桌上的这个东西对话。浏览器控制功能也已加入，让代理能够代表你在网站上操作，而不仅仅通过聊天集成和API工作。\n\n有三个版本可供选择：\n\n默认版，预装框架，除Wi-Fi和聊天应用外无需设置。\n\n相同硬件，开箱即运行Hermes。\n\n开发者版，外壳开放。你可以通过SSH登录，Claude Code已预装，并留有空间可替换为Codex或OpenCode，如果你想运行自己的代理栈。\n\n开源自主操作系统\n\nAutonomous OS，由Autonomous为物理AI代理创建的开源操作系统。\n\n它处理感知、记忆、技能和更新，而实际的“大脑”可在OpenClaw、Hermes、PicoClaw、Claude Code、OpenAI Codex或任何你想接入的其他代理框架之间切换。\n\nIntern是继名为Autonomous Lamp的台灯之后，基于该系统构建的第二款参考设备。由于Autonomous正在……"
+  },
+  "998dae69203f0ceb1476d103ad6d5fab": {
+    "id": "998dae69203f0ceb1476d103ad6d5fab",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/mpeg-4-visual-patent-expiry/",
+    "title_en": "Siemens AG Was The Last Holdout in MPEG-4 Visual's Road to Being Patent-Free",
+    "summary_en": "The final patent, active in Brazil, expired on July 19, 2026.",
+    "pub_date": "Wed, 22 Jul 2026 04:55:09 GMT",
+    "title_zh": "西门子股份公司曾是MPEG-4 Visual走向专利自由之路上的最后坚守者",
+    "summary_zh": "MPEG-4 Visual专利组合许可证自2000年生效，涵盖30多家许可方的核心专利。随着最后一项在巴西有效的西门子专利于2026年7月19日到期，该许可证已无专利可执行。这标志着该专利池的终结，但并不意味着所有MPEG-4 Visual专利都已消失，池外仍可能存在其他必要专利。",
+    "fulltext_zh": "西门子股份公司曾是MPEG-4 Visual走向专利自由之路上的最后坚守者\n\n最后一项专利（在巴西有效）已于2026年7月19日到期。\n\nMPEG-4 Visual专利组合许可证自2000年1月1日起生效，涵盖来自30多家许可方的MPEG-4 Part 2 Visual标准核心专利，包括佳能、LG、微软、松下、索尼和东芝等公司。\n\n截至2026年7月19日，这些专利已全部到期。最后一项存续的专利属于西门子股份公司，仅在巴西有效。管理该专利组合的机构VIA Licensing Alliance已撤下相关许可证页面，该页面此前一直存在至到期前一天。\n\n该专利涉及一种用于存储和处理连续图像信息的方法。西门子曾在多个司法管辖区申请同一专利，其中大部分已于多年前到期。欧洲版本EP 1,279,291于2021年4月9日在德国、法国和英国到期。该专利组合中另外两项西门子美国专利US 6,636,637和US 7,068,721分别于2018年1月和2022年3月到期。\n\n专利组合中的其余专利也按类似时间线逐步到期。皇家飞利浦公司的US 6,959,046于2022年12月7日到期；杜比实验室许可公司的US 7,395,211于2023年11月14日到期，成为该专利池中最后一项到期的美国专利。\n\n这使得巴西专利BR PI0109962-0成为最后一项。\n\n随着最后一项专利到期，该特定许可证背后已无任何专利支持。VIA Licensing Alliance对解码器和编码器收取的单位许可费，以及针对订阅和单部视频服务的单独参与费，现已无法执行。\n\n这并不意味着所有可能的MPEG-4 Visual专利都已消失，仅指该特定专利池中的专利。池外仍可能存在其他必要专利。但对于已加入该专利池的30多家公司而言，许可义务现已结束。\n\nMPEG-4 Visual简介\n\nMPEG-4 Visual是MPEG-4标准套件的一部分，与MP4容器格式（Part 14）同属一个系列。容器和编解码器是分开的。MP4文件可以容纳多种编解码器编码的音视频，包括MPEG-4 Part 2、H.264/AVC、HEVC和AV1。\n\n该标准本身由动态图像专家组（Moving Picture Experts Group）制定，该工作组是负责视频、音频和3D图形压缩标准的国际标准化组织下属机构。\n\n不过，MPEG并不管理其标准背后的专利。这项工作由VIA Licensing Alliance负责，该机构将佳能、LG、微软、松下、西门子、索尼、东芝等30多家许可方的专利汇集到一个单一许可证中。多年来，大大小小的公司都获得了在其产品中使用MPEG-4 Visual的许可。Canonical、苹果、索尼、树莓派和迪士尼公司均出现在VIA Licensing Alliance的良好信誉许可方名单上，此外还有数百家涵盖安防摄像头、媒体播放器和广播设备的公司。\n\n《电子工程时报》对MPEG许可历史有详细报道，供有兴趣深入了解的读者参考。\n\n喜欢这篇更新？支持独立的Linux新闻\n\nIt's FOSS在过去14年里一直帮助人们使用Linux。请帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获取5本电子书。\n\n一次性付费，永久享受\n\n任意金额，无承诺\n\n一个热爱开源软件、定制PC组装、赛车运动并探索这个世界无限可能的极客。\n\n与桌上的发光金字塔对话，它将为你运行AI代理\n\nGNOME的安全可能因单一追踪器离线而面临风险\n\nLinus Torvalds多年无视AI，如今却为其背书\n\n15本O'Reilly Linux电子书仅售30美元：从命令行基础到Kubernetes的捆绑包\n\nX（前Twitter）可能走向开源\n\n成为更好的Linux用户\n\n与FOSS一起"
+  },
+  "d0194ce22c3f1e694b92f0fd9c1c4d10": {
+    "id": "d0194ce22c3f1e694b92f0fd9c1c4d10",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-Lemonade-11.5",
+    "title_en": "Lemonade 11.5 Local AI Server Released With Completed Lemonade Router",
+    "summary_en": "Just one week after releasing Lemonade 11.0, the Lemonade 11.5 local AI server was released today for this open-source AMD backed project during their AMD Advancing AI event...",
+    "pub_date": "Wed, 22 Jul 2026 18:35:35 -0400",
+    "title_zh": "Lemonade 11.5 本地 AI 服务器发布，Lemonade Router 功能完成",
+    "summary_zh": "AMD 支持的 Lemonade 11.5 本地 AI 服务器于 2026 年 7 月 22 日发布，主要亮点是完成了 Lemonade Router，可根据规则、分类器、语义相似性或 LLM 作为路由器自动将查询路由到相关模型。此外，新版本还引入了服务端作业引擎，支持客户端提交多步骤任务并通过 /jobs 端点进行管理；Lemonade 守护进程现在可作为 MCP 客户端主机连接外部 stdio MCP 服务器。",
+    "fulltext_zh": "Lemonade 11.5 本地 AI 服务器发布，Lemonade Router 功能完成 - Phoronix\n\nLemonade 11.5 本地 AI 服务器发布，Lemonade Router 功能完成\n2026 年 7 月 22 日，美国东部时间下午 6:35。\n\n在上一版本发布仅一周后，Lemonade 11.5 本地 AI 服务器于今日在 AMD 的 Advancing AI 活动中正式发布。该项目由 AMD 支持，采用开源模式。\n\nLemonade 本地 AI 服务器可轻松在 Windows 和 Linux 系统上，将 LLM 工作负载部署到 Ryzen AI NPU、Radeon GPU 和 CPU 上。Lemonade 11.5 最重要的变化是完成了 Lemonade Router，该路由器可根据定义的策略自动将查询路由到相关模型——甚至支持 LLM 作为路由器，即使用一个小型 LLM 来决定将特定请求路由到哪个模型。\n\nLemonade Router 允许基于规则、分类器、语义相似性或 LLM 作为路由器策略来引导请求。策略可在 JSON 文件中定义，也可以通过 Lemonade GUI 创建。有关这些路由器功能的更多详细信息，请参见相关文档。\n\nLemonade 11.5 还引入了服务端作业引擎，允许客户端提交多步骤任务，并通过 /jobs 端点进行管理。通过这些端点，多步骤任务可以暂停、中断、恢复或删除。另一个新特性是，Lemonade 守护进程现在可以作为 MCP 客户端主机，连接外部的 stdio MCP 服务器。\n\n想要了解更多关于今天 Lemonade 11.5 版本的信息，可以访问以下链接：\n\nAMD Ryzen AI Halo LED 驱动程序即将引入 Linux 7.3\nAMD 正在为 Linux 内核准备 Zen 6 性能分析/性能事件支持，增加更多 EILVT 寄存器\nAMD 谈论 ROCm 中 SPIR-V IR 的巨大机遇\nFastFlowLM 开发者加入 AMD，助力推动开源 NPU 软件\nAMD 的 GAIA 持续致力于成为您终极的 AI 邮件助手\nAMD ROCm 7.14 发布，作为新的生产版本，支持 Ryzen AI 400 系列\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\n最后一个 MPEG-4 Visual 专利已过期\nFreeBSD 16 从其基础系统中移除了最后一段 GPL 代码\nLinus Torvalds 重申 Linux 并非“反 AI”也非“社会战士”项目\nFirefox 153 发布，支持 Vulkan 视频解码和实验性 JPEG-XL\nFrame：一个完全用 x86_64 汇编编写的新 X11 服务器实现\nAMD 发布 Lemonade 11.0 本地 AI 服务器，支持文本转语音及其他新功能\nUbuntu 内核团队警告临时 AMD GPU 性能回归，最高可达 42 倍\n微软最新开源项目怀旧：Comic Chat 在 30 年后开源\n\n在享受无广告浏览的同时，\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "c38def653d2c9dbfd4f9b25f076590ea": {
+    "id": "c38def653d2c9dbfd4f9b25f076590ea",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/SDL-HDR10-Rendering-Support",
+    "title_en": "SDL Lands HDR10 Rendering Support",
+    "summary_en": "Sam Lantinga of Valve and SDL fame has landed HDR10 rendering support into the Simple DirectMedia Library...",
+    "pub_date": "Wed, 22 Jul 2026 15:13:21 -0400",
+    "title_zh": "SDL 引入 HDR10 渲染支持",
+    "summary_zh": "Valve 和 SDL 的知名开发者 Sam Lantinga 已为 Simple DirectMedia Library（SDL）添加了 HDR10 渲染支持。该功能目前已在 SDL3 Git 版本中实现，支持 Direct3D 11、Direct3D 12 和 Vulkan 渲染器。此前 SDL 3.0 已引入色彩空间支持和 Wayland 色彩管理等 HDR 准备工作。这一进展标志着 HDR 支持在 Linux 及开源生态系统中的持续扩展。",
+    "fulltext_zh": "SDL 引入 HDR10 渲染支持 - Phoronix\n\nSDL 引入 HDR10 渲染支持\n2026 年 7 月 22 日，美国东部时间下午 3:13。\n\n来自 Valve 和 SDL 的知名开发者 Sam Lantinga 已为 Simple DirectMedia Library 添加了 HDR10 渲染支持。\n\n当使用 SDL 的 Direct3D 11、Direct3D 12 或 Vulkan 渲染器时，SDL3 Git 版本现已具备 HDR10 显示支持。SDL 3.0 此前已引入色彩空间支持以及其他 HDR 准备工作，例如 Wayland 色彩管理。看到 HDR 支持在 Linux 和开源生态系统中持续扩展，令人振奋。\n\n对于有兴趣使用这一流行于跨平台游戏和应用的库进行 HDR10 渲染的读者，可以通过以下链接了解更多详情：\n\nD7VK 2.0 发布，带来显著性能改进：最高提升 2 倍或更多\nD7VK 自诞生以来在 Linux 上针对旧版 Direct3D 的性能提升\nDXVK 3.0.1 发布，包含更多游戏修复及其他改进\nTLAC 旨在成为内核级反作弊系统的开源替代方案\nDXVK 3.0 发布，支持 DXBC-SPIRV 着色器编译及默认描述符堆\nGodot 4.7 发布，支持 HDR 输出\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\n最后一个 MPEG-4 Visual 专利已过期\nFreeBSD 16 从其基础系统中移除最后一部分 GPL 代码\nLinus Torvalds 重申 Linux 并非“反 AI”也不是“社会战士”项目\nFirefox 153 发布，支持 Vulkan 视频解码及实验性 JPEG-XL\nFrame：一个完全用 x86_64 汇编编写的新 X11 服务器实现\nAMD 发布 Lemonade 11.0 本地 AI 服务器，支持文本转语音及其他新功能\nUbuntu 内核团队警告临时性 AMD GPU 性能回归，最高达 42 倍\n微软最新开源项目怀旧：Comic Chat 在 30 年后开源\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "caf649cab0ceab4dc21caf890fc6b7ce": {
+    "id": "caf649cab0ceab4dc21caf890fc6b7ce",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/COSMIC-Epoch-1.4",
+    "title_en": "COSMIC Epoch 1.4 Released With More Fixes, Force Quit For COSMIC Monitor",
+    "summary_en": "System76 developers today released COSMIC Epoch 1.4 as the newest stable release to their Rust-based desktop environment...",
+    "pub_date": "Wed, 22 Jul 2026 14:48:39 -0400",
+    "title_zh": "COSMIC Epoch 1.4 发布：更多修复与 COSMIC Monitor 的强制退出功能",
+    "summary_zh": "System76 于 2026 年 7 月 22 日发布了基于 Rust 的桌面环境 COSMIC Epoch 1.4 稳定版。该版本带来了大量修复，包括 cosmic-sound-theme 打包、翻译更新，以及各组件的小幅功能改进。COSMIC Compositor 修复了输入和窗口处理问题，改进了分数缩放下的屏幕边缘指针精度；COSMIC Panel 修复了崩溃问题；COSMIC Monitor 新增了应用退出和强制退出选项，并支持切换 CPU/GPU 图表类型及收集 GPU 频率等功能。",
+    "fulltext_zh": "COSMIC Epoch 1.4 发布：更多修复与 COSMIC Monitor 的强制退出功能 - Phoronix\nCOSMIC Epoch 1.4 发布：更多修复与 COSMIC Monitor 的强制退出功能\n2026 年 7 月 22 日下午 2:48（美国东部时间）\n\nSystem76 开发者今日发布了 COSMIC Epoch 1.4，这是其基于 Rust 的桌面环境的最新稳定版本。\n\nCOSMIC Epoch 1.4 带来了大量修复、cosmic-sound-theme 打包、翻译更新，以及各 COSMIC 组件的一些小幅功能改进。\n\nCOSMIC Compositor 对输入和窗口处理进行了多项修复，改进了分数缩放下的屏幕边缘指针精度等。COSMIC Panel 修复了崩溃问题。\n\nCOSMIC Monitor 也新增了功能，现在支持应用退出和强制退出选项。此外，COSMIC Monitor 还允许切换 CPU 和 GPU 图表类型、收集 GPU 频率以及其他改进。\n\n关于 COSMIC Epoch 版本的下载和更多详情，请访问：\nVocalinux 0.14 Beta 发布：Linux 离线语音听写/语音转文字\nCOSMIC Epoch 1.3 发布：新增磨砂玻璃选项\nPop!_OS 为 COSMIC 推出“磨砂玻璃”桌面风格\nCOSMIC Epoch 1.2 桌面修复 Intel 显卡闪烁问题\nVim 补丁提升 GTK3 Wayland 性能：“重大里程碑”\nCOSMIC Epoch 1.1 发布：新增 COSMIC-Monitor 与 Compositor 改进\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\n最后一个 MPEG-4 Visual 专利已过期\nFreeBSD 16 从基础系统中移除最后一段 GPL 代码\nLinus Torvalds 重申 Linux 并非“反 AI”也不是“社会斗士”项目\nFirefox 153 发布：支持 Vulkan 视频解码、实验性 JPEG-XL\nFrame：一个完全用 x86_64 汇编编写的新 X11 服务器实现\nAMD 发布 Lemonade 11.0 本地 AI 服务器：支持文本转语音及其他新功能\nUbuntu 内核团队警告：临时 AMD GPU 性能回归高达 42 倍\n微软最新开源怀旧之作：Comic Chat 在 30 年后开源\n\n在享受无广告浏览的同时，\n单页文章查看\n法律声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者财产。保留所有权利。"
+  },
+  "cd102195a36b71da6c5ae68f9f75e428": {
+    "id": "cd102195a36b71da6c5ae68f9f75e428",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/linux-72-epyc-9455p",
+    "title_en": "AMD EPYC Turin With PCIe 5.0 Storage Shows Off Nice Gains On Linux 7.2",
+    "summary_en": "Earlier this week was an exciting look at Intel Xe3 graphics performance gains on Linux 7.2 with Intel Core Ultra Series 3 \"Panther Lake\" hardware. On the other side of the table, with AMD hardware on this forthcoming kernel an area to be excited about are some I/O improvements at least for 5th Gen EPYC with speedy PCIe Gen5 NVMe SSD storage.",
+    "pub_date": "Wed, 22 Jul 2026 12:00:00 -0400",
+    "title_zh": "AMD EPYC Turin 搭配 PCIe 5.0 存储 在 Linux 7.2 上展现出显著性能提升",
+    "summary_zh": "本文报道了 AMD 第五代 EPYC Turin 处理器在 Linux 7.2 开发内核下的 I/O 性能表现。通过对比 Linux 7.1 稳定版与 7.2 Git 快照，在配备三星 PM1743 PCIe 5.0 NVMe SSD 的 EPYC 9455P 48 核服务器上进行的基准测试显示，新内核在高速存储场景下带来了明显的性能提升。Linux 7.2 预计于 8 月下旬发布，将成为 Ubuntu 26.10 的默认内核。",
+    "fulltext_zh": "AMD EPYC Turin 搭配 PCIe 5.0 存储 在 Linux 7.2 上展现出显著性能提升 - Phoronix\nAMD EPYC Turin 搭配 PCIe 5.0 存储 在 Linux 7.2 上展现出显著性能提升\n发布于 2026 年 7 月 22 日 中午 12:00（美国东部时间）\n\n本周早些时候，我们看到了一个令人兴奋的测试：Intel Xe3 图形性能在 Linux 7.2 上借助 Intel Core Ultra Series 3 \"Panther Lake\" 硬件所取得的提升。而在另一边，对于 AMD 硬件而言，在这个即将到来的内核中，一个值得关注的领域是第五代 EPYC 在搭配高速 PCIe Gen5 NVMe SSD 存储时的 I/O 改进。\n\n我继续在更多系统上尝试开发内核，总体而言取得了不错的成功。Linux 7.2 正在稳步推进，预计于 8 月下旬发布稳定版，并带来了众多新特性和改动。Linux 7.2 之所以更加重要，是因为它将成为 Ubuntu 26.10 等发行版的默认内核。\n\n我最新分享的 Linux 7.2 测试，是在一台 AMD EPYC 9455P 48 核服务器上，使用相同的 Kconfig 配置，对 Linux 7.1 稳定版与最新的 Linux 7.2 Git 快照进行基准测试的结果。\n\n这台 AMD EPYC 9455P 服务器基于相应平台构建，存储方面采用了一块三星 PM1743 MZWLO3T8HCLS-00A07 PCIe 5.0 NVMe 固态硬盘。该 EPYC 9455P 服务器配备了 12 条 64GB DDR5-6000 内存，并以 Ubuntu 26.04 为基础操作系统，运行上述用于对比的 Linux 7.1/7.2 内核。\n\nLinux 7.2 提升 Intel Panther Lake Xe3 Arc B390 图形性能\nRISC-V RVV 向量性能基准测试（基于 SpacemiT K3 SoC）\nLinux 7.2 特性：缓存感知调度、USB4STREAM、AMD ISP4、AMDGPU HDMI 2.1 FRL\nLinux 7.2 在 Threadripper 上展现一些不错的 I/O 改进与更快的轮询，同时存在一些回归\nBcachefs 1.38.6 基准测试：首个不再标记为“实验性”的版本\nIntel Core Ultra X7 Panther Lake 在 Linux 7.1 上的性能\n\n在享受无广告浏览的同时，\n单页文章视图\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "1d7beb216f8b033c4c6d339033fac0fb": {
+    "id": "1d7beb216f8b033c4c6d339033fac0fb",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/libx11-compat",
+    "title_en": "libx11-compat Is Working To Implement Xlib Atop SDL For Wayland, macOS, Android",
+    "summary_en": "For helping to keep X11 clients running in a modern Linux desktop world with Wayland or even for running on macOS or Android, there is now yet-another option being developed with libx11-compat. The libx11-compat project is working to re-implement the Xlib client library atop SDL2/SDL3 interfaces for allow broad underlying platform coverage...",
+    "pub_date": "Wed, 22 Jul 2026 08:28:11 -0400",
+    "title_zh": "libx11-compat 正致力于在 SDL 之上实现 Xlib，以支持 Wayland、macOS 和 Android",
+    "summary_zh": "libx11-compat 项目正在开发中，旨在基于 SDL2/SDL3 接口重新实现 Xlib 客户端库，从而为 X11 应用程序提供跨平台兼容层。该项目由开源开发者 Ching-Chun (Jim) Huang 主导，支持在 macOS（无需 XQuartz）、纯 Wayland 桌面、无头 CI 环境、Android 等非 X11 原生平台上运行 Xlib 依赖的应用程序，无需修改源代码。目前，该库已能运行 XMosaic、Qt2 应用、XCircuit、XMMS 等经典 X11 程序。",
+    "fulltext_zh": "libx11-compat 正致力于在 SDL 之上实现 Xlib，以支持 Wayland、macOS 和 Android - Phoronix\nlibx11-compat 正致力于在 SDL 之上实现 Xlib，以支持 Wayland、macOS 和 Android\n发布于 2026 年 7 月 22 日，美国东部时间上午 8:28。\n为了帮助 X11 客户端在采用 Wayland 的现代 Linux 桌面环境中运行，甚至能在 macOS 或 Android 上运行，现在又多了一个正在开发中的选项——libx11-compat。libx11-compat 项目正致力于在 SDL2/SDL3 接口之上重新实现 Xlib 客户端库，以实现广泛的底层平台覆盖。\n开源开发者 Ching-Chun (Jim) Huang 撰文介绍了他在 libx11-compat 上的工作，该项目旨在为 X11 客户端提供一个轻量级兼容层。对于依赖 Xlib 的应用程序，无需修改源代码即可运行，例如在无需 XQuartz 的 macOS 上、纯 Wayland 的 Linux 桌面会话中、无头 CI 环境、Android 以及其他非 X11 原生平台上。\nlibx11-compat 库是 X Window 系统客户端库的进程内实现，构建于 SDL2/SDL3、SDL_ttf 和 Pixman 之上。该代码目前无需 X 服务器即可运行大量经典 X11 应用程序，如 XMosaic、Qt2 应用、XCircuit、XMMS 等。\n想要了解更多关于 libx11-compat 的信息，可以访问以下链接：\nFrame：完全用 x86_64 汇编编写的新 X11 服务器实现\nXWayland 24.1.13 发布，修复 X.Org 代码库中的两个更多安全问题\n用 Rust 编写的 Vibe Coded X11 服务器新增 Xinerama、FreeBSD 支持及其他功能\nYSERVER：借助 Claude Code 用 Rust 编写的现代 X11 服务器\nX.Org 服务器在六月因 AI 发现九个新的安全漏洞\nX.Org Server 21.1.22 因五个新的安全漏洞而发布\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动程序及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n最后一个 MPEG-4 Visual 专利已过期\nFreeBSD 16 从其基础系统中移除了最后一部分 GPL 代码\nLinus Torvalds 重申 Linux 并非“反 AI”也不是“社会战士”项目\nFirefox 153 发布，支持 Vulkan 视频解码和实验性 JPEG-XL\nFrame：完全用 x86_64 汇编编写的新 X11 服务器实现\nAMD 发布 Lemonade 11.0 本地 AI 服务器，支持文本转语音及其他新功能\nUbuntu 内核团队警告临时性 AMD GPU 性能回归，最高达 42 倍\n微软最新开源项目怀旧：Comic Chat 在 30 年后开源\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "86a9052c2409167fa477a9b185266764": {
+    "id": "86a9052c2409167fa477a9b185266764",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/firefox-152-adds-jpeg-xl-support-and-redesigned-settings/",
+    "title_en": "Firefox 152 Adds JPEG XL Support and Redesigned Settings",
+    "summary_en": "Discover the latest features in Firefox 152, including JPEG XL support and a redesigned settings interface for enhanced user experience.\nThe post Firefox 152 Adds JPEG XL Support and Redesigned Settings appeared first on Linux Today.",
+    "pub_date": "Wed, 22 Jul 2026 07:32:35 +0000",
+    "title_zh": "Firefox 152 新增 JPEG XL 支持与重新设计的设置界面",
+    "summary_zh": "Firefox 152 版本引入了对 JPEG XL 图像格式的支持，并重新设计了设置界面，以提升用户体验。该更新旨在提供更高效的图像压缩和更直观的配置管理。",
+    "fulltext_zh": "探索 Firefox 152 的最新功能，包括 JPEG XL 支持以及重新设计的设置界面，旨在增强用户体验。\n该文章 Firefox 152 新增 JPEG XL 支持与重新设计的设置界面 首次出现在 Linux Today 上。"
+  },
+  "1fadc81937d3ba4d273cfc1af1776adc": {
+    "id": "1fadc81937d3ba4d273cfc1af1776adc",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/freerdp-3-27-released-with-stronger-tls-defaults/",
+    "title_en": "FreeRDP 3.27 Released with Stronger TLS Defaults",
+    "summary_en": "FreeRDP 3.27 is here! Explore the new version with stronger TLS defaults, ensuring a more secure and efficient remote desktop connection for users.\nThe post FreeRDP 3.27 Released with Stronger TLS Defaults appeared first on Linux Today.",
+    "pub_date": "Wed, 22 Jul 2026 07:31:23 +0000",
+    "title_zh": "FreeRDP 3.27 发布，采用更强的 TLS 默认设置",
+    "summary_zh": "FreeRDP 3.27 版本正式发布，主要改进了 TLS 默认配置，提升了远程桌面连接的安全性和效率。该版本旨在为用户提供更安全、更流畅的远程桌面体验。",
+    "fulltext_zh": "FreeRDP 3.27 来了！探索这个采用更强 TLS 默认设置的新版本，确保为用户提供更安全、更高效的远程桌面连接。\n\n该文章 FreeRDP 3.27 Released with Stronger TLS Defaults 最初出现在 Linux Today 上。"
+  },
+  "421955dcc45f4e97d147b464485a1ca5": {
+    "id": "421955dcc45f4e97d147b464485a1ca5",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/open-source-ci-cd-abuse-detector-guards-against-stolen-credential-attacks/",
+    "title_en": "Open-source CI/CD Abuse Detector Guards Against Stolen Credential Attacks",
+    "summary_en": "Discover how our open-source CI/CD Abuse Detector safeguards your projects from stolen credential attacks, ensuring robust security and peace of mind.\nThe post Open-source CI/CD Abuse Detector Guards Against Stolen Credential Attacks appeared first on Linux Today.",
+    "pub_date": "Wed, 22 Jul 2026 07:29:47 +0000",
+    "title_zh": "开源CI/CD滥用检测器防范凭证窃取攻击",
+    "summary_zh": "本文介绍了一款开源CI/CD滥用检测器，旨在保护项目免受凭证窃取攻击。该工具通过实时监控和检测异常行为，帮助开发团队识别并阻止恶意使用被盗凭证，从而提升CI/CD管道的安全性，确保系统稳健运行。",
+    "fulltext_zh": "了解我们的开源CI/CD滥用检测器如何保护您的项目免受凭证窃取攻击，确保强大的安全性和安心。\n\n这篇关于开源CI/CD滥用检测器防范凭证窃取攻击的文章最初出现在Linux Today上。"
+  },
+  "8bd9b694f0bf0fbd4620fc3734f806c2": {
+    "id": "8bd9b694f0bf0fbd4620fc3734f806c2",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/peladn-wo4-5600h-mini-pc-bios/",
+    "title_en": "PELADN WO4 5600H Mini PC: BIOS",
+    "summary_en": "Unlock the full potential of your PELADN WO4 5600H Mini PC. Explore BIOS settings to improve performance and customize your computing experience.\nThe post PELADN WO4 5600H Mini PC: BIOS appeared first on Linux Today.",
+    "pub_date": "Wed, 22 Jul 2026 07:26:47 +0000",
+    "title_zh": "PELADN WO4 5600H 迷你PC：BIOS",
+    "summary_zh": "本文介绍了如何通过调整PELADN WO4 5600H迷你PC的BIOS设置，释放设备全部潜力，提升性能并定制计算体验。",
+    "fulltext_zh": "解锁您的PELADN WO4 5600H迷你PC的全部潜力。探索BIOS设置，以提升性能并定制您的计算体验。\n该文章PELADN WO4 5600H迷你PC：BIOS首次出现在Linux Today上。"
+  },
+  "a2a24159b6008d1392fee619ff43d4d6": {
+    "id": "a2a24159b6008d1392fee619ff43d4d6",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/gnu-linux-libre-7-1-kernel-released-for-software-freedom-lovers/",
+    "title_en": "GNU Linux-Libre 7.1 Kernel Released for Software Freedom Lovers",
+    "summary_en": "Discover the newly released GNU Linux-Libre 7.1 Kernel, designed for software freedom enthusiasts. Explore its features and enhancements today.\nThe post GNU Linux-Libre 7.1 Kernel Released for Software Freedom Lovers appeared first on Linux Today.",
+    "pub_date": "Wed, 22 Jul 2026 07:18:31 +0000",
+    "title_zh": "GNU Linux-Libre 7.1 内核发布，献给软件自由爱好者",
+    "summary_zh": "GNU Linux-Libre 7.1 内核已正式发布，专为追求软件自由的用户设计。该版本移除了所有非自由固件和驱动，确保完全符合自由软件基金会（FSF）的指导原则。新内核基于上游 Linux 7.1 版本，并进行了清理和优化，为用户提供纯净的自由软件体验。",
+    "fulltext_zh": "探索新发布的 GNU Linux-Libre 7.1 内核，专为软件自由爱好者设计。立即了解其功能与改进。\n\nGNU Linux-Libre 7.1 内核发布，献给软件自由爱好者 一文最早出现在 Linux Today 上。"
   }
 }

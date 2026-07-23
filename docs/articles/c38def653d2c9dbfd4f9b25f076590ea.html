@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：deepin 25.2.0 — Linux 中文速报</title>
+<title>SDL 引入 HDR10 渲染支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：deepin 25.2.0</h1>
+  <h1>SDL 引入 HDR10 渲染支持</h1>
 
-  <div class="article-summary">deepin 25.2.0 正式发布，基于 Debian 分支，带来多项桌面改进与安全更新。Treeland 桌面环境显著提升稳定性与可用性，修复超20个高频交互问题；文件管理新增索引配置，用户可灵活平衡搜索速度与资源占用；DDE 任务栏图标拆分模式支持按窗口显示，提升多窗口识别效率。内核更新至6.6和6.18分支，增强底层稳定性和新硬件兼容性，并同步集成 Qt6、PipeWire、initramfs 等基础组件更新及多项安全修复。</div>
+  <div class="article-summary">Valve 和 SDL 的知名开发者 Sam Lantinga 已为 Simple DirectMedia Library（SDL）添加了 HDR10 渲染支持。该功能目前已在 SDL3 Git 版本中实现，支持 Direct3D 11、Direct3D 12 和 Vulkan 渲染器。此前 SDL 3.0 已引入色彩空间支持和 Wayland 色彩管理等 HDR 准备工作。这一进展标志着 HDR 支持在 Linux 及开源生态系统中的持续扩展。</div>
 
-  <div class="article-body"><p>发行版发布：deepin 25.2.0（DistroWatch.com 新闻）</p><p>该项目已发布其基于 Debian 的发行版的新版本。新版本 deepin 25.2.0 包含多项桌面改进和安全更新：</p><p>&quot;Treeland 桌面环境升级——Treeland 的稳定性和可用性得到显著提升，针对稳定性和高频交互问题进行了超过20项修复；文件管理和搜索能力升级——新增文件索引配置，允许用户独立控制索引，灵活平衡搜索速度与资源占用；DDE 桌面体验增强——任务栏图标拆分模式现支持按窗口显示图标，提升多窗口场景下的识别效率；内核与安全更新——更新了6.6和6.18内核分支，增强了底层系统的稳定性、安全性和对新硬件的兼容性，同时提升了整体性能；同步集成了系统更新、Qt6、PipeWire、initramfs、虚拟化及其他基础组件更新，并包含多项安全修复，以提高系统稳定性、安全性和长期可维护性。&quot;</p><p>发布公告（链接）提供了更多详细信息。</p><p>deepin-desktop-community-25.2.0-amd64.iso</p><p>近期相关新闻与版本</p><p>发行版发布：deepin 25.2.0</p><p>发行版发布：deepin 25.1.0</p><p>发行版发布：deepin 25.0.10</p><p>发行版发布：deepin 25</p><p>开发版发布：deepin 25 Beta</p><p>发行版发布：deepin 23.1</p><p>deepin（原名 Deepin、Linux Deepin、Hiweed GNU/Linux）是一个基于 Debian 的发行版（在2015年底发布的版本15之前基于 Ubuntu），旨在提供优雅、用户友好且可靠的操作系统。它不仅包含开源世界的最佳成果，还创建了基于 Qt 5 工具包的自有桌面环境 DDE（Deepin Desktop Environment）。Deepin 将大量注意力集中在直观的设计上。</p></div>
+  <div class="article-body"><p>SDL 引入 HDR10 渲染支持 - Phoronix</p><p>SDL 引入 HDR10 渲染支持</p><p>2026 年 7 月 22 日，美国东部时间下午 3:13。</p><p>来自 Valve 和 SDL 的知名开发者 Sam Lantinga 已为 Simple DirectMedia Library 添加了 HDR10 渲染支持。</p><p>当使用 SDL 的 Direct3D 11、Direct3D 12 或 Vulkan 渲染器时，SDL3 Git 版本现已具备 HDR10 显示支持。SDL 3.0 此前已引入色彩空间支持以及其他 HDR 准备工作，例如 Wayland 色彩管理。看到 HDR 支持在 Linux 和开源生态系统中持续扩展，令人振奋。</p><p>对于有兴趣使用这一流行于跨平台游戏和应用的库进行 HDR10 渲染的读者，可以通过以下链接了解更多详情：</p><p>D7VK 2.0 发布，带来显著性能改进：最高提升 2 倍或更多</p><p>D7VK 自诞生以来在 Linux 上针对旧版 Direct3D 的性能提升</p><p>DXVK 3.0.1 发布，包含更多游戏修复及其他改进</p><p>TLAC 旨在成为内核级反作弊系统的开源替代方案</p><p>DXVK 3.0 发布，支持 DXBC-SPIRV 着色器编译及默认描述符堆</p><p>Godot 4.7 发布，支持 HDR 输出</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>最后一个 MPEG-4 Visual 专利已过期</p><p>FreeBSD 16 从其基础系统中移除最后一部分 GPL 代码</p><p>Linus Torvalds 重申 Linux 并非“反 AI”也不是“社会战士”项目</p><p>Firefox 153 发布，支持 Vulkan 视频解码及实验性 JPEG-XL</p><p>Frame：一个完全用 x86_64 汇编编写的新 X11 服务器实现</p><p>AMD 发布 Lemonade 11.0 本地 AI 服务器，支持文本转语音及其他新功能</p><p>Ubuntu 内核团队警告临时性 AMD GPU 性能回归，最高达 42 倍</p><p>微软最新开源项目怀旧：Comic Chat 在 30 年后开源</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12893" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/SDL-HDR10-Rendering-Support" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
