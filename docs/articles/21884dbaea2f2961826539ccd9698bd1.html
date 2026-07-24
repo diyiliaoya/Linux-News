@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BSD 发布：OPNsense 26.7 — Linux 中文速报</title>
+<title>Codeberg 成员投票禁止 AI 生成代码 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">软件应用</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>BSD 发布：OPNsense 26.7</h1>
+  <h1>Codeberg 成员投票禁止 AI 生成代码</h1>
 
-  <div class="article-summary">OPNsense 26.7 发布，基于 FreeBSD 15.1，引入了新的接口分配框架以取代旧模块，为未来 API 驱动的接口管理奠定基础。该版本还将出站 NAT 迁移到新的源 NAT 架构，简化了防火墙管理。此外，KEA DHCP 用户现在支持动态 DNS 和 IPv6 前缀委派，提升了现代网络环境的灵活性。</div>
+  <div class="article-summary">非营利代码托管平台 Codeberg 于 2026 年 7 月 22 日结束投票，以 358 票赞成、144 票反对的结果通过决议，禁止托管“大部分”由 AI 生成的代码。另一项动议也获得通过，承诺 Codeberg 永远不会使用托管代码或用户数据训练 AI 模型。此举主要源于 AI 生成项目激增导致存储和 CI/CD 预算不堪重负，但并非全面禁令，人类主导的项目仍可接受少量 AI 贡献。</div>
 
-  <div class="article-body"><p>BSD 发布：OPNsense 26.7</p><p>该项目开发了一个基于 FreeBSD 的专用操作系统（也是 pfSense 的一个分支），专为防火墙和路由器设计。OPNsense 的最新版本是 26.7，基于 FreeBSD 15.1，并引入了许多幕后变化：</p><p>“新的接口分配框架的首次实现取代了旧模块，并为未来 API 驱动的接口管理奠定了基础。虽然初始版本侧重于功能对等，但后续版本将进一步扩展其能力。延续之前版本中引入的防火墙管理现代化，版本 26.7 通过将出站 NAT 迁移到新的源 NAT 架构，进一步简化了平台。这创造了更一致的管理体验，同时简化了未来的开发。使用 KEA DHCP 的组织受益于扩展的配置能力，包括对动态 DNS 和动态 IPv6 前缀委派的支持，为现代网络环境提供了更大的灵活性。”</p><p>更多详情可在项目网站上找到。</p><p>OPNsense-26.7-dvd-amd64.iso.bz2</p><p>近期相关新闻和发布：</p><p>- BSD 发布：OPNsense 26.7</p><p>- BSD 发布：OPNsense 26.1</p><p>- BSD 发布：OPNsense 25.7</p><p>- BSD 发布：OPNsense 25.1</p><p>- BSD 发布：OPNsense 24.7</p><p>- BSD 发布：OPNsense 24.1</p><p>- 更多 OPNsense 新闻...</p><p>OPNsense 是一个基于 FreeBSD 的专用操作系统（也是 pfSense 的一个分支），专为防火墙和路由器设计。它由荷兰的 Deciso B.V. 开发。OPNsense 的一些功能包括正向缓存代理、流量整形、入侵检测、双因素认证和简单的 OpenVPN 客户端设置。该项目对安全的关注带来了许多独特功能，例如可以选择使用 LibreSSL 替代 OpenSSL（可在 GUI 中选择）。OPNsense 还包含一个更新机制，能够及时提供重要的安全更新。</p><p>https://opn</p></div>
+  <div class="article-body"><p>Codeberg 成员投票禁止 AI 生成代码 - OMG! Ubuntu</p><p>作为 GitHub 的非营利替代品，用于托管 FLOSS 项目的 Codeberg 将不再托管“大部分”由 AI 生成的软件。</p><p>一项投票于昨天（2026 年 7 月 22 日）结束，以 358 票赞成、144 票反对、14 票弃权的结果通过，投票率约为 50%，决定停止托管主要由“氛围编码”生成的软件。另一项动议也获得通过，承诺 Codeberg 永远不会使用托管代码或用户数据训练 AI 模型。</p><p>尽管这本来也不太可能发生。</p><p>修正案现在禁止“主要由生成式 AI 工具编写的代码”构成的项目。</p><p>关于禁令的经济必要性，解释称几年前 SSD 成本约为每个 700 欧元，而现在每个高达 3700 欧元。氛围编码项目的激增正在消耗其 CI/CD 和存储预算。</p><p>对于依赖捐赠资助的服务来说，这在日常运营上是不可持续的。Codeberg 与许多代码共享仓库一样，旨在让人类能够共同协作开发自由软件。托管无人编写、无人维护的一次性代码与此目标背道而驰。</p><p>或者，引用该组织的话说，分享提示词的输出“并不能让世界变得更美好”。</p><p>这不是全面禁令——存在例外情况</p><p>在任何人因托管在 Codeberg 上的代码含有少量 AI 痕迹而恐慌之前，有一个例外条款：现在被禁止的是“大部分”由 AI 生成的代码。</p><p>分享提示词的输出“并不能让世界变得更美好”，Codeberg 表示</p><p>这个“大部分”是一个重要的限定词，因为它意味着这并非对所有 AI 用途的全面禁令。例如，一个由人类主导的项目不会因为接受偶尔的 LLM 生成的贡献（无论知情与否）而违反新规。</p><p>也不会进行大规模清理，因此那些拥有活跃社区或早于 LLM 历史的现有项目不会在一夜之间被删除仓库。</p><p>不安全的是现有的自主代理构建的仓库、资源负担与其贡献者数量不相称的项目，以及代码从未由人类编写的项目。</p><p>Codeberg 的名字可能源于某种冰冷的事物，但它并不打算成为无人编写、无人关心、很可能再也不会被查看的代码的冰库。</p><p>此举呼应了 Flathub 最近关于 AI 辅助代码的政策变更，该变更侧重于审查志愿者因自动提交的废弃项目泛滥而付出的人力成本。Codeberg 的理由更为直接：托管所有这些项目的成本。</p><p>我们都在感受 LLM 在硬件价格、能源成本以及数据中心造成的环境破坏方面带来的“冲击”——无论我们是否使用 LLM 来一次性生成又一个世界并不需要的“应用”，并将托管责任转嫁给他人。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12896" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/codeberg-bans-ai-generated-code" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

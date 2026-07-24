@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>与桌面上的发光金字塔对话，它将为你运行AI代理 — Linux 中文速报</title>
+<title>Collabora Online 迎来十周年，拒绝将你的数据交给别人的AI — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
+    <span class="tag">软件应用</span>
     <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>与桌面上的发光金字塔对话，它将为你运行AI代理</h1>
+  <h1>Collabora Online 迎来十周年，拒绝将你的数据交给别人的AI</h1>
 
-  <div class="article-summary">Autonomous公司推出Intern 2，一款金字塔形状的桌面AI代理设备。它基于Orange Pi 4 Pro，预装OpenClaw或Hermes框架，支持语音交互、浏览器控制及Telegram/Slack/Discord集成。售价249美元起，可执行邮件管理、GitHub监控等任务，无需终端操作。</div>
+  <div class="article-summary">Collabora Online 发布 26.04 版本，庆祝其开源办公套件问世十周年。新版本引入 AI 辅助功能，覆盖 Writer、Calc 和 Impress，但强调用户可自主选择是否启用，并支持自托管或连接信任的商业 API，不强制绑定特定供应商。此外，协作功能增强，包括每用户工作表视图、数据透视表计算值、演示文稿同步视图，以及大幅改进的文档比较工具。Collabora 提供免费社区版、桌面版和企业版，企业版附带付费 SLA 和安全更新。</div>
 
-  <div class="article-body"><p>与桌面上的发光金字塔对话，它将为你运行AI代理</p><p>与桌面上的发光金字塔对话，它将为你运行AI代理</p><p>这是一款金字塔形状的Orange Pi 4 Pro，预装OpenClaw或Hermes，现在还能与你对话，让你获得“钢铁侠”般的感觉。</p><p>当OpenClaw在2026年初达到炒作巅峰时，很多人购买了Mac Mini只是为了全天候运行一个代理。</p><p>我从不理解为什么人们会花500美元购买一个设备来运行那些仅仅是对商业LLM（如Claude和ChatGPT）进行推理的任务。</p><p>但这些“爪子”已经站稳脚跟，人们正在利用它们在专用硬件上运行自己的代理。这就是为什么我们有了围绕这些代理构建的专用硬件。</p><p>Autonomous是一家以站立式办公桌和人体工学椅闻名的公司，尽管他们最初是以Robotbase的身份起步，制造个人机器人。</p><p>看起来他们某种程度上回归了本源。他们的产品线中有几个“AI硬件”项目，其中包括一个……</p><p>但我今天要介绍的设备是一款运行AI代理的桌面伴侣，你可以把它当作办公助手或实习生（无意冒犯实习生）。</p><p>该设备名为Intern 2，因为它是六个月前发布的Intern的后续产品。让我们进一步了解它。</p><p>Intern 2规格</p><p>Orange Pi 4 Pro，8核Allwinner A733（2个Cortex-A76 + 6个Cortex-A55，最高2.0GHz）</p><p>64GB板载存储 + 最高256GB扩展</p><p>Wi-Fi 6，蓝牙5.4</p><p>语音交互（双麦克风，拾音距离达3米；5W扬声器）和浏览器控制，外加现有的Telegram/Slack/Discord渠道</p><p>1年保修，30天免费退货</p><p>Intern 2起售价为249美元（OpenClaw或Hermes版本），开发者版售价299美元。</p><p>基本上，该设备出厂时已预装代理框架。你在结账时选择OpenClaw或Hermes，将设备连接Wi-Fi，添加到Telegram、Slack或Discord群组（WhatsApp稍后通过单独的QR配对步骤添加），它就会开始处理你的收件箱、监控GitHub问题，并执行你交给它的任何多步骤任务，全程无需触碰终端。</p><p>我猜你需要进行一些配置来连接你的邮件等，但如果你的主要LLM已经连接到你使用的各种服务，这应该不会太难。</p><p>底层的板子是Orange Pi 4 Pro：一颗8核Allwinner A733芯片，两个性能更强的Cortex-A76核心搭配六个能效Cortex-A55核心，以及一个3 TOPS的NPU。这是一种你可以单独购买的板子，所以Intern 2并没有提供或隐藏任何奇特的东西。它只是将常见的SBC硬件包装成看起来不像开发板的样子。</p><p>它长什么样？它看起来像一个顶部发光的金字塔。我挺喜欢这个外观。</p><p>语音交互是这里的主要卖点。能说话为什么还要打字？托尼·斯塔克作为钢铁侠不就是这样做的吗？</p><p>Intern 2增加了双远场麦克风，额定拾音距离达3米，外加一个5W扬声器，所以你可以像与同事（或实习生）交谈一样，直接与放在桌上的这个东西对话。浏览器控制功能也已加入，让代理能够代表你在网站上操作，而不仅仅通过聊天集成和API工作。</p><p>有三个版本可供选择：</p><p>默认版，预装框架，除Wi-Fi和聊天应用外无需设置。</p><p>相同硬件，开箱即运行Hermes。</p><p>开发者版，外壳开放。你可以通过SSH登录，Claude Code已预装，并留有空间可替换为Codex或OpenCode，如果你想运行自己的代理栈。</p><p>开源自主操作系统</p><p>Autonomous OS，由Autonomous为物理AI代理创建的开源操作系统。</p><p>它处理感知、记忆、技能和更新，而实际的“大脑”可在OpenClaw、Hermes、PicoClaw、Claude Code、OpenAI Codex或任何你想接入的其他代理框架之间切换。</p><p>Intern是继名为Autonomous Lamp的台灯之后，基于该系统构建的第二款参考设备。由于Autonomous正在……</p></div>
+  <div class="article-body"><p>Collabora Online 迎来十周年，拒绝将你的数据交给别人的AI</p><p>Collabora Online 迎来十周年，拒绝将你的数据交给别人的AI</p><p>其最新版本吸收了 CODE 26.04 的改进，因此涉及了 AI。</p><p>Collabora Productivity</p><p>过去十年一直在证明，开源办公套件可以直接与 Microsoft 365 和 Google Workspace 竞争，而无需组织放弃对其基础设施或文档的控制。</p><p>这一切都得益于一支开源工程师团队，他们的工作使 Collabora 成为企业寻找协作文档平台时的可信赖品牌。</p><p>为庆祝十周年，</p><p>发布了 Collabora Online 26.04</p><p>，标志着这款可自托管产品的一个重要里程碑。</p><p>Collabora Online 26.04 包含 Writer、Calc 和 Impress。</p><p>如果你关注过今年六月发布的 CODE 26.04，那么 Collabora Online 26.04 中的大部分内容都会让你感到熟悉。所以这里我将重复我们之前已经介绍过的信息。</p><p>AI 辅助功能这次覆盖了套件中的每个主要应用，</p><p>落地于 Writer、Calc 和 Impress。Writer 的版本帮助起草和改写段落，Calc 的版本处理公式错误和电子表格数据，Impress 的版本将笔记或较长的文档压缩成适合幻灯片的材料。</p><p>除非组织先开启它，否则这些功能都不会运行。从那里开始，团队可以选择自己的路径，连接他们已信任的商业 API，或者在他们控制的基础设施上部署自托管模型，Collabora 不推销任何特定供应商。</p><p>CODE 26.04 的变更倾向于协作。每用户工作表视图允许两个人过滤和重新排列同一共享电子表格，而不会互相干扰设置。数据透视表现在支持计算值，并且为从事严肃数据处理工作的人提供了一批新函数。</p><p>演示文稿方面，观众可以自动跟踪演示者当前所在的幻灯片，并可以选择暂停和回看之前错过的内容，然后再重新加入实时视图。</p><p>Writer 的文档比较工具是本次周期中改动最大的部分。调出文件的早期版本，无论是位于服务器上还是本地，编辑器都会高亮显示与当前草稿相比的所有更改，并注明修改者和修改时间。</p><p>你还可以选择并排审阅更改，或通过通常的侧边栏审阅，并且还获得了 BITV 2.0 认证。</p><p>谈到此次发布，</p><p>Collabora Productivity 的 CEO 表示：</p><p>“Collabora Online 26.04 高度可定制且严格控制的 AI 辅助功能，使用户能够安全地加速完成与文档相关的任务。”</p><p>“同样，新的编辑和审阅功能、改进的可访问性以及更强的文档互操作性，将平滑所有用户的日常体验，使其更加直观和灵活。”</p><p>为什么选择 Collabora Online？</p><p>Collabora 提供其套件的四种版本。</p><p>Collabora Online 开发版 (CODE) 是免费且自托管的，专为追求新功能的早期采用者打造。</p><p>Collabora Office 经典版</p><p>将该体验带到桌面端，而</p><p>Collabora Online 企业版</p><p>是付费的企业解决方案。</p><p>这里的所有内容都已经在 CODE 中经过社区的压力测试。然后 Collabora 将其整合到</p><p>企业版中，附带付费 SLA、签名安全更新、长期维护，以及出现问题时直接联系其支持团队的权限。</p><p>喜欢这次更新？支持独立的 Linux 新闻报导</p><p>It's FOSS 过去 14 年来一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无需承诺</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的技术爱好者。</p><p>Plex 的开源替代品 Jellyfin 正面临领导危机</p><p>与你桌上的发光金字塔对话，它将为你运行 AI 代理</p><p>西门子股份公司曾是 MPEG-4 Visual 走向无专利之路的最后坚守者</p><p>GNOME</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/autonomous-intern-2/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/collabora-online-26-04/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

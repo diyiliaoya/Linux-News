@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BSD 发布：OPNsense 26.7 — Linux 中文速报</title>
+<title>AMD EPYC 9006 Venice 发布，有望成为全垒打 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>BSD 发布：OPNsense 26.7</h1>
+  <h1>AMD EPYC 9006 Venice 发布，有望成为全垒打</h1>
 
-  <div class="article-summary">OPNsense 26.7 发布，基于 FreeBSD 15.1，引入了新的接口分配框架以取代旧模块，为未来 API 驱动的接口管理奠定基础。该版本还将出站 NAT 迁移到新的源 NAT 架构，简化了防火墙管理。此外，KEA DHCP 用户现在支持动态 DNS 和 IPv6 前缀委派，提升了现代网络环境的灵活性。</div>
+  <div class="article-summary">AMD 在 Advancing AI 2026 大会上正式发布 EPYC 9006 &quot;Venice&quot; 系列处理器，旨在将服务器性能提升至代理式 AI 时代的新高度。Venice 支持 DDR5-8000 和 Gen2 MRDIMM-12800 内存，每插槽最多 16 通道，并引入 PCIe Gen 6（双路配置下最多 160 条通道）。Zen 6C 核心数可达每插槽 256 核/512 线程，96 核处理器频率最高 5.0GHz。相比前代 Turin，Venice 每核性能提升约 20%，在 Nginx HTTPS 等负载中实现 1.2 倍代际提升。产品线包括 EPYC 9006 SP7、SP8 以及 2027 年推出的 9006X 3D V-Cache 版本。SP7 将于 Q4 上市，AMD 承诺测试无限制。</div>
 
-  <div class="article-body"><p>BSD 发布：OPNsense 26.7</p><p>该项目开发了一个基于 FreeBSD 的专用操作系统（也是 pfSense 的一个分支），专为防火墙和路由器设计。OPNsense 的最新版本是 26.7，基于 FreeBSD 15.1，并引入了许多幕后变化：</p><p>“新的接口分配框架的首次实现取代了旧模块，并为未来 API 驱动的接口管理奠定了基础。虽然初始版本侧重于功能对等，但后续版本将进一步扩展其能力。延续之前版本中引入的防火墙管理现代化，版本 26.7 通过将出站 NAT 迁移到新的源 NAT 架构，进一步简化了平台。这创造了更一致的管理体验，同时简化了未来的开发。使用 KEA DHCP 的组织受益于扩展的配置能力，包括对动态 DNS 和动态 IPv6 前缀委派的支持，为现代网络环境提供了更大的灵活性。”</p><p>更多详情可在项目网站上找到。</p><p>OPNsense-26.7-dvd-amd64.iso.bz2</p><p>近期相关新闻和发布：</p><p>- BSD 发布：OPNsense 26.7</p><p>- BSD 发布：OPNsense 26.1</p><p>- BSD 发布：OPNsense 25.7</p><p>- BSD 发布：OPNsense 25.1</p><p>- BSD 发布：OPNsense 24.7</p><p>- BSD 发布：OPNsense 24.1</p><p>- 更多 OPNsense 新闻...</p><p>OPNsense 是一个基于 FreeBSD 的专用操作系统（也是 pfSense 的一个分支），专为防火墙和路由器设计。它由荷兰的 Deciso B.V. 开发。OPNsense 的一些功能包括正向缓存代理、流量整形、入侵检测、双因素认证和简单的 OpenVPN 客户端设置。该项目对安全的关注带来了许多独特功能，例如可以选择使用 LibreSSL 替代 OpenSSL（可在 GUI 中选择）。OPNsense 还包含一个更新机制，能够及时提供重要的安全更新。</p><p>https://opn</p></div>
+  <div class="article-body"><p>AMD EPYC 9006 Venice 发布，有望成为全垒打 - Phoronix</p><p>AMD EPYC 9006 Venice 发布，有望成为全垒打</p><p>2026年7月23日 下午1:20 EDT</p><p>“Turin”发布至今不到两年，但它的表现依然出色。在我过去22年的Linux硬件评测/基准测试生涯中，它是少数几代在两年后仍能让我着迷的CPU之一——在各种工作负载下依然保持行业领先的性能、卓越的可靠性，以及一个非常稳健的平台。今天，在AMD Advancing AI 2026大会上，Lisa Su正式发布了EPYC 9006“Venice”，旨在将服务器产品提升至代理式AI时代的新高度。</p><p>AMD EPYC 9005系列之所以近乎永恒，部分原因在于它在与竞争对手的较量中表现极为出色。即使是面对更新的CPU，比如EPYC Turin超越亚马逊新推出的Graviton5，Turin依然老而弥坚。而现在，EPYC Venice已经投入生产。</p><p>在与Intel Xeon 6 Granite Rapids的对比中，Intel的优势在于MRDIMM，能在内存密集型工作负载中提供比DDR5-6400更高的内存带宽（尽管功耗和成本更高），或者适用于那些准备利用Advanced Matrix Extensions（AMX）的工作负载。而EPYC Venice现在支持Gen2 MRDIMM-12800内存以及DDR5-8000内存。这直接消除了Granite Rapids的优势，只留下AMX作为某些AI工作负载的独特特性。虽然AMD EPYC 9006系列不支持AMX，但Venice改进了AMD的AVX-512支持。这将使得在未来的Phoronix文章中，使用最新编译器对AVX-512 BMM的影响进行基准测试变得非常有趣。</p><p>除了DDR5-8000和MRDIMM-12800 MT/s的速度，EPYC Venice每插槽支持最多16通道内存。考虑到EPYC 9005 Turin在整体性能上的优势，再加上每核性能提升约20%，这将是彻底的压倒性胜利。即使在Nginx HTTPS网页服务等工作负载中，AMD也展示了1.2倍的代际性能提升。而Zen 6C核心数可达每插槽256核/512线程。</p><p>AMD EPYC 9006 Venice还支持PCIe Gen 6，在双路配置下最多提供160条通道。Venice还引入了新的电源管理特性，如FAST、UBPS和UPP，这些都将非常值得测试和评估。EPYC Venice的时钟频率最高可达5.0GHz（针对96核处理器）。</p><p>Venice产品线包括EPYC 9006 SP7处理器、面向更优化服务器价值的EPYC 9006 SP8，以及将于2027年首次亮相的EPYC 9006X SP7（Venice-X 3D V-Cache处理器）。AMD EPYC 9006 LP“Verano”也即将推出，它将在2027年下半年搭载LPDDR内存的EPYC Zen 6。</p><p>虽然今天“发布”了，但在旧金山的保密简报会上，AMD并未分享EPYC 9006的SKU表格等详细信息，且EPYC 9006 SP7要到Q4才能上市。因此，对一些人来说，这更像是一次软发布。但考虑到EPYC 9005系列目前强劲的表现，即使AMD的宣称只实现了一半（这通常不太可能），鉴于EPYC 9005当前强大的性能，它依然会处于行业领先地位。</p><p>Phoronix很快将进行AMD EPYC 9006 Venice的基准测试。这些测试将没有任何人为干预、选定的基准测试限制，或阻止功耗/频率报告的情况——正如最近在其他厂商的基准测试中遇到的那样：EPYC Venice测试不会有任何此类限制。AMD表示，他们致力于公平地展示自己能够在当今多样化的代理式AI时代以及更传统的Linux服务器工作负载、HPC等领域中交付优秀成果。</p><p>从AMD公布的EPYC Venice数据来看，该处理器在与Intel Xeon和ARM服务器CPU的竞争中取得了决定性胜利。即使以非常保守的方式解读，考虑到当前EPYC 9005 Turin的统治地位，这些数据依然非常强劲且状态极佳。此外，Intel的Xeon Diamond Rapids竞争产品至少要到2027年才会推出。未来非常值得期待。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12896" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/review/amd-epyc-9006-venice" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

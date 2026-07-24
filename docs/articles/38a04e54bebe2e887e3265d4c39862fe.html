@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BSD 发布：OPNsense 26.7 — Linux 中文速报</title>
+<title>AMD 发布 ROCm.AI 作为面向开发者的 AI 驱动平台 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>BSD 发布：OPNsense 26.7</h1>
+  <h1>AMD 发布 ROCm.AI 作为面向开发者的 AI 驱动平台</h1>
 
-  <div class="article-summary">OPNsense 26.7 发布，基于 FreeBSD 15.1，引入了新的接口分配框架以取代旧模块，为未来 API 驱动的接口管理奠定基础。该版本还将出站 NAT 迁移到新的源 NAT 架构，简化了防火墙管理。此外，KEA DHCP 用户现在支持动态 DNS 和 IPv6 前缀委派，提升了现代网络环境的灵活性。</div>
+  <div class="article-summary">AMD 在年度 Advancing AI 大会上宣布推出 ROCm.AI，这是一个面向开发者的 AI 驱动平台。该平台利用 AI 帮助开发者适配代码以运行于 ROCm 环境，支持 Claude、Codex、Cursor 和 Gemini 等流行智能体，并引入 Hyperloom 组件实现端到端推理工作负载的自动化优化。AMD 声称，与 ROCm 7.0 基线相比，ROCm.AI 平均可带来 3.3 倍的推理性能提升和 2.4 倍的训练性能提升。该平台将于 8 月随下一版本发布。</div>
 
-  <div class="article-body"><p>BSD 发布：OPNsense 26.7</p><p>该项目开发了一个基于 FreeBSD 的专用操作系统（也是 pfSense 的一个分支），专为防火墙和路由器设计。OPNsense 的最新版本是 26.7，基于 FreeBSD 15.1，并引入了许多幕后变化：</p><p>“新的接口分配框架的首次实现取代了旧模块，并为未来 API 驱动的接口管理奠定了基础。虽然初始版本侧重于功能对等，但后续版本将进一步扩展其能力。延续之前版本中引入的防火墙管理现代化，版本 26.7 通过将出站 NAT 迁移到新的源 NAT 架构，进一步简化了平台。这创造了更一致的管理体验，同时简化了未来的开发。使用 KEA DHCP 的组织受益于扩展的配置能力，包括对动态 DNS 和动态 IPv6 前缀委派的支持，为现代网络环境提供了更大的灵活性。”</p><p>更多详情可在项目网站上找到。</p><p>OPNsense-26.7-dvd-amd64.iso.bz2</p><p>近期相关新闻和发布：</p><p>- BSD 发布：OPNsense 26.7</p><p>- BSD 发布：OPNsense 26.1</p><p>- BSD 发布：OPNsense 25.7</p><p>- BSD 发布：OPNsense 25.1</p><p>- BSD 发布：OPNsense 24.7</p><p>- BSD 发布：OPNsense 24.1</p><p>- 更多 OPNsense 新闻...</p><p>OPNsense 是一个基于 FreeBSD 的专用操作系统（也是 pfSense 的一个分支），专为防火墙和路由器设计。它由荷兰的 Deciso B.V. 开发。OPNsense 的一些功能包括正向缓存代理、流量整形、入侵检测、双因素认证和简单的 OpenVPN 客户端设置。该项目对安全的关注带来了许多独特功能，例如可以选择使用 LibreSSL 替代 OpenSSL（可在 GUI 中选择）。OPNsense 还包含一个更新机制，能够及时提供重要的安全更新。</p><p>https://opn</p></div>
+  <div class="article-body"><p>AMD 发布 ROCm.AI 作为面向开发者的 AI 驱动平台 - Phoronix</p><p>AMD 发布 ROCm.AI 作为面向开发者的 AI 驱动平台</p><p>2026 年 7 月 23 日下午 1:45（美国东部时间）</p><p>在 Instinct MI455X 和 Helios 以及全新 AMD EPYC 9006 &quot;Venice&quot; 处理器发布之际，AMD 利用其年度 Advancing AI 大会宣布推出 ROCm.AI，这是一个面向开发者的 AI 驱动平台。</p><p>ROCm.AI 将作为 8 月下一版本的一部分发布，旨在利用 AI 帮助开发者适配其代码，以便在 ROCm 上运行。</p><p>ROCm.AI 为 Claude、Codex、Cursor 和 Gemini 等流行智能体提供技能，帮助它们成为 &quot;ROCm 超级用户&quot;，从而提供 AI 辅助优化，用于适配或改进围绕 ROCm 的代码库。此外，ROCm.AI 还具备通过其全新 Hyperloom 组件实现端到端 AI 工作负载优化的能力。Hyperloom 旨在自动化端到端推理工作负载的优化，并帮助在远短于手动所需的时间内完成分析、内核优化和验证。</p><p>ROCm.AI 利用 AI 驱动的优化技术，针对计算内核、内存管理、并行化和调度进行优化，从而提升 AI 推理和训练性能。</p><p>从理论上讲，ROCm.AI 听起来非常出色：利用 AI 帮助你的软件适配 AMD 的 AI 栈。在实践中，观察它在不同代码库上的表现将十分有趣。AMD 声称，与 ROCm 7.0 基线相比，ROCm.AI 平均可带来 3.3 倍的推理性能提升和 2.4 倍的训练性能提升。</p><p>目前这些只是初步细节，我们期待在 8 月发布的下一版本中了解更多关于 ROCm.AI 的信息。</p><p>AMD EPYC Zen 7 &quot;Florence&quot; 确认搭载 ACE 及下一代内存</p><p>AMD 发布 Instinct MI455X 与 Helios AI 机架</p><p>Ryzen AI 软件 1.8 发布，新增模型支持与更多优化</p><p>Lemonade 11.5 本地 AI 服务器发布，完成 Lemonade 路由器</p><p>AMD Ryzen AI Halo LED 驱动已排队等待引入 Linux 7.3</p><p>AMD 正在为 Linux 内核准备 Zen 6 性能分析/性能事件支持，新增更多 EILVT 寄存器</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>最后一个 MPEG-4 Visual 专利已过期</p><p>Linus Torvalds 重申 Linux 并非 &quot;反 AI&quot; 也不是 &quot;社会斗士&quot; 项目</p><p>Firefox 153 发布，支持 Vulkan 视频解码及实验性 JPEG-XL</p><p>Frame：一个完全用 x86_64 汇编编写的新 X11 服务器实现</p><p>AMD 发布 Lemonade 11.0 本地 AI 服务器，支持文本转语音及其他新功能</p><p>Ubuntu 内核团队警告 AMD GPU 临时性能回归，最高达 42 倍</p><p>微软最新开源项目怀旧：Comic Chat 在 30 年后开源</p><p>GNOME 因 AI 生成报告更改安全披露政策</p><p>在享受无广告浏览和单页文章查看的同时，请注意：</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12896" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/AMD-ROCm-AI" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

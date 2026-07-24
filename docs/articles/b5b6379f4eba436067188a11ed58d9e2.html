@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BSD 发布：OPNsense 26.7 — Linux 中文速报</title>
+<title>FreeBSD Ports 因一次超大提交而冻结 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>BSD 发布：OPNsense 26.7</h1>
+  <h1>FreeBSD Ports 因一次超大提交而冻结</h1>
 
-  <div class="article-summary">OPNsense 26.7 发布，基于 FreeBSD 15.1，引入了新的接口分配框架以取代旧模块，为未来 API 驱动的接口管理奠定基础。该版本还将出站 NAT 迁移到新的源 NAT 架构，简化了防火墙管理。此外，KEA DHCP 用户现在支持动态 DNS 和 IPv6 前缀委派，提升了现代网络环境的灵活性。</div>
+  <div class="article-summary">FreeBSD 项目宣布，由于一个 150MB 的二进制文件被提交到 Ports 仓库，导致镜像到 GitHub（100MB 硬限制）失败，Ports 仓库自 7 月 21 日起冻结。项目团队正在积极清理问题提交、恢复镜像，并添加服务端钩子防止未来发生类似事件。此次冻结并非恶意入侵，而是意外事故。</div>
 
-  <div class="article-body"><p>BSD 发布：OPNsense 26.7</p><p>该项目开发了一个基于 FreeBSD 的专用操作系统（也是 pfSense 的一个分支），专为防火墙和路由器设计。OPNsense 的最新版本是 26.7，基于 FreeBSD 15.1，并引入了许多幕后变化：</p><p>“新的接口分配框架的首次实现取代了旧模块，并为未来 API 驱动的接口管理奠定了基础。虽然初始版本侧重于功能对等，但后续版本将进一步扩展其能力。延续之前版本中引入的防火墙管理现代化，版本 26.7 通过将出站 NAT 迁移到新的源 NAT 架构，进一步简化了平台。这创造了更一致的管理体验，同时简化了未来的开发。使用 KEA DHCP 的组织受益于扩展的配置能力，包括对动态 DNS 和动态 IPv6 前缀委派的支持，为现代网络环境提供了更大的灵活性。”</p><p>更多详情可在项目网站上找到。</p><p>OPNsense-26.7-dvd-amd64.iso.bz2</p><p>近期相关新闻和发布：</p><p>- BSD 发布：OPNsense 26.7</p><p>- BSD 发布：OPNsense 26.1</p><p>- BSD 发布：OPNsense 25.7</p><p>- BSD 发布：OPNsense 25.1</p><p>- BSD 发布：OPNsense 24.7</p><p>- BSD 发布：OPNsense 24.1</p><p>- 更多 OPNsense 新闻...</p><p>OPNsense 是一个基于 FreeBSD 的专用操作系统（也是 pfSense 的一个分支），专为防火墙和路由器设计。它由荷兰的 Deciso B.V. 开发。OPNsense 的一些功能包括正向缓存代理、流量整形、入侵检测、双因素认证和简单的 OpenVPN 客户端设置。该项目对安全的关注带来了许多独特功能，例如可以选择使用 LibreSSL 替代 OpenSSL（可在 GUI 中选择）。OPNsense 还包含一个更新机制，能够及时提供重要的安全更新。</p><p>https://opn</p></div>
+  <div class="article-body"><p>FreeBSD Ports 因一次超大提交而冻结 - Phoronix</p><p>FreeBSD Ports 因一次超大提交而冻结</p><p>发布于 2026 年 7 月 23 日 12:25 PM EDT。</p><p>FreeBSD 项目今天发布声明，解释了 FreeBSD Ports 仓库在过去两天被冻结的原因。此次冻结并非恶意入侵，而是一次超大提交导致的问题。</p><p>自 7 月 21 日起，FreeBSD Ports 仓库一直处于冻结状态，截至本文撰写时仍未解冻。FreeBSD Ports 冻结的状态通过以下渠道传达：</p><p>声明详细说明了冻结原因：一个 150MB 的文件被提交，导致镜像到 GitHub（有 100MB 硬限制）失败。</p><p>“您可能已经注意到，截至本文撰写时，ports 仓库已冻结近 24 小时。我们关于当前情况及后续步骤的声明如下。</p><p>一个 150MB 的二进制文件最近被提交到 ports 树中，因此 core@ 决定对 ports 树实施临时冻结，以便进行清理工作。该提交因 GitHub 的 100MB 文件大小硬限制，切断了我们 ports 树到 github.com 的镜像，并在仓库历史中引入了一个许可存疑的 blob。</p><p>鉴于 github.com 镜像对我们社区的重要性，我们正在积极采取措施移除有问题的提交，并恢复对外部服务的镜像。无需担心 ports 树已被入侵。冻结完全是为了限制需要重写的提交数量，以便发布修正后的状态。</p><p>对我们而言，为社区和下游用户提供一条可重现且可持续的修正路径至关重要。如您所知，修正此类问题并不总是那么简单直接。</p><p>我们正在积极编写说明，现有检出需要遵循这些说明以跟上修正进度。为保持完全透明，我们还将提供一套流程，用于验证官方仓库的变更是否严格限定在我们声称的范围内。</p><p>我们还在实施服务端钩子，以防止未来再次发生此类事件。</p><p>请继续关注我们的后续更新，感谢您的耐心。”</p><p>解决此问题的工作仍在进行中，但至少这不是一次恶意入侵，不像最近的 Arch Linux AUR 事件那样。</p><p>FreeBSD 内部人员正在致力于将 AMD ROCm 移植到 BSD 世界</p><p>FreeBSD 笔记本电脑支持持续改进：WiFi、GPU 和音频驱动工作</p><p>FreeBSD 16 从其基础系统中移除最后一部分 GPL 代码</p><p>FreeBSD 桌面安装程序选项：处理 NVIDIA 驱动和许可问题</p><p>FreeBSD 更新其从 Linux 6.12 LTS 移植的图形驱动</p><p>FreeBSD 15.1 发布：更新 WiFi 驱动、更好的 C23 支持及其他改进</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>最后一项 MPEG-4 Visual 专利已过期</p><p>Linus Torvalds 重申 Linux 并非“反 AI”也不是“社会战士”项目</p><p>Firefox 153 发布：支持 Vulkan 视频解码、实验性 JPEG-XL</p><p>Frame：一个完全用 x86_64 汇编编写的新 X11 服务器实现</p><p>AMD 发布 Lemonade 11.0 本地 AI 服务器：支持文本转语音及其他新功能</p><p>Ubuntu 内核团队警告：临时 AMD GPU 性能回归高达 42 倍</p><p>微软最新开源怀旧之作：Comic Chat 在 30 年后开源</p><p>GNOME 因 AI 生成报告更改安全披露策略</p><p>在享受无广告浏览的同时，</p><p>单页</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12896" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/FreeBSD-Ports-Frozen-2026" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
