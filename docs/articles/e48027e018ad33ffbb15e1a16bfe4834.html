@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 26.04 Stopped Notifying Users About Updates, But That Was Intentional — Linux 中文速报</title>
+<title>Ubuntu 26.04 停止通知用户更新，但这是有意为之 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -140,7 +140,7 @@
   <div class="header-inner">
     <a class="logo" href="../index.html">$ linux<span>-news</span></a>
     <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
-    <div class="update-time">更新于 2026年07月26日</div>
+    <div class="update-time">更新于 2026年07月27日</div>
   </div>
 </header>
 
@@ -152,11 +152,11 @@
     <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Ubuntu 26.04 Stopped Notifying Users About Updates, But That Was Intentional</h1>
+  <h1>Ubuntu 26.04 停止通知用户更新，但这是有意为之</h1>
 
-  <div class="article-summary">Luckily, a fix is already out, shipped as a security update.</div>
+  <div class="article-summary">Ubuntu 26.04 LTS 的更新通知突然消失，经调查发现是设计变更：更新通知器仅在托盘图标可见时发送通知，而该图标默认被关闭且无菜单可重新开启。非安全更新因此未被标记，但安全更新仍通过无人值守升级自动安装。修复补丁已作为安全更新发布，版本为 update-notifier 3.207.2，彻底移除了托盘图标依赖，确保安装、无人值守升级或手动检查均能触发通知。用户也可通过命令手动恢复托盘图标。</div>
 
-  <div class="article-body"><p>Luckily, a fix is already out, shipped as a security update.</p></div>
+  <div class="article-body"><p>Ubuntu 26.04 停止通知用户更新，但这是有意为之</p><p>幸运的是，修复补丁已经发布，作为安全更新推送。</p><p>如果你的 Ubuntu 26.04 LTS 系统上不再显示更新通知，那并非随机故障。OMG Ubuntu 追踪到 Launchpad 上的一个错误报告，两者均指向同一根本原因。</p><p>更新通知器仅在托盘图标可见时才会发送桌面通知，而该图标在 Ubuntu 26.04 中被关闭，且菜单中没有任何选项可以重新开启。</p><p>7 月 5 日提交该错误的用户发现，他的机器上有 10 个待处理的非安全更新，却没有收到任何安装提示。他手动进行了测试：强制启用托盘图标后，更新通知器弹出了通知；而关闭图标后，则完全没有反应。</p><p>Canonical 的 Marco Trevisan 早在 4 月就标记了一个自身问题：当时更新指示器不遵循自身设置，甚至无法手动开启。该问题在一天内得到修复，但图标默认保持关闭。再次评论该错误时，Marco 称这种设置是一种设计选择，并表示任何希望恢复图标的用户都可以通过设置启用它。</p><p>然而，实际情况并没有听起来那么糟糕。Ubuntu 默认在后台运行无人值守升级，因此安全补丁会自行安装，无论是否有通知出现。真正的缺口在于非安全更新——这类更新通常需要用户自行审查——完全没有被标记。</p><p>Alessandro Astone 已经发布了 update-notifier 3.207.2，作为针对 Ubuntu 26.04.1 的安全更新。它完全移除了对托盘图标的依赖。现在，一次安装、一次无人值守升级运行或一次手动检查，都会触发相同的通知。</p><p>由于该修复以安全更新的形式发布，借助无人值守升级，大多数系统会自动收到修复。</p><p>如果你更希望恢复托盘图标，可以打开终端并运行：</p><p>gsettings set com.ubuntu.update-notifier show-updates-status-icon true</p><p>或者直接通过应用中心的“更新”标签页、软件更新器，或运行以下命令来检查更新状态：</p><p>apt list --upgradable</p><p>GNOME 的安全可能面临危机，因为唯一的追踪者即将离职</p><p>Michael Catanzaro 自 2020 年以来一直独自负责 GNOME 安全追踪工作，但他将于 12 月离职。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。请帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无需承诺</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。</p><p>Ubuntu 26.10 &quot;Stonking Stingray&quot;：迄今为止所有新功能</p><p>Codeberg 在社区支持下对 AI 的使用划定了明确界限</p><p>Collabora Online 迎来十周年，拒绝将你的数据交给别人的 AI</p><p>Plex 的开源替代品 Jellyfin 正面临领导危机</p><p>与桌上的发光金字塔对话，它将为你运行 AI 代理</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周新闻通讯，你将学到有用的 Linux 技巧，发现应用程序，探索新发行版，并随时了解 Linux 世界的最新动态。</p><p>太棒了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅 It's FOSS。</p><p>您的链接已过期。</p><p>成功！请检查您的电子邮件以获取登录的魔法链接。</p><p>成功！您的账单信息已更新。</p><p>您的账单未更新。</p></div>
 
   <div class="article-footer">
     <a class="btn-original" href="https://itsfoss.com/news/ubuntu-26-04-update-notifier-fix/" target="_blank" rel="noopener">

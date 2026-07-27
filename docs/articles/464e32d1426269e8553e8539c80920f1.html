@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 26.10 “Stonking Stingray”：迄今所有新特性一览 — Linux 中文速报</title>
+<title>用户对FreeBSD音频/声音支持的“悲惨状况”感到沮丧 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 26.10 “Stonking Stingray”：迄今所有新特性一览</h1>
+  <h1>用户对FreeBSD音频/声音支持的“悲惨状况”感到沮丧</h1>
 
-  <div class="article-summary">Ubuntu 26.10 “Stonking Stingray” 作为下一个 LTS 版本前的临时版本，正测试多项新特性。本文追踪了已添加的功能，包括重新设计的安装程序与首次启动引导流程（旨在简化分区和个性化设置）、采用 Linux 内核 7.0.0-14（可能随开发周期变动）、以及用 dbus-broker 替换自 2004 年起使用的默认 D-Bus 实现 dbus-daemon，以提升消息传递性能。该版本预计于 2026 年 10 月发布，支持至 2027 年 7 月。</div>
+  <div class="article-summary">FreeBSD的音频驱动支持和流处理在桌面环境下存在诸多问题，用户反映在FreeBSD 14及15.1版本中遇到随机爆音、播放异常等困扰，且日志中无相关记录。部分用户将问题归咎于PulseAudio，也有人借助AI/LLM排查代码。FreeBSD基金会已赞助音频驱动改进工作，但逐步引入的补丁可能反而导致问题增多。尽管图形和WiFi驱动近期备受关注，音频支持的优化也在幕后推进中。</div>
 
-  <div class="article-body"><p>Ubuntu 26.10 “Stonking Stingray”：迄今所有新特性一览</p><p>一如既往，Canonical 正利用一个临时版本来测试面向下一个 LTS 版本的功能。在此，我们持续追踪这些新增特性。</p><p>每两年，Canonical 会发布一个获得五年安全更新的版本，该期限还可进一步延长。在这些 LTS 版本之间，Canonical 每六个月发布一个临时版本，每个版本支持九个月。</p><p>这些版本的重要性不及 LTS，但这正是其意义所在。它们为在更小用户群中测试更新的内核、工具链和设计变更提供了空间，随后这些变更才会被整合进下一个 LTS 版本。</p><p>该版本代号为 “Stonking Stingray”，延续了按字母顺序命名的传统。Stonking 是英国俚语，意为极其巨大或出色；stingray 则是那种扁平、无骨的鱼类，大部分时间半埋在海底沙中（考虑到这个世界的现状，这完全可以理解）。</p><p>如果一切按计划进行，它将于 2026 年 10 月发布，支持窗口较短，将于 2027 年 7 月关闭。</p><p>⏱️ Ubuntu 26.10 发布日程</p><p>以下是 Canonical 制定的发布日程；请注意，如果出现任何回归或其他开发障碍，其中部分日期可能会变更。</p><p>Ubuntu 测试周（可选）</p><p>请注意，这更像是一个动态页面，我们将在此添加新的变更并处理任何预期出现的功能。那么，让我们看看 Ubuntu 26.10 将带来什么。👇</p><p>新安装相关</p><p>Ubuntu 的典型安装和上手体验。</p><p>Ubuntu 正在重新设计安装方式，更专注于降低分区和存储配置的复杂性。新设计将依赖安全默认值、引导式工作流，并将高级选项隐藏在一个按钮后面，而不是一次性将所有内容抛给你。</p><p>除了安装程序，一个新的首次启动引导流程也正在开发中。Ubuntu 不会要求你在设置过程中做出所有决定，而是将个性化和配置转移到系统启动并运行后的专用首次启动体验中。</p><p>大规模部署 Ubuntu 的组织仍能像使用当前安装程序一样，自动化和配置这些引导步骤。</p><p>值得注意的是，这两者都明确针对新用户。设计工作将在 26.10 开发周期内进行，但不要期望完整的体验能在这个版本中完全呈现。</p><p>我测试的 Ubuntu 26.10 Snapshot 2 版本搭载了 Linux 内核 7.0.0-14。这是一个临时实现，而非最终方案。Canonical 更改了其内核选择策略，选择在发布冻结时提供任何可用的上游内核最新版本，即使它仍处于候选发布阶段。该策略进一步扩展，还通过月度快照在开发周期本身中跟踪临时内核版本，以便在过程中获得更好的测试覆盖率。</p><p>这意味着内核版本在现在到十月之间很容易发生变化。我们已经介绍了内核本身带来的内容，因此如果你想了解完整信息，那是一个不错的起点。</p><p>Ubuntu 终于要替换自 2004 年首个版本起就一直使用的默认 D-Bus 实现 dbus-daemon，转而采用 dbus-broker。D-Bus 是你的桌面持续依赖的消息传递系统，允许应用程序、后台服务和系统本身来回传递消息。从插入 USB 驱动器到更新通知徽章，一切操作都通过它运行。</p><p>Dbus-daemon 作为参考实现已经良好运行了二十多年，但它存在局限性。在高负载下，消息可能会意外丢失，并且它会顺序查询消息目标而非一次性查询，这随着总线负载增加会导致延迟累积。</p><p>Dbus-broker 在设计上解决了这两个问题，它基于……</p></div>
+  <div class="article-body"><p>用户对FreeBSD音频/声音支持的“悲惨状况”感到沮丧 - Phoronix</p><p>用户对FreeBSD音频/声音支持的“悲惨状况”感到沮丧</p><p>发布于2026年7月26日上午9:24（美国东部时间）。</p><p>除了FreeBSD的图形和WiFi驱动落后于Linux及其他操作系统外，FreeBSD在桌面环境下的音频驱动支持及音频流处理也可能因硬件/系统不同而出现问题。本周FreeBSD社区最活跃的邮件列表讨论之一，正是关于FreeBSD音频/声音支持的“悲惨状况”。</p><p>这场持续已久的邮件列表讨论始于一位用户对FreeBSD 14系列后期出现的回归问题感到沮丧——该问题至少延续到FreeBSD 15.1版本，涉及“大量与声音/音频相关的问题”。用户报告称，存在来源不明的“随机爆音”以及其他音频播放故障。值得注意的是，这并非什么尖端硬件，而是一台近十年前的老款ThinkPad。</p><p>“但这些随机的‘爆音’完全无法接受……我甚至无法判断它们来自哪里——是OSS的问题？是PulseAudio的问题？还是中间某个环节的问题？因为日志中完全没有音频相关的记录。</p><p>……而且这也不是什么最新款的笔记本电脑——它只是一台2018年的ThinkPad T480，见鬼——这种硬件以前运行得像卡洛斯·塞恩斯在新加坡大奖赛上的‘流畅操作’一样顺滑……但现在再也不行了。”</p><p>邮件列表的讨论由此展开，其他用户也纷纷发泄对FreeBSD音频问题的不满。有些人已经开始借助AI/LLM来排查FreeBSD的音频代码故障。另一些人则将音频痛点归咎于PulseAudio的使用。</p><p>虽然并非立即可行的解决方案，但FreeBSD基金会已赞助了改善音频驱动支持的开发工作。这是提升FreeBSD笔记本支持整体努力的一部分。改进FreeBSD音频支持的补丁正在逐步落地，一些人认为，这可能是近期音频相关问题增多的潜在原因——因为改动是逐步引入的，而非等整个音频重构完成并经过充分验证后再一次性合并。</p><p>因此，尽管FreeBSD的图形和WiFi驱动近期备受关注，音频支持方面的幕后工作也在同步进行。希望假以时日，FreeBSD的音频支持能够达到良好状态，成为桌面体验中一个重要的组成部分。</p><p>FreeBSD Ports因一次非常大的提交而暂时冻结</p><p>FreeBSD实习生致力于将AMD ROCm移植到BSD世界</p><p>FreeBSD笔记本支持持续改进：WiFi、GPU及音频驱动工作</p><p>FreeBSD 16从其基础系统中移除最后一批GPL代码</p><p>FreeBSD桌面安装程序选项正在处理NVIDIA驱动管理与许可问题</p><p>FreeBSD将其图形驱动端口更新至Linux 6.12 LTS</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动等主题。他还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>最后一个MPEG-4视觉专利已过期</p><p>Firefox 153发布，支持Vulkan视频解码和实验性JPEG-XL</p><p>GNOME因AI生成报告更改安全披露政策</p><p>Lemonade 11.5本地AI服务器发布，附带完整的Lemonade Router</p><p>NVK Vulkan性能在Mesa 26.2中提升，对抗NVIDIA专有驱动</p><p>Linux补丁引入“KNOD”，用于内核内网络直接卸载至AMD GPU</p><p>Linux 7.2-rc4发布：看起来像“新常态”</p><p>Fedora 45 Atomic桌面版计划支持基于Web的远程安装</p><p>享受无广告浏览</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 -</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/ubuntu-26-10-features/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Tragic-FreeBSD-Audio-Support" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

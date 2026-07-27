@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 26.10 “Stonking Stingray”：迄今所有新特性一览 — Linux 中文速报</title>
+<title>Linux 7.2-rc5 发布：“又一次，我们迎来了相当庞大的 -rc5” — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 26.10 “Stonking Stingray”：迄今所有新特性一览</h1>
+  <h1>Linux 7.2-rc5 发布：“又一次，我们迎来了相当庞大的 -rc5”</h1>
 
-  <div class="article-summary">Ubuntu 26.10 “Stonking Stingray” 作为下一个 LTS 版本前的临时版本，正测试多项新特性。本文追踪了已添加的功能，包括重新设计的安装程序与首次启动引导流程（旨在简化分区和个性化设置）、采用 Linux 内核 7.0.0-14（可能随开发周期变动）、以及用 dbus-broker 替换自 2004 年起使用的默认 D-Bus 实现 dbus-daemon，以提升消息传递性能。该版本预计于 2026 年 10 月发布，支持至 2027 年 7 月。</div>
+  <div class="article-summary">Linux 7.2-rc5 于 2026 年 7 月 26 日发布，旨在一个月内推出稳定版内核。该版本包含大量错误修复，其中许多由 AI/LLM 代理发现，并带来了全面的音频修复。此外，还修复了自 2009 年以来存在于主线内核中的 IEEE-1394 Firewire IPv4 网络问题。Linus Torvalds 指出，本次 rc5 规模较大，主要由于网络树因会议干扰积压了工作，补丁中超过三分之一涉及网络，驱动方面 USB 变更多于 GPU。整体虽大，但无异常之处。</div>
 
-  <div class="article-body"><p>Ubuntu 26.10 “Stonking Stingray”：迄今所有新特性一览</p><p>一如既往，Canonical 正利用一个临时版本来测试面向下一个 LTS 版本的功能。在此，我们持续追踪这些新增特性。</p><p>每两年，Canonical 会发布一个获得五年安全更新的版本，该期限还可进一步延长。在这些 LTS 版本之间，Canonical 每六个月发布一个临时版本，每个版本支持九个月。</p><p>这些版本的重要性不及 LTS，但这正是其意义所在。它们为在更小用户群中测试更新的内核、工具链和设计变更提供了空间，随后这些变更才会被整合进下一个 LTS 版本。</p><p>该版本代号为 “Stonking Stingray”，延续了按字母顺序命名的传统。Stonking 是英国俚语，意为极其巨大或出色；stingray 则是那种扁平、无骨的鱼类，大部分时间半埋在海底沙中（考虑到这个世界的现状，这完全可以理解）。</p><p>如果一切按计划进行，它将于 2026 年 10 月发布，支持窗口较短，将于 2027 年 7 月关闭。</p><p>⏱️ Ubuntu 26.10 发布日程</p><p>以下是 Canonical 制定的发布日程；请注意，如果出现任何回归或其他开发障碍，其中部分日期可能会变更。</p><p>Ubuntu 测试周（可选）</p><p>请注意，这更像是一个动态页面，我们将在此添加新的变更并处理任何预期出现的功能。那么，让我们看看 Ubuntu 26.10 将带来什么。👇</p><p>新安装相关</p><p>Ubuntu 的典型安装和上手体验。</p><p>Ubuntu 正在重新设计安装方式，更专注于降低分区和存储配置的复杂性。新设计将依赖安全默认值、引导式工作流，并将高级选项隐藏在一个按钮后面，而不是一次性将所有内容抛给你。</p><p>除了安装程序，一个新的首次启动引导流程也正在开发中。Ubuntu 不会要求你在设置过程中做出所有决定，而是将个性化和配置转移到系统启动并运行后的专用首次启动体验中。</p><p>大规模部署 Ubuntu 的组织仍能像使用当前安装程序一样，自动化和配置这些引导步骤。</p><p>值得注意的是，这两者都明确针对新用户。设计工作将在 26.10 开发周期内进行，但不要期望完整的体验能在这个版本中完全呈现。</p><p>我测试的 Ubuntu 26.10 Snapshot 2 版本搭载了 Linux 内核 7.0.0-14。这是一个临时实现，而非最终方案。Canonical 更改了其内核选择策略，选择在发布冻结时提供任何可用的上游内核最新版本，即使它仍处于候选发布阶段。该策略进一步扩展，还通过月度快照在开发周期本身中跟踪临时内核版本，以便在过程中获得更好的测试覆盖率。</p><p>这意味着内核版本在现在到十月之间很容易发生变化。我们已经介绍了内核本身带来的内容，因此如果你想了解完整信息，那是一个不错的起点。</p><p>Ubuntu 终于要替换自 2004 年首个版本起就一直使用的默认 D-Bus 实现 dbus-daemon，转而采用 dbus-broker。D-Bus 是你的桌面持续依赖的消息传递系统，允许应用程序、后台服务和系统本身来回传递消息。从插入 USB 驱动器到更新通知徽章，一切操作都通过它运行。</p><p>Dbus-daemon 作为参考实现已经良好运行了二十多年，但它存在局限性。在高负载下，消息可能会意外丢失，并且它会顺序查询消息目标而非一次性查询，这随着总线负载增加会导致延迟累积。</p><p>Dbus-broker 在设计上解决了这两个问题，它基于……</p></div>
+  <div class="article-body"><p>Linux 7.2-rc5 发布：“又一次，我们迎来了相当庞大的 -rc5” - Phoronix</p><p>Linux 7.2-rc5 发布：“又一次，我们迎来了相当庞大的 -rc5”</p><p>于 2026 年 7 月 26 日下午 6:05 EDT。</p><p>为了在不到一个月的时间内发布稳定内核，今天推出了 Linux 7.2-rc5，以提供本周最新的错误/回归修复，并促进对这个正在开发的内核版本进行更多测试。</p><p>Linux 7.2-rc5 带来了各种错误修复，其中许多继续通过 AI/LLM 代理被发现。Linux 7.2-rc5 带来了全面的音频修复这一“新常态”，这由许多 AI 驱动的发现和大量奇特的硬件所推动。Linux 7.2-rc5 还修复了自 2009 年以来存在于主线 Linux 内核中的 IEEE-1394 Firewire IPv4 网络问题。</p><p>Linus Torvalds 在今天写道：“现在是周日下午，又一次，我们迎来了相当庞大的 -rc5。</p><p>同样的事情在 7.1 中也发生过，所以部分原因只是‘新常态’。但我认为这次更大的原因是，由于会议干扰，网络树积压了一些上周的工作。因此，超过三分之一的补丁涉及网络，尽管其中大部分显然在驱动端。</p><p>这里也包含了所有其他常见的驱动，不过这次的变化是 USB 的变更比 GPU 驱动更多。所以这有点意思。但驱动端涵盖了各种内容（声音、tty、块设备、firewire——你懂的）。</p><p>然后还有其他一切：工具（selftest 和 perf）、文件系统（smb、btrfs）、Rust 和架构修复、文档……</p><p>所以这对我来说有点太大了，但其中没有任何东西让我觉得特别奇怪或可怕。”</p><p>Linux 7.2 的许多新特性和变更预计将在三周后的 8 月 16 日作为稳定版首次亮相。</p><p>Linux 7.2-rc4 发布：看起来像是“新常态”</p><p>搭载骁龙 8 Elite 的 Legion Y700 Gen4 平板电脑迎来 Linux 补丁</p><p>Linus Torvalds 重申 Linux 并非“反 AI”也不是“社会战士”项目</p><p>新 Linux 补丁旨在更好地处理多个交换设备</p><p>重新设计的系统调用入口处理计划用于 Linux 7.3</p><p>Linux 7.2-rc3 发布：接近“新常态”</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 已撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>最后一个 MPEG-4 Visual 专利已过期</p><p>Firefox 153 发布，支持 Vulkan 视频解码和实验性 JPEG-XL</p><p>GNOME 因 AI 生成的报告更改安全披露政策</p><p>Lemonade 11.5 本地 AI 服务器发布，附带完整的 Lemonade 路由器</p><p>NVK Vulkan 性能借助 Mesa 26.2 提升，与 NVIDIA 专有驱动对比</p><p>Linux 补丁引入“KNOD”用于直接向 AMD GPU 进行内核网络卸载</p><p>Linux 7.2-rc4 发布：看起来像是“新常态”</p><p>Fedora 45 Atomic 桌面版考虑允许基于 Web 的远程安装</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/ubuntu-26-10-features/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.2-rc5-Released" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

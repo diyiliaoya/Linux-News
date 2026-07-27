@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 26.10 “Stonking Stingray”：迄今所有新特性一览 — Linux 中文速报</title>
+<title>GNU Binutils 2.47 发布，新增更多 RISC-V 扩展与新选项 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 26.10 “Stonking Stingray”：迄今所有新特性一览</h1>
+  <h1>GNU Binutils 2.47 发布，新增更多 RISC-V 扩展与新选项</h1>
 
-  <div class="article-summary">Ubuntu 26.10 “Stonking Stingray” 作为下一个 LTS 版本前的临时版本，正测试多项新特性。本文追踪了已添加的功能，包括重新设计的安装程序与首次启动引导流程（旨在简化分区和个性化设置）、采用 Linux 内核 7.0.0-14（可能随开发周期变动）、以及用 dbus-broker 替换自 2004 年起使用的默认 D-Bus 实现 dbus-daemon，以提升消息传递性能。该版本预计于 2026 年 10 月发布，支持至 2027 年 7 月。</div>
+  <div class="article-summary">GNU Binutils 2.47 版本正式发布，引入了多项新功能：新增 --reloc-section-sym 汇编器选项以控制重定位符号调整；objdump 和 readelf 新增 --debug-info-dir 选项用于指定调试信息文件路径；objdump 还增加了 --show-global-vars 选项以显示全局变量位置和类型。链接器支持新的存档选项，BFD 链接器新增 -O 0 优化级别以加快链接速度。此外，该版本弃用了对 32 位 s390 目标的支持，并新增了对多个 RISC-V 标准扩展的支持。</div>
 
-  <div class="article-body"><p>Ubuntu 26.10 “Stonking Stingray”：迄今所有新特性一览</p><p>一如既往，Canonical 正利用一个临时版本来测试面向下一个 LTS 版本的功能。在此，我们持续追踪这些新增特性。</p><p>每两年，Canonical 会发布一个获得五年安全更新的版本，该期限还可进一步延长。在这些 LTS 版本之间，Canonical 每六个月发布一个临时版本，每个版本支持九个月。</p><p>这些版本的重要性不及 LTS，但这正是其意义所在。它们为在更小用户群中测试更新的内核、工具链和设计变更提供了空间，随后这些变更才会被整合进下一个 LTS 版本。</p><p>该版本代号为 “Stonking Stingray”，延续了按字母顺序命名的传统。Stonking 是英国俚语，意为极其巨大或出色；stingray 则是那种扁平、无骨的鱼类，大部分时间半埋在海底沙中（考虑到这个世界的现状，这完全可以理解）。</p><p>如果一切按计划进行，它将于 2026 年 10 月发布，支持窗口较短，将于 2027 年 7 月关闭。</p><p>⏱️ Ubuntu 26.10 发布日程</p><p>以下是 Canonical 制定的发布日程；请注意，如果出现任何回归或其他开发障碍，其中部分日期可能会变更。</p><p>Ubuntu 测试周（可选）</p><p>请注意，这更像是一个动态页面，我们将在此添加新的变更并处理任何预期出现的功能。那么，让我们看看 Ubuntu 26.10 将带来什么。👇</p><p>新安装相关</p><p>Ubuntu 的典型安装和上手体验。</p><p>Ubuntu 正在重新设计安装方式，更专注于降低分区和存储配置的复杂性。新设计将依赖安全默认值、引导式工作流，并将高级选项隐藏在一个按钮后面，而不是一次性将所有内容抛给你。</p><p>除了安装程序，一个新的首次启动引导流程也正在开发中。Ubuntu 不会要求你在设置过程中做出所有决定，而是将个性化和配置转移到系统启动并运行后的专用首次启动体验中。</p><p>大规模部署 Ubuntu 的组织仍能像使用当前安装程序一样，自动化和配置这些引导步骤。</p><p>值得注意的是，这两者都明确针对新用户。设计工作将在 26.10 开发周期内进行，但不要期望完整的体验能在这个版本中完全呈现。</p><p>我测试的 Ubuntu 26.10 Snapshot 2 版本搭载了 Linux 内核 7.0.0-14。这是一个临时实现，而非最终方案。Canonical 更改了其内核选择策略，选择在发布冻结时提供任何可用的上游内核最新版本，即使它仍处于候选发布阶段。该策略进一步扩展，还通过月度快照在开发周期本身中跟踪临时内核版本，以便在过程中获得更好的测试覆盖率。</p><p>这意味着内核版本在现在到十月之间很容易发生变化。我们已经介绍了内核本身带来的内容，因此如果你想了解完整信息，那是一个不错的起点。</p><p>Ubuntu 终于要替换自 2004 年首个版本起就一直使用的默认 D-Bus 实现 dbus-daemon，转而采用 dbus-broker。D-Bus 是你的桌面持续依赖的消息传递系统，允许应用程序、后台服务和系统本身来回传递消息。从插入 USB 驱动器到更新通知徽章，一切操作都通过它运行。</p><p>Dbus-daemon 作为参考实现已经良好运行了二十多年，但它存在局限性。在高负载下，消息可能会意外丢失，并且它会顺序查询消息目标而非一次性查询，这随着总线负载增加会导致延迟累积。</p><p>Dbus-broker 在设计上解决了这两个问题，它基于……</p></div>
+  <div class="article-body"><p>GNU Binutils 2.47 发布，新增更多 RISC-V 扩展与新选项 - Phoronix</p><p>GNU Binutils 2.47 发布，新增更多 RISC-V 扩展与新选项</p><p>2026年7月26日下午3:36（美国东部时间）</p><p>继本周末发布的 GNU C 库 2.44 之后，GNU Binutils 2.47 版本现已可用。这是一套重要的二进制工具集，广泛应用于 Linux 系统及其他使用 GNU 工具链的平台。</p><p>GNU Binutils 2.47 引入了一个新的汇编器命令行选项 --reloc-section-sym=[all|internal|none]，用于控制是否将引用局部绑定符号的重定位调整为使用节符号。Objdump 和 readelf 现在新增了 --debug-info-dir 选项，用于指定查找独立调试信息文件的路径。Objdump 还新增了 --show-global-vars 选项，用于显示目标文件中全局变量的位置和类型。此外，链接器新增了对存档中所有格式下无符号索引的 --no-symbol-index 选项的支持。</p><p>BFD 链接器还新增了零级优化选项。当使用 BFD 并指定 &quot;-O 0&quot; 时，它将停止合并可合并节的内容。这可以显著加快链接过程，但代价是生成更大的二进制文件。Binutils 2.47 还弃用了对 32 位 s390 目标的支持，而 64 位 s390x 目标仍将继续维护。</p><p>GNU Binutils 2.47 新增了对以下较新 RISC-V 标准扩展的支持：zalasr v1.0、svrsw60t59b v1.0、zvabd v1.0、smpmpmt v1.0、zvqwdota8i、zvqwdota16i、zvfwdota16bf 和 zvfqwdota8f v1.0、zvqwbdota8i、zvqwbdota16i、zvfwbdota16bf、zvfqwbdota8f 和 zvfbdota32f v1.0，以及 SpacemiT 的 xsmtvdot v1.0、xsmtvdotii v1.0。</p><p>GNU Binutils 2.47 的下载链接及更多详情，请参阅邮件列表公告。</p><p>GNU C 库 2.44 发布，新增 /etc/tunables.conf 及更多优化</p><p>AMD 为 GCC 编译器提交 AVX10_V2_AUX ISA 支持补丁</p><p>GNU Hurd 在 AArch64 上取得进展，用 Rust 编写翻译器</p><p>Glibc 引入 /etc/tunables.conf 实现系统级可调参数</p><p>GCC 16.2 计划于八月初发布</p><p>GCC 17 编译器新增对 SpacemiT X100 核心的支持</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他。</p><p>最后一个 MPEG-4 Visual 专利已过期</p><p>Firefox 153 发布，支持 Vulkan 视频解码及实验性 JPEG-XL</p><p>GNOME 因 AI 生成报告更改安全披露政策</p><p>Lemonade 11.5 本地 AI 服务器发布，完成 Lemonade 路由器</p><p>NVK Vulkan 性能在 Mesa 26.2 下提升，与 NVIDIA 专有驱动对比</p><p>Linux 补丁引入 &quot;KNOD&quot;，实现内核网络卸载直接到 AMD GPU</p><p>Linux 7.2-rc4 发布：看起来像是“新常态”</p><p>Fedora 45 Atomic 桌面计划支持基于 Web 的远程安装</p><p>在享受无广告浏览和单页文章查看的同时，请注意法律免责声明、隐私政策和 Cookie。</p><p>版权所有 © 2004 - 2026，所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/ubuntu-26-10-features/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/GNU-Binutils-2.47" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
