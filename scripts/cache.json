@@ -4431,5 +4431,148 @@
     "title_zh": "Mozilla Thunderbird 152 邮件客户端更新 GMail OAuth 以使用 PKCE",
     "summary_zh": "Mozilla Thunderbird 152 版本发布，主要更新了 GMail OAuth 集成，引入 PKCE 协议以增强安全性和用户体验。该改进旨在保护用户账户免受授权码拦截攻击，提升邮件客户端与 Gmail 服务的交互安全性。",
     "fulltext_zh": "了解 Mozilla Thunderbird 152 的最新更新，该版本增强了 GMail OAuth 集成，采用 PKCE 协议以提升安全性和用户体验。\n本文《Mozilla Thunderbird 152 邮件客户端更新 GMail OAuth 以使用 PKCE》首发于 Linux Today。"
+  },
+  "15adffd92e3fe519f6eca461dc5205a7": {
+    "id": "15adffd92e3fe519f6eca461dc5205a7",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/07/mission-center-battery-power-draw-reporting",
+    "title_en": "Mission Center update adds battery, partition and power draw stats",
+    "summary_en": "A new version of Linux system monitoring app Mission Center is available for download, adding new hardware stats, first-run setup prompt and bug fixes. Mission Center 1.2.0 adds a new Battery page in the Performance tab, surfaces per-partition usage details on the Disk page with free and used space and adds a graph to the bottom of the CPU page that can optionally show temperature, power draw or CPU frequency. The Memory page now shows compression (zRAM/zswap) stats, while the GPU page lets you ",
+    "pub_date": "Mon, 27 Jul 2026 21:46:51 +0000",
+    "title_zh": "Mission Center 更新新增电池、分区和功耗统计",
+    "summary_zh": "Linux系统监控工具Mission Center发布1.2.0版本，新增电池统计、磁盘分区详情、功耗曲线等硬件监控功能。改进图形渲染引擎，优化Snap和AppImage包，新增键盘快捷键，并修复多项Bug，包括Steam Deck CPU温度读取、HiDPI图标模糊等问题。",
+    "fulltext_zh": "Mission Center（Linux系统监控工具）新增电池统计等功能\nLinux系统监控应用Mission Center的新版本现已可供下载，新增了硬件统计功能、首次运行设置提示以及Bug修复。\n\nMission Center 1.2.0新增了一个标签页，在页面中展示了每个分区的使用详情（包括已用空间和可用空间），并在页面底部添加了一个图表，可选择显示温度、功耗或CPU频率。\n\n磁盘分区（前端）和电池历史（后端）页面现在显示压缩（zRAM/zswap）统计信息，而GPU页面允许你将中间图表切换为编码/解码活动、功耗、时钟速度或温度（取决于你的显卡在Linux上能报告哪些信息）。\n\nMission Center的统计功能丰富的版本\n图形后端经过彻底改造，实现了更流畅的动画和渲染效果。在较慢的系统上启动应用时，你可能会注意到真实图表加载前会出现短暂的灰色占位图表“闪烁”，这能更清楚地表明应用并未卡顿。\n\nMission Center是一款系统监控工具，可以显示活动进程、服务及其相对资源使用情况的详细信息。应用检测功能已得到改进，确保更多应用显示正确的名称、图标等。\n\n并非所有功能开箱即用——但让它们工作起来更简单了\n对于某些功能，如CPU功耗、进程级网络使用率和风扇读数，Mission Center 1.2.0会提示你运行一个设置脚本。你可以在运行前预览该脚本。你也可以选择拒绝，但某些功能将无法报告。\n\nMission Center的官方Snap和AppImage包在此次更新中得到了改进。Snap包已升级使用运行时，而AppImage包现在体积更小，使用相关技术，且不再依赖FUSE运行。\n\n还新增了键盘快捷键：\n双击或使用左右箭头键折叠和展开行，使用其他按键切换页面等。\n\n除了新功能外，Mission Center今年首次重大更新中还包含了大量Bug修复。Steam Deck上的CPU温度读取问题、HiDPI显示屏上的模糊应用图标、过宽的SMART对话框以及虚假的CPU使用率峰值等问题均已解决。\n\nMission Center v1.2.0中的其他值得注意的变化：\n交换空间使用现在显示为每进程交换，而非共享内存\n每进程内存使用采用混合PSS近似\n通过提升权限发送进程信号\n禁用设备类别和单个网络类型\n连接状态现在在对话框中列出，显示更多信息，支持复制\n\n对于我认为是最清晰、最流畅的Linux系统监控工具之一来说，这是一次扎实的更新（对于那些急于提问的人，是的：Mission Center的设计灵感来自Windows的任务管理器）。\n\nUbuntu决定将系统监控器设为默认工具——这——意味着许多人可能不再那么倾向于寻找另一种方式来获取大致相同的统计信息。\n\n就个人而言，我一直很喜欢系统监控工具的外观和布局，而通过这次最新更新，额外的信息使其对我的需求来说更加不可或缺。在命令行方面我仍然是粉丝，但对于GUI需求，这就是最佳选择。\n\n如何获取Mission Center 1.2.0\nMission Center是免费、开源软件，使用Rust和GTK4/libadwaita构建，更多信息请访问官方网站，后者也提供AppImage下载。\n\n或者，你也可以从Flathub安装Mission Center。如果你使用的是Ubuntu，可以在软件中心搜索它，或者打开终端并运行：\nsudo snap install mission-center\n\n在评论区告诉我你对这次更新的看法！"
+  },
+  "d38f60c4f347cab79a2c50247ed03800": {
+    "id": "d38f60c4f347cab79a2c50247ed03800",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/firedragon-v13-release/",
+    "title_en": "FireDragon Browser Swoops in With New Wings",
+    "summary_en": "It's been rewritten from scratch to provide some good gains.",
+    "pub_date": "Mon, 27 Jul 2026 15:05:14 GMT",
+    "title_zh": "FireDragon 浏览器展翅翱翔，焕新登场",
+    "summary_zh": "FireDragon 浏览器基于 Arch 的 Garuda Linux 默认浏览器，现已从零重写，改用新代码库并带来多项以可用性为核心的改进。新版本默认启用 TLS 1.3、支持 XDG 基础目录、通过网站权限处理 WebGL 和 DRM 内容，并优化了搜索体验和首次使用引导。尽管存在主题跟随系统失效和标题栏无法隐藏等问题，但对于 Garuda Linux 用户而言，经过适当调整仍可成为日常主力浏览器。",
+    "fulltext_zh": "FireDragon 浏览器展翅翱翔，焕新登场\nFireDragon 浏览器已从零重写，带来显著提升。\nFireDragon 是 Garuda Linux 的默认浏览器，这款基于 Arch 的发行版以其精致的 KDE Plasma 定制和可靠性著称，尽管它始终处于最前沿。传统上，FireDragon 基于 Firefox 构建，因此拥有 Firefox 的扩展支持，并融合了 Garuda 的隐私默认设置。\n现在，开发者改变了策略，更换了其基础代码，并交付了一个充满许多以可用性为导向的改进版本。\n这次彻底改造为你带来了更好的搜索体验，默认搜索引擎是 DuckDuckGo。同时，它还附带了一个扩展的搜索工具列表，范围从注重隐私的 SearXNG 和 MetaGer，到大型科技公司的选项如 Google 和 Bing。\n接下来是改进的首次使用引导体验，新的欢迎对话框现在包含一键切换开关，用于那些你通常需要深入设置才能找到的功能。如果你已经依赖像 Bitwarden 这样的独立密码管理器，可以关闭内置密码管理器以增强隐私（尽管可能破坏某些网站），或者开启预取功能以加快页面加载速度。\n新的快速设置、搜索引擎选项和预装扩展（点击/触摸可展开）。\n类似地，浏览速度也有小幅提升，TLS 1.3 现在默认启用，减少了重新连接已访问网站时的延迟。还有一个可选设置可以启用预取（与前面提到的相同），当你将鼠标悬停在链接上时就开始加载页面，或者在后台下载下一页内容，然后你才点击它。\n其他值得注意的变化包括：v13 版本增加了对 XDG 基础目录的支持，现在通过网站权限处理 WebGL 和 DRM 内容。它还从默认扩展列表中移除了 uBlock Origin，只留下 Violentmonkey 作为唯一的预装附加组件。\n你应该放弃 Firefox 吗？\\n我花了一些时间体验 FireDragon v13，看看新的代码库表现如何，以及它是否会改变人们在它和原生 Firefox 之间做选择时的想法。大部分体验感觉很熟悉，不过也有一些粗糙的地方值得指出。\n由新的欢迎对话框驱动的快速设置向导让我有点失望，因为页面上有很多空白区域；不过，选项本身工作得很好。\n过了那个界面之后，浏览体验感觉像是 Floorp 或 Firefox 加上 Garuda 的风格。\n垂直标签页是 FireDragon 最接近完全匹配 Firefox 的地方，布局看起来几乎一模一样。一个小问题是标题栏。Firefox 在 Fedora Workstation（搭载 GNOME）上会隐藏标题栏，但 FireDragon 显示了一个丑陋的标题栏，并且在设置中没有任何开关可以关闭它。\n一个更大的缺失体现在系统主题跟随上。Firefox 会自动跟随系统的深色或浅色模式，同时应用于界面和支持的网站。FireDragon 没有为网站做到这一点，即使开启了“自动深色模式”。我在你正在阅读本文的网站 Omg! Linux 上进行了测试，重启浏览器也无济于事。\n启用垂直标签页（左）和 FireDragon 设置（右）。\n“常规”页面挽回了一些局面，提供了诸如关闭最后一个标签页时关闭浏览器窗口、启用中键粘贴、自动更新附加组件以及预取的额外控制等开关。\n“主题”标签页让你更进一步，可以对任何已安装的主题进行微调，对显示什么和不显示什么有很高的控制度。\n那么，你应该放弃 Firefox 吗？\n如果你已经在使用 Garuda Linux，FireDragon v13 经过一些调整可以成为日常主力浏览器。如果你已经愉快地使用着 Firefox，那么主题跟随的 bug 和顽固的标题栏会让它难以打动你。\n对于大多数 Linux 电脑，可以从 Flathub 安装 FireDragon 的 Flatpak 版本：\nflatpak install flathub org.garudalinux.firedragon\n有多种软件包可供选择。其中一个应该安装更快，第二个是相同的但带有调试符号，另外两个相同但分别对应上述两种情况。\n像 Arch Linux 这样的平台上的用户，或者为 Linux 寻找替代软件包的用户，可以访问 Garuda Linux 的下载页面，你也可以参考 FireDragon 的 GitHub 仓库，但请注意它可能有点过时。\n喜欢这次更新吗？支持独立的 Linux 新闻。"
+  },
+  "e46da0bf1d1387470d694305f72a7458": {
+    "id": "e46da0bf1d1387470d694305f72a7458",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12903",
+    "title_en": "Distribution Release: Emmabuntüs DE6-1.02",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The Emmabuntüs project has published an update to its Debian Edition 6 branch, which is based on Debian 13 \"Trixie\". The latest version focuses on accessibility improvements and is available in Core and Full editions. \"This new evolution of our distribution mainly focuses on accessibility improvements, developed as....",
+    "pub_date": "",
+    "title_zh": "Emmabuntüs DE6-1.02 发布",
+    "summary_zh": "Emmabuntüs 项目发布了基于 Debian 13 \"Trixie\" 的 Debian Edition 6 分支更新版本 DE6-1.02。该版本主要聚焦于无障碍性改进，提供 Core 和 Full 两个版本。改进包括 Piper 文本转语音引擎的增强支持，旨在为多哥的视障人士提供帮助，并已在洛美的圣奥古斯丁多功能中心进行了首次培训。",
+    "fulltext_zh": "Emmabuntüs DE6-1.02 发布\n\n该项目为其基于 Debian 13 \"Trixie\" 的 Debian Edition 6 分支发布了一个更新。最新版本主要聚焦于无障碍性改进，并提供 Core 和 Full 两个版本。\n\n\"我们发行版的这一新演进主要聚焦于无障碍性改进，这是在与我们的朋友 A.S.I. YOVOTOGO 以及多哥残疾人协会联合会（FETAPH）合作下开发的。目标是尽快为多哥各地的视障人士专用中心提供装备，包括洛美的圣奥古斯丁多功能中心以及由 Mutualistes Sans Frontières 发起的 Maison du Handicap。这一开发涉及 Piper 文本转语音引擎的实施，该引擎现在受益于改进的支持。它已在洛美的圣奥古斯丁多功能中心由我们的朋友 Jean-Pierre LOGOVI 和 Elias AMAH 为 11 名未来协调员举办的首次培训中使用，这些协调员代表了多哥为视障人士服务的 10 个专门组织。\"\n\n关于新更新的更多信息可以在以下位置找到：\nemmabuntus-de6-full-amd64-13.6-1.02.iso\nemmabuntus-de6-core-amd64-13.6-1.02.iso\n\n最近的相关新闻和发布：\nDistribution Release: Emmabuntüs DE6-1.02\nDistribution Release: Emmabuntüs DE6-1.01\nDistribution Release: Emmabuntüs DE5-1.05\nDistribution Release: Emmabuntüs DE6-1.00\nDevelopment Release: Emmabuntüs DE6 RC1\nDistribution Release: Emmabuntüs DE5-1.04\n更多 Emmabuntüs 新闻...\n\nEmmabuntüs 是一款桌面 Linux 发行版，其版本基于 Debian 的稳定分支，提供 Xfce 和 LXQt 桌面环境。它力求对新手友好且资源占用较轻，以便能在旧电脑上使用。它还包含许多现代特性，例如大量预配置的日常使用程序、用于启动应用程序的 dockbar。"
+  },
+  "040be1bdae476e9ade79db98a6c5512e": {
+    "id": "040be1bdae476e9ade79db98a6c5512e",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-PMF-Testing-Tool-Linux-7.3",
+    "title_en": "AMD PMF Testing Tool Slated For Linux 7.3",
+    "summary_en": "Looking to be added to the Linux kernel source tree for the upcoming Linux 7.3 cycle is test_amd_pmf, a small testing application for exercising the AMD Platform Management Framework (PMF) interfaces and dumping various system data points...",
+    "pub_date": "Mon, 27 Jul 2026 17:28:20 -0400",
+    "title_zh": "AMD PMF 测试工具计划用于 Linux 7.3",
+    "summary_zh": "AMD 计划在即将到来的 Linux 7.3 周期中，向内核源码树添加一个名为 test_amd_pmf 的小型测试应用程序，用于测试 AMD 平台管理框架（PMF）接口并转储各种系统数据点。该工具可报告电源来源、笔记本电脑表面温度、电池状态、自定义 BIOS 输入/输出、设备放置位置、盖子状态、用户存在检测、性能滑块位置、环境光、平均/最大 C0 驻留时间、插槽功耗等指标，主要用于测试或了解 PMF 功能的工作情况。",
+    "fulltext_zh": "AMD PMF 测试工具计划用于 Linux 7.3 - Phoronix\nAMD PMF 测试工具计划用于 Linux 7.3\n2026年7月27日下午5:28 EDT。\n\n即将被添加到 Linux 内核源码树以用于即将到来的 Linux 7.3 周期的，是 test_amd_pmf，一个用于测试 AMD 平台管理框架（PMF）接口并转储各种系统数据点的小型测试应用程序。\n\nAMD PMF 测试工具“test_amd_pmf”计划驻留在 Linux 内核源码树内，它只是一个类似于 Turbostat 和其他内核源码树内应用的小型用户空间应用程序。Test_amd_pmf 读取 /dev/amdpmf_interface 并打印各种指标，用于测试和分析目的。\n\n这个小工具将报告诸如检测到的电源来源、AMD Ryzen 笔记本电脑的表面温度、电池状态、自定义 BIOS 输入/输出、确定的笔记本电脑放置位置、盖子状态、是否检测到用户在场或离开笔记本电脑、性能滑块位置、环境光、平均/最大 C0 驻留时间、插槽功耗以及其他参数。\n\n主要用于测试目的，或对于那些好奇不同 AMD PMF 功能在热/功耗特性或用户存在检测等功能上表现如何的人。\n\n已进入 platform-drivers-x86.git 的“for-next”Git 分支，距离 Linux 7.3 合并窗口还有几周时间。\n\nAMD “低功耗” CPU 核心类型补丁已在 Linux 7.3 之前排队\nAMD ROCm 承诺未来采用六周发布周期\nAMD Advancing AI 2026：开放、开源与更多开源\nAMD EPYC Zen 7 “Florence” 确认配备 ACE 及下一代内存\nAMD 宣布 ROCm.AI 作为 AI 驱动平台供开发者使用\nAMD 发布 Instinct MI455X 和 Helios AI 机架\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动程序及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他。\n\n最后一个 MPEG-4 Visual 专利已过期\nFirefox 153 发布，支持 Vulkan 视频解码和实验性 JPEG-XL\nLemonade 11.5 本地 AI 服务器发布，附带完整的 Lemonade 路由器\nGNOME 因 AI 生成报告更改安全披露策略\nFedora 45 Atomic 桌面计划允许基于 Web 的远程安装\n“KVM 电锯”预计将随 Linux 7.3 推出，用于处理 God 数据结构\nLinux 补丁引入“KNOD”，用于将网络卸载直接到 AMD GPU\nLinux 7.2-rc4 发布：看起来像是“新常态”\n\n虽然提供无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n使用的所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "b75dcbf985d3d6f024dd5923cf80a5dd": {
+    "id": "b75dcbf985d3d6f024dd5923cf80a5dd",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/16-Tile-32-Tile-AMX-Performance",
+    "title_en": "Mysterious 16-Tile & 32-Tile AMX Implementations Talked Up For More Performance",
+    "summary_en": "Last October on Phoronix we were first to point out there being some mysterious intrigue around a new x86 implementation from a \"corporate entity other than Intel/AMD\" with the developer involved not elaborating on the matter. Now that same developer has posted another semi-cryptic message to the Linux kernel mailing list to talk about 16-tile and 32-tile Advanced Matrix Extensions (AMX) implementations. To date Intel only has 8-tile AMX...",
+    "pub_date": "Mon, 27 Jul 2026 12:41:37 -0400",
+    "title_zh": "神秘的16-Tile和32-Tile AMX实现被热议以提升性能",
+    "summary_zh": "Linux内核邮件列表上出现关于16-tile和32-tile Advanced Matrix Extensions (AMX) 实现的半加密消息。目前Intel仅支持8-tile AMX。x86架构专家Christian Ludloff透露，这些更大规模的AMX实现来自一家“非Intel/AMD的企业实体”，旨在通过额外tile提升性能，尤其适用于计算密集型任务。该实现已大规模运行一段时间，但委托方身份仍未公开。",
+    "fulltext_zh": "神秘的16-Tile和32-Tile AMX实现被热议以提升性能 - Phoronix\n神秘的16-Tile和32-Tile AMX实现被热议以提升性能\n发布于2026年7月27日美国东部时间下午12:41。\n\n去年十月，Phoronix率先指出，来自一家“非Intel/AMD的企业实体”的新x86实现存在一些神秘之处，相关开发者未对此事进行详细说明。如今，同一位开发者又在Linux内核邮件列表中发布了一条半加密的消息，讨论16-tile和32-tile的Advanced Matrix Extensions (AMX) 实现。迄今为止，Intel仅拥有8-tile AMX。\n\nChristian Ludloff曾作为x86架构专家在Google、AMD、TI等公司工作，同时也是Sandpile.org x86 CPU信息网站的维护者。正是他去年传达了关于一家“非Intel/AMD的企业实体”的x86消息，而今天他在Linux内核邮件列表上的不定期活动则围绕更大的AMX tile实现展开。\n\n迄今为止，配备Advanced Matrix Extensions (AMX) 的Intel Xeon CPU实现仅支持八个tile。但现在，Ludloff正在谈论配置16个tile和32个tile的CPU，以提升性能。这发生在AMX演进为下一代AI计算扩展“ACE”（适用于未来AMD和Intel CPU）之前。\n\n“如果x86 AMX/ACE的>8 tile不让你担心，那么你可以停止阅读。\n----------------------- 8\n-----------------------\n我被要求记录16-tile和32-tile实现的x86 AMX/ACE行为。\n16-tile或32-tile硬件实现的目标是通过运行利用额外tile的软件来获得额外性能。特别是，所述软件预计主要运行计算内核，最小化进程切换，并避免在存储和网络的中断处理程序中使用tile。使用虚拟机是可能的，但同样，在客户机之间快速切换并非目标场景。\n支持16和32个tile的实现已经大规模运行了一段时间。”\n该消息继续在规范范围内记录了16-tile和32-tile的AMX实现，并指出了AMX、APX和ACE规范中的各种疏忽。\n\n目前仍无消息透露是谁要求Ludloff将这些技术细节传达给公共邮件列表。\n\nQualcomm发布适用于搭载X2 Elite Extreme的ASUS Zenbook A16的Linux补丁\nInputPlumber 0.78发布，扩展了硬件支持\nLinux的Qualcomm加密加速器驱动“有害”且被禁用：比CPU慢，存在大量Bug历史\n更多ASUS主板在Linux 7.3上获得正常工作的传感器监控\n新Linux驱动改善对GETAC加固笔记本电脑的支持\nImagination PowerVR BXM-4-64 GPU固件为T-Head TH1520上游\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动等主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\n最后一个MPEG-4 Visual专利已过期\nFirefox 153发布，支持Vulkan视频解码和实验性JPEG-XL\nLemonade 11.5本地AI服务器发布，附带完整的Lemonade路由器\nGNOME因AI生成的报告更改安全披露政策\nFedora 45 Atomic桌面版计划支持基于Web的远程安装\n“KVM电锯”预计将进入Linux 7.3以处理God数据结构\nLinux补丁引入“KNOD”用于直接向AMD GPU的内核网络卸载\nLinux 7.2-rc4发布：看起来像“新常态”\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有商标均已使用"
+  },
+  "1702bb9873ba1bc727ea4d5d79ca1317": {
+    "id": "1702bb9873ba1bc727ea4d5d79ca1317",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Fwupd-2.1.7-Released",
+    "title_en": "Fwupd 2.1.7 Released With Many Bug Fixes",
+    "summary_en": "Fwupd 2.1.7 is out today as the newest update to this open-source firmware updating utility that pairs with the Linux Vendor Firmware Service (LVFS) for offering a nice firmware upgrade story on Linux systems...",
+    "pub_date": "Mon, 27 Jul 2026 12:17:48 -0400",
+    "title_zh": "Fwupd 2.1.7 发布，包含大量错误修复",
+    "summary_zh": "Fwupd 2.1.7 作为开源固件更新工具的最新版本发布，新增对 PixArt PJP360 设备的支持，并引入了通用 BIOS 设置 AppStream ID、MTD 锁安全属性、外部管理 EFI 签名列表、systemd-pcrlock 插件及 TCG 磁盘加密安全属性等新功能。此外，该版本修复了从 AMD GPU 版本字符串处理到加密内存挂起等多种错误，并改进了 Android 平台下的插件兼容性。",
+    "fulltext_zh": "Fwupd 2.1.7 发布，包含大量错误修复 - Phoronix\nFwupd 2.1.7 发布，包含大量错误修复\n发布于 2026 年 7 月 27 日 下午 12:17 EDT。\n\nFwupd 2.1.7 今日发布，这是这款开源固件更新工具的最新版本。该工具与 Linux 供应商固件服务（LVFS）配合使用，为 Linux 系统提供了良好的固件升级体验。\n\nFwupd 2.1.7 中唯一新增的硬件支持是对 PixArt PJP360 设备的支持。PixArt PJP360 用于 PixArt POCO 103X 触控板。为了支持这款新型触控板的固件更新，需要对 PixArt Fwupd 插件进行相应更新。PixArt 公司自行贡献了这项支持。\n\nFwupd 2.1.7 还引入了通用 BIOS 设置的“知名”AppStream ID、MTD 锁安全属性、对“外部管理”EFI 签名列表的支持、一个 systemd-pcrlock 插件及其与 UEFI 更新的挂钩，以及 TCG 磁盘加密安全属性。此外，在为 Android 构建软件时，更多 Fwupd 插件现在也能正常工作。\n\nFwupd 2.1.7 还带来了大量错误修复，涵盖从 AMD GPU 版本字符串处理到允许使用加密内存进行挂起到 RAM 等功能，以及代码库中其他各种修复。\n\n有关 Fwupd 2.1.7 的下载和更多详情，请访问：\nFwupd 2.0.21 通过 AI 发现并修复了超过 250 个潜在安全问题\nFwupd 2.1.4 修复了 Anthropic 的 Mythos 发现的多个错误，并为 Intel Arc Pro B65/B70 提供固件更新支持\nHP 现赞助 Linux 供应商固件服务 / Fwupd\nFwupd 2.1.3 为模块化智能手机带来固件更新功能\n戴尔和联想现赞助 Linux 供应商固件服务\nFwupd 2.1.2 为更多硬件提供固件更新支持\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\n最后一个 MPEG-4 Visual 专利已过期\nFirefox 153 发布，支持 Vulkan 视频解码和实验性 JPEG-XL\nLemonade 11.5 本地 AI 服务器发布，附带完整的 Lemonade Router\nGNOME 因 AI 生成报告更改安全披露政策\nFedora 45 Atomic Desktops 计划支持基于 Web 的远程安装\n“KVM Chainsaw”预计将随 Linux 7.3 引入，用于处理 God 数据结构\nLinux 补丁引入“KNOD”，用于直接向 AMD GPU 进行内核内网络卸载\nLinux 7.2-rc4 发布：看起来像是“新常态”\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "3bac2b42fe0956d87e7710980b4870ca": {
+    "id": "3bac2b42fe0956d87e7710980b4870ca",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/framework-laptop-13-pro",
+    "title_en": "Framework Laptop 13 Pro: Aiming To Be One Of The Best Upgradeable Linux Laptops",
+    "summary_en": "Back in April, Framework Computer announced the Framework Laptop 13 Pro as a ground-up re-design of their modular/upgradeable laptop. This new Framework Laptop 13 Pro features a much larger battery (74Wh), LPCAMM2 memory support, a full CNC aluminum chassis, haptic touchpad, and a new power-optimized touch display. Paired with the very efficient Intel Core Ultra Series 3 \"Panther Lake\" SoCs, the Framework Laptop 13 Pro ends up being an incredible offering from the hardware perspective.",
+    "pub_date": "Mon, 27 Jul 2026 11:00:00 -0400",
+    "title_zh": "Framework Laptop 13 Pro：旨在成为最佳可升级Linux笔记本电脑之一",
+    "summary_zh": "Framework Computer 发布了全新设计的 Framework Laptop 13 Pro，采用全CNC铝制机身、74Wh大电池、LPCAMM2内存、触觉触控板和低功耗触控屏，搭载高效的Intel Core Ultra Series 3“Panther Lake”SoC。该机型在保持模块化可升级特性的同时，大幅提升了硬件品质和续航能力，支持长达20小时的电池寿命。Linux兼容性出色，开箱即可运行Ubuntu 26.04 LTS等现代发行版，且组件跨代兼容，旧款机型也可升级。",
+    "fulltext_zh": "Framework Laptop 13 Pro：旨在成为最佳可升级Linux笔记本电脑之一 评测 - Phoronix\nFramework Laptop 13 Pro：旨在成为最佳可升级Linux笔记本电脑之一\n发布于2026年7月27日上午11:00（美国东部时间）。\n今年四月，Framework Computer 发布了 Framework Laptop 13 Pro，这是对其模块化/可升级笔记本电脑的彻底重新设计。这款全新的 Framework Laptop 13 Pro 配备了更大的电池（74Wh）、LPCAMM2内存支持、全CNC铝制机身、触觉触控板，以及一块经过功耗优化的触控显示屏。搭配能效极高的Intel Core Ultra Series 3“Panther Lake”SoC，Framework Laptop 13 Pro 从硬件角度来看，成为了一款令人难以置信的产品。\nFramework Computer 最近向我们寄送了一台 Framework Laptop 13 Pro 的评测样机。评测解禁日期为今天，虽然我目前只有大约一周的测试时间，但从开箱的那一刻起，就明显看出这相比前几代 Framework Laptop 13 是一次多么重大的硬件升级。CNC加工的铝制机身手感极佳，类似于老款ThinkPad笔记本电脑或Apple MacBook Pro的质感。机身采用6063铝合金加工而成，同时保持了与前代 Framework Laptop 13 型号相同的外部尺寸，重量仅为1.4公斤。与以往的 Framework Computer 产品一样，硬件设计的开源CAD文件可供获取。\n新的 Framework Laptop 13 Pro 仍然像之前的笔记本型号一样可升级，但由于采用了新的机身制造工艺，硬件品质现已提升到了新的水平。与之前的 Framework Laptop 型号相比，新显示屏是开机后另一个非常显著的体验提升。\n借助新的 Panther Lake 主板上的 LPCAMM2 内存，Framework Computer 提供了16GB、32GB和64GB的选项，速度为7467 MT/s。\n另一个需要重点注意的事项是，虽然有了全新的 Framework Laptop 13 Pro 机身，但 Framework Computer 保持了其组件的跨代兼容性。基于 Panther Lake 的新主板以及显示套件和其他组件，都沿用了早期单元的外形规格和接口，因此，如果暂时不想选择全新的机身，旧款笔记本电脑仍然可以用这些新组件进行升级。或者，如果你现在想升级机身，同时保留现有硬件组件，直到内存/存储价格等下降。\n凭借新的74 Wh电池、功耗优化的显示屏以及Intel Panther Lake SoC的低功耗，Framework Computing 宣称这款笔记本的电池续航时间可达20小时。虽然由于存在众多变量以及不同的用户工作流程会导致截然不同的结果，我暂不公布具体的续航数据，但 Framework Laptop 13 Pro 的续航时间确实比之前的 Framework Laptop 13 型号（如搭载 Ryzen AI 9 HX 370 或 Ryzen 7 7840U 的配置）长了好几个小时。\n对于曾组装过前代 Framework Laptop DIY 版本的用户来说，设置 Framework Laptop 13 Pro 的过程完全相同。非常简单直接。我没有遇到任何问题，整个过程非常顺畅。Framework Computer 继续支持 LVFS/Fwupd，使系统和组件固件更新变得简单直接。\nFramework Laptop 13 Pro 在设计时充分考虑了对Linux的出色兼容性。运行现代Linux发行版（如 Ubuntu 26.04 LTS、Fedora Workstation 44、Arch Linux 等）的用户，应该能够在这款搭载 Panther Lake 的新笔记本上获得出色的开箱即用Linux体验。\n由于目前使用这台笔记本的时间有限，我的大部分测试都是在 Ubuntu 26.04 LTS 上进行的。Ubuntu 26.04 LTS 在这款搭载 Panther Lake 的 Framework 笔记本上，使用 Linux 7.0 内核即可完美开箱即用。Panther Lake SoC 搭配 Arc B390 集成显卡、新的显示套件、新的触觉触控板以及所有其他组件"
+  },
+  "36beaaea5fbe4f305d76b60fe2bf88f5": {
+    "id": "36beaaea5fbe4f305d76b60fe2bf88f5",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Ubuntu-Virtualization-HWE-Stack",
+    "title_en": "Ubuntu To Provide Virtualization HWE Stack For Ubuntu 26.04 LTS",
+    "summary_en": "Ubuntu has long provided hardware enablement \"HWE\" stacks for Ubuntu LTS releases to provide a newer kernel and Mesa drivers and more for better supporting new/modern hardware on the long-term support Ubuntu Linux releases. With Ubuntu 26.04 LTS, Canonical will also now be providing a virtualization HWE stack for shipping newer virtualization / confidential computing features...",
+    "pub_date": "Mon, 27 Jul 2026 07:32:53 -0400",
+    "title_zh": "Ubuntu 将为 Ubuntu 26.04 LTS 提供虚拟化 HWE 堆栈",
+    "summary_zh": "Ubuntu 长期为 LTS 版本提供硬件启用（HWE）堆栈，以支持新硬件。现在 Canonical 计划在 Ubuntu 26.04 LTS 中引入虚拟化 HWE 堆栈，通过更新 QEMU、libvirt、EDK2 和 SeaBIOS 等组件，支持 AMD SEV-SNP 和 Intel TDX 等最新虚拟化与机密计算特性。该堆栈将每六个月升级一次，用户也可选择保留默认版本。",
+    "fulltext_zh": "Ubuntu 将提供 Ubuntu 26.04 LTS 的虚拟化 HWE 堆栈 - Phoronix\nUbuntu 将提供 Ubuntu 26.04 LTS 的虚拟化 HWE 堆栈\n发布于 2026 年 7 月 27 日上午 07:32（美国东部时间）\n\nUbuntu 长期以来一直为 Ubuntu LTS 版本提供硬件启用（HWE）堆栈，以提供更新的内核、Mesa 驱动等，从而在长期支持的 Ubuntu Linux 版本上更好地支持新式/现代硬件。随着 Ubuntu 26.04 LTS 的到来，Canonical 还将提供虚拟化 HWE 堆栈，用于提供更新的虚拟化/机密计算功能。\n\n由于 AMD 和 Intel 分别持续向上游提交新的 SEV-SNP 和 Trust Domain Extensions（TDX）特性，现在计划在 Ubuntu 26.04 LTS 上推出虚拟化硬件启用堆栈。\n\n未来的 Ubuntu 26.04 LTS 小版本更新将通过带有 \"-hwe\" 后缀的新软件包，提供更新版本的 QEMU、libvirt、EDK2 和 SeaBIOS。这是为了补充 HWE Linux 内核，以在服务器上支持最新的 AMD 和 Intel 虚拟化特性，尤其是在机密计算方面。\n\nUbuntu 虚拟化 HWE 堆栈计划每六个月升级一次，以匹配 Ubuntu Linux 中支持的最新上游版本。希望使用默认版本的用户可以避免安装 qemu-hwe / libvirt-hwe / edk2-hwe / seabios-hwe 软件包。\n\n关于 Ubuntu 26.04 LTS 新虚拟化 HWE 堆栈计划的更多详情，请参见今日的\n\nUbuntu Touch 24.04-2.0 发布，支持刘海屏和圆角\nUbuntu Linux 计划移除 /etc/debian_version 历史遗留文件\n三个新的 Ubuntu Snap 漏洞被公开，其中一个可追溯至 Ubuntu 16.04 LTS\nCanonical 正式推出面向离线/气隙环境的 \"Enterprise Store\"\nUbuntu 内核团队警告：AMD GPU 性能临时回退最高可达 42 倍\nCanonical 致力于让 Ubuntu for ARM64 成为 \"真正的一流架构\"\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\n最后一个 MPEG-4 Visual 专利已过期\nFirefox 153 发布，支持 Vulkan 视频解码和实验性 JPEG-XL\nLemonade 11.5 本地 AI 服务器发布，附带完整的 Lemonade Router\nGNOME 因 AI 生成报告更改安全披露政策\nFedora 45 Atomic Desktops 计划支持基于 Web 的远程安装\n\"KVM Chainsaw\" 预计将随 Linux 7.3 引入，用于处理 God 数据结构\nLinux 补丁引入 \"KNOD\"，用于将内核网络卸载直接定向至 AMD GPU\nLinux 7.2-rc4 发布：看起来像是 \"新常态\"\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "826adcab11cc53065a499df26f4e0dfb": {
+    "id": "826adcab11cc53065a499df26f4e0dfb",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/freebsd-launches-ai-assisted-project-to-find-and-fix-vulnerabilities/",
+    "title_en": "FreeBSD Launches AI-Assisted Project to Find and Fix Vulnerabilities",
+    "summary_en": "Discover how FreeBSD's new AI-assisted project aims to identify and resolve vulnerabilities, enhancing system security and reliability for users.\nThe post FreeBSD Launches AI-Assisted Project to Find and Fix Vulnerabilities appeared first on Linux Today.",
+    "pub_date": "Mon, 27 Jul 2026 07:31:04 +0000",
+    "title_zh": "FreeBSD 启动 AI 辅助项目以发现并修复漏洞",
+    "summary_zh": "FreeBSD 宣布启动一项新的 AI 辅助项目，旨在利用人工智能技术自动识别和修复系统漏洞，从而提升整体安全性与可靠性。该项目将结合机器学习与静态分析，帮助开发者更高效地发现潜在风险，并加速补丁发布流程。此举标志着 FreeBSD 在安全维护领域迈出创新一步。",
+    "fulltext_zh": "了解 FreeBSD 新的 AI 辅助项目如何旨在识别和解决漏洞，从而增强用户的系统安全性与可靠性。\n\n该文章 FreeBSD Launches AI-Assisted Project to Find and Fix Vulnerabilities 首次出现在 Linux Today 上。"
+  },
+  "1979ed9bfc48a77cd622e5e4850fd80b": {
+    "id": "1979ed9bfc48a77cd622e5e4850fd80b",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/nvidia-595-84-linux-driver-improves-support-for-007-first-light-and-other-games/",
+    "title_en": "NVIDIA 595.84 Linux Driver Improves Support for 007 First Light and Other Games",
+    "summary_en": "Explore the NVIDIA 595.84 Linux Driver update, featuring enhanced support for 007 First Light and various games, ensuring optimal performance and graphics.\nThe post NVIDIA 595.84 Linux Driver Improves Support for 007 First Light and Other Games appeared first on Linux Today.",
+    "pub_date": "Mon, 27 Jul 2026 07:27:31 +0000",
+    "title_zh": "NVIDIA 595.84 Linux 驱动程序改进对《007：第一缕光》及其他游戏的支持",
+    "summary_zh": "NVIDIA 发布了 595.84 版本的 Linux 驱动程序更新，主要增强了对《007：第一缕光》等多款游戏的支持，确保用户获得最佳性能和图形体验。",
+    "fulltext_zh": "探索 NVIDIA 595.84 Linux 驱动程序更新，该版本增强了对《007：第一缕光》及多款游戏的支持，确保最佳性能和图形表现。\n\n该文章 NVIDIA 595.84 Linux Driver Improves Support for 007 First Light and Other Games 最初出现在 Linux Today 上。"
+  },
+  "7cb02d0ede1a458b282e9037463c3829": {
+    "id": "7cb02d0ede1a458b282e9037463c3829",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/firefox-153-enters-beta-testing-as-the-next-extended-support-release-series/",
+    "title_en": "Firefox 153 Enters Beta Testing as the Next Extended Support Release Series",
+    "summary_en": "Firefox 153 is now in beta testing, marking the next phase of the Extended Support Release series. Discover new features and improvements today.\nThe post Firefox 153 Enters Beta Testing as the Next Extended Support Release Series appeared first on Linux Today.",
+    "pub_date": "Mon, 27 Jul 2026 07:24:29 +0000",
+    "title_zh": "Firefox 153 进入 Beta 测试，成为下一个扩展支持版本系列",
+    "summary_zh": "Firefox 153 现已进入 Beta 测试阶段，标志着扩展支持版本系列的新阶段。该版本引入了多项新功能和改进，旨在提升用户体验和安全性。作为下一个 ESR 系列，它将为企业和长期稳定用户提供更可靠的浏览器支持。",
+    "fulltext_zh": "Firefox 153 现已进入 Beta 测试阶段，标志着扩展支持版本系列的下一个阶段。立即探索新功能和改进。\n\n该文章《Firefox 153 进入 Beta 测试，成为下一个扩展支持版本系列》首发于 Linux Today。"
+  },
+  "ba5c0d5d3ba25e64f3adbd811a43b812": {
+    "id": "ba5c0d5d3ba25e64f3adbd811a43b812",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/ubuntu-26-10-steps-into-ai-with-local-speech-to-text/",
+    "title_en": "Ubuntu 26.10 Steps into AI with Local Speech-to-Text",
+    "summary_en": "Learn about the powerful local speech-to-text functionality in Ubuntu 26.10, making AI technology accessible and efficient for everyday tasks.\nThe post Ubuntu 26.10 Steps into AI with Local Speech-to-Text appeared first on Linux Today.",
+    "pub_date": "Mon, 27 Jul 2026 07:21:31 +0000",
+    "title_zh": "Ubuntu 26.10 迈入AI领域，引入本地语音转文字功能",
+    "summary_zh": "Ubuntu 26.10 引入了强大的本地语音转文字功能，使AI技术更易访问且高效，适用于日常任务。该功能无需联网，在本地即可完成语音识别，提升了隐私保护和响应速度。",
+    "fulltext_zh": "了解 Ubuntu 26.10 中强大的本地语音转文字功能，让AI技术在日常任务中变得易用且高效。\n\n该文章《Ubuntu 26.10 Steps into AI with Local Speech-to-Text》最初发表于 Linux Today。"
+  },
+  "d55a39c56154c91d201b50b5ec141485": {
+    "id": "d55a39c56154c91d201b50b5ec141485",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/amarok-3-3-3-music-player-released-with-playback-and-layout-fixes/",
+    "title_en": "Amarok 3.3.3 Music Player Released with Playback and Layout Fixes",
+    "summary_en": "Discover the latest updates in Amarok 3.3.3, featuring essential playback improvements and layout fixes for an enhanced music listening experience.\nThe post Amarok 3.3.3 Music Player Released with Playback and Layout Fixes appeared first on Linux Today.",
+    "pub_date": "Mon, 27 Jul 2026 07:18:44 +0000",
+    "title_zh": "Amarok 3.3.3 音乐播放器发布，带来播放与布局修复",
+    "summary_zh": "Amarok 3.3.3 版本发布，主要针对播放功能和界面布局进行了关键修复，旨在提升用户的音乐聆听体验。该更新解决了播放过程中的问题，并优化了界面布局，使操作更加流畅。",
+    "fulltext_zh": "了解 Amarok 3.3.3 的最新更新，该版本带来了重要的播放改进和布局修复，以增强音乐聆听体验。\n\n本文《Amarok 3.3.3 Music Player Released with Playback and Layout Fixes》首发于 Linux Today。"
   }
 }

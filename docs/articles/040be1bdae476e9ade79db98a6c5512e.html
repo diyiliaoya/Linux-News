@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StartOS 0.4.0 发布 — Linux 中文速报</title>
+<title>AMD PMF 测试工具计划用于 Linux 7.3 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>StartOS 0.4.0 发布</h1>
+  <h1>AMD PMF 测试工具计划用于 Linux 7.3</h1>
 
-  <div class="article-summary">StartOS 0.4.0 是一个基于 Debian 的个人服务器优化 Linux 发行版，支持 AArch64、riscv64 和 x86_64 架构。此版本是对 StartOS 的完全重写，带来了重新设计的用户界面、全新的网络栈、StartTunnel 反向隧道、LXC 容器运行时以及改进的备份功能。发行版由 Start9 Labs, Inc. 开发，可通过 Tor 网络从本地或全球访问。</div>
+  <div class="article-summary">AMD 计划在即将到来的 Linux 7.3 周期中，向内核源码树添加一个名为 test_amd_pmf 的小型测试应用程序，用于测试 AMD 平台管理框架（PMF）接口并转储各种系统数据点。该工具可报告电源来源、笔记本电脑表面温度、电池状态、自定义 BIOS 输入/输出、设备放置位置、盖子状态、用户存在检测、性能滑块位置、环境光、平均/最大 C0 驻留时间、插槽功耗等指标，主要用于测试或了解 PMF 功能的工作情况。</div>
 
-  <div class="article-body"><p>Aiden McClelland 宣布了一个重大新版本的发布，这是一个基于 Debian 的 Linux 发行版，针对个人服务器进行了优化，支持 AArch64、riscv64 和 x86_64 架构：“0.4.0 版本是对 StartOS 的完全重写。经过六年的构建，我们相信已经找到了正确的架构和基础，以实现主权计算的承诺。亮点：重新设计的用户界面——更快、更直观、移动友好，带有实时系统指标仪表板；全新的网络栈——LAN 端口转发、Wireguard VPN 网关、私有和公共域名（clearnet）、Let's Encrypt、内置 DNS，以及可选的 Tor 插件；StartTunnel——免费、开源的反向隧道，可在公共域名上暴露服务而不泄露家庭 IP；LXC 容器运行时——用可靠的分层容器架构取代 Docker/Podman，支持硬件加速和多容器设置；改进的备份——差异备份、跨服务器恢复，以及用于跨平台可靠性的新 FUSE 模块……有关完整变更日志和升级说明，请访问。下载链接（startos-0.4.0-x86_64-nonfree.iso、startos-0.4.0-aarch64-nonfree.iso、startos-0.4.0-riscv64-nonfree.iso、startos-0.4.0-raspberrypi.img）。</p><p>StartOS 是一个基于 Debian 的 Linux 发行版，针对个人服务器进行了优化。它便于发现、安装、网络配置、服务配置、数据备份、依赖管理和自托管软件服务的健康监控。安装后，发行版会启动到 Firefox 浏览器，其中预装了几项服务，其他服务（包括各种比特币、通信、数据和人工智能服务）可从项目的在线市场获取。服务器可以通过 Tor 网络的 Onion 服务从本地或全球任何地方访问。该发行版由 Start9 Labs, Inc. 开发。</p><p>https://github.com/Start9Labs/start</p></div>
+  <div class="article-body"><p>AMD PMF 测试工具计划用于 Linux 7.3 - Phoronix</p><p>AMD PMF 测试工具计划用于 Linux 7.3</p><p>2026年7月27日下午5:28 EDT。</p><p>即将被添加到 Linux 内核源码树以用于即将到来的 Linux 7.3 周期的，是 test_amd_pmf，一个用于测试 AMD 平台管理框架（PMF）接口并转储各种系统数据点的小型测试应用程序。</p><p>AMD PMF 测试工具“test_amd_pmf”计划驻留在 Linux 内核源码树内，它只是一个类似于 Turbostat 和其他内核源码树内应用的小型用户空间应用程序。Test_amd_pmf 读取 /dev/amdpmf_interface 并打印各种指标，用于测试和分析目的。</p><p>这个小工具将报告诸如检测到的电源来源、AMD Ryzen 笔记本电脑的表面温度、电池状态、自定义 BIOS 输入/输出、确定的笔记本电脑放置位置、盖子状态、是否检测到用户在场或离开笔记本电脑、性能滑块位置、环境光、平均/最大 C0 驻留时间、插槽功耗以及其他参数。</p><p>主要用于测试目的，或对于那些好奇不同 AMD PMF 功能在热/功耗特性或用户存在检测等功能上表现如何的人。</p><p>已进入 platform-drivers-x86.git 的“for-next”Git 分支，距离 Linux 7.3 合并窗口还有几周时间。</p><p>AMD “低功耗” CPU 核心类型补丁已在 Linux 7.3 之前排队</p><p>AMD ROCm 承诺未来采用六周发布周期</p><p>AMD Advancing AI 2026：开放、开源与更多开源</p><p>AMD EPYC Zen 7 “Florence” 确认配备 ACE 及下一代内存</p><p>AMD 宣布 ROCm.AI 作为 AI 驱动平台供开发者使用</p><p>AMD 发布 Instinct MI455X 和 Helios AI 机架</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动程序及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他。</p><p>最后一个 MPEG-4 Visual 专利已过期</p><p>Firefox 153 发布，支持 Vulkan 视频解码和实验性 JPEG-XL</p><p>Lemonade 11.5 本地 AI 服务器发布，附带完整的 Lemonade 路由器</p><p>GNOME 因 AI 生成报告更改安全披露策略</p><p>Fedora 45 Atomic 桌面计划允许基于 Web 的远程安装</p><p>“KVM 电锯”预计将随 Linux 7.3 推出，用于处理 God 数据结构</p><p>Linux 补丁引入“KNOD”，用于将网络卸载直接到 AMD GPU</p><p>Linux 7.2-rc4 发布：看起来像是“新常态”</p><p>虽然提供无广告浏览，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>使用的所有商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12901" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/AMD-PMF-Testing-Tool-Linux-7.3" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

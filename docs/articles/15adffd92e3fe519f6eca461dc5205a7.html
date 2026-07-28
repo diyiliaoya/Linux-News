@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StartOS 0.4.0 发布 — Linux 中文速报</title>
+<title>Mission Center 更新新增电池、分区和功耗统计 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">软件应用</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>StartOS 0.4.0 发布</h1>
+  <h1>Mission Center 更新新增电池、分区和功耗统计</h1>
 
-  <div class="article-summary">StartOS 0.4.0 是一个基于 Debian 的个人服务器优化 Linux 发行版，支持 AArch64、riscv64 和 x86_64 架构。此版本是对 StartOS 的完全重写，带来了重新设计的用户界面、全新的网络栈、StartTunnel 反向隧道、LXC 容器运行时以及改进的备份功能。发行版由 Start9 Labs, Inc. 开发，可通过 Tor 网络从本地或全球访问。</div>
+  <div class="article-summary">Linux系统监控工具Mission Center发布1.2.0版本，新增电池统计、磁盘分区详情、功耗曲线等硬件监控功能。改进图形渲染引擎，优化Snap和AppImage包，新增键盘快捷键，并修复多项Bug，包括Steam Deck CPU温度读取、HiDPI图标模糊等问题。</div>
 
-  <div class="article-body"><p>Aiden McClelland 宣布了一个重大新版本的发布，这是一个基于 Debian 的 Linux 发行版，针对个人服务器进行了优化，支持 AArch64、riscv64 和 x86_64 架构：“0.4.0 版本是对 StartOS 的完全重写。经过六年的构建，我们相信已经找到了正确的架构和基础，以实现主权计算的承诺。亮点：重新设计的用户界面——更快、更直观、移动友好，带有实时系统指标仪表板；全新的网络栈——LAN 端口转发、Wireguard VPN 网关、私有和公共域名（clearnet）、Let's Encrypt、内置 DNS，以及可选的 Tor 插件；StartTunnel——免费、开源的反向隧道，可在公共域名上暴露服务而不泄露家庭 IP；LXC 容器运行时——用可靠的分层容器架构取代 Docker/Podman，支持硬件加速和多容器设置；改进的备份——差异备份、跨服务器恢复，以及用于跨平台可靠性的新 FUSE 模块……有关完整变更日志和升级说明，请访问。下载链接（startos-0.4.0-x86_64-nonfree.iso、startos-0.4.0-aarch64-nonfree.iso、startos-0.4.0-riscv64-nonfree.iso、startos-0.4.0-raspberrypi.img）。</p><p>StartOS 是一个基于 Debian 的 Linux 发行版，针对个人服务器进行了优化。它便于发现、安装、网络配置、服务配置、数据备份、依赖管理和自托管软件服务的健康监控。安装后，发行版会启动到 Firefox 浏览器，其中预装了几项服务，其他服务（包括各种比特币、通信、数据和人工智能服务）可从项目的在线市场获取。服务器可以通过 Tor 网络的 Onion 服务从本地或全球任何地方访问。该发行版由 Start9 Labs, Inc. 开发。</p><p>https://github.com/Start9Labs/start</p></div>
+  <div class="article-body"><p>Mission Center（Linux系统监控工具）新增电池统计等功能</p><p>Linux系统监控应用Mission Center的新版本现已可供下载，新增了硬件统计功能、首次运行设置提示以及Bug修复。</p><p>Mission Center 1.2.0新增了一个标签页，在页面中展示了每个分区的使用详情（包括已用空间和可用空间），并在页面底部添加了一个图表，可选择显示温度、功耗或CPU频率。</p><p>磁盘分区（前端）和电池历史（后端）页面现在显示压缩（zRAM/zswap）统计信息，而GPU页面允许你将中间图表切换为编码/解码活动、功耗、时钟速度或温度（取决于你的显卡在Linux上能报告哪些信息）。</p><p>Mission Center的统计功能丰富的版本</p><p>图形后端经过彻底改造，实现了更流畅的动画和渲染效果。在较慢的系统上启动应用时，你可能会注意到真实图表加载前会出现短暂的灰色占位图表“闪烁”，这能更清楚地表明应用并未卡顿。</p><p>Mission Center是一款系统监控工具，可以显示活动进程、服务及其相对资源使用情况的详细信息。应用检测功能已得到改进，确保更多应用显示正确的名称、图标等。</p><p>并非所有功能开箱即用——但让它们工作起来更简单了</p><p>对于某些功能，如CPU功耗、进程级网络使用率和风扇读数，Mission Center 1.2.0会提示你运行一个设置脚本。你可以在运行前预览该脚本。你也可以选择拒绝，但某些功能将无法报告。</p><p>Mission Center的官方Snap和AppImage包在此次更新中得到了改进。Snap包已升级使用运行时，而AppImage包现在体积更小，使用相关技术，且不再依赖FUSE运行。</p><p>还新增了键盘快捷键：</p><p>双击或使用左右箭头键折叠和展开行，使用其他按键切换页面等。</p><p>除了新功能外，Mission Center今年首次重大更新中还包含了大量Bug修复。Steam Deck上的CPU温度读取问题、HiDPI显示屏上的模糊应用图标、过宽的SMART对话框以及虚假的CPU使用率峰值等问题均已解决。</p><p>Mission Center v1.2.0中的其他值得注意的变化：</p><p>交换空间使用现在显示为每进程交换，而非共享内存</p><p>每进程内存使用采用混合PSS近似</p><p>通过提升权限发送进程信号</p><p>禁用设备类别和单个网络类型</p><p>连接状态现在在对话框中列出，显示更多信息，支持复制</p><p>对于我认为是最清晰、最流畅的Linux系统监控工具之一来说，这是一次扎实的更新（对于那些急于提问的人，是的：Mission Center的设计灵感来自Windows的任务管理器）。</p><p>Ubuntu决定将系统监控器设为默认工具——这——意味着许多人可能不再那么倾向于寻找另一种方式来获取大致相同的统计信息。</p><p>就个人而言，我一直很喜欢系统监控工具的外观和布局，而通过这次最新更新，额外的信息使其对我的需求来说更加不可或缺。在命令行方面我仍然是粉丝，但对于GUI需求，这就是最佳选择。</p><p>如何获取Mission Center 1.2.0</p><p>Mission Center是免费、开源软件，使用Rust和GTK4/libadwaita构建，更多信息请访问官方网站，后者也提供AppImage下载。</p><p>或者，你也可以从Flathub安装Mission Center。如果你使用的是Ubuntu，可以在软件中心搜索它，或者打开终端并运行：</p><p>sudo snap install mission-center</p><p>在评论区告诉我你对这次更新的看法！</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12901" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/mission-center-battery-power-draw-reporting" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
