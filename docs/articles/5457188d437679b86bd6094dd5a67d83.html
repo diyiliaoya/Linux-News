@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mission Center 更新新增电池、分区和功耗统计 — Linux 中文速报</title>
+<title>OpenUK 希望英国停止免费赠予开源成果 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Mission Center 更新新增电池、分区和功耗统计</h1>
+  <h1>OpenUK 希望英国停止免费赠予开源成果</h1>
 
-  <div class="article-summary">Linux系统监控工具Mission Center发布1.2.0版本，新增电池统计、磁盘分区详情、功耗曲线等硬件监控功能。改进图形渲染引擎，优化Snap和AppImage包，新增键盘快捷键，并修复多项Bug，包括Steam Deck CPU温度读取、HiDPI图标模糊等问题。</div>
+  <div class="article-summary">OpenUK 发布报告，呼吁英国政府建立自己的开源基金会，以持有代码、治理权和标准，防止英国公共资金资助的开源项目流失到美国等其他国家。报告以 MCP（模型上下文协议）为例，该协议由伦敦工程师创建，最终却归入美国基金会治理。OpenUK 认为这是资金和治理缺口，而非技术问题，并指出德国、中国已有成功先例。</div>
 
-  <div class="article-body"><p>Mission Center（Linux系统监控工具）新增电池统计等功能</p><p>Linux系统监控应用Mission Center的新版本现已可供下载，新增了硬件统计功能、首次运行设置提示以及Bug修复。</p><p>Mission Center 1.2.0新增了一个标签页，在页面中展示了每个分区的使用详情（包括已用空间和可用空间），并在页面底部添加了一个图表，可选择显示温度、功耗或CPU频率。</p><p>磁盘分区（前端）和电池历史（后端）页面现在显示压缩（zRAM/zswap）统计信息，而GPU页面允许你将中间图表切换为编码/解码活动、功耗、时钟速度或温度（取决于你的显卡在Linux上能报告哪些信息）。</p><p>Mission Center的统计功能丰富的版本</p><p>图形后端经过彻底改造，实现了更流畅的动画和渲染效果。在较慢的系统上启动应用时，你可能会注意到真实图表加载前会出现短暂的灰色占位图表“闪烁”，这能更清楚地表明应用并未卡顿。</p><p>Mission Center是一款系统监控工具，可以显示活动进程、服务及其相对资源使用情况的详细信息。应用检测功能已得到改进，确保更多应用显示正确的名称、图标等。</p><p>并非所有功能开箱即用——但让它们工作起来更简单了</p><p>对于某些功能，如CPU功耗、进程级网络使用率和风扇读数，Mission Center 1.2.0会提示你运行一个设置脚本。你可以在运行前预览该脚本。你也可以选择拒绝，但某些功能将无法报告。</p><p>Mission Center的官方Snap和AppImage包在此次更新中得到了改进。Snap包已升级使用运行时，而AppImage包现在体积更小，使用相关技术，且不再依赖FUSE运行。</p><p>还新增了键盘快捷键：</p><p>双击或使用左右箭头键折叠和展开行，使用其他按键切换页面等。</p><p>除了新功能外，Mission Center今年首次重大更新中还包含了大量Bug修复。Steam Deck上的CPU温度读取问题、HiDPI显示屏上的模糊应用图标、过宽的SMART对话框以及虚假的CPU使用率峰值等问题均已解决。</p><p>Mission Center v1.2.0中的其他值得注意的变化：</p><p>交换空间使用现在显示为每进程交换，而非共享内存</p><p>每进程内存使用采用混合PSS近似</p><p>通过提升权限发送进程信号</p><p>禁用设备类别和单个网络类型</p><p>连接状态现在在对话框中列出，显示更多信息，支持复制</p><p>对于我认为是最清晰、最流畅的Linux系统监控工具之一来说，这是一次扎实的更新（对于那些急于提问的人，是的：Mission Center的设计灵感来自Windows的任务管理器）。</p><p>Ubuntu决定将系统监控器设为默认工具——这——意味着许多人可能不再那么倾向于寻找另一种方式来获取大致相同的统计信息。</p><p>就个人而言，我一直很喜欢系统监控工具的外观和布局，而通过这次最新更新，额外的信息使其对我的需求来说更加不可或缺。在命令行方面我仍然是粉丝，但对于GUI需求，这就是最佳选择。</p><p>如何获取Mission Center 1.2.0</p><p>Mission Center是免费、开源软件，使用Rust和GTK4/libadwaita构建，更多信息请访问官方网站，后者也提供AppImage下载。</p><p>或者，你也可以从Flathub安装Mission Center。如果你使用的是Ubuntu，可以在软件中心搜索它，或者打开终端并运行：</p><p>sudo snap install mission-center</p><p>在评论区告诉我你对这次更新的看法！</p></div>
+  <div class="article-body"><p>OpenUK 希望英国停止免费赠予开源成果</p><p>OpenUK 希望英国停止免费赠予开源成果</p><p>他们指出 MCP（模型上下文协议）——由伦敦两名工程师构建——最终却归入美国主导的治理之下。</p><p>OpenUK 近期发布了其报告，在这份 40 页的文件中，隐藏着一个对英国政府的重大请求：建立属于英国自己的基金会，以持有代码、治理权和标准，方式如同 Linux 基金会。</p><p>如果你第一次听到这个名字，OpenUK 是一个倡导开放技术的非营利组织，由……领导。他们最初是在提交给……的《让英国成为开源之家》中发出这一呼吁的。</p><p>《AI 开放度》报告此次以更紧迫的口吻重申了这一主张。</p><p>OpenUK 将提议的英国版 Linux 基金会描述为一个“……”，一旦成立，该机构将持有用英国公共资金构建的代码库、标准和数据集，而不是看着这些成果迁移到位于其他国家的服务器和治理委员会。</p><p>它还将负责培训、社区参与和活动组织。这些领域原本需要单独的基础设施，比如开源项目办公室。</p><p>OpenUK 将此视为资金和治理缺口，而非技术问题。</p><p>他们指出，英国在开源软件和 AI 开放度方面位列欧洲第一，却没有与 Linux 基金会、德国的“主权技术机构”相当的组织。</p><p>英国正在流失开源成果。</p><p>这家非营利组织无需费力就能证明其观点，因为 MCP 是其最强有力的例证。</p><p>模型上下文协议（MCP）——如今已成为 AI 模型连接外部工具和数据背后的标准——由伦敦的两名工程师创建。</p><p>Anthropic 支持了该协议，并最终将其捐赠给了 Linux 基金会的“智能体 AI 基金会”，一同捐赠的还有 Block 的 Goose 和 OpenAI 的……</p><p>在与 OpenUK 的对话中，MCP 的联合创始人之一表示，他们之所以免费赠予 MCP，是因为需要该标准保持供应商中立，避免商标和许可风险。</p><p>如果英国有一个成熟的基金会，那么他们就不会把 MCP 拱手让给美国。</p><p>欧盟委员会已经展示了一项倡议，旨在通过迈向开放的欧洲数字生态系统，摆脱美国的技术主导。该倡议将涵盖云计算、人工智能、网络安全、开放硬件、互联网技术以及汽车和制造等工业应用领域。</p><p>德国更接近 OpenUK 为英国所设想的目标。其……已转变为一个政府机构，报告称其为“……”。</p><p>中国已经证明了这种模式行之有效。开源在其……下成为国家支柱，并由一个名为……的专门基金会提供支持。</p><p>DeepSeek 的 R1 展示了这种专注如何带来回报，它利用开放权重和知识蒸馏，以极低的成本提供了前沿水平的 AI。</p><p>OpenUK 希望吸引英国各公共部门组织的兴趣，同时旨在与全球专家合作，最终为国家提供最佳方案。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。请帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无需承诺</p><p>一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的极客。</p><p>GrapheneOS 的一项隐私功能刚刚成为联邦起诉的依据</p><p>FireDragon 浏览器展翅高飞</p><p>Ubuntu 26.10 “Stonking Stingray”：迄今为止所有新功能</p><p>Ubuntu 26.04 停止通知用户更新，但这是有意为之</p><p>Codeberg 在社区支持下对 AI 的使用划定了明确界限</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周新闻通讯，您将学到有用的 Linux 技巧、发现应用程序、探索新发行版，并随时了解 Linux 世界的最新动态。</p><p>太好了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/mission-center-battery-power-draw-reporting" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/british-flavored-linux-foundation-proposal/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

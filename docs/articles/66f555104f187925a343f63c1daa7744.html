@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mission Center 更新新增电池、分区和功耗统计 — Linux 中文速报</title>
+<title>我们终于复活了Firefox扩展（晚了10年） — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
+    <span class="tag">发行版</span>
     <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Mission Center 更新新增电池、分区和功耗统计</h1>
+  <h1>我们终于复活了Firefox扩展（晚了10年）</h1>
 
-  <div class="article-summary">Linux系统监控工具Mission Center发布1.2.0版本，新增电池统计、磁盘分区详情、功耗曲线等硬件监控功能。改进图形渲染引擎，优化Snap和AppImage包，新增键盘快捷键，并修复多项Bug，包括Steam Deck CPU温度读取、HiDPI图标模糊等问题。</div>
+  <div class="article-summary">OMG! Ubuntu 官方 Firefox 扩展在中断十年后重新上线。该扩展提供工具栏图标，点击可显示最新12条头条（含缩略图），支持未读计数、跨设备同步、桌面通知等功能。与Chrome版本功能几乎一致，但缺少通知按钮支持。扩展不持续后台运行，而是定期唤醒检查更新。</div>
 
-  <div class="article-body"><p>Mission Center（Linux系统监控工具）新增电池统计等功能</p><p>Linux系统监控应用Mission Center的新版本现已可供下载，新增了硬件统计功能、首次运行设置提示以及Bug修复。</p><p>Mission Center 1.2.0新增了一个标签页，在页面中展示了每个分区的使用详情（包括已用空间和可用空间），并在页面底部添加了一个图表，可选择显示温度、功耗或CPU频率。</p><p>磁盘分区（前端）和电池历史（后端）页面现在显示压缩（zRAM/zswap）统计信息，而GPU页面允许你将中间图表切换为编码/解码活动、功耗、时钟速度或温度（取决于你的显卡在Linux上能报告哪些信息）。</p><p>Mission Center的统计功能丰富的版本</p><p>图形后端经过彻底改造，实现了更流畅的动画和渲染效果。在较慢的系统上启动应用时，你可能会注意到真实图表加载前会出现短暂的灰色占位图表“闪烁”，这能更清楚地表明应用并未卡顿。</p><p>Mission Center是一款系统监控工具，可以显示活动进程、服务及其相对资源使用情况的详细信息。应用检测功能已得到改进，确保更多应用显示正确的名称、图标等。</p><p>并非所有功能开箱即用——但让它们工作起来更简单了</p><p>对于某些功能，如CPU功耗、进程级网络使用率和风扇读数，Mission Center 1.2.0会提示你运行一个设置脚本。你可以在运行前预览该脚本。你也可以选择拒绝，但某些功能将无法报告。</p><p>Mission Center的官方Snap和AppImage包在此次更新中得到了改进。Snap包已升级使用运行时，而AppImage包现在体积更小，使用相关技术，且不再依赖FUSE运行。</p><p>还新增了键盘快捷键：</p><p>双击或使用左右箭头键折叠和展开行，使用其他按键切换页面等。</p><p>除了新功能外，Mission Center今年首次重大更新中还包含了大量Bug修复。Steam Deck上的CPU温度读取问题、HiDPI显示屏上的模糊应用图标、过宽的SMART对话框以及虚假的CPU使用率峰值等问题均已解决。</p><p>Mission Center v1.2.0中的其他值得注意的变化：</p><p>交换空间使用现在显示为每进程交换，而非共享内存</p><p>每进程内存使用采用混合PSS近似</p><p>通过提升权限发送进程信号</p><p>禁用设备类别和单个网络类型</p><p>连接状态现在在对话框中列出，显示更多信息，支持复制</p><p>对于我认为是最清晰、最流畅的Linux系统监控工具之一来说，这是一次扎实的更新（对于那些急于提问的人，是的：Mission Center的设计灵感来自Windows的任务管理器）。</p><p>Ubuntu决定将系统监控器设为默认工具——这——意味着许多人可能不再那么倾向于寻找另一种方式来获取大致相同的统计信息。</p><p>就个人而言，我一直很喜欢系统监控工具的外观和布局，而通过这次最新更新，额外的信息使其对我的需求来说更加不可或缺。在命令行方面我仍然是粉丝，但对于GUI需求，这就是最佳选择。</p><p>如何获取Mission Center 1.2.0</p><p>Mission Center是免费、开源软件，使用Rust和GTK4/libadwaita构建，更多信息请访问官方网站，后者也提供AppImage下载。</p><p>或者，你也可以从Flathub安装Mission Center。如果你使用的是Ubuntu，可以在软件中心搜索它，或者打开终端并运行：</p><p>sudo snap install mission-center</p><p>在评论区告诉我你对这次更新的看法！</p></div>
+  <div class="article-body"><p>我们终于复活了Firefox扩展（晚了10年） - OMG! Ubuntu</p><p>官方 OMG! Ubuntu Firefox 扩展回来了——尽管比计划晚了很多（对此表示抱歉）。</p><p>过去十年里，这个扩展会让人感到熟悉，因为它和以前一样，只是现在在Firefox上。外观相同，（几乎）功能也相同，因为它是同一个东西（尽管API名称有所更换，manifest也有调整）。</p><p>这并非本博客首次提供Firefox扩展。我们的旧版扩展在2017年失效了，虽然我们本想修复它，但十年就这么一晃而过。</p><p>与Chrome版本一样，它提供了一种快速、低开销的方式来浏览最新头条，仿佛你正身处Web 2.0的巅峰时代（还有人记得Firefox的实时书签吗？）。</p><p>OMG! Ubuntu Firefox通知器</p><p>我们的扩展能做什么？嗯，它不会帮你洗袜子。</p><p>它会在工具栏添加一个图标，点击后弹出一个可滚动的列表，显示来自本站的最新12条头条（含缩略图）。工具栏图标上有一个徽章计数，显示有多少未读文章（最多12篇）。刷新按钮可检查新文章。</p><p>你无需保持标签页打开（这个功能让我很暖心），也无需访问首页（当然，经常访问首页的朋友们，我依然爱你们），因为新闻会主动来找你。</p><p>如果你登录了Mozilla账户，未读计数会在所有安装了该扩展并登录同一Mozilla账户的设备上同步（我们的Chrome版本也实现了这一点，不过使用的是原生同步功能）。</p><p>未读文章旁边有一个橙色书签标记。点击书签可将该文章标记为已读，而无需打开阅读。或者，你也可以让它保持未读状态，作为提醒稍后回来查看。底部有一个“全部标记为已读”按钮，以防——天哪——没有哪篇文章吸引你。</p><p>点击列表中的任意文章，即可在浏览器的新标签页中直接阅读。是的，是新标签页；这不是浏览器中的浏览器，所以弹出窗口中没有移动端视口。点击文章阅读时，它会自动标记为已读。</p><p>我们的扩展不会持续在后台运行。相反，它会定期唤醒检查新文章，然后继续休眠。如果发现新文章，它会发送桌面通知提醒你。点击通知即可在新标签页中阅读文章。</p><p>Chrome版本的通知带有操作按钮，但Firefox不支持这些按钮。</p><p>除了访问我们内置的RSS源之外，不需要任何实际权限。与Chrome版本相比，唯一的功能差异是缺少通知按钮（因为Firefox不支持它们）。</p><p>目前，你无法在Firefox扩展中禁用通知。我们很快会重新添加这个选项（Chrome已将通知控制移至浏览器本身，因此我们移除了设置页面以保持简洁）。</p><p>这只是关注OMG! Ubuntu的另一种方式。</p><p>对于这个本质上很简单的工具，我写了太多废话了——我并不指望你会使用它：有很多方法可以随时了解我们的报道：Chrome扩展、macOS上的RSS阅读器、RSS源、社交媒体账号等等。</p><p>但如果你确实想试试，欢迎将反馈发送至joey [at] ohso [dot] io，或者在此处的评论区留言。</p><p>在Firefox浏览器扩展商店中。</p><p>坦白说，我们重写了Chrome扩展，但没有重写Firefox版本。它之前一直能用，直到突然失效，然后因为只有大约一百人在使用，它的优先级就降低了。我们的Chrome扩展有几千名用户。</p><p>更新和强制刷新也会更新现有头条中的任何更改，例如，关于某个bug的文章中的“[现已修复]”，以及文章缩略图的任何更改（诚然，后者不太重要）。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/mission-center-battery-power-draw-reporting" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/omgubuntu-firefox-addon-notifier" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

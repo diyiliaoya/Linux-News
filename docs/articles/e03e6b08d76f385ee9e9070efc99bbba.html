@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Starling：一款用 Swift 编写、自带 Wayland 合成器并由 AI 辅助开发的全新 Linux 桌面 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年07月29日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">桌面环境</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Starling：一款用 Swift 编写、自带 Wayland 合成器并由 AI 辅助开发的全新 Linux 桌面</h1>
+
+  <div class="article-summary">Starling 是一款全新的开源 Linux 桌面环境，主要使用 Swift 编程语言，并借助 AI（Claude）在半年内开发完成。它拥有用 C 语言实现的 Wayland 合成器，内置 X11 服务器以兼容 X11 客户端，基于 Flutter 引擎的 C 核心运行，支持 Chrome、VS Code 等原生应用。目前作为早期预览版（v0.2）发布，仅支持 Ubuntu 26.04，提供约 53 MB 的 .deb 包。</div>
+
+  <div class="article-body"><p>Starling：一款用 Swift 编写、自带 Wayland 合成器并由 AI 辅助开发的全新 Linux 桌面 - Phoronix</p><p>Starling：一款用 Swift 编写、自带 Wayland 合成器并由 AI 辅助开发的全新 Linux 桌面</p><p>发布于 2026 年 7 月 28 日 上午 11:50（美国东部时间）</p><p>在大量通过 AI/LLM 编写的新开源项目涌现的时代，Linux 用户又多了一个全新的开源桌面选择。Starling 就是这样一个新项目，它主要通过 Claude 编写，使用 Swift 编程语言构建桌面，同时拥有用 C 语言实现的 Wayland 合成器。它还内置了一个 X11 服务器，用于处理 X11 客户端。</p><p>对于那些喜欢尝试评估新 Linux 桌面选项的人来说，Starling 刚刚被宣布为一个新的桌面选择，它是在过去半年中主要通过 AI（Claude）编写的。在给 Phoronix 的一封邮件中，这个项目的唯一开发者（与 Claude 合作）解释了其技术栈：</p><p>&quot;- 自有的 Wayland 合成器，用 C 语言编写，实现了 xdg-shell、linux-dmabuf（零拷贝导入）、viewporter、fractional-scale-v1、pointer-constraints、relative-pointer、text-input-v3、presentation-time、primary-selection、idle-inhibit、cursor-shape-v1、xdg-decoration、xdg-activation、xdg-output 和 wlr-data-control。</p><p>- 内置 X11 服务器（DRI3/Present），因此 X11 客户端也能运行。</p><p>- 运行在 Flutter 引擎的 C 核心之上，通过 DRM/KMS 嵌入器实现。Shell、窗口管理器、合成器和应用都是 Swift 编写的——UI 框架是 Flutter 框架到 Swift 的完整移植，没有使用 Dart 虚拟机。</p><p>- 无特权会话：DRM 主控和输入来自 logind（通过 libseat），而非以 root 身份运行。像任何 Wayland 会话一样通过 GDM 启动。</p><p>- 作为原生客户端运行真实应用——Chrome、VS Code、Slack、IntelliJ、GIMP 和 Blender（通过 linux-dmabuf 使用 EEVEE 视口）——涵盖 Chromium/Electron、Qt6、GTK3/4、JetBrains 运行时和 Blender 的 GHOST。</p><p>- 以约 53 MB 的 .deb 包形式发布，适用于 Ubuntu 26.04。已在 AMD（Radeon 780M）和虚拟机中的 virtio-gpu/virgl 上验证。</p><p>这是一个诚实的早期预览版（v0.2）：已测试 AMD 和 virtio-gpu，尚未测试 Intel/NVIDIA；缩放当前固定为 2.0；仅支持 Ubuntu 26.04。&quot;</p><p>对于那些想知道 Starling 外观的人：</p><p>想要了解更多关于 Starling 的信息，可以访问项目网站。采用 Apache 2.0 许可证的代码可在 GitHub 上获取。预构建的 Ubuntu 26.04 LTS Debian 包可供那些想尝试这款最新的 AI 编写桌面和合成器的人使用。</p><p>COSMIC Epoch 1.4 发布，带来更多修复及 COSMIC Monitor 的强制退出功能</p><p>Vocalinux 0.14 Beta 发布，用于 Linux 上的离线语音听写/语音转文字</p><p>COSMIC Epoch 1.3 发布，新增磨砂玻璃选项</p><p>Pop!_OS 为 COSMIC 推出“磨砂玻璃”桌面风格</p><p>COSMIC Epoch 1.2 桌面修复了 Intel 显卡的闪烁问题</p><p>Vim 补丁带来更快的 GTK3 Wayland 性能：“重大里程碑”</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。</p><p>Firefox 153 发布，支持 Vulkan 视频解码和实验性 JPEG-XL</p><p>“KVM Chainsaw”预计将随 Linux 7.3 发布，用于处理 God 数据结构</p><p>Fedora 45 Atomic Desktops 计划支持基于 Web 的远程安装</p><p>Lemonade 11.5 本地 AI 服务器发布，完成 Lemonade Router</p><p>GNOME 因 AI 生成的报告更改安全披露政策</p><p>Kiwi Menu 继续为 GNOME 带来 macOS 风格</p><p>Linux 补丁引入“KNOD”，用于直接向 AMD GPU 进行内核内网络卸载</p><p>Ubuntu Linux 计划移除 /etc/debian_version 这一历史遗留文件</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Starling-Swift-Desktop" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

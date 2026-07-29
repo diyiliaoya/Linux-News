@@ -4574,5 +4574,170 @@
     "title_zh": "Amarok 3.3.3 音乐播放器发布，带来播放与布局修复",
     "summary_zh": "Amarok 3.3.3 版本发布，主要针对播放功能和界面布局进行了关键修复，旨在提升用户的音乐聆听体验。该更新解决了播放过程中的问题，并优化了界面布局，使操作更加流畅。",
     "fulltext_zh": "了解 Amarok 3.3.3 的最新更新，该版本带来了重要的播放改进和布局修复，以增强音乐聆听体验。\n\n本文《Amarok 3.3.3 Music Player Released with Playback and Layout Fixes》首发于 Linux Today。"
+  },
+  "c04f13263e911586d8001b2a10b26054": {
+    "id": "c04f13263e911586d8001b2a10b26054",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/07/ubuntu-26-04-virtualization-hwe-stack",
+    "title_en": "Ubuntu 26.04 virtualization HWE stack offers newer QEMU & libvirt",
+    "summary_en": "Ubuntu&#8217;s hardware enablement (HWE) effort has expanded to include backports of newer virtualisation tech to users of the current LTS release. The virtualization HWE stack from Canonical will let users benefit from newer versions of QEMU, libvirt and related firmware on top of their exiting LTS install, refreshed every 6 months for 2 years, without the need to seek out via third-party repos. Or, to quote Canonical&#8217;s Ijlal Loutfi, it gives companies &#8220;the operational confidence of",
+    "pub_date": "Tue, 28 Jul 2026 17:53:00 +0000",
+    "title_zh": "Ubuntu 26.04 虚拟化 HWE 堆栈提供更新的 QEMU 和 libvirt",
+    "summary_zh": "Canonical 为 Ubuntu 26.04 LTS 推出了虚拟化硬件启用（HWE）堆栈，通过每6个月更新一次的方式，向后移植新版 QEMU、libvirt 及相关固件，让用户在不依赖第三方仓库的情况下获得更新的虚拟化功能。该堆栈特别适用于机密计算工作负载，支持 AMD SEV-SNP 和 Intel TDX 技术。用户可通过安装 ubuntu-helper-virt-hwe 工具包并运行相应命令来启用和切换 HWE 版本。",
+    "fulltext_zh": "Ubuntu 26.04 虚拟化 HWE 堆栈提供更新的 QEMU 和 libvirt\nUbuntu 的硬件启用（HWE）工作已扩展至包括将更新的虚拟化技术向后移植到当前 LTS 版本的用户。\n来自 Canonical 的虚拟化 HWE 堆栈将让用户在其现有 LTS 安装基础上受益于更新版本的 QEMU、libvirt 及相关固件，每6个月刷新一次，持续2年，无需通过第三方仓库寻找。\n或者，引用 Canonical 的话：“LTS 版本的操作信心，加上在需要时获得更新虚拟化能力的路径”。\n如果你不熟悉 HWE，它就是将当前 Ubuntu 版本中更新的 Linux 内核、GPU 驱动程序和其他一些基础组件带到较旧 LTS 版本，使其能够在较新硬件上工作并启动。\nHWE 更新每6个月推出一次，向后移植来自中间版本的“经过实战检验”的软件包。例如，即将发布的 Ubuntu 26.10 版本中的内核和 GPU 驱动程序集将包含在 2027 年初的 Ubuntu 26.04.2 HWE 更新中。\nUbuntu 虚拟化 HWE 包含什么？\n软件包（如果你想知道）包括 qemu-system-data（它捆绑了 OVMF 固件）和 libvirt-clients。这些在 Ubuntu 26.04 LTS 上均未预装，因此只有那些主动寻找的人才能受益。\n而肯定想要寻找的人正是那些运行机密计算工作负载的用户。\nUbuntu 26.04 已经支持 AMD SEV-SNP 和 Intel TDX——这些技术用于加密虚拟机的内存，使其在运行时连宿主机也无法窥探内部——但正如 Canonical 所指出的，“机密计算功能很少同时出现在所有相关组件上”。\n如果堆栈的其余部分尚未跟上，仅靠内核支持作用不大。等待两年直到下一个 LTS 版本推出并不总是可行，切换到中间版本也会带来其他方面的变动，影响生产工作负载。\n如果这些新闻对你毫无意义，或者你使用的是 Virtualbox 或 VMware Workstation 而非 KVM/QEMU，那么不必担心；这不会影响你。\n但如果你觉得“有点意思”，以下是在 Ubuntu 26.04 LTS 上设置它的方法。\n在 Ubuntu 26.04 上启用虚拟化 HWE 堆栈\nCanonical 提供了一个辅助工具包，用于在 Ubuntu 26.04 LTS 中启用新的虚拟化 HWE。这有助于确保 HWE 和非 HWE 软件包之间没有不匹配。\n该辅助工具可以从 Ubuntu 26.04 'resolute' 仓库安装：\nsudo apt install ubuntu-helper-virt-hwe\n安装完成后，单独运行 ubuntu_virt_helper 它会告诉你当前使用的是哪个版本——例如“virt: stock”（如果你只是为了好玩而尝试，你会看到后者）。\n要在 HWE 和非 HWE 版本之间切换：\nsudo ubuntu_virt_helper switch\n确保你也安装了内核 HWE 堆栈：\nsudo apt install linux-generic-hwe-26.04\n需要重启后新软件包才会生效，但仅此而已。\nUbuntu LTS 版本构成了该发行版在桌面、云和企业领域的大部分安装基础。对于运行机密虚拟机的那一小部分用户，这个新堆栈在可靠的基座上，以可靠的节奏提供了对更新版本的可预测访问。"
+  },
+  "66f555104f187925a343f63c1daa7744": {
+    "id": "66f555104f187925a343f63c1daa7744",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/07/omgubuntu-firefox-addon-notifier",
+    "title_en": "We finally revived our Firefox add-on (10 years late)",
+    "summary_en": "The official OMG! Ubuntu add-on for Firefox is back – albeit far later than planned (sorry about that). If you’ve used our Chrome extension over the last decade, this add-on will be familiar as it&#8217;s the same thing, just in Firefox. Same look and (almost) the same features because it&#8217;s the same code (albeit with API name swaps and manifest tweaks). This isn&#8217;t the first time this blog has offered a Firefox add-on. Our old one broke in 2017 and though we intended to fix it, a deca",
+    "pub_date": "Tue, 28 Jul 2026 10:28:57 +0000",
+    "title_zh": "我们终于复活了Firefox扩展（晚了10年）",
+    "summary_zh": "OMG! Ubuntu 官方 Firefox 扩展在中断十年后重新上线。该扩展提供工具栏图标，点击可显示最新12条头条（含缩略图），支持未读计数、跨设备同步、桌面通知等功能。与Chrome版本功能几乎一致，但缺少通知按钮支持。扩展不持续后台运行，而是定期唤醒检查更新。",
+    "fulltext_zh": "我们终于复活了Firefox扩展（晚了10年） - OMG! Ubuntu\n\n官方 OMG! Ubuntu Firefox 扩展回来了——尽管比计划晚了很多（对此表示抱歉）。\n\n过去十年里，这个扩展会让人感到熟悉，因为它和以前一样，只是现在在Firefox上。外观相同，（几乎）功能也相同，因为它是同一个东西（尽管API名称有所更换，manifest也有调整）。\n\n这并非本博客首次提供Firefox扩展。我们的旧版扩展在2017年失效了，虽然我们本想修复它，但十年就这么一晃而过。\n\n与Chrome版本一样，它提供了一种快速、低开销的方式来浏览最新头条，仿佛你正身处Web 2.0的巅峰时代（还有人记得Firefox的实时书签吗？）。\n\nOMG! Ubuntu Firefox通知器\n\n我们的扩展能做什么？嗯，它不会帮你洗袜子。\n\n它会在工具栏添加一个图标，点击后弹出一个可滚动的列表，显示来自本站的最新12条头条（含缩略图）。工具栏图标上有一个徽章计数，显示有多少未读文章（最多12篇）。刷新按钮可检查新文章。\n\n你无需保持标签页打开（这个功能让我很暖心），也无需访问首页（当然，经常访问首页的朋友们，我依然爱你们），因为新闻会主动来找你。\n\n如果你登录了Mozilla账户，未读计数会在所有安装了该扩展并登录同一Mozilla账户的设备上同步（我们的Chrome版本也实现了这一点，不过使用的是原生同步功能）。\n\n未读文章旁边有一个橙色书签标记。点击书签可将该文章标记为已读，而无需打开阅读。或者，你也可以让它保持未读状态，作为提醒稍后回来查看。底部有一个“全部标记为已读”按钮，以防——天哪——没有哪篇文章吸引你。\n\n点击列表中的任意文章，即可在浏览器的新标签页中直接阅读。是的，是新标签页；这不是浏览器中的浏览器，所以弹出窗口中没有移动端视口。点击文章阅读时，它会自动标记为已读。\n\n我们的扩展不会持续在后台运行。相反，它会定期唤醒检查新文章，然后继续休眠。如果发现新文章，它会发送桌面通知提醒你。点击通知即可在新标签页中阅读文章。\n\nChrome版本的通知带有操作按钮，但Firefox不支持这些按钮。\n\n除了访问我们内置的RSS源之外，不需要任何实际权限。与Chrome版本相比，唯一的功能差异是缺少通知按钮（因为Firefox不支持它们）。\n\n目前，你无法在Firefox扩展中禁用通知。我们很快会重新添加这个选项（Chrome已将通知控制移至浏览器本身，因此我们移除了设置页面以保持简洁）。\n\n这只是关注OMG! Ubuntu的另一种方式。\n\n对于这个本质上很简单的工具，我写了太多废话了——我并不指望你会使用它：有很多方法可以随时了解我们的报道：Chrome扩展、macOS上的RSS阅读器、RSS源、社交媒体账号等等。\n\n但如果你确实想试试，欢迎将反馈发送至joey [at] ohso [dot] io，或者在此处的评论区留言。\n\n在Firefox浏览器扩展商店中。\n\n坦白说，我们重写了Chrome扩展，但没有重写Firefox版本。它之前一直能用，直到突然失效，然后因为只有大约一百人在使用，它的优先级就降低了。我们的Chrome扩展有几千名用户。\n\n更新和强制刷新也会更新现有头条中的任何更改，例如，关于某个bug的文章中的“[现已修复]”，以及文章缩略图的任何更改（诚然，后者不太重要）。"
+  },
+  "0e42f727420e3db310815c195bf3ddfd": {
+    "id": "0e42f727420e3db310815c195bf3ddfd",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/grapheneos-duress-password-indictment/",
+    "title_en": "A GrapheneOS Privacy Feature Just Became the Basis for a Federal Indictment",
+    "summary_en": "Samuel Tunick faces up to five years in prison after the passcode he gave CBP agents wiped his phone.",
+    "pub_date": "Tue, 28 Jul 2026 12:56:46 GMT",
+    "title_zh": "GrapheneOS 隐私功能成为联邦起诉依据",
+    "summary_zh": "亚特兰大居民 Samuel Tunick 因在边境检查时提供的密码导致手机数据被擦除，面临联邦指控。他使用了 GrapheneOS 的胁迫密码功能，该功能在特定密码输入后自动清除设备。政府认为此举构成销毁证据，但 Tunick 律师辩称其与环保组织的关联才是真正原因。案件仍在审理中，最终判决尚未确定。",
+    "fulltext_zh": "GrapheneOS 隐私功能成为联邦起诉依据\n\nSamuel Tunick 因向 CBP 探员提供的密码导致手机被擦除，面临最高五年监禁。\n\n亚特兰大居民 Samuel Tunick 正在抗辩一项联邦起诉，该起诉将手机上的隐私功能视为销毁证据。大陪审团依据一项涵盖为阻止政府人员扣押而销毁财产的法规对其提出指控。\n\n这一切的根源是在边境检查期间，一部 Google Pixel 智能手机的内容被删除，案件本身在佐治亚州北区法院审理，主审法官为 Eleanor L. Ross。\n\n如果 Tunick 被判有罪，该指控将处以罚款、最高五年监禁，或两者并罚。\n\n去年 1 月 24 日，Tunick 从多米尼加共和国旅行归来，在哈茨菲尔德-杰克逊亚特兰大国际机场被海关与边境保护局官员带入二次检查，经历了多轮审讯和搜查。\n\n官员们首先对他进行搜身，检查随身物品，并要求他交出手机密码。据报道，这一切都是在搜查违禁品的借口下进行的。\n\n他多次要求见律师，但官员们无视所有请求，从未宣读他的米兰达权利，并继续审问他。当他反抗时，他们表示在边境是“完全不同的游戏”，不需要搜查令。\n\nTunick 最终交出了一个密码。\n\n但密码输入后，屏幕闪烁了几次空白，随后设备自行重启，在要求访问的探员面前擦除了所有内容。\n\nTunick 律师提交的动议强调，他与“保卫亚特兰大森林”组织（一个被标记为 AGAAVE 的组织）的关联才是联邦探员针对他的真正原因，而非任何犯罪行为。\n\n此前，一名国土安全部探员在 Tunick 航班降落前数小时就传阅了他的姓名和照片，将其标记为涉嫌恐怖活动，而 FBI 和 CBP 官员则协调安排了这次搜查。\n\n尽管如此，政府从未出示证据将 Tunick 与该运动相关的实际犯罪联系起来。\n\nTunick 的手机上似乎设置了 GrapheneOS 的胁迫密码功能。当官员输入他提供的密码时，该功能按设计运行——在输入胁迫密码的瞬间擦除了设备。\n\n如果你不知道，这个功能不仅会在锁屏界面触发，还会在任何身份验证提示下触发，并且覆盖手机上的所有用户配置文件，而不仅仅是主配置文件。\n\nGrapheneOS 团队发布了一份声明，看起来是对此案的回应（尽管他们未点名），建议人们仔细思考如何使用胁迫密码功能，并指出在真实胁迫情况下擦除设备本身可能带来身体或法律后果。\n\n不！目前尚无定论。本月早些时候举行了关于 Tunick 撤销动议的听证会，但法官在做出裁决前保留了进一步证词的空间。\n\n书面辩论将持续到秋季，Tunick 一方需在 9 月 18 日前提交，政府一方在 10 月 9 日前提交，Tunick 的回复在 10 月 23 日前提交。在此之前，需知该指控附带的五年监禁只是法律允许的最高刑罚，并非他实际面临的判决。\n\n就我而言，听到一个国家的公民仅仅为了回家而遭受如此对待，最终却在几个月后招致联邦起诉，感觉像是来自香蕉共和国才会发生的事。\n\n但这就是“世界上最伟大的国家”的现状。\n\n这不禁让人思考，普通人的权利是多么一文不值，而那些令人发指的罪犯却逍遥法外。🙃\n\n喜欢这篇更新吗？支持独立的 Linux 新闻报道。\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。请帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。\n\n一次性付费，永久享受\n\n任意金额，无需承诺\n\n一个带着密码的极客"
+  },
+  "5457188d437679b86bd6094dd5a67d83": {
+    "id": "5457188d437679b86bd6094dd5a67d83",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/british-flavored-linux-foundation-proposal/",
+    "title_en": "OpenUK Wants Britain to Stop Giving Away Open Source Creations",
+    "summary_en": "They point to MCP, built by two engineers in London, that ended up under US-based governance.",
+    "pub_date": "Tue, 28 Jul 2026 05:34:45 GMT",
+    "title_zh": "OpenUK 希望英国停止免费赠予开源成果",
+    "summary_zh": "OpenUK 发布报告，呼吁英国政府建立自己的开源基金会，以持有代码、治理权和标准，防止英国公共资金资助的开源项目流失到美国等其他国家。报告以 MCP（模型上下文协议）为例，该协议由伦敦工程师创建，最终却归入美国基金会治理。OpenUK 认为这是资金和治理缺口，而非技术问题，并指出德国、中国已有成功先例。",
+    "fulltext_zh": "OpenUK 希望英国停止免费赠予开源成果\nOpenUK 希望英国停止免费赠予开源成果\n他们指出 MCP（模型上下文协议）——由伦敦两名工程师构建——最终却归入美国主导的治理之下。\nOpenUK 近期发布了其报告，在这份 40 页的文件中，隐藏着一个对英国政府的重大请求：建立属于英国自己的基金会，以持有代码、治理权和标准，方式如同 Linux 基金会。\n如果你第一次听到这个名字，OpenUK 是一个倡导开放技术的非营利组织，由……领导。他们最初是在提交给……的《让英国成为开源之家》中发出这一呼吁的。\n《AI 开放度》报告此次以更紧迫的口吻重申了这一主张。\nOpenUK 将提议的英国版 Linux 基金会描述为一个“……”，一旦成立，该机构将持有用英国公共资金构建的代码库、标准和数据集，而不是看着这些成果迁移到位于其他国家的服务器和治理委员会。\n它还将负责培训、社区参与和活动组织。这些领域原本需要单独的基础设施，比如开源项目办公室。\nOpenUK 将此视为资金和治理缺口，而非技术问题。\n他们指出，英国在开源软件和 AI 开放度方面位列欧洲第一，却没有与 Linux 基金会、德国的“主权技术机构”相当的组织。\n英国正在流失开源成果。\n这家非营利组织无需费力就能证明其观点，因为 MCP 是其最强有力的例证。\n模型上下文协议（MCP）——如今已成为 AI 模型连接外部工具和数据背后的标准——由伦敦的两名工程师创建。\nAnthropic 支持了该协议，并最终将其捐赠给了 Linux 基金会的“智能体 AI 基金会”，一同捐赠的还有 Block 的 Goose 和 OpenAI 的……\n在与 OpenUK 的对话中，MCP 的联合创始人之一表示，他们之所以免费赠予 MCP，是因为需要该标准保持供应商中立，避免商标和许可风险。\n如果英国有一个成熟的基金会，那么他们就不会把 MCP 拱手让给美国。\n欧盟委员会已经展示了一项倡议，旨在通过迈向开放的欧洲数字生态系统，摆脱美国的技术主导。该倡议将涵盖云计算、人工智能、网络安全、开放硬件、互联网技术以及汽车和制造等工业应用领域。\n德国更接近 OpenUK 为英国所设想的目标。其……已转变为一个政府机构，报告称其为“……”。\n中国已经证明了这种模式行之有效。开源在其……下成为国家支柱，并由一个名为……的专门基金会提供支持。\nDeepSeek 的 R1 展示了这种专注如何带来回报，它利用开放权重和知识蒸馏，以极低的成本提供了前沿水平的 AI。\nOpenUK 希望吸引英国各公共部门组织的兴趣，同时旨在与全球专家合作，最终为国家提供最佳方案。\n喜欢这篇更新？支持独立的 Linux 新闻报道\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。请帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。\n一次付费，永久享受\n任意金额，无需承诺\n一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的极客。\nGrapheneOS 的一项隐私功能刚刚成为联邦起诉的依据\nFireDragon 浏览器展翅高飞\nUbuntu 26.10 “Stonking Stingray”：迄今为止所有新功能\nUbuntu 26.04 停止通知用户更新，但这是有意为之\nCodeberg 在社区支持下对 AI 的使用划定了明确界限\n成为更好的 Linux 用户\n通过 FOSS 每周新闻通讯，您将学到有用的 Linux 技巧、发现应用程序、探索新发行版，并随时了解 Linux 世界的最新动态。\n太好了！您已成功注册。\n欢迎回来！您已成功登录。\n您已成功订阅"
+  },
+  "22524d44ce92a0d475aa1fca7bca7d46": {
+    "id": "22524d44ce92a0d475aa1fca7bca7d46",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12904",
+    "title_en": "Distribution Release: ZimaOS 1.7.0",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  IceWhale Technology has released ZimaOS 1.7.0, the latest stable version of the company's independently-developed, Linux-based operating system for personal servers and network-attached storage (NAS) computers. The new version includes a redesigned App Store and various other improvements: \"ZimaOS 1.7.0. Added: redesigned App Store with a new UI for....",
+    "pub_date": "",
+    "title_zh": "ZimaOS 1.7.0 发布",
+    "summary_zh": "IceWhale Technology 发布了 ZimaOS 1.7.0，这是其基于 Linux 的个人服务器与 NAS 操作系统的最新稳定版。新版本重新设计了应用商店，新增了应用管理页面、应用发现页面、原生 YAML 支持，并修复了备份页面文件计数重叠、大文件备份卡顿等问题，同时改进了应用列表、容器日志、容器终端、商业许可证检测、页面缓存清理策略及 OneDrive 连接体验。",
+    "fulltext_zh": "IceWhale Technology 已发布 1.7.0 版本，这是该公司独立开发的、基于 Linux 的个人服务器与网络附加存储（NAS）操作系统的最新稳定版。新版本包含重新设计的应用商店及其他多项改进：\n\nZimaOS 1.7.0。新增：重新设计的应用商店，采用全新用户界面，提供更现代、更清晰的应用浏览体验；新增应用管理页面，可集中管理已安装应用、更新状态及常用操作；新增应用发现页面，改进了应用推荐、分类浏览和内容展示；新增原生 YAML 支持，提供更好的配置编辑与解析体验。修复：修复了备份页面上文件计数重叠的问题；修复了大文件备份时的卡顿问题。改进：改进了应用列表、分类页面和应用详情页面的显示体验；改进了容器日志显示，提升可读性和故障排查效率；改进了容器终端操作，提供更清晰的执行状态和交互反馈；改进了商业许可证检测逻辑，提升兼容性和准确性；改进了页面缓存清理策略，带来更流畅的浏览体验；改进了 OneDrive 连接体验，支持工作或学校账户登录。\n\n更多详情请访问项目 GitHub 页面。\n\nzimaos-x86_64-1.7.0_installer.iso\nzimaos-x86_64-1.7.0_installer.img\n\n近期相关新闻与发布：\nDistribution Release: ZimaOS 1.7.0\nDistribution Release: ZimaOS 1.6.0\nDistribution Release: ZimaOS 1.5.0\n\nZimaOS 是一款独立开发的、基于 Linux 的个人服务器与网络附加存储（NAS）设备操作系统。它具备系统级远程访问、RAID 配置、无线（OTA）更新支持，并提供基于浏览器的用户界面用于管理服务器。该系统由中国的 IceWhale Technology Limited 开发。"
+  },
+  "29c46da20f4fd4ece6cca626b50e3711": {
+    "id": "29c46da20f4fd4ece6cca626b50e3711",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/ARCTIC-Fan-Controller-Launches",
+    "title_en": "ARCTIC Launches Its New Fan Controller That Already Has Mainline Linux Support",
+    "summary_en": "In over 22 years of Linux hardware reviews and testing at Phoronix, I have never been more excited for a fan controller... ARCTIC today launched their new Fan Controller and in making the product very unique for Linux users, it already has mainline Linux kernel support via a open-source driver contributed directly by ARCTIC...",
+    "pub_date": "Tue, 28 Jul 2026 20:38:00 -0400",
+    "title_zh": "ARCTIC 发布新款风扇控制器，已获主线 Linux 支持",
+    "summary_zh": "ARCTIC 发布了一款新型风扇控制器，支持多达10个风扇通道，并已通过开源驱动获得主线 Linux 内核支持。该驱动由 ARCTIC 直接贡献，在 Linux 7.2 内核中主线化，将于8月下旬稳定发布。此举在桌面风扇控制领域极为罕见，因为通常厂商不提供 Linux 支持。该产品售价仅9美元，同时支持 Windows 和 macOS。",
+    "fulltext_zh": "ARCTIC 发布新款风扇控制器，已获主线 Linux 支持 - Phoronix\n\nARCTIC 发布新款风扇控制器，已获主线 Linux 支持\n发布于 2026年7月28日 美国东部时间晚上8点38分。\n\n在 Phoronix 从事 Linux 硬件评测超过22年的时间里，我从未对一款风扇控制器如此兴奋过……ARCTIC 今天发布了他们的新款风扇控制器，而这款产品对 Linux 用户来说非常独特——它已经通过 ARCTIC 直接贡献的开源驱动获得了主线 Linux 内核支持。\n\nARCTIC Cooling 发布了一款 Linux 风扇控制器驱动，支持多达10个风扇通道，并能很好地集成到 Linux HWMON 接口中，用于风扇控制和监控。一开始有些令人困惑，因为现有的 ARCTIC 风扇控制产品没有任何用于与系统通信的 USB 接口，因此不清楚它关联的是什么。\n\n他们继续完善其风扇控制器驱动，后来才明确这是针对一款新的/未发布的产品。该驱动已在 Linux 7.2 内核中主线化，该内核将于8月下旬作为稳定版发布。\n\n这款产品之所以如此独特，是因为长期使用 Linux 的用户都知道，风扇控制器厂商通常不提供任何 Linux 支持，尤其是产品发布前。通常，Linux 的桌面风扇控制驱动大多由热情的 Linux/开源用户通过逆向工程自行创建。而这次，ARCTIC 不仅向主线内核贡献了开源驱动，而且是在产品发布之前就完成了。向他们致敬，因为我不记得在桌面风扇控制领域有过类似的情况。事实上，在2026年这居然还值得兴奋，这本身就挺可悲的——更多桌面 PC 散热厂商并没有更直接地为 Linux 内核做出贡献。\n\n他们在 X 平台上宣布，新款“ARCTIC 风扇控制器”已发布。他们在公告中指出，这款10通道风扇控制器甚至“开源且已为 Linux 做好准备”。\n\n除此之外，他们还提到了 Linux 支持。同时也有 Windows 和 macOS 支持。\n\n这款新型风扇控制器的价格也出奇地便宜。最初的 Amazon.com 产品页面（联盟链接）显示，这款对 Linux 友好的风扇控制器仅售9美元。ARCTIC 将很快寄送评测样品，以便在未来的 Phoronix 文章中确认 Linux 驱动支持并进行测试。\n\n华硕笔记本 Whisper 模式支持正在为 Linux 开发中\n神秘的16瓦片和32瓦片 AMX 实现被提及以提升性能\n高通发布适用于搭载 X2 Elite Extreme 的华硕 Zenbook A16 的 Linux 补丁\nInputPlumber 0.78 发布，扩展了硬件支持\nLinux 的高通加密加速器驱动“有害”且将被禁用：比 CPU 慢，且存在大量 Bug\n更多华硕主板将在 Linux 7.3 中获得正常的传感器监控支持\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于2004年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过20,000篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nFirefox 153 发布，支持 Vulkan 视频解码和实验性 JPEG-XL\n“KVM Chainsaw”预计将在 Linux 7.3 中用于处理 God 数据结构\nFedora 45 Atomic Desktops 计划允许基于 Web 的远程安装\nLemonade 11.5 本地 AI 服务器发布，完成 Lemonade Router\nGNOME 因 AI 生成的报告更改安全披露政策\nKiwi Menu 继续为 GNOME 带来 macOS 风格\nLinux 补丁引入“KNOD”用于将网络卸载直接到 AMD GPU\nUbuntu Linux 计划移除 /etc/debian_version 这一历史遗留文件\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产"
+  },
+  "e03e6b08d76f385ee9e9070efc99bbba": {
+    "id": "e03e6b08d76f385ee9e9070efc99bbba",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Starling-Swift-Desktop",
+    "title_en": "Starling: A New Linux Desktop Written In Swift, Own Wayland Compositor & Written With AI",
+    "summary_en": "There's yet another new open-source desktop option for Linux users in the era of new open-source projects largely written via AI/LLMs. Starling is this new project largely written via Claude and using the Swift programming language for the desktop while having its own Wayland compositor implemented in C. It also includes a built-in X11 server for handling X11 clients...",
+    "pub_date": "Tue, 28 Jul 2026 11:50:00 -0400",
+    "title_zh": "Starling：一款用 Swift 编写、自带 Wayland 合成器并由 AI 辅助开发的全新 Linux 桌面",
+    "summary_zh": "Starling 是一款全新的开源 Linux 桌面环境，主要使用 Swift 编程语言，并借助 AI（Claude）在半年内开发完成。它拥有用 C 语言实现的 Wayland 合成器，内置 X11 服务器以兼容 X11 客户端，基于 Flutter 引擎的 C 核心运行，支持 Chrome、VS Code 等原生应用。目前作为早期预览版（v0.2）发布，仅支持 Ubuntu 26.04，提供约 53 MB 的 .deb 包。",
+    "fulltext_zh": "Starling：一款用 Swift 编写、自带 Wayland 合成器并由 AI 辅助开发的全新 Linux 桌面 - Phoronix\n\nStarling：一款用 Swift 编写、自带 Wayland 合成器并由 AI 辅助开发的全新 Linux 桌面\n发布于 2026 年 7 月 28 日 上午 11:50（美国东部时间）\n\n在大量通过 AI/LLM 编写的新开源项目涌现的时代，Linux 用户又多了一个全新的开源桌面选择。Starling 就是这样一个新项目，它主要通过 Claude 编写，使用 Swift 编程语言构建桌面，同时拥有用 C 语言实现的 Wayland 合成器。它还内置了一个 X11 服务器，用于处理 X11 客户端。\n\n对于那些喜欢尝试评估新 Linux 桌面选项的人来说，Starling 刚刚被宣布为一个新的桌面选择，它是在过去半年中主要通过 AI（Claude）编写的。在给 Phoronix 的一封邮件中，这个项目的唯一开发者（与 Claude 合作）解释了其技术栈：\n\n\"- 自有的 Wayland 合成器，用 C 语言编写，实现了 xdg-shell、linux-dmabuf（零拷贝导入）、viewporter、fractional-scale-v1、pointer-constraints、relative-pointer、text-input-v3、presentation-time、primary-selection、idle-inhibit、cursor-shape-v1、xdg-decoration、xdg-activation、xdg-output 和 wlr-data-control。\n- 内置 X11 服务器（DRI3/Present），因此 X11 客户端也能运行。\n- 运行在 Flutter 引擎的 C 核心之上，通过 DRM/KMS 嵌入器实现。Shell、窗口管理器、合成器和应用都是 Swift 编写的——UI 框架是 Flutter 框架到 Swift 的完整移植，没有使用 Dart 虚拟机。\n- 无特权会话：DRM 主控和输入来自 logind（通过 libseat），而非以 root 身份运行。像任何 Wayland 会话一样通过 GDM 启动。\n- 作为原生客户端运行真实应用——Chrome、VS Code、Slack、IntelliJ、GIMP 和 Blender（通过 linux-dmabuf 使用 EEVEE 视口）——涵盖 Chromium/Electron、Qt6、GTK3/4、JetBrains 运行时和 Blender 的 GHOST。\n- 以约 53 MB 的 .deb 包形式发布，适用于 Ubuntu 26.04。已在 AMD（Radeon 780M）和虚拟机中的 virtio-gpu/virgl 上验证。\n这是一个诚实的早期预览版（v0.2）：已测试 AMD 和 virtio-gpu，尚未测试 Intel/NVIDIA；缩放当前固定为 2.0；仅支持 Ubuntu 26.04。\"\n\n对于那些想知道 Starling 外观的人：\n\n想要了解更多关于 Starling 的信息，可以访问项目网站。采用 Apache 2.0 许可证的代码可在 GitHub 上获取。预构建的 Ubuntu 26.04 LTS Debian 包可供那些想尝试这款最新的 AI 编写桌面和合成器的人使用。\n\nCOSMIC Epoch 1.4 发布，带来更多修复及 COSMIC Monitor 的强制退出功能\nVocalinux 0.14 Beta 发布，用于 Linux 上的离线语音听写/语音转文字\nCOSMIC Epoch 1.3 发布，新增磨砂玻璃选项\nPop!_OS 为 COSMIC 推出“磨砂玻璃”桌面风格\nCOSMIC Epoch 1.2 桌面修复了 Intel 显卡的闪烁问题\nVim 补丁带来更快的 GTK3 Wayland 性能：“重大里程碑”\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。\n\nFirefox 153 发布，支持 Vulkan 视频解码和实验性 JPEG-XL\n“KVM Chainsaw”预计将随 Linux 7.3 发布，用于处理 God 数据结构\nFedora 45 Atomic Desktops 计划支持基于 Web 的远程安装\nLemonade 11.5 本地 AI 服务器发布，完成 Lemonade Router\nGNOME 因 AI 生成的报告更改安全披露政策\nKiwi Menu 继续为 GNOME 带来 macOS 风格\nLinux 补丁引入“KNOD”，用于直接向 AMD GPU 进行内核内网络卸载\nUbuntu Linux 计划移除 /etc/debian_version 这一历史遗留文件\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产"
+  },
+  "1c424c392906293bddf84e7a2dbef7dc": {
+    "id": "1c424c392906293bddf84e7a2dbef7dc",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/amd-hx470-windows-linux",
+    "title_en": "CachyOS Outperforming Windows 11, Slight Advantage Over Ubuntu & Fedora On AMD Ryzen AI 9 HX 470",
+    "summary_en": "A recent mini PC being benchmarked at Phoronix is the BOSGAME VTA-439 that employs the new AMD Ryzen AI 9 HX 470 Gorgon Point SoC. With the BOSGAME mini PC having shipped with Microsoft Windows 11, here are some comparison benchmarks of the out-of-the-box Windows 11 performance up against Ubuntu 26.04 LTS and Fedora Workstation 44 while also tossing the rolling-release, highly-optimized Arch Linux based CachyOS into the benchmarking mix.",
+    "pub_date": "Tue, 28 Jul 2026 10:04:04 -0400",
+    "title_zh": "CachyOS 性能超越 Windows 11，在 AMD Ryzen AI 9 HX 470 上略优于 Ubuntu 与 Fedora",
+    "summary_zh": "Phoronix 对搭载 AMD Ryzen AI 9 HX 470 处理器的 BOSGAME VTA-439 迷你 PC 进行了多系统性能对比测试。结果显示，基于 Arch Linux 的高度优化滚动发行版 CachyOS 在出厂配置下全面超越 Windows 11，并小幅领先 Ubuntu 26.04 LTS 和 Fedora Workstation 44，展现出在该平台上的性能优势。",
+    "fulltext_zh": "CachyOS 性能超越 Windows 11，在 AMD Ryzen AI 9 HX 470 上略优于 Ubuntu 与 Fedora - Phoronix\n\nCachyOS 性能超越 Windows 11，在 AMD Ryzen AI 9 HX 470 上略优于 Ubuntu 与 Fedora\n\n2026年7月28日，美国东部时间上午10:04。\n\nPhoronix 近期测试的一款迷你 PC 采用了全新的 AMD Ryzen AI 9 HX 470 Gorgon Point SoC。由于 BOSGAME 迷你 PC 出厂预装 Microsoft Windows 11，本文提供了开箱即用的 Windows 11 性能与 Ubuntu 26.04 LTS 及 Fedora Workstation 44 的对比基准测试，同时还将基于 Arch Linux 的滚动发行版、高度优化的 CachyOS 纳入测试范围。\n\nBOSGAME VTA-439 是一款有趣的迷你 PC，搭载 12 核 / 24 线程的 AMD Ryzen AI 9 HX 470 处理器及其 Radeon 890M 集成 RDNA 3.5 显卡。评测样机配备双 16GB DDR5-5600 内存（总计 32GB）和 1TB NVMe 固态硬盘。\n\n这台 BOSGAME 迷你 PC 出厂预装 Microsoft Windows 11 Pro，测试时已安装截至 7 月 8 日的所有可用 Microsoft Windows 更新。随后，在测试过程中，于 7 月中旬分别对 Ubuntu 26.04 LTS、Fedora Workstation 44 和 CachyOS 进行了全新安装。\n\n每个操作系统均以其出厂默认配置运行，以观察这些不同操作系统在 AMD Ryzen AI 9 HX 470 Gorgon Point 平台上的性能表现。\n\nRyzen AI 开发者平台：AMD 基于 Debian 构建的自家 Linux 发行版\n\n更新后的 Raspberry Pi OS 搭载 Linux 6.18 LTS，带来一定性能提升\n\n对 Ubuntu 26.10 amd64v3 软件包进行性能基准测试\n\n对 CachyOS Linux 的 BORE 调度器进行性能基准测试\n\n对 CachyOS Linux 不同内核版本进行性能基准测试\n\nCachyOS 在 System76 Thelio Major 上领先于 Arch Linux、Pop!_OS 和 Ubuntu\n\n在享受无广告浏览的同时，\n\n单页文章浏览\n\n法律免责声明、隐私政策、Cookie\n\n版权所有 © 2004 - 2026\n\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "b9094da692d03b2d56c782115c7aeb8a": {
+    "id": "b9094da692d03b2d56c782115c7aeb8a",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-P-State-Better-1p-Lows",
+    "title_en": "AMD P-State Linux Driver Patches Can Boost 1%-Low FPS Gaming Performance By 31%",
+    "summary_en": "A set of patches posted today to the Linux kernel mailing list implement per-core Energy Performance Preference (EPP) boosting for recently-busy CPUs. This feature is designed to have a dramatic impact for Linux gaming and helping especially with the 1% low frame-rates improving by 31.8% on the Valve Steam Deck...",
+    "pub_date": "Tue, 28 Jul 2026 06:03:00 -0400",
+    "title_zh": "AMD P-State Linux 驱动补丁可将 1% 低帧游戏性能提升 31%",
+    "summary_zh": "AMD P-State Linux 驱动的一组新补丁实现了每核心能量性能偏好（EPP）提升功能，针对近期繁忙的CPU核心动态调整性能。在Valve Steam Deck上测试《文明VI》时，1%低帧率提升了31.8%，p99帧时间改善了4.1%。该功能通过内核参数amd_pstate.epp_boost=1启用，有望显著提升Linux游戏体验。",
+    "fulltext_zh": "AMD P-State Linux 驱动补丁可将 1% 低帧游戏性能提升 31% - Phoronix\nAMD P-State Linux 驱动补丁可将 1% 低帧游戏性能提升 31%\n发布于 2026年7月28日 美国东部时间上午6:03。\n\n今天发布到Linux内核邮件列表的一组补丁实现了针对近期繁忙CPU的每核心能量性能偏好（EPP）提升功能。该功能旨在对Linux游戏产生显著影响，尤其有助于将Valve Steam Deck上的1%低帧率提升31.8%。\n\nDavid Vernet，白天是Meta的Linux内核黑客，他通过提出的“epp_boost”功能改进了AMD P-State驱动，以提升Linux游戏性能。Vernet很好地总结了当前AMD P-State CPU频率缩放驱动行为的情况，以及这种动态EPP提升模式的动机：\n\n“在主动（EPP）模式下，平台自主选择min_perf和max_perf之间的工作点，由EPP提示偏置，内核仅在策略或限制更改时重写CPPC请求。一个主要由一个大部分时间繁忙的线程主导的工作负载，该线程频繁进行短时间休眠（例如在游戏工作负载中常见），在这种策略下表现可能不佳。每次休眠都会衰减硬件的性能信号，导致唤醒后的突发从低工作点开始，并增加尾部延迟，即使CPU在有工作可用时基本上处于完全繁忙状态。\n\n如上所述，这里的激励案例是游戏。游戏的主线程或渲染线程通常每帧在futex或GPU栅栏上短暂阻塞，由此产生的频率下降直接表现为帧率卡顿和帧时间百分位数膨胀。\n\n在cpufreq层解决这个问题需要走一条相当狭窄的路径。全局强制设置EPP=performance可以修复尾部延迟，但会使每个核心上的每个工作负载都消耗电力，这在CPU和GPU共享功率预算的手持设备上很重要。提高繁忙核心的min_perf似乎是明显的手术式修复，但它会将核心固定在标称频率或以上，即使在微空闲和vsync等待期间也是如此。在Van Gogh（Steam Deck）上我进行的实验中，这扰乱了SMU的共享CPU/GPU升频管理，导致帧时间尾部相对于不做任何操作时更差。\n\n本系列补丁改为添加了一个可选的、每核心的EPP提升。当启用epp_boost模块参数时，一个更新-利用钩子每10毫秒最多采样一次每个核心的C0驻留时间（delta MPERF除以delta TSC）。如果采样显示核心至少50%繁忙，其MSR_AMD_CPPC_REQ的EPP字段被设置为性能（0），并保持该状态直到300毫秒内没有另一个繁忙采样，此时钩子恢复策略管理上次存储在cppc_req_cached中的请求。”\n\n最终结果非常令人兴奋：使用《文明VI》游戏基准测试，1%低帧率提升了31.8%，而p99帧时间改善了4.1%。这是在Steam Deck上测试的结果，而其他现代AMD Ryzen手持设备和系统总体上也将受益。\n\n该补丁为AMD P-State驱动提供了这一改进。除了需要这些补丁外，还需要设置amd_pstate.epp_boost=1来激活该模式。使用打过补丁的内核，可以通过/sys/module/amd_pstate/parameters/epp_boost检查（或在运行时设置）该功能的状态。观察该功能在更广泛游戏中的影响将会很有趣，而《文明VI》被选为AMD epp_boost功能的测试候选，因为它易于操作且可重复。\n\n这项有前景的工作仍需经过补丁审查，特别是由AMD Linux内核工程师进行，但希望它能在不远的将来被主线化，以进一步增强AMD Linux游戏体验。\n\nAMD PMF测试工具计划用于Linux 7.3\nAMD“低功耗”CPU核心类型补丁在Linux 7.3之前排队\nAMD ROCm承诺未来采用六周发布周期\nAMD推进AI 2026：开放、开源与更多开源\nAMD EPYC Zen 7“Florence”确认搭载ACE及下一代内存"
+  },
+  "24f0ecfaed2b8fe2890c1403e4146f90": {
+    "id": "24f0ecfaed2b8fe2890c1403e4146f90",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/KDE-Ridiculous-File-Copy-Times",
+    "title_en": "KDE Developer Fixing Long-Standing Bug Over Very Long Small-File Copy Times",
+    "summary_en": "Since 2014 there has been a KDE bug report titled Ridiculously slow file copy (multiple small files). With the Dolphin file manager or other KIO-based KDE programs, copying many small files can be much slower than using the cp command directly or other copying programs like rsync, Finally that issue is in the process of being resolved for addressing very slow copy times when dealing with many small files on the KDE Plasma desktop...",
+    "pub_date": "Tue, 28 Jul 2026 05:50:02 -0400",
+    "title_zh": "KDE 开发者修复长期存在的复制大量小文件速度极慢的 Bug",
+    "summary_zh": "自2014年以来，KDE 存在一个关于复制大量小文件速度极慢的 Bug。KDE 开发者 Méven Car 近期着手修复该问题，通过移除内存传输、批量合并复制操作等方式，将复制速度提升至接近 cp 命令的水平。该代码尚未合并，预计在 6.29 版本后发布。",
+    "fulltext_zh": "KDE 开发者修复长期存在的复制大量小文件速度极慢的 Bug - Phoronix\nKDE 开发者修复长期存在的复制大量小文件速度极慢的 Bug\n发布于 2026年7月28日 美国东部时间上午5:50。\n自2014年以来，KDE 有一个标题为“复制文件（多个小文件）慢得离谱”的 Bug 报告。使用 Dolphin 文件管理器或其他基于 KIO 的 KDE 程序时，复制大量小文件的速度可能远慢于直接使用 cp 命令或其他复制程序（如 rsync）。现在，这个问题终于得到解决，以应对在 KDE Plasma 桌面上处理大量小文件时复制速度极慢的情况。\nKDE 开发者 Méven Car 近期着手修复这个长期存在的缺陷，该缺陷导致 KIO 代码在复制大量小文件时速度极其缓慢。简而言之，Car 对 KIO 进行了改进，移除了内存传输，并将整个批次的文件复制操作合并为单个 cp 命令。\n该代码尚未合并，但预计将在 6.29 版本之后发布。根据提供的性能数据，与使用 cp 相比，长时间的文件复制时间在提议的代码中基本消除：\nMéven Car 在其博客文章中评论道：“小文件案例是关键。KIO 6.28 的速度比 cp 慢约 20 倍，这正是 2014 年报告中所抱怨的比例。移除用于进程内工作者的套接字，加上不再每次对目标文件系统进行探测，将时间从约 1.6 秒缩短到 0.4 秒（大约提升 4 倍）。批量复制操作进一步将时间缩短到 88 毫秒，基本上达到了 cp 的速度，比 6.28 快约 18 倍。那句‘我用 cp 而不是 Dolphin’的说法终于有了答案。”\n对 KDE 的 KIO 这一重大改进感兴趣的人，可以通过以下内容了解更多：\nKDE Plasma 6.8 引入新的 kscreenctl 工具\nKDE Plasma 6.8 系统监视器使将进程分配给 CPU 核心更简单\nKDE KWin 引入对服务器端投影阴影的支持\nKDE 开发者继续为 Plasma 6.8 添加更多功能\nKDE Plasma 6.8 中的 KWin 合成器放弃对桌面 OpenGL 的支持\nKDE Plasma 受到任意代码执行影响，可通过“打开新窗口”破坏沙箱\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动程序及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\nFirefox 153 发布，支持 Vulkan 视频解码和实验性 JPEG-XL\n“KVM 电锯”预计将随 Linux 7.3 推出，用于处理 God 数据结构\nFedora 45 Atomic 桌面考虑支持基于 Web 的远程安装\nLemonade 11.5 本地 AI 服务器发布，附带完整的 Lemonade 路由器\nGNOME 因 AI 生成的报告更改安全披露政策\nKiwi Menu 继续为 GNOME 带来 macOS 风格\nLinux 补丁引入“KNOD”，用于将内核网络卸载直接到 AMD GPU\nUbuntu Linux 考虑移除 /etc/debian_version 这一历史遗留产物\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "a921962b12c34a9deb61d423d8a364bf": {
+    "id": "a921962b12c34a9deb61d423d8a364bf",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/godot-4-7-open-source-game-engine-released-with-linux-wayland-hdr-support/",
+    "title_en": "Godot 4.7 Open-Source Game Engine Released with Linux Wayland HDR Support",
+    "summary_en": "Explore Godot 4.7, the newly released open-source game engine featuring Linux Wayland HDR support. Unleash your creativity in game development now!\nThe post Godot 4.7 Open-Source Game Engine Released with Linux Wayland HDR Support appeared first on Linux Today.",
+    "pub_date": "Tue, 28 Jul 2026 07:47:00 +0000",
+    "title_zh": "Godot 4.7 开源游戏引擎发布，新增 Linux Wayland HDR 支持",
+    "summary_zh": "Godot 4.7 开源游戏引擎正式发布，主要亮点是新增了对 Linux Wayland 下的 HDR 支持。该版本为游戏开发者提供了更强大的创作工具，进一步提升了在 Linux 平台上的图形表现能力。",
+    "fulltext_zh": "探索 Godot 4.7，这款新发布的开源游戏引擎，新增了对 Linux Wayland HDR 的支持。现在就在游戏开发中释放你的创造力吧！\n\n本文《Godot 4.7 开源游戏引擎发布，新增 Linux Wayland HDR 支持》最初发表于 Linux Today。"
+  },
+  "6fed5d607bdc1fdaad9e698d996b3e9c": {
+    "id": "6fed5d607bdc1fdaad9e698d996b3e9c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/someone-wants-linux-to-still-boot-1000-years-from-now/",
+    "title_en": "Someone Wants Linux to Still Boot 1,000 Years From Now",
+    "summary_en": "Learn about the ambitious project aiming to keep Linux booting for a millennium. Delve into the technology and vision behind this groundbreaking initiative.\nThe post Someone Wants Linux to Still Boot 1,000 Years From Now appeared first on Linux Today.",
+    "pub_date": "Tue, 28 Jul 2026 07:44:53 +0000",
+    "title_zh": "有人希望Linux在1000年后仍能启动",
+    "summary_zh": "本文介绍了一项雄心勃勃的项目，旨在确保Linux系统在未来一千年内仍能正常启动。文章深入探讨了这一开创性举措背后的技术细节与愿景，展示了开发者对长期系统兼容性和可持续性的追求。",
+    "fulltext_zh": "了解这个旨在让Linux持续启动千年的雄心勃勃项目。深入探讨这一开创性举措背后的技术与愿景。\n\n该文章《Someone Wants Linux to Still Boot 1,000 Years From Now》最初发表于Linux Today。"
+  },
+  "fc5d29d62ed663e57608a32b4e4f3e55": {
+    "id": "fc5d29d62ed663e57608a32b4e4f3e55",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/mastodon-4-6-released-with-collections-and-redesigned-profiles/",
+    "title_en": "Mastodon 4.6 Released with Collections and Redesigned Profiles",
+    "summary_en": "Discover the new features of Mastodon 4.6, including Collections and redesigned profiles that enhance user experience and engagement.\nThe post Mastodon 4.6 Released with Collections and Redesigned Profiles appeared first on Linux Today.",
+    "pub_date": "Tue, 28 Jul 2026 07:43:04 +0000",
+    "title_zh": "Mastodon 4.6 发布，带来收藏集与重新设计的个人资料页面",
+    "summary_zh": "Mastodon 4.6 版本正式发布，主要新功能包括收藏集（Collections）和重新设计的个人资料页面，旨在提升用户体验和互动性。该版本通过改进界面和功能，进一步优化了社交平台的可用性。",
+    "fulltext_zh": "探索 Mastodon 4.6 的新功能，包括收藏集和重新设计的个人资料页面，这些功能增强了用户体验和参与度。\n\n该文章《Mastodon 4.6 发布，带来收藏集与重新设计的个人资料页面》最初出现在 Linux Today 上。"
+  },
+  "249b46660b42a08491c24a3e49184d8e": {
+    "id": "249b46660b42a08491c24a3e49184d8e",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/mozilla-opens-up-firefox-roadmap-with-big-browser-changes-ahead/",
+    "title_en": "Mozilla Opens Up Firefox Roadmap with Big Browser Changes Ahead",
+    "summary_en": "Discover the latest updates on Mozilla's Firefox roadmap, featuring significant changes that promise to enhance your browsing experience.\nThe post Mozilla Opens Up Firefox Roadmap with Big Browser Changes Ahead appeared first on Linux Today.",
+    "pub_date": "Tue, 28 Jul 2026 07:40:35 +0000",
+    "title_zh": "Mozilla 公开 Firefox 路线图，重大浏览器变革在即",
+    "summary_zh": "Mozilla 公布了 Firefox 浏览器的未来路线图，计划进行一系列重大改进，以提升用户的浏览体验。这些变化涉及性能优化、隐私保护以及新功能引入，旨在巩固 Firefox 在浏览器市场的竞争力。",
+    "fulltext_zh": "了解 Mozilla 的 Firefox 路线图最新动态，其中包含一系列重大变化，有望提升您的浏览体验。\n该文章《Mozilla Opens Up Firefox Roadmap with Big Browser Changes Ahead》最初发表于 Linux Today。"
+  },
+  "4058c05b07ca3e357670aeed78e2d7fc": {
+    "id": "4058c05b07ca3e357670aeed78e2d7fc",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/minisforum-m2-intel-panther-lake-mini-pc-running-linux-cores/",
+    "title_en": "MINISFORUM M2 Intel Panther Lake Mini PC Running Linux: Cores",
+    "summary_en": "Explore the MINISFORUM M2 Intel Panther Lake Mini PC, designed for Linux enthusiasts. Enjoy robust performance with advanced cores in a sleek mini form factor.\nThe post MINISFORUM M2 Intel Panther Lake Mini PC Running Linux: Cores appeared first on Linux Today.",
+    "pub_date": "Tue, 28 Jul 2026 07:38:06 +0000",
+    "title_zh": "MINISFORUM M2 Intel Panther Lake 迷你PC运行Linux：核心解析",
+    "summary_zh": "本文介绍了MINISFORUM M2 Intel Panther Lake迷你PC，该设备专为Linux爱好者设计，采用先进核心架构，在紧凑的迷你机箱中提供强劲性能。文章强调了其适合运行Linux系统的特点，并提及了相关性能优势。",
+    "fulltext_zh": "探索专为Linux爱好者设计的MINISFORUM M2 Intel Panther Lake迷你PC。其采用先进核心，在时尚的迷你机箱中提供强劲性能。\n该文章MINISFORUM M2 Intel Panther Lake迷你PC运行Linux：核心解析首发于Linux Today。"
   }
 }

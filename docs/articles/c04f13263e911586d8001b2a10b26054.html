@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mission Center 更新新增电池、分区和功耗统计 — Linux 中文速报</title>
+<title>Ubuntu 26.04 虚拟化 HWE 堆栈提供更新的 QEMU 和 libvirt — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
+    <span class="tag">发行版</span>
     <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Mission Center 更新新增电池、分区和功耗统计</h1>
+  <h1>Ubuntu 26.04 虚拟化 HWE 堆栈提供更新的 QEMU 和 libvirt</h1>
 
-  <div class="article-summary">Linux系统监控工具Mission Center发布1.2.0版本，新增电池统计、磁盘分区详情、功耗曲线等硬件监控功能。改进图形渲染引擎，优化Snap和AppImage包，新增键盘快捷键，并修复多项Bug，包括Steam Deck CPU温度读取、HiDPI图标模糊等问题。</div>
+  <div class="article-summary">Canonical 为 Ubuntu 26.04 LTS 推出了虚拟化硬件启用（HWE）堆栈，通过每6个月更新一次的方式，向后移植新版 QEMU、libvirt 及相关固件，让用户在不依赖第三方仓库的情况下获得更新的虚拟化功能。该堆栈特别适用于机密计算工作负载，支持 AMD SEV-SNP 和 Intel TDX 技术。用户可通过安装 ubuntu-helper-virt-hwe 工具包并运行相应命令来启用和切换 HWE 版本。</div>
 
-  <div class="article-body"><p>Mission Center（Linux系统监控工具）新增电池统计等功能</p><p>Linux系统监控应用Mission Center的新版本现已可供下载，新增了硬件统计功能、首次运行设置提示以及Bug修复。</p><p>Mission Center 1.2.0新增了一个标签页，在页面中展示了每个分区的使用详情（包括已用空间和可用空间），并在页面底部添加了一个图表，可选择显示温度、功耗或CPU频率。</p><p>磁盘分区（前端）和电池历史（后端）页面现在显示压缩（zRAM/zswap）统计信息，而GPU页面允许你将中间图表切换为编码/解码活动、功耗、时钟速度或温度（取决于你的显卡在Linux上能报告哪些信息）。</p><p>Mission Center的统计功能丰富的版本</p><p>图形后端经过彻底改造，实现了更流畅的动画和渲染效果。在较慢的系统上启动应用时，你可能会注意到真实图表加载前会出现短暂的灰色占位图表“闪烁”，这能更清楚地表明应用并未卡顿。</p><p>Mission Center是一款系统监控工具，可以显示活动进程、服务及其相对资源使用情况的详细信息。应用检测功能已得到改进，确保更多应用显示正确的名称、图标等。</p><p>并非所有功能开箱即用——但让它们工作起来更简单了</p><p>对于某些功能，如CPU功耗、进程级网络使用率和风扇读数，Mission Center 1.2.0会提示你运行一个设置脚本。你可以在运行前预览该脚本。你也可以选择拒绝，但某些功能将无法报告。</p><p>Mission Center的官方Snap和AppImage包在此次更新中得到了改进。Snap包已升级使用运行时，而AppImage包现在体积更小，使用相关技术，且不再依赖FUSE运行。</p><p>还新增了键盘快捷键：</p><p>双击或使用左右箭头键折叠和展开行，使用其他按键切换页面等。</p><p>除了新功能外，Mission Center今年首次重大更新中还包含了大量Bug修复。Steam Deck上的CPU温度读取问题、HiDPI显示屏上的模糊应用图标、过宽的SMART对话框以及虚假的CPU使用率峰值等问题均已解决。</p><p>Mission Center v1.2.0中的其他值得注意的变化：</p><p>交换空间使用现在显示为每进程交换，而非共享内存</p><p>每进程内存使用采用混合PSS近似</p><p>通过提升权限发送进程信号</p><p>禁用设备类别和单个网络类型</p><p>连接状态现在在对话框中列出，显示更多信息，支持复制</p><p>对于我认为是最清晰、最流畅的Linux系统监控工具之一来说，这是一次扎实的更新（对于那些急于提问的人，是的：Mission Center的设计灵感来自Windows的任务管理器）。</p><p>Ubuntu决定将系统监控器设为默认工具——这——意味着许多人可能不再那么倾向于寻找另一种方式来获取大致相同的统计信息。</p><p>就个人而言，我一直很喜欢系统监控工具的外观和布局，而通过这次最新更新，额外的信息使其对我的需求来说更加不可或缺。在命令行方面我仍然是粉丝，但对于GUI需求，这就是最佳选择。</p><p>如何获取Mission Center 1.2.0</p><p>Mission Center是免费、开源软件，使用Rust和GTK4/libadwaita构建，更多信息请访问官方网站，后者也提供AppImage下载。</p><p>或者，你也可以从Flathub安装Mission Center。如果你使用的是Ubuntu，可以在软件中心搜索它，或者打开终端并运行：</p><p>sudo snap install mission-center</p><p>在评论区告诉我你对这次更新的看法！</p></div>
+  <div class="article-body"><p>Ubuntu 26.04 虚拟化 HWE 堆栈提供更新的 QEMU 和 libvirt</p><p>Ubuntu 的硬件启用（HWE）工作已扩展至包括将更新的虚拟化技术向后移植到当前 LTS 版本的用户。</p><p>来自 Canonical 的虚拟化 HWE 堆栈将让用户在其现有 LTS 安装基础上受益于更新版本的 QEMU、libvirt 及相关固件，每6个月刷新一次，持续2年，无需通过第三方仓库寻找。</p><p>或者，引用 Canonical 的话：“LTS 版本的操作信心，加上在需要时获得更新虚拟化能力的路径”。</p><p>如果你不熟悉 HWE，它就是将当前 Ubuntu 版本中更新的 Linux 内核、GPU 驱动程序和其他一些基础组件带到较旧 LTS 版本，使其能够在较新硬件上工作并启动。</p><p>HWE 更新每6个月推出一次，向后移植来自中间版本的“经过实战检验”的软件包。例如，即将发布的 Ubuntu 26.10 版本中的内核和 GPU 驱动程序集将包含在 2027 年初的 Ubuntu 26.04.2 HWE 更新中。</p><p>Ubuntu 虚拟化 HWE 包含什么？</p><p>软件包（如果你想知道）包括 qemu-system-data（它捆绑了 OVMF 固件）和 libvirt-clients。这些在 Ubuntu 26.04 LTS 上均未预装，因此只有那些主动寻找的人才能受益。</p><p>而肯定想要寻找的人正是那些运行机密计算工作负载的用户。</p><p>Ubuntu 26.04 已经支持 AMD SEV-SNP 和 Intel TDX——这些技术用于加密虚拟机的内存，使其在运行时连宿主机也无法窥探内部——但正如 Canonical 所指出的，“机密计算功能很少同时出现在所有相关组件上”。</p><p>如果堆栈的其余部分尚未跟上，仅靠内核支持作用不大。等待两年直到下一个 LTS 版本推出并不总是可行，切换到中间版本也会带来其他方面的变动，影响生产工作负载。</p><p>如果这些新闻对你毫无意义，或者你使用的是 Virtualbox 或 VMware Workstation 而非 KVM/QEMU，那么不必担心；这不会影响你。</p><p>但如果你觉得“有点意思”，以下是在 Ubuntu 26.04 LTS 上设置它的方法。</p><p>在 Ubuntu 26.04 上启用虚拟化 HWE 堆栈</p><p>Canonical 提供了一个辅助工具包，用于在 Ubuntu 26.04 LTS 中启用新的虚拟化 HWE。这有助于确保 HWE 和非 HWE 软件包之间没有不匹配。</p><p>该辅助工具可以从 Ubuntu 26.04 'resolute' 仓库安装：</p><p>sudo apt install ubuntu-helper-virt-hwe</p><p>安装完成后，单独运行 ubuntu_virt_helper 它会告诉你当前使用的是哪个版本——例如“virt: stock”（如果你只是为了好玩而尝试，你会看到后者）。</p><p>要在 HWE 和非 HWE 版本之间切换：</p><p>sudo ubuntu_virt_helper switch</p><p>确保你也安装了内核 HWE 堆栈：</p><p>sudo apt install linux-generic-hwe-26.04</p><p>需要重启后新软件包才会生效，但仅此而已。</p><p>Ubuntu LTS 版本构成了该发行版在桌面、云和企业领域的大部分安装基础。对于运行机密虚拟机的那一小部分用户，这个新堆栈在可靠的基座上，以可靠的节奏提供了对更新版本的可预测访问。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/mission-center-battery-power-draw-reporting" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/ubuntu-26-04-virtualization-hwe-stack" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
