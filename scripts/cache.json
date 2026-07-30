@@ -4739,5 +4739,170 @@
     "title_zh": "MINISFORUM M2 Intel Panther Lake 迷你PC运行Linux：核心解析",
     "summary_zh": "本文介绍了MINISFORUM M2 Intel Panther Lake迷你PC，该设备专为Linux爱好者设计，采用先进核心架构，在紧凑的迷你机箱中提供强劲性能。文章强调了其适合运行Linux系统的特点，并提及了相关性能优势。",
     "fulltext_zh": "探索专为Linux爱好者设计的MINISFORUM M2 Intel Panther Lake迷你PC。其采用先进核心，在时尚的迷你机箱中提供强劲性能。\n该文章MINISFORUM M2 Intel Panther Lake迷你PC运行Linux：核心解析首发于Linux Today。"
+  },
+  "164afef425180bcee5dc50703c271d30": {
+    "id": "164afef425180bcee5dc50703c271d30",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/07/mosaic-automatic-window-tiling-gnome-shell",
+    "title_en": "Mosaic is an i3-style auto-tiling extension for GNOME Shell",
+    "summary_en": "Mosaic brings i3-style automatic tiling to GNOME Shell without asking you to choose it permanently. Turn it on when you want windows to arrange themselves, turn it off when you want floating windows back. The extension works with GNOME 45 and up, adding a toggle to Quick Settings to enable the auto-tiling mode. When off, you&#8217;re in floating mode (which still has tiling features). Expand the toggle to access more options or get at Mosaic&#8217;s settings. It&#8217;s the on-demand nature that",
+    "pub_date": "Wed, 29 Jul 2026 22:26:51 +0000",
+    "title_zh": "Mosaic：为GNOME Shell带来i3风格自动平铺的扩展",
+    "summary_zh": "Mosaic是一款为GNOME Shell设计的i3风格自动平铺扩展，支持按需启用或关闭平铺模式。启用时，窗口自动以树状方式排列；关闭时恢复浮动窗口。它提供丰富的键盘快捷键用于窗口管理，并支持鼠标拖拽调整间隙。该扩展适用于GNOME 45及以上版本，可从GNOME Extensions网站安装。",
+    "fulltext_zh": "Mosaic是一款为GNOME Shell设计的i3风格自动平铺扩展 - OMG! Ubuntu\n将i3风格的自动平铺带到GNOME Shell，无需你永久选择。当你希望窗口自动排列时开启它，当你想要恢复浮动窗口时关闭它。\n\n该扩展适用于GNOME 45及以上版本，添加了一个开关用于启用自动平铺模式。关闭时，你处于浮动模式（但仍保留平铺功能）。展开开关可访问更多选项或获取更多信息。\n\nMosaic的实际效果（图片来自项目GitHub）\n正是这种按需使用的特性，让Mosaic作为工具更具吸引力。\n\n当自动平铺模式激活（开关打开）时，你打开的所有窗口都会自动平铺，采用基于树的i3风格方法，根据Mosaic GitHub页面说明。\n\n自然，它提供了大量键盘快捷键来操作和管理工作区上的窗口。\n进入窗口管理模式后：\n调整焦点窗口的方向\n在窗口间移动焦点\n调整焦点窗口大小\n+ 方向键/vim（然后）\n与另一个窗口交换焦点窗口\n朝该方向调整窗口大小（增大）\n朝该方向调整窗口大小（缩小）\n\n在窗口管理模式之外，按快捷键可在浮动和平铺状态间切换窗口，按快捷键可启用调整大小模式。你也可以用鼠标在间隙之间拖拽来调整大小（间隙大小可在设置中配置）。\n\n窗口管理模式在自动平铺关闭时也能工作，只是略有不同——如果你想用键盘创建更独特的应用排列，这会很有用。\n\n不过，我确实注意到，当安装并启用此扩展但自动平铺关闭时，移动浮动窗口的流畅度有所下降。你的体验可能有所不同。\n\n如果这一切让你想起System76的扩展，那是有原因的：Mosaic最初是它的一个分支。Pop!_OS此后已从GNOME Shell迁移到COSMIC桌面，类似功能已内置于桌面中。\n\n在Ubuntu上安装Mosaic\n“简单直观的窗口管理，以及最少的配置和合理的默认设置”。\n\n“重新思考窗口管理”\n来自GNOME的Tobias Bernard的博客文章，但并未完全实现这一概念——它只是一个起点。\n\n它解决了与另一个我之前写过的GNOME Shell自适应窗口平铺扩展不同的用例。那个扩展提供自定义布局、多种交互模式以及更广泛的配置选项。\n\nMosaic设计简单——简单本身可以是一种特性——并且比GNOME Shell的其他窗口平铺扩展复杂度更低。它是否最适合你，显然由你自己决定。\n\nMosaic适用于GNOME 45及以上版本，可从GNOME Extensions网站获取（我建议使用Ubuntu仓库中的应用程序来安装，因为它更省事且提供更多功能）。\n使用此扩展时，应禁用Ubuntu内置的平铺辅助扩展。\n你也可以通过构建源代码在本地安装。\n这有一些额外的快捷键，但如果选择这条路，请务必仔细阅读GitHub页面，因为它会更改一些原生Shell快捷键——你可能希望或不希望这样。\n旨在将这一概念变为现实。"
+  },
+  "2d0c63ef0fb69d32a8cf9614f4b5c2aa": {
+    "id": "2d0c63ef0fb69d32a8cf9614f4b5c2aa",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/gog-galaxy-is-coming-to-linux/",
+    "title_en": "Good News Gamers! GOG is Officially Coming to Linux",
+    "summary_en": "They have hired someone to bring the GOG GALAXY client to the platform.",
+    "pub_date": "Wed, 29 Jul 2026 12:44:34 GMT",
+    "title_zh": "好消息，玩家们！GOG 正式登陆 Linux",
+    "summary_zh": "GOG 公司已确认正在开发 Linux 版 GOG GALAXY 客户端，并已招聘相关工程师。该客户端将支持自动更新、云存档、成就追踪等功能，且延续 GOG 一贯的无 DRM 政策，允许用户下载离线安装包并自由复制。目前尚无具体发布时间表，但此举被视为 GOG 独立后战略重点之一。",
+    "fulltext_zh": "好消息，玩家们！GOG 正式登陆 Linux\n\n他们已聘请专人将 GOG GALAXY 客户端带到该平台。\n\nGOG 整个品牌都建立在销售无 DRM 游戏并提供离线安装包的基础上，这些安装包无需网络连接或任何来自他们一方的验证即可使用。用户可以下载安装包并将其复制到光盘等物理介质上，将副本视为己有。这是该领域的大玩家 Steam 和 Epic Games 无法做到的，因为两者都将你的游戏库绑定在他们的客户端上。\n\n更别提账户状态了。如果你违反他们的规则，他们有权暂停你的账户，或者更糟，直接封禁，让你无法访问自己的游戏。\n\nGOG GALAXY 是该公司的可选客户端，具备人们对此类应用所期望的功能。它处理自动更新、云存档、成就追踪、补丁破坏存档时的回滚，并整合来自其他平台的游戏库。\n\n然而，这些功能从未正式登陆 Linux，因为该客户端仅提供 Windows 和 macOS 版本。希望在系统上使用它的 Linux 玩家必须通过 Bottles 或 Lutris 等兼容层运行 Windows 客户端，而不是直接安装。\n\n当你从 Linux 电脑访问 GOG GALAXY 网站时，会看到这样的画面。\n\n不过，并非全是坏消息，因为现已确认 Linux 版 GOG GALAXY 即将到来。在接受 GamingOnLinux 的 Liam 采访时，GOG 联合首席执行官 Krzysztof Papliński 表示，他们已经有一个“Linux 构建版本”，并且正在寻找“支持 Linux 的最佳方式”。\n\n在你过于兴奋之前，要知道 Krzysztof 在原始邮件回复中并未提及任何发布窗口，他指出：\n\n这是一项重大工程，因此虽然我们尚未准备好分享任何具体计划、时间表或成果，但这确实是我们正在投入时间和精力的领域。\n\n这并非凭空出现。去年年底，GOG 在 CD Projekt 将其出售给联合创始人 Michał Kiciński 后成为一家独立公司，结束了其作为子公司的历程。\n\n几天后，在一月份，Michał 告诉媒体，GOG 的“软件质量差”，并且他并不惊讶人们正在完全远离这个生态系统。\n\n在同一采访中，董事总经理 Maciej Gołębiewski 表示 Linux 已经是 GOG 今年战略中的一部分。\n\n大约在同一时间，招聘信息发布，寻找一名高级软件工程师，职位描述将 Linux 称为该平台的下一个主要前沿。\n\nGOG GALAXY Windows 客户端的占位图。\n\n原生 GOG GALAXY 客户端最终将让 Linux 玩家像 Windows 和 Mac 用户一样管理他们的 GOG 游戏库。虽然我不确定是否会支持其他游戏平台。\n\n但尽管如此，玩家们仍然可以利用一个功能齐全的启动器，轻松处理大型游戏库。它还辅以便利的自动更新、云存档、多设备同步以及与朋友保持联系等功能。\n\n顺便说一句，这比你想象的要重要得多。如今，数字商店对哪些游戏能留在你的库中拥有最终决定权。最近 Xbox 游戏的下架就清楚地表明了这一点。\n\n物理介质也在消失，例如索尼最近确认将从 2028 年 1 月起停止为新的 PlayStation 游戏生产游戏光盘，将新发行版推向纯数字领域。\n\nGOG 的无 DRM 安装包以及让你下载这些安装包的可选客户端消除了这两个问题。由于无需回传检查许可证，将这些安装包复制到 U 盘或刻录到蓝光或 DVD 上，就足以在商店消失后长期保持游戏库的可玩性。\n\n喜欢这篇更新？支持独立的 Linux 新闻报道。\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。"
+  },
+  "7072d39f1d00bc4436815ee619dcdd37": {
+    "id": "7072d39f1d00bc4436815ee619dcdd37",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/ubuntu-rolling-release-virtualization-stack/",
+    "title_en": "Ubuntu Now Has a Rolling Release Model! But Not For The Distro",
+    "summary_en": "A new virtualization stack is being introduced that gets updated every six months.",
+    "pub_date": "Wed, 29 Jul 2026 11:33:48 GMT",
+    "title_zh": "Ubuntu 现已推出滚动发布模型！但并非针对发行版本身",
+    "summary_zh": "Canonical 为 Ubuntu 引入了虚拟化栈的滚动发布模型，每六个月更新一次，取代了传统的 LTS 周期。此举由机密计算驱动，旨在解决硬件、内核、虚拟化工具和固件更新不同步的问题。该模型可选，用户可通过 ubuntu_virt_helper 工具切换，适用于运行机密虚拟机、AI 推理或私有云的用户。",
+    "fulltext_zh": "Ubuntu 现已推出滚动发布模型！但并非针对发行版本身\n\nUbuntu 现已推出滚动发布模型！但并非针对发行版本身\n\n一个新的虚拟化栈正在引入，每六个月更新一次。\n\nUbuntu 是最稳定的 Linux 发行版之一，前提是你运行的是其 LTS 版本。现在想象一下，放弃这一点，转而采用滚动发布模型。听起来很激动，对吧？那就别幻想了，因为今天还不是时候。\n\nCanonical 为虚拟化栈引入了一种滚动发布方法，将通常的 LTS 周期替换为更快的六个月升级周期。机密计算是这一举措背后的驱动力，因为 Canonical 强调，栈中的不同组件很少同时就绪。处理器可能支持一项新功能，但内核尚未能暴露它，QEMU 尚未能处理它，libvirt 尚未给用户提供开启它的方式，固件和证明工具也尚未准备好使其真正可用。\n\n使用 ubuntu_virt_helper 检查已安装的虚拟化变体。\n\n虚拟化 HWE 栈包含四个部分。QEMU 负责管理程序和系统仿真；libvirt 涵盖虚拟化管理；ovmf 提供 UEFI 启动的固件；而 seabios 则用于 BIOS 兼容性。\n\n这与 Ubuntu 已在内核上采用的方法相同，只是扩展到了虚拟化栈的其余部分。\n\n切换到此模型完全是可选的，在 Ubuntu 26.04 LTS 的前两年，所有四个软件包每六个月刷新一次，但仅在 Ubuntu 24.04 LTS 中试运行之后。\n\n显而易见，现有的 Ubuntu 安装将保留在基础栈上，除非有人决定切换到新栈。一个名为 ubuntu_virt_helper（不同软件包名称）的工具处理这种切换，因为 QEMU、libvirt 和固件需要作为一个整体移动，而不是逐个替换。\n\nCanonical 承认机密计算已超出两年周期。\n\n虚拟化 HWE 栈面向任何在 Ubuntu 上运行机密虚拟机、需要更强隔离的监管工作负载、依赖机密计算的 AI 推理或加速器，以及无法直接跳转到 Ubuntu 临时版本的私有或主权云平台的用户。\n\n这些工作负载的发展速度超过了 Ubuntu 自身发布计划的吸收能力，而运行这些工作负载的用户不会等待两年才通过点版本来追赶不断演进的硅供应商。\n\nCanonical 将其定位为一种同时获得 LTS 稳定性和新硬件支持的方式，而不是让用户必须在两者之间做出选择。\n\n不要以为这被锁定在 Ubuntu Pro 之后。Canonical 教学材料中的每个示例都通过普通的 apt 命令运行，无需你登录任何门户。\n\n最基本的方法是安装辅助工具：\n\nsudo apt install ubuntu-helper-virt-hwe\n\n其余部分，你需要查阅文档并运行以下命令：\n\nubuntu_virt_helper --help\n\n喜欢这篇更新？支持独立的 Linux 新闻报道。\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。\n\n一次付费，永久享受。\n\n任意金额，无需承诺。\n\n一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。\n\n好消息，玩家们！GOG 正式登陆 Linux。\n\nGrapheneOS 的一项隐私功能刚刚成为联邦起诉的依据。\n\nOpenUK 希望英国停止免费赠送开源作品。\n\nFireDragon 浏览器展翅高飞。\n\nUbuntu 26.10 “Stonking Stingray”：迄今为止所有新功能。\n\n成为更好的 Linux 用户。\n\n通过 FOSS 每周新闻通讯，你将学到有用的 Linux 技巧，发现应用程序，探索新发行版，并随时了解 Linux 世界的最新动态。\n\n太好了！你已成功注册。\n\n欢迎回来！你已成功登录。\n\n你已成功订阅 It's FOSS。\n\n你的链接已过期。\n\n成功！请检查你的电子邮件以获取用于登录的魔法链接。\n\nSu"
+  },
+  "8634b3d9416255a4abcc04da5622754f": {
+    "id": "8634b3d9416255a4abcc04da5622754f",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12906",
+    "title_en": "Distribution Release: NethSecurity 8.8.0",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Davide Marini has announced the release of NethSecurity, a major update of the project's OpenWRT-based firewall distribution, with MultiWAN, deep packet inspection, VPNs and threat protection features. It is designed primarily for small and medium-sized businesses: \"We are pleased to announce the release of NethSecurity 8.8.0. This version....",
+    "pub_date": "",
+    "title_zh": "发行版发布：NethSecurity 8.8.0",
+    "summary_zh": "NethSecurity 8.8.0 发布，这是一个基于 OpenWRT 的防火墙发行版的主要更新。新版本基于 OpenWrt 25.12.5，Linux 内核升级至 6.12，包管理器从 opkg 切换为 apk，并更新了 OpenVPN 2.7.4、IPsec/strongSwan 6.0.3 等关键组件，修复了大量安全漏洞，提升了稳定性、兼容性和硬件支持。",
+    "fulltext_zh": "发行版发布：NethSecurity 8.8.0\n\nDavide Marini 宣布发布 NethSecurity 8.8.0，这是该项目基于 OpenWRT 的防火墙发行版的一个重大更新，具备多 WAN、深度包检测、VPN 和威胁防护功能。它主要面向中小型企业：\n\n“我们很高兴宣布 NethSecurity 8.8.0 的发布。此版本是一个重大的平台更新：NethSecurity 8.8.0 基于 OpenWrt 25.12.5，而 8.7.2 版本基于 24.10.5。此次基础重构引入了对系统、内核、主要网络和 VPN 组件的重大更新，以及大量安全修复。NethSecurity 8.8.0 引入了系统基础的重大更新，包括：Linux 内核更新至 6.12 版本；更新了许多系统和网络组件；从 opkg 包管理器切换至新的 apk 包管理器；OpenVPN 更新至 2.7.4 版本；IPsec/strongSwan 更新至 6.0.3 版本；修复了基础组件、内核、网络服务和系统库中的大量漏洞；在稳定性、兼容性和硬件支持方面进行了全面改进。新的包管理器是最重要的变化之一：apk 取代 opkg 成为包管理系统。”\n\n有关变更列表和截图的完整信息，请访问官方发布页面。\n\n下载链接：nethsecurity-8.8.0-x86-64-generic-squashfs-combined-efi.img.gz\n\n近期相关新闻与发布：\n- 发行版发布：NethSecurity 8.8.0\n- 发行版发布：NethSecurity 8.3\n- 发行版发布：NethSecurity 8.1\n- 发行版发布：NethSecurity 8.0\n- 更多 NethSecurity 新闻...\n\nNethSecurity 是一个功能齐全的开源 Linux 防火墙，只需几次点击即可简化网络安全部署。NethSecurity 是 NethServer 项目的衍生版本。它将多种安全功能整合到一个平台中，包括防火墙、入侵检测与防御、防病毒等。"
+  },
+  "82357506b3a478552caa72287665b9b0": {
+    "id": "82357506b3a478552caa72287665b9b0",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12905",
+    "title_en": "Distribution Release: MakuluLinux 2026-07-28",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Jacque Montague Raymer has announced the availability of a major new release of MakuluLinux, a Debian-based desktop Linux distribution with deeply integrated artificial intelligence features: \"Every other Linux distro gives you an AI plugin. A chatbox. A sidebar widget. Something you open, use once, and close. AI-OS is....",
+    "pub_date": "",
+    "title_zh": "MakuluLinux 2026-07-28 发布",
+    "summary_zh": "MakuluLinux 发布了2026-07-28版本，这是一款基于Debian的桌面Linux发行版，深度集成人工智能特性。新版本的核心是AI-OS，将AI作为整个操作系统的支柱，而非简单的插件。其特色功能Electra Bar是一个始终可见的浮动AI输入部件，用户只需输入一句话，系统即可自动识别意图并执行相应操作，如写作、调试代码、更改WiFi或回答问题。",
+    "fulltext_zh": "发行版发布：MakuluLinux 2026-07-28 (DistroWatch.com 新闻)\nDistroWatch.com 由以下机构赞助\n新闻/观点/评测 ▼\n发布公告\nDW 周刊 / 评测存档\n访客评分与评论\n按评分排列项目排名\n播客、新闻通讯与评测\n跨发行版比较软件包\n显示所有发行版的软件包版本\n搜索发行版 - 高级\n已停产的发行版\n教程与学习 ▼\n搜索文章\n问答专栏\n技巧与窍门专栏\n常见误解专栏\n简化手册页\n其他操作系统\n发行版验证密钥\n发行版可视化族谱\n常见问题解答\n我们的捐赠计划\n小型企业电话系统\nUbuntu 将为 LTS 版本上的虚拟化工具提供升级\nGaruda 更新其 FireDragon 网页浏览器，采用新基础\nHaiku 获得在移植版浏览器中使用 Firefox 品牌的权利\nFreeBSD 发布 2026 年第二季度状态报告\nDebian 讨论 LLM 工具的使用\nFreeBSD 临时冻结 ports 树\nDebian 启动 Perl 更新\nCanonical 为 Ubuntu Pro 用户推出企业商店\nopenSUSE 分享刷新过期仓库密钥的技巧\nGNOME OS 在 Fairphone 上运行\n易于使用的 PBX - 托管或自管理\nLinux 电话系统\n免费在线聊天解决方案\n集成呼叫中心软件\n联络中心软件\n远程办公应用：iOS 或 Android\n免费视频会议\n3CX 的 VoIP / PBX 教程\n不要措手不及，制定灾难恢复计划！\n必备的在线聊天报告与统计\n导致呼叫欺诈的常见错误\nWhatsApp Business 与 3CX WhatsApp API 集成对比\n3CX StartUP 的五大杀手级功能\n别做“那种人”第1卷：使用复杂凭证\n别做“那种人”第2卷：呼叫欺诈\n别做“那种人”第3卷：四大安全提示\n别做“那种人”第4卷：监控您的实例\nMakuluLinux 2026-07-28\nShadowfetch Linux 2.0.1\nArmbian 2026年7月新闻通讯\nUbuntu 周刊第954期\nFreeBSD 2026年第二季度状态报告\n红帽周五五件事 - 2026年7月24日\nFedora 项目播客\nProjets Libres 播客\nFull Circle 每周新闻\nGalactic Mandate Linux\n最新新闻与更新\n新闻筛选选项\n发行版发布：MakuluLinux 2026-07-28\nJacque Montague Raymer 宣布了一个重大新版本的可用性，这是一款基于Debian的桌面Linux发行版，深度集成了人工智能特性：“其他每个Linux发行版都给你一个AI插件。一个聊天框。一个侧边栏小部件。你打开它，用一次，然后关闭。AI-OS则不同。人工智能不是一个功能——它是整个操作系统的脊柱。桌面的每个部分、每个工作流程、你执行的每个任务都直接融入了AI。从你启动的那一刻起，你就拥有一个全栈智能助手，它了解你的系统，记住你的历史，说你的语言，并执行你的意图。输入一句话，然后看着你的电脑自我管理。这就是AI-OS。在屏幕顶部，始终可见，随时待命。Electra Bar 是一个浮动AI输入部件，静静地停留在你的桌面上。一句话。按回车。正确的事情就会发生，每次都是。Electra Bar 将每个输入通过一个智能路由代理，一个内置的AI，读取你的意图并自动决定做什么。写博客文章？它打开Writer模式。调试代码？Coder模式。更改WiFi？Command模式。问问题？Chat模式。”阅读更多关于 MakuluLinux-AI-OS-Debian-2026-07-28.iso 的信息。\n近期相关新闻与发布\n发行版发布：MakuluLinux 2026-07-28\n发行版发布：MakuluLinux 2024-12-22\n发行版发布：MakuluLinux 2022-06-10\n发行版发布：MakuluLinux 2021-03-05\n发行版发布：MakuluLinux 2020 \"Flash\"\n发行版发布：MakuluLinux 2019.01.25\n更多 MakuluLinux 新闻...\nMakuluLinux 是一个滚动发布的桌面发行版，基于 Ubuntu 的 LTS（长期支持）版本或 Debian 的 \"Testing\" 分支。它预装了多媒体编解码器，并"
+  },
+  "bfe5132b598ae77869aa4156ce22311a": {
+    "id": "bfe5132b598ae77869aa4156ce22311a",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/COSMIC-Epoch-1.5-Released",
+    "title_en": "COSMIC Epoch 1.5 Brings More Fixes & Improvements To System76's Desktop",
+    "summary_en": "The System76 and Pop!_OS developers continue quickly iterating on their Rust-based COSMIC desktop environment...",
+    "pub_date": "Wed, 29 Jul 2026 20:21:55 -0400",
+    "title_zh": "COSMIC Epoch 1.5 为 System76 桌面带来更多修复与改进",
+    "summary_zh": "System76 和 Pop!_OS 开发者继续快速迭代其基于 Rust 的 COSMIC 桌面环境。COSMIC Epoch 1.5 现已发布，主要改进包括：利用 EXIF 方向数据优化背景处理、修复 Chromium 应用在低于 1.0 分数缩放时的崩溃问题、改进 GPU 重置时的合成器处理、为 COSMIC Greeter 添加 cosmic-keymap-unstable-v1 Wayland 协议支持，以及修复 COSMIC Panel 中 Frosted Glass 效果和锁屏时高 CPU 占用等问题。",
+    "fulltext_zh": "COSMIC Epoch 1.5 为 System76 桌面带来更多修复与改进\n\nSystem76 和 Pop!_OS 开发者继续快速迭代其基于 Rust 的 COSMIC 桌面环境。\n\n距离上次 COSMIC Epoch 1.4（带来 COSMIC Monitor 改进与修复）仅过去一周，COSMIC Epoch 1.5 现已可用。COSMIC 1.5 现在利用 EXIF 方向数据来处理 COSMIC 背景；COSMIC Compositor 修复了 Chromium 应用在低于 1.0 分数缩放时崩溃的问题；合成器在 GPU 重置期间的处理更加完善；COSMIC Greeter 现在可以使用 cosmic-keymap-unstable-v1 Wayland 协议。\n\nCOSMIC Epoch 1.5 还为 COSMIC Panel 带来了多项修复，包括针对最近添加的 Frosted Glass 效果的修复。此外，还修复了屏幕锁定时 COSMIC Panel 导致高 CPU 占用的问题。\n\n此外，COSMIC Epoch 1.5 还包含大量其他修复，详情请参见相关发布说明。"
+  },
+  "444ced21d6cd8e947cb623f46c943f88": {
+    "id": "444ced21d6cd8e947cb623f46c943f88",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.3-AMDGPU-GFX6-Modifiers",
+    "title_en": "DRM Format Modifiers For Old AMD GPUs Coming With Linux 7.3: Thanks Valve",
+    "summary_en": "Sent out today was another week's worth of features and other code changes to the AMDGPU kernel graphics driver and AMDKFD kernel compute driver. We are nearing the cut-off of new feature material for next month's Linux 7.3 kernel but there is some nice feature work in store for this week...",
+    "pub_date": "Wed, 29 Jul 2026 16:47:11 -0400",
+    "title_zh": "旧款AMD GPU的DRM格式修饰符随Linux 7.3到来：感谢Valve",
+    "summary_zh": "Valve开源Linux图形驱动团队的Timur Kristóf为旧款AMD Radeon GPU（GFX6至GFX8架构，涵盖Radeon HD 7000系列到Polaris和Fiji）添加了DRM格式修饰符支持。该支持可改善Vulkan驱动的Wayland合成器、Zink OpenGL-on-Vulkan层及不同图形API间的互操作性，并提升性能。此外，本周AMDGPU/AMDKFD驱动更新还包括Apple Studio Display修复、GEM关闭优化、DCN 4.2显示核心IP更新及移除旧BUG()调用等。",
+    "fulltext_zh": "DRM格式修饰符即将为旧款AMD GPU登陆Linux 7.3：感谢Valve - Phoronix\nDRM格式修饰符即将为旧款AMD GPU登陆Linux 7.3：感谢Valve\n发布于2026年7月29日下午4:47（美国东部时间）。\n今天又有一周的功能和其他代码变更提交给了AMDGPU内核图形驱动和AMDKFD内核计算驱动。我们正接近下个月内核新功能特性的截止日期，但本周仍有一些不错的功能工作值得期待。\n对于使用GFX6至GFX8时代IP的旧款AMD Radeon GPU（即从最初的Radeon HD 7000系列“GCN 1.0”显卡到基于Polaris和Fiji的显卡），现在这些旧款GPU已获得DRM格式修饰符支持。这是Valve开源Linux图形驱动团队Timur Kristóf为旧款AMD Radeon图形处理器带来的又一项改进。\nDRM格式修饰符提供了图像缓冲区的平铺、压缩及其他属性的详细信息。根据布局不同，它还有助于提升性能并实现更多样化的用例。DRM格式修饰符支持可让基于Vulkan的Wayland合成器、运行在Zink OpenGL-on-Vulkan层上的合成器、不同图形API之间的互操作性等成为可能。\nGFX6至GFX9的修饰符支持是本周AMDGPU/AMDKFD拉取请求中值得关注的变更之一。同样值得注意的还有Apple Studio Display修复。此外，还有GEM关闭优化、DCN 4.2显示核心IP更新，以及移除旧的BUG()调用。AMDGPU和AMDKFD驱动也包含大量错误修复。这些计划纳入Linux 7.3的变更完整列表可通过以下链接查看：\nValve赞助将开源RADV驱动移植到Windows的工作\nAMD Linux图形驱动准备修复Apple Studio Display\nAMD为Linux 7.3准备更多图形驱动改进\nLinux 7.3为现代AMD APU启用第二图形管线\nAMD在Linux上启用CACP功能以实现更大的OLED省电\nAMD Linux图形驱动致力于清除所有BUG()\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动及其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\n“KVM电锯”预计将随Linux 7.3到来，用于处理God数据结构\nKiwi菜单继续为GNOME带来macOS风格\nFedora 45 Atomic桌面考虑支持基于Web的远程安装\nValve赞助将开源RADV驱动移植到Windows的工作\nLemonade 11.5本地AI服务器发布，附带完整的Lemonade路由器\nUbuntu Linux考虑移除/etc/debian_version这一历史遗留文件\nlibx11-compat致力于在SDL之上实现Xlib以支持Wayland、macOS、Android\nAMD P-State Linux驱动补丁可将1%低帧游戏性能提升31%\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "aff6f6de8ea2d2d23250736cd65a668b": {
+    "id": "aff6f6de8ea2d2d23250736cd65a668b",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Steam-Beta-Video-Streaming",
+    "title_en": "Steam Client Adds HDR Streaming On Steam Deck OLED, AV1 Video Streaming",
+    "summary_en": "Today's Steam client beta update brings some new game streaming enhancements for Linux gamers...",
+    "pub_date": "Wed, 29 Jul 2026 15:07:07 -0400",
+    "title_zh": "Steam客户端为Steam Deck OLED添加HDR串流与AV1视频串流支持",
+    "summary_zh": "今日的Steam客户端测试版更新为Linux游戏玩家带来了新的游戏串流增强功能。Steam Deck OLED型号现已支持高动态范围（HDR）串流，同时Steam Deck还新增了对AV1视频串流的支持，后者需使用实验性SteamRT3客户端。此外，该版本还包含若干修复。",
+    "fulltext_zh": "Steam客户端为Steam Deck OLED添加HDR串流与AV1视频串流支持 - Phoronix\nSteam客户端为Steam Deck OLED添加HDR串流与AV1视频串流支持\n发布于2026年7月29日美国东部时间下午3:07。\n\n今日的Steam客户端测试版更新为Linux游戏玩家带来了一些新的游戏串流增强功能。\n\n首先，对于使用Steam Deck OLED型号的用户，最新Steam客户端测试版现已内置对高动态范围（HDR）串流的支持。\n\n今日测试版中的第二项Steam串流增强功能是Steam Deck上对AV1视频串流的支持。此AV1视频串流在使用实验性SteamRT3 Steam客户端时生效。对于偏好现代、开放的AV1格式而非专有视频编解码器的用户来说，这非常棒。\n\n这些是主要亮点，同时今日的Steam客户端测试版还包含若干修复，详情见发布说明。\n\nDXVK 3.0.2发布，改进了挂起调试并修复了多款游戏\n\nHolo Core实验性构建发布：面向Valve Steam平台的Arch Linux AArch64\n\nProton 11.0-1发布，推进Valve的Steam Play，带来最佳Linux体验\n\nLinux平台Steam使用率在6月略有下降\n\nSteam Machine发布，售价1049至1428美元\n\nSteamOS 3.8.10稳定版发布，更新了Arch、支持Steam Machine并将Wayland桌面设为默认\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael也是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\n“KVM Chainsaw”预计将随Linux 7.3发布，用于处理God数据结构\n\nKiwi Menu继续为GNOME带来macOS风格\n\nFedora 45 Atomic桌面计划支持基于Web的远程安装\n\nValve赞助将开源RADV驱动移植到Windows的工作\n\nLemonade 11.5本地AI服务器发布，附带完整的Lemonade Router\n\nUbuntu Linux计划移除/etc/debian_version这一历史遗留文件\n\nlibx11-compat正在致力于在SDL之上实现Xlib，以支持Wayland、macOS和Android\n\nAMD P-State Linux驱动补丁可将1%低帧游戏性能提升31%\n\n在享受无广告浏览的同时，\n\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026\n\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "2d3bd10822775b51a20228ec9d848d44": {
+    "id": "2d3bd10822775b51a20228ec9d848d44",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Intel-Linux-7.3-Peak-Bandwidth",
+    "title_en": "Intel Graphics Driver Support For Xe3 \"Peak Bandwidth Threshold\" Feature In Linux 7.3",
+    "summary_en": "Intel today sent out their latest batch of kernel graphics driver updates that are ready for staging ahead of next month's Linux 7.3 merge window...",
+    "pub_date": "Wed, 29 Jul 2026 09:12:09 -0400",
+    "title_zh": "英特尔图形驱动为Linux 7.3中的Xe3“峰值带宽阈值”功能提供支持",
+    "summary_zh": "英特尔于2026年7月29日发布了最新的内核图形驱动更新，其中一项重要变化是为Xe3 Panther Lake及更新显卡引入了“峰值带宽阈值”功能，旨在降低功耗。该功能允许SoC在显示所需带宽低于最小GV点时降低结构频率，阈值设定为20 GB/s。此外，本周的DRM拉取请求还启用了Thunderbolt隧道链路的超高比特率（UHBR）链接速率，并添加了混合模式属性等改进。",
+    "fulltext_zh": "英特尔图形驱动为Linux 7.3中的Xe3“峰值带宽阈值”功能提供支持 - Phoronix\n英特尔图形驱动为Linux 7.3中的Xe3“峰值带宽阈值”功能提供支持\n发布于2026年7月29日美国东部时间上午09:12。\n\n英特尔今天发送了他们最新的内核图形驱动更新批次，这些更新已准备好在下个月之前进入暂存阶段。\n\n对于最终用户而言，此次功能拉取中一个有趣的变化是Xe3 Panther Lake及更新显卡中引入的“峰值带宽阈值”功能，这是一项节能特性。它可以降低Linux上最新Xe3图形硬件的电源管理需求。\n\n提供此峰值带宽阈值功能的补丁解释道：\n“在Xe3+上，当显示所需带宽低于最小GV点时，SoC可以降低结构频率。此阈值定义为20 GB/s。当所需数据速率低于此阈值时，驱动程序可以选择请求此阈值。\n当以下所有条件成立时，向带宽信息中添加一个额外的QGV条目，其峰值带宽和降额带宽均设置为20 GB/s：\n1. 平台为Xe3+。\n2. 至少存在一个现有的QGV点。\n3. QGV点的数量低于8（最大值）。\n一旦找到平面组，驱动程序会遍历该组中的所有QGV点，以找到与所需数据速率最佳匹配的点。如果所需数据速率低于20 GB/s，则从此新QGV点（20 GB/s）中选择峰值带宽。”\n\n补丁中未提供任何数字来指示相对节能收益。\n\n本周的英特尔DRM拉取请求还启用了Thunderbolt隧道链路的超高比特率（UHBR）链接速率，向所有支持alpha混合的平面添加了混合模式属性，以及各种错误修复和其他增强功能。\n\n有关本周功能补丁的更多详细信息，请参见：\n英特尔定向封装级热中断计划用于Linux 7.3\n英特尔计算运行时持续构建令人兴奋的“LEO”\n冷重置恢复正在完善，以更好地帮助Linux上的英特尔GPU\n英特尔为当前Xeon 6 / Xeon 6+服务器扩展内存选项\nUXL的oneDNN 3.13为英特尔Nova Lake准备AVX10.2及更多英特尔优化\n英特尔IGC 2.38.2带来最新一轮图形编译器改进\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立了该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动程序及其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n“KVM电锯”预计将进入Linux 7.3以处理God数据结构\nKiwi菜单继续为GNOME带来macOS风格\nFedora 45 Atomic桌面考虑允许基于Web的远程安装\nValve赞助将开源RADV驱动移植到Windows的工作\nLemonade 11.5本地AI服务器发布，附带完整的Lemonade路由器\nUbuntu Linux考虑移除/etc/debian_version历史遗留文件\nlibx11-compat正在致力于在SDL之上实现Xlib以支持Wayland、macOS和Android\nAMD P-State Linux驱动补丁可将1%低帧游戏性能提升31%\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "efe060bfcdb2fd45c285165ada9c328c": {
+    "id": "efe060bfcdb2fd45c285165ada9c328c",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Valve-Sponsors-RADV-Windows",
+    "title_en": "Valve Sponsors Work Bringing Open-Source RADV Driver To Windows",
+    "summary_en": "Valve has been sponsoring Collabora engineers with early phase, exploratory work for trying to bring the open-source Radeon Vulkan \"RADV\" driver to Microsoft Windows...",
+    "pub_date": "Wed, 29 Jul 2026 06:35:22 -0400",
+    "title_zh": "Valve赞助将开源RADV驱动移植到Windows的工作",
+    "summary_zh": "Valve正在资助Collabora工程师进行早期探索性工作，尝试将开源Radeon Vulkan驱动RADV移植到Microsoft Windows。该项目面临的主要挑战是依赖AMD官方的Windows内核驱动，需要逆向工程以适配其数据结构。目前已在Windows上成功演示了《反恐精英2》的运行。",
+    "fulltext_zh": "Valve赞助将开源RADV驱动移植到Windows的工作 - Phoronix\nValve赞助将开源RADV驱动移植到Windows的工作\n发布于2026年7月29日美国东部时间上午6:35。\n\nValve一直在资助Collabora工程师进行早期探索性工作，尝试将开源Radeon Vulkan“RADV”驱动移植到Microsoft Windows。\n\n目前正在进行实验性工作，将Mesa RADV Vulkan驱动移植到Windows。该开源驱动实现被Linux游戏玩家广泛使用，并且是AMD驱动的Steam Deck以及现在的Steam Machine取得成功的重要因素。Valve资助了多名开发者从事开源RADV Vulkan驱动以及Linux图形栈其他部分的工作。现在，他们正在赞助Collabora的开发者，尝试让RADV在Microsoft Windows上变得可行。\n\nLouis-Francis Ratté-Boulianne发布了一篇博客文章，介绍了他们将RADV移植到Windows的初步工作。除了在Windows上集成WDDM2之外，将RADV移植到Windows的一个重大挑战是依赖AMD Radeon Software Windows内核驱动。\n\n当前工作的范围不包括将AMDGPU Linux内核图形驱动移植到Windows，因此他们正在努力将RADV带到Windows，同时依赖AMD的官方Windows内核驱动。这反过来导致了逆向工程和其他步骤，以弄清楚专有内核驱动的数据结构和其他元素，从而使RADV能够适配使用它。\n\n最终要使这项工作顺利开展，他们要么需要一个稳定且有文档记录的AMD Windows内核图形驱动接口，要么创建一个垫片库，作为稳定接口位于RADV和内核驱动之间，以应对AMD Radeon Software Windows驱动版本之间未文档化的变更。\n\n他们已成功在Windows上使用RADV演示了《反恐精英2》的运行：\n\n实验性代码可通过此开发分支获取。\n\n旧款AMD GPU的DRM格式修饰符即将随Linux 7.3到来：感谢Valve\nAMD Linux图形驱动为Apple Studio Display做准备\nAMD为Linux 7.3准备更多图形驱动改进\nLinux 7.3为现代AMD APU启用第二图形管线\nAMD在Linux上启用CACP功能以实现更大的OLED省电效果\nAMD Linux图形驱动致力于清除所有BUG()\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立了该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动及其他主题。Michael也是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\n“KVM电锯”预计将随Linux 7.3到来，用于处理God数据结构\nKiwi Menu继续为GNOME带来macOS风格\nFedora 45 Atomic桌面考虑允许基于Web的远程安装\nValve赞助将开源RADV驱动移植到Windows的工作\nLemonade 11.5本地AI服务器发布，附带完整的Lemonade路由器\nUbuntu Linux考虑移除/etc/debian_version历史遗留文件\nlibx11-compat正在致力于在SDL之上实现Xlib以支持Wayland、macOS、Android\nAMD P-State Linux驱动补丁可将1%低帧游戏性能提升31%\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "b6b709cf5bddcf73418cedc15ecc6903": {
+    "id": "b6b709cf5bddcf73418cedc15ecc6903",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/9-best-free-and-open-source-serial-port-and-telemetry-visualization-tools/",
+    "title_en": "9 Best Free and Open Source Serial Port and Telemetry Visualization Tools",
+    "summary_en": "Uncover the top 9 free and open-source tools for serial port and telemetry visualization. Optimize your data insights with these essential resources.\nThe post 9 Best Free and Open Source Serial Port and Telemetry Visualization Tools appeared first on Linux Today.",
+    "pub_date": "Wed, 29 Jul 2026 07:20:21 +0000",
+    "title_zh": "9款最佳免费开源串口与遥测可视化工具",
+    "summary_zh": "本文介绍了9款免费开源的串口与遥测可视化工具，帮助用户优化数据洞察。这些工具涵盖数据监控、日志分析、实时可视化等功能，适用于嵌入式开发、物联网和科研等领域。文章列举了每款工具的核心特性与适用场景，为技术选型提供参考。",
+    "fulltext_zh": "探索9款顶级免费开源串口与遥测可视化工具，利用这些必备资源优化您的数据洞察。\n该文章《9款最佳免费开源串口与遥测可视化工具》最初发表于Linux Today。"
+  },
+  "9b9d911598a75d13797b28dbedee04f9": {
+    "id": "9b9d911598a75d13797b28dbedee04f9",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/kde-plasma-6-8-starts-taking-shape-with-better-multi-monitor-handling/",
+    "title_en": "KDE Plasma 6.8 Starts Taking Shape with Better Multi-Monitor Handling",
+    "summary_en": "KDE Plasma 6.8 is evolving with improved multi-monitor handling. Learn how these updates can enhance your productivity and overall desktop experience.\nThe post KDE Plasma 6.8 Starts Taking Shape with Better Multi-Monitor Handling appeared first on Linux Today.",
+    "pub_date": "Wed, 29 Jul 2026 07:18:12 +0000",
+    "title_zh": "KDE Plasma 6.8 初具雏形，多显示器处理能力更佳",
+    "summary_zh": "KDE Plasma 6.8 正在演进，带来了改进的多显示器处理能力。本文介绍了这些更新如何提升用户的生产力和整体桌面体验。",
+    "fulltext_zh": "KDE Plasma 6.8 正在演进，改进了多显示器处理能力。了解这些更新如何提升您的生产力和整体桌面体验。\n\n该文章《KDE Plasma 6.8 Starts Taking Shape with Better Multi-Monitor Handling》最初发表于 Linux Today。"
+  },
+  "69a76a10a96f4f2be4397b96df432e48": {
+    "id": "69a76a10a96f4f2be4397b96df432e48",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/systemd-261-lands-with-cloud-imds-tpm-and-network-updates/",
+    "title_en": "Systemd 261 Lands with Cloud IMDS, TPM, and Network Updates",
+    "summary_en": "Learn about the key updates in Systemd 261, highlighting Cloud IMDS, TPM advancements, and network improvements designed to elevate your system's functionality.\nThe post Systemd 261 Lands with Cloud IMDS, TPM, and Network Updates appeared first on Linux Today.",
+    "pub_date": "Wed, 29 Jul 2026 07:16:00 +0000",
+    "title_zh": "Systemd 261 发布，带来云 IMDS、TPM 和网络更新",
+    "summary_zh": "Systemd 261 版本正式发布，重点引入了对云实例元数据服务（IMDS）的支持、TPM 技术的改进以及网络功能的增强，旨在提升系统的整体功能与性能。",
+    "fulltext_zh": "了解 Systemd 261 的关键更新，重点包括云 IMDS、TPM 技术的进步以及网络改进，旨在提升您的系统功能。\n\n该文章《Systemd 261 Lands with Cloud IMDS, TPM, and Network Updates》最初发表于 Linux Today。"
+  },
+  "2386f29296e6e58655f2e01c0d0578b8": {
+    "id": "2386f29296e6e58655f2e01c0d0578b8",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/ghostty-1-3-1-terminal-emulator-released-with-fixes-for-1-3-regressions/",
+    "title_en": "Ghostty 1.3.1 Terminal Emulator Released with Fixes for 1.3 Regressions`",
+    "summary_en": "Ghostty 1.3.1 Terminal Emulator is now available, featuring essential fixes for 1.3 regressions. Upgrade for improved performance and stability.\nThe post Ghostty 1.3.1 Terminal Emulator Released with Fixes for 1.3 Regressions` appeared first on Linux Today.",
+    "pub_date": "Wed, 29 Jul 2026 07:11:11 +0000",
+    "title_zh": "Ghostty 1.3.1 终端模拟器发布，修复 1.3 版本回归问题",
+    "summary_zh": "Ghostty 1.3.1 终端模拟器现已发布，主要修复了 1.3 版本中出现的回归问题。此次更新旨在提升性能与稳定性，建议用户升级以获得更好的使用体验。",
+    "fulltext_zh": "Ghostty 1.3.1 终端模拟器现已可用，包含针对 1.3 版本回归问题的关键修复。升级以获得改进的性能和稳定性。\n\n该文章 Ghostty 1.3.1 Terminal Emulator Released with Fixes for 1.3 Regressions 首次出现在 Linux Today 上。"
+  },
+  "b998146e2604a42ed06439abaca31565": {
+    "id": "b998146e2604a42ed06439abaca31565",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/raspberry-pi-imager-2-0-10-adds-pi-connect-for-organization-support/",
+    "title_en": "Raspberry Pi Imager 2.0.10 Adds Pi Connect for Organization Support",
+    "summary_en": "Discover Raspberry Pi Imager 2.0.10, featuring Pi Connect for enhanced organization support. Streamline your projects with this powerful tool today.\nThe post Raspberry Pi Imager 2.0.10 Adds Pi Connect for Organization Support appeared first on Linux Today.",
+    "pub_date": "Wed, 29 Jul 2026 07:07:29 +0000",
+    "title_zh": "Raspberry Pi Imager 2.0.10 新增 Pi Connect 以支持组织管理",
+    "summary_zh": "Raspberry Pi Imager 2.0.10 版本发布，新增 Pi Connect 功能，为组织用户提供更强大的支持。该工具可帮助用户更高效地管理项目，简化部署流程。",
+    "fulltext_zh": "探索 Raspberry Pi Imager 2.0.10，该版本引入了 Pi Connect，以增强组织支持。立即使用这一强大工具，简化您的项目流程。\n\n本文《Raspberry Pi Imager 2.0.10 Adds Pi Connect for Organization Support》最初发表于 Linux Today。"
   }
 }

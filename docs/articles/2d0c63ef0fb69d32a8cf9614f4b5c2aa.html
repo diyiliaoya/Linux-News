@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mission Center 更新新增电池、分区和功耗统计 — Linux 中文速报</title>
+<title>好消息，玩家们！GOG 正式登陆 Linux — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Mission Center 更新新增电池、分区和功耗统计</h1>
+  <h1>好消息，玩家们！GOG 正式登陆 Linux</h1>
 
-  <div class="article-summary">Linux系统监控工具Mission Center发布1.2.0版本，新增电池统计、磁盘分区详情、功耗曲线等硬件监控功能。改进图形渲染引擎，优化Snap和AppImage包，新增键盘快捷键，并修复多项Bug，包括Steam Deck CPU温度读取、HiDPI图标模糊等问题。</div>
+  <div class="article-summary">GOG 公司已确认正在开发 Linux 版 GOG GALAXY 客户端，并已招聘相关工程师。该客户端将支持自动更新、云存档、成就追踪等功能，且延续 GOG 一贯的无 DRM 政策，允许用户下载离线安装包并自由复制。目前尚无具体发布时间表，但此举被视为 GOG 独立后战略重点之一。</div>
 
-  <div class="article-body"><p>Mission Center（Linux系统监控工具）新增电池统计等功能</p><p>Linux系统监控应用Mission Center的新版本现已可供下载，新增了硬件统计功能、首次运行设置提示以及Bug修复。</p><p>Mission Center 1.2.0新增了一个标签页，在页面中展示了每个分区的使用详情（包括已用空间和可用空间），并在页面底部添加了一个图表，可选择显示温度、功耗或CPU频率。</p><p>磁盘分区（前端）和电池历史（后端）页面现在显示压缩（zRAM/zswap）统计信息，而GPU页面允许你将中间图表切换为编码/解码活动、功耗、时钟速度或温度（取决于你的显卡在Linux上能报告哪些信息）。</p><p>Mission Center的统计功能丰富的版本</p><p>图形后端经过彻底改造，实现了更流畅的动画和渲染效果。在较慢的系统上启动应用时，你可能会注意到真实图表加载前会出现短暂的灰色占位图表“闪烁”，这能更清楚地表明应用并未卡顿。</p><p>Mission Center是一款系统监控工具，可以显示活动进程、服务及其相对资源使用情况的详细信息。应用检测功能已得到改进，确保更多应用显示正确的名称、图标等。</p><p>并非所有功能开箱即用——但让它们工作起来更简单了</p><p>对于某些功能，如CPU功耗、进程级网络使用率和风扇读数，Mission Center 1.2.0会提示你运行一个设置脚本。你可以在运行前预览该脚本。你也可以选择拒绝，但某些功能将无法报告。</p><p>Mission Center的官方Snap和AppImage包在此次更新中得到了改进。Snap包已升级使用运行时，而AppImage包现在体积更小，使用相关技术，且不再依赖FUSE运行。</p><p>还新增了键盘快捷键：</p><p>双击或使用左右箭头键折叠和展开行，使用其他按键切换页面等。</p><p>除了新功能外，Mission Center今年首次重大更新中还包含了大量Bug修复。Steam Deck上的CPU温度读取问题、HiDPI显示屏上的模糊应用图标、过宽的SMART对话框以及虚假的CPU使用率峰值等问题均已解决。</p><p>Mission Center v1.2.0中的其他值得注意的变化：</p><p>交换空间使用现在显示为每进程交换，而非共享内存</p><p>每进程内存使用采用混合PSS近似</p><p>通过提升权限发送进程信号</p><p>禁用设备类别和单个网络类型</p><p>连接状态现在在对话框中列出，显示更多信息，支持复制</p><p>对于我认为是最清晰、最流畅的Linux系统监控工具之一来说，这是一次扎实的更新（对于那些急于提问的人，是的：Mission Center的设计灵感来自Windows的任务管理器）。</p><p>Ubuntu决定将系统监控器设为默认工具——这——意味着许多人可能不再那么倾向于寻找另一种方式来获取大致相同的统计信息。</p><p>就个人而言，我一直很喜欢系统监控工具的外观和布局，而通过这次最新更新，额外的信息使其对我的需求来说更加不可或缺。在命令行方面我仍然是粉丝，但对于GUI需求，这就是最佳选择。</p><p>如何获取Mission Center 1.2.0</p><p>Mission Center是免费、开源软件，使用Rust和GTK4/libadwaita构建，更多信息请访问官方网站，后者也提供AppImage下载。</p><p>或者，你也可以从Flathub安装Mission Center。如果你使用的是Ubuntu，可以在软件中心搜索它，或者打开终端并运行：</p><p>sudo snap install mission-center</p><p>在评论区告诉我你对这次更新的看法！</p></div>
+  <div class="article-body"><p>好消息，玩家们！GOG 正式登陆 Linux</p><p>他们已聘请专人将 GOG GALAXY 客户端带到该平台。</p><p>GOG 整个品牌都建立在销售无 DRM 游戏并提供离线安装包的基础上，这些安装包无需网络连接或任何来自他们一方的验证即可使用。用户可以下载安装包并将其复制到光盘等物理介质上，将副本视为己有。这是该领域的大玩家 Steam 和 Epic Games 无法做到的，因为两者都将你的游戏库绑定在他们的客户端上。</p><p>更别提账户状态了。如果你违反他们的规则，他们有权暂停你的账户，或者更糟，直接封禁，让你无法访问自己的游戏。</p><p>GOG GALAXY 是该公司的可选客户端，具备人们对此类应用所期望的功能。它处理自动更新、云存档、成就追踪、补丁破坏存档时的回滚，并整合来自其他平台的游戏库。</p><p>然而，这些功能从未正式登陆 Linux，因为该客户端仅提供 Windows 和 macOS 版本。希望在系统上使用它的 Linux 玩家必须通过 Bottles 或 Lutris 等兼容层运行 Windows 客户端，而不是直接安装。</p><p>当你从 Linux 电脑访问 GOG GALAXY 网站时，会看到这样的画面。</p><p>不过，并非全是坏消息，因为现已确认 Linux 版 GOG GALAXY 即将到来。在接受 GamingOnLinux 的 Liam 采访时，GOG 联合首席执行官 Krzysztof Papliński 表示，他们已经有一个“Linux 构建版本”，并且正在寻找“支持 Linux 的最佳方式”。</p><p>在你过于兴奋之前，要知道 Krzysztof 在原始邮件回复中并未提及任何发布窗口，他指出：</p><p>这是一项重大工程，因此虽然我们尚未准备好分享任何具体计划、时间表或成果，但这确实是我们正在投入时间和精力的领域。</p><p>这并非凭空出现。去年年底，GOG 在 CD Projekt 将其出售给联合创始人 Michał Kiciński 后成为一家独立公司，结束了其作为子公司的历程。</p><p>几天后，在一月份，Michał 告诉媒体，GOG 的“软件质量差”，并且他并不惊讶人们正在完全远离这个生态系统。</p><p>在同一采访中，董事总经理 Maciej Gołębiewski 表示 Linux 已经是 GOG 今年战略中的一部分。</p><p>大约在同一时间，招聘信息发布，寻找一名高级软件工程师，职位描述将 Linux 称为该平台的下一个主要前沿。</p><p>GOG GALAXY Windows 客户端的占位图。</p><p>原生 GOG GALAXY 客户端最终将让 Linux 玩家像 Windows 和 Mac 用户一样管理他们的 GOG 游戏库。虽然我不确定是否会支持其他游戏平台。</p><p>但尽管如此，玩家们仍然可以利用一个功能齐全的启动器，轻松处理大型游戏库。它还辅以便利的自动更新、云存档、多设备同步以及与朋友保持联系等功能。</p><p>顺便说一句，这比你想象的要重要得多。如今，数字商店对哪些游戏能留在你的库中拥有最终决定权。最近 Xbox 游戏的下架就清楚地表明了这一点。</p><p>物理介质也在消失，例如索尼最近确认将从 2028 年 1 月起停止为新的 PlayStation 游戏生产游戏光盘，将新发行版推向纯数字领域。</p><p>GOG 的无 DRM 安装包以及让你下载这些安装包的可选客户端消除了这两个问题。由于无需回传检查许可证，将这些安装包复制到 U 盘或刻录到蓝光或 DVD 上，就足以在商店消失后长期保持游戏库的可玩性。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/mission-center-battery-power-draw-reporting" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/gog-galaxy-is-coming-to-linux/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

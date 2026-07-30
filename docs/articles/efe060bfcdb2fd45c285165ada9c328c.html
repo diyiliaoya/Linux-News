@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mission Center 更新新增电池、分区和功耗统计 — Linux 中文速报</title>
+<title>Valve赞助将开源RADV驱动移植到Windows的工作 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Mission Center 更新新增电池、分区和功耗统计</h1>
+  <h1>Valve赞助将开源RADV驱动移植到Windows的工作</h1>
 
-  <div class="article-summary">Linux系统监控工具Mission Center发布1.2.0版本，新增电池统计、磁盘分区详情、功耗曲线等硬件监控功能。改进图形渲染引擎，优化Snap和AppImage包，新增键盘快捷键，并修复多项Bug，包括Steam Deck CPU温度读取、HiDPI图标模糊等问题。</div>
+  <div class="article-summary">Valve正在资助Collabora工程师进行早期探索性工作，尝试将开源Radeon Vulkan驱动RADV移植到Microsoft Windows。该项目面临的主要挑战是依赖AMD官方的Windows内核驱动，需要逆向工程以适配其数据结构。目前已在Windows上成功演示了《反恐精英2》的运行。</div>
 
-  <div class="article-body"><p>Mission Center（Linux系统监控工具）新增电池统计等功能</p><p>Linux系统监控应用Mission Center的新版本现已可供下载，新增了硬件统计功能、首次运行设置提示以及Bug修复。</p><p>Mission Center 1.2.0新增了一个标签页，在页面中展示了每个分区的使用详情（包括已用空间和可用空间），并在页面底部添加了一个图表，可选择显示温度、功耗或CPU频率。</p><p>磁盘分区（前端）和电池历史（后端）页面现在显示压缩（zRAM/zswap）统计信息，而GPU页面允许你将中间图表切换为编码/解码活动、功耗、时钟速度或温度（取决于你的显卡在Linux上能报告哪些信息）。</p><p>Mission Center的统计功能丰富的版本</p><p>图形后端经过彻底改造，实现了更流畅的动画和渲染效果。在较慢的系统上启动应用时，你可能会注意到真实图表加载前会出现短暂的灰色占位图表“闪烁”，这能更清楚地表明应用并未卡顿。</p><p>Mission Center是一款系统监控工具，可以显示活动进程、服务及其相对资源使用情况的详细信息。应用检测功能已得到改进，确保更多应用显示正确的名称、图标等。</p><p>并非所有功能开箱即用——但让它们工作起来更简单了</p><p>对于某些功能，如CPU功耗、进程级网络使用率和风扇读数，Mission Center 1.2.0会提示你运行一个设置脚本。你可以在运行前预览该脚本。你也可以选择拒绝，但某些功能将无法报告。</p><p>Mission Center的官方Snap和AppImage包在此次更新中得到了改进。Snap包已升级使用运行时，而AppImage包现在体积更小，使用相关技术，且不再依赖FUSE运行。</p><p>还新增了键盘快捷键：</p><p>双击或使用左右箭头键折叠和展开行，使用其他按键切换页面等。</p><p>除了新功能外，Mission Center今年首次重大更新中还包含了大量Bug修复。Steam Deck上的CPU温度读取问题、HiDPI显示屏上的模糊应用图标、过宽的SMART对话框以及虚假的CPU使用率峰值等问题均已解决。</p><p>Mission Center v1.2.0中的其他值得注意的变化：</p><p>交换空间使用现在显示为每进程交换，而非共享内存</p><p>每进程内存使用采用混合PSS近似</p><p>通过提升权限发送进程信号</p><p>禁用设备类别和单个网络类型</p><p>连接状态现在在对话框中列出，显示更多信息，支持复制</p><p>对于我认为是最清晰、最流畅的Linux系统监控工具之一来说，这是一次扎实的更新（对于那些急于提问的人，是的：Mission Center的设计灵感来自Windows的任务管理器）。</p><p>Ubuntu决定将系统监控器设为默认工具——这——意味着许多人可能不再那么倾向于寻找另一种方式来获取大致相同的统计信息。</p><p>就个人而言，我一直很喜欢系统监控工具的外观和布局，而通过这次最新更新，额外的信息使其对我的需求来说更加不可或缺。在命令行方面我仍然是粉丝，但对于GUI需求，这就是最佳选择。</p><p>如何获取Mission Center 1.2.0</p><p>Mission Center是免费、开源软件，使用Rust和GTK4/libadwaita构建，更多信息请访问官方网站，后者也提供AppImage下载。</p><p>或者，你也可以从Flathub安装Mission Center。如果你使用的是Ubuntu，可以在软件中心搜索它，或者打开终端并运行：</p><p>sudo snap install mission-center</p><p>在评论区告诉我你对这次更新的看法！</p></div>
+  <div class="article-body"><p>Valve赞助将开源RADV驱动移植到Windows的工作 - Phoronix</p><p>Valve赞助将开源RADV驱动移植到Windows的工作</p><p>发布于2026年7月29日美国东部时间上午6:35。</p><p>Valve一直在资助Collabora工程师进行早期探索性工作，尝试将开源Radeon Vulkan“RADV”驱动移植到Microsoft Windows。</p><p>目前正在进行实验性工作，将Mesa RADV Vulkan驱动移植到Windows。该开源驱动实现被Linux游戏玩家广泛使用，并且是AMD驱动的Steam Deck以及现在的Steam Machine取得成功的重要因素。Valve资助了多名开发者从事开源RADV Vulkan驱动以及Linux图形栈其他部分的工作。现在，他们正在赞助Collabora的开发者，尝试让RADV在Microsoft Windows上变得可行。</p><p>Louis-Francis Ratté-Boulianne发布了一篇博客文章，介绍了他们将RADV移植到Windows的初步工作。除了在Windows上集成WDDM2之外，将RADV移植到Windows的一个重大挑战是依赖AMD Radeon Software Windows内核驱动。</p><p>当前工作的范围不包括将AMDGPU Linux内核图形驱动移植到Windows，因此他们正在努力将RADV带到Windows，同时依赖AMD的官方Windows内核驱动。这反过来导致了逆向工程和其他步骤，以弄清楚专有内核驱动的数据结构和其他元素，从而使RADV能够适配使用它。</p><p>最终要使这项工作顺利开展，他们要么需要一个稳定且有文档记录的AMD Windows内核图形驱动接口，要么创建一个垫片库，作为稳定接口位于RADV和内核驱动之间，以应对AMD Radeon Software Windows驱动版本之间未文档化的变更。</p><p>他们已成功在Windows上使用RADV演示了《反恐精英2》的运行：</p><p>实验性代码可通过此开发分支获取。</p><p>旧款AMD GPU的DRM格式修饰符即将随Linux 7.3到来：感谢Valve</p><p>AMD Linux图形驱动为Apple Studio Display做准备</p><p>AMD为Linux 7.3准备更多图形驱动改进</p><p>Linux 7.3为现代AMD APU启用第二图形管线</p><p>AMD在Linux上启用CACP功能以实现更大的OLED省电效果</p><p>AMD Linux图形驱动致力于清除所有BUG()</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立了该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动及其他主题。Michael也是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他。</p><p>“KVM电锯”预计将随Linux 7.3到来，用于处理God数据结构</p><p>Kiwi Menu继续为GNOME带来macOS风格</p><p>Fedora 45 Atomic桌面考虑允许基于Web的远程安装</p><p>Valve赞助将开源RADV驱动移植到Windows的工作</p><p>Lemonade 11.5本地AI服务器发布，附带完整的Lemonade路由器</p><p>Ubuntu Linux考虑移除/etc/debian_version历史遗留文件</p><p>libx11-compat正在致力于在SDL之上实现Xlib以支持Wayland、macOS、Android</p><p>AMD P-State Linux驱动补丁可将1%低帧游戏性能提升31%</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/mission-center-battery-power-draw-reporting" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Valve-Sponsors-RADV-Windows" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

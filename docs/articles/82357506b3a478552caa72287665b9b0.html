@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mission Center 更新新增电池、分区和功耗统计 — Linux 中文速报</title>
+<title>MakuluLinux 2026-07-28 发布 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">发行版</span>
+    <span class="source">DistroWatch</span>
   </div>
 
-  <h1>Mission Center 更新新增电池、分区和功耗统计</h1>
+  <h1>MakuluLinux 2026-07-28 发布</h1>
 
-  <div class="article-summary">Linux系统监控工具Mission Center发布1.2.0版本，新增电池统计、磁盘分区详情、功耗曲线等硬件监控功能。改进图形渲染引擎，优化Snap和AppImage包，新增键盘快捷键，并修复多项Bug，包括Steam Deck CPU温度读取、HiDPI图标模糊等问题。</div>
+  <div class="article-summary">MakuluLinux 发布了2026-07-28版本，这是一款基于Debian的桌面Linux发行版，深度集成人工智能特性。新版本的核心是AI-OS，将AI作为整个操作系统的支柱，而非简单的插件。其特色功能Electra Bar是一个始终可见的浮动AI输入部件，用户只需输入一句话，系统即可自动识别意图并执行相应操作，如写作、调试代码、更改WiFi或回答问题。</div>
 
-  <div class="article-body"><p>Mission Center（Linux系统监控工具）新增电池统计等功能</p><p>Linux系统监控应用Mission Center的新版本现已可供下载，新增了硬件统计功能、首次运行设置提示以及Bug修复。</p><p>Mission Center 1.2.0新增了一个标签页，在页面中展示了每个分区的使用详情（包括已用空间和可用空间），并在页面底部添加了一个图表，可选择显示温度、功耗或CPU频率。</p><p>磁盘分区（前端）和电池历史（后端）页面现在显示压缩（zRAM/zswap）统计信息，而GPU页面允许你将中间图表切换为编码/解码活动、功耗、时钟速度或温度（取决于你的显卡在Linux上能报告哪些信息）。</p><p>Mission Center的统计功能丰富的版本</p><p>图形后端经过彻底改造，实现了更流畅的动画和渲染效果。在较慢的系统上启动应用时，你可能会注意到真实图表加载前会出现短暂的灰色占位图表“闪烁”，这能更清楚地表明应用并未卡顿。</p><p>Mission Center是一款系统监控工具，可以显示活动进程、服务及其相对资源使用情况的详细信息。应用检测功能已得到改进，确保更多应用显示正确的名称、图标等。</p><p>并非所有功能开箱即用——但让它们工作起来更简单了</p><p>对于某些功能，如CPU功耗、进程级网络使用率和风扇读数，Mission Center 1.2.0会提示你运行一个设置脚本。你可以在运行前预览该脚本。你也可以选择拒绝，但某些功能将无法报告。</p><p>Mission Center的官方Snap和AppImage包在此次更新中得到了改进。Snap包已升级使用运行时，而AppImage包现在体积更小，使用相关技术，且不再依赖FUSE运行。</p><p>还新增了键盘快捷键：</p><p>双击或使用左右箭头键折叠和展开行，使用其他按键切换页面等。</p><p>除了新功能外，Mission Center今年首次重大更新中还包含了大量Bug修复。Steam Deck上的CPU温度读取问题、HiDPI显示屏上的模糊应用图标、过宽的SMART对话框以及虚假的CPU使用率峰值等问题均已解决。</p><p>Mission Center v1.2.0中的其他值得注意的变化：</p><p>交换空间使用现在显示为每进程交换，而非共享内存</p><p>每进程内存使用采用混合PSS近似</p><p>通过提升权限发送进程信号</p><p>禁用设备类别和单个网络类型</p><p>连接状态现在在对话框中列出，显示更多信息，支持复制</p><p>对于我认为是最清晰、最流畅的Linux系统监控工具之一来说，这是一次扎实的更新（对于那些急于提问的人，是的：Mission Center的设计灵感来自Windows的任务管理器）。</p><p>Ubuntu决定将系统监控器设为默认工具——这——意味着许多人可能不再那么倾向于寻找另一种方式来获取大致相同的统计信息。</p><p>就个人而言，我一直很喜欢系统监控工具的外观和布局，而通过这次最新更新，额外的信息使其对我的需求来说更加不可或缺。在命令行方面我仍然是粉丝，但对于GUI需求，这就是最佳选择。</p><p>如何获取Mission Center 1.2.0</p><p>Mission Center是免费、开源软件，使用Rust和GTK4/libadwaita构建，更多信息请访问官方网站，后者也提供AppImage下载。</p><p>或者，你也可以从Flathub安装Mission Center。如果你使用的是Ubuntu，可以在软件中心搜索它，或者打开终端并运行：</p><p>sudo snap install mission-center</p><p>在评论区告诉我你对这次更新的看法！</p></div>
+  <div class="article-body"><p>发行版发布：MakuluLinux 2026-07-28 (DistroWatch.com 新闻)</p><p>DistroWatch.com 由以下机构赞助</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW 周刊 / 评测存档</p><p>访客评分与评论</p><p>按评分排列项目排名</p><p>播客、新闻通讯与评测</p><p>跨发行版比较软件包</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停产的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与窍门专栏</p><p>常见误解专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>发行版可视化族谱</p><p>常见问题解答</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>Ubuntu 将为 LTS 版本上的虚拟化工具提供升级</p><p>Garuda 更新其 FireDragon 网页浏览器，采用新基础</p><p>Haiku 获得在移植版浏览器中使用 Firefox 品牌的权利</p><p>FreeBSD 发布 2026 年第二季度状态报告</p><p>Debian 讨论 LLM 工具的使用</p><p>FreeBSD 临时冻结 ports 树</p><p>Debian 启动 Perl 更新</p><p>Canonical 为 Ubuntu Pro 用户推出企业商店</p><p>openSUSE 分享刷新过期仓库密钥的技巧</p><p>GNOME OS 在 Fairphone 上运行</p><p>易于使用的 PBX - 托管或自管理</p><p>Linux 电话系统</p><p>免费在线聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程办公应用：iOS 或 Android</p><p>免费视频会议</p><p>3CX 的 VoIP / PBX 教程</p><p>不要措手不及，制定灾难恢复计划！</p><p>必备的在线聊天报告与统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成对比</p><p>3CX StartUP 的五大杀手级功能</p><p>别做“那种人”第1卷：使用复杂凭证</p><p>别做“那种人”第2卷：呼叫欺诈</p><p>别做“那种人”第3卷：四大安全提示</p><p>别做“那种人”第4卷：监控您的实例</p><p>MakuluLinux 2026-07-28</p><p>Shadowfetch Linux 2.0.1</p><p>Armbian 2026年7月新闻通讯</p><p>Ubuntu 周刊第954期</p><p>FreeBSD 2026年第二季度状态报告</p><p>红帽周五五件事 - 2026年7月24日</p><p>Fedora 项目播客</p><p>Projets Libres 播客</p><p>Full Circle 每周新闻</p><p>Galactic Mandate Linux</p><p>最新新闻与更新</p><p>新闻筛选选项</p><p>发行版发布：MakuluLinux 2026-07-28</p><p>Jacque Montague Raymer 宣布了一个重大新版本的可用性，这是一款基于Debian的桌面Linux发行版，深度集成了人工智能特性：“其他每个Linux发行版都给你一个AI插件。一个聊天框。一个侧边栏小部件。你打开它，用一次，然后关闭。AI-OS则不同。人工智能不是一个功能——它是整个操作系统的脊柱。桌面的每个部分、每个工作流程、你执行的每个任务都直接融入了AI。从你启动的那一刻起，你就拥有一个全栈智能助手，它了解你的系统，记住你的历史，说你的语言，并执行你的意图。输入一句话，然后看着你的电脑自我管理。这就是AI-OS。在屏幕顶部，始终可见，随时待命。Electra Bar 是一个浮动AI输入部件，静静地停留在你的桌面上。一句话。按回车。正确的事情就会发生，每次都是。Electra Bar 将每个输入通过一个智能路由代理，一个内置的AI，读取你的意图并自动决定做什么。写博客文章？它打开Writer模式。调试代码？Coder模式。更改WiFi？Command模式。问问题？Chat模式。”阅读更多关于 MakuluLinux-AI-OS-Debian-2026-07-28.iso 的信息。</p><p>近期相关新闻与发布</p><p>发行版发布：MakuluLinux 2026-07-28</p><p>发行版发布：MakuluLinux 2024-12-22</p><p>发行版发布：MakuluLinux 2022-06-10</p><p>发行版发布：MakuluLinux 2021-03-05</p><p>发行版发布：MakuluLinux 2020 &quot;Flash&quot;</p><p>发行版发布：MakuluLinux 2019.01.25</p><p>更多 MakuluLinux 新闻...</p><p>MakuluLinux 是一个滚动发布的桌面发行版，基于 Ubuntu 的 LTS（长期支持）版本或 Debian 的 &quot;Testing&quot; 分支。它预装了多媒体编解码器，并</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/mission-center-battery-power-draw-reporting" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://distrowatch.com/12905" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

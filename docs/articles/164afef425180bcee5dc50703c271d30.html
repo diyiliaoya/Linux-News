@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mission Center 更新新增电池、分区和功耗统计 — Linux 中文速报</title>
+<title>Mosaic：为GNOME Shell带来i3风格自动平铺的扩展 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
+    <span class="tag">桌面环境</span>
     <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Mission Center 更新新增电池、分区和功耗统计</h1>
+  <h1>Mosaic：为GNOME Shell带来i3风格自动平铺的扩展</h1>
 
-  <div class="article-summary">Linux系统监控工具Mission Center发布1.2.0版本，新增电池统计、磁盘分区详情、功耗曲线等硬件监控功能。改进图形渲染引擎，优化Snap和AppImage包，新增键盘快捷键，并修复多项Bug，包括Steam Deck CPU温度读取、HiDPI图标模糊等问题。</div>
+  <div class="article-summary">Mosaic是一款为GNOME Shell设计的i3风格自动平铺扩展，支持按需启用或关闭平铺模式。启用时，窗口自动以树状方式排列；关闭时恢复浮动窗口。它提供丰富的键盘快捷键用于窗口管理，并支持鼠标拖拽调整间隙。该扩展适用于GNOME 45及以上版本，可从GNOME Extensions网站安装。</div>
 
-  <div class="article-body"><p>Mission Center（Linux系统监控工具）新增电池统计等功能</p><p>Linux系统监控应用Mission Center的新版本现已可供下载，新增了硬件统计功能、首次运行设置提示以及Bug修复。</p><p>Mission Center 1.2.0新增了一个标签页，在页面中展示了每个分区的使用详情（包括已用空间和可用空间），并在页面底部添加了一个图表，可选择显示温度、功耗或CPU频率。</p><p>磁盘分区（前端）和电池历史（后端）页面现在显示压缩（zRAM/zswap）统计信息，而GPU页面允许你将中间图表切换为编码/解码活动、功耗、时钟速度或温度（取决于你的显卡在Linux上能报告哪些信息）。</p><p>Mission Center的统计功能丰富的版本</p><p>图形后端经过彻底改造，实现了更流畅的动画和渲染效果。在较慢的系统上启动应用时，你可能会注意到真实图表加载前会出现短暂的灰色占位图表“闪烁”，这能更清楚地表明应用并未卡顿。</p><p>Mission Center是一款系统监控工具，可以显示活动进程、服务及其相对资源使用情况的详细信息。应用检测功能已得到改进，确保更多应用显示正确的名称、图标等。</p><p>并非所有功能开箱即用——但让它们工作起来更简单了</p><p>对于某些功能，如CPU功耗、进程级网络使用率和风扇读数，Mission Center 1.2.0会提示你运行一个设置脚本。你可以在运行前预览该脚本。你也可以选择拒绝，但某些功能将无法报告。</p><p>Mission Center的官方Snap和AppImage包在此次更新中得到了改进。Snap包已升级使用运行时，而AppImage包现在体积更小，使用相关技术，且不再依赖FUSE运行。</p><p>还新增了键盘快捷键：</p><p>双击或使用左右箭头键折叠和展开行，使用其他按键切换页面等。</p><p>除了新功能外，Mission Center今年首次重大更新中还包含了大量Bug修复。Steam Deck上的CPU温度读取问题、HiDPI显示屏上的模糊应用图标、过宽的SMART对话框以及虚假的CPU使用率峰值等问题均已解决。</p><p>Mission Center v1.2.0中的其他值得注意的变化：</p><p>交换空间使用现在显示为每进程交换，而非共享内存</p><p>每进程内存使用采用混合PSS近似</p><p>通过提升权限发送进程信号</p><p>禁用设备类别和单个网络类型</p><p>连接状态现在在对话框中列出，显示更多信息，支持复制</p><p>对于我认为是最清晰、最流畅的Linux系统监控工具之一来说，这是一次扎实的更新（对于那些急于提问的人，是的：Mission Center的设计灵感来自Windows的任务管理器）。</p><p>Ubuntu决定将系统监控器设为默认工具——这——意味着许多人可能不再那么倾向于寻找另一种方式来获取大致相同的统计信息。</p><p>就个人而言，我一直很喜欢系统监控工具的外观和布局，而通过这次最新更新，额外的信息使其对我的需求来说更加不可或缺。在命令行方面我仍然是粉丝，但对于GUI需求，这就是最佳选择。</p><p>如何获取Mission Center 1.2.0</p><p>Mission Center是免费、开源软件，使用Rust和GTK4/libadwaita构建，更多信息请访问官方网站，后者也提供AppImage下载。</p><p>或者，你也可以从Flathub安装Mission Center。如果你使用的是Ubuntu，可以在软件中心搜索它，或者打开终端并运行：</p><p>sudo snap install mission-center</p><p>在评论区告诉我你对这次更新的看法！</p></div>
+  <div class="article-body"><p>Mosaic是一款为GNOME Shell设计的i3风格自动平铺扩展 - OMG! Ubuntu</p><p>将i3风格的自动平铺带到GNOME Shell，无需你永久选择。当你希望窗口自动排列时开启它，当你想要恢复浮动窗口时关闭它。</p><p>该扩展适用于GNOME 45及以上版本，添加了一个开关用于启用自动平铺模式。关闭时，你处于浮动模式（但仍保留平铺功能）。展开开关可访问更多选项或获取更多信息。</p><p>Mosaic的实际效果（图片来自项目GitHub）</p><p>正是这种按需使用的特性，让Mosaic作为工具更具吸引力。</p><p>当自动平铺模式激活（开关打开）时，你打开的所有窗口都会自动平铺，采用基于树的i3风格方法，根据Mosaic GitHub页面说明。</p><p>自然，它提供了大量键盘快捷键来操作和管理工作区上的窗口。</p><p>进入窗口管理模式后：</p><p>调整焦点窗口的方向</p><p>在窗口间移动焦点</p><p>调整焦点窗口大小</p><p>+ 方向键/vim（然后）</p><p>与另一个窗口交换焦点窗口</p><p>朝该方向调整窗口大小（增大）</p><p>朝该方向调整窗口大小（缩小）</p><p>在窗口管理模式之外，按快捷键可在浮动和平铺状态间切换窗口，按快捷键可启用调整大小模式。你也可以用鼠标在间隙之间拖拽来调整大小（间隙大小可在设置中配置）。</p><p>窗口管理模式在自动平铺关闭时也能工作，只是略有不同——如果你想用键盘创建更独特的应用排列，这会很有用。</p><p>不过，我确实注意到，当安装并启用此扩展但自动平铺关闭时，移动浮动窗口的流畅度有所下降。你的体验可能有所不同。</p><p>如果这一切让你想起System76的扩展，那是有原因的：Mosaic最初是它的一个分支。Pop!_OS此后已从GNOME Shell迁移到COSMIC桌面，类似功能已内置于桌面中。</p><p>在Ubuntu上安装Mosaic</p><p>“简单直观的窗口管理，以及最少的配置和合理的默认设置”。</p><p>“重新思考窗口管理”</p><p>来自GNOME的Tobias Bernard的博客文章，但并未完全实现这一概念——它只是一个起点。</p><p>它解决了与另一个我之前写过的GNOME Shell自适应窗口平铺扩展不同的用例。那个扩展提供自定义布局、多种交互模式以及更广泛的配置选项。</p><p>Mosaic设计简单——简单本身可以是一种特性——并且比GNOME Shell的其他窗口平铺扩展复杂度更低。它是否最适合你，显然由你自己决定。</p><p>Mosaic适用于GNOME 45及以上版本，可从GNOME Extensions网站获取（我建议使用Ubuntu仓库中的应用程序来安装，因为它更省事且提供更多功能）。</p><p>使用此扩展时，应禁用Ubuntu内置的平铺辅助扩展。</p><p>你也可以通过构建源代码在本地安装。</p><p>这有一些额外的快捷键，但如果选择这条路，请务必仔细阅读GitHub页面，因为它会更改一些原生Shell快捷键——你可能希望或不希望这样。</p><p>旨在将这一概念变为现实。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/mission-center-battery-power-draw-reporting" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/07/mosaic-automatic-window-tiling-gnome-shell" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
