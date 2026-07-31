@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：NethSecurity 8.8.0 — Linux 中文速报</title>
+<title>AMD发布Linux补丁，支持HDMI 2.1自动低延迟模式“ALLM”与VRR — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：NethSecurity 8.8.0</h1>
+  <h1>AMD发布Linux补丁，支持HDMI 2.1自动低延迟模式“ALLM”与VRR</h1>
 
-  <div class="article-summary">NethSecurity 8.8.0 发布，这是一个基于 OpenWRT 的防火墙发行版的主要更新。新版本基于 OpenWrt 25.12.5，Linux 内核升级至 6.12，包管理器从 opkg 切换为 apk，并更新了 OpenVPN 2.7.4、IPsec/strongSwan 6.0.3 等关键组件，修复了大量安全漏洞，提升了稳定性、兼容性和硬件支持。</div>
+  <div class="article-summary">AMD近日为Linux内核的AMDGPU驱动程序发布了新补丁，旨在启用HDMI 2.1的自动低延迟模式（ALLM）和可变刷新率（VRR）支持。此前，HDMI 2.1的开源支持因HDMI论坛的阻碍而长期受限，但AMD已逐步推进，包括显示流压缩（DSC）支持。此次补丁将允许用户在游戏场景下自动启用电视或显示器的“游戏模式”，减少延迟，提升游戏体验。同时，HDMI VRR的加入也为Linux游戏玩家带来了更流畅的画面。补丁已提交至邮件列表审查，有望进入Linux 7.3或7.4内核。</div>
 
-  <div class="article-body"><p>发行版发布：NethSecurity 8.8.0</p><p>Davide Marini 宣布发布 NethSecurity 8.8.0，这是该项目基于 OpenWRT 的防火墙发行版的一个重大更新，具备多 WAN、深度包检测、VPN 和威胁防护功能。它主要面向中小型企业：</p><p>“我们很高兴宣布 NethSecurity 8.8.0 的发布。此版本是一个重大的平台更新：NethSecurity 8.8.0 基于 OpenWrt 25.12.5，而 8.7.2 版本基于 24.10.5。此次基础重构引入了对系统、内核、主要网络和 VPN 组件的重大更新，以及大量安全修复。NethSecurity 8.8.0 引入了系统基础的重大更新，包括：Linux 内核更新至 6.12 版本；更新了许多系统和网络组件；从 opkg 包管理器切换至新的 apk 包管理器；OpenVPN 更新至 2.7.4 版本；IPsec/strongSwan 更新至 6.0.3 版本；修复了基础组件、内核、网络服务和系统库中的大量漏洞；在稳定性、兼容性和硬件支持方面进行了全面改进。新的包管理器是最重要的变化之一：apk 取代 opkg 成为包管理系统。”</p><p>有关变更列表和截图的完整信息，请访问官方发布页面。</p><p>下载链接：nethsecurity-8.8.0-x86-64-generic-squashfs-combined-efi.img.gz</p><p>近期相关新闻与发布：</p><p>- 发行版发布：NethSecurity 8.8.0</p><p>- 发行版发布：NethSecurity 8.3</p><p>- 发行版发布：NethSecurity 8.1</p><p>- 发行版发布：NethSecurity 8.0</p><p>- 更多 NethSecurity 新闻...</p><p>NethSecurity 是一个功能齐全的开源 Linux 防火墙，只需几次点击即可简化网络安全部署。NethSecurity 是 NethServer 项目的衍生版本。它将多种安全功能整合到一个平台中，包括防火墙、入侵检测与防御、防病毒等。</p></div>
+  <div class="article-body"><p>AMD发布Linux补丁，支持HDMI 2.1自动低延迟模式“ALLM”与VRR - Phoronix</p><p>AMD发布Linux补丁，支持HDMI 2.1自动低延迟模式“ALLM”与VRR</p><p>发布于2026年7月30日下午2:36（美国东部时间）。</p><p>在HDMI 2.1开源支持长期被HDMI论坛阻碍之后，AMD发布了AMDGPU补丁以支持HDMI 2.1 FRL，作为在AMD Linux驱动中实现完整HDMI 2.1功能的一部分，随后又增加了HDMI 2.1显示流压缩（DSC）支持。现在，AMDGPU HDMI 2.1支持的最新进展是启用自动低延迟模式（ALLM）以及HDMI可变刷新率（VRR）！</p><p>今天，AMD发布了补丁，用于在AMDGPU Linux驱动中启用HDMI 2.1的自动低延迟模式。HDMI ALLM允许您的计算机（或游戏系统）通知显示设备开启“游戏模式”，以优化更快的游戏速度。其目的是减少延迟和卡顿，为现代电视/显示器提供更快的游戏体验。</p><p>通过AMDGPU驱动补丁，当用户空间请求将内容类型设置为“游戏”时，或启用“游戏VRR”可变刷新率时，HDMI 2.1 ALLM将被启用。</p><p>另一个令人兴奋的元素是HDMI 2.1 VRR支持，而DisplayPort VRR早已得到AMDGPU驱动的支持。对于使用AMD Radeon显卡的Linux游戏玩家来说，这又是一个激动人心的里程碑，他们终于可以享受HDMI 2.1 VRR了。</p><p>这些补丁现已提交至邮件列表进行审查。不过，距离DRM-Next的截止时间已经很近，以决定是否将其纳入即将到来的Linux v7.3合并窗口，因此我们将拭目以待，看它能否在8月下旬的下一个内核周期中落地，还是会被推迟到v7.4。无论如何，看到AMDGPU HDMI 2.1支持逐步完善，真是太好了。</p><p>旧款AMD GPU的DRM格式修饰符将随Linux 7.3到来：感谢Valve</p><p>Valve赞助将开源RADV驱动移植到Windows的工作</p><p>AMD Linux图形驱动为Apple Studio Display准备修复</p><p>AMD为Linux 7.3准备更多图形驱动改进</p><p>Linux 7.3为现代AMD APU启用第二图形管道</p><p>AMD在Linux上启用CACP功能以实现更大的OLED省电</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动及其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>Valve赞助将开源RADV驱动移植到Windows的工作</p><p>“KVM电锯”预计将进入Linux 7.3以处理God数据结构</p><p>Fedora 45 Atomic桌面版考虑允许基于Web的远程安装</p><p>Kiwi菜单继续为GNOME带来macOS风格</p><p>AMD P-State Linux驱动补丁可将1%低帧率游戏性能提升31%</p><p>Lemonade 11.5本地AI服务器发布，附带完整的Lemonade路由器</p><p>libx11-compat正在致力于在SDL之上实现Xlib，以支持Wayland、macOS和Android</p><p>Ubuntu Linux计划移除/etc/debian_version历史遗留文件</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12906" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/AMDGPU-HDMI-2.1-ALLM" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

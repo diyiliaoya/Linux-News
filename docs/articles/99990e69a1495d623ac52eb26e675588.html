@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：NethSecurity 8.8.0 — Linux 中文速报</title>
+<title>Linux 7.3 将把英特尔 Nova Lake S 显卡视为稳定版 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：NethSecurity 8.8.0</h1>
+  <h1>Linux 7.3 将把英特尔 Nova Lake S 显卡视为稳定版</h1>
 
-  <div class="article-summary">NethSecurity 8.8.0 发布，这是一个基于 OpenWRT 的防火墙发行版的主要更新。新版本基于 OpenWrt 25.12.5，Linux 内核升级至 6.12，包管理器从 opkg 切换为 apk，并更新了 OpenVPN 2.7.4、IPsec/strongSwan 6.0.3 等关键组件，修复了大量安全漏洞，提升了稳定性、兼容性和硬件支持。</div>
+  <div class="article-summary">Linux 7.3 内核即将把英特尔下一代 Nova Lake S 处理器的集成显卡视为稳定，默认启用，不再需要 force_probe 模块参数。该补丁已包含在 drm-xe-next 的最终拉取请求中，并附带多项修复和改进。对于希望在 Linux 上使用 Nova Lake S 集成显卡的用户，Linux 7.3 将成为最低安全版本。</div>
 
-  <div class="article-body"><p>发行版发布：NethSecurity 8.8.0</p><p>Davide Marini 宣布发布 NethSecurity 8.8.0，这是该项目基于 OpenWRT 的防火墙发行版的一个重大更新，具备多 WAN、深度包检测、VPN 和威胁防护功能。它主要面向中小型企业：</p><p>“我们很高兴宣布 NethSecurity 8.8.0 的发布。此版本是一个重大的平台更新：NethSecurity 8.8.0 基于 OpenWrt 25.12.5，而 8.7.2 版本基于 24.10.5。此次基础重构引入了对系统、内核、主要网络和 VPN 组件的重大更新，以及大量安全修复。NethSecurity 8.8.0 引入了系统基础的重大更新，包括：Linux 内核更新至 6.12 版本；更新了许多系统和网络组件；从 opkg 包管理器切换至新的 apk 包管理器；OpenVPN 更新至 2.7.4 版本；IPsec/strongSwan 更新至 6.0.3 版本；修复了基础组件、内核、网络服务和系统库中的大量漏洞；在稳定性、兼容性和硬件支持方面进行了全面改进。新的包管理器是最重要的变化之一：apk 取代 opkg 成为包管理系统。”</p><p>有关变更列表和截图的完整信息，请访问官方发布页面。</p><p>下载链接：nethsecurity-8.8.0-x86-64-generic-squashfs-combined-efi.img.gz</p><p>近期相关新闻与发布：</p><p>- 发行版发布：NethSecurity 8.8.0</p><p>- 发行版发布：NethSecurity 8.3</p><p>- 发行版发布：NethSecurity 8.1</p><p>- 发行版发布：NethSecurity 8.0</p><p>- 更多 NethSecurity 新闻...</p><p>NethSecurity 是一个功能齐全的开源 Linux 防火墙，只需几次点击即可简化网络安全部署。NethSecurity 是 NethServer 项目的衍生版本。它将多种安全功能整合到一个平台中，包括防火墙、入侵检测与防御、防病毒等。</p></div>
+  <div class="article-body"><p>Linux 7.3 将把英特尔 Nova Lake S 显卡视为稳定版 - Phoronix</p><p>Linux 7.3 将把英特尔 Nova Lake S 显卡视为稳定版</p><p>发布于 2026 年 7 月 30 日下午 5:10（美国东部时间）。</p><p>在预计于 2027 年初开始推出的下一代英特尔 Nova Lake 处理器之前，即将到来的 Linux 7.3 内核周期将开始将 Nova Lake S 处理器及其集成显卡视为稳定。</p><p>英特尔软件工程师数月来一直在上游提交 Xe3P 显卡支持，其中包括 Nova Lake 的集成显卡。主线内核中已有实验性的 Nova Lake 集成显卡支持，但在现有内核中，需要使用 Intel 显卡 PCI 设备 ID 的 &quot;force_probe=&quot; 模块参数手动启用该支持。但从 Linux 7.3 开始，Nova Lake S 显卡将被视为稳定，并默认启用。</p><p>移除 NVL-S 的 &quot;force_probe&quot; 要求的补丁仅说明：</p><p>&quot;NVL-S 已足够稳定，我们可以移除 force_probe 要求。让我们这样做。&quot;</p><p>该补丁是最终 drm-xe-next 拉取请求的一部分，该请求中的新内容现已提交到 DRM-Next，为下个月的 Linux 7.3 合并窗口做准备。除了默认启用 NVL-S 显卡外，还有各种新的工作区、GuC 更新、RAS 改进和其他修复。</p><p>因此，在未来几个月内，如果希望在 Linux 上使用 Nova Lake S 集成显卡，Linux 7.3 将是安全的最低基础版本。</p><p>已提交补丁以改进英特尔 Alchemist GPU 上的 Linux 媒体加速</p><p>英特尔媒体驱动与 VPL GPU 运行时 2026Q2 更新继续为 Nova Lake 做准备</p><p>Linux 7.3 中英特尔显卡驱动对 Xe3 &quot;峰值带宽阈值&quot; 功能的支持</p><p>英特尔定向封装级热中断计划于 Linux 7.3 中实现</p><p>英特尔计算运行时继续构建令人兴奋的 &quot;LEO&quot;</p><p>冷重置恢复功能将更好地帮助 Linux 上的英特尔 GPU</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、显卡驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>Valve 赞助将开源 RADV 驱动移植到 Windows 的工作</p><p>&quot;KVM 电锯&quot; 预计将在 Linux 7.3 中用于处理 God 数据结构</p><p>Fedora 45 Atomic 桌面考虑允许基于 Web 的远程安装</p><p>Kiwi 菜单继续将 macOS 风格带入 GNOME</p><p>AMD P-State Linux 驱动补丁可将 1% 低帧率游戏性能提升 31%</p><p>Lemonade 11.5 本地 AI 服务器发布，附带完整的 Lemonade 路由器</p><p>libx11-compat 正在努力在 Wayland、macOS、Android 上实现基于 SDL 的 Xlib</p><p>Ubuntu Linux 考虑移除 /etc/debian_version 历史遗留文件</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12906" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-Intel-NVL-S-Stable" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

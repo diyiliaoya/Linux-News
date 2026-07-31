@@ -4904,5 +4904,137 @@
     "title_zh": "Raspberry Pi Imager 2.0.10 新增 Pi Connect 以支持组织管理",
     "summary_zh": "Raspberry Pi Imager 2.0.10 版本发布，新增 Pi Connect 功能，为组织用户提供更强大的支持。该工具可帮助用户更高效地管理项目，简化部署流程。",
     "fulltext_zh": "探索 Raspberry Pi Imager 2.0.10，该版本引入了 Pi Connect，以增强组织支持。立即使用这一强大工具，简化您的项目流程。\n\n本文《Raspberry Pi Imager 2.0.10 Adds Pi Connect for Organization Support》最初发表于 Linux Today。"
+  },
+  "b0fa34484485df976eeeac2e761d005f": {
+    "id": "b0fa34484485df976eeeac2e761d005f",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/keychron-zgm-mouse-firmware/",
+    "title_en": "Keychron Built Open Source Firmware for Gaming Mice, and Linux Users Stand to Gain the Most",
+    "summary_en": "Built on Zephyr RTOS and licensed under GPL-3.0, the firmware is scheduled to ship first on the Keychron G6 HE next year.",
+    "pub_date": "Thu, 30 Jul 2026 16:42:42 GMT",
+    "title_zh": "Keychron为游戏鼠标打造开源固件，Linux用户获益最大",
+    "summary_zh": "Keychron推出了名为ZGM的开源固件项目，专为游戏鼠标设计，基于Zephyr RTOS并采用GPL-3.0许可。该固件将首先搭载于2027年发布的Keychron G6 HE鼠标上。目前项目处于早期阶段，仅有规划文件，但计划逐步完善为完整的Zephyr固件，支持有线、无线连接及多种硬件配置。Linux用户因缺乏官方鼠标配置软件而长期依赖社区逆向工程，ZGM的开源特性有望改变这一现状。",
+    "fulltext_zh": "Keychron为游戏鼠标打造开源固件，Linux用户获益最大\n\n基于Zephyr RTOS并采用GPL-3.0许可，该固件计划于明年率先搭载于Keychron G6 HE鼠标。\n\nKeychron推出了ZGM（Zephyr Gaming Mouse的缩写），一个专为游戏鼠标设计的开源固件项目。ZGM基于Zephyr RTOS，与键盘领域已有的ZMK固件使用相同的实时操作系统。在项目公告中，Keychron将此次发布描述为一种理念而非营销角度，并表示：“开源对我们来说不是营销，而是默认选择。”\n\n键盘有QMK，有ZMK。鼠标呢？什么都没有。🔒\n市面上每款游戏鼠标运行的固件，你无法阅读、无法审计、无法修改。\n所以我们自己动手构建。\nZGM——Zephyr游戏鼠标。开源游戏鼠标固件，将于2027年第一季度推出。G6 HE将搭载……\n— Keychron (@KeychronMK)\n\n该固件将与G6 HE一同首发，发布时间窗口在2027年1月至3月之间。\n\nZGM不是鼠标，也不是驱动或购买后安装的第三方工具。它是直接运行在鼠标硬件上的固件，只有基于它构建的设备才能运行。\n\nG6 HE是首款确认搭载的设备，更广泛的采用取决于其他制造商是否选择围绕它进行开发。该项目采用GPL-3.0许可发布，任何人都可以检查代码、修改代码或将其分叉用于自己的硬件。\n\n目前，该项目处于非常早期的开发阶段，仓库中主要包含项目框架和政策文件。Keychron表示，固件源码、板级支持和刷写指南仍在准备中。\n\n计划是让该项目发展成完整的基于Zephyr的固件，包含针对不同硬件变体的配置层，以及传感器、按钮、滚轮和灯光的集成。\n\n有线支持预计将首先实现，无线支持随后跟进，同时还会提供构建说明、示例硬件目标和延迟及可靠性测试指南。\n\n这只是ZGM网站的占位图。\n\nKeychron计划支持Zephyr已兼容的芯片，以及游戏鼠标中使用的传感器、按钮、滚轮和灯光。无线版本的电池管理也在计划之中。\n\n路线图从项目当前状态开始，然后转向构建实际固件。之后是让按钮、滚动和传感器工作，接着是支持有线鼠标的基本USB功能。\n\n后续步骤涵盖不同的硬件配置、延迟和稳定性测试，最终实现无线支持和更多自定义功能。该外设制造商表示，这目前只是初步计划，并非固定时间表。\n\nKeychron已经围绕QMK和ZMK构建键盘，并且正朝着这些方向推进。这两款固件都证明了开源软件可以通过多年的社区开发提供深度自定义和长期可靠性。\n\n如前所述，ZMK已经运行在ZGM所使用的同一Zephyr基础上，这可能影响了Keychron选择在其上构建新鼠标固件，而不是从零开始。\n\n话虽如此，ZGM要赶上这两个项目还有很长的路要走。QMK和ZMK都积累了多年的贡献、文档和支持的硬件，而ZGM的仓库目前只有规划材料。\n\nLinux用户从中获益\n\n游戏和生产力鼠标很少提供官方Linux支持。大多数外设制造商只为其配置软件提供Windows和macOS版本，导致按钮、DPI档位和灯光配置文件被锁定在从未发布Linux版本的应用程序中。\n\nLinux用户只能依赖社区项目对这些设备进行逆向工程，即便如此，支持范围也仅限于有人愿意记录的协议。\n\n我个人使用两款罗技鼠标，一款是MX Master 3S，另一款是随MX Keys套装附带的无线鼠标，两者在Linux上都没有官方软件支持。"
+  },
+  "6e94070f9b84b4fdb16fdfbbaafbf117": {
+    "id": "6e94070f9b84b4fdb16fdfbbaafbf117",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/gcc-bans-ai-code/",
+    "title_en": "GCC Compiler Bans AI Code Contribution But Sensibly",
+    "summary_en": "The GCC Steering Committee adopted a new AI policy this week, with a review planned for early 2027.",
+    "pub_date": "Thu, 30 Jul 2026 09:10:17 GMT",
+    "title_zh": "GCC 编译器禁止 AI 代码贡献，但方式合理",
+    "summary_zh": "GCC 指导委员会本周通过了新的 AI 政策，计划于 2027 年初进行审查。该政策规定，若贡献具有法律意义且部分内容源自大型语言模型，GCC 将不予接受。但允许维护者接受法律意义不大的 AI 生成贡献，前提是明确标记并符合项目标准。测试用例可豁免。政策仅适用于 GCC 本身，从其他项目导入的代码不受影响。AI 辅助贡献需在提交信息中添加“AI”标签。该政策比 Codeberg 的全面禁令更宽松，但比 Linux 内核的披露政策更严格。",
+    "fulltext_zh": "GCC 指导委员会本周通过了新的 AI 政策，计划于 2027 年初进行审查。\n\n开源项目在 AI 问题上大多分为两派。一派保持人工参与，允许贡献者使用任何工具，只要他们对结果负责。另一派则更进一步，完全禁止 AI 生成的贡献，无论由谁审查。\n\nGCC 现已表态，倾向于更严格的阵营。它是构建 GNU 和 Linux 系统软件的核心编译器，因此其对 AI 的立场影响远超其自身仓库。GCC 指导委员会决定拒绝其所谓的“AI 生成”贡献，我们稍后将详细解读这一术语。\n\n嗯，是也不是。GCC 指导委员会引入了一条核心规则：如果贡献具有法律意义，且任何部分可追溯到大型语言模型，GCC 将不予接受。\n\n他们所指的“法律意义”遵循 GNU 维护者指南的定义，即约 15 行代码或文本，这是版权实际适用的临界点。较小的编辑本身不算，但同一人提交的足够多的小编辑累积起来也可能达到该标准。\n\n不过，对于某些用例有一定余地。GCC 维护者仍可接受法律意义不大的 AI 生成贡献，只要它们被明确标记并符合项目通常的贡献标准。测试用例也可豁免，即使是通常算作具有法律意义的测试用例，仍可由 AI 生成。该政策本身仅涵盖 GCC。为方便或满足依赖而从其他项目导入的任何代码均不在其范围内。\n\n除此之外，任何 AI 辅助贡献现在都需要在提交信息中添加“AI”标签，类似于 Linux 内核今年早些时候采用的做法。\n\n这些都不涉及贡献者如何在工作之余使用 AI。屏幕阅读器、翻译工具、拼写和语法辅助、研究、漏洞排查和补丁审查均不受限制，前提是提交给 GCC 的实际输出本身并非 AI 生成。\n\nGCC 指导委员会预计该政策将随着社区反馈以及整个 GNU 项目对 AI 的总体立场而持续演变。下一次审查定于 2027 年初进行。\n\n上周，Codeberg 采取了激进路线，其成员以 358 票对 144 票通过决议，禁止主要基于 AI 生成代码的项目，并正式排除在用户数据或代码上训练 AI 模型。他们将 AI 爬虫造成的服务器压力、不断攀升的硬件成本以及日益堆积的低质量 AI 生成贡献视为该决定的主要推动因素。\n\nLinux 内核则在今年年初采取了不同做法，采用了“披露”政策。在此政策下，贡献者可以使用任何 AI 工具，但必须披露使用了哪种工具，回答有关其提交的问题，并对结果承担全部责任。\n\nGCC 的政策更接近 Codeberg 的做法，但并未走向全面禁令。GCC 保留了 Codeberg 规则所没有的狭窄入口，仍允许小规模、明确标记的 AI 贡献，而 Codeberg 的项目级禁令则不允许。\n\n喜欢这篇更新吗？支持独立的 Linux 新闻报道。\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。\n\n一次付费，永久享受。\n\n任意金额，无需承诺。\n\n一位热爱开源软件、定制 PC 组装、赛车运动并探索这个世界无限可能的极客。\n\nKeychron 为游戏鼠标构建开源固件，Linux 用户受益最大。\n\n游戏玩家好消息！GOG 正式登陆 Linux。\n\nUbuntu 现在有了滚动发布模式！但并非针对该发行版本身。\n\nGrapheneOS 的隐私功能刚刚成为联邦起诉的依据。\n\nOpenUK 希望英国停止免费赠送开源成果。\n\n成为更好的 Linux 用户。\n\n使用 FOSS。"
+  },
+  "99990e69a1495d623ac52eb26e675588": {
+    "id": "99990e69a1495d623ac52eb26e675588",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.3-Intel-NVL-S-Stable",
+    "title_en": "Linux 7.3 Will Treat Intel Nova Lake S Graphics As Stable",
+    "summary_en": "Ahead of the next-generation Intel Nova Lake processors expected to begin rolling out around the start of 2027, the upcoming Linux 7.3 kernel cycle is going to begin treating Nova Lake S processors with their integrated graphics as stable...",
+    "pub_date": "Thu, 30 Jul 2026 17:10:00 -0400",
+    "title_zh": "Linux 7.3 将把英特尔 Nova Lake S 显卡视为稳定版",
+    "summary_zh": "Linux 7.3 内核即将把英特尔下一代 Nova Lake S 处理器的集成显卡视为稳定，默认启用，不再需要 force_probe 模块参数。该补丁已包含在 drm-xe-next 的最终拉取请求中，并附带多项修复和改进。对于希望在 Linux 上使用 Nova Lake S 集成显卡的用户，Linux 7.3 将成为最低安全版本。",
+    "fulltext_zh": "Linux 7.3 将把英特尔 Nova Lake S 显卡视为稳定版 - Phoronix\nLinux 7.3 将把英特尔 Nova Lake S 显卡视为稳定版\n发布于 2026 年 7 月 30 日下午 5:10（美国东部时间）。\n\n在预计于 2027 年初开始推出的下一代英特尔 Nova Lake 处理器之前，即将到来的 Linux 7.3 内核周期将开始将 Nova Lake S 处理器及其集成显卡视为稳定。\n\n英特尔软件工程师数月来一直在上游提交 Xe3P 显卡支持，其中包括 Nova Lake 的集成显卡。主线内核中已有实验性的 Nova Lake 集成显卡支持，但在现有内核中，需要使用 Intel 显卡 PCI 设备 ID 的 \"force_probe=\" 模块参数手动启用该支持。但从 Linux 7.3 开始，Nova Lake S 显卡将被视为稳定，并默认启用。\n\n移除 NVL-S 的 \"force_probe\" 要求的补丁仅说明：\n\n\"NVL-S 已足够稳定，我们可以移除 force_probe 要求。让我们这样做。\"\n\n该补丁是最终 drm-xe-next 拉取请求的一部分，该请求中的新内容现已提交到 DRM-Next，为下个月的 Linux 7.3 合并窗口做准备。除了默认启用 NVL-S 显卡外，还有各种新的工作区、GuC 更新、RAS 改进和其他修复。\n\n因此，在未来几个月内，如果希望在 Linux 上使用 Nova Lake S 集成显卡，Linux 7.3 将是安全的最低基础版本。\n\n已提交补丁以改进英特尔 Alchemist GPU 上的 Linux 媒体加速\n英特尔媒体驱动与 VPL GPU 运行时 2026Q2 更新继续为 Nova Lake 做准备\nLinux 7.3 中英特尔显卡驱动对 Xe3 \"峰值带宽阈值\" 功能的支持\n英特尔定向封装级热中断计划于 Linux 7.3 中实现\n英特尔计算运行时继续构建令人兴奋的 \"LEO\"\n冷重置恢复功能将更好地帮助 Linux 上的英特尔 GPU\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、显卡驱动等主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nValve 赞助将开源 RADV 驱动移植到 Windows 的工作\n\"KVM 电锯\" 预计将在 Linux 7.3 中用于处理 God 数据结构\nFedora 45 Atomic 桌面考虑允许基于 Web 的远程安装\nKiwi 菜单继续将 macOS 风格带入 GNOME\nAMD P-State Linux 驱动补丁可将 1% 低帧率游戏性能提升 31%\nLemonade 11.5 本地 AI 服务器发布，附带完整的 Lemonade 路由器\nlibx11-compat 正在努力在 Wayland、macOS、Android 上实现基于 SDL 的 Xlib\nUbuntu Linux 考虑移除 /etc/debian_version 历史遗留文件\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "1efcbea0fc83708ee664ddcf55b0aacc": {
+    "id": "1efcbea0fc83708ee664ddcf55b0aacc",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMDGPU-HDMI-2.1-ALLM",
+    "title_en": "AMD Posts Linux Patches For HDMI 2.1 Auto Low-Latency Mode \"ALLM\" & VRR",
+    "summary_en": "Following AMD posting AMDGPU patches for HDMI 2.1 FRL support after the HDMI 2.1 open-source support was long blocked by the HDMI Forum, as part of working toward a complete HDMI 2.1 implementation in this AMD Linux driver it was followed by HDMI 2.1 Display Stream Compression (DSC) support. Now the latest on the AMDGPU HDMI 2.1 enabling path is enabling Auto Low-Latency Mode (ALLM) as well as HDMI Variable Rate Refresh!..",
+    "pub_date": "Thu, 30 Jul 2026 14:36:07 -0400",
+    "title_zh": "AMD发布Linux补丁，支持HDMI 2.1自动低延迟模式“ALLM”与VRR",
+    "summary_zh": "AMD近日为Linux内核的AMDGPU驱动程序发布了新补丁，旨在启用HDMI 2.1的自动低延迟模式（ALLM）和可变刷新率（VRR）支持。此前，HDMI 2.1的开源支持因HDMI论坛的阻碍而长期受限，但AMD已逐步推进，包括显示流压缩（DSC）支持。此次补丁将允许用户在游戏场景下自动启用电视或显示器的“游戏模式”，减少延迟，提升游戏体验。同时，HDMI VRR的加入也为Linux游戏玩家带来了更流畅的画面。补丁已提交至邮件列表审查，有望进入Linux 7.3或7.4内核。",
+    "fulltext_zh": "AMD发布Linux补丁，支持HDMI 2.1自动低延迟模式“ALLM”与VRR - Phoronix\n\nAMD发布Linux补丁，支持HDMI 2.1自动低延迟模式“ALLM”与VRR\n\n发布于2026年7月30日下午2:36（美国东部时间）。\n\n在HDMI 2.1开源支持长期被HDMI论坛阻碍之后，AMD发布了AMDGPU补丁以支持HDMI 2.1 FRL，作为在AMD Linux驱动中实现完整HDMI 2.1功能的一部分，随后又增加了HDMI 2.1显示流压缩（DSC）支持。现在，AMDGPU HDMI 2.1支持的最新进展是启用自动低延迟模式（ALLM）以及HDMI可变刷新率（VRR）！\n\n今天，AMD发布了补丁，用于在AMDGPU Linux驱动中启用HDMI 2.1的自动低延迟模式。HDMI ALLM允许您的计算机（或游戏系统）通知显示设备开启“游戏模式”，以优化更快的游戏速度。其目的是减少延迟和卡顿，为现代电视/显示器提供更快的游戏体验。\n\n通过AMDGPU驱动补丁，当用户空间请求将内容类型设置为“游戏”时，或启用“游戏VRR”可变刷新率时，HDMI 2.1 ALLM将被启用。\n\n另一个令人兴奋的元素是HDMI 2.1 VRR支持，而DisplayPort VRR早已得到AMDGPU驱动的支持。对于使用AMD Radeon显卡的Linux游戏玩家来说，这又是一个激动人心的里程碑，他们终于可以享受HDMI 2.1 VRR了。\n\n这些补丁现已提交至邮件列表进行审查。不过，距离DRM-Next的截止时间已经很近，以决定是否将其纳入即将到来的Linux v7.3合并窗口，因此我们将拭目以待，看它能否在8月下旬的下一个内核周期中落地，还是会被推迟到v7.4。无论如何，看到AMDGPU HDMI 2.1支持逐步完善，真是太好了。\n\n旧款AMD GPU的DRM格式修饰符将随Linux 7.3到来：感谢Valve\nValve赞助将开源RADV驱动移植到Windows的工作\nAMD Linux图形驱动为Apple Studio Display准备修复\nAMD为Linux 7.3准备更多图形驱动改进\nLinux 7.3为现代AMD APU启用第二图形管道\nAMD在Linux上启用CACP功能以实现更大的OLED省电\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动及其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nValve赞助将开源RADV驱动移植到Windows的工作\n“KVM电锯”预计将进入Linux 7.3以处理God数据结构\nFedora 45 Atomic桌面版考虑允许基于Web的远程安装\nKiwi菜单继续为GNOME带来macOS风格\nAMD P-State Linux驱动补丁可将1%低帧率游戏性能提升31%\nLemonade 11.5本地AI服务器发布，附带完整的Lemonade路由器\nlibx11-compat正在致力于在SDL之上实现Xlib，以支持Wayland、macOS和Android\nUbuntu Linux计划移除/etc/debian_version历史遗留文件\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "c84a5b74debc8a8833668931d2f110e2": {
+    "id": "c84a5b74debc8a8833668931d2f110e2",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Unigine-Engine-3-Rideshare",
+    "title_en": "There's Finally A New Game Powered By The Unigine 2 Engine",
+    "summary_en": "It's been about a decade since seeing any new games released on the visually-impressive, Linux-friendly Unigine Engine. Unigine Corp has mostly been focusing on Unigine Engine usage for simulations and other professional applications, but coming as a surprise today is a new game being developed on their latest Unigine 2 engine technology...",
+    "pub_date": "Thu, 30 Jul 2026 13:30:00 -0400",
+    "title_zh": "终于有一款基于Unigine 2引擎的新游戏问世",
+    "summary_zh": "Unigine公司多年来专注于模拟和专业应用，但近日意外宣布了一款基于其最新Unigine 2引擎的新游戏《Rideshare Stimulator》。该游戏由Unigine Studio开发，Saber Interactive发行，是一款沉浸式驾驶模拟游戏，玩家将扮演拼车业务的司机和老板。游戏尚未发布，目前仅列出Windows 11平台，但Unigine 2官方支持Linux，即使没有原生Linux版本，也可通过Steam Play运行。",
+    "fulltext_zh": "距离上一款基于视觉效果惊艳且对Linux友好的Unigine引擎的游戏发布已经过去了大约十年。Unigine公司主要专注于将Unigine引擎用于模拟和其他专业应用，但今天令人意外的是，一款基于其最新Unigine 2引擎技术的新游戏正在开发中。\n\n这款游戏由Unigine Studio开发，Saber Interactive发行，名为《Rideshare Stimulator》，是一款沉浸式驾驶游戏。这款独特的游戏设定是，你扮演拼车业务的司机和老板。这是一款相当独特的游戏。\n\n该游戏尚未发布，目前列在“即将推出”的列表中。最初的列表至少是针对Windows 11的。虽然Unigine 2在Linux上得到官方支持，但即使这款游戏没有官方Linux版本，至少还有Steam Play可以运行。\n\n对这款游戏感兴趣的人可以在以下链接了解更多关于《Rideshare Stimulator》的信息：\n\nSDL获得HDR10渲染支持\nD7VK 2.0发布，带来一些不错的性能改进：最高可达2倍或更多\nD7VK自诞生以来在Linux上对旧版Direct3D的性能提升\nDXVK 3.0.1发布，包含更多游戏修复和其他改进\nTLAC旨在成为内核级反作弊系统的开源替代品\nDXVK 3.0发布，支持DXBC-SPIRV着色器编译，默认启用描述符堆\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动和其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nValve赞助将开源RADV驱动带到Windows的工作\n“KVM电锯”预计将进入Linux 7.3，用于处理God数据结构\nFedora 45 Atomic桌面版计划允许基于Web的远程安装\nKiwi菜单继续为GNOME带来macOS风格\nAMD P-State Linux驱动补丁可将1%低帧率游戏性能提升31%\nLemonade 11.5本地AI服务器发布，附带完整的Lemonade路由器\nlibx11-compat正在致力于在SDL之上实现Xlib，以支持Wayland、macOS和Android\nUbuntu Linux计划移除/etc/debian_version这一历史遗留文件\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "9477d939f40e3a83df19d2a0a7bf1e4f": {
+    "id": "9477d939f40e3a83df19d2a0a7bf1e4f",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Open-Programmable-OPI-DPU-IPU",
+    "title_en": "OPI Abstraction v0.1 Published With Aiming To Standardize DPU/IPU Ecosystems",
+    "summary_en": "The Linux Foundation hosted Open Programmable Infrastructure \"OPI\" announced its first coordinated release with OPI Abstraction v0.1. The work of the Open Programmable Infrastructure is hoping to standardize the data processing unit (DPU) and infrastructure processing unit (IPU) ecosystems...",
+    "pub_date": "Thu, 30 Jul 2026 13:05:56 -0400",
+    "title_zh": "OPI Abstraction v0.1 发布，旨在标准化 DPU/IPU 生态系统",
+    "summary_zh": "Linux 基金会主办的开放可编程基础设施（OPI）项目发布了首个协调版本 OPI Abstraction v0.1，旨在标准化数据处理单元（DPU）和基础设施处理单元（IPU）生态系统。该版本包含一个跨 26 个存储库的厂商中立 API 层，是使 IPU 和 DPU 基础设施更易于消费、集成和扩展的第一步。初始重点是与 Nginx、Intel 和 Red Hat 合作开发的 Kubernetes 网络功能卸载蓝图，作为生产级部署模式。",
+    "fulltext_zh": "OPI Abstraction v0.1 发布，旨在标准化 DPU/IPU 生态系统 - Phoronix\n\nOPI Abstraction v0.1 发布，旨在标准化 DPU/IPU 生态系统\n\n2026 年 7 月 30 日，美国东部时间下午 1:05。\n\nLinux 基金会主办的开放可编程基础设施（OPI）项目宣布了其首个协调版本 OPI Abstraction v0.1。开放可编程基础设施的工作旨在标准化数据处理单元（DPU）和基础设施处理单元（IPU）生态系统。\n\n开放可编程基础设施抽象 v0.1 是使 IPU 和 DPU 基础设施更易于消费、集成和扩展的第一步。它包含一个跨 26 个存储库的厂商中立 API 层。\n\n开放可编程基础设施的初始重点围绕 Kubernetes 网络功能卸载蓝图，这是由 Nginx、Intel 和 Red Hat 开发的生产级部署模式。\n\n那些希望了解更多关于这项开放可编程基础设施工作以帮助标准化 DPU/IPU 生态系统的人，可以通过今天的公告和项目网站了解更多信息。\n\nKhronos 列出首个符合 OpenCL 3.1 的实现：Apple M1/M2 在 Asahi Linux 上使用 Rusticl\n\nKhronos 发布 glTF 2.1，使这一 3D 资产标准更好地适用于大型场景\n\nAV2 v1.0 规范发布，用于下一代视频编码\n\nOpenCL 3.1.1 发布，以解决可能的性能回归问题\n\n用于嵌入式 Linux 系统的 Flattened Image Tree 1.0 规范\n\nPCIe 8.0 规范草案 0.5 发布，支持 1TB/s 双向 x16 带宽\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动程序和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他。\n\nValve 赞助将开源 RADV 驱动带到 Windows 的工作\n\n预计 \"KVM Chainsaw\" 将进入 Linux 7.3，以处理 God 数据结构\n\nFedora 45 Atomic Desktops 考虑允许基于 Web 的远程安装\n\nKiwi Menu 继续为 GNOME 带来 macOS 风格\n\nAMD P-State Linux 驱动补丁可将 1% 低帧率游戏性能提升 31%\n\nLemonade 11.5 本地 AI 服务器发布，完成 Lemonade Router\n\nlibx11-compat 正在努力在 SDL 之上实现 Xlib，以支持 Wayland、macOS、Android\n\nUbuntu Linux 寻求移除 /etc/debian_version 历史遗留文件\n\n在享受无广告浏览的同时，\n\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026\n\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "c28f652ba8b1d38be039189dde3b9969": {
+    "id": "c28f652ba8b1d38be039189dde3b9969",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/nvidia-rtx-5090-laptop-linux",
+    "title_en": "Nouveau vs. NVIDIA R610 On CachyOS With The GeForce RTX 5090 Laptop GPU",
+    "summary_en": "With the Razer Blade 18 as the first laptop Razer's certifying for (Ubuntu) Linux use while testing it out I was predominantly using the NVIDIA R610 official driver stack. Some users were interested though in how well this laptop is working with the open-source, upstream Nouveau+NVK driver stack given Razer is marketing this high-end laptop for Linux use too. Before sending the review unit back I had run some graphics benchmarks to see how Nouveau+NVK was performing for this Razer Blade RZ09-058",
+    "pub_date": "Thu, 30 Jul 2026 11:00:00 -0400",
+    "title_zh": "Nouveau vs. NVIDIA R610 在 CachyOS 上搭配 GeForce RTX 5090 笔记本 GPU 的对比评测",
+    "summary_zh": "Phoronix 对 Razer Blade 18 笔记本进行了 Nouveau+NVK 开源驱动与 NVIDIA 官方 R610 驱动在 GeForce RTX 5090 Laptop GPU 上的性能对比测试。测试在 CachyOS 系统上进行，结果显示官方驱动在性能和功能上仍占优势，尤其是 CUDA、OpenCL、NVENC/NVDEC 以及 Vulkan 光线追踪支持方面。Nouveau+NVK 虽能运行，但存在明显差距，适合对开源驱动有特殊需求的用户。",
+    "fulltext_zh": "Nouveau vs. NVIDIA R610 在 CachyOS 上搭配 GeForce RTX 5090 笔记本 GPU 的评测 - Phoronix\n\nNouveau vs. NVIDIA R610 在 CachyOS 上搭配 GeForce RTX 5090 笔记本 GPU\n发布于 2026年7月30日 上午11:00（美国东部时间）。\n\nRazer Blade 18 是 Razer 首款认证可用于（Ubuntu）Linux 的笔记本电脑。在测试过程中，我主要使用了 NVIDIA R610 官方驱动栈。但一些用户对这款笔记本在开源、上游 Nouveau+NVK 驱动栈下的表现感兴趣，因为 Razer 也将这款高端笔记本定位为 Linux 使用。在归还评测样机之前，我运行了一些图形基准测试，以了解 Nouveau+NVK 在这款搭载旗舰级 GeForce RTX 5090 Laptop GPU 的 Razer Blade RZ09-0582 上的性能表现。\n\n对于那些好奇 NVIDIA GeForce RTX 5090 Laptop GPU 在 NVIDIA 官方 R610 驱动与开源、上游 Nouveau 内核驱动搭配 Mesa NVK Vulkan 驱动之间性能差异的用户，这轮基准测试正好回答了这个问题。在 CachyOS 系统上测试 Razer Blade 18 时，我使用了 Linux 7.1 内核，并对比了 NVIDIA 610.43.02 官方驱动栈与 Nouveau+NVK 组合（Linux 7.1.3 + Mesa 26.1.4）在滚动发行版上的表现。\n\n提醒一下，Razer Blade 18 RZ09-0582 配备了 Intel Core Ultra 9 290HX Plus 处理器、2×16GB DDR5-6400 内存、2TB Samsung NVMe SSD，以及拥有 24GB 显存的 GeForce RTX 5090 Laptop GPU。\n\n随后，我运行了多种图形基准测试，以了解 Nouveau+NVK 在这款搭载强大 GeForce RTX 5090 Laptop GPU 的高端 Razer 笔记本上的表现。但在展示性能数据之前，需要说明的是，绝大多数使用 GeForce RTX 5090 Laptop GPU 或其他 Blackwell 硬件的用户，最好还是使用 NVIDIA 官方驱动栈。除了性能差异外，许多购买者（截至撰写本文时售价为 5399 美元）是为了 AI/LLM 和开发用途，而如果没有官方驱动栈，将无法使用 CUDA。此外，官方 NVIDIA 驱动栈还提供了 OpenCL 支持以及其他功能，如 NVENC/NVDEC 等。NVK 目前也还不支持 Vulkan 光线追踪，这是不使用官方 NVIDIA Linux 驱动时的另一个显著缺陷。无论如何，由于读者请求和个人好奇心，我在实验室测试这款高端笔记本时，运行了一些全新的 NVIDIA vs. Nouveau 基准测试。\n\nLinux 7.1 助力 Intel Arc Battlemage 显卡性能提升\nROCm 7.0.0 vs. ROCm 7.2.3 在 AMD Radeon AI PRO R9700 上的性能表现\nNouveau vs. NVIDIA R595 Linux 驱动在工作站图形性能上的对比\nIntel Xe2 Lunar Lake Linux 图形性能较过去一年提升约 17%\nKDE Plasma 6.6 在 NVIDIA R595 驱动下频繁展现优于 GNOME 50 的性能\n开源 Nouveau 在 Linux 7.0 + NVK Mesa 26.1-dev 下的性能 vs. NVIDIA Linux 驱动\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "8fd4e580fbf39e9eeed3c4606688934d": {
+    "id": "8fd4e580fbf39e9eeed3c4606688934d",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/linuxiac-weekly-wrap-up-week-25-2026-june-15-21/",
+    "title_en": "Linuxiac Weekly Wrap-Up: Week 25, 2026 (June 15 – 21)",
+    "summary_en": "Stay updated with the latest in the Linux community! Explore key highlights and insights from the Linuxiac Weekly Wrap-Up for June 15-21, 2026.\nThe post Linuxiac Weekly Wrap-Up: Week 25, 2026 (June 15 – 21) appeared first on Linux Today.",
+    "pub_date": "Thu, 30 Jul 2026 12:23:33 +0000",
+    "title_zh": "Linuxiac 每周综述：2026年第25周（6月15日-21日）",
+    "summary_zh": "本文是Linuxiac发布的2026年第25周（6月15日至21日）每周综述，旨在帮助读者快速了解Linux社区的最新动态。文章汇总了本周的重要新闻、技术进展和关键见解，为Linux爱好者和专业人士提供了一份简洁的资讯回顾。内容涵盖社区热点、软件更新及行业趋势，是跟踪Linux生态发展的便捷参考。",
+    "fulltext_zh": "随时了解Linux社区的最新动态！探索Linuxiac 2026年6月15日至21日每周综述中的关键亮点和见解。\n\n该文章最初发布在Linux Today上。"
+  },
+  "bfc2d28fa67b8c4c4f9c174e75e99567": {
+    "id": "bfc2d28fa67b8c4c4f9c174e75e99567",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/miracle-wm-0-10-wayland-compositor-released-with-focus-blur/",
+    "title_en": "Miracle-WM 0.10 Wayland Compositor Released with Focus Blur",
+    "summary_en": "Discover the latest release of Miracle-WM 0.10, featuring an innovative focus blur effect that enhances your Wayland compositing experience.\nThe post Miracle-WM 0.10 Wayland Compositor Released with Focus Blur appeared first on Linux Today.",
+    "pub_date": "Thu, 30 Jul 2026 12:20:01 +0000",
+    "title_zh": "Miracle-WM 0.10 Wayland 合成器发布，新增焦点模糊效果",
+    "summary_zh": "Miracle-WM 0.10 版本正式发布，该版本引入了创新的焦点模糊效果，显著提升了 Wayland 合成体验。此更新旨在为用户提供更流畅、更美观的窗口管理交互，进一步巩固了 Miracle-WM 在 Wayland 合成器领域的竞争力。",
+    "fulltext_zh": "探索 Miracle-WM 0.10 的最新版本，其引入了创新的焦点模糊效果，增强了您的 Wayland 合成体验。\n\n该文章首次发布于 Linux Today。"
+  },
+  "03dd45a708b4ddc6315c0d0309e1da2f": {
+    "id": "03dd45a708b4ddc6315c0d0309e1da2f",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/darktable-5-6-open-source-raw-image-editor-released-with-new-ai-features/",
+    "title_en": "Darktable 5.6 Open-Source RAW Image Editor Released with New AI Features",
+    "summary_en": "Discover Darktable 5.6, the latest open-source RAW image editor, featuring innovative AI tools to enhance your photography workflow.\nThe post Darktable 5.6 Open-Source RAW Image Editor Released with New AI Features appeared first on Linux Today.",
+    "pub_date": "Thu, 30 Jul 2026 12:17:01 +0000",
+    "title_zh": "Darktable 5.6 开源 RAW 图像编辑器发布，带来全新 AI 功能",
+    "summary_zh": "Darktable 5.6 作为最新版开源 RAW 图像编辑器正式发布，引入了创新的 AI 工具，旨在提升摄影工作流程的效率与效果。该版本在原有强大功能基础上，进一步整合人工智能技术，帮助摄影师更智能地处理图像，优化编辑体验。",
+    "fulltext_zh": "探索 Darktable 5.6，这款最新的开源 RAW 图像编辑器，其特色在于引入了创新的 AI 工具，以增强你的摄影工作流程。\n\n该文章最初发表于 Linux Today。"
+  },
+  "a4b1ad6dad8cb0f6d6cf88e6f4f99c07": {
+    "id": "a4b1ad6dad8cb0f6d6cf88e6f4f99c07",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/postmarketos-26-06-alpen-avocado-released-with-gnome-50-and-kde-plasma-6-6/",
+    "title_en": "postmarketOS 26.06 “Alpen Avocado” Released with GNOME 50 and KDE Plasma 6.6",
+    "summary_en": "postmarketOS 26.06 \"Alpen Avocado\" is here! Experience the power of GNOME 50 and KDE Plasma 6.6 with enhanced features and performance improvements.\nThe post postmarketOS 26.06 “Alpen Avocado” Released with GNOME 50 and KDE Plasma 6.6 appeared first on Linux Today.",
+    "pub_date": "Thu, 30 Jul 2026 12:14:31 +0000",
+    "title_zh": "postmarketOS 26.06 “Alpen Avocado” 发布，搭载 GNOME 50 与 KDE Plasma 6.6",
+    "summary_zh": "postmarketOS 26.06 “Alpen Avocado” 正式发布，带来了 GNOME 50 和 KDE Plasma 6.6 的桌面环境支持，并增强了功能与性能表现。该版本面向移动设备，旨在提供更流畅、更现代的 Linux 体验。",
+    "fulltext_zh": "postmarketOS 26.06 “Alpen Avocado” 现已发布！体验 GNOME 50 和 KDE Plasma 6.6 带来的强大功能与性能提升。\n\n该文章最初发表于 Linux Today。"
+  },
+  "a57f9925d9ffde8faddddecabd93dbe9": {
+    "id": "a57f9925d9ffde8faddddecabd93dbe9",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/10-best-free-and-open-source-clipboard-sync-tools/",
+    "title_en": "10 Best Free and Open Source Clipboard Sync Tools",
+    "summary_en": "Explore the best free and open source clipboard sync tools. Boost your efficiency by syncing clipboard content across multiple devices effortlessly.\nThe post 10 Best Free and Open Source Clipboard Sync Tools appeared first on Linux Today.",
+    "pub_date": "Thu, 30 Jul 2026 12:04:09 +0000",
+    "title_zh": "10款最佳免费开源剪贴板同步工具",
+    "summary_zh": "本文介绍了10款最佳的免费开源剪贴板同步工具，这些工具能够帮助用户在多台设备之间无缝同步剪贴板内容，从而提升工作效率。文章涵盖了不同平台和功能的工具，适合不同需求的用户选择。",
+    "fulltext_zh": "探索最佳的免费开源剪贴板同步工具。通过在多台设备之间轻松同步剪贴板内容，提升你的工作效率。\n\n本文首发于Linux Today。"
   }
 }
