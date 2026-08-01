@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GCC 编译器禁止 AI 代码贡献，但方式合理 — Linux 中文速报</title>
+<title>Canonical宣布为Ubuntu ARM64提供实时内核补丁支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">Linux Today</span>
   </div>
 
-  <h1>GCC 编译器禁止 AI 代码贡献，但方式合理</h1>
+  <h1>Canonical宣布为Ubuntu ARM64提供实时内核补丁支持</h1>
 
-  <div class="article-summary">GCC 指导委员会本周通过了新的 AI 政策，计划于 2027 年初进行审查。该政策规定，若贡献具有法律意义且部分内容源自大型语言模型，GCC 将不予接受。但允许维护者接受法律意义不大的 AI 生成贡献，前提是明确标记并符合项目标准。测试用例可豁免。政策仅适用于 GCC 本身，从其他项目导入的代码不受影响。AI 辅助贡献需在提交信息中添加“AI”标签。该政策比 Codeberg 的全面禁令更宽松，但比 Linux 内核的披露政策更严格。</div>
+  <div class="article-summary">Canonical宣布为Ubuntu ARM64架构引入实时内核补丁功能，该功能允许系统在不重启的情况下应用安全补丁，从而确保系统性能不间断并增强安全性。此特性对于需要高可用性的服务器和关键任务环境尤为重要，减少了维护窗口并降低了运营风险。</div>
 
-  <div class="article-body"><p>GCC 指导委员会本周通过了新的 AI 政策，计划于 2027 年初进行审查。</p><p>开源项目在 AI 问题上大多分为两派。一派保持人工参与，允许贡献者使用任何工具，只要他们对结果负责。另一派则更进一步，完全禁止 AI 生成的贡献，无论由谁审查。</p><p>GCC 现已表态，倾向于更严格的阵营。它是构建 GNU 和 Linux 系统软件的核心编译器，因此其对 AI 的立场影响远超其自身仓库。GCC 指导委员会决定拒绝其所谓的“AI 生成”贡献，我们稍后将详细解读这一术语。</p><p>嗯，是也不是。GCC 指导委员会引入了一条核心规则：如果贡献具有法律意义，且任何部分可追溯到大型语言模型，GCC 将不予接受。</p><p>他们所指的“法律意义”遵循 GNU 维护者指南的定义，即约 15 行代码或文本，这是版权实际适用的临界点。较小的编辑本身不算，但同一人提交的足够多的小编辑累积起来也可能达到该标准。</p><p>不过，对于某些用例有一定余地。GCC 维护者仍可接受法律意义不大的 AI 生成贡献，只要它们被明确标记并符合项目通常的贡献标准。测试用例也可豁免，即使是通常算作具有法律意义的测试用例，仍可由 AI 生成。该政策本身仅涵盖 GCC。为方便或满足依赖而从其他项目导入的任何代码均不在其范围内。</p><p>除此之外，任何 AI 辅助贡献现在都需要在提交信息中添加“AI”标签，类似于 Linux 内核今年早些时候采用的做法。</p><p>这些都不涉及贡献者如何在工作之余使用 AI。屏幕阅读器、翻译工具、拼写和语法辅助、研究、漏洞排查和补丁审查均不受限制，前提是提交给 GCC 的实际输出本身并非 AI 生成。</p><p>GCC 指导委员会预计该政策将随着社区反馈以及整个 GNU 项目对 AI 的总体立场而持续演变。下一次审查定于 2027 年初进行。</p><p>上周，Codeberg 采取了激进路线，其成员以 358 票对 144 票通过决议，禁止主要基于 AI 生成代码的项目，并正式排除在用户数据或代码上训练 AI 模型。他们将 AI 爬虫造成的服务器压力、不断攀升的硬件成本以及日益堆积的低质量 AI 生成贡献视为该决定的主要推动因素。</p><p>Linux 内核则在今年年初采取了不同做法，采用了“披露”政策。在此政策下，贡献者可以使用任何 AI 工具，但必须披露使用了哪种工具，回答有关其提交的问题，并对结果承担全部责任。</p><p>GCC 的政策更接近 Codeberg 的做法，但并未走向全面禁令。GCC 保留了 Codeberg 规则所没有的狭窄入口，仍允许小规模、明确标记的 AI 贡献，而 Codeberg 的项目级禁令则不允许。</p><p>喜欢这篇更新吗？支持独立的 Linux 新闻报道。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。</p><p>一次付费，永久享受。</p><p>任意金额，无需承诺。</p><p>一位热爱开源软件、定制 PC 组装、赛车运动并探索这个世界无限可能的极客。</p><p>Keychron 为游戏鼠标构建开源固件，Linux 用户受益最大。</p><p>游戏玩家好消息！GOG 正式登陆 Linux。</p><p>Ubuntu 现在有了滚动发布模式！但并非针对该发行版本身。</p><p>GrapheneOS 的隐私功能刚刚成为联邦起诉的依据。</p><p>OpenUK 希望英国停止免费赠送开源成果。</p><p>成为更好的 Linux 用户。</p><p>使用 FOSS。</p></div>
+  <div class="article-body"><p>Canonical为Ubuntu ARM64架构引入了实时内核补丁功能，该功能允许系统在不中断运行的情况下应用安全更新，从而提升系统性能的连续性和安全性。了解更多关于此特性的信息。</p><p>此文章首发于Linux Today。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/gcc-bans-ai-code/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.linuxtoday.com/blog/canonical-announces-live-kernel-patching-support-for-ubuntu-on-arm64/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

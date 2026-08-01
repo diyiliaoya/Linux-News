@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GCC 编译器禁止 AI 代码贡献，但方式合理 — Linux 中文速报</title>
+<title>AMD开始为RDNA5 GPU提交Display Core Next 6 &quot;DCN6&quot; Linux补丁 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>GCC 编译器禁止 AI 代码贡献，但方式合理</h1>
+  <h1>AMD开始为RDNA5 GPU提交Display Core Next 6 &quot;DCN6&quot; Linux补丁</h1>
 
-  <div class="article-summary">GCC 指导委员会本周通过了新的 AI 政策，计划于 2027 年初进行审查。该政策规定，若贡献具有法律意义且部分内容源自大型语言模型，GCC 将不予接受。但允许维护者接受法律意义不大的 AI 生成贡献，前提是明确标记并符合项目标准。测试用例可豁免。政策仅适用于 GCC 本身，从其他项目导入的代码不受影响。AI 辅助贡献需在提交信息中添加“AI”标签。该政策比 Codeberg 的全面禁令更宽松，但比 Linux 内核的披露政策更严格。</div>
+  <div class="article-summary">AMD在7月底发布了新的AMDGPU显示核心补丁，其中包含多个为下一代显示IP——Display Core Next 6（DCN6）奠定基础的补丁。这些补丁将DCN6与AMD GFX13图形引擎关联，预计用于下一代RDNA5图形处理器。这是DCN6的首次公开提及，其IP版本为6.0.0，接替DCN 4.2.1，但DCN5尚未在驱动中出现。补丁还引入了新的缩放线性度、表面特性、UPSP预缩放器及更多像素格式。RDNA5 GPU预计2027年发布，未来将有更多开源驱动补丁。</div>
 
-  <div class="article-body"><p>GCC 指导委员会本周通过了新的 AI 政策，计划于 2027 年初进行审查。</p><p>开源项目在 AI 问题上大多分为两派。一派保持人工参与，允许贡献者使用任何工具，只要他们对结果负责。另一派则更进一步，完全禁止 AI 生成的贡献，无论由谁审查。</p><p>GCC 现已表态，倾向于更严格的阵营。它是构建 GNU 和 Linux 系统软件的核心编译器，因此其对 AI 的立场影响远超其自身仓库。GCC 指导委员会决定拒绝其所谓的“AI 生成”贡献，我们稍后将详细解读这一术语。</p><p>嗯，是也不是。GCC 指导委员会引入了一条核心规则：如果贡献具有法律意义，且任何部分可追溯到大型语言模型，GCC 将不予接受。</p><p>他们所指的“法律意义”遵循 GNU 维护者指南的定义，即约 15 行代码或文本，这是版权实际适用的临界点。较小的编辑本身不算，但同一人提交的足够多的小编辑累积起来也可能达到该标准。</p><p>不过，对于某些用例有一定余地。GCC 维护者仍可接受法律意义不大的 AI 生成贡献，只要它们被明确标记并符合项目通常的贡献标准。测试用例也可豁免，即使是通常算作具有法律意义的测试用例，仍可由 AI 生成。该政策本身仅涵盖 GCC。为方便或满足依赖而从其他项目导入的任何代码均不在其范围内。</p><p>除此之外，任何 AI 辅助贡献现在都需要在提交信息中添加“AI”标签，类似于 Linux 内核今年早些时候采用的做法。</p><p>这些都不涉及贡献者如何在工作之余使用 AI。屏幕阅读器、翻译工具、拼写和语法辅助、研究、漏洞排查和补丁审查均不受限制，前提是提交给 GCC 的实际输出本身并非 AI 生成。</p><p>GCC 指导委员会预计该政策将随着社区反馈以及整个 GNU 项目对 AI 的总体立场而持续演变。下一次审查定于 2027 年初进行。</p><p>上周，Codeberg 采取了激进路线，其成员以 358 票对 144 票通过决议，禁止主要基于 AI 生成代码的项目，并正式排除在用户数据或代码上训练 AI 模型。他们将 AI 爬虫造成的服务器压力、不断攀升的硬件成本以及日益堆积的低质量 AI 生成贡献视为该决定的主要推动因素。</p><p>Linux 内核则在今年年初采取了不同做法，采用了“披露”政策。在此政策下，贡献者可以使用任何 AI 工具，但必须披露使用了哪种工具，回答有关其提交的问题，并对结果承担全部责任。</p><p>GCC 的政策更接近 Codeberg 的做法，但并未走向全面禁令。GCC 保留了 Codeberg 规则所没有的狭窄入口，仍允许小规模、明确标记的 AI 贡献，而 Codeberg 的项目级禁令则不允许。</p><p>喜欢这篇更新吗？支持独立的 Linux 新闻报道。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。</p><p>一次付费，永久享受。</p><p>任意金额，无需承诺。</p><p>一位热爱开源软件、定制 PC 组装、赛车运动并探索这个世界无限可能的极客。</p><p>Keychron 为游戏鼠标构建开源固件，Linux 用户受益最大。</p><p>游戏玩家好消息！GOG 正式登陆 Linux。</p><p>Ubuntu 现在有了滚动发布模式！但并非针对该发行版本身。</p><p>GrapheneOS 的隐私功能刚刚成为联邦起诉的依据。</p><p>OpenUK 希望英国停止免费赠送开源成果。</p><p>成为更好的 Linux 用户。</p><p>使用 FOSS。</p></div>
+  <div class="article-body"><p>AMD在7月底发布了新的AMDGPU显示核心（DC）补丁。在这次每周补丁例行更新中，最引人注目的是多个补丁开始为Display Core Next 6（DCN6）奠定基础，这是他们的下一代显示IP。这些补丁将DCN6与AMD GFX13图形引擎关联起来，预计该引擎将用于下一代RDNA5图形处理器。</p><p>对于AMDGPU Linux驱动，目前持续进行的工作包括扩展显示代码的KUnit单元测试覆盖范围、一些修复、围绕显示流验证的重构，以及最重大的——启用DCN6支持。</p><p>这些是DCN6的首次公开提及，它是为即将推出的AMD GPU准备的下一代显示逻辑。有趣的是，这个DCN 6.0.0 IP接替了DCN 4.2.1……那么DCN 5在哪里？在今天的补丁中，至少有一处提到了DCN5，但在AMDGPU驱动中尚未发现DCN5的bring-up。我们将看看这是否会到来，也许DCN5用于某些未来的AMD移动平台，而DCN6可能用于桌面显卡。或者，DCN5可能因未知原因被最终跳过。</p><p>这些补丁确实将一些DCN6引用与GC/GFX 13.0.1关联起来，后者被认为是带有GFX13的RDNA5。</p><p>AMD DCN6带来了新的缩放线性度和用于平面的cositing表面特性，UPSP预缩放器可在缩放前对420/422内容进行上采样，以及额外的像素格式和其他底层更改。</p><p>由于RDNA5 GPU预计要到2027年才会推出，我们将看看未来几个月会有哪些更多的开源Linux图形驱动补丁出现。希望在发布之前，我们能看到成熟的开源AMD RDNA5图形驱动支持。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/gcc-bans-ai-code/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/AMD-DCN6-Linux-Start" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

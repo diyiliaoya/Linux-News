@@ -5036,5 +5036,137 @@
     "title_zh": "10款最佳免费开源剪贴板同步工具",
     "summary_zh": "本文介绍了10款最佳的免费开源剪贴板同步工具，这些工具能够帮助用户在多台设备之间无缝同步剪贴板内容，从而提升工作效率。文章涵盖了不同平台和功能的工具，适合不同需求的用户选择。",
     "fulltext_zh": "探索最佳的免费开源剪贴板同步工具。通过在多台设备之间轻松同步剪贴板内容，提升你的工作效率。\n\n本文首发于Linux Today。"
+  },
+  "b25dbf004f3a3cf65fd119811652b8ad": {
+    "id": "b25dbf004f3a3cf65fd119811652b8ad",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/07/starling-ai-built-linux-desktop",
+    "title_en": "Starling is a new Linux desktop built using AI in six months",
+    "summary_en": "Some Linux desktop environments were developed over decades, others in just a few years. Starling, which made the rounds online this week, claims to have been built by just one person in six months using AI coding tools. What&#8217;s more, a preview build is available as a .deb to install on Ubuntu 26.04 LTS. Yup, this isn&#8217;t a ChatGPT mockup but a real working demo. According to the project&#8217;s GitHub and website, a developer used AI to rewrite Flutter&#8217;s framework layer from Dart",
+    "pub_date": "Fri, 31 Jul 2026 11:00:00 +0000",
+    "title_zh": "Starling：一款仅用六个月、借助AI构建的全新Linux桌面",
+    "summary_zh": "Starling是一款全新的Linux桌面环境，据称由一人仅用六个月时间、借助AI工具开发完成。其预览版已提供.deb安装包，支持Ubuntu 26.04 LTS。该桌面采用Flutter框架，通过DRM/KMS直接驱动显示，并实现了零拷贝GPU缓冲区共享。尽管技术上有一定创新，但其界面设计被批评为类似“Temu版macOS Mojave”，且宣传文案充满空洞的AI生成内容。项目声称是“首个由AI编写的桌面”，但评论认为其独特性有限，更多是现有技术的拼凑。",
+    "fulltext_zh": "Starling是一款全新的Linux桌面环境，据称仅用六个月时间、由一人借助AI构建完成。\n\n本周在网络上流传的Starling，声称仅由一人使用AI工具在六个月内构建而成。更令人惊讶的是，其预览版已提供.deb安装包，可安装于Ubuntu 26.04 LTS。没错，这并非ChatGPT的模拟图，而是一个真实可用的演示版本。\n\n开发者利用AI将Flutter的框架层从Dart重写为Swift，同时保留了其C++渲染引擎不变。传统桌面使用窗口系统，而这里引擎通过DRM/KMS直接驱动显示。为此项目构建的Wayland合成器和X服务器，将每个应用的窗口直接交给框架，从GPU直接获取，无需复制。框架随后将该窗口视为其自身的Dock、按钮或窗口栏。\n\n零拷贝GPU缓冲区共享是Wayland协议的一部分，而混合原生和X11客户端正是Xwayland的职责。这里真正新颖的地方更为狭窄：将合成的“缓冲区”作为框架自身布局系统中的一个组件。\n\n这算新颖吗？作为一项壮举，或许如此。但足以支撑整个桌面的独特卖点吗？\n\n为什么Starling会存在？\n\n说实话，我花了好几天反复撰写这篇帖子，因为很难把握Starling的目标和受众。任何人为的动因都被其网站和GitHub上堆积如山的“深度废话”所掩盖。\n\n其独特卖点很大程度基于“首个由AI编写的桌面”这一事实，并将其与AI桌面的模拟图和截图进行比较。其余则是令人头晕目眩的空洞陈述和叙事框架。\n\n我可以引用很多关于这一努力为何如此非凡的理由，但下面这句话最为突出：\n\n“一个充满好奇心和大胆想法的人并不新鲜。能够独自行动才是。”\n——Starling.build网站\n\n这是“涤纶散文”；LLM排列出的华丽辞藻，但逻辑边缘磨损（让我感到不适）。我怀疑生成这种油嘴滑舌垃圾的提示词是：“以诈骗广告的风格写一篇宣言，但少一点真诚”。\n\n要知道，Enlightenment桌面早已存在。其创始人在1997年独自构建了第一个版本，并发展为一个完整的桌面，运行在自己的工具包上——在AI工具出现之前，没有想象中的瓶颈可归咎。\n\nStarling的“为什么”页面简要提到了这一点，但没有像人类那样以此为锚点解释其方法的不同之处，而是无视其存在，继续吹嘘其由一人创造，仿佛这是AI赋予的超能力。\n\n网站上到处是模仿TED演讲的腔调，大多刺穿或削弱了Starling声称值得如此赞誉的前提。LLM终究是LLM。\n\nStarling桌面的“大胆”想法非常macOS\n\n我善意地将Starling桌面的UI描述为“Temu版macOS Mojave”。网站上的截图展示了一个现代但传统的桌面布局，其UI风格我善意地称为“暗色模式下的Temu版macOS Mojave”。\n\n没错，甚至不是最新版的macOS。\n\nDock、面板、时钟、窗口切换器。用户可见的功能几乎都可以通过几个应用和过时的macOS GTK主题在任何Linux桌面上重现。\n\n“大胆想法”不过如此。\n\n其提供的优势在于，平铺、空间和Dock玻璃效果等特性无需显式编写代码即可在应用上运行。此外，还提供了一套第一方应用，包括文件管理器、终端和计算器。\n\n一旦你越过这种“氛围编码”的工程新闻点，剩下的实际上是在移植代码库之上的拼凑模仿。\n\n你无法提示承诺\n\nStarling乍一看尚可。它确实在后端做了一些新颖的事情。我的怀疑——暂且不论AI生成代码的来源和伦理——更多在于这种“氛围编码”软件的短暂本质。"
+  },
+  "6415451d1b75f1f3a0ccbeabf1c752c0": {
+    "id": "6415451d1b75f1f3a0ccbeabf1c752c0",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12907",
+    "title_en": "Distribution Release: 4Mlinux 52.0",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The 4MLinux minimal distribution has published a new release, version 52.0. The new version includes several key package updates, simplified wireless network configuration, better support for legacy graphics cards, and a new game. The release announcement states: \"The status of the 4MLinux 52.0 series has been changed to....",
+    "pub_date": "",
+    "title_zh": "发行版发布：4Mlinux 52.0",
+    "summary_zh": "4MLinux 发布了 52.0 版本，该版本已标记为 STABLE。新版本包含多项关键软件包更新，简化了无线网络配置，增强了对旧显卡的支持，并新增了一款游戏。用户可使用 LibreOffice、Firefox、Chrome、Thunderbird、Audacious、mpv 或 VLC 等软件进行办公、上网和娱乐。此外，还提供了 PHP、Perl、Python 和 Ruby 等编程语言，并新增了对 Ultra HDR 图像的支持。Linux 内核已升级至最新的 LTS 版本 6.18。",
+    "fulltext_zh": "发行版发布：4Mlinux 52.0\n\n4MLinux 是一个极简发行版，现已发布新版本 52.0。新版本包含多项关键软件包更新、简化的无线网络配置、对旧显卡的更好支持，以及一款新游戏。\n\n4MLinux 52.0 系列的状态已变更为 STABLE。使用 LibreOffice 26.2.5 和 GNOME Office（AbiWord 3.0.8、GIMP 3.2.4、Gnumeric 1.12.61）编辑文档，使用 Firefox 153.0 或 Chrome 151.0 浏览互联网，并通过 Thunderbird 153.0 发送电子邮件。使用 Audacious 4.6.1 欣赏音乐收藏，使用 mpv 0.41.0 或 VLC 3.0.23 观看喜爱的视频，并畅玩由 Mesa 26.0.3 驱动的游戏。您还可以设置一个非常轻量级的 HTTP/FTP 服务器（基于 BusyBox 1.37.0）。同时提供 PHP 8.5.4、Perl 5.42.1、Python 3.14.3 和 Ruby 3.4.8。一如既往，这个新的主要版本包含一些新功能，包括简化的 Wi-Fi 配置和改进的对旧显卡的支持。Rocks'n'Diamonds（经典平台游戏）、Elvis（旧的 vi 克隆）、PDF Tricks（用于处理 PDF 图像的 Ghostscript GUI）可作为可下载扩展提供，而 ksh（KornShell）和 audioconvert（命令行实用程序）则开箱即用。还添加了对 Ultra HDR 图像的支持（通过 libultrahdr 和 ImageMagick）。最后，4MLinux 中的 Linux 内核已升级至最新的 LTS 版本，即 6.18。\n\n4MLinux-52.0-64bit.iso"
+  },
+  "85b31237f72edce3a34042338be670e4": {
+    "id": "85b31237f72edce3a34042338be670e4",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-DCN6-Linux-Start",
+    "title_en": "AMD Begins Posting Display Core Next 6 \"DCN6\" Linux Patches For RDNA5 GPUs",
+    "summary_en": "AMD closed out the month of July by posting some new AMDGPU Display Core \"DC\" patches. Most notable with this weekly patch ritual is several patches beginning to establish the foundation for Display Core Next 6 \"DCN6\" as their next-generation display IP. The patches tie DCN6 to the AMD GFX13 graphics engine, which is anticipated to be for the next-generation RDNA5 graphics processors...",
+    "pub_date": "Fri, 31 Jul 2026 20:29:25 -0400",
+    "title_zh": "AMD开始为RDNA5 GPU提交Display Core Next 6 \"DCN6\" Linux补丁",
+    "summary_zh": "AMD在7月底发布了新的AMDGPU显示核心补丁，其中包含多个为下一代显示IP——Display Core Next 6（DCN6）奠定基础的补丁。这些补丁将DCN6与AMD GFX13图形引擎关联，预计用于下一代RDNA5图形处理器。这是DCN6的首次公开提及，其IP版本为6.0.0，接替DCN 4.2.1，但DCN5尚未在驱动中出现。补丁还引入了新的缩放线性度、表面特性、UPSP预缩放器及更多像素格式。RDNA5 GPU预计2027年发布，未来将有更多开源驱动补丁。",
+    "fulltext_zh": "AMD在7月底发布了新的AMDGPU显示核心（DC）补丁。在这次每周补丁例行更新中，最引人注目的是多个补丁开始为Display Core Next 6（DCN6）奠定基础，这是他们的下一代显示IP。这些补丁将DCN6与AMD GFX13图形引擎关联起来，预计该引擎将用于下一代RDNA5图形处理器。\n\n对于AMDGPU Linux驱动，目前持续进行的工作包括扩展显示代码的KUnit单元测试覆盖范围、一些修复、围绕显示流验证的重构，以及最重大的——启用DCN6支持。\n\n这些是DCN6的首次公开提及，它是为即将推出的AMD GPU准备的下一代显示逻辑。有趣的是，这个DCN 6.0.0 IP接替了DCN 4.2.1……那么DCN 5在哪里？在今天的补丁中，至少有一处提到了DCN5，但在AMDGPU驱动中尚未发现DCN5的bring-up。我们将看看这是否会到来，也许DCN5用于某些未来的AMD移动平台，而DCN6可能用于桌面显卡。或者，DCN5可能因未知原因被最终跳过。\n\n这些补丁确实将一些DCN6引用与GC/GFX 13.0.1关联起来，后者被认为是带有GFX13的RDNA5。\n\nAMD DCN6带来了新的缩放线性度和用于平面的cositing表面特性，UPSP预缩放器可在缩放前对420/422内容进行上采样，以及额外的像素格式和其他底层更改。\n\n由于RDNA5 GPU预计要到2027年才会推出，我们将看看未来几个月会有哪些更多的开源Linux图形驱动补丁出现。希望在发布之前，我们能看到成熟的开源AMD RDNA5图形驱动支持。"
+  },
+  "2977b5eae3b066c1293c7bbcbb1330aa": {
+    "id": "2977b5eae3b066c1293c7bbcbb1330aa",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-CDNA5-ISA-Documentation",
+    "title_en": "AMD Publishes CDNA5 ISA Documentation For Instinct MI455X",
+    "summary_en": "Following last week's launch of the AMD Instinct MI455X, AMD has now kept with tradition and provided ISA documentation concerning this latest CDNA5 architecture...",
+    "pub_date": "Fri, 31 Jul 2026 16:29:05 -0400",
+    "title_zh": "AMD发布Instinct MI455X的CDNA5 ISA文档",
+    "summary_zh": "AMD在发布Instinct MI455X加速器后，按照传统公开了其CDNA5架构的ISA（指令集架构）文档。此举延续了AMD近年来公开ISA文档的做法，以帮助开发者进行底层调试和优化。同时，AMD的开源Linux驱动栈（包括AMDGPU、AMDKFD、LLVM后端及ROCm基础设施）已提供对MI455X的支持。AMD认为，相比发布完整硬件文档，公开ISA文档对开发者更有价值，且开源驱动本身就是硬件设计的活示例。",
+    "fulltext_zh": "AMD发布Instinct MI455X的CDNA5 ISA文档 - Phoronix\nAMD发布Instinct MI455X的CDNA5 ISA文档\n2026年7月31日下午4:29（美国东部时间）\n\n继上周发布Instinct MI455X之后，AMD现在按照传统，提供了关于这一最新CDNA5架构的ISA文档。\n\nAMD继续公开其新GPU/加速器架构的ISA文档，并与其开源Linux驱动支持相辅相成。近年来，在硬件代际更新中，AMD已不再提供完整的开放硬件文档，而是专注于对开发者更有用的ISA文档。此外，他们的开源Linux驱动栈本身就是其硬件设计的活示例，与多年前为发布完整硬件文档而进行的内部投入和法律审查相比，这对最终用户/客户更为有益。\n\n由于上游开源驱动已支持Instinct MI455X，包括主线Linux内核中的AMDGPU和AMDKFD驱动、AMDGPU LLVM后端以及相关ROCm基础设施，AMD本周发布了CDNA5的ISA文档，以帮助开发者更好地理解该架构，进行底层调试和优化工作。感谢AMD继续公开其ISA文档。\n\n对AMD CDNA5 ISA文档感兴趣的人可以通过以下链接找到：\n\nLinux 7.3将允许以每CPU核心粒度调整AMD P-State动态EPP\nAMD Zen 6客户端HSMP补丁指向Linux上的“Ryzen Master”功能\nAMD P-State Linux驱动补丁可将1%低帧游戏性能提升31%\nAMD PMF测试工具计划用于Linux 7.3\nAMD“低功耗”CPU核心类型补丁在Linux 7.3之前排队\nAMD ROCm承诺未来采用六周发布周期\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nValve赞助将开源RADV驱动带到Windows的工作\n“KVM电锯”预计将在Linux 7.3中用于处理God数据结构\nAMD P-State Linux驱动补丁可将1%低帧游戏性能提升31%\nFedora 45 Atomic桌面考虑允许基于Web的远程安装\nKiwi菜单继续为GNOME带来macOS风格\nStarling：一款用Swift编写的新Linux桌面，自带Wayland合成器，并使用AI开发\nUbuntu Linux考虑移除/etc/debian_version历史遗留文件\nRyzen AI Software 1.8发布，支持新模型及更多优化\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "5529e792fa7efd9ed00c852792e0be54": {
+    "id": "5529e792fa7efd9ed00c852792e0be54",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/OSS-Firmware-MSI-B850-P-WIFI",
+    "title_en": "The First Open-Source Firmware Released For Modern AMD Ryzen AM5 Platform",
+    "summary_en": "Last month 3mdeb released their open-source firmware for a modern AMD EPYC motherboard from Gigabyte that was built off the new AMD openSIL project and Coreboot. Today 3mdeb has delivered the first open-source firmware release for a modern AMD Ryzen desktop motherboard with having independently brought their openSIL+Coreboot powered Dasharo stack to the readily available MSI PRO B850-P WIFI...",
+    "pub_date": "Fri, 31 Jul 2026 14:04:00 -0400",
+    "title_zh": "现代AMD Ryzen AM5平台首个开源固件发布",
+    "summary_zh": "3mdeb公司发布了针对现代AMD Ryzen桌面主板的首个开源固件，该固件基于AMD openSIL项目和Coreboot，应用于MSI PRO B850-P WIFI主板。此固件支持Zen 4 Phoenix处理器、UEFI安全启动、Ubuntu 26.04 LTS和Windows 11 25H2。此前，3mdeb已为AMD EPYC服务器主板提供类似支持。该主板售价约179美元，现价约300美元。3mdeb计划继续优化该固件，并已实现Windows 11启动支持。",
+    "fulltext_zh": "现代AMD Ryzen AM5平台的首个开源固件发布 - Phoronix\n\n现代AMD Ryzen AM5平台的首个开源固件发布\n2026年7月31日下午2:04（美国东部时间）。\n\n3mdeb发布了针对技嘉现代AMD EPYC主板的开源固件，该固件基于新的AMD openSIL项目和Coreboot。今天，3mdeb为现代AMD Ryzen桌面主板交付了首个开源固件版本，他们独立将基于openSIL+Coreboot的Dasharo技术栈移植到了市面上常见的MSI PRO B850-P WIFI主板上。\n\n除了技嘉AMD EPYC主板移植外，3mdeb固件工程师同时也在将他们的Dasharo开源软件栈移植到MSI PRO B850-P WIFI上。他们于2月份宣布了这一计划，并在随后的几个月里持续进行移植工作，并添加了诸如Windows 11启动支持等新功能。现在，在7月即将结束之际，他们为MSI PRO B850-P WIFI准备好了Dasharo v0.9版本。\n\nMSI PRO B850-P WIFI是一款典型的AMD Ryzen 7000/9000系列桌面ATX主板。它具备所有常见的功能，直到现在，由于3mdeb的独立固件移植，它才变得特别。我之前在《MSI PRO B850-P WiFi：一款面向Linux/开源爱好者的特殊AMD Ryzen AM5主板》中介绍过这款主板。今年早些时候，当3mdeb宣布移植计划时，我以约179美元的价格购买了这块主板，而如今在流行的互联网零售商（如亚马逊）上，其价格已上涨至约300美元。\n\n3mdeb通过博客宣布了Dasharo v0.9版本，并指出目前它支持Zen 4 Phoenix处理器，UEFI安全启动可用，Ubuntu 26.04 LTS和Windows 11 25H2均已测试通过，其他常见功能应该也能正常工作。更多关于当前功能和硬件支持的详细信息，请参阅该博客文章。我将很快在这块MSI主板上试用Dasharo固件，以了解其实际工作情况和性能表现。\n\nCoreboot + AMD openSIL在MSI Ryzen主板上现已支持Windows 11\nCoreboot 26.06带来对Intel Nova Lake、AMD Strix Halo及31款新主板的支持\nFramework Computer在为其现代Intel笔记本电脑推进Coreboot支持方面取得进展\n3mdeb持续推进其Coreboot + AMD openSIL向Ryzen MSI主板的移植\n3mdeb在Ryzen AM5主板上让更多AMD openSIL和Coreboot功能得以工作\nCoreboot在等待3年多后终于来到AMD Ryzen驱动的Star Labs StarBook MK VI\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过2万篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过Twitter关注他。\n\nValve赞助将开源RADV驱动带到Windows的工作\n预计“KVM电锯”将进入Linux 7.3以处理God数据结构\nAMD P-State Linux驱动补丁可将1%低帧率游戏性能提升31%\nFedora 45 Atomic桌面考虑允许基于Web的远程安装\nKiwi菜单继续为GNOME带来macOS风格\nStarling：一款用Swift编写的全新Linux桌面，自带Wayland合成器，并由AI辅助开发\nUbuntu Linux考虑移除/etc/debian_version历史遗留物\nRyzen AI Software 1.8发布，带来新模型支持和更多优化\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026，保留所有权利。"
+  },
+  "3b6370eafd77776d595c36ba2433c03f": {
+    "id": "3b6370eafd77776d595c36ba2433c03f",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Shotcut-26.7-Released",
+    "title_en": "Shotcut 26.7 Video Editor Released With Stock Asset Library",
+    "summary_en": "Shotcut 26.7 is out today as the newest feature release to this open-source, cross-platform video editing solution...",
+    "pub_date": "Fri, 31 Jul 2026 13:50:05 -0400",
+    "title_zh": "Shotcut 26.7 视频编辑器发布，新增素材库",
+    "summary_zh": "Shotcut 26.7 作为开源跨平台视频编辑解决方案的最新功能版本发布，最显著的特点是引入了名为“Elements”的新素材库，该库约22MB，提供多种表情贴纸、音效、叠加转场、动画文本和图形，且均免版税。此外，该版本还增加了图形适配器设置以支持多GPU切换、新的Shake视频滤镜、实验性UI生成器生成meta.qml，并改善了部分主题下标签页的外观。",
+    "fulltext_zh": "Shotcut 26.7 视频编辑器发布，新增素材库 - Phoronix\nShotcut 26.7 视频编辑器发布，新增素材库\n2026年7月31日，美国东部时间下午1:50。\n\nShotcut 26.7 于今日发布，作为这款开源、跨平台视频编辑解决方案的最新功能版本。\n\nShotcut 26.7 最显著的特点是引入了“Elements”作为新的素材库。这个约22MB的库提供了多种表情贴纸、音效、叠加转场、动画文本和图形。所有这些素材均在开放字体许可证、Lottie简单许可证或类似许可下免版税使用。\n\nShotcut 26.7 还增加了图形适配器设置，用于在多个GPU之间切换；新增了Shake视频滤镜；实验性的“--experimental”UI生成器现在生成meta.qml；并改善了某些Shotcut主题下标签页的外观。\n\nShotcut 26.7 版本的下载和更多详情请访问：\n\nLinux 7.2-rc6 的声音修复：“远超预期”\ndav1d 1.5.4 为 OS/2 带来 AV1 解码\nLinux 7.2-rc5 提交的音频怪癖“新常态”\n最后一个 MPEG-4 视觉专利已过期\nFFmpeg 落地最新 AVX-512 优化：像素格式转换速度提升 1.372 倍\nFFmpeg 引入 Vulkan APV 编码器\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过20,000篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nValve 赞助将开源 RADV 驱动移植到 Windows 的工作\n“KVM 电锯”预计将在 Linux 7.3 中处理 God 数据结构\nAMD P-State Linux 驱动补丁可将 1% 低帧率游戏性能提升 31%\nFedora 45 Atomic 桌面计划允许基于 Web 的远程安装\nKiwi Menu 继续为 GNOME 带来 macOS 风格\nStarling：一款用 Swift 编写的新 Linux 桌面，自带 Wayland 合成器，并由 AI 辅助编写\nUbuntu Linux 计划移除 /etc/debian_version 历史遗留文件\nRyzen AI Software 1.8 发布，支持新模型并进一步优化\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "f7cda20ec925c14e3e1d9ae1e7df64e8": {
+    "id": "f7cda20ec925c14e3e1d9ae1e7df64e8",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Nouveau-Atomic-Mode-Setting-26",
+    "title_en": "Nouveau Preparing To Finally Enable Atomic Mode-Setting By Default",
+    "summary_en": "In addition to the Nouveau kernel driver unblocking Vulkan Video H.264 support for the Mesa NVK driver, another feature change on the way is this open-source NVIDIA Linux driver finally preparing to enable atomic mode-setting by default...",
+    "pub_date": "Fri, 31 Jul 2026 11:22:00 -0400",
+    "title_zh": "Nouveau 准备最终默认启用原子模式设置",
+    "summary_zh": "Nouveau 内核驱动长期以来支持原子模式设置，但一直未默认启用。Red Hat 的 Lyude Paul 正在准备补丁，使 Nouveau 默认启用原子模式设置，至少对 NV50（GeForce 8 系列）及更新硬件生效。原子模式设置允许用户空间合成器/程序将完整硬件配置作为单个原子事务提交给内核，可减少屏幕闪烁并提高现代 Linux 桌面模式设置的可靠性。目前大多数 Linux 桌面软件和主要开源 DRM 驱动已支持该功能。补丁系列还强制在 NV50 以下禁用原子模式设置，并添加调试输出。预计该更改可能无法及时进入 Linux v7.3 周期，但希望不久后落地。",
+    "fulltext_zh": "Nouveau 准备最终默认启用原子模式设置 - Phoronix\n\nNouveau 准备最终默认启用原子模式设置\n\n2026年7月31日，上午11:22 EDT。\n\n继 Nouveau 内核驱动解锁 Mesa NVK 驱动的 Vulkan Video H.264 支持之后，另一个即将到来的功能变更是这个开源 NVIDIA Linux 驱动终于准备默认启用原子模式设置。\n\nNouveau 长期以来一直支持原子模式设置，但尚未默认启用。\n\n原子模式设置允许用户空间的合成器/程序将完整的硬件配置传递给内核，以单个原子事务的形式提交。原子模式设置反过来可以减少屏幕闪烁，并在现代 Linux 桌面上提供更可靠的模式设置体验。大多数 Linux 桌面软件都支持原子模式设置，且主要的开源 DRM 内核驱动早已支持。\n\nRed Hat 的 Lyude Paul 一直在处理补丁，以在 Nouveau 驱动中默认启用原子模式设置。这影响 NVIDIA NV50 / GeForce 8 系列及更新的硬件。\n\n默认启用 Nouveau 原子 KMS 的补丁说明：\n\n“Nouveau 是内核中少数几个未默认启用原子模式设置的现代硬件驱动之一，部分原因是当 Ben 最初编写它时，没有太多好的原子模式设置客户端来实际测试。\n\n然而如今，原子模式设置已成为常态——用户空间对非原子驱动的支持开始逐渐腐化——这导致了其自身的一系列问题。同时，许多这些问题只需在 Nouveau 中开启原子模式即可解决。此外，我已在大多数我工作的机器上默认启用 Nouveau 的原子模式设置，并已修复了相当多的问题，以至于情况似乎相当稳定（除了我桌面上一个屏幕闪烁的 bug，我不太确定这与原子模式设置有关）。\n\n这个补丁系列默认启用原子模式设置，至少对 NV50 及更新硬件生效。NV04 保持不变，因为从未为其实现原子模式设置。该系列还强制在 NV50 以下禁用原子模式设置，并在内核调试输出中添加 nouveau.atomic 的值。”\n\n鉴于当前的时间安排，这个更改可能不太可能及时进入 Linux v7.3 周期，但希望这个默认更改不久后就能落地。\n\nNouveau 补丁为 Linux 7.3 允许在 NVIDIA NVDEC 之上实现 NVK Vulkan 视频\nNVK Vulkan 性能在 Mesa 26.2 中相对 NVIDIA 专有驱动有所提升\n开源 NVIDIA Vulkan 驱动“NVK”合并网格着色器支持\nLinux 7.2 的开源 Nouveau 驱动终于支持 NVIDIA GA100\n开源 Nouveau 为 NVIDIA GPU 实现 HDMI FRL 支持\nNouveau + NVK 的 ZCULL 支持带来小幅性能提升\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他。\n\nValve 赞助将开源 RADV 驱动带到 Windows 的工作\n“KVM 电锯”预计将进入 Linux 7.3 以处理 God 数据结构\nAMD P-State Linux 驱动补丁可将 1% 低帧率游戏性能提升 31%\nFedora 45 原子桌面考虑允许基于 Web 的远程安装\nKiwi Menu 继续为 GNOME 带来 macOS 风格\nStarling：一款用 Swift 编写的新 Linux 桌面，自带 Wayland 合成器，并使用 AI 编写\nUbuntu Linux 考虑移除 /etc/debian_version 历史遗留文件\nRyzen AI 软件 1.8 发布，支持新模型并进一步优化\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策"
+  },
+  "982fd4aaf018de1c51d7c7f33b879e26": {
+    "id": "982fd4aaf018de1c51d7c7f33b879e26",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/gnu-nano-9-1-command-line-text-editor-drops-old-mac-file-format-support/",
+    "title_en": "GNU Nano 9.1 Command-Line Text Editor Drops Old Mac File Format Support",
+    "summary_en": "Learn about the latest updates in GNU Nano 9.1, including the removal of old Mac file format support, improving compatibility and performance for users.\nThe post GNU Nano 9.1 Command-Line Text Editor Drops Old Mac File Format Support appeared first on Linux Today.",
+    "pub_date": "Fri, 31 Jul 2026 12:54:52 +0000",
+    "title_zh": "GNU Nano 9.1 命令行文本编辑器放弃对旧 Mac 文件格式的支持",
+    "summary_zh": "GNU Nano 9.1 版本发布，主要更新包括移除对旧 Mac 文件格式的支持，以提升兼容性和性能。该版本针对现代系统进行了优化，减少了不必要的兼容性负担，使用户在处理文本文件时获得更流畅的体验。此更新反映了项目对简化维护和聚焦当前技术环境的承诺。",
+    "fulltext_zh": "了解 GNU Nano 9.1 的最新更新，包括移除对旧 Mac 文件格式的支持，从而提升用户的兼容性和性能。\n\n该文章最初发布在 Linux Today 上。"
+  },
+  "e739690cc722c894cc4256907f19c9ff": {
+    "id": "e739690cc722c894cc4256907f19c9ff",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/canonical-announces-live-kernel-patching-support-for-ubuntu-on-arm64/",
+    "title_en": "Canonical Announces Live Kernel Patching Support for Ubuntu on ARM64",
+    "summary_en": "Canonical introduces live kernel patching for Ubuntu on ARM64, allowing for uninterrupted system performance and enhanced security. Learn more about this feature.\nThe post Canonical Announces Live Kernel Patching Support for Ubuntu on ARM64 appeared first on Linux Today.",
+    "pub_date": "Fri, 31 Jul 2026 12:52:33 +0000",
+    "title_zh": "Canonical宣布为Ubuntu ARM64提供实时内核补丁支持",
+    "summary_zh": "Canonical宣布为Ubuntu ARM64架构引入实时内核补丁功能，该功能允许系统在不重启的情况下应用安全补丁，从而确保系统性能不间断并增强安全性。此特性对于需要高可用性的服务器和关键任务环境尤为重要，减少了维护窗口并降低了运营风险。",
+    "fulltext_zh": "Canonical为Ubuntu ARM64架构引入了实时内核补丁功能，该功能允许系统在不中断运行的情况下应用安全更新，从而提升系统性能的连续性和安全性。了解更多关于此特性的信息。\n\n此文章首发于Linux Today。"
+  },
+  "c699dfba752012c72d0f4af8b841ad32": {
+    "id": "c699dfba752012c72d0f4af8b841ad32",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/kubuntu-focus-m2-and-zr-linux-laptops-now-ship-with-intel-core-ultra-9-290hx-plus/",
+    "title_en": "Kubuntu Focus M2 and Zr Linux Laptops Now Ship with Intel Core Ultra 9 290HX Plus",
+    "summary_en": "Discover the power of the Kubuntu Focus M2 and Zr Linux laptops, now equipped with the Intel Core Ultra 9 290HX Plus for unmatched performance.\nThe post Kubuntu Focus M2 and Zr Linux Laptops Now Ship with Intel Core Ultra 9 290HX Plus appeared first on Linux Today.",
+    "pub_date": "Fri, 31 Jul 2026 12:49:02 +0000",
+    "title_zh": "Kubuntu Focus M2 和 Zr Linux 笔记本电脑现已搭载 Intel Core Ultra 9 290HX Plus",
+    "summary_zh": "Kubuntu Focus 系列 M2 和 Zr 两款 Linux 笔记本电脑现已升级至 Intel Core Ultra 9 290HX Plus 处理器，提供卓越性能。该处理器专为高端计算需求设计，结合 Kubuntu 系统的优化，为用户带来更流畅的多任务处理、内容创作和开发体验。此次更新进一步巩固了 Kubuntu Focus 作为专业级 Linux 硬件品牌的定位。",
+    "fulltext_zh": "探索 Kubuntu Focus M2 和 Zr Linux 笔记本电脑的强大性能，现已搭载 Intel Core Ultra 9 290HX Plus 处理器，带来无与伦比的表现。\n\n该文章首发于 Linux Today。"
+  },
+  "76ecac22a90465179a3872ab71a99408": {
+    "id": "76ecac22a90465179a3872ab71a99408",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/home-assistant-os-18-0-released-with-linux-kernel-6-18-lts/",
+    "title_en": "Home Assistant OS 18.0 Released with Linux Kernel 6.18 LTS",
+    "summary_en": "Home Assistant OS 18.0 is here! Explore the enhancements brought by Linux Kernel 6.18 LTS and elevate your home automation setup.\nThe post Home Assistant OS 18.0 Released with Linux Kernel 6.18 LTS appeared first on Linux Today.",
+    "pub_date": "Fri, 31 Jul 2026 12:46:53 +0000",
+    "title_zh": "Home Assistant OS 18.0 发布，搭载 Linux Kernel 6.18 LTS",
+    "summary_zh": "Home Assistant OS 18.0 正式发布，此次更新基于 Linux Kernel 6.18 LTS，为用户带来更稳定、更高效的家庭自动化体验。新版本在系统性能、硬件兼容性和安全性方面均有提升，进一步巩固了 Home Assistant 作为开源智能家居核心平台的地位。",
+    "fulltext_zh": "Home Assistant OS 18.0 来了！探索 Linux Kernel 6.18 LTS 带来的增强功能，提升您的家庭自动化设置。\n\n该文章 Home Assistant OS 18.0 Released with Linux Kernel 6.18 LTS 首次出现在 Linux Today 上。"
+  },
+  "ee67af9a5fd7901c1827f335749acfb0": {
+    "id": "ee67af9a5fd7901c1827f335749acfb0",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/obs-studio-32-2-promises-new-filter-to-compose-sdr-into-hdr-beta-out-now/",
+    "title_en": "OBS Studio 32.2 Promises New Filter to Compose SDR into HDR, Beta Out Now",
+    "summary_en": "OBS Studio 32.2 introduces an innovative filter for transforming SDR content into HDR. Explore the beta version now and elevate your video quality.\nThe post OBS Studio 32.2 Promises New Filter to Compose SDR into HDR, Beta Out Now appeared first on Linux Today.",
+    "pub_date": "Fri, 31 Jul 2026 12:42:56 +0000",
+    "title_zh": "OBS Studio 32.2 承诺推出新滤镜，将 SDR 合成到 HDR，测试版现已发布",
+    "summary_zh": "OBS Studio 32.2 版本引入了一项创新滤镜，用于将 SDR 内容转换为 HDR。该测试版现已推出，用户可提前体验并提升视频质量。此功能旨在满足创作者对高动态范围内容的需求，通过简单的滤镜操作即可实现格式转换，无需复杂的外部工具。",
+    "fulltext_zh": "OBS Studio 32.2 引入了一项创新滤镜，用于将 SDR 内容转换为 HDR。立即探索测试版，提升您的视频质量。\n\n该文章首发于 Linux Today。"
   }
 }
