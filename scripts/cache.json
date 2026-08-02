@@ -5168,5 +5168,82 @@
     "title_zh": "OBS Studio 32.2 承诺推出新滤镜，将 SDR 合成到 HDR，测试版现已发布",
     "summary_zh": "OBS Studio 32.2 版本引入了一项创新滤镜，用于将 SDR 内容转换为 HDR。该测试版现已推出，用户可提前体验并提升视频质量。此功能旨在满足创作者对高动态范围内容的需求，通过简单的滤镜操作即可实现格式转换，无需复杂的外部工具。",
     "fulltext_zh": "OBS Studio 32.2 引入了一项创新滤镜，用于将 SDR 内容转换为 HDR。立即探索测试版，提升您的视频质量。\n\n该文章首发于 Linux Today。"
+  },
+  "a97c877745182cd16f12645be3a26cde": {
+    "id": "a97c877745182cd16f12645be3a26cde",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12909",
+    "title_en": "BSD Release: NetBSD 11.0",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The NetBSD project has announced the release of NetBSD 11.0, the 19th major release of the highly portable operating system. The new version includes a port to the RISC-V architecture, better Linux compatibility, and a virt68k port. \"New port to the RISC-V processor architecture. NetBSD 11.0 is the....",
+    "pub_date": "",
+    "title_zh": "BSD发布：NetBSD 11.0",
+    "summary_zh": "NetBSD项目宣布发布11.0版本，这是其第19个主要版本。新版本增加了对RISC-V架构的支持，提升了Linux兼容性，并引入了virt68k移植。此外，还增强了对POSIX.1-2024和C23标准的支持，改进了npf防火墙，并新增了针对x86的MICROVM内核，可实现极速虚拟机启动。",
+    "fulltext_zh": "NetBSD项目宣布发布11.0版本，这是其高度可移植操作系统的第19个主要版本。新版本包括对RISC-V架构的移植、更好的Linux兼容性，以及virt68k移植。\n\n\"新增对RISC-V处理器架构的移植。NetBSD 11.0是首个包含64位RISC-V平台支持的稳定版本，包括一系列基于StarFive JH71XX的设备，如VisionFive 2、PINE64 STAR64，以及QEMU。增强了对POSIX.1-2024和C23编程接口标准的合规性。在compat_linux(8)中增强了对Linux系统调用的支持，包括epoll（基于kqueue实现）、POSIX消息队列、statx、readahead、close_range、waitid、renameat2、clone3、sync_file_range、syncfs和inotify。初步支持Qualcomm Snapdragon X Elite平台。改进了npf(7)防火墙，包括二层和用户/组过滤。新增针对x86的MICROVM内核，支持i386和amd64，NetBSD 11.0引入了专为极速虚拟机启动设计的MICROVM内核，利用PVH启动、VirtIO MMIO和多项内核优化，在2020年代的x86 CPU上可在约10毫秒内启动。新增virt68k移植，用于在QEMU中使用半虚拟化设备运行Motorola 68000移植。\"\n\n更多信息可在NetBSD-11.0-amd64.iso中找到。\n\n近期相关新闻和发布：\nBSD发布：NetBSD 11.0\n开发版发布：NetBSD 11.0 RC3\n开发版发布：NetBSD 11.0 RC1\nBSD发布：NetBSD 10.1\nBSD发布：NetBSD 9.4\nBSD发布：NetBSD 10.0\n\nNetBSD是一个免费、安全、高度可移植的类Unix开源操作系统，可用于多种平台，从64位AlphaServer和桌面系统到手持和嵌入式设备。"
+  },
+  "8a02dbed5001e858143ac8e70cf5fbc9": {
+    "id": "8a02dbed5001e858143ac8e70cf5fbc9",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12908",
+    "title_en": "Distribution Release: Archcraft 2026.08.01",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Aditya Shakya has announced the release of Archcraft 2026.08.01, the latest stable release of the project's Arch-based lightweight and fast Linux distribution. This release adds the Sway Wayland compositor as the new desktop choice in live mode (beside the Openbox and bspwm window managers): \"August 2026 ISO image....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Archcraft 2026.08.01",
+    "summary_zh": "Archcraft 发布了 2026.08.01 版本，这是基于 Arch 的轻量级 Linux 发行版的最新稳定版。本次更新引入了 Sway Wayland 合成器作为新的桌面选择，并全面改进了安装体验、桌面会话、VirtualBox 支持，修复了大量 bug。同时恢复了 Btrfs 和 XFS 文件系统的安装支持，更新了 archiso 至 88-1，并增强了 GTK/GNOME 应用集成。该版本被认为是 Archcraft 迄今最大的更新之一。",
+    "fulltext_zh": "发行版发布：Archcraft 2026.08.01\n\nAditya Shakya 已宣布发布 2026.08.01，这是该项目基于 Arch 的轻量级快速 Linux 发行版的最新稳定版。此版本在实时模式中新增了 Sway Wayland 合成器作为桌面选择（除了 Openbox 和 bspwm 窗口管理器之外）：\n\n“Archcraft 的 2026 年 8 月 ISO 镜像现已可供下载。此版本专注于稳定性、兼容性和精致度。从完全改版的安装体验到改进的桌面会话、更好的 VirtualBox 支持以及无数错误修复，这是 Archcraft 迄今最大的更新之一。亮点包括：全新的 Qt6 SDDM 主题；新的 Sway Wayland 会话；跨安装程序的可靠加密安装；恢复 Btrfs 和 XFS 安装支持（Calamares）；更新至 archiso 88-1；改进的 VirtualBox 兼容性；更好的 GTK/GNOME 应用集成；数百项小修复和改进。此版本最大的新增功能之一是引入 Sway，在现有窗口管理器之外提供了另一个轻量级 Wayland 会话。”\n\n更多信息和截图请见下文。\n\narchcraft-2026.08.01-x86_64.iso\n\n近期相关新闻和发布：\n\n发行版发布：Archcraft 2026.08.01\n发行版发布：Archcraft 2026.05.12\n发行版发布：Archcraft 2026.02.02\n发行版发布：Archcraft 2025.04.24\n发行版发布：Archcraft 2024.04.06\n发行版发布：Archcraft 2023.01.01\n更多 Archcraft 新闻...\n\nArchcraft 是一个基于 Arch Linux 的极简 Linux 发行版。该项目使用极简窗口管理器而非功能完整的桌面环境来提供图形用户界面。Archcraft 使用 Calamares 系统安装程序进行安装，并包含 y"
+  },
+  "15973b781fb5f9cae50076cc62f9b02c": {
+    "id": "15973b781fb5f9cae50076cc62f9b02c",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Steam-On-Linux-July-2026",
+    "title_en": "Steam On Linux Use Back Above 4% In July",
+    "summary_en": "Valve just published the Steam Survey results for July 2026 and point to a small uptick in Linux gaming use...",
+    "pub_date": "Sat, 01 Aug 2026 20:25:24 -0400",
+    "title_zh": "Steam在Linux上的使用率7月回升至4%以上",
+    "summary_zh": "Valve发布了2026年7月的Steam调查结果，显示Linux游戏使用率略有回升，达到4.01%，较上月增长0.02%。尽管这一数字仍低于3月和4月的高点，但已连续两个月改善。7月数据还显示，SteamOS Holo在Linux游戏系统中的占比约为22%，这得益于Steam Machine的发布和Steam Deck的持续存在。",
+    "fulltext_zh": "Steam在Linux上的使用率7月回升至4%以上 - Phoronix\n\nSteam在Linux上的使用率7月回升至4%以上\n\n2026年8月1日，美国东部时间晚上8点25分。\n\nValve刚刚发布了2026年7月的Steam调查结果，显示Linux游戏使用率略有上升。\n\nSteam在Linux上的使用率曾达到5.33%的历史新高，4月降至4.52%，5月为3.99%，6月则为3.69%。刚刚发布的7月数据显示，Steam在Linux上的使用率为4.01%，较前两个月有所改善，但仍远低于3月和4月的高点。\n\n7月的Steam调查结果显示，Linux市场份额为4.01%，较上月增长0.02%，这与最初公布的6月数据（Linux为3.69%）有所不同。有时Steam数据会在之后被悄悄修正，上个月似乎就发生了这种情况，最终修正为环比仅增长0.02%。\n\n7月的数据显示，SteamOS Holo在Linux游戏系统中的占比约为22%。这得益于Steam Machine现已发货，以及Steam Deck的持续存在。\n\n想要查看7月所有Steam调查数据的用户，可以在以下链接找到更新后的数据：\n\nSteam客户端为Steam Deck OLED添加HDR流媒体，AV1视频流媒体\n\nDXVK 3.0.2发布，改进了挂起调试，并包含少量游戏修复\n\nHolo Core实验版发布：面向Valve Steam Frame的Arch Linux AArch64\n\nProton 11.0-1发布，推进Valve的Steam Play，带来最佳Linux体验\n\nSteam在Linux上的使用率6月略有回落\n\nSteam Machine发布，售价1049至1428美元\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动及其他主题。他还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nValve赞助将开源RADV驱动带到Windows的工作\n\n“KVM电锯”预计将进入Linux 7.3，用于处理God数据结构\n\nAMD P-State Linux驱动补丁可将1%低帧率游戏性能提升31%\n\n首个面向现代AMD Ryzen AM5平台的开源固件发布\n\nArch Linux AUR再次遭遇恶意软件包浪潮，软件包采用暂停\n\nKiwi菜单继续为GNOME带来macOS风格\n\nStarling：一款用Swift编写的全新Linux桌面，自带Wayland合成器，并借助AI开发\n\n适用于旧款AMD GPU的DRM格式修饰符将随Linux 7.3推出：感谢Valve\n\n在享受无广告浏览的同时，\n\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026，由\n\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "27bbf69f693e670c4a22b94a724b5084": {
+    "id": "27bbf69f693e670c4a22b94a724b5084",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/NetBSD-11.0",
+    "title_en": "NetBSD 11.0 Released With RISC-V Support, Enhanced Linux System Call Compatibility",
+    "summary_en": "NetBSD 11.0 officially shipped today as the nineteenth major release of this popular BSD operating system...",
+    "pub_date": "Sat, 01 Aug 2026 12:49:21 -0400",
+    "title_zh": "NetBSD 11.0 发布，支持 RISC-V，增强 Linux 系统调用兼容性",
+    "summary_zh": "NetBSD 11.0 作为该 BSD 操作系统的第十九个主要版本正式发布，首次支持 64 位 RISC-V 架构，并针对 StarFive JH71XX 平台（如 VisionFive 2 和 STAR64）提供初始硬件支持，同时支持 QEMU 上的 RISC-V 模拟。此外，新版本还增加了对 Qualcomm Snapdragon X1 Elite 的初步支持，改进了 POSIX.1-2024 和 C23 标准兼容性，增强了 Linux 系统调用兼容性，并引入了 MICROVM 内核和 virt68k 端口。还包含新的 Intel/AMD 驱动、AArch64 上的 SIMD 加速 X.Org 优化等。",
+    "fulltext_zh": "NetBSD 11.0 发布，支持 RISC-V，增强 Linux 系统调用兼容性 - Phoronix\n\nNetBSD 11.0 发布，支持 RISC-V，增强 Linux 系统调用兼容性\n\n2026年8月1日，美国东部时间下午12:49。\n\n今天正式发布，这是这个流行的 BSD 操作系统的第十九个主要版本。\n\nNetBSD 11.0 是该项目的首个支持 64 位 RISC-V 架构的版本，并在基于 StarFive JH71XX 的平台（如 VisionFive 2 和 STAR64）上提供了初始硬件支持。NetBSD 11.0 也支持在 QEMU 上运行 RISC-V。此外，NetBSD 还支持 AMD64、ARM、SPARC64、MIPS 以及许多其他架构。\n\n在 Arm 方面，NetBSD 11.0 对 Qualcomm Snapdragon X1 Elite 硬件提供了初步支持，包括 Oryon CPU 核心和其他硬件启用工作。\n\nNetBSD 11.0 还更好地支持 POSIX.1-2024 和 C23 标准，通过其“compat_linux”代码增强了与各种 Linux 系统调用的兼容性，为 x86/amd64 提供了新的 MICROVM 内核，以实现极快的虚拟机启动，以及一个 virt68k 端口，用于在 QEMU 中使用半虚拟化设备运行 Motorola 68000 端口。\n\nNetBSD 11.0 还带来了一些新的 Intel 和 AMD 驱动程序，AArch64 上的 SIMD 加速 X.Org Server 优化，各种内核优化，以及其他全面的硬件启用。\n\n有关今天 NetBSD 11.0 版本的下载和更多详细信息，请访问：\n\nFreeBSD 的内核仍有一些 GPL 代码，而其基础用户空间已无 GPL\nFreeBSD 开发新的 NTSYNC 驱动程序以加速 Windows NT 同步原语\n用户对 FreeBSD 音频/声音支持的“悲惨状态”感到沮丧\nFreeBSD 端口因一个非常大的提交而暂时冻结\nFreeBSD 实习生致力于将 AMD ROCm 移植到 BSD 世界\nFreeBSD 笔记本电脑支持持续改进，包括 WiFi、GPU 和音频驱动工作\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创建了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动程序和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nValve 赞助将开源 RADV 驱动程序带到 Windows 的工作\n“KVM 电锯”预计将在 Linux 7.3 中处理 God 数据结构\nAMD P-State Linux 驱动补丁可将 1% 低帧率游戏性能提升 31%\n现代 AMD Ryzen AM5 平台发布首个开源固件\nArch Linux AUR 再次遭遇恶意软件包浪潮，软件包收养暂停\nKiwi Menu 继续为 GNOME 带来 macOS 风格\nStarling：一款用 Swift 编写的新 Linux 桌面，自带 Wayland 合成器，并由 AI 编写\n旧 AMD GPU 的 DRM 格式修饰符将随 Linux 7.3 推出：感谢 Valve\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "5e4de5cbe30974ea1a61fd66dc3517c5": {
+    "id": "5e4de5cbe30974ea1a61fd66dc3517c5",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/July-2026-Highlights",
+    "title_en": "MPEG-4 Patent Expiration, RADV On Windows, Open-Source AI & Other July Highlights",
+    "summary_en": "Last month on Phoronix there were 257 original Linux/open-source related news articles and another 20 featured Linux hardware reviews / multi-page benchmark articles. Following the recent 22nd birthday of Phoronix.com, this puts the overall tally at nearly 51k original news articles and more than 5,600 Linux hardware reviews. Here is a look back at what readers found most exciting during the course of July...",
+    "pub_date": "Sat, 01 Aug 2026 09:30:00 -0400",
+    "title_zh": "MPEG-4专利到期、RADV登陆Windows、开源AI及其他七月亮点",
+    "summary_zh": "2026年7月，Phoronix发布了257篇原创Linux/开源相关新闻和20篇Linux硬件评测。本月亮点包括：最后一个MPEG-4视觉专利到期、FreeBSD 16移除基础系统中所有GPL代码、Linus Torvalds重申Linux不反对AI、ReactOS成功运行《半条命2》、Rust Coreutils的cp命令导致Ubuntu镜像构建失败、Firefox 153支持Vulkan视频解码、Pop!_OS推出COSMIC的\"磨砂玻璃\"桌面风格，以及Valve赞助将开源RADV驱动移植到Windows。",
+    "fulltext_zh": "MPEG-4专利到期、RADV登陆Windows、开源AI及其他七月亮点 - Phoronix\n\nMPEG-4专利到期、RADV登陆Windows、开源AI及其他七月亮点\n发布于2026年8月1日上午9:30（美国东部时间）。\n\n上个月，Phoronix上共有257篇原创Linux/开源相关新闻文章，以及20篇专题Linux硬件评测/多页基准测试文章。继Phoronix.com迎来22周年庆之后，总文章数已接近5.1万篇原创新闻和超过5600篇Linux硬件评测。以下是读者在7月期间最感兴趣的内容回顾。\n\n7月发生了许多有趣的事件，包括Linux内核中的AI争议、最后一个MPEG-4视觉专利到期、Valve赞助RADV移植到Windows、AMD的多项产品公告，以及源源不断的令人兴奋的Linux内核创新。如果您喜欢Phoronix每天提供的所有原创内容，请考虑加入Phoronix Premium，以帮助维持持续运营，同时享受无广告浏览、单页多页文章、原生深色模式等福利。对于使用广告拦截器的读者，通过提供的打赏链接给予小费将不胜感激。\n\n2026年7月Phoronix上最受欢迎的新闻包括：\n\n最后一个MPEG-4视觉专利已到期\n如果您今天想找个理由庆祝，那么最后一个MPEG-4 Part 2专利已于今日到期。\n\nFreeBSD 16从其基础系统中移除最后一段GPL代码\n截至上周，在FreeBSD 16的源代码树中，基础系统中最后一段GNU GPL许可代码已被移除。\n\nLinus Torvalds重申Linux并非\"反AI\"，也不是\"社会战士\"项目\n昨晚，Linux创始人Linus Torvalds撰写了一篇措辞精妙的文章，重申Linux内核的立场并非反对AI，并回击了内核项目中一些反对AI/LLM使用的内核开发者。\n\nReactOS\"开源Windows\"项目现已能够运行《半条命2》\n一个月前，看到开源ReactOS操作系统运行Valve的《半条命》令人兴奋。没想到不到30天后，它还能运行《半条命2》。\n\nRust Coreutils的cp命令因最新不兼容性导致Ubuntu镜像构建失败\n虽然Rust Coreutils因使用Rust编程语言编写而比GNU Coreutils具有更好的内存安全性，但不同命令的Rust Coreutils实现中仍不断发现细微的不兼容性。本周最新曝光的是Rust Coreutils的cp命令因参数处理差异导致Ubuntu镜像构建失败。\n\nFirefox 153发布，支持Vulkan视频解码和实验性JPEG-XL\nMozilla今天上传了Firefox 153.0版本二进制文件，这是这款跨平台网页浏览器的最新月度更新。Firefox 153令人兴奋之处在于它是最新的扩展支持版本\"ESR\"，同时引入了Vulkan视频解码支持。\n\nPop!_OS为其COSMIC桌面推出\"磨砂玻璃\"风格\nSystem76开发者过去几周一直在为其Pop!_OS Linux发行版中的COSMIC桌面环境开发\"磨砂玻璃\"外观。对于Pop!_OS用户来说，这一磨砂玻璃功能现已可用，并且一旦下一个COSMIC版本正式发布，该功能将在其他Linux发行版中更广泛地推广。\n\nValve赞助将开源RADV驱动移植到Windows的工作\nValve一直在赞助Collabora工程师进行早期探索性工作，尝试将开源Radeon Vulkan\"RADV\"驱动引入Microsoft Windows。\n\nLinux内核开发者再次讨论AI代理署名问题——可能将其移除\n当AI/LLM代理参与创建Linux内核补丁时，目前的政策是应在补丁/提交中使用\"Assisted-by\"标签进行标注。但Linux内核开发者"
+  },
+  "df910bdefe011bb4471701a7c933367d": {
+    "id": "df910bdefe011bb4471701a7c933367d",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Arch-Linux-Foxboron",
+    "title_en": "Prominent Arch Linux Developer Resigns After 10 Year Run",
+    "summary_en": "Arch Linux developer, security team member, AUR maintainer, and package maintainer Morten Linderud \"Foxboron\" announced today he is resigning from the project...",
+    "pub_date": "Sat, 01 Aug 2026 07:47:02 -0400",
+    "title_zh": "著名Arch Linux开发者任职十年后宣布辞职",
+    "summary_zh": "Arch Linux开发者、安全团队成员、AUR维护者及软件包维护者Morten Linderud（网名Foxboron）在任职十年后宣布辞职。他曾负责Arch Linux的调试软件包、Git迁移的初期工作等多项贡献。辞职后，他仍将继续从事TPM、Secure Boot等安全相关的开源工作。其维护的多个软件包如mkinitcpio、Pacman、WPA_Supplicant等需要新的维护者接手。",
+    "fulltext_zh": "著名Arch Linux开发者任职十年后宣布辞职 - Phoronix\n著名Arch Linux开发者任职十年后宣布辞职\n2026年8月1日，美国东部时间上午7:47。\n\nArch Linux开发者、安全团队成员、AUR维护者及软件包维护者Morten Linderud（网名“Foxboron”）今天宣布，他将从该项目辞职。\n\n在担任Arch Linux开发者、软件包维护者和安全团队成员十年之后，Morten Linderud认为“现在是放手的好时机”，决定离开该项目。多年来，他负责Arch Linux的调试软件包、Git迁移的初期工作，并为项目做出了其他诸多贡献。\n\nMorten仍计划继续从事围绕TPM、Secure Boot及相关安全倡议的开源工作，但决定不再参与Arch Linux的贡献。\n\n目前，Arch Linux中需要新维护者的软件包包括mkinitcpio、Bolt、nvme-cli、Go-Tools、Pacman、arch-install-scripts、archlinux-keyring、archlinux-repro等。他还是WPA_Supplicant、fsverity-utils及其他软件包的唯一维护者。此外，多年来“Foxboron”还以不同程度维护了许多其他软件包。\n\nLinderud也就辞去Arch Linux项目职务一事发表了评论。"
+  },
+  "4db5dd6a3ad5879cf36b367e5c837d4c": {
+    "id": "4db5dd6a3ad5879cf36b367e5c837d4c",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.2-rc6-ATA",
+    "title_en": "Linux 7.2-rc6 Working Around Several Buggy Western Digital SATA Drives",
+    "summary_en": "Merged ahead of tomorrow's Linux 7.2-rc6 kernel test release are several ATA fixes that include a number of device-specific workarounds for some Western Digital SATA drives that have been failing to work on recent versions of the Linux kernel...",
+    "pub_date": "Sat, 01 Aug 2026 06:49:22 -0400",
+    "title_zh": "Linux 7.2-rc6 针对多款有问题的西部数据 SATA 硬盘实施规避措施",
+    "summary_zh": "Linux 7.2-rc6 内核测试版合并了多项 ATA 修复，其中包括针对多款西部数据 SATA 硬盘的特定设备规避措施。这些硬盘因电源管理行为在 Linux 内核下无法正常工作，导致 SATA 总线离线或设备消失。修复方案是默认禁用这些硬盘的链接电源管理（LPM）功能。涉及的型号包括 WD100EFGX-68CPLN0（10TB Red Plus）和 WD102KFBX-68M95N0（10TB Red Plus Pro），以及 WD Green 2.5 480GB 硬盘。用户也可通过内核启动参数禁用 LPM，但会损失每块硬盘约 0.5~1.5W 的功耗节省。",
+    "fulltext_zh": "Linux 7.2-rc6 针对多款有问题的西部数据 SATA 硬盘实施规避措施 - Phoronix\nLinux 7.2-rc6 针对多款有问题的西部数据 SATA 硬盘实施规避措施\n发布于 2026年8月1日 上午06:49（美国东部时间）。\n\n在明天发布的 Linux 7.2-rc6 内核测试版之前，合并了多项 ATA 修复，其中包括针对一些西部数据 SATA 硬盘的特定设备规避措施，这些硬盘在最近的 Linux 内核版本上无法正常工作。\n\n本周的 ATA 修复批次最终强制禁用了多款西部数据硬盘的链接电源管理（LPM），这些硬盘由于电源管理行为在 Linux 内核开箱即用时无法正常工作。\n\n自去年以来，有一个 kernel.org 错误报告，关于 SATA 总线在一段时间后离线。自去年八月以来的 Linux 内核上，用户报告其 SATA 硬盘离线。该问题最终被缩小到系统中两块硬盘的链接电源管理行为。LPM 本应是 SATA 设备的一项省电功能，通过让硬盘/固态硬盘与控制器之间的通信链路休息来降低功耗。\n\n在 Linux 7.2-rc6 中，WDC WD100EFGX-68CPLN0 和 WDC WD102KFBX-68M95N0 硬盘现在默认被列入黑名单，禁止使用 LPM，以便它们在 Linux 内核下正常工作。WD100EFGX-68CPLN0 是一款专为 NAS 设备设计的 10TB Red Plus SATA 机械硬盘。WD102KFBX-68M95N0 是西部数据的 3.5 英寸 10TB Red Plus Pro 机械硬盘，同样面向 NAS 使用。\n\n本周 ATA 队列中合并的另一个补丁也禁用了西部数据 Green 2.5 480GB 硬盘的 LPM。该 SATA 硬盘被单独报告在系统启动 Linux 后两到三分钟出现问题，设备通常消失，直到下次重启。\n\n对于不使用最新内核且使用这些硬盘的用户，另一种规避方法是使用内核启动参数 libata.force=noncq 来禁用 LPM——或者如果你想测试不同硬盘的 SATA 问题。但禁用 LPM 会失去每块硬盘约 0.5~1.5W 的潜在功耗节省。\n\n这些规避措施现已合并到 Linux 7.2-rc6 中，而稳定的 Linux 7.2 内核将于八月晚些时候发布。\n\nARCTIC 推出其新风扇控制器，已获得主线 Linux 支持\n华硕笔记本 Whisper Mode 支持正在为 Linux 开发\n神秘的 16 瓦片和 32 瓦片 AMX 实现被提及以提升性能\n高通为搭载 X2 Elite Extreme 的华硕 Zenbook A16 发布 Linux 补丁\nInputPlumber 0.78 发布，扩展了硬件支持\nLinux 的高通加密加速器驱动“有害”且被禁用：比 CPU 慢，且存在历史错误\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他。\n\nValve 赞助将开源 RADV 驱动带到 Windows 的工作\n“KVM 电锯”预计将在 Linux 7.3 中处理 God 数据结构\nAMD P-State Linux 驱动补丁可将 1% 低帧率游戏性能提升 31%\n首个针对现代 AMD Ryzen AM5 平台的开源固件发布\nArch Linux AUR 再次遭遇恶意软件包浪潮，软件包采用暂停\nKiwi Menu 继续为 GNOME 带来 macOS 风格\nStarling：一款用 Swift 编写的新 Linux 桌面，自带 Wayland 合成器，并借助 AI 开发\nDRM 格式修饰符为旧 AMD GPU 在 Linux 7.3 中到来：感谢 Valve\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
   }
 }

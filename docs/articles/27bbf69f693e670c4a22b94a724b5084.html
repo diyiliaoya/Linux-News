@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GrapheneOS 隐私功能成为联邦起诉依据 — Linux 中文速报</title>
+<title>NetBSD 11.0 发布，支持 RISC-V，增强 Linux 系统调用兼容性 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>GrapheneOS 隐私功能成为联邦起诉依据</h1>
+  <h1>NetBSD 11.0 发布，支持 RISC-V，增强 Linux 系统调用兼容性</h1>
 
-  <div class="article-summary">亚特兰大居民 Samuel Tunick 因在边境检查时提供的密码导致手机数据被擦除，面临联邦指控。他使用了 GrapheneOS 的胁迫密码功能，该功能在特定密码输入后自动清除设备。政府认为此举构成销毁证据，但 Tunick 律师辩称其与环保组织的关联才是真正原因。案件仍在审理中，最终判决尚未确定。</div>
+  <div class="article-summary">NetBSD 11.0 作为该 BSD 操作系统的第十九个主要版本正式发布，首次支持 64 位 RISC-V 架构，并针对 StarFive JH71XX 平台（如 VisionFive 2 和 STAR64）提供初始硬件支持，同时支持 QEMU 上的 RISC-V 模拟。此外，新版本还增加了对 Qualcomm Snapdragon X1 Elite 的初步支持，改进了 POSIX.1-2024 和 C23 标准兼容性，增强了 Linux 系统调用兼容性，并引入了 MICROVM 内核和 virt68k 端口。还包含新的 Intel/AMD 驱动、AArch64 上的 SIMD 加速 X.Org 优化等。</div>
 
-  <div class="article-body"><p>GrapheneOS 隐私功能成为联邦起诉依据</p><p>Samuel Tunick 因向 CBP 探员提供的密码导致手机被擦除，面临最高五年监禁。</p><p>亚特兰大居民 Samuel Tunick 正在抗辩一项联邦起诉，该起诉将手机上的隐私功能视为销毁证据。大陪审团依据一项涵盖为阻止政府人员扣押而销毁财产的法规对其提出指控。</p><p>这一切的根源是在边境检查期间，一部 Google Pixel 智能手机的内容被删除，案件本身在佐治亚州北区法院审理，主审法官为 Eleanor L. Ross。</p><p>如果 Tunick 被判有罪，该指控将处以罚款、最高五年监禁，或两者并罚。</p><p>去年 1 月 24 日，Tunick 从多米尼加共和国旅行归来，在哈茨菲尔德-杰克逊亚特兰大国际机场被海关与边境保护局官员带入二次检查，经历了多轮审讯和搜查。</p><p>官员们首先对他进行搜身，检查随身物品，并要求他交出手机密码。据报道，这一切都是在搜查违禁品的借口下进行的。</p><p>他多次要求见律师，但官员们无视所有请求，从未宣读他的米兰达权利，并继续审问他。当他反抗时，他们表示在边境是“完全不同的游戏”，不需要搜查令。</p><p>Tunick 最终交出了一个密码。</p><p>但密码输入后，屏幕闪烁了几次空白，随后设备自行重启，在要求访问的探员面前擦除了所有内容。</p><p>Tunick 律师提交的动议强调，他与“保卫亚特兰大森林”组织（一个被标记为 AGAAVE 的组织）的关联才是联邦探员针对他的真正原因，而非任何犯罪行为。</p><p>此前，一名国土安全部探员在 Tunick 航班降落前数小时就传阅了他的姓名和照片，将其标记为涉嫌恐怖活动，而 FBI 和 CBP 官员则协调安排了这次搜查。</p><p>尽管如此，政府从未出示证据将 Tunick 与该运动相关的实际犯罪联系起来。</p><p>Tunick 的手机上似乎设置了 GrapheneOS 的胁迫密码功能。当官员输入他提供的密码时，该功能按设计运行——在输入胁迫密码的瞬间擦除了设备。</p><p>如果你不知道，这个功能不仅会在锁屏界面触发，还会在任何身份验证提示下触发，并且覆盖手机上的所有用户配置文件，而不仅仅是主配置文件。</p><p>GrapheneOS 团队发布了一份声明，看起来是对此案的回应（尽管他们未点名），建议人们仔细思考如何使用胁迫密码功能，并指出在真实胁迫情况下擦除设备本身可能带来身体或法律后果。</p><p>不！目前尚无定论。本月早些时候举行了关于 Tunick 撤销动议的听证会，但法官在做出裁决前保留了进一步证词的空间。</p><p>书面辩论将持续到秋季，Tunick 一方需在 9 月 18 日前提交，政府一方在 10 月 9 日前提交，Tunick 的回复在 10 月 23 日前提交。在此之前，需知该指控附带的五年监禁只是法律允许的最高刑罚，并非他实际面临的判决。</p><p>就我而言，听到一个国家的公民仅仅为了回家而遭受如此对待，最终却在几个月后招致联邦起诉，感觉像是来自香蕉共和国才会发生的事。</p><p>但这就是“世界上最伟大的国家”的现状。</p><p>这不禁让人思考，普通人的权利是多么一文不值，而那些令人发指的罪犯却逍遥法外。🙃</p><p>喜欢这篇更新吗？支持独立的 Linux 新闻报道。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。请帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。</p><p>一次性付费，永久享受</p><p>任意金额，无需承诺</p><p>一个带着密码的极客</p></div>
+  <div class="article-body"><p>NetBSD 11.0 发布，支持 RISC-V，增强 Linux 系统调用兼容性 - Phoronix</p><p>NetBSD 11.0 发布，支持 RISC-V，增强 Linux 系统调用兼容性</p><p>2026年8月1日，美国东部时间下午12:49。</p><p>今天正式发布，这是这个流行的 BSD 操作系统的第十九个主要版本。</p><p>NetBSD 11.0 是该项目的首个支持 64 位 RISC-V 架构的版本，并在基于 StarFive JH71XX 的平台（如 VisionFive 2 和 STAR64）上提供了初始硬件支持。NetBSD 11.0 也支持在 QEMU 上运行 RISC-V。此外，NetBSD 还支持 AMD64、ARM、SPARC64、MIPS 以及许多其他架构。</p><p>在 Arm 方面，NetBSD 11.0 对 Qualcomm Snapdragon X1 Elite 硬件提供了初步支持，包括 Oryon CPU 核心和其他硬件启用工作。</p><p>NetBSD 11.0 还更好地支持 POSIX.1-2024 和 C23 标准，通过其“compat_linux”代码增强了与各种 Linux 系统调用的兼容性，为 x86/amd64 提供了新的 MICROVM 内核，以实现极快的虚拟机启动，以及一个 virt68k 端口，用于在 QEMU 中使用半虚拟化设备运行 Motorola 68000 端口。</p><p>NetBSD 11.0 还带来了一些新的 Intel 和 AMD 驱动程序，AArch64 上的 SIMD 加速 X.Org Server 优化，各种内核优化，以及其他全面的硬件启用。</p><p>有关今天 NetBSD 11.0 版本的下载和更多详细信息，请访问：</p><p>FreeBSD 的内核仍有一些 GPL 代码，而其基础用户空间已无 GPL</p><p>FreeBSD 开发新的 NTSYNC 驱动程序以加速 Windows NT 同步原语</p><p>用户对 FreeBSD 音频/声音支持的“悲惨状态”感到沮丧</p><p>FreeBSD 端口因一个非常大的提交而暂时冻结</p><p>FreeBSD 实习生致力于将 AMD ROCm 移植到 BSD 世界</p><p>FreeBSD 笔记本电脑支持持续改进，包括 WiFi、GPU 和音频驱动工作</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创建了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动程序和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>Valve 赞助将开源 RADV 驱动程序带到 Windows 的工作</p><p>“KVM 电锯”预计将在 Linux 7.3 中处理 God 数据结构</p><p>AMD P-State Linux 驱动补丁可将 1% 低帧率游戏性能提升 31%</p><p>现代 AMD Ryzen AM5 平台发布首个开源固件</p><p>Arch Linux AUR 再次遭遇恶意软件包浪潮，软件包收养暂停</p><p>Kiwi Menu 继续为 GNOME 带来 macOS 风格</p><p>Starling：一款用 Swift 编写的新 Linux 桌面，自带 Wayland 合成器，并由 AI 编写</p><p>旧 AMD GPU 的 DRM 格式修饰符将随 Linux 7.3 推出：感谢 Valve</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/grapheneos-duress-password-indictment/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/NetBSD-11.0" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
