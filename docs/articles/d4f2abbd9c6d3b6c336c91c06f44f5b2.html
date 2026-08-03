@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身 — Linux 中文速报</title>
+<title>Linux 7.2-rc6 发布：“这个 RC 版本巨大” — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身</h1>
+  <h1>Linux 7.2-rc6 发布：“这个 RC 版本巨大”</h1>
 
-  <div class="article-summary">Canonical 为 Ubuntu 引入了虚拟化栈的滚动发布模型，每六个月更新一次，取代了传统的 LTS 周期。此举由机密计算驱动，旨在解决硬件、内核、虚拟化工具和固件更新不同步的问题。该模型可选，用户可通过 ubuntu_virt_helper 工具切换，适用于运行机密虚拟机、AI 推理或私有云的用户。</div>
+  <div class="article-summary">Linux 7.2-rc6 内核已发布，用于测试，预计两周后发布稳定版。本次 RC 版本包含大量修复，尤其是声音和 DRM 图形驱动方面的修复，远超预期。Linus Torvalds 表示，这是多年来最大的 rc6 版本，尽管统计数据看似正常，但变更规模令人不安。他还提到，部分网络补丁积压与会议时间有关，希望剩余两周能平静下来。</div>
 
-  <div class="article-body"><p>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身</p><p>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身</p><p>一个新的虚拟化栈正在引入，每六个月更新一次。</p><p>Ubuntu 是最稳定的 Linux 发行版之一，前提是你运行的是其 LTS 版本。现在想象一下，放弃这一点，转而采用滚动发布模型。听起来很激动，对吧？那就别幻想了，因为今天还不是时候。</p><p>Canonical 为虚拟化栈引入了一种滚动发布方法，将通常的 LTS 周期替换为更快的六个月升级周期。机密计算是这一举措背后的驱动力，因为 Canonical 强调，栈中的不同组件很少同时就绪。处理器可能支持一项新功能，但内核尚未能暴露它，QEMU 尚未能处理它，libvirt 尚未给用户提供开启它的方式，固件和证明工具也尚未准备好使其真正可用。</p><p>使用 ubuntu_virt_helper 检查已安装的虚拟化变体。</p><p>虚拟化 HWE 栈包含四个部分。QEMU 负责管理程序和系统仿真；libvirt 涵盖虚拟化管理；ovmf 提供 UEFI 启动的固件；而 seabios 则用于 BIOS 兼容性。</p><p>这与 Ubuntu 已在内核上采用的方法相同，只是扩展到了虚拟化栈的其余部分。</p><p>切换到此模型完全是可选的，在 Ubuntu 26.04 LTS 的前两年，所有四个软件包每六个月刷新一次，但仅在 Ubuntu 24.04 LTS 中试运行之后。</p><p>显而易见，现有的 Ubuntu 安装将保留在基础栈上，除非有人决定切换到新栈。一个名为 ubuntu_virt_helper（不同软件包名称）的工具处理这种切换，因为 QEMU、libvirt 和固件需要作为一个整体移动，而不是逐个替换。</p><p>Canonical 承认机密计算已超出两年周期。</p><p>虚拟化 HWE 栈面向任何在 Ubuntu 上运行机密虚拟机、需要更强隔离的监管工作负载、依赖机密计算的 AI 推理或加速器，以及无法直接跳转到 Ubuntu 临时版本的私有或主权云平台的用户。</p><p>这些工作负载的发展速度超过了 Ubuntu 自身发布计划的吸收能力，而运行这些工作负载的用户不会等待两年才通过点版本来追赶不断演进的硅供应商。</p><p>Canonical 将其定位为一种同时获得 LTS 稳定性和新硬件支持的方式，而不是让用户必须在两者之间做出选择。</p><p>不要以为这被锁定在 Ubuntu Pro 之后。Canonical 教学材料中的每个示例都通过普通的 apt 命令运行，无需你登录任何门户。</p><p>最基本的方法是安装辅助工具：</p><p>sudo apt install ubuntu-helper-virt-hwe</p><p>其余部分，你需要查阅文档并运行以下命令：</p><p>ubuntu_virt_helper --help</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。</p><p>一次付费，永久享受。</p><p>任意金额，无需承诺。</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。</p><p>好消息，玩家们！GOG 正式登陆 Linux。</p><p>GrapheneOS 的一项隐私功能刚刚成为联邦起诉的依据。</p><p>OpenUK 希望英国停止免费赠送开源作品。</p><p>FireDragon 浏览器展翅高飞。</p><p>Ubuntu 26.10 “Stonking Stingray”：迄今为止所有新功能。</p><p>成为更好的 Linux 用户。</p><p>通过 FOSS 每周新闻通讯，你将学到有用的 Linux 技巧，发现应用程序，探索新发行版，并随时了解 Linux 世界的最新动态。</p><p>太好了！你已成功注册。</p><p>欢迎回来！你已成功登录。</p><p>你已成功订阅 It's FOSS。</p><p>你的链接已过期。</p><p>成功！请检查你的电子邮件以获取用于登录的魔法链接。</p><p>Su</p></div>
+  <div class="article-body"><p>Linux 7.2-rc6 发布：“这个 RC 版本巨大” - Phoronix</p><p>Linux 7.2-rc6 发布：“这个 RC 版本巨大”</p><p>于 2026 年 8 月 2 日晚上 7:38（美国东部时间）发布。</p><p>像时钟一样准时，Linux 7.2-rc6 内核现已可供测试，目标是在大约两周后发布稳定版。</p><p>Linux 7.2-rc6 带来了又一轮大量的错误修复……此前，由于 AI/LLM 编码代理的参与，修复和其他 Linux 内核补丁数量有所增加。声音方面的修复在开发阶段远超预期。Linux DRM 内核图形驱动程序的修复也大量涌入。本周落地的其他众多更改包括：</p><p>- 规避有问题的西部数据 SATA 驱动器</p><p>- 一些 AMD Zen 5 CPU 型号被错误识别为 Zen 6</p><p>Linus Torvalds 写道：</p><p>“嗯。这个 RC 版本巨大。即使按照‘新常态’的标准，这也是一个庞大的 RC 版本，我认为至少从提交数量来看，这是多年来最大的 rc6。</p><p>统计数据看起来并不特别奇怪：驱动程序占不到 60%，网络占 20%，其余 20% 是‘其他’（架构、工具、文件系统——没有什么特别奇怪的）。驱动程序方面主要是常见的 GPU 和网络驱动程序，但也不全是——还有声音、SPI、ATA 等。</p><p>所以有很多网络相关的内容，这至少部分是由于会议时间安排导致的持续积压。我希望这就是全部原因，但即使这里没有什么看起来特别奇怪，这个阶段的变更规模还是有点令人不安。</p><p>这里没有什么东西表明‘有问题’或暗示发布需要延迟，但我确实希望我们在剩余的两周内能平静下来。”</p><p>有关此内核版本（将于 8 月下旬首次亮相）中更改的更多详细信息，请参阅 Linux 7.2 功能概述。</p><p>Linux 的 crypto_rng 抽象层将成为下一个被移除的目标</p><p>Linux 7.2-rc5 发布：“又一次相当大的 -rc5”</p><p>Linux 7.2-rc4 发布：看起来像“新常态”</p><p>搭载骁龙 8 Elite 的 Legion Y700 Gen4 平板电脑获得 Linux 补丁支持</p><p>Linus Torvalds 重申 Linux 并非“反 AI”且不是“社会战士”项目</p><p>新的 Linux 补丁旨在更好地处理多个交换设备</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动程序和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>Valve 赞助将开源 RADV 驱动程序移植到 Windows 的工作</p><p>适用于现代 AMD Ryzen AM5 平台的首个开源固件发布</p><p>Arch Linux AUR 再次遭遇恶意软件包浪潮，软件包采用暂停</p><p>“KVM 电锯”预计将在 Linux 7.3 中用于处理 God 数据结构</p><p>AMD P-State Linux 驱动程序补丁可将 1% 低帧率游戏性能提升 31%</p><p>Kiwi Menu 继续为 GNOME 带来 macOS 风格</p><p>Starling：一款用 Swift 编写的新 Linux 桌面，自带 Wayland 合成器，并使用 AI 编写</p><p>适用于旧 AMD GPU 的 DRM 格式修饰符将在 Linux 7.3 中推出：感谢 Valve</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/ubuntu-rolling-release-virtualization-stack/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.2-rc6-Released" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

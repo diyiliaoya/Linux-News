@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身 — Linux 中文速报</title>
+<title>Ubuntu Touch 向 Ubuntu 26.04、Vulkan 及应用更新稳步推进 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身</h1>
+  <h1>Ubuntu Touch 向 Ubuntu 26.04、Vulkan 及应用更新稳步推进</h1>
 
-  <div class="article-summary">Canonical 为 Ubuntu 引入了虚拟化栈的滚动发布模型，每六个月更新一次，取代了传统的 LTS 周期。此举由机密计算驱动，旨在解决硬件、内核、虚拟化工具和固件更新不同步的问题。该模型可选，用户可通过 ubuntu_virt_helper 工具切换，适用于运行机密虚拟机、AI 推理或私有云的用户。</div>
+  <div class="article-summary">Ubuntu Touch 团队在发布 24.04-2.0 版本后，公布了后续开发计划。该版本已部分支持 Vulkan、Widevine DRM 流媒体、浏览器更新及改进的设备加密。当前开发重点包括 PulseAudio 集成、基于 Halium 16 的新设备移植、内核补丁以延长电池寿命，以及通过 Waydroid 支持 Play Integrity API 的试验。Ubuntu Touch 24.04-2.1 将带来小幅改进，而更大的里程碑是转向 Ubuntu 26.04 LTS 基底的 26.04-1.0 版本，但尚无具体时间表。</div>
 
-  <div class="article-body"><p>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身</p><p>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身</p><p>一个新的虚拟化栈正在引入，每六个月更新一次。</p><p>Ubuntu 是最稳定的 Linux 发行版之一，前提是你运行的是其 LTS 版本。现在想象一下，放弃这一点，转而采用滚动发布模型。听起来很激动，对吧？那就别幻想了，因为今天还不是时候。</p><p>Canonical 为虚拟化栈引入了一种滚动发布方法，将通常的 LTS 周期替换为更快的六个月升级周期。机密计算是这一举措背后的驱动力，因为 Canonical 强调，栈中的不同组件很少同时就绪。处理器可能支持一项新功能，但内核尚未能暴露它，QEMU 尚未能处理它，libvirt 尚未给用户提供开启它的方式，固件和证明工具也尚未准备好使其真正可用。</p><p>使用 ubuntu_virt_helper 检查已安装的虚拟化变体。</p><p>虚拟化 HWE 栈包含四个部分。QEMU 负责管理程序和系统仿真；libvirt 涵盖虚拟化管理；ovmf 提供 UEFI 启动的固件；而 seabios 则用于 BIOS 兼容性。</p><p>这与 Ubuntu 已在内核上采用的方法相同，只是扩展到了虚拟化栈的其余部分。</p><p>切换到此模型完全是可选的，在 Ubuntu 26.04 LTS 的前两年，所有四个软件包每六个月刷新一次，但仅在 Ubuntu 24.04 LTS 中试运行之后。</p><p>显而易见，现有的 Ubuntu 安装将保留在基础栈上，除非有人决定切换到新栈。一个名为 ubuntu_virt_helper（不同软件包名称）的工具处理这种切换，因为 QEMU、libvirt 和固件需要作为一个整体移动，而不是逐个替换。</p><p>Canonical 承认机密计算已超出两年周期。</p><p>虚拟化 HWE 栈面向任何在 Ubuntu 上运行机密虚拟机、需要更强隔离的监管工作负载、依赖机密计算的 AI 推理或加速器，以及无法直接跳转到 Ubuntu 临时版本的私有或主权云平台的用户。</p><p>这些工作负载的发展速度超过了 Ubuntu 自身发布计划的吸收能力，而运行这些工作负载的用户不会等待两年才通过点版本来追赶不断演进的硅供应商。</p><p>Canonical 将其定位为一种同时获得 LTS 稳定性和新硬件支持的方式，而不是让用户必须在两者之间做出选择。</p><p>不要以为这被锁定在 Ubuntu Pro 之后。Canonical 教学材料中的每个示例都通过普通的 apt 命令运行，无需你登录任何门户。</p><p>最基本的方法是安装辅助工具：</p><p>sudo apt install ubuntu-helper-virt-hwe</p><p>其余部分，你需要查阅文档并运行以下命令：</p><p>ubuntu_virt_helper --help</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。</p><p>一次付费，永久享受。</p><p>任意金额，无需承诺。</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。</p><p>好消息，玩家们！GOG 正式登陆 Linux。</p><p>GrapheneOS 的一项隐私功能刚刚成为联邦起诉的依据。</p><p>OpenUK 希望英国停止免费赠送开源作品。</p><p>FireDragon 浏览器展翅高飞。</p><p>Ubuntu 26.10 “Stonking Stingray”：迄今为止所有新功能。</p><p>成为更好的 Linux 用户。</p><p>通过 FOSS 每周新闻通讯，你将学到有用的 Linux 技巧，发现应用程序，探索新发行版，并随时了解 Linux 世界的最新动态。</p><p>太好了！你已成功注册。</p><p>欢迎回来！你已成功登录。</p><p>你已成功订阅 It's FOSS。</p><p>你的链接已过期。</p><p>成功！请检查你的电子邮件以获取用于登录的魔法链接。</p><p>Su</p></div>
+  <div class="article-body"><p>Ubuntu Touch 向 Ubuntu 26.04、Vulkan 及应用更新稳步推进 - Phoronix</p><p>Ubuntu Touch 向 Ubuntu 26.04、Vulkan 及应用更新稳步推进</p><p>2026年8月2日 上午06:37（美国东部时间）</p><p>继上周发布由社区维护的 Ubuntu Linux 移动版本 Ubuntu Touch 24.04-2.0 之后，现在有更多关于其后续开发工作以及最终过渡到 Ubuntu 26.04 基底的详细信息。</p><p>Ubuntu Touch Q&amp;A 195 现已发布（虽然其报告日期为7月25日，但直到昨天才出现在其 RSS 订阅中），其中概述了当前开发工作以及未来版本的发展路线图。随着 Ubuntu Touch 24.04-2.0 的发布，目前在某些场景下已部分支持 Vulkan，支持用于 DRM 内容流媒体的 Widevine，浏览器更新，以及改进的设备加密处理等。</p><p>正在进行的一些开发工作包括：PulseAudio 集成更新，基于 Halium 16 的移植以支持更新的 Android 设备，内核补丁以实现冻结用户进程而非休眠以延长电池寿命，以及使用 Waydroid 支持 Play Integrity API 的实验。如果他们能够实现 Play Integrity 支持，就可以在 Ubuntu Touch 上运行一些 Android 银行应用等。</p><p>许多 Ubuntu Touch 应用最近已更新并持续获得新功能，Snap 包中的 Vulkan 支持正在开发中，同时还有各种安全改进。</p><p>Ubuntu Touch 24.04-2.1 计划在最近的 -2.0 版本基础上提供小幅改进和修复。但更大的里程碑是转向 Ubuntu 26.04 LTS 基底的 Ubuntu 26.04-1.0。目前尚无 Ubuntu Touch 26.04-1.0 的发布时间表，但这是一个正在努力实现的目标。更多详情请参阅：</p><p>Ubuntu 将为 Ubuntu 26.04 LTS 提供虚拟化 HWE 栈</p><p>Ubuntu Touch 24.04-2.0 发布，支持刘海屏和圆角</p><p>Ubuntu Linux 计划移除 /etc/debian_version 历史遗留文件</p><p>三个新的 Ubuntu Snap 漏洞公开——其中一个可追溯至 Ubuntu 16.04 LTS</p><p>Canonical 正式推出用于离线/隔离环境 Ubuntu 使用的“企业商店”</p><p>Ubuntu 内核团队警告 AMD GPU 临时性能回归，最高达 42 倍</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过20,000篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 也是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Valve 赞助将开源 RADV 驱动移植到 Windows 的工作</p><p>首个面向现代 AMD Ryzen AM5 平台的开源固件发布</p><p>Arch Linux AUR 再次遭遇恶意软件包浪潮，软件包收养暂停</p><p>“KVM 电锯”预计将进入 Linux 7.3，以处理 God 数据结构</p><p>AMD P-State Linux 驱动补丁可将 1% 低帧率游戏性能提升 31%</p><p>Kiwi Menu 继续为 GNOME 带来 macOS 风格</p><p>Starling：一款用 Swift 编写的新 Linux 桌面，自带 Wayland 合成器，并由 AI 辅助编写</p><p>旧款 AMD GPU 的 DRM 格式修饰符将随 Linux 7.3 到来：感谢 Valve</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/ubuntu-rolling-release-virtualization-stack/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Ubuntu-Touch-Toward-26.04" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

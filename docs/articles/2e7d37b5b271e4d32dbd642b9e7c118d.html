@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身 — Linux 中文速报</title>
+<title>Linux 应用发布汇总（2026 年 7 月） — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身</h1>
+  <h1>Linux 应用发布汇总（2026 年 7 月）</h1>
 
-  <div class="article-summary">Canonical 为 Ubuntu 引入了虚拟化栈的滚动发布模型，每六个月更新一次，取代了传统的 LTS 周期。此举由机密计算驱动，旨在解决硬件、内核、虚拟化工具和固件更新不同步的问题。该模型可选，用户可通过 ubuntu_virt_helper 工具切换，适用于运行机密虚拟机、AI 推理或私有云的用户。</div>
+  <div class="article-summary">本文汇总了 2026 年 7 月 Linux 平台上的重要应用更新。Rio 终端新增 Quake 下拉模式，性能大幅提升，并将终端引擎拆分为独立 Rust crate。Typhoon 天气应用新增系统托盘图标和 24 小时降雨概率预报。BleachBit 6.0.2 新增清理 AI 编码工具缓存的功能，并改进 Linux 下的垃圾文件检测。此外，Anthropic 发布了 Claude Desktop 的 Linux 测试版，系统监视器也有重大更新。</div>
 
-  <div class="article-body"><p>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身</p><p>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身</p><p>一个新的虚拟化栈正在引入，每六个月更新一次。</p><p>Ubuntu 是最稳定的 Linux 发行版之一，前提是你运行的是其 LTS 版本。现在想象一下，放弃这一点，转而采用滚动发布模型。听起来很激动，对吧？那就别幻想了，因为今天还不是时候。</p><p>Canonical 为虚拟化栈引入了一种滚动发布方法，将通常的 LTS 周期替换为更快的六个月升级周期。机密计算是这一举措背后的驱动力，因为 Canonical 强调，栈中的不同组件很少同时就绪。处理器可能支持一项新功能，但内核尚未能暴露它，QEMU 尚未能处理它，libvirt 尚未给用户提供开启它的方式，固件和证明工具也尚未准备好使其真正可用。</p><p>使用 ubuntu_virt_helper 检查已安装的虚拟化变体。</p><p>虚拟化 HWE 栈包含四个部分。QEMU 负责管理程序和系统仿真；libvirt 涵盖虚拟化管理；ovmf 提供 UEFI 启动的固件；而 seabios 则用于 BIOS 兼容性。</p><p>这与 Ubuntu 已在内核上采用的方法相同，只是扩展到了虚拟化栈的其余部分。</p><p>切换到此模型完全是可选的，在 Ubuntu 26.04 LTS 的前两年，所有四个软件包每六个月刷新一次，但仅在 Ubuntu 24.04 LTS 中试运行之后。</p><p>显而易见，现有的 Ubuntu 安装将保留在基础栈上，除非有人决定切换到新栈。一个名为 ubuntu_virt_helper（不同软件包名称）的工具处理这种切换，因为 QEMU、libvirt 和固件需要作为一个整体移动，而不是逐个替换。</p><p>Canonical 承认机密计算已超出两年周期。</p><p>虚拟化 HWE 栈面向任何在 Ubuntu 上运行机密虚拟机、需要更强隔离的监管工作负载、依赖机密计算的 AI 推理或加速器，以及无法直接跳转到 Ubuntu 临时版本的私有或主权云平台的用户。</p><p>这些工作负载的发展速度超过了 Ubuntu 自身发布计划的吸收能力，而运行这些工作负载的用户不会等待两年才通过点版本来追赶不断演进的硅供应商。</p><p>Canonical 将其定位为一种同时获得 LTS 稳定性和新硬件支持的方式，而不是让用户必须在两者之间做出选择。</p><p>不要以为这被锁定在 Ubuntu Pro 之后。Canonical 教学材料中的每个示例都通过普通的 apt 命令运行，无需你登录任何门户。</p><p>最基本的方法是安装辅助工具：</p><p>sudo apt install ubuntu-helper-virt-hwe</p><p>其余部分，你需要查阅文档并运行以下命令：</p><p>ubuntu_virt_helper --help</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。</p><p>一次付费，永久享受。</p><p>任意金额，无需承诺。</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。</p><p>好消息，玩家们！GOG 正式登陆 Linux。</p><p>GrapheneOS 的一项隐私功能刚刚成为联邦起诉的依据。</p><p>OpenUK 希望英国停止免费赠送开源作品。</p><p>FireDragon 浏览器展翅高飞。</p><p>Ubuntu 26.10 “Stonking Stingray”：迄今为止所有新功能。</p><p>成为更好的 Linux 用户。</p><p>通过 FOSS 每周新闻通讯，你将学到有用的 Linux 技巧，发现应用程序，探索新发行版，并随时了解 Linux 世界的最新动态。</p><p>太好了！你已成功注册。</p><p>欢迎回来！你已成功登录。</p><p>你已成功订阅 It's FOSS。</p><p>你的链接已过期。</p><p>成功！请检查你的电子邮件以获取用于登录的魔法链接。</p><p>Su</p></div>
+  <div class="article-body"><p>Linux 应用发布汇总（2026 年 7 月） - OMG! Ubuntu</p><p>欢迎查看 2026 年 7 月最热门的 Linux 应用发布汇总（不仅仅是上个月气温高，这些应用也很“热”）。</p><p>上个月的主要更新包括：容器标签页让那些已经使用多年的人感到困惑。它还在基于 GTK 的 Linux 桌面（包括 Ubuntu）上圆润了窗口底部边角。</p><p>但流畅的系统监视器也发布了重大更新。我建议你去看看，尤其是如果你一直渴望一种查看电源统计信息的方法。Anthropic 发布了其 Claude Desktop 应用的 Linux 测试版，可以通过 .deb 包轻松安装在 Ubuntu 上。</p><p>但是，和往常一样，软件领域还有更多令人兴奋的东西，不仅仅是那些显而易见的。请继续阅读，了解我在每月 Linux 应用发布汇总中记下的其他值得注意的更新。</p><p>Rio 终端新增 Quake 模式</p><p>跨平台、GPU 加速的终端 Rio（不是其他跨平台、GPU 加速的终端）上个月活动频繁。</p><p>在众多更新中，它增加了一个下拉式“quake”模式选项。这允许你分配一个键盘热键，让终端从显示器顶部滑出到光标下方。巧妙的是，这个快捷键可以全局生效，即使 Rio 不在焦点上也能使用。</p><p>它将终端引擎与渲染器分离，成为一个独立的 Rust crate，并通过 C 接口封装了相同的核心。其他开发者可以在不使用 Rio 本身的情况下，基于 Rio 的技术构建自己的终端前端。</p><p>据 Amorim 称，性能也得到了大幅提升。全屏 TUI 重绘速度提升高达 1.6 倍，滚动密集型纯文本（例如大量的 print 输出）的解析速度现在提升高达 2.7 倍。</p><p>Rio 0.5.x 中的其他更改包括恢复了对 Sixel 和 iTerm2 内联图像的支持，修复了 Kitty 图形协议的问题，并且在 Linux 上，Rio 现在通过读取标准的 XDG Desktop Portal，在 Wayland 和 X11 会话中都会遵循系统的浅色/深色偏好。</p><p>Rio 是一款用 Rust 编写的免费开源软件。从其网站下载最新版本，或从其 .deb 包获取。</p><p>Typhoon 天气应用新增托盘图标</p><p>跨平台开源天气应用 Typhoon 在其最新版本中增加了系统托盘图标。这使得当应用不在前台时，你可以从面板上查看温度，并在需要时快速将其调至焦点。</p><p>本月该应用还增加了交互式 24 小时降雨概率和温度预报，并修复了一些错误。</p><p>Typhoon 是对标志性天气应用的现代复兴，但它本身是一个非常独特的存在。它于今年早些时候发布，并配备了新功能和集成，使其成为 Linux 上最好的天气应用之一。</p><p>托盘图标是一个小改动，但对于那些想要面板小程序一目了然的好处，同时又能在需要时跳转到应用的人来说，这是理想的选择。</p><p>下载详情可在 Typhoon 网站上找到，其中列出了 Windows 和 Linux 的软件包。Ubuntu 用户可以使用 Snap 版本、Flatpak 和 .deb 包。</p><p>BleachBit 可以释放 AI 编码工具占用的空间</p><p>BleachBit 6.0.2 新增清理器</p><p>免费系统清理器 BleachBit 新增了清理器，这是我在六月汇总中提到的测试版的稳定版本。抱歉让你有似曾相识的感觉。</p><p>该工具现在能够清除 AI 编码工具（包括 Continue）产生的垃圾文件。它还能清除 Google Chrome 经常在后台下载的 4GB AI 模型，但请注意，Chrome 可能会再次下载它。</p><p>其他跨平台支持包括：清理 Linux 上的多个浏览器配置文件、DNS 缓存，以及在粉碎粘贴的文件后清除剪贴板；深度扫描可以检测损坏的符号链接。</p><p>在 Linux 上，BleachBit 6.0.2 改进了对回收站文件的检测，并且能够清理 Deb 安装的 Brave 浏览器和 Flatpak 版本的 qBittorrent 客户端。修复改进了 Snap 处理，并允许 BleachBit 的 CLI 模式在 Wayland 上以 root 身份运行。</p><p>BleachBit 6.0.2 可从 download.bleachbit.org 下载，包括新的 AppImage 选项。</p><p>PhotoGIMP 持续模仿 Ad</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/ubuntu-rolling-release-virtualization-stack/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/linux-app-release-roundup-july-2026" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

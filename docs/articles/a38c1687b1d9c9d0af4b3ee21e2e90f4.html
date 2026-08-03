@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身 — Linux 中文速报</title>
+<title>Linux 7.3 将为 Intel Starfire 奠定基础 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身</h1>
+  <h1>Linux 7.3 将为 Intel Starfire 奠定基础</h1>
 
-  <div class="article-summary">Canonical 为 Ubuntu 引入了虚拟化栈的滚动发布模型，每六个月更新一次，取代了传统的 LTS 周期。此举由机密计算驱动，旨在解决硬件、内核、虚拟化工具和固件更新不同步的问题。该模型可选，用户可通过 ubuntu_virt_helper 工具切换，适用于运行机密虚拟机、AI 推理或私有云的用户。</div>
+  <div class="article-summary">Intel 近期发布了基于 Panther Lake 的航天级 SoC Starfire，专为极端环境设计。Linux 7.3 将开始引入首批针对 Starfire 的补丁，主要是在 EDAC 子系统中添加设备 ID，以支持错误检测与纠正功能。由于 Starfire 与 Panther Lake 在内存架构上非常接近，因此驱动代码路径可以复用。预计后续还会有更多补丁，主要涉及新设备 ID 的添加。此外，Linux 内核中已有另一个名为 Starfire 的 Adaptec 网络驱动，需注意区分。</div>
 
-  <div class="article-body"><p>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身</p><p>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身</p><p>一个新的虚拟化栈正在引入，每六个月更新一次。</p><p>Ubuntu 是最稳定的 Linux 发行版之一，前提是你运行的是其 LTS 版本。现在想象一下，放弃这一点，转而采用滚动发布模型。听起来很激动，对吧？那就别幻想了，因为今天还不是时候。</p><p>Canonical 为虚拟化栈引入了一种滚动发布方法，将通常的 LTS 周期替换为更快的六个月升级周期。机密计算是这一举措背后的驱动力，因为 Canonical 强调，栈中的不同组件很少同时就绪。处理器可能支持一项新功能，但内核尚未能暴露它，QEMU 尚未能处理它，libvirt 尚未给用户提供开启它的方式，固件和证明工具也尚未准备好使其真正可用。</p><p>使用 ubuntu_virt_helper 检查已安装的虚拟化变体。</p><p>虚拟化 HWE 栈包含四个部分。QEMU 负责管理程序和系统仿真；libvirt 涵盖虚拟化管理；ovmf 提供 UEFI 启动的固件；而 seabios 则用于 BIOS 兼容性。</p><p>这与 Ubuntu 已在内核上采用的方法相同，只是扩展到了虚拟化栈的其余部分。</p><p>切换到此模型完全是可选的，在 Ubuntu 26.04 LTS 的前两年，所有四个软件包每六个月刷新一次，但仅在 Ubuntu 24.04 LTS 中试运行之后。</p><p>显而易见，现有的 Ubuntu 安装将保留在基础栈上，除非有人决定切换到新栈。一个名为 ubuntu_virt_helper（不同软件包名称）的工具处理这种切换，因为 QEMU、libvirt 和固件需要作为一个整体移动，而不是逐个替换。</p><p>Canonical 承认机密计算已超出两年周期。</p><p>虚拟化 HWE 栈面向任何在 Ubuntu 上运行机密虚拟机、需要更强隔离的监管工作负载、依赖机密计算的 AI 推理或加速器，以及无法直接跳转到 Ubuntu 临时版本的私有或主权云平台的用户。</p><p>这些工作负载的发展速度超过了 Ubuntu 自身发布计划的吸收能力，而运行这些工作负载的用户不会等待两年才通过点版本来追赶不断演进的硅供应商。</p><p>Canonical 将其定位为一种同时获得 LTS 稳定性和新硬件支持的方式，而不是让用户必须在两者之间做出选择。</p><p>不要以为这被锁定在 Ubuntu Pro 之后。Canonical 教学材料中的每个示例都通过普通的 apt 命令运行，无需你登录任何门户。</p><p>最基本的方法是安装辅助工具：</p><p>sudo apt install ubuntu-helper-virt-hwe</p><p>其余部分，你需要查阅文档并运行以下命令：</p><p>ubuntu_virt_helper --help</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。</p><p>一次付费，永久享受。</p><p>任意金额，无需承诺。</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。</p><p>好消息，玩家们！GOG 正式登陆 Linux。</p><p>GrapheneOS 的一项隐私功能刚刚成为联邦起诉的依据。</p><p>OpenUK 希望英国停止免费赠送开源作品。</p><p>FireDragon 浏览器展翅高飞。</p><p>Ubuntu 26.10 “Stonking Stingray”：迄今为止所有新功能。</p><p>成为更好的 Linux 用户。</p><p>通过 FOSS 每周新闻通讯，你将学到有用的 Linux 技巧，发现应用程序，探索新发行版，并随时了解 Linux 世界的最新动态。</p><p>太好了！你已成功注册。</p><p>欢迎回来！你已成功登录。</p><p>你已成功订阅 It's FOSS。</p><p>你的链接已过期。</p><p>成功！请检查你的电子邮件以获取用于登录的魔法链接。</p><p>Su</p></div>
+  <div class="article-body"><p>Linux 7.3 将为 Intel Starfire 奠定基础 - Phoronix</p><p>Linux 7.3 将为 Intel Starfire 奠定基础</p><p>发布于 2026 年 8 月 2 日上午 10:32（美国东部时间）。</p><p>Intel 最近宣布了 Starfire，这是他们基于 Panther Lake 衍生的航天级 SoC，专为极端环境设计……例如在太空中的生存能力。随着 Linux 7.3 的到来，我们将开始看到首批针对 Intel Starfire 的补丁进入内核。</p><p>Intel 在 7 月发布了航天级 Starfire SoC，工程样品将于本季度开始出货。这些美国制造的 18A SoC 专为极端环境设计，且在这些环境中 Linux 比 Windows 更常见。</p><p>上周，错误检测与纠正（EDAC）子系统的 edac-for-next Git 分支中已加入了对 Intel Starfire SoC 的支持。从 EDAC 的角度来看，Starfire 的内存架构与 Panther Lake 非常接近，并复用了 IGEN6 驱动中现有的代码路径。最终，对于错误检测与纠正处理，只需一个新的设备 ID 即可支持 Starfire。</p><p>这是目前所见到的首个针对 Intel Starfire 的 Linux 补丁。预计还会有更多补丁，很可能主要是添加新的设备 ID，并遵循现有的 Panther Lake 驱动支持代码路径。也有可能 Starfire 实际上与之前在内核中提到的“加固型”Panther Lake 相同。</p><p>无论如何，鉴于目前 Intel Linux 支持的良好状态，一旦所有必要的设备 ID 添加完成，Starfire 的 Linux 支持也应该会处于良好状态。另外值得一提的是，Intel 的 Starfire 并不是 Linux 内核中唯一的“Starfire”，因为主线 Linux 内核中还有现有的 Adaptec Starfire 网络驱动。</p><p>Linux 7.3 将把 Intel Nova Lake S 图形视为稳定版</p><p>已提交补丁以改进 Intel Alchemist GPU 上的 Linux 媒体加速</p><p>Intel Media Driver 与 VPL GPU Runtime 2026Q2 更新继续为 Nova Lake 做准备</p><p>Linux 7.3 中 Intel 图形驱动支持 Xe3“峰值带宽阈值”功能</p><p>Intel 定向封装级热中断计划用于 Linux 7.3</p><p>Intel Compute Runtime 继续构建令人兴奋的“LEO”</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>Valve 赞助将开源 RADV 驱动移植到 Windows 的工作</p><p>首个面向现代 AMD Ryzen AM5 平台的开源固件发布</p><p>Arch Linux AUR 再次遭遇恶意软件包浪潮，软件包采用暂停</p><p>“KVM Chainsaw”预计将在 Linux 7.3 中用于处理 God 数据结构</p><p>AMD P-State Linux 驱动补丁可将 1% 低帧率游戏性能提升 31%</p><p>Kiwi Menu 继续将 macOS 风格带入 GNOME</p><p>Starling：一款用 Swift 编写的新 Linux 桌面，自带 Wayland 合成器，并由 AI 辅助开发</p><p>DRM 格式修饰符用于旧 AMD GPU，随 Linux 7.3 到来：感谢 Valve</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/ubuntu-rolling-release-virtualization-stack/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Intel-Starfire-Starts-Linux-7.3" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

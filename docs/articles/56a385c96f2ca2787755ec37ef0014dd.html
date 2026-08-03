@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身 — Linux 中文速报</title>
+<title>Linux 7.3 将支持高通 Adreno 704 和 Adreno 722 GPU — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身</h1>
+  <h1>Linux 7.3 将支持高通 Adreno 704 和 Adreno 722 GPU</h1>
 
-  <div class="article-summary">Canonical 为 Ubuntu 引入了虚拟化栈的滚动发布模型，每六个月更新一次，取代了传统的 LTS 周期。此举由机密计算驱动，旨在解决硬件、内核、虚拟化工具和固件更新不同步的问题。该模型可选，用户可通过 ubuntu_virt_helper 工具切换，适用于运行机密虚拟机、AI 推理或私有云的用户。</div>
+  <div class="article-summary">高通 MSM DRM 内核图形/显示驱动更新已提交，将进入 Linux 7.3 合并窗口。此次更新新增了对 Adreno 704 和 Adreno 722 GPU 的支持，其中 Adreno 704 用于 UNO-Q 等嵌入式平台，Adreno 722 用于骁龙 7 Gen 4 SoC。此外，还添加了高通 Shikra SoC 的设备树绑定，并改进了 FBDEV 模拟和修复了 teardown 问题。Linux 7.3 合并窗口预计于 8 月下旬开始。</div>
 
-  <div class="article-body"><p>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身</p><p>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身</p><p>一个新的虚拟化栈正在引入，每六个月更新一次。</p><p>Ubuntu 是最稳定的 Linux 发行版之一，前提是你运行的是其 LTS 版本。现在想象一下，放弃这一点，转而采用滚动发布模型。听起来很激动，对吧？那就别幻想了，因为今天还不是时候。</p><p>Canonical 为虚拟化栈引入了一种滚动发布方法，将通常的 LTS 周期替换为更快的六个月升级周期。机密计算是这一举措背后的驱动力，因为 Canonical 强调，栈中的不同组件很少同时就绪。处理器可能支持一项新功能，但内核尚未能暴露它，QEMU 尚未能处理它，libvirt 尚未给用户提供开启它的方式，固件和证明工具也尚未准备好使其真正可用。</p><p>使用 ubuntu_virt_helper 检查已安装的虚拟化变体。</p><p>虚拟化 HWE 栈包含四个部分。QEMU 负责管理程序和系统仿真；libvirt 涵盖虚拟化管理；ovmf 提供 UEFI 启动的固件；而 seabios 则用于 BIOS 兼容性。</p><p>这与 Ubuntu 已在内核上采用的方法相同，只是扩展到了虚拟化栈的其余部分。</p><p>切换到此模型完全是可选的，在 Ubuntu 26.04 LTS 的前两年，所有四个软件包每六个月刷新一次，但仅在 Ubuntu 24.04 LTS 中试运行之后。</p><p>显而易见，现有的 Ubuntu 安装将保留在基础栈上，除非有人决定切换到新栈。一个名为 ubuntu_virt_helper（不同软件包名称）的工具处理这种切换，因为 QEMU、libvirt 和固件需要作为一个整体移动，而不是逐个替换。</p><p>Canonical 承认机密计算已超出两年周期。</p><p>虚拟化 HWE 栈面向任何在 Ubuntu 上运行机密虚拟机、需要更强隔离的监管工作负载、依赖机密计算的 AI 推理或加速器，以及无法直接跳转到 Ubuntu 临时版本的私有或主权云平台的用户。</p><p>这些工作负载的发展速度超过了 Ubuntu 自身发布计划的吸收能力，而运行这些工作负载的用户不会等待两年才通过点版本来追赶不断演进的硅供应商。</p><p>Canonical 将其定位为一种同时获得 LTS 稳定性和新硬件支持的方式，而不是让用户必须在两者之间做出选择。</p><p>不要以为这被锁定在 Ubuntu Pro 之后。Canonical 教学材料中的每个示例都通过普通的 apt 命令运行，无需你登录任何门户。</p><p>最基本的方法是安装辅助工具：</p><p>sudo apt install ubuntu-helper-virt-hwe</p><p>其余部分，你需要查阅文档并运行以下命令：</p><p>ubuntu_virt_helper --help</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。</p><p>一次付费，永久享受。</p><p>任意金额，无需承诺。</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。</p><p>好消息，玩家们！GOG 正式登陆 Linux。</p><p>GrapheneOS 的一项隐私功能刚刚成为联邦起诉的依据。</p><p>OpenUK 希望英国停止免费赠送开源作品。</p><p>FireDragon 浏览器展翅高飞。</p><p>Ubuntu 26.10 “Stonking Stingray”：迄今为止所有新功能。</p><p>成为更好的 Linux 用户。</p><p>通过 FOSS 每周新闻通讯，你将学到有用的 Linux 技巧，发现应用程序，探索新发行版，并随时了解 Linux 世界的最新动态。</p><p>太好了！你已成功注册。</p><p>欢迎回来！你已成功登录。</p><p>你已成功订阅 It's FOSS。</p><p>你的链接已过期。</p><p>成功！请检查你的电子邮件以获取用于登录的魔法链接。</p><p>Su</p></div>
+  <div class="article-body"><p>Linux 7.3 将支持高通 Adreno 704 和 Adreno 722 GPU - Phoronix</p><p>Linux 7.3 将支持高通 Adreno 704 和 Adreno 722 GPU</p><p>发布于 2026 年 8 月 2 日星期六上午 06:47（美国东部时间）</p><p>周六，高通 MSM DRM 内核图形/显示驱动更新已提交，为即将到来的 Linux 7.3 合并窗口做准备。</p><p>这次 MSM 驱动的功能拉取请求（已提交至 DRM-Next）新增了对 Adreno 704 和 Adreno 722 GPU 的支持。Adreno 704 是用于某些嵌入式平台（如 UNO-Q）的 GPU。而 Adreno 722 则是更强大的兄弟型号，用于骁龙 7 Gen 4 SoC 等平台。</p><p>MSM 驱动的拉取请求还添加了设备树绑定，以支持即将推出的高通 Shikra SoC。高通 Shikra 最近收到了大量 Linux 启用补丁，现在其 GPU 支持也将进入主线 Linux 7.3。</p><p>这个下一个内核版本的 MSM 更新还带来了 FBDEV 模拟的改进、teardown 修复以及其他各种修复。Linux 7.3 的高通 MSM 内核驱动补丁的完整列表可以通过以下链接查看。Linux 7.3 合并窗口预计将于 8 月下旬开始。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/ubuntu-rolling-release-virtualization-stack/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-MSM-DRM-Driver" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

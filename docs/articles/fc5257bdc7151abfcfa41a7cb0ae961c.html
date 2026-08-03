@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身 — Linux 中文速报</title>
+<title>DistroWatch周刊，第1184期 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">DistroWatch</span>
   </div>
 
-  <h1>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身</h1>
+  <h1>DistroWatch周刊，第1184期</h1>
 
-  <div class="article-summary">Canonical 为 Ubuntu 引入了虚拟化栈的滚动发布模型，每六个月更新一次，取代了传统的 LTS 周期。此举由机密计算驱动，旨在解决硬件、内核、虚拟化工具和固件更新不同步的问题。该模型可选，用户可通过 ubuntu_virt_helper 工具切换，适用于运行机密虚拟机、AI 推理或私有云的用户。</div>
+  <div class="article-summary">本期DistroWatch周刊报道了FreeBSD计划引入Dockerbox、Haiku获得Firefox品牌使用权、Garuda更新FireDragon浏览器、Ubuntu计划为LTS版本提供虚拟化工具升级等新闻。此外，还讨论了Debian关于LLM生成内容的辩论、FreeBSD冻结ports树、Debian启动Perl更新等话题。问答部分涵盖了Linux初学者的多个问题，包括使用systemd隐藏文件、利用显卡扩展内存等。本周发布了多个发行版更新，如Emmabuntüs、ZimaOS、MakuluLinux等。</div>
 
-  <div class="article-body"><p>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身</p><p>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身</p><p>一个新的虚拟化栈正在引入，每六个月更新一次。</p><p>Ubuntu 是最稳定的 Linux 发行版之一，前提是你运行的是其 LTS 版本。现在想象一下，放弃这一点，转而采用滚动发布模型。听起来很激动，对吧？那就别幻想了，因为今天还不是时候。</p><p>Canonical 为虚拟化栈引入了一种滚动发布方法，将通常的 LTS 周期替换为更快的六个月升级周期。机密计算是这一举措背后的驱动力，因为 Canonical 强调，栈中的不同组件很少同时就绪。处理器可能支持一项新功能，但内核尚未能暴露它，QEMU 尚未能处理它，libvirt 尚未给用户提供开启它的方式，固件和证明工具也尚未准备好使其真正可用。</p><p>使用 ubuntu_virt_helper 检查已安装的虚拟化变体。</p><p>虚拟化 HWE 栈包含四个部分。QEMU 负责管理程序和系统仿真；libvirt 涵盖虚拟化管理；ovmf 提供 UEFI 启动的固件；而 seabios 则用于 BIOS 兼容性。</p><p>这与 Ubuntu 已在内核上采用的方法相同，只是扩展到了虚拟化栈的其余部分。</p><p>切换到此模型完全是可选的，在 Ubuntu 26.04 LTS 的前两年，所有四个软件包每六个月刷新一次，但仅在 Ubuntu 24.04 LTS 中试运行之后。</p><p>显而易见，现有的 Ubuntu 安装将保留在基础栈上，除非有人决定切换到新栈。一个名为 ubuntu_virt_helper（不同软件包名称）的工具处理这种切换，因为 QEMU、libvirt 和固件需要作为一个整体移动，而不是逐个替换。</p><p>Canonical 承认机密计算已超出两年周期。</p><p>虚拟化 HWE 栈面向任何在 Ubuntu 上运行机密虚拟机、需要更强隔离的监管工作负载、依赖机密计算的 AI 推理或加速器，以及无法直接跳转到 Ubuntu 临时版本的私有或主权云平台的用户。</p><p>这些工作负载的发展速度超过了 Ubuntu 自身发布计划的吸收能力，而运行这些工作负载的用户不会等待两年才通过点版本来追赶不断演进的硅供应商。</p><p>Canonical 将其定位为一种同时获得 LTS 稳定性和新硬件支持的方式，而不是让用户必须在两者之间做出选择。</p><p>不要以为这被锁定在 Ubuntu Pro 之后。Canonical 教学材料中的每个示例都通过普通的 apt 命令运行，无需你登录任何门户。</p><p>最基本的方法是安装辅助工具：</p><p>sudo apt install ubuntu-helper-virt-hwe</p><p>其余部分，你需要查阅文档并运行以下命令：</p><p>ubuntu_virt_helper --help</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。</p><p>一次付费，永久享受。</p><p>任意金额，无需承诺。</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。</p><p>好消息，玩家们！GOG 正式登陆 Linux。</p><p>GrapheneOS 的一项隐私功能刚刚成为联邦起诉的依据。</p><p>OpenUK 希望英国停止免费赠送开源作品。</p><p>FireDragon 浏览器展翅高飞。</p><p>Ubuntu 26.10 “Stonking Stingray”：迄今为止所有新功能。</p><p>成为更好的 Linux 用户。</p><p>通过 FOSS 每周新闻通讯，你将学到有用的 Linux 技巧，发现应用程序，探索新发行版，并随时了解 Linux 世界的最新动态。</p><p>太好了！你已成功注册。</p><p>欢迎回来！你已成功登录。</p><p>你已成功订阅 It's FOSS。</p><p>你的链接已过期。</p><p>成功！请检查你的电子邮件以获取用于登录的魔法链接。</p><p>Su</p></div>
+  <div class="article-body"><p>DistroWatch周刊，第1184期（DistroWatch.com新闻）</p><p>DistroWatch.com由以下赞助商支持</p><p>新闻/观点/评论 ▼</p><p>发布公告</p><p>DW周刊 / 评论存档</p><p>访客评分与评论</p><p>按评分排列的项目排名</p><p>播客、通讯与评论</p><p>跨发行版比较软件包</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停止维护的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与诀窍专栏</p><p>神话与误解专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>发行版家族树可视化</p><p>常见问题解答</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>Arch项目阻止对AUR的新推送</p><p>Ubuntu计划为LTS版本提供虚拟化工具升级</p><p>Garuda更新其FireDragon浏览器，采用新基础</p><p>Haiku获得在移植浏览器上使用Firefox品牌的权利</p><p>FreeBSD发布2026年第二季度状态报告</p><p>Debian就LLM工具的使用展开辩论</p><p>FreeBSD暂时冻结ports树</p><p>Debian启动Perl更新</p><p>Canonical为Ubuntu Pro用户推出Enterprise Store</p><p>openSUSE分享刷新过期仓库密钥的技巧</p><p>易于使用的PBX - 托管或自管理</p><p>Linux电话系统</p><p>免费在线聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程工作应用：iOS或Android</p><p>免费视频会议</p><p>VoIP / PBX 操作指南（由3CX提供）</p><p>不要被蒙蔽，制定灾难恢复计划！</p><p>必备的在线聊天报告与统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business与3CX WhatsApp API集成对比</p><p>3CX StartUP的5大杀手级功能</p><p>别做“那种人”第1卷：保持复杂凭据</p><p>别做“那种人”第2卷：呼叫欺诈</p><p>别做“那种人”第3卷：四大安全提示</p><p>别做“那种人”第4卷：监控你的实例</p><p>MakuluLinux 2026-07-28</p><p>Shadowfetch Linux 2.0.1</p><p>PCLinuxOS杂志2026年8月号</p><p>HardenedBSD 2026年6月/7月状态报告</p><p>Full Circle杂志第231期</p><p>Red Hat周五五件事 - 2026年7月31日</p><p>Armbian通讯2026年7月</p><p>Ubuntu每周通讯第954期</p><p>FreeBSD状态报告2026年第二季度</p><p>Full Circle每周新闻</p><p>Fedora项目播客</p><p>Projets Libres播客</p><p>Galactic Mandate Linux</p><p>最新新闻与更新</p><p>新闻过滤选项</p><p>DistroWatch周刊，第1184期</p><p>新闻：FreeBSD将获得Dockerbox，Haiku可重新分发Firefox移植版，Garuda改进FireDragon，Ubuntu计划虚拟化升级</p><p>问答：Linux初学者的多个问题</p><p>上周发布：Emmabuntüs DE6-1.02、ZimaOS 1.7.0、MakuluLinux 2026-07-28、NethSecurity 8.8.0、4MLinux 52.0、Archcraft 2026.08.01、NetBSD 11.0、AerynOS 2026.08</p><p>Torrent专区：BigLinux、Emmabuntus、NetBSD、TUXEDO OS</p><p>即将发布：FreeBSD 14.5 BETA1</p><p>投票：你认为Debian将如何决定是否接受LLM生成的内容？</p><p>更多内容请阅读本期DistroWatch周刊……</p><p>PorteuX是一个基于Slackware Linux的发行版，灵感来自Slax和Porteus，免费向公众提供。其主要目标是快速、小巧、便携（可从U盘运行）、模块化，并且可选不可变。它预配置了基本使用环境，包括七个桌面环境（Cinnamon、GNOME、KDE Plasma、LXDE、LXQt、MATE和Xfce）中的轻量级应用。未包含浏览器，但提供了应用商店，可下载任何最流行的浏览器以及其他应用程序。</p><p>问答：使用systemd隐藏文件</p><p>问答：使用显卡扩展内存</p><p>技巧：GRUB Customizer</p><p>技巧：运行openSUSE &quot;Factory&quot;</p><p>问答：开源社区中的战争</p><p>问答：关于硬件兼容性和评论的问题</p><p>问答：提供init多样性的发行版</p><p>技巧：发行版安装后更换init软件</p><p>技巧：用于救援操作系统和数据文件的工具</p><p>技巧：改进软件包状态</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/ubuntu-rolling-release-virtualization-stack/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://distrowatch.com/12911" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身 — Linux 中文速报</title>
+<title>Ubuntu 已为阿尔伯塔省和摩洛哥时区变更做好准备 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身</h1>
+  <h1>Ubuntu 已为阿尔伯塔省和摩洛哥时区变更做好准备</h1>
 
-  <div class="article-summary">Canonical 为 Ubuntu 引入了虚拟化栈的滚动发布模型，每六个月更新一次，取代了传统的 LTS 周期。此举由机密计算驱动，旨在解决硬件、内核、虚拟化工具和固件更新不同步的问题。该模型可选，用户可通过 ubuntu_virt_helper 工具切换，适用于运行机密虚拟机、AI 推理或私有云的用户。</div>
+  <div class="article-summary">Ubuntu 更新了 tzdata 时区数据库，以应对加拿大阿尔伯塔省将于2026年11月永久采用夏令时（UTC-6），以及摩洛哥将于2026年9月恢复格林尼治标准时间（GMT+0）的变更。更新将自动推送到所有受支持的 Ubuntu 版本（包括16.04 LTS）及基于 Ubuntu 的发行版（如 Linux Mint、ZorinOS 和 Pop!_OS），确保用户系统时间自动同步，避免因时间错误导致的安全和访问问题。</div>
 
-  <div class="article-body"><p>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身</p><p>Ubuntu 现已推出滚动发布模型！但并非针对发行版本身</p><p>一个新的虚拟化栈正在引入，每六个月更新一次。</p><p>Ubuntu 是最稳定的 Linux 发行版之一，前提是你运行的是其 LTS 版本。现在想象一下，放弃这一点，转而采用滚动发布模型。听起来很激动，对吧？那就别幻想了，因为今天还不是时候。</p><p>Canonical 为虚拟化栈引入了一种滚动发布方法，将通常的 LTS 周期替换为更快的六个月升级周期。机密计算是这一举措背后的驱动力，因为 Canonical 强调，栈中的不同组件很少同时就绪。处理器可能支持一项新功能，但内核尚未能暴露它，QEMU 尚未能处理它，libvirt 尚未给用户提供开启它的方式，固件和证明工具也尚未准备好使其真正可用。</p><p>使用 ubuntu_virt_helper 检查已安装的虚拟化变体。</p><p>虚拟化 HWE 栈包含四个部分。QEMU 负责管理程序和系统仿真；libvirt 涵盖虚拟化管理；ovmf 提供 UEFI 启动的固件；而 seabios 则用于 BIOS 兼容性。</p><p>这与 Ubuntu 已在内核上采用的方法相同，只是扩展到了虚拟化栈的其余部分。</p><p>切换到此模型完全是可选的，在 Ubuntu 26.04 LTS 的前两年，所有四个软件包每六个月刷新一次，但仅在 Ubuntu 24.04 LTS 中试运行之后。</p><p>显而易见，现有的 Ubuntu 安装将保留在基础栈上，除非有人决定切换到新栈。一个名为 ubuntu_virt_helper（不同软件包名称）的工具处理这种切换，因为 QEMU、libvirt 和固件需要作为一个整体移动，而不是逐个替换。</p><p>Canonical 承认机密计算已超出两年周期。</p><p>虚拟化 HWE 栈面向任何在 Ubuntu 上运行机密虚拟机、需要更强隔离的监管工作负载、依赖机密计算的 AI 推理或加速器，以及无法直接跳转到 Ubuntu 临时版本的私有或主权云平台的用户。</p><p>这些工作负载的发展速度超过了 Ubuntu 自身发布计划的吸收能力，而运行这些工作负载的用户不会等待两年才通过点版本来追赶不断演进的硅供应商。</p><p>Canonical 将其定位为一种同时获得 LTS 稳定性和新硬件支持的方式，而不是让用户必须在两者之间做出选择。</p><p>不要以为这被锁定在 Ubuntu Pro 之后。Canonical 教学材料中的每个示例都通过普通的 apt 命令运行，无需你登录任何门户。</p><p>最基本的方法是安装辅助工具：</p><p>sudo apt install ubuntu-helper-virt-hwe</p><p>其余部分，你需要查阅文档并运行以下命令：</p><p>ubuntu_virt_helper --help</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。</p><p>一次付费，永久享受。</p><p>任意金额，无需承诺。</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的极客。</p><p>好消息，玩家们！GOG 正式登陆 Linux。</p><p>GrapheneOS 的一项隐私功能刚刚成为联邦起诉的依据。</p><p>OpenUK 希望英国停止免费赠送开源作品。</p><p>FireDragon 浏览器展翅高飞。</p><p>Ubuntu 26.10 “Stonking Stingray”：迄今为止所有新功能。</p><p>成为更好的 Linux 用户。</p><p>通过 FOSS 每周新闻通讯，你将学到有用的 Linux 技巧，发现应用程序，探索新发行版，并随时了解 Linux 世界的最新动态。</p><p>太好了！你已成功注册。</p><p>欢迎回来！你已成功登录。</p><p>你已成功订阅 It's FOSS。</p><p>你的链接已过期。</p><p>成功！请检查你的电子邮件以获取用于登录的魔法链接。</p><p>Su</p></div>
+  <div class="article-body"><p>Ubuntu 已为阿尔伯塔省和摩洛哥时区变更做好准备 - OMG! Ubuntu</p><p>时区在变，Ubuntu 也在跟进——嗯，算是吧。</p><p>今年11月，加拿大大部分地区将把时钟拨慢一小时，但加拿大西部省份阿尔伯塔省不会。该省决定永久保留夏令时，而不是回拨至标准时间。</p><p>与此同时，摩洛哥在9月将反其道而行：在比格林尼治标准时间快一小时运行了八年之后，它将回归 GMT。</p><p>因此，Ubuntu 更新了其 tzdata 软件包，以便这两个地区的用户——或任何前往这些地区的人——都能在时间上保持系统同步。</p><p>此次更新刷新了数据库，使操作系统能够识别并计算适用于各地的时区规则。</p><p>基于 Ubuntu 的下游发行版，如 Linux Mint，也会获得此更新。</p><p>如果没有该更新，Ubuntu 将继续应用旧规则。除了造成困惑之外，系统时间不正确也是一种安全风险，这可能导致访问网站、软件仓库和安全功能时出现问题。</p><p>阿尔伯塔省或摩洛哥的用户在各自的变更日期到来时，无需手动调整系统时间。只要安装了 tzdata 2026c 更新（或更新版本），时钟变更时就会自动显示正确时间。</p><p>该更新正在向所有受支持的 Ubuntu 版本推送，最早可追溯至 16.04 LTS（在 Ubuntu Pro 中仍通过 Legacy 附加组件获得支持）。它也将应用于基于 Ubuntu 的发行版，如 Linux Mint、ZorinOS 和 Pop!_OS，这些发行版使用 LTS 基础版本。</p><p>阿尔伯塔省将从2026年11月1日起全年保持 UTC-6（称为“阿尔伯塔时间”）。阿尔伯塔省的部长们更倾向于在一天结束时而非早晨保留更多光照。该省计划在第一个完整年度后“监测过渡情况”，以确保其运行良好。</p><p>摩洛哥将从2026年9月20日起改用 GMT+0。自2018年以来，该国在一年中的大部分时间使用 GMT+1，仅在斋月期间回拨至 GMT+0，斋月结束后再拨快。这一做法并不受欢迎；要求废除它的公众压力最终占了上风。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/ubuntu-rolling-release-virtualization-stack/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/ubuntu-alberta-morocco-time-change" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
