@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Archcraft 2026.08.01 — Linux 中文速报</title>
+<title>Linux 7.3 看起来将上游合并 FailFS — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Archcraft 2026.08.01</h1>
+  <h1>Linux 7.3 看起来将上游合并 FailFS</h1>
 
-  <div class="article-summary">Archcraft 发布了 2026.08.01 版本，这是基于 Arch 的轻量级 Linux 发行版的最新稳定版。本次更新引入了 Sway Wayland 合成器作为新的桌面选择，并全面改进了安装体验、桌面会话、VirtualBox 支持，修复了大量 bug。同时恢复了 Btrfs 和 XFS 文件系统的安装支持，更新了 archiso 至 88-1，并增强了 GTK/GNOME 应用集成。该版本被认为是 Archcraft 迄今最大的更新之一。</div>
+  <div class="article-summary">Linux 7.3 预计将合并 FailFS 文件系统，这是继 NULLFS 之后引入的另一个伪文件系统。FailFS 在启动早期通过 kern_mount() 挂载，不属于任何挂载命名空间，无法被克隆或从用户空间挂载。所有到达该文件系统的操作都会返回 EOPNOTSUPP 错误。该文件系统允许进程完全摆脱文件系统状态，绝对路径和相对路径查找都会失败。FailFS 驱动代码不到 200 行，已进入 VFS.git 分支，若无反对意见，将在本月晚些时候的合并窗口提交。</div>
 
-  <div class="article-body"><p>发行版发布：Archcraft 2026.08.01</p><p>Aditya Shakya 已宣布发布 2026.08.01，这是该项目基于 Arch 的轻量级快速 Linux 发行版的最新稳定版。此版本在实时模式中新增了 Sway Wayland 合成器作为桌面选择（除了 Openbox 和 bspwm 窗口管理器之外）：</p><p>“Archcraft 的 2026 年 8 月 ISO 镜像现已可供下载。此版本专注于稳定性、兼容性和精致度。从完全改版的安装体验到改进的桌面会话、更好的 VirtualBox 支持以及无数错误修复，这是 Archcraft 迄今最大的更新之一。亮点包括：全新的 Qt6 SDDM 主题；新的 Sway Wayland 会话；跨安装程序的可靠加密安装；恢复 Btrfs 和 XFS 安装支持（Calamares）；更新至 archiso 88-1；改进的 VirtualBox 兼容性；更好的 GTK/GNOME 应用集成；数百项小修复和改进。此版本最大的新增功能之一是引入 Sway，在现有窗口管理器之外提供了另一个轻量级 Wayland 会话。”</p><p>更多信息和截图请见下文。</p><p>archcraft-2026.08.01-x86_64.iso</p><p>近期相关新闻和发布：</p><p>发行版发布：Archcraft 2026.08.01</p><p>发行版发布：Archcraft 2026.05.12</p><p>发行版发布：Archcraft 2026.02.02</p><p>发行版发布：Archcraft 2025.04.24</p><p>发行版发布：Archcraft 2024.04.06</p><p>发行版发布：Archcraft 2023.01.01</p><p>更多 Archcraft 新闻...</p><p>Archcraft 是一个基于 Arch Linux 的极简 Linux 发行版。该项目使用极简窗口管理器而非功能完整的桌面环境来提供图形用户界面。Archcraft 使用 Calamares 系统安装程序进行安装，并包含 y</p></div>
+  <div class="article-body"><p>Linux 7.3 看起来将上游合并 FailFS - Phoronix</p><p>Linux 7.3 看起来将上游合并 FailFS</p><p>2026年8月3日下午2:46 EDT。</p><p>在 Linux 7.3 中合并了 NULLFS，作为一个“完全僵化的最小伪文件系统”。现在预计 Linux 7.3 将合并它的兄弟：FailFS。</p><p>NULLFS 提供了一个永久为空且不可变的目录，其中查找操作以 ENOENT（无此文件或目录）错误码失败。对于即将到来的 FailFS，到达文件系统的每个操作都会返回 EOPNOTSUPP，即 Linux 中“操作不支持”的错误码。</p><p>Christian Brauner 在将 FailFS 排入 VFS.git 的“vfs-7.3.failfs”Git 分支时解释道：</p><p>“在早期启动期间，通过 kern_mount() 挂载了一个 FailFS 实例，使其在逻辑上区别于每个挂载命名空间。</p><p>由于该挂载不属于任何挂载命名空间，因此无法在其上挂载其他东西。它不能被 OPEN_TREE_CLONE 克隆，也不会出现在 statmount()/listmount() 或 /proc/&lt;pid&gt;/mountinfo 中。该文件系统未注册，因此不会出现在 /proc/filesystems 中，也无法从用户空间挂载。</p><p>这允许任务完全摆脱其文件系统状态。根目录或工作目录位于 failfs 中的进程必须将每个路径查找锚定在显式文件描述符上，否则任何查找都将失败。绝对路径、绝对符号链接和 AT_FDCWD 相对查找都会失败。后续补丁将通过一个新的 FD_FAILFS_ROOT 文件描述符哨兵将其暴露，该哨兵可被 fchdir() 和新的 fchroot() 系统调用使用。</p><p>有趣的是，由于动态二进制执行与 PT_INTERP 的工作方式，这目前也阻止了动态二进制的执行，因为加载器使用绝对路径（参见 selftests）。”</p><p>FailFS 无法被克隆，无法从用户空间挂载，也无法在其上挂载任何东西。FailFS 驱动程序的驱动部分代码不到两百行。</p><p>Brauner 已将 FailFS 排入 VFS.git 分支，并标记为“7.3”，预计 FailFS 将在本月晚些时候的 Linux 7.3 合并窗口提交——前提是 Linus Torvalds 或其他著名内核开发者没有反对意见。</p><p>Linux 7.3 预计将移除 FreeVxFS 文件系统驱动</p><p>Cryptsetup 2.8.7 发布以应对 Linux 仓促弃用 AF_ALG 的后果</p><p>EFS 文件系统计划在 Linux 7.3 中移除，已超过20年未维护</p><p>Linux 7.3 将克服 PCIe Gen5 NVMe SSD 小 I/O 的“重大瓶颈”</p><p>下一个 Bcachefs 版本旨在将 Rust 代码纳入内核模块</p><p>Linux MD RAID5 可扩展性提升高达17%</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过20,000篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>Valve 赞助将开源 RADV 驱动移植到 Windows 的工作</p><p>首个面向现代 AMD Ryzen AM5 平台的开源固件发布</p><p>Arch Linux AUR 再次遭遇恶意软件包浪潮，软件包收养暂停</p><p>“KVM 电锯”预计将在 Linux 7.3 中处理 God 数据结构</p><p>AMD P-State Linux 驱动补丁可将 1% 低帧率游戏性能提升 31%</p><p>知名 Arch Linux 开发者任职10年后辞职</p><p>Starling：用 Swift 编写的新 Linux 桌面，自带 Wayland 合成器，并使用 AI 辅助开发</p><p>旧 AMD GPU 的 DRM 格式修饰符将随 Linux 7.3 到来：感谢 Valve</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12908" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-Expects-FailFS" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

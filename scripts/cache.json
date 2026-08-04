@@ -5344,5 +5344,159 @@
     "title_zh": "Ubuntu Touch 向 Ubuntu 26.04、Vulkan 及应用更新稳步推进",
     "summary_zh": "Ubuntu Touch 团队在发布 24.04-2.0 版本后，公布了后续开发计划。该版本已部分支持 Vulkan、Widevine DRM 流媒体、浏览器更新及改进的设备加密。当前开发重点包括 PulseAudio 集成、基于 Halium 16 的新设备移植、内核补丁以延长电池寿命，以及通过 Waydroid 支持 Play Integrity API 的试验。Ubuntu Touch 24.04-2.1 将带来小幅改进，而更大的里程碑是转向 Ubuntu 26.04 LTS 基底的 26.04-1.0 版本，但尚无具体时间表。",
     "fulltext_zh": "Ubuntu Touch 向 Ubuntu 26.04、Vulkan 及应用更新稳步推进 - Phoronix\nUbuntu Touch 向 Ubuntu 26.04、Vulkan 及应用更新稳步推进\n2026年8月2日 上午06:37（美国东部时间）\n\n继上周发布由社区维护的 Ubuntu Linux 移动版本 Ubuntu Touch 24.04-2.0 之后，现在有更多关于其后续开发工作以及最终过渡到 Ubuntu 26.04 基底的详细信息。\n\nUbuntu Touch Q&A 195 现已发布（虽然其报告日期为7月25日，但直到昨天才出现在其 RSS 订阅中），其中概述了当前开发工作以及未来版本的发展路线图。随着 Ubuntu Touch 24.04-2.0 的发布，目前在某些场景下已部分支持 Vulkan，支持用于 DRM 内容流媒体的 Widevine，浏览器更新，以及改进的设备加密处理等。\n\n正在进行的一些开发工作包括：PulseAudio 集成更新，基于 Halium 16 的移植以支持更新的 Android 设备，内核补丁以实现冻结用户进程而非休眠以延长电池寿命，以及使用 Waydroid 支持 Play Integrity API 的实验。如果他们能够实现 Play Integrity 支持，就可以在 Ubuntu Touch 上运行一些 Android 银行应用等。\n\n许多 Ubuntu Touch 应用最近已更新并持续获得新功能，Snap 包中的 Vulkan 支持正在开发中，同时还有各种安全改进。\n\nUbuntu Touch 24.04-2.1 计划在最近的 -2.0 版本基础上提供小幅改进和修复。但更大的里程碑是转向 Ubuntu 26.04 LTS 基底的 Ubuntu 26.04-1.0。目前尚无 Ubuntu Touch 26.04-1.0 的发布时间表，但这是一个正在努力实现的目标。更多详情请参阅：\n\nUbuntu 将为 Ubuntu 26.04 LTS 提供虚拟化 HWE 栈\nUbuntu Touch 24.04-2.0 发布，支持刘海屏和圆角\nUbuntu Linux 计划移除 /etc/debian_version 历史遗留文件\n三个新的 Ubuntu Snap 漏洞公开——其中一个可追溯至 Ubuntu 16.04 LTS\nCanonical 正式推出用于离线/隔离环境 Ubuntu 使用的“企业商店”\nUbuntu 内核团队警告 AMD GPU 临时性能回归，最高达 42 倍\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过20,000篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 也是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nValve 赞助将开源 RADV 驱动移植到 Windows 的工作\n首个面向现代 AMD Ryzen AM5 平台的开源固件发布\nArch Linux AUR 再次遭遇恶意软件包浪潮，软件包收养暂停\n“KVM 电锯”预计将进入 Linux 7.3，以处理 God 数据结构\nAMD P-State Linux 驱动补丁可将 1% 低帧率游戏性能提升 31%\nKiwi Menu 继续为 GNOME 带来 macOS 风格\nStarling：一款用 Swift 编写的新 Linux 桌面，自带 Wayland 合成器，并由 AI 辅助编写\n旧款 AMD GPU 的 DRM 格式修饰符将随 Linux 7.3 到来：感谢 Valve\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "329c4a6a57cc14db416198bfe54bd364": {
+    "id": "329c4a6a57cc14db416198bfe54bd364",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/dropbeat-music-controller-gnome-extension",
+    "title_en": "Dropbeat is yet another flashy music controller for GNOME Shell",
+    "summary_en": "Dropbeat is a new riff on an old tune, a panel-based music applet for GNOME Shell that gives you an alternate way to pause, play and skip tracks in MPRIS-friendly Linux media players. Applets of this ilk are legion, and this panel applet doesn&#8217;t do anything that different to ones you may have tried in the past or currently use (for all the bells and whistles, try the Dynamic Music Pill extension instead). But it does do some things differently. When installed, it adds a button to your pane",
+    "pub_date": "Mon, 03 Aug 2026 23:31:15 +0000",
+    "title_zh": "Dropbeat：GNOME Shell 又一款炫酷音乐控制器",
+    "summary_zh": "Dropbeat 是一款面向 GNOME Shell 的面板音乐小程序，为 MPRIS 兼容的 Linux 音乐播放器提供暂停、播放和切歌的替代控制方式。它通过当前歌曲的专辑封面生成模糊背景，并支持点击封面进入沉浸式全屏模式，还提供可配置的全局快捷键。尽管功能与内置媒体控件相似，但其全屏视觉效果和快捷操作增添了亮点。目前不支持将播放器窗口前置，也不会禁用 GNOME Shell 自带的媒体控制器。适用于 GNOME 48 至 50，可通过 GNOME Extensions 网站或 Ubuntu 软件中心安装。",
+    "fulltext_zh": "Dropbeat 是 GNOME Shell 又一款炫酷的音乐控制器，它是一首老曲调的新变奏：一个基于面板的音乐小程序，为支持 MPRIS 的 Linux 媒体播放器提供暂停、播放和跳曲的替代方式。\n\n这类小程序数不胜数，而这个面板小程序并没有比你过去尝试过或正在使用的那些（想要花哨功能，可以试试那个）有太多不同。\n\n但它确实在某些方面有所不同。\n\n安装后，它会在你的面板上添加一个按钮，点击后，“显示一个炫酷的卡片来控制你的媒体播放器”，引用其描述，利用当前播放歌曲的专辑封面生成模糊画布。然后，它以此作为面板小程序和全屏模式的背景。\n\n这种方法的一个明显缺点是，当你切换曲目时，模糊背景通常需要片刻才能出现，小程序也需要时间跟上，这在快速跳过曲目时会破坏乐趣，但嘿：每个人都是批评家。\n\n点击专辑封面将进入全屏模式。专辑封面、曲目标题和艺术家名称在模糊背景上大号显示：\n\n通过点击专辑封面轻松激活沉浸式全屏模式\n\n第三点也是最后一点，它支持可配置的全局快捷键，无论何时都能切换打开卡片，无需将鼠标移出当前操作，这可能很方便。\n\n当然，如果你想访问其他媒体播放器功能，如收藏曲目、调节音量、启用随机播放或循环，或在曲目内快进，你仍需进入应用本身（或使用其他小程序）。\n\n目前，Dropbeat 没有将播放器窗口前置的方式，这是其他插件和应用能做到的。它也不会在激活时禁用 GNOME Shell 自带的媒体控制器，所以你仍会在通知列表中看到它。\n\n它是否做到了 GNOME Shell 内置媒体小部件能做的一切？是的，虽然两者都将控制项隐藏在视线之外，直到你主动寻找，但 Dropbeat 加入了由专辑封面构建的全屏视图，为操作增添了一些额外炫酷效果。\n\n如果你喜欢它的外观，可以通过网络浏览器在 GNOME Extensions 网站上获取，或者通过桌面应用（在 Ubuntu 软件源中可用）减少麻烦。\n\nDropbeat 支持 GNOME 48 至 50。\n\n喜欢这种风格但不喜欢样式？有一个流畅的替代方案，提供实时歌词，并能嵌入 Ubuntu Dock 而非面板。对于非扩展方案，还有一个可自定义的桌面“正在播放”小部件。"
+  },
+  "cc417cbb85101f24a2aea0501f5ca103": {
+    "id": "cc417cbb85101f24a2aea0501f5ca103",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/ubuntu-hwctl-deb-to-snap-transition",
+    "title_en": "Ubuntu’s turning another system Deb package into a snap",
+    "summary_en": "Ubuntu is moving hwctl from Deb package to snap-only distribution, a change Canonical says improves security and desktop integration.\nYou're reading Ubuntu&#8217;s turning another system Deb package into a snap, a blog post from OMG! Ubuntu. Do not reproduce elsewhere without permission.",
+    "pub_date": "Mon, 03 Aug 2026 21:56:12 +0000",
+    "title_zh": "Ubuntu 将另一个系统 Deb 包转换为 Snap",
+    "summary_zh": "Ubuntu 正在将其另一个核心系统 Deb 包转换为沙盒化的 snap 格式，以提升安全性并改善桌面集成。该包为 hwctl，是一个预装在 Ubuntu 桌面和服务器上的小型命令行工具。Canonical 工程师 Sergio Costas 表示，为了将 hwctl 与 gnome-control-center 及其他前端集成，并增强安全性，hwctl 包将仅以 snap 形式提供。在 Ubuntu 26.04 LTS 上，用户将自动迁移至 snap 版本，现有系统通过更新将 Deb 包替换为自动安装 snap 的虚拟包。Ubuntu 26.10 及更高版本将直接默认包含该 snap。",
+    "fulltext_zh": "Ubuntu 正在将其另一个核心系统 Deb 包转换为沙盒化的 snap 格式，此举据称将提升安全性并实现更好的桌面集成。\n\n涉及的包是 hwctl，这是一个预装在 Ubuntu 桌面和服务器上的小型命令行工具，属于 Canonical 的硬件 API 工具集的一部分。\n\nCanonical 工程师 Sergio Costas 表示：“为了将 hwctl 与 gnome-control-center 及其他前端集成，并增强安全性，HWCTL 包从今往后将仅以 snap 形式提供。”\n\n如果你使用的是 Ubuntu 26.04 LTS，你将被自动迁移至 snap 版本。Canonical 将把当前的 Deb 包转换为一个虚拟包，在标准系统更新期间自动安装 snap 版本。\n\n然而，这一转换尚未发生，因为对于 Ubuntu LTS 版本，必须遵循必要的稳定版更新（SRU）流程。\n\n在 Ubuntu 26.10 及更高版本中，该 snap 将成为构建 ISO 的默认种子的一部分，因此无需任何包替换技巧。\n\nhwctl 和其他硬件 API 工具是在 Ubuntu 25.10 中添加的。这些包用于支持各种操作系统功能，包括 Ubuntu Pro 和可选的 Ubuntu Insights 系统遥测。"
+  },
+  "1b0471954632cf9a334cf42874ab88a5": {
+    "id": "1b0471954632cf9a334cf42874ab88a5",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/ubuntu-2604-server-cloud-minimal-curl-missing",
+    "title_en": "Curl dropped from Ubuntu 26.04 minimal cloud images by mistake",
+    "summary_en": "Ubuntu 26.04 LTS&#8217;s minimal cloud images have been missing curl – accidentally, it turns out, so Canonical has put it back. Curl is a commonly-used command-line tool for fetching files from remote servers. It&#8217;s called on in countless install scripts, CI pipelines and one-liners you&#8217;ve no doubt pasted into your terminal without thinking twice about. But the package has been missing from the server-cloud-minimal images of 26.04 to date. That caught those running pared-back cloud i",
+    "pub_date": "Mon, 03 Aug 2026 14:34:37 +0000",
+    "title_zh": "Curl 被误从 Ubuntu 26.04 最小云镜像中移除",
+    "summary_zh": "Ubuntu 26.04 LTS 的最小云镜像中意外缺失了 curl 工具，该工具常用于脚本和 CI 流程中下载文件。Canonical 已确认这是错误，并已将 curl 重新加入镜像。此前，curl 作为 pollinate 的依赖项被包含，但 pollinate 在 26.04 中被移除，导致 curl 也随之消失。现在 curl 已明确加入最小云镜像种子，并正在推送更新，现有安装将在下次更新时恢复。不过，Canonical 正在讨论是否在未来的 26.10 版本中正式移除 curl，以保持最小镜像的极简性。",
+    "fulltext_zh": "Ubuntu 26.04 LTS 的最小云镜像一直缺少 curl——事实证明这是意外，因此 Canonical 已将其恢复。\n\ncurl 是一个常用的命令行工具，用于从远程服务器获取文件。无数安装脚本、CI 流水线以及你无疑曾粘贴到终端中的一行命令都会调用它，而你不会多想。\n\n但该软件包至今一直缺失于 26.04 的镜像中。这导致那些运行精简云安装的用户措手不及，破坏了预期的工作流程，因为它在之前的版本中是可用的。\n\n手动修复方法是从软件源安装 curl，从整体来看，这并不算太大的工作量。\n\ncurl 预装在 Ubuntu 26.04 LTS（更早版本）的完整服务器和云镜像中。它此前也存在于最小变体中，尽管并非有意为之。\n\n这个“bug”是因为 curl 未被明确列入最小云服务器的“种子”（核心软件包列表）。相反，它是作为 pollinate（一个用于云环境的熵种子工具）的依赖项而被带入的。pollinate 在 26.04 中被移除，curl 也随之消失。\n\nCanonical 的工程师 Gauthier Jolly 表示：“虽然 pollinate 可能不是用户期望的工具，但 curl 绝对是，我们不应该这样破坏 LTS 用户。”\n\n支持重新引入 curl 的 Canonical 工程师 Christian Ehrhardt 表示：“之前 SRU 变更的意图只是移除 pollinate。”\n\ncurl 已被明确添加到 server-cloud-minimal 种子中。更新正在推送中，因此现有安装将在下次系统更新时拉取缺失的软件包。\n\n然而，使用最小云和服务器镜像的用户不应因 curl 的存在而过于安心。\n\nCanonical 的工程师正在讨论是否在 Ubuntu 26.10 之前正式从最小安装种子中移除 curl——注意：是种子，不是软件源，以免引起恐慌——因为最小镜像的意义就在于“最小”，而 curl 并非启动所必需。"
+  },
+  "d18a661f68ef1c7ef7545e99b3eb41c4": {
+    "id": "d18a661f68ef1c7ef7545e99b3eb41c4",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/gnome-shell-extension-instructions-for-bots/",
+    "title_en": "AI Slop Keeps Flooding GNOME Extensions, So They Wrote a Manual for Bots Instead",
+    "summary_en": "The same low-quality AI patterns kept showing up in submissions even after GNOME updated its review guidelines in December.",
+    "pub_date": "Mon, 03 Aug 2026 13:18:19 GMT",
+    "title_zh": "AI垃圾信息持续淹没GNOME扩展，他们转而编写机器人手册",
+    "summary_zh": "GNOME扩展门户（EGO）持续遭受AI生成的低质量扩展提交的困扰，尽管12月更新了审查指南，问题仍未缓解。审查员Javad采取了新策略：直接为AI模型编写指令，要求其生成更规范的代码，包括清理资源、避免冗余错误处理、针对单一版本等。同时，AI生成的个人使用扩展需附带注释，禁止上传至EGO。此举旨在减轻人工审查负担，保护开源生态。",
+    "fulltext_zh": "AI垃圾信息持续淹没GNOME扩展，他们转而编写机器人手册\n\nGNOME Shell扩展通常来源于extensions.gnome.org，GNOME社区称之为“EGO”。该门户上的每个提交都经过人工审查，而这一审查流程数月来一直承受着巨大压力。\n\n12月，GNOME在其EGO审查指南中新增了一条规则，拒绝AI生成的垃圾内容。他们允许使用AI进行学习和代码补全，但明确禁止生成整个扩展，除非开发者能够令人信服地解释和调试代码。\n\n数月过去，AI垃圾信息的洪流并未减缓。Javad，即最初规则的制定者，尝试了一种不同的方法。他没有仅仅在事后拒绝糟糕的提交，而是编写了直接针对生成这些提交的AI模型的指令。\n\n让机器人理解\n\n鉴于审查队列仍被AI生成的扩展淹没，且大多数重复着完全相同的错误，Javad决定直接向AI模型发出指令。大部分指导涉及清理工作。扩展需要在`disable()`中按特定顺序移除超时、断开信号和销毁小部件。Javad还指出，AI模型会添加布尔标志（如`_isDisposed`）来防止不当调用，而实例应在`disable()`后直接置空，不再引用。AI模型倾向于将安全函数调用包裹在不必要的错误处理中，并为必然存在的方法添加检查。Javad将此归因于模型试图编写同时兼容多个GNOME Shell版本的代码，他的解决方案很简单：只针对一个版本，而不是覆盖所有可能的版本。\n\n此外，指导还涉及保持代码组织性。将逻辑拆分到多个文件，而不是集中在一个臃肿的入口点；将相关函数放在一起，便于检查清理；不要提交包含空函数的占位代码，仅仅为了展示。\n\n还有一条专门针对AI模型本身的规则。任何仅用于个人用途的AI生成扩展，必须附带一条注释，告知用户除非真正理解代码并能维护，否则不要上传至EGO。👇\n\n```javascript\n// 使用AI生成，仅供个人使用。\n// 除非你理解JavaScript并能维护此代码，否则不要上传至extensions.gnome.org (EGO)。\n```\n\n机器人淹没开源贡献者并非新鲜事。我们已经看到足够多的证据，可以得出结论：如果不加以强力管控，这些机器人将拖垮开源生态系统。\n\nGNOME的Javad所做的是一种损害控制。他和其他EGO审查员肩负重任。如果他们被毫无意义的AI垃圾信息淹没，那对我们这些通过安装扩展来改善桌面体验的GNOME用户来说，将是巨大的损失。\n\n喜欢这次更新？支持独立的Linux新闻报道。\n\nIt's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读，并获得5本电子书。\n\n一次付费，永久享受。\n\n任意金额，无需承诺。\n\n一个热爱开源软件、定制PC组装、赛车运动并探索世界无限可能的极客。\n\nKeychron为游戏鼠标开发了开源固件，Linux用户将获益最多。\n\nGCC编译器禁止AI代码贡献，但明智地。\n\n游戏玩家好消息！GOG正式登陆Linux。\n\nUbuntu现在有了滚动发布模式！但不是针对发行版。\n\nGrapheneOS的隐私功能成为联邦起诉的依据。\n\n成为更好的Linux用户。\n\n通过FOSS每周通讯，你学习有用的Linux技巧，发现应用程序，探索新发行版，并了解Linux世界的最新动态。\n\n太好了！你已成功注册。\n\n欢迎回来！你已成功"
+  },
+  "5beb88cc47c84dfd554794c50765b314": {
+    "id": "5beb88cc47c84dfd554794c50765b314",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12912",
+    "title_en": "Distribution Release: NetHydra 1.1.0",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The NetHydra project has published a new update of the Debian-based distribution. The latest version includes a handful of new tools and enables running as the root user by default. \"In this update we decide to make MATE as the default desktop for NetHydra (for SONAR it would....",
+    "pub_date": "",
+    "title_zh": "发行版发布：NetHydra 1.1.0",
+    "summary_zh": "NetHydra项目发布了基于Debian的发行版新版本1.1.0。该版本默认使用MATE桌面环境（SONAR版本仍使用Xfce），并默认以root用户运行。新增了多个安全工具，包括Fluxion、ligolo-ng、chisel和Evilginx2，同时重新加入了一些旧工具，如cisco-auditing-tool、cisco-global-exploiter等。该发行版主要面向渗透测试，包含大量渗透测试工具，并采用实时Linux内核。",
+    "fulltext_zh": "发行版发布：NetHydra 1.1.0\n\n该项目发布了基于Debian的发行版的新更新。最新版本包含了一些新工具，并默认以root用户运行。\n\n“在此次更新中，我们决定将MATE作为NetHydra的默认桌面环境（对于SONAR版本，仍将使用Xfce），以提供经典和技术感。与每个NetHydra版本一样，此次更新也引入了几个新工具和软件包，以补充和扩展NetHydra的范围：Fluxion——一个安全审计和社会工程研究工具；ligolo-ng——一个高级但简单的隧道/枢轴工具，使用TUN接口；chisel——通过HTTP传输的快速TCP/UDP隧道，通过SSH保护，使用单个可执行文件；Evilginx2——用于网络钓鱼的独立中间人攻击框架。此外，我们还在NetHydra ISO镜像中添加了一些旧工具，包括cisco-auditing-tool（CAT）、cisco-global-exploiter、cisco-torch、0trace、unix-privesc-check和smtp-user-enum。”\n\n更多信息（含截图）可在以下位置找到：\n\nnethydra-1.1.0-leopard-amd64.iso\nnethydra-1.1.0-sonar-leopard-amd64.iso\n\n相关新闻和发布：\n\n发行版发布：NetHydra 1.1.0\n发行版发布：NetHydra 2026.2\n发行版发布：HydraPWK GNU/Linux 2025.03\n更多NetHydra新闻...\n\nNetHydra（前身为HydraPWK GNU/Linux）是一个基于Debian的发行版，主要用于渗透测试。它包含一系列渗透测试工具，包括用于信息收集、扫描、压力测试、漏洞利用、破解、逆向工程和取证的工具。该发行版以前称为BlackTrack，使用实时Linux内核，并采用Xfce桌面环境。\n\nhttps://nethydra.github.io\n\n替代用户论坛\n\nhttps://nethydra.github.i"
+  },
+  "5d2e8dda856043d1f480221a576e2624": {
+    "id": "5d2e8dda856043d1f480221a576e2624",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/FFmpeg-9.0-Released",
+    "title_en": "FFmpeg 9.0 Released With More Vulkan Acceleration, Animated WebP & More AMD AMF",
+    "summary_en": "FFmpeg 9.0 is now available as the latest feature release for this widely used, open-source multimedia library...",
+    "pub_date": "Mon, 03 Aug 2026 20:49:30 -0400",
+    "title_zh": "FFmpeg 9.0 发布：更多 Vulkan 加速、动画 WebP 及更多 AMD AMF 支持",
+    "summary_zh": "FFmpeg 9.0 作为这一广泛使用的开源多媒体库的最新功能版本正式发布，包含大量改进，如更多 Vulkan API 加速工作（包括 Vulkan APV 视频解码、Apple ProRes RAW Vulkan 加速、Vulkan v360 视频滤镜）、HE-AAC 960 解码、NVIDIA CUDA 转置滤镜、动画 WebP 解码与解封装、持续的 AMD AMF 增强以及更多 AVX-512 优化。官方更新日志列出了多项亮点，包括扩展 AMF 色彩转换器的 HDR 能力、MP4 封装器中的 LCEVC 轨道复用支持、Playdate 视频编码器与封装器、新增 v360_vulkan 滤镜、HE-AAC 960 解码（DAB+）、transpose_cuda 滤镜、AMF 帧率转换器滤镜、SMPTE 2094-50 元数据支持与透传、ProRes RAW VideoToolbox 硬件加速、动画 WebP 解码器与解封装器、移除 CELT 解码支持、用于分割 Dolby Vision 多层 HEVC 的比特流滤镜、AMF 硬件内存映射支持、ONNX Runtime DNN 后端及 GPU 执行提供程序支持、移除已弃用的 NVENC 选项及对 11.1 之前 SDK 版本的支持，以及新增 AMF 视频质量增强器滤镜。",
+    "fulltext_zh": "FFmpeg 9.0 发布：更多 Vulkan 加速、动画 WebP 及更多 AMD AMF 支持 - Phoronix\n\nFFmpeg 9.0 发布：更多 Vulkan 加速、动画 WebP 及更多 AMD AMF 支持\n\n2026年8月3日，美国东部时间晚上8:49。\n\nFFmpeg 9.0 现已作为这一广泛使用的开源多媒体库的最新功能版本发布。\n\nFFmpeg 9.0 包含大量重大改进，包括更多 Vulkan API 加速工作，例如 Vulkan APV 视频解码、Apple ProRes RAW Vulkan 加速、Vulkan v360 视频滤镜，HE-AAC 960 解码，NVIDIA CUDA 转置滤镜，动画 WebP 解码与解封装，持续的 AMD AMF 增强，以及更多 AVX-512 优化。\n\n官方 FFmpeg 更新日志将 9.0 版本的重点列出如下：\n\n- 扩展 AMF 色彩转换器（vf_vpp_amf）的 HDR 能力\n- MP4 封装器中支持 LCEVC 轨道复用\n- Playdate 视频编码器和封装器\n- 新增 v360_vulkan 滤镜\n- HE-AAC 960 解码（DAB+）\n- transpose_cuda 滤镜\n- 新增 AMF 帧率转换器（vf_frc_amf）滤镜\n- SMPTE 2094-50 元数据支持与透传\n- ProRes RAW VideoToolbox 硬件加速\n- 动画 WebP 解码器\n- 动画 WebP 解封装器\n- 移除 CELT 解码支持（不影响 Opus CELT）\n- 移除 ogg/celt 解析\n- 用于分割 Dolby Vision 多层 HEVC 的比特流滤镜\n- 新增 AMF 硬件内存映射支持\n- ONNX Runtime DNN 后端，支持 GPU 执行提供程序\n- 移除已弃用的 NVENC 选项及对 11.1 之前 SDK 版本的支持\n- 新增 AMF 视频质量增强器（vf_vqe_amf）滤镜\n\n那些从源代码构建的用户可以着手编译，以获取这些最新的多媒体库功能。\n\nShotcut 26.7 视频编辑器发布，附带素材库\n\nLinux 7.2-rc6 的声音修复：“远超预期”\n\ndav1d 1.5.4 为 OS/2 带来 AV1 解码\n\n提交给 Linux 7.2-rc5 的音频怪癖“新常态”\n\n最后一个 MPEG-4 视觉专利已过期\n\nFFmpeg 落地最新 AVX-512 优化：像素格式转换速度提升 1.372 倍\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nValve 赞助将开源 RADV 驱动移植到 Windows 的工作\n\n首个面向现代 AMD Ryzen AM5 平台的开源固件发布\n\nArch Linux AUR 再次遭遇恶意软件包浪潮，软件包收养暂停\n\n“KVM 电锯”预计将进入 Linux 7.3，以处理 God 数据结构\n\nAMD P-State Linux 驱动补丁可将 1% 低帧游戏性能提升 31%\n\n著名 Arch Linux 开发者任职 10 年后辞职\n\nStarling：一款用 Swift 编写的新 Linux 桌面，自带 Wayland 合成器，并由 AI 辅助开发\n\n面向旧 AMD GPU 的 DRM 格式修饰符将随 Linux 7.3 到来：感谢 Valve\n\n在享受无广告浏览的同时，\n\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026\n\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "5c50b49da64224fee3b6de2c91733b70": {
+    "id": "5c50b49da64224fee3b6de2c91733b70",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-GFX7-Soft-Reset-Linux-7.3",
+    "title_en": "Improved GPU Reset Recovery For AMD Kaveri, Hawaii & Other GFX7 GPUs With Linux 7.3",
+    "summary_en": "In addition to the AMDGPU feature pull request to DRM-Next last week that landed DRM format modifiers for old AMD GPUs and a variety of other improvements, a secondary set of AMDGPU feature work followed that last week in preparation for the upcoming Linux 7.3 merge window...",
+    "pub_date": "Mon, 03 Aug 2026 20:36:30 -0400",
+    "title_zh": "Linux 7.3 为 AMD Kaveri、Hawaii 及其他 GFX7 GPU 改进 GPU 重置恢复",
+    "summary_zh": "AMDGPU 驱动在 Linux 7.3 合并窗口前获得了一系列新特性，其中最引人注目的是由 Valve 的 Timur Kristóf 贡献的 GFX7 系列 GPU 的软重置恢复补丁。该补丁利用 GFX IP 块软重置功能，使得 Kaveri、Kabini APU 以及 Hawaii、Bonaire 独立显卡在 GPU 挂起时无需重启系统或清空显存即可恢复，显著提升了用户体验。",
+    "fulltext_zh": "Linux 7.3 为 AMD Kaveri、Hawaii 及其他 GFX7 GPU 改进 GPU 重置恢复 - Phoronix\n\nLinux 7.3 为 AMD Kaveri、Hawaii 及其他 GFX7 GPU 改进 GPU 重置恢复\n\n发布于 2026 年 8 月 3 日晚上 8:36（美国东部时间）。\n\n除了上周提交给 DRM-Next 的 AMDGPU 特性拉取请求（其中包括针对旧款 AMD GPU 的 DRM 格式修饰符以及其他多项改进）之外，上周还提交了第二批 AMDGPU 特性工作，为即将到来的 Linux 7.3 合并窗口做准备。\n\nAlex Deucher 于周五发送了一些针对 AMDGPU 驱动的额外特性更新，这些工作将在 Linux 7.3 合并窗口（大约两周后开启）之前，赶在新特性材料截止日期前合并到 DRM-Next 中。\n\n这次后续拉取请求中最引人注目的是 Valve 的 Timur Kristóf 的更多工作。特别值得一提的是，其中包含一个重置补丁系列，用于在 GFX7 时代的硬件（如 Kaveri APU、Hawaii 独立显卡、Bonaire 独立显卡等）上使用 GFX IP 块软重置支持。Timur 在七月份解释道：\n\n“GFX IP 块软重置已被实现为恢复方法，这样我们就可以在不重置整个 GPU 或丢失显存内容的情况下，仅重置 GFX 块。\n\n修复了 GFX7 代码中的各种问题，使其能够与 IP 块软重置配合工作。主要挑战是修复 MQD/HQD 处理，确保软重置后不会挂起。还有其他一些小的修复。\n\n重新设计了现有的 GFX7 软重置实现，类似于 GFX8 上的重新设计版本，使其更加健壮。实际上，这意味着现在它会重置 GFX IP 块中的所有内容（而不是猜测哪些部分需要重置），以保持一致性，并且现在还处理时钟和电源门控，以确保在 GFX IP 块软重置后不会降低 GPU 功能。\n\n这改善了所有 GFX7 芯片的当前用户体验：\n\n在 Kaveri 和 Kabini 上，目前没有可用的 GPU 恢复方法，因此这些芯片在挂起时需要用户手动重启计算机。\n\n在 Hawaii 和 Bonaire 上，当前的 GPU 恢复方法总是清除显存内容，这意味着一个有 bug（挂起）的应用程序可能导致整个图形会话崩溃，这不太理想。\n\n使用 GFX IP 块软重置意味着我们现在可以在 GFX7 APU 上实现有效的恢复，并且也可以在独立显卡上从 GFX 挂起中恢复，而不会导致整个系统崩溃。”\n\n通过这个周末的 AMDGPU 拉取请求，这些针对老款 AMD Radeon 显卡的改进应该会成为即将到来的 Linux 7.3 合并窗口的一部分。这些针对 Linux 7.3 的 AMD 内核图形驱动的最后时刻特性补丁列表可以通过以下链接查看：\n\nAMD 开始为 RDNA5 GPU 发布 Display Core Next 6 “DCN6” Linux 补丁\nAMD 发布 Linux 补丁支持 HDMI 2.1 自动低延迟模式 “ALLM” 和 VRR\nDRM 格式修饰符即将随 Linux 7.3 支持旧款 AMD GPU：感谢 Valve\nValve 赞助将开源 RADV 驱动移植到 Windows 的工作\nAMD Linux 图形驱动为 Apple Studio Display 做准备\nAMD 为 Linux 7.3 准备更多图形驱动改进\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nValve 赞助将开源 RADV 驱动移植到 Windows 的工作\n首个面向现代 AMD Ryzen AM5 平台的开源固件发布\nArch Linux AUR 再次遭遇恶意软件包浪潮，软件包收养暂停\n“KVM 电锯”预计将随 Linux 7.3 到来，用于处理 God 数据结构\nAMD P-State Linux 驱动补丁可将 1% 低帧率游戏性能提升 31%\n知名 Arch Linux 开发者任职 10 年后辞职\nStarling：一个新的 Linux D"
+  },
+  "8833b7d587be40bf5a51ceaabdaf9013": {
+    "id": "8833b7d587be40bf5a51ceaabdaf9013",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.3-Expects-FailFS",
+    "title_en": "Linux 7.3 Looks Like It Will Upstream FailFS",
+    "summary_en": "Merged back in Linux 7.3 was NULLFS as a \"completely catatonic minimal pseudo filesystem\". Now expected for Linux 7.3 is its sibling: FailFS...",
+    "pub_date": "Mon, 03 Aug 2026 14:46:16 -0400",
+    "title_zh": "Linux 7.3 看起来将上游合并 FailFS",
+    "summary_zh": "Linux 7.3 预计将合并 FailFS 文件系统，这是继 NULLFS 之后引入的另一个伪文件系统。FailFS 在启动早期通过 kern_mount() 挂载，不属于任何挂载命名空间，无法被克隆或从用户空间挂载。所有到达该文件系统的操作都会返回 EOPNOTSUPP 错误。该文件系统允许进程完全摆脱文件系统状态，绝对路径和相对路径查找都会失败。FailFS 驱动代码不到 200 行，已进入 VFS.git 分支，若无反对意见，将在本月晚些时候的合并窗口提交。",
+    "fulltext_zh": "Linux 7.3 看起来将上游合并 FailFS - Phoronix\nLinux 7.3 看起来将上游合并 FailFS\n2026年8月3日下午2:46 EDT。\n在 Linux 7.3 中合并了 NULLFS，作为一个“完全僵化的最小伪文件系统”。现在预计 Linux 7.3 将合并它的兄弟：FailFS。\nNULLFS 提供了一个永久为空且不可变的目录，其中查找操作以 ENOENT（无此文件或目录）错误码失败。对于即将到来的 FailFS，到达文件系统的每个操作都会返回 EOPNOTSUPP，即 Linux 中“操作不支持”的错误码。\nChristian Brauner 在将 FailFS 排入 VFS.git 的“vfs-7.3.failfs”Git 分支时解释道：\n“在早期启动期间，通过 kern_mount() 挂载了一个 FailFS 实例，使其在逻辑上区别于每个挂载命名空间。\n由于该挂载不属于任何挂载命名空间，因此无法在其上挂载其他东西。它不能被 OPEN_TREE_CLONE 克隆，也不会出现在 statmount()/listmount() 或 /proc/<pid>/mountinfo 中。该文件系统未注册，因此不会出现在 /proc/filesystems 中，也无法从用户空间挂载。\n这允许任务完全摆脱其文件系统状态。根目录或工作目录位于 failfs 中的进程必须将每个路径查找锚定在显式文件描述符上，否则任何查找都将失败。绝对路径、绝对符号链接和 AT_FDCWD 相对查找都会失败。后续补丁将通过一个新的 FD_FAILFS_ROOT 文件描述符哨兵将其暴露，该哨兵可被 fchdir() 和新的 fchroot() 系统调用使用。\n有趣的是，由于动态二进制执行与 PT_INTERP 的工作方式，这目前也阻止了动态二进制的执行，因为加载器使用绝对路径（参见 selftests）。”\nFailFS 无法被克隆，无法从用户空间挂载，也无法在其上挂载任何东西。FailFS 驱动程序的驱动部分代码不到两百行。\nBrauner 已将 FailFS 排入 VFS.git 分支，并标记为“7.3”，预计 FailFS 将在本月晚些时候的 Linux 7.3 合并窗口提交——前提是 Linus Torvalds 或其他著名内核开发者没有反对意见。\nLinux 7.3 预计将移除 FreeVxFS 文件系统驱动\nCryptsetup 2.8.7 发布以应对 Linux 仓促弃用 AF_ALG 的后果\nEFS 文件系统计划在 Linux 7.3 中移除，已超过20年未维护\nLinux 7.3 将克服 PCIe Gen5 NVMe SSD 小 I/O 的“重大瓶颈”\n下一个 Bcachefs 版本旨在将 Rust 代码纳入内核模块\nLinux MD RAID5 可扩展性提升高达17%\nMichael Larabel 是 Phoronix.com 的主要作者，并于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过20,000篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\nValve 赞助将开源 RADV 驱动移植到 Windows 的工作\n首个面向现代 AMD Ryzen AM5 平台的开源固件发布\nArch Linux AUR 再次遭遇恶意软件包浪潮，软件包收养暂停\n“KVM 电锯”预计将在 Linux 7.3 中处理 God 数据结构\nAMD P-State Linux 驱动补丁可将 1% 低帧率游戏性能提升 31%\n知名 Arch Linux 开发者任职10年后辞职\nStarling：用 Swift 编写的新 Linux 桌面，自带 Wayland 合成器，并使用 AI 辅助开发\n旧 AMD GPU 的 DRM 格式修饰符将随 Linux 7.3 到来：感谢 Valve\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "144f135681d470502aa139544395e48a": {
+    "id": "144f135681d470502aa139544395e48a",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/zlib-rs-0.6.7",
+    "title_en": "zlib-rs 0.6.7 Released With LoongArch LSX Optimizations, Use-After-Free Fix",
+    "summary_en": "zlib-rs 0.6.7 is out today as the newest version of this \"safer zlib\" implementation making use of the Rust programming language and aiming to deliver performance on-par with zlib-ng...",
+    "pub_date": "Mon, 03 Aug 2026 09:19:33 -0400",
+    "title_zh": "zlib-rs 0.6.7 发布，带来 LoongArch LSX 优化与释放后使用修复",
+    "summary_zh": "zlib-rs 0.6.7 作为基于 Rust 的“更安全 zlib”实现的最新版本发布，修复了代码中的释放后使用（UAF）漏洞，并新增了 LoongArch64 LSX 优化，包括 LSX compare256 实现和更宽的加载/存储操作，分别带来约 4% 和 10% 的性能提升。该版本旨在提供与 zlib-ng 相当的性能，同时增强内存安全性。",
+    "fulltext_zh": "zlib-rs 0.6.7 于今日发布，这是这款基于 Rust 编程语言的“更安全 zlib”实现的最新版本，旨在提供与 zlib-ng 相当的性能。\n\nzlib-rs 0.6.7 版本修复了其代码库中新发现的一个释放后使用（UAF）漏洞。\n\n昨天的报告概述了 Deflate::compress_uninit 中的释放后使用条件，并附带了概念验证示例。该 PoC 即使在代码中禁止任何不安全 Rust 特性的情况下也能触发 UAF。\n\nzlib-rs 0.6.7 的另一个重点是增加了更多 LoongArch64 LSX 优化，针对龙芯 SIMD 扩展。现在有了 LSX compare256 实现，在某个测试中带来了约 4% 的速度提升。在 inflate 代码中，现在也使用了更宽的 LSX 加载/存储操作，带来了高达 10% 的改进。以及其他修复。\n\n很快我将对我的 LoongArch 测试系统进行新一轮的龙芯 3B6000 基准测试。\n\n有关 zlib-rs 0.6.7 的下载和更多详情，请访问 Phoronix。"
+  },
+  "dfc765b8bacd1582e2dcea04066cdf68": {
+    "id": "dfc765b8bacd1582e2dcea04066cdf68",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/brave-gives-linux-users-its-stripped-down-origin-browser-for-free/",
+    "title_en": "Brave Gives Linux Users Its Stripped Down Origin Browser for Free",
+    "summary_en": "Brave introduces its stripped-down Origin browser for Linux users at no cost. Enjoy faster, safer browsing with a focus on user privacy and efficiency.\nThe post Brave Gives Linux Users Its Stripped Down Origin Browser for Free appeared first on Linux Today.",
+    "pub_date": "Mon, 03 Aug 2026 07:11:58 +0000",
+    "title_zh": "Brave 为 Linux 用户免费提供精简版 Origin 浏览器",
+    "summary_zh": "Brave 公司面向 Linux 用户推出了其精简版 Origin 浏览器，完全免费。该浏览器专注于用户隐私和效率，提供更快、更安全的浏览体验。此版本去除了冗余功能，旨在为 Linux 平台用户提供轻量级且高性能的替代方案。",
+    "fulltext_zh": "Brave 面向 Linux 用户免费推出其精简版 Origin 浏览器。享受更快速、更安全的浏览体验，重点关注用户隐私和效率。\n该文章 Brave Gives Linux Users Its Stripped Down Origin Browser for Free 首次出现在 Linux Today 上。"
+  },
+  "f4a1d3bf404b8b4e8b618e68fc8f541c": {
+    "id": "f4a1d3bf404b8b4e8b618e68fc8f541c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/cloudflare-unveils-pact-to-help-websites-fight-bots-without-captcha/",
+    "title_en": "Cloudflare Unveils PACT to Help Websites Fight Bots Without CAPTCHA",
+    "summary_en": "Explore Cloudflare's PACT solution, which offers a CAPTCHA-free approach to protect websites from bot attacks, ensuring seamless user interactions.\nThe post Cloudflare Unveils PACT to Help Websites Fight Bots Without CAPTCHA appeared first on Linux Today.",
+    "pub_date": "Mon, 03 Aug 2026 07:10:20 +0000",
+    "title_zh": "Cloudflare 推出 PACT，帮助网站无需 CAPTCHA 即可抵御机器人攻击",
+    "summary_zh": "Cloudflare 发布了名为 PACT 的新解决方案，旨在帮助网站抵御机器人攻击，同时无需使用 CAPTCHA 验证码，从而确保用户交互的流畅性。该方案通过替代传统验证码的方式，提升用户体验并增强安全性。",
+    "fulltext_zh": "探索 Cloudflare 的 PACT 解决方案，该方案提供了一种无需 CAPTCHA 的方法来保护网站免受机器人攻击，确保用户交互的无缝体验。\n\n此文章《Cloudflare 推出 PACT，帮助网站无需 CAPTCHA 即可抵御机器人攻击》首发于 Linux Today。"
+  },
+  "aa745a5ca3ad08c5840b604f05e4ac83": {
+    "id": "aa745a5ca3ad08c5840b604f05e4ac83",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/bosgame-vta-439-mini-pc-running-linux-power-consumption/",
+    "title_en": "BOSGAME VTA-439 Mini PC running Linux – Power Consumption",
+    "summary_en": "Explore the BOSGAME VTA-439 Mini PC, designed for Linux users seeking energy efficiency. Experience powerful performance with minimal power usage.\nThe post BOSGAME VTA-439 Mini PC running Linux – Power Consumption appeared first on Linux Today.",
+    "pub_date": "Mon, 03 Aug 2026 07:08:24 +0000",
+    "title_zh": "BOSGAME VTA-439迷你PC运行Linux——功耗评测",
+    "summary_zh": "本文介绍了BOSGAME VTA-439迷你PC，该设备专为追求能效的Linux用户设计，在提供强劲性能的同时保持极低的功耗。文章重点探讨了其功耗表现，并强调了其在Linux环境下的适用性，适合需要节能且高效计算的用户。",
+    "fulltext_zh": "探索BOSGAME VTA-439迷你PC，它专为追求能效的Linux用户而设计。以极低的功耗体验强劲性能。\n\n该文章BOSGAME VTA-439迷你PC运行Linux——功耗评测首次出现在Linux Today上。"
+  },
+  "a1bae32f85ce188e6c00776b6bf4f695": {
+    "id": "a1bae32f85ce188e6c00776b6bf4f695",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/lxd-6-9-container-virtual-machine-manager-adds-ovn-load-balancer-pools/",
+    "title_en": "LXD 6.9 Container & Virtual Machine Manager Adds OVN Load Balancer Pools",
+    "summary_en": "LXD 6.9 introduces OVN Load Balancer Pools, streamlining container and virtual machine management. Learn how these enhancements can benefit your setup.\nThe post LXD 6.9 Container &amp; Virtual Machine Manager Adds OVN Load Balancer Pools appeared first on Linux Today.",
+    "pub_date": "Mon, 03 Aug 2026 07:02:32 +0000",
+    "title_zh": "LXD 6.9 容器与虚拟机管理器新增 OVN 负载均衡器池",
+    "summary_zh": "LXD 6.9 版本引入了 OVN 负载均衡器池，简化了容器和虚拟机的管理流程。该功能通过集中管理负载均衡配置，提升了网络资源的利用效率和运维便捷性。本文介绍了这一增强功能如何优化用户的部署环境，并强调了其对现代基础设施管理的实际价值。",
+    "fulltext_zh": "LXD 6.9 引入了 OVN 负载均衡器池，简化了容器和虚拟机的管理。了解这些增强功能如何为您的部署环境带来益处。\n\n该文章最初发布在 Linux Today 上。"
+  },
+  "788fa168711460cbfdfff4115c9e0107": {
+    "id": "788fa168711460cbfdfff4115c9e0107",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/gnu-nano-9-1-cli-text-editor-released-with-minor-improvements-and-bug-fixes/",
+    "title_en": "GNU nano 9.1 CLI Text Editor Released with Minor Improvements and Bug Fixes",
+    "summary_en": "Learn about the release of GNU nano 9.1, which includes minor improvements and bug fixes to optimize your command-line text editing tasks.\nThe post GNU nano 9.1 CLI Text Editor Released with Minor Improvements and Bug Fixes appeared first on Linux Today.",
+    "pub_date": "Mon, 03 Aug 2026 06:58:51 +0000",
+    "title_zh": "GNU nano 9.1 命令行文本编辑器发布，带来小幅改进与错误修复",
+    "summary_zh": "GNU nano 9.1 版本已发布，主要包含小幅改进和错误修复，旨在优化用户的命令行文本编辑体验。该版本针对之前版本中的一些问题进行了修复，并提升了整体稳定性。对于依赖 nano 进行日常编辑工作的用户来说，这是一个值得更新的维护版本。",
+    "fulltext_zh": "了解 GNU nano 9.1 版本的发布信息，该版本包含小幅改进和错误修复，以优化您的命令行文本编辑任务。\n\n此文章首发于 Linux Today。"
   }
 }

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Archcraft 2026.08.01 — Linux 中文速报</title>
+<title>Dropbeat：GNOME Shell 又一款炫酷音乐控制器 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>发行版发布：Archcraft 2026.08.01</h1>
+  <h1>Dropbeat：GNOME Shell 又一款炫酷音乐控制器</h1>
 
-  <div class="article-summary">Archcraft 发布了 2026.08.01 版本，这是基于 Arch 的轻量级 Linux 发行版的最新稳定版。本次更新引入了 Sway Wayland 合成器作为新的桌面选择，并全面改进了安装体验、桌面会话、VirtualBox 支持，修复了大量 bug。同时恢复了 Btrfs 和 XFS 文件系统的安装支持，更新了 archiso 至 88-1，并增强了 GTK/GNOME 应用集成。该版本被认为是 Archcraft 迄今最大的更新之一。</div>
+  <div class="article-summary">Dropbeat 是一款面向 GNOME Shell 的面板音乐小程序，为 MPRIS 兼容的 Linux 音乐播放器提供暂停、播放和切歌的替代控制方式。它通过当前歌曲的专辑封面生成模糊背景，并支持点击封面进入沉浸式全屏模式，还提供可配置的全局快捷键。尽管功能与内置媒体控件相似，但其全屏视觉效果和快捷操作增添了亮点。目前不支持将播放器窗口前置，也不会禁用 GNOME Shell 自带的媒体控制器。适用于 GNOME 48 至 50，可通过 GNOME Extensions 网站或 Ubuntu 软件中心安装。</div>
 
-  <div class="article-body"><p>发行版发布：Archcraft 2026.08.01</p><p>Aditya Shakya 已宣布发布 2026.08.01，这是该项目基于 Arch 的轻量级快速 Linux 发行版的最新稳定版。此版本在实时模式中新增了 Sway Wayland 合成器作为桌面选择（除了 Openbox 和 bspwm 窗口管理器之外）：</p><p>“Archcraft 的 2026 年 8 月 ISO 镜像现已可供下载。此版本专注于稳定性、兼容性和精致度。从完全改版的安装体验到改进的桌面会话、更好的 VirtualBox 支持以及无数错误修复，这是 Archcraft 迄今最大的更新之一。亮点包括：全新的 Qt6 SDDM 主题；新的 Sway Wayland 会话；跨安装程序的可靠加密安装；恢复 Btrfs 和 XFS 安装支持（Calamares）；更新至 archiso 88-1；改进的 VirtualBox 兼容性；更好的 GTK/GNOME 应用集成；数百项小修复和改进。此版本最大的新增功能之一是引入 Sway，在现有窗口管理器之外提供了另一个轻量级 Wayland 会话。”</p><p>更多信息和截图请见下文。</p><p>archcraft-2026.08.01-x86_64.iso</p><p>近期相关新闻和发布：</p><p>发行版发布：Archcraft 2026.08.01</p><p>发行版发布：Archcraft 2026.05.12</p><p>发行版发布：Archcraft 2026.02.02</p><p>发行版发布：Archcraft 2025.04.24</p><p>发行版发布：Archcraft 2024.04.06</p><p>发行版发布：Archcraft 2023.01.01</p><p>更多 Archcraft 新闻...</p><p>Archcraft 是一个基于 Arch Linux 的极简 Linux 发行版。该项目使用极简窗口管理器而非功能完整的桌面环境来提供图形用户界面。Archcraft 使用 Calamares 系统安装程序进行安装，并包含 y</p></div>
+  <div class="article-body"><p>Dropbeat 是 GNOME Shell 又一款炫酷的音乐控制器，它是一首老曲调的新变奏：一个基于面板的音乐小程序，为支持 MPRIS 的 Linux 媒体播放器提供暂停、播放和跳曲的替代方式。</p><p>这类小程序数不胜数，而这个面板小程序并没有比你过去尝试过或正在使用的那些（想要花哨功能，可以试试那个）有太多不同。</p><p>但它确实在某些方面有所不同。</p><p>安装后，它会在你的面板上添加一个按钮，点击后，“显示一个炫酷的卡片来控制你的媒体播放器”，引用其描述，利用当前播放歌曲的专辑封面生成模糊画布。然后，它以此作为面板小程序和全屏模式的背景。</p><p>这种方法的一个明显缺点是，当你切换曲目时，模糊背景通常需要片刻才能出现，小程序也需要时间跟上，这在快速跳过曲目时会破坏乐趣，但嘿：每个人都是批评家。</p><p>点击专辑封面将进入全屏模式。专辑封面、曲目标题和艺术家名称在模糊背景上大号显示：</p><p>通过点击专辑封面轻松激活沉浸式全屏模式</p><p>第三点也是最后一点，它支持可配置的全局快捷键，无论何时都能切换打开卡片，无需将鼠标移出当前操作，这可能很方便。</p><p>当然，如果你想访问其他媒体播放器功能，如收藏曲目、调节音量、启用随机播放或循环，或在曲目内快进，你仍需进入应用本身（或使用其他小程序）。</p><p>目前，Dropbeat 没有将播放器窗口前置的方式，这是其他插件和应用能做到的。它也不会在激活时禁用 GNOME Shell 自带的媒体控制器，所以你仍会在通知列表中看到它。</p><p>它是否做到了 GNOME Shell 内置媒体小部件能做的一切？是的，虽然两者都将控制项隐藏在视线之外，直到你主动寻找，但 Dropbeat 加入了由专辑封面构建的全屏视图，为操作增添了一些额外炫酷效果。</p><p>如果你喜欢它的外观，可以通过网络浏览器在 GNOME Extensions 网站上获取，或者通过桌面应用（在 Ubuntu 软件源中可用）减少麻烦。</p><p>Dropbeat 支持 GNOME 48 至 50。</p><p>喜欢这种风格但不喜欢样式？有一个流畅的替代方案，提供实时歌词，并能嵌入 Ubuntu Dock 而非面板。对于非扩展方案，还有一个可自定义的桌面“正在播放”小部件。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12908" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/dropbeat-music-controller-gnome-extension" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

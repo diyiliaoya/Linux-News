@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Archcraft 2026.08.01 — Linux 中文速报</title>
+<title>Curl 被误从 Ubuntu 26.04 最小云镜像中移除 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>发行版发布：Archcraft 2026.08.01</h1>
+  <h1>Curl 被误从 Ubuntu 26.04 最小云镜像中移除</h1>
 
-  <div class="article-summary">Archcraft 发布了 2026.08.01 版本，这是基于 Arch 的轻量级 Linux 发行版的最新稳定版。本次更新引入了 Sway Wayland 合成器作为新的桌面选择，并全面改进了安装体验、桌面会话、VirtualBox 支持，修复了大量 bug。同时恢复了 Btrfs 和 XFS 文件系统的安装支持，更新了 archiso 至 88-1，并增强了 GTK/GNOME 应用集成。该版本被认为是 Archcraft 迄今最大的更新之一。</div>
+  <div class="article-summary">Ubuntu 26.04 LTS 的最小云镜像中意外缺失了 curl 工具，该工具常用于脚本和 CI 流程中下载文件。Canonical 已确认这是错误，并已将 curl 重新加入镜像。此前，curl 作为 pollinate 的依赖项被包含，但 pollinate 在 26.04 中被移除，导致 curl 也随之消失。现在 curl 已明确加入最小云镜像种子，并正在推送更新，现有安装将在下次更新时恢复。不过，Canonical 正在讨论是否在未来的 26.10 版本中正式移除 curl，以保持最小镜像的极简性。</div>
 
-  <div class="article-body"><p>发行版发布：Archcraft 2026.08.01</p><p>Aditya Shakya 已宣布发布 2026.08.01，这是该项目基于 Arch 的轻量级快速 Linux 发行版的最新稳定版。此版本在实时模式中新增了 Sway Wayland 合成器作为桌面选择（除了 Openbox 和 bspwm 窗口管理器之外）：</p><p>“Archcraft 的 2026 年 8 月 ISO 镜像现已可供下载。此版本专注于稳定性、兼容性和精致度。从完全改版的安装体验到改进的桌面会话、更好的 VirtualBox 支持以及无数错误修复，这是 Archcraft 迄今最大的更新之一。亮点包括：全新的 Qt6 SDDM 主题；新的 Sway Wayland 会话；跨安装程序的可靠加密安装；恢复 Btrfs 和 XFS 安装支持（Calamares）；更新至 archiso 88-1；改进的 VirtualBox 兼容性；更好的 GTK/GNOME 应用集成；数百项小修复和改进。此版本最大的新增功能之一是引入 Sway，在现有窗口管理器之外提供了另一个轻量级 Wayland 会话。”</p><p>更多信息和截图请见下文。</p><p>archcraft-2026.08.01-x86_64.iso</p><p>近期相关新闻和发布：</p><p>发行版发布：Archcraft 2026.08.01</p><p>发行版发布：Archcraft 2026.05.12</p><p>发行版发布：Archcraft 2026.02.02</p><p>发行版发布：Archcraft 2025.04.24</p><p>发行版发布：Archcraft 2024.04.06</p><p>发行版发布：Archcraft 2023.01.01</p><p>更多 Archcraft 新闻...</p><p>Archcraft 是一个基于 Arch Linux 的极简 Linux 发行版。该项目使用极简窗口管理器而非功能完整的桌面环境来提供图形用户界面。Archcraft 使用 Calamares 系统安装程序进行安装，并包含 y</p></div>
+  <div class="article-body"><p>Ubuntu 26.04 LTS 的最小云镜像一直缺少 curl——事实证明这是意外，因此 Canonical 已将其恢复。</p><p>curl 是一个常用的命令行工具，用于从远程服务器获取文件。无数安装脚本、CI 流水线以及你无疑曾粘贴到终端中的一行命令都会调用它，而你不会多想。</p><p>但该软件包至今一直缺失于 26.04 的镜像中。这导致那些运行精简云安装的用户措手不及，破坏了预期的工作流程，因为它在之前的版本中是可用的。</p><p>手动修复方法是从软件源安装 curl，从整体来看，这并不算太大的工作量。</p><p>curl 预装在 Ubuntu 26.04 LTS（更早版本）的完整服务器和云镜像中。它此前也存在于最小变体中，尽管并非有意为之。</p><p>这个“bug”是因为 curl 未被明确列入最小云服务器的“种子”（核心软件包列表）。相反，它是作为 pollinate（一个用于云环境的熵种子工具）的依赖项而被带入的。pollinate 在 26.04 中被移除，curl 也随之消失。</p><p>Canonical 的工程师 Gauthier Jolly 表示：“虽然 pollinate 可能不是用户期望的工具，但 curl 绝对是，我们不应该这样破坏 LTS 用户。”</p><p>支持重新引入 curl 的 Canonical 工程师 Christian Ehrhardt 表示：“之前 SRU 变更的意图只是移除 pollinate。”</p><p>curl 已被明确添加到 server-cloud-minimal 种子中。更新正在推送中，因此现有安装将在下次系统更新时拉取缺失的软件包。</p><p>然而，使用最小云和服务器镜像的用户不应因 curl 的存在而过于安心。</p><p>Canonical 的工程师正在讨论是否在 Ubuntu 26.10 之前正式从最小安装种子中移除 curl——注意：是种子，不是软件源，以免引起恐慌——因为最小镜像的意义就在于“最小”，而 curl 并非启动所必需。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12908" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/ubuntu-2604-server-cloud-minimal-curl-missing" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Archcraft 2026.08.01 — Linux 中文速报</title>
+<title>zlib-rs 0.6.7 发布，带来 LoongArch LSX 优化与释放后使用修复 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Archcraft 2026.08.01</h1>
+  <h1>zlib-rs 0.6.7 发布，带来 LoongArch LSX 优化与释放后使用修复</h1>
 
-  <div class="article-summary">Archcraft 发布了 2026.08.01 版本，这是基于 Arch 的轻量级 Linux 发行版的最新稳定版。本次更新引入了 Sway Wayland 合成器作为新的桌面选择，并全面改进了安装体验、桌面会话、VirtualBox 支持，修复了大量 bug。同时恢复了 Btrfs 和 XFS 文件系统的安装支持，更新了 archiso 至 88-1，并增强了 GTK/GNOME 应用集成。该版本被认为是 Archcraft 迄今最大的更新之一。</div>
+  <div class="article-summary">zlib-rs 0.6.7 作为基于 Rust 的“更安全 zlib”实现的最新版本发布，修复了代码中的释放后使用（UAF）漏洞，并新增了 LoongArch64 LSX 优化，包括 LSX compare256 实现和更宽的加载/存储操作，分别带来约 4% 和 10% 的性能提升。该版本旨在提供与 zlib-ng 相当的性能，同时增强内存安全性。</div>
 
-  <div class="article-body"><p>发行版发布：Archcraft 2026.08.01</p><p>Aditya Shakya 已宣布发布 2026.08.01，这是该项目基于 Arch 的轻量级快速 Linux 发行版的最新稳定版。此版本在实时模式中新增了 Sway Wayland 合成器作为桌面选择（除了 Openbox 和 bspwm 窗口管理器之外）：</p><p>“Archcraft 的 2026 年 8 月 ISO 镜像现已可供下载。此版本专注于稳定性、兼容性和精致度。从完全改版的安装体验到改进的桌面会话、更好的 VirtualBox 支持以及无数错误修复，这是 Archcraft 迄今最大的更新之一。亮点包括：全新的 Qt6 SDDM 主题；新的 Sway Wayland 会话；跨安装程序的可靠加密安装；恢复 Btrfs 和 XFS 安装支持（Calamares）；更新至 archiso 88-1；改进的 VirtualBox 兼容性；更好的 GTK/GNOME 应用集成；数百项小修复和改进。此版本最大的新增功能之一是引入 Sway，在现有窗口管理器之外提供了另一个轻量级 Wayland 会话。”</p><p>更多信息和截图请见下文。</p><p>archcraft-2026.08.01-x86_64.iso</p><p>近期相关新闻和发布：</p><p>发行版发布：Archcraft 2026.08.01</p><p>发行版发布：Archcraft 2026.05.12</p><p>发行版发布：Archcraft 2026.02.02</p><p>发行版发布：Archcraft 2025.04.24</p><p>发行版发布：Archcraft 2024.04.06</p><p>发行版发布：Archcraft 2023.01.01</p><p>更多 Archcraft 新闻...</p><p>Archcraft 是一个基于 Arch Linux 的极简 Linux 发行版。该项目使用极简窗口管理器而非功能完整的桌面环境来提供图形用户界面。Archcraft 使用 Calamares 系统安装程序进行安装，并包含 y</p></div>
+  <div class="article-body"><p>zlib-rs 0.6.7 于今日发布，这是这款基于 Rust 编程语言的“更安全 zlib”实现的最新版本，旨在提供与 zlib-ng 相当的性能。</p><p>zlib-rs 0.6.7 版本修复了其代码库中新发现的一个释放后使用（UAF）漏洞。</p><p>昨天的报告概述了 Deflate::compress_uninit 中的释放后使用条件，并附带了概念验证示例。该 PoC 即使在代码中禁止任何不安全 Rust 特性的情况下也能触发 UAF。</p><p>zlib-rs 0.6.7 的另一个重点是增加了更多 LoongArch64 LSX 优化，针对龙芯 SIMD 扩展。现在有了 LSX compare256 实现，在某个测试中带来了约 4% 的速度提升。在 inflate 代码中，现在也使用了更宽的 LSX 加载/存储操作，带来了高达 10% 的改进。以及其他修复。</p><p>很快我将对我的 LoongArch 测试系统进行新一轮的龙芯 3B6000 基准测试。</p><p>有关 zlib-rs 0.6.7 的下载和更多详情，请访问 Phoronix。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12908" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/zlib-rs-0.6.7" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

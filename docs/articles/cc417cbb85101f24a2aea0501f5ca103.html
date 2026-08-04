@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Archcraft 2026.08.01 — Linux 中文速报</title>
+<title>Ubuntu 将另一个系统 Deb 包转换为 Snap — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>发行版发布：Archcraft 2026.08.01</h1>
+  <h1>Ubuntu 将另一个系统 Deb 包转换为 Snap</h1>
 
-  <div class="article-summary">Archcraft 发布了 2026.08.01 版本，这是基于 Arch 的轻量级 Linux 发行版的最新稳定版。本次更新引入了 Sway Wayland 合成器作为新的桌面选择，并全面改进了安装体验、桌面会话、VirtualBox 支持，修复了大量 bug。同时恢复了 Btrfs 和 XFS 文件系统的安装支持，更新了 archiso 至 88-1，并增强了 GTK/GNOME 应用集成。该版本被认为是 Archcraft 迄今最大的更新之一。</div>
+  <div class="article-summary">Ubuntu 正在将其另一个核心系统 Deb 包转换为沙盒化的 snap 格式，以提升安全性并改善桌面集成。该包为 hwctl，是一个预装在 Ubuntu 桌面和服务器上的小型命令行工具。Canonical 工程师 Sergio Costas 表示，为了将 hwctl 与 gnome-control-center 及其他前端集成，并增强安全性，hwctl 包将仅以 snap 形式提供。在 Ubuntu 26.04 LTS 上，用户将自动迁移至 snap 版本，现有系统通过更新将 Deb 包替换为自动安装 snap 的虚拟包。Ubuntu 26.10 及更高版本将直接默认包含该 snap。</div>
 
-  <div class="article-body"><p>发行版发布：Archcraft 2026.08.01</p><p>Aditya Shakya 已宣布发布 2026.08.01，这是该项目基于 Arch 的轻量级快速 Linux 发行版的最新稳定版。此版本在实时模式中新增了 Sway Wayland 合成器作为桌面选择（除了 Openbox 和 bspwm 窗口管理器之外）：</p><p>“Archcraft 的 2026 年 8 月 ISO 镜像现已可供下载。此版本专注于稳定性、兼容性和精致度。从完全改版的安装体验到改进的桌面会话、更好的 VirtualBox 支持以及无数错误修复，这是 Archcraft 迄今最大的更新之一。亮点包括：全新的 Qt6 SDDM 主题；新的 Sway Wayland 会话；跨安装程序的可靠加密安装；恢复 Btrfs 和 XFS 安装支持（Calamares）；更新至 archiso 88-1；改进的 VirtualBox 兼容性；更好的 GTK/GNOME 应用集成；数百项小修复和改进。此版本最大的新增功能之一是引入 Sway，在现有窗口管理器之外提供了另一个轻量级 Wayland 会话。”</p><p>更多信息和截图请见下文。</p><p>archcraft-2026.08.01-x86_64.iso</p><p>近期相关新闻和发布：</p><p>发行版发布：Archcraft 2026.08.01</p><p>发行版发布：Archcraft 2026.05.12</p><p>发行版发布：Archcraft 2026.02.02</p><p>发行版发布：Archcraft 2025.04.24</p><p>发行版发布：Archcraft 2024.04.06</p><p>发行版发布：Archcraft 2023.01.01</p><p>更多 Archcraft 新闻...</p><p>Archcraft 是一个基于 Arch Linux 的极简 Linux 发行版。该项目使用极简窗口管理器而非功能完整的桌面环境来提供图形用户界面。Archcraft 使用 Calamares 系统安装程序进行安装，并包含 y</p></div>
+  <div class="article-body"><p>Ubuntu 正在将其另一个核心系统 Deb 包转换为沙盒化的 snap 格式，此举据称将提升安全性并实现更好的桌面集成。</p><p>涉及的包是 hwctl，这是一个预装在 Ubuntu 桌面和服务器上的小型命令行工具，属于 Canonical 的硬件 API 工具集的一部分。</p><p>Canonical 工程师 Sergio Costas 表示：“为了将 hwctl 与 gnome-control-center 及其他前端集成，并增强安全性，HWCTL 包从今往后将仅以 snap 形式提供。”</p><p>如果你使用的是 Ubuntu 26.04 LTS，你将被自动迁移至 snap 版本。Canonical 将把当前的 Deb 包转换为一个虚拟包，在标准系统更新期间自动安装 snap 版本。</p><p>然而，这一转换尚未发生，因为对于 Ubuntu LTS 版本，必须遵循必要的稳定版更新（SRU）流程。</p><p>在 Ubuntu 26.10 及更高版本中，该 snap 将成为构建 ISO 的默认种子的一部分，因此无需任何包替换技巧。</p><p>hwctl 和其他硬件 API 工具是在 Ubuntu 25.10 中添加的。这些包用于支持各种操作系统功能，包括 Ubuntu Pro 和可选的 Ubuntu Insights 系统遥测。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12908" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/ubuntu-hwctl-deb-to-snap-transition" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

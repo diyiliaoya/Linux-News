@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Archcraft 2026.08.01 — Linux 中文速报</title>
+<title>FFmpeg 9.0 发布：更多 Vulkan 加速、动画 WebP 及更多 AMD AMF 支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Archcraft 2026.08.01</h1>
+  <h1>FFmpeg 9.0 发布：更多 Vulkan 加速、动画 WebP 及更多 AMD AMF 支持</h1>
 
-  <div class="article-summary">Archcraft 发布了 2026.08.01 版本，这是基于 Arch 的轻量级 Linux 发行版的最新稳定版。本次更新引入了 Sway Wayland 合成器作为新的桌面选择，并全面改进了安装体验、桌面会话、VirtualBox 支持，修复了大量 bug。同时恢复了 Btrfs 和 XFS 文件系统的安装支持，更新了 archiso 至 88-1，并增强了 GTK/GNOME 应用集成。该版本被认为是 Archcraft 迄今最大的更新之一。</div>
+  <div class="article-summary">FFmpeg 9.0 作为这一广泛使用的开源多媒体库的最新功能版本正式发布，包含大量改进，如更多 Vulkan API 加速工作（包括 Vulkan APV 视频解码、Apple ProRes RAW Vulkan 加速、Vulkan v360 视频滤镜）、HE-AAC 960 解码、NVIDIA CUDA 转置滤镜、动画 WebP 解码与解封装、持续的 AMD AMF 增强以及更多 AVX-512 优化。官方更新日志列出了多项亮点，包括扩展 AMF 色彩转换器的 HDR 能力、MP4 封装器中的 LCEVC 轨道复用支持、Playdate 视频编码器与封装器、新增 v360_vulkan 滤镜、HE-AAC 960 解码（DAB+）、transpose_cuda 滤镜、AMF 帧率转换器滤镜、SMPTE 2094-50 元数据支持与透传、ProRes RAW VideoToolbox 硬件加速、动画 WebP 解码器与解封装器、移除 CELT 解码支持、用于分割 Dolby Vision 多层 HEVC 的比特流滤镜、AMF 硬件内存映射支持、ONNX Runtime DNN 后端及 GPU 执行提供程序支持、移除已弃用的 NVENC 选项及对 11.1 之前 SDK 版本的支持，以及新增 AMF 视频质量增强器滤镜。</div>
 
-  <div class="article-body"><p>发行版发布：Archcraft 2026.08.01</p><p>Aditya Shakya 已宣布发布 2026.08.01，这是该项目基于 Arch 的轻量级快速 Linux 发行版的最新稳定版。此版本在实时模式中新增了 Sway Wayland 合成器作为桌面选择（除了 Openbox 和 bspwm 窗口管理器之外）：</p><p>“Archcraft 的 2026 年 8 月 ISO 镜像现已可供下载。此版本专注于稳定性、兼容性和精致度。从完全改版的安装体验到改进的桌面会话、更好的 VirtualBox 支持以及无数错误修复，这是 Archcraft 迄今最大的更新之一。亮点包括：全新的 Qt6 SDDM 主题；新的 Sway Wayland 会话；跨安装程序的可靠加密安装；恢复 Btrfs 和 XFS 安装支持（Calamares）；更新至 archiso 88-1；改进的 VirtualBox 兼容性；更好的 GTK/GNOME 应用集成；数百项小修复和改进。此版本最大的新增功能之一是引入 Sway，在现有窗口管理器之外提供了另一个轻量级 Wayland 会话。”</p><p>更多信息和截图请见下文。</p><p>archcraft-2026.08.01-x86_64.iso</p><p>近期相关新闻和发布：</p><p>发行版发布：Archcraft 2026.08.01</p><p>发行版发布：Archcraft 2026.05.12</p><p>发行版发布：Archcraft 2026.02.02</p><p>发行版发布：Archcraft 2025.04.24</p><p>发行版发布：Archcraft 2024.04.06</p><p>发行版发布：Archcraft 2023.01.01</p><p>更多 Archcraft 新闻...</p><p>Archcraft 是一个基于 Arch Linux 的极简 Linux 发行版。该项目使用极简窗口管理器而非功能完整的桌面环境来提供图形用户界面。Archcraft 使用 Calamares 系统安装程序进行安装，并包含 y</p></div>
+  <div class="article-body"><p>FFmpeg 9.0 发布：更多 Vulkan 加速、动画 WebP 及更多 AMD AMF 支持 - Phoronix</p><p>FFmpeg 9.0 发布：更多 Vulkan 加速、动画 WebP 及更多 AMD AMF 支持</p><p>2026年8月3日，美国东部时间晚上8:49。</p><p>FFmpeg 9.0 现已作为这一广泛使用的开源多媒体库的最新功能版本发布。</p><p>FFmpeg 9.0 包含大量重大改进，包括更多 Vulkan API 加速工作，例如 Vulkan APV 视频解码、Apple ProRes RAW Vulkan 加速、Vulkan v360 视频滤镜，HE-AAC 960 解码，NVIDIA CUDA 转置滤镜，动画 WebP 解码与解封装，持续的 AMD AMF 增强，以及更多 AVX-512 优化。</p><p>官方 FFmpeg 更新日志将 9.0 版本的重点列出如下：</p><p>- 扩展 AMF 色彩转换器（vf_vpp_amf）的 HDR 能力</p><p>- MP4 封装器中支持 LCEVC 轨道复用</p><p>- Playdate 视频编码器和封装器</p><p>- 新增 v360_vulkan 滤镜</p><p>- HE-AAC 960 解码（DAB+）</p><p>- transpose_cuda 滤镜</p><p>- 新增 AMF 帧率转换器（vf_frc_amf）滤镜</p><p>- SMPTE 2094-50 元数据支持与透传</p><p>- ProRes RAW VideoToolbox 硬件加速</p><p>- 动画 WebP 解码器</p><p>- 动画 WebP 解封装器</p><p>- 移除 CELT 解码支持（不影响 Opus CELT）</p><p>- 移除 ogg/celt 解析</p><p>- 用于分割 Dolby Vision 多层 HEVC 的比特流滤镜</p><p>- 新增 AMF 硬件内存映射支持</p><p>- ONNX Runtime DNN 后端，支持 GPU 执行提供程序</p><p>- 移除已弃用的 NVENC 选项及对 11.1 之前 SDK 版本的支持</p><p>- 新增 AMF 视频质量增强器（vf_vqe_amf）滤镜</p><p>那些从源代码构建的用户可以着手编译，以获取这些最新的多媒体库功能。</p><p>Shotcut 26.7 视频编辑器发布，附带素材库</p><p>Linux 7.2-rc6 的声音修复：“远超预期”</p><p>dav1d 1.5.4 为 OS/2 带来 AV1 解码</p><p>提交给 Linux 7.2-rc5 的音频怪癖“新常态”</p><p>最后一个 MPEG-4 视觉专利已过期</p><p>FFmpeg 落地最新 AVX-512 优化：像素格式转换速度提升 1.372 倍</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>Valve 赞助将开源 RADV 驱动移植到 Windows 的工作</p><p>首个面向现代 AMD Ryzen AM5 平台的开源固件发布</p><p>Arch Linux AUR 再次遭遇恶意软件包浪潮，软件包收养暂停</p><p>“KVM 电锯”预计将进入 Linux 7.3，以处理 God 数据结构</p><p>AMD P-State Linux 驱动补丁可将 1% 低帧游戏性能提升 31%</p><p>著名 Arch Linux 开发者任职 10 年后辞职</p><p>Starling：一款用 Swift 编写的新 Linux 桌面，自带 Wayland 合成器，并由 AI 辅助开发</p><p>面向旧 AMD GPU 的 DRM 格式修饰符将随 Linux 7.3 到来：感谢 Valve</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12908" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/FFmpeg-9.0-Released" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

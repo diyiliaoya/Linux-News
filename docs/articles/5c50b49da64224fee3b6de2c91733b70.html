@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Archcraft 2026.08.01 — Linux 中文速报</title>
+<title>Linux 7.3 为 AMD Kaveri、Hawaii 及其他 GFX7 GPU 改进 GPU 重置恢复 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Archcraft 2026.08.01</h1>
+  <h1>Linux 7.3 为 AMD Kaveri、Hawaii 及其他 GFX7 GPU 改进 GPU 重置恢复</h1>
 
-  <div class="article-summary">Archcraft 发布了 2026.08.01 版本，这是基于 Arch 的轻量级 Linux 发行版的最新稳定版。本次更新引入了 Sway Wayland 合成器作为新的桌面选择，并全面改进了安装体验、桌面会话、VirtualBox 支持，修复了大量 bug。同时恢复了 Btrfs 和 XFS 文件系统的安装支持，更新了 archiso 至 88-1，并增强了 GTK/GNOME 应用集成。该版本被认为是 Archcraft 迄今最大的更新之一。</div>
+  <div class="article-summary">AMDGPU 驱动在 Linux 7.3 合并窗口前获得了一系列新特性，其中最引人注目的是由 Valve 的 Timur Kristóf 贡献的 GFX7 系列 GPU 的软重置恢复补丁。该补丁利用 GFX IP 块软重置功能，使得 Kaveri、Kabini APU 以及 Hawaii、Bonaire 独立显卡在 GPU 挂起时无需重启系统或清空显存即可恢复，显著提升了用户体验。</div>
 
-  <div class="article-body"><p>发行版发布：Archcraft 2026.08.01</p><p>Aditya Shakya 已宣布发布 2026.08.01，这是该项目基于 Arch 的轻量级快速 Linux 发行版的最新稳定版。此版本在实时模式中新增了 Sway Wayland 合成器作为桌面选择（除了 Openbox 和 bspwm 窗口管理器之外）：</p><p>“Archcraft 的 2026 年 8 月 ISO 镜像现已可供下载。此版本专注于稳定性、兼容性和精致度。从完全改版的安装体验到改进的桌面会话、更好的 VirtualBox 支持以及无数错误修复，这是 Archcraft 迄今最大的更新之一。亮点包括：全新的 Qt6 SDDM 主题；新的 Sway Wayland 会话；跨安装程序的可靠加密安装；恢复 Btrfs 和 XFS 安装支持（Calamares）；更新至 archiso 88-1；改进的 VirtualBox 兼容性；更好的 GTK/GNOME 应用集成；数百项小修复和改进。此版本最大的新增功能之一是引入 Sway，在现有窗口管理器之外提供了另一个轻量级 Wayland 会话。”</p><p>更多信息和截图请见下文。</p><p>archcraft-2026.08.01-x86_64.iso</p><p>近期相关新闻和发布：</p><p>发行版发布：Archcraft 2026.08.01</p><p>发行版发布：Archcraft 2026.05.12</p><p>发行版发布：Archcraft 2026.02.02</p><p>发行版发布：Archcraft 2025.04.24</p><p>发行版发布：Archcraft 2024.04.06</p><p>发行版发布：Archcraft 2023.01.01</p><p>更多 Archcraft 新闻...</p><p>Archcraft 是一个基于 Arch Linux 的极简 Linux 发行版。该项目使用极简窗口管理器而非功能完整的桌面环境来提供图形用户界面。Archcraft 使用 Calamares 系统安装程序进行安装，并包含 y</p></div>
+  <div class="article-body"><p>Linux 7.3 为 AMD Kaveri、Hawaii 及其他 GFX7 GPU 改进 GPU 重置恢复 - Phoronix</p><p>Linux 7.3 为 AMD Kaveri、Hawaii 及其他 GFX7 GPU 改进 GPU 重置恢复</p><p>发布于 2026 年 8 月 3 日晚上 8:36（美国东部时间）。</p><p>除了上周提交给 DRM-Next 的 AMDGPU 特性拉取请求（其中包括针对旧款 AMD GPU 的 DRM 格式修饰符以及其他多项改进）之外，上周还提交了第二批 AMDGPU 特性工作，为即将到来的 Linux 7.3 合并窗口做准备。</p><p>Alex Deucher 于周五发送了一些针对 AMDGPU 驱动的额外特性更新，这些工作将在 Linux 7.3 合并窗口（大约两周后开启）之前，赶在新特性材料截止日期前合并到 DRM-Next 中。</p><p>这次后续拉取请求中最引人注目的是 Valve 的 Timur Kristóf 的更多工作。特别值得一提的是，其中包含一个重置补丁系列，用于在 GFX7 时代的硬件（如 Kaveri APU、Hawaii 独立显卡、Bonaire 独立显卡等）上使用 GFX IP 块软重置支持。Timur 在七月份解释道：</p><p>“GFX IP 块软重置已被实现为恢复方法，这样我们就可以在不重置整个 GPU 或丢失显存内容的情况下，仅重置 GFX 块。</p><p>修复了 GFX7 代码中的各种问题，使其能够与 IP 块软重置配合工作。主要挑战是修复 MQD/HQD 处理，确保软重置后不会挂起。还有其他一些小的修复。</p><p>重新设计了现有的 GFX7 软重置实现，类似于 GFX8 上的重新设计版本，使其更加健壮。实际上，这意味着现在它会重置 GFX IP 块中的所有内容（而不是猜测哪些部分需要重置），以保持一致性，并且现在还处理时钟和电源门控，以确保在 GFX IP 块软重置后不会降低 GPU 功能。</p><p>这改善了所有 GFX7 芯片的当前用户体验：</p><p>在 Kaveri 和 Kabini 上，目前没有可用的 GPU 恢复方法，因此这些芯片在挂起时需要用户手动重启计算机。</p><p>在 Hawaii 和 Bonaire 上，当前的 GPU 恢复方法总是清除显存内容，这意味着一个有 bug（挂起）的应用程序可能导致整个图形会话崩溃，这不太理想。</p><p>使用 GFX IP 块软重置意味着我们现在可以在 GFX7 APU 上实现有效的恢复，并且也可以在独立显卡上从 GFX 挂起中恢复，而不会导致整个系统崩溃。”</p><p>通过这个周末的 AMDGPU 拉取请求，这些针对老款 AMD Radeon 显卡的改进应该会成为即将到来的 Linux 7.3 合并窗口的一部分。这些针对 Linux 7.3 的 AMD 内核图形驱动的最后时刻特性补丁列表可以通过以下链接查看：</p><p>AMD 开始为 RDNA5 GPU 发布 Display Core Next 6 “DCN6” Linux 补丁</p><p>AMD 发布 Linux 补丁支持 HDMI 2.1 自动低延迟模式 “ALLM” 和 VRR</p><p>DRM 格式修饰符即将随 Linux 7.3 支持旧款 AMD GPU：感谢 Valve</p><p>Valve 赞助将开源 RADV 驱动移植到 Windows 的工作</p><p>AMD Linux 图形驱动为 Apple Studio Display 做准备</p><p>AMD 为 Linux 7.3 准备更多图形驱动改进</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>Valve 赞助将开源 RADV 驱动移植到 Windows 的工作</p><p>首个面向现代 AMD Ryzen AM5 平台的开源固件发布</p><p>Arch Linux AUR 再次遭遇恶意软件包浪潮，软件包收养暂停</p><p>“KVM 电锯”预计将随 Linux 7.3 到来，用于处理 God 数据结构</p><p>AMD P-State Linux 驱动补丁可将 1% 低帧率游戏性能提升 31%</p><p>知名 Arch Linux 开发者任职 10 年后辞职</p><p>Starling：一个新的 Linux D</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12908" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/AMD-GFX7-Soft-Reset-Linux-7.3" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
