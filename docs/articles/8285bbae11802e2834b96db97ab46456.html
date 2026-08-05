@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Curl 被误从 Ubuntu 26.04 最小云镜像中移除 — Linux 中文速报</title>
+<title>Fish Shell 4.8 改进历史搜索、脚本编写与补全功能 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Linux Today</span>
   </div>
 
-  <h1>Curl 被误从 Ubuntu 26.04 最小云镜像中移除</h1>
+  <h1>Fish Shell 4.8 改进历史搜索、脚本编写与补全功能</h1>
 
-  <div class="article-summary">Ubuntu 26.04 LTS 的最小云镜像中意外缺失了 curl 工具，该工具常用于脚本和 CI 流程中下载文件。Canonical 已确认这是错误，并已将 curl 重新加入镜像。此前，curl 作为 pollinate 的依赖项被包含，但 pollinate 在 26.04 中被移除，导致 curl 也随之消失。现在 curl 已明确加入最小云镜像种子，并正在推送更新，现有安装将在下次更新时恢复。不过，Canonical 正在讨论是否在未来的 26.10 版本中正式移除 curl，以保持最小镜像的极简性。</div>
+  <div class="article-summary">Fish Shell 4.8 版本发布，带来了历史搜索、脚本编写效率和补全功能的显著改进，旨在简化命令行任务。该版本优化了用户交互体验，提升了操作流畅度，是Linux用户值得关注的更新。</div>
 
-  <div class="article-body"><p>Ubuntu 26.04 LTS 的最小云镜像一直缺少 curl——事实证明这是意外，因此 Canonical 已将其恢复。</p><p>curl 是一个常用的命令行工具，用于从远程服务器获取文件。无数安装脚本、CI 流水线以及你无疑曾粘贴到终端中的一行命令都会调用它，而你不会多想。</p><p>但该软件包至今一直缺失于 26.04 的镜像中。这导致那些运行精简云安装的用户措手不及，破坏了预期的工作流程，因为它在之前的版本中是可用的。</p><p>手动修复方法是从软件源安装 curl，从整体来看，这并不算太大的工作量。</p><p>curl 预装在 Ubuntu 26.04 LTS（更早版本）的完整服务器和云镜像中。它此前也存在于最小变体中，尽管并非有意为之。</p><p>这个“bug”是因为 curl 未被明确列入最小云服务器的“种子”（核心软件包列表）。相反，它是作为 pollinate（一个用于云环境的熵种子工具）的依赖项而被带入的。pollinate 在 26.04 中被移除，curl 也随之消失。</p><p>Canonical 的工程师 Gauthier Jolly 表示：“虽然 pollinate 可能不是用户期望的工具，但 curl 绝对是，我们不应该这样破坏 LTS 用户。”</p><p>支持重新引入 curl 的 Canonical 工程师 Christian Ehrhardt 表示：“之前 SRU 变更的意图只是移除 pollinate。”</p><p>curl 已被明确添加到 server-cloud-minimal 种子中。更新正在推送中，因此现有安装将在下次系统更新时拉取缺失的软件包。</p><p>然而，使用最小云和服务器镜像的用户不应因 curl 的存在而过于安心。</p><p>Canonical 的工程师正在讨论是否在 Ubuntu 26.10 之前正式从最小安装种子中移除 curl——注意：是种子，不是软件源，以免引起恐慌——因为最小镜像的意义就在于“最小”，而 curl 并非启动所必需。</p></div>
+  <div class="article-body"><p>探索 Fish Shell 4.8，它在历史搜索、脚本编写效率和补全功能方面带来了显著改进，以简化你的命令行任务。</p><p>该文章最初发表于 Linux Today。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/ubuntu-2604-server-cloud-minimal-curl-missing" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.linuxtoday.com/blog/fish-shell-4-8-improves-history-search-scripting-and-completions/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

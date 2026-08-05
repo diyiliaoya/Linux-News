@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Curl 被误从 Ubuntu 26.04 最小云镜像中移除 — Linux 中文速报</title>
+<title>AMD openSIL 与 Coreboot 为 Phoenix AM5 支持提交拉取请求 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Curl 被误从 Ubuntu 26.04 最小云镜像中移除</h1>
+  <h1>AMD openSIL 与 Coreboot 为 Phoenix AM5 支持提交拉取请求</h1>
 
-  <div class="article-summary">Ubuntu 26.04 LTS 的最小云镜像中意外缺失了 curl 工具，该工具常用于脚本和 CI 流程中下载文件。Canonical 已确认这是错误，并已将 curl 重新加入镜像。此前，curl 作为 pollinate 的依赖项被包含，但 pollinate 在 26.04 中被移除，导致 curl 也随之消失。现在 curl 已明确加入最小云镜像种子，并正在推送更新，现有安装将在下次更新时恢复。不过，Canonical 正在讨论是否在未来的 26.10 版本中正式移除 curl，以保持最小镜像的极简性。</div>
+  <div class="article-summary">3mdeb 固件咨询公司上周发布了首个面向现代 AMD Ryzen AM5 平台的开源固件，将 AMD openSIL 和 Coreboot 移植到 MSI 桌面 ATX 主板上。目前该工作进展顺利，3mdeb 正努力将 AM5 平台支持和 Phoenix SoC 支持上游化到 AMD openSIL 和 Coreboot 中。固件工程师 Michał Żygowski 今日提交了 AMD openSIL 拉取请求，包含必要的修复、Phoenix 桌面 CPU 处理更新、MMIO 处理更新、Promontory21 IP 块支持、缺失的 SMU/USB/GFX 初始化等。同时，Coreboot 的上游化更改也已提交，包括 AMD Phoenix 更改、Promontory21 处理以及 MSI PRO B850-P WIFI 主板的初始树。</div>
 
-  <div class="article-body"><p>Ubuntu 26.04 LTS 的最小云镜像一直缺少 curl——事实证明这是意外，因此 Canonical 已将其恢复。</p><p>curl 是一个常用的命令行工具，用于从远程服务器获取文件。无数安装脚本、CI 流水线以及你无疑曾粘贴到终端中的一行命令都会调用它，而你不会多想。</p><p>但该软件包至今一直缺失于 26.04 的镜像中。这导致那些运行精简云安装的用户措手不及，破坏了预期的工作流程，因为它在之前的版本中是可用的。</p><p>手动修复方法是从软件源安装 curl，从整体来看，这并不算太大的工作量。</p><p>curl 预装在 Ubuntu 26.04 LTS（更早版本）的完整服务器和云镜像中。它此前也存在于最小变体中，尽管并非有意为之。</p><p>这个“bug”是因为 curl 未被明确列入最小云服务器的“种子”（核心软件包列表）。相反，它是作为 pollinate（一个用于云环境的熵种子工具）的依赖项而被带入的。pollinate 在 26.04 中被移除，curl 也随之消失。</p><p>Canonical 的工程师 Gauthier Jolly 表示：“虽然 pollinate 可能不是用户期望的工具，但 curl 绝对是，我们不应该这样破坏 LTS 用户。”</p><p>支持重新引入 curl 的 Canonical 工程师 Christian Ehrhardt 表示：“之前 SRU 变更的意图只是移除 pollinate。”</p><p>curl 已被明确添加到 server-cloud-minimal 种子中。更新正在推送中，因此现有安装将在下次系统更新时拉取缺失的软件包。</p><p>然而，使用最小云和服务器镜像的用户不应因 curl 的存在而过于安心。</p><p>Canonical 的工程师正在讨论是否在 Ubuntu 26.10 之前正式从最小安装种子中移除 curl——注意：是种子，不是软件源，以免引起恐慌——因为最小镜像的意义就在于“最小”，而 curl 并非启动所必需。</p></div>
+  <div class="article-body"><p>AMD openSIL 与 Coreboot 为 Phoenix AM5 支持提交拉取请求 - Phoronix</p><p>AMD openSIL 与 Coreboot 为 Phoenix AM5 支持提交拉取请求</p><p>2026年8月4日，美国东部时间上午10:07。</p><p>上周，3mdeb 固件咨询公司发布了首个面向现代 AMD Ryzen AM5 平台的开源固件，他们将 AMD openSIL 和 Coreboot 移植到其下游 Dasharo 版本中，并应用于一款 MSI 桌面 ATX 主板。目前该工作进展顺利，3mdeb 正努力将 AM5 平台支持和 Phoenix SoC 支持上游化到 AMD openSIL 和 Coreboot 中。</p><p>3mdeb 固件工程师 Michał Żygowski 今日提交了一个 AMD openSIL 拉取请求，旨在将 AM5 支持和 Phoenix Ryzen 8000 系列处理器所需的更改上游化。</p><p>该拉取请求包含一些与 Coreboot 启动配合所需的修复、Phoenix 桌面 CPU 处理更新、MMIO 处理更新、用于芯片组初始化的 Promontory21 IP 块支持、缺失的 SMU/USB/GFX 初始化，以及与 AMD openSIL 中当前 Phoenix 概念验证代码相比的其他缺失元素。</p><p>Żygowski 在评论中表示：</p><p>“借助这些更改，我成功启动了搭载 AMD B850 芯片组的 AM5 Phoenix 平台，并使用 coreboot 引导了 Ubuntu 26.04 和 Windows 11。”</p><p>今天还提交了用于上游化 Coreboot 更改的拉取请求。这包括针对 Coreboot 的各种 AMD Phoenix 更改、Promontory21 处理，以及针对 AM5 处理器的其他更改。此外，还包括 MSI PRO B850-P WIFI 主板的初始树，3mdeb 一直专注于该主板的移植工作。</p><p>很高兴看到他们提交 openSIL 和 Coreboot 更改以供审查，以便将这些新增内容上游化。那些希望以简便易用的方式体验的用户，可以查看 3mdeb 为 MSI PRO B850-P WIFI 发布的 Dasharo 固件版本。我将很快对该主板进行测试。</p><p>首个面向现代 AMD Ryzen AM5 平台的开源固件发布</p><p>Coreboot + AMD openSIL 在 MSI Ryzen 主板上现已支持 Windows 11</p><p>Coreboot 26.06 带来对 Intel Nova Lake、AMD Strix Halo 及 31 款新主板的支持</p><p>Framework Computer 在为其现代 Intel 笔记本电脑推进 Coreboot 支持</p><p>3mdeb 持续推进 Coreboot + AMD openSIL 向 Ryzen MSI 主板的移植</p><p>3mdeb 在 Ryzen AM5 主板上实现更多 AMD openSIL 与 Coreboot 功能</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Valve 赞助将开源 RADV 驱动移植到 Windows 的工作</p><p>首个面向现代 AMD Ryzen AM5 平台的开源固件发布</p><p>Arch Linux AUR 再次遭遇恶意软件包浪潮，软件包采纳暂停</p><p>AMD P-State Linux 驱动补丁可将 1% 低帧率游戏性能提升 31%</p><p>知名 Arch Linux 开发者任职 10 年后辞职</p><p>Starling：一款用 Swift 编写的新 Linux 桌面，自带 Wayland 合成器，并由 AI 辅助编写</p><p>DRM 格式修饰符为旧 AMD GPU 随 Linux 7.3 到来：感谢 Valve</p><p>Steam 在 Linux 上的使用率在 7 月回升至 4% 以上</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/ubuntu-2604-server-cloud-minimal-curl-missing" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/AMD-openSIL-Phoenix-AM5-PR" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

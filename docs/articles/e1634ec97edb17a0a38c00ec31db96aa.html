@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Curl 被误从 Ubuntu 26.04 最小云镜像中移除 — Linux 中文速报</title>
+<title>GNOME Boxes 焕然一新，告别陈旧外观 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Curl 被误从 Ubuntu 26.04 最小云镜像中移除</h1>
+  <h1>GNOME Boxes 焕然一新，告别陈旧外观</h1>
 
-  <div class="article-summary">Ubuntu 26.04 LTS 的最小云镜像中意外缺失了 curl 工具，该工具常用于脚本和 CI 流程中下载文件。Canonical 已确认这是错误，并已将 curl 重新加入镜像。此前，curl 作为 pollinate 的依赖项被包含，但 pollinate 在 26.04 中被移除，导致 curl 也随之消失。现在 curl 已明确加入最小云镜像种子，并正在推送更新，现有安装将在下次更新时恢复。不过，Canonical 正在讨论是否在未来的 26.10 版本中正式移除 curl，以保持最小镜像的极简性。</div>
+  <div class="article-summary">GNOME Boxes 的独立开发者 Felipe Borges 展示了该应用作为仅限 Flatpak 的测试版，进行了全面重写，迁移至 GTK4 和 Libadwaita，并改进了 Windows 11 支持。新版本不再依赖宿主发行版，而是自带完整的虚拟化栈，并采用新的显示组件，界面焕然一新。测试显示 Windows 11 安装无需手动调整，但需微软账户登录。新界面包含七个设置分区，支持端口转发、快照等功能。目前测试版可通过 Flatpak 安装，但存在一些稳定性问题。</div>
 
-  <div class="article-body"><p>Ubuntu 26.04 LTS 的最小云镜像一直缺少 curl——事实证明这是意外，因此 Canonical 已将其恢复。</p><p>curl 是一个常用的命令行工具，用于从远程服务器获取文件。无数安装脚本、CI 流水线以及你无疑曾粘贴到终端中的一行命令都会调用它，而你不会多想。</p><p>但该软件包至今一直缺失于 26.04 的镜像中。这导致那些运行精简云安装的用户措手不及，破坏了预期的工作流程，因为它在之前的版本中是可用的。</p><p>手动修复方法是从软件源安装 curl，从整体来看，这并不算太大的工作量。</p><p>curl 预装在 Ubuntu 26.04 LTS（更早版本）的完整服务器和云镜像中。它此前也存在于最小变体中，尽管并非有意为之。</p><p>这个“bug”是因为 curl 未被明确列入最小云服务器的“种子”（核心软件包列表）。相反，它是作为 pollinate（一个用于云环境的熵种子工具）的依赖项而被带入的。pollinate 在 26.04 中被移除，curl 也随之消失。</p><p>Canonical 的工程师 Gauthier Jolly 表示：“虽然 pollinate 可能不是用户期望的工具，但 curl 绝对是，我们不应该这样破坏 LTS 用户。”</p><p>支持重新引入 curl 的 Canonical 工程师 Christian Ehrhardt 表示：“之前 SRU 变更的意图只是移除 pollinate。”</p><p>curl 已被明确添加到 server-cloud-minimal 种子中。更新正在推送中，因此现有安装将在下次系统更新时拉取缺失的软件包。</p><p>然而，使用最小云和服务器镜像的用户不应因 curl 的存在而过于安心。</p><p>Canonical 的工程师正在讨论是否在 Ubuntu 26.10 之前正式从最小安装种子中移除 curl——注意：是种子，不是软件源，以免引起恐慌——因为最小镜像的意义就在于“最小”，而 curl 并非启动所必需。</p></div>
+  <div class="article-body"><p>GNOME Boxes 焕然一新，告别陈旧外观</p><p>全面重写使其迁移至 GTK4 和 Libadwaita，并完善了 Windows 11 支持。</p><p>GNOME Boxes 的独立开发者 Felipe Borges 展示了该应用作为仅限 Flatpak 的测试版，其界面基础焕然一新。</p><p>在兼顾 Red Hat 日常工作与常规维护职责的同时，Felipe 表示过去两年他一直在独自开发此项目，并在社区活动中分享了相关进展。</p><p>第一个设计决策是自包含。Boxes 是 libvirt 的前端，因此其许多行为取决于宿主发行版提供的内容。对于单一维护者而言，为每个发行版维护独立的代码路径并不现实，因此新版本不再依赖宿主，而是自带完整的虚拟化栈。</p><p>第二个决策是你最先注意到的。Boxes 已迁移至 GTK4，弃用了基于 GTK3 的 SPICE 组件，改用名为 libdisplay-info 的新显示组件。至此，过时的视觉风格终于消失。</p><p>Windows 11 支持方面，重写后的 Boxes 现在可以成功安装，无需任何手动变通或特殊技巧，因为它会自动配置安全启动和虚拟 TPM 设备。</p><p>新版本绕过了 Flatpak 沙箱限制，只要客户机运行 systemd v256 或更高版本，即可直接通过 SSH 进入。早期端口转发支持也已加入，目前涵盖 SSH 和 HTTP。</p><p>注意到区别了吗？忽略标题栏右侧的栏。</p><p>在翻新后的 Boxes 中，你看到的每一处都是新界面组件的结果。尽管如此，应用从启动那一刻起就让人感到熟悉。作为 Boxes 的常客，我清楚地知道该点击哪里。</p><p>虚拟机创建流程完美地印证了这一点。我开始安装 Windows 11，Boxes 自动预填了内存和存储值，并设置了 UEFI 作为首选启动方式，我无需触碰任何设置。</p><p>安装过程本身一帆风顺，但 Windows 随后坚持要求我使用微软账户登录才能进入桌面，所以我只能到此为止。</p><p>不过，在此之前，虚拟机窗口右上角的三个点菜单给了我很多操作空间。我可以截图、发送组合键，并打开完整的控制台。</p><p>顺便说一句，这些界面与当前 Boxes 提供的完全不同。</p><p>上面的视频展示了新的属性对话框。以前是带有标题菜单的单一窗口，现在变成了带有侧边栏的对话框，包含七个部分：常规、资源、网络、设备、快照、日志和配置。</p><p>资源部分允许调整内存和调整存储大小；设备部分处理启动顺序和可移动介质；日志部分显示 Boxes 在底层运行的命令；网络页面允许将主机端口转发到虚拟机，并提供 SSH 和 HTTP 的开关。快照页面允许你捕获虚拟机在某一时刻的确切状态，然后可以恢复或删除。</p><p>与当前 Boxes 提供的功能相比（压缩到三个标签页，功能实用但非常笨重），这无疑是一次巨大改进。</p><p>不过，也存在一些瑕疵。Windows 11 虚拟机在我创建快照后不久就崩溃了。我无法确定确切原因，但当时我弹出 ISO 镜像可能是罪魁祸首。</p><p>在此之前，我还尝试安装 Fedora，但无论我尝试什么，都不断遇到不支持的配置错误。切换操作系统类型（如 Generic 和 Windows）以及固件（如 UEFI 和 BIOS），都无法解决问题。</p><p>还有一些小改动。退出虚拟机窗口现在需要按下 Ctrl+Alt 组合键，而当前 Boxes 使用的是 Ctrl+Alt+Delete。也没有专门的全屏按钮，F11 键也不起作用。</p><p>如果你使用 Ubuntu 或其他基于 Debian 的发行版，只需几个终端命令即可运行测试版。你需要先设置 Flatpak。如果你尚未安装，可以按照相关指南完成整个过程。完成后，添加 nightly 仓库：</p><p>flatpak remote-add --if-not-exists gnome-nightly https://nightly.gnome.org/gnome-nightly.flatpakrepo</p><p>然后，在安装任何内容之前，你可以查看该仓库中实际包含的内容：</p><p>flatpak remote-ls -</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/ubuntu-2604-server-cloud-minimal-curl-missing" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/gnome-boxes-glow-up/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

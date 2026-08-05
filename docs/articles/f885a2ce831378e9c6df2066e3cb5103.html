@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Curl 被误从 Ubuntu 26.04 最小云镜像中移除 — Linux 中文速报</title>
+<title>AMD发布eSPI子系统的提案与Linux补丁 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Curl 被误从 Ubuntu 26.04 最小云镜像中移除</h1>
+  <h1>AMD发布eSPI子系统的提案与Linux补丁</h1>
 
-  <div class="article-summary">Ubuntu 26.04 LTS 的最小云镜像中意外缺失了 curl 工具，该工具常用于脚本和 CI 流程中下载文件。Canonical 已确认这是错误，并已将 curl 重新加入镜像。此前，curl 作为 pollinate 的依赖项被包含，但 pollinate 在 26.04 中被移除，导致 curl 也随之消失。现在 curl 已明确加入最小云镜像种子，并正在推送更新，现有安装将在下次更新时恢复。不过，Canonical 正在讨论是否在未来的 26.10 版本中正式移除 curl，以保持最小镜像的极简性。</div>
+  <div class="article-summary">AMD近日向Linux内核邮件列表提交了补丁，提议为增强串行外设接口（eSPI）标准建立新的子系统。eSPI最初由英特尔开发，用于替代LPC接口和传统SPI，连接BIOS、系统控制器及TPM等外设。AMD目前已在自家硬件上使用eSPI，因此提出新子系统并附带一个AMD eSPI驱动。该代码已在AMDI0070平台上测试验证，但尚不支持设备树，从设备枚举需手动完成，部分操作将在后续补丁中补充。</div>
 
-  <div class="article-body"><p>Ubuntu 26.04 LTS 的最小云镜像一直缺少 curl——事实证明这是意外，因此 Canonical 已将其恢复。</p><p>curl 是一个常用的命令行工具，用于从远程服务器获取文件。无数安装脚本、CI 流水线以及你无疑曾粘贴到终端中的一行命令都会调用它，而你不会多想。</p><p>但该软件包至今一直缺失于 26.04 的镜像中。这导致那些运行精简云安装的用户措手不及，破坏了预期的工作流程，因为它在之前的版本中是可用的。</p><p>手动修复方法是从软件源安装 curl，从整体来看，这并不算太大的工作量。</p><p>curl 预装在 Ubuntu 26.04 LTS（更早版本）的完整服务器和云镜像中。它此前也存在于最小变体中，尽管并非有意为之。</p><p>这个“bug”是因为 curl 未被明确列入最小云服务器的“种子”（核心软件包列表）。相反，它是作为 pollinate（一个用于云环境的熵种子工具）的依赖项而被带入的。pollinate 在 26.04 中被移除，curl 也随之消失。</p><p>Canonical 的工程师 Gauthier Jolly 表示：“虽然 pollinate 可能不是用户期望的工具，但 curl 绝对是，我们不应该这样破坏 LTS 用户。”</p><p>支持重新引入 curl 的 Canonical 工程师 Christian Ehrhardt 表示：“之前 SRU 变更的意图只是移除 pollinate。”</p><p>curl 已被明确添加到 server-cloud-minimal 种子中。更新正在推送中，因此现有安装将在下次系统更新时拉取缺失的软件包。</p><p>然而，使用最小云和服务器镜像的用户不应因 curl 的存在而过于安心。</p><p>Canonical 的工程师正在讨论是否在 Ubuntu 26.10 之前正式从最小安装种子中移除 curl——注意：是种子，不是软件源，以免引起恐慌——因为最小镜像的意义就在于“最小”，而 curl 并非启动所必需。</p></div>
+  <div class="article-body"><p>AMD发布了针对eSPI子系统的提案与Linux补丁 - Phoronix</p><p>AMD发布针对eSPI子系统的提案与Linux补丁</p><p>2026年8月4日晚上8点33分（美国东部时间）</p><p>AMD已发布补丁，提议为增强串行外设接口（eSPI）标准建立一个新的Linux子系统，该标准最初由英特尔开发。随着AMD现在开始使用eSPI，他们提议在Linux内核中为其建立一个新的子系统，其中包括一个针对其硬件的新驱动。</p><p>英特尔最初开发eSPI是作为一种通信协议，用于连接BIOS、系统控制器以及TPM等其他外设，作为LPC接口、传统SPI和其他边带信号的替代方案。</p><p>在AMD的Krishnamoorthi M在Linux内核邮件列表上询问AMD eSPI工作应扩展现有SPI子系统代码还是引入为新的总线类型之后，提出的补丁选择了后者，该子系统的首个用户是一个新的AMD eSPI驱动。</p><p>这段新代码已在AMDI0070平台上测试并验证，运行正常。新子系统的已知限制包括：由于AMD代码仅使用ACPI，目前尚不支持设备树；从设备枚举为手动操作；某些操作将在后续补丁中添加。</p><p>对Linux内核中AMD eSPI工作感兴趣的人可以在内核邮件列表上找到补丁系列。</p><p>Linux 7.2-rc6修复了部分AMD Zen 5 CPU被误识别为Zen 6的问题</p><p>AMD发布Instinct MI455X的CDNA5 ISA文档</p><p>Linux 7.3将允许按CPU核心粒度调整AMD P-State动态EPP</p><p>AMD Zen 6客户端HSMP补丁指向Linux上的“Ryzen Master”功能</p><p>AMD P-State Linux驱动补丁可将1%低帧游戏性能提升31%</p><p>AMD PMF测试工具计划用于Linux 7.3</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他。</p><p>Valve赞助将开源RADV驱动带到Windows的工作</p><p>现代AMD Ryzen AM5平台的首个开源固件发布</p><p>Arch Linux AUR再次遭遇恶意软件包浪潮，包采纳暂停</p><p>AMD P-State Linux驱动补丁可将1%低帧游戏性能提升31%</p><p>知名Arch Linux开发者任职10年后辞职</p><p>Starling：一款用Swift编写的新Linux桌面，自带Wayland合成器，并借助AI开发</p><p>旧AMD GPU的DRM格式修饰符即将随Linux 7.3推出：感谢Valve</p><p>Steam在Linux上的使用率7月回升至4%以上</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/ubuntu-2604-server-cloud-minimal-curl-missing" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/AMD-eSPI-Linux-Patches" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

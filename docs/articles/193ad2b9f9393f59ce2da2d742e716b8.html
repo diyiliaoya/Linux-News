@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Curl 被误从 Ubuntu 26.04 最小云镜像中移除 — Linux 中文速报</title>
+<title>Linux最喜爱的音乐播放器Rhythmbox 3.5发布，3.4系列历经近十年终迎更新 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Curl 被误从 Ubuntu 26.04 最小云镜像中移除</h1>
+  <h1>Linux最喜爱的音乐播放器Rhythmbox 3.5发布，3.4系列历经近十年终迎更新</h1>
 
-  <div class="article-summary">Ubuntu 26.04 LTS 的最小云镜像中意外缺失了 curl 工具，该工具常用于脚本和 CI 流程中下载文件。Canonical 已确认这是错误，并已将 curl 重新加入镜像。此前，curl 作为 pollinate 的依赖项被包含，但 pollinate 在 26.04 中被移除，导致 curl 也随之消失。现在 curl 已明确加入最小云镜像种子，并正在推送更新，现有安装将在下次更新时恢复。不过，Canonical 正在讨论是否在未来的 26.10 版本中正式移除 curl，以保持最小镜像的极简性。</div>
+  <div class="article-summary">Rhythmbox 3.5是GNOME项目推出的最新版本，距上次更新约九个月。此版本修复了2038年问题，将时间处理从32位迁移到64位；播客页面获得显著升级，包括已播放标记、通知改进及通过gpodder同步的插件；歌词支持扩展，可从lrclib.net获取、读取sidecar .lrc文件及Ogg内嵌歌词；新播放后端默认启用，并修复了交叉淡化时长设为零时的播放中断问题。此外，该版本移除了旧有API，与其他GNOME项目保持一致。</div>
 
-  <div class="article-body"><p>Ubuntu 26.04 LTS 的最小云镜像一直缺少 curl——事实证明这是意外，因此 Canonical 已将其恢复。</p><p>curl 是一个常用的命令行工具，用于从远程服务器获取文件。无数安装脚本、CI 流水线以及你无疑曾粘贴到终端中的一行命令都会调用它，而你不会多想。</p><p>但该软件包至今一直缺失于 26.04 的镜像中。这导致那些运行精简云安装的用户措手不及，破坏了预期的工作流程，因为它在之前的版本中是可用的。</p><p>手动修复方法是从软件源安装 curl，从整体来看，这并不算太大的工作量。</p><p>curl 预装在 Ubuntu 26.04 LTS（更早版本）的完整服务器和云镜像中。它此前也存在于最小变体中，尽管并非有意为之。</p><p>这个“bug”是因为 curl 未被明确列入最小云服务器的“种子”（核心软件包列表）。相反，它是作为 pollinate（一个用于云环境的熵种子工具）的依赖项而被带入的。pollinate 在 26.04 中被移除，curl 也随之消失。</p><p>Canonical 的工程师 Gauthier Jolly 表示：“虽然 pollinate 可能不是用户期望的工具，但 curl 绝对是，我们不应该这样破坏 LTS 用户。”</p><p>支持重新引入 curl 的 Canonical 工程师 Christian Ehrhardt 表示：“之前 SRU 变更的意图只是移除 pollinate。”</p><p>curl 已被明确添加到 server-cloud-minimal 种子中。更新正在推送中，因此现有安装将在下次系统更新时拉取缺失的软件包。</p><p>然而，使用最小云和服务器镜像的用户不应因 curl 的存在而过于安心。</p><p>Canonical 的工程师正在讨论是否在 Ubuntu 26.10 之前正式从最小安装种子中移除 curl——注意：是种子，不是软件源，以免引起恐慌——因为最小镜像的意义就在于“最小”，而 curl 并非启动所必需。</p></div>
+  <div class="article-body"><p>Linux最喜爱的音乐播放器Rhythmbox 3.5发布，3.4系列历经近十年终迎更新</p><p>Linux最喜爱的音乐播放器Rhythmbox 3.5发布，3.4系列历经近十年终迎更新</p><p>此版本还新增了lrclib.net、sidecar .lrc文件以及内嵌Ogg歌词作为新的歌词来源。</p><p>Rhythmbox是你在配备GNOME的桌面上会发现的应用之一。如果你已经完全转向在线流媒体音乐/播客，那么它对你来说可能没什么用处。</p><p>尽管流媒体兴起，许多人仍然更喜欢在本地托管媒体，这也是这款由GNOME驱动的音乐播放器至今仍未消亡的部分原因。</p><p>GNOME项目刚刚发布了Rhythmbox 3.5，这是约九个月以来的最新版本。上一个版本3.4.9主要修补了插件加载问题，并更换了新的播放后端。而这次，变化更为明显。</p><p>在更新日志中，隐藏着对2038年问题的修复——即系统以32位数字计数时间时，会耗尽空间并开始认为现在是1901年。Rhythmbox已将已弃用的GDateTime替换为GDateTime64。</p><p>接下来是播客页面，这是本次发布中升级最明显的部分。剧集列表现在会标记你已播放过的内容；更新和下载的通知已重新设计；新增插件允许你通过gpodder同步订阅源和剧集。</p><p>此处展示的播客是Linux Unplugged。</p><p>歌词支持也得到了扩展，Rhythmbox现在可以从lrclib.net获取歌词，从音频文件旁的sidecar .lrc文件中读取歌词，并利用GStreamer最近添加的标签，直接抓取嵌入在Ogg Vorbis、Opus和FLAC文件中的歌词。</p><p>我们以几个值得了解的小修复来结束本次发布。</p><p>在3.4.9中引入的用于替代旧交叉淡化系统的新播放后端，现在默认启用，并且修复了一个在交叉淡化时长设为零时完全破坏播放的bug。</p><p>该音乐播放器还移除了其旧的libpeas API，与其他GNOME项目保持一致。</p><p>下载此版本</p><p>虽然从纸面上看变化不大，但Rhythmbox 3.5引入了一些重要的生活质量升级，这些升级将大大有助于保持体验的简洁和音乐播放器的相关性。</p><p>鉴于它刚刚发布，大多数发行版尚未跟进。如果你想快速安装，Flathub上有一个非官方的Flatpak包，但推荐从源码构建。仓库中包含所有必要的说明和文件，供你在计算机上安装。如果这要求太高，你也可以等待你的发行版仓库跟上新版本。</p><p>Rhythmbox（非官方）</p><p>AI垃圾信息持续淹没GNOME扩展，因此他们为机器人编写了手册</p><p>即使在GNOME于12月更新了审查指南后，提交中仍不断出现低质量的AI模式。</p><p>喜欢这次更新吗？支持独立的Linux新闻覆盖</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。请帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获取5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无需承诺</p><p>一个对开源软件、定制PC组装、赛车运动以及探索这个世界无限可能性充满热情的书呆子。</p><p>GNOME Boxes将不再显得古老，得益于一次焕新</p><p>AI垃圾信息持续淹没GNOME扩展，因此他们为机器人编写了手册</p><p>Keychron为游戏鼠标构建了开源固件，Linux用户将获益最多</p><p>GCC编译器禁止AI代码贡献，但明智地</p><p>游戏玩家好消息！GOG正式登陆Linux</p><p>成为更好的Linux用户</p><p>通过FOSS每周通讯，你学习有用的Linux技巧，发现应用，探索新发行版，并随时了解Linux世界的最新动态</p><p>太棒了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅It's FOSS。</p><p>您的链接已过期。</p><p>成功！请检查您的电子邮件以获取魔法链接</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/ubuntu-2604-server-cloud-minimal-curl-missing" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/rhythmbox-3-5-release/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

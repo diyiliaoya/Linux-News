@@ -5498,5 +5498,148 @@
     "title_zh": "GNU nano 9.1 命令行文本编辑器发布，带来小幅改进与错误修复",
     "summary_zh": "GNU nano 9.1 版本已发布，主要包含小幅改进和错误修复，旨在优化用户的命令行文本编辑体验。该版本针对之前版本中的一些问题进行了修复，并提升了整体稳定性。对于依赖 nano 进行日常编辑工作的用户来说，这是一个值得更新的维护版本。",
     "fulltext_zh": "了解 GNU nano 9.1 版本的发布信息，该版本包含小幅改进和错误修复，以优化您的命令行文本编辑任务。\n\n此文章首发于 Linux Today。"
+  },
+  "8dfa9e2b5bb25aea23c38f62ed709d1a": {
+    "id": "8dfa9e2b5bb25aea23c38f62ed709d1a",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/paprius-icon-pack-sees-first-update-in-a-year-with-80-new-icons",
+    "title_en": "Papirus icon set gets first update in over a year with 80+ new icons",
+    "summary_en": "Fans of the the Papirus icon theme will be pleased to hear there a new update – the first since May 2025. Papirus&#8217;s first update in 2026 (the tardiness of which its maintainer, Serhii Yeremenko, apologises) brings over 80 new or updated icons spanning apps, games and user-interface icons, plus new file mimetypes and revised symlinks. Frequent updates are why Papirus icons are popular with Linux users, and have been for such a long time. Often, Linux icon packs debut with a big bang, the mo",
+    "pub_date": "Tue, 04 Aug 2026 14:54:11 +0000",
+    "title_zh": "Papirus 图标集时隔一年多迎来首次更新，新增 80+ 个图标",
+    "summary_zh": "Papirus 图标集在 2026 年迎来首次更新，新增或更新了 80 多个图标，涵盖应用、游戏、用户界面图标，以及新的文件 MIME 类型和修订的符号链接。维护者 Serhii Yeremenko 对更新延迟表示歉意。此次更新扩展了游戏图标（如《突击立方体：重装版》《黑色沙漠》《城市：天际线 2》等），改进了 C 语言家族 MIME 类型图标，并优化了 Cinnamon、LxQt 和 XFCE 桌面环境的支持。用户可通过 GitHub 下载或添加 PPA 安装。",
+    "fulltext_zh": "Papirus 图标集时隔一年多迎来首次更新，新增 80+ 个图标 - OMG! Ubuntu\n\n主题爱好者们会很高兴听到有一个新更新——这是 Papirus 自 2026 年以来的首次更新（其维护者 Serhii Yeremenko 对更新迟缓表示歉意），带来了 80 多个新增或更新的图标，涵盖应用、游戏和用户界面图标，以及新的文件 MIME 类型和修订的符号链接。\n\n频繁的更新正是 Papirus 图标在 Linux 用户中长久受欢迎的原因。通常，Linux 图标包以盛大的方式登场，初期动力推动几次修订，但随后随着人员和维护者的离开而归于沉寂。\n\nPapirus 自 2013 年以来一直存在，并自那时起定期更新。\n\n维护一个图标主题需要付出大量努力。新应用不断发布，需要考虑打包格式的怪癖，应用会更改品牌或进行 UI 改版，期望提供更新的符号图标。\n\n一个覆盖缺口常常会破坏整体外观。\n\n在 Papirus 202608 更新中新增的图标（或接收符号链接更改）包括：\n\n游戏覆盖范围扩大。新增了《突击立方体：重装版》《黑色沙漠》《城市：天际线 2》《军团要塞 2：机密》《守望先锋》和《空洞骑士：丝之歌》的图标。\n\nMIME 类型和文件图标覆盖范围也扩展了更多 ROM 文件，包括任天堂 DS 模拟器使用的文件。\n\n其他图标更改惠及 Cinnamon、LxQt 和 XFCE 桌面的用户，后者获得了更新的符号链接，为相关应用提供图标。\n\nC 语言家族 MIME 类型图标的更改\n\nPapirus 202608 包括为 IntelliJ IDEA Ultimate 和 Community 版重新设计的图标，其 Community 版和开源参考管理器以及项目 ReadMe 文件也获得了修订的 MIME 类型。\n\n整个 C 语言家族 MIME 类型（文件）图标已在 Papirus v202608 中更新。它们现在使用相同的文本样式，与官方徽标衍生的页面颜色保持一致，并为“Objective”C 版本使用不同的颜色。\n\n如何安装 Papirus 图标\n\n从 GitHub 下载最新的 Papirus 图标发布版，然后手动将解压的文件夹移动到相关位置（例如，/usr/share/icons，凭记忆）。\n\n如果你使用 Ubuntu、Linux Mint 或类似系统，可能会发现通过 PPA 安装更容易。PPA 为 Ubuntu 20.04 LTS 打包了最新版本。\n\n要添加 PPA，请打开终端并运行：\n\nsudo add-apt-repository ppa:papirus/papirus\nsudo apt install papirus-icon-theme\n\n安装后，你可以将图标主题更改为 Papirus。在 GNOME Shell 上，安装 GNOME Tweaks（sudo apt install gnome-tweaks），而其他桌面环境通常提供内置的方法来更改图标主题。\n\n值得注意的是：沙盒应用（如 Snap 或 Flatpak）并不总是“继承”系统级别的图标主题。"
+  },
+  "193ad2b9f9393f59ce2da2d742e716b8": {
+    "id": "193ad2b9f9393f59ce2da2d742e716b8",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/rhythmbox-3-5-release/",
+    "title_en": "Linux's Favorite Music Player Rhythmbox 3.5 Lands After Nearly a Decade in the 3.4 Series",
+    "summary_en": "The release also adds lrclib.net, sidecar .lrc files, and embedded Ogg lyrics as new sources.",
+    "pub_date": "Tue, 04 Aug 2026 16:08:04 GMT",
+    "title_zh": "Linux最喜爱的音乐播放器Rhythmbox 3.5发布，3.4系列历经近十年终迎更新",
+    "summary_zh": "Rhythmbox 3.5是GNOME项目推出的最新版本，距上次更新约九个月。此版本修复了2038年问题，将时间处理从32位迁移到64位；播客页面获得显著升级，包括已播放标记、通知改进及通过gpodder同步的插件；歌词支持扩展，可从lrclib.net获取、读取sidecar .lrc文件及Ogg内嵌歌词；新播放后端默认启用，并修复了交叉淡化时长设为零时的播放中断问题。此外，该版本移除了旧有API，与其他GNOME项目保持一致。",
+    "fulltext_zh": "Linux最喜爱的音乐播放器Rhythmbox 3.5发布，3.4系列历经近十年终迎更新\n\nLinux最喜爱的音乐播放器Rhythmbox 3.5发布，3.4系列历经近十年终迎更新\n\n此版本还新增了lrclib.net、sidecar .lrc文件以及内嵌Ogg歌词作为新的歌词来源。\n\nRhythmbox是你在配备GNOME的桌面上会发现的应用之一。如果你已经完全转向在线流媒体音乐/播客，那么它对你来说可能没什么用处。\n\n尽管流媒体兴起，许多人仍然更喜欢在本地托管媒体，这也是这款由GNOME驱动的音乐播放器至今仍未消亡的部分原因。\n\nGNOME项目刚刚发布了Rhythmbox 3.5，这是约九个月以来的最新版本。上一个版本3.4.9主要修补了插件加载问题，并更换了新的播放后端。而这次，变化更为明显。\n\n在更新日志中，隐藏着对2038年问题的修复——即系统以32位数字计数时间时，会耗尽空间并开始认为现在是1901年。Rhythmbox已将已弃用的GDateTime替换为GDateTime64。\n\n接下来是播客页面，这是本次发布中升级最明显的部分。剧集列表现在会标记你已播放过的内容；更新和下载的通知已重新设计；新增插件允许你通过gpodder同步订阅源和剧集。\n\n此处展示的播客是Linux Unplugged。\n\n歌词支持也得到了扩展，Rhythmbox现在可以从lrclib.net获取歌词，从音频文件旁的sidecar .lrc文件中读取歌词，并利用GStreamer最近添加的标签，直接抓取嵌入在Ogg Vorbis、Opus和FLAC文件中的歌词。\n\n我们以几个值得了解的小修复来结束本次发布。\n\n在3.4.9中引入的用于替代旧交叉淡化系统的新播放后端，现在默认启用，并且修复了一个在交叉淡化时长设为零时完全破坏播放的bug。\n\n该音乐播放器还移除了其旧的libpeas API，与其他GNOME项目保持一致。\n\n下载此版本\n\n虽然从纸面上看变化不大，但Rhythmbox 3.5引入了一些重要的生活质量升级，这些升级将大大有助于保持体验的简洁和音乐播放器的相关性。\n\n鉴于它刚刚发布，大多数发行版尚未跟进。如果你想快速安装，Flathub上有一个非官方的Flatpak包，但推荐从源码构建。仓库中包含所有必要的说明和文件，供你在计算机上安装。如果这要求太高，你也可以等待你的发行版仓库跟上新版本。\n\nRhythmbox（非官方）\n\nAI垃圾信息持续淹没GNOME扩展，因此他们为机器人编写了手册\n\n即使在GNOME于12月更新了审查指南后，提交中仍不断出现低质量的AI模式。\n\n喜欢这次更新吗？支持独立的Linux新闻覆盖\n\nIt's FOSS在过去14年里一直帮助人们使用Linux。请帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获取5本电子书。\n\n一次付费，永久享受\n\n任意金额，无需承诺\n\n一个对开源软件、定制PC组装、赛车运动以及探索这个世界无限可能性充满热情的书呆子。\n\nGNOME Boxes将不再显得古老，得益于一次焕新\n\nAI垃圾信息持续淹没GNOME扩展，因此他们为机器人编写了手册\n\nKeychron为游戏鼠标构建了开源固件，Linux用户将获益最多\n\nGCC编译器禁止AI代码贡献，但明智地\n\n游戏玩家好消息！GOG正式登陆Linux\n\n成为更好的Linux用户\n\n通过FOSS每周通讯，你学习有用的Linux技巧，发现应用，探索新发行版，并随时了解Linux世界的最新动态\n\n太棒了！您已成功注册。\n\n欢迎回来！您已成功登录。\n\n您已成功订阅It's FOSS。\n\n您的链接已过期。\n\n成功！请检查您的电子邮件以获取魔法链接"
+  },
+  "e1634ec97edb17a0a38c00ec31db96aa": {
+    "id": "e1634ec97edb17a0a38c00ec31db96aa",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/gnome-boxes-glow-up/",
+    "title_en": "GNOME Boxes Won't Look Ancient Anymore Thanks to a Glow-Up",
+    "summary_en": "A full rewrite moves it to GTK4 and Libadwaita, with Windows 11 support being tidied up.",
+    "pub_date": "Tue, 04 Aug 2026 10:55:33 GMT",
+    "title_zh": "GNOME Boxes 焕然一新，告别陈旧外观",
+    "summary_zh": "GNOME Boxes 的独立开发者 Felipe Borges 展示了该应用作为仅限 Flatpak 的测试版，进行了全面重写，迁移至 GTK4 和 Libadwaita，并改进了 Windows 11 支持。新版本不再依赖宿主发行版，而是自带完整的虚拟化栈，并采用新的显示组件，界面焕然一新。测试显示 Windows 11 安装无需手动调整，但需微软账户登录。新界面包含七个设置分区，支持端口转发、快照等功能。目前测试版可通过 Flatpak 安装，但存在一些稳定性问题。",
+    "fulltext_zh": "GNOME Boxes 焕然一新，告别陈旧外观\n\n全面重写使其迁移至 GTK4 和 Libadwaita，并完善了 Windows 11 支持。\n\nGNOME Boxes 的独立开发者 Felipe Borges 展示了该应用作为仅限 Flatpak 的测试版，其界面基础焕然一新。\n\n在兼顾 Red Hat 日常工作与常规维护职责的同时，Felipe 表示过去两年他一直在独自开发此项目，并在社区活动中分享了相关进展。\n\n第一个设计决策是自包含。Boxes 是 libvirt 的前端，因此其许多行为取决于宿主发行版提供的内容。对于单一维护者而言，为每个发行版维护独立的代码路径并不现实，因此新版本不再依赖宿主，而是自带完整的虚拟化栈。\n\n第二个决策是你最先注意到的。Boxes 已迁移至 GTK4，弃用了基于 GTK3 的 SPICE 组件，改用名为 libdisplay-info 的新显示组件。至此，过时的视觉风格终于消失。\n\nWindows 11 支持方面，重写后的 Boxes 现在可以成功安装，无需任何手动变通或特殊技巧，因为它会自动配置安全启动和虚拟 TPM 设备。\n\n新版本绕过了 Flatpak 沙箱限制，只要客户机运行 systemd v256 或更高版本，即可直接通过 SSH 进入。早期端口转发支持也已加入，目前涵盖 SSH 和 HTTP。\n\n注意到区别了吗？忽略标题栏右侧的栏。\n\n在翻新后的 Boxes 中，你看到的每一处都是新界面组件的结果。尽管如此，应用从启动那一刻起就让人感到熟悉。作为 Boxes 的常客，我清楚地知道该点击哪里。\n\n虚拟机创建流程完美地印证了这一点。我开始安装 Windows 11，Boxes 自动预填了内存和存储值，并设置了 UEFI 作为首选启动方式，我无需触碰任何设置。\n\n安装过程本身一帆风顺，但 Windows 随后坚持要求我使用微软账户登录才能进入桌面，所以我只能到此为止。\n\n不过，在此之前，虚拟机窗口右上角的三个点菜单给了我很多操作空间。我可以截图、发送组合键，并打开完整的控制台。\n\n顺便说一句，这些界面与当前 Boxes 提供的完全不同。\n\n上面的视频展示了新的属性对话框。以前是带有标题菜单的单一窗口，现在变成了带有侧边栏的对话框，包含七个部分：常规、资源、网络、设备、快照、日志和配置。\n\n资源部分允许调整内存和调整存储大小；设备部分处理启动顺序和可移动介质；日志部分显示 Boxes 在底层运行的命令；网络页面允许将主机端口转发到虚拟机，并提供 SSH 和 HTTP 的开关。快照页面允许你捕获虚拟机在某一时刻的确切状态，然后可以恢复或删除。\n\n与当前 Boxes 提供的功能相比（压缩到三个标签页，功能实用但非常笨重），这无疑是一次巨大改进。\n\n不过，也存在一些瑕疵。Windows 11 虚拟机在我创建快照后不久就崩溃了。我无法确定确切原因，但当时我弹出 ISO 镜像可能是罪魁祸首。\n\n在此之前，我还尝试安装 Fedora，但无论我尝试什么，都不断遇到不支持的配置错误。切换操作系统类型（如 Generic 和 Windows）以及固件（如 UEFI 和 BIOS），都无法解决问题。\n\n还有一些小改动。退出虚拟机窗口现在需要按下 Ctrl+Alt 组合键，而当前 Boxes 使用的是 Ctrl+Alt+Delete。也没有专门的全屏按钮，F11 键也不起作用。\n\n如果你使用 Ubuntu 或其他基于 Debian 的发行版，只需几个终端命令即可运行测试版。你需要先设置 Flatpak。如果你尚未安装，可以按照相关指南完成整个过程。完成后，添加 nightly 仓库：\n\nflatpak remote-add --if-not-exists gnome-nightly https://nightly.gnome.org/gnome-nightly.flatpakrepo\n\n然后，在安装任何内容之前，你可以查看该仓库中实际包含的内容：\n\nflatpak remote-ls -"
+  },
+  "f885a2ce831378e9c6df2066e3cb5103": {
+    "id": "f885a2ce831378e9c6df2066e3cb5103",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-eSPI-Linux-Patches",
+    "title_en": "AMD Posts Proposal & Linux Patches For eSPI Subsystem",
+    "summary_en": "AMD has posted patches proposing a new Linux subsystem for the Enhanced Serial Peripheral Interface (eSPI) standard that was in turn originally developed by Intel. With AMD now making use of eSPI, they are proposing a new subsystem for it within the Linux kernel, which includes a new driver for their hardware...",
+    "pub_date": "Tue, 04 Aug 2026 20:33:08 -0400",
+    "title_zh": "AMD发布eSPI子系统的提案与Linux补丁",
+    "summary_zh": "AMD近日向Linux内核邮件列表提交了补丁，提议为增强串行外设接口（eSPI）标准建立新的子系统。eSPI最初由英特尔开发，用于替代LPC接口和传统SPI，连接BIOS、系统控制器及TPM等外设。AMD目前已在自家硬件上使用eSPI，因此提出新子系统并附带一个AMD eSPI驱动。该代码已在AMDI0070平台上测试验证，但尚不支持设备树，从设备枚举需手动完成，部分操作将在后续补丁中补充。",
+    "fulltext_zh": "AMD发布了针对eSPI子系统的提案与Linux补丁 - Phoronix\nAMD发布针对eSPI子系统的提案与Linux补丁\n2026年8月4日晚上8点33分（美国东部时间）\n\nAMD已发布补丁，提议为增强串行外设接口（eSPI）标准建立一个新的Linux子系统，该标准最初由英特尔开发。随着AMD现在开始使用eSPI，他们提议在Linux内核中为其建立一个新的子系统，其中包括一个针对其硬件的新驱动。\n\n英特尔最初开发eSPI是作为一种通信协议，用于连接BIOS、系统控制器以及TPM等其他外设，作为LPC接口、传统SPI和其他边带信号的替代方案。\n\n在AMD的Krishnamoorthi M在Linux内核邮件列表上询问AMD eSPI工作应扩展现有SPI子系统代码还是引入为新的总线类型之后，提出的补丁选择了后者，该子系统的首个用户是一个新的AMD eSPI驱动。\n\n这段新代码已在AMDI0070平台上测试并验证，运行正常。新子系统的已知限制包括：由于AMD代码仅使用ACPI，目前尚不支持设备树；从设备枚举为手动操作；某些操作将在后续补丁中添加。\n\n对Linux内核中AMD eSPI工作感兴趣的人可以在内核邮件列表上找到补丁系列。\n\nLinux 7.2-rc6修复了部分AMD Zen 5 CPU被误识别为Zen 6的问题\nAMD发布Instinct MI455X的CDNA5 ISA文档\nLinux 7.3将允许按CPU核心粒度调整AMD P-State动态EPP\nAMD Zen 6客户端HSMP补丁指向Linux上的“Ryzen Master”功能\nAMD P-State Linux驱动补丁可将1%低帧游戏性能提升31%\nAMD PMF测试工具计划用于Linux 7.3\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他。\n\nValve赞助将开源RADV驱动带到Windows的工作\n现代AMD Ryzen AM5平台的首个开源固件发布\nArch Linux AUR再次遭遇恶意软件包浪潮，包采纳暂停\nAMD P-State Linux驱动补丁可将1%低帧游戏性能提升31%\n知名Arch Linux开发者任职10年后辞职\nStarling：一款用Swift编写的新Linux桌面，自带Wayland合成器，并借助AI开发\n旧AMD GPU的DRM格式修饰符即将随Linux 7.3推出：感谢Valve\nSteam在Linux上的使用率7月回升至4%以上\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "ec80c2e3de608b0723089f4b77b38a5f": {
+    "id": "ec80c2e3de608b0723089f4b77b38a5f",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-openSIL-Phoenix-AM5-PR",
+    "title_en": "AMD openSIL & Coreboot Pull Requests For Phoenix AM5 Support",
+    "summary_en": "Last week the 3mdeb firmware consulting firm released the first open-source firmware for a modern AMD Ryzen AM5 platform with their work to port AMD openSIL and Coreboot in their downstream Dasharo flavor to an MSI desktop ATX motherboard. Now that it's working out well, 3mdeb is working to upstream their AM5 platform support and Phoenix SoC support into upstream AMD openSIL as well as Coreboot...",
+    "pub_date": "Tue, 04 Aug 2026 10:07:29 -0400",
+    "title_zh": "AMD openSIL 与 Coreboot 为 Phoenix AM5 支持提交拉取请求",
+    "summary_zh": "3mdeb 固件咨询公司上周发布了首个面向现代 AMD Ryzen AM5 平台的开源固件，将 AMD openSIL 和 Coreboot 移植到 MSI 桌面 ATX 主板上。目前该工作进展顺利，3mdeb 正努力将 AM5 平台支持和 Phoenix SoC 支持上游化到 AMD openSIL 和 Coreboot 中。固件工程师 Michał Żygowski 今日提交了 AMD openSIL 拉取请求，包含必要的修复、Phoenix 桌面 CPU 处理更新、MMIO 处理更新、Promontory21 IP 块支持、缺失的 SMU/USB/GFX 初始化等。同时，Coreboot 的上游化更改也已提交，包括 AMD Phoenix 更改、Promontory21 处理以及 MSI PRO B850-P WIFI 主板的初始树。",
+    "fulltext_zh": "AMD openSIL 与 Coreboot 为 Phoenix AM5 支持提交拉取请求 - Phoronix\nAMD openSIL 与 Coreboot 为 Phoenix AM5 支持提交拉取请求\n2026年8月4日，美国东部时间上午10:07。\n上周，3mdeb 固件咨询公司发布了首个面向现代 AMD Ryzen AM5 平台的开源固件，他们将 AMD openSIL 和 Coreboot 移植到其下游 Dasharo 版本中，并应用于一款 MSI 桌面 ATX 主板。目前该工作进展顺利，3mdeb 正努力将 AM5 平台支持和 Phoenix SoC 支持上游化到 AMD openSIL 和 Coreboot 中。\n3mdeb 固件工程师 Michał Żygowski 今日提交了一个 AMD openSIL 拉取请求，旨在将 AM5 支持和 Phoenix Ryzen 8000 系列处理器所需的更改上游化。\n该拉取请求包含一些与 Coreboot 启动配合所需的修复、Phoenix 桌面 CPU 处理更新、MMIO 处理更新、用于芯片组初始化的 Promontory21 IP 块支持、缺失的 SMU/USB/GFX 初始化，以及与 AMD openSIL 中当前 Phoenix 概念验证代码相比的其他缺失元素。\nŻygowski 在评论中表示：\n“借助这些更改，我成功启动了搭载 AMD B850 芯片组的 AM5 Phoenix 平台，并使用 coreboot 引导了 Ubuntu 26.04 和 Windows 11。”\n今天还提交了用于上游化 Coreboot 更改的拉取请求。这包括针对 Coreboot 的各种 AMD Phoenix 更改、Promontory21 处理，以及针对 AM5 处理器的其他更改。此外，还包括 MSI PRO B850-P WIFI 主板的初始树，3mdeb 一直专注于该主板的移植工作。\n很高兴看到他们提交 openSIL 和 Coreboot 更改以供审查，以便将这些新增内容上游化。那些希望以简便易用的方式体验的用户，可以查看 3mdeb 为 MSI PRO B850-P WIFI 发布的 Dasharo 固件版本。我将很快对该主板进行测试。\n首个面向现代 AMD Ryzen AM5 平台的开源固件发布\nCoreboot + AMD openSIL 在 MSI Ryzen 主板上现已支持 Windows 11\nCoreboot 26.06 带来对 Intel Nova Lake、AMD Strix Halo 及 31 款新主板的支持\nFramework Computer 在为其现代 Intel 笔记本电脑推进 Coreboot 支持\n3mdeb 持续推进 Coreboot + AMD openSIL 向 Ryzen MSI 主板的移植\n3mdeb 在 Ryzen AM5 主板上实现更多 AMD openSIL 与 Coreboot 功能\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\nValve 赞助将开源 RADV 驱动移植到 Windows 的工作\n首个面向现代 AMD Ryzen AM5 平台的开源固件发布\nArch Linux AUR 再次遭遇恶意软件包浪潮，软件包采纳暂停\nAMD P-State Linux 驱动补丁可将 1% 低帧率游戏性能提升 31%\n知名 Arch Linux 开发者任职 10 年后辞职\nStarling：一款用 Swift 编写的新 Linux 桌面，自带 Wayland 合成器，并由 AI 辅助编写\nDRM 格式修饰符为旧 AMD GPU 随 Linux 7.3 到来：感谢 Valve\nSteam 在 Linux 上的使用率在 7 月回升至 4% 以上\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "9c7406b07ff0305149bb07676c41780b": {
+    "id": "9c7406b07ff0305149bb07676c41780b",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/NVIDIA-Premier-Sponsor-LVFS",
+    "title_en": "NVIDIA Becomes A Premier Sponsor Of LVFS / Fwupd",
+    "summary_en": "Now this is a pleasant and very unexpected surprise... NVIDIA has become the latest premier sponsor of the Linux Vendor Firmware Service (LVFS)...",
+    "pub_date": "Tue, 04 Aug 2026 09:43:44 -0400",
+    "title_zh": "NVIDIA成为LVFS/Fwupd的顶级赞助商",
+    "summary_zh": "NVIDIA成为Linux Vendor Firmware Service（LVFS）和Fwupd项目的第四家顶级赞助商，每年贡献超过10万美元。此前，戴尔、联想和惠普已加入该行列。NVIDIA通过LVFS/Fwupd分发DGX Spark固件，并有望在未来扩展至Vera Rubin服务器及显卡固件更新。LVFS/Fwupd首席开发者Richard Hughes对此表示欢迎。",
+    "fulltext_zh": "NVIDIA成为LVFS/Fwupd的顶级赞助商 - Phoronix\n\nNVIDIA成为LVFS/Fwupd的顶级赞助商\n\n2026年8月4日上午09:43（美国东部时间）\n\n这真是一个令人愉快且非常意外的惊喜……NVIDIA已成为Linux Vendor Firmware Service（LVFS）的最新顶级赞助商。\n\n戴尔和联想成为顶级赞助商，每年向LVFS/Fwupd项目贡献10万美元，而5月份惠普成为第三家顶级赞助商。今天上午宣布，NVIDIA成为第四家每年向该项目贡献超过10万美元的公司，该项目使得在Linux系统上进行开源固件更新成为可能。\n\n作为此次赞助的动机之一，NVIDIA已通过LVFS/Fwupd分发DGX Spark固件。希望我们能看到NVIDIA在其Vera Rubin服务器、未来平台，甚至显卡固件更新中增加对LVFS/Fwupd的使用。\n\nLVFS/Fwupd首席开发者、红帽公司的Richard Hughes今天上午对NVIDIA的顶级赞助表示欢迎。\n\n当前的项目赞助商名单可在以下页面查看：\n\nFwupd 2.1.7发布，包含许多错误修复\nFwupd 2.0.21带来针对AI发现的250多个潜在安全问题的修复\nFwupd 2.1.4带来许多修复，包括Anthropic的Mythos发现的错误，以及对Intel Arc Pro B65/B70的固件更新支持\nHP现在赞助Linux Vendor Firmware Service / Fwupd\nFwupd 2.1.3为模块化智能手机带来固件更新\nDell & Lenovo现在赞助Linux Vendor Firmware Service\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动及其他主题。Michael也是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nValve赞助将开源RADV驱动带到Windows的工作\n首个面向现代AMD Ryzen AM5平台的开源固件发布\nArch Linux AUR再次遭遇恶意软件包浪潮，软件包采用暂停\nAMD P-State Linux驱动补丁可将1%低帧率游戏性能提升31%\n著名Arch Linux开发者十年后辞职\nStarling：一款用Swift编写的新Linux桌面，自带Wayland合成器，并使用AI开发\n旧AMD GPU的DRM格式修饰符将随Linux 7.3推出：感谢Valve\nSteam在Linux上的使用率7月回升至4%以上\n\n在享受无广告浏览的同时，\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "dbf8d2f278e3f9743f6a6471227f60a5": {
+    "id": "dbf8d2f278e3f9743f6a6471227f60a5",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-Foundation-Tokenomics",
+    "title_en": "Linux Foundation Announces Tokenomics Foundation For \"Economics & ROI Of AI Value\"",
+    "summary_en": "Last month the Linux Foundation launched the x402 Foundation to standardize Internet-native payments for AI agents as their latest AI play. That followed other \"AI\" initiatives from dealing with AI exploits to AI asset and data exchange. Today they have another AI foray being announced with the creation of the Tokenomics Foundation...",
+    "pub_date": "Tue, 04 Aug 2026 08:14:14 -0400",
+    "title_zh": "Linux基金会宣布成立Tokenomics基金会，聚焦“AI价值的经济学与投资回报率”",
+    "summary_zh": "Linux基金会宣布成立Tokenomics基金会，旨在为AI经济建立开放、供应商中立的行业标准、基准和最佳实践。该基金会由30家初始成员支持，将解决AI投资回报率追踪难题，用标准方法替代碎片化的供应商定价，衡量AI的真实总拥有成本。其路线图包括定义tokenomics和AI ROI价值指标、创建AI价值框架、建立供应商中立的AI成本模型、制定成本服务与AI实际回报的测量标准、在FOCUS规范中提供token成本遥测，以及构建从业者所需的教育和认证。创始成员包括埃森哲、IBM、甲骨文、SAP等知名企业。",
+    "fulltext_zh": "Linux基金会宣布成立Tokenomics基金会，聚焦“AI价值的经济学与投资回报率”\n\nLinux基金会宣布成立Tokenomics基金会，聚焦“AI价值的经济学与投资回报率”\n发布于2026年8月4日，美国东部时间上午8:14。\n\n上个月，Linux基金会推出了x402基金会，旨在为AI代理标准化互联网原生支付，这是其最新的AI举措。此前，该基金会还推出了其他“AI”相关项目，涉及AI漏洞利用防护以及AI资产与数据交换。今天，他们又宣布了另一项AI进军计划——成立Tokenomics基金会。\n\nLinux基金会成员继续在Linux基金会框架下加大AI投入，最新举措便是Tokenomics基金会。通过Tokenomics基金会，他们致力于定义AI价值的经济学和投资回报率（ROI）。\n\nTokenomics基金会的公告摘要如下：\n\n“- Linux基金会已启动Tokenomics基金会，旨在为AI经济学建立开放、供应商中立的行业标准、基准和最佳实践。\n- 该基金会由30家初始成员支持，将解决追踪AI投资回报率的挑战，用标准化的方式衡量真实总拥有成本，取代碎片化的供应商定价。\n- 路线图旨在创建共享语言和衡量标准：定义tokenomics和AI ROI的价值指标，创建衡量业务影响的AI价值框架，建立供应商中立的AI全成本模型，制定衡量服务成本和AI实际回报价值的标准方法，在FOCUS规范中提供token成本遥测，并构建从业者所需的教育和认证。”\n\n该新Tokenomics基金会的创始成员包括：埃森哲、纽约梅隆银行、博通、Calero、Cast.ai、DoiT、Finout、Flexera、GoDaddy、Greenpixie、日立、IBM、摩根大通、Kion、联想、Nebius、North Cloud、甲骨文、Pay-i、Pointfive、Revenium、SAP、ServiceNow、SHI、Stacklet、Vantage、WWT、XOsphere和Yarken。\n\n感兴趣的人可以通过Linux基金会新闻稿或新基金会网站了解更多信息。\n\nLinux内核开发者再次讨论AI代理归属问题——可能放弃该功能\nLinux基金会与其他机构推出“Akrites”以保护开源软件免受AI驱动的漏洞利用\nLinux基金会最新AI举措聚焦AI资产与数据交换\nLinux固件仓库为AI编码代理做准备\n微软宣布开源“智能终端”\n七国集团就开源AI和开放权重AI的共享语言达成一致\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动及其他主题。他还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\nValve赞助将开源RADV驱动移植到Windows的工作\n首个面向现代AMD Ryzen AM5平台的开源固件发布\nArch Linux AUR再次遭遇恶意软件包浪潮，软件包采纳暂停\nAMD P-State Linux驱动补丁可将1%低帧游戏性能提升31%\n知名Arch Linux开发者十年后辞职\nStarling：一款用Swift编写的全新Linux桌面，自带Wayland合成器，并由AI辅助开发\n旧AMD GPU的DRM格式修饰符随Linux 7.3推出：感谢Valve\nSteam在Linux上的使用率7月回升至4%以上\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "4ebb25f9da129395ccff450fefa8ce83": {
+    "id": "4ebb25f9da129395ccff450fefa8ce83",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-Staging-Reject-LLMs",
+    "title_en": "Linux's Staging Area To Now Reject LLM-Generated Patches, Except For Real Security Fixes",
+    "summary_en": "While Linux's second-in-command Greg Kroah-Hartman does use AI / LLMs himself to success in the Linux kernel, given the \"onslaught\" of kernel patches produced by large language models and the intent on the Linux kernel's staging area being an area for newcomers to get involved, moving forward he's now rejecting AI/LLM-generated staging patches. But there is one exception and that is for genuinely valid security fixes...",
+    "pub_date": "Tue, 04 Aug 2026 06:29:29 -0400",
+    "title_zh": "Linux暂存区将拒绝LLM生成的补丁，真正的安全修复除外",
+    "summary_zh": "Linux内核的暂存区（staging area）将不再接受由大语言模型（LLM）生成的补丁，除非这些补丁是针对真实安全问题的修复。Linux内核维护者Greg Kroah-Hartman表示，暂存区的主要目的是让新开发者学习内核开发，而LLM生成的补丁违背了这一初衷。他警告说，LLM生成的补丁很容易被识别，且其中至少三分之一是错误的或有害的。对于声称是安全修复的补丁，提交者必须在真实硬件上测试并描述测试过程。",
+    "fulltext_zh": "Linux暂存区将拒绝LLM生成的补丁，真正的安全修复除外 - Phoronix\n\nLinux暂存区将拒绝LLM生成的补丁，真正的安全修复除外\n\n2026年8月4日，美国东部时间上午6:29。\n\n虽然Linux的二号人物Greg Kroah-Hartman本人确实使用AI/LLM并在Linux内核中取得了成功，但鉴于大语言模型产生的内核补丁的“猛攻”，以及Linux内核暂存区旨在成为新手参与开发的领域，他今后将拒绝AI/LLM生成的暂存区补丁。但有一个例外，那就是真正有效的安全修复。\n\nGreg KH周一宣布了一项关于AI/LLM使用的新政策，专门针对Linux内核的暂存区，其中LLM生成的补丁将被禁止，除非它们解决真实的安全问题。\n\nGreg在他的说明中详细阐述道：\n\n“鉴于最近LLM为drivers/staging/子系统生成的补丁的‘猛攻’，我想澄清我今后关于接受使用这些工具制作的补丁的立场。\n\n首先，drivers/staging/的存在主要是为了给新的内核开发者提供一个学习如何参与内核开发的地方。它包含大量关于代码清理和API更改的‘容易摘取的果实’，非常适合新开发者在安全友好的环境中学习流程，没有压力，因为没有人_应该_依赖这些目录中的代码（如果你真的在内核树中加载了这些代码，TAINT_CRAP标志就会被设置，这就是证明）。\n\n我们不会接受诸如‘修复这个文件中的所有编码风格问题！’之类的由工具生成的补丁，因为那会破坏drivers/staging存在的初衷。如果我们真的_关心_这里的代码，我们明天就能做到，但我们宁愿忍受这些问题，因为这里是人们可以起步、学习和成长的地方。\n\n所以这意味着任何试图使用LLM来清理或‘修复’drivers/staging/中任何代码的人，都明确地违背了它存在的初衷。因此，今后我将自动拒绝任何为drivers/staging/子系统生成的LLM补丁，下面提到的例外情况除外。\n\n是的，当人们提交LLM生成的补丁时，这是非常明显的，所以不要以为不披露使用它们就能‘蒙混过关’。目标是让人们能够学习，而不是试图‘欺骗’维护者。如果有人被确定是故意‘欺骗’我们，那么，提前把这话当作给你的警告……\n\n注意，LLM如今非常擅长在内核代码中发现可疑的‘安全问题’。但即使使用当前和下一代工具中最好的，它们生成的结果中至少有三分之一是完全错误或有害的。所以，如果你认为你在drivers/staging/文件中发现/修复的LLM问题确实是有效的，提交它是可以的，但你必须先在驱动程序的真实硬件上测试过，并描述你是如何测试的，我们才愿意接受这个更改。这个测试过程_希望_能剔除那三分之一错误的报告，但情况并非总是如此，所以你必须愿意为你的提交辩护，并证明它确实修复了一个用户真正会遇到的问题。\n\n换句话说，这里的drivers/staging/是一个‘健身房’，用来学习和提升你的技能。LLM正在成为做某些‘重活’的合理工具，但这应该只由那些已经经过适当训练、知道什么样的‘重活’可以做以及如何做的人来使用。参见Bruce Schneier的这篇精彩文章，他对此有更好的解释。”\n\n在暂存区之外，AI/LLM生成的工作继续被允许，Linus Torvalds将其视为一种工具，并且Linux内核并不反AI。\n\nLinux 7.2-rc6发布：“这个RC版本巨大”\n\nLinux的c"
+  },
+  "b4c2707bcfb9ff4e32d36592db386157": {
+    "id": "b4c2707bcfb9ff4e32d36592db386157",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/ventoy-1-1-14-updates-secure-boot-support/",
+    "title_en": "Ventoy 1.1.14 Updates Secure Boot Support",
+    "summary_en": "Discover the latest updates in Ventoy 1.1.14, featuring enhanced Secure Boot support for a more secure and efficient booting experience.\nThe post Ventoy 1.1.14 Updates Secure Boot Support appeared first on Linux Today.",
+    "pub_date": "Tue, 04 Aug 2026 07:21:51 +0000",
+    "title_zh": "Ventoy 1.1.14 更新安全启动支持",
+    "summary_zh": "Ventoy 1.1.14 版本发布，主要增强了安全启动（Secure Boot）支持，为用户提供更安全、更高效的启动体验。该更新进一步优化了系统兼容性，确保在启用安全启动的机器上能够顺利引导多种操作系统镜像。",
+    "fulltext_zh": "探索 Ventoy 1.1.14 的最新更新，其特色是增强了安全启动支持，带来更安全、更高效的启动体验。\n\n该文章 Ventoy 1.1.14 更新安全启动支持 首次出现在 Linux Today 上。"
+  },
+  "8285bbae11802e2834b96db97ab46456": {
+    "id": "8285bbae11802e2834b96db97ab46456",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/fish-shell-4-8-improves-history-search-scripting-and-completions/",
+    "title_en": "Fish Shell 4.8 Improves History Search, Scripting, and Completions",
+    "summary_en": "Explore Fish Shell 4.8, which brings significant improvements in history search, scripting efficiency, and completion features to streamline your command line tasks.\nThe post Fish Shell 4.8 Improves History Search, Scripting, and Completions appeared first on Linux Today.",
+    "pub_date": "Tue, 04 Aug 2026 07:19:30 +0000",
+    "title_zh": "Fish Shell 4.8 改进历史搜索、脚本编写与补全功能",
+    "summary_zh": "Fish Shell 4.8 版本发布，带来了历史搜索、脚本编写效率和补全功能的显著改进，旨在简化命令行任务。该版本优化了用户交互体验，提升了操作流畅度，是Linux用户值得关注的更新。",
+    "fulltext_zh": "探索 Fish Shell 4.8，它在历史搜索、脚本编写效率和补全功能方面带来了显著改进，以简化你的命令行任务。\n\n该文章最初发表于 Linux Today。"
+  },
+  "995e4038b2721fe0f3e70a90edeb4a81": {
+    "id": "995e4038b2721fe0f3e70a90edeb4a81",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/das-keyboard-5qs-mark-ii-review-smart-rgb-mechanical-keyboard/",
+    "title_en": "Das Keyboard 5QS Mark II Review – Smart RGB Mechanical Keyboard",
+    "summary_en": "Uncover the capabilities of the Das Keyboard 5QS Mark II in our comprehensive review, highlighting its smart RGB features and superior mechanical performance.\nThe post Das Keyboard 5QS Mark II Review &#8211; Smart RGB Mechanical Keyboard appeared first on Linux Today.",
+    "pub_date": "Tue, 04 Aug 2026 07:18:05 +0000",
+    "title_zh": "Das Keyboard 5QS Mark II 评测 – 智能RGB机械键盘",
+    "summary_zh": "本文全面评测了Das Keyboard 5QS Mark II机械键盘，重点介绍了其智能RGB背光功能和卓越的机械性能。评测指出，该键盘在设计和功能上均表现出色，适合追求高品质输入体验的用户。",
+    "fulltext_zh": "在我们的全面评测中，深入了解Das Keyboard 5QS Mark II的功能，突出其智能RGB特性与卓越的机械性能。\n该文章首次发布于Linux Today。"
+  },
+  "032aff36cf3aa993d6d7726e172997a2": {
+    "id": "032aff36cf3aa993d6d7726e172997a2",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/protonup-qt-2-15-1-linux-gaming-utility-released-with-arm-ge-proton-fix/",
+    "title_en": "ProtonUp-Qt 2.15.1 Linux Gaming Utility Released with ARM GE-Proton Fix",
+    "summary_en": "Discover the latest ProtonUp-Qt 2.15.1 release, enhancing Linux gaming with ARM GE-Proton fixes. Elevate your gaming experience today!\nThe post ProtonUp-Qt 2.15.1 Linux Gaming Utility Released with ARM GE-Proton Fix appeared first on Linux Today.",
+    "pub_date": "Tue, 04 Aug 2026 07:16:22 +0000",
+    "title_zh": "ProtonUp-Qt 2.15.1 Linux 游戏工具发布，修复 ARM GE-Proton 问题",
+    "summary_zh": "ProtonUp-Qt 2.15.1 版本已发布，主要针对 ARM 架构下的 GE-Proton 兼容性进行了修复，进一步提升了 Linux 平台上的游戏体验。该工具是 Linux 游戏玩家的常用辅助软件，用于管理 Proton 和 GE-Proton 等兼容层。此次更新旨在解决 ARM 设备上的运行问题，确保更多用户能够顺畅运行 Windows 游戏。",
+    "fulltext_zh": "探索最新的 ProtonUp-Qt 2.15.1 版本，该版本通过 ARM GE-Proton 修复增强了 Linux 游戏体验。立即提升您的游戏体验！\n\n此文章《ProtonUp-Qt 2.15.1 Linux 游戏工具发布，修复 ARM GE-Proton 问题》最初出现在 Linux Today 上。"
+  },
+  "9daffcba6463d657e09cf29132835e17": {
+    "id": "9daffcba6463d657e09cf29132835e17",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/17-best-free-and-open-source-self-hosted-personal-finance-tools/",
+    "title_en": "17 Best Free and Open Source Self-Hosted Personal Finance Tools",
+    "summary_en": "Explore our curated list of 17 top free and open-source self-hosted personal finance tools. Take control of your financial future with these powerful resources.\nThe post 17 Best Free and Open Source Self-Hosted Personal Finance Tools appeared first on Linux Today.",
+    "pub_date": "Tue, 04 Aug 2026 07:14:46 +0000",
+    "title_zh": "17款最佳免费开源自托管个人理财工具",
+    "summary_zh": "本文精选了17款免费且开源的自我托管个人理财工具，帮助用户掌控财务未来。这些工具涵盖预算管理、账单跟踪、投资组合监控等功能，支持数据自主掌控和隐私保护。文章旨在为寻求替代商业金融软件的用户提供可靠、灵活的解决方案，适合技术用户和注重数据安全的个人使用。",
+    "fulltext_zh": "探索我们精心挑选的17款顶级免费开源自我托管个人理财工具。利用这些强大的资源，掌控您的财务未来。\n\n该文章《17款最佳免费开源自托管个人理财工具》首次出现在Linux Today上。"
   }
 }

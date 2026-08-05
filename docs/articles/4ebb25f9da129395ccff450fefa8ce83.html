@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Curl 被误从 Ubuntu 26.04 最小云镜像中移除 — Linux 中文速报</title>
+<title>Linux暂存区将拒绝LLM生成的补丁，真正的安全修复除外 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Curl 被误从 Ubuntu 26.04 最小云镜像中移除</h1>
+  <h1>Linux暂存区将拒绝LLM生成的补丁，真正的安全修复除外</h1>
 
-  <div class="article-summary">Ubuntu 26.04 LTS 的最小云镜像中意外缺失了 curl 工具，该工具常用于脚本和 CI 流程中下载文件。Canonical 已确认这是错误，并已将 curl 重新加入镜像。此前，curl 作为 pollinate 的依赖项被包含，但 pollinate 在 26.04 中被移除，导致 curl 也随之消失。现在 curl 已明确加入最小云镜像种子，并正在推送更新，现有安装将在下次更新时恢复。不过，Canonical 正在讨论是否在未来的 26.10 版本中正式移除 curl，以保持最小镜像的极简性。</div>
+  <div class="article-summary">Linux内核的暂存区（staging area）将不再接受由大语言模型（LLM）生成的补丁，除非这些补丁是针对真实安全问题的修复。Linux内核维护者Greg Kroah-Hartman表示，暂存区的主要目的是让新开发者学习内核开发，而LLM生成的补丁违背了这一初衷。他警告说，LLM生成的补丁很容易被识别，且其中至少三分之一是错误的或有害的。对于声称是安全修复的补丁，提交者必须在真实硬件上测试并描述测试过程。</div>
 
-  <div class="article-body"><p>Ubuntu 26.04 LTS 的最小云镜像一直缺少 curl——事实证明这是意外，因此 Canonical 已将其恢复。</p><p>curl 是一个常用的命令行工具，用于从远程服务器获取文件。无数安装脚本、CI 流水线以及你无疑曾粘贴到终端中的一行命令都会调用它，而你不会多想。</p><p>但该软件包至今一直缺失于 26.04 的镜像中。这导致那些运行精简云安装的用户措手不及，破坏了预期的工作流程，因为它在之前的版本中是可用的。</p><p>手动修复方法是从软件源安装 curl，从整体来看，这并不算太大的工作量。</p><p>curl 预装在 Ubuntu 26.04 LTS（更早版本）的完整服务器和云镜像中。它此前也存在于最小变体中，尽管并非有意为之。</p><p>这个“bug”是因为 curl 未被明确列入最小云服务器的“种子”（核心软件包列表）。相反，它是作为 pollinate（一个用于云环境的熵种子工具）的依赖项而被带入的。pollinate 在 26.04 中被移除，curl 也随之消失。</p><p>Canonical 的工程师 Gauthier Jolly 表示：“虽然 pollinate 可能不是用户期望的工具，但 curl 绝对是，我们不应该这样破坏 LTS 用户。”</p><p>支持重新引入 curl 的 Canonical 工程师 Christian Ehrhardt 表示：“之前 SRU 变更的意图只是移除 pollinate。”</p><p>curl 已被明确添加到 server-cloud-minimal 种子中。更新正在推送中，因此现有安装将在下次系统更新时拉取缺失的软件包。</p><p>然而，使用最小云和服务器镜像的用户不应因 curl 的存在而过于安心。</p><p>Canonical 的工程师正在讨论是否在 Ubuntu 26.10 之前正式从最小安装种子中移除 curl——注意：是种子，不是软件源，以免引起恐慌——因为最小镜像的意义就在于“最小”，而 curl 并非启动所必需。</p></div>
+  <div class="article-body"><p>Linux暂存区将拒绝LLM生成的补丁，真正的安全修复除外 - Phoronix</p><p>Linux暂存区将拒绝LLM生成的补丁，真正的安全修复除外</p><p>2026年8月4日，美国东部时间上午6:29。</p><p>虽然Linux的二号人物Greg Kroah-Hartman本人确实使用AI/LLM并在Linux内核中取得了成功，但鉴于大语言模型产生的内核补丁的“猛攻”，以及Linux内核暂存区旨在成为新手参与开发的领域，他今后将拒绝AI/LLM生成的暂存区补丁。但有一个例外，那就是真正有效的安全修复。</p><p>Greg KH周一宣布了一项关于AI/LLM使用的新政策，专门针对Linux内核的暂存区，其中LLM生成的补丁将被禁止，除非它们解决真实的安全问题。</p><p>Greg在他的说明中详细阐述道：</p><p>“鉴于最近LLM为drivers/staging/子系统生成的补丁的‘猛攻’，我想澄清我今后关于接受使用这些工具制作的补丁的立场。</p><p>首先，drivers/staging/的存在主要是为了给新的内核开发者提供一个学习如何参与内核开发的地方。它包含大量关于代码清理和API更改的‘容易摘取的果实’，非常适合新开发者在安全友好的环境中学习流程，没有压力，因为没有人_应该_依赖这些目录中的代码（如果你真的在内核树中加载了这些代码，TAINT_CRAP标志就会被设置，这就是证明）。</p><p>我们不会接受诸如‘修复这个文件中的所有编码风格问题！’之类的由工具生成的补丁，因为那会破坏drivers/staging存在的初衷。如果我们真的_关心_这里的代码，我们明天就能做到，但我们宁愿忍受这些问题，因为这里是人们可以起步、学习和成长的地方。</p><p>所以这意味着任何试图使用LLM来清理或‘修复’drivers/staging/中任何代码的人，都明确地违背了它存在的初衷。因此，今后我将自动拒绝任何为drivers/staging/子系统生成的LLM补丁，下面提到的例外情况除外。</p><p>是的，当人们提交LLM生成的补丁时，这是非常明显的，所以不要以为不披露使用它们就能‘蒙混过关’。目标是让人们能够学习，而不是试图‘欺骗’维护者。如果有人被确定是故意‘欺骗’我们，那么，提前把这话当作给你的警告……</p><p>注意，LLM如今非常擅长在内核代码中发现可疑的‘安全问题’。但即使使用当前和下一代工具中最好的，它们生成的结果中至少有三分之一是完全错误或有害的。所以，如果你认为你在drivers/staging/文件中发现/修复的LLM问题确实是有效的，提交它是可以的，但你必须先在驱动程序的真实硬件上测试过，并描述你是如何测试的，我们才愿意接受这个更改。这个测试过程_希望_能剔除那三分之一错误的报告，但情况并非总是如此，所以你必须愿意为你的提交辩护，并证明它确实修复了一个用户真正会遇到的问题。</p><p>换句话说，这里的drivers/staging/是一个‘健身房’，用来学习和提升你的技能。LLM正在成为做某些‘重活’的合理工具，但这应该只由那些已经经过适当训练、知道什么样的‘重活’可以做以及如何做的人来使用。参见Bruce Schneier的这篇精彩文章，他对此有更好的解释。”</p><p>在暂存区之外，AI/LLM生成的工作继续被允许，Linus Torvalds将其视为一种工具，并且Linux内核并不反AI。</p><p>Linux 7.2-rc6发布：“这个RC版本巨大”</p><p>Linux的c</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/ubuntu-2604-server-cloud-minimal-curl-missing" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-Staging-Reject-LLMs" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
