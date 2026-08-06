@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Papirus 图标集时隔一年多迎来首次更新，新增 80+ 个图标 — Linux 中文速报</title>
+<title>Rust Coreutils 0.10 发布：增强安全加固，提升 GNU 兼容性 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #8b5cf61a; color: #8b5cf6;
-    border: 1px solid #8b5cf630;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">桌面环境</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Papirus 图标集时隔一年多迎来首次更新，新增 80+ 个图标</h1>
+  <h1>Rust Coreutils 0.10 发布：增强安全加固，提升 GNU 兼容性</h1>
 
-  <div class="article-summary">Papirus 图标集在 2026 年迎来首次更新，新增或更新了 80 多个图标，涵盖应用、游戏、用户界面图标，以及新的文件 MIME 类型和修订的符号链接。维护者 Serhii Yeremenko 对更新延迟表示歉意。此次更新扩展了游戏图标（如《突击立方体：重装版》《黑色沙漠》《城市：天际线 2》等），改进了 C 语言家族 MIME 类型图标，并优化了 Cinnamon、LxQt 和 XFCE 桌面环境的支持。用户可通过 GitHub 下载或添加 PPA 安装。</div>
+  <div class="article-summary">Rust Coreutils 0.10 由 uutils 项目发布，作为 GNU Coreutils 的替代品，本次更新聚焦于额外的安全加固和 GNU 测试套件兼容性的提升。新版本在 GNU 测试套件中新增了 20 个通过用例，通过率达到历史最高的 93.48%。兼容性改进包括行为对齐、nproc 处理、日期范围支持及格式差异修复。安全方面进行了第二轮加固，修复了 TOCTOU 问题、安全递归下降问题，并为 mkdir/mkfifo/mknod 应用 SELinux 标签。此外，移除了多个核心工具中的 panic 和 abort，支持原子交换路径及新特性，并进行了性能优化。</div>
 
-  <div class="article-body"><p>Papirus 图标集时隔一年多迎来首次更新，新增 80+ 个图标 - OMG! Ubuntu</p><p>主题爱好者们会很高兴听到有一个新更新——这是 Papirus 自 2026 年以来的首次更新（其维护者 Serhii Yeremenko 对更新迟缓表示歉意），带来了 80 多个新增或更新的图标，涵盖应用、游戏和用户界面图标，以及新的文件 MIME 类型和修订的符号链接。</p><p>频繁的更新正是 Papirus 图标在 Linux 用户中长久受欢迎的原因。通常，Linux 图标包以盛大的方式登场，初期动力推动几次修订，但随后随着人员和维护者的离开而归于沉寂。</p><p>Papirus 自 2013 年以来一直存在，并自那时起定期更新。</p><p>维护一个图标主题需要付出大量努力。新应用不断发布，需要考虑打包格式的怪癖，应用会更改品牌或进行 UI 改版，期望提供更新的符号图标。</p><p>一个覆盖缺口常常会破坏整体外观。</p><p>在 Papirus 202608 更新中新增的图标（或接收符号链接更改）包括：</p><p>游戏覆盖范围扩大。新增了《突击立方体：重装版》《黑色沙漠》《城市：天际线 2》《军团要塞 2：机密》《守望先锋》和《空洞骑士：丝之歌》的图标。</p><p>MIME 类型和文件图标覆盖范围也扩展了更多 ROM 文件，包括任天堂 DS 模拟器使用的文件。</p><p>其他图标更改惠及 Cinnamon、LxQt 和 XFCE 桌面的用户，后者获得了更新的符号链接，为相关应用提供图标。</p><p>C 语言家族 MIME 类型图标的更改</p><p>Papirus 202608 包括为 IntelliJ IDEA Ultimate 和 Community 版重新设计的图标，其 Community 版和开源参考管理器以及项目 ReadMe 文件也获得了修订的 MIME 类型。</p><p>整个 C 语言家族 MIME 类型（文件）图标已在 Papirus v202608 中更新。它们现在使用相同的文本样式，与官方徽标衍生的页面颜色保持一致，并为“Objective”C 版本使用不同的颜色。</p><p>如何安装 Papirus 图标</p><p>从 GitHub 下载最新的 Papirus 图标发布版，然后手动将解压的文件夹移动到相关位置（例如，/usr/share/icons，凭记忆）。</p><p>如果你使用 Ubuntu、Linux Mint 或类似系统，可能会发现通过 PPA 安装更容易。PPA 为 Ubuntu 20.04 LTS 打包了最新版本。</p><p>要添加 PPA，请打开终端并运行：</p><p>sudo add-apt-repository ppa:papirus/papirus</p><p>sudo apt install papirus-icon-theme</p><p>安装后，你可以将图标主题更改为 Papirus。在 GNOME Shell 上，安装 GNOME Tweaks（sudo apt install gnome-tweaks），而其他桌面环境通常提供内置的方法来更改图标主题。</p><p>值得注意的是：沙盒应用（如 Snap 或 Flatpak）并不总是“继承”系统级别的图标主题。</p></div>
+  <div class="article-body"><p>Rust Coreutils 0.10 发布：增强安全加固，提升 GNU 兼容性 - Phoronix</p><p>Rust Coreutils 0.10 发布：增强安全加固，提升 GNU 兼容性</p><p>2026年8月5日，美国东部时间下午6:59。</p><p>Rust Coreutils 0.10 于今日由 uutils 项目发布，作为 GNU Coreutils 的替代品。Rust Coreutils 0.10 的开发重点在于额外的安全加固，同时提升 GNU 测试套件的兼容性和健壮性。</p><p>Rust Coreutils 0.10 现在又通过了 20 个 GNU 测试套件用例，使总通过率达到历史最高的 93.48%。这些 GNU 兼容性更新涉及行为对齐、不同 CPU 条件下的 nproc 处理、日期超出范围年份的处理，以及各种格式差异的修复。此外，Rust Coreutils 的许多错误信息也得到了改进。</p><p>Rust Coreutils 0.10 还进行了第二轮安全加固，包括更多的检查时间到使用时间（TOCTOU）修正、安全递归下降修复、mkdir/mkfifo/mknod 在创建时应用 SELinux 标签，以及其他安全更新。</p><p>这个新版本还移除了多个核心工具中的 panic 和 abort，现在支持原子交换两个路径，支持新特性，并进行了各种性能改进和其他改进。</p><p>Rust Coreutils 0.10 的下载和完整变更列表可在以下链接找到：</p><p>GCC 将拒绝任何通过 AI/LLM 做出的重大贡献 - 测试用例除外</p><p>GNU Binutils 2.47 发布，支持更多 RISC-V 扩展和新选项</p><p>GNU C Library 2.44 发布，包含 /etc/tunables.conf 和更多优化</p><p>AMD 为 GCC 编译器提交 AVX10_V2_AUX ISA 支持补丁</p><p>GNU Hurd 在 AArch64 上取得进展，用 Rust 编写翻译器</p><p>Glibc 引入 /etc/tunables.conf 用于系统级可调参数</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过20,000篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>Valve 赞助将开源 RADV 驱动移植到 Windows 的工作</p><p>首个面向现代 AMD Ryzen AM5 平台的开源固件发布</p><p>Arch Linux AUR 再次遭遇恶意软件包浪潮，软件包采用暂停</p><p>AMD P-State Linux 驱动补丁可将 1% 低帧率游戏性能提升 31%</p><p>知名 Arch Linux 开发者任职10年后辞职</p><p>Starling：用 Swift 编写的新 Linux 桌面，自带 Wayland 合成器，并使用 AI 辅助开发</p><p>旧 AMD GPU 的 DRM 格式修饰符随 Linux 7.3 到来：感谢 Valve</p><p>Steam 在 Linux 上的使用率在7月回升至4%以上</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/paprius-icon-pack-sees-first-update-in-a-year-with-80-new-icons" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Rust-Coreutils-0.10" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

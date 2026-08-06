@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mesa 26.2 发布，支持 NVK 网格着色器及多项 Vulkan 改进 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年08月06日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Mesa 26.2 发布，支持 NVK 网格着色器及多项 Vulkan 改进</h1>
+
+  <div class="article-summary">Mesa 26.2 稳定版于 2026 年 8 月 5 日发布，作为开源 OpenGL 和 Vulkan 驱动的最新季度功能更新。本次更新重点在 Vulkan API 方面，包括对 Intel ANV 和 AMD RADV 驱动的多项优化、Vulkan Video 的持续改进、KosmicKrisp 驱动支持 Vulkan 1.4、Rusticl 对 OpenCL 的更好支持、NVIDIA NVK 驱动的成熟化、新增 KRAID 编译器（用于 Arm Mali Panfrost/PanVK）、AMD GFX12.1 图形支持的早期工作，以及多种新 Vulkan 扩展。此外，旧版 Radeon R600g 和 R300g 驱动也获得了多项修复。</div>
+
+  <div class="article-body"><p>Mesa 26.2 发布，支持 NVK 网格着色器及多项 Vulkan 改进 - Phoronix</p><p>Mesa 26.2 发布，支持 NVK 网格着色器及多项 Vulkan 改进</p><p>2026年8月5日下午6:13（美国东部时间）</p><p>Mesa 26.2 稳定版现已发布，这是这套通常用于 Linux 系统的开源 OpenGL 和 Vulkan 驱动的最新季度功能版本。</p><p>对于这些开源用户空间 3D 驱动来说，这又是一次精彩的功能更新，尤其是在 Vulkan API 方面，大部分活动通常集中于此，但 Zink（OpenGL-on-Vulkan）和 Rusticl（Gallium3D 上的 OpenCL）也取得了良好进展。</p><p>Mesa 26.2 为 Intel ANV 和 AMD RADV Vulkan 驱动带来了多项优化，继续推进 Vulkan Video 的工作，KosmicKrisp（Vulkan 到 Apple Metal 的驱动）现在支持 Vulkan 1.4，Rusticl 继续提供更好的 OpenCL 支持，NVIDIA NVK Vulkan 驱动持续成熟，新的 KRAID 编译器已合入 Arm Mali Panfrost/PanVK 驱动，AMD GFX12.1 图形支持的早期工作也已开始，同时合入了多种新的 Vulkan 扩展。甚至旧的 Radeon R600g 和 R300g 驱动在 Mesa 26.2 功能开发期间也获得了多项修复。</p><p>新的 OpenGL 和 Vulkan 扩展及其他工作的完整列表如下：</p><p>“自 Mesa 26.1 以来的几个亮点：</p><p>- 新增 Gamma，一个用于检查加速结构和光线追踪分派的工具。目前仅支持 RADV。</p><p>- NVK 获得了对 VK_EXT_mesh_shader 的支持。</p><p>- KosmicKrisp 现在暴露 Vulkan 1.4。</p><p>用户可以期待所有驱动和组件中常见的改进浪潮，包括以下由开发者强调的新扩展和功能（不分先后）：</p><p>- radeonsi 上的 cl_khr_subgroup_rotate</p><p>- iris 上的 cl_khr_subgroup_rotate</p><p>- panvk 上的 VK_EXT_shader_uniform_buffer_unsized_array</p><p>- RADV 上的 VK_KHR_shader_constant_data</p><p>- panvk 上的 VK_EXT_dynamic_rendering_unused_attachments</p><p>- RADV/GFX10+ 和 VEGA10 上的 protectedMemory 支持</p><p>- RADV/GFX11 上的 VK_KHR_performance_query</p><p>- panvk 上的 VK_EXT_conservative_rasterization</p><p>- pvr 上的 shaderImageGatherExtended</p><p>- RADV 上的 VK_EXT_pipeline_protected_access</p><p>- panvk 上的 VK_EXT_extended_dynamic_state3</p><p>- panfrost/v9+ 上的 GL_ARB_texture_query_lod</p><p>- RADV 上的 VK_KHR_maintenance11</p><p>- asahi、iris、radeonsi、llvmpipe 和 zink 上的 rusticl 的 OpenCL 3.1 支持</p><p>- pvr 上的 VK_KHR_workgroup_memory_explicit_layout</p><p>- pvr 上的 VK_KHR_maintenance5</p><p>- hasvk 上的 VK_KHR_calibrated_timestamps</p><p>- pvr 上的 VK_KHR_present_id</p><p>- pvr 上的 VK_KHR_present_wait</p><p>- hasvk 上的 VK_KHR_present_id2</p><p>- hasvk 上的 VK_KHR_present_wait2</p><p>- RADV 上的 VK_KHR_shader_fma</p><p>- RADV/GFX12 上的 VK_EXT_shader_split_barrier</p><p>- nvk 上的 VK_KHR_shader_fma</p><p>- Panfrost 和 PanVK 对 G1-Ultra、G1-Premium 和 G1-Pro GPU 的支持</p><p>- nvk 上的 VK_EXT_shader_atomic_float</p><p>- pvr 上的 VK_{KHR,EXT}_index_type_uint8</p><p>- vulkan 运行时中的 VK_EXT_debug_marker</p><p>- NVK 上的 VK_EXT_mesh_shader</p><p>- RADV 上的 VK_KHR_device_fault</p><p>- VK_EXT_present_timing 现在也支持 x11</p><p>- hasvk 上的 VK_EXT_present_timing</p><p>- VK_GOOGLE_display_timing 用于 KHR_display（以及 x11、wayland 的选择加入），支持 anv、hasvk、hk、nvk、panvk、pvr、radv、tu、v3dv</p><p>- RADV 上的 VK_KHR_shader_abort</p><p>- panvk 上的 VK_KHR_shader_fma</p><p>- NVK 上的 VK_NV_shader_atomic_float16_vector</p><p>- panvk 上的 VK_KHR_compute_shader_derivatives</p><p>- pvr 上的 VK_EXT_shader_subgroup_ballot、VK_EXT_shader_subgroup_vote、VK_KHR_shader_subgroup_rotate、VK_KHR_shader_subgroup_uniform_control_flow、VK_EXT_subgroup_size_control</p><p>- panvk 上的 VK_EXT_rasterization_order_attachment_access 和 VK_ARM_rasterization_order_attachment_access</p><p>- etnaviv/HALF_FLOAT 上的 GL_OES_texture_float 和 GL_ARB_texture_float</p><p>- NVK 上的 VK_NVX_binary_import</p><p>- panvk 上的 VK_EXT_image_sliced_view_of_3d</p><p>- panvk 上的 VK_EXT_shader_tile_image</p><p>- panvk 上的 VK_KHR_internally_synchronized_queues</p><p>- panvk 上的 VK_KHR_workgroup_memory_explicit_layout</p><p>- pvr 上的 VK_EXT_device_memory_report</p><p>- anv、RADV 上默认启用 VK_EXT_descriptor_heap</p><p>- panvk 上的 VK_EXT_device_address_binding_report</p><p>- VK_EXT_multisampled_ren</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Mesa-26.2-Released" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

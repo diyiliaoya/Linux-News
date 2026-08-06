@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Papirus 图标集时隔一年多迎来首次更新，新增 80+ 个图标 — Linux 中文速报</title>
+<title>托瓦兹与AI在Linux中达成和解，格雷格·克罗-哈特曼却划下界线（某种程度上） — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #8b5cf61a; color: #8b5cf6;
-    border: 1px solid #8b5cf630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">桌面环境</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Papirus 图标集时隔一年多迎来首次更新，新增 80+ 个图标</h1>
+  <h1>托瓦兹与AI在Linux中达成和解，格雷格·克罗-哈特曼却划下界线（某种程度上）</h1>
 
-  <div class="article-summary">Papirus 图标集在 2026 年迎来首次更新，新增或更新了 80 多个图标，涵盖应用、游戏、用户界面图标，以及新的文件 MIME 类型和修订的符号链接。维护者 Serhii Yeremenko 对更新延迟表示歉意。此次更新扩展了游戏图标（如《突击立方体：重装版》《黑色沙漠》《城市：天际线 2》等），改进了 C 语言家族 MIME 类型图标，并优化了 Cinnamon、LxQt 和 XFCE 桌面环境的支持。用户可通过 GitHub 下载或添加 PPA 安装。</div>
+  <div class="article-summary">Linux内核维护者格雷格·克罗-哈特曼（Greg Kroah-Hartman）近日宣布，将拒绝接受由大型语言模型（LLM）生成的补丁提交到drivers/staging子系统，该子系统旨在帮助新手学习内核开发。尽管他本人曾使用AI辅助工具发现真实漏洞，但他认为在staging中，AI生成的补丁会破坏该子系统的学习目的。与此同时，Linus Torvalds对AI持更开放态度，认为Linux并非反AI项目。克罗-哈特曼的立场是在托瓦兹的总体政策下，对特定子系统做出的更严格限制。</div>
 
-  <div class="article-body"><p>Papirus 图标集时隔一年多迎来首次更新，新增 80+ 个图标 - OMG! Ubuntu</p><p>主题爱好者们会很高兴听到有一个新更新——这是 Papirus 自 2026 年以来的首次更新（其维护者 Serhii Yeremenko 对更新迟缓表示歉意），带来了 80 多个新增或更新的图标，涵盖应用、游戏和用户界面图标，以及新的文件 MIME 类型和修订的符号链接。</p><p>频繁的更新正是 Papirus 图标在 Linux 用户中长久受欢迎的原因。通常，Linux 图标包以盛大的方式登场，初期动力推动几次修订，但随后随着人员和维护者的离开而归于沉寂。</p><p>Papirus 自 2013 年以来一直存在，并自那时起定期更新。</p><p>维护一个图标主题需要付出大量努力。新应用不断发布，需要考虑打包格式的怪癖，应用会更改品牌或进行 UI 改版，期望提供更新的符号图标。</p><p>一个覆盖缺口常常会破坏整体外观。</p><p>在 Papirus 202608 更新中新增的图标（或接收符号链接更改）包括：</p><p>游戏覆盖范围扩大。新增了《突击立方体：重装版》《黑色沙漠》《城市：天际线 2》《军团要塞 2：机密》《守望先锋》和《空洞骑士：丝之歌》的图标。</p><p>MIME 类型和文件图标覆盖范围也扩展了更多 ROM 文件，包括任天堂 DS 模拟器使用的文件。</p><p>其他图标更改惠及 Cinnamon、LxQt 和 XFCE 桌面的用户，后者获得了更新的符号链接，为相关应用提供图标。</p><p>C 语言家族 MIME 类型图标的更改</p><p>Papirus 202608 包括为 IntelliJ IDEA Ultimate 和 Community 版重新设计的图标，其 Community 版和开源参考管理器以及项目 ReadMe 文件也获得了修订的 MIME 类型。</p><p>整个 C 语言家族 MIME 类型（文件）图标已在 Papirus v202608 中更新。它们现在使用相同的文本样式，与官方徽标衍生的页面颜色保持一致，并为“Objective”C 版本使用不同的颜色。</p><p>如何安装 Papirus 图标</p><p>从 GitHub 下载最新的 Papirus 图标发布版，然后手动将解压的文件夹移动到相关位置（例如，/usr/share/icons，凭记忆）。</p><p>如果你使用 Ubuntu、Linux Mint 或类似系统，可能会发现通过 PPA 安装更容易。PPA 为 Ubuntu 20.04 LTS 打包了最新版本。</p><p>要添加 PPA，请打开终端并运行：</p><p>sudo add-apt-repository ppa:papirus/papirus</p><p>sudo apt install papirus-icon-theme</p><p>安装后，你可以将图标主题更改为 Papirus。在 GNOME Shell 上，安装 GNOME Tweaks（sudo apt install gnome-tweaks），而其他桌面环境通常提供内置的方法来更改图标主题。</p><p>值得注意的是：沙盒应用（如 Snap 或 Flatpak）并不总是“继承”系统级别的图标主题。</p></div>
+  <div class="article-body"><p>当托瓦兹与AI在Linux中和解时，格雷格·克罗-哈特曼划下界线（某种程度上）</p><p>他的新政策将AI补丁挡在drivers/staging之外，这个树本意是让新手学习内核开发的地方。</p><p>格雷格·克罗-哈特曼（Greg Kroah-Hartman，常被称为GKH）并不反对AI。事实上，他曾在自己的实验中使用了AI辅助模糊测试工具，在ksmbd和SMB代码中发现了真实漏洞。如今，他并非唯一使用AI的人，其他贡献者也开始提交带有相同标签的补丁。</p><p>因此，当他几天前发布一项限制AI使用的新政策时，并非是在反对他所熟悉的工具。这项限制只适用于内核的一个部分——那个他不希望AI接近代码的地方。</p><p>在linux-staging邮件列表中，GKH表示他现在会主动拒绝LLM生成的补丁，因为最近这类补丁“太多了”。</p><p>他的理由归结为staging的实际用途。该子系统主要作为训练场，充满了相对简单的清理工作和API更改，让新手学习提交流程。</p><p>项目已经跳过了由自动化工具生成的“修复所有代码风格问题”的补丁，因为清除这些混乱会消除staging存在的理由。GKH认为，LLM做同样的清理工作会破坏其目的，同时警告那些想耍花招的人：</p><p>“是的，当人们提交LLM生成的补丁时，这是非常明显的，所以不要以为不披露使用情况就能在这里‘蒙混过关’。目标是让人们能够学习，而不是试图‘欺骗’维护者。如果有人被认定故意‘欺骗’我们，那么请把这当作提前警告……”</p><p>但请注意，这并非完全禁止。如果LLM发现了真正的安全修复，仍然可以提交，但前提是提交者已在驱动目标硬件上进行了测试，并能令人信服地解释测试是如何进行的。</p><p>在Linus和解之际划下界线</p><p>这一举动恰逢Linus Torvalds对AI的态度转变。他多年来一直在调整立场，在最近的一封邮件列表帖子中，他向批评者明确表示，Linux“不是那些反AI的项目之一”，并建议那些不同意的人可以分叉项目或离开。</p><p>GKH对drivers/staging的处理方式符合这一政策，他并没有撤销Linus的批准，而是专注于更窄的范围。</p><p>他将这个子系统视为健身房，开发者应该亲自来举重，而不是让AI完成重复动作并把结果交给他们。</p><p>这就是GKH划下的界线。AI可以在内核的其他地方用于工作，但在一个为仍在学习的人而建的子系统中，他宁愿他们先以艰难的方式构建。</p><p>💬 你对GKH的决定有何看法？它会对新手有帮助吗？</p><p>喜欢这次更新？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次支付，永久享受</p><p>任意金额，无需承诺</p><p>一个热爱开源软件、定制PC构建、赛车运动并探索这个世界无限可能的极客。</p><p>这个新的开源项目想成为微软Office的AI优先替代品</p><p>Linux最喜爱的音乐播放器Rhythmbox 3.5在3.4系列近十年后发布</p><p>GNOME Boxes将不再显得古老，得益于一次焕新</p><p>AI垃圾信息不断涌入GNOME扩展，所以他们为机器人编写了手册</p><p>Keychron为游戏鼠标构建了开源固件，Linux用户受益最大</p><p>成为更好的Linux用户</p><p>通过FOSS每周通讯，你学习有用的Linux技巧，发现应用程序，探索新发行版，并随时了解Linux世界的最新动态</p><p>太好了！你已成功注册。</p><p>欢迎回来！你已成功登录。</p><p>你已成功订阅It's FOSS。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/paprius-icon-pack-sees-first-update-in-a-year-with-80-new-icons" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/linux-drivers-staging-ai-rejection/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

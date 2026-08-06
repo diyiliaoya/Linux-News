@@ -5641,5 +5641,159 @@
     "title_zh": "17款最佳免费开源自托管个人理财工具",
     "summary_zh": "本文精选了17款免费且开源的自我托管个人理财工具，帮助用户掌控财务未来。这些工具涵盖预算管理、账单跟踪、投资组合监控等功能，支持数据自主掌控和隐私保护。文章旨在为寻求替代商业金融软件的用户提供可靠、灵活的解决方案，适合技术用户和注重数据安全的个人使用。",
     "fulltext_zh": "探索我们精心挑选的17款顶级免费开源自我托管个人理财工具。利用这些强大的资源，掌控您的财务未来。\n\n该文章《17款最佳免费开源自托管个人理财工具》首次出现在Linux Today上。"
+  },
+  "43bb9a8a41d422d6b091aab99b8535c4": {
+    "id": "43bb9a8a41d422d6b091aab99b8535c4",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/resources-51-beta-npu-powerpc-temps",
+    "title_en": "Resources beta adds PowerPC temp, AMD NPU stats",
+    "summary_en": "Resources 51 beta, the system monitor Ubuntu now uses, adds AMD NPU stats, PowerPC CPU temps and alternative memory-usage metrics.\nYou're reading Resources beta adds PowerPC temp, AMD NPU stats, a blog post from OMG! Ubuntu. Do not reproduce elsewhere without permission.",
+    "pub_date": "Wed, 05 Aug 2026 23:43:43 +0000",
+    "title_zh": "Resources beta新增PowerPC温度与AMD NPU统计功能",
+    "summary_zh": "系统监控工具Resources（Ubuntu 26.04 LTS默认搭载）发布beta版本，新增对AMD NPU（神经处理单元）的利用率、功耗和性能统计，支持Ryzen 7040、8040及AI 300/400系列芯片。同时，通过hwmon驱动支持PowerPC CPU温度监控（POWER8及以上）。此外，该版本改进了Steam游戏和Snap应用的检测可靠性，优化了侧边栏和图表显示，并新增内存指标选项，用户可通过dconf配置切换不同的内存计算方式。Resources现已成为GNOME孵化器项目，未来有望加入GNOME核心应用。",
+    "fulltext_zh": "系统监控工具Resources（Ubuntu 26.04 LTS默认搭载）发布了新版本，扩展了AMD NPU统计功能，并新增了对PowerPC CPU的温度报告。\n\n搭载Ryzen 7040、8040以及Ryzen AI 300/400系列芯片的用户，现在可以获取其板载神经加速器的利用率、功耗和性能指标。这是一种可靠的方式，可以判断AI工作负载是否在使用NPU，而不是悄悄让CPU过热。\n\n听到“PowerPC”时你可能会感到惊讶。Resources对PowerPC CPU温度的支持使用了hwmon驱动，该驱动覆盖POWER8及更新的芯片，而不包括苹果在2000年代中期之前使用的那些老旧且容易发热的芯片。\n\nPowerPC并未消亡。Raptor Computing销售运行Linux且无需专有固件的POWER9主板（Talos II、Blackbird），IBM也仍在销售POWER服务器。当然，这是一个小众用户群，但这是一个显示数字的功能，所以向Resources的开发者致敬。\n\n据称，此beta版本中Steam游戏和Snap应用的检测更加可靠，并进一步改进了无障碍功能。\n\n在视觉方面，侧边栏进行了一些“节省空间”的更改，例如仅在存在多个同类设备实例时才显示设备描述（还新增了侧边栏切换快捷键）。在页面上，使用量数字叠加在图表上，而不是堆叠在下方。\n\n新的内存指标选项改变了Resources内存计算的工作方式，使用新的dconf值（/org/gnome/Resources/memory-metric），可从默认的“RssNoSharedMemory”切换为“VmSize”、“Rss”、“RssAnon”、“ApproximatePss”或“Pss”。\n\n“RssNoSharedMemory”忽略与其他进程共享的RAM。“ApproximatePss”通过将共享内存平均分配给每个使用它的进程来修复此问题，因此数字实际上加起来是准确的。“Pss”以大致相同的方式工作，但速度更快、精度稍低。“VmSize”报告总虚拟内存，而不是实际驻留在RAM中的部分。“RssAnon”则完全剥离共享内存和文件支持的内存，如果你只关心进程自身的私有数据。\n\n也就是说：如果这些选项听起来都不实用，请保持默认设置。但如果其他计算方式符合你的统计需求，可以尝试一下——如果发现重大差异或某个选项出现奇怪问题，请在上游提供反馈！\n\nResources 51是beta版本，现在是一个GNOME孵化器项目，正在不断完善和改进，目标是加入GNOME核心应用阵容。Ubuntu 26.04 LTS将其默认包含在内，所以如果你喜欢它的外观，并计划本月晚些时候从24.04升级到Ubuntu 26.04 LTS，就可以使用它。\n\n如果你设置了GNOME Nightly Flatpak仓库，可以从那里安装Resources 51 beta进行测试。使用和评估预发布软件的标准注意事项适用，因此如果在测试时出现问题，请务必在上游提交错误报告。"
+  },
+  "666d7dae9e75cff1aec2d8dd62aede2c": {
+    "id": "666d7dae9e75cff1aec2d8dd62aede2c",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/rhythmbox-3-5-podcast-sync",
+    "title_en": "Rhythmbox 3.5 lets you sync your podcast listening across apps",
+    "summary_en": "Rhythmbox 3.5.0 is out and it now lets you sync podcast subscriptions and listening progress across apps – the standout feature in the music player’s first major release in nine months\nYou're reading Rhythmbox 3.5 lets you sync your podcast listening across apps, a blog post from OMG! Ubuntu. Do not reproduce elsewhere without permission.",
+    "pub_date": "Wed, 05 Aug 2026 16:22:14 +0000",
+    "title_zh": "Rhythmbox 3.5 让你跨应用同步播客收听进度",
+    "summary_zh": "Rhythmbox 3.5.0 发布，这是该音乐播放器九个月来的首次更新。新版本引入了播客插件，支持通过自托管同步服务器（如 Nextcloud）在 Rhythmbox 与其他应用之间同步播客订阅和收听进度。播客页面也经过重新设计，显示已收听集数，并重新设计了通知。此外，歌词功能得到增强，默认从 lrclib.net 获取歌词，并支持读取 .lrc 文件或嵌入在 .ogg 文件中的歌词。最重要的变化是默认启用多流（multistream）后端，取代了 xfade，利用现代声音系统（如 PipeWire）进行混音，减少代码维护负担。同时修复了 2038 年时间问题。用户可通过 Flatpak 安装体验。",
+    "fulltext_zh": "Rhythmbox 3.5.0 已发布，现在它允许你在不同应用之间同步播客订阅和收听进度。\n\n这款音乐播放器九个月来的首次更新增加了一个新的播客插件，该插件与自托管同步服务器（如 Nextcloud）集成，因此你的订阅和播放计数可以在 Rhythmbox 和你使用的其他应用之间同步。\n\n播客页面本身也经过了刷新，剧集列表会显示你已经听过的内容，这样你就不会产生似曾相识的感觉。更新说明还提到，播客通知也经过了重新设计。\n\nRhythmbox 3.5.0 还关注了歌词功能。该插件默认从 lrclib.net 获取歌词，播放器可以读取与曲目一起保存的 .lrc 文件或嵌入在 .ogg 文件中的歌词（但后者需要 GStreamer 1.25.90 或更高版本）。\n\n但这里最大的变化，也是值得在十多年的 3.4.x 版本之后开启 Rhythmbox 3.5.x 系列的原因，在于后端。\n\nTributary 是 Rhythmbox 的“现代”版本\n\nRhythmbox 3.4.9 于去年年底发布，带有可选的“多流”播放器后端。该后端在 3.5.0 中默认启用，取代了 xfade。\n\n为什么会有这个变化？为了现代化。\n\nXfade 构建了一个音频管道，并在启用交叉淡化时自行混合音轨。\n\n多流则让每条音轨通过自己的管道运行，并让现代声音系统（如 PipeWire）处理混音——据说它们在这方面做得更好。\n\n此外，将任务卸载给系统声音服务器意味着 Rhythmbox 需要维护的代码更少（也不会被那些推测性的 AI 安全报告所困扰）。\n\n除了这些变化，Rhythmbox 3.5.0 还修复了臭名昭著的“2038”问题中的 32 位时间处理，解决了一些小问题，并更新了一些打包元数据。\n\n想试试吗？你可以从源码构建 Rhythmbox 3.5.0——尽管我在 Ubuntu 26.04 LTS 上构建失败了——或者，为了省事，你可以安装 Flatpak 版本。目前该 Flatpak 尚未验证，但那是另一回事。\n\n提醒 Ubuntu 用户，上游 Rhythmbox 看起来与仓库中的版本略有不同，因为发行版应用了一些 UI 修改，使其与桌面其他部分更匹配。"
+  },
+  "dbe3278ff96204aace51a8593a7f03ae": {
+    "id": "dbe3278ff96204aace51a8593a7f03ae",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/genoffice-overview/",
+    "title_en": "This New Open Source Project Wants to Be the AI-First Alternative to Microsoft Office",
+    "summary_en": "Built by a single engineer using open source components, GenOffice bundles editors like Docs, Sheets, Slides, and PDF.",
+    "pub_date": "Wed, 05 Aug 2026 13:29:59 GMT",
+    "title_zh": "这个新开源项目想成为微软Office的AI优先替代品",
+    "summary_zh": "GenOffice是一个由单一工程师使用开源组件构建的新办公套件，集成了文档、表格、幻灯片和PDF编辑器，并深度集成AI功能。它基于Genspark的AI服务，提供文档生成、改写、幻灯片制作等功能，但AI功能需要消耗Genspark的积分。目前仅支持Windows和macOS（Apple Silicon），不支持Linux，尽管有社区请求，但官方尚未回应。",
+    "fulltext_zh": "这个新开源项目想成为微软Office的AI优先替代品\n\n这个新开源项目想成为微软Office的AI优先替代品\n\n由一位工程师使用开源组件构建，GenOffice集成了文档、表格、幻灯片和PDF等编辑器。\n\n办公套件自几十年前首次出现在桌面上以来，已经发生了很大变化。最初用于打字和汇总数字的基本工具，如今已演变成包含模板、云同步以及现在的AI的庞大软件。\n\n现在是2026年，最后这一点已将办公套件市场分为两个阵营。\n\n微软倾向于将AI推向所有地方，Copilot出现在Word、Excel和PowerPoint中，无论你是否需要。其他公司则选择了更温和的路线，将AI构建为可以开启的功能，而不是强制性的。\n\nGenOffice是Genspark推出的新产品，它强烈聚焦于AI，属于第一阵营，具备现代办公套件所期望的一系列编辑器。\n\nGenOffice：快速概览\n\n由一位开发者使用价值1万美元的token构建，GenOffice集成了四个编辑器，基于Electron的桌面应用允许你通过简单的提示起草章节、重新排版段落或为不同的读者改写内容，AI直接在文档内部工作，而不是在侧边栏中。\n\n表格部分使用开源电子表格引擎，并配有一个内部Rust辅助程序用于读写文件。\n\n演示文稿通过AI从单个提示生成幻灯片，选择布局、编写文案，并根据需要插入数据卡片。\n\n办公套件的最后一部分是PDF编辑器，基于开源的PDF库构建，允许你阅读长文档并就特定段落提问，无需在应用之间切换。\n\n很明显，AI贯穿于每个编辑器中。所有这些都通过Genspark的AI服务实现，该服务被视为应用的核心部分，而不是附加的聊天窗口。\n\n打开、编辑和保存文件是免费的，但AI功能会消耗Genspark的积分，并将它们绑定到账户而不是本地模型。\n\n这一点很重要，因为GenOffice似乎没有自己的隐私政策。AI功能通过Genspark的服务运行，因此你发送的任何内容都受Genspark隐私政策的约束，发送给AI功能的文本会传递给第三方提供商，并且你的设备上不会存储API密钥。\n\n目前，GenOffice仅适用于Apple Silicon上的macOS。不支持Intel Mac，而且你可能已经猜到，也不支持Linux。\n\nLinux版本在哪里？\n\n有一个社区成员提交的问题（很可能是AI生成的）提到了原生Linux版本。它解释了为Linux发布GenOffice并不像听起来那么简单。\n\n截至撰写本文时，GenOffice团队没有回复，所以我不指望短期内会有Linux版本。\n\n如果你仍然想尝试GenOffice，可以从官方网站获取Windows和macOS的安装程序，或者查看GitHub上的源代码，看看能否自己构建一个Linux版本。\n\n6个适用于Linux的最佳微软Office开源替代品\n\n6个适用于Linux的最佳微软Office开源替代品\n\n在Linux上寻找微软Office？这里有一些适用于Linux的最佳免费开源替代品。\n\n喜欢这次更新吗？支持独立的Linux新闻报道\n\nIt's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。\n\n一次付费，永久享受\n\n任意金额，无需承诺\n\n一个热爱开源软件、定制PC构建、赛车运动并探索这个世界无限可能的极客。\n\n当Torvalds在Linux中与AI和解时，Greg Kroah-Hartman划清了界限（某种程度上）\n\nLinux最喜爱的音乐播放器Rhythmbox 3.5在3.4系列近十年后发布\n\nGNOME Boxes不再显得古老，得益于一次焕新\n\nAI垃圾内容不断涌入GNOME扩展，所以他们写了一篇..."
+  },
+  "0642c4e16456fdf2987e0db82f8c5ade": {
+    "id": "0642c4e16456fdf2987e0db82f8c5ade",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/linux-drivers-staging-ai-rejection/",
+    "title_en": "While Torvalds Makes Peace With AI in Linux, Greg Kroah-Hartman Draws a Line (Sort of)",
+    "summary_en": "His new policy keeps AI patches out of drivers/staging, the tree meant for newcomers to learn kernel development.",
+    "pub_date": "Wed, 05 Aug 2026 10:44:06 GMT",
+    "title_zh": "托瓦兹与AI在Linux中达成和解，格雷格·克罗-哈特曼却划下界线（某种程度上）",
+    "summary_zh": "Linux内核维护者格雷格·克罗-哈特曼（Greg Kroah-Hartman）近日宣布，将拒绝接受由大型语言模型（LLM）生成的补丁提交到drivers/staging子系统，该子系统旨在帮助新手学习内核开发。尽管他本人曾使用AI辅助工具发现真实漏洞，但他认为在staging中，AI生成的补丁会破坏该子系统的学习目的。与此同时，Linus Torvalds对AI持更开放态度，认为Linux并非反AI项目。克罗-哈特曼的立场是在托瓦兹的总体政策下，对特定子系统做出的更严格限制。",
+    "fulltext_zh": "当托瓦兹与AI在Linux中和解时，格雷格·克罗-哈特曼划下界线（某种程度上）\n\n他的新政策将AI补丁挡在drivers/staging之外，这个树本意是让新手学习内核开发的地方。\n\n格雷格·克罗-哈特曼（Greg Kroah-Hartman，常被称为GKH）并不反对AI。事实上，他曾在自己的实验中使用了AI辅助模糊测试工具，在ksmbd和SMB代码中发现了真实漏洞。如今，他并非唯一使用AI的人，其他贡献者也开始提交带有相同标签的补丁。\n\n因此，当他几天前发布一项限制AI使用的新政策时，并非是在反对他所熟悉的工具。这项限制只适用于内核的一个部分——那个他不希望AI接近代码的地方。\n\n在linux-staging邮件列表中，GKH表示他现在会主动拒绝LLM生成的补丁，因为最近这类补丁“太多了”。\n\n他的理由归结为staging的实际用途。该子系统主要作为训练场，充满了相对简单的清理工作和API更改，让新手学习提交流程。\n\n项目已经跳过了由自动化工具生成的“修复所有代码风格问题”的补丁，因为清除这些混乱会消除staging存在的理由。GKH认为，LLM做同样的清理工作会破坏其目的，同时警告那些想耍花招的人：\n\n“是的，当人们提交LLM生成的补丁时，这是非常明显的，所以不要以为不披露使用情况就能在这里‘蒙混过关’。目标是让人们能够学习，而不是试图‘欺骗’维护者。如果有人被认定故意‘欺骗’我们，那么请把这当作提前警告……”\n\n但请注意，这并非完全禁止。如果LLM发现了真正的安全修复，仍然可以提交，但前提是提交者已在驱动目标硬件上进行了测试，并能令人信服地解释测试是如何进行的。\n\n在Linus和解之际划下界线\n\n这一举动恰逢Linus Torvalds对AI的态度转变。他多年来一直在调整立场，在最近的一封邮件列表帖子中，他向批评者明确表示，Linux“不是那些反AI的项目之一”，并建议那些不同意的人可以分叉项目或离开。\n\nGKH对drivers/staging的处理方式符合这一政策，他并没有撤销Linus的批准，而是专注于更窄的范围。\n\n他将这个子系统视为健身房，开发者应该亲自来举重，而不是让AI完成重复动作并把结果交给他们。\n\n这就是GKH划下的界线。AI可以在内核的其他地方用于工作，但在一个为仍在学习的人而建的子系统中，他宁愿他们先以艰难的方式构建。\n\n💬 你对GKH的决定有何看法？它会对新手有帮助吗？\n\n喜欢这次更新？支持独立的Linux新闻报道\n\nIt's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。\n\n一次支付，永久享受\n\n任意金额，无需承诺\n\n一个热爱开源软件、定制PC构建、赛车运动并探索这个世界无限可能的极客。\n\n这个新的开源项目想成为微软Office的AI优先替代品\n\nLinux最喜爱的音乐播放器Rhythmbox 3.5在3.4系列近十年后发布\n\nGNOME Boxes将不再显得古老，得益于一次焕新\n\nAI垃圾信息不断涌入GNOME扩展，所以他们为机器人编写了手册\n\nKeychron为游戏鼠标构建了开源固件，Linux用户受益最大\n\n成为更好的Linux用户\n\n通过FOSS每周通讯，你学习有用的Linux技巧，发现应用程序，探索新发行版，并随时了解Linux世界的最新动态\n\n太好了！你已成功注册。\n\n欢迎回来！你已成功登录。\n\n你已成功订阅It's FOSS。"
+  },
+  "71c6736961a167ff08deef844f021d76": {
+    "id": "71c6736961a167ff08deef844f021d76",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.3-Steam-Controller",
+    "title_en": "Linux 7.3 To Fix Longstanding Gap In The Native Driver For Original Steam Controller",
+    "summary_en": "For those with one of the original Valve Steam Controllers from a decade ago and looking to make use of it with the native HID Linux driver outside of the Steam client or SDL, an important addition is coming with the Linux 7.3 kernel release later in the year...",
+    "pub_date": "Wed, 05 Aug 2026 20:44:00 -0400",
+    "title_zh": "Linux 7.3 将修复原始 Steam 手柄原生驱动中长期存在的缺陷",
+    "summary_zh": "Linux 7.3 内核将修复原始 Steam 手柄原生 HID 驱动中缺失的传感器事件支持。该驱动此前仅支持基本输入，而传感器事件（如加速度计、陀螺仪、触摸握把等）可触发游戏内动作或切换行为。补丁由 Vicki Pfau 提交，约 200 行代码，使 Steam 手柄支持与 SDL 和 Steam 客户端功能对齐。此外，还有其他小幅改进被合入 HID 子系统的 for-next 分支。",
+    "fulltext_zh": "Linux 7.3 将修复原始 Steam 手柄原生驱动中长期存在的缺陷 - Phoronix\n\nLinux 7.3 将修复原始 Steam 手柄原生驱动中长期存在的缺陷\n\n2026年8月5日 晚上8:44 EDT\n\n对于那些拥有十年前发布的原始 Valve Steam 手柄，并希望在内核原生 HID Linux 驱动（而非 Steam 客户端或 SDL）中使用它的用户来说，Linux 7.3 内核将在今年晚些时候带来一项重要更新。\n\nLinux 内核长期以来一直拥有该驱动，用于在 Steam 客户端或 SDL 库等用户空间解决方案之外支持 Steam 手柄。但 Steam HID 驱动一直缺乏对传感器事件的支持，这些事件是由物理硬件组件（如手柄的加速度计、陀螺仪、触摸握把等）触发的数据输入。这些传感器事件可用于触发游戏内动作或切换其他行为，而无需按下物理按钮。\n\n在 Linux 7.3 合并窗口之前，HID 子系统的“next”分支中添加了一个补丁，用于支持原始 Steam 手柄的传感器事件。该补丁的作者 Vicki Pfau 在提交信息中阐述道：\n\n“此前已为 Steam Deck 添加了传感器支持，但 Steam 手柄的传感器事件从未被添加。此次补丁添加了缺失的支持，使 Steam 手柄的支持更接近 SDL 和 Steam 本身的功能对等。”\n\n大约 200 行代码使该功能在即将到来的 Linux 7.3 周期中为 Steam HID 驱动提供支持，并如前所述，更接近 Steam/SDL 中原始 Steam 手柄支持的功能对等。\n\n此外，还有其他一些 Steam HID 驱动补丁被合入 HID 的 for-next 代码分支，为该驱动带来其他小幅改进。\n\nSteam 在 Linux 上的使用率在 7 月回升至 4% 以上\nSteam 客户端为 Steam Deck OLED 添加 HDR 串流、AV1 视频串流\nDXVK 3.0.2 发布，改进挂起调试，包含少量游戏修复\nHolo Core 实验构建发布：面向 Valve Steam Frame 的 Arch Linux AArch64\nProton 11.0-1 发布，推进 Valve 的 Steam Play，带来最佳 Linux 体验\nSteam 在 Linux 上的使用率在 6 月略有下降\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nValve 赞助开源 RADV 驱动移植到 Windows 的工作\n首个面向现代 AMD Ryzen AM5 平台的开源固件发布\nArch Linux AUR 再次遭遇恶意软件包浪潮，软件包采用暂停\nAMD P-State Linux 驱动补丁可将 1% 低帧率游戏性能提升 31%\n知名 Arch Linux 开发者任职 10 年后辞职\nStarling：一款用 Swift 编写的新 Linux 桌面，自带 Wayland 合成器，并借助 AI 开发\nDRM 格式修饰符为旧 AMD GPU 随 Linux 7.3 到来：感谢 Valve\nSteam 在 Linux 上的使用率在 7 月回升至 4% 以上\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "5c88a95196a6112d8037844c037a26fc": {
+    "id": "5c88a95196a6112d8037844c037a26fc",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Rust-Coreutils-0.10",
+    "title_en": "Rust Coreutils 0.10 Released With More Security Hardening, Increased GNU Compatibility",
+    "summary_en": "Rust Coreutils 0.10 is out today from the uutils project for this alternative to GNU Coreutils. Rust Coreutils 0.10 development focused on additional security hardening plus also increasing the GNU test suite compatibility and robustness...",
+    "pub_date": "Wed, 05 Aug 2026 18:59:00 -0400",
+    "title_zh": "Rust Coreutils 0.10 发布：增强安全加固，提升 GNU 兼容性",
+    "summary_zh": "Rust Coreutils 0.10 由 uutils 项目发布，作为 GNU Coreutils 的替代品，本次更新聚焦于额外的安全加固和 GNU 测试套件兼容性的提升。新版本在 GNU 测试套件中新增了 20 个通过用例，通过率达到历史最高的 93.48%。兼容性改进包括行为对齐、nproc 处理、日期范围支持及格式差异修复。安全方面进行了第二轮加固，修复了 TOCTOU 问题、安全递归下降问题，并为 mkdir/mkfifo/mknod 应用 SELinux 标签。此外，移除了多个核心工具中的 panic 和 abort，支持原子交换路径及新特性，并进行了性能优化。",
+    "fulltext_zh": "Rust Coreutils 0.10 发布：增强安全加固，提升 GNU 兼容性 - Phoronix\nRust Coreutils 0.10 发布：增强安全加固，提升 GNU 兼容性\n2026年8月5日，美国东部时间下午6:59。\n\nRust Coreutils 0.10 于今日由 uutils 项目发布，作为 GNU Coreutils 的替代品。Rust Coreutils 0.10 的开发重点在于额外的安全加固，同时提升 GNU 测试套件的兼容性和健壮性。\n\nRust Coreutils 0.10 现在又通过了 20 个 GNU 测试套件用例，使总通过率达到历史最高的 93.48%。这些 GNU 兼容性更新涉及行为对齐、不同 CPU 条件下的 nproc 处理、日期超出范围年份的处理，以及各种格式差异的修复。此外，Rust Coreutils 的许多错误信息也得到了改进。\n\nRust Coreutils 0.10 还进行了第二轮安全加固，包括更多的检查时间到使用时间（TOCTOU）修正、安全递归下降修复、mkdir/mkfifo/mknod 在创建时应用 SELinux 标签，以及其他安全更新。\n\n这个新版本还移除了多个核心工具中的 panic 和 abort，现在支持原子交换两个路径，支持新特性，并进行了各种性能改进和其他改进。\n\nRust Coreutils 0.10 的下载和完整变更列表可在以下链接找到：\n\nGCC 将拒绝任何通过 AI/LLM 做出的重大贡献 - 测试用例除外\nGNU Binutils 2.47 发布，支持更多 RISC-V 扩展和新选项\nGNU C Library 2.44 发布，包含 /etc/tunables.conf 和更多优化\nAMD 为 GCC 编译器提交 AVX10_V2_AUX ISA 支持补丁\nGNU Hurd 在 AArch64 上取得进展，用 Rust 编写翻译器\nGlibc 引入 /etc/tunables.conf 用于系统级可调参数\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过20,000篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nValve 赞助将开源 RADV 驱动移植到 Windows 的工作\n首个面向现代 AMD Ryzen AM5 平台的开源固件发布\nArch Linux AUR 再次遭遇恶意软件包浪潮，软件包采用暂停\nAMD P-State Linux 驱动补丁可将 1% 低帧率游戏性能提升 31%\n知名 Arch Linux 开发者任职10年后辞职\nStarling：用 Swift 编写的新 Linux 桌面，自带 Wayland 合成器，并使用 AI 辅助开发\n旧 AMD GPU 的 DRM 格式修饰符随 Linux 7.3 到来：感谢 Valve\nSteam 在 Linux 上的使用率在7月回升至4%以上\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "afd1fc796d250bac6f22c455c4f3f307": {
+    "id": "afd1fc796d250bac6f22c455c4f3f307",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Mesa-26.2-Released",
+    "title_en": "Mesa 26.2 Released With NVK Mesh Shader Support, Many Other Vulkan Improvements",
+    "summary_en": "Mesa 26.2 stable is now available as the newest quarterly feature release for this set of open-source OpenGL and Vulkan drivers typically used on Linux systems...",
+    "pub_date": "Wed, 05 Aug 2026 18:13:57 -0400",
+    "title_zh": "Mesa 26.2 发布，支持 NVK 网格着色器及多项 Vulkan 改进",
+    "summary_zh": "Mesa 26.2 稳定版于 2026 年 8 月 5 日发布，作为开源 OpenGL 和 Vulkan 驱动的最新季度功能更新。本次更新重点在 Vulkan API 方面，包括对 Intel ANV 和 AMD RADV 驱动的多项优化、Vulkan Video 的持续改进、KosmicKrisp 驱动支持 Vulkan 1.4、Rusticl 对 OpenCL 的更好支持、NVIDIA NVK 驱动的成熟化、新增 KRAID 编译器（用于 Arm Mali Panfrost/PanVK）、AMD GFX12.1 图形支持的早期工作，以及多种新 Vulkan 扩展。此外，旧版 Radeon R600g 和 R300g 驱动也获得了多项修复。",
+    "fulltext_zh": "Mesa 26.2 发布，支持 NVK 网格着色器及多项 Vulkan 改进 - Phoronix\n\nMesa 26.2 发布，支持 NVK 网格着色器及多项 Vulkan 改进\n\n2026年8月5日下午6:13（美国东部时间）\n\nMesa 26.2 稳定版现已发布，这是这套通常用于 Linux 系统的开源 OpenGL 和 Vulkan 驱动的最新季度功能版本。\n\n对于这些开源用户空间 3D 驱动来说，这又是一次精彩的功能更新，尤其是在 Vulkan API 方面，大部分活动通常集中于此，但 Zink（OpenGL-on-Vulkan）和 Rusticl（Gallium3D 上的 OpenCL）也取得了良好进展。\n\nMesa 26.2 为 Intel ANV 和 AMD RADV Vulkan 驱动带来了多项优化，继续推进 Vulkan Video 的工作，KosmicKrisp（Vulkan 到 Apple Metal 的驱动）现在支持 Vulkan 1.4，Rusticl 继续提供更好的 OpenCL 支持，NVIDIA NVK Vulkan 驱动持续成熟，新的 KRAID 编译器已合入 Arm Mali Panfrost/PanVK 驱动，AMD GFX12.1 图形支持的早期工作也已开始，同时合入了多种新的 Vulkan 扩展。甚至旧的 Radeon R600g 和 R300g 驱动在 Mesa 26.2 功能开发期间也获得了多项修复。\n\n新的 OpenGL 和 Vulkan 扩展及其他工作的完整列表如下：\n\n“自 Mesa 26.1 以来的几个亮点：\n\n- 新增 Gamma，一个用于检查加速结构和光线追踪分派的工具。目前仅支持 RADV。\n- NVK 获得了对 VK_EXT_mesh_shader 的支持。\n- KosmicKrisp 现在暴露 Vulkan 1.4。\n\n用户可以期待所有驱动和组件中常见的改进浪潮，包括以下由开发者强调的新扩展和功能（不分先后）：\n\n- radeonsi 上的 cl_khr_subgroup_rotate\n- iris 上的 cl_khr_subgroup_rotate\n- panvk 上的 VK_EXT_shader_uniform_buffer_unsized_array\n- RADV 上的 VK_KHR_shader_constant_data\n- panvk 上的 VK_EXT_dynamic_rendering_unused_attachments\n- RADV/GFX10+ 和 VEGA10 上的 protectedMemory 支持\n- RADV/GFX11 上的 VK_KHR_performance_query\n- panvk 上的 VK_EXT_conservative_rasterization\n- pvr 上的 shaderImageGatherExtended\n- RADV 上的 VK_EXT_pipeline_protected_access\n- panvk 上的 VK_EXT_extended_dynamic_state3\n- panfrost/v9+ 上的 GL_ARB_texture_query_lod\n- RADV 上的 VK_KHR_maintenance11\n- asahi、iris、radeonsi、llvmpipe 和 zink 上的 rusticl 的 OpenCL 3.1 支持\n- pvr 上的 VK_KHR_workgroup_memory_explicit_layout\n- pvr 上的 VK_KHR_maintenance5\n- hasvk 上的 VK_KHR_calibrated_timestamps\n- pvr 上的 VK_KHR_present_id\n- pvr 上的 VK_KHR_present_wait\n- hasvk 上的 VK_KHR_present_id2\n- hasvk 上的 VK_KHR_present_wait2\n- RADV 上的 VK_KHR_shader_fma\n- RADV/GFX12 上的 VK_EXT_shader_split_barrier\n- nvk 上的 VK_KHR_shader_fma\n- Panfrost 和 PanVK 对 G1-Ultra、G1-Premium 和 G1-Pro GPU 的支持\n- nvk 上的 VK_EXT_shader_atomic_float\n- pvr 上的 VK_{KHR,EXT}_index_type_uint8\n- vulkan 运行时中的 VK_EXT_debug_marker\n- NVK 上的 VK_EXT_mesh_shader\n- RADV 上的 VK_KHR_device_fault\n- VK_EXT_present_timing 现在也支持 x11\n- hasvk 上的 VK_EXT_present_timing\n- VK_GOOGLE_display_timing 用于 KHR_display（以及 x11、wayland 的选择加入），支持 anv、hasvk、hk、nvk、panvk、pvr、radv、tu、v3dv\n- RADV 上的 VK_KHR_shader_abort\n- panvk 上的 VK_KHR_shader_fma\n- NVK 上的 VK_NV_shader_atomic_float16_vector\n- panvk 上的 VK_KHR_compute_shader_derivatives\n- pvr 上的 VK_EXT_shader_subgroup_ballot、VK_EXT_shader_subgroup_vote、VK_KHR_shader_subgroup_rotate、VK_KHR_shader_subgroup_uniform_control_flow、VK_EXT_subgroup_size_control\n- panvk 上的 VK_EXT_rasterization_order_attachment_access 和 VK_ARM_rasterization_order_attachment_access\n- etnaviv/HALF_FLOAT 上的 GL_OES_texture_float 和 GL_ARB_texture_float\n- NVK 上的 VK_NVX_binary_import\n- panvk 上的 VK_EXT_image_sliced_view_of_3d\n- panvk 上的 VK_EXT_shader_tile_image\n- panvk 上的 VK_KHR_internally_synchronized_queues\n- panvk 上的 VK_KHR_workgroup_memory_explicit_layout\n- pvr 上的 VK_EXT_device_memory_report\n- anv、RADV 上默认启用 VK_EXT_descriptor_heap\n- panvk 上的 VK_EXT_device_address_binding_report\n- VK_EXT_multisampled_ren"
+  },
+  "175b984f0ff3bc53091e7c4f6a799e1e": {
+    "id": "175b984f0ff3bc53091e7c4f6a799e1e",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/USB4STREAM-Lower-Latency",
+    "title_en": "USB4STREAM Adding Busy Poll Option For Lower Latency At The Cost Of Increased CPU Cycles",
+    "summary_en": "One of the nifty new features of Linux 7.2 is USB4STREAM as an Intel-developed solution for quickly sending data between USB4 connected systems. Now for the upcoming Linux 7.3 cycle, a busy poll mode is being added to provide lower-latency data transfers at the expense of increased CPU activity...",
+    "pub_date": "Wed, 05 Aug 2026 17:27:47 -0400",
+    "title_zh": "USB4STREAM 添加忙轮询选项：以增加 CPU 周期为代价降低延迟",
+    "summary_zh": "Linux 7.2 引入了由英特尔开发的 USB4STREAM 功能，用于在 USB4 连接的系统间快速传输数据。即将到来的 Linux 7.3 将新增忙轮询模式，通过增加 CPU 活动来降低数据传输延迟。该模式可通过 ConfigFS 属性启用，适用于对延迟敏感的应用，但代价是更高的 CPU 占用且无法使用 poll(2)。补丁已进入 thunderbolt.git 的 next 分支，等待合并窗口。",
+    "fulltext_zh": "USB4STREAM 添加忙轮询选项：以增加 CPU 周期为代价降低延迟 - Phoronix\nUSB4STREAM 添加忙轮询选项：以增加 CPU 周期为代价降低延迟\n发布于 2026 年 8 月 5 日下午 5:27（美国东部时间）。\n\nLinux 7.2 的一个亮点新功能是 USB4STREAM，这是英特尔开发的解决方案，用于在 USB4 连接的系统之间快速发送数据。现在，在即将到来的 Linux 7.3 周期中，将添加忙轮询模式，以增加 CPU 活动为代价提供更低延迟的数据传输。\n\n英特尔工程师开发了 USB4STREAM 协议，这是一种使用 USB4/Thunderbolt 在主机之间传输原始数据包的极简方法。英特尔 Thunderbolt 专家 Mika Westerberg 在 Claude Opus 4.8 的协助下，设计了一种用于 USB4STREAM 的忙轮询方法，以提供更低延迟的传输。排队中的补丁说明如下：\n\n“使用中断和调度工作线程会增加延迟，因此对延迟敏感的应用可能希望避免这种情况。通过在 USB4STREAM 中添加一个新的 ConfigFS 属性：busy_poll，当激活时，将环切换到轮询模式，即可实现这一点。降低延迟的代价是消耗更多 CPU 周期，并且无法使用 poll(2) 等功能。”\n\n对于 Linux 7.3+，可以通过以下路径切换 USB4STREAM 的忙轮询模式：\n/sys/kernel/config/thunderbolt/stream/[xdomain].[service]/$name/busy_poll\n\n该补丁目前位于 thunderbolt.git 的 next 分支中，等待即将到来的 Linux 7.3 合并窗口。"
+  },
+  "4503e95abbc2a07a3232788e3da10360": {
+    "id": "4503e95abbc2a07a3232788e3da10360",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Denial-WM-Compositor",
+    "title_en": "Denial WM: New Wayland Compositor With Flutter Directly Embedded",
+    "summary_en": "The newest Wayland compositor to talk about and discuss is Denial, a Wayland compositor focused on optimal Arch Linux integration and that embeds the Flutter engine directly into the codebase. Denial makes use of the Rust programming language and leverages Smithay to help in the compositor responsibilities...",
+    "pub_date": "Wed, 05 Aug 2026 12:10:08 -0400",
+    "title_zh": "Denial WM：全新 Wayland 合成器，直接嵌入 Flutter",
+    "summary_zh": "Denial 是一款全新的 Wayland 合成器，专注于 Arch Linux 的优化集成，并直接将 Flutter 引擎嵌入代码库。它使用 Rust 编程语言，并借助 Smithay 处理合成器职责。Denial 目前为 alpha 软件，其设计独特：不将 Flutter 作为应用运行在其他合成器之上，而是直接嵌入 Flutter 引擎，由 Rust 和 Smithay 合成器处理 Wayland 协议状态、输入、DMA-BUF、DRM/KMS 呈现等。应用缓冲区通过 EGL_EXT_image_dma_buf_import 导入为 GPU 纹理，无需 CPU 回读或像素拷贝。Flutter 直接渲染到 GBM 缓冲区用于 KMS 呈现，无中间渲染目标。开发者已将其作为日常桌面使用，支持原生 Wayland 应用、Steam 和 Proton 游戏、多显示器、音频、锁屏、屏幕共享等，并提供签名 Arch 包和 CI/CD。项目还保留了 Flutter 开发工作流，支持热重载和调试。",
+    "fulltext_zh": "Denial WM：全新 Wayland 合成器，直接嵌入 Flutter - Phoronix\nDenial WM：全新 Wayland 合成器，直接嵌入 Flutter\n2026年8月5日 下午12:10 EDT。\n\n最新值得讨论的 Wayland 合成器是 Denial，它专注于 Arch Linux 的优化集成，并将 Flutter 引擎直接嵌入代码库。Denial 使用 Rust 编程语言，并借助 Smithay 处理合成器职责。\n\nDenial 目前被视为 alpha 软件，是一款 Flutter 原生的 Wayland 合成器。Denial 的首席开发者致信 Phoronix，并解释了其设计：\n\n“Denial 并非将 Flutter 作为应用运行在其他合成器之上：它直接嵌入 Flutter 引擎，而 Rust 和 Smithay 合成器负责处理 Wayland 协议状态、输入、DMA-BUF、DRM/KMS 呈现以及原生资源生命周期。\n\n基于 Wayland DMA-BUF 的应用缓冲区通过 EGL_EXT_image_dma_buf_import 作为 GPU 纹理导入 Flutter 场景，无需 CPU 回读、像素拷贝或纹理上传。\n\nFlutter 直接渲染到用于 KMS 呈现的 GBM 缓冲区。没有中间渲染目标、最终 blit 或第二次合成器传递。\n\nDenial 已成为我的日常桌面：\n- 原生 Wayland 应用（如 Chromium、Firefox、Blender、Discord）\n- Steam 和要求较高的 Proton 游戏（我测试了《明日方舟：终末地》《鸣潮》《无限暖暖》和《最终幻想 XIV》）在我的测试中均完美运行\n- 多显示器配置，为 nwg-displays 实现了专用 Denial 后端，并已准备好提交上游\n- 音频，支持按窗口音量控制\n- 屏幕锁定和 DPMS\n- 屏幕共享（已用 OBS 测试）\n- 带 CI/CD 的签名 Arch 包\n\n该项目还保留了正常的 Flutter 开发工作流：一个可选的开发包提供 Flutter Inspector、DevTools 和热重载，用于实时桌面外壳，无需重启合成器或关闭运行中的应用。在 Denial 运行时，可以启用或禁用性能分析和调试模式。\n\nDenial 使用定制的 Flutter 引擎和 Skia 构建，带有合成器特定优化，包括外部纹理损伤跟踪、专门的帧调度以及消除热绘制依赖路径中的堆分配。优化在桌面合成器中至关重要，因此大部分工作都花在优化低且一致的帧时间上。”\n\n这看起来是一个有趣的项目，至少比一些其他 Wayland 合成器有更多原创目标。\n\n想了解更多关于 Denial 的信息，可以访问其官方网站，GPLv3+ 代码托管在 GitHub 上。\n\nWayfire Wayland 合成器接近 v1.0 发布\nHyprland 0.56 发布，带来多项增强\nWayland 1.26 发布，新增指针扭曲事件\nWeston 16.0 合成器发布，改进 HDR 和 Vulkan 修复\nWayland 1.26 RC1 发布，新增事件以确保正确的指针坐标\nNourish：基于 Vulkan 的新 Wayland 合成器，支持无限滚动/平移\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过 Twitter 关注他。\n\nValve 赞助将开源 RADV 驱动移植到 Windows\n现代 AMD Ryzen AM5 平台发布首个开源固件\nArch Linux AUR 再次遭遇恶意软件包浪潮，软件包采纳暂停\nAMD P-State Linux 驱动补丁可将 1% 低帧率游戏性能提升 31%\n著名 Arch Linux 开发者十年后辞职\nStarling：用 Swift 编写的新 Linux 桌面，自带 Wayland 合成器，并使用 AI 开发\nDRM 格式修饰符用于"
+  },
+  "837bba1f10f1bde64e6fe73a8fe11953": {
+    "id": "837bba1f10f1bde64e6fe73a8fe11953",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/kraid-a-new-compiler-for-panfrost/",
+    "title_en": "Kraid: A New Compiler for Panfrost",
+    "summary_en": "Discover Kraid, the innovative compiler designed for Panfrost, enhancing performance and efficiency in graphics rendering. Explore its features today.\nThe post Kraid: A New Compiler for Panfrost appeared first on Linux Today.",
+    "pub_date": "Wed, 05 Aug 2026 07:10:03 +0000",
+    "title_zh": "Kraid：为Panfrost打造的全新编译器",
+    "summary_zh": "Kraid是一款专为Panfrost图形驱动程序设计的创新编译器，旨在提升图形渲染的性能与效率。本文介绍了Kraid的发布及其在Linux图形栈中的潜在影响，强调其作为优化工具的重要性，并鼓励读者探索其功能。",
+    "fulltext_zh": "探索Kraid，这款专为Panfrost设计的创新编译器，旨在提升图形渲染的性能与效率。立即了解其特性。\n\n该文章《Kraid: A New Compiler for Panfrost》首发于Linux Today。"
+  },
+  "957db0230336ac972d49bed7b0a9c113": {
+    "id": "957db0230336ac972d49bed7b0a9c113",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/qsoe-0-1-debuts-as-a-qnx-inspired-open-source-os-for-risc-v/",
+    "title_en": "QSOE 0.1 Debuts as a QNX-Inspired Open-Source OS for RISC-V",
+    "summary_en": "QSOE 0.1 has arrived! This QNX-inspired open-source OS for RISC-V offers unique capabilities. Learn more about its potential and applications now.\nThe post QSOE 0.1 Debuts as a QNX-Inspired Open-Source OS for RISC-V appeared first on Linux Today.",
+    "pub_date": "Wed, 05 Aug 2026 07:08:49 +0000",
+    "title_zh": "QSOE 0.1 首发：受 QNX 启发的 RISC-V 开源操作系统",
+    "summary_zh": "QSOE 0.1 正式发布，这是一款受 QNX 启发的开源操作系统，专为 RISC-V 架构设计。该系统提供了独特的功能，有望在嵌入式、物联网及实时计算等领域发挥重要作用。本文介绍了其发布背景、核心特性及潜在应用场景，为开发者与爱好者提供了初步了解。",
+    "fulltext_zh": "QSOE 0.1 已正式发布！这款受 QNX 启发的开源操作系统专为 RISC-V 架构打造，提供了独特的功能。现在就来了解它的潜力与应用场景。\n\n本文首发于 Linux Today。"
+  },
+  "6f5d185b8e608dbed72e4e7d1797ae92": {
+    "id": "6f5d185b8e608dbed72e4e7d1797ae92",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/p-cores-e-cores-and-lp-e-cores-compared-across-4-intel-processors/",
+    "title_en": "P-Cores, E-Cores and LP E-Cores Compared Across 4 Intel Processors",
+    "summary_en": "Explore a detailed comparison of P-Cores, E-Cores, and LP E-Cores in four Intel processors. Gain insights into their performance and efficiency.\nThe post P-Cores, E-Cores and LP E-Cores Compared Across 4 Intel Processors appeared first on Linux Today.",
+    "pub_date": "Wed, 05 Aug 2026 07:07:24 +0000",
+    "title_zh": "P核、E核与LP E核在四款英特尔处理器中的对比",
+    "summary_zh": "本文深入对比了四款英特尔处理器中的P核（性能核）、E核（能效核）和LP E核（低功耗能效核），分析了它们在性能与能效方面的表现，帮助读者理解不同核心架构的适用场景与优势。",
+    "fulltext_zh": "探索四款英特尔处理器中P核、E核与LP E核的详细对比，深入了解它们的性能与能效表现。\n\n该文章《P-Cores, E-Cores and LP E-Cores Compared Across 4 Intel Processors》最初发布于Linux Today。"
+  },
+  "dff3ec19aa6e4645b97907bc68e4b939": {
+    "id": "dff3ec19aa6e4645b97907bc68e4b939",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/a-30-year-old-gimp-build-used-to-create-tux-is-now-a-linux-flatpak/",
+    "title_en": "A 30-Year-Old GIMP Build Used to Create Tux Is Now a Linux Flatpak",
+    "summary_en": "Discover the evolution of Tux with the 30-year-old GIMP build now available as a Linux Flatpak. Explore its features and enhancements today.\nThe post A 30-Year-Old GIMP Build Used to Create Tux Is Now a Linux Flatpak appeared first on Linux Today.",
+    "pub_date": "Wed, 05 Aug 2026 07:05:54 +0000",
+    "title_zh": "30年前的GIMP构建曾用于创建Tux，现已作为Linux Flatpak发布",
+    "summary_zh": "一个30年前的GIMP构建版本，曾用于创建Linux吉祥物Tux，现已作为Flatpak包提供给Linux用户。该版本展示了GIMP的早期发展历程，并包含当时的功能特性。用户可以通过Flatpak轻松安装和体验这一历史性版本，感受其与当代GIMP的差异。",
+    "fulltext_zh": "探索Tux的演变历程，这个30年前的GIMP构建版本现已作为Linux Flatpak提供。今天就来看看它的功能和改进。\n\n该文章《A 30-Year-Old GIMP Build Used to Create Tux Is Now a Linux Flatpak》最初出现在Linux Today上。"
+  },
+  "c3af9ff6bca1cdebc928e9310d752de7": {
+    "id": "c3af9ff6bca1cdebc928e9310d752de7",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/5-ways-to-check-remote-port-connectivity-in-linux/",
+    "title_en": "5 Ways to Check Remote Port Connectivity in Linux",
+    "summary_en": "Learn the 5 essential ways to verify remote port connectivity in Linux. Improve your network diagnostics and ensure optimal performance with these practical tips.\nThe post 5 Ways to Check Remote Port Connectivity in Linux appeared first on Linux Today.",
+    "pub_date": "Wed, 05 Aug 2026 07:04:44 +0000",
+    "title_zh": "在Linux中检查远程端口连通性的5种方法",
+    "summary_zh": "本文介绍了在Linux系统中检查远程端口连通性的五种实用方法，帮助用户进行网络诊断并确保系统性能。这些方法包括使用telnet、nc（netcat）、nmap、/dev/tcp以及ss命令等，每种方法都有其适用场景和优缺点。通过掌握这些技巧，系统管理员可以快速定位网络问题，验证服务是否正常运行，并优化网络配置。文章旨在提升用户的网络故障排查能力，确保远程服务的可用性和稳定性。",
+    "fulltext_zh": "学习在Linux中验证远程端口连通性的5种基本方法。通过这些实用技巧，改进你的网络诊断并确保最佳性能。\n\n这篇文章《在Linux中检查远程端口连通性的5种方法》首先出现在Linux Today上。"
   }
 }

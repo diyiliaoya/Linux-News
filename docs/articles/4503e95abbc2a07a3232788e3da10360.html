@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BSD发布：NetBSD 11.0 — Linux 中文速报</title>
+<title>Denial WM：全新 Wayland 合成器，直接嵌入 Flutter — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>BSD发布：NetBSD 11.0</h1>
+  <h1>Denial WM：全新 Wayland 合成器，直接嵌入 Flutter</h1>
 
-  <div class="article-summary">NetBSD项目宣布发布11.0版本，这是其第19个主要版本。新版本增加了对RISC-V架构的支持，提升了Linux兼容性，并引入了virt68k移植。此外，还增强了对POSIX.1-2024和C23标准的支持，改进了npf防火墙，并新增了针对x86的MICROVM内核，可实现极速虚拟机启动。</div>
+  <div class="article-summary">Denial 是一款全新的 Wayland 合成器，专注于 Arch Linux 的优化集成，并直接将 Flutter 引擎嵌入代码库。它使用 Rust 编程语言，并借助 Smithay 处理合成器职责。Denial 目前为 alpha 软件，其设计独特：不将 Flutter 作为应用运行在其他合成器之上，而是直接嵌入 Flutter 引擎，由 Rust 和 Smithay 合成器处理 Wayland 协议状态、输入、DMA-BUF、DRM/KMS 呈现等。应用缓冲区通过 EGL_EXT_image_dma_buf_import 导入为 GPU 纹理，无需 CPU 回读或像素拷贝。Flutter 直接渲染到 GBM 缓冲区用于 KMS 呈现，无中间渲染目标。开发者已将其作为日常桌面使用，支持原生 Wayland 应用、Steam 和 Proton 游戏、多显示器、音频、锁屏、屏幕共享等，并提供签名 Arch 包和 CI/CD。项目还保留了 Flutter 开发工作流，支持热重载和调试。</div>
 
-  <div class="article-body"><p>NetBSD项目宣布发布11.0版本，这是其高度可移植操作系统的第19个主要版本。新版本包括对RISC-V架构的移植、更好的Linux兼容性，以及virt68k移植。</p><p>&quot;新增对RISC-V处理器架构的移植。NetBSD 11.0是首个包含64位RISC-V平台支持的稳定版本，包括一系列基于StarFive JH71XX的设备，如VisionFive 2、PINE64 STAR64，以及QEMU。增强了对POSIX.1-2024和C23编程接口标准的合规性。在compat_linux(8)中增强了对Linux系统调用的支持，包括epoll（基于kqueue实现）、POSIX消息队列、statx、readahead、close_range、waitid、renameat2、clone3、sync_file_range、syncfs和inotify。初步支持Qualcomm Snapdragon X Elite平台。改进了npf(7)防火墙，包括二层和用户/组过滤。新增针对x86的MICROVM内核，支持i386和amd64，NetBSD 11.0引入了专为极速虚拟机启动设计的MICROVM内核，利用PVH启动、VirtIO MMIO和多项内核优化，在2020年代的x86 CPU上可在约10毫秒内启动。新增virt68k移植，用于在QEMU中使用半虚拟化设备运行Motorola 68000移植。&quot;</p><p>更多信息可在NetBSD-11.0-amd64.iso中找到。</p><p>近期相关新闻和发布：</p><p>BSD发布：NetBSD 11.0</p><p>开发版发布：NetBSD 11.0 RC3</p><p>开发版发布：NetBSD 11.0 RC1</p><p>BSD发布：NetBSD 10.1</p><p>BSD发布：NetBSD 9.4</p><p>BSD发布：NetBSD 10.0</p><p>NetBSD是一个免费、安全、高度可移植的类Unix开源操作系统，可用于多种平台，从64位AlphaServer和桌面系统到手持和嵌入式设备。</p></div>
+  <div class="article-body"><p>Denial WM：全新 Wayland 合成器，直接嵌入 Flutter - Phoronix</p><p>Denial WM：全新 Wayland 合成器，直接嵌入 Flutter</p><p>2026年8月5日 下午12:10 EDT。</p><p>最新值得讨论的 Wayland 合成器是 Denial，它专注于 Arch Linux 的优化集成，并将 Flutter 引擎直接嵌入代码库。Denial 使用 Rust 编程语言，并借助 Smithay 处理合成器职责。</p><p>Denial 目前被视为 alpha 软件，是一款 Flutter 原生的 Wayland 合成器。Denial 的首席开发者致信 Phoronix，并解释了其设计：</p><p>“Denial 并非将 Flutter 作为应用运行在其他合成器之上：它直接嵌入 Flutter 引擎，而 Rust 和 Smithay 合成器负责处理 Wayland 协议状态、输入、DMA-BUF、DRM/KMS 呈现以及原生资源生命周期。</p><p>基于 Wayland DMA-BUF 的应用缓冲区通过 EGL_EXT_image_dma_buf_import 作为 GPU 纹理导入 Flutter 场景，无需 CPU 回读、像素拷贝或纹理上传。</p><p>Flutter 直接渲染到用于 KMS 呈现的 GBM 缓冲区。没有中间渲染目标、最终 blit 或第二次合成器传递。</p><p>Denial 已成为我的日常桌面：</p><p>- 原生 Wayland 应用（如 Chromium、Firefox、Blender、Discord）</p><p>- Steam 和要求较高的 Proton 游戏（我测试了《明日方舟：终末地》《鸣潮》《无限暖暖》和《最终幻想 XIV》）在我的测试中均完美运行</p><p>- 多显示器配置，为 nwg-displays 实现了专用 Denial 后端，并已准备好提交上游</p><p>- 音频，支持按窗口音量控制</p><p>- 屏幕锁定和 DPMS</p><p>- 屏幕共享（已用 OBS 测试）</p><p>- 带 CI/CD 的签名 Arch 包</p><p>该项目还保留了正常的 Flutter 开发工作流：一个可选的开发包提供 Flutter Inspector、DevTools 和热重载，用于实时桌面外壳，无需重启合成器或关闭运行中的应用。在 Denial 运行时，可以启用或禁用性能分析和调试模式。</p><p>Denial 使用定制的 Flutter 引擎和 Skia 构建，带有合成器特定优化，包括外部纹理损伤跟踪、专门的帧调度以及消除热绘制依赖路径中的堆分配。优化在桌面合成器中至关重要，因此大部分工作都花在优化低且一致的帧时间上。”</p><p>这看起来是一个有趣的项目，至少比一些其他 Wayland 合成器有更多原创目标。</p><p>想了解更多关于 Denial 的信息，可以访问其官方网站，GPLv3+ 代码托管在 GitHub 上。</p><p>Wayfire Wayland 合成器接近 v1.0 发布</p><p>Hyprland 0.56 发布，带来多项增强</p><p>Wayland 1.26 发布，新增指针扭曲事件</p><p>Weston 16.0 合成器发布，改进 HDR 和 Vulkan 修复</p><p>Wayland 1.26 RC1 发布，新增事件以确保正确的指针坐标</p><p>Nourish：基于 Vulkan 的新 Wayland 合成器，支持无限滚动/平移</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过 Twitter 关注他。</p><p>Valve 赞助将开源 RADV 驱动移植到 Windows</p><p>现代 AMD Ryzen AM5 平台发布首个开源固件</p><p>Arch Linux AUR 再次遭遇恶意软件包浪潮，软件包采纳暂停</p><p>AMD P-State Linux 驱动补丁可将 1% 低帧率游戏性能提升 31%</p><p>著名 Arch Linux 开发者十年后辞职</p><p>Starling：用 Swift 编写的新 Linux 桌面，自带 Wayland 合成器，并使用 AI 开发</p><p>DRM 格式修饰符用于</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12909" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Denial-WM-Compositor" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

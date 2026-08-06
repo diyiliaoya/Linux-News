@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Papirus 图标集时隔一年多迎来首次更新，新增 80+ 个图标 — Linux 中文速报</title>
+<title>这个新开源项目想成为微软Office的AI优先替代品 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #8b5cf61a; color: #8b5cf6;
-    border: 1px solid #8b5cf630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">桌面环境</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Papirus 图标集时隔一年多迎来首次更新，新增 80+ 个图标</h1>
+  <h1>这个新开源项目想成为微软Office的AI优先替代品</h1>
 
-  <div class="article-summary">Papirus 图标集在 2026 年迎来首次更新，新增或更新了 80 多个图标，涵盖应用、游戏、用户界面图标，以及新的文件 MIME 类型和修订的符号链接。维护者 Serhii Yeremenko 对更新延迟表示歉意。此次更新扩展了游戏图标（如《突击立方体：重装版》《黑色沙漠》《城市：天际线 2》等），改进了 C 语言家族 MIME 类型图标，并优化了 Cinnamon、LxQt 和 XFCE 桌面环境的支持。用户可通过 GitHub 下载或添加 PPA 安装。</div>
+  <div class="article-summary">GenOffice是一个由单一工程师使用开源组件构建的新办公套件，集成了文档、表格、幻灯片和PDF编辑器，并深度集成AI功能。它基于Genspark的AI服务，提供文档生成、改写、幻灯片制作等功能，但AI功能需要消耗Genspark的积分。目前仅支持Windows和macOS（Apple Silicon），不支持Linux，尽管有社区请求，但官方尚未回应。</div>
 
-  <div class="article-body"><p>Papirus 图标集时隔一年多迎来首次更新，新增 80+ 个图标 - OMG! Ubuntu</p><p>主题爱好者们会很高兴听到有一个新更新——这是 Papirus 自 2026 年以来的首次更新（其维护者 Serhii Yeremenko 对更新迟缓表示歉意），带来了 80 多个新增或更新的图标，涵盖应用、游戏和用户界面图标，以及新的文件 MIME 类型和修订的符号链接。</p><p>频繁的更新正是 Papirus 图标在 Linux 用户中长久受欢迎的原因。通常，Linux 图标包以盛大的方式登场，初期动力推动几次修订，但随后随着人员和维护者的离开而归于沉寂。</p><p>Papirus 自 2013 年以来一直存在，并自那时起定期更新。</p><p>维护一个图标主题需要付出大量努力。新应用不断发布，需要考虑打包格式的怪癖，应用会更改品牌或进行 UI 改版，期望提供更新的符号图标。</p><p>一个覆盖缺口常常会破坏整体外观。</p><p>在 Papirus 202608 更新中新增的图标（或接收符号链接更改）包括：</p><p>游戏覆盖范围扩大。新增了《突击立方体：重装版》《黑色沙漠》《城市：天际线 2》《军团要塞 2：机密》《守望先锋》和《空洞骑士：丝之歌》的图标。</p><p>MIME 类型和文件图标覆盖范围也扩展了更多 ROM 文件，包括任天堂 DS 模拟器使用的文件。</p><p>其他图标更改惠及 Cinnamon、LxQt 和 XFCE 桌面的用户，后者获得了更新的符号链接，为相关应用提供图标。</p><p>C 语言家族 MIME 类型图标的更改</p><p>Papirus 202608 包括为 IntelliJ IDEA Ultimate 和 Community 版重新设计的图标，其 Community 版和开源参考管理器以及项目 ReadMe 文件也获得了修订的 MIME 类型。</p><p>整个 C 语言家族 MIME 类型（文件）图标已在 Papirus v202608 中更新。它们现在使用相同的文本样式，与官方徽标衍生的页面颜色保持一致，并为“Objective”C 版本使用不同的颜色。</p><p>如何安装 Papirus 图标</p><p>从 GitHub 下载最新的 Papirus 图标发布版，然后手动将解压的文件夹移动到相关位置（例如，/usr/share/icons，凭记忆）。</p><p>如果你使用 Ubuntu、Linux Mint 或类似系统，可能会发现通过 PPA 安装更容易。PPA 为 Ubuntu 20.04 LTS 打包了最新版本。</p><p>要添加 PPA，请打开终端并运行：</p><p>sudo add-apt-repository ppa:papirus/papirus</p><p>sudo apt install papirus-icon-theme</p><p>安装后，你可以将图标主题更改为 Papirus。在 GNOME Shell 上，安装 GNOME Tweaks（sudo apt install gnome-tweaks），而其他桌面环境通常提供内置的方法来更改图标主题。</p><p>值得注意的是：沙盒应用（如 Snap 或 Flatpak）并不总是“继承”系统级别的图标主题。</p></div>
+  <div class="article-body"><p>这个新开源项目想成为微软Office的AI优先替代品</p><p>这个新开源项目想成为微软Office的AI优先替代品</p><p>由一位工程师使用开源组件构建，GenOffice集成了文档、表格、幻灯片和PDF等编辑器。</p><p>办公套件自几十年前首次出现在桌面上以来，已经发生了很大变化。最初用于打字和汇总数字的基本工具，如今已演变成包含模板、云同步以及现在的AI的庞大软件。</p><p>现在是2026年，最后这一点已将办公套件市场分为两个阵营。</p><p>微软倾向于将AI推向所有地方，Copilot出现在Word、Excel和PowerPoint中，无论你是否需要。其他公司则选择了更温和的路线，将AI构建为可以开启的功能，而不是强制性的。</p><p>GenOffice是Genspark推出的新产品，它强烈聚焦于AI，属于第一阵营，具备现代办公套件所期望的一系列编辑器。</p><p>GenOffice：快速概览</p><p>由一位开发者使用价值1万美元的token构建，GenOffice集成了四个编辑器，基于Electron的桌面应用允许你通过简单的提示起草章节、重新排版段落或为不同的读者改写内容，AI直接在文档内部工作，而不是在侧边栏中。</p><p>表格部分使用开源电子表格引擎，并配有一个内部Rust辅助程序用于读写文件。</p><p>演示文稿通过AI从单个提示生成幻灯片，选择布局、编写文案，并根据需要插入数据卡片。</p><p>办公套件的最后一部分是PDF编辑器，基于开源的PDF库构建，允许你阅读长文档并就特定段落提问，无需在应用之间切换。</p><p>很明显，AI贯穿于每个编辑器中。所有这些都通过Genspark的AI服务实现，该服务被视为应用的核心部分，而不是附加的聊天窗口。</p><p>打开、编辑和保存文件是免费的，但AI功能会消耗Genspark的积分，并将它们绑定到账户而不是本地模型。</p><p>这一点很重要，因为GenOffice似乎没有自己的隐私政策。AI功能通过Genspark的服务运行，因此你发送的任何内容都受Genspark隐私政策的约束，发送给AI功能的文本会传递给第三方提供商，并且你的设备上不会存储API密钥。</p><p>目前，GenOffice仅适用于Apple Silicon上的macOS。不支持Intel Mac，而且你可能已经猜到，也不支持Linux。</p><p>Linux版本在哪里？</p><p>有一个社区成员提交的问题（很可能是AI生成的）提到了原生Linux版本。它解释了为Linux发布GenOffice并不像听起来那么简单。</p><p>截至撰写本文时，GenOffice团队没有回复，所以我不指望短期内会有Linux版本。</p><p>如果你仍然想尝试GenOffice，可以从官方网站获取Windows和macOS的安装程序，或者查看GitHub上的源代码，看看能否自己构建一个Linux版本。</p><p>6个适用于Linux的最佳微软Office开源替代品</p><p>6个适用于Linux的最佳微软Office开源替代品</p><p>在Linux上寻找微软Office？这里有一些适用于Linux的最佳免费开源替代品。</p><p>喜欢这次更新吗？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无需承诺</p><p>一个热爱开源软件、定制PC构建、赛车运动并探索这个世界无限可能的极客。</p><p>当Torvalds在Linux中与AI和解时，Greg Kroah-Hartman划清了界限（某种程度上）</p><p>Linux最喜爱的音乐播放器Rhythmbox 3.5在3.4系列近十年后发布</p><p>GNOME Boxes不再显得古老，得益于一次焕新</p><p>AI垃圾内容不断涌入GNOME扩展，所以他们写了一篇...</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/paprius-icon-pack-sees-first-update-in-a-year-with-80-new-icons" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/genoffice-overview/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
