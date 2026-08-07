@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：AerynOS 2026.08 — Linux 中文速报</title>
+<title>Linux网络子系统持续遭受AI补丁轰炸 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：AerynOS 2026.08</h1>
+  <h1>Linux网络子系统持续遭受AI补丁轰炸</h1>
 
-  <div class="article-summary">AerynOS 团队发布了实验性发行版的新快照2026.08，该版本改进了文件系统支持，包括为数据池提供OpenZFS。开发团队表示，过去一年他们专注于强化核心工具和基础设施，现在已能无缝更新磁盘仓库和文件格式，未来将转向更开放和协作的模式。此次更新增加了对Btrfs、bcachefs和OpenZFS数据盘的支持，并邀请社区用户测试OpenZFS并提供反馈。</div>
+  <div class="article-summary">Linux网络子系统持续受到AI生成补丁的冲击。尽管WiFi/无线子系统维护者刚刚宣布采取“三秒审查”规则来抵制AI/LLM生成的劣质补丁，但更广泛的网络子系统仍面临大量AI补丁。Jakub Kicinski在最新的网络补丁请求中指出，过去9天内，标记为[PATCH net]的补丁有405个，[PATCH net-next]的有687个，其中37%为修复补丁，且实际数量可能被低估。他承认调整标准以控制补丁规模，但问题仍在继续。</div>
 
-  <div class="article-body"><p>发行版发布：AerynOS 2026.08</p><p>AerynOS团队已发布实验性发行版的更新。快照2026.08包括改进的文件系统支持，包括为数据池提供OpenZFS：</p><p>“从开发故事线的角度来看，AerynOS在过去一年里一直被刻意严格控制，因为我们专注于强化核心工具和基础设施代码库。虽然我们距离工具愿景的‘完成’还很远，但既然我们已经确保了无缝更新磁盘仓库和文件格式的能力，你会看到AerynOS有意转向一个更开放和协作的空间，供那些想参与项目并从事有趣、有吸引力工作的人使用。这种方法的转变在过去几个月已经很明显，因为项目在各个社交媒体平台，尤其是Zulip服务器上的参与度持续增长。Reilly致力于在AerynOS中添加OpenZFS数据盘支持。这意味着我们现在支持Btrfs、bcachefs和OpenZFS驱动器用于用户管理的数据盘。Reilly已在他的一块驱动器上测试了OpenZFS；然而，我们需要你们——我们的早期采用者社区——的帮助，在你们的驱动器上测试OpenZFS并提供反馈，以便我们进行迭代。”</p><p>更多信息请参阅AerynOS-2026.08-GNOME-live-x86_64.iso。</p></div>
+  <div class="article-body"><p>Linux网络子系统持续遭受AI补丁轰炸 - Phoronix</p><p>Linux网络子系统持续遭受AI补丁轰炸</p><p>2026年8月6日下午3:07（美国东部时间）</p><p>虽然Linux WiFi/无线子系统维护者刚刚宣布采取“三秒审查”规则，以抵制AI/LLM生成的劣质补丁，但更广泛的Linux网络子系统仍持续遭受AI生成补丁的轰炸。</p><p>Jakub Kicinski在周日Linux 7.2-rc7内核测试版发布前，发送了本周的网络补丁集。在之前的几周里，他曾指出AI生成补丁的增加以及“新常态”，某些周网络领域的典型补丁数量激增，且疯狂持续，看不到尽头。这甚至是在今年早些时候Linux 7.1以AI/LLM对旧/未使用代码的噪音为由，移除了旧网络驱动、ISDN子系统和其他网络代码之后发生的。</p><p>Kicinski在今天的网络拉取请求中指出：</p><p>“看起来我们试图保持拉取请求更小的努力，只是阻止了这次请求变得更大。在过去9天里，有405个明确标记为[PATCH net]的帖子，而[PATCH net-next]有687个。37%的补丁是修复补丁，这相当疯狂，而且这可能被低估了，因为LLM‘研究人员’更常发布修复补丁，却不知道为特定树标记补丁。我没有历史数据。无论如何，我们一直在调整标准。下一个拉取请求会更小。”</p><p>情况仍在继续。本周的bug和回归修复补丁分散在整个网络子系统中。</p><p>Linux无线维护者对AI/LLM生成的劣质补丁采取坚定立场</p><p>Linux 7.3将添加MCTP-Over-USB v1.1支持</p><p>Linux 7.3将支持Realtek RTL8261C和RTL8261D</p><p>Realtek RTL8723B/RTL8723BS试图加入RTW88 Linux驱动</p><p>Linux 7.2-rc5修复IPv4 over Firewire的长期Bug</p><p>NetworkManager 1.58发布，支持464XLAT CLAT和GENEVE接口</p><p>Michael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动等主题。他还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>Valve赞助将开源RADV驱动带到Windows的工作</p><p>首个面向现代AMD Ryzen AM5平台的开源固件发布</p><p>Arch Linux AUR再次遭遇恶意软件包浪潮，软件包收养暂停</p><p>知名Arch Linux开发者十年后辞职</p><p>旧AMD GPU的DRM格式修饰符随Linux 7.3到来：感谢Valve</p><p>Steam在Linux上的使用率7月回升至4%以上</p><p>FFmpeg 9.0发布，带来更多Vulkan加速、动画WebP和更多AMD AMF功能</p><p>Linux 7.3似乎将上游FailFS</p><p>无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12910" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-Net-Bombarded-AI-Patches" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

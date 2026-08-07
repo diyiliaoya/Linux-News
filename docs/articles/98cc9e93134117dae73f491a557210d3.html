@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：AerynOS 2026.08 — Linux 中文速报</title>
+<title>AMD为Linux 7.3提交最后一批图形驱动更新 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：AerynOS 2026.08</h1>
+  <h1>AMD为Linux 7.3提交最后一批图形驱动更新</h1>
 
-  <div class="article-summary">AerynOS 团队发布了实验性发行版的新快照2026.08，该版本改进了文件系统支持，包括为数据池提供OpenZFS。开发团队表示，过去一年他们专注于强化核心工具和基础设施，现在已能无缝更新磁盘仓库和文件格式，未来将转向更开放和协作的模式。此次更新增加了对Btrfs、bcachefs和OpenZFS数据盘的支持，并邀请社区用户测试OpenZFS并提供反馈。</div>
+  <div class="article-summary">AMD今日提交了Linux 7.3合并窗口开启前的最后一批功能更新和修复，涵盖SMU 15 IP更新、Display Core流验证重构、经典Radeon驱动性能回归修复，以及基于Valve贡献的GFX6图形IP重做以改善早期GCN显卡的软复位恢复。此外还包括JPEG队列重置修复、边界检查修复、DCN 6.0.0初步支持等多项改进。</div>
 
-  <div class="article-body"><p>发行版发布：AerynOS 2026.08</p><p>AerynOS团队已发布实验性发行版的更新。快照2026.08包括改进的文件系统支持，包括为数据池提供OpenZFS：</p><p>“从开发故事线的角度来看，AerynOS在过去一年里一直被刻意严格控制，因为我们专注于强化核心工具和基础设施代码库。虽然我们距离工具愿景的‘完成’还很远，但既然我们已经确保了无缝更新磁盘仓库和文件格式的能力，你会看到AerynOS有意转向一个更开放和协作的空间，供那些想参与项目并从事有趣、有吸引力工作的人使用。这种方法的转变在过去几个月已经很明显，因为项目在各个社交媒体平台，尤其是Zulip服务器上的参与度持续增长。Reilly致力于在AerynOS中添加OpenZFS数据盘支持。这意味着我们现在支持Btrfs、bcachefs和OpenZFS驱动器用于用户管理的数据盘。Reilly已在他的一块驱动器上测试了OpenZFS；然而，我们需要你们——我们的早期采用者社区——的帮助，在你们的驱动器上测试OpenZFS并提供反馈，以便我们进行迭代。”</p><p>更多信息请参阅AerynOS-2026.08-GNOME-live-x86_64.iso。</p></div>
+  <div class="article-body"><p>AMD今日提交了本月晚些时候合并窗口开启前的最后一批计划功能更新。</p><p>此前几周，已有多个AMDGPU/AMDKFD拉取请求提交至DRM-Next，包括：改进旧硬件的GPU重置恢复、旧硬件的DRM格式修饰符支持（该旧硬件改进由Valve提供）、GFX11 APU的第二图形管线。现在，在Linux 7.3合并窗口（8月下半月开启）之前，又提交了最后一轮附加功能工作和修复。</p><p>今日的拉取请求包括：SMU 15 IP更新、各种其他SMU更新、Display Core（DC）流验证重构、经典Radeon DRM驱动的性能回归修复、基于Valve的Timur Kristóf贡献的旧GFX6图形IP重做（作为改善早期GCN显卡软复位恢复的一部分），以及各种修复。</p><p>amd-drm-next-7.3-2026-08-06：</p><p>- JPEG队列重置修复</p><p>- Lockdep误报修复</p><p>- 边界检查修复</p><p>- 孔径映射修复</p><p>- DC自刷新修复</p><p>- DCN 6.0.0初步支持</p><p>- GC 6软复位重做</p><p>- 显示边界检查修复</p><p>- 更多显示KUnit测试</p><p>- DC流验证重构</p><p>- 性能回归修复</p><p>Linux 7.3合并窗口前这最后一批AMDGPU/AMDKFD/Radeon驱动补丁的完整列表，可通过以下链接查看：</p><p>AMD GFX1171支持已合并至Mesa 26.3</p><p>AMD准备HDMI FRL修复，新增禁用旧AMD GPU DCE显示支持的开关</p><p>Linux 7.3改进AMD Kaveri、Hawaii及其他GFX7 GPU的重置恢复</p><p>AMD开始为RDNA5 GPU发布Display Core Next 6 &quot;DCN6&quot; Linux补丁</p><p>AMD发布HDMI 2.1自动低延迟模式&quot;ALLM&quot;及VRR的Linux补丁</p><p>DRM格式修饰符即将随Linux 7.3支持旧AMD GPU：感谢Valve</p><p>Michael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Valve赞助将开源RADV驱动移植到Windows的工作</p><p>现代AMD Ryzen AM5平台首个开源固件发布</p><p>Arch Linux AUR再次遭遇恶意软件包浪潮，软件包接管暂停</p><p>资深Arch Linux开发者任职10年后辞职</p><p>DRM格式修饰符即将随Linux 7.3支持旧AMD GPU：感谢Valve</p><p>Steam Linux使用率7月回升至4%以上</p><p>FFmpeg 9.0发布，带来更多Vulkan加速、动画WebP及AMD AMF支持</p><p>Linux 7.3似乎将上游化FailFS</p><p>无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12910" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/AMDGPU-Linux-7.3-Last-Round" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

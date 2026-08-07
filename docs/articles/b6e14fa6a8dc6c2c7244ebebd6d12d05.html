@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：AerynOS 2026.08 — Linux 中文速报</title>
+<title>IceWM 4.1 窗口管理器修复罕见的视频性能问题 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：AerynOS 2026.08</h1>
+  <h1>IceWM 4.1 窗口管理器修复罕见的视频性能问题</h1>
 
-  <div class="article-summary">AerynOS 团队发布了实验性发行版的新快照2026.08，该版本改进了文件系统支持，包括为数据池提供OpenZFS。开发团队表示，过去一年他们专注于强化核心工具和基础设施，现在已能无缝更新磁盘仓库和文件格式，未来将转向更开放和协作的模式。此次更新增加了对Btrfs、bcachefs和OpenZFS数据盘的支持，并邀请社区用户测试OpenZFS并提供反馈。</div>
+  <div class="article-summary">IceWM 4.1 作为自 4.0 以来的首个新版本，现已发布。该版本包含多项错误修复，其中最引人注目的是避免罕见的视频性能问题。此外，新增了 ignoreUserTime 窗口选项和 icesh 的鼠标移动命令，并更新了部分翻译。此版本还修复了配置文件中的未终止字符串处理、_NET_STARTUP_ID 解析错误以及图片释放顺序问题。</div>
 
-  <div class="article-body"><p>发行版发布：AerynOS 2026.08</p><p>AerynOS团队已发布实验性发行版的更新。快照2026.08包括改进的文件系统支持，包括为数据池提供OpenZFS：</p><p>“从开发故事线的角度来看，AerynOS在过去一年里一直被刻意严格控制，因为我们专注于强化核心工具和基础设施代码库。虽然我们距离工具愿景的‘完成’还很远，但既然我们已经确保了无缝更新磁盘仓库和文件格式的能力，你会看到AerynOS有意转向一个更开放和协作的空间，供那些想参与项目并从事有趣、有吸引力工作的人使用。这种方法的转变在过去几个月已经很明显，因为项目在各个社交媒体平台，尤其是Zulip服务器上的参与度持续增长。Reilly致力于在AerynOS中添加OpenZFS数据盘支持。这意味着我们现在支持Btrfs、bcachefs和OpenZFS驱动器用于用户管理的数据盘。Reilly已在他的一块驱动器上测试了OpenZFS；然而，我们需要你们——我们的早期采用者社区——的帮助，在你们的驱动器上测试OpenZFS并提供反馈，以便我们进行迭代。”</p><p>更多信息请参阅AerynOS-2026.08-GNOME-live-x86_64.iso。</p></div>
+  <div class="article-body"><p>IceWM 4.1 窗口管理器修复罕见的视频性能问题 - Phoronix</p><p>IceWM 4.1 窗口管理器修复罕见的视频性能问题</p><p>2026年8月6日下午2:55（美国东部时间）</p><p>作为自 IceWM 4.0 于元旦发布以来的首个新版本，IceWM 4.1 现已可用。</p><p>IceWM 4.1 带来了一些错误修复，以及一个新的“ignoreUserTime”窗口选项和 icesh 的“鼠标移动”命令。此外，还有一些翻译更新。</p><p>在修复方面，最值得注意的是避免罕见的视频性能问题的修复。</p><p>- 默认将 Alpha 设为 false，以避免罕见的视频性能问题。</p><p>- 正确处理配置文件中的未终止字符串。</p><p>- 正确处理 _NET_STARTUP_ID 的字符串解析错误。</p><p>- 在释放 pixmap 之前释放图片，以防止错误消息。</p><p>- 为问题 #833 添加新的窗口选项 ignoreUserTime。</p><p>- 向 icesh 添加“mousemove”命令。</p><p>IceWM 4.1 X11 窗口管理器可以从以下位置下载：</p><p>Vibe Coded X11 YSERVER 获得 Steam 支持，Cinnamon 下全屏游戏</p><p>libx11-compat 正在努力在 SDL 之上实现 Xlib，用于 Wayland、macOS、Android</p><p>Frame：一个完全用 x86_64 汇编语言编写的新 X11 服务器实现</p><p>XWayland 24.1.13 发布，修复 X.Org 代码库中的两个更多安全问题</p><p>Vibe Coded 用 Rust 编写的 X11 服务器添加了 Xinerama、FreeBSD 支持和其他功能</p><p>YSERVER：在 Claude Code 的帮助下用 Rust 编写的现代 X11 服务器</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动程序和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发人员。您可以通过以下方式关注他：</p><p>Valve 赞助将开源 RADV 驱动程序移植到 Windows 的工作</p><p>首个面向现代 AMD Ryzen AM5 平台的开源固件发布</p><p>Arch Linux AUR 再次遭遇恶意软件包浪潮，软件包采用暂停</p><p>知名 Arch Linux 开发者在任职 10 年后辞职</p><p>旧 AMD GPU 的 DRM 格式修饰符随 Linux 7.3 推出：感谢 Valve</p><p>Steam 在 Linux 上的使用率在 7 月份回升至 4% 以上</p><p>FFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 和更多 AMD AMF 功能</p><p>Linux 7.3 看起来将上游 FailFS</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12910" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/IceWM-4.1-Released" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：AerynOS 2026.08 — Linux 中文速报</title>
+<title>Zapscape：Linux KVM 客户机到宿主机逃逸及本地提权的最新漏洞 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：AerynOS 2026.08</h1>
+  <h1>Zapscape：Linux KVM 客户机到宿主机逃逸及本地提权的最新漏洞</h1>
 
-  <div class="article-summary">AerynOS 团队发布了实验性发行版的新快照2026.08，该版本改进了文件系统支持，包括为数据池提供OpenZFS。开发团队表示，过去一年他们专注于强化核心工具和基础设施，现在已能无缝更新磁盘仓库和文件格式，未来将转向更开放和协作的模式。此次更新增加了对Btrfs、bcachefs和OpenZFS数据盘的支持，并邀请社区用户测试OpenZFS并提供反馈。</div>
+  <div class="article-summary">Zapscape 是一个影响 Linux KVM x86 代码的客户机到宿主机逃逸漏洞，自 2020 年内核变更引入，影响范围达六年。该漏洞源于影子 MMU 模拟代码中的释放后使用问题，攻击者可通过客户机操作使宿主机内核崩溃（DoS）或执行任意代码（RCE）。在 RHEL 等发行版中，/dev/kvm 为全局可写，非特权用户可利用此漏洞进行本地提权。该漏洞已于 7 月 21 日修复，并公开了概念验证代码。</div>
 
-  <div class="article-body"><p>发行版发布：AerynOS 2026.08</p><p>AerynOS团队已发布实验性发行版的更新。快照2026.08包括改进的文件系统支持，包括为数据池提供OpenZFS：</p><p>“从开发故事线的角度来看，AerynOS在过去一年里一直被刻意严格控制，因为我们专注于强化核心工具和基础设施代码库。虽然我们距离工具愿景的‘完成’还很远，但既然我们已经确保了无缝更新磁盘仓库和文件格式的能力，你会看到AerynOS有意转向一个更开放和协作的空间，供那些想参与项目并从事有趣、有吸引力工作的人使用。这种方法的转变在过去几个月已经很明显，因为项目在各个社交媒体平台，尤其是Zulip服务器上的参与度持续增长。Reilly致力于在AerynOS中添加OpenZFS数据盘支持。这意味着我们现在支持Btrfs、bcachefs和OpenZFS驱动器用于用户管理的数据盘。Reilly已在他的一块驱动器上测试了OpenZFS；然而，我们需要你们——我们的早期采用者社区——的帮助，在你们的驱动器上测试OpenZFS并提供反馈，以便我们进行迭代。”</p><p>更多信息请参阅AerynOS-2026.08-GNOME-live-x86_64.iso。</p></div>
+  <div class="article-body"><p>Zapscape 是影响 Linux KVM x86 代码的客户机到宿主机逃逸漏洞，该漏洞已存在六年。今天早些时候，该漏洞被公开。2020 年对 KVM x86 的内核变更也可被用作本地提权（LPE）漏洞，因为在某些 Linux 发行版（如 RHEL）中，/dev/kvm 是全局可写的。</p><p>Zapscape 是一个 KVM 逃逸漏洞，允许 KVM x86/x86_64 客户机逃逸到宿主机，并以 root 权限在宿主机上执行命令。该漏洞围绕 x86 代码路径中基于内核的虚拟机（KVM）的影子 MMU 模拟代码中的释放后使用漏洞展开。</p><p>随着今天的公告、漏洞的炫酷图形和相关信息的发布，还公开了一个概念验证（PoC）示例，尽管并非武器化形式。</p><p>受影响的 Linux 内核版本从 2020 年年中到 7 月 21 日，该问题通过检查 MMU 页面可用后的无效/过时根目录而得到修复。</p><p>仅通过客户机侧操作，攻击者就可以破坏运行其虚拟机的宿主机。例如，攻击者只需在公共云上租用一个实例，就可以使宿主机内核崩溃，从而击垮同一物理机器上的所有其他租户虚拟机（DoS），或者以 root 权限在宿主机上运行代码，从而接管宿主机及其上的所有客户机（RCE）。</p><p>在 RHEL 等发行版中，/dev/kvm 是全局可写的（0666），因此非特权用户也可以利用此漏洞作为本地提权（LPE）来获取 root 权限。当用作 LPE 时，宿主机侧的 VMM ioctl 可用，因此漏洞利用变得更加容易和稳定。</p><p>关于 Zapscape 的更多详细信息，请参阅 Zapscape GitHub 仓库。</p><p>Xen 4.22 发布，支持 AMD Zen 5 BLT，改进 RISC-V 虚拟化</p><p>“KVM Chainsaw” 预计将进入 Linux 7.3，用于处理 God 数据结构</p><p>Cloud Hypervisor 53 发布，支持卸载快照/恢复守护进程</p><p>“大量 AI 驱动的修复”意味着 Linux 7.2 不会为 ARM64 KVM 添加新功能</p><p>Broadcom 正在研究 VMware 虚拟机与虚拟机监控程序之间的零拷贝缓冲区共享</p><p>Linux 的 KVM 为虚拟机中的 APX 支持做准备</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动程序和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>Valve 赞助将开源 RADV 驱动移植到 Windows 的工作</p><p>首个面向现代 AMD Ryzen AM5 平台的开源固件发布</p><p>Arch Linux AUR 再次遭遇恶意软件包浪潮，软件包采用暂停</p><p>知名 Arch Linux 开发者任职 10 年后辞职</p><p>旧 AMD GPU 的 DRM 格式修饰符将随 Linux 7.3 推出：感谢 Valve</p><p>Steam 在 Linux 上的使用率在 7 月重新突破 4%</p><p>FFmpeg 9.0 发布，支持更多 Vulkan 加速、动画 WebP 及更多 AMD AMF</p><p>Linux 7.3 看起来将上游 FailFS</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12910" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-Zapscape-Vulnerability" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

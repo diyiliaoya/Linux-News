@@ -5795,5 +5795,137 @@
     "title_zh": "在Linux中检查远程端口连通性的5种方法",
     "summary_zh": "本文介绍了在Linux系统中检查远程端口连通性的五种实用方法，帮助用户进行网络诊断并确保系统性能。这些方法包括使用telnet、nc（netcat）、nmap、/dev/tcp以及ss命令等，每种方法都有其适用场景和优缺点。通过掌握这些技巧，系统管理员可以快速定位网络问题，验证服务是否正常运行，并优化网络配置。文章旨在提升用户的网络故障排查能力，确保远程服务的可用性和稳定性。",
     "fulltext_zh": "学习在Linux中验证远程端口连通性的5种基本方法。通过这些实用技巧，改进你的网络诊断并确保最佳性能。\n\n这篇文章《在Linux中检查远程端口连通性的5种方法》首先出现在Linux Today上。"
+  },
+  "439bd02ca554188d758867f29107a9f5": {
+    "id": "439bd02ca554188d758867f29107a9f5",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12914",
+    "title_en": "Mobile OS Release: Murena 4.1.1",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Murena is an umbrella name for the /e/OS operating system, associated open source powered smartphones, and cloud-based services. Murena has published /e/OS 4.1.1 which introduces new tools, including a backup option to make migration to new devices easier. \"Fairphone 6 is now available on AOSP 16 Backup &....",
+    "pub_date": "",
+    "title_zh": "移动操作系统发布：Murena 4.1.1",
+    "summary_zh": "Murena 发布了 /e/OS 4.1.1 版本，该版本引入了多项新工具，包括备份与恢复（测试版）、内置密码管理器以及离线语音转文字功能。备份功能可自动将应用及其数据备份到 Murena Workspace，并支持在新设备上恢复。密码管理器支持密码的保存、生成和自动填充，并支持离线缓存。语音转文字功能完全离线运行，语言模型按需下载，所有用户均可使用，无需高级账户。",
+    "fulltext_zh": "移动操作系统发布：Murena 4.1.1（DistroWatch.com 新闻）\n\nDistroWatch.com 由以下赞助商支持\n\n新闻/观点/评测 ▼\n发布公告\nDW 周报 / 评测存档\n访客评分与评测\n按评分排列的项目排名\n播客、新闻通讯与评测\n跨发行版软件包比较\n显示所有发行版的软件包版本\n搜索发行版 - 高级\n已停止维护的发行版\n教程与学习 ▼\n搜索文章\n问答专栏\n技巧与诀窍专栏\n常见误解专栏\n简化手册页\n其他操作系统\n发行版验证密钥\n发行版家族树可视化\n常见问题解答\n我们的捐赠计划\n\n小型企业电话系统\nProxmox 现已支持 ARM 处理器\nMageia 重点介绍 Pidgin\nArch 项目将阻止对 AUR 的新推送\nUbuntu 将为 LTS 版本提供虚拟化工具升级\nGardua 更新 FireDragon 网络浏览器，采用新基础\nHaiku 获得在移植浏览器中使用 Firefox 品牌的权利\nFreeBSD 发布 2026 年第二季度状态报告\nDebian 讨论 LLM 工具的使用\nFreeBSD 暂时冻结 ports 树\nDebian 启动 Perl 更新\n\n易于使用的 PBX - 托管或自管理\n适用于 Linux 的电话系统\n免费在线聊天解决方案\n集成呼叫中心软件\n联络中心软件\n远程办公应用：iOS 或 Android\n免费视频会议\n3CX 提供的 VoIP / PBX 操作指南\n\n不要被措手不及，制定灾难恢复计划！\n必备的在线聊天报告与统计\n导致呼叫欺诈的常见错误\nWhatsApp Business 与 3CX WhatsApp API 集成对比\n3CX StartUP 的 5 大杀手级功能\n不要成为“那种人”第 1 卷：保持复杂凭据\n不要成为“那种人”第 2 卷：呼叫欺诈\n不要成为“那种人”第 3 卷：四大安全提示\n不要成为“那种人”第 4 卷：监控您的实例\n\nRed Hat 周五五件事 - 2026 年 8 月 7 日\nUbuntu 每周通讯 955 期\nPCLinuxOS 杂志 2026 年 8 月刊\nHardenedBSD 2026 年 6 月/7 月状态报告\nFull Circle 杂志 231 期\nDistrohoppers' Digest\nFull Circle 每周新闻\nGalactic Mandate Linux\n最新新闻与更新\n新闻过滤选项\n\n移动操作系统发布：Murena 4.1.1\n\nMurena 是 /e/OS 操作系统、相关的开源智能手机以及基于云的服务总称。Murena 发布了 /e/OS 4.1.1 版本，该版本引入了新工具，包括备份选项，使迁移到新设备更加容易。\n\n“Fairphone 6 现已支持 AOSP 16。备份与恢复（测试版）：/e/OS 现在可以自动将您的应用及其数据备份到您的 Murena Workspace，并在新设备上或重置后恢复它们。备份在设备空闲时自动运行，可以限制为仅在 Wi-Fi 下进行，在电池电量低时暂停，并在上传失败时自动重试。您可以一目了然地看到上次备份的时间和状态，清晰的每个应用信息显示哪些内容已备份以及哪些可以恢复。/e/OS 密码管理器：一个全新的内置密码管理器：可以在应用和网站中保存、自动生成和自动填充密码。离线缓存让您即使在没有连接的情况下也能检索密码，您的密码库可以安全备份和同步。离线语音转文字：Murena 语音转文字现在可以完全在您的设备上运行，因此您可以在没有互联网连接的情况下进行听写。语言模型按需下载。现在所有用户均可使用 - 无需高级账户。”\n\n有关 4.1.1 版本的更多信息，请参阅发布公告。支持的设备列表和安装选项可在公司网站上找到。\n\n最近相关新闻与发布\n移动操作系统发布：Murena 4.1.1\n移动操作系统发布：Murena 3.6\n移动操作系统发布：Murena 3.2\n移动操作系统发布：Murena 3.1.1\n移动操作系统发布：Murena 3.0\n移动操作系统发布：Murena 2.9\n\nMurena 是 /e/OS 操作系统、相关的开源智能手机以及基于云的服务总称。Murena 项目为常见智能手机提供开源镜像、基于云的开源存储、日历和备份解决方案，并销售预装 /e/OS 的手机。"
+  },
+  "bed0ba8cc6f59fc52c4025c5ff11548a": {
+    "id": "bed0ba8cc6f59fc52c4025c5ff11548a",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12913",
+    "title_en": "Distribution Release: Soplos Linux 2026.08",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Sergi Perich has announced the release of Soplos Linux 2026.08, a new stable release of the project's set of desktop Linux distributions based on Debian's \"Testing\" branch. It ships with a number of custom applications, such as Soplos Theme Manager, Soplos Plymouth Manager, Soplos Docklike and Soplos GRUB....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Soplos Linux 2026.08",
+    "summary_zh": "Soplos Linux 2026.08稳定版发布，基于Debian Testing分支，提供GNOME、KDE Plasma和Xfce三种桌面环境。此版本同步发布三个变体，内核升级至7.1.5，新增mesa-vulkan-drivers和openssh-common，并完全移除专有NVIDIA驱动。",
+    "fulltext_zh": "Sergi Perich宣布发布Soplos Linux 2026.08，这是该项目基于Debian Testing分支的一系列桌面Linux发行版的新稳定版本。该版本附带多个自定义应用程序，如Soplos主题管理器、Soplos Plymouth管理器、Soplos Docklike和Soplos GRUB编辑器，并提供三种桌面环境选择：GNOME（\"Boro\"）、KDE Plasma（\"Tyson\"）和Xfce（\"Tyron\"）。原始西班牙语公告的英文翻译提供了所有细节：\"这一天终于到来了。Soplos Linux 2026.08现已作为稳定版本提供。经过数月的测试版和候选发布版，项目迈出了最后一步。该发行版的三个变体'Tyron'、'Tyson'和'Boro'同时发布，没有遗漏任何一个。同样，系统核心在这三个ISO镜像中也有所推进。自定义Soplos内核升级至7.1.5版本。因此，mesa-vulkan-drivers也以26.1.5版本加入，改善了标准的Vulkan图形支持。此外，还加入了openssh-common，增强了首次启动时可用的网络工具。然而，此版本最引人注目的变化是其他方面。Soplos Linux 2026.08完全从ISO镜像中移除了专有的NVIDIA驱动。\n\nsoplos-linux-tyron-2026.08.iso\nsoplos-linux-tyson-2026.08.iso（3,442MB，KDE Plasma）\nsoplos-linux-boro-2026.08.iso\n\n最近相关新闻和发布：\n发行版发布：Soplos Linux 2026.08\n\nSoplos Linux是一组基于Debian Testing分支的桌面Linux发行版，包含多种流行的桌面环境。它提供滚动更新、最新软件、相对轻量且可定制的桌面、对旧硬件的兼容性，以及各种速度和性能优化功能。该发行版附带多个自定义应用程序，如Soplos主题管理器、So"
+  },
+  "98cc9e93134117dae73f491a557210d3": {
+    "id": "98cc9e93134117dae73f491a557210d3",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMDGPU-Linux-7.3-Last-Round",
+    "title_en": "AMD Squeezes In A Few More Graphics Driver Updates For Linux 7.3",
+    "summary_en": "AMD today submitted their last planned feature updates ahead of the Linux 7.3 merge window opening later this month...",
+    "pub_date": "Thu, 06 Aug 2026 20:44:47 -0400",
+    "title_zh": "AMD为Linux 7.3提交最后一批图形驱动更新",
+    "summary_zh": "AMD今日提交了Linux 7.3合并窗口开启前的最后一批功能更新和修复，涵盖SMU 15 IP更新、Display Core流验证重构、经典Radeon驱动性能回归修复，以及基于Valve贡献的GFX6图形IP重做以改善早期GCN显卡的软复位恢复。此外还包括JPEG队列重置修复、边界检查修复、DCN 6.0.0初步支持等多项改进。",
+    "fulltext_zh": "AMD今日提交了本月晚些时候合并窗口开启前的最后一批计划功能更新。\n\n此前几周，已有多个AMDGPU/AMDKFD拉取请求提交至DRM-Next，包括：改进旧硬件的GPU重置恢复、旧硬件的DRM格式修饰符支持（该旧硬件改进由Valve提供）、GFX11 APU的第二图形管线。现在，在Linux 7.3合并窗口（8月下半月开启）之前，又提交了最后一轮附加功能工作和修复。\n\n今日的拉取请求包括：SMU 15 IP更新、各种其他SMU更新、Display Core（DC）流验证重构、经典Radeon DRM驱动的性能回归修复、基于Valve的Timur Kristóf贡献的旧GFX6图形IP重做（作为改善早期GCN显卡软复位恢复的一部分），以及各种修复。\n\namd-drm-next-7.3-2026-08-06：\n- JPEG队列重置修复\n- Lockdep误报修复\n- 边界检查修复\n- 孔径映射修复\n- DC自刷新修复\n- DCN 6.0.0初步支持\n- GC 6软复位重做\n- 显示边界检查修复\n- 更多显示KUnit测试\n- DC流验证重构\n- 性能回归修复\n\nLinux 7.3合并窗口前这最后一批AMDGPU/AMDKFD/Radeon驱动补丁的完整列表，可通过以下链接查看：\n\nAMD GFX1171支持已合并至Mesa 26.3\nAMD准备HDMI FRL修复，新增禁用旧AMD GPU DCE显示支持的开关\nLinux 7.3改进AMD Kaveri、Hawaii及其他GFX7 GPU的重置恢复\nAMD开始为RDNA5 GPU发布Display Core Next 6 \"DCN6\" Linux补丁\nAMD发布HDMI 2.1自动低延迟模式\"ALLM\"及VRR的Linux补丁\nDRM格式修饰符即将随Linux 7.3支持旧AMD GPU：感谢Valve\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nValve赞助将开源RADV驱动移植到Windows的工作\n现代AMD Ryzen AM5平台首个开源固件发布\nArch Linux AUR再次遭遇恶意软件包浪潮，软件包接管暂停\n资深Arch Linux开发者任职10年后辞职\nDRM格式修饰符即将随Linux 7.3支持旧AMD GPU：感谢Valve\nSteam Linux使用率7月回升至4%以上\nFFmpeg 9.0发布，带来更多Vulkan加速、动画WebP及AMD AMF支持\nLinux 7.3似乎将上游化FailFS\n\n无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "2a80ea44300a3bdf11386ef61d556691": {
+    "id": "2a80ea44300a3bdf11386ef61d556691",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-Zapscape-Vulnerability",
+    "title_en": "Zapscape Is The Latest Linux Vulnerability For KVM Guest-To-Host Escape, LPE",
+    "summary_en": "Made public earlier today is Zapscape as a guest-to-host escape vulnerability affecting the Linux KVM x86 code for the past six years. This 2020 kernel change to KVM x86 can also be used as a local privilege escalation (LPE) exploit too where /dev/kvm is world-writable on some Linux distributions like RHEL...",
+    "pub_date": "Thu, 06 Aug 2026 20:29:00 -0400",
+    "title_zh": "Zapscape：Linux KVM 客户机到宿主机逃逸及本地提权的最新漏洞",
+    "summary_zh": "Zapscape 是一个影响 Linux KVM x86 代码的客户机到宿主机逃逸漏洞，自 2020 年内核变更引入，影响范围达六年。该漏洞源于影子 MMU 模拟代码中的释放后使用问题，攻击者可通过客户机操作使宿主机内核崩溃（DoS）或执行任意代码（RCE）。在 RHEL 等发行版中，/dev/kvm 为全局可写，非特权用户可利用此漏洞进行本地提权。该漏洞已于 7 月 21 日修复，并公开了概念验证代码。",
+    "fulltext_zh": "Zapscape 是影响 Linux KVM x86 代码的客户机到宿主机逃逸漏洞，该漏洞已存在六年。今天早些时候，该漏洞被公开。2020 年对 KVM x86 的内核变更也可被用作本地提权（LPE）漏洞，因为在某些 Linux 发行版（如 RHEL）中，/dev/kvm 是全局可写的。\n\nZapscape 是一个 KVM 逃逸漏洞，允许 KVM x86/x86_64 客户机逃逸到宿主机，并以 root 权限在宿主机上执行命令。该漏洞围绕 x86 代码路径中基于内核的虚拟机（KVM）的影子 MMU 模拟代码中的释放后使用漏洞展开。\n\n随着今天的公告、漏洞的炫酷图形和相关信息的发布，还公开了一个概念验证（PoC）示例，尽管并非武器化形式。\n\n受影响的 Linux 内核版本从 2020 年年中到 7 月 21 日，该问题通过检查 MMU 页面可用后的无效/过时根目录而得到修复。\n\n仅通过客户机侧操作，攻击者就可以破坏运行其虚拟机的宿主机。例如，攻击者只需在公共云上租用一个实例，就可以使宿主机内核崩溃，从而击垮同一物理机器上的所有其他租户虚拟机（DoS），或者以 root 权限在宿主机上运行代码，从而接管宿主机及其上的所有客户机（RCE）。\n\n在 RHEL 等发行版中，/dev/kvm 是全局可写的（0666），因此非特权用户也可以利用此漏洞作为本地提权（LPE）来获取 root 权限。当用作 LPE 时，宿主机侧的 VMM ioctl 可用，因此漏洞利用变得更加容易和稳定。\n\n关于 Zapscape 的更多详细信息，请参阅 Zapscape GitHub 仓库。\n\nXen 4.22 发布，支持 AMD Zen 5 BLT，改进 RISC-V 虚拟化\n\n“KVM Chainsaw” 预计将进入 Linux 7.3，用于处理 God 数据结构\n\nCloud Hypervisor 53 发布，支持卸载快照/恢复守护进程\n\n“大量 AI 驱动的修复”意味着 Linux 7.2 不会为 ARM64 KVM 添加新功能\n\nBroadcom 正在研究 VMware 虚拟机与虚拟机监控程序之间的零拷贝缓冲区共享\n\nLinux 的 KVM 为虚拟机中的 APX 支持做准备\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动程序和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nValve 赞助将开源 RADV 驱动移植到 Windows 的工作\n\n首个面向现代 AMD Ryzen AM5 平台的开源固件发布\n\nArch Linux AUR 再次遭遇恶意软件包浪潮，软件包采用暂停\n\n知名 Arch Linux 开发者任职 10 年后辞职\n\n旧 AMD GPU 的 DRM 格式修饰符将随 Linux 7.3 推出：感谢 Valve\n\nSteam 在 Linux 上的使用率在 7 月重新突破 4%\n\nFFmpeg 9.0 发布，支持更多 Vulkan 加速、动画 WebP 及更多 AMD AMF\n\nLinux 7.3 看起来将上游 FailFS\n\n在享受无广告浏览的同时，\n\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026，由\n\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "92a0edd40e21705efadc8d8ecfb5c1e0": {
+    "id": "92a0edd40e21705efadc8d8ecfb5c1e0",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Btrfs-Restores-Fixup-Worker",
+    "title_en": "Linux 7.2-rc7 Restoring Btrfs Fixup Worker Infrastructure To Address Silent Data Loss",
+    "summary_en": "Back during the Linux 7.2 merge window the Btrfs file-system dropped its COW fixup mechanism, which was used to detect dirty pages without an ordered extent. This code was removed as it was believed the kernel's memory management layer had solved the underlying conditions but in reality it ended up leading to silent data loss. That Btrfs fixup worker infrastructure is now restored in time for Linux 7.2-rc7 this weekend and the stable v7.2 kernel later this month...",
+    "pub_date": "Thu, 06 Aug 2026 17:09:10 -0400",
+    "title_zh": "Linux 7.2-rc7 恢复 Btrfs 修复工作线程基础设施以解决静默数据丢失",
+    "summary_zh": "Linux 7.2 合并窗口期间，Btrfs 文件系统移除了 COW 修复机制，该机制用于检测没有有序 extents 的脏页。开发者曾认为内核内存管理层已解决相关问题，但实际导致静默数据丢失。为此，Linux 7.2-rc7 恢复了该修复工作线程基础设施，涉及 600 多行代码。SUSE 的 David Sterba 提交了相关补丁，Linus Torvalds 已接受。此外，本周还有其他 Btrfs 修复，包括编码 ioctl 写入泄漏、禁用高内存系统的大 folios 等。",
+    "fulltext_zh": "Linux 7.2-rc7 恢复 Btrfs 修复工作线程基础设施以解决静默数据丢失 - Phoronix\nLinux 7.2-rc7 恢复 Btrfs 修复工作线程基础设施以解决静默数据丢失\n2026年8月6日下午5:09（美国东部时间）\n\n在 Linux 7.2 合并窗口期间，Btrfs 文件系统移除了其 COW 修复机制，该机制用于检测没有有序 extents 的脏页。这段代码被移除是因为开发者认为内核的内存管理层已经解决了底层条件，但实际上却导致了静默数据丢失。现在，该 Btrfs 修复工作线程基础设施已在 Linux 7.2-rc7（本周末）和本月晚些时候的稳定版 v7.2 内核中及时恢复。\n\nSUSE 的 David Sterba 今天提交了一个专门用于恢复修复工作线程基础设施的拉取请求。对于内核周期的后期来说，这是一个重大变更，恢复了 600 多行的功能代码，但正如 Sterba 所指出的，如果不这样做，在当前条件下可能导致静默数据丢失：\n\n“此拉取请求恢复了修复工作线程基础设施。这是一种检测机制，用于检测那些在文件系统不知情的情况下被标记为脏的页/folio，并需要 COW 修复。不这样做的后果是静默数据丢失。\n\n第一个补丁详细描述了各种场景，也反映了近年来添加的 folio API 移植和子页块大小支持。原始的修复工作线程仅适用于页。\n\n该补丁相对较大，其中一半代码是调试和支持代码，其余部分则是围绕检测和修复的核心设计。”\n\nLinus Torvalds 已经接受了该请求，恢复的基础设施现已进入 Linux Git。\n\n今天还有一个单独的拉取请求，包含了本周的其他 Btrfs 修复。该 Btrfs 拉取请求修复了编码 ioctl 写入中的泄漏问题，禁用了高内存系统上的大 folios，并禁用了不支持透明大页（THP）的系统上的块大小大于页大小的支持。\n\nLinux 7.3 看起来将上游化 FailFS\nLinux 7.3 预计将移除 FreeVxFS 文件系统驱动\nCryptsetup 2.8.7 发布以应对 Linux 仓促弃用 AF_ALG 的影响\nEFS 文件系统计划在 Linux 7.3 中移除，已超过 20 年未维护\nLinux 7.3 将克服 PCIe Gen5 NVMe SSD 小 I/O 的“重大瓶颈”\n下一个 Bcachefs 版本旨在在内核模块中包含 Rust 代码\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nValve 赞助将开源 RADV 驱动移植到 Windows 的工作\n首个面向现代 AMD Ryzen AM5 平台的开源固件发布\nArch Linux AUR 再次遭遇恶意软件包浪潮，软件包采纳暂停\n著名 Arch Linux 开发者任职 10 年后辞职\nDRM 格式修饰符为旧 AMD GPU 在 Linux 7.3 中提供支持：感谢 Valve\nSteam 在 Linux 上的使用率在 7 月回升至 4% 以上\nFFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 及更多 AMD AMF 功能\nLinux 7.3 看起来将上游化 FailFS\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "6f2220118d53c6318d1e024c3743a067": {
+    "id": "6f2220118d53c6318d1e024c3743a067",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-Net-Bombarded-AI-Patches",
+    "title_en": "Linux Networking Continues Being Bombarded With AI Patches",
+    "summary_en": "While the Linux WiFi/wireless maintainer just announced taking a stand against AI/LLM generated slop patches with a new \"three second review\" rule, the broader Linux networking subsystem continues to be bombarded with AI-generated patches...",
+    "pub_date": "Thu, 06 Aug 2026 15:07:23 -0400",
+    "title_zh": "Linux网络子系统持续遭受AI补丁轰炸",
+    "summary_zh": "Linux网络子系统持续受到AI生成补丁的冲击。尽管WiFi/无线子系统维护者刚刚宣布采取“三秒审查”规则来抵制AI/LLM生成的劣质补丁，但更广泛的网络子系统仍面临大量AI补丁。Jakub Kicinski在最新的网络补丁请求中指出，过去9天内，标记为[PATCH net]的补丁有405个，[PATCH net-next]的有687个，其中37%为修复补丁，且实际数量可能被低估。他承认调整标准以控制补丁规模，但问题仍在继续。",
+    "fulltext_zh": "Linux网络子系统持续遭受AI补丁轰炸 - Phoronix\n\nLinux网络子系统持续遭受AI补丁轰炸\n2026年8月6日下午3:07（美国东部时间）\n\n虽然Linux WiFi/无线子系统维护者刚刚宣布采取“三秒审查”规则，以抵制AI/LLM生成的劣质补丁，但更广泛的Linux网络子系统仍持续遭受AI生成补丁的轰炸。\n\nJakub Kicinski在周日Linux 7.2-rc7内核测试版发布前，发送了本周的网络补丁集。在之前的几周里，他曾指出AI生成补丁的增加以及“新常态”，某些周网络领域的典型补丁数量激增，且疯狂持续，看不到尽头。这甚至是在今年早些时候Linux 7.1以AI/LLM对旧/未使用代码的噪音为由，移除了旧网络驱动、ISDN子系统和其他网络代码之后发生的。\n\nKicinski在今天的网络拉取请求中指出：\n\n“看起来我们试图保持拉取请求更小的努力，只是阻止了这次请求变得更大。在过去9天里，有405个明确标记为[PATCH net]的帖子，而[PATCH net-next]有687个。37%的补丁是修复补丁，这相当疯狂，而且这可能被低估了，因为LLM‘研究人员’更常发布修复补丁，却不知道为特定树标记补丁。我没有历史数据。无论如何，我们一直在调整标准。下一个拉取请求会更小。”\n\n情况仍在继续。本周的bug和回归修复补丁分散在整个网络子系统中。\n\nLinux无线维护者对AI/LLM生成的劣质补丁采取坚定立场\nLinux 7.3将添加MCTP-Over-USB v1.1支持\nLinux 7.3将支持Realtek RTL8261C和RTL8261D\nRealtek RTL8723B/RTL8723BS试图加入RTW88 Linux驱动\nLinux 7.2-rc5修复IPv4 over Firewire的长期Bug\nNetworkManager 1.58发布，支持464XLAT CLAT和GENEVE接口\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动等主题。他还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nValve赞助将开源RADV驱动带到Windows的工作\n首个面向现代AMD Ryzen AM5平台的开源固件发布\nArch Linux AUR再次遭遇恶意软件包浪潮，软件包收养暂停\n知名Arch Linux开发者十年后辞职\n旧AMD GPU的DRM格式修饰符随Linux 7.3到来：感谢Valve\nSteam在Linux上的使用率7月回升至4%以上\nFFmpeg 9.0发布，带来更多Vulkan加速、动画WebP和更多AMD AMF功能\nLinux 7.3似乎将上游FailFS\n\n无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "b6e14fa6a8dc6c2c7244ebebd6d12d05": {
+    "id": "b6e14fa6a8dc6c2c7244ebebd6d12d05",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/IceWM-4.1-Released",
+    "title_en": "IceWM 4.1 Window Manager Fixes Rare Video Performance Problems",
+    "summary_en": "As the first new release since IceWM 4.0 released back on New Year's Day for this X11 window manager, IceWM 4.1 is now available...",
+    "pub_date": "Thu, 06 Aug 2026 14:55:01 -0400",
+    "title_zh": "IceWM 4.1 窗口管理器修复罕见的视频性能问题",
+    "summary_zh": "IceWM 4.1 作为自 4.0 以来的首个新版本，现已发布。该版本包含多项错误修复，其中最引人注目的是避免罕见的视频性能问题。此外，新增了 ignoreUserTime 窗口选项和 icesh 的鼠标移动命令，并更新了部分翻译。此版本还修复了配置文件中的未终止字符串处理、_NET_STARTUP_ID 解析错误以及图片释放顺序问题。",
+    "fulltext_zh": "IceWM 4.1 窗口管理器修复罕见的视频性能问题 - Phoronix\nIceWM 4.1 窗口管理器修复罕见的视频性能问题\n2026年8月6日下午2:55（美国东部时间）\n\n作为自 IceWM 4.0 于元旦发布以来的首个新版本，IceWM 4.1 现已可用。\n\nIceWM 4.1 带来了一些错误修复，以及一个新的“ignoreUserTime”窗口选项和 icesh 的“鼠标移动”命令。此外，还有一些翻译更新。\n\n在修复方面，最值得注意的是避免罕见的视频性能问题的修复。\n\n- 默认将 Alpha 设为 false，以避免罕见的视频性能问题。\n- 正确处理配置文件中的未终止字符串。\n- 正确处理 _NET_STARTUP_ID 的字符串解析错误。\n- 在释放 pixmap 之前释放图片，以防止错误消息。\n- 为问题 #833 添加新的窗口选项 ignoreUserTime。\n- 向 icesh 添加“mousemove”命令。\n\nIceWM 4.1 X11 窗口管理器可以从以下位置下载：\n\nVibe Coded X11 YSERVER 获得 Steam 支持，Cinnamon 下全屏游戏\nlibx11-compat 正在努力在 SDL 之上实现 Xlib，用于 Wayland、macOS、Android\nFrame：一个完全用 x86_64 汇编语言编写的新 X11 服务器实现\nXWayland 24.1.13 发布，修复 X.Org 代码库中的两个更多安全问题\nVibe Coded 用 Rust 编写的 X11 服务器添加了 Xinerama、FreeBSD 支持和其他功能\nYSERVER：在 Claude Code 的帮助下用 Rust 编写的现代 X11 服务器\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动程序和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发人员。您可以通过以下方式关注他：\n\nValve 赞助将开源 RADV 驱动程序移植到 Windows 的工作\n首个面向现代 AMD Ryzen AM5 平台的开源固件发布\nArch Linux AUR 再次遭遇恶意软件包浪潮，软件包采用暂停\n知名 Arch Linux 开发者在任职 10 年后辞职\n旧 AMD GPU 的 DRM 格式修饰符随 Linux 7.3 推出：感谢 Valve\nSteam 在 Linux 上的使用率在 7 月份回升至 4% 以上\nFFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 和更多 AMD AMF 功能\nLinux 7.3 看起来将上游 FailFS\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "6bfd59caf732fff03a48877ecc3d97b9": {
+    "id": "6bfd59caf732fff03a48877ecc3d97b9",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/ubuntu-26-10-stonking-stingray-snapshot-2-is-now-available-for-download/",
+    "title_en": "Ubuntu 26.10 “Stonking Stingray” Snapshot 2 Is Now Available for Download",
+    "summary_en": "Ubuntu 26.10 \"Stonking Stingray\" Snapshot 2 is here! Explore new enhancements and download the latest version for an optimized user experience.\nThe post Ubuntu 26.10 “Stonking Stingray” Snapshot 2 Is Now Available for Download appeared first on Linux Today.",
+    "pub_date": "Thu, 06 Aug 2026 07:23:52 +0000",
+    "title_zh": "Ubuntu 26.10 “Stonking Stingray” 快照 2 现已开放下载",
+    "summary_zh": "Ubuntu 26.10 “Stonking Stingray” 快照 2 已正式发布，带来多项新改进，旨在优化用户体验。用户现在可以下载最新版本，体验更流畅、更高效的系统操作。",
+    "fulltext_zh": "Ubuntu 26.10 “Stonking Stingray” 快照 2 现已发布！探索新增强功能，并下载最新版本以获得优化的用户体验。\n\n该文章首发于 Linux Today。"
+  },
+  "b64fb89f86e0219657655c33ff3671a3": {
+    "id": "b64fb89f86e0219657655c33ff3671a3",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/linux-gets-dirty-again-dirtyclone-kernel-flaw-can-lead-to-local-root-access/",
+    "title_en": "Linux Gets Dirty Again: DirtyClone Kernel Flaw Can Lead to Local Root Access",
+    "summary_en": "Discover the DirtyClone kernel flaw in Linux that poses a risk of local root access. Learn how this vulnerability can impact your system's security.\nThe post Linux Gets Dirty Again: DirtyClone Kernel Flaw Can Lead to Local Root Access appeared first on Linux Today.",
+    "pub_date": "Thu, 06 Aug 2026 07:22:20 +0000",
+    "title_zh": "Linux再度“脏”起来：DirtyClone内核漏洞可导致本地root权限获取",
+    "summary_zh": "Linux系统再次面临内核级安全威胁，新发现的DirtyClone漏洞允许本地用户获取root权限。该漏洞影响系统安全性，可能导致未授权访问和提权攻击。本文介绍了漏洞的基本情况及其潜在影响，提醒用户关注并及时更新系统以防范风险。",
+    "fulltext_zh": "了解Linux中的DirtyClone内核漏洞，该漏洞存在本地获取root权限的风险。了解此漏洞如何影响您系统的安全性。\n该文章《Linux再度“脏”起来：DirtyClone内核漏洞可导致本地root权限获取》首次出现在Linux Today上。"
+  },
+  "7d3297d2799598f91c506bd138639d8c": {
+    "id": "7d3297d2799598f91c506bd138639d8c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/15-best-free-and-open-source-linux-manga-readers/",
+    "title_en": "15 Best Free and Open Source Linux Manga Readers",
+    "summary_en": "Uncover the top 15 free and open-source Linux manga readers. Enhance your reading experience with our curated list of the best applications available.\nThe post 15 Best Free and Open Source Linux Manga Readers appeared first on Linux Today.",
+    "pub_date": "Thu, 06 Aug 2026 07:18:37 +0000",
+    "title_zh": "15款最佳免费开源Linux漫画阅读器",
+    "summary_zh": "本文精选了15款适用于Linux系统的免费开源漫画阅读器，旨在提升用户的阅读体验。这些应用各具特色，支持多种漫画格式，提供舒适的阅读界面和丰富的功能，如书签、缩放、翻页动画等。无论您是漫画爱好者还是专业读者，都能从中找到适合自己的工具。",
+    "fulltext_zh": "探索15款最佳免费开源Linux漫画阅读器。通过我们精心挑选的最佳应用列表，提升您的阅读体验。\n\n该文章首次发布于Linux Today。"
+  },
+  "56158ecb1706fd81bbf252fe41550643": {
+    "id": "56158ecb1706fd81bbf252fe41550643",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/nvidia-580-173-02-linux-graphics-driver-released-for-geforce-10-series/",
+    "title_en": "NVIDIA 580.173.02 Linux Graphics Driver Released for GeForce 10 Series",
+    "summary_en": "Discover the latest NVIDIA 580.173.02 Linux graphics driver, optimized for GeForce 10 series. Enhance your gaming and graphics performance today.\nThe post NVIDIA 580.173.02 Linux Graphics Driver Released for GeForce 10 Series appeared first on Linux Today.",
+    "pub_date": "Thu, 06 Aug 2026 07:17:23 +0000",
+    "title_zh": "NVIDIA 580.173.02 Linux 图形驱动程序发布，专为 GeForce 10 系列优化",
+    "summary_zh": "NVIDIA 发布了最新的 580.173.02 Linux 图形驱动程序，该版本针对 GeForce 10 系列显卡进行了优化，旨在提升游戏和图形性能。用户可通过更新此驱动获得更好的体验。",
+    "fulltext_zh": "了解最新的 NVIDIA 580.173.02 Linux 图形驱动程序，该版本专为 GeForce 10 系列优化。立即提升您的游戏和图形性能。\n\n该文章 NVIDIA 580.173.02 Linux 图形驱动程序发布，专为 GeForce 10 系列优化，首次出现在 Linux Today 上。"
+  },
+  "ac74f059bf03c0d156e13311a0485cb1": {
+    "id": "ac74f059bf03c0d156e13311a0485cb1",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/fastfetch-2-65-system-information-tool-brings-better-hardware-detection-on-linux/",
+    "title_en": "Fastfetch 2.65 System Information Tool Brings Better Hardware Detection on Linux",
+    "summary_en": "Upgrade your Linux experience with Fastfetch 2.65, featuring superior hardware detection to provide comprehensive system information at your fingertips.\nThe post Fastfetch 2.65 System Information Tool Brings Better Hardware Detection on Linux appeared first on Linux Today.",
+    "pub_date": "Thu, 06 Aug 2026 07:13:31 +0000",
+    "title_zh": "Fastfetch 2.65 系统信息工具为 Linux 带来更佳的硬件检测能力",
+    "summary_zh": "Fastfetch 2.65 版本发布，显著提升了 Linux 系统上的硬件检测能力，使用户能够更全面、更准确地获取系统信息。该版本通过改进硬件识别算法，增强了与各种硬件组件的兼容性，确保用户能快速获取详细且可靠的数据。",
+    "fulltext_zh": "通过 Fastfetch 2.65 升级您的 Linux 体验，该版本具备卓越的硬件检测能力，让您轻松获取全面的系统信息。\n\n此文章首发于 Linux Today。"
   }
 }

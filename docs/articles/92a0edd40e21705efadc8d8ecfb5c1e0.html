@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：AerynOS 2026.08 — Linux 中文速报</title>
+<title>Linux 7.2-rc7 恢复 Btrfs 修复工作线程基础设施以解决静默数据丢失 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：AerynOS 2026.08</h1>
+  <h1>Linux 7.2-rc7 恢复 Btrfs 修复工作线程基础设施以解决静默数据丢失</h1>
 
-  <div class="article-summary">AerynOS 团队发布了实验性发行版的新快照2026.08，该版本改进了文件系统支持，包括为数据池提供OpenZFS。开发团队表示，过去一年他们专注于强化核心工具和基础设施，现在已能无缝更新磁盘仓库和文件格式，未来将转向更开放和协作的模式。此次更新增加了对Btrfs、bcachefs和OpenZFS数据盘的支持，并邀请社区用户测试OpenZFS并提供反馈。</div>
+  <div class="article-summary">Linux 7.2 合并窗口期间，Btrfs 文件系统移除了 COW 修复机制，该机制用于检测没有有序 extents 的脏页。开发者曾认为内核内存管理层已解决相关问题，但实际导致静默数据丢失。为此，Linux 7.2-rc7 恢复了该修复工作线程基础设施，涉及 600 多行代码。SUSE 的 David Sterba 提交了相关补丁，Linus Torvalds 已接受。此外，本周还有其他 Btrfs 修复，包括编码 ioctl 写入泄漏、禁用高内存系统的大 folios 等。</div>
 
-  <div class="article-body"><p>发行版发布：AerynOS 2026.08</p><p>AerynOS团队已发布实验性发行版的更新。快照2026.08包括改进的文件系统支持，包括为数据池提供OpenZFS：</p><p>“从开发故事线的角度来看，AerynOS在过去一年里一直被刻意严格控制，因为我们专注于强化核心工具和基础设施代码库。虽然我们距离工具愿景的‘完成’还很远，但既然我们已经确保了无缝更新磁盘仓库和文件格式的能力，你会看到AerynOS有意转向一个更开放和协作的空间，供那些想参与项目并从事有趣、有吸引力工作的人使用。这种方法的转变在过去几个月已经很明显，因为项目在各个社交媒体平台，尤其是Zulip服务器上的参与度持续增长。Reilly致力于在AerynOS中添加OpenZFS数据盘支持。这意味着我们现在支持Btrfs、bcachefs和OpenZFS驱动器用于用户管理的数据盘。Reilly已在他的一块驱动器上测试了OpenZFS；然而，我们需要你们——我们的早期采用者社区——的帮助，在你们的驱动器上测试OpenZFS并提供反馈，以便我们进行迭代。”</p><p>更多信息请参阅AerynOS-2026.08-GNOME-live-x86_64.iso。</p></div>
+  <div class="article-body"><p>Linux 7.2-rc7 恢复 Btrfs 修复工作线程基础设施以解决静默数据丢失 - Phoronix</p><p>Linux 7.2-rc7 恢复 Btrfs 修复工作线程基础设施以解决静默数据丢失</p><p>2026年8月6日下午5:09（美国东部时间）</p><p>在 Linux 7.2 合并窗口期间，Btrfs 文件系统移除了其 COW 修复机制，该机制用于检测没有有序 extents 的脏页。这段代码被移除是因为开发者认为内核的内存管理层已经解决了底层条件，但实际上却导致了静默数据丢失。现在，该 Btrfs 修复工作线程基础设施已在 Linux 7.2-rc7（本周末）和本月晚些时候的稳定版 v7.2 内核中及时恢复。</p><p>SUSE 的 David Sterba 今天提交了一个专门用于恢复修复工作线程基础设施的拉取请求。对于内核周期的后期来说，这是一个重大变更，恢复了 600 多行的功能代码，但正如 Sterba 所指出的，如果不这样做，在当前条件下可能导致静默数据丢失：</p><p>“此拉取请求恢复了修复工作线程基础设施。这是一种检测机制，用于检测那些在文件系统不知情的情况下被标记为脏的页/folio，并需要 COW 修复。不这样做的后果是静默数据丢失。</p><p>第一个补丁详细描述了各种场景，也反映了近年来添加的 folio API 移植和子页块大小支持。原始的修复工作线程仅适用于页。</p><p>该补丁相对较大，其中一半代码是调试和支持代码，其余部分则是围绕检测和修复的核心设计。”</p><p>Linus Torvalds 已经接受了该请求，恢复的基础设施现已进入 Linux Git。</p><p>今天还有一个单独的拉取请求，包含了本周的其他 Btrfs 修复。该 Btrfs 拉取请求修复了编码 ioctl 写入中的泄漏问题，禁用了高内存系统上的大 folios，并禁用了不支持透明大页（THP）的系统上的块大小大于页大小的支持。</p><p>Linux 7.3 看起来将上游化 FailFS</p><p>Linux 7.3 预计将移除 FreeVxFS 文件系统驱动</p><p>Cryptsetup 2.8.7 发布以应对 Linux 仓促弃用 AF_ALG 的影响</p><p>EFS 文件系统计划在 Linux 7.3 中移除，已超过 20 年未维护</p><p>Linux 7.3 将克服 PCIe Gen5 NVMe SSD 小 I/O 的“重大瓶颈”</p><p>下一个 Bcachefs 版本旨在在内核模块中包含 Rust 代码</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>Valve 赞助将开源 RADV 驱动移植到 Windows 的工作</p><p>首个面向现代 AMD Ryzen AM5 平台的开源固件发布</p><p>Arch Linux AUR 再次遭遇恶意软件包浪潮，软件包采纳暂停</p><p>著名 Arch Linux 开发者任职 10 年后辞职</p><p>DRM 格式修饰符为旧 AMD GPU 在 Linux 7.3 中提供支持：感谢 Valve</p><p>Steam 在 Linux 上的使用率在 7 月回升至 4% 以上</p><p>FFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 及更多 AMD AMF 功能</p><p>Linux 7.3 看起来将上游化 FailFS</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12910" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Btrfs-Restores-Fixup-Worker" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
