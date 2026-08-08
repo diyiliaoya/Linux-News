@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resources beta新增PowerPC温度与AMD NPU统计功能 — Linux 中文速报</title>
+<title>Incus 7.2 容器与虚拟机管理器发布，支持 SELinux — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Linux Today</span>
   </div>
 
-  <h1>Resources beta新增PowerPC温度与AMD NPU统计功能</h1>
+  <h1>Incus 7.2 容器与虚拟机管理器发布，支持 SELinux</h1>
 
-  <div class="article-summary">系统监控工具Resources（Ubuntu 26.04 LTS默认搭载）发布beta版本，新增对AMD NPU（神经处理单元）的利用率、功耗和性能统计，支持Ryzen 7040、8040及AI 300/400系列芯片。同时，通过hwmon驱动支持PowerPC CPU温度监控（POWER8及以上）。此外，该版本改进了Steam游戏和Snap应用的检测可靠性，优化了侧边栏和图表显示，并新增内存指标选项，用户可通过dconf配置切换不同的内存计算方式。Resources现已成为GNOME孵化器项目，未来有望加入GNOME核心应用。</div>
+  <div class="article-summary">Incus 7.2 版本正式发布，该版本增强了容器与虚拟机管理功能，并引入了 SELinux 支持，以提升安全性和性能。此更新旨在为用户提供更安全、更高效的虚拟化环境管理体验。</div>
 
-  <div class="article-body"><p>系统监控工具Resources（Ubuntu 26.04 LTS默认搭载）发布了新版本，扩展了AMD NPU统计功能，并新增了对PowerPC CPU的温度报告。</p><p>搭载Ryzen 7040、8040以及Ryzen AI 300/400系列芯片的用户，现在可以获取其板载神经加速器的利用率、功耗和性能指标。这是一种可靠的方式，可以判断AI工作负载是否在使用NPU，而不是悄悄让CPU过热。</p><p>听到“PowerPC”时你可能会感到惊讶。Resources对PowerPC CPU温度的支持使用了hwmon驱动，该驱动覆盖POWER8及更新的芯片，而不包括苹果在2000年代中期之前使用的那些老旧且容易发热的芯片。</p><p>PowerPC并未消亡。Raptor Computing销售运行Linux且无需专有固件的POWER9主板（Talos II、Blackbird），IBM也仍在销售POWER服务器。当然，这是一个小众用户群，但这是一个显示数字的功能，所以向Resources的开发者致敬。</p><p>据称，此beta版本中Steam游戏和Snap应用的检测更加可靠，并进一步改进了无障碍功能。</p><p>在视觉方面，侧边栏进行了一些“节省空间”的更改，例如仅在存在多个同类设备实例时才显示设备描述（还新增了侧边栏切换快捷键）。在页面上，使用量数字叠加在图表上，而不是堆叠在下方。</p><p>新的内存指标选项改变了Resources内存计算的工作方式，使用新的dconf值（/org/gnome/Resources/memory-metric），可从默认的“RssNoSharedMemory”切换为“VmSize”、“Rss”、“RssAnon”、“ApproximatePss”或“Pss”。</p><p>“RssNoSharedMemory”忽略与其他进程共享的RAM。“ApproximatePss”通过将共享内存平均分配给每个使用它的进程来修复此问题，因此数字实际上加起来是准确的。“Pss”以大致相同的方式工作，但速度更快、精度稍低。“VmSize”报告总虚拟内存，而不是实际驻留在RAM中的部分。“RssAnon”则完全剥离共享内存和文件支持的内存，如果你只关心进程自身的私有数据。</p><p>也就是说：如果这些选项听起来都不实用，请保持默认设置。但如果其他计算方式符合你的统计需求，可以尝试一下——如果发现重大差异或某个选项出现奇怪问题，请在上游提供反馈！</p><p>Resources 51是beta版本，现在是一个GNOME孵化器项目，正在不断完善和改进，目标是加入GNOME核心应用阵容。Ubuntu 26.04 LTS将其默认包含在内，所以如果你喜欢它的外观，并计划本月晚些时候从24.04升级到Ubuntu 26.04 LTS，就可以使用它。</p><p>如果你设置了GNOME Nightly Flatpak仓库，可以从那里安装Resources 51 beta进行测试。使用和评估预发布软件的标准注意事项适用，因此如果在测试时出现问题，请务必在上游提交错误报告。</p></div>
+  <div class="article-body"><p>探索全新的 Incus 7.2，其特色在于增强了容器与虚拟机管理，并支持 SELinux，从而提升安全性与性能。</p><p>该文章最初发表于 Linux Today。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/resources-51-beta-npu-powerpc-temps" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.linuxtoday.com/blog/incus-7-2-container-virtual-machine-manager-released-with-selinux-support/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

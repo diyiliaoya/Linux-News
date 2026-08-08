@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resources beta新增PowerPC温度与AMD NPU统计功能 — Linux 中文速报</title>
+<title>Linux 7.3 将更激进地使用 TTM 内存管理以优化图形性能 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Resources beta新增PowerPC温度与AMD NPU统计功能</h1>
+  <h1>Linux 7.3 将更激进地使用 TTM 内存管理以优化图形性能</h1>
 
-  <div class="article-summary">系统监控工具Resources（Ubuntu 26.04 LTS默认搭载）发布beta版本，新增对AMD NPU（神经处理单元）的利用率、功耗和性能统计，支持Ryzen 7040、8040及AI 300/400系列芯片。同时，通过hwmon驱动支持PowerPC CPU温度监控（POWER8及以上）。此外，该版本改进了Steam游戏和Snap应用的检测可靠性，优化了侧边栏和图表显示，并新增内存指标选项，用户可通过dconf配置切换不同的内存计算方式。Resources现已成为GNOME孵化器项目，未来有望加入GNOME核心应用。</div>
+  <div class="article-summary">本周提交的 DRM-Misc-Next 功能补丁中，TTM 内存管理代码在分配低于保护限制时变得更加激进。该改进由 Valve 的开源 Linux 图形团队贡献，旨在解决当 VRAM 稀缺且应用竞争时，受保护的内存分配可能落入 GTT 的问题。通过引入特殊处理，受 cgroup 保护的分配将尝试驱逐未受保护的缓冲区，以确保应用能充分利用系统授予的内存保护。此外，DMEMCG 支持已扩展到 AMDGPU 和 Xe 驱动，Nouveau 驱动也新增了 DMEMCG 支持，UDMABUF 移除了人为的 64MB 限制，Allwinner Sun4i 驱动则改进了 YUV 和 4K 支持。</div>
 
-  <div class="article-body"><p>系统监控工具Resources（Ubuntu 26.04 LTS默认搭载）发布了新版本，扩展了AMD NPU统计功能，并新增了对PowerPC CPU的温度报告。</p><p>搭载Ryzen 7040、8040以及Ryzen AI 300/400系列芯片的用户，现在可以获取其板载神经加速器的利用率、功耗和性能指标。这是一种可靠的方式，可以判断AI工作负载是否在使用NPU，而不是悄悄让CPU过热。</p><p>听到“PowerPC”时你可能会感到惊讶。Resources对PowerPC CPU温度的支持使用了hwmon驱动，该驱动覆盖POWER8及更新的芯片，而不包括苹果在2000年代中期之前使用的那些老旧且容易发热的芯片。</p><p>PowerPC并未消亡。Raptor Computing销售运行Linux且无需专有固件的POWER9主板（Talos II、Blackbird），IBM也仍在销售POWER服务器。当然，这是一个小众用户群，但这是一个显示数字的功能，所以向Resources的开发者致敬。</p><p>据称，此beta版本中Steam游戏和Snap应用的检测更加可靠，并进一步改进了无障碍功能。</p><p>在视觉方面，侧边栏进行了一些“节省空间”的更改，例如仅在存在多个同类设备实例时才显示设备描述（还新增了侧边栏切换快捷键）。在页面上，使用量数字叠加在图表上，而不是堆叠在下方。</p><p>新的内存指标选项改变了Resources内存计算的工作方式，使用新的dconf值（/org/gnome/Resources/memory-metric），可从默认的“RssNoSharedMemory”切换为“VmSize”、“Rss”、“RssAnon”、“ApproximatePss”或“Pss”。</p><p>“RssNoSharedMemory”忽略与其他进程共享的RAM。“ApproximatePss”通过将共享内存平均分配给每个使用它的进程来修复此问题，因此数字实际上加起来是准确的。“Pss”以大致相同的方式工作，但速度更快、精度稍低。“VmSize”报告总虚拟内存，而不是实际驻留在RAM中的部分。“RssAnon”则完全剥离共享内存和文件支持的内存，如果你只关心进程自身的私有数据。</p><p>也就是说：如果这些选项听起来都不实用，请保持默认设置。但如果其他计算方式符合你的统计需求，可以尝试一下——如果发现重大差异或某个选项出现奇怪问题，请在上游提供反馈！</p><p>Resources 51是beta版本，现在是一个GNOME孵化器项目，正在不断完善和改进，目标是加入GNOME核心应用阵容。Ubuntu 26.04 LTS将其默认包含在内，所以如果你喜欢它的外观，并计划本月晚些时候从24.04升级到Ubuntu 26.04 LTS，就可以使用它。</p><p>如果你设置了GNOME Nightly Flatpak仓库，可以从那里安装Resources 51 beta进行测试。使用和评估预发布软件的标准注意事项适用，因此如果在测试时出现问题，请务必在上游提交错误报告。</p></div>
+  <div class="article-body"><p>本周，DRM-Misc-Next 的最终一批功能材料已提交给 DRM-Next，以便在 Linux 7.3 合并窗口于本月晚些时候开启前排队。最值得注意的是，TTM 内存管理代码在分配低于保护限制时现在变得更加激进。这一改进得益于 Valve 的开源 Linux 图形团队。</p><p>自去年以来，Valve Linux 图形团队的 Natalie Vock 一直在研究当 VRAM 稀缺且应用程序/游戏开始竞争视频内存空间时，设备内存保护无法阻止分配最终落入 GTT 的情况。经过八轮修订，这些对通用 TTM 内存管理代码和 cgroup 设备内存代码的改进现已确定将合并到 Linux 7.3 中。</p><p>Vock 在补丁中总结了情况：</p><p>“我一直在研究一些情况，当 VRAM 变得稀缺且应用开始激烈竞争时，dmem 保护无法阻止分配最终落入 GTT。简而言之，这是因为其他（未受保护的）应用程序在受保护应用程序之前填满了 VRAM。这导致 TTM 退缩，并尝试在 GTT 中分配，而最终分配就落在了那里。现有的驱逐保护无法防止这种情况，因为从未尝试过驱逐（尽管你可以将退缩视为立即驱逐到 GTT）。</p><p>本系列试图通过添加一个特殊情况来缓解这个问题：当分配受 cgroup 保护时，TTM 不会立即退缩，而是会尝试从域中驱逐未受保护的缓冲区，为受保护的缓冲区腾出空间。这确保了应用程序能够真正使用系统授予的所有内存保护，而不会容易发生乒乓效应（只有受保护的分配可以驱逐未受保护的分配，反之则不行）。”</p><p>Vock 一直在致力于改善内存容量有限系统上的 Linux 游戏体验。</p><p>这些补丁是本周 DRM-Misc-Next 的一部分。它还包括 DMEMCG 对驱逐的支持，并已为 AMDGPU 和 Xe 驱动启用。UDMABUF 代码还移除了一个人为的 64MB 限制，该限制是 Xaver Hugl 在最近改进 KDE 多 GPU/eGPU 体验时发现的。Allwinner Sun4i DRM 驱动也改进了 YUV 和 4K 支持。Nouveau 驱动现在也支持设备内存控制组（DMEMCG），该支持由 Natalie Vock 作为其他改进的一部分编写。</p><p>Linux 7.2-rc7 解决了导致 8 年后释放后使用的“棘手”竞争条件</p><p>Page Alloc Hogger 让您更好地在 Linux 上测试/调试内存行为</p><p>Qualcomm 为 Linux 内核提出 Synx，具有“显著”的功耗和性能优势</p><p>更多旧 Linux 驱动面临移除，原因是 AI/LLM 编码代理的噪音</p><p>Linux 的 Staging 区域现在将拒绝 LLM 生成的补丁，除非是真正的安全修复</p><p>Linux 7.2-rc6 发布：“这个 RC 很大”</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动和其他主题的状态。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>首款面向现代 AMD Ryzen AM5 平台的开源固件发布</p><p>Arch Linux AUR 再次遭遇恶意软件包浪潮，软件包收养暂停</p><p>著名 Arch Linux 开发者任职 10 年后辞职</p><p>Steam 在 Linux 上的使用率在 7 月回升至 4% 以上</p><p>FFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 和更多 AMD AMF</p><p>Linux 7.3 看起来将上游化</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/resources-51-beta-npu-powerpc-temps" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/More-Aggressive-TTM-Linux-7.3" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

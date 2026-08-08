@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resources beta新增PowerPC温度与AMD NPU统计功能 — Linux 中文速报</title>
+<title>Intel QATlib 26.08 发布，支持 Gen6 设备和 2MB 大页 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Resources beta新增PowerPC温度与AMD NPU统计功能</h1>
+  <h1>Intel QATlib 26.08 发布，支持 Gen6 设备和 2MB 大页</h1>
 
-  <div class="article-summary">系统监控工具Resources（Ubuntu 26.04 LTS默认搭载）发布beta版本，新增对AMD NPU（神经处理单元）的利用率、功耗和性能统计，支持Ryzen 7040、8040及AI 300/400系列芯片。同时，通过hwmon驱动支持PowerPC CPU温度监控（POWER8及以上）。此外，该版本改进了Steam游戏和Snap应用的检测可靠性，优化了侧边栏和图表显示，并新增内存指标选项，用户可通过dconf配置切换不同的内存计算方式。Resources现已成为GNOME孵化器项目，未来有望加入GNOME核心应用。</div>
+  <div class="article-summary">Intel 今日发布了 QATlib 26.08，这是 QuickAssist Technology 库的用户空间组件，用于在 Linux 下使用 QuickAssist 加速器。该版本最重要的更新是支持下一代 QAT Gen6 6XXX 加速器，包括字典、Zstandard 和 KPT 功能，并提供了针对这些新硬件的示例代码。此外，新版本还增加了对 QAT_MAX_2M_HPG_PER_PROCESS 环境变量的支持，以启用 2MB 大页，并引入了 EPOLL 合并定时器支持、设备管理脚本等改进。</div>
 
-  <div class="article-body"><p>系统监控工具Resources（Ubuntu 26.04 LTS默认搭载）发布了新版本，扩展了AMD NPU统计功能，并新增了对PowerPC CPU的温度报告。</p><p>搭载Ryzen 7040、8040以及Ryzen AI 300/400系列芯片的用户，现在可以获取其板载神经加速器的利用率、功耗和性能指标。这是一种可靠的方式，可以判断AI工作负载是否在使用NPU，而不是悄悄让CPU过热。</p><p>听到“PowerPC”时你可能会感到惊讶。Resources对PowerPC CPU温度的支持使用了hwmon驱动，该驱动覆盖POWER8及更新的芯片，而不包括苹果在2000年代中期之前使用的那些老旧且容易发热的芯片。</p><p>PowerPC并未消亡。Raptor Computing销售运行Linux且无需专有固件的POWER9主板（Talos II、Blackbird），IBM也仍在销售POWER服务器。当然，这是一个小众用户群，但这是一个显示数字的功能，所以向Resources的开发者致敬。</p><p>据称，此beta版本中Steam游戏和Snap应用的检测更加可靠，并进一步改进了无障碍功能。</p><p>在视觉方面，侧边栏进行了一些“节省空间”的更改，例如仅在存在多个同类设备实例时才显示设备描述（还新增了侧边栏切换快捷键）。在页面上，使用量数字叠加在图表上，而不是堆叠在下方。</p><p>新的内存指标选项改变了Resources内存计算的工作方式，使用新的dconf值（/org/gnome/Resources/memory-metric），可从默认的“RssNoSharedMemory”切换为“VmSize”、“Rss”、“RssAnon”、“ApproximatePss”或“Pss”。</p><p>“RssNoSharedMemory”忽略与其他进程共享的RAM。“ApproximatePss”通过将共享内存平均分配给每个使用它的进程来修复此问题，因此数字实际上加起来是准确的。“Pss”以大致相同的方式工作，但速度更快、精度稍低。“VmSize”报告总虚拟内存，而不是实际驻留在RAM中的部分。“RssAnon”则完全剥离共享内存和文件支持的内存，如果你只关心进程自身的私有数据。</p><p>也就是说：如果这些选项听起来都不实用，请保持默认设置。但如果其他计算方式符合你的统计需求，可以尝试一下——如果发现重大差异或某个选项出现奇怪问题，请在上游提供反馈！</p><p>Resources 51是beta版本，现在是一个GNOME孵化器项目，正在不断完善和改进，目标是加入GNOME核心应用阵容。Ubuntu 26.04 LTS将其默认包含在内，所以如果你喜欢它的外观，并计划本月晚些时候从24.04升级到Ubuntu 26.04 LTS，就可以使用它。</p><p>如果你设置了GNOME Nightly Flatpak仓库，可以从那里安装Resources 51 beta进行测试。使用和评估预发布软件的标准注意事项适用，因此如果在测试时出现问题，请务必在上游提交错误报告。</p></div>
+  <div class="article-body"><p>Intel QATlib 26.08 发布，支持 Gen6 设备和 2MB 大页 - Phoronix</p><p>Intel QATlib 26.08 发布，支持 Gen6 设备和 2MB 大页</p><p>2026年8月7日，美国东部时间下午12:57。</p><p>Intel 今日发布了其 QuickAssist Technology 库（QATlib）的更新版本，这是用于在 Linux 下使用 QuickAssist 加速器的用户空间组件。</p><p>QATlib 26.08 最显著的变化是库已准备好支持下一代 QAT Gen6 6XXX 加速器。自去年以来，Intel 已经在其 Linux 内核驱动中准备了 QAT Gen6 支持，并启用了新功能，如无线模式支持和密钥保护技术（KPT）。现在，QATlib 的用户空间支持已与其 Gen6 支持对齐。</p><p>Gen6 QATlib 支持包括字典、Zstandard 和 KPT 功能，以及针对这些即将推出的硬件的示例 QAT 代码。据推测，QAT Gen6 将用于下一代 Xeon 7 Diamond Rapids 处理器。</p><p>QATlib 26.08 的另一个新功能是增加了对 QAT_MAX_2M_HPG_PER_PROCESS 环境变量的支持，用于启用 2MB 大页支持。</p><p>此外，还有 EPOLL 合并定时器支持、用于速率限制功能的设备管理脚本，以及其他更新。</p><p>有关今天更新的 Intel QATlib 26.08 版本的下载和更多详细信息，请访问 Phoronix。</p><p>Intel 在 Meteor Lake 及更新版本的 Linux 驱动中推进 HDMI 2.1 FRL 支持</p><p>USB4STREAM 增加忙轮询选项，以降低延迟但增加 CPU 周期</p><p>Linux 将避免混淆带有 DEC 的新 Intel CPU 的处理器固件</p><p>Linux 7.3 将开始为 Intel Starfire 奠定基础</p><p>Linux 7.3 将把 Intel Nova Lake S 图形视为稳定</p><p>补丁提交以改善 Intel Alchemist GPU 上的 Linux 媒体加速</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他。</p><p>首个面向现代 AMD Ryzen AM5 平台的开源固件发布</p><p>Arch Linux AUR 再次遭遇恶意软件包浪潮，软件包采用暂停</p><p>著名 Arch Linux 开发者任职十年后辞职</p><p>Steam 在 Linux 上的使用率在 7 月回升至 4% 以上</p><p>FFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 和 AMD AMF</p><p>Linux 7.3 看起来将上游 FailFS</p><p>Cloudflare 宣布开源 Cloudflare OS 作为 AI“操作系统”</p><p>Linux 的暂存区现在将拒绝 LLM 生成的补丁，除非是真正的安全修复</p><p>虽然有无广告浏览，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由 Phoronix Media 所有。</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/resources-51-beta-npu-powerpc-temps" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Intel-QATlib-26.08-Released" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

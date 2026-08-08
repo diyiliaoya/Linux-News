@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resources beta新增PowerPC温度与AMD NPU统计功能 — Linux 中文速报</title>
+<title>伊利诺伊州要求所有操作系统报告孩子的年龄 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">软件应用</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Resources beta新增PowerPC温度与AMD NPU统计功能</h1>
+  <h1>伊利诺伊州要求所有操作系统报告孩子的年龄</h1>
 
-  <div class="article-summary">系统监控工具Resources（Ubuntu 26.04 LTS默认搭载）发布beta版本，新增对AMD NPU（神经处理单元）的利用率、功耗和性能统计，支持Ryzen 7040、8040及AI 300/400系列芯片。同时，通过hwmon驱动支持PowerPC CPU温度监控（POWER8及以上）。此外，该版本改进了Steam游戏和Snap应用的检测可靠性，优化了侧边栏和图表显示，并新增内存指标选项，用户可通过dconf配置切换不同的内存计算方式。Resources现已成为GNOME孵化器项目，未来有望加入GNOME核心应用。</div>
+  <div class="article-summary">伊利诺伊州签署《儿童在线社交媒体安全法》，要求设备制造商、操作系统提供商和应用商店在账户设置时收集儿童出生日期，并划分为四个年龄段。应用通过API获取信号后，需对未成年人启用安全设置，如限制信息流、隐藏个人资料、屏蔽成人消息、隐藏精确位置，并在晚上10点至早上7点关闭通知。违规者每次最高罚款5万美元，法律将于2028年7月1日生效。与科罗拉多州和加州不同，伊利诺伊州未对开源平台提供豁免，引发争议。</div>
 
-  <div class="article-body"><p>系统监控工具Resources（Ubuntu 26.04 LTS默认搭载）发布了新版本，扩展了AMD NPU统计功能，并新增了对PowerPC CPU的温度报告。</p><p>搭载Ryzen 7040、8040以及Ryzen AI 300/400系列芯片的用户，现在可以获取其板载神经加速器的利用率、功耗和性能指标。这是一种可靠的方式，可以判断AI工作负载是否在使用NPU，而不是悄悄让CPU过热。</p><p>听到“PowerPC”时你可能会感到惊讶。Resources对PowerPC CPU温度的支持使用了hwmon驱动，该驱动覆盖POWER8及更新的芯片，而不包括苹果在2000年代中期之前使用的那些老旧且容易发热的芯片。</p><p>PowerPC并未消亡。Raptor Computing销售运行Linux且无需专有固件的POWER9主板（Talos II、Blackbird），IBM也仍在销售POWER服务器。当然，这是一个小众用户群，但这是一个显示数字的功能，所以向Resources的开发者致敬。</p><p>据称，此beta版本中Steam游戏和Snap应用的检测更加可靠，并进一步改进了无障碍功能。</p><p>在视觉方面，侧边栏进行了一些“节省空间”的更改，例如仅在存在多个同类设备实例时才显示设备描述（还新增了侧边栏切换快捷键）。在页面上，使用量数字叠加在图表上，而不是堆叠在下方。</p><p>新的内存指标选项改变了Resources内存计算的工作方式，使用新的dconf值（/org/gnome/Resources/memory-metric），可从默认的“RssNoSharedMemory”切换为“VmSize”、“Rss”、“RssAnon”、“ApproximatePss”或“Pss”。</p><p>“RssNoSharedMemory”忽略与其他进程共享的RAM。“ApproximatePss”通过将共享内存平均分配给每个使用它的进程来修复此问题，因此数字实际上加起来是准确的。“Pss”以大致相同的方式工作，但速度更快、精度稍低。“VmSize”报告总虚拟内存，而不是实际驻留在RAM中的部分。“RssAnon”则完全剥离共享内存和文件支持的内存，如果你只关心进程自身的私有数据。</p><p>也就是说：如果这些选项听起来都不实用，请保持默认设置。但如果其他计算方式符合你的统计需求，可以尝试一下——如果发现重大差异或某个选项出现奇怪问题，请在上游提供反馈！</p><p>Resources 51是beta版本，现在是一个GNOME孵化器项目，正在不断完善和改进，目标是加入GNOME核心应用阵容。Ubuntu 26.04 LTS将其默认包含在内，所以如果你喜欢它的外观，并计划本月晚些时候从24.04升级到Ubuntu 26.04 LTS，就可以使用它。</p><p>如果你设置了GNOME Nightly Flatpak仓库，可以从那里安装Resources 51 beta进行测试。使用和评估预发布软件的标准注意事项适用，因此如果在测试时出现问题，请务必在上游提交错误报告。</p></div>
+  <div class="article-body"><p>伊利诺伊州刚刚要求每个操作系统开始报告你孩子的年龄。</p><p>伊利诺伊州刚刚要求每个操作系统开始报告你孩子的年龄。</p><p>《儿童在线社交媒体安全法》要求设备制造商收集年龄区间，但应用仍需据此采取行动。</p><p>伊利诺伊州成为美国最新一个将操作系统纳入年龄验证范围的州。州长签署了《儿童在线社交媒体安全法》，为该州销售或使用的每台设备提出了新的年龄验证框架。</p><p>该法案对“涵盖制造商”实施年龄检查，这一类别将设备制造商、操作系统提供商和应用商店归为一类。</p><p>为了保护孩子！这些制造商必须在账户设置时构建一个界面，要求家长或账户持有人提供孩子的出生日期。该日期随后被转换为四个年龄区间之一：</p><p>该法律还规定，所有传输的数字信号必须加密。</p><p>应用在用户下载或启动后，可以通过API获取该区间。一旦收到标记用户为未成年人的信号，应用在法律上被视为已获得“实际通知”。</p><p>一旦被标记，应用必须开启一系列安全设置。信息流受到限制，个人资料对成年陌生人隐藏，来自成人的消息被屏蔽，精确位置被隐藏，通知在晚上10点至早上7点之间关闭。</p><p>家长可以覆盖这些默认设置，16岁以上的未成年人也可以自行更改。</p><p>应用必须在2028年7月1日前开始请求这些信号，每次违规最高可罚款5万美元，由州政府执行。如果信号出错，善意行事的设备制造商和应用不承担责任。</p><p>Jennifer Gong-Gershowitz在众议院主导了该法案，众议员作为首席共同提案人，另有十多人签署。参议员在参议院推动该法案，与参议员共同合作。该法案在众议院以82票对27票通过，随后一致通过最终同意。</p><p>开源豁免在哪里？</p><p>伊利诺伊州并不是第一个尝试这种模式的州。科罗拉多州的SB26-051和加州的AB-1043都依赖相同的操作系统级年龄信号设置；应用请求信号，设备响应。</p><p>这两项法案最初都没有为开源平台提供任何让步（科罗拉多州的SB26-051最初适用于每个操作系统和开发者，没有例外）。System76创始人Carl Richell直接与州立法者合作，法案增加了豁免条款，豁免那些以允许任何人自由复制、再分发和修改的条款分发软件的操作系统和开发者。它还增加了一项条款，阻止平台锁定修改版本。</p><p>加州的AB-1043也有同样的漏洞。撰写AB-1043的议员Buffy Wicks提出了AB-1639来修复这一问题。经过几轮修改，修订后的法案重新定义了“操作系统提供商”，将那些以相同开源许可条款分发软件的人排除在外。</p><p>伊利诺伊州没有这些。HB5511对“制造商”和“操作系统提供商”的定义与这些法案修订前一样宽泛。</p><p>好吧，各位，我们确实越来越接近某些人的梦想——一个反乌托邦的地狱，人们无法控制自己的设备。一方面，这些所谓的“儿童安全”法案在保护儿童的幌子下毫无阻碍地通过，另一方面，那些岛级白痴仍未受到起诉。</p><p>喜欢这次更新吗？支持独立的Linux新闻报道。</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读，并获得5本电子书。</p><p>一次付费，永久享受。</p><p>任何金额，无需承诺。</p><p>一个热爱开源软件、定制PC组装、赛车运动和探索这个世界无限可能的极客。</p><p>Proxmox虚拟环境正式支持ARM64，但你的树莓派尚不支持。</p><p>这个Linux驱动程序多年无人问津，直到AI开始研究它，然后它被移除。</p><p>这个新的开源项目等待……</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/resources-51-beta-npu-powerpc-temps" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/illinois-age-verification-bill/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

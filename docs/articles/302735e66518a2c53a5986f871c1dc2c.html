@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resources beta新增PowerPC温度与AMD NPU统计功能 — Linux 中文速报</title>
+<title>Proxmox虚拟环境正式支持ARM64，但你的树莓派尚不支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Resources beta新增PowerPC温度与AMD NPU统计功能</h1>
+  <h1>Proxmox虚拟环境正式支持ARM64，但你的树莓派尚不支持</h1>
 
-  <div class="article-summary">系统监控工具Resources（Ubuntu 26.04 LTS默认搭载）发布beta版本，新增对AMD NPU（神经处理单元）的利用率、功耗和性能统计，支持Ryzen 7040、8040及AI 300/400系列芯片。同时，通过hwmon驱动支持PowerPC CPU温度监控（POWER8及以上）。此外，该版本改进了Steam游戏和Snap应用的检测可靠性，优化了侧边栏和图表显示，并新增内存指标选项，用户可通过dconf配置切换不同的内存计算方式。Resources现已成为GNOME孵化器项目，未来有望加入GNOME核心应用。</div>
+  <div class="article-summary">Proxmox虚拟环境（VE）正式发布ARM64版本，基于Debian 13.5和Linux 7.0，支持NVIDIA Grace和Vera系统。该版本与x86-64版本共享相同的代码库、发布周期和支持窗口，并包含QEMU 11.0、LXC 7.0和ZFS 2.4等组件。目前官方支持的硬件仅限于NVIDIA平台，其他基于UEFI的ARMv9-A硬件获得尽力支持，而ARMv8-A设备（如树莓派）不在支持范围内。Proxmox还计划将ARM64支持扩展到其他产品，如Proxmox备份服务器。</div>
 
-  <div class="article-body"><p>系统监控工具Resources（Ubuntu 26.04 LTS默认搭载）发布了新版本，扩展了AMD NPU统计功能，并新增了对PowerPC CPU的温度报告。</p><p>搭载Ryzen 7040、8040以及Ryzen AI 300/400系列芯片的用户，现在可以获取其板载神经加速器的利用率、功耗和性能指标。这是一种可靠的方式，可以判断AI工作负载是否在使用NPU，而不是悄悄让CPU过热。</p><p>听到“PowerPC”时你可能会感到惊讶。Resources对PowerPC CPU温度的支持使用了hwmon驱动，该驱动覆盖POWER8及更新的芯片，而不包括苹果在2000年代中期之前使用的那些老旧且容易发热的芯片。</p><p>PowerPC并未消亡。Raptor Computing销售运行Linux且无需专有固件的POWER9主板（Talos II、Blackbird），IBM也仍在销售POWER服务器。当然，这是一个小众用户群，但这是一个显示数字的功能，所以向Resources的开发者致敬。</p><p>据称，此beta版本中Steam游戏和Snap应用的检测更加可靠，并进一步改进了无障碍功能。</p><p>在视觉方面，侧边栏进行了一些“节省空间”的更改，例如仅在存在多个同类设备实例时才显示设备描述（还新增了侧边栏切换快捷键）。在页面上，使用量数字叠加在图表上，而不是堆叠在下方。</p><p>新的内存指标选项改变了Resources内存计算的工作方式，使用新的dconf值（/org/gnome/Resources/memory-metric），可从默认的“RssNoSharedMemory”切换为“VmSize”、“Rss”、“RssAnon”、“ApproximatePss”或“Pss”。</p><p>“RssNoSharedMemory”忽略与其他进程共享的RAM。“ApproximatePss”通过将共享内存平均分配给每个使用它的进程来修复此问题，因此数字实际上加起来是准确的。“Pss”以大致相同的方式工作，但速度更快、精度稍低。“VmSize”报告总虚拟内存，而不是实际驻留在RAM中的部分。“RssAnon”则完全剥离共享内存和文件支持的内存，如果你只关心进程自身的私有数据。</p><p>也就是说：如果这些选项听起来都不实用，请保持默认设置。但如果其他计算方式符合你的统计需求，可以尝试一下——如果发现重大差异或某个选项出现奇怪问题，请在上游提供反馈！</p><p>Resources 51是beta版本，现在是一个GNOME孵化器项目，正在不断完善和改进，目标是加入GNOME核心应用阵容。Ubuntu 26.04 LTS将其默认包含在内，所以如果你喜欢它的外观，并计划本月晚些时候从24.04升级到Ubuntu 26.04 LTS，就可以使用它。</p><p>如果你设置了GNOME Nightly Flatpak仓库，可以从那里安装Resources 51 beta进行测试。使用和评估预发布软件的标准注意事项适用，因此如果在测试时出现问题，请务必在上游提交错误报告。</p></div>
+  <div class="article-body"><p>Proxmox虚拟环境正式支持ARM64，但你的树莓派尚不支持</p><p>Proxmox虚拟环境正式支持ARM64，但你的树莓派尚不支持</p><p>该版本基于Debian 13.5和Linux 7.0，完全支持NVIDIA Grace和Vera系统。</p><p>到2026年，虚拟化基本上是任何严肃数据中心的承载基础设施。企业依赖它在更少的硬件上运行更多的工作负载，干净地隔离服务，并在不购买一堆额外服务器的情况下保持高可用性。</p><p>多年来，Proxmox凭借其产品系列在这一领域建立了声誉。Proxmox虚拟环境（VE）处理虚拟化，Proxmox备份服务器负责数据保护，而Proxmox数据中心管理器则将它们整合为管理分布式基础设施的解决方案。所有这些都是开源软件！</p><p>现在，他们宣布为Proxmox VE（其旗舰虚拟化平台）推出ARM64版本。</p><p>Proxmox VE 9.2的占位图。</p><p>是的，这是亮点。在其现有的x86-64构建旁边，新增的ARM64镜像带来了对ARM64架构的官方支持。</p><p>Proxmox表示，新镜像遵循与x86-64相同的代码库、发布周期和支持窗口，同时运行在Debian 13.5和Linux 7.0上，并包含QEMU 11.0、LXC 7.0和ZFS 2.4等附加组件。</p><p>存储方面也有类似改进，ZFS 2.4和Ceph（Proxmox VE的两个核心存储选项）与x86-64构建具有完全的功能对等性。</p><p>不过，你应该知道，目前官方支持的硬件仅限于NVIDIA平台。Proxmox还与NVIDIA和Supermicro联合验证了Arm64构建，特别是在Grace Hopper Superchip和Vera平台上进行了测试。</p><p>其他基于UEFI的ARMv9-A硬件获得尽力支持，Proxmox表示ARMv8-A“不支持”。</p><p>你桌上那个树莓派，或者任何其他仅支持ARMv8-A的单板计算机，比如Orange Pi或Radxa ROCK板，都不在支持范围内。</p><p>不要以为ARM64支持会止步于Proxmox VE；开发人员已经在为他们的其他产品运行内部测试构建，Proxmox备份服务器就是其中之一。</p><p>然而，哪个产品优先取决于企业客户的需求。</p><p>看到ARM64平台多年来成熟得如此之好，越来越多的负载从x86-64转移到ARM64，这一举措对我来说并不意外。</p><p>Proxmox也不是作为实验来发布这个的。它从第一天起就提供了全面支持。在我看来，这是一家看到了市场方向并相应调整的公司。</p><p>无论如何，Proxmox VE for ARM64现在可以免费下载，既可以是裸机ISO镜像，也可以通过软件包仓库与现有的x86-64构建一起获取。</p><p>企业用户也可以访问企业仓库，与x86-64相同，Proxmox建议在生产部署中使用它。</p><p>直接下载，查看设置细节的文档，或者浏览源代码仓库以了解内部机制。</p><p>一个信息丰富的迷你课程，涵盖从安装和升级Proxmox到使用它的所有内容。</p><p>使用Proxmox进行虚拟机管理</p><p>一个迷你课程，涵盖从安装和升级Proxmox到使用它创建和管理虚拟机的所有内容。</p><p>喜欢这个更新吗？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次支付，永久享受</p><p>任意金额，无承诺</p><p>一个热爱开源软件、定制PC构建、赛车运动和探索这个世界无限可能性的极客。</p><p>伊利诺伊州要求所有操作系统报告你孩子的年龄</p><p>这个Linux驱动程序多年无人问津，直到AI开始研究它并被移除</p><p>这个新的开源项目想成为微软Office的AI优先替代品</p><p>托瓦兹与AI在Linux中达成和解，而Greg Kroah-Hartman划清界限</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/resources-51-beta-npu-powerpc-temps" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/proxmox-virtual-environment-arm64-support/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resources beta新增PowerPC温度与AMD NPU统计功能 — Linux 中文速报</title>
+<title>Apple M3 Pro / Max / Ultra 的初步支持正在为 Linux 7.3 上游化 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Resources beta新增PowerPC温度与AMD NPU统计功能</h1>
+  <h1>Apple M3 Pro / Max / Ultra 的初步支持正在为 Linux 7.3 上游化</h1>
 
-  <div class="article-summary">系统监控工具Resources（Ubuntu 26.04 LTS默认搭载）发布beta版本，新增对AMD NPU（神经处理单元）的利用率、功耗和性能统计，支持Ryzen 7040、8040及AI 300/400系列芯片。同时，通过hwmon驱动支持PowerPC CPU温度监控（POWER8及以上）。此外，该版本改进了Steam游戏和Snap应用的检测可靠性，优化了侧边栏和图表显示，并新增内存指标选项，用户可通过dconf配置切换不同的内存计算方式。Resources现已成为GNOME孵化器项目，未来有望加入GNOME核心应用。</div>
+  <div class="article-summary">Linux 7.2 内核已支持在基础版 Apple M3 SoC 上启动主线内核，但功能尚不完善。现在，Linux 7.3 将加入对 M3 Pro、Max 和 Ultra 变体的初步支持，主要是设备树文件，使其达到与基础 M3 相似的支持水平。不过，由于 GPU 加速等功能尚未实现，这些支持对终端用户仍不实用。此外，该补丁还包含 Apple M1/M2 系列的 HWMON 支持，以应对其复杂的传感器。未来，用户可能仍需依赖 Asahi Linux 发行版，但 M3 系列的支持仍在开发中。</div>
 
-  <div class="article-body"><p>系统监控工具Resources（Ubuntu 26.04 LTS默认搭载）发布了新版本，扩展了AMD NPU统计功能，并新增了对PowerPC CPU的温度报告。</p><p>搭载Ryzen 7040、8040以及Ryzen AI 300/400系列芯片的用户，现在可以获取其板载神经加速器的利用率、功耗和性能指标。这是一种可靠的方式，可以判断AI工作负载是否在使用NPU，而不是悄悄让CPU过热。</p><p>听到“PowerPC”时你可能会感到惊讶。Resources对PowerPC CPU温度的支持使用了hwmon驱动，该驱动覆盖POWER8及更新的芯片，而不包括苹果在2000年代中期之前使用的那些老旧且容易发热的芯片。</p><p>PowerPC并未消亡。Raptor Computing销售运行Linux且无需专有固件的POWER9主板（Talos II、Blackbird），IBM也仍在销售POWER服务器。当然，这是一个小众用户群，但这是一个显示数字的功能，所以向Resources的开发者致敬。</p><p>据称，此beta版本中Steam游戏和Snap应用的检测更加可靠，并进一步改进了无障碍功能。</p><p>在视觉方面，侧边栏进行了一些“节省空间”的更改，例如仅在存在多个同类设备实例时才显示设备描述（还新增了侧边栏切换快捷键）。在页面上，使用量数字叠加在图表上，而不是堆叠在下方。</p><p>新的内存指标选项改变了Resources内存计算的工作方式，使用新的dconf值（/org/gnome/Resources/memory-metric），可从默认的“RssNoSharedMemory”切换为“VmSize”、“Rss”、“RssAnon”、“ApproximatePss”或“Pss”。</p><p>“RssNoSharedMemory”忽略与其他进程共享的RAM。“ApproximatePss”通过将共享内存平均分配给每个使用它的进程来修复此问题，因此数字实际上加起来是准确的。“Pss”以大致相同的方式工作，但速度更快、精度稍低。“VmSize”报告总虚拟内存，而不是实际驻留在RAM中的部分。“RssAnon”则完全剥离共享内存和文件支持的内存，如果你只关心进程自身的私有数据。</p><p>也就是说：如果这些选项听起来都不实用，请保持默认设置。但如果其他计算方式符合你的统计需求，可以尝试一下——如果发现重大差异或某个选项出现奇怪问题，请在上游提供反馈！</p><p>Resources 51是beta版本，现在是一个GNOME孵化器项目，正在不断完善和改进，目标是加入GNOME核心应用阵容。Ubuntu 26.04 LTS将其默认包含在内，所以如果你喜欢它的外观，并计划本月晚些时候从24.04升级到Ubuntu 26.04 LTS，就可以使用它。</p><p>如果你设置了GNOME Nightly Flatpak仓库，可以从那里安装Resources 51 beta进行测试。使用和评估预发布软件的标准注意事项适用，因此如果在测试时出现问题，请务必在上游提交错误报告。</p></div>
+  <div class="article-body"><p>Apple M3 Pro / Max / Ultra 的初步支持正在为 Linux 7.3 上游化 - Phoronix</p><p>Apple M3 Pro / Max / Ultra 的初步支持正在为 Linux 7.3 上游化</p><p>2026年8月7日，下午1:31 EDT。</p><p>Linux 7.2 内核已上游化了对基础版 Apple M3 SoC 的设备树（DT）支持，用于在主线内核上启动，但许多功能仍待支持，对终端用户尚不实用。现在，对于即将到来的 Linux 7.3 内核，M3 Pro、Max 和 Ultra 变体也将获得在主线内核上启动的初步支持。</p><p>这些 M3 Pro / M3 Max / M3 Ultra 支持是主线 Linux 内核的基本设备树文件，使其达到与基础 M3 SoC 大致相同的支持水平……同样，由于 GPU 加速等功能尚未支持，对终端用户仍不实用。但至少这是一个开始，并为未来内核版本中更好的主线支持奠定了基础。</p><p>Apple M3 Pro 和 M3 Max 于 2023 年 10 月随 MacBook Pro 发布，而 M3 Ultra 于 2025 年 3 月随 Mac Studio 推出。目前尚不清楚主线 Linux 内核何时能为 M3 系列或更新型号提供可日常使用的支持。在此之前，用户更容易运行下游的 Asahi Linux 发行版，但即使在那里，许多 M3 功能仍由他们的小型志愿者团队进行开发，正如针对即将到来的 Linux 7.3 合并窗口的补丁所示，该补丁为所有搭载 M3 Pro/Max/Ultra SoC 的 Apple 设备布局了设备树。该补丁还包含对 Apple M1 和 M2 系列的 HWMON 支持，以应对 Apple 混乱的传感器。</p><p>Apple NVMe Linux 驱动在受到新固件影响后获得修复</p><p>Linux 软盘驱动改进以支持旧 Mac 中的 Apple Super Woz Integrated Machine &quot;SWIM&quot;</p><p>Linux 补丁最终允许通过蓝牙监控 Apple Magic Keyboard/Mouse 电池</p><p>Linux 应对 Apple Silicon SoC 上混乱的传感器</p><p>Linux DT 补丁为 Apple M3 Pro / Max / Ultra 提供非常基本的支持</p><p>发布用于在 Linux 上启动 Apple M4 的初始补丁</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他。</p><p>首个面向现代 AMD Ryzen AM5 平台的开源固件发布</p><p>Arch Linux AUR 再次遭遇恶意软件包浪潮，软件包采用暂停</p><p>著名 Arch Linux 开发者任职 10 年后辞职</p><p>Steam 在 Linux 上的使用率在 7 月回升至 4% 以上</p><p>FFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 和 AMD AMF</p><p>Linux 7.3 似乎将上游化 FailFS</p><p>Cloudflare 宣布开源 Cloudflare OS 作为 AI &quot;操作系统&quot;</p><p>Linux 暂存区将拒绝 LLM 生成的补丁，除非是真正的安全修复</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/resources-51-beta-npu-powerpc-temps" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/M3-Pro-Max-Ultra-Linux-7.3" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

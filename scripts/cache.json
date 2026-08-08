@@ -5927,5 +5927,170 @@
     "title_zh": "Fastfetch 2.65 系统信息工具为 Linux 带来更佳的硬件检测能力",
     "summary_zh": "Fastfetch 2.65 版本发布，显著提升了 Linux 系统上的硬件检测能力，使用户能够更全面、更准确地获取系统信息。该版本通过改进硬件识别算法，增强了与各种硬件组件的兼容性，确保用户能快速获取详细且可靠的数据。",
     "fulltext_zh": "通过 Fastfetch 2.65 升级您的 Linux 体验，该版本具备卓越的硬件检测能力，让您轻松获取全面的系统信息。\n\n此文章首发于 Linux Today。"
+  },
+  "d04687c794f8a91b323b3aa030605faf": {
+    "id": "d04687c794f8a91b323b3aa030605faf",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/calibre-9-13-bug-fix-update",
+    "title_en": "Calibre 9.13 fixes broken ebook search in the content server",
+    "summary_en": "A new bug-fix release of Calibre, the open-source e-book manger, view and converter, is available for download. Calibre 9.13 fixes a number of PDF-related issues, including a conversion error that could occur on Linux distributions shipping an &#8216;ancient&#8217; version of the libxml2 library, which is mainly older Debian installs. The cause was a clash between Qt&#8217;s GPU detection and Calibre&#8217;s PDF parser, which both need different versions of libxml2. Calibre now preloads the vers",
+    "pub_date": "Fri, 07 Aug 2026 15:07:51 +0000",
+    "title_zh": "Calibre 9.13 修复内容服务器中电子书搜索故障",
+    "summary_zh": "Calibre 9.13 作为开源电子书管理器的新版本发布，修复了多个 PDF 相关问题，包括因 libxml2 库版本冲突导致的转换错误，以及 PDF 内部链接跳转位置偏移的回归问题。此外，该版本还修复了内容服务器中 ePub 搜索失效、数据文件管理上传问题，并恢复了通过内容服务器转换电子书时缺失的选项，以及批量编辑元数据时的操作按钮。用户可通过官网下载或重新运行安装脚本更新。",
+    "fulltext_zh": "Calibre 9.13 修复内容服务器中电子书搜索故障 - OMG! Ubuntu\n\n开源电子书管理器、阅读器和转换器 Calibre 的新错误修复版本现已可供下载。\n\nCalibre 9.13 修复了多个与 PDF 相关的问题，包括在 Linux 发行版上可能出现的转换错误，这些发行版自带的 libxml2 库版本“过旧”，主要影响较旧的 Debian 安装。\n\n原因是 Qt 的 GPU 检测与 Calibre 的 PDF 解析器之间存在冲突，两者需要不同版本的 libxml2。根据说明，Calibre 现在会在 Qt 的检查干扰之前预加载其所需的版本。\n\nCalibre 9.x 系列中的一个回归问题导致 PDF 文档中的内部链接跳转到目标位置上方。该问题现已解决。\n\n有趣的是，Ubuntu 的 PDF 查看器 Evince 最近也修复了自身的 PDF 链接问题——这一定是某种巧合！\n\n其他修复主要针对使用 Calibre 内容服务器时遇到的问题。内容服务器是一项便捷功能，允许你通过另一台设备（如智能手机或平板电脑）上的网页浏览器，从主机浏览、打开和管理你的电子书库。\n\n有用户报告称，在电子书查看器中搜索 ePub 内容无法正常工作，因此该问题已得到修复，同时修复的还有数据文件管理和上传的问题。\n\n通过内容服务器界面转换电子书时缺失的选项也已恢复。\n\n此外，用户现在可以再次在书籍详情面板中拖放书籍封面，并在批量编辑元数据时查看（并点击）操作按钮。\n\n都是些简单的事情，真的。\n\n如何获取 Calibre 的最新版本\n\nCalibre 是免费的开源软件，适用于 Windows、macOS 和 Linux，可从官方网站下载。对于 Linux，Calibre 通过运行一个脚本安装，该脚本会下载二进制构建版本。要安装更新，每次都需要重新运行该命令。\n\nCalibre 也提供 Flathub 版本，但作为未经验证的构建，截至撰写本文时，该版本落后当前版本两个版本。"
+  },
+  "f19e25137fcb8c180c219d7f76766ac0": {
+    "id": "f19e25137fcb8c180c219d7f76766ac0",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/illinois-age-verification-bill/",
+    "title_en": "Illinois Just Told Every Operating System to Start Reporting Your Kid's Age",
+    "summary_en": "The Children's Online Social Media Safety Act has device makers collect the age bracket, but apps still have to act on it.",
+    "pub_date": "Fri, 07 Aug 2026 09:57:09 GMT",
+    "title_zh": "伊利诺伊州要求所有操作系统报告孩子的年龄",
+    "summary_zh": "伊利诺伊州签署《儿童在线社交媒体安全法》，要求设备制造商、操作系统提供商和应用商店在账户设置时收集儿童出生日期，并划分为四个年龄段。应用通过API获取信号后，需对未成年人启用安全设置，如限制信息流、隐藏个人资料、屏蔽成人消息、隐藏精确位置，并在晚上10点至早上7点关闭通知。违规者每次最高罚款5万美元，法律将于2028年7月1日生效。与科罗拉多州和加州不同，伊利诺伊州未对开源平台提供豁免，引发争议。",
+    "fulltext_zh": "伊利诺伊州刚刚要求每个操作系统开始报告你孩子的年龄。\n\n伊利诺伊州刚刚要求每个操作系统开始报告你孩子的年龄。\n\n《儿童在线社交媒体安全法》要求设备制造商收集年龄区间，但应用仍需据此采取行动。\n\n伊利诺伊州成为美国最新一个将操作系统纳入年龄验证范围的州。州长签署了《儿童在线社交媒体安全法》，为该州销售或使用的每台设备提出了新的年龄验证框架。\n\n该法案对“涵盖制造商”实施年龄检查，这一类别将设备制造商、操作系统提供商和应用商店归为一类。\n\n为了保护孩子！这些制造商必须在账户设置时构建一个界面，要求家长或账户持有人提供孩子的出生日期。该日期随后被转换为四个年龄区间之一：\n\n该法律还规定，所有传输的数字信号必须加密。\n\n应用在用户下载或启动后，可以通过API获取该区间。一旦收到标记用户为未成年人的信号，应用在法律上被视为已获得“实际通知”。\n\n一旦被标记，应用必须开启一系列安全设置。信息流受到限制，个人资料对成年陌生人隐藏，来自成人的消息被屏蔽，精确位置被隐藏，通知在晚上10点至早上7点之间关闭。\n\n家长可以覆盖这些默认设置，16岁以上的未成年人也可以自行更改。\n\n应用必须在2028年7月1日前开始请求这些信号，每次违规最高可罚款5万美元，由州政府执行。如果信号出错，善意行事的设备制造商和应用不承担责任。\n\nJennifer Gong-Gershowitz在众议院主导了该法案，众议员作为首席共同提案人，另有十多人签署。参议员在参议院推动该法案，与参议员共同合作。该法案在众议院以82票对27票通过，随后一致通过最终同意。\n\n开源豁免在哪里？\n\n伊利诺伊州并不是第一个尝试这种模式的州。科罗拉多州的SB26-051和加州的AB-1043都依赖相同的操作系统级年龄信号设置；应用请求信号，设备响应。\n\n这两项法案最初都没有为开源平台提供任何让步（科罗拉多州的SB26-051最初适用于每个操作系统和开发者，没有例外）。System76创始人Carl Richell直接与州立法者合作，法案增加了豁免条款，豁免那些以允许任何人自由复制、再分发和修改的条款分发软件的操作系统和开发者。它还增加了一项条款，阻止平台锁定修改版本。\n\n加州的AB-1043也有同样的漏洞。撰写AB-1043的议员Buffy Wicks提出了AB-1639来修复这一问题。经过几轮修改，修订后的法案重新定义了“操作系统提供商”，将那些以相同开源许可条款分发软件的人排除在外。\n\n伊利诺伊州没有这些。HB5511对“制造商”和“操作系统提供商”的定义与这些法案修订前一样宽泛。\n\n好吧，各位，我们确实越来越接近某些人的梦想——一个反乌托邦的地狱，人们无法控制自己的设备。一方面，这些所谓的“儿童安全”法案在保护儿童的幌子下毫无阻碍地通过，另一方面，那些岛级白痴仍未受到起诉。\n\n喜欢这次更新吗？支持独立的Linux新闻报道。\n\nIt's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读，并获得5本电子书。\n\n一次付费，永久享受。\n\n任何金额，无需承诺。\n\n一个热爱开源软件、定制PC组装、赛车运动和探索这个世界无限可能的极客。\n\nProxmox虚拟环境正式支持ARM64，但你的树莓派尚不支持。\n\n这个Linux驱动程序多年无人问津，直到AI开始研究它，然后它被移除。\n\n这个新的开源项目等待……"
+  },
+  "302735e66518a2c53a5986f871c1dc2c": {
+    "id": "302735e66518a2c53a5986f871c1dc2c",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/proxmox-virtual-environment-arm64-support/",
+    "title_en": "Proxmox Virtual Environment Officially Runs on ARM64, But Your Raspberry Pi Isn't Supported Yet",
+    "summary_en": "The release is powered by Debian 13.5 and Linux 7.0, with NVIDIA Grace and Vera systems fully supported.",
+    "pub_date": "Fri, 07 Aug 2026 06:22:08 GMT",
+    "title_zh": "Proxmox虚拟环境正式支持ARM64，但你的树莓派尚不支持",
+    "summary_zh": "Proxmox虚拟环境（VE）正式发布ARM64版本，基于Debian 13.5和Linux 7.0，支持NVIDIA Grace和Vera系统。该版本与x86-64版本共享相同的代码库、发布周期和支持窗口，并包含QEMU 11.0、LXC 7.0和ZFS 2.4等组件。目前官方支持的硬件仅限于NVIDIA平台，其他基于UEFI的ARMv9-A硬件获得尽力支持，而ARMv8-A设备（如树莓派）不在支持范围内。Proxmox还计划将ARM64支持扩展到其他产品，如Proxmox备份服务器。",
+    "fulltext_zh": "Proxmox虚拟环境正式支持ARM64，但你的树莓派尚不支持\n\nProxmox虚拟环境正式支持ARM64，但你的树莓派尚不支持\n\n该版本基于Debian 13.5和Linux 7.0，完全支持NVIDIA Grace和Vera系统。\n\n到2026年，虚拟化基本上是任何严肃数据中心的承载基础设施。企业依赖它在更少的硬件上运行更多的工作负载，干净地隔离服务，并在不购买一堆额外服务器的情况下保持高可用性。\n\n多年来，Proxmox凭借其产品系列在这一领域建立了声誉。Proxmox虚拟环境（VE）处理虚拟化，Proxmox备份服务器负责数据保护，而Proxmox数据中心管理器则将它们整合为管理分布式基础设施的解决方案。所有这些都是开源软件！\n\n现在，他们宣布为Proxmox VE（其旗舰虚拟化平台）推出ARM64版本。\n\nProxmox VE 9.2的占位图。\n\n是的，这是亮点。在其现有的x86-64构建旁边，新增的ARM64镜像带来了对ARM64架构的官方支持。\n\nProxmox表示，新镜像遵循与x86-64相同的代码库、发布周期和支持窗口，同时运行在Debian 13.5和Linux 7.0上，并包含QEMU 11.0、LXC 7.0和ZFS 2.4等附加组件。\n\n存储方面也有类似改进，ZFS 2.4和Ceph（Proxmox VE的两个核心存储选项）与x86-64构建具有完全的功能对等性。\n\n不过，你应该知道，目前官方支持的硬件仅限于NVIDIA平台。Proxmox还与NVIDIA和Supermicro联合验证了Arm64构建，特别是在Grace Hopper Superchip和Vera平台上进行了测试。\n\n其他基于UEFI的ARMv9-A硬件获得尽力支持，Proxmox表示ARMv8-A“不支持”。\n\n你桌上那个树莓派，或者任何其他仅支持ARMv8-A的单板计算机，比如Orange Pi或Radxa ROCK板，都不在支持范围内。\n\n不要以为ARM64支持会止步于Proxmox VE；开发人员已经在为他们的其他产品运行内部测试构建，Proxmox备份服务器就是其中之一。\n\n然而，哪个产品优先取决于企业客户的需求。\n\n看到ARM64平台多年来成熟得如此之好，越来越多的负载从x86-64转移到ARM64，这一举措对我来说并不意外。\n\nProxmox也不是作为实验来发布这个的。它从第一天起就提供了全面支持。在我看来，这是一家看到了市场方向并相应调整的公司。\n\n无论如何，Proxmox VE for ARM64现在可以免费下载，既可以是裸机ISO镜像，也可以通过软件包仓库与现有的x86-64构建一起获取。\n\n企业用户也可以访问企业仓库，与x86-64相同，Proxmox建议在生产部署中使用它。\n\n直接下载，查看设置细节的文档，或者浏览源代码仓库以了解内部机制。\n\n一个信息丰富的迷你课程，涵盖从安装和升级Proxmox到使用它的所有内容。\n\n使用Proxmox进行虚拟机管理\n\n一个迷你课程，涵盖从安装和升级Proxmox到使用它创建和管理虚拟机的所有内容。\n\n喜欢这个更新吗？支持独立的Linux新闻报道\n\nIt's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。\n\n一次支付，永久享受\n\n任意金额，无承诺\n\n一个热爱开源软件、定制PC构建、赛车运动和探索这个世界无限可能性的极客。\n\n伊利诺伊州要求所有操作系统报告你孩子的年龄\n\n这个Linux驱动程序多年无人问津，直到AI开始研究它并被移除\n\n这个新的开源项目想成为微软Office的AI优先替代品\n\n托瓦兹与AI在Linux中达成和解，而Greg Kroah-Hartman划清界限"
+  },
+  "56b390bbc953cc59c00ab11fd4a2db63": {
+    "id": "56b390bbc953cc59c00ab11fd4a2db63",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/linux-old-moxa-driver-removal/",
+    "title_en": "Nobody Touched This Linux Driver for Years, Until AI Started Poking Around and It Got Removed",
+    "summary_en": "Moxa confirmed the Intellio hardware was discontinued back in 2021, but the driver only left the kernel recently after AI agents started poking at the dead code.",
+    "pub_date": "Fri, 07 Aug 2026 04:11:13 GMT",
+    "title_zh": "多年无人问津的Linux驱动，直到AI开始翻找后被移除",
+    "summary_zh": "Linux内核维护者Greg Kroah-Hartman近日移除了一款已有27年历史的Moxa Intellio多端口串行驱动，该驱动自1999年加入内核，但硬件早已停产。移除的直接原因是AI代理开始扫描这些死代码，并发现了一些“有趣”的问题，但维护者认为这些发现毫无意义，因为该驱动已无人使用。Moxa公司早在2021年就确认硬件停产，2026年5月确认软件支持也完全终止。虽然AI并非直接删除代码，但其对旧代码的扫描促使维护者最终采取了行动。",
+    "fulltext_zh": "多年无人问津的Linux驱动，直到AI开始翻找后被移除\n\nMoxa确认Intellio硬件早在2021年就已停产，但该驱动直到最近才因AI代理开始翻找死代码而离开内核。\n\nGreg Kroah-Hartman刚刚删除了一款多年来对任何人都无关紧要的Linux驱动。\n\n移除的原因不是bug报告，也不是用户投诉，而是AI代理在翻找死代码时发现了没人要求的结果。\n\n这听起来像是另一篇“AI正在重塑开源”的文章。但事实并非如此。这款驱动早已在淘汰之列，多年前就已说明。变化在于，移除最终发生在AI正在内核代码库中不断挖掘的时期。\n\n8月3日，GKH向linux-serial邮件列表发送了一个补丁，完全移除了该驱动。这就是Moxa Intellio系列多端口串行驱动，自1999年起就一直是内核的一部分。\n\n该补丁删除了2137行驱动代码，以及引用它的Kconfig和Makefile条目。总计删除了2148行未使用代码。\n\nGKH在补丁说明中写道：“这是一款非常古老的驱动，已知硬件已不存在，公司也表示不再需要它，所以让我们移除它，因为LLM开始翻找它并发现‘有趣’的东西，鉴于它实际上并未被使用，这只会浪费每个人的时间。”\n\n不过，他也为真正仍需要该驱动的用户留了门，指出该驱动未来可能会以“更‘现代’的方式”重新构建。\n\nMoxa并非一家默默无闻或已倒闭的90年代酷公司。它是一家台湾公司，为工厂和铁路系统制造工业网络设备和串行卡。\n\nIntellio系列是其产品线中较老的PCI串行卡系列，并非人们阁楼里能找到的消费级硬件。\n\n虽然软件支持承诺到2023年，但硬件本身早在2017年就已停产。根据Moxa的Ray Chen在2021年发给Jiri Slaby的邮件，公司已无意继续维持Intellio系列。\n\nJiri多年来一直维护内核串行驱动代码的部分，曾提议将该驱动标记为损坏或直接移除。\n\n但直到2026年5月，一个重组tty子系统目录结构的独立补丁集才重新提起这个话题。Moxa的Crescent Hsieh确认硬件和软件支持已完全淘汰，甚至主动提出帮忙编写移除补丁。\n\n这个时间差本身并不罕见；内核补丁经常在队列中等待。值得注意的是最终推动移除的因素。如果说“AI正在删除内核代码”就夸大了实际情况。Moxa方面在5月就已同意移除，GKH直到三个月后的8月才行动。\n\nAI所做的是开始翻找这款27年历史的代码，而所有人都已同意它已死亡，并提出了关于已无硬件可测试的发现。\n\n如果你习惯使用AI代理，就会知道扫描旧代码并不总能产生真正的新工作。有时它只是产生足够的烦扰，迫使维护者采取行动以扼杀在萌芽状态。\n\n这一变更落地几分钟前，GKH划出了另一条界限，完全拒绝了LLM为内核staging树生成的补丁。\n\n因此，虽然AI尚未编写多少Linux内核代码，但它已经在影响哪些部分被丢弃。\n\n喜欢这次更新吗？支持独立的Linux新闻报道。\n\nIt's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。\n\n一次付费，永久享受。\n\n任意金额，无需承诺。\n\n一位热爱开源软件、定制PC组装、赛车运动并探索这个世界无限可能的极客。\n\n伊利诺伊州刚要求每个操作系统开始报告你孩子的..."
+  },
+  "6254f517d62ba88e09175478dc92f8fb": {
+    "id": "6254f517d62ba88e09175478dc92f8fb",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12915",
+    "title_en": "Distribution Release: TitalcruiseOS 5.4",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Titalcruise E.A. has announced the release of TitalcruiseOS 5.4, a major update of the project's Debian-based Linux distribution designed primarily for system administrators, developers and power users. Developed in Argentina, it is localised into the Spanish language. The English translation of the original announcement provides the release information:....",
+    "pub_date": "",
+    "title_zh": "发行版发布：TitalcruiseOS 5.4",
+    "summary_zh": "Titalcruise E.A. 宣布发布 TitalcruiseOS 5.4，这是其基于 Debian 的 Linux 发行版的一次重大更新，主要面向系统管理员、开发者和高级用户。该版本采用 Debian 14 'Forky' 基础，标志着第五代（Gen 5）的正式收官。新版本体积为 7.0 GB，不仅提升了低延迟桌面体验，还引入了完整的软件工程工作站特性，包括 Docker CE、Podman、Flatpak 集成以及预装的 Android SDK。",
+    "fulltext_zh": "Titalcruise E.A. 已宣布发布 5.4 版本，这是该项目基于 Debian 的 Linux 发行版的一次重大更新，主要面向系统管理员、开发者和高级用户。该发行版在阿根廷开发，本地化为西班牙语。原始公告的英文翻译提供了发布信息：\"今天对整个团队以及那些密切关注我们每一个构建、每一个概念验证和每一个系统镜像调整的人来说，都是真正特别的一天。我们自豪地宣布 TitalcruiseOS 5.4（构建 20260806）正式发布，这是一个累积更新，不仅重新定义了我们操作系统的能力，也标志着第五代（Gen 5）的正式收官和巅峰。最初对敏捷、低延迟桌面体验的追求，随着 5.4 版本，已经演变成一个完整的软件工程工作站。是什么让 TitalcruiseOS 5.4 成为 Gen 5 中最雄心勃勃的版本？这个 7.0 GB 的版本不仅仅是补丁，它代表了一次重大的架构飞跃，旨在提供安全性和对市场上最苛刻硬件的兼容性。我们正在超越之前版本的限制，采用新的 Debian 14 'Forky' 基础。\"\n\nTitalcruiseOS 5.4 20260806-gnome50-amd64.iso\n\n近期相关新闻和发布\n\n发行版发布：TitalcruiseOS 5.4\n更多 TitalcruiseOS 新闻...\n\nTitalcruiseOS 是一个基于 Debian 的桌面 Linux 发行版，具有高度定制的 GNOME 桌面。它旨在为系统管理员、开发者和高级用户提供低延迟性能和全面的软件兼容性。其 GNOME 桌面通过精选的原生扩展和实用工具进行了增强。TitalcruiseOS 预配置了部署和虚拟化功能，包括完整的 Docker CE 环境、Podman 工具、通过 Flatseal 进行的 Flatpak 集成，以及预装的 Android SDK。"
+  },
+  "148541f737f790d2c7795d8ee214972f": {
+    "id": "148541f737f790d2c7795d8ee214972f",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/KDE-Plasma-6.8-Remote-Desktop",
+    "title_en": "KDE Plasma 6.8 Improvements For UI, Built-In Remote Desktop Server",
+    "summary_en": "It's been another busy summertime week of KDE developers working toward a great Plasma 6.8 desktop release in October...",
+    "pub_date": "Fri, 07 Aug 2026 21:01:10 -0400",
+    "title_zh": "KDE Plasma 6.8 改进用户界面，内置远程桌面服务器",
+    "summary_zh": "KDE Plasma 6.8 正在积极开发中，预计于十月发布。本周的改进包括：打印不可用时的通知提示、任务管理器缩略图标签间距优化、用户账户创建时的限制提示更清晰、修复内置远程桌面服务器黑屏问题并降低延迟、按需加载剪贴板弹出以减少内存占用。",
+    "fulltext_zh": "KDE Plasma 6.8 改进用户界面，内置远程桌面服务器 - Phoronix\nKDE Plasma 6.8 改进用户界面，内置远程桌面服务器\n发布于 2026年8月7日 美国东部时间晚上9:01。\n\n对于KDE开发者来说，这又是一个忙碌的夏季周，他们正致力于在十月发布一个出色的Plasma 6.8桌面版本。\n\n本周的Plasma更新今日发布，重点介绍了本周所有有趣的变更。在Plasma 6.8中，如果尝试打印到不可用的打印机，现在会弹出通知提醒您，而不是静默失败。\n\n此外，Plasma 6.8还改进了任务管理器缩略图，使标签顶部的内边距更美观；在创建新用户账户时，对用户名/密码等限制的UI报告更清晰；以及其他改进。\n\nPlasma 6.8还修复了内置远程桌面服务器的一些问题，这些问题可能导致某些客户端出现黑屏。此外，内置远程桌面服务器还进行了调整，以减少延迟，并在网络连接不佳时提供更好的性能。\n\n本周另一个值得注意的变化是，Plasma 6.8现在按需加载剪贴板弹出窗口，而不是在启动时加载，以减少内存占用。\n\n有关这些KDE Plasma变更的更多详细信息，请参阅最新一期的\n\nKGamma2 让 KDE Plasma 在 Wayland 下轻松调整伽马值\nKDE Linux 让 Java 和 DOS 应用的首次运行体验更轻松\nKDE Plasma 6.8 将获得多GPU/eGPU性能的巨大提升\nKDE 开发者修复了超长小文件复制时间的长期错误\nKDE Plasma 6.8 引入新的 kscreenctl 工具\nKDE Plasma 6.8 系统监视器让进程分配到 CPU 核心更简单\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael 撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\n首款面向现代 AMD Ryzen AM5 平台的开源固件发布\nArch Linux AUR 再次遭遇恶意软件包浪潮，软件包采纳暂停\n著名 Arch Linux 开发者任职十年后辞职\nSteam 在 Linux 上的使用率在七月回升至4%以上\nFFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 及更多 AMD AMF 功能\nLinux 7.3 看起来将上游支持 FailFS\nCloudflare 宣布开源 Cloudflare OS 作为 AI“操作系统”\nLinux 的暂存区将拒绝 LLM 生成的补丁，除非是真正的安全修复\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "9e1e87527a9b74d3b0f33e998c6ccea4": {
+    "id": "9e1e87527a9b74d3b0f33e998c6ccea4",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.3-HIDPP-Reprogrammable",
+    "title_en": "Linux 7.3 To Support Logitech HID++ 2.0 Reprogrammable Button Support",
+    "summary_en": "For those with newer, high-end Logitech input devices, coming with Linux 7.3 is support for the re-programmable button support of the HID++ 2.0 protocol...",
+    "pub_date": "Fri, 07 Aug 2026 15:28:18 -0400",
+    "title_zh": "Linux 7.3 将支持罗技 HID++ 2.0 可重编程按键功能",
+    "summary_zh": "Linux 7.3 内核将新增对罗技 HID++ 2.0 协议可重编程按键的支持，允许软件查询、重映射和分流鼠标按键及特殊键盘键。该功能由开源开发者 Elliot Douglas 主导，通过内核驱动 logitech-hidpp 实现，并已加入 HID 子系统的 for-next 分支，预计将在 Linux 7.3 合并窗口中被接受。",
+    "fulltext_zh": "Linux 7.3 将支持罗技 HID++ 2.0 可重编程按键功能 - Phoronix\nLinux 7.3 将支持罗技 HID++ 2.0 可重编程按键功能\n2026年8月7日 下午3:28（美国东部时间）\n\n对于使用较新高端罗技输入设备的用户，Linux 7.3 将带来对 HID++ 2.0 协议可重编程按键的支持。\n\nHID++ 2.0 设备协议的可重编程按键支持允许软件查询、重映射和分流鼠标按键及特殊键盘键。当按键被分流时，系统会发送特殊通知，而不是标准的按键事件。\n\n此前已有一些用户空间的开源软件解决方案来处理罗技可重编程按键支持及重映射界面，而现在 logitech-hidpp 内核驱动程序也开始支持这一 HID++ 2.0 功能。\n\n主导这项罗技 HID++ 内核驱动功能开发的开源开发者 Elliot Douglas 解释道：\n\n“某些罗技 HID++ 2.0 鼠标可以通过 HID++ 功能 0x1b04（SpecialKeysMseButtons / REPROG_CONTROLS_V4）报告被分流的可重编程控制，而不是通过正常的 HID 鼠标报告。\n\n为这些控制添加一个由 quirk 门控的事件路径。该处理程序会临时分流经过验证的每产品控制，将 divertedButtonsEvent 解析为当前按下的控制列表，并为每个映射的控制报告相应的 evdev 按键状态。\n\n将控制映射保存在每产品数组中，这样为另一款鼠标添加支持时，不会改变已支持设备所通告的 evdev 能力。”\n\n更多细节可参见此协议文档。\n\n该补丁已加入 HID 子系统的“for-next”Git 分支，因此预计将在即将到来的 Linux 7.3 合并窗口中被提交。\n\nHyperX 驱动程序即将在 Linux 7.3 中支持，仅用于报告麦克风静音状态\nSteelSeries 最新 Arctis Nova 5X 和 Nova 7 耳机将在 Linux 7.3 中获得支持\nLinux 7.3 将支持高通 Adreno 704 和 Adreno 722 GPU\nLinux 7.2-rc6 绕过了多个有问题的西部数据 SATA 驱动器\nARCTIC 推出新风扇控制器，已获得主线 Linux 支持\n华硕笔记本低语模式支持正在为 Linux 开发中\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他。\n\n首个面向现代 AMD Ryzen AM5 平台的开源固件发布\nArch Linux AUR 再次遭遇恶意软件包浪潮，软件包收养暂停\n著名 Arch Linux 开发者十年后辞职\nSteam 在 Linux 上的使用率在 7 月份回升至 4% 以上\nFFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 和更多 AMD AMF 功能\nLinux 7.3 看起来将上游化 FailFS\nCloudflare 宣布开源 Cloudflare OS 作为 AI“操作系统”\nLinux 的暂存区将拒绝 LLM 生成的补丁，除非是真正的安全修复\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "deb7d710591098ec0168c2030b74daf8": {
+    "id": "deb7d710591098ec0168c2030b74daf8",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/M3-Pro-Max-Ultra-Linux-7.3",
+    "title_en": "Initial Apple M3 Pro / Max / Ultra Support Being Upstreamed For Linux 7.3",
+    "summary_en": "Upstreamed for the Linux 7.2 kernel was the Device Tree (DT) support for booting the mainline Linux kernel on the base Apple M3 SoC. Though it's not yet useful for end-users with many features remaining to be supported and upstreamed. Now for the upcoming Linux 7.3 kernel, the M3 Pro, Max, and Ultra variants will also have initial support for booting on the mainline kernel...",
+    "pub_date": "Fri, 07 Aug 2026 13:31:21 -0400",
+    "title_zh": "Apple M3 Pro / Max / Ultra 的初步支持正在为 Linux 7.3 上游化",
+    "summary_zh": "Linux 7.2 内核已支持在基础版 Apple M3 SoC 上启动主线内核，但功能尚不完善。现在，Linux 7.3 将加入对 M3 Pro、Max 和 Ultra 变体的初步支持，主要是设备树文件，使其达到与基础 M3 相似的支持水平。不过，由于 GPU 加速等功能尚未实现，这些支持对终端用户仍不实用。此外，该补丁还包含 Apple M1/M2 系列的 HWMON 支持，以应对其复杂的传感器。未来，用户可能仍需依赖 Asahi Linux 发行版，但 M3 系列的支持仍在开发中。",
+    "fulltext_zh": "Apple M3 Pro / Max / Ultra 的初步支持正在为 Linux 7.3 上游化 - Phoronix\n\nApple M3 Pro / Max / Ultra 的初步支持正在为 Linux 7.3 上游化\n\n2026年8月7日，下午1:31 EDT。\n\nLinux 7.2 内核已上游化了对基础版 Apple M3 SoC 的设备树（DT）支持，用于在主线内核上启动，但许多功能仍待支持，对终端用户尚不实用。现在，对于即将到来的 Linux 7.3 内核，M3 Pro、Max 和 Ultra 变体也将获得在主线内核上启动的初步支持。\n\n这些 M3 Pro / M3 Max / M3 Ultra 支持是主线 Linux 内核的基本设备树文件，使其达到与基础 M3 SoC 大致相同的支持水平……同样，由于 GPU 加速等功能尚未支持，对终端用户仍不实用。但至少这是一个开始，并为未来内核版本中更好的主线支持奠定了基础。\n\nApple M3 Pro 和 M3 Max 于 2023 年 10 月随 MacBook Pro 发布，而 M3 Ultra 于 2025 年 3 月随 Mac Studio 推出。目前尚不清楚主线 Linux 内核何时能为 M3 系列或更新型号提供可日常使用的支持。在此之前，用户更容易运行下游的 Asahi Linux 发行版，但即使在那里，许多 M3 功能仍由他们的小型志愿者团队进行开发，正如针对即将到来的 Linux 7.3 合并窗口的补丁所示，该补丁为所有搭载 M3 Pro/Max/Ultra SoC 的 Apple 设备布局了设备树。该补丁还包含对 Apple M1 和 M2 系列的 HWMON 支持，以应对 Apple 混乱的传感器。\n\nApple NVMe Linux 驱动在受到新固件影响后获得修复\n\nLinux 软盘驱动改进以支持旧 Mac 中的 Apple Super Woz Integrated Machine \"SWIM\"\n\nLinux 补丁最终允许通过蓝牙监控 Apple Magic Keyboard/Mouse 电池\n\nLinux 应对 Apple Silicon SoC 上混乱的传感器\n\nLinux DT 补丁为 Apple M3 Pro / Max / Ultra 提供非常基本的支持\n\n发布用于在 Linux 上启动 Apple M4 的初始补丁\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他。\n\n首个面向现代 AMD Ryzen AM5 平台的开源固件发布\n\nArch Linux AUR 再次遭遇恶意软件包浪潮，软件包采用暂停\n\n著名 Arch Linux 开发者任职 10 年后辞职\n\nSteam 在 Linux 上的使用率在 7 月回升至 4% 以上\n\nFFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 和 AMD AMF\n\nLinux 7.3 似乎将上游化 FailFS\n\nCloudflare 宣布开源 Cloudflare OS 作为 AI \"操作系统\"\n\nLinux 暂存区将拒绝 LLM 生成的补丁，除非是真正的安全修复\n\n在享受无广告浏览的同时，\n\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026\n\n所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "3042ed10dd8c1729e892459190e588f2": {
+    "id": "3042ed10dd8c1729e892459190e588f2",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Intel-QATlib-26.08-Released",
+    "title_en": "Intel QATlib 26.08 Released With Gen6 Device Support, 2MB Hugepages",
+    "summary_en": "Intel today released an updated version of their QuickAssist Technology library (QATlib) as the user-space component for making use of QuickAssist accelerators under Linux...",
+    "pub_date": "Fri, 07 Aug 2026 12:57:18 -0400",
+    "title_zh": "Intel QATlib 26.08 发布，支持 Gen6 设备和 2MB 大页",
+    "summary_zh": "Intel 今日发布了 QATlib 26.08，这是 QuickAssist Technology 库的用户空间组件，用于在 Linux 下使用 QuickAssist 加速器。该版本最重要的更新是支持下一代 QAT Gen6 6XXX 加速器，包括字典、Zstandard 和 KPT 功能，并提供了针对这些新硬件的示例代码。此外，新版本还增加了对 QAT_MAX_2M_HPG_PER_PROCESS 环境变量的支持，以启用 2MB 大页，并引入了 EPOLL 合并定时器支持、设备管理脚本等改进。",
+    "fulltext_zh": "Intel QATlib 26.08 发布，支持 Gen6 设备和 2MB 大页 - Phoronix\n\nIntel QATlib 26.08 发布，支持 Gen6 设备和 2MB 大页\n\n2026年8月7日，美国东部时间下午12:57。\n\nIntel 今日发布了其 QuickAssist Technology 库（QATlib）的更新版本，这是用于在 Linux 下使用 QuickAssist 加速器的用户空间组件。\n\nQATlib 26.08 最显著的变化是库已准备好支持下一代 QAT Gen6 6XXX 加速器。自去年以来，Intel 已经在其 Linux 内核驱动中准备了 QAT Gen6 支持，并启用了新功能，如无线模式支持和密钥保护技术（KPT）。现在，QATlib 的用户空间支持已与其 Gen6 支持对齐。\n\nGen6 QATlib 支持包括字典、Zstandard 和 KPT 功能，以及针对这些即将推出的硬件的示例 QAT 代码。据推测，QAT Gen6 将用于下一代 Xeon 7 Diamond Rapids 处理器。\n\nQATlib 26.08 的另一个新功能是增加了对 QAT_MAX_2M_HPG_PER_PROCESS 环境变量的支持，用于启用 2MB 大页支持。\n\n此外，还有 EPOLL 合并定时器支持、用于速率限制功能的设备管理脚本，以及其他更新。\n\n有关今天更新的 Intel QATlib 26.08 版本的下载和更多详细信息，请访问 Phoronix。\n\nIntel 在 Meteor Lake 及更新版本的 Linux 驱动中推进 HDMI 2.1 FRL 支持\nUSB4STREAM 增加忙轮询选项，以降低延迟但增加 CPU 周期\nLinux 将避免混淆带有 DEC 的新 Intel CPU 的处理器固件\nLinux 7.3 将开始为 Intel Starfire 奠定基础\nLinux 7.3 将把 Intel Nova Lake S 图形视为稳定\n补丁提交以改善 Intel Alchemist GPU 上的 Linux 媒体加速\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他。\n\n首个面向现代 AMD Ryzen AM5 平台的开源固件发布\nArch Linux AUR 再次遭遇恶意软件包浪潮，软件包采用暂停\n著名 Arch Linux 开发者任职十年后辞职\nSteam 在 Linux 上的使用率在 7 月回升至 4% 以上\nFFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 和 AMD AMF\nLinux 7.3 看起来将上游 FailFS\nCloudflare 宣布开源 Cloudflare OS 作为 AI“操作系统”\nLinux 的暂存区现在将拒绝 LLM 生成的补丁，除非是真正的安全修复\n\n虽然有无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026，由 Phoronix Media 所有。\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "8dd0ba592f74bc1cd4e7145b120f7f00": {
+    "id": "8dd0ba592f74bc1cd4e7145b120f7f00",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/More-Aggressive-TTM-Linux-7.3",
+    "title_en": "TTM Memory Management For Graphics To Be More Aggresive With Linux 7.3",
+    "summary_en": "This week a final batch of DRM-Misc-Next feature material was submitted for DRM-Next to queue ahead of the Linux 7.3 merge window opening later in the month. Most notable is the TTM memory management code is now being more agressive when allocating below protection limits. This is an improvement coming thanks to Valve's open-source Linux graphics team...",
+    "pub_date": "Fri, 07 Aug 2026 11:57:22 -0400",
+    "title_zh": "Linux 7.3 将更激进地使用 TTM 内存管理以优化图形性能",
+    "summary_zh": "本周提交的 DRM-Misc-Next 功能补丁中，TTM 内存管理代码在分配低于保护限制时变得更加激进。该改进由 Valve 的开源 Linux 图形团队贡献，旨在解决当 VRAM 稀缺且应用竞争时，受保护的内存分配可能落入 GTT 的问题。通过引入特殊处理，受 cgroup 保护的分配将尝试驱逐未受保护的缓冲区，以确保应用能充分利用系统授予的内存保护。此外，DMEMCG 支持已扩展到 AMDGPU 和 Xe 驱动，Nouveau 驱动也新增了 DMEMCG 支持，UDMABUF 移除了人为的 64MB 限制，Allwinner Sun4i 驱动则改进了 YUV 和 4K 支持。",
+    "fulltext_zh": "本周，DRM-Misc-Next 的最终一批功能材料已提交给 DRM-Next，以便在 Linux 7.3 合并窗口于本月晚些时候开启前排队。最值得注意的是，TTM 内存管理代码在分配低于保护限制时现在变得更加激进。这一改进得益于 Valve 的开源 Linux 图形团队。\n\n自去年以来，Valve Linux 图形团队的 Natalie Vock 一直在研究当 VRAM 稀缺且应用程序/游戏开始竞争视频内存空间时，设备内存保护无法阻止分配最终落入 GTT 的情况。经过八轮修订，这些对通用 TTM 内存管理代码和 cgroup 设备内存代码的改进现已确定将合并到 Linux 7.3 中。\n\nVock 在补丁中总结了情况：\n\n“我一直在研究一些情况，当 VRAM 变得稀缺且应用开始激烈竞争时，dmem 保护无法阻止分配最终落入 GTT。简而言之，这是因为其他（未受保护的）应用程序在受保护应用程序之前填满了 VRAM。这导致 TTM 退缩，并尝试在 GTT 中分配，而最终分配就落在了那里。现有的驱逐保护无法防止这种情况，因为从未尝试过驱逐（尽管你可以将退缩视为立即驱逐到 GTT）。\n\n本系列试图通过添加一个特殊情况来缓解这个问题：当分配受 cgroup 保护时，TTM 不会立即退缩，而是会尝试从域中驱逐未受保护的缓冲区，为受保护的缓冲区腾出空间。这确保了应用程序能够真正使用系统授予的所有内存保护，而不会容易发生乒乓效应（只有受保护的分配可以驱逐未受保护的分配，反之则不行）。”\n\nVock 一直在致力于改善内存容量有限系统上的 Linux 游戏体验。\n\n这些补丁是本周 DRM-Misc-Next 的一部分。它还包括 DMEMCG 对驱逐的支持，并已为 AMDGPU 和 Xe 驱动启用。UDMABUF 代码还移除了一个人为的 64MB 限制，该限制是 Xaver Hugl 在最近改进 KDE 多 GPU/eGPU 体验时发现的。Allwinner Sun4i DRM 驱动也改进了 YUV 和 4K 支持。Nouveau 驱动现在也支持设备内存控制组（DMEMCG），该支持由 Natalie Vock 作为其他改进的一部分编写。\n\nLinux 7.2-rc7 解决了导致 8 年后释放后使用的“棘手”竞争条件\nPage Alloc Hogger 让您更好地在 Linux 上测试/调试内存行为\nQualcomm 为 Linux 内核提出 Synx，具有“显著”的功耗和性能优势\n更多旧 Linux 驱动面临移除，原因是 AI/LLM 编码代理的噪音\nLinux 的 Staging 区域现在将拒绝 LLM 生成的补丁，除非是真正的安全修复\nLinux 7.2-rc6 发布：“这个 RC 很大”\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动和其他主题的状态。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\n首款面向现代 AMD Ryzen AM5 平台的开源固件发布\nArch Linux AUR 再次遭遇恶意软件包浪潮，软件包收养暂停\n著名 Arch Linux 开发者任职 10 年后辞职\nSteam 在 Linux 上的使用率在 7 月回升至 4% 以上\nFFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 和更多 AMD AMF\nLinux 7.3 看起来将上游化"
+  },
+  "91a1c96bb707c3da5a49bf1ebd4bb382": {
+    "id": "91a1c96bb707c3da5a49bf1ebd4bb382",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/incus-7-2-container-virtual-machine-manager-released-with-selinux-support/",
+    "title_en": "Incus 7.2 Container & Virtual Machine Manager Released with SELinux Support",
+    "summary_en": "Discover the new Incus 7.2, featuring enhanced Container &#038; Virtual Machine Management with SELinux support for improved security and performance.\nThe post Incus 7.2 Container &amp; Virtual Machine Manager Released with SELinux Support appeared first on Linux Today.",
+    "pub_date": "Fri, 07 Aug 2026 07:09:05 +0000",
+    "title_zh": "Incus 7.2 容器与虚拟机管理器发布，支持 SELinux",
+    "summary_zh": "Incus 7.2 版本正式发布，该版本增强了容器与虚拟机管理功能，并引入了 SELinux 支持，以提升安全性和性能。此更新旨在为用户提供更安全、更高效的虚拟化环境管理体验。",
+    "fulltext_zh": "探索全新的 Incus 7.2，其特色在于增强了容器与虚拟机管理，并支持 SELinux，从而提升安全性与性能。\n\n该文章最初发表于 Linux Today。"
+  },
+  "62d41d0b5abe7425246c7c5a38dc063a": {
+    "id": "62d41d0b5abe7425246c7c5a38dc063a",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/shelly-2-4-1-gui-package-manager-for-arch-linux-improves-networking-security/",
+    "title_en": "Shelly 2.4.1 GUI Package Manager for Arch Linux Improves Networking, Security",
+    "summary_en": "Discover the enhanced Shelly 2.4.1 GUI Package Manager for Arch Linux, featuring improved networking and security for a seamless user experience.\nThe post Shelly 2.4.1 GUI Package Manager for Arch Linux Improves Networking, Security appeared first on Linux Today.",
+    "pub_date": "Fri, 07 Aug 2026 07:07:50 +0000",
+    "title_zh": "Shelly 2.4.1 GUI 包管理器为 Arch Linux 增强网络与安全性",
+    "summary_zh": "Shelly 2.4.1 作为 Arch Linux 的图形化包管理器，本次更新重点改进了网络功能与安全性，旨在为用户提供更流畅、更安全的操作体验。该版本针对网络连接稳定性和安全防护进行了优化，确保软件包管理过程更加可靠。",
+    "fulltext_zh": "探索增强版的 Shelly 2.4.1 GUI 包管理器，它专为 Arch Linux 设计，通过改进的网络与安全特性，为用户带来无缝的使用体验。\n\n该文章最初发表于 Linux Today。"
+  },
+  "e49a0df8dd7953cd251e0cff83bf1d9c": {
+    "id": "e49a0df8dd7953cd251e0cff83bf1d9c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/coreboot-26-06-adds-early-intel-nova-lake-and-amd-strix-halo-support/",
+    "title_en": "Coreboot 26.06 Adds Early Intel Nova Lake and AMD Strix Halo Support",
+    "summary_en": "Discover the latest features in Coreboot 26.06, including early support for Intel Nova Lake and AMD Strix Halo. Upgrade your system today!\nThe post Coreboot 26.06 Adds Early Intel Nova Lake and AMD Strix Halo Support appeared first on Linux Today.",
+    "pub_date": "Fri, 07 Aug 2026 07:06:22 +0000",
+    "title_zh": "Coreboot 26.06 添加对英特尔 Nova Lake 和 AMD Strix Halo 的早期支持",
+    "summary_zh": "Coreboot 26.06 版本发布，引入了对英特尔下一代处理器 Nova Lake 和 AMD Strix Halo 平台的早期支持。该更新旨在提升系统兼容性和性能，为用户提供更广泛的硬件选择。本文简要介绍了新版本的主要特性，并鼓励用户升级以体验最新功能。",
+    "fulltext_zh": "探索 Coreboot 26.06 的最新特性，包括对英特尔 Nova Lake 和 AMD Strix Halo 的早期支持。立即升级您的系统！\n\n此文章首发于 Linux Today。"
+  },
+  "33244495da8dd2e54107a542bd9a36d7": {
+    "id": "33244495da8dd2e54107a542bd9a36d7",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/kde-plasma-6-8-to-enable-triple-buffering-by-default-for-nvidia-gpus/",
+    "title_en": "KDE Plasma 6.8 to Enable Triple Buffering by Default for NVIDIA GPUs",
+    "summary_en": "Discover how KDE Plasma 6.8 enhances performance with triple buffering enabled by default for NVIDIA GPUs, improving your visual experience.\nThe post KDE Plasma 6.8 to Enable Triple Buffering by Default for NVIDIA GPUs appeared first on Linux Today.",
+    "pub_date": "Fri, 07 Aug 2026 07:04:52 +0000",
+    "title_zh": "KDE Plasma 6.8 将为 NVIDIA GPU 默认启用三重缓冲",
+    "summary_zh": "KDE Plasma 6.8 将默认启用三重缓冲，特别针对 NVIDIA GPU 用户，以提升图形性能和视觉体验。这一改进旨在减少画面撕裂和延迟，使桌面操作更加流畅。该功能默认开启，用户无需手动配置即可享受更佳性能。",
+    "fulltext_zh": "了解 KDE Plasma 6.8 如何通过为 NVIDIA GPU 默认启用三重缓冲来提升性能，改善您的视觉体验。\n\n该文章最初发表于 Linux Today。"
+  },
+  "1a965460bcf8f4a01249038cc395d11f": {
+    "id": "1a965460bcf8f4a01249038cc395d11f",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/7-best-free-and-open-source-terminal-based-serial-terminals/",
+    "title_en": "7 Best Free and Open Source Terminal-Based Serial Terminals",
+    "summary_en": "Explore our top 7 free and open-source terminal-based serial terminals. Find the perfect tool to streamline your serial communication tasks today.\nThe post 7 Best Free and Open Source Terminal-Based Serial Terminals appeared first on Linux Today.",
+    "pub_date": "Fri, 07 Aug 2026 07:01:55 +0000",
+    "title_zh": "7款最佳免费开源终端串口终端",
+    "summary_zh": "本文介绍了7款免费且开源的终端串口终端工具，帮助用户高效完成串口通信任务。这些工具适用于Linux系统，提供命令行界面，支持串口连接、数据监控和调试等功能。文章旨在为用户推荐合适的工具，以简化串口通信流程，提升工作效率。",
+    "fulltext_zh": "探索我们精选的7款免费且开源的终端串口终端。立即找到完美的工具，以简化您的串口通信任务。\n\n本文首发于Linux Today。"
   }
 }
