@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resources beta新增PowerPC温度与AMD NPU统计功能 — Linux 中文速报</title>
+<title>Dynamic Music Pill 新增逐词歌词高亮功能 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
+    <span class="tag">桌面环境</span>
     <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Resources beta新增PowerPC温度与AMD NPU统计功能</h1>
+  <h1>Dynamic Music Pill 新增逐词歌词高亮功能</h1>
 
-  <div class="article-summary">系统监控工具Resources（Ubuntu 26.04 LTS默认搭载）发布beta版本，新增对AMD NPU（神经处理单元）的利用率、功耗和性能统计，支持Ryzen 7040、8040及AI 300/400系列芯片。同时，通过hwmon驱动支持PowerPC CPU温度监控（POWER8及以上）。此外，该版本改进了Steam游戏和Snap应用的检测可靠性，优化了侧边栏和图表显示，并新增内存指标选项，用户可通过dconf配置切换不同的内存计算方式。Resources现已成为GNOME孵化器项目，未来有望加入GNOME核心应用。</div>
+  <div class="article-summary">Dynamic Music Pill 是一款 GNOME Shell 扩展，可在面板或 Dock 中显示当前播放曲目信息和歌词。其最新版本 v1.3.0 引入了两个新的歌词提供者 API，并支持基于 TTML 的逐词同步歌词，实现卡拉OK风格的逐词高亮显示。该功能可在扩展的歌词视图或面板中启用，若曲目无逐词歌词，则自动回退到逐行或静态歌词。此外，新版本还改进了音量调节方式（可选择调节媒体播放器或系统音量）、增加了音量 OSD 显示，并修复了若干小问题。该版本已可在 GitHub 下载，稍后将通过 GNOME Extensions 网站发布。</div>
 
-  <div class="article-body"><p>系统监控工具Resources（Ubuntu 26.04 LTS默认搭载）发布了新版本，扩展了AMD NPU统计功能，并新增了对PowerPC CPU的温度报告。</p><p>搭载Ryzen 7040、8040以及Ryzen AI 300/400系列芯片的用户，现在可以获取其板载神经加速器的利用率、功耗和性能指标。这是一种可靠的方式，可以判断AI工作负载是否在使用NPU，而不是悄悄让CPU过热。</p><p>听到“PowerPC”时你可能会感到惊讶。Resources对PowerPC CPU温度的支持使用了hwmon驱动，该驱动覆盖POWER8及更新的芯片，而不包括苹果在2000年代中期之前使用的那些老旧且容易发热的芯片。</p><p>PowerPC并未消亡。Raptor Computing销售运行Linux且无需专有固件的POWER9主板（Talos II、Blackbird），IBM也仍在销售POWER服务器。当然，这是一个小众用户群，但这是一个显示数字的功能，所以向Resources的开发者致敬。</p><p>据称，此beta版本中Steam游戏和Snap应用的检测更加可靠，并进一步改进了无障碍功能。</p><p>在视觉方面，侧边栏进行了一些“节省空间”的更改，例如仅在存在多个同类设备实例时才显示设备描述（还新增了侧边栏切换快捷键）。在页面上，使用量数字叠加在图表上，而不是堆叠在下方。</p><p>新的内存指标选项改变了Resources内存计算的工作方式，使用新的dconf值（/org/gnome/Resources/memory-metric），可从默认的“RssNoSharedMemory”切换为“VmSize”、“Rss”、“RssAnon”、“ApproximatePss”或“Pss”。</p><p>“RssNoSharedMemory”忽略与其他进程共享的RAM。“ApproximatePss”通过将共享内存平均分配给每个使用它的进程来修复此问题，因此数字实际上加起来是准确的。“Pss”以大致相同的方式工作，但速度更快、精度稍低。“VmSize”报告总虚拟内存，而不是实际驻留在RAM中的部分。“RssAnon”则完全剥离共享内存和文件支持的内存，如果你只关心进程自身的私有数据。</p><p>也就是说：如果这些选项听起来都不实用，请保持默认设置。但如果其他计算方式符合你的统计需求，可以尝试一下——如果发现重大差异或某个选项出现奇怪问题，请在上游提供反馈！</p><p>Resources 51是beta版本，现在是一个GNOME孵化器项目，正在不断完善和改进，目标是加入GNOME核心应用阵容。Ubuntu 26.04 LTS将其默认包含在内，所以如果你喜欢它的外观，并计划本月晚些时候从24.04升级到Ubuntu 26.04 LTS，就可以使用它。</p><p>如果你设置了GNOME Nightly Flatpak仓库，可以从那里安装Resources 51 beta进行测试。使用和评估预发布软件的标准注意事项适用，因此如果在测试时出现问题，请务必在上游提交错误报告。</p></div>
+  <div class="article-body"><p>Dynamic Music Pill (GNOME Extension) 新增逐词歌词高亮功能</p><p>Dynamic Music Pill 的更新版本已发布，这是一款 GNOME Shell 扩展，可在面板或 Dock 中显示当前播放曲目信息和歌词，并带有动画效果。</p><p>如果你喜欢在桌边哼唱，Dynamic Music Pill v1.3.0 带来了两个新的歌词提供者 API，并支持解析 TTML（定时文本标记语言）以实现逐词卡拉OK风格的高亮显示。</p><p>如果正在播放的曲目具有词级同步歌词，扩展会在小程序控制器中显示它们（点击扩展内的专辑封面即可访问歌词视图）或面板中，具体取决于你的配置方式：</p><p>词级同步功能在可用时启用——大多数曲目不具备此功能。</p><p>Dynamic Music Pill 可以显示词级同步歌词高亮——无论是在 Dock 还是面板中——如果你启用“词级卡拉OK”开关。</p><p>以下视频展示了启用后的效果：</p><p>逐词歌词可以显示在胶囊本身中。</p><p>如果当前播放的曲目没有逐词歌词，扩展会愉快地回退到逐行同步或静态歌词（如果其支持的四个歌词提供者中有提供）。如果找不到歌词，则显示无内容。</p><p>这有趣吗？当然。但取决于胶囊的宽度（你可以根据需要设置固定宽度）以及歌词演唱或说唱的速度，可能很难跟上——歌词行快速闪过，没有给你太多时间记住被高亮的单词。</p><p>在 Dock 中看起来确实比在面板中更难，因为宽度更小，但高度更大意味着文本可读性更好……</p><p>不喜欢哼唱？没关系；新的 Dynamic Music Pill v1.3.0 版本还带来了一些较小的质量改进。</p><p>该扩展已经允许你通过在胶囊上滚动来调节音量，但现在你可以选择调节的对象：活动媒体播放器或系统总音量。使用此功能时，胶囊内会显示 OSD 反馈音量级别。</p><p>如果你更喜欢扁平外观，可以关闭胶囊弹出窗口中专辑艺术下方的阴影。</p><p>修复的次要错误包括：在关闭专辑艺术的情况下点击进度条时，会跳转到曲目开头而不是预期位置的问题。</p><p>Dynamic Music Pill v1.3.0 可从 GitHub 下载。</p><p>该更新将在未来一周内发布到 GNOME Extensions 网站，但尚未通过审核。如果你已经安装了该扩展，一旦准备就绪，此更新将自动到达。</p><p>如果你喜欢它的外观，就去试试吧。它适用于 GNOME 46（Ubuntu 24.04 LTS）及更高版本，但最新版本需要 GNOME 50（Ubuntu 26.04 LTS）。</p><p>在 Ubuntu 上使用 GNOME Extension Manager 可以更轻松地浏览、安装和管理 GNOME 扩展，该工具可在软件仓库中获取（sudo apt install gnome-shell-extension-manager）。</p><p>有大量设置可供筛选和尝试：可视化样式、背景颜色、紧凑模式、动画旋转封面艺术等等。</p><p>TTML（定时文本标记语言）是一种 W3C 标准的 XML 格式，专为字幕设计，因此非常适合对单个单词而非整行进行计时。</p><p>它可以在胶囊中一次只显示一个单词，至少在 Dock 模式下如此。这肯定会很迷幻，但单个单词“heartbeat”比一行文字更适合受限宽度。虽然我有点贪心，但一个轻松切换歌词显示的方法会很好。打开设置有点过时了。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/resources-51-beta-npu-powerpc-temps" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/dynamic-music-pill-update-lyrics" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

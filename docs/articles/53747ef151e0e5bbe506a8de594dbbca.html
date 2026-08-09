@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resources beta新增PowerPC温度与AMD NPU统计功能 — Linux 中文速报</title>
+<title>新Linux补丁启用ASUS ROG Ryujin III监控支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Resources beta新增PowerPC温度与AMD NPU统计功能</h1>
+  <h1>新Linux补丁启用ASUS ROG Ryujin III监控支持</h1>
 
-  <div class="article-summary">系统监控工具Resources（Ubuntu 26.04 LTS默认搭载）发布beta版本，新增对AMD NPU（神经处理单元）的利用率、功耗和性能统计，支持Ryzen 7040、8040及AI 300/400系列芯片。同时，通过hwmon驱动支持PowerPC CPU温度监控（POWER8及以上）。此外，该版本改进了Steam游戏和Snap应用的检测可靠性，优化了侧边栏和图表显示，并新增内存指标选项，用户可通过dconf配置切换不同的内存计算方式。Resources现已成为GNOME孵化器项目，未来有望加入GNOME核心应用。</div>
+  <div class="article-summary">针对ASUS ROG Ryujin III一体式CPU水冷散热器，Linux内核邮件列表本周发布了新补丁，扩展了asus_rog_ryujin硬件监控驱动，以支持该系列新型号。补丁由Arie Miller提交，借助Codex GPT 5.6-sol AI辅助开发。目前ROG Ryujin III EXTREME、EVA EDITION和WHITE EDITION三个版本已测试可在Linux下进行硬件监控，但仅支持监控功能，尚不支持风扇转速控制。补丁正在Linux内核邮件列表中接受审查。</div>
 
-  <div class="article-body"><p>系统监控工具Resources（Ubuntu 26.04 LTS默认搭载）发布了新版本，扩展了AMD NPU统计功能，并新增了对PowerPC CPU的温度报告。</p><p>搭载Ryzen 7040、8040以及Ryzen AI 300/400系列芯片的用户，现在可以获取其板载神经加速器的利用率、功耗和性能指标。这是一种可靠的方式，可以判断AI工作负载是否在使用NPU，而不是悄悄让CPU过热。</p><p>听到“PowerPC”时你可能会感到惊讶。Resources对PowerPC CPU温度的支持使用了hwmon驱动，该驱动覆盖POWER8及更新的芯片，而不包括苹果在2000年代中期之前使用的那些老旧且容易发热的芯片。</p><p>PowerPC并未消亡。Raptor Computing销售运行Linux且无需专有固件的POWER9主板（Talos II、Blackbird），IBM也仍在销售POWER服务器。当然，这是一个小众用户群，但这是一个显示数字的功能，所以向Resources的开发者致敬。</p><p>据称，此beta版本中Steam游戏和Snap应用的检测更加可靠，并进一步改进了无障碍功能。</p><p>在视觉方面，侧边栏进行了一些“节省空间”的更改，例如仅在存在多个同类设备实例时才显示设备描述（还新增了侧边栏切换快捷键）。在页面上，使用量数字叠加在图表上，而不是堆叠在下方。</p><p>新的内存指标选项改变了Resources内存计算的工作方式，使用新的dconf值（/org/gnome/Resources/memory-metric），可从默认的“RssNoSharedMemory”切换为“VmSize”、“Rss”、“RssAnon”、“ApproximatePss”或“Pss”。</p><p>“RssNoSharedMemory”忽略与其他进程共享的RAM。“ApproximatePss”通过将共享内存平均分配给每个使用它的进程来修复此问题，因此数字实际上加起来是准确的。“Pss”以大致相同的方式工作，但速度更快、精度稍低。“VmSize”报告总虚拟内存，而不是实际驻留在RAM中的部分。“RssAnon”则完全剥离共享内存和文件支持的内存，如果你只关心进程自身的私有数据。</p><p>也就是说：如果这些选项听起来都不实用，请保持默认设置。但如果其他计算方式符合你的统计需求，可以尝试一下——如果发现重大差异或某个选项出现奇怪问题，请在上游提供反馈！</p><p>Resources 51是beta版本，现在是一个GNOME孵化器项目，正在不断完善和改进，目标是加入GNOME核心应用阵容。Ubuntu 26.04 LTS将其默认包含在内，所以如果你喜欢它的外观，并计划本月晚些时候从24.04升级到Ubuntu 26.04 LTS，就可以使用它。</p><p>如果你设置了GNOME Nightly Flatpak仓库，可以从那里安装Resources 51 beta进行测试。使用和评估预发布软件的标准注意事项适用，因此如果在测试时出现问题，请务必在上游提交错误报告。</p></div>
+  <div class="article-body"><p>新Linux补丁启用ASUS ROG Ryujin III监控支持 - Phoronix</p><p>新Linux补丁启用ASUS ROG Ryujin III监控支持</p><p>发布于2026年8月8日晚上8:47（美国东部时间）。</p><p>对于使用ASUS ROG Ryujin III一体式CPU水冷散热器的游戏玩家，目前已有补丁待审，旨在让这款一体式水冷散热器在Linux下实现监控功能。</p><p>自2024年起，Linux社区中已有开源开发者创建了asus_rog_ryujin驱动，用于支持ROG Ryujin II（并在Linux 6.9中合入上游）。本周，Linux内核邮件列表上发布的新补丁扩展了该硬件监控（HWMON）驱动，以支持ASUS ROG Ryujin III。</p><p>Arie Miller发布了这些补丁，为更新的ASUS ROG Ryujin III散热器启用硬件监控支持，因为与早期ASUS散热器相比，它们使用不同的偏移量和其他更改。将asus_rog_ryujin Linux驱动扩展到新硬件的过程中，得到了Codex GPT 5.6-sol AI的协助。</p><p>ASUS ROG RYUJIN III EXTREME、ASUS ROG RYUJIN III EVA EDITION和ASUS ROG RYUJIN III WHITE EDITION均已在Linux下测试通过硬件监控功能。对于RYUJIN II，Linux驱动支持风扇转速/占空比控制，而目前RYUJIN III仅支持监控功能。感兴趣的用户可以在Linux内核邮件列表上查看这些补丁以供审查。</p><p>Polychromatic 0.9.8发布，支持Razer Blade 16 2023</p><p>Linux 7.2-rc7增加对最独特或非常有趣的游戏控制器的支持</p><p>Linux 7.3将支持Logitech HID++ 2.0可编程按钮支持</p><p>HyperX驱动即将登陆Linux 7.3，仅用于报告麦克风静音状态</p><p>SteelSeries最新Arctis Nova 5X和Nova 7耳机将由Linux 7.3支持</p><p>Linux 7.3将支持Qualcomm Adreno 704和Adreno 722 GPU</p><p>Michael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动等主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>首个面向现代AMD Ryzen AM5平台的开源固件发布</p><p>Arch Linux AUR再次遭遇恶意软件包浪潮，软件包采用暂停</p><p>知名Arch Linux开发者任职10年后辞职</p><p>Steam在Linux上的使用率7月回升至4%以上</p><p>FFmpeg 9.0发布，带来更多Vulkan加速、动画WebP和AMD AMF支持</p><p>Linux 7.3似乎将合入FailFS</p><p>Cloudflare宣布开源Cloudflare OS作为AI“操作系统”</p><p>Linux的staging区域将拒绝LLM生成的补丁，除非是真正的安全修复</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有© 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/resources-51-beta-npu-powerpc-temps" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/ASUS-ROG-Ryujin-3-Linux" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

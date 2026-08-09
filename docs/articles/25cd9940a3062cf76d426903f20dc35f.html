@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resources beta新增PowerPC温度与AMD NPU统计功能 — Linux 中文速报</title>
+<title>Linux 7.3 将更好地处理 Intel 混合 CPU 上的集群负载均衡 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Resources beta新增PowerPC温度与AMD NPU统计功能</h1>
+  <h1>Linux 7.3 将更好地处理 Intel 混合 CPU 上的集群负载均衡</h1>
 
-  <div class="article-summary">系统监控工具Resources（Ubuntu 26.04 LTS默认搭载）发布beta版本，新增对AMD NPU（神经处理单元）的利用率、功耗和性能统计，支持Ryzen 7040、8040及AI 300/400系列芯片。同时，通过hwmon驱动支持PowerPC CPU温度监控（POWER8及以上）。此外，该版本改进了Steam游戏和Snap应用的检测可靠性，优化了侧边栏和图表显示，并新增内存指标选项，用户可通过dconf配置切换不同的内存计算方式。Resources现已成为GNOME孵化器项目，未来有望加入GNOME核心应用。</div>
+  <div class="article-summary">Intel 提交的一组补丁将被合入即将到来的 Linux 7.3 合并窗口，以增强集群感知调度代码，使其在现代 Intel Core (Ultra) 混合 CPU（包含 P 核和 E/LPE 核）上更好地处理负载均衡。该补丁系列解决了在非对称容量系统上集群级负载均衡失效的问题，恢复了预期行为。Intel 工程师 Ricardo Neri 已在 Alder Lake、Lunar Lake 和 Panther Lake 上进行了测试，负载均衡器表现符合预期。这些补丁已进入 TIP 分支，预计将在 Linux 7.3 周期中合并。</div>
 
-  <div class="article-body"><p>系统监控工具Resources（Ubuntu 26.04 LTS默认搭载）发布了新版本，扩展了AMD NPU统计功能，并新增了对PowerPC CPU的温度报告。</p><p>搭载Ryzen 7040、8040以及Ryzen AI 300/400系列芯片的用户，现在可以获取其板载神经加速器的利用率、功耗和性能指标。这是一种可靠的方式，可以判断AI工作负载是否在使用NPU，而不是悄悄让CPU过热。</p><p>听到“PowerPC”时你可能会感到惊讶。Resources对PowerPC CPU温度的支持使用了hwmon驱动，该驱动覆盖POWER8及更新的芯片，而不包括苹果在2000年代中期之前使用的那些老旧且容易发热的芯片。</p><p>PowerPC并未消亡。Raptor Computing销售运行Linux且无需专有固件的POWER9主板（Talos II、Blackbird），IBM也仍在销售POWER服务器。当然，这是一个小众用户群，但这是一个显示数字的功能，所以向Resources的开发者致敬。</p><p>据称，此beta版本中Steam游戏和Snap应用的检测更加可靠，并进一步改进了无障碍功能。</p><p>在视觉方面，侧边栏进行了一些“节省空间”的更改，例如仅在存在多个同类设备实例时才显示设备描述（还新增了侧边栏切换快捷键）。在页面上，使用量数字叠加在图表上，而不是堆叠在下方。</p><p>新的内存指标选项改变了Resources内存计算的工作方式，使用新的dconf值（/org/gnome/Resources/memory-metric），可从默认的“RssNoSharedMemory”切换为“VmSize”、“Rss”、“RssAnon”、“ApproximatePss”或“Pss”。</p><p>“RssNoSharedMemory”忽略与其他进程共享的RAM。“ApproximatePss”通过将共享内存平均分配给每个使用它的进程来修复此问题，因此数字实际上加起来是准确的。“Pss”以大致相同的方式工作，但速度更快、精度稍低。“VmSize”报告总虚拟内存，而不是实际驻留在RAM中的部分。“RssAnon”则完全剥离共享内存和文件支持的内存，如果你只关心进程自身的私有数据。</p><p>也就是说：如果这些选项听起来都不实用，请保持默认设置。但如果其他计算方式符合你的统计需求，可以尝试一下——如果发现重大差异或某个选项出现奇怪问题，请在上游提供反馈！</p><p>Resources 51是beta版本，现在是一个GNOME孵化器项目，正在不断完善和改进，目标是加入GNOME核心应用阵容。Ubuntu 26.04 LTS将其默认包含在内，所以如果你喜欢它的外观，并计划本月晚些时候从24.04升级到Ubuntu 26.04 LTS，就可以使用它。</p><p>如果你设置了GNOME Nightly Flatpak仓库，可以从那里安装Resources 51 beta进行测试。使用和评估预发布软件的标准注意事项适用，因此如果在测试时出现问题，请务必在上游提交错误报告。</p></div>
+  <div class="article-body"><p>Linux 7.3 将更好地处理 Intel 混合 CPU 上的集群负载均衡 - Phoronix</p><p>Linux 7.3 将更好地处理 Intel 混合 CPU 上的集群负载均衡</p><p>发布于 2026 年 8 月 8 日下午 1:27（美国东部时间）。</p><p>一组来自 Intel 的补丁将被合入即将到来的 Linux 7.3 合并窗口，以增强集群感知调度代码，使其在现代 Intel Core (Ultra) 混合 CPU（包含 P 核和 E/LPE 核）上更好地处理负载均衡。</p><p>早在 2021 年，内核引入了集群感知调度支持，旨在为共享 L2 缓存或其他中级资源的 CPU 核心集群提供更好的调度支持。当时合并后，我指出了这种新调度在 Intel 混合 CPU 上导致的性能回退，尽管此后进行了一些改进，但集群感知调度在 Intel 混合处理器上仍然不够理想。不过，对于 Linux 7.3，看起来它将得到更好的改善。</p><p>Intel Linux 工程师 Ricardo Neri 领导了最新的修复工作，以解决非对称容量处理器的集群调度问题。他解释道：</p><p>“集群调度旨在通过将负载分散到共享中级资源的 CPU 集群之间来最大化性能。它在统一系统上运行良好，但在由大小核组成的集群拓扑上会失效。因此，它已经在几代已出货和即将推出的 Intel 处理器上失败。</p><p>在部分繁忙的系统上（存在空闲 CPU；繁忙 CPU 各有一个任务），非对称容量调度确保不匹配任务落在大型 CPU 上。其余任务，无论是否不匹配，都在小型 CPU 上运行。当启用 CONFIG_SCHED_CLUSTER 时，这些剩余任务本应均匀分布在小型 CPU 集群之间。但如今，这并未发生。</p><p>这些问题共同导致在非对称 CPU 容量系统上无法进行集群级负载均衡。</p><p>本系列补丁解决了每个问题并恢复了预期行为。每个补丁中详细说明了细节、理由和代码更改。</p><p>我在 Alder Lake（具有 SMT P 核和 E 核集群）上测试了这些补丁，分别测试了 SMT 禁用和启用的场景。我还在 Lunar Lake 和 Panther Lake（具有未连接到 L3 缓存的 E 核集群）上进行了测试。我使用 CONFIG_SCHED_CLUSTER 禁用时重复了相同的实验。负载均衡器表现符合预期。”</p><p>这些补丁现已进入 tip/tip.git 的 sched/core Git 分支。由于补丁已进入 TIP 分支，它们应该会在即将到来的 Linux 7.3 周期中合并。</p><p>补丁中没有共享性能数据，但一旦 Linux 7.3 周期开始，我将在一些 Intel Core Ultra 处理器上运行基准测试，以观察不同工作负载下的性能影响。</p><p>Intel QATlib 26.08 发布，支持 Gen6 设备和 2MB 大页</p><p>Intel 在 Meteor Lake 及更新平台的 Linux 驱动上推进 HDMI 2.1 FRL 支持</p><p>USB4STREAM 增加忙轮询选项，以降低延迟但增加 CPU 周期</p><p>Linux 将避免混淆配备 DEC 的新型 Intel CPU 的处理器固件</p><p>Linux 7.3 将为 Intel Starfire 奠定基础</p><p>Linux 7.3 将把 Intel Nova Lake S 显卡视为稳定</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、显卡驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>首个面向现代 AMD Ryzen AM5 平台的开源固件发布</p><p>Arch Linux AUR 再次遭遇恶意软件包浪潮，软件包采纳暂停</p><p>著名 Arch Linux 开发者任职 10 年后辞职</p><p>Linux 上的 Steam 使用率在 7 月回升至 4% 以上</p><p>FFmpeg 9.0 发布，支持更多 Vulkan 加速、动画 WebP 及更多 AMD AMF</p><p>Linux 7.3 看起来将……</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/resources-51-beta-npu-powerpc-temps" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-Better-Intel-Hybrid" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
