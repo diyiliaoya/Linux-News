@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calibre 9.13 修复内容服务器中电子书搜索故障 — Linux 中文速报</title>
+<title>Orion for Linux beta更新新增隐私浏览和链接预览功能 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -152,14 +152,14 @@
     <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Calibre 9.13 修复内容服务器中电子书搜索故障</h1>
+  <h1>Orion for Linux beta更新新增隐私浏览和链接预览功能</h1>
 
-  <div class="article-summary">Calibre 9.13 作为开源电子书管理器的新版本发布，修复了多个 PDF 相关问题，包括因 libxml2 库版本冲突导致的转换错误，以及 PDF 内部链接跳转位置偏移的回归问题。此外，该版本还修复了内容服务器中 ePub 搜索失效、数据文件管理上传问题，并恢复了通过内容服务器转换电子书时缺失的选项，以及批量编辑元数据时的操作按钮。用户可通过官网下载或重新运行安装脚本更新。</div>
+  <div class="article-summary">Kagi发布了Orion for Linux的v0.4.1测试版，该版本基于WebKitGTK，新增了隐私窗口、下载管理器、工具栏溢出菜单、链接预览、自定义操作按钮、本地同步等功能，并改进了稳定性与性能。用户可通过Flatpak安装，但需添加Kagi的专属仓库。尽管功能逐步完善，但部分高级特性如网页元素擦除、工具栏图标重排及Chrome扩展支持仍未就绪。</div>
 
-  <div class="article-body"><p>Calibre 9.13 修复内容服务器中电子书搜索故障 - OMG! Ubuntu</p><p>开源电子书管理器、阅读器和转换器 Calibre 的新错误修复版本现已可供下载。</p><p>Calibre 9.13 修复了多个与 PDF 相关的问题，包括在 Linux 发行版上可能出现的转换错误，这些发行版自带的 libxml2 库版本“过旧”，主要影响较旧的 Debian 安装。</p><p>原因是 Qt 的 GPU 检测与 Calibre 的 PDF 解析器之间存在冲突，两者需要不同版本的 libxml2。根据说明，Calibre 现在会在 Qt 的检查干扰之前预加载其所需的版本。</p><p>Calibre 9.x 系列中的一个回归问题导致 PDF 文档中的内部链接跳转到目标位置上方。该问题现已解决。</p><p>有趣的是，Ubuntu 的 PDF 查看器 Evince 最近也修复了自身的 PDF 链接问题——这一定是某种巧合！</p><p>其他修复主要针对使用 Calibre 内容服务器时遇到的问题。内容服务器是一项便捷功能，允许你通过另一台设备（如智能手机或平板电脑）上的网页浏览器，从主机浏览、打开和管理你的电子书库。</p><p>有用户报告称，在电子书查看器中搜索 ePub 内容无法正常工作，因此该问题已得到修复，同时修复的还有数据文件管理和上传的问题。</p><p>通过内容服务器界面转换电子书时缺失的选项也已恢复。</p><p>此外，用户现在可以再次在书籍详情面板中拖放书籍封面，并在批量编辑元数据时查看（并点击）操作按钮。</p><p>都是些简单的事情，真的。</p><p>如何获取 Calibre 的最新版本</p><p>Calibre 是免费的开源软件，适用于 Windows、macOS 和 Linux，可从官方网站下载。对于 Linux，Calibre 通过运行一个脚本安装，该脚本会下载二进制构建版本。要安装更新，每次都需要重新运行该命令。</p><p>Calibre 也提供 Flathub 版本，但作为未经验证的构建，截至撰写本文时，该版本落后当前版本两个版本。</p></div>
+  <div class="article-body"><p>Kagi发布了Orion for Linux的新测试版，这是其macOS和iOS浏览器基于WebKitGTK的移植版本。</p><p>Orion for Linux v0.4.1在5月发布的版本基础上，增加了更多macOS和iOS版本中的功能，并改进了现有功能。</p><p>新测试版新增了可用的隐私窗口、功能齐全（尽管简陋）的下载管理器以及工具栏溢出菜单。溢出菜单允许你隐藏按钮，但又不至于难以访问。</p><p>不熟悉Orion？</p><p>我在之前的报道中介绍过这个浏览器是什么以及它为何存在。本文仅关注v0.4.1的新内容。</p><p>链接预览功能也登陆Linux。这不是那种“AI摘要”式的预览（谢天谢地）。更像是macOS上网页的“快速查看”；你可以预览当前页面上的链接，而无需打开新标签页。</p><p>在这个测试版中，没有键盘快捷键来激活链接预览——macOS用户可以通过按Command+点击来触发——但在右键点击链接时会出现上下文菜单项。预览窗口无法调整大小，但有一个“在标签页中打开”按钮：</p><p>在Orion for Linux 0.4.1中预览链接而无需打开它们</p><p>此外，v0.4.1测试版还包含了Orion的可编程按钮功能。这些按钮允许你创建自定义工具栏按钮，按需运行代码或对网页应用条件，类似于书签小工具。它们可以放在工具栏上，或隐藏在溢出菜单中。</p><p>你可以使用浏览器内置编辑器手动添加和编辑这些操作按钮。也可以从URL导入现成的按钮。Orion的GitHub上有一个开源可编程按钮仓库，如果你需要一些灵感的话。</p><p>本地同步支持也加入了此测试版，这很受欢迎。</p><p>iOS和macOS版本的Orion使用iCloud在平台间同步书签、标签页等。Kagi计划未来提供自己的云同步后端，但就目前而言，你现在可以将关键数据导出为文件，并导入到另一个构建中。</p><p>最新测试版中现已可用的功能：</p><p>还包含许多较小的更改。</p><p>有一个选项可以在新标签页中打开页面（如果网站加载失败，也会显示一个按钮），并且你可以在地址栏中添加和使用自定义搜索引擎。</p><p>更多基础浏览器快捷键，包括Ctrl+L聚焦地址栏、Ctrl+T新建标签页等。</p><p>侧边栏将“窗口”重命名为“标签页组”</p><p>密码管理器中新增“永不用于此网站”选项</p><p>支持从Chrome和Firefox导入书签HTML</p><p>“编辑网页文本”工具</p><p>网站设置现已生效（阻止网页字体、Cookie等）</p><p>标签页休眠（一段时间不活动后挂起标签页）</p><p>Kagi表示，此构建提升了浏览器的整体稳定性和性能，界面也更加精致和打磨。智能跟踪防护现已对所有WebKit网络会话启用。</p><p>然而，Orion的许多新颖浏览器功能，如擦除网页元素，尚未移植或仍处于重度开发中，一些核心浏览器能力，如重新排列工具栏图标或使用Chrome扩展，同样尚未就绪。</p><p>如何安装Orion的Linux测试版</p><p>Orion for Linux并非完美，但一直在进步</p><p>Orion for Linux可通过Flatpak在所有主要发行版上安装，但不在Flathub上。Kagi已建立了自己的Flatpak仓库。</p><p>如果你在Ubuntu上使用Flatpak，添加新的Orion浏览器Flatpak仓库：</p><p>flatpak remote-add --if-not-exists orion-beta https://flatpak.orionbrowser.com/orion-beta.flatpakrepo</p><p>然后，安装Orion for Linux（测试版）：</p><p>flatpak install orion-beta com.kagi.Orion</p><p>由于Orion是GTK4/libadwaita应用，它依赖GNOME 50运行时。如果你的系统没有该运行时，它会在你安装第一个需要它的应用时一并下载。</p><p>要更新到未来的测试版，请从终端运行此命令：</p><p>flatpak update com.kagi.Orion</p><p>或者，你也可以使用GUI包管理器（如GNOME Software）更新Flatpak软件。两者都在Ubuntu 26.04 LTS仓库中可用。</p><p>测试版就是测试版，各位</p><p>Kagi表示，这个测试版“让Orion感觉更接近日常使用”，但请记住，它仍然是一个测试版。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/calibre-9-13-bug-fix-update" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/orion-for-linux-0-4-1-beta" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

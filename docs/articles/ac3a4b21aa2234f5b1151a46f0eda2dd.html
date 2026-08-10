@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calibre 9.13 修复内容服务器中电子书搜索故障 — Linux 中文速报</title>
+<title>Mesa 26.3 Intel 驱动代码为新型 GPU 启用 Large GRF 模式 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Calibre 9.13 修复内容服务器中电子书搜索故障</h1>
+  <h1>Mesa 26.3 Intel 驱动代码为新型 GPU 启用 Large GRF 模式</h1>
 
-  <div class="article-summary">Calibre 9.13 作为开源电子书管理器的新版本发布，修复了多个 PDF 相关问题，包括因 libxml2 库版本冲突导致的转换错误，以及 PDF 内部链接跳转位置偏移的回归问题。此外，该版本还修复了内容服务器中 ePub 搜索失效、数据文件管理上传问题，并恢复了通过内容服务器转换电子书时缺失的选项，以及批量编辑元数据时的操作按钮。用户可通过官网下载或重新运行安装脚本更新。</div>
+  <div class="article-summary">Mesa 26.3 开发版中的 Intel 图形编译器代码现已为 Alchemist/DG2 和 Battlemage/Xe2 图形启用 Large GRF 模式，并为 Xe3 图形启用 VRT 功能。Large GRF 模式将单硬件线程的寄存器空间从 128 个 GRF 寄存器翻倍至 256 个，有助于减少寄存器溢出。此前，该功能已在 IGC 和 Intel Compute Runtime 中启用。此次更新通过两个提交实现，分别针对 DG2 至 Xe2 的 Large GRF 以及 Xe3 的 VRT 功能。</div>
 
-  <div class="article-body"><p>Calibre 9.13 修复内容服务器中电子书搜索故障 - OMG! Ubuntu</p><p>开源电子书管理器、阅读器和转换器 Calibre 的新错误修复版本现已可供下载。</p><p>Calibre 9.13 修复了多个与 PDF 相关的问题，包括在 Linux 发行版上可能出现的转换错误，这些发行版自带的 libxml2 库版本“过旧”，主要影响较旧的 Debian 安装。</p><p>原因是 Qt 的 GPU 检测与 Calibre 的 PDF 解析器之间存在冲突，两者需要不同版本的 libxml2。根据说明，Calibre 现在会在 Qt 的检查干扰之前预加载其所需的版本。</p><p>Calibre 9.x 系列中的一个回归问题导致 PDF 文档中的内部链接跳转到目标位置上方。该问题现已解决。</p><p>有趣的是，Ubuntu 的 PDF 查看器 Evince 最近也修复了自身的 PDF 链接问题——这一定是某种巧合！</p><p>其他修复主要针对使用 Calibre 内容服务器时遇到的问题。内容服务器是一项便捷功能，允许你通过另一台设备（如智能手机或平板电脑）上的网页浏览器，从主机浏览、打开和管理你的电子书库。</p><p>有用户报告称，在电子书查看器中搜索 ePub 内容无法正常工作，因此该问题已得到修复，同时修复的还有数据文件管理和上传的问题。</p><p>通过内容服务器界面转换电子书时缺失的选项也已恢复。</p><p>此外，用户现在可以再次在书籍详情面板中拖放书籍封面，并在批量编辑元数据时查看（并点击）操作按钮。</p><p>都是些简单的事情，真的。</p><p>如何获取 Calibre 的最新版本</p><p>Calibre 是免费的开源软件，适用于 Windows、macOS 和 Linux，可从官方网站下载。对于 Linux，Calibre 通过运行一个脚本安装，该脚本会下载二进制构建版本。要安装更新，每次都需要重新运行该命令。</p><p>Calibre 也提供 Flathub 版本，但作为未经验证的构建，截至撰写本文时，该版本落后当前版本两个版本。</p></div>
+  <div class="article-body"><p>Mesa 26.3 Intel 驱动代码为新型 GPU 启用 Large GRF 模式 - Phoronix</p><p>Mesa 26.3 Intel 驱动代码为新型 GPU 启用 Large GRF 模式</p><p>发布于 2026 年 8 月 9 日美国东部时间上午 8:24。</p><p>Mesa 26.3-devel 中的 Intel 图形编译器代码现已为 Alchemist/DG2 和 Battlemage/Xe2 图形启用 Large GRF 模式，并为 Xe3 图形启用 VRT 功能。</p><p>Intel 图形中的 Large General Register File（GRF）模式将单个硬件线程的寄存器空间从 128 个 GRF 寄存器翻倍至 256 个。Large GRF 模式有助于减少寄存器溢出。有关 Intel Large GRF 支持的更多详细信息，请参阅此 Intel.com 文档。</p><p>本周末提交到 Mesa 26.3-devel Git 的更改使 DG2 至 Xe2 图形启用了 Large GRF 模式。此前，Large GRF 已在 IGC / Intel Compute Runtime 中启用。第二个提交还通过新的 Variable Register Thread（VRT）功能使 Xe3 能够使用 256 个 GRF 寄存器，而 DG2 至 Xe2 仅使用 Large GRF 功能。</p><p>Linux 7.3 将更好地处理 Intel 混合 CPU 上的集群负载均衡</p><p>Intel QATlib 26.08 发布，支持 Gen6 设备和 2MB 大页</p><p>Intel 在 Meteor Lake 及更新版本的 Linux 驱动上推进 HDMI 2.1 FRL 支持</p><p>USB4STREAM 添加忙轮询选项，以增加 CPU 周期为代价降低延迟</p><p>Linux 将避免混淆配备 DEC 的新型 Intel CPU 的处理器固件</p><p>Linux 7.3 开始为 Intel Starfire 奠定基础</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。</p><p>著名 Arch Linux 开发者任职 10 年后辞职</p><p>Steam 在 Linux 上的使用率 7 月回升至 4% 以上</p><p>FFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 及更多 AMD AMF 功能</p><p>Linux 7.3 看起来将上游化 FailFS</p><p>Linux 的 Staging 区域将拒绝 LLM 生成的补丁，除非是真正的安全修复</p><p>Cloudflare 宣布开源 Cloudflare OS 作为 AI“操作系统”</p><p>GNOME Boxes 准备提供大幅改进的虚拟化体验</p><p>Linux 7.2-rc6 发布：“此 RC 非常庞大”</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/calibre-9-13-bug-fix-update" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Intel-Large-GRF-Mode-Mesa-26.3" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

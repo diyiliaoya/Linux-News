@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calibre 9.13 修复内容服务器中电子书搜索故障 — Linux 中文速报</title>
+<title>DistroWatch 周刊，第 1185 期 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">DistroWatch</span>
   </div>
 
-  <h1>Calibre 9.13 修复内容服务器中电子书搜索故障</h1>
+  <h1>DistroWatch 周刊，第 1185 期</h1>
 
-  <div class="article-summary">Calibre 9.13 作为开源电子书管理器的新版本发布，修复了多个 PDF 相关问题，包括因 libxml2 库版本冲突导致的转换错误，以及 PDF 内部链接跳转位置偏移的回归问题。此外，该版本还修复了内容服务器中 ePub 搜索失效、数据文件管理上传问题，并恢复了通过内容服务器转换电子书时缺失的选项，以及批量编辑元数据时的操作按钮。用户可通过官网下载或重新运行安装脚本更新。</div>
+  <div class="article-summary">本期 DistroWatch 周刊报道了多项 Linux 发行版新闻：Arch Linux 暂停对 AUR 的新提交，Mageia 推荐 Pidgin 等实用应用，Proxmox 宣布支持 ARM 处理器，Ubuntu 计划为 LTS 版本提供虚拟化工具升级，Garuda 更新 FireDragon 浏览器，Haiku 获得 Firefox 品牌使用权，FreeBSD 发布 2026 年第二季度状态报告，并暂时冻结 ports 树，Debian 讨论 LLM 工具使用并启动 Perl 更新。此外，本期还包含对 ML4W OS 的评测、关于 Linux 为何免费的问答，以及多个技巧和问答专栏。</div>
 
-  <div class="article-body"><p>Calibre 9.13 修复内容服务器中电子书搜索故障 - OMG! Ubuntu</p><p>开源电子书管理器、阅读器和转换器 Calibre 的新错误修复版本现已可供下载。</p><p>Calibre 9.13 修复了多个与 PDF 相关的问题，包括在 Linux 发行版上可能出现的转换错误，这些发行版自带的 libxml2 库版本“过旧”，主要影响较旧的 Debian 安装。</p><p>原因是 Qt 的 GPU 检测与 Calibre 的 PDF 解析器之间存在冲突，两者需要不同版本的 libxml2。根据说明，Calibre 现在会在 Qt 的检查干扰之前预加载其所需的版本。</p><p>Calibre 9.x 系列中的一个回归问题导致 PDF 文档中的内部链接跳转到目标位置上方。该问题现已解决。</p><p>有趣的是，Ubuntu 的 PDF 查看器 Evince 最近也修复了自身的 PDF 链接问题——这一定是某种巧合！</p><p>其他修复主要针对使用 Calibre 内容服务器时遇到的问题。内容服务器是一项便捷功能，允许你通过另一台设备（如智能手机或平板电脑）上的网页浏览器，从主机浏览、打开和管理你的电子书库。</p><p>有用户报告称，在电子书查看器中搜索 ePub 内容无法正常工作，因此该问题已得到修复，同时修复的还有数据文件管理和上传的问题。</p><p>通过内容服务器界面转换电子书时缺失的选项也已恢复。</p><p>此外，用户现在可以再次在书籍详情面板中拖放书籍封面，并在批量编辑元数据时查看（并点击）操作按钮。</p><p>都是些简单的事情，真的。</p><p>如何获取 Calibre 的最新版本</p><p>Calibre 是免费的开源软件，适用于 Windows、macOS 和 Linux，可从官方网站下载。对于 Linux，Calibre 通过运行一个脚本安装，该脚本会下载二进制构建版本。要安装更新，每次都需要重新运行该命令。</p><p>Calibre 也提供 Flathub 版本，但作为未经验证的构建，截至撰写本文时，该版本落后当前版本两个版本。</p></div>
+  <div class="article-body"><p>DistroWatch 周刊，第 1185 期（DistroWatch.com 新闻）</p><p>DistroWatch.com 由以下赞助商支持</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW 周刊 / 评测存档</p><p>访客评分与评论</p><p>按评分排列的项目排名</p><p>播客、新闻通讯与评测</p><p>跨发行版软件包比较</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停止维护的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与提示专栏</p><p>神话与误解专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>发行版家族树可视化</p><p>常见问题解答</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>Proxmox 现已支持 ARM 处理器</p><p>Mageia 重点推荐 Pidgin</p><p>Arch 项目将阻止对 AUR 的新推送</p><p>Ubuntu 计划为 LTS 版本提供虚拟化工具升级</p><p>Garuda 以新基础更新 FireDragon 网络浏览器</p><p>Haiku 获得在移植浏览器上使用 Firefox 品牌的权利</p><p>FreeBSD 发布 2026 年第二季度状态报告</p><p>Debian 就 LLM 工具的使用展开辩论</p><p>FreeBSD 暂时冻结 ports 树</p><p>Debian 启动 Perl 更新</p><p>易于使用的 PBX - 托管或自管理</p><p>适用于 Linux 的电话系统</p><p>免费在线聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程办公应用：iOS 或 Android</p><p>免费视频会议</p><p>3CX 提供的 VoIP / PBX 操作指南</p><p>不要措手不及，制定灾难恢复计划！</p><p>必备的在线聊天报告与统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成对比</p><p>3CX StartUP 的 5 个杀手级功能</p><p>别做“那种人”第 1 卷：使用复杂凭据</p><p>别做“那种人”第 2 卷：呼叫欺诈</p><p>别做“那种人”第 3 卷：四大安全提示</p><p>别做“那种人”第 4 卷：监控您的实例</p><p>Red Hat 周五五件事 - 2026 年 8 月 7 日</p><p>Ubuntu 每周通讯 955</p><p>Full Circle 每周新闻</p><p>Distrohoppers' Digest</p><p>最新新闻与更新</p><p>新闻过滤选项</p><p>DistroWatch 周刊，第 1185 期</p><p>评测：Void 后裔之战</p><p>新闻：AUR 提交暂停，Mageia 重点推荐实用应用，Proxmox 引入 ARM 支持</p><p>问答：为什么 Linux 是免费的？</p><p>上周发布：NetHydra 1.1.0、Soplos Linux 2026.08、Murena 4.1.1、TitalcruiseOS 5.4</p><p>种子下载专区：Armbian、BigLinux、TitalCruiseOS</p><p>即将发布：FreeBSD 14.5 BETA2</p><p>意见调查：AUR 的替代方案</p><p>在本周刊中阅读更多内容...</p><p>ML4W OS 是一款基于 Arch Linux 的发行版，采用高度定制的 Hyprland 平铺合成器。该项目主要专注于为 Hyprland 创建高级配置，即所谓的“点文件”，这些配置可安装在其他多个基于 Arch 的发行版以及 Fedora 和 openSUSE 上。然而，ML4W OS 的 live ISO 镜像是一个独立的、功能完整的 Linux 发行版，包含所有 Hyprland 配置文件、应用程序、图标、主题和壁纸。它可以使用自定义的文本模式系统安装程序安装到硬盘上。该项目还提供了关于设置和配置 Hyprland 的广泛文档。</p><p>技巧与提示：将 AppImage 添加到应用程序菜单</p><p>问答：恢复 GRUB</p><p>技巧与提示：在多个 shell 之间导航</p><p>技巧与提示：将 UBports 用作带媒体共享的家庭服务器</p><p>技巧与提示：从命令行处理图像</p><p>问答：便携式软件包格式的兴起</p><p>技巧与提示：使用 zedenv 管理启动环境</p><p>技巧与提示：端口敲门及其他保护 OpenSSH 的方法</p><p>问答：创建交换文件</p><p>技巧与提示：在发行版安装后更改 init 软件</p><p>版权所有 © 2001 - 2026 Atea Ataroa Limited。保留所有权利。所有商标均为其各自所有者的财产。</p><p>更改隐私设置</p><p>联系方式、更正和建议：</p><p>bc1qxes3k2wq3uqzr074tkwwjmwfe63z70gwzfu4lx</p><p>lnurl1dp68gurn8ghj7ampd3kx2ar0veekzar0wd5xjtnrdakj7tnhv4kxctttdehhwm30d3h82unvwqhhxarpw3jkc7tzw4ex6cfexyfua2nr</p><p>86fA3qPTeQtNb2k1</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/calibre-9-13-bug-fix-update" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://distrowatch.com/12917" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

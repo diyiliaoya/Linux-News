@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calibre 9.13 修复内容服务器中电子书搜索故障 — Linux 中文速报</title>
+<title>高通发布Kuno SoC支持Linux补丁：2026年Cortex-A7平台 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Calibre 9.13 修复内容服务器中电子书搜索故障</h1>
+  <h1>高通发布Kuno SoC支持Linux补丁：2026年Cortex-A7平台</h1>
 
-  <div class="article-summary">Calibre 9.13 作为开源电子书管理器的新版本发布，修复了多个 PDF 相关问题，包括因 libxml2 库版本冲突导致的转换错误，以及 PDF 内部链接跳转位置偏移的回归问题。此外，该版本还修复了内容服务器中 ePub 搜索失效、数据文件管理上传问题，并恢复了通过内容服务器转换电子书时缺失的选项，以及批量编辑元数据时的操作按钮。用户可通过官网下载或重新运行安装脚本更新。</div>
+  <div class="article-summary">高通工程师今日向Linux内核提交了15个补丁，以支持其Kuno SoC及参考开发平台。Kuno是一款32位Cortex-A7平台，性能在2026年并不突出。补丁系列主要添加了启动到串行控制台所需的基础SoC基础设施，包括全局时钟控制器、RPMh时钟控制器、NoC互连、TLMM引脚控制器、PDC中断控制器、SCM固件接口以及SoC和Kuno IDP板的设备树。</div>
 
-  <div class="article-body"><p>Calibre 9.13 修复内容服务器中电子书搜索故障 - OMG! Ubuntu</p><p>开源电子书管理器、阅读器和转换器 Calibre 的新错误修复版本现已可供下载。</p><p>Calibre 9.13 修复了多个与 PDF 相关的问题，包括在 Linux 发行版上可能出现的转换错误，这些发行版自带的 libxml2 库版本“过旧”，主要影响较旧的 Debian 安装。</p><p>原因是 Qt 的 GPU 检测与 Calibre 的 PDF 解析器之间存在冲突，两者需要不同版本的 libxml2。根据说明，Calibre 现在会在 Qt 的检查干扰之前预加载其所需的版本。</p><p>Calibre 9.x 系列中的一个回归问题导致 PDF 文档中的内部链接跳转到目标位置上方。该问题现已解决。</p><p>有趣的是，Ubuntu 的 PDF 查看器 Evince 最近也修复了自身的 PDF 链接问题——这一定是某种巧合！</p><p>其他修复主要针对使用 Calibre 内容服务器时遇到的问题。内容服务器是一项便捷功能，允许你通过另一台设备（如智能手机或平板电脑）上的网页浏览器，从主机浏览、打开和管理你的电子书库。</p><p>有用户报告称，在电子书查看器中搜索 ePub 内容无法正常工作，因此该问题已得到修复，同时修复的还有数据文件管理和上传的问题。</p><p>通过内容服务器界面转换电子书时缺失的选项也已恢复。</p><p>此外，用户现在可以再次在书籍详情面板中拖放书籍封面，并在批量编辑元数据时查看（并点击）操作按钮。</p><p>都是些简单的事情，真的。</p><p>如何获取 Calibre 的最新版本</p><p>Calibre 是免费的开源软件，适用于 Windows、macOS 和 Linux，可从官方网站下载。对于 Linux，Calibre 通过运行一个脚本安装，该脚本会下载二进制构建版本。要安装更新，每次都需要重新运行该命令。</p><p>Calibre 也提供 Flathub 版本，但作为未经验证的构建，截至撰写本文时，该版本落后当前版本两个版本。</p></div>
+  <div class="article-body"><p>高通发布Kuno SoC支持Linux补丁：2026年Cortex-A7平台 - Phoronix</p><p>高通发布Kuno SoC支持Linux补丁：2026年Cortex-A7平台</p><p>2026年8月9日，美国东部时间上午11:35。</p><p>高通工程师今日向Linux内核提交了一组共15个补丁，以启用高通Kuno SoC及其参考开发平台的支持。</p><p>我未能通过搜索找到关于高通Kuno的官方信息，搜索结果仅指向这些高通Linux补丁本身。但在过于兴奋之前，需要说明的是，高通Kuno是一款32位Cortex-A7平台，在2026年甚至过去十年中，其性能都难以令人兴奋。</p><p>该补丁系列总结如下：</p><p>“本系列添加了对高通Kuno SoC及Kuno IDP参考板的初始支持。</p><p>Kuno是高通的一款32位ARM（Cortex-A7）平台。本系列引入了启动到串行控制台所需的基本SoC基础设施：</p><p>- 全局时钟控制器（GCC）和RPMh时钟控制器</p><p>- 互连（NoC）提供程序</p><p>- TLMM引脚控制器</p><p>- PDC中断控制器和SCM固件接口</p><p>- SoC和Kuno IDP板的设备树”</p><p>这些补丁使Kuno SoC的基本启用工作得以完成，考虑到Cortex-A7在此阶段的成熟度，工作量并不算大。此外，还包括了高通集成开发平台（IDP）参考板的设备树。</p><p>感兴趣的人可以通过此LKML补丁系列找到启用工作。</p><p>Linux WMI驱动程序准备支持基于ACPI的ARM64笔记本电脑</p><p>Arm Core Local Accelerator驱动程序发布，作为加速器的通用接口</p><p>Linux计划在2027年初退役多个旧ARM平台</p><p>红帽ARM工程师放弃ARM64 Linux个人桌面，回归AMD Ryzen系统</p><p>Linux的ARM64 NEON内联CRC64代码已适配32位ARM</p><p>AI/LLM补丁混乱对ARM64 Linux内核开发产生影响</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他。</p><p>著名Arch Linux开发者任职10年后辞职</p><p>Steam在Linux上的使用率在7月回升至4%以上</p><p>FFmpeg 9.0发布，带来更多Vulkan加速、动画WebP及更多AMD AMF功能</p><p>Linux 7.3似乎将上游化FailFS</p><p>Linux的staging区域将拒绝LLM生成的补丁，除非是真正的安全修复</p><p>Cloudflare宣布开源Cloudflare OS作为AI“操作系统”</p><p>GNOME Boxes准备提供大幅改进的虚拟化体验</p><p>Linux 7.2-rc6发布：“这个RC很大”</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/calibre-9-13-bug-fix-update" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Qualcomm-Kuno-SoC-Linux" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

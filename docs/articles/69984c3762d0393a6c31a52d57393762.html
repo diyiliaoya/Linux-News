@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calibre 9.13 修复内容服务器中电子书搜索故障 — Linux 中文速报</title>
+<title>CachyOS 2026年8月版为即将推出的服务器版做准备 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Calibre 9.13 修复内容服务器中电子书搜索故障</h1>
+  <h1>CachyOS 2026年8月版为即将推出的服务器版做准备</h1>
 
-  <div class="article-summary">Calibre 9.13 作为开源电子书管理器的新版本发布，修复了多个 PDF 相关问题，包括因 libxml2 库版本冲突导致的转换错误，以及 PDF 内部链接跳转位置偏移的回归问题。此外，该版本还修复了内容服务器中 ePub 搜索失效、数据文件管理上传问题，并恢复了通过内容服务器转换电子书时缺失的选项，以及批量编辑元数据时的操作按钮。用户可通过官网下载或重新运行安装脚本更新。</div>
+  <div class="article-summary">CachyOS发布了2026年8月的最新版本，为即将推出的服务器版做准备。此次更新除了常规的桌面改进外，重点优化了命令行安装程序，并修复了多个问题。同时，CachyOS的chwd内核管理器后端从C++重写为Rust，Cachy Update系统托盘应用也改用Rust，而Shelly默认GUI包管理器则从C#迁移到Zig。此外，还更新了CachyOS Wiki的游戏指南，并进行了多项错误修复和增强。</div>
 
-  <div class="article-body"><p>Calibre 9.13 修复内容服务器中电子书搜索故障 - OMG! Ubuntu</p><p>开源电子书管理器、阅读器和转换器 Calibre 的新错误修复版本现已可供下载。</p><p>Calibre 9.13 修复了多个与 PDF 相关的问题，包括在 Linux 发行版上可能出现的转换错误，这些发行版自带的 libxml2 库版本“过旧”，主要影响较旧的 Debian 安装。</p><p>原因是 Qt 的 GPU 检测与 Calibre 的 PDF 解析器之间存在冲突，两者需要不同版本的 libxml2。根据说明，Calibre 现在会在 Qt 的检查干扰之前预加载其所需的版本。</p><p>Calibre 9.x 系列中的一个回归问题导致 PDF 文档中的内部链接跳转到目标位置上方。该问题现已解决。</p><p>有趣的是，Ubuntu 的 PDF 查看器 Evince 最近也修复了自身的 PDF 链接问题——这一定是某种巧合！</p><p>其他修复主要针对使用 Calibre 内容服务器时遇到的问题。内容服务器是一项便捷功能，允许你通过另一台设备（如智能手机或平板电脑）上的网页浏览器，从主机浏览、打开和管理你的电子书库。</p><p>有用户报告称，在电子书查看器中搜索 ePub 内容无法正常工作，因此该问题已得到修复，同时修复的还有数据文件管理和上传的问题。</p><p>通过内容服务器界面转换电子书时缺失的选项也已恢复。</p><p>此外，用户现在可以再次在书籍详情面板中拖放书籍封面，并在批量编辑元数据时查看（并点击）操作按钮。</p><p>都是些简单的事情，真的。</p><p>如何获取 Calibre 的最新版本</p><p>Calibre 是免费的开源软件，适用于 Windows、macOS 和 Linux，可从官方网站下载。对于 Linux，Calibre 通过运行一个脚本安装，该脚本会下载二进制构建版本。要安装更新，每次都需要重新运行该命令。</p><p>Calibre 也提供 Flathub 版本，但作为未经验证的构建，截至撰写本文时，该版本落后当前版本两个版本。</p></div>
+  <div class="article-body"><p>CachyOS 2026年8月版为即将推出的服务器版做准备 - Phoronix</p><p>CachyOS 2026年8月版为即将推出的服务器版做准备</p><p>发布于2026年8月9日下午2:18（美国东部时间）。</p><p>CachyOS发布了今年最新的媒体刷新版。除了针对性能优化的CachyOS常规桌面改进外，他们还在继续为即将推出的CachyOS服务器版做准备。</p><p>为了提前为CachyOS服务器版的发布做准备，2026年8月的媒体刷新版对其命令行（CLI）安装程序进行了多项修复和改进。图形化的CachyOS安装程序和CachyOS欢迎屏幕在桌面端也有了一些改进。</p><p>CachyOS的chwd（内核管理器后端）已从C++重写为Rust。Cachy Update系统托盘应用也已用Rust重写。同时，Shelly默认GUI包管理器从C#迁移到了Zig。</p><p>此外，还有大量错误修复、CachyOS Wiki游戏指南的更新以及其他增强功能。</p><p>有关CachyOS 2026年8月版的下载和更多详情，请访问Phoronix网站。</p><p>（以下为Phoronix网站的其他新闻标题和版权信息，与正文无关，已忽略。）</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/calibre-9-13-bug-fix-update" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/CachyOS-August-2026" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

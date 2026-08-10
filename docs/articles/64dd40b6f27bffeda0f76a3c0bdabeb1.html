@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calibre 9.13 修复内容服务器中电子书搜索故障 — Linux 中文速报</title>
+<title>戴尔Latitude 7320二合一笔记本在五年后终于获得Linux网络摄像头支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Calibre 9.13 修复内容服务器中电子书搜索故障</h1>
+  <h1>戴尔Latitude 7320二合一笔记本在五年后终于获得Linux网络摄像头支持</h1>
 
-  <div class="article-summary">Calibre 9.13 作为开源电子书管理器的新版本发布，修复了多个 PDF 相关问题，包括因 libxml2 库版本冲突导致的转换错误，以及 PDF 内部链接跳转位置偏移的回归问题。此外，该版本还修复了内容服务器中 ePub 搜索失效、数据文件管理上传问题，并恢复了通过内容服务器转换电子书时缺失的选项，以及批量编辑元数据时的操作按钮。用户可通过官网下载或重新运行安装脚本更新。</div>
+  <div class="article-summary">戴尔Latitude 7320二合一商务笔记本于2021年发布，搭载英特尔第11代酷睿处理器，但其网络摄像头在Linux下一直无法工作。近日，独立Linux用户Sahan Nissanka通过研究发现，该摄像头传感器OV5678实为OV5675，并提交了内核补丁，使前置摄像头终于能在Linux下使用。补丁系列包括PMIC板数据、传感器ID添加和ipu-bridge条目，但后置摄像头仍待支持。</div>
 
-  <div class="article-body"><p>Calibre 9.13 修复内容服务器中电子书搜索故障 - OMG! Ubuntu</p><p>开源电子书管理器、阅读器和转换器 Calibre 的新错误修复版本现已可供下载。</p><p>Calibre 9.13 修复了多个与 PDF 相关的问题，包括在 Linux 发行版上可能出现的转换错误，这些发行版自带的 libxml2 库版本“过旧”，主要影响较旧的 Debian 安装。</p><p>原因是 Qt 的 GPU 检测与 Calibre 的 PDF 解析器之间存在冲突，两者需要不同版本的 libxml2。根据说明，Calibre 现在会在 Qt 的检查干扰之前预加载其所需的版本。</p><p>Calibre 9.x 系列中的一个回归问题导致 PDF 文档中的内部链接跳转到目标位置上方。该问题现已解决。</p><p>有趣的是，Ubuntu 的 PDF 查看器 Evince 最近也修复了自身的 PDF 链接问题——这一定是某种巧合！</p><p>其他修复主要针对使用 Calibre 内容服务器时遇到的问题。内容服务器是一项便捷功能，允许你通过另一台设备（如智能手机或平板电脑）上的网页浏览器，从主机浏览、打开和管理你的电子书库。</p><p>有用户报告称，在电子书查看器中搜索 ePub 内容无法正常工作，因此该问题已得到修复，同时修复的还有数据文件管理和上传的问题。</p><p>通过内容服务器界面转换电子书时缺失的选项也已恢复。</p><p>此外，用户现在可以再次在书籍详情面板中拖放书籍封面，并在批量编辑元数据时查看（并点击）操作按钮。</p><p>都是些简单的事情，真的。</p><p>如何获取 Calibre 的最新版本</p><p>Calibre 是免费的开源软件，适用于 Windows、macOS 和 Linux，可从官方网站下载。对于 Linux，Calibre 通过运行一个脚本安装，该脚本会下载二进制构建版本。要安装更新，每次都需要重新运行该命令。</p><p>Calibre 也提供 Flathub 版本，但作为未经验证的构建，截至撰写本文时，该版本落后当前版本两个版本。</p></div>
+  <div class="article-body"><p>戴尔Latitude 7320二合一笔记本在五年后终于获得Linux网络摄像头支持 - Phoronix</p><p>戴尔Latitude 7320二合一笔记本在五年后终于获得Linux网络摄像头支持</p><p>发布于2026年8月9日美国东部时间上午6:37。</p><p>戴尔Latitude 7320二合一商务笔记本/平板于2021年推出，搭载当时令人印象深刻的英特尔第11代酷睿“Tiger Lake”处理器。其网络摄像头在Linux下一直无法正常工作，但本周末发布的内核补丁终于破解了这一谜团，至少对于面向用户的摄像头而言。</p><p>戴尔Latitude 7320笔记本是英特尔IPU6技术的早期使用者之一，该技术需要时间来解决，Linux支持也需要以合适的方式实现。早在2022年，Linux二把手Greg KH就因此建议避免购买搭载英特尔IPU6的笔记本电脑。虽然此后该问题已得到解决，但戴尔Latitude 7320的网络摄像头支持仍然缺失，原因被归咎于OV5678传感器规格的缺乏。</p><p>多年来，一直有Latitude 7320的Linux用户反馈此问题，但直到现在才得到解决。独立Linux用户Sahan Nissanka开始破解这一谜团，他发现OV5678实际上是OV5675，而后者已有Linux驱动程序。经过其他一些发现和几个内核补丁，这款五年前的Tiger Lake笔记本终于可以在Linux下使用面向用户的网络摄像头了。</p><p>Nissanka今天在Linux内核邮件列表上解释了所需的更改和摄像头支持补丁：</p><p>“本系列补丁启用了戴尔Latitude 7320可拆卸版上的面向用户的500万像素摄像头，该摄像头在Linux下从未工作过。有两个公开报告请求此功能：intel/ipu6-drivers问题#24（2022年）和#402（2025年），后者因等待‘OV5678传感器规格（时钟速率、电源要求）’而受阻。</p><p>事实证明，这些规格并不需要。ACPI将前置传感器描述为OVTI5678，且没有驱动程序声明过该ID。该部件在寄存器0x300a处报告芯片ID 0x005675，而ov5675.c所敏感的值在传感器通电前就从机器的ACPI SSDB中读取，两者一致——2条CSI-2数据通道和19.2 MHz外部时钟。宣传的500万像素也与驱动程序的原始分辨率2592x1944匹配。因此，无需新的传感器驱动程序或新的寄存器表即可使其流式传输。</p><p>一个注意事项，在2/3补丁中有详细说明：该部件并非普通的拜耳传感器。它带有4x4 RGB-IR彩色滤光片阵列，四个像素中有一个是红外像素。这一点已从英特尔自己的Windows IPU6配置（针对此确切模块）、传感器全分辨率测量以及模块的调谐数据中得到确认，三者相互一致。因此，ov5675声明的SGRBG10是不准确的，颜色错误无法通过白平衡校正。</p><p>这无法在本系列中修复：V4L2 ABI完全没有RGB-IR媒体总线代码，而ox05b1s已经对同类和同分辨率的RGB-IR传感器存在相同的不准确性。我打算单独提出RGB-IR媒体总线代码。在获得此类支持之前，本系列将完全无法工作的硬件变为颜色不完美但可用的硬件，这似乎值得暂时采用。如果维护者更愿意在格式被如实描述之前不添加ID，我愿意保留2/3补丁。</p><p>剩下三个小部分：</p><p>1/3为TPS68470 PMIC提供板数据，没有它传感器甚至无法被枚举——它们声明了对控制逻辑的ACPI _DEP依赖，因此在探测之前不会创建i2c客户端。</p><p>2/3将OVTI5678 ID添加到ov5675。</p><p>3/3添加ipu-bridge条目，以便为其创建软件节点。</p><p>补丁涉及两个子系统：1/3是platform-driver-x86，2/3和3/3是媒体子系统。它们在构建上相互独立，但单独使用都没有实际作用，因此一起发送以提供上下文。如果维护者更倾向于拆分，我也乐意拆分。”</p><p>戴尔Latitude 7320还有一个后置网络摄像头尚未得到支持。在本次补丁之后，该支持可能很快就会到来。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/calibre-9-13-bug-fix-update" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Dell-Latitude-7320-Linux-Webcam" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calibre 9.13 修复内容服务器中电子书搜索故障 — Linux 中文速报</title>
+<title>Windows 11 天气应用占用约 1GB 内存，Linux 应用仅为其零头 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
+    <span class="tag">桌面环境</span>
     <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Calibre 9.13 修复内容服务器中电子书搜索故障</h1>
+  <h1>Windows 11 天气应用占用约 1GB 内存，Linux 应用仅为其零头</h1>
 
-  <div class="article-summary">Calibre 9.13 作为开源电子书管理器的新版本发布，修复了多个 PDF 相关问题，包括因 libxml2 库版本冲突导致的转换错误，以及 PDF 内部链接跳转位置偏移的回归问题。此外，该版本还修复了内容服务器中 ePub 搜索失效、数据文件管理上传问题，并恢复了通过内容服务器转换电子书时缺失的选项，以及批量编辑元数据时的操作按钮。用户可通过官网下载或重新运行安装脚本更新。</div>
+  <div class="article-summary">据报道，Windows 11 自带的天气应用占用内存超过 1GB，引发关注。经测试，Linux 上的天气应用内存占用远低于此，例如 Mousam 仅需约 250MB。尽管测试非科学严谨，但凸显了微软应用的低效，其采用 WebView2 框架并嵌入广告，导致资源浪费。相比之下，Linux 应用更注重效率，这反映了微软对用户体验和硬件资源的忽视。</div>
 
-  <div class="article-body"><p>Calibre 9.13 修复内容服务器中电子书搜索故障 - OMG! Ubuntu</p><p>开源电子书管理器、阅读器和转换器 Calibre 的新错误修复版本现已可供下载。</p><p>Calibre 9.13 修复了多个与 PDF 相关的问题，包括在 Linux 发行版上可能出现的转换错误，这些发行版自带的 libxml2 库版本“过旧”，主要影响较旧的 Debian 安装。</p><p>原因是 Qt 的 GPU 检测与 Calibre 的 PDF 解析器之间存在冲突，两者需要不同版本的 libxml2。根据说明，Calibre 现在会在 Qt 的检查干扰之前预加载其所需的版本。</p><p>Calibre 9.x 系列中的一个回归问题导致 PDF 文档中的内部链接跳转到目标位置上方。该问题现已解决。</p><p>有趣的是，Ubuntu 的 PDF 查看器 Evince 最近也修复了自身的 PDF 链接问题——这一定是某种巧合！</p><p>其他修复主要针对使用 Calibre 内容服务器时遇到的问题。内容服务器是一项便捷功能，允许你通过另一台设备（如智能手机或平板电脑）上的网页浏览器，从主机浏览、打开和管理你的电子书库。</p><p>有用户报告称，在电子书查看器中搜索 ePub 内容无法正常工作，因此该问题已得到修复，同时修复的还有数据文件管理和上传的问题。</p><p>通过内容服务器界面转换电子书时缺失的选项也已恢复。</p><p>此外，用户现在可以再次在书籍详情面板中拖放书籍封面，并在批量编辑元数据时查看（并点击）操作按钮。</p><p>都是些简单的事情，真的。</p><p>如何获取 Calibre 的最新版本</p><p>Calibre 是免费的开源软件，适用于 Windows、macOS 和 Linux，可从官方网站下载。对于 Linux，Calibre 通过运行一个脚本安装，该脚本会下载二进制构建版本。要安装更新，每次都需要重新运行该命令。</p><p>Calibre 也提供 Flathub 版本，但作为未经验证的构建，截至撰写本文时，该版本落后当前版本两个版本。</p></div>
+  <div class="article-body"><p>Windows 11 的天气应用占用约 1GB 内存，Linux 应用仅为其零头 - OMG! Ubuntu</p><p>我读到一篇关于微软 Windows 11 天气应用内存占用的报告时感到困惑——它仅为了渲染一个看似花哨的统计表格，就占用了超过 1GB 内存。</p><p>更不令人意外的是，Linux 上的天气应用完成同样的任务仅需 Windows 报告数值的五分之一，而我常用的天气应用 Mousam 的内存占用约为微软应用的三分之一（而且设计更美观）。</p><p>并非所有 Windows 11 用户都会看到像病毒式帖子中给出的 1.1GB 那样高的内存占用。但当我检查我那台低功耗的 Chuwi 笔记本时，该应用的内存占用超过 900MB——考虑到复杂应用能以更少资源做更多事，这个数值高得离谱。</p><p>Windows 11 上的天气应用占用 918MB 内存</p><p>微软使用 WebView2 框架构建其许多自有应用，而非原生 WinUI。该框架由 Microsoft Edge 的 Chromium 引擎驱动（任务栏的新闻和天气面板也是如此，同样因占用大量内存而受到批评）。</p><p>桌面天气应用还包含赞助内容和广告，遵循微软标准的“广告优先，功能其次”的设计理念。</p><p>高端游戏电脑不会因使用该应用而感觉到响应速度下降，但在内存有限的设备上，打开它可能会导致内存压力增加（RAM 先被压缩，然后页面文件被调入），从而导致系统卡顿。</p><p>Linux 天气应用相比之下如何？</p><p>我喜欢的 Linux 天气应用 Mousam——不是面板小程序，尽管那些更流行——与 Windows 相比如何。我打开了在 Ubuntu 26.04 LTS 上安装的应用，检查它们的内存占用。</p><p>这不是科学测试。</p><p>请将其视为出于好奇而非经验数据。微软的天气应用仅限 Windows；不同操作系统管理内存的方式不同；每个测试应用的功能集也不同；等等。</p><p>我的笔记本配置不算高端：低功耗 Intel m3-8100y 处理器，8GB 内存和 250GB NVMe SSD。但这是唯一运行 Windows 11 的设备，因此似乎是理想的测试平台：</p><p>内存数值是活跃使用期间 3 次运行的平均值。微软的天气应用内存占用波动很大（跨 9 个子进程），取决于加载内容、加载位置、是否聚焦等。</p><p>Linux 应用更高效这一事实不会让新闻界震惊。但我对微软应用的低效感到震惊。我没有达到测试者看到的 1.1GB 峰值，但已经足够接近了。</p><p>仅为了知道是否下雨，就占用 Windows 11 最低内存要求（官方仅为 4GB——“是啊，没错！”——全世界都这么说）的四分之一，坦率地说，这令人震惊。</p><p>对于 Linux 用户来说，看到 Windows 软件运行得如此糟糕，是对确认偏误的慰藉。虽然很容易将这些数据视为 Linux 默认更好的证据，但实际上这证明了微软并不在乎去尝试优化。</p><p>这就是为什么性能基准——无论是经验性的还是轶事性的——并不是真正的关键，关键在于意图。</p><p>微软宁愿发布一个带有广告的浏览器标签页来充实自己的腰包，也不愿构建一个既尊重用户又尊重硬件的优化应用——这比天气应用的低效更能促使用户转换系统。</p><p>你在 Windows 上使用了不同的天气应用或看到了不同的数字吗？请在下方分享你的内存读数。</p><p>Mousam 是一款用 Qt 编写的跨平台应用。在 Linux 上，报告称其使用内存低于 4MB，但一个属于它的 Python 进程占用约 250MB。该报告一并给出了这个数字。</p><p>对于 macOS，我（显然）必须使用 Apple 设备获取数值。我从基于 Intel i5 的 2017 年 iMac 4k（32GB 内存）上获取了应用读数，并从朋友的 MacBook Pro（M4 Max，64GB 内存，令人羡慕）上获取了运行 macOS 26 的读数。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/calibre-9-13-bug-fix-update" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/linux-vs-windows-weather-app-ram" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
