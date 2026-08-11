@@ -6257,5 +6257,192 @@
     "title_zh": "戴尔Latitude 7320二合一笔记本在五年后终于获得Linux网络摄像头支持",
     "summary_zh": "戴尔Latitude 7320二合一商务笔记本于2021年发布，搭载英特尔第11代酷睿处理器，但其网络摄像头在Linux下一直无法工作。近日，独立Linux用户Sahan Nissanka通过研究发现，该摄像头传感器OV5678实为OV5675，并提交了内核补丁，使前置摄像头终于能在Linux下使用。补丁系列包括PMIC板数据、传感器ID添加和ipu-bridge条目，但后置摄像头仍待支持。",
     "fulltext_zh": "戴尔Latitude 7320二合一笔记本在五年后终于获得Linux网络摄像头支持 - Phoronix\n\n戴尔Latitude 7320二合一笔记本在五年后终于获得Linux网络摄像头支持\n\n发布于2026年8月9日美国东部时间上午6:37。\n\n戴尔Latitude 7320二合一商务笔记本/平板于2021年推出，搭载当时令人印象深刻的英特尔第11代酷睿“Tiger Lake”处理器。其网络摄像头在Linux下一直无法正常工作，但本周末发布的内核补丁终于破解了这一谜团，至少对于面向用户的摄像头而言。\n\n戴尔Latitude 7320笔记本是英特尔IPU6技术的早期使用者之一，该技术需要时间来解决，Linux支持也需要以合适的方式实现。早在2022年，Linux二把手Greg KH就因此建议避免购买搭载英特尔IPU6的笔记本电脑。虽然此后该问题已得到解决，但戴尔Latitude 7320的网络摄像头支持仍然缺失，原因被归咎于OV5678传感器规格的缺乏。\n\n多年来，一直有Latitude 7320的Linux用户反馈此问题，但直到现在才得到解决。独立Linux用户Sahan Nissanka开始破解这一谜团，他发现OV5678实际上是OV5675，而后者已有Linux驱动程序。经过其他一些发现和几个内核补丁，这款五年前的Tiger Lake笔记本终于可以在Linux下使用面向用户的网络摄像头了。\n\nNissanka今天在Linux内核邮件列表上解释了所需的更改和摄像头支持补丁：\n\n“本系列补丁启用了戴尔Latitude 7320可拆卸版上的面向用户的500万像素摄像头，该摄像头在Linux下从未工作过。有两个公开报告请求此功能：intel/ipu6-drivers问题#24（2022年）和#402（2025年），后者因等待‘OV5678传感器规格（时钟速率、电源要求）’而受阻。\n\n事实证明，这些规格并不需要。ACPI将前置传感器描述为OVTI5678，且没有驱动程序声明过该ID。该部件在寄存器0x300a处报告芯片ID 0x005675，而ov5675.c所敏感的值在传感器通电前就从机器的ACPI SSDB中读取，两者一致——2条CSI-2数据通道和19.2 MHz外部时钟。宣传的500万像素也与驱动程序的原始分辨率2592x1944匹配。因此，无需新的传感器驱动程序或新的寄存器表即可使其流式传输。\n\n一个注意事项，在2/3补丁中有详细说明：该部件并非普通的拜耳传感器。它带有4x4 RGB-IR彩色滤光片阵列，四个像素中有一个是红外像素。这一点已从英特尔自己的Windows IPU6配置（针对此确切模块）、传感器全分辨率测量以及模块的调谐数据中得到确认，三者相互一致。因此，ov5675声明的SGRBG10是不准确的，颜色错误无法通过白平衡校正。\n\n这无法在本系列中修复：V4L2 ABI完全没有RGB-IR媒体总线代码，而ox05b1s已经对同类和同分辨率的RGB-IR传感器存在相同的不准确性。我打算单独提出RGB-IR媒体总线代码。在获得此类支持之前，本系列将完全无法工作的硬件变为颜色不完美但可用的硬件，这似乎值得暂时采用。如果维护者更愿意在格式被如实描述之前不添加ID，我愿意保留2/3补丁。\n\n剩下三个小部分：\n1/3为TPS68470 PMIC提供板数据，没有它传感器甚至无法被枚举——它们声明了对控制逻辑的ACPI _DEP依赖，因此在探测之前不会创建i2c客户端。\n2/3将OVTI5678 ID添加到ov5675。\n3/3添加ipu-bridge条目，以便为其创建软件节点。\n\n补丁涉及两个子系统：1/3是platform-driver-x86，2/3和3/3是媒体子系统。它们在构建上相互独立，但单独使用都没有实际作用，因此一起发送以提供上下文。如果维护者更倾向于拆分，我也乐意拆分。”\n\n戴尔Latitude 7320还有一个后置网络摄像头尚未得到支持。在本次补丁之后，该支持可能很快就会到来。"
+  },
+  "55e5ba6dbfebdf3376283b29811b20f4": {
+    "id": "55e5ba6dbfebdf3376283b29811b20f4",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/linux-mint-deletes-old-kernels-automatically",
+    "title_en": "Linux Mint will delete your old kernel versions automatically",
+    "summary_en": "Linux Mint has announced an overhaul in its kernel management, and will now automatically delete old kernels once a week. Kernel management is moving out of Update Manager and into the System Administration tool on both standard and LMDE versions and it now track kernels by series rather than individual versions. You&#8217;ll get to choose which kernel series are tracked and how many older kernels within each series the system should keep (in addition to the one you&#8217;re booted on; it doesn&",
+    "pub_date": "Mon, 10 Aug 2026 15:50:25 +0000",
+    "title_zh": "Linux Mint 将自动删除旧内核版本",
+    "summary_zh": "Linux Mint 宣布对其内核管理进行全面改革，现在将每周自动删除旧内核。内核管理从系统管理工具中移出，并按系列而非单个版本跟踪内核。用户可以选择跟踪哪些内核系列，以及每个系列中保留的旧内核数量。受保护的内核不会被删除，自定义内核也可标记为受保护。手动清理按钮可立即释放空间，且提供已删除内核的列表。此更改可能通过软件更新到达现有用户，或随 Linux Mint 23 发布。",
+    "fulltext_zh": "Linux Mint 宣布对其内核管理进行全面改革，现在将每周自动删除旧内核。\n\n内核管理将从标准版和 LMDE 版本的系统管理工具中移出，现在按系列而非单个版本跟踪内核。\n\n您可以选择跟踪哪些内核系列，以及系统在每个系列中应保留的旧内核数量（除了您当前启动的内核之外；它不会自拆台脚）。\n\n受跟踪系列的内核更新将像以前一样出现在更新管理器中，但一个显著的变化是，您较旧的、未使用的内核版本将每周自动删除。\n\n项目负责人 Clement Lefebvre 表示，手动“清理”按钮还可让您“立即释放空间”。一个历史按钮将使您能够轻松查看已删除的内核列表及其删除时间。\n\n扩展的内核管理选项（图片：Linux Mint / OMG! Ubuntu）\n\n如果您担心旧内核在后台被删除，不用担心：您有控制权。\n\n单个内核可以标记为“受保护”。这使它们免于被删除，无论其他设置或条件如何。简而言之：要防止特定内核被删除，无论它是否被跟踪，您必须在更新管理器中将其标记为受保护。\n\n从其他系列安装内核，例如 OEM、Azure、IBM、Real Time，将提示工具列出完整系列，并为您提供跟踪它的选项。跟踪会自动安装任何相关的元包和未来更新，因此值得这样做。\n\n虽然您可能安装的自定义内核（例如来自随机 PPA 或 .deb）无法被正确“跟踪”，但您可以将它们标记为受保护，以防止它们在清理过程中被删除。但是，Linux Mint 的工具会警告您，您有责任实际更新它们。\n\n删除未使用的内核释放空间\n\n您可能会惊讶于 Mint 保留了多少内核……\n\n如果您不太关注更新，您可能不知道发布和安装了多少内核更新——并且它们会并排保留安装。在 GRUB 引导加载程序中选择您的发行版的“高级选项”，以查看所有已安装且可引导的内核列表。\n\n在我的一台 Linux Mint 22.3 安装中，我列出了 4 个不同的内核（见上图）以及它们各自的恢复模式。保留它们很有用，但并非严格必要——尤其是多个系列内修订版。\n\n所有这些旧内核都占用空间，如果您从不使用或需要它们（因为当前内核运行良好），那么删除它们是回收数百兆字节空间的简单方法。但是，我建议您保留一个已知的备份内核，以防万一。\n\nMint 的博客文章中没有明确说明这些更改是否会作为软件更新提供给现有的 Linux Mint 22.3 和 LMDE 用户，还是随 Linux Mint 23“Alfa”（临时代号）一起发布，后者计划于今年年底发布。"
+  },
+  "86d44c3eab472fb312cdce5ba21b4d18": {
+    "id": "86d44c3eab472fb312cdce5ba21b4d18",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/linux-mint-linux-kernel-7-hwe",
+    "title_en": "Linux Mint 22.3 HWE released with Linux kernel 7.0",
+    "summary_en": "A refreshed Linux Mint 22.3 (Zena) OS installer is available for download, powered by Linux kernel 7.0. The distro made the first Linux Mint 22.3 HWE ISO available in March, with an installer that boots Linux 6.17 by default. That image remains available to download alongside the newest one, which boots Linux 7.0, and the original Linux Mint 22.3 (Zena) ISO that boots Linux 6.14. The Linux Mint HWE images provide the same core Linux Mint 22.3 experience, still based on Ubuntu 24.04 LTS, but it a",
+    "pub_date": "Mon, 10 Aug 2026 14:38:18 +0000",
+    "title_zh": "Linux Mint 22.3 HWE 发布，搭载 Linux 内核 7.0",
+    "summary_zh": "Linux Mint 22.3 (Zena) 的 HWE 版本 ISO 现已发布，默认搭载 Linux 7.0 内核，基于 Ubuntu 24.04 LTS。该版本旨在通过更新的硬件支持栈，让新硬件能够更好地运行长期支持系统。现有 Mint 用户无需重装，可通过软件更新获取 HWE 内核。官方建议仅在常规 ISO 无法正常工作时才使用 HWE 版本。",
+    "fulltext_zh": "Linux Mint 22.3 HWE 发布，搭载 Linux 内核 7.0 - OMG! Ubuntu\n\n一个全新的 Linux Mint 22.3 (Zena) 操作系统安装镜像现已可供下载，由最新的 HWE（硬件启用）内核驱动。\n\n首个 Linux Mint 22.3 HWE ISO 于三月发布，其安装程序默认启动 Linux 6.17 内核。该镜像仍可下载，与最新版本（默认启动 Linux 7.0）以及原始 Linux Mint 22.3 (Zena) ISO（默认启动 Linux 6.14）并列提供。\n\n这些镜像提供相同的核心 Linux Mint 22.3 体验，仍基于 Ubuntu 24.04 LTS，但整体构建在更新的硬件栈之上。现有 Mint 用户无需重新安装系统，因为 HWE 内核以软件更新的形式提供。\n\n因此，正如我在上次报道中所指出的，这些并非 Linux Mint 的新版本，而是当前稳定版本搭配更新内核的版本。\n\nCanonical 于七月开始推出最终的 Ubuntu 24.04 LTS 硬件启用（HWE）内核，将 Linux 7.0 从上游反向移植。该内核以及更新的 GPU 驱动和固件包将被“内置”到计划于九月发布的 Ubuntu 24.04.5 ISO 中。\n\nLinux Mint 继承的正是 Canonical 的 Ubuntu HWE 更新。\n\n所有这些硬件启用工作的目的是什么？Mint HWE ISO 与 Ubuntu 的 LTS 点版本介质一样，旨在让长期支持的操作系统版本在长期内保持可用。它们确保仅在新内核中才能正常工作或获得更好支持的新硬件能够启动和安装。\n\n你应该使用 Linux Mint HWE 吗？\n\nLinux Mint 的官方建议是，用户应坚持使用常规 ISO，即其网站在点击下载按钮时默认提供的版本。官方表示，仅当常规版本在设备上“无法正常工作”时，用户才应选择带有更新内核的 HWE 镜像。\n\n现有 Linux Mint 22.3 用户无需下载 ISO 并重新安装即可获得新的 HWE 内核，因为它作为标准软件更新提供。\n\n新的 HWE ISO 发布的同时，该发行版还宣布了对其原生内核管理工具的其他改进。"
+  },
+  "2fc1aa04df9ac392bc78671c6748e152": {
+    "id": "2fc1aa04df9ac392bc78671c6748e152",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/cachyos-august-2026-release/",
+    "title_en": "CachyOS is Laying Groundwork for The Server Edition",
+    "summary_en": "The CLI installer's new experimental profiles target the upcoming Server Edition, while Shelly gets a full rewrite.",
+    "pub_date": "Mon, 10 Aug 2026 15:09:59 GMT",
+    "title_zh": "CachyOS 为服务器版奠定基础",
+    "summary_zh": "CachyOS 最新版本为即将推出的服务器版奠定了基础，CLI 安装器新增了实验性配置文件，同时其 GUI 包管理器 Shelly 进行了全面重写，采用 Rust 编写，性能更优。此外，新版本还引入了新的欢迎界面、列表/网格视图、AUR PKGBUILD 预览、系统托盘支持、手持设备检测改进以及 DNS 处理优化。用户可通过 Shelly 或终端轻松更新。",
+    "fulltext_zh": "CachyOS 为服务器版奠定基础\n\nCLI 安装器的新实验性配置文件针对即将推出的服务器版，而 Shelly 则进行了全面重写。\n\n无论你喜欢还是讨厌，滚动发布发行版已经在 Linux 桌面市场中占据了一席之地。它们提供了前沿的体验，如果维护得当，可以保持相当稳定，但如果处理不当，也会让用户吃尽苦头。\n\nCachyOS 就是其中一种越来越受欢迎的选项。它提供了针对 CPU 优化的重建 Arch 软件包栈，以及为响应性调优的自定义内核，是一款性能出色的发行版。\n\n你可能还记得去年年底，开发者曾预告了针对 NAS 设置和托管提供商的专用服务器版的计划。他们最新的发布向我们展示了部分工作进展，以及典型的发行版改进。\n\n本次更新带来了许多新增内容，例如 Hyprland 的选项，用 lightdm-slick-greeter 替换了 SDDM，以及 COSMIC 引入了新功能。除了常规的 bug 修复和代码重构工作外，还新增了服务器版安装配置文件的实验性支持，这标志着新变体开发中的一个重要里程碑。\n\nShelly 在四月份成为 CachyOS 的默认 GUI 包管理器，取代了 Octopi，我们在使用后发现这是一个有前途的转变。在这次 CachyOS 发布中，Shelly 的 v3 迭代迎来了迄今为止最重大的变化。\n\n它已从使用 Rust 编写，用原生二进制文件取代了托管运行时，启动更快，内存占用更少。\n\n与之相伴的是首次运行时显示的新欢迎界面，以及用于浏览软件包的列表和网格视图，还有带有构建输出的 AUR PKGBUILD 预览。\n\n新增了用于同步数据库、清理缓存和移除孤立软件包的页面。同样，其 CLI 版本现在可以在一个地方搜索仓库和 AUR，并在仓库、AUR、AppImage 和 Flatpak 中运行更新检查。\n\n系统托盘小程序已移植到 Rust。新的标志将两个先前独立的步骤合并，同时启用自动更新检查和启动托盘图标。\n\n然后是手持设备检测，目前基于主板名称模式匹配，支持保加利亚语本地化，并且不再因某些情况而出现问题。\n\n最后，我们看到了应用，其 DNS 处理已重新设计，解决了一个导致基于速度测试的排名无法实际选择最快服务器的问题。\n\n请查看发布公告博客，了解我们在此略过的较小更改。\n\n两个版本都提供了全新的 ISO，\"完整 CPU 优化桌面体验\"版，或\"Steam Deck、ROG Ally、Legion Go 或 Legion Go S\"版。\n\n无需重新安装任何东西即可获得此版本。只需从应用启动器中打开，进入\"页面\"。在这里，等待同步完成，或点击\"\"一次性从官方仓库、AUR 和 Flatpak 拉取更新。\n\n如果你更喜欢终端，Shelly 的 CLI 可以通过一条命令完成同样的工作：\n\n喜欢这次更新吗？支持独立的 Linux 新闻报道。\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无承诺\n\n一个热爱开源软件、定制 PC 组装、赛车运动和探索这个世界无限可能的极客。\n\nopenJiuwen 的 Agent Swarm：当 AI 代理终于团队协作时\n\nAI 不再能肆虐 Rust 的代码仓库\n\n伊利诺伊州刚刚要求每个操作系统开始报告你孩子的年龄\n\nProxmox 虚拟环境正式在 ARM64 上运行，但你的树莓派尚不支持\n\n多年无人触碰的 Linux 驱动，直到 AI 开始探索并将其移除\n\n成为更好的 Linux 用户\n\n通过 FOSS 周刊通讯，你将学到……"
+  },
+  "2142cfb83c84ea2ef60dda74d382b4e7": {
+    "id": "2142cfb83c84ea2ef60dda74d382b4e7",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/openjiuwens-agent-swarm/",
+    "title_en": "openJiuwen’s Agent Swarm: When AI Agents Finally Work as a Team",
+    "summary_en": "openJiuwen is an open-source AI agent platform to help developers build production-grade AI agents and enable large-scale multi-agent collaboration.",
+    "pub_date": "Mon, 10 Aug 2026 12:51:35 GMT",
+    "title_zh": "openJiuwen的Agent Swarm：当AI代理终于能团队协作",
+    "summary_zh": "openJiuwen是一个开源AI代理平台，旨在帮助开发者构建生产级AI代理并实现大规模多代理协作。其核心组件JiuwenSwarm首次实现了“协调工程”，将焦点从单个代理的智能化转向多代理的高效协作。JiuwenSwarm支持异构模型路由、分层记忆架构、分布式部署以及与HarmonyOS生态的无缝集成，并具备可观测性和自我进化能力。该平台由华为实验室、华为云和终端小艺团队联合开发，采用Apache 2.0许可证，已在HarmonyOS PC上推出，为多设备分布式场景提供支持。",
+    "fulltext_zh": "openJiuwen的Agent Swarm：当AI代理终于能团队协作\n\nopenJiuwen的Agent Swarm：当AI代理终于能团队协作\n\nopenJiuwen是一个开源AI代理平台，旨在帮助开发者构建生产级AI代理，并实现大规模多代理协作。\n\n在过去两年中，AI代理领域经历了一波又一波的“工程范式转变”。从提示工程到上下文工程，再到控制工程，每一次迭代都聚焦于让单个代理更智能、更可靠。\n\n然而，现实世界中的复杂任务从来不是由单个人完成的。\n\n例如，多学科医疗会诊需要来自不同领域的专家协同工作。\n\n同样，大型软件工程项目需要产品经理、前端工程师、后端开发人员和测试人员共同推进。\n\n然而，AI行业仍在试图构建一个“全能”的单一代理，而不是一个协调良好的代理团队。\n\n这正是openJiuwen旨在解决的问题。\n\nopenJiuwen是一个开源AI代理平台，由华为实验室、华为云和终端小艺团队联合构建，以Apache 2.0许可证发布。其目标是帮助开发者构建生产级AI代理，并实现大规模多代理协作。\n\n2026年5月，openJiuwen社区发布了一个重要组件：JiuwenSwarm。它标志着“协调工程”的首次工程实现，将焦点从“让单个代理更智能”转向“让多个代理高效协作”。\n\nopenJiuwen与华为终端平板与PC产品线、软件部等团队合作，推出了HarmonyOS PC版的JiuwenSwarm。这意味着JiuwenSwarm从架构基础起就与HarmonyOS生态共享相同的技术DNA。\n\nJiuwenSwarm有何不同？\n\nJiuwenSwarm的核心是Agent Swarm机制，它使多个AI代理能够自主分工、动态协商并高效协作。\n\n以下是其关键特性。\n\n异构模型路由，适配不同任务\n\nJiuwenSwarm支持将成员路由到不同的模型，为不同角色提供合适的模型能力，从而将重推理模型分配给复杂逻辑，将轻量模型分配给简单任务。这降低了系统负载，并提高了整体执行质量。开发者只需在配置文件中声明角色到模型的映射，系统即可自动管理调度。\n\nJiuwenSwarm已实现与HarmonyOS小艺、飞书等平台的无缝集成。开发者可以构建JiuwenSwarm模式的代理，并可直接通过HarmonyOS设备调用。\n\n分层记忆架构\n\n配合分层持久记忆系统，JiuwenSwarm在会话间保留全维度记录，包括操作历史、企业资料和政策指南。通过跨Swarm经验继承机制，一个Swarm积累的经验可以直接被另一个Swarm继承。\n\n分布式部署\n\nJiuwenSwarm支持分布式Agent Swarm。Leader Agent和群成员可以运行在不同的进程、不同的节点，甚至完全不同的服务器上。这一能力对于需要访问隔离环境（如内网数据库）的任务尤为关键。\n\n这种架构天然适应HarmonyOS PC的多设备分布式场景。在HarmonyOS PC的“Agent PC”环境中，PC作为Leader Agent的大本营，而手机、平板等HarmonyOS设备作为Teammate Agent节点，无需额外适配即可协同工作。\n\n借助Channels机制，开箱即用地支持小艺等平台集成，开发者可以立即为HarmonyOS PC生态构建多代理应用。\n\n可观测性与自我进化\n\nJiuwenSwarm提供可观测性和自我进化能力。"
+  },
+  "52e126fdddfa62849ca38a018b0e9112": {
+    "id": "52e126fdddfa62849ca38a018b0e9112",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/rust-code-repo-ai-policy/",
+    "title_en": "AI Can No Longer Rampage Through Rust's Code Repo",
+    "summary_en": "The new rust-lang/rust policy allows AI-written code only under a narrow, disclosed experiment, and doesn't apply to the wider Rust project.",
+    "pub_date": "Mon, 10 Aug 2026 10:35:34 GMT",
+    "title_zh": "AI不再能在Rust代码仓库中肆意横行",
+    "summary_zh": "Rust项目采纳了新政策，限制AI编写代码，仅允许在狭窄且公开的实验范围内使用，且不适用于更广泛的Rust项目。政策要求AI生成的代码需事先与审查者安排，全面测试，并确保双方理解。同时，NetworkManager也采用了类似政策，要求作者对提交的代码负全责，禁止未经人工审查的大型机器生成合并请求。这些举措反映了开源社区对AI使用可能带来的维护负担和基础设施压力的担忧。",
+    "fulltext_zh": "AI不再能在Rust代码仓库中肆意横行\n\n新的rust-lang/rust政策仅允许在狭窄且公开的实验范围内使用AI编写的代码，且不适用于更广泛的Rust项目。\n\nRust项目已实施了一项政策，鼓励人们使用LLM来分析和思考代码，而非编写代码。\n\n就目前而言，该政策仅涵盖Rust的核心仓库。它规定了诸多关于受限内容、允许内容以及一个熔断机制的规则，该熔断机制会在六周窗口期内AI编写的合并请求超过所有合并请求的一半时暂停此类合并。\n\n需要说明的是，核心仓库托管了整个语言的编译器和标准库。每个Rust程序都依赖于这里的代码，这使得该仓库成为一个非常重要的审核对象。\n\n他们以这种方式禁止LLM使用并不令人意外。\n\nLLM不能以你的名义编写评论、问题或PR描述。文档、安全评论和编译器诊断信息也都在禁止之列。LLM审查也永远不能替代人工审查，也不能替代你在发布前对自己的代码进行的审查。\n\n允许的是私人使用。向LLM询问代码库相关问题无需披露，私下审查自己的代码、为自己总结PR或使用LLM构建个人开发工具也无需披露。\n\n除此之外，还有一些处于灰色地带的事项。机器翻译、使用LLM进行的琐碎修复以及自我验证的漏洞查找都属于此类，每项都需要披露。\n\nAI编写的代码受到最严格的对待。它必须事先与审查者安排，不太可能引入破坏Rust安全保证的漏洞，经过全面测试，并且双方都理解后才能获得新的“AI实验”标签。\n\n撰写原始政策（项目现已采纳）的开发者总结道：“这不是故事的结局。该政策的目标之一是帮助我们收集数据：人们是否在用LLM做有趣且有用的事情？他们是否在学习？他们是否在做出重复贡献？这些问题的答案将帮助我们确定政策未来的变化。”\n\n其他地方也有类似举措\n\nNetworkManager（大多数主流Linux发行版的默认网络守护进程）也采纳了自己的AI编码助手政策，最近合并了一项变更。\n\n作者对其提交的代码负100%的责任。不要发送你无法解释的补丁，也不要发送你未自行构建和测试的补丁。自己编写提交信息和合并请求描述。这些内容解释了为什么你要进行更改，这是工具无法知道的部分。自己回应审查评论。如果你无法与审查者讨论自己的补丁，它将不会被合并。\n\n法律部分的所有内容均适用。你是证明贡献可以在LGPL-2.1-or-later下发布的人。工具无法为你证明这一点。\n\n未经人工逐行审查的大型机器生成合并请求将被关闭。\n\nRed Hat的开发者编写了该变更，并在维护者批准后于8月7日合并。如果你阅读了上述内容，你会看到NetworkManager的版本比Rust的分层系统简单得多。目前，它更接近我们已经在Gentoo Linux中看到的“作者负责”方法。\n\n我们不断看到此类举措。例如，Codeberg的成员投票禁止主要由AI生成代码构建的项目，理由是服务器压力和硬件成本上升。\n\n我们一次又一次地看到更多证据表明，如果不加以控制，AI的使用会迅速降低以维护为重点的工作和基础设施的质量。一如既往，开源生态系统将继续根据AI的使用情况而演变。\n\n喜欢这次更新吗？支持独立的Linux新闻报道\n\nIt's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。\n\n一次付费，永久享受\n\n任意金额，无需承诺\n\n一个热爱开源软件和定制PC的极客"
+  },
+  "5d72b5ada8692864e809c9e171325f93": {
+    "id": "5d72b5ada8692864e809c9e171325f93",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12919",
+    "title_en": "Distribution Release: SparkyLinux 8.4",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  SparkyLinux is a Debian-based distribution with a variety of desktop editions. The project's latest version, SparkyLinux 8.4, reintroduces 32-bit support for x86 machines. \"A year ago, Debian dropped support for 32-bit live/install ISO images, so SparkyLinux dropped it as well. This decision has been reassessed, as it turns....",
+    "pub_date": "",
+    "title_zh": "发行版发布：SparkyLinux 8.4",
+    "summary_zh": "SparkyLinux 8.4 发布，这是一个基于 Debian 的发行版，提供多种桌面环境。该版本重新引入了对 32 位 x86 机器的支持，因为开发团队发现全球仍有大量用户在使用配备 32 位处理器的老旧但功能正常的电脑。除了 x86_64 和 Aarch64 版本外，新版本还提供 i686-pae 的 live/install 镜像，以及超轻量级的 Openbox 和 CLI 版本供用户自行配置。所有软件包均已更新至 2026 年 8 月 9 日的稳定版仓库。",
+    "fulltext_zh": "发行版发布：SparkyLinux 8.4\n\nSparkyLinux 是一个基于 Debian 的发行版，提供多种桌面版本。该项目的最新版本 SparkyLinux 8.4 重新引入了对 x86 机器的 32 位支持。\n\n\"一年前，Debian 放弃了对 32 位 live/install ISO 镜像的支持，因此 SparkyLinux 也跟随放弃了。这一决定现已被重新评估，因为事实证明，世界上仍有相当多的人拥有配备 32 位处理器的'非常老旧'但仍然功能正常的电脑。这就是为什么 SparkyLinux 8.4 恢复了对 32 位机器的支持，除了 x86_64 和 Aarch64 版本外，还提供 i686-pae 的 live/install 镜像，以及超轻量级的 Openbox 和 CLI 版本供用户按需自行配置。主要变化：所有软件包均已从 Debian 稳定版和 SparkyLinux 仓库更新至 2026 年 8 月 9 日；PC 64 位 Linux 内核 6.12.101 LTS（SparkyLinux 仓库中为 7.1.8、6.18.43-LTS、6.12.102 LTS）；Arm64 Linux 内核 6.18.39；PC 32 位 Linux 内核 6.12.102 LTS；LibreOffice 25.2.3（Debian backports 仓库中为 26.2.4）；KDE Plasma 6.3.6....\"\n\n关于新版本的更多信息可以在[项目发布公告](https://sparkylinux.org/sparky-8-4/)中找到。\n\n下载镜像：\n\n- sparkylinux-8.4-x86_64-kde.iso\n- sparkylinux-8.4-x86_64-lxqt.iso\n- sparkylinux-8.4-x86_64-mate.iso\n- sparkylinux-8.4-x86_64-xfce.iso\n\n近期相关新闻和发布：\n\n- 发行版发布：SparkyLinux 8.4\n- 发行版发布：SparkyLinux 2026.03\n- 发行版发布：SparkyLinux 8.2\n- 发行版发布：SparkyLinux 8.1\n- 发行版发布：SparkyLinux 2025.09\n- 发行版发布：SparkyLinux 8.0\n- 更多 SparkyLinux 新闻...\n\nSparkyLinux 是一组基于 Debian 的桌面 Linux 发行版。该项目提供带有 KDE Plasma、LXQt、MATE 和 Xfce 桌面的独立版本，以及一个使用 Openbox 窗口管理器的轻量级版本。它提供两种产品变体——一种基于 Debian 的 \"Stable\" 分支，较为保守；另一种则源自 Debian \"Testing\"，更新更及时。\n\n- https://sparkylinux.org/\n- https://forum.sparkylinux.org/"
+  },
+  "cf35f73b71d6a2b96cb7c87c0bd14e88": {
+    "id": "cf35f73b71d6a2b96cb7c87c0bd14e88",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12918",
+    "title_en": "Distribution Release: CachyOS 260809",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The CachyOS project has published a new snapshot. The distribution's August release features improvements to the system installers, the welcome window, and handheld device detection. \"CachyOS Welcome got a DNS rework, so the speed-test based server ranking now correctly picks the fastest DNS server. In chwd, improved handheld....",
+    "pub_date": "",
+    "title_zh": "发行版发布：CachyOS 260809",
+    "summary_zh": "CachyOS 发布了 260809 版本，该版本对系统安装程序、欢迎窗口和手持设备检测进行了改进。欢迎窗口的 DNS 功能得到重构，服务器排名现在能正确选择最快的 DNS 服务器。chwd 改进了手持设备检测，并添加了保加利亚语本地化。内核管理器后端从 C++ 重写为 Rust，并集成到 chwd-kernel 中。Cachy-Update 基于 Arch-Update v4.x 重写，系统托盘应用改用 Rust 编写，并新增了自动更新检查选项。默认的 GUI 包管理器 Shelly 从 C# 重写为 Zig，降低了内存使用并加快了启动速度。",
+    "fulltext_zh": "发行版发布：CachyOS 260809 (DistroWatch.com 新闻)\n\nDistroWatch.com 由以下赞助商支持\n\n新闻/观点/评测 ▼\n发布公告\nDW 周刊 / 评测存档\n访客评分与评测\n项目评分排名\n播客、新闻通讯与评测\n跨发行版软件包比较\n显示所有发行版的软件包版本\n搜索发行版 - 高级\n已停止维护的发行版\n教程与学习 ▼\n搜索文章\n问答专栏\n技巧与窍门专栏\n常见误解专栏\n简化手册页\n其他操作系统\n发行版验证密钥\n发行版家族树可视化\n常见问题解答\n我们的捐赠计划\n\n小型企业电话系统\nMint 推出新的内核管理器\nProxmox 现已支持 ARM 处理器\nMageia 重点介绍 Pidgin\nArch 项目将阻止对 AUR 的新推送\nUbuntu 将为 LTS 版本上的虚拟化工具提供升级\nGardua 更新 FireDragon 网络浏览器，采用新基础\nHaiku 获得在移植浏览器上使用 Firefox 品牌的权利\nFreeBSD 发布 2026 年第二季度状态报告\nDebian 讨论 LLM 工具的使用\nFreeBSD 暂时冻结 ports 树\n\n易于使用的 PBX - 托管或自管理\n适用于 Linux 的电话系统\n免费在线聊天解决方案\n集成呼叫中心软件\n联络中心软件\n远程办公应用：iOS 或 Android\n免费视频会议\n3CX 提供的 VoIP / PBX 操作指南\n不要措手不及，制定灾难恢复计划！\n必备的在线聊天报告与统计\n导致呼叫欺诈的常见错误\nWhatsApp Business 与 3CX WhatsApp API 集成对比\n3CX StartUP 的 5 大杀手级功能\n不要成为“那种人”第1卷：保持复杂凭据\n不要成为“那种人”第2卷：呼叫欺诈\n不要成为“那种人”第3卷：4 大安全提示\n不要成为“那种人”第4卷：监控您的实例\n\nLinux Mint 月度新闻 - 2026年7月\nRed Hat 周五五件事 - 2026年8月7日\nUbuntu 每周通讯 955\n播客 Projets Libres\nFull Circle 每周新闻\nDistrohoppers' Digest\n最新新闻与更新\n新闻筛选选项\n\n发行版发布：CachyOS 260809\n\n该项目已发布新快照。该发行版的八月版本对系统安装程序、欢迎窗口和手持设备检测进行了改进。\n\n“CachyOS 欢迎窗口进行了 DNS 重构，因此基于速度测试的服务器排名现在能正确选择最快的 DNS 服务器。在 chwd 中，通过特定的主板名称匹配改进了手持设备检测，并添加了保加利亚语本地化。内核管理器后端从 C++ 重写为 Rust，并直接集成到 chwd-kernel 中。Cachy-Update 已基于 Arch-Update v4.x 重新构建，其系统托盘小程序用 Rust 重写。新增的 --check --enable 选项可一键开启自动更新检查并启动系统托盘，托盘现在通过 TrayUpdatesPerPage 支持可配置分页，默认检查间隔提高到 6 小时。Shelly，我们默认的 GUI 包管理器，已从 C# 重写为 Zig，作为其重大版本发布，放弃了托管运行时，改用原生二进制，内存使用更低，启动更快。桌面应用新增了首次运行欢迎界面、列表和网格软件包浏览、AUR PKGBUILD 预览及构建输出，以及用于数据库同步、缓存清理和孤立包删除的实用工具页面。”\n\n更多详细信息可在 cachyos-desktop-linux-260809.iso 中找到。\n\n近期相关新闻和发布\n发行版发布：CachyOS 260809\n发行版发布：CachyOS 260426\n发行版发布：CachyOS 260308\n发行版发布：CachyOS 260124\n发行版发布：CachyOS 251129\n发行版发布：CachyOS 250824\n\nCachyOS 是一个基于 Arch Linux 的 Linux 发行版。它专注于速度和安全性优化——默认 Linux 内核使用 BORE（突发响应增强器）调度器进行了重度优化，而桌面软件包则使用 LTO、x86-64-v3 和 x86-64-v4、Zen 4 优化、安全标志和性能改进进行编译。可用的桌面环境、窗口管理器和 Wayland 合成器包括 bspwm、Budgie、Cinnamon、COSMIC、G"
+  },
+  "bce44961ae715c5b429e6615becf3e00": {
+    "id": "bce44961ae715c5b429e6615becf3e00",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Fedora-CoreOS-OOMD-zRAM-Swap",
+    "title_en": "Fedora CoreOS To Enable systemd-oomd & zRAM Swap By Default",
+    "summary_en": "Fedora's CoreOS as their container-optimized operating system will be moving to enable systemd-oomd by default with Fedora CoreOS 45. Additionally, swap on zRAM will be enabled by default too...",
+    "pub_date": "Mon, 10 Aug 2026 15:35:44 -0400",
+    "title_zh": "Fedora CoreOS 将默认启用 systemd-oomd 与 zRAM 交换空间",
+    "summary_zh": "Fedora CoreOS 作为面向容器的操作系统，将在 Fedora CoreOS 45 版本中默认启用 systemd-oomd 和 zRAM 交换空间。该变更已获得 Fedora 工程指导委员会（FESCo）的批准，使 CoreOS 与其他 Fedora 变体保持一致。此前因 Kubernetes 对节点交换空间的不兼容而推迟，现条件已成熟。此外，FESCo 本周还批准了 Fedora Atomic 改用 Anaconda WebUI 安装程序，以及为原子桌面提供基于 Web 的远程安装支持。",
+    "fulltext_zh": "Fedora CoreOS 将默认启用 systemd-oomd 与 zRAM 交换空间 - Phoronix\nFedora CoreOS 将默认启用 systemd-oomd 与 zRAM 交换空间\n2026年8月10日，美国东部时间下午3:35。\n\nFedora 的 CoreOS 作为其面向容器优化的操作系统，将在 Fedora CoreOS 45 中默认启用 systemd-oomd。此外，zRAM 上的交换空间也将默认启用。\n\nFedora 工程指导委员会（FESCo）现已批准在 Fedora CoreOS F45 版本中启用 systemd-oomd 和 zRAM 交换空间。这使 CoreOS 与其他已使用这些默认设置的 Fedora 变体保持一致。Fedora CoreOS 此前因 Kubernetes 直到最近才兼容节点上的交换空间而推迟了该变更。\n\n相关计划已在该变更的提案中详细说明，该提案现已获得一致通过。\n\nFESCo 本周还批准了将 Fedora Atomic 切换到 Anaconda WebUI，而非基于 GTK 的传统 Anaconda 安装程序。此外，还有针对原子桌面的基于 Web 的远程安装支持。\n\nx86_64 Shadow Stack 默认启用目标推迟至 Fedora 46\nFedora 正在制定利益冲突政策\nFedora 45 计划开始逐步淘汰内核中的加密用户空间 API\nFedora 45 原子桌面计划支持基于 Web 的远程安装\nStratis 存储 Anaconda 集成已获 Fedora 45 批准\n面向机密计算的“轻量级”GRUB 替代包已获 Fedora 45 批准\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。他还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\nFFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 及更多 AMD AMF 功能\nLinux 暂存区将拒绝 LLM 生成的补丁，但真正的安全修复除外\nLinux 7.3 看起来将上游支持 FailFS\nCloudflare 宣布开源 Cloudflare OS 作为 AI“操作系统”\nGNOME Boxes 准备提供大幅改进的虚拟化体验\nLinux 意外在内核锁定模式下遗留了旧版 I/O 和内存处理程序\nLinux 7.2-rc6 发布：“此 RC 巨大”\n更多旧版 Linux 驱动因 AI/LLM 编码代理的噪音而面临移除\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "59ed94ebbe4c2dab166b5bf332844f1e": {
+    "id": "59ed94ebbe4c2dab166b5bf332844f1e",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.3-Yogafan-Driver",
+    "title_en": "Five More Lenovo Laptops To Report Fan Sensors With Linux 7.3",
+    "summary_en": "In addition to more ASUS motherboards having working sensors with Linux 7.3, this next kernel version will also get several more Lenovo laptop models to be reporting their fan sensor information under Linux...",
+    "pub_date": "Mon, 10 Aug 2026 14:40:00 -0400",
+    "title_zh": "Linux 7.3 将为五款更多联想笔记本电脑报告风扇传感器",
+    "summary_zh": "Linux 7.3 内核将扩展 Yogafan 驱动，新增对五款联想笔记本电脑型号的风扇转速监控支持，包括 IdeaPad 3 15ALC6、Legion Pro 7 16、Yoga Pro 7 14IAH、Yoga 7 16ARP8 和 XiaoXinPro 13ARE。该补丁已加入硬件监控子系统的 hwmon-next 分支，共增加 69 行 C 代码，为这些型号添加了正确的 DMI 条目，以实现风扇转速报告功能。",
+    "fulltext_zh": "Linux 7.3 将报告五款更多联想笔记本电脑的风扇传感器 - Phoronix\n\nLinux 7.3 将报告五款更多联想笔记本电脑的风扇传感器\n2026年8月10日下午2:40（美国东部时间）\n\n继更多华硕主板在 Linux 7.3 下拥有可工作的传感器之后，这个下一个内核版本还将让更多联想笔记本电脑型号在 Linux 下报告其风扇传感器信息。\n\n早在 Linux 7.1 中合并了 Yogafan 驱动，以支持更多联想 Yoga、Legion、Flex、Slim 和 IdeaPad 笔记本电脑型号的风扇转速监控。该 Yogafan 驱动将在 Linux 7.3 中进一步扩展，以支持更多联想笔记本电脑型号。\n\n计划为 Linux 7.3 新增的设备支持包括 IdeaPad 3 15ALC6、Legion Pro 7 16、Yoga Pro 7 14IAH、Yoga 7 16ARP8 以及 XiaoXinPro 13ARE。\n\n这些新增内容相当于增加了 69 行 C 代码，为这些额外的笔记本电脑型号添加了正确的 DMI 条目，以实现风扇转速报告功能。该补丁已排队在硬件监控子系统的“hwmon-next”Git 分支中，等待 Linux 7.3 合并窗口开启。\n\n针对运行 Linux 的 AMD Athlon XP 时代系统的小型优化即将到来\n旧 SGI 驱动因安全问题将在 Linux 7.3 中被移除\n戴尔 Latitude 7320 二合一在 Linux 上五年后获得网络摄像头支持\n新 Linux 补丁启用华硕 ROG Ryujin III 监控支持\nPolychromatic 0.9.8 发布，支持 Razer Blade 16 2023\nLinux 7.2-rc7 添加对最独特或非常时髦的游戏控制器的支持\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nFFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 及更多 AMD AMF\nLinux 的 Staging 区域现在将拒绝 LLM 生成的补丁，除非是真正的安全修复\nLinux 7.3 看起来将上游化 FailFS\nCloudflare 宣布开源 Cloudflare OS 作为 AI“操作系统”\nGNOME Boxes 准备提供大幅改进的虚拟化体验\nLinux 意外在内核锁定模式下遗留了传统 I/O 和内存处理程序\nLinux 7.2-rc6 发布：“这个 RC 非常庞大”\n更多旧 Linux 驱动因 AI/LLM 编码代理的噪音而面临移除\n\n在享受无广告浏览的同时，\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "6dc6c5c5cef53cb684e9d613841ba8cd": {
+    "id": "6dc6c5c5cef53cb684e9d613841ba8cd",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.3-KCFI-Optimization",
+    "title_en": "Linux 7.3 Bringing A KCFI Optimization To Benefit Older Intel CPUs",
+    "summary_en": "Expected to be merged during the upcoming Linux 7.3 merge window is a Kernel Control Flow Integrity (KCFI) improvement intended to benefit older Intel processors...",
+    "pub_date": "Mon, 10 Aug 2026 13:26:55 -0400",
+    "title_zh": "Linux 7.3 引入 KCFI 优化，惠及旧款 Intel CPU",
+    "summary_zh": "Linux 7.3 合并窗口即将迎来一项内核控制流完整性（KCFI）优化，旨在提升不支持 CET/IBT 的旧款 Intel 处理器的性能。该优化由 Intel 工程师 Peter Zijlstra 提出，通过替换 KCFI 检查序列中的条件跳转指令，减少分支预测开销，从而提高吞吐量。Intel 工程师 Scott Constable 的基准测试显示，该补丁在旧平台上可带来显著性能提升。目前补丁已进入 tip 树，预计将在 Linux 7.3 合并窗口中被合并。",
+    "fulltext_zh": "Linux 7.3 引入 KCFI 优化，惠及旧款 Intel CPU - Phoronix\n\nLinux 7.3 引入 KCFI 优化，惠及旧款 Intel CPU\n\n2026年8月10日，美国东部时间下午1:26。\n\n在即将到来的 Linux 7.3 合并窗口中，预计将合并一项内核控制流完整性（KCFI）改进，旨在惠及旧款 Intel 处理器。\n\nIntel 的 Peter Zijlstra 为不支持 CET 的旧平台开发了一项 KCFI 改进。Peter 在待合并补丁中解释道：\n\n“正如提交 85a2d4a890dc（\"x86,ibt: Use UDB instead of 0xEA\"）中所指出的，Jcc 应被视为不跳转，然而标准的 kCFI（ABI）会生成以下序列：\n\naddl\t-15(%r11), %r10d\n1: cs call __x86_indirect_thunk_r11\n\n（当与 -mretpoline-external-thunk 结合使用时）。\n\n值得注意的是，这里的 Jcc 总是被跳转，导致吞吐量低于理想水平。在启动时将其替换为以下序列：\n\naddl\t-15(%r11), %r10d\ncs call __x86_indirect_thunk_r11\n\n这会跳转到测试指令中用作立即数字节的 UDB 指令。测试指令会破坏 eflags，但这无关紧要，因为 eflags 已经被前面的 addl 改变了。\n\nIntel 建议在支持 IBT 的平台上使用 FineIBT 序列；旧平台仍被广泛使用，并会从这一优化中受益。”\n\nFineIBT / CET 与间接分支跟踪（IBT）出现在 Intel 第11代酷睿“Tiger Lake”及更新的 CPU 中。\n\nIntel 工程师 Scott Constable 在补丁的早期版本上运行了一些基准测试，以评估 CFI 优化的收益：\n\n该补丁已进入 tip/tip.git 的 x86/core Git 分支。随着该代码现在位于 TIP 分支中，预计将在即将到来的 Linux 7.3 合并窗口中被提交。\n\n开源 NVIDIA “Nova” 驱动为 Linux 7.3 带来更多功能\n\nLinux 7.2-rc7 发布，又一个由 AI 驱动的疲惫周\n\nLinux 7.2-rc7 的 HWMON 修复：“大部分修复了严重或高危漏洞”\n\nLinux 7.3 中图形 TTM 内存管理将更加激进\n\nLinux 7.2-rc7 修复了一个“恶劣”的竞态条件，该问题存在8年后导致释放后使用\n\nPage Alloc Hogger 让您更好地在 Linux 上测试/调试内存行为\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过20,000篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nFFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 及更多 AMD AMF 功能\n\nLinux 的 Staging 区域将拒绝 LLM 生成的补丁，除非是真正的安全修复\n\nLinux 7.3 看起来将上游 FailFS\n\nCloudflare 宣布开源 Cloudflare OS 作为 AI“操作系统”\n\nGNOME Boxes 准备提供大幅改进的虚拟化体验\n\nLinux 意外在内核锁定模式下遗留了旧版 I/O 和内存处理程序\n\nLinux 7.2-rc6 发布：“这个 RC 很大”\n\n更多旧 Linux 驱动面临移除，原因是 AI/LLM 编码代理的噪音\n\n在享受无广告浏览的同时，\n\n单页文章查看\n\n法律免责声明、隐私政策、Cookie\n\n版权所有 © 2004 - 2026，由\n\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "76f0be8bc96ffd205c4c05befccb20ae": {
+    "id": "76f0be8bc96ffd205c4c05befccb20ae",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Qt-Edge-AI-Module-Coming",
+    "title_en": "Qt Toolkit To Introduce Edge AI Submodule, Initially For Vision AI With Qt",
+    "summary_en": "The Qt Group has been working on various AI integrations for the Qt toolkit in recent times like a QML profiler skill for agentic development to help with performance profiling. They have also worked on Qt AI coding assistants and AI agents in the Qt Creator integrated development environment. Their latest AI use is now preparing to introduce a new module in the Qt toolkit itself for edge AI inferencing...",
+    "pub_date": "Mon, 10 Aug 2026 11:22:21 -0400",
+    "title_zh": "Qt工具包将引入边缘AI子模块，初期聚焦视觉AI",
+    "summary_zh": "Qt集团近期在AI集成方面动作频频，包括QML分析器技能、AI编码助手及Qt Creator中的AI代理。最新计划是在Qt工具包中新增Qt Edge AI子模块，用于边缘AI推理，初期支持NVIDIA Jetson/Thor、Qualcomm IQ和NXP i.MX95等嵌入式平台。该模块提供C++ API，支持构建推理流水线并运行机器视觉任务（如目标检测和分类），依赖QtMultimedia处理视频帧。首个版本由Cursor AI代理协助开发，后续将添加NXP NNStreamer后端插件和面部检测示例应用。",
+    "fulltext_zh": "Qt工具包将引入边缘AI子模块，初期聚焦视觉AI - Phoronix\n\nQt工具包将引入边缘AI子模块，初期聚焦视觉AI\n\n2026年8月10日，美国东部时间上午11:22。\n\nQt集团近期一直在为Qt工具包开发多种AI集成，例如用于性能分析的QML分析器技能（支持代理式开发）。他们还开发了Qt AI编码助手以及Qt Creator集成开发环境中的AI代理。最新的AI应用是准备在Qt工具包中引入一个用于边缘AI推理的新模块。\n\nQt开发者正准备引入Qt Edge AI作为新的子模块，供开发者创建边缘AI应用。借助Qt工具包，这一过程将以AI运行时无关的方式进行，初期支持面向嵌入式设备，如NVIDIA Jetson/Thor、Qualcomm IQ和NXP i.MX95平台。\n\n最初的Qt EdgeAI实现描述在Qt代码审查工单中：“添加EdgeAI首个版本，聚焦视觉AI”。该提交添加了一个模块，提供C++ API，用于创建推理步骤流水线并运行机器视觉任务，如目标检测和分类。同时定义了一个接口，用于为步骤提供平台/运行时相关的实现。该API依赖QtMultimedia接收QVideoFrames，并使用私有QtMultimedia API进一步访问底层GstBuffer，以便将其馈送到推理流水线。\n\n最初的Qt EdgeAI子模块由Cursor AI代理共同编写。后续的代码审查工单添加了NXP NNStreamer后端插件，以及一个使用Qt EdgeAI进行人脸检测的示例应用。我们将拭目以待，看看EdgeAI在初期视觉AI焦点之外还会增加哪些功能。\n\nQt开发者邮件列表线程阐述了他们将该EdgeAI模块添加到Qt工具包武器库的计划。\n\nQt Creator 20 IDE发布，支持AI代理\nQt 6.12 Beta发布，Qt Quick 3D XR应用现可在2D AR眼镜上运行\nQt Creator 20 Beta扩展AI集成\nQt最新AI推动：让AI代理处理性能分析\nQt 6.11工具包发布，具备“与游戏引擎相同的3D能力”\nQt Creator 19 IDE发布，支持Minimap和内置MCP服务器（用于AI/LLM）\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动及其他主题。他还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nFFmpeg 9.0发布，带来更多Vulkan加速、动画WebP及更多AMD AMF功能\nLinux的Staging区域将拒绝LLM生成的补丁，除非是真正的安全修复\nLinux 7.3似乎将上游化FailFS\nCloudflare宣布开源Cloudflare OS作为AI“操作系统”\nGNOME Boxes准备提供大幅改进的虚拟化体验\nLinux在锁定模式下意外遗留了旧版I/O和内存处理程序\nLinux 7.2-rc6发布：“这个RC非常庞大”\n更多旧版Linux驱动面临移除，因AI/LLM编码代理产生噪音\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "8832d0c2c5b2e241c5433c7f72a5733a": {
+    "id": "8832d0c2c5b2e241c5433c7f72a5733a",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/intel-xeon-678x-windows-linux",
+    "title_en": "Intel Xeon 678X Windows 11 vs. Ubuntu 26.04 Performance With The HP Z4 G6i",
+    "summary_en": "HP recently launched their Z4 G6i workstation that I have been testing out the past few weeks. The HP Z4 G6i is powered by Granite Rapids WS with the review unit specifically being powered by the Intel Xeon 678X. As the unit shipped with Microsoft Windows 11 Pro and this being the first time I've had my hands on Granite Rapids WS, I took the opportunity to run some Windows 11 vs. Ubuntu 26.04 LTS performance benchmarks to see how the operating system performance compares for this 48 core / 96 th",
+    "pub_date": "Mon, 10 Aug 2026 10:35:23 -0400",
+    "title_zh": "Intel Xeon 678X Windows 11 vs. Ubuntu 26.04 性能对比：HP Z4 G6i 工作站实测",
+    "summary_zh": "HP 近期推出了 Z4 G6i 工作站，搭载 Intel Xeon 678X（Granite Rapids WS）处理器。Phoronix 对该设备进行了 Windows 11 Pro 与 Ubuntu 26.04 LTS 的性能对比测试，重点关注 48 核/96 线程处理器在两种操作系统下的表现。测试还涉及 NVIDIA RTX PRO 6000 Blackwell 显卡的默认驱动性能。结果显示，Ubuntu 26.04 在部分基准测试中表现优于 Windows 11，但具体数据将在后续文章中公布。",
+    "fulltext_zh": "Intel Xeon 678X Windows 11 vs. Ubuntu 26.04 性能对比：HP Z4 G6i 工作站实测 - Phoronix\n\nIntel Xeon 678X Windows 11 vs. Ubuntu 26.04 性能对比：HP Z4 G6i 工作站实测\n发布于 2026 年 8 月 10 日上午 10:35（美国东部时间）\n\nHP 最近推出了 Z4 G6i 工作站，我在过去几周内一直在测试这款产品。HP Z4 G6i 搭载了 Granite Rapids WS 处理器，本次评测样机具体配置为 Intel Xeon 678X。由于该设备预装了 Microsoft Windows 11 Pro，并且这是我首次接触 Granite Rapids WS 硬件，我借此机会进行了一些 Windows 11 与 Ubuntu 26.04 LTS 的性能基准测试，以比较这款 48 核 / 96 线程工作站处理器在不同操作系统下的性能表现。\n\nHP Z4 G6i 在过去几周的测试中表现良好，后续将发布相关评测和数篇基准测试文章。这款 HP 工作站配备了 Intel Xeon 678W GNR-WS 处理器、4 条 32GB DDR5-6400 内存、2TB SK Hynix NVMe 固态硬盘，以及 NVIDIA RTX PRO 6000 Blackwell 显卡。\n\nWindows 11 Pro 测试采用 HP 出厂预装配置，并安装了测试时所有可用的 Windows 更新。Ubuntu 26.04 LTS 则进行了全新安装，使用其 Linux 7.0 内核和其他默认软件组件。\n\n这次 Windows 与 Linux 的对比主要是出于好奇心，因为这是我首次接触 Granite Rapids WS 硬件。此外，我还使用各操作系统默认提供的驱动程序，对 NVIDIA RTX PRO 6000 Blackwell 进行了 Windows 与 Linux 的对比测试。关于这款 Intel Xeon 678X 在 Linux 下的其他基准测试，将在后续文章中陆续发布，因为我还会继续使用这款 HP Z4 G6i 工作站数周。感谢 HP 为 Phoronix 提供测试硬件。\n\nCachyOS 性能超越 Windows 11，在 AMD Ryzen AI 9 HX 470 上略优于 Ubuntu 和 Fedora\n\nUbuntu 26.04 LTS vs. Windows 11 vs. CachyOS 性能对比：一款 5399 美元笔记本电脑的测试\n\nRyzen AI 开发者平台：AMD 基于 Debian 的自家 Linux 发行版\n\n更新后的 Raspberry Pi OS（搭载 Linux 6.18 LTS）带来了一些性能提升\n\nUbuntu 26.10 amd64v3 软件包性能优势基准测试\n\nCachyOS Linux 下 BORE 调度器性能基准测试\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "5f9f9ebe0f4a47f6ace1c466622a45fa": {
+    "id": "5f9f9ebe0f4a47f6ace1c466622a45fa",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/slackel-mate-9-0-keeps-slackware-current-alive-for-32-bit-systems/",
+    "title_en": "Slackel MATE 9.0 Keeps Slackware Current Alive for 32-Bit Systems",
+    "summary_en": "Discover Slackel MATE 9.0, the perfect solution for keeping Slackware alive on 32-bit systems. Experience a modern desktop environment today.\nThe post Slackel MATE 9.0 Keeps Slackware Current Alive for 32-Bit Systems appeared first on Linux Today.",
+    "pub_date": "Mon, 10 Aug 2026 07:10:55 +0000",
+    "title_zh": "Slackel MATE 9.0 让 Slackware 在 32 位系统上保持活力",
+    "summary_zh": "Slackel MATE 9.0 发布，为 32 位系统提供持续更新的 Slackware 体验。该版本搭载 MATE 桌面环境，兼顾现代功能与轻量性能，是老旧硬件用户的理想选择。",
+    "fulltext_zh": "探索 Slackel MATE 9.0，这是让 Slackware 在 32 位系统上保持活力的完美解决方案。今天就体验现代桌面环境。\n\n该文章 Slackel MATE 9.0 Keeps Slackware Current Alive for 32-Bit Systems 首次出现在 Linux Today 上。"
+  },
+  "c14de0c16354025ca53ac91ef9110b83": {
+    "id": "c14de0c16354025ca53ac91ef9110b83",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/darkmoon-open-source-ai-pentesting-platform/",
+    "title_en": "DarkMoon: Open-source AI Pentesting Platform",
+    "summary_en": "Unleash the power of DarkMoon, an open-source AI pentesting platform that streamlines security testing and helps identify vulnerabilities in your systems efficiently.\nThe post DarkMoon: Open-source AI Pentesting Platform appeared first on Linux Today.",
+    "pub_date": "Mon, 10 Aug 2026 07:07:21 +0000",
+    "title_zh": "DarkMoon：开源AI渗透测试平台",
+    "summary_zh": "DarkMoon是一个开源的AI渗透测试平台，旨在简化安全测试流程，帮助用户高效识别系统中的漏洞。该平台利用人工智能技术，提供自动化的安全评估功能，适用于各类系统环境。本文介绍了DarkMoon的核心特性及其在安全测试中的应用价值。",
+    "fulltext_zh": "释放DarkMoon的力量，这是一个开源的AI渗透测试平台，能够简化安全测试流程，并帮助您高效识别系统中的漏洞。\n\n该文章最初发表于Linux Today。"
+  },
+  "46f79854f869b1dac8e3a2eded3937dc": {
+    "id": "46f79854f869b1dac8e3a2eded3937dc",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/archinstall-4-4-polishes-the-arch-linux-installation-experience/",
+    "title_en": "Archinstall 4.4 Polishes the Arch Linux Installation Experience",
+    "summary_en": "Learn about the latest features in Archinstall 4.4 that elevate the Arch Linux installation experience, providing a polished and efficient setup process.\nThe post Archinstall 4.4 Polishes the Arch Linux Installation Experience appeared first on Linux Today.",
+    "pub_date": "Mon, 10 Aug 2026 07:05:14 +0000",
+    "title_zh": "Archinstall 4.4 提升 Arch Linux 安装体验",
+    "summary_zh": "Archinstall 4.4 版本发布，旨在提升 Arch Linux 的安装体验，提供更完善、更高效的设置流程。该版本引入了多项新功能和改进，使用户能够更轻松地完成系统安装。",
+    "fulltext_zh": "了解 Archinstall 4.4 中的最新功能，这些功能提升了 Arch Linux 的安装体验，提供了完善且高效的设置流程。\n\n该文章 Archinstall 4.4 Polishes the Arch Linux Installation Experience 首次出现在 Linux Today 上。"
+  },
+  "ce49336b346adc9f744e7f156981c723": {
+    "id": "ce49336b346adc9f744e7f156981c723",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/rust-gets-a-commercial-network-with-microsoft-google-aws-and-openai-onboard/",
+    "title_en": "Rust Gets a Commercial Network with Microsoft, Google, AWS, and OpenAI Onboard",
+    "summary_en": "Learn about Rust's new commercial network featuring partnerships with Microsoft, Google, AWS, and OpenAI, driving innovation and growth in the tech landscape.\nThe post Rust Gets a Commercial Network with Microsoft, Google, AWS, and OpenAI Onboard appeared first on Linux Today.",
+    "pub_date": "Mon, 10 Aug 2026 07:02:20 +0000",
+    "title_zh": "Rust迎来商业网络，微软、谷歌、AWS和OpenAI加盟",
+    "summary_zh": "Rust编程语言近日宣布成立一个全新的商业网络，吸引了微软、谷歌、AWS和OpenAI等科技巨头加入。该网络旨在通过企业合作推动Rust生态系统的创新与增长，进一步巩固其在系统编程和基础设施领域的地位。此举标志着Rust从开源社区驱动向商业化发展迈出重要一步，有望加速其在云计算、人工智能等前沿领域的应用。",
+    "fulltext_zh": "了解Rust新成立的商业网络，该网络与微软、谷歌、AWS和OpenAI建立了合作伙伴关系，推动技术领域的创新与增长。\n\n该文章《Rust Gets a Commercial Network with Microsoft, Google, AWS, and OpenAI Onboard》首发于Linux Today。"
+  },
+  "c78fc4f36afb5a59e79f96bb4e5f24fd": {
+    "id": "c78fc4f36afb5a59e79f96bb4e5f24fd",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/linus-torvalds-announces-first-linux-kernel-7-2-release-candidate/",
+    "title_en": "Linus Torvalds Announces First Linux Kernel 7.2 Release Candidate",
+    "summary_en": "Linus Torvalds has unveiled the first release candidate for Linux Kernel 7.2. Explore the enhancements and what they mean for developers and users alike.\nThe post Linus Torvalds Announces First Linux Kernel 7.2 Release Candidate appeared first on Linux Today.",
+    "pub_date": "Mon, 10 Aug 2026 07:00:54 +0000",
+    "title_zh": "Linus Torvalds 宣布首个 Linux 内核 7.2 候选版本",
+    "summary_zh": "Linus Torvalds 发布了 Linux 内核 7.2 的首个候选版本（RC1），标志着这一重大版本进入测试阶段。该版本包含多项性能优化、硬件支持改进以及开发者工具更新，旨在提升系统稳定性和用户体验。本文概述了这些增强功能及其对开发者和用户的潜在影响。",
+    "fulltext_zh": "Linus Torvalds 已发布 Linux 内核 7.2 的首个候选版本。探索这些增强功能及其对开发者和用户的共同意义。\n\n该文章 Linus Torvalds 宣布首个 Linux 内核 7.2 候选版本 首次出现在 Linux Today 上。"
   }
 }

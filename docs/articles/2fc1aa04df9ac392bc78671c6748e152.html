@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：iDeal OS 2026.08.08 — Linux 中文速报</title>
+<title>CachyOS 为服务器版奠定基础 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>发行版发布：iDeal OS 2026.08.08</h1>
+  <h1>CachyOS 为服务器版奠定基础</h1>
 
-  <div class="article-summary">iDeal OS 是一款基于MX Linux的桌面发行版，注重隐私和安全。其最新版本2026.08.08（即4.4版）已发布，紧随MX Linux 25.2和Debian 13.6之后。此版本引入了官方iDeal OS软件仓库，所有系统和自定义应用均以原生.deb包形式通过APT管理，支持自动更新、系统整洁、安全验证和未来扩展。新内核Liquorix提升了交互响应性，降低了音频/视频制作延迟和游戏帧时间偏差。默认浏览器改为Waterfox，这是Firefox的分支，增强了隐私功能。</div>
+  <div class="article-summary">CachyOS 最新版本为即将推出的服务器版奠定了基础，CLI 安装器新增了实验性配置文件，同时其 GUI 包管理器 Shelly 进行了全面重写，采用 Rust 编写，性能更优。此外，新版本还引入了新的欢迎界面、列表/网格视图、AUR PKGBUILD 预览、系统托盘支持、手持设备检测改进以及 DNS 处理优化。用户可通过 Shelly 或终端轻松更新。</div>
 
-  <div class="article-body"><p>发行版发布：iDeal OS 2026.08.08</p><p>iDeal OS是一款基于MX Linux的桌面发行版，专注于隐私和安全，现已更新至版本2026.08.08。此版本将默认浏览器从Firefox更换为Waterfox，Waterfox是Firefox的一个分支，具有增强的隐私功能。</p><p>“2026.08.08 - iDeal OS 4.4。iDeal OS 4.4的发布是紧随MX Linux 25.2和Debian 13.6之后的一次重大升级。我们很高兴推出新的官方iDeal OS软件仓库。整个操作系统和所有自定义应用程序现在都通过APT以原生.deb包的形式进行维护，带来了明显的好处。自动更新——只需运行sudo apt upgrade即可获得最新功能和错误修复；系统整洁——所有内容都与传统的APT包管理器完美集成；安全验证——所有包均由iDeal OS研发团队进行加密签名；面向未来——应用程序和系统错误修复、配置文件、壁纸、主题、图标将随着时间的推移通过同一仓库发布。新的Liquorix内核为交互式系统提供了更好的响应性，实现了音频/视频制作的低延迟计算，并减少了游戏中的帧时间偏差。Waterfox是新的默认Web浏览器，它是Firefox的一个分支，具有增强的隐私功能。”</p><p>请访问项目页面以阅读完整的发布公告。</p><p>2026.08.08_iDeal_OS_Emerald_x64.iso</p><p>近期相关新闻和发布：</p><p>发行版发布：iDeal OS 2026.08.08</p><p>发行版发布：iDeal OS 2026.04.03</p><p>发行版发布：iDeal OS 2026.01.31</p><p>iDeal OS是一款基于MX Linux的发行版，默认启用了多种隐私和安全设置。隐私和安全是该项目的首要目标，提供无忧的在线浏览、购物、交易和银行业务，无需担心广告、跟踪、日志记录、漏洞、病毒或个人信息的不当披露。iDeal OS此前提供两个版本：“Emerald”和“Diamond”，但在2026年合并为单一产品，其中“Diamond”版本的额外功能现在仅向提供财务支持的用户开放。</p></div>
+  <div class="article-body"><p>CachyOS 为服务器版奠定基础</p><p>CLI 安装器的新实验性配置文件针对即将推出的服务器版，而 Shelly 则进行了全面重写。</p><p>无论你喜欢还是讨厌，滚动发布发行版已经在 Linux 桌面市场中占据了一席之地。它们提供了前沿的体验，如果维护得当，可以保持相当稳定，但如果处理不当，也会让用户吃尽苦头。</p><p>CachyOS 就是其中一种越来越受欢迎的选项。它提供了针对 CPU 优化的重建 Arch 软件包栈，以及为响应性调优的自定义内核，是一款性能出色的发行版。</p><p>你可能还记得去年年底，开发者曾预告了针对 NAS 设置和托管提供商的专用服务器版的计划。他们最新的发布向我们展示了部分工作进展，以及典型的发行版改进。</p><p>本次更新带来了许多新增内容，例如 Hyprland 的选项，用 lightdm-slick-greeter 替换了 SDDM，以及 COSMIC 引入了新功能。除了常规的 bug 修复和代码重构工作外，还新增了服务器版安装配置文件的实验性支持，这标志着新变体开发中的一个重要里程碑。</p><p>Shelly 在四月份成为 CachyOS 的默认 GUI 包管理器，取代了 Octopi，我们在使用后发现这是一个有前途的转变。在这次 CachyOS 发布中，Shelly 的 v3 迭代迎来了迄今为止最重大的变化。</p><p>它已从使用 Rust 编写，用原生二进制文件取代了托管运行时，启动更快，内存占用更少。</p><p>与之相伴的是首次运行时显示的新欢迎界面，以及用于浏览软件包的列表和网格视图，还有带有构建输出的 AUR PKGBUILD 预览。</p><p>新增了用于同步数据库、清理缓存和移除孤立软件包的页面。同样，其 CLI 版本现在可以在一个地方搜索仓库和 AUR，并在仓库、AUR、AppImage 和 Flatpak 中运行更新检查。</p><p>系统托盘小程序已移植到 Rust。新的标志将两个先前独立的步骤合并，同时启用自动更新检查和启动托盘图标。</p><p>然后是手持设备检测，目前基于主板名称模式匹配，支持保加利亚语本地化，并且不再因某些情况而出现问题。</p><p>最后，我们看到了应用，其 DNS 处理已重新设计，解决了一个导致基于速度测试的排名无法实际选择最快服务器的问题。</p><p>请查看发布公告博客，了解我们在此略过的较小更改。</p><p>两个版本都提供了全新的 ISO，&quot;完整 CPU 优化桌面体验&quot;版，或&quot;Steam Deck、ROG Ally、Legion Go 或 Legion Go S&quot;版。</p><p>无需重新安装任何东西即可获得此版本。只需从应用启动器中打开，进入&quot;页面&quot;。在这里，等待同步完成，或点击&quot;&quot;一次性从官方仓库、AUR 和 Flatpak 拉取更新。</p><p>如果你更喜欢终端，Shelly 的 CLI 可以通过一条命令完成同样的工作：</p><p>喜欢这次更新吗？支持独立的 Linux 新闻报道。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热爱开源软件、定制 PC 组装、赛车运动和探索这个世界无限可能的极客。</p><p>openJiuwen 的 Agent Swarm：当 AI 代理终于团队协作时</p><p>AI 不再能肆虐 Rust 的代码仓库</p><p>伊利诺伊州刚刚要求每个操作系统开始报告你孩子的年龄</p><p>Proxmox 虚拟环境正式在 ARM64 上运行，但你的树莓派尚不支持</p><p>多年无人触碰的 Linux 驱动，直到 AI 开始探索并将其移除</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 周刊通讯，你将学到……</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12916" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/cachyos-august-2026-release/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：iDeal OS 2026.08.08 — Linux 中文速报</title>
+<title>Linux 7.3 引入 KCFI 优化，惠及旧款 Intel CPU — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：iDeal OS 2026.08.08</h1>
+  <h1>Linux 7.3 引入 KCFI 优化，惠及旧款 Intel CPU</h1>
 
-  <div class="article-summary">iDeal OS 是一款基于MX Linux的桌面发行版，注重隐私和安全。其最新版本2026.08.08（即4.4版）已发布，紧随MX Linux 25.2和Debian 13.6之后。此版本引入了官方iDeal OS软件仓库，所有系统和自定义应用均以原生.deb包形式通过APT管理，支持自动更新、系统整洁、安全验证和未来扩展。新内核Liquorix提升了交互响应性，降低了音频/视频制作延迟和游戏帧时间偏差。默认浏览器改为Waterfox，这是Firefox的分支，增强了隐私功能。</div>
+  <div class="article-summary">Linux 7.3 合并窗口即将迎来一项内核控制流完整性（KCFI）优化，旨在提升不支持 CET/IBT 的旧款 Intel 处理器的性能。该优化由 Intel 工程师 Peter Zijlstra 提出，通过替换 KCFI 检查序列中的条件跳转指令，减少分支预测开销，从而提高吞吐量。Intel 工程师 Scott Constable 的基准测试显示，该补丁在旧平台上可带来显著性能提升。目前补丁已进入 tip 树，预计将在 Linux 7.3 合并窗口中被合并。</div>
 
-  <div class="article-body"><p>发行版发布：iDeal OS 2026.08.08</p><p>iDeal OS是一款基于MX Linux的桌面发行版，专注于隐私和安全，现已更新至版本2026.08.08。此版本将默认浏览器从Firefox更换为Waterfox，Waterfox是Firefox的一个分支，具有增强的隐私功能。</p><p>“2026.08.08 - iDeal OS 4.4。iDeal OS 4.4的发布是紧随MX Linux 25.2和Debian 13.6之后的一次重大升级。我们很高兴推出新的官方iDeal OS软件仓库。整个操作系统和所有自定义应用程序现在都通过APT以原生.deb包的形式进行维护，带来了明显的好处。自动更新——只需运行sudo apt upgrade即可获得最新功能和错误修复；系统整洁——所有内容都与传统的APT包管理器完美集成；安全验证——所有包均由iDeal OS研发团队进行加密签名；面向未来——应用程序和系统错误修复、配置文件、壁纸、主题、图标将随着时间的推移通过同一仓库发布。新的Liquorix内核为交互式系统提供了更好的响应性，实现了音频/视频制作的低延迟计算，并减少了游戏中的帧时间偏差。Waterfox是新的默认Web浏览器，它是Firefox的一个分支，具有增强的隐私功能。”</p><p>请访问项目页面以阅读完整的发布公告。</p><p>2026.08.08_iDeal_OS_Emerald_x64.iso</p><p>近期相关新闻和发布：</p><p>发行版发布：iDeal OS 2026.08.08</p><p>发行版发布：iDeal OS 2026.04.03</p><p>发行版发布：iDeal OS 2026.01.31</p><p>iDeal OS是一款基于MX Linux的发行版，默认启用了多种隐私和安全设置。隐私和安全是该项目的首要目标，提供无忧的在线浏览、购物、交易和银行业务，无需担心广告、跟踪、日志记录、漏洞、病毒或个人信息的不当披露。iDeal OS此前提供两个版本：“Emerald”和“Diamond”，但在2026年合并为单一产品，其中“Diamond”版本的额外功能现在仅向提供财务支持的用户开放。</p></div>
+  <div class="article-body"><p>Linux 7.3 引入 KCFI 优化，惠及旧款 Intel CPU - Phoronix</p><p>Linux 7.3 引入 KCFI 优化，惠及旧款 Intel CPU</p><p>2026年8月10日，美国东部时间下午1:26。</p><p>在即将到来的 Linux 7.3 合并窗口中，预计将合并一项内核控制流完整性（KCFI）改进，旨在惠及旧款 Intel 处理器。</p><p>Intel 的 Peter Zijlstra 为不支持 CET 的旧平台开发了一项 KCFI 改进。Peter 在待合并补丁中解释道：</p><p>“正如提交 85a2d4a890dc（&quot;x86,ibt: Use UDB instead of 0xEA&quot;）中所指出的，Jcc 应被视为不跳转，然而标准的 kCFI（ABI）会生成以下序列：</p><p>addl	-15(%r11), %r10d</p><p>1: cs call __x86_indirect_thunk_r11</p><p>（当与 -mretpoline-external-thunk 结合使用时）。</p><p>值得注意的是，这里的 Jcc 总是被跳转，导致吞吐量低于理想水平。在启动时将其替换为以下序列：</p><p>addl	-15(%r11), %r10d</p><p>cs call __x86_indirect_thunk_r11</p><p>这会跳转到测试指令中用作立即数字节的 UDB 指令。测试指令会破坏 eflags，但这无关紧要，因为 eflags 已经被前面的 addl 改变了。</p><p>Intel 建议在支持 IBT 的平台上使用 FineIBT 序列；旧平台仍被广泛使用，并会从这一优化中受益。”</p><p>FineIBT / CET 与间接分支跟踪（IBT）出现在 Intel 第11代酷睿“Tiger Lake”及更新的 CPU 中。</p><p>Intel 工程师 Scott Constable 在补丁的早期版本上运行了一些基准测试，以评估 CFI 优化的收益：</p><p>该补丁已进入 tip/tip.git 的 x86/core Git 分支。随着该代码现在位于 TIP 分支中，预计将在即将到来的 Linux 7.3 合并窗口中被提交。</p><p>开源 NVIDIA “Nova” 驱动为 Linux 7.3 带来更多功能</p><p>Linux 7.2-rc7 发布，又一个由 AI 驱动的疲惫周</p><p>Linux 7.2-rc7 的 HWMON 修复：“大部分修复了严重或高危漏洞”</p><p>Linux 7.3 中图形 TTM 内存管理将更加激进</p><p>Linux 7.2-rc7 修复了一个“恶劣”的竞态条件，该问题存在8年后导致释放后使用</p><p>Page Alloc Hogger 让您更好地在 Linux 上测试/调试内存行为</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过20,000篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>FFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 及更多 AMD AMF 功能</p><p>Linux 的 Staging 区域将拒绝 LLM 生成的补丁，除非是真正的安全修复</p><p>Linux 7.3 看起来将上游 FailFS</p><p>Cloudflare 宣布开源 Cloudflare OS 作为 AI“操作系统”</p><p>GNOME Boxes 准备提供大幅改进的虚拟化体验</p><p>Linux 意外在内核锁定模式下遗留了旧版 I/O 和内存处理程序</p><p>Linux 7.2-rc6 发布：“这个 RC 很大”</p><p>更多旧 Linux 驱动面临移除，原因是 AI/LLM 编码代理的噪音</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026，由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12916" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-KCFI-Optimization" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

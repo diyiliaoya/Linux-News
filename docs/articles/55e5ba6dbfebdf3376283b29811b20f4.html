@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：iDeal OS 2026.08.08 — Linux 中文速报</title>
+<title>Linux Mint 将自动删除旧内核版本 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>发行版发布：iDeal OS 2026.08.08</h1>
+  <h1>Linux Mint 将自动删除旧内核版本</h1>
 
-  <div class="article-summary">iDeal OS 是一款基于MX Linux的桌面发行版，注重隐私和安全。其最新版本2026.08.08（即4.4版）已发布，紧随MX Linux 25.2和Debian 13.6之后。此版本引入了官方iDeal OS软件仓库，所有系统和自定义应用均以原生.deb包形式通过APT管理，支持自动更新、系统整洁、安全验证和未来扩展。新内核Liquorix提升了交互响应性，降低了音频/视频制作延迟和游戏帧时间偏差。默认浏览器改为Waterfox，这是Firefox的分支，增强了隐私功能。</div>
+  <div class="article-summary">Linux Mint 宣布对其内核管理进行全面改革，现在将每周自动删除旧内核。内核管理从系统管理工具中移出，并按系列而非单个版本跟踪内核。用户可以选择跟踪哪些内核系列，以及每个系列中保留的旧内核数量。受保护的内核不会被删除，自定义内核也可标记为受保护。手动清理按钮可立即释放空间，且提供已删除内核的列表。此更改可能通过软件更新到达现有用户，或随 Linux Mint 23 发布。</div>
 
-  <div class="article-body"><p>发行版发布：iDeal OS 2026.08.08</p><p>iDeal OS是一款基于MX Linux的桌面发行版，专注于隐私和安全，现已更新至版本2026.08.08。此版本将默认浏览器从Firefox更换为Waterfox，Waterfox是Firefox的一个分支，具有增强的隐私功能。</p><p>“2026.08.08 - iDeal OS 4.4。iDeal OS 4.4的发布是紧随MX Linux 25.2和Debian 13.6之后的一次重大升级。我们很高兴推出新的官方iDeal OS软件仓库。整个操作系统和所有自定义应用程序现在都通过APT以原生.deb包的形式进行维护，带来了明显的好处。自动更新——只需运行sudo apt upgrade即可获得最新功能和错误修复；系统整洁——所有内容都与传统的APT包管理器完美集成；安全验证——所有包均由iDeal OS研发团队进行加密签名；面向未来——应用程序和系统错误修复、配置文件、壁纸、主题、图标将随着时间的推移通过同一仓库发布。新的Liquorix内核为交互式系统提供了更好的响应性，实现了音频/视频制作的低延迟计算，并减少了游戏中的帧时间偏差。Waterfox是新的默认Web浏览器，它是Firefox的一个分支，具有增强的隐私功能。”</p><p>请访问项目页面以阅读完整的发布公告。</p><p>2026.08.08_iDeal_OS_Emerald_x64.iso</p><p>近期相关新闻和发布：</p><p>发行版发布：iDeal OS 2026.08.08</p><p>发行版发布：iDeal OS 2026.04.03</p><p>发行版发布：iDeal OS 2026.01.31</p><p>iDeal OS是一款基于MX Linux的发行版，默认启用了多种隐私和安全设置。隐私和安全是该项目的首要目标，提供无忧的在线浏览、购物、交易和银行业务，无需担心广告、跟踪、日志记录、漏洞、病毒或个人信息的不当披露。iDeal OS此前提供两个版本：“Emerald”和“Diamond”，但在2026年合并为单一产品，其中“Diamond”版本的额外功能现在仅向提供财务支持的用户开放。</p></div>
+  <div class="article-body"><p>Linux Mint 宣布对其内核管理进行全面改革，现在将每周自动删除旧内核。</p><p>内核管理将从标准版和 LMDE 版本的系统管理工具中移出，现在按系列而非单个版本跟踪内核。</p><p>您可以选择跟踪哪些内核系列，以及系统在每个系列中应保留的旧内核数量（除了您当前启动的内核之外；它不会自拆台脚）。</p><p>受跟踪系列的内核更新将像以前一样出现在更新管理器中，但一个显著的变化是，您较旧的、未使用的内核版本将每周自动删除。</p><p>项目负责人 Clement Lefebvre 表示，手动“清理”按钮还可让您“立即释放空间”。一个历史按钮将使您能够轻松查看已删除的内核列表及其删除时间。</p><p>扩展的内核管理选项（图片：Linux Mint / OMG! Ubuntu）</p><p>如果您担心旧内核在后台被删除，不用担心：您有控制权。</p><p>单个内核可以标记为“受保护”。这使它们免于被删除，无论其他设置或条件如何。简而言之：要防止特定内核被删除，无论它是否被跟踪，您必须在更新管理器中将其标记为受保护。</p><p>从其他系列安装内核，例如 OEM、Azure、IBM、Real Time，将提示工具列出完整系列，并为您提供跟踪它的选项。跟踪会自动安装任何相关的元包和未来更新，因此值得这样做。</p><p>虽然您可能安装的自定义内核（例如来自随机 PPA 或 .deb）无法被正确“跟踪”，但您可以将它们标记为受保护，以防止它们在清理过程中被删除。但是，Linux Mint 的工具会警告您，您有责任实际更新它们。</p><p>删除未使用的内核释放空间</p><p>您可能会惊讶于 Mint 保留了多少内核……</p><p>如果您不太关注更新，您可能不知道发布和安装了多少内核更新——并且它们会并排保留安装。在 GRUB 引导加载程序中选择您的发行版的“高级选项”，以查看所有已安装且可引导的内核列表。</p><p>在我的一台 Linux Mint 22.3 安装中，我列出了 4 个不同的内核（见上图）以及它们各自的恢复模式。保留它们很有用，但并非严格必要——尤其是多个系列内修订版。</p><p>所有这些旧内核都占用空间，如果您从不使用或需要它们（因为当前内核运行良好），那么删除它们是回收数百兆字节空间的简单方法。但是，我建议您保留一个已知的备份内核，以防万一。</p><p>Mint 的博客文章中没有明确说明这些更改是否会作为软件更新提供给现有的 Linux Mint 22.3 和 LMDE 用户，还是随 Linux Mint 23“Alfa”（临时代号）一起发布，后者计划于今年年底发布。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12916" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/linux-mint-deletes-old-kernels-automatically" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

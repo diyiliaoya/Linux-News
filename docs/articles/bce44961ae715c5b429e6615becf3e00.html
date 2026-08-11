@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：iDeal OS 2026.08.08 — Linux 中文速报</title>
+<title>Fedora CoreOS 将默认启用 systemd-oomd 与 zRAM 交换空间 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：iDeal OS 2026.08.08</h1>
+  <h1>Fedora CoreOS 将默认启用 systemd-oomd 与 zRAM 交换空间</h1>
 
-  <div class="article-summary">iDeal OS 是一款基于MX Linux的桌面发行版，注重隐私和安全。其最新版本2026.08.08（即4.4版）已发布，紧随MX Linux 25.2和Debian 13.6之后。此版本引入了官方iDeal OS软件仓库，所有系统和自定义应用均以原生.deb包形式通过APT管理，支持自动更新、系统整洁、安全验证和未来扩展。新内核Liquorix提升了交互响应性，降低了音频/视频制作延迟和游戏帧时间偏差。默认浏览器改为Waterfox，这是Firefox的分支，增强了隐私功能。</div>
+  <div class="article-summary">Fedora CoreOS 作为面向容器的操作系统，将在 Fedora CoreOS 45 版本中默认启用 systemd-oomd 和 zRAM 交换空间。该变更已获得 Fedora 工程指导委员会（FESCo）的批准，使 CoreOS 与其他 Fedora 变体保持一致。此前因 Kubernetes 对节点交换空间的不兼容而推迟，现条件已成熟。此外，FESCo 本周还批准了 Fedora Atomic 改用 Anaconda WebUI 安装程序，以及为原子桌面提供基于 Web 的远程安装支持。</div>
 
-  <div class="article-body"><p>发行版发布：iDeal OS 2026.08.08</p><p>iDeal OS是一款基于MX Linux的桌面发行版，专注于隐私和安全，现已更新至版本2026.08.08。此版本将默认浏览器从Firefox更换为Waterfox，Waterfox是Firefox的一个分支，具有增强的隐私功能。</p><p>“2026.08.08 - iDeal OS 4.4。iDeal OS 4.4的发布是紧随MX Linux 25.2和Debian 13.6之后的一次重大升级。我们很高兴推出新的官方iDeal OS软件仓库。整个操作系统和所有自定义应用程序现在都通过APT以原生.deb包的形式进行维护，带来了明显的好处。自动更新——只需运行sudo apt upgrade即可获得最新功能和错误修复；系统整洁——所有内容都与传统的APT包管理器完美集成；安全验证——所有包均由iDeal OS研发团队进行加密签名；面向未来——应用程序和系统错误修复、配置文件、壁纸、主题、图标将随着时间的推移通过同一仓库发布。新的Liquorix内核为交互式系统提供了更好的响应性，实现了音频/视频制作的低延迟计算，并减少了游戏中的帧时间偏差。Waterfox是新的默认Web浏览器，它是Firefox的一个分支，具有增强的隐私功能。”</p><p>请访问项目页面以阅读完整的发布公告。</p><p>2026.08.08_iDeal_OS_Emerald_x64.iso</p><p>近期相关新闻和发布：</p><p>发行版发布：iDeal OS 2026.08.08</p><p>发行版发布：iDeal OS 2026.04.03</p><p>发行版发布：iDeal OS 2026.01.31</p><p>iDeal OS是一款基于MX Linux的发行版，默认启用了多种隐私和安全设置。隐私和安全是该项目的首要目标，提供无忧的在线浏览、购物、交易和银行业务，无需担心广告、跟踪、日志记录、漏洞、病毒或个人信息的不当披露。iDeal OS此前提供两个版本：“Emerald”和“Diamond”，但在2026年合并为单一产品，其中“Diamond”版本的额外功能现在仅向提供财务支持的用户开放。</p></div>
+  <div class="article-body"><p>Fedora CoreOS 将默认启用 systemd-oomd 与 zRAM 交换空间 - Phoronix</p><p>Fedora CoreOS 将默认启用 systemd-oomd 与 zRAM 交换空间</p><p>2026年8月10日，美国东部时间下午3:35。</p><p>Fedora 的 CoreOS 作为其面向容器优化的操作系统，将在 Fedora CoreOS 45 中默认启用 systemd-oomd。此外，zRAM 上的交换空间也将默认启用。</p><p>Fedora 工程指导委员会（FESCo）现已批准在 Fedora CoreOS F45 版本中启用 systemd-oomd 和 zRAM 交换空间。这使 CoreOS 与其他已使用这些默认设置的 Fedora 变体保持一致。Fedora CoreOS 此前因 Kubernetes 直到最近才兼容节点上的交换空间而推迟了该变更。</p><p>相关计划已在该变更的提案中详细说明，该提案现已获得一致通过。</p><p>FESCo 本周还批准了将 Fedora Atomic 切换到 Anaconda WebUI，而非基于 GTK 的传统 Anaconda 安装程序。此外，还有针对原子桌面的基于 Web 的远程安装支持。</p><p>x86_64 Shadow Stack 默认启用目标推迟至 Fedora 46</p><p>Fedora 正在制定利益冲突政策</p><p>Fedora 45 计划开始逐步淘汰内核中的加密用户空间 API</p><p>Fedora 45 原子桌面计划支持基于 Web 的远程安装</p><p>Stratis 存储 Anaconda 集成已获 Fedora 45 批准</p><p>面向机密计算的“轻量级”GRUB 替代包已获 Fedora 45 批准</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。他还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。</p><p>FFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 及更多 AMD AMF 功能</p><p>Linux 暂存区将拒绝 LLM 生成的补丁，但真正的安全修复除外</p><p>Linux 7.3 看起来将上游支持 FailFS</p><p>Cloudflare 宣布开源 Cloudflare OS 作为 AI“操作系统”</p><p>GNOME Boxes 准备提供大幅改进的虚拟化体验</p><p>Linux 意外在内核锁定模式下遗留了旧版 I/O 和内存处理程序</p><p>Linux 7.2-rc6 发布：“此 RC 巨大”</p><p>更多旧版 Linux 驱动因 AI/LLM 编码代理的噪音而面临移除</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12916" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Fedora-CoreOS-OOMD-zRAM-Swap" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

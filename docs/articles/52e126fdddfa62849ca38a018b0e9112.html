@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：iDeal OS 2026.08.08 — Linux 中文速报</title>
+<title>AI不再能在Rust代码仓库中肆意横行 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">软件应用</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>发行版发布：iDeal OS 2026.08.08</h1>
+  <h1>AI不再能在Rust代码仓库中肆意横行</h1>
 
-  <div class="article-summary">iDeal OS 是一款基于MX Linux的桌面发行版，注重隐私和安全。其最新版本2026.08.08（即4.4版）已发布，紧随MX Linux 25.2和Debian 13.6之后。此版本引入了官方iDeal OS软件仓库，所有系统和自定义应用均以原生.deb包形式通过APT管理，支持自动更新、系统整洁、安全验证和未来扩展。新内核Liquorix提升了交互响应性，降低了音频/视频制作延迟和游戏帧时间偏差。默认浏览器改为Waterfox，这是Firefox的分支，增强了隐私功能。</div>
+  <div class="article-summary">Rust项目采纳了新政策，限制AI编写代码，仅允许在狭窄且公开的实验范围内使用，且不适用于更广泛的Rust项目。政策要求AI生成的代码需事先与审查者安排，全面测试，并确保双方理解。同时，NetworkManager也采用了类似政策，要求作者对提交的代码负全责，禁止未经人工审查的大型机器生成合并请求。这些举措反映了开源社区对AI使用可能带来的维护负担和基础设施压力的担忧。</div>
 
-  <div class="article-body"><p>发行版发布：iDeal OS 2026.08.08</p><p>iDeal OS是一款基于MX Linux的桌面发行版，专注于隐私和安全，现已更新至版本2026.08.08。此版本将默认浏览器从Firefox更换为Waterfox，Waterfox是Firefox的一个分支，具有增强的隐私功能。</p><p>“2026.08.08 - iDeal OS 4.4。iDeal OS 4.4的发布是紧随MX Linux 25.2和Debian 13.6之后的一次重大升级。我们很高兴推出新的官方iDeal OS软件仓库。整个操作系统和所有自定义应用程序现在都通过APT以原生.deb包的形式进行维护，带来了明显的好处。自动更新——只需运行sudo apt upgrade即可获得最新功能和错误修复；系统整洁——所有内容都与传统的APT包管理器完美集成；安全验证——所有包均由iDeal OS研发团队进行加密签名；面向未来——应用程序和系统错误修复、配置文件、壁纸、主题、图标将随着时间的推移通过同一仓库发布。新的Liquorix内核为交互式系统提供了更好的响应性，实现了音频/视频制作的低延迟计算，并减少了游戏中的帧时间偏差。Waterfox是新的默认Web浏览器，它是Firefox的一个分支，具有增强的隐私功能。”</p><p>请访问项目页面以阅读完整的发布公告。</p><p>2026.08.08_iDeal_OS_Emerald_x64.iso</p><p>近期相关新闻和发布：</p><p>发行版发布：iDeal OS 2026.08.08</p><p>发行版发布：iDeal OS 2026.04.03</p><p>发行版发布：iDeal OS 2026.01.31</p><p>iDeal OS是一款基于MX Linux的发行版，默认启用了多种隐私和安全设置。隐私和安全是该项目的首要目标，提供无忧的在线浏览、购物、交易和银行业务，无需担心广告、跟踪、日志记录、漏洞、病毒或个人信息的不当披露。iDeal OS此前提供两个版本：“Emerald”和“Diamond”，但在2026年合并为单一产品，其中“Diamond”版本的额外功能现在仅向提供财务支持的用户开放。</p></div>
+  <div class="article-body"><p>AI不再能在Rust代码仓库中肆意横行</p><p>新的rust-lang/rust政策仅允许在狭窄且公开的实验范围内使用AI编写的代码，且不适用于更广泛的Rust项目。</p><p>Rust项目已实施了一项政策，鼓励人们使用LLM来分析和思考代码，而非编写代码。</p><p>就目前而言，该政策仅涵盖Rust的核心仓库。它规定了诸多关于受限内容、允许内容以及一个熔断机制的规则，该熔断机制会在六周窗口期内AI编写的合并请求超过所有合并请求的一半时暂停此类合并。</p><p>需要说明的是，核心仓库托管了整个语言的编译器和标准库。每个Rust程序都依赖于这里的代码，这使得该仓库成为一个非常重要的审核对象。</p><p>他们以这种方式禁止LLM使用并不令人意外。</p><p>LLM不能以你的名义编写评论、问题或PR描述。文档、安全评论和编译器诊断信息也都在禁止之列。LLM审查也永远不能替代人工审查，也不能替代你在发布前对自己的代码进行的审查。</p><p>允许的是私人使用。向LLM询问代码库相关问题无需披露，私下审查自己的代码、为自己总结PR或使用LLM构建个人开发工具也无需披露。</p><p>除此之外，还有一些处于灰色地带的事项。机器翻译、使用LLM进行的琐碎修复以及自我验证的漏洞查找都属于此类，每项都需要披露。</p><p>AI编写的代码受到最严格的对待。它必须事先与审查者安排，不太可能引入破坏Rust安全保证的漏洞，经过全面测试，并且双方都理解后才能获得新的“AI实验”标签。</p><p>撰写原始政策（项目现已采纳）的开发者总结道：“这不是故事的结局。该政策的目标之一是帮助我们收集数据：人们是否在用LLM做有趣且有用的事情？他们是否在学习？他们是否在做出重复贡献？这些问题的答案将帮助我们确定政策未来的变化。”</p><p>其他地方也有类似举措</p><p>NetworkManager（大多数主流Linux发行版的默认网络守护进程）也采纳了自己的AI编码助手政策，最近合并了一项变更。</p><p>作者对其提交的代码负100%的责任。不要发送你无法解释的补丁，也不要发送你未自行构建和测试的补丁。自己编写提交信息和合并请求描述。这些内容解释了为什么你要进行更改，这是工具无法知道的部分。自己回应审查评论。如果你无法与审查者讨论自己的补丁，它将不会被合并。</p><p>法律部分的所有内容均适用。你是证明贡献可以在LGPL-2.1-or-later下发布的人。工具无法为你证明这一点。</p><p>未经人工逐行审查的大型机器生成合并请求将被关闭。</p><p>Red Hat的开发者编写了该变更，并在维护者批准后于8月7日合并。如果你阅读了上述内容，你会看到NetworkManager的版本比Rust的分层系统简单得多。目前，它更接近我们已经在Gentoo Linux中看到的“作者负责”方法。</p><p>我们不断看到此类举措。例如，Codeberg的成员投票禁止主要由AI生成代码构建的项目，理由是服务器压力和硬件成本上升。</p><p>我们一次又一次地看到更多证据表明，如果不加以控制，AI的使用会迅速降低以维护为重点的工作和基础设施的质量。一如既往，开源生态系统将继续根据AI的使用情况而演变。</p><p>喜欢这次更新吗？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无需承诺</p><p>一个热爱开源软件和定制PC的极客</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12916" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/rust-code-repo-ai-policy/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
