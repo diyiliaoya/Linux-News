@@ -6444,5 +6444,159 @@
     "title_zh": "Linus Torvalds 宣布首个 Linux 内核 7.2 候选版本",
     "summary_zh": "Linus Torvalds 发布了 Linux 内核 7.2 的首个候选版本（RC1），标志着这一重大版本进入测试阶段。该版本包含多项性能优化、硬件支持改进以及开发者工具更新，旨在提升系统稳定性和用户体验。本文概述了这些增强功能及其对开发者和用户的潜在影响。",
     "fulltext_zh": "Linus Torvalds 已发布 Linux 内核 7.2 的首个候选版本。探索这些增强功能及其对开发者和用户的共同意义。\n\n该文章 Linus Torvalds 宣布首个 Linux 内核 7.2 候选版本 首次出现在 Linux Today 上。"
+  },
+  "855e702c523eb227afa122931403fc5e": {
+    "id": "855e702c523eb227afa122931403fc5e",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/gnome-51-search-redesign",
+    "title_en": "GNOME Shell search redesign use a floating overlay",
+    "summary_en": "The next version of GNOME Shell, out in September, is &#8216;likely&#8217; to include a redesigned search experience. Currently, when you start a search from the GNOME Shell overview, a dedicated search results screen replaces the one you&#8217;re looking at, i.e., the workspace row and dash (aka dock). GNOME&#8217;s design is predicated around a &#8216;semantic&#8217; model, where elements visibly enter and exit from a specific place, so users know how one screen relates to the next. For search",
+    "pub_date": "Tue, 11 Aug 2026 23:33:46 +0000",
+    "title_zh": "GNOME Shell 搜索重新设计采用浮动覆盖层",
+    "summary_zh": "GNOME Shell 的下一个版本（GNOME 51）预计将于9月发布，其搜索体验将迎来重大改进。目前，从概览启动搜索会切换到独立的搜索结果屏幕，而新设计将搜索结果以浮动覆盖层的形式从搜索框展开，覆盖在工作区或应用网格上方，避免切换视图。该设计已通过合并请求实现，并获得了开发者与设计师的积极反馈，但因讨论延迟，可能仍有望赶上GNOME 51的发布。此外，GNOME Shell 还有其他设计改进计划，如直接编辑、简化日历、马赛克窗口管理等。",
+    "fulltext_zh": "GNOME 51 可能会为 Shell 带来浮动搜索覆盖层\n\nGNOME Shell 的下一个版本将于9月发布，它“很可能”包含重新设计的搜索体验。\n\n目前，当你在 GNOME Shell 概览中开始搜索时，一个专用的搜索结果屏幕会替换你正在查看的界面，即工作区行和停靠栏（即 dock）。\n\nGNOME 的设计基于“语义”模型，元素会从特定位置可见地进入和退出，以便用户了解一个屏幕与下一个屏幕的关系。\n\n对于搜索，结果将出现在一个“从搜索框弹出”的覆盖层中，浮动在工作区概览或应用网格上方。这个想法已在 GNOME 设计模型中探索过（见下面的动画演示）。\n\n一个开放的合并请求已提交，旨在将理想化的“shell 搜索”体验变为现实。\n\n动画：Jakub Steiner\n\n根据上面的动画模型，该合并请求将 GNOME Shell 的搜索体验重新设计为浮动覆盖层，该覆盖层明确源自搜索字段，但覆盖在概览（工作区）或应用网格上方，而不是像现在这样“切换到单独的视图”。\n\n该代码引发了 GNOME 贡献者和设计师的大量讨论，他们一直在帮助测试，并提供反馈和代码来完善它，以便其能够落地。\n\nCassidy James Blaede（曾任职于 System76）也参与了讨论，称其“看起来很棒”。长期担任 GNOME 设计团队成员的 Sam Hewitt 将覆盖层搜索描述为“期待已久”。\n\n但讨论似乎推迟了合并请求的接受，使其未能赶上 GNOME 的开发截止日期。一个冻结请求已开启，如果得到关键人物的热情支持，它仍有可能在9月的 GNOME 51 发布中准备就绪。\n\n在一篇题为“GNOME Shell 设计梦想”的博客文章中，讨论了这一设计变更及其他设计变更，GNOME 设计师 Tobias Bernard 显得充满希望，提到它“很可能”会在 GNOME 51 中发布。\n\n如果确实如此，它将进入 Ubuntu 26.10。\n\nGNOME Shell 可能会看到更多设计变更\n\nBernard 建议支持“更丰富的内容和操作类型”，类似于其他桌面启动器和工具（如 macOS 上的 Spotlight）。搜索已经可扩展——Ubuntu 26.04 添加了 Snap Store 应用匹配和网络搜索快捷方式——因此存在扩展空间。\n\nGNOME Shell“愿望清单”上的其他设计变更包括可直接编辑的快捷方式、更简单的日历小程序、“马赛克”风格的窗口管理、透明顶栏、动态电池图标以及不那么单调的登录屏幕。\n\n如果你有技能（不是设计技能）来实现更多这些想法，Bernard 的帖子提到，现在比以往任何时候都更容易在 GNOME Shell 上进行开发。要参与并提供帮助，请加入 Matrix 上的 #gnome-design 房间。"
+  },
+  "3a0b2a53d51b44431a06a4635fdaa2bc": {
+    "id": "3a0b2a53d51b44431a06a4635fdaa2bc",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/chatgpt-desktop-app-linux-preview",
+    "title_en": "ChatGPT desktop app is now available for Linux (in preview)",
+    "summary_en": "OpenAI has announced a preview release of the official ChatGPT Desktop app for Linux. Compared to using ChatGPT in a browser tab, the GUI desktop app can run Codex in your local repos, hook into and control other apps via extensions, handle ChatGPT Work-related tasks and probe your local files without you having to upload things elsewhere. In an email, OpenAI said that &#8216;Linux has been one of the most-requested platforms&#8217; for its desktop app, and with this launch it&#8217;s finally av",
+    "pub_date": "Tue, 11 Aug 2026 19:33:19 +0000",
+    "title_zh": "ChatGPT 桌面应用现已推出 Linux 版本（预览版）",
+    "summary_zh": "OpenAI 正式发布了 ChatGPT 桌面应用的 Linux 预览版，支持 Ubuntu、Debian 和 Fedora。该应用集成了 ChatGPT、ChatGPT Work、Codex 及内置浏览器，可在本地仓库运行 Codex、控制其他应用并访问本地文件。OpenAI 表示 Linux 是用户最常请求的平台之一，此次发布后，ChatGPT 桌面应用已覆盖所有主流操作系统。目前为公开预览版，可能存在缺陷，不建议用于关键任务。",
+    "fulltext_zh": "ChatGPT 桌面应用现已推出 Linux 版本（预览版） - OMG! Ubuntu\n\n官方 ChatGPT 桌面应用的 Linux 预览版已发布。\n\n与在浏览器标签页中使用 ChatGPT 相比，这款 GUI 桌面应用可以在你的本地仓库中运行 Codex，通过扩展连接并控制其他应用，处理 ChatGPT 工作相关任务，并探查你的本地文件，而无需将内容上传到其他地方。\n\nOpenAI 在一封电子邮件中表示，“Linux 一直是其桌面应用最常被请求的平台之一”，而随着此次发布，该应用终于覆盖了所有主要操作系统。\n\n这款新的“超级应用”功能强大\n\nChatGPT 桌面应用 Linux 版加入了 Anthropic 的 Claude 桌面应用 Linux 版（后者于上个月进入测试阶段）。\n\n你之前肯定见过大量非官方的 ChatGPT 包装器，而且通过 Codex CLI 已经可以访问命令行。\n\n此次发布的是 OpenAI 官方版本的（某种程度上）全新“超级应用”，它结合了 ChatGPT、ChatGPT Work、Codex，甚至还内置了网页浏览器。\n\n下载适用于 Linux 的 ChatGPT\n\n可从所有主流网页浏览器获取（只要它们还存在）\n\n你可以下载适用于 Ubuntu 的 ChatGPT Linux 应用，提供 64 位 Intel/AMD 或 Arm64 的 .deb 安装包。OpenAI 表示，该应用已在 Ubuntu 24.04 LTS 和 Ubuntu 26.04 LTS 以及 Debian 13 上测试通过。Fedora 用户可使用 RPM 构建版本。\n\n安装 .deb 包后，系统会添加 OpenAI 的软件源。未来的更新将通过 apt 与其他软件更新一起安装。\n\n显然，ChatGPT 是闭源软件，虽然免费下载和使用（需要免费 OpenAI 账户），但某些功能需要付费套餐才能访问。\n\n另外请注意，这目前是公开预览版。可能存在缺陷，功能集成可能无法可靠运行，因此不要将其用于任何关键任务。"
+  },
+  "eec670e822dc0373462822fc8f6866b5": {
+    "id": "eec670e822dc0373462822fc8f6866b5",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/xodus-xbox-gamepass-linux/",
+    "title_en": "These Open Source Devs Are Reverse-Engineering Xbox Game Pass for Linux",
+    "summary_en": "They have already cracked Xbox game downloads, and macOS support is also being worked on.",
+    "pub_date": "Tue, 11 Aug 2026 17:28:55 GMT",
+    "title_zh": "这些开源开发者正在为Linux逆向工程Xbox Game Pass",
+    "summary_zh": "一个名为Xodus的开源项目正在逆向工程Xbox Game Pass，旨在让Linux用户无需云流媒体即可运行Xbox PC游戏。项目负责人Paweł在Reddit上确认，Xbox认证和游戏下载等最困难的部分已经实现。该项目已获得广泛关注，但开发者提醒仍处于早期阶段，距离可用版本还有数月。若成功，将填补Linux与Windows游戏体验之间的最后空白。",
+    "fulltext_zh": "这些开源开发者正在为Linux逆向工程Xbox Game Pass\n这些开源开发者正在为Linux逆向工程Xbox Game Pass\n他们已经破解了Xbox游戏下载，macOS支持也在开发中。\nXbox Game Pass在Linux上从未真正良好运行过，除了延迟严重的云流媒体，但一个名为Xodus的开源项目正试图改变这一现状。\n根据Reddit上的一个帖子，Xodus的项目负责人Paweł（网名）确认，在Linux上运行这些游戏最困难的部分——Xbox认证和游戏下载——已经可以工作了。\n该项目正试图逆向工程Xbox的整个认证、许可和分发流程，以便在Linux上运行Xbox PC游戏。\nXodus自称是“向Linux的伟大游戏迁移”，同时提醒人们它未经微软认可，使用它存在风险。要知道，现代Xbox PC游戏运行在微软的GDK（游戏开发套件）上，并以加密的MSIXVC格式分发。在Linux上运行游戏意味着要同时处理这两者。\n该项目的GitHub页面目前包含多个仓库，包括用Rust编写的主客户端、一个用于读取MSIXVC的fork库，以及xgameruntime——一个为Wine构建的GDK开源实现。另一个仓库则记录了该DLL的内部工作原理。\n此外还有由Xodus团队维护的fork版本，包含自定义调整，以及从OpenXbox fork出来的Xbox认证库。\n目前还没有可供试玩的二进制文件；仍有大量工作要做。Xodus的可用版本仍需数月时间。\n开发者们感到惊讶\n得益于Reddit上的回复，该项目获得了一波媒体报道，这让开发者们措手不及。在Digital Foundry报道后，Paweł在项目的Discord服务器上写道：“哇，这真是疯了。”\n尽管最初的报道似乎来自VideoCardz.com，但许多媒体都弄错了一个细节。将Xodus描述为Heroic Games Launcher团队的项目是不正确的，因为Paweł是唯一一位同时参与过Heroic Games Launcher的Xodus贡献者，而非整个团队。\n另一位开发者（一直在追踪这波意外报道）指出，其中一篇文章对Xodus的评价相当尖刻，而另一位开发者（olivi-r）则分享了一些重要的开发进展。\n“最近几天，xgameruntime方面的进展相当快，XTaskQueue几乎已经实现，还有一些模式和怪癖需要解决。\n目前正在修复XUser，因为签名生成似乎有点问题😬\n还需要将票据从xodus加载到XUser中，我一直硬编码自己的票据用于测试，还不确定我们是采用stdio代理还是直接在Wine中实现IPC。\n如果Xodus成功，它将填补Linux和Windows游戏体验之间的最后一大空白。Steam、GOG和Epic Games上的游戏库已经可以通过Proton和Heroic良好运行，但Xbox PC和Game Pass游戏此前一直局限于Windows或延迟严重的云流媒体。\n如果你问我，这是微软让Xodus的工作变得更容易的最佳时机，类似于Valve在上游处理Wine开发的方式。这样，整个生态系统都能受益，而不仅仅是Steam。\n如果Xbox决定帮助这个项目，他们确实有很多途径可以探索……\n喜欢这次更新吗？支持独立的Linux新闻报道\nIt's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。\n一次付费，永久享受\n任意金额，无需承诺\n一个热爱开源软件、定制PC组装、赛车运动并探索这个世界无限可能的极客。\nLinux Mint预告了一项Fedora多年前就搞定的内核清理技巧\nCachyOS正在为服务器版奠定基础\nopenJiuwen的Agent Swarm：当AI代理终于能团队协作时\nAI不再能肆意破坏Rust的代码仓库\n伊利诺伊州要求所有操作系统开始报告你孩子的年龄\n成为更好的Linux用户\n订阅FOSS每周通讯，"
+  },
+  "93f1031a8950aa66f6d3bc1537c09b6c": {
+    "id": "93f1031a8950aa66f6d3bc1537c09b6c",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/linux-mint-kernel-removal-feature/",
+    "title_en": "Linux Mint Teases A Kernel Cleanup Trick That Fedora Figured Out Years Ago",
+    "summary_en": "The work-in-progress feature would clear out old, unused kernels automatically every week.",
+    "pub_date": "Tue, 11 Aug 2026 10:41:46 GMT",
+    "title_zh": "Linux Mint 预告内核清理技巧，Fedora 多年前已实现",
+    "summary_zh": "Linux Mint 在七月更新中预告了一项新功能，旨在自动清理旧内核。该功能将内核管理从更新管理器移至系统管理工具，允许用户按系列分组管理内核，并设置保留数量，每周自动清理。Fedora 早已通过 DNF 包管理器默认实现类似功能，仅保留最近三个内核。Mint 的新方案提供更多手动控制，但尚未正式发布。此外，Mint 22.3 将默认使用 Wayland，Cinnamon 桌面将同时支持 X11 和 Wayland。",
+    "fulltext_zh": "Linux Mint 预告内核清理技巧，Fedora 多年前已实现\n\n这项正在开发中的功能将每周自动清除旧的和未使用的内核。\n\nLinux Mint 项目定期发布月度新闻，让我们了解开发人员正在做什么以及整个项目的方向。\n\n他们的七月更新向我们展示了该发行版未来打算如何处理内核，将整个工作从更新管理器中移出，并转移到完全不同的工具中。\n\n来源：Linux Mint 博客\n\n是，也不是。内核管理并不新鲜，过去更新管理器允许用户查看和删除单个内核，但该功能已被移除。\n\n新的实现位于“系统管理”工具中，并且无论你使用的是 Linux Mint 还是 LMDE，它的行为方式都是一样的。\n\n不再逐个跟踪单个版本，系统管理中的新“内核”页面将多个内核版本按系列分组。\n\n设置该工具是一次性选择，你告诉它哪些内核系列对你重要，以及每个系列要保留多深的回退数量。\n\n之后所有下游操作都会自动运行。你关注的系列会像往常一样通过更新管理器持续更新，而超出你设定限制的任何内容都会在每周的定时清理中被删除。\n\n手动清理也是可能的，适用于你想快速释放一些空间以容纳其他内容的时候。单个内核也可以标记为“保留”，这样无论其系列是否被跟踪或有多旧，都不会被删除。\n\n在你亲自去系统上寻找这个功能之前，要知道它尚未上线。Linux Mint 项目负责人克莱门特·勒菲弗表示，这只是下一个 Mint 版本功能的预览。\n\nFedora 已经有了这个功能\n\n我理解 Linux Mint 必须重新实现他们的解决方案，但 Fedora 已经解决这个问题多年了。其 DNF 包管理器一直默认这样做。\n\n其背后的设置称为“installonly_limit”。任何时候只保留最近三个内核构建。每当通过常规更新引入新内核时，DNF 会在同一事务中删除超出该限制的任何内容。\n\n与 Mint 的每周清理不同，它背后没有单独的定时任务。它只在您实际更新时运行，因此通过 DNF 正常流程之外安装的内核将保持不变。\n\n这两种方法最终以不同的方式解决了类似的问题。Fedora 的是一种固定的、始终开启的限制，直接与更新事务绑定。而 Mint 的新实现一旦发布，将为您提供更直接的控制。\n\n内核管理并不是 Mint 七月帖子中唯一的内容。该团队还为 Linux Mint 22.3 发布了新的默认壁纸，这次基于 Wayland 支持，在 Cinnamon 中运行，在 Wayland 和 X11 上表现相同。\n\n有关完整详情，包括新的环境变量页面和面板修复，请参阅官方公告。\n\nLinux Mint 现在认为 Wayland 足够稳定，可以在下一个版本中包含，该版本预计在圣诞节发布。\n\nLinux Mint 现在认为 Wayland 稳定\n\n从 Mint 的下一个版本开始，Cinnamon 将完全支持 X11 和 Wayland 会话，该版本预计在圣诞节发布。\n\n喜欢这次更新吗？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无需承诺\n\n一个热爱开源软件、定制 PC 组装、赛车运动并探索这个世界无限可能的技术爱好者。\n\n这些开源开发者正在逆向工程 Xbox Game Pass 以用于 Linux\n\nCachyOS 正在为服务器版奠定基础\n\nopenJiuwen 的 Agent Swarm：当 AI 代理最终作为一个团队工作\n\nAI 不再能肆虐 Rust 的代码仓库\n\n伊利诺伊州刚刚告诉每个操作系统……"
+  },
+  "96364c72e48353e1a06614e6874d7ff2": {
+    "id": "96364c72e48353e1a06614e6874d7ff2",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Redox-OS-July-2026",
+    "title_en": "Redox OS Enjoys installer Improvements, Performance Enhancements",
+    "summary_en": "A new blog post out today from the Redox OS crew highlights all of the interesting improvements made to this Rust-based, open-source operating system over the course of July...",
+    "pub_date": "Tue, 11 Aug 2026 20:47:55 -0400",
+    "title_zh": "Redox OS 获得安装程序改进与性能增强",
+    "summary_zh": "Redox OS 团队发布七月进展报告，展示了这款基于 Rust 的开源操作系统在多个方面的改进。性能方面，EEVDF 调度器支持得到完善，CPU 上下文切换成本降低，合成基准测试从约 1.15 微秒降至约 250 纳秒。安装程序获得 GUI 改进，支持多种安装模式和镜像快照创建。此外，更多用户空间软件（如 uutils 的 grep 和 sed）已移植到 Redox OS，内核和驱动程序也持续增强。",
+    "fulltext_zh": "Redox OS 获得安装程序改进与性能增强 - Phoronix\nRedox OS 获得安装程序改进与性能增强\n发布于 2026 年 8 月 11 日晚上 8:47（美国东部时间）。\n\n今天，Redox OS 团队发布了一篇新博客文章，重点介绍了这款基于 Rust 的开源操作系统在七月份所做的所有有趣改进。\n\nRedox OS 继续完善其 EEVDF 调度器支持，并降低 CPU 上下文切换的成本，同时改进扩展性。Redox Summer of Code 开发者 Akshit Gaur 通过最新工作，将合成基准测试的时间从约 1.15 微秒降低到约 250 纳秒。最终，当这项工作完成时，将大大提升 Redox OS 的性能能力。\n\nRedox OS 还在改进其基于 GUI 的安装程序，以支持不同的安装模式、镜像快照创建和其他功能。\n\n此外，Redox OS 继续将更多用户空间软件移植到系统中。uutils 的 grep 和 sed 实现现在可以在 Redox 上运行，各种应用程序也是如此。\n\nRedox OS 还进行了各种内核改进、持续的驱动程序增强和其他系统改进。\n\n关于 Redox OS 近期所有这些重大改进的更多细节，请参阅他们的七月亮点报告。\n\nLinux Mint 改进内核管理与系统级环境变量设置\nCachyOS 2026 年 8 月版本为即将推出的服务器版做准备\nAerynOS 发布三个月来的首个开发更新和新 ISO\nHaiku 合并 NVMM 以提供初步虚拟化支持，但尚未完全正常工作\nRedox OS 为 Orbital 桌面获取 GTK3 后端、分数缩放和 USB 游戏手柄支持\nOpenMandriva GitHub 遭到破坏，恶意软件包推送企图破坏\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他。\n\nFFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 和更多 AMD AMF 支持\nLinux 的暂存区将拒绝 LLM 生成的补丁，除非是真正的安全修复\nLinux 7.3 看起来将上游支持 FailFS\nCloudflare 宣布开源 Cloudflare OS 作为 AI“操作系统”\nGNOME Boxes 准备提供大幅改进的虚拟化体验\nLinux 意外在内核锁定模式下遗留了传统 I/O 和内存处理程序\nWine 11.15 发布，包含 Wayland 修复和针对 20 年历史的 MSXML3 错误的修复\n更多旧版 Linux 驱动程序因 AI/LLM 编码代理的噪音而面临移除\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "18cf576c2d36e7f3435226aac3486d36": {
+    "id": "18cf576c2d36e7f3435226aac3486d36",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Intel-CPU-Microcode-20260811",
+    "title_en": "Intel CPU Microcode 20260811 Release Fixes Eight Security Issues",
+    "summary_en": "Intel today published their 20260811 CPU microcode updates to fix a variety of issues for existing processors, including shipping the first new microcode images for Bartlett Lake and Wildcat Lake. The new microcode updates stretch back to Intel Core Gen10 processors...",
+    "pub_date": "Tue, 11 Aug 2026 15:26:09 -0400",
+    "title_zh": "Intel CPU 微码 20260811 版本修复八个安全问题",
+    "summary_zh": "Intel 于 2026 年 8 月 11 日发布了 20260811 CPU 微码更新，修复了现有处理器的多个问题，包括首次为 Bartlett Lake 和 Wildcat Lake 提供新微码镜像，更新覆盖至 Intel Core Gen10 处理器。本次更新共解决八个安全问题，涉及 Xeon 6、Core Ultra 等系列，包括权限提升、信息泄露、拒绝服务等漏洞。此外，还修复了若干功能性问题。",
+    "fulltext_zh": "Intel CPU 微码 20260811 版本修复八个安全问题 - Phoronix\nIntel CPU 微码 20260811 版本修复八个安全问题\n2026 年 8 月 11 日下午 03:26（美国东部时间）\n\nIntel 今天发布了 20260811 CPU 微码更新，以修复现有处理器的各种问题，包括首次为 Bartlett Lake 和 Wildcat Lake 提供新的微码镜像。新的微码更新可追溯至 Intel Core Gen10 处理器。\n\n今天的 Intel 20260811 CPU 微码更新共解决了八个安全问题。INTEL-SA-01379 是一个高等级的权限提升漏洞，涉及 Intel TDX 和 Xeon 6 处理器。\n\nINTEL-SA-01404 是 Xeon 6 CPU 与 Intel TDX 相关的信息泄露漏洞。\n\nINTEL-SA-01423 是 Intel 处理器的信息泄露漏洞，涉及 Ring 0 瞬态执行期间错误数据转发的加载值注入问题。该漏洞可追溯至第十代 Intel Core CPU。\n\nINTEL-SA-01428 是一个影响所有 Intel Core Ultra CPU 以及 Xeon 6 处理器的权限提升漏洞。\n\nINTEL-SA-01435 是 Xeon 6 处理器因 Ring 3 中不当访问控制导致的权限提升漏洞。\n\nINTEL-SA-01441 是 Core Ultra Series 2 和 Core Ultra Series 3 处理器的拒绝服务漏洞。\n\nINTEL-SA-01442 是 Intel Xeon 处理器的权限提升漏洞，原因是某些固件中始终不正确的控制流，以及与之相关的第二个 CVE（不当输入验证）。\n\nINTEL-SA-01443 是第三代 Xeon Scalable 处理器因硬件逻辑竞争条件导致的拒绝服务漏洞。\n\n除了这八个安全漏洞之外，本月的 Intel CPU 微码更新还修复了各种功能性问题。\n\n有关今天 Intel CPU 微码 20260811 版本的更多详情，请参阅：\n\nMesa 26.3 Intel 驱动代码为较新 GPU 启用大型 GRF 模式\nLinux 7.3 将更好地处理 Intel 混合 CPU 上的集群负载均衡\nIntel QATlib 26.08 发布，支持 Gen6 设备和 2MB 大页\nIntel 在 Meteor Lake 及更新平台的 Linux 驱动上推进 HDMI 2.1 FRL 支持\nUSB4STREAM 添加忙轮询选项，以增加 CPU 周期为代价降低延迟\nLinux 将避免混淆带有 DEC 的较新 Intel CPU 的处理器固件\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nFFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 和 AMD AMF\nLinux 暂存区将拒绝 LLM 生成的补丁，除非是真正的安全修复\nLinux 7.3 看起来将上游化 FailFS\nCloudflare 宣布开源 Cloudflare OS 作为 AI“操作系统”\nGNOME Boxes 准备提供大幅改进的虚拟化体验\nLinux 在内核锁定模式下意外遗留了旧版 I/O 和内存处理程序\nWine 11.15 发布，包含 Wayland 修复和 20 年历史的 MSXML3 错误修复\n更多旧版 Linux 驱动因 AI/LLM 编码代理的噪音而面临移除\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "61fba072e0ebac32cae3b59ad93245bb": {
+    "id": "61fba072e0ebac32cae3b59ad93245bb",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/ChatGPT-Desktop-Linux-Preview",
+    "title_en": "OpenAI Brings ChatGPT Desktop App To Linux",
+    "summary_en": "OpenAI announced today they have brought their ChatGPT Desktop application to Linux and is currently in preview form...",
+    "pub_date": "Tue, 11 Aug 2026 14:37:16 -0400",
+    "title_zh": "OpenAI 将 ChatGPT 桌面应用带到 Linux",
+    "summary_zh": "OpenAI 宣布其 ChatGPT 桌面应用现已以预览版形式登陆 Linux，支持 ChatGPT、ChatGPT Work 和 Codex 集成。该应用已在 Ubuntu 24.04 LTS、Ubuntu 26.04 LTS、Debian 13 和 Fedora 43/44 上完成测试验证，并提供 x64 和 ARM64 架构的 RPM 与 Debian 软件包。",
+    "fulltext_zh": "OpenAI 今日宣布，其 ChatGPT 桌面应用已登陆 Linux，目前以预览版形式提供。\n\nChatGPT 桌面应用现已以预览版形式在 Linux 上可用，支持 ChatGPT、ChatGPT Work 和 Codex 集成。适用于 Linux 的 ChatGPT 桌面应用已在 Ubuntu 24.04 LTS、Ubuntu 26.04 LTS、Debian 13 和 Fedora 43/44 上完成测试与验证。\n\n该闭源 Linux 应用提供 x64 和 ARM64 架构的 RPM 及 Debian 软件包。\n\nOpenAI 今日在 [公告页面] 上发布了 Linux 应用预览版，感兴趣的用户可从 [下载页面] 获取。"
+  },
+  "e6323a08fd6e2d5afa65d17087de21f2": {
+    "id": "e6323a08fd6e2d5afa65d17087de21f2",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/fedora-pantherlake-thermald-tuned",
+    "title_en": "Analyzing Fedora's Slow Performance On The Framework Laptop 13 Pro With Intel Panther Lake",
+    "summary_en": "As part of my recent Linux testing of the Framework Laptop 13 Pro I had recently benchmarked six Linux distributions on the Framework Laptop 13 Pro. CachyOS was the fastest to not much surprise but arguably the most surprising aspect was finding Fedora Workstation 44 typically running slower than the five other modern Linux distributions benchmarked. Here's a follow-up to that with more Fedora Linux benchmarks and the cause/workaround for Fedora's slower performance on the Intel Panther Lake lap",
+    "pub_date": "Tue, 11 Aug 2026 10:39:01 -0400",
+    "title_zh": "分析Fedora在搭载Intel Panther Lake的Framework Laptop 13 Pro上性能缓慢的原因",
+    "summary_zh": "Phoronix对Framework Laptop 13 Pro（搭载Intel Core Ultra X9 388H）进行了六款Linux发行版的基准测试，发现Fedora Workstation 44性能明显落后于其他发行版。深入调查后，初步怀疑是Thermald版本过旧（2.5.9 vs 2.5.12），但更新至2.5.12后性能仍无改善。进一步发现Fedora默认使用Tuned而非power-profiles-daemon，通过切换后性能恢复。本文详细记录了排查过程及解决方案。",
+    "fulltext_zh": "分析Fedora在搭载Intel Panther Lake的Framework Laptop 13 Pro上性能缓慢的原因 - Phoronix\n分析Fedora在搭载Intel Panther Lake的Framework Laptop 13 Pro上性能缓慢的原因\n发布于2026年8月11日美国东部时间上午10:39。\n\n在我近期对Framework Laptop 13 Pro的Linux测试中，我对六款Linux发行版进行了基准测试。CachyOS最快并不令人意外，但最令人惊讶的发现是Fedora Workstation 44通常比其他五款现代Linux发行版运行得更慢。本文是对该问题的后续报道，包含更多Fedora Linux基准测试以及Fedora在Intel Panther Lake笔记本上性能较慢的原因和解决方法。\n\n在许多基准测试中，Fedora Workstation 44都明显慢于其他测试的Linux发行版。每款发行版均使用开箱即用的配置，仅根据其他Panther Lake笔记本的表现和Intel此前的建议设置了性能模式。面对Fedora 44的性能失望，现在有时间深入调查这些Fedora特有的性能异常。\n\nFedora的性能不佳令人意外，因为它搭载了Linux 7.1内核，并且其他软件包也与其他测试的发行版相差不远。不过，与Ubuntu等发行版的一个区别是，Fedora Workstation 44搭载的是Intel Thermald 2.5.9，而Ubuntu 26.04 LRS使用的是Thermald 2.5.11或上游最新的Thermald 2.5.12。Thermald 2.5.9上游版本发布于2025年2月。正如我在2021年指出的，Intel Thermald对现代Intel笔记本上的Linux非常重要。\n\n通常Fedora Linux会搭载最新的软件包，但Thermald的情况是，维护者不再响应，因为打包者离开了Red Hat，导致该软件包长时间未更新。进一步增强了我的猜测——问题可能仅由过时的Thermald引起。Red Hat贡献者Neal Gompa上周在该非响应维护者工单中评论道：\n\n“因此，在Fedora稳定版中，现有的thermald对过去一年左右发布的笔记本存在严重的功能问题，有人私下向我指出了这一点，这促使我采取行动。我希望尽快接管上述软件包，以便现在和将来作为Fedora Ready工作的一部分解决这些问题。”\n\n上周还发起了一项针对Thermald的更新政策例外请求：\n\n“我想请求在所有Fedora分支中对thermald进行一次例外处理。这是修复依赖thermald实现此功能的Intel机器上的电源管理控制所必需的，因为过去两年发布的许多新笔记本目前支持不佳或完全无法工作。不幸的是，没有更多信息，这些是由Fedora Ready供应商根据NDA私下披露的。”\n\n鉴于这发生在我对Framework Laptop 13 Pro进行基准测试并发现Fedora Workstation 44异常之后不久，这似乎与我的发现相符。\n\n因此，从全新的Fedora 44安装开始，随着Thermald 2.5.12现在作为Fedora 44更新推送，我在受影响的负载上运行了一些基准测试。\n\n令人惊讶的是，即使应用了截至昨天的所有Fedora 44更新（包括Thermald 2.5.12），性能仍然落后于其他Linux发行版。所以问题不仅仅是Thermald。\n\n然后我回想起2024年，Fedora从Power-Profiles-Daemon切换到了Tuned。大多数其他Linux发行版使用power-profiles-daemon，而不是Red Hat的Tuned项目。\n\nFedora 44默认不安装power-profiles-daemon，但仍然可用。所以我尝试了\nsudo dnf swap tuned-ppd power-profiles-daemon\n并在相同的性能模式下重新运行了受影响的基准测试。"
+  },
+  "aeef9decac0651c17a4b231648c392cf": {
+    "id": "aeef9decac0651c17a4b231648c392cf",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Flatpak-1.19-Released",
+    "title_en": "Flatpak 1.19 Released With Nine Security Fixes",
+    "summary_en": "Flatpak 1.19 was released today as a new development release along with the Flatpak 1.18.1 stable point release. Both of these releases ship a number of newly-discovered security issues with this app sandboxing and distribution tech...",
+    "pub_date": "Tue, 11 Aug 2026 09:41:20 -0400",
+    "title_zh": "Flatpak 1.19 发布，包含九个安全修复",
+    "summary_zh": "Flatpak 1.19 作为新的开发版本于今日发布，同时发布了 Flatpak 1.18.1 稳定版。这两个版本都修复了多个新发现的安全问题，包括通过符号链接攻击实现沙箱逃逸并获得宿主机文件系统完整读写权限的漏洞，以及通过 revokefs 符号链接路径遍历导致的本地 root 权限提升漏洞。此外，还修复了多个任意 root 读写问题、32 位系统上的缓冲区溢出等。功能方面，Flatpak 1.19 现在支持通过系统助手进行系统级降级，改进了 Bash 补全，并包含其他增强和修复。",
+    "fulltext_zh": "Flatpak 1.19 发布，包含九个安全修复 - Phoronix\n\nFlatpak 1.19 于今日发布，作为新的开发版本，同时发布了 Flatpak 1.18.1 稳定版。这两个版本都修复了该应用沙箱和分发技术中多个新发现的安全问题。\n\nFlatpak 1.19 包含九个安全修复，Flatpak 1.18.1 包含十个。这些安全修复包括一个可能通过符号链接攻击实现沙箱逃逸并获得宿主机文件系统完整读写权限的漏洞。此外，还有一个通过 revokefs 符号链接路径遍历导致的本地 root 权限提升漏洞。还修复了多个任意 root 读写问题、32 位系统上可能的缓冲区溢出，以及其他安全问题。\n\n在功能方面，Flatpak 1.19 现在允许通过系统助手进行系统级降级，改进了 Bash 补全，并包含其他增强和修复。\n\nFlatpak 1.19 的完整更改列表可在上述链接中找到，其中包含所有安全和错误修复。"
+  },
+  "c401434a26943511abbf12467afad0a8": {
+    "id": "c401434a26943511abbf12467afad0a8",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/microsofts-azure-linux-4-0-is-publicly-available-but-still-preview-only/",
+    "title_en": "Microsoft’s Azure Linux 4.0 Is Publicly Available, But Still Preview-Only",
+    "summary_en": "Microsoft Azure Linux 4.0 is now in public preview. Learn about its innovative features and how it can enhance your cloud computing experience.\nThe post Microsoft’s Azure Linux 4.0 Is Publicly Available, But Still Preview-Only appeared first on Linux Today.",
+    "pub_date": "Tue, 11 Aug 2026 07:04:42 +0000",
+    "title_zh": "微软的 Azure Linux 4.0 公开可用，但仍仅限预览版",
+    "summary_zh": "微软的 Azure Linux 4.0 现已进入公开预览阶段。本文介绍了其创新特性，以及如何提升您的云计算体验。该版本旨在为 Azure 平台提供更优化的性能和安全性，并支持更广泛的容器和开源工作负载。尽管已公开可用，但该版本仍为预览版，建议用户在生产环境中谨慎使用。",
+    "fulltext_zh": "微软的 Azure Linux 4.0 现已进入公开预览阶段。了解其创新特性，以及它如何提升您的云计算体验。\n\n该文章《微软的 Azure Linux 4.0 公开可用，但仍仅限预览版》最初出现在 Linux Today 上。"
+  },
+  "8b01f1b107229a5f469fbc6a059ff919": {
+    "id": "8b01f1b107229a5f469fbc6a059ff919",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/transmission-4-1-3-bittorrent-client-fixes-remote-access-security-issue/",
+    "title_en": "Transmission 4.1.3 BitTorrent Client Fixes Remote Access Security Issue",
+    "summary_en": "Discover how Transmission 4.1.3 addresses critical remote access security vulnerabilities in its BitTorrent client. Stay secure while downloading.\nThe post Transmission 4.1.3 BitTorrent Client Fixes Remote Access Security Issue appeared first on Linux Today.",
+    "pub_date": "Tue, 11 Aug 2026 07:00:48 +0000",
+    "title_zh": "Transmission 4.1.3 BitTorrent 客户端修复远程访问安全问题",
+    "summary_zh": "Transmission 4.1.3 版本修复了 BitTorrent 客户端中关键的远程访问安全漏洞，确保用户下载时的安全性。该更新针对远程访问功能中的潜在风险进行了加固，建议所有用户及时升级以防范潜在攻击。",
+    "fulltext_zh": "了解 Transmission 4.1.3 如何修复其 BitTorrent 客户端中的关键远程访问安全漏洞。在下载时保持安全。\n\n该文章首次发布于 Linux Today。"
+  },
+  "76335cce093e036ce539aa2dfa5cc74c": {
+    "id": "76335cce093e036ce539aa2dfa5cc74c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/wine-11-12-released-with-bundled-ffmpeg-libraries-and-mono-11-2/",
+    "title_en": "Wine 11.12 Released with Bundled FFmpeg Libraries and Mono 11.2",
+    "summary_en": "Discover the latest Wine 11.12 release featuring bundled FFmpeg libraries and Mono 11.2. Enhance your Windows application experience on Linux today.\nThe post Wine 11.12 Released with Bundled FFmpeg Libraries and Mono 11.2 appeared first on Linux Today.",
+    "pub_date": "Tue, 11 Aug 2026 06:59:06 +0000",
+    "title_zh": "Wine 11.12 发布，集成 FFmpeg 库与 Mono 11.2",
+    "summary_zh": "Wine 11.12 版本正式发布，主要亮点包括捆绑 FFmpeg 库和 Mono 11.2。这一更新旨在提升 Linux 系统上运行 Windows 应用程序的体验。用户现在可以更便捷地在 Linux 环境中使用各类 Windows 软件，享受更好的兼容性和性能。",
+    "fulltext_zh": "探索 Wine 11.12 最新版本，该版本集成了捆绑的 FFmpeg 库和 Mono 11.2。立即提升您在 Linux 上的 Windows 应用程序体验。\n\n该文章 Wine 11.12 发布，集成 FFmpeg 库与 Mono 11.2 首次出现在 Linux Today 上。"
+  },
+  "74012d6790fcae124f1bd2d6fd0a414a": {
+    "id": "74012d6790fcae124f1bd2d6fd0a414a",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/git-2-55-lands-with-big-speedups-for-large-linux-repositories/",
+    "title_en": "Git 2.55 Lands with Big Speedups for Large Linux Repositories",
+    "summary_en": "Git 2.55 introduces major speed optimizations for large Linux repositories. Learn how these updates can enhance your development efficiency.\nThe post Git 2.55 Lands with Big Speedups for Large Linux Repositories appeared first on Linux Today.",
+    "pub_date": "Tue, 11 Aug 2026 06:57:03 +0000",
+    "title_zh": "Git 2.55 发布，为大型 Linux 仓库带来显著提速",
+    "summary_zh": "Git 2.55 版本针对大型 Linux 仓库进行了重大性能优化，显著提升了开发效率。该版本通过改进算法和数据结构，大幅缩短了克隆、检出和日志操作的时间。对于维护庞大代码库的开发者而言，这些更新将带来更流畅的日常操作体验。",
+    "fulltext_zh": "Git 2.55 为大型 Linux 仓库引入了重大的速度优化。了解这些更新如何提升您的开发效率。\n\n该文章首发于 Linux Today。"
+  },
+  "15350afbea8e0ebaf29b81f22c193e4b": {
+    "id": "15350afbea8e0ebaf29b81f22c193e4b",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/kali-linux-2026-2-released-with-gnome-50-kde-plasma-6-6-kernel-6-19/",
+    "title_en": "Kali Linux 2026.2 Released with GNOME 50, KDE Plasma 6.6, Kernel 6.19",
+    "summary_en": "Discover the latest features of Kali Linux 2026.2, now with GNOME 50, KDE Plasma 6.6, and Kernel 6.19. Upgrade your security toolkit today!\nThe post Kali Linux 2026.2 Released with GNOME 50, KDE Plasma 6.6, Kernel 6.19 appeared first on Linux Today.",
+    "pub_date": "Tue, 11 Aug 2026 06:55:36 +0000",
+    "title_zh": "Kali Linux 2026.2 发布，搭载 GNOME 50、KDE Plasma 6.6 与内核 6.19",
+    "summary_zh": "Kali Linux 2026.2 正式发布，此次更新带来了 GNOME 50、KDE Plasma 6.6 桌面环境以及 Linux 内核 6.19，进一步提升了系统性能与安全性。作为面向安全测试的发行版，新版本优化了工具集，增强了硬件兼容性，并修复了多个已知问题。用户可通过升级或全新安装体验最新功能，以强化渗透测试与数字取证工作流。",
+    "fulltext_zh": "探索 Kali Linux 2026.2 的最新功能，现已搭载 GNOME 50、KDE Plasma 6.6 与内核 6.19。立即升级您的安全工具包！\n\n本文首发于 Linux Today。"
   }
 }

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>openJiuwen的Agent Swarm：当AI代理终于能团队协作 — Linux 中文速报</title>
+<title>分析Fedora在搭载Intel Panther Lake的Framework Laptop 13 Pro上性能缓慢的原因 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>openJiuwen的Agent Swarm：当AI代理终于能团队协作</h1>
+  <h1>分析Fedora在搭载Intel Panther Lake的Framework Laptop 13 Pro上性能缓慢的原因</h1>
 
-  <div class="article-summary">openJiuwen是一个开源AI代理平台，旨在帮助开发者构建生产级AI代理并实现大规模多代理协作。其核心组件JiuwenSwarm首次实现了“协调工程”，将焦点从单个代理的智能化转向多代理的高效协作。JiuwenSwarm支持异构模型路由、分层记忆架构、分布式部署以及与HarmonyOS生态的无缝集成，并具备可观测性和自我进化能力。该平台由华为实验室、华为云和终端小艺团队联合开发，采用Apache 2.0许可证，已在HarmonyOS PC上推出，为多设备分布式场景提供支持。</div>
+  <div class="article-summary">Phoronix对Framework Laptop 13 Pro（搭载Intel Core Ultra X9 388H）进行了六款Linux发行版的基准测试，发现Fedora Workstation 44性能明显落后于其他发行版。深入调查后，初步怀疑是Thermald版本过旧（2.5.9 vs 2.5.12），但更新至2.5.12后性能仍无改善。进一步发现Fedora默认使用Tuned而非power-profiles-daemon，通过切换后性能恢复。本文详细记录了排查过程及解决方案。</div>
 
-  <div class="article-body"><p>openJiuwen的Agent Swarm：当AI代理终于能团队协作</p><p>openJiuwen的Agent Swarm：当AI代理终于能团队协作</p><p>openJiuwen是一个开源AI代理平台，旨在帮助开发者构建生产级AI代理，并实现大规模多代理协作。</p><p>在过去两年中，AI代理领域经历了一波又一波的“工程范式转变”。从提示工程到上下文工程，再到控制工程，每一次迭代都聚焦于让单个代理更智能、更可靠。</p><p>然而，现实世界中的复杂任务从来不是由单个人完成的。</p><p>例如，多学科医疗会诊需要来自不同领域的专家协同工作。</p><p>同样，大型软件工程项目需要产品经理、前端工程师、后端开发人员和测试人员共同推进。</p><p>然而，AI行业仍在试图构建一个“全能”的单一代理，而不是一个协调良好的代理团队。</p><p>这正是openJiuwen旨在解决的问题。</p><p>openJiuwen是一个开源AI代理平台，由华为实验室、华为云和终端小艺团队联合构建，以Apache 2.0许可证发布。其目标是帮助开发者构建生产级AI代理，并实现大规模多代理协作。</p><p>2026年5月，openJiuwen社区发布了一个重要组件：JiuwenSwarm。它标志着“协调工程”的首次工程实现，将焦点从“让单个代理更智能”转向“让多个代理高效协作”。</p><p>openJiuwen与华为终端平板与PC产品线、软件部等团队合作，推出了HarmonyOS PC版的JiuwenSwarm。这意味着JiuwenSwarm从架构基础起就与HarmonyOS生态共享相同的技术DNA。</p><p>JiuwenSwarm有何不同？</p><p>JiuwenSwarm的核心是Agent Swarm机制，它使多个AI代理能够自主分工、动态协商并高效协作。</p><p>以下是其关键特性。</p><p>异构模型路由，适配不同任务</p><p>JiuwenSwarm支持将成员路由到不同的模型，为不同角色提供合适的模型能力，从而将重推理模型分配给复杂逻辑，将轻量模型分配给简单任务。这降低了系统负载，并提高了整体执行质量。开发者只需在配置文件中声明角色到模型的映射，系统即可自动管理调度。</p><p>JiuwenSwarm已实现与HarmonyOS小艺、飞书等平台的无缝集成。开发者可以构建JiuwenSwarm模式的代理，并可直接通过HarmonyOS设备调用。</p><p>分层记忆架构</p><p>配合分层持久记忆系统，JiuwenSwarm在会话间保留全维度记录，包括操作历史、企业资料和政策指南。通过跨Swarm经验继承机制，一个Swarm积累的经验可以直接被另一个Swarm继承。</p><p>分布式部署</p><p>JiuwenSwarm支持分布式Agent Swarm。Leader Agent和群成员可以运行在不同的进程、不同的节点，甚至完全不同的服务器上。这一能力对于需要访问隔离环境（如内网数据库）的任务尤为关键。</p><p>这种架构天然适应HarmonyOS PC的多设备分布式场景。在HarmonyOS PC的“Agent PC”环境中，PC作为Leader Agent的大本营，而手机、平板等HarmonyOS设备作为Teammate Agent节点，无需额外适配即可协同工作。</p><p>借助Channels机制，开箱即用地支持小艺等平台集成，开发者可以立即为HarmonyOS PC生态构建多代理应用。</p><p>可观测性与自我进化</p><p>JiuwenSwarm提供可观测性和自我进化能力。</p></div>
+  <div class="article-body"><p>分析Fedora在搭载Intel Panther Lake的Framework Laptop 13 Pro上性能缓慢的原因 - Phoronix</p><p>分析Fedora在搭载Intel Panther Lake的Framework Laptop 13 Pro上性能缓慢的原因</p><p>发布于2026年8月11日美国东部时间上午10:39。</p><p>在我近期对Framework Laptop 13 Pro的Linux测试中，我对六款Linux发行版进行了基准测试。CachyOS最快并不令人意外，但最令人惊讶的发现是Fedora Workstation 44通常比其他五款现代Linux发行版运行得更慢。本文是对该问题的后续报道，包含更多Fedora Linux基准测试以及Fedora在Intel Panther Lake笔记本上性能较慢的原因和解决方法。</p><p>在许多基准测试中，Fedora Workstation 44都明显慢于其他测试的Linux发行版。每款发行版均使用开箱即用的配置，仅根据其他Panther Lake笔记本的表现和Intel此前的建议设置了性能模式。面对Fedora 44的性能失望，现在有时间深入调查这些Fedora特有的性能异常。</p><p>Fedora的性能不佳令人意外，因为它搭载了Linux 7.1内核，并且其他软件包也与其他测试的发行版相差不远。不过，与Ubuntu等发行版的一个区别是，Fedora Workstation 44搭载的是Intel Thermald 2.5.9，而Ubuntu 26.04 LRS使用的是Thermald 2.5.11或上游最新的Thermald 2.5.12。Thermald 2.5.9上游版本发布于2025年2月。正如我在2021年指出的，Intel Thermald对现代Intel笔记本上的Linux非常重要。</p><p>通常Fedora Linux会搭载最新的软件包，但Thermald的情况是，维护者不再响应，因为打包者离开了Red Hat，导致该软件包长时间未更新。进一步增强了我的猜测——问题可能仅由过时的Thermald引起。Red Hat贡献者Neal Gompa上周在该非响应维护者工单中评论道：</p><p>“因此，在Fedora稳定版中，现有的thermald对过去一年左右发布的笔记本存在严重的功能问题，有人私下向我指出了这一点，这促使我采取行动。我希望尽快接管上述软件包，以便现在和将来作为Fedora Ready工作的一部分解决这些问题。”</p><p>上周还发起了一项针对Thermald的更新政策例外请求：</p><p>“我想请求在所有Fedora分支中对thermald进行一次例外处理。这是修复依赖thermald实现此功能的Intel机器上的电源管理控制所必需的，因为过去两年发布的许多新笔记本目前支持不佳或完全无法工作。不幸的是，没有更多信息，这些是由Fedora Ready供应商根据NDA私下披露的。”</p><p>鉴于这发生在我对Framework Laptop 13 Pro进行基准测试并发现Fedora Workstation 44异常之后不久，这似乎与我的发现相符。</p><p>因此，从全新的Fedora 44安装开始，随着Thermald 2.5.12现在作为Fedora 44更新推送，我在受影响的负载上运行了一些基准测试。</p><p>令人惊讶的是，即使应用了截至昨天的所有Fedora 44更新（包括Thermald 2.5.12），性能仍然落后于其他Linux发行版。所以问题不仅仅是Thermald。</p><p>然后我回想起2024年，Fedora从Power-Profiles-Daemon切换到了Tuned。大多数其他Linux发行版使用power-profiles-daemon，而不是Red Hat的Tuned项目。</p><p>Fedora 44默认不安装power-profiles-daemon，但仍然可用。所以我尝试了</p><p>sudo dnf swap tuned-ppd power-profiles-daemon</p><p>并在相同的性能模式下重新运行了受影响的基准测试。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/openjiuwens-agent-swarm/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/review/fedora-pantherlake-thermald-tuned" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>openJiuwen的Agent Swarm：当AI代理终于能团队协作 — Linux 中文速报</title>
+<title>这些开源开发者正在为Linux逆向工程Xbox Game Pass — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -152,14 +152,14 @@
     <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>openJiuwen的Agent Swarm：当AI代理终于能团队协作</h1>
+  <h1>这些开源开发者正在为Linux逆向工程Xbox Game Pass</h1>
 
-  <div class="article-summary">openJiuwen是一个开源AI代理平台，旨在帮助开发者构建生产级AI代理并实现大规模多代理协作。其核心组件JiuwenSwarm首次实现了“协调工程”，将焦点从单个代理的智能化转向多代理的高效协作。JiuwenSwarm支持异构模型路由、分层记忆架构、分布式部署以及与HarmonyOS生态的无缝集成，并具备可观测性和自我进化能力。该平台由华为实验室、华为云和终端小艺团队联合开发，采用Apache 2.0许可证，已在HarmonyOS PC上推出，为多设备分布式场景提供支持。</div>
+  <div class="article-summary">一个名为Xodus的开源项目正在逆向工程Xbox Game Pass，旨在让Linux用户无需云流媒体即可运行Xbox PC游戏。项目负责人Paweł在Reddit上确认，Xbox认证和游戏下载等最困难的部分已经实现。该项目已获得广泛关注，但开发者提醒仍处于早期阶段，距离可用版本还有数月。若成功，将填补Linux与Windows游戏体验之间的最后空白。</div>
 
-  <div class="article-body"><p>openJiuwen的Agent Swarm：当AI代理终于能团队协作</p><p>openJiuwen的Agent Swarm：当AI代理终于能团队协作</p><p>openJiuwen是一个开源AI代理平台，旨在帮助开发者构建生产级AI代理，并实现大规模多代理协作。</p><p>在过去两年中，AI代理领域经历了一波又一波的“工程范式转变”。从提示工程到上下文工程，再到控制工程，每一次迭代都聚焦于让单个代理更智能、更可靠。</p><p>然而，现实世界中的复杂任务从来不是由单个人完成的。</p><p>例如，多学科医疗会诊需要来自不同领域的专家协同工作。</p><p>同样，大型软件工程项目需要产品经理、前端工程师、后端开发人员和测试人员共同推进。</p><p>然而，AI行业仍在试图构建一个“全能”的单一代理，而不是一个协调良好的代理团队。</p><p>这正是openJiuwen旨在解决的问题。</p><p>openJiuwen是一个开源AI代理平台，由华为实验室、华为云和终端小艺团队联合构建，以Apache 2.0许可证发布。其目标是帮助开发者构建生产级AI代理，并实现大规模多代理协作。</p><p>2026年5月，openJiuwen社区发布了一个重要组件：JiuwenSwarm。它标志着“协调工程”的首次工程实现，将焦点从“让单个代理更智能”转向“让多个代理高效协作”。</p><p>openJiuwen与华为终端平板与PC产品线、软件部等团队合作，推出了HarmonyOS PC版的JiuwenSwarm。这意味着JiuwenSwarm从架构基础起就与HarmonyOS生态共享相同的技术DNA。</p><p>JiuwenSwarm有何不同？</p><p>JiuwenSwarm的核心是Agent Swarm机制，它使多个AI代理能够自主分工、动态协商并高效协作。</p><p>以下是其关键特性。</p><p>异构模型路由，适配不同任务</p><p>JiuwenSwarm支持将成员路由到不同的模型，为不同角色提供合适的模型能力，从而将重推理模型分配给复杂逻辑，将轻量模型分配给简单任务。这降低了系统负载，并提高了整体执行质量。开发者只需在配置文件中声明角色到模型的映射，系统即可自动管理调度。</p><p>JiuwenSwarm已实现与HarmonyOS小艺、飞书等平台的无缝集成。开发者可以构建JiuwenSwarm模式的代理，并可直接通过HarmonyOS设备调用。</p><p>分层记忆架构</p><p>配合分层持久记忆系统，JiuwenSwarm在会话间保留全维度记录，包括操作历史、企业资料和政策指南。通过跨Swarm经验继承机制，一个Swarm积累的经验可以直接被另一个Swarm继承。</p><p>分布式部署</p><p>JiuwenSwarm支持分布式Agent Swarm。Leader Agent和群成员可以运行在不同的进程、不同的节点，甚至完全不同的服务器上。这一能力对于需要访问隔离环境（如内网数据库）的任务尤为关键。</p><p>这种架构天然适应HarmonyOS PC的多设备分布式场景。在HarmonyOS PC的“Agent PC”环境中，PC作为Leader Agent的大本营，而手机、平板等HarmonyOS设备作为Teammate Agent节点，无需额外适配即可协同工作。</p><p>借助Channels机制，开箱即用地支持小艺等平台集成，开发者可以立即为HarmonyOS PC生态构建多代理应用。</p><p>可观测性与自我进化</p><p>JiuwenSwarm提供可观测性和自我进化能力。</p></div>
+  <div class="article-body"><p>这些开源开发者正在为Linux逆向工程Xbox Game Pass</p><p>这些开源开发者正在为Linux逆向工程Xbox Game Pass</p><p>他们已经破解了Xbox游戏下载，macOS支持也在开发中。</p><p>Xbox Game Pass在Linux上从未真正良好运行过，除了延迟严重的云流媒体，但一个名为Xodus的开源项目正试图改变这一现状。</p><p>根据Reddit上的一个帖子，Xodus的项目负责人Paweł（网名）确认，在Linux上运行这些游戏最困难的部分——Xbox认证和游戏下载——已经可以工作了。</p><p>该项目正试图逆向工程Xbox的整个认证、许可和分发流程，以便在Linux上运行Xbox PC游戏。</p><p>Xodus自称是“向Linux的伟大游戏迁移”，同时提醒人们它未经微软认可，使用它存在风险。要知道，现代Xbox PC游戏运行在微软的GDK（游戏开发套件）上，并以加密的MSIXVC格式分发。在Linux上运行游戏意味着要同时处理这两者。</p><p>该项目的GitHub页面目前包含多个仓库，包括用Rust编写的主客户端、一个用于读取MSIXVC的fork库，以及xgameruntime——一个为Wine构建的GDK开源实现。另一个仓库则记录了该DLL的内部工作原理。</p><p>此外还有由Xodus团队维护的fork版本，包含自定义调整，以及从OpenXbox fork出来的Xbox认证库。</p><p>目前还没有可供试玩的二进制文件；仍有大量工作要做。Xodus的可用版本仍需数月时间。</p><p>开发者们感到惊讶</p><p>得益于Reddit上的回复，该项目获得了一波媒体报道，这让开发者们措手不及。在Digital Foundry报道后，Paweł在项目的Discord服务器上写道：“哇，这真是疯了。”</p><p>尽管最初的报道似乎来自VideoCardz.com，但许多媒体都弄错了一个细节。将Xodus描述为Heroic Games Launcher团队的项目是不正确的，因为Paweł是唯一一位同时参与过Heroic Games Launcher的Xodus贡献者，而非整个团队。</p><p>另一位开发者（一直在追踪这波意外报道）指出，其中一篇文章对Xodus的评价相当尖刻，而另一位开发者（olivi-r）则分享了一些重要的开发进展。</p><p>“最近几天，xgameruntime方面的进展相当快，XTaskQueue几乎已经实现，还有一些模式和怪癖需要解决。</p><p>目前正在修复XUser，因为签名生成似乎有点问题😬</p><p>还需要将票据从xodus加载到XUser中，我一直硬编码自己的票据用于测试，还不确定我们是采用stdio代理还是直接在Wine中实现IPC。</p><p>如果Xodus成功，它将填补Linux和Windows游戏体验之间的最后一大空白。Steam、GOG和Epic Games上的游戏库已经可以通过Proton和Heroic良好运行，但Xbox PC和Game Pass游戏此前一直局限于Windows或延迟严重的云流媒体。</p><p>如果你问我，这是微软让Xodus的工作变得更容易的最佳时机，类似于Valve在上游处理Wine开发的方式。这样，整个生态系统都能受益，而不仅仅是Steam。</p><p>如果Xbox决定帮助这个项目，他们确实有很多途径可以探索……</p><p>喜欢这次更新吗？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无需承诺</p><p>一个热爱开源软件、定制PC组装、赛车运动并探索这个世界无限可能的极客。</p><p>Linux Mint预告了一项Fedora多年前就搞定的内核清理技巧</p><p>CachyOS正在为服务器版奠定基础</p><p>openJiuwen的Agent Swarm：当AI代理终于能团队协作时</p><p>AI不再能肆意破坏Rust的代码仓库</p><p>伊利诺伊州要求所有操作系统开始报告你孩子的年龄</p><p>成为更好的Linux用户</p><p>订阅FOSS每周通讯，</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/openjiuwens-agent-swarm/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/xodus-xbox-gamepass-linux/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

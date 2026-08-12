@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>openJiuwen的Agent Swarm：当AI代理终于能团队协作 — Linux 中文速报</title>
+<title>Intel CPU 微码 20260811 版本修复八个安全问题 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>openJiuwen的Agent Swarm：当AI代理终于能团队协作</h1>
+  <h1>Intel CPU 微码 20260811 版本修复八个安全问题</h1>
 
-  <div class="article-summary">openJiuwen是一个开源AI代理平台，旨在帮助开发者构建生产级AI代理并实现大规模多代理协作。其核心组件JiuwenSwarm首次实现了“协调工程”，将焦点从单个代理的智能化转向多代理的高效协作。JiuwenSwarm支持异构模型路由、分层记忆架构、分布式部署以及与HarmonyOS生态的无缝集成，并具备可观测性和自我进化能力。该平台由华为实验室、华为云和终端小艺团队联合开发，采用Apache 2.0许可证，已在HarmonyOS PC上推出，为多设备分布式场景提供支持。</div>
+  <div class="article-summary">Intel 于 2026 年 8 月 11 日发布了 20260811 CPU 微码更新，修复了现有处理器的多个问题，包括首次为 Bartlett Lake 和 Wildcat Lake 提供新微码镜像，更新覆盖至 Intel Core Gen10 处理器。本次更新共解决八个安全问题，涉及 Xeon 6、Core Ultra 等系列，包括权限提升、信息泄露、拒绝服务等漏洞。此外，还修复了若干功能性问题。</div>
 
-  <div class="article-body"><p>openJiuwen的Agent Swarm：当AI代理终于能团队协作</p><p>openJiuwen的Agent Swarm：当AI代理终于能团队协作</p><p>openJiuwen是一个开源AI代理平台，旨在帮助开发者构建生产级AI代理，并实现大规模多代理协作。</p><p>在过去两年中，AI代理领域经历了一波又一波的“工程范式转变”。从提示工程到上下文工程，再到控制工程，每一次迭代都聚焦于让单个代理更智能、更可靠。</p><p>然而，现实世界中的复杂任务从来不是由单个人完成的。</p><p>例如，多学科医疗会诊需要来自不同领域的专家协同工作。</p><p>同样，大型软件工程项目需要产品经理、前端工程师、后端开发人员和测试人员共同推进。</p><p>然而，AI行业仍在试图构建一个“全能”的单一代理，而不是一个协调良好的代理团队。</p><p>这正是openJiuwen旨在解决的问题。</p><p>openJiuwen是一个开源AI代理平台，由华为实验室、华为云和终端小艺团队联合构建，以Apache 2.0许可证发布。其目标是帮助开发者构建生产级AI代理，并实现大规模多代理协作。</p><p>2026年5月，openJiuwen社区发布了一个重要组件：JiuwenSwarm。它标志着“协调工程”的首次工程实现，将焦点从“让单个代理更智能”转向“让多个代理高效协作”。</p><p>openJiuwen与华为终端平板与PC产品线、软件部等团队合作，推出了HarmonyOS PC版的JiuwenSwarm。这意味着JiuwenSwarm从架构基础起就与HarmonyOS生态共享相同的技术DNA。</p><p>JiuwenSwarm有何不同？</p><p>JiuwenSwarm的核心是Agent Swarm机制，它使多个AI代理能够自主分工、动态协商并高效协作。</p><p>以下是其关键特性。</p><p>异构模型路由，适配不同任务</p><p>JiuwenSwarm支持将成员路由到不同的模型，为不同角色提供合适的模型能力，从而将重推理模型分配给复杂逻辑，将轻量模型分配给简单任务。这降低了系统负载，并提高了整体执行质量。开发者只需在配置文件中声明角色到模型的映射，系统即可自动管理调度。</p><p>JiuwenSwarm已实现与HarmonyOS小艺、飞书等平台的无缝集成。开发者可以构建JiuwenSwarm模式的代理，并可直接通过HarmonyOS设备调用。</p><p>分层记忆架构</p><p>配合分层持久记忆系统，JiuwenSwarm在会话间保留全维度记录，包括操作历史、企业资料和政策指南。通过跨Swarm经验继承机制，一个Swarm积累的经验可以直接被另一个Swarm继承。</p><p>分布式部署</p><p>JiuwenSwarm支持分布式Agent Swarm。Leader Agent和群成员可以运行在不同的进程、不同的节点，甚至完全不同的服务器上。这一能力对于需要访问隔离环境（如内网数据库）的任务尤为关键。</p><p>这种架构天然适应HarmonyOS PC的多设备分布式场景。在HarmonyOS PC的“Agent PC”环境中，PC作为Leader Agent的大本营，而手机、平板等HarmonyOS设备作为Teammate Agent节点，无需额外适配即可协同工作。</p><p>借助Channels机制，开箱即用地支持小艺等平台集成，开发者可以立即为HarmonyOS PC生态构建多代理应用。</p><p>可观测性与自我进化</p><p>JiuwenSwarm提供可观测性和自我进化能力。</p></div>
+  <div class="article-body"><p>Intel CPU 微码 20260811 版本修复八个安全问题 - Phoronix</p><p>Intel CPU 微码 20260811 版本修复八个安全问题</p><p>2026 年 8 月 11 日下午 03:26（美国东部时间）</p><p>Intel 今天发布了 20260811 CPU 微码更新，以修复现有处理器的各种问题，包括首次为 Bartlett Lake 和 Wildcat Lake 提供新的微码镜像。新的微码更新可追溯至 Intel Core Gen10 处理器。</p><p>今天的 Intel 20260811 CPU 微码更新共解决了八个安全问题。INTEL-SA-01379 是一个高等级的权限提升漏洞，涉及 Intel TDX 和 Xeon 6 处理器。</p><p>INTEL-SA-01404 是 Xeon 6 CPU 与 Intel TDX 相关的信息泄露漏洞。</p><p>INTEL-SA-01423 是 Intel 处理器的信息泄露漏洞，涉及 Ring 0 瞬态执行期间错误数据转发的加载值注入问题。该漏洞可追溯至第十代 Intel Core CPU。</p><p>INTEL-SA-01428 是一个影响所有 Intel Core Ultra CPU 以及 Xeon 6 处理器的权限提升漏洞。</p><p>INTEL-SA-01435 是 Xeon 6 处理器因 Ring 3 中不当访问控制导致的权限提升漏洞。</p><p>INTEL-SA-01441 是 Core Ultra Series 2 和 Core Ultra Series 3 处理器的拒绝服务漏洞。</p><p>INTEL-SA-01442 是 Intel Xeon 处理器的权限提升漏洞，原因是某些固件中始终不正确的控制流，以及与之相关的第二个 CVE（不当输入验证）。</p><p>INTEL-SA-01443 是第三代 Xeon Scalable 处理器因硬件逻辑竞争条件导致的拒绝服务漏洞。</p><p>除了这八个安全漏洞之外，本月的 Intel CPU 微码更新还修复了各种功能性问题。</p><p>有关今天 Intel CPU 微码 20260811 版本的更多详情，请参阅：</p><p>Mesa 26.3 Intel 驱动代码为较新 GPU 启用大型 GRF 模式</p><p>Linux 7.3 将更好地处理 Intel 混合 CPU 上的集群负载均衡</p><p>Intel QATlib 26.08 发布，支持 Gen6 设备和 2MB 大页</p><p>Intel 在 Meteor Lake 及更新平台的 Linux 驱动上推进 HDMI 2.1 FRL 支持</p><p>USB4STREAM 添加忙轮询选项，以增加 CPU 周期为代价降低延迟</p><p>Linux 将避免混淆带有 DEC 的较新 Intel CPU 的处理器固件</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>FFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 和 AMD AMF</p><p>Linux 暂存区将拒绝 LLM 生成的补丁，除非是真正的安全修复</p><p>Linux 7.3 看起来将上游化 FailFS</p><p>Cloudflare 宣布开源 Cloudflare OS 作为 AI“操作系统”</p><p>GNOME Boxes 准备提供大幅改进的虚拟化体验</p><p>Linux 在内核锁定模式下意外遗留了旧版 I/O 和内存处理程序</p><p>Wine 11.15 发布，包含 Wayland 修复和 20 年历史的 MSXML3 错误修复</p><p>更多旧版 Linux 驱动因 AI/LLM 编码代理的噪音而面临移除</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/openjiuwens-agent-swarm/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Intel-CPU-Microcode-20260811" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
