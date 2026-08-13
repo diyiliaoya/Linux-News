@@ -6598,5 +6598,137 @@
     "title_zh": "Kali Linux 2026.2 发布，搭载 GNOME 50、KDE Plasma 6.6 与内核 6.19",
     "summary_zh": "Kali Linux 2026.2 正式发布，此次更新带来了 GNOME 50、KDE Plasma 6.6 桌面环境以及 Linux 内核 6.19，进一步提升了系统性能与安全性。作为面向安全测试的发行版，新版本优化了工具集，增强了硬件兼容性，并修复了多个已知问题。用户可通过升级或全新安装体验最新功能，以强化渗透测试与数字取证工作流。",
     "fulltext_zh": "探索 Kali Linux 2026.2 的最新功能，现已搭载 GNOME 50、KDE Plasma 6.6 与内核 6.19。立即升级您的安全工具包！\n\n本文首发于 Linux Today。"
+  },
+  "c8bb42b814943e60e467536fcfa3b5ac": {
+    "id": "c8bb42b814943e60e467536fcfa3b5ac",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/simplex-chat-investment-drive/",
+    "title_en": "SimpleX Chat Wants Its 400K+ Users to Become Investors Too",
+    "summary_en": "The funds will go towards keeping the project up and running.",
+    "pub_date": "Wed, 12 Aug 2026 10:59:08 GMT",
+    "title_zh": "SimpleX Chat 希望其 40 多万用户也能成为投资者",
+    "summary_zh": "SimpleX Chat 正在寻求通过 SAFE（未来股权简单协议）向用户开放投资机会，以筹集资金维持项目运营。首批 45 万美元投资将获得 4000 万美元估值上限的 SAFE，后续投资则适用 4500 万美元上限。资金将用于运营开支、招聘、开发浏览器端消息栈等。公司已从英国实体转为美国子公司，并承认若无更多资金，未来 12 个月可能无法持续运营。",
+    "fulltext_zh": "SimpleX Chat 希望其 40 多万用户也能成为投资者\n\nSimpleX Chat 希望其 40 多万用户也能成为投资者\n\n这些资金将用于维持项目的持续运营。\n\n当今世界处于一种混乱状态，监控和侵蚀人们权利的行为受到奖励，而反对者则被贴上不爱国、反国家、激进分子、犯罪同情者等标签。\n\n然而，这并没有阻止人们投入时间和金钱来保护自己的数据，例如选择开源移动操作系统，或采取其他措施来改善隐私。\n\n其中一步是使用不会将你的数据提供给人工智能或政府机构的隐私消息应用。\n\nSimpleX Chat 就是这样一个选择，它是一个不要求电话号码、电子邮件或用户账户的消息网络。\n\n我亲自试用过，它给我留下了深刻的印象。其团队一直在持续开发，现在它希望用户也能在项目未来发展方向上拥有股份。\n\n寻找投资者\n\nSimpleX Chat 的创始人最近联系了我们，表示他们希望给用户“获得 SimpleX Chat 股份并从中受益的机会”。\n\n这种股份通过 SAFE（未来股权简单协议）来实现。\n\n首批 45 万美元的投资将获得估值上限为 4000 万美元的 SAFE。一旦达到上限，后续投资者将获得另一份 SAFE，估值上限为 4500 万美元。\n\n不过有一个问题。你的资金不会直接进入 SimpleX Chat 的 SAFE，而是进入一个特殊目的实体（SPV），该实体实际持有 SAFE，你的签名最终会出现在 SPV 自己的认购协议上。\n\n因此，早期投资和后续投资会有不同的版本。\n\n软启动将于 8 月 15 日结束，截至 8 月 11 日，已筹集到目标发行金额的 50%。\n\n该应用背后的公司也已发生变化。开发该应用的英国实体现在是一家新美国公司的全资子公司。\n\n如果你在投资前考虑公司所在地，请记住这一点。\n\n如果 SimpleX Chat 达到 5 万美元的最低目标，资金将用于支付一般运营费用，仅够维持一段时间。\n\n如果达到 123.5 万美元的完整目标，他们将能够雇佣更多团队成员，构建基于浏览器的消息栈，为发布者提供工具，并开发交互式小部件框架。\n\n公司还预计，随着更多独立运营商接管网络基础设施，服务器托管成本将下降，同时计划通过公共名称、商业服务以及所谓的“渠道”收入来实现收支平衡。\n\n这是一种让大型频道为其使用的服务器付费的模式。\n\n在你投资之前，请了解这伴随着早期公司投资的常见风险。\n\n无法保证回报，如果你改变主意，你的投资也不容易出售。公司自己的文件进一步指出，如果没有更多资金，预计未来 12 个月将没有足够的现金维持运营。\n\n今年早些时候，我们已经有一个消息应用向社区求助的例子，当时一个应用因资金耗尽而几乎关闭，需要 100 万美元才能继续运营。\n\n后来开发恢复了，但只有两到三名开发者，而不是曾经的十几名。\n\nSimpleX Chat 自己的文件也承认，如果没有更多资金，未来 12 个月将没有足够的现金维持运营。现在通过股权融资，而不是紧急捐赠活动，给了它一个强有力的开端。\n\n喜欢这次更新吗？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。\n\n一次性付费，永久享受\n\n任意金额，无需承诺\n\n一个热爱开源软件、定制 PC 构建的极客"
+  },
+  "9922bf660acec9c5233500711e2c89de": {
+    "id": "9922bf660acec9c5233500711e2c89de",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12920",
+    "title_en": "Distribution Release: Manjaro Linux 26.1.0",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Philip Müller has announced the release of Manjaro Linux 26, the new stable build of the project's set of rolling-release distributions with a choice of GNOME, KDE Plasma and Xfce desktops. This release updates the GNOME desktop to version 50 and KDE Plasma to version 6.7: \"Manjaro 26.1....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Manjaro Linux 26.1.0",
+    "summary_zh": "Manjaro Linux 26.1.0 'Bian-May' 正式发布，这是该项目滚动发行系列的最新稳定版本，提供 GNOME、KDE Plasma 和 Xfce 桌面环境。本次更新将 GNOME 桌面升级至 50 系列，KDE Plasma 升级至 6.7 版本。GNOME 50 引入了重大改进的家长控制功能，允许家长监控屏幕时间、设置限制和就寝时间表，并支持自动锁定屏幕。此外，该版本还集成了来自巴西姊妹项目 Big Linux 的 Big Parental Controls 1.0，以符合当地法律要求。",
+    "fulltext_zh": "发行版发布：Manjaro Linux 26.1.0 (DistroWatch.com 新闻)\n\nDistroWatch.com 由以下赞助商支持\n\n新闻/观点/评论 ▼\n发布公告\nDW 周报 / 评论存档\n访客评分与评论\n项目评分排名\n播客、新闻通讯与评论\n跨发行版软件包比较\n显示所有发行版的软件包版本\n搜索发行版 - 高级\n已停止维护的发行版\n教程与学习 ▼\n搜索文章\n问答专栏\n技巧与提示专栏\n误解与谬误专栏\n简化手册页\n其他操作系统\n发行版验证密钥\n发行版家族树可视化\n常见问题解答\n我们的捐赠计划\n\n小型企业电话系统\nNetBSD 致力于更新 Enlightenment 移植版\nMint 推出新的内核管理器\nProxmox 现已支持 ARM 处理器\nMageia 重点介绍 Pidgin\nArch 项目将阻止对 AUR 的新推送\nUbuntu 将为 LTS 版本的虚拟化工具提供升级\nGardua 以新基础更新 FireDragon 网络浏览器\nHaiku 获得在移植浏览器上使用 Firefox 品牌的权利\nFreeBSD 发布 2026 年第二季度状态报告\nDebian 就 LLM 工具的使用展开辩论\n\n易于使用的 PBX - 托管或自管理\n适用于 Linux 的电话系统\n免费在线聊天解决方案\n集成呼叫中心软件\n联络中心软件\n远程办公应用：iOS 或 Android\n免费视频会议\n3CX 提供的 VoIP / PBX 操作指南\n不要措手不及，制定灾难恢复计划！\n必备的在线聊天报告与统计\n导致呼叫欺诈的常见错误\nWhatsApp Business 与 3CX WhatsApp API 集成对比\n3CX StartUP 的 5 大杀手级功能\n不要成为“那种人”第 1 卷：使用复杂凭据\n不要成为“那种人”第 2 卷：呼叫欺诈\n不要成为“那种人”第 3 卷：四大安全提示\n不要成为“那种人”第 4 卷：监控你的实例\n\nAfagOS 20260719, LazyLinux 20260712\nUbuntu 每周通讯 956 期\nLinux Mint 月度新闻 - 2026 年 7 月\nRed Hat 周五五件事 - 2026 年 8 月 7 日\nFedora 项目播客\nPodcast Projets Libres\nFull Circle 每周新闻\nDistrohoppers' Digest\n最新新闻与更新\n新闻过滤选项\n\n发行版发布：Manjaro Linux 26.1.0\n\nPhilip Müller 宣布发布 Manjaro Linux 26.1.0，这是该项目滚动发行系列的新稳定版本，提供 GNOME、KDE Plasma 和 Xfce 桌面环境。本次更新将 GNOME 桌面升级至 50 版本，KDE Plasma 升级至 6.7 版本：\n\n“Manjaro 26.1 'Bian-May' 已发布。自 2026 年 1 月发布 'Anh-Linh' 以来，我们一直努力推出 Manjaro 的下一个版本。我们将其命名为 'Bian-May'。GNOME 版本已收到多项更新，升级至 GNOME 50 系列。这包括 GNOME 50 于 2026 年 3 月最初发布以来的大量修复和打磨。GNOME 的家长控制在 GNOME 50 中取得了巨大进步。家长和监护人现在首次可以监控屏幕时间，并为儿童账户设置限制，包括就寝时间表。新功能允许在达到屏幕时间限制或就寝时间时自动锁定屏幕。家长和监护人还可以在需要时延长屏幕时间。我们还从巴西的姊妹项目 Big Linux 引入了 Big Parental Controls 1.0，以符合当地最近的法律要求。”\n\n更多信息请参阅发布公告。\n\nmanjaro-gnome-26.1.0-260812-linux71.iso\nmanjaro-kde-26.1.0-260812-linux71.iso\nmanjaro-xfce-26.1.0-260812-linux71.iso\n\n近期相关新闻与发布\n\n发行版发布：Manjaro Linux 26.1.0\n发行版发布：Manjaro Linux 26.0\n发行版发布：Manjaro Linux 25.0.0\n发行版发布：Manjaro Linux 24.2.0\n发行版发布：Manjaro Linux 24.1.0\n发行版发布：Manjaro Linux 24.0\n\nManjaro Linux 是一款基于 Arch Linux 的快速、用户友好、面向桌面的操作系统。主要特点包括直观的安装过程、自动硬件检测、稳定的滚动发布模式、支持安装多个内核、用于管理显卡驱动程序的特殊 Bash 脚本以及广泛的桌面可配置性。Manjar"
+  },
+  "cd86d809b7f1dd5c056c28f97ef76a76": {
+    "id": "cd86d809b7f1dd5c056c28f97ef76a76",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Comma.ai-PCIe-Gen4-USB4-Dock",
+    "title_en": "Comma.ai Launches A PCIe Gen4 x4 To USB4 Dock With Open-Source Firmware",
+    "summary_en": "George Hotz of Comma.ai and Tinygrad today announced the Tiny Chestnut eGPU Dock and the \"Chestnut\" Dock complete with an AMD Radeon RX 9060 8GB GPU too. Making this Chestnut / Tiny Chestnut Dock interesting is that it runs on open-source firmware...",
+    "pub_date": "Wed, 12 Aug 2026 20:35:57 -0400",
+    "title_zh": "Comma.ai 推出采用开源固件的 PCIe Gen4 x4 转 USB4 扩展坞",
+    "summary_zh": "Comma.ai 与 Tinygrad 的创始人 George Hotz 今日发布了 Tiny Chestnut eGPU 扩展坞及配备 AMD Radeon RX 9060 8GB GPU 的 Chestnut 扩展坞。该扩展坞运行开源固件，主要面向高级驾驶辅助系统，支持更大规模的驾驶模型，功耗从 10 瓦扩展至 100 瓦。此外，它也可连接普通 PC 使用，兼容 Tinygrad，固件基于 C 语言，适用于 ASM2464PD USB4/Thunderbolt 转 NVMe 桥接控制器。Tiny Chestnut 售价 249 美元，含 GPU 的 Chestnut 售价 799 美元。",
+    "fulltext_zh": "Comma.ai 推出采用开源固件的 PCIe Gen4 x4 转 USB4 扩展坞 - Phoronix\n\nComma.ai 推出采用开源固件的 PCIe Gen4 x4 转 USB4 扩展坞\n\n2026年8月12日晚上8点35分（美国东部时间）\n\nComma.ai 和 Tinygrad 的 George Hotz 今天宣布推出 Tiny Chestnut eGPU 扩展坞和“Chestnut”扩展坞，后者配备 AMD Radeon RX 9060 8GB GPU。这款 Chestnut / Tiny Chestnut 扩展坞的特别之处在于它运行开源固件。\n\nComma.ai 推出 Chestnut 的主要目的是为其高级驾驶辅助系统支持更大的驾驶模型。目前系统受限于 10 瓦的计算功耗，而使用 Chestnut 可以将功耗扩展到 100 瓦，并借助 Radeon RX 9060 等 GPU 处理更大的模型。\n\n与此同时，Comma.ai 推出了新的 10 亿参数驾驶模型，随即将发布的 OpenPilot 0.11.2 一同推出。借助这款增强型 eGPU 扩展坞，他们甚至指出你可以将显卡安装在车辆座椅下方或乘客脚部空间。\n\n所有细节都可以在[相关页面]找到。对我们来说更有趣的是，它也可以连接到普通 PC 使用，不仅限于 Comma.ai 驾驶系统。此外，它运行开源固件。固件发布在[GitHub]上，是基于 C 语言的固件，适用于 ASM2464PD USB4/Thunderbolt 转 NVMe 桥接控制器。\n\nChestnut 可以连接到计算机，像其他 USB4 扩展坞一样使用。它也兼容 Tinygrad。\n\nTiny Chestnut eGPU 扩展坞单独售价为 249 美元。而包含 Radeon RX 9060 的 Chestnut 目前售价为 799 美元。想了解更多信息，可以访问[相关链接]。\n\nLACT 0.10 发布，新增 NVIDIA 超频控制、Blackwell 热点传感器\n\n五款更多联想笔记本电脑将在 Linux 7.3 中报告风扇传感器\n\n针对运行 Linux 的 AMD Athlon XP 时代系统的小幅优化即将到来\n\nLinux 7.3 因安全问题移除旧 SGI 驱动\n\n戴尔 Latitude 7320 二合一笔记本在 Linux 上五年后获得摄像头支持\n\n新 Linux 补丁启用 ASUS ROG Ryujin III 监控支持\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过[相关链接]关注他。\n\nLinux 的暂存区将拒绝 LLM 生成的补丁，除非是真正的安全修复\n\nCloudflare 宣布开源 Cloudflare OS 作为 AI“操作系统”\n\nLinux 意外在内核锁定模式下遗留了传统 I/O 和内存处理程序\n\nWine 11.15 发布，包含 Wayland 修复和 20 年历史的 MSXML3 错误修复\n\n更多旧 Linux 驱动因 AI/LLM 编码代理的噪音而面临移除\n\nGNOME 设计师勾勒出他们的一些 GNOME Shell 梦想\n\nAI 帮助为 QEMU 虚拟机创建 DirectX 11 驱动\n\nKDE Plasma 6.8 改进 UI，内置远程桌面服务器\n\n虽然拥有无广告浏览，\n\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026 由[Phoronix Media]所有\n\n所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "1103bf871185ba6537bffc95f3f95cf1": {
+    "id": "1103bf871185ba6537bffc95f3f95cf1",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Tenstorrent-Ascalon-XG-GCC",
+    "title_en": "Tenstrorrent Posts GCC Compiler Patches For Ascalon XG Core",
+    "summary_en": "While the Tenstorrent Ascalon X is known as their high performance out-of-order RISC-V RVA23 CPU core for extreme performance over the H and S models, a new GNU Compiler Collection (GCC) patch today from Tenstorrent makes known a new Ascalon XG core...",
+    "pub_date": "Wed, 12 Aug 2026 16:14:37 -0400",
+    "title_zh": "Tenstorrent为Ascalon XG核心提交GCC编译器补丁",
+    "summary_zh": "Tenstorrent近日向GCC邮件列表提交了针对其新型Ascalon XG RISC-V CPU核心的补丁。Ascalon XG是Ascalon X的变体，去除了向量加密扩展（zvkng）并降低了吞吐量，可能面向中国市场或全球非美国市场。该补丁为GCC添加了“tt-ascalon-xg”目标标识符，支持rva23s64等特性，目前正在审查中。",
+    "fulltext_zh": "Tenstorrent为Ascalon XG核心提交GCC编译器补丁 - Phoronix\n\nTenstorrent为Ascalon XG核心提交GCC编译器补丁\n\n2026年8月12日，美国东部时间下午4:14。\n\n虽然Tenstorrent的Ascalon X以其高性能乱序RISC-V RVA23 CPU核心而闻名，性能远超H和S型号，但今天Tenstorrent提交的GNU编译器集合（GCC）补丁揭示了一款新的Ascalon XG核心。\n\n这个补丁出现在GCC邮件列表中，是我第一次见到或听说Ascalon XG，显然也是谷歌搜索的首次。这是Ascalon X的一个新变体，Tenstorrent工程师正在努力将RISC-V CPU核心支持准备好，以便上游合并到开源GCC编译器中。RISC-V的zvkng是一组向量加密扩展。\n\n通过移除加密功能并降低吞吐量，Ascalon XG可能成为Tenstorrent面向中国或类似市场的出口型号。补丁中确实提到“Ascalon X的全球版本”，因此如果“全球”指的是非美国/全球范围，那么这与此相符。\n\n因此，Ascalon XG补丁与现有的Ascalon X的GCC支持非常相似，但去除了zvkng，从而保留了rva23s64、zfbfmin、zfh、zkr、zvbc、zvfbfmin、zvfbfwma、zvfh、zvl256b、smaia、smmpm、smnpm、smrnmi、smstateen、ssaia、ssstrict和svadu等特性。在RISC-V目标中，它使用“tt-ascalon-xg”目标标识符。\n\n该补丁已在GCC邮件列表中供审查。"
+  },
+  "023fd420896d4d973a04269d13ad2644": {
+    "id": "023fd420896d4d973a04269d13ad2644",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/GCC-Git-m128bit-atomic",
+    "title_en": "GCC 17 Compiler Adding \"-m128bit-atomic\" For 128-bit Atomic Memory Operations",
+    "summary_en": "Merged today to the GNU Compiler Collection Git code is the new -m128bit-atomic option for next year's GCC 17 feature release...",
+    "pub_date": "Wed, 12 Aug 2026 14:40:00 -0400",
+    "title_zh": "GCC 17 编译器新增 \"-m128bit-atomic\" 选项，支持 128 位原子内存操作",
+    "summary_zh": "GCC 17 编译器新增了 \"-m128bit-atomic\" 选项，用于在支持该特性的 Intel、AMD、兆芯（Zhaoxin）和 Hygon 处理器上生成 128 位原子内存操作的指令，从而避免使用 libatomic 库带来的开销。该选项已在 GCC Git 代码中合并，并在 64 位模式下默认启用（如果目标处理器支持）。此功能基于 Intel、AMD、Hygon 和兆芯对 128 位原子加载和存储的硬件支持保证，预计将在明年春季发布的 GCC 17.1 稳定版中提供。",
+    "fulltext_zh": "GCC 17 编译器新增 \"-m128bit-atomic\" 选项，用于 128 位原子内存操作 - Phoronix\n\nGCC 17 编译器新增 \"-m128bit-atomic\" 选项，用于 128 位原子内存操作\n发布于 2026 年 8 月 12 日下午 2:40（美国东部时间）\n\n今天合并到 GNU 编译器集合 Git 代码中的是明年 GCC 17 功能版本的新选项。该选项用于让 GCC 在支持的 Intel / AMD / 兆芯 / Hygon 处理器上生成 128 位原子内存操作的指令。这个 GCC 内置选项可以避免使用 libatomic 库带来的开销。\n\n除了添加 -m128bit-atomic 本身之外，新的 GCC Git 代码现在还在目标处理器支持的情况下（通过或类似方式）默认启用该选项。添加此选项是在 x86_64 CPU 厂商确认其对 128 位原子加载和存储的支持之后进行的。\n\nx86-64：添加 -m128bit-atomic\n\n凭借 Intel、AMD、Hygon 和兆芯在以下链接中提供的硅厂商保证：\nhttps://gcc.gnu.org/bugzilla/show_bug.cgi?id=104688\n许多软件开发人员会乐意在他们的程序中使用内联的 128 位原子加载和存储，因为他们只针对兼容的 CPU。添加 -m128bit-atomic 以生成 128 位原子加载和存储，避免调用 libatomic 的开销。在 64 位模式下，如果目标处理器支持，则默认启用 -m128bit-atomic，这些处理器包括支持 x86-64-v3 的处理器以及来自 Intel、AMD、Hygon 和兆芯的支持 AVX 的处理器。\n\n该支持已通过合并。请期待明年春季发布的 GCC 17.1 稳定版中的这一功能。\n\nTenstrorrent 发布针对 Ascalon XG Core 的 GCC 编译器补丁\nGCC 16.2 发布，包含 100 多项修复\nRust Coreutils 0.10 发布，增强安全性并提高 GNU 兼容性\nGCC 将拒绝任何通过 AI/LLM 做出的重大贡献 - 测试用例除外\nGNU Binutils 2.47 发布，包含更多 RISC-V 扩展和新选项\nGNU C 库 2.44 发布，包含 /etc/tunables.conf 和更多优化\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动程序和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过关注他。\n\nLinux 的暂存区现在将拒绝 LLM 生成的补丁，真正的安全修复除外\nCloudflare 宣布开源 Cloudflare OS 作为 AI \"操作系统\"\nLinux 意外在内核锁定模式下遗留了旧版 I/O 和内存处理程序\nWine 11.15 发布，包含 Wayland 修复和 20 年历史的 MSXML3 错误修复\n更多旧版 Linux 驱动程序因 AI/LLM 编码代理的噪音而面临移除\nGNOME 设计师展示他们的一些 GNOME Shell 愿景\nAI 帮助为 QEMU 虚拟机创建了 DirectX 11 驱动程序\nKDE Plasma 6.8 改进 UI，内置远程桌面服务器\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "37a987af54ef2ea51b90b6051dd1d7a7": {
+    "id": "37a987af54ef2ea51b90b6051dd1d7a7",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Manjaro-Linux-26.1",
+    "title_en": "Manjaro Linux 26.1 Released With GNOME 50 & KDE Plasma 6.7 Desktops",
+    "summary_en": "Manjaro 26.1 Bian-May is now available as the newest feature release to this desktop Linux distribution built atop an Arch Linux base...",
+    "pub_date": "Wed, 12 Aug 2026 14:28:03 -0400",
+    "title_zh": "Manjaro Linux 26.1 发布，搭载 GNOME 50 与 KDE Plasma 6.7 桌面环境",
+    "summary_zh": "Manjaro Linux 26.1（代号 Bian-May）正式发布，这是基于 Arch Linux 的桌面发行版自 1 月 26.0 版本以来的首个新版本。本次更新带来了大量新软件包，其中最引人注目的是 GNOME 50 和 KDE Plasma 6.7 桌面环境，同时提供轻量级的 Xfce 4.20。系统默认使用 Linux 7.1 稳定内核，并可选 Linux 6.18 LTS 和 6.12 LTS 内核。",
+    "fulltext_zh": "Manjaro Linux 26.1 发布，搭载 GNOME 50 与 KDE Plasma 6.7 桌面环境 - Phoronix\n\nManjaro Linux 26.1 发布，搭载 GNOME 50 与 KDE Plasma 6.7 桌面环境\n2026年8月12日下午2:28（美国东部时间）\n\nManjaro 26.1 Bian-May 现已发布，这是这款基于 Arch Linux 的桌面 Linux 发行版的最新功能版本。\n\n这是自 1 月份 Manjaro 26.0 以来的首个新标签版本。Manjaro 26.1 带来了许多新软件包。其中，面向用户最直观的更新是提供了 GNOME 50 和 KDE Plasma 6.7 桌面环境。此外，对于偏好轻量级桌面的用户，还提供了 Xfce 4.20。\n\nManjaro Linux 26.1 采用 Linux 7.1 稳定内核，同时为感兴趣的用户提供 Linux 6.18 LTS 和 Linux 6.12 LTS 内核。\n\n有关 Manjaro 26.1 的更多详情，请访问：\n\nRedox OS 获得安装程序改进与性能增强\nLinux Mint 改进内核管理及系统级环境变量设置\nCachyOS 2026年8月版本为即将推出的服务器版做准备\nAerynOS 发布三个月来首个开发更新及新 ISO\nHaiku 合并 NVMM 以支持初步虚拟化，但尚未完全可用\nRedox OS 为 Orbital 桌面引入 GTK3 后端、分数缩放及 USB 手柄支持\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nLinux 暂存区将拒绝 LLM 生成的补丁，但真正的安全修复除外\nCloudflare 宣布开源 Cloudflare OS 作为 AI“操作系统”\nLinux 在锁定模式下意外遗留了传统 I/O 和内存处理程序\nWine 11.15 发布，包含 Wayland 修复及一个 20 年历史的 MSXML3 错误修复\n更多旧版 Linux 驱动因 AI/LLM 编码代理的噪音而面临移除\nGNOME 设计师勾勒出部分 GNOME Shell 愿景\nAI 帮助为 QEMU 虚拟机创建 DirectX 11 驱动\nKDE Plasma 6.8 改进 UI，内置远程桌面服务器\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "b101a1efc28d09cfd1630502273fe6a1": {
+    "id": "b101a1efc28d09cfd1630502273fe6a1",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/intel-amx-xeon-678x",
+    "title_en": "Intel AMX Performance With The Xeon 678X Workstation CPU",
+    "summary_en": "One of the most compelling features for Intel Xeon 6 Granite Rapids alongside MRDIMMs is Advanced Matrix Extensions (AMX) for helping accelerate AI workloads and more. AMX is also found with the new Granite Rapids WS processors and in currently having my hands on an Intel Xeon 678X in the HP Z4 G6i workstation, I ran some benchmarks looking at the AMX performance and power impact for this high-end workstation.",
+    "pub_date": "Wed, 12 Aug 2026 13:07:34 -0400",
+    "title_zh": "Intel Xeon 678X 工作站 CPU 的 Intel AMX 性能表现",
+    "summary_zh": "本文评测了 Intel Xeon 678X 工作站处理器在 Linux 下的 AMX（高级矩阵扩展）性能与功耗影响。测试在 HP Z4 G6i 工作站上进行，配备 4×32GB DDR5-6400 内存，运行 Ubuntu 26.04 和 Linux 7.0 内核。结果显示，AMX 对 AI 工作负载及 Open Image Denoise 等软件有显著加速效果，且相比早期 AVX-512，AMX 没有带来明显的功耗或散热问题。",
+    "fulltext_zh": "Intel AMX 性能表现：Xeon 678X 工作站 CPU - Phoronix\n\nIntel AMX 性能表现：Xeon 678X 工作站 CPU\n发布于 2026 年 8 月 12 日，美国东部时间下午 01:07。\n\nIntel Xeon 6 Granite Rapids 最引人注目的特性之一，是用于加速 AI 工作负载等的先进矩阵扩展（AMX）。AMX 同样出现在新的 Granite Rapids WS 处理器中，而我目前正在使用 HP Z4 G6i 工作站中的 Intel Xeon 678X，因此我运行了一些基准测试，以考察这款高端工作站的 AMX 性能与功耗影响。\n\n继 Phoronix 对支持 AMX 的 Xeon 服务器处理器进行测试之后，本轮测试聚焦于 Xeon 678X 工作站处理器在 Linux 下、搭配兼容软件时的 AMX 优势。尤其是 AI 工作负载，以及其他特定软件（如针对 AMX-BF16 适配的 Open Image Denoise），AMX 能带来非常显著的性能提升。\n\n与早期支持 AVX-512 的 Xeon 服务器/工作站 CPU 不同，AMX 不会带来较大的功耗或散热影响，这一点也在最新一轮测试中得到了证实。\n\n本轮测试在 HP Z4 G6i 工作站上进行，配备 Xeon 678X 和 4×32GB DDR5-6400 内存，运行 Ubuntu 26.04 和 Linux 7.0 内核。感谢 HP 提供这款评测样品，供 Phoronix 进行数周的 Linux 测试，这也是我们首次上手 Granite Rapids WS。\n\nAMD Ryzen 7 7700X3D Linux 性能\nGraviton5 超越 Intel Xeon Granite Rapids，但不及 AMD EPYC Turin\nNVIDIA GB10 CPU 性能与 Vera 对比\nNVIDIA Vera CPU 性能与 Ampere Altra Max 对比\nRISC-V CPU 性能五年提升 8 倍：SiFive HiFive Unmatched 到 SpacemiT K3\nARM Linux 服务器性能八年几何平均提升超 7 倍，NVIDIA Vera CPU 最高达 15 倍\n\n在享受无广告浏览的同时，\n单页文章查看\n法律声明、隐私政策、Cookies\n版权所有 © 2004 - 2026，由 Phoronix Media 所有。\n所有商标均为其各自所有者财产。保留所有权利。"
+  },
+  "31442303170d631f4663e149f16d622d": {
+    "id": "31442303170d631f4663e149f16d622d",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/asahi-linux-gets-closer-to-full-m3-support-on-apple-silicon-macs/",
+    "title_en": "Asahi Linux Gets Closer to Full M3 Support on Apple Silicon Macs",
+    "summary_en": "Discover how Asahi Linux is advancing towards complete M3 support for Apple Silicon Macs, enhancing performance and compatibility for users.\nThe post Asahi Linux Gets Closer to Full M3 Support on Apple Silicon Macs appeared first on Linux Today.",
+    "pub_date": "Wed, 12 Aug 2026 07:25:12 +0000",
+    "title_zh": "Asahi Linux 在 Apple Silicon Mac 上更接近全面支持 M3",
+    "summary_zh": "Asahi Linux 项目正在积极推进对 Apple Silicon Mac 上 M3 芯片的全面支持，旨在提升用户性能和兼容性。该进展标志着 Linux 在苹果硬件上的可用性进一步增强，为 Mac 用户提供了更多操作系统选择。",
+    "fulltext_zh": "了解 Asahi Linux 如何推进对 Apple Silicon Mac 上 M3 芯片的全面支持，从而提升用户的性能和兼容性。\n\n该文章《Asahi Linux Gets Closer to Full M3 Support on Apple Silicon Macs》首次出现在 Linux Today 上。"
+  },
+  "9c5e1a3e9fb081dc53ff691c9c5a7951": {
+    "id": "9c5e1a3e9fb081dc53ff691c9c5a7951",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/canonical-confirms-ubuntu-fixes-for-dirtyclone-linux-kernel-flaw/",
+    "title_en": "Canonical Confirms Ubuntu Fixes for DirtyClone Linux Kernel Flaw",
+    "summary_en": "Canonical has confirmed the release of fixes for the DirtyClone Linux kernel flaw in Ubuntu, ensuring enhanced security and system stability for users.\nThe post Canonical Confirms Ubuntu Fixes for DirtyClone Linux Kernel Flaw appeared first on Linux Today.",
+    "pub_date": "Wed, 12 Aug 2026 07:22:29 +0000",
+    "title_zh": "Canonical确认Ubuntu修复DirtyClone Linux内核漏洞",
+    "summary_zh": "Canonical已确认发布针对DirtyClone Linux内核漏洞的Ubuntu修复程序，确保用户获得增强的安全性和系统稳定性。该漏洞影响Linux内核，可能允许本地攻击者利用竞态条件提升权限。Canonical的修复补丁已推送到受影响的Ubuntu版本，用户应及时更新系统以防范潜在风险。",
+    "fulltext_zh": "Canonical已确认发布针对DirtyClone Linux内核漏洞的Ubuntu修复程序，确保用户获得增强的安全性和系统稳定性。\n\n该消息最初发布于Linux Today。"
+  },
+  "77119a1274398f4f0bda7d935b6ed27a": {
+    "id": "77119a1274398f4f0bda7d935b6ed27a",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/set-up-a-local-caching-dns-resolver-with-unbound-on-rocky-linux-10/",
+    "title_en": "Set Up a Local Caching DNS Resolver with Unbound on Rocky Linux 10",
+    "summary_en": "Discover how to set up a local caching DNS resolver using Unbound on Rocky Linux 10. Enhance your network's performance and reliability today.\nThe post Set Up a Local Caching DNS Resolver with Unbound on Rocky Linux 10 appeared first on Linux Today.",
+    "pub_date": "Wed, 12 Aug 2026 07:21:09 +0000",
+    "title_zh": "在Rocky Linux 10上使用Unbound设置本地缓存DNS解析器",
+    "summary_zh": "本文介绍了如何在Rocky Linux 10上使用Unbound配置本地缓存DNS解析器。通过设置本地缓存，可以显著提升DNS查询速度，减少对外部DNS服务器的依赖，增强网络性能和可靠性。文章提供了详细的步骤，包括安装Unbound、配置相关参数、启动服务以及测试解析功能，帮助用户快速搭建高效的本地DNS解析环境。",
+    "fulltext_zh": "了解如何在Rocky Linux 10上使用Unbound设置本地缓存DNS解析器。立即提升您网络的性能和可靠性。\n\n该文章《在Rocky Linux 10上使用Unbound设置本地缓存DNS解析器》首次出现在Linux Today上。"
+  },
+  "1f95e5865d534e5cc6ed3e0c00364c9b": {
+    "id": "1f95e5865d534e5cc6ed3e0c00364c9b",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/virtualbox-7-2-12-fixes-linux-host-kernel-panic/",
+    "title_en": "VirtualBox 7.2.12 Fixes Linux Host Kernel Panic",
+    "summary_en": "Learn about the critical fixes in VirtualBox 7.2.12 that address Linux host kernel panic, improving reliability and user satisfaction in virtual setups.\nThe post VirtualBox 7.2.12 Fixes Linux Host Kernel Panic appeared first on Linux Today.",
+    "pub_date": "Wed, 12 Aug 2026 07:18:21 +0000",
+    "title_zh": "VirtualBox 7.2.12 修复 Linux 主机内核崩溃",
+    "summary_zh": "VirtualBox 7.2.12 版本发布，重点修复了导致 Linux 主机内核崩溃的关键问题，显著提升了虚拟化环境的稳定性和用户体验。该更新解决了影响系统可靠性的严重缺陷，确保虚拟化工作负载在 Linux 主机上更安全、更顺畅地运行。",
+    "fulltext_zh": "了解 VirtualBox 7.2.12 中的关键修复，这些修复解决了 Linux 主机内核崩溃问题，提高了虚拟化环境中的可靠性和用户满意度。\n\n该文章 VirtualBox 7.2.12 Fixes Linux Host Kernel Panic 首次出现在 Linux Today 上。"
+  },
+  "99cd60140d259a3130fbe9b694875b63": {
+    "id": "99cd60140d259a3130fbe9b694875b63",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/cosmic-desktop-1-2-released-with-file-manager-fixes-and-more-polish/",
+    "title_en": "COSMIC Desktop 1.2 Released with File Manager Fixes and More Polish",
+    "summary_en": "Discover the latest updates in COSMIC Desktop 1.2, featuring essential file manager fixes and enhanced polish for a smoother user experience.\nThe post COSMIC Desktop 1.2 Released with File Manager Fixes and More Polish appeared first on Linux Today.",
+    "pub_date": "Wed, 12 Aug 2026 07:15:11 +0000",
+    "title_zh": "COSMIC桌面环境1.2发布：文件管理器修复与更多优化",
+    "summary_zh": "COSMIC桌面环境1.2版本正式发布，本次更新重点修复了文件管理器中的关键问题，并进行了多项细节优化，旨在为用户提供更流畅、更精致的桌面体验。该版本进一步提升了系统的稳定性和易用性，是COSMIC桌面环境持续完善的重要一步。",
+    "fulltext_zh": "探索COSMIC桌面环境1.2的最新更新，其中包含必要的文件管理器修复和增强的细节优化，为用户带来更流畅的体验。\n\n该文章《COSMIC桌面环境1.2发布：文件管理器修复与更多优化》最初出现在Linux Today上。"
   }
 }

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：SparkyLinux 8.4 — Linux 中文速报</title>
+<title>Intel Xeon 678X 工作站 CPU 的 Intel AMX 性能表现 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：SparkyLinux 8.4</h1>
+  <h1>Intel Xeon 678X 工作站 CPU 的 Intel AMX 性能表现</h1>
 
-  <div class="article-summary">SparkyLinux 8.4 发布，这是一个基于 Debian 的发行版，提供多种桌面环境。该版本重新引入了对 32 位 x86 机器的支持，因为开发团队发现全球仍有大量用户在使用配备 32 位处理器的老旧但功能正常的电脑。除了 x86_64 和 Aarch64 版本外，新版本还提供 i686-pae 的 live/install 镜像，以及超轻量级的 Openbox 和 CLI 版本供用户自行配置。所有软件包均已更新至 2026 年 8 月 9 日的稳定版仓库。</div>
+  <div class="article-summary">本文评测了 Intel Xeon 678X 工作站处理器在 Linux 下的 AMX（高级矩阵扩展）性能与功耗影响。测试在 HP Z4 G6i 工作站上进行，配备 4×32GB DDR5-6400 内存，运行 Ubuntu 26.04 和 Linux 7.0 内核。结果显示，AMX 对 AI 工作负载及 Open Image Denoise 等软件有显著加速效果，且相比早期 AVX-512，AMX 没有带来明显的功耗或散热问题。</div>
 
-  <div class="article-body"><p>发行版发布：SparkyLinux 8.4</p><p>SparkyLinux 是一个基于 Debian 的发行版，提供多种桌面版本。该项目的最新版本 SparkyLinux 8.4 重新引入了对 x86 机器的 32 位支持。</p><p>&quot;一年前，Debian 放弃了对 32 位 live/install ISO 镜像的支持，因此 SparkyLinux 也跟随放弃了。这一决定现已被重新评估，因为事实证明，世界上仍有相当多的人拥有配备 32 位处理器的'非常老旧'但仍然功能正常的电脑。这就是为什么 SparkyLinux 8.4 恢复了对 32 位机器的支持，除了 x86_64 和 Aarch64 版本外，还提供 i686-pae 的 live/install 镜像，以及超轻量级的 Openbox 和 CLI 版本供用户按需自行配置。主要变化：所有软件包均已从 Debian 稳定版和 SparkyLinux 仓库更新至 2026 年 8 月 9 日；PC 64 位 Linux 内核 6.12.101 LTS（SparkyLinux 仓库中为 7.1.8、6.18.43-LTS、6.12.102 LTS）；Arm64 Linux 内核 6.18.39；PC 32 位 Linux 内核 6.12.102 LTS；LibreOffice 25.2.3（Debian backports 仓库中为 26.2.4）；KDE Plasma 6.3.6....&quot;</p><p>关于新版本的更多信息可以在[项目发布公告](https://sparkylinux.org/sparky-8-4/)中找到。</p><p>下载镜像：</p><p>- sparkylinux-8.4-x86_64-kde.iso</p><p>- sparkylinux-8.4-x86_64-lxqt.iso</p><p>- sparkylinux-8.4-x86_64-mate.iso</p><p>- sparkylinux-8.4-x86_64-xfce.iso</p><p>近期相关新闻和发布：</p><p>- 发行版发布：SparkyLinux 8.4</p><p>- 发行版发布：SparkyLinux 2026.03</p><p>- 发行版发布：SparkyLinux 8.2</p><p>- 发行版发布：SparkyLinux 8.1</p><p>- 发行版发布：SparkyLinux 2025.09</p><p>- 发行版发布：SparkyLinux 8.0</p><p>- 更多 SparkyLinux 新闻...</p><p>SparkyLinux 是一组基于 Debian 的桌面 Linux 发行版。该项目提供带有 KDE Plasma、LXQt、MATE 和 Xfce 桌面的独立版本，以及一个使用 Openbox 窗口管理器的轻量级版本。它提供两种产品变体——一种基于 Debian 的 &quot;Stable&quot; 分支，较为保守；另一种则源自 Debian &quot;Testing&quot;，更新更及时。</p><p>- https://sparkylinux.org/</p><p>- https://forum.sparkylinux.org/</p></div>
+  <div class="article-body"><p>Intel AMX 性能表现：Xeon 678X 工作站 CPU - Phoronix</p><p>Intel AMX 性能表现：Xeon 678X 工作站 CPU</p><p>发布于 2026 年 8 月 12 日，美国东部时间下午 01:07。</p><p>Intel Xeon 6 Granite Rapids 最引人注目的特性之一，是用于加速 AI 工作负载等的先进矩阵扩展（AMX）。AMX 同样出现在新的 Granite Rapids WS 处理器中，而我目前正在使用 HP Z4 G6i 工作站中的 Intel Xeon 678X，因此我运行了一些基准测试，以考察这款高端工作站的 AMX 性能与功耗影响。</p><p>继 Phoronix 对支持 AMX 的 Xeon 服务器处理器进行测试之后，本轮测试聚焦于 Xeon 678X 工作站处理器在 Linux 下、搭配兼容软件时的 AMX 优势。尤其是 AI 工作负载，以及其他特定软件（如针对 AMX-BF16 适配的 Open Image Denoise），AMX 能带来非常显著的性能提升。</p><p>与早期支持 AVX-512 的 Xeon 服务器/工作站 CPU 不同，AMX 不会带来较大的功耗或散热影响，这一点也在最新一轮测试中得到了证实。</p><p>本轮测试在 HP Z4 G6i 工作站上进行，配备 Xeon 678X 和 4×32GB DDR5-6400 内存，运行 Ubuntu 26.04 和 Linux 7.0 内核。感谢 HP 提供这款评测样品，供 Phoronix 进行数周的 Linux 测试，这也是我们首次上手 Granite Rapids WS。</p><p>AMD Ryzen 7 7700X3D Linux 性能</p><p>Graviton5 超越 Intel Xeon Granite Rapids，但不及 AMD EPYC Turin</p><p>NVIDIA GB10 CPU 性能与 Vera 对比</p><p>NVIDIA Vera CPU 性能与 Ampere Altra Max 对比</p><p>RISC-V CPU 性能五年提升 8 倍：SiFive HiFive Unmatched 到 SpacemiT K3</p><p>ARM Linux 服务器性能八年几何平均提升超 7 倍，NVIDIA Vera CPU 最高达 15 倍</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由 Phoronix Media 所有。</p><p>所有商标均为其各自所有者财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12919" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/review/intel-amx-xeon-678x" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

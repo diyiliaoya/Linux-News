@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：SparkyLinux 8.4 — Linux 中文速报</title>
+<title>GCC 17 编译器新增 &quot;-m128bit-atomic&quot; 选项，支持 128 位原子内存操作 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：SparkyLinux 8.4</h1>
+  <h1>GCC 17 编译器新增 &quot;-m128bit-atomic&quot; 选项，支持 128 位原子内存操作</h1>
 
-  <div class="article-summary">SparkyLinux 8.4 发布，这是一个基于 Debian 的发行版，提供多种桌面环境。该版本重新引入了对 32 位 x86 机器的支持，因为开发团队发现全球仍有大量用户在使用配备 32 位处理器的老旧但功能正常的电脑。除了 x86_64 和 Aarch64 版本外，新版本还提供 i686-pae 的 live/install 镜像，以及超轻量级的 Openbox 和 CLI 版本供用户自行配置。所有软件包均已更新至 2026 年 8 月 9 日的稳定版仓库。</div>
+  <div class="article-summary">GCC 17 编译器新增了 &quot;-m128bit-atomic&quot; 选项，用于在支持该特性的 Intel、AMD、兆芯（Zhaoxin）和 Hygon 处理器上生成 128 位原子内存操作的指令，从而避免使用 libatomic 库带来的开销。该选项已在 GCC Git 代码中合并，并在 64 位模式下默认启用（如果目标处理器支持）。此功能基于 Intel、AMD、Hygon 和兆芯对 128 位原子加载和存储的硬件支持保证，预计将在明年春季发布的 GCC 17.1 稳定版中提供。</div>
 
-  <div class="article-body"><p>发行版发布：SparkyLinux 8.4</p><p>SparkyLinux 是一个基于 Debian 的发行版，提供多种桌面版本。该项目的最新版本 SparkyLinux 8.4 重新引入了对 x86 机器的 32 位支持。</p><p>&quot;一年前，Debian 放弃了对 32 位 live/install ISO 镜像的支持，因此 SparkyLinux 也跟随放弃了。这一决定现已被重新评估，因为事实证明，世界上仍有相当多的人拥有配备 32 位处理器的'非常老旧'但仍然功能正常的电脑。这就是为什么 SparkyLinux 8.4 恢复了对 32 位机器的支持，除了 x86_64 和 Aarch64 版本外，还提供 i686-pae 的 live/install 镜像，以及超轻量级的 Openbox 和 CLI 版本供用户按需自行配置。主要变化：所有软件包均已从 Debian 稳定版和 SparkyLinux 仓库更新至 2026 年 8 月 9 日；PC 64 位 Linux 内核 6.12.101 LTS（SparkyLinux 仓库中为 7.1.8、6.18.43-LTS、6.12.102 LTS）；Arm64 Linux 内核 6.18.39；PC 32 位 Linux 内核 6.12.102 LTS；LibreOffice 25.2.3（Debian backports 仓库中为 26.2.4）；KDE Plasma 6.3.6....&quot;</p><p>关于新版本的更多信息可以在[项目发布公告](https://sparkylinux.org/sparky-8-4/)中找到。</p><p>下载镜像：</p><p>- sparkylinux-8.4-x86_64-kde.iso</p><p>- sparkylinux-8.4-x86_64-lxqt.iso</p><p>- sparkylinux-8.4-x86_64-mate.iso</p><p>- sparkylinux-8.4-x86_64-xfce.iso</p><p>近期相关新闻和发布：</p><p>- 发行版发布：SparkyLinux 8.4</p><p>- 发行版发布：SparkyLinux 2026.03</p><p>- 发行版发布：SparkyLinux 8.2</p><p>- 发行版发布：SparkyLinux 8.1</p><p>- 发行版发布：SparkyLinux 2025.09</p><p>- 发行版发布：SparkyLinux 8.0</p><p>- 更多 SparkyLinux 新闻...</p><p>SparkyLinux 是一组基于 Debian 的桌面 Linux 发行版。该项目提供带有 KDE Plasma、LXQt、MATE 和 Xfce 桌面的独立版本，以及一个使用 Openbox 窗口管理器的轻量级版本。它提供两种产品变体——一种基于 Debian 的 &quot;Stable&quot; 分支，较为保守；另一种则源自 Debian &quot;Testing&quot;，更新更及时。</p><p>- https://sparkylinux.org/</p><p>- https://forum.sparkylinux.org/</p></div>
+  <div class="article-body"><p>GCC 17 编译器新增 &quot;-m128bit-atomic&quot; 选项，用于 128 位原子内存操作 - Phoronix</p><p>GCC 17 编译器新增 &quot;-m128bit-atomic&quot; 选项，用于 128 位原子内存操作</p><p>发布于 2026 年 8 月 12 日下午 2:40（美国东部时间）</p><p>今天合并到 GNU 编译器集合 Git 代码中的是明年 GCC 17 功能版本的新选项。该选项用于让 GCC 在支持的 Intel / AMD / 兆芯 / Hygon 处理器上生成 128 位原子内存操作的指令。这个 GCC 内置选项可以避免使用 libatomic 库带来的开销。</p><p>除了添加 -m128bit-atomic 本身之外，新的 GCC Git 代码现在还在目标处理器支持的情况下（通过或类似方式）默认启用该选项。添加此选项是在 x86_64 CPU 厂商确认其对 128 位原子加载和存储的支持之后进行的。</p><p>x86-64：添加 -m128bit-atomic</p><p>凭借 Intel、AMD、Hygon 和兆芯在以下链接中提供的硅厂商保证：</p><p>https://gcc.gnu.org/bugzilla/show_bug.cgi?id=104688</p><p>许多软件开发人员会乐意在他们的程序中使用内联的 128 位原子加载和存储，因为他们只针对兼容的 CPU。添加 -m128bit-atomic 以生成 128 位原子加载和存储，避免调用 libatomic 的开销。在 64 位模式下，如果目标处理器支持，则默认启用 -m128bit-atomic，这些处理器包括支持 x86-64-v3 的处理器以及来自 Intel、AMD、Hygon 和兆芯的支持 AVX 的处理器。</p><p>该支持已通过合并。请期待明年春季发布的 GCC 17.1 稳定版中的这一功能。</p><p>Tenstrorrent 发布针对 Ascalon XG Core 的 GCC 编译器补丁</p><p>GCC 16.2 发布，包含 100 多项修复</p><p>Rust Coreutils 0.10 发布，增强安全性并提高 GNU 兼容性</p><p>GCC 将拒绝任何通过 AI/LLM 做出的重大贡献 - 测试用例除外</p><p>GNU Binutils 2.47 发布，包含更多 RISC-V 扩展和新选项</p><p>GNU C 库 2.44 发布，包含 /etc/tunables.conf 和更多优化</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动程序和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过关注他。</p><p>Linux 的暂存区现在将拒绝 LLM 生成的补丁，真正的安全修复除外</p><p>Cloudflare 宣布开源 Cloudflare OS 作为 AI &quot;操作系统&quot;</p><p>Linux 意外在内核锁定模式下遗留了旧版 I/O 和内存处理程序</p><p>Wine 11.15 发布，包含 Wayland 修复和 20 年历史的 MSXML3 错误修复</p><p>更多旧版 Linux 驱动程序因 AI/LLM 编码代理的噪音而面临移除</p><p>GNOME 设计师展示他们的一些 GNOME Shell 愿景</p><p>AI 帮助为 QEMU 虚拟机创建了 DirectX 11 驱动程序</p><p>KDE Plasma 6.8 改进 UI，内置远程桌面服务器</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12919" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/GCC-Git-m128bit-atomic" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：SparkyLinux 8.4 — Linux 中文速报</title>
+<title>Tenstorrent为Ascalon XG核心提交GCC编译器补丁 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：SparkyLinux 8.4</h1>
+  <h1>Tenstorrent为Ascalon XG核心提交GCC编译器补丁</h1>
 
-  <div class="article-summary">SparkyLinux 8.4 发布，这是一个基于 Debian 的发行版，提供多种桌面环境。该版本重新引入了对 32 位 x86 机器的支持，因为开发团队发现全球仍有大量用户在使用配备 32 位处理器的老旧但功能正常的电脑。除了 x86_64 和 Aarch64 版本外，新版本还提供 i686-pae 的 live/install 镜像，以及超轻量级的 Openbox 和 CLI 版本供用户自行配置。所有软件包均已更新至 2026 年 8 月 9 日的稳定版仓库。</div>
+  <div class="article-summary">Tenstorrent近日向GCC邮件列表提交了针对其新型Ascalon XG RISC-V CPU核心的补丁。Ascalon XG是Ascalon X的变体，去除了向量加密扩展（zvkng）并降低了吞吐量，可能面向中国市场或全球非美国市场。该补丁为GCC添加了“tt-ascalon-xg”目标标识符，支持rva23s64等特性，目前正在审查中。</div>
 
-  <div class="article-body"><p>发行版发布：SparkyLinux 8.4</p><p>SparkyLinux 是一个基于 Debian 的发行版，提供多种桌面版本。该项目的最新版本 SparkyLinux 8.4 重新引入了对 x86 机器的 32 位支持。</p><p>&quot;一年前，Debian 放弃了对 32 位 live/install ISO 镜像的支持，因此 SparkyLinux 也跟随放弃了。这一决定现已被重新评估，因为事实证明，世界上仍有相当多的人拥有配备 32 位处理器的'非常老旧'但仍然功能正常的电脑。这就是为什么 SparkyLinux 8.4 恢复了对 32 位机器的支持，除了 x86_64 和 Aarch64 版本外，还提供 i686-pae 的 live/install 镜像，以及超轻量级的 Openbox 和 CLI 版本供用户按需自行配置。主要变化：所有软件包均已从 Debian 稳定版和 SparkyLinux 仓库更新至 2026 年 8 月 9 日；PC 64 位 Linux 内核 6.12.101 LTS（SparkyLinux 仓库中为 7.1.8、6.18.43-LTS、6.12.102 LTS）；Arm64 Linux 内核 6.18.39；PC 32 位 Linux 内核 6.12.102 LTS；LibreOffice 25.2.3（Debian backports 仓库中为 26.2.4）；KDE Plasma 6.3.6....&quot;</p><p>关于新版本的更多信息可以在[项目发布公告](https://sparkylinux.org/sparky-8-4/)中找到。</p><p>下载镜像：</p><p>- sparkylinux-8.4-x86_64-kde.iso</p><p>- sparkylinux-8.4-x86_64-lxqt.iso</p><p>- sparkylinux-8.4-x86_64-mate.iso</p><p>- sparkylinux-8.4-x86_64-xfce.iso</p><p>近期相关新闻和发布：</p><p>- 发行版发布：SparkyLinux 8.4</p><p>- 发行版发布：SparkyLinux 2026.03</p><p>- 发行版发布：SparkyLinux 8.2</p><p>- 发行版发布：SparkyLinux 8.1</p><p>- 发行版发布：SparkyLinux 2025.09</p><p>- 发行版发布：SparkyLinux 8.0</p><p>- 更多 SparkyLinux 新闻...</p><p>SparkyLinux 是一组基于 Debian 的桌面 Linux 发行版。该项目提供带有 KDE Plasma、LXQt、MATE 和 Xfce 桌面的独立版本，以及一个使用 Openbox 窗口管理器的轻量级版本。它提供两种产品变体——一种基于 Debian 的 &quot;Stable&quot; 分支，较为保守；另一种则源自 Debian &quot;Testing&quot;，更新更及时。</p><p>- https://sparkylinux.org/</p><p>- https://forum.sparkylinux.org/</p></div>
+  <div class="article-body"><p>Tenstorrent为Ascalon XG核心提交GCC编译器补丁 - Phoronix</p><p>Tenstorrent为Ascalon XG核心提交GCC编译器补丁</p><p>2026年8月12日，美国东部时间下午4:14。</p><p>虽然Tenstorrent的Ascalon X以其高性能乱序RISC-V RVA23 CPU核心而闻名，性能远超H和S型号，但今天Tenstorrent提交的GNU编译器集合（GCC）补丁揭示了一款新的Ascalon XG核心。</p><p>这个补丁出现在GCC邮件列表中，是我第一次见到或听说Ascalon XG，显然也是谷歌搜索的首次。这是Ascalon X的一个新变体，Tenstorrent工程师正在努力将RISC-V CPU核心支持准备好，以便上游合并到开源GCC编译器中。RISC-V的zvkng是一组向量加密扩展。</p><p>通过移除加密功能并降低吞吐量，Ascalon XG可能成为Tenstorrent面向中国或类似市场的出口型号。补丁中确实提到“Ascalon X的全球版本”，因此如果“全球”指的是非美国/全球范围，那么这与此相符。</p><p>因此，Ascalon XG补丁与现有的Ascalon X的GCC支持非常相似，但去除了zvkng，从而保留了rva23s64、zfbfmin、zfh、zkr、zvbc、zvfbfmin、zvfbfwma、zvfh、zvl256b、smaia、smmpm、smnpm、smrnmi、smstateen、ssaia、ssstrict和svadu等特性。在RISC-V目标中，它使用“tt-ascalon-xg”目标标识符。</p><p>该补丁已在GCC邮件列表中供审查。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12919" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Tenstorrent-Ascalon-XG-GCC" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
