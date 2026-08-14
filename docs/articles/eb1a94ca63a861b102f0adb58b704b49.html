@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Linux Mint 将自动删除旧内核版本 — Linux 中文速报</title>
+<title>VLC被错误归咎于Microsoft Defender的笨拙 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">软件应用</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Linux Mint 将自动删除旧内核版本</h1>
+  <h1>VLC被错误归咎于Microsoft Defender的笨拙</h1>
 
-  <div class="article-summary">Linux Mint 宣布对其内核管理进行全面改革，现在将每周自动删除旧内核。内核管理从系统管理工具中移出，并按系列而非单个版本跟踪内核。用户可以选择跟踪哪些内核系列，以及每个系列中保留的旧内核数量。受保护的内核不会被删除，自定义内核也可标记为受保护。手动清理按钮可立即释放空间，且提供已删除内核的列表。此更改可能通过软件更新到达现有用户，或随 Linux Mint 23 发布。</div>
+  <div class="article-summary">知名游戏开发者Jonathan Blow在推特上抱怨VLC在Windows上播放MP3需要33秒，并以此批评开源软件现状。VLC官方回应称这是Windows 11/Microsoft Defender更新隔离插件缓存所致，而非VLC核心问题。一位Linux用户提供视频证据显示VLC在Linux上秒开MP3，进一步证明问题源于Windows。解决方案包括重置插件缓存、重新安装VLC或在Defender中排除vlc.exe。文章认为将个别问题上升为“开源软件糟糕”的结论过于牵强，责任应在微软。</div>
 
-  <div class="article-body"><p>Linux Mint 宣布对其内核管理进行全面改革，现在将每周自动删除旧内核。</p><p>内核管理将从标准版和 LMDE 版本的系统管理工具中移出，现在按系列而非单个版本跟踪内核。</p><p>您可以选择跟踪哪些内核系列，以及系统在每个系列中应保留的旧内核数量（除了您当前启动的内核之外；它不会自拆台脚）。</p><p>受跟踪系列的内核更新将像以前一样出现在更新管理器中，但一个显著的变化是，您较旧的、未使用的内核版本将每周自动删除。</p><p>项目负责人 Clement Lefebvre 表示，手动“清理”按钮还可让您“立即释放空间”。一个历史按钮将使您能够轻松查看已删除的内核列表及其删除时间。</p><p>扩展的内核管理选项（图片：Linux Mint / OMG! Ubuntu）</p><p>如果您担心旧内核在后台被删除，不用担心：您有控制权。</p><p>单个内核可以标记为“受保护”。这使它们免于被删除，无论其他设置或条件如何。简而言之：要防止特定内核被删除，无论它是否被跟踪，您必须在更新管理器中将其标记为受保护。</p><p>从其他系列安装内核，例如 OEM、Azure、IBM、Real Time，将提示工具列出完整系列，并为您提供跟踪它的选项。跟踪会自动安装任何相关的元包和未来更新，因此值得这样做。</p><p>虽然您可能安装的自定义内核（例如来自随机 PPA 或 .deb）无法被正确“跟踪”，但您可以将它们标记为受保护，以防止它们在清理过程中被删除。但是，Linux Mint 的工具会警告您，您有责任实际更新它们。</p><p>删除未使用的内核释放空间</p><p>您可能会惊讶于 Mint 保留了多少内核……</p><p>如果您不太关注更新，您可能不知道发布和安装了多少内核更新——并且它们会并排保留安装。在 GRUB 引导加载程序中选择您的发行版的“高级选项”，以查看所有已安装且可引导的内核列表。</p><p>在我的一台 Linux Mint 22.3 安装中，我列出了 4 个不同的内核（见上图）以及它们各自的恢复模式。保留它们很有用，但并非严格必要——尤其是多个系列内修订版。</p><p>所有这些旧内核都占用空间，如果您从不使用或需要它们（因为当前内核运行良好），那么删除它们是回收数百兆字节空间的简单方法。但是，我建议您保留一个已知的备份内核，以防万一。</p><p>Mint 的博客文章中没有明确说明这些更改是否会作为软件更新提供给现有的 Linux Mint 22.3 和 LMDE 用户，还是随 Linux Mint 23“Alfa”（临时代号）一起发布，后者计划于今年年底发布。</p></div>
+  <div class="article-body"><p>VLC被错误归咎于Microsoft Defender的笨拙</p><p>VLC在Windows上播放MP3需要很长时间？这要归咎于Microsoft Defender，而不是VLC。</p><p>作者：视频游戏设计师</p><p>. Blow是《Braid》和《The Witness》等游戏的开发者。</p><p>他提到，他已经停止在Windows上使用VLC，因为点击一个简单的MP3后需要大约33秒才能开始播放，他转而使用Microsoft Media Player。</p><p>“终于从VLC *换到* Microsoft Media Player，因为VLC现在点击后需要33秒才能开始播放mp3。</p><p>开源软件的一大块现在真的处于尴尬的境地……</p><p>pic.twitter.com/237aLdx2fG</p><p>— Jonathan Blow (@Jonathan_Blow)”</p><p>他还批评了开源软件，将其描述为大量开源软件状况不佳的标志。</p><p>“开源软件的一大块现在真的处于尴尬的境地……”</p><p>这迅速演变成一场激烈的讨论，双方都有人加入。</p><p>VLC的官方推特账号澄清说，这种延迟不是VLC核心回归，而是Windows 11 / Microsoft Defender更新隔离了VLC插件缓存的副作用。他们建议的解决方案是重新安装VLC或重新生成该缓存。</p><p>Jonathan认为修复是开发者的责任。他引用了自己在游戏《Braid》中修复AMD引起的问题的经验。</p><p>Linux用户带着确凿证据加入</p><p>一位使用X账号的Linux用户加入了讨论，提供了具体证据，表明这不是VLC核心问题，而是Windows问题。</p><p>，该用户分享了一段似乎是运行KDE的Linux发行版的录制视频。录制视频清楚地显示VLC在1-2秒内开始播放MP3文件。</p><p>“听起来像是Windows的问题，真的</p><p>pic.twitter.com/9Icp2Sf58M</p><p>— PRIZ ;] (@VoxelPrismatic)”</p><p>但有些人仍然不满意，因为VLC在Windows上打开MP3文件缓慢是一个真实问题，但他们一直归咎于VLC。</p><p>问题的解决方案</p><p>VLC建议以下修复方法：</p><p>重新生成插件缓存（例如使用 `vlc --reset-plugins-cache` 启动，或清除用户配置文件下的VLC缓存并重新启动）</p><p>从官方版本重新安装VLC</p><p>更好的建议来自一些用户，他们指出在Microsoft Defender中排除vlc.exe可以解决这个问题。我更喜欢这个建议，因为它似乎解决了问题的根源，即Microsoft Defender。而且如果缓存再次积累，VLC可能会再次变慢（我想）。</p><p>由几个人提出。所以这看起来是值得尝试的解决方法。</p><p>提出正确的问题</p><p>在所有讨论中，有人提出了真正的问题：为什么VLC对一个人不起作用就变成了“开源软件的一大块”处于尴尬境地？</p><p>归咎于Defender，而不是VLC</p><p>我理解这种沮丧。在现代系统上，等待半分钟才能播放MP3是不可接受的，即使是在Windows上。</p><p>当你不知道真实背景和根本原因时，归咎于VLC也是可以的。</p><p>但将其描述为“开源软件已破碎”的说法是非常牵强的。</p><p>我自己没有测试过。我不会仅仅为了这个而跳进Windows，但据我所见，修复的责任在微软那边。而且据我对微软的了解，他们不会做任何事情。</p><p>你对这件事有什么看法？在评论中分享吧。</p><p>喜欢这次更新吗？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次支付，永久享受</p><p>任意金额，无需承诺</p><p>13年前创建It's FOSS，分享我的Linux冒险。拥有工程学硕士学位和多年的IT行业经验。阿加莎·克里斯蒂侦探悬疑小说的超级粉丝🕵️‍♂️</p><p>Omarchy将其未来押注于AI代理，而Linux世界保持谨慎</p><p>SimpleX Chat希望其40万+用户也成为投资者</p><p>这些开源</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/linux-mint-deletes-old-kernels-automatically" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/vlc-microsoft-defenders-drama/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

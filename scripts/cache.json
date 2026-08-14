@@ -6730,5 +6730,159 @@
     "title_zh": "COSMIC桌面环境1.2发布：文件管理器修复与更多优化",
     "summary_zh": "COSMIC桌面环境1.2版本正式发布，本次更新重点修复了文件管理器中的关键问题，并进行了多项细节优化，旨在为用户提供更流畅、更精致的桌面体验。该版本进一步提升了系统的稳定性和易用性，是COSMIC桌面环境持续完善的重要一步。",
     "fulltext_zh": "探索COSMIC桌面环境1.2的最新更新，其中包含必要的文件管理器修复和增强的细节优化，为用户带来更流畅的体验。\n\n该文章《COSMIC桌面环境1.2发布：文件管理器修复与更多优化》最初出现在Linux Today上。"
+  },
+  "facdc1f2594dd1bd399fd2f9139e377c": {
+    "id": "facdc1f2594dd1bd399fd2f9139e377c",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/nvidia-geforce-now-linux-stable",
+    "title_en": "GeForce NOW’s Linux app exits beta, gets official Flatpak repo",
+    "summary_en": "GeForce NOW&#8217;s native Linux app has exited beta after seven months of testing, with official support for Ubuntu 24.04 LTS and later. The app is a frontend for Nvidia&#8217;s game streaming service, with more than 4,500 PC titles running in the cloud on Nvidia servers. Users get GeForce RTX-class performance, ray tracing and DLSS without the need to own the relevant hardware. In a blog post to announce its &#8216;graduation&#8217; from beta, Nvidia say GeForce NOW for Linux has picked up &#8",
+    "pub_date": "Thu, 13 Aug 2026 15:22:52 +0000",
+    "title_zh": "GeForce NOW Linux 应用退出测试版，获得官方 Flatpak 仓库",
+    "summary_zh": "Nvidia 的 GeForce NOW 原生 Linux 应用在经历七个月测试后正式退出测试版，现支持 Ubuntu 24.04 LTS 及更高版本。该应用作为云游戏服务前端，提供超过 4500 款 PC 游戏，用户无需高端硬件即可享受 RTX 级性能、光线追踪和 DLSS。测试期间根据社区反馈进行了性能、稳定性和打磨改进。此外，Nvidia 还优化了 DLSS 帧生成技术，提升流式游戏体验。为简化安装，Nvidia 提供了官方 Flatpak 仓库，用户可通过终端轻松安装和更新。免费版有诸多限制，付费订阅可解锁更多功能。",
+    "fulltext_zh": "GeForce NOW 的原生 Linux 应用在经历七个月的测试后正式退出测试版，现官方支持 Ubuntu 24.04 LTS 及更高版本。\n\n该应用是 Nvidia 游戏流媒体服务的前端，提供超过 4500 款 PC 游戏在 Nvidia 服务器上云端运行。用户无需拥有相关硬件即可获得 GeForce RTX 级性能、光线追踪和 DLSS 支持。\n\n在一篇宣布其“毕业”测试版的博客文章中，GeForce NOW for Linux 因测试期间的社区反馈而获得了“性能、稳定性和打磨”方面的改进。\n\n该公司还提及了服务端的一些通用云侧变更，这些变更惠及所有平台的用户。其中包括对 DLSS 帧生成的优化，Nvidia 表示这能让流式游戏体验在本地感觉更灵敏，即使在 60 和 120fps 下也是如此。\n\nGeForce NOW 可以免费使用，但带有广告支持，不过有游戏、访问和性能限制（仅 2000 款游戏，无光线追踪，1 小时游戏时长限制，最高 1080p 等）。付费订阅层级提供更多游戏、更宽松的限制和更好的性能等。\n\n在 Linux 上更轻松地安装 GeForce NOW\n\nGeForce NOW Linux 应用支持 Ubuntu 24.04 LTS 及更高版本。Nvidia 网站提供 .bin 文件形式的应用，您需要使其可执行并运行以进行安装。\n\n如果这听起来很麻烦，Nvidia 已设立了一个专门的 Flatpak 仓库，使安装 GeForce NOW for Linux 并保持更新变得更加容易。\n\n如果您在 Ubuntu 上使用 Flatpak，请通过终端添加 GeForce NOW Flatpak 仓库：\n\nflatpak remote-add --user --if-not-exists GeForceNOW https://international.download.nvidia.com/GFNLinux/flatpak/geforcenow.flatpakrepo\n\n然后安装客户端本身：\n\nflatpak install --user GeForceNOW com.nvidia.geforcenow\n\n安装完成后，从桌面的应用程序启动器中启动它。\n\nLinux 系统要求\n\n在尝试之前，请注意：大多数现代系统应该能正常运行，但建议 Nvidia GPU 用户登录 Xorg 会话以运行该应用——在 Ubuntu 26.04 LTS 上使用标准 GNOME 桌面时无法做到这一点。"
+  },
+  "1d2656d6b2897fa374442bec54a0922c": {
+    "id": "1d2656d6b2897fa374442bec54a0922c",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/lightdm-new-release-new-maintainers",
+    "title_en": "LightDM returns from the dark with first release in 4 years",
+    "summary_en": "LightDM, Ubuntu&#8217;s former display manager, has had its first new release in four years – and the first under a new set of maintainers. LightDM v1.33.0 is a &#8216;catch up&#8217; release that adds Qt6 support (Qt5 still works, don&#8217;t worry) and clears a backlog of fixes that had built up since the previous release in 2022. There shouldn&#8217;t be any breaking changes either, per the release notes. While it might sound like a sudden revival of a legacy effort, LightDM is still widely u",
+    "pub_date": "Wed, 12 Aug 2026 16:16:04 +0000",
+    "title_zh": "LightDM沉寂四年后携新版本回归",
+    "summary_zh": "Ubuntu前显示管理器LightDM在四年后发布了首个新版本，也是新维护团队接手后的首个版本。该版本为“追赶型”发布，新增Qt6支持，并清理了自2022年上次发布以来积累的修复 backlog，无破坏性变更。LightDM仍被众多Linux发行版和桌面环境广泛使用，如Linux Mint。Ubuntu于2017年弃用后，项目一度几乎无人维护，但在Fedora等社区推动下，新维护团队接管，现为社区维护项目，贡献者无需再签署Canonical CLA。",
+    "fulltext_zh": "Ubuntu的前显示管理器LightDM在四年后发布了首个新版本，也是在新维护团队接手后的首个版本。\n\n这是一个“追赶型”发布，新增了Qt6支持（Qt5仍然可用，别担心），并清理了自2022年上次发布以来积累的修复 backlog。根据发布说明，也不应有任何破坏性变更。\n\n虽然这听起来像是旧项目的突然复兴，但LightDM仍被Linux发行版和桌面环境广泛使用。\n\nLightDM是一个处理用户会话登录的后端。一个GUI“欢迎器”位于其上，用于用户交互。Ubuntu曾使用unity-greeter，但其他发行版和桌面环境则自行开发。\n\nLinux Mint于2017年切换到LightDM，使用slick-greeter作为登录界面。\n\nCanonical构建LightDM是为了替代GDM——它在Ubuntu 11.10中首次亮相——作为一个灵活、与桌面无关且易于适应的替代方案。\n\nUbuntu于2017年停止使用LightDM，当时它切换回GNOME Shell和GDM。但其他发行版（包括各种Ubuntu风味版）并未停止使用。LightDM的代码仍归Canonical所有，但根据原维护者Robert Ancell的说法，它“基本上无人维护”。\n\n它的上次发布是在2022年，大多数开发活动（审查合并请求）在2024年停止。\n\n快进到2026年。Fedora的Neal Gompa对其未来提出了质疑（因为多个Fedora spin使用LightDM驱动其登录界面）。长话短说，希望继续维护的人们站了出来，并在Ancell的祝福下完成了交接。\n\nLightDM现在由社区维护，贡献者不再需要签署（有争议的）Canonical贡献者许可协议（CLA）。仓库本身仍保留在Ubuntu GitHub家族下。\n\n多年来，Canonical因独自开发Unity、Mir、Snap等而饱受批评。LightDM在首次亮相约15年后仍具有持久吸引力，这表明，与某些说法相反，它的直觉并不总是错误的。"
+  },
+  "c44aef52e206a636ad3627308b0e34be": {
+    "id": "c44aef52e206a636ad3627308b0e34be",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/omarchy-ai-agent-focus/",
+    "title_en": "Omarchy Bets Its Future on AI Agents While the Linux World Stays Cautious",
+    "summary_en": "While some open source projects are locking AI out of their codebases, Omarchy's upcoming v4 release treats AI as part of the system.",
+    "pub_date": "Thu, 13 Aug 2026 11:40:20 GMT",
+    "title_zh": "Omarchy押注AI代理，而Linux世界保持谨慎",
+    "summary_zh": "开源社区对AI的态度分歧明显，Linux项目领袖持开放态度，而一些项目则禁止AI参与编码。Omarchy发行版即将发布的4.0版本将AI代理深度集成到系统中，提供崩溃监视器、代理选择等功能，旨在通过AI实现Linux的民主化。然而，此举引发部分用户不满，有开发者表示因不感兴趣而拒绝升级。Omarchy创始人DHH认为这是顺应趋势的及时决策。",
+    "fulltext_zh": "当一些开源项目将AI拒之门外时，Omarchy即将发布的v4版本将AI视为系统的一部分。\n\n开源世界在AI问题上存在分歧，像Linux这样的大型项目的领导人开始接受AI，他在邮件列表中告诉那些反对者，Linux“不是那些反AI的项目之一”。而其他项目则走向相反方向，禁止AI编写大量代码，尽管它们划定的界限各不相同。\n\nOmarchy不在乎这些。其即将发布的版本（4.0）跳过了关于AI是否应该编写代码的争论，直接将AI构建到桌面系统中。\n\n提醒一下，该项目自称“美观、现代且固执己见的Linux”，这种固执己见体现在发行版在安装过程中以最少的用户输入进行配置的方式上。\n\n其创始人David Heinemeier Hansson（DHH）现已决定AI代理也应成为默认配置的一部分，他认为这将“真正实现Linux的民主化”，并预测“Linux在开发者中的采用率将爆炸式增长”。\n\n虽然Omarchy 4.0仍在开发中，但DHH称这将是他们迄今为止最大的发布。他预告了各种面向代理的新功能，例如崩溃监视器（一旦出现问题就会向你的AI代理简报）、专用的代理使用小部件，以及九种可供选择的代理。\n\n举个例子：假设一个进程崩溃了。Omarchy从日志中捕获它并弹出一个提示。点击它，你的默认代理就会通过一个专门为理解回溯而构建的技能获得整个事件的简报。别担心，在向上游报告任何内容之前，它仍会请求你的确认，并且还会检查重复项。\n\n设置 > 默认 > 代理 让你可以选择默认的编码代理，提供九个选项，包括Claude、Codex、Gemini、Grok和Copilot等。它们都没有被预先选择。在首次启动时，会有一个通知提示你选择默认代理，如果你跳过它，代理功能将保持禁用状态。\n\n我简要试用了一个由Gemini驱动的AI代理。使用API密钥，我问代理它能为我做什么，它说它可以通过Omarchy帮助进行Linux配置和窗口管理器设置。它还提到了使用前面提到的相同技能进行崩溃诊断，此外还有任何编码代理都能处理的常规代码阅读、编写和命令执行。\n\n甚至还有一个模型使用小部件，可以跟踪每周限额的使用情况，但它仅适用于Claude Code、Codex、Pi、Oh My Pi和OpenCode会话。\n\n而且，如果你查看该项目的贡献者列表，你会看到Claude贡献了不少，这进一步巩固了Omarchy项目的发展方向。\n\n并非所有人都会满意\n\n“看到Omarchy的发展真的很酷，但不幸的是，我不会更新到v4。Omarchy让我有勇气从macOS跳到Linux，并为我指明了正确的方向。但现在我已经到了只需要一个终端、一个浏览器……的地步。”\n\n—— IroncladDev (@IroncladDev)\n\n根据你对AI的立场，人们开始选择阵营。其中一位名叫IroncladDev的开发者表示，他们不会更新到4.0。他说Omarchy是让他从macOS转向Linux的原因，但这不足以让他留下来。他的问题在于他对那些“AI的花哨功能”不感兴趣。他只需要一个终端、一个浏览器和可用的USB端口，仅此而已。\n\n这种抵制是不可避免的。如此大力、快速地改变一个发行版，你会失去那些追求简单的人。将代理嵌入操作系统比更换主题的要求更高，而DHH替所有人做了这个决定，无论他们是否愿意。\n\n我相信DHH是在生态系统其他部分赶上之前做出了一个及时的决策。Omarchy……"
+  },
+  "eb1a94ca63a861b102f0adb58b704b49": {
+    "id": "eb1a94ca63a861b102f0adb58b704b49",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/vlc-microsoft-defenders-drama/",
+    "title_en": "VLC is Wrongly Blamed for Microsoft Defender's Clumsiness",
+    "summary_en": "VLC takes a long time to play MP3 on Windows? Blame it on Microsoft Defender, not VLC.",
+    "pub_date": "Thu, 13 Aug 2026 04:21:33 GMT",
+    "title_zh": "VLC被错误归咎于Microsoft Defender的笨拙",
+    "summary_zh": "知名游戏开发者Jonathan Blow在推特上抱怨VLC在Windows上播放MP3需要33秒，并以此批评开源软件现状。VLC官方回应称这是Windows 11/Microsoft Defender更新隔离插件缓存所致，而非VLC核心问题。一位Linux用户提供视频证据显示VLC在Linux上秒开MP3，进一步证明问题源于Windows。解决方案包括重置插件缓存、重新安装VLC或在Defender中排除vlc.exe。文章认为将个别问题上升为“开源软件糟糕”的结论过于牵强，责任应在微软。",
+    "fulltext_zh": "VLC被错误归咎于Microsoft Defender的笨拙\n\nVLC在Windows上播放MP3需要很长时间？这要归咎于Microsoft Defender，而不是VLC。\n\n作者：视频游戏设计师\n\n. Blow是《Braid》和《The Witness》等游戏的开发者。\n\n他提到，他已经停止在Windows上使用VLC，因为点击一个简单的MP3后需要大约33秒才能开始播放，他转而使用Microsoft Media Player。\n\n“终于从VLC *换到* Microsoft Media Player，因为VLC现在点击后需要33秒才能开始播放mp3。\n\n开源软件的一大块现在真的处于尴尬的境地……\npic.twitter.com/237aLdx2fG\n— Jonathan Blow (@Jonathan_Blow)”\n\n他还批评了开源软件，将其描述为大量开源软件状况不佳的标志。\n\n“开源软件的一大块现在真的处于尴尬的境地……”\n\n这迅速演变成一场激烈的讨论，双方都有人加入。\n\nVLC的官方推特账号澄清说，这种延迟不是VLC核心回归，而是Windows 11 / Microsoft Defender更新隔离了VLC插件缓存的副作用。他们建议的解决方案是重新安装VLC或重新生成该缓存。\n\nJonathan认为修复是开发者的责任。他引用了自己在游戏《Braid》中修复AMD引起的问题的经验。\n\nLinux用户带着确凿证据加入\n\n一位使用X账号的Linux用户加入了讨论，提供了具体证据，表明这不是VLC核心问题，而是Windows问题。\n\n，该用户分享了一段似乎是运行KDE的Linux发行版的录制视频。录制视频清楚地显示VLC在1-2秒内开始播放MP3文件。\n\n“听起来像是Windows的问题，真的\npic.twitter.com/9Icp2Sf58M\n— PRIZ ;] (@VoxelPrismatic)”\n\n但有些人仍然不满意，因为VLC在Windows上打开MP3文件缓慢是一个真实问题，但他们一直归咎于VLC。\n\n问题的解决方案\n\nVLC建议以下修复方法：\n\n重新生成插件缓存（例如使用 `vlc --reset-plugins-cache` 启动，或清除用户配置文件下的VLC缓存并重新启动）\n\n从官方版本重新安装VLC\n\n更好的建议来自一些用户，他们指出在Microsoft Defender中排除vlc.exe可以解决这个问题。我更喜欢这个建议，因为它似乎解决了问题的根源，即Microsoft Defender。而且如果缓存再次积累，VLC可能会再次变慢（我想）。\n\n由几个人提出。所以这看起来是值得尝试的解决方法。\n\n提出正确的问题\n\n在所有讨论中，有人提出了真正的问题：为什么VLC对一个人不起作用就变成了“开源软件的一大块”处于尴尬境地？\n\n归咎于Defender，而不是VLC\n\n我理解这种沮丧。在现代系统上，等待半分钟才能播放MP3是不可接受的，即使是在Windows上。\n\n当你不知道真实背景和根本原因时，归咎于VLC也是可以的。\n\n但将其描述为“开源软件已破碎”的说法是非常牵强的。\n\n我自己没有测试过。我不会仅仅为了这个而跳进Windows，但据我所见，修复的责任在微软那边。而且据我对微软的了解，他们不会做任何事情。\n\n你对这件事有什么看法？在评论中分享吧。\n\n喜欢这次更新吗？支持独立的Linux新闻报道\n\nIt's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。\n\n一次支付，永久享受\n\n任意金额，无需承诺\n\n13年前创建It's FOSS，分享我的Linux冒险。拥有工程学硕士学位和多年的IT行业经验。阿加莎·克里斯蒂侦探悬疑小说的超级粉丝🕵️‍♂️\n\nOmarchy将其未来押注于AI代理，而Linux世界保持谨慎\n\nSimpleX Chat希望其40万+用户也成为投资者\n\n这些开源"
+  },
+  "94d1211e63e50b33711b81f9769347e6": {
+    "id": "94d1211e63e50b33711b81f9769347e6",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-GAIA-0.23",
+    "title_en": "AMD GAIA 0.23 Delivers Ability To Install/Run AI Agents From The Terminal",
+    "summary_en": "AMD's GAIA open-source AI software built atop Lemonade for serving as an AI companion for emails, a Bash coding agent, and other AI agent skills is out with a new version today with more features while also improving security and making other improvements...",
+    "pub_date": "Thu, 13 Aug 2026 20:33:01 -0400",
+    "title_zh": "AMD GAIA 0.23 推出从终端安装/运行 AI 代理的功能",
+    "summary_zh": "AMD 发布了 GAIA 0.23，这是其基于 Lemonade 的开源 AI 软件的新版本。此版本引入了从终端直接安装和运行 AI 代理的能力，用户无需再依赖图形界面或手动 pip 命令。此外，新版本还增加了用于构建和分享 AI 技能的子命令，并确保所有 AI 代理在执行操作前征询用户同意。安全性方面，GAIA 0.23 默认更安全，修复了多个本地暴露问题，并基于 Lemonade SDK 11.5 构建，包含多项错误修复。该更新现已支持 Windows、Linux 和 macOS。",
+    "fulltext_zh": "AMD GAIA 0.23 推出从终端安装/运行 AI 代理的功能 - Phoronix\n\nAMD GAIA 0.23 推出从终端安装/运行 AI 代理的功能\n\n2026年8月13日，美国东部时间晚上8:33。\n\nAMD 的开源 AI 软件 GAIA 基于 Lemonade 构建，用作电子邮件和其他 AI 代理技能的 AI 伴侣。今天发布了新版本，带来了更多功能，同时提高了安全性并进行了其他改进。\n\nAMD GAIA 0.23 引入了直接从终端安装和运行代理的功能。在此之前，使用 AMD GAIA 的用户需要运行图形应用程序来安装新的 AI 代理，或者需要知道手动安装的 Python pip 命令。现在，有了用于展示可能 AI 代理目录的命令，以及用于从命令行指定要安装的 AI 代理的命令。因此，这为管理 AI 代理提供了良好的终端/CLI 原生体验，同时还提供了卸载代理的新选项。\n\nAMD GAIA 软件还添加了带有各种子命令的功能，用于轻松构建和分享 AI 技能。\n\nAMD GAIA 现在还确保所有 AI 代理在执行操作前先征求同意。此外，此新版本默认更安全，包含多项安全改进，并关闭了此版本中的本地暴露。\n\nAMD GAIA 0.23 基于开源 Lemonade SDK 11.5 构建，并带来了许多不同的错误修复。\n\nAMD GAIA 0.23 软件更新的下载和更多详细信息现已适用于 Windows、Linux 和 macOS，可通过以下链接获取：\n\nFastFlowLM 1.0 发布，现作为 AMD ROCm 伞形项目的一部分\nAMD ROCm Spur：提供 AI 原生、基于 Rust 的作业调度\nAMD 提交 eSPI 子系统提案及 Linux 补丁\nLinux 7.2-rc6 修复了部分 AMD Zen 5 CPU 被误识别为 Zen 6 的问题\nAMD 发布 Instinct MI455X 的 CDNA5 ISA 文档\nLinux 7.3 将允许按 CPU 核心粒度调整 AMD P-State 动态 EPP\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nCloudflare 宣布开源 Cloudflare OS 作为 AI“操作系统”\nGNOME 设计师阐述他们的一些 GNOME Shell 梦想\nLinux 意外在内核锁定模式下遗留了传统 I/O 和内存处理程序\nWine 11.15 发布，包含 Wayland 修复，修复了 20 年前的 MSXML3 错误\n更多旧版 Linux 驱动因 AI/LLM 编码代理的噪音而面临移除\nAI 帮助为 QEMU 虚拟机创建了 DirectX 11 驱动\nKDE Plasma 6.8 改进 UI，内置远程桌面服务器\nQEMU 11.1 发布，包含众多改进\n\n虽然拥有无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "f8ad7265caca937ceefb619f384cc225": {
+    "id": "f8ad7265caca937ceefb619f384cc225",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/KDE-Bullet-Proof-Software",
+    "title_en": "KDE, Techpaladin & Kubuntu Focus Announce The Bullet-Proof KDE Software Initiative",
+    "summary_en": "KDE e.V. along with Linux PC vendor Kubuntu Focus and KDE-aligned consulting firm Techpaladin Software have announced a collaboration of the \"bullet-proof KDE Software initiative\" for providing at least three years of bug fixes and security updates to KDE Plasma 6.6 LTS and related software...",
+    "pub_date": "Thu, 13 Aug 2026 16:08:00 -0400",
+    "title_zh": "KDE、Techpaladin 与 Kubuntu Focus 联合推出“防弹 KDE 软件计划”",
+    "summary_zh": "KDE e.V. 联合 Linux PC 厂商 Kubuntu Focus 及 KDE 相关咨询公司 Techpaladin Software，宣布启动“防弹 KDE 软件计划”，旨在为 KDE Plasma 6.6 LTS 及相关软件提供至少三年的错误修复和安全更新。Kubuntu Focus 承诺三年内向 Techpaladin Software 直接支付 10 万美元，用于维护该“防弹”KDE 软件栈，涵盖 Plasma 6.6 LTS、KDE Frameworks 库及 KDE Gear 应用。此外，Kubuntu Focus 还赞助 KDE e.V. 增加三个 CI 测试节点，用于在 Kubuntu 26.04 LTS 上进行持续集成测试。该“防弹 KDE 软件套件”目前已随 Kubuntu 26.04 LTS 分发。",
+    "fulltext_zh": "KDE、Techpaladin 与 Kubuntu Focus 联合推出“防弹 KDE 软件计划” - Phoronix\n\nKDE、Techpaladin 与 Kubuntu Focus 联合推出“防弹 KDE 软件计划”\n\n发布于 2026 年 8 月 13 日，美国东部时间下午 4:08。\n\nKDE e.V. 联合 Linux PC 厂商 Kubuntu Focus 以及 KDE 相关的咨询公司 Techpaladin Software，宣布了一项名为“防弹 KDE 软件计划”的合作，旨在为 KDE Plasma 6.6 LTS 及相关软件提供至少三年的错误修复和安全更新。\n\nKubuntu Focus 承诺在未来三年内向 Techpaladin Software 直接支付 10 万美元，用于维护这一“防弹”KDE 软件栈，涵盖 Plasma 6.6 LTS 的维护工作。这不仅包括 Plasma 6.6 LTS，还包括 KDE Frameworks 库以及相关的 KDE Gear 应用。\n\nKubuntu Focus 还赞助 KDE e.V. 增加三个额外的 CI 测试节点，用于在 Kubuntu 26.04 LTS 上对软件进行为期三年的持续集成测试。\n\n这一“防弹 KDE 软件套件”目前已随 Kubuntu 26.04 LTS 一起分发。\n\n对这项“防弹”KDE Plasma 6.6 LTS 工作感兴趣的人士，可以通过今天的文章了解详情：\n\nKDE Plasma 6.8 改进 UI，内置远程桌面服务器\nKGamma2 让 KDE Plasma 在 Wayland 下轻松调整伽马值\nKDE Linux 让 Java 和 DOS 应用的首次运行体验更轻松\nKDE Plasma 6.8 在多 GPU/eGPU 性能上获得巨大提升\nKDE 开发者修复了长时间小文件复制缓慢的长期问题\nKDE Plasma 6.8 引入新的 kscreenctl 工具\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。他还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nCloudflare 宣布开源 Cloudflare OS 作为 AI“操作系统”\nGNOME 设计师勾勒部分 GNOME Shell 愿景\nLinux 在内核锁定模式下意外遗留了传统 I/O 和内存处理程序\nWine 11.15 发布，包含 Wayland 修复和 20 年历史的 MSXML3 错误修复\n更多旧 Linux 驱动因 AI/LLM 编码代理的噪音而面临移除\nAI 帮助为 QEMU 虚拟机创建了 DirectX 11 驱动\nKDE Plasma 6.8 改进 UI，内置远程桌面服务器\nQEMU 11.1 发布，包含众多改进\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "d103fb051481d6200dbd9010ca2a9185": {
+    "id": "d103fb051481d6200dbd9010ca2a9185",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.2-Best-Features",
+    "title_en": "The Best Linux 7.2 Features: Cache Aware Scheduling, AMD Zen 6, AMDGPU HDMI 2.1 FRL",
+    "summary_en": "With the Linux 7.2 kernel expected to be released on Sunday, 16 August, here is a look at some of the most interesting new features and changes to find with this next kernel version to be used by Ubuntu 26.10 and other upcoming Linux distribution releases...",
+    "pub_date": "Thu, 13 Aug 2026 15:57:51 -0400",
+    "title_zh": "Linux 7.2 最佳特性：缓存感知调度、AMD Zen 6、AMDGPU HDMI 2.1 FRL",
+    "summary_zh": "Linux 7.2 内核即将发布，带来了多项令人兴奋的新特性。其中，缓存感知调度（Cache Aware Scheduling）可显著提升多 LLC 域系统的性能；对 AMD Zen 6 处理器的支持已基本完善；AMDGPU 驱动初步支持 HDMI 2.1 FRL（默认禁用），并合并了 DC 电源模块以改善功耗表现；此外，还新增了 ISP4 驱动以支持高端 AMD Ryzen 笔记本的摄像头。Intel 方面，初步支持 Panther Lake R 等新平台。Apple M3 设备获得基础支持，但完整支持需等到 7.3。其他改进包括 USB4STREAM 协议、MGLRU 优化、WiFi 8 准备等。",
+    "fulltext_zh": "Linux 7.2 最佳特性：缓存感知调度、AMD Zen 6、AMDGPU HDMI 2.1 FRL - Phoronix\n\nLinux 7.2 最佳特性：缓存感知调度、AMD Zen 6、AMDGPU HDMI 2.1 FRL\n发布于 2026 年 8 月 13 日下午 3:57（美国东部时间）。\n\n该内核预计将于 8 月 16 日（周日）发布，以下是这个即将被 Ubuntu 26.10 及其他即将发布的 Linux 发行版采用的新内核版本中最有趣的新特性和变更。\n\n**缓存感知调度**\n\n对于运行在拥有多个最后一级缓存（LLC）域的现代系统上的用户来说，这无疑是新内核中最令人兴奋的特性之一。对于某些工作负载，缓存感知调度可以带来非常显著的性能提升，正如之前的基准测试所示。\n\n**AMD Zen 6 支持**\n\nLinux 7.2 继续为 AMD 的处理器做好准备，这些处理器最近随 EPYC 9006 \"Venice\" 系列发布，并将在未来几个月内应用于下一代台式机和笔记本电脑。仍有一些 Zen 6 补丁在流传，但主线内核支持现在似乎已经为所有标准功能做好了充分准备。\n\n**AMDGPU HDMI 2.1 FRL**\n\n对于 AMD 显卡，有初步的 AMDGPU HDMI 2.1 FRL 支持，尽管在此内核版本中默认禁用，并且 HDMI 2.1 规范的其他功能（如 VRR 和 ALLM）未包含在此内核版本中。AMDGPU 驱动还合并了 DC 电源模块，以更好地匹配 AMD Radeon 显卡在 Linux 下的功耗行为。\n\n**ISP4 驱动**\n\nAMD 方面另一个令人兴奋的是 ISP4 驱动被合并，用于支持 HP ZBook Ultra G1a 及其他即将推出的高端 AMD Ryzen 笔记本电脑上的网络摄像头。很高兴看到这个现代 AMD 图像信号处理栈终于整合在一起。\n\n**Intel 支持**\n\nIntel 方面，初步支持加固型 Panther Lake SoC \"Panther Lake R\"，更多 Diamond Rapids 和 Nova Lake H 的准备，TDX 运行时更新，以及其他增强。\n\n**Apple M3 支持**\n\nLinux 7.2 还提供了对 Apple M3 设备的初步支持，尽管 M3 Pro / Max / Ultra 的支持要到 Linux 7.3 才会到来。此外，这种 Apple M3 支持非常基础，仅能启动到控制台，没有更多功能。这些较新的（尽管已经落后两代）Mac 要在主线 Linux 内核上运行得更好，还需要一段时间。\n\n**其他性能优化**\n\nLinux 7.2 还为某些 Intel 图形硬件带来了各种性能优化，享受更好的性能；MGLRU 改进为 MongoDB 带来了可观的收益；前面提到的缓存感知调度；以及更快的读取速度。\n\n**WiFi 8 准备**\n\nLinux 的 WiFi 8 准备工作也在继续，Intel IWLWIFI 驱动正在进行相关工作，以及其他围绕 WiFi Aware 和 UHR 的 Linux WiFi 基础设施。\n\n**USB4STREAM 协议**\n\nLinux 7.2 的一个巧妙新功能是 Intel 开发的 USB4STREAM 协议，允许在 USB4/Thunderbolt 连接的系统之间快速发送数据包。\n\n**更多详情**\n\n有关此新内核中许多内核改进和其他变更的更详尽细节，请参阅 Linux 7.2 特性概览。此外，还移除了一些旧驱动/代码，例如 Hercules Monochrome ISA 显卡、Profibus 驱动、AF_ALG 已弃用、放弃对 ISA 和 PCMCIA 的 ARCnet 支持，以及其他旧驱动被移除。\n\n**相关文章**\n\n- Linux 7.2 因 \"Fair\" 回归将恢复 FIFO DRM 调度器策略\n- 新 Linux MM 补丁使 gup_test 性能提升高达 12.8 倍\n- 开源 NVIDIA \"Nova\" 驱动为 Linux 7.3 带来更多功能\n- Linux 7.3 将为旧款 Intel CPU 带来 KCFI 优化\n- Linux 7.2-rc7 在又一个令人精疲力竭的 AI 驱动周后发布\n- Linux 7.2-rc7 的 HWMON 修复：\"大部分修复了严重或高危错误\"\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。"
+  },
+  "390cc8101415da2970cf5230e5757f1f": {
+    "id": "390cc8101415da2970cf5230e5757f1f",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/New-Dasharo-2026-MSI-Intel-Z",
+    "title_en": "Updated Coreboot/Dasharo For MSI PRO Z690-A / Z790-P Motherboards, Adds Overclocking",
+    "summary_en": "In addition to 3mdeb providing their Coreboot-based Dasharo built atop AMD openSIL on a Gigabyte EPYC server motherboard and recently making their first Dasharo release for an AMD Ryzen AM5 platform with the MSI PRO B850-P WIFI, the firmware consulting firm today released updated versions of their MSI PRO Z690-A and MSI PRO Z790-P Dasharo ports to those Intel Core motherboards...",
+    "pub_date": "Thu, 13 Aug 2026 15:08:39 -0400",
+    "title_zh": "更新版Coreboot/Dasharo适用于MSI PRO Z690-A / Z790-P主板，新增超频功能",
+    "summary_zh": "3mdeb公司发布了针对MSI PRO Z690-A和Z790-P主板的更新版Dasharo固件，基于Coreboot的开源固件。此次更新引入了初始SMI传输模式（STM）支持、新的平台设置菜单，以及实验性的CPU超频和RAM电压配置功能。此外，还增加了EZ Debug LED支持、通过CMOS电池重置恢复默认设置、XMP配置文件与电压验证/调整等改进。超频功能被标记为高度实验性，可能损坏硬件。",
+    "fulltext_zh": "更新版Coreboot/Dasharo适用于MSI PRO Z690-A / Z790-P主板，新增超频功能 - Phoronix\n更新版Coreboot/Dasharo适用于MSI PRO Z690-A / Z790-P主板，新增超频功能\n发布于2026年8月13日美国东部时间下午3:08。\n3mdeb在技嘉EPYC服务器主板上提供基于Coreboot的Dasharo，基于AMD openSIL，首次为AMD Ryzen AM5平台发布Dasharo版本，适用于MSI PRO B850-P WIFI。该固件咨询公司今天发布了针对MSI PRO Z690-A和MSI PRO Z790-P的更新版Dasharo移植，适用于这些Intel Core主板。\n早在2022年，他们最初推出了适用于MSI PRO Z690-A WiFi主板的Dasharo，并最终也支持了Z790-P主板。他们持续维护这些移植，并时不时推出新更新。\n今天发布的Dasharo固件v1.17（适用于MSI PRO Z690-A）和Dasharo固件v0.9.5（适用于MSI PRO Z790-P）现在提供了初始SMI传输模式（STM）支持。此外，还有新的平台设置菜单，甚至实验性的CPU/超频选项。超频支持非常实验性，警告可能损坏硬件。同时，针对DDR4主板还提供了实验性的RAM电压配置支持。\n更新后的开源固件还增加了EZ Debug LED支持、通过CMOS电池重置恢复默认设置、XMP配置文件与电压验证/调整，以及其他改进和修复。\n关于这些Intel Core桌面主板固件更新的更多细节，请参阅：\nAMD openSIL与Coreboot针对Phoenix AM5支持的拉取请求\n为现代AMD Ryzen AM5平台发布的首个开源固件\nCoreboot + AMD openSIL在MSI Ryzen主板上现已支持Windows 11\nCoreboot 26.06带来对Intel Nova Lake、AMD Strix Halo及31款新主板的支持\nFramework Computer在为其现代Intel笔记本推进Coreboot方面取得进展\n3mdeb持续推进其Coreboot + AMD openSIL移植至Ryzen MSI主板\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动及其他主题。Michael也是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\nCloudflare宣布开源Cloudflare OS作为AI“操作系统”\nGNOME设计师阐述其GNOME Shell愿景\nLinux在Kernel锁定模式下意外遗留了传统I/O和内存处理程序\nWine 11.15发布，包含Wayland修复及一个20年历史的MSXML3错误修复\n更多旧Linux驱动因AI/LLM编码代理的噪音而面临移除\nAI帮助为QEMU虚拟机创建了DirectX 11驱动\nKDE Plasma 6.8改进UI，内置远程桌面服务器\nQEMU 11.1发布，包含众多改进\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "5b9bf9bfebe27a933f577241a5388bcc": {
+    "id": "5b9bf9bfebe27a933f577241a5388bcc",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/framework-13-pro-linux-71-72",
+    "title_en": "The Beneficial Performance Gains Running The Framework Laptop Pro 13 / Core Ultra X9 388H With Linux 7.1+",
+    "summary_en": "The recently launched Framework Laptop 13 Pro powered by Intel Core Ultra Series 3 \"Panther Lake\" runs well on Ubuntu 26.04 LTS and other modern Linux distributions. In the case of Ubuntu 26.04 with Linux 7.0, while everything works, if upgrading to Linux 7.1 or the upcoming Linux 7.2 kernel is even better performance. Here are benchmarks of the Framework Laptop 13 Pro with Core Ultra X9 388H across the Linux 7.0, 7.1, and 7.2 kernels.",
+    "pub_date": "Thu, 13 Aug 2026 10:00:00 -0400",
+    "title_zh": "Framework Laptop Pro 13 / Core Ultra X9 388H 在 Linux 7.1+ 上运行带来的显著性能提升",
+    "summary_zh": "Phoronix 对 Framework Laptop 13 Pro（搭载 Intel Core Ultra Series 3 \"Panther Lake\"）在 Linux 7.0、7.1 和 7.2 内核下的性能进行了基准测试。测试表明，在 Ubuntu 26.04 LTS 上，升级到 Linux 7.1 或即将发布的 7.2 内核能带来更好的性能表现。这些性能提升预计也适用于其他搭载 Intel Panther Lake 处理器的笔记本电脑。",
+    "fulltext_zh": "最近发布的搭载 Intel Core Ultra Series 3 \"Panther Lake\" 的 Framework Laptop 13 Pro 在 Ubuntu 26.04 LTS 和其他现代 Linux 发行版上运行良好。在 Ubuntu 26.04 搭配 Linux 7.0 的情况下，虽然一切功能正常，但升级到 Linux 7.1 或即将推出的 Linux 7.2 内核会获得更好的性能。以下是 Framework Laptop 13 Pro 搭载 Core Ultra X9 388H 在 Linux 7.0、7.1 和 7.2 内核下的基准测试结果。\n\n对于那些好奇升级到 Linux 7.1 稳定版性能差异，或者想知道预计本周末发布的 Linux 7.2 内核是否还有额外性能提升的人，以下是我最近在 Framework Laptop 13 Pro 上进行的基准测试，比较了 Ubuntu 26.04 在三个最新内核系列下的表现，同时保持软件和硬件堆栈的其他部分不变。\n\n虽然所有这些测试都是在 Framework Laptop 13 Pro 上进行的，但内核升级带来的性能影响在很大程度上应该也适用于其他搭载 Intel Panther Lake 处理器的笔记本电脑。再次感谢 Framework Computer 提供 Framework Laptop 13 Pro，使得这些持续的 Linux 性能测试得以进行。\n\nKDE Plasma 6.7 对比 GNOME Shell 50.3 对比 Xfce 4.20（CachyOS 搭配 NVIDIA 显卡）\nLinux 7.2 提升 Intel Panther Lake Xe3 Arc B390 显卡性能\nRISC-V RVV 向量性能基准测试（SpacemiT K3 SoC）\nLinux 7.2 特性：缓存感知调度、USB4STREAM、AMD ISP4、AMDGPU HDMI 2.1 FRL\nLinux 7.2 在 Threadripper 上显示一些不错的 I/O 改进和更快的 poll，以及一些回退\nBcachefs 1.38.6 基准测试：首个不再标记为 \"实验性\" 的版本\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "1a8e36419c9c5d66bfa4e7bd971726ba": {
+    "id": "1a8e36419c9c5d66bfa4e7bd971726ba",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/wsl-gets-its-own-linux-container-runtime-with-docker-like-commands/",
+    "title_en": "WSL Gets Its Own Linux Container Runtime with Docker-Like Commands",
+    "summary_en": "Explore the new Linux container runtime for WSL, designed with Docker-like commands to streamline your development process and improve workflow efficiency.\nThe post WSL Gets Its Own Linux Container Runtime with Docker-Like Commands appeared first on Linux Today.",
+    "pub_date": "Thu, 13 Aug 2026 07:18:52 +0000",
+    "title_zh": "WSL迎来专属Linux容器运行时，提供类Docker命令",
+    "summary_zh": "WSL（Windows Subsystem for Linux）现已推出专属的Linux容器运行时，其设计采用类Docker命令，旨在简化开发流程并提升工作效率。该运行时为WSL用户提供了更便捷的容器管理方式，无需依赖外部工具即可在Windows环境下高效运行Linux容器。",
+    "fulltext_zh": "探索WSL全新的Linux容器运行时，其设计采用类Docker命令，以简化您的开发流程并提升工作效率。\n\n该文章首发于Linux Today。"
+  },
+  "ac6348c0521d7213a7a834ea986e0110": {
+    "id": "ac6348c0521d7213a7a834ea986e0110",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/kde-gear-26-04-3-apps-collection-lands-with-more-app-stability-improvements/",
+    "title_en": "KDE Gear 26.04.3 Apps Collection Lands with More App Stability Improvements",
+    "summary_en": "KDE Gear 26.04.3 has arrived, bringing significant app stability improvements. Learn how these updates enhance your favorite applications today!\nThe post KDE Gear 26.04.3 Apps Collection Lands with More App Stability Improvements appeared first on Linux Today.",
+    "pub_date": "Thu, 13 Aug 2026 07:17:10 +0000",
+    "title_zh": "KDE Gear 26.04.3 应用集合发布，带来更多应用稳定性改进",
+    "summary_zh": "KDE Gear 26.04.3 版本已发布，主要聚焦于应用稳定性的显著提升。此次更新旨在改善用户体验，确保常用应用运行更加可靠。文章简要介绍了该版本带来的改进，并鼓励用户了解这些更新如何增强他们喜爱的应用程序。",
+    "fulltext_zh": "KDE Gear 26.04.3 已发布，带来了显著的应用稳定性改进。立即了解这些更新如何增强您喜爱的应用程序！\n\n该文章首发于 Linux Today。"
+  },
+  "844542d4150bd7ecc53316e1e1936b55": {
+    "id": "844542d4150bd7ecc53316e1e1936b55",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/pclinuxos-has-new-iso-files/",
+    "title_en": "PCLinuxOS Has New ISO files",
+    "summary_en": "Discover the latest ISO files for PCLinuxOS. Download now to experience enhanced features and improved performance in your Linux environment.\nThe post PCLinuxOS Has New ISO files appeared first on Linux Today.",
+    "pub_date": "Thu, 13 Aug 2026 07:14:46 +0000",
+    "title_zh": "PCLinuxOS 发布新版 ISO 文件",
+    "summary_zh": "PCLinuxOS 发布了新的 ISO 镜像文件，用户可下载体验增强的功能和更佳的性能。新版 ISO 旨在优化 Linux 环境下的使用体验，适合现有用户升级或新用户安装。",
+    "fulltext_zh": "探索 PCLinuxOS 的最新 ISO 文件。立即下载，体验 Linux 环境中增强的功能和更佳的性能。\n\n该文章 PCLinuxOS Has New ISO files 首次出现在 Linux Today 上。"
+  },
+  "80b4746e35a6d622d70e93cb0681c425": {
+    "id": "80b4746e35a6d622d70e93cb0681c425",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/arch-linux-july-iso-is-out-with-linux-kernel-7-0-14-and-archinstall-4-4/",
+    "title_en": "Arch Linux July ISO Is Out with Linux Kernel 7.0.14 and Archinstall 4.4",
+    "summary_en": "Explore the new Arch Linux July ISO, equipped with Linux Kernel 7.0.14 and Archinstall 4.4. Elevate your Linux experience with the latest updates!\nThe post Arch Linux July ISO Is Out with Linux Kernel 7.0.14 and Archinstall 4.4 appeared first on Linux Today.",
+    "pub_date": "Thu, 13 Aug 2026 07:09:16 +0000",
+    "title_zh": "Arch Linux 七月 ISO 发布，搭载 Linux 内核 7.0.14 与 Archinstall 4.4",
+    "summary_zh": "Arch Linux 发布了最新的七月 ISO 镜像，包含 Linux 内核 7.0.14 和 Archinstall 4.4 安装程序。此次更新旨在提升用户体验，带来更稳定的系统性能和更流畅的安装过程。用户可以通过官方渠道下载该 ISO，体验最新的 Arch Linux 特性。",
+    "fulltext_zh": "探索全新的 Arch Linux 七月 ISO，它搭载了 Linux 内核 7.0.14 和 Archinstall 4.4。通过最新更新，提升您的 Linux 体验！\n\n该文章 Arch Linux July ISO Is Out with Linux Kernel 7.0.14 and Archinstall 4.4 首次出现在 Linux Today 上。"
+  },
+  "a15bf06389a441ccf48fb1da79f118eb": {
+    "id": "a15bf06389a441ccf48fb1da79f118eb",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/kubuntu-focus-announces-5-new-laptops-with-kubuntu-26-04-lts/",
+    "title_en": "Kubuntu Focus Announces 5 New Laptops With Kubuntu 26.04 LTS",
+    "summary_en": "Kubuntu Focus introduces 5 new laptops equipped with the robust Kubuntu 26.04 LTS. Elevate your computing experience with these innovative devices.\nThe post Kubuntu Focus Announces 5 New Laptops With Kubuntu 26.04 LTS appeared first on Linux Today.",
+    "pub_date": "Thu, 13 Aug 2026 07:07:29 +0000",
+    "title_zh": "Kubuntu Focus 发布 5 款搭载 Kubuntu 26.04 LTS 的新笔记本电脑",
+    "summary_zh": "Kubuntu Focus 宣布推出 5 款全新笔记本电脑，均预装强大的 Kubuntu 26.04 LTS 操作系统。这些创新设备旨在提升用户的计算体验，满足不同场景下的高性能需求。此次发布进一步巩固了 Kubuntu Focus 在专业 Linux 硬件领域的地位，为用户提供开箱即用的优质选择。",
+    "fulltext_zh": "Kubuntu Focus 推出了 5 款全新笔记本电脑，均搭载强大的 Kubuntu 26.04 LTS 系统。借助这些创新设备，提升您的计算体验。\n\n该文章首发于 Linux Today。"
   }
 }

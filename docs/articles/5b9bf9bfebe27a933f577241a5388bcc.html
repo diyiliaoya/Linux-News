@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：CachyOS 260809 — Linux 中文速报</title>
+<title>Framework Laptop Pro 13 / Core Ultra X9 388H 在 Linux 7.1+ 上运行带来的显著性能提升 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：CachyOS 260809</h1>
+  <h1>Framework Laptop Pro 13 / Core Ultra X9 388H 在 Linux 7.1+ 上运行带来的显著性能提升</h1>
 
-  <div class="article-summary">CachyOS 发布了 260809 版本，该版本对系统安装程序、欢迎窗口和手持设备检测进行了改进。欢迎窗口的 DNS 功能得到重构，服务器排名现在能正确选择最快的 DNS 服务器。chwd 改进了手持设备检测，并添加了保加利亚语本地化。内核管理器后端从 C++ 重写为 Rust，并集成到 chwd-kernel 中。Cachy-Update 基于 Arch-Update v4.x 重写，系统托盘应用改用 Rust 编写，并新增了自动更新检查选项。默认的 GUI 包管理器 Shelly 从 C# 重写为 Zig，降低了内存使用并加快了启动速度。</div>
+  <div class="article-summary">Phoronix 对 Framework Laptop 13 Pro（搭载 Intel Core Ultra Series 3 &quot;Panther Lake&quot;）在 Linux 7.0、7.1 和 7.2 内核下的性能进行了基准测试。测试表明，在 Ubuntu 26.04 LTS 上，升级到 Linux 7.1 或即将发布的 7.2 内核能带来更好的性能表现。这些性能提升预计也适用于其他搭载 Intel Panther Lake 处理器的笔记本电脑。</div>
 
-  <div class="article-body"><p>发行版发布：CachyOS 260809 (DistroWatch.com 新闻)</p><p>DistroWatch.com 由以下赞助商支持</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW 周刊 / 评测存档</p><p>访客评分与评测</p><p>项目评分排名</p><p>播客、新闻通讯与评测</p><p>跨发行版软件包比较</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停止维护的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与窍门专栏</p><p>常见误解专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>发行版家族树可视化</p><p>常见问题解答</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>Mint 推出新的内核管理器</p><p>Proxmox 现已支持 ARM 处理器</p><p>Mageia 重点介绍 Pidgin</p><p>Arch 项目将阻止对 AUR 的新推送</p><p>Ubuntu 将为 LTS 版本上的虚拟化工具提供升级</p><p>Gardua 更新 FireDragon 网络浏览器，采用新基础</p><p>Haiku 获得在移植浏览器上使用 Firefox 品牌的权利</p><p>FreeBSD 发布 2026 年第二季度状态报告</p><p>Debian 讨论 LLM 工具的使用</p><p>FreeBSD 暂时冻结 ports 树</p><p>易于使用的 PBX - 托管或自管理</p><p>适用于 Linux 的电话系统</p><p>免费在线聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程办公应用：iOS 或 Android</p><p>免费视频会议</p><p>3CX 提供的 VoIP / PBX 操作指南</p><p>不要措手不及，制定灾难恢复计划！</p><p>必备的在线聊天报告与统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成对比</p><p>3CX StartUP 的 5 大杀手级功能</p><p>不要成为“那种人”第1卷：保持复杂凭据</p><p>不要成为“那种人”第2卷：呼叫欺诈</p><p>不要成为“那种人”第3卷：4 大安全提示</p><p>不要成为“那种人”第4卷：监控您的实例</p><p>Linux Mint 月度新闻 - 2026年7月</p><p>Red Hat 周五五件事 - 2026年8月7日</p><p>Ubuntu 每周通讯 955</p><p>播客 Projets Libres</p><p>Full Circle 每周新闻</p><p>Distrohoppers' Digest</p><p>最新新闻与更新</p><p>新闻筛选选项</p><p>发行版发布：CachyOS 260809</p><p>该项目已发布新快照。该发行版的八月版本对系统安装程序、欢迎窗口和手持设备检测进行了改进。</p><p>“CachyOS 欢迎窗口进行了 DNS 重构，因此基于速度测试的服务器排名现在能正确选择最快的 DNS 服务器。在 chwd 中，通过特定的主板名称匹配改进了手持设备检测，并添加了保加利亚语本地化。内核管理器后端从 C++ 重写为 Rust，并直接集成到 chwd-kernel 中。Cachy-Update 已基于 Arch-Update v4.x 重新构建，其系统托盘小程序用 Rust 重写。新增的 --check --enable 选项可一键开启自动更新检查并启动系统托盘，托盘现在通过 TrayUpdatesPerPage 支持可配置分页，默认检查间隔提高到 6 小时。Shelly，我们默认的 GUI 包管理器，已从 C# 重写为 Zig，作为其重大版本发布，放弃了托管运行时，改用原生二进制，内存使用更低，启动更快。桌面应用新增了首次运行欢迎界面、列表和网格软件包浏览、AUR PKGBUILD 预览及构建输出，以及用于数据库同步、缓存清理和孤立包删除的实用工具页面。”</p><p>更多详细信息可在 cachyos-desktop-linux-260809.iso 中找到。</p><p>近期相关新闻和发布</p><p>发行版发布：CachyOS 260809</p><p>发行版发布：CachyOS 260426</p><p>发行版发布：CachyOS 260308</p><p>发行版发布：CachyOS 260124</p><p>发行版发布：CachyOS 251129</p><p>发行版发布：CachyOS 250824</p><p>CachyOS 是一个基于 Arch Linux 的 Linux 发行版。它专注于速度和安全性优化——默认 Linux 内核使用 BORE（突发响应增强器）调度器进行了重度优化，而桌面软件包则使用 LTO、x86-64-v3 和 x86-64-v4、Zen 4 优化、安全标志和性能改进进行编译。可用的桌面环境、窗口管理器和 Wayland 合成器包括 bspwm、Budgie、Cinnamon、COSMIC、G</p></div>
+  <div class="article-body"><p>最近发布的搭载 Intel Core Ultra Series 3 &quot;Panther Lake&quot; 的 Framework Laptop 13 Pro 在 Ubuntu 26.04 LTS 和其他现代 Linux 发行版上运行良好。在 Ubuntu 26.04 搭配 Linux 7.0 的情况下，虽然一切功能正常，但升级到 Linux 7.1 或即将推出的 Linux 7.2 内核会获得更好的性能。以下是 Framework Laptop 13 Pro 搭载 Core Ultra X9 388H 在 Linux 7.0、7.1 和 7.2 内核下的基准测试结果。</p><p>对于那些好奇升级到 Linux 7.1 稳定版性能差异，或者想知道预计本周末发布的 Linux 7.2 内核是否还有额外性能提升的人，以下是我最近在 Framework Laptop 13 Pro 上进行的基准测试，比较了 Ubuntu 26.04 在三个最新内核系列下的表现，同时保持软件和硬件堆栈的其他部分不变。</p><p>虽然所有这些测试都是在 Framework Laptop 13 Pro 上进行的，但内核升级带来的性能影响在很大程度上应该也适用于其他搭载 Intel Panther Lake 处理器的笔记本电脑。再次感谢 Framework Computer 提供 Framework Laptop 13 Pro，使得这些持续的 Linux 性能测试得以进行。</p><p>KDE Plasma 6.7 对比 GNOME Shell 50.3 对比 Xfce 4.20（CachyOS 搭配 NVIDIA 显卡）</p><p>Linux 7.2 提升 Intel Panther Lake Xe3 Arc B390 显卡性能</p><p>RISC-V RVV 向量性能基准测试（SpacemiT K3 SoC）</p><p>Linux 7.2 特性：缓存感知调度、USB4STREAM、AMD ISP4、AMDGPU HDMI 2.1 FRL</p><p>Linux 7.2 在 Threadripper 上显示一些不错的 I/O 改进和更快的 poll，以及一些回退</p><p>Bcachefs 1.38.6 基准测试：首个不再标记为 &quot;实验性&quot; 的版本</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12918" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/review/framework-13-pro-linux-71-72" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

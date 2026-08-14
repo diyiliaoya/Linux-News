@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：CachyOS 260809 — Linux 中文速报</title>
+<title>Arch Linux 七月 ISO 发布，搭载 Linux 内核 7.0.14 与 Archinstall 4.4 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Linux Today</span>
   </div>
 
-  <h1>发行版发布：CachyOS 260809</h1>
+  <h1>Arch Linux 七月 ISO 发布，搭载 Linux 内核 7.0.14 与 Archinstall 4.4</h1>
 
-  <div class="article-summary">CachyOS 发布了 260809 版本，该版本对系统安装程序、欢迎窗口和手持设备检测进行了改进。欢迎窗口的 DNS 功能得到重构，服务器排名现在能正确选择最快的 DNS 服务器。chwd 改进了手持设备检测，并添加了保加利亚语本地化。内核管理器后端从 C++ 重写为 Rust，并集成到 chwd-kernel 中。Cachy-Update 基于 Arch-Update v4.x 重写，系统托盘应用改用 Rust 编写，并新增了自动更新检查选项。默认的 GUI 包管理器 Shelly 从 C# 重写为 Zig，降低了内存使用并加快了启动速度。</div>
+  <div class="article-summary">Arch Linux 发布了最新的七月 ISO 镜像，包含 Linux 内核 7.0.14 和 Archinstall 4.4 安装程序。此次更新旨在提升用户体验，带来更稳定的系统性能和更流畅的安装过程。用户可以通过官方渠道下载该 ISO，体验最新的 Arch Linux 特性。</div>
 
-  <div class="article-body"><p>发行版发布：CachyOS 260809 (DistroWatch.com 新闻)</p><p>DistroWatch.com 由以下赞助商支持</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW 周刊 / 评测存档</p><p>访客评分与评测</p><p>项目评分排名</p><p>播客、新闻通讯与评测</p><p>跨发行版软件包比较</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停止维护的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与窍门专栏</p><p>常见误解专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>发行版家族树可视化</p><p>常见问题解答</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>Mint 推出新的内核管理器</p><p>Proxmox 现已支持 ARM 处理器</p><p>Mageia 重点介绍 Pidgin</p><p>Arch 项目将阻止对 AUR 的新推送</p><p>Ubuntu 将为 LTS 版本上的虚拟化工具提供升级</p><p>Gardua 更新 FireDragon 网络浏览器，采用新基础</p><p>Haiku 获得在移植浏览器上使用 Firefox 品牌的权利</p><p>FreeBSD 发布 2026 年第二季度状态报告</p><p>Debian 讨论 LLM 工具的使用</p><p>FreeBSD 暂时冻结 ports 树</p><p>易于使用的 PBX - 托管或自管理</p><p>适用于 Linux 的电话系统</p><p>免费在线聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程办公应用：iOS 或 Android</p><p>免费视频会议</p><p>3CX 提供的 VoIP / PBX 操作指南</p><p>不要措手不及，制定灾难恢复计划！</p><p>必备的在线聊天报告与统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成对比</p><p>3CX StartUP 的 5 大杀手级功能</p><p>不要成为“那种人”第1卷：保持复杂凭据</p><p>不要成为“那种人”第2卷：呼叫欺诈</p><p>不要成为“那种人”第3卷：4 大安全提示</p><p>不要成为“那种人”第4卷：监控您的实例</p><p>Linux Mint 月度新闻 - 2026年7月</p><p>Red Hat 周五五件事 - 2026年8月7日</p><p>Ubuntu 每周通讯 955</p><p>播客 Projets Libres</p><p>Full Circle 每周新闻</p><p>Distrohoppers' Digest</p><p>最新新闻与更新</p><p>新闻筛选选项</p><p>发行版发布：CachyOS 260809</p><p>该项目已发布新快照。该发行版的八月版本对系统安装程序、欢迎窗口和手持设备检测进行了改进。</p><p>“CachyOS 欢迎窗口进行了 DNS 重构，因此基于速度测试的服务器排名现在能正确选择最快的 DNS 服务器。在 chwd 中，通过特定的主板名称匹配改进了手持设备检测，并添加了保加利亚语本地化。内核管理器后端从 C++ 重写为 Rust，并直接集成到 chwd-kernel 中。Cachy-Update 已基于 Arch-Update v4.x 重新构建，其系统托盘小程序用 Rust 重写。新增的 --check --enable 选项可一键开启自动更新检查并启动系统托盘，托盘现在通过 TrayUpdatesPerPage 支持可配置分页，默认检查间隔提高到 6 小时。Shelly，我们默认的 GUI 包管理器，已从 C# 重写为 Zig，作为其重大版本发布，放弃了托管运行时，改用原生二进制，内存使用更低，启动更快。桌面应用新增了首次运行欢迎界面、列表和网格软件包浏览、AUR PKGBUILD 预览及构建输出，以及用于数据库同步、缓存清理和孤立包删除的实用工具页面。”</p><p>更多详细信息可在 cachyos-desktop-linux-260809.iso 中找到。</p><p>近期相关新闻和发布</p><p>发行版发布：CachyOS 260809</p><p>发行版发布：CachyOS 260426</p><p>发行版发布：CachyOS 260308</p><p>发行版发布：CachyOS 260124</p><p>发行版发布：CachyOS 251129</p><p>发行版发布：CachyOS 250824</p><p>CachyOS 是一个基于 Arch Linux 的 Linux 发行版。它专注于速度和安全性优化——默认 Linux 内核使用 BORE（突发响应增强器）调度器进行了重度优化，而桌面软件包则使用 LTO、x86-64-v3 和 x86-64-v4、Zen 4 优化、安全标志和性能改进进行编译。可用的桌面环境、窗口管理器和 Wayland 合成器包括 bspwm、Budgie、Cinnamon、COSMIC、G</p></div>
+  <div class="article-body"><p>探索全新的 Arch Linux 七月 ISO，它搭载了 Linux 内核 7.0.14 和 Archinstall 4.4。通过最新更新，提升您的 Linux 体验！</p><p>该文章 Arch Linux July ISO Is Out with Linux Kernel 7.0.14 and Archinstall 4.4 首次出现在 Linux Today 上。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12918" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.linuxtoday.com/blog/arch-linux-july-iso-is-out-with-linux-kernel-7-0-14-and-archinstall-4-4/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
