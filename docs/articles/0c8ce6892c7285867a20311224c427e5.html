@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ChatGPT 桌面应用现已推出 Linux 版本（预览版） — Linux 中文速报</title>
+<title>Lemonade 11.6 集成 Muse-Glimmer 30B，实验性 TheNoise ROCm 图像生成 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>ChatGPT 桌面应用现已推出 Linux 版本（预览版）</h1>
+  <h1>Lemonade 11.6 集成 Muse-Glimmer 30B，实验性 TheNoise ROCm 图像生成</h1>
 
-  <div class="article-summary">OpenAI 正式发布了 ChatGPT 桌面应用的 Linux 预览版，支持 Ubuntu、Debian 和 Fedora。该应用集成了 ChatGPT、ChatGPT Work、Codex 及内置浏览器，可在本地仓库运行 Codex、控制其他应用并访问本地文件。OpenAI 表示 Linux 是用户最常请求的平台之一，此次发布后，ChatGPT 桌面应用已覆盖所有主流操作系统。目前为公开预览版，可能存在缺陷，不建议用于关键任务。</div>
+  <div class="article-summary">Lemonade SDK 11.6 发布，新增对 Muse Glimmer 30B GGUF 模型的支持，该模型由 Mesa AI 发布，支持草稿解码、视觉和工具调用。同时，实验性的 TheNoise ROCm 图像生成后端为 AMD Strix Halo 和 Strix Point 集成显卡带来 Anima 和 Krea-2 支持。此外，Llama.cpp ROCm 后端现支持多款旧款 Instinct GPU，并新增别名子命令和可选的视觉基准测试场景。</div>
 
-  <div class="article-body"><p>ChatGPT 桌面应用现已推出 Linux 版本（预览版） - OMG! Ubuntu</p><p>官方 ChatGPT 桌面应用的 Linux 预览版已发布。</p><p>与在浏览器标签页中使用 ChatGPT 相比，这款 GUI 桌面应用可以在你的本地仓库中运行 Codex，通过扩展连接并控制其他应用，处理 ChatGPT 工作相关任务，并探查你的本地文件，而无需将内容上传到其他地方。</p><p>OpenAI 在一封电子邮件中表示，“Linux 一直是其桌面应用最常被请求的平台之一”，而随着此次发布，该应用终于覆盖了所有主要操作系统。</p><p>这款新的“超级应用”功能强大</p><p>ChatGPT 桌面应用 Linux 版加入了 Anthropic 的 Claude 桌面应用 Linux 版（后者于上个月进入测试阶段）。</p><p>你之前肯定见过大量非官方的 ChatGPT 包装器，而且通过 Codex CLI 已经可以访问命令行。</p><p>此次发布的是 OpenAI 官方版本的（某种程度上）全新“超级应用”，它结合了 ChatGPT、ChatGPT Work、Codex，甚至还内置了网页浏览器。</p><p>下载适用于 Linux 的 ChatGPT</p><p>可从所有主流网页浏览器获取（只要它们还存在）</p><p>你可以下载适用于 Ubuntu 的 ChatGPT Linux 应用，提供 64 位 Intel/AMD 或 Arm64 的 .deb 安装包。OpenAI 表示，该应用已在 Ubuntu 24.04 LTS 和 Ubuntu 26.04 LTS 以及 Debian 13 上测试通过。Fedora 用户可使用 RPM 构建版本。</p><p>安装 .deb 包后，系统会添加 OpenAI 的软件源。未来的更新将通过 apt 与其他软件更新一起安装。</p><p>显然，ChatGPT 是闭源软件，虽然免费下载和使用（需要免费 OpenAI 账户），但某些功能需要付费套餐才能访问。</p><p>另外请注意，这目前是公开预览版。可能存在缺陷，功能集成可能无法可靠运行，因此不要将其用于任何关键任务。</p></div>
+  <div class="article-body"><p>Lemonade 11.6 集成 Muse-Glimmer 30B，实验性 TheNoise ROCm 图像生成 - Phoronix</p><p>Lemonade 11.6 集成 Muse-Glimmer 30B，实验性 TheNoise ROCm 图像生成</p><p>发布于 2026年8月14日 下午4:00（美国东部时间）</p><p>对于周末尝试生成式 AI 的用户，AMD 主导的 Lemonade SDK 11.6 今日发布，这是该开源软件的最新功能版本，用于在 CPU、GPU 和 NPU 上运行经过优化的本地 AI 应用。</p><p>Lemonade 11.6 在 Lemonade 的 Llama.cpp 目录中新增了 Muse Glimmer 30B GGUF 模型支持，并支持草稿解码、视觉和工具调用。Mesa AI 研究人员本周发布了 Muse Glimmer，这是一个 30B 的开源智能体模型，用于本地智能体工作流。AMD 已准备好发布日支持，现在 Lemonade 11.6 已集成目录，方便使用这一有趣的 LLM。</p><p>Lemonade 11.6 还新增了实验性的 TheNoise ROCm 图像生成后端，为 AMD Strix Halo 和 Strix Point 集成显卡带来 Anima 和 Krea-2 支持。</p><p>Lemonade 的 Llama.cpp ROCm 后端现在支持多款旧款 Instinct GPU。AMD Instinct MI100、MI200、MI210 和 MI250 GPU 现在可以在 Linux 上开箱即用地使用新版 Lemonade。</p><p>Lemonade 还新增了 alias 子命令，用于为 LLM 模型设置自定义名称；内置的 Lemonade 基准测试（bench）现在可以为多模态模型提供可选的视觉基准测试场景，以及其他改进。</p><p>有关 Lemonade SDK 11.6 版本的下载和更多详情，请访问 OpenAI 将 ChatGPT 桌面应用带到 Linux、Meta 发布 Muse Glimmer 作为 30B 开源智能体模型、Cloudflare 宣布开源 Cloudflare OS 作为 AI“操作系统”、Linux 基金会宣布 Tokenomics 基金会以“AI 价值的经济与 ROI”、Linux 内核开发者再次讨论 AI 智能体归属——可能放弃该功能、Linux 基金会与其他机构推出“Akrites”以保护开源软件免受 AI 驱动的漏洞利用。</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：GNOME 设计师展示他们的 GNOME Shell 梦想、QEMU 11.1 发布并带来众多改进、Linux 意外在内核锁定模式下遗留了传统 I/O 和内存处理程序、Wine 11.15 发布并修复 Wayland 问题及一个 20 年前的 MSXML3 错误、AI 帮助为 QEMU 虚拟机创建 DirectX 11 驱动、OpenAI 将 ChatGPT 桌面应用带到 Linux、KDE Plasma 6.8 改进 UI 并内置远程桌面服务器、Linux 7.3 将支持 Logitech HID++ 2.0 可编程按钮支持。</p><p>在享受无广告浏览的同时，单页文章查看。法律免责声明、隐私政策、Cookies。版权所有 © 2004 - 2026。所有商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/chatgpt-desktop-app-linux-preview" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Lemonade-SDK-11.6" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

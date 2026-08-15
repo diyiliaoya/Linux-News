@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ChatGPT 桌面应用现已推出 Linux 版本（预览版） — Linux 中文速报</title>
+<title>Linux 7.3 即将带来的特性：从优化英特尔混合 CPU 到支持老旧的 AMD Athlon XP — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>ChatGPT 桌面应用现已推出 Linux 版本（预览版）</h1>
+  <h1>Linux 7.3 即将带来的特性：从优化英特尔混合 CPU 到支持老旧的 AMD Athlon XP</h1>
 
-  <div class="article-summary">OpenAI 正式发布了 ChatGPT 桌面应用的 Linux 预览版，支持 Ubuntu、Debian 和 Fedora。该应用集成了 ChatGPT、ChatGPT Work、Codex 及内置浏览器，可在本地仓库运行 Codex、控制其他应用并访问本地文件。OpenAI 表示 Linux 是用户最常请求的平台之一，此次发布后，ChatGPT 桌面应用已覆盖所有主流操作系统。目前为公开预览版，可能存在缺陷，不建议用于关键任务。</div>
+  <div class="article-summary">Linux 7.3 合并窗口即将开启，预计将引入大量新特性。在 CPU 方面，包括针对 AMD Athlon XP 的优化、AMD P-State 动态 EPP 的每核粒度支持、英特尔 KCFI 优化、混合 CPU 集群负载均衡改进等。图形方面，英特尔 Nova Lake S 显卡驱动稳定，AMD 驱动改进，NVIDIA Nova 驱动继续开发。此外，还有存储、网络、硬件监控等多方面的更新。</div>
 
-  <div class="article-body"><p>ChatGPT 桌面应用现已推出 Linux 版本（预览版） - OMG! Ubuntu</p><p>官方 ChatGPT 桌面应用的 Linux 预览版已发布。</p><p>与在浏览器标签页中使用 ChatGPT 相比，这款 GUI 桌面应用可以在你的本地仓库中运行 Codex，通过扩展连接并控制其他应用，处理 ChatGPT 工作相关任务，并探查你的本地文件，而无需将内容上传到其他地方。</p><p>OpenAI 在一封电子邮件中表示，“Linux 一直是其桌面应用最常被请求的平台之一”，而随着此次发布，该应用终于覆盖了所有主要操作系统。</p><p>这款新的“超级应用”功能强大</p><p>ChatGPT 桌面应用 Linux 版加入了 Anthropic 的 Claude 桌面应用 Linux 版（后者于上个月进入测试阶段）。</p><p>你之前肯定见过大量非官方的 ChatGPT 包装器，而且通过 Codex CLI 已经可以访问命令行。</p><p>此次发布的是 OpenAI 官方版本的（某种程度上）全新“超级应用”，它结合了 ChatGPT、ChatGPT Work、Codex，甚至还内置了网页浏览器。</p><p>下载适用于 Linux 的 ChatGPT</p><p>可从所有主流网页浏览器获取（只要它们还存在）</p><p>你可以下载适用于 Ubuntu 的 ChatGPT Linux 应用，提供 64 位 Intel/AMD 或 Arm64 的 .deb 安装包。OpenAI 表示，该应用已在 Ubuntu 24.04 LTS 和 Ubuntu 26.04 LTS 以及 Debian 13 上测试通过。Fedora 用户可使用 RPM 构建版本。</p><p>安装 .deb 包后，系统会添加 OpenAI 的软件源。未来的更新将通过 apt 与其他软件更新一起安装。</p><p>显然，ChatGPT 是闭源软件，虽然免费下载和使用（需要免费 OpenAI 账户），但某些功能需要付费套餐才能访问。</p><p>另外请注意，这目前是公开预览版。可能存在缺陷，功能集成可能无法可靠运行，因此不要将其用于任何关键任务。</p></div>
+  <div class="article-body"><p>Linux 7.3 即将带来的特性：从优化英特尔混合 CPU 到支持老旧的 AMD Athlon XP - Phoronix</p><p>Linux 7.3 即将带来的特性：从优化英特尔混合 CPU 到支持老旧的 AMD Athlon XP</p><p>2026年8月14日 上午07:00 EDT</p><p>Linux 7.2 预计将于周日稳定发布，以下是我一直在关注的、预计将在周一开启的 Linux 7.3 合并窗口期间提交的变更。</p><p>像往常一样，每个新的 Linux 内核版本都充满了新特性和硬件支持方面的变化，同时也在迭代现有功能，并且最近也在移除更多老旧硬件/驱动支持，因为在 AI 时代这些支持成为了更大的维护负担。根据我对“-next”Git 分支的持续监控，Linux 7.3 有很多内容。除非 Linus Torvalds 在最后一刻提出任何问题或反对意见，以下是预计将出现在 Linux 7.3 中的部分特性。这不是一个详尽的列表，请继续关注 Phoronix 在两周合并窗口期间的新闻文章。之后将进行 Linux 7.3 内核性能基准测试。</p><p>如果你还在使用支持 SSE 但不支持 SSE2 的 AMD Athlon XP 时代系统，Linux 7.3 将带来一个小的优化。在 AMD CPU 方面，还有针对 Zen 6 的 AMD P-State 动态 EPP 每 CPU 核粒度支持。AMD 还增加了对新的 CPU“低功耗”核心类型的识别，可能用于某些 Zen 6 SoC。</p><p>AMD Ryzen AI Halo LED 驱动也将被引入，用于控制 Ryzen AI Halo PC 的 LED 开关和 RGB 颜色。</p><p>对于英特尔 CPU，Linux 7.3 中已排队了一个 KCFI 优化，以惠及较老的英特尔 CPU 的控制流完整性（CFI）。对于采用 P 核和 E 核混合架构的较新英特尔 Core (Ultra) CPU，Linux 7.3 应该能更好地处理集群负载均衡。此外，在英特尔 CPU 方面，Linux 7.3 还为英特尔 Starfire 做好了准备，这是基于 Panther Lake 的 SoC，用于太空等极端环境。</p><p>英特尔定向封装级热中断也计划在 Linux 7.3 中作为效率增强功能。在英特尔图形方面，英特尔 Nova Lake S 显卡在 Linux 7.3 中被视为稳定，这些下一代处理器将在未来几个月内推出。英特尔显卡驱动还增加了对 Xe3 峰值带宽阈值功能的支持。</p><p>Linux 7.3 的 CPU 调度将进行扁平化选择，以改善游戏工作负载及其他场景的调度。</p><p>在 ARM 方面，Apple M1 系列硬件在 s2idle 期间将获得小幅功耗节省。此外，还有初步的 Apple M3 Pro / Max / Ultra 支持，以补充 v7.2 中添加的 Apple M3 基础型号支持。但该 Apple M3 系列支持目前还无法供最终用户使用，目前基本上只能启动到控制台。</p><p>在图形方面，TTM 内存管理将变得更加激进。AMDGPU 驱动正在为下一代图形硬件做准备。得益于 Valve，旧款 AMD GPU 的 GPU 重置恢复也得到了改进。此外，Timur 的另一个特别之处是旧款 AMD 硬件上的 DRM 格式修饰符支持，使得 GFX11 APU 上的第二个图形管道得以启用。</p><p>Qualcomm MSM DRM 驱动现在支持 Adreno 704 和 Adreno 722 GPU。</p><p>在开源 NVIDIA 内核图形驱动方面，基于 Rust 的 Nova 驱动继续开发，更多功能已就位，但尚未准备好供最终用户使用。与此同时，较老的 Nouveau 驱动正在准备支持 Mesa NVK 驱动的 Vulkan Video。</p><p>对于硬件监控感兴趣的用户，Linux 7.3 将为更多联想笔记本电脑带来风扇传感器，并为更多华硕台式机主板带来传感器监控。</p><p>FailFS 预计将被上游化，作为 NullFS 的补充。Linux 7.3 中另一个与 I/O/存储相关的改进是解决 PCIe Gen5 NVMe SSD 上小 I/O 的显著瓶颈。</p><p>在网络方面，有 Realtek RTL8261C 和 RTL8261D 支持。</p><p>在掌上电脑/游戏设备方面，Linux 7.3 应该会引入 MSI Claw 游戏手柄配置驱动，该驱动正在开发中。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/chatgpt-desktop-app-linux-preview" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-Features-Preview" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

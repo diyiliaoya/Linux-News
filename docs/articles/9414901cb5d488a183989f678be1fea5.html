@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ChatGPT 桌面应用现已推出 Linux 版本（预览版） — Linux 中文速报</title>
+<title>Linux 7.1、Linux 7.2 在英特尔至强600系列上的性能表现 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>ChatGPT 桌面应用现已推出 Linux 版本（预览版）</h1>
+  <h1>Linux 7.1、Linux 7.2 在英特尔至强600系列上的性能表现</h1>
 
-  <div class="article-summary">OpenAI 正式发布了 ChatGPT 桌面应用的 Linux 预览版，支持 Ubuntu、Debian 和 Fedora。该应用集成了 ChatGPT、ChatGPT Work、Codex 及内置浏览器，可在本地仓库运行 Codex、控制其他应用并访问本地文件。OpenAI 表示 Linux 是用户最常请求的平台之一，此次发布后，ChatGPT 桌面应用已覆盖所有主流操作系统。目前为公开预览版，可能存在缺陷，不建议用于关键任务。</div>
+  <div class="article-summary">Phoronix对Linux 7.1稳定版和Linux 7.2 Git内核在英特尔至强678X Granite Rapids WS处理器（HP Z4 G6i工作站）上的性能进行了对比测试。测试基于Ubuntu 26.04 LTS，使用主线内核PPA，比较了Linux 7.0、7.1和7.2。结果显示Linux 7.2在部分配置下对Intel Arc B390 Xe3有性能提升，AMD平台有更快的poll性能和I/O改进，但本次测试聚焦于英特尔至强平台，具体数据待观察。</div>
 
-  <div class="article-body"><p>ChatGPT 桌面应用现已推出 Linux 版本（预览版） - OMG! Ubuntu</p><p>官方 ChatGPT 桌面应用的 Linux 预览版已发布。</p><p>与在浏览器标签页中使用 ChatGPT 相比，这款 GUI 桌面应用可以在你的本地仓库中运行 Codex，通过扩展连接并控制其他应用，处理 ChatGPT 工作相关任务，并探查你的本地文件，而无需将内容上传到其他地方。</p><p>OpenAI 在一封电子邮件中表示，“Linux 一直是其桌面应用最常被请求的平台之一”，而随着此次发布，该应用终于覆盖了所有主要操作系统。</p><p>这款新的“超级应用”功能强大</p><p>ChatGPT 桌面应用 Linux 版加入了 Anthropic 的 Claude 桌面应用 Linux 版（后者于上个月进入测试阶段）。</p><p>你之前肯定见过大量非官方的 ChatGPT 包装器，而且通过 Codex CLI 已经可以访问命令行。</p><p>此次发布的是 OpenAI 官方版本的（某种程度上）全新“超级应用”，它结合了 ChatGPT、ChatGPT Work、Codex，甚至还内置了网页浏览器。</p><p>下载适用于 Linux 的 ChatGPT</p><p>可从所有主流网页浏览器获取（只要它们还存在）</p><p>你可以下载适用于 Ubuntu 的 ChatGPT Linux 应用，提供 64 位 Intel/AMD 或 Arm64 的 .deb 安装包。OpenAI 表示，该应用已在 Ubuntu 24.04 LTS 和 Ubuntu 26.04 LTS 以及 Debian 13 上测试通过。Fedora 用户可使用 RPM 构建版本。</p><p>安装 .deb 包后，系统会添加 OpenAI 的软件源。未来的更新将通过 apt 与其他软件更新一起安装。</p><p>显然，ChatGPT 是闭源软件，虽然免费下载和使用（需要免费 OpenAI 账户），但某些功能需要付费套餐才能访问。</p><p>另外请注意，这目前是公开预览版。可能存在缺陷，功能集成可能无法可靠运行，因此不要将其用于任何关键任务。</p></div>
+  <div class="article-body"><p>Linux 7.1、Linux 7.2 在英特尔至强600系列上的性能表现 - Phoronix</p><p>Linux 7.1、Linux 7.2 在英特尔至强600系列上的性能表现</p><p>发布于2026年8月14日美国东部时间上午11:18。</p><p>预计本周末将发布稳定版，今天的测试对Linux 7.2 Git内核以及Linux 7.1稳定版进行了额外测试，并与Ubuntu 26.04 LTS默认使用的Linux 7.0进行了对比。Phoronix之前对Linux 7.2进行的测试显示，在某些配置下对Intel Arc B390 Xe3有性能提升，在AMD Ryzen Threadripper上有更快的poll性能，以及其他硬件上的改进，并且在AMD EPYC Turin上有一些不错的I/O性能提升。今天的内核基准测试使用的是实验室中的英特尔至强678X Granite Rapids WS，作为HP Z4 G6i工作站测试的一部分。</p><p>过去几周我一直在测试的HP Z4 G6i工作站（本月将在实验室中）配备了英特尔至强678X 48核/96线程Granite Rapids WS处理器、4 x 32GB DDR5-6400内存、2TB SK Hynix NVMe SSD和NVIDIA RTX PRO 6000 Blackwell显卡。</p><p>这台HP GNR-WS工作站运行Ubuntu 26.04 LTS，同时比较Linux 7.0、Linux 7.1和Linux 7.2 Git。使用Ubuntu Kernel Mainline PPA获取内核镜像，以便轻松复现并透明查看Kconfig等配置。除更换测试的内核版本外，所有软件和硬件均保持不变。</p><p>让我们看看英特尔至强Granite Rapids WS在Linux 7.1/7.2下的表现如何。</p><p>AMD EPYC Turin搭配PCIe 5.0存储，在Linux 7.2上展现出不错的性能提升</p><p>KDE Plasma 6.7 vs. GNOME Shell 50.3 vs. Xfce 4.20（CachyOS，NVIDIA显卡）</p><p>Linux 7.2提升英特尔Panther Lake Xe3 Arc B390显卡性能</p><p>RISC-V RVV向量性能基准测试（SpacemiT K3 SoC）</p><p>Linux 7.2特性：缓存感知调度、USB4STREAM、AMD ISP4、AMDGPU HDMI 2.1 FRL</p><p>Linux 7.2在Threadripper上展现出一些不错的I/O改进和更快的poll，但也有一些回退</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由...持有</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/chatgpt-desktop-app-linux-preview" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/review/intel-xeon-6-linux-72" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
