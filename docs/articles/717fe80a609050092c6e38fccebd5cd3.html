@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calibre 9.11 电子书管理器新增将注释导出为HTML页面的功能 — Linux 中文速报</title>
+<title>Nitrux展示全新桌面方案，其他发行版或可借鉴 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">Linux Today</span>
+    <span class="tag">发行版</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Calibre 9.11 电子书管理器新增将注释导出为HTML页面的功能</h1>
+  <h1>Nitrux展示全新桌面方案，其他发行版或可借鉴</h1>
 
-  <div class="article-summary">Calibre 9.11 版本更新，新增了将注释导出为HTML页面的功能，简化了电子书管理流程。该功能允许用户将阅读时的注释以网页形式导出，便于分享和备份。此次更新进一步提升了Calibre作为电子书管理工具的实用性。</div>
+  <div class="article-summary">Nitrux项目展示了其全新的“工作区环境”（Workspace Environment），旨在填补窗口管理器与完整桌面环境之间的空白。该环境由四个自主研发的组件构成，采用五层架构，提供统一的视觉与功能体验。Nitrux创始人Uri Herrera强调，这些组件均基于QML构建，避免依赖外部框架，以确保一致性和可维护性。新环境取代了KDE Plasma和Maui Shell，但当前稳定版仍为6.1.0，新组件需等待Nitrux 7.0.0发布。</div>
 
-  <div class="article-body"><p>探索Calibre 9.11的最新更新，该版本现在允许用户将注释导出为HTML页面，简化您的电子书管理流程。</p><p>此文章《Calibre 9.11 E-Book Manager Adds Support for Exporting Annotations as HTML Pages》最初出现在Linux Today上。</p></div>
+  <div class="article-body"><p>Nitrux展示全新桌面方案，其他发行版或可借鉴</p><p>Nitrux展示全新桌面方案，其他发行版或可借鉴</p><p>它旨在成为窗口管理器与桌面环境之间的中间地带。</p><p>不要以为这一举动是凭空出现的。</p><p>自去年将KDE Plasma换成Hyprland，并告知所有人他们正朝着“不适合所有人”的方向前进以来，Nitrux一直在忙于构建这一方案。</p><p>该项目现在为其所创造的东西命名为“工作区环境”（Workspace Environment）。它将四个新开发的内部组件整合为一个五层架构，为Nitrux带来了与以往截然不同的桌面体验。</p><p>Nitrux创始人Uri Herrera将其描述为填补了一个空白：窗口管理器除了窗口放置之外几乎不提供任何功能，而像GNOME或Plasma这样的完整桌面环境则将一切捆绑在一个紧密耦合的进程树中。</p><p>工作区环境介于两者之间，作为一个由独立、单一用途组件组成的凝聚性外壳，这些组件不与合成器或彼此共享进程生命周期。</p><p>Valenz是新的工作区栏，负责媒体控制、系统托盘、通知以及网络、蓝牙、电池和电源配置文件指示器，此外还有天气、日历视图和系统资源小部件。</p><p>Marina是新的Dock，可跟踪并分组Hyprland上跨工作区的打开窗口，同时处理固定、自动隐藏和水平滚动。它还为固定应用添加了未读消息徽章，这些应用会显示启动器计数。</p><p>Workspace Settings和Desklock。</p><p>Workspace Settings完全取代了KDE系统设置，涵盖用户账户、区域设置、网络和MauiKit配置，且不依赖任何Plasma组件。</p><p>Desklock则作为基于QMLGreet代码库的原生锁屏，提供PAM认证、每个输出的锁屏表面，以及CPU、内存和网络监视器，同时支持MPRIS播放控制。</p><p>这些组件均基于MauiKit构建，但只有Valenz和Marina共享LayerShell-Qt，因此整个技术栈最终呈现统一的视觉语言，而非拼凑的工具包。</p><p>这些切换不仅仅是外观上的改变，项目也考虑过其他替代方案。</p><p>Uri曾倾向于GTK和CSS样式，但这与他已承诺的QML优先方法相冲突。</p><p>另一个替代方案也有类似局限，它基于旧的Qt Widgets而非QML，而且其广泛的功能集与Nitrux偏好单一用途工具的理念相悖。</p><p>此外，由于与视觉不匹配以及挂起或休眠后出现故障的问题，另一个组件也被替换。</p><p>所有三次替换的共同模式是一致性。Uri选择第一方QML工具而非外部选项，专门为了避免依赖他无法控制的构建框架。</p><p>锁屏的选择也涉及维护方面。用Uri的话说：</p><p>“由于Desklock直接源自QMLGreet代码库，这两个组件共享相同的安全生命周期和视觉标识。这一共同基础最大限度地减少了维护开销，同时严格执行我们统一的架构理念。它提供了一个原生的QML会话锁屏，完美地执行其单一职责，完善了工作区环境的视觉和功能生态系统。”</p><p>Nitrux工作区环境标志着Maui Shell的终结，Maui Shell是该项目旧有的融合外壳概念。Nitrux已将其仓库归档，并期待下一个开发里程碑。</p><p>在寻找这些工具之前，有一个值得注意的问题：Valenz和Marina都将Nitrux 7.0.0列为要求，而当前稳定版仍是6.1.0。因此，你需要等待。</p><p>是否值得等待，将取决于这些组件在普通用户真正上手后的表现。</p><p>喜欢这次更新吗？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。请帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读，</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/calibre-9-11-e-book-manager-adds-support-for-exporting-annotations-as-html-pages/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/nitrux-workspace-environment/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

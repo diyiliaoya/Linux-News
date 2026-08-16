@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calibre 9.11 电子书管理器新增将注释导出为HTML页面的功能 — Linux 中文速报</title>
+<title>Marek Olšák 的 19 个最新补丁进一步优化 RADV 与 ACO — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">Linux Today</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Calibre 9.11 电子书管理器新增将注释导出为HTML页面的功能</h1>
+  <h1>Marek Olšák 的 19 个最新补丁进一步优化 RADV 与 ACO</h1>
 
-  <div class="article-summary">Calibre 9.11 版本更新，新增了将注释导出为HTML页面的功能，简化了电子书管理流程。该功能允许用户将阅读时的注释以网页形式导出，便于分享和备份。此次更新进一步提升了Calibre作为电子书管理工具的实用性。</div>
+  <div class="article-summary">Marek Olšák 是 Mesa Radeon Gallium3D 驱动的传奇开发者，长期在 AMD 工作，今年早些时候加入 Valve 的 Linux 图形驱动团队。他近期专注于优化 RADV Vulkan 驱动和 ACO 着色器编译器，在过去一天中合并了 19 个新补丁，进一步提升性能。这些补丁主要改善像素着色器吞吐量，包括在深度/模板输出无效时移除相关代码，可能使性能翻倍；同时修复了 GFX11/RDNA3 及更新硬件的 alpha-to-coverage 性能问题，对 DXVK 和 VKD3D 都有益处。这些改动已合入 Mesa 26.3，预计第四季度稳定发布。</div>
 
-  <div class="article-body"><p>探索Calibre 9.11的最新更新，该版本现在允许用户将注释导出为HTML页面，简化您的电子书管理流程。</p><p>此文章《Calibre 9.11 E-Book Manager Adds Support for Exporting Annotations as HTML Pages》最初出现在Linux Today上。</p></div>
+  <div class="article-body"><p>Marek Olšák 的 19 个最新补丁进一步优化 RADV 与 ACO - Phoronix</p><p>Marek Olšák 的 19 个最新补丁进一步优化 RADV 与 ACO</p><p>2026年8月15日晚上8点17分（美国东部时间）。</p><p>传奇的 Mesa Radeon Gallium3D 驱动开发者 Marek Olšák，曾在 AMD 长期任职，今年早些时候加入了 Valve 的 Linux 图形驱动团队。他继续专注于完善 RADV Vulkan 驱动和 ACO 着色器编译器。</p><p>自几个月前加入 Valve 以来，Marek 在多年专注于 RadeonSI Gallium3D 驱动之后，成功在 RADV 领域实现了多项显著改进。在过去一天中，又合并了 19 个补丁，进一步优化 RADV+ACO。</p><p>这一轮补丁主要致力于在特定条件下提升像素着色器（PS）的吞吐量。其中一种情况是，当深度和模板片段着色器输出没有实际效果时，可以将其移除；Marek 指出，在这种罕见情况下，性能可能翻倍。此外，还有其他深度/模板/样本掩码消除以及其他改动。</p><p>这个大型补丁系列还修复了 GFX11/RDNA3 及更新硬件上的 alpha-to-coverage 性能问题，尤其是在 alpha-to-coverage 启用状态为静态时。Marek 表示，这应该对 DXVK 和 VKD3D 都有益处。</p><p>此外，其他一些改动也已合入 Mesa 26.3，预计将在第四季度稳定发布。</p><p>AMD 更新 HDMI 2.1 VRR 与 ALLM 补丁，但将错过 Linux 7.3</p><p>AMD 为 Linux 7.3 挤入更多图形驱动更新</p><p>AMD GFX1171 支持已合入 Mesa 26.3</p><p>AMD 准备 HDMI FRL 修复，新增禁用旧 AMD GPU DCE 显示支持的选项</p><p>改进 AMD Kaveri、Hawaii 及其他 GFX7 GPU 在 Linux 7.3 下的 GPU 重置恢复</p><p>AMD 开始为 RDNA5 GPU 提交 Display Core Next 6 &quot;DCN6&quot; Linux 补丁</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于2004年创建该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过20,000篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>GNOME 设计师展示他们的 GNOME Shell 梦想</p><p>QEMU 11.1 发布，带来众多改进</p><p>Wine 11.15 发布，包含 Wayland 修复及修复一个20年的 MSXML3 错误</p><p>OpenAI 将 ChatGPT 桌面应用带到 Linux</p><p>AI 帮助为 QEMU 虚拟机创建 DirectX 11 驱动</p><p>KDE Plasma 6.8 改进 UI，内置远程桌面服务器</p><p>Rsync 3.5 发布，作为“非凡”更新修复33个安全问题</p><p>Comma.ai 推出 PCIe Gen4 x4 转 USB4 扩展坞，采用开源固件</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/calibre-9-11-e-book-manager-adds-support-for-exporting-annotations-as-html-pages/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/RADV-ACO-19-More-Patches-Valve" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
