@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>向AI过度分享？Proton的新工具将给你一个现实检查 — Linux 中文速报</title>
+<title>发行版发布：PrismLinux 2026.08.15 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">DistroWatch</span>
   </div>
 
-  <h1>向AI过度分享？Proton的新工具将给你一个现实检查</h1>
+  <h1>发行版发布：PrismLinux 2026.08.15</h1>
 
-  <div class="article-summary">Proton推出了名为AI Paper Trail的免费工具，基于其隐私保护AI助手Lumo，分析用户导出的AI聊天记录，生成个性化报告，揭示个人数据暴露程度。报告包括人格标签、AI暴露评分、AI所知信息分类及数据潜在价值。所有上传数据在分析后立即删除，仅用户可见。该工具旨在提高用户对AI数据收集的认知，同时推广Lumo。</div>
+  <div class="article-summary">PrismLinux 2026.08.15 发布，这是基于 Arch 的发行版，经过两个多月的开发，带来了重大更新。安装程序从 Web 技术迁移到原生实现，并重新设计，新增键盘语言选择、可选 Chaotic-AUR 支持、引导管理器选择（GRUB、systemd-boot、rEFInd）等功能。驱动处理优化，自动检测硬件并安装相应驱动。默认启用 Flatpak。支持 Cinnamon、GNOME、KDE Plasma 和 niri Wayland 合成器。</div>
 
-  <div class="article-body"><p>向AI过度分享？Proton的新工具将给你一个现实检查</p><p>由Lumo驱动的该工具，将你导出的AI聊天历史转化为一份关于你隐私暴露程度的个性化报告。</p><p>（Proton）推出了一款免费工具，向人们展示他们的AI聊天机器人对话揭示了哪些关于他们的信息。它运行在该公司注重隐私的AI助手Lumo（合作伙伴链接）上，通过挖掘导出的对话历史来工作。</p><p>一旦你上传内容，该工具就会开始围绕四个类别构建个人报告。首先是一个基于人们如何处理自己数据的人格标签。然后是一个“AI暴露评分”，该分数基于从对话中提取的个人数据点数量及其揭示程度。</p><p>报告还分解了AI实际了解你的信息，涵盖身份、习惯、关系和兴趣。此外，它还为这些信息可能对AI提供商的价值设定了一个货币数字。</p><p>上传的数据不会保留在Proton的服务器上；该公司表示，数据在分析后立即删除，生成的报告仅对生成者可见。</p><p>AI Paper Trail背后的理念在于人们对待个人AI提示的随意态度。一个关于旅行计划或工作邮件草稿的单一问题本身可能看起来无害。但累积数月或数年的对话，涵盖某人的工作、关系、健康问题和财务状况，就会形成一个惊人完整的画像。</p><p>Proton工程总监表示：“人们知道AI收集数据，但大多数人没有意识到他们的对话历史随着时间推移会变得多么具有揭示性。AI Paper Trail让这种隐形画像变得可见。我们希望人们了解他们与AI系统分享的内容，以便他们能对自己使用的工具做出明智的决定。”</p><p>他们在这里所做的是一石二鸟，为人们提供了一款注重隐私的工具，促使他们在与AI聊天机器人互动时做出更有意识的决定，同时在这个过程中将他们引向Lumo。这是营销一款专注于隐私而非挖掘你灵魂（呃，个人数据）的聊天机器人的绝佳方式。</p><p>关于Lumo，隐私优先的AI助手 | Proton</p><p>Lumo帮助你保持高效和隐私。作为隐私优先的AI助手，Lumo通过Proton的无日志政策和零访问加密保护你。</p><p>我想亲自看看这个工具是如何工作的，所以我首先让ChatGPT生成一些关于我如何处理某些主题的信息，将其保存为JSON文件，然后回到Proton的AI Paper Trail看看它能从中得出什么。</p><p>该工具首先告诉我在设置菜单中通过“数据导出”部分从ChatGPT导出数据。我不得不通过一次性密码重新验证我的ChatGPT会话，并开始导出，但文件从未及时出现供我使用。</p><p>相反，我让它根据记忆生成一个虚拟文件。完成后，我上传了虚拟导出文件，Lumo在后台工作，同时承诺不会在其服务器上存储任何数据。</p><p>大约一分钟后，我的报告准备好了。它给了我一个类似人格的概要，将我标记为“探索AI分析和伦理的技术测试者”，并配有一个假用户名和总结，称我是对AI行为进行结构化实验的人，专注于数据提取限制和伦理。</p><p>我的AI暴露评分是21分（满分100分），还有一个“低风险”标签。在细分中，“兴趣”最终是我最大的泄露点，而其他一切都处于“低”水平。</p><p>真正让我惊讶的是“AI对你的了解”部分（第一张图片，右侧）。它注意到我要求一个结构化的人格画像，试图让它从几乎没有任何信息中推断我的身份，甚至捕捉到我试图通过直接命令强制它记住某些内容。</p><p>由于我让ChatGPT直接从它对我的记忆中构建那个虚拟文件，而不是从实际对话中提取，所以这个结果尤其有趣。</p></div>
+  <div class="article-body"><p>发行版发布：PrismLinux 2026.08.15 (DistroWatch.com 新闻)</p><p>DistroWatch.com 由以下赞助商支持</p><p>新闻/观点/评论 ▼</p><p>发布公告</p><p>DW 周报 / 评论存档</p><p>访客评分与评论</p><p>项目评分排名</p><p>播客、新闻通讯与评论</p><p>跨发行版软件包比较</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停止维护的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与窍门专栏</p><p>误解与迷思专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>发行版家族树可视化</p><p>常见问题</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>Kubuntu 用户将受益于 Plasma 长期支持</p><p>Redox OS 获得改进的安装程序和更快的上下文切换</p><p>NetBSD 正在开发更新的 Enlightenment 移植版</p><p>Mint 引入新的内核管理器</p><p>Proxmox 现已支持 ARM 处理器</p><p>Mageia 重点介绍 Pidgin</p><p>Arch 项目将阻止对 AUR 的新推送</p><p>Ubuntu 将为 LTS 版本上的虚拟化工具提供升级</p><p>Gardua 更新 FireDragon 网络浏览器，采用新基础</p><p>Haiku 获得在移植浏览器上使用 Firefox 品牌的权利</p><p>易于使用的 PBX - 托管或自管理</p><p>Linux 电话系统</p><p>免费在线聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程工作应用：iOS 或 Android</p><p>免费视频会议</p><p>3CX 提供的 VoIP / PBX 操作指南</p><p>不要措手不及，制定灾难恢复计划！</p><p>必备的在线聊天报告和统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成</p><p>3CX StartUP 的 5 大杀手级功能</p><p>不要成为“那种人”第1卷：保持复杂凭据</p><p>不要成为“那种人”第2卷：呼叫欺诈</p><p>不要成为“那种人”第3卷：4 大安全提示</p><p>不要成为“那种人”第4卷：监控您的实例</p><p>Red Hat 周五五件事 - 2026年8月14日</p><p>Redox 本月动态 - 2026年7月</p><p>Ubuntu 每周通讯 956</p><p>Linux Mint 月度新闻 - 2026年7月</p><p>Full Circle 每周新闻</p><p>Fedora 项目播客</p><p>播客 Projets Libres</p><p>最新新闻与更新</p><p>新闻过滤选项</p><p>发行版发布：PrismLinux 2026.08.15</p><p>基于 Arch 的 Linux 发行版 PrismLinux，带有自定义系统安装程序，支持 Cinnamon、GNOME 和 KDE Plasma 桌面，以及 niri Wayland 合成器，已更新至版本 2026.08.15：</p><p>“经过两个多月没有发布，PrismLinux Reborn 1.0 终于来了。此版本代表了整个发行版的一轮重大重新设计、迁移、优化和生态系统清理。安装程序已全面重新设计并打磨，作为从 Web 技术迁移到原生实现的一部分。新的和改进的安装程序功能包括：安装期间选择键盘语言；可选的 Chaotic-AUR 支持；在 GRUB、systemd-boot 和 rEFInd 之间选择引导管理器；GRUB 作为默认引导管理器；固件感知选择——不支持 systemd-boot 或 rEFInd 的系统，包括传统 BIOS 安装，将仅提供 GRUB；每个支持的桌面环境默认启用 Flatpak。驱动程序处理已优化。安装程序现在检测系统，并为该硬件安装适当的驱动程序和相关软件包。”</p><p>详细更改列表请参见此处。</p><p>PrismLinux-Desktop-2026.08.15-x86_64.iso</p><p>近期相关新闻和发布</p><p>发行版发布：PrismLinux 2026.08.15</p><p>发行版发布：PrismLinux 2026.05.05</p><p>发行版发布：PrismLinux 2026.03.04</p><p>更多 PrismLinux 新闻...</p><p>PrismLinux 是一个基于 Arch Linux 的极简发行版。live 镜像启动到 River Wayland 合成器和自定义系统安装程序，该安装程序提供了多种流行的桌面选项可供安装，包括 KDE Plasma、GNOME、COSMIC 和 Cinnamon，以及定制的 Niri Wayland 合成器。该发行版使用长期支持（LTS）Linux 内核，编译时带有针对速度优化的内核参数，并包含预配置的 TLP 实用程序以延长电池寿命。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/proton-ai-paper-trail/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://distrowatch.com/12922" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

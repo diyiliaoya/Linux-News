@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>向AI过度分享？Proton的新工具将给你一个现实检查 — Linux 中文速报</title>
+<title>AVX-512 xor_gen 持续为现代 CPU 上的 Linux RAID 带来令人兴奋的性能提升 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>向AI过度分享？Proton的新工具将给你一个现实检查</h1>
+  <h1>AVX-512 xor_gen 持续为现代 CPU 上的 Linux RAID 带来令人兴奋的性能提升</h1>
 
-  <div class="article-summary">Proton推出了名为AI Paper Trail的免费工具，基于其隐私保护AI助手Lumo，分析用户导出的AI聊天记录，生成个性化报告，揭示个人数据暴露程度。报告包括人格标签、AI暴露评分、AI所知信息分类及数据潜在价值。所有上传数据在分析后立即删除，仅用户可见。该工具旨在提高用户对AI数据收集的认知，同时推广Lumo。</div>
+  <div class="article-summary">Google 工程师 Eric Biggers 在 6 月提交了针对 Linux RAID 的 AVX-512 优化，在 AMD Ryzen 9 9950X (Zen 5) 上实现了高达 41% 的性能提升，修订后的补丁更是将提升幅度提高到 43%。该代码尚未合并到主线，但最新版本已发布。此优化针对 xor_gen() 函数，用于 Linux 软件 RAID 及 Btrfs 文件系统的奇偶校验块生成与检查。新版本修复了 AVX-512 代码中缺失的 VZEROUPPER 指令，并改进了内核处理 AVX/AVX-512 特性标志的方式。</div>
 
-  <div class="article-body"><p>向AI过度分享？Proton的新工具将给你一个现实检查</p><p>由Lumo驱动的该工具，将你导出的AI聊天历史转化为一份关于你隐私暴露程度的个性化报告。</p><p>（Proton）推出了一款免费工具，向人们展示他们的AI聊天机器人对话揭示了哪些关于他们的信息。它运行在该公司注重隐私的AI助手Lumo（合作伙伴链接）上，通过挖掘导出的对话历史来工作。</p><p>一旦你上传内容，该工具就会开始围绕四个类别构建个人报告。首先是一个基于人们如何处理自己数据的人格标签。然后是一个“AI暴露评分”，该分数基于从对话中提取的个人数据点数量及其揭示程度。</p><p>报告还分解了AI实际了解你的信息，涵盖身份、习惯、关系和兴趣。此外，它还为这些信息可能对AI提供商的价值设定了一个货币数字。</p><p>上传的数据不会保留在Proton的服务器上；该公司表示，数据在分析后立即删除，生成的报告仅对生成者可见。</p><p>AI Paper Trail背后的理念在于人们对待个人AI提示的随意态度。一个关于旅行计划或工作邮件草稿的单一问题本身可能看起来无害。但累积数月或数年的对话，涵盖某人的工作、关系、健康问题和财务状况，就会形成一个惊人完整的画像。</p><p>Proton工程总监表示：“人们知道AI收集数据，但大多数人没有意识到他们的对话历史随着时间推移会变得多么具有揭示性。AI Paper Trail让这种隐形画像变得可见。我们希望人们了解他们与AI系统分享的内容，以便他们能对自己使用的工具做出明智的决定。”</p><p>他们在这里所做的是一石二鸟，为人们提供了一款注重隐私的工具，促使他们在与AI聊天机器人互动时做出更有意识的决定，同时在这个过程中将他们引向Lumo。这是营销一款专注于隐私而非挖掘你灵魂（呃，个人数据）的聊天机器人的绝佳方式。</p><p>关于Lumo，隐私优先的AI助手 | Proton</p><p>Lumo帮助你保持高效和隐私。作为隐私优先的AI助手，Lumo通过Proton的无日志政策和零访问加密保护你。</p><p>我想亲自看看这个工具是如何工作的，所以我首先让ChatGPT生成一些关于我如何处理某些主题的信息，将其保存为JSON文件，然后回到Proton的AI Paper Trail看看它能从中得出什么。</p><p>该工具首先告诉我在设置菜单中通过“数据导出”部分从ChatGPT导出数据。我不得不通过一次性密码重新验证我的ChatGPT会话，并开始导出，但文件从未及时出现供我使用。</p><p>相反，我让它根据记忆生成一个虚拟文件。完成后，我上传了虚拟导出文件，Lumo在后台工作，同时承诺不会在其服务器上存储任何数据。</p><p>大约一分钟后，我的报告准备好了。它给了我一个类似人格的概要，将我标记为“探索AI分析和伦理的技术测试者”，并配有一个假用户名和总结，称我是对AI行为进行结构化实验的人，专注于数据提取限制和伦理。</p><p>我的AI暴露评分是21分（满分100分），还有一个“低风险”标签。在细分中，“兴趣”最终是我最大的泄露点，而其他一切都处于“低”水平。</p><p>真正让我惊讶的是“AI对你的了解”部分（第一张图片，右侧）。它注意到我要求一个结构化的人格画像，试图让它从几乎没有任何信息中推断我的身份，甚至捕捉到我试图通过直接命令强制它记住某些内容。</p><p>由于我让ChatGPT直接从它对我的记忆中构建那个虚拟文件，而不是从实际对话中提取，所以这个结果尤其有趣。</p></div>
+  <div class="article-body"><p>AVX-512 xor_gen 持续为现代 CPU 上的 Linux RAID 带来令人兴奋的性能提升 - Phoronix</p><p>AVX-512 xor_gen 持续为现代 CPU 上的 Linux RAID 带来令人兴奋的性能提升</p><p>2026年8月16日 上午06:54 EDT</p><p>Google 工程师 Eric Biggers 在 6 月提交了一项针对 Linux RAID 的 AVX-512 优化，在 AMD Ryzen 9 9950X (Zen 5) 处理器上实现了高达 41% 的性能提升。修订后的补丁将这一 AVX-512 优化的 xor_gen() 函数的性能提升幅度提高到了 43%。该代码尚未合并到主线，但现已提供更新版本。</p><p>Linux 的 xor_gen() 函数用于生成和检查 Linux 软件 RAID 的奇偶校验块，以及 Btrfs 文件系统等原生内置 RAID 功能。Eric Biggers 一直在推进 xor_gen() 的 AVX-512 实现，以提升现代 Intel 和 AMD 处理器的吞吐量。</p><p>该实现应适用于 AMD Zen 4 及更新版本、Intel Xeon Sapphire Rapids 及更新版本、Intel Rocket Lake，以及即将推出的 Intel Nova Lake 及更新版本。Biggers 在 AMD Ryzen 9 9950X 上的基准测试结果非常令人期待：</p><p>虽然时间上看起来无法赶上即将到来的 Linux v7.3 合并窗口，但本周末 Biggers 发布了补丁的更新版本。修订后的代码修复了新的 AVX-512 代码中缺失的一些 VZEROUPPER 指令。感兴趣的人可以查看 AVX-512 xor_gen() 实现的补丁，以及内核处理 AVX/AVX-512 特性标志的增强。</p><p>开源 exFAT 程序 1.4.3 改进了 Fsck 和 Mkfs</p><p>Linux 补丁启用 Apple M4 NVMe 支持</p><p>Linux 7.2-rc7 恢复 Btrfs 修复工作线程基础设施以解决静默数据丢失</p><p>Linux 7.3 看起来将上游 FailFS</p><p>Linux 7.3 预计将移除 FreeVxFS 文件系统驱动</p><p>Cryptsetup 2.8.7 发布以应对 Linux 仓促弃用 AF_ALG 的后果</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。他还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>GNOME 设计师阐述他们的 GNOME Shell 梦想</p><p>QEMU 11.1 发布，带来众多改进</p><p>OpenAI 将 ChatGPT 桌面应用带到 Linux</p><p>Wine 11.15 发布，包含 Wayland 修复和 20 年历史的 MSXML3 错误修复</p><p>Rsync 3.5 发布，作为“非凡”更新修复 33 个安全问题</p><p>Comma.ai 推出带开源固件的 PCIe Gen4 x4 转 USB4 扩展坞</p><p>AI 帮助为 QEMU 虚拟机创建 DirectX 11 驱动</p><p>KDE Plasma 6.8 改进 UI，内置远程桌面服务器</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/proton-ai-paper-trail/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/AVX-512-xor-gen-v4" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
