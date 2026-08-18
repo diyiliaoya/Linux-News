@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>开发版发布：TUXEDO OS 20260813 — Linux 中文速报</title>
+<title>FFmpeg 实现 H.265 Vulkan 编码性能优化 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>开发版发布：TUXEDO OS 20260813</h1>
+  <h1>FFmpeg 实现 H.265 Vulkan 编码性能优化</h1>
 
-  <div class="article-summary">TUXEDO Computers 发布了基于 Debian 的 TUXEDO OS 首个公开测试版。该发行版此前基于 Ubuntu，现决定转向 Debian 的 Testing 分支，并采用“持续 Debian”模式，以提供更灵活且持续更新的基础。新版本仍使用 KDE Plasma 桌面环境，并邀请用户参与测试，反馈系统体验，帮助完善最终版本。</div>
+  <div class="article-summary">FFmpeg 多媒体库近日合并了一项针对 hevc_vulkan 编码器的优化补丁，通过采用与 h264_vulkan 类似的调优策略，显著提升了 H.265/HEVC 视频编码性能。优化后，H.265 编码速度与 H.264 基本持平，在 1080p 测试中，帧率从原来的 200-317 fps 提升至 289-358 fps，与 H.264 的 288-359 fps 相当。该补丁还修复了编码配置同步问题，确保输出视频可解码。</div>
 
-  <div class="article-body"><p>开发版发布：TUXEDO OS 20260813（DistroWatch.com 新闻）</p><p>DistroWatch.com 由以下赞助商支持</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW 每周 / 评测存档</p><p>访客评分与评论</p><p>按评分排列的项目排名</p><p>播客、通讯与评测</p><p>跨发行版软件包比较</p><p>显示所有发行版的软件包版本</p><p>高级发行版搜索</p><p>已停止维护的发行版</p><p>教程与学习 ▼</p><p>文章搜索</p><p>问答专栏</p><p>技巧与诀窍专栏</p><p>误解与迷思专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>发行版家族树图示</p><p>常见问题解答</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>Kubuntu 用户将受益于 Plasma 长期支持</p><p>Redox OS 获得改进的安装程序和更快的上下文切换</p><p>NetBSD 正在更新 Enlightenment 移植版</p><p>Mint 引入新的内核管理器</p><p>Proxmox 现已支持 ARM 处理器</p><p>Mageia 重点介绍 Pidgin</p><p>Arch 项目将阻止对 AUR 的新推送</p><p>Ubuntu 将为 LTS 版本提供虚拟化工具升级</p><p>Gardua 更新 FireDragon 网络浏览器，采用新基础</p><p>Haiku 获得在移植浏览器上使用 Firefox 品牌的权利</p><p>易于使用的 PBX——托管或自管理</p><p>Linux 电话系统</p><p>免费在线聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程办公应用：iOS 或 Android</p><p>免费视频会议</p><p>VoIP / PBX 操作指南（由 3CX 提供）</p><p>不要措手不及，制定灾难恢复计划！</p><p>必备的在线聊天报告与统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成对比</p><p>3CX StartUP 的五大杀手级功能</p><p>别做“那种人”第1卷：使用复杂凭据</p><p>别做“那种人”第2卷：呼叫欺诈</p><p>别做“那种人”第3卷：四大安全提示</p><p>别做“那种人”第4卷：监控你的实例</p><p>Red Hat 周五五件事——2026年8月14日</p><p>Redox 本月动态——2026年7月</p><p>Ubuntu 每周通讯 956</p><p>Linux Mint 月度新闻——2026年7月</p><p>Full Circle 每周新闻</p><p>Fedora 项目播客</p><p>Projets Libres 播客</p><p>最新新闻与更新</p><p>新闻筛选选项</p><p>开发版发布：TUXEDO OS 20260813</p><p>总部位于德国的 Linux 台式机和笔记本电脑制造商 TUXEDO Computers 宣布发布其基于 Debian 的 TUXEDO OS 的首个公开测试版。虽然该发行版过去的版本基于 Ubuntu，但项目最近决定转向 Debian 的“Testing”分支，用于所有未来版本：“欢迎来到下一代 TUXEDO OS 的公开测试版。TUXEDO OS 正在迁移到一个新基础——Debian‘Testing’。通过这次公开测试，我们开放了开发过程，邀请您试用新系统，在真实场景中使用它，并帮助我们塑造最终版本。这不仅仅是关于发现崩溃或明显错误。我们想知道系统的使用感受。如果有任何让您感到惊讶、困惑、拖慢速度或行为不符合预期的地方，请告诉我们。TUXEDO OS 的未来版本将永久使用 Debian‘Testing’作为基础。我们将这种方法称为‘持续 Debian’。它使我们能够保持 TUXEDO OS 的混合发布模式，同时致力于更灵活且持续更新的基础。在日常使用中，TUXEDO OS 的许多方面将保持熟悉。系统继续使用 Debian 的软件包管理生态系统，并以 KDE Plasma 作为桌面环境。”更多信息请阅读完整公告。感兴趣的测试人员可以从这里下载此测试版：TUXEDO-OS-DEBIAN-202608131141.iso。（披露：TUXEDO Computers 是 DistroWatch.com 的赞助商之一。）</p><p>近期相关新闻与发布</p><p>开发版发布：TUXEDO OS 20260813</p><p>发行版发布：TUXEDO OS 3-20240429</p><p>发行版发布：TUXEDO OS 2</p><p>TUXEDO OS 是一款基于 Ubuntu 的发行版，由德国 TUXEDO Computers GmbH 开发，针对该公司自己的 Linux 友好型个人电脑和笔记本系列进行设计和优化。该发行版以 KDE Plasma 作为首选桌面。Ubuntu 与 TUXE</p></div>
+  <div class="article-body"><p>FFmpeg 实现 H.265 Vulkan 编码性能优化 - Phoronix</p><p>FFmpeg 实现 H.265 Vulkan 编码性能优化</p><p>2026年8月17日 下午4:14 EDT</p><p>FFmpeg 多媒体库现在可以通过 Vulkan 加速的编码路径享受更快的 H.265/HEVC 视频编码。随着今天合并的优化，H.265 编码性能应大致与 H.264 编码速度持平。</p><p>一个优化补丁今天被合并到 FFmpeg Git 中，用于加速 hevc_vulkan，该补丁遵循了 h264_vulkan 的一些相同调优。提交信息解释了这一点并提供了一些性能数据：</p><p>&quot;在不启用 ALLOW_ENCODE_PARAMETER_OPTIMIZATIONS 且最小 CU 强制为 8x8 的情况下，hevc_vulkan 在常见质量级别下保持了比 h264_vulkan 更重的编码配置（16x16 宏块，无最小 CU SPS 字段）。设置会话标志并在 CTB &gt;= 32 时使用最小 CU 16x16；同时修复了 max_transform_hierarchy_depth_inter 的赋值。</p><p>在应用 GetEncoded SPS 反馈时，同步覆盖的字段（extent/conf_win、最小/差异 CU 和 TB 大小、变换层次）。仅复制 log2_diff 会导致 CtbLog2SizeY=7，并在某些实现重写最小 CU 后产生无法解码的 HEVC。</p><p>报告者命令（1080p testsrc2，质量 1，1000 帧）：</p><p>之前：hevc ~200–317 fps，低于 h264</p><p>之后：hevc 289/325/358 fps，h264 288/317/359 fps（持平）&quot;</p><p>很高兴看到 HEVC Vulkan 编码性能不仅比以前更快，而且与 H.264 编码速度持平。</p><p>感兴趣的人可以通过以下链接找到合并的补丁：</p><p>Claude Opus 帮助调试并修复 HP OmniBook X Flip 14 在 Linux 上无音频的问题</p><p>FFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 及更多 AMD AMF 功能</p><p>Shotcut 26.7 视频编辑器发布，附带素材库</p><p>Linux 7.2-rc6 音频修复：&quot;远超预期&quot;</p><p>dav1d 1.5.4 为 OS/2 带来 AV1 解码</p><p>Linux 7.2-rc5 提交的音频怪癖&quot;新常态&quot;</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>GNOME 设计师勾勒他们的 GNOME Shell 梦想</p><p>QEMU 11.1 发布，带来众多改进</p><p>OpenAI 将 ChatGPT 桌面应用带到 Linux</p><p>Rsync 3.5 发布，作为&quot;非凡&quot;更新修复 33 个安全问题</p><p>Comma.ai 推出 PCIe Gen4 x4 转 USB4 扩展坞，采用开源固件</p><p>Omarchy 4.0 Linux 发行版发布，桌面 Shell 现通过 Quickshell 实现</p><p>CachyOS 2026年8月发布，为即将推出的服务器版做准备</p><p>GNOME 51 Beta 发布，带来许多小改进</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12923" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/FFmpeg-Faster-HEVC-Encode" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

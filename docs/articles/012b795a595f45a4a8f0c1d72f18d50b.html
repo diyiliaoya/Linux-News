@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Linux 7.2 带来缓存感知调度、更快的 ext4 和 Btrfs — Linux 中文速报</title>
+<title>Ubuntu在Windows上的增长速度快于在Linux上的增长速度 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Linux 7.2 带来缓存感知调度、更快的 ext4 和 Btrfs</h1>
+  <h1>Ubuntu在Windows上的增长速度快于在Linux上的增长速度</h1>
 
-  <div class="article-summary">Linux 内核 7.2 正式发布，引入了缓存感知调度、ext4 文件系统性能提升以及大量新的和改进的硬件驱动程序。本次开发周期历时 9 周，吸引了超过 2100 名贡献者，其中约 5% 的提交使用了 AI 辅助。同时，内核移除了大量旧代码，如 i486 CPU 模拟和 Hercules 显卡驱动。备受期待的公平 GPU 调度器因性能回退问题被临时回退。其他改进包括管道锁定修复、MGLRU 内存回收优化以及 ext4 快速提交功能的增强。</div>
+  <div class="article-summary">Canonical工程副总裁Jon在采访中表示，Ubuntu在Windows子系统（WSL）中的用户增长速度已显著超过原生Ubuntu桌面用户，并预计未来几个月内WSL用户将超过原生用户。这一趋势主要受AI和机器学习工作推动，许多开发者因公司配备Windows电脑而转向WSL。Canonical对此并不担忧，因为Ubuntu Pro订阅已覆盖WSL实例，无论用户使用WSL还是原生安装，公司都能获得收入。然而，这一现象可能削弱原生Linux桌面的采用动力。</div>
 
-  <div class="article-body"><p>Linux 7.2 带来缓存感知调度、更快的 ext4、mglru 回收</p><p>Linux 内核 7.2 已发布，新增了缓存感知调度、ext4 文件系统性能提升，以及大量针对笔记本电脑和外设的新硬件驱动和改进驱动。</p><p>在 9 周的开发周期中还创下了合并窗口记录，参与贡献的个人超过 2100 人。显然，AI 在其中发挥了作用。LWN 的提交分析发现，7.2 版本中约有 5% 的提交带有“assisted-by”标签，表明使用了 AI。</p><p>不过，最新的内核更新并非全是新增内容。</p><p>Linux 7.2 中移除了超过 13000 行用于旧式 i486 CPU 模拟的代码，以及一个已有 40 年历史的 Hercules 显卡驱动、AppleTalk 网络协议和 ISA 与 PCMCIA ARCnet 驱动。</p><p>这些都不是人们日常会怀念的东西，而那些怀念的人可以启动 Linux 7.1 或更低版本。</p><p>最后，一个原本预期在 Linux 7.2 中出现的关键特性——更公平的 GPU 调度器——并未如期而至。由于某些 AMD 显卡上出现性能回退的报告，在最后一刻被回退，重新采用了先入先出（FIFO）方法。</p><p>欲了解更多 Linux 7.2 的新特性，请继续阅读！</p><p>Linux 7.2：主要变化</p><p>缓存感知调度</p><p>Linux 7.2 使其任务调度器（负责决定哪些任务运行以及何时运行）具备缓存感知能力。这意味着它可以识别线程（任务的一部分）是否属于同一进程，并将它们保持在共享缓存的核上。</p><p>调度器现在更加智能，将进程线程保持在共享缓存的核上</p><p>此前，调度器会在所有 CPU 核之间平衡负载，而不检查不同核上的线程是否共享内存。</p><p>不同核上的线程需要重新获取或同步相同的数据，这种现象被称为“缓存抖动”——而现在这已受到限制。</p><p>已设置防护措施以防止进程过载缓存“域”（因此一个应用的任务不会阻塞系统）。如果进程已使用超过 25% 的 CPU 时间，或超过域中 33% 的负载，调度器也不会再移动更多线程。</p><p>具有“多缓存域”的 AMD 和 Intel CPU 从中受益最大，但具体受益程度取决于处理器和所涉及的工作负载。</p><p>管道获得锁定修复</p><p>针对管道（是的，管道，如 shell 命令和后台任务中常用的那种）的锁定修复减少了它们在写入期间持有锁（防止同时访问）的时间。</p><p>现在，这听起来可能有点技术性，但它带来的改进相当可观。根据提交说明，这在特定情况下可带来高达 6-28% 的性能提升，并将写入延迟降低 5-22%（在内存压力下提升更明显）。</p><p>与大多数 Linux 内核更新中的大多数优化一样，这些好处并非普遍适用，因此常规的日常工作流程不会明显注意到或受益于此。但只要管道机制在运行，它就会发挥作用，保持其高效。</p><p>内存回收更加紧凑</p><p>Linux 7.2 优化了多代 LRU（MGLRU），这是内核用于在内存不足时决定从内存中移除什么以及如何回收的算法。</p><p>通过清理和收紧“回收”循环，以及在此过程中“脏页”的写回方式，这有利于特定类型的工作负载。提交说明宣称在 MongoDB 与 YCSB 中实现了“显著改进”，并减少了意外的内存不足（OOM）终止。</p><p>ext4 文件系统更改</p><p>ext4（Ubuntu 的默认文件系统）在 Linux 7.2 中获得了一些小幅度的速度优化。</p><p>ext4 消除了高负载下的锁竞争和死锁</p><p>对 ext4 文件系统快速提交功能的更改（顾名思义，它比完整提交更快地写入日志条目）消除了高负载下的锁竞争和死锁。</p><p>相关统计信息现在可以在 /proc/fs/ext4/*/fc_info 中查看（我们稍后会在本综述中再次提到 proc）。</p><p>另一个与 XFS 共享的修复，从内核的 IOMAP 层中移除了一步内存清理操作，使小型随机 4K 读取性能提升了 5%。</p></div>
+  <div class="article-body"><p>Ubuntu在Windows上的增长速度快于在Linux上的增长速度</p><p>Canonical工程副总裁Jon与《The Pragmatic Engineer》交谈时表示，Ubuntu在Windows子系统（WSL）中的增长速度已超过原生Ubuntu桌面安装。他预计WSL用户将在几个月内超过原生用户。</p><p>Jon在谈论AI如何重塑Ubuntu时提到了WSL，他指出：</p><p>“一年来，我们WSL用户数量的增长显著高于桌面用户数量的增长。”WSL允许Windows用户“安装”Ubuntu并在其Windows环境中使用。</p><p>安装后，用户通过终端应用与Ubuntu交互，运行的就是真正的Ubuntu。你的主目录挂载在Ubuntu中，你可以将终端中的窗口拖到桌面上，就像真正的窗口一样。</p><p>“我预计未来几个月内，Ubuntu WSL用户将超过‘原生’Ubuntu用户。”这对于从事机器学习或AI工作的人来说尤其如此。我们已经听到许多开发者反馈，他们不得不使用雇主提供的Windows电脑，但发现自己需要做AI或ML工作。有了WSL，这就简单多了。</p><p>Canonical似乎并不担心。Canonical的付费安全与支持订阅Ubuntu Pro已经像覆盖原生安装一样覆盖WSL实例。订阅者可以享受长达15年的CVE补丁、Python、Go和Rust工具链覆盖以及舰队管理。</p><p>简单来说，使用Ubuntu Pro的WSL用户和运行Ubuntu Server的数据中心对Canonical来说是同一类客户；无论如何，公司都能获得收入。</p><p>而且，正如你之前看到的，Jon也指出了需求持续攀升的原因。许多开发者无法选择自己的工作笔记本电脑，一旦AI或ML工作落到他们头上，WSL就成为在不与IT政策抗争的情况下获得可用Linux环境的最简单途径。</p><p>微软WSL产品经理在Ubuntu Pro推出时称这一安排为“梦幻般的合作”，并进一步表示：</p><p>“这项工作将使使用WSL构建生产Linux解决方案的企业开发者受益。”</p><p>这对原生Linux意味着什么？</p><p>如果你特别支持Linux桌面，这里就变得棘手了。如果WSL悄悄满足了那些原本会推动开发者双系统或完全切换的需求，这是否会减轻IT部门和硬件供应商批准原生Linux的压力？</p><p>Canonical没有问这个问题，但其副总裁将这一转变描述为胜利，这削弱了原生Linux采用的理由。对于任何想要完全硬件控制、最大性能和Linux优先设置的人来说，在裸机上运行Ubuntu仍然比WSL更好。</p><p>但如果Ubuntu增长最快的方式是在微软操作系统内部，那么这值得思考。</p><p>喜欢这篇更新吗？支持独立的Linux新闻报道。</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受。</p><p>任何金额，无需承诺。</p><p>一个热爱开源软件、定制PC组装、赛车运动和探索世界无限可能的极客。</p><p>Linux 7.2发布，带来缓存感知调度，经过一年多的工作。</p><p>过度分享给AI？Proton的工具会给你现实检查。</p><p>Nitrux展示了其他发行版可能想借鉴的新桌面方法。</p><p>LightDM复活，但Canonical不再负责。</p><p>Omarchy押注AI代理，而Linux世界保持谨慎。</p><p>成为更好的Linux用户。</p><p>通过FOSS每周通讯，你可以学习有用的Linux技巧、发现应用程序、探索新发行版，并了解Linux世界的最新动态。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/linux-7-2-cache-aware-scheduling-ext4-btrfs" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/canonical-wsl-growth/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>开发版发布：TUXEDO OS 20260813 — Linux 中文速报</title>
+<title>Linux 7.3 将引入改进 vRAM 管理的初始代码，更多改进即将到来 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>开发版发布：TUXEDO OS 20260813</h1>
+  <h1>Linux 7.3 将引入改进 vRAM 管理的初始代码，更多改进即将到来</h1>
 
-  <div class="article-summary">TUXEDO Computers 发布了基于 Debian 的 TUXEDO OS 首个公开测试版。该发行版此前基于 Ubuntu，现决定转向 Debian 的 Testing 分支，并采用“持续 Debian”模式，以提供更灵活且持续更新的基础。新版本仍使用 KDE Plasma 桌面环境，并邀请用户参与测试，反馈系统体验，帮助完善最终版本。</div>
+  <div class="article-summary">Valve 的 Linux 图形团队工程师 Natalie Vock 早前提出的改进有限 vRAM 系统下 Linux 游戏体验的内核补丁，已被纳入 DRM-Next，并计划在 Linux 7.3 合并窗口中合并。Vock 在最新博客中详细介绍了视频内存管理、驱逐处理及测试结果，表明即使显存超支 1GB，游戏仍可流畅运行。该工作已应用于 SteamOS 内核，未来还将继续改进并上游化到主线内核。</div>
 
-  <div class="article-body"><p>开发版发布：TUXEDO OS 20260813（DistroWatch.com 新闻）</p><p>DistroWatch.com 由以下赞助商支持</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW 每周 / 评测存档</p><p>访客评分与评论</p><p>按评分排列的项目排名</p><p>播客、通讯与评测</p><p>跨发行版软件包比较</p><p>显示所有发行版的软件包版本</p><p>高级发行版搜索</p><p>已停止维护的发行版</p><p>教程与学习 ▼</p><p>文章搜索</p><p>问答专栏</p><p>技巧与诀窍专栏</p><p>误解与迷思专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>发行版家族树图示</p><p>常见问题解答</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>Kubuntu 用户将受益于 Plasma 长期支持</p><p>Redox OS 获得改进的安装程序和更快的上下文切换</p><p>NetBSD 正在更新 Enlightenment 移植版</p><p>Mint 引入新的内核管理器</p><p>Proxmox 现已支持 ARM 处理器</p><p>Mageia 重点介绍 Pidgin</p><p>Arch 项目将阻止对 AUR 的新推送</p><p>Ubuntu 将为 LTS 版本提供虚拟化工具升级</p><p>Gardua 更新 FireDragon 网络浏览器，采用新基础</p><p>Haiku 获得在移植浏览器上使用 Firefox 品牌的权利</p><p>易于使用的 PBX——托管或自管理</p><p>Linux 电话系统</p><p>免费在线聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程办公应用：iOS 或 Android</p><p>免费视频会议</p><p>VoIP / PBX 操作指南（由 3CX 提供）</p><p>不要措手不及，制定灾难恢复计划！</p><p>必备的在线聊天报告与统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成对比</p><p>3CX StartUP 的五大杀手级功能</p><p>别做“那种人”第1卷：使用复杂凭据</p><p>别做“那种人”第2卷：呼叫欺诈</p><p>别做“那种人”第3卷：四大安全提示</p><p>别做“那种人”第4卷：监控你的实例</p><p>Red Hat 周五五件事——2026年8月14日</p><p>Redox 本月动态——2026年7月</p><p>Ubuntu 每周通讯 956</p><p>Linux Mint 月度新闻——2026年7月</p><p>Full Circle 每周新闻</p><p>Fedora 项目播客</p><p>Projets Libres 播客</p><p>最新新闻与更新</p><p>新闻筛选选项</p><p>开发版发布：TUXEDO OS 20260813</p><p>总部位于德国的 Linux 台式机和笔记本电脑制造商 TUXEDO Computers 宣布发布其基于 Debian 的 TUXEDO OS 的首个公开测试版。虽然该发行版过去的版本基于 Ubuntu，但项目最近决定转向 Debian 的“Testing”分支，用于所有未来版本：“欢迎来到下一代 TUXEDO OS 的公开测试版。TUXEDO OS 正在迁移到一个新基础——Debian‘Testing’。通过这次公开测试，我们开放了开发过程，邀请您试用新系统，在真实场景中使用它，并帮助我们塑造最终版本。这不仅仅是关于发现崩溃或明显错误。我们想知道系统的使用感受。如果有任何让您感到惊讶、困惑、拖慢速度或行为不符合预期的地方，请告诉我们。TUXEDO OS 的未来版本将永久使用 Debian‘Testing’作为基础。我们将这种方法称为‘持续 Debian’。它使我们能够保持 TUXEDO OS 的混合发布模式，同时致力于更灵活且持续更新的基础。在日常使用中，TUXEDO OS 的许多方面将保持熟悉。系统继续使用 Debian 的软件包管理生态系统，并以 KDE Plasma 作为桌面环境。”更多信息请阅读完整公告。感兴趣的测试人员可以从这里下载此测试版：TUXEDO-OS-DEBIAN-202608131141.iso。（披露：TUXEDO Computers 是 DistroWatch.com 的赞助商之一。）</p><p>近期相关新闻与发布</p><p>开发版发布：TUXEDO OS 20260813</p><p>发行版发布：TUXEDO OS 3-20240429</p><p>发行版发布：TUXEDO OS 2</p><p>TUXEDO OS 是一款基于 Ubuntu 的发行版，由德国 TUXEDO Computers GmbH 开发，针对该公司自己的 Linux 友好型个人电脑和笔记本系列进行设计和优化。该发行版以 KDE Plasma 作为首选桌面。Ubuntu 与 TUXE</p></div>
+  <div class="article-body"><p>Linux 7.3 将引入改进 vRAM 管理的初始代码，更多改进即将到来 - Phoronix</p><p>Linux 7.3 将引入改进 vRAM 管理的初始代码，更多改进即将到来</p><p>2026年8月17日下午5:15（美国东部时间）</p><p>今年早些时候，Valve 的 Linux 图形团队工程师 Natalie Vock 提出了一些补丁，用于改善在 vRAM 受限系统上的 Linux 游戏体验。这些改进视频内存管理的内核工作将随 Linux 7.3 内核引入。虽然这本身已值得庆祝，但 Vock 仍在追求更多改进，以优化 Linux GPU 驱动程序的视频内存管理行为。</p><p>随着初始补丁已排队进入 DRM-Next，并计划在接下来的两周内合并到 Linux 7.13 合并窗口，Natalie Vock 今天发布了一篇新博客文章，概述了改进 Linux vRAM 管理的最新工作和成果，尤其是针对 AMDGPU 驱动程序。</p><p>Vock 的博客文章篇幅较长但内容详实，重点介绍了视频内存管理、驱逐处理以及使用《夺宝奇兵：大圆环》进行的测试中的诸多细节。测试中，她尝试将设置调至最高，以消耗 9GB 视频内存，而显卡仅有 8GB vRAM。即使超支 1GB，游戏在 8GB 显卡上仍然相当可玩。</p><p>Vock 在最新文章中总结道：</p><p>“当一切尘埃落定，vRAM 耗尽时的表现如何？</p><p>我认为相当不错！在许多情况下，即使驱逐 1GB 或更多的内存，你可能会惊讶于性能仍能保持多少！但话说回来，这当然是一个相当乐观的情况，如果错误的数据最终进入 CPU 内存，可能会很快导致非常显著的性能下降。驱逐要做到恰到好处是很棘手的，而且在某种程度上，性能总会受到影响。如果一款游戏即使在所有内容都在 vRAM 中时也难以达到 30fps，那么在此基础上还需要驱逐某些内容，有时可能不可避免地无法达到 30fps 的目标。</p><p>无论如何，我希望这篇博客文章能够证明，即使最终有一些内存被驱逐到系统内存，性能下降也是可以控制的。驱动程序（尤其是内核驱动程序）可以采取措施，使超支尽可能高效地工作，甚至应用程序也可以与驱动栈协调，以减轻其内存被驱逐的影响。当一切到位时，vRAM 超支其实并不像乍一看那么严重。”</p><p>这项工作已经应用于 SteamOS 内核的稳定版和预览版频道。除了 Linux 7.3 的初始上游化工作外，进一步的改进仍在进行中，以便在未来某个主线 Linux 内核版本中上游化。</p><p>相关补丁集名为“vramstuff-rebase”，包含所有补丁，供那些想在 SteamOS 之外立即测试的人使用。</p><p>完整博客文章请参阅：</p><p>Linux 7.3 SMP 改进有助于减少延迟，提升实时性能</p><p>Con Kolivas 恢复“-ck”补丁和 MuQSS 以提升 Linux 桌面响应速度</p><p>GNU Linux-libre 7.2-gnu 在更多驱动清理后发布</p><p>Linux 7.2 发布，I/O 更快，AMD 和 Intel 驱动改进</p><p>Linux 7.2 内核发布前提交的 tlbi= 启动选项</p><p>Linux 7.3 binfmt_misc 将允许 BPF 程序动态选择执行环境</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>GNOME 设计师阐述他们的 GNOME Shell 梦想</p><p>QEMU 11.1 发布，带来众多改进</p><p>OpenAI 将 ChatGPT 桌面应用带到 Linux</p><p>Rsync 3.5 作为“Extraordina”发布</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12923" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-Improving-vRAM-Mgmt" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

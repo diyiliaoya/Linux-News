@@ -7203,5 +7203,159 @@
     "title_zh": "AVX-512 xor_gen 持续为现代 CPU 上的 Linux RAID 带来令人兴奋的性能提升",
     "summary_zh": "Google 工程师 Eric Biggers 在 6 月提交了针对 Linux RAID 的 AVX-512 优化，在 AMD Ryzen 9 9950X (Zen 5) 上实现了高达 41% 的性能提升，修订后的补丁更是将提升幅度提高到 43%。该代码尚未合并到主线，但最新版本已发布。此优化针对 xor_gen() 函数，用于 Linux 软件 RAID 及 Btrfs 文件系统的奇偶校验块生成与检查。新版本修复了 AVX-512 代码中缺失的 VZEROUPPER 指令，并改进了内核处理 AVX/AVX-512 特性标志的方式。",
     "fulltext_zh": "AVX-512 xor_gen 持续为现代 CPU 上的 Linux RAID 带来令人兴奋的性能提升 - Phoronix\n\nAVX-512 xor_gen 持续为现代 CPU 上的 Linux RAID 带来令人兴奋的性能提升\n\n2026年8月16日 上午06:54 EDT\n\nGoogle 工程师 Eric Biggers 在 6 月提交了一项针对 Linux RAID 的 AVX-512 优化，在 AMD Ryzen 9 9950X (Zen 5) 处理器上实现了高达 41% 的性能提升。修订后的补丁将这一 AVX-512 优化的 xor_gen() 函数的性能提升幅度提高到了 43%。该代码尚未合并到主线，但现已提供更新版本。\n\nLinux 的 xor_gen() 函数用于生成和检查 Linux 软件 RAID 的奇偶校验块，以及 Btrfs 文件系统等原生内置 RAID 功能。Eric Biggers 一直在推进 xor_gen() 的 AVX-512 实现，以提升现代 Intel 和 AMD 处理器的吞吐量。\n\n该实现应适用于 AMD Zen 4 及更新版本、Intel Xeon Sapphire Rapids 及更新版本、Intel Rocket Lake，以及即将推出的 Intel Nova Lake 及更新版本。Biggers 在 AMD Ryzen 9 9950X 上的基准测试结果非常令人期待：\n\n虽然时间上看起来无法赶上即将到来的 Linux v7.3 合并窗口，但本周末 Biggers 发布了补丁的更新版本。修订后的代码修复了新的 AVX-512 代码中缺失的一些 VZEROUPPER 指令。感兴趣的人可以查看 AVX-512 xor_gen() 实现的补丁，以及内核处理 AVX/AVX-512 特性标志的增强。\n\n开源 exFAT 程序 1.4.3 改进了 Fsck 和 Mkfs\nLinux 补丁启用 Apple M4 NVMe 支持\nLinux 7.2-rc7 恢复 Btrfs 修复工作线程基础设施以解决静默数据丢失\nLinux 7.3 看起来将上游 FailFS\nLinux 7.3 预计将移除 FreeVxFS 文件系统驱动\nCryptsetup 2.8.7 发布以应对 Linux 仓促弃用 AF_ALG 的后果\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。他还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nGNOME 设计师阐述他们的 GNOME Shell 梦想\nQEMU 11.1 发布，带来众多改进\nOpenAI 将 ChatGPT 桌面应用带到 Linux\nWine 11.15 发布，包含 Wayland 修复和 20 年历史的 MSXML3 错误修复\nRsync 3.5 发布，作为“非凡”更新修复 33 个安全问题\nComma.ai 推出带开源固件的 PCIe Gen4 x4 转 USB4 扩展坞\nAI 帮助为 QEMU 虚拟机创建 DirectX 11 驱动\nKDE Plasma 6.8 改进 UI，内置远程桌面服务器\n\n在享受无广告浏览的同时，\n单页文章查看\n\n法律免责声明、隐私政策、Cookie\n\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "3070367eacfdb638872e3af99d11b72f": {
+    "id": "3070367eacfdb638872e3af99d11b72f",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/ubuntu-app-center-something-went-wrong",
+    "title_en": "Ubuntu’s App Center doesn’t know what went wrong",
+    "summary_en": "I recently re-encountered my favourite &#8216;error&#8217; dialog in Ubuntu, which is thrown by the distro&#8217;s App Center (snap-store), which is the default GUI software management tool. I don&#8217;t see it often, but when I do it (un)helpfully informs me: &#8220;Something went wrong. We&#8217;re sorry, but we&#8217;re not sure what the error is.&#8221; While I sympathise with its honesty and the general sense of unease in imparts – I say something similar, looking at the state of the world",
+    "pub_date": "Tue, 18 Aug 2026 00:32:22 +0000",
+    "title_zh": "Ubuntu 的应用中心不知道哪里出了问题",
+    "summary_zh": "Ubuntu 的默认图形化软件管理工具 App Center 经常显示“出了点问题，但我们不确定错误是什么”的模糊错误信息，这让用户感到困惑和无助。尽管该错误并不频繁出现，且大多数 snap 包会在后台自动更新，但作为系统主要的 GUI 包管理器，它应该提供更详细的错误信息或至少检查是否有实际影响。作者建议 App Center 在不确定错误时向 Canonical 发送堆栈跟踪，并希望未来能改进错误提示，让用户知道如何解决问题。",
+    "fulltext_zh": "Ubuntu 的应用中心不知道哪里出了问题 - OMG! Ubuntu\n\n我最近再次遇到了 Ubuntu 中我最喜欢的“错误”对话框，这是由发行版的默认图形化软件管理工具抛出的。\n\n我并不经常看到它，但每当它出现时，它会（无用地）告诉我：\n\n“出了点问题。很抱歉，但我们不确定错误是什么。”\n\n虽然我同情它的诚实和它传达的普遍不安感——看着当前世界的状态，我也会说类似的话——但知道哪里出了问题不正是软件的工作吗？\n\n你可以在这里看到这个对话框，现场版（一张较旧的截图，如果有人在意的话——我最近一次没有截图，但手头有几张旧的）：\n\n作为一款用 Flutter 编写的桌面应用，但样式却模仿原生 GTK 应用，它因为这种不协调而显得突出；它看起来应该像其他外观相似的应用那样表现，但实际上并非如此。\n\n按钮离标签太远，调整窗口大小时内容不会很好地重新排列，有很多浪费的空间，字体大小不一致，旋转指示器不寻常——此外还有整体不对劲的感觉，窗口颠倒，颜色奇怪，这取决于硬件。\n\n与 Flathub 以及像出色的桌面 Flatpak 管理器相比，App Center 的主页有一种自动化连锁电子邮件的精心策划的热情。\n\n如果 App Center 是一个藏在文件夹深处的很少使用的工具，我可以忽略这些（许多）怪癖。但它不是。它是 Canonical 希望我们都用来安装和管理 Snap 和 Debian 包——以及很快的驱动程序的 GUI。\n\n它应该更好。\n\n“未知错误”错误的荒谬之处在于：在显示对话框后，似乎没有任何东西损坏或出错，至少我无法分辨。如果应用无法识别什么停止工作，那没关系，但它至少能检查一下是否有东西出错吗？\n\n目前，它只是给我一个无奈的耸肩。没有信息，我该怎么办？\n\n为了在简短的纸上谈兵式评论中保持客观，这个错误并不经常出现，而且大多数 snap 包会在后台自动更新。\n\n但这是主要 GUI 包管理器在一个主要桌面操作系统上，由一家拥有许多才华横溢工程师的公司开发，应该向用户显示的有用信息吗？\n\n每次 App Center “不确定”时，它应该向 Canonical 发送堆栈跟踪。这涉及很多环节；有些出错的地方可能确实难以总结。\n\n在 Ubuntu 26.10 中添加新的驱动程序页面，使得可以图形化地安装、查看和管理 GPU 及其他自由和非自由驱动程序，我的主要希望是，如果我们不能减少错误，至少能提供更有帮助的错误信息。\n\nApp Center 在更新软件时经常遇到困难，在取消选择包或点击查看变更日志时经常卡住。\n\n这就是为什么我更喜欢使用命令行进行所有包更新。它有效，如果无效，它会告诉我原因，并且通常会告诉我如何解决。"
+  },
+  "e133bb0b6fa1764bebfd627232dd406d": {
+    "id": "e133bb0b6fa1764bebfd627232dd406d",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/gnome-wordbook-dictionary-offline",
+    "title_en": "Wordbook is a modern offline dictionary for GNOME",
+    "summary_en": "They say never judge a book by its cover, and few do if said book is a dictionary, but what about desktop dictionary apps? I recently came across Wordbook, a modern English-English dictionary powered by OpenEnglish WordNet and eSpeak for pronunciations. Wordbook is in GNOME Circle, and its GTK4/libadwaita UI is a good fit for the desktop. Wordbook uses a lexical database, with words grouped into &#8216;synsets&#8217; based on their meaning. It makes it easier to explore related words, distinguis",
+    "pub_date": "Mon, 17 Aug 2026 22:30:28 +0000",
+    "title_zh": "Wordbook：GNOME 的现代离线词典",
+    "summary_zh": "Wordbook 是一款专为 GNOME 桌面设计的现代离线词典应用，基于 WordNet 词汇数据库和 eSpeak 发音引擎，采用 GTK4/libadwaita 界面，完全离线运行。它提供同义词集分组、随机单词、收藏、历史记录和自动补全功能，特别适合英语学习者。文章还讨论了离线词典的实用性，并建议 GNOME Shell 的概览搜索未来能集成单词定义查询功能。",
+    "fulltext_zh": "他们常说不要以封面评判一本书，如果这本书是词典，很少有人会这么做，但桌面词典应用又如何呢？\n\n我最近遇到了 Wordbook，一款由 WordNet 和 eSpeak 发音支持的现代英英词典。Wordbook 属于 GNOME Circle，其 GTK4/libadwaita 界面非常适合桌面环境。\n\nWordbook：一本用于理解单词而非仅仅列出单词的词典\n\nWordbook 使用词汇数据库，将单词按含义分组为“同义词集”。这使得探索相关单词、区分形近但义异的单词以及寻找精确的替代词变得更加容易。\n\n它还包含随机单词选项、收藏夹和历史记录，以及自动补全功能。这些对英语学习者都很有用。\n\n更好的是，它完全离线运行。\n\n它提供了一种更传统的词典查询工具，但通常需要互联网连接，而且界面相当过时。如果你只需要“这个词是什么意思？”，它就能满足需求——在我看来，它做得更好。\n\n总的来说，使用网页浏览器查找单词定义更快。同义词也是如此；向搜索引擎询问一个替代词，它会给出更精确的结果——而且随着大语言模型的加入，甚至可能找到一个完全符合你想表达意思的术语。\n\n我希望能有一个像 GNOME Shell 那样的 Linux 工具。即便如此，一款包含发音的离线词典仍有其用途，例如在互联网不可靠时、需要无干扰工作时，或者那些不想把每次查询都交给大型科技公司的人。\n\nWordbook 的功能听起来也对那些正在掌握英语（及其众多怪癖）的非母语者特别有益。\n\nmacOS 和 iOS 有一个简洁的“查找”功能。你可以在任何可选文本上高亮一个单词，右键点击并选择“查找”。匹配的定义会出现在你所在的位置，而不会把你跳转到网页或应用（尽管也有这个选项）。我非常喜欢这种方法。\n\n在写这篇文章时，我惊讶地发现，即使安装了 Wordbook，你也无法在 GNOME Shell 的概览中查找单词的含义。它可以进行计算、显示其他国家的时间，并显示表情符号供复制到剪贴板。\n\n但定义单词？不行。\n\n也许 Wordbook 可以通过添加定义查找来扩展它？\n\nGNOME 51 中的浮动搜索结果只是该功能更大雄心的一部分。一个能回答“这是什么意思？”的桌面搜索工具将是非常有用的定义。\n\n如果大语言模型被信任的话。"
+  },
+  "012b795a595f45a4a8f0c1d72f18d50b": {
+    "id": "012b795a595f45a4a8f0c1d72f18d50b",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/canonical-wsl-growth/",
+    "title_en": "Ubuntu is Growing Faster on Windows Than on Linux",
+    "summary_en": "The company's VP of Engineering expects WSL users to outnumber native Ubuntu desktop users within months.",
+    "pub_date": "Mon, 17 Aug 2026 16:23:17 GMT",
+    "title_zh": "Ubuntu在Windows上的增长速度快于在Linux上的增长速度",
+    "summary_zh": "Canonical工程副总裁Jon在采访中表示，Ubuntu在Windows子系统（WSL）中的用户增长速度已显著超过原生Ubuntu桌面用户，并预计未来几个月内WSL用户将超过原生用户。这一趋势主要受AI和机器学习工作推动，许多开发者因公司配备Windows电脑而转向WSL。Canonical对此并不担忧，因为Ubuntu Pro订阅已覆盖WSL实例，无论用户使用WSL还是原生安装，公司都能获得收入。然而，这一现象可能削弱原生Linux桌面的采用动力。",
+    "fulltext_zh": "Ubuntu在Windows上的增长速度快于在Linux上的增长速度\n\nCanonical工程副总裁Jon与《The Pragmatic Engineer》交谈时表示，Ubuntu在Windows子系统（WSL）中的增长速度已超过原生Ubuntu桌面安装。他预计WSL用户将在几个月内超过原生用户。\n\nJon在谈论AI如何重塑Ubuntu时提到了WSL，他指出：\n\n“一年来，我们WSL用户数量的增长显著高于桌面用户数量的增长。”WSL允许Windows用户“安装”Ubuntu并在其Windows环境中使用。\n\n安装后，用户通过终端应用与Ubuntu交互，运行的就是真正的Ubuntu。你的主目录挂载在Ubuntu中，你可以将终端中的窗口拖到桌面上，就像真正的窗口一样。\n\n“我预计未来几个月内，Ubuntu WSL用户将超过‘原生’Ubuntu用户。”这对于从事机器学习或AI工作的人来说尤其如此。我们已经听到许多开发者反馈，他们不得不使用雇主提供的Windows电脑，但发现自己需要做AI或ML工作。有了WSL，这就简单多了。\n\nCanonical似乎并不担心。Canonical的付费安全与支持订阅Ubuntu Pro已经像覆盖原生安装一样覆盖WSL实例。订阅者可以享受长达15年的CVE补丁、Python、Go和Rust工具链覆盖以及舰队管理。\n\n简单来说，使用Ubuntu Pro的WSL用户和运行Ubuntu Server的数据中心对Canonical来说是同一类客户；无论如何，公司都能获得收入。\n\n而且，正如你之前看到的，Jon也指出了需求持续攀升的原因。许多开发者无法选择自己的工作笔记本电脑，一旦AI或ML工作落到他们头上，WSL就成为在不与IT政策抗争的情况下获得可用Linux环境的最简单途径。\n\n微软WSL产品经理在Ubuntu Pro推出时称这一安排为“梦幻般的合作”，并进一步表示：\n\n“这项工作将使使用WSL构建生产Linux解决方案的企业开发者受益。”\n\n这对原生Linux意味着什么？\n\n如果你特别支持Linux桌面，这里就变得棘手了。如果WSL悄悄满足了那些原本会推动开发者双系统或完全切换的需求，这是否会减轻IT部门和硬件供应商批准原生Linux的压力？\n\nCanonical没有问这个问题，但其副总裁将这一转变描述为胜利，这削弱了原生Linux采用的理由。对于任何想要完全硬件控制、最大性能和Linux优先设置的人来说，在裸机上运行Ubuntu仍然比WSL更好。\n\n但如果Ubuntu增长最快的方式是在微软操作系统内部，那么这值得思考。\n\n喜欢这篇更新吗？支持独立的Linux新闻报道。\n\nIt's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。\n\n一次付费，永久享受。\n\n任何金额，无需承诺。\n\n一个热爱开源软件、定制PC组装、赛车运动和探索世界无限可能的极客。\n\nLinux 7.2发布，带来缓存感知调度，经过一年多的工作。\n\n过度分享给AI？Proton的工具会给你现实检查。\n\nNitrux展示了其他发行版可能想借鉴的新桌面方法。\n\nLightDM复活，但Canonical不再负责。\n\nOmarchy押注AI代理，而Linux世界保持谨慎。\n\n成为更好的Linux用户。\n\n通过FOSS每周通讯，你可以学习有用的Linux技巧、发现应用程序、探索新发行版，并了解Linux世界的最新动态。"
+  },
+  "7986f7b2bec631a753016e633e5f4d4f": {
+    "id": "7986f7b2bec631a753016e633e5f4d4f",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/linux-kernel-7-2-release/",
+    "title_en": "Linux 7.2 Arrives With Cache Aware Scheduling After More Than a Year of Work",
+    "summary_en": "AMD's Radeon driver also picks up HDMI 2.1 support, and Apple M3 MacBooks can now boot the kernel.",
+    "pub_date": "Mon, 17 Aug 2026 05:08:16 GMT",
+    "title_zh": "Linux 7.2 发布：历时一年多，缓存感知调度终落地",
+    "summary_zh": "Linux 7.2 版本在数月后发布，带来了多项重要更新。调度器方面，经过一年多的工作，缓存感知调度（Cache Aware Scheduling）功能终于落地，可优化多核芯片上的任务分配。AMD 的 Radeon 驱动新增 HDMI 2.1 支持，Apple M3 MacBook 也能首次启动内核（目前仅限串行控制台）。此外，该版本还包含针对 AMD 和 Intel 新硬件的支持、Btrfs 大页面的默认启用、网络方面的 WiFi 8 基础工作等。",
+    "fulltext_zh": "Linux 7.2 发布：历时一年多，缓存感知调度终落地\n\nLinux 7.2 发布：历时一年多，缓存感知调度终落地\n\nAMD 的 Radeon 驱动也获得了 HDMI 2.1 支持，Apple M3 MacBook 现在可以启动内核。\n\nLinux 的最新小版本更新在数月后发布，这段时间并没有虚度。耗时一年多的调度器工作终于完成，多款硬件获得了适当支持，一批 2023 款 MacBook 也终于可以启动 Linux。\n\n在此期间，Linus Torvalds 多年来一直将 AI 视为噪音，如今逐渐对其产生兴趣，这本身也算是一种转变。\n\n无论如何，让我们看看这个小版本带来了什么。\n\n此版本有哪些新功能？\n\nAMD 的平台驱动变更主要依赖于准备工作。硬件反馈接口（HFI）驱动增加了 v3 排名表支持，用于动态核心排名；电源管理控制器驱动增加了对 Family 1Ah Model 80H SoC 的支持（基本上是一项针对 Zen 6 的变更）。\n\nUbuntu OEM 内核此前在树外携带的内容现已合入。期待已久的补丁完成了对 HP ZBook Ultra G1a 及其他即将推出的 Ryzen 笔记本的网络摄像头支持。\n\n同样，AMDGPU 也获得了初步的 HDMI 2.1 固定速率链路（Fixed Rate Link）支持，此前该功能被阻止在开源驱动之外。\n\n对于 Intel，本轮大部分工作针对下一代至强 Diamond Rapids 芯片，增加了子内存通道感知和 Rank Retry Logic，以在内存错误期间保持数据完整性。Nova Lake H 和 Panther Lake H 通过 PCIe AER 获得带内 ECC 错误报告。\n\nLinux 7.2 还继续清理旧的 i486 代码块（这些代码在 7.1 中已开始消失），并使 TSC 和 CX8 支持在 x86 上成为无条件支持。TDX 模块现在可以在运行时更新，类似于 CPU 微码，因此安全修复不再强制要求对受影响的系统进行完全重启。\n\n此内核版本的另一个亮点是缓存感知调度（Cache Aware Scheduling），经过一年多的努力，该功能终于落地，位于 CONFIG_SCHED_CACHE_AWARE 配置项之后。\n\n在没有缓存感知的情况下，调度器可能会将相关任务分散到具有多个最后一级缓存（LLC）的芯片上的不同区域。此功能将这些任务分组到同一 LLC 内的核心上。\n\n笔记本支持方面也有改进，包括新增对 ASUS ROG Strix G16 2025、Zephyrus G14 2023/2025 和 TUF Gaming F16 的支持。联想笔记本获得了更多可配置属性以及 WMI 电池充电限制功能，微软 Surface Pro 12 英寸版获得了平台驱动支持。\n\nNouveau 增加了对 NVIDIA GA100 计算加速器的支持。\n\nBtrfs 大页面（large folio）支持已脱离实验状态，现已默认启用，而高达 2M 的超大页面（huge folios）则作为新的实验选项出现。\n\nRISC-V 构建现在默认启用 ACPI 支持，使其可以在 SiFive 的硬件上启动。\n\n网络方面带来了更多 Rust 支持、WiFi 8/UHR 基础工作，以及 Realtek R8152 驱动中的 10Gbit 和 2.5Gbit 支持。\n\nMacBook 首次可以启动主线内核，尽管目前仅限于串行控制台。开发者们为此付出了巨大努力。\n\n此版本还引入了 USB4 或 Thunderbolt 主机到主机（host-to-host）功能，允许两台机器通过 USB4 或 Thunderbolt 线缆直接传输数据。\n\n在发布公告中，Linus Torvalds 表示：\n\n“嗯，这最后一周的发布——再次——比我预期的要大，但嘿，考虑到‘新常态’这回事，如果我因为这个原因推迟发布，我们可能永远不会有发布。\n\n有一些相当晚的还原——drm 调度还原很突出，但这里还有其他一些。这可能不漂亮，但这是处理‘哦，那段代码还没准备好并导致问题’的正确方式。人们稍后会再试。”\n\n对新内核版本感到兴奋是好事，但编译或安装新内核通常被认为需要中级到专家级技能。如果此版本填补了早期内核的某些空白，那么你绝对应该尝试。\n\n但前提是了解风险。我们关于在 Ubuntu 上安装最新 Linux 内核的指南明确列出了各种陷阱。\n\n喜欢这次更新吗？支持独立的 Linux 新闻报道。\n\nIt's FOSS 一直在帮助人们使用 Linux。"
+  },
+  "9be554c351b93e335b4101b7d9c53fde": {
+    "id": "9be554c351b93e335b4101b7d9c53fde",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-File-System-Changes-7.3",
+    "title_en": "EFS & FreeVxFS File-Systems Get Booted While FailFS Merged For Linux 7.3",
+    "summary_en": "Among the early pull requests merged today by Linus Torvalds for the Linux 7.3 kernel cycle were removal of some ancient file-systems while adding in a new pseudo file-system...",
+    "pub_date": "Mon, 17 Aug 2026 20:29:44 -0400",
+    "title_zh": "EFS 与 FreeVxFS 文件系统被移除，FailFS 合并入 Linux 7.3",
+    "summary_zh": "Linux 7.3 内核合并窗口初期，Linus Torvalds 合并了一系列早期拉取请求，其中包括移除两个古老文件系统驱动（FreeVxFS 和 EFS），并新增一个伪文件系统 FailFS。FreeVxFS 是 Veritas VxFS 的只读开源驱动，已无实际用途；EFS 是 SGI IRIX 使用的只读文件系统，已超过20年未维护。FailFS 作为 NULLFS 的补充，使所有操作返回 ENOTSUP，并引入新的 fchroot() 系统调用。此外，NILFS2 的 O_DIRECT 读取改用 IOmap 基础设施。移除 EFS 和 FreeVxFS 约3700行代码，FailFS 仅931行。",
+    "fulltext_zh": "EFS 与 FreeVxFS 文件系统被移除，FailFS 合并入 Linux 7.3 - Phoronix\nEFS 与 FreeVxFS 文件系统被移除，FailFS 合并入 Linux 7.3\n发布于 2026年8月17日 晚上8:29（美国东部时间）。\n\n在今日 Linus Torvalds 为内核周期合并的早期拉取请求中，包括移除一些古老文件系统，同时添加一个新的伪文件系统。\n\n正如预期，Linux 7.3 移除了 FreeVxFS 文件系统驱动。这是用于 Veritas VxFS 文件系统的只读开源驱动，该文件系统曾用于 HP-UX 和 SCO UnixWare。在现代计算中它没有实际用途，如今只会吸引 AI/LLM 编码代理和错误检查器的注意。\n\n现已合并的移除 FreeVxFS 的提交说明如下：\n\n“此提交移除了 freevxfs 驱动。25年前，提供对 1990 年代各种老式 Unix 系统的兼容性还很有趣。如今它主要成为自动化错误检查器的素材。在过去 15 年中，只有一位已知用户和贡献者。”\n\n同时，EFS 文件系统驱动也被移除。EFS 是 SGI 在 IRIX 上使用的只读磁盘格式，早于 XFS 文件系统。EFS 已超过 20 年未维护。\n\n与此同时，Linux 7.3 引入了一个新的文件系统驱动 FailFS。FailFS 是对最近合并的 NULLFS 的补充。使用 FailFS 时，到达文件系统的每个操作都会返回 ENOTSUP（Linux 上表示操作不支持的错误码）。Linux 开发者 Christian Brauner 在提交中解释：\n\n“添加 failfs 并暴露 FD_FAILFS_ROOT 哨兵。这允许用户空间完全摆脱其文件系统状态。进程的根目录或工作目录位于 failfs 中时，必须将每个路径查找锚定在显式文件描述符上。绝对路径、绝对符号链接和 AT_FDCWD 相对查找将直接失败。\n\nFailfs 是 nullfs 的对应物。nullfs 添加一个永久为空、不可变的目录，其查找失败并返回 ENOENT，但可以打开、读取、stat 和挂载。而 failfs 则使每个操作失败。根目录根本无法打开。单个实例在早期启动时通过 kern_mount() 挂载，这使其在逻辑上与每个挂载命名空间不同。\n\n这伴随着一个新的 fchroot() 系统调用，使通过文件描述符进行 chroot 成为一流概念。只要任务没有设置新权限，非特权用户也可以 chroot 到 failfs 中。”\n\n另外，作为 VFS 拉取系列的一部分，还有针对 NILFS2 的改动。NILFS2 已将 O_DIRECT 读取切换到使用 IOmap 基础设施。\n\n移除 EFS 和 FreeVxFS 大约涉及 3700 行代码，而简单的 FailFS 仅 931 行，包括文档。\n\nAVX-512 xor_gen 继续为现代 CPU 上的 Linux RAID 带来令人兴奋的前景\n开源 exFAT 程序 1.4.3 改进 Fsck 和 Mkfs\nLinux 补丁启用 Apple M4 NVMe 支持\nLinux 7.2-rc7 恢复 Btrfs Fixup Worker 基础设施以解决静默数据丢失\nLinux 7.3 看起来将上游化 FailFS\nLinux 7.3 预计移除 FreeVxFS 文件系统驱动\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nGNOME 设计师勾勒他们的一些 GNOME Shell 梦想\nQEMU 11.1 发布，带来众多改进\nOpenAI 将 ChatGPT 桌面应用带到 Linux\nRsync 3.5 发布，作为“非凡”更新修复 33 个安全问题\nComma.ai 推出 PCIe Gen4 x4 转 USB4 扩展坞，采用开源固件\nOmarchy 4.0 Linux 发行版发布，桌面外壳现通过 Quickshell 实现\nCachyOS 2026年8月版本为即将推出的服务器版做准备\nGNOME 51 Beta 发布，包含许多小改进\n\n在享受无广告浏览的同时，\n单页文章查看\n法律声明"
+  },
+  "c171b70a669a600f280c0533e85419f4": {
+    "id": "c171b70a669a600f280c0533e85419f4",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.3-Improving-vRAM-Mgmt",
+    "title_en": "Linux 7.3 To Land Initial Code Improving vRAM Management, More Improvements Coming",
+    "summary_en": "Earlier this year Natalie Vock of Valve's Linux graphics team laid out some patches for improving the Linux gaming experience for systems with limited vRAM. The kernel work for improving that video memory management is set to be introduced in the Linux 7.3 kernel. While that's a celebration on its own, Vock is pursuing more improvements still for bettering the Linux GPU driver video memory management behavior...",
+    "pub_date": "Mon, 17 Aug 2026 17:15:57 -0400",
+    "title_zh": "Linux 7.3 将引入改进 vRAM 管理的初始代码，更多改进即将到来",
+    "summary_zh": "Valve 的 Linux 图形团队工程师 Natalie Vock 早前提出的改进有限 vRAM 系统下 Linux 游戏体验的内核补丁，已被纳入 DRM-Next，并计划在 Linux 7.3 合并窗口中合并。Vock 在最新博客中详细介绍了视频内存管理、驱逐处理及测试结果，表明即使显存超支 1GB，游戏仍可流畅运行。该工作已应用于 SteamOS 内核，未来还将继续改进并上游化到主线内核。",
+    "fulltext_zh": "Linux 7.3 将引入改进 vRAM 管理的初始代码，更多改进即将到来 - Phoronix\nLinux 7.3 将引入改进 vRAM 管理的初始代码，更多改进即将到来\n2026年8月17日下午5:15（美国东部时间）\n今年早些时候，Valve 的 Linux 图形团队工程师 Natalie Vock 提出了一些补丁，用于改善在 vRAM 受限系统上的 Linux 游戏体验。这些改进视频内存管理的内核工作将随 Linux 7.3 内核引入。虽然这本身已值得庆祝，但 Vock 仍在追求更多改进，以优化 Linux GPU 驱动程序的视频内存管理行为。\n随着初始补丁已排队进入 DRM-Next，并计划在接下来的两周内合并到 Linux 7.13 合并窗口，Natalie Vock 今天发布了一篇新博客文章，概述了改进 Linux vRAM 管理的最新工作和成果，尤其是针对 AMDGPU 驱动程序。\nVock 的博客文章篇幅较长但内容详实，重点介绍了视频内存管理、驱逐处理以及使用《夺宝奇兵：大圆环》进行的测试中的诸多细节。测试中，她尝试将设置调至最高，以消耗 9GB 视频内存，而显卡仅有 8GB vRAM。即使超支 1GB，游戏在 8GB 显卡上仍然相当可玩。\nVock 在最新文章中总结道：\n“当一切尘埃落定，vRAM 耗尽时的表现如何？\n我认为相当不错！在许多情况下，即使驱逐 1GB 或更多的内存，你可能会惊讶于性能仍能保持多少！但话说回来，这当然是一个相当乐观的情况，如果错误的数据最终进入 CPU 内存，可能会很快导致非常显著的性能下降。驱逐要做到恰到好处是很棘手的，而且在某种程度上，性能总会受到影响。如果一款游戏即使在所有内容都在 vRAM 中时也难以达到 30fps，那么在此基础上还需要驱逐某些内容，有时可能不可避免地无法达到 30fps 的目标。\n无论如何，我希望这篇博客文章能够证明，即使最终有一些内存被驱逐到系统内存，性能下降也是可以控制的。驱动程序（尤其是内核驱动程序）可以采取措施，使超支尽可能高效地工作，甚至应用程序也可以与驱动栈协调，以减轻其内存被驱逐的影响。当一切到位时，vRAM 超支其实并不像乍一看那么严重。”\n这项工作已经应用于 SteamOS 内核的稳定版和预览版频道。除了 Linux 7.3 的初始上游化工作外，进一步的改进仍在进行中，以便在未来某个主线 Linux 内核版本中上游化。\n相关补丁集名为“vramstuff-rebase”，包含所有补丁，供那些想在 SteamOS 之外立即测试的人使用。\n完整博客文章请参阅：\nLinux 7.3 SMP 改进有助于减少延迟，提升实时性能\nCon Kolivas 恢复“-ck”补丁和 MuQSS 以提升 Linux 桌面响应速度\nGNU Linux-libre 7.2-gnu 在更多驱动清理后发布\nLinux 7.2 发布，I/O 更快，AMD 和 Intel 驱动改进\nLinux 7.2 内核发布前提交的 tlbi= 启动选项\nLinux 7.3 binfmt_misc 将允许 BPF 程序动态选择执行环境\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\nGNOME 设计师阐述他们的 GNOME Shell 梦想\nQEMU 11.1 发布，带来众多改进\nOpenAI 将 ChatGPT 桌面应用带到 Linux\nRsync 3.5 作为“Extraordina”发布"
+  },
+  "1970a37d3a7c9b21902b9c48cf9c80bd": {
+    "id": "1970a37d3a7c9b21902b9c48cf9c80bd",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/FFmpeg-Faster-HEVC-Encode",
+    "title_en": "FFmpeg Lands H.265 Vulkan Encode Performance Optimizations",
+    "summary_en": "The FFmpeg multimedia library can now enjoy faster H.265/HEVC video encoding with the Vulkan-powered encode path. With the optimizations merged today, the H.265 encode performance should be roughly at parity to the H.264 encode speed...",
+    "pub_date": "Mon, 17 Aug 2026 16:14:03 -0400",
+    "title_zh": "FFmpeg 实现 H.265 Vulkan 编码性能优化",
+    "summary_zh": "FFmpeg 多媒体库近日合并了一项针对 hevc_vulkan 编码器的优化补丁，通过采用与 h264_vulkan 类似的调优策略，显著提升了 H.265/HEVC 视频编码性能。优化后，H.265 编码速度与 H.264 基本持平，在 1080p 测试中，帧率从原来的 200-317 fps 提升至 289-358 fps，与 H.264 的 288-359 fps 相当。该补丁还修复了编码配置同步问题，确保输出视频可解码。",
+    "fulltext_zh": "FFmpeg 实现 H.265 Vulkan 编码性能优化 - Phoronix\nFFmpeg 实现 H.265 Vulkan 编码性能优化\n2026年8月17日 下午4:14 EDT\n\nFFmpeg 多媒体库现在可以通过 Vulkan 加速的编码路径享受更快的 H.265/HEVC 视频编码。随着今天合并的优化，H.265 编码性能应大致与 H.264 编码速度持平。\n\n一个优化补丁今天被合并到 FFmpeg Git 中，用于加速 hevc_vulkan，该补丁遵循了 h264_vulkan 的一些相同调优。提交信息解释了这一点并提供了一些性能数据：\n\n\"在不启用 ALLOW_ENCODE_PARAMETER_OPTIMIZATIONS 且最小 CU 强制为 8x8 的情况下，hevc_vulkan 在常见质量级别下保持了比 h264_vulkan 更重的编码配置（16x16 宏块，无最小 CU SPS 字段）。设置会话标志并在 CTB >= 32 时使用最小 CU 16x16；同时修复了 max_transform_hierarchy_depth_inter 的赋值。\n\n在应用 GetEncoded SPS 反馈时，同步覆盖的字段（extent/conf_win、最小/差异 CU 和 TB 大小、变换层次）。仅复制 log2_diff 会导致 CtbLog2SizeY=7，并在某些实现重写最小 CU 后产生无法解码的 HEVC。\n\n报告者命令（1080p testsrc2，质量 1，1000 帧）：\n之前：hevc ~200–317 fps，低于 h264\n之后：hevc 289/325/358 fps，h264 288/317/359 fps（持平）\"\n\n很高兴看到 HEVC Vulkan 编码性能不仅比以前更快，而且与 H.264 编码速度持平。\n\n感兴趣的人可以通过以下链接找到合并的补丁：\n\nClaude Opus 帮助调试并修复 HP OmniBook X Flip 14 在 Linux 上无音频的问题\nFFmpeg 9.0 发布，带来更多 Vulkan 加速、动画 WebP 及更多 AMD AMF 功能\nShotcut 26.7 视频编辑器发布，附带素材库\nLinux 7.2-rc6 音频修复：\"远超预期\"\ndav1d 1.5.4 为 OS/2 带来 AV1 解码\nLinux 7.2-rc5 提交的音频怪癖\"新常态\"\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nGNOME 设计师勾勒他们的 GNOME Shell 梦想\nQEMU 11.1 发布，带来众多改进\nOpenAI 将 ChatGPT 桌面应用带到 Linux\nRsync 3.5 发布，作为\"非凡\"更新修复 33 个安全问题\nComma.ai 推出 PCIe Gen4 x4 转 USB4 扩展坞，采用开源固件\nOmarchy 4.0 Linux 发行版发布，桌面 Shell 现通过 Quickshell 实现\nCachyOS 2026年8月发布，为即将推出的服务器版做准备\nGNOME 51 Beta 发布，带来许多小改进\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "be74001d92496c913ff666109b7e4cd5": {
+    "id": "be74001d92496c913ff666109b7e4cd5",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/LLVM-Offload-Rust-Performance",
+    "title_en": "Offloading Rust To GPUs Proves Capable Of High Performance With Memory Safety",
+    "summary_en": "A new research paper published on LLVM offloading to GPU accelerators using the Rust programming language is talking up the prospects of making use of safe Rust code for GPU kernels while retaining Rust's memory safety and other advantages over C++ / CUDA / HIP...",
+    "pub_date": "Mon, 17 Aug 2026 15:30:16 -0400",
+    "title_zh": "将Rust卸载到GPU：内存安全与高性能兼备",
+    "summary_zh": "一项新研究展示了使用Rust编程语言通过LLVM卸载到GPU加速器的可行性，表明安全的Rust代码在GPU内核中能保持内存安全优势，同时性能与手写优化的CUDA/HIP C++内核相当。研究团队利用LLVM的卸载基础设施和Rust编译器特性，在多数测试中与AMD HIP和NVIDIA CUDA方案竞争，部分测试胜出。该前端被认为是安全的，允许大多数GPU内核避免使用原始指针。",
+    "fulltext_zh": "一项关于使用Rust编程语言通过LLVM卸载到GPU加速器的新研究论文，探讨了在GPU内核中使用安全Rust代码的前景，同时保留Rust的内存安全及其他优于C++/CUDA/HIP的优势。\n\n该研究论文由Manuel S. Drehwald、Marcelo Domínguez、Kevin Sala、Alán Aspuru-Guzik和Johannes Doerfert撰写，发现使用LLVM的卸载基础设施和Rust编程语言的特性，仍能实现与原生、手写优化的CUDA和HIP C++内核相媲美的性能。所有这些都位于LLVM后端和Rust编译器中。\n\n论文中分享的基准测试结果显示，他们的LLVM卸载实现与原生AMD HIP和NVIDIA CUDA解决方案在大多数测试中普遍具有竞争力——有的胜出，有的落败。研究人员意识到还有其他性能途径可以探索，以缩小在代码生成和其他IR差异方面的差距。\n\n他们的前端被认为是安全的，允许大多数GPU内核避免使用原始指针。\n\n有兴趣了解有关Rust中LLVM卸载工作的更多信息的人，可以查看该论文。\n\nRust卸载支持的上游跟踪可通过此Rust-Lang工单查看。"
+  },
+  "5581aae47bc4b653cc6c4f78e7e3187a": {
+    "id": "5581aae47bc4b653cc6c4f78e7e3187a",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/arctic-fan-controller",
+    "title_en": "ARCTIC Fan Controller: The Best Fan Controller For Linux Desktops, Less Than $10 USD",
+    "summary_en": "Back in March were patches posted by ARCTIC Cooling for an ARCTIC fan controller driver for Linux. Typically we aren't used to seeing desktop/enthusiast focused vendors providing such Linux drivers for peripherals directly but the sad fact is most often it's left up to the open-source community to reverse engineer and create such drivers for Linux. Making it all the more surprising besides it coming from ARCTIC Cooling directly was that at the time they didn't even have a fan controller product ",
+    "pub_date": "Mon, 17 Aug 2026 12:50:00 -0400",
+    "title_zh": "ARCTIC风扇控制器：Linux桌面最佳风扇控制器，售价不到10美元",
+    "summary_zh": "ARCTIC Cooling为Linux内核提交了风扇控制器驱动，并在产品发布前就完成了主线化。这款ARCTIC风扇控制器拥有10个PWM独立调节端口，通过USB接口监控，SATA电源供电，售价仅9美元。Phoronix评论称这是首次有PC发烧友品牌在发布前就为Linux内核提供驱动，并称赞ARCTIC的贡献，相比之下其他品牌如Thermaltake、Corsair、NZXT从未直接贡献过Linux内核驱动。",
+    "fulltext_zh": "早在三月份，ARCTIC Cooling就为Linux提交了ARCTIC风扇控制器驱动的补丁。通常我们并不习惯看到面向桌面/发烧友的厂商直接为外设提供这样的Linux驱动，但遗憾的是，大多数情况下这都留给开源社区去逆向工程并创建这些Linux驱动。更令人惊讶的是，除了驱动直接来自ARCTIC Cooling之外，当时他们甚至还没有带USB接口的风扇控制器产品。现在，这款产品已经发布，成为Linux系统上一款出色的USB风扇控制器，零售价仅为9美元。\n\n这款ARCTIC风扇控制器驱动已合入Linux 7.2主线，并于上周末作为稳定版发布。与此同时，7月底ARCTIC Cooling发布了他们的新款风扇控制器，支持USB监控/控制，而当时Linux驱动已经在内核主线树中。\n\n在Phoronix评测Linux硬件超过22年的历史中，这是我第一次看到PC发烧友品牌在产品发布前就为Linux内核主线提供风扇控制器驱动……而像Thermaltake、Corsair、NZXT等其他品牌，从未直接贡献过任何Linux内核驱动。因此，向ARCTIC Cooling致敬，他们不仅将这款Linux内核驱动上游化，甚至在产品发货前就完成了主线化。\n\n这款ARCTIC风扇控制器是一个10端口风扇控制器，支持独立PWM调节。通过USB接口进行监控，而风扇控制器则通过SATA电源适配器供电。\n\nARCTIC提供了Windows驱动/软件来控制风扇，而在Linux上则有了现在已主线化的支持。ARCTIC Cooling慷慨地为Phoronix提供了评测样品，用于Linux测试。\n\nARCTIC Freezer 4U-SP5为AMD EPYC 9004/9005 CPU提供高效散热\nARCTIC Freezer 4U-M散热器适用于Ampere Altra 4U服务器/工作站\nSilverStone XED120S-WS为4U Intel/AMD工作站和服务器提供超强散热\nSilverStone XE360-SP5和XE04-SP5用于冷却AMD EPYC 9004/9005 4U服务器\nNoctua NH-L12Sx77是一款出色的低剖面CPU散热器\nArctic Freezer 4U-M是一款不错的4U散热器，能够冷却高端AMD和Intel CPU\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "8029187c3b9558e8109b18c955cc2beb": {
+    "id": "8029187c3b9558e8109b18c955cc2beb",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/shelly-gui-package-manager-for-arch-linux-now-lets-you-install-apps-from-flathub/",
+    "title_en": "Shelly GUI Package Manager for Arch Linux Now Lets You Install Apps from Flathub",
+    "summary_en": "The Shelly GUI Package Manager for Arch Linux now supports Flathub, allowing you to install a wide range of applications effortlessly. Try it now!\nThe post Shelly GUI Package Manager for Arch Linux Now Lets You Install Apps from Flathub appeared first on Linux Today.",
+    "pub_date": "Mon, 17 Aug 2026 07:20:23 +0000",
+    "title_zh": "Shelly GUI 包管理器现已支持从 Flathub 安装应用",
+    "summary_zh": "Arch Linux 的 Shelly GUI 包管理器现已支持 Flathub，用户可以通过图形界面轻松安装大量应用程序。这一更新简化了软件安装流程，扩展了可用软件库，提升了用户体验。",
+    "fulltext_zh": "Arch Linux 的 Shelly GUI 包管理器现已支持 Flathub，让你能够轻松安装各种应用程序。立即尝试吧！\n\n该文章首发于 Linux Today。"
+  },
+  "a7bf89b70d2bb23c914655f803e366ea": {
+    "id": "a7bf89b70d2bb23c914655f803e366ea",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/first-look-at-ubuntu-budgie-24-04-4-lts-for-raspberry-pi/",
+    "title_en": "First Look at Ubuntu Budgie 24.04.4 LTS for Raspberry Pi",
+    "summary_en": "Unveil the capabilities of Ubuntu Budgie 24.04.4 LTS on Raspberry Pi. Experience a sleek design and improved functionality tailored for your needs.\nThe post First Look at Ubuntu Budgie 24.04.4 LTS for Raspberry Pi appeared first on Linux Today.",
+    "pub_date": "Mon, 17 Aug 2026 07:19:06 +0000",
+    "title_zh": "Ubuntu Budgie 24.04.4 LTS 树莓派版初体验",
+    "summary_zh": "本文介绍了 Ubuntu Budgie 24.04.4 LTS 在树莓派上的表现，强调了其时尚的设计和针对用户需求改进的功能。该版本为树莓派用户提供了流畅的桌面体验，并展示了 Ubuntu Budgie 在 ARM 平台上的优化成果。",
+    "fulltext_zh": "探索 Ubuntu Budgie 24.04.4 LTS 在树莓派上的强大功能。体验专为你的需求打造的时尚设计与改进功能。\n\n该文章首发于 Linux Today。"
+  },
+  "242152cef16cd24c4b68b29645f8f549": {
+    "id": "242152cef16cd24c4b68b29645f8f549",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/ubuntu-reverts-rust-cp-after-it-breaks-live-image-builds/",
+    "title_en": "Ubuntu Reverts Rust cp After It Breaks Live Image Builds",
+    "summary_en": "Explore the recent changes in Ubuntu as it reverts Rust's cp due to issues with live image builds. Understand the consequences for developers and users.\nThe post Ubuntu Reverts Rust cp After It Breaks Live Image Builds appeared first on Linux Today.",
+    "pub_date": "Mon, 17 Aug 2026 07:16:06 +0000",
+    "title_zh": "Ubuntu 因破坏 Live 镜像构建而回退 Rust cp",
+    "summary_zh": "Ubuntu 最近决定回退 Rust 实现的 cp 命令，因为该命令在构建 Live 镜像时出现了问题。这一变动影响了开发者和用户，导致构建流程不稳定。Ubuntu 团队选择暂时恢复传统的 cp 实现，以确保系统构建的可靠性。此举反映了在采用新工具时需谨慎评估其兼容性，同时也提醒开发者关注系统关键组件的稳定性。",
+    "fulltext_zh": "探索 Ubuntu 近期因 Rust 实现的 cp 命令导致 Live 镜像构建问题而进行的回退变更。了解这一变动对开发者和用户的影响。\n\n该文章《Ubuntu 因破坏 Live 镜像构建而回退 Rust cp》最初发表于 Linux Today。"
+  },
+  "804bc40a9e076884cd1e90eeac091230": {
+    "id": "804bc40a9e076884cd1e90eeac091230",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/fedora-rethinks-community-initiatives-after-ai-desktop-backlash/",
+    "title_en": "Fedora Rethinks Community Initiatives After AI Desktop Backlash",
+    "summary_en": "Explore Fedora's strategic changes to community initiatives following the backlash against AI desktop features. Learn more about their new direction.\nThe post Fedora Rethinks Community Initiatives After AI Desktop Backlash appeared first on Linux Today.",
+    "pub_date": "Mon, 17 Aug 2026 07:12:09 +0000",
+    "title_zh": "Fedora在AI桌面功能引发争议后重新思考社区计划",
+    "summary_zh": "Fedora项目在AI桌面功能遭到用户强烈反对后，正在重新评估其社区计划。这一战略调整旨在更好地回应用户关切，并重新定位Fedora在开源社区中的发展方向。本文探讨了Fedora如何应对这一挑战，以及其未来的新方向。",
+    "fulltext_zh": "探索Fedora在AI桌面功能引发争议后，对社区计划进行的战略调整。了解更多关于他们的新方向。\n\n这篇关于Fedora在AI桌面功能引发争议后重新思考社区计划的文章首发于Linux Today。"
+  },
+  "0bd5c0f6460f8e660fabc39df5975868": {
+    "id": "0bd5c0f6460f8e660fabc39df5975868",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/the-july-2026-issue-of-the-pclinuxos-magazine/",
+    "title_en": "The July 2026 Issue of the PCLinuxOS Magazine",
+    "summary_en": "Explore the July 2026 issue of PCLinuxOS Magazine, featuring the latest updates, tutorials, and insights into the PCLinuxOS community and its innovations.\nThe post The July 2026 Issue of the PCLinuxOS Magazine appeared first on Linux Today.",
+    "pub_date": "Mon, 17 Aug 2026 07:08:46 +0000",
+    "title_zh": "PCLinuxOS杂志2026年7月刊",
+    "summary_zh": "PCLinuxOS杂志发布了2026年7月刊，内容涵盖最新更新、教程以及社区动态和创新见解。本期杂志为读者提供了关于PCLinuxOS发行版的深入信息，帮助用户了解新功能、技术指南和社区活动。",
+    "fulltext_zh": "探索PCLinuxOS杂志2026年7月刊，其中包含最新更新、教程以及对PCLinuxOS社区及其创新的见解。\n\n本文首发于Linux Today。"
   }
 }

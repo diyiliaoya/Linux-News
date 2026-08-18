@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linux 7.2 发布：历时一年多，缓存感知调度终落地 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年08月18日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">软件应用</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Linux 7.2 发布：历时一年多，缓存感知调度终落地</h1>
+
+  <div class="article-summary">Linux 7.2 版本在数月后发布，带来了多项重要更新。调度器方面，经过一年多的工作，缓存感知调度（Cache Aware Scheduling）功能终于落地，可优化多核芯片上的任务分配。AMD 的 Radeon 驱动新增 HDMI 2.1 支持，Apple M3 MacBook 也能首次启动内核（目前仅限串行控制台）。此外，该版本还包含针对 AMD 和 Intel 新硬件的支持、Btrfs 大页面的默认启用、网络方面的 WiFi 8 基础工作等。</div>
+
+  <div class="article-body"><p>Linux 7.2 发布：历时一年多，缓存感知调度终落地</p><p>Linux 7.2 发布：历时一年多，缓存感知调度终落地</p><p>AMD 的 Radeon 驱动也获得了 HDMI 2.1 支持，Apple M3 MacBook 现在可以启动内核。</p><p>Linux 的最新小版本更新在数月后发布，这段时间并没有虚度。耗时一年多的调度器工作终于完成，多款硬件获得了适当支持，一批 2023 款 MacBook 也终于可以启动 Linux。</p><p>在此期间，Linus Torvalds 多年来一直将 AI 视为噪音，如今逐渐对其产生兴趣，这本身也算是一种转变。</p><p>无论如何，让我们看看这个小版本带来了什么。</p><p>此版本有哪些新功能？</p><p>AMD 的平台驱动变更主要依赖于准备工作。硬件反馈接口（HFI）驱动增加了 v3 排名表支持，用于动态核心排名；电源管理控制器驱动增加了对 Family 1Ah Model 80H SoC 的支持（基本上是一项针对 Zen 6 的变更）。</p><p>Ubuntu OEM 内核此前在树外携带的内容现已合入。期待已久的补丁完成了对 HP ZBook Ultra G1a 及其他即将推出的 Ryzen 笔记本的网络摄像头支持。</p><p>同样，AMDGPU 也获得了初步的 HDMI 2.1 固定速率链路（Fixed Rate Link）支持，此前该功能被阻止在开源驱动之外。</p><p>对于 Intel，本轮大部分工作针对下一代至强 Diamond Rapids 芯片，增加了子内存通道感知和 Rank Retry Logic，以在内存错误期间保持数据完整性。Nova Lake H 和 Panther Lake H 通过 PCIe AER 获得带内 ECC 错误报告。</p><p>Linux 7.2 还继续清理旧的 i486 代码块（这些代码在 7.1 中已开始消失），并使 TSC 和 CX8 支持在 x86 上成为无条件支持。TDX 模块现在可以在运行时更新，类似于 CPU 微码，因此安全修复不再强制要求对受影响的系统进行完全重启。</p><p>此内核版本的另一个亮点是缓存感知调度（Cache Aware Scheduling），经过一年多的努力，该功能终于落地，位于 CONFIG_SCHED_CACHE_AWARE 配置项之后。</p><p>在没有缓存感知的情况下，调度器可能会将相关任务分散到具有多个最后一级缓存（LLC）的芯片上的不同区域。此功能将这些任务分组到同一 LLC 内的核心上。</p><p>笔记本支持方面也有改进，包括新增对 ASUS ROG Strix G16 2025、Zephyrus G14 2023/2025 和 TUF Gaming F16 的支持。联想笔记本获得了更多可配置属性以及 WMI 电池充电限制功能，微软 Surface Pro 12 英寸版获得了平台驱动支持。</p><p>Nouveau 增加了对 NVIDIA GA100 计算加速器的支持。</p><p>Btrfs 大页面（large folio）支持已脱离实验状态，现已默认启用，而高达 2M 的超大页面（huge folios）则作为新的实验选项出现。</p><p>RISC-V 构建现在默认启用 ACPI 支持，使其可以在 SiFive 的硬件上启动。</p><p>网络方面带来了更多 Rust 支持、WiFi 8/UHR 基础工作，以及 Realtek R8152 驱动中的 10Gbit 和 2.5Gbit 支持。</p><p>MacBook 首次可以启动主线内核，尽管目前仅限于串行控制台。开发者们为此付出了巨大努力。</p><p>此版本还引入了 USB4 或 Thunderbolt 主机到主机（host-to-host）功能，允许两台机器通过 USB4 或 Thunderbolt 线缆直接传输数据。</p><p>在发布公告中，Linus Torvalds 表示：</p><p>“嗯，这最后一周的发布——再次——比我预期的要大，但嘿，考虑到‘新常态’这回事，如果我因为这个原因推迟发布，我们可能永远不会有发布。</p><p>有一些相当晚的还原——drm 调度还原很突出，但这里还有其他一些。这可能不漂亮，但这是处理‘哦，那段代码还没准备好并导致问题’的正确方式。人们稍后会再试。”</p><p>对新内核版本感到兴奋是好事，但编译或安装新内核通常被认为需要中级到专家级技能。如果此版本填补了早期内核的某些空白，那么你绝对应该尝试。</p><p>但前提是了解风险。我们关于在 Ubuntu 上安装最新 Linux 内核的指南明确列出了各种陷阱。</p><p>喜欢这次更新吗？支持独立的 Linux 新闻报道。</p><p>It's FOSS 一直在帮助人们使用 Linux。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/linux-kernel-7-2-release/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

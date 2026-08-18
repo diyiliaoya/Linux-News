@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Linux 7.2 带来缓存感知调度、更快的 ext4 和 Btrfs — Linux 中文速报</title>
+<title>ARCTIC风扇控制器：Linux桌面最佳风扇控制器，售价不到10美元 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Linux 7.2 带来缓存感知调度、更快的 ext4 和 Btrfs</h1>
+  <h1>ARCTIC风扇控制器：Linux桌面最佳风扇控制器，售价不到10美元</h1>
 
-  <div class="article-summary">Linux 内核 7.2 正式发布，引入了缓存感知调度、ext4 文件系统性能提升以及大量新的和改进的硬件驱动程序。本次开发周期历时 9 周，吸引了超过 2100 名贡献者，其中约 5% 的提交使用了 AI 辅助。同时，内核移除了大量旧代码，如 i486 CPU 模拟和 Hercules 显卡驱动。备受期待的公平 GPU 调度器因性能回退问题被临时回退。其他改进包括管道锁定修复、MGLRU 内存回收优化以及 ext4 快速提交功能的增强。</div>
+  <div class="article-summary">ARCTIC Cooling为Linux内核提交了风扇控制器驱动，并在产品发布前就完成了主线化。这款ARCTIC风扇控制器拥有10个PWM独立调节端口，通过USB接口监控，SATA电源供电，售价仅9美元。Phoronix评论称这是首次有PC发烧友品牌在发布前就为Linux内核提供驱动，并称赞ARCTIC的贡献，相比之下其他品牌如Thermaltake、Corsair、NZXT从未直接贡献过Linux内核驱动。</div>
 
-  <div class="article-body"><p>Linux 7.2 带来缓存感知调度、更快的 ext4、mglru 回收</p><p>Linux 内核 7.2 已发布，新增了缓存感知调度、ext4 文件系统性能提升，以及大量针对笔记本电脑和外设的新硬件驱动和改进驱动。</p><p>在 9 周的开发周期中还创下了合并窗口记录，参与贡献的个人超过 2100 人。显然，AI 在其中发挥了作用。LWN 的提交分析发现，7.2 版本中约有 5% 的提交带有“assisted-by”标签，表明使用了 AI。</p><p>不过，最新的内核更新并非全是新增内容。</p><p>Linux 7.2 中移除了超过 13000 行用于旧式 i486 CPU 模拟的代码，以及一个已有 40 年历史的 Hercules 显卡驱动、AppleTalk 网络协议和 ISA 与 PCMCIA ARCnet 驱动。</p><p>这些都不是人们日常会怀念的东西，而那些怀念的人可以启动 Linux 7.1 或更低版本。</p><p>最后，一个原本预期在 Linux 7.2 中出现的关键特性——更公平的 GPU 调度器——并未如期而至。由于某些 AMD 显卡上出现性能回退的报告，在最后一刻被回退，重新采用了先入先出（FIFO）方法。</p><p>欲了解更多 Linux 7.2 的新特性，请继续阅读！</p><p>Linux 7.2：主要变化</p><p>缓存感知调度</p><p>Linux 7.2 使其任务调度器（负责决定哪些任务运行以及何时运行）具备缓存感知能力。这意味着它可以识别线程（任务的一部分）是否属于同一进程，并将它们保持在共享缓存的核上。</p><p>调度器现在更加智能，将进程线程保持在共享缓存的核上</p><p>此前，调度器会在所有 CPU 核之间平衡负载，而不检查不同核上的线程是否共享内存。</p><p>不同核上的线程需要重新获取或同步相同的数据，这种现象被称为“缓存抖动”——而现在这已受到限制。</p><p>已设置防护措施以防止进程过载缓存“域”（因此一个应用的任务不会阻塞系统）。如果进程已使用超过 25% 的 CPU 时间，或超过域中 33% 的负载，调度器也不会再移动更多线程。</p><p>具有“多缓存域”的 AMD 和 Intel CPU 从中受益最大，但具体受益程度取决于处理器和所涉及的工作负载。</p><p>管道获得锁定修复</p><p>针对管道（是的，管道，如 shell 命令和后台任务中常用的那种）的锁定修复减少了它们在写入期间持有锁（防止同时访问）的时间。</p><p>现在，这听起来可能有点技术性，但它带来的改进相当可观。根据提交说明，这在特定情况下可带来高达 6-28% 的性能提升，并将写入延迟降低 5-22%（在内存压力下提升更明显）。</p><p>与大多数 Linux 内核更新中的大多数优化一样，这些好处并非普遍适用，因此常规的日常工作流程不会明显注意到或受益于此。但只要管道机制在运行，它就会发挥作用，保持其高效。</p><p>内存回收更加紧凑</p><p>Linux 7.2 优化了多代 LRU（MGLRU），这是内核用于在内存不足时决定从内存中移除什么以及如何回收的算法。</p><p>通过清理和收紧“回收”循环，以及在此过程中“脏页”的写回方式，这有利于特定类型的工作负载。提交说明宣称在 MongoDB 与 YCSB 中实现了“显著改进”，并减少了意外的内存不足（OOM）终止。</p><p>ext4 文件系统更改</p><p>ext4（Ubuntu 的默认文件系统）在 Linux 7.2 中获得了一些小幅度的速度优化。</p><p>ext4 消除了高负载下的锁竞争和死锁</p><p>对 ext4 文件系统快速提交功能的更改（顾名思义，它比完整提交更快地写入日志条目）消除了高负载下的锁竞争和死锁。</p><p>相关统计信息现在可以在 /proc/fs/ext4/*/fc_info 中查看（我们稍后会在本综述中再次提到 proc）。</p><p>另一个与 XFS 共享的修复，从内核的 IOMAP 层中移除了一步内存清理操作，使小型随机 4K 读取性能提升了 5%。</p></div>
+  <div class="article-body"><p>早在三月份，ARCTIC Cooling就为Linux提交了ARCTIC风扇控制器驱动的补丁。通常我们并不习惯看到面向桌面/发烧友的厂商直接为外设提供这样的Linux驱动，但遗憾的是，大多数情况下这都留给开源社区去逆向工程并创建这些Linux驱动。更令人惊讶的是，除了驱动直接来自ARCTIC Cooling之外，当时他们甚至还没有带USB接口的风扇控制器产品。现在，这款产品已经发布，成为Linux系统上一款出色的USB风扇控制器，零售价仅为9美元。</p><p>这款ARCTIC风扇控制器驱动已合入Linux 7.2主线，并于上周末作为稳定版发布。与此同时，7月底ARCTIC Cooling发布了他们的新款风扇控制器，支持USB监控/控制，而当时Linux驱动已经在内核主线树中。</p><p>在Phoronix评测Linux硬件超过22年的历史中，这是我第一次看到PC发烧友品牌在产品发布前就为Linux内核主线提供风扇控制器驱动……而像Thermaltake、Corsair、NZXT等其他品牌，从未直接贡献过任何Linux内核驱动。因此，向ARCTIC Cooling致敬，他们不仅将这款Linux内核驱动上游化，甚至在产品发货前就完成了主线化。</p><p>这款ARCTIC风扇控制器是一个10端口风扇控制器，支持独立PWM调节。通过USB接口进行监控，而风扇控制器则通过SATA电源适配器供电。</p><p>ARCTIC提供了Windows驱动/软件来控制风扇，而在Linux上则有了现在已主线化的支持。ARCTIC Cooling慷慨地为Phoronix提供了评测样品，用于Linux测试。</p><p>ARCTIC Freezer 4U-SP5为AMD EPYC 9004/9005 CPU提供高效散热</p><p>ARCTIC Freezer 4U-M散热器适用于Ampere Altra 4U服务器/工作站</p><p>SilverStone XED120S-WS为4U Intel/AMD工作站和服务器提供超强散热</p><p>SilverStone XE360-SP5和XE04-SP5用于冷却AMD EPYC 9004/9005 4U服务器</p><p>Noctua NH-L12Sx77是一款出色的低剖面CPU散热器</p><p>Arctic Freezer 4U-M是一款不错的4U散热器，能够冷却高端AMD和Intel CPU</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/linux-7-2-cache-aware-scheduling-ext4-btrfs" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/review/arctic-fan-controller" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
