@@ -7357,5 +7357,148 @@
     "title_zh": "PCLinuxOS杂志2026年7月刊",
     "summary_zh": "PCLinuxOS杂志发布了2026年7月刊，内容涵盖最新更新、教程以及社区动态和创新见解。本期杂志为读者提供了关于PCLinuxOS发行版的深入信息，帮助用户了解新功能、技术指南和社区活动。",
     "fulltext_zh": "探索PCLinuxOS杂志2026年7月刊，其中包含最新更新、教程以及对PCLinuxOS社区及其创新的见解。\n\n本文首发于Linux Today。"
+  },
+  "bfe3411f03bd9a5934e0f66c59f5ea5b": {
+    "id": "bfe3411f03bd9a5934e0f66c59f5ea5b",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/firefox-154-released",
+    "title_en": "Firefox 154 released with translation, AI and UI tweaks",
+    "summary_en": "Mozilla has released Firefox 154 with some small AI-related changes, an &#8216;improved&#8217; full-page translations and faster video seeking on &#8220;all operating systems&#8221;. Firefox 154 serves as the final monthly release of Firefox before browser switches to a faster, twice-monthly release schedule early September. That means you&#8217;ll be back here, reading &#8220;Firefox 155 released&#8221; in a couple weeks, rather than the usual four weeks. But enough what&#8217;s coming; what&#8",
+    "pub_date": "Tue, 18 Aug 2026 13:46:26 +0000",
+    "title_zh": "Firefox 154 发布，带来翻译、AI 与界面调整",
+    "summary_zh": "Mozilla 发布了 Firefox 154，这是浏览器在 9 月初切换到每两周一次发布周期前的最后一次月度更新。本次更新引入了 AI 控制快捷方式、改进的整页翻译功能（支持 iframe 内容）、更快的视频定位速度，并移除了工具栏上的 Firefox View 图标。此外，还包含 PDF 文本选择颜色修复、垂直标签栏全屏隐藏、macOS 配置文件备份支持、本地网络访问保护扩展至 WebSocket 连接等多项改进。",
+    "fulltext_zh": "Mozilla 发布了 Firefox 154，带来了一些与 AI 相关的小改动、改进的整页翻译功能，以及“在所有操作系统上”更快的视频定位速度。\n\nFirefox 154 是浏览器在 9 月初切换到更快的每两周一次发布周期之前的最后一次月度发布。这意味着几周后你就能看到“Firefox 155 发布”的消息，而不是通常的四周。\n\n但先别管即将到来的，看看现在有什么新功能？\n\nFirefox 154 的主要变化\n\nFirefox 在最近的版本中不断扩展地址栏操作。我们在 v152 中获得了标签页静音操作，在 v153 中获得了颜色选择器。Firefox 154 新增了浏览器 AI 控件的快速链接。在地址栏输入“Manage AI”即可看到“设置 > AI 控件”的快捷操作。\n\nFirefox 154 中的“管理 AI 控件”快速操作\n\n在 AI 功能方面，如果你可以使用 Firefox 的 AI 驱动浏览模式，你将获得基于大语言模型的标签页分组功能。与经典模式中使用本地模型进行匹配的“智能标签页分组”不同，该模式使用云端大语言模型来分析你的标签页，将相关的标签页分组并建议一个合适的名称。\n\n使用整页翻译功能时，现在可以翻译 <iframe> 内容。它还会在所有页面加载时运行语言检测，Mozilla 表示这将“为用户提供更好的翻译体验”。\n\n你用过 Firefox View 吗？如果没有，现在更难找到它了。Firefox 154 在新配置文件和一段时间未使用该功能的配置文件中，从工具栏移除了 View 图标。用户可以手动将其添加回来，或者通过“列出所有标签页 > 查看所有标签页”获得相同的功能。\n\nFirefox 154 的其他变化\n\n在 PDF 中选择文本（在 Firefox 内置的 PDF 查看器和编辑器中）现在使用正确的文本选择高亮颜色，并遵循浏览器检测到的操作系统高对比度设置（当然，这些设置可能因 Linux 桌面环境而异）。\n\n在 Windows 和 Linux 上，垂直标签栏现在会在 Firefox 进入全屏时正确隐藏，同时主浏览器工具栏也会隐藏。将光标移到屏幕顶部即可恢复所有内容。\n\nFirefox 配置文件备份现在可在 macOS 上使用。备份可以在所有三个平台上恢复，例如，可以从 Linux 备份导入到 Windows 等。\n\n如果你排除了某些网站在关闭时清除其 cookie 和站点数据，现在可以设置这些网站而不将其排除在跟踪保护和其他 cookie 限制之外。\n\n本地网络访问保护现在包括 WebSocket 连接。\n\n（德国、法国、奥地利、瑞士、荷兰）现在会清除/更新缓存的网站图标。\n\nJSON 查看器为所选条目增加了面包屑路径。\n\n最后，Windows 上的 Firefox 用户可以在设置中选择不同的浏览器应用图标。但是，他们必须完成一些步骤，例如将 Firefox 设为默认浏览器，才能“解锁”额外的图标。Mozilla 表示，可自定义的应用图标“很快”会登陆 Linux 和 macOS。\n\n“显著更快”的视频定位——还是不是？\n\n回到开头提到的视频定位修复。Firefox 154.0 发布说明称：“视频定位在所有操作系统上现在显著更快”，使得在浏览器中跳转到流媒体视频的特定部分更加容易。\n\n但该功能引用的错误报告特别针对 macOS 上启用硬件解码时的视频定位修复。此前，解码器在定位期间会闲置帧，并为即将丢弃的帧生成帧图像。根据 Mozilla 的测试，定位延迟从约 260 毫秒降至约 30 毫秒。这使其在相同硬件上的测试中与 Google Chrome 相当。\n\n那么为什么提到“在所有操作系统上”呢？\n\n也许是因为 Firefox 有一系列“视频解码和定位性能”修复。并非所有修复都已落地，但有一些已经落地，它们解决了在 Firefox 中播放视频或音频内容、通过蓝牙音频设备输出并触发定位操作时出现的音频丢失和同步问题。"
+  },
+  "dd7c950548243697583f8f0b4bb09def": {
+    "id": "dd7c950548243697583f8f0b4bb09def",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/xen-project-safety-committee/",
+    "title_en": "The Xen Project is Serious About Safety, So It Formed a Committee",
+    "summary_en": "Founding members AMD, EPAM, and Renesas already put in the groundwork, and there's a new Premier Plus membership tier to go with it.",
+    "pub_date": "Tue, 18 Aug 2026 10:25:21 GMT",
+    "title_zh": "Xen项目认真对待安全性，因此成立了委员会",
+    "summary_zh": "Xen项目宣布成立安全委员会，旨在帮助基于Xen构建产品的公司获得安全认证。创始成员AMD、EPAM和Renesas已投入大量工作，并新增了Premier Plus会员级别。该委员会将提供安全文档和测试证据，减少重复工作，降低成本，加速认证流程。Xen本身的开发流程不变，委员会作为并行治理层运行。",
+    "fulltext_zh": "Xen项目认真对待安全性，因此成立了委员会\nXen项目认真对待安全性，因此成立了委员会\n创始成员AMD、EPAM和Renesas已经奠定了基础，并随之推出了新的Premier Plus会员级别。\nXen是一个运行在各种硬件上的虚拟机监控器，其崩溃可能带来巨大后果。它部署在汽车、工业自动化、机器人和航空电子等领域。这些都是安全关键领域，认证至关重要。\n到目前为止，Xen一直处于良好的发展轨道上，采用率不断提高，并持续增强以保持其对企业用途的相关性。但它缺乏的是一种结构化的协作方式，来帮助基于其构建的公司真正获得此类工作的认证。\nXen安全委员会是一个负责构建安全文档和测试证据的团体，成员公司可以依赖这些资源，而不必从头开始。\n该委员会的工作涵盖软件安全需求、架构规范、安全相关工程、DFMEA分析、测试框架、工具、代码覆盖率和流程文档。\n创始贡献者AMD、EPAM和Renesas被认可为上述工作付出了大部分努力，形成了该倡议的早期基础。\n其目的是阻止每家公司独自解决相同的问题。共享这一基础应能降低成本、避免重复工作，并让任何基于Xen构建的产品更快通过认证。\nXen本身的构建方式不会改变。源代码、许可和现有的开放贡献与审查流程保持不变。该委员会作为并行治理层运行，而非替代现有维护者的工作方式。\n不过，加入委员会并非完全开放。组织需要注册合适的会员级别。详情如下。👇\n招募新成员\nXen项目的会员制度与大多数Linux基金会项目类似。它资助共享基础设施、测试环境、活动和协调，而日常技术决策则通过开放贡献由维护者掌握。\n付费加入并不能购买对代码库的影响力。\nAMD、ARM、AWS、Boeing、EPAM、Ford、Honda、Renesas、Vates和XenServer均被列为Premier会员。这些代表了芯片制造商、云提供商、汽车、航空航天以及其他几个行业。\n新的会员级别“Premier Plus”位于现有级别之上，赋予会员在Xen咨询委员会和Xen安全委员会中的投票代表权，对优先级和路线图的制定有发言权，并可访问委员会管理的安全工件。\n这样，成员无需在内部生成所有需求和测试，而是可以将委员会现有的工件交给自己的安全评估员进行审计和评估。\n就此话题，Linux基金会可靠嵌入式系统副总裁Kate Stewart表示：\n“具有安全考虑的系统需要可信的虚拟机监控器，为Zephyr和Linux等其他开源组件提供基础，以支持混合关键性嵌入式应用。Zephyr和Xen项目在过去几年中一直在交流最佳实践，作为实现开源组件安全认证的途径。我们欢迎Xen安全倡议，以加速Xen获得正式认证的进程。”\nProxmox虚拟环境正式支持ARM64\nProxmox虚拟环境正式支持ARM64，但你的树莓派尚不支持\n该版本由Debian 13.5和Linux 7.0驱动，完全支持NVIDIA Grace和Vera系统。\n喜欢这次更新吗？支持独立的Linux新闻\nIt's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。\n一次付费，永久享受\n任意金额，无承诺\n一个热爱开源软件、定制PC组装、赛车运动并探索这个世界无限可能的极客。\nUbuntu正在成长"
+  },
+  "27716c3daa99e8e17f74a6a169236bb1": {
+    "id": "27716c3daa99e8e17f74a6a169236bb1",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12925",
+    "title_en": "Distribution Release: Mainstream OS 1.3.0",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Mainstream OS, an Arch-based, user-friendly Linux distribution with a highly customised desktop that uses the Quickshell toolkit on top of the Hyprland compositor, has been updated to version 1.3.0. The project's changelog provides details about the latest round of desktop interface improvements and bug fixes: \"Put the dock....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Mainstream OS 1.3.0",
+    "summary_zh": "Mainstream OS 1.3.0 发布，这是一款基于 Arch 的易用 Linux 发行版，采用 Hyprland 合成器上的 Quickshell 工具包定制桌面。新版本改进了桌面界面，支持将 Dock 放置在屏幕任意边缘，主题可记忆 Dock 位置，优化了弹出窗口、媒体组件、计时器、分隔线等细节，并修复了窗口规则编辑器的问题。该发行版提供 Material You 桌面布局、工作区布局切换、会话恢复、游戏模式及图形化设置工具，使用 Calamares 安装器，并在每次更新前自动创建 Btrfs 快照。",
+    "fulltext_zh": "发行版发布：Mainstream OS 1.3.0\n\nMainstream OS 是一款基于 Arch 的易用 Linux 发行版，其高度定制的桌面使用 Hyprland 合成器之上的 Quickshell 工具包。该发行版已更新至 1.3.0 版本。项目提供了关于最新一轮桌面界面改进和错误修复的详细信息：\n\n“将 Dock 放置在屏幕的任意边缘：顶部、底部、左侧或右侧；当您将 Dock 放置在某个边缘时，任务栏会主动让位；主题现在会记住 Dock 所在的边缘，以及它们记住的其他所有设置；灵活空间组件已退役——任务栏现在自行管理其各个部分，而您已保存的布局会自动迁移；任务栏弹出窗口会在其所属组件下方居中打开，无论您将其放置在何处；靠近屏幕边缘的弹出窗口会保持在屏幕内，而不会超出屏幕；媒体组件在中心区域之外保持其大小和弹出窗口位置正确；计时器在倒计时时保持稳定的宽度，而不会挤压相邻组件；分隔线保持在任务栏圆角背景内部；您可以从窗口规则编辑器的角落关闭它，并在不关闭编辑器的情况下切换规则……”\n\n相关下载：mainstream-legacy-nvidia-1.3.0.iso\n\n近期相关新闻与发布：\n- 发行版发布：Mainstream OS 1.3.0\n- 更多 Mainstream 新闻……\n\nMainstream Linux 是一款基于 Arch 的 Linux 发行版，使用 Hyprland 合成器之上的 Quickshell 工具包提供高度定制的桌面。它包含多种用户友好功能，例如 Material You 桌面布局、按工作区切换布局、会话恢复选项、游戏模式，以及用于自定义显示器、主题、按键绑定、网络和更新的图形化设置工具。该发行版使用 Calamares 系统安装器，提供多种安装模式，并在每次更新前自动应用 Btrfs 快照。\n\n官方网站：https://mainstreamos.org/\n讨论区：https://github.com/MainstreamOS/dots-hyprland/discussions\n备用用户论坛：https://mainstreamos.org/#install"
+  },
+  "19163fd6615ed2cb06f6a6274d12fccb": {
+    "id": "19163fd6615ed2cb06f6a6274d12fccb",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Modular-Mojo-Open-Source",
+    "title_en": "Modular's Mojo Language Now Open-Source Following Qualcomm Acquisition",
+    "summary_en": "Modular, the AI startup founded by Chris Lattner of LLVM and Swift fame, has open-sourced their Mojo systems programming language! This comes following the recent acquisition of Modular by Qualcomm...",
+    "pub_date": "Tue, 18 Aug 2026 20:33:22 -0400",
+    "title_zh": "Modular的Mojo语言在Qualcomm收购后现已开源",
+    "summary_zh": "Modular公司由Chris Lattner创立，其开发的Mojo系统编程语言在Qualcomm收购后现已完全开源，采用Apache 2.0许可证。此前Mojo标准库已开源，而随着Mojo 1.0的发布，整个语言现已开放。Mojo旨在为AI驱动世界提供生产级基础，支持CPU、GPU及AI加速器等多样化硬件，并可与Python互操作。Modular还计划将Mojo支持扩展到Windows平台。这一举措被视为重大进展，得益于Lattner的持续参与，Mojo有望取得更大成就。",
+    "fulltext_zh": "Modular的Mojo语言在Qualcomm收购后现已开源 - Phoronix\n\nModular的Mojo语言在Qualcomm收购后现已开源\n发布于2026年8月18日晚上8点33分（美国东部时间）\n\n由Chris Lattner创立的AI初创公司Modular，现已将其Mojo系统编程语言开源！这是在Qualcomm近期收购Modular之后发生的。\n\nModular此前已将Mojo标准库开源。鉴于Qualcomm在开源方面的历史表现不一，我原本对收购后会有更多开源动作不抱太大期望，但继上周Mojo 1.0发布之后，Mojo现在以Apache 2.0许可证提供。\n\nMojo 1.0旨在为这一语言在AI驱动的世界中奠定生产就绪的基础。截至今日，整个Mojo语言已在Apache 2.0许可证下完全开源。Modular还在努力将Mojo引入Windows，以补充现有的macOS和Linux支持。\n\nMojo语言专为从CPU、GPU到AI加速器的多样化硬件而设计。那些因Mojo完全开源而对其感兴趣的人，可以通过相关资源了解更多关于该语言的信息。Mojo部分受到Rust和其他现代编程语言的启发。可以从Mojo调用Python，也可以从Python调用Mojo。以下是一个Mojo中的GPU内核示例：\n\n看到Mojo现在开源，并且由于Chris Lattner的持续参与，它注定会取得更大的进步，这真是令人兴奋。\n\n关于Modular的Mojo开源的更多细节，可以参见相关链接。\n\n将Rust卸载到GPU被证明能够以内存安全实现高性能\nMold 2.42为这款高速链接器带来更高性能\nPoCL 7.2-RC1在RISC-V和x86_64 CPU上带来官方OpenCL 3.0一致性\nWild Linker 0.10发布，支持GDB索引，缓解Btrfs性能问题\nPicolibc 1.8.12为这款嵌入式C库带来最新改进\nOpenBLAS 0.3.34改进多线程，支持内存安全C工具链\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过相关渠道关注他。\n\nGNOME设计师阐述他们的一些GNOME Shell愿景\nQEMU 11.1发布，带来众多改进\nOpenAI将ChatGPT桌面应用带到Linux\nRsync 3.5作为“非凡”更新发布，修复33个安全问题\nComma.ai推出PCIe Gen4 x4转USB4扩展坞，配备开源固件\nOmarchy 4.0 Linux发行版发布，桌面外壳现通过Quickshell实现\nGNOME 51 Beta发布，包含许多小改进\nLinux 7.2发布，I/O更快，AMD和Intel驱动改进\n\n在享受无广告浏览的同时，\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026，由相关方所有。\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "f09381c96684d8a93bf4ea714f85763b": {
+    "id": "f09381c96684d8a93bf4ea714f85763b",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/COSMIC-Epoch-1.6",
+    "title_en": "COSMIC Epoch 1.6 Released With Per-App Volume Control, Remote Desktop Preparations",
+    "summary_en": "COSMIC Epoch 1.6 was released this evening as the latest milestone for this open-source, Rust-based desktop environment led by System76 as part of the work on their Pop!_OS Linux distribution...",
+    "pub_date": "Tue, 18 Aug 2026 20:20:01 -0400",
+    "title_zh": "COSMIC Epoch 1.6 发布，新增按应用音量控制及远程桌面准备",
+    "summary_zh": "System76 发布了 COSMIC Epoch 1.6，这是其基于 Rust 的开源桌面环境的最新里程碑。该版本为合成器添加了 Wayland wl-dmabuf-v6 协议支持、全屏表面演示反馈及 EI 协议支持，为未来远程桌面功能奠定基础。此外，COSMIC Edit 得到优化，COSMIC Greeter 支持 JPEG-XL 和 AVIF 图像格式，并新增按应用音量与输出控制、终端分屏边框等增强功能。",
+    "fulltext_zh": "COSMIC Epoch 1.6 发布，新增按应用音量控制及远程桌面准备 - Phoronix\nCOSMIC Epoch 1.6 发布，新增按应用音量控制及远程桌面准备\n发布于 2026 年 8 月 18 日晚上 8:20（美国东部时间）。\n\nCOSMIC Epoch 1.6 于今晚发布，这是 System76 在其 Pop!_OS Linux 发行版工作中主导开发的开源、基于 Rust 的桌面环境的最新里程碑。\n\nCOSMIC Epoch 1.6 合成器新增了对 Wayland wl-dmabuf-v6 协议的支持，现在可从全屏表面获取演示反馈，并添加了 EI 协议支持。模拟输入（EI）支持是 COSMIC 远程桌面支持工作的一部分。COSMIC Epoch 1.6 尚不支持远程桌面功能，但相关工作正在进行中，预计将在未来版本中推出。\n\nCOSMIC Edit 进行了一些优化，COSMIC Greeter 现在支持 JPEG-XL 和 AVIF 图像格式，并且 COSMIC Greeter 还可在运行时检测 logind 的存在。\n\n新的 COSMIC Epoch 1.6 版本还包括按应用音量和输出控制、COSMIC Terminal 中分屏终端周围的边框以及其他增强功能。\n\n有关 COSMIC Epoch 1.6 的下载和更多详细信息，请访问相关页面。\n\nSystem76 CEO Carl Richell 还分享了一张 v1.6 实际运行的截图，展示了这个 Rust 桌面环境的发展程度。"
+  },
+  "84e1e3cd164586d40a36f8c1ac49dbbe": {
+    "id": "84e1e3cd164586d40a36f8c1ac49dbbe",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.3-bpf_sock_read_xattr",
+    "title_en": "Linux 7.3 Adds New \"bpf_sock_read_xattr\" Feature For systemd, BPF Programs",
+    "summary_en": "Merged earlier this year for Linux 7.1 was extended attributes on sockets support as a feature sought after by the likes of GNOME and systemd for helping with Varlink IPC usage and other purposes. A limitation though of the functionality has been no efficient means for a BPF program to read those user extended attribute labels back. But with Linux 7.3 that's being addressed with the new bpf_sock_read_xattr() kernel function...",
+    "pub_date": "Tue, 18 Aug 2026 15:38:32 -0400",
+    "title_zh": "Linux 7.3 为 systemd 和 BPF 程序新增“bpf_sock_read_xattr”特性",
+    "summary_zh": "Linux 7.3 内核合并了新的 bpf_sock_read_xattr() 函数，允许 BPF 程序无锁读取套接字扩展属性。该特性由 Christian Brauner 开发，主要服务于 systemd 等用户态管理器，用于套接字限速、标签标记及 Varlink 注册表实现。新函数仅对 BPF LSM 程序注册，并受 KF_RCU 保护，确保在 sockfs 中安全访问。该补丁已合入 Linux 7.3 内核。",
+    "fulltext_zh": "Linux 7.3 为 systemd 和 BPF 程序新增“bpf_sock_read_xattr”特性 - Phoronix\nLinux 7.3 为 systemd 和 BPF 程序新增“bpf_sock_read_xattr”特性\n发布于 2026年8月18日 下午3:38（美国东部时间）。\n今年早些时候合入 Linux 7.1 的是套接字上的扩展属性支持，这是 GNOME 和 systemd 等所寻求的特性，用于帮助 Varlink IPC 使用及其他目的。该功能的一个限制是，BPF 程序没有高效的方法来读回这些用户扩展属性标签。但在 Linux 7.3 中，新的 bpf_sock_read_xattr() 内核函数解决了这一问题。\nChristian Brauner 实现了 bpf_sock_read_xattr() 的支持，允许 BPF 程序无锁地从套接字的 sockfs inode 中读取扩展属性。他解释了新功能：\n“systemd 使用套接字上的 user.* 扩展属性来实现套接字限速，并用于其他目的（例如实现 varlink 注册表）来标记套接字。目前 BPF 程序没有高效的方法来读回这些标签。新的辅助函数允许在 bind/connect 期间读回带有扩展属性的监听套接字，然后对 connect() 的套接字采取行动。扩展属性使得非特权用户管理器（如 systemd --user）能够从用户空间标记套接字，然后重新发现它们或实施策略。\nkfunc 注册为 KF_RCU，且仅用于 BPF LSM 程序。只有当 LSM 套接字钩子提供 struct socket 时，它才保证在 sockfs 中存活，这正是保持 SOCK_INODE() 有效的原因。在 sockfs 之外嵌入 struct socket 的套接字（如 tun、tap）只能从跟踪程序访问，并通过注册排除。（顺便说一句，为了保持一致性，最好强制从 sockfs 分配 struct socket，而不是简单地将其嵌入例如 struct tun_file，这会使 SOCKFS_I() 模式变得危险——至少在 sockfs 函数之外。）\n读取操作从不休眠，也不加锁。对于 sockfs，该值存在于 inode 的内存 xattr 存储中，simple_xattr_get() 通过 RCU 保护的 rhashtable 查找来解析它，既不获取 inode 锁，也不获取任何 xattr 锁。因此，该 kfunc 可用于可睡眠和不可睡眠的 LSM 钩子。”\n该 bpf_sock_read_xattr 支持现已通过合并，进入 Linux 7.3 内核。\n\nRust For Linux 7.3 开始修复以为 Rust 的 GCC 后端做准备\nLinux 7.3 将合入改进 vRAM 管理的初始代码，更多改进即将到来\nLinux 7.3 SMP 改进有助于减少延迟，提升实时性能\nCon Kolivas 恢复“-ck”补丁和 MuQSS 以提升 Linux 桌面响应速度\nGNU Linux-libre 7.2-gnu 在更多驱动清理后发布\nLinux 7.2 发布，I/O 更快，AMD 和 Intel 驱动改进\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nGNOME 设计师勾勒他们的一些 GNOME Shell 梦想\nQEMU 11.1 发布，带来众多改进\nOpenAI 将 ChatGPT 桌面应用带到 Linux\nRsync 3.5 发布，作为“非凡”更新修复 33 个安全问题\nComma.ai 推出 PCIe Gen4 x4 转 USB4 扩展坞，采用开源固件\nOmarchy 4.0 Linux 发行版发布，桌面外壳现通过 Quickshell 实现\nGNOME 51 Beta 发布，包含许多小改进\nLinux 7.2 发布，I/O 更快，AMD 和 Intel 驱动改进\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "93d1cf94abcf6d07b45aa69da0f020e3": {
+    "id": "93d1cf94abcf6d07b45aa69da0f020e3",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/IOmap-Linux-7.3-Faster",
+    "title_en": "IOmap Improvement For Linux 7.3 Takes EXT4 & XFS Performance Further",
+    "summary_en": "As part of the VFS pull requests now merged to the Linux 7.3 development kernel was an improvement to the IOmap framework used by various file-systems for mapping logical file byte offsets in memory to their physical locations on storage. With the now-merged code, this modern block mapping framework is allowing better performance at least for the EXT4 file-system...",
+    "pub_date": "Tue, 18 Aug 2026 13:25:00 -0400",
+    "title_zh": "Linux 7.3 的 IOmap 改进进一步提升 EXT4 与 XFS 性能",
+    "summary_zh": "Linux 7.3 开发内核已合并 VFS 拉取请求，其中包含对 IOmap 框架的改进。IOmap 现已完全转换为迭代器模型，采用单一的 iomap_next() 回调，减少了间接调用，使编译器能生成直接且可内联的调用，从而提升性能。该改进尤其对 EXT4 文件系统的小型 I/O 操作带来显著提升，在 PCIe Gen5 NVMe SSD 上，4K 随机读性能从约 1.92M IOPS 提升至 2.19M IOPS，提升幅度在 4% 至 10% 之间，具体取决于 I/O 模式。此外，该更新也惠及 Btrfs、F2FS、XFS 等多个文件系统。",
+    "fulltext_zh": "IOmap 改进为 Linux 7.3 带来 EXT4 与 XFS 性能进一步提升 - Phoronix\nIOmap 改进为 Linux 7.3 带来 EXT4 与 XFS 性能进一步提升\n发布于 2026 年 8 月 18 日下午 1:25（美国东部时间）\n\n作为已合并至 Linux 7.3 开发内核的 VFS 拉取请求的一部分，IOmap 框架得到了改进。该框架被多种文件系统用于将内存中的逻辑文件字节偏移映射到存储上的物理位置。借助现已合并的代码，这一现代块映射框架至少为 EXT4 文件系统带来了更好的性能。\n\n在 Linux 7.3 中，IOmap 已完成向迭代器模型的转换，并迁移至单一的 iomap_next() 回调。通过这一改动，每次迭代不再需要间接调用，编译器可以将其转换为直接调用，从而支持内联。\n\n这一 IOmap 拉取请求还克服了 PCIe Gen5 NVMe SSD 存储上小型 I/O 的瓶颈。\n\n对于最终用户而言，令人兴奋的是最终结果，正如拉取请求中关于 EXT4 性能影响的说明所述：\n\n“这还为小型读取添加了一个简单的直接 I/O 路径。在 Gen5 NVMe 上，__iomap_dio_rw() 主导了 4K 随机读取。相同的单核 io_uring 轮询模式工作负载在原始块设备上可达到约 3.2M IOPS，但通过 ext4 或 XFS 仅约 1.92M。\n\n在原始工作负载中，这使 ext4 从 1.92M 提升至 2.19M IOPS。fio 显示大约：\n* 在 libaio 队列深度为 64 及以上时提升约 4%\n* 对于 io_uring 提升约 5%\n* 对于 io_uring 轮询模式在深度 256 时提升高达 10%\n在 ext4 和 xfs 上均如此。”\n\n虽然仅展示了 EXT4 和 XFS 的这些数字，但此次 IOmap 更新也已更新至 Btrfs、EXT2、EROFS、F2FS、GFS2、HPFS、FUSE、exFAT、ZoneFS、NTFS 和 NTFS3 文件系统。\n\n对此工作感兴趣的人可以查看昨天作为 Linux 7.3 周期早期拉取请求之一合并的详细信息。\n\nLinux 7.3 修正 FAT 文件系统驱动对过长文件名的错误行为\nXFS 在 Linux 7.3 中引入 FALLOC_FL_WRITE_ZEROES 以提升效率\nEFS 与 FreeVxFS 文件系统启动，FailFS 合并至 Linux 7.3\nAVX-512 xor_gen 持续展现助力 Linux RAID 与现代 CPU 的潜力\n开源 exFAT 程序 1.4.3 改进 Fsck 与 Mkfs\nLinux 补丁启用 Apple M4 NVMe 支持\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\nGNOME 设计师勾勒他们的 GNOME Shell 愿景\nQEMU 11.1 发布，带来众多改进\nOpenAI 将 ChatGPT 桌面应用带到 Linux\nRsync 3.5 发布，作为“非凡”更新修复 33 个安全问题\nComma.ai 推出 PCIe Gen4 x4 转 USB4 扩展坞，采用开源固件\nOmarchy 4.0 Linux 发行版发布，桌面 Shell 现通过 Quickshell 实现\nGNOME 51 Beta 发布，包含许多小改进\nLinux 7.2 发布，I/O 更快，AMD 与 Intel 驱动改进\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "d8ef2db881150afc75f7a1ce56585b5d": {
+    "id": "d8ef2db881150afc75f7a1ce56585b5d",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Framework-Laptop-12-WCL",
+    "title_en": "Framework Laptop 12 Updated For Intel Wildcat Lake, Shipping Starts In October",
+    "summary_en": "Last year Framework Computer launched the Framework Laptop 12 as an upgrade-friendly and Linux-compatible 2-in-1 laptop. The Framework Laptop 12 was originally powered by Intel Core 13th Gen \"Raptor Lake\" low-end processor while now Framework is adding Core Series 3 \"Wildcat Lake\" as an upgrade or for new Laptop 12 orders...",
+    "pub_date": "Tue, 18 Aug 2026 12:14:17 -0400",
+    "title_zh": "Framework Laptop 12 更新至英特尔 Wildcat Lake，十月开始发货",
+    "summary_zh": "Framework Computer 宣布其可升级且兼容 Linux 的 2-in-1 笔记本电脑 Framework Laptop 12 将新增英特尔 Core Series 3 \"Wildcat Lake\" 处理器选项，并带来 Thunderbolt 4、WiFi 7、可选背光键盘等升级。预购即日开启，首批产品将于十月发货。DIY 版起售价 549 美元，预装版起售价 699 美元。该笔记本在 Linux 下支持良好，Phoronix 已收到 Wildcat Lake 评测样品，即将进行基准测试。",
+    "fulltext_zh": "Framework Laptop 12 更新至英特尔 Wildcat Lake，十月开始发货 - Phoronix\nFramework Laptop 12 更新至英特尔 Wildcat Lake，十月开始发货\n2026年8月18日 下午12:14（美国东部时间）\n去年，Framework Computer 推出了这款可升级且兼容 Linux 的 2-in-1 笔记本电脑。Framework Laptop 12 最初搭载英特尔第13代酷睿 \"Raptor Lake\" 低端处理器，而现在 Framework 正在为 Laptop 12 新增 Core Series 3 \"Wildcat Lake\" 作为升级选项，或用于新的 Laptop 12 订单。\nFramework Computer 今日宣布，Framework Laptop 12 将新增 Core Series 3 \"Wildcat Lake\" 选项，并配备 Thunderbolt 4、WiFi 7、可选背光键盘等升级。Framework Computer 还将提供预装 Fedora Linux 的版本。\n升级版 Framework Laptop 12 的预购今日开启，首批笔记本电脑将于十月发货。\n关于升级版 Framework Laptop 12 的更多详情，请参阅官方公告。\n搭载 Wildcat Lake 的 Framework Laptop 12 DIY 版起售价为：Core 3 304 型号 549 美元，Core 5 320 型号 779 美元，Core 7 350 型号 999 美元。DIY 版默认不含内存和存储。预装版售价分别为 699 美元、1099 美元和 1399 美元。关于 Linux 支持的详情，在近期内核版本下应该表现良好。就在本周，搭载 Wildcat Lake 的评测样品已经送达，因此未来几天 Phoronix 将开始进行英特尔 WCL 基准测试。\n英特尔通过 DXVK 启用缓冲区压缩以提升游戏性能\n英特尔 XPU Manager 2.1 发布，用于在 Windows/Linux 上监控 Arc Pro 显卡\n英特尔 ANV 驱动为 DG2/Alchemist GPU 启用 Vulkan Video AV1 编码\n英特尔 LLM-Scaler 就绪，支持 Muse Glimmer 及其他 LLM 与功能\n英特尔 CPU 微码 20260811 版本修复八个安全问题\nMesa 26.3 英特尔驱动代码为较新 GPU 启用大型 GRF 模式\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。\nGNOME 设计师勾勒他们的 GNOME Shell 梦想\nQEMU 11.1 发布，带来众多改进\nOpenAI 将 ChatGPT 桌面应用带到 Linux\nRsync 3.5 发布，作为 \"非凡\" 更新修复 33 个安全问题\nComma.ai 推出 PCIe Gen4 x4 转 USB4 扩展坞，采用开源固件\nOmarchy 4.0 Linux 发行版发布，桌面 Shell 现通过 Quickshell 实现\nGNOME 51 Beta 发布，包含许多小改进\nLinux 7.2 发布，I/O 更快，并带来新的 AMD 与英特尔驱动改进\n在享受无广告浏览和单页文章视图的同时，\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026 归 Phoronix Media 所有。\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "f10e7ac5dea13ea36b865cb3fad8395d": {
+    "id": "f10e7ac5dea13ea36b865cb3fad8395d",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/aerynos-lands-versioned-repositories-phase-2-in-major-july-update/",
+    "title_en": "AerynOS Lands Versioned Repositories Phase 2 in Major July Update",
+    "summary_en": "AerynOS unveils its July update, marking Phase 2 of versioned repositories. Learn how these improvements can elevate your operating system experience.\nThe post AerynOS Lands Versioned Repositories Phase 2 in Major July Update appeared first on Linux Today.",
+    "pub_date": "Tue, 18 Aug 2026 07:18:30 +0000",
+    "title_zh": "AerynOS 七月重大更新：版本化仓库第二阶段落地",
+    "summary_zh": "AerynOS 发布了其七月更新，标志着版本化仓库（Versioned Repositories）第二阶段的完成。此次更新旨在通过改进仓库管理机制，提升操作系统的稳定性与用户体验。文章介绍了该阶段的核心改进及其对用户日常使用的影响，强调了版本化仓库在系统更新和软件管理中的优势。",
+    "fulltext_zh": "AerynOS 发布了其七月更新，标志着版本化仓库（Versioned Repositories）第二阶段的完成。了解这些改进如何提升您的操作系统体验。\n\n该文章首发于 Linux Today。"
+  },
+  "c8f022b047f694103a7c530ea7ab8e10": {
+    "id": "c8f022b047f694103a7c530ea7ab8e10",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/nushell-a-better-shell-for-files-processes-and-json/",
+    "title_en": "Nushell: A Better Shell for Files, Processes, and JSON",
+    "summary_en": "Experience Nushell, the advanced shell that streamlines working with files, processes, and JSON. Revolutionize your command line tasks effortlessly.\nThe post Nushell: A Better Shell for Files, Processes, and JSON appeared first on Linux Today.",
+    "pub_date": "Tue, 18 Aug 2026 07:12:13 +0000",
+    "title_zh": "Nushell：一款更优秀的文件、进程与JSON处理Shell",
+    "summary_zh": "Nushell是一款先进的Shell，旨在简化文件、进程和JSON数据的操作。它通过现代设计理念，提供更直观、高效的命令行体验，帮助用户轻松完成各种任务。本文介绍了Nushell的核心优势，并指出其作为传统Shell替代品的潜力。",
+    "fulltext_zh": "体验Nushell，这款先进的Shell能简化文件、进程和JSON数据的处理。轻松革新你的命令行任务。\n\n该文章最初发表于Linux Today，标题为“Nushell: A Better Shell for Files, Processes, and JSON”。"
+  },
+  "797b16030c885994e36bf9af511759d6": {
+    "id": "797b16030c885994e36bf9af511759d6",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/9to5linux-weekly-roundup-july-5th-2026/",
+    "title_en": "9to5Linux Weekly Roundup: July 5th, 2026",
+    "summary_en": "Discover the latest in Linux news with the 9to5Linux Weekly Roundup for July 5th, 2026. Stay informed on updates, releases, and community highlights.\nThe post 9to5Linux Weekly Roundup: July 5th, 2026 appeared first on Linux Today.",
+    "pub_date": "Tue, 18 Aug 2026 07:10:03 +0000",
+    "title_zh": "9to5Linux 每周综述：2026年7月5日",
+    "summary_zh": "本期9to5Linux每周综述汇总了2026年7月5日当周Linux领域的重要新闻，包括软件更新、发行版发布以及社区亮点，帮助读者快速掌握最新动态。",
+    "fulltext_zh": "通过9to5Linux每周综述（2026年7月5日）了解最新的Linux新闻。随时掌握更新、发布和社区亮点。\n\n本文首发于Linux Today。"
+  },
+  "4fc2324b4e4a5d01c2db27f8dc027c0c": {
+    "id": "4fc2324b4e4a5d01c2db27f8dc027c0c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/linuxiac-weekly-wrap-up-week-27-2026-june-29-july-5/",
+    "title_en": "Linuxiac Weekly Wrap-Up: Week 27, 2026 (June 29 – July 5)",
+    "summary_en": "Stay updated with the latest in Linux! Explore the highlights and key events from Week 27, 2026, in our comprehensive wrap-up.\nThe post Linuxiac Weekly Wrap-Up: Week 27, 2026 (June 29 – July 5) appeared first on Linux Today.",
+    "pub_date": "Tue, 18 Aug 2026 07:07:49 +0000",
+    "title_zh": "Linuxiac 每周综述：2026年第27周（6月29日 - 7月5日）",
+    "summary_zh": "本文是Linuxiac发布的2026年第27周（6月29日至7月5日）的每周新闻综述，汇总了本周Linux领域的重要事件和亮点，帮助读者快速了解最新动态。",
+    "fulltext_zh": "随时了解Linux的最新动态！在我们全面的综述中，探索2026年第27周（6月29日至7月5日）的亮点和关键事件。\n\n本文首发于Linux Today。"
+  },
+  "186cba72e7f2d942bcd5297fe6e95b61": {
+    "id": "186cba72e7f2d942bcd5297fe6e95b61",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/bleachbit-6-0-2-cleaner-and-privacy-tool-released-with-appimage-build-for-linux-users/",
+    "title_en": "BleachBit 6.0.2 Cleaner and Privacy Tool Released with AppImage Build for Linux Users",
+    "summary_en": "Explore the new BleachBit 6.0.2 release, offering an AppImage build for Linux. Clean your system and protect your privacy effortlessly!\nThe post BleachBit 6.0.2 Cleaner and Privacy Tool Released with AppImage Build for Linux Users appeared first on Linux Today.",
+    "pub_date": "Tue, 18 Aug 2026 07:05:34 +0000",
+    "title_zh": "BleachBit 6.0.2 清理与隐私工具发布，为 Linux 用户提供 AppImage 构建",
+    "summary_zh": "BleachBit 6.0.2 版本正式发布，新增了适用于 Linux 的 AppImage 构建。该工具旨在帮助用户轻松清理系统垃圾文件并保护隐私。本次更新进一步提升了易用性和跨发行版兼容性，使用户无需安装即可运行。",
+    "fulltext_zh": "探索新的 BleachBit 6.0.2 版本，该版本为 Linux 提供了 AppImage 构建。轻松清理系统并保护您的隐私！\n\n此文章首发于 Linux Today。"
   }
 }
