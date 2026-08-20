@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Mainstream OS 1.3.0 — Linux 中文速报</title>
+<title>Btrfs 为 Linux 7.3 准备更多性能改进：部分场景提升约 3 倍至 5 倍 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Mainstream OS 1.3.0</h1>
+  <h1>Btrfs 为 Linux 7.3 准备更多性能改进：部分场景提升约 3 倍至 5 倍</h1>
 
-  <div class="article-summary">Mainstream OS 1.3.0 发布，这是一款基于 Arch 的易用 Linux 发行版，采用 Hyprland 合成器上的 Quickshell 工具包定制桌面。新版本改进了桌面界面，支持将 Dock 放置在屏幕任意边缘，主题可记忆 Dock 位置，优化了弹出窗口、媒体组件、计时器、分隔线等细节，并修复了窗口规则编辑器的问题。该发行版提供 Material You 桌面布局、工作区布局切换、会话恢复、游戏模式及图形化设置工具，使用 Calamares 安装器，并在每次更新前自动创建 Btrfs 快照。</div>
+  <div class="article-summary">SUSE 的 David Sterba 提交了针对 Linux 7.3 合并窗口的 Btrfs 文件系统更新，包含多项性能改进。Btrfs 现使用 IOmap 反弹缓冲区处理直接 I/O，性能从理论最大值的约 50% 提升至约 95%，几乎翻倍。同时，用本地 LRU 列表替代 XArray 跟踪受抑制的 extent 缓冲区，性能提升约 3 倍；在非 SSD 模式下移除不必要的 jiffy 延迟，吞吐量提升约 5 倍；全 fsync 跳过空洞检测逻辑也带来 5 倍提升。此外，Btrfs 默认禁用 free-space v1 代码，改用 v2，并包含多项错误修复。</div>
 
-  <div class="article-body"><p>发行版发布：Mainstream OS 1.3.0</p><p>Mainstream OS 是一款基于 Arch 的易用 Linux 发行版，其高度定制的桌面使用 Hyprland 合成器之上的 Quickshell 工具包。该发行版已更新至 1.3.0 版本。项目提供了关于最新一轮桌面界面改进和错误修复的详细信息：</p><p>“将 Dock 放置在屏幕的任意边缘：顶部、底部、左侧或右侧；当您将 Dock 放置在某个边缘时，任务栏会主动让位；主题现在会记住 Dock 所在的边缘，以及它们记住的其他所有设置；灵活空间组件已退役——任务栏现在自行管理其各个部分，而您已保存的布局会自动迁移；任务栏弹出窗口会在其所属组件下方居中打开，无论您将其放置在何处；靠近屏幕边缘的弹出窗口会保持在屏幕内，而不会超出屏幕；媒体组件在中心区域之外保持其大小和弹出窗口位置正确；计时器在倒计时时保持稳定的宽度，而不会挤压相邻组件；分隔线保持在任务栏圆角背景内部；您可以从窗口规则编辑器的角落关闭它，并在不关闭编辑器的情况下切换规则……”</p><p>相关下载：mainstream-legacy-nvidia-1.3.0.iso</p><p>近期相关新闻与发布：</p><p>- 发行版发布：Mainstream OS 1.3.0</p><p>- 更多 Mainstream 新闻……</p><p>Mainstream Linux 是一款基于 Arch 的 Linux 发行版，使用 Hyprland 合成器之上的 Quickshell 工具包提供高度定制的桌面。它包含多种用户友好功能，例如 Material You 桌面布局、按工作区切换布局、会话恢复选项、游戏模式，以及用于自定义显示器、主题、按键绑定、网络和更新的图形化设置工具。该发行版使用 Calamares 系统安装器，提供多种安装模式，并在每次更新前自动应用 Btrfs 快照。</p><p>官方网站：https://mainstreamos.org/</p><p>讨论区：https://github.com/MainstreamOS/dots-hyprland/discussions</p><p>备用用户论坛：https://mainstreamos.org/#install</p></div>
+  <div class="article-body"><p>SUSE 的 David Sterba 今天提交了针对 Linux 7.3 合并窗口的 Btrfs 文件系统特性更新。除其他更改外，此版本 Linux 内核还包含更多性能改进。</p><p>Linux 7.3 中的 Btrfs 现在使用 IOmap 反弹缓冲区进行直接 I/O，而不是回退到缓冲 I/O。合并请求指出，过去正确性与速度之间的权衡使性能降至理论最大值的约 50%，而现在则提升至约 95%。换句话说，性能实际上翻倍了。</p><p>Btrfs 还使用本地 LRU 列表替换了 XArray，用于跟踪受抑制的 extent 缓冲区，这可以带来约 3 倍的性能提升。通过移除非 SSD 模式下多个日志任务中不必要的 jiffy 延迟，延迟降低，同时示例工作负载的吞吐量提升约 5 倍。另一个 5 倍提升来自全 fsync 期间对无空洞但具有大量 extent 的文件跳过空洞检测逻辑。Btrfs 还在锁定等方面进行了其他性能改进。</p><p>Btrfs 现在还默认禁用 free-space v1 代码，转而使用多年来一直是默认的 free-space v2。此外，还有大量错误修复和其他代码改进。</p><p>有关 Linux 7.3 中这些众多 Btrfs 文件系统改进的更多详细信息，请参阅：</p><p>IOmap 改进为 Linux 7.3 进一步提升 EXT4 和 XFS 性能</p><p>Linux 7.3 修正 FAT 文件系统驱动对过长文件名的错误行为</p><p>XFS 在 Linux 7.3 中引入 FALLOC_FL_WRITE_ZEROES 以提高效率</p><p>EFS 和 FreeVxFS 文件系统启动，FailFS 合并到 Linux 7.3</p><p>AVX-512 xor_gen 继续为 Linux RAID 在现代 CPU 上带来令人兴奋的前景</p><p>开源 exFAT 程序 1.4.3 改进 Fsck 和 Mkfs</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。他还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>GNOME 设计师阐述他们的 GNOME Shell 梦想</p><p>QEMU 11.1 发布，包含众多改进</p><p>OpenAI 将 ChatGPT 桌面应用带到 Linux</p><p>Rsync 3.5 发布，作为“非凡”更新修复 33 个安全问题</p><p>Comma.ai 推出 PCIe Gen4 x4 转 USB4 扩展坞，采用开源固件</p><p>Linux 7.2 发布，I/O 更快，AMD 和 Intel 驱动改进</p><p>GNOME 51 Beta 发布，包含许多小改进</p><p>Omarchy 4.0 Linux 发行版发布，桌面 Shell 现通过 Quickshell 实现</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12925" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-Btrfs" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

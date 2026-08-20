@@ -7500,5 +7500,148 @@
     "title_zh": "BleachBit 6.0.2 清理与隐私工具发布，为 Linux 用户提供 AppImage 构建",
     "summary_zh": "BleachBit 6.0.2 版本正式发布，新增了适用于 Linux 的 AppImage 构建。该工具旨在帮助用户轻松清理系统垃圾文件并保护隐私。本次更新进一步提升了易用性和跨发行版兼容性，使用户无需安装即可运行。",
     "fulltext_zh": "探索新的 BleachBit 6.0.2 版本，该版本为 Linux 提供了 AppImage 构建。轻松清理系统并保护您的隐私！\n\n此文章首发于 Linux Today。"
+  },
+  "904b9293545a687bdd4a909c67aa7665": {
+    "id": "904b9293545a687bdd4a909c67aa7665",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/pine64-stops-linux-device-production-chip-shortage",
+    "title_en": "PINE64 pulls the plug on Linux devices because of AI boom",
+    "summary_en": "If you&#8217;ve been eyeing up one of PINE64&#8216;s Linux-friendly single-board computers, phones or tablets, now is the time to buy one. The open-hardware company has announced it will stop &#8220;producing more Linux devices&#8221; for the time being, and said it expects its existing stock of certain devices, including the PineNote and PineTab 2, to sell out in the next three months. RAMaggeddon is to blame. The AI infrastructure boom continues apace, with demand for memory and storage chips ",
+    "pub_date": "Wed, 19 Aug 2026 15:49:50 +0000",
+    "title_zh": "PINE64因AI热潮停产Linux设备",
+    "summary_zh": "由于AI基础设施的蓬勃发展导致内存和存储芯片供应紧张、价格上涨，开源硬件公司PINE64宣布将暂停生产Linux设备，现有库存预计在未来三个月内售罄。该公司表示，其低成本、低利润的商业模式在芯片短缺背景下难以为继，但将继续生产基于微控制器的产品，如智能手表和焊台，并计划推出更多MCU设备。",
+    "fulltext_zh": "如果你一直在关注PINE64的Linux友好型单板计算机、手机或平板电脑，现在是购买的好时机。这家开源硬件公司宣布将暂时停止“生产更多Linux设备”，并表示其现有库存（包括某些设备）预计将在未来三个月内售罄。\n\n罪魁祸首是“内存末日”（RAMaggeddon）。AI基础设施的繁荣持续加速，对内存和存储芯片的需求继续减少供应。\n\n如果看到即使是普通科技产品的价格——比如290英镑的树莓派5——也会让你皱眉，那么你就会理解为什么像PINE64这样的小众硬件公司会觉得自己无法竞争。\n\n毕竟，PINE64的整个模式依赖于制造廉价、低利润的硬件，供开源社区提供软件。它保持低成本的部分原因是使用供应充足的组件。在AI时代之前，RAM是充足的！\n\n因此，虽然它可以像树莓派那样提高价格以抵消组件成本，但这对PINE64来说将是困难且难以接受的，因为它生产的是业余级硬件，其成本正是其独特卖点。\n\n在其Mastodon账户上，PINE64表示：“总而言之，对Linux设备来说有点黯淡。”\n\n然而，并非全是坏消息。一旦组件价格回落到更可接受的水平——许多市场观察人士预计这将需要数年时间——生产将再次可行。\n\nPINE64将继续生产其基于微控制器的设备，如焊台和即将推出的智能手表。这些设备（直接）不受组件短缺的影响。\n\n事实上，该公司表示，我们可以期待其MCU产品线中“更多令人兴奋的设备”——这是值得期待的。\n\n让我们只希望数据中心不要对16MiB闪存芯片或32MiB pSRAM模块产生兴趣，对吧！"
+  },
+  "2f646ae0424a12478227d52e702ee74b": {
+    "id": "2f646ae0424a12478227d52e702ee74b",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/murena-fairphone-6-plus/",
+    "title_en": "Murena Just Made The Fairphone (Gen. 6) Better!",
+    "summary_en": "A new variant of the modular smartphone now offers 12GB of RAM and a Snapdragon 7s Gen 4 upgrade.",
+    "pub_date": "Wed, 19 Aug 2026 11:53:09 GMT",
+    "title_zh": "Murena 让 Fairphone（第 6 代）更出色！",
+    "summary_zh": "Murena 推出了 Fairphone（第 6 代）的全新变体，配备 12GB RAM 和骁龙 7s Gen 4 处理器，性能显著提升。该设备预装 /e/OS 系统，注重隐私保护，无 Google 追踪。新增钴蓝色配色，延续模块化设计，可轻松更换 12 个关键部件。售价高于标准版，欧洲为 €749，美国为 $749，并附赠配件。该产品旨在为用户提供硬件和软件双重伦理的选择，但能否吸引用户摆脱 Google 生态仍是未知数。",
+    "fulltext_zh": "Murena 刚刚让 Fairphone（第 6 代）变得更出色！\nMurena 刚刚让 Fairphone（第 6 代）变得更出色！\n这款模块化智能手机的新版本现提供 12GB RAM 和骁龙 7s Gen 4 升级。\n\n我们习惯了看到 Murena 时不时推出新设备。他们的整个销售理念围绕去谷歌化、注重隐私的 Android 体验展开。当然，并非所有人都认同这种方法，但该公司已经坚持了好几年，这本身就说明了一些问题。\n\n他们产品线的最新成员是 Fairphone（第 6 代+）。它与仍在销售的普通版 Fairphone（第 6 代）并驾齐驱。新版本搭载了更好的硬件，价格也相应更高。\n\n三种配色：地平线黑、钴蓝和森林绿。\n\n最显著的变化是处理器，升级为骁龙 7s Gen 4，搭配 12GB RAM。基础型号则使用较旧的 Gen 3 芯片和 8GB RAM。尽管存储空间两者均为 256GB，但可通过 microSD 扩展至 2TB。\n\n其他硬件配置与基础型号相同，包括 6.31 英寸 120Hz LTPO OLED 显示屏、5000 万像素主摄像头（配备 1300 万像素副摄像头和 3200 万像素前置摄像头）、4415mAh 可拆卸电池（支持 30W 充电）、IP55 防水等级，以及保护屏幕的 Gorilla Glass 7i。\n\n此外，新增的钴蓝配色与 Fairphone 的公平采矿钴供应链努力相呼应。它加入了现有的地平线黑和森林绿配色。\n\n模块化设计保持不变，因此您仍然可以使用普通螺丝刀更换 12 个关键部件。\n\n此次发布中，软件本身没有变化。它仍然是 Murena 一直在改进的隐私优先构建版本。\n\n这意味着操作系统中没有内置 Google 追踪，有一个高级隐私控制小部件，可让您控制单个应用可以访问哪些数据，以及一个持续运行的隐私看板，用于指出泄露最多个人信息的已安装应用。\n\nMurena 的创始人兼首席执行官 Alexis de Lattre 谈及该设备时表示：\n\n“通过像 Fairphone（第 6 代+）这样的设备搭载 /e/OS，用户可以在硬件和软件方面都拥有真正合乎道德的设备。\n\n当我在 90 年代开发 Mandriva Linux 时，我的使命是让操作系统对日常非技术用户可用。这也是我在 Murena 的目标——让普通用户能够使用不将隐私作为要挟的智能手机。”\n\n价格因您从哪个地区订购 Murena Fairphone（第 6 代+）而异。在欧洲，价格为 €749，高于 Murena 对标准第 6 代收取的 €649。在美国，Fairphone（第 6 代+）的定价为 $749，高于标准第 6 代的 $649 价格标签。\n\n在 2026 年 8 月 18 日至 9 月 1 日的限时发布窗口内下单的用户将获得一些额外赠品。在欧盟，您可以从保护壳、屏幕保护膜、指环扣、卡夹或挂绳中选择两件免费配件。美国买家则获得保护壳和屏幕保护膜套装。\n\n每位用户都将获得一年的 1TB 云存储服务。\n\n可用性也因地区而异。该设备目前在欧洲发货，美国则列为预订状态。\n\n伦理智能手机市场仍然很小，主要依靠像这样的合作伙伴关系生存。Fairphone 制造硬件，Murena 负责软件，他们共同不断证明，注重隐私的手机并不意味着停留在黑暗时代。\n\n这是否足以将人们从 Google 生态中拉走，仍然是上次 Murena 更新产品线时同样悬而未决的问题。\n\n喜欢这次更新？支持独立的 Linux 新闻报道。\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受。\n\n任意金额，无需承诺。\n\n一位热爱开源软件、定制 PC 组装、赛车运动并探索这个世界无限可能的极客。\n\nXen 项目认真对待安全，因此成立了委员会\nUbuntu 在 Windows 上的增长速度超过 Linux\nLinux 7.2 在一年多的工作后带来缓存感知调度\n向 AI 过度分享？Proton 的工具将给您一个真实的"
+  },
+  "69a076f2d516975d9ce5d25bf8d0f2bf": {
+    "id": "69a076f2d516975d9ce5d25bf8d0f2bf",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12926",
+    "title_en": "Distribution Release: Garuda Linux 260819",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The Garuda Linux project has published a new release. The new version, 260819 \"Temeraire\", introduces a refined way to handle disk sectors and switches the default kernel to match CachyOS. \"When creating new disk layouts, the installer will pick the biggest sector size a disk supports, and for....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Garuda Linux 260819",
+    "summary_zh": "Garuda Linux 发布了新版本260819 \"Temeraire\"，该版本改进了磁盘扇区处理方式，安装程序在创建新磁盘布局时会选择磁盘支持的最大扇区大小，并使用LUKS2和argon2加密。同时，默认内核从linux-zen切换为linux-garuda（基于CachyOS），采用EEVDF调度器，并通过DKMS确保Nvidia驱动兼容。",
+    "fulltext_zh": "发行版发布：Garuda Linux 260819 (DistroWatch.com 新闻)\n\nDistroWatch.com 由以下赞助商支持\n\n新闻/观点/评论 ▼\n发布公告\nDW 周刊 / 评论存档\n访客评分与评论\n项目评分排名\n播客、新闻通讯与评论\n跨发行版软件包比较\n显示所有发行版的软件包版本\n搜索发行版 - 高级\n已停止维护的发行版\n教程与学习 ▼\n搜索文章\n问答专栏\n技巧与诀窍专栏\n误解与迷思专栏\n简化手册页\n其他操作系统\n发行版验证密钥\n发行版家族树可视化\n常见问题解答\n我们的捐赠计划\n\n小型企业电话系统\nFairphone 6 在美国销售\nKubuntu 用户将受益于 Plasma 长期支持\nRedox OS 获得改进的安装程序和更快的上下文切换\nNetBSD 在更新的 Enlightenment 移植版上运行\nMint 引入新的内核管理器\nProxmox 现已支持 ARM 处理器\nMageia 重点介绍 Pidgin\nArch 项目将阻止对 AUR 的新推送\nUbuntu 将为 LTS 版本上的虚拟化工具提供升级\nGaruda 更新 FireDragon 浏览器，采用新基础\n\n易于使用的 PBX - 托管或自管理\n适用于 Linux 的电话系统\n免费在线聊天解决方案\n集成呼叫中心软件\n联络中心软件\n远程办公应用：iOS 或 Android\n免费视频会议\nVoIP / PBX 操作指南（由 3CX 提供）\n不要措手不及，制定灾难恢复计划！\n必备的在线聊天报告和统计\n导致呼叫欺诈的常见错误\nWhatsApp Business 与 3CX WhatsApp API 集成\n3CX StartUP 的 5 个杀手级功能\n不要成为“那种人”第 1 卷：保持复杂凭据\n不要成为“那种人”第 2 卷：呼叫欺诈\n不要成为“那种人”第 3 卷：4 大安全提示\n不要成为“那种人”第 4 卷：监控您的实例\n\nUbuntu 每周通讯 957\nRed Hat 周五五件事 - 2026年8月14日\nRedox 本月动态 - 2026年7月\nFull Circle 每周新闻\n最新新闻与更新\n新闻过滤选项\n\n发行版发布：Garuda Linux 260819\n\n该项目已发布新版本。新版本 260819 \"Temeraire\" 引入了一种改进的磁盘扇区处理方式，并将默认内核切换为与 CachyOS 匹配的内核。\n\n“在创建新的磁盘布局时，安装程序将选择磁盘支持的最大扇区大小，对于希望使用 LUKS 加密磁盘的用户，安装程序现在使用 LUKS2 和 argon2 加密，并采用与磁盘相同的扇区大小。此前，在支持更优的 4096 扇区大小的磁盘上，默认值仍为 512。新的默认内核：laptop：传统上，Garuda Linux 多年来一直使用 linux-zen，主要是因为在我们选择它作为默认内核时，它比当时的其他替代方案更稳定。从本次发布开始，这一情况将改变 - linux-garuda 是我们许多人已经使用的出色的 Linux CachyOS，确保在更新前通过 DKMS 始终针对 Nvidia 驱动进行构建。该内核版本使用 EEVDF 调度器。当然，所有功劳都归功于 CachyOS；他们在这方面做得非常出色！”\n\n更多详细信息可在项目的发布公告中找到。\n\ngaruda-mokka-linux-garuda-260819.iso\ngaruda-hyprland-linux-garuda-260819.iso\ngaruda-dr460nized-linux-garuda-260819.iso\n\n最近相关新闻和发布：\n发行版发布：Garuda Linux 260819\n发行版发布：Garuda Linux 250308\n发行版发布：Garuda Linux 240428\n发行版发布：Garuda Linux 231029\n发行版发布：Garuda Linux 230305\n发行版发布：Garuda Linux 201007\n\nGaruda Linux 是一个基于 Arch Linux 操作系统的滚动发行版。与 Arch Linux 不同，Garuda Linux 带有图形安装程序（Calamares），便于安装，并提供其他高级图形工具来管理系统。Garuda 是一个面向性能的发行版，具有许多性能增强调整。其中一些调整包括使用 zram、性能 CPU 调控器，以及自定义内存管理软件。Garuda Linux 一直致力于提供"
+  },
+  "f1ea1408389bdd0efab5a13a49b9a9b2": {
+    "id": "f1ea1408389bdd0efab5a13a49b9a9b2",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.3-MM",
+    "title_en": "Two Very Exciting Memory Management Optimizations Going Into Linux 7.3",
+    "summary_en": "Andrew Morton on Tuesday sent out all of the memory management \"MM\" updates for the Linux 7.3 merge window. The MM pull was particularly heavy as he noted 1,250 \"added-to-MM\" emails were sent out this cycle compared to 920 the prior cycle. With a lot of patch churn, he also turned to Google's Gemini AI for writing his patch summaries. In going through the very verbose AI-generated summary, there are two patch series that get me excited on the performance front with Linux 7.3...",
+    "pub_date": "Wed, 19 Aug 2026 16:31:26 -0400",
+    "title_zh": "Linux 7.3 引入两项令人振奋的内存管理优化",
+    "summary_zh": "Linux 7.3 合并窗口期间，内存管理（MM）更新包含两项显著的性能优化。其一，针对 zsmalloc 内存分配器中的 zs_free() 函数减少锁竞争，在内存压力下可显著提升性能，测试显示树莓派 4B 速度提升达 1.83 倍，Intel 系统提升达 1.4 倍。其二，优化 rmap_walk_ksm 函数，解决 KSM 反向映射导致的严重性能问题，将锁持有时间从超过 500ms 降至不到 2ms，极大改善了高 VMA 共享场景下的应用延迟。",
+    "fulltext_zh": "Andrew Morton 于周二提交了 Linux 7.3 合并窗口期间所有内存管理（MM）更新。本次 MM 拉取请求尤为庞大，他指出本周期发送了 1,250 封“added-to-MM”邮件，而上一周期为 920 封。由于补丁变更频繁，他还借助 Google 的 Gemini AI 撰写补丁摘要。在浏览这份冗长的 AI 生成摘要时，有两项补丁系列在性能方面令我感到兴奋。\n\n首先是一个减少 zs_free() 中锁竞争的补丁系列。zs_free() 是 Linux 上 zsmalloc 内存分配器的一部分，被 Zswap 和 zRAM 用于释放压缩 RAM 页面。当系统处于内存压力下（无论是 Google Android 设备还是 Zswap 负载较重的服务器），zs_free() 中的锁竞争在取消映射路径中可能非常显著。鉴于当前内存价格下 Zswap/zRAM 使用量的增加（尤其是大型服务器），这一锁竞争优化可能非常有用。\n\n在基准测试中，测量每个进程独立映射 256MB、写入数据、通过 madvise 将页面换出至 zRAM，然后并发取消映射的时间，发现 20 核 Intel 系统和小型树莓派 4B 均受益明显。小米的 Wenchao Hao 发现，在此操作中树莓派速度提升高达 1.83 倍，而 Intel 系统提升达 1.4 倍。\n\n另外，同样属于 MM 拉取请求的一部分，还有针对 rmap_walk_ksm 的性能优化。rmap_walk_ksm 内存管理函数用于对通过内核同页合并（KSM）管理的页面执行反向映射遍历。ZTE 工程师发现 KSM 反向映射存在“严重”性能问题，在内存压力下应用程序可能冻结数百毫秒。当大量不相关的 VMA 共享同一个 anon_vma 时，该问题最为明显。\n\n该问题如此严重，以至于锁持有时间从超过 500ms 降至不到 2ms！在最坏情况下，从 705ms 降至平均 1.44ms 或最大 1.67ms。\n\nZTE 的 Xu Xin 详细阐述了性能影响及一些实际案例：\n\n1. 锁持有时间从 >500ms 降至 <2ms\n- 在我们的基准测试中（20,000 个 VMA 共享一个 anon_vma），KSM rmap 遍历期间 anon_vma 锁的最坏持有时间从 705ms 降至 1.67ms（最大）和 1.44ms（平均）。\n- anon_vma 锁也会被页面错误、回收、迁移、压缩、mlock、exit_mmap 和 cgroup 记账获取。\n- 由于低效的 rmap 遍历导致的长时间锁持有会阻塞应用程序线程，造成延迟尖峰、吞吐量下降，甚至容器超时。\n- 即使没有 fork() 也会发生此问题——VMA 分割（例如，通过 mprotect 或 madvise 随时间推移）可能创建数万个 VMA，全部附加到同一个 anon_vma。\n- JVM / Go 运行时：它们使用 mmap 分配堆区域，随后调用 mprotect(PROT_NONE) 用于垃圾回收屏障或保护页，随时间将原始 VMA 分割成数千个小片段。\n- 数据库引擎（MySQL、PostgreSQL）：大型共享内存缓冲区或匿名映射通过 madvise(MADV_DONTNEED) 管理以释放特定页面，这也会分割 VMA。\n\n* 为什么基准测试数字是现实的：我们在一个运行 Java 应用程序且启用 KSM 的生产系统上观察到约 20,000 个 VMA 共享一个 anon_vma。补丁前，在内存压缩和页面迁移触发的 rmap 遍历期间，测得的锁持有时间最大为 228ms。基准测试在受控环境中重现了该 VMA 数量和锁持有行为。\n\n对于每个 anon_vma 没有数千个 VMA 的系统，该补丁增加的开销可忽略不计（一次 pgoff 比较）。对于确实受此问题影响的系统，改进是显著的。"
+  },
+  "d1d9473fc63c7a87adfdd018b1696c1b": {
+    "id": "d1d9473fc63c7a87adfdd018b1696c1b",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Go-1.27",
+    "title_en": "Go Language 1.27 Adds Generic Methods, Struct Improvement & More SIMD",
+    "summary_en": "Go 1.27 was released today as the newest version of this programming language from Google's Go team...",
+    "pub_date": "Wed, 19 Aug 2026 14:23:05 -0400",
+    "title_zh": "Go语言1.27版本新增泛型方法、结构体改进及更多SIMD支持",
+    "summary_zh": "Go语言1.27版本正式发布，带来了多项语言增强，包括泛型方法、结构体字面量中键的灵活性提升，以及函数类型推断的泛化。工具链方面，内存分配优化使小对象分配成本降低30%，新增encoding/json/v2、crypto/mldsa和uuid包。实验性SIMD包simd/archsimd支持AMD64、Arm Neon和WebAssembly 128位SIMD。",
+    "fulltext_zh": "Go语言1.27版本新增泛型方法、结构体改进及更多SIMD支持 - Phoronix\nGo语言1.27版本新增泛型方法、结构体改进及更多SIMD支持\n发布于2026年8月19日下午2:23（美国东部时间）。\n\nGo 1.27于今日发布，这是谷歌Go团队开发的这一编程语言的最新版本。\n\nGo 1.27带来了一些语言增强，包括泛型方法，结构体字面量中的键现在可以是该结构体类型的任何有效字段选择器，并且函数类型推断已泛化，适用于所有赋值上下文。关于Go 1.27对泛型方法的支持：\n\nGo 1.27还带来了多项工具链改进，尺寸特化的内存分配将小对象分配成本降低了最多30%，并新增了标准库内容。encoding/json/v2提供了高级JSON处理，带有新选项和更严格的默认设置。同时，crypto/mldsa提供了后量子ML-DSA签名支持。此外，还新增了uuid包，用于生成和解析UUID。\n\nGo 1.27有一个新的实验性SIMD包，用于可移植且与向量大小无关的SIMD支持。simd/archsimd用于架构特定的SIMD操作，已修订其AMD64 API，并增加了对Arm Neon 128位SIMD和WebAssembly 128位SIMD的支持。\n\n关于Go 1.27更新的更多详情，请访问项目网站。"
+  },
+  "30a5836f539575aede7b0501486fda1d": {
+    "id": "30a5836f539575aede7b0501486fda1d",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.3-Btrfs",
+    "title_en": "Btrfs Ready With More Performance Improvements For Linux 7.3: Some ~3x To ~5x Wins",
+    "summary_en": "David Sterba of SUSE sent in the Btrfs file-system feature updates today that target the Linux 7.3 merge window. Among other changes are more performance improvements for this next version of the Linux kernel...",
+    "pub_date": "Wed, 19 Aug 2026 13:50:46 -0400",
+    "title_zh": "Btrfs 为 Linux 7.3 准备更多性能改进：部分场景提升约 3 倍至 5 倍",
+    "summary_zh": "SUSE 的 David Sterba 提交了针对 Linux 7.3 合并窗口的 Btrfs 文件系统更新，包含多项性能改进。Btrfs 现使用 IOmap 反弹缓冲区处理直接 I/O，性能从理论最大值的约 50% 提升至约 95%，几乎翻倍。同时，用本地 LRU 列表替代 XArray 跟踪受抑制的 extent 缓冲区，性能提升约 3 倍；在非 SSD 模式下移除不必要的 jiffy 延迟，吞吐量提升约 5 倍；全 fsync 跳过空洞检测逻辑也带来 5 倍提升。此外，Btrfs 默认禁用 free-space v1 代码，改用 v2，并包含多项错误修复。",
+    "fulltext_zh": "SUSE 的 David Sterba 今天提交了针对 Linux 7.3 合并窗口的 Btrfs 文件系统特性更新。除其他更改外，此版本 Linux 内核还包含更多性能改进。\n\nLinux 7.3 中的 Btrfs 现在使用 IOmap 反弹缓冲区进行直接 I/O，而不是回退到缓冲 I/O。合并请求指出，过去正确性与速度之间的权衡使性能降至理论最大值的约 50%，而现在则提升至约 95%。换句话说，性能实际上翻倍了。\n\nBtrfs 还使用本地 LRU 列表替换了 XArray，用于跟踪受抑制的 extent 缓冲区，这可以带来约 3 倍的性能提升。通过移除非 SSD 模式下多个日志任务中不必要的 jiffy 延迟，延迟降低，同时示例工作负载的吞吐量提升约 5 倍。另一个 5 倍提升来自全 fsync 期间对无空洞但具有大量 extent 的文件跳过空洞检测逻辑。Btrfs 还在锁定等方面进行了其他性能改进。\n\nBtrfs 现在还默认禁用 free-space v1 代码，转而使用多年来一直是默认的 free-space v2。此外，还有大量错误修复和其他代码改进。\n\n有关 Linux 7.3 中这些众多 Btrfs 文件系统改进的更多详细信息，请参阅：\n\nIOmap 改进为 Linux 7.3 进一步提升 EXT4 和 XFS 性能\nLinux 7.3 修正 FAT 文件系统驱动对过长文件名的错误行为\nXFS 在 Linux 7.3 中引入 FALLOC_FL_WRITE_ZEROES 以提高效率\nEFS 和 FreeVxFS 文件系统启动，FailFS 合并到 Linux 7.3\nAVX-512 xor_gen 继续为 Linux RAID 在现代 CPU 上带来令人兴奋的前景\n开源 exFAT 程序 1.4.3 改进 Fsck 和 Mkfs\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。他还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nGNOME 设计师阐述他们的 GNOME Shell 梦想\nQEMU 11.1 发布，包含众多改进\nOpenAI 将 ChatGPT 桌面应用带到 Linux\nRsync 3.5 发布，作为“非凡”更新修复 33 个安全问题\nComma.ai 推出 PCIe Gen4 x4 转 USB4 扩展坞，采用开源固件\nLinux 7.2 发布，I/O 更快，AMD 和 Intel 驱动改进\nGNOME 51 Beta 发布，包含许多小改进\nOmarchy 4.0 Linux 发行版发布，桌面 Shell 现通过 Quickshell 实现\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "57bd75c15ad7093a1d9a32149cb3be9e": {
+    "id": "57bd75c15ad7093a1d9a32149cb3be9e",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/dell-epyc-9005-memory-scaling",
+    "title_en": "AMD EPYC 9005 Series Memory Scaling Performance From 4 To 24 DDR5 RDIMMs",
+    "summary_en": "With today's memory prices, a frequent question at Phoronix and throughout many organizations is about reducing cost by not necessarily populating all memory channels. Especially with modern servers going up to 12 memory channels per socket or even 16 memory channels with upcoming EPYC Venice, you may be curious about the performance impact of populating less memory channels to see if the trade-off is worthwhile given today's DDR5 RDIMM pricing. In this article are benchmarks from a Dell PowerEd",
+    "pub_date": "Wed, 19 Aug 2026 10:20:00 -0400",
+    "title_zh": "AMD EPYC 9005系列内存扩展性能测试：从4条到24条DDR5 RDIMM",
+    "summary_zh": "本文评测了AMD EPYC 9655双路服务器在不同内存配置下的性能表现。测试使用了Dell PowerEdge R7725平台，对比了4、8、10、12、16、20和24条DDR5-6400 RDIMM内存条的性能差异。结果显示，内存条数量对性能有显著影响，但考虑到当前内存价格高昂，用户可能需要在成本和性能之间权衡。文章提供了超过250项基准测试数据，帮助用户了解不同内存配置的实际性能表现。",
+    "fulltext_zh": "AMD EPYC 9005系列内存扩展性能测试：从4条到24条DDR5 RDIMM - Phoronix\n\nAMD EPYC 9005系列内存扩展性能测试：从4条到24条DDR5 RDIMM\n发布于2026年8月19日上午10:20（美国东部时间）。\n\n考虑到当前的内存价格，Phoronix和许多组织经常面临一个问题：是否可以通过不填满所有内存通道来降低成本。尤其是现代服务器每个插槽支持多达12个内存通道，甚至即将推出的EPYC Venice支持16个内存通道，您可能想知道减少内存通道数量对性能的影响，以判断在当前DDR5 RDIMM价格下，这种取舍是否值得。本文基于Dell PowerEdge服务器，对双AMD EPYC 9655 2P配置进行了基准测试，比较了4条到满配24条DDR5-6400 RDIMM配置的性能影响，并提供了超过250项基准测试的结果。\n\nDell免费提供了Dell PowerEdge R7725 2U服务器平台的远程访问权限，用于进行这些测试。测试采用双EPYC 9655 2P配置，并在两个EPYC Turin处理器之间更换了4、8、10、12、16、20和24条RDIMM内存条。\n\n测试使用的内存是Hynix HMCG94AHBRA480N 64GB DDR5-6400 RDIMM内存模块。根据Dell PowerEdge R7725产品页面，目前64GB RDIMM模块的标价为每根8,260.92美元。因此，满配24条DDR5-6400 RDIMM的Dell标价总计为198,240美元……按照当前价格，配备AMD EPYC 9655 96核处理器和24条内存模块的Dell PowerEdge R7725服务器大约为222,000美元。鉴于行业内存价格，许多人可能会选择少于满配24条内存的配置，至少等到价格回落。\n\n这些基准测试在Ubuntu 26.04 LTS和Linux 7.0内核上进行，旨在提供跨多种工作负载的参考数据，以观察在4/8/10/12/16/20/24内存通道下的性能影响，且不进行任何其他软件/硬件更改。感谢Dell提供免费远程访问，使这些基准测试成为可能。\n\n相关文章：\n- Intel Xeon 6 Granite Rapids内存扩展性能测试：从6条到12条MRDIMM\n- DDR5-4800与DDR5-6000性能对比：AMD Ryzen 7 9850X3D在300多项基准测试中\n- Linux 6.18 LTS上的透明大页性能：Madvise与Always对比\n- 重新审视Intel Xeon 6 Granite Rapids的SNC3与HEX模式性能\n- 重新审视Intel Xeon 6 \"Granite Rapids\"的DDR5-6400与MRDIMM-8800性能\n- DDR5-6400与DDR5-4800 R-DIMM性能对比：Threadripper 9980X / 9970X CPU\n\n无广告浏览，单页文章查看。\n\n法律免责声明、隐私政策、Cookies。\n\n版权所有 © 2004 - 2026。所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "bdfa8809881fa965d18af12f719af197": {
+    "id": "bdfa8809881fa965d18af12f719af197",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/XWayland-26.1-RC1",
+    "title_en": "XWayland 26.1 RC1 Released With Many New Features",
+    "summary_en": "Olivier Fourdan of Red Hat announced today the first release candidate of XWayland 26.1. This is the first new tagged feature release since XWayland 24.1 back in 2024! As such there are many new features in tow...",
+    "pub_date": "Wed, 19 Aug 2026 10:11:07 -0400",
+    "title_zh": "XWayland 26.1 RC1 发布，带来众多新特性",
+    "summary_zh": "Red Hat 的 Olivier Fourdan 于 2026 年 8 月 19 日宣布了 XWayland 26.1 的首个候选版本（RC1），这是自 2024 年 XWayland 24.1 以来的首个新特性版本。XWayland 26.1 为在 Wayland 环境中运行 X11 客户端带来了大量新功能和改进，包括改进 rootful 实现、支持 X Input 2 的多席位兼容性、支持 Wayland fixes 协议、改进 RandR 模拟、支持 XDG System Bell 协议等。此外，该版本移除了 EGLStream 支持，因为 NVIDIA Linux 驱动已不再依赖它。总计包含数百项变更。",
+    "fulltext_zh": "XWayland 26.1 RC1 发布，带来众多新特性 - Phoronix\n\nXWayland 26.1 RC1 发布，带来众多新特性\n2026年8月19日，上午10:11（美国东部时间）\n\nRed Hat 的 Olivier Fourdan 今天宣布了 XWayland 26.1 的首个候选版本（RC1）。这是自 2024 年 XWayland 24.1 以来的首个新特性版本！因此，其中包含了许多新特性。\n\nXWayland 26.1 为在 Wayland 环境中运行 X11 客户端带来了许多新功能和改进。XWayland 26.1 改进了其 rootful 实现、与 X Input 2 的多席位兼容性、支持 Wayland fixes 协议、改进的 RandR 模拟、支持 XDG System Bell 协议以及其他更改。它还移除了 EGLStream 支持，因为 NVIDIA Linux 驱动栈现在无需它也能正常工作。\n\n* 移除了 EGLStream 支持。\n* Xwayland rootful 实现了剪贴板/主选择桥接（通过 \"-clipboard\" 启用），允许在 rootful Xwayland 与 Wayland 桌面其他部分之间进行复制/粘贴。\n* 通过 Xi2 实现多席位：Wayland 席位及其设备被镜像到 XInput 2 层次结构中。\n* 支持 \"wl_fixes\"，即 destroy_global 和 ack_global_remove。\n* RandR 模拟现在优先使用原生模式，最高可达物理分辨率，并且模拟模式现在考虑旋转。\n* Xwayland rootful 全屏默认使用实际输出分辨率，而不是将 640x480 的分辨率放大。\n* 支持 xdg-system-bell：当合成器支持时，Xwayland 现在通过 Wayland 系统铃协议响铃。\n\n自 XWayland 24.1 以来，由于两年的变更积累，总计有数百项更改。有关 XWayland 26.1 RC1 的下载和所有工作的更多详细信息，请参阅邮件列表公告。目前还没有关于新的 X.Org Server 特性版本的消息，只有独立的 XWayland。\n\nIceWM 4.1 窗口管理器修复罕见的视频性能问题\nVibe Coded X11 YSERVER 让 Steam 和全屏游戏在 Cinnamon 上运行\nlibx11-compat 正在致力于在 SDL 之上实现 Xlib，以支持 Wayland、macOS、Android\nFrame：一个完全用 x86_64 汇编编写的全新 X11 服务器实现\nXWayland 24.1.13 发布，修复 X.Org 代码库中的两个更多安全问题\n用 Rust 编写的 Vibe Coded X11 服务器增加了 Xinerama、FreeBSD 支持及其他功能\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nGNOME 设计师阐述他们的 GNOME Shell 梦想\nQEMU 11.1 发布，带来众多改进\nOpenAI 将 ChatGPT 桌面应用带到 Linux\nRsync 3.5 发布，作为“非凡”更新修复 33 个安全问题\nComma.ai 推出 PCIe Gen4 x4 转 USB4 扩展坞，配备开源固件\nLinux 7.2 发布，带来更快的 I/O、新的 AMD 和 Intel 驱动改进\nGNOME 51 Beta 发布，包含许多小改进\nOmarchy 4.0 Linux 发行版发布，桌面 Shell 现通过 Quickshell 实现\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "ea97a29babf5716bcca5bccc392d78f2": {
+    "id": "ea97a29babf5716bcca5bccc392d78f2",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/kde-plasma-6-6-6-released-with-numerous-bug-fixes-and-various-improvements/",
+    "title_en": "KDE Plasma 6.6.6 Released with Numerous Bug Fixes and Various Improvements",
+    "summary_en": "Explore the new KDE Plasma 6.6.6, packed with essential bug fixes and various improvements to enhance functionality and user satisfaction.\nThe post KDE Plasma 6.6.6 Released with Numerous Bug Fixes and Various Improvements appeared first on Linux Today.",
+    "pub_date": "Wed, 19 Aug 2026 07:14:04 +0000",
+    "title_zh": "KDE Plasma 6.6.6 发布：包含众多错误修复与多项改进",
+    "summary_zh": "KDE Plasma 6.6.6 版本正式发布，该版本专注于修复大量已知问题，并引入多项改进，旨在提升系统的稳定性和用户体验。此次更新覆盖了桌面环境的核心组件，包括窗口管理、系统设置、通知系统等，为用户带来更流畅、更可靠的操作体验。",
+    "fulltext_zh": "探索全新的 KDE Plasma 6.6.6，它包含了必要的错误修复和多项改进，以增强功能性和用户满意度。\n\n该文章《KDE Plasma 6.6.6 发布：包含众多错误修复与多项改进》最初出现在 Linux Today 上。"
+  },
+  "ac6c5ccc14f576a973021db3cb2c7b00": {
+    "id": "ac6c5ccc14f576a973021db3cb2c7b00",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/apple-container-open-source-tool-for-linux-containers-on-the-mac/",
+    "title_en": "Apple Container: Open-source Tool for Linux Containers on the Mac",
+    "summary_en": "Explore Apple Container, an innovative open-source solution that enables Linux containers to run effortlessly on Mac. Boost your productivity now.\nThe post Apple Container: Open-source Tool for Linux Containers on the Mac appeared first on Linux Today.",
+    "pub_date": "Wed, 19 Aug 2026 07:13:06 +0000",
+    "title_zh": "Apple Container：在Mac上运行Linux容器的开源工具",
+    "summary_zh": "Apple Container 是一款创新的开源解决方案，旨在让Linux容器在Mac上轻松运行。它通过提供轻量级、高效的容器运行环境，帮助开发者在macOS系统中无缝使用Linux容器，从而提升开发效率和生产力。该工具简化了跨平台开发流程，为Mac用户带来了更便捷的容器化体验。",
+    "fulltext_zh": "探索 Apple Container，这是一款创新的开源解决方案，能够让 Linux 容器在 Mac 上轻松运行。立即提升您的生产力。\n\n该文章《Apple Container: Open-source Tool for Linux Containers on the Mac》首次出现在 Linux Today 上。"
+  },
+  "e50a355803c03d48292924fdd40ccf8c": {
+    "id": "e50a355803c03d48292924fdd40ccf8c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/tuxedo-os-leaves-ubuntu-behind-for-a-debian-testing-base/",
+    "title_en": "TUXEDO OS Leaves Ubuntu Behind for a Debian Testing Base",
+    "summary_en": "Learn about TUXEDO OS's move away from Ubuntu to a Debian Testing base, promising users a more stable and efficient operating system for their computing needs.\nThe post TUXEDO OS Leaves Ubuntu Behind for a Debian Testing Base appeared first on Linux Today.",
+    "pub_date": "Wed, 19 Aug 2026 07:10:19 +0000",
+    "title_zh": "TUXEDO OS 弃用 Ubuntu，转向 Debian Testing 基础",
+    "summary_zh": "TUXEDO OS 宣布其发行版将不再基于 Ubuntu，转而采用 Debian Testing 作为基础。这一改变旨在为用户提供更稳定、更高效的操作系统，满足其日常计算需求。该消息由 Linux Today 首次报道。",
+    "fulltext_zh": "了解 TUXEDO OS 从 Ubuntu 迁移到 Debian Testing 基础的变化，这承诺为用户提供更稳定、更高效的操作系统，以满足其计算需求。\n\n该文章 TUXEDO OS Leaves Ubuntu Behind for a Debian Testing Base 首次出现在 Linux Today 上。"
+  },
+  "d0f3078ab8dee57640bcf6999de55d47": {
+    "id": "d0f3078ab8dee57640bcf6999de55d47",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/kdenlive-26-04-3-released-as-the-final-maintenance-update-in-the-series/",
+    "title_en": "Kdenlive 26.04.3 Released as the Final Maintenance Update in the Series",
+    "summary_en": "Explore Kdenlive 26.04.3, the final maintenance update, which delivers vital updates and optimizations to elevate your video editing projects.\nThe post Kdenlive 26.04.3 Released as the Final Maintenance Update in the Series appeared first on Linux Today.",
+    "pub_date": "Wed, 19 Aug 2026 07:08:22 +0000",
+    "title_zh": "Kdenlive 26.04.3 发布：该系列的最终维护更新",
+    "summary_zh": "Kdenlive 26.04.3 作为该系列的最终维护更新版本正式发布，为用户带来了关键更新与优化，旨在提升视频编辑项目的体验。此版本修复了若干问题，并进行了性能优化，确保稳定性和效率。对于使用 Kdenlive 进行视频编辑的用户而言，这是一个值得升级的版本，以享受更流畅的编辑流程和更可靠的功能表现。",
+    "fulltext_zh": "探索 Kdenlive 26.04.3，这是该系列的最终维护更新，它带来了关键更新和优化，以提升您的视频编辑项目体验。\n\n此文章《Kdenlive 26.04.3 发布：该系列的最终维护更新》最初出现在 Linux Today 上。"
+  },
+  "231d537d52f4e8e7bee528aad049a885": {
+    "id": "231d537d52f4e8e7bee528aad049a885",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/freerdp-3-28-released-with-security-fixes-revived-ios-client/",
+    "title_en": "FreeRDP 3.28 Released with Security Fixes, Revived iOS Client",
+    "summary_en": "Discover the latest FreeRDP 3.28 release featuring essential security fixes and a revitalized iOS client. Stay secure and connected today!\nThe post FreeRDP 3.28 Released with Security Fixes, Revived iOS Client appeared first on Linux Today.",
+    "pub_date": "Wed, 19 Aug 2026 07:07:02 +0000",
+    "title_zh": "FreeRDP 3.28 发布：包含安全修复与焕新的 iOS 客户端",
+    "summary_zh": "FreeRDP 3.28 版本正式发布，重点修复了多个安全漏洞，并重新激活了 iOS 客户端。此次更新旨在提升远程桌面协议的安全性和跨平台体验，确保用户连接更安全、更稳定。",
+    "fulltext_zh": "探索最新 FreeRDP 3.28 版本，该版本包含关键安全修复和焕然一新的 iOS 客户端。立即保持安全并保持连接！\n\n该文章 FreeRDP 3.28 发布：包含安全修复与焕新的 iOS 客户端 首次出现在 Linux Today 上。"
   }
 }
