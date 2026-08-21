@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Xen项目认真对待安全性，因此成立了委员会 — Linux 中文速报</title>
+<title>Linux 7.3网络变更合并，但开发者因AI/LLM“完全不堪重负” — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Xen项目认真对待安全性，因此成立了委员会</h1>
+  <h1>Linux 7.3网络变更合并，但开发者因AI/LLM“完全不堪重负”</h1>
 
-  <div class="article-summary">Xen项目宣布成立安全委员会，旨在帮助基于Xen构建产品的公司获得安全认证。创始成员AMD、EPAM和Renesas已投入大量工作，并新增了Premier Plus会员级别。该委员会将提供安全文档和测试证据，减少重复工作，降低成本，加速认证流程。Xen本身的开发流程不变，委员会作为并行治理层运行。</div>
+  <div class="article-summary">Linux 7.3内核的网络子系统更新已合并，包含大量有线和无线网络改进，但也带来了大量由AI/LLM生成的补丁，导致维护者“完全不堪重负”。维护者Jakub Kicinski表示，AI生成的补丁占净下一版本补丁的三分之一到一半，他们正利用LLM预算（由Meta提供）进行多模型审查以减少幻觉，并计划让LLM承担更多管理工作。此外，本周期网络变更包括UDP隧道中的BIG TCP支持、MPTCP内存压力改进、AMD/Solarflare NIC的CXL支持、Intel iXD驱动初步框架、WiFi MLO增强等。</div>
 
-  <div class="article-body"><p>Xen项目认真对待安全性，因此成立了委员会</p><p>Xen项目认真对待安全性，因此成立了委员会</p><p>创始成员AMD、EPAM和Renesas已经奠定了基础，并随之推出了新的Premier Plus会员级别。</p><p>Xen是一个运行在各种硬件上的虚拟机监控器，其崩溃可能带来巨大后果。它部署在汽车、工业自动化、机器人和航空电子等领域。这些都是安全关键领域，认证至关重要。</p><p>到目前为止，Xen一直处于良好的发展轨道上，采用率不断提高，并持续增强以保持其对企业用途的相关性。但它缺乏的是一种结构化的协作方式，来帮助基于其构建的公司真正获得此类工作的认证。</p><p>Xen安全委员会是一个负责构建安全文档和测试证据的团体，成员公司可以依赖这些资源，而不必从头开始。</p><p>该委员会的工作涵盖软件安全需求、架构规范、安全相关工程、DFMEA分析、测试框架、工具、代码覆盖率和流程文档。</p><p>创始贡献者AMD、EPAM和Renesas被认可为上述工作付出了大部分努力，形成了该倡议的早期基础。</p><p>其目的是阻止每家公司独自解决相同的问题。共享这一基础应能降低成本、避免重复工作，并让任何基于Xen构建的产品更快通过认证。</p><p>Xen本身的构建方式不会改变。源代码、许可和现有的开放贡献与审查流程保持不变。该委员会作为并行治理层运行，而非替代现有维护者的工作方式。</p><p>不过，加入委员会并非完全开放。组织需要注册合适的会员级别。详情如下。👇</p><p>招募新成员</p><p>Xen项目的会员制度与大多数Linux基金会项目类似。它资助共享基础设施、测试环境、活动和协调，而日常技术决策则通过开放贡献由维护者掌握。</p><p>付费加入并不能购买对代码库的影响力。</p><p>AMD、ARM、AWS、Boeing、EPAM、Ford、Honda、Renesas、Vates和XenServer均被列为Premier会员。这些代表了芯片制造商、云提供商、汽车、航空航天以及其他几个行业。</p><p>新的会员级别“Premier Plus”位于现有级别之上，赋予会员在Xen咨询委员会和Xen安全委员会中的投票代表权，对优先级和路线图的制定有发言权，并可访问委员会管理的安全工件。</p><p>这样，成员无需在内部生成所有需求和测试，而是可以将委员会现有的工件交给自己的安全评估员进行审计和评估。</p><p>就此话题，Linux基金会可靠嵌入式系统副总裁Kate Stewart表示：</p><p>“具有安全考虑的系统需要可信的虚拟机监控器，为Zephyr和Linux等其他开源组件提供基础，以支持混合关键性嵌入式应用。Zephyr和Xen项目在过去几年中一直在交流最佳实践，作为实现开源组件安全认证的途径。我们欢迎Xen安全倡议，以加速Xen获得正式认证的进程。”</p><p>Proxmox虚拟环境正式支持ARM64</p><p>Proxmox虚拟环境正式支持ARM64，但你的树莓派尚不支持</p><p>该版本由Debian 13.5和Linux 7.0驱动，完全支持NVIDIA Grace和Vera系统。</p><p>喜欢这次更新吗？支持独立的Linux新闻</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热爱开源软件、定制PC组装、赛车运动并探索这个世界无限可能的极客。</p><p>Ubuntu正在成长</p></div>
+  <div class="article-body"><p>Linux 7.3网络变更已合并，但开发者因AI/LLM“完全不堪重负” - Phoronix</p><p>Linux 7.3网络变更已合并，但开发者因AI/LLM“完全不堪重负”</p><p>2026年8月20日下午4:05（美国东部时间）</p><p>所有网络子系统的功能更新已于今日在Linux 7.3内核的合并窗口期间合并。本周期有大量有线和无线网络改进，但也有大量错误修复——包括许多由AI/LLM代理生成的、并非那么重要的修复。网络子系统维护者承认，由于AI大语言模型输出带来的代码变动，他们现在“完全不堪重负”。</p><p>在介绍本周期Linux 7.3网络变更之前，维护者Jakub Kicinski指出，由于AI使用量的增加，他们已“完全不堪重负”。正如最近几周/几个月所指出的，他们一直受到补丁的轰炸，这些补丁旨在删除旧网络代码/驱动程序，以减少AI补丁噪音，这些驱动可能被任何运行现代、最新Linux内核的用户所使用。然而，AI/LLM代理并不罢休，网络开发者继续受到影响。不过，他们现在对所有AI活动的回应是……让AI代理和前沿模型在未来承担更多工作。</p><p>Jakub在Linux 7.3网络拉取请求中评论道：</p><p>“快速粗略的计数表明，我们（Paolo和我）合并了非常相似数量的net（632）和net-next（648）补丁。这并不能说明全部情况，因为net-next补丁中有三分之一到一半*看起来*也是AI驱动的低优先级修复、清理和澄清。</p><p>我们当然完全不堪重负。一线希望是我们获得了足够的LLM预算和访问权限（感谢Meta！），可以对每个补丁运行多个前沿模型进行审查。这消除了一些幻觉。尽管如此，在审查方面，LLM只能做这么多。可悲的事实是，我们的API（尤其是针对PCIe错误、超时等罕见事件）一直存在竞争条件，现在LLM不让我们忽视这一点。我预计我们下一个版本的方向将是稍微调整审查，但开始将重点转向让LLM处理繁忙工作——管理patchwork、自动化常见流程投诉、编辑提交消息，甚至应用那些已经获得我们信任的人‘Reviewed-by’标签的补丁……”</p><p>所以希望他们能够有效地利用AI来抵御AI带来的这种增长。Meta正在提供他们的AI令牌预算。</p><p>至于本周期的网络变更，现在UDP隧道中的VXLAN和Geneve驱动支持BIG TCP，改进了多路径TCP（MPTCP）在极端内存压力下的处理，以及其他核心改进。</p><p>对于有线网络驱动，AMD/Solarflare NIC有了初步的CXL支持，Intel iXD驱动有了初步框架，AMD Pensando NIC支持固件刷新，以及其他驱动变更。</p><p>Intel iXD驱动将用于支持Intel E2100及更高版本IPU和FNIC上的Intel控制平面PIC功能。对于Linux 7.3，正在建立非常基础的Intel iXD驱动基础设施。</p><p>在WiFi驱动方面，继续有Multi-Link Operation（MLO）增强，新的mm81x驱动用于Morse Micro Long-Range S1G设备，以及NXPWIFI作为NXP设备的新无线驱动。联发科MT76驱动增加了对MT7928和MT7925 NAN的支持。</p><p>关于Linux 7.3的更多网络更新详情，请参阅：</p><p>NetworkManager采用AI编码助手政策</p><p>Linux网络持续受到AI补丁轰炸</p><p>Linux无线维护者对AI/LLM生成的垃圾补丁采取强硬立场</p><p>Linux 7.3添加MCTP-Over-USB v1.1支持</p><p>Linux 7.3将支持Realtek RTL8261C和RTL8261D</p><p>Realtek RTL8723B/RTL8723BS试图加入RTW88 Linux驱动</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件生态。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/xen-project-safety-committee/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-Networking" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

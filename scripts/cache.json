@@ -7643,5 +7643,181 @@
     "title_zh": "FreeRDP 3.28 发布：包含安全修复与焕新的 iOS 客户端",
     "summary_zh": "FreeRDP 3.28 版本正式发布，重点修复了多个安全漏洞，并重新激活了 iOS 客户端。此次更新旨在提升远程桌面协议的安全性和跨平台体验，确保用户连接更安全、更稳定。",
     "fulltext_zh": "探索最新 FreeRDP 3.28 版本，该版本包含关键安全修复和焕然一新的 iOS 客户端。立即保持安全并保持连接！\n\n该文章 FreeRDP 3.28 发布：包含安全修复与焕新的 iOS 客户端 首次出现在 Linux Today 上。"
+  },
+  "9327803f9351c21cb481f67f2f742797": {
+    "id": "9327803f9351c21cb481f67f2f742797",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/gimp-new-project-file-format",
+    "title_en": "GIMP is (finally) working on a new project file format",
+    "summary_en": "A new project file format is in the works for GIMP, as the existing one can&#8217;t handle larger, complex projects. Since 1997, the famed FOSS image editor has used the binary .xcf format to save projects so layers, effects and anything else can be edited and adjusted again – which doesn&#8217;t happen in a flat file export to JPEG or PNG. But, writing in a recent development update, the team has said it&#8217;s finding &#8220;more and more limitations&#8221; in the current format. And with maj",
+    "pub_date": "Thu, 20 Aug 2026 21:05:57 +0000",
+    "title_zh": "GIMP（终于）正在开发新的项目文件格式",
+    "summary_zh": "GIMP正在开发一种新的项目文件格式，以解决现有XCF格式在处理大型复杂项目时的局限性。新格式将采用“压缩XML”结构，支持更快的保存速度，并可能实现自动保存功能。尽管新格式将默认用于新项目，但XCF支持仍将保留以确保向后兼容性。",
+    "fulltext_zh": "GIMP（终于）正在开发新的项目文件格式 - OMG! Ubuntu\n\nGIMP正在开发一种新的项目文件格式，因为现有的格式无法处理更大、更复杂的项目。\n\n自1997年以来，这款著名的自由开源图像编辑器一直使用二进制的.xcf格式来保存项目，以便图层、效果和其他内容可以再次编辑和调整——这在导出为JPEG或PNG等平面文件时是不会发生的。\n\n在最近的一次开发更新中，团队表示他们发现当前格式存在“越来越多的限制”。\n\n随着动画和多页文档等重大新功能被列入GIMP的近期路线图，它已经开始着手开发一种新的项目文件格式，该格式将采用“压缩XML”结构（这种结构通常被其他软件使用，包括办公套件）。\n\n新的项目类型将支持更快的保存，因为作为一种高级的“zip”文件，只需保存编辑中发生变化的部分，而不是整个文件。这有可能最终为GIMP用户带来最长期请求的功能之一：自动保存！\n\n现在要知道确切的技术细节或文件扩展名还为时过早——希望不是——因为根据博客文章，一切都“仍在设计和实现中”。\n\n不过，XCF将继续保留\n\n一旦GIMP的新文件格式就位，使用编辑器最新功能的新项目将默认使用新的项目格式。\n\n但XCF支持将继续作为GIMP的一部分，以确保向后兼容性。谷歌的第一个标志是1998年用GIMP制作的XCF文件，这个古老的文件至今仍能在现代GIMP中打开，没有任何问题——团队表示对此感到“自豪”。\n\nGIMP已经处理了不仅仅是XCF。除了打开和保存常见图像格式外，它还可以打开和导出Adobe Photoshop的.psd和OpenRaster的.ora文件。\n\n既然已经学会了如何处理其他软件使用的项目文件，那么回过头来改进自己的文件格式也是理所当然的。随着现代性的不断推进，一个近30年的格式难免显得有些过时。"
+  },
+  "48c6e883b1d10afdccb16a26a5bd1575": {
+    "id": "48c6e883b1d10afdccb16a26a5bd1575",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/dynamic-icons-gnome-extension-updated",
+    "title_en": "Dynamic icons GNOME extension adds 2 new styles, Yaru fixes",
+    "summary_en": "You can bring Ubuntu&#8217;s clock, calendar and weather app icons to life with the Dynamic Calendar, Clocks and Weather Icons [Reborn] GNOME Shell extension – which has been updated with new icon styles. The extension already has Yaru, Adwaita, Paprius, Big Sur and other icon styles built-in (the dynamic versions don&#8217;t depend on the icon sets themselves), so you see real-time clock, date and weather info on icons that look like their static equivalents. Two new icon choices land in latest",
+    "pub_date": "Thu, 20 Aug 2026 14:46:54 +0000",
+    "title_zh": "动态图标GNOME扩展新增2种样式，修复Yaru问题",
+    "summary_zh": "Dynamic Calendar, Clocks and Weather Icons [Reborn] GNOME Shell扩展更新至v9，新增两种图标样式，并修复了Yaru图标集的一些视觉不一致问题。该扩展能让Ubuntu的时钟、日历和天气应用图标动态显示实时信息，支持GNOME 46至50，适用于Ubuntu 24.04 LTS及以上版本。",
+    "fulltext_zh": "Dynamic Calendar, Clocks and Weather Icons [Reborn] GNOME Shell扩展可以让Ubuntu的时钟、日历和天气应用图标变得生动，该扩展已更新，新增了图标样式。\n\n该扩展已经内置了多种图标样式（动态版本不依赖于图标集本身），因此你可以在图标上看到实时的时钟、日期和天气信息，而这些图标的外观与静态图标相似。\n\n在最新更新v9中，新增了两个图标选择。\n\n在上面的截图中，你可以看到两种新图标样式在Ubuntu Dock上的效果，尽管系统的其余部分仍使用标准的Yaru图标集。\n\nYaru用户受益于一些图标现在看起来更协调，因为一些细微的视觉不一致问题已经得到修复。\n\n日历图标中1像素的差异已得到修正，日期输入问题也已解决。据说以1结尾的日期现在会使日历图标上的月/日视图看起来“更合适”。\n\n日历图标现在也使用Ubuntu字体，并增加了日历基础图标的额外尺寸。因此，动态版本现在看起来更像非动态版本，尤其是在Ubuntu Dock上。\n\n它有什么动态之处？\n\n它让图标变得生动。\n\n如果你不熟悉这个扩展，它之所以“动态”，是因为安装后，它会让三个应用的图标“活”起来——日历图标上的实际日期、时钟图标上移动的指针，以及天气图标上的当前天气状况和温度。\n\n某些元素可以开启或关闭，包括日历的月份和星期几、时钟的秒针、温度以及天气图标的背景。你也可以选择性地让哪些图标变为动态。\n\nDynamic Calendar, Clocks and Weather Icons [Reborn] 可在GNOME Extensions上获取。最新版本支持GNOME 46至50，所以如果你使用的是Ubuntu 24.04 LTS或更高版本，就可以放心使用。\n\n它是早期扩展的改进分支，该早期扩展多年未更新，因此命名为“Reborn”。"
+  },
+  "92d2b509cbbddcbbb85d1293c65746c1": {
+    "id": "92d2b509cbbddcbbb85d1293c65746c1",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/tuba-mastodon-quote-support-collections",
+    "title_en": "Tuba, the best Mastodon client for Linux, just got a BIG update",
+    "summary_en": "Tuba 0.11 adds full Mastodon quote and Collections support, UnifiedPush and an early, experimental Android build. Linux's best Mastodon app, now better!\nYou're reading Tuba, the best Mastodon client for Linux, just got a BIG update, a blog post from OMG! Ubuntu. Do not reproduce elsewhere without permission.",
+    "pub_date": "Thu, 20 Aug 2026 02:04:16 +0000",
+    "title_zh": "Tuba，Linux 上最好的 Mastodon 客户端，刚刚迎来重大更新",
+    "summary_zh": "Tuba 是 Linux 上功能最丰富的 Mastodon 客户端，其 0.11.0 版本带来了重大更新，包括对 Mastodon 引用（quote）功能的完整支持、集合（Collections）功能、统一推送支持、自定义时间线、自定义缩略图、帖文投票等。此外，Tuba 还推出了实验性的 Android 版本，但官方建议 Android 用户使用其他更成熟的客户端。该版本还修复了 Linux 移动端的一些问题，并提供了多种安装方式。",
+    "fulltext_zh": "Tuba，Linux 上的 Mastodon 应用，增加了引用和集合支持。\n\n这款基于 GTK4/libadwaita 的 Fediverse 客户端，迎来了其首个重大更新，并同时推出了实验性的 Android 版本。\n\nTuba 0.11.0 是该社交应用的第一个重大更新，带来了对 Mastodon 引用功能的完整支持。在撰写器中，你可以引用帖子、控制他人是否可以引用你的帖子，以及撤销对已引用者的授权。\n\n虽然该应用此前已经提供了自己的“引用推文”分享方式，但对 Mastodon 基于“同意”的引用支持，意味着你在引用时能够尊重这个去中心化社交媒体平台上其他用户的需求。\n\n集合（Collections）是基于主题或话题的账户精选列表，通过链接分享——类似于 BlueSky 的 Starter Packs。\n\n在 Tuba 0.11.0 中，如果你的实例支持集合，你可以浏览集合、关注其中的单个账户（设计上不提供“全部关注”选项），并在 Tuba 内创建和编辑自己的集合。\n\n统一推送（UnifiedPush）支持。在桌面端，如果系统提供了统一推送服务并已启用，Tuba 将保持连接活跃，而不是在后台运行以监听通知。\n\n其他功能包括：从多个话题标签创建自定义时间线，在帖子撰写器中为视频或音频附件添加自定义缩略图，以及创建同时包含附件和投票的帖子（在支持的实例上）。\n\nTuba 0.11.0 中其他较小的显著变化：\n\n- 个人资料备注显示完整内容，且更易于编辑\n- 键盘快捷键速查表\n- 在较窄窗口下使用紧凑间距\n- 保存媒体时的提示显示“打开文件夹”按钮\n- 重写了自定义表情选择器\n- 字体大小滑块取代了按钮\n- 当转发带有附件但无替代文本的帖子时发出警告\n- 可以禁用“精选”和“媒体”（以及媒体回复）个人资料标签页\n\n总的来说，这是对 Linux 桌面上功能最丰富、最友好的 Mastodon 应用的一次受欢迎更新。这无疑是一个大版本，因此要尽情享受所有细节，请查看完整的发布说明。\n\nTuba 现已登陆 Android\n\nTuba 的 Android 版本（图片：geopjr）\n\nTuba 现已提供 Android 版本，但构建仍处于早期阶段。应用自己的发布说明提到，在 Android 上使用 Mastodon 有“更好的选择”。\n\n不过，在开发 Android 移植版的过程中，影响 Linux 移动端的一些“烦扰和用户体验小问题”被发现并解决了。即使你或其他人坚持在谷歌移动操作系统上使用那些“更好的选择”，这项工作仍然带来了益处。\n\n然而，你暂时不会在 Play Store 或 F-Droid 中找到 Tuba。相反，你可以从 nightly 构建中下载。\n\n如何获取 Tuba 0.11.0\n\n你可以安装最新版本。有一个官方的 Snap Store 构建，但截至撰写本文时，它尚未更新。\n\n要体验本文提到的更改，你可以在 Ubuntu 24.04 LTS 及更高版本上从仓库安装旧版本，使用命令：\n\nsudo apt install tuba\n\n如果你使用的是 Ubuntu 26.10 每日构建版，v0.11.0 将包含在仓库中。\n\n否则，请前往 Tuba 官方网站。那里有下载链接以及所有可用的 Linux 包和格式的详细信息，还有 Windows 安装程序，如果你喜欢在双启动设置的另一侧使用该客户端的话。\n\n如果你感兴趣，这个博客也在 Mastodon 上——关注我们：floss.social/@omgubuntu"
+  },
+  "49880210ebca4e72cfd23e3ec243e2fc": {
+    "id": "49880210ebca4e72cfd23e3ec243e2fc",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/pine64-kills-off-linux-hardware/",
+    "title_en": "PINE64 is Halting its Linux Hardware Line, and The AI Bubble is to Blame",
+    "summary_en": "They are blaming DRAM and eMMC shortages, with nothing coming back before mid-2027.",
+    "pub_date": "Thu, 20 Aug 2026 10:42:38 GMT",
+    "title_zh": "PINE64暂停Linux硬件产品线，AI泡沫是罪魁祸首",
+    "summary_zh": "PINE64宣布暂停其Linux硬件产品线，原因是DRAM和eMMC芯片短缺，预计2027年中之前无法恢复。该公司表示，现有库存将在三个月内售罄，之后不再推出新品或补货。不过，其微控制器产品线（如PineTime）不受影响，将继续正常发货。PINE64将短缺归因于AI数据中心对内存芯片的抢购，导致全球供应紧张。其他Linux硬件项目如PineNote也因存储芯片价格高企而停滞。这一局面引发了对小型Linux硬件项目生存空间的担忧。",
+    "fulltext_zh": "PINE64暂停Linux硬件产品线，AI泡沫是罪魁祸首\n\nPINE64暂停Linux硬件产品线，AI泡沫是罪魁祸首\n\n他们将其归咎于DRAM和eMMC芯片短缺，预计2027年中之前不会有任何恢复。\n\n这家开放硬件制造商最近在其Mastodon账户上发布了这一消息，如果你正期待购买新的Linux驱动的设备，这可不是什么好消息。PINE64表示，其Linux硬件生产线目前处于空置状态，在组件成本居高不下的情况下，没有新的生产计划。\n\n2027年中之后的组件价格将决定后续计划，而在此之前他们不做任何承诺。他们预计现有库存将在三个月内售罄。\n\n一旦库存售罄，将不再有新品发布或补货来覆盖现有库存。\n\n不过，并非所有产品都受影响。PINE64的微控制器产品线（即PineTime系列）将继续正常发货，因为它们不依赖相同的存储芯片。\n\n在公告的最后，他们更新了即将推出的PineTime Pro的状态。目前，演示固件已具备显示屏、触摸、运动、GPS、按键、心率传感器（仅芯片ID）、电池充电器、电机、麦克风和扬声器的基本驱动程序。不过，在试产批次开始生产之前，仍需解决一些问题。\n\n以上就是本次更新的全部内容。总的来说，对Linux设备而言情况有些黯淡，但与此同时，PineStore仍然拥有强大的MCU驱动设备产品线，并将继续推出更多令人兴奋的设备。\n\nPINE64在公告中从未提及“AI”一词，而是将重点放在DRAM/eMMC短缺上。但你需要进一步探究短缺的真正根源。\n\n内存价格持续上涨，其中AI相关需求受到的冲击最为严重。运营AI数据中心的企业已经锁定了全球内存供应，直至明年，导致其他买家只能争夺剩余产能。\n\n内存行业的高管们也不乐观。SK海力士CEO最近表示，最糟糕的时刻还在后面，预计未来数年供应将持续落后于需求。\n\nPINE64并非唯一受此价格飙升影响的Linux硬件供应商。PineNote，一款基于Manjaro的Linux优先手持设备，自今年早些时候起就因同样原因被搁置。该项目已开发两年，至今仍无发布日期，原因就是DDR5和SSD价格居高不下。\n\n我相信这些并非唯一受影响的项目；那些仍处于众筹或概念阶段的小型项目肯定也面临同样的问题。\n\n让我担心的是，AI泡沫终将破裂，但小型Linux项目现在正被扼杀。如果这些组件价格持续如此离谱，我们将失去仅存的少数独立硬件选择。\n\nOmarchy押注AI代理，而Linux世界保持谨慎\n\nOmarchy押注AI代理，而Linux世界保持谨慎\n\n当一些开源项目将AI拒之门外时，Omarchy即将发布的v4版本将AI视为系统的一部分。\n\n喜欢这次更新吗？支持独立的Linux新闻报道\n\nIt's FOSS在过去14年里一直帮助人们使用Linux。请帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读，并获得5本电子书。\n\n一次付费，永久享受\n\n任意金额，无需承诺\n\n一个热爱开源软件、定制PC组装、赛车运动并探索世界无限可能的极客。\n\nWarp推出工厂，让工程团队构建自己的云软件工厂\n\nMurena刚刚让Fairphone（第6代）变得更好！\n\nXen项目认真对待安全性，因此成立了委员会\n\nUbuntu在Windows上的增长比在Linux上更快\n\nLinux 7.2在一年多的工作后带来了缓存感知调度\n\n成为更好的Linux用户\n\n通过FOSS每周通讯，你可以学习有用的Linux技巧、发现应用程序、探索新发行版，并随时了解最新动态"
+  },
+  "e0c740607a9e6c3bde5897ba44abf814": {
+    "id": "e0c740607a9e6c3bde5897ba44abf814",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/warp-factories-launched/",
+    "title_en": "Warp Launches Factories to Let Engineering Teams Build Their Own Cloud Software Factories",
+    "summary_en": "The platform is open at every layer, letting teams bring their own models, harnesses, and compute while Warp handles the orchestration.",
+    "pub_date": "Thu, 20 Aug 2026 08:53:58 GMT",
+    "title_zh": "Warp 推出 Factories，让工程团队构建自己的云软件工厂",
+    "summary_zh": "Warp 发布了名为 Factories 的新平台，旨在帮助工程团队构建和运行自己的云软件工厂。该平台允许团队使用自己的模型、工具和计算资源，而 Warp 负责编排。Factories 通过代理集群处理从分诊、规格编写、实现到审查的整个开发流程，仅在关键决策点引入人工干预。它支持任何模型或工具，并提供内置指标跟踪所有运行。目前处于封闭测试阶段，需申请早期访问。",
+    "fulltext_zh": "Warp 推出 Factories，让工程团队构建自己的云软件工厂\n\n该平台在每一层都是开放的，允许团队自带模型、工具和计算资源，而 Warp 负责编排。\n\n▶️ Warp 推出了 Factories，这是一个用于运行你自己的云软件工厂的基础设施，配备代理集群。\n▶️ 代理负责分诊、规格编写、实现和审查；人类仅在需要时介入。\n▶️ 支持任何模型或工具，所有运行均通过内置指标进行跟踪。\n▶️ 仅限封闭测试版；申请早期访问。\n\n组织内软件的构建方式多年来已经发生了很大变化。早在 AI 出现之前，工程团队就已经将开发转变为一系列可重复的操作，这些操作汇集了共享组件和定义好的流程，同时最大限度地减少了重复发明。\n\n这种方法使团队更快、更一致。在 AI 时代，它需要再次转型。\n\nWarp 确信自己已经找到了下一步的方向。\n\n该公司推出了 Factories，作为一个开放的基础设施产品，旨在帮助工程团队构建和运行自己的云软件工厂。在这里，编码代理集群负责工作，而不是局限于开发者笔记本电脑上的单个代理。\n\n简而言之，这是 Warp 尝试将“在云端运行代理”转变为真正的流水线，具有清晰的步骤、可跟踪的真实数据，并且人类仅在关键时刻介入。\n\n如果你使用广告拦截器（如 AdBlock），带有 Warp 链接的文本将不会显示。\n\n开发流水线\n\nWarp Factories 充当一个编排层，用于在整个软件开发生命周期中运行编码代理集群。按照 Warp 自己的说法，这使其成为一个云软件工厂，一个自动化循环，代理从接收请求到交付结果全程处理。\n\n代理负责分诊、编写规格、实现更改、审查工作、验证结果并监控结果，而人类仅在真正需要人工验证的决策点介入。\n\n可以把它想象成汽车装配线。一个工位焊接，另一个喷漆，另一个进行最终检查，车辆在前一个工位签字确认之前不会向前移动。Warp 的版本将同样的逻辑应用于代码。\n\n一个代理对传入的工单进行分诊，如果更改足够复杂，另一个代理起草规格，另一个实现修复，另一个在人工批准合并之前进行审查。\n\nWarp 大力强调“自带”的概念，以解释为什么这需要作为基础设施存在。\n\n团队可以自带托管环境，并且每个代理对话、评估和记忆记录都可以保存在公司控制的基础设施上，而不是 Warp 的。\n\n通过零数据保留选项，数据也可以完全排除在任何训练流程之外。\n\nWarp 的创始人兼 CEO 进一步指出：\n\n“我们的愿景是为你们提供核心组件，以便尽快达到这一目标。在一个交付时间可以说是你最重要的竞争优势的时代，你应该今天就建立并运营一个工厂，而不是六个月后。”\n\n更多功能\n\nFactories 还附带一个仪表板，公司称之为“控制室”，基本上是一个控制室，你可以在其中观看实时和过去的代理运行，检查待处理事项，并在一个地方审查所有自动化。\n\n你也不会被锁定在 Warp 自己的模型或代理上。Factories 支持任何模型，包括开放权重模型，以及任何工具，因此 Claude Code 或 Codex 可以坐在实现的位置上，而不是 Warp 的代理。\n\n所有这些活动都会自动测量，成本、吞吐量和代码质量指标会输入到评估和基准测试工具中，跟踪工厂性能随时间的变化。\n\nFactories 目前不对所有人开放。如果你或你的组织想要试用，则需要通过 Warp Factories 申请访问权限。"
+  },
+  "08e46de5bc201c688f77a621962fd2c6": {
+    "id": "08e46de5bc201c688f77a621962fd2c6",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12927",
+    "title_en": "Distribution Release: FydeOS 23.0",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The FydeOS project has announced the release of FydeOS 23.0, a significant update of the project's ChromeOS-based Linux distribution that aims to bring a Google Chromebook-like experience to standard PCs. This new version upgrades the Android subsystem to Android 13: \"We are delighted to announce the release of....",
+    "pub_date": "",
+    "title_zh": "发行版发布：FydeOS 23.0",
+    "summary_zh": "FydeOS 项目发布了 23.0 版本，这是一个基于 ChromeOS 的 Linux 发行版，旨在为标准 PC 提供类似谷歌 Chromebook 的体验。该版本将底层 Chromium OS 平台从 r144 升级到 r150，并将 Android 子系统升级至 Android 13，同时引入了新的 fyDroid 框架以支持 Android 应用，增强了远程桌面功能，并改进了系统应用。FydeOS 23 注重强化操作系统基础，为未来的应用兼容性、系统维护和企业设备管理提供更坚实的基础。",
+    "fulltext_zh": "发行版发布：FydeOS 23.0\n\nFydeOS 项目已宣布发布 23.0 版本，这是该项目基于 ChromeOS 的 Linux 发行版的一次重大更新，旨在为标准 PC 带来类似谷歌 Chromebook 的体验。此新版本将 Android 子系统升级至 Android 13：\n\n“我们很高兴地宣布发布 FydeOS 23 'Chromatic Cadence'。此版本将底层 Chromium OS 平台从 r144 升级至 r150，并引入了新的 Android 子系统框架、更新的系统应用，以及针对企业设备的增强远程桌面功能。FydeOS 23 专注于强化操作系统的根基。这些变化为未来在应用兼容性、系统维护和企业设备管理方面的改进提供了更坚实的基础。FydeOS 23 将所有版本的 Android 子系统升级至 Android 13，并引入了 fyDroid，这是一个在 FydeOS 上支持 Android 应用的新实现。我们计划将 fyDroid 完全开源。展望未来，我们将继续开发此框架，逐步更新其 Android 版本，并改进应用兼容性、性能和安全性。”\n\n如需完整的更改列表和截图，请参阅相关页面。FydeOS 以独立的 BIN 镜像形式提供，适用于 Intel 或 AMD 处理器；以下是相关文件：\n\nFydeOS_for_PC_iris_v23.0-io.bin.zip\nFydeOS_for_PC_apu_v23.0-io.bin.zip\n\n近期相关新闻和发布：\n\n发行版发布：FydeOS 23.0\n发行版发布：FydeOS 22.0\n发行版发布：FydeOS 21.0\n\nFydeOS 由 Fyde Innovations 开发，是一款轻量级操作系统，包含 Linux 内核、浏览器平台和容器技术驱动。它在使用上与谷歌 ChromeOS 非常相似。FydeOS 支持最新的 Web 应用标准，并且能够运行 Android 和 Linux 应用（通过激活内置的 Android 和 Debian 子系统），提供类似谷歌 Chromebook 的体验。用户可以选择使用谷歌提供的云服务、Fyde Innovations 提供的服务，或本地账户。FydeOS 基于开源的 ChromiumOS，并包含……"
+  },
+  "b5c5416d376297ef430d982dcc677a6d": {
+    "id": "b5c5416d376297ef430d982dcc677a6d",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Intel-Mesa-Nova-Lake-Stable",
+    "title_en": "Intel Mesa Linux Drivers Now Treating Nova Lake S / U / H / HX As Stable",
+    "summary_en": "Intel's open-source Mesa drivers for Iris Gallium3D (OpenGL) and ANV (Vulkan) on Linux are no longer treating next-gen Nova Lake processors with integrated graphics as experimental and off-by-default. With today's Mesa 26.3-devel code, the Intel driver code across Nova Lake's S, U, H, and HX product families are considered stable and enabled by default...",
+    "pub_date": "Thu, 20 Aug 2026 20:44:45 -0400",
+    "title_zh": "Intel Mesa Linux驱动现已将Nova Lake S / U / H / HX视为稳定",
+    "summary_zh": "Intel的开源Mesa驱动（Iris Gallium3D和ANV Vulkan）在Linux上不再将下一代集成显卡处理器视为实验性且默认关闭。随着Mesa 26.3-devel代码的更新，Nova Lake的S、U、H和HX产品系列已被视为稳定并默认启用。Linux内核已不再要求对Intel Nova Lake图形支持进行“force_probe”，Mesa中的相应覆盖也已移除。该补丁还将回溯到Mesa 26.2稳定版系列。",
+    "fulltext_zh": "Intel的开源Mesa驱动（Iris Gallium3D用于OpenGL，ANV用于Vulkan）在Linux上不再将下一代集成显卡处理器视为实验性且默认关闭。随着今天的Mesa 26.3-devel代码，Intel驱动代码中Nova Lake的S、U、H和HX产品系列已被视为稳定并默认启用。\n\nLinux 7.3将Nova Lake Xe3P图形视为稳定并默认启用，Intel Mesa用户空间驱动代码也紧随其后。既然Linux内核不再要求对Intel Nova Lake图形支持进行“force_probe”，Mesa中Intel图形驱动代码的单独强制探测覆盖也已移除。\n\n该补丁在Mesa Git中实现了对Intel Nova Lake S / U / H / HX的升级。该补丁也将回溯到当前的Mesa 26.2稳定版系列。\n\n在Intel Nova Lake处理器未来几个月发布之前，开源Linux驱动支持看起来状态良好。\n\nFramework Laptop 12更新支持Intel Wildcat Lake，10月开始发货\nIntel启用缓冲区压缩，通过DXVK提升游戏性能\nIntel XPU Manager 2.1发布，用于在Windows/Linux上监控Arc Pro显卡\nIntel ANV驱动为DG2/Alchemist GPU启用Vulkan Video AV1编码\nIntel LLM-Scaler准备支持Muse Glimmer及其他LLM和功能\nIntel CPU微码20260811版本修复八个安全问题\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他。\n\nQEMU 11.1发布，带来众多改进\nLinux 7.2发布，I/O更快，AMD和Intel驱动改进\nGNOME 51 Beta发布，包含许多小改进\nRsync 3.5发布，作为“非凡”更新修复33个安全问题\nComma.ai推出PCIe Gen4 x4转USB4扩展坞，采用开源固件\nOmarchy 4.0 Linux发行版发布，桌面Shell现通过Quickshell实现\n将Rust卸载到GPU被证明能够实现高性能并保持内存安全\nGeForce NOW Linux原生应用退出Beta\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "3063f952e00842cdd48c622a278b8f85": {
+    "id": "3063f952e00842cdd48c622a278b8f85",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.3-Networking",
+    "title_en": "Linux 7.3 Network Changes Merged But Developers \"Completely Overwhelmed\" Due To AI/LLMs",
+    "summary_en": "All of the networking subsystem feature updates were merged today for the Linux 7.3 kernel's merge window. There are a lot of wired and wireless networking improvements this cycle but also a ton of bug fixes -- including many not so important fixes spun up by AI/LLM agents. The networking subsystem maintainers admit now they are \"completely overwhelmed\" due to this code churn from the output of AI large language models...",
+    "pub_date": "Thu, 20 Aug 2026 16:05:28 -0400",
+    "title_zh": "Linux 7.3网络变更合并，但开发者因AI/LLM“完全不堪重负”",
+    "summary_zh": "Linux 7.3内核的网络子系统更新已合并，包含大量有线和无线网络改进，但也带来了大量由AI/LLM生成的补丁，导致维护者“完全不堪重负”。维护者Jakub Kicinski表示，AI生成的补丁占净下一版本补丁的三分之一到一半，他们正利用LLM预算（由Meta提供）进行多模型审查以减少幻觉，并计划让LLM承担更多管理工作。此外，本周期网络变更包括UDP隧道中的BIG TCP支持、MPTCP内存压力改进、AMD/Solarflare NIC的CXL支持、Intel iXD驱动初步框架、WiFi MLO增强等。",
+    "fulltext_zh": "Linux 7.3网络变更已合并，但开发者因AI/LLM“完全不堪重负” - Phoronix\n\nLinux 7.3网络变更已合并，但开发者因AI/LLM“完全不堪重负”\n\n2026年8月20日下午4:05（美国东部时间）\n\n所有网络子系统的功能更新已于今日在Linux 7.3内核的合并窗口期间合并。本周期有大量有线和无线网络改进，但也有大量错误修复——包括许多由AI/LLM代理生成的、并非那么重要的修复。网络子系统维护者承认，由于AI大语言模型输出带来的代码变动，他们现在“完全不堪重负”。\n\n在介绍本周期Linux 7.3网络变更之前，维护者Jakub Kicinski指出，由于AI使用量的增加，他们已“完全不堪重负”。正如最近几周/几个月所指出的，他们一直受到补丁的轰炸，这些补丁旨在删除旧网络代码/驱动程序，以减少AI补丁噪音，这些驱动可能被任何运行现代、最新Linux内核的用户所使用。然而，AI/LLM代理并不罢休，网络开发者继续受到影响。不过，他们现在对所有AI活动的回应是……让AI代理和前沿模型在未来承担更多工作。\n\nJakub在Linux 7.3网络拉取请求中评论道：\n\n“快速粗略的计数表明，我们（Paolo和我）合并了非常相似数量的net（632）和net-next（648）补丁。这并不能说明全部情况，因为net-next补丁中有三分之一到一半*看起来*也是AI驱动的低优先级修复、清理和澄清。\n\n我们当然完全不堪重负。一线希望是我们获得了足够的LLM预算和访问权限（感谢Meta！），可以对每个补丁运行多个前沿模型进行审查。这消除了一些幻觉。尽管如此，在审查方面，LLM只能做这么多。可悲的事实是，我们的API（尤其是针对PCIe错误、超时等罕见事件）一直存在竞争条件，现在LLM不让我们忽视这一点。我预计我们下一个版本的方向将是稍微调整审查，但开始将重点转向让LLM处理繁忙工作——管理patchwork、自动化常见流程投诉、编辑提交消息，甚至应用那些已经获得我们信任的人‘Reviewed-by’标签的补丁……”\n\n所以希望他们能够有效地利用AI来抵御AI带来的这种增长。Meta正在提供他们的AI令牌预算。\n\n至于本周期的网络变更，现在UDP隧道中的VXLAN和Geneve驱动支持BIG TCP，改进了多路径TCP（MPTCP）在极端内存压力下的处理，以及其他核心改进。\n\n对于有线网络驱动，AMD/Solarflare NIC有了初步的CXL支持，Intel iXD驱动有了初步框架，AMD Pensando NIC支持固件刷新，以及其他驱动变更。\n\nIntel iXD驱动将用于支持Intel E2100及更高版本IPU和FNIC上的Intel控制平面PIC功能。对于Linux 7.3，正在建立非常基础的Intel iXD驱动基础设施。\n\n在WiFi驱动方面，继续有Multi-Link Operation（MLO）增强，新的mm81x驱动用于Morse Micro Long-Range S1G设备，以及NXPWIFI作为NXP设备的新无线驱动。联发科MT76驱动增加了对MT7928和MT7925 NAN的支持。\n\n关于Linux 7.3的更多网络更新详情，请参阅：\n\nNetworkManager采用AI编码助手政策\nLinux网络持续受到AI补丁轰炸\nLinux无线维护者对AI/LLM生成的垃圾补丁采取强硬立场\nLinux 7.3添加MCTP-Over-USB v1.1支持\nLinux 7.3将支持Realtek RTL8261C和RTL8261D\nRealtek RTL8723B/RTL8723BS试图加入RTW88 Linux驱动\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件生态。"
+  },
+  "5ca9e6759374708167c990650786c2e2": {
+    "id": "5ca9e6759374708167c990650786c2e2",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Rust-1.98-Released",
+    "title_en": "Rust 1.98 Adds Algebraic Floating-Point Methods Akin To \"-ffast-math\"",
+    "summary_en": "Rust 1.98 released today and is headlined the debut of new algebraic floating-point methods...",
+    "pub_date": "Thu, 20 Aug 2026 13:29:25 -0400",
+    "title_zh": "Rust 1.98 新增代数浮点方法，类似“-ffast-math”",
+    "summary_zh": "Rust 1.98 版本发布，引入了针对 f32 和 f64 浮点类型的代数方法（如加法、减法、乘法、除法、取余），允许编译器利用实数代数性质进行优化，类似于其他语言中的 -ffast-math 选项。这些方法可能改变运算顺序以提升性能，但结果不确定且不保证与标准浮点运算一致。该特性源于 Rust 在 x86_64 上简单点积运算比 C++ 慢最多 8 倍的问题。此外，该版本还改进了整数格式化等功能。",
+    "fulltext_zh": "Rust 1.98 新增代数浮点方法，类似“-ffast-math” - Phoronix\nRust 1.98 新增代数浮点方法，类似“-ffast-math”\n发布于 2026 年 8 月 20 日下午 1:29（美国东部时间）。\n\nRust 1.98 今日发布，其亮点是引入了新的代数浮点方法。\n\nRust 1.98 引入了代数浮点方法，类似于在其他语言/编译器中使用“--fast-math”选项。Rust 1.98 的发布公告解释了这些优化的代数方法：\n\n“浮点类型 f32 和 f64 现在拥有用于加法、减法、乘法、除法和取余的“代数”方法。这些方法允许利用实数的代数性质对这些运算进行优化，尽管这些性质在浮点表示的局限性下并不成立。具体的优化集合未作规定，但可能类似于其他语言中 -ffast-math 选项所提供的优化。\n\n例如，浮点加法不满足结合律，因此像 a + b + c + d 这样的和必须按照解析时的左结合顺序计算，即 ((a + b) + c) + d。如果你将同样的和写成一系列 algebraic_add 调用，编译器就可以自由地重新排序，或许可以像 (a + b) + (c + d) 那样同时计算部分和。使用这些代数方法通常还能实现更广泛的循环向量化。\n\n这些方法是非确定性的，因为编译器可以自由选择不同的优化，但它们绝不会导致未定义行为。”\n\n类似于在其他地方使用 -ffast-math，公告还指出：\n\n“由于编译器优化的不可预测性，即使在同一程序运行中，相同的输入也可能产生不同的结果。不安全代码不得依赖返回值的任何属性来保证健全性。然而，实现通常会尽力在性能与结果准确性之间做出合理的权衡。”\n\n这些代数方法的出现源于一个性能问题：在现代 x86_64 CPU 上，由于编译器不重新排序浮点运算以进行更好的向量化，Rust 中简单点积运算的速度比 C++ 慢最多 8 倍。\n\nRust 1.98 还带来了缓冲整数格式化及其他更改，详见公告。\n\nGo 语言 1.27 新增泛型方法、结构体改进及更多 SIMD 支持\nPHP 7.4 至 PHP 8.6 基准测试，PHP 8.6 JIT 性能\nModular 的 Mojo 语言在 Qualcomm 收购后现已开源\n将 Rust 卸载到 GPU 证明能够以内存安全实现高性能\nMold 2.42 为这款高速链接器带来更高性能\nPoCL 7.2-RC1 在 RISC-V 和 x86_64 CPU 上实现官方 OpenCL 3.0 一致性\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他。\n\nQEMU 11.1 发布，带来众多改进\nLinux 7.2 发布，I/O 更快，AMD 和 Intel 驱动改进\nGNOME 51 Beta 发布，包含许多小改进\nRsync 3.5 发布，作为“非凡”更新修复 33 个安全问题\nComma.ai 推出带开源固件的 PCIe Gen4 x4 转 USB4 扩展坞\nOmarchy 4.0 Linux 发行版发布，桌面 Shell 现通过 Quickshell 实现\n将 Rust 卸载到 GPU 证明能够以内存安全实现高性能\nGeForce NOW Linux 原生应用退出测试版\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "2962976a955b4c82d25845d3561d0a73": {
+    "id": "2962976a955b4c82d25845d3561d0a73",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/KMSCON-10.0.2-Released",
+    "title_en": "KMSCON 10.0.2 Brings asciicast Playback Support, Bug Fixes",
+    "summary_en": "KMSCON 10.0.2 debuted today as the latest update to this leading user-space terminal emulator for Linux systems. KMSCON is built around Linux's KMS/DRM interfaces and the most viable alternative to date for in-kernel VTs...",
+    "pub_date": "Thu, 20 Aug 2026 13:19:37 -0400",
+    "title_zh": "KMSCON 10.0.2 带来 asciicast 回放支持及错误修复",
+    "summary_zh": "KMSCON 10.0.2 于今日发布，作为 Linux 系统领先的用户空间终端模拟器的最新更新。该版本新增了 asciicast 回放支持，用于播放 asciicinema 录制的终端会话。此外，还引入了闪烁配置选项、改进了 DRM 模式设置失败后的恢复机制、优化了 8x16 字体、修复了鼠标按钮顺序问题，并包含其他多项错误修复。",
+    "fulltext_zh": "KMSCON 10.0.2 今日发布，作为 Linux 系统领先的用户空间终端模拟器的最新更新。\n\n它基于 Linux 的 KMS/DRM 接口构建，是目前内核虚拟终端（VT）最可行的替代方案。KMSCON 默认用于某些系统，并作为内核 VT 代码的替代品。KMSCON 10.0.2 现在支持 asciicast 回放，用于终端会话。asciicast 是基于 JSON 的文件格式，用于存储 asciicinema 命令行工具录制的终端会话。\n\n除了 KMSCON 的 asciicast 回放支持外，KMSCON 10.0.2 还添加了闪烁配置选项，改进了原子 DRM 模式设置失败后的恢复，优化了 8x16 字体，修复了鼠标按钮顺序问题，并包含其他各种错误修复。\n\nKMSCON 10.0.2 的下载和更多详情可在 Phoronix 上查看。"
+  },
+  "52ea56063ddf7bcc397b4ca3e2d389c6": {
+    "id": "52ea56063ddf7bcc397b4ca3e2d389c6",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/KDE-Btrfs-Snapshots",
+    "title_en": "KDE Software Now Has Stable Btrfs Snapshot Integration With KIO-Snapshot 1.0",
+    "summary_en": "With today's release of KIO-Snapshot, KDE software now has stable integration of Btrfs file-system snapshots...",
+    "pub_date": "Thu, 20 Aug 2026 12:21:31 -0400",
+    "title_zh": "KDE软件现通过KIO-Snapshot 1.0实现稳定的Btrfs快照集成",
+    "summary_zh": "KDE软件通过KIO-Snapshot 1.0实现了对Btrfs文件系统快照的稳定集成。该工具为KIO提供工作器，使用户能够浏览子卷快照及文件的历史版本，并在Dolphin等应用中通过上下文菜单插件访问不同快照版本。此项目由KDE开发者Bharadwaj Raju主导，基于libbtrfsutil并与KDE Frameworks Solid集成。KDE Linux发行版计划很快默认搭载Snapper和KIO-Snapshot，以提供更完善的Btrfs体验。",
+    "fulltext_zh": "KDE软件现通过KIO-Snapshot 1.0实现稳定的Btrfs快照集成 - Phoronix\nKDE软件现通过KIO-Snapshot 1.0实现稳定的Btrfs快照集成\n2026年8月20日，美国东部时间下午12:21。\n随着今天KIO-Snapshot的发布，KDE软件现已实现对Btrfs文件系统快照的稳定集成。\n对于使用KIO的KDE软件，现在有一个KIO工作器，用于浏览子卷的快照，并能够浏览文件的历史版本。此外，作为KIO-Snapshot的一部分，还有一个上下文菜单插件，用于在Dolphin和其他KDE软件中展示不同的快照版本。\nKDE开发者Bharadwaj Raju一直领导着KDE中Btrfs快照集成的工作。今天发布了一篇博客文章，以纪念KIO-Snapshot达到v1.0里程碑，并展示了其功能。KIO-Snapshot与Btrfs的libbtrfsutil接口交互，并与KDE Frameworks的Solid代码集成。\nKDE自有的Linux发行版KDE Linux计划很快搭载Snapper和KIO-Snapshot，以提供出色的Btrfs体验。\nKIO-Snapshot可以从[此处下载]。有关KDE + Btrfs集成工作的更多详细信息，请参阅[相关链接]。\n\nKDE Gear 26.08提供最新的KDE应用体验\nKDE Plasma 6.8将允许微调鼠标/触摸板速度\nKDE、Techpaladin和Kubuntu Focus宣布Bullet-Proof KDE软件计划\nKDE Plasma 6.8改进UI，内置远程桌面服务器\nKGamma2使KDE Plasma Wayland上的伽马调整更简单\nKDE Linux使Java和DOS应用首次运行体验更轻松\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动及其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。您可以通过[相关链接]关注他。\n\nQEMU 11.1发布，带来众多改进\nLinux 7.2发布，I/O更快，AMD和Intel驱动改进\nGNOME 51 Beta发布，包含许多小幅改进\nRsync 3.5发布，作为“非凡”更新修复33个安全问题\nComma.ai推出PCIe Gen4 x4转USB4扩展坞，采用开源固件\nOmarchy 4.0 Linux发行版发布，桌面Shell现通过Quickshell实现\n将Rust卸载到GPU证明可实现高性能并保持内存安全\nGeForce NOW Linux原生应用退出Beta\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "a343bde21514169af4918f6e5accce9a": {
+    "id": "a343bde21514169af4918f6e5accce9a",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/linux-mints-next-release-will-fully-support-wayland-in-cinnamon/",
+    "title_en": "Linux Mint’s Next Release Will Fully Support Wayland in Cinnamon",
+    "summary_en": "Get ready for Linux Mint's next release, which will embrace Wayland in Cinnamon, offering enhanced functionality and a modernized user interface.\nThe post Linux Mint’s Next Release Will Fully Support Wayland in Cinnamon appeared first on Linux Today.",
+    "pub_date": "Thu, 20 Aug 2026 16:16:43 +0000",
+    "title_zh": "Linux Mint 下一个版本将在 Cinnamon 中完全支持 Wayland",
+    "summary_zh": "Linux Mint 即将推出的新版本将全面支持 Wayland，并在 Cinnamon 桌面环境中实现这一功能，提供增强的功能和现代化的用户界面。这一更新标志着 Linux Mint 在显示服务器技术上的重要进步，旨在为用户带来更流畅、更安全的图形体验。",
+    "fulltext_zh": "准备好迎接 Linux Mint 的下一个版本吧，它将在 Cinnamon 中拥抱 Wayland，提供增强的功能和现代化的用户界面。\n\n该文章最初发表于 Linux Today。"
+  },
+  "fff4e818ea7954e2df8057fea029b847": {
+    "id": "fff4e818ea7954e2df8057fea029b847",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/netgear-orbi-770-series-tri-band-wifi-7-mesh-system-review-rbe773-3-pack/",
+    "title_en": "NETGEAR Orbi 770 Series Tri-Band WiFi 7 Mesh System Review – RBE773 3-Pack",
+    "summary_en": "Discover the NETGEAR Orbi 770 Series Tri-Band WiFi 7 Mesh System in our detailed review. Learn about its features, performance, and why it's a top choice for seamless connectivity.\nThe post NETGEAR Orbi 770 Series Tri-Band WiFi 7 Mesh System Review – RBE773 3-Pack appeared first on Linux Today.",
+    "pub_date": "Thu, 20 Aug 2026 16:12:43 +0000",
+    "title_zh": "NETGEAR Orbi 770系列三频WiFi 7网状系统评测 – RBE773 三件装",
+    "summary_zh": "本文详细评测了NETGEAR Orbi 770系列三频WiFi 7网状系统（RBE773三件装）。文章介绍了该系统的核心特性、性能表现，并解释了为何它成为无缝连接体验的顶级选择。评测涵盖其设计、覆盖范围、速度以及易用性等方面，旨在帮助用户了解这款高端网状WiFi系统的实际价值。",
+    "fulltext_zh": "在我们的详细评测中，探索NETGEAR Orbi 770系列三频WiFi 7网状系统。了解其特性、性能，以及为何它是无缝连接的顶级选择。\n\n该文章首次发表于Linux Today，标题为“NETGEAR Orbi 770 Series Tri-Band WiFi 7 Mesh System Review – RBE773 3-Pack”。"
+  },
+  "8cecde9d1f5a8a7bc74d44fc83521ac3": {
+    "id": "8cecde9d1f5a8a7bc74d44fc83521ac3",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/deepin-25-2-released-with-smarter-file-search-and-desktop-improvements/",
+    "title_en": "Deepin 25.2 Released with Smarter File Search and Desktop Improvements",
+    "summary_en": "Discover the latest features in Deepin 25.2, including smarter file search and enhanced desktop improvements for a more efficient user experience.\nThe post Deepin 25.2 Released with Smarter File Search and Desktop Improvements appeared first on Linux Today.",
+    "pub_date": "Thu, 20 Aug 2026 16:10:50 +0000",
+    "title_zh": "Deepin 25.2 发布，带来更智能的文件搜索与桌面改进",
+    "summary_zh": "Deepin 25.2 正式发布，本次更新聚焦于提升用户体验，引入了更智能的文件搜索功能，并对桌面环境进行了多项增强，旨在提供更高效、流畅的操作体验。该版本在文件管理、系统交互等方面进行了优化，进一步巩固了 Deepin 作为易用型 Linux 发行版的定位。",
+    "fulltext_zh": "探索 Deepin 25.2 的最新功能，包括更智能的文件搜索和增强的桌面改进，以带来更高效的用户体验。\n\n该文章首次发布于 Linux Today。"
+  },
+  "96833247a48cfea1c7461cd66866fd3e": {
+    "id": "96833247a48cfea1c7461cd66866fd3e",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/try-uutils-coreutils-rust-alternative-to-gnu-coreutils/",
+    "title_en": "Try uutils-coreutils: Rust Alternative to GNU Coreutils",
+    "summary_en": "Discover uutils-coreutils, a Rust-based alternative to GNU Coreutils, offering enhanced performance and safety for your command-line needs.\nThe post Try uutils-coreutils: Rust Alternative to GNU Coreutils appeared first on Linux Today.",
+    "pub_date": "Thu, 20 Aug 2026 16:00:57 +0000",
+    "title_zh": "尝试uutils-coreutils：GNU Coreutils的Rust替代品",
+    "summary_zh": "uutils-coreutils是一个用Rust编写的GNU Coreutils替代品，旨在提供更高的性能和安全性。它兼容大多数常用命令，同时利用Rust的内存安全特性减少漏洞风险。本文介绍了该项目的优势、安装方法及基本使用，适合希望提升命令行工具安全性和效率的Linux用户。",
+    "fulltext_zh": "探索uutils-coreutils，一个基于Rust的GNU Coreutils替代品，为您的命令行需求提供增强的性能和安全性。\n\n这篇文章《尝试uutils-coreutils：GNU Coreutils的Rust替代品》首次出现在Linux Today上。"
+  },
+  "6485550fd6025e71d5910c27382cb5ab": {
+    "id": "6485550fd6025e71d5910c27382cb5ab",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/proton-11-0-released-with-big-compatibility-boost-for-linux-gaming/",
+    "title_en": "Proton 11.0 Released with Big Compatibility Boost for Linux Gaming",
+    "summary_en": "Experience the power of Proton 11.0, now with improved compatibility for Linux gaming. Uncover the latest updates and features designed for gamers.\nThe post Proton 11.0 Released with Big Compatibility Boost for Linux Gaming appeared first on Linux Today.",
+    "pub_date": "Thu, 20 Aug 2026 15:56:22 +0000",
+    "title_zh": "Proton 11.0 发布，大幅提升 Linux 游戏兼容性",
+    "summary_zh": "Proton 11.0 正式发布，为 Linux 游戏带来显著的兼容性提升。该版本针对游戏玩家进行了优化，引入了多项更新和新功能，旨在提供更流畅、更稳定的游戏体验。此次更新进一步巩固了 Proton 作为 Linux 平台运行 Windows 游戏的重要工具地位。",
+    "fulltext_zh": "体验 Proton 11.0 的强大功能，现在对 Linux 游戏的兼容性得到了改进。了解专为游戏玩家设计的最新更新和功能。\n\n此文章首发于 Linux Today。"
   }
 }

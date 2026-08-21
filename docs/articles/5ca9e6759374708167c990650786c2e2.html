@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Xen项目认真对待安全性，因此成立了委员会 — Linux 中文速报</title>
+<title>Rust 1.98 新增代数浮点方法，类似“-ffast-math” — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Xen项目认真对待安全性，因此成立了委员会</h1>
+  <h1>Rust 1.98 新增代数浮点方法，类似“-ffast-math”</h1>
 
-  <div class="article-summary">Xen项目宣布成立安全委员会，旨在帮助基于Xen构建产品的公司获得安全认证。创始成员AMD、EPAM和Renesas已投入大量工作，并新增了Premier Plus会员级别。该委员会将提供安全文档和测试证据，减少重复工作，降低成本，加速认证流程。Xen本身的开发流程不变，委员会作为并行治理层运行。</div>
+  <div class="article-summary">Rust 1.98 版本发布，引入了针对 f32 和 f64 浮点类型的代数方法（如加法、减法、乘法、除法、取余），允许编译器利用实数代数性质进行优化，类似于其他语言中的 -ffast-math 选项。这些方法可能改变运算顺序以提升性能，但结果不确定且不保证与标准浮点运算一致。该特性源于 Rust 在 x86_64 上简单点积运算比 C++ 慢最多 8 倍的问题。此外，该版本还改进了整数格式化等功能。</div>
 
-  <div class="article-body"><p>Xen项目认真对待安全性，因此成立了委员会</p><p>Xen项目认真对待安全性，因此成立了委员会</p><p>创始成员AMD、EPAM和Renesas已经奠定了基础，并随之推出了新的Premier Plus会员级别。</p><p>Xen是一个运行在各种硬件上的虚拟机监控器，其崩溃可能带来巨大后果。它部署在汽车、工业自动化、机器人和航空电子等领域。这些都是安全关键领域，认证至关重要。</p><p>到目前为止，Xen一直处于良好的发展轨道上，采用率不断提高，并持续增强以保持其对企业用途的相关性。但它缺乏的是一种结构化的协作方式，来帮助基于其构建的公司真正获得此类工作的认证。</p><p>Xen安全委员会是一个负责构建安全文档和测试证据的团体，成员公司可以依赖这些资源，而不必从头开始。</p><p>该委员会的工作涵盖软件安全需求、架构规范、安全相关工程、DFMEA分析、测试框架、工具、代码覆盖率和流程文档。</p><p>创始贡献者AMD、EPAM和Renesas被认可为上述工作付出了大部分努力，形成了该倡议的早期基础。</p><p>其目的是阻止每家公司独自解决相同的问题。共享这一基础应能降低成本、避免重复工作，并让任何基于Xen构建的产品更快通过认证。</p><p>Xen本身的构建方式不会改变。源代码、许可和现有的开放贡献与审查流程保持不变。该委员会作为并行治理层运行，而非替代现有维护者的工作方式。</p><p>不过，加入委员会并非完全开放。组织需要注册合适的会员级别。详情如下。👇</p><p>招募新成员</p><p>Xen项目的会员制度与大多数Linux基金会项目类似。它资助共享基础设施、测试环境、活动和协调，而日常技术决策则通过开放贡献由维护者掌握。</p><p>付费加入并不能购买对代码库的影响力。</p><p>AMD、ARM、AWS、Boeing、EPAM、Ford、Honda、Renesas、Vates和XenServer均被列为Premier会员。这些代表了芯片制造商、云提供商、汽车、航空航天以及其他几个行业。</p><p>新的会员级别“Premier Plus”位于现有级别之上，赋予会员在Xen咨询委员会和Xen安全委员会中的投票代表权，对优先级和路线图的制定有发言权，并可访问委员会管理的安全工件。</p><p>这样，成员无需在内部生成所有需求和测试，而是可以将委员会现有的工件交给自己的安全评估员进行审计和评估。</p><p>就此话题，Linux基金会可靠嵌入式系统副总裁Kate Stewart表示：</p><p>“具有安全考虑的系统需要可信的虚拟机监控器，为Zephyr和Linux等其他开源组件提供基础，以支持混合关键性嵌入式应用。Zephyr和Xen项目在过去几年中一直在交流最佳实践，作为实现开源组件安全认证的途径。我们欢迎Xen安全倡议，以加速Xen获得正式认证的进程。”</p><p>Proxmox虚拟环境正式支持ARM64</p><p>Proxmox虚拟环境正式支持ARM64，但你的树莓派尚不支持</p><p>该版本由Debian 13.5和Linux 7.0驱动，完全支持NVIDIA Grace和Vera系统。</p><p>喜欢这次更新吗？支持独立的Linux新闻</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热爱开源软件、定制PC组装、赛车运动并探索这个世界无限可能的极客。</p><p>Ubuntu正在成长</p></div>
+  <div class="article-body"><p>Rust 1.98 新增代数浮点方法，类似“-ffast-math” - Phoronix</p><p>Rust 1.98 新增代数浮点方法，类似“-ffast-math”</p><p>发布于 2026 年 8 月 20 日下午 1:29（美国东部时间）。</p><p>Rust 1.98 今日发布，其亮点是引入了新的代数浮点方法。</p><p>Rust 1.98 引入了代数浮点方法，类似于在其他语言/编译器中使用“--fast-math”选项。Rust 1.98 的发布公告解释了这些优化的代数方法：</p><p>“浮点类型 f32 和 f64 现在拥有用于加法、减法、乘法、除法和取余的“代数”方法。这些方法允许利用实数的代数性质对这些运算进行优化，尽管这些性质在浮点表示的局限性下并不成立。具体的优化集合未作规定，但可能类似于其他语言中 -ffast-math 选项所提供的优化。</p><p>例如，浮点加法不满足结合律，因此像 a + b + c + d 这样的和必须按照解析时的左结合顺序计算，即 ((a + b) + c) + d。如果你将同样的和写成一系列 algebraic_add 调用，编译器就可以自由地重新排序，或许可以像 (a + b) + (c + d) 那样同时计算部分和。使用这些代数方法通常还能实现更广泛的循环向量化。</p><p>这些方法是非确定性的，因为编译器可以自由选择不同的优化，但它们绝不会导致未定义行为。”</p><p>类似于在其他地方使用 -ffast-math，公告还指出：</p><p>“由于编译器优化的不可预测性，即使在同一程序运行中，相同的输入也可能产生不同的结果。不安全代码不得依赖返回值的任何属性来保证健全性。然而，实现通常会尽力在性能与结果准确性之间做出合理的权衡。”</p><p>这些代数方法的出现源于一个性能问题：在现代 x86_64 CPU 上，由于编译器不重新排序浮点运算以进行更好的向量化，Rust 中简单点积运算的速度比 C++ 慢最多 8 倍。</p><p>Rust 1.98 还带来了缓冲整数格式化及其他更改，详见公告。</p><p>Go 语言 1.27 新增泛型方法、结构体改进及更多 SIMD 支持</p><p>PHP 7.4 至 PHP 8.6 基准测试，PHP 8.6 JIT 性能</p><p>Modular 的 Mojo 语言在 Qualcomm 收购后现已开源</p><p>将 Rust 卸载到 GPU 证明能够以内存安全实现高性能</p><p>Mold 2.42 为这款高速链接器带来更高性能</p><p>PoCL 7.2-RC1 在 RISC-V 和 x86_64 CPU 上实现官方 OpenCL 3.0 一致性</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他。</p><p>QEMU 11.1 发布，带来众多改进</p><p>Linux 7.2 发布，I/O 更快，AMD 和 Intel 驱动改进</p><p>GNOME 51 Beta 发布，包含许多小改进</p><p>Rsync 3.5 发布，作为“非凡”更新修复 33 个安全问题</p><p>Comma.ai 推出带开源固件的 PCIe Gen4 x4 转 USB4 扩展坞</p><p>Omarchy 4.0 Linux 发行版发布，桌面 Shell 现通过 Quickshell 实现</p><p>将 Rust 卸载到 GPU 证明能够以内存安全实现高性能</p><p>GeForce NOW Linux 原生应用退出测试版</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/xen-project-safety-committee/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Rust-1.98-Released" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
