@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PINE64暂停Linux硬件产品线，AI泡沫是罪魁祸首 — Linux 中文速报</title>
+<title>AMD发布大规模补丁系列，在Linux内核中启用UALink — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>PINE64暂停Linux硬件产品线，AI泡沫是罪魁祸首</h1>
+  <h1>AMD发布大规模补丁系列，在Linux内核中启用UALink</h1>
 
-  <div class="article-summary">PINE64宣布暂停其Linux硬件产品线，原因是DRAM和eMMC芯片短缺，预计2027年中之前无法恢复。该公司表示，现有库存将在三个月内售罄，之后不再推出新品或补货。不过，其微控制器产品线（如PineTime）不受影响，将继续正常发货。PINE64将短缺归因于AI数据中心对内存芯片的抢购，导致全球供应紧张。其他Linux硬件项目如PineNote也因存储芯片价格高企而停滞。这一局面引发了对小型Linux硬件项目生存空间的担忧。</div>
+  <div class="article-summary">AMD工程师向Linux内核邮件列表提交了两个补丁系列，旨在为AMDGPU驱动引入UALink（超加速器链接）支持。UALink是一种开放标准的高速网络协议，用于连接数据中心内的GPU和AI加速器，支持单个域内最多1024个加速器。首个补丁系列约7000行代码，添加了核心基础设施和AMDGPU驱动集成，支持GPU间直接内存访问。第二个补丁系列包含三个补丁，暴露了新的IOCTL接口和文档。这些补丁展示了AMD在Linux内核中实现UALink的努力，有望提升AI工作负载的性能。</div>
 
-  <div class="article-body"><p>PINE64暂停Linux硬件产品线，AI泡沫是罪魁祸首</p><p>PINE64暂停Linux硬件产品线，AI泡沫是罪魁祸首</p><p>他们将其归咎于DRAM和eMMC芯片短缺，预计2027年中之前不会有任何恢复。</p><p>这家开放硬件制造商最近在其Mastodon账户上发布了这一消息，如果你正期待购买新的Linux驱动的设备，这可不是什么好消息。PINE64表示，其Linux硬件生产线目前处于空置状态，在组件成本居高不下的情况下，没有新的生产计划。</p><p>2027年中之后的组件价格将决定后续计划，而在此之前他们不做任何承诺。他们预计现有库存将在三个月内售罄。</p><p>一旦库存售罄，将不再有新品发布或补货来覆盖现有库存。</p><p>不过，并非所有产品都受影响。PINE64的微控制器产品线（即PineTime系列）将继续正常发货，因为它们不依赖相同的存储芯片。</p><p>在公告的最后，他们更新了即将推出的PineTime Pro的状态。目前，演示固件已具备显示屏、触摸、运动、GPS、按键、心率传感器（仅芯片ID）、电池充电器、电机、麦克风和扬声器的基本驱动程序。不过，在试产批次开始生产之前，仍需解决一些问题。</p><p>以上就是本次更新的全部内容。总的来说，对Linux设备而言情况有些黯淡，但与此同时，PineStore仍然拥有强大的MCU驱动设备产品线，并将继续推出更多令人兴奋的设备。</p><p>PINE64在公告中从未提及“AI”一词，而是将重点放在DRAM/eMMC短缺上。但你需要进一步探究短缺的真正根源。</p><p>内存价格持续上涨，其中AI相关需求受到的冲击最为严重。运营AI数据中心的企业已经锁定了全球内存供应，直至明年，导致其他买家只能争夺剩余产能。</p><p>内存行业的高管们也不乐观。SK海力士CEO最近表示，最糟糕的时刻还在后面，预计未来数年供应将持续落后于需求。</p><p>PINE64并非唯一受此价格飙升影响的Linux硬件供应商。PineNote，一款基于Manjaro的Linux优先手持设备，自今年早些时候起就因同样原因被搁置。该项目已开发两年，至今仍无发布日期，原因就是DDR5和SSD价格居高不下。</p><p>我相信这些并非唯一受影响的项目；那些仍处于众筹或概念阶段的小型项目肯定也面临同样的问题。</p><p>让我担心的是，AI泡沫终将破裂，但小型Linux项目现在正被扼杀。如果这些组件价格持续如此离谱，我们将失去仅存的少数独立硬件选择。</p><p>Omarchy押注AI代理，而Linux世界保持谨慎</p><p>Omarchy押注AI代理，而Linux世界保持谨慎</p><p>当一些开源项目将AI拒之门外时，Omarchy即将发布的v4版本将AI视为系统的一部分。</p><p>喜欢这次更新吗？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。请帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读，并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无需承诺</p><p>一个热爱开源软件、定制PC组装、赛车运动并探索世界无限可能的极客。</p><p>Warp推出工厂，让工程团队构建自己的云软件工厂</p><p>Murena刚刚让Fairphone（第6代）变得更好！</p><p>Xen项目认真对待安全性，因此成立了委员会</p><p>Ubuntu在Windows上的增长比在Linux上更快</p><p>Linux 7.2在一年多的工作后带来了缓存感知调度</p><p>成为更好的Linux用户</p><p>通过FOSS每周通讯，你可以学习有用的Linux技巧、发现应用程序、探索新发行版，并随时了解最新动态</p></div>
+  <div class="article-body"><p>AMD发布大规模补丁系列，在Linux内核中启用UALink - Phoronix</p><p>AMD发布大规模补丁系列，在Linux内核中启用UALink</p><p>2026年8月21日下午4:07 EDT。</p><p>无论是巧合还是有意为之，AMD工程师倾向于在周五下午为开源/Linux领域发布有趣的特性补丁。几分钟前，AMDGPU维护者Alex Deucher向内核邮件列表发送了两个补丁系列，用于引入超加速器链接（UALink）。</p><p>UALink是一种开放标准的高速网络协议，用于连接数据中心内scale-up pod中的GPU和其他AI加速器。UALink旨在支持在单个域内链接多达1024个加速器。</p><p>发送的第一个补丁系列包含约7000行代码，添加了UALink的核心基础设施和AMDGPU内核图形驱动集成。</p><p>“pod中连接的GPU可以通过UALink直接访问另一GPU上的[远程]内存。与RMDA不同，这里不涉及复制；它是通过结构直接进行加载/存储。只有内存被导出且导入者已获授权，远程GPU才能访问共享内存。要共享内存，它必须是节点间共享的统一物理地址空间的一部分。该地址空间称为NPA（网络物理地址）空间。该地址空间在GPU之间划分，每个GPU拥有自己的地址空间段，用于导出其内存。每个GPU为其NPA空间维护一组专用的页表，类似于GPUVM。</p><p>导出的内存不会被固定。导出者可能需要移动内存或使其对导入者不可用。这通过导出者上的远程TLB失效（在TTM驱逐或MMU通知器的情况下）以及导入者上的远程[存在性]检查（带重试）来处理。</p><p>要访问远程内存，驱动程序可以将NPA地址映射到其每进程GPUVM页表中，就像本地内存一样。应用程序使用不透明的句柄来表示远程内存。pod中的GPU直接相互通信，在导入者和导出者之间交换NPA地址。如果节点离线或重置，其对等方将清理该事件发生时丢失的任何剩余[引用]。”</p><p>第二个补丁系列仅包含三个补丁，暴露了新的IOCTL接口和关于UALink内存导入/导出集成的文档。</p><p>对于读者来说，最可能感兴趣的部分是看到AMD为其AMDGPU驱动公开的UALink Linux内核集成工作终于浮出水面。</p><p>Linux 7.3为AMD Solarflare NIC准备CXL Type-2驱动支持</p><p>Linux 7.3中新的AMD低功耗核心和统一Intel/AMD CPU核心类型处理</p><p>AMD正在为QEMU/VM中的ROCm计算改进开发新的后端</p><p>AMD周五晚上发布大规模109补丁系列，用于GFX 12.1 RAS支持</p><p>AMD GAIA 0.23提供从终端安装/运行AI代理的能力</p><p>FastFlowLM 1.0发布，现为AMD ROCm伞形项目的一部分</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动和其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>Linux 7.2发布，具有更快的I/O、新的AMD和Intel驱动改进</p><p>GNOME 51 Beta发布，包含许多小改进</p><p>Rsync 3.5作为“非凡”更新发布，修复33个安全问题</p><p>Comma.ai推出PCIe Gen4 x4到USB4坞站，带开源固件</p><p>Omarchy 4.0 Linux发行版发布，桌面Shell现通过Quickshell实现</p><p>X.Org Server 26.1 RC1为五年来的首个功能版本做准备</p><p>Modular的Mojo语言在Qualcomm收购后现开源</p><p>两个非常令人兴奋的内存管理优化进入Linux</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/pine64-kills-off-linux-hardware/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/UALink-Series-2-Linux" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

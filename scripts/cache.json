@@ -7819,5 +7819,137 @@
     "title_zh": "Proton 11.0 发布，大幅提升 Linux 游戏兼容性",
     "summary_zh": "Proton 11.0 正式发布，为 Linux 游戏带来显著的兼容性提升。该版本针对游戏玩家进行了优化，引入了多项更新和新功能，旨在提供更流畅、更稳定的游戏体验。此次更新进一步巩固了 Proton 作为 Linux 平台运行 Windows 游戏的重要工具地位。",
     "fulltext_zh": "体验 Proton 11.0 的强大功能，现在对 Linux 游戏的兼容性得到了改进。了解专为游戏玩家设计的最新更新和功能。\n\n此文章首发于 Linux Today。"
+  },
+  "59226739b59bdbb06cfcc52b0b4fbbdf": {
+    "id": "59226739b59bdbb06cfcc52b0b4fbbdf",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/canonical-c-to-rust-automation/",
+    "title_en": "Canonical is Funding a PhD to Automate C to Rust Translation for Ubuntu",
+    "summary_en": "The three-year project aims to translate hundreds of thousands of lines of C into Rust.",
+    "pub_date": "Fri, 21 Aug 2026 08:28:11 GMT",
+    "title_zh": "Canonical资助博士项目，实现Ubuntu中C到Rust的自动翻译",
+    "summary_zh": "Canonical宣布资助一项为期三年的博士项目，旨在开发一个能够自动将大规模C语言代码库翻译成安全、行为正确且可维护的Rust代码的系统。该项目由布里斯托大学编程语言研究组负责，并得到英国研究与创新机构的配套资金支持。项目将分阶段解决代码拆分、翻译、形式化等价性检查和修复等问题，并以Ubuntu中实际运行的安全关键组件作为测试案例。尽管项目成果不会立即用于生产，但若成功，将有望提升Ubuntu系统的安全性和可靠性。",
+    "fulltext_zh": "Canonical资助博士项目，实现Ubuntu中C到Rust的自动翻译\n\nCanonical已承诺资助一项为期三年的博士项目，该项目专注于构建一个能够自动将大型代码库翻译成Rust的系统。他们并非孤军奋战；英国研究与创新机构也为该项目提供了配套资金。该项目将在布里斯托大学编程语言研究组进行，旨在构建一个全面的平台，将包含数十万行代码的仓库翻译成安全、行为正确且可维护的Rust代码。\n\n该工作将由一名学生承担，并得到多位导师的支持。\n\n从C自动转换到Rust意味着要解决几个独立的问题，该系统将依次处理这些问题。首先，它必须将庞大的代码库分解成足够小的片段，同时不丢失这些片段在代码中其他地方的依赖关系。只有在这之后，实际的翻译才会发生，由已经接受过真实C到Rust转换训练的模型处理，目标是编写出看起来像Rust开发者主动编写的代码，而不是用Rust语法包装的C代码。\n\n这是比较容易的一半。更困难的任务是证明翻译后的代码确实与原代码行为一致，这正是形式化等价性检查发挥作用的地方。当某些内容不一致时，一个单独的修复步骤会尝试定位翻译出错的确切位置，并使用符号程序修复技术进行修补，而不是重新开始整个代码块。\n\n语言模型只处理工作的一部分。无论它生成什么，都必须通过验证，才能让人相信它保持了原始行为。\n\n目标测试用例已经在真实的Ubuntu系统上投入生产，处理大多数用户看不到但经常依赖的访问控制和沙箱功能。这正是它们被选中的原因，不是因为它们简单，而是因为Canonical想要工业级的测试用例，以便更好地了解该方法在真实生产条件下的表现。测试一个实时组件会带来多年实际使用中积累的所有东西，这使得在不破坏某些东西的情况下翻译它变得更加困难，而这正是重点。\n\nJon还指出一个重要警告，即该项目生成的任何内容都不会很快进入任何工具。他说，重点是Canonical“对软件有既得利益，并渴望看到结果”，而不是重写即将到来。\n\n如果该方法能通过这一测试，那么对于自动化翻译是否可以被信任用于保护系统的代码，而不仅仅是那些易于测试的代码，我们将有一个真正的答案。因此，Ubuntu用户，从普通桌面安装到企业部署，最终可能会看到安全关键组件中的错误更少，而Canonical不必冒险对敏感代码进行耗时的手动重写。\n\n喜欢这次更新吗？支持独立的Linux新闻报道。\n\nIt's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。\n\n一次付费，永久享受\n\n任何金额，无需承诺\n\n一个热爱开源软件、定制PC构建、赛车运动并探索这个世界无限可能的极客。\n\nPINE64停止其Linux硬件产品线，AI泡沫是罪魁祸首\n\nWarp推出工厂，让工程团队构建自己的云软件工厂\n\nMurena让Fairphone（第6代）变得更好！\n\nXen项目认真对待安全性，因此成立了委员会\n\nUbuntu在Windows上的增长速度超过在Linux上的增长速度\n\n成为更好的Linux用户\n\n通过FOSS每周通讯，你可以在Linux上学习有用的技巧。"
+  },
+  "170268d88a13865b3ccf4c5abdd3e448": {
+    "id": "170268d88a13865b3ccf4c5abdd3e448",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12928",
+    "title_en": "Distribution Release: DragonOS Resolute_R1",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The DragonOS project has announced the release of a major update to DragonOS, a specialist Ubuntu-based Linux distribution designed for those interested in software-defined radio (SDR). It ships with a suite of some of the most powerful and accessible open-source SDR software. The latest version, labelled as \"Resolute_R1\"....",
+    "pub_date": "",
+    "title_zh": "发行版发布：DragonOS Resolute_R1",
+    "summary_zh": "DragonOS项目发布了其重大更新版本Resolute_R1，这是一个基于Ubuntu的专为软件定义无线电（SDR）爱好者设计的Linux发行版。该版本基于长期支持的Lubuntu 26.04，采用Linux内核7.0，支持多种SDR硬件（如USRP、HackRF One、LimeSDR等）和丰富的SDR软件（如SDRAngel、CyberEther、SatDump等）。此版本从头构建，旨在提供更稳定和全面的SDR体验。",
+    "fulltext_zh": "发行版发布：DragonOS Resolute_R1 (DistroWatch.com新闻)\n\nDragonOS项目宣布发布其专业发行版的一个重大更新，该发行版是基于Ubuntu的Linux发行版，专为对软件定义无线电（SDR）感兴趣的用户设计。它预装了一套功能强大且易于使用的开源SDR软件。最新版本名为“Resolute_R1”，基于长期支持的Lubuntu 26.04：\n\n“DragonOS Resolute_R1（2026年8月26日）——基于Ubuntu 26.04的全新构建，采用Linux内核7.0。支持的SDR硬件：USRP/UHD 4.9（B200、B210、B205mini、X3xx、N3xx、E3xx、AntSDR、LibreSDR）；BladeRF（x40、x115、2.0 micro）；HackRF One；LimeSDR（USB、Mini、XTRX）；RTL-SDR；Airspy（R2、Mini、HF+）；SDRplay（RSP系列）；ADALM-Pluto；HydraSDR（RFOne）；Fobos SDR；SDDC（RX888、RX666、BBRF103）；Mirics（SoapyMiri）；Red Pitaya；SoapyRemote（网络SDR）；VITA 49/VRT（基于UDP的网络IQ）。SDR应用程序：SDRAngel 7.27.1；CyberEther 1.9.1（基于GPU加速的节点式SDR/DSP可视化；支持Vulkan，若存在CUDA则自动启用）；SatDump 2.0.0-alpha；SDRPP 1.3.0；SDRconnect 0+git（SDRplay跨平台SDR应用+无头WebSocket-API服务器，默认关闭）；SDRTrunk 0+git；GQRX-SDR 2.17.7；SigDigger 0.3.0....”\n\n完整的包含软件列表可在SourceForge上查看。\n\nDragonOS_Resolute_R1.iso\n\n最近相关新闻和发布：\n发行版发布：DragonOS Resolute_R1\n更多DragonOS新闻...\n\nDragonOS是一个基于Lubuntu的桌面Linux发行版，专注于软件定义无线电（SDR）。它提供了一套预装的功能强大且易于使用的开源SDR软件。DragonOS已验证支持多种廉价且功能强大的SDR硬件，包括RTL-SDR、HackRF One、LimeSDR、BladeRF等。\n\nhttps://sourceforge.net/projects/dragonos-focal/\nhttps://sourceforge.net/projects/dragonos-focal/support\n\n替代用户论坛\nhttps://sourceforge.net/p/dragonos-focal/wiki/\nhttps://sourceforge.net/projects/dragonos-focal/files/\n\nDistroWatch种子存档\nhttps://sourceforge.net/p/dragonos-focal/tickets/\n\n捐赠、购买或试用地点\n\nProtech是一个专业的、基于Ubuntu的live和安装CD，主要设计用于..."
+  },
+  "5b124deec9e9bc3e709ed0ff67814148": {
+    "id": "5b124deec9e9bc3e709ed0ff67814148",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/OpenZFS-2.4.4-Released",
+    "title_en": "OpenZFS 2.4.4 Released With Linux 7.2 Support, Dozens Of Fixes",
+    "summary_en": "OpenZFS 2.4.4 is out today as the newest stable point release for this ZFS file-system implementation for Linux and FreeBSD systems...",
+    "pub_date": "Fri, 21 Aug 2026 20:40:33 -0400",
+    "title_zh": "OpenZFS 2.4.4 发布，支持 Linux 7.2，包含数十项修复",
+    "summary_zh": "OpenZFS 2.4.4 作为最新的稳定点版本发布，主要新增了对 Linux 7.2 内核的支持，并保持对 Linux 4.18 及 FreeBSD 13.3+ 的兼容性。该版本还包含数十项错误修复，包括更新测试用例、安全策略改进、使 systemd-udev-settle 在导入单元中变为可选，以及其他内核兼容性修复。此外，OpenZFS 2.4.2 和 2.4.3 分支也发布了更新，回移植了多项修复。",
+    "fulltext_zh": "OpenZFS 2.4.4 发布，支持 Linux 7.2，包含数十项修复 - Phoronix\n\nOpenZFS 2.4.4 发布，支持 Linux 7.2，包含数十项修复\n\n2026年8月21日，美国东部时间晚上8:40。\n\nOpenZFS 2.4.4 今日发布，这是面向 Linux 和 FreeBSD 系统的 ZFS 文件系统实现的最新稳定点版本。\n\nOpenZFS 2.4.4 版本最重要的变化是现已支持最新的稳定内核版本。所有必要的更改均已到位，使得树外 OpenZFS 文件系统能够与上游 Linux 7.2 内核状态良好兼容。同时保持了对 Linux 4.18 及更早版本的回溯兼容性，当然也支持 FreeBSD 13.3 及以上版本。\n\nOpenZFS 2.4.4 还带来了数十项错误修复，包括更新的测试用例、各种安全策略改进、使 systemd-udev-settle 在导入单元中变为可选、各种其他 Linux 内核兼容性修复，以及广泛的其他修复。\n\n有关 OpenZFS 2.4.4 版本的下载和更多详情，请访问 [链接]。除了 OpenZFS 2.4.4，今天还发布了 [其他版本]，将各种错误修复回溯移植到了前两个稳定分支。\n\nFSCRYPT 在 Linux 7.3 中进行了清理，为 Btrfs 加密等更多功能打开了大门\nEXT4 为 Linux 7.3 准备了更多性能改进\nBtrfs 为 Linux 7.3 准备了更多性能改进：部分提升约 3 倍至 5 倍\nIOmap 对 Linux 7.3 的改进进一步提升了 EXT4 和 XFS 的性能\nLinux 7.3 纠正了 FAT 文件系统驱动程序对过长文件名的错误行为\nXFS 在 Linux 7.3 中引入了 FALLOC_FL_WRITE_ZEROES 以提高效率\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动程序和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过 [链接] 关注他。\n\nLinux 7.2 发布，带来更快的 I/O、新的 AMD 和 Intel 驱动改进\nGNOME 51 Beta 发布，包含许多小幅改进\nRsync 3.5 作为“非凡”更新发布，修复了 33 个安全问题\nComma.ai 推出 PCIe Gen4 x4 转 USB4 坞站，采用开源固件\nOmarchy 4.0 Linux 发行版发布，桌面 Shell 现通过 Quickshell 实现\nX.Org Server 26.1 RC1 为五年来的首个功能版本做准备\nModular 的 Mojo 语言在 Qualcomm 收购后现已开源\nLinux 7.3 中引入两项非常令人兴奋的内存管理优化\n\n虽然拥有无广告浏览，\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026，由 [公司] 所有。所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "ba6f7af2cfe97991275ccbeb67de27e5": {
+    "id": "ba6f7af2cfe97991275ccbeb67de27e5",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Wine-11.16-Released",
+    "title_en": "Wine 11.16 Released With VA-API Hardware Decoding, Better ARM64 Support",
+    "summary_en": "Wine 11.16 is out today as the newest bi-weekly development release for this software enabling Windows games and applications to run on Linux and other platforms...",
+    "pub_date": "Fri, 21 Aug 2026 18:12:01 -0400",
+    "title_zh": "Wine 11.16 发布，支持 VA-API 硬件解码，改进 ARM64 支持",
+    "summary_zh": "Wine 11.16 作为每两周一次的开发版本发布，主要亮点是实现了基于 VA-API 的硬件加速视频解码，目前支持 H.264 解码。此外，该版本改进了 ARM64 支持，包括 Wine Mono 引擎对 64 位 ARM 的支持和 ARM64EC 异常处理的改进。同时修复了 35 个已知问题，涉及游戏、Steam 客户端等，并包含 Wayland 修复。",
+    "fulltext_zh": "Wine 11.16 发布，支持 VA-API 硬件解码，改进 ARM64 支持 - Phoronix\n\nWine 11.16 于 2026 年 8 月 21 日下午 6:12（美国东部时间）发布，作为最新的双周开发版本，该软件使 Windows 游戏和应用程序能够在 Linux 及其他平台上运行。\n\nWine 11.16 最令人兴奋的是实现了使用视频加速 API（VA-API）的硬件加速视频解码。该 VA-API 支持是 Direct3D 视频解码的 VA-API 后端。CodeWeavers 的 Elizabeth Figura 编写的代码实现了 WineD3D 中的 H.264 解码，并在 WineD3D 中集成了必要的 VA-API 集成。不过，当前形式的代码仅支持 H.264 解码，不支持 H.265 或其他替代方案。\n\nWine 11.16 还带来了 ARM64 改进，包括更新的 Wine Mono 引擎，现在支持 64 位 ARM。此外，ARM64EC 上的异常处理也得到了改进。\n\nWine 11.16 修复了 35 个已知问题，帮助了诸如《命令与征服 3》和 Steam 客户端等游戏，以及西门子自动化等应用程序和 regedit。Wine 11.16 还包含一个 Wayland 修复。\n\nWine 11.16 的下载和关于此开发版本的更多信息，请访问 Wine 12.0 稳定版发布前的相关页面。\n\nWine 11.15 发布，包含 Wayland 修复，修复了 20 年前的 MSXML3 错误\nWine 11.14 为 FreeBSD 带来 WoW64 模式，开始菜单支持图标\nWine 11.13 更好地支持输入指针，改进 X11 的键盘扫描码映射\nWine 11.12 发布，包含 Wayland 分数缩放及其他 Wayland 增强\nWine Wayland 支持分数缩放\nWine-Staging 11.11 发布，包含上游之上的 289 个补丁\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创建了该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动程序等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他。\n\nLinux 7.2 发布，I/O 更快，AMD 和 Intel 驱动改进\nGNOME 51 Beta 发布，包含许多小改进\nRsync 3.5 发布，作为“非凡”更新修复 33 个安全问题\nComma.ai 推出 PCIe Gen4 x4 转 USB4 扩展坞，采用开源固件\nOmarchy 4.0 Linux 发行版发布，桌面外壳现通过 Quickshell 实现\nX.Org Server 26.1 RC1 为五年来的首个功能版本做准备\nModular 的 Mojo 语言在 Qualcomm 收购后开源\nLinux 7.3 中两个非常令人兴奋的内存管理优化\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "5ae03ab202d8609ec8042a9c9947bfd4": {
+    "id": "5ae03ab202d8609ec8042a9c9947bfd4",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Proton-11.0-2",
+    "title_en": "Proton 11.0-2 Enables More Titles With Steam Play / Linux Gaming",
+    "summary_en": "Just in time for those that enjoy their Linux / Steam Play gaming on weekends, Valve and CodeWeavers today released Proton 11.0-2 as the newest stable release of this Wine 11.0 downstream that powers Steam Play for running Windows games gracefully on Linux...",
+    "pub_date": "Fri, 21 Aug 2026 17:14:07 -0400",
+    "title_zh": "Proton 11.0-2 通过 Steam Play / Linux 游戏支持更多游戏",
+    "summary_zh": "Valve 和 CodeWeavers 于 2026 年 8 月 21 日发布了 Proton 11.0-2，这是 Wine 11.0 下游版本的最新稳定版，用于 Steam Play 在 Linux 上流畅运行 Windows 游戏。该版本新增了对多款游戏的支持，包括《AsteroidsHD》、《三国群英传7》、《战魂铭人》等，并修复了多个 Proton 11 回归问题及众多游戏错误。同时，该版本还整合了 Wine Mono 11.2、FEX 2607、VKD3D-Proton Git、DXVK Git、VKD3D 2.0 和 DXVK-NVAPI 0.9.2 等组件。",
+    "fulltext_zh": "Proton 11.0-2 通过 Steam Play / Linux 游戏支持更多游戏 - Phoronix\nProton 11.0-2 通过 Steam Play / Linux 游戏支持更多游戏\n发布于 2026 年 8 月 21 日下午 5:14（美国东部时间）\n\n恰逢那些喜欢在周末享受 Linux / Steam Play 游戏的用户，Valve 和 CodeWeavers 今天发布了 Proton 11.0-2，这是 Wine 11.0 下游版本的最新稳定版，该版本为 Steam Play 提供支持，使 Windows 游戏能够在 Linux 上流畅运行。\n\nProton 11.0-2 现在支持了更多 Windows 游戏，包括：《AsteroidsHD》、《三国群英传7》、《Konkan Coast Pirate Solutions》、《战魂铭人》、《Plain Sight》、《Portal Worlds》、《SMILE GAME BUILDER》、《Tetrageddon Games》和《战锤：暗黑预兆》（经典版）。\n\nProton 11.0-2 还修复了 Proton 11 的多个回归问题，以及从《使命召唤 2003》到《火箭联盟》、《极限竞速：地平线 6》等众多现有支持游戏的数十个游戏修复。\n\n作为 Proton 11.0-2 的一部分，还整合了 Wine Mono 11.2、用于 AArch64 的 FEX 2607、VKD3D-Proton Git、DXVK Git、VKD3D 2.0 和 DXVK-NVAPI 0.9.2。\n\n完整的 Proton 11.0-2 详细变更日志可以在以下页面找到：\n\nLinux 7.3 将修复原始 Steam 控制器原生驱动中的长期缺陷\nSteam 在 Linux 上的使用率在 7 月份回升至 4% 以上\nSteam 客户端为 Steam Deck OLED 添加 HDR 串流、AV1 视频串流\nDXVK 3.0.2 发布，改进了挂起调试，并包含一些游戏修复\nHolo Core 实验版发布：面向 Valve 的 Steam Frame 的 Arch Linux AArch64 版本\nProton 11.0-1 发布，推进 Valve 的 Steam Play，带来迄今最佳的 Linux 体验\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nLinux 7.2 发布，带来更快的 I/O、新的 AMD 和 Intel 驱动改进\nGNOME 51 Beta 发布，包含许多小改进\nRsync 3.5 作为“非凡”更新发布，修复了 33 个安全问题\nComma.ai 推出 PCIe Gen4 x4 转 USB4 扩展坞，采用开源固件\nOmarchy 4.0 Linux 发行版发布，桌面外壳现通过 Quickshell 实现\nX.Org Server 26.1 RC1 为五年来的首个功能版本做准备\nModular 的 Mojo 语言在 Qualcomm 收购后现已开源\n两个非常令人兴奋的内存管理优化将进入 Linux 7.3\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "28a868d5cc646ac4e00788e2b729ffd1": {
+    "id": "28a868d5cc646ac4e00788e2b729ffd1",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/UALink-Series-2-Linux",
+    "title_en": "AMD Posts Massive Patch Series For Enabling UALink In The Linux Kernel",
+    "summary_en": "Whether coincidental or intentional, AMD engineers tend to drop interesting, feature patches for the open-source/Linux space on Friday afternoons. Hitting the kernel mailing list minutes ago were two patch series sent out by AMDGPU maintainer Alex Deucher for introducing UALink infrastructure...",
+    "pub_date": "Fri, 21 Aug 2026 16:07:08 -0400",
+    "title_zh": "AMD发布大规模补丁系列，在Linux内核中启用UALink",
+    "summary_zh": "AMD工程师向Linux内核邮件列表提交了两个补丁系列，旨在为AMDGPU驱动引入UALink（超加速器链接）支持。UALink是一种开放标准的高速网络协议，用于连接数据中心内的GPU和AI加速器，支持单个域内最多1024个加速器。首个补丁系列约7000行代码，添加了核心基础设施和AMDGPU驱动集成，支持GPU间直接内存访问。第二个补丁系列包含三个补丁，暴露了新的IOCTL接口和文档。这些补丁展示了AMD在Linux内核中实现UALink的努力，有望提升AI工作负载的性能。",
+    "fulltext_zh": "AMD发布大规模补丁系列，在Linux内核中启用UALink - Phoronix\nAMD发布大规模补丁系列，在Linux内核中启用UALink\n2026年8月21日下午4:07 EDT。\n无论是巧合还是有意为之，AMD工程师倾向于在周五下午为开源/Linux领域发布有趣的特性补丁。几分钟前，AMDGPU维护者Alex Deucher向内核邮件列表发送了两个补丁系列，用于引入超加速器链接（UALink）。\n\nUALink是一种开放标准的高速网络协议，用于连接数据中心内scale-up pod中的GPU和其他AI加速器。UALink旨在支持在单个域内链接多达1024个加速器。\n\n发送的第一个补丁系列包含约7000行代码，添加了UALink的核心基础设施和AMDGPU内核图形驱动集成。\n\n“pod中连接的GPU可以通过UALink直接访问另一GPU上的[远程]内存。与RMDA不同，这里不涉及复制；它是通过结构直接进行加载/存储。只有内存被导出且导入者已获授权，远程GPU才能访问共享内存。要共享内存，它必须是节点间共享的统一物理地址空间的一部分。该地址空间称为NPA（网络物理地址）空间。该地址空间在GPU之间划分，每个GPU拥有自己的地址空间段，用于导出其内存。每个GPU为其NPA空间维护一组专用的页表，类似于GPUVM。\n\n导出的内存不会被固定。导出者可能需要移动内存或使其对导入者不可用。这通过导出者上的远程TLB失效（在TTM驱逐或MMU通知器的情况下）以及导入者上的远程[存在性]检查（带重试）来处理。\n\n要访问远程内存，驱动程序可以将NPA地址映射到其每进程GPUVM页表中，就像本地内存一样。应用程序使用不透明的句柄来表示远程内存。pod中的GPU直接相互通信，在导入者和导出者之间交换NPA地址。如果节点离线或重置，其对等方将清理该事件发生时丢失的任何剩余[引用]。”\n\n第二个补丁系列仅包含三个补丁，暴露了新的IOCTL接口和关于UALink内存导入/导出集成的文档。\n\n对于读者来说，最可能感兴趣的部分是看到AMD为其AMDGPU驱动公开的UALink Linux内核集成工作终于浮出水面。\n\nLinux 7.3为AMD Solarflare NIC准备CXL Type-2驱动支持\nLinux 7.3中新的AMD低功耗核心和统一Intel/AMD CPU核心类型处理\nAMD正在为QEMU/VM中的ROCm计算改进开发新的后端\nAMD周五晚上发布大规模109补丁系列，用于GFX 12.1 RAS支持\nAMD GAIA 0.23提供从终端安装/运行AI代理的能力\nFastFlowLM 1.0发布，现为AMD ROCm伞形项目的一部分\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动和其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nLinux 7.2发布，具有更快的I/O、新的AMD和Intel驱动改进\nGNOME 51 Beta发布，包含许多小改进\nRsync 3.5作为“非凡”更新发布，修复33个安全问题\nComma.ai推出PCIe Gen4 x4到USB4坞站，带开源固件\nOmarchy 4.0 Linux发行版发布，桌面Shell现通过Quickshell实现\nX.Org Server 26.1 RC1为五年来的首个功能版本做准备\nModular的Mojo语言在Qualcomm收购后现开源\n\n两个非常令人兴奋的内存管理优化进入Linux"
+  },
+  "7e2ccfeac7aa0c58c80dd8c4b55538ed": {
+    "id": "7e2ccfeac7aa0c58c80dd8c4b55538ed",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.3-FBDEV",
+    "title_en": "Linux 7.3 Lands Improvements For Voodoo 3 / 4 / 5 & Vintage Atari Computers In 2026",
+    "summary_en": "At a time when Linux continues dropping older hardware drivers due to the influx of AI/LLM-generated bug reports and patches for hardware extremely unlikely to be used with modern versions of the mainline Linux kernel, Voodoo graphics cards and vintage Atari computers are seeing some reprieve with the upcoming Linux 7.3 kernel release...",
+    "pub_date": "Fri, 21 Aug 2026 13:53:28 -0400",
+    "title_zh": "Linux 7.3 为 Voodoo 3 / 4 / 5 及复古 Atari 计算机带来改进",
+    "summary_zh": "Linux 7.3 内核的帧缓冲设备（FBDEV）子系统更新已合并，为 Voodoo 3 / 4 / 5 显卡和复古 Atari 计算机带来改进。TDFXFB 驱动现在可以在没有 PC-BIOS 的情况下初始化 Voodoo 显卡，主要对非 x86 系统有用。此外，ATAFB 驱动增强了 Atari 计算机支持，新增了多种视频位深和 SuperVidel SuperBlitter 硬件加速支持。这些改进已在 x86_64 和 Amiga 4000 系统上测试通过。",
+    "fulltext_zh": "Linux 7.3 为 Voodoo 3 / 4 / 5 及复古 Atari 计算机带来改进 - Phoronix\n\nLinux 7.3 为 Voodoo 3 / 4 / 5 及复古 Atari 计算机带来改进\n\n2026年8月21日下午1:53（美国东部时间）\n\n尽管由于 AI/LLM 生成的错误报告和补丁大量涌入，Linux 内核正在不断移除旧硬件驱动，因为这些硬件极不可能与现代主线内核版本一起使用，但 Voodoo 显卡和复古 Atari 计算机在即将到来的内核中却得到了一些喘息的机会。\n\n帧缓冲设备（\"FBDEV\"）子系统的更新已提交并于今天合并到 Linux 7.3 内核中。对于 Voodoo 3 / 4 / 5 显卡支持，TDFXFB 驱动现在能够在没有 PC-BIOS 的情况下初始化这些 Voodoo 显卡。开源开发者 Daniel Palmer 进行了这项工作，使得“未启动”的 Voodoo 显卡能够在 Linux 上工作，即硬件从未被视频 BIOS 启动过。这主要对非 x86 计算机有用。\n\nTDFXFB 驱动直接使用从视频 BIOS 获取的值来实现这一支持，使驱动能够自行初始化硬件，并将其带到通常由 vBIOS 完成的状态。\n\nClaude Fable 5 协助调试了这一支持。该支持已在 x86_64 系统和带有 mediator PCI 桥接器的 Amiga 4000 上进行了测试。这些补丁还配合一些尚未合并的 3D 渲染支持补丁进行了测试，所有功能似乎都能正常工作。\n\n另外，在此次 FBDEV 拉取请求中，还通过 ATAFB 帧缓冲驱动增强了 Atari 计算机支持。新代码增加了额外的视频位深，并增加了对 SuperVidel 的 SuperBlitter 的支持。新增的位深包括 8 位块状、16 位 RGB565 和 ARGB888。SuperVidel SuperBlitter 是 Atari Falcon 计算机的硬件协处理器升级，用于更快的屏幕绘制和像素操作。\n\n这些 Voodoo 3 / 4 / 5 和复古 Atari 的改进，以及各种 FBDEV 修复和代码清理，都已合并。\n\nLinux 7.3 清理栈随机化，确保尽早进行\nLinux 7.3 清理禁用传统 32 位时间支持的代码\n两个非常令人兴奋的内存管理优化进入 Linux 7.3\nLinux 7.3 调度器改进：对游戏、混合 CPU 有帮助，降低调度器延迟\nLinux 7.3 为 systemd 和 BPF 程序添加新的 \"bpf_sock_read_xattr\" 功能\nLinux 的 Rust 支持在 7.3 中开始为 Rust 的 GCC 后端做准备\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他。\n\nLinux 7.2 发布，带来更快的 I/O、新的 AMD 和 Intel 驱动改进\nGNOME 51 Beta 发布，包含许多小改进\nRsync 3.5 作为“非凡”更新发布，修复 33 个安全问题\nComma.ai 推出 PCIe Gen4 x4 转 USB4 扩展坞，采用开源固件\nOmarchy 4.0 Linux 发行版发布，桌面 Shell 现通过 Quickshell 实现\nX.Org Server 26.1 RC1 为五年来的首个功能版本做准备\nModular 的 Mojo 语言在 Qualcomm 收购后开源\n两个非常令人兴奋的内存管理优化进入 Linux 7.3\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "beec96cc4104793fb49426ea154268b1": {
+    "id": "beec96cc4104793fb49426ea154268b1",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/revisited-trix-player-linux-music-player/",
+    "title_en": "Revisited: Trix Player – Linux Music Player",
+    "summary_en": "Experience Trix Player, a powerful Linux music player that combines simplicity and functionality for an unparalleled listening experience. Try it now!\nThe post Revisited: Trix Player – Linux Music Player appeared first on Linux Today.",
+    "pub_date": "Fri, 21 Aug 2026 16:41:55 +0000",
+    "title_zh": "再探：Trix Player – Linux音乐播放器",
+    "summary_zh": "本文重新审视了Trix Player，一款兼具简洁与强大功能的Linux音乐播放器。它旨在为用户提供无与伦比的聆听体验，通过直观的界面和丰富的功能，满足音乐爱好者的需求。文章强调其易用性与实用性，并鼓励用户立即尝试这款播放器。",
+    "fulltext_zh": "体验Trix Player，这是一款强大的Linux音乐播放器，它将简洁与功能融为一体，为您带来无与伦比的聆听体验。立即尝试吧！\n\n该文章首次发表于Linux Today，标题为“Revisited: Trix Player – Linux Music Player”。"
+  },
+  "98ce6460416c64c59a41e003edcd57e8": {
+    "id": "98ce6460416c64c59a41e003edcd57e8",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/herdr-a-terminal-tool-for-managing-multiple-ai-coding-agents/",
+    "title_en": "herdr: A Terminal Tool for Managing Multiple AI Coding Agents",
+    "summary_en": "Discover herdr, the ultimate terminal tool designed for efficiently managing multiple AI coding agents. Streamline your coding workflow today.\nThe post herdr: A Terminal Tool for Managing Multiple AI Coding Agents appeared first on Linux Today.",
+    "pub_date": "Fri, 21 Aug 2026 16:40:26 +0000",
+    "title_zh": "herdr：用于管理多个AI编码代理的终端工具",
+    "summary_zh": "herdr是一款专为高效管理多个AI编码代理而设计的终端工具，旨在简化编码工作流程。该工具帮助开发者集中管理和协调多个AI代理，提升开发效率。本文介绍了herdr的基本功能和优势，并指出该文章最初发布在Linux Today上。",
+    "fulltext_zh": "发现herdr，这款终极终端工具专为高效管理多个AI编码代理而设计。立即简化您的编码工作流程。\n\n该文章《herdr: A Terminal Tool for Managing Multiple AI Coding Agents》最初出现在Linux Today上。"
+  },
+  "fe7ea9189d268a679486ab9f4ed74ee7": {
+    "id": "fe7ea9189d268a679486ab9f4ed74ee7",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/vivaldi-8-1-browser-released-with-tab-behavior-improvements/",
+    "title_en": "Vivaldi 8.1 Browser Released with Tab Behavior Improvements",
+    "summary_en": "Discover the latest Vivaldi 8.1 update featuring enhanced tab behavior for a more efficient browsing experience. Upgrade now for improved performance!\nThe post Vivaldi 8.1 Browser Released with Tab Behavior Improvements appeared first on Linux Today.",
+    "pub_date": "Fri, 21 Aug 2026 16:38:15 +0000",
+    "title_zh": "Vivaldi 8.1 浏览器发布，改进标签页行为",
+    "summary_zh": "Vivaldi 8.1 版本正式发布，此次更新聚焦于标签页行为的优化，旨在为用户提供更高效的浏览体验。新版本在性能上也有所提升，建议用户立即升级以享受改进后的功能。",
+    "fulltext_zh": "探索最新的 Vivaldi 8.1 更新，其增强了标签页行为，带来更高效的浏览体验。立即升级以享受改进的性能！\n\n该文章首发于 Linux Today。"
+  },
+  "f0a3b593d267a6037710dfaeb6dd79f9": {
+    "id": "f0a3b593d267a6037710dfaeb6dd79f9",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/flyline-add-syntax-highlighting-fuzzy-search-and-ai-to-bash/",
+    "title_en": "Flyline: Add Syntax Highlighting, Fuzzy Search, and AI to Bash",
+    "summary_en": "Enhance your Bash experience with Flyline. Discover how to implement syntax highlighting, fuzzy search, and AI features for improved productivity.\nThe post Flyline: Add Syntax Highlighting, Fuzzy Search, and AI to Bash appeared first on Linux Today.",
+    "pub_date": "Fri, 21 Aug 2026 16:36:41 +0000",
+    "title_zh": "Flyline：为Bash添加语法高亮、模糊搜索和AI功能",
+    "summary_zh": "Flyline是一款旨在提升Bash命令行体验的工具，它通过添加语法高亮、模糊搜索和AI功能，帮助用户提高生产力。本文介绍了如何利用Flyline实现这些功能，使命令行操作更加高效和直观。",
+    "fulltext_zh": "通过Flyline增强您的Bash体验。了解如何实现语法高亮、模糊搜索和AI功能，以提高生产力。\n\n这篇文章《Flyline：为Bash添加语法高亮、模糊搜索和AI功能》首次出现在Linux Today上。"
+  },
+  "aa0b4573dd2c1e9b608125c4e42090ed": {
+    "id": "aa0b4573dd2c1e9b608125c4e42090ed",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/wireshark-4-6-7-packet-analyzer-fixes-12-security-vulnerabilities/",
+    "title_en": "Wireshark 4.6.7 Packet Analyzer Fixes 12 Security Vulnerabilities",
+    "summary_en": "Discover the latest updates in Wireshark 4.6.7, which addresses 12 critical security vulnerabilities to enhance your packet analysis experience.\nThe post Wireshark 4.6.7 Packet Analyzer Fixes 12 Security Vulnerabilities appeared first on Linux Today.",
+    "pub_date": "Fri, 21 Aug 2026 16:34:45 +0000",
+    "title_zh": "Wireshark 4.6.7 数据包分析器修复 12 个安全漏洞",
+    "summary_zh": "Wireshark 4.6.7 版本发布，修复了 12 个关键安全漏洞，提升了数据包分析体验。该版本针对多个协议解析器中的漏洞进行了修补，包括可能导致拒绝服务或任意代码执行的问题。用户应尽快升级以确保安全。",
+    "fulltext_zh": "了解 Wireshark 4.6.7 的最新更新，该版本解决了 12 个关键安全漏洞，以增强您的数据包分析体验。\n\n该文章最初发布在 Linux Today 上。"
   }
 }
