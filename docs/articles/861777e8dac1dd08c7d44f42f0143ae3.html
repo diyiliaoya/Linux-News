@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flyline：为Bash添加语法高亮、模糊搜索和AI功能 — Linux 中文速报</title>
+<title>Postcard：一款基于AI构建的GNOME新邮件客户端 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">Linux Today</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Flyline：为Bash添加语法高亮、模糊搜索和AI功能</h1>
+  <h1>Postcard：一款基于AI构建的GNOME新邮件客户端</h1>
 
-  <div class="article-summary">Flyline是一款旨在提升Bash命令行体验的工具，它通过添加语法高亮、模糊搜索和AI功能，帮助用户提高生产力。本文介绍了如何利用Flyline实现这些功能，使命令行操作更加高效和直观。</div>
+  <div class="article-summary">Postcard是一款面向GNOME的新邮件客户端，采用现代设计，灵感来自Geary。它由独立开发者gxanshu使用Python、GTK4/libadwaita编写，支持IMAP/SMTP，通过GNOME在线账户访问Gmail，并提供本地SQLite索引搜索、WebKitGTK渲染HTML和libsecret密码保护。应用遵循GNOME HIG，具备多栏布局、通知、线程会话和搜索等功能，但不支持POP、Exchange和统一收件箱。目前以Flatpak形式提供，但未上架Flathub。开发者坦诚使用了AI编码工具，项目处于活跃开发中，建议用户试用而非完全依赖。</div>
 
-  <div class="article-body"><p>通过Flyline增强您的Bash体验。了解如何实现语法高亮、模糊搜索和AI功能，以提高生产力。</p><p>这篇文章《Flyline：为Bash添加语法高亮、模糊搜索和AI功能》首次出现在Linux Today上。</p></div>
+  <div class="article-body"><p>Postcard是一款面向GNOME的新邮件客户端，采用现代设计，让人联想到Geary。</p><p>该应用由独立开发者gxanshu（GitHub用户名）开发，他坦率地表示使用了AI编码工具来打造这款“现代邮件客户端”。</p><p>Postcard使用Python编写，基于GTK4/libadwaita。它利用libcurl进行网络通信，使用本地SQLite索引进行搜索，通过WebKitGTK渲染HTML，并使用libsecret安全存储密码。它也是开源的，因此代码可以被审查。</p><p>对于Geary邮件客户端的粉丝来说，Postcard的界面应该很熟悉，因为它采用了类似的多栏设计：左侧是可调整大小的侧边栏显示文件夹，中间是邮件列表，右侧是阅读面板：</p><p>Postcard简洁的Geary风格布局</p><p>它支持使用IMAP和SMTP的邮件提供商，但没有提及POP，并且根据开发者的说法，不支持Exchange Web Services。Gmail访问通过GNOME在线账户提供，因此如果你在那里登录了账户，就可以直接使用。</p><p>你可以向Postcard添加多个邮件账户，但目前它不提供统一收件箱来在一个超长邮件列表中查看所有账户的邮件。</p><p>其他功能是最基本的：新邮件通知、可调整的同步、线程会话和搜索工具。基本的邮件编辑器支持富文本格式、主题、抄送和密送行，以及添加附件的功能。</p><p>据称，该应用的UI严格遵循GNOME人机界面指南（HIG）。</p><p>Postcard的偏好设置和新邮件撰写对话框</p><p>在（简洁的）偏好设置对话框中，可以定义签名，以及切换阻止邮件中的远程图像（如跟踪像素）和关闭时保持应用在后台运行（这是保持邮件连接活跃所必需的）。</p><p>没有PGP/GPG密钥设置，没有内置日历，没有客户端邮件过滤等。虽然高级用户不太可能被这样的应用吸引，但可以说：对于邮件管理，像Geary这样的成熟客户端仍然是更好的选择。</p><p>Postcard正在积极开发中——仅本月两周内就发布了5次更新——项目README也指出了这一点，建议用户先试用几周，而不是将其作为唯一的邮件应用。</p><p>“氛围编码”的困境……</p><p>AI工具使得创建个人项目变得容易。但当用户报告其他20%的问题时，热情就会消退。</p><p>这就是为什么AI辅助软件——关于何种程度的AI辅助配得上“氛围编码”的定义，欢迎在评论中讨论——有着“一次性垃圾”的名声。</p><p>Flathub已禁止AI辅助提交，检查被拒绝的“氛围编码”应用的状态发现，其中四分之三已被放弃（在其他人的基础设施上；Codeberg也不再托管氛围编码软件，因为存储成本上升）。</p><p>从某种意义上说，Postcard的开发者坦诚地承认了AI的参与（假设Claude设计美学™网站没有向人们透露这一点），这让我感到安心。</p><p>“在一个……”充满空洞营销宣传和氛围编码模糊性的世界里，一点诚实是有价值的。</p><p>在Ubuntu上安装Postcard GTK邮件应用</p><p>Postcard可以作为Flatpak安装在Ubuntu和其他Linux发行版上，但不在Flathub上（原因如上所述）。</p><p>如果你想尝试，可以添加其专用的Flatpak仓库：</p><p>flatpak remote-add --if-not-exists postcard https://postcard.gxanshu.in/postcard.flatpakrepo</p><p>flatpak install postcard in.gxanshu.postcard</p><p>如果你愿意，也可以从项目的GitHub发布页面下载.flatpakref文件。你可以在Flatpak软件管理器中打开它，比如GNOME Software（在Ubuntu仓库中可用）或Discover。</p><p>Postcard并不是近几个月涌现的唯一新邮件客户端。还有Sieve，另一个受Geary启发的客户端，以及Warp，它提供了更丰富的功能集。基于GTK的邮件客户端的空白正在AI的帮助下被填补。</p><p>“氛围编码”的计时器、待办事项列表和其他一次性小玩意儿。如果它们坏了，没什么大不了的。但把我的邮件托付给……</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/flyline-add-syntax-highlighting-fuzzy-search-and-ai-to-bash/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/postcard-gnome-email-client" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

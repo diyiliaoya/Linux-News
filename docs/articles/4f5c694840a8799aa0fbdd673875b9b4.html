@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flyline：为Bash添加语法高亮、模糊搜索和AI功能 — Linux 中文速报</title>
+<title>eCryptfs 修复潜在恶意意图问题，部分可追溯至 2006 年首次亮相 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">Linux Today</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Flyline：为Bash添加语法高亮、模糊搜索和AI功能</h1>
+  <h1>eCryptfs 修复潜在恶意意图问题，部分可追溯至 2006 年首次亮相</h1>
 
-  <div class="article-summary">Flyline是一款旨在提升Bash命令行体验的工具，它通过添加语法高亮、模糊搜索和AI功能，帮助用户提高生产力。本文介绍了如何利用Flyline实现这些功能，使命令行操作更加高效和直观。</div>
+  <div class="article-summary">Linux 内核中的 eCryptfs 堆叠加密文件系统在 Linux 7.3 内核中迎来多项错误修复，其中一些涉及潜在恶意构造的数据，且漏洞可追溯至 2006 年 eCryptfs 首次引入时。该文件系统常用于 Ubuntu 主目录加密和 Chrome OS。修复内容包括针对下层加密文件中恶意元数据的加固、内核与用户空间 miscdev 通信的加固、锁修复、挂载选项显示修复以及内存分配优化等。部分安全漏洞疑似通过 AI 工具发现。</div>
 
-  <div class="article-body"><p>通过Flyline增强您的Bash体验。了解如何实现语法高亮、模糊搜索和AI功能，以提高生产力。</p><p>这篇文章《Flyline：为Bash添加语法高亮、模糊搜索和AI功能》首次出现在Linux Today上。</p></div>
+  <div class="article-body"><p>eCryptfs 是 Linux 内核中的堆叠加密文件系统实现，用于透明加密文件。在 Linux 7.3 内核中，它迎来了一系列错误修复。其中许多修复涉及潜在恶意构造的数据，以及可追溯至 2006 年 eCryptfs 首次引入时的漏洞——该选项因用于 Ubuntu 主目录加密和 Chrome OS 而闻名。</p><p>eCryptfs 代码现已针对下层加密文件中的恶意构造元数据进行了加固和修复。同时，针对内核与用户空间 miscdev 通信中的恶意行为也进行了加固和修复。此外，还有锁修复、与加密文件名相关的挂载选项显示修复、避免不必要的内存分配以及其他改进。</p><p>其中一些安全修复可追溯至提交 237fead61998，即 eCryptfs 于 2006 年首次引入主线内核之时。至少部分这些漏洞似乎是通过 AI 工具发现的。</p><p>关于 Linux 7.3 中这些 eCryptfs 修复的更多详情，可通过以下内容了解：</p><p>长期 Linux CIFS/SMB3 维护者去世</p><p>特制 NTFS 文件系统镜像可在 Linux 上通过 NTFS3 驱动获取 root 权限</p><p>OpenZFS 2.4.4 发布，支持 Linux 7.2，包含数十项修复</p><p>FSCRYPT 在 Linux 7.3 中进行清理，为 Btrfs 加密等更多功能打开大门</p><p>EXT4 为 Linux 7.3 准备更多性能改进</p><p>Btrfs 为 Linux 7.3 准备更多性能改进：部分提升约 3 倍至 5 倍</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Linus Torvalds 经历了一场“地狱般的调试会话”，AI 提供了“巨大帮助”</p><p>GNOME 51 Beta 发布，包含许多小幅改进</p><p>Linux 7.2 发布，I/O 更快，AMD 和 Intel 驱动改进</p><p>Omarchy 4.0 Linux 发行版发布，桌面 Shell 现通过 Quickshell 实现</p><p>X.Org Server 26.1 RC1 为五年来的首个功能版本做准备</p><p>两项非常令人兴奋的内存管理优化将进入 Linux 7.3</p><p>Modular 的 Mojo 语言在 Qualcomm 收购后现已开源</p><p>Linux 7.3 网络变更已合并，但开发者因 AI/LLM 而“完全不堪重负”</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/flyline-add-syntax-highlighting-fuzzy-search-and-ai-to-bash/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-eCryptfs" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

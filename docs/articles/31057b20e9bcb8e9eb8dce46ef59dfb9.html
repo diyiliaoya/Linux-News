@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flyline：为Bash添加语法高亮、模糊搜索和AI功能 — Linux 中文速报</title>
+<title>特制NTFS文件系统镜像可利用NTFS3驱动在Linux上获取Root权限 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">Linux Today</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Flyline：为Bash添加语法高亮、模糊搜索和AI功能</h1>
+  <h1>特制NTFS文件系统镜像可利用NTFS3驱动在Linux上获取Root权限</h1>
 
-  <div class="article-summary">Flyline是一款旨在提升Bash命令行体验的工具，它通过添加语法高亮、模糊搜索和AI功能，帮助用户提高生产力。本文介绍了如何利用Flyline实现这些功能，使命令行操作更加高效和直观。</div>
+  <div class="article-summary">NTFS3内核驱动存在一个未修复的安全漏洞，攻击者可通过特制的NTFS镜像（如USB驱动器）在挂载时注入SUID权限，从而获得本地权限提升至root。该漏洞由Vova Tokarev发现，并已在NTFS3邮件列表中公开。问题根源在于xattr.c中直接从不信任的磁盘数据加载S_ISUID/S_ISGID标志。建议的修复方案是清除这些标志位。截至报道时，主线内核尚未修复此漏洞，但不影响新的NTFS驱动替代方案。</div>
 
-  <div class="article-body"><p>通过Flyline增强您的Bash体验。了解如何实现语法高亮、模糊搜索和AI功能，以提高生产力。</p><p>这篇文章《Flyline：为Bash添加语法高亮、模糊搜索和AI功能》首次出现在Linux Today上。</p></div>
+  <div class="article-body"><p>特制NTFS文件系统镜像可利用NTFS3驱动在Linux上获取Root权限 - Phoronix</p><p>特制NTFS文件系统镜像可利用NTFS3驱动在Linux上获取Root权限</p><p>2026年8月22日 上午08:42（美国东部时间）</p><p>NTFS3驱动的一个已报告的安全漏洞自今年夏天早些时候被报告以来一直未得到解决。该漏洞允许通过USB闪存驱动器或类似设备上的预制作NTFS镜像，使用户能够获得正在运行的Linux系统的root访问权限。</p><p>在两个月前被私下报告且未得到解决后，一个导致本地权限提升的SUID注入漏洞被公开。一位Phoronix读者通过NTFS3邮件列表注意到了这一披露。</p><p>发现该问题的Vova Tokarev指出：</p><p>“一个预制作的NTFS镜像（例如USB驱动器），其中MFT中已包含$LXUID=0、$LXGID=0、$LXMOD=0104755，在卷挂载的瞬间就会产生一个setuid-root二进制文件。不涉及setxattr()——扩展属性（EAs）就在磁盘上。-EPERM检查无济于事。</p><p>根本原因仍在fs/ntfs3/xattr.c:1022：</p><p>inode-&gt;i_mode = le32_to_cpu(value[2]);</p><p>这直接从不信任的磁盘数据加载S_ISUID/S_ISGID。桌面自动挂载器（udisks）默认以suid方式挂载NTFS，因此插入一个特制的USB设备即可让任何本地用户获得euid=0。</p><p>建议的一行修复：</p><p>-   inode-&gt;i_mode = le32_to_cpu(value[2]);</p><p>+   inode-&gt;i_mode = le32_to_cpu(value[2]) &amp; ~(S_ISUID | S_ISGID);</p><p>我有完整的PoC和可工作的演示。”</p><p>感兴趣的人可以通过此邮件列表帖子找到概念验证、演示以及更多信息。</p><p>截至撰写本文时，该漏洞尚未被主线NTFS3内核驱动解决。这似乎不影响较新的NTFS驱动替代方案，该方案也在主线内核树中持续成熟。</p><p>长期Linux CIFS/SMB3维护者去世</p><p>eCryptfs针对潜在恶意意图的修复，部分可追溯至2006年首次亮相</p><p>OpenZFS 2.4.4发布，支持Linux 7.2，包含数十项修复</p><p>FSCRYPT在Linux 7.3中清理，为Btrfs加密等更多功能打开大门</p><p>EXT4为Linux 7.3准备更多性能改进</p><p>Btrfs为Linux 7.3准备更多性能改进：部分提升约3倍至5倍</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他。</p><p>Linus Torvalds经历地狱般的调试会话，AI“极大帮助”</p><p>GNOME 51 Beta发布，包含许多小改进</p><p>Linux 7.2发布，I/O更快，AMD和Intel驱动改进</p><p>Omarchy 4.0 Linux发行版发布，桌面Shell现通过Quickshell实现</p><p>X.Org Server 26.1 RC1为五年来首个功能版本做准备</p><p>Linux 7.3中两个非常令人兴奋的内存管理优化</p><p>Modular的Mojo语言在Qualcomm收购后开源</p><p>Linux 7.3网络变更合并，但开发者因AI/LLM“完全不堪重负”</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/flyline-add-syntax-highlighting-fuzzy-search-and-ai-to-bash/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/NTFS3-Vulnerability-For-Root" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
