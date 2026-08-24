@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>herdr：用于管理多个AI编码代理的终端工具 — Linux 中文速报</title>
+<title>Linux 7.3 为上游化 FAMFS 文件系统做准备 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">Linux Today</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>herdr：用于管理多个AI编码代理的终端工具</h1>
+  <h1>Linux 7.3 为上游化 FAMFS 文件系统做准备</h1>
 
-  <div class="article-summary">herdr是一款专为高效管理多个AI编码代理而设计的终端工具，旨在简化编码工作流程。该工具帮助开发者集中管理和协调多个AI代理，提升开发效率。本文介绍了herdr的基本功能和优势，并指出该文章最初发布在Linux Today上。</div>
+  <div class="article-summary">Linux 7.3 内核周期的 NVDIMM 和 DAX 补丁已合并，主要工作是为 Micron 的 FAMFS 文件系统提交做准备。FAMFS 是面向结构附加内存（FAM）设备的专用文件系统，自 2024 年起开发，已历经 13 轮补丁审查，预计 2026 年上游化。该文件系统针对大规模共享/分解内存应用设计，支持 100TB 以上内存的字节级访问，对现代 CXL 服务器至关重要。Micron 曾尝试 FUSE 移植，但最终选择独立内核驱动，并承诺长期维护。</div>
 
-  <div class="article-body"><p>发现herdr，这款终极终端工具专为高效管理多个AI编码代理而设计。立即简化您的编码工作流程。</p><p>该文章《herdr: A Terminal Tool for Managing Multiple AI Coding Agents》最初出现在Linux Today上。</p></div>
+  <div class="article-body"><p>Linux 7.3 为上游化 FAMFS 文件系统做准备 - Phoronix</p><p>Linux 7.3 为上游化 FAMFS 文件系统做准备</p><p>2026年8月23日 上午07:20（美国东部时间）</p><p>Linux 7.3 周期的 NVDIMM 和直接访问（DAX）补丁已合并。本周期大部分 DAX/NVDIMM 活动都在为即将提交的 Micron FAMFS 文件系统做准备。</p><p>Linux 7.3 中的 DAX 代码经历了一系列修复、代码重构和其他改进，为 FAMFS 的引入做准备。</p><p>Micron 多年来一直在开发 FAMFS（至少自 2024 年起），这是一种面向结构附加内存（FAM）设备的专用文件系统。Micron 希望能在 2026 年将 FAMFS 上游化，该文件系统本身的补丁现已历经十三轮补丁审查。这种结构附加内存文件系统对于未来现代 CXL 服务器将非常重要。</p><p>它不适用于通用文件系统用途，而是围绕基于文件的字节级访问设计，面向非常大的共享/分解内存应用，常见规模约为 100TB 以上内存。尽管有人担心 Linux 内核中文件系统数量过多，但 FAMFS 正是为此用途专门设计的。Micron 工程师曾尝试移植到用户空间的 FUSE，但最终发现独立的内核文件系统驱动是最佳方案。Micron 还承诺维护 FAMFS，并明确其客户需求。</p><p>Linux 7.3 已合并所有 NVDIMM 和 DAX 更改。FAMFS 尚未提交上游包含，但看起来已接近可被接受的阶段。不过没有迹象表明它会在 v7.3 合并窗口期间提交。感兴趣的人可以查看当前形式的 FAMFS。</p><p>Linux 7.3 改进基于基准的 RAID 5/6 算法选择</p><p>长期 Linux CIFS/SMB3 维护者去世</p><p>eCryptfs 修复潜在恶意意图问题，部分问题可追溯至 2006 年首次发布</p><p>特制 NTFS 文件系统镜像可在 Linux 上通过 NTFS3 驱动获取 root 权限</p><p>OpenZFS 2.4.4 发布，支持 Linux 7.2，包含数十项修复</p><p>FSCRYPT 在 Linux 7.3 中进行清理，为 Btrfs 加密等功能打开大门</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Linus Torvalds 经历了一场地狱般的调试会话，AI“极大帮助”了他</p><p>长期 Linux CIFS/SMB3 维护者去世</p><p>GNOME 51 Beta 发布，包含许多小改进</p><p>Linux 7.2 发布，I/O 更快，AMD 和 Intel 驱动改进</p><p>Linux 7.3 网络更改已合并，但开发者因 AI/LLM 而“完全不堪重负”</p><p>X.Org Server 26.1 RC1 为五年来的首个功能版本做准备</p><p>Linux 7.3 中两个非常令人兴奋的内存管理优化</p><p>特制 NTFS 文件系统镜像可在 Linux 上通过 NTFS3 驱动获取 root 权限</p><p>虽然有无广告浏览，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/herdr-a-terminal-tool-for-managing-multiple-ai-coding-agents/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-Preps-Toward-FAMFS" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

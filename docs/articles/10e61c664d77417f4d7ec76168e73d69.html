@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>herdr：用于管理多个AI编码代理的终端工具 — Linux 中文速报</title>
+<title>Linux 7.3 更好地保护系统免受有缺陷的 EFI 固件拖垮用户空间 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">软件应用</span>
-    <span class="source">Linux Today</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>herdr：用于管理多个AI编码代理的终端工具</h1>
+  <h1>Linux 7.3 更好地保护系统免受有缺陷的 EFI 固件拖垮用户空间</h1>
 
-  <div class="article-summary">herdr是一款专为高效管理多个AI编码代理而设计的终端工具，旨在简化编码工作流程。该工具帮助开发者集中管理和协调多个AI代理，提升开发效率。本文介绍了herdr的基本功能和优势，并指出该文章最初发布在Linux Today上。</div>
+  <div class="article-summary">Linux 7.3 内核合并了 EFI 更新，其中最重要的改进是为 EFI 运行时服务调用设置超时，避免因固件挂起导致系统无限期等待。该补丁由 Meta 内核工程师 Breno Leitao 在遇到 NVIDIA Grace 服务器问题后提出，超时设为 120 秒，超过后固件将被标记为“wedged”，从而防止单个卡死的 EFI 调用拖垮整个用户空间，并在 dmesg 中提供明确的错误信号。</div>
 
-  <div class="article-body"><p>发现herdr，这款终极终端工具专为高效管理多个AI编码代理而设计。立即简化您的编码工作流程。</p><p>该文章《herdr: A Terminal Tool for Managing Multiple AI Coding Agents》最初出现在Linux Today上。</p></div>
+  <div class="article-body"><p>Linux 7.3 更好地保护系统免受有缺陷的 EFI 固件拖垮用户空间 - Phoronix</p><p>Linux 7.3 更好地保护系统免受有缺陷的 EFI 固件拖垮用户空间</p><p>2026年8月23日下午3:05（美国东部时间）</p><p>针对正在开发中的 Linux 7.3 内核，EFI 更新已于今日合并。其中最重要的变化是，现在将对 EFI 运行时服务的完成强制设置超时，而不是可能无限期挂起。</p><p>Linux 7.3 内核的一项改动现在将为 EFI 运行时服务的完成设置超时，而不是可能无限期挂起。如果超过超时时间，固件将被声明为“wedged”（卡死）。这有助于处理某些平台上存在缺陷的 EFI/固件，这些固件最终可能导致用户空间的其余部分崩溃。</p><p>Debian 开发者、Meta 内核工程师 Breno Leitao 通过补丁为 EFI 运行时服务调用提供了超时机制。这一问题的出现源于他在一台 NVIDIA Grace 服务器上遇到的问题。Leitao 解释了当时的情况：</p><p>“当 EFI 运行时服务调用在固件中挂起时，efi_rts_wq 上的 kworker 会卡在固件调用中且无法取消。内核目前会无限期地等待完成，而调用者在整个期间持有 efi_runtime_lock，因此所有后续的 EFI 运行时调用者（efivarfs、NVRAM 写入、set_wakeup_time、ACPI PRM 处理程序等）都会一直卡死，直到重启。唯一外部可见的症状是“工作队列锁死”消息，以及用户空间进程不可中断地堆积在信号量上。</p><p>PC 和 LR 位于 EFI 运行时服务的固件内存中；固件从未返回；工作线程在 127 秒/157 秒/188 秒的“工作队列锁死”报告中一直卡住，直到外部监控最终重启主机。</p><p>这个补丁系列并不能修复固件缺陷——那是供应商的领域——但它能阻止一个卡死的 EFI 调用拖垮用户空间的其余部分，并将一个通用的停滞任务谜团转变为 dmesg 中明确的“EFI 固件故障”信号，这在舰队规模上尤其有价值，因为同样的症状可能被归因于数十种无关的停滞。”</p><p>设置的超时阈值为 120 秒，因为任何合理的 EFI 运行时服务调用都不应超过这个时间。</p><p>这一新的安全措施已通过以下方式合入：</p><p>Linux 7.3 为从旧 GPU 到下一代硬件的图形驱动带来改进</p><p>Linux 7.3 引入新的 AES 加密 API——将带来更多性能提升</p><p>Sched_ext 的子调度器支持在 Linux 7.3 中“功能完备”</p><p>Linux 7.3 x86/mm 合入补丁，大幅改善延迟敏感型工作负载</p><p>Linux 7.3 为 Voodoo 3/4/5 及复古 Atari 计算机带来改进（2026年）</p><p>Linux 7.3 清理栈随机化，确保尽早执行</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>Linus Torvalds 经历地狱般的调试会话，AI“极大帮助”</p><p>长期担任 Linux CIFS/SMB3 维护者的开发者去世</p><p>GNOME 51 Beta 发布，包含许多小改进</p><p>Linux 7.2 发布，带来更快的 I/O、新的 AMD 和 Intel 驱动改进</p><p>Linux 7.3 网络变更已合并，但开发者因 AI/LLM“完全不堪重负”</p><p>X.Org Server 26.1 RC1 为五年来的首个功能版本做准备</p><p>Linux 7.3 中两个非常令人兴奋的内存管理优化</p><p>特制 NTFS 文件系统镜像允许在 Linux 上通过 NTFS3 驱动获取 root 权限</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/herdr-a-terminal-tool-for-managing-multiple-ai-coding-agents/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-EFI" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

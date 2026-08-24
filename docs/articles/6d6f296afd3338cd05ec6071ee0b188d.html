@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>herdr：用于管理多个AI编码代理的终端工具 — Linux 中文速报</title>
+<title>发行版发布：PorteuX 2.8 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">Linux Today</span>
+    <span class="tag">发行版</span>
+    <span class="source">DistroWatch</span>
   </div>
 
-  <h1>herdr：用于管理多个AI编码代理的终端工具</h1>
+  <h1>发行版发布：PorteuX 2.8</h1>
 
-  <div class="article-summary">herdr是一款专为高效管理多个AI编码代理而设计的终端工具，旨在简化编码工作流程。该工具帮助开发者集中管理和协调多个AI代理，提升开发效率。本文介绍了herdr的基本功能和优势，并指出该文章最初发布在Linux Today上。</div>
+  <div class="article-summary">PorteuX 2.8 发布，基于 Slackware Linux，引入了两个全新的内部项目：aufs-ng 联合文件系统和 xfwm4-gl 合成器。aufs-ng 从零编写，替代 aufs，代码量更少，性能更高，内存占用更低；xfwm4-gl 为 Xfce 在 X11 下带来 OpenGL 合成，功耗降低约三分之一，帧率提升约 10%。该版本提供多种桌面环境镜像，包括 Cinnamon、GNOME、KDE Plasma 等。</div>
 
-  <div class="article-body"><p>发现herdr，这款终极终端工具专为高效管理多个AI编码代理而设计。立即简化您的编码工作流程。</p><p>该文章《herdr: A Terminal Tool for Managing Multiple AI Coding Agents》最初出现在Linux Today上。</p></div>
+  <div class="article-body"><p>发行版发布：PorteuX 2.8</p><p>PorteuX 是一款基于 Slackware Linux 的发行版。该项目的最新版本 PorteuX 2.8 引入了新的联合文件系统和新的 Xfce 合成器。</p><p>“此版本围绕两个新的内部项目构建：aufs-ng 和 xfwm4-gl。aufs-ng 是我们新的联合文件系统，从零编写以替代 aufs，而 aufs 是 PorteuX 自诞生以来一直依赖的。它保持了相同的磁盘格式和相同的挂载命令语法，因此一切照常工作。它的代码量约为 5,000 行，而 Aufs 为 28,000 行，并且它使用内核的现代 I/O 直通，这意味着文件系统级锁定大大减少，由于使用内核内拼接而非逐页缓冲，复制操作速度显著提高，并且它仅跟踪 inode，因此热系统内存占用约为原来的三分之一。从现在起，它成为默认文件系统。xfwm4-gl 是我们对 xfwm4 的分支，最终为 X11 下的 Xfce 带来了 OpenGL 合成，并保留 XRender 作为自动回退。与 XRender 相比，它功耗降低约三分之一，每秒向应用程序传递的帧数增加约 10%。”</p><p>更多详细信息可在发布公告中找到。</p><p>下载镜像：</p><p>porteux-2.8-current-cinnamon-6.6.9-x86_64.iso</p><p>porteux-2.8-current-cosmic-1.6.0-x86_64.iso</p><p>porteux-2.8-current-gnome-50.4-x86_64.iso</p><p>porteux-2.8-current-kde-6.7.4-x86_64.iso</p><p>porteux-2.8-current-lxde-0.11.1-x86_64.iso</p><p>porteux-2.8-current-lxqt-2.4.0-x86_64.iso</p><p>porteux-2.8-current-mate-1.28.2-x86_64.iso</p><p>porteux-2.8-current-xfce-4.20-x86_64.iso</p><p>相关近期新闻和发布：</p><p>发行版发布：PorteuX 2.8</p><p>发行版发布：PorteuX 2.7</p><p>发行版发布：PorteuX 2.5</p><p>发行版发布：PorteuX 2.4</p><p>发行版发布：PorteuX 2.2</p><p>发行版发布：PorteuX 2.1</p><p>PorteuX 是一款基于 Slackware Linux 的发行版，灵感来自 Slax 和 Porteus，免费向公众提供。其主要目标是快速、小巧、便携（可从 U 盘运行）、模块化，并且可选不可变。它预配置了基本用法，包括七个桌面环境（Cinnamon、GNOME、KDE Plasma、LXDE、LXQt、MATE 和 Xfce）中的每一个的轻量级应用程序。不包含浏览器，但有一个应用商店……</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/herdr-a-terminal-tool-for-managing-multiple-ai-coding-agents/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://distrowatch.com/12929" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
