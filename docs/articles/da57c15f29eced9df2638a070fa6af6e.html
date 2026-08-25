@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GIMP（终于）正在开发新的项目文件格式 — Linux 中文速报</title>
+<title>Linux 7.3 合并了 2026 年 Steam 控制器的初始内核驱动支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">软件应用</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>GIMP（终于）正在开发新的项目文件格式</h1>
+  <h1>Linux 7.3 合并了 2026 年 Steam 控制器的初始内核驱动支持</h1>
 
-  <div class="article-summary">GIMP正在开发一种新的项目文件格式，以解决现有XCF格式在处理大型复杂项目时的局限性。新格式将采用“压缩XML”结构，支持更快的保存速度，并可能实现自动保存功能。尽管新格式将默认用于新项目，但XCF支持仍将保留以确保向后兼容性。</div>
+  <div class="article-summary">Linux 7.3 内核合并了 HID 子系统的更新，其中包含对 2026 年 Valve Steam 控制器的初始内核驱动支持。该驱动由 Vicki Pfau 开发，扩展了原有的 hid-steam 驱动，使其支持新控制器，并达到了与 2015 年原始型号相同的支持水平。此外，Linux 7.3 的 HID 更新还包括 HyperX QuadCast 2 麦克风的静音状态驱动、MSI Claw 游戏手柄驱动、罗技 HID++ 2.0 可重编程按键支持，以及 AMD 传感器融合中心对平板模式切换的支持。</div>
 
-  <div class="article-body"><p>GIMP（终于）正在开发新的项目文件格式 - OMG! Ubuntu</p><p>GIMP正在开发一种新的项目文件格式，因为现有的格式无法处理更大、更复杂的项目。</p><p>自1997年以来，这款著名的自由开源图像编辑器一直使用二进制的.xcf格式来保存项目，以便图层、效果和其他内容可以再次编辑和调整——这在导出为JPEG或PNG等平面文件时是不会发生的。</p><p>在最近的一次开发更新中，团队表示他们发现当前格式存在“越来越多的限制”。</p><p>随着动画和多页文档等重大新功能被列入GIMP的近期路线图，它已经开始着手开发一种新的项目文件格式，该格式将采用“压缩XML”结构（这种结构通常被其他软件使用，包括办公套件）。</p><p>新的项目类型将支持更快的保存，因为作为一种高级的“zip”文件，只需保存编辑中发生变化的部分，而不是整个文件。这有可能最终为GIMP用户带来最长期请求的功能之一：自动保存！</p><p>现在要知道确切的技术细节或文件扩展名还为时过早——希望不是——因为根据博客文章，一切都“仍在设计和实现中”。</p><p>不过，XCF将继续保留</p><p>一旦GIMP的新文件格式就位，使用编辑器最新功能的新项目将默认使用新的项目格式。</p><p>但XCF支持将继续作为GIMP的一部分，以确保向后兼容性。谷歌的第一个标志是1998年用GIMP制作的XCF文件，这个古老的文件至今仍能在现代GIMP中打开，没有任何问题——团队表示对此感到“自豪”。</p><p>GIMP已经处理了不仅仅是XCF。除了打开和保存常见图像格式外，它还可以打开和导出Adobe Photoshop的.psd和OpenRaster的.ora文件。</p><p>既然已经学会了如何处理其他软件使用的项目文件，那么回过头来改进自己的文件格式也是理所当然的。随着现代性的不断推进，一个近30年的格式难免显得有些过时。</p></div>
+  <div class="article-body"><p>Linux 7.3 合并了 2026 年 Steam 控制器的初始内核驱动支持 - Phoronix</p><p>Linux 7.3 合并了 2026 年 Steam 控制器的初始内核驱动支持</p><p>2026 年 8 月 24 日晚上 8:33（美国东部时间）</p><p>HID 子系统的更新最近已合并到正在进行的内核合并窗口中。在其他硬件添加中，2026 年 Valve Steam 控制器正在获得初始内核驱动支持。</p><p>新的 Steam 控制器已开始发货，并且在 Steam 下所有主要平台从发布之初就得到了支持。随后，SDL 库添加了对 Steam 控制器的支持，以便在 Steam 之外使用，类似于原始 Steam 控制器的支持。</p><p>早在 2018 年，Linux 就引入了 Steam 控制器内核驱动，用于在依赖 Steam 运行时或 SDL 的软件之外作为传统 HID 驱动使用。该驱动现在已扩展以支持新的 Steam 控制器。</p><p>Vicki Pfau 致力于补丁，以现代化 hid-steam 控制器驱动并支持 2026 年控制器，使其达到与 2015 年原始型号相同的内核驱动支持水平。所有这些工作现在已出现在主线 Linux 7.3 中。</p><p>原始 Steam 控制器原生驱动在传感器支持方面存在长期差距。</p><p>Linux 7.3 的 HID 拉取请求还引入了 HID-HyperX 驱动，用于 HyperX QuadCast 2 USB 游戏麦克风的麦克风静音状态。</p><p>Linux 7.3 中 HID 子系统的另一个值得注意之处是新的 MSI Claw 游戏手柄驱动。</p><p>在罗技设备方面，增加了 HID++ 2.0 可重编程按键支持。</p><p>AMD 传感器融合中心（SFH）驱动为相关设备添加了平板模式切换支持。</p><p>Linux 7.3 内核合并的 HID 更新的完整列表可以通过以下链接找到：</p><p>AMD k10temp 驱动为 Linux 7.3 添加 EPYC Zen 5 每 CCD 温度监控</p><p>Linux 7.3 输入子系统更新合并，包含安全修复和其他改进</p><p>联想在 Linux 7.3 中为其 SE30G2 和 SE60 边缘 AI 计算机添加新的看门狗驱动</p><p>Intel 和 AMD 电源管理驱动改进为 Linux 7.3 做好准备</p><p>Linux 7.3 在 PowerPC 上支持内核内 Rust，开始初步启用 Power12</p><p>新 Linux 驱动为 ASUS ROG Astral 显卡启用 12VHPWR 监控</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>长期担任 Linux CIFS/SMB3 维护者的人去世</p><p>Linus Torvalds 经历了一场地狱般的调试会话，AI“极大地帮助”了他</p><p>特制的 NTFS 文件系统镜像允许在 Linux 上通过 NTFS3 驱动获得 root 访问权限</p><p>Linux 7.3 网络更改已合并，但开发人员因 AI/LLM 而“完全不堪重负”</p><p>Linux 7.2 发布，具有更快的 I/O、新的 AMD 和 Intel 驱动改进</p><p>X.Org Server 26.1 RC1 为五年来的首次功能发布做准备</p><p>两个非常令人兴奋的内存管理优化将进入 Linux 7.3</p><p>Modular 的 Mojo 语言在 Qualcomm 收购后现已开源</p><p>虽然拥有无广告浏览，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/gimp-new-project-file-format" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-HID" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

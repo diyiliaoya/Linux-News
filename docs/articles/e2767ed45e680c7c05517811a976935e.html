@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GIMP（终于）正在开发新的项目文件格式 — Linux 中文速报</title>
+<title>早期Linux 7.3内核基准测试显示部分性能提升，部分回退 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">软件应用</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>GIMP（终于）正在开发新的项目文件格式</h1>
+  <h1>早期Linux 7.3内核基准测试显示部分性能提升，部分回退</h1>
 
-  <div class="article-summary">GIMP正在开发一种新的项目文件格式，以解决现有XCF格式在处理大型复杂项目时的局限性。新格式将采用“压缩XML”结构，支持更快的保存速度，并可能实现自动保存功能。尽管新格式将默认用于新项目，但XCF支持仍将保留以确保向后兼容性。</div>
+  <div class="article-summary">在Linux 7.3内核合并窗口进行到一半时，Phoronix对Linux 7.0、7.1、7.2和7.3 Git内核进行了基准测试，测试平台为搭载Intel Xeon 678X处理器、NVIDIA RTX PRO 6000显卡的HP Z4 G6i工作站。测试结果显示，Linux 7.3在部分工作负载中带来性能提升，但在其他方面出现回退。测试使用了相同的配置和编译器，并采用Nouveau驱动。文章还列出了其他相关Linux性能测试的链接。</div>
 
-  <div class="article-body"><p>GIMP（终于）正在开发新的项目文件格式 - OMG! Ubuntu</p><p>GIMP正在开发一种新的项目文件格式，因为现有的格式无法处理更大、更复杂的项目。</p><p>自1997年以来，这款著名的自由开源图像编辑器一直使用二进制的.xcf格式来保存项目，以便图层、效果和其他内容可以再次编辑和调整——这在导出为JPEG或PNG等平面文件时是不会发生的。</p><p>在最近的一次开发更新中，团队表示他们发现当前格式存在“越来越多的限制”。</p><p>随着动画和多页文档等重大新功能被列入GIMP的近期路线图，它已经开始着手开发一种新的项目文件格式，该格式将采用“压缩XML”结构（这种结构通常被其他软件使用，包括办公套件）。</p><p>新的项目类型将支持更快的保存，因为作为一种高级的“zip”文件，只需保存编辑中发生变化的部分，而不是整个文件。这有可能最终为GIMP用户带来最长期请求的功能之一：自动保存！</p><p>现在要知道确切的技术细节或文件扩展名还为时过早——希望不是——因为根据博客文章，一切都“仍在设计和实现中”。</p><p>不过，XCF将继续保留</p><p>一旦GIMP的新文件格式就位，使用编辑器最新功能的新项目将默认使用新的项目格式。</p><p>但XCF支持将继续作为GIMP的一部分，以确保向后兼容性。谷歌的第一个标志是1998年用GIMP制作的XCF文件，这个古老的文件至今仍能在现代GIMP中打开，没有任何问题——团队表示对此感到“自豪”。</p><p>GIMP已经处理了不仅仅是XCF。除了打开和保存常见图像格式外，它还可以打开和导出Adobe Photoshop的.psd和OpenRaster的.ora文件。</p><p>既然已经学会了如何处理其他软件使用的项目文件，那么回过头来改进自己的文件格式也是理所当然的。随着现代性的不断推进，一个近30年的格式难免显得有些过时。</p></div>
+  <div class="article-body"><p>早期Linux 7.3内核基准测试显示部分性能提升，部分回退 - Phoronix</p><p>早期Linux 7.3内核基准测试显示部分性能提升，部分回退</p><p>发布于2026年8月24日上午09:38（美国东部时间）</p><p>在Linux内核合并窗口进行到一半，并且在我将HP Z4 G6i工作站（搭载Granite Rapids WS处理器）打包送回之前，我决定运行一些基准测试，以了解Linux 7.3 Git相对于之前稳定内核系列的性能表现。以下是Linux 7.3早期状态的首批基准测试结果，其中既有性能提升，也有性能回退。</p><p>在HP Z4 G6i工作站上，我对Linux 7.0、7.1、7.2和7.3 Git内核进行了基准测试，其余软件环境（Ubuntu 26.10每日构建版）保持一致。该工作站搭载48核/96线程的Intel Xeon 678X GNR-WS处理器，配备4×32GB DDR5-6400内存、SK海力士2TB NVMe固态硬盘，以及NVIDIA RTX PRO 6000 Blackwell显卡。</p><p>为了进行上游内核对比，RTX PRO 6000 Blackwell使用了Nouveau驱动。这包括Linux 7.3上Nouveau与Zink/NVK的配合，与之前版本相同……这一点对于理解本文中的某些数据非常重要。</p><p>所有测试的内核版本均使用相同的标准内核配置，每个后续内核版本仅采用Kconfig默认设置。所有内核均使用相同的编译器从源代码构建。虽然通常优先使用Ubuntu Mainline内核PPA以便于复现和透明性，但由于近期Ubuntu内核PPA构建持续失败且可靠性不佳，本次对比使用了本地构建的内核。</p><p>在Linux 7.0 / 7.1 / 7.2 / 7.3 Git（截至8月23日）内核上测试了数十种不同的工作负载，运行期间没有其他硬件或软件变更。感谢HP在过去一个月为Phoronix提供了Z4 G6i工作站，用于进行有趣的Linux基准测试。</p><p>Linux 7.1+在Framework Laptop Pro 13 / Core Ultra X9 388H上带来的有益性能提升</p><p>AMD EPYC Turin搭配PCIe 5.0存储，在Linux 7.2上展现出显著提升</p><p>KDE Plasma 6.7 vs. GNOME Shell 50.3 vs. Xfce 4.20在CachyOS上搭配NVIDIA显卡的对比</p><p>Linux 7.2提升Intel Panther Lake Xe3 Arc B390显卡性能</p><p>RISC-V RVV向量性能基准测试（SpacemiT K3 SoC）</p><p>Linux 7.2特性：缓存感知调度、USB4STREAM、AMD ISP4、AMDGPU HDMI 2.1 FRL</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/gimp-new-project-file-format" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/review/linux-73-early-benchmarks" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

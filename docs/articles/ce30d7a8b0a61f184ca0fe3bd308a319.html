@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GIMP（终于）正在开发新的项目文件格式 — Linux 中文速报</title>
+<title>Mozilla 公布在 Firefox 157 中正式支持 JPEG-XL 的计划 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">软件应用</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>GIMP（终于）正在开发新的项目文件格式</h1>
+  <h1>Mozilla 公布在 Firefox 157 中正式支持 JPEG-XL 的计划</h1>
 
-  <div class="article-summary">GIMP正在开发一种新的项目文件格式，以解决现有XCF格式在处理大型复杂项目时的局限性。新格式将采用“压缩XML”结构，支持更快的保存速度，并可能实现自动保存功能。尽管新格式将默认用于新项目，但XCF支持仍将保留以确保向后兼容性。</div>
+  <div class="article-summary">Mozilla 宣布计划在 Firefox 157 中默认启用 JPEG-XL 图像解码支持，该版本预计于 9 月底发布。目前 Firefox Nightly 已默认启用该功能以进行测试。Mozilla 认为 JPEG-XL 支持已足够稳定，适合在 Firefox 157 中正式推出。此举紧随 Chrome 推出 JPEG-XL 支持以及 Google Research 开发 Rust 版解码器 jxl-rs 之后。Mozilla 还对比了 JPEG-XL 与 AVIF 格式的优劣，指出 JPEG-XL 在无损图像、渐进式渲染和 JPEG 再压缩方面表现优异，而 AVIF 在网页质量照片和混合边缘/平面图像上更胜一筹，但渐进式渲染支持有限。</div>
 
-  <div class="article-body"><p>GIMP（终于）正在开发新的项目文件格式 - OMG! Ubuntu</p><p>GIMP正在开发一种新的项目文件格式，因为现有的格式无法处理更大、更复杂的项目。</p><p>自1997年以来，这款著名的自由开源图像编辑器一直使用二进制的.xcf格式来保存项目，以便图层、效果和其他内容可以再次编辑和调整——这在导出为JPEG或PNG等平面文件时是不会发生的。</p><p>在最近的一次开发更新中，团队表示他们发现当前格式存在“越来越多的限制”。</p><p>随着动画和多页文档等重大新功能被列入GIMP的近期路线图，它已经开始着手开发一种新的项目文件格式，该格式将采用“压缩XML”结构（这种结构通常被其他软件使用，包括办公套件）。</p><p>新的项目类型将支持更快的保存，因为作为一种高级的“zip”文件，只需保存编辑中发生变化的部分，而不是整个文件。这有可能最终为GIMP用户带来最长期请求的功能之一：自动保存！</p><p>现在要知道确切的技术细节或文件扩展名还为时过早——希望不是——因为根据博客文章，一切都“仍在设计和实现中”。</p><p>不过，XCF将继续保留</p><p>一旦GIMP的新文件格式就位，使用编辑器最新功能的新项目将默认使用新的项目格式。</p><p>但XCF支持将继续作为GIMP的一部分，以确保向后兼容性。谷歌的第一个标志是1998年用GIMP制作的XCF文件，这个古老的文件至今仍能在现代GIMP中打开，没有任何问题——团队表示对此感到“自豪”。</p><p>GIMP已经处理了不仅仅是XCF。除了打开和保存常见图像格式外，它还可以打开和导出Adobe Photoshop的.psd和OpenRaster的.ora文件。</p><p>既然已经学会了如何处理其他软件使用的项目文件，那么回过头来改进自己的文件格式也是理所当然的。随着现代性的不断推进，一个近30年的格式难免显得有些过时。</p></div>
+  <div class="article-body"><p>Mozilla 公布在 Firefox 157 中正式支持 JPEG-XL 的计划 - Phoronix</p><p>Mozilla 公布在 Firefox 157 中正式支持 JPEG-XL 的计划</p><p>2026 年 8 月 24 日，美国东部时间下午 12:43</p><p>虽然 Firefox 152 及以上版本已经提供了实验性的 JPEG-XL 支持，但 Mozilla 今天正式宣布了在 Firefox 网页浏览器中正式支持 JPEG-XL 图像格式的计划。</p><p>对于计划于 9 月底发布的 Firefox 157，其计划是在所有可用平台上默认启用 JPEG-XL 图像解码。目前，Firefox Nightly 已默认启用 JPEG-XL 支持，以帮助验证该功能，而 Mozilla 认为该支持已足够完善，可以在 Firefox 157 中稳定亮相。</p><p>此前，Chrome 已推出 JPEG-XL 支持，Google Research 也开发了 jxl-rs，这是一个基于 Rust 的 JPEG-XL 图像解码器，兼具高性能和高安全性。</p><p>在 Mozilla Hacks 博客文章中，他们详细阐述了 JPEG-XL 与 AVIF 图像格式的对比：</p><p>“JPEG XL：在无损图像、渐进式渲染以及无质量损失的 JPEG 再压缩方面表现出色。</p><p>AVIF：在网页质量的摄影图像以及混合锐利边缘和平面表面的图像方面表现出色。</p><p>尽管 AVIF 在网页质量下往往比 JPEG XL 产生更小的文件，但 AVIF 仅支持基本的渐进式渲染。因此，对于非常大的图像，可能值得接受 JPEG XL 带来的文件大小增加。”</p><p>关于 Firefox 中 JPEG-XL 计划的更多细节，请参阅此邮件列表帖子，其中说明了他们在 Blink 引擎中默认向所有用户提供 JPEG-XL 解码的意图。</p><p>Firefox 154 现已推出，包含“管理 AI”快速操作</p><p>Firefox 153 现已推出，支持 Vulkan 视频解码和实验性 JPEG-XL</p><p>Mozilla AI 发布 Llamafile 0.10.4，内置基于 Transcribe.cpp 的新 Transcribefile</p><p>Mozilla Firefox 使用 zlib-rs 以提高安全性和性能</p><p>Firefox 152 现已推出，默认内置 JPEG-XL 支持，并更新了设置界面</p><p>Firefox 合并 Vulkan 视频解码支持</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>长期担任 Linux CIFS/SMB3 维护者的开发者去世</p><p>Linus Torvalds 经历了一场地狱般的调试会话，AI“极大帮助”了他</p><p>特制的 NTFS 文件系统镜像允许在 Linux 上通过 NTFS3 驱动获得 root 访问权限</p><p>Linux 7.3 网络变更已合并，但开发者因 AI/LLM 而“完全不堪重负”</p><p>Linux 7.2 发布，I/O 更快，新增 AMD 和 Intel 驱动改进</p><p>X.Org Server 26.1 RC1 为五年来的首个功能版本做准备</p><p>Linux 7.3 中两项非常令人兴奋的内存管理优化</p><p>Modular 的 Mojo 语言在 Qualcomm 收购后现已开源</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/gimp-new-project-file-format" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Firefox-JPEG-XL-2026-Plans" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GIMP（终于）正在开发新的项目文件格式 — Linux 中文速报</title>
+<title>发行版发布：Vanilla OS 3 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">发行版</span>
+    <span class="source">DistroWatch</span>
   </div>
 
-  <h1>GIMP（终于）正在开发新的项目文件格式</h1>
+  <h1>发行版发布：Vanilla OS 3</h1>
 
-  <div class="article-summary">GIMP正在开发一种新的项目文件格式，以解决现有XCF格式在处理大型复杂项目时的局限性。新格式将采用“压缩XML”结构，支持更快的保存速度，并可能实现自动保存功能。尽管新格式将默认用于新项目，但XCF支持仍将保留以确保向后兼容性。</div>
+  <div class="article-summary">Vanilla OS 团队发布了基于 Debian Testing 分支的 Vanilla OS 3，代号“Reunion”。该版本支持 x86_64 和 ARM64 架构，所有镜像均为多架构，并包含 ARM64 构建。系统强调安全与透明，除 NVIDIA 镜像外均可完全重现构建。此次发布距 Vanilla OS 2 已有两年，旨在提供开箱即用的统一体验，覆盖从单板计算机到 ARM 笔记本和工作站的广泛硬件。</div>
 
-  <div class="article-body"><p>GIMP（终于）正在开发新的项目文件格式 - OMG! Ubuntu</p><p>GIMP正在开发一种新的项目文件格式，因为现有的格式无法处理更大、更复杂的项目。</p><p>自1997年以来，这款著名的自由开源图像编辑器一直使用二进制的.xcf格式来保存项目，以便图层、效果和其他内容可以再次编辑和调整——这在导出为JPEG或PNG等平面文件时是不会发生的。</p><p>在最近的一次开发更新中，团队表示他们发现当前格式存在“越来越多的限制”。</p><p>随着动画和多页文档等重大新功能被列入GIMP的近期路线图，它已经开始着手开发一种新的项目文件格式，该格式将采用“压缩XML”结构（这种结构通常被其他软件使用，包括办公套件）。</p><p>新的项目类型将支持更快的保存，因为作为一种高级的“zip”文件，只需保存编辑中发生变化的部分，而不是整个文件。这有可能最终为GIMP用户带来最长期请求的功能之一：自动保存！</p><p>现在要知道确切的技术细节或文件扩展名还为时过早——希望不是——因为根据博客文章，一切都“仍在设计和实现中”。</p><p>不过，XCF将继续保留</p><p>一旦GIMP的新文件格式就位，使用编辑器最新功能的新项目将默认使用新的项目格式。</p><p>但XCF支持将继续作为GIMP的一部分，以确保向后兼容性。谷歌的第一个标志是1998年用GIMP制作的XCF文件，这个古老的文件至今仍能在现代GIMP中打开，没有任何问题——团队表示对此感到“自豪”。</p><p>GIMP已经处理了不仅仅是XCF。除了打开和保存常见图像格式外，它还可以打开和导出Adobe Photoshop的.psd和OpenRaster的.ora文件。</p><p>既然已经学会了如何处理其他软件使用的项目文件，那么回过头来改进自己的文件格式也是理所当然的。随着现代性的不断推进，一个近30年的格式难免显得有些过时。</p></div>
+  <div class="article-body"><p>发行版发布：Vanilla OS 3</p><p>Vanilla OS 团队已宣布发布 OS 3，这是该项目基于 Debian“Testing”分支的不可变 Linux 发行版的全新版本。代号为“Reunion”，此主要版本支持两种处理器架构——x86_64 和 AArch64：</p><p>“在 Vanilla OS 2 'Orchid' 发布两年后，Vanilla OS 3 'Reunion' 现已可用。我们的使命保持不变——让 Vanilla OS 简单、稳定且安全。借助 Reunion，我们将用户跨架构汇聚在一起，为每个人提供开箱即用的体验。Vanilla OS 3 现已正式支持带有 UEFI 固件的 ARM64 设备，为从单板计算机到基于 ARM 的笔记本电脑和工作站的广泛硬件打开了大门。为实现这一目标，所有镜像现在均为多架构，并且每个软件包都包含 ARM64 构建。ARM64 上的体验与 AMD64 上的预期完全相同，功能上没有任何妥协。安全性和透明度仍然是 Vanilla OS 3 的核心。大多数镜像（由于内核模块，NVIDIA 镜像除外）现在完全可重现，这意味着构建过程始终从相同源生成逐位相同的镜像。”</p><p>欲了解更多信息，请参阅发布公告。</p><p>Vanilla-OS-3-stable-amd64.20260812.iso</p><p>Vanilla-OS-3-stable-arm64.20260812.iso</p><p>最近相关新闻和发布</p><p>发行版发布：Vanilla OS 3</p><p>发行版发布：Vanilla OS 2</p><p>开发版发布：Vanilla OS 2 Beta</p><p>发行版发布：Vanilla OS 22.10</p><p>Vanilla OS 是一个基于 Debian（在版本 2 之前曾基于 Ubuntu）的固定发布发行版，采用 GNOME 桌面，是一个不可变操作系统。系统的核心部分被锁定，以防止第三方应用程序或错误更新造成的不需要的更改和损坏。</p><p>https://vanillaos.org/</p><p>替代用户论坛</p><p>https://documentation.vanillaos.org/</p><p>https://github.com/Vanilla-OS/os/releases/</p><p>https://github.com/Vanilla-OS/os/issues</p><p>捐赠、购买或尝试的地点</p><p>https://vanillaos.org/get-involved/funding</p><p>最近相关新闻和发布</p><p>发行版发布：Vanilla OS 2</p><p>Vanilla OS 团队已宣布</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/gimp-new-project-file-format" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://distrowatch.com/12931" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

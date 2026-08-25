@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GIMP（终于）正在开发新的项目文件格式 — Linux 中文速报</title>
+<title>Linux 7.3 因安全与维护噩梦对 AF_ALG 实施新限制 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>GIMP（终于）正在开发新的项目文件格式</h1>
+  <h1>Linux 7.3 因安全与维护噩梦对 AF_ALG 实施新限制</h1>
 
-  <div class="article-summary">GIMP正在开发一种新的项目文件格式，以解决现有XCF格式在处理大型复杂项目时的局限性。新格式将采用“压缩XML”结构，支持更快的保存速度，并可能实现自动保存功能。尽管新格式将默认用于新项目，但XCF支持仍将保留以确保向后兼容性。</div>
+  <div class="article-summary">Linux 内核因 AF_ALG 接口存在安全漏洞和维护困难，在 7.3 版本中引入新的 af_alg_restrict sysctl 参数，默认限制该接口仅允许少量算法，以平衡安全与兼容性。该限制允许 IWD 无线守护进程等已知依赖者继续使用，同时支持通过配置恢复旧行为或完全禁用。此外，该版本还标记 Qualcomm QCE 驱动为损坏，并修复了 HWRNG 中的挂起/恢复竞态条件。</div>
 
-  <div class="article-body"><p>GIMP（终于）正在开发新的项目文件格式 - OMG! Ubuntu</p><p>GIMP正在开发一种新的项目文件格式，因为现有的格式无法处理更大、更复杂的项目。</p><p>自1997年以来，这款著名的自由开源图像编辑器一直使用二进制的.xcf格式来保存项目，以便图层、效果和其他内容可以再次编辑和调整——这在导出为JPEG或PNG等平面文件时是不会发生的。</p><p>在最近的一次开发更新中，团队表示他们发现当前格式存在“越来越多的限制”。</p><p>随着动画和多页文档等重大新功能被列入GIMP的近期路线图，它已经开始着手开发一种新的项目文件格式，该格式将采用“压缩XML”结构（这种结构通常被其他软件使用，包括办公套件）。</p><p>新的项目类型将支持更快的保存，因为作为一种高级的“zip”文件，只需保存编辑中发生变化的部分，而不是整个文件。这有可能最终为GIMP用户带来最长期请求的功能之一：自动保存！</p><p>现在要知道确切的技术细节或文件扩展名还为时过早——希望不是——因为根据博客文章，一切都“仍在设计和实现中”。</p><p>不过，XCF将继续保留</p><p>一旦GIMP的新文件格式就位，使用编辑器最新功能的新项目将默认使用新的项目格式。</p><p>但XCF支持将继续作为GIMP的一部分，以确保向后兼容性。谷歌的第一个标志是1998年用GIMP制作的XCF文件，这个古老的文件至今仍能在现代GIMP中打开，没有任何问题——团队表示对此感到“自豪”。</p><p>GIMP已经处理了不仅仅是XCF。除了打开和保存常见图像格式外，它还可以打开和导出Adobe Photoshop的.psd和OpenRaster的.ora文件。</p><p>既然已经学会了如何处理其他软件使用的项目文件，那么回过头来改进自己的文件格式也是理所当然的。随着现代性的不断推进，一个近30年的格式难免显得有些过时。</p></div>
+  <div class="article-body"><p>Linux 7.3 因安全与维护噩梦对 AF_ALG 实施新限制 - Phoronix</p><p>Linux 7.3 因安全与维护噩梦对 AF_ALG 实施新限制</p><p>发布于 2026 年 8 月 24 日下午 2:17（美国东部时间）。</p><p>过去的几个 Linux 内核版本一直在逐步削减该接口的功能，该接口用于用户空间程序访问内核内部的加密 API。Linux 一直在移除 AF_ALG 的特性，例如 AF_ALG 在 Linux 7.2 中迅速被弃用，而现在在 Linux 7.3 中它受到进一步限制。</p><p>在 Linux 7.3 中，新增了 af_alg_restrict sysctl 参数，默认限制 AF_ALG 的功能，仅提供有限的算法集。这个 af_alg_restrict sysctl 仍然可以设置为允许无限制访问，就像旧版 Linux 内核那样，或者如果希望在运行时完全阻止它。</p><p>由于安全漏洞和维护噩梦，默认的 af_alg_restrict=1 允许列表允许使用 CMAC AES、HMAC MD5、HMAC SHA1、HMAC SHA224、SHMAC SHA256、HMAC SHA384、HMAC SHA512、MD4、MD5、SHA1、SHA224、SHA256、SHA385 和 SHA512 哈希。这些算法被允许是因为已知 IWD 无线守护进程使用它们，而 IWD 仍然依赖 AF_ALG。</p><p>AF_ALG 的 skcipher 代码也有一个允许列表，包括 Adiantum XChaCha12 AES、Adiantum XChaCha20 AES、CBC AES、CBC DES、CBC DES3_EDE、CTR AES、ECB AES、ECB DES、HCTR2 AES 和 XTR AES，这些算法被 IWD、BlueZ 和 cryptsetup 使用。</p><p>关于这个新的 AF_ALG 可调参数和默认行为变更的更多细节，请参阅相关文档。</p><p>该变更已作为 Linux 7.3 的拉取请求的一部分合并。该拉取请求还将 Qualcomm QCE 驱动标记为损坏，从 Qualcomm / Sun8i / CAAM 驱动中移除 crypto_rng，并带来其他修复。此外，还修复了硬件随机数生成（HWRNG）代码中潜在的挂起/恢复竞态条件。</p><p>Linux ath11k 驱动改进为 Qualcomm WiFi 6 硬件带来 7 倍更低的延迟</p><p>Linux 7.3 网络变更已合并，但开发者因 AI/LLM 而“完全不堪重负”</p><p>NetworkManager 采用 AI 编码助手政策</p><p>Linux 网络持续受到 AI 补丁的轰炸</p><p>Linux 无线维护者坚决反对 AI/LLM 生成的垃圾补丁</p><p>Linux 7.3 添加对 MCTP-Over-USB v1.1 的支持</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他。</p><p>长期担任 Linux CIFS/SMB3 维护者的开发者去世</p><p>Linus Torvalds 经历了一场地狱般的调试会话，AI“极大地帮助”了他</p><p>特制的 NTFS 文件系统镜像允许在 Linux 上通过 NTFS3 驱动获得 root 访问权限</p><p>Linux 7.3 网络变更已合并，但开发者因 AI/LLM 而“完全不堪重负”</p><p>Linux 7.2 发布，带来更快的 I/O、新的 AMD 和 Intel 驱动改进</p><p>X.Org Server 26.1 RC1 为五年来的首个功能版本做准备</p><p>两个非常令人兴奋的内存管理优化将进入 Linux 7.3</p><p>Modular 的 Mojo 语言在 Qualcomm 收购后现已开源</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/gimp-new-project-file-format" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-AF-ALG-Restrictions" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
