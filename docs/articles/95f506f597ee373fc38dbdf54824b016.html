@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Linux 7.3 有望成为多年来最注重性能的内核版本之一 — Linux 中文速报</title>
+<title>COSMIC Epoch 1.7 发布：浏览网络文件系统不再缓慢 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Linux 7.3 有望成为多年来最注重性能的内核版本之一</h1>
+  <h1>COSMIC Epoch 1.7 发布：浏览网络文件系统不再缓慢</h1>
 
-  <div class="article-summary">Linux 7.3 的合并窗口仍在开放，但已确认多项性能优化：存储方面，EXT4 和 XFS 文件系统通过 IOmap 反弹缓冲、日志与 fsync 修复、缓存 v2 等改进，大幅提升吞吐量；调度器方面，针对 AMD GPU 的调度优化和 Intel 混合 CPU 的集群感知调度修复，减少了卡顿；内存管理方面，修复了反向映射和 zsmalloc 的锁延迟问题；实时工作负载的延迟显著降低；RISC-V 新增多个 ISA 扩展支持。这些改进使 7.3 成为近年来最注重性能的版本。</div>
+  <div class="article-summary">COSMIC Epoch 1.7 作为 System76 主导开发的基于 Rust 的开源桌面环境的最新更新，修复了 COSMIC-Files 文件管理器在浏览网络文件系统（如 SFTP）时速度缓慢的问题。此前，远程文件被当作本地文件处理，导致加载目录时产生过多操作，尤其在文件数量多或网络流量大时性能下降。本次更新通过改进远程文件系统检测，避免了不必要的操作，显著提升了浏览速度。此外，新版本还修复了解锁时屏幕不亮的问题，并改进了合成器的缩放行为，以及多项其他修复和改进。</div>
 
-  <div class="article-body"><p>Linux 7.3 有望成为多年来最注重性能的内核版本之一</p><p>合并窗口仍然开放，但更快的文件系统、更智能的调度器和实时延迟修复已经就位。</p><p>几天前我们在 X 上发帖，称 Linux 7.3 是多年来最注重性能的版本之一。现在，回顾自那以来合并窗口中实际落地的内容，这一说法似乎确实成立。</p><p>本版本的合并窗口在 7.2 发布后立即开启，除非有最后一刻的变动导致关闭时间推迟，否则将持续到本月底。</p><p>以下是目前确认将进入 7.3 版本的内容。</p><p>存储性能大幅提升</p><p>EXT4 一次性获得了多项更改。直接 I/O 现在通过 IOmap 反弹缓冲区运行，而不是回退到缓冲 I/O，将原本最高只能达到理论最大吞吐量一半的工作流程提升到接近 95% 的理论最大值。</p><p>日志和 fsync 路径中的两个独立修复各自带来了约 5 倍的提升：一个修复移除了多个日志任务同时运行时的不必要延迟，另一个修复在完整 fsync 期间跳过了对包含大量 extent 但没有空洞的文件进行不必要的空洞检测。</p><p>EXT4 缓存也从 v1 迁移到 v2，这是一个更安全且更快的选项，之前尚未成为默认。</p><p>XFS 也进行了一系列工作。并行直接 I/O 写入现在被允许，而此前文件系统过于严格；多块分配器通过批量分配跳过了不必要的工作。</p><p>在这两个文件系统之下，是一个重新设计的块层，基于单个迭代器回调构建，编译器可以内联该回调，而无需进行间接分发。</p><p>你无需为这些做任何事。一旦升级到 7.3，它们就会自动生效，而 IOmap 更改在快速 NVMe 上收益最大，将 EXT4 从 192 万 IOPS 提升到 219 万 IOPS。</p><p>重要的调度器工作</p><p>调度器现在围绕单个就绪队列进行调度，取代了旧的、容易出问题的设计。Peter 在一台老旧的 Sandy Bridge 机器上搭配 AMD Radeon RX 580 进行了测试，帧率和帧时间一致性都有显著提升。</p><p>如果你在性能不佳的硬件上玩游戏，这一改进应该会减少卡顿感。</p><p>Intel 混合 CPU 也得到修复。集群感知调度此前未能正确处理集群间的唤醒，而这一修复填补了 Alder Lake、Lunar Lake 和 Panther Lake 上的这一空白。</p><p>实际上，这意味着当你的笔记本电脑在处理繁重任务（如源码编译、游戏或视频导出）时，后台任务争夺小核资源，卡顿会减少。</p><p>内存管理修复</p><p>ZTE 工程师发现了一个反向映射中的 bug，该步骤在内核接触合并页之前检查哪些内存区域指向该页。在高负载下，一个内部锁可能卡住数百毫秒，冻结其他尝试使用它的操作。</p><p>延迟从约 700ms 降至 2ms 以下。简单来说，这意味着服务器和容器在内存压力下随机冻结的情况会减少。</p><p>小米工程师 Wenchao Hao 在 zsmalloc 中发现了类似的减速问题，zRAM 和 Zswap 使用 zsmalloc 来存储压缩内存。</p><p>在测试中，一个 20 核 Intel 系统上的性能提升高达 1.83 倍。通俗地说，在 Raspberry Pi 等低端板上你会感受到更快的响应，而在更强大的硬件上也有较小但真实的提升。</p><p>实时工作负载的更低延迟</p><p>每当一个 CPU 核心使用内核的 IPI 代码要求其他核心立即执行某项操作（如刷新内存缓存）时，内核过去会冻结该 CPU 上的所有其他任务，直到所有其他核心响应。</p><p>现在，其他任务可以继续运行，而不是被冻结。在繁忙的系统上，这种冻结等待可能会拉长并阻塞高优先级任务。</p><p>在使用 DPDK（一个为快速网络而构建的框架）的集群测试中，最慢请求的最坏情况延迟从约 17ms 降至约 1.5ms。大多数桌面用户不会注意到这一点，但对于网络和实时软件来说，这是一个重要的修复。</p><p>RISC-V 增加了对十一个更新的 ISA 扩展的支持。</p><p>EFI 运行时调用现在会超时，而不是无限期挂起。</p></div>
+  <div class="article-body"><p>COSMIC Epoch 1.7 发布：不再缓慢浏览网络文件系统 - Phoronix</p><p>COSMIC Epoch 1.7 于今日发布，这是由 System76 主导开发的基于 Rust 的开源桌面环境的最新更新。</p><p>我认为 COSMIC Epoch 1.7 中最值得注意的变化是 COSMIC-Files 文件管理器，通过 SFTP 等协议浏览网络文件系统将比以往快得多。自 2024 年以来，COSMIC 的文件管理器一直存在 SFTP 连接速度缓慢的问题。有人指出，COSMIC 的加载时间会随着给定目录中文件数量的增加而增加，并且网络流量也比使用 GNOME 的 Nautilus 文件管理器更大。</p><p>这一问题在过去一周内已通过改进远程文件系统检测和避免对非本地文件进行过多操作而得到修复。到目前为止，在 GNOME-Files 中，远程文件与本地文件被同等对待，因此在通过远程协议加载目录时会导致过多的工作。</p><p>COSMIC Epoch 1.7 还修复了计算机解锁时屏幕无法自动开启的问题，合成器将随着每次按键增加缩放，以及各种其他修复和改进。完整的 v1.7 更改列表可以在以下链接中找到：</p><p>COSMIC Epoch 1.6 发布，支持每应用音量控制，远程桌面准备</p><p>Omarchy 4.0 Linux 发行版发布，桌面 Shell 现已通过 Quickshell 实现</p><p>Flatpak 1.19 发布，包含九个安全修复</p><p>COSMIC Epoch 1.5 为 System76 桌面带来更多修复和改进</p><p>Starling：用 Swift 编写的新 Linux 桌面，自带 Wayland 合成器，并使用 AI 编写</p><p>COSMIC Epoch 1.4 发布，包含更多修复，COSMIC Monitor 新增强制退出功能</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>长期担任 Linux CIFS/SMB3 维护者的开发者去世</p><p>Linus Torvalds 经历了一场地狱般的调试会话，AI“极大帮助”了他</p><p>特制的 NTFS 文件系统镜像允许在 Linux 上通过 NTFS3 驱动获得 root 访问权限</p><p>Linux 7.3 网络更改已合并，但开发者因 AI/LLM 而“完全不堪重负”</p><p>X.Org Server 26.1 RC1 为五年来的首个功能版本做准备</p><p>Linux 7.3 中两项非常令人兴奋的内存管理优化</p><p>Modular 的 Mojo 语言在 Qualcomm 收购后现已开源</p><p>Linux 7.3 的 Rust 开始出现修复，为 Rust 的 GCC 后端做准备</p><p>虽然拥有无广告浏览，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/linux-7-3-preview/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/COSMIC-Epoch-1.7" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

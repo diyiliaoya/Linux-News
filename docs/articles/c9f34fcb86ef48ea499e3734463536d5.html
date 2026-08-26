@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Omarchy Linux 获科技界巨头800万美元投资 — Linux 中文速报</title>
+<title>Chrome/Chromium 正在试验 Flatpak 打包 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Omarchy Linux 获科技界巨头800万美元投资</h1>
+  <h1>Chrome/Chromium 正在试验 Flatpak 打包</h1>
 
-  <div class="article-summary">Omarchy Linux 创始人 DHH 宣布投入800万美元成立非营利组织 Omacom 基金会，用于支持项目发展及依赖的开源开发者。Hyprland 成为首个受益的外部项目，其开发者 Vaxry 获得三年独家赞助，可全职投入开发。此外，Framework 等公司也参与赞助，但此前因争议引发讨论。Omarchy 最新版本 Quattro 将 AI 代理集成到桌面系统中，这一战略可能吸引了投资者的关注。</div>
+  <div class="article-summary">Google 的 Chrome/Chromium 浏览器团队正在 Linux 上试验 Flatpak 打包，但尚未承诺官方支持。该实验性支持已合并到代码中，旨在测试受限沙箱配置和扩展 XDG 门户支持。打包脚本和模板已添加到 chrome/installer/linux/flatpak/，并引入了 enable_flatpak 构建参数。此举有望改善 Chrome 在非 RPM 和 Debian 发行版上的安装体验，但最终是否官方支持仍待观察。</div>
 
-  <div class="article-body"><p>Omarchy Linux 获科技界巨头800万美元投资</p><p>一个全新的非营利组织正在筹建，将管理这笔资金，而 Hyprland 成为首个受益的外部项目。</p><p>David Heinemeier Hansson（即 DHH）已经明确了他对桌面 Linux 的认真程度，这个数字是800万美元，这笔资金将注入一个名为 Omacom 的全新非营利组织。</p><p>DHH 目前正在注册成立该基金会，旨在覆盖 Omarchy 商标、基础设施和托管、项目推广，以及为其所依赖的开源开发者提供资金支持。</p><p>这笔资金不仅是为了让 Omarchy 触达更多用户，更是为了改变人们使用计算机的方式。</p><p>DHH 本人及其他几位投资者各投入了100万美元。</p><p>DHH 表示，人们已经喜欢使用 Omarchy，他希望这笔资金能尽可能持久，而不是一次性花完，同时最大化其效用。</p><p>Hyprland 率先受益</p><p>Hyprland 是 Omarchy 之外第一个获得这笔资金的项目。Omacom 将提供独家赞助，支持 Omarchy 所依赖的 Wayland 合成器开发者 Vaxry。</p><p>根据协议，Vaxry 将锁定三年合约，并有可能延长两年。</p><p>这样，Vaxry 就可以全职投入 Hyprland 的开发，无需为资金分心。作为协议的一部分，每月5欧元的订阅服务将被取消，所有相关服务将免费提供。</p><p>DHH 还开玩笑说，要为 Vaxry 找个女朋友。</p><p>“非常感谢 37signals（你好，我自己！😂）、Butterfly 和 Framework 帮助 Hyprland 走到今天。很高兴 Omacom 基金会能从10月10日起接管，让这位 Linux 新时代最优秀的开发者之一有机会全力以赴。”</p><p>（* 该协议不包括帮助 Vaxry 找女朋友的直接协助，但我个人愿意作为任何相关询问的推荐人。）</p><p>你还记得吗？</p><p>“我们很高兴继续赞助并支持更多 Linux 生态系统项目！我们最近也加入了 LVFS（Linux 供应商固件服务），并成为其（可能是第一个？）企业赞助商。我们很快还会宣布其他几项赞助！”</p><p>— Framework (@FrameworkPuter)</p><p>这不是我们第一次讨论资金和 Hyprland 的话题。早在2025年，Framework 就成为该项目的黄金级赞助商。但这引起了许多人的不满，因为不久后，官方论坛上出现了“Framework 支持极右翼种族主义者？”的帖子。</p><p>发帖者指责 Vaxry 早前被 freedesktop.org 封禁，并要求 Framework 解释为何资助该项目。Framework 官方账号当天发布了将 Omarchy 比作旧 Windows XP 产品密钥梗的帖子，使情况更加恶化，人们将其解读为对 DHH 的认可。</p><p>尽管 Framework 确实向 Omarchy 团队发送了硬件，但项目本身从未获得直接资金支持。后来，由于人们不断询问该公司资助了谁以及为何资助，Framework 不得不开始公布其赞助明细。</p><p>Omarchy 的未来方向</p><p>Omarchy 的最新版本 Quattro 默认将 AI 代理集成到桌面系统中，而不是将其视为附加功能。虽然八位赞助者中没有人公开表示 Omarchy 的 AI 押注影响了他们支持基金会的决定。</p><p>我的看法是，这一点很难忽视，尤其是考虑到 DHH 的公司正在大力投资 AI 基础设施。一个围绕 AI 代理构建的发行版，正是销售 AI 硬件的公司愿意支持的赌注。</p><p>这一切都与 DHH 所说的“真正实现 Linux 民主化”相呼应。</p><p>这800万美元和非营利结构是否能带来“Linux 桌面之年”，则是另一个问题。</p><p>Canonical 已为一个为期三年的博士项目提供资助，该项目旨在实现 Ubuntu 重要组件的 C 到 Rust 自动翻译。</p><p>Canonical 资助博士项目，推动 Ubuntu 的 C 到 Rust 自动翻译</p><p>这个为期三年的项目……</p></div>
+  <div class="article-body"><p>Chrome/Chromium 正在试验 Flatpak 打包 - Phoronix</p><p>Chrome/Chromium 正在试验 Flatpak 打包</p><p>发布于 2026 年 8 月 25 日晚上 8:22（美国东部时间）</p><p>负责 Chrome/Chromium 浏览器的 Google 工程师正在 Linux 上试验 Flatpak 打包。他们尚未承诺正式支持 Flatpak 包，但目前至少是在探索这一选项。</p><p>Google 浏览器团队的 Tom Anderson 今天合并了用于测试的实验性 Flatpak 打包支持。在合并说明中，解释了当前的测试意图，但尚未有任何正式支持的明确计划：</p><p>“在 chrome/installer/linux 中添加实验性 Flatpak 打包，以方便测试受限沙箱配置，并扩展现有的 XDG 门户支持。这并非承诺正式支持 Flatpak 包。</p><p>- 创建 chrome/installer/linux/flatpak/，包含打包脚本以及元数据、AppStream 元信息和启动器入口点的模板。</p><p>- 添加 enable_flatpak GN 构建参数（默认值为 false）。</p><p>- 在 InstallerConfig 中添加 package_format，并在为 Flatpak 打包时省略主机桌面集成工件（系统桌面文件、/usr/bin 符号链接、AppStream 应用数据、GNOME 默认应用、手册页和 AppArmor 配置文件）。</p><p>- 更新 common/installer.py，添加 Chromium（org.chromium.Chromium*）和 Google Chrome（com.google.Chrome*）的 Flatpak 配置和 App ID 映射。</p><p>- 泛化 common/desktop.template，以支持 Flatpak 和系统级桌面执行命令。</p><p>- 对非官方构建禁用 setuid 沙箱和 zlib 压缩。</p><p>- 更新 BUILD.gn，添加 flatpak 打包目标和别名。”</p><p>对于这项 Linux 应用沙箱和分发技术来说，这是一个令人兴奋的发展。这也将有助于改善 Google Chrome/Chromium 在除基于 RPM 和 Debian 的发行版之外的支持，提供更简洁的打包体验。</p><p>希望最终能证明其足够好，让 Google 正式支持 Chrome 的 Flatpak。</p><p>许多令人兴奋的 Google Summer of Code 2026 项目及大量 AI 内容</p><p>Chrome 147 稳定版发布，带来新限制和 Web 打印 API</p><p>Google 现在使用 AutoFDO 增强 Android 的 Linux 内核性能</p><p>Google 终于为 Linux 提供 Chrome ARM64 二进制文件</p><p>Google Chrome 转向两周发布周期</p><p>Chrome 146 现已进入 Beta 版，浏览器中神经网络 WebNN 原始试验启动</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动程序及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>长期担任 Linux CIFS/SMB3 维护者的开发者去世</p><p>Linus Torvalds 经历了一场地狱般的调试会话，AI 提供了“巨大帮助”</p><p>特制的 NTFS 文件系统镜像允许在 Linux 上通过 NTFS3 驱动获得 root 访问权限</p><p>Linux 7.3 网络更改已合并，但开发者因 AI/LLM 而“完全不堪重负”</p><p>X.Org Server 26.1 RC1 为五年来的首个功能版本做准备</p><p>Linux 7.3 中两项非常令人兴奋的内存管理优化</p><p>Modular 的 Mojo 语言在 Qualcomm 收购后现已开源</p><p>Linux 7.3 的 Rust 开始进行修复，为 Rust 的 GCC 后端做准备</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/omarchy-launches-omacom-foundation/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Chrome-Chromium-Flatpak" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

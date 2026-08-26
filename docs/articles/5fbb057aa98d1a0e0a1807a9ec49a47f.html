@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Linux 7.3 有望成为多年来最注重性能的内核版本之一 — Linux 中文速报</title>
+<title>Wayland被发现“本质上比X11更快，但未必更高效” — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Linux 7.3 有望成为多年来最注重性能的内核版本之一</h1>
+  <h1>Wayland被发现“本质上比X11更快，但未必更高效”</h1>
 
-  <div class="article-summary">Linux 7.3 的合并窗口仍在开放，但已确认多项性能优化：存储方面，EXT4 和 XFS 文件系统通过 IOmap 反弹缓冲、日志与 fsync 修复、缓存 v2 等改进，大幅提升吞吐量；调度器方面，针对 AMD GPU 的调度优化和 Intel 混合 CPU 的集群感知调度修复，减少了卡顿；内存管理方面，修复了反向映射和 zsmalloc 的锁延迟问题；实时工作负载的延迟显著降低；RISC-V 新增多个 ISA 扩展支持。这些改进使 7.3 成为近年来最注重性能的版本。</div>
+  <div class="article-summary">PorteuX Linux发行版开发了xfwm4-gl窗口管理器，并进行了Wayland与X11的性能和效率基准测试。测试在AMD Ryzen 7 7840HS系统上进行，结果显示Wayland在合成方面本质上比X11更快，但功耗效率并非总是更优。KDE Plasma在Wayland上表现优异，而LXDE/Openbox在X11上则更省电。</div>
 
-  <div class="article-body"><p>Linux 7.3 有望成为多年来最注重性能的内核版本之一</p><p>合并窗口仍然开放，但更快的文件系统、更智能的调度器和实时延迟修复已经就位。</p><p>几天前我们在 X 上发帖，称 Linux 7.3 是多年来最注重性能的版本之一。现在，回顾自那以来合并窗口中实际落地的内容，这一说法似乎确实成立。</p><p>本版本的合并窗口在 7.2 发布后立即开启，除非有最后一刻的变动导致关闭时间推迟，否则将持续到本月底。</p><p>以下是目前确认将进入 7.3 版本的内容。</p><p>存储性能大幅提升</p><p>EXT4 一次性获得了多项更改。直接 I/O 现在通过 IOmap 反弹缓冲区运行，而不是回退到缓冲 I/O，将原本最高只能达到理论最大吞吐量一半的工作流程提升到接近 95% 的理论最大值。</p><p>日志和 fsync 路径中的两个独立修复各自带来了约 5 倍的提升：一个修复移除了多个日志任务同时运行时的不必要延迟，另一个修复在完整 fsync 期间跳过了对包含大量 extent 但没有空洞的文件进行不必要的空洞检测。</p><p>EXT4 缓存也从 v1 迁移到 v2，这是一个更安全且更快的选项，之前尚未成为默认。</p><p>XFS 也进行了一系列工作。并行直接 I/O 写入现在被允许，而此前文件系统过于严格；多块分配器通过批量分配跳过了不必要的工作。</p><p>在这两个文件系统之下，是一个重新设计的块层，基于单个迭代器回调构建，编译器可以内联该回调，而无需进行间接分发。</p><p>你无需为这些做任何事。一旦升级到 7.3，它们就会自动生效，而 IOmap 更改在快速 NVMe 上收益最大，将 EXT4 从 192 万 IOPS 提升到 219 万 IOPS。</p><p>重要的调度器工作</p><p>调度器现在围绕单个就绪队列进行调度，取代了旧的、容易出问题的设计。Peter 在一台老旧的 Sandy Bridge 机器上搭配 AMD Radeon RX 580 进行了测试，帧率和帧时间一致性都有显著提升。</p><p>如果你在性能不佳的硬件上玩游戏，这一改进应该会减少卡顿感。</p><p>Intel 混合 CPU 也得到修复。集群感知调度此前未能正确处理集群间的唤醒，而这一修复填补了 Alder Lake、Lunar Lake 和 Panther Lake 上的这一空白。</p><p>实际上，这意味着当你的笔记本电脑在处理繁重任务（如源码编译、游戏或视频导出）时，后台任务争夺小核资源，卡顿会减少。</p><p>内存管理修复</p><p>ZTE 工程师发现了一个反向映射中的 bug，该步骤在内核接触合并页之前检查哪些内存区域指向该页。在高负载下，一个内部锁可能卡住数百毫秒，冻结其他尝试使用它的操作。</p><p>延迟从约 700ms 降至 2ms 以下。简单来说，这意味着服务器和容器在内存压力下随机冻结的情况会减少。</p><p>小米工程师 Wenchao Hao 在 zsmalloc 中发现了类似的减速问题，zRAM 和 Zswap 使用 zsmalloc 来存储压缩内存。</p><p>在测试中，一个 20 核 Intel 系统上的性能提升高达 1.83 倍。通俗地说，在 Raspberry Pi 等低端板上你会感受到更快的响应，而在更强大的硬件上也有较小但真实的提升。</p><p>实时工作负载的更低延迟</p><p>每当一个 CPU 核心使用内核的 IPI 代码要求其他核心立即执行某项操作（如刷新内存缓存）时，内核过去会冻结该 CPU 上的所有其他任务，直到所有其他核心响应。</p><p>现在，其他任务可以继续运行，而不是被冻结。在繁忙的系统上，这种冻结等待可能会拉长并阻塞高优先级任务。</p><p>在使用 DPDK（一个为快速网络而构建的框架）的集群测试中，最慢请求的最坏情况延迟从约 17ms 降至约 1.5ms。大多数桌面用户不会注意到这一点，但对于网络和实时软件来说，这是一个重要的修复。</p><p>RISC-V 增加了对十一个更新的 ISA 扩展的支持。</p><p>EFI 运行时调用现在会超时，而不是无限期挂起。</p></div>
+  <div class="article-body"><p>PorteuX Linux发行版专注于高性能、模块化和极简设计，他们分叉了Xfce的xfwm4窗口管理器，创建了“xfwm4-gl”以支持OpenGL合成。为此，他们开发了一个窗口管理器/合成器基准测试，用于评估典型操作的性能和效率。他们的结果非常引人注目。</p><p>PorteuX Linux开发者向Phoronix分享了他们使用不同合成器选项评估Wayland和X11的发现。测试在搭载Radeon 780M集成显卡和32GB内存的AMD Ryzen 7 7840HS系统上运行PorteuX 2.8 Linux进行。他们的数据相当有趣：</p><p>他们在消息中指出，发现“Wayland本质上比X11更快，但未必更高效——就合成而言（不包括openbox），我们的新xfwm4-gl在这方面表现最佳。”他们发现KDE Plasma在Wayland上性能出色，Labwc和COSMIC也紧随其后。在功耗效率方面，他们发现LXDE搭配Openbox在X11上以及xfwm4-gl略优于基于Wayland的替代方案。同样，LXDE/Openbox和Xfce搭配xfwm4-gl的CPU利用率最低。</p><p>想了解更多关于他们的合成器/窗口管理器性能测试的人可以通过[链接]了解。我会研究它以备将来使用。想了解更多关于Porteux发行版本身的人可以通过[链接]了解。他们的Xfce xfwm4分叉可以在[链接]找到。</p><p>相关新闻：</p><p>- Denial WM：全新Wayland合成器，直接嵌入Flutter</p><p>- Wayfire Wayland合成器接近v1.0发布</p><p>- Hyprland 0.56发布，为这款Wayland合成器带来多项增强</p><p>- Wayland 1.26发布，新增指针扭曲事件</p><p>- Weston 16.0合成器发布，改进HDR和Vulkan修复</p><p>- Wayland 1.26 RC1发布，新增事件以确保正确的指针坐标</p><p>Michael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动等主题。他还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过[链接]关注他。</p><p>其他新闻：</p><p>- 长期维护Linux CIFS/SMB3的维护者去世</p><p>- Linus Torvalds经历“地狱级”调试会话，AI“极大帮助”</p><p>- 特制NTFS文件系统镜像允许在Linux上通过NTFS3驱动获取root权限</p><p>- Linux 7.3网络变更已合并，但开发者因AI/LLM“完全不堪重负”</p><p>- X.Org Server 26.1 RC1准备五年来的首个功能版本</p><p>- Linux 7.3将引入两项令人兴奋的内存管理优化</p><p>- Modular的Mojo语言在Qualcomm收购后现已开源</p><p>- Rust for Linux 7.3开始修复，为Rust的GCC后端做准备</p><p>虽然拥有无广告浏览，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由[公司]所有</p><p>所有商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/linux-7-3-preview/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Wayland-X11-Performance-PorteuX" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -8292,5 +8292,137 @@
     "title_zh": "愤怒之下，开发者“破坏”OpenMandriva仓库",
     "summary_zh": "一名OpenMandriva开发者因争执而涉嫌破坏项目仓库，引发了对安全性和开源治理的担忧。该事件凸显了开源社区中个人冲突可能对项目稳定性造成的风险，以及加强治理和应急响应机制的必要性。",
     "fulltext_zh": "一名OpenMandriva开发者据称在一次争执后破坏了项目仓库，引发了对安全性和开源治理的担忧。\n\n该报道最初发表于Linux Today。"
+  },
+  "4f40c665f5fbb29a7f649a3fdecff543": {
+    "id": "4f40c665f5fbb29a7f649a3fdecff543",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/ubuntu-2610-hits-feature-freeze",
+    "title_en": "Ubuntu 26.10 ‘Stonking Stingray’ hits feature freeze",
+    "summary_en": "Ubuntu 26.10, codenamed &#8216;Stonking Stingray&#8217;, entered feature freeze on 20 August – though the formal announcement arrive later than usual. From this point onwards, development focus shifts from landing major changes to improving them, along with the rest of the package set, ahead of the final, stable Ubuntu 26.10 release in October. &#8220;Ideally, you should all now be focusing on bug fixing rather than getting new features into the release&#8221;, said Paride Legovini, engineer at ",
+    "pub_date": "Tue, 25 Aug 2026 01:07:09 +0000",
+    "title_zh": "Ubuntu 26.10 ‘Stonking Stingray’ 进入功能冻结阶段",
+    "summary_zh": "Ubuntu 26.10（代号“Stonking Stingray”）于8月20日进入功能冻结阶段，尽管正式公告比往常稍晚。此后，开发重点从引入重大变更转向改进现有功能及软件包，为10月的最终稳定版做准备。Canonical工程师Paride Legovini在邮件列表中建议开发者专注于修复bug而非添加新功能。虽然主要软件包更新仍可能通过功能冻结例外（FFE）申请加入，但需获批准。壁纸、Yaru主题等视觉调整将在9月10日用户界面冻结前完成。内核方面，Ubuntu 26.10可能搭载Linux 7.3而非原计划的7.2。正式版将于2026年10月15日发布，9月24日提供测试版。",
+    "fulltext_zh": "Ubuntu 26.10，代号“Stonking Stingray”，于8月20日进入功能冻结阶段——尽管正式公告比往常来得稍晚。\n\n从此刻起，开发重点从引入重大变更转向改进这些变更以及其余软件包，为10月最终稳定版Ubuntu 26.10的发布做准备。\n\n“理想情况下，你们现在都应该专注于修复bug，而不是为发布引入新功能，”Canonical工程师Paride Legovini在Ubuntu开发者邮件列表的一篇帖子中表示。\n\n然而，Ubuntu 26.10的最终构成——预计将提供GNOME 51、以及GPU驱动管理等诸多变更——尚未完全敲定。\n\n主要软件包更新仍有可能进入最终发布，但开发者必须申请功能冻结例外（FFE）并获得批准，才能将其纳入，这遵循Ubuntu常规的发布流程。\n\n在冻结截止日期前上传到归档中的软件包，若包含重大变更但仍在提议队列中，也将被纳入。\n\n不添加新功能、仅修复bug的软件包上传，即使版本号大幅提升，也不需要FFE——功能冻结，顾名思义，是关于功能的。\n\n更多面向用户的变更仍将陆续到来，壁纸、Yaru主题工作以及其他视觉调整将在9月10日用户界面冻结前完成。同样，如有需要，可以申请例外。\n\n至于内核选择，内核的到来早于预期。Canonical曾表示将瞄准v7.2内核，但现在，Ubuntu 26.10有可能搭载Linux 7.3——即使该版本在10月仍处于候选发布状态。\n\nUbuntu 26.10计划于2026年10月15日发布，但9月24日将提供测试版，供那些想要提前体验的用户使用。"
+  },
+  "e5fae06f7121b555559a90ac719c5ff6": {
+    "id": "e5fae06f7121b555559a90ac719c5ff6",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/openterface-keymod-crowdfunding-campaign/",
+    "title_en": "This Tiny USB Device Turns Your Phone Into a Keyboard, Mouse, and SSH Terminal",
+    "summary_en": "The $42 open source dongle gives you BIOS-level keyboard and mouse control plus SSH access. No software installation is needed on the target machine.",
+    "pub_date": "Tue, 25 Aug 2026 09:44:54 GMT",
+    "title_zh": "这款微型USB设备将手机变成键盘、鼠标和SSH终端",
+    "summary_zh": "TechxArtisan推出了一款名为KeyMod的开源USB设备，售价42美元，可将智能手机变成键盘、鼠标、游戏手柄甚至SSH终端。它通过USB连接目标机器，同时提供HID键盘鼠标和USB网络桥接功能，无需安装驱动即可在BIOS、启动菜单等环境中使用。KeyMod支持BLE 5.3，并有USB-C和USB-A两种型号，可通过配套应用KeyCmd实现远程命令输入、宏操作、演示模式等功能。此外，它还具备实验性的AI代理模式，可调用LLM自动执行终端命令。",
+    "fulltext_zh": "这款微型USB设备将手机变成键盘、鼠标和SSH终端\n\n这款售价42美元的开源加密狗让你获得BIOS级别的键盘和鼠标控制，以及SSH访问权限。目标机器上无需安装任何软件。\n\n有一台无头Raspberry Pi想连接它？你不需要用电脑。用智能手机就能做到。\n\nTechxArtisan的最新设备将你的智能手机变成键盘、鼠标、游戏手柄，甚至SSH终端。\n\n这些人之前推出过KVM-over-USB设备，比如Openterface Mini-KVM。现在他们正在开发KeyMod，一个微型USB桥接器，可以通过手机与计算机交互，实现多种功能。\n\nKeyMod Mini和KeyMod Plus的主要规格：\n- 采用WCH CH32V208 RISC-V微控制器\n- HID键盘和鼠标，加上USB网络桥接（SSH、VNC、文件传输），两者同时工作\n- 两款型号均支持BLE 5.3；KeyMod Plus额外提供有线USB选项，以获得更高带宽\n- KeyCmd应用，支持Android（提供APK）和iOS（即将推出）\n- Mini使用USB-C接口，Plus使用USB-A接口\n\n两款型号售价均为24美元。该项目正在CrowdSupply上众筹。\n\n有趣的地方不在于键盘和鼠标部分，而在于KeyMod同时执行两个USB任务。让我解释一下。\n\n你将它插入目标机器，它会显示为一个USB复合设备：一个标准的HID键盘和鼠标，以及一个使用CDC-ECM标准的USB网络桥接器，基本上作为一个私有USB以太网链路工作。目标机器获得固定IP 192.168.11.2，你的手机则位于192.168.11.1。无需DHCP，无需寻找Wi-Fi，在大多数系统上无需安装驱动。\n\n由于HID输入在操作系统加载之前就能工作，KeyMod也能进入BIOS屏幕、启动菜单和恢复环境。这与Openterface Mini-KVM的功能类似，只是没有视频输出。\n\nKeyCmd应用决定KeyMod接下来做什么。他们的描述提到，它提供无线键盘、触摸板和数字键盘。还增加了快捷方式中心和编写并发送功能，让你可以在手机上起草长命令、API密钥或许可证密钥，检查后再以真实按键的形式发送出去。\n\n还有用于脚本化按键序列的宏功能，用于Keynote和Google Slides的演示模式，用于模拟器的游戏手柄模式，以及针对Blender、VS Code等的快捷方式中心配置。\n\n请注意，KeyCmd目前仅提供APK格式，不在Google Play商店中。iOS版本标记为“即将推出”。我希望在设备发货前处理好这个问题，因为Google计划限制应用侧载，而Apple也以设置围墙花园而闻名。\n\n现在，网络桥接使得通过BLE或USB进行SSH终端连接成为可能，无需网络设置。目前支持macOS和Linux目标系统。Windows支持需要RNDIS而不是CDC-ECM，这仍在开发中。啊！作为Linux用户，这真是太令人满意了；）\n\nMini和Plus运行相同的软件，只是连接方式不同。KeyMod Mini是USB-C接口，仅支持BLE，尺寸为25 x 15 x 5毫米，重约2.4克，小到可以挂在钥匙链或手机挂绳上。KeyMod Plus是USB-A接口，增加了到手机的有线USB连接，速度可达10 Mbps（而BLE为2 Mbps），更适合长期插在服务器、旧PC或机架设备上。\n\n售价42美元，与Openterface Mini-KVM（39美元）接近，但两者都无法像KeyMod那样通过BLE进行SSH。\n\n不仅是软件，似乎现在每个硬件都要有AI。\n\n所以，还有一个实验性的AI代理模式。你添加自己的LLM API密钥（OpenAI、Anthropic、Gemini、Ollama等），用自然语言描述目标，如“检查日志”或“重启服务”，模型会规划一系列终端命令，并在执行前逐一显示供你批准。\n\n在较新的iPhone（14 Pro及以上）上，KeyCmd还可以运行本地小模型，TechxArtisan表示已测试了在1GB RAM下运行的0.6B Qwen模型。这显然处于早期阶段，TechxArtisan自己也表示可能会在相当长一段时间内保持实验性质。\n\n有几件事你应该知道。BLE加密是……"
+  },
+  "c9f34fcb86ef48ea499e3734463536d5": {
+    "id": "c9f34fcb86ef48ea499e3734463536d5",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Chrome-Chromium-Flatpak",
+    "title_en": "Chrome/Chromium Experimenting With Flatpak Packaging",
+    "summary_en": "Google engineers responsible for the Chrome/Chromium web browser are experimenting with Flatpak packaging on Linux. They aren't yet committed to officially supporting Flatpak packages but for now are at least exploring the option...",
+    "pub_date": "Tue, 25 Aug 2026 20:22:59 -0400",
+    "title_zh": "Chrome/Chromium 正在试验 Flatpak 打包",
+    "summary_zh": "Google 的 Chrome/Chromium 浏览器团队正在 Linux 上试验 Flatpak 打包，但尚未承诺官方支持。该实验性支持已合并到代码中，旨在测试受限沙箱配置和扩展 XDG 门户支持。打包脚本和模板已添加到 chrome/installer/linux/flatpak/，并引入了 enable_flatpak 构建参数。此举有望改善 Chrome 在非 RPM 和 Debian 发行版上的安装体验，但最终是否官方支持仍待观察。",
+    "fulltext_zh": "Chrome/Chromium 正在试验 Flatpak 打包 - Phoronix\nChrome/Chromium 正在试验 Flatpak 打包\n发布于 2026 年 8 月 25 日晚上 8:22（美国东部时间）\n\n负责 Chrome/Chromium 浏览器的 Google 工程师正在 Linux 上试验 Flatpak 打包。他们尚未承诺正式支持 Flatpak 包，但目前至少是在探索这一选项。\n\nGoogle 浏览器团队的 Tom Anderson 今天合并了用于测试的实验性 Flatpak 打包支持。在合并说明中，解释了当前的测试意图，但尚未有任何正式支持的明确计划：\n\n“在 chrome/installer/linux 中添加实验性 Flatpak 打包，以方便测试受限沙箱配置，并扩展现有的 XDG 门户支持。这并非承诺正式支持 Flatpak 包。\n- 创建 chrome/installer/linux/flatpak/，包含打包脚本以及元数据、AppStream 元信息和启动器入口点的模板。\n- 添加 enable_flatpak GN 构建参数（默认值为 false）。\n- 在 InstallerConfig 中添加 package_format，并在为 Flatpak 打包时省略主机桌面集成工件（系统桌面文件、/usr/bin 符号链接、AppStream 应用数据、GNOME 默认应用、手册页和 AppArmor 配置文件）。\n- 更新 common/installer.py，添加 Chromium（org.chromium.Chromium*）和 Google Chrome（com.google.Chrome*）的 Flatpak 配置和 App ID 映射。\n- 泛化 common/desktop.template，以支持 Flatpak 和系统级桌面执行命令。\n- 对非官方构建禁用 setuid 沙箱和 zlib 压缩。\n- 更新 BUILD.gn，添加 flatpak 打包目标和别名。”\n\n对于这项 Linux 应用沙箱和分发技术来说，这是一个令人兴奋的发展。这也将有助于改善 Google Chrome/Chromium 在除基于 RPM 和 Debian 的发行版之外的支持，提供更简洁的打包体验。\n\n希望最终能证明其足够好，让 Google 正式支持 Chrome 的 Flatpak。\n\n许多令人兴奋的 Google Summer of Code 2026 项目及大量 AI 内容\nChrome 147 稳定版发布，带来新限制和 Web 打印 API\nGoogle 现在使用 AutoFDO 增强 Android 的 Linux 内核性能\nGoogle 终于为 Linux 提供 Chrome ARM64 二进制文件\nGoogle Chrome 转向两周发布周期\nChrome 146 现已进入 Beta 版，浏览器中神经网络 WebNN 原始试验启动\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动程序及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\n长期担任 Linux CIFS/SMB3 维护者的开发者去世\nLinus Torvalds 经历了一场地狱般的调试会话，AI 提供了“巨大帮助”\n特制的 NTFS 文件系统镜像允许在 Linux 上通过 NTFS3 驱动获得 root 访问权限\nLinux 7.3 网络更改已合并，但开发者因 AI/LLM 而“完全不堪重负”\nX.Org Server 26.1 RC1 为五年来的首个功能版本做准备\nLinux 7.3 中两项非常令人兴奋的内存管理优化\nModular 的 Mojo 语言在 Qualcomm 收购后现已开源\nLinux 7.3 的 Rust 开始进行修复，为 Rust 的 GCC 后端做准备\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "1acdf9ddbe49b0843e5fd5068ff4123f": {
+    "id": "1acdf9ddbe49b0843e5fd5068ff4123f",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.0-mk2-Multikernel",
+    "title_en": "Linux 7.0-mk2 Released For Multi-Kernel Linux With Promising Performance Results",
+    "summary_en": "Last year a multi-kernel architecture was proposed for the Linux kernel to allow multiple independent kernel instances to co-exist on a single physical machine. Each kernel with \"multikernel\" Linux can run on dedicated CPU cores whole sharing the underlying hardware resources. Linux 7.0-mk2 released today with the kernel patched for this multi-kernel behavior...",
+    "pub_date": "Tue, 25 Aug 2026 17:30:00 -0400",
+    "title_zh": "Linux 7.0-mk2 发布：多内核 Linux 性能表现令人期待",
+    "summary_zh": "Linux 7.0-mk2 作为多内核 Linux 的首个公开版本正式发布。该架构允许单个物理机器上同时运行多个独立的 Linux 内核实例，每个实例运行在专用 CPU 核心上，共享底层硬件资源，无需虚拟机监控程序。开发者通过设备树声明实例，并支持动态迁移资源。初步基准测试显示，其性能优于 KVM，在 24 核配置下双内核运行比单内核更具优势。目前该特性尚未确定是否及何时合入主线内核。",
+    "fulltext_zh": "Linux 7.0-mk2 发布：多内核 Linux 性能表现令人期待\n\nLinux 7.0-mk2 发布：多内核 Linux 性能表现令人期待\n\n2026年8月25日下午5:30（美国东部时间）\n\n此前，有人提出了 Linux 内核的多内核架构，允许单个物理机器上共存多个独立的内核实例。采用“多内核”Linux 的每个内核可以运行在专用的 CPU 核心上，同时共享底层硬件资源。今天发布的 Linux 7.0-mk2 正是针对这一多内核行为打了补丁的内核。\n\n在过去一年中，多内核补丁陆续发布，而今天它们被便捷地整合到 Linux 7.0 内核树中，以便于测试和评估。这被认为是多内核 Linux 树的首个公开版本。\n\nMultikernel Technologies 的开发者 Cong Wang 总结道：\n\n“mklinux 让一台机器能够在裸机上同时运行多个独立的 Linux 内核，而无需虚拟机监控程序。宿主内核拥有一个 CPU、内存和 PCI 设备池，将该池划分为多个实例，并通过 kexec_file_load() 将生成的内核启动到每个实例中。每个生成的内核都在自己的 CPU、自己的物理内存和自己的设备上原生运行。没有任何模拟，也没有任何陷入；唯一共享的是你选择共享的内容。\n\n实例通过写入 /sys/fs/multikernel/ 的设备树来声明，设备树覆盖可以在不重启的情况下在池和运行中的实例之间移动内存、CPU 和设备。实例可以被关闭，其资源被回收，并用不同的内核重新生成。\n\n与虚拟机相比，没有 VM 退出路径，没有第二级页表，也没有设备模型。与容器相比，实例不共享内核，因此一个内核中的锁、崩溃或漏洞无法影响到另一个内核。”\n\n今天的公开版本还包含了一些基准测试，在 2 核/vCPU 对比中展示了其相对于 KVM 的性能优势：\n\n此外，还有在 24 核配置下的基准测试，显示运行两个内核比运行一个内核具有性能优势：\n\n更多细节可以在今天发布在 Linux 内核邮件列表上的公告中找到。目前尚不清楚多内核支持是否以及何时会进入主线 Linux 内核，如果会的话，可能还需要一段时间。"
+  },
+  "95f506f597ee373fc38dbdf54824b016": {
+    "id": "95f506f597ee373fc38dbdf54824b016",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/COSMIC-Epoch-1.7",
+    "title_en": "COSMIC Epoch 1.7 Released: No Longer Slow Browsing Network Filesystems",
+    "summary_en": "COSMIC Epoch 1.7 is out today as the newest update to this Rust-based open-source desktop environment with development led by System76...",
+    "pub_date": "Tue, 25 Aug 2026 16:46:55 -0400",
+    "title_zh": "COSMIC Epoch 1.7 发布：浏览网络文件系统不再缓慢",
+    "summary_zh": "COSMIC Epoch 1.7 作为 System76 主导开发的基于 Rust 的开源桌面环境的最新更新，修复了 COSMIC-Files 文件管理器在浏览网络文件系统（如 SFTP）时速度缓慢的问题。此前，远程文件被当作本地文件处理，导致加载目录时产生过多操作，尤其在文件数量多或网络流量大时性能下降。本次更新通过改进远程文件系统检测，避免了不必要的操作，显著提升了浏览速度。此外，新版本还修复了解锁时屏幕不亮的问题，并改进了合成器的缩放行为，以及多项其他修复和改进。",
+    "fulltext_zh": "COSMIC Epoch 1.7 发布：不再缓慢浏览网络文件系统 - Phoronix\n\nCOSMIC Epoch 1.7 于今日发布，这是由 System76 主导开发的基于 Rust 的开源桌面环境的最新更新。\n\n我认为 COSMIC Epoch 1.7 中最值得注意的变化是 COSMIC-Files 文件管理器，通过 SFTP 等协议浏览网络文件系统将比以往快得多。自 2024 年以来，COSMIC 的文件管理器一直存在 SFTP 连接速度缓慢的问题。有人指出，COSMIC 的加载时间会随着给定目录中文件数量的增加而增加，并且网络流量也比使用 GNOME 的 Nautilus 文件管理器更大。\n\n这一问题在过去一周内已通过改进远程文件系统检测和避免对非本地文件进行过多操作而得到修复。到目前为止，在 GNOME-Files 中，远程文件与本地文件被同等对待，因此在通过远程协议加载目录时会导致过多的工作。\n\nCOSMIC Epoch 1.7 还修复了计算机解锁时屏幕无法自动开启的问题，合成器将随着每次按键增加缩放，以及各种其他修复和改进。完整的 v1.7 更改列表可以在以下链接中找到：\n\nCOSMIC Epoch 1.6 发布，支持每应用音量控制，远程桌面准备\nOmarchy 4.0 Linux 发行版发布，桌面 Shell 现已通过 Quickshell 实现\nFlatpak 1.19 发布，包含九个安全修复\nCOSMIC Epoch 1.5 为 System76 桌面带来更多修复和改进\nStarling：用 Swift 编写的新 Linux 桌面，自带 Wayland 合成器，并使用 AI 编写\nCOSMIC Epoch 1.4 发布，包含更多修复，COSMIC Monitor 新增强制退出功能\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\n长期担任 Linux CIFS/SMB3 维护者的开发者去世\nLinus Torvalds 经历了一场地狱般的调试会话，AI“极大帮助”了他\n特制的 NTFS 文件系统镜像允许在 Linux 上通过 NTFS3 驱动获得 root 访问权限\nLinux 7.3 网络更改已合并，但开发者因 AI/LLM 而“完全不堪重负”\nX.Org Server 26.1 RC1 为五年来的首个功能版本做准备\nLinux 7.3 中两项非常令人兴奋的内存管理优化\nModular 的 Mojo 语言在 Qualcomm 收购后现已开源\nLinux 7.3 的 Rust 开始出现修复，为 Rust 的 GCC 后端做准备\n\n虽然拥有无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "a81b1af07ca8625abe3f4ac86b8486d9": {
+    "id": "a81b1af07ca8625abe3f4ac86b8486d9",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/LLVM-23.1-Released",
+    "title_en": "LLVM/Clang 23.1 Released With AMD Zen 6 & NVIDIA Rigel Support, Partial C++26 Support",
+    "summary_en": "LLVM 23.1 was released today on-schedule as the first stable release of the LLVM 23 series as the H2'2026 update to this open-source compiler stack...",
+    "pub_date": "Tue, 25 Aug 2026 15:40:00 -0400",
+    "title_zh": "LLVM/Clang 23.1 发布：支持 AMD Zen 6 与 NVIDIA Rigel，部分支持 C++26",
+    "summary_zh": "LLVM 23.1 于 2026 年 8 月 25 日如期发布，作为该开源编译器栈 2026 年下半年的首个稳定版本。本次更新带来了多项重要改进，包括对 AMD Zen 6（znver6）处理器的支持、x86 轻量级故障隔离（LFI）目标、针对 NVIDIA Rosa 处理器的初步支持、Arm C1-Ultra 调度模型、新的 AMD HIP 卸载驱动程序、部分 C++26 支持（-std=c++2c）、更多 C2Y 语言功能、LLD 链接器改进、AMDGPU GFX1310 目标支持、SpacemiT X100 RISC-V 目标支持，以及 AVX-512 BMM 支持等。源代码现已可用，预构建二进制文件即将发布。",
+    "fulltext_zh": "LLVM/Clang 23.1 发布：支持 AMD Zen 6 与 NVIDIA Rigel，部分支持 C++26 - Phoronix\n\nLLVM/Clang 23.1 发布：支持 AMD Zen 6 与 NVIDIA Rigel，部分支持 C++26\n\n2026 年 8 月 25 日下午 3:40（美国东部时间）\n\nLLVM 23.1 于今日如期发布，作为该系列的首个稳定版本，也是这一开源编译器栈 2026 年下半年的更新。\n\nLLVM 23.1 带来了许多显著改进，从 AMD Zen 6“znver6”支持，到各种 C/C++ 语言增强以及其他多项变更。\n\n新的 LLVM 版本带来了 x86 轻量级故障隔离（LFI）目标支持、对即将推出的 NVIDIA Rosa 处理器的初步支持、Arm C1-Ultra 调度模型、新的 AMD HIP 卸载驱动程序、对 C++26 的部分支持（通过 -std=c++2c）、更多 C2Y 语言功能、LLD 链接器改进、各种编译器诊断改进、AMDGPU GFX1310 目标支持、SpacemiT X100 RISC-V 目标支持、针对多种较新 RISC-V 指令的实验性汇编器支持，以及 AVX-512 BMM 支持（作为针对 Zen 6 处理器的 AMD znver6 目标引入的一部分）。\n\nLLVM 23.1.0 的下载可通过 [链接] 获取。源代码现已可用，而预构建的二进制文件也将很快发布，供那些不想自行构建的用户使用。\n\n[相关文章链接]\n- LLVM 23.1-rc1 发布：支持 AMD Zen 6 与 AVX-512 BMM 及其他编译器增强\n- LLVM 合并 x86 LFI“轻量级故障隔离”目标，用于进程内沙箱\n- LLVM Clang 合并对 NVIDIA Rigel 核心的初步支持，面向下一代 Rosa CPU\n- “我要让 Linux 内核邮件列表燃烧”：著名 LLVM Linux 开发者回归\n- LLVM/Clang 初步支持 Hygon x86 CPU 的编译器目标\n- LLVM 将提供 Zstd 压缩二进制文件，以“显著减小”下载体积\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动程序及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过 [链接] 关注他。\n\n[其他新闻]\n- 长期担任 Linux CIFS/SMB3 维护者的开发者去世\n- Linus Torvalds 经历了一场“地狱级”调试会话，AI“极大地帮助”了他\n- 特制的 NTFS 文件系统镜像可在 Linux 上通过 NTFS3 驱动获取 root 权限\n- Linux 7.3 网络变更已合并，但开发者因 AI/LLM 而“完全不堪重负”\n- X.Org Server 26.1 RC1 为五年来的首个功能版本做准备\n- 两个非常令人兴奋的内存管理优化将进入 Linux 7.3\n- Modular 的 Mojo 语言在 Qualcomm 收购后现已开源\n- Linux 7.3 的 Rust 支持开始为 Rust 的 GCC 后端做准备\n\n[广告/导航等无关内容已忽略]\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026。所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "5fbb057aa98d1a0e0a1807a9ec49a47f": {
+    "id": "5fbb057aa98d1a0e0a1807a9ec49a47f",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Wayland-X11-Performance-PorteuX",
+    "title_en": "Wayland Found To Be \"Intrinsically Faster Than X11, But Not Necessarily More Efficient\"",
+    "summary_en": "The PorteuX Linux distribution focused on being a high performance, modular, and minimalist distro took to forking Xfce's xfwm4 window manager into \"xfwm4-gl\" for OpenGL compositing support. As part of that they developed a window manager / compositor benchmark for evaluating the performance and efficiency of typical operations. Their results are fascinating...",
+    "pub_date": "Tue, 25 Aug 2026 13:37:28 -0400",
+    "title_zh": "Wayland被发现“本质上比X11更快，但未必更高效”",
+    "summary_zh": "PorteuX Linux发行版开发了xfwm4-gl窗口管理器，并进行了Wayland与X11的性能和效率基准测试。测试在AMD Ryzen 7 7840HS系统上进行，结果显示Wayland在合成方面本质上比X11更快，但功耗效率并非总是更优。KDE Plasma在Wayland上表现优异，而LXDE/Openbox在X11上则更省电。",
+    "fulltext_zh": "PorteuX Linux发行版专注于高性能、模块化和极简设计，他们分叉了Xfce的xfwm4窗口管理器，创建了“xfwm4-gl”以支持OpenGL合成。为此，他们开发了一个窗口管理器/合成器基准测试，用于评估典型操作的性能和效率。他们的结果非常引人注目。\n\nPorteuX Linux开发者向Phoronix分享了他们使用不同合成器选项评估Wayland和X11的发现。测试在搭载Radeon 780M集成显卡和32GB内存的AMD Ryzen 7 7840HS系统上运行PorteuX 2.8 Linux进行。他们的数据相当有趣：\n\n他们在消息中指出，发现“Wayland本质上比X11更快，但未必更高效——就合成而言（不包括openbox），我们的新xfwm4-gl在这方面表现最佳。”他们发现KDE Plasma在Wayland上性能出色，Labwc和COSMIC也紧随其后。在功耗效率方面，他们发现LXDE搭配Openbox在X11上以及xfwm4-gl略优于基于Wayland的替代方案。同样，LXDE/Openbox和Xfce搭配xfwm4-gl的CPU利用率最低。\n\n想了解更多关于他们的合成器/窗口管理器性能测试的人可以通过[链接]了解。我会研究它以备将来使用。想了解更多关于Porteux发行版本身的人可以通过[链接]了解。他们的Xfce xfwm4分叉可以在[链接]找到。\n\n相关新闻：\n- Denial WM：全新Wayland合成器，直接嵌入Flutter\n- Wayfire Wayland合成器接近v1.0发布\n- Hyprland 0.56发布，为这款Wayland合成器带来多项增强\n- Wayland 1.26发布，新增指针扭曲事件\n- Weston 16.0合成器发布，改进HDR和Vulkan修复\n- Wayland 1.26 RC1发布，新增事件以确保正确的指针坐标\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动等主题。他还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过[链接]关注他。\n\n其他新闻：\n- 长期维护Linux CIFS/SMB3的维护者去世\n- Linus Torvalds经历“地狱级”调试会话，AI“极大帮助”\n- 特制NTFS文件系统镜像允许在Linux上通过NTFS3驱动获取root权限\n- Linux 7.3网络变更已合并，但开发者因AI/LLM“完全不堪重负”\n- X.Org Server 26.1 RC1准备五年来的首个功能版本\n- Linux 7.3将引入两项令人兴奋的内存管理优化\n- Modular的Mojo语言在Qualcomm收购后现已开源\n- Rust for Linux 7.3开始修复，为Rust的GCC后端做准备\n\n虽然拥有无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026，由[公司]所有\n所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "8e4b91d1bc71c4d1b66673177cd07828": {
+    "id": "8e4b91d1bc71c4d1b66673177cd07828",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/peazip-11-2-file-archiver-adds-zim-archive-support/",
+    "title_en": "PeaZip 11.2 File Archiver Adds ZIM Archive Support",
+    "summary_en": "PeaZip 11.2 adds support for ZIM archives, expanding the file archiver’s format compatibility alongside other improvements and fixes.\nThe post PeaZip 11.2 File Archiver Adds ZIM Archive Support appeared first on Linux Today.",
+    "pub_date": "Tue, 25 Aug 2026 07:02:46 +0000",
+    "title_zh": "PeaZip 11.2 文件归档器新增 ZIM 归档支持",
+    "summary_zh": "PeaZip 11.2 版本发布，新增对 ZIM 归档格式的支持，进一步扩展了该文件归档器的格式兼容性，同时包含其他改进和修复。此更新使得用户能够更便捷地处理 ZIM 文件，提升了软件的实用性和灵活性。",
+    "fulltext_zh": "PeaZip 11.2 新增了对 ZIM 归档的支持，扩展了文件归档器的格式兼容性，并包含其他改进和修复。\n\n该文章最初发表于 Linux Today。"
+  },
+  "a0445c5994c8d03438cb9ffc526ae253": {
+    "id": "a0445c5994c8d03438cb9ffc526ae253",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/fastfetch-2-66-system-information-tool-released-with-better-amd-gpu-detection/",
+    "title_en": "Fastfetch 2.66 System Information Tool Released with Better AMD GPU Detection",
+    "summary_en": "Fastfetch 2.66 improves AMD GPU detection and brings additional refinements to the popular system information tool for command-line users.\nThe post Fastfetch 2.66 System Information Tool Released with Better AMD GPU Detection appeared first on Linux Today.",
+    "pub_date": "Tue, 25 Aug 2026 07:01:50 +0000",
+    "title_zh": "Fastfetch 2.66 系统信息工具发布，改进 AMD GPU 检测",
+    "summary_zh": "Fastfetch 2.66 版本发布，主要改进了 AMD GPU 检测功能，并为这款广受欢迎的命令行系统信息工具带来了其他优化。该工具面向命令行用户，提供系统信息展示。此次更新进一步提升了硬件识别的准确性，增强了用户体验。",
+    "fulltext_zh": "Fastfetch 2.66 改进了 AMD GPU 检测，并为这款面向命令行用户的热门系统信息工具带来了其他优化。\n\n该文章最初发表于 Linux Today。"
+  },
+  "5ae86bc293d3449d0fa01ea500abdd78": {
+    "id": "5ae86bc293d3449d0fa01ea500abdd78",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/navidrome-0-63-music-server-streamer-adds-karaoke-style-lyrics/",
+    "title_en": "Navidrome 0.63 Music Server & Streamer Adds Karaoke-Style Lyrics",
+    "summary_en": "Navidrome 0.63 adds karaoke-style synchronized lyrics, enhancing the self-hosted music server and streaming experience with a more interactive playback feature.\nThe post Navidrome 0.63 Music Server &amp; Streamer Adds Karaoke-Style Lyrics appeared first on Linux Today.",
+    "pub_date": "Tue, 25 Aug 2026 07:00:43 +0000",
+    "title_zh": "Navidrome 0.63 音乐服务器与流媒体服务新增卡拉OK风格歌词",
+    "summary_zh": "Navidrome 0.63 版本引入了卡拉OK风格的同步歌词功能，提升了自托管音乐服务器和流媒体播放的交互体验。该更新使得用户在播放音乐时能够看到与歌曲同步滚动的歌词，增强了音乐欣赏的沉浸感。此版本专注于改善播放功能，为用户带来更丰富的音乐体验。",
+    "fulltext_zh": "Navidrome 0.63 新增了卡拉OK风格的同步歌词功能，增强了自托管音乐服务器和流媒体播放体验，提供了更具交互性的播放特性。\n\n该文章最初发表于 Linux Today。"
+  },
+  "553df106643f1f3e65ce5f8072d0bd8a": {
+    "id": "553df106643f1f3e65ce5f8072d0bd8a",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/cosmic-desktops-big-visual-upgrade-is-finally-here/",
+    "title_en": "COSMIC Desktop’s Big Visual Upgrade Is Finally Here",
+    "summary_en": "COSMIC Desktop receives its long-awaited visual upgrade, bringing a refreshed interface and design improvements to System76’s desktop environment.\nThe post COSMIC Desktop’s Big Visual Upgrade Is Finally Here appeared first on Linux Today.",
+    "pub_date": "Tue, 25 Aug 2026 06:59:33 +0000",
+    "title_zh": "COSMIC桌面的大规模视觉升级终于到来",
+    "summary_zh": "System76的COSMIC桌面环境迎来了期待已久的视觉升级，带来了焕然一新的界面和设计改进。此次更新旨在提升用户体验，使桌面更加现代化和美观。",
+    "fulltext_zh": "COSMIC桌面迎来了期待已久的视觉升级，为System76的桌面环境带来了焕然一新的界面和设计改进。\n\n该文章首次发布于Linux Today。"
+  },
+  "e49b1dd4ac639939a3185523dcf3841e": {
+    "id": "e49b1dd4ac639939a3185523dcf3841e",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/debian-13-6-released-with-120-security-fixes-and-124-stability-updates/",
+    "title_en": "Debian 13.6 Released with 120 Security Fixes and 124 Stability Updates",
+    "summary_en": "Debian 13.6 is now available with 120 security fixes and 124 stability updates, delivering a safer and more reliable experience for users.\nThe post Debian 13.6 Released with 120 Security Fixes and 124 Stability Updates appeared first on Linux Today.",
+    "pub_date": "Tue, 25 Aug 2026 06:56:57 +0000",
+    "title_zh": "Debian 13.6 发布：包含 120 项安全修复和 124 项稳定性更新",
+    "summary_zh": "Debian 项目发布了 Debian 13.6 版本，该版本集成了 120 项安全修复和 124 项稳定性更新，旨在为用户提供更安全、更可靠的系统体验。此版本是 Debian 13 系列的最新维护更新，建议用户及时升级以获取这些改进。",
+    "fulltext_zh": "Debian 13.6 现已发布，包含 120 项安全修复和 124 项稳定性更新，为用户带来更安全、更可靠的体验。\n\n该文章《Debian 13.6 Released with 120 Security Fixes and 124 Stability Updates》最初出现在 Linux Today 上。"
   }
 }
