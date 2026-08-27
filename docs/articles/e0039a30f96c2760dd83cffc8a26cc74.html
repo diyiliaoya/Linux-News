@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 26.10 ‘Stonking Stingray’ 进入功能冻结阶段 — Linux 中文速报</title>
+<title>你应该关注Chromium的Flatpak实验 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Ubuntu 26.10 ‘Stonking Stingray’ 进入功能冻结阶段</h1>
+  <h1>你应该关注Chromium的Flatpak实验</h1>
 
-  <div class="article-summary">Ubuntu 26.10（代号“Stonking Stingray”）于8月20日进入功能冻结阶段，尽管正式公告比往常稍晚。此后，开发重点从引入重大变更转向改进现有功能及软件包，为10月的最终稳定版做准备。Canonical工程师Paride Legovini在邮件列表中建议开发者专注于修复bug而非添加新功能。虽然主要软件包更新仍可能通过功能冻结例外（FFE）申请加入，但需获批准。壁纸、Yaru主题等视觉调整将在9月10日用户界面冻结前完成。内核方面，Ubuntu 26.10可能搭载Linux 7.3而非原计划的7.2。正式版将于2026年10月15日发布，9月24日提供测试版。</div>
+  <div class="article-summary">Chromium的源代码树中新增了一个实验性补丁，支持将浏览器打包为Flatpak格式。目前该功能默认关闭，但若正式推出，将为Linux用户提供官方Flatpak安装方式，并可能为Google Chrome的Flatpak版本铺平道路。社区维护的Flatpak版本已颇受欢迎，官方支持将带来更直接的权限管理和更新。不过，Flatpak也有占用空间大、沙箱限制等缺点，因此官方Flatpak未必成为所有人的首选。</div>
 
-  <div class="article-body"><p>Ubuntu 26.10，代号“Stonking Stingray”，于8月20日进入功能冻结阶段——尽管正式公告比往常来得稍晚。</p><p>从此刻起，开发重点从引入重大变更转向改进这些变更以及其余软件包，为10月最终稳定版Ubuntu 26.10的发布做准备。</p><p>“理想情况下，你们现在都应该专注于修复bug，而不是为发布引入新功能，”Canonical工程师Paride Legovini在Ubuntu开发者邮件列表的一篇帖子中表示。</p><p>然而，Ubuntu 26.10的最终构成——预计将提供GNOME 51、以及GPU驱动管理等诸多变更——尚未完全敲定。</p><p>主要软件包更新仍有可能进入最终发布，但开发者必须申请功能冻结例外（FFE）并获得批准，才能将其纳入，这遵循Ubuntu常规的发布流程。</p><p>在冻结截止日期前上传到归档中的软件包，若包含重大变更但仍在提议队列中，也将被纳入。</p><p>不添加新功能、仅修复bug的软件包上传，即使版本号大幅提升，也不需要FFE——功能冻结，顾名思义，是关于功能的。</p><p>更多面向用户的变更仍将陆续到来，壁纸、Yaru主题工作以及其他视觉调整将在9月10日用户界面冻结前完成。同样，如有需要，可以申请例外。</p><p>至于内核选择，内核的到来早于预期。Canonical曾表示将瞄准v7.2内核，但现在，Ubuntu 26.10有可能搭载Linux 7.3——即使该版本在10月仍处于候选发布状态。</p><p>Ubuntu 26.10计划于2026年10月15日发布，但9月24日将提供测试版，供那些想要提前体验的用户使用。</p></div>
+  <div class="article-body"><p>你应该关注Chromium的Flatpak实验</p><p>Chromium的源代码树中新增了对将浏览器打包为Flatpak格式的实验性支持，该补丁已经合并。这是一个小改动，基本上是一个位于禁用构建标志后面的提交，但如果你一直想在Linux上通过Flatpak官方运行Chromium，这种变化值得关注。</p><p>目前，Chromium的其他Flatpak打包实例是非官方的社区构建，一个在Flathub上，另一个在ungoogled-chromium中。这个新补丁位于Chromium的Linux安装脚本内部，默认情况下通过构建标志保持关闭：</p><p>启用该标志后，构建系统将生成Flatpak版本的浏览器，而不是通常的软件包，省略了Flatpak文件不需要的桌面特定组件和系统文件。</p><p>根据补丁作者的说法，目标是改善Chromium通过Flatpak的权限系统与桌面交互的方式。不过，他也指出，这并不代表Chromium承诺发布官方Flatpak包。</p><p>官方Flatpak将非常棒</p><p>如前所述，如果你想将Chromium安装为Flatpak，那么Flathub上的社区维护构建和ungoogled-chromium是最容易访问的方式。这两者在Linux用户中都很受欢迎，即使不考虑去Google化版本的热度，社区维护的版本平均每月下载量已超过27,000次。</p><p>官方包意味着人们可以在Linux上获得相同的Chromium体验，只是以Flatpak形式提供，由Chromium自己的开发者直接处理沙箱权限、更新和桌面集成，而不是将这些工作留给开源贡献者。</p><p>这也不仅限于Chromium；该补丁已经为Chromium（org.chromium.Chromium）和Google Chrome（org.chromium.Chrome）映射了应用ID，因此如果此功能最终发布，Chrome Flatpak也可能遵循相同的路径。</p><p>这还将为Linux用户提供一种更直接的安装Chromium或Chrome的方式，与现有的TAR、DEB和RPM选项并列。</p><p>现状如何</p><p>Flatpak有其缺点。Flatpak应用往往比传统软件包占用更多磁盘空间，因为它们通常自带库，而不是共享系统上已有的库。</p><p>Flatpak的沙箱默认限制应用对文件、设备、网络资源以及主机系统其他部分的访问。当应用需要访问沙箱外的资源时，可以请求额外权限，这为用户和开发者增加了另一层配置。</p><p>这些都不意味着Flatpak是糟糕的选择，但确实意味着官方Chromium包不会自动成为每个人安装浏览器的首选方式。</p><p>目前，这个补丁有一个默认关闭的构建标志，仅此而已。它并不确认官方Flatpak即将到来。但如果这个实验最终成功，值得关注。</p><p>喜欢这次更新吗？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无需承诺</p><p>一个对开源软件、定制PC构建、赛车运动以及探索这个世界无限可能性充满热情的书呆子。</p><p>这个小USB设备将你的手机变成键盘、鼠标和SSH终端</p><p>Linux 7.3正成为多年来最注重性能的内核版本之一</p><p>Omarchy Linux刚刚从科技界大腕那里获得800万美元投资</p><p>TeamSpeak将允许你直接给朋友打电话</p><p>Linux创始人Linus Torvalds刚刚用AI修复了一个内核错误</p><p>成为更好的Linux用户</p><p>通过FOSS每周通讯，你学到有用的Linux技巧，每</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/ubuntu-2610-hits-feature-freeze" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/experimental-chromium-flatpak-packaging/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

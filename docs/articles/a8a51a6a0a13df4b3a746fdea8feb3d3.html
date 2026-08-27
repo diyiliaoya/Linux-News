@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 26.10 ‘Stonking Stingray’ 进入功能冻结阶段 — Linux 中文速报</title>
+<title>Linux 7.3 KSMBD 增加对 Apple Time Machine 备份的互操作性 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 26.10 ‘Stonking Stingray’ 进入功能冻结阶段</h1>
+  <h1>Linux 7.3 KSMBD 增加对 Apple Time Machine 备份的互操作性</h1>
 
-  <div class="article-summary">Ubuntu 26.10（代号“Stonking Stingray”）于8月20日进入功能冻结阶段，尽管正式公告比往常稍晚。此后，开发重点从引入重大变更转向改进现有功能及软件包，为10月的最终稳定版做准备。Canonical工程师Paride Legovini在邮件列表中建议开发者专注于修复bug而非添加新功能。虽然主要软件包更新仍可能通过功能冻结例外（FFE）申请加入，但需获批准。壁纸、Yaru主题等视觉调整将在9月10日用户界面冻结前完成。内核方面，Ubuntu 26.10可能搭载Linux 7.3而非原计划的7.2。正式版将于2026年10月15日发布，9月24日提供测试版。</div>
+  <div class="article-summary">Linux 7.3 内核中的 KSMBD（内核 SMB3/CIFS 服务器）新增了对 Apple Time Machine 备份的可选支持，通过实现 Apple 的 SMB2 扩展（如 Finder、流、COPYCHUNK 等），使 macOS 的 backupd 能够通过 SMB 协议将数据备份到 Linux 服务器。这些扩展未公开文档，需逆向工程实现，因此目前为可选功能。此外，KSMBD 还实现了 SMB2 命令序列窗口、SMB3 请求重放、每共享加密和 SMB Direct RDMA 加密支持。同时，Linux 7.3 的 CIFS/SMB3 客户端修复了 33 个问题，但无重大新功能，因维护者 Steve French 不幸去世，由 Paulo Alcantara 接任。</div>
 
-  <div class="article-body"><p>Ubuntu 26.10，代号“Stonking Stingray”，于8月20日进入功能冻结阶段——尽管正式公告比往常来得稍晚。</p><p>从此刻起，开发重点从引入重大变更转向改进这些变更以及其余软件包，为10月最终稳定版Ubuntu 26.10的发布做准备。</p><p>“理想情况下，你们现在都应该专注于修复bug，而不是为发布引入新功能，”Canonical工程师Paride Legovini在Ubuntu开发者邮件列表的一篇帖子中表示。</p><p>然而，Ubuntu 26.10的最终构成——预计将提供GNOME 51、以及GPU驱动管理等诸多变更——尚未完全敲定。</p><p>主要软件包更新仍有可能进入最终发布，但开发者必须申请功能冻结例外（FFE）并获得批准，才能将其纳入，这遵循Ubuntu常规的发布流程。</p><p>在冻结截止日期前上传到归档中的软件包，若包含重大变更但仍在提议队列中，也将被纳入。</p><p>不添加新功能、仅修复bug的软件包上传，即使版本号大幅提升，也不需要FFE——功能冻结，顾名思义，是关于功能的。</p><p>更多面向用户的变更仍将陆续到来，壁纸、Yaru主题工作以及其他视觉调整将在9月10日用户界面冻结前完成。同样，如有需要，可以申请例外。</p><p>至于内核选择，内核的到来早于预期。Canonical曾表示将瞄准v7.2内核，但现在，Ubuntu 26.10有可能搭载Linux 7.3——即使该版本在10月仍处于候选发布状态。</p><p>Ubuntu 26.10计划于2026年10月15日发布，但9月24日将提供测试版，供那些想要提前体验的用户使用。</p></div>
+  <div class="article-body"><p>Linux 7.3 KSMBD 增加对 Apple Time Machine 备份的互操作性 - Phoronix</p><p>Linux 7.3 KSMBD 增加对 Apple Time Machine 备份的互操作性</p><p>2026年8月26日下午3:09（美国东部时间）</p><p>作为内核中的 SMB3/CIFS 服务器，KSMBD 相比用户空间的 SMB/CIFS 协议实现具有更高的性能和更低的资源占用，而随着开发中的 KSMBD 现在支持可选的 Apple Time Machine 集成，它变得更加有用。这使得通过 backupd 进行的 Apple Time Machine SMB 备份可以使用 Linux KSMBD 服务器来备份数据。这是因为 Apple Time Machine 依赖许多 Apple SMB 扩展，而此前 Linux KSMBD 并不支持这些扩展。</p><p>Apple 的“AAPL”SMB2 扩展包括 Finder、流、COPYCHUNK、稀疏文件、CHANGE_NOTIFY 和 RPC 兼容性位。通过 Gael Blivet 编写的代码，这些 Apple 扩展中已有足够多的部分被实现，以满足 Apple Time Machine 与 KSMBD 的对接。</p><p>这些 Apple 扩展没有公开文档，必须从客户端/服务器行为中逆向工程得出。因此，至少目前这项支持是可选启用的。</p><p>Linux 7.3 中的 KSMBD 还实现了 SMB2 命令序列窗口支持、SMB3 请求重放支持、每共享 SMB3 加密支持，以及 SMB Direct RDMA 加密支持。</p><p>关于这些新功能以及对这个 Linux 内核 SMB 服务器的许多修复的更多细节，请参阅相关链接。</p><p>与此同时，本周还合并了针对 Linux 7.3 的客户端更新。其中包含三十三个客户端修复。由于维护者 Steve French 不幸突然去世，Paulo Alcantara 接任后，没有安排重大功能变更。</p><p>Linux 7.3 FUSE 带来显著的性能改进</p><p>现代 NTFS Linux 驱动增加对 Windows 系统压缩（WOF）的读取支持</p><p>Linux 7.3 Device Mapper 包含许多修复，包括 Claude Opus 的代码清理</p><p>Linux 7.3 改进基于基准的 RAID 5/6 算法选择</p><p>Linux 7.3 为上游化 FAMFS 文件系统做准备</p><p>长期 Linux CIFS/SMB3 维护者去世</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过20,000篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他。</p><p>长期 Linux CIFS/SMB3 维护者去世</p><p>Linus Torvalds 经历了一场地狱般的调试会话，AI“极大地帮助”了他</p><p>特制的 NTFS 文件系统镜像允许在 Linux 上通过 NTFS3 驱动获得 root 访问权限</p><p>Wayland 被发现“本质上比 X11 更快，但未必更高效”</p><p>Linux 7.3 网络变更已合并，但开发者因 AI/LLM 而“完全不知所措”</p><p>X.Org Server 26.1 RC1 为五年来的首个功能版本做准备</p><p>两个非常令人兴奋的内存管理优化进入 Linux 7.3</p><p>Modular 的 Mojo 语言在 Qualcomm 收购后现已开源</p><p>虽然提供无广告浏览，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026 由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/ubuntu-2610-hits-feature-freeze" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-KSMBD" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

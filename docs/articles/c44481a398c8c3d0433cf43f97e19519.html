@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LibreOffice 26.8 发布：段落布局改进、草稿视图等新功能 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年08月27日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>LibreOffice 26.8 发布：段落布局改进、草稿视图等新功能</h1>
+
+  <div class="article-summary">LibreOffice 26.8 正式发布，这是面向 Windows、macOS 和 Linux 的开源办公套件的一个重要新版本。本次更新引入了新的段落布局算法，优化了两端对齐文本的间距平衡；原生支持可变 OpenType 字体；增强了从右到左语言（如阿拉伯语和希伯来语）的支持，包括自动检测文档方向和单元格文本方向。此外，还新增了多彩的 Notebookbar 背景选项、无需重启即可更改主题颜色、大型文档打开速度提升、草稿视图、多页面大小支持、幻灯片分组等功能。文档基金会强调，这些工作没有商业市场，但自由软件可以专注于真正重要的功能。</div>
+
+  <div class="article-body"><p>LibreOffice 26.8 发布：段落布局改进、草稿视图等新功能 - OMG! Ubuntu</p><p>文档基金会已发布 LibreOffice 26.8，这是面向 Windows、macOS 和 Linux 的开源办公套件的一个重要新版本。</p><p>其中的变化包括一个新的段落布局算法。该算法改进了两端对齐文本的处理方式。在许多文字处理器中，两端对齐文本会被拉伸，使页面两侧形成平直的边缘，但这可能看起来不均匀。有些行排列紧密，有些行则出现空隙。</p><p>但在 LibreOffice 26.8 中，新的间距平衡算法会同时平衡多行的间距，而不是逐行处理，这可以带来更好的整体视觉效果：</p><p>LibreOffice 26.8 中的其他排版改进包括原生支持可变 OpenType 字体，让您可以调整“影响字形对比度和比例以适应文本设置大小的轴”。此外，还为文本框添加了基线网格对齐功能。</p><p>对于从右到左书写的语言（如阿拉伯语和希伯来语），LibreOffice 现在会在打开或粘贴文档时自动检测文档方向，而无需用户手动设置；并且，该套件的电子表格工具 Calc 在输入从右到左文本时，会自动设置单元格文本方向。</p><p>该套件还增强了对其他语言（包括从右到左书写的语言）的支持：</p><p>- 打开文件或粘贴文本时自动检测段落方向</p><p>- 在空单元格中输入从右到左文本时自动设置书写方向</p><p>- 双向控制字符现在会显示</p><p>- 对象调整大小手柄在从右到左和垂直中日韩（CJK）文档中正常工作</p><p>- CJK 文本网格选项已重命名</p><p>- 为 N'Ko 和 Adlam 语言添加了命名函数和运算符</p><p>“这些工作没有商业市场，”文档基金会表示，并指出他们这样做是因为不必根据回报来证明功能的合理性。这有点循环论证，但其中的理念是成立的：自由软件可以专注于真正重要的东西，而不是专注于能带来收益的东西。</p><p>LibreOffice 26.8 添加了我六月份报道过的彩色 Notebookbar 背景选项。这些选项旨在让用户更容易区分不同的应用程序，但在我看来，它们也让界面看起来更清新。</p><p>更改主题颜色不再需要重启应用程序，这在您想探索自定义选项时能节省大量时间。</p><p>LibreOffice 26.8 中的其他变化</p><p>互操作性（一个枯燥的词）始终是一个需要不断改进的领域。人们可能会选择 LibreOffice，但仍然需要与使用 Microsoft Office 的同事和协作者共享文件，反之亦然。</p><p>在互操作性方面，LibreOffice 26.8 修复了一个问题，该问题曾导致在 LibreOffice 中打开和编辑的某些较新的 Microsoft Excel 图表类型在再次用 Excel 打开时被损坏。LibreOffice 仍然无法处理这些图表，但至少不再会弄乱它们了！</p><p>- 数据透视表新增计算字段</p><p>- 数据有效性再次静默拒绝无效条目</p><p>- 单元格样式支持相对字体大小</p><p>- 随机排序命令可随机化区域中单元格的顺序</p><p>- 边框工具栏按钮会记住并重新应用最近使用的样式</p><p>- 改进了 XLSX 中引用单元格的线条处理</p><p>- XLSX 表单控件元素现在显示在导航器中</p><p>- 打开包含图像的大型文档速度更快</p><p>- 草稿视图隐藏页眉、页脚和页边距，实现无干扰工作</p><p>- 单个文档现在支持多种页面大小</p><p>- 幻灯片可以组织成命名组</p><p>- 许多捆绑模板提供 16:9 和 4:3 比例版本</p><p>- 允许交换鼠标滚轮行为，使缩放成为默认操作</p><p>- 侧边栏可搜索评论</p><p>- 不再捆绑字体</p><p>- 新文档默认使用起始对齐，而不是左对齐</p><p>- 安全模式更名为疑难解答模式</p><p>- 新增纸张尺寸（A0 至 B3）</p><p>- 对话框从地址中去除查询字符串</p><p>- 自定义词典具有搜索过滤器</p><p>LibreOffice 的数据库工具 Base 常常被忽视。</p><p>在 v26.8 中，数据库用户现在可以使用 Firebird 引擎按日期和时间过滤条目。注释现在也会写入 SQL 代码中，并且在切换到设计视图时仍然保留。</p><p>开发人员可以在应用程序内部构建和修改 Python 脚本，而无需使用其他工具。脚本命令可以调用内部系统……</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/libreoffice-268-released" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

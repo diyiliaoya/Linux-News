@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 26.10 ‘Stonking Stingray’ 进入功能冻结阶段 — Linux 中文速报</title>
+<title>补丁大幅提升内核Zstd性能，修复令人尴尬的低效问题 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 26.10 ‘Stonking Stingray’ 进入功能冻结阶段</h1>
+  <h1>补丁大幅提升内核Zstd性能，修复令人尴尬的低效问题</h1>
 
-  <div class="article-summary">Ubuntu 26.10（代号“Stonking Stingray”）于8月20日进入功能冻结阶段，尽管正式公告比往常稍晚。此后，开发重点从引入重大变更转向改进现有功能及软件包，为10月的最终稳定版做准备。Canonical工程师Paride Legovini在邮件列表中建议开发者专注于修复bug而非添加新功能。虽然主要软件包更新仍可能通过功能冻结例外（FFE）申请加入，但需获批准。壁纸、Yaru主题等视觉调整将在9月10日用户界面冻结前完成。内核方面，Ubuntu 26.10可能搭载Linux 7.3而非原计划的7.2。正式版将于2026年10月15日发布，9月24日提供测试版。</div>
+  <div class="article-summary">Linux内核邮件列表今日收到一组补丁，通过修复现有代码中一个非常不幸的疏忽，大幅提升了Zstd压缩和解压缩的效率。开发者Usama Arif指出，内核Zstd代码在每次创建压缩或解压缩上下文时，都会动态检测CPU是否支持BMI2指令集，而这种检测涉及两次序列化的CPUID指令，且每次操作都会执行，导致性能严重下降。通过仅检测一次BMI2支持，补丁在crypto_acomp基准测试中实现了解压缩时间减少71%、压缩时间减少18%的显著效果。</div>
 
-  <div class="article-body"><p>Ubuntu 26.10，代号“Stonking Stingray”，于8月20日进入功能冻结阶段——尽管正式公告比往常来得稍晚。</p><p>从此刻起，开发重点从引入重大变更转向改进这些变更以及其余软件包，为10月最终稳定版Ubuntu 26.10的发布做准备。</p><p>“理想情况下，你们现在都应该专注于修复bug，而不是为发布引入新功能，”Canonical工程师Paride Legovini在Ubuntu开发者邮件列表的一篇帖子中表示。</p><p>然而，Ubuntu 26.10的最终构成——预计将提供GNOME 51、以及GPU驱动管理等诸多变更——尚未完全敲定。</p><p>主要软件包更新仍有可能进入最终发布，但开发者必须申请功能冻结例外（FFE）并获得批准，才能将其纳入，这遵循Ubuntu常规的发布流程。</p><p>在冻结截止日期前上传到归档中的软件包，若包含重大变更但仍在提议队列中，也将被纳入。</p><p>不添加新功能、仅修复bug的软件包上传，即使版本号大幅提升，也不需要FFE——功能冻结，顾名思义，是关于功能的。</p><p>更多面向用户的变更仍将陆续到来，壁纸、Yaru主题工作以及其他视觉调整将在9月10日用户界面冻结前完成。同样，如有需要，可以申请例外。</p><p>至于内核选择，内核的到来早于预期。Canonical曾表示将瞄准v7.2内核，但现在，Ubuntu 26.10有可能搭载Linux 7.3——即使该版本在10月仍处于候选发布状态。</p><p>Ubuntu 26.10计划于2026年10月15日发布，但9月24日将提供测试版，供那些想要提前体验的用户使用。</p></div>
+  <div class="article-body"><p>今日发送至Linux内核邮件列表的补丁，通过解决现有代码中一个非常不幸的疏忽，可以大幅提升Zstd压缩和解压缩的效率。</p><p>Linux开发者Usama Arif指出，内核中的Zstd代码在创建压缩或解压缩上下文时，会在运行时决定是选择通用代码路径还是使用BMI2指令的路径。BMI2位操作指令集存在于Intel Haswell及更新版本或AMD Excavator及更新版本的处理器中。大体上，这涵盖了过去十年的AMD和Intel CPU。</p><p>运行时检测本身并不坏，它允许旧CPU回退到通用代码，但每次创建新上下文时都进行检测则是冗余的。除非出现某些极端的CPU错误，否则系统启动并运行后不应丢失BMI2支持。探测BMI2需要执行两条序列化的CPUID指令，并伴随无条件的VM退出。</p><p>这种情况变得非常糟糕的原因是，该检测最终成为了一条非常热门的代码路径。SquashFS在解压缩每个块时都会调用它，而EROFS、Btrfs和F2FS每次操作都会初始化一个上下文。crypto/zstd代码也每次操作初始化一个上下文。因此，对于SquashFS的每个块或其他地方的每次操作，它都会执行两次昂贵的序列化CPUID指令来检查CPU是否支持BMI2。</p><p>Usama Arif发现，通过这三个补丁仅探测一次BMI2 CPU支持，在crypto_acomp基准测试中，解压缩时间减少了71%，压缩时间减少了18%。</p><p>这些补丁正在Linux内核邮件列表中进行审查。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/ubuntu-2610-hits-feature-freeze" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/In-Kernel-Zstd-BMI2-Probing" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

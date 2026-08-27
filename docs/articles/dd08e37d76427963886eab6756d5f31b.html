@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 26.10 ‘Stonking Stingray’ 进入功能冻结阶段 — Linux 中文速报</title>
+<title>Asahi Linux 希望尽快发布支持 Apple M3 设备的版本 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 26.10 ‘Stonking Stingray’ 进入功能冻结阶段</h1>
+  <h1>Asahi Linux 希望尽快发布支持 Apple M3 设备的版本</h1>
 
-  <div class="article-summary">Ubuntu 26.10（代号“Stonking Stingray”）于8月20日进入功能冻结阶段，尽管正式公告比往常稍晚。此后，开发重点从引入重大变更转向改进现有功能及软件包，为10月的最终稳定版做准备。Canonical工程师Paride Legovini在邮件列表中建议开发者专注于修复bug而非添加新功能。虽然主要软件包更新仍可能通过功能冻结例外（FFE）申请加入，但需获批准。壁纸、Yaru主题等视觉调整将在9月10日用户界面冻结前完成。内核方面，Ubuntu 26.10可能搭载Linux 7.3而非原计划的7.2。正式版将于2026年10月15日发布，9月24日提供测试版。</div>
+  <div class="article-summary">Asahi Linux 团队发布了最新进展，重点推进 Apple M3 设备的支持，包括麦克风处理、网络摄像头支持以及 USB 3.0 和 Thunderbolt 功能。同时，团队也在努力改进 Apple CPU 核心的电源管理，并探索基于 UEFI 运行时服务的 PSCI 通道。此外，Apple M4 和 M5 的适配工作也在进行中，但仍有大量工作待完成。GPU 直接扫描输出支持也在开发中。团队预计将在未来几周内发布支持 M3 的版本，但上游内核的整合仍需时间。</div>
 
-  <div class="article-body"><p>Ubuntu 26.10，代号“Stonking Stingray”，于8月20日进入功能冻结阶段——尽管正式公告比往常来得稍晚。</p><p>从此刻起，开发重点从引入重大变更转向改进这些变更以及其余软件包，为10月最终稳定版Ubuntu 26.10的发布做准备。</p><p>“理想情况下，你们现在都应该专注于修复bug，而不是为发布引入新功能，”Canonical工程师Paride Legovini在Ubuntu开发者邮件列表的一篇帖子中表示。</p><p>然而，Ubuntu 26.10的最终构成——预计将提供GNOME 51、以及GPU驱动管理等诸多变更——尚未完全敲定。</p><p>主要软件包更新仍有可能进入最终发布，但开发者必须申请功能冻结例外（FFE）并获得批准，才能将其纳入，这遵循Ubuntu常规的发布流程。</p><p>在冻结截止日期前上传到归档中的软件包，若包含重大变更但仍在提议队列中，也将被纳入。</p><p>不添加新功能、仅修复bug的软件包上传，即使版本号大幅提升，也不需要FFE——功能冻结，顾名思义，是关于功能的。</p><p>更多面向用户的变更仍将陆续到来，壁纸、Yaru主题工作以及其他视觉调整将在9月10日用户界面冻结前完成。同样，如有需要，可以申请例外。</p><p>至于内核选择，内核的到来早于预期。Canonical曾表示将瞄准v7.2内核，但现在，Ubuntu 26.10有可能搭载Linux 7.3——即使该版本在10月仍处于候选发布状态。</p><p>Ubuntu 26.10计划于2026年10月15日发布，但9月24日将提供测试版，供那些想要提前体验的用户使用。</p></div>
+  <div class="article-body"><p>Asahi Linux 希望尽快发布支持 Apple M3 设备的版本 - Phoronix</p><p>Asahi Linux 希望尽快发布支持 Apple M3 设备的版本</p><p>2026年8月26日，美国东部时间晚上8:25。</p><p>致力于将 Linux 带到 Apple Silicon 硬件上的 Asahi Linux 团队今天发布了关于其项目的最新状态更新，主要围绕 Apple M3 的适配工作，以及一些 M4/M5 的进展。</p><p>目前正在进行的工作旨在改进主线上 Linux 内核中对 Apple CPU 核心的电源管理。由于上游要求 ARM64 设备使用电源状态协调接口（PSCI）进行电源管理，而当前 Apple Silicon 和 Asahi 驱动设计无法很好地满足这些约束，因此目前只有下游的 Asahi Linux 代码提供了“深度”等待中断（WFI）指令的使用。不过，团队正在努力实现一个基于 UEFI 运行时服务的 PSCI 通道，以适用于 Apple Silicon / Asahi 的 Linux 使用场景。</p><p>Asahi Linux 开发人员也在继续推进 Apple M3 系列机器的适配工作。麦克风处理方面有一些细微变化，得益于新的补丁，M3 设备上的网络摄像头支持现已正常工作，此外还有其他改进。Apple M3 的 USB 端口控制器变化带来了更多的逆向工程工作和麻烦，但借助最新的下游 Asahi Linux 代码，USB 3.0 和 Thunderbolt 现已正常工作。</p><p>Asahi Linux 开发人员几乎已经准备好发布一个支持 Apple M3 的版本，供使用其下游代码的用户使用。未来几周内，预计将公布更多关于 Asahi Linux 上 Apple M3 的详细信息。显然，将所有代码上游整合到主线 Linux 内核还需要更多时间。</p><p>Asahi Linux 开发人员也在继续推进 Apple M4 和 M5 的适配工作，但仍有更多工作有待完成。</p><p>Asahi Linux 的帖子还详细介绍了他们在适配 Apple M4 过程中面临的挑战，包括 Apple 的设计选择以及 Apple 安全特性带来的其他麻烦。</p><p>Asahi Linux 开发人员还在努力实现 GPU 直接扫描输出支持，这是另一个重要的改进，但在向用户推出之前仍有更多工作要做。</p><p>关于 Asahi Linux 最新工作的更多详情，请参阅以下链接：</p><p>Apple 发布 M6 2nm 12 核 CPU，四芯片 M5 Ultra</p><p>Apple HFS / HFS+ 文件系统支持在 Linux 7.3 中持续修复</p><p>Linux 终于迎来针对 2018~2019 款 MacBook Pro 的混合图形改进补丁</p><p>Apple M1 系列 SoC 在 Linux 7.3 中预计节省约 1 瓦功耗</p><p>Apple M3 Pro / Max / Ultra 的初步支持正在为 Linux 7.3 上游化</p><p>Apple NVMe Linux 驱动在新固件问题后获得修复</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>长期担任 Linux CIFS/SMB3 维护者的开发者去世</p><p>Linus Torvalds 经历了一场“地狱级”调试会话，AI“极大帮助”了他</p><p>特制 NTFS 文件系统镜像可导致 Linux 上 NTFS3 驱动获得 root 权限</p><p>Wayland 被发现“本质上比 X11 更快，但未必更高效”</p><p>Linux 7.3 网络变更已合并，但开发者因 AI/LLM 而“完全不堪重负”</p><p>X.Org Server 26.1 RC1 为五年来的首个功能版本做准备</p><p>Linux 7.3 中两个非常令人兴奋的内存管理优化</p><p>Modular 的 Mojo 语言在 Qualcomm 收购后现已开源</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/ubuntu-2610-hits-feature-freeze" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Asahi-Linux-M3-Release-Soon" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
