@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>我用一个隐藏的Ubuntu功能来整理桌面 — Linux 中文速报</title>
+<title>AMD 准备在 Linux 中默认启用 HDMI 2.1 FRL 支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>我用一个隐藏的Ubuntu功能来整理桌面</h1>
+  <h1>AMD 准备在 Linux 中默认启用 HDMI 2.1 FRL 支持</h1>
 
-  <div class="article-summary">本文介绍了一个Ubuntu桌面上的隐藏功能——文件堆叠（stacks），该功能由DING扩展提供，可将相同类型的文件分组到可折叠的图标中，从而减少桌面视觉杂乱。用户只需右键点击桌面并选择“堆叠文件”即可启用，且该功能在Ubuntu 24.04及以上版本中可用。堆叠仅基于文件类型，不支持按日期分组，且文件夹不会被堆叠。虽然无法排除特定文件类型，但该功能仍是一种便捷的整理方式。</div>
+  <div class="article-summary">AMD 正在准备默认启用其开源 AMDGPU Linux 驱动中的 HDMI 2.1 固定速率链路（FRL）支持。此前，该功能因 HDMI 论坛的阻碍而长期无法开源，后于 Linux 7.2 中合并但默认禁用。随着 VRR 和 ALLM 等功能的完善，AMD 现已准备反转逻辑，默认启用 FRL，同时保留模块参数以便在需要时禁用。预计该改动将在 Linux 7.4 中落地，并有望成为 2026 年 LTS 内核的圣诞礼物。</div>
 
-  <div class="article-body"><p>一个隐藏的Ubuntu功能，我用它来整理桌面 - OMG! Ubuntu</p><p>(DING)扩展有一个鲜为人知的方法，可以为混乱的桌面带来秩序：堆叠。</p><p>堆叠会将相同类型的多个文件分组到一个可折叠的图标中，例如图片归入一个堆叠，PDF归入另一个堆叠，以此类推。文件夹不会被分组，如果桌面上某种类型的文件只有一个，也不会被堆叠。</p><p>点击堆叠即可展开，显示堆叠中的所有文件（其他文件图标会被挤开）。多个堆叠可以同时展开或折叠，堆叠也可以保持打开状态（有自动折叠功能）。堆叠在重启后仍然保留。</p><p>但文件并不会移动位置；堆叠分组是一种视觉上的整理，而非实际上的移动。</p><p>直到我在7月份报道这一功能时，我才知道这个精巧的功能竟然存在。当时的更新日志提到，堆叠功能已经变得可访问。</p><p>“肯定不像macOS那样的桌面堆叠吧……”</p><p>是的，结果非常相似：</p><p>一段视频展示了DING中堆叠图标的工作方式，录制于Ubuntu 26.04 LTS</p><p>这并不是一个新功能。你可以在Ubuntu 24.04 LTS及以上版本中从桌面启用文件堆叠：</p><p>右键点击Ubuntu桌面</p><p>要关闭桌面堆叠，重复上述步骤即可。所有文件将恢复为散落在桌面上的单个图标。</p><p>分组仅基于文件类型，因此没有日期选项（macOS的对应功能有）。所有堆叠都使用相同的图标——一个文件夹——这有点遗憾。但一个小箭头标志将堆叠文件夹与实际文件夹区分开来，并且名称反映了内容。</p><p>能否排除某些文件类型不被堆叠，而其他类型仍然堆叠？有一个gsettings值，我以为它会有所帮助。它期望文件字符串，例如“image/png”而不是“.png”——然而，这些文件仍然会被堆叠，但默认是展开的。</p><p>我认为如果排除功能真的有效会很有用，例如，让.png截图保留在桌面上显示，而将其他图片类型分组。也许这是一个小众用例。</p><p>保持桌面空间整洁是个好主意。如果你做不到，又不想将文件移动到文件夹中（或者使用脚本来自动整理，这在过去很流行），这个功能是减少视觉杂乱的一种便捷方式。</p><p>DING预装在Ubuntu上，因此无需安装任何东西。如果你使用的是其他基于GNOME Shell的Linux发行版，可以从GNOME扩展网站安装DING。</p></div>
+  <div class="article-body"><p>AMD 准备在 Linux 中默认启用 HDMI 2.1 FRL 支持 - Phoronix</p><p>AMD 准备在 Linux 中默认启用 HDMI 2.1 FRL 支持</p><p>发布于 2026 年 8 月 27 日下午 3:45（美国东部时间）</p><p>今年五月发生了一件令人意外的事件：AMD 为其开源 AMDGPU Linux 驱动发布了 HDMI 2.1 FRL 补丁，作为其更广泛的 HDMI 2.1 支持工作的一部分。多年来，AMDGPU 中的开源 HDMI 2.1 支持一直受到 HDMI 论坛的阻碍，但无论是由于 Valve 还是其他事件，代码最终得以解禁。虽然该支持自 Linux 7.2 起已包含在内核中，但默认情况下一直处于禁用状态——不过这一情况即将改变。</p><p>在针对更高分辨率和更高刷新率的 HDMI 2.1 固定速率链路（FRL）补丁之后，又相继推出了显示流压缩（DSC）、VRR 和 ALLM 功能的补丁，这些功能对游戏玩家尤为重要。AMD 一直在将这些 HDMI 2.1 功能上游到主线 Linux 内核，但最初默认禁用，直到可变刷新率（VRR）功能准备就绪，以避免任何用户体验回退。</p><p>随着这些功能现已趋于完善，AMD 正准备根据今天的补丁默认启用 HDMI 2.1 FRL。AMD 驱动工程师 Fangzhi Zuo 发布了该补丁，通过反转逻辑来默认启用 HDMI 2.1 FRL。通过模块参数，可以在需要时禁用该支持，以便进行错误/回归测试等。</p><p>因此，对于今年晚些时候的 Linux 7.4，我们希望看到 AMDGPU VRR 和 ALLM 准备就绪，并且现在默认启用 FRL。对于当前的 Linux 7.3 周期来说已经太晚了，但对于 Linux 7.4，希望一切都能准备就绪。如果 Linux 7.3 和 Linux 7.4 按计划发布，Linux 7.4 应该会在 12 月的最后两周发布……这反过来将使其成为 2026 年 Linux 长期支持（LTS）内核版本，并且如果 HDMI 2.1 功能全部就绪，这将是 AMD Radeon Linux 用户的一份绝妙圣诞礼物。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/ubuntu-desktop-icons-stacks" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/AMDGPU-HDMI-2.1-FRL-Default" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>我用一个隐藏的Ubuntu功能来整理桌面 — Linux 中文速报</title>
+<title>Linux 7.3 MGLRU 变更助力可执行代码驻留内存，提升性能 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>我用一个隐藏的Ubuntu功能来整理桌面</h1>
+  <h1>Linux 7.3 MGLRU 变更助力可执行代码驻留内存，提升性能</h1>
 
-  <div class="article-summary">本文介绍了一个Ubuntu桌面上的隐藏功能——文件堆叠（stacks），该功能由DING扩展提供，可将相同类型的文件分组到可折叠的图标中，从而减少桌面视觉杂乱。用户只需右键点击桌面并选择“堆叠文件”即可启用，且该功能在Ubuntu 24.04及以上版本中可用。堆叠仅基于文件类型，不支持按日期分组，且文件夹不会被堆叠。虽然无法排除特定文件类型，但该功能仍是一种便捷的整理方式。</div>
+  <div class="article-summary">Linux 7.3 合并窗口即将关闭之际，内存管理（MM）代码又迎来一批更新，其中一项由阿里巴巴工程师 Baolin Wang 提交的补丁系列尤为引人注目。该补丁优化了 MGLRU（多代最近最少使用）算法，使其在首次使用后提升映射可执行文件 folio 的保留优先级，从而减少 I/O 抖动并提升工作负载性能。在 32 核 Arm 服务器、内存限制 2GB 的极端内存受限环境下，该补丁将内核编译的系统时间从 9248 秒降至 7861 秒。尽管现实场景中较少出现如此极端的资源争用，但在内存受限或超订阅环境中，该改动仍具实际价值。</div>
 
-  <div class="article-body"><p>一个隐藏的Ubuntu功能，我用它来整理桌面 - OMG! Ubuntu</p><p>(DING)扩展有一个鲜为人知的方法，可以为混乱的桌面带来秩序：堆叠。</p><p>堆叠会将相同类型的多个文件分组到一个可折叠的图标中，例如图片归入一个堆叠，PDF归入另一个堆叠，以此类推。文件夹不会被分组，如果桌面上某种类型的文件只有一个，也不会被堆叠。</p><p>点击堆叠即可展开，显示堆叠中的所有文件（其他文件图标会被挤开）。多个堆叠可以同时展开或折叠，堆叠也可以保持打开状态（有自动折叠功能）。堆叠在重启后仍然保留。</p><p>但文件并不会移动位置；堆叠分组是一种视觉上的整理，而非实际上的移动。</p><p>直到我在7月份报道这一功能时，我才知道这个精巧的功能竟然存在。当时的更新日志提到，堆叠功能已经变得可访问。</p><p>“肯定不像macOS那样的桌面堆叠吧……”</p><p>是的，结果非常相似：</p><p>一段视频展示了DING中堆叠图标的工作方式，录制于Ubuntu 26.04 LTS</p><p>这并不是一个新功能。你可以在Ubuntu 24.04 LTS及以上版本中从桌面启用文件堆叠：</p><p>右键点击Ubuntu桌面</p><p>要关闭桌面堆叠，重复上述步骤即可。所有文件将恢复为散落在桌面上的单个图标。</p><p>分组仅基于文件类型，因此没有日期选项（macOS的对应功能有）。所有堆叠都使用相同的图标——一个文件夹——这有点遗憾。但一个小箭头标志将堆叠文件夹与实际文件夹区分开来，并且名称反映了内容。</p><p>能否排除某些文件类型不被堆叠，而其他类型仍然堆叠？有一个gsettings值，我以为它会有所帮助。它期望文件字符串，例如“image/png”而不是“.png”——然而，这些文件仍然会被堆叠，但默认是展开的。</p><p>我认为如果排除功能真的有效会很有用，例如，让.png截图保留在桌面上显示，而将其他图片类型分组。也许这是一个小众用例。</p><p>保持桌面空间整洁是个好主意。如果你做不到，又不想将文件移动到文件夹中（或者使用脚本来自动整理，这在过去很流行），这个功能是减少视觉杂乱的一种便捷方式。</p><p>DING预装在Ubuntu上，因此无需安装任何东西。如果你使用的是其他基于GNOME Shell的Linux发行版，可以从GNOME扩展网站安装DING。</p></div>
+  <div class="article-body"><p>Linux 7.3 MGLRU 变更助力可执行代码驻留内存，提升性能 - Phoronix</p><p>Linux 7.3 MGLRU 变更助力可执行代码驻留内存，提升性能</p><p>发布于 2026 年 8 月 27 日下午 2:20（美国东部时间）</p><p>继上周 Linux 7.3 的主要内存管理（&quot;MM&quot;）相关更新之后，今天又提交并合并了另一批 MM 代码更新，我们正为关闭 Linux 7.3 合并窗口做准备。其中有一些值得关注的优化补丁，以及其他大多为小型修复/变更的内容。</p><p>今天 MM 合并中引起我注意的是 Baolin Wang 提交的补丁系列，该系列旨在为 MGLRU 在首次使用后提升映射可执行文件 folio 的优先级。这位阿里巴巴工程师指出，传统的最近最少使用（LRU）算法会保护映射的可执行文件 folio，使其有更大机会驻留系统内存，从而避免 I/O 抖动并有助于提升工作负载性能。但 MGLRU 到目前为止在这方面表现并不尽如人意。</p><p>MGLRU 在保护映射可执行文件 folio 方面一直“不太可靠”，导致这些 folio 比传统 LRU 行为更容易被回收。</p><p>Baolin Wang 在一台 32 核 Arm 服务器上量化了该问题，将内存记账限制设置为 2GB，使其处于严重内存受限状态，同时运行 32 个 Linux 内核构建作业以制造大量内存争用。他在补丁说明中指出，默认情况下系统时间为 9248 秒，而应用这些补丁后，由于更好地提升了映射可执行文件 folio 的优先级，系统时间降至 7861 秒。</p><p>通常在实际场景中，你不会遇到 32 个核心争抢 2GB 内存的情况，但在当今内存受限的市场环境下，以及其他过度订阅（over-subscribed）的配置中，这一改动最终应该会有所帮助。</p><p>这些有助于让可执行文件 folio 驻留内存的补丁今天已合并，同时合并的还有许多其他小型 MM 优化补丁。</p><p>补丁因极其糟糕的低效问题大幅提升内核内 Zstd 性能</p><p>Linux 7.0-mk2 发布，多内核 Linux 性能表现令人期待</p><p>Linux 7.3 更好地防止有缺陷的 EFI 固件导致用户空间其余部分宕机</p><p>Linux 7.3 带来从旧 GPU 到下一代硬件的图形驱动改进</p><p>Linux 7.3 引入新的 AES 加密 API——将释放更多性能</p><p>Sched_ext 的子调度器支持在 Linux 7.3 中已“功能完备”</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。他还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。</p><p>长期担任 Linux CIFS/SMB3 维护者的开发者去世</p><p>Linus Torvalds 经历了一场“地狱级”调试会话，AI 提供了“巨大帮助”</p><p>Wayland 被发现“本质上比 X11 更快，但未必更高效”</p><p>特制 NTFS 文件系统镜像可借助 NTFS3 驱动在 Linux 上获取 root 权限</p><p>Linux 7.3 网络变更已合并，但开发者因 AI/LLM 而“完全不堪重负”</p><p>X.Org Server 26.1 RC1 为五年来的首个功能版本做准备</p><p>Linux 7.3 中两项非常令人兴奋的内存管理优化</p><p>Btrfs 为 Linux 7.3 准备更多性能改进：部分场景提升约 3 倍至 5 倍</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/ubuntu-desktop-icons-stacks" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-MGLRU-Executable-Mem" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

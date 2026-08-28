@@ -8589,5 +8589,203 @@
     "title_zh": "OpenCode：在终端中读取和编辑代码的AI代理",
     "summary_zh": "OpenCode是一款AI编码代理，直接在终端中运行，能够读取、理解和编辑代码，帮助开发者简化编码工作流程。该工具旨在提升开发效率，通过自然语言交互实现代码操作，适用于Linux等命令行环境。",
     "fulltext_zh": "OpenCode是一款AI编码代理，直接在终端中运行，能够读取、理解和编辑代码，帮助开发者简化编码工作流程。\n\n该文章《OpenCode：在终端中读取和编辑代码的AI代理》最初出现在Linux Today上。"
+  },
+  "b39fb512c43f89a76330cc1d6322b32f": {
+    "id": "b39fb512c43f89a76330cc1d6322b32f",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/ubuntu-26041-lts-point-release-download",
+    "title_en": "Ubuntu 26.04.1 LTS is now available to download",
+    "summary_en": "Ubuntu 26.04.1 LTS is now available to download, the first of 5 point releases scheduled for the &#8216;Resolute Raccoon&#8217; in the 3 years. The release doesn&#8217;t add new features, but brings a refreshed installation image (.iso) that includes all of the bug fixes, security patches and package updates released since the Ubuntu 26.04 LTS release back in April. No new hardware enablement stack is included since there&#8217;s not been a newer Ubuntu release to backport a kernel and graphics ",
+    "pub_date": "Thu, 27 Aug 2026 23:06:40 +0000",
+    "title_zh": "Ubuntu 26.04.1 LTS 现已开放下载",
+    "summary_zh": "Ubuntu 26.04.1 LTS 已发布，这是 Ubuntu 26.04 LTS 系列五个点版本中的第一个。该版本不包含新功能，但提供了更新的安装镜像，集成了自 4 月发布以来的所有错误修复、安全补丁和软件包更新。新镜像适用于多种版本和官方衍生版。现有用户无需重新安装，只需定期更新即可。此外，从 Ubuntu 24.04 LTS 直接升级到 26.04 LTS 的通道即将开启，用户可通过图形界面进行升级。",
+    "fulltext_zh": "Ubuntu 26.04.1 LTS 已发布，现有用户无需重新安装。\n\nUbuntu 26.04.1 LTS 现已开放下载，这是计划中的 5 个点版本中的第一个。\n\n该版本不添加新功能，但提供了更新的安装镜像（.iso），其中包含了自 4 月 Ubuntu 26.04 LTS 发布以来所有错误修复、安全补丁和软件包更新。\n\n由于没有更新的 Ubuntu 版本可供反向移植内核和图形驱动集，因此未包含新的硬件支持栈。明年的 Ubuntu 26.04.2 LTS 将带来 Ubuntu 26.10 中的 Linux 内核和 GPU 驱动。\n\n新镜像也适用于各种版本（Raspberry Pi、Arm64、RISC-V）以及参与 4 月 LTS 发布的 Ubuntu 官方衍生版。\n\nUbuntu 26.04 LTS 于 4 月 23 日发布，搭载 GNOME 50，并新增了两个默认应用。Snap 商店和网页搜索可在 GNOME Shell 概览中使用，您还可以启用 Ubuntu Pro。此外，还有新的文件夹图标、命令的可视化密码反馈，以及更简便的 NVIDIA CUDA 和 AMD ROCm 安装（现已包含在软件源中）。\n\n这是为新用户准备的，而非现有用户。\n\n如果您已经在使用 Ubuntu 26.04 LTS，则无需下载或重新安装任何内容。.1 版本中包含的所有内容都已经在您的系统上（前提是您及时安装了更新）。实际上，如果您前往设置，应该会看到更新后的版本号。\n\n点版本的意义在于定期刷新安装介质，这样可以减少安装后需要下载和应用的更新数量，节省用户的时间和精力，对 Canonical 来说也节省了带宽。\n\n从 Ubuntu 24.04 LTS 升级已启用\n\n从 24.04 直接升级到 26.04 即将上线\n\nUbuntu LTS 系列中的第一个点版本还因另一个原因而引人注目：这是从上一个 LTS 版本升级的通道开启之时（尽管并不总是与 ISO 发布同日，请耐心等待）。\n\nUbuntu 24.04 LTS 用户可以通过图形界面直接升级到 Ubuntu 26.04 LTS，无需命令行变通方法。官方提示会出现，但需在运行更新检查后才会显示。\n\n不必急于升级。Ubuntu 24.04 LTS 支持至 2029 年，包含标准更新，之后通过启用 Ubuntu Pro 还可获得额外 5 年的关键修复。\n\nCanonical 最初会延迟长期支持版本之间的升级。由于从 24.10、25.04 和 25.10 以及 26.04 中积累了两年的变更，升级过程需要经过大量测试以确保可靠过渡。\n\n如果您确实从 Ubuntu 24.04 LTS 升级，会有很多新内容——我的文章列出了 26 项值得关注的变更，包括改进的 APT、基于 Rust 的 coreutils、总共 7 个新的默认应用、通知分组、锁屏媒体控制等。\n\n通过官方 Ubuntu 网站或 cdimage 服务器下载 Ubuntu 26.04.1 LTS。"
+  },
+  "7a71315630a944fe43e41e7b3d93a07d": {
+    "id": "7a71315630a944fe43e41e7b3d93a07d",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/chromium-adds-flatpak-packaging-support",
+    "title_en": "Chrome moves a step closer to an official Flatpak",
+    "summary_en": "If you&#8217;ve installed Chromium or Google Chrome as a Flatpak, you&#8217;ve installed an unofficial, community-maintained package done independently of the search giant – that could be about to change. Chromium&#8217;s build system is now able to generate Flatpak packages of the browser itself, though its developers caution that the change does not mean official Flatpak support is coming. A commit made by Google&#8217;s Tom Anderson this week adds the necessary packaging scripts and a build f",
+    "pub_date": "Thu, 27 Aug 2026 22:50:37 +0000",
+    "title_zh": "Chrome 向官方 Flatpak 迈进一步",
+    "summary_zh": "谷歌为 Chromium 构建系统添加了生成 Flatpak 包的支持，但开发者强调这并不意味着官方 Flatpak 支持即将到来。该更改由谷歌工程师 Tom Anderson 提交，添加了必要的打包脚本和构建标志，但默认关闭。此举旨在促进受限沙箱配置的测试和改善 XDG 门户支持，而非承诺官方支持。目前 Flathub 上的 Chromium 和 Chrome Flatpak 包均为社区维护，非谷歌官方构建。",
+    "fulltext_zh": "谷歌为官方 Chrome Flatpak 添加构建支持\n\n如果你通过 Flatpak 安装了 Chromium 或 Google Chrome，你安装的是由社区维护的非官方包，与这家搜索巨头无关——这种情况可能即将改变。\n\nChromium 的构建系统现在能够生成浏览器本身的 Flatpak 包，不过其开发者提醒，这一变化并不意味着官方 Flatpak 支持即将到来。\n\n谷歌的 Tom Anderson 本周提交的更改添加了必要的打包脚本和一个构建标志（），用于生成 .flatpak 包，而不是 .deb 或 .rpm，但该标志目前默认关闭。\n\n如果启用，谷歌的构建还将跳过生成 Flatpak 原生处理的内容（如符号链接、桌面文件等），生成的 Flatpak 构建将拥有自己的应用 ID，Chromium 对应 org.chromium.Chromium*。\n\nAnderson 的提交信息指出，这“并非承诺官方支持 Flatpak 包”，而是旨在“促进受限沙箱配置的测试”并改进浏览器的 XDG 门户支持。\n\n你可以在 Flathub 上找到 Chromium 和 Google Chrome 的非官方 Flatpak 构建，它们均由社区独立维护，并从源代码打包。这些是 Flatpak，但不是谷歌在其基础设施上构建的 Flatpak。\n\n这一更改将相关的 Flatpak 打包工具添加到 Chromium 的内部构建系统中，以便如果——仍然是一个“如果”——谷歌确实决定进行官方构建，它可以轻松生成它们。\n\n但谷歌不太可能正式将 Chrome 添加到 Flathub，原因与我们在 Snap Store 上找不到它的原因相同：这家搜索巨头不需要别人的基础设施成为其向用户推送更新的瓶颈。"
+  },
+  "154b75e713bd697cf7ad0ba3e6a0e9f1": {
+    "id": "154b75e713bd697cf7ad0ba3e6a0e9f1",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/testing-ubuntu-ai-voice-dictation",
+    "title_en": "Hands-on with Ubuntu’s new AI voice typing feature",
+    "summary_en": "AI-powered voice typing is coming to Ubuntu in Myna, a speech-to-text feature that lets you talk into any valid text field. It&#8217;s still a work in progress, but I grabbed an early build to see how it&#8217;s shaping up. With Ubuntu 26.10 now entering its freeze, the user-facing pieces of myna are falling in to place. This week, a new GNOME Shell extension was added to default installs to provide an on-screen indicator when myna is listening and recording. To be clear: Myna is not a GNOME She",
+    "pub_date": "Thu, 27 Aug 2026 15:33:24 +0000",
+    "title_zh": "Ubuntu 新AI语音输入功能上手体验",
+    "summary_zh": "Ubuntu 26.10 将引入名为 Myna 的 AI 语音输入功能，允许用户在任意文本字段中通过语音输入文字。该功能基于本地 AI 模型，完全离线运行，保护隐私。目前仍处于开发阶段，但已加入默认安装的 GNOME Shell 扩展，提供屏幕指示器。本文作者通过早期构建版本进行了测试，体验了热键激活、屏幕显示动画和文本转录过程。Myna 支持多种本地 AI 模型，可根据硬件选择最佳方案。Canonical 强调 AI 功能需提供实际价值，Myna 将作为可选功能推出。",
+    "fulltext_zh": "Ubuntu 的 AI 语音转文字功能 Myna 上手体验\n\nAI 驱动的语音输入即将登陆 Ubuntu，这是一项语音转文字功能，让你可以在任何有效的文本字段中说话输入。它仍在开发中，但我提前拿到了早期构建版本，看看它的进展如何。\n\n随着 Ubuntu 26.10 进入冻结阶段，Myna 面向用户的部分正在逐步就位。本周，一个新的 GNOME Shell 扩展被添加到默认安装中，当 Myna 正在监听和录音时，会在屏幕上显示指示器。\n\n如果你对这个功能的原理和原因感兴趣，我的文章会详细介绍细节（随着更多信息的出现，我已经更新了那篇简短的双人对话文章）。\n\n这是一个 GNOME Shell 扩展。它是一个编排器，负责管理加载 AI 模型、热键激活、将麦克风音频传递给模型进行转录，然后通过 IBus 将输出反馈到文本字段。\n\n但扩展很重要。它是你能看到的部分，让你知道 Myna 何时在积极监听和处理音频（以及是否失败）。\n\n下面是一段快速屏幕录制，我在其中激活了 Myna，并用它把一句简单的话转录到文本字段中。\n\n在虚拟机中测试 Myna——不要评判性能\n\n“无论你是想免提口述文本、改善无障碍体验，还是简化工作流程，myna 都能将无缝语音识别直接带到你的 Linux 生态系统中。”\n\n在我尝试的版本中，我通过按下（但不是按住——这与 Canonical 之前描述该功能的方式有所不同）键盘快捷键来激活 Myna，同时已聚焦到我想使用语音输入的应用程序中的文本字段。\n\n屏幕上会出现一个显示（OSD）来指示监听已激活。当我说话时，OSD 内的动画“波浪”会振荡。这是一个很好的确认反馈，让你知道它正在工作。\n\n完成后，再次按下相同的键盘快捷键会停止监听。OSD 动画变平，音频在后台转录。短暂停顿后，文本出现在我想要输入的应用程序的文本字段中。\n\nMyna GNOME Shell 扩展让你知道它是否在工作\n\n根据规格说明，如果在激活 Myna 后关闭或最小化“目标”窗口，它将停止工作。我无法让这种情况发生，不过 Myna 的 OSD 确实会在某些时候让我知道焦点丢失了。\n\n根据规格，聚焦另一个窗口或 Alt+Tab 切换离开不会中断输入。Myna 会跟踪预期的目标——这意味着你不会把正确的内容粘贴到错误的文本字段中！\n\n如果 Myna 没有听到任何音频，它会告诉你；它无法转录静音，唉，也无法通过心灵感应工作。\n\n不同的 AI 模型将为 Myna 提供动力\n\nCanonical 表示，不会有音频离开你的设备。Myna 不依赖云端模型；它完全离线运行，无论是比喻意义上还是字面意义上。任何用于转录的音频都不会被存储、记录或用于训练。\n\n在我的测试中，Myna 使用了某种模型。但将提供多种本地 AI 模型（全部作为 snap 包），包括一些可以仅在 NVIDIA GPU 上运行的模型，一些仅支持 CPU 的模型，一些具有更广泛语言支持的模型等。\n\n当这个功能准备好进行更广泛测试时，将使用最适合你系统硬件的本地 AI 模型。\n\n我还没有在 Snap 商店中找到任何语音 snap 包或 myna 编排器，但我从 GitHub 上的源代码让它运行起来了。由于该功能将作为 snap 包分发……\n\n好消息是它运行良好，相当准确，虽然有点慢（我是在虚拟机中运行 WIP 源代码，所以我不做任何定论）。输入成功出现在我尝试的大多数字段中，包括文本编辑器、GNOME Shell 概览和 Firefox。\n\nUbuntu 的听写功能，而非由 Ubuntu 强加的听写功能\n\nCanonical 将对其 Ubuntu 中的 AI 功能采取审慎的方法，据其工程副总裁 Jon Seager 表示。他说，为了 AI 而使用 AI 很少奏效，Ubuntu 中的任何功能都需要为用户提供真正的价值。\n\nMyna 预计将是可选加入的。它和语音识别模型都将……"
+  },
+  "72c122e1fdcbcb59562894319e7642da": {
+    "id": "72c122e1fdcbcb59562894319e7642da",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/multikernel-public-release/",
+    "title_en": "You Can Now Run Multiple Linux Kernels on One Machine at Once",
+    "summary_en": "Multikernel has had its first public release, and it boots each kernel directly on the hardware, not inside a virtual machine.",
+    "pub_date": "Thu, 27 Aug 2026 18:07:01 GMT",
+    "title_zh": "现在你可以在一台机器上同时运行多个Linux内核",
+    "summary_zh": "Multikernel Technologies发布了其多内核Linux树的首个公开版本，该版本允许一台物理服务器并行运行多个独立的Linux内核，每个内核拥有专用的CPU和内存。这一架构通过直接引导硬件而非虚拟机实现，避免了传统虚拟化和容器技术的开销。项目基于Linux内核的直接分支，并添加了补丁以支持并行运行。该技术已用于商业产品，包括裸机工作负载整合、AI代理独立内核运行和内核热补丁。目前仅支持x86_64架构，但未来可能扩展。",
+    "fulltext_zh": "现在你可以在一台机器上同时运行多个Linux内核\n\nMultikernel Technologies发布了其多内核Linux树的首个公开版本，该版本直接在每个内核的硬件上引导，而非在虚拟机内部。\n\nMultikernel Technologies，这是自去年以来一直在构建的多内核Linux树的首个公开版本。\n\n该项目的基本前提是，一台物理服务器可以并行运行多个独立的Linux内核，每个内核拥有专用的CPU和内存。因此，同一台机器可以在一个内核上运行数据库，在另一个内核上运行GPU训练任务，而两个内核互不干扰对方的资源。\n\n别担心，这不是某个晦涩的副本，而是Linux内核的直接分支，并添加了一系列补丁，使其具备如此高水平的并行能力。\n\n一个内核作为主机运行，控制机器的CPU、内存和PCI设备。当它启动一个新的内核实例时，该实例获得专用的硬件切片，并使用Linux的kexec机制直接引导到该硬件上，以原生方式运行，而非在虚拟机监控器下运行。\n\n主机通过设备树覆盖层（位于/sys/firmware/devicetree下）跟踪所有这些，并且可以在所有实例保持运行的同时，在运行中的实例之间转移硬件。\n\n这与虚拟机和容器都不同。虚拟机仍然在应用程序和硬件之间放置了虚拟机监控器和主机内核。容器跳过了虚拟机监控器，但机器上的每个租户共享一个内核。\n\nMultikernel避免了这两个问题。每个实例都是一个完整、独立的内核，运行在专用的核心上。现代NIC和SSD也可以分配独立的硬件队列，因此实例可以独占访问设备的一部分，而不仅仅是CPU的一部分。\n\n这种应用程序内核和设备内核的分离是公司文档中描述的架构模式，通常将一个实例专门用于驱动程序和I/O，这样面向应用程序的内核就永远不会看到设备中断。\n\n目前仅支持x86_64硬件，但Multikernel Technologies表示，架构特定代码已经足够模块化，未来可以支持其他移植。\n\nMultikernel Technologies已经基于这个内核树销售三种产品，它们的定位充分说明了目标用户。\n\n- 在裸机上整合工作负载，无需虚拟机监控器。\n- 在独立内核中运行AI代理，直接访问GPU。\n- 在不关闭系统的情况下修补运行中的内核。\n\n这些定位都针对基础设施和平台团队，他们运行自己的硬件。公司网站还列出了更具体的用例，包括高核心数系统，以及为异构SoC上的每个集群分配一个内核。希望将Multikernel集成到嵌入式设备中的开发者也欢迎。\n\nMultikernel的创始人兼CEO Cong Wang早在2024年就通过Linux内核邮件列表中的RFC首次提出了这一架构。很高兴看到这个项目取得了如此大的进展。\n\n还有更多内容，你可以阅读公告，深入了解Cong分享的全面基准数据。\n\n这里是源代码供你查阅。\n\n喜欢这次更新吗？支持独立的Linux新闻报道。\n\nIt's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。\n\n一次付费，永久享受。\n\n任意金额，无需承诺。\n\n一个热爱开源软件、定制PC构建、赛车运动并探索这个世界无限可能的极客。\n\nLibreOffice 26.8加倍坚持无AI，紧随Collabora欢迎AI之后。\n\n你应该关注Chromium的Flatpak实验。\n\n这个微型USB设备将你的手机变成键盘、鼠标和SSH终端。\n\nLinux 7.3有望成为多年来最注重性能的内核版本之一。\n\nOmarchy Linux刚刚从科技界大腕那里获得800万美元投资。\n\n成为更好的Linux用户。\n\n通过FOSS每周通讯，你可以学习有用的Linux技巧，发现应用程序，探索……"
+  },
+  "c9f2899526df7106a7538613ca04141d": {
+    "id": "c9f2899526df7106a7538613ca04141d",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/libreoffice-26-8-release/",
+    "title_en": "LibreOffice 26.8 Doubles Down on No AI, Right After Collabora Welcomed It",
+    "summary_en": "TDF is not interested in providing any AI features, sticking to the basics of an open source office suite.",
+    "pub_date": "Thu, 27 Aug 2026 15:55:54 GMT",
+    "title_zh": "LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后",
+    "summary_zh": "LibreOffice 26.8 发布，明确拒绝集成任何 AI 功能，强调隐私和离线办公。此前 Collabora 在 26.04 版本中引入了可选的 AI 功能，双方立场形成鲜明对比。新版本改进了 RTL 文本检测、基线网格显示、电子表格和演示文稿功能，并支持西非文字系统。安装可通过官方包或 Flatpak 进行。",
+    "fulltext_zh": "LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后\n\nLibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后\n\nTDF 对提供任何 AI 功能不感兴趣，坚持开源办公套件的基本功能。\n\n自 4 月以来，TDF 和 Collabora 一直存在分歧，当时 TDF 的会员委员会一举开除了所有 Collabora 员工和合作伙伴，超过 30 人被除名。\n\n但这并没有阻止 Collabora 发布一系列新版本，其中 Collabora Office 26.04 是最新的一个，该版本将 AI 作为可选功能引入，让用户选择模型并自带凭据。\n\n现在，LibreOffice（以及背后的文档基金会）将拒绝 AI 的态度放在了最前沿，随着 LibreOffice 26.8 的发布，甚至直接在发布公告的标题中明确提及了这一点。\n\n🆕 LibreOffice 26.8：有哪些新功能？\n\nLibreOffice 26.8 中没有 AI。套件的任何部分都不会与远程服务器通信，也不需要互联网连接才能工作。\n\n这并非疏忽；TDF 表示，如果你的工作因法律或隐私原因不能离开办公场所，那么事后（例如在审计期间）证明这一点的唯一方法就是软件从未给数据提供任何去处。\n\n无论如何，让我们回到编辑器。👇\n\nWriter 现在在打开或粘贴文档时自动检测段落方向，行尾间距跟随段落方向而不是阅读方向，对象调整大小控件也能很好地处理 RTL 和垂直 CJK 文档。\n\n它还提供了一种在编辑时查看基线网格的方法，网格本身现在在文本框架内正确对齐。还提供了一个新的“无干扰写作”模式，用于去除页眉、页脚和页边距。\n\nCalc 采用了我们之前看到的 RTL 检测。在空单元格中输入从右到左的文本会自动设置其方向，而无需手动切换。\n\n其他改进包括数据透视表的“刷新”功能，以及一个“随机排序”命令，用于打乱选定范围内的单元格顺序。\n\nImpress 新增了为两种西非书写系统（曼丁语和富拉尼语）设计的命名函数和运算符，以及用于从右到左书写公式的左向矢量箭头。\n\n从左到右：Writer、Impress 和彩色笔记本栏。\n\nDraw 基本支持读写 Microsoft OOXML 文件中出现的新图表格式（如 c:chart），涵盖“图表”功能。\n\nImpress 可以在一个文件中混合页面大小，而不是强制每张幻灯片或页面都匹配，并且还引入了演示文稿分区，让你可以将幻灯片分组命名，而不是滚动浏览一长串列表。\n\n总的来说，Calc、Writer、Impress 和 Draw 现在各自带有自己的背景色调（位于功能区式界面顶部），因此你可以不用阅读标题栏就能知道自己在哪个应用程序中。\n\nWriter 还新增了一个“对齐”功能，可以平衡整个段落的字间距，而不是逐行判断，修复了逐行两端对齐导致的不均匀外观。\n\n⚙️ 如何安装/升级？\n\n你通常会在流行的 Linux 发行版中找到已安装的 LibreOffice，这个版本作为常规系统升级的一部分出现只是时间问题。\n\n如果你等不及，下载官方软件包是安装此版本的最快方式。或者，你也可以选择 Flatpak 版本，但要知道它收到更新会稍晚一些。\n\n如果你不想错过，可以查看“新功能”页面以了解实际变化。\n\n喜欢这次更新吗？支持独立的 Linux 新闻报道。\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无承诺\n\n一个热爱开源软件、定制 PC 组装、赛车运动并探索这个世界无限可能的极客。\n\n你现在可以在一台机器上同时运行多个 Linux 内核\n\n你应该关注 Chromium 的 Flatpak 体验"
+  },
+  "423f1ec0393a326f4495ab46ee63710f": {
+    "id": "423f1ec0393a326f4495ab46ee63710f",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12936",
+    "title_en": "Distribution Release: Ubuntu 26.04.1",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Oliver Reiche has announced the release of Ubuntu 26.04.1, an update to the distribution's latest long-term support release. \"Ubuntu 26.04.1 LTS, codenamed “Resolute Raccoon”, is here. This release continues Ubuntu's proud tradition of integrating the latest and greatest open source technologies into a high-quality, easy-to-use Linux distribution. The....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Ubuntu 26.04.1",
+    "summary_zh": "Ubuntu 26.04.1 LTS（代号“Resolute Raccoon”）正式发布。该版本是Ubuntu最新长期支持版的更新，集成了最新的开源技术，并提供了更新的安装镜像，以减少安装后的更新下载。此点版本包含安全更新和高严重性漏洞修复，重点保持与Ubuntu 26.04 LTS的稳定性和兼容性。同时，官方社区版（如Kubuntu、Lubuntu等）的发行说明和下载链接也已提供。",
+    "fulltext_zh": "发行版发布：Ubuntu 26.04.1\n\nOliver Reiche 宣布发布 Ubuntu 26.04.1，这是该发行版最新长期支持版本的更新。“Ubuntu 26.04.1 LTS，代号‘Resolute Raccoon’，现已发布。此版本延续了Ubuntu将最新、最优秀的开源技术整合到高质量、易用的Linux发行版中的优良传统。团队在整个开发周期中与社区和合作伙伴共同努力，引入了新功能并修复了错误。与往常一样，此点版本包含许多更新，并提供了更新的安装介质，以便安装后需要下载的更新更少。这些更新包括安全更新和其他高严重性错误的修正，重点在于保持与Ubuntu 26.04 LTS的稳定性和兼容性。”更多详细信息可在发行版的发布公告中找到。Ubuntu各官方社区版的发行说明也已提供。下载链接：\n\nubuntu-26.04.1-desktop-amd64.iso\nkubuntu-26.04.1-desktop-amd64.iso\nlubuntu-26.04.1-desktop-amd64.iso\nubuntukylin-26.04.1-desktop-amd64.iso\nubuntu-budgie-26.04.1-desktop-amd64.iso\nubuntucinnamon-26.04.1-desktop-amd64.iso\nubuntustudio-26.04.1-desktop-amd64.iso\nedubuntu-26.04.1-desktop-amd64.iso\nxubuntu-26.04.1-desktop-amd64.iso\n\n最近相关新闻和发布：\n\n发行版发布：Ubuntu 26.04.1\n发行版发布：Ubuntu 26.04\n发行版发布：Ubuntu 24.04.4\n发行版发布：Ubuntu 25.10\n开发版发布：Ubuntu 25.10 Beta\n发行版发布：Ubuntu 24.04.3\n\nUbuntu是一个完整的桌面Linux操作系统，免费提供，并同时拥有社区和专业支持。Ubuntu社区建立在《Ubuntu宣言》所载的理念之上：软件应免费提供，软件工具应能供人们以本地语言使用，且无论是否有残障，人们都应能自由地以他们认为合适的方式定制和修改软件。"
+  },
+  "90a7ca4163bc9bc286e2e450eea5bd9b": {
+    "id": "90a7ca4163bc9bc286e2e450eea5bd9b",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12935",
+    "title_en": "Distribution Release: Butterbian 0.4.0",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The Butterbian project has announced the availability of Butterbian 0.4.0, the latest stable release of the project's Debian-based Linux distribution with out-of-the-box support for the Btrfs filesystem and pre-configured Timeshift that takes incremental snapshots of the installed filesystem at regular intervals. The new version of the distribution updates....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Butterbian 0.4.0",
+    "summary_zh": "Butterbian 项目发布了基于 Debian 的 Linux 发行版 0.4.0 版本，该版本默认支持 Btrfs 文件系统，并预配置了 Timeshift 定期快照功能。新版本主要更新了 Xfce 桌面的视觉外观，包括全新的壁纸、启动菜单、LightDM 登录界面和 Orchis 黑色主题，使系统从开机到桌面呈现统一的视觉风格。",
+    "fulltext_zh": "Butterbian 项目已宣布发布 0.4.0 版本，这是该项目基于 Debian 的 Linux 发行版的最新稳定版本，默认支持 Btrfs 文件系统，并预配置了 Timeshift，该工具会定期对已安装的文件系统进行增量快照。新版本更新了其 Xfce 桌面的视觉方面：\"Butterbian Xfce 0.4.0 已发布。快照优先的基础没有改变——为你布局好的 Btrfs 子卷、每次 apt 操作前的 Timeshift 快照、从 GRUB 菜单回滚。改变的是你所看到的一切。0.3.3 看起来像是带有壁纸的普通 Xfce，而 0.4.0 看起来像一个真正的发行版。壁纸是为这个版本绘制的暮色场景——黑暗山脊上的一座孤独灯塔。启动菜单使用相同的艺术风格，因此从开机到桌面是同一个场景。小屋和灯笼变体也随附其中，如果你想重新混搭，SVG 源文件在仓库中。LightDM 现在采用深色 Butterbian 风格，而不是普通的灰色——聚光灯艺术、Butterbian 标志作为你的账户图片，以及一个与系统其余部分匹配的登录框。锁定屏幕也会进入相同的界面。桌面主题是 Orchis 的黑色变体——近黑色、扁平、蓝色点缀，搭配匹配的窗口边框，因此标题栏和应用程序终于协调一致。\" 阅读 butterbian-xfce-0.4.0-trixie-20260826.iso 的其余内容。"
+  },
+  "4867675b835738a297040264b57f3641": {
+    "id": "4867675b835738a297040264b57f3641",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12934",
+    "title_en": "Distribution Release: NawaOS 2.0",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Ahmed Abdulla has announced the release of NawaOS 2.0, a new stable build of the project's Debian-based Linux distribution designed primarily for gamers. It includes Steam, Lutris, Wine and RetroArch pre-installed and configured. This new release comes with snapshots, a setup wizard, and various user-friendly gaming enhancements: \"NawaOS....",
+    "pub_date": "",
+    "title_zh": "发行版发布：NawaOS 2.0",
+    "summary_zh": "NawaOS 2.0 是基于 Debian 的 Linux 发行版，专为游戏玩家设计，预装并配置了 Steam、Lutris、Wine 和 RetroArch。此版本引入了首次启动设置向导、NawaOS 商店、Companion 2.0 远程控制、更新前快照与恢复模式、游戏存档云同步、即时回放、掌机支持、驱动管理器、防火墙和自动安全更新，以及全新的深色主题。",
+    "fulltext_zh": "发行版发布：NawaOS 2.0\n\nAhmed Abdulla 宣布发布 NawaOS 2.0，这是该项目基于 Debian 的 Linux 发行版的新稳定版本，主要面向游戏玩家。该版本预装并配置了 Steam、Lutris、Wine 和 RetroArch。此新版本带来了快照、设置向导以及各种用户友好的游戏增强功能：\n\n“NawaOS 2.0 是迄今为止最大的版本。设置、更新、存档和恢复现在都由系统为您处理。新增功能包括：首次启动时的设置向导，支持阿拉伯语或英语，驱动程序、应用程序，几分钟内完成；NawaOS 商店——超过 60 款游戏、启动器和工具，一键安装；Companion 2.0——将您的手机用作加密遥控器，直接通过浏览器使用，无需安装应用；每次更新前自动创建快照，并在启动菜单中提供恢复模式；每次游戏会话后，游戏存档自动同步到您自己的 Google Drive 或 Dropbox；即时回放——按 Super + R 保存最近 30 秒的游戏画面；掌机支持——在 ROG Ally、Legion Go 和 Steam Deck 上提供控制台模式、TDP 控制和可用的指南按钮；驱动管理器——一键为您的显卡安装正确的 NVIDIA 驱动；默认开启防火墙并自动进行安全更新；整个系统重新设计的深色主题，并附带新的壁纸合集。”\n\n该消息发布在项目的 GitHub 页面上，更多信息可在发行版的 NawaOS-Gaming-2.0.iso 页面获取。\n\n近期相关新闻和发布：\n\n发行版发布：NawaOS 2.0\n\nNawaOS 是一个基于 Debian 的 Linux 发行版，专为游戏玩家设计，预装并配置了 Steam、Lutris、Wine 和 RetroArch。它还支持 Xbox、PlayStation 和其他控制器。该发行版具有定制化的 Cinnamon 桌面、Calamares 系统安装程序，以及用于流式传输游戏画面的 OBS Studio。NawaOS 适合没有 Linux 使用经验的用户。"
+  },
+  "05c20fda2276797c8f658bce7d2083b4": {
+    "id": "05c20fda2276797c8f658bce7d2083b4",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Sovereign-Tech-Agency-Flatpak",
+    "title_en": "Sovereign Tech Agency Providing Massive Investment Into Flatpak",
+    "summary_en": "The latest beneficiary of Germany's Sovereign Tech Agency is Flatpak where more than half a million Euros will be invested over the next two years to help with app sandboxing and other functionality...",
+    "pub_date": "Thu, 27 Aug 2026 20:38:03 -0400",
+    "title_zh": "主权技术机构向Flatpak提供巨额投资",
+    "summary_zh": "德国主权技术机构（Sovereign Tech Agency）通过其主权技术基金向Flatpak投资508,640欧元，旨在未来两年内加强应用沙箱功能并开发新特性。该投资将用于改进沙箱能力，开发基于PipeWire的音频门户、网络隔离功能、模仿Android和iOS的VPN门户，以及拼写检查等写作辅助门户。此外，还将探索密码自动填充功能，并引入“权限”和“意图”系统来简化静态权限和服务声明。",
+    "fulltext_zh": "主权技术机构向Flatpak提供巨额投资 - Phoronix\n\n主权技术机构向Flatpak提供巨额投资\n\n发布于2026年8月27日晚上8:38（美国东部时间）。\n\n德国主权技术机构的最新受益者是Flatpak，未来两年将投入超过50万欧元，用于帮助应用沙箱和其他功能。\n\n主权技术机构的主权技术基金将投资508,640欧元，帮助Flatpak在2027年底前开发新功能，以提供更安全、更沙箱化的平台。\n\n主权技术机构此前曾投资于GNOME项目，该项目帮助了Flatpak的一些工作，而这项新举措将有助于加强沙箱能力。此外，还将开发围绕PipeWire的音频门户、具有新功能的网络隔离、模仿Android和iOS API的VPN门户，以及用于拼写检查和其他写作辅助的新门户。还将探索密码自动填充的可能性。\n\n作为这项工作的一部分，还包括开发“权限”系统，用于声明特定门户的静态权限，“意图”系统用于声明提供的服务，以及对现有门户的维护。\n\n关于这笔508,640欧元对Flatpak投资的更多详情，请参阅：\n\nLibgcrypt 1.12.3带来Intel SM3/SM4/SHA512优化\nNginx错误页面的暗色模式支持仍遥遥无期\nKMSCON 10.0.2带来asciicast播放支持和错误修复\nGIMP在XCF格式近30年后，新项目文件格式取得进展\nRsync 3.5发布，作为“非凡”更新修复33个安全问题\nFEX 2608发布，带来更多针对ARM64运行x86_64二进制的修复\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动等主题。Michael也是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\n长期担任Linux CIFS/SMB3维护者的人士去世\nLinus Torvalds经历了一场地狱般的调试会话，AI“极大地帮助”了他\nWayland被发现“本质上比X11更快，但不一定更高效”\n特制的NTFS文件系统镜像允许通过NTFS3驱动在Linux上获得root访问权限\nLinux 7.3网络变更已合并，但开发者因AI/LLM“完全不知所措”\nX.Org Server 26.1 RC1为五年来的首个功能版本做准备\nLinux 7.3中两个非常令人兴奋的内存管理优化\nBtrfs为Linux 7.3准备更多性能改进：约3倍至5倍的提升\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "68f256d4be750598308b8c07b7f2111d": {
+    "id": "68f256d4be750598308b8c07b7f2111d",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Ubuntu-26.04.1-LTS-Released",
+    "title_en": "Ubuntu 26.04.1 LTS Released With Initial Collection Of Fixes",
+    "summary_en": "Canonical today published Ubuntu 26.04.1 LTS as their first point release in the long-term support series for the \"Resolute Raccoon\"...",
+    "pub_date": "Thu, 27 Aug 2026 20:13:09 -0400",
+    "title_zh": "Ubuntu 26.04.1 LTS 发布，包含首批修复集合",
+    "summary_zh": "Canonical 于今日发布了 Ubuntu 26.04.1 LTS，这是“Resolute Raccoon”长期支持系列的首个维护版本。该版本整合了自 4 月 Ubuntu 26.04 LTS 发布以来的所有稳定版更新（SRU），包括错误修复和安全补丁，但不包含新的硬件支持（HWE）栈，该栈将在 Ubuntu 26.04.2 LTS 中随 Ubuntu 26.10 发布后推出。此版本旨在通过捆绑过去四个月的修复，提供更快速、更愉快的安装体验。",
+    "fulltext_zh": "Ubuntu 26.04.1 LTS 发布，包含首批修复集合 - Phoronix\n\nUbuntu 26.04.1 LTS 发布，包含首批修复集合\n2026年8月27日，晚上8:13（美国东部时间）\n\nCanonical 今天发布了 Ubuntu 26.04.1 LTS，这是“Resolute Raccoon”长期支持系列的首个维护版本。\n\nUbuntu 26.04.1 LTS 包含了自 4 月 Ubuntu 26.04 LTS 发布以来收集的所有稳定版更新（SRU）中的错误修复和安全更新。这个首个维护版本不包含任何新的硬件支持（HWE）栈（如更新的内核等）——这些将在 Ubuntu 26.10 发布后随 Ubuntu 26.04.2 LTS 一起提供。\n\nUbuntu 26.04.1 LTS 主要旨在通过捆绑过去四个月中纳入的所有修复，提供更快速、更愉快的安装体验。有关今晚 Ubuntu 26.04.1 LTS 发布的下载和更多详细信息，请参阅邮件列表公告。\n\nUbuntu Touch 正在向 Ubuntu 26.04 迈进，Vulkan 和应用更新\nUbuntu 将为 Ubuntu 26.04 LTS 提供虚拟化 HWE 栈\nUbuntu Touch 24.04-2.0 发布，支持刘海屏和圆角\nUbuntu Linux 计划移除 /etc/debian_version 历史遗留文件\n三个新的 Ubuntu Snap 漏洞公开——其中一个可追溯至 Ubuntu 16.04 LTS\nCanonical 正式推出“企业商店”，用于离线/气隙 Ubuntu 使用\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他。\n\n长期 Linux CIFS/SMB3 维护者去世\nLinus Torvalds 经历了一场“地狱级”调试会话，AI“极大地帮助”了他\nWayland 被发现“本质上比 X11 更快，但不一定更高效”\n特制的 NTFS 文件系统镜像允许在 Linux 上通过 NTFS3 驱动获得 root 访问权限\nLinux 7.3 网络更改已合并，但开发者因 AI/LLM 而“完全不堪重负”\nX.Org Server 26.1 RC1 为五年来的首个功能版本做准备\nLinux 7.3 中两个非常令人兴奋的内存管理优化\nBtrfs 为 Linux 7.3 准备了更多性能改进：某些提升约 3 倍至 5 倍\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "7045e8d0e3b09f6b2fc759235fb93925": {
+    "id": "7045e8d0e3b09f6b2fc759235fb93925",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Intel-Linux-SAR-Driver-Orphaned",
+    "title_en": "Intel Linux Driver Orphaned For Limiting RF Exposure To Humans",
+    "summary_en": "Over the past year and a half a number of open-source drivers in the Linux kernel have been orphaned as a result of departures from the company. The impact has ranged from the Intel CPU \"coretemp\" temperature driver being orphaned without a maintainer to other lesser known Intel drivers. Another lesser known Intel driver is now being orphaned with no longer having a maintainer at the company: the Intel Specific Absorption Rate Driver...",
+    "pub_date": "Thu, 27 Aug 2026 17:13:01 -0400",
+    "title_zh": "英特尔Linux驱动程序因限制人体射频暴露而被弃养",
+    "summary_zh": "英特尔一位前维护者离开公司后，其Linux内核中的“英特尔特定吸收率（SAR）驱动程序”被标记为孤儿。该驱动用于限制英特尔M.2调制解调器的射频功率，以保护人体免受过度辐射。尽管英特尔已退出调制解调器业务，但该驱动仍保留在内核中，供使用INTC1092设备的用户使用，但不再积极维护。",
+    "fulltext_zh": "英特尔Linux驱动程序因限制人体射频暴露而被弃养 - Phoronix\n\n英特尔Linux驱动程序因限制人体射频暴露而被弃养\n\n2026年8月27日下午5:13（美国东部时间）\n\n在过去一年半中，由于公司人员的离职，Linux内核中的多个开源驱动程序被弃养。影响范围从英特尔CPU“coretemp”温度驱动程序被弃养（没有维护者）到其他不太知名的英特尔驱动程序。现在，另一个不太知名的英特尔驱动程序也被弃养，公司内不再有维护者：英特尔特定吸收率驱动程序。\n\n英特尔特定吸收率（SAR）驱动程序通过Kconfig选项控制，用于限制英特尔M.2调制解调器对人体射频（RF）的暴露。该内核驱动程序根据BIOS通过ACPI提供的SAR数据（通过硬件传感器）来调节射频功率。然后，它依赖于用户空间分配来读取设备属性、SAR表索引、设备位置等，最终收集和分析所有这些数据，以动态调整射频功率调节，从而限制对人体射频的暴露。\n\n该驱动程序支持带有“INTC1092”设备ID的WWAN调制解调器。\n\n英特尔SAR驱动程序于2021年在Linux 5.15中添加到Linux内核。由于Sashiko等人发现的代码缺陷以及各种树级内核更改，这个英特尔int1092驱动程序代码今年得到了少量修复。\n\n随着该驱动程序的前维护者不再在英特尔工作，且英特尔多年前已退出调制解调器业务，该Linux驱动程序现在被标记为孤儿。它仍将保留在Linux内核中，供仍在使用配备INTC1092的英特尔笔记本电脑进行动态SAR监管的用户使用，但不再积极支持。\n\n英特尔ANV驱动程序改进Vulkan视频H.265解码\n英特尔推出新“BFF”Linux驱动程序以应对老化硅和卡住位\nDisplayPort 2.1 ALPM仍在为英特尔Xe3P / Nova Lake开发中\n英特尔工程师提议为Linux开发DRM Fabric\n英特尔计算运行时26.31.39395.13继续为Crescent Island和OpenCL LEO做准备\n英特尔Mesa Linux驱动程序现在将Nova Lake S / U / H / HX视为稳定版\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动程序和其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\n长期Linux CIFS/SMB3维护者去世\nLinus Torvalds经历了一场地狱般的调试会话，AI“极大帮助”\nWayland被发现“本质上比X11更快，但不一定更高效”\n特制NTFS文件系统镜像允许在Linux上通过NTFS3驱动程序获得root访问权限\nLinux 7.3网络更改已合并，但开发者因AI/LLM“完全不堪重负”\nX.Org Server 26.1 RC1准备五年来的首个功能版本\nLinux 7.3中两个非常令人兴奋的内存管理优化：约3倍至5倍的提升\nBtrfs为Linux 7.3准备更多性能改进：约3倍至5倍的胜利\n\n虽然拥有无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "fc5646fc5c5989b0d2255c1da21664f9": {
+    "id": "fc5646fc5c5989b0d2255c1da21664f9",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMDGPU-HDMI-2.1-FRL-Default",
+    "title_en": "AMD Preparing To Enable HDMI 2.1 FRL Support By Default For Linux",
+    "summary_en": "It was back in May that the surprising event happened of AMD posting HDMI 2.1 FRL patches for their open-source AMDGPU Linux driver as part of their broader HDMI 2.1 bring-up. For years the open-source HDMI 2.1 support in AMDGPU was blocked by the HDMI Forum but whether it was due to Valve or some other event, the code was finally unblocked. While it's been part of the kernel since Linux 7.2, it's been disabled by default -- except that is now changing...",
+    "pub_date": "Thu, 27 Aug 2026 15:45:06 -0400",
+    "title_zh": "AMD 准备在 Linux 中默认启用 HDMI 2.1 FRL 支持",
+    "summary_zh": "AMD 正在准备默认启用其开源 AMDGPU Linux 驱动中的 HDMI 2.1 固定速率链路（FRL）支持。此前，该功能因 HDMI 论坛的阻碍而长期无法开源，后于 Linux 7.2 中合并但默认禁用。随着 VRR 和 ALLM 等功能的完善，AMD 现已准备反转逻辑，默认启用 FRL，同时保留模块参数以便在需要时禁用。预计该改动将在 Linux 7.4 中落地，并有望成为 2026 年 LTS 内核的圣诞礼物。",
+    "fulltext_zh": "AMD 准备在 Linux 中默认启用 HDMI 2.1 FRL 支持 - Phoronix\n\nAMD 准备在 Linux 中默认启用 HDMI 2.1 FRL 支持\n发布于 2026 年 8 月 27 日下午 3:45（美国东部时间）\n\n今年五月发生了一件令人意外的事件：AMD 为其开源 AMDGPU Linux 驱动发布了 HDMI 2.1 FRL 补丁，作为其更广泛的 HDMI 2.1 支持工作的一部分。多年来，AMDGPU 中的开源 HDMI 2.1 支持一直受到 HDMI 论坛的阻碍，但无论是由于 Valve 还是其他事件，代码最终得以解禁。虽然该支持自 Linux 7.2 起已包含在内核中，但默认情况下一直处于禁用状态——不过这一情况即将改变。\n\n在针对更高分辨率和更高刷新率的 HDMI 2.1 固定速率链路（FRL）补丁之后，又相继推出了显示流压缩（DSC）、VRR 和 ALLM 功能的补丁，这些功能对游戏玩家尤为重要。AMD 一直在将这些 HDMI 2.1 功能上游到主线 Linux 内核，但最初默认禁用，直到可变刷新率（VRR）功能准备就绪，以避免任何用户体验回退。\n\n随着这些功能现已趋于完善，AMD 正准备根据今天的补丁默认启用 HDMI 2.1 FRL。AMD 驱动工程师 Fangzhi Zuo 发布了该补丁，通过反转逻辑来默认启用 HDMI 2.1 FRL。通过模块参数，可以在需要时禁用该支持，以便进行错误/回归测试等。\n\n因此，对于今年晚些时候的 Linux 7.4，我们希望看到 AMDGPU VRR 和 ALLM 准备就绪，并且现在默认启用 FRL。对于当前的 Linux 7.3 周期来说已经太晚了，但对于 Linux 7.4，希望一切都能准备就绪。如果 Linux 7.3 和 Linux 7.4 按计划发布，Linux 7.4 应该会在 12 月的最后两周发布……这反过来将使其成为 2026 年 Linux 长期支持（LTS）内核版本，并且如果 HDMI 2.1 功能全部就绪，这将是 AMD Radeon Linux 用户的一份绝妙圣诞礼物。"
+  },
+  "468aa8a2f212c679f3ca13376f6dd6ac": {
+    "id": "468aa8a2f212c679f3ca13376f6dd6ac",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.3-MGLRU-Executable-Mem",
+    "title_en": "Linux 7.3 MGLRU Change Helps Executable Code Stays In Memory, Improving Performance",
+    "summary_en": "Following last week's main set of memory management \"MM\" related updates for Linux 7.3, another batch of MM code updates were submitted and merged today as we prepare to close out the Linux 7.3 merge window. There are a few optimization patches that stand out along with other mostly small fixes/changes...",
+    "pub_date": "Thu, 27 Aug 2026 14:20:28 -0400",
+    "title_zh": "Linux 7.3 MGLRU 变更助力可执行代码驻留内存，提升性能",
+    "summary_zh": "Linux 7.3 合并窗口即将关闭之际，内存管理（MM）代码又迎来一批更新，其中一项由阿里巴巴工程师 Baolin Wang 提交的补丁系列尤为引人注目。该补丁优化了 MGLRU（多代最近最少使用）算法，使其在首次使用后提升映射可执行文件 folio 的保留优先级，从而减少 I/O 抖动并提升工作负载性能。在 32 核 Arm 服务器、内存限制 2GB 的极端内存受限环境下，该补丁将内核编译的系统时间从 9248 秒降至 7861 秒。尽管现实场景中较少出现如此极端的资源争用，但在内存受限或超订阅环境中，该改动仍具实际价值。",
+    "fulltext_zh": "Linux 7.3 MGLRU 变更助力可执行代码驻留内存，提升性能 - Phoronix\nLinux 7.3 MGLRU 变更助力可执行代码驻留内存，提升性能\n发布于 2026 年 8 月 27 日下午 2:20（美国东部时间）\n\n继上周 Linux 7.3 的主要内存管理（\"MM\"）相关更新之后，今天又提交并合并了另一批 MM 代码更新，我们正为关闭 Linux 7.3 合并窗口做准备。其中有一些值得关注的优化补丁，以及其他大多为小型修复/变更的内容。\n\n今天 MM 合并中引起我注意的是 Baolin Wang 提交的补丁系列，该系列旨在为 MGLRU 在首次使用后提升映射可执行文件 folio 的优先级。这位阿里巴巴工程师指出，传统的最近最少使用（LRU）算法会保护映射的可执行文件 folio，使其有更大机会驻留系统内存，从而避免 I/O 抖动并有助于提升工作负载性能。但 MGLRU 到目前为止在这方面表现并不尽如人意。\n\nMGLRU 在保护映射可执行文件 folio 方面一直“不太可靠”，导致这些 folio 比传统 LRU 行为更容易被回收。\n\nBaolin Wang 在一台 32 核 Arm 服务器上量化了该问题，将内存记账限制设置为 2GB，使其处于严重内存受限状态，同时运行 32 个 Linux 内核构建作业以制造大量内存争用。他在补丁说明中指出，默认情况下系统时间为 9248 秒，而应用这些补丁后，由于更好地提升了映射可执行文件 folio 的优先级，系统时间降至 7861 秒。\n\n通常在实际场景中，你不会遇到 32 个核心争抢 2GB 内存的情况，但在当今内存受限的市场环境下，以及其他过度订阅（over-subscribed）的配置中，这一改动最终应该会有所帮助。\n\n这些有助于让可执行文件 folio 驻留内存的补丁今天已合并，同时合并的还有许多其他小型 MM 优化补丁。\n\n补丁因极其糟糕的低效问题大幅提升内核内 Zstd 性能\nLinux 7.0-mk2 发布，多内核 Linux 性能表现令人期待\nLinux 7.3 更好地防止有缺陷的 EFI 固件导致用户空间其余部分宕机\nLinux 7.3 带来从旧 GPU 到下一代硬件的图形驱动改进\nLinux 7.3 引入新的 AES 加密 API——将释放更多性能\nSched_ext 的子调度器支持在 Linux 7.3 中已“功能完备”\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。他还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\n长期担任 Linux CIFS/SMB3 维护者的开发者去世\nLinus Torvalds 经历了一场“地狱级”调试会话，AI 提供了“巨大帮助”\nWayland 被发现“本质上比 X11 更快，但未必更高效”\n特制 NTFS 文件系统镜像可借助 NTFS3 驱动在 Linux 上获取 root 权限\nLinux 7.3 网络变更已合并，但开发者因 AI/LLM 而“完全不堪重负”\nX.Org Server 26.1 RC1 为五年来的首个功能版本做准备\nLinux 7.3 中两项非常令人兴奋的内存管理优化\nBtrfs 为 Linux 7.3 准备更多性能改进：部分场景提升约 3 倍至 5 倍\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "c4116ba6af431eb382d6351fb7203b1f": {
+    "id": "c4116ba6af431eb382d6351fb7203b1f",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/system76-launches-next-gen-adder-pro-linux-laptop-with-2k-oled-display/",
+    "title_en": "System76 Launches Next-Gen Adder Pro Linux Laptop with 2K OLED Display",
+    "summary_en": "System76 launches its next-gen Adder Pro with a 15.3-inch 2K OLED display, Intel Core Ultra 7 processor, and NVIDIA RTX 50-series graphics.\nThe post System76 Launches Next-Gen Adder Pro Linux Laptop with 2K OLED Display appeared first on Linux Today.",
+    "pub_date": "Thu, 27 Aug 2026 06:50:11 +0000",
+    "title_zh": "System76发布搭载2K OLED显示屏的下一代Adder Pro Linux笔记本电脑",
+    "summary_zh": "System76推出了新一代Adder Pro笔记本电脑，配备15.3英寸2K OLED显示屏、英特尔酷睿Ultra 7处理器和NVIDIA RTX 50系列显卡。该产品专为Linux用户设计，提供高性能计算体验，适合游戏、内容创作和专业工作负载。",
+    "fulltext_zh": "System76推出了其下一代Adder Pro，配备15.3英寸2K OLED显示屏、英特尔酷睿Ultra 7处理器和NVIDIA RTX 50系列显卡。\n\n该文章System76发布搭载2K OLED显示屏的下一代Adder Pro Linux笔记本电脑首次出现在Linux Today上。"
+  },
+  "270e3aa975d48d210f59fab20935e989": {
+    "id": "270e3aa975d48d210f59fab20935e989",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/clonezilla-live-3-3-3-adds-reverse-connection-network-cloning/",
+    "title_en": "Clonezilla Live 3.3.3 Adds Reverse-Connection Network Cloning",
+    "summary_en": "Clonezilla Live 3.3.3 introduces reverse-connection network cloning, allowing source machines behind strict NAT or CGNAT to initiate cloning connections.\nThe post Clonezilla Live 3.3.3 Adds Reverse-Connection Network Cloning appeared first on Linux Today.",
+    "pub_date": "Thu, 27 Aug 2026 06:48:38 +0000",
+    "title_zh": "Clonezilla Live 3.3.3 新增反向连接网络克隆功能",
+    "summary_zh": "Clonezilla Live 3.3.3 版本引入了反向连接网络克隆功能，使得位于严格 NAT 或 CGNAT 环境下的源机器能够主动发起克隆连接，从而解决了传统克隆模式下因网络限制而无法连接的问题。该功能增强了 Clonezilla 在复杂网络环境中的适用性，为用户提供了更灵活的克隆方案。",
+    "fulltext_zh": "Clonezilla Live 3.3.3 引入了反向连接网络克隆功能，允许位于严格 NAT 或 CGNAT 环境下的源机器主动发起克隆连接。\n\n该文章《Clonezilla Live 3.3.3 Adds Reverse-Connection Network Cloning》最初发表于 Linux Today。"
+  },
+  "1922ef8f600b685c11d98e03d88cd6fa": {
+    "id": "1922ef8f600b685c11d98e03d88cd6fa",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/kde-plasma-6-7-3-restores-triple-buffering-for-nvidia-gpus/",
+    "title_en": "KDE Plasma 6.7.3 Restores Triple Buffering for NVIDIA GPUs",
+    "summary_en": "KDE Plasma 6.7.3 restores triple buffering for NVIDIA GPUs, helping deliver smoother rendering while also bringing display fixes and KWin improvements.\nThe post KDE Plasma 6.7.3 Restores Triple Buffering for NVIDIA GPUs appeared first on Linux Today.",
+    "pub_date": "Thu, 27 Aug 2026 06:46:06 +0000",
+    "title_zh": "KDE Plasma 6.7.3 为 NVIDIA GPU 恢复三重缓冲",
+    "summary_zh": "KDE Plasma 6.7.3 已发布，该版本为 NVIDIA GPU 恢复了三重缓冲功能，从而带来更流畅的渲染体验，同时修复了显示问题并改进了 KWin 窗口管理器。此次更新旨在提升用户界面的响应速度和稳定性，尤其对使用 NVIDIA 显卡的用户而言，性能优化更为明显。",
+    "fulltext_zh": "KDE Plasma 6.7.3 为 NVIDIA GPU 恢复了三重缓冲功能，有助于实现更流畅的渲染，同时还带来了显示修复和 KWin 改进。\n\n该文章 KDE Plasma 6.7.3 Restores Triple Buffering for NVIDIA GPUs 首次出现在 Linux Today 上。"
+  },
+  "c2d16bb4bfb7c9c99ae464c64bbd274c": {
+    "id": "c2d16bb4bfb7c9c99ae464c64bbd274c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/atk-dragonfly-a9-air-ultimate-lightweight-wireless-mouse-review/",
+    "title_en": "ATK Dragonfly A9 Air Ultimate Lightweight Wireless Mouse Review",
+    "summary_en": "The ATK Dragonfly A9 Air Ultimate combines a 47g lightweight design, PAW3950 Ultra sensor, 8K polling, and wireless performance for competitive gaming.\nThe post ATK Dragonfly A9 Air Ultimate Lightweight Wireless Mouse Review appeared first on Linux Today.",
+    "pub_date": "Thu, 27 Aug 2026 06:45:06 +0000",
+    "title_zh": "ATK Dragonfly A9 Air Ultimate 轻量化无线鼠标评测",
+    "summary_zh": "ATK Dragonfly A9 Air Ultimate 是一款专为竞技游戏设计的轻量化无线鼠标，重量仅47克，搭载PAW3950 Ultra传感器，支持8K轮询率，并提供出色的无线性能。本文基于Linux Today的评测，详细介绍了该鼠标的设计、性能及适用场景，适合追求极致轻便和快速响应的游戏玩家。",
+    "fulltext_zh": "ATK Dragonfly A9 Air Ultimate 将47克的轻量化设计、PAW3950 Ultra传感器、8K轮询率以及无线性能相结合，为竞技游戏提供了出色的支持。\n\n该文章最初发表于Linux Today。"
+  },
+  "be3f28f3e2a95e999bd09e53f990f5cf": {
+    "id": "be3f28f3e2a95e999bd09e53f990f5cf",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/17-best-node-js-frameworks-and-libraries-for-developers-in-2026/",
+    "title_en": "17 Best Node.js Frameworks and Libraries for Developers in 2026",
+    "summary_en": "Discover 17 of the best Node.js frameworks and libraries for developers in 2026, including tools for APIs, web apps, real-time services, and more.\nThe post 17 Best Node.js Frameworks and Libraries for Developers in 2026 appeared first on Linux Today.",
+    "pub_date": "Thu, 27 Aug 2026 06:43:02 +0000",
+    "title_zh": "2026年开发者必备的17款最佳Node.js框架与库",
+    "summary_zh": "本文介绍了2026年开发者应关注的17款最佳Node.js框架与库，涵盖API开发、Web应用、实时服务等多个领域。这些工具旨在提升开发效率、简化代码结构，并支持现代应用需求。文章为开发者提供了实用的选型参考，帮助他们在不同项目中找到合适的Node.js解决方案。",
+    "fulltext_zh": "探索2026年开发者必备的17款最佳Node.js框架与库，包括用于API、Web应用、实时服务等的工具。\n\n本文首发于Linux Today。"
   }
 }

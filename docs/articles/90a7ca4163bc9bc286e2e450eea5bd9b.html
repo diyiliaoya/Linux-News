@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>我用一个隐藏的Ubuntu功能来整理桌面 — Linux 中文速报</title>
+<title>发行版发布：Butterbian 0.4.0 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">DistroWatch</span>
   </div>
 
-  <h1>我用一个隐藏的Ubuntu功能来整理桌面</h1>
+  <h1>发行版发布：Butterbian 0.4.0</h1>
 
-  <div class="article-summary">本文介绍了一个Ubuntu桌面上的隐藏功能——文件堆叠（stacks），该功能由DING扩展提供，可将相同类型的文件分组到可折叠的图标中，从而减少桌面视觉杂乱。用户只需右键点击桌面并选择“堆叠文件”即可启用，且该功能在Ubuntu 24.04及以上版本中可用。堆叠仅基于文件类型，不支持按日期分组，且文件夹不会被堆叠。虽然无法排除特定文件类型，但该功能仍是一种便捷的整理方式。</div>
+  <div class="article-summary">Butterbian 项目发布了基于 Debian 的 Linux 发行版 0.4.0 版本，该版本默认支持 Btrfs 文件系统，并预配置了 Timeshift 定期快照功能。新版本主要更新了 Xfce 桌面的视觉外观，包括全新的壁纸、启动菜单、LightDM 登录界面和 Orchis 黑色主题，使系统从开机到桌面呈现统一的视觉风格。</div>
 
-  <div class="article-body"><p>一个隐藏的Ubuntu功能，我用它来整理桌面 - OMG! Ubuntu</p><p>(DING)扩展有一个鲜为人知的方法，可以为混乱的桌面带来秩序：堆叠。</p><p>堆叠会将相同类型的多个文件分组到一个可折叠的图标中，例如图片归入一个堆叠，PDF归入另一个堆叠，以此类推。文件夹不会被分组，如果桌面上某种类型的文件只有一个，也不会被堆叠。</p><p>点击堆叠即可展开，显示堆叠中的所有文件（其他文件图标会被挤开）。多个堆叠可以同时展开或折叠，堆叠也可以保持打开状态（有自动折叠功能）。堆叠在重启后仍然保留。</p><p>但文件并不会移动位置；堆叠分组是一种视觉上的整理，而非实际上的移动。</p><p>直到我在7月份报道这一功能时，我才知道这个精巧的功能竟然存在。当时的更新日志提到，堆叠功能已经变得可访问。</p><p>“肯定不像macOS那样的桌面堆叠吧……”</p><p>是的，结果非常相似：</p><p>一段视频展示了DING中堆叠图标的工作方式，录制于Ubuntu 26.04 LTS</p><p>这并不是一个新功能。你可以在Ubuntu 24.04 LTS及以上版本中从桌面启用文件堆叠：</p><p>右键点击Ubuntu桌面</p><p>要关闭桌面堆叠，重复上述步骤即可。所有文件将恢复为散落在桌面上的单个图标。</p><p>分组仅基于文件类型，因此没有日期选项（macOS的对应功能有）。所有堆叠都使用相同的图标——一个文件夹——这有点遗憾。但一个小箭头标志将堆叠文件夹与实际文件夹区分开来，并且名称反映了内容。</p><p>能否排除某些文件类型不被堆叠，而其他类型仍然堆叠？有一个gsettings值，我以为它会有所帮助。它期望文件字符串，例如“image/png”而不是“.png”——然而，这些文件仍然会被堆叠，但默认是展开的。</p><p>我认为如果排除功能真的有效会很有用，例如，让.png截图保留在桌面上显示，而将其他图片类型分组。也许这是一个小众用例。</p><p>保持桌面空间整洁是个好主意。如果你做不到，又不想将文件移动到文件夹中（或者使用脚本来自动整理，这在过去很流行），这个功能是减少视觉杂乱的一种便捷方式。</p><p>DING预装在Ubuntu上，因此无需安装任何东西。如果你使用的是其他基于GNOME Shell的Linux发行版，可以从GNOME扩展网站安装DING。</p></div>
+  <div class="article-body"><p>Butterbian 项目已宣布发布 0.4.0 版本，这是该项目基于 Debian 的 Linux 发行版的最新稳定版本，默认支持 Btrfs 文件系统，并预配置了 Timeshift，该工具会定期对已安装的文件系统进行增量快照。新版本更新了其 Xfce 桌面的视觉方面：&quot;Butterbian Xfce 0.4.0 已发布。快照优先的基础没有改变——为你布局好的 Btrfs 子卷、每次 apt 操作前的 Timeshift 快照、从 GRUB 菜单回滚。改变的是你所看到的一切。0.3.3 看起来像是带有壁纸的普通 Xfce，而 0.4.0 看起来像一个真正的发行版。壁纸是为这个版本绘制的暮色场景——黑暗山脊上的一座孤独灯塔。启动菜单使用相同的艺术风格，因此从开机到桌面是同一个场景。小屋和灯笼变体也随附其中，如果你想重新混搭，SVG 源文件在仓库中。LightDM 现在采用深色 Butterbian 风格，而不是普通的灰色——聚光灯艺术、Butterbian 标志作为你的账户图片，以及一个与系统其余部分匹配的登录框。锁定屏幕也会进入相同的界面。桌面主题是 Orchis 的黑色变体——近黑色、扁平、蓝色点缀，搭配匹配的窗口边框，因此标题栏和应用程序终于协调一致。&quot; 阅读 butterbian-xfce-0.4.0-trixie-20260826.iso 的其余内容。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/ubuntu-desktop-icons-stacks" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://distrowatch.com/12935" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

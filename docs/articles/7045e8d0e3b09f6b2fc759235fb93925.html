@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>我用一个隐藏的Ubuntu功能来整理桌面 — Linux 中文速报</title>
+<title>英特尔Linux驱动程序因限制人体射频暴露而被弃养 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>我用一个隐藏的Ubuntu功能来整理桌面</h1>
+  <h1>英特尔Linux驱动程序因限制人体射频暴露而被弃养</h1>
 
-  <div class="article-summary">本文介绍了一个Ubuntu桌面上的隐藏功能——文件堆叠（stacks），该功能由DING扩展提供，可将相同类型的文件分组到可折叠的图标中，从而减少桌面视觉杂乱。用户只需右键点击桌面并选择“堆叠文件”即可启用，且该功能在Ubuntu 24.04及以上版本中可用。堆叠仅基于文件类型，不支持按日期分组，且文件夹不会被堆叠。虽然无法排除特定文件类型，但该功能仍是一种便捷的整理方式。</div>
+  <div class="article-summary">英特尔一位前维护者离开公司后，其Linux内核中的“英特尔特定吸收率（SAR）驱动程序”被标记为孤儿。该驱动用于限制英特尔M.2调制解调器的射频功率，以保护人体免受过度辐射。尽管英特尔已退出调制解调器业务，但该驱动仍保留在内核中，供使用INTC1092设备的用户使用，但不再积极维护。</div>
 
-  <div class="article-body"><p>一个隐藏的Ubuntu功能，我用它来整理桌面 - OMG! Ubuntu</p><p>(DING)扩展有一个鲜为人知的方法，可以为混乱的桌面带来秩序：堆叠。</p><p>堆叠会将相同类型的多个文件分组到一个可折叠的图标中，例如图片归入一个堆叠，PDF归入另一个堆叠，以此类推。文件夹不会被分组，如果桌面上某种类型的文件只有一个，也不会被堆叠。</p><p>点击堆叠即可展开，显示堆叠中的所有文件（其他文件图标会被挤开）。多个堆叠可以同时展开或折叠，堆叠也可以保持打开状态（有自动折叠功能）。堆叠在重启后仍然保留。</p><p>但文件并不会移动位置；堆叠分组是一种视觉上的整理，而非实际上的移动。</p><p>直到我在7月份报道这一功能时，我才知道这个精巧的功能竟然存在。当时的更新日志提到，堆叠功能已经变得可访问。</p><p>“肯定不像macOS那样的桌面堆叠吧……”</p><p>是的，结果非常相似：</p><p>一段视频展示了DING中堆叠图标的工作方式，录制于Ubuntu 26.04 LTS</p><p>这并不是一个新功能。你可以在Ubuntu 24.04 LTS及以上版本中从桌面启用文件堆叠：</p><p>右键点击Ubuntu桌面</p><p>要关闭桌面堆叠，重复上述步骤即可。所有文件将恢复为散落在桌面上的单个图标。</p><p>分组仅基于文件类型，因此没有日期选项（macOS的对应功能有）。所有堆叠都使用相同的图标——一个文件夹——这有点遗憾。但一个小箭头标志将堆叠文件夹与实际文件夹区分开来，并且名称反映了内容。</p><p>能否排除某些文件类型不被堆叠，而其他类型仍然堆叠？有一个gsettings值，我以为它会有所帮助。它期望文件字符串，例如“image/png”而不是“.png”——然而，这些文件仍然会被堆叠，但默认是展开的。</p><p>我认为如果排除功能真的有效会很有用，例如，让.png截图保留在桌面上显示，而将其他图片类型分组。也许这是一个小众用例。</p><p>保持桌面空间整洁是个好主意。如果你做不到，又不想将文件移动到文件夹中（或者使用脚本来自动整理，这在过去很流行），这个功能是减少视觉杂乱的一种便捷方式。</p><p>DING预装在Ubuntu上，因此无需安装任何东西。如果你使用的是其他基于GNOME Shell的Linux发行版，可以从GNOME扩展网站安装DING。</p></div>
+  <div class="article-body"><p>英特尔Linux驱动程序因限制人体射频暴露而被弃养 - Phoronix</p><p>英特尔Linux驱动程序因限制人体射频暴露而被弃养</p><p>2026年8月27日下午5:13（美国东部时间）</p><p>在过去一年半中，由于公司人员的离职，Linux内核中的多个开源驱动程序被弃养。影响范围从英特尔CPU“coretemp”温度驱动程序被弃养（没有维护者）到其他不太知名的英特尔驱动程序。现在，另一个不太知名的英特尔驱动程序也被弃养，公司内不再有维护者：英特尔特定吸收率驱动程序。</p><p>英特尔特定吸收率（SAR）驱动程序通过Kconfig选项控制，用于限制英特尔M.2调制解调器对人体射频（RF）的暴露。该内核驱动程序根据BIOS通过ACPI提供的SAR数据（通过硬件传感器）来调节射频功率。然后，它依赖于用户空间分配来读取设备属性、SAR表索引、设备位置等，最终收集和分析所有这些数据，以动态调整射频功率调节，从而限制对人体射频的暴露。</p><p>该驱动程序支持带有“INTC1092”设备ID的WWAN调制解调器。</p><p>英特尔SAR驱动程序于2021年在Linux 5.15中添加到Linux内核。由于Sashiko等人发现的代码缺陷以及各种树级内核更改，这个英特尔int1092驱动程序代码今年得到了少量修复。</p><p>随着该驱动程序的前维护者不再在英特尔工作，且英特尔多年前已退出调制解调器业务，该Linux驱动程序现在被标记为孤儿。它仍将保留在Linux内核中，供仍在使用配备INTC1092的英特尔笔记本电脑进行动态SAR监管的用户使用，但不再积极支持。</p><p>英特尔ANV驱动程序改进Vulkan视频H.265解码</p><p>英特尔推出新“BFF”Linux驱动程序以应对老化硅和卡住位</p><p>DisplayPort 2.1 ALPM仍在为英特尔Xe3P / Nova Lake开发中</p><p>英特尔工程师提议为Linux开发DRM Fabric</p><p>英特尔计算运行时26.31.39395.13继续为Crescent Island和OpenCL LEO做准备</p><p>英特尔Mesa Linux驱动程序现在将Nova Lake S / U / H / HX视为稳定版</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动程序和其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>长期Linux CIFS/SMB3维护者去世</p><p>Linus Torvalds经历了一场地狱般的调试会话，AI“极大帮助”</p><p>Wayland被发现“本质上比X11更快，但不一定更高效”</p><p>特制NTFS文件系统镜像允许在Linux上通过NTFS3驱动程序获得root访问权限</p><p>Linux 7.3网络更改已合并，但开发者因AI/LLM“完全不堪重负”</p><p>X.Org Server 26.1 RC1准备五年来的首个功能版本</p><p>Linux 7.3中两个非常令人兴奋的内存管理优化：约3倍至5倍的提升</p><p>Btrfs为Linux 7.3准备更多性能改进：约3倍至5倍的胜利</p><p>虽然拥有无广告浏览，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/ubuntu-desktop-icons-stacks" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Intel-Linux-SAR-Driver-Orphaned" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
