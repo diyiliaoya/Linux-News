@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chrome 向官方 Flatpak 迈进一步 — Linux 中文速报</title>
+<title>发行版发布：openKylin 3.0 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">DistroWatch</span>
   </div>
 
-  <h1>Chrome 向官方 Flatpak 迈进一步</h1>
+  <h1>发行版发布：openKylin 3.0</h1>
 
-  <div class="article-summary">谷歌为 Chromium 构建系统添加了生成 Flatpak 包的支持，但开发者强调这并不意味着官方 Flatpak 支持即将到来。该更改由谷歌工程师 Tom Anderson 提交，添加了必要的打包脚本和构建标志，但默认关闭。此举旨在促进受限沙箱配置的测试和改善 XDG 门户支持，而非承诺官方支持。目前 Flathub 上的 Chromium 和 Chrome Flatpak 包均为社区维护，非谷歌官方构建。</div>
+  <div class="article-summary">openKylin项目宣布发布openKylin 3.0，这是该Linux发行版的一次重大升级，面向桌面和服务器，采用自研UKUI桌面环境，支持x86_64、AArch64和Loong64架构。新版本将系统内核从Linux 6.6直接升级至Linux 7.0，并全面升级了超过180个核心组件，包括GCC 15、glibc 2.42、LLVM 22和JDK 25。此外，openKylin 3.0集成了NIST后量子密码标准，通过openHiTLS开源密码套件实现系统级调用，并创新了空中手势、语音输入和屏幕阅读等多模态交互，应用场景从智能桌面扩展至移动设备和服务器。</div>
 
-  <div class="article-body"><p>谷歌为官方 Chrome Flatpak 添加构建支持</p><p>如果你通过 Flatpak 安装了 Chromium 或 Google Chrome，你安装的是由社区维护的非官方包，与这家搜索巨头无关——这种情况可能即将改变。</p><p>Chromium 的构建系统现在能够生成浏览器本身的 Flatpak 包，不过其开发者提醒，这一变化并不意味着官方 Flatpak 支持即将到来。</p><p>谷歌的 Tom Anderson 本周提交的更改添加了必要的打包脚本和一个构建标志（），用于生成 .flatpak 包，而不是 .deb 或 .rpm，但该标志目前默认关闭。</p><p>如果启用，谷歌的构建还将跳过生成 Flatpak 原生处理的内容（如符号链接、桌面文件等），生成的 Flatpak 构建将拥有自己的应用 ID，Chromium 对应 org.chromium.Chromium*。</p><p>Anderson 的提交信息指出，这“并非承诺官方支持 Flatpak 包”，而是旨在“促进受限沙箱配置的测试”并改进浏览器的 XDG 门户支持。</p><p>你可以在 Flathub 上找到 Chromium 和 Google Chrome 的非官方 Flatpak 构建，它们均由社区独立维护，并从源代码打包。这些是 Flatpak，但不是谷歌在其基础设施上构建的 Flatpak。</p><p>这一更改将相关的 Flatpak 打包工具添加到 Chromium 的内部构建系统中，以便如果——仍然是一个“如果”——谷歌确实决定进行官方构建，它可以轻松生成它们。</p><p>但谷歌不太可能正式将 Chrome 添加到 Flathub，原因与我们在 Snap Store 上找不到它的原因相同：这家搜索巨头不需要别人的基础设施成为其向用户推送更新的瓶颈。</p></div>
+  <div class="article-body"><p>发行版发布：openKylin 3.0 (DistroWatch.com News)</p><p>openKylin项目已宣布发布3.0版本，这是该项目面向桌面和服务器的Linux发行版的一次重大升级，采用名为UKUI的自定义桌面环境，并支持x86_64、AArch64和Loong64架构：</p><p>&quot;开放原子开源基金会openKylin（以下简称'openKylin'）3.0版本正式发布。本次版本升级中，openKylin将系统内核跨代升级至Linux 7.0，完成了180余个核心组件的全面迭代，构建了面向智能体的开放底座，使AI贯穿系统全链路，创新了隔空手势、语音输入、屏幕朗读等多模态交互，场景覆盖从智能桌面延伸至移动设备、服务器等全场景。openKylin 3.0将系统内核直接从Linux 6.6升级至Linux 7.0。GCC 15、glibc 2.42、LLVM 22、JDK 25，围绕新内核全面升级了180余个核心组件。核心基础库和编译工具链与国际上游社区最新版本对齐。本版本集成了NIST三项后量子密码标准（ML-KEM、ML-DSA、SLH-DSA），通过openHiTLS开源密码套件实现系统级调用……&quot;</p><p>更多信息请参阅发布公告。</p><p>下载链接：</p><p>openKylin-Desktop-V3.0-20260827-x86_64.iso</p><p>openKylin-Desktop-V3.0-20260827-arm64.iso</p><p>近期相关新闻和发布：</p><p>发行版发布：openKylin 3.0</p><p>更多openKylin新闻……</p><p>openKylin是一款中国桌面Linux发行版，运行麒麟和UKUI桌面环境。开箱即用支持Wayland和X11会话。该项目是Debian家族的成员，可以使用APT包管理工具。它还拥有自定义的软件包格式，并与软件中心结合。openKylin也是自定义实用程序的试验场，这些实用程序可帮助用户管理系统。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/chromium-adds-flatpak-packaging-support" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://distrowatch.com/12938" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -8787,5 +8787,137 @@
     "title_zh": "2026年开发者必备的17款最佳Node.js框架与库",
     "summary_zh": "本文介绍了2026年开发者应关注的17款最佳Node.js框架与库，涵盖API开发、Web应用、实时服务等多个领域。这些工具旨在提升开发效率、简化代码结构，并支持现代应用需求。文章为开发者提供了实用的选型参考，帮助他们在不同项目中找到合适的Node.js解决方案。",
     "fulltext_zh": "探索2026年开发者必备的17款最佳Node.js框架与库，包括用于API、Web应用、实时服务等的工具。\n\n本文首发于Linux Today。"
+  },
+  "6b3c084381f9688e2d9267b72d172e49": {
+    "id": "6b3c084381f9688e2d9267b72d172e49",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12938",
+    "title_en": "Distribution Release: openKylin 3.0",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The openKylin project has announced the release of openKylin 3.0, a major upgrade of the project's Linux distribution for desktops and servers, with a custom desktop environment called UKUI and available for x86_64, AArch64 and Loong64 architectures: \"OpenAtom openKylin (hereafter referred to as \"openKylin\") version 3.0 is officially....",
+    "pub_date": "",
+    "title_zh": "发行版发布：openKylin 3.0",
+    "summary_zh": "openKylin项目宣布发布openKylin 3.0，这是该Linux发行版的一次重大升级，面向桌面和服务器，采用自研UKUI桌面环境，支持x86_64、AArch64和Loong64架构。新版本将系统内核从Linux 6.6直接升级至Linux 7.0，并全面升级了超过180个核心组件，包括GCC 15、glibc 2.42、LLVM 22和JDK 25。此外，openKylin 3.0集成了NIST后量子密码标准，通过openHiTLS开源密码套件实现系统级调用，并创新了空中手势、语音输入和屏幕阅读等多模态交互，应用场景从智能桌面扩展至移动设备和服务器。",
+    "fulltext_zh": "发行版发布：openKylin 3.0 (DistroWatch.com News)\n\nopenKylin项目已宣布发布3.0版本，这是该项目面向桌面和服务器的Linux发行版的一次重大升级，采用名为UKUI的自定义桌面环境，并支持x86_64、AArch64和Loong64架构：\n\n\"开放原子开源基金会openKylin（以下简称'openKylin'）3.0版本正式发布。本次版本升级中，openKylin将系统内核跨代升级至Linux 7.0，完成了180余个核心组件的全面迭代，构建了面向智能体的开放底座，使AI贯穿系统全链路，创新了隔空手势、语音输入、屏幕朗读等多模态交互，场景覆盖从智能桌面延伸至移动设备、服务器等全场景。openKylin 3.0将系统内核直接从Linux 6.6升级至Linux 7.0。GCC 15、glibc 2.42、LLVM 22、JDK 25，围绕新内核全面升级了180余个核心组件。核心基础库和编译工具链与国际上游社区最新版本对齐。本版本集成了NIST三项后量子密码标准（ML-KEM、ML-DSA、SLH-DSA），通过openHiTLS开源密码套件实现系统级调用……\"\n\n更多信息请参阅发布公告。\n\n下载链接：\nopenKylin-Desktop-V3.0-20260827-x86_64.iso\nopenKylin-Desktop-V3.0-20260827-arm64.iso\n\n近期相关新闻和发布：\n发行版发布：openKylin 3.0\n更多openKylin新闻……\n\nopenKylin是一款中国桌面Linux发行版，运行麒麟和UKUI桌面环境。开箱即用支持Wayland和X11会话。该项目是Debian家族的成员，可以使用APT包管理工具。它还拥有自定义的软件包格式，并与软件中心结合。openKylin也是自定义实用程序的试验场，这些实用程序可帮助用户管理系统。"
+  },
+  "9ad34ceccd47361454a43e8f955c6d89": {
+    "id": "9ad34ceccd47361454a43e8f955c6d89",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12937",
+    "title_en": "Distribution Release: EndeavourOS 2026.08.15",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The EndeavourOS project has a new release, which is acting as a filler between two major releases. EndeavourOS 2026.08.15 \"Titan Nova\" fixes some keyboard setup issues, improves support for NVIDIA GPUs, and removes the Budgie desktop environment as an install-time option. \"Titan Nova's live environment and offline installer....",
+    "pub_date": "",
+    "title_zh": "发行版发布：EndeavourOS 2026.08.15",
+    "summary_zh": "EndeavourOS 发布了代号为“Titan Nova”的2026.08.15版本，作为两个主要版本之间的过渡版本。该版本修复了键盘设置问题，改进了对NVIDIA GPU的支持，并暂时移除了Budgie桌面环境的安装选项。新版本搭载了Calamares 26.03.2.3、Firefox 153.0.4、Linux内核7.1.8、Mesa 26.1.7等组件。键盘问题已通过临时补丁解决，永久修复将在下一个版本中推出。Budgie因上游过渡到Wayland而暂时移除，预计未来回归。",
+    "fulltext_zh": "发行版发布：EndeavourOS 2026.08.15 (DistroWatch.com News)\n\nDistroWatch.com由以下赞助商支持\n\n新闻/观点/评测 ▼\n发布公告\nDW周刊 / 评测存档\n访客评分与评论\n项目评分排名\n播客、通讯与评测\n跨发行版软件包比较\n显示所有发行版的软件包版本\n搜索发行版 - 高级\n已停止维护的发行版\n教程与学习 ▼\n搜索文章\n问答专栏\n技巧与提示专栏\n误解与澄清专栏\n简化手册页\n其他操作系统\n发行版验证密钥\n发行版家族树可视化\n常见问题解答\n我们的捐赠计划\n\n小型企业电话系统\n\nAsahi在多个方面取得进展\n新版COSMIC带来更多无障碍功能\nBazzite更新Deck镜像\nRPM改进锁处理\nFairphone 6在美国销售\nKubuntu用户将受益于Plasma长期支持\nRedox OS获得改进的安装程序和更快的上下文切换\nNetBSD致力于更新的Enlightenment移植\nMint引入新的内核管理器\nProxmox现已支持ARM处理器\n\n易于使用的PBX - 托管或自管理\nLinux电话系统\n免费在线聊天解决方案\n集成呼叫中心软件\n联络中心软件\n远程办公应用：iOS或Android\n免费视频会议\n3CX提供的VoIP/PBX操作指南\n不要被抓住，制定灾难恢复计划！\n基本在线聊天报告与统计\n导致呼叫欺诈的常见错误\nWhatsApp Business与3CX WhatsApp API集成\n3CX StartUP的5个杀手级功能\n不要成为“那种人”第1卷：使用复杂凭据\n不要成为“那种人”第2卷：呼叫欺诈\n不要成为“那种人”第3卷：4大安全提示\n不要成为“那种人”第4卷：监控您的实例\n\nFull Circle Magazine 232\nRed Hat周五五件事 - 2026年8月28日\nArmbian通讯2026年8月\nHaiku活动与合同报告，2026年7月\nUbuntu每周通讯958\nFedora项目播客\nFull Circle每周新闻\n\n最新新闻与更新\n新闻过滤选项\n\n发行版发布：EndeavourOS 2026.08.15\n\n该项目发布了新版本，作为两个主要版本之间的过渡版本。EndeavourOS 2026.08.15“Titan Nova”修复了一些键盘设置问题，改进了对NVIDIA GPU的支持，并移除了Budgie桌面环境作为安装时的选项。\n\n“Titan Nova的实时环境和离线安装程序搭载了Calamares 26.03.2.3、Firefox 153.0.4、Linux内核7.1.8、Mesa 26.1.7、X.Org Server 21.1.24、nvidia-utils 610.57.04、nvidia-open 610.54.01。\n\n键盘设置修复 - 修复了最近的键盘配置更新导致设置错误的问题。目前采用临时补丁确保一切配置顺利进行，永久修复计划在即将发布的Triton版本中推出。\n\n改进了ISO上使用Nouveau驱动程序的NVIDIA GPU体验。\n\n移除Budgie桌面 - 暂时移除了安装Budgie桌面环境的选项。当前上游软件版本正处于向新显示技术（Wayland）过渡的阶段，并未提供我们满意的默认体验。我们预计Budgie将在未来的版本中回归。”\n\n更多信息请参阅\nEndeavourOS_Titan-Nova-2026.08.15.iso\n\n近期相关新闻与发布\n\n发行版发布：EndeavourOS 2026.08.15\n发行版发布：EndeavourOS 2026.03.06\n发行版发布：EndeavourOS 2026.01.12\n发行版发布：EndeavourOS 2025.11.24\n发行版发布：EndeavourOS 2025.03.19\n发行版发布：EndeavourOS 2025.02.08\n更多EndeavourOS新闻...\n\nEndeavourOS是一个基于Arch Linux的滚动发行版Linux。该项目旨在成为Antergos的精神继承者，在Arch基础上提供简易安装和预配置的桌面环境。EndeavourOS提供离线和在线两种安装选项。离线安装程序Calamares默认使用KDE Plasma桌面。在线安装程序可以安装可选的软件组件，包括大多数流行的桌面环境。"
+  },
+  "dae8b65bb83f95917f1c61eca6a238e7": {
+    "id": "dae8b65bb83f95917f1c61eca6a238e7",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Debian-Votes-Responsible-AI-Use",
+    "title_en": "Debian Votes To Allow \"Responsible Use Of Generative AI\"",
+    "summary_en": "The voting is over and there is a winner now known in the much-debated Debian General Resolution voting over an AI policy for the Linux distribution...",
+    "pub_date": "Fri, 28 Aug 2026 20:43:52 -0400",
+    "title_zh": "Debian投票允许“负责任地使用生成式AI”",
+    "summary_zh": "Debian项目就AI政策进行了激烈的大选投票，最终决定允许“负责任地使用生成式AI”。该决议既不全面禁止也不明确支持AI工具，而是强调所有贡献无论是否使用AI，都必须满足相同的质量标准、法律合规性，并要求贡献者对其提交的内容负责。同时，Debian鼓励披露AI辅助贡献，但非强制，并提醒注意保密信息和法律不确定性。",
+    "fulltext_zh": "Debian投票允许“负责任地使用生成式AI” - Phoronix\nDebian投票允许“负责任地使用生成式AI”\n于2026年8月28日晚上8:43（美国东部时间）发布。\n投票已经结束，关于Debian通用决议中备受争议的AI政策投票现已产生获胜者。\nDebian开发者一直在就项目的AI/LLM政策进行投票，选项包括禁止LLM贡献、允许选择性AI贡献以及其他更为谨慎的选择。最终，Debian开发者投票选择了允许“负责任地使用生成式AI”的选项。\n“根据宪法第4.1条第(5)款的授权，项目发布以下声明，阐述其对AI辅助贡献的当前立场。该声明描述了项目在采纳时的立场。这一立场可能随时间推移而演变，无需诉诸未来的通用决议。如果项目需要做出决定且无法达成共识，通用决议流程仍然可用。\nDebian既不认可也不禁止在软件开发、维护、文档编写以及Debian项目内发布的其他媒体中使用生成式AI工具。我们认识到，在负责任使用的前提下，此类工具可以显著提高贡献者的生产力，使志愿者能够将有限的更多时间投入到需要技术专长、判断、审查和协作的工作中。\n然而，Debian项目期望所有提交给Debian的贡献，无论其产生方式和工具如何，都必须满足相同的质量、正确性、可维护性和法律合规性标准。使用生成式AI工具并不减轻贡献者对其提交工作的责任。贡献者应在将AI辅助输出整合到Debian之前，理解、审查、测试并在适当情况下修改这些输出。未经适当人工审查而盲目接受或上传AI生成的材料，不符合Debian既定的开发实践。我们鼓励贡献者披露其贡献是否使用了AI辅助，但并非强制要求。\nDebian承认，生成式AI系统产生的材料的法律地位在许多司法管辖区仍是持续讨论的主题，包括与版权、作者身份、许可和训练材料潜在复制相关的问题。项目不试图通过本通用决议解决这些未决的法律问题，也不对AI生成输出是否全部或部分受版权保护或衍生自受版权保护作品采取立场。\n相反，Debian继续依赖其个体贡献者的判断和责任。项目成员被期望在使用生成式AI工具时保持适当谨慎，考虑其贡献材料的来源和许可影响，并避免引入其法律地位无法合理证明的内容。Debian关于许可、版权、软件自由和贡献接受的现有政策继续适用，无论贡献产生所使用的工具如何。\n贡献者被期望在设计和工作流中整合生成式AI工具时保持适当谨慎。特别是，他们应确保机密信息、私人通信、安全敏感信息（例如尚未公开的安全漏洞的禁运信息）、加密密钥、凭据以及与Debian项目、其基础设施或其社区相关的其他非公开材料不会披露给第三方AI服务，除非此类披露已明确授权且符合Debian的安全和隐私要求。\n生成式AI的使用不会改变Debian既定的期望"
+  },
+  "b73acb6a8cb841c4dc1be1a3e7fcfbba": {
+    "id": "b73acb6a8cb841c4dc1be1a3e7fcfbba",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/KDE-Union-QtWidgets",
+    "title_en": "Union QtWidgets Sees Initial Release For Advancing KDE Plasma's Union",
+    "summary_en": "Premiering in KDE Plasma 6.7 was Union as the new CSS-based style/theming engine for Plasma. Union ultimately aims to address KDE's fragmented ways of styling apps. As a step closer to that goal, there is now the initial release of Union for QtWidgets support...",
+    "pub_date": "Fri, 28 Aug 2026 17:05:24 -0400",
+    "title_zh": "Union QtWidgets 首次发布，推进 KDE Plasma 的 Union 项目",
+    "summary_zh": "KDE Plasma 6.7 中引入了基于 CSS 的 Union 样式引擎，旨在统一 KDE 应用的外观。近日，Union QtWidgets 迎来首次发布，使 Kate 编辑器、Dolphin 文件管理器等基于 QtWidgets 的应用能够使用 Union CSS 文件进行样式定制。尽管目前存在一些样式问题，但开发者正在积极修复。预计该支持将随 KDE Plasma 6.8 正式推出。",
+    "fulltext_zh": "Union QtWidgets 首次发布，推进 KDE Plasma 的 Union 项目 - Phoronix\n\nUnion QtWidgets 首次发布，推进 KDE Plasma 的 Union 项目\n\n发布于 2026 年 8 月 28 日下午 5:05（美国东部时间）。\n\nKDE Plasma 6.7 中首次亮相的 Union 是 Plasma 新的基于 CSS 的样式/主题引擎。Union 的最终目标是解决 KDE 在应用样式方面的碎片化问题。作为迈向这一目标的一步，现在 Union 对 QtWidgets 的支持迎来了首次发布。\n\nKDE 开发者 Akseli Lahtinen 今天宣布了 Union QtWidgets 的首次发布，使得基于 QtWidgets 的应用（如 Kate 编辑器、Dolphin 文件管理器等）现在可以使用 Union CSS 文件进行样式定制。目前存在一些已知的样式问题，某些方面可能显示不正常，但这些问题正在处理中。预计该 Union QtWidgets 支持将包含在即将发布的 KDE Plasma 6.8 中。\n\nLahtinen 在其博客文章中写道：\n\n“这是 Breeze QtWidgets 和 QtQuick 样式首次拥有共同的、易于编辑的文件作为唯一事实来源！（不包括配色方案。）因此，有些设计是针对 QtQuick 的，在 QtWidgets 中可能看起来有些偏差。”\n\n想了解更多关于这一里程碑的信息，可以查看以下相关文章：\n\nKDE 远程桌面体验改进，缩小 X11 与 Wayland 差距\nKDE Plasma 6.8 本周带来一些诱人的性能优化\nKDE 软件现已通过 KIO-Snapshot 1.0 实现稳定的 Btrfs 快照集成\nKDE Gear 26.08 带来最新的 KDE 应用体验\nKDE Plasma 6.8 将允许微调鼠标/触摸板速度\nKDE、Techpaladin 和 Kubuntu Focus 宣布 Bullet-Proof KDE 软件计划\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。他还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他。\n\n长期维护 Linux CIFS/SMB3 的维护者去世\nLinus Torvalds 经历了一场地狱般的调试会话，AI 提供了“巨大帮助”\nWayland 被发现“本质上比 X11 更快，但未必更高效”\n特制 NTFS 文件系统镜像允许通过 NTFS3 驱动在 Linux 上获得 Root 权限\nLinux 7.3 网络更改已合并，但开发者因 AI/LLM 而“完全不堪重负”\n英特尔工程师提议为 Linux 引入 DRM Fabric\nGCC 补丁调整 AMD Zen 5 误预测成本，基准测试提升 12%\nAMD RDNA 4m 固件在发布前已发布到 Linux\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "12eb475586727a89eb6ea0f199d6dc43": {
+    "id": "12eb475586727a89eb6ea0f199d6dc43",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.3-TPM",
+    "title_en": "Linux 7.3 TPM Makes Cleanup Preparations For TrenchBoot",
+    "summary_en": "The Trusted Platform Module (TPM) subsystem changes for the Linux 7.3 kernel are centered around code clean-ups and improvements being made as a precursor toward TrenchBoot support...",
+    "pub_date": "Fri, 28 Aug 2026 15:05:56 -0400",
+    "title_zh": "Linux 7.3 TPM 为 TrenchBoot 进行清理准备工作",
+    "summary_zh": "Linux 7.3 内核的 TPM（可信平台模块）子系统变更主要围绕代码清理和改进，为 TrenchBoot 支持铺平道路。TrenchBoot 是一个开源项目，利用硬件支持的动态信任根测量（DRTM）增强启动安全性和完整性。本次合并的 TPM 补丁由 Ross Philipson 提供，暴露了 TPM 常量，并解耦和增强了 tpm_buf 的健壮性，以实现最小化的早期 TPM 驱动。这些改动为未来 TrenchBoot 进入主线内核奠定了基础，即使 TrenchBoot 最终未能实现，TPM 驱动的清理也是有益的。",
+    "fulltext_zh": "Linux 7.3 TPM 为 TrenchBoot 进行清理准备工作 - Phoronix\nLinux 7.3 TPM 为 TrenchBoot 进行清理准备工作\n发布于 2026年8月28日 下午3:05（美国东部时间）\n\nLinux 7.3 内核的可信平台模块（TPM）子系统变更主要集中在代码清理和改进上，这些工作是 TrenchBoot 支持的前奏。\n\nTrenchBoot 是一个历时多年的开源项目，旨在通过利用硬件支持的动态信任根测量（DRTM）来增强启动安全性和完整性。多年来，Oracle 一直是 TrenchBoot 的主要支持者之一，用于保护启动过程。\n\nTrenchBoot 利用了 AMD 和 Intel 的安全技术，并且还需要对 GRUB 引导加载程序和 Linux 内核等进行更改。Linux 内核补丁尚未上游化，但为 Linux 7.3 合并的 TPM 更改对于使 TrenchBoot 有可能进入主线内核是必要的。\n\nJarkko Sakkinen 在补丁中解释道：\n\n“这部分的大部分是 Ross Philipson 为 TrenchBoot 提供的 TPM 支持。它暴露了 TPM 常量，并解耦和增强了 tpm_buf 的健壮性，以便实现一个最小的早期 TPM 驱动。\n\n早期启动代码将在跳转到内核入口点之前调用 AMD 的 SKINIT 或 Intel 的 GETSEC[SENTER]。它们会重新初始化 TPM PCR，但将测量 initrd、boot_params 和 TrenchBoot 相关元数据的任务留给早期启动代码。\n\n这里的动机只是希望在未来的系列迭代中，将我们的全部精力集中在 x86 部分的审查上，而 TPM 更改则就此告一段落。此外，即使 TrenchBoot 最终被证明是空头彩票，TPM 驱动最坏的结果也只是进行了一些清理。”\n\n因此，无论如何这都是一个胜利。虽然 TrenchBoot 本身不会在 Linux 7.3 内核周期中到来，但那些想了解这一启动安全功能的人可以在此了解更多。\n\nLinux 7.3 将开始检查 USB-C 线缆的 Alt-Mode 支持\nLinux 7.3 PCI 代码添加咨询性非致命错误，Intel Dunlow 支持\nLinux 7.3 合并 2026 年 Steam 控制器的初始内核驱动支持\nAMD k10temp 驱动为 Linux 7.3 添加 EPYC Zen 5 每 CCD 温度监控\nLinux 7.3 输入子系统更新合并，包含安全修复和其他改进\n联想在 Linux 7.3 中为其 SE30G2 + SE60 边缘 AI 计算机添加新的看门狗驱动\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。他还是 Phoronix 测试套件、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他。\n\n长期担任 Linux CIFS/SMB3 维护者的开发者去世\nLinus Torvalds 经历了一场地狱般的调试会话，AI“极大地帮助”了他\nWayland 被发现“本质上比 X11 更快，但不一定更高效”\n特制的 NTFS 文件系统镜像允许在 Linux 上通过 NTFS3 驱动获得 root 访问权限\nLinux 7.3 网络更改已合并，但开发者因 AI/LLM 而“完全不堪重负”\nIntel 工程师提议为 Linux 提供 DRM Fabric\nGCC 补丁调整 AMD Zen 5 误预测成本，在基准测试中带来 12% 的提升\nAMD RDNA 4m 固件在发布前为 Linux 发布\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "428aa381921a12de9736d328226c9afd": {
+    "id": "428aa381921a12de9736d328226c9afd",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/DXVK-3.1-Released",
+    "title_en": "DXVK 3.1 Released With DXGI Incremental Presentation, D3D11 Buffer Render Targets",
+    "summary_en": "DXVK 3.1 is out today as the newest feature release for this Direct3D 8 / 9 / 10 / 11 implementation built atop the Vulkan API as a key component to Valve's Steam Play (Proton)...",
+    "pub_date": "Fri, 28 Aug 2026 12:33:22 -0400",
+    "title_zh": "DXVK 3.1 发布，支持 DXGI 增量呈现与 D3D11 缓冲区渲染目标",
+    "summary_zh": "DXVK 3.1 作为基于 Vulkan API 的 Direct3D 8/9/10/11 实现的最新功能版本发布，新增 DXGI 增量呈现支持，修复了多个 UI 渲染问题，并优化了游戏启动器（如 Ubisoft Connect）的兼容性。同时，该版本引入了 Direct3D 11 缓冲区渲染目标支持，改善了旧版 Frostbite 引擎游戏（如《战地3》）的渲染效果。此外，DXVK 3.1 增加了对 Intel 显卡的厂商扩展支持，类似于 NVIDIA 的 NVAPI，并包含多项错误修复。",
+    "fulltext_zh": "DXVK 3.1 发布，支持 DXGI 增量呈现与 D3D11 缓冲区渲染目标 - Phoronix\nDXVK 3.1 发布，支持 DXGI 增量呈现与 D3D11 缓冲区渲染目标\n2026年8月28日，美国东部时间下午12:33。\n\nDXVK 3.1 于今日发布，这是基于 Vulkan API 构建的 Direct3D 8/9/10/11 实现的最新功能版本，也是 Valve 的 Steam Play（Proton）的关键组件。\n\nDXVK 3.1 引入了 DXGI 增量呈现支持，这将修复许多 UI 渲染问题，并对某些游戏启动器（如 Ubisoft Connect）非常重要。对于支持 VK_KHR_incremental_present 的 Vulkan 驱动程序，它还可能带来更高的效率。\n\nDXVK 3.1 的第二个重要功能是 Direct3D 11 缓冲区渲染目标。现在 DXVK 直接支持缓冲区上的渲染目标视图，有助于运行旧版 Frostbite 引擎游戏，如《战地3》。\n\n对于使用 Intel 显卡的用户，现在支持 Intel 厂商扩展，在 Intel GPU 上会加载 Intel 特定的扩展库。这类似于 NVIDIA 的 NVAPI 支持，并且此 Intel 支持将在未来的 Proton 版本中进一步扩展。\n\nDXVK 3.1 还带来了各种错误修复，详见发布公告。\n\nProton 11.0-2 通过 Steam Play / Linux 游戏支持更多游戏\nLinux 7.3 修复原始 Steam 控制器原生驱动中的长期缺陷\nSteam 在 Linux 上的使用率在 7 月回升至 4% 以上\nSteam 客户端为 Steam Deck OLED 添加 HDR 流媒体，AV1 视频流\nDXVK 3.0.2 发布，改进挂起调试，包含少量游戏修复\nHolo Core 实验性构建发布：面向 Valve 的 Steam Frame 的 Arch Linux AArch64\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动程序等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他。\n\n长期担任 Linux CIFS/SMB3 维护者的人去世\nLinus Torvalds 经历了一场地狱般的调试会话，AI“极大地帮助”了他\nWayland 被发现“本质上比 X11 更快，但不一定更高效”\n特制的 NTFS 文件系统镜像允许在 Linux 上通过 NTFS3 驱动程序获得 root 访问权限\nLinux 7.3 网络更改已合并，但开发人员因 AI/LLM 而“完全不知所措”\nIntel 工程师提议为 Linux 提供 DRM Fabric\n调整 AMD Zen 5 误预测成本的 GCC 补丁在基准测试中带来 12% 的胜利\nAMD RDNA 4m 固件在发布前为 Linux 发布\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "f5cf9d4e050bd97be2077ddafc54e90c": {
+    "id": "f5cf9d4e050bd97be2077ddafc54e90c",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/hp-z4-g6i",
+    "title_en": "HP Z4 G6i: A Linux-Friendly Workstation Powered By The Intel Xeon 600 Series",
+    "summary_en": "The past month I have been testing out the HP Z4 G6i workstation across many different workloads and grueling tasks. This HP workstation powered by the Intel Xeon 600 series \"Granite Rapids WS\" and NVIDIA RTX graphics offers a lot of compute power, but with the top-end configuration retailing for over $41k USD is quite pricey in today's environment. Windows 11 Pro is the default operating system of the HP Z4 Gi but Ubuntu LTS releases are supported and it's \"Linux-ready\" at large.",
+    "pub_date": "Fri, 28 Aug 2026 10:25:27 -0400",
+    "title_zh": "HP Z4 G6i：搭载英特尔至强600系列处理器的Linux友好型工作站",
+    "summary_zh": "HP Z4 G6i工作站搭载英特尔至强600系列“Granite Rapids WS”处理器和NVIDIA RTX图形卡，提供强大计算能力，但顶配价格超过4.1万美元。默认系统为Windows 11 Pro，但支持Ubuntu LTS，且整体对Linux友好。评测配置包括48核/96线程的Xeon 678X、128GB DDR5内存、双2TB NVMe SSD和RTX PRO 6000 Blackwell显卡。在多种Linux发行版测试中表现稳定，无兼容性问题，推荐使用官方NVIDIA驱动。",
+    "fulltext_zh": "HP Z4 G6i：搭载英特尔至强600系列处理器的Linux友好型工作站评测 - Phoronix\n\nHP Z4 G6i：搭载英特尔至强600系列处理器的Linux友好型工作站\n发布于2026年8月28日上午10:25（美国东部时间）\n\n过去一个月，我对HP Z4 G6i工作站进行了多种工作负载和严苛任务的测试。这款搭载英特尔至强600系列“Granite Rapids WS”和NVIDIA RTX显卡的HP工作站提供了强大的计算能力，但顶配售价超过4.1万美元，在当前环境下相当昂贵。HP Z4 G6i的默认操作系统是Windows 11 Pro，但支持Ubuntu LTS版本，并且整体上“为Linux做好准备”。\n\nHP提供了Z4 G6i工作站的评测样机，供我在过去数周内进行测试。评测配置为48核/96线程的英特尔至强678X处理器、4条32GB DDR5-6400 SK海力士ECC RDIMM内存、双2TB NVMe固态硬盘，以及NVIDIA RTX PRO 6000 Blackwell显卡。\n\nHP Z4 G6i工作站最高可配置至强678X型号，同时可搭配最高512GB内存，仅此一项就比1×16GB基础选项贵出4.4万美元，或比测试所用的128GB配置贵出3.4万美元。该工作站还可容纳第三块PCIe M.2固态硬盘，以及内部PCIe存储，甚至3.5英寸机械硬盘，如果需要更多存储空间。\n\n同样，如果一块NVIDIA RTX PRO 6000 Blackwell不够用，还可以额外花费1.34万美元加装第二块RTX PRO 6000 Blackwell。\n\n截至撰写本文时，这款HP Z4 G6i工作站配置（英特尔至强678X、4×32GB内存、2×2TB NVMe固态硬盘、NVIDIA RTX PRO 6000 Blackwell）标价为41,479美元。几周前标价为4.6万美元，但现在的折扣可能是由于劳动节促销。\n\n在过去一个月的所有测试中，这款HP工作站运行良好，表现出色。它被用于测试并出现在一些文章中，包括：\n\n- Windows 11与Ubuntu 26.04 LTS在至强678X上的性能对比\n- 至强678X工作站CPU的Intel AMX性能\n- Linux 7.1、Linux 7.2在英特尔至强600系列上的性能\n- CachyOS与其他Linux操作系统在4.6万美元工作站上的性能对比\n- 至强678X“Granite Rapids-WS”的英特尔超线程性能\n- 早期Linux 7.3内核基准测试显示部分性能提升，部分回退\n- 在Linux 7.3上对Btrfs进行基准测试，展现惊人性能提升\n- 至强678X的英特尔Granite Rapids WS核心扩展性能\n- PHP 7.4至PHP 8.6基准测试，PHP 8.6 JIT性能\n- Btrfs、EXT4、F2FS和XFS在Linux 7.2与Linux 7.3上的性能对比\n\n在众多不同的基准测试中，HP Z4 G6i工作站表现强劲。在测试的所有Linux发行版中均未遇到任何问题，包括Ubuntu 26.04 LTS、Ubuntu 26.10每日构建版、Fedora Workstation 44、CachyOS等。当然，使用NVIDIA RTX PRO Blackwell显卡时，最好使用官方NVIDIA Linux驱动栈，而不是Nouveau/NVK。\n\nFramework Laptop 13 Pro：旨在成为最佳可升级Linux笔记本电脑之一\n\nSnapdragon X Elite笔记本电脑在Ubuntu 26.04 LTS上的体验仍不尽如人意\n\nBOSGAME VTA-439：搭载AMD Ryzen AI 9 HX 470的出色Linux友好型迷你PC\n\nRazer认证其首款Linux笔记本电脑：Razer Blade 18 RZ09-0582\n\nAMD Ryzen AI Halo是一款功能强大的迷你PC，拥有完全开源软件\n\nZimaCube 2凭借Linux+Intel CPU打造出色个人云/NAS\n\n在无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "bc52769250f98dd06f70075c1bee943e": {
+    "id": "bc52769250f98dd06f70075c1bee943e",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/learn-perl-scripting-for-shell-users-part-33-34/",
+    "title_en": "Learn Perl Scripting for Shell Users ( Part 33 / 34)",
+    "summary_en": "Learn Perl scripting from a shell user’s perspective in Part 33 of this practical series, covering key concepts, syntax, and scripting techniques.\nThe post Learn Perl Scripting for Shell Users ( Part 33 / 34) appeared first on Linux Today.",
+    "pub_date": "Fri, 28 Aug 2026 07:06:54 +0000",
+    "title_zh": "为Shell用户学习Perl脚本（第33/34部分）",
+    "summary_zh": "本文是Linux Today系列教程的第33部分，旨在从Shell用户的角度介绍Perl脚本编程。内容涵盖Perl的关键概念、语法和脚本编写技巧，帮助已有Shell经验的用户快速上手Perl。文章强调实用性，通过对比Shell与Perl的异同，让读者理解Perl在文本处理和系统管理中的优势。",
+    "fulltext_zh": "在本实用系列的第33部分中，从Shell用户的角度学习Perl脚本编程，涵盖关键概念、语法和脚本编写技巧。\n\n该文章最初发表于Linux Today。"
+  },
+  "62f0c166fe54e91897b5f9f31630be95": {
+    "id": "62f0c166fe54e91897b5f9f31630be95",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/ploopy-bean-pointing-stick-mouse-review/",
+    "title_en": "Ploopy Bean Pointing Stick Mouse Review",
+    "summary_en": "The Ploopy Bean is an open-source pointing stick mouse with precise cursor control, customizable buttons, QMK firmware, and high-resolution scrolling.\nThe post Ploopy Bean Pointing Stick Mouse Review appeared first on Linux Today.",
+    "pub_date": "Fri, 28 Aug 2026 07:03:23 +0000",
+    "title_zh": "Ploopy Bean 指点杆鼠标评测",
+    "summary_zh": "Ploopy Bean 是一款开源的指点杆鼠标，提供精确的光标控制、可自定义按键、QMK 固件支持以及高分辨率滚动功能。该评测文章最初发布于 Linux Today，重点介绍了这款鼠标的开源特性和实用功能，适合追求高度定制化和精准操作的 Linux 用户。",
+    "fulltext_zh": "Ploopy Bean 是一款开源的指点杆鼠标，具有精确的光标控制、可自定义按键、QMK 固件以及高分辨率滚动功能。\n\n该文章最初发布于 Linux Today。"
+  },
+  "de289c2a57d293c36da61cd0c8e2122e": {
+    "id": "de289c2a57d293c36da61cd0c8e2122e",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/firefox-to-test-a-two-week-release-cycle-starting-in-september/",
+    "title_en": "Firefox to Test a Two-Week Release Cycle Starting in September",
+    "summary_en": "Mozilla will test a two-week Firefox release cycle starting in September 2026, beginning with Firefox 155 on September 1 for desktop and Android.\nThe post Firefox to Test a Two-Week Release Cycle Starting in September appeared first on Linux Today.",
+    "pub_date": "Fri, 28 Aug 2026 07:02:15 +0000",
+    "title_zh": "Firefox将于9月开始测试两周发布周期",
+    "summary_zh": "Mozilla宣布将从2026年9月开始测试Firefox的两周发布周期，首个测试版本为Firefox 155，计划于9月1日面向桌面端和Android平台发布。这一举措旨在加快功能迭代速度，更频繁地向用户提供更新和改进。该消息最初发布于Linux Today网站。",
+    "fulltext_zh": "Mozilla将从2026年9月开始测试Firefox的两周发布周期，首个测试版本为Firefox 155，计划于9月1日面向桌面端和Android平台发布。\n\n该消息最初发布于Linux Today网站。"
+  },
+  "a12eaa3045382dd6bc6e553d31f5e1bc": {
+    "id": "a12eaa3045382dd6bc6e553d31f5e1bc",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/mkvtoolnix-100-mkv-manipulation-tool-brings-new-features-and-enhancements/",
+    "title_en": "MKVToolNix 100 MKV Manipulation Tool Brings New Features and Enhancements",
+    "summary_en": "MKVToolNix 100 arrives with new scalable icons, improved MP4 track name handling, job queue enhancements, and new automation options across platforms.\nThe post MKVToolNix 100 MKV Manipulation Tool Brings New Features and Enhancements appeared first on Linux Today.",
+    "pub_date": "Fri, 28 Aug 2026 07:00:26 +0000",
+    "title_zh": "MKVToolNix 100 MKV 操作工具带来新功能与增强",
+    "summary_zh": "MKVToolNix 100 版本发布，引入了可缩放图标、改进的 MP4 轨道名称处理、任务队列增强以及跨平台的新自动化选项。该工具是 Linux 平台上广泛使用的 MKV 文件处理工具，此次更新进一步提升了用户体验和操作效率。",
+    "fulltext_zh": "MKVToolNix 100 版本带来了新的可缩放图标、改进的 MP4 轨道名称处理、任务队列增强，以及跨平台的新自动化选项。\n\n该文章最初发表于 Linux Today。"
+  },
+  "eae82f774d881a27a6a6da9e4eeaace7": {
+    "id": "eae82f774d881a27a6a6da9e4eeaace7",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/freerdp-3-29-is-out-with-extensive-security-fixes/",
+    "title_en": "FreeRDP 3.29 Is Out With Extensive Security Fixes",
+    "summary_en": "FreeRDP 3.29 arrives with 22 security advisories, stronger runtime protections, bug fixes, and hardening across its Remote Desktop Protocol stack.\nThe post FreeRDP 3.29 Is Out With Extensive Security Fixes appeared first on Linux Today.",
+    "pub_date": "Fri, 28 Aug 2026 06:58:21 +0000",
+    "title_zh": "FreeRDP 3.29 发布，带来大量安全修复",
+    "summary_zh": "FreeRDP 3.29 版本正式发布，包含 22 个安全公告，增强了运行时保护，修复了多个漏洞，并对其远程桌面协议栈进行了全面加固。该版本旨在提升整体安全性和稳定性，建议用户及时更新。",
+    "fulltext_zh": "FreeRDP 3.29 版本携 22 个安全公告、更强的运行时保护、错误修复以及对其远程桌面协议栈的全面加固而来。\n\n该文章 FreeRDP 3.29 Is Out With Extensive Security Fixes 首次出现在 Linux Today 上。"
   }
 }

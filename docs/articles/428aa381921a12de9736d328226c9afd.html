@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chrome 向官方 Flatpak 迈进一步 — Linux 中文速报</title>
+<title>DXVK 3.1 发布，支持 DXGI 增量呈现与 D3D11 缓冲区渲染目标 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Chrome 向官方 Flatpak 迈进一步</h1>
+  <h1>DXVK 3.1 发布，支持 DXGI 增量呈现与 D3D11 缓冲区渲染目标</h1>
 
-  <div class="article-summary">谷歌为 Chromium 构建系统添加了生成 Flatpak 包的支持，但开发者强调这并不意味着官方 Flatpak 支持即将到来。该更改由谷歌工程师 Tom Anderson 提交，添加了必要的打包脚本和构建标志，但默认关闭。此举旨在促进受限沙箱配置的测试和改善 XDG 门户支持，而非承诺官方支持。目前 Flathub 上的 Chromium 和 Chrome Flatpak 包均为社区维护，非谷歌官方构建。</div>
+  <div class="article-summary">DXVK 3.1 作为基于 Vulkan API 的 Direct3D 8/9/10/11 实现的最新功能版本发布，新增 DXGI 增量呈现支持，修复了多个 UI 渲染问题，并优化了游戏启动器（如 Ubisoft Connect）的兼容性。同时，该版本引入了 Direct3D 11 缓冲区渲染目标支持，改善了旧版 Frostbite 引擎游戏（如《战地3》）的渲染效果。此外，DXVK 3.1 增加了对 Intel 显卡的厂商扩展支持，类似于 NVIDIA 的 NVAPI，并包含多项错误修复。</div>
 
-  <div class="article-body"><p>谷歌为官方 Chrome Flatpak 添加构建支持</p><p>如果你通过 Flatpak 安装了 Chromium 或 Google Chrome，你安装的是由社区维护的非官方包，与这家搜索巨头无关——这种情况可能即将改变。</p><p>Chromium 的构建系统现在能够生成浏览器本身的 Flatpak 包，不过其开发者提醒，这一变化并不意味着官方 Flatpak 支持即将到来。</p><p>谷歌的 Tom Anderson 本周提交的更改添加了必要的打包脚本和一个构建标志（），用于生成 .flatpak 包，而不是 .deb 或 .rpm，但该标志目前默认关闭。</p><p>如果启用，谷歌的构建还将跳过生成 Flatpak 原生处理的内容（如符号链接、桌面文件等），生成的 Flatpak 构建将拥有自己的应用 ID，Chromium 对应 org.chromium.Chromium*。</p><p>Anderson 的提交信息指出，这“并非承诺官方支持 Flatpak 包”，而是旨在“促进受限沙箱配置的测试”并改进浏览器的 XDG 门户支持。</p><p>你可以在 Flathub 上找到 Chromium 和 Google Chrome 的非官方 Flatpak 构建，它们均由社区独立维护，并从源代码打包。这些是 Flatpak，但不是谷歌在其基础设施上构建的 Flatpak。</p><p>这一更改将相关的 Flatpak 打包工具添加到 Chromium 的内部构建系统中，以便如果——仍然是一个“如果”——谷歌确实决定进行官方构建，它可以轻松生成它们。</p><p>但谷歌不太可能正式将 Chrome 添加到 Flathub，原因与我们在 Snap Store 上找不到它的原因相同：这家搜索巨头不需要别人的基础设施成为其向用户推送更新的瓶颈。</p></div>
+  <div class="article-body"><p>DXVK 3.1 发布，支持 DXGI 增量呈现与 D3D11 缓冲区渲染目标 - Phoronix</p><p>DXVK 3.1 发布，支持 DXGI 增量呈现与 D3D11 缓冲区渲染目标</p><p>2026年8月28日，美国东部时间下午12:33。</p><p>DXVK 3.1 于今日发布，这是基于 Vulkan API 构建的 Direct3D 8/9/10/11 实现的最新功能版本，也是 Valve 的 Steam Play（Proton）的关键组件。</p><p>DXVK 3.1 引入了 DXGI 增量呈现支持，这将修复许多 UI 渲染问题，并对某些游戏启动器（如 Ubisoft Connect）非常重要。对于支持 VK_KHR_incremental_present 的 Vulkan 驱动程序，它还可能带来更高的效率。</p><p>DXVK 3.1 的第二个重要功能是 Direct3D 11 缓冲区渲染目标。现在 DXVK 直接支持缓冲区上的渲染目标视图，有助于运行旧版 Frostbite 引擎游戏，如《战地3》。</p><p>对于使用 Intel 显卡的用户，现在支持 Intel 厂商扩展，在 Intel GPU 上会加载 Intel 特定的扩展库。这类似于 NVIDIA 的 NVAPI 支持，并且此 Intel 支持将在未来的 Proton 版本中进一步扩展。</p><p>DXVK 3.1 还带来了各种错误修复，详见发布公告。</p><p>Proton 11.0-2 通过 Steam Play / Linux 游戏支持更多游戏</p><p>Linux 7.3 修复原始 Steam 控制器原生驱动中的长期缺陷</p><p>Steam 在 Linux 上的使用率在 7 月回升至 4% 以上</p><p>Steam 客户端为 Steam Deck OLED 添加 HDR 流媒体，AV1 视频流</p><p>DXVK 3.0.2 发布，改进挂起调试，包含少量游戏修复</p><p>Holo Core 实验性构建发布：面向 Valve 的 Steam Frame 的 Arch Linux AArch64</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动程序等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他。</p><p>长期担任 Linux CIFS/SMB3 维护者的人去世</p><p>Linus Torvalds 经历了一场地狱般的调试会话，AI“极大地帮助”了他</p><p>Wayland 被发现“本质上比 X11 更快，但不一定更高效”</p><p>特制的 NTFS 文件系统镜像允许在 Linux 上通过 NTFS3 驱动程序获得 root 访问权限</p><p>Linux 7.3 网络更改已合并，但开发人员因 AI/LLM 而“完全不知所措”</p><p>Intel 工程师提议为 Linux 提供 DRM Fabric</p><p>调整 AMD Zen 5 误预测成本的 GCC 补丁在基准测试中带来 12% 的胜利</p><p>AMD RDNA 4m 固件在发布前为 Linux 发布</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/chromium-adds-flatpak-packaging-support" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/DXVK-3.1-Released" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
