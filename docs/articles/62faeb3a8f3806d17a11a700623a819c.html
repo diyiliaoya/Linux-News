@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FreeRDP 3.29 发布，带来大量安全修复 — Linux 中文速报</title>
+<title>来自英特尔或AMD以外某实体的又一份x86公告 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #8b5cf61a; color: #8b5cf6;
-    border: 1px solid #8b5cf630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">桌面环境</span>
-    <span class="source">Linux Today</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>FreeRDP 3.29 发布，带来大量安全修复</h1>
+  <h1>来自英特尔或AMD以外某实体的又一份x86公告</h1>
 
-  <div class="article-summary">FreeRDP 3.29 版本正式发布，包含 22 个安全公告，增强了运行时保护，修复了多个漏洞，并对其远程桌面协议栈进行了全面加固。该版本旨在提升整体安全性和稳定性，建议用户及时更新。</div>
+  <div class="article-summary">Linux内核邮件列表上再次出现来自英特尔或AMD以外某实体的x86指令集公告。此次公告涉及WBINVD指令的新跳过提示（skip hints），允许跳过L0i/L1i缓存、L0d/L1d缓存、无效化操作及LLC缓存，并定义了六个实现特定的提示。公告指出这些提示自2025年起已被该实体积极使用，不应重新定义。外界猜测该实体可能是初创公司RosaicLabs，但尚未确认。</div>
 
-  <div class="article-body"><p>FreeRDP 3.29 版本携 22 个安全公告、更强的运行时保护、错误修复以及对其远程桌面协议栈的全面加固而来。</p><p>该文章 FreeRDP 3.29 Is Out With Extensive Security Fixes 首次出现在 Linux Today 上。</p></div>
+  <div class="article-body"><p>来自英特尔或AMD以外某实体的又一份x86公告 - Phoronix</p><p>来自英特尔或AMD以外某实体的又一份x86公告</p><p>2026年8月29日，美国东部时间下午12:24。</p><p>去年十月，我重点介绍了一篇关于Linux内核邮件列表上的有趣帖子，内容涉及一个英特尔或AMD以外的x86企业实体，留下了神秘的悬念。那位开发者在七月详细描述了那些x86操作码/CPUID/MSR分配，随后又详细描述了16核和32核AMX实现，再次涉及当前英特尔/AMD处理器范围之外的内容。今天，来自那个“英特尔或AMD以外的企业实体”的另一条消息被转达出来。</p><p>x86专家Christian Ludloff今天在Linux内核邮件列表上转达了关于WBINVD指令上x86前缀的详细信息。WBINVD用于写回并使缓存无效。新的披露涉及一个英特尔或AMD以外的组织使用WBINVD指令的新跳过提示。这些跳过提示允许跳过L0i/L1i缓存、跳过L0d/L1d缓存、跳过无效化操作以及跳过LLC缓存。还定义了其他新提示。</p><p>“截至2025年，以下内容已被英特尔或AMD以外的企业实体积极使用；因此不应重新定义。</p><p>0x67 = 无CODE提示 =&gt; 跳过L0i/L1i缓存</p><p>0x66 = 无DATA提示 =&gt; 跳过L0d/L1d缓存</p><p>0xF3 = 无INVD提示 =&gt; 跳过无效化操作</p><p>0xF2 = 无LLC提示 =&gt; 跳过LLC缓存</p><p>虽然CODE和DATA提示操作应跳过代码和数据缓存，LLC提示操作应跳过最后一级缓存，而INVD保持不变。</p><p>此外，六个实现特定的提示根据特定处理器选择最多六种或2^6=64种行为。</p><p>0x26 = ES实现特定提示</p><p>0x2E = CS实现特定提示</p><p>0x36 = SS实现特定提示</p><p>0x3E = DS实现特定提示</p><p>0x64 = FS实现特定提示</p><p>0x65 = GS实现特定提示</p><p>一个特定实现可能使用这些来针对CODE与DATA与STREAMING STORES，以及缓存级别L1与L2与L3。</p><p>另一个特定实现可能使用这些来针对可编程行为。</p><p>所有十个前缀可以组合，产生最长12字节的指令。”</p><p>完整消息可在Linux内核邮件列表上找到。至于这个实体是谁，以及这些x86更改（最近围绕WBINVD提示）的幕后主使，仍然不清楚。</p><p>几周前有消息称，初创公司RosaicLabs据报道获得了英特尔Atom处理器设计的访问权限。时间上的巧合增加了该实体可能是RosaicLabs的可能性，但仍有待确认。</p><p>RTL8723BS驱动程序继续主导Linux 7.3的暂存区活动</p><p>Linux 7.3 TPM为TrenchBoot做清理准备</p><p>Linux 7.3将开始检查USB-C线缆的Alt-Mode支持</p><p>Linux 7.3 PCI代码添加咨询非致命错误，英特尔Dunlow支持</p><p>Linux 7.3合并2026年Steam控制器的初始内核驱动支持</p><p>AMD k10temp驱动程序为Linux 7.3添加EPYC Zen 5每CCD温度监控</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动程序和其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他。</p><p>长期担任Linux CIFS/SMB3维护者去世</p><p>Linus Torvalds经历“地狱般的调试会话”，AI“极大地帮助”了他</p><p>Wayland被发现“本质上比X11更快，但不一定更高效”</p><p>特制NTFS文件系统镜像允许在Linux上通过NTFS3驱动程序获得root访问权限</p><p>Linux内核每个版本接近2,000个CVE</p><p>英特尔工程师提议为Linux提供DRM Fabric</p><p>Debian投票允许“负责任地使用生成式AI”</p><p>GCC补丁调整AMD Zen 5误预测成本，在基准测试中赢得12%的提升</p><p>W</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/freerdp-3-29-is-out-with-extensive-security-fixes/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/x86-WBINVD-Advisory" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

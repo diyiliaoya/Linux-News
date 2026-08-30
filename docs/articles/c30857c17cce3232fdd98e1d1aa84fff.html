@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FreeRDP 3.29 发布，带来大量安全修复 — Linux 中文速报</title>
+<title>RTL8723BS 驱动继续主导 Linux 7.3 的暂存区活动 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #8b5cf61a; color: #8b5cf6;
-    border: 1px solid #8b5cf630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">桌面环境</span>
-    <span class="source">Linux Today</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>FreeRDP 3.29 发布，带来大量安全修复</h1>
+  <h1>RTL8723BS 驱动继续主导 Linux 7.3 的暂存区活动</h1>
 
-  <div class="article-summary">FreeRDP 3.29 版本正式发布，包含 22 个安全公告，增强了运行时保护，修复了多个漏洞，并对其远程桌面协议栈进行了全面加固。该版本旨在提升整体安全性和稳定性，建议用户及时更新。</div>
+  <div class="article-summary">RTL8723BS 驱动自 2017 年进入内核暂存区以来，至今仍未毕业，且在 Linux 7.3 的暂存区更新中再次占据主导地位。该驱动因代码混乱、抽象过多而被称为“意大利面条式代码”，多年来持续进行清理和改进，包括针对恶意 WiFi 接入点的加固。Linux 7.3 的暂存区改动中，该驱动的清理工作占据了大部分，许多改动来自内核新人，以积累驱动开发经验。尽管清理工作琐碎，但近十年后仍在继续，成为暂存区活动的主要焦点。</div>
 
-  <div class="article-body"><p>FreeRDP 3.29 版本携 22 个安全公告、更强的运行时保护、错误修复以及对其远程桌面协议栈的全面加固而来。</p><p>该文章 FreeRDP 3.29 Is Out With Extensive Security Fixes 首次出现在 Linux Today 上。</p></div>
+  <div class="article-body"><p>RTL8723BS 驱动继续主导 Linux 7.3 的暂存区活动 - Phoronix</p><p>RTL8723BS 驱动继续主导 Linux 7.3 的暂存区活动</p><p>2026年8月29日晚上8:33（美国东部时间）。</p><p>RTL8723BS 驱动于 2017 年为 Linux 4.12 合入内核暂存区。九年过去了，它仍然留在暂存区，并且仍然是清理和代码改进的频繁目标，因为它试图走出暂存区。</p><p>本周，Linux 7.3 的暂存区驱动更新已合并，Greg Kroah-Hartman 表示“这里没有任何重大变化”。在暂存区的变动中，RTL8723BS WiFi 驱动再次占据主导地位。RTL8723BS 是一款基于 SDIO 的 802.11 b/g/n WiFi 和蓝牙驱动，曾被各种廉价单板计算机以及早期的 Intel Compute Stick 设备使用。这个驱动一直很混乱，并因其各种抽象和代码意大利面条而被描述为“一团糟”。近十年后，它仍然留在暂存区，并不断进行代码改进，以及针对恶意 WiFi 接入点的加固等。</p><p>对于 Linux 7.3 的暂存区改动，这个 Realtek 驱动轻松占据主导地位，大部分改动涉及编码风格、重构以及解决驱动中的其他问题。其中许多改动仍然来自 Linux 内核新人，以积累内核驱动开发经验。</p><p>目前，许多改动都相当平凡，比如重命名驼峰式命名变量、删除未使用的代码片段，但近十年后，清理工作仍在继续。</p><p>由于没有新的暂存区驱动或其他类似内容，持续的 RTL8723BS 清理工作仍然是 Linux 7.3 暂存区拉取请求的主要焦点（以及暂存区活动的大部分）。</p><p>其他相关新闻：</p><p>- 来自 Intel 或 AMD 以外的其他实体的另一个 x86 公告</p><p>- Linux 7.3 TPM 为 TrenchBoot 做清理准备</p><p>- Linux 7.3 将开始检查 USB-C 线缆的 Alt-Mode 支持</p><p>- Linux 7.3 PCI 代码添加咨询性非致命错误，支持 Intel Dunlow</p><p>- Linux 7.3 合并 2026 年 Steam 控制器的初始内核驱动支持</p><p>- AMD k10temp 驱动为 Linux 7.3 添加 EPYC Zen 5 每 CCD 温度监控</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他。</p><p>其他新闻：</p><p>- 长期 Linux CIFS/SMB3 维护者去世</p><p>- Linus Torvalds 经历了一场“地狱般的调试会话”，AI“极大地帮助”了他</p><p>- Wayland 被发现“本质上比 X11 更快，但不一定更高效”</p><p>- 特制的 NTFS 文件系统镜像允许在 Linux 上通过 NTFS3 驱动获得 root 访问权限</p><p>- Linux 内核每个版本接近 2000 个 CVE</p><p>- Intel 工程师提议为 Linux 提供 DRM Fabric</p><p>- Debian 投票允许“负责任地使用生成式 AI”</p><p>- GCC 补丁调整 AMD Zen 5 误预测成本，基准测试提升 12%</p><p>虽然拥有无广告浏览，单页文章查看。</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026。</p><p>所有商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/freerdp-3-29-is-out-with-extensive-security-fixes/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-Staging" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

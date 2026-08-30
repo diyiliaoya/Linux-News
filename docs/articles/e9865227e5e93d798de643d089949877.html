@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FreeRDP 3.29 发布，带来大量安全修复 — Linux 中文速报</title>
+<title>KDE Plasma 6.8 提升部分全屏内容的性能与能效 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #8b5cf61a; color: #8b5cf6;
-    border: 1px solid #8b5cf630;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">桌面环境</span>
-    <span class="source">Linux Today</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>FreeRDP 3.29 发布，带来大量安全修复</h1>
+  <h1>KDE Plasma 6.8 提升部分全屏内容的性能与能效</h1>
 
-  <div class="article-summary">FreeRDP 3.29 版本正式发布，包含 22 个安全公告，增强了运行时保护，修复了多个漏洞，并对其远程桌面协议栈进行了全面加固。该版本旨在提升整体安全性和稳定性，建议用户及时更新。</div>
+  <div class="article-summary">KDE Plasma 6.8 本周迎来多项改进，包括针对 Intel 或 NVIDIA GPU 在全屏 HDR、ICC 配置文件及夜间灯光效果下的性能与能效优化，通过将单平面 OETF 卸载至 CRTC 后混合伽马 LUT，减少色彩带状并提升硬件色彩管线利用率。KPipeWire 降低了屏幕投射延迟一帧；回收站组件改用 KCoreDirLister 减少资源占用；修复了注销时第二常见的崩溃问题；内置 RDP 服务器可根据网络带宽自动调整质量。此外，Plasma 6.7.5 改善了 ICC 显示配置文件下的 HDR 内容显示。</div>
 
-  <div class="article-body"><p>FreeRDP 3.29 版本携 22 个安全公告、更强的运行时保护、错误修复以及对其远程桌面协议栈的全面加固而来。</p><p>该文章 FreeRDP 3.29 Is Out With Extensive Security Fixes 首次出现在 Linux Today 上。</p></div>
+  <div class="article-body"><p>KDE Plasma 6.8 提升部分全屏内容的性能与能效 - Phoronix</p><p>KDE Plasma 6.8 提升部分全屏内容的性能与能效</p><p>发布于 2026年8月29日 上午10:48（美国东部时间）。</p><p>本周，Union QtWidgets 首次发布，同时在过去几天中，其他多项改进也相继落地，使 Plasma 6.8 更加令人期待。</p><p>Plasma 6.8 还完成了针对 Intel 或 NVIDIA GPU 在全屏 HDR、ICC 配置文件及夜间灯光效果下的性能与能效优化。对 KWin 的改动是将单平面 OETF 卸载到 CRTC 后混合伽马 LUT。这使得更多场景能够直接扫描输出，而非回退到着色器合成，从而减少色彩带状，并提升 DRM/KMS 硬件色彩管线的利用率。</p><p>Plasma 6.8 对 KPipeWire 的另一项增强是，将 Plasma 和 KWin 中的屏幕投射延迟降低一帧。</p><p>Plasma 6.8 的回收站组件现在也减少了资源占用。回收站小程序放弃了 DIrModel 的使用，转而依赖 KCoreDirLister，在仅需统计回收站中项目数量时降低开销。同时，在计数过程中，它也会避免更新回收站项目的显示计数。</p><p>Plasma 6.8 将修复 Plasma 桌面第二常见的崩溃问题。这一崩溃发生在用户注销时，原因是 QConcatenateTablesProxyModel 析构过程中的崩溃。</p><p>Plasma 6.8 的另一项新功能是，其内置的 RDP 服务器现在会根据网络可用带宽自动调整质量级别。</p><p>与此同时，Plasma 6.7.5 正在改进使用 ICC 显示配置文件时 HDR 内容的显示效果。</p><p>关于这些改进以及更多 KDE Plasma 相关内容的详细信息，请参阅最新一期的：</p><p>Union QtWidgets 首次发布，推动 KDE Plasma 的 Union 发展</p><p>KDE 远程桌面体验改进，缩小 X11 与 Wayland 差距</p><p>KDE Plasma 6.8 本周带来一些诱人的性能优化</p><p>KDE 软件现通过 KIO-Snapshot 1.0 实现稳定的 Btrfs 快照集成</p><p>KDE Gear 26.08 带来最新的 KDE 应用体验</p><p>KDE Plasma 6.8 将允许微调鼠标/触摸板速度</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。他还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>长期担任 Linux CIFS/SMB3 维护者的开发者去世</p><p>Linus Torvalds 经历了一场地狱般的调试会话，AI“极大地帮助”了他</p><p>Wayland 被发现“本质上比 X11 更快，但未必更高效”</p><p>特制 NTFS 文件系统镜像可在 Linux 上通过 NTFS3 驱动获取 Root 权限</p><p>Linux 内核每个版本接近 2000 个 CVE</p><p>Intel 工程师提议为 Linux 引入 DRM Fabric</p><p>Debian 投票允许“负责任地使用生成式 AI”</p><p>GCC 补丁调整 AMD Zen 5 误预测成本，基准测试提升 12%</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/freerdp-3-29-is-out-with-extensive-security-fixes/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Plasma-6.8-Full-Screen-Perf" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
