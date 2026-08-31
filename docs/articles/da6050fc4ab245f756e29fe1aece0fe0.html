@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后 — Linux 中文速报</title>
+<title>将AMD ROCm引入FreeBSD所面临的挑战 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后</h1>
+  <h1>将AMD ROCm引入FreeBSD所面临的挑战</h1>
 
-  <div class="article-summary">LibreOffice 26.8 发布，明确拒绝集成任何 AI 功能，强调隐私和离线办公。此前 Collabora 在 26.04 版本中引入了可选的 AI 功能，双方立场形成鲜明对比。新版本改进了 RTL 文本检测、基线网格显示、电子表格和演示文稿功能，并支持西非文字系统。安装可通过官方包或 Flatpak 进行。</div>
+  <div class="article-summary">FreeBSD基金会的一名实习生致力于将AMD的ROCm计算堆栈从Linux移植到FreeBSD。尽管FreeBSD已有从Linux内核DRM移植的AMDGPU驱动，并借助LinuxKPI兼容层，但移植工作仍面临巨大挑战，涉及内核改动、LLVM代码修补、GPU运行时调整及drm-kmod模块修改。目前项目已接近运行简单向量加法工作负载的里程碑，但用户空间仍存在问题。实习生计划继续推进，未来将重点探索FreeBSD的内存管理，特别是异构内存管理（HMM）支持。</div>
 
-  <div class="article-body"><p>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后</p><p>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后</p><p>TDF 对提供任何 AI 功能不感兴趣，坚持开源办公套件的基本功能。</p><p>自 4 月以来，TDF 和 Collabora 一直存在分歧，当时 TDF 的会员委员会一举开除了所有 Collabora 员工和合作伙伴，超过 30 人被除名。</p><p>但这并没有阻止 Collabora 发布一系列新版本，其中 Collabora Office 26.04 是最新的一个，该版本将 AI 作为可选功能引入，让用户选择模型并自带凭据。</p><p>现在，LibreOffice（以及背后的文档基金会）将拒绝 AI 的态度放在了最前沿，随着 LibreOffice 26.8 的发布，甚至直接在发布公告的标题中明确提及了这一点。</p><p>🆕 LibreOffice 26.8：有哪些新功能？</p><p>LibreOffice 26.8 中没有 AI。套件的任何部分都不会与远程服务器通信，也不需要互联网连接才能工作。</p><p>这并非疏忽；TDF 表示，如果你的工作因法律或隐私原因不能离开办公场所，那么事后（例如在审计期间）证明这一点的唯一方法就是软件从未给数据提供任何去处。</p><p>无论如何，让我们回到编辑器。👇</p><p>Writer 现在在打开或粘贴文档时自动检测段落方向，行尾间距跟随段落方向而不是阅读方向，对象调整大小控件也能很好地处理 RTL 和垂直 CJK 文档。</p><p>它还提供了一种在编辑时查看基线网格的方法，网格本身现在在文本框架内正确对齐。还提供了一个新的“无干扰写作”模式，用于去除页眉、页脚和页边距。</p><p>Calc 采用了我们之前看到的 RTL 检测。在空单元格中输入从右到左的文本会自动设置其方向，而无需手动切换。</p><p>其他改进包括数据透视表的“刷新”功能，以及一个“随机排序”命令，用于打乱选定范围内的单元格顺序。</p><p>Impress 新增了为两种西非书写系统（曼丁语和富拉尼语）设计的命名函数和运算符，以及用于从右到左书写公式的左向矢量箭头。</p><p>从左到右：Writer、Impress 和彩色笔记本栏。</p><p>Draw 基本支持读写 Microsoft OOXML 文件中出现的新图表格式（如 c:chart），涵盖“图表”功能。</p><p>Impress 可以在一个文件中混合页面大小，而不是强制每张幻灯片或页面都匹配，并且还引入了演示文稿分区，让你可以将幻灯片分组命名，而不是滚动浏览一长串列表。</p><p>总的来说，Calc、Writer、Impress 和 Draw 现在各自带有自己的背景色调（位于功能区式界面顶部），因此你可以不用阅读标题栏就能知道自己在哪个应用程序中。</p><p>Writer 还新增了一个“对齐”功能，可以平衡整个段落的字间距，而不是逐行判断，修复了逐行两端对齐导致的不均匀外观。</p><p>⚙️ 如何安装/升级？</p><p>你通常会在流行的 Linux 发行版中找到已安装的 LibreOffice，这个版本作为常规系统升级的一部分出现只是时间问题。</p><p>如果你等不及，下载官方软件包是安装此版本的最快方式。或者，你也可以选择 Flatpak 版本，但要知道它收到更新会稍晚一些。</p><p>如果你不想错过，可以查看“新功能”页面以了解实际变化。</p><p>喜欢这次更新吗？支持独立的 Linux 新闻报道。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热爱开源软件、定制 PC 组装、赛车运动并探索这个世界无限可能的极客。</p><p>你现在可以在一台机器上同时运行多个 Linux 内核</p><p>你应该关注 Chromium 的 Flatpak 体验</p></div>
+  <div class="article-body"><p>将AMD ROCm引入FreeBSD所面临的挑战 - Phoronix</p><p>将AMD ROCm引入FreeBSD所面临的挑战</p><p>2026年8月30日，美国东部时间上午10:38。</p><p>FreeBSD基金会的一名实习生致力于将AMD ROCm移植到FreeBSD。实习即将结束，而FreeBSD的ROCm代码已接近能够执行简单向量加法工作负载的阶段。</p><p>FreeBSD基金会本周发布了一篇博客文章，总结了学生开发者Sourojeet Adhikari作为实习生，将AMD开源ROCm计算堆栈从Linux移植到FreeBSD的工作成果。</p><p>尽管FreeBSD拥有从Linux内核DRM移植过来的AMDGPU驱动，并且有LinuxKPI兼容层帮助将Linux内核接口转换到FreeBSD环境，但将ROCm引入FreeBSD仍是一项艰巨的任务。这项工作不仅涉及内核改动，还包括修补AMD用于ROCm的下游LLVM代码、调整ROCm GPU运行时，以及修改drm-kmod模块。此外，在FreeBSD的LinuxKPI兼容接口中还发现了一些错误和差异。</p><p>随着夏季实习结束，Sourojeet计划继续在ROCm和FreeBSD上工作。至于当前状态：</p><p>“该项目已接近一个重要里程碑：运行一个简单的向量加法工作负载。驱动可以链接、加载和运行，尽管用户空间仍有待解决的问题。”</p><p>“接下来，Sourojeet预计将花更多时间探索FreeBSD的内存管理系统，特别是支持异构内存管理（HMM）所需的工作。”</p><p>因此，FreeBSD上的ROCm尚未达到可供最终用户使用的状态，但未来如何发展值得关注。</p><p>想了解更多信息的人可以阅读FreeBSD基金会博客上的相关倡议。相关更改可在GitHub仓库中找到，详见：</p><p>AMD Zen 6准备工作、Ryzen AI Halo LED驱动及Linux 7.3的众多笔记本改动</p><p>AMD从ROCm 7.14跃升至ROCm 10.0，推出ROCm.AI</p><p>Lemonade 11.8让在AMD Strix Halo上运行DeepSeek V4 Flash变得简单</p><p>AMD在LLVM中引入新的“GFX1250-STRICT”GPU目标</p><p>GCC补丁调整AMD Zen 5误预测成本，基准测试提升12%</p><p>AMD发布大规模补丁系列，在Linux内核中启用UALink</p><p>Michael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动及其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>长期担任Linux CIFS/SMB3维护者的开发者去世</p><p>Wayland被发现“本质上比X11更快，但不一定更高效”</p><p>Linux内核每个版本接近2,000个CVE</p><p>特制NTFS文件系统镜像可在Linux上通过NTFS3驱动获取root权限</p><p>Debian投票允许“负责任地使用生成式AI”</p><p>加利福尼亚州通过AB-1856，为年龄验证提供开源救济</p><p>补丁大幅提升内核内Zstd性能，因原有低效问题严重</p><p>英特尔工程师提议为Linux引入DRM Fabric</p><p>在享受无广告浏览时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/libreoffice-26-8-release/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/AMD-ROCm-FreeBSD-Intern-Report" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

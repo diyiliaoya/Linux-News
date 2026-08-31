@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后 — Linux 中文速报</title>
+<title>OpenShot 4.0 新增色彩分级、录制停靠面板及 Qt 6 支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后</h1>
+  <h1>OpenShot 4.0 新增色彩分级、录制停靠面板及 Qt 6 支持</h1>
 
-  <div class="article-summary">LibreOffice 26.8 发布，明确拒绝集成任何 AI 功能，强调隐私和离线办公。此前 Collabora 在 26.04 版本中引入了可选的 AI 功能，双方立场形成鲜明对比。新版本改进了 RTL 文本检测、基线网格显示、电子表格和演示文稿功能，并支持西非文字系统。安装可通过官方包或 Flatpak 进行。</div>
+  <div class="article-summary">OpenShot 4.0 已标记发布，带来 Qt 6 界面、色彩分级工具和新的音视频录制界面。Qt 6 迁移改善了 Wayland 支持和分数缩放。新功能包括色彩分级效果（含示波器、曲线编辑和色彩轮）、录制停靠面板（支持麦克风、屏幕或摄像头直接录制到项目）、AI 效果简化（本地模型下载和 ComfyUI 工作流新增音频处理）、运动菜单重构、音频可视化效果，以及更简洁的界面和新的工作区布局。此外，还改进了波形显示、新增社交媒体导出滤镜，并移除了旧视图选项。</div>
 
-  <div class="article-body"><p>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后</p><p>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后</p><p>TDF 对提供任何 AI 功能不感兴趣，坚持开源办公套件的基本功能。</p><p>自 4 月以来，TDF 和 Collabora 一直存在分歧，当时 TDF 的会员委员会一举开除了所有 Collabora 员工和合作伙伴，超过 30 人被除名。</p><p>但这并没有阻止 Collabora 发布一系列新版本，其中 Collabora Office 26.04 是最新的一个，该版本将 AI 作为可选功能引入，让用户选择模型并自带凭据。</p><p>现在，LibreOffice（以及背后的文档基金会）将拒绝 AI 的态度放在了最前沿，随着 LibreOffice 26.8 的发布，甚至直接在发布公告的标题中明确提及了这一点。</p><p>🆕 LibreOffice 26.8：有哪些新功能？</p><p>LibreOffice 26.8 中没有 AI。套件的任何部分都不会与远程服务器通信，也不需要互联网连接才能工作。</p><p>这并非疏忽；TDF 表示，如果你的工作因法律或隐私原因不能离开办公场所，那么事后（例如在审计期间）证明这一点的唯一方法就是软件从未给数据提供任何去处。</p><p>无论如何，让我们回到编辑器。👇</p><p>Writer 现在在打开或粘贴文档时自动检测段落方向，行尾间距跟随段落方向而不是阅读方向，对象调整大小控件也能很好地处理 RTL 和垂直 CJK 文档。</p><p>它还提供了一种在编辑时查看基线网格的方法，网格本身现在在文本框架内正确对齐。还提供了一个新的“无干扰写作”模式，用于去除页眉、页脚和页边距。</p><p>Calc 采用了我们之前看到的 RTL 检测。在空单元格中输入从右到左的文本会自动设置其方向，而无需手动切换。</p><p>其他改进包括数据透视表的“刷新”功能，以及一个“随机排序”命令，用于打乱选定范围内的单元格顺序。</p><p>Impress 新增了为两种西非书写系统（曼丁语和富拉尼语）设计的命名函数和运算符，以及用于从右到左书写公式的左向矢量箭头。</p><p>从左到右：Writer、Impress 和彩色笔记本栏。</p><p>Draw 基本支持读写 Microsoft OOXML 文件中出现的新图表格式（如 c:chart），涵盖“图表”功能。</p><p>Impress 可以在一个文件中混合页面大小，而不是强制每张幻灯片或页面都匹配，并且还引入了演示文稿分区，让你可以将幻灯片分组命名，而不是滚动浏览一长串列表。</p><p>总的来说，Calc、Writer、Impress 和 Draw 现在各自带有自己的背景色调（位于功能区式界面顶部），因此你可以不用阅读标题栏就能知道自己在哪个应用程序中。</p><p>Writer 还新增了一个“对齐”功能，可以平衡整个段落的字间距，而不是逐行判断，修复了逐行两端对齐导致的不均匀外观。</p><p>⚙️ 如何安装/升级？</p><p>你通常会在流行的 Linux 发行版中找到已安装的 LibreOffice，这个版本作为常规系统升级的一部分出现只是时间问题。</p><p>如果你等不及，下载官方软件包是安装此版本的最快方式。或者，你也可以选择 Flatpak 版本，但要知道它收到更新会稍晚一些。</p><p>如果你不想错过，可以查看“新功能”页面以了解实际变化。</p><p>喜欢这次更新吗？支持独立的 Linux 新闻报道。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热爱开源软件、定制 PC 组装、赛车运动并探索这个世界无限可能的极客。</p><p>你现在可以在一台机器上同时运行多个 Linux 内核</p><p>你应该关注 Chromium 的 Flatpak 体验</p></div>
+  <div class="article-body"><p>OpenShot 4.0 新增色彩分级、录制停靠面板及 Qt 6 支持</p><p>OpenShot 4.0 已标记发布，其变化包括 Qt 6 界面、色彩分级工具以及新的视频和音频录制界面。</p><p>Qt 6 迁移已经进行了一段时间，虽然它不会直接改变外观——更多关于其他视觉变化的内容将在下文提及——但后端的升级确实带来了改进的 Wayland 支持和可靠的分数缩放。</p><p>在功能方面，OpenShot 4.0 首次推出了新的色彩分级效果和专用的工作视图：</p><p>色彩校正现在可以在 OpenShot 4.0 内部完成。</p><p>这提供了用于色彩评估的示波器、曲线编辑和用于校正的色彩轮等，解决了该编辑器此前最大的弱点之一：缺乏专业级工具。</p><p>还有一个新的录制停靠面板。它可以管理输入设备、实时监控输入电平，并直接从麦克风、屏幕或网络摄像头录制到现有项目中。录制过程中，片段会出现在时间线上（你可以定义目标轨道），录制完成后自动导入。</p><p>使用 AI 效果“更简单”</p><p>OpenShot 在过去的几个版本中一直在拥抱 AI 视频编辑工具。本次更新在该领域带来了更多改进。</p><p>提醒一下，OpenShot 支持内置的 AI/ML 效果（如对象检测），这些效果使用本地模型，以及生成式 AI 功能，这些功能连接到单独运行的 ComfyUI 服务器，OpenShot 会将文件传递给它，并将结果拉回你的项目中。</p><p>OpenShot 4.0 为音频新增了四个 ComfyUI 工作流：降噪（通过）、增强语音、提升音频分辨率，以及对质量较差或损坏的片段进行基本修复。</p><p>在本地方面，AI 效果界面变得“更简单”，因为当你首次尝试使用模型的效果时，模型下载选项和状态会出现在对话框中。为片段添加和细化 AI 驱动的效果现在会显示实时蒙版预览，并且可以切换模型和设置质量。</p><p>运动菜单全面改革，以及音频可视化效果</p><p>OpenShot 4.0 中有几个新的视频效果（见下文列表），但（原文如此）最有趣：它在片段顶部应用可配置的波形、条形、频谱和其他动画模式——非常适合让纯音频部分变得有趣。</p><p>OpenShot 的界面看起来更简洁，这要归功于对默认界面的各种调整（2024 年 v3.3 引入），以及开发者重新组织、重新定位、重命名，在某些情况下还删除了菜单项、停靠面板、按钮等。</p><p>使用菜单（或键盘快捷键）可以轻松切换视图。视图已被淘汰，因为 OpenShot 4.0 中新增了创建并保存自己的工作区布局作为视图，并快速切换的功能。</p><p>OpenShot 4.0 中的其他变化：</p><p>菜单新增了相机和动画预设</p><p>移除了各种旧的和半完成的视图选项</p><p>更好地支持 Linux 上的 Wayland 捕获</p><p>新增社交媒体导出滤镜，例如，</p><p>改进的波形显示，带有峰值和 RMS 密度选项</p><p>更新了文档</p><p>OpenShot 4.0 已在 GitHub 上标记发布，提供适用于 Windows、macOS 和 Linux（AppImage）的可下载安装程序。我预计一旦公告发布，OpenShot PPA 将会更新。</p><p>总而言之，这是一个相当丰富的更新，这一次可能真的配得上 OpenShot 首席开发者 Jonathan Thomas 的习惯——他将每次发布（无论多小）都宣称为有史以来最具颠覆性、改变游戏规则的版本。</p><p>比这更重要的是：这是测试期间没有崩溃的第一个版本——而且我一直在报道它的更新。我不能说它对每个人都更可靠，但它可能让我不再使用我幼稚的绰号：“open-shut”。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/libreoffice-26-8-release/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/08/openshot-4-0-release" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

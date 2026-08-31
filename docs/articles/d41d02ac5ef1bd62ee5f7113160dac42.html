@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后 — Linux 中文速报</title>
+<title>Linux 7.3-rc1 接近 4100 万行代码，AMD 内核图形驱动达 650 万行 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后</h1>
+  <h1>Linux 7.3-rc1 接近 4100 万行代码，AMD 内核图形驱动达 650 万行</h1>
 
-  <div class="article-summary">LibreOffice 26.8 发布，明确拒绝集成任何 AI 功能，强调隐私和离线办公。此前 Collabora 在 26.04 版本中引入了可选的 AI 功能，双方立场形成鲜明对比。新版本改进了 RTL 文本检测、基线网格显示、电子表格和演示文稿功能，并支持西非文字系统。安装可通过官方包或 Flatpak 进行。</div>
+  <div class="article-summary">Linux 7.3-rc1 版本即将发布，其代码规模已接近 4100 万行。其中，AMD 内核图形驱动（包括 AMDGPU、AMDKFD 及相关显示代码）占据了约 650 万行，占整个内核的约 16%。Linus Torvalds 在发布公告中指出，本次版本中 AMD GPU 寄存器头文件（如 DCN6.0）的引入是补丁规模庞大的主要原因，约占 rc1 补丁的三分之一。与上一版本 7.2 相比，内核代码增加了约 56 万行。预计 Linux 7.4 将轻松突破 4100 万行。</div>
 
-  <div class="article-body"><p>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后</p><p>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后</p><p>TDF 对提供任何 AI 功能不感兴趣，坚持开源办公套件的基本功能。</p><p>自 4 月以来，TDF 和 Collabora 一直存在分歧，当时 TDF 的会员委员会一举开除了所有 Collabora 员工和合作伙伴，超过 30 人被除名。</p><p>但这并没有阻止 Collabora 发布一系列新版本，其中 Collabora Office 26.04 是最新的一个，该版本将 AI 作为可选功能引入，让用户选择模型并自带凭据。</p><p>现在，LibreOffice（以及背后的文档基金会）将拒绝 AI 的态度放在了最前沿，随着 LibreOffice 26.8 的发布，甚至直接在发布公告的标题中明确提及了这一点。</p><p>🆕 LibreOffice 26.8：有哪些新功能？</p><p>LibreOffice 26.8 中没有 AI。套件的任何部分都不会与远程服务器通信，也不需要互联网连接才能工作。</p><p>这并非疏忽；TDF 表示，如果你的工作因法律或隐私原因不能离开办公场所，那么事后（例如在审计期间）证明这一点的唯一方法就是软件从未给数据提供任何去处。</p><p>无论如何，让我们回到编辑器。👇</p><p>Writer 现在在打开或粘贴文档时自动检测段落方向，行尾间距跟随段落方向而不是阅读方向，对象调整大小控件也能很好地处理 RTL 和垂直 CJK 文档。</p><p>它还提供了一种在编辑时查看基线网格的方法，网格本身现在在文本框架内正确对齐。还提供了一个新的“无干扰写作”模式，用于去除页眉、页脚和页边距。</p><p>Calc 采用了我们之前看到的 RTL 检测。在空单元格中输入从右到左的文本会自动设置其方向，而无需手动切换。</p><p>其他改进包括数据透视表的“刷新”功能，以及一个“随机排序”命令，用于打乱选定范围内的单元格顺序。</p><p>Impress 新增了为两种西非书写系统（曼丁语和富拉尼语）设计的命名函数和运算符，以及用于从右到左书写公式的左向矢量箭头。</p><p>从左到右：Writer、Impress 和彩色笔记本栏。</p><p>Draw 基本支持读写 Microsoft OOXML 文件中出现的新图表格式（如 c:chart），涵盖“图表”功能。</p><p>Impress 可以在一个文件中混合页面大小，而不是强制每张幻灯片或页面都匹配，并且还引入了演示文稿分区，让你可以将幻灯片分组命名，而不是滚动浏览一长串列表。</p><p>总的来说，Calc、Writer、Impress 和 Draw 现在各自带有自己的背景色调（位于功能区式界面顶部），因此你可以不用阅读标题栏就能知道自己在哪个应用程序中。</p><p>Writer 还新增了一个“对齐”功能，可以平衡整个段落的字间距，而不是逐行判断，修复了逐行两端对齐导致的不均匀外观。</p><p>⚙️ 如何安装/升级？</p><p>你通常会在流行的 Linux 发行版中找到已安装的 LibreOffice，这个版本作为常规系统升级的一部分出现只是时间问题。</p><p>如果你等不及，下载官方软件包是安装此版本的最快方式。或者，你也可以选择 Flatpak 版本，但要知道它收到更新会稍晚一些。</p><p>如果你不想错过，可以查看“新功能”页面以了解实际变化。</p><p>喜欢这次更新吗？支持独立的 Linux 新闻报道。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热爱开源软件、定制 PC 组装、赛车运动并探索这个世界无限可能的极客。</p><p>你现在可以在一台机器上同时运行多个 Linux 内核</p><p>你应该关注 Chromium 的 Flatpak 体验</p></div>
+  <div class="article-body"><p>Linux 7.3-rc1 接近 4100 万行代码，AMD 内核图形驱动达 650 万行 - Phoronix</p><p>Linux 7.3-rc1 接近 4100 万行代码，AMD 内核图形驱动达 650 万行</p><p>2026年8月30日晚上8:23 EDT</p><p>Linus Torvalds 在 Linux 7.3-rc1 发布公告中提到，AMD 内核图形驱动的改动约占 -rc1 补丁的三分之一，原因是 AMD 为 DCN 6.0 和其他新 IP 添加了庞大的 GPU 寄存器文件。以下是一些最新的代码统计。</p><p>随着 AMD 在 Linux 7.3 中为即将推出的图形硬件启用新的硬件 IP 块，内核的规模也随之膨胀。Linus 在 7.3-rc1 公告中指出：“这个版本的实际补丁规模也很大，原因并不令人意外：这又是一个包含大量 AMD GPU 寄存器转储的版本。这次是 AMD DCN6 寄存器头文件。它们非常庞大，一如既往。当你把所有硬件定义以 C 头文件 #define 的形式转储出来时，就会得到这样的结果。此外还有与新代际配套的代码。总而言之，AMD GPU 代码和头文件转储约占整个 rc1 补丁的三分之一。”</p><p>根据 Linux Git 树在 v7.3-rc1 时的数据……</p><p>Linux 7.3-rc1 的代码量达到 4098 万行。其中包括 5,134,418 行空行（由 cloc 检测）、4,912,366 行代码注释，以及 30,937,090 行实际代码。相比之下，Linux v7.2 的代码量为 4042 万行。可以肯定地说，Linux 7.4 的代码量将轻松超过 4100 万行。</p><p>这包括头文件、AMDGPU 内核图形驱动、AMDKFD 计算驱动，以及相关的显示代码和其他部分，总计 652 万行。这还不包括位于该目录之外的经典 Radeon DRM 驱动（用于 pre-GCN 硬件）。因此，现代 AMD 内核图形驱动代码现在约占 Linux 内核的 16%。在 Linux v7.2 中，cloc 测得为 635 万行。</p><p>内核持续增长。考虑到 AMDGPU/AMDKFD 驱动以及整个 Linux 内核的开发方式，这并不特别出人意料，但至少这些是当前的数据，供好奇者参考。</p><p>Linux 7.3-rc1 带来 AMD Zen 6 支持、更好的 Btrfs 性能以及 2026 年 Steam 控制器支持</p><p>Linux 内核每个版本的 CVE 数量接近 2000 个</p><p>旧 IBM 驱动与不安全的 SGI 驱动一同在 Linux 7.3 中被移除</p><p>Linux 7.3 的 MGLRU 更改有助于可执行代码驻留内存，提升性能</p><p>补丁大幅提升内核内 Zstd 速度，修复了令人尴尬的低效问题</p><p>Linux 7.0-mk2 发布，多内核 Linux 性能表现亮眼</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。他还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>长期担任 Linux CIFS/SMB3 维护者的开发者去世</p><p>Wayland 被发现“本质上比 X11 更快，但未必更高效”</p><p>Linux 内核每个版本的 CVE 数量接近 2000 个</p><p>特制 NTFS 文件系统镜像可在 Linux 上通过 NTFS3 驱动获取 root 权限</p><p>Debian 投票允许“负责任地使用生成式 AI”</p><p>加州通过 AB-1856 法案，为年龄验证提供开源救济</p><p>补丁大幅提升内核内 Zstd 速度，修复了令人尴尬的低效问题</p><p>英特尔工程师提议为 Linux 引入 DRM Fabric</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由</p><p>所有商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/libreoffice-26-8-release/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-rc1-Code-Stats" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

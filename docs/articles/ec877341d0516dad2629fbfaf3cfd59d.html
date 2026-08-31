@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后 — Linux 中文速报</title>
+<title>OpenShot 4.0 发布：视频编辑器界面适配 Qt6 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后</h1>
+  <h1>OpenShot 4.0 发布：视频编辑器界面适配 Qt6</h1>
 
-  <div class="article-summary">LibreOffice 26.8 发布，明确拒绝集成任何 AI 功能，强调隐私和离线办公。此前 Collabora 在 26.04 版本中引入了可选的 AI 功能，双方立场形成鲜明对比。新版本改进了 RTL 文本检测、基线网格显示、电子表格和演示文稿功能，并支持西非文字系统。安装可通过官方包或 Flatpak 进行。</div>
+  <div class="article-summary">OpenShot 4.0 于今日在 GitHub 上发布，这是这款开源非线性视频编辑应用的最新重大版本。主要变化是从 Qt5 迁移到 Qt6 工具包，并进行了大量代码修改和 UI 增强，如新增录制视图、音频录制停靠面板、实时多资源录制时间轴预览。此外，还引入了新的 ComfyUI 模板（用于音频降噪、清理、修复和语音增强）、阴影和发光效果、分析视图、胶片颗粒剪辑预设、YOLOv5 设置和 YOLO 模型选择器。Windows 软件包也有所改进。</div>
 
-  <div class="article-body"><p>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后</p><p>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后</p><p>TDF 对提供任何 AI 功能不感兴趣，坚持开源办公套件的基本功能。</p><p>自 4 月以来，TDF 和 Collabora 一直存在分歧，当时 TDF 的会员委员会一举开除了所有 Collabora 员工和合作伙伴，超过 30 人被除名。</p><p>但这并没有阻止 Collabora 发布一系列新版本，其中 Collabora Office 26.04 是最新的一个，该版本将 AI 作为可选功能引入，让用户选择模型并自带凭据。</p><p>现在，LibreOffice（以及背后的文档基金会）将拒绝 AI 的态度放在了最前沿，随着 LibreOffice 26.8 的发布，甚至直接在发布公告的标题中明确提及了这一点。</p><p>🆕 LibreOffice 26.8：有哪些新功能？</p><p>LibreOffice 26.8 中没有 AI。套件的任何部分都不会与远程服务器通信，也不需要互联网连接才能工作。</p><p>这并非疏忽；TDF 表示，如果你的工作因法律或隐私原因不能离开办公场所，那么事后（例如在审计期间）证明这一点的唯一方法就是软件从未给数据提供任何去处。</p><p>无论如何，让我们回到编辑器。👇</p><p>Writer 现在在打开或粘贴文档时自动检测段落方向，行尾间距跟随段落方向而不是阅读方向，对象调整大小控件也能很好地处理 RTL 和垂直 CJK 文档。</p><p>它还提供了一种在编辑时查看基线网格的方法，网格本身现在在文本框架内正确对齐。还提供了一个新的“无干扰写作”模式，用于去除页眉、页脚和页边距。</p><p>Calc 采用了我们之前看到的 RTL 检测。在空单元格中输入从右到左的文本会自动设置其方向，而无需手动切换。</p><p>其他改进包括数据透视表的“刷新”功能，以及一个“随机排序”命令，用于打乱选定范围内的单元格顺序。</p><p>Impress 新增了为两种西非书写系统（曼丁语和富拉尼语）设计的命名函数和运算符，以及用于从右到左书写公式的左向矢量箭头。</p><p>从左到右：Writer、Impress 和彩色笔记本栏。</p><p>Draw 基本支持读写 Microsoft OOXML 文件中出现的新图表格式（如 c:chart），涵盖“图表”功能。</p><p>Impress 可以在一个文件中混合页面大小，而不是强制每张幻灯片或页面都匹配，并且还引入了演示文稿分区，让你可以将幻灯片分组命名，而不是滚动浏览一长串列表。</p><p>总的来说，Calc、Writer、Impress 和 Draw 现在各自带有自己的背景色调（位于功能区式界面顶部），因此你可以不用阅读标题栏就能知道自己在哪个应用程序中。</p><p>Writer 还新增了一个“对齐”功能，可以平衡整个段落的字间距，而不是逐行判断，修复了逐行两端对齐导致的不均匀外观。</p><p>⚙️ 如何安装/升级？</p><p>你通常会在流行的 Linux 发行版中找到已安装的 LibreOffice，这个版本作为常规系统升级的一部分出现只是时间问题。</p><p>如果你等不及，下载官方软件包是安装此版本的最快方式。或者，你也可以选择 Flatpak 版本，但要知道它收到更新会稍晚一些。</p><p>如果你不想错过，可以查看“新功能”页面以了解实际变化。</p><p>喜欢这次更新吗？支持独立的 Linux 新闻报道。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热爱开源软件、定制 PC 组装、赛车运动并探索这个世界无限可能的极客。</p><p>你现在可以在一台机器上同时运行多个 Linux 内核</p><p>你应该关注 Chromium 的 Flatpak 体验</p></div>
+  <div class="article-body"><p>OpenShot 4.0 发布：视频编辑器界面适配 Qt6 - Phoronix</p><p>OpenShot 4.0 于今日下午在 GitHub 上标记发布，这是这款开源非线性视频编辑应用的最新重大功能版本。</p><p>OpenShot 4.0 的主要变化（也是从 3.5.1 版本升级的原因）是现在采用了 Qt6 工具包。OpenShot 已从 Qt5 移植到当前的 Qt6 版本。在迁移到 Qt6 工具包的过程中进行了大量代码修改，同时还进行了其他 UI 增强，例如录制视图和音频录制停靠面板。现在还有实时多资源录制时间轴预览。</p><p>此外，还新增了用于音频降噪/清理/修复/语音增强的 ComfyUI 模板、新的阴影和发光效果、新的分析视图、新的胶片颗粒剪辑预设、YOLOv5 设置、用于对象检测过滤器的 YOLO 模型选择器，以及其他改进。OpenShot 4.0 的 Microsoft Windows 软件包也得到了改进。</p><p>想要试用 OpenShot 4.0.0 的用户可以在 GitHub 上找到源代码和各种发布二进制文件。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/libreoffice-26-8-release/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/OpenShot-4.0" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

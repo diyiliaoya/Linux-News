@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后 — Linux 中文速报</title>
+<title>Debian AI 投票导致社区分裂 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
+    <span class="tag">发行版</span>
     <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后</h1>
+  <h1>Debian AI 投票导致社区分裂</h1>
 
-  <div class="article-summary">LibreOffice 26.8 发布，明确拒绝集成任何 AI 功能，强调隐私和离线办公。此前 Collabora 在 26.04 版本中引入了可选的 AI 功能，双方立场形成鲜明对比。新版本改进了 RTL 文本检测、基线网格显示、电子表格和演示文稿功能，并支持西非文字系统。安装可通过官方包或 Flatpak 进行。</div>
+  <div class="article-summary">Debian 正式投票允许在项目贡献中使用生成式 AI，此举在社区引发巨大争议。支持者认为 AI 能提高生产力，反对者则强烈不满，甚至有开发者因此退出项目。Debian 的决策可能为其他开源项目树立先例，影响未来 AI 在开源社区中的使用规范。</div>
 
-  <div class="article-body"><p>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后</p><p>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后</p><p>TDF 对提供任何 AI 功能不感兴趣，坚持开源办公套件的基本功能。</p><p>自 4 月以来，TDF 和 Collabora 一直存在分歧，当时 TDF 的会员委员会一举开除了所有 Collabora 员工和合作伙伴，超过 30 人被除名。</p><p>但这并没有阻止 Collabora 发布一系列新版本，其中 Collabora Office 26.04 是最新的一个，该版本将 AI 作为可选功能引入，让用户选择模型并自带凭据。</p><p>现在，LibreOffice（以及背后的文档基金会）将拒绝 AI 的态度放在了最前沿，随着 LibreOffice 26.8 的发布，甚至直接在发布公告的标题中明确提及了这一点。</p><p>🆕 LibreOffice 26.8：有哪些新功能？</p><p>LibreOffice 26.8 中没有 AI。套件的任何部分都不会与远程服务器通信，也不需要互联网连接才能工作。</p><p>这并非疏忽；TDF 表示，如果你的工作因法律或隐私原因不能离开办公场所，那么事后（例如在审计期间）证明这一点的唯一方法就是软件从未给数据提供任何去处。</p><p>无论如何，让我们回到编辑器。👇</p><p>Writer 现在在打开或粘贴文档时自动检测段落方向，行尾间距跟随段落方向而不是阅读方向，对象调整大小控件也能很好地处理 RTL 和垂直 CJK 文档。</p><p>它还提供了一种在编辑时查看基线网格的方法，网格本身现在在文本框架内正确对齐。还提供了一个新的“无干扰写作”模式，用于去除页眉、页脚和页边距。</p><p>Calc 采用了我们之前看到的 RTL 检测。在空单元格中输入从右到左的文本会自动设置其方向，而无需手动切换。</p><p>其他改进包括数据透视表的“刷新”功能，以及一个“随机排序”命令，用于打乱选定范围内的单元格顺序。</p><p>Impress 新增了为两种西非书写系统（曼丁语和富拉尼语）设计的命名函数和运算符，以及用于从右到左书写公式的左向矢量箭头。</p><p>从左到右：Writer、Impress 和彩色笔记本栏。</p><p>Draw 基本支持读写 Microsoft OOXML 文件中出现的新图表格式（如 c:chart），涵盖“图表”功能。</p><p>Impress 可以在一个文件中混合页面大小，而不是强制每张幻灯片或页面都匹配，并且还引入了演示文稿分区，让你可以将幻灯片分组命名，而不是滚动浏览一长串列表。</p><p>总的来说，Calc、Writer、Impress 和 Draw 现在各自带有自己的背景色调（位于功能区式界面顶部），因此你可以不用阅读标题栏就能知道自己在哪个应用程序中。</p><p>Writer 还新增了一个“对齐”功能，可以平衡整个段落的字间距，而不是逐行判断，修复了逐行两端对齐导致的不均匀外观。</p><p>⚙️ 如何安装/升级？</p><p>你通常会在流行的 Linux 发行版中找到已安装的 LibreOffice，这个版本作为常规系统升级的一部分出现只是时间问题。</p><p>如果你等不及，下载官方软件包是安装此版本的最快方式。或者，你也可以选择 Flatpak 版本，但要知道它收到更新会稍晚一些。</p><p>如果你不想错过，可以查看“新功能”页面以了解实际变化。</p><p>喜欢这次更新吗？支持独立的 Linux 新闻报道。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热爱开源软件、定制 PC 组装、赛车运动并探索这个世界无限可能的极客。</p><p>你现在可以在一台机器上同时运行多个 Linux 内核</p><p>你应该关注 Chromium 的 Flatpak 体验</p></div>
+  <div class="article-body"><p>Debian 是一个大名字，是社区的领导者，因此 Debian 做出的决定将开创先例。这可能会导致更多项目像 Debian 一样拥抱 AI。</p><p>Debian 现已正式投票允许在项目贡献中使用生成式 AI。正如你所料，这样的决定并非所有人都能接受。有些人对这个决定漠不关心，而有些人则无法容忍他们喜爱的开源项目中出现任何 AI 元素。</p><p>让我们看看 Debian 到底决定了什么。</p><p>Debian 对“负责任地使用生成式 AI”投了赞成票</p><p>经过数周的讨论和投票，Debian 对 AI 投了赞成票。虽然你可以在此处阅读完整提案，但其核心内容如下：</p><p>AI 工具被允许用于开发、维护和文档工作。在负责任地使用时，它们可以提高贡献者的生产力。</p><p>每个 AI 辅助的贡献必须达到与其他贡献相同的质量、正确性和法律标准。没有例外。</p><p>贡献者在提交 AI 生成的内容之前，必须理解、审查、测试，并在需要时修改它。责任完全由人类承担。</p><p>鼓励但不强制要求披露 AI 的使用情况。</p><p>明确禁止与第三方 AI 服务共享机密或安全敏感信息。</p><p>大规模自动化更改需要事先进行社区讨论，并在进行过程中有人类监督。</p><p>一个分裂的社区……毫不意外</p><p>社区再次分裂了。有些人坚决反对任何 AI 相关的东西，并表达了他们强烈的反感。</p><p>当我在 It's FOSS 的 X 账户上分享这个消息时，评论区一片哗然。有些人还好，但有些人则用“Linslop”、“debAIn”、“Slopian”等词来称呼它，甚至有人提到要切换到 BSD。</p><p>一个主要的愤怒来自 Debian 开发者 Antoine Le Gonidec，他决定退出该项目。</p><p>我无法支持 Debian 目前关于 LLM 使用的决定，并且在这些新规则下，我不再愿意被视为 Debian 的一部分。在面对法西斯主义时假装保持“中立立场”不是中立，而是积极的合作。</p><p>对 AI 说“是”……还是“不”？</p><p>从 GCC 到 Fedora，几乎每个开源项目都在为 AI 生成的代码和贡献制定新的指导方针。</p><p>有些项目完全对 AI 关上了大门。例如，Oracle 不允许 AI 生成的贡献进入 OpenJDK。GCC 也做了同样的事情，禁止任何 AI 生成的代码进入编译器代码库。</p><p>但有些项目采取了更温和的态度。</p><p>Linux 内核项目本身现在允许 AI 辅助代码，但附带了一些条件。使用 AI 的补丁必须相应地进行标记。AI 生成的代码仍然必须遵循 GPL 2.0 许可证。还有更多类似的规则。</p><p>Debian 是一个大名字，是社区的领导者，因此 Debian 做出的决定将开创先例。这可能会导致更多项目像 Debian 一样拥抱 AI。</p><p>在我看来，无论我们喜欢与否，AI 辅助编程将会（或已经成为）新常态。年轻的开发者将伴随着它们成长，并严重依赖它们。在某个时候，项目将不得不“妥协”，否则贡献者的数量将急剧减少，因为将开始难以找到能够在没有任何 AI 辅助下编写代码的贡献者。</p><p>这与 Linux 内核中越来越多地使用 Rust 而非 C 的逻辑相同。暂且不论内存安全性，年轻的开发者对 Rust 更熟悉。引入 Rust 意味着更多的年轻贡献者，这对项目的长期未来是有利的。</p><p>这里重要的是，程序员不应该盲目地将控制权交给 AI。他们应该能够引导 AI 朝着正确的方向前进，而不是产生低效、质量低下的垃圾代码。</p><p>💬 现在轮到你了。Debian 做对了吗？在评论区分享你的想法。</p><p>喜欢这个更新吗？支持独立的 Linux 新闻报道。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/libreoffice-26-8-release/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/debian-allows-ai-contribution/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

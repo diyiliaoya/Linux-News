@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后 — Linux 中文速报</title>
+<title>Linux 7.3 为笔记本电脑及其他设备带来更多音频修复 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后</h1>
+  <h1>Linux 7.3 为笔记本电脑及其他设备带来更多音频修复</h1>
 
-  <div class="article-summary">LibreOffice 26.8 发布，明确拒绝集成任何 AI 功能，强调隐私和离线办公。此前 Collabora 在 26.04 版本中引入了可选的 AI 功能，双方立场形成鲜明对比。新版本改进了 RTL 文本检测、基线网格显示、电子表格和演示文稿功能，并支持西非文字系统。安装可通过官方包或 Flatpak 进行。</div>
+  <div class="article-summary">Linux 7.3 内核在合并了上周的大量音频硬件支持后，本周又合并了第二轮声音子系统更新，主要包含修复和大量设备特定怪癖（quirks），以改善各种笔记本电脑和其他音频设备在 Linux 下的声音支持。新增的修复包括：罗技 PRO X 无线耳机的热插拔麦克风问题、微星 Thin A15 B7UC 笔记本的内置麦克风支持、Intel Hades Canyon NUC 的 ALC700 编解码器初始化问题、Creative Sound Blaster Play! 3 的最小静音值处理、TongFang XxAF5xxx 笔记本的麦克风检测、SMSL USB DAC 的爆音消除、M-Audio Venom USB 合成器支持、HP 笔记本的麦克风静音 LED 修复，以及新增 Realtek 和联想、外星人等设备的音频怪癖。</div>
 
-  <div class="article-body"><p>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后</p><p>LibreOffice 26.8 坚决不引入 AI，紧随 Collabora 欢迎 AI 之后</p><p>TDF 对提供任何 AI 功能不感兴趣，坚持开源办公套件的基本功能。</p><p>自 4 月以来，TDF 和 Collabora 一直存在分歧，当时 TDF 的会员委员会一举开除了所有 Collabora 员工和合作伙伴，超过 30 人被除名。</p><p>但这并没有阻止 Collabora 发布一系列新版本，其中 Collabora Office 26.04 是最新的一个，该版本将 AI 作为可选功能引入，让用户选择模型并自带凭据。</p><p>现在，LibreOffice（以及背后的文档基金会）将拒绝 AI 的态度放在了最前沿，随着 LibreOffice 26.8 的发布，甚至直接在发布公告的标题中明确提及了这一点。</p><p>🆕 LibreOffice 26.8：有哪些新功能？</p><p>LibreOffice 26.8 中没有 AI。套件的任何部分都不会与远程服务器通信，也不需要互联网连接才能工作。</p><p>这并非疏忽；TDF 表示，如果你的工作因法律或隐私原因不能离开办公场所，那么事后（例如在审计期间）证明这一点的唯一方法就是软件从未给数据提供任何去处。</p><p>无论如何，让我们回到编辑器。👇</p><p>Writer 现在在打开或粘贴文档时自动检测段落方向，行尾间距跟随段落方向而不是阅读方向，对象调整大小控件也能很好地处理 RTL 和垂直 CJK 文档。</p><p>它还提供了一种在编辑时查看基线网格的方法，网格本身现在在文本框架内正确对齐。还提供了一个新的“无干扰写作”模式，用于去除页眉、页脚和页边距。</p><p>Calc 采用了我们之前看到的 RTL 检测。在空单元格中输入从右到左的文本会自动设置其方向，而无需手动切换。</p><p>其他改进包括数据透视表的“刷新”功能，以及一个“随机排序”命令，用于打乱选定范围内的单元格顺序。</p><p>Impress 新增了为两种西非书写系统（曼丁语和富拉尼语）设计的命名函数和运算符，以及用于从右到左书写公式的左向矢量箭头。</p><p>从左到右：Writer、Impress 和彩色笔记本栏。</p><p>Draw 基本支持读写 Microsoft OOXML 文件中出现的新图表格式（如 c:chart），涵盖“图表”功能。</p><p>Impress 可以在一个文件中混合页面大小，而不是强制每张幻灯片或页面都匹配，并且还引入了演示文稿分区，让你可以将幻灯片分组命名，而不是滚动浏览一长串列表。</p><p>总的来说，Calc、Writer、Impress 和 Draw 现在各自带有自己的背景色调（位于功能区式界面顶部），因此你可以不用阅读标题栏就能知道自己在哪个应用程序中。</p><p>Writer 还新增了一个“对齐”功能，可以平衡整个段落的字间距，而不是逐行判断，修复了逐行两端对齐导致的不均匀外观。</p><p>⚙️ 如何安装/升级？</p><p>你通常会在流行的 Linux 发行版中找到已安装的 LibreOffice，这个版本作为常规系统升级的一部分出现只是时间问题。</p><p>如果你等不及，下载官方软件包是安装此版本的最快方式。或者，你也可以选择 Flatpak 版本，但要知道它收到更新会稍晚一些。</p><p>如果你不想错过，可以查看“新功能”页面以了解实际变化。</p><p>喜欢这次更新吗？支持独立的 Linux 新闻报道。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热爱开源软件、定制 PC 组装、赛车运动并探索这个世界无限可能的极客。</p><p>你现在可以在一台机器上同时运行多个 Linux 内核</p><p>你应该关注 Chromium 的 Flatpak 体验</p></div>
+  <div class="article-body"><p>Linux 7.3 为笔记本电脑及其他设备带来更多音频修复 - Phoronix</p><p>Linux 7.3 为笔记本电脑及其他设备带来更多音频修复</p><p>2026年8月30日，美国东部时间上午11:06。</p><p>继上周 Linux 7.3 的声音子系统更新（带来了大量新的音频硬件支持）之后，本周在 Linux 7.3-rc1 发布之前，又合并了第二轮声音更新。</p><p>这第二轮声音更新主要聚焦于“修复”，但也包含大量设备硬件怪癖（quirks），使各种笔记本电脑和其他音频设备在 Linux 下能够提供更好的声音支持。此外，还有一些新的设备 ID 等，构成了这个有趣的修复拉取请求：</p><p>- 罗技 PRO X 无线耳机具有热插拔麦克风，在 Linux 下当麦克风断开时会出现混乱。Linux 7.3 对此进行了修复，同时处理了其静音时的最小音量级别。</p><p>- 为微星 Thin A15 B7UC 笔记本电脑添加了怪癖，以支持该 AMD Ryzen 笔记本的内置麦克风。</p><p>- 针对 2018 年的 Intel Hades Canyon NUC，为 ALC700 编解码器添加了怪癖。当从 Windows 重启到 Linux 时，ALC700 编解码器无法使用。借助 Linux 7.3 的代码，即使从 Windows 重启到 Linux，它现在也能正确初始化。</p><p>- Creative Sound Blaster Play! 3 现在有了处理最小静音值的怪癖。</p><p>- 修复了 TongFang XxAF5xxx（也是 TUXEDO Computers 销售的笔记本型号）的麦克风检测问题。</p><p>- 为 SMSL USB DAC 添加了怪癖，以避免在内核模块探测时设置或从运行时挂起返回时出现可闻的爆音。</p><p>- 补丁使 M-Audio Venom USB 合成器能够在 Linux 下工作。MIDI 使用在 Linux 下已经可以工作，但 USB 接口直到现在才正常工作。</p><p>- 修复了 HP Laptop 15-fd0039nt 的麦克风静音 LED。</p><p>- 在 SoundWire RT766 驱动中新增了 Realtek RT766/RT767 VA1 设备 ID。</p><p>- 为联想 Yoga Pro 9 16IAH10、联想 Legion Pro 7 16ARX8H、联想 IdeaPad Slim 3 15ABR8 和 Alienware m18 R1 AMD 添加了额外的声音处理怪癖。</p><p>合并到 Linux Git 的声音修复完整列表，请参阅：</p><p>OpenShot 4.0 发布，视频编辑器 UI 适配 Qt6</p><p>NVIDIA Vulkan 帧率上转换“FRUC”合并到 FFmpeg</p><p>Linux 7.3 带来大量新音频硬件支持</p><p>Intel 计算机视觉传感驱动现已为 Nova Lake 做好准备</p><p>Linux 驱动发布，支持 PreSonus Quantum 2626：约 700 美元的 Thunderbolt 音频接口</p><p>FFmpeg 实现 H.265 Vulkan 编码性能优化</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>长期担任 Linux CIFS/SMB3 维护者的开发者去世</p><p>Wayland 被发现“本质上比 X11 更快，但不一定更高效”</p><p>Linux 内核每个版本的 CVE 数量接近 2000</p><p>特制 NTFS 文件系统镜像允许在 Linux 上通过 NTFS3 驱动获得 root 权限</p><p>Debian 投票允许“负责任地使用生成式 AI”</p><p>加州通过 AB-1856，为年龄验证提供开源救济</p><p>补丁大幅提升内核内 Zstd 速度，解决令人尴尬的低效问题</p><p>Intel 工程师提议为 Linux 引入 DRM Fabric</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/libreoffice-26-8-release/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-More-Sound" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

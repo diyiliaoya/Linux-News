@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linux 7.3-rc1 发布：支持 AMD Zen 6、提升 Btrfs 性能及 2026 款 Steam 手柄 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年08月31日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Linux 7.3-rc1 发布：支持 AMD Zen 6、提升 Btrfs 性能及 2026 款 Steam 手柄</h1>
+
+  <div class="article-summary">Linux 7.3-rc1 内核已发布，合并窗口为期两周，包含大量新代码。主要亮点包括：对 AMD Zen 6 平台的更多支持、Intel 混合 CPU 的新优化、Btrfs 性能提升、Nouveau 对 NVK Vulkan Video 的支持、2026 款 Valve Steam 手柄的内核驱动、M3 Ultra/Pro/Max 的初步支持、新的 AMD 图形 IP 支持、Intel Starfire 和 Nova Lake 的 Xe3P 图形默认启用、FailFS 上游化、USB4STREAM 低延迟模式，以及 Valve 针对低显存系统的游戏改进。此外，由于 AI/LLM 代理的持续噪音，一些旧硬件驱动被移除。Linus Torvalds 表示，本次合并窗口规模较大，但主要归因于 AMD GPU 寄存器头文件的大规模转储，约占补丁的三分之一。</div>
+
+  <div class="article-body"><p>Linux 7.3-rc1 发布：支持 AMD Zen 6、提升 Btrfs 性能及 2026 款 Steam 手柄 - Phoronix</p><p>Linux 7.3-rc1 发布：支持 AMD Zen 6、提升 Btrfs 性能及 2026 款 Steam 手柄</p><p>2026年8月30日，美国东部时间下午5:51。</p><p>为期两周的合并窗口已经结束，Linux 7.3-rc1 内核现已可供测试。</p><p>Linux 7.3-rc1 的发布伴随着大量新代码的落地，包括新的/改进的硬件支持、文件系统增强、安全改进以及更多内容。当然，由于 AI/LLM 驱动的活动，Linux 内核的不同部分也进行了大量修复。</p><p>Linux 7.3 为 Intel 混合 CPU 带来了新的优化，对即将推出的 AMD Zen 6 平台提供了更多支持，提升了 Btrfs 性能，为 NVK Vulkan Video 提供了 Nouveau 支持，为 2026 款 Valve Steam 手柄提供了内核驱动支持，初步支持 M3 Ultra / Pro / Max，启用了新的 AMD 图形 IP，Intel Starfire 的初步启用，Nova Lake 的 Intel Xe3P 图形现已默认启用，FailFS 已上游化，USB4STREAM 增加了低延迟模式，以及许多其他新功能。Linux 7.3 还包含了 Valve 带来的游戏改进，以增强在显存非常有限的系统上的体验。此外，由于 AI/LLM 代理的持续噪音，一些旧/过时的硬件驱动继续被移除。</p><p>现在，让我们继续在 Phoronix 上进行更多 Linux 7.3 内核测试和性能基准测试。我将在未来几天内发布更详尽的 Linux 7.3 内核功能概述。</p><p>Linus Torvalds 尚未在 LKML 上发布他的发布评论，但预计很快会发布。Linux 7.3-rc1 可通过 Git 获取。</p><p>Linus Torvalds 现在发布了标记 Linux 7.3-rc1 的惯常消息。他说：</p><p>“两周过去了，现在是周日下午，合并窗口已经关闭。</p><p>没有什么特别突出的——除了它很大。这不是我们有过的最大的 rc1，但肯定名列前茅，至少在提交数量上是这样。</p><p>而且我认为这不再让任何人感到惊讶。这是我们一段时间以来一直看到的相同模式。</p><p>它作为一个实际的差异也很大，而*这*的原因也不令人惊讶：这又是一个带有大量 AMD GPU 寄存器转储的版本。这次是 AMD DCN6 寄存器头文件。它们非常庞大。一如既往。这就是当你将所有硬件定义转储为 C 头文件 #define 时所得到的。还有伴随新代的代码。总而言之，AMD GPU 代码和头文件转储约占整个 rc1 补丁的三分之一。</p><p>但如果你只是屏蔽掉那一大块，事情看起来相当正常，这个合并窗口尽管很大，但感觉与大多数合并窗口没有太大不同。我因为自己是个一流的傻瓜，在中间进行了系统升级，然后不得不追查由此引起的问题，这让我自己变得不必要地困难，但那完全是我自己的错。我知道我不应该这样做，但我只是天真地想‘不会出问题的’。嘿，最终一切都很好，我只是让这个合并窗口比本应更困难。</p><p>让我们希望这个版本的其余部分会顺利进行。并且要小且平淡。但我在骗谁呢？它几乎肯定不会小，但我总是可以希望。”</p><p>Linux 7.3-rc1 接近 4100 万行，AMD 内核图形驱动达到 650 万行</p><p>Linux 内核每个版本接近 2000 个 CVE</p><p>旧 IBM 驱动与不安全的 SGI 驱动一起在 Linux 7.3 中被移除</p><p>Linux 7.3 MGLRU 更改有助于可执行代码留在内存中，提高性能</p><p>补丁提供更快的内核内 Zstd，由于令人尴尬的糟糕低效</p><p>Linux 7.0-mk2 发布，用于多内核 Linux，性能结果令人期待</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写了超过 20,000 篇文章，涵盖 Linux 硬件的现状。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-rc1-Released" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
