@@ -9106,5 +9106,170 @@
     "title_zh": "将AMD ROCm引入FreeBSD所面临的挑战",
     "summary_zh": "FreeBSD基金会的一名实习生致力于将AMD的ROCm计算堆栈从Linux移植到FreeBSD。尽管FreeBSD已有从Linux内核DRM移植的AMDGPU驱动，并借助LinuxKPI兼容层，但移植工作仍面临巨大挑战，涉及内核改动、LLVM代码修补、GPU运行时调整及drm-kmod模块修改。目前项目已接近运行简单向量加法工作负载的里程碑，但用户空间仍存在问题。实习生计划继续推进，未来将重点探索FreeBSD的内存管理，特别是异构内存管理（HMM）支持。",
     "fulltext_zh": "将AMD ROCm引入FreeBSD所面临的挑战 - Phoronix\n将AMD ROCm引入FreeBSD所面临的挑战\n2026年8月30日，美国东部时间上午10:38。\nFreeBSD基金会的一名实习生致力于将AMD ROCm移植到FreeBSD。实习即将结束，而FreeBSD的ROCm代码已接近能够执行简单向量加法工作负载的阶段。\nFreeBSD基金会本周发布了一篇博客文章，总结了学生开发者Sourojeet Adhikari作为实习生，将AMD开源ROCm计算堆栈从Linux移植到FreeBSD的工作成果。\n尽管FreeBSD拥有从Linux内核DRM移植过来的AMDGPU驱动，并且有LinuxKPI兼容层帮助将Linux内核接口转换到FreeBSD环境，但将ROCm引入FreeBSD仍是一项艰巨的任务。这项工作不仅涉及内核改动，还包括修补AMD用于ROCm的下游LLVM代码、调整ROCm GPU运行时，以及修改drm-kmod模块。此外，在FreeBSD的LinuxKPI兼容接口中还发现了一些错误和差异。\n随着夏季实习结束，Sourojeet计划继续在ROCm和FreeBSD上工作。至于当前状态：\n“该项目已接近一个重要里程碑：运行一个简单的向量加法工作负载。驱动可以链接、加载和运行，尽管用户空间仍有待解决的问题。”\n“接下来，Sourojeet预计将花更多时间探索FreeBSD的内存管理系统，特别是支持异构内存管理（HMM）所需的工作。”\n因此，FreeBSD上的ROCm尚未达到可供最终用户使用的状态，但未来如何发展值得关注。\n想了解更多信息的人可以阅读FreeBSD基金会博客上的相关倡议。相关更改可在GitHub仓库中找到，详见：\nAMD Zen 6准备工作、Ryzen AI Halo LED驱动及Linux 7.3的众多笔记本改动\nAMD从ROCm 7.14跃升至ROCm 10.0，推出ROCm.AI\nLemonade 11.8让在AMD Strix Halo上运行DeepSeek V4 Flash变得简单\nAMD在LLVM中引入新的“GFX1250-STRICT”GPU目标\nGCC补丁调整AMD Zen 5误预测成本，基准测试提升12%\nAMD发布大规模补丁系列，在Linux内核中启用UALink\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动及其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\n长期担任Linux CIFS/SMB3维护者的开发者去世\nWayland被发现“本质上比X11更快，但不一定更高效”\nLinux内核每个版本接近2,000个CVE\n特制NTFS文件系统镜像可在Linux上通过NTFS3驱动获取root权限\nDebian投票允许“负责任地使用生成式AI”\n加利福尼亚州通过AB-1856，为年龄验证提供开源救济\n补丁大幅提升内核内Zstd性能，因原有低效问题严重\n英特尔工程师提议为Linux引入DRM Fabric\n在享受无广告浏览时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "24d4ece2afe5d786d2dd24b2d851b214": {
+    "id": "24d4ece2afe5d786d2dd24b2d851b214",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/firefox-155-released",
+    "title_en": "Firefox 155 brings AI-powered Smart Window to more countries",
+    "summary_en": "Firefox 155 is out, the first to arrive as part of the browser&#8217;s new twice-monthly release schedule. This update brings Firefox&#8217;s AI-powered Smart Window browsing mode to users in the USA, Canada and France. It&#8217;s still opt-in (for now), and is powered by your choice of AI model from Alibaba, OpenAI and Google. Mozilla&#8217;s also added changes to entice you to chat more (&#8220;personalised resume conversation starters&#8221;), made the assistant faster at responding with Exa ",
+    "pub_date": "Tue, 01 Sep 2026 02:34:22 +0000",
+    "title_zh": "Firefox 155 将AI驱动的智能窗口扩展到更多国家",
+    "summary_zh": "Firefox 155 作为浏览器新双月发布计划的首个版本，将AI驱动的浏览模式带到了更多国家，用户可自主选择阿里巴巴、OpenAI或Google的AI模型。该版本还引入了个性化对话开场白、更快的Exa网络搜索引用响应，以及更智能的标签分组功能。此外，Firefox 155 还包含多项小改进，如地址栏跟踪器计数显示、容器重新排序、乌尔都语和马拉地语翻译支持、PDF缩放超过100%、Linux系统睡眠问题修复、Windows上Nintendo Switch Pro控制器支持等。",
+    "fulltext_zh": "Firefox 155 将AI驱动的智能窗口扩展到更多国家 - OMG! Ubuntu\nFirefox 155 已发布，这是浏览器新的双月发布计划中的首个版本。\n此次更新将Firefox的AI驱动浏览模式带到了更多国家的用户。目前该功能仍为可选启用（暂时如此），并由用户从阿里巴巴、OpenAI和Google中选择的AI模型提供支持。\nMozilla还增加了一些变化以吸引你更多聊天（“个性化恢复对话开场白”），使助手通过Exa网络搜索引用响应更快，并让智能窗口在分组相关标签方面表现更好。\n如果这些都不合你意，你可以通过禁用Firefox中的AI功能来移除窗口框架中的智能窗口按钮。就这样！不过，直到你访问任何搜索引擎、社交媒体、购物网站、公司网站，它们也会要求你接受它们的AI集成。\nFirefox 155 的小改动\n重新排序容器并翻译更多语言，包括乌尔都语\nFirefox 155 中的地址栏现在会在你浏览时提示它已阻止的跟踪器数量。Mozilla表示，这使用户更容易看到其“内置隐私保护”在我们浏览时的工作情况。如果这个计数让你分心，你可以隐藏它。\n你可以从浏览器的设置页面重新排序容器（该功能在Firefox 153中“引入”）。你偏好的顺序会反映在容器列出的所有位置，主要是上下文菜单中。\nFirefox的内置隐私翻译工具现在支持乌尔都语和马拉地语，较小的PDF现在可以缩放超过100%以打印整页大小（其他浏览器，包括Microsoft Edge，已经支持此功能）。\n在Linux上，Firefox之前会在长时间浏览会话后阻止系统休眠，这个问题现已解决。同样解决的还有Microsoft 365 Word Online和Linux上的Web应用中文本消失的问题（尽管该问题仅影响某些键盘布局）。\n在Windows上使用Firefox？Nintendo Switch Pro和类似的第三方控制器现在可以在网页游戏中使用——所有按键都已映射，即插即用。Mozilla与Nvidia合作支持GeForce NOW进入浏览器的努力显然已见成效。\n强制门户检测域名移至firefox-portal-detection.com\n链接触发改为显式用户交互\nCSS块和函数嵌套限制为75层以防止崩溃\n现在适用于所有属性\n直接解析Promise的键控对象\n函数内联调整任何颜色的不透明度\n限制为少量允许列表站点\nJSON查看器支持JSON Lines文档\n开发者工具现在可以模拟prefers-reduced-motion偏好\n修复以允许在X上复制直接消息和YouTube上的评论\n此外，还有各种错误修复和一批新的安全更新\n升级到Firefox 155\nFirefox 155 从今天（星期二，9月1日）起可从Firefox网站或Mozilla FTP（如果你想直接下载）获取。\n现有用户？你可以在Windows和macOS上通过应用内更新，或者在Linux上如果你使用Firefox二进制文件。否则，请等待更新通过你的软件管理器或应用商店推送。\nUbuntu用户将通过Snap Store自动后台更新获得此更新，因此无需特别关注——一旦准备好，通知会提示你重启。"
+  },
+  "8c2468a679986c9f6e2db50f98d3a992": {
+    "id": "8c2468a679986c9f6e2db50f98d3a992",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/ubuntu-irc-channels-official-sunset",
+    "title_en": "Ubuntu’s IRC support channels to be ‘sunset’, some aren’t happy",
+    "summary_en": "Getting is planning to &#8216;sunset&#8217; IRC as an official support method, and some long-time users aren&#8217;t happy. The recently Ubuntu 26.04.1 LTS release announcement didn&#8217;t include a link to the Ubuntu Support IRC channel under its &#8220;if you have a question&#8221; section – though, from looking, the last announcement to list IRC was the one for Ubuntu 24.10). That led to questions on if the Ubuntu support IRC channel is still an official community support option (the Help ap",
+    "pub_date": "Mon, 31 Aug 2026 22:25:00 +0000",
+    "title_zh": "Ubuntu 的 IRC 支持频道将被“日落”，部分用户不满",
+    "summary_zh": "Ubuntu 计划将 IRC 作为官方支持渠道“日落”，此举引发长期用户不满。近期 Ubuntu 26.04.1 LTS 发布公告未包含 IRC 支持频道链接，引发社区讨论。Ubuntu 社区委员会成员 Aaron Rainbolt 表示，未来将逐步淘汰 IRC，转向 Matrix 等现代平台。尽管 IRC 频道不会关闭，但官方将不再推荐使用。部分用户认为 Matrix 无法完全替代 IRC，且 IRC 在透明度和决策记录方面仍有价值。",
+    "fulltext_zh": "Ubuntu 的 IRC 支持频道将被“日落”，部分用户对此不满。\n\n最近的 Ubuntu 26.04.1 LTS 发布公告中，在“如果您有问题”部分没有包含 Ubuntu 支持 IRC 频道的链接——尽管从查看来看，最后一次列出 IRC 的公告是 Ubuntu 24.10 的公告。\n\n这引发了关于 Ubuntu 支持 IRC 频道是否仍是官方社区支持选项的疑问（Ubuntu 26.04 中的应用仍包含指向提及 IRC 的页面的链接）。\n\nUbuntu 社区委员会成员 Aaron Rainbolt 表示，这一遗漏可能是“偶然的”，并在 Ubuntu 的 Discourse 上发布了一个后续讨论，标题为“保持 IRC 作为 Ubuntu 的官方支持方法”，计划在适当时候“将 IRC 作为 Ubuntu 官方通信平台日落”。显然，这尚未发生，但即将到来——尽管这一消息不会登上头版。\n\nCanonical 最近一直在现代化其基础设施，例如，砍掉 Bazaar 代码托管，退役 Ubuntu Pastebin。其目光将转向为 IRC 上的传统集成而保持在线运行的服务器，如 irclogs.ubuntu.com 存档和各种交互式机器人。\n\n在 2006 年到 2016 年间很有用，但在 2026 年是否还值得继续维持？\n\nUbuntu 开发团队已于 2025 年 3 月将其讨论移至 Matrix。虽然曾尝试过 IRC 桥接，但根据 Rainbolt 的说法，目标是让所有人都使用“社区整体监控、维护和工作的”平台。\n\n这并不意味着 IRC 上的频道会终结。它们不会离线，仍会存在，任何人都可以自由加入、潜水或聊天——毕竟，日志脚本和机器人对于基本的聊天任务并不是必需的。\n\n而 IRC 本身——除了 Freenode 的闹剧之外——即使在现代替代品的冲击下，仍然保持韧性。\n\nUbuntu 可能不再引导用户到其旧 IRC 频道提问或寻求帮助，但毫无疑问，仍然会有人类（或机器人）可以回答问题。\n\n一些热心的 IRC 用户并不相信 Matrix 是完美的替代品，指出支持房间活动量低，账户设置过程更复杂。但是，自从 AI 聊天机器人出现以来，向人类同伴寻求帮助并不是大多数人的首选。\n\n目前尚未确定任何面向用户的转变日期——就目前而言，如果有什么值得注意的变化——所以现在，如果您潜伏在 Ubuntu 支持（或其他）频道上：保持冷静，不要 /quit。\n\n更多可能让人惊讶的是，这些频道竟然还没有被“日落”。\n\n当 Ubuntu 治理会议在 IRC 上举行时，存档对于透明度、投票记录、决策等尤为重要。现在会议通过 Jitsi 在 Matrix 上进行。Canonical 工程师也使用自己的内部聊天平台进行沟通。"
+  },
+  "5918ee535eabd22a17a8f57fd6bcae16": {
+    "id": "5918ee535eabd22a17a8f57fd6bcae16",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/08/ubuntu-2404-to-2604-upgrade-delay",
+    "title_en": "Why Ubuntu 26.04 upgrades from 24.04 are delayed (until Sept)",
+    "summary_en": "If you&#8217;re wondering why you can&#8217;t do a directly upgrade to Ubuntu 26.04 from 24.04 yet, despite the Resolute Raccoon&#8217;s first point release being live, there is a reason. Canonical’s Oliver Reiche&#160;said in the mailing list announcement for Ubuntu 26.04.1 LTS that upgrades will be delayed by a few weeks to allow couple of backports to land. These will&#160;“address regressions in a recent version of rust-coreutils”. Users on Ubuntu 25.10 are not affected by this; upgrades fro",
+    "pub_date": "Mon, 31 Aug 2026 14:33:00 +0000",
+    "title_zh": "为什么Ubuntu 26.04从24.04的升级被推迟（至9月）",
+    "summary_zh": "Ubuntu 26.04 LTS的首个点版本发布后，用户仍无法直接从24.04升级，原因是Canonical需要回传几个修复，以解决rust-coreutils中的回归问题。升级通常不会随ISO发布而立即启用，LTS到LTS的升级需在首个点版本后才会正式开放。此次延迟预计至9月初，用户可耐心等待，或使用开发标志进行升级，但需注意风险。",
+    "fulltext_zh": "为什么Ubuntu 26.04从24.04的升级被推迟（至9月） - OMG! Ubuntu\n\n如果你想知道为什么尽管首个点版本已经发布，你仍然无法直接从24.04升级到Ubuntu 26.04，Canonical的Oliver Reiche在Ubuntu 26.04.1 LTS的邮件列表公告中表示，升级将推迟几周，以便让几个回传更新落地。这些更新将“解决最近版本rust-coreutils中的回归问题”。\n\nUbuntu 25.10的用户不受此影响；\n\n与针对固定发布日期发布的ISO不同，升级没有固定的发布日期。当ISO发布时，并不意味着升级会立即启用——这会让一些用户感到困惑。对于LTS到LTS的升级，这种困惑更是加倍，因为它们只在首个点版本发布后才正式启用。\n\n这种额外的等待是因为，一次性处理两年的软件包变更，没有两个系统是完全相同的，而且LTS版本注重稳定性，因此需要进行更多的测试，并发现边缘情况下的错误。\n\n全新安装可以跳过所有这些。\n\n直接升级必须大规模迁移数千个相互关联的软件包、依赖链等。修复可能需要落在基础LTS版本或正在升级到的版本中。这可能需要时间——前面提到的rust-coreutils回归就是一个很好的例子！\n\n保持冷静，停止刷新\n\n所以，事情就是这样；你可以减少每小时刷新页面的频率，放松一下手指，不用再频繁运行`sudo do-release-upgrade -c`。你将在9月初能够升级，所以请耐心等待。\n\n如果你不想等待，你可以使用命令行从24.04升级到26.04，但由于升级路径尚未正式启用，你需要传递开发标志，并注意可能的风险：\n\nsudo do-release-upgrade -d\n\n自Ubuntu 24.04以来有什么新变化？\n\n可以查看汇总，了解即将到来的一系列变化，包括更好看的APT、前面提到的基于Rust的coreutils、7个新的默认应用、可选的隐私控制、通知分组等等。\n\n并不是说你必须升级：Ubuntu 24.04 LTS支持到2029年，定期更新，启用Ubuntu Pro后，扩展安全覆盖支持到2034年。"
+  },
+  "0a4dde44ec92f5fb9d8fb6ceecb9fdef": {
+    "id": "0a4dde44ec92f5fb9d8fb6ceecb9fdef",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/tether-apple-continuity-on-linux/",
+    "title_en": "Tether Brings the Apple Continuity Experience to Linux",
+    "summary_en": "The open source offering syncs iMessage, SMS, and OTP codes between iPhone and Linux without needing a Mac device.",
+    "pub_date": "Mon, 31 Aug 2026 12:32:04 GMT",
+    "title_zh": "Tether 将 Apple 连续互通体验带到 Linux",
+    "summary_zh": "Tether 是一个开源项目，旨在将 Apple 的连续互通（Continuity）体验带到 Linux，无需 Mac 设备即可在 iPhone 和 Linux 之间同步 iMessage、短信和 OTP 验证码。该项目由开发者 Zack 创建，使用蓝牙和加密配对，支持通过 CLI 和 GTK4 应用管理，并提供 iOS 应用。目前，Tether 已支持多项功能，部分仍处于测试阶段。用户可通过 AUR 安装，并需安装 iOS 应用及浏览器扩展以启用 OTP 自动填充。",
+    "fulltext_zh": "Tether 将 Apple 连续互通体验带到 Linux\n\nTether 将 Apple 连续互通体验带到 Linux\n\n这款开源方案可在 iPhone 和 Linux 之间同步 iMessage、短信和 OTP 验证码，无需 Mac 设备。\n\n有一位开发者全职切换到 Linux，并且基本上没有回头考虑过之前日常使用的 macOS。然而，有一个例外。\n\n这个例外就是 Apple 的连续互通（Continuity）功能，它让 iPhone、iPad 和 Mac 之间能够相互协作。它涵盖了许多小便利：在 iPhone 上复制内容，在 Mac 上粘贴；在一台设备上开始写邮件，在另一台设备上完成；即使手机在房间另一头，也能在 Mac 上接听电话。\n\n但毫不意外的是，它的支持存在缺口。它并不官方支持 Linux。因此，Zack 构建了一个开源项目，在 Linux 上复刻了部分连续互通体验，且无需 Mac 设备。\n\n考虑到这个应用在几个月前（5 月）才刚刚发布，Tether 已经覆盖了很多功能。目前所有功能都已上线，其中一些仍处于测试阶段。\n\nTether 在 Linux 上处理设备间通信，通过 CLI 和原生 GTK4 应用进行配对。SwiftUI 编写的 iPhone 应用会自动发现 Linux 上的守护进程（daemon）。\n\nLinux 没有官方途径访问 iMessage 或短信，而 Zack 排除了通过实际 Mac 代理所有内容的常见变通方案。\n\nBlueZ 和 libimobiledevice 提供了足够的蓝牙基础，让他能够构建自己的路径，不过两者都是 GPL 许可的，因此用 C++ 重写使 Tether 保持 GPL 许可。此外，他在配对过程中使用了端到端加密，因此 iPhone 和 Linux 守护进程在连接前都必须证明各自的身份。代码库还定期通过 Anthropic 的 Opus 和 Fable AI 模型进行安全扫描。\n\n如果你认为 KDE Connect 已经做了很多 Tether 能做的事情，要知道 Zack 知道它的存在，并称其“很棒”，但他指出该应用并不满足他设想的使用场景。\n\n对于 Arch Linux 用户，Tether 可通过 AUR 获取；你可以运行以下命令安装：\n\n如果你不知道 yay 是什么，它是一个 AUR 助手，能简化从 Arch 用户软件仓库获取包的过程。不过，你需要注意使用社区运营平台所带来的风险。\n\n对于其他发行版，有为近期版本构建的 .deb 和 .rpm 包。\n\n此外，你需要从 App Store 下载 Tether - Linux Companion 应用，这要求你的设备至少运行 iOS 17。\n\n如果你希望 OTP 自动填充正常工作，还需要两个扩展：一个浏览器扩展，能在验证码到达时自动填入登录表单；以及 Thunderbird 扩展，它会监视你的收件箱，查找任何看起来像验证码的内容，并将其交给 Linux 机器上运行的 Tether 应用。\n\n喜欢这次更新吗？支持独立的 Linux 新闻报道。\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。请帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读，并获得 5 本电子书。\n\n一次付费，永久享受。\n\n任意金额，无需承诺。\n\n一个热爱开源软件、定制 PC 组装、赛车运动以及探索世界无限可能的极客。\n\nAI 爬虫正在消耗 Linux 内核仓库的计算资源。\n\nDebian AI 投票使社区产生分歧。\n\n你现在可以在一台机器上同时运行多个 Linux 内核。\n\nLibreOffice 26.8 加倍坚持无 AI，紧随 Collabora 欢迎 AI 之后。\n\n你应该关注 Chromium 的 Flatpak 实验。\n\n成为更好的 Linux 用户。\n\n通过 FOSS 每周通讯，你可以学习有用的 Linux 技巧、发现应用程序、探索新的发行版，并随时了解 Linux 世界的最新动态。\n\n太棒了！您已成功注册。\n\n欢迎回来！您已成功登录。\n\n您已成功订阅 It's FOSS。\n\n您的链接已过期。\n\n成功！请检查您的电子邮件，以获取登录的魔法链接。\n\n成功！您的账单信息已更新。\n\n您的账单未更新。"
+  },
+  "beb46898b0d667bab64a02cb3efd1331": {
+    "id": "beb46898b0d667bab64a02cb3efd1331",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/linux-kernel-repo-ai-overrun/",
+    "title_en": "AI Crawlers Are Bleeding The Linux Kernel Repo's Compute Power",
+    "summary_en": "By comparison, only about two percent of the six million daily requests hitting the repo are likely human.",
+    "pub_date": "Mon, 31 Aug 2026 10:11:41 GMT",
+    "title_zh": "AI爬虫正在榨干Linux内核仓库的计算资源",
+    "summary_zh": "Linux内核仓库正遭受AI爬虫的猛烈攻击，这些爬虫通过cgit页面反复抓取提交历史，消耗了约20%的计算能力。Linux基金会IT基础设施安全总监Konstantin Ryabitsev指出，一次常规克隆仅需200 CPU秒，而通过cgit页面抓取同样数据需280 CPU小时，成本高出数百万倍。尽管采取了IP封锁、验证码等措施，爬虫仍通过分布式IP绕过。他预测AI泡沫破裂后，此类流量将大幅减少，并希望爬虫能停止这种低效抓取行为。",
+    "fulltext_zh": "AI爬虫正在榨干Linux内核仓库的计算资源\n\n相比之下，每天访问该仓库的六百万请求中，可能只有约2%来自人类。\n\n如果过去几周的情况能说明什么，那就是越来越多的开源项目正在划定界限，决定在AI进入其工作流程和代码库之前，能容忍多少AI。\n\n在项目贡献方面，而Rust则采用了将AI基本排除在实际代码之外的策略。这两个项目都解决了同一个根本问题。\n\n而现在，Linux——全球最大的开源项目之一——正遭受大量AI驱动的爬虫的猛烈攻击，这些爬虫反复发送相同的请求，烧毁计算能力。\n\n顺便说一句，其中大部分与任何人实际编写代码无关。🙃\n\nLinux基金会的Konstantin Ryabitsev终于将他一直以来的抱怨公开化了。在90个CPU核心中，有14个分布在五个节点上，每时每刻都在将提交转换为HTML页面。\n\n从外部看，你可能会想：这有什么问题？\n\nLinux历史中的每一次提交都是公开的，可以自由克隆，并且早于现在抓取它的AI工具浪潮。\n\n你看，所有这些特征恰恰使该仓库成为“学习数据的金矿”。它包含了主线内核树、可追溯多年的每个稳定发布分支、数十个子系统维护者树，甚至还有来自前git时代的历史。\n\n真正荒谬的是这些爬虫进行抓取的方式。\n\n来源：Konstantin Ryabitsev。\n\nKonstantin对此进行了计算，发现常规克隆一次，在本地遍历整个提交历史，大约需要200 CPU秒的服务器时间。而通过cgit的单个页面抓取同样的148万次提交，则需要消耗280 CPU小时。\n\n（如果你想了解这两种CPU时间单位的关系，可以自行换算。）\n\n对服务器上托管的922个分支中的每一个进行同样的抓取，总成本将膨胀到惊人的程度，大约是单次克隆的460万倍。\n\n而这一切只是为了获取一份更差的数据副本，而这些数据本来就可以免费获取。\n\n这还不算cgit为每个补丁、差异和纯文本视图提供的单独URL，这使得单个分支暴露的页面数量达到千万亿级别。\n\n封锁它们变成了一场军备竞赛。IP封锁一度有效，直到机器人扩散到整个子网。验证码封锁也曾有效，直到数百万住宅和移动IP接管。接下来是挑战墙，作为机器人必须解决的障碍。它奏效了一段时间，直到爬虫开始解决越来越难的挑战。\n\n在总结中，Konstantin指出：\n\n“然而，你应该知道，在5个地理分布节点的总共90个核心中，有14-16个核心一直在做渲染提交给爬虫的工作。平均而言，这是我们全部容量的20%——但爬虫群是波浪式来袭的，实际图表比20%的平直线要尖峰得多。”\n\n他进一步推测，当AI泡沫破裂时，项目将很快看到大量“爬虫流量”的减少——这是他给爬虫贴的标签。\n\n尽管他也希望它们能“消失”，并停止以“最糟糕的方式”抓取他们的数据。\n\n如果你不知道Konstantin是谁，他是Linux基金会IT基础设施安全总监，也是维护Linux内核基础设施的系统管理员之一。\n\nAI本质上是贪婪的。\n\n这种计算浪费并非Linux独有，但它是我们目前看到的最清晰的例子。喂养一个模型意味着在那些本可以以极小成本完成的任务上烧掉大量周期，而现在，构建这些系统的人似乎并不在意这笔账。\n\n这些系统似乎只知道一种方法，那就是普通亿万富翁的运行方式——比如一个虚构的亿万富翁。已经拥有足够多了，还想要更多，并不特别在乎如何得到。"
+  },
+  "d87534bfec37b592c233c88e6f4077d6": {
+    "id": "d87534bfec37b592c233c88e6f4077d6",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/KDE-Linux-August-2026",
+    "title_en": "KDE Linux Now Providing Automatic Btrfs Snapshots For All User Files",
+    "summary_en": "With the end of the month comes a new monthly status report from the KDE Linux project as their in-house distribution project...",
+    "pub_date": "Mon, 31 Aug 2026 20:49:02 -0400",
+    "title_zh": "KDE Linux 现为所有用户文件提供自动 Btrfs 快照",
+    "summary_zh": "KDE Linux 项目在8月的月度报告中宣布，已为所有用户文件启用自动 Btrfs 快照功能，用户主目录现为 Btrfs 子卷，并配置了 Snapper 和 KIO-Snapshot 以提供更友好的快照体验，支持文件恢复，但并非备份替代方案。此外，本月还默认启用了中日韩越文输入支持，并进行了多项质量保证、安全改进和错误修复。",
+    "fulltext_zh": "KDE Linux 现为所有用户文件提供自动 Btrfs 快照 - Phoronix\nKDE Linux 现为所有用户文件提供自动 Btrfs 快照\n2026年8月31日 晚上8:49（美国东部时间）\n\n随着月底的到来，KDE Linux 项目发布了新的月度状态报告，这是他们内部发行版项目的最新进展。\n\n本月 KDE Linux 最令人兴奋的改进，可以说是为了数据安全而启用的自动 Btrfs 快照功能，现在所有用户文件都会自动创建快照，用户的主目录现在成为 Btrfs 子卷。这一 KDE Linux 变更配置了 Snapper 和 KIO-Snapshot，以提供更友好的用户主目录快照体验，如果你希望将用户文件恢复到较早的状态，但请注意，这并不能替代将数据备份到独立设备的常规备份用途。\n\nKDE Linux 还包含了 KIO-Snapshot 的最新工作，以便与 Dolphin 文件管理器进行良好的集成，以及围绕 Btrfs 快照的其他功能。\n\n除了通过 Btrfs 快照实现“撤销支持”这一主要亮点外，KDE Linux 在8月还决定默认启用 CJKV（中日韩越）输入支持，为中文、日文、韩文和越南文文本输入提供良好的支持。\n\n本月还进行了更多关于质量保证和测试的工作，安全改进以及各种错误修复。\n\n关于 KDE Linux 操作系统在8月期间所做的改进的更多详细信息，请参阅 KDE.org 博客文章。\n\nKDE Plasma 6.8 提升某些全屏内容的性能与效率\nUnion QtWidgets 发布初始版本，推进 KDE Plasma 的 Union 项目\nKDE 远程桌面体验改进，缩小 X11 与 Wayland 差距\nKDE Plasma 6.8 本周带来一些诱人的性能优化\nKDE 软件现已通过 KIO-Snapshot 1.0 实现稳定的 Btrfs 快照集成\nKDE Gear 26.08 带来最新的 KDE 应用体验\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过20000篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他。\n\nWayland 被发现“本质上比 X11 更快，但未必更高效”\nLinux 内核每个版本接近2000个 CVE\nDebian 投票允许“负责任地使用生成式 AI”\n加州通过 AB-1856 法案，为年龄验证提供开源救济\nReactOS 0.4.16 发布，带来新的图形安装程序，更好的硬件支持\n补丁大幅提升内核内 Zstd 速度，解决令人尴尬的低效问题\n另一个来自非 Intel 或 AMD 实体的 x86 咨询\nIntel 工程师提议为 Linux 提供 DRM Fabric\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "5d21e690edac3f304a0b98c04209b826": {
+    "id": "5d21e690edac3f304a0b98c04209b826",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/NVIDIA-Linux-Sched-Vera-SMT",
+    "title_en": "NVIDIA Posts Linux Scheduler Patches To Further Boost SMT Performance On NVIDIA Vera",
+    "summary_en": "Hitting the Linux kernel mailing list today is a new kernel scheduler patch series to enable preferred SMT siblings for NVIDIA Vera with its Olympus cores...",
+    "pub_date": "Mon, 31 Aug 2026 20:26:40 -0400",
+    "title_zh": "NVIDIA发布Linux调度器补丁，进一步提升NVIDIA Vera的SMT性能",
+    "summary_zh": "NVIDIA工程师Andrea Righi向Linux内核邮件列表提交了一系列调度器补丁，旨在优化NVIDIA Vera处理器中Olympus核心的同步多线程（SMT）性能。补丁通过引入SD_ASYM_PACKING标志，使PE0成为首选兄弟线程，并调整空闲选择路径以尊重非对称SMT优先级。测试显示，在双路Vera系统上，单精度GEMM基准性能从约9.4 TFLOP/s提升至10.1 TFLOP/s，且运行结果更加稳定。该系列补丁目前正在Linux内核邮件列表中接受审查。",
+    "fulltext_zh": "NVIDIA发布Linux调度器补丁，进一步提升NVIDIA Vera的SMT性能 - Phoronix\n\nNVIDIA发布Linux调度器补丁，进一步提升NVIDIA Vera的SMT性能\n\n2026年8月31日晚上8点26分（美国东部时间）\n\n今天，Linux内核邮件列表中出现了一个新的内核调度器补丁系列，旨在为搭载Olympus核心的NVIDIA Vera启用首选SMT兄弟线程。\n\nNVIDIA工程师Andrea Righi在补丁系列的封面信中很好地总结了当前情况：\n\n“NVIDIA Olympus实现了具有两个对称处理单元（PE）的SMT。当只有一个PE活动时，核心以单线程模式运行，该PE可以使用全部核心资源。当两个PE都活动时，核心以双线程模式运行，PE共享这些资源。这种行为在SMT实现中很常见，但Olympus对短暂的兄弟线程激活特别敏感，因为从双线程模式返回到单线程模式并非即时完成，尤其是在兄弟线程变为空闲之后。如提交293f9611ae735（“sched/fair: Prefer fully idle cores for NOHZ balancing”）所述：\n\n‘短暂激活一个原本空闲的兄弟线程可能会降低另一个兄弟线程可用的性能，而这种影响不一定在激活的兄弟线程变为空闲后立即结束：在ILB完成且其CPU进入WFI后，只有在兄弟线程保持空闲达到一个资格间隔（在测试的Vera系统上为10Ki周期）后，才能恢复完整的单线程性能。’\n\n该更改防止了NOHZ空闲负载均衡器不必要地唤醒忙碌PE的兄弟线程。然而，普通的任务放置仍然可以选择空闲核心的任一兄弟线程，并且活动PE的反复更改可能使Olympus核心保持在双线程模式，尽管兄弟线程之间几乎没有或没有有用的重叠。\n\n本系列通过使用SD_ASYM_PACKING使PE0成为Olympus核心的首选兄弟线程，并教导公平调度器的空闲选择路径尊重非对称SMT优先级。调度器首先根据其现有的放置和容量规则选择一个空闲核心，然后在该核心内选择最高优先级的可用兄弟线程。仅当架构提供SD_ASYM_PACKING SMT域时，通用调度器行为才会启用。”\n\n重要的是最终结果，Righi总结为在NVIDIA双插槽Vera上为SMT带来了不错的收益：\n\n“该系列在双节点Vera系统上进行了测试，使用NUMA节点0的88个物理核心上的88线程单精度GEMM。\n\n当工作负载允许选择每个核心的任一兄弟线程时，观察到的吞吐量从基线内核的大约9.4 TFLOP/s提高到应用此系列后的大约10.1 TFLOP/s。重复运行也变得更加可预测，因为工作负载始终稳定在PE0上，而PE1保持安静。”\n\n该更改也由Righi编写，并已合并到Linux 7.3中，以在NOHZ平衡中优先选择完全空闲的核心。这一更改已经将Vera上的GEMM基准从6.2 TFLOP/s提升到9.2 TFLOP/s。\n\n专门针对NVIDIA Vera / Olympus核心的补丁现在正在Linux内核邮件列表中接受审查。\n\nNVIDIA VA-API驱动0.0.18带来更多修复，Chrome/Chromium在Direct后端上解码\n\nGeForce NOW Linux原生应用退出测试版\n\nNVIDIA 610.57.04 Linux驱动带来众多修复\n\nNVIDIA与其他公司组建开放安全AI联盟\n\nNVIDIA将初始Rigel CPU核心支持上游到GCC编译器\n\nNVIDIA确认其Rigel核心的一些Rosa CPU细节\n\nMichael Larabel是Phoronix.com的首席作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动及其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他。\n\nWayland被发现“本质上比X11更快，但未必更高效”\n\nLinux内核是"
+  },
+  "dbd31a0630107c03fcd037e7530425ec": {
+    "id": "dbd31a0630107c03fcd037e7530425ec",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Rust-Coreutils-0.11",
+    "title_en": "Rust Coreutils 0.11 Released With Some Nifty Debug Helper Messages",
+    "summary_en": "Rust Coreutils 0.11 was just released as this alternative to the GNU Coreutils. Besides the long-running task of catching up the GNU Coreutils compatibility with the GNU test suite and never-ending work on optimizing the performance, Rust Coreutils 0.11 is quite a nice release for its improved error messages...",
+    "pub_date": "Mon, 31 Aug 2026 17:03:00 -0400",
+    "title_zh": "Rust Coreutils 0.11 发布，附带一些精巧的调试辅助信息",
+    "summary_zh": "Rust Coreutils 0.11 作为 GNU Coreutils 的替代品正式发布。此版本在兼容性上取得了突破，测试通过率达到95.33%，首次突破95%大关。新版本引入了 Ariadne Rust 库，为 chmod、cut、sort 和 tr 等命令提供了更丰富的错误诊断信息，类似于编译器的错误报告，对不熟悉命令的用户尤为有用。此外，Linux、macOS 和 Windows 平台现已启用基于 Profile Guided Optimizations (PGO) 的发布构建，性能得到进一步优化。",
+    "fulltext_zh": "Rust Coreutils 0.11 发布，附带一些精巧的调试辅助信息 - Phoronix\nRust Coreutils 0.11 发布，附带一些精巧的调试辅助信息\n发布于 2026年8月31日 下午5:03（美国东部时间）。\n\nRust Coreutils 0.11 刚刚发布，作为 GNU Coreutils 的替代品。除了长期追赶 GNU Coreutils 兼容性（通过 GNU 测试套件）以及不断进行的性能优化工作外，Rust Coreutils 0.11 在改进错误信息方面也相当出色。\n\nRust Coreutils 0.11 现在使用了 Ariadne Rust 库，这是一个用于 Rust 程序的“花哨诊断和错误报告库”。最初应用于 chmod、cut、sort 和 tr 工具，当命令参数错误或语法错误时，会提供更丰富的错误信息。这个新特性类似于信息丰富的编译器错误报告，但针对的是 Coreutils 命令。\n\n对于不熟悉各种 Coreutils 命令的用户来说，这应该非常有帮助，并且随着其他工具开始支持此功能，效果会更佳。关于新的错误报告/诊断功能，还有更多信息。\n\n在性能方面，Linux、macOS 和 Windows 平台现已启用基于 Profile Guided Optimizations (PGO) 的发布构建。此外还有其他优化工作。\n\n在兼容性方面，Rust Coreutils 0.11 的测试通过率现已达到 95.33%……突破了 95% 的关口！相比上一版本提升了 0.89%，这得益于新增了八个通过的测试。\n\n想要了解更多关于这个令人兴奋的 Rust Coreutils 0.11 版本的信息或下载它，可以在以下网址找到。"
+  },
+  "579c58784180c14d518db815adbdcdda": {
+    "id": "579c58784180c14d518db815adbdcdda",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Firefox-155-Released",
+    "title_en": "Firefox 155 Available With Faster Page Loads Via Happy Eyeballs v3, QUIC v2 For HTTP/3",
+    "summary_en": "The Mozilla Firefox 155 release binaries are now available ahead of the formal announcement on Tuesday for this latest web browser release. With Firefox 155 it's heavier on new features than we have seen in some time...",
+    "pub_date": "Mon, 31 Aug 2026 16:48:00 -0400",
+    "title_zh": "Firefox 155 发布：通过 Happy Eyeballs v3 加速页面加载，支持 HTTP/3 的 QUIC v2",
+    "summary_zh": "Mozilla Firefox 155 正式发布，带来多项新特性。通过 Happy Eyeballs v3 技术，浏览器可同时尝试多种连接方式并选择最快路径，显著提升页面加载速度。此外，Firefox 155 支持 QUIC v2 用于 HTTP/3 连接，并新增可选的 AI 驱动桌面浏览窗口 Smart Window（目前仅限美国、加拿大和法国用户）。该版本还修复了 Linux 系统长时间浏览后无法休眠的问题，并为开发者带来 WebAssembly 改进、CSS progress() 函数支持等多项更新。",
+    "fulltext_zh": "Firefox 155 发布：通过 Happy Eyeballs v3 加速页面加载，支持 HTTP/3 的 QUIC v2 - Phoronix\n\nFirefox 155 发布：通过 Happy Eyeballs v3 加速页面加载，支持 HTTP/3 的 QUIC v2\n发布于 2026 年 8 月 31 日下午 4:48（美东时间）\n\nMozilla Firefox 155 的发布二进制文件现已可用，早于周二正式公告。与以往版本相比，Firefox 155 带来了更多新功能。\n\n借助 Firefox 155，网页加载速度得以提升，这得益于 Happy Eyeballs v3 技术——浏览器可同时尝试多种方式连接网站，并选择最先成功的那一种。Happy Eyeballs v3 在并行进行 IPv4 与 IPv6 选择的基础上，进一步利用现代 DNS 记录来发现服务器支持的协议，并同时尝试 HTTP/2 和 HTTP/3，以找到最快的连接方式。\n\n此外，Firefox 155 还支持将 QUIC 版本 2 用于 HTTP/3 连接，并在服务器通过兼容的版本协商选择该协议时自动使用。\n\nFirefox 155 还引入了 Smart Window，这是一个可选的、由 AI 驱动的桌面浏览窗口。该功能允许用户授权访问其打开的标签页和浏览历史。Smart Window 最初仅面向美国、加拿大和法国的用户开放。\n\nFirefox 155 还修复了一个问题，该问题曾导致 Linux 系统在长时间浏览后无法进入休眠状态。\n\nFirefox 155 还包含许多开发者相关的变更，例如支持 WebAssembly Compact Import Section、支持 128 位算术指令的 WebAssembly Wide Arithmetic、将 font-width 属性作为 font-stretch 的标准名称、改进 WebRTC 互操作性，以及支持 CSS 的 progress() 函数。\n\nFirefox 155 的发布二进制文件现已可供下载。\n\nMozilla 公布在 Firefox 157 中提供 JPEG-XL 的计划\nFirefox 154 现已发布，新增“管理 AI”快速操作\nFirefox 153 发布，支持 Vulkan 视频解码和实验性 JPEG-XL\nMozilla AI 发布 Llamafile 0.10.4，内置基于 Transcribe.cpp 的新 Transcribefile\nMozilla Firefox 使用 zlib-rs 以提升安全性与性能\nFirefox 152 现已发布，默认启用 JPEG-XL 支持，设置界面现代化\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 同时也是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\nWayland 被发现“本质上比 X11 更快，但未必更高效”\nLinux 内核每个版本接近 2000 个 CVE\nDebian 投票允许“负责任地使用生成式 AI”\n加州通过 AB-1856 法案，为年龄验证提供开源豁免\nReactOS 0.4.16 发布，新增图形化安装程序，改进硬件支持\n补丁大幅提升内核内 Zstd 性能，修复严重低效问题\n另一份来自非 Intel 或 AMD 实体的 x86 公告\nIntel 工程师提议为 Linux 引入 DRM Fabric\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "d79044d2f220a78f3cad2d86156eb08c": {
+    "id": "d79044d2f220a78f3cad2d86156eb08c",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-UALink-Linux-Patches-v2",
+    "title_en": "AMD Updates UALink Patches To Get The Linux Kernel Ready For UALoE On Helios",
+    "summary_en": "Earlier this month AMD posted a massive set of patches for bringing up UALink support for the mainline Linux kernel and wiring it up into the AMDGPU kernel driver. In closing out the month of August, they have updated this big set of Ultra Accelerator Link patches...",
+    "pub_date": "Mon, 31 Aug 2026 15:39:10 -0400",
+    "title_zh": "AMD更新UALink补丁，为Helios上的UALoE做好Linux内核准备",
+    "summary_zh": "AMD发布了一组大规模补丁，旨在为Linux主内核添加UALink支持，并将其集成到AMDGPU内核驱动中。在8月底，他们更新了这套Ultra Accelerator Link补丁。UALink是用于连接GPU和其他AI加速器的高速网络协议开放标准。AMD当前的重点是让UALink over Ethernet（UALoE）为其基于Instinct MI455X、第六代AMD EPYC \"Venice\"处理器和Pensando AI网卡构建的Helios服务器做好准备。更新后的补丁修复了32位内核构建问题，并放弃了基于sysfs的配置API，转而采用带外工具进行配置管理。",
+    "fulltext_zh": "AMD发布了一组大规模补丁，旨在为Linux主内核添加UALink支持，并将其集成到AMDGPU内核驱动中。在8月底，他们更新了这套Ultra Accelerator Link补丁。\n\nUALink是用于在scale-up pod内连接GPU和其他AI加速器的高速网络协议的开放标准。对于AMD的近期需求，这一启动工作重点是让UALink over Ethernet（UALoE）为其基于Instinct MI455X、第六代AMD EPYC \"Venice\"处理器和Pensando AI网卡构建的Helios服务器做好准备。\n\n更新后的UALink Linux补丁修复了32位内核构建问题。他们还决定放弃基于sysfs的UALink配置API，转而至少初期采用带外工具来处理UALink配置管理。\n\nv2系列共95个补丁，包含初始UALink基础设施，随后发布的系列2 v2补丁也附带了更新文档。\n\n这些UALink补丁对于进入Linux v7.3周期来说为时已晚，但或许一切将在Linux v7.4中为主内核做好准备。对于近期的AMD Helios服务器，他们可能依赖经过修补和认证的Linux发行版，但我目前没有可分享的已确认软件细节。"
+  },
+  "e5fbbde39607fa34c0ba7db727242dd6": {
+    "id": "e5fbbde39607fa34c0ba7db727242dd6",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/weston-16-hdr-ready-improved-debugging-and-drm-backend-features/",
+    "title_en": "Weston 16: HDR-ready, Improved debugging, and DRM Backend Features",
+    "summary_en": "Weston 16 expands HDR and color management support while improving debugging, DRM backend performance, and renderer capabilities for Wayland.\nThe post Weston 16: HDR-ready, Improved debugging, and DRM Backend Features appeared first on Linux Today.",
+    "pub_date": "Mon, 31 Aug 2026 07:17:30 +0000",
+    "title_zh": "Weston 16：支持HDR，改进调试，增强DRM后端功能",
+    "summary_zh": "Weston 16作为Wayland合成器的重大更新，扩展了HDR和色彩管理支持，同时改进了调试功能、DRM后端性能以及渲染器能力。该版本旨在提升显示服务器的稳定性、灵活性和视觉质量，为Linux桌面环境提供更先进的图形处理能力。",
+    "fulltext_zh": "Weston 16扩展了HDR和色彩管理支持，同时改进了Wayland的调试、DRM后端性能和渲染器能力。\n\n该文章《Weston 16: HDR-ready, Improved debugging, and DRM Backend Features》首次出现在Linux Today上。"
+  },
+  "78ed881a3cf4cff18c5d0251cbe17830": {
+    "id": "78ed881a3cf4cff18c5d0251cbe17830",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/opnsense-26-7-open-source-firewall-released-powered-by-freebsd-15-1/",
+    "title_en": "OPNsense 26.7 Open-Source Firewall Released, Powered by FreeBSD 15.1",
+    "summary_en": "OPNsense 26.7 “Xenial Xenops” is now available, powered by FreeBSD 15.1 and featuring firewall, NAT, IPv6, OpenVPN, and API improvements.\nThe post OPNsense 26.7 Open-Source Firewall Released, Powered by FreeBSD 15.1 appeared first on Linux Today.",
+    "pub_date": "Mon, 31 Aug 2026 07:15:57 +0000",
+    "title_zh": "OPNsense 26.7 开源防火墙发布，基于 FreeBSD 15.1",
+    "summary_zh": "OPNsense 26.7 “Xenial Xenops” 正式发布，该版本基于 FreeBSD 15.1，带来了防火墙、NAT、IPv6、OpenVPN 及 API 的多项改进。此次更新旨在提升系统稳定性、安全性和易用性，为用户提供更强大的开源防火墙解决方案。",
+    "fulltext_zh": "OPNsense 26.7 “Xenial Xenops” 现已发布，该版本基于 FreeBSD 15.1，并引入了防火墙、NAT、IPv6、OpenVPN 和 API 方面的改进。\n\n本文首发于 Linux Today。"
+  },
+  "3c1727714a2639c4444e537b75a4fd7c": {
+    "id": "3c1727714a2639c4444e537b75a4fd7c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/beelink-eqi-304-mini-pc-review-introduction-to-the-series/",
+    "title_en": "Beelink EQi 304 Mini PC Review – Introduction to the Series",
+    "summary_en": "The Beelink EQi 304 Mini PC pairs an Intel Core 3 304 processor with 16GB RAM, 512GB storage, dual Thunderbolt 4, and 10GbE networking.\nThe post Beelink EQi 304 Mini PC Review – Introduction to the Series appeared first on Linux Today.",
+    "pub_date": "Mon, 31 Aug 2026 07:14:51 +0000",
+    "title_zh": "Beelink EQi 304 迷你电脑评测——系列介绍",
+    "summary_zh": "本文是Beelink EQi 304迷你电脑评测系列的开篇，简要介绍了该设备的核心配置：搭载英特尔酷睿3 304处理器，配备16GB内存、512GB存储，支持双Thunderbolt 4接口和10GbE网络。文章旨在为后续详细评测奠定基础，吸引对高性能迷你主机感兴趣的读者关注。",
+    "fulltext_zh": "Beelink EQi 304 迷你电脑将英特尔酷睿3 304处理器与16GB内存、512GB存储、双Thunderbolt 4接口以及10GbE网络相结合。\n\n该评测系列文章首发于Linux Today。"
+  },
+  "d74bf57d48576e3dc2deebd15430d010": {
+    "id": "d74bf57d48576e3dc2deebd15430d010",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/forgejo-16-0-dev-platform-adds-granular-notifications-and-better-pr-reviews/",
+    "title_en": "Forgejo 16.0 Dev Platform Adds Granular Notifications and Better PR Reviews",
+    "summary_en": "Forgejo 16.0 adds granular repository notifications, multi-line PR review comments, improved comment placement, and new Forgejo Actions features.\nThe post Forgejo 16.0 Dev Platform Adds Granular Notifications and Better PR Reviews appeared first on Linux Today.",
+    "pub_date": "Mon, 31 Aug 2026 07:13:43 +0000",
+    "title_zh": "Forgejo 16.0 开发平台新增细粒度通知与更优的 PR 审查功能",
+    "summary_zh": "Forgejo 16.0 版本发布，带来了细粒度的仓库通知、多行 PR 审查评论、改进的评论定位功能以及新的 Forgejo Actions 特性。这些更新旨在提升开发者的协作效率和代码审查体验。",
+    "fulltext_zh": "Forgejo 16.0 新增了细粒度的仓库通知、多行 PR 审查评论、改进的评论定位功能，以及新的 Forgejo Actions 特性。\n\n该文章《Forgejo 16.0 Dev Platform Adds Granular Notifications and Better PR Reviews》最初发布于 Linux Today。"
+  },
+  "e4365f0fea3a03b97b1fcee9f8a5d26e": {
+    "id": "e4365f0fea3a03b97b1fcee9f8a5d26e",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/freerdp-3-30-is-out-with-critical-security-fixes/",
+    "title_en": "FreeRDP 3.30 Is Out with Critical Security Fixes",
+    "summary_en": "FreeRDP 3.30 is a security-focused release addressing a severe server-side vulnerability, strengthening bounds checks, and fixing several bugs.\nThe post FreeRDP 3.30 Is Out with Critical Security Fixes appeared first on Linux Today.",
+    "pub_date": "Mon, 31 Aug 2026 07:10:28 +0000",
+    "title_zh": "FreeRDP 3.30 发布，包含关键安全修复",
+    "summary_zh": "FreeRDP 3.30 是一个以安全为重点的版本，修复了一个严重的服务器端漏洞，加强了边界检查，并解决了多个错误。该版本旨在提升远程桌面协议实现的稳定性和安全性，建议所有用户尽快升级。",
+    "fulltext_zh": "FreeRDP 3.30 是一个以安全为重点的版本，修复了一个严重的服务器端漏洞，加强了边界检查，并解决了多个错误。\n\n该文章 FreeRDP 3.30 发布，包含关键安全修复 首次出现在 Linux Today 上。"
   }
 }

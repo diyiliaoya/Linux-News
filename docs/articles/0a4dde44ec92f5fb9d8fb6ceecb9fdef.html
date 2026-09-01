@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>现在你可以在一台机器上同时运行多个Linux内核 — Linux 中文速报</title>
+<title>Tether 将 Apple 连续互通体验带到 Linux — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
+    <span class="tag">软件应用</span>
     <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>现在你可以在一台机器上同时运行多个Linux内核</h1>
+  <h1>Tether 将 Apple 连续互通体验带到 Linux</h1>
 
-  <div class="article-summary">Multikernel Technologies发布了其多内核Linux树的首个公开版本，该版本允许一台物理服务器并行运行多个独立的Linux内核，每个内核拥有专用的CPU和内存。这一架构通过直接引导硬件而非虚拟机实现，避免了传统虚拟化和容器技术的开销。项目基于Linux内核的直接分支，并添加了补丁以支持并行运行。该技术已用于商业产品，包括裸机工作负载整合、AI代理独立内核运行和内核热补丁。目前仅支持x86_64架构，但未来可能扩展。</div>
+  <div class="article-summary">Tether 是一个开源项目，旨在将 Apple 的连续互通（Continuity）体验带到 Linux，无需 Mac 设备即可在 iPhone 和 Linux 之间同步 iMessage、短信和 OTP 验证码。该项目由开发者 Zack 创建，使用蓝牙和加密配对，支持通过 CLI 和 GTK4 应用管理，并提供 iOS 应用。目前，Tether 已支持多项功能，部分仍处于测试阶段。用户可通过 AUR 安装，并需安装 iOS 应用及浏览器扩展以启用 OTP 自动填充。</div>
 
-  <div class="article-body"><p>现在你可以在一台机器上同时运行多个Linux内核</p><p>Multikernel Technologies发布了其多内核Linux树的首个公开版本，该版本直接在每个内核的硬件上引导，而非在虚拟机内部。</p><p>Multikernel Technologies，这是自去年以来一直在构建的多内核Linux树的首个公开版本。</p><p>该项目的基本前提是，一台物理服务器可以并行运行多个独立的Linux内核，每个内核拥有专用的CPU和内存。因此，同一台机器可以在一个内核上运行数据库，在另一个内核上运行GPU训练任务，而两个内核互不干扰对方的资源。</p><p>别担心，这不是某个晦涩的副本，而是Linux内核的直接分支，并添加了一系列补丁，使其具备如此高水平的并行能力。</p><p>一个内核作为主机运行，控制机器的CPU、内存和PCI设备。当它启动一个新的内核实例时，该实例获得专用的硬件切片，并使用Linux的kexec机制直接引导到该硬件上，以原生方式运行，而非在虚拟机监控器下运行。</p><p>主机通过设备树覆盖层（位于/sys/firmware/devicetree下）跟踪所有这些，并且可以在所有实例保持运行的同时，在运行中的实例之间转移硬件。</p><p>这与虚拟机和容器都不同。虚拟机仍然在应用程序和硬件之间放置了虚拟机监控器和主机内核。容器跳过了虚拟机监控器，但机器上的每个租户共享一个内核。</p><p>Multikernel避免了这两个问题。每个实例都是一个完整、独立的内核，运行在专用的核心上。现代NIC和SSD也可以分配独立的硬件队列，因此实例可以独占访问设备的一部分，而不仅仅是CPU的一部分。</p><p>这种应用程序内核和设备内核的分离是公司文档中描述的架构模式，通常将一个实例专门用于驱动程序和I/O，这样面向应用程序的内核就永远不会看到设备中断。</p><p>目前仅支持x86_64硬件，但Multikernel Technologies表示，架构特定代码已经足够模块化，未来可以支持其他移植。</p><p>Multikernel Technologies已经基于这个内核树销售三种产品，它们的定位充分说明了目标用户。</p><p>- 在裸机上整合工作负载，无需虚拟机监控器。</p><p>- 在独立内核中运行AI代理，直接访问GPU。</p><p>- 在不关闭系统的情况下修补运行中的内核。</p><p>这些定位都针对基础设施和平台团队，他们运行自己的硬件。公司网站还列出了更具体的用例，包括高核心数系统，以及为异构SoC上的每个集群分配一个内核。希望将Multikernel集成到嵌入式设备中的开发者也欢迎。</p><p>Multikernel的创始人兼CEO Cong Wang早在2024年就通过Linux内核邮件列表中的RFC首次提出了这一架构。很高兴看到这个项目取得了如此大的进展。</p><p>还有更多内容，你可以阅读公告，深入了解Cong分享的全面基准数据。</p><p>这里是源代码供你查阅。</p><p>喜欢这次更新吗？支持独立的Linux新闻报道。</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受。</p><p>任意金额，无需承诺。</p><p>一个热爱开源软件、定制PC构建、赛车运动并探索这个世界无限可能的极客。</p><p>LibreOffice 26.8加倍坚持无AI，紧随Collabora欢迎AI之后。</p><p>你应该关注Chromium的Flatpak实验。</p><p>这个微型USB设备将你的手机变成键盘、鼠标和SSH终端。</p><p>Linux 7.3有望成为多年来最注重性能的内核版本之一。</p><p>Omarchy Linux刚刚从科技界大腕那里获得800万美元投资。</p><p>成为更好的Linux用户。</p><p>通过FOSS每周通讯，你可以学习有用的Linux技巧，发现应用程序，探索……</p></div>
+  <div class="article-body"><p>Tether 将 Apple 连续互通体验带到 Linux</p><p>Tether 将 Apple 连续互通体验带到 Linux</p><p>这款开源方案可在 iPhone 和 Linux 之间同步 iMessage、短信和 OTP 验证码，无需 Mac 设备。</p><p>有一位开发者全职切换到 Linux，并且基本上没有回头考虑过之前日常使用的 macOS。然而，有一个例外。</p><p>这个例外就是 Apple 的连续互通（Continuity）功能，它让 iPhone、iPad 和 Mac 之间能够相互协作。它涵盖了许多小便利：在 iPhone 上复制内容，在 Mac 上粘贴；在一台设备上开始写邮件，在另一台设备上完成；即使手机在房间另一头，也能在 Mac 上接听电话。</p><p>但毫不意外的是，它的支持存在缺口。它并不官方支持 Linux。因此，Zack 构建了一个开源项目，在 Linux 上复刻了部分连续互通体验，且无需 Mac 设备。</p><p>考虑到这个应用在几个月前（5 月）才刚刚发布，Tether 已经覆盖了很多功能。目前所有功能都已上线，其中一些仍处于测试阶段。</p><p>Tether 在 Linux 上处理设备间通信，通过 CLI 和原生 GTK4 应用进行配对。SwiftUI 编写的 iPhone 应用会自动发现 Linux 上的守护进程（daemon）。</p><p>Linux 没有官方途径访问 iMessage 或短信，而 Zack 排除了通过实际 Mac 代理所有内容的常见变通方案。</p><p>BlueZ 和 libimobiledevice 提供了足够的蓝牙基础，让他能够构建自己的路径，不过两者都是 GPL 许可的，因此用 C++ 重写使 Tether 保持 GPL 许可。此外，他在配对过程中使用了端到端加密，因此 iPhone 和 Linux 守护进程在连接前都必须证明各自的身份。代码库还定期通过 Anthropic 的 Opus 和 Fable AI 模型进行安全扫描。</p><p>如果你认为 KDE Connect 已经做了很多 Tether 能做的事情，要知道 Zack 知道它的存在，并称其“很棒”，但他指出该应用并不满足他设想的使用场景。</p><p>对于 Arch Linux 用户，Tether 可通过 AUR 获取；你可以运行以下命令安装：</p><p>如果你不知道 yay 是什么，它是一个 AUR 助手，能简化从 Arch 用户软件仓库获取包的过程。不过，你需要注意使用社区运营平台所带来的风险。</p><p>对于其他发行版，有为近期版本构建的 .deb 和 .rpm 包。</p><p>此外，你需要从 App Store 下载 Tether - Linux Companion 应用，这要求你的设备至少运行 iOS 17。</p><p>如果你希望 OTP 自动填充正常工作，还需要两个扩展：一个浏览器扩展，能在验证码到达时自动填入登录表单；以及 Thunderbird 扩展，它会监视你的收件箱，查找任何看起来像验证码的内容，并将其交给 Linux 机器上运行的 Tether 应用。</p><p>喜欢这次更新吗？支持独立的 Linux 新闻报道。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。请帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读，并获得 5 本电子书。</p><p>一次付费，永久享受。</p><p>任意金额，无需承诺。</p><p>一个热爱开源软件、定制 PC 组装、赛车运动以及探索世界无限可能的极客。</p><p>AI 爬虫正在消耗 Linux 内核仓库的计算资源。</p><p>Debian AI 投票使社区产生分歧。</p><p>你现在可以在一台机器上同时运行多个 Linux 内核。</p><p>LibreOffice 26.8 加倍坚持无 AI，紧随 Collabora 欢迎 AI 之后。</p><p>你应该关注 Chromium 的 Flatpak 实验。</p><p>成为更好的 Linux 用户。</p><p>通过 FOSS 每周通讯，你可以学习有用的 Linux 技巧、发现应用程序、探索新的发行版，并随时了解 Linux 世界的最新动态。</p><p>太棒了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅 It's FOSS。</p><p>您的链接已过期。</p><p>成功！请检查您的电子邮件，以获取登录的魔法链接。</p><p>成功！您的账单信息已更新。</p><p>您的账单未更新。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/multikernel-public-release/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/tether-apple-continuity-on-linux/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
