@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI爬虫正在榨干Linux内核仓库的计算资源 — Linux 中文速报</title>
+<title>Linux获得针对华硕ROG NVMe硬盘盒RGB灯光的逆向工程驱动 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>AI爬虫正在榨干Linux内核仓库的计算资源</h1>
+  <h1>Linux获得针对华硕ROG NVMe硬盘盒RGB灯光的逆向工程驱动</h1>
 
-  <div class="article-summary">Linux内核仓库正遭受AI爬虫的猛烈攻击，这些爬虫通过cgit页面反复抓取提交历史，消耗了约20%的计算能力。Linux基金会IT基础设施安全总监Konstantin Ryabitsev指出，一次常规克隆仅需200 CPU秒，而通过cgit页面抓取同样数据需280 CPU小时，成本高出数百万倍。尽管采取了IP封锁、验证码等措施，爬虫仍通过分布式IP绕过。他预测AI泡沫破裂后，此类流量将大幅减少，并希望爬虫能停止这种低效抓取行为。</div>
+  <div class="article-summary">开源开发者梁浩文开发了名为“leds-asus-aura-scsi”的Linux驱动程序，用于控制华硕ROG Strix Arion NVMe外置硬盘盒的RGB灯光。该硬盘盒通过USB大容量存储设备暴露，在Linux上正常工作，但RGB灯光需要通过ENE控制器的SCSI命令进行控制。驱动支持四个独立可寻址LED，并通过sysfs接口进行管理。该驱动已作为RFC提交至Linux内核邮件列表，并属于更广泛的ASUS Aura共享接口计划的一部分。目前尚不确定该驱动何时能进入主线内核。</div>
 
-  <div class="article-body"><p>AI爬虫正在榨干Linux内核仓库的计算资源</p><p>相比之下，每天访问该仓库的六百万请求中，可能只有约2%来自人类。</p><p>如果过去几周的情况能说明什么，那就是越来越多的开源项目正在划定界限，决定在AI进入其工作流程和代码库之前，能容忍多少AI。</p><p>在项目贡献方面，而Rust则采用了将AI基本排除在实际代码之外的策略。这两个项目都解决了同一个根本问题。</p><p>而现在，Linux——全球最大的开源项目之一——正遭受大量AI驱动的爬虫的猛烈攻击，这些爬虫反复发送相同的请求，烧毁计算能力。</p><p>顺便说一句，其中大部分与任何人实际编写代码无关。🙃</p><p>Linux基金会的Konstantin Ryabitsev终于将他一直以来的抱怨公开化了。在90个CPU核心中，有14个分布在五个节点上，每时每刻都在将提交转换为HTML页面。</p><p>从外部看，你可能会想：这有什么问题？</p><p>Linux历史中的每一次提交都是公开的，可以自由克隆，并且早于现在抓取它的AI工具浪潮。</p><p>你看，所有这些特征恰恰使该仓库成为“学习数据的金矿”。它包含了主线内核树、可追溯多年的每个稳定发布分支、数十个子系统维护者树，甚至还有来自前git时代的历史。</p><p>真正荒谬的是这些爬虫进行抓取的方式。</p><p>来源：Konstantin Ryabitsev。</p><p>Konstantin对此进行了计算，发现常规克隆一次，在本地遍历整个提交历史，大约需要200 CPU秒的服务器时间。而通过cgit的单个页面抓取同样的148万次提交，则需要消耗280 CPU小时。</p><p>（如果你想了解这两种CPU时间单位的关系，可以自行换算。）</p><p>对服务器上托管的922个分支中的每一个进行同样的抓取，总成本将膨胀到惊人的程度，大约是单次克隆的460万倍。</p><p>而这一切只是为了获取一份更差的数据副本，而这些数据本来就可以免费获取。</p><p>这还不算cgit为每个补丁、差异和纯文本视图提供的单独URL，这使得单个分支暴露的页面数量达到千万亿级别。</p><p>封锁它们变成了一场军备竞赛。IP封锁一度有效，直到机器人扩散到整个子网。验证码封锁也曾有效，直到数百万住宅和移动IP接管。接下来是挑战墙，作为机器人必须解决的障碍。它奏效了一段时间，直到爬虫开始解决越来越难的挑战。</p><p>在总结中，Konstantin指出：</p><p>“然而，你应该知道，在5个地理分布节点的总共90个核心中，有14-16个核心一直在做渲染提交给爬虫的工作。平均而言，这是我们全部容量的20%——但爬虫群是波浪式来袭的，实际图表比20%的平直线要尖峰得多。”</p><p>他进一步推测，当AI泡沫破裂时，项目将很快看到大量“爬虫流量”的减少——这是他给爬虫贴的标签。</p><p>尽管他也希望它们能“消失”，并停止以“最糟糕的方式”抓取他们的数据。</p><p>如果你不知道Konstantin是谁，他是Linux基金会IT基础设施安全总监，也是维护Linux内核基础设施的系统管理员之一。</p><p>AI本质上是贪婪的。</p><p>这种计算浪费并非Linux独有，但它是我们目前看到的最清晰的例子。喂养一个模型意味着在那些本可以以极小成本完成的任务上烧掉大量周期，而现在，构建这些系统的人似乎并不在意这笔账。</p><p>这些系统似乎只知道一种方法，那就是普通亿万富翁的运行方式——比如一个虚构的亿万富翁。已经拥有足够多了，还想要更多，并不特别在乎如何得到。</p></div>
+  <div class="article-body"><p>Linux获得针对华硕ROG NVMe硬盘盒RGB灯光的逆向工程驱动 - Phoronix</p><p>Linux获得针对华硕ROG NVMe硬盘盒RGB灯光的逆向工程驱动</p><p>2026年9月1日，美国东部时间下午12:28。</p><p>如果你热衷于RGB灯光，如今甚至可以在NVMe外置硬盘盒上找到RGB LED，例如华硕ROG Strix Arion。现在，得益于逆向工程，Linux有了一个驱动程序，可以控制华硕ROG Strix Arion NVMe硬盘盒的RGB灯光。</p><p>开源开发者梁浩文开发了“leds-asus-aura-scsi”作为Linux驱动程序，目前正在审查中，用于启用该外置NVMe M.2 SSD硬盘盒的RGB灯光控制。该硬盘盒作为普通USB大容量存储设备暴露，在Linux上正常工作，可提供典型功能。研究发现，RGB灯光可通过ENE控制器经由厂商SCSI命令进行控制。硬件上有四个独立可寻址的LED，现在可以通过Linux的LED sysfs接口进行操作。</p><p>该驱动今日发布在Linux内核邮件列表上，作为请求评论（RFC）。这也是更广泛的ASUS Aura共享接口计划的一部分。我们将拭目以待，看看这款针对华硕ROG Strix Arion NVMe硬盘盒的RGB LED驱动何时能进入主线内核。</p><p>对于那些好奇的人来说，ROG Strix Arion在亚马逊等平台上的零售价约为52美元（联盟链接），而它本身只是一款普通的NVMe硬盘盒。</p><p>Linux 7.3为Moxa PCIe多端口串行板引入8250_mxpcie驱动</p><p>RTL8723BS驱动继续主导Linux 7.3的暂存区活动</p><p>来自英特尔或AMD之外的另一个x86咨询</p><p>Linux 7.3 TPM为TrenchBoot进行清理准备</p><p>Linux 7.3将开始检查USB-C线缆的Alt-Mode支持</p><p>Linux 7.3 PCI代码添加咨询性非致命错误，支持Intel Dunlow</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动及其他主题。Michael也是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>Wayland被发现“本质上比X11更快，但不一定更高效”</p><p>Linux内核每版本接近2000个CVE</p><p>Debian投票允许“负责任地使用生成式AI”</p><p>加州通过AB-1856法案，为年龄验证提供开源救济</p><p>ReactOS 0.4.16发布，带来新的图形安装程序，更好的硬件支持</p><p>来自英特尔或AMD之外的另一个x86咨询</p><p>补丁提供更快的内核内Zstd，由于令人尴尬的低效</p><p>英特尔工程师提议为Linux提供DRM Fabric</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/linux-kernel-repo-ai-overrun/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/ASUS-ROG-Strix-Arion-RGB-Linux" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

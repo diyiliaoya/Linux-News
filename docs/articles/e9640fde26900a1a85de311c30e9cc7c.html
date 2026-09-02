@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vanilla OS 3 重磅来袭，历经漫长等待终获 ARM64 支持 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年09月02日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Vanilla OS 3 重磅来袭，历经漫长等待终获 ARM64 支持</h1>
+
+  <div class="article-summary">Vanilla OS 3（代号“Reunion”）正式发布，带来了对 ARM64 架构的完整支持，所有软件包均同时构建 ARM64 和 x86_64 版本，且除 NVIDIA 构建外，大多数镜像现已实现逐位可复现。该版本搭载 GNOME 50 和 Linux 内核 7.1.3，并引入了多项桌面改进，如默认启用分数缩放、移除 X11，以及新的默认应用（Ptyxis 终端、Papers 文档查看器、Resources 系统监视器）。此外，新增快照备份工具 Continuity，支持本地、加密外部驱动器或远程服务器备份。社区还可通过 GitHub 构建自定义版本，现有中国用户专属的“源”版本。现有 Vanilla OS 2 用户可通过系统升级获取此版本。</div>
+
+  <div class="article-body"><p>Vanilla OS 3 重磅来袭，历经漫长等待终获 ARM64 支持</p><p>该版本代号为“Reunion”，同时搭载 GNOME 50 和 Linux 内核 7.1.3。</p><p>我与 Vanilla OS 的渊源可以追溯到 2022 年，当时我报道了它的首个稳定版发布，那仅仅是我在 It's FOSS（一个关于开源和 Linux 的网站）任职一个月后。</p><p>自那以后，我的关注点转向了其他发行版和以治理为核心的开发动态，不过我确实关注过它转向 Debian Sid 的过程，并远远地看着它经历了一次重大变革。我后来一直没有真正运行过它（生活就是这样，我想），但事情往往如此。</p><p>如果你之前没有听说过 Vanilla OS，它是一个基于不可变和原子化设计的发行版，其核心机制是在容器内安装软件包，而不是直接修改基础系统。</p><p>Reunion 有什么新特性？</p><p>如果你正在使用 ARM64 设备，无论是单板计算机、笔记本电脑，还是支持 UEFI 启动的完整工作站，那么你会很高兴地知道，Vanilla OS 现在对 ARM64 架构提供了完整支持。</p><p>现在每个软件包都同时为 ARM64 和 x86_64 构建，而且开发团队并没有将 ARM64 视为次要平台；在功能上，它应该与 x86_64 一一对应。</p><p>此外，除 NVIDIA 构建外，Vanilla OS 的大多数镜像现在都可以逐位复现。这意味着你可以自行重建镜像，并检查它是否与项目发布的版本一致，而不是盲目信任其构建基础设施的输出。</p><p>桌面端升级</p><p>该版本搭载了 GNOME 50，并配有 Linux 内核 7.1.3。虽然我们已经在其他发行版的发布中多次讨论过这个桌面环境，但这里为你做一个简要回顾。</p><p>GNOME 50 延续了之前 GNOME 放弃的 X11 移除计划。分数缩放也在此次版本中正式推出，不再需要实验性标志。</p><p>你还将获得一系列新的默认应用。Ptyxis 取代了 Black Box，其容器支持是值得关注的原因。Papers 取代了 Evince，提供了明显更现代的 PDF 阅读体验，而 Resources 则取代了 GNOME 系统监视器，让你清晰地了解应用和硬件的实际运行情况。</p><p>此外，配置处理、权限和日志记录现在在两个工具中终于以相同的方式工作，而不是各自为政。</p><p>另一个新增功能是 Continuity，这是一个基于快照的备份和恢复工具，与 ABRoot 协同工作。如果配置得当，它可以保存你的主目录、已安装的 Flatpak 应用以及 ABRoot 自身的元数据。</p><p>快照的存储位置由你决定。默认情况下，本地目录即可，但你也可以将 Continuity 指向一个使用 LUKS2 加密的外部驱动器，或者通过 SFTP、FTP 或 NFS 将备份发送到远程服务器。</p><p>此外，还推动了社区构建镜像的发展。GitHub 上的 Vanilla OS 组织现在托管了“源”版本，该版本面向中国大陆用户。</p><p>如果你想构建并维护自己的版本，Vanilla OS 开发者欢迎你与他们联系。</p><p>下载 Vanilla OS 3</p><p>Vanilla OS 3“Reunion”的镜像现已上线官方网站。请注意，下载页面会要求你先选择架构，然后选择捐赠金额。</p><p>你可以输入“0”作为金额来获取免费下载链接，也可以输入大于零的捐赠金额来直接支持项目，然后下载 ISO。</p><p>在撰写本文时，项目集成的 PayPal 捐赠功能暂不可用。</p><p>如果你已经在使用 Vanilla OS 2 Orchid（v1.4.0），此版本将作为常规系统升级提供。如果升级耗时过长，你可以运行以下命令来获取该版本：</p><p>```</p><p>sudo vanilla upgrade</p><p>```</p><p>喜欢这次更新吗？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。请帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读，并获得 5 本电子书。</p><p>一次性付费，永久享受</p><p>任意金额，无承诺</p><p>一个热爱开源软件、定制 PC 组装和赛车运动的极客</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/vanilla-os-3-release/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

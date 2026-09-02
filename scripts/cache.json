@@ -9271,5 +9271,170 @@
     "title_zh": "FreeRDP 3.30 发布，包含关键安全修复",
     "summary_zh": "FreeRDP 3.30 是一个以安全为重点的版本，修复了一个严重的服务器端漏洞，加强了边界检查，并解决了多个错误。该版本旨在提升远程桌面协议实现的稳定性和安全性，建议所有用户尽快升级。",
     "fulltext_zh": "FreeRDP 3.30 是一个以安全为重点的版本，修复了一个严重的服务器端漏洞，加强了边界检查，并解决了多个错误。\n\n该文章 FreeRDP 3.30 发布，包含关键安全修复 首次出现在 Linux Today 上。"
+  },
+  "dad4302d24e4de8fbcb365338993c8a8": {
+    "id": "dad4302d24e4de8fbcb365338993c8a8",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/linux-app-release-roundup-august-2026",
+    "title_en": "Linux App Release Roundup (August 2026)",
+    "summary_en": "August saw a number of slew of notable Linux app updates, and in this post I roundup a few that might have passed you by. But unless you&#8217;ve been sleeping under a rock you&#8217;ll have already heard about Firefox 153, the big OpenShot 4.0 release with colour grading and the latest update to the ebook manager Calibre letting you generate new book covers using online generative AI. August also saw the Mastodon client Tuba pick up a stack of new features and LibreOffice 26.8 debuted a new par",
+    "pub_date": "Tue, 01 Sep 2026 22:18:27 +0000",
+    "title_zh": "Linux 应用发布汇总（2026 年 8 月）",
+    "summary_zh": "2026 年 8 月，Linux 生态迎来众多重要应用更新。Firefox 153、OpenShot 4.0（新增调色功能）、LibreOffice 26.8（新段落排版引擎）等大版本发布，NVIDIA GeForce NOW 应用正式版推出，ChatGPT Linux 应用进入测试。此外，RSS 阅读器 Liferea 完成 GTK4/libadwaita 移植，Kdenlive 视频编辑器新增多项功能，GNOME AI 助手 Newelle 1.5.0 引入目录系统。本文汇总了这些可能被忽略的更新细节。",
+    "fulltext_zh": "Linux 应用发布汇总（2026 年 8 月）\n\n8 月涌现了大量值得关注的 Linux 应用更新，本文汇总了其中一些你可能错过的内容。\n\n除非你一直与世隔绝，否则你肯定已经听说了 Firefox 153、OpenShot 4.0（新增调色功能）以及最新更新（允许使用在线生成式 AI 制作新书封面）。\n\n8 月，Mastodon 客户端也获得了一系列新功能，LibreOffice 26.8 推出了新的段落排版引擎。我们还看到 NVIDIA GeForce NOW 应用退出测试版，ChatGPT Linux 应用进入测试阶段。\n\n但除此之外，以下是 8 月带来的其他内容。\n\nLiferea 完成 GTK4/libadwaita 移植\n\n这款长期服务的 RSS 阅读器迎来了新外观。你更喜欢通过 RSS 获取新闻，不受算法干扰吗？如果是，你可能已经尝试过（或至少听说过）Liferea，这是一款采用传统界面（类似老式电子邮件客户端）的 GTK 客户端。\n\nLiferea 发布了新的稳定版本系列，主要变化是完成了 GTK4/libadwaita 移植，使应用更好地融入现代 GNOME 应用生态。应用全面采用模态对话框，标题栏替换了窗口标题栏和菜单栏。\n\n此外，新增了基于 WebDAV 的同步后端，引入了适用于“所有节点源”的标准化订阅对话框，并增加了“更新监视器”以显示后台更新的详细信息（有助于排查订阅源错误）。\n\nLiferea 的部分现有功能在 GTK4 移植中未能保留。精简订阅列表模式不再支持，条目列表视图标题已移除（请使用右键上下文菜单进行排序），托盘图标不再显示未读计数。\n\n数据仍与 Liferea 1.6.x 系列兼容。如果你更新到新版本后不喜欢这些变化（并非所有人都喜欢标题栏），应该可以无问题地降级到早期版本。\n\n说到问题，目前存在一些已知崩溃，例如拖放订阅源或删除项目时可能触发崩溃——GitHub 页面列出了这些问题，请注意。\n\nLiferea 源代码已提供，Snap 和 Flathub 版本尚未更新。\n\nKdenlive 带来大量改进\n\nRadii redux——Kdenlive 众多改进之一。8 月，Linux 上最全面、功能最强大的开源视频编辑器 Kdenlive 迎来了一大堆改进。\n\n新增了拖放轨道重排功能，以及当拖入的剪辑音频通道数超过现有轨道时自动创建音轨的功能。还可以使用快捷键同时更改多个剪辑的播放速度。\n\n矩形形状现在支持直接控制半径，画布支持吸附，并可在画布内复制粘贴单个图形和文本元素。\n\n变换效果新增了可调整的旋转锚点；音频效果支持在预览监视器上调整；数字字段可输入数学公式（例如 sqrt(2)）；关键帧功能已添加到矩形 Alpha 遮罩中。\n\n其他变化包括：按住 Shift 并拖动可将播放头直接吸附到剪辑边缘、参考线和标记；按住 Ctrl 并点击音轨上的独奏按钮可同时隔离多个音轨；支持导入动画 WebP 图像序列；以及……\n\n嗯，还有很多其他改进——请务必查看官方发布说明。\n\n可从官方网站下载，或安装使用。\n\nNewelle AI 助手新增目录功能\n\n在 GNOME 的 AI 助手中查找并启用技能、扩展和 MCP 服务器。Newelle 于 8 月发布 1.5.0 版本，新增了额外功能。\n\n提醒一下不了解的用户，Newelle 是一个 GTK 前端，用于与云端 LLM（如 ChatGPT、Claude 等）或通过 Ollama（需单独安装和配置）在本地硬件上运行的 AI 模型进行交互。\n\n新增功能包括自定义模式创建，可针对所需任务定制提示、工具和技能；持久终端会话；以及更便捷地在应用内连接 OpenAI、Anthropic 等 LLM 提供商。\n\n你还可以在应用内浏览“精选”的 MCP 服务器集合。MCP（模型上下文协议）是一种开放协议，可让 AI 模型……"
+  },
+  "e9640fde26900a1a85de311c30e9cc7c": {
+    "id": "e9640fde26900a1a85de311c30e9cc7c",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/vanilla-os-3-release/",
+    "title_en": "Vanilla OS 3 Comes in Hot, Packing ARM64 Support After a Long Wait",
+    "summary_en": "The release, codenamed \"Reunion,\" also ships GNOME 50 and Linux kernel 7.1.3.",
+    "pub_date": "Tue, 01 Sep 2026 17:12:49 GMT",
+    "title_zh": "Vanilla OS 3 重磅来袭，历经漫长等待终获 ARM64 支持",
+    "summary_zh": "Vanilla OS 3（代号“Reunion”）正式发布，带来了对 ARM64 架构的完整支持，所有软件包均同时构建 ARM64 和 x86_64 版本，且除 NVIDIA 构建外，大多数镜像现已实现逐位可复现。该版本搭载 GNOME 50 和 Linux 内核 7.1.3，并引入了多项桌面改进，如默认启用分数缩放、移除 X11，以及新的默认应用（Ptyxis 终端、Papers 文档查看器、Resources 系统监视器）。此外，新增快照备份工具 Continuity，支持本地、加密外部驱动器或远程服务器备份。社区还可通过 GitHub 构建自定义版本，现有中国用户专属的“源”版本。现有 Vanilla OS 2 用户可通过系统升级获取此版本。",
+    "fulltext_zh": "Vanilla OS 3 重磅来袭，历经漫长等待终获 ARM64 支持\n\n该版本代号为“Reunion”，同时搭载 GNOME 50 和 Linux 内核 7.1.3。\n\n我与 Vanilla OS 的渊源可以追溯到 2022 年，当时我报道了它的首个稳定版发布，那仅仅是我在 It's FOSS（一个关于开源和 Linux 的网站）任职一个月后。\n\n自那以后，我的关注点转向了其他发行版和以治理为核心的开发动态，不过我确实关注过它转向 Debian Sid 的过程，并远远地看着它经历了一次重大变革。我后来一直没有真正运行过它（生活就是这样，我想），但事情往往如此。\n\n如果你之前没有听说过 Vanilla OS，它是一个基于不可变和原子化设计的发行版，其核心机制是在容器内安装软件包，而不是直接修改基础系统。\n\nReunion 有什么新特性？\n\n如果你正在使用 ARM64 设备，无论是单板计算机、笔记本电脑，还是支持 UEFI 启动的完整工作站，那么你会很高兴地知道，Vanilla OS 现在对 ARM64 架构提供了完整支持。\n\n现在每个软件包都同时为 ARM64 和 x86_64 构建，而且开发团队并没有将 ARM64 视为次要平台；在功能上，它应该与 x86_64 一一对应。\n\n此外，除 NVIDIA 构建外，Vanilla OS 的大多数镜像现在都可以逐位复现。这意味着你可以自行重建镜像，并检查它是否与项目发布的版本一致，而不是盲目信任其构建基础设施的输出。\n\n桌面端升级\n\n该版本搭载了 GNOME 50，并配有 Linux 内核 7.1.3。虽然我们已经在其他发行版的发布中多次讨论过这个桌面环境，但这里为你做一个简要回顾。\n\nGNOME 50 延续了之前 GNOME 放弃的 X11 移除计划。分数缩放也在此次版本中正式推出，不再需要实验性标志。\n\n你还将获得一系列新的默认应用。Ptyxis 取代了 Black Box，其容器支持是值得关注的原因。Papers 取代了 Evince，提供了明显更现代的 PDF 阅读体验，而 Resources 则取代了 GNOME 系统监视器，让你清晰地了解应用和硬件的实际运行情况。\n\n此外，配置处理、权限和日志记录现在在两个工具中终于以相同的方式工作，而不是各自为政。\n\n另一个新增功能是 Continuity，这是一个基于快照的备份和恢复工具，与 ABRoot 协同工作。如果配置得当，它可以保存你的主目录、已安装的 Flatpak 应用以及 ABRoot 自身的元数据。\n\n快照的存储位置由你决定。默认情况下，本地目录即可，但你也可以将 Continuity 指向一个使用 LUKS2 加密的外部驱动器，或者通过 SFTP、FTP 或 NFS 将备份发送到远程服务器。\n\n此外，还推动了社区构建镜像的发展。GitHub 上的 Vanilla OS 组织现在托管了“源”版本，该版本面向中国大陆用户。\n\n如果你想构建并维护自己的版本，Vanilla OS 开发者欢迎你与他们联系。\n\n下载 Vanilla OS 3\n\nVanilla OS 3“Reunion”的镜像现已上线官方网站。请注意，下载页面会要求你先选择架构，然后选择捐赠金额。\n\n你可以输入“0”作为金额来获取免费下载链接，也可以输入大于零的捐赠金额来直接支持项目，然后下载 ISO。\n\n在撰写本文时，项目集成的 PayPal 捐赠功能暂不可用。\n\n如果你已经在使用 Vanilla OS 2 Orchid（v1.4.0），此版本将作为常规系统升级提供。如果升级耗时过长，你可以运行以下命令来获取该版本：\n\n```\nsudo vanilla upgrade\n```\n\n喜欢这次更新吗？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。请帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读，并获得 5 本电子书。\n\n一次性付费，永久享受\n\n任意金额，无承诺\n\n一个热爱开源软件、定制 PC 组装和赛车运动的极客"
+  },
+  "58f5b8dd1842fa6cadcfa90f00883d3a": {
+    "id": "58f5b8dd1842fa6cadcfa90f00883d3a",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/the-ur-project-appears/",
+    "title_en": "This Dev Spent 8 Years on Intel's Clear Linux, Now He's Undoing Its Biggest Mistake",
+    "summary_en": "Auke Kok says Clear Linux was \"silly difficult\" for outsiders to contribute to, and The Ur Project is his answer to that.",
+    "pub_date": "Tue, 01 Sep 2026 14:02:23 GMT",
+    "title_zh": "这位开发者花了8年时间在Intel的Clear Linux上，现在他正在纠正其最大的错误",
+    "summary_zh": "Auke Kok曾在Intel的Clear Linux项目上工作了8年，他认为该项目最大的错误是让外部贡献者难以参与。现在，他通过个人项目The Ur Project来纠正这一错误。该项目是一个从零开始的Linux发行版构建系统，基于Rust编写，强调确定性构建、可复现性和社区友好性。它采用声明式TOML文件定义包，通过探针自动决定编译方式，并支持内容寻址存储和可验证的更新。目前项目仍处于早期阶段，Auke正在完善托管和镜像发布。",
+    "fulltext_zh": "这位开发者花了8年时间在Intel的Clear Linux上，现在他正在纠正其最大的错误\n\n这位开发者花了8年时间在Intel的Clear Linux上，现在他正在纠正其最大的错误\n\nAuke Kok表示，Clear Linux对于外部贡献者来说“愚蠢地困难”，而The Ur Project正是他对这一问题的回应。\n\nAuke Kok在Intel的Clear Linux项目上工作了8年。现在他认为自己确切知道是什么导致了它的失败，并且正试图独自修复这个问题。\n\n本周，现任Verge.io的Linux发行版架构师Auke介绍了The Ur Project。这是一个他从零开始构建的Linux发行版构建系统，他利用所有空闲时间来打造它。\n\n“这个项目不是企业行为，”他写道，据我所知，没有任何公司甚至基金会支持它。此外，你可能还记得，Intel已于今年早些时候停止了Clear Linux OS的开发。\n\nClear Linux的不足之处\n\n在The Ur Project网站上，Auke详细阐述了他认为第一次失败的原因。用他自己的话说，最大的问题是他们“让社区贡献变得太难了”。\n\n他说，像测试自己的代码更改或进行常规的增量开发这样简单的事情，都变得不必要的痛苦。\n\n发布流程也没有帮助。不匹配的仪表板以及新旧工具的混合被强行拼凑在一起，仅仅是为了跟踪每日更新。\n\n跟上各种每日更新的步伐意味着要缝合一个不断增长的、互不关联的工具和界面堆栈，所有这些都运行在CDN和硬件资源上，而一个处于当前阶段的个人项目永远无法获得这些资源。\n\n一个构建系统，而非发行版\n\nThe Ur Project并不打算成为一个光鲜的新原子发行版，至少现在还不是。目前的重点是打造其背后的机制，而不是提供一个完善的产品。\n\n所有部分都基于Rust运行，包括构建包的部分和安装包的部分，它们共享相同的底层代码。\n\n包通过Auke所称的“配方”来定义，这些是声明式的TOML文件，描述包需要什么，而不规定具体如何构建，他将这一想法比作“你祖母的食谱收藏”。\n\n构建步骤不是手工编写的脚本。相反，一组探针检查源代码并决定如何编译它。仓库运行在签名更新上，以确保更新经过签名且可验证，内容寻址存储处理去重，因此跨包的相同文件只存储一次。\n\n每个包都带有来源数据，记录其构建方式，Auke表示该系统设计为可以逐位复现构建。同一底层系统可以输出一个普通的已安装系统。\n\nLLM仅被用于为特定包类型编写测试套件和构建定义。\n\n构建系统本身保持确定性。它在没有任何AI代理的情况下运行，并且MCP集成被有意排除在常规打包工作之外。\n\n目前，可用的有网站、Auke在The Ur Project上的定期博客文章以及代码仓库。他目前正在处理托管事宜，让人们能够实际拉取镜像和仓库。这还需要几天时间才能准备好。\n\n一旦解决，他计划发布用于云部署和Live USB的可启动镜像。\n\n喜欢这篇更新吗？支持独立的Linux新闻覆盖\n\nIt's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。\n\n一次支付，永久享受\n\n任意金额，无需承诺\n\n一个对开源软件、定制PC组装、赛车运动以及探索这个世界无限可能性充满热情的书呆子。\n\nVanilla OS 3强势来袭，在漫长等待后支持ARM64\n\nFirefox 155新增两项更改，加速网页浏览\n\nTether将Apple Continuity体验带到Linux\n\nAI爬虫正在消耗Linux内核仓库的计算能力\n\nDebian AI投票已使社区分裂\n\n成为更好的Linux用户\n\n通过FOSS每周通讯，你学习有用的Linux技巧，发现应用程序，并了解Linux新闻。"
+  },
+  "a13dc695b099559bb6f45ddc4064e826": {
+    "id": "a13dc695b099559bb6f45ddc4064e826",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/firefox-155-faster-page-loads/",
+    "title_en": "Firefox 155 Adds Two New Changes for Faster Web Browsing",
+    "summary_en": "Apart from being faster, Firefox 155 is also the only non-Chromium browser that supports uBlock Origin, as Google removed it yesterday.",
+    "pub_date": "Tue, 01 Sep 2026 08:05:29 GMT",
+    "title_zh": "Firefox 155 新增两项改进，加速网页浏览",
+    "summary_zh": "Firefox 155 作为最新稳定版发布，带来了两项关键技术改进：支持 QUIC v2 和 Happy Eyeballs v3。前者优化了 HTTP/3 连接，减少握手往返次数；后者通过并行尝试多种网络路径，加快网页加载速度。此外，Firefox 155 是唯一支持完整版 uBlock Origin 的非 Chromium 浏览器，因为谷歌已从 Chrome 商店移除该扩展。其他新功能包括 AI 聊天机器人集成（限美、加、法用户）、地址栏显示被拦截跟踪器数量等。Linux 用户可通过官方仓库或 Mozilla 服务器下载更新。",
+    "fulltext_zh": "Firefox 155 新增两项改进，加速网页浏览\n\n除了速度更快，Firefox 155 还是唯一支持 uBlock Origin 的非 Chromium 浏览器，因为谷歌昨天已将其移除。\n\n以非常低调的方式，Firefox 155 作为这款注重隐私的流行网络浏览器的最新稳定版已经到来。\n\n虽然此版本包含一系列改进，但我们将重点关注两项改变 Firefox 处理网页加载方式的技术改进。\n\nHTTP/3 的 QUIC v2 支持\n\nFirefox 现在不再只测试一条路径并希望它有效，而是同时尝试多种方式访问网站，并选择最先响应的那个。无需开启任何设置，也无需配置。你只会注意到，当 Firefox 在寻找真正连接到网站的方法时，那些一直加载不出来的页面变少了。\n\n你看，每次 Firefox 加载页面时，它首先必须决定如何到达其背后的服务器。而且通常有不止一种选择：IPv4 地址、IPv6 地址，有时两者都有，并且根据网站的不同，还可以在 HTTP/2 和更新的 HTTP/3 之间选择。旧版 Firefox 会选择一个选项，然后等待看它是否有效，再尝试下一个，因此如果第一次猜测缓慢或失败，页面就会一直停留在那里而不加载。\n\nHappy Eyeballs v3 改变了这一点。Firefox 会同时沿多条路径发起连接尝试，并采用最先到达的那条，而不是在开始时只提交一个猜测。\n\n官方来说，Happy Eyeballs v3 是一个互联网草案，而非最终 RFC，由苹果和谷歌的工程师编写。Mozilla 自己针对此版本的开发者说明将该功能描述为“目前仅在某些平台上支持”，但没有指明是哪些平台。\n\nQUIC v2 是当今网站加载速度背后的关键技术之一，Firefox 155 增加了对“稍新版本”的支持。真正重要的不是新版本本身，而是 Firefox 可以“立即切换”到它，跳过了两台计算机在无法立即就使用哪个版本达成一致时通常发生的来回协商。\n\n这种来回协商过去常常需要额外的一次互联网往返。现在不需要了。\n\nHTTP/3 是在浏览器和网站之间传输数据的最新协议版本，它运行在 QUIC 上，而不是较旧的 TCP 上。通过 QUIC 建立安全连接只需一次往返，而不是多次，这是 HTTP/3 在不稳定连接上感觉更快的重要原因。\n\n这是切换的最佳时机\n\n安装了 uBlock Origin 的 Firefox。\n\n这是切换到 Firefox 的最佳时机。uBlock Origin 的完整版自 2025 年 7 月谷歌禁用 Manifest V2 以来在 Chrome 上一直无法使用，而昨天谷歌将其从 Chrome 网上应用店完全移除。\n\n当然，Firefox 从未真正受到谷歌行为的影响，一直支持完整的 uBlock Origin 体验，其广告拦截能力没有任何削弱。你可以通过官方发布页面获取其最新版本。\n\nFirefox 155 版本还有许多其他新增功能，包括 AI 聊天机器人集成（仅限居住在美国、加拿大或法国的用户）、地址栏中显示被拦截的跟踪器数量，以及重新排序容器的功能。这些都可能进一步促使你从 Chrome 或其他基于 Chromium 的浏览器切换过来。\n\nFirefox 155 的二进制文件已经可用，不过官方下载页面尚未更新到新版本；应该很快就会更新。如果你等不及，想现在就获取此版本，虽然我建议等待，但你可以直接下载。\n\n你的 Linux 发行版应该很快就会提供新版本。最好通过官方发行版方式获取更新。\n\nMozilla 服务器已经有适用于 Linux 的 155.0 构建版本。记得选择正确的平台和语言选项，以获取适合你电脑配置的软件包。\n\n在我的 Ubuntu 系统上，我选择了：\n\nlinux-x86_64 > en-US > firefox-155.0.deb\n\n喜欢这次更新吗？支持独立的 Linux 新闻报道。\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立，不受商业影响。"
+  },
+  "f1e0eb30c04fd4064192df6d708692f9": {
+    "id": "f1e0eb30c04fd4064192df6d708692f9",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12943",
+    "title_en": "Distribution Release: Linux From Scratch 13.1",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The Linux From Scratch (LFS) project has announced the release of Linux From Scratch 13.1, a document which will assist people in building their own distribution from source code. This version of LFS includes Linux kernel 7.1.8, glibc 2.44 and GCC 16.2.0. \"The Linux From Scratch community announces....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Linux From Scratch 13.1",
+    "summary_zh": "Linux From Scratch（LFS）项目宣布发布13.1版本，该文档指导用户从源代码构建自己的Linux发行版。此版本包含Linux内核7.1.8、glibc 2.44和GCC 16.2.0，工具链更新至Binutils 2.47，共更新或新增46个软件包。安全更新涉及attr、acl、expat、glibc、Linux内核、Python、systemd、util-linux、vim和zlib。自上一稳定版以来，LFS已有超过200次提交。Beyond Linux From Scratch（BLFS）尚未更新至13.1，仍以12.4为最新版本。",
+    "fulltext_zh": "发行版发布：Linux From Scratch 13.1\n\nLinux From Scratch（LFS）项目宣布发布Linux From Scratch 13.1，该文档将帮助人们从源代码构建自己的发行版。此版本的LFS包含Linux内核7.1.8、glibc 2.44和GCC 16.2.0。\n\n“Linux From Scratch社区宣布发布LFS 13.1版本。主要变更包括工具链更新至Binutils 2.47、GCC 16.2.0和glibc 2.44。自上次发布以来，共有46个软件包被更新或新增。全书文本也进行了多处修改。Linux内核已更新至7.1.8版本。包含安全更新的软件包有attr、acl、expat、glibc、Linux内核、Python、systemd、util-linux、vim和zlib。详情请参阅安全公告页面。总体而言，自上一稳定版书籍以来，LFS已有超过200次提交。”\n\n请访问项目页面阅读简短的发布公告。Linux From Scratch和Beyond Linux From Scratch书籍可在项目页面上找到。请注意，Beyond Linux From Scratch（BLFS）书籍尚未更新至13.1版本，因此12.4仍为最新的BLFS书籍。\n\n最近相关新闻和发布：\n- 发行版发布：Linux From Scratch 13.1\n- 发行版发布：Linux From Scratch 13.0\n- 发行版发布：Linux From Scratch 12.4\n- 发行版发布：Linux From Scratch 12.3\n- 发行版发布：Linux From Scratch 12.2\n- 发行版发布：Linux From Scratch 12.1\n\n关于Linux From Scratch：\nLinux From Scratch（LFS）是一个项目，提供构建自定义Linux系统所需的步骤。人们想要安装LFS系统有很多原因。大多数人提出的问题是：“既然你可以直接下载现有的发行版，如Debian或Redhat，为什么还要费心手动从零开始安装Linux系统？”这是一个合理的问题，我希望为你解答。最重要的原因是……"
+  },
+  "be95f99c3dca2355f0c2ac9fb868b070": {
+    "id": "be95f99c3dca2355f0c2ac9fb868b070",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Steam-Survey-August-2026",
+    "title_en": "Steam On Linux Dips Below 4% For August",
+    "summary_en": "Valve just published the Steam Survey results for August 2026. After jumping above 4% in July, in August it fell back below that threshold. Meanwhile CachyOS continues gaining ground among Linux gamers...",
+    "pub_date": "Tue, 01 Sep 2026 20:19:13 -0400",
+    "title_zh": "Steam 在 Linux 上的市场份额八月降至 4% 以下",
+    "summary_zh": "Valve 发布了 2026 年 8 月的 Steam 调查结果。在 7 月突破 4% 后，8 月又回落至该阈值以下，目前为 3.9%，较 7 月仅下降 0.11%。SteamOS 在 Linux 发行版中以 21% 的份额领先，CachyOS 以 15.4% 的份额紧随其后，环比增长 1.16%。AMD CPU 在 Linux 游戏玩家中的使用率保持在 60% 以上，而在 Windows 上则升至 45%。",
+    "fulltext_zh": "Steam 在 Linux 上的市场份额八月降至 4% 以下 - Phoronix\n\nSteam 在 Linux 上的市场份额八月降至 4% 以下\n\n发布于 2026 年 9 月 1 日晚上 8:19（美国东部时间）。\n\nValve 刚刚发布了 2026 年 8 月的 Steam 调查结果。在 7 月突破 4% 之后，8 月又回落至该阈值以下。与此同时，CachyOS 在 Linux 游戏玩家中继续取得进展。\n\n今年 3 月，Steam 在 Linux 上的使用率创下了 5.33% 的历史新高，但此后一直在 3% 至 4% 的区间内波动。8 月的数据为 3.9%。\n\n与 7 月相比，这仅下降了 0.11%。从绝对数字来看，Linux 游戏客户群的总量可能与此前持平甚至更高，但由于缺乏 Steam 使用情况的最新绝对数据，很难进行准确评估。\n\nSteamOS 在 Linux 发行版中以 21% 的市场份额领先，这是基于 Arch Linux 的 Steam Deck 和 Steam Machine 操作系统。CachyOS 以 15.4% 的份额位居第二，表现强劲，环比增长 1.16%。\n\nLinux 游戏玩家中 AMD CPU 的使用率保持在 60% 以上，这得益于为 Valve Steam Deck 和 Steam Machine 提供支持的定制 AMD SoC，以及 AMD 对 Linux 游戏/爱好者社区整体的开源友好态度。在 Windows 上的 Steam 中，AMD CPU 的使用率已升至 45%。\n\n想要完整查看 2026 年 8 月 Steam 调查数据的用户，可以在 Steam 官方页面找到相关数据。\n\n相关文章：\n\nSteamOS 3.9 预览版升级至 Linux 7.2 和 KDE Plasma 6.7 桌面\nDXVK 3.1 发布，带来 DXGI 增量呈现和 D3D11 缓冲渲染目标\nProton 11.0-2 通过 Steam Play / Linux 游戏支持更多游戏\nLinux 7.3 将修复原始 Steam 控制器原生驱动的长期缺陷\nSteam 在 Linux 上的使用率 7 月重新突破 4%\nSteam 客户端为 Steam Deck OLED 添加 HDR 串流和 AV1 视频串流\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他。\n\nWayland 被发现“本质上比 X11 更快，但不一定更高效”\nLinux 内核每个版本接近 2,000 个 CVE\nDebian 投票允许“负责任地使用生成式 AI”\n加州通过 AB-1856 法案，为年龄验证提供开源救济\nReactOS 0.4.16 发布，带来全新图形安装程序和更好的硬件支持\n来自 Intel 或 AMD 以外实体的另一份 x86 公告\n补丁大幅提升内核内 Zstd 性能，修复令人尴尬的低效问题\nIntel 工程师提议为 Linux 引入 DRM Fabric\n\n在享受无广告浏览的同时，\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026，由 Phoronix Media 所有。\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "f593ab582fe99c59c6c79abcacf931d2": {
+    "id": "f593ab582fe99c59c6c79abcacf931d2",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/WinBtrfs-1.10",
+    "title_en": "WinBtrfs 1.10 Released With Two Years Worth Of Improvements For Btrfs On Windows",
+    "summary_en": "WinBtrfs is a driver for Microsoft Windows to support reading and writing to Btrfs file-systems. WinBtrfs works with Windows XP and newer. It hadn't seen a new release in over two years but a big feature release is now available with a combination of new features and bug fixes...",
+    "pub_date": "Tue, 01 Sep 2026 17:57:42 -0400",
+    "title_zh": "WinBtrfs 1.10 发布：两年改进成果助力 Windows 上的 Btrfs",
+    "summary_zh": "WinBtrfs 1.10 发布，这是两年多来首次重大更新，为 Windows 系统上的 Btrfs 文件系统带来了多项新特性和错误修复。新版本支持写入空闲空间位图和压缩内联文件，改进了可移动设备的处理、内存不足或磁盘空间不足时的错误恢复，并修复了多个崩溃问题，包括在子卷间移动文件、大量文件同时创建（如 Steam 客户端）等场景。此外，开发团队提到使用 Claude 辅助漏洞查找和代码审查，但所有代码均由人工编写。",
+    "fulltext_zh": "WinBtrfs 1.10 发布：两年改进成果助力 Windows 上的 Btrfs - Phoronix\n\nWinBtrfs 1.10 发布：两年改进成果助力 Windows 上的 Btrfs\n\n2026年9月1日，下午5:57（美国东部时间）\n\nWinBtrfs 是一个用于 Microsoft Windows 的驱动程序，支持对 Btrfs 文件系统进行读写操作。WinBtrfs 支持 Windows XP 及更高版本。该项目已有两年多没有发布新版本，但现在推出了一次重大功能更新，结合了新功能和错误修复。\n\nWinBtrfs 1.10 于今天发布，现在支持写入空闲空间位图以及写入压缩内联文件：这两个功能在 WinBtrfs 上此前已具备读取支持。新的 WinBtrfs 版本还改进了对可移动设备的处理，增强了在内存不足或磁盘空间不足时的错误恢复能力，并进行了多种不同的错误修复。\n\nWinBtrfs 1.10 的修复包括：在子卷之间移动文件时可能出现的崩溃；同时创建大量文件（如 Steam 客户端中观察到的情况）时的崩溃；预分配问题现已解决；多设备卷的磁盘使用统计；以及其他修复。\n\nWinBtrfs 1.10 的发布公告还提到，Claude 被用于漏洞查找，并证明不仅在漏洞查找方面，而且在代码审查方面都“帮助很大”。不过，WinBtrfs 1.10 的代码全部由人工编写，未使用人工智能。\n\n除了在 Microsoft Windows 上提供 Btrfs 支持外，WinBtrfs 也被 ReactOS 用于其 Btrfs 读写支持：\n\n想要尝试 WinBtrfs 1.10 的用户可以通过以下方式获取：\n\nF2FS 在 Linux 7.3 中现在支持多设备并行刷新\nLinux 7.3 UBI 增加对每设备磨损均衡阈值的支持\nChris Mason 卸任 Btrfs 联合维护者，离开 Meta\nLinux 7.3 为块设备增加 RWF_DONTCACHE 支持\nLinux 7.3 的 NFS 改进\nLinux 7.3 KSMBD 增加对 Apple Time Machine 备份的互操作性\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nWayland 被发现“本质上比 X11 更快，但未必更高效”\nLinux 内核每个版本接近 2000 个 CVE\nDebian 投票允许“负责任地使用生成式 AI”\n加州通过 AB-1856 法案，为年龄验证提供开源救济\nReactOS 0.4.16 发布，带来新的图形安装程序和更好的硬件支持\n来自 Intel 或 AMD 以外的实体的另一份 x86 公告\n补丁大幅提升内核内 Zstd 性能，解决令人尴尬的低效问题\nIntel 工程师提议为 Linux 提供 DRM Fabric\n\n在享受无广告浏览的同时，\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "e651fc663c6d366a24b75f9d7536b993": {
+    "id": "e651fc663c6d366a24b75f9d7536b993",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMDGPU-HDMI-Passive-VRR",
+    "title_en": "AMDGPU Linux Driver's Latest Patches For HDMI Passive VRR Support",
+    "summary_en": "As part of AMD's ongoing effort for getting HDMI 2.1 support squared away in their upstream AMDGPU kernel graphics driver, sent out today were the latest patches around passive variable refresh rate \"Passive VRR\" for HDMI connections...",
+    "pub_date": "Tue, 01 Sep 2026 16:41:59 -0400",
+    "title_zh": "AMDGPU Linux驱动最新补丁支持HDMI被动VRR",
+    "summary_zh": "AMD继续推进其上游AMDGPU内核图形驱动对HDMI连接被动可变刷新率（Passive VRR）的支持，最新补丁已发布。被动VRR旨在避免HDMI输出切换到VRR模式时出现屏幕空白或亮度闪烁，而DisplayPort和eDP则无此问题。该功能此前包含在HDMI 2.1“游戏”补丁系列中，现已独立成系列，默认启用但可关闭。这些补丁有望在Linux 7.4合并窗口（10月底开启）前完成审查。",
+    "fulltext_zh": "作为AMD持续努力完善其上游AMDGPU内核图形驱动的一部分，今天发布了关于HDMI连接被动可变刷新率（Passive VRR）的最新补丁。\n\n被动VRR用于避免HDMI输出切换到VRR模式时出现屏幕空白或亮度闪烁。对于DisplayPort或嵌入式DisplayPort，无缝VRR切换是强制要求的，因此不存在此问题；但对于HDMI，被动VRR功能通过在固定刷新率桌面使用期间保持HDMI接收器处于可变刷新状态来工作。\n\nAMDGPU对HDMI的被动VRR支持此前包含在HDMI 2.1“游戏”补丁系列中（包括VRR和ALLM），现在已拆分为独立的补丁系列。\n\n最新被动VRR代码已提交给AMDGPU驱动，默认启用，但如果您希望在切换到VRR模式时保留空白/闪烁效果，也可以选择关闭。\n\n希望这些最新的AMDGPU HDMI 2.1补充功能能在10月底Linux 7.4合并窗口开启前及时完成审查和准备。"
+  },
+  "4a745f2cacc8d3c8f35a4547a83c1348": {
+    "id": "4a745f2cacc8d3c8f35a4547a83c1348",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/ASUS-ROG-Strix-Arion-RGB-Linux",
+    "title_en": "Linux Gets A Reverse-Engineered Driver For ASUS ROG NVMe Enclosure RGB Lighting",
+    "summary_en": "If you are into RGB lighting, you can even find NVMe external enclosures these days with RGB LEDs like the ASUS ROG Strix Arion. Now thanks to reverse engineering there is a Linux driver for allowing the RGB lighting controls for the ASUS ROG Strix Arion NVMe enclosure...",
+    "pub_date": "Tue, 01 Sep 2026 12:28:38 -0400",
+    "title_zh": "Linux获得针对华硕ROG NVMe硬盘盒RGB灯光的逆向工程驱动",
+    "summary_zh": "开源开发者梁浩文开发了名为“leds-asus-aura-scsi”的Linux驱动程序，用于控制华硕ROG Strix Arion NVMe外置硬盘盒的RGB灯光。该硬盘盒通过USB大容量存储设备暴露，在Linux上正常工作，但RGB灯光需要通过ENE控制器的SCSI命令进行控制。驱动支持四个独立可寻址LED，并通过sysfs接口进行管理。该驱动已作为RFC提交至Linux内核邮件列表，并属于更广泛的ASUS Aura共享接口计划的一部分。目前尚不确定该驱动何时能进入主线内核。",
+    "fulltext_zh": "Linux获得针对华硕ROG NVMe硬盘盒RGB灯光的逆向工程驱动 - Phoronix\n\nLinux获得针对华硕ROG NVMe硬盘盒RGB灯光的逆向工程驱动\n\n2026年9月1日，美国东部时间下午12:28。\n\n如果你热衷于RGB灯光，如今甚至可以在NVMe外置硬盘盒上找到RGB LED，例如华硕ROG Strix Arion。现在，得益于逆向工程，Linux有了一个驱动程序，可以控制华硕ROG Strix Arion NVMe硬盘盒的RGB灯光。\n\n开源开发者梁浩文开发了“leds-asus-aura-scsi”作为Linux驱动程序，目前正在审查中，用于启用该外置NVMe M.2 SSD硬盘盒的RGB灯光控制。该硬盘盒作为普通USB大容量存储设备暴露，在Linux上正常工作，可提供典型功能。研究发现，RGB灯光可通过ENE控制器经由厂商SCSI命令进行控制。硬件上有四个独立可寻址的LED，现在可以通过Linux的LED sysfs接口进行操作。\n\n该驱动今日发布在Linux内核邮件列表上，作为请求评论（RFC）。这也是更广泛的ASUS Aura共享接口计划的一部分。我们将拭目以待，看看这款针对华硕ROG Strix Arion NVMe硬盘盒的RGB LED驱动何时能进入主线内核。\n\n对于那些好奇的人来说，ROG Strix Arion在亚马逊等平台上的零售价约为52美元（联盟链接），而它本身只是一款普通的NVMe硬盘盒。\n\nLinux 7.3为Moxa PCIe多端口串行板引入8250_mxpcie驱动\nRTL8723BS驱动继续主导Linux 7.3的暂存区活动\n来自英特尔或AMD之外的另一个x86咨询\nLinux 7.3 TPM为TrenchBoot进行清理准备\nLinux 7.3将开始检查USB-C线缆的Alt-Mode支持\nLinux 7.3 PCI代码添加咨询性非致命错误，支持Intel Dunlow\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动及其他主题。Michael也是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nWayland被发现“本质上比X11更快，但不一定更高效”\nLinux内核每版本接近2000个CVE\nDebian投票允许“负责任地使用生成式AI”\n加州通过AB-1856法案，为年龄验证提供开源救济\nReactOS 0.4.16发布，带来新的图形安装程序，更好的硬件支持\n来自英特尔或AMD之外的另一个x86咨询\n补丁提供更快的内核内Zstd，由于令人尴尬的低效\n英特尔工程师提议为Linux提供DRM Fabric\n\n在享受无广告浏览的同时，\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "7c655ccb656ab3def7e87231a49b41fc": {
+    "id": "7c655ccb656ab3def7e87231a49b41fc",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/lekuo-southbridge-max",
+    "title_en": "Lekuo SouthBridge Max Puts An AMD B650 Chipset Onto A PCIe Card For More I/O",
+    "summary_en": "For those looking at expanding the SATA, NVMe, and/or the USB/USB-C capabilities of your system, the Lekuo SouthBridge Max PB65MX3 is an interesting creation that I have been trying out. The Lekuo SouthBridge Max puts an AMD B650 chipset onto a low-profile PCIe add-in card to provide all of the above without any bifurcation required. Given that it's an AMD B650 chipset, it also \"just works\" nicely under Linux.",
+    "pub_date": "Tue, 01 Sep 2026 09:55:50 -0400",
+    "title_zh": "Lekuo SouthBridge Max 将 AMD B650 芯片组置于 PCIe 卡上以扩展 I/O",
+    "summary_zh": "Lekuo SouthBridge Max PB65MX3 是一款独特的 PCIe 扩展卡，将 AMD B650 芯片组集成到低矮型 PCIe 卡上，提供四个 M.2 NVMe 插槽、四个 SATA 3.0 端口、两个 10 Gbps USB-A 端口、一个 10 Gbps USB-C 端口和一个 20 Gbps USB-C 端口。该卡通过 PCIe 4.0 x4 接口连接，带宽共享，但 Linux 支持极佳，即插即用，无需额外驱动。适合需要扩展存储和 USB 接口的用户。",
+    "fulltext_zh": "Lekuo SouthBridge Max 将 AMD B650 芯片组置于 PCIe 卡上以扩展 I/O 评测 - Phoronix\n\nLekuo SouthBridge Max 将 AMD B650 芯片组置于 PCIe 卡上以扩展 I/O\n2026年9月1日 上午09:55（美国东部时间）\n\n对于那些希望扩展系统 SATA、NVMe 和/或 USB/USB-C 功能的用户来说，Lekuo SouthBridge Max PB65MX3 是一个有趣的创新产品，我一直在试用。Lekuo SouthBridge Max 将 AMD B650 芯片组集成到一块低矮型 PCIe 扩展卡上，无需任何拆分即可提供上述所有功能。由于采用 AMD B650 芯片组，它在 Linux 下也能“开箱即用”，表现良好。\n\n我很少对 PCIe 扩展卡感到兴奋或急于评测，但 Lekuo SouthBridge Max PB65MX3 通过使用 AMD B650 芯片组，为系统提供更多 SATA、NVMe 和 USB 连接，这是一个有趣的尝试。SouthBridge Max 提供四个 M.2 NVMe 插槽、四个 SATA 3.0 端口、两个 10 Gbps USB-A 端口、一个 10 Gbps USB-C 端口和一个 20 Gbps USB-C 端口。\n\n这四个 NVMe 插槽、四个 SATA 端口和四个 USB 接口都位于这块使用 PCIe 4.0 x4 接口的扩展卡上。因此，如果充分利用该设备的所有功能，它们将共享 PCIe 4.0 x4 接口的带宽，可能会受到带宽限制。同样，它支持 PCIe 4.0 而非 PCIe 5.0，具体取决于您计划使用的 NVMe SSD。\n\n如果连接多个设备到 SouthBridge Max，卡上有一个 6 针 PCIe 电源连接器，以确保充足的供电。\n\n即使带宽为 PCIe 4.0 x4，对于想要更多存储设备和额外 USB/USB-C 端口的用户来说，这仍然是一块有趣的扩展卡。最棒的是，使用 AMD B650，Linux 支持“开箱即用”，没有任何问题。连接 SATA 和 NVMe 驱动器的扩展卡以及 USB-A 和 USB-C 接口均无故障运行。通过 lspci 查看，系统上就像出现了一个 AMD 600 系列芯片组。这非常好，因为 AMD 芯片组驱动在 Linux 上经过了充分测试，无需处理其他测试较少的 ASIC，这些 ASIC 可能没有良好的 Linux 驱动支持，或者需要额外的树外模块/固件。SouthBridge Max 同样适用于 Windows 和 macOS。\n\nLekuo PB65MX3 套件包含低矮型卡、标准型和低矮型金属扩展挡板、用于 NVMe 驱动器的铜柱和螺丝，以及一份简单的用户手册。该扩展卡尺寸仅为 69 x 174 毫米。\n\nGentex PLACE Any Space PL1AS / PL1K 作为 Nest Protect 烟雾探测器的替代品\nMemryX MX3 M.2 模块以出色的软件体验提供出色的 AI 性能\nTOUPUWAN 30 槽笔记本电脑/平板电脑存储推车\n试用 JSAUX 的各种 Steam Deck 配件\nValve Steam Deck 扩展坞上手体验\nSpaceX Starlink 互联网体验与性能\n\n在享受无广告浏览的同时，\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "5f6d096af989453dc31121fc691fb31e": {
+    "id": "5f6d096af989453dc31121fc691fb31e",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/frame-is-a-new-linux-x11-server-written-entirely-in-assembly/",
+    "title_en": "Frame Is a New Linux X11 Server Written Entirely in Assembly",
+    "summary_en": "Frame is a new dependency-free X11 server written from scratch in x86-64 Assembly, using direct system calls, DRM/KMS, and evdev.\nThe post Frame Is a New Linux X11 Server Written Entirely in Assembly appeared first on Linux Today.",
+    "pub_date": "Tue, 01 Sep 2026 06:49:43 +0000",
+    "title_zh": "Frame：一个完全用汇编编写的全新Linux X11服务器",
+    "summary_zh": "Frame是一个全新的、无依赖的X11服务器，完全使用x86-64汇编语言从零编写，直接调用系统接口、DRM/KMS和evdev。该项目旨在提供一种极简、高性能的X11实现，适合对底层图形栈感兴趣的开发者。本文介绍了Frame的基本特点及其在Linux生态中的意义。",
+    "fulltext_zh": "Frame是一个全新的、无依赖的X11服务器，完全使用x86-64汇编语言从零编写，直接调用系统接口、DRM/KMS和evdev。\n\n该文章最初发表于Linux Today。"
+  },
+  "1c8283dc81b5f07dbbcb27494f92ed66": {
+    "id": "1c8283dc81b5f07dbbcb27494f92ed66",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/elon-to-open-source-xs-codebase-believe-it-when-git-happens/",
+    "title_en": "Elon to Open Source X’s Codebase. Believe It When Git Happens",
+    "summary_en": "Elon Musk says X will open source its entire codebase after a security review, promising third-party verification amid skepticism over past transparency efforts.\nThe post Elon to Open Source X’s Codebase. Believe It When Git Happens appeared first on Linux Today.",
+    "pub_date": "Tue, 01 Sep 2026 06:48:35 +0000",
+    "title_zh": "埃隆将开源X的代码库。等Git提交了再信",
+    "summary_zh": "埃隆·马斯克表示，在安全审查之后，X将开源其整个代码库，并承诺由第三方进行验证。然而，鉴于过去在透明度方面的努力并不令人满意，外界对此持怀疑态度。",
+    "fulltext_zh": "埃隆·马斯克表示，X将在安全审查之后开源其整个代码库，并承诺由第三方进行验证，尽管外界对其过去的透明度努力持怀疑态度。\n\n这篇题为“埃隆将开源X的代码库。等Git提交了再信”的文章最初出现在Linux Today上。"
+  },
+  "e06abe728cfc461438f611409d2a4344": {
+    "id": "e06abe728cfc461438f611409d2a4344",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/perplexity-unveils-space-a-secure-sandbox-platform-for-ai-agents/",
+    "title_en": "Perplexity Unveils SPACE, a Secure Sandbox Platform for AI Agents",
+    "summary_en": "Perplexity unveils SPACE, a secure sandbox platform using Firecracker microVMs to isolate code, files, credentials, and long-running AI agent workflows.\nThe post Perplexity Unveils SPACE, a Secure Sandbox Platform for AI Agents appeared first on Linux Today.",
+    "pub_date": "Tue, 01 Sep 2026 06:47:16 +0000",
+    "title_zh": "Perplexity 推出 SPACE，一个面向 AI 代理的安全沙箱平台",
+    "summary_zh": "Perplexity 发布了 SPACE，一个基于 Firecracker 微虚拟机技术的安全沙箱平台，旨在隔离代码、文件、凭据以及长时间运行的 AI 代理工作流。该平台通过轻量级虚拟化提供强隔离性，确保 AI 代理在执行任务时不会影响宿主系统或其他工作负载。SPACE 的推出标志着 Perplexity 在 AI 安全与可靠性方面的进一步投入，为开发者提供了更安全的执行环境。",
+    "fulltext_zh": "Perplexity 推出了 SPACE，一个使用 Firecracker 微虚拟机来隔离代码、文件、凭据以及长时间运行的 AI 代理工作流的安全沙箱平台。\n\n该文章 Perplexity Unveils SPACE, a Secure Sandbox Platform for AI Agents 首次出现在 Linux Today 上。"
+  },
+  "3ce2eaedc60ae6e12507680bba722bff": {
+    "id": "3ce2eaedc60ae6e12507680bba722bff",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/building-an-arch-linux-aarch64-port-for-holo-core/",
+    "title_en": "Building an Arch Linux aarch64 port for Holo Core",
+    "summary_en": "Explore how Collabora and Valve are building Holo Core, a pure Arch Linux aarch64 port with reproducible CI tooling for the Steam Frame.\nThe post Building an Arch Linux aarch64 port for Holo Core appeared first on Linux Today.",
+    "pub_date": "Tue, 01 Sep 2026 06:46:18 +0000",
+    "title_zh": "为Holo Core构建Arch Linux aarch64移植版",
+    "summary_zh": "本文介绍了Collabora与Valve合作，为Steam Frame构建Holo Core的过程。Holo Core是一个纯Arch Linux aarch64移植版，采用可复现的CI工具链。文章探讨了该项目的技术细节、构建流程及其对Steam生态的意义。",
+    "fulltext_zh": "探索Collabora和Valve如何构建Holo Core，这是一个纯Arch Linux aarch64移植版，配备可复现的CI工具链，用于Steam Frame。\n\n《为Holo Core构建Arch Linux aarch64移植版》一文首发于Linux Today。"
+  },
+  "350871eae7723416ce4339493cd7e2dc": {
+    "id": "350871eae7723416ce4339493cd7e2dc",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/linux-patches-keep-1980s-90s-macs-spinning-their-floppies/",
+    "title_en": "Linux Patches Keep 1980s–90s Macs Spinning Their Floppies",
+    "summary_en": "New kernel patches improve floppy drive support on vintage 1980s and 1990s Macs, bringing fixes to the SWIM driver for aging Apple hardware.\nThe post Linux Patches Keep 1980s–90s Macs Spinning Their Floppies appeared first on Linux Today.",
+    "pub_date": "Tue, 01 Sep 2026 06:45:12 +0000",
+    "title_zh": "Linux补丁让上世纪80-90年代Mac的软驱继续转动",
+    "summary_zh": "最新的Linux内核补丁增强了对上世纪80年代和90年代经典Mac机型的软驱支持，修复了SWIM驱动中的问题，使这些老旧的Apple硬件能够继续使用软盘。该补丁针对SWIM驱动进行了优化，解决了老化硬件在读取软盘时可能遇到的兼容性问题，延长了这些复古设备的使用寿命。",
+    "fulltext_zh": "新的内核补丁增强了对上世纪80年代和90年代经典Mac机型的软驱支持，为老化的Apple硬件带来了SWIM驱动的修复。\n\n该文章《Linux补丁让上世纪80-90年代Mac的软驱继续转动》最初出现在Linux Today上。"
   }
 }

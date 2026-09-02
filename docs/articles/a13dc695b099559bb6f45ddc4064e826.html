@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI爬虫正在榨干Linux内核仓库的计算资源 — Linux 中文速报</title>
+<title>Firefox 155 新增两项改进，加速网页浏览 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
+    <span class="tag">软件应用</span>
     <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>AI爬虫正在榨干Linux内核仓库的计算资源</h1>
+  <h1>Firefox 155 新增两项改进，加速网页浏览</h1>
 
-  <div class="article-summary">Linux内核仓库正遭受AI爬虫的猛烈攻击，这些爬虫通过cgit页面反复抓取提交历史，消耗了约20%的计算能力。Linux基金会IT基础设施安全总监Konstantin Ryabitsev指出，一次常规克隆仅需200 CPU秒，而通过cgit页面抓取同样数据需280 CPU小时，成本高出数百万倍。尽管采取了IP封锁、验证码等措施，爬虫仍通过分布式IP绕过。他预测AI泡沫破裂后，此类流量将大幅减少，并希望爬虫能停止这种低效抓取行为。</div>
+  <div class="article-summary">Firefox 155 作为最新稳定版发布，带来了两项关键技术改进：支持 QUIC v2 和 Happy Eyeballs v3。前者优化了 HTTP/3 连接，减少握手往返次数；后者通过并行尝试多种网络路径，加快网页加载速度。此外，Firefox 155 是唯一支持完整版 uBlock Origin 的非 Chromium 浏览器，因为谷歌已从 Chrome 商店移除该扩展。其他新功能包括 AI 聊天机器人集成（限美、加、法用户）、地址栏显示被拦截跟踪器数量等。Linux 用户可通过官方仓库或 Mozilla 服务器下载更新。</div>
 
-  <div class="article-body"><p>AI爬虫正在榨干Linux内核仓库的计算资源</p><p>相比之下，每天访问该仓库的六百万请求中，可能只有约2%来自人类。</p><p>如果过去几周的情况能说明什么，那就是越来越多的开源项目正在划定界限，决定在AI进入其工作流程和代码库之前，能容忍多少AI。</p><p>在项目贡献方面，而Rust则采用了将AI基本排除在实际代码之外的策略。这两个项目都解决了同一个根本问题。</p><p>而现在，Linux——全球最大的开源项目之一——正遭受大量AI驱动的爬虫的猛烈攻击，这些爬虫反复发送相同的请求，烧毁计算能力。</p><p>顺便说一句，其中大部分与任何人实际编写代码无关。🙃</p><p>Linux基金会的Konstantin Ryabitsev终于将他一直以来的抱怨公开化了。在90个CPU核心中，有14个分布在五个节点上，每时每刻都在将提交转换为HTML页面。</p><p>从外部看，你可能会想：这有什么问题？</p><p>Linux历史中的每一次提交都是公开的，可以自由克隆，并且早于现在抓取它的AI工具浪潮。</p><p>你看，所有这些特征恰恰使该仓库成为“学习数据的金矿”。它包含了主线内核树、可追溯多年的每个稳定发布分支、数十个子系统维护者树，甚至还有来自前git时代的历史。</p><p>真正荒谬的是这些爬虫进行抓取的方式。</p><p>来源：Konstantin Ryabitsev。</p><p>Konstantin对此进行了计算，发现常规克隆一次，在本地遍历整个提交历史，大约需要200 CPU秒的服务器时间。而通过cgit的单个页面抓取同样的148万次提交，则需要消耗280 CPU小时。</p><p>（如果你想了解这两种CPU时间单位的关系，可以自行换算。）</p><p>对服务器上托管的922个分支中的每一个进行同样的抓取，总成本将膨胀到惊人的程度，大约是单次克隆的460万倍。</p><p>而这一切只是为了获取一份更差的数据副本，而这些数据本来就可以免费获取。</p><p>这还不算cgit为每个补丁、差异和纯文本视图提供的单独URL，这使得单个分支暴露的页面数量达到千万亿级别。</p><p>封锁它们变成了一场军备竞赛。IP封锁一度有效，直到机器人扩散到整个子网。验证码封锁也曾有效，直到数百万住宅和移动IP接管。接下来是挑战墙，作为机器人必须解决的障碍。它奏效了一段时间，直到爬虫开始解决越来越难的挑战。</p><p>在总结中，Konstantin指出：</p><p>“然而，你应该知道，在5个地理分布节点的总共90个核心中，有14-16个核心一直在做渲染提交给爬虫的工作。平均而言，这是我们全部容量的20%——但爬虫群是波浪式来袭的，实际图表比20%的平直线要尖峰得多。”</p><p>他进一步推测，当AI泡沫破裂时，项目将很快看到大量“爬虫流量”的减少——这是他给爬虫贴的标签。</p><p>尽管他也希望它们能“消失”，并停止以“最糟糕的方式”抓取他们的数据。</p><p>如果你不知道Konstantin是谁，他是Linux基金会IT基础设施安全总监，也是维护Linux内核基础设施的系统管理员之一。</p><p>AI本质上是贪婪的。</p><p>这种计算浪费并非Linux独有，但它是我们目前看到的最清晰的例子。喂养一个模型意味着在那些本可以以极小成本完成的任务上烧掉大量周期，而现在，构建这些系统的人似乎并不在意这笔账。</p><p>这些系统似乎只知道一种方法，那就是普通亿万富翁的运行方式——比如一个虚构的亿万富翁。已经拥有足够多了，还想要更多，并不特别在乎如何得到。</p></div>
+  <div class="article-body"><p>Firefox 155 新增两项改进，加速网页浏览</p><p>除了速度更快，Firefox 155 还是唯一支持 uBlock Origin 的非 Chromium 浏览器，因为谷歌昨天已将其移除。</p><p>以非常低调的方式，Firefox 155 作为这款注重隐私的流行网络浏览器的最新稳定版已经到来。</p><p>虽然此版本包含一系列改进，但我们将重点关注两项改变 Firefox 处理网页加载方式的技术改进。</p><p>HTTP/3 的 QUIC v2 支持</p><p>Firefox 现在不再只测试一条路径并希望它有效，而是同时尝试多种方式访问网站，并选择最先响应的那个。无需开启任何设置，也无需配置。你只会注意到，当 Firefox 在寻找真正连接到网站的方法时，那些一直加载不出来的页面变少了。</p><p>你看，每次 Firefox 加载页面时，它首先必须决定如何到达其背后的服务器。而且通常有不止一种选择：IPv4 地址、IPv6 地址，有时两者都有，并且根据网站的不同，还可以在 HTTP/2 和更新的 HTTP/3 之间选择。旧版 Firefox 会选择一个选项，然后等待看它是否有效，再尝试下一个，因此如果第一次猜测缓慢或失败，页面就会一直停留在那里而不加载。</p><p>Happy Eyeballs v3 改变了这一点。Firefox 会同时沿多条路径发起连接尝试，并采用最先到达的那条，而不是在开始时只提交一个猜测。</p><p>官方来说，Happy Eyeballs v3 是一个互联网草案，而非最终 RFC，由苹果和谷歌的工程师编写。Mozilla 自己针对此版本的开发者说明将该功能描述为“目前仅在某些平台上支持”，但没有指明是哪些平台。</p><p>QUIC v2 是当今网站加载速度背后的关键技术之一，Firefox 155 增加了对“稍新版本”的支持。真正重要的不是新版本本身，而是 Firefox 可以“立即切换”到它，跳过了两台计算机在无法立即就使用哪个版本达成一致时通常发生的来回协商。</p><p>这种来回协商过去常常需要额外的一次互联网往返。现在不需要了。</p><p>HTTP/3 是在浏览器和网站之间传输数据的最新协议版本，它运行在 QUIC 上，而不是较旧的 TCP 上。通过 QUIC 建立安全连接只需一次往返，而不是多次，这是 HTTP/3 在不稳定连接上感觉更快的重要原因。</p><p>这是切换的最佳时机</p><p>安装了 uBlock Origin 的 Firefox。</p><p>这是切换到 Firefox 的最佳时机。uBlock Origin 的完整版自 2025 年 7 月谷歌禁用 Manifest V2 以来在 Chrome 上一直无法使用，而昨天谷歌将其从 Chrome 网上应用店完全移除。</p><p>当然，Firefox 从未真正受到谷歌行为的影响，一直支持完整的 uBlock Origin 体验，其广告拦截能力没有任何削弱。你可以通过官方发布页面获取其最新版本。</p><p>Firefox 155 版本还有许多其他新增功能，包括 AI 聊天机器人集成（仅限居住在美国、加拿大或法国的用户）、地址栏中显示被拦截的跟踪器数量，以及重新排序容器的功能。这些都可能进一步促使你从 Chrome 或其他基于 Chromium 的浏览器切换过来。</p><p>Firefox 155 的二进制文件已经可用，不过官方下载页面尚未更新到新版本；应该很快就会更新。如果你等不及，想现在就获取此版本，虽然我建议等待，但你可以直接下载。</p><p>你的 Linux 发行版应该很快就会提供新版本。最好通过官方发行版方式获取更新。</p><p>Mozilla 服务器已经有适用于 Linux 的 155.0 构建版本。记得选择正确的平台和语言选项，以获取适合你电脑配置的软件包。</p><p>在我的 Ubuntu 系统上，我选择了：</p><p>linux-x86_64 &gt; en-US &gt; firefox-155.0.deb</p><p>喜欢这次更新吗？支持独立的 Linux 新闻报道。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立，不受商业影响。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/linux-kernel-repo-ai-overrun/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/firefox-155-faster-page-loads/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

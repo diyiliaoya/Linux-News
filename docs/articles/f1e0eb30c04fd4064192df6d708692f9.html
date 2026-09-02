@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI爬虫正在榨干Linux内核仓库的计算资源 — Linux 中文速报</title>
+<title>发行版发布：Linux From Scratch 13.1 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">DistroWatch</span>
   </div>
 
-  <h1>AI爬虫正在榨干Linux内核仓库的计算资源</h1>
+  <h1>发行版发布：Linux From Scratch 13.1</h1>
 
-  <div class="article-summary">Linux内核仓库正遭受AI爬虫的猛烈攻击，这些爬虫通过cgit页面反复抓取提交历史，消耗了约20%的计算能力。Linux基金会IT基础设施安全总监Konstantin Ryabitsev指出，一次常规克隆仅需200 CPU秒，而通过cgit页面抓取同样数据需280 CPU小时，成本高出数百万倍。尽管采取了IP封锁、验证码等措施，爬虫仍通过分布式IP绕过。他预测AI泡沫破裂后，此类流量将大幅减少，并希望爬虫能停止这种低效抓取行为。</div>
+  <div class="article-summary">Linux From Scratch（LFS）项目宣布发布13.1版本，该文档指导用户从源代码构建自己的Linux发行版。此版本包含Linux内核7.1.8、glibc 2.44和GCC 16.2.0，工具链更新至Binutils 2.47，共更新或新增46个软件包。安全更新涉及attr、acl、expat、glibc、Linux内核、Python、systemd、util-linux、vim和zlib。自上一稳定版以来，LFS已有超过200次提交。Beyond Linux From Scratch（BLFS）尚未更新至13.1，仍以12.4为最新版本。</div>
 
-  <div class="article-body"><p>AI爬虫正在榨干Linux内核仓库的计算资源</p><p>相比之下，每天访问该仓库的六百万请求中，可能只有约2%来自人类。</p><p>如果过去几周的情况能说明什么，那就是越来越多的开源项目正在划定界限，决定在AI进入其工作流程和代码库之前，能容忍多少AI。</p><p>在项目贡献方面，而Rust则采用了将AI基本排除在实际代码之外的策略。这两个项目都解决了同一个根本问题。</p><p>而现在，Linux——全球最大的开源项目之一——正遭受大量AI驱动的爬虫的猛烈攻击，这些爬虫反复发送相同的请求，烧毁计算能力。</p><p>顺便说一句，其中大部分与任何人实际编写代码无关。🙃</p><p>Linux基金会的Konstantin Ryabitsev终于将他一直以来的抱怨公开化了。在90个CPU核心中，有14个分布在五个节点上，每时每刻都在将提交转换为HTML页面。</p><p>从外部看，你可能会想：这有什么问题？</p><p>Linux历史中的每一次提交都是公开的，可以自由克隆，并且早于现在抓取它的AI工具浪潮。</p><p>你看，所有这些特征恰恰使该仓库成为“学习数据的金矿”。它包含了主线内核树、可追溯多年的每个稳定发布分支、数十个子系统维护者树，甚至还有来自前git时代的历史。</p><p>真正荒谬的是这些爬虫进行抓取的方式。</p><p>来源：Konstantin Ryabitsev。</p><p>Konstantin对此进行了计算，发现常规克隆一次，在本地遍历整个提交历史，大约需要200 CPU秒的服务器时间。而通过cgit的单个页面抓取同样的148万次提交，则需要消耗280 CPU小时。</p><p>（如果你想了解这两种CPU时间单位的关系，可以自行换算。）</p><p>对服务器上托管的922个分支中的每一个进行同样的抓取，总成本将膨胀到惊人的程度，大约是单次克隆的460万倍。</p><p>而这一切只是为了获取一份更差的数据副本，而这些数据本来就可以免费获取。</p><p>这还不算cgit为每个补丁、差异和纯文本视图提供的单独URL，这使得单个分支暴露的页面数量达到千万亿级别。</p><p>封锁它们变成了一场军备竞赛。IP封锁一度有效，直到机器人扩散到整个子网。验证码封锁也曾有效，直到数百万住宅和移动IP接管。接下来是挑战墙，作为机器人必须解决的障碍。它奏效了一段时间，直到爬虫开始解决越来越难的挑战。</p><p>在总结中，Konstantin指出：</p><p>“然而，你应该知道，在5个地理分布节点的总共90个核心中，有14-16个核心一直在做渲染提交给爬虫的工作。平均而言，这是我们全部容量的20%——但爬虫群是波浪式来袭的，实际图表比20%的平直线要尖峰得多。”</p><p>他进一步推测，当AI泡沫破裂时，项目将很快看到大量“爬虫流量”的减少——这是他给爬虫贴的标签。</p><p>尽管他也希望它们能“消失”，并停止以“最糟糕的方式”抓取他们的数据。</p><p>如果你不知道Konstantin是谁，他是Linux基金会IT基础设施安全总监，也是维护Linux内核基础设施的系统管理员之一。</p><p>AI本质上是贪婪的。</p><p>这种计算浪费并非Linux独有，但它是我们目前看到的最清晰的例子。喂养一个模型意味着在那些本可以以极小成本完成的任务上烧掉大量周期，而现在，构建这些系统的人似乎并不在意这笔账。</p><p>这些系统似乎只知道一种方法，那就是普通亿万富翁的运行方式——比如一个虚构的亿万富翁。已经拥有足够多了，还想要更多，并不特别在乎如何得到。</p></div>
+  <div class="article-body"><p>发行版发布：Linux From Scratch 13.1</p><p>Linux From Scratch（LFS）项目宣布发布Linux From Scratch 13.1，该文档将帮助人们从源代码构建自己的发行版。此版本的LFS包含Linux内核7.1.8、glibc 2.44和GCC 16.2.0。</p><p>“Linux From Scratch社区宣布发布LFS 13.1版本。主要变更包括工具链更新至Binutils 2.47、GCC 16.2.0和glibc 2.44。自上次发布以来，共有46个软件包被更新或新增。全书文本也进行了多处修改。Linux内核已更新至7.1.8版本。包含安全更新的软件包有attr、acl、expat、glibc、Linux内核、Python、systemd、util-linux、vim和zlib。详情请参阅安全公告页面。总体而言，自上一稳定版书籍以来，LFS已有超过200次提交。”</p><p>请访问项目页面阅读简短的发布公告。Linux From Scratch和Beyond Linux From Scratch书籍可在项目页面上找到。请注意，Beyond Linux From Scratch（BLFS）书籍尚未更新至13.1版本，因此12.4仍为最新的BLFS书籍。</p><p>最近相关新闻和发布：</p><p>- 发行版发布：Linux From Scratch 13.1</p><p>- 发行版发布：Linux From Scratch 13.0</p><p>- 发行版发布：Linux From Scratch 12.4</p><p>- 发行版发布：Linux From Scratch 12.3</p><p>- 发行版发布：Linux From Scratch 12.2</p><p>- 发行版发布：Linux From Scratch 12.1</p><p>关于Linux From Scratch：</p><p>Linux From Scratch（LFS）是一个项目，提供构建自定义Linux系统所需的步骤。人们想要安装LFS系统有很多原因。大多数人提出的问题是：“既然你可以直接下载现有的发行版，如Debian或Redhat，为什么还要费心手动从零开始安装Linux系统？”这是一个合理的问题，我希望为你解答。最重要的原因是……</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/linux-kernel-repo-ai-overrun/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://distrowatch.com/12943" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

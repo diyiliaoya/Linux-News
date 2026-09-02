@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI爬虫正在榨干Linux内核仓库的计算资源 — Linux 中文速报</title>
+<title>WinBtrfs 1.10 发布：两年改进成果助力 Windows 上的 Btrfs — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>AI爬虫正在榨干Linux内核仓库的计算资源</h1>
+  <h1>WinBtrfs 1.10 发布：两年改进成果助力 Windows 上的 Btrfs</h1>
 
-  <div class="article-summary">Linux内核仓库正遭受AI爬虫的猛烈攻击，这些爬虫通过cgit页面反复抓取提交历史，消耗了约20%的计算能力。Linux基金会IT基础设施安全总监Konstantin Ryabitsev指出，一次常规克隆仅需200 CPU秒，而通过cgit页面抓取同样数据需280 CPU小时，成本高出数百万倍。尽管采取了IP封锁、验证码等措施，爬虫仍通过分布式IP绕过。他预测AI泡沫破裂后，此类流量将大幅减少，并希望爬虫能停止这种低效抓取行为。</div>
+  <div class="article-summary">WinBtrfs 1.10 发布，这是两年多来首次重大更新，为 Windows 系统上的 Btrfs 文件系统带来了多项新特性和错误修复。新版本支持写入空闲空间位图和压缩内联文件，改进了可移动设备的处理、内存不足或磁盘空间不足时的错误恢复，并修复了多个崩溃问题，包括在子卷间移动文件、大量文件同时创建（如 Steam 客户端）等场景。此外，开发团队提到使用 Claude 辅助漏洞查找和代码审查，但所有代码均由人工编写。</div>
 
-  <div class="article-body"><p>AI爬虫正在榨干Linux内核仓库的计算资源</p><p>相比之下，每天访问该仓库的六百万请求中，可能只有约2%来自人类。</p><p>如果过去几周的情况能说明什么，那就是越来越多的开源项目正在划定界限，决定在AI进入其工作流程和代码库之前，能容忍多少AI。</p><p>在项目贡献方面，而Rust则采用了将AI基本排除在实际代码之外的策略。这两个项目都解决了同一个根本问题。</p><p>而现在，Linux——全球最大的开源项目之一——正遭受大量AI驱动的爬虫的猛烈攻击，这些爬虫反复发送相同的请求，烧毁计算能力。</p><p>顺便说一句，其中大部分与任何人实际编写代码无关。🙃</p><p>Linux基金会的Konstantin Ryabitsev终于将他一直以来的抱怨公开化了。在90个CPU核心中，有14个分布在五个节点上，每时每刻都在将提交转换为HTML页面。</p><p>从外部看，你可能会想：这有什么问题？</p><p>Linux历史中的每一次提交都是公开的，可以自由克隆，并且早于现在抓取它的AI工具浪潮。</p><p>你看，所有这些特征恰恰使该仓库成为“学习数据的金矿”。它包含了主线内核树、可追溯多年的每个稳定发布分支、数十个子系统维护者树，甚至还有来自前git时代的历史。</p><p>真正荒谬的是这些爬虫进行抓取的方式。</p><p>来源：Konstantin Ryabitsev。</p><p>Konstantin对此进行了计算，发现常规克隆一次，在本地遍历整个提交历史，大约需要200 CPU秒的服务器时间。而通过cgit的单个页面抓取同样的148万次提交，则需要消耗280 CPU小时。</p><p>（如果你想了解这两种CPU时间单位的关系，可以自行换算。）</p><p>对服务器上托管的922个分支中的每一个进行同样的抓取，总成本将膨胀到惊人的程度，大约是单次克隆的460万倍。</p><p>而这一切只是为了获取一份更差的数据副本，而这些数据本来就可以免费获取。</p><p>这还不算cgit为每个补丁、差异和纯文本视图提供的单独URL，这使得单个分支暴露的页面数量达到千万亿级别。</p><p>封锁它们变成了一场军备竞赛。IP封锁一度有效，直到机器人扩散到整个子网。验证码封锁也曾有效，直到数百万住宅和移动IP接管。接下来是挑战墙，作为机器人必须解决的障碍。它奏效了一段时间，直到爬虫开始解决越来越难的挑战。</p><p>在总结中，Konstantin指出：</p><p>“然而，你应该知道，在5个地理分布节点的总共90个核心中，有14-16个核心一直在做渲染提交给爬虫的工作。平均而言，这是我们全部容量的20%——但爬虫群是波浪式来袭的，实际图表比20%的平直线要尖峰得多。”</p><p>他进一步推测，当AI泡沫破裂时，项目将很快看到大量“爬虫流量”的减少——这是他给爬虫贴的标签。</p><p>尽管他也希望它们能“消失”，并停止以“最糟糕的方式”抓取他们的数据。</p><p>如果你不知道Konstantin是谁，他是Linux基金会IT基础设施安全总监，也是维护Linux内核基础设施的系统管理员之一。</p><p>AI本质上是贪婪的。</p><p>这种计算浪费并非Linux独有，但它是我们目前看到的最清晰的例子。喂养一个模型意味着在那些本可以以极小成本完成的任务上烧掉大量周期，而现在，构建这些系统的人似乎并不在意这笔账。</p><p>这些系统似乎只知道一种方法，那就是普通亿万富翁的运行方式——比如一个虚构的亿万富翁。已经拥有足够多了，还想要更多，并不特别在乎如何得到。</p></div>
+  <div class="article-body"><p>WinBtrfs 1.10 发布：两年改进成果助力 Windows 上的 Btrfs - Phoronix</p><p>WinBtrfs 1.10 发布：两年改进成果助力 Windows 上的 Btrfs</p><p>2026年9月1日，下午5:57（美国东部时间）</p><p>WinBtrfs 是一个用于 Microsoft Windows 的驱动程序，支持对 Btrfs 文件系统进行读写操作。WinBtrfs 支持 Windows XP 及更高版本。该项目已有两年多没有发布新版本，但现在推出了一次重大功能更新，结合了新功能和错误修复。</p><p>WinBtrfs 1.10 于今天发布，现在支持写入空闲空间位图以及写入压缩内联文件：这两个功能在 WinBtrfs 上此前已具备读取支持。新的 WinBtrfs 版本还改进了对可移动设备的处理，增强了在内存不足或磁盘空间不足时的错误恢复能力，并进行了多种不同的错误修复。</p><p>WinBtrfs 1.10 的修复包括：在子卷之间移动文件时可能出现的崩溃；同时创建大量文件（如 Steam 客户端中观察到的情况）时的崩溃；预分配问题现已解决；多设备卷的磁盘使用统计；以及其他修复。</p><p>WinBtrfs 1.10 的发布公告还提到，Claude 被用于漏洞查找，并证明不仅在漏洞查找方面，而且在代码审查方面都“帮助很大”。不过，WinBtrfs 1.10 的代码全部由人工编写，未使用人工智能。</p><p>除了在 Microsoft Windows 上提供 Btrfs 支持外，WinBtrfs 也被 ReactOS 用于其 Btrfs 读写支持：</p><p>想要尝试 WinBtrfs 1.10 的用户可以通过以下方式获取：</p><p>F2FS 在 Linux 7.3 中现在支持多设备并行刷新</p><p>Linux 7.3 UBI 增加对每设备磨损均衡阈值的支持</p><p>Chris Mason 卸任 Btrfs 联合维护者，离开 Meta</p><p>Linux 7.3 为块设备增加 RWF_DONTCACHE 支持</p><p>Linux 7.3 的 NFS 改进</p><p>Linux 7.3 KSMBD 增加对 Apple Time Machine 备份的互操作性</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>Wayland 被发现“本质上比 X11 更快，但未必更高效”</p><p>Linux 内核每个版本接近 2000 个 CVE</p><p>Debian 投票允许“负责任地使用生成式 AI”</p><p>加州通过 AB-1856 法案，为年龄验证提供开源救济</p><p>ReactOS 0.4.16 发布，带来新的图形安装程序和更好的硬件支持</p><p>来自 Intel 或 AMD 以外的实体的另一份 x86 公告</p><p>补丁大幅提升内核内 Zstd 性能，解决令人尴尬的低效问题</p><p>Intel 工程师提议为 Linux 提供 DRM Fabric</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/linux-kernel-repo-ai-overrun/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/WinBtrfs-1.10" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

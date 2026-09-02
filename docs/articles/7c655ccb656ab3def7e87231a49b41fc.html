@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI爬虫正在榨干Linux内核仓库的计算资源 — Linux 中文速报</title>
+<title>Lekuo SouthBridge Max 将 AMD B650 芯片组置于 PCIe 卡上以扩展 I/O — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>AI爬虫正在榨干Linux内核仓库的计算资源</h1>
+  <h1>Lekuo SouthBridge Max 将 AMD B650 芯片组置于 PCIe 卡上以扩展 I/O</h1>
 
-  <div class="article-summary">Linux内核仓库正遭受AI爬虫的猛烈攻击，这些爬虫通过cgit页面反复抓取提交历史，消耗了约20%的计算能力。Linux基金会IT基础设施安全总监Konstantin Ryabitsev指出，一次常规克隆仅需200 CPU秒，而通过cgit页面抓取同样数据需280 CPU小时，成本高出数百万倍。尽管采取了IP封锁、验证码等措施，爬虫仍通过分布式IP绕过。他预测AI泡沫破裂后，此类流量将大幅减少，并希望爬虫能停止这种低效抓取行为。</div>
+  <div class="article-summary">Lekuo SouthBridge Max PB65MX3 是一款独特的 PCIe 扩展卡，将 AMD B650 芯片组集成到低矮型 PCIe 卡上，提供四个 M.2 NVMe 插槽、四个 SATA 3.0 端口、两个 10 Gbps USB-A 端口、一个 10 Gbps USB-C 端口和一个 20 Gbps USB-C 端口。该卡通过 PCIe 4.0 x4 接口连接，带宽共享，但 Linux 支持极佳，即插即用，无需额外驱动。适合需要扩展存储和 USB 接口的用户。</div>
 
-  <div class="article-body"><p>AI爬虫正在榨干Linux内核仓库的计算资源</p><p>相比之下，每天访问该仓库的六百万请求中，可能只有约2%来自人类。</p><p>如果过去几周的情况能说明什么，那就是越来越多的开源项目正在划定界限，决定在AI进入其工作流程和代码库之前，能容忍多少AI。</p><p>在项目贡献方面，而Rust则采用了将AI基本排除在实际代码之外的策略。这两个项目都解决了同一个根本问题。</p><p>而现在，Linux——全球最大的开源项目之一——正遭受大量AI驱动的爬虫的猛烈攻击，这些爬虫反复发送相同的请求，烧毁计算能力。</p><p>顺便说一句，其中大部分与任何人实际编写代码无关。🙃</p><p>Linux基金会的Konstantin Ryabitsev终于将他一直以来的抱怨公开化了。在90个CPU核心中，有14个分布在五个节点上，每时每刻都在将提交转换为HTML页面。</p><p>从外部看，你可能会想：这有什么问题？</p><p>Linux历史中的每一次提交都是公开的，可以自由克隆，并且早于现在抓取它的AI工具浪潮。</p><p>你看，所有这些特征恰恰使该仓库成为“学习数据的金矿”。它包含了主线内核树、可追溯多年的每个稳定发布分支、数十个子系统维护者树，甚至还有来自前git时代的历史。</p><p>真正荒谬的是这些爬虫进行抓取的方式。</p><p>来源：Konstantin Ryabitsev。</p><p>Konstantin对此进行了计算，发现常规克隆一次，在本地遍历整个提交历史，大约需要200 CPU秒的服务器时间。而通过cgit的单个页面抓取同样的148万次提交，则需要消耗280 CPU小时。</p><p>（如果你想了解这两种CPU时间单位的关系，可以自行换算。）</p><p>对服务器上托管的922个分支中的每一个进行同样的抓取，总成本将膨胀到惊人的程度，大约是单次克隆的460万倍。</p><p>而这一切只是为了获取一份更差的数据副本，而这些数据本来就可以免费获取。</p><p>这还不算cgit为每个补丁、差异和纯文本视图提供的单独URL，这使得单个分支暴露的页面数量达到千万亿级别。</p><p>封锁它们变成了一场军备竞赛。IP封锁一度有效，直到机器人扩散到整个子网。验证码封锁也曾有效，直到数百万住宅和移动IP接管。接下来是挑战墙，作为机器人必须解决的障碍。它奏效了一段时间，直到爬虫开始解决越来越难的挑战。</p><p>在总结中，Konstantin指出：</p><p>“然而，你应该知道，在5个地理分布节点的总共90个核心中，有14-16个核心一直在做渲染提交给爬虫的工作。平均而言，这是我们全部容量的20%——但爬虫群是波浪式来袭的，实际图表比20%的平直线要尖峰得多。”</p><p>他进一步推测，当AI泡沫破裂时，项目将很快看到大量“爬虫流量”的减少——这是他给爬虫贴的标签。</p><p>尽管他也希望它们能“消失”，并停止以“最糟糕的方式”抓取他们的数据。</p><p>如果你不知道Konstantin是谁，他是Linux基金会IT基础设施安全总监，也是维护Linux内核基础设施的系统管理员之一。</p><p>AI本质上是贪婪的。</p><p>这种计算浪费并非Linux独有，但它是我们目前看到的最清晰的例子。喂养一个模型意味着在那些本可以以极小成本完成的任务上烧掉大量周期，而现在，构建这些系统的人似乎并不在意这笔账。</p><p>这些系统似乎只知道一种方法，那就是普通亿万富翁的运行方式——比如一个虚构的亿万富翁。已经拥有足够多了，还想要更多，并不特别在乎如何得到。</p></div>
+  <div class="article-body"><p>Lekuo SouthBridge Max 将 AMD B650 芯片组置于 PCIe 卡上以扩展 I/O 评测 - Phoronix</p><p>Lekuo SouthBridge Max 将 AMD B650 芯片组置于 PCIe 卡上以扩展 I/O</p><p>2026年9月1日 上午09:55（美国东部时间）</p><p>对于那些希望扩展系统 SATA、NVMe 和/或 USB/USB-C 功能的用户来说，Lekuo SouthBridge Max PB65MX3 是一个有趣的创新产品，我一直在试用。Lekuo SouthBridge Max 将 AMD B650 芯片组集成到一块低矮型 PCIe 扩展卡上，无需任何拆分即可提供上述所有功能。由于采用 AMD B650 芯片组，它在 Linux 下也能“开箱即用”，表现良好。</p><p>我很少对 PCIe 扩展卡感到兴奋或急于评测，但 Lekuo SouthBridge Max PB65MX3 通过使用 AMD B650 芯片组，为系统提供更多 SATA、NVMe 和 USB 连接，这是一个有趣的尝试。SouthBridge Max 提供四个 M.2 NVMe 插槽、四个 SATA 3.0 端口、两个 10 Gbps USB-A 端口、一个 10 Gbps USB-C 端口和一个 20 Gbps USB-C 端口。</p><p>这四个 NVMe 插槽、四个 SATA 端口和四个 USB 接口都位于这块使用 PCIe 4.0 x4 接口的扩展卡上。因此，如果充分利用该设备的所有功能，它们将共享 PCIe 4.0 x4 接口的带宽，可能会受到带宽限制。同样，它支持 PCIe 4.0 而非 PCIe 5.0，具体取决于您计划使用的 NVMe SSD。</p><p>如果连接多个设备到 SouthBridge Max，卡上有一个 6 针 PCIe 电源连接器，以确保充足的供电。</p><p>即使带宽为 PCIe 4.0 x4，对于想要更多存储设备和额外 USB/USB-C 端口的用户来说，这仍然是一块有趣的扩展卡。最棒的是，使用 AMD B650，Linux 支持“开箱即用”，没有任何问题。连接 SATA 和 NVMe 驱动器的扩展卡以及 USB-A 和 USB-C 接口均无故障运行。通过 lspci 查看，系统上就像出现了一个 AMD 600 系列芯片组。这非常好，因为 AMD 芯片组驱动在 Linux 上经过了充分测试，无需处理其他测试较少的 ASIC，这些 ASIC 可能没有良好的 Linux 驱动支持，或者需要额外的树外模块/固件。SouthBridge Max 同样适用于 Windows 和 macOS。</p><p>Lekuo PB65MX3 套件包含低矮型卡、标准型和低矮型金属扩展挡板、用于 NVMe 驱动器的铜柱和螺丝，以及一份简单的用户手册。该扩展卡尺寸仅为 69 x 174 毫米。</p><p>Gentex PLACE Any Space PL1AS / PL1K 作为 Nest Protect 烟雾探测器的替代品</p><p>MemryX MX3 M.2 模块以出色的软件体验提供出色的 AI 性能</p><p>TOUPUWAN 30 槽笔记本电脑/平板电脑存储推车</p><p>试用 JSAUX 的各种 Steam Deck 配件</p><p>Valve Steam Deck 扩展坞上手体验</p><p>SpaceX Starlink 互联网体验与性能</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/linux-kernel-repo-ai-overrun/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/review/lekuo-southbridge-max" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
