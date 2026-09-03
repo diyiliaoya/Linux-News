@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Linux From Scratch 13.1 — Linux 中文速报</title>
+<title>Fedora 46 提案希望为 Crystal 编程语言提供官方支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Linux From Scratch 13.1</h1>
+  <h1>Fedora 46 提案希望为 Crystal 编程语言提供官方支持</h1>
 
-  <div class="article-summary">Linux From Scratch（LFS）项目宣布发布13.1版本，该文档指导用户从源代码构建自己的Linux发行版。此版本包含Linux内核7.1.8、glibc 2.44和GCC 16.2.0，工具链更新至Binutils 2.47，共更新或新增46个软件包。安全更新涉及attr、acl、expat、glibc、Linux内核、Python、systemd、util-linux、vim和zlib。自上一稳定版以来，LFS已有超过200次提交。Beyond Linux From Scratch（BLFS）尚未更新至13.1，仍以12.4为最新版本。</div>
+  <div class="article-summary">一项针对 Fedora 46 的新变更提案已提交评估，旨在为 Crystal 编程语言提供官方原生支持。Crystal 是一种静态类型、面向对象的编译型语言，语法受 Ruby 启发，但强调速度、效率和类型安全。该提案计划打包 Crystal 编译器、Shards 依赖管理器、自动化规范生成器（cr2rpm）和 RPM 打包宏（crystal-rpm-macros）。提案认为，在 Fedora 上支持 Crystal 有利于高安全部署、供应链完整性、集中安全审计、可重现构建等。该提案仍需 Fedora 工程指导委员会（FESCo）投票表决。</div>
 
-  <div class="article-body"><p>发行版发布：Linux From Scratch 13.1</p><p>Linux From Scratch（LFS）项目宣布发布Linux From Scratch 13.1，该文档将帮助人们从源代码构建自己的发行版。此版本的LFS包含Linux内核7.1.8、glibc 2.44和GCC 16.2.0。</p><p>“Linux From Scratch社区宣布发布LFS 13.1版本。主要变更包括工具链更新至Binutils 2.47、GCC 16.2.0和glibc 2.44。自上次发布以来，共有46个软件包被更新或新增。全书文本也进行了多处修改。Linux内核已更新至7.1.8版本。包含安全更新的软件包有attr、acl、expat、glibc、Linux内核、Python、systemd、util-linux、vim和zlib。详情请参阅安全公告页面。总体而言，自上一稳定版书籍以来，LFS已有超过200次提交。”</p><p>请访问项目页面阅读简短的发布公告。Linux From Scratch和Beyond Linux From Scratch书籍可在项目页面上找到。请注意，Beyond Linux From Scratch（BLFS）书籍尚未更新至13.1版本，因此12.4仍为最新的BLFS书籍。</p><p>最近相关新闻和发布：</p><p>- 发行版发布：Linux From Scratch 13.1</p><p>- 发行版发布：Linux From Scratch 13.0</p><p>- 发行版发布：Linux From Scratch 12.4</p><p>- 发行版发布：Linux From Scratch 12.3</p><p>- 发行版发布：Linux From Scratch 12.2</p><p>- 发行版发布：Linux From Scratch 12.1</p><p>关于Linux From Scratch：</p><p>Linux From Scratch（LFS）是一个项目，提供构建自定义Linux系统所需的步骤。人们想要安装LFS系统有很多原因。大多数人提出的问题是：“既然你可以直接下载现有的发行版，如Debian或Redhat，为什么还要费心手动从零开始安装Linux系统？”这是一个合理的问题，我希望为你解答。最重要的原因是……</p></div>
+  <div class="article-body"><p>一项针对明年 Fedora 46 版本的新变更提案已提交评估，旨在为 Crystal 编程语言提供官方原生支持。</p><p>Crystal 是一种静态类型、面向对象的编译型语言，专为系统级执行而设计。Crystal 的语法灵感来自 Ruby 编程语言，但强调速度、效率和类型安全。</p><p>关于 Crystal 语言本身的更多细节，可在此处查看。</p><p>该提案旨在为 Crystal 提供官方支持，希望在 Fedora Linux 世界中打包 Crystal 编译器、Shards 依赖管理器、自动化规范生成器（cr2rpm）以及 RPM 打包宏（crystal-rpm-macros）。</p><p>该提案将 Fedora 上 Crystal 编程的优势归类为：适用于气隙隔离和高安全性部署、供应链完整性、集中式安全审计、封闭且可重现的构建，以及作为一种现代系统语言。</p><p>对于这项从 Fedora 46 开始在 Fedora Linux 中提供 Crystal 编程语言软件包的提案感兴趣的人，可以在此处查看详细信息。Fedora 工程指导委员会（FESCo）仍需对该提案进行投票。</p><p>Fedora + Tuned-PPD 性能回退应通过新 Linux 内核修复</p><p>Fedora x86-64-v3 优化包推迟至至少 Fedora 46</p><p>Fedora CoreOS 默认启用 systemd-oomd 和 zRAM 交换</p><p>x86_64 影子栈默认目标重新调整为 Fedora 46</p><p>Fedora 正在制定利益冲突政策</p><p>Fedora 45 计划开始逐步淘汰内核内加密用户空间 API</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。</p><p>Wayland 被发现“本质上比 X11 更快，但不一定更高效”</p><p>Linux 内核每个版本接近 2,000 个 CVE</p><p>Debian 投票允许“负责任地使用生成式 AI”</p><p>加利福尼亚州通过 AB-1856 法案，为年龄验证提供开源救济</p><p>ReactOS 0.4.16 发布，带来新的图形安装程序和更好的硬件支持</p><p>来自 Intel 或 AMD 以外实体的另一份 x86 公告</p><p>补丁大幅提升内核内 Zstd 速度，修复严重低效问题</p><p>前 Intel 工程师、Clear Linux 架构师之一正在创建新发行版</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12943" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Fedora-46-Proposal-Crystal" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

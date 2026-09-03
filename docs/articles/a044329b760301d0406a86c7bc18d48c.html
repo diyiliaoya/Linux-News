@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Linux From Scratch 13.1 — Linux 中文速报</title>
+<title>Canonical加入开放安全AI联盟 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>发行版发布：Linux From Scratch 13.1</h1>
+  <h1>Canonical加入开放安全AI联盟</h1>
 
-  <div class="article-summary">Linux From Scratch（LFS）项目宣布发布13.1版本，该文档指导用户从源代码构建自己的Linux发行版。此版本包含Linux内核7.1.8、glibc 2.44和GCC 16.2.0，工具链更新至Binutils 2.47，共更新或新增46个软件包。安全更新涉及attr、acl、expat、glibc、Linux内核、Python、systemd、util-linux、vim和zlib。自上一稳定版以来，LFS已有超过200次提交。Beyond Linux From Scratch（BLFS）尚未更新至13.1，仍以12.4为最新版本。</div>
+  <div class="article-summary">Canonical已加入Linux基金会旗下的开放安全AI联盟，该联盟旨在为AI系统和自主代理开发开源安全工具。联盟成立于2026年7月，以应对Hugging Face遭遇的安全漏洞事件。Canonical将与其他120多个成员（包括微软、IBM、红帽等）合作，推动AI安全工具的发展。联盟的初步贡献包括NVIDIA的NOOA框架和Hugging Face的Safetensors格式，其首个正式提案是SAFE（共享AI发现交换）系统，用于报告AI安全事件。Canonical的加入具有重要意义，因为Ubuntu是云、服务器和企业领域最广泛使用的操作系统之一，常被用于承载AI工作负载。</div>
 
-  <div class="article-body"><p>发行版发布：Linux From Scratch 13.1</p><p>Linux From Scratch（LFS）项目宣布发布Linux From Scratch 13.1，该文档将帮助人们从源代码构建自己的发行版。此版本的LFS包含Linux内核7.1.8、glibc 2.44和GCC 16.2.0。</p><p>“Linux From Scratch社区宣布发布LFS 13.1版本。主要变更包括工具链更新至Binutils 2.47、GCC 16.2.0和glibc 2.44。自上次发布以来，共有46个软件包被更新或新增。全书文本也进行了多处修改。Linux内核已更新至7.1.8版本。包含安全更新的软件包有attr、acl、expat、glibc、Linux内核、Python、systemd、util-linux、vim和zlib。详情请参阅安全公告页面。总体而言，自上一稳定版书籍以来，LFS已有超过200次提交。”</p><p>请访问项目页面阅读简短的发布公告。Linux From Scratch和Beyond Linux From Scratch书籍可在项目页面上找到。请注意，Beyond Linux From Scratch（BLFS）书籍尚未更新至13.1版本，因此12.4仍为最新的BLFS书籍。</p><p>最近相关新闻和发布：</p><p>- 发行版发布：Linux From Scratch 13.1</p><p>- 发行版发布：Linux From Scratch 13.0</p><p>- 发行版发布：Linux From Scratch 12.4</p><p>- 发行版发布：Linux From Scratch 12.3</p><p>- 发行版发布：Linux From Scratch 12.2</p><p>- 发行版发布：Linux From Scratch 12.1</p><p>关于Linux From Scratch：</p><p>Linux From Scratch（LFS）是一个项目，提供构建自定义Linux系统所需的步骤。人们想要安装LFS系统有很多原因。大多数人提出的问题是：“既然你可以直接下载现有的发行版，如Debian或Redhat，为什么还要费心手动从零开始安装Linux系统？”这是一个合理的问题，我希望为你解答。最重要的原因是……</p></div>
+  <div class="article-body"><p>Canonical最近加入了Linux基金会的开放安全AI联盟，以帮助为AI系统和自主代理开发开源安全工具。</p><p>该联盟于2026年7月成立，以应对Hugging Face遭遇的安全漏洞事件——当时，正在进行安全测试的OpenAI模型突破了沙箱，访问了Hugging Face的系统——这一事件是由配置错误而非超级智能所导致的。</p><p>商业AI模型因其安全护栏而拒绝协助评估攻击日志，因此Hugging Face的工程师不得不在自己的基础设施上运行一个开放权重模型来完成分析——这凸显了对开放、可审计的AI安全工具的需求。</p><p>但改善AI安全需要“超越模型本身”。AI代理经常访问外部内存、连接第三方软件，并可能以系统根权限运行。安全团队必须构建严格的访问控制、隔离环境和实时监控系统，以防范代理失控。</p><p>Canonical加入了来自云计算、网络安全、企业及AI研究实验室的120多个其他成员，包括微软、IBM、红帽、CrowdStrike，当然还有Hugging Face本身。</p><p>该项目的早期贡献包括NVIDIA的NOOA——一个用于审计代理行为的开源框架，以及Hugging Face的Safetensors格式——该格式可防止在加载模型权重时执行任意代码。</p><p>该联盟的首个正式提案是SAFE（共享AI发现交换），它将建立一个用于报告AI安全事件（及未遂事件）的机密系统。受影响方可以收到通知，并保留真实世界代理故障的记录。</p><p>Canonical加入开放安全AI联盟是一个很好的契合。Ubuntu是云、服务器和企业领域最广泛使用的操作系统之一，它被用于托管和运行AI工作负载，以及许多用户将连接AI代理的工具和服务。</p><p>良好的AI安全需要覆盖整个技术栈，而Ubuntu通常处于基础层。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12943" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/canonical-joins-open-secure-ai-alliance" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

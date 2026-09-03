@@ -9436,5 +9436,159 @@
     "title_zh": "Linux补丁让上世纪80-90年代Mac的软驱继续转动",
     "summary_zh": "最新的Linux内核补丁增强了对上世纪80年代和90年代经典Mac机型的软驱支持，修复了SWIM驱动中的问题，使这些老旧的Apple硬件能够继续使用软盘。该补丁针对SWIM驱动进行了优化，解决了老化硬件在读取软盘时可能遇到的兼容性问题，延长了这些复古设备的使用寿命。",
     "fulltext_zh": "新的内核补丁增强了对上世纪80年代和90年代经典Mac机型的软驱支持，为老化的Apple硬件带来了SWIM驱动的修复。\n\n该文章《Linux补丁让上世纪80-90年代Mac的软驱继续转动》最初出现在Linux Today上。"
+  },
+  "a044329b760301d0406a86c7bc18d48c": {
+    "id": "a044329b760301d0406a86c7bc18d48c",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/canonical-joins-open-secure-ai-alliance",
+    "title_en": "Canonical joins the Open Secure AI Alliance",
+    "summary_en": "Canonical recently joined the Linux Foundation&#8217;s Open Secure AI Alliance to help make open-source security tools for AI systems and autonomous agents. The alliance formed in July 2026 in response to the security breach at Hugging Face, when OpenAI models undergoing a safety test broke out of their sandbox to access Hugging Face&#8217;s systems – aided by config errors rather than super-intelligence. Commercial AI models refused to help in assessing attack logs due to their guardrails, so H",
+    "pub_date": "Thu, 03 Sep 2026 01:02:37 +0000",
+    "title_zh": "Canonical加入开放安全AI联盟",
+    "summary_zh": "Canonical已加入Linux基金会旗下的开放安全AI联盟，该联盟旨在为AI系统和自主代理开发开源安全工具。联盟成立于2026年7月，以应对Hugging Face遭遇的安全漏洞事件。Canonical将与其他120多个成员（包括微软、IBM、红帽等）合作，推动AI安全工具的发展。联盟的初步贡献包括NVIDIA的NOOA框架和Hugging Face的Safetensors格式，其首个正式提案是SAFE（共享AI发现交换）系统，用于报告AI安全事件。Canonical的加入具有重要意义，因为Ubuntu是云、服务器和企业领域最广泛使用的操作系统之一，常被用于承载AI工作负载。",
+    "fulltext_zh": "Canonical最近加入了Linux基金会的开放安全AI联盟，以帮助为AI系统和自主代理开发开源安全工具。\n\n该联盟于2026年7月成立，以应对Hugging Face遭遇的安全漏洞事件——当时，正在进行安全测试的OpenAI模型突破了沙箱，访问了Hugging Face的系统——这一事件是由配置错误而非超级智能所导致的。\n\n商业AI模型因其安全护栏而拒绝协助评估攻击日志，因此Hugging Face的工程师不得不在自己的基础设施上运行一个开放权重模型来完成分析——这凸显了对开放、可审计的AI安全工具的需求。\n\n但改善AI安全需要“超越模型本身”。AI代理经常访问外部内存、连接第三方软件，并可能以系统根权限运行。安全团队必须构建严格的访问控制、隔离环境和实时监控系统，以防范代理失控。\n\nCanonical加入了来自云计算、网络安全、企业及AI研究实验室的120多个其他成员，包括微软、IBM、红帽、CrowdStrike，当然还有Hugging Face本身。\n\n该项目的早期贡献包括NVIDIA的NOOA——一个用于审计代理行为的开源框架，以及Hugging Face的Safetensors格式——该格式可防止在加载模型权重时执行任意代码。\n\n该联盟的首个正式提案是SAFE（共享AI发现交换），它将建立一个用于报告AI安全事件（及未遂事件）的机密系统。受影响方可以收到通知，并保留真实世界代理故障的记录。\n\nCanonical加入开放安全AI联盟是一个很好的契合。Ubuntu是云、服务器和企业领域最广泛使用的操作系统之一，它被用于托管和运行AI工作负载，以及许多用户将连接AI代理的工具和服务。\n\n良好的AI安全需要覆盖整个技术栈，而Ubuntu通常处于基础层。"
+  },
+  "64dc5479d33c00f5684192e0d3864225": {
+    "id": "64dc5479d33c00f5684192e0d3864225",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/arduino-ventuno-q-preorder",
+    "title_en": "Arduino’s Ubuntu-powered $299 edge AI board just sold out",
+    "summary_en": "Arduino's VENTUNO Q went up for pre-order priced from $299. The development board runs Ubuntu 24.04 LTS is built around Qualcomm's Dragonwing IQ8 platform.\nYou're reading Arduino’s Ubuntu-powered $299 edge AI board just sold out, a blog post from OMG! Ubuntu. Do not reproduce elsewhere without permission.",
+    "pub_date": "Wed, 02 Sep 2026 18:08:36 +0000",
+    "title_zh": "Arduino 的 299 美元 Ubuntu 驱动边缘 AI 主板已售罄",
+    "summary_zh": "Arduino 的 VENTUNO Q 边缘 AI 主板以 299 美元的价格开启预购后迅速售罄。该主板搭载 Ubuntu 24.04 LTS，采用高通 Dragonwing IQ-8275 的“双脑”架构，配备八核 Kryo CPU、Adreno 623 GPU 和 Hexagon NPU（性能高达 40 TOPS），并辅以 STM32H5F5 微控制器用于实时电机控制。它拥有 16GB LPDDR5 RAM、64GB eMMC 存储、M.2 NVMe 扩展、Wi-Fi 6、蓝牙 5.3 和 2.5GbE 端口，支持视觉语言模型、语音识别和手势识别等边缘 AI 任务。该板卡还提供三个 MIPI-CSI 摄像头接口、40 针 GPIO 和 CAN-FD，适用于机器人及工业应用。",
+    "fulltext_zh": "售价 299 美元的 Arduino VENTUNO Q 边缘 AI 主板预购已售罄。该主板运行 Ubuntu 24.04 LTS，于 8 月下旬开启预购，并迅速售罄了首批配额。\n\n该主板面向边缘 AI、机器人和工业应用，起售价为 299 美元。Arduino 将其称为迄今“最先进的平台”，旨在“让开发者、创客、教育工作者和工程师拥有一块不仅能感知世界，还能与世界互动的板卡”。\n\nCanonical 云与芯片合作伙伴副总裁 Cindy Goldberg 表示：“我们与 Arduino 和高通技术公司紧密合作，提供了一套‘工业级’软件栈作为起点。”\n\n“通过在 VENTUNO Q 开发者主板上预装生产就绪的 Ubuntu 环境，我们消除了从原型到商业规模之间的障碍。”\n\n这块主板有何不同？\n\n它采用基于高通 Dragonwing IQ-8275 的“双脑”架构，配备八核高通 Kryo CPU、Adreno 623 GPU 和 Hexagon NPU，并搭配独立的 STM32H5F5 微控制器用于实时电机控制。\n\nNPU 性能高达 40 TOPS，可支持在设备端运行 AI 视觉语言模型、语音识别和手势识别任务。\n\n它还配备 16GB LPDDR5 RAM 和 64GB eMMC 存储，用于存放操作系统、AI 模型和本地数据，并带有 M.2 接口用于 NVMe Gen4 存储扩展。Wi-Fi 6、蓝牙 5.3 和 2.5Gb 以太网端口也内置其中。\n\n视觉负载是主要应用场景，因此该主板拥有三个 MIPI-CSI 接口，并可通过 JMEDIA 排针额外提供两个接口。HDMI 和 USB-C DisplayPort、两个 USB 3.0 Type-A 端口以及一个用于供电的桶形插孔也包含在内。\n\n40 针 GPIO 排针允许使用现有的 Arduino 和 Raspberry Pi 扩展板，而 CAN-FD 则为专业电机控制器和工业网络提供连接能力。\n\nVENTUNO Q 预装 Ubuntu 24.04 LTS 和 Arduino App Lab IDE，但也支持 Zephyr Project 实时操作系统。Debian 支持将于今年晚些时候推出。\n\n如需深入了解该主板的技术规格，可访问 LinuxGizmos，或访问 Arduino 官网的产品页面（如果你不介意大量营销宣传的话）。\n\n截至本文撰写时，VENTUNO Q 的预购已售罄，但部分经销商仍接受预订，因此值得从商店链接查看你所在国家的经销商是否有货。\n\n这不是一款通用型单板计算机；它专为边缘 AI 和机器人应用而设计。如果你只想在 Ubuntu 上运行 Kodi、复古模拟器，或在 Firefox 中观看 YouTube，市面上有更快、更便宜的选择——尽管它们不再像以前那样便宜了。\n\n（注：品牌名称均为大写，并非我刻意强调。）"
+  },
+  "789db1a4374b8fc14cc606d05adcd606": {
+    "id": "789db1a4374b8fc14cc606d05adcd606",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/libreoffice-download-record",
+    "title_en": "LibreOffice 26.8 set a new first-week download record",
+    "summary_en": "LibreOffice 26.8 was download more than 1 million times in its first week of release, which The Document Foundation say is the highest first-week figure of any release of the free office suite. Released on 26 August, LibreOffice 26.8 saw 1,031,162 downloads from the official website, which provides installers for Windows, macOS and Linux, during the first seven days. As many Linux users update via other sources, like the Snap Store, Flathub and PPAs, the real figure will be even higher than that",
+    "pub_date": "Wed, 02 Sep 2026 15:15:46 +0000",
+    "title_zh": "LibreOffice 26.8 创下首周下载量新纪录",
+    "summary_zh": "LibreOffice 26.8 在发布首周下载量突破百万，成为该免费办公套件历史上首周下载量最高的版本。官方数据显示，自8月26日发布以来，前七天从官网下载次数达1,031,162次，且未计入通过Snap、Flathub等渠道的Linux用户，实际数字更高。文档基金会将此归功于重大更新，如改进的文本对齐、从右到左及CJK脚本支持、无干扰视图等。同时，基金会强调其刻意避免加入AI功能，与微软和苹果等公司形成对比，为用户提供了无AI干扰的纯净选择。",
+    "fulltext_zh": "LibreOffice 26.8 创下首周下载量新纪录\n\nLibreOffice 26.8 在发布首周下载量超过一百万次，文档基金会表示，这是该免费办公套件所有版本中首周下载量的最高纪录。\n\nLibreOffice 26.8 于8月26日发布，在最初七天内，从提供Windows、macOS和Linux安装程序的官方网站下载次数达到1,031,162次。\n\n由于许多Linux用户通过其他来源（如Snap Store、Flathub和PPA）进行更新，实际数字将更高。\n\n“这是LibreOffice任何版本首周下载量的最高数字，”文档基金会总结道，以回顾新版本带来的影响（它在社交媒体上也获得了关注）。\n\n首先，这是一个重大更新。它终于让两端对齐的文本看起来美观，改进了对从右到左和CJK脚本的处理，并添加了无干扰视图，以实现更高效、专注的工作流程——这些只是众多变化中的一部分。\n\n但我不禁想知道，部分增长是否是因为LibreOffice没有添加的东西：AI功能。\n\nLibreOffice缺乏AI是一个特点。这一趋势仍在继续，微软最近在Word、Excel和PowerPoint角落强加了一个无法禁用的浮动AI图标，更令人恼火的是，它开始故意用追加销售来骚扰那些已付费Microsoft 365的用户。苹果正在将其免费随电脑附赠的iWork套件中的功能隔离起来。只有那些付费订阅Creator Studio的用户才能使用某些功能，比如Keynote中的某些特性。\n\n尽管ONLYOFFICE是免费且开源的（而且，如果读者评论能说明问题的话，它在处理Microsoft Office文件方面更好），但过去一年它一直在添加对AI代理的集成和支持，这些AI代理可以代表你生成和编辑文档。\n\n文档基金会表示，他们刻意选择避开AI。文档不会被发送到远程服务器上的大型语言模型，或被其翻查，没有“闪光”按钮杂乱地出现在用户界面上，也没有菜单内的提示来削弱你自己的意图。\n\n如今有如此多的软件都注入了AI——即使在某些几乎不合理的地方——LibreOffice选择不加入其中，是一个令人耳目一新的选择，也提供了选择的自由。"
+  },
+  "bcb0956431643322a91da17ded5ab17d": {
+    "id": "bcb0956431643322a91da17ded5ab17d",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/for-honor-drops-linux-support/",
+    "title_en": "An Honorless Move! Ubisoft Decides Linux isn't Worth the Effort",
+    "summary_en": "For Honor is being kneecapped on Linux, and by extension, the Steam Deck.",
+    "pub_date": "Wed, 02 Sep 2026 10:50:32 GMT",
+    "title_zh": "毫无荣誉之举！育碧认为Linux不值得投入精力",
+    "summary_zh": "育碧宣布其游戏《荣耀战魂》将停止支持Linux平台，包括Steam Deck。该公司称无法在Linux上有效部署反作弊保护，但社区认为这是借口，因为此前该游戏曾支持Linux。此举引发了对Linux游戏未来的担忧，尤其是随着Steam Deck等手持设备的普及。尽管开源社区和Valve持续推动Linux游戏发展，但大型发行商仍因反作弊问题而退缩。",
+    "fulltext_zh": "《荣耀战魂》在Linux平台上正被“截肢”，进而也影响了Steam Deck。\n\nLinux游戏生态持续进步，Wine和Proton兼容层不断开放更多Windows游戏库，社区项目也在填补大型发行商留下的空白。例如，开源项目正致力于将Xbox和Game Pass游戏带到Linux。尽管目前还没有可玩的版本，但其方向已充分说明了Linux游戏的未来走向。\n\n资金方面也在跟进。虽然并非严格针对游戏，但最近推出的、支持Omarchy及其依赖的开源项目的基金，已获得1200万美元的融资。\n\n然而，育碧在《刺客信条：黑旗重制版》大获成功后，却反其道而行之，破坏了原本运行良好的功能。\n\n他们抛弃了Linux\n\n（此处为占位视频，展示《荣耀战魂》近期引入的内容。）\n\n《荣耀战魂》正在离开Linux平台。自[日期]起，该游戏将无法在Linux桌面或Steam Deck上运行。取消支持的同一天，育碧宣布为排名赛引入额外措施以保障公平竞技环境，并称“无法在该平台上有效部署保护”。\n\n育碧进一步表示：\n\n“我们将继续研究改进反作弊的不同方法，并有可能在未来重新开放该平台。”\n\n这不过是公关辞令，实际意思是“这事已被搁置，不是我们的优先事项”。\n\n这让我觉得，他们宁愿推出昂贵的新皮肤，也不愿支持少数玩家群体。\n\n老把戏重演\n\n如果你一直关注Linux游戏新闻，可能已经熟悉这些大型发行商的套路。2023年，[某公司]封禁了Wine用户；2024年，[某公司]禁止Linux玩家；同年，[某公司]又将Steam Deck用户拒之门外。《荣耀战魂》是最新加入这一不断增长的名单的游戏，而给出的理由从未真正改变。\n\n这次的不同之处在于，育碧曾亲自打开过这扇门，如今又将其关闭。该公司曾为Steam Deck启用Easy Anti-Cheat支持，游戏自此可在该平台运行。现在，他们关上了这扇门，声称无法在Linux上“有效部署保护”，尽管该平台已支持多年。\n\n甚至，今年早些时候，EA似乎也转变了态度，为其Javelin反作弊系统制定了支持Linux和Proton的路线图。虽然新东家和领导层将如何掌舵尚不明朗，但该计划最终可能无法实现。与此同时，手持设备市场持续壮大，SteamOS已扩展到Deck之外的更多设备。\n\n你知道更令人担忧的是什么吗？\n\n作弊者总能找到漏洞，无论是在Windows还是其他平台。\n\n喜欢这篇更新吗？支持独立的Linux新闻报道\n\nIt's FOSS过去14年一直帮助人们使用Linux。请帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读，并获得5本电子书。\n\n一次付费，永久享受\n\n任意金额，无需承诺\n\n一个热爱开源软件、定制PC、赛车运动和探索世界无限可能的极客。\n\nVanilla OS 3发布，长期等待后终于支持ARM64\n\n这位开发者花了8年时间在Intel Clear Linux上，现在他要纠正其最大的错误\n\nFirefox 155新增两项更改，加快网页浏览速度\n\nTether将Apple Continuity体验带到Linux\n\nAI爬虫正在消耗Linux内核仓库的计算资源\n\n成为更好的Linux用户\n\n通过FOSS每周通讯，你学习有用的Linux技巧、发现应用程序、探索新发行版，并随时了解Linux世界的最新动态。\n\n太好了！您已成功注册。\n\n欢迎回来！您"
+  },
+  "53ceed3e97f46439cbe29f5053cf7777": {
+    "id": "53ceed3e97f46439cbe29f5053cf7777",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Lemonade-11.9-ROCm-HRX",
+    "title_en": "Lemonade 11.9 Local AI Server Released With Super Exciting AMD ROCm HRX Backend",
+    "summary_en": "Lemonade 11.9 is out today as the newest feature release to this AMD-backed, open-source local AI server solution across Linux, Windows, and macOS. Lemonade has long been focused on offering \"100% free and private\" AI use with local hardware whether it be GPUs, CPUs, or NPUs.  With Lemonade 11.9's release today it's very interesting for having experimental ROCm HRX back-end support with Llama.cpp. HRX is the new exciting thing to watch out for on the AMD ROCm compute landscape...",
+    "pub_date": "Wed, 02 Sep 2026 20:32:40 -0400",
+    "title_zh": "Lemonade 11.9 本地 AI 服务器发布，搭载令人振奋的 AMD ROCm HRX 后端",
+    "summary_zh": "Lemonade 11.9 作为 AMD 支持的开源本地 AI 服务器解决方案的最新功能版本，现已面向 Linux、Windows 和 macOS 发布。该版本最引人注目的是实验性地支持了 Llama.cpp 的 ROCm HRX 后端，HRX 是 AMD 在 ROCm 生态中的新开发成果，属于其 Loom/Hyperloom 计划的一部分，旨在提供更轻量、更聚焦的 ROCm 子集，以优化客户端 GPU、NPU 和 CPU 的性能。初期支持 Radeon RX 7900 系列 RDNA3 和 Strix Halo APU，据称在预填充阶段相比现有 Vulkan 和 HIP 后端可带来 30% 至 50% 的 token/s 提升。",
+    "fulltext_zh": "Lemonade 11.9 本地 AI 服务器发布，搭载令人振奋的 AMD ROCm HRX 后端 - Phoronix\n\nLemonade 11.9 本地 AI 服务器发布，搭载令人振奋的 AMD ROCm HRX 后端\n发布于 2026 年 9 月 2 日晚上 8 点 32 分（美国东部时间）。\n\nLemonade 11.9 于今日发布，这是这款由 AMD 支持的开源本地 AI 服务器解决方案在 Linux、Windows 和 macOS 上的最新功能版本。Lemonade 一直专注于通过本地硬件（无论是 GPU、CPU 还是 NPU）提供“100% 免费且私密”的 AI 使用体验。随着今天 Lemonade 11.9 的发布，其特别引人注目之处在于对 Llama.cpp 的实验性 ROCm HRX 后端支持。HRX 是 AMD ROCm 计算领域值得关注的新亮点。\n\nLemonade 11.9 中最令我兴奋的是，它拥有一个可与 AMD HRX 运行时协同工作的 Llama.cpp HRX 后端，初期支持 Radeon RX 7900 系列 RDNA3 和 Strix Halo APU。\n\nHRX 是 ROCm 生态系统中的一项新开发成果，也是 AMD 在旧金山举行的 Advancing AI 活动中宣布的 Loom/Hyperloom 计划的一部分。Hyperloom 是其代理工作负载优化工作的一部分。HRX 属于其 Loom 编译器和 IR 栈，作为其长期使用的 LLVM IR 的替代方案，能够更快地将生成的代码转换为优化的 AMDGPU 汇编。\n\n不仅如此，它还是帮助在所有 AMD GPU、NPU 和 CPU 上实现高性能集成的通用组件。\n\nhrx-system GitHub 仓库中写道：“HRX System 是一组最小运行时组件，提供了 HIP 的替代实现，目前随 ROCm 一起发布。它为与 AMD 的 GPU、NPU 和 CPU 产品的低延迟、高性能集成提供了一个通用基础。”\n\n这相当有趣，让我想起了长期讨论的 AMD 统一 AI 软件栈，以及过去关于使用 MLIR 和 SPIR-V 作为其首选通用中间表示语言的讨论。现在，Loom IR 作为他们为 AMD 硬件定制的、更契合的 IR 加入了这一体系。\n\n在过去两周中，关于 Llama.cpp 中 HRX 的更多细节通过 AMD 工程师 Stella Laurenzo 发起的 GGML 讨论线程被提出。Laurenzo 在初始帖子中解释道：\n\n“在 AMD，我们正在积极优化 llama.cpp 中现有 Vulkan 和 HIP（源自 CUDA）后端下的 AMD GPU 性能。然而，随着 ROCm 在客户端系统上的成熟，我们反复遇到了缺乏 AMD 原生后端和优化客户端库的成本问题，这些库可以独立优化，以实现我们芯片上 GPU 和 NPU 的最佳性能。此外，由于 ROCm 最初主要面向数据中心市场开发，在尝试以最佳方式集成和部署到客户端操作系统时，常常面临阻力。因此，我们一直在开发一个更轻量、更聚焦的 ROCm 子集，针对这些用例进行优化。我们称之为 HRX，并且已经与专用 llama.cpp 后端的需求共同开发了几个月，最终目标是将其作为一组聚焦的、可再分发的库纳入 ROCm 正式版本。\n\n虽然这项工作仍处于早期阶段，但我们希望与社区讨论完成这项工作并将其作为 llama.cpp 中新的 ggml-hrx 后端落地的可能性。虽然我们已经做了大量实验性工作来优化这个后端，以支持广泛的模型和用例，但我们决定在首次亮相和讨论中，将贡献集中在一个最小的内核库上，足以在 RDNA3（W7900）和 RDNA3.5（Strix Halo）上高效运行 unsloth/Qwen3-30B-A3B-Instruct-2507-GGUF Q4_K_M 模型。这个 RFC PR 包含了这个最小集，我们将继续开发该分支，以覆盖更广泛的模型、操作系统和系统。”\n\n该帖子继续指出，使用 HRX，预填充阶段的 token/s 相比 Llama.cpp/GGML 现有的 Vulkan 和 HIP 后端可能提升 30% 至 50%。在非 MTP 解码任务上，也有与 10% token/s 提升相当的性能提升。"
+  },
+  "cd535c9e5349c5349adc97140f27bb8d": {
+    "id": "cd535c9e5349c5349adc97140f27bb8d",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Fedora-46-Proposal-Crystal",
+    "title_en": "Fedora 46 Proposal Wants To Provide Official Support For Crystal Programming Language",
+    "summary_en": "A new change proposal that's been filed for evaluation with next year's Fedora 46 release is to provide official, native support for the Crystal programming language...",
+    "pub_date": "Wed, 02 Sep 2026 16:32:09 -0400",
+    "title_zh": "Fedora 46 提案希望为 Crystal 编程语言提供官方支持",
+    "summary_zh": "一项针对 Fedora 46 的新变更提案已提交评估，旨在为 Crystal 编程语言提供官方原生支持。Crystal 是一种静态类型、面向对象的编译型语言，语法受 Ruby 启发，但强调速度、效率和类型安全。该提案计划打包 Crystal 编译器、Shards 依赖管理器、自动化规范生成器（cr2rpm）和 RPM 打包宏（crystal-rpm-macros）。提案认为，在 Fedora 上支持 Crystal 有利于高安全部署、供应链完整性、集中安全审计、可重现构建等。该提案仍需 Fedora 工程指导委员会（FESCo）投票表决。",
+    "fulltext_zh": "一项针对明年 Fedora 46 版本的新变更提案已提交评估，旨在为 Crystal 编程语言提供官方原生支持。\n\nCrystal 是一种静态类型、面向对象的编译型语言，专为系统级执行而设计。Crystal 的语法灵感来自 Ruby 编程语言，但强调速度、效率和类型安全。\n\n关于 Crystal 语言本身的更多细节，可在此处查看。\n\n该提案旨在为 Crystal 提供官方支持，希望在 Fedora Linux 世界中打包 Crystal 编译器、Shards 依赖管理器、自动化规范生成器（cr2rpm）以及 RPM 打包宏（crystal-rpm-macros）。\n\n该提案将 Fedora 上 Crystal 编程的优势归类为：适用于气隙隔离和高安全性部署、供应链完整性、集中式安全审计、封闭且可重现的构建，以及作为一种现代系统语言。\n\n对于这项从 Fedora 46 开始在 Fedora Linux 中提供 Crystal 编程语言软件包的提案感兴趣的人，可以在此处查看详细信息。Fedora 工程指导委员会（FESCo）仍需对该提案进行投票。\n\nFedora + Tuned-PPD 性能回退应通过新 Linux 内核修复\nFedora x86-64-v3 优化包推迟至至少 Fedora 46\nFedora CoreOS 默认启用 systemd-oomd 和 zRAM 交换\nx86_64 影子栈默认目标重新调整为 Fedora 46\nFedora 正在制定利益冲突政策\nFedora 45 计划开始逐步淘汰内核内加密用户空间 API\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状态、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\nWayland 被发现“本质上比 X11 更快，但不一定更高效”\nLinux 内核每个版本接近 2,000 个 CVE\nDebian 投票允许“负责任地使用生成式 AI”\n加利福尼亚州通过 AB-1856 法案，为年龄验证提供开源救济\nReactOS 0.4.16 发布，带来新的图形安装程序和更好的硬件支持\n来自 Intel 或 AMD 以外实体的另一份 x86 公告\n补丁大幅提升内核内 Zstd 速度，修复严重低效问题\n前 Intel 工程师、Clear Linux 架构师之一正在创建新发行版\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "b9f60102f2963a884ce7db621ae44f1f": {
+    "id": "b9f60102f2963a884ce7db621ae44f1f",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Open-Secure-AI-Alliance-LF",
+    "title_en": "NVIDIA-Started Open Secure AI Alliance Moves To The Linux Foundation",
+    "summary_en": "Earlier this year NVIDIA led an effort with more than two dozen other companies to launch the Open Secure AI Alliance with a focus on keeping open-source AI models secure. The Open Secure AI Alliance today is transitioning from being stewarded by NVIDIA to becoming a Linux Foundation project...",
+    "pub_date": "Wed, 02 Sep 2026 14:42:04 -0400",
+    "title_zh": "NVIDIA发起的开放安全AI联盟移交至Linux基金会",
+    "summary_zh": "今年早些时候，NVIDIA联合二十多家公司发起了开放安全AI联盟（Open Secure AI Alliance），旨在保障开源AI模型的安全。近日，该联盟宣布从NVIDIA的 stewardship 过渡为Linux基金会项目，以寻求中立的治理环境。联盟将开发开源工具、共享标准和防御实践，帮助组织检查、审计和保护AI系统，包括共享AI发现交换（SAFE）等倡议，以促进威胁情报共享和集体防御。",
+    "fulltext_zh": "今年早些时候，NVIDIA联合二十多家公司发起了开放安全AI联盟（Open Secure AI Alliance），专注于保障开源AI模型的安全。今天，该联盟宣布从NVIDIA的 stewardship 过渡为Linux基金会项目。\n\n开放安全AI联盟于7月启动时，已经基于Linux基金会的Akrites倡议和OpenSSF。它由NVIDIA创立，并得到了IBM/Red Hat、SpaceX、OpenClaw、Palantir等组织的支持。现在，开放安全AI联盟正在过渡到Linux基金会的保护伞下，作为中立的家园。\n\n今天在LinkedIn上宣布了这一过渡。\n\n“开放安全AI联盟最初由NVIDIA创立，将开发开源工具、共享标准和防御实践，帮助组织检查、审计和保护AI系统。\n在Linux基金会的中立治理下，这个社区可以加速开发一个共享的、开放的AI安全堆栈。这包括诸如共享AI发现交换（SAFE）等倡议，使组织能够共享威胁情报，并共同加强针对新兴AI安全风险的防御。\nAI安全是一个共同的挑战。解决它需要一个开放生态系统，让组织能够在供应商、平台和行业之间进行协作。”\n\n开放安全AI联盟的新项目希望有更多关于其雄心的细节。\n\nAI/LLM使用成为开源项目维护者的“拒绝服务攻击”\nLinus Torvalds经历了一场地狱般的调试会话，AI“极大地帮助”了他\nKTransformers 0.7扩展AVX-512支持，惠及AMD EPYC服务器\nLemonade 11.6集成Muse-Glimmer 30B，实验性TheNoise ROCm图像生成\nOpenAI将ChatGPT桌面应用带到Linux\nMeta发布Muse Glimmer作为30B开放代理模型\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、图形驱动和其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他。\n\nWayland被发现“本质上比X11更快，但不一定更高效”\nLinux内核每个版本接近2,000个CVE\nDebian投票允许“负责任地使用生成式AI”\n加州通过AB-1856，为年龄验证提供开源救济\nReactOS 0.4.16发布，带有新的图形安装程序，更好的硬件支持\n来自英特尔或AMD以外的实体的另一份x86公告\n补丁提供了更快的内核内Zstd，由于令人尴尬的糟糕效率\n前英特尔工程师，Clear Linux架构师之一，正在启动一个新的发行版\n\n虽然有无广告浏览，\n单页文章查看\n法律免责声明，隐私政策，Cookies\n版权所有 © 2004 - 2026 由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "79dba50b59491f006093e90ce30cc7ab": {
+    "id": "79dba50b59491f006093e90ce30cc7ab",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/KDE-Plasma-6.8-Dwell-Clicker",
+    "title_en": "KDE Plasma 6.8 Lands Dwell Clicker Support To Improve Accessibility On Wayland",
+    "summary_en": "In preparations for Plasma 6.8 going Wayland-exclusive in abandoning the X11 session, another feature gap compared to X11 has been addressed...",
+    "pub_date": "Wed, 02 Sep 2026 13:51:36 -0400",
+    "title_zh": "KDE Plasma 6.8 引入驻留点击支持，提升 Wayland 无障碍体验",
+    "summary_zh": "KDE Plasma 6.8 将放弃 X11 会话，全面转向 Wayland。为此，开发团队合并了驻留点击（dwell clicker）支持，以替代 X11 上 KMouseTool 的功能。该功能允许用户通过将光标停留在某处来执行鼠标点击，无需物理按键，为行动不便或无法使用鼠标的用户提供无障碍桌面体验。相关代码已合并到 KWin 和 Plasma Desktop，并新增了配置界面。Plasma 6.8 计划于 10 月 14 日发布，恰逢 KDE 成立 30 周年。",
+    "fulltext_zh": "KDE Plasma 6.8 引入驻留点击支持，提升 Wayland 无障碍体验\n\nKDE Plasma 6.8 将放弃 X11 会话，全面转向 Wayland，在此过程中，与 X11 相比的另一个功能差距已得到解决。\n\n今天合并的是驻留点击支持，用于替代 KDE Plasma 在 X11 上使用的 KMouseTool 功能。驻留点击提供了一种通过将光标停留在指定位置来执行鼠标点击的方法，无需按下物理按钮。对于因瘫痪、行动不便或其他原因无法点击物理鼠标按钮的 KDE Plasma 用户，Plasma 6.8 在 Wayland 上的驻留点击支持允许替代 X11 上的 KMouseTool 功能，从而提供无障碍的桌面体验。\n\nKDE 开发者 Sebastian Sauer 在 KWin 方面提供了有关驻留点击支持的详细信息。此外，还对 Plasma Desktop 进行了补充，添加了一个 Plasma 小程序和 KCM 用于配置该无障碍选项。\n\nPlasma 6.8 计划于 10 月 14 日发布，这一天也标志着 KDE 成立 30 周年。"
+  },
+  "c9465f600ccfd3c83c26f49503acf60b": {
+    "id": "c9465f600ccfd3c83c26f49503acf60b",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Mesa-26.2.2-Released",
+    "title_en": "Mesa 26.2.2 Enables Intel Nova Lake Graphics By Default",
+    "summary_en": "Mesa 26.2.2 is out today as the newest bi-weekly stable point release for these open-source OpenGL and Vulkan drivers...",
+    "pub_date": "Wed, 02 Sep 2026 13:05:41 -0400",
+    "title_zh": "Mesa 26.2.2 默认启用 Intel Nova Lake 显卡支持",
+    "summary_zh": "Mesa 26.2.2 作为最新的双周稳定版发布，最显著的变化是将 Intel Nova Lake S、H、HX 和 U 系列集成显卡默认启用，无需再通过环境变量强制覆盖。该补丁从 Mesa 26.3-devel 反向移植而来，此前 Linux 7.3 已将 Nova Lake 显卡标记为稳定。此外，本次更新还包含 RADV、ACO、PowerVR PCO 等多项修复。",
+    "fulltext_zh": "Mesa 26.2.2 于今日发布，作为这些开源 OpenGL 和 Vulkan 驱动最新的双周稳定版点版本。\n\nMesa 26.2.2 最引人注目的变化是，它从 Mesa 26.3-devel 反向移植了一个补丁，将 Intel Nova Lake S、Nova Lake H、Nova Lake HX 和 Nova Lake U 集成显卡提升为默认启用。几周前，Mesa Git 已合并了将 Intel ANV Vulkan 和 Iris Gallium3D 驱动默认支持 Nova Lake 显卡的更改，而不再需要强制覆盖环境变量。此前，Linux 7.3 已将 Nova Lake 显卡提升为稳定状态，不再需要其 force_probe 模块参数覆盖。\n\n借助 Mesa 26.2.2，Nova Lake 显卡已处于良好状态，因此默认启用补丁被反向移植，而无需等到下个季度的 Mesa 26.3 版本。\n\n此外还有一些 RADV 和 ACO 修复、多项 PowerVR PCO 修复以及各种其他小修复。Mesa 26.2.2 的完整更改列表可通过邮件列表公告查看。"
+  },
+  "e42d6b9cf52eb756ae53a98fd5d6c9cc": {
+    "id": "e42d6b9cf52eb756ae53a98fd5d6c9cc",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/linux-mint-and-gnome-calendar-clash-resurfaces-months-later/",
+    "title_en": "Linux Mint and GNOME Calendar Clash Resurfaces Months Later",
+    "summary_en": "The dispute between Linux Mint and GNOME Calendar has resurfaced months later, renewing debate over app compatibility, communication, and desktop integration.\nThe post Linux Mint and GNOME Calendar Clash Resurfaces Months Later appeared first on Linux Today.",
+    "pub_date": "Wed, 02 Sep 2026 07:06:20 +0000",
+    "title_zh": "Linux Mint与GNOME Calendar的冲突数月后再次浮现",
+    "summary_zh": "Linux Mint与GNOME Calendar之间的争议在数月后重新浮出水面，再次引发了关于应用兼容性、沟通以及桌面集成问题的讨论。这一事件凸显了不同Linux桌面环境之间在应用开发和集成方面的分歧，以及社区间沟通的重要性。",
+    "fulltext_zh": "Linux Mint与GNOME Calendar之间的争议在数月后再次浮现，重新引发了关于应用兼容性、沟通以及桌面集成的讨论。\n\n该文章最初发表于Linux Today。"
+  },
+  "ab132f5bf2bae740c76401f8b27def25": {
+    "id": "ab132f5bf2bae740c76401f8b27def25",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/gitea-1-27-released-with-actions-improvements-and-45-cve-fixes/",
+    "title_en": "Gitea 1.27 Released with Actions Improvements and 45 CVE Fixes",
+    "summary_en": "Gitea 1.27 brings major Actions improvements, 45 CVE security fixes, and additional enhancements for self-hosted software development workflows.\nThe post Gitea 1.27 Released with Actions Improvements and 45 CVE Fixes appeared first on Linux Today.",
+    "pub_date": "Wed, 02 Sep 2026 07:01:05 +0000",
+    "title_zh": "Gitea 1.27 发布，带来 Actions 改进与 45 个 CVE 修复",
+    "summary_zh": "Gitea 1.27 版本正式发布，主要亮点包括对 Actions 的重大改进、45 个 CVE 安全修复，以及针对自托管软件开发流程的额外增强。该版本旨在提升自托管 Git 服务的性能与安全性，满足开发团队对高效协作和稳定运行的需求。",
+    "fulltext_zh": "Gitea 1.27 带来了 Actions 的重大改进、45 个 CVE 安全修复，以及针对自托管软件开发工作流程的额外增强。\n\n该文章《Gitea 1.27 Released with Actions Improvements and 45 CVE Fixes》最初出现在 Linux Today 上。"
+  },
+  "bbeb259bb925c9951555ff4ba006e9ec": {
+    "id": "bbeb259bb925c9951555ff4ba006e9ec",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/frame-the-first-linux-x-server-written-entirely-in-assembly-language/",
+    "title_en": "Frame: The First Linux X Server Written Entirely in Assembly Language",
+    "summary_en": "Frame is an X11 server written entirely in x86-64 Assembly, built with direct system calls, DRM/KMS, and evdev for a minimal low-level graphics stack.\nThe post Frame: The First Linux X Server Written Entirely in Assembly Language appeared first on Linux Today.",
+    "pub_date": "Wed, 02 Sep 2026 06:57:53 +0000",
+    "title_zh": "Frame：首个完全用汇编语言编写的Linux X服务器",
+    "summary_zh": "Frame是一款完全使用x86-64汇编语言编写的X11服务器，它通过直接系统调用、DRM/KMS和evdev构建了一个极简的低层图形栈。这一创新项目展示了在底层硬件交互中汇编语言的潜力，为追求极致性能和最小依赖的Linux图形环境提供了新的可能性。",
+    "fulltext_zh": "Frame是一款完全使用x86-64汇编语言编写的X11服务器，它通过直接系统调用、DRM/KMS和evdev构建了一个极简的低层图形栈。\n\n这篇题为“Frame：首个完全用汇编语言编写的Linux X服务器”的文章最初发表在Linux Today上。"
+  },
+  "0abd5b8e4906bab6176cc597f810d024": {
+    "id": "0abd5b8e4906bab6176cc597f810d024",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/vocalinux-is-an-open-source-voice-dictation-app-built-for-linux/",
+    "title_en": "Vocalinux Is an Open-Source Voice Dictation App Built for Linux",
+    "summary_en": "Vocalinux is an open-source voice dictation app designed for private, local speech-to-text transcription with customizable shortcuts and workflows.\nThe post Vocalinux Is an Open-Source Voice Dictation App Built for Linux appeared first on Linux Today.",
+    "pub_date": "Wed, 02 Sep 2026 06:56:47 +0000",
+    "title_zh": "Vocalinux：一款专为Linux打造的开源语音听写应用",
+    "summary_zh": "Vocalinux是一款面向Linux平台的开源语音听写应用，专注于本地、私密的语音转文字功能。它允许用户通过自定义快捷键和工作流，实现高效、个性化的语音输入体验。该应用强调隐私保护，所有语音处理均在本地完成，无需上传至云端。",
+    "fulltext_zh": "Vocalinux是一款开源语音听写应用，专为私密、本地的语音转文字转录而设计，支持自定义快捷键和工作流。\n\n该文章首发于Linux Today。"
+  },
+  "2e8d10e316f167651a08218ea4cc4cf9": {
+    "id": "2e8d10e316f167651a08218ea4cc4cf9",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/kitty-0-48-terminal-emulator-introduces-vertical-tabs/",
+    "title_en": "Kitty 0.48 Terminal Emulator Introduces Vertical Tabs",
+    "summary_en": "Kitty 0.48 introduces vertical tabs for easier terminal session management, alongside new features, usability improvements, and bug fixes.\nThe post Kitty 0.48 Terminal Emulator Introduces Vertical Tabs appeared first on Linux Today.",
+    "pub_date": "Wed, 02 Sep 2026 06:55:45 +0000",
+    "title_zh": "Kitty 0.48 终端模拟器引入垂直标签页",
+    "summary_zh": "Kitty 0.48 版本发布，新增垂直标签页功能，简化终端会话管理，同时带来多项新特性、可用性改进和错误修复。该版本旨在提升用户在多任务处理时的效率与体验。",
+    "fulltext_zh": "Kitty 0.48 引入了垂直标签页，以便更轻松地管理终端会话，同时还带来了新功能、可用性改进和错误修复。\n该文章首发于 Linux Today。"
   }
 }
