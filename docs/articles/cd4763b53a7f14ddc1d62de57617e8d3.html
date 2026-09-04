@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Canonical加入开放安全AI联盟 — Linux 中文速报</title>
+<title>Amazon Linux 2027 预览版发布：基于 Linux 7.1，支持 x86-64-v3，并采用 LTO 构建 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Canonical加入开放安全AI联盟</h1>
+  <h1>Amazon Linux 2027 预览版发布：基于 Linux 7.1，支持 x86-64-v3，并采用 LTO 构建</h1>
 
-  <div class="article-summary">Canonical已加入Linux基金会旗下的开放安全AI联盟，该联盟旨在为AI系统和自主代理开发开源安全工具。联盟成立于2026年7月，以应对Hugging Face遭遇的安全漏洞事件。Canonical将与其他120多个成员（包括微软、IBM、红帽等）合作，推动AI安全工具的发展。联盟的初步贡献包括NVIDIA的NOOA框架和Hugging Face的Safetensors格式，其首个正式提案是SAFE（共享AI发现交换）系统，用于报告AI安全事件。Canonical的加入具有重要意义，因为Ubuntu是云、服务器和企业领域最广泛使用的操作系统之一，常被用于承载AI工作负载。</div>
+  <div class="article-summary">AWS 宣布 Amazon Linux 2027 公开预览版发布。该版本默认使用 Linux 7.1 内核，启用 SELinux 强制模式，新增加速器驱动，并针对 AWS 云工作负载进行了大量性能优化。所有软件包均以 -O2 优化级别构建，并启用链接时优化（LTO）和自动向量化，x86-64 软件包面向 x86-64-v3 微架构。在 ARM 方面，为 Graviton 实例默认启用透明大页（THP）。此外，默认编译器为 GCC 16.1，并包含 LLVM/Clang 22 及更新的 Rust 和 Go 版本，包管理器为 DNF5，部分基于 Fedora 44 和 45。</div>
 
-  <div class="article-body"><p>Canonical最近加入了Linux基金会的开放安全AI联盟，以帮助为AI系统和自主代理开发开源安全工具。</p><p>该联盟于2026年7月成立，以应对Hugging Face遭遇的安全漏洞事件——当时，正在进行安全测试的OpenAI模型突破了沙箱，访问了Hugging Face的系统——这一事件是由配置错误而非超级智能所导致的。</p><p>商业AI模型因其安全护栏而拒绝协助评估攻击日志，因此Hugging Face的工程师不得不在自己的基础设施上运行一个开放权重模型来完成分析——这凸显了对开放、可审计的AI安全工具的需求。</p><p>但改善AI安全需要“超越模型本身”。AI代理经常访问外部内存、连接第三方软件，并可能以系统根权限运行。安全团队必须构建严格的访问控制、隔离环境和实时监控系统，以防范代理失控。</p><p>Canonical加入了来自云计算、网络安全、企业及AI研究实验室的120多个其他成员，包括微软、IBM、红帽、CrowdStrike，当然还有Hugging Face本身。</p><p>该项目的早期贡献包括NVIDIA的NOOA——一个用于审计代理行为的开源框架，以及Hugging Face的Safetensors格式——该格式可防止在加载模型权重时执行任意代码。</p><p>该联盟的首个正式提案是SAFE（共享AI发现交换），它将建立一个用于报告AI安全事件（及未遂事件）的机密系统。受影响方可以收到通知，并保留真实世界代理故障的记录。</p><p>Canonical加入开放安全AI联盟是一个很好的契合。Ubuntu是云、服务器和企业领域最广泛使用的操作系统之一，它被用于托管和运行AI工作负载，以及许多用户将连接AI代理的工具和服务。</p><p>良好的AI安全需要覆盖整个技术栈，而Ubuntu通常处于基础层。</p></div>
+  <div class="article-body"><p>Amazon Linux 2027 预览版发布：基于 Linux 7.1，支持 x86-64-v3，并采用 LTO 构建 - Phoronix</p><p>Amazon Linux 2027 预览版发布：基于 Linux 7.1，支持 x86-64-v3，并采用 LTO 构建</p><p>发布于 2026 年 9 月 3 日 下午 05:13（美国东部时间）。</p><p>AWS 今天宣布了 Amazon Linux 2027 的公开预览版。鉴于自 Amazon Linux 2023 以来的时间跨度，Amazon Linux 2027 带来了大量软件更新，以及许多性能优化和其他调整，以便更好地运行针对 AWS 云的工作负载。</p><p>Amazon Linux 2027 默认使用 Linux 7.1 内核，现在默认启用 SELinux 强制模式，新增了加速器驱动程序，并包含各种其他改进。</p><p>Amazon Linux 2027 的软件包现在也全部以 -O2 优化级别构建，软件包在构建时启用了链接时优化（LTO）以获得更好的性能，并且 x86-64 软件包现在面向 x86-64-v3，以支持 AVX/AVX2。Amazon Linux 2027 的软件包现在还启用了自动向量化。</p><p>在增强 ARM 性能方面，对于 Amazon Linux 2027 上的 AArch64 Graviton 实例，默认还为 malloc 堆区域启用了透明大页（THP）。</p><p>Amazon Linux 2027 还默认使用新的 GCC 16.1 编译器，以及 LLVM/Clang 22 和更新版本的 Rust 和 Go。在包管理器方面，使用 DNF5。Amazon Linux 2027 部分基于 Fedora 44 和 Fedora 45。</p><p>有关 Amazon Linux 2027 的更多详细信息，请参阅</p><p>有关 Amazon Linux 2027 的技术变更的所有有趣细节，请参阅。我将很快着手运行一些 Amazon Linux 2027 基准测试。</p><p>ReactOS 0.4.16 发布，带来新的图形安装程序，更好的硬件支持</p><p>Haiku R1 Beta 6 时隔两年发布，BeOS 灵感项目下周迎来 25 周年</p><p>Armbian 26.8 发布，重写安装程序，提供 UEFI ISO 镜像</p><p>ReactOS 合并作业对象支持，作为运行现代 Windows 应用的一步</p><p>Redox OS 切换到基于 EEVDF 的调度器，吞吐量提升 2.6 倍</p><p>基于 Slackware 的 Zenwalk Linux 旨在提供“真正的低延迟桌面体验”</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动程序和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他。</p><p>CERN 在长期使用 RHEL 后，将工业计算机迁移至 Debian</p><p>Linux 内核每个版本接近 2000 个 CVE</p><p>Debian 投票允许“负责任地使用生成式 AI”</p><p>加州通过 AB-1856 法案，为年龄验证提供开源救济</p><p>ReactOS 0.4.16 发布，带来新的图形安装程序，更好的硬件支持</p><p>前英特尔工程师，Clear Linux 架构师之一，正在启动新的发行版</p><p>来自英特尔或 AMD 以外实体的另一份 x86 公告</p><p>补丁大幅提升内核内 Zstd 性能，修复令人尴尬的低效问题</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/canonical-joins-open-secure-ai-alliance" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Amazon-Linux-2027-Preview" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Canonical加入开放安全AI联盟 — Linux 中文速报</title>
+<title>Audacity 4.0发布：全新外观与剪辑功能 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
+    <span class="tag">发行版</span>
     <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Canonical加入开放安全AI联盟</h1>
+  <h1>Audacity 4.0发布：全新外观与剪辑功能</h1>
 
-  <div class="article-summary">Canonical已加入Linux基金会旗下的开放安全AI联盟，该联盟旨在为AI系统和自主代理开发开源安全工具。联盟成立于2026年7月，以应对Hugging Face遭遇的安全漏洞事件。Canonical将与其他120多个成员（包括微软、IBM、红帽等）合作，推动AI安全工具的发展。联盟的初步贡献包括NVIDIA的NOOA框架和Hugging Face的Safetensors格式，其首个正式提案是SAFE（共享AI发现交换）系统，用于报告AI安全事件。Canonical的加入具有重要意义，因为Ubuntu是云、服务器和企业领域最广泛使用的操作系统之一，常被用于承载AI工作负载。</div>
+  <div class="article-summary">Audacity 4.0正式发布，采用全新的Qt用户界面，带来原生HDPI缩放、明暗模式支持及系统强调色跟随。新版引入新的剪辑编辑模型和项目文件格式，支持多选、移动、修剪及时间重设多个剪辑，并可在单声道与立体声轨道间移动剪辑。播放与录音功能增强，包括可拖动的播放头、ASIO支持。频谱图工具重新设计，预设管理更一致。部分旧功能如宏管理器、VAMP/LADSPA插件支持暂未包含，但团队表示未来可能回归。</div>
 
-  <div class="article-body"><p>Canonical最近加入了Linux基金会的开放安全AI联盟，以帮助为AI系统和自主代理开发开源安全工具。</p><p>该联盟于2026年7月成立，以应对Hugging Face遭遇的安全漏洞事件——当时，正在进行安全测试的OpenAI模型突破了沙箱，访问了Hugging Face的系统——这一事件是由配置错误而非超级智能所导致的。</p><p>商业AI模型因其安全护栏而拒绝协助评估攻击日志，因此Hugging Face的工程师不得不在自己的基础设施上运行一个开放权重模型来完成分析——这凸显了对开放、可审计的AI安全工具的需求。</p><p>但改善AI安全需要“超越模型本身”。AI代理经常访问外部内存、连接第三方软件，并可能以系统根权限运行。安全团队必须构建严格的访问控制、隔离环境和实时监控系统，以防范代理失控。</p><p>Canonical加入了来自云计算、网络安全、企业及AI研究实验室的120多个其他成员，包括微软、IBM、红帽、CrowdStrike，当然还有Hugging Face本身。</p><p>该项目的早期贡献包括NVIDIA的NOOA——一个用于审计代理行为的开源框架，以及Hugging Face的Safetensors格式——该格式可防止在加载模型权重时执行任意代码。</p><p>该联盟的首个正式提案是SAFE（共享AI发现交换），它将建立一个用于报告AI安全事件（及未遂事件）的机密系统。受影响方可以收到通知，并保留真实世界代理故障的记录。</p><p>Canonical加入开放安全AI联盟是一个很好的契合。Ubuntu是云、服务器和企业领域最广泛使用的操作系统之一，它被用于托管和运行AI工作负载，以及许多用户将连接AI代理的工具和服务。</p><p>良好的AI安全需要覆盖整个技术栈，而Ubuntu通常处于基础层。</p></div>
+  <div class="article-body"><p>Audacity 4.0发布：现代界面与剪辑编辑</p><p>Audacity 4.0已发布，采用全新的Qt用户界面、新的剪辑编辑模型和项目文件格式，同时带来大量小改进。</p><p>Audacity的Qt移植不仅仅是表面（有人会说急需的）整容，因为工具包的切换带来了原生HDPI缩放、明暗模式支持，并且界面能够跟随系统强调色。新的应用标志也为这次更新增色。</p><p>现在可以自定义Audacity的界面。工具栏和面板可以移动、弹出或关闭。用户可以根据需要创建界面布局，并将其保存为预设，以便随时切换回，同时内置布局也可用。</p><p>Audacity 4.0切换到新的项目格式，该格式存储预览缩略图以及新的剪辑和外观数据。它会将Audacity 3.x文件转换为新格式——这是一个单向过程，因为转换后的项目无法保存为旧格式。</p><p>工作流程是大多数Audacity用户关心的重点，v4.0中新增了剪辑编辑功能：</p><p>- 更轻松的剪辑选择（Ctrl+点击选择多个剪辑）</p><p>- 同时移动、修剪和调整多个剪辑的时间，使剪辑在移动、复制、粘贴或重复时保持在一起</p><p>- 在单声道和立体声轨道之间移动剪辑，并放置在其他剪辑之上（Alt+点击波形或剪辑标题）</p><p>- 改进的对齐参考线和吸附设置（根据上下文/工具自适应）</p><p>播放和录音方面的变化包括：导航时可见的可拖动播放头，允许在时间线上任意位置开始录音，以及改进的音频设备设置。Windows用户获得了ASIO播放和录音支持。</p><p>Audacity 4.0中的频谱图工具经过重新设计和重新装备，更易于使用，渲染速度更快，预设处理在“内置、破坏性和实时效果”之间保持一致——此外还有其他变化。</p><p>长期粉丝无需担心变化。有些功能已移动或更改，但项目表示“大多数Audacity 3工作流程仍然可用”——尽管有所保留，因为以下Audacity 3功能未包含在Audacity 4.0版本中：</p><p>- 宏管理器和脚本管道</p><p>- VAMP和LADSPA插件托管</p><p>一些导出和渲染功能以及音频效果也缺失，但团队表示希望缺失的功能能在未来版本中回归。</p><p>Audacity 4.0的官方发布视频很好地展示了众多大小变化：</p><p>官方发布视频</p><p>下载Audacity 4.0</p><p>Windows和macOS的安装程序可从官方网站或项目GitHub获取，其中也提供了Linux的AppImage构建，包括64位Intel/AMD和Arrch64/ARM64构建。</p><p>想要传统安装的用户可以选择Snap Store上的Audacity snap包，或尝试Flathub构建——截至撰写本文时，两者均未更新至v4.0，但更新可能会在适当时候到来。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/canonical-joins-open-secure-ai-alliance" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/audacity-4-released" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

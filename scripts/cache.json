@@ -9590,5 +9590,181 @@
     "title_zh": "Kitty 0.48 终端模拟器引入垂直标签页",
     "summary_zh": "Kitty 0.48 版本发布，新增垂直标签页功能，简化终端会话管理，同时带来多项新特性、可用性改进和错误修复。该版本旨在提升用户在多任务处理时的效率与体验。",
     "fulltext_zh": "Kitty 0.48 引入了垂直标签页，以便更轻松地管理终端会话，同时还带来了新功能、可用性改进和错误修复。\n该文章首发于 Linux Today。"
+  },
+  "fc462074ccec7343bb7f157d244bc6a3": {
+    "id": "fc462074ccec7343bb7f157d244bc6a3",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/ubuntu-26-10-snapshot-3",
+    "title_en": "Ubuntu 26.10 Snapshot 3 is now available for testing",
+    "summary_en": "The third, and potentially final, monthly snapshot of Ubuntu 26.10 is available for download. There were no monthly snapshots of the &#8216;Stonking Stingray&#8217; in August or July – no reason has been given – and the Ubuntu 26.10 beta release is scheduled for release on 24 September. Thus, this could be the final snapshot of the, though Canonical&#8217;s Utkarsh Gupta says that a &#8220;surprise snapshot to test some changes to our machinery&#8221; might appear. Ubuntu&#8217;s monthly snapsho",
+    "pub_date": "Thu, 03 Sep 2026 23:24:32 +0000",
+    "title_zh": "Ubuntu 26.10 快照 3 现已可供测试",
+    "summary_zh": "Ubuntu 26.10 的第三个（可能是最后一个）月度快照现已发布。由于 8 月和 7 月未发布快照，且正式测试版将于 9 月 24 日发布，因此这可能是最终快照，但 Canonical 表示可能会有一个“惊喜快照”用于测试构建系统变更。这些快照仅供测试，不适合生产环境。自 6 月快照以来，包含 GNOME 51 的关键组件和默认应用更新，但不包含新的 AI 语音转文字功能 Myna。普通用户建议等待即将到来的官方测试版。",
+    "fulltext_zh": "Ubuntu 26.10 快照 3 现已可供测试 - OMG! Ubuntu\n\nUbuntu 26.10 的第三个（也可能是最后一个）月度快照现已可供下载。\n\n“Stonking Stingray”在 8 月或 7 月没有发布月度快照——没有给出原因——而 Ubuntu 26.10 测试版计划于 9 月 24 日发布。\n\n因此，这可能是最后一个快照，尽管 Canonical 的 Utkarsh Gupta 表示，可能会有一个“惊喜快照”来“测试我们机制的一些更改”。\n\nUbuntu 的月度快照严格用于测试。它们不是 alpha 版本，也不适合生产环境。团队表示应将其视为“一次性产物”。自推出以来，它们的作用是帮助 Canonical 测试和迭代新的构建系统。\n\n而且，它们还充当了一系列非官方的软性截止日期，促使发行版工程师将希望更多人测试的功能落地。\n\n对我们大多数人来说，使用最新的每日构建版来测试 Ubuntu 26.10 比使用月度快照更好，原因很简单：快照只是快照，它们会更快过时。\n\n自 6 月快照以来，已有大量软件包更新落地，包括即将推出的 GNOME 51 的关键组件，以及默认应用的新版本，例如（获得了视觉签名）和（显示软件、镜头和其他元数据）。\n\n该快照由 8 月发布的 [内核] 提供支持。\n\n你不会在这里找到 Ubuntu 新的 AI 语音转文字功能 Myna。我上周分享了 Ubuntu 语音转文字技术的视频演示，但它并未包含在此快照或每日构建中。\n\n但除非你是开发者或经验丰富的漏洞猎手，否则现在还没有必要尝试——毕竟官方 Ubuntu 26.10 测试版几周后就要发布了。\n\nUbuntu 26.10 快照 3 可从官方 cdimage 服务器下载，该服务器还提供 Ubuntu 26.10 各风味版本、衍生版本和硬件变体的新快照，包括 Raspberry Pi 和 Arm64。"
+  },
+  "08071ffef8d160abe3cbe941d5ad16fa": {
+    "id": "08071ffef8d160abe3cbe941d5ad16fa",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/vivaldi-8-2-released",
+    "title_en": "Vivaldi 8.2 is out with a calculator in the address bar",
+    "summary_en": "Vivaldi 8.2 rolled out today (3 September 2026) and lets you do quick and private math calculations directly in the address bar. This may prove useful when you don&#8217;t want to open to a new tab or a calculator app. I&#8217;ve often narrowed my eyes at an online checkout page after applying a coupon code (don&#8217;t judge), muttering &#8220;that can&#8217;t be right&#8221;. A quick number crunch later and, of course, it always is. You can click to copy the the result to your system clipboard",
+    "pub_date": "Thu, 03 Sep 2026 22:46:26 +0000",
+    "title_zh": "Vivaldi 8.2 发布，地址栏内置计算器",
+    "summary_zh": "Vivaldi 8.2 于2026年9月3日发布，新版本在地址栏中加入了快速计算功能，用户无需离开当前页面或打开计算器应用即可进行私密数学运算，并可将结果一键复制到剪贴板。此外，该版本还优化了渐进式Web应用（PWA）的安装流程，在地址栏显示安装图标，方便用户将网站安装为本地应用。Vivaldi 8.2 还包含常规的Bug修复、安全补丁和Chromium内核更新，并预告了面向企业用户的版本。",
+    "fulltext_zh": "Vivaldi 8.2 于今日（2026年9月3日）发布，新版本允许用户直接在地址栏中进行快速且私密的数学计算。\n\n当你不想打开新标签页或计算器应用时，这个功能可能会很有用。我经常在应用优惠券代码后（别评判我）眯着眼睛盯着在线结账页面，喃喃自语“这不可能是对的”。稍作快速数字运算后，当然，结果总是对的。\n\n你可以点击复制结果到系统剪贴板，随时粘贴到其他地方。\n\n之前的Vivaldi版本允许你通过菜单进行本地计算，但该公司表示，“以真正的Vivaldi风格”，他们希望给用户更多方式，让他们按自己的意愿访问该功能。\n\n同样“以真正的Vivaldi风格”，该功能是可选的；只需快速访问设置 > 地址栏 > 地址栏建议，即可将其隐藏。\n\n在Vivaldi 8.2中，无需离开页面或切换应用即可进行计算。\n\n在Vivaldi 8.2中，发现渐进式Web应用（PWA）变得更加容易。\n\n当您访问一个可以“安装”为本地应用的网站时，浏览器现在会在地址栏中显示一个“安装”图标。点击该图标会打开一个对话框，您可以通过它进行本地安装。在Vivaldi中管理PWA。\n\n“我们热爱网络，因为它可以在任何设备和任何操作系统上运行”，该浏览器制造商在添加此功能时表示，并指出PWA将“网络的普遍覆盖范围”与“原生应用的外观和感觉”相结合——只不过，你知道，它们看起来并不原生。\n\n但这份心意是好的。\n\n对于一次更新来说，这次用户可见的功能就这些，这很不寻常。当然，还有Bug修复、安全补丁、底层调整和一些小的UI更改。Chromium已更新至v152.0.7977.80。\n\nVivaldi是一款几乎已经内置了所有功能的网络浏览器——内置电子邮件、RSS和日历工具、计时器、待办事项列表和新标签页小部件、社交媒体侧边栏、扩展、主题和内容拦截……\n\n这个列表还在（不断）增加。\n\n他们还透露，面向企业的Vivaldi版本即将推出。像Firefox ESR一样，它将面向“各种规模的组织——从企业和公共机构，到政府部门和学校”，并提供策略管理和定制控制。\n\nVivaldi是免费的，但不是开源软件，适用于所有主流操作系统。Ubuntu用户可以从Snap Store安装Vivaldi，或从浏览器官方网站获取Deb构建版本，该版本适用于Intel/AMD和ARM64设备。"
+  },
+  "83447697e784ec0367406b17e6e5eba7": {
+    "id": "83447697e784ec0367406b17e6e5eba7",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/audacity-4-released",
+    "title_en": "Audacity 4.0 released with brand-new look, clip editing features",
+    "summary_en": "Audacity 4.0 has been released with a new Qt user interface, a new clip editing model and project file format – as well as a swathe of smaller improvements. The Qt port of Audacity is more than a superficial – some would say much-needed – facelift, as the toolkit switch brings native HDPI scaling, light and dark mode support and is able to follow system accent colours in its UI. A new app logo compliment the refresh. Customising Audacity&#8217;s interface is now possible. Toolbars and panels can",
+    "pub_date": "Thu, 03 Sep 2026 14:52:11 +0000",
+    "title_zh": "Audacity 4.0发布：全新外观与剪辑功能",
+    "summary_zh": "Audacity 4.0正式发布，采用全新的Qt用户界面，带来原生HDPI缩放、明暗模式支持及系统强调色跟随。新版引入新的剪辑编辑模型和项目文件格式，支持多选、移动、修剪及时间重设多个剪辑，并可在单声道与立体声轨道间移动剪辑。播放与录音功能增强，包括可拖动的播放头、ASIO支持。频谱图工具重新设计，预设管理更一致。部分旧功能如宏管理器、VAMP/LADSPA插件支持暂未包含，但团队表示未来可能回归。",
+    "fulltext_zh": "Audacity 4.0发布：现代界面与剪辑编辑\n\nAudacity 4.0已发布，采用全新的Qt用户界面、新的剪辑编辑模型和项目文件格式，同时带来大量小改进。\n\nAudacity的Qt移植不仅仅是表面（有人会说急需的）整容，因为工具包的切换带来了原生HDPI缩放、明暗模式支持，并且界面能够跟随系统强调色。新的应用标志也为这次更新增色。\n\n现在可以自定义Audacity的界面。工具栏和面板可以移动、弹出或关闭。用户可以根据需要创建界面布局，并将其保存为预设，以便随时切换回，同时内置布局也可用。\n\nAudacity 4.0切换到新的项目格式，该格式存储预览缩略图以及新的剪辑和外观数据。它会将Audacity 3.x文件转换为新格式——这是一个单向过程，因为转换后的项目无法保存为旧格式。\n\n工作流程是大多数Audacity用户关心的重点，v4.0中新增了剪辑编辑功能：\n\n- 更轻松的剪辑选择（Ctrl+点击选择多个剪辑）\n- 同时移动、修剪和调整多个剪辑的时间，使剪辑在移动、复制、粘贴或重复时保持在一起\n- 在单声道和立体声轨道之间移动剪辑，并放置在其他剪辑之上（Alt+点击波形或剪辑标题）\n- 改进的对齐参考线和吸附设置（根据上下文/工具自适应）\n\n播放和录音方面的变化包括：导航时可见的可拖动播放头，允许在时间线上任意位置开始录音，以及改进的音频设备设置。Windows用户获得了ASIO播放和录音支持。\n\nAudacity 4.0中的频谱图工具经过重新设计和重新装备，更易于使用，渲染速度更快，预设处理在“内置、破坏性和实时效果”之间保持一致——此外还有其他变化。\n\n长期粉丝无需担心变化。有些功能已移动或更改，但项目表示“大多数Audacity 3工作流程仍然可用”——尽管有所保留，因为以下Audacity 3功能未包含在Audacity 4.0版本中：\n\n- 宏管理器和脚本管道\n- VAMP和LADSPA插件托管\n\n一些导出和渲染功能以及音频效果也缺失，但团队表示希望缺失的功能能在未来版本中回归。\n\nAudacity 4.0的官方发布视频很好地展示了众多大小变化：\n\n官方发布视频\n\n下载Audacity 4.0\n\nWindows和macOS的安装程序可从官方网站或项目GitHub获取，其中也提供了Linux的AppImage构建，包括64位Intel/AMD和Arrch64/ARM64构建。\n\n想要传统安装的用户可以选择Snap Store上的Audacity snap包，或尝试Flathub构建——截至撰写本文时，两者均未更新至v4.0，但更新可能会在适当时候到来。"
+  },
+  "36b11f9c6dfbef04408dbf404cdaab9a": {
+    "id": "36b11f9c6dfbef04408dbf404cdaab9a",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/1password-omarchy-pledge/",
+    "title_en": "1Password Just Pledged $300,000 to DHH's Omarchy, and its Own Employees Aren't Happy",
+    "summary_en": "Internal Slack messages show the CEO and cofounder gave staff two very different explanations for the decision.",
+    "pub_date": "Thu, 03 Sep 2026 13:03:20 GMT",
+    "title_zh": "1Password承诺向DHH的Omarchy捐赠30万美元，自家员工却不买账",
+    "summary_zh": "1Password宣布向DHH（David Heinemeier Hansson）的Omarchy项目捐赠30万美元（分三年，每年10万），此举引发内部员工不满。内部Slack消息显示，CEO和联合创始人对员工给出了不同的解释。员工认为这笔钱本可资助更小的开源项目，部分用户因此考虑转向Bitwarden等替代品。此外，1Password近期刚提高订阅价格，加剧了用户信任危机。",
+    "fulltext_zh": "1Password承诺向DHH的Omarchy捐赠30万美元，自家员工却不买账\n\n内部Slack消息显示，CEO和联合创始人向员工给出了两种截然不同的解释。\n\nOmarchy近来势头正盛。其基金会获得的资金迅速攀升，从最初的数额到几周后的1000万美元，如今已突破1300万美元，最近一笔承诺来自1Password。\n\n引起我注意的是前两家捐赠方——1Password和37signals，两者都决定在未来三年内每年捐赠10万美元。37signals的捐赠我可以理解，DHH深度参与其中，但1Password的出现令人意外。\n\n自然，并非所有人都认同这笔捐赠。\n\n分歧的迹象\n\n这一决定在1Password员工中引发了不满，公司领导层不得不采取一定的危机公关措施来安抚员工。\n\n一份内部Slack消息（已曝光）显示，联合创始人淡化批评，告诉团队成员：\n\n“人们有不同的个人观点。你内心坚信DHH是邪恶的，你站在道德高地上，没有什么能改变你的想法。然而，并非所有人都这么认为。声称垄断真理并排斥可能持不同意见的团队成员是不公平的。有些人不敢发声，仅仅是因为害怕遭到人身攻击。”\n\nCEO则在不同场合回应，告诉员工公司并不认可DHH的观点，同时指出Omarchy是1Password用户中第二常用的Linux发行版。\n\nDHH以坚定站在政治光谱某一端而闻名，他从不回避公开表达自己的观点。他定期发布博客，表明自己在某些社会问题上的立场，而他最近的一些文章正是引发此次强烈反对的原因。\n\n其中一篇题为《狼、羊和吉普赛人》的文章，将丹麦的狼群与在哥本哈根公园露营的罗姆人进行比较，他写道：“当吉普赛人占据公共空间时，你就驱逐他们。”另一篇文章则哀叹伦敦失去本土英国人多数，并对汤米·罗宾逊的游行表示赞同。\n\n当然，这些并非他引发反对的唯一原因，但你大概明白了吧？\n\n用户可能流失\n\n目前1Password如何向新用户推销其个人计划。\n\n如果你现在搜索“1Password Omarchy”等关键词，你一定会看到许多不满的1Password用户在论坛上的评论。他们称这一选择“不合时宜”，因为这笔钱本可以资助许多较小的开源项目。有些人已经转向Bitwarden等替代品，还有人建议自托管Vaultwarden，或改用KeePass及其分支。\n\n我认为问题还在加剧。1Password刚刚提高了订阅价格，从3月27日起的续费开始生效。个人计划价格上涨33%，从每年35.88美元涨至47.88美元；家庭计划价格上涨20%，从每年59.88美元涨至71.88美元。\n\n其社区论坛上已经满是长期用户表示因此离开的帖子。如果1Password继续这样玩弄用户的信任，谁知道接下来会遭遇怎样的大规模流失？\n\n喜欢这篇更新？支持独立的Linux新闻报道\n\nIt's FOSS在过去14年里一直帮助人们使用Linux。请帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读，并获得5本电子书。\n\n一次性付费，永久享受\n\n任意金额，无需承诺\n\n一个热爱开源软件、定制PC组装、赛车运动并探索这个世界无限可能的极客。\n\n好消息！CERN将2200多个控制系统迁移至Debian 13\n\n不光彩之举！育碧认为Linux不值得投入\n\nVanilla OS 3强势来袭，在漫长等待后支持ARM64\n\n这位开发者花了8年时间在Intel Clear Linux上，如今他正在纠正其最大错误\n\nFirefox 155新增两项变更，加快网页浏览速度\n\n成为更好的Linux用户"
+  },
+  "2570d0c294efe677bf3f08a902e334fc": {
+    "id": "2570d0c294efe677bf3f08a902e334fc",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/cern-debian-push/",
+    "title_en": "Good News! CERN is Migrating Over 2,200 Control Systems to Debian 13",
+    "summary_en": "The migration would move accelerator control computers out of the Red Hat ecosystem.",
+    "pub_date": "Thu, 03 Sep 2026 09:51:52 GMT",
+    "title_zh": "好消息！CERN 正在将超过 2,200 个控制系统迁移至 Debian 13",
+    "summary_zh": "CERN 计划将其粒子加速器控制系统从 Red Hat 生态系统迁移至 Debian 13，涉及超过 2,200 台工业计算机和嵌入式系统，预计于 2026 年底完成。此举源于 RHEL 10 对旧硬件的支持中断，继续使用将面临高昂的重新设计成本。CERN 评估了多条迁移路径，并开始赞助 Debian 服务公司 Freexian 以支持长期维护。迁移将采用新的启动服务器模型，提高配置同步效率，但不涉及数据中心。",
+    "fulltext_zh": "好消息！CERN 正在将超过 2,200 个控制系统迁移至 Debian 13\n\n好消息！CERN 正在将超过 2,200 个控制系统迁移至 Debian 13\n\n此次迁移将把加速器控制计算机移出 Red Hat 生态系统。\n\n得益于 Federico Vaga 和 Nikos Tsipinakis 在 MiniDebConf Winterthur 上的演讲，此事获得了不少正面报道。这两位 CERN 工程师解释了该组织为何将其粒子加速器控制计算机迁移至 Debian，到 2026 年底，将有超过 2,200 台工业计算机和嵌入式系统运行该系统。\n\n不过，这并不意味着 CERN 的整个 IT 基础设施都将迁移。此次迁移仅针对加速器控制层——即直接与运行光束的设备通信的前端计算机。\n\n这是他们目标中的多层基础设施架构。\n\nCERN 在 2023 年第二季度进行了一项风险分析，量化了继续留在 Red Hat 生态系统中的成本。估算成本约为（原文此处缺失具体数字），涉及约 11 块需要完全重新设计的硬件板卡，以及为此雇佣两名电子工程师、两名软件工程师和两名技术员。机架需要重新组织和布线，且大多数系统在调试期间将受到影响。即使假设替代品没有缺陷，CERN 自己的估计也将成功概率定在乐观的（原文此处缺失具体百分比）。\n\n造成这一切的原因是 CPU 代际限制。当 Red Hat 构建 RHEL 时，它会选择一个软件运行所需的最低 CPU 代际。RHEL 9 的截止点已经排除了 CERN 最古老的板卡，这些板卡运行着诸如英特尔老款（原文此处缺失具体型号）芯片，约占其设备总量的 47%。\n\nRHEL 10 再次提高了这一截止点，而这次即使是较新的（原文此处缺失具体代际）代板卡（另外 17% 的设备）也落到了不支持的一侧。\n\nDebian LTS 和 Freexian ELTS 的发布策略路径。\n\nCERN 权衡了使 Debian 与其加速器时间表保持一致的两种路径。计划 A 在 2026 年之前基于（原文此处缺失版本名）进行开发，在 2026 年至 2030 年间部署（原文此处缺失版本名）作为长期支持版本，然后迁移到 Debian 15 \"Duke\"。计划 B 则跳过最后一步，在 Trixie 上通过扩展长期支持（ELTS）一直使用到 2033 年。第三种选择，即全程在扩展支持下运行 Bookworm，已被排除。\n\n任一途径都依赖于 Debian 的 LTS 和 ELTS 项目保持健康运行，这也是 CERN 开始赞助 Freexian 的部分原因。Freexian 是一家专注于 Debian 的服务公司，负责这些（原文此处缺失项目名），这是一种可追溯到大约 2005 年的启动服务器模型。\n\n新的模型将引导加载程序、内核、初始 RAM 磁盘和用户空间解耦为独立部分，然后围绕（原文此处缺失技术名）重建交付流程。\n\n一个控制器将 CERN 期望的配置与实际部署的配置进行比较，当两者不同步时自动重新部署，而不是依赖人工通过 NFS 推送文件。\n\n这些都不涉及 CERN 的数据中心；这专门针对维持加速器本身运行的机器。到 2026 年最后一个季度结束时，CERN 预计将完成迁移。\n\n喜欢这次更新吗？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。请帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无需承诺\n\n一个热爱开源软件、定制 PC 组装、赛车运动并探索这个世界无限可能的极客。\n\n1Password 刚刚向 DHH 的 Omarchy 承诺捐赠 300,000 美元，其自家员工对此并不满意\n\n不光彩之举！育碧认为 Linux 不值得投入\n\nVanilla OS 3 强势来袭，在漫长等待后支持 ARM64\n\n这位开发者花了 8 年时间在英特尔的 Clear Linux 上，现在他正在纠正其最大的错误\n\nFirefox 155 新增两项更改，加快网页浏览速度\n\n成为更好的 Linux 用户\n\n通过 FOSS 每周通讯，您可以学习有用的 Linux 技巧、发现应用程序、探索新的发行版，并随时了解 Linux 世界的最新动态\n\n太好了！您已成功注册。\n\n欢迎回来！您已成功登录"
+  },
+  "9e282fd8a9fbe2fe948500cdad64aca8": {
+    "id": "9e282fd8a9fbe2fe948500cdad64aca8",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12944",
+    "title_en": "Distribution Release: Grml 2026.09",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Grml is a Debian-based live system focusing on the needs of system administrators. The project's latest version is Grml 2026.09 which is based on Debian's Testing branch, known at the time of writing as Forky. \"The 2026.09 release provides fresh software packages from Debian testing/forky. As usual it....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Grml 2026.09",
+    "summary_zh": "Grml 2026.09 发布，这是一个基于 Debian 的面向系统管理员的 live 系统。新版本基于 Debian 的 Testing 分支（代号 Forky），包含了最新的软件包和硬件支持，并修复了已知问题。重要变化包括 GNU Screen 5.0.1 的引入（配置不向后兼容），以及 grml-live 构建系统现在要求 Linux 用户命名空间，导致 Docker 等容器工具无法使用。此外，从 2026-06-10 到 2026-09-02 期间未构建每日镜像，并移除了从 grml-live.conf 读取配置的功能。",
+    "fulltext_zh": "发行版发布：Grml 2026.09 (DistroWatch.com News)\n\nGrml 是一个基于 Debian 的 live 系统，专注于满足系统管理员的需求。该项目的最新版本是 Grml 2026.09，它基于 Debian 的 Testing 分支，在撰写本文时该分支代号为 Forky。\n\n2026.09 版本提供了来自 Debian testing/forky 的最新软件包。像往常一样，它也包含了最新的硬件支持，并修复了之前 Grml 版本中的已知错误。\n\n重要变化：此版本基于截至 2026 年 9 月的 Debian testing/forky。GNU Screen 5.0.1 已引入。所需的配置更改不向后兼容。使用我们 grml screenrc 的用户必须升级，或者使用 screenrc_v4 文件搭配 GNU Screen 4.9。\n\n新增和移除的功能。自 Grml 2026.04 版本以来，包含了新软件，并且我们继续进行了清理工作。值得注意的变化有：\n\n- grml-live - 用于创建 Grml（基于）Linux live 系统的构建系统：grml-live 现在要求构建环境中具有 Linux 用户命名空间。不幸的是，Docker 和其他容器化工具在容器内不提供 Linux 用户命名空间。这是由 systemd 的变化引起的，并付出了大量努力。\n- 2026-06-10 至 2026-09-02 期间未构建每日镜像。\n- 移除了从 grml-live.conf 读取配置的功能。\n\n更多详细信息可在项目的发布公告中找到。\n\n下载：grml-full-2026.09-amd64.iso (3,200MB, SHA256), grml-small-2026.09-amd64.iso (1,200MB, SHA256)。\n\n相关新闻和发布：\n- 发行版发布：Grml 2026.09\n- 发行版发布：Grml 2026.04\n- 发行版发布：Grml 2025.12\n- 发行版发布：Grml 2025.08\n- 发行版发布：Grml 2025.05\n- 发行版发布：Grml 2024.12\n\nGrml 是一个基于 Debian GNU/Linux 的可启动 CD（live CD）。它包含一组 GNU/Linux 软件，特别适用于文本工具用户和系统管理员。它还提供自动硬件检测。Grml 可以用作救援系统，用于分析系统和网络，或作为工作环境。由于即时解压缩，Grml 包含了大量软件。"
+  },
+  "be88801066e09c78d54a9ba478465d7a": {
+    "id": "be88801066e09c78d54a9ba478465d7a",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Ubuntu-26.10-Snapshot-3",
+    "title_en": "Ubuntu 26.10 Snapshot 3 Monthly ISOs Released For Testing",
+    "summary_en": "Released tonight is Ubuntu 26.10 \"Stonking Stingray\" Snapshot 3 as the newest monthly ISO candidates for Ubuntu Linux...",
+    "pub_date": "Thu, 03 Sep 2026 20:15:30 -0400",
+    "title_zh": "Ubuntu 26.10 Snapshot 3 月度 ISO 发布供测试",
+    "summary_zh": "Ubuntu 26.10 的第三个月度 Snapshot ISO 已发布，代号“Stonking Stingray”，旨在帮助社区测试发布自动化并提前发现错误。该版本非生产就绪，仅用于一次性测试。Ubuntu 26.10 的 UI 冻结将于下周开始，内核功能冻结定于 9 月 17 日，Beta 版计划于 9 月 24 日发布，正式版预计在 10 月 15 日推出。",
+    "fulltext_zh": "Ubuntu 26.10 Snapshot 3 月度 ISO 发布供测试 - Phoronix\nUbuntu 26.10 Snapshot 3 月度 ISO 发布供测试\n发布于 2026 年 9 月 3 日晚上 8:15（美国东部时间）。\n\n“Stonking Stingray” Snapshot 3 是 Ubuntu Linux 最新的月度 ISO 候选版本。\n\nUbuntu 26.10 正在逐步迈向 10 月份的正式发布，而这些月度“Snapshot”版本有助于测试其发布自动化，并促进 Ubuntu Linux 社区的广泛测试，同时补充了持续每日 ISO 快照，以提供最前沿的体验。\n\nUbuntu 26.10 Snapshot 3 并非生产就绪，而是严格用于一次性测试。它现在提供了最新的 Ubuntu 26.10 体验，包含所有最新软件包，以帮助更早发现错误。有关 Ubuntu 26.10 Snapshot 3 的详细信息和下载，请参阅 ubuntu-devel 邮件列表。\n\nUbuntu 26.10 的 UI 冻结将于下周开始，内核功能冻结（基于 Linux 7.2 内核）定于 9 月 17 日，Beta 冻结定于 9 月 21 日。Ubuntu 26.10 Beta 计划于 9 月 24 日发布，而 Ubuntu 26.10 的正式版预计在 10 月 15 日发布。\n\nMir 2.29 发布，附带更多 Wayland 协议\nUbuntu 26.04.1 LTS 发布，包含首批修复集合\nUbuntu Touch 在 Ubuntu 26.04、Vulkan 和应用更新方面取得进展\nUbuntu 将为 Ubuntu 26.04 LTS 提供虚拟化 HWE 栈\nUbuntu Touch 24.04-2.0 发布，支持刘海屏和圆角\nUbuntu Linux 计划移除 /etc/debian_version 历史遗留文件\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nCERN 长期作为 RHEL 机构后，将工业计算机迁移至 Debian\nLinux 内核每个版本接近 2,000 个 CVE\nDebian 投票允许“负责任地使用生成式 AI”\n加利福尼亚州通过 AB-1856，为年龄验证提供开源救济\nReactOS 0.4.16 发布，带有新的图形安装程序和更好的硬件支持\n前英特尔工程师（曾是 Clear Linux 架构师之一）正在创建新发行版\n来自英特尔或 AMD 以外的实体的另一条 x86 建议\n补丁提供更快的内核内 Zstd，解决令人尴尬的低效问题\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "cd4763b53a7f14ddc1d62de57617e8d3": {
+    "id": "cd4763b53a7f14ddc1d62de57617e8d3",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Amazon-Linux-2027-Preview",
+    "title_en": "Amazon Linux 2027 Now in Preview: Powered By Linux 7.1, x86-64-v3 & Built With LTO",
+    "summary_en": "AWS announced today the public preview of Amazon Linux 2027. Given the time since Amazon Linux 2023, Amazon Linux 2027 comes with a heavy arsenal of software updates as well as many performance optimizations and other tuning for better running workloads geared for the AWS cloud...",
+    "pub_date": "Thu, 03 Sep 2026 17:13:55 -0400",
+    "title_zh": "Amazon Linux 2027 预览版发布：基于 Linux 7.1，支持 x86-64-v3，并采用 LTO 构建",
+    "summary_zh": "AWS 宣布 Amazon Linux 2027 公开预览版发布。该版本默认使用 Linux 7.1 内核，启用 SELinux 强制模式，新增加速器驱动，并针对 AWS 云工作负载进行了大量性能优化。所有软件包均以 -O2 优化级别构建，并启用链接时优化（LTO）和自动向量化，x86-64 软件包面向 x86-64-v3 微架构。在 ARM 方面，为 Graviton 实例默认启用透明大页（THP）。此外，默认编译器为 GCC 16.1，并包含 LLVM/Clang 22 及更新的 Rust 和 Go 版本，包管理器为 DNF5，部分基于 Fedora 44 和 45。",
+    "fulltext_zh": "Amazon Linux 2027 预览版发布：基于 Linux 7.1，支持 x86-64-v3，并采用 LTO 构建 - Phoronix\n\nAmazon Linux 2027 预览版发布：基于 Linux 7.1，支持 x86-64-v3，并采用 LTO 构建\n\n发布于 2026 年 9 月 3 日 下午 05:13（美国东部时间）。\n\nAWS 今天宣布了 Amazon Linux 2027 的公开预览版。鉴于自 Amazon Linux 2023 以来的时间跨度，Amazon Linux 2027 带来了大量软件更新，以及许多性能优化和其他调整，以便更好地运行针对 AWS 云的工作负载。\n\nAmazon Linux 2027 默认使用 Linux 7.1 内核，现在默认启用 SELinux 强制模式，新增了加速器驱动程序，并包含各种其他改进。\n\nAmazon Linux 2027 的软件包现在也全部以 -O2 优化级别构建，软件包在构建时启用了链接时优化（LTO）以获得更好的性能，并且 x86-64 软件包现在面向 x86-64-v3，以支持 AVX/AVX2。Amazon Linux 2027 的软件包现在还启用了自动向量化。\n\n在增强 ARM 性能方面，对于 Amazon Linux 2027 上的 AArch64 Graviton 实例，默认还为 malloc 堆区域启用了透明大页（THP）。\n\nAmazon Linux 2027 还默认使用新的 GCC 16.1 编译器，以及 LLVM/Clang 22 和更新版本的 Rust 和 Go。在包管理器方面，使用 DNF5。Amazon Linux 2027 部分基于 Fedora 44 和 Fedora 45。\n\n有关 Amazon Linux 2027 的更多详细信息，请参阅\n\n有关 Amazon Linux 2027 的技术变更的所有有趣细节，请参阅。我将很快着手运行一些 Amazon Linux 2027 基准测试。\n\nReactOS 0.4.16 发布，带来新的图形安装程序，更好的硬件支持\n\nHaiku R1 Beta 6 时隔两年发布，BeOS 灵感项目下周迎来 25 周年\n\nArmbian 26.8 发布，重写安装程序，提供 UEFI ISO 镜像\n\nReactOS 合并作业对象支持，作为运行现代 Windows 应用的一步\n\nRedox OS 切换到基于 EEVDF 的调度器，吞吐量提升 2.6 倍\n\n基于 Slackware 的 Zenwalk Linux 旨在提供“真正的低延迟桌面体验”\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动程序和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他。\n\nCERN 在长期使用 RHEL 后，将工业计算机迁移至 Debian\n\nLinux 内核每个版本接近 2000 个 CVE\n\nDebian 投票允许“负责任地使用生成式 AI”\n\n加州通过 AB-1856 法案，为年龄验证提供开源救济\n\nReactOS 0.4.16 发布，带来新的图形安装程序，更好的硬件支持\n\n前英特尔工程师，Clear Linux 架构师之一，正在启动新的发行版\n\n来自英特尔或 AMD 以外实体的另一份 x86 公告\n\n补丁大幅提升内核内 Zstd 性能，修复令人尴尬的低效问题\n\n在享受无广告浏览的同时，\n\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026，由\n\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "f7cf057032d9f5335f3de1c11ceb0e2c": {
+    "id": "f7cf057032d9f5335f3de1c11ceb0e2c",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Intel-Graphics-CMRR-Linux-7.4",
+    "title_en": "Intel Improving Its Content Match Refresh Rate \"CMRR\" Feature With Linux 7.4",
+    "summary_en": "Introduced with the Xe2 Lunar Lake graphics hardware was support for Content Match Refresh Rate (CMRR) as an improvement over typical Variable Refresh Rate (VRR) / Adaptive-Sync to more precisely match the video or content frame rates. Particularly for video playback it aims for no stuttering or frame drops. With the upcoming Linux 7.4 kernel will be better support for CMRR with the Intel graphics driver...",
+    "pub_date": "Thu, 03 Sep 2026 13:57:03 -0400",
+    "title_zh": "英特尔改进其“内容匹配刷新率”CMRR功能，支持Linux 7.4",
+    "summary_zh": "英特尔正在改进其内容匹配刷新率（CMRR）功能，该功能随Xe2 Lunar Lake显卡硬件引入，旨在比传统可变刷新率（VRR）/自适应同步更精确地匹配视频或内容帧率，尤其避免视频播放时的卡顿或掉帧。即将推出的Linux 7.4内核将增强对CMRR的支持。此前，CMRR的分数定时代码被永久禁用，仅支持嵌入式DisplayPort（eDP），且依赖启发式猜测。新补丁解决了这些问题，并添加了基于DebugFS的接口，以便用户空间控制CMRR。默认启用针对Intel Display IP 30及以上版本（对应Xe3/Panther Lake及更新）的CMRR。",
+    "fulltext_zh": "英特尔改进其“内容匹配刷新率”CMRR功能，支持Linux 7.4 - Phoronix\n英特尔改进其“内容匹配刷新率”CMRR功能，支持Linux 7.4\n2026年9月3日下午1:57（美国东部时间）。\n\nXe2 Lunar Lake显卡硬件引入了内容匹配刷新率（CMRR）支持，作为对传统可变刷新率（VRR）/自适应同步的改进，以更精确地匹配视频或内容帧率。尤其对于视频播放，它旨在避免卡顿或掉帧。即将推出的Linux 7.4内核将更好地支持英特尔显卡驱动中的CMRR。\n\n早在2023年，我首次报道了英特尔为其开源显卡驱动开发的新CMRR功能，该功能在Lunar Lake发布之前就已进行。虽然Lunar Lake以及现在的Panther Lake和Wildcat Lake已经出现，英特尔硬件持续进步，且英特尔CMRR补丁已存在近两年，但内容匹配刷新率在Linux下尚未完全利用。\n\n直到现在，补丁才在Linux 7.4之前被排队加入DRM-Next以扩展其使用。英特尔工程师Mitul Golani在即将合并到Linux 7.4的补丁系列中指出，CMRR分数定时代码已被永久禁用，仅支持嵌入式DisplayPort（eDP），并依赖启发式猜测何时需要分数定时路径。新补丁解决了这些缺点，并添加了一个基于DebugFS的新功能，目前先于新的用户空间API来控制CMRR。\n\n虽然CMRR支持随Lunar Lake引入，但Linux 7.4的工作是默认启用它，适用于VRR定时生成是默认定时生成器的情况，目前仅适用于Intel Display IP版本30及更高版本。这对应于Xe3 / Panther Lake及更新版本。\n\n新的DebugFS控制是一个每CRTC的DebugFS文件，允许用户空间为CMRR目标刷新率和视频模式要求进行设置。请求的刷新率可以以毫赫兹为单位指定，也可以指定视频定时的分母。最终预计会有一个良好的用户空间API，但目前它是一个英特尔驱动特定的DebugFS接口。\n\n[链接]包含最新的英特尔CMRR启用工作。这些补丁通过今天的drm-intel-next拉取请求发送，该请求包含面向Linux 7.4的新英特尔内核显卡驱动材料。\n\n该拉取还调整了DG2多协议PLL代码以使用DPLL框架，修复了DP-HDMI PCON显示流压缩问题，以及各种其他代码清理和修复。在Linux 7.4合并窗口于10月下旬开启之前，还有几周时间可以让更多英特尔显卡驱动功能进入DRM-Next。\n\n英特尔更新LLM-Scaler-vLLM构建以支持vLLM 0.26及其他改进\n英特尔显卡驱动为Linux 7.4引入冷重置恢复，Panther Lake IBC v3\n前英特尔工程师、Clear Linux架构师之一将创办新发行版\n英特尔Linux驱动因限制人体射频暴露而被弃用\n英特尔ANV驱动改进Vulkan视频H.265解码\n英特尔推出新的“BFF”Linux驱动以处理老化硅片和卡住位\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、显卡驱动和其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过[链接]关注他。\n\nCERN在长期使用RHEL机构后，将工业计算机迁移至Debian\nLinux内核每个版本接近2000个CVE\nDebian投票允许“负责任地使用生成式AI”\n加利福尼亚州通过AB-1856，为年龄验证提供开源救济\nReactOS 0.4.16发布，带有新的图形安装程序，更好的硬件支持\n前英特尔工程师、Clear Linux架构师之一正在启动新发行版"
+  },
+  "18dd8f7800b7abee7872a2ac6b0ba2c7": {
+    "id": "18dd8f7800b7abee7872a2ac6b0ba2c7",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Mir-2.29-Released",
+    "title_en": "Mir 2.29 Released With Additional Wayland Protocols",
+    "summary_en": "For those using Canonical's Mir compositor for building Wayland-based shells, Mir 2.29 is now available with various improvements and new Wayland protocol coverage...",
+    "pub_date": "Thu, 03 Sep 2026 13:18:12 -0400",
+    "title_zh": "Mir 2.29 发布，新增多项 Wayland 协议支持",
+    "summary_zh": "Mir 2.29 是 Canonical 为构建基于 Wayland 的 shell 而开发的合成器的最新版本，现已发布。此版本新增了对 xdg-dialog-v1 协议的支持，使应用程序能够告知窗口管理器某个窗口是对话框；同时支持 ext_foreign_toplevel_image_capture_source_manager_v1 协议，允许客户端为特定顶层应用窗口创建图像捕获源，用于屏幕录制等场景。此外，Mir 2.29 还增加了对单个表面截图的支持，改进了 wl_region 实现，并引入了触摸模拟器。代码库已迁移至 C++26，移除了 EGLStream 和 wl-drm 支持，转而使用 DMA-BUF，并清理了其他废弃 API，同时修复了大量 bug。",
+    "fulltext_zh": "Mir 2.29 发布，新增多项 Wayland 协议支持 - Phoronix\n\nMir 2.29 发布，新增多项 Wayland 协议支持\n\n2026年9月3日，下午1:18（美国东部时间）。\n\n对于使用 Canonical 的 Mir 合成器来构建基于 Wayland 的 shell 的用户，Mir 2.29 现已可用，带来了多项改进和新的 Wayland 协议覆盖。\n\nMir 2.29 增加了对 xdg-dialog-v1 的支持，该协议允许应用程序告知窗口管理器某个特定窗口是对话框。这一协议已被其他主流 Wayland 合成器支持。Mir 2.29 现在还支持 ext_foreign_toplevel_image_capture_source_manager_v1，该协议允许客户端为特定的顶层应用窗口创建图像捕获源，用于屏幕录制等类似用途。\n\nMir 2.29 更新还增加了对单个表面截图的支持，其 wl_region 实现现在可以处理添加和减去操作，并且新增了一个触摸模拟器，可将鼠标点击和拖动映射为触摸事件。其他更改包括将代码库迁移到 C++26，移除 EGLStream 支持，取消 wl-drm 支持以改用 DMA-BUF，以及移除其他废弃的 API。此外还修复了大量 bug。\n\nMir 2.29 的下载和更多详情请访问：\n\nUbuntu 26.10 Snapshot 3 月度 ISO 发布供测试\n\nUbuntu 26.04.1 LTS 发布，包含首批修复集合\n\nUbuntu Touch 向 Ubuntu 26.04、Vulkan 和应用更新迈进\n\nUbuntu 将为 Ubuntu 26.04 LTS 提供虚拟化 HWE 栈\n\nUbuntu Touch 24.04-2.0 发布，支持刘海屏和圆角\n\nUbuntu Linux 计划移除 /etc/debian_version 历史遗留文件\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过20,000篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nCERN 在长期使用 RHEL 后，将工业计算机迁移至 Debian\n\nLinux 内核每个版本接近 2000 个 CVE\n\nDebian 投票允许“负责任地使用生成式 AI”\n\n加利福尼亚州通过 AB-1856，为年龄验证提供开源救济\n\nReactOS 0.4.16 发布，配备新的图形安装程序，更好的硬件支持\n\n前英特尔工程师，曾是 Clear Linux 架构师之一，正在启动新发行版\n\n来自英特尔或 AMD 之外实体的另一份 x86 公告\n\n补丁大幅提升内核内 Zstd 速度，因效率低得惊人\n\n在享受无广告浏览的同时，\n\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026，由\n\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "c8a0a9c35aec4f20ca40235a44b55dbd": {
+    "id": "c8a0a9c35aec4f20ca40235a44b55dbd",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/LLVM-Debates-AGENTS-MD",
+    "title_en": "LLVM Developers Begin Debate Over AGENTS.md For Helping AI Agents",
+    "summary_en": "LLVM developers have begun a discussion on whether the project should host an AGENTS.md file (and CLAUDE.md) in their Git repository for helping to guide AI agents...",
+    "pub_date": "Thu, 03 Sep 2026 11:45:12 -0400",
+    "title_zh": "LLVM开发者开始讨论引入AGENTS.md以辅助AI代理",
+    "summary_zh": "LLVM开发者近日就是否在Git仓库中引入AGENTS.md文件以指导AI代理展开讨论。尽管许多开源项目已采用此类文件，但LLVM社区对此意见不一。支持者认为有助于规范AI贡献，反对者则担心增加噪音、违背项目不干预个人工作流程的原则。长期开发者Nick Desaulniers提议添加一个精简版AGENTS.md，引导AI代理查阅相关文档和编码标准。目前讨论仍在进行，最终立场尚未确定。",
+    "fulltext_zh": "LLVM开发者开始讨论是否应在Git仓库中引入AGENTS.md文件，以帮助指导AI代理。\n\n尽管许多开源项目已采用AGENTS.md文件来指导AI代理处理补丁或其他开源贡献相关工作，但并非所有人都认同其有效性，或对AI代理的欢迎程度持一致态度。对于LLVM而言，由于涉及众多范围各异的子项目，也引发了相关担忧。\n\n长期参与LLVM开发的Nick Desaulniers昨日发起了关于是否引入AGENTS.md/CLAUDE.md的讨论，目前回应褒贬不一。部分人表示支持，但也有人认为这些文件可能带来更多噪音，未必有效。还有人指出，这违背了LLVM不干预开发者个人工作流程的原则。部分开发者已在各自的私有仓库中使用自定义的AGENTS.md内容。\n\n目前已有提议为LLVM添加一个精简版AGENTS.md，该版本将告知AI代理查阅LLVM关于AI工具贡献政策的文档，以及编码标准。\n\n我们将关注LLVM最终对AGENTS.md采取何种立场。"
+  },
+  "0e6e00cd6b0d94d3d598419ff0e3dc7d": {
+    "id": "0e6e00cd6b0d94d3d598419ff0e3dc7d",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/gnome-cuts-security-disclosure-deadline-from-90-to-30-days/",
+    "title_en": "GNOME Cuts Security Disclosure Deadline From 90 to 30 Days",
+    "summary_en": "GNOME cuts its security disclosure deadline from 90 to 30 days, giving developers less time to fix reported vulnerabilities before they become public.\nThe post GNOME Cuts Security Disclosure Deadline From 90 to 30 Days appeared first on Linux Today.",
+    "pub_date": "Thu, 03 Sep 2026 07:00:52 +0000",
+    "title_zh": "GNOME将安全披露期限从90天缩短至30天",
+    "summary_zh": "GNOME项目宣布将其安全漏洞披露期限从90天缩短至30天，这意味着开发者修复已报告漏洞的时间将大幅减少，漏洞在公开前留给开发者的缓冲期更短。此举旨在加快安全响应速度，但也给维护者带来了更大的时间压力。",
+    "fulltext_zh": "GNOME将其安全披露期限从90天缩短至30天，这给了开发者在漏洞公开前更少的时间来修复已报告的漏洞。\n\n该消息最初发布于Linux Today。"
+  },
+  "ef23131066330d32c4fe0b50ba3b8c80": {
+    "id": "ef23131066330d32c4fe0b50ba3b8c80",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/the-xz-backdoor-long-con-chronicled-in-half-a-second/",
+    "title_en": "The XZ Backdoor Long Con Chronicled in ‘Half a Second’",
+    "summary_en": "Half a Second chronicles the XZ Utils backdoor and the years-long social engineering campaign behind one of open source’s most alarming supply chain attacks.\nThe post The XZ Backdoor Long Con Chronicled in ‘Half a Second’ appeared first on Linux Today.",
+    "pub_date": "Thu, 03 Sep 2026 06:58:30 +0000",
+    "title_zh": "《半秒钟》记录XZ后门长期骗局",
+    "summary_zh": "本文介绍了《半秒钟》一书，该书详细记录了XZ Utils后门事件及其背后长达数年的社会工程攻击，这是开源领域最令人警惕的供应链攻击之一。文章强调了这一事件的严重性和对开源社区的影响。",
+    "fulltext_zh": "《半秒钟》详细记录了XZ Utils后门事件，以及其背后长达数年的社会工程攻击，这是开源领域最令人警惕的供应链攻击之一。\n\n该文章首发于Linux Today。"
+  },
+  "61e0732fdabbdb746ab46e5ffe41fca0": {
+    "id": "61e0732fdabbdb746ab46e5ffe41fca0",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/simple-taskbar-brings-a-windows-11-like-taskbar-to-gnome-desktop/",
+    "title_en": "Simple Taskbar Brings a Windows 11-Like Taskbar to GNOME Desktop",
+    "summary_en": "Simple Taskbar brings a Windows 11-inspired taskbar experience to the GNOME desktop, offering familiar app launching and window management features.\nThe post Simple Taskbar Brings a Windows 11-Like Taskbar to GNOME Desktop appeared first on Linux Today.",
+    "pub_date": "Thu, 03 Sep 2026 06:57:13 +0000",
+    "title_zh": "Simple Taskbar 为 GNOME 桌面带来类似 Windows 11 的任务栏",
+    "summary_zh": "Simple Taskbar 是一款新的 GNOME 扩展，旨在将 Windows 11 风格的任务栏引入 GNOME 桌面环境。它提供了熟悉的应用程序启动和窗口管理功能，使用户能够更轻松地切换和启动应用。该扩展适合喜欢 Windows 11 界面风格的用户，同时保留了 GNOME 的灵活性和可定制性。",
+    "fulltext_zh": "Simple Taskbar 为 GNOME 桌面带来了受 Windows 11 启发的任务栏体验，提供了熟悉的应用程序启动和窗口管理功能。\n\n该文章首次出现在 Linux Today 上。"
+  },
+  "04c94544bc56926df436da92734afbfa": {
+    "id": "04c94544bc56926df436da92734afbfa",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/networkmanager-1-58-officially-released-with-new-features-and-improvements/",
+    "title_en": "NetworkManager 1.58 Officially Released with New Features and Improvements",
+    "summary_en": "NetworkManager 1.58 is now available with new networking features, connectivity improvements, bug fixes, and enhancements for managing network connections.\nThe post NetworkManager 1.58 Officially Released with New Features and Improvements appeared first on Linux Today.",
+    "pub_date": "Thu, 03 Sep 2026 06:56:09 +0000",
+    "title_zh": "NetworkManager 1.58 正式发布，带来新功能与改进",
+    "summary_zh": "NetworkManager 1.58 已正式发布，此次更新引入了新的网络功能、连接性改进、错误修复以及针对网络连接管理的增强。该版本旨在提升用户体验和系统稳定性，适用于各类Linux发行版。更多详细信息请参阅官方发布说明。",
+    "fulltext_zh": "NetworkManager 1.58 现已发布，带来了新的网络功能、连接性改进、错误修复以及用于管理网络连接的增强功能。\n\n该文章最初发表于 Linux Today。"
+  },
+  "6914a4d255d2b8cba0de9ecdf2a54bc5": {
+    "id": "6914a4d255d2b8cba0de9ecdf2a54bc5",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/koan-audiophile-music-player/",
+    "title_en": "koan – Audiophile Music Player",
+    "summary_en": "Koan is an audiophile-focused music player designed for high-quality playback, offering a clean listening experience for users who prioritize sound quality.\nThe post koan – Audiophile Music Player appeared first on Linux Today.",
+    "pub_date": "Thu, 03 Sep 2026 06:55:07 +0000",
+    "title_zh": "koan – 发烧级音乐播放器",
+    "summary_zh": "Koan是一款专为音频发烧友设计的音乐播放器，专注于高品质播放，为追求音质的用户提供纯净的聆听体验。该软件在Linux平台上发布，旨在满足对声音质量有高要求的用户需求。",
+    "fulltext_zh": "Koan是一款专为音频发烧友设计的音乐播放器，专注于高品质播放，为优先考虑音质的用户提供纯净的聆听体验。\n\n该文章最初发表于Linux Today。"
   }
 }

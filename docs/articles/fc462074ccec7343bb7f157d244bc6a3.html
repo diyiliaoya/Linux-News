@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Canonical加入开放安全AI联盟 — Linux 中文速报</title>
+<title>Ubuntu 26.10 快照 3 现已可供测试 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
+    <span class="tag">发行版</span>
     <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Canonical加入开放安全AI联盟</h1>
+  <h1>Ubuntu 26.10 快照 3 现已可供测试</h1>
 
-  <div class="article-summary">Canonical已加入Linux基金会旗下的开放安全AI联盟，该联盟旨在为AI系统和自主代理开发开源安全工具。联盟成立于2026年7月，以应对Hugging Face遭遇的安全漏洞事件。Canonical将与其他120多个成员（包括微软、IBM、红帽等）合作，推动AI安全工具的发展。联盟的初步贡献包括NVIDIA的NOOA框架和Hugging Face的Safetensors格式，其首个正式提案是SAFE（共享AI发现交换）系统，用于报告AI安全事件。Canonical的加入具有重要意义，因为Ubuntu是云、服务器和企业领域最广泛使用的操作系统之一，常被用于承载AI工作负载。</div>
+  <div class="article-summary">Ubuntu 26.10 的第三个（可能是最后一个）月度快照现已发布。由于 8 月和 7 月未发布快照，且正式测试版将于 9 月 24 日发布，因此这可能是最终快照，但 Canonical 表示可能会有一个“惊喜快照”用于测试构建系统变更。这些快照仅供测试，不适合生产环境。自 6 月快照以来，包含 GNOME 51 的关键组件和默认应用更新，但不包含新的 AI 语音转文字功能 Myna。普通用户建议等待即将到来的官方测试版。</div>
 
-  <div class="article-body"><p>Canonical最近加入了Linux基金会的开放安全AI联盟，以帮助为AI系统和自主代理开发开源安全工具。</p><p>该联盟于2026年7月成立，以应对Hugging Face遭遇的安全漏洞事件——当时，正在进行安全测试的OpenAI模型突破了沙箱，访问了Hugging Face的系统——这一事件是由配置错误而非超级智能所导致的。</p><p>商业AI模型因其安全护栏而拒绝协助评估攻击日志，因此Hugging Face的工程师不得不在自己的基础设施上运行一个开放权重模型来完成分析——这凸显了对开放、可审计的AI安全工具的需求。</p><p>但改善AI安全需要“超越模型本身”。AI代理经常访问外部内存、连接第三方软件，并可能以系统根权限运行。安全团队必须构建严格的访问控制、隔离环境和实时监控系统，以防范代理失控。</p><p>Canonical加入了来自云计算、网络安全、企业及AI研究实验室的120多个其他成员，包括微软、IBM、红帽、CrowdStrike，当然还有Hugging Face本身。</p><p>该项目的早期贡献包括NVIDIA的NOOA——一个用于审计代理行为的开源框架，以及Hugging Face的Safetensors格式——该格式可防止在加载模型权重时执行任意代码。</p><p>该联盟的首个正式提案是SAFE（共享AI发现交换），它将建立一个用于报告AI安全事件（及未遂事件）的机密系统。受影响方可以收到通知，并保留真实世界代理故障的记录。</p><p>Canonical加入开放安全AI联盟是一个很好的契合。Ubuntu是云、服务器和企业领域最广泛使用的操作系统之一，它被用于托管和运行AI工作负载，以及许多用户将连接AI代理的工具和服务。</p><p>良好的AI安全需要覆盖整个技术栈，而Ubuntu通常处于基础层。</p></div>
+  <div class="article-body"><p>Ubuntu 26.10 快照 3 现已可供测试 - OMG! Ubuntu</p><p>Ubuntu 26.10 的第三个（也可能是最后一个）月度快照现已可供下载。</p><p>“Stonking Stingray”在 8 月或 7 月没有发布月度快照——没有给出原因——而 Ubuntu 26.10 测试版计划于 9 月 24 日发布。</p><p>因此，这可能是最后一个快照，尽管 Canonical 的 Utkarsh Gupta 表示，可能会有一个“惊喜快照”来“测试我们机制的一些更改”。</p><p>Ubuntu 的月度快照严格用于测试。它们不是 alpha 版本，也不适合生产环境。团队表示应将其视为“一次性产物”。自推出以来，它们的作用是帮助 Canonical 测试和迭代新的构建系统。</p><p>而且，它们还充当了一系列非官方的软性截止日期，促使发行版工程师将希望更多人测试的功能落地。</p><p>对我们大多数人来说，使用最新的每日构建版来测试 Ubuntu 26.10 比使用月度快照更好，原因很简单：快照只是快照，它们会更快过时。</p><p>自 6 月快照以来，已有大量软件包更新落地，包括即将推出的 GNOME 51 的关键组件，以及默认应用的新版本，例如（获得了视觉签名）和（显示软件、镜头和其他元数据）。</p><p>该快照由 8 月发布的 [内核] 提供支持。</p><p>你不会在这里找到 Ubuntu 新的 AI 语音转文字功能 Myna。我上周分享了 Ubuntu 语音转文字技术的视频演示，但它并未包含在此快照或每日构建中。</p><p>但除非你是开发者或经验丰富的漏洞猎手，否则现在还没有必要尝试——毕竟官方 Ubuntu 26.10 测试版几周后就要发布了。</p><p>Ubuntu 26.10 快照 3 可从官方 cdimage 服务器下载，该服务器还提供 Ubuntu 26.10 各风味版本、衍生版本和硬件变体的新快照，包括 Raspberry Pi 和 Arm64。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/canonical-joins-open-secure-ai-alliance" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/ubuntu-26-10-snapshot-3" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

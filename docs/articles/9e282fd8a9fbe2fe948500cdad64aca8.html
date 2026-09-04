@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Canonical加入开放安全AI联盟 — Linux 中文速报</title>
+<title>发行版发布：Grml 2026.09 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">发行版</span>
+    <span class="source">DistroWatch</span>
   </div>
 
-  <h1>Canonical加入开放安全AI联盟</h1>
+  <h1>发行版发布：Grml 2026.09</h1>
 
-  <div class="article-summary">Canonical已加入Linux基金会旗下的开放安全AI联盟，该联盟旨在为AI系统和自主代理开发开源安全工具。联盟成立于2026年7月，以应对Hugging Face遭遇的安全漏洞事件。Canonical将与其他120多个成员（包括微软、IBM、红帽等）合作，推动AI安全工具的发展。联盟的初步贡献包括NVIDIA的NOOA框架和Hugging Face的Safetensors格式，其首个正式提案是SAFE（共享AI发现交换）系统，用于报告AI安全事件。Canonical的加入具有重要意义，因为Ubuntu是云、服务器和企业领域最广泛使用的操作系统之一，常被用于承载AI工作负载。</div>
+  <div class="article-summary">Grml 2026.09 发布，这是一个基于 Debian 的面向系统管理员的 live 系统。新版本基于 Debian 的 Testing 分支（代号 Forky），包含了最新的软件包和硬件支持，并修复了已知问题。重要变化包括 GNU Screen 5.0.1 的引入（配置不向后兼容），以及 grml-live 构建系统现在要求 Linux 用户命名空间，导致 Docker 等容器工具无法使用。此外，从 2026-06-10 到 2026-09-02 期间未构建每日镜像，并移除了从 grml-live.conf 读取配置的功能。</div>
 
-  <div class="article-body"><p>Canonical最近加入了Linux基金会的开放安全AI联盟，以帮助为AI系统和自主代理开发开源安全工具。</p><p>该联盟于2026年7月成立，以应对Hugging Face遭遇的安全漏洞事件——当时，正在进行安全测试的OpenAI模型突破了沙箱，访问了Hugging Face的系统——这一事件是由配置错误而非超级智能所导致的。</p><p>商业AI模型因其安全护栏而拒绝协助评估攻击日志，因此Hugging Face的工程师不得不在自己的基础设施上运行一个开放权重模型来完成分析——这凸显了对开放、可审计的AI安全工具的需求。</p><p>但改善AI安全需要“超越模型本身”。AI代理经常访问外部内存、连接第三方软件，并可能以系统根权限运行。安全团队必须构建严格的访问控制、隔离环境和实时监控系统，以防范代理失控。</p><p>Canonical加入了来自云计算、网络安全、企业及AI研究实验室的120多个其他成员，包括微软、IBM、红帽、CrowdStrike，当然还有Hugging Face本身。</p><p>该项目的早期贡献包括NVIDIA的NOOA——一个用于审计代理行为的开源框架，以及Hugging Face的Safetensors格式——该格式可防止在加载模型权重时执行任意代码。</p><p>该联盟的首个正式提案是SAFE（共享AI发现交换），它将建立一个用于报告AI安全事件（及未遂事件）的机密系统。受影响方可以收到通知，并保留真实世界代理故障的记录。</p><p>Canonical加入开放安全AI联盟是一个很好的契合。Ubuntu是云、服务器和企业领域最广泛使用的操作系统之一，它被用于托管和运行AI工作负载，以及许多用户将连接AI代理的工具和服务。</p><p>良好的AI安全需要覆盖整个技术栈，而Ubuntu通常处于基础层。</p></div>
+  <div class="article-body"><p>发行版发布：Grml 2026.09 (DistroWatch.com News)</p><p>Grml 是一个基于 Debian 的 live 系统，专注于满足系统管理员的需求。该项目的最新版本是 Grml 2026.09，它基于 Debian 的 Testing 分支，在撰写本文时该分支代号为 Forky。</p><p>2026.09 版本提供了来自 Debian testing/forky 的最新软件包。像往常一样，它也包含了最新的硬件支持，并修复了之前 Grml 版本中的已知错误。</p><p>重要变化：此版本基于截至 2026 年 9 月的 Debian testing/forky。GNU Screen 5.0.1 已引入。所需的配置更改不向后兼容。使用我们 grml screenrc 的用户必须升级，或者使用 screenrc_v4 文件搭配 GNU Screen 4.9。</p><p>新增和移除的功能。自 Grml 2026.04 版本以来，包含了新软件，并且我们继续进行了清理工作。值得注意的变化有：</p><p>- grml-live - 用于创建 Grml（基于）Linux live 系统的构建系统：grml-live 现在要求构建环境中具有 Linux 用户命名空间。不幸的是，Docker 和其他容器化工具在容器内不提供 Linux 用户命名空间。这是由 systemd 的变化引起的，并付出了大量努力。</p><p>- 2026-06-10 至 2026-09-02 期间未构建每日镜像。</p><p>- 移除了从 grml-live.conf 读取配置的功能。</p><p>更多详细信息可在项目的发布公告中找到。</p><p>下载：grml-full-2026.09-amd64.iso (3,200MB, SHA256), grml-small-2026.09-amd64.iso (1,200MB, SHA256)。</p><p>相关新闻和发布：</p><p>- 发行版发布：Grml 2026.09</p><p>- 发行版发布：Grml 2026.04</p><p>- 发行版发布：Grml 2025.12</p><p>- 发行版发布：Grml 2025.08</p><p>- 发行版发布：Grml 2025.05</p><p>- 发行版发布：Grml 2024.12</p><p>Grml 是一个基于 Debian GNU/Linux 的可启动 CD（live CD）。它包含一组 GNU/Linux 软件，特别适用于文本工具用户和系统管理员。它还提供自动硬件检测。Grml 可以用作救援系统，用于分析系统和网络，或作为工作环境。由于即时解压缩，Grml 包含了大量软件。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/canonical-joins-open-secure-ai-alliance" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://distrowatch.com/12944" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

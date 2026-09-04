@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Canonical加入开放安全AI联盟 — Linux 中文速报</title>
+<title>英特尔改进其“内容匹配刷新率”CMRR功能，支持Linux 7.4 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">其他</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Canonical加入开放安全AI联盟</h1>
+  <h1>英特尔改进其“内容匹配刷新率”CMRR功能，支持Linux 7.4</h1>
 
-  <div class="article-summary">Canonical已加入Linux基金会旗下的开放安全AI联盟，该联盟旨在为AI系统和自主代理开发开源安全工具。联盟成立于2026年7月，以应对Hugging Face遭遇的安全漏洞事件。Canonical将与其他120多个成员（包括微软、IBM、红帽等）合作，推动AI安全工具的发展。联盟的初步贡献包括NVIDIA的NOOA框架和Hugging Face的Safetensors格式，其首个正式提案是SAFE（共享AI发现交换）系统，用于报告AI安全事件。Canonical的加入具有重要意义，因为Ubuntu是云、服务器和企业领域最广泛使用的操作系统之一，常被用于承载AI工作负载。</div>
+  <div class="article-summary">英特尔正在改进其内容匹配刷新率（CMRR）功能，该功能随Xe2 Lunar Lake显卡硬件引入，旨在比传统可变刷新率（VRR）/自适应同步更精确地匹配视频或内容帧率，尤其避免视频播放时的卡顿或掉帧。即将推出的Linux 7.4内核将增强对CMRR的支持。此前，CMRR的分数定时代码被永久禁用，仅支持嵌入式DisplayPort（eDP），且依赖启发式猜测。新补丁解决了这些问题，并添加了基于DebugFS的接口，以便用户空间控制CMRR。默认启用针对Intel Display IP 30及以上版本（对应Xe3/Panther Lake及更新）的CMRR。</div>
 
-  <div class="article-body"><p>Canonical最近加入了Linux基金会的开放安全AI联盟，以帮助为AI系统和自主代理开发开源安全工具。</p><p>该联盟于2026年7月成立，以应对Hugging Face遭遇的安全漏洞事件——当时，正在进行安全测试的OpenAI模型突破了沙箱，访问了Hugging Face的系统——这一事件是由配置错误而非超级智能所导致的。</p><p>商业AI模型因其安全护栏而拒绝协助评估攻击日志，因此Hugging Face的工程师不得不在自己的基础设施上运行一个开放权重模型来完成分析——这凸显了对开放、可审计的AI安全工具的需求。</p><p>但改善AI安全需要“超越模型本身”。AI代理经常访问外部内存、连接第三方软件，并可能以系统根权限运行。安全团队必须构建严格的访问控制、隔离环境和实时监控系统，以防范代理失控。</p><p>Canonical加入了来自云计算、网络安全、企业及AI研究实验室的120多个其他成员，包括微软、IBM、红帽、CrowdStrike，当然还有Hugging Face本身。</p><p>该项目的早期贡献包括NVIDIA的NOOA——一个用于审计代理行为的开源框架，以及Hugging Face的Safetensors格式——该格式可防止在加载模型权重时执行任意代码。</p><p>该联盟的首个正式提案是SAFE（共享AI发现交换），它将建立一个用于报告AI安全事件（及未遂事件）的机密系统。受影响方可以收到通知，并保留真实世界代理故障的记录。</p><p>Canonical加入开放安全AI联盟是一个很好的契合。Ubuntu是云、服务器和企业领域最广泛使用的操作系统之一，它被用于托管和运行AI工作负载，以及许多用户将连接AI代理的工具和服务。</p><p>良好的AI安全需要覆盖整个技术栈，而Ubuntu通常处于基础层。</p></div>
+  <div class="article-body"><p>英特尔改进其“内容匹配刷新率”CMRR功能，支持Linux 7.4 - Phoronix</p><p>英特尔改进其“内容匹配刷新率”CMRR功能，支持Linux 7.4</p><p>2026年9月3日下午1:57（美国东部时间）。</p><p>Xe2 Lunar Lake显卡硬件引入了内容匹配刷新率（CMRR）支持，作为对传统可变刷新率（VRR）/自适应同步的改进，以更精确地匹配视频或内容帧率。尤其对于视频播放，它旨在避免卡顿或掉帧。即将推出的Linux 7.4内核将更好地支持英特尔显卡驱动中的CMRR。</p><p>早在2023年，我首次报道了英特尔为其开源显卡驱动开发的新CMRR功能，该功能在Lunar Lake发布之前就已进行。虽然Lunar Lake以及现在的Panther Lake和Wildcat Lake已经出现，英特尔硬件持续进步，且英特尔CMRR补丁已存在近两年，但内容匹配刷新率在Linux下尚未完全利用。</p><p>直到现在，补丁才在Linux 7.4之前被排队加入DRM-Next以扩展其使用。英特尔工程师Mitul Golani在即将合并到Linux 7.4的补丁系列中指出，CMRR分数定时代码已被永久禁用，仅支持嵌入式DisplayPort（eDP），并依赖启发式猜测何时需要分数定时路径。新补丁解决了这些缺点，并添加了一个基于DebugFS的新功能，目前先于新的用户空间API来控制CMRR。</p><p>虽然CMRR支持随Lunar Lake引入，但Linux 7.4的工作是默认启用它，适用于VRR定时生成是默认定时生成器的情况，目前仅适用于Intel Display IP版本30及更高版本。这对应于Xe3 / Panther Lake及更新版本。</p><p>新的DebugFS控制是一个每CRTC的DebugFS文件，允许用户空间为CMRR目标刷新率和视频模式要求进行设置。请求的刷新率可以以毫赫兹为单位指定，也可以指定视频定时的分母。最终预计会有一个良好的用户空间API，但目前它是一个英特尔驱动特定的DebugFS接口。</p><p>[链接]包含最新的英特尔CMRR启用工作。这些补丁通过今天的drm-intel-next拉取请求发送，该请求包含面向Linux 7.4的新英特尔内核显卡驱动材料。</p><p>该拉取还调整了DG2多协议PLL代码以使用DPLL框架，修复了DP-HDMI PCON显示流压缩问题，以及各种其他代码清理和修复。在Linux 7.4合并窗口于10月下旬开启之前，还有几周时间可以让更多英特尔显卡驱动功能进入DRM-Next。</p><p>英特尔更新LLM-Scaler-vLLM构建以支持vLLM 0.26及其他改进</p><p>英特尔显卡驱动为Linux 7.4引入冷重置恢复，Panther Lake IBC v3</p><p>前英特尔工程师、Clear Linux架构师之一将创办新发行版</p><p>英特尔Linux驱动因限制人体射频暴露而被弃用</p><p>英特尔ANV驱动改进Vulkan视频H.265解码</p><p>英特尔推出新的“BFF”Linux驱动以处理老化硅片和卡住位</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状态、Linux性能、显卡驱动和其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过[链接]关注他。</p><p>CERN在长期使用RHEL机构后，将工业计算机迁移至Debian</p><p>Linux内核每个版本接近2000个CVE</p><p>Debian投票允许“负责任地使用生成式AI”</p><p>加利福尼亚州通过AB-1856，为年龄验证提供开源救济</p><p>ReactOS 0.4.16发布，带有新的图形安装程序，更好的硬件支持</p><p>前英特尔工程师、Clear Linux架构师之一正在启动新发行版</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/canonical-joins-open-secure-ai-alliance" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Intel-Graphics-CMRR-Linux-7.4" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Canonical加入开放安全AI联盟 — Linux 中文速报</title>
+<title>LLVM开发者开始讨论引入AGENTS.md以辅助AI代理 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">其他</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Canonical加入开放安全AI联盟</h1>
+  <h1>LLVM开发者开始讨论引入AGENTS.md以辅助AI代理</h1>
 
-  <div class="article-summary">Canonical已加入Linux基金会旗下的开放安全AI联盟，该联盟旨在为AI系统和自主代理开发开源安全工具。联盟成立于2026年7月，以应对Hugging Face遭遇的安全漏洞事件。Canonical将与其他120多个成员（包括微软、IBM、红帽等）合作，推动AI安全工具的发展。联盟的初步贡献包括NVIDIA的NOOA框架和Hugging Face的Safetensors格式，其首个正式提案是SAFE（共享AI发现交换）系统，用于报告AI安全事件。Canonical的加入具有重要意义，因为Ubuntu是云、服务器和企业领域最广泛使用的操作系统之一，常被用于承载AI工作负载。</div>
+  <div class="article-summary">LLVM开发者近日就是否在Git仓库中引入AGENTS.md文件以指导AI代理展开讨论。尽管许多开源项目已采用此类文件，但LLVM社区对此意见不一。支持者认为有助于规范AI贡献，反对者则担心增加噪音、违背项目不干预个人工作流程的原则。长期开发者Nick Desaulniers提议添加一个精简版AGENTS.md，引导AI代理查阅相关文档和编码标准。目前讨论仍在进行，最终立场尚未确定。</div>
 
-  <div class="article-body"><p>Canonical最近加入了Linux基金会的开放安全AI联盟，以帮助为AI系统和自主代理开发开源安全工具。</p><p>该联盟于2026年7月成立，以应对Hugging Face遭遇的安全漏洞事件——当时，正在进行安全测试的OpenAI模型突破了沙箱，访问了Hugging Face的系统——这一事件是由配置错误而非超级智能所导致的。</p><p>商业AI模型因其安全护栏而拒绝协助评估攻击日志，因此Hugging Face的工程师不得不在自己的基础设施上运行一个开放权重模型来完成分析——这凸显了对开放、可审计的AI安全工具的需求。</p><p>但改善AI安全需要“超越模型本身”。AI代理经常访问外部内存、连接第三方软件，并可能以系统根权限运行。安全团队必须构建严格的访问控制、隔离环境和实时监控系统，以防范代理失控。</p><p>Canonical加入了来自云计算、网络安全、企业及AI研究实验室的120多个其他成员，包括微软、IBM、红帽、CrowdStrike，当然还有Hugging Face本身。</p><p>该项目的早期贡献包括NVIDIA的NOOA——一个用于审计代理行为的开源框架，以及Hugging Face的Safetensors格式——该格式可防止在加载模型权重时执行任意代码。</p><p>该联盟的首个正式提案是SAFE（共享AI发现交换），它将建立一个用于报告AI安全事件（及未遂事件）的机密系统。受影响方可以收到通知，并保留真实世界代理故障的记录。</p><p>Canonical加入开放安全AI联盟是一个很好的契合。Ubuntu是云、服务器和企业领域最广泛使用的操作系统之一，它被用于托管和运行AI工作负载，以及许多用户将连接AI代理的工具和服务。</p><p>良好的AI安全需要覆盖整个技术栈，而Ubuntu通常处于基础层。</p></div>
+  <div class="article-body"><p>LLVM开发者开始讨论是否应在Git仓库中引入AGENTS.md文件，以帮助指导AI代理。</p><p>尽管许多开源项目已采用AGENTS.md文件来指导AI代理处理补丁或其他开源贡献相关工作，但并非所有人都认同其有效性，或对AI代理的欢迎程度持一致态度。对于LLVM而言，由于涉及众多范围各异的子项目，也引发了相关担忧。</p><p>长期参与LLVM开发的Nick Desaulniers昨日发起了关于是否引入AGENTS.md/CLAUDE.md的讨论，目前回应褒贬不一。部分人表示支持，但也有人认为这些文件可能带来更多噪音，未必有效。还有人指出，这违背了LLVM不干预开发者个人工作流程的原则。部分开发者已在各自的私有仓库中使用自定义的AGENTS.md内容。</p><p>目前已有提议为LLVM添加一个精简版AGENTS.md，该版本将告知AI代理查阅LLVM关于AI工具贡献政策的文档，以及编码标准。</p><p>我们将关注LLVM最终对AGENTS.md采取何种立场。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/canonical-joins-open-secure-ai-alliance" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/LLVM-Debates-AGENTS-MD" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
