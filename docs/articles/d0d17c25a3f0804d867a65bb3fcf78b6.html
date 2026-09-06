@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Linux From Scratch 13.1 — Linux 中文速报</title>
+<title>GNOME Sushi 迎来 GTK4 改造与新功能 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>发行版发布：Linux From Scratch 13.1</h1>
+  <h1>GNOME Sushi 迎来 GTK4 改造与新功能</h1>
 
-  <div class="article-summary">Linux From Scratch（LFS）项目宣布发布13.1版本，该文档指导用户从源代码构建自己的Linux发行版。此版本包含Linux内核7.1.8、glibc 2.44和GCC 16.2.0，工具链更新至Binutils 2.47，共更新或新增46个软件包。安全更新涉及attr、acl、expat、glibc、Linux内核、Python、systemd、util-linux、vim和zlib。自上一稳定版以来，LFS已有超过200次提交。Beyond Linux From Scratch（BLFS）尚未更新至13.1，仍以12.4为最新版本。</div>
+  <div class="article-summary">GNOME Sushi，Nautilus 文件管理器的空格键预览工具，已移植到 GTK4，适用于 GNOME 51。新版界面更美观，支持明暗模式，窗口大小自适应，新增键盘快捷键，支持动画 GIF/TIFF 预览，HTML 预览可阻止远程内容，并采用 Rust 图像解码库。维护工作由新开发者接手，预计 9 月随 GNOME 51 发布。</div>
 
-  <div class="article-body"><p>发行版发布：Linux From Scratch 13.1</p><p>Linux From Scratch（LFS）项目宣布发布Linux From Scratch 13.1，该文档将帮助人们从源代码构建自己的发行版。此版本的LFS包含Linux内核7.1.8、glibc 2.44和GCC 16.2.0。</p><p>“Linux From Scratch社区宣布发布LFS 13.1版本。主要变更包括工具链更新至Binutils 2.47、GCC 16.2.0和glibc 2.44。自上次发布以来，共有46个软件包被更新或新增。全书文本也进行了多处修改。Linux内核已更新至7.1.8版本。包含安全更新的软件包有attr、acl、expat、glibc、Linux内核、Python、systemd、util-linux、vim和zlib。详情请参阅安全公告页面。总体而言，自上一稳定版书籍以来，LFS已有超过200次提交。”</p><p>请访问项目页面阅读简短的发布公告。Linux From Scratch和Beyond Linux From Scratch书籍可在项目页面上找到。请注意，Beyond Linux From Scratch（BLFS）书籍尚未更新至13.1版本，因此12.4仍为最新的BLFS书籍。</p><p>最近相关新闻和发布：</p><p>- 发行版发布：Linux From Scratch 13.1</p><p>- 发行版发布：Linux From Scratch 13.0</p><p>- 发行版发布：Linux From Scratch 12.4</p><p>- 发行版发布：Linux From Scratch 12.3</p><p>- 发行版发布：Linux From Scratch 12.2</p><p>- 发行版发布：Linux From Scratch 12.1</p><p>关于Linux From Scratch：</p><p>Linux From Scratch（LFS）是一个项目，提供构建自定义Linux系统所需的步骤。人们想要安装LFS系统有很多原因。大多数人提出的问题是：“既然你可以直接下载现有的发行版，如Debian或Redhat，为什么还要费心手动从零开始安装Linux系统？”这是一个合理的问题，我希望为你解答。最重要的原因是……</p></div>
+  <div class="article-body"><p>GNOME Sushi，Nautilus 文件管理器的空格键预览工具，已移植到 GTK4，适用于 GNOME 51。</p><p>对于不熟悉它的人来说，Sushi 就像 macOS 上的“快速查看”：你在 Nautilus 中高亮一个文件（图片、音乐、视频、文档等），其内容的即时预览就会出现。再次按下空格键即可关闭预览。</p><p>对于 v51 版本，Sushi 的 GTK4 移植意味着它在更新的 GNOME 版本上看起来更美观。标题栏更扁平，某些文件类型（如媒体）上的覆盖控件让内容从下方透出。明/暗模式偏好现在也能被正确遵循。</p><p>改进后的 Sushi 预览不同文件类型</p><p>早期版本的 Sushi 在使用方向键循环浏览文件时，不会调整窗口大小。我用它预览各种尺寸/比例的图片时，预览框会保持第一个文件预览的尺寸——这很烦人。</p><p>所以我很高兴看到 Sushi v51 解决了这个问题。开发者彻底修改了窗口大小调整逻辑，并使其在显示缩放时表现更好。预览画布现在可以动态调整大小，非常流畅：</p><p>Sushi v51（夜间构建版）中的自适应调整演示</p><p>还新增了键盘快捷键：</p><p>- 按 F2 重命名预览中的文件</p><p>- 按 Delete 将文件移至回收站</p><p>- 按 Enter 在默认应用中打开该文件类型</p><p>- 按空格键暂停/恢复视频/音频内容的播放</p><p>HTML 文件预览会阻止远程内容加载。信息栏会提示你这种情况，并让你选择是否允许内容加载。你现在还可以在 HTML 预览中右键点击 URL，在默认网页浏览器中打开它们。</p><p>如果你曾因在动画 GIF 上按空格键却只看到静态帧而感到恼火，那么现在可以欢呼了：Sushi 现在能够播放动画 GIF 和 TIFF 图像。</p><p>文本查看器支持自动换行</p><p>点击视频预览可暂停/恢复播放</p><p>打开预览的文件夹时，会在父文件夹中打开</p><p>音频文件预览显示嵌入的封面图</p><p>双击预览区域可进入/退出全屏</p><p>标题栏新增全屏图标</p><p>支持 XHTML 和更多办公文件 MIME 类型</p><p>如果预览加载需要时间，会显示动画加载指示器</p><p>旧的 Gdkpixbuf 图像渲染已被基于 Rust 的图像加载库所取代。这个沙盒化的解码器库也被其他 GNOME 应用使用，包括图像查看器 Loupe。</p><p>Sushi 再次被提上日程</p><p>维护工作最近移交给了开发者 Peter Eisenmann，他与 Lorenzo Ubaldi 和 Tau Gärtli 一起，在完善功能和现代化代码库方面做出了卓越努力；GTK4 移植由 Corey Berla 完成。</p><p>Sushi 是一个 GNOME 项目，作为 Nautilus 的配套工具。它曾在 2017 年被提议纳入默认安装，但与其他在从 Unity 过渡到 GNOME 期间提出的计划一样，最终未能实现。</p><p>GNOME 设计追踪器上有一个提案，其中包含一些早期建议。主题是什么？为什么，当然是让 Sushi 成为默认安装。</p><p>提前体验 Sushi 51</p><p>Sushi v51 将于 9 月发布，与 GNOME 51 的稳定版同步。希望它能被打包进 Ubuntu 26.10 的软件源，但截至撰写本文时，软件源中只有 v50 版本——希望新版本能顺利进入。</p><p>如果你使用 GNOME Nightly Flatpak 仓库，可以从那里安装 Sushi 的开发构建版。请记住，该仓库还需要 GNOME 51 开发运行时、编解码器，并且你也需要 Nautilus 51。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12943" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/gnome-sushi-gtk4-port" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Linux From Scratch 13.1 — Linux 中文速报</title>
+<title>Linux补丁发布：初步支持Apple A18 Pro与MacBook Neo — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Linux From Scratch 13.1</h1>
+  <h1>Linux补丁发布：初步支持Apple A18 Pro与MacBook Neo</h1>
 
-  <div class="article-summary">Linux From Scratch（LFS）项目宣布发布13.1版本，该文档指导用户从源代码构建自己的Linux发行版。此版本包含Linux内核7.1.8、glibc 2.44和GCC 16.2.0，工具链更新至Binutils 2.47，共更新或新增46个软件包。安全更新涉及attr、acl、expat、glibc、Linux内核、Python、systemd、util-linux、vim和zlib。自上一稳定版以来，LFS已有超过200次提交。Beyond Linux From Scratch（BLFS）尚未更新至13.1，仍以12.4为最新版本。</div>
+  <div class="article-summary">开源开发者Yureka Lilian发布了针对Apple A18 Pro SoC及新款低成本笔记本MacBook Neo的初始Linux补丁，主要添加了设备树和绑定。然而，目前支持极为有限，仅能在单核CPU上运行，受限于WFI和WFIT指令。此外，Asahi Linux项目的m1n1引导加载程序也需要相应更改。预计MacBook Neo在Linux上实现完整功能（如GPU加速）仍需数月，但这是第一步。</div>
 
-  <div class="article-body"><p>发行版发布：Linux From Scratch 13.1</p><p>Linux From Scratch（LFS）项目宣布发布Linux From Scratch 13.1，该文档将帮助人们从源代码构建自己的发行版。此版本的LFS包含Linux内核7.1.8、glibc 2.44和GCC 16.2.0。</p><p>“Linux From Scratch社区宣布发布LFS 13.1版本。主要变更包括工具链更新至Binutils 2.47、GCC 16.2.0和glibc 2.44。自上次发布以来，共有46个软件包被更新或新增。全书文本也进行了多处修改。Linux内核已更新至7.1.8版本。包含安全更新的软件包有attr、acl、expat、glibc、Linux内核、Python、systemd、util-linux、vim和zlib。详情请参阅安全公告页面。总体而言，自上一稳定版书籍以来，LFS已有超过200次提交。”</p><p>请访问项目页面阅读简短的发布公告。Linux From Scratch和Beyond Linux From Scratch书籍可在项目页面上找到。请注意，Beyond Linux From Scratch（BLFS）书籍尚未更新至13.1版本，因此12.4仍为最新的BLFS书籍。</p><p>最近相关新闻和发布：</p><p>- 发行版发布：Linux From Scratch 13.1</p><p>- 发行版发布：Linux From Scratch 13.0</p><p>- 发行版发布：Linux From Scratch 12.4</p><p>- 发行版发布：Linux From Scratch 12.3</p><p>- 发行版发布：Linux From Scratch 12.2</p><p>- 发行版发布：Linux From Scratch 12.1</p><p>关于Linux From Scratch：</p><p>Linux From Scratch（LFS）是一个项目，提供构建自定义Linux系统所需的步骤。人们想要安装LFS系统有很多原因。大多数人提出的问题是：“既然你可以直接下载现有的发行版，如Debian或Redhat，为什么还要费心手动从零开始安装Linux系统？”这是一个合理的问题，我希望为你解答。最重要的原因是……</p></div>
+  <div class="article-body"><p>Linux补丁发布：初步支持Apple A18 Pro与MacBook Neo</p><p>除了专注于Apple Silicon的Linux开发者忙于为M3及更新SoC在Linux内核下启用功能外，还有开发者正在为新型平价笔记本MacBook Neo所使用的A18 Pro SoC提供支持。本周发布了针对A18 Pro和MacBook Neo设备树的初步启用补丁……但即使有了这些补丁，目前Linux支持仍然非常有限。</p><p>开源开发者Yureka Lilian于周五发布了初始Linux补丁，为Apple A18 Pro SoC和最近推出的低成本笔记本MacBook Neo布局设备树和绑定。但与目前Apple M3的Linux支持类似，支持非常有限。实际上，目前A18 Pro的限制更多，仅能在单个CPU核心上成功运行。当前单核限制是由于WFI和WFIT指令所致。这只是让MacBook Neo最终在Linux上良好运行的漫长过程的开始。</p><p>除了Linux内核更改以支持在MacBook Neo上启动外，Asahi Linux项目的m1n1引导加载程序也需要更改。</p><p>“为MacBook Neo添加了设备树，该设备使用t8140 SoC（A18 Pro），与iPhone 16 Pro中的相同。</p><p>设备树包含一组最少的设备，仅限于CPU核心、中断控制器、看门狗、串行和帧缓冲。”</p><p>要让MacBook Neo在Linux上良好运行，具备GPU加速和现代笔记本日常使用所期望的所有功能，可能还需要相当长的时间，但这是目前实现的第一步。</p><p>初始补丁已在Linux内核邮件列表上发布以供审查。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12943" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Apple-A18-Pro-MacBook-Neo-Patch" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

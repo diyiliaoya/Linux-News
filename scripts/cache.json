@@ -9898,5 +9898,82 @@
     "title_zh": "Apache Spark 4.2：让您的数据对AI开发者更友好",
     "summary_zh": "Apache Spark 4.2版本引入了新功能，旨在使数据更易于访问且对AI开发者更友好，从而简化现代数据与AI工作流程。该版本聚焦于提升数据处理的便捷性和AI应用的集成度，帮助开发者更高效地构建和部署AI模型。",
     "fulltext_zh": "Apache Spark 4.2引入了新功能，旨在使数据更易于访问且对AI开发者更友好，从而简化现代数据与AI工作流程。\n\n该文章最初发表于Linux Today。"
+  },
+  "d0d17c25a3f0804d867a65bb3fcf78b6": {
+    "id": "d0d17c25a3f0804d867a65bb3fcf78b6",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/gnome-sushi-gtk4-port",
+    "title_en": "GNOME Sushi gets a GTK4 revamp, new features",
+    "summary_en": "Sushi, the spacebar preview utility for Nautilus file manager, has been ported to GTK4 for GNOME 51. For anyone unfamiliar with it, Sushi is like Quick Look on macOS: you highlight a file (image, music, video, document, etc) in Nautilus, press the spacebar and an instant preview of its content appears. Press the spacebar again to dismiss it. For v51, Sushi&#8217;s GTK4 port means it looks nicer on newer GNOME releases. There&#8217;s a flatter headerbar, and overlay controls on certain file types",
+    "pub_date": "Sun, 06 Sep 2026 01:22:59 +0000",
+    "title_zh": "GNOME Sushi 迎来 GTK4 改造与新功能",
+    "summary_zh": "GNOME Sushi，Nautilus 文件管理器的空格键预览工具，已移植到 GTK4，适用于 GNOME 51。新版界面更美观，支持明暗模式，窗口大小自适应，新增键盘快捷键，支持动画 GIF/TIFF 预览，HTML 预览可阻止远程内容，并采用 Rust 图像解码库。维护工作由新开发者接手，预计 9 月随 GNOME 51 发布。",
+    "fulltext_zh": "GNOME Sushi，Nautilus 文件管理器的空格键预览工具，已移植到 GTK4，适用于 GNOME 51。\n\n对于不熟悉它的人来说，Sushi 就像 macOS 上的“快速查看”：你在 Nautilus 中高亮一个文件（图片、音乐、视频、文档等），其内容的即时预览就会出现。再次按下空格键即可关闭预览。\n\n对于 v51 版本，Sushi 的 GTK4 移植意味着它在更新的 GNOME 版本上看起来更美观。标题栏更扁平，某些文件类型（如媒体）上的覆盖控件让内容从下方透出。明/暗模式偏好现在也能被正确遵循。\n\n改进后的 Sushi 预览不同文件类型\n\n早期版本的 Sushi 在使用方向键循环浏览文件时，不会调整窗口大小。我用它预览各种尺寸/比例的图片时，预览框会保持第一个文件预览的尺寸——这很烦人。\n\n所以我很高兴看到 Sushi v51 解决了这个问题。开发者彻底修改了窗口大小调整逻辑，并使其在显示缩放时表现更好。预览画布现在可以动态调整大小，非常流畅：\n\nSushi v51（夜间构建版）中的自适应调整演示\n\n还新增了键盘快捷键：\n\n- 按 F2 重命名预览中的文件\n- 按 Delete 将文件移至回收站\n- 按 Enter 在默认应用中打开该文件类型\n- 按空格键暂停/恢复视频/音频内容的播放\n\nHTML 文件预览会阻止远程内容加载。信息栏会提示你这种情况，并让你选择是否允许内容加载。你现在还可以在 HTML 预览中右键点击 URL，在默认网页浏览器中打开它们。\n\n如果你曾因在动画 GIF 上按空格键却只看到静态帧而感到恼火，那么现在可以欢呼了：Sushi 现在能够播放动画 GIF 和 TIFF 图像。\n\n文本查看器支持自动换行\n\n点击视频预览可暂停/恢复播放\n\n打开预览的文件夹时，会在父文件夹中打开\n\n音频文件预览显示嵌入的封面图\n\n双击预览区域可进入/退出全屏\n\n标题栏新增全屏图标\n\n支持 XHTML 和更多办公文件 MIME 类型\n\n如果预览加载需要时间，会显示动画加载指示器\n\n旧的 Gdkpixbuf 图像渲染已被基于 Rust 的图像加载库所取代。这个沙盒化的解码器库也被其他 GNOME 应用使用，包括图像查看器 Loupe。\n\nSushi 再次被提上日程\n\n维护工作最近移交给了开发者 Peter Eisenmann，他与 Lorenzo Ubaldi 和 Tau Gärtli 一起，在完善功能和现代化代码库方面做出了卓越努力；GTK4 移植由 Corey Berla 完成。\n\nSushi 是一个 GNOME 项目，作为 Nautilus 的配套工具。它曾在 2017 年被提议纳入默认安装，但与其他在从 Unity 过渡到 GNOME 期间提出的计划一样，最终未能实现。\n\nGNOME 设计追踪器上有一个提案，其中包含一些早期建议。主题是什么？为什么，当然是让 Sushi 成为默认安装。\n\n提前体验 Sushi 51\n\nSushi v51 将于 9 月发布，与 GNOME 51 的稳定版同步。希望它能被打包进 Ubuntu 26.10 的软件源，但截至撰写本文时，软件源中只有 v50 版本——希望新版本能顺利进入。\n\n如果你使用 GNOME Nightly Flatpak 仓库，可以从那里安装 Sushi 的开发构建版。请记住，该仓库还需要 GNOME 51 开发运行时、编解码器，并且你也需要 Nautilus 51。"
+  },
+  "3d332da0019c74a35d709d123ece0b60": {
+    "id": "3d332da0019c74a35d709d123ece0b60",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12946",
+    "title_en": "Distribution Release: Zenwalk GNU Linux Current-260905",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Zenwalk GNU Linux is a Slackware-based desktop distribution. The project's latest snapshot integrates Flatpak support and includes version 7.1.7 of the Linux kernel. \"One of the improvements in this milestone is the integration of native Flatpak support directly into the Zenwalk desktop. Flatpak is installed and configured out....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Zenwalk GNU Linux Current-260905",
+    "summary_zh": "Zenwalk GNU Linux 发布了最新的 Current-260905 快照版本。该版本集成了对 Flatpak 的原生支持，用户可直接通过图形化应用商店安装现代桌面应用，同时保留传统的 Slackware 包管理系统。此外，内核升级至 Linux 7.1.7，并引入了 BORE CPU 调度器补丁，旨在提升桌面交互响应速度，确保系统在高负载下依然流畅。",
+    "fulltext_zh": "发行版发布：Zenwalk GNU Linux Current-260905 (DistroWatch.com 新闻)\n\nZenwalk GNU Linux 是一个基于 Slackware 的桌面发行版。该项目的最新快照集成了 Flatpak 支持，并包含 Linux 内核 7.1.7 版本。\n\n“此版本的一大改进是将原生 Flatpak 支持直接集成到 Zenwalk 桌面中。Flatpak 已预装并配置好，Flathub 作为应用程序源可用。安装现代桌面应用程序不再需要搜索软件包、处理依赖关系或打开终端。只需打开图形化应用商店，找到所需应用，点击安装——即可完成。这为 Zenwalk 用户提供了访问庞大且最新的桌面应用生态系统的途径，同时保留传统的 Slackware 包系统用于核心操作系统。换句话说：系统使用 Zenwalk 包，应用使用 Flatpak——两者从第一天起即可使用。\n\n此版本升级至 Linux 7.1.7 内核，提供了现代内核基础，并带有 BORE（面向突发响应的增强器）CPU 调度器补丁。BORE 专为交互式桌面工作负载而设计，旨在通过优先处理短促、交互式的 CPU 活动突发来提高响应性，即使在系统 CPU 负载较重时，也能保持桌面任务响应迅速。对于像 Zenwalk 这样的桌面导向型发行版，这尤其契合：应用程序、窗口管理、多媒体工作负载和后台进程可以共存，同时保持用户界面的响应性。其结果是内核配置不仅针对基准测试数字，更关注桌面使用时的实际感受：系统保持响应。”\n\n更多信息可在发行版的发布公告中找到。\n\nzenwalk-current-260905.iso\n\n近期相关新闻与发布：\n\n发行版发布：Zenwalk GNU Linux Current-260905\n发行版发布：Zenwalk GNU Linux Current-230909"
+  },
+  "4fd34fbdc38607e78209cb363cfeb4c8": {
+    "id": "4fd34fbdc38607e78209cb363cfeb4c8",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Zenwalk-2026-Current",
+    "title_en": "Slackware-Based Zenwalk ISOs Updated With Linux 7.1, Flatpak Integrated + Xfce 4.20",
+    "summary_en": "It's been over four years since the original release of Zenwalk 15.0 while released today is a new Zenwalk Current Milestone snapshot. This Slackware-based Linux distribution with a long history has an exciting update out for testing this weekend...",
+    "pub_date": "Sat, 05 Sep 2026 18:27:47 -0400",
+    "title_zh": "基于Slackware的Zenwalk ISO更新：搭载Linux 7.1、集成Flatpak及Xfce 4.20",
+    "summary_zh": "Zenwalk 15.0发布四年多后，基于Slackware的Zenwalk发行版于今日推出新的Current Milestone快照，供用户在本周末测试。该版本完全集成了Flatpak包支持，默认使用Linux 7.1内核并引入BORE调度器，同时采用Xfce 4.20作为默认桌面环境。此外，新版本还带来了图形化系统工具箱、改进的多媒体支持及其他多项变更。Zenwalk是一个历史悠久的Linux发行版，此次更新旨在提供现代化的用户体验。",
+    "fulltext_zh": "基于Slackware的Zenwalk ISO更新：搭载Linux 7.1、集成Flatpak及Xfce 4.20 - Phoronix\n\n基于Slackware的Zenwalk ISO更新：搭载Linux 7.1、集成Flatpak及Xfce 4.20\n\n于2026年9月5日下午6点27分（美国东部时间）发布。\n\n自Zenwalk 15.0最初发布以来已过去四年多，而今天发布的是新的Zenwalk Current Milestone快照。这个基于Slackware的Linux发行版历史悠久，本周末有一个令人兴奋的更新供用户测试。\n\n继2022年2月发布该Linux发行版之后（该发行版也已存在多年）。以下是二十年前Phoronix报道Zenwalk时的样子：\n\n或者Phoronix在2006年对Zenwalk的报道：\n\n关于Zenwalk（以及Slackware）有许多美好的回忆，今天看到新的Current Milestone版本为这个发行版带来更新体验，真是有趣。Zenwalk Current Milestone搭载了最新的Slackware上游代码，并结合了Zenwalk自身的系统改进和桌面增强。就在上个月，他们还在研究Zenwalk上使用BORE调度器的低延迟桌面增强功能。\n\nZenwalk Current Milestone将Flatpak包支持完全集成到发行版中，默认使用Linux 7.1内核并配备新的BORE调度器，Xfce 4.20提供默认桌面基础。此外，Zenwalk还带来了新的图形化系统工具箱、改进的多媒体支持以及其他各种变更。\n\n以下是Zenwalk在2026年的样子：\n\n关于Zenwalk Current Milestone 2026版本的下载和更多详情，请访问相关页面。"
+  },
+  "84785bfe7a854065dd5eaf080728848f": {
+    "id": "84785bfe7a854065dd5eaf080728848f",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Ikey-Doherty-Plans-Linux-Build",
+    "title_en": "Ikey Doherty Plans To Show How To \"Properly\" Build A Modern Linux Distro",
+    "summary_en": "Ikey Doherty is back in the Linux distribution space. Sort of. Ikey Doherty who was the founder of the Solus Linux distribution as well as Serpent OS (now AerynOS) as well as having been employed by Intel on their Clear Linux team is back at it again in the Linux space...",
+    "pub_date": "Sat, 05 Sep 2026 14:35:41 -0400",
+    "title_zh": "Ikey Doherty计划展示如何“正确”构建现代Linux发行版",
+    "summary_zh": "Ikey Doherty，Solus Linux和Serpent OS（现AerynOS）的创始人，曾任职于Intel Clear Linux团队，如今再次涉足Linux领域。他宣布将公开演示如何构建现代Linux发行版，并开发新的公共包管理器。他称此举为“向行业宣战”，但并非直接创建新发行版，而是展示其理念。该计划将结合Clear Linux和Serpent OS的特点，采用基于源码、全优化、可更新且不可变的架构，并尽可能使用Rust编程语言。他将在视频中分享进展。",
+    "fulltext_zh": "Ikey Doherty计划展示如何“正确”构建现代Linux发行版 - Phoronix\nIkey Doherty计划展示如何“正确”构建现代Linux发行版\n2026年9月5日下午2:35（美国东部时间）。\n\nIkey Doherty重返Linux发行版领域。某种程度上。Ikey Doherty是Solus Linux发行版以及Serpent OS（现为AerynOS）的创始人，也曾受雇于Intel的Clear Linux团队。如今，他再次活跃于Linux领域。\n\n作为一名全职旅行者和内容创作者，Ikey Doherty向Phoronix透露了他即将推出的Linux计划。他表示自己“并非在制作另一个发行版”，或者说不是直接制作，但确实打算公开演示他认为现代Linux发行版应该如何构建。这还将包括构建他自己的全新公共包管理器。\n\n他解释说，他已“向行业宣战”，而这一最新的Linux发行版工作并不打算长期维护该发行版，而是计划公开强调应该如何去做。他设想这有点像“Clear Linux与Serpent的融合”。\n\n对于那些希望跟随他公开记录现代Linux发行版构建方式的人，他将通过他的渠道发布更新。\n\n在今天公开的首个视频中，Ikey概述了该计划：一个基于源码、完全优化、易于更新且不可变的Linux发行版，并尽可能利用Rust编程语言。该项目正在开发中。\n\n（以下为无关内容，已忽略）\n\n基于Slackware的Zenwalk ISO更新至Linux 7.1，集成Flatpak和Xfce 4.20\nAmazon Linux 2027现提供预览版：基于Linux 7.1，x86-64-v3架构，并使用LTO构建\nReactOS 0.4.16发布，带来全新图形安装程序，更好的硬件支持\nHaiku R1 Beta 6时隔两年发布，BeOS灵感项目下周迎来25周年\nArmbian 26.8发布，重写安装程序，提供UEFI ISO镜像\nReactOS合并作业对象支持，向运行现代Windows应用迈进\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动等主题。Michael也是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\nCERN在长期使用RHEL后，将工业计算机迁移至Debian\nLinux内核每个版本接近2,000个CVE\nDebian投票允许“负责任地使用生成式AI”\n加州通过AB-1856法案，为年龄验证提供开源救济\nReactOS 0.4.16发布，带来全新图形安装程序，更好的硬件支持\n前Intel工程师，Clear Linux架构师之一，正在启动新发行版\n另一份来自Intel或AMD以外实体的x86公告\nServo 0.5发布：DuckDuckGo正确渲染，文本渲染速度提升高达10倍\n\n在享受无广告浏览的同时，\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "be5341e8ad9a045106eb1ee89252def7": {
+    "id": "be5341e8ad9a045106eb1ee89252def7",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/NVIDIA-Nova-vGPU-Manager",
+    "title_en": "NVIDIA Posts vGPU Manager & VFIO Variant Driver For Open-Source Nova",
+    "summary_en": "NVIDIA continues building out more functionality around the open-source, upstream Nova kernel graphics driver within the Linux kernel. Making it out to the mailing list this Saturday is a set of 13 patches for introducing a NVIDIA vGPU manager and VFIO variant driver...",
+    "pub_date": "Sat, 05 Sep 2026 11:02:15 -0400",
+    "title_zh": "NVIDIA为开源Nova驱动发布vGPU Manager与VFIO变体驱动",
+    "summary_zh": "NVIDIA继续扩展Linux内核中开源Nova图形驱动的功能，近日向邮件列表提交了13个补丁，引入NVIDIA vGPU管理器和VFIO变体驱动。这些补丁旨在支持vGPU管理，并允许QEMU用户通过VFIO使用Linux或Windows虚拟机，同时基于上游Nova内核驱动运行。NVIDIA对Nova驱动栈投入巨大，今年早些时候在NVIDIA总部曾透露关于Nova在Linux上未来的积极信号。不过，该功能可能仅支持工作站和数据中心产品，而非消费级GeForce GPU。",
+    "fulltext_zh": "NVIDIA继续围绕Linux内核中的开源、上游Nova内核图形驱动扩展更多功能。本周六（2026年9月5日）向邮件列表提交了一组13个补丁，用于引入NVIDIA vGPU管理器和VFIO变体驱动。\n\n这些补丁旨在启用vGPU管理，并支持QEMU用户通过VFIO使用Linux或Windows客户机，同时基于上游Nova内核驱动运行。NVIDIA持续对Nova驱动栈投入大量资源，今年早些时候我在NVIDIA总部时，曾听到关于Nova在Linux上未来的一些非常令人振奋的评论。\n\n图示展示了由该NVIDIA vGPU管理器和VFIO变体驱动启用的控制路径：\n\n在部分读者看到GPU相关“VFIO”字样而过于兴奋之前，需要说明的是，NVIDIA物理GPU更可能仅支持其工作站和数据中心产品，而非消费级GeForce GPU。\n\n对NVIDIA vGPU管理器和VFIO代码感兴趣的读者，可通过[链接]了解更多。NVIDIA Nova驱动持续推进，最终何时能在主线内核上供终端用户使用，值得关注。"
+  },
+  "55b16a2974975b35a857abc810f56525": {
+    "id": "55b16a2974975b35a857abc810f56525",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Nouveau-Blackwell-Display-Fixes",
+    "title_en": "Nouveau Lands Display Fixes For NVIDIA Blackwell GPUs As It Works Toward HDMI 2.1",
+    "summary_en": "This week's Direct Rendering Manager (DRM) fixes that were merged ahead of Sunday's Linux 7.3-rc2 release contain a number of fixes to the open-source Nouveau driver's display support for current-generation NVIDIA Blackwell GPUs...",
+    "pub_date": "Sat, 05 Sep 2026 07:20:00 -0400",
+    "title_zh": "Nouveau为NVIDIA Blackwell GPU带来显示修复，推进HDMI 2.1支持",
+    "summary_zh": "本周，Linux 7.3-rc2发布前的DRM修复中，包含了对开源Nouveau驱动在NVIDIA Blackwell GPU上显示支持的多项修复。这些修复涉及与GSP的交互、HDMI vendor infoframes、GCP AVMute寄存器偏移、vblank中断等问题。Nouveau开发者表示，这些修复主要源于HDMI 2.1支持的工作，虽然部分问题当前不构成实际故障，但修复它们是实现FRL、DSC、VRR等高级功能的前提。",
+    "fulltext_zh": "Nouveau为NVIDIA Blackwell GPU带来显示修复，推进HDMI 2.1支持 - Phoronix\n\nNouveau为NVIDIA Blackwell GPU带来显示修复，推进HDMI 2.1支持\n\n2026年9月5日 07:20 EDT\n\n本周，在Linux 7.3-rc2发布之前合并的直接渲染管理器（DRM）修复中，包含了对开源Nouveau驱动在当代NVIDIA Blackwell GPU上显示支持的多项修复。\n\n这些合并到Nouveau内核驱动中的显示相关修复，旨在改善与GPU系统处理器（GSP）的交互，修复GB20x硬件上的HDMI vendor infoframes、HDMI GCP AVMute寄存器偏移、Blackwell GPU上的vblank中断等问题。\n\nNouveau开发者Mohamed Ahmed在提及这些Nouveau Blackwell显示修复时表示，这些修复主要是在推进Nouveau的HDMI 2.1支持过程中产生的：\n\n“针对GSP驱动显示的多项修复，由四个独立组组成。这些修复是在持续的HDMI 2.1启动和显示处理清理工作中创建的，因此其中一些问题目前并不构成实际故障（例如2.147GHz像素时钟上限），但修复它们是实现FRL、DSC、VRR等高级功能正常工作的必要条件。”\n\n这些修复于昨晚作为Linux 7.3-rc2的一部分被合并。此外，还有大量AMDGPU和Intel驱动的修复，以及一些较小的DRM驱动的修复。\n\nNVK Vulkan Video合并至Mesa 26.3\nNouveau准备最终默认启用原子模式设置\nNouveau针对Linux 7.3的补丁允许在NVIDIA NVDEC之上使用NVK Vulkan Video\nNVK Vulkan性能在Mesa 26.2中提升，对比NVIDIA专有驱动\n开源NVIDIA Vulkan驱动“NVK”合并网格着色器支持\nLinux 7.2的开源Nouveau驱动最终支持NVIDIA GA100\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动等主题。他还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他。\n\nCERN长期使用RHEL后转向Debian\nLinux内核每个版本接近2,000个CVE\nDebian投票允许“负责任地使用生成式AI”\n加州通过AB-1856法案，为年龄验证提供开源救济\nReactOS 0.4.16发布，带来新图形安装程序和更好的硬件支持\n前英特尔工程师、Clear Linux架构师之一正在创建新发行版\n来自英特尔或AMD以外实体的另一份x86公告\nServo 0.5发布：DuckDuckGo正确渲染，文本渲染速度提升高达10倍\n\n在无广告浏览的同时，\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "a313c9a0dd38ac85309d369a9f223168": {
+    "id": "a313c9a0dd38ac85309d369a9f223168",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Apple-A18-Pro-MacBook-Neo-Patch",
+    "title_en": "Linux Patches Posted For Initial Enablement Of The Apple A18 Pro + MacBook Neo",
+    "summary_en": "In addition to Linux developers focused on Apple  Silicon being busy enabling functionality for the M3 and newer SoCs under the Linux kernel, there are also developers working on enabling the A18 Pro SoC used by the new, budget-friendly MacBook Neo laptop. Patches were posted this week for initial enablement of the A18 Pro and the MacBook Neo Device Tree... But even with these patches, the Linux support is still severely limited for now...",
+    "pub_date": "Sat, 05 Sep 2026 07:11:11 -0400",
+    "title_zh": "Linux补丁发布：初步支持Apple A18 Pro与MacBook Neo",
+    "summary_zh": "开源开发者Yureka Lilian发布了针对Apple A18 Pro SoC及新款低成本笔记本MacBook Neo的初始Linux补丁，主要添加了设备树和绑定。然而，目前支持极为有限，仅能在单核CPU上运行，受限于WFI和WFIT指令。此外，Asahi Linux项目的m1n1引导加载程序也需要相应更改。预计MacBook Neo在Linux上实现完整功能（如GPU加速）仍需数月，但这是第一步。",
+    "fulltext_zh": "Linux补丁发布：初步支持Apple A18 Pro与MacBook Neo\n\n除了专注于Apple Silicon的Linux开发者忙于为M3及更新SoC在Linux内核下启用功能外，还有开发者正在为新型平价笔记本MacBook Neo所使用的A18 Pro SoC提供支持。本周发布了针对A18 Pro和MacBook Neo设备树的初步启用补丁……但即使有了这些补丁，目前Linux支持仍然非常有限。\n\n开源开发者Yureka Lilian于周五发布了初始Linux补丁，为Apple A18 Pro SoC和最近推出的低成本笔记本MacBook Neo布局设备树和绑定。但与目前Apple M3的Linux支持类似，支持非常有限。实际上，目前A18 Pro的限制更多，仅能在单个CPU核心上成功运行。当前单核限制是由于WFI和WFIT指令所致。这只是让MacBook Neo最终在Linux上良好运行的漫长过程的开始。\n\n除了Linux内核更改以支持在MacBook Neo上启动外，Asahi Linux项目的m1n1引导加载程序也需要更改。\n\n“为MacBook Neo添加了设备树，该设备使用t8140 SoC（A18 Pro），与iPhone 16 Pro中的相同。\n设备树包含一组最少的设备，仅限于CPU核心、中断控制器、看门狗、串行和帧缓冲。”\n\n要让MacBook Neo在Linux上良好运行，具备GPU加速和现代笔记本日常使用所期望的所有功能，可能还需要相当长的时间，但这是目前实现的第一步。\n\n初始补丁已在Linux内核邮件列表上发布以供审查。"
   }
 }

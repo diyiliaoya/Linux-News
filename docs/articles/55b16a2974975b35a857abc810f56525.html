@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Linux From Scratch 13.1 — Linux 中文速报</title>
+<title>Nouveau为NVIDIA Blackwell GPU带来显示修复，推进HDMI 2.1支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Linux From Scratch 13.1</h1>
+  <h1>Nouveau为NVIDIA Blackwell GPU带来显示修复，推进HDMI 2.1支持</h1>
 
-  <div class="article-summary">Linux From Scratch（LFS）项目宣布发布13.1版本，该文档指导用户从源代码构建自己的Linux发行版。此版本包含Linux内核7.1.8、glibc 2.44和GCC 16.2.0，工具链更新至Binutils 2.47，共更新或新增46个软件包。安全更新涉及attr、acl、expat、glibc、Linux内核、Python、systemd、util-linux、vim和zlib。自上一稳定版以来，LFS已有超过200次提交。Beyond Linux From Scratch（BLFS）尚未更新至13.1，仍以12.4为最新版本。</div>
+  <div class="article-summary">本周，Linux 7.3-rc2发布前的DRM修复中，包含了对开源Nouveau驱动在NVIDIA Blackwell GPU上显示支持的多项修复。这些修复涉及与GSP的交互、HDMI vendor infoframes、GCP AVMute寄存器偏移、vblank中断等问题。Nouveau开发者表示，这些修复主要源于HDMI 2.1支持的工作，虽然部分问题当前不构成实际故障，但修复它们是实现FRL、DSC、VRR等高级功能的前提。</div>
 
-  <div class="article-body"><p>发行版发布：Linux From Scratch 13.1</p><p>Linux From Scratch（LFS）项目宣布发布Linux From Scratch 13.1，该文档将帮助人们从源代码构建自己的发行版。此版本的LFS包含Linux内核7.1.8、glibc 2.44和GCC 16.2.0。</p><p>“Linux From Scratch社区宣布发布LFS 13.1版本。主要变更包括工具链更新至Binutils 2.47、GCC 16.2.0和glibc 2.44。自上次发布以来，共有46个软件包被更新或新增。全书文本也进行了多处修改。Linux内核已更新至7.1.8版本。包含安全更新的软件包有attr、acl、expat、glibc、Linux内核、Python、systemd、util-linux、vim和zlib。详情请参阅安全公告页面。总体而言，自上一稳定版书籍以来，LFS已有超过200次提交。”</p><p>请访问项目页面阅读简短的发布公告。Linux From Scratch和Beyond Linux From Scratch书籍可在项目页面上找到。请注意，Beyond Linux From Scratch（BLFS）书籍尚未更新至13.1版本，因此12.4仍为最新的BLFS书籍。</p><p>最近相关新闻和发布：</p><p>- 发行版发布：Linux From Scratch 13.1</p><p>- 发行版发布：Linux From Scratch 13.0</p><p>- 发行版发布：Linux From Scratch 12.4</p><p>- 发行版发布：Linux From Scratch 12.3</p><p>- 发行版发布：Linux From Scratch 12.2</p><p>- 发行版发布：Linux From Scratch 12.1</p><p>关于Linux From Scratch：</p><p>Linux From Scratch（LFS）是一个项目，提供构建自定义Linux系统所需的步骤。人们想要安装LFS系统有很多原因。大多数人提出的问题是：“既然你可以直接下载现有的发行版，如Debian或Redhat，为什么还要费心手动从零开始安装Linux系统？”这是一个合理的问题，我希望为你解答。最重要的原因是……</p></div>
+  <div class="article-body"><p>Nouveau为NVIDIA Blackwell GPU带来显示修复，推进HDMI 2.1支持 - Phoronix</p><p>Nouveau为NVIDIA Blackwell GPU带来显示修复，推进HDMI 2.1支持</p><p>2026年9月5日 07:20 EDT</p><p>本周，在Linux 7.3-rc2发布之前合并的直接渲染管理器（DRM）修复中，包含了对开源Nouveau驱动在当代NVIDIA Blackwell GPU上显示支持的多项修复。</p><p>这些合并到Nouveau内核驱动中的显示相关修复，旨在改善与GPU系统处理器（GSP）的交互，修复GB20x硬件上的HDMI vendor infoframes、HDMI GCP AVMute寄存器偏移、Blackwell GPU上的vblank中断等问题。</p><p>Nouveau开发者Mohamed Ahmed在提及这些Nouveau Blackwell显示修复时表示，这些修复主要是在推进Nouveau的HDMI 2.1支持过程中产生的：</p><p>“针对GSP驱动显示的多项修复，由四个独立组组成。这些修复是在持续的HDMI 2.1启动和显示处理清理工作中创建的，因此其中一些问题目前并不构成实际故障（例如2.147GHz像素时钟上限），但修复它们是实现FRL、DSC、VRR等高级功能正常工作的必要条件。”</p><p>这些修复于昨晚作为Linux 7.3-rc2的一部分被合并。此外，还有大量AMDGPU和Intel驱动的修复，以及一些较小的DRM驱动的修复。</p><p>NVK Vulkan Video合并至Mesa 26.3</p><p>Nouveau准备最终默认启用原子模式设置</p><p>Nouveau针对Linux 7.3的补丁允许在NVIDIA NVDEC之上使用NVK Vulkan Video</p><p>NVK Vulkan性能在Mesa 26.2中提升，对比NVIDIA专有驱动</p><p>开源NVIDIA Vulkan驱动“NVK”合并网格着色器支持</p><p>Linux 7.2的开源Nouveau驱动最终支持NVIDIA GA100</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动等主题。他还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他。</p><p>CERN长期使用RHEL后转向Debian</p><p>Linux内核每个版本接近2,000个CVE</p><p>Debian投票允许“负责任地使用生成式AI”</p><p>加州通过AB-1856法案，为年龄验证提供开源救济</p><p>ReactOS 0.4.16发布，带来新图形安装程序和更好的硬件支持</p><p>前英特尔工程师、Clear Linux架构师之一正在创建新发行版</p><p>来自英特尔或AMD以外实体的另一份x86公告</p><p>Servo 0.5发布：DuckDuckGo正确渲染，文本渲染速度提升高达10倍</p><p>在无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12943" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Nouveau-Blackwell-Display-Fixes" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
