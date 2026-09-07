@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Zenwalk GNU Linux Current-260905 — Linux 中文速报</title>
+<title>Linux 7.3-rc2 发布，又一个繁忙的一周 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Zenwalk GNU Linux Current-260905</h1>
+  <h1>Linux 7.3-rc2 发布，又一个繁忙的一周</h1>
 
-  <div class="article-summary">Zenwalk GNU Linux 发布了最新的 Current-260905 快照版本。该版本集成了对 Flatpak 的原生支持，用户可直接通过图形化应用商店安装现代桌面应用，同时保留传统的 Slackware 包管理系统。此外，内核升级至 Linux 7.1.7，并引入了 BORE CPU 调度器补丁，旨在提升桌面交互响应速度，确保系统在高负载下依然流畅。</div>
+  <div class="article-summary">Linux 7.3-rc2 在合并窗口结束后发布，包含大量 AI/LLM 生成代码的涌入，以及针对早期测试问题的修复。主要更新包括：混合 CPU 的缓存感知调度修复、将 kmalloc 调用迁移至 kmalloc_obj、Nouveau 驱动的 NVIDIA Blackwell 显示修复、在存在 Rust 支持时默认禁用 RandStruct 安全特性，以及补入合并窗口遗漏的 EDAC 更改。Greg Kroah-Hartman 警告称，由于 AI 活动频繁，7.3 开发周期可能较为艰难。</div>
 
-  <div class="article-body"><p>发行版发布：Zenwalk GNU Linux Current-260905 (DistroWatch.com 新闻)</p><p>Zenwalk GNU Linux 是一个基于 Slackware 的桌面发行版。该项目的最新快照集成了 Flatpak 支持，并包含 Linux 内核 7.1.7 版本。</p><p>“此版本的一大改进是将原生 Flatpak 支持直接集成到 Zenwalk 桌面中。Flatpak 已预装并配置好，Flathub 作为应用程序源可用。安装现代桌面应用程序不再需要搜索软件包、处理依赖关系或打开终端。只需打开图形化应用商店，找到所需应用，点击安装——即可完成。这为 Zenwalk 用户提供了访问庞大且最新的桌面应用生态系统的途径，同时保留传统的 Slackware 包系统用于核心操作系统。换句话说：系统使用 Zenwalk 包，应用使用 Flatpak——两者从第一天起即可使用。</p><p>此版本升级至 Linux 7.1.7 内核，提供了现代内核基础，并带有 BORE（面向突发响应的增强器）CPU 调度器补丁。BORE 专为交互式桌面工作负载而设计，旨在通过优先处理短促、交互式的 CPU 活动突发来提高响应性，即使在系统 CPU 负载较重时，也能保持桌面任务响应迅速。对于像 Zenwalk 这样的桌面导向型发行版，这尤其契合：应用程序、窗口管理、多媒体工作负载和后台进程可以共存，同时保持用户界面的响应性。其结果是内核配置不仅针对基准测试数字，更关注桌面使用时的实际感受：系统保持响应。”</p><p>更多信息可在发行版的发布公告中找到。</p><p>zenwalk-current-260905.iso</p><p>近期相关新闻与发布：</p><p>发行版发布：Zenwalk GNU Linux Current-260905</p><p>发行版发布：Zenwalk GNU Linux Current-230909</p></div>
+  <div class="article-body"><p>Linux 7.3-rc2 发布，又一个繁忙的一周 - Phoronix</p><p>Linux 7.3-rc2 发布，又一个繁忙的一周</p><p>2026年9月6日，下午6:22 EDT。</p><p>合并窗口于上周末结束，今天我们迎来了 Linux 7.3-rc2 测试内核版本，目标是在十月中旬发布稳定的 v7.3 内核。</p><p>Linux 7.3-rc2 是合并窗口后又一个繁忙的每周候选版本，大量 AI/LLM 生成的内容持续涌入，同时也在处理 Linux 7.3-rc1 早期测试中暴露的问题。Linux 7.3-rc2 带来了：</p><p>- 针对混合 CPU 的缓存感知调度（Cache Aware Scheduling）失配修复，以提供更好的性能；</p><p>- 一次全树范围的清理，将更多 kmalloc() 调用迁移至 kmalloc_obj() 调用；</p><p>- Nouveau 驱动针对 NVIDIA Blackwell 的显示修复；</p><p>- 在存在 Rust 支持（以及 Rust 编译器工具链）时，默认禁用 RandStruct 安全特性；</p><p>- 以及 EDAC 更改，这些更改在 Linux 7.3 合并窗口期间被遗漏。</p><p>此外，在庞大的内核领域（源代码树接近 4100 万行）中还有大量其他修复。二把手 Greg Kroah-Hartman 已经警告称，由于所有 AI/LLM 活动，Linux 7.3 开发周期看起来会比较艰难。</p><p>Linux 7.3-rc2 现已可用。</p><p>Linux 7.3 功能概览可查看这一新内核版本带来的所有有趣变化。</p><p>Linus Torvalds 现在发布了延迟的发布公告：</p><p>“这*感觉*不像一个特别繁忙的 rc2，但显然确实如此。</p><p>rc2 通常是人们合并窗口后喘息的最安静时期，而且需要一段时间才能开始发现错误。但这次不是——这是一个‘全脂’的 rc 版本。</p><p>而且这不是单一原因造成的。我想指出的是，迟到的 EDAC 拉取请求被遗忘了，没有在合并窗口期间发生，但说实话，那是一件相当小的事情。不，rc2 有几个文件系统发送了修复，还有一个相当大的 drm 拉取请求，包含大量分散的修复。还有网络和 bpf 发送的修复。*以及*许多驱动树。”</p><p>Linux 7.3-rc2 为混合 CPU 上的缓存感知负载调度失配提供调度器修复</p><p>Linux 7.3-rc2 将更多 kmalloc 调用迁移至更优越的 kmalloc_obj</p><p>第21版补丁：让 Linux 异步关闭设备</p><p>Linux 7.3 现在在存在 Rust 支持时默认禁用 RandStruct 安全特性</p><p>Greg KH 预警：由于持续的 AI 变动，Linux 7.3 内核周期将“艰难”</p><p>EDAC 更改在合并窗口期间被遗忘后，现已并入 Linux 7.3</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>CERN 长期使用 RHEL 后，将工业计算机迁移至 Debian</p><p>Asahi Linux 现已正式支持 Apple M3 Mac——但有注意事项</p><p>加州通过 AB-1856 法案，为年龄验证提供开源救济</p><p>ReactOS 0.4.16 发布，带有新图形安装程序，更好的硬件支持</p><p>前英特尔工程师、Clear Linux 架构师之一正在创建新发行版</p><p>来自英特尔或 AMD 以外实体的另一份 x86 公告</p><p>Servo 0.5 发布：DuckDuckGo 正确渲染，文本渲染速度提升高达 10 倍</p><p>WinBtrfs 1.10 发布，包含两年来的改进，适用于 Windows 上的 Btrfs</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026，由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12946" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-rc2-Released" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

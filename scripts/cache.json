@@ -9975,5 +9975,104 @@
     "title_zh": "Linux补丁发布：初步支持Apple A18 Pro与MacBook Neo",
     "summary_zh": "开源开发者Yureka Lilian发布了针对Apple A18 Pro SoC及新款低成本笔记本MacBook Neo的初始Linux补丁，主要添加了设备树和绑定。然而，目前支持极为有限，仅能在单核CPU上运行，受限于WFI和WFIT指令。此外，Asahi Linux项目的m1n1引导加载程序也需要相应更改。预计MacBook Neo在Linux上实现完整功能（如GPU加速）仍需数月，但这是第一步。",
     "fulltext_zh": "Linux补丁发布：初步支持Apple A18 Pro与MacBook Neo\n\n除了专注于Apple Silicon的Linux开发者忙于为M3及更新SoC在Linux内核下启用功能外，还有开发者正在为新型平价笔记本MacBook Neo所使用的A18 Pro SoC提供支持。本周发布了针对A18 Pro和MacBook Neo设备树的初步启用补丁……但即使有了这些补丁，目前Linux支持仍然非常有限。\n\n开源开发者Yureka Lilian于周五发布了初始Linux补丁，为Apple A18 Pro SoC和最近推出的低成本笔记本MacBook Neo布局设备树和绑定。但与目前Apple M3的Linux支持类似，支持非常有限。实际上，目前A18 Pro的限制更多，仅能在单个CPU核心上成功运行。当前单核限制是由于WFI和WFIT指令所致。这只是让MacBook Neo最终在Linux上良好运行的漫长过程的开始。\n\n除了Linux内核更改以支持在MacBook Neo上启动外，Asahi Linux项目的m1n1引导加载程序也需要更改。\n\n“为MacBook Neo添加了设备树，该设备使用t8140 SoC（A18 Pro），与iPhone 16 Pro中的相同。\n设备树包含一组最少的设备，仅限于CPU核心、中断控制器、看门狗、串行和帧缓冲。”\n\n要让MacBook Neo在Linux上良好运行，具备GPU加速和现代笔记本日常使用所期望的所有功能，可能还需要相当长的时间，但这是目前实现的第一步。\n\n初始补丁已在Linux内核邮件列表上发布以供审查。"
+  },
+  "52cfb38e26b3787dc5b7c533d599dcee": {
+    "id": "52cfb38e26b3787dc5b7c533d599dcee",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/firefox-nova-redesign-coming-september",
+    "title_en": "Firefox redesign will arrive in v157 release",
+    "summary_en": "Firefox&#8217;s new &#8216;Nova&#8217; redesign will be enabled for all users in Firefox 157, due the end of September – barring any last minute hiccups, of course. Mozilla&#8217;s engineers have been working on Nova since March. The original pitch was for rounded UI elements, floating toolbars, framed web content no longer flush with the edges of the browser window and, more strikingly, a lot of pastel gradients. Those changes have been refined and dialled down during the past few months, as yo",
+    "pub_date": "Sun, 06 Sep 2026 22:45:03 +0000",
+    "title_zh": "Firefox 重新设计将在 v157 版本中推出",
+    "summary_zh": "Mozilla 的 Firefox 浏览器即将迎来名为“Nova”的全新 UI 重新设计，该设计将在 Firefox 157 版本中向所有用户默认启用，预计于 9 月底发布。Nova 设计最初包含圆角 UI 元素、浮动工具栏、网页内容不再与浏览器窗口边缘齐平，以及大量柔和渐变等特色。经过几个月的调整，这些变化被适度收敛，例如圆角程度减轻、工具栏与内容的间隔被取消、默认渐变更加柔和，并重新加入了紧凑模式选项。用户可通过隐藏标志在现有稳定版中提前体验，但最终版本可能有所不同。",
+    "fulltext_zh": "Firefox 重新设计将在 v157 版本中推出 - OMG! Ubuntu\n\nFirefox 的全新“Nova”重新设计将在 Firefox 157 版本中向所有用户启用，该版本预计于 9 月底发布——当然，除非出现最后一刻的意外。\n\nMozilla 的工程师们一直在致力于 Nova 设计。最初的构想是圆角 UI 元素、浮动工具栏、网页内容不再与浏览器窗口边缘齐平，以及更引人注目的柔和渐变。\n\n在过去的几个月里，这些变化经过了精炼和调整，正如你在下面的对比中看到的那样（拖动滑块进行比较）：\n\nFirefox 155 稳定版中的 Nova 与 v157 Nightly 版中的 Nova\n\n圆角程度被适度收敛，用于分隔和浮动工具栏与内容的“间隔”被悄然关闭，默认渐变变得更加柔和，并重新加入了紧凑模式选项，让希望减少额外内边距的用户可以自行调整。\n\n——顺便感谢提供提示——一位用户在评论中调侃道，放弃间隔的决定意味着 Nova 现在只是一个“更圆的 Proton”加上渐变——但在 Linux 上，即使是这些渐变在默认状态下也是缺失的：\n\n启用垂直标签时 v155 与 v157 中的 Nova 对比\n\nMozilla 的窗口装饰有助于以“潮流”的方式改变浏览器的美学风格。类似的圆角和渐变也用于 Android 上较新版本的 Google Material You 设计，以及 macOS 和 iOS 上 Apple 备受争议的 Liquid Glass 设计。\n\n其他 UI 变化还包括浏览器内置艺术，使用新的 Firefox 吉祥物 Kit，以及面向用户的功能，如新标签页上的小组件——其中大部分已经就位。\n\n3 月份的模型展示了一种主观性强的设计，但我们在 Firefox 157 中看到的是一种更为温和的呈现。\n\nNova 可以为窗口装饰添加渐变色调\n\n当然，对于 Firefox 是否需要重新设计，甚至是否需要这种特定的设计，意见自然会有所不同。根据过去的趋势，这次重新设计已经迟到了：\n\n“Australis”设计于 2014 年推出，“Photon”重新设计于 2017 年推出，而 Nova 将在 Firefox 157 中启用（计划当然可能改变）。\n\n不想等待？你不需要等待。你可以通过 about:config 中的隐藏标志在当前稳定版 Firefox 中启用 Nova。\n\n如果你选择提前测试，请记住，你看到的 Nova 版本与 v157 中的版本会有所不同（使用 Nightly 版本可以获得更准确的预览）。\n\n真正的意见将在 9 月 29 日 Firefox 157 发布后形成。"
+  },
+  "21a2c0987b817328dbbd7cbb5fcd89e9": {
+    "id": "21a2c0987b817328dbbd7cbb5fcd89e9",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/switzerland-replace-microssoft-pilot/",
+    "title_en": "Switzerland's Federal Government is Replacing Microsoft on 3,000 Computers",
+    "summary_en": "This is the pilot phase, with 3,000 workstations moving away from Microsoft 365. The federal administration has over 54,000 computers.",
+    "pub_date": "Sun, 06 Sep 2026 15:23:30 GMT",
+    "title_zh": "瑞士联邦政府将在3000台电脑上替换微软产品",
+    "summary_zh": "瑞士联邦政府启动试点项目，计划在3000台工作站上用开源替代品替换Microsoft 365，约占联邦劳动力的7%。此举源于数字主权考量，旨在降低对外国供应商的依赖。试点阶段新系统将与微软产品并行运行，若成功将推广至全部54000台电脑。瑞士军方已先行一步，计划在2026年10月前全面采用开源软件。",
+    "fulltext_zh": "瑞士联邦政府正在3000台电脑上替换微软产品\n\n这是试点阶段，3000台工作站将迁移出Microsoft 365。联邦政府拥有超过54000台电脑。\n\n瑞士联邦政府已启动试点项目，在3000台工作站上用开源替代品替换Microsoft 365。这约占联邦劳动力的7%。目标是在2027年底前完成迁移。\n\n此举是在概念验证成功和新的数字主权法出台后进行的。一项独立的军方快速迁移也已在推进中。\n\n大规模迁移进入试点阶段\n\n联邦总理府投资900万瑞士法郎，为3000名联邦雇员部署开源工作场所。\n\n2026年9月3日，联邦委员会公布了“PoC BOSS”的结果，这是一项涉及172名联邦雇员的概念验证，他们测试了这套德国开源协作平台。\n\n在概念验证阶段，文档处理和电子邮件等核心办公任务获得积极评价，而大规模视频会议仍显示技术局限。\n\n基于172名员工的PoC阶段的“成功”，试点现已扩展到3000名员工。\n\n请注意，在试点阶段，新系统与Microsoft 365并行运行，而非直接替换。我认为这没问题。此类迁移应循序渐进，而非突然进行。\n\n如果试点成功，我们预计迁移将继续覆盖联邦政府所有的54000台工作站。这是我的猜测。\n\n据伯尔尼应用科学大学（BFH）教授Matthias Stürmer称，微软在公共机构中的主导地位带来了三个问题，推动了此次迁移。\n\n首先是外国访问的风险。美国云立法可能使瑞士政府数据暴露给外国当局。\n\n其次是服务连续性的风险，因为对单一外国供应商的依赖造成了运营风险。\n\n第三个风险是成本不断上升，专有许可费用不断上涨，而瑞士缺乏议价能力。\n\n瑞士军队行动更快\n\n瑞士军事网络安全部门——网络司令部——并未等待民用试点。它计划在2026年10月前用openDesk完全替换Microsoft 365。\n\n原因基本相同。军方不希望外国政府访问瑞士的敏感数据。\n\n更大计划的一部分\n\n一项法律已生效，要求所有瑞士联邦机构默认将政府开发的软件作为开源发布。该法律还旨在促进数字主权，并鼓励公共部门内的创新与合作。\n\n联邦委员会将数字主权指定为主要关注主题。它将数字主权定义为“联邦政府能够在不依赖外部供应商或国家的情况下履行其基本使命”。\n\n这实质上就是摆脱美国的科技巨头。\n\n邻国法国和德国也一直在尝试类似举措。让我们希望瑞士的大规模迁移成功，为其他国家树立榜样，加速他们摆脱微软的计划。\n\n顺便说一句，微软财力雄厚，因此他们也在投资超过3.25亿瑞士法郎，扩大在瑞士的AI和云基础设施，部分目的是削弱主权论点。\n\n让我们看看接下来事态如何发展，但到目前为止，对我们开源支持者来说，前景是积极的。\n\n喜欢这篇更新吗？支持独立的Linux新闻报道\n\nIt's FOSS 14年来一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读，并获得5本电子书。\n\n一次付费，永久享受\n\n任意金额，无需承诺\n\n13年前创建It's FOSS，分享我的Linux冒险经历。拥有工程学硕士学位，多年经验。"
+  },
+  "1334302d0fec5c420129d71a1bb39634": {
+    "id": "1334302d0fec5c420129d71a1bb39634",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12948",
+    "title_en": "DistroWatch Weekly, Issue 1189",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  This week in DistroWatch Weekly: \nReview: Genuen 6.0.0\nNews: Multikernel Linux, bots swarm the kernel repository, Debian being deployed at CERN, Debian 11 reaches its end of life\nQuestions and answers: Avoiding LLM-written code\nReleased last week: Linux From Scratch 13.1, Grml 2026.09, Talos Linux 1.14.0, Zenwalk GNU Linux 260905, NetBSD....",
+    "pub_date": "",
+    "title_zh": "DistroWatch周刊，第1189期",
+    "summary_zh": "本期DistroWatch周刊报道了多项Linux新闻：多内核Linux项目、内核仓库遭遇机器人刷屏、Debian在CERN部署、Debian 11生命周期结束，以及Debian关于LLM贡献的投票。此外，Asahi在多个方面取得进展，新版COSMIC桌面带来更多无障碍功能，Bazzite更新了Deck镜像，RPM改进了锁处理，Fairphone 6在美国销售，Kubuntu用户将受益于Plasma长期支持，Redox OS改进了安装程序和上下文切换速度。问答栏目探讨了如何避免使用LLM编写的代码。",
+    "fulltext_zh": "DistroWatch周刊，第1189期\n\nDistroWatch.com由以下赞助商支持\n\n新闻/观点/评论 ▼\n发布公告\nDW周刊 / 评论存档\n访客评分与评论\n按评分排列的项目排名\n播客、新闻通讯与评论\n跨发行版软件包比较\n显示所有发行版的软件包版本\n搜索发行版 - 高级\n已停止维护的发行版\n教程与学习 ▼\n搜索文章\n问答专栏\n技巧与提示专栏\n误区与误解专栏\n简化手册页\n其他操作系统\n发行版验证密钥\n发行版家族树可视化\n常见问题\n我们的捐赠计划\n\n小型企业电话系统\nDebian将在CERN使用\nDebian 11达到生命周期终点\nDebian就LLM贡献进行投票\nAsahi在多个方面取得进展\n新版COSMIC版本带来更多无障碍功能\nBazzite更新Deck镜像\nRPM改进锁处理\nFairphone 6在美国销售\nKubuntu用户将受益于Plasma长期支持\nRedox OS获得改进的安装程序和更快的上下文切换\n\n易于使用的PBX - 托管或自管理\nLinux电话系统\n免费在线聊天解决方案\n集成呼叫中心软件\n联络中心软件\n远程办公应用：iOS或Android\n免费视频会议\n3CX提供的VoIP / PBX操作指南\n不要措手不及，制定灾难恢复计划！\n必备的在线聊天报告与统计\n导致呼叫欺诈的常见错误\nWhatsApp Business与3CX WhatsApp API集成对比\n3CX StartUP的5大杀手级功能\n别做“那种人”第1卷：使用复杂凭据\n别做“那种人”第2卷：呼叫欺诈\n别做“那种人”第3卷：4大安全提示\n别做“那种人”第4卷：监控您的实例\n\nFluff Linux 2026.08.01\nRed Hat周五五件事 - 2026年9月4日\nPCLinuxOS杂志2026年9月号\nTumbleweed月度更新 - 2026年8月\nUbuntu每周新闻通讯959期\nFull Circle每周新闻\n\n最新新闻与更新\n新闻过滤选项\n\nDistroWatch周刊，第1189期\n新闻：多内核Linux、机器人涌入内核仓库、Debian在CERN部署、Debian 11达到生命周期终点\n问答：避免使用LLM编写的代码\n上周发布：Linux From Scratch 13.1、Grml 2026.09、Talos Linux 1.14.0、Zenwalk GNU Linux 260905、NetBSD 9.5\n种子下载专区：NetBSD\n即将发布：FreeBSD 14.5、GLF OS Quasar Quake\n读者投票：Debian关于LLM生成贡献的决定\n更多内容请阅读本期DistroWatch周刊……\n\nPeropesis（个人操作系统）是一个小规模、极简、基于命令行的Linux操作系统。它不是一个完整的系统，但正在不断改进。同时，它是一个由自由软件创建的自由操作系统，大部分软件以GNU GPL或BSD许可证分发。\n\n问答：在文本文件前添加行、转换图像文件、设置系统时钟\n技巧与提示：在发行版安装后更改init软件\n问答：将窗口视为标签页\n问答：设置主目录模板\n技巧与提示：应对低内存性能问题\n技巧与提示：收集系统信息\n技巧与提示：在Ubuntu下回退到旧内核\n技巧与提示：更安全地使用dd\n技巧与提示：从命令行处理图像\n问答：了解谁运行了sudo以及设置防火墙\n\n版权所有 © 2001 - 2026 Atea Ataroa Limited。保留所有权利。所有商标均为其各自所有者的财产。\n更改隐私设置\n联系方式、更正和建议：\nbc1qxes3k2wq3uqzr074tkwwjmwfe63z70gwzfu4lx\nlnurl1dp68gurn8ghj7ampd3kx2ar0veekzar0wd5xjtnrdakj7tnhv4kxctttdehhwm30d3h82unvwqhhxarpw3jkc7tzw4ex6cfexyfua2nr\n86fA3qPTeQtNb2k1vLwEQaAp3XxkvvvXt69gSG5LGunXXikK9koPWZaRQgfFPBPWhMgXjPjccy9LA9xRFchPWQAnPvxh5Le\nPatreon.com/distrowatch"
+  },
+  "b8425b0e34e4809ea15f3e346ff5ecc0": {
+    "id": "b8425b0e34e4809ea15f3e346ff5ecc0",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12947",
+    "title_en": "BSD Release: NetBSD 9.5",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The NetBSD project has announced the fifth and final update to the NetBSD 9.x series. The NetBSD 9 series will no longer receive security updates. \"Announcing NetBSD 9.5. Note: this will be the final release from the netbsd-9 stable branch and also marks the end-of-support for this branch.....",
+    "pub_date": "",
+    "title_zh": "BSD发布：NetBSD 9.5",
+    "summary_zh": "NetBSD项目宣布了NetBSD 9.x系列的第五个也是最后一个更新版本9.5。该版本标志着netbsd-9稳定分支的终止，此后该分支将不再接收安全更新。项目强烈建议生产环境中的用户迁移到更新的版本系列，如netbsd-11或netbsd-10。9.5版本包含系统改进和硬件支持更新，包括对aarch64架构的线程本地存储修复、x86平台MSI/MSI-X配置修复、新增手册页、ACPI亮度控制修复，以及对多种USB适配器的支持。",
+    "fulltext_zh": "BSD发布：NetBSD 9.5（DistroWatch.com新闻）\n\n项目已宣布NetBSD 9.x系列的第五个也是最终更新版本。NetBSD 9系列将不再接收安全更新。\n\n“宣布NetBSD 9.5。注意：这将是netbsd-9稳定分支的最终版本，也标志着该分支的支持终止。此后将不再对此分支进行安全补丁更新！在生产环境中运行netbsd-9的用户强烈建议迁移到更新的版本系列，例如netbsd-11或netbsd-10。自9.4以来的变更：系统改进和硬件支持——build.sh——针对更新的编译器和非NetBSD平台的各种工具构建修复；aarch64——修复了线程本地存储支持；x86——修复了某些机器上的MSI/MSI-X配置；mbsnrtowcs(3)、wcsnrtombs(3)——新增手册页；acpiout(4)——修复了某些机器上的显示亮度控制；eap(4)——恢复了netbsd-7中支持的完整硬件编码集；uftdi(4)——新增对一系列Brainboxes USB转串口适配器的支持；urtwn(4)——新增对Mercusys MW150USV2 USB WiFi适配器的支持；urtwn(4)——新增对华硕USB-N10 Nano B1 WiFi适配器的支持；viaide(4)——对多个控制器的支持进行了多项改进。”\n\n更多详细信息可在相关新闻和发布中找到。\n\n近期相关新闻和发布：\nBSD发布：NetBSD 9.5\nBSD发布：NetBSD 11.0\n开发版发布：NetBSD 11.0 RC3\n开发版发布：NetBSD 11.0 RC1\nBSD发布：NetBSD 10.1\nBSD发布：NetBSD 9.4\n\nNetBSD是一个免费、安全且高度可移植的类Unix开源操作系统，支持多种平台，从64位AlphaServer和桌面系统到手持和嵌入式设备。其简洁的设计和先进的功能使其在生产和研究环境中表现出色，并且由用户支持，提供完整源代码。许多应用程序可通过NetBSD软件包集合轻松获取。\n\nhttps://www.netbsd.org/\nhttps://www.netbsd.org/MailingLists/\n\n替代用户论坛\nhttps://www.netbsd.org/Documentation/\nhttps://www.netbsd.org/mirrors/#iso\nhttps://www.netbsd.org/mir"
+  },
+  "ec6d0923610cfb15805bf1caace21cab": {
+    "id": "ec6d0923610cfb15805bf1caace21cab",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.3-rc2-Released",
+    "title_en": "Linux 7.3-rc2 Released Following Another Busy Week",
+    "summary_en": "After the Linux 7.3 merge window concluded last weekend, today we are up to the Linux 7.3-rc2 test kernel release in working toward the stable v7.3 kernel during the second half of October...",
+    "pub_date": "Sun, 06 Sep 2026 18:22:25 -0400",
+    "title_zh": "Linux 7.3-rc2 发布，又一个繁忙的一周",
+    "summary_zh": "Linux 7.3-rc2 在合并窗口结束后发布，包含大量 AI/LLM 生成代码的涌入，以及针对早期测试问题的修复。主要更新包括：混合 CPU 的缓存感知调度修复、将 kmalloc 调用迁移至 kmalloc_obj、Nouveau 驱动的 NVIDIA Blackwell 显示修复、在存在 Rust 支持时默认禁用 RandStruct 安全特性，以及补入合并窗口遗漏的 EDAC 更改。Greg Kroah-Hartman 警告称，由于 AI 活动频繁，7.3 开发周期可能较为艰难。",
+    "fulltext_zh": "Linux 7.3-rc2 发布，又一个繁忙的一周 - Phoronix\nLinux 7.3-rc2 发布，又一个繁忙的一周\n2026年9月6日，下午6:22 EDT。\n合并窗口于上周末结束，今天我们迎来了 Linux 7.3-rc2 测试内核版本，目标是在十月中旬发布稳定的 v7.3 内核。\nLinux 7.3-rc2 是合并窗口后又一个繁忙的每周候选版本，大量 AI/LLM 生成的内容持续涌入，同时也在处理 Linux 7.3-rc1 早期测试中暴露的问题。Linux 7.3-rc2 带来了：\n- 针对混合 CPU 的缓存感知调度（Cache Aware Scheduling）失配修复，以提供更好的性能；\n- 一次全树范围的清理，将更多 kmalloc() 调用迁移至 kmalloc_obj() 调用；\n- Nouveau 驱动针对 NVIDIA Blackwell 的显示修复；\n- 在存在 Rust 支持（以及 Rust 编译器工具链）时，默认禁用 RandStruct 安全特性；\n- 以及 EDAC 更改，这些更改在 Linux 7.3 合并窗口期间被遗漏。\n此外，在庞大的内核领域（源代码树接近 4100 万行）中还有大量其他修复。二把手 Greg Kroah-Hartman 已经警告称，由于所有 AI/LLM 活动，Linux 7.3 开发周期看起来会比较艰难。\nLinux 7.3-rc2 现已可用。\nLinux 7.3 功能概览可查看这一新内核版本带来的所有有趣变化。\nLinus Torvalds 现在发布了延迟的发布公告：\n“这*感觉*不像一个特别繁忙的 rc2，但显然确实如此。\nrc2 通常是人们合并窗口后喘息的最安静时期，而且需要一段时间才能开始发现错误。但这次不是——这是一个‘全脂’的 rc 版本。\n而且这不是单一原因造成的。我想指出的是，迟到的 EDAC 拉取请求被遗忘了，没有在合并窗口期间发生，但说实话，那是一件相当小的事情。不，rc2 有几个文件系统发送了修复，还有一个相当大的 drm 拉取请求，包含大量分散的修复。还有网络和 bpf 发送的修复。*以及*许多驱动树。”\nLinux 7.3-rc2 为混合 CPU 上的缓存感知负载调度失配提供调度器修复\nLinux 7.3-rc2 将更多 kmalloc 调用迁移至更优越的 kmalloc_obj\n第21版补丁：让 Linux 异步关闭设备\nLinux 7.3 现在在存在 Rust 支持时默认禁用 RandStruct 安全特性\nGreg KH 预警：由于持续的 AI 变动，Linux 7.3 内核周期将“艰难”\nEDAC 更改在合并窗口期间被遗忘后，现已并入 Linux 7.3\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\nCERN 长期使用 RHEL 后，将工业计算机迁移至 Debian\nAsahi Linux 现已正式支持 Apple M3 Mac——但有注意事项\n加州通过 AB-1856 法案，为年龄验证提供开源救济\nReactOS 0.4.16 发布，带有新图形安装程序，更好的硬件支持\n前英特尔工程师、Clear Linux 架构师之一正在创建新发行版\n来自英特尔或 AMD 以外实体的另一份 x86 公告\nServo 0.5 发布：DuckDuckGo 正确渲染，文本渲染速度提升高达 10 倍\nWinBtrfs 1.10 发布，包含两年来的改进，适用于 Windows 上的 Btrfs\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "8d3aa2e312583e68056656e85f4b088d": {
+    "id": "8d3aa2e312583e68056656e85f4b088d",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Shotcut-26.9-Beta",
+    "title_en": "Shotcut 26.9 Video Editor Beta Brings UI Improvements, Better Audio Quality",
+    "summary_en": "Following the recent Shotcut stable release with a stock asset library and other improvements, Shotcut 26.9 Beta is out today with yet more improvements for this open-source video editing application for Linux, macOS, and Windows systems...",
+    "pub_date": "Sun, 06 Sep 2026 15:58:05 -0400",
+    "title_zh": "Shotcut 26.9 视频编辑器测试版带来界面改进与更佳音频质量",
+    "summary_zh": "Shotcut 26.9 测试版发布，带来了音频质量提升，通过避免16位整数转换并保持管线完全在32位浮点模式，同时改进了时间线功能的性能。界面经过现代化改进，采用圆角设计，并更新了标志。该版本基于FFmpeg 9.0，修复了Linux上的VA-API HEVC硬件编码问题，并包含其他多项修复和小改进。用户可下载Linux AppImage、通用Linux x86_64构建版以及macOS和Windows二进制文件进行测试。",
+    "fulltext_zh": "Shotcut 26.9 视频编辑器测试版带来界面改进与更佳音频质量 - Phoronix\nShotcut 26.9 视频编辑器测试版带来界面改进与更佳音频质量\n发布于2026年9月6日美国东部时间下午3:58。\n\n继最近发布的Shotcut稳定版（包含素材资源库和其他改进）之后，Shotcut 26.9测试版于今日推出，为这款适用于Linux、macOS和Windows系统的开源视频编辑应用带来了更多改进。\n\nShotcut 26.9测试版通过避免16位整数转换并保持管线完全在32位浮点模式，提升了音频质量。此外，Shotcut时间线功能的性能也得到了改进。\n\nShotcut 26.9还增强了其用户界面，致力于通过圆角和其他细节改进使其更加现代化。该项目还采用了新标志。\n\nShotcut 26.9测试版的另一个突出特点是基于FFmpeg 9.0，修复了Linux上的VA-API HEVC硬件编码问题，并包含其他各种修复和小改进。\n\n想要试用Shotcut 26.9测试版的用户可以从[此处]下载。除了GPLv3许可的源代码外，还提供Linux AppImage x86_64构建版、通用Linux x86_64构建版，以及macOS和Windows二进制文件。"
+  },
+  "156e300792ff18ec6ed610462dddd38e": {
+    "id": "156e300792ff18ec6ed610462dddd38e",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/NetBSD-9.5-Released",
+    "title_en": "NetBSD 9.5 Released To Cap Off The Series",
+    "summary_en": "NetBSD 9.5 released today as the final release of the NetBSD 9 stable branch...",
+    "pub_date": "Sun, 06 Sep 2026 13:52:15 -0400",
+    "title_zh": "NetBSD 9.5 发布，为 9 系列画上句号",
+    "summary_zh": "NetBSD 9.5 于今日发布，作为 NetBSD 9 稳定分支的最终版本。该版本主要包含各种错误修复和安全更新，同时保持与 NetBSD 9.0 的完全兼容。虽然没有什么特别令人兴奋的新功能，但对于仍依赖经过实战检验的 NetBSD 9 的用户来说非常实用。此外，NetBSD 11.1 预计将于 9 月下旬发布，NetBSD 10.2 也即将推出。",
+    "fulltext_zh": "NetBSD 9.5 今日发布，作为 NetBSD 9 稳定分支的最终版本。\n\nNetBSD 9.5 为 NetBSD 9 系列带来了各种错误和安全修复，同时保持与 NetBSD 9.0 的完全兼容。该版本主要只是安全性和稳定性修复，没有什么特别令人兴奋的内容，但对于那些仍依赖经过实战检验的 NetBSD 9 的用户来说非常实用。\n\nNetBSD 11 于 8 月初作为这一广受欢迎的 BSD 操作系统的最新稳定系列发布。NetBSD 11.1 预计将于 9 月下旬发布，其中包含一系列初步修复；而对于 NetBSD 10 用户，NetBSD 10.2 版本也即将推出。\n\n感兴趣的读者可以通过相关页面下载 NetBSD 9.5。"
+  },
+  "2d537d81e3ec25b8a1f21aa23b134f18": {
+    "id": "2d537d81e3ec25b8a1f21aa23b134f18",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.3-rc2-Scheduler-Fixes",
+    "title_en": "Linux 7.3-rc2 Scheduler Fix For Cache Aware Load Scheduling Misfits On Hybrid CPUs",
+    "summary_en": "Ahead of the Linux 7.3-rc2 kernel being released later today, a set of scheduler fixes have been sent out for this week's kernel test release. Most notable with the scheduler fixes are dealing with possible misfits for Cache-Aware Load Scheduling on hybrid CPUs like Intel Core (Ultra) processors...",
+    "pub_date": "Sun, 06 Sep 2026 09:32:43 -0400",
+    "title_zh": "Linux 7.3-rc2 调度器修复：混合 CPU 上缓存感知负载调度的失配问题",
+    "summary_zh": "Linux 7.3-rc2 内核发布前，一组调度器修复被提交，主要解决混合 CPU（如 Intel Core/Ultra）上缓存感知负载调度可能出现的失配问题。该问题源于任务被迁移到容量不足的小核，导致性能损失。Intel 工程师 Tim Chen 的补丁通过限制 LLC 迁移和主动平衡，防止任务被放置到无法容纳的 CPU 上，同时优先处理失配任务迁移，以提升整体系统性能。",
+    "fulltext_zh": "Linux 7.3-rc2 调度器修复：混合 CPU 上缓存感知负载调度的失配问题 - Phoronix\n\nLinux 7.3-rc2 调度器修复：混合 CPU 上缓存感知负载调度的失配问题\n\n2026年9月6日 上午09:32 EDT\n\n在 Linux 7.3-rc2 内核于今天晚些时候发布之前，一组调度器修复已为本周的测试内核版本发送。最值得注意的是，这些调度器修复处理了在混合 CPU（如 Intel Core (Ultra) 处理器）上缓存感知负载调度可能出现的失配问题。\n\n缓存感知调度是一个出色的 Linux 内核特性，它可以将相关任务分组到能够共享相同最后一级缓存（LLC）的 CPU 核心上。缓存感知调度可以带来更好的缓存局部性，进而降低延迟并避免缓存乒乓的开销。但在具有大小核架构的混合 CPU 情况下，如果分组任务最终全部被限制在 E 核/小核上，则可能存在权衡取舍。\n\nIntel 工程师 Tim Chen 针对混合处理器上缓存感知调度的失配问题提出了一个修复方案。他在补丁中解释道：\n\n“缓存感知负载平衡将任务偏向其首选的 LLC。在非对称 CPU 容量系统（例如 big.LITTLE）上，目标 LLC 可能包含容量过小、无法运行该任务的 CPU。将任务拉取到那里会使其成为失配任务，用缓存局部性的收益换取容量损失，而容量损失对性能的损害更大。\n\n针对这两个缓存感知迁移入口点进行防护：\n- can_migrate_llc_task()：当任务适合其源 CPU 但不适合目标 CPU 时，禁止 LLC 迁移。\n- alb_break_llc()：在相同条件下否决主动平衡，以免可运行任务被推送到无法容纳它的 CPU 上。\n\n两个检查都通过混合处理器检查进行门控，因此对称系统不受影响。已经不适合其源 CPU 的任务则保留现有的 LLC 策略，因为迁移不会使其适合性变得更差（这也保留了失配任务向更大 CPU 的上迁移）。\n\n此外，如果在负载平衡分类阶段发现失配任务，则在非对称系统上优先进行失配任务迁移，而不是 LLC 负载聚合。一个更合适的 CPU 将比更好的缓存局部性带来更大的性能提升。”\n\n这对整体系统性能有利。该修复补丁是今天调度器拉取请求的一部分。\n\nLinux 7.3-rc2 在又一个繁忙的一周后发布\nLinux 7.3-rc2 将更多 kmalloc 调用转换为更优秀的 kmalloc_obj\n第21版补丁：让 Linux 异步关闭设备\nLinux 7.3 现在默认在存在 Rust 支持时禁用 RandStruct 安全特性\nGreg KH 预警：由于持续的 AI 变动，Linux 7.3 内核周期将“艰难”\nEDAC 更改在合并窗口期间被遗忘后已合入 Linux 7.3\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过20,000篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动程序及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nCERN 在长期作为 RHEL 机构后，将工业计算机迁移至 Debian\nAsahi Linux 现已正式支持 Apple M3 Mac - 但有限制\n加州通过 AB-1856 法案，为年龄验证提供开源救济\nReactOS 0.4.16 发布，带有新的图形安装程序，更好的硬件支持\n前 Intel 工程师（Clear Linux 架构师之一）正在启动新发行版\n另一份来自 Intel 或 AMD 以外实体的 x86 公告\nServo 0.5 发布：DuckDuckGo 正确渲染，文本渲染速度提升高达10倍\nWinBtrfs 1.10 发布，包含两年来的 Btrfs Windows 改进\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookies\nCop"
+  },
+  "a634cde819638a5ea5ba5186d24e55bc": {
+    "id": "a634cde819638a5ea5ba5186d24e55bc",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Asahi-Linux-Official-M3",
+    "title_en": "Asahi Linux Now Officially Supports Apple M3 Macs - With Caveats",
+    "summary_en": "Asahi Linux developers announced today that they are now officially supporting the Linux distribution on Apple M3 powered Macs. With the exception of the Mac Studio M3 Ultra, other M3 / M3 Pro / M3 Max devices should now work with the latest Asahi Linux builds but with some feature caveats...",
+    "pub_date": "Sun, 06 Sep 2026 06:53:22 -0400",
+    "title_zh": "Asahi Linux 现已正式支持 Apple M3 Macs - 但存在一些限制",
+    "summary_zh": "Asahi Linux 开发者今日宣布，该 Linux 发行版现已正式支持搭载 Apple M3 系列芯片的 Mac 设备（Mac Studio M3 Ultra 除外）。虽然大部分 M3/M3 Pro/M3 Max 设备已能运行最新版本，但 GPU 支持尚不完善，3D 加速性能与功耗效率欠佳；同时，由于缺少 DCP 支持，睡眠功能和 HDMI 端口暂不可用。上游内核的 M3 支持仍在推进中，Linux 7.4+ 将进一步完善。",
+    "fulltext_zh": "Asahi Linux 开发者今日宣布，他们现已正式支持在搭载 Apple M3 芯片的 Mac 上运行该 Linux 发行版。除 Mac Studio M3 Ultra 外，其他 M3 / M3 Pro / M3 Max 设备应可使用最新的 Asahi Linux 版本，但存在一些功能限制。\n\nAsahi Linux 开发者今日宣布，搭载 M3 系列 SoC 的 Apple Mac 已达到“几乎”所有功能都支持的状态，与较旧的 M1 和 M2 硬件类似。\n\n然而，最大的例外是 GPU 支持，他们承认目前 3D 加速的性能和功耗效率尚不理想。他们希望在接下来的几个月内能在 GPU 方面取得更多进展。\n\n除了 GPU 支持不佳外，由于缺少 DCP 支持，Asahi Linux 在 Apple M3 上目前也无法提供睡眠功能。同样由于缺少 DCP 支持，M3 MacBook 上的 HDMI 端口也无法工作。此 M3 支持应涵盖除 Mac Studio M3 Ultra 之外的所有 Apple 设备。\n\n关于下游 Asahi Linux 在 Apple M3 Mac 上正式支持的更多细节，可在此处查看。所有 M3 支持的上游化工作仍在进行中。主线 Linux 内核中已有初步的 M3 支持，可实现基本启动，但各种其他补丁仍需在 Linux 7.4+ 中上游化，才能达到与 Asahi Linux 本身类似的状态。"
   }
 }

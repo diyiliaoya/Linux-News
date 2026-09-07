@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Zenwalk GNU Linux Current-260905 — Linux 中文速报</title>
+<title>Linux 7.3-rc2 调度器修复：混合 CPU 上缓存感知负载调度的失配问题 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Zenwalk GNU Linux Current-260905</h1>
+  <h1>Linux 7.3-rc2 调度器修复：混合 CPU 上缓存感知负载调度的失配问题</h1>
 
-  <div class="article-summary">Zenwalk GNU Linux 发布了最新的 Current-260905 快照版本。该版本集成了对 Flatpak 的原生支持，用户可直接通过图形化应用商店安装现代桌面应用，同时保留传统的 Slackware 包管理系统。此外，内核升级至 Linux 7.1.7，并引入了 BORE CPU 调度器补丁，旨在提升桌面交互响应速度，确保系统在高负载下依然流畅。</div>
+  <div class="article-summary">Linux 7.3-rc2 内核发布前，一组调度器修复被提交，主要解决混合 CPU（如 Intel Core/Ultra）上缓存感知负载调度可能出现的失配问题。该问题源于任务被迁移到容量不足的小核，导致性能损失。Intel 工程师 Tim Chen 的补丁通过限制 LLC 迁移和主动平衡，防止任务被放置到无法容纳的 CPU 上，同时优先处理失配任务迁移，以提升整体系统性能。</div>
 
-  <div class="article-body"><p>发行版发布：Zenwalk GNU Linux Current-260905 (DistroWatch.com 新闻)</p><p>Zenwalk GNU Linux 是一个基于 Slackware 的桌面发行版。该项目的最新快照集成了 Flatpak 支持，并包含 Linux 内核 7.1.7 版本。</p><p>“此版本的一大改进是将原生 Flatpak 支持直接集成到 Zenwalk 桌面中。Flatpak 已预装并配置好，Flathub 作为应用程序源可用。安装现代桌面应用程序不再需要搜索软件包、处理依赖关系或打开终端。只需打开图形化应用商店，找到所需应用，点击安装——即可完成。这为 Zenwalk 用户提供了访问庞大且最新的桌面应用生态系统的途径，同时保留传统的 Slackware 包系统用于核心操作系统。换句话说：系统使用 Zenwalk 包，应用使用 Flatpak——两者从第一天起即可使用。</p><p>此版本升级至 Linux 7.1.7 内核，提供了现代内核基础，并带有 BORE（面向突发响应的增强器）CPU 调度器补丁。BORE 专为交互式桌面工作负载而设计，旨在通过优先处理短促、交互式的 CPU 活动突发来提高响应性，即使在系统 CPU 负载较重时，也能保持桌面任务响应迅速。对于像 Zenwalk 这样的桌面导向型发行版，这尤其契合：应用程序、窗口管理、多媒体工作负载和后台进程可以共存，同时保持用户界面的响应性。其结果是内核配置不仅针对基准测试数字，更关注桌面使用时的实际感受：系统保持响应。”</p><p>更多信息可在发行版的发布公告中找到。</p><p>zenwalk-current-260905.iso</p><p>近期相关新闻与发布：</p><p>发行版发布：Zenwalk GNU Linux Current-260905</p><p>发行版发布：Zenwalk GNU Linux Current-230909</p></div>
+  <div class="article-body"><p>Linux 7.3-rc2 调度器修复：混合 CPU 上缓存感知负载调度的失配问题 - Phoronix</p><p>Linux 7.3-rc2 调度器修复：混合 CPU 上缓存感知负载调度的失配问题</p><p>2026年9月6日 上午09:32 EDT</p><p>在 Linux 7.3-rc2 内核于今天晚些时候发布之前，一组调度器修复已为本周的测试内核版本发送。最值得注意的是，这些调度器修复处理了在混合 CPU（如 Intel Core (Ultra) 处理器）上缓存感知负载调度可能出现的失配问题。</p><p>缓存感知调度是一个出色的 Linux 内核特性，它可以将相关任务分组到能够共享相同最后一级缓存（LLC）的 CPU 核心上。缓存感知调度可以带来更好的缓存局部性，进而降低延迟并避免缓存乒乓的开销。但在具有大小核架构的混合 CPU 情况下，如果分组任务最终全部被限制在 E 核/小核上，则可能存在权衡取舍。</p><p>Intel 工程师 Tim Chen 针对混合处理器上缓存感知调度的失配问题提出了一个修复方案。他在补丁中解释道：</p><p>“缓存感知负载平衡将任务偏向其首选的 LLC。在非对称 CPU 容量系统（例如 big.LITTLE）上，目标 LLC 可能包含容量过小、无法运行该任务的 CPU。将任务拉取到那里会使其成为失配任务，用缓存局部性的收益换取容量损失，而容量损失对性能的损害更大。</p><p>针对这两个缓存感知迁移入口点进行防护：</p><p>- can_migrate_llc_task()：当任务适合其源 CPU 但不适合目标 CPU 时，禁止 LLC 迁移。</p><p>- alb_break_llc()：在相同条件下否决主动平衡，以免可运行任务被推送到无法容纳它的 CPU 上。</p><p>两个检查都通过混合处理器检查进行门控，因此对称系统不受影响。已经不适合其源 CPU 的任务则保留现有的 LLC 策略，因为迁移不会使其适合性变得更差（这也保留了失配任务向更大 CPU 的上迁移）。</p><p>此外，如果在负载平衡分类阶段发现失配任务，则在非对称系统上优先进行失配任务迁移，而不是 LLC 负载聚合。一个更合适的 CPU 将比更好的缓存局部性带来更大的性能提升。”</p><p>这对整体系统性能有利。该修复补丁是今天调度器拉取请求的一部分。</p><p>Linux 7.3-rc2 在又一个繁忙的一周后发布</p><p>Linux 7.3-rc2 将更多 kmalloc 调用转换为更优秀的 kmalloc_obj</p><p>第21版补丁：让 Linux 异步关闭设备</p><p>Linux 7.3 现在默认在存在 Rust 支持时禁用 RandStruct 安全特性</p><p>Greg KH 预警：由于持续的 AI 变动，Linux 7.3 内核周期将“艰难”</p><p>EDAC 更改在合并窗口期间被遗忘后已合入 Linux 7.3</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过20,000篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动程序及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>CERN 在长期作为 RHEL 机构后，将工业计算机迁移至 Debian</p><p>Asahi Linux 现已正式支持 Apple M3 Mac - 但有限制</p><p>加州通过 AB-1856 法案，为年龄验证提供开源救济</p><p>ReactOS 0.4.16 发布，带有新的图形安装程序，更好的硬件支持</p><p>前 Intel 工程师（Clear Linux 架构师之一）正在启动新发行版</p><p>另一份来自 Intel 或 AMD 以外实体的 x86 公告</p><p>Servo 0.5 发布：DuckDuckGo 正确渲染，文本渲染速度提升高达10倍</p><p>WinBtrfs 1.10 发布，包含两年来的 Btrfs Windows 改进</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>Cop</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12946" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-rc2-Scheduler-Fixes" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
