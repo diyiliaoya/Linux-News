@@ -10074,5 +10074,170 @@
     "title_zh": "Asahi Linux 现已正式支持 Apple M3 Macs - 但存在一些限制",
     "summary_zh": "Asahi Linux 开发者今日宣布，该 Linux 发行版现已正式支持搭载 Apple M3 系列芯片的 Mac 设备（Mac Studio M3 Ultra 除外）。虽然大部分 M3/M3 Pro/M3 Max 设备已能运行最新版本，但 GPU 支持尚不完善，3D 加速性能与功耗效率欠佳；同时，由于缺少 DCP 支持，睡眠功能和 HDMI 端口暂不可用。上游内核的 M3 支持仍在推进中，Linux 7.4+ 将进一步完善。",
     "fulltext_zh": "Asahi Linux 开发者今日宣布，他们现已正式支持在搭载 Apple M3 芯片的 Mac 上运行该 Linux 发行版。除 Mac Studio M3 Ultra 外，其他 M3 / M3 Pro / M3 Max 设备应可使用最新的 Asahi Linux 版本，但存在一些功能限制。\n\nAsahi Linux 开发者今日宣布，搭载 M3 系列 SoC 的 Apple Mac 已达到“几乎”所有功能都支持的状态，与较旧的 M1 和 M2 硬件类似。\n\n然而，最大的例外是 GPU 支持，他们承认目前 3D 加速的性能和功耗效率尚不理想。他们希望在接下来的几个月内能在 GPU 方面取得更多进展。\n\n除了 GPU 支持不佳外，由于缺少 DCP 支持，Asahi Linux 在 Apple M3 上目前也无法提供睡眠功能。同样由于缺少 DCP 支持，M3 MacBook 上的 HDMI 端口也无法工作。此 M3 支持应涵盖除 Mac Studio M3 Ultra 之外的所有 Apple 设备。\n\n关于下游 Asahi Linux 在 Apple M3 Mac 上正式支持的更多细节，可在此处查看。所有 M3 支持的上游化工作仍在进行中。主线 Linux 内核中已有初步的 M3 支持，可实现基本启动，但各种其他补丁仍需在 Linux 7.4+ 中上游化，才能达到与 Asahi Linux 本身类似的状态。"
+  },
+  "24c3f22a9fd8de06adee5405347d3c8d": {
+    "id": "24c3f22a9fd8de06adee5405347d3c8d",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/kde-photos-app-replace-gwenview",
+    "title_en": "KDE’s new Photos app offers a sleek alternative to Gwenview",
+    "summary_en": "Photos is a new(ish) image viewer and organiser for KDE Plasma aiming to give Gwenview a run for its pixels. Linux distributions that use KDE Plasma typically ship Gwenview, which has been the KDE image app for over 25 years. It&#8217;s a solid, feature-filled and Qt-based tool that and many love and rely on to view, manage and edit images. But development on Gwenview has slowed – and its legacy could be to blame. As GNOME found during efforts to modernise the Evince document viewer, updating ol",
+    "pub_date": "Mon, 07 Sep 2026 22:24:46 +0000",
+    "title_zh": "KDE新推出的Photos应用为Gwenview提供了时尚的替代选择",
+    "summary_zh": "KDE Plasma桌面环境的新Photos应用旨在成为Gwenview的现代替代品。Gwenview作为KDE默认图像查看器已有25年历史，但因其老旧代码库导致性能问题和开发停滞。Photos应用起源于2017年的移动应用，现已在KDE社区支持下完善桌面功能，提供更快的性能、更好的HiDPI支持、自适应界面和标注工具。KDE开发者Nate Graham鼓励用户测试并推动发行版采用此应用，但其长期维护仍需社区持续投入。",
+    "fulltext_zh": "KDE的新Photos应用为Gwenview提供了时尚的替代选择 - OMG! Ubuntu\n\nKDE的新Photos应用是一款面向KDE Plasma的新式（相对而言）图像查看器和管理器，旨在与Gwenview一较高下。\n\n使用KDE Plasma的Linux发行版通常预装Gwenview，它作为KDE图像应用已有超过25年的历史。Gwenview是一款功能丰富、基于Qt的可靠工具，许多用户喜爱并依赖它来查看、管理和编辑图像。\n\n但Gwenview的开发速度已经放缓——其遗留代码可能是罪魁祸首。\n\n正如GNOME在现代化努力中所发现的，更新旧软件往往需要重写和重构过时代码库的大部分内容。与其费力地拆解和改造，通常更容易的做法是重新开始或直接删除大量代码。\n\nGNOME的PDF查看器就是这一努力的成果，其改进和现代方法反过来也为其他现代化项目提供了参考。\n\n在KDE的案例中，Nate Graham提到了Gwenview在处理大型图像库时的性能问题、GPU加速的怪癖，以及如前所述的陈旧代码库，这些问题使得新手难以掌握，更不用说在其基础上进行开发了。\n\nGwenview是KDE桌面环境的中流砥柱。\n\n“近年来，对Gwenview的功能贡献、错误修复和UI改进已经枯竭，”一篇介绍Photos应用的博客文章中写道。“Gwenview的技术架构已经达到了人们愿意为其付出的极限。”\n\nPhotos应用——其用户界面标签为“Photos”——起源于2017年，最初是一款移动应用。随后增加了桌面模式及更多功能。最近，Nate Graham担任CEO的KDE社区赞助了将应用提升至与Gwenview同等水平的努力。\n\n乍一看，Photos应用看起来更简洁、相对直观，并提供以下功能：\n\n- 处理大型照片库时性能更快\n- 更好的HiDPI屏幕支持\n- 适用于移动或桌面的自适应界面\n- 使用标注工具进行注释\n\nNate Graham鼓励用户测试该应用，并邀请基于KDE的Linux发行版切换使用。但要与Gwenview的持久性相媲美，它还需要积极、持续的维护。\n\n如果你想测试它，看看它能否在功能上与Gwenview匹敌，你可以从Flathub获取（如果这是你从Flathub安装的第一个Qt/KDE应用，会拉取KDE运行时），或者通过其他方式安装。"
+  },
+  "5f69e4456b31f937121ad720391cc997": {
+    "id": "5f69e4456b31f937121ad720391cc997",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/ubuntu-amd64v3-iso-downloads",
+    "title_en": "Ubuntu 26.10 daily ISOs now include Amd64-v3 installer",
+    "summary_en": "Ubuntu 26.10 adds an amd64-v3 ISO to its daily builds, letting you to install the Linux distribution with packages optimised for the x86-64-v3 CPUs.\nYou're reading Ubuntu 26.10 daily ISOs now include Amd64-v3 installer, a blog post from OMG! Ubuntu. Do not reproduce elsewhere without permission.",
+    "pub_date": "Mon, 07 Sep 2026 15:51:41 +0000",
+    "title_zh": "Ubuntu 26.10 每日构建 ISO 现已包含 Amd64-v3 安装程序",
+    "summary_zh": "Ubuntu 26.10 的每日构建版本现已包含 amd64-v3 安装程序，允许用户在安装时直接使用针对 CPU 优化的软件包，无需安装后手动配置。此前，Ubuntu 26.04 LTS 仍默认使用标准 amd64 (v1) 基线，但用户可在安装后手动转换。amd64-v3 是较新的 CPU 指令集基线，支持 AVX2、FMA 等特性，可提升计算密集型任务的性能。大多数 2015 年后的 Intel 和 AMD 芯片均兼容。Canonical 尚未宣布 v3 ISO 将成为 26.10 的官方下载，但此举有助于收集测试反馈，为未来可能的基线升级提供参考。",
+    "fulltext_zh": "Ubuntu 26.10 每日构建版本现已包含 amd64-v3 安装程序，让您从一开始就能尝试针对 CPU 优化的软件包，无需安装后进行额外配置。\n\n去年，Ubuntu 开始以可选归档的形式构建 amd64v3 软件包，但 Ubuntu 26.04 LTS 仍默认使用标准 amd64 (v1) 基线（由于过程中出现了一些小问题，这一决定是明智的）。\n\nUbuntu 26.04 LTS 可以在安装后手动转换为 amd64-v3 软件包集，但 Ubuntu 26.10 每日构建版本突然提供内置支持，省去了这一麻烦：它从一开始就引导并安装 v3 优化的软件包。\n\n什么是 Amd64-v3？\n\nAmd64-v3（又称 x86-64-v3）是 CPU 指令集支持的新基线，包括 AVX2、FMA、BMI1/2 等特性，这些特性可提升计算密集型工作负载的性能（但对基本的电子邮件和网页浏览影响不大）。\n\n大多数 2015 年后生产的 Intel 和 AMD 芯片均兼容 v3，但也有一些例外（低端和嵌入式芯片缺乏 AVX2）。运行针对 CPU 优化的 Ubuntu 软件包，可能意味着特定软件能获得更好的体验。\n\n运行以下命令可检查您的 CPU 是否支持 x86-64-v3：\n\n/lib64/ld-linux-x86-64.so.2 --help | grep x86-64\n\n如果不支持，也不必担心；默认 ISO 仍可正常工作（较旧且不支持的 CPU 无法运行 v3 软件包，但 v3 CPU 可以运行 v2 和 v1 软件包）。\n\nRed Hat Enterprise Linux 10 已要求支持 x86-64-v3，而 openSUSE Leap 16 提供 v2 支持，但 Ubuntu 在提高 CPU 基线方面一直较为谨慎。Canonical 决定将 v3 作为可选测试（而非强制更改）的做法受到了欢迎。\n\n不过，Canonical 尚未表示 amd64-v3 ISO 将成为 26.10 的官方下载版本，而随着该版本（代号“Stonking Stingray”）临近发布，本周期内不太可能进行此类切换。\n\n提供替代安装程序无疑是增加 Ubuntu v3 基线体验测试和反馈的务实方式。这些反馈必将为未来可能的切换决策提供参考。\n\n您可以从以下位置下载最新的 Ubuntu 26.10 每日实时 ISO："
+  },
+  "eacc55a66bafb0ae5a92616b6bdd1853": {
+    "id": "eacc55a66bafb0ae5a92616b6bdd1853",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/fedora-beats-windows-11/",
+    "title_en": "A Clanker Pitted Fedora Against Windows 11. Fedora Won, Mostly",
+    "summary_en": "PhoneBuff's automated test found Windows 11 ahead only at launching Cyberpunk 2077.",
+    "pub_date": "Mon, 07 Sep 2026 16:33:37 GMT",
+    "title_zh": "Clanker测试：Fedora对决Windows 11，Fedora多数胜出",
+    "summary_zh": "PhoneBuff使用两台相同的戴尔XPS 13（Intel Core 5 320，8GB内存）分别运行Fedora和Windows 11，通过机器人进行标准化测试。结果显示，在11项计时测试中，Fedora赢得6项，4项持平，Windows仅胜1项（启动《赛博朋克2077》）。Fedora在解压、VS Code测试、创意应用和空闲内存占用上优势明显，而日常应用表现接近。测试者提醒，结果不代表所有Linux发行版，且未包含AI或游戏基准测试。",
+    "fulltext_zh": "一家名为Clanker的公司将Fedora与Windows 11进行了对比测试，结果Fedora大部分胜出。\nPhoneBuff的自动化测试发现，Windows 11仅在启动《赛博朋克2077》时领先。\nPhoneBuff是一家以机器人手对智能手机进行实验室标准化评测而闻名的公司。他们的评测涵盖速度测试、跌落测试和电池测试等多项内容。\n当观众在近期他们对戴尔XPS 13和MacBook Neo进行的性能对比后，开始询问他们是否尝试Linux时，他们做出了回应。\nPhoneBuff团队使用两台相同的戴尔XPS 13（配备Intel Core 5 320和8GB内存），一台运行Windows 11，另一台运行Fedora，在每台机器上运行相同的真实应用和工作流程，并由机器人鼠标和键盘计时。\n测试结束时，Fedora在11项计时测试中赢得6项，4项持平，而Windows 11仅获得1项胜利。\nFedora与Windows 11在相同硬件上的对比\n设置也相同！屏幕亮度均为200尼特，两台笔记本电脑与WiFi点的距离相等，房间温度受控。每项测试重复3至5次，取中位数。\n从完全关机启动时，Windows为23秒，Fedora为24秒，差距极小，难以判定。但重启测试并非如此：Fedora中位数为27秒，而Windows需要61秒。Windows的五次运行在46至68秒之间波动，Fedora则在23至34秒之间。\n最大的差距出现在文件解压方面。解压同一个6GB压缩包，Fedora内置工具用时12秒。在Windows上使用Windows资源管理器则需要57秒，而安装第三方工具后也仅降至17.4秒。\n接下来是可能让微软感到刺痛的结果。运行VS Code时，机器人加载了一个开源白板项目，扫描错误、编译并运行了近1900项测试。Fedora在2分20.5秒内完成，而Windows 11需要3分41.99秒。\n创意应用也呈现相同趋势。DaVinci Resolve导入两个剪辑、对一个进行调色、对另一个进行稳定处理并导出，Fedora用时2分10.9秒，Windows为2分49.9秒。GIMP处理4K图像（使用涂抹、修复和物体移除等工具）时，Fedora用时53.3秒，Windows为60.7秒。\n日常应用大多持平。Chrome在本地托管页面上运行视频、3D模型、地图和图表计算，Fedora用时19.3秒，Windows为19.8秒。\n同一份500页文档在ONLYOFFICE中打开，Fedora用时8.7秒，Windows为9.3秒；OCR处理也由Fedora胜出，36.6秒对39.8秒。\n甚至Blender渲染同一1080p场景也打成平手，44.2秒对43.5秒。\n空闲内存占用是另一个显著差距。闲置一分钟后，Fedora使用了8GB内存的32.9%，而Windows占用了85.2%。视频显示Fedora占用2.27GB，Windows占用6.47GB。\nWindows唯一胜出的是启动《赛博朋克2077》，用时54.3秒，Fedora为57.0秒。但请注意，这是启动时间，而非帧率，PhoneBuff并未运行任何游戏基准测试。\n这些数字意味着什么？\n暂时不要过度解读。这里没有AI工作负载，如前所述，也没有游戏基准测试。\nPhoneBuff的主持人在视频开头表示，Fedora是众多Linux发行版之一，“这不一定代表所有可能的Linux体验”。不同的发行版搭配不同的桌面环境，肯定会改变我们看到的某些差距。\n内存差距也带有星号。Windows占用85.2%是因为默认运行了一些戴尔实用程序、Defender（MsMpEng）和Edge WebView2，因此6.47GB并非仅由Windows造成。Fedora只是初始负担更少。\n总结来说，重负载任务由Fedora胜出，有时领先数分钟；日常应用持平；空闲内存占用方面，Linux约为三分之一，而Windows为85%。\n这就是全部11项测试所能说明的，请将它们视为数据点，而非最终结论。\n喜欢这篇更新吗？支持独立的Linux新闻。\nIt's FOSS在过去14年里一直帮助人们使用Linux。"
+  },
+  "d4d7341b8e97f427ce60ebfb27c0ca1f": {
+    "id": "d4d7341b8e97f427ce60ebfb27c0ca1f",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/ikey-doherty-barney/",
+    "title_en": "Ikey Doherty vs Omarchy: Why He’s Building Barney Instead of Another Distro",
+    "summary_en": "Ikey Doherty, the creator of Solus and AerynOS, is back with Barney, a Rust tool that builds Linux distros from source. So that you can easily create your own Omarchy.",
+    "pub_date": "Mon, 07 Sep 2026 14:23:05 GMT",
+    "title_zh": "Ikey Doherty 与 Omarchy：为何他构建 Barney 而非另一个发行版",
+    "summary_zh": "Solus 和 AerynOS 的创造者 Ikey Doherty 携 Barney 回归，这是一个用 Rust 编写的工具，可从源代码构建 Linux 发行版，旨在帮助用户轻松创建自己的 Omarchy。Doherty 批评 Omarchy 的融资方式，认为其资金荒谬，并承诺用更少的资源做得更好。Barney 并非发行版，而是一个展示发行版构建过程的工具，所有内容从源代码构建，输出按内容缓存，布局无状态。项目名称源于他儿子的名字，目前已在开发中，并发布了第一集视频。作为爱尔兰游民，Doherty 对 DHH 的言论表示强烈谴责，并宣布不再购买戴尔笔记本电脑。",
+    "fulltext_zh": "Ikey Doherty 与 Omarchy：为何他构建 Barney 而非另一个发行版\n\nIkey Doherty，Solus 和 AerynOS 的创造者，带着 Barney 回归，这是一个用 Rust 编写的工具，可从源代码构建 Linux 发行版，以便你轻松创建自己的 Omarchy。\n\n他退隐后复出，而 Omarchy 的融资正是原因。\n\n他称 DHH 发行版背后的资金荒谬，并承诺用更少的资源做得更好，即通过一个基于 Rust 的工具从源代码构建 Linux 发行版。\n\n自 8 月推出以来，Omarchy 的认捐金额已超过 1300 万美元，当时包括 Michael Dell 在内的八位科技高管每人投入了 100 万美元。这一热潮也引来了一些反对声音，最近一次是 1Password 承诺捐赠 30 万美元，而其员工表示反对。Ikey 的视频发布一天后，该基金会宣布从 Meta、Anthropic、OpenAI 和 Fireworks 获得 195 万美元的 AI 代币。\n\n不是发行版，而是一种立场\n\nBarney 是一个旨在帮助你构建 Linux 发行版的工具；该仓库将其描述为“又一个该死的构建 Linux 发行版的工具”，并指出交付发行版并非预期目标。\n\nIkey 计划展示发行版是如何构建的，而不是发布他所称的“又一个壁纸重制版”发行版，他将在 YouTube 频道上展示这一过程。\n\n所有内容都从源代码构建，输出会根据生成它们的来源进行缓存。更改依赖项，则基于它构建的任何内容都会重新构建。布局保持无状态，Doherty 表示这一概念是他帮助在 Intel 的 Clear Linux 团队中开创的，后来在 Solus 和 AerynOS 中推广（AerynOS 是 Solus 的继任者）。\n\n构建在容器中运行，结果按内容存储，因此不同包中的相同文件只存储一次。计划甚至包括从头重建工具链。\n\n所有内容都用 Rust 编写，并以 MPL-2.0 许可证发布。项目名称本身对他个人意义重大，因为 Barney 是他儿子的名字。\n\n工作已经开始。该系列的第一集已经上线，标题为“第 0 集：准备就绪”。要访问幕后内容，Ikey 已设立了 Patreon，人们可以直接支持他。\n\n一位爱尔兰游民的回应\n\n不要以为 Ikey 没有资格谈论此事。\n\nOmarchy 的创造者 David Heinemeier Hansson（更广为人知的名字是 DHH）曾写过一篇文章，将丹麦的狼群与在哥本哈根公园露营的罗姆人进行比较。\n\n自然，作为世代面临歧视的爱尔兰游民，Ikey 必然会做出反应。在社交媒体上分享他的视频（开头链接的那个）时，他称 DHH 的言论“恶心”，并表示资金和观点共同将他拖回了这场游戏。\n\n他的笔记本电脑购买计划\n\nMichael Dell 是发布时的支持者之一，Ikey 已将该品牌列入他的回避名单，同时点名批评 Omarchy：\n\n“说实话，在 Michael Dell 表示支持 DHH 之后，我不会再买戴尔笔记本电脑了。暂且不提它又是一个壁纸重制版发行版……我无法容忍 DHH 的言论（在多个话题上）。作为爱尔兰游民，我强烈谴责他关于游牧民族的言论。作为前 Linux 发行版开发者，即使你付钱给我，我也不会碰他的东西。”\n\n只有时间能证明一切。目前，我的看法是这个问题没有抓住要点。Barney 并不是要成为每个人都安装的发行版。按照 Doherty 自己的说法，成功在于在业界的注视下展示一个真正的发行版是如何构建的。\n\n你已经知道他以前曾放弃过大型项目。Solus 和 AerynOS 都在没有他的情况下继续发展。Barney 当然也可能成为下一个。\n\n让我印象深刻的是这一切的时机。另一位 Clear Linux 成员 Auke Kok 正在从头构建一个系统，而他们两人都没有等待某个基金会来启动。\n\n我内心的乐观主义者说，如果他们两人合作，他们可以交付一些东西，向 Linux 生态系统展示，向一个项目投入荒谬的资金并不是构建优秀系统的唯一途径。\n\n喜欢这篇更新吗？支持独立的 Linux 新闻报道。\n\nIt's FOSS 一直在帮助人们使用……"
+  },
+  "98fcfbd21fa9b6fdb8acdae708ac497a": {
+    "id": "98fcfbd21fa9b6fdb8acdae708ac497a",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/nitter-returns-after-legal-troubles/",
+    "title_en": "Elom Musk's X Tried to Kill Nitter. The Project Just Said It’s Coming Back",
+    "summary_en": "Two weeks after X Corp's legal letter forced the project offline, Nitter says it will continue.",
+    "pub_date": "Mon, 07 Sep 2026 11:33:11 GMT",
+    "title_zh": "埃隆·马斯克的X试图扼杀Nitter，项目方宣布即将回归",
+    "summary_zh": "开源前端项目Nitter在收到X Corp的律师函后短暂下线，但近日其GitHub仓库已解除只读模式，并宣布项目将继续运营。Nitter是一个无需注册账号即可阅读X（原Twitter）帖子的前端，X指控其非法使用和规避API。此前X曾通过移除访客功能等方式施压，但Nitter均找到解决方案。项目方表示将很快公布更多细节，但未透露法律建议的具体内容。社区对此表示关注，并希望开源社区能支持此类项目。",
+    "fulltext_zh": "埃隆·马斯克的X试图扼杀Nitter，项目方宣布即将回归\n\n在X Corp发出法律信函迫使该项目下线两周后，Nitter表示将继续运营。\n\n，这个无需注册账号即可阅读X帖子的开源前端，目前还不会消失。\n\n在X Corp的律师要求永久关闭该项目数周后，该项目的GitHub仓库已解除只读模式，并附上以下声明：\n\n遵循法律建议，Nitter项目将继续运营。更多细节将很快公布。\n\n目前，仓库和主页均显示相同信息，后者进一步表示Nitter的主要实例和其他实例将很快恢复上线。\n\n预计在未来几天内会发布正式公告。\n\nX Corp的律师此前发出信函，要求永久关闭Nitter实例和项目仓库，截止日期为美国东部时间8月25日下午5点。随后，该仓库被归档并标记为只读，nitter.net的内容被替换为简短通知（此后已更新），热门实例也停止了运营。\n\nTechCrunch获得了这封信函，并报道称X指控Nitter“非法使用和规避X的应用程序编程接口（API）及相关数据”。X声称有证据表明Nitter抓取了X的数据，并访问了X账户和会话令牌，违反了X的《德克萨斯州有害访问计算机法》。\n\n截至目前，X尚未公开评论此次关闭或逆转。\n\n这并不是Nitter第一次被宣告死亡。2024年初，X移除了该项目所依赖的访客账户功能，导致项目负责人Zedeus宣布项目死亡。后来，该项目找到了变通方法，并在2025年某个时候回归。\n\nNitter的灵感来源——一个注重隐私的YouTube前端，也曾与大科技公司的律师发生冲突，于2023年6月面临YouTube发出的七天关闭要求。该项目一直坚持运营，该要求最终不了了之。\n\n这不禁让人思考，此类举动是否只是为了胁迫开源项目屈服，而非执行规则。对这些公司而言，只要有丝毫理由，任何项目都值得提起诉讼。\n\n目前的情况是，Nitter表示法律建议允许其继续运营，但并未透露该建议的具体内容，也未说明实例未来将如何运作。正式公告将为我们带来这些答案。\n\n在我看来，X在2024年试图通过关闭这些项目所依赖的访问权限来扼杀它们，但没有成功。如今，在2026年，他们又试图通过派遣律师来达到目的。\n\n鉴于X领导层的破坏性行为，我感觉他们不会轻易放弃，事情可能会升级。届时，我希望开源社区能站在Nitter这样的项目背后。\n\n喜欢这次更新吗？支持独立的Linux新闻报道。\n\nIt's FOSS在过去14年里一直帮助人们使用Linux。请帮助我们保持独立于大科技公司。成为Plus会员，享受无广告阅读，并获得5本电子书。\n\n一次付费，永久享受\n\n任意金额，无需承诺\n\n一个热爱开源软件、定制PC组装、赛车运动并探索这个世界无限可能的极客。\n\n一位Clanker将Fedora与Windows 11进行对比，Fedora基本获胜。\n\nIkey Doherty与Omarchy：他为何构建Barney而非另一个发行版。\n\n瑞士联邦政府正在用Debian替换3000台电脑上的微软系统。\n\n1Password刚刚向DHH的Omarchy承诺捐赠30万美元，其员工并不高兴。\n\n好消息！CERN正在将超过2200个控制系统迁移到Debian 13。\n\n成为更好的Linux用户\n\n通过FOSS每周通讯，您可以学习有用的Linux技巧、发现应用程序、探索新的发行版，并随时了解Linux世界的最新动态。\n\n太棒了！您已成功注册。\n\n欢迎回来！您已成功登录。\n\n您已成功订阅It's FOSS。\n\n您的链接已过期。\n\n成功！请检查您的电子邮件以获取魔法登录链接。\n\n成功！您的账单信息已"
+  },
+  "2fa2e41a53b275b0b844ff1ad2ed0d41": {
+    "id": "2fa2e41a53b275b0b844ff1ad2ed0d41",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/FreeBSD-14.5-RELEASE",
+    "title_en": "FreeBSD 14.5 Released With Hardware Support Improvements, Many Bug & Security Fixes",
+    "summary_en": "For those that haven't yet made the move to FreeBSD 15 with still relying on FreeBSD 14 in production, out today is FreeBSD 14.5-RELEASE...",
+    "pub_date": "Mon, 07 Sep 2026 20:35:33 -0400",
+    "title_zh": "FreeBSD 14.5 发布：硬件支持改进，大量 Bug 与安全修复",
+    "summary_zh": "FreeBSD 14.5-RELEASE 正式发布，为仍在使用 FreeBSD 14 的生产环境用户提供了大量向后移植的 Bug 修复、数十项安全更新，以及硬件驱动支持改进。该版本修复了从远程代码执行到拒绝服务攻击、内核栈问题、释放后使用漏洞等多种安全问题，其中许多是通过 AI/LLM 工具发现的。此外，FreeBSD 14.5 更新了 LLVM 21.1.8、ncurses 6.6、OpenSSL 3.0.21、XZ 5.8.3 等外部软件。硬件方面，ACPI 驱动改进了对配备双 GPU 的 Apple Mac 硬件的电源管理，AHCI 驱动支持更多 SATA 控制器，ASMC 驱动放弃了对 32 位 Intel Mac 的支持。",
+    "fulltext_zh": "FreeBSD 14.5 发布：硬件支持改进，大量 Bug 与安全修复 - Phoronix\n\nFreeBSD 14.5 发布：硬件支持改进，大量 Bug 与安全修复\n\n2026 年 9 月 7 日晚上 8:35（美国东部时间）\n\n对于那些尚未迁移到更新版本、仍在生产环境中依赖 FreeBSD 14 的用户，今天发布了 FreeBSD 14.5-RELEASE。\n\nFreeBSD 14.5 向后移植了各种 Bug 修复，解决了数十个安全问题，并在此稳定版本基础上引入了部分硬件驱动支持改进和其他调整。\n\nFreeBSD 14.5 解决了各种安全公告，涵盖远程代码执行、拒绝服务攻击向量、内核栈问题、释放后使用漏洞等。与 Linux 和其他开源项目一样，近期许多针对 FreeBSD 的安全公告是通过 AI/LLM 工具发现的。\n\nFreeBSD 14.5 还引入了部分更新的外部软件，如 LLVM 21.1.8、ncurses 6.6、OpenSSL 3.0.21、XZ 5.8.3 等。\n\n在硬件方面，ACPI 驱动现在能更好地处理配备双 GPU 的 Apple Mac 硬件的电源管理；AHCI 驱动支持更多 SATA 控制器；ASMC 驱动放弃了对基于 32 位 Intel 的 Mac 的支持。\n\nFreeBSD 14.5 的下载和更多详细信息可在以下页面获取：\n\nNetBSD 9.5 发布，为该系列画上句号\nFreeBSD 14.5-RC1 发布，包含多项安全修复\nFreeBSD 14.5 Beta 1 发布，包含各种向后移植和安全修复\nNetBSD 11.0 发布，支持 RISC-V，增强 Linux 系统调用兼容性\nFreeBSD 内核仍含少量 GPL 代码，而其基础用户空间已无 GPL\nFreeBSD 开发新的 NTSYNC 驱动，加速 Windows NT 同步原语\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。他还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nCERN 长期使用 RHEL 后，将工业计算机迁移至 Debian\nAsahi Linux 现已正式支持 Apple M3 Mac——但有限制\n前 Intel 工程师、Clear Linux 架构师之一开始打造新发行版\nServo 0.5 发布：DuckDuckGo 正常渲染，文本渲染速度提升高达 10 倍\nNetworkManager 通过欺骗 AI 代理添加金丝雀来执行 AI 政策\nIkey Doherty 计划展示如何“正确”构建现代 Linux 发行版\nWinBtrfs 1.10 发布：两年改进，支持 Windows 上的 Btrfs\nFirefox 155 发布：通过 Happy Eyeballs v3 加快页面加载，HTTP/3 支持 QUIC v2\n\n在享受无广告浏览的同时，\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "66f9ab253616b1edec9af4285d64cebe": {
+    "id": "66f9ab253616b1edec9af4285d64cebe",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/x86-CPU-With-APX-x86S",
+    "title_en": "Mysterious x86 CPU Already Has APX, x86S Where Intel Left Off For Legacy-Free x86",
+    "summary_en": "The mystery deepens around an x86 implementation from a corporate entity other than AMD and Intel and has been making some very intriguing changes for coming from a seeming start-up. Beyond 16 tile and 32 tile AMX implementations that already surpass Intel's current Advanced Matrix Extensions (AMX) capabilities in shipping Xeon CPUs, new disclosures were made today concerning Advanced Performance Extensions (APX), Flexible Return and Event Delivery (FRED), and even x86S as the effort that Intel ",
+    "pub_date": "Mon, 07 Sep 2026 15:54:23 -0400",
+    "title_zh": "神秘x86 CPU已具备APX、x86S，英特尔在无传统x86方向上止步之处",
+    "summary_zh": "一家非AMD、非英特尔的实体企业正在开发一种神秘的x86 CPU实现，其已超越英特尔当前AMX能力，支持16和32 tile AMX，并披露了APX、FRED及x86S等新特性。该实现仅支持PM64和PML5，已大规模使用超过一年。英特尔曾于2024年放弃x86S规范，但该神秘组织继续推进。业界猜测可能涉及兆芯、海光或初创公司RosaicLabs。",
+    "fulltext_zh": "神秘x86 CPU已具备APX、x86S，英特尔在无传统x86方向上止步之处 - Phoronix\n\n神秘x86 CPU已具备APX、x86S，英特尔在无传统x86方向上止步之处\n\n2026年9月7日下午3:54（美国东部时间）\n\n围绕一家非AMD和英特尔的企业实体所实现的x86实现，谜团愈发加深，该实现已带来一些非常引人入胜的变化，尽管它看似来自一家初创公司。除了已经超越英特尔当前在售Xeon CPU中AMX能力的16 tile和32 tile AMX实现外，今天还披露了关于高级性能扩展（APX）、灵活返回与事件传递（FRED）以及x86S的新信息，而x86S正是英特尔此前为清理x86包袱而停止推进的工作。\n\n8月底，这家未知公司发布了最新的x86咨询，公开信息由x86专家Christian Ludloff代为传达。Christian Ludloff曾在谷歌、AMD、TI等公司工作多年，作为x86架构专家，并以其sandpile.org x86 CPU信息网站而闻名。\n\n今天，Ludloff转达的最新消息出现在Linux内核邮件列表中，内容极其引人注目……FRED，这家未知公司全面采用。今天消息的一些关键要点：\n\n“我被要求为一款仅支持PM64和PML5、并配备FRED和APX的x86实现记录x86行为，该实现已大规模使用超过一年。\n\n经过二十多年的x86-64发展，传统模式（Legacy Mode）和兼容模式（Compatibility Mode）已完成了它们的使命；是时候抛弃它们带来的负担了。\n\n五年前，英特尔发布了首个FRED规范，相关尘埃在2023年底和2024年初落定；英特尔刚刚出货了首批支持FRED的产品，AMD预计也将很快跟进。FRED对灵活返回和事件传递的清理是x86演进中的一个关键里程碑。\n\n三年前，英特尔发布了首个APX规范和首个x86S规范。APX规范的尘埃在2024年底和2025年初落定；英特尔和AMD预计将在不久的将来最终出货其产品。另一方面，对于x86S规范，英特尔在2024年中放弃了。这被证明为时过早。其他人继续了这项工作。”\n\n消息还继续指出了该未知组织对x86_64所做的根本性改变。简而言之，对他们来说，这是一个仅支持PM64和PML5的世界。帖子总结道：\n\n“将你的复杂性迁移到x86软件模拟中。\n拒绝x86的‘货物崇拜’。并收好你的胶带。”\n\n这个新的x86_64 CPU实现背后是谁，仍然是个谜。如果是兆芯或海光这样的公司，那将是工程上非常重大的飞跃。可能性之一是RosaicLabs，这家初创公司据报道获得了英特尔的Atom处理器设计访问权。如果他们能在基于Atom的设计上实现16和32 tile AMX、APX、FRED、x86S以及其他工程壮举，那将非常大胆。这个x86谜团接下来会带来什么，值得关注。\n\nNouveau为HDMI 2.1 DSC做准备，AMD HDMI FreeSync修复进入Linux 7.4\nInputPlumber 0.79增加对更多掌机的支持\nLinux获得华硕ROG NVMe硬盘盒RGB灯效的反向工程驱动\nLinux 7.3为Moxa PCIe多端口串口板引入8250_mxpcie驱动\nRTL8723BS驱动继续主导Linux 7.3的staging区域活动\n来自英特尔或AMD以外实体的另一份x86咨询\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动及其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nCERN在长期作为RHEL机构后，将工业计算机迁移至Debian\nAsahi Linux现在正式支持App"
+  },
+  "69e1c99bfa0b0105f18e0b5f45ee1ae5": {
+    "id": "69e1c99bfa0b0105f18e0b5f45ee1ae5",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Ubuntu-26.10-amd64v3-Daily",
+    "title_en": "Ubuntu 26.10 amd64v3 Daily ISOs Now Being Published",
+    "summary_en": "As an interesting development for Ubuntu 26.10, the daily ISOs of the \"Stonking Stingray\" now include amd64v3 images...",
+    "pub_date": "Mon, 07 Sep 2026 09:36:20 -0400",
+    "title_zh": "Ubuntu 26.10 amd64v3 每日 ISO 现已发布",
+    "summary_zh": "Ubuntu 26.10 \"Stonking Stingray\" 的每日 ISO 从 9 月 4 日起新增了 amd64v3 架构版本，与通用 amd64、arm64 和 riscv64 镜像一同提供。amd64v3 微架构级别默认支持 AVX/AVX2、FMA、BMI2、MOVBE 等新指令，可提升性能。此前用户需先安装通用版再切换至 amd64v3 包，现在通过专用 ISO 可直接安装，体验更流畅。这标志着 Canonical 可能正式提升 amd64v3 在 Ubuntu 26.10 中的地位。",
+    "fulltext_zh": "Ubuntu 26.10 amd64v3 每日 ISO 现已发布 - Phoronix\n\nUbuntu 26.10 amd64v3 每日 ISO 现已发布\n发布于 2026 年 9 月 7 日上午 09:36（美国东部时间）\n\n作为 Ubuntu 26.10 的一个有趣进展，\"Stonking Stingray\" 的每日 ISO 现在包含了 amd64v3 架构版本。\n\n从 9 月 4 日开始，每日 ISO 除了通用的 amd64 镜像以及 arm64 和 riscv64 ISO 之外，还新增了 amd64v3 ISO。\n\n与之前的 Ubuntu Linux 版本一样，Canonical 继续在发行版中试验 amd64v3 软件包构建。x86_64-v3 微架构特性级别允许默认启用 AVX/AVX2，以及 FMA、BMI2、MOVBE 和其他更新的 CPU ISA 特性，从而获得更好的性能。Red Hat Enterprise Linux 10 是已经强制要求 x86_64-v3 的 Linux 发行版之一，这大致对应过去 13 年以上的 CPU，从 Intel Haswell 到 AMD Excavator 及更新型号。\n\n在 Ubuntu 的 amd64v3 软件包实验中，它在归档中是一个独立的架构，而普通的 amd64 \"x86_64\" 软件包仍然为使用 2013 年之前系统的用户提供。\n\n作为 Canonical 可能在 Ubuntu 26.10 中提升 amd64v3 地位的迹象，amd64v3 ISO 现在已作为每日镜像流程的一部分进行构建。此前，amd64v3 软件包必须通过先安装通用的 amd64 ISO/软件包，然后调整 APT 并升级到 amd64v3 软件包来部署。有了 amd64v3 ISO，体验将更加简化。\n\n看看 amd64v3 在 Ubuntu 26.10 中正式会带来什么，将会很有趣。我很快将进行一些全新的 Ubuntu amd64 与 amd64v3 基准测试。对于感兴趣的用户，最新的 Ubuntu 26.10 每日 live ISO 可以在以下位置找到：\n\nUbuntu 26.10 Snapshot 3 月度 ISO 发布供测试\nMir 2.29 发布，附带更多 Wayland 协议\nUbuntu 26.04.1 LTS 发布，包含首批修复集合\nUbuntu Touch 正在向 Ubuntu 26.04 迈进，Vulkan 与应用更新\nUbuntu 将为 Ubuntu 26.04 LTS 提供虚拟化 HWE 栈\nUbuntu Touch 24.04-2.0 发布，支持刘海屏和圆角\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：\n\nCERN 在长期作为 RHEL 机构后，将工业计算机迁移至 Debian\nAsahi Linux 现已正式支持 Apple M3 Mac——但有一些注意事项\n前英特尔工程师、Clear Linux 架构师之一正在创建新的发行版\nServo 0.5 发布：DuckDuckGo 正确渲染，文本渲染速度提升高达 10 倍\nNetworkManager 通过诱骗 AI 代理添加 Canary 来执行 AI 政策\nIkey Doherty 计划展示如何\"正确地\"构建现代 Linux 发行版\nWinBtrfs 1.10 发布，包含两年多的 Windows 上 Btrfs 改进\nFirefox 155 发布，通过 Happy Eyeballs v3 加快页面加载，HTTP/3 支持 QUIC v2\n\n在享受无广告浏览的同时，\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "640535d69983c45c3d8eb61763ac3b41": {
+    "id": "640535d69983c45c3d8eb61763ac3b41",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-Preps-AMD-BTB-CTX",
+    "title_en": "Linux Preps For New AMD Zen 6 BTB CTX Isolation Security Feature",
+    "summary_en": "A recently posted Linux kernel patch has revealed a new security improvement with Zen 6 processors...",
+    "pub_date": "Mon, 07 Sep 2026 07:55:33 -0400",
+    "title_zh": "Linux为AMD Zen 6新增BTB CTX隔离安全特性做准备",
+    "summary_zh": "近日发布的Linux内核补丁揭示了AMD Zen 6处理器的一项新安全改进，即分支目标缓冲（BTB）保护，用于隔离不同上下文（用户/内核、客户/主机）。该补丁由AMD Linux工程师Borislav Petkov提交，指出Zen 6的BTB保护使得SafeRET缓解措施不再必要，但用户/用户和客户/客户攻击向量仍需通过Spectre v2缓解设置中的IBPB来处理。补丁已合入tip/tip.git的x86/bugs分支，预计将进入Linux v7.4内核周期。目前关于BTB CTX隔离的更多细节尚未公开。",
+    "fulltext_zh": "Linux为AMD Zen 6新增BTB CTX隔离安全特性做准备\n\nLinux为AMD Zen 6新增BTB CTX隔离安全特性\n发布于2026年9月7日美国东部时间上午7:55。\n\n近日发布的一个Linux内核补丁揭示了一项新的安全改进，该改进针对的是影响AMD Zen 1至Zen 4代处理器的投机性返回栈溢出（SRSO）漏洞。随着Zen 6的推出，引入了分支目标缓冲（BTB）保护，用于隔离不同上下文。\n\nAMD Linux工程师Borislav Petkov在内核补丁中解释说，Zen 6带来了BTB保护，以隔离不同的用户/内核和客户/主机上下文：\n\n“Zen 6具有BTB保护，可隔离不同上下文（用户/内核、客户/主机）。这使得SafeRET缓解措施变得不必要，但留下了用户/用户和客户/客户攻击向量，其保护由Spectre v2缓解设置中的IBPB（上下文切换时执行）来处理。\n检测该设置并用新的缓解字符串报告。”\n\n该补丁已合入tip/tip.git的x86/bugs Git分支。预计它将提交给Linux v7.4内核周期，除非它最终被作为当前Linux v7.3周期的“修复”部分被采纳。除了这个内核补丁，我还没有看到关于分支目标缓冲上下文“BTB CTX”隔离或AMD Zen 6 CPU其他安全更改的更多信息。\n\nAMD致力于“将Rust深入GPU栈”\nLemonade 11.9本地AI服务器发布，带来令人兴奋的AMD ROCm HRX后端\nLinux对Zen 6客户端CPPC的更改——硬编码默认值将低功耗核心置于0.47倍\nAMD更新UALink补丁，为Helios上的UALoE准备Linux内核\n新Linux补丁调整AMD Ryzen Zen 6以优化性能和功耗\n将AMD ROCm引入FreeBSD的挑战\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动及其他主题的状态。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他。\n\nCERN在长期作为RHEL机构后，将工业计算机过渡到Debian\nAsahi Linux现已正式支持Apple M3 Mac——但有一些注意事项\n前英特尔工程师、Clear Linux架构师之一正在创建新发行版\nServo 0.5发布：DuckDuckGo正确渲染，文本渲染速度提升高达10倍\nNetworkManager通过诱骗AI代理添加金丝雀来执行AI政策\nIkey Doherty计划展示如何“正确”构建现代Linux发行版\nWinBtrfs 1.10发布，包含两年来的Btrfs Windows改进\nFirefox 155发布，通过Happy Eyeballs v3加快页面加载，HTTP/3支持QUIC v2\n\n在享受无广告浏览的同时，\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "de4f72471e2761c35ffd8ed3a2d7576d": {
+    "id": "de4f72471e2761c35ffd8ed3a2d7576d",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-DRM-Misc-Next-1",
+    "title_en": "Nouveau Preparations For HDMI 2.1 DSC, AMD HDMI FreeSync Fixes For Linux 7.4",
+    "summary_en": "Last week's set of DRM-Misc-Next changes submitted to DRM-Next with targeting the upcoming Linux 7.4 kernel cycle features HDMI 2.1 related work for both the AMDGPU kernel driver as well as the Nouveau open-source NVIDIA driver...",
+    "pub_date": "Mon, 07 Sep 2026 06:48:48 -0400",
+    "title_zh": "Nouveau 为 HDMI 2.1 DSC 做准备，AMD HDMI FreeSync 修复将进入 Linux 7.4",
+    "summary_zh": "上周提交给 DRM-Next 的 DRM-Misc-Next 变更集包含了针对即将到来的 Linux 7.4 内核周期的 HDMI 2.1 相关工作，涉及 AMDGPU 内核驱动和 Nouveau 开源 NVIDIA 驱动。Nouveau 方面，为 Blackwell GPU 支持 2.147 GHz 像素时钟，为 HDMI 2.1 DSC 做准备，并默认启用原子模式设置。AMDGPU 方面，修复了 DRM EDID 解析器对 AMD VSDB FreeSync 功能的处理，以更好地检测某些显示器制造商的 VRR 能力。",
+    "fulltext_zh": "上周提交给 DRM-Next 的 DRM-Misc-Next 变更集包含了针对即将到来的 Linux 7.4 内核周期的 HDMI 2.1 相关工作，涉及 AMDGPU 内核驱动以及 Nouveau 开源 NVIDIA 驱动。\n\n作为上周 DRM-Misc-Next 拉取请求的一部分提交的 Nouveau 变更包括为 Blackwell GPU 支持 2.147 GHz 像素时钟。这与 Nouveau 上最近其他与显示相关的修复一起，这些修复以纯修复的形式进入了 Linux 7.3。Nouveau 需要为 Blackwell GPU 支持 2.147 GHz 及更高的像素时钟，以为 HDMI 2.1 显示流压缩（DSC）支持做准备。目前，Nouveau 未压缩的 HDMI FRL 仅能达到约 1.78 GHz，但一旦 DSC 完全启用，将达到更高的限制。Nouveau 的 DSC 支持是否能及时为 Linux 7.4 内核周期做好准备，目前仍有待观察。\n\n此拉取请求中另一个值得注意的变化是最终默认启用 Nouveau 的原子模式设置。很高兴看到这项工作终于完成，并赶上了其他长期默认使用原子模式设置的 Linux DRM 驱动。\n\nDRM-Misc-Next 拉取请求还包含一些在 AMDGPU 方面值得一提的内容。有一些 DRM EDID 解析器修复，用于处理 AMD VSDB FreeSync 功能，因为一些显示器制造商仅在 AMD 供应商特定数据块（VSDB）中宣传其可变刷新率（VRR）能力。目前，通用的 Linux DRM EDID 解析器无法处理某些版本的 AMD VSDB，这将在 Linux 7.4 中得到解决，以更好地检测 VRR 能力。\n\n关于这些针对 Linux 7.4 的最新 Linux DRM 驱动功能变更的更多详细信息，请参阅此 drm-misc-next 拉取请求。"
+  },
+  "ccd903e502798fad4b068c10d8bba597": {
+    "id": "ccd903e502798fad4b068c10d8bba597",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/tails-7-10-anonymous-os-released-with-improved-data-loss-protection/",
+    "title_en": "Tails 7.10 Anonymous OS Released with Improved Data-Loss Protection",
+    "summary_en": "Tails 7.10 improves data-loss protection alongside security updates, bug fixes, and usability enhancements for the privacy-focused operating system.\nThe post Tails 7.10 Anonymous OS Released with Improved Data-Loss Protection appeared first on Linux Today.",
+    "pub_date": "Mon, 07 Sep 2026 07:15:43 +0000",
+    "title_zh": "Tails 7.10匿名操作系统发布，增强数据丢失保护",
+    "summary_zh": "Tails 7.10版本已发布，该版本针对注重隐私的操作系统进行了改进，重点增强了数据丢失保护功能，同时包含安全更新、错误修复和可用性提升。此次更新旨在为用户提供更安全的匿名上网体验，减少数据意外丢失的风险，并优化整体系统稳定性和用户体验。",
+    "fulltext_zh": "Tails 7.10在提供安全更新、错误修复和可用性增强的同时，改进了数据丢失保护功能，为这款注重隐私的操作系统带来更完善的体验。\n\n该文章首发于Linux Today。"
+  },
+  "6b3cfa4d1a506e43d3662d95632735fa": {
+    "id": "6b3cfa4d1a506e43d3662d95632735fa",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/codeberg-git-hosting-platform-bans-projects-mostly-written-by-generative-ai/",
+    "title_en": "Codeberg Git Hosting Platform Bans Projects Mostly Written by Generative AI",
+    "summary_en": "Codeberg bans projects primarily written by generative AI, citing concerns over limited resources, maintainability, and the burden placed on its community.\nThe post Codeberg Git Hosting Platform Bans Projects Mostly Written by Generative AI appeared first on Linux Today.",
+    "pub_date": "Mon, 07 Sep 2026 07:13:42 +0000",
+    "title_zh": "Codeberg Git托管平台禁止主要由生成式AI编写的项目",
+    "summary_zh": "Codeberg宣布禁止托管主要由生成式AI编写的项目，理由是这些项目消耗有限资源、难以维护，并给社区带来额外负担。该政策旨在保护平台资源，确保项目质量，并减轻维护者和社区的压力。此决定引发了关于AI在开源社区中角色的讨论。",
+    "fulltext_zh": "Codeberg禁止主要由生成式AI编写的项目，理由是这些项目消耗有限资源、难以维护，并给社区带来负担。\n\n该消息最初发布于Linux Today。"
+  },
+  "37e4235136221a0e9ad9b9f366b6d429": {
+    "id": "37e4235136221a0e9ad9b9f366b6d429",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/nextcloud-names-christian-fu-muller-as-ai-team-lead/",
+    "title_en": "Nextcloud Names Christian Fu Müller as AI Team Lead",
+    "summary_en": "Nextcloud names Christian Fu Müller as its new AI Team Lead, strengthening the company’s focus on artificial intelligence and open-source AI development.\nThe post Nextcloud Names Christian Fu Müller as AI Team Lead appeared first on Linux Today.",
+    "pub_date": "Mon, 07 Sep 2026 07:12:28 +0000",
+    "title_zh": "Nextcloud 任命 Christian Fu Müller 为 AI 团队负责人",
+    "summary_zh": "Nextcloud 宣布任命 Christian Fu Müller 为新的 AI 团队负责人，此举强化了该公司在人工智能和开源 AI 开发方面的战略重点。该任命体现了 Nextcloud 对推动开源 AI 技术发展的承诺。",
+    "fulltext_zh": "Nextcloud 任命 Christian Fu Müller 为新的 AI 团队负责人，此举强化了该公司对人工智能和开源 AI 开发的关注。\n\n该消息首发于 Linux Today。"
+  },
+  "2bf0579f2cbb78ba7e1404fe41e2f797": {
+    "id": "2bf0579f2cbb78ba7e1404fe41e2f797",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/mozilla-firefox-154-enters-public-beta-testing-heres-what-to-expect/",
+    "title_en": "Mozilla Firefox 154 Enters Public Beta Testing, Here’s What to Expect",
+    "summary_en": "Mozilla Firefox 154 enters public beta testing with new features, browser improvements, and changes ahead of its upcoming stable release.\nThe post Mozilla Firefox 154 Enters Public Beta Testing, Here’s What to Expect appeared first on Linux Today.",
+    "pub_date": "Mon, 07 Sep 2026 07:11:26 +0000",
+    "title_zh": "Mozilla Firefox 154 进入公开测试阶段，期待新特性",
+    "summary_zh": "Mozilla Firefox 154 已进入公开测试阶段，为用户带来一系列新功能、浏览器改进和变更。此次更新预计将在稳定版发布前进行充分测试，旨在提升浏览体验和性能。具体包括界面优化、安全增强以及开发者工具升级等。用户可通过测试版提前体验这些变化，并反馈问题以帮助完善最终版本。",
+    "fulltext_zh": "Mozilla Firefox 154 已进入公开测试阶段，带来了新功能、浏览器改进和变更，为即将到来的稳定版发布做准备。\n\n该文章最初发布于 Linux Today。"
+  },
+  "436b9d18e8158c2d89a77a0a3d610d64": {
+    "id": "436b9d18e8158c2d89a77a0a3d610d64",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/cosmic-1-4-desktop-environment-introduces-new-default-sound-theme/",
+    "title_en": "COSMIC 1.4 Desktop Environment Introduces New Default Sound Theme",
+    "summary_en": "COSMIC 1.4 introduces a new default sound theme, bringing a refreshed audio identity alongside additional desktop improvements and refinements.\nThe post COSMIC 1.4 Desktop Environment Introduces New Default Sound Theme appeared first on Linux Today.",
+    "pub_date": "Mon, 07 Sep 2026 07:09:43 +0000",
+    "title_zh": "COSMIC 1.4 桌面环境引入新的默认声音主题",
+    "summary_zh": "COSMIC 1.4 版本更新引入了全新的默认声音主题，为用户带来焕然一新的音频体验，同时还包括多项桌面改进与优化。此次更新旨在提升整体用户体验，使系统声音更加统一、现代。",
+    "fulltext_zh": "COSMIC 1.4 引入了一个新的默认声音主题，带来了焕然一新的音频标识，同时还包括额外的桌面改进和优化。\n\n该文章《COSMIC 1.4 桌面环境引入新的默认声音主题》最初出现在 Linux Today 上。"
   }
 }

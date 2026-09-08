@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 24.04 拆分固件包以加快更新速度 — Linux 中文速报</title>
+<title>Linux为AMD Zen 6新增BTB CTX隔离安全特性做准备 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 24.04 拆分固件包以加快更新速度</h1>
+  <h1>Linux为AMD Zen 6新增BTB CTX隔离安全特性做准备</h1>
 
-  <div class="article-summary">Canonical 将原本在 Ubuntu 26.04 中引入的拆分 Linux 固件包反向移植到了 Ubuntu 24.04 LTS。现在，linux-firmware 包变成了一个元包，会拉取所有独立的固件子包。这些子包按硬件厂商划分，共 18 个，例如 linux-firmware-intel-wireless、linux-firmware-amd-graphics 等。此改动使得更新某个厂商的固件时无需再下载整个固件堆栈，从而显著减少下载量和更新频率。用户还可以卸载不需要的固件包以节省空间或增强安全性。Ubuntu 26.04 LTS 将正式采用此机制，而 24.04 用户现在也能提前受益。</div>
+  <div class="article-summary">近日发布的Linux内核补丁揭示了AMD Zen 6处理器的一项新安全改进，即分支目标缓冲（BTB）保护，用于隔离不同上下文（用户/内核、客户/主机）。该补丁由AMD Linux工程师Borislav Petkov提交，指出Zen 6的BTB保护使得SafeRET缓解措施不再必要，但用户/用户和客户/客户攻击向量仍需通过Spectre v2缓解设置中的IBPB来处理。补丁已合入tip/tip.git的x86/bugs分支，预计将进入Linux v7.4内核周期。目前关于BTB CTX隔离的更多细节尚未公开。</div>
 
-  <div class="article-body"><p>Ubuntu 24.04 拆分固件包以加快更新速度 - OMG! Ubuntu</p><p>固件包变得更小了，因为 Canonical 已将它在 26.04 中引入的拆分 Linux 固件包反向移植到了 24.04。</p><p>为了实现这一改动，linux-firmware 包现在是一个元包，它会拉取所有单独的固件包。从功能上讲，没有任何变化；所有安装都会获得完整的固件集合。</p><p>发行版使用的二进制 blob 现在被拆分到 18 个特定于厂商的子包中：</p><p>linux-firmware-realtek</p><p>linux-firmware-qualcomm-wireless</p><p>linux-firmware-qualcomm-misc</p><p>linux-firmware-qualcomm-graphics</p><p>linux-firmware-qlogic</p><p>linux-firmware-nvidia-graphics</p><p>linux-firmware-netronome</p><p>linux-firmware-mellanox-spectrum</p><p>linux-firmware-mediatek</p><p>linux-firmware-marvell-wireless</p><p>linux-firmware-marvell-prestera</p><p>linux-firmware-intel-wireless</p><p>linux-firmware-intel-misc</p><p>linux-firmware-intel-graphics</p><p>linux-firmware-broadcom-wireless</p><p>linux-firmware-amd-misc</p><p>linux-firmware-amd-graphics</p><p>一些非默认固件已经可以作为子包安装，例如 linux-firmware-xilinx-vcu，因此这些包不会改变（但也不会被纳入新的元包中）。</p><p>linux-firmware 包原本是一组来自硬件厂商的、大多是闭源的二进制 blob，网卡、CPU 和 DSP 等设备在 Linux 上运行（或达到最佳性能）时通常依赖这些 blob。</p><p>所有相同的固件仍然可用，但由于元包现在分别拉取每个包，因此当某一组固件有小的安全补丁或错误修复时，更新 linux-firmware 不再需要每次都下载整个固件堆栈。</p><p>例如，如果对 Intel 无线 blob 做了一个微小的更改，只需更新 linux-firmware-intel-wireless 包即可。</p><p>而且，由于厂商固件包之间互不依赖，你现在可以删除任何不需要的包——但不要过于草率地删除，因为你可能会升级 PC 组件或插入需要某些固件的设备。</p><p>如果你发现空间变得紧张，或者想保持系统安全性，你可以卸载不需要的固件。例如，linux-firmware-netronome 主要在企业级和数据中心环境中受益，因此可以运行：</p><p>sudo apt remove linux-firmware-netronome</p><p>Canonical 的工程师在 2025 年开始研究改进 Linux 固件分发方式的方法，目的是减少用户的总体下载量（和下载频率），同时减轻其自身更新基础设施的负载。</p><p>Ubuntu 26.04 LTS 将切换到 Linux 固件子包。现在，使用上一个 LTS 版本的用户（该版本通过 Ubuntu Pro 支持安全更新至 2034 年）也能从中受益。</p></div>
+  <div class="article-body"><p>Linux为AMD Zen 6新增BTB CTX隔离安全特性做准备</p><p>Linux为AMD Zen 6新增BTB CTX隔离安全特性</p><p>发布于2026年9月7日美国东部时间上午7:55。</p><p>近日发布的一个Linux内核补丁揭示了一项新的安全改进，该改进针对的是影响AMD Zen 1至Zen 4代处理器的投机性返回栈溢出（SRSO）漏洞。随着Zen 6的推出，引入了分支目标缓冲（BTB）保护，用于隔离不同上下文。</p><p>AMD Linux工程师Borislav Petkov在内核补丁中解释说，Zen 6带来了BTB保护，以隔离不同的用户/内核和客户/主机上下文：</p><p>“Zen 6具有BTB保护，可隔离不同上下文（用户/内核、客户/主机）。这使得SafeRET缓解措施变得不必要，但留下了用户/用户和客户/客户攻击向量，其保护由Spectre v2缓解设置中的IBPB（上下文切换时执行）来处理。</p><p>检测该设置并用新的缓解字符串报告。”</p><p>该补丁已合入tip/tip.git的x86/bugs Git分支。预计它将提交给Linux v7.4内核周期，除非它最终被作为当前Linux v7.3周期的“修复”部分被采纳。除了这个内核补丁，我还没有看到关于分支目标缓冲上下文“BTB CTX”隔离或AMD Zen 6 CPU其他安全更改的更多信息。</p><p>AMD致力于“将Rust深入GPU栈”</p><p>Lemonade 11.9本地AI服务器发布，带来令人兴奋的AMD ROCm HRX后端</p><p>Linux对Zen 6客户端CPPC的更改——硬编码默认值将低功耗核心置于0.47倍</p><p>AMD更新UALink补丁，为Helios上的UALoE准备Linux内核</p><p>新Linux补丁调整AMD Ryzen Zen 6以优化性能和功耗</p><p>将AMD ROCm引入FreeBSD的挑战</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动及其他主题的状态。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他。</p><p>CERN在长期作为RHEL机构后，将工业计算机过渡到Debian</p><p>Asahi Linux现已正式支持Apple M3 Mac——但有一些注意事项</p><p>前英特尔工程师、Clear Linux架构师之一正在创建新发行版</p><p>Servo 0.5发布：DuckDuckGo正确渲染，文本渲染速度提升高达10倍</p><p>NetworkManager通过诱骗AI代理添加金丝雀来执行AI政策</p><p>Ikey Doherty计划展示如何“正确”构建现代Linux发行版</p><p>WinBtrfs 1.10发布，包含两年来的Btrfs Windows改进</p><p>Firefox 155发布，通过Happy Eyeballs v3加快页面加载，HTTP/3支持QUIC v2</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/ubuntu-firmware-split-packages-24-04" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-Preps-AMD-BTB-CTX" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

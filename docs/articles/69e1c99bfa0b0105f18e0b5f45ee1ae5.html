@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 24.04 拆分固件包以加快更新速度 — Linux 中文速报</title>
+<title>Ubuntu 26.10 amd64v3 每日 ISO 现已发布 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 24.04 拆分固件包以加快更新速度</h1>
+  <h1>Ubuntu 26.10 amd64v3 每日 ISO 现已发布</h1>
 
-  <div class="article-summary">Canonical 将原本在 Ubuntu 26.04 中引入的拆分 Linux 固件包反向移植到了 Ubuntu 24.04 LTS。现在，linux-firmware 包变成了一个元包，会拉取所有独立的固件子包。这些子包按硬件厂商划分，共 18 个，例如 linux-firmware-intel-wireless、linux-firmware-amd-graphics 等。此改动使得更新某个厂商的固件时无需再下载整个固件堆栈，从而显著减少下载量和更新频率。用户还可以卸载不需要的固件包以节省空间或增强安全性。Ubuntu 26.04 LTS 将正式采用此机制，而 24.04 用户现在也能提前受益。</div>
+  <div class="article-summary">Ubuntu 26.10 &quot;Stonking Stingray&quot; 的每日 ISO 从 9 月 4 日起新增了 amd64v3 架构版本，与通用 amd64、arm64 和 riscv64 镜像一同提供。amd64v3 微架构级别默认支持 AVX/AVX2、FMA、BMI2、MOVBE 等新指令，可提升性能。此前用户需先安装通用版再切换至 amd64v3 包，现在通过专用 ISO 可直接安装，体验更流畅。这标志着 Canonical 可能正式提升 amd64v3 在 Ubuntu 26.10 中的地位。</div>
 
-  <div class="article-body"><p>Ubuntu 24.04 拆分固件包以加快更新速度 - OMG! Ubuntu</p><p>固件包变得更小了，因为 Canonical 已将它在 26.04 中引入的拆分 Linux 固件包反向移植到了 24.04。</p><p>为了实现这一改动，linux-firmware 包现在是一个元包，它会拉取所有单独的固件包。从功能上讲，没有任何变化；所有安装都会获得完整的固件集合。</p><p>发行版使用的二进制 blob 现在被拆分到 18 个特定于厂商的子包中：</p><p>linux-firmware-realtek</p><p>linux-firmware-qualcomm-wireless</p><p>linux-firmware-qualcomm-misc</p><p>linux-firmware-qualcomm-graphics</p><p>linux-firmware-qlogic</p><p>linux-firmware-nvidia-graphics</p><p>linux-firmware-netronome</p><p>linux-firmware-mellanox-spectrum</p><p>linux-firmware-mediatek</p><p>linux-firmware-marvell-wireless</p><p>linux-firmware-marvell-prestera</p><p>linux-firmware-intel-wireless</p><p>linux-firmware-intel-misc</p><p>linux-firmware-intel-graphics</p><p>linux-firmware-broadcom-wireless</p><p>linux-firmware-amd-misc</p><p>linux-firmware-amd-graphics</p><p>一些非默认固件已经可以作为子包安装，例如 linux-firmware-xilinx-vcu，因此这些包不会改变（但也不会被纳入新的元包中）。</p><p>linux-firmware 包原本是一组来自硬件厂商的、大多是闭源的二进制 blob，网卡、CPU 和 DSP 等设备在 Linux 上运行（或达到最佳性能）时通常依赖这些 blob。</p><p>所有相同的固件仍然可用，但由于元包现在分别拉取每个包，因此当某一组固件有小的安全补丁或错误修复时，更新 linux-firmware 不再需要每次都下载整个固件堆栈。</p><p>例如，如果对 Intel 无线 blob 做了一个微小的更改，只需更新 linux-firmware-intel-wireless 包即可。</p><p>而且，由于厂商固件包之间互不依赖，你现在可以删除任何不需要的包——但不要过于草率地删除，因为你可能会升级 PC 组件或插入需要某些固件的设备。</p><p>如果你发现空间变得紧张，或者想保持系统安全性，你可以卸载不需要的固件。例如，linux-firmware-netronome 主要在企业级和数据中心环境中受益，因此可以运行：</p><p>sudo apt remove linux-firmware-netronome</p><p>Canonical 的工程师在 2025 年开始研究改进 Linux 固件分发方式的方法，目的是减少用户的总体下载量（和下载频率），同时减轻其自身更新基础设施的负载。</p><p>Ubuntu 26.04 LTS 将切换到 Linux 固件子包。现在，使用上一个 LTS 版本的用户（该版本通过 Ubuntu Pro 支持安全更新至 2034 年）也能从中受益。</p></div>
+  <div class="article-body"><p>Ubuntu 26.10 amd64v3 每日 ISO 现已发布 - Phoronix</p><p>Ubuntu 26.10 amd64v3 每日 ISO 现已发布</p><p>发布于 2026 年 9 月 7 日上午 09:36（美国东部时间）</p><p>作为 Ubuntu 26.10 的一个有趣进展，&quot;Stonking Stingray&quot; 的每日 ISO 现在包含了 amd64v3 架构版本。</p><p>从 9 月 4 日开始，每日 ISO 除了通用的 amd64 镜像以及 arm64 和 riscv64 ISO 之外，还新增了 amd64v3 ISO。</p><p>与之前的 Ubuntu Linux 版本一样，Canonical 继续在发行版中试验 amd64v3 软件包构建。x86_64-v3 微架构特性级别允许默认启用 AVX/AVX2，以及 FMA、BMI2、MOVBE 和其他更新的 CPU ISA 特性，从而获得更好的性能。Red Hat Enterprise Linux 10 是已经强制要求 x86_64-v3 的 Linux 发行版之一，这大致对应过去 13 年以上的 CPU，从 Intel Haswell 到 AMD Excavator 及更新型号。</p><p>在 Ubuntu 的 amd64v3 软件包实验中，它在归档中是一个独立的架构，而普通的 amd64 &quot;x86_64&quot; 软件包仍然为使用 2013 年之前系统的用户提供。</p><p>作为 Canonical 可能在 Ubuntu 26.10 中提升 amd64v3 地位的迹象，amd64v3 ISO 现在已作为每日镜像流程的一部分进行构建。此前，amd64v3 软件包必须通过先安装通用的 amd64 ISO/软件包，然后调整 APT 并升级到 amd64v3 软件包来部署。有了 amd64v3 ISO，体验将更加简化。</p><p>看看 amd64v3 在 Ubuntu 26.10 中正式会带来什么，将会很有趣。我很快将进行一些全新的 Ubuntu amd64 与 amd64v3 基准测试。对于感兴趣的用户，最新的 Ubuntu 26.10 每日 live ISO 可以在以下位置找到：</p><p>Ubuntu 26.10 Snapshot 3 月度 ISO 发布供测试</p><p>Mir 2.29 发布，附带更多 Wayland 协议</p><p>Ubuntu 26.04.1 LTS 发布，包含首批修复集合</p><p>Ubuntu Touch 正在向 Ubuntu 26.04 迈进，Vulkan 与应用更新</p><p>Ubuntu 将为 Ubuntu 26.04 LTS 提供虚拟化 HWE 栈</p><p>Ubuntu Touch 24.04-2.0 发布，支持刘海屏和圆角</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。您可以通过以下方式关注他：</p><p>CERN 在长期作为 RHEL 机构后，将工业计算机迁移至 Debian</p><p>Asahi Linux 现已正式支持 Apple M3 Mac——但有一些注意事项</p><p>前英特尔工程师、Clear Linux 架构师之一正在创建新的发行版</p><p>Servo 0.5 发布：DuckDuckGo 正确渲染，文本渲染速度提升高达 10 倍</p><p>NetworkManager 通过诱骗 AI 代理添加 Canary 来执行 AI 政策</p><p>Ikey Doherty 计划展示如何&quot;正确地&quot;构建现代 Linux 发行版</p><p>WinBtrfs 1.10 发布，包含两年多的 Windows 上 Btrfs 改进</p><p>Firefox 155 发布，通过 Happy Eyeballs v3 加快页面加载，HTTP/3 支持 QUIC v2</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/ubuntu-firmware-split-packages-24-04" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Ubuntu-26.10-amd64v3-Daily" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

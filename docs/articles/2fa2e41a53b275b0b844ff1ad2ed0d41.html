@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 24.04 拆分固件包以加快更新速度 — Linux 中文速报</title>
+<title>FreeBSD 14.5 发布：硬件支持改进，大量 Bug 与安全修复 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 24.04 拆分固件包以加快更新速度</h1>
+  <h1>FreeBSD 14.5 发布：硬件支持改进，大量 Bug 与安全修复</h1>
 
-  <div class="article-summary">Canonical 将原本在 Ubuntu 26.04 中引入的拆分 Linux 固件包反向移植到了 Ubuntu 24.04 LTS。现在，linux-firmware 包变成了一个元包，会拉取所有独立的固件子包。这些子包按硬件厂商划分，共 18 个，例如 linux-firmware-intel-wireless、linux-firmware-amd-graphics 等。此改动使得更新某个厂商的固件时无需再下载整个固件堆栈，从而显著减少下载量和更新频率。用户还可以卸载不需要的固件包以节省空间或增强安全性。Ubuntu 26.04 LTS 将正式采用此机制，而 24.04 用户现在也能提前受益。</div>
+  <div class="article-summary">FreeBSD 14.5-RELEASE 正式发布，为仍在使用 FreeBSD 14 的生产环境用户提供了大量向后移植的 Bug 修复、数十项安全更新，以及硬件驱动支持改进。该版本修复了从远程代码执行到拒绝服务攻击、内核栈问题、释放后使用漏洞等多种安全问题，其中许多是通过 AI/LLM 工具发现的。此外，FreeBSD 14.5 更新了 LLVM 21.1.8、ncurses 6.6、OpenSSL 3.0.21、XZ 5.8.3 等外部软件。硬件方面，ACPI 驱动改进了对配备双 GPU 的 Apple Mac 硬件的电源管理，AHCI 驱动支持更多 SATA 控制器，ASMC 驱动放弃了对 32 位 Intel Mac 的支持。</div>
 
-  <div class="article-body"><p>Ubuntu 24.04 拆分固件包以加快更新速度 - OMG! Ubuntu</p><p>固件包变得更小了，因为 Canonical 已将它在 26.04 中引入的拆分 Linux 固件包反向移植到了 24.04。</p><p>为了实现这一改动，linux-firmware 包现在是一个元包，它会拉取所有单独的固件包。从功能上讲，没有任何变化；所有安装都会获得完整的固件集合。</p><p>发行版使用的二进制 blob 现在被拆分到 18 个特定于厂商的子包中：</p><p>linux-firmware-realtek</p><p>linux-firmware-qualcomm-wireless</p><p>linux-firmware-qualcomm-misc</p><p>linux-firmware-qualcomm-graphics</p><p>linux-firmware-qlogic</p><p>linux-firmware-nvidia-graphics</p><p>linux-firmware-netronome</p><p>linux-firmware-mellanox-spectrum</p><p>linux-firmware-mediatek</p><p>linux-firmware-marvell-wireless</p><p>linux-firmware-marvell-prestera</p><p>linux-firmware-intel-wireless</p><p>linux-firmware-intel-misc</p><p>linux-firmware-intel-graphics</p><p>linux-firmware-broadcom-wireless</p><p>linux-firmware-amd-misc</p><p>linux-firmware-amd-graphics</p><p>一些非默认固件已经可以作为子包安装，例如 linux-firmware-xilinx-vcu，因此这些包不会改变（但也不会被纳入新的元包中）。</p><p>linux-firmware 包原本是一组来自硬件厂商的、大多是闭源的二进制 blob，网卡、CPU 和 DSP 等设备在 Linux 上运行（或达到最佳性能）时通常依赖这些 blob。</p><p>所有相同的固件仍然可用，但由于元包现在分别拉取每个包，因此当某一组固件有小的安全补丁或错误修复时，更新 linux-firmware 不再需要每次都下载整个固件堆栈。</p><p>例如，如果对 Intel 无线 blob 做了一个微小的更改，只需更新 linux-firmware-intel-wireless 包即可。</p><p>而且，由于厂商固件包之间互不依赖，你现在可以删除任何不需要的包——但不要过于草率地删除，因为你可能会升级 PC 组件或插入需要某些固件的设备。</p><p>如果你发现空间变得紧张，或者想保持系统安全性，你可以卸载不需要的固件。例如，linux-firmware-netronome 主要在企业级和数据中心环境中受益，因此可以运行：</p><p>sudo apt remove linux-firmware-netronome</p><p>Canonical 的工程师在 2025 年开始研究改进 Linux 固件分发方式的方法，目的是减少用户的总体下载量（和下载频率），同时减轻其自身更新基础设施的负载。</p><p>Ubuntu 26.04 LTS 将切换到 Linux 固件子包。现在，使用上一个 LTS 版本的用户（该版本通过 Ubuntu Pro 支持安全更新至 2034 年）也能从中受益。</p></div>
+  <div class="article-body"><p>FreeBSD 14.5 发布：硬件支持改进，大量 Bug 与安全修复 - Phoronix</p><p>FreeBSD 14.5 发布：硬件支持改进，大量 Bug 与安全修复</p><p>2026 年 9 月 7 日晚上 8:35（美国东部时间）</p><p>对于那些尚未迁移到更新版本、仍在生产环境中依赖 FreeBSD 14 的用户，今天发布了 FreeBSD 14.5-RELEASE。</p><p>FreeBSD 14.5 向后移植了各种 Bug 修复，解决了数十个安全问题，并在此稳定版本基础上引入了部分硬件驱动支持改进和其他调整。</p><p>FreeBSD 14.5 解决了各种安全公告，涵盖远程代码执行、拒绝服务攻击向量、内核栈问题、释放后使用漏洞等。与 Linux 和其他开源项目一样，近期许多针对 FreeBSD 的安全公告是通过 AI/LLM 工具发现的。</p><p>FreeBSD 14.5 还引入了部分更新的外部软件，如 LLVM 21.1.8、ncurses 6.6、OpenSSL 3.0.21、XZ 5.8.3 等。</p><p>在硬件方面，ACPI 驱动现在能更好地处理配备双 GPU 的 Apple Mac 硬件的电源管理；AHCI 驱动支持更多 SATA 控制器；ASMC 驱动放弃了对基于 32 位 Intel 的 Mac 的支持。</p><p>FreeBSD 14.5 的下载和更多详细信息可在以下页面获取：</p><p>NetBSD 9.5 发布，为该系列画上句号</p><p>FreeBSD 14.5-RC1 发布，包含多项安全修复</p><p>FreeBSD 14.5 Beta 1 发布，包含各种向后移植和安全修复</p><p>NetBSD 11.0 发布，支持 RISC-V，增强 Linux 系统调用兼容性</p><p>FreeBSD 内核仍含少量 GPL 代码，而其基础用户空间已无 GPL</p><p>FreeBSD 开发新的 NTSYNC 驱动，加速 Windows NT 同步原语</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。他还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>CERN 长期使用 RHEL 后，将工业计算机迁移至 Debian</p><p>Asahi Linux 现已正式支持 Apple M3 Mac——但有限制</p><p>前 Intel 工程师、Clear Linux 架构师之一开始打造新发行版</p><p>Servo 0.5 发布：DuckDuckGo 正常渲染，文本渲染速度提升高达 10 倍</p><p>NetworkManager 通过欺骗 AI 代理添加金丝雀来执行 AI 政策</p><p>Ikey Doherty 计划展示如何“正确”构建现代 Linux 发行版</p><p>WinBtrfs 1.10 发布：两年改进，支持 Windows 上的 Btrfs</p><p>Firefox 155 发布：通过 Happy Eyeballs v3 加快页面加载，HTTP/3 支持 QUIC v2</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/ubuntu-firmware-split-packages-24-04" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/FreeBSD-14.5-RELEASE" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

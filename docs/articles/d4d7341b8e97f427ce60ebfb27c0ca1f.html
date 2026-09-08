@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ikey Doherty 与 Omarchy：为何他构建 Barney 而非另一个发行版 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年09月08日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Ikey Doherty 与 Omarchy：为何他构建 Barney 而非另一个发行版</h1>
+
+  <div class="article-summary">Solus 和 AerynOS 的创造者 Ikey Doherty 携 Barney 回归，这是一个用 Rust 编写的工具，可从源代码构建 Linux 发行版，旨在帮助用户轻松创建自己的 Omarchy。Doherty 批评 Omarchy 的融资方式，认为其资金荒谬，并承诺用更少的资源做得更好。Barney 并非发行版，而是一个展示发行版构建过程的工具，所有内容从源代码构建，输出按内容缓存，布局无状态。项目名称源于他儿子的名字，目前已在开发中，并发布了第一集视频。作为爱尔兰游民，Doherty 对 DHH 的言论表示强烈谴责，并宣布不再购买戴尔笔记本电脑。</div>
+
+  <div class="article-body"><p>Ikey Doherty 与 Omarchy：为何他构建 Barney 而非另一个发行版</p><p>Ikey Doherty，Solus 和 AerynOS 的创造者，带着 Barney 回归，这是一个用 Rust 编写的工具，可从源代码构建 Linux 发行版，以便你轻松创建自己的 Omarchy。</p><p>他退隐后复出，而 Omarchy 的融资正是原因。</p><p>他称 DHH 发行版背后的资金荒谬，并承诺用更少的资源做得更好，即通过一个基于 Rust 的工具从源代码构建 Linux 发行版。</p><p>自 8 月推出以来，Omarchy 的认捐金额已超过 1300 万美元，当时包括 Michael Dell 在内的八位科技高管每人投入了 100 万美元。这一热潮也引来了一些反对声音，最近一次是 1Password 承诺捐赠 30 万美元，而其员工表示反对。Ikey 的视频发布一天后，该基金会宣布从 Meta、Anthropic、OpenAI 和 Fireworks 获得 195 万美元的 AI 代币。</p><p>不是发行版，而是一种立场</p><p>Barney 是一个旨在帮助你构建 Linux 发行版的工具；该仓库将其描述为“又一个该死的构建 Linux 发行版的工具”，并指出交付发行版并非预期目标。</p><p>Ikey 计划展示发行版是如何构建的，而不是发布他所称的“又一个壁纸重制版”发行版，他将在 YouTube 频道上展示这一过程。</p><p>所有内容都从源代码构建，输出会根据生成它们的来源进行缓存。更改依赖项，则基于它构建的任何内容都会重新构建。布局保持无状态，Doherty 表示这一概念是他帮助在 Intel 的 Clear Linux 团队中开创的，后来在 Solus 和 AerynOS 中推广（AerynOS 是 Solus 的继任者）。</p><p>构建在容器中运行，结果按内容存储，因此不同包中的相同文件只存储一次。计划甚至包括从头重建工具链。</p><p>所有内容都用 Rust 编写，并以 MPL-2.0 许可证发布。项目名称本身对他个人意义重大，因为 Barney 是他儿子的名字。</p><p>工作已经开始。该系列的第一集已经上线，标题为“第 0 集：准备就绪”。要访问幕后内容，Ikey 已设立了 Patreon，人们可以直接支持他。</p><p>一位爱尔兰游民的回应</p><p>不要以为 Ikey 没有资格谈论此事。</p><p>Omarchy 的创造者 David Heinemeier Hansson（更广为人知的名字是 DHH）曾写过一篇文章，将丹麦的狼群与在哥本哈根公园露营的罗姆人进行比较。</p><p>自然，作为世代面临歧视的爱尔兰游民，Ikey 必然会做出反应。在社交媒体上分享他的视频（开头链接的那个）时，他称 DHH 的言论“恶心”，并表示资金和观点共同将他拖回了这场游戏。</p><p>他的笔记本电脑购买计划</p><p>Michael Dell 是发布时的支持者之一，Ikey 已将该品牌列入他的回避名单，同时点名批评 Omarchy：</p><p>“说实话，在 Michael Dell 表示支持 DHH 之后，我不会再买戴尔笔记本电脑了。暂且不提它又是一个壁纸重制版发行版……我无法容忍 DHH 的言论（在多个话题上）。作为爱尔兰游民，我强烈谴责他关于游牧民族的言论。作为前 Linux 发行版开发者，即使你付钱给我，我也不会碰他的东西。”</p><p>只有时间能证明一切。目前，我的看法是这个问题没有抓住要点。Barney 并不是要成为每个人都安装的发行版。按照 Doherty 自己的说法，成功在于在业界的注视下展示一个真正的发行版是如何构建的。</p><p>你已经知道他以前曾放弃过大型项目。Solus 和 AerynOS 都在没有他的情况下继续发展。Barney 当然也可能成为下一个。</p><p>让我印象深刻的是这一切的时机。另一位 Clear Linux 成员 Auke Kok 正在从头构建一个系统，而他们两人都没有等待某个基金会来启动。</p><p>我内心的乐观主义者说，如果他们两人合作，他们可以交付一些东西，向 Linux 生态系统展示，向一个项目投入荒谬的资金并不是构建优秀系统的唯一途径。</p><p>喜欢这篇更新吗？支持独立的 Linux 新闻报道。</p><p>It's FOSS 一直在帮助人们使用……</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/ikey-doherty-barney/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

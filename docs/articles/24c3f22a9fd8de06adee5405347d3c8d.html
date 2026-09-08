@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 24.04 拆分固件包以加快更新速度 — Linux 中文速报</title>
+<title>KDE新推出的Photos应用为Gwenview提供了时尚的替代选择 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
+    <span class="tag">桌面环境</span>
     <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Ubuntu 24.04 拆分固件包以加快更新速度</h1>
+  <h1>KDE新推出的Photos应用为Gwenview提供了时尚的替代选择</h1>
 
-  <div class="article-summary">Canonical 将原本在 Ubuntu 26.04 中引入的拆分 Linux 固件包反向移植到了 Ubuntu 24.04 LTS。现在，linux-firmware 包变成了一个元包，会拉取所有独立的固件子包。这些子包按硬件厂商划分，共 18 个，例如 linux-firmware-intel-wireless、linux-firmware-amd-graphics 等。此改动使得更新某个厂商的固件时无需再下载整个固件堆栈，从而显著减少下载量和更新频率。用户还可以卸载不需要的固件包以节省空间或增强安全性。Ubuntu 26.04 LTS 将正式采用此机制，而 24.04 用户现在也能提前受益。</div>
+  <div class="article-summary">KDE Plasma桌面环境的新Photos应用旨在成为Gwenview的现代替代品。Gwenview作为KDE默认图像查看器已有25年历史，但因其老旧代码库导致性能问题和开发停滞。Photos应用起源于2017年的移动应用，现已在KDE社区支持下完善桌面功能，提供更快的性能、更好的HiDPI支持、自适应界面和标注工具。KDE开发者Nate Graham鼓励用户测试并推动发行版采用此应用，但其长期维护仍需社区持续投入。</div>
 
-  <div class="article-body"><p>Ubuntu 24.04 拆分固件包以加快更新速度 - OMG! Ubuntu</p><p>固件包变得更小了，因为 Canonical 已将它在 26.04 中引入的拆分 Linux 固件包反向移植到了 24.04。</p><p>为了实现这一改动，linux-firmware 包现在是一个元包，它会拉取所有单独的固件包。从功能上讲，没有任何变化；所有安装都会获得完整的固件集合。</p><p>发行版使用的二进制 blob 现在被拆分到 18 个特定于厂商的子包中：</p><p>linux-firmware-realtek</p><p>linux-firmware-qualcomm-wireless</p><p>linux-firmware-qualcomm-misc</p><p>linux-firmware-qualcomm-graphics</p><p>linux-firmware-qlogic</p><p>linux-firmware-nvidia-graphics</p><p>linux-firmware-netronome</p><p>linux-firmware-mellanox-spectrum</p><p>linux-firmware-mediatek</p><p>linux-firmware-marvell-wireless</p><p>linux-firmware-marvell-prestera</p><p>linux-firmware-intel-wireless</p><p>linux-firmware-intel-misc</p><p>linux-firmware-intel-graphics</p><p>linux-firmware-broadcom-wireless</p><p>linux-firmware-amd-misc</p><p>linux-firmware-amd-graphics</p><p>一些非默认固件已经可以作为子包安装，例如 linux-firmware-xilinx-vcu，因此这些包不会改变（但也不会被纳入新的元包中）。</p><p>linux-firmware 包原本是一组来自硬件厂商的、大多是闭源的二进制 blob，网卡、CPU 和 DSP 等设备在 Linux 上运行（或达到最佳性能）时通常依赖这些 blob。</p><p>所有相同的固件仍然可用，但由于元包现在分别拉取每个包，因此当某一组固件有小的安全补丁或错误修复时，更新 linux-firmware 不再需要每次都下载整个固件堆栈。</p><p>例如，如果对 Intel 无线 blob 做了一个微小的更改，只需更新 linux-firmware-intel-wireless 包即可。</p><p>而且，由于厂商固件包之间互不依赖，你现在可以删除任何不需要的包——但不要过于草率地删除，因为你可能会升级 PC 组件或插入需要某些固件的设备。</p><p>如果你发现空间变得紧张，或者想保持系统安全性，你可以卸载不需要的固件。例如，linux-firmware-netronome 主要在企业级和数据中心环境中受益，因此可以运行：</p><p>sudo apt remove linux-firmware-netronome</p><p>Canonical 的工程师在 2025 年开始研究改进 Linux 固件分发方式的方法，目的是减少用户的总体下载量（和下载频率），同时减轻其自身更新基础设施的负载。</p><p>Ubuntu 26.04 LTS 将切换到 Linux 固件子包。现在，使用上一个 LTS 版本的用户（该版本通过 Ubuntu Pro 支持安全更新至 2034 年）也能从中受益。</p></div>
+  <div class="article-body"><p>KDE的新Photos应用为Gwenview提供了时尚的替代选择 - OMG! Ubuntu</p><p>KDE的新Photos应用是一款面向KDE Plasma的新式（相对而言）图像查看器和管理器，旨在与Gwenview一较高下。</p><p>使用KDE Plasma的Linux发行版通常预装Gwenview，它作为KDE图像应用已有超过25年的历史。Gwenview是一款功能丰富、基于Qt的可靠工具，许多用户喜爱并依赖它来查看、管理和编辑图像。</p><p>但Gwenview的开发速度已经放缓——其遗留代码可能是罪魁祸首。</p><p>正如GNOME在现代化努力中所发现的，更新旧软件往往需要重写和重构过时代码库的大部分内容。与其费力地拆解和改造，通常更容易的做法是重新开始或直接删除大量代码。</p><p>GNOME的PDF查看器就是这一努力的成果，其改进和现代方法反过来也为其他现代化项目提供了参考。</p><p>在KDE的案例中，Nate Graham提到了Gwenview在处理大型图像库时的性能问题、GPU加速的怪癖，以及如前所述的陈旧代码库，这些问题使得新手难以掌握，更不用说在其基础上进行开发了。</p><p>Gwenview是KDE桌面环境的中流砥柱。</p><p>“近年来，对Gwenview的功能贡献、错误修复和UI改进已经枯竭，”一篇介绍Photos应用的博客文章中写道。“Gwenview的技术架构已经达到了人们愿意为其付出的极限。”</p><p>Photos应用——其用户界面标签为“Photos”——起源于2017年，最初是一款移动应用。随后增加了桌面模式及更多功能。最近，Nate Graham担任CEO的KDE社区赞助了将应用提升至与Gwenview同等水平的努力。</p><p>乍一看，Photos应用看起来更简洁、相对直观，并提供以下功能：</p><p>- 处理大型照片库时性能更快</p><p>- 更好的HiDPI屏幕支持</p><p>- 适用于移动或桌面的自适应界面</p><p>- 使用标注工具进行注释</p><p>Nate Graham鼓励用户测试该应用，并邀请基于KDE的Linux发行版切换使用。但要与Gwenview的持久性相媲美，它还需要积极、持续的维护。</p><p>如果你想测试它，看看它能否在功能上与Gwenview匹敌，你可以从Flathub获取（如果这是你从Flathub安装的第一个Qt/KDE应用，会拉取KDE运行时），或者通过其他方式安装。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/ubuntu-firmware-split-packages-24-04" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/kde-photos-app-replace-gwenview" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

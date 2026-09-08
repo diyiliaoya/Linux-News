@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 24.04 拆分固件包以加快更新速度 — Linux 中文速报</title>
+<title>Clanker测试：Fedora对决Windows 11，Fedora多数胜出 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Ubuntu 24.04 拆分固件包以加快更新速度</h1>
+  <h1>Clanker测试：Fedora对决Windows 11，Fedora多数胜出</h1>
 
-  <div class="article-summary">Canonical 将原本在 Ubuntu 26.04 中引入的拆分 Linux 固件包反向移植到了 Ubuntu 24.04 LTS。现在，linux-firmware 包变成了一个元包，会拉取所有独立的固件子包。这些子包按硬件厂商划分，共 18 个，例如 linux-firmware-intel-wireless、linux-firmware-amd-graphics 等。此改动使得更新某个厂商的固件时无需再下载整个固件堆栈，从而显著减少下载量和更新频率。用户还可以卸载不需要的固件包以节省空间或增强安全性。Ubuntu 26.04 LTS 将正式采用此机制，而 24.04 用户现在也能提前受益。</div>
+  <div class="article-summary">PhoneBuff使用两台相同的戴尔XPS 13（Intel Core 5 320，8GB内存）分别运行Fedora和Windows 11，通过机器人进行标准化测试。结果显示，在11项计时测试中，Fedora赢得6项，4项持平，Windows仅胜1项（启动《赛博朋克2077》）。Fedora在解压、VS Code测试、创意应用和空闲内存占用上优势明显，而日常应用表现接近。测试者提醒，结果不代表所有Linux发行版，且未包含AI或游戏基准测试。</div>
 
-  <div class="article-body"><p>Ubuntu 24.04 拆分固件包以加快更新速度 - OMG! Ubuntu</p><p>固件包变得更小了，因为 Canonical 已将它在 26.04 中引入的拆分 Linux 固件包反向移植到了 24.04。</p><p>为了实现这一改动，linux-firmware 包现在是一个元包，它会拉取所有单独的固件包。从功能上讲，没有任何变化；所有安装都会获得完整的固件集合。</p><p>发行版使用的二进制 blob 现在被拆分到 18 个特定于厂商的子包中：</p><p>linux-firmware-realtek</p><p>linux-firmware-qualcomm-wireless</p><p>linux-firmware-qualcomm-misc</p><p>linux-firmware-qualcomm-graphics</p><p>linux-firmware-qlogic</p><p>linux-firmware-nvidia-graphics</p><p>linux-firmware-netronome</p><p>linux-firmware-mellanox-spectrum</p><p>linux-firmware-mediatek</p><p>linux-firmware-marvell-wireless</p><p>linux-firmware-marvell-prestera</p><p>linux-firmware-intel-wireless</p><p>linux-firmware-intel-misc</p><p>linux-firmware-intel-graphics</p><p>linux-firmware-broadcom-wireless</p><p>linux-firmware-amd-misc</p><p>linux-firmware-amd-graphics</p><p>一些非默认固件已经可以作为子包安装，例如 linux-firmware-xilinx-vcu，因此这些包不会改变（但也不会被纳入新的元包中）。</p><p>linux-firmware 包原本是一组来自硬件厂商的、大多是闭源的二进制 blob，网卡、CPU 和 DSP 等设备在 Linux 上运行（或达到最佳性能）时通常依赖这些 blob。</p><p>所有相同的固件仍然可用，但由于元包现在分别拉取每个包，因此当某一组固件有小的安全补丁或错误修复时，更新 linux-firmware 不再需要每次都下载整个固件堆栈。</p><p>例如，如果对 Intel 无线 blob 做了一个微小的更改，只需更新 linux-firmware-intel-wireless 包即可。</p><p>而且，由于厂商固件包之间互不依赖，你现在可以删除任何不需要的包——但不要过于草率地删除，因为你可能会升级 PC 组件或插入需要某些固件的设备。</p><p>如果你发现空间变得紧张，或者想保持系统安全性，你可以卸载不需要的固件。例如，linux-firmware-netronome 主要在企业级和数据中心环境中受益，因此可以运行：</p><p>sudo apt remove linux-firmware-netronome</p><p>Canonical 的工程师在 2025 年开始研究改进 Linux 固件分发方式的方法，目的是减少用户的总体下载量（和下载频率），同时减轻其自身更新基础设施的负载。</p><p>Ubuntu 26.04 LTS 将切换到 Linux 固件子包。现在，使用上一个 LTS 版本的用户（该版本通过 Ubuntu Pro 支持安全更新至 2034 年）也能从中受益。</p></div>
+  <div class="article-body"><p>一家名为Clanker的公司将Fedora与Windows 11进行了对比测试，结果Fedora大部分胜出。</p><p>PhoneBuff的自动化测试发现，Windows 11仅在启动《赛博朋克2077》时领先。</p><p>PhoneBuff是一家以机器人手对智能手机进行实验室标准化评测而闻名的公司。他们的评测涵盖速度测试、跌落测试和电池测试等多项内容。</p><p>当观众在近期他们对戴尔XPS 13和MacBook Neo进行的性能对比后，开始询问他们是否尝试Linux时，他们做出了回应。</p><p>PhoneBuff团队使用两台相同的戴尔XPS 13（配备Intel Core 5 320和8GB内存），一台运行Windows 11，另一台运行Fedora，在每台机器上运行相同的真实应用和工作流程，并由机器人鼠标和键盘计时。</p><p>测试结束时，Fedora在11项计时测试中赢得6项，4项持平，而Windows 11仅获得1项胜利。</p><p>Fedora与Windows 11在相同硬件上的对比</p><p>设置也相同！屏幕亮度均为200尼特，两台笔记本电脑与WiFi点的距离相等，房间温度受控。每项测试重复3至5次，取中位数。</p><p>从完全关机启动时，Windows为23秒，Fedora为24秒，差距极小，难以判定。但重启测试并非如此：Fedora中位数为27秒，而Windows需要61秒。Windows的五次运行在46至68秒之间波动，Fedora则在23至34秒之间。</p><p>最大的差距出现在文件解压方面。解压同一个6GB压缩包，Fedora内置工具用时12秒。在Windows上使用Windows资源管理器则需要57秒，而安装第三方工具后也仅降至17.4秒。</p><p>接下来是可能让微软感到刺痛的结果。运行VS Code时，机器人加载了一个开源白板项目，扫描错误、编译并运行了近1900项测试。Fedora在2分20.5秒内完成，而Windows 11需要3分41.99秒。</p><p>创意应用也呈现相同趋势。DaVinci Resolve导入两个剪辑、对一个进行调色、对另一个进行稳定处理并导出，Fedora用时2分10.9秒，Windows为2分49.9秒。GIMP处理4K图像（使用涂抹、修复和物体移除等工具）时，Fedora用时53.3秒，Windows为60.7秒。</p><p>日常应用大多持平。Chrome在本地托管页面上运行视频、3D模型、地图和图表计算，Fedora用时19.3秒，Windows为19.8秒。</p><p>同一份500页文档在ONLYOFFICE中打开，Fedora用时8.7秒，Windows为9.3秒；OCR处理也由Fedora胜出，36.6秒对39.8秒。</p><p>甚至Blender渲染同一1080p场景也打成平手，44.2秒对43.5秒。</p><p>空闲内存占用是另一个显著差距。闲置一分钟后，Fedora使用了8GB内存的32.9%，而Windows占用了85.2%。视频显示Fedora占用2.27GB，Windows占用6.47GB。</p><p>Windows唯一胜出的是启动《赛博朋克2077》，用时54.3秒，Fedora为57.0秒。但请注意，这是启动时间，而非帧率，PhoneBuff并未运行任何游戏基准测试。</p><p>这些数字意味着什么？</p><p>暂时不要过度解读。这里没有AI工作负载，如前所述，也没有游戏基准测试。</p><p>PhoneBuff的主持人在视频开头表示，Fedora是众多Linux发行版之一，“这不一定代表所有可能的Linux体验”。不同的发行版搭配不同的桌面环境，肯定会改变我们看到的某些差距。</p><p>内存差距也带有星号。Windows占用85.2%是因为默认运行了一些戴尔实用程序、Defender（MsMpEng）和Edge WebView2，因此6.47GB并非仅由Windows造成。Fedora只是初始负担更少。</p><p>总结来说，重负载任务由Fedora胜出，有时领先数分钟；日常应用持平；空闲内存占用方面，Linux约为三分之一，而Windows为85%。</p><p>这就是全部11项测试所能说明的，请将它们视为数据点，而非最终结论。</p><p>喜欢这篇更新吗？支持独立的Linux新闻。</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/ubuntu-firmware-split-packages-24-04" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/fedora-beats-windows-11/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

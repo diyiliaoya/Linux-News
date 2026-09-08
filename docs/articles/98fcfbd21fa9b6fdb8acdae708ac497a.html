@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 24.04 拆分固件包以加快更新速度 — Linux 中文速报</title>
+<title>埃隆·马斯克的X试图扼杀Nitter，项目方宣布即将回归 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Ubuntu 24.04 拆分固件包以加快更新速度</h1>
+  <h1>埃隆·马斯克的X试图扼杀Nitter，项目方宣布即将回归</h1>
 
-  <div class="article-summary">Canonical 将原本在 Ubuntu 26.04 中引入的拆分 Linux 固件包反向移植到了 Ubuntu 24.04 LTS。现在，linux-firmware 包变成了一个元包，会拉取所有独立的固件子包。这些子包按硬件厂商划分，共 18 个，例如 linux-firmware-intel-wireless、linux-firmware-amd-graphics 等。此改动使得更新某个厂商的固件时无需再下载整个固件堆栈，从而显著减少下载量和更新频率。用户还可以卸载不需要的固件包以节省空间或增强安全性。Ubuntu 26.04 LTS 将正式采用此机制，而 24.04 用户现在也能提前受益。</div>
+  <div class="article-summary">开源前端项目Nitter在收到X Corp的律师函后短暂下线，但近日其GitHub仓库已解除只读模式，并宣布项目将继续运营。Nitter是一个无需注册账号即可阅读X（原Twitter）帖子的前端，X指控其非法使用和规避API。此前X曾通过移除访客功能等方式施压，但Nitter均找到解决方案。项目方表示将很快公布更多细节，但未透露法律建议的具体内容。社区对此表示关注，并希望开源社区能支持此类项目。</div>
 
-  <div class="article-body"><p>Ubuntu 24.04 拆分固件包以加快更新速度 - OMG! Ubuntu</p><p>固件包变得更小了，因为 Canonical 已将它在 26.04 中引入的拆分 Linux 固件包反向移植到了 24.04。</p><p>为了实现这一改动，linux-firmware 包现在是一个元包，它会拉取所有单独的固件包。从功能上讲，没有任何变化；所有安装都会获得完整的固件集合。</p><p>发行版使用的二进制 blob 现在被拆分到 18 个特定于厂商的子包中：</p><p>linux-firmware-realtek</p><p>linux-firmware-qualcomm-wireless</p><p>linux-firmware-qualcomm-misc</p><p>linux-firmware-qualcomm-graphics</p><p>linux-firmware-qlogic</p><p>linux-firmware-nvidia-graphics</p><p>linux-firmware-netronome</p><p>linux-firmware-mellanox-spectrum</p><p>linux-firmware-mediatek</p><p>linux-firmware-marvell-wireless</p><p>linux-firmware-marvell-prestera</p><p>linux-firmware-intel-wireless</p><p>linux-firmware-intel-misc</p><p>linux-firmware-intel-graphics</p><p>linux-firmware-broadcom-wireless</p><p>linux-firmware-amd-misc</p><p>linux-firmware-amd-graphics</p><p>一些非默认固件已经可以作为子包安装，例如 linux-firmware-xilinx-vcu，因此这些包不会改变（但也不会被纳入新的元包中）。</p><p>linux-firmware 包原本是一组来自硬件厂商的、大多是闭源的二进制 blob，网卡、CPU 和 DSP 等设备在 Linux 上运行（或达到最佳性能）时通常依赖这些 blob。</p><p>所有相同的固件仍然可用，但由于元包现在分别拉取每个包，因此当某一组固件有小的安全补丁或错误修复时，更新 linux-firmware 不再需要每次都下载整个固件堆栈。</p><p>例如，如果对 Intel 无线 blob 做了一个微小的更改，只需更新 linux-firmware-intel-wireless 包即可。</p><p>而且，由于厂商固件包之间互不依赖，你现在可以删除任何不需要的包——但不要过于草率地删除，因为你可能会升级 PC 组件或插入需要某些固件的设备。</p><p>如果你发现空间变得紧张，或者想保持系统安全性，你可以卸载不需要的固件。例如，linux-firmware-netronome 主要在企业级和数据中心环境中受益，因此可以运行：</p><p>sudo apt remove linux-firmware-netronome</p><p>Canonical 的工程师在 2025 年开始研究改进 Linux 固件分发方式的方法，目的是减少用户的总体下载量（和下载频率），同时减轻其自身更新基础设施的负载。</p><p>Ubuntu 26.04 LTS 将切换到 Linux 固件子包。现在，使用上一个 LTS 版本的用户（该版本通过 Ubuntu Pro 支持安全更新至 2034 年）也能从中受益。</p></div>
+  <div class="article-body"><p>埃隆·马斯克的X试图扼杀Nitter，项目方宣布即将回归</p><p>在X Corp发出法律信函迫使该项目下线两周后，Nitter表示将继续运营。</p><p>，这个无需注册账号即可阅读X帖子的开源前端，目前还不会消失。</p><p>在X Corp的律师要求永久关闭该项目数周后，该项目的GitHub仓库已解除只读模式，并附上以下声明：</p><p>遵循法律建议，Nitter项目将继续运营。更多细节将很快公布。</p><p>目前，仓库和主页均显示相同信息，后者进一步表示Nitter的主要实例和其他实例将很快恢复上线。</p><p>预计在未来几天内会发布正式公告。</p><p>X Corp的律师此前发出信函，要求永久关闭Nitter实例和项目仓库，截止日期为美国东部时间8月25日下午5点。随后，该仓库被归档并标记为只读，nitter.net的内容被替换为简短通知（此后已更新），热门实例也停止了运营。</p><p>TechCrunch获得了这封信函，并报道称X指控Nitter“非法使用和规避X的应用程序编程接口（API）及相关数据”。X声称有证据表明Nitter抓取了X的数据，并访问了X账户和会话令牌，违反了X的《德克萨斯州有害访问计算机法》。</p><p>截至目前，X尚未公开评论此次关闭或逆转。</p><p>这并不是Nitter第一次被宣告死亡。2024年初，X移除了该项目所依赖的访客账户功能，导致项目负责人Zedeus宣布项目死亡。后来，该项目找到了变通方法，并在2025年某个时候回归。</p><p>Nitter的灵感来源——一个注重隐私的YouTube前端，也曾与大科技公司的律师发生冲突，于2023年6月面临YouTube发出的七天关闭要求。该项目一直坚持运营，该要求最终不了了之。</p><p>这不禁让人思考，此类举动是否只是为了胁迫开源项目屈服，而非执行规则。对这些公司而言，只要有丝毫理由，任何项目都值得提起诉讼。</p><p>目前的情况是，Nitter表示法律建议允许其继续运营，但并未透露该建议的具体内容，也未说明实例未来将如何运作。正式公告将为我们带来这些答案。</p><p>在我看来，X在2024年试图通过关闭这些项目所依赖的访问权限来扼杀它们，但没有成功。如今，在2026年，他们又试图通过派遣律师来达到目的。</p><p>鉴于X领导层的破坏性行为，我感觉他们不会轻易放弃，事情可能会升级。届时，我希望开源社区能站在Nitter这样的项目背后。</p><p>喜欢这次更新吗？支持独立的Linux新闻报道。</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。请帮助我们保持独立于大科技公司。成为Plus会员，享受无广告阅读，并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无需承诺</p><p>一个热爱开源软件、定制PC组装、赛车运动并探索这个世界无限可能的极客。</p><p>一位Clanker将Fedora与Windows 11进行对比，Fedora基本获胜。</p><p>Ikey Doherty与Omarchy：他为何构建Barney而非另一个发行版。</p><p>瑞士联邦政府正在用Debian替换3000台电脑上的微软系统。</p><p>1Password刚刚向DHH的Omarchy承诺捐赠30万美元，其员工并不高兴。</p><p>好消息！CERN正在将超过2200个控制系统迁移到Debian 13。</p><p>成为更好的Linux用户</p><p>通过FOSS每周通讯，您可以学习有用的Linux技巧、发现应用程序、探索新的发行版，并随时了解Linux世界的最新动态。</p><p>太棒了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅It's FOSS。</p><p>您的链接已过期。</p><p>成功！请检查您的电子邮件以获取魔法登录链接。</p><p>成功！您的账单信息已</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/ubuntu-firmware-split-packages-24-04" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/nitter-returns-after-legal-troubles/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

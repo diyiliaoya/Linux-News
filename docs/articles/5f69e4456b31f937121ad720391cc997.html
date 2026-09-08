@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 24.04 拆分固件包以加快更新速度 — Linux 中文速报</title>
+<title>Ubuntu 26.10 每日构建 ISO 现已包含 Amd64-v3 安装程序 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -152,14 +152,14 @@
     <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Ubuntu 24.04 拆分固件包以加快更新速度</h1>
+  <h1>Ubuntu 26.10 每日构建 ISO 现已包含 Amd64-v3 安装程序</h1>
 
-  <div class="article-summary">Canonical 将原本在 Ubuntu 26.04 中引入的拆分 Linux 固件包反向移植到了 Ubuntu 24.04 LTS。现在，linux-firmware 包变成了一个元包，会拉取所有独立的固件子包。这些子包按硬件厂商划分，共 18 个，例如 linux-firmware-intel-wireless、linux-firmware-amd-graphics 等。此改动使得更新某个厂商的固件时无需再下载整个固件堆栈，从而显著减少下载量和更新频率。用户还可以卸载不需要的固件包以节省空间或增强安全性。Ubuntu 26.04 LTS 将正式采用此机制，而 24.04 用户现在也能提前受益。</div>
+  <div class="article-summary">Ubuntu 26.10 的每日构建版本现已包含 amd64-v3 安装程序，允许用户在安装时直接使用针对 CPU 优化的软件包，无需安装后手动配置。此前，Ubuntu 26.04 LTS 仍默认使用标准 amd64 (v1) 基线，但用户可在安装后手动转换。amd64-v3 是较新的 CPU 指令集基线，支持 AVX2、FMA 等特性，可提升计算密集型任务的性能。大多数 2015 年后的 Intel 和 AMD 芯片均兼容。Canonical 尚未宣布 v3 ISO 将成为 26.10 的官方下载，但此举有助于收集测试反馈，为未来可能的基线升级提供参考。</div>
 
-  <div class="article-body"><p>Ubuntu 24.04 拆分固件包以加快更新速度 - OMG! Ubuntu</p><p>固件包变得更小了，因为 Canonical 已将它在 26.04 中引入的拆分 Linux 固件包反向移植到了 24.04。</p><p>为了实现这一改动，linux-firmware 包现在是一个元包，它会拉取所有单独的固件包。从功能上讲，没有任何变化；所有安装都会获得完整的固件集合。</p><p>发行版使用的二进制 blob 现在被拆分到 18 个特定于厂商的子包中：</p><p>linux-firmware-realtek</p><p>linux-firmware-qualcomm-wireless</p><p>linux-firmware-qualcomm-misc</p><p>linux-firmware-qualcomm-graphics</p><p>linux-firmware-qlogic</p><p>linux-firmware-nvidia-graphics</p><p>linux-firmware-netronome</p><p>linux-firmware-mellanox-spectrum</p><p>linux-firmware-mediatek</p><p>linux-firmware-marvell-wireless</p><p>linux-firmware-marvell-prestera</p><p>linux-firmware-intel-wireless</p><p>linux-firmware-intel-misc</p><p>linux-firmware-intel-graphics</p><p>linux-firmware-broadcom-wireless</p><p>linux-firmware-amd-misc</p><p>linux-firmware-amd-graphics</p><p>一些非默认固件已经可以作为子包安装，例如 linux-firmware-xilinx-vcu，因此这些包不会改变（但也不会被纳入新的元包中）。</p><p>linux-firmware 包原本是一组来自硬件厂商的、大多是闭源的二进制 blob，网卡、CPU 和 DSP 等设备在 Linux 上运行（或达到最佳性能）时通常依赖这些 blob。</p><p>所有相同的固件仍然可用，但由于元包现在分别拉取每个包，因此当某一组固件有小的安全补丁或错误修复时，更新 linux-firmware 不再需要每次都下载整个固件堆栈。</p><p>例如，如果对 Intel 无线 blob 做了一个微小的更改，只需更新 linux-firmware-intel-wireless 包即可。</p><p>而且，由于厂商固件包之间互不依赖，你现在可以删除任何不需要的包——但不要过于草率地删除，因为你可能会升级 PC 组件或插入需要某些固件的设备。</p><p>如果你发现空间变得紧张，或者想保持系统安全性，你可以卸载不需要的固件。例如，linux-firmware-netronome 主要在企业级和数据中心环境中受益，因此可以运行：</p><p>sudo apt remove linux-firmware-netronome</p><p>Canonical 的工程师在 2025 年开始研究改进 Linux 固件分发方式的方法，目的是减少用户的总体下载量（和下载频率），同时减轻其自身更新基础设施的负载。</p><p>Ubuntu 26.04 LTS 将切换到 Linux 固件子包。现在，使用上一个 LTS 版本的用户（该版本通过 Ubuntu Pro 支持安全更新至 2034 年）也能从中受益。</p></div>
+  <div class="article-body"><p>Ubuntu 26.10 每日构建版本现已包含 amd64-v3 安装程序，让您从一开始就能尝试针对 CPU 优化的软件包，无需安装后进行额外配置。</p><p>去年，Ubuntu 开始以可选归档的形式构建 amd64v3 软件包，但 Ubuntu 26.04 LTS 仍默认使用标准 amd64 (v1) 基线（由于过程中出现了一些小问题，这一决定是明智的）。</p><p>Ubuntu 26.04 LTS 可以在安装后手动转换为 amd64-v3 软件包集，但 Ubuntu 26.10 每日构建版本突然提供内置支持，省去了这一麻烦：它从一开始就引导并安装 v3 优化的软件包。</p><p>什么是 Amd64-v3？</p><p>Amd64-v3（又称 x86-64-v3）是 CPU 指令集支持的新基线，包括 AVX2、FMA、BMI1/2 等特性，这些特性可提升计算密集型工作负载的性能（但对基本的电子邮件和网页浏览影响不大）。</p><p>大多数 2015 年后生产的 Intel 和 AMD 芯片均兼容 v3，但也有一些例外（低端和嵌入式芯片缺乏 AVX2）。运行针对 CPU 优化的 Ubuntu 软件包，可能意味着特定软件能获得更好的体验。</p><p>运行以下命令可检查您的 CPU 是否支持 x86-64-v3：</p><p>/lib64/ld-linux-x86-64.so.2 --help | grep x86-64</p><p>如果不支持，也不必担心；默认 ISO 仍可正常工作（较旧且不支持的 CPU 无法运行 v3 软件包，但 v3 CPU 可以运行 v2 和 v1 软件包）。</p><p>Red Hat Enterprise Linux 10 已要求支持 x86-64-v3，而 openSUSE Leap 16 提供 v2 支持，但 Ubuntu 在提高 CPU 基线方面一直较为谨慎。Canonical 决定将 v3 作为可选测试（而非强制更改）的做法受到了欢迎。</p><p>不过，Canonical 尚未表示 amd64-v3 ISO 将成为 26.10 的官方下载版本，而随着该版本（代号“Stonking Stingray”）临近发布，本周期内不太可能进行此类切换。</p><p>提供替代安装程序无疑是增加 Ubuntu v3 基线体验测试和反馈的务实方式。这些反馈必将为未来可能的切换决策提供参考。</p><p>您可以从以下位置下载最新的 Ubuntu 26.10 每日实时 ISO：</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/ubuntu-firmware-split-packages-24-04" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/ubuntu-amd64v3-iso-downloads" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

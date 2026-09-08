@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 24.04 拆分固件包以加快更新速度 — Linux 中文速报</title>
+<title>神秘x86 CPU已具备APX、x86S，英特尔在无传统x86方向上止步之处 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 24.04 拆分固件包以加快更新速度</h1>
+  <h1>神秘x86 CPU已具备APX、x86S，英特尔在无传统x86方向上止步之处</h1>
 
-  <div class="article-summary">Canonical 将原本在 Ubuntu 26.04 中引入的拆分 Linux 固件包反向移植到了 Ubuntu 24.04 LTS。现在，linux-firmware 包变成了一个元包，会拉取所有独立的固件子包。这些子包按硬件厂商划分，共 18 个，例如 linux-firmware-intel-wireless、linux-firmware-amd-graphics 等。此改动使得更新某个厂商的固件时无需再下载整个固件堆栈，从而显著减少下载量和更新频率。用户还可以卸载不需要的固件包以节省空间或增强安全性。Ubuntu 26.04 LTS 将正式采用此机制，而 24.04 用户现在也能提前受益。</div>
+  <div class="article-summary">一家非AMD、非英特尔的实体企业正在开发一种神秘的x86 CPU实现，其已超越英特尔当前AMX能力，支持16和32 tile AMX，并披露了APX、FRED及x86S等新特性。该实现仅支持PM64和PML5，已大规模使用超过一年。英特尔曾于2024年放弃x86S规范，但该神秘组织继续推进。业界猜测可能涉及兆芯、海光或初创公司RosaicLabs。</div>
 
-  <div class="article-body"><p>Ubuntu 24.04 拆分固件包以加快更新速度 - OMG! Ubuntu</p><p>固件包变得更小了，因为 Canonical 已将它在 26.04 中引入的拆分 Linux 固件包反向移植到了 24.04。</p><p>为了实现这一改动，linux-firmware 包现在是一个元包，它会拉取所有单独的固件包。从功能上讲，没有任何变化；所有安装都会获得完整的固件集合。</p><p>发行版使用的二进制 blob 现在被拆分到 18 个特定于厂商的子包中：</p><p>linux-firmware-realtek</p><p>linux-firmware-qualcomm-wireless</p><p>linux-firmware-qualcomm-misc</p><p>linux-firmware-qualcomm-graphics</p><p>linux-firmware-qlogic</p><p>linux-firmware-nvidia-graphics</p><p>linux-firmware-netronome</p><p>linux-firmware-mellanox-spectrum</p><p>linux-firmware-mediatek</p><p>linux-firmware-marvell-wireless</p><p>linux-firmware-marvell-prestera</p><p>linux-firmware-intel-wireless</p><p>linux-firmware-intel-misc</p><p>linux-firmware-intel-graphics</p><p>linux-firmware-broadcom-wireless</p><p>linux-firmware-amd-misc</p><p>linux-firmware-amd-graphics</p><p>一些非默认固件已经可以作为子包安装，例如 linux-firmware-xilinx-vcu，因此这些包不会改变（但也不会被纳入新的元包中）。</p><p>linux-firmware 包原本是一组来自硬件厂商的、大多是闭源的二进制 blob，网卡、CPU 和 DSP 等设备在 Linux 上运行（或达到最佳性能）时通常依赖这些 blob。</p><p>所有相同的固件仍然可用，但由于元包现在分别拉取每个包，因此当某一组固件有小的安全补丁或错误修复时，更新 linux-firmware 不再需要每次都下载整个固件堆栈。</p><p>例如，如果对 Intel 无线 blob 做了一个微小的更改，只需更新 linux-firmware-intel-wireless 包即可。</p><p>而且，由于厂商固件包之间互不依赖，你现在可以删除任何不需要的包——但不要过于草率地删除，因为你可能会升级 PC 组件或插入需要某些固件的设备。</p><p>如果你发现空间变得紧张，或者想保持系统安全性，你可以卸载不需要的固件。例如，linux-firmware-netronome 主要在企业级和数据中心环境中受益，因此可以运行：</p><p>sudo apt remove linux-firmware-netronome</p><p>Canonical 的工程师在 2025 年开始研究改进 Linux 固件分发方式的方法，目的是减少用户的总体下载量（和下载频率），同时减轻其自身更新基础设施的负载。</p><p>Ubuntu 26.04 LTS 将切换到 Linux 固件子包。现在，使用上一个 LTS 版本的用户（该版本通过 Ubuntu Pro 支持安全更新至 2034 年）也能从中受益。</p></div>
+  <div class="article-body"><p>神秘x86 CPU已具备APX、x86S，英特尔在无传统x86方向上止步之处 - Phoronix</p><p>神秘x86 CPU已具备APX、x86S，英特尔在无传统x86方向上止步之处</p><p>2026年9月7日下午3:54（美国东部时间）</p><p>围绕一家非AMD和英特尔的企业实体所实现的x86实现，谜团愈发加深，该实现已带来一些非常引人入胜的变化，尽管它看似来自一家初创公司。除了已经超越英特尔当前在售Xeon CPU中AMX能力的16 tile和32 tile AMX实现外，今天还披露了关于高级性能扩展（APX）、灵活返回与事件传递（FRED）以及x86S的新信息，而x86S正是英特尔此前为清理x86包袱而停止推进的工作。</p><p>8月底，这家未知公司发布了最新的x86咨询，公开信息由x86专家Christian Ludloff代为传达。Christian Ludloff曾在谷歌、AMD、TI等公司工作多年，作为x86架构专家，并以其sandpile.org x86 CPU信息网站而闻名。</p><p>今天，Ludloff转达的最新消息出现在Linux内核邮件列表中，内容极其引人注目……FRED，这家未知公司全面采用。今天消息的一些关键要点：</p><p>“我被要求为一款仅支持PM64和PML5、并配备FRED和APX的x86实现记录x86行为，该实现已大规模使用超过一年。</p><p>经过二十多年的x86-64发展，传统模式（Legacy Mode）和兼容模式（Compatibility Mode）已完成了它们的使命；是时候抛弃它们带来的负担了。</p><p>五年前，英特尔发布了首个FRED规范，相关尘埃在2023年底和2024年初落定；英特尔刚刚出货了首批支持FRED的产品，AMD预计也将很快跟进。FRED对灵活返回和事件传递的清理是x86演进中的一个关键里程碑。</p><p>三年前，英特尔发布了首个APX规范和首个x86S规范。APX规范的尘埃在2024年底和2025年初落定；英特尔和AMD预计将在不久的将来最终出货其产品。另一方面，对于x86S规范，英特尔在2024年中放弃了。这被证明为时过早。其他人继续了这项工作。”</p><p>消息还继续指出了该未知组织对x86_64所做的根本性改变。简而言之，对他们来说，这是一个仅支持PM64和PML5的世界。帖子总结道：</p><p>“将你的复杂性迁移到x86软件模拟中。</p><p>拒绝x86的‘货物崇拜’。并收好你的胶带。”</p><p>这个新的x86_64 CPU实现背后是谁，仍然是个谜。如果是兆芯或海光这样的公司，那将是工程上非常重大的飞跃。可能性之一是RosaicLabs，这家初创公司据报道获得了英特尔的Atom处理器设计访问权。如果他们能在基于Atom的设计上实现16和32 tile AMX、APX、FRED、x86S以及其他工程壮举，那将非常大胆。这个x86谜团接下来会带来什么，值得关注。</p><p>Nouveau为HDMI 2.1 DSC做准备，AMD HDMI FreeSync修复进入Linux 7.4</p><p>InputPlumber 0.79增加对更多掌机的支持</p><p>Linux获得华硕ROG NVMe硬盘盒RGB灯效的反向工程驱动</p><p>Linux 7.3为Moxa PCIe多端口串口板引入8250_mxpcie驱动</p><p>RTL8723BS驱动继续主导Linux 7.3的staging区域活动</p><p>来自英特尔或AMD以外实体的另一份x86咨询</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动及其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>CERN在长期作为RHEL机构后，将工业计算机迁移至Debian</p><p>Asahi Linux现在正式支持App</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/ubuntu-firmware-split-packages-24-04" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/x86-CPU-With-APX-x86S" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
