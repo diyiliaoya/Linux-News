@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mozilla Firefox 154 进入公开测试阶段，期待新特性 — Linux 中文速报</title>
+<title>AI 生成了大量“丑陋”代码，但发现了加速 Linux 编译的主要瓶颈 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">Linux Today</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Mozilla Firefox 154 进入公开测试阶段，期待新特性</h1>
+  <h1>AI 生成了大量“丑陋”代码，但发现了加速 Linux 编译的主要瓶颈</h1>
 
-  <div class="article-summary">Mozilla Firefox 154 已进入公开测试阶段，为用户带来一系列新功能、浏览器改进和变更。此次更新预计将在稳定版发布前进行充分测试，旨在提升浏览体验和性能。具体包括界面优化、安全增强以及开发者工具升级等。用户可通过测试版提前体验这些变化，并反馈问题以帮助完善最终版本。</div>
+  <div class="article-summary">一位 ARM 工程师利用 AI/LLM 发现了显著加速 Linux 内核构建的方法。通过并行化内核构建过程中的多个单线程瓶颈，实现了全模块内核构建提速约 36%，增量构建提速高达 70%，noop 构建提速约 90%。该工程师承认 LLM 生成了大量“丑陋”代码，但经过人工审计和重写后，补丁已提交。涉及 Kbuild、kallsyms、modpost、objtool、mksysmap 和 Rust 构建系统等多个领域。</div>
 
-  <div class="article-body"><p>Mozilla Firefox 154 已进入公开测试阶段，带来了新功能、浏览器改进和变更，为即将到来的稳定版发布做准备。</p><p>该文章最初发布于 Linux Today。</p></div>
+  <div class="article-body"><p>一位 ARM Linux 工程师利用 AI/LLM 帮助发现了一些“显著加速”Linux 内核构建时间的改进。在此过程中，LLM 生成了“大量代码，其中大部分很丑陋”，但最终被用来通过在内核构建过程的不同领域实现更多任务并行化，从而找到了显著节省时间的方法。</p><p>ARM 工程师、资深 Linux 开发者 Lorenzo Stoakes 今天发布了这组 23 个补丁，旨在“显著加速内核构建”。从根本上说，这是为了解决内核构建过程中在单线程瓶颈上花费的大量时间。最终，他发现启用所有模块的内核构建速度提高了约 36%，增量内核构建速度提高了高达 70%，noop 构建速度提高了约 90%。</p><p>Lorenzo 指出，使用了一个未命名的大型语言模型（LLM）来发现这些瓶颈并解决它们，随后他亲自审计和评估了这些代码。Lorenzo 写道：</p><p>“LLM 首先用于确定瓶颈所在，然后找出改进方法。</p><p>它生成了大量代码，其中大部分很丑陋。</p><p>我广泛地审计并重写了其中许多代码，并大量编辑了提交信息、封面信和注释。</p><p>LLM 还协调了构建运行、测试、调试和分析。</p><p>我已手动检查了应用此系列补丁后生成的内核在构建和运行时的正确性。</p><p>性能改进也已手动验证。</p><p>由于广泛使用了 LLM，每个提交都带有 Assisted-by 标签。”</p><p>这些补丁致力于并行化许多单线程任务，并提高构建过程的效率。Kbuild、kallsyms、modpost、objtool、mksysmap 和 Rust 构建系统等领域都受到了这项工作影响。</p><p>最终，在各种硬件和不同内核配置下，构建时间的改进都非常显著：</p><p>更多基准测试结果和详细信息可在此处查看。一旦经过审查，希望这项工作能进入主线 Linux 内核，从而大幅加快内核构建时间。有关不同 CPU 的 Linux 内核构建时间参考，可访问此基准测试页面，以获取一些当前的通用数据。</p><p>Linux 7.3-rc2 在又一个繁忙周后发布</p><p>Linux 7.3-rc2 调度器修复：混合 CPU 上的缓存感知负载调度不匹配问题</p><p>Linux 7.3-rc2 将更多 kmalloc 调用转换为更优的 kmalloc_obj</p><p>第 21 版补丁：让 Linux 异步关闭设备</p><p>Linux 7.3 现在在存在 Rust 支持时默认禁用 RandStruct 安全特性</p><p>Greg KH 预告 Linux 7.3 内核周期将因持续的 AI 变动而“艰难”</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>CERN 在长期使用 RHEL 后转向 Debian 用于工业计算机</p><p>Asahi Linux 现在正式支持 Apple M3 Mac——但有注意事项</p><p>前英特尔工程师、Clear Linux 架构师之一正在创建新发行版</p><p>Ikey Doherty 计划展示如何“正确地”构建现代 Linux 发行版</p><p>NetworkManager 通过诱骗 AI 代理添加金丝雀来执行 AI 政策</p><p>Servo 0.5 发布：DuckDuckGo 正确渲染，文本渲染速度提升高达 10 倍</p><p>AMD 致力于“将 Rust 深入 GPU 栈”</p><p>WinBtrfs 1.10 发布，包含两年来的 Btrfs Windows 改进</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/mozilla-firefox-154-enters-public-beta-testing-heres-what-to-expect/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/AI-To-Faster-Linux-Kernel-Comp" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

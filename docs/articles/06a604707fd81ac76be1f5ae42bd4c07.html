@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mozilla Firefox 154 进入公开测试阶段，期待新特性 — Linux 中文速报</title>
+<title>DLSS5VKLayer 为原生 Linux 游戏及 Steam Play 接入 NVIDIA DLSS 5 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">Linux Today</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Mozilla Firefox 154 进入公开测试阶段，期待新特性</h1>
+  <h1>DLSS5VKLayer 为原生 Linux 游戏及 Steam Play 接入 NVIDIA DLSS 5</h1>
 
-  <div class="article-summary">Mozilla Firefox 154 已进入公开测试阶段，为用户带来一系列新功能、浏览器改进和变更。此次更新预计将在稳定版发布前进行充分测试，旨在提升浏览体验和性能。具体包括界面优化、安全增强以及开发者工具升级等。用户可通过测试版提前体验这些变化，并反馈问题以帮助完善最终版本。</div>
+  <div class="article-summary">DLSS5VKLayer 是一个新的开源 Linux Vulkan 层，旨在为原生 Linux 游戏和 Steam Play (Proton) 下的 Windows 游戏提供实验性的 NVIDIA DLSS 5 支持。它通过 Wine/Proton 运行 Windows 可执行文件，并利用 IPC 传递渲染帧，再返回经 DLSS 5 处理后的帧。该层使用 NVIDIA Optical Flow 生成矢量以消除伪影，并可选支持 NVIDIA Smooth Motion。项目提供 Qt 图形界面和命令行工具，但需要用户自行获取 NVIDIA NGX DLL，并依赖官方驱动。</div>
 
-  <div class="article-body"><p>Mozilla Firefox 154 已进入公开测试阶段，带来了新功能、浏览器改进和变更，为即将到来的稳定版发布做准备。</p><p>该文章最初发布于 Linux Today。</p></div>
+  <div class="article-body"><p>DLSS5VKLayer 为原生 Linux 游戏及 Steam Play 接入 NVIDIA DLSS 5 - Phoronix</p><p>DLSS5VKLayer 为原生 Linux 游戏及 Steam Play 接入 NVIDIA DLSS 5</p><p>2026年9月8日 下午3:31 EDT</p><p>对于那些希望在 Linux 上使用 NVIDIA DLSS 5 的用户，一个新的有趣开源项目是 DLSS5VKLayer。DLSS5VKLayer 是一个 Linux Vulkan 层，既适用于原生 Linux 游戏，也适用于 Steam Play (Proton) 下的 Windows 游戏，提供实验性的 DLSS 5 支持。</p><p>DLSS5VKLayer 采用了一种有趣的方法：它在 Wine/Proton 下运行一个 Windows 可执行文件，并通过这个隐式 Vulkan 层，利用 IPC 将渲染帧传递给它，然后将经过 DLSS 5 处理后的帧返回给 Vulkan 交换链。DLSS5VKLayer 使用 NVIDIA Optical Flow 进行矢量生成，以消除注入 DLSS 5 后出现的闪烁、抖动等类似伪影。DLSS5VKLayer 还可以选择性地使用 NVIDIA Smooth Motion 技术。</p><p>Windows NGX 神经渲染辅助程序可以在 Wine 下运行，或者使用自定义的 Proton 兼容工具。该项目提供了一个基于 Qt 的图形界面来控制体验，同时也有一个命令行辅助工具。</p><p>这仍然要求用户使用 NVIDIA GPU 并运行其官方图形驱动程序。此外，用户需要从 NVIDIA Windows 软件中获取 NGX DLL，并在设置过程中自行提供。</p><p>想了解更多关于 DLSS5VKLayer 的信息，可以访问该项目的 GitHub 仓库。需要提醒的是，该项目公开承认在创建过程中使用了本地运行的 Qwen 3.8 Flash Next 作为 AI/LLM 辅助工具。</p><p>NVIDIA 为开源 Nova 发布 vGPU Manager 和 VFIO 变体驱动</p><p>NVIDIA 以 129.3 亿美元收购 Hugging Face</p><p>NVIDIA 发布 Linux 调度器补丁，进一步提升 NVIDIA Vera 的 SMT 性能</p><p>NVIDIA VA-API 驱动 0.0.18 带来更多修复，Chrome/Chromium 在 Direct 后端上解码</p><p>GeForce NOW Linux 原生应用结束 Beta 测试</p><p>NVIDIA 610.57.04 Linux 驱动带来大量修复</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。他还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>CERN 长期使用 RHEL 后，将工业计算机迁移至 Debian</p><p>Asahi Linux 现已正式支持 Apple M3 Mac，但存在一些注意事项</p><p>前 Intel 工程师、Clear Linux 架构师之一将创建新发行版</p><p>Ikey Doherty 计划展示如何“正确地”构建现代 Linux 发行版</p><p>NetworkManager 通过向 AI 代理添加金丝雀来强制实施 AI 政策</p><p>Servo 0.5 发布：DuckDuckGo 正确渲染，文本渲染速度提升高达 10 倍</p><p>AMD 致力于“将 Rust 深入 GPU 技术栈”</p><p>WinBtrfs 1.10 发布，包含两年来的 Btrfs Windows 改进</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/mozilla-firefox-154-enters-public-beta-testing-heres-what-to-expect/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/DLSS5VKLayer" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

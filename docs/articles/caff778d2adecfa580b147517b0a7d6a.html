@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mozilla Firefox 154 进入公开测试阶段，期待新特性 — Linux 中文速报</title>
+<title>KDE的KWin合并Wayland提交时序协议支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">Linux Today</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Mozilla Firefox 154 进入公开测试阶段，期待新特性</h1>
+  <h1>KDE的KWin合并Wayland提交时序协议支持</h1>
 
-  <div class="article-summary">Mozilla Firefox 154 已进入公开测试阶段，为用户带来一系列新功能、浏览器改进和变更。此次更新预计将在稳定版发布前进行充分测试，旨在提升浏览体验和性能。具体包括界面优化、安全增强以及开发者工具升级等。用户可通过测试版提前体验这些变化，并反馈问题以帮助完善最终版本。</div>
+  <div class="article-summary">KDE的KWin合成器今日合并了Wayland提交时序协议支持，该协议对视频播放和依赖Adaptive-Sync/FreeSync的游戏玩家至关重要。此功能由KDE开发者Xaver Hugl半年前提出，经过大量工作和测试后成功合并，恰逢KDE Plasma 6.8 Beta 1即将发布。该协议允许应用程序设置合成器应用提交的最早时间，有助于视频播放器提前调度帧或更好地控制自适应同步下的刷新率。Mesa Vulkan驱动和VKD3D-Proton等也将受益于此。</div>
 
-  <div class="article-body"><p>Mozilla Firefox 154 已进入公开测试阶段，带来了新功能、浏览器改进和变更，为即将到来的稳定版发布做准备。</p><p>该文章最初发布于 Linux Today。</p></div>
+  <div class="article-body"><p>KDE的KWin合并Wayland提交时序协议支持 - Phoronix</p><p>KDE的KWin合并Wayland提交时序协议支持</p><p>2026年9月8日，美国东部时间下午12:55。</p><p>今天合并到最新KDE KWin合成器开发代码中的是对Wayland重要提交时序协议的支持，该协议对视频播放以及依赖Adaptive-Sync/FreeSync的游戏玩家非常有用。</p><p>半年前，KDE开发者Xaver Hugl提出了为KWin提供提交时序协议支持的拉取请求。经过大量工作和测试，该代码今天合并到了KWin中。这个时机也非常重要，因为KDE Plasma 6.8 Beta 1预计于9月10日发布，这也标志着Plasma 6.8分支的创建。因此，该功能正好赶上了下个月Plasma 6.8稳定版的发布。</p><p>Hugl在提交时序协议中解释道：</p><p>&quot;该协议允许应用程序设置合成器应应用提交的最早时间。例如，视频播放器可以利用它提前调度帧，或者更好地控制自适应同步下的刷新率。&quot;</p><p>反过来，Wayland提交时序支持是Mesa Vulkan驱动支持VK_EXT_present_timing扩展所必需的，并且对于Steam Play中的VKD3D-Proton等也很重要。</p><p>该协议围绕为Wayland表面更新添加时间约束。自去年GNOME已经支持提交时序协议以来，该协议在Wayland Protocols 1.38中引入。</p><p>很高兴看到这一令人兴奋的最新添加及时赶上了超级多事的KDE Plasma 6.8版本。</p><p>KDE Plasma 6.8引入类似Windows的自动滚动，降低Breeze主题的vRAM使用量</p><p>KDE Plasma 6.8引入Dwell Clicker支持以改善Wayland上的可访问性</p><p>KDE Linux现在为所有用户文件提供自动Btrfs快照</p><p>KDE Plasma 6.8提高某些全屏内容的性能与效率</p><p>Union QtWidgets发布初始版本以推进KDE Plasma的Union</p><p>KDE远程桌面体验改善以缩小X11与Wayland之间的差距</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。您可以通过以下方式关注他。</p><p>CERN将工业计算机从长期RHEL机构迁移至Debian</p><p>Asahi Linux现在正式支持Apple M3 Mac - 但有注意事项</p><p>前英特尔工程师、Clear Linux架构师之一正在创建新发行版</p><p>Ikey Doherty计划展示如何&quot;正确&quot;构建现代Linux发行版</p><p>NetworkManager通过欺骗AI代理添加金丝雀来执行AI政策</p><p>Servo 0.5发布：DuckDuckGo正确渲染，文本渲染速度提升高达10倍</p><p>AMD致力于&quot;将Rust深入GPU栈&quot;</p><p>WinBtrfs 1.10发布，带来两年Windows上Btrfs的改进</p><p>虽然拥有无广告浏览，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/mozilla-firefox-154-enters-public-beta-testing-heres-what-to-expect/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/KDE-KWin-Wayland-Commit-Timing" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

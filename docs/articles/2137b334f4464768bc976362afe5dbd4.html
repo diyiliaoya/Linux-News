@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mozilla Firefox 154 进入公开测试阶段，期待新特性 — Linux 中文速报</title>
+<title>Linux内核计划移除约5.5万行旧ARM平台代码 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">Linux Today</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Mozilla Firefox 154 进入公开测试阶段，期待新特性</h1>
+  <h1>Linux内核计划移除约5.5万行旧ARM平台代码</h1>
 
-  <div class="article-summary">Mozilla Firefox 154 已进入公开测试阶段，为用户带来一系列新功能、浏览器改进和变更。此次更新预计将在稳定版发布前进行充分测试，旨在提升浏览体验和性能。具体包括界面优化、安全增强以及开发者工具升级等。用户可通过测试版提前体验这些变化，并反馈问题以帮助完善最终版本。</div>
+  <div class="article-summary">Linux内核计划在接下来的一个或两个内核周期内，移除大量已弃用的旧32位ARM平台代码，涉及约5.5万行代码和设备树文件。这些代码已成为上游内核开发人员的负担，阻碍了代码清理和新功能的开发。Arnd Bergmann已提交包含13个补丁的补丁集，移除包括SA1100、Footbridge、OMAP24xx等在内的多个平台。移除工作可能推迟到Linux 7.5，以便为仍有需求的用户提供申诉时间，并避开今年的长期支持版本。</div>
 
-  <div class="article-body"><p>Mozilla Firefox 154 已进入公开测试阶段，带来了新功能、浏览器改进和变更，为即将到来的稳定版发布做准备。</p><p>该文章最初发布于 Linux Today。</p></div>
+  <div class="article-body"><p>Linux内核计划移除约5.5万行旧ARM平台代码 - Phoronix</p><p>Linux内核计划移除约5.5万行旧ARM平台代码</p><p>发布于2026年9月8日美国东部时间下午12:06。</p><p>在当前Linux 7.3内核中，许多较旧的32位ARM平台已被弃用，进而导致数百个仅与这些过时ARM平台相关的驱动程序被孤立。移除这些已弃用代码的计划将在接下来的一个或两个内核周期内进行。</p><p>大量旧的32位ARM代码在被弃用后正面临删除。这主要是因为许多旧内核代码已成为上游内核开发人员的负担，阻碍了进一步的代码清理和新内核功能的交付。尽管在2026年及以后，仍有人运行非常过时的32位ARM平台并同时使用主线上游Linux内核版本的可能性微乎其微。</p><p>Arnd Bergmann今天发送了一组包含13个补丁的补丁集，用于移除已弃用的ARM平台，从而释放超过5.5万行代码和设备树文件。之后，更多孤立的驱动程序可以被移除，以实现更大的代码节省。</p><p>被移除的ARM平台包括SA1100、Footbridge、RISCPC、Orion / Dove / MV78xx0、OMAP24xx、i.MX31、无MMU的i.MX目标、LPC18xx、STM32f4/f7/h7微控制器、Versatile MPS2、AT91 SAMV7、Axxia以及传统的PXA板级文件。</p><p>尽管这些补丁今天已发送，并可能被合并到即将到来的Linux 7.4内核中，但Arnd Bergmann倾向于在Linux 7.5中全部移除，以保持依赖关系的简单性，并避开今年的长期支持（LTS）内核版本。将移除推迟到Linux 7.5也为任何仍有需求的用户提供了更多时间，以论证保留这些待移除目标的理由。</p><p>Linux 7.3弃用许多较旧的32位ARM平台，孤立数百个驱动程序</p><p>ARM64 BBML3功能随Linux 7.3就绪，NVIDIA Olympus变通方案</p><p>高通发布Linux补丁支持Kuno SoC：2026年的Cortex-A7平台</p><p>Linux WMI驱动程序准备支持基于ACPI的ARM64笔记本电脑</p><p>Arm Core本地加速器驱动程序发布，作为加速器的通用接口</p><p>Linux计划在2027年初退役一批旧ARM平台</p><p>Michael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动程序及其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发人员。可以通过以下方式关注他。</p><p>CERN在长期使用RHEL后，将工业计算机过渡到Debian</p><p>Asahi Linux现已正式支持Apple M3 Macs - 但存在一些注意事项</p><p>前英特尔工程师，曾是Clear Linux架构师之一，正在启动一个新的发行版</p><p>Ikey Doherty计划展示如何“正确地”构建现代Linux发行版</p><p>NetworkManager致力于通过欺骗AI代理添加金丝雀来执行AI政策</p><p>Servo 0.5发布：DuckDuckGo正确渲染，文本渲染速度提升高达10倍</p><p>AMD致力于“将Rust深入GPU堆栈”</p><p>WinBtrfs 1.10发布，包含两年来的Btrfs Windows改进</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/mozilla-firefox-154-enters-public-beta-testing-heres-what-to-expect/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-Dropping-Old-ARM-Ahead" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
