@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BSD发布：NetBSD 9.5 — Linux 中文速报</title>
+<title>XWayland 26.1 RC2 发布测试，带来更多修复 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>BSD发布：NetBSD 9.5</h1>
+  <h1>XWayland 26.1 RC2 发布测试，带来更多修复</h1>
 
-  <div class="article-summary">NetBSD项目宣布了NetBSD 9.x系列的第五个也是最后一个更新版本9.5。该版本标志着netbsd-9稳定分支的终止，此后该分支将不再接收安全更新。项目强烈建议生产环境中的用户迁移到更新的版本系列，如netbsd-11或netbsd-10。9.5版本包含系统改进和硬件支持更新，包括对aarch64架构的线程本地存储修复、x86平台MSI/MSI-X配置修复、新增手册页、ACPI亮度控制修复，以及对多种USB适配器的支持。</div>
+  <div class="article-summary">XWayland 26.1 第二个候选版本 RC2 现已发布，包含多项 XKB 修复、损坏跟踪改进、X Input 字节交换调整等。该版本是自 2024 年 XWayland 24.1 以来首个重要更新，提供更好的 rootful 实现、多席位兼容性、新 Wayland 协议支持及 RandR 模拟改进，并移除了 EGLStream 支持。</div>
 
-  <div class="article-body"><p>BSD发布：NetBSD 9.5（DistroWatch.com新闻）</p><p>项目已宣布NetBSD 9.x系列的第五个也是最终更新版本。NetBSD 9系列将不再接收安全更新。</p><p>“宣布NetBSD 9.5。注意：这将是netbsd-9稳定分支的最终版本，也标志着该分支的支持终止。此后将不再对此分支进行安全补丁更新！在生产环境中运行netbsd-9的用户强烈建议迁移到更新的版本系列，例如netbsd-11或netbsd-10。自9.4以来的变更：系统改进和硬件支持——build.sh——针对更新的编译器和非NetBSD平台的各种工具构建修复；aarch64——修复了线程本地存储支持；x86——修复了某些机器上的MSI/MSI-X配置；mbsnrtowcs(3)、wcsnrtombs(3)——新增手册页；acpiout(4)——修复了某些机器上的显示亮度控制；eap(4)——恢复了netbsd-7中支持的完整硬件编码集；uftdi(4)——新增对一系列Brainboxes USB转串口适配器的支持；urtwn(4)——新增对Mercusys MW150USV2 USB WiFi适配器的支持；urtwn(4)——新增对华硕USB-N10 Nano B1 WiFi适配器的支持；viaide(4)——对多个控制器的支持进行了多项改进。”</p><p>更多详细信息可在相关新闻和发布中找到。</p><p>近期相关新闻和发布：</p><p>BSD发布：NetBSD 9.5</p><p>BSD发布：NetBSD 11.0</p><p>开发版发布：NetBSD 11.0 RC3</p><p>开发版发布：NetBSD 11.0 RC1</p><p>BSD发布：NetBSD 10.1</p><p>BSD发布：NetBSD 9.4</p><p>NetBSD是一个免费、安全且高度可移植的类Unix开源操作系统，支持多种平台，从64位AlphaServer和桌面系统到手持和嵌入式设备。其简洁的设计和先进的功能使其在生产和研究环境中表现出色，并且由用户支持，提供完整源代码。许多应用程序可通过NetBSD软件包集合轻松获取。</p><p>https://www.netbsd.org/</p><p>https://www.netbsd.org/MailingLists/</p><p>替代用户论坛</p><p>https://www.netbsd.org/Documentation/</p><p>https://www.netbsd.org/mirrors/#iso</p><p>https://www.netbsd.org/mir</p></div>
+  <div class="article-body"><p>在上个月 XWayland 26.1 首个候选版本发布并带来众多新功能之后，第二个候选版本现已推出，包含大量修复。</p><p>XWayland 26.1 正蓄势成为一次重大发布，这是自 2024 年 XWayland 24.1 首次亮相以来首个被标记的重要更新。XWayland 26.1 提供了更好的 rootful 实现、与 X Input 2 的多席位兼容性、对新 Wayland 协议的支持、更好的 Resize and Rotate（“RandR”）模拟，以及许多其他改进。它还移除了对 EGLStream 的支持。</p><p>在今天的 XWayland 26.1 RC2 版本中，包含了多项 XKB 修复、损坏跟踪改进、X Input 的字节交换更改，以及为本候选版本贡献补丁的三位开发者带来的其他修复。</p><p>有关 XWayland 26.1 RC2 版本的下载和更多详细信息，请访问 xorg 邮件列表。</p><p>X.Org Server 26.1 也正在向发布迈进，这将是自 xorg-server 21.1 稳定系列首次亮相以来更大的一次更新。</p><p>Wayland 被发现“本质上比 X11 更快，但不一定更高效”</p><p>Denial WM：直接嵌入 Flutter 的新 Wayland 合成器</p><p>Wayfire Wayland 合成器即将发布 v1.0 版本</p><p>Hyprland 0.56 发布，为这款 Wayland 合成器带来许多增强</p><p>Wayland 1.26 发布，带来新的指针 warp 事件</p><p>Weston 16.0 合成器发布，带来 HDR 改进和 Vulkan 修复</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>CERN 在长期作为 RHEL 机构后，正将工业计算机迁移至 Debian</p><p>Asahi Linux 现已正式支持 Apple M3 Mac——但附带条件</p><p>Ikey Doherty 计划展示如何“正确”构建现代 Linux 发行版</p><p>NetworkManager 致力于通过诱骗 AI 代理添加金丝雀来执行 AI 政策</p><p>AMD 致力于“将 Rust 深入推入 GPU 栈”</p><p>WinBtrfs 1.10 发布，为 Windows 上的 Btrfs 带来两年积累的改进</p><p>Wine 11.17 发布，初步支持显示模式模拟</p><p>NVIDIA 为开源 Nova 发布 vGPU Manager 和 VFIO 变体驱动</p><p>同时享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026，保留所有权利。</p><p>所有使用的商标均为其各自所有者的财产。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12947" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/XWayland-26.1-RC2" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BSD发布：NetBSD 9.5 — Linux 中文速报</title>
+<title>Broadcom 关闭 VDDK 公开访问，加强对 VMware 的控制 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>BSD发布：NetBSD 9.5</h1>
+  <h1>Broadcom 关闭 VDDK 公开访问，加强对 VMware 的控制</h1>
 
-  <div class="article-summary">NetBSD项目宣布了NetBSD 9.x系列的第五个也是最后一个更新版本9.5。该版本标志着netbsd-9稳定分支的终止，此后该分支将不再接收安全更新。项目强烈建议生产环境中的用户迁移到更新的版本系列，如netbsd-11或netbsd-10。9.5版本包含系统改进和硬件支持更新，包括对aarch64架构的线程本地存储修复、x86平台MSI/MSI-X配置修复、新增手册页、ACPI亮度控制修复，以及对多种USB适配器的支持。</div>
+  <div class="article-summary">Broadcom 悄然下架了 VMware VDDK 的公开下载页面，导致依赖该工具进行备份和无代理迁移的用户无法获取新副本。现有副本仍可使用，但 Red Hat、Microsoft Azure Migrate 等均受影响，用户被建议联系 Broadcom 支持或转向授权合作伙伴方案。此举被视为 Broadcom 收购 VMware 后收紧控制、推动订阅制与捆绑销售策略的延续。</div>
 
-  <div class="article-body"><p>BSD发布：NetBSD 9.5（DistroWatch.com新闻）</p><p>项目已宣布NetBSD 9.x系列的第五个也是最终更新版本。NetBSD 9系列将不再接收安全更新。</p><p>“宣布NetBSD 9.5。注意：这将是netbsd-9稳定分支的最终版本，也标志着该分支的支持终止。此后将不再对此分支进行安全补丁更新！在生产环境中运行netbsd-9的用户强烈建议迁移到更新的版本系列，例如netbsd-11或netbsd-10。自9.4以来的变更：系统改进和硬件支持——build.sh——针对更新的编译器和非NetBSD平台的各种工具构建修复；aarch64——修复了线程本地存储支持；x86——修复了某些机器上的MSI/MSI-X配置；mbsnrtowcs(3)、wcsnrtombs(3)——新增手册页；acpiout(4)——修复了某些机器上的显示亮度控制；eap(4)——恢复了netbsd-7中支持的完整硬件编码集；uftdi(4)——新增对一系列Brainboxes USB转串口适配器的支持；urtwn(4)——新增对Mercusys MW150USV2 USB WiFi适配器的支持；urtwn(4)——新增对华硕USB-N10 Nano B1 WiFi适配器的支持；viaide(4)——对多个控制器的支持进行了多项改进。”</p><p>更多详细信息可在相关新闻和发布中找到。</p><p>近期相关新闻和发布：</p><p>BSD发布：NetBSD 9.5</p><p>BSD发布：NetBSD 11.0</p><p>开发版发布：NetBSD 11.0 RC3</p><p>开发版发布：NetBSD 11.0 RC1</p><p>BSD发布：NetBSD 10.1</p><p>BSD发布：NetBSD 9.4</p><p>NetBSD是一个免费、安全且高度可移植的类Unix开源操作系统，支持多种平台，从64位AlphaServer和桌面系统到手持和嵌入式设备。其简洁的设计和先进的功能使其在生产和研究环境中表现出色，并且由用户支持，提供完整源代码。许多应用程序可通过NetBSD软件包集合轻松获取。</p><p>https://www.netbsd.org/</p><p>https://www.netbsd.org/MailingLists/</p><p>替代用户论坛</p><p>https://www.netbsd.org/Documentation/</p><p>https://www.netbsd.org/mirrors/#iso</p><p>https://www.netbsd.org/mir</p></div>
+  <div class="article-body"><p>Broadcom 关闭 VDDK 公开访问，加强对 VMware 的控制</p><p>现有副本仍可使用；但获取新副本则是另一回事。他们似乎“忘记”宣布这一变化。</p><p>Broadcom 已下架 VMware 虚拟磁盘开发工具包（VDDK）的公开下载页面。VDDK 8 和 9 的页面，以及相关链接，现在均返回通用错误信息。</p><p>迄今为止，Broadcom 尚未发布任何正式公告。</p><p>此次移除发生在上个月的某个时候，因为 Reddit 和厂商论坛上的用户从 8 月中旬开始报告链接失效。Apache CloudStack 服务公司 ShapeBlue 于 8 月 25 日记录了这一变化。Red Hat 几天后也为其虚拟化迁移工具包发布了支持说明。</p><p>虽然现有副本仍可正常使用，这意味着当前使用 VDDK 的实现将继续照常工作，但那些想要获取新副本的人则无计可施。</p><p>为何引发争议？</p><p>VDDK 是一个库，允许备份和迁移工具从 hypervisor 外部读取 VMware 虚拟磁盘。VMware 将其作为易于访问的 SDK 提供给构建磁盘工具的客户，它很快成为映像级备份和无代理迁移的支柱。</p><p>但其许可证让事情变得复杂。该库不可再分发，因此没有 Linux 发行版提供它，也没有开源项目能将其捆绑给用户。所有人都必须指向 Broadcom 的下载页面，而该页面现已消失。</p><p>方便，不是对用户而言，而是对 VMware 的所有者 Broadcom 而言，它成功切断了许多人依赖的、用于迁移离开该平台的工具的公开访问。</p><p>陷入困境者</p><p>Microsoft 的 Azure Migrate 就是这种沉默造成混乱的一个例子。它告诉管理员从 Broadcom 门户下载 VDDK 8.0 或 9.0 以进行无代理迁移，而其中嵌入的链接指向一个无法访问的页面。</p><p>文档建议如果 VDDK 无法访问，则回退到基于代理的迁移。</p><p>Red Hat 也处于同样境地。其支持说明报告客户在尝试访问 VDDK 公开下载链接时遇到“404”错误，并进一步指出它无法托管或再分发该工具包。</p><p>他们引导客户联系 Broadcom 支持，同时 Red Hat 工程团队正在寻找替代的长期出路。</p><p>在 Reddit 上，一位用户 bobdrakken 联系了 Broadcom，他收到的回复应该能让你了解 Broadcom 的立场。👇</p><p>来自 Broadcom 客户关怀的问候。</p><p>为确保最高标准的安全性、可靠性和产品功能，虚拟磁盘开发工具包（VDDK）不再可供使用或下载。</p><p>Broadcom 继续积极维护各种 API 和 SDK，以使授权技术联盟合作伙伴能够构建经过验证和授权、可与 Broadcom 产品集成、互操作或兼容的备份和恢复软件解决方案。</p><p>对于所有备份和恢复需求，客户应依赖 Broadcom 授权技术联盟合作伙伴提供的此类解决方案。</p><p>希望这对您有帮助。</p><p>请联系您的合作伙伴以获得更好的协助，因为我们这边没有待处理的操作，因此此案例现在将被归档。</p><p>如果您有其他支持请求，我很乐意协助您。</p><p>此次下架符合自 Broadcom 于 2023 年 11 月以 690 亿美元收购 VMware 以来的一贯模式。几周内便进行了仅订阅制的全面改革，终止了永久许可证，并将独立产品并入捆绑包。</p><p>欧洲客户后来报告续订价格大幅上涨，足以引起行业机构的正式投诉。</p><p>并非完全是从 VMware 身上榨取最大价值；Broadcom 一路上也抛出了一些善意。</p><p>Workstation Pro 和 Fusion Pro 于 2024 年 11 月对所有人免费，并在 2025 年以有限形式回归。</p><p>每一步都可以单独辩护；许可证改革和价格变动是正常的商业行为。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12947" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/broadcom-removes-vmware-vddk-downloads/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

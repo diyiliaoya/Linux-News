@@ -10338,5 +10338,148 @@
     "title_zh": "Linux内核计划移除约5.5万行旧ARM平台代码",
     "summary_zh": "Linux内核计划在接下来的一个或两个内核周期内，移除大量已弃用的旧32位ARM平台代码，涉及约5.5万行代码和设备树文件。这些代码已成为上游内核开发人员的负担，阻碍了代码清理和新功能的开发。Arnd Bergmann已提交包含13个补丁的补丁集，移除包括SA1100、Footbridge、OMAP24xx等在内的多个平台。移除工作可能推迟到Linux 7.5，以便为仍有需求的用户提供申诉时间，并避开今年的长期支持版本。",
     "fulltext_zh": "Linux内核计划移除约5.5万行旧ARM平台代码 - Phoronix\n\nLinux内核计划移除约5.5万行旧ARM平台代码\n\n发布于2026年9月8日美国东部时间下午12:06。\n\n在当前Linux 7.3内核中，许多较旧的32位ARM平台已被弃用，进而导致数百个仅与这些过时ARM平台相关的驱动程序被孤立。移除这些已弃用代码的计划将在接下来的一个或两个内核周期内进行。\n\n大量旧的32位ARM代码在被弃用后正面临删除。这主要是因为许多旧内核代码已成为上游内核开发人员的负担，阻碍了进一步的代码清理和新内核功能的交付。尽管在2026年及以后，仍有人运行非常过时的32位ARM平台并同时使用主线上游Linux内核版本的可能性微乎其微。\n\nArnd Bergmann今天发送了一组包含13个补丁的补丁集，用于移除已弃用的ARM平台，从而释放超过5.5万行代码和设备树文件。之后，更多孤立的驱动程序可以被移除，以实现更大的代码节省。\n\n被移除的ARM平台包括SA1100、Footbridge、RISCPC、Orion / Dove / MV78xx0、OMAP24xx、i.MX31、无MMU的i.MX目标、LPC18xx、STM32f4/f7/h7微控制器、Versatile MPS2、AT91 SAMV7、Axxia以及传统的PXA板级文件。\n\n尽管这些补丁今天已发送，并可能被合并到即将到来的Linux 7.4内核中，但Arnd Bergmann倾向于在Linux 7.5中全部移除，以保持依赖关系的简单性，并避开今年的长期支持（LTS）内核版本。将移除推迟到Linux 7.5也为任何仍有需求的用户提供了更多时间，以论证保留这些待移除目标的理由。\n\nLinux 7.3弃用许多较旧的32位ARM平台，孤立数百个驱动程序\n\nARM64 BBML3功能随Linux 7.3就绪，NVIDIA Olympus变通方案\n\n高通发布Linux补丁支持Kuno SoC：2026年的Cortex-A7平台\n\nLinux WMI驱动程序准备支持基于ACPI的ARM64笔记本电脑\n\nArm Core本地加速器驱动程序发布，作为加速器的通用接口\n\nLinux计划在2027年初退役一批旧ARM平台\n\nMichael Larabel是Phoronix.com的主要作者，并于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持、Linux性能、图形驱动程序及其他主题。Michael还是Phoronix测试套件、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发人员。可以通过以下方式关注他。\n\nCERN在长期使用RHEL后，将工业计算机过渡到Debian\n\nAsahi Linux现已正式支持Apple M3 Macs - 但存在一些注意事项\n\n前英特尔工程师，曾是Clear Linux架构师之一，正在启动一个新的发行版\n\nIkey Doherty计划展示如何“正确地”构建现代Linux发行版\n\nNetworkManager致力于通过欺骗AI代理添加金丝雀来执行AI政策\n\nServo 0.5发布：DuckDuckGo正确渲染，文本渲染速度提升高达10倍\n\nAMD致力于“将Rust深入GPU堆栈”\n\nWinBtrfs 1.10发布，包含两年来的Btrfs Windows改进\n\n在享受无广告浏览的同时，\n\n单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026\n\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "e887ba2f40ca149b14c910773ca18272": {
+    "id": "e887ba2f40ca149b14c910773ca18272",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/bleachbit-6-0-4-update",
+    "title_en": "BleachBit 6.0.4 brings faster scanning, better browser cleaning",
+    "summary_en": "A new version of BleachBit, an open-source system cleaning tool, is out. BleachBit 6.0.4 brings everything I mentioned in my spot on the BleachBit 6.0.4 beta release, including macOS support for the first time – albeit in an early state, and including a Cleaner for Safari and a choice of the (neat) BleachBit CLI or an early GUI. Windows and Linux users all benefit from faster startup times and scanning speeds, and gain new cleaners for Android Studio, Gradle&#8217;s cache, fish and Zsh shells an",
+    "pub_date": "Wed, 09 Sep 2026 16:54:24 +0000",
+    "title_zh": "BleachBit 6.0.4 带来更快的扫描速度和更好的浏览器清理功能",
+    "summary_zh": "BleachBit 6.0.4 发布，新增 macOS 支持（早期阶段）、Safari 清理器，Windows 和 Linux 用户获得更快的启动和扫描速度，以及针对 shell 和 Python CLI 的新清理器。Linux 方面改进了浏览器配置文件查找、磁盘空间检测，并修复了 systemd 内存擦除等问题。",
+    "fulltext_zh": "BleachBit 6.0.4 带来更快的扫描速度和更好的浏览器清理功能 - OMG! Ubuntu\n\n开源系统清理工具 BleachBit 发布了新版本。\n\nBleachBit 6.0.4 包含了我之前在发布报道中提到的所有内容，包括首次支持 macOS——尽管还处于早期阶段，并且包含了一个 Safari 清理器，以及一个可供选择的\n\nWindows 和 Linux 用户都受益于更快的启动时间和扫描速度，并获得了针对 shell 和 Python CLI 的新清理器。顶层日志文件会被清理器清除，浏览器“超级 cookie”也可以被清除。\n\nBleachBit 6.0.4 中 Linux 特有的变化\n\nBleachBit 继续扩展其可清理的内容\n\n在浏览器方面，BleachBit 不再“过度清理” snap，并使用 XDG_CONFIG_HOME 来查找配置文件文件夹，这对于那些在标准安装之外还运行 Firefox 二进制版本（例如）的用户来说会非常感激。\n\n各种包管理器中的磁盘空间和使用情况检测得到了改进。Fedora 用户在选择 DNF4 和 DNF5 操作（如 autoremove）时能看到准确的磁盘使用信息，pacman 和 APT 任务的大小估算也更加精确。\n\nv6.0.4 中的其他 Linux 修复\n\nsystemd 下的内存擦除功能恢复正常\nSwapCached 不再被计为空闲内存\n保留列表匹配字面点号，避免意外的正则表达式匹配\n\n此外，如前所述，所有适用于各平台用户的改进和清理器调整也都包含在内。\n\n从官方网站下载 BleachBit\n\n适用于所有主流操作系统，Ubuntu 用户可选择 Deb 和 AppImage 版本。\n\n除了这个新的维护版本，BleachBit 还添加了\n2008 年 v0.1.0 版本的源代码\n页面，用于“历史目的”。\n\n这些代码早已在 SourceForge 上提供，该项目多年来一直在此托管下载（因为 GitHub 当时还"
+  },
+  "36645b2128b01955bd50cee40fb42d69": {
+    "id": "36645b2128b01955bd50cee40fb42d69",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/broadcom-removes-vmware-vddk-downloads/",
+    "title_en": "Broadcom Kills Public VDDK Access to Tighten its Grip on VMware",
+    "summary_en": "Existing copies still work; getting a fresh one is another matter. They seem to have \"forgotten\" to announce this.",
+    "pub_date": "Wed, 09 Sep 2026 17:42:00 GMT",
+    "title_zh": "Broadcom 关闭 VDDK 公开访问，加强对 VMware 的控制",
+    "summary_zh": "Broadcom 悄然下架了 VMware VDDK 的公开下载页面，导致依赖该工具进行备份和无代理迁移的用户无法获取新副本。现有副本仍可使用，但 Red Hat、Microsoft Azure Migrate 等均受影响，用户被建议联系 Broadcom 支持或转向授权合作伙伴方案。此举被视为 Broadcom 收购 VMware 后收紧控制、推动订阅制与捆绑销售策略的延续。",
+    "fulltext_zh": "Broadcom 关闭 VDDK 公开访问，加强对 VMware 的控制\n\n现有副本仍可使用；但获取新副本则是另一回事。他们似乎“忘记”宣布这一变化。\n\nBroadcom 已下架 VMware 虚拟磁盘开发工具包（VDDK）的公开下载页面。VDDK 8 和 9 的页面，以及相关链接，现在均返回通用错误信息。\n\n迄今为止，Broadcom 尚未发布任何正式公告。\n\n此次移除发生在上个月的某个时候，因为 Reddit 和厂商论坛上的用户从 8 月中旬开始报告链接失效。Apache CloudStack 服务公司 ShapeBlue 于 8 月 25 日记录了这一变化。Red Hat 几天后也为其虚拟化迁移工具包发布了支持说明。\n\n虽然现有副本仍可正常使用，这意味着当前使用 VDDK 的实现将继续照常工作，但那些想要获取新副本的人则无计可施。\n\n为何引发争议？\n\nVDDK 是一个库，允许备份和迁移工具从 hypervisor 外部读取 VMware 虚拟磁盘。VMware 将其作为易于访问的 SDK 提供给构建磁盘工具的客户，它很快成为映像级备份和无代理迁移的支柱。\n\n但其许可证让事情变得复杂。该库不可再分发，因此没有 Linux 发行版提供它，也没有开源项目能将其捆绑给用户。所有人都必须指向 Broadcom 的下载页面，而该页面现已消失。\n\n方便，不是对用户而言，而是对 VMware 的所有者 Broadcom 而言，它成功切断了许多人依赖的、用于迁移离开该平台的工具的公开访问。\n\n陷入困境者\n\nMicrosoft 的 Azure Migrate 就是这种沉默造成混乱的一个例子。它告诉管理员从 Broadcom 门户下载 VDDK 8.0 或 9.0 以进行无代理迁移，而其中嵌入的链接指向一个无法访问的页面。\n\n文档建议如果 VDDK 无法访问，则回退到基于代理的迁移。\n\nRed Hat 也处于同样境地。其支持说明报告客户在尝试访问 VDDK 公开下载链接时遇到“404”错误，并进一步指出它无法托管或再分发该工具包。\n\n他们引导客户联系 Broadcom 支持，同时 Red Hat 工程团队正在寻找替代的长期出路。\n\n在 Reddit 上，一位用户 bobdrakken 联系了 Broadcom，他收到的回复应该能让你了解 Broadcom 的立场。👇\n\n来自 Broadcom 客户关怀的问候。\n\n为确保最高标准的安全性、可靠性和产品功能，虚拟磁盘开发工具包（VDDK）不再可供使用或下载。\n\nBroadcom 继续积极维护各种 API 和 SDK，以使授权技术联盟合作伙伴能够构建经过验证和授权、可与 Broadcom 产品集成、互操作或兼容的备份和恢复软件解决方案。\n\n对于所有备份和恢复需求，客户应依赖 Broadcom 授权技术联盟合作伙伴提供的此类解决方案。\n\n希望这对您有帮助。\n请联系您的合作伙伴以获得更好的协助，因为我们这边没有待处理的操作，因此此案例现在将被归档。\n\n如果您有其他支持请求，我很乐意协助您。\n\n此次下架符合自 Broadcom 于 2023 年 11 月以 690 亿美元收购 VMware 以来的一贯模式。几周内便进行了仅订阅制的全面改革，终止了永久许可证，并将独立产品并入捆绑包。\n\n欧洲客户后来报告续订价格大幅上涨，足以引起行业机构的正式投诉。\n\n并非完全是从 VMware 身上榨取最大价值；Broadcom 一路上也抛出了一些善意。\n\nWorkstation Pro 和 Fusion Pro 于 2024 年 11 月对所有人免费，并在 2025 年以有限形式回归。\n\n每一步都可以单独辩护；许可证改革和价格变动是正常的商业行为。"
+  },
+  "254938b14be1e6f5bac5c2e6dd90ce01": {
+    "id": "254938b14be1e6f5bac5c2e6dd90ce01",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12950",
+    "title_en": "Distribution Release: Spaced Linux 9.26",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Spaced Linux 9.26 has been released. Spaced Linux is a desktop Linux distribution based on Devuan's \"Unstable\" branch and featuring the MATE desktop environment with the Compiz compositing window manager. \"Spaced Linux 9.26 is a major production release focused on upgrade reliability, graphics-driver recovery, desktop startup resilience, signed....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Spaced Linux 9.26",
+    "summary_zh": "Spaced Linux 9.26 正式发布，这是一个基于 Devuan \"Unstable\" 分支的桌面发行版，采用 MATE 桌面环境和 Compiz 合成窗口管理器，并使用 SysV init 系统。本次更新重点提升升级可靠性、显卡驱动恢复、桌面启动韧性、签名软件包交付以及自动化发布验证，改进了 Spaced Update 和 APT 事务保护，并新增软件包负载验证与发布标识检查。",
+    "fulltext_zh": "发行版发布：Spaced Linux 9.26（DistroWatch.com 新闻）\n\nLinux 9.26 已发布。Spaced Linux 是一个桌面 Linux 发行版，基于 Devuan 的 \"Unstable\" 分支，采用 MATE 桌面环境，并搭配 Compiz 合成窗口管理器。\n\n\"Spaced Linux 9.26 是一个重要的生产版本，专注于升级可靠性、显卡驱动恢复、桌面启动韧性、签名软件包交付以及大幅增强的自动化发布验证。系统更新与升级可靠性：重新设计了 Spaced Update，以更安全、更可预测的方式处理完整的操作系统升级；新增专用的 APT 事务保护，使软件包变更在实际锁定的软件包管理操作期间受到保护，而不仅仅是在初步检查期间；改进了对软件包刷新、原生软件包升级、Flatpak 更新、发布标记变更和错误报告的处理；新增对从早期 Spaced Linux 安装升级的显式测试，以减少影响现有用户的回归问题；新增软件包负载验证，以确认生产仓库交付的软件包与预期发布版本一致；新增发布标识检查，使构建的 ISO、已安装的发布元数据、软件包仓库和发布版本不会悄然偏离……\"\n\n继续查看详细信息以获取更多内容。\n\nspaced-linux-9.26-amd64.iso\n\n近期相关新闻与发布\n\n发行版发布：Spaced Linux 9.26\n\nSpaced Linux 是一个桌面 Linux 发行版，基于 Devuan 的 \"Unstable\" 分支，采用 MATE 桌面环境，并运行在 Compiz 合成窗口管理器之上。与其父发行版一样，它使用 SysV init 系统。该发行版启动进入一个精简的 Live 环境，提供使用 Calamares 系统安装程序将 Spaced Linux 安装到硬盘的选项。安装完成后，欢迎屏幕提供一键选项来扩展发行版，包括安装一组建议的应用程序（用于网络、办公和多媒体用途），以及添加 SpacedBazaar（用于 Flatpak"
+  },
+  "9d71ad29e913b70d902941d150111ca5": {
+    "id": "9d71ad29e913b70d902941d150111ca5",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Steam-Beta-9-September-2026",
+    "title_en": "Steam Client Beta Improves Big Picture Mode, Several Linux Enhancements",
+    "summary_en": "Tonight Valve released a big Steam client beta update with a number of new features and fixes...",
+    "pub_date": "Wed, 09 Sep 2026 20:27:02 -0400",
+    "title_zh": "Steam 客户端测试版改进大屏幕模式，带来多项 Linux 增强",
+    "summary_zh": "Valve 发布 Steam 客户端测试版更新，重点改进大屏幕模式，新增“大图模式”首页选项、个人日历和可自定义屏保。同时提升客户端启动性能与 Steam Input 的 CPU 效率，修复大量错误。Linux 版优化了高延迟连接下载速度，并在桌面界面显示 SteamOS 兼容性及 Proton 不支持提示，还改进了 Steam 调查的发行版信息收集。",
+    "fulltext_zh": "Steam 客户端测试版改进大屏幕模式，带来多项 Linux 增强\n2026 年 9 月 9 日晚上 08:27 EDT。\n\n今晚 Valve 发布了一个大型 Steam 客户端测试版更新，包含多项新功能和修复。\n\nSteam 的大屏幕模式在此次测试版更新中获得了多项改进。首页新增了“大图模式”选项，首页的“推荐标签页”中还新增了个人日历。\n\nSteam 大屏幕模式还新增了屏保功能，包括加载自定义屏保的能力。\n\n在大屏幕模式之外，Steam 客户端的启动性能整体得到提升，Steam Input 运行时的 CPU 性能也有所改善，并修复了许多错误。\n\nLinux 版 Steam 客户端测试版改进了高延迟连接下的下载速度；当安装未针对该硬件验证的游戏时，SteamOS 兼容性对话框现在会在桌面 UI 中显示；当安装已知无法与 Proton 配合使用的游戏时，Linux 桌面 UI 也会显示 SteamOS 不支持对话框。该测试版还改进了 Steam 调查中 Linux 发行版信息收集的准确性。SteamRT3 实验性测试版也获得了多项修复。\n\n有关今日功能丰富的 Steam 测试版更新的更多详情，请访问\n\nSteam 在 Linux 上的份额 8 月跌破 4%\nSteamOS 3.9 预览版转向 Linux 7.2、KDE Plasma 6.7 桌面\nDXVK 3.1 发布，带来 DXGI 增量呈现、D3D11 缓冲区渲染目标\nProton 11.0-2 通过 Steam Play / Linux 游戏启用更多作品\nLinux 7.3 将修复原版 Steam 控制器原生驱动长期存在的空白\nSteam 在 Linux 上的使用率 7 月回升至 4% 以上\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创办该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、显卡驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nCERN 在长期作为 RHEL 机构后，将工业计算机过渡到 Debian\nAsahi Linux 现已正式支持 Apple M3 Mac——但附带条件\nIkey Doherty 计划展示如何“正确”构建现代 Linux 发行版\nNetworkManager 通过诱骗 AI 代理添加金丝雀来执行 AI 政策\nAMD 致力于“将 Rust 深入推入 GPU 栈”\nWinBtrfs 1.10 发布，为 Windows 上的 Btrfs 带来两年的改进\nWine 11.17 发布，初步支持显示模式模拟\nNVIDIA 为开源 Nova 发布 vGPU 管理器和 VFIO 变体驱动\n\n同时享有无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "1a51eec207fa33e5a0d531f3a7d06239": {
+    "id": "1a51eec207fa33e5a0d531f3a7d06239",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/ReactOS-FEX-ARM64-Stacking",
+    "title_en": "ReactOS Dev Gets FEX Running For x86_64 Games On This \"Open-Source Windows\" OS Under ARM",
+    "summary_en": "A ReactOS developer for this open-source operating system project striving for binary compatibility with Windows drivers and applications has achieved an intriguing software stack. With the experimental ReactOS ARM64 build for running on 64-bit ARM hardware like Raspberry Pi SBCs, he's paired that \"open-source Windows\" OS with the open-source FEX emulator for in turn being able to run Windows x64 games/apps on ReactOS atop native ARM hardware...",
+    "pub_date": "Wed, 09 Sep 2026 16:15:11 -0400",
+    "title_zh": "ReactOS 开发者让 FEX 在该“开源 Windows”系统上于 ARM 下运行 x86_64 游戏",
+    "summary_zh": "ReactOS 开发者 Ahmed Arif 在实验性的 ReactOS ARM64 版本上成功运行了开源 FEX 模拟器，从而在 ARM 硬件上通过 ReactOS 运行 Windows x64 游戏和应用。这被视为一个重要里程碑，演示中已能运行《超级马里奥 64》。此外，ReactOS 对树莓派 3 的支持也在推进中。",
+    "fulltext_zh": "ReactOS 开发者让 FEX 在该“开源 Windows”系统上于 ARM 下运行 x86_64 游戏\n\n2026 年 9 月 9 日 下午 04:15 EDT\n\n这个致力于与 Windows 驱动程序和应用程序实现二进制兼容的开源操作系统项目的一名 ReactOS 开发者实现了一套引人注目的软件栈。借助用于在树莓派 SBC 等 64 位 ARM 硬件上运行的实验性 ReactOS ARM64 构建版，他将这个“开源 Windows”操作系统与开源的 FEX 模拟器配对，从而能够在原生 ARM 硬件上的 ReactOS 中运行 Windows x64 游戏/应用。\n\nReactOS 开发者 Ahmed Arif “SidiHmeed” 一直负责许多实验性的 ReactOS ARM64 活动。自今年早些时候以来，ReactOS 已在真实 ARM64 上运行，但截至撰写本文时仍处于实验形式。不过它持续成熟，而 Ahmed 的最新工作就是让 FEX 在 ReactOS ARM64 上运行。\n\n这一被称作 ReactOS 通过 FEX 在 ARM64 硬件上运行 x64 Windows 游戏的“重大里程碑”的消息。发布到 X 的视频中演示了《超级马里奥 64》。\n\n随着最新开发代码的推进，ARM64 支持似乎进展得相当顺利，如今又与 FEX 形成了有趣的叠加组合。\n\n最近几天，还实现了在较旧的树莓派 3 单板计算机上运行 ReactOS 的能力，并配有定制的以太网和 WiFi 驱动，补充了此前针对树莓派 5 的工作。\n\nSlackware 16 Alpha 1 在 GCC 16.2、Glibc 2.44 和 Binutils 2.47 升级后发布\n\n基于 Slackware 的 Zenwalk ISO 更新至 Linux 7.1，集成 Flatpak 和 Xfce 4.20\n\nIkey Doherty 计划展示如何“正确”构建现代 Linux 发行版\n\nAmazon Linux 2027 现已进入预览：由 Linux 7.1 驱动，x86-64-v3，并使用 LTO 构建\n\nReactOS 0.4.16 发布，带来新的图形安装程序和更好的硬件支持\n\nHaiku R1 Beta 6 在两年后发布，这个受 BeOS 启发的项目下周将迎来 25 周年\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nCERN 在长期作为 RHEL 机构后，正将工业计算机过渡到 Debian\n\nAsahi Linux 现已正式支持 Apple M3 Mac——但附带条件\n\nIkey Doherty 计划展示如何“正确”构建现代 Linux 发行版\n\nNetworkManager 通过诱骗 AI 代理添加金丝雀来努力执行 AI 政策\n\nAMD 正努力“将 Rust 深入推入 GPU 栈”\n\nWinBtrfs 1.10 发布，为 Windows 上的 Btrfs 带来两年的改进\n\nWine 11.17 发布，初步支持显示模式模拟\n\nNVIDIA 发布用于开源 Nova 的 vGPU 管理器和 VFIO 变体驱动\n\n同时享有无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "9c7aef0197f995adaf67dbd6349da811": {
+    "id": "9c7aef0197f995adaf67dbd6349da811",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/msi-b850p-coreboot-opensil",
+    "title_en": "Running AMD openSIL + Coreboot On The First Available Ryzen AM5 Motherboard",
+    "summary_en": "Earlier this year the 3mdeb firmware consulting firm ported AMD openSIL CPU open-source silicon initialization library and Coreboot to an EPYC motherboard, the Gigabyte MZ33-AR1. Their next feat now achieved is bringing AMD openSIL and Coreboot to a desktop AMD Ryzen motherboard with their downstream Dasharo firmware solution. I have been running this alternative firmware on the MSI PRO B850P WiFi motherboard and it's been working out and performing well as an alternative to the closed-up mother",
+    "pub_date": "Wed, 09 Sep 2026 12:10:00 -0400",
+    "title_zh": "在首款可用的Ryzen AM5主板上运行AMD openSIL + Coreboot",
+    "summary_zh": "3mdeb将AMD openSIL开源硅初始化库与Coreboot移植到微星PRO B850P WiFi桌面主板，这是首个面向零售主板的openSIL+Coreboot方案。测试使用Ryzen 7 8700G处理器，性能表现良好。由于openSIL概念验证目前仅支持Phoenix APU，兼容CPU限于Ryzen 8000系列。用户可通过MSI FlashBIOS轻松刷写，3mdeb还提供预装Dasharo固件的整机销售。",
+    "fulltext_zh": "今年早些时候，固件咨询公司3mdeb将AMD openSIL CPU开源硅初始化库和Coreboot移植到了一块EPYC主板上。他们现在取得的下一项成就是，通过其下游Dasharo固件方案，将AMD openSIL和Coreboot带到了桌面级AMD Ryzen主板。我一直在微星PRO B850P WiFi主板上运行这个替代固件，作为封闭式主板固件的替代方案，它运行良好且性能出色。\n\n3mdeb自今年年初以来一直在将其基于Coreboot和AMD openSIL的Dasharo固件移植到微星B850P WiFi主板，发布了首批Dasharo构建版本，并将支持上游到openSIL和Coreboot中。相比之下，AMD的openSIL概念验证移植迄今仅针对部分内部参考主板，而非任何面向最终用户/爱好者的零售可用方案。\n\n为了使项目在财务上可持续，他们通过[链接]销售预装在微星PRO B850P上的Dasharo。你可以购买围绕该主板构建的整机系统，它将预先加载这个开源固件替代方案。鉴于许多人出于安全目的追求Dasharo/openSIL/Coreboot，3mdeb还提供防篡改密封等服务。\n\n为本次测试目的，3mdeb慷慨提供了Dasharo发布版本，用于在我为测试而购买的微星PRO B850P主板上进行测试。对于3mdeb移植到技嘉MZ33-AR1的版本，你可以通过BMC网页界面刷写Dasharo固件。或者对于3mdeb之前的微星Intel主板移植，你可以在桌面上使用Flashrom。对于微星B850P WiFi，由于AMD ROM Armor保护阻止从主机操作系统写入BIOS，无法使用Flashrom。因此部署时，你需要外部编程器，或者至少可以使用MSI FlashBIOS。使用MSI FlashBIOS，你只需将镜像文件放入外部闪存盘并插入指定USB端口，然后在系统关机时按下FlashBIOS物理按钮。\n\n因此，使用MSI FlashBIOS在这块主板上部署Dasharo相当容易。不过起初系统无法正常启动……3mdeb的大部分使用都是通过外部编程。但幸运的是，不到一天后，3mdeb就找出了导致刷写失败的问题。使用更新后的镜像，再次尝试MSI FlashBIOS后一切正常。因此，未来通过FlashBIOS刷写Dasharo的体验有望更加可靠。无论如何，能够使用MSI FlashBIOS刷写基于Coreboot的Dasharo，而无需取出外部编程器来编程BIOS芯片或跳过其他障碍，这非常方便。\n\n从那时起，这块运行openSIL和Coreboot基础的微星AMD Ryzen AM5主板就一路顺畅！在报道AMD[链接]开发三年多之后，终于看到它在Ryzen消费级桌面主板上运行，尽管是非官方的，仍令人耳目一新。\n\n但需要注意的是，虽然微星PRO B850P WiFi主板支持AMD Ryzen 7000/8000/9000系列CPU，但鉴于AMD openSIL概念验证目前针对Phoenix APU的限制，支持的CPU范围有限。基本上就是[链接]等Ryzen 8000系列基于Phoenix的部件。希望AMD能更新其PoC以支持Ryzen 9000系列处理器，但目前这遗憾地是openSIL的限制。\n\n在我的测试中，我在这块微星主板上运行了Ryzen 7 8700G处理器，运行良好，就像在Dasharo上使用AMD第五代EPYC“Turin”的技嘉MZ33-AR1服务器测试一样。\n\n微星PRO B850-P WiFi：一款特殊的AMD Ryzen AM5主板"
+  },
+  "780b82a53ae5f03d27a3b3accbeb462a": {
+    "id": "780b82a53ae5f03d27a3b3accbeb462a",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/XWayland-26.1-RC2",
+    "title_en": "XWayland 26.1 RC2 Released For Testing With More Fixes",
+    "summary_en": "Following last month's initial release candidate of XWayland 26.1 with its many new features, a second release  candidate is now available with a number of fixes...",
+    "pub_date": "Wed, 09 Sep 2026 11:52:32 -0400",
+    "title_zh": "XWayland 26.1 RC2 发布测试，带来更多修复",
+    "summary_zh": "XWayland 26.1 第二个候选版本 RC2 现已发布，包含多项 XKB 修复、损坏跟踪改进、X Input 字节交换调整等。该版本是自 2024 年 XWayland 24.1 以来首个重要更新，提供更好的 rootful 实现、多席位兼容性、新 Wayland 协议支持及 RandR 模拟改进，并移除了 EGLStream 支持。",
+    "fulltext_zh": "在上个月 XWayland 26.1 首个候选版本发布并带来众多新功能之后，第二个候选版本现已推出，包含大量修复。\n\nXWayland 26.1 正蓄势成为一次重大发布，这是自 2024 年 XWayland 24.1 首次亮相以来首个被标记的重要更新。XWayland 26.1 提供了更好的 rootful 实现、与 X Input 2 的多席位兼容性、对新 Wayland 协议的支持、更好的 Resize and Rotate（“RandR”）模拟，以及许多其他改进。它还移除了对 EGLStream 的支持。\n\n在今天的 XWayland 26.1 RC2 版本中，包含了多项 XKB 修复、损坏跟踪改进、X Input 的字节交换更改，以及为本候选版本贡献补丁的三位开发者带来的其他修复。\n\n有关 XWayland 26.1 RC2 版本的下载和更多详细信息，请访问 xorg 邮件列表。\n\nX.Org Server 26.1 也正在向发布迈进，这将是自 xorg-server 21.1 稳定系列首次亮相以来更大的一次更新。\n\nWayland 被发现“本质上比 X11 更快，但不一定更高效”\nDenial WM：直接嵌入 Flutter 的新 Wayland 合成器\nWayfire Wayland 合成器即将发布 v1.0 版本\nHyprland 0.56 发布，为这款 Wayland 合成器带来许多增强\nWayland 1.26 发布，带来新的指针 warp 事件\nWeston 16.0 合成器发布，带来 HDR 改进和 Vulkan 修复\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nCERN 在长期作为 RHEL 机构后，正将工业计算机迁移至 Debian\nAsahi Linux 现已正式支持 Apple M3 Mac——但附带条件\nIkey Doherty 计划展示如何“正确”构建现代 Linux 发行版\nNetworkManager 致力于通过诱骗 AI 代理添加金丝雀来执行 AI 政策\nAMD 致力于“将 Rust 深入推入 GPU 栈”\nWinBtrfs 1.10 发布，为 Windows 上的 Btrfs 带来两年积累的改进\nWine 11.17 发布，初步支持显示模式模拟\nNVIDIA 为开源 Nova 发布 vGPU Manager 和 VFIO 变体驱动\n\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，保留所有权利。\n所有使用的商标均为其各自所有者的财产。"
+  },
+  "924c05adaae8c4bd56c40d54c644bb63": {
+    "id": "924c05adaae8c4bd56c40d54c644bb63",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/System76-Thelio-Mira-AI",
+    "title_en": "System76 Launches The Thelio Mira AI With AMD Ryzen + NVIDIA Or AMD Graphics",
+    "summary_en": "System76 today unveiled their newest desktop computer as the Thelio Mira AI. The System76 Thelio Mira AI is designed for multi-GPU AI training, model fine-tuning, AI inferencing, computer vision and image generation tasks on tthe AI side. Or with its AMD Ryzen 9000 series CPU and NVIDIA/AMD GPU options is also a good candidate for simulations and other HPC-type workloads...",
+    "pub_date": "Wed, 09 Sep 2026 10:57:09 -0400",
+    "title_zh": "System76 推出 Thelio Mira AI，搭载 AMD Ryzen 及 NVIDIA 或 AMD 显卡",
+    "summary_zh": "System76 发布新款桌面电脑 Thelio Mira AI，基于 AMD Ryzen 9000 系列平台，支持最高双 NVIDIA RTX PRO 6000 或 AMD Radeon AI PRO R9700 显卡，面向多 GPU AI 训练、模型微调、推理、计算机视觉和图像生成等任务，起售价 3299 美元。",
+    "fulltext_zh": "System76 今日发布了其最新台式机 Thelio Mira AI。System76 Thelio Mira AI 在 AI 方面专为多 GPU AI 训练、模型微调、AI 推理、计算机视觉和图像生成任务而设计。凭借其 AMD Ryzen 9000 系列 CPU 以及 NVIDIA/AMD GPU 选项，它也是模拟和其他 HPC 类工作负载的理想选择。\n\n今年早些时候，System76 推出了搭载 AMD Ryzen 9000 系列 CPU 的新款 System76 Thelio Mira Linux 桌面。Thelio Mira AI 沿用了同样更新的机箱设计和 Ryzen 9000 系列平台，但现在增加了额外的 GPU 选项、可使用更低功耗的 AMD CPU 以便为 GPU 留出更多供电容量，以及其他组件选项。Thelio Mira AI 起售价为 3299 美元。\n\n在我对它的 Linux 测试中表现相当不错，而现在的 Thelio Mira AI 是它的进化版。CPU 选项包括 AMD Ryzen 7 9700X / Ryzen 9 9900X / Ryzen 9 9950X。GPU 方面最高可选 AMD Radeon AI PRO R9700 或 NVIDIA RTX PRO 6000。如果预算允许，最多可配备两块 RTX PRO 6000 显卡。标配 64GB 内存，可升级至 128GB 或 192GB，并提供多种 SSD 选项。\n\n如果需要在 CPU 方面更强大、采用 AMD Ryzen Threadripper 的产品，System76 Thelio Major 是目前 Phoronix 的最爱。\n\n希望了解更多关于 Thelio Mira AI 信息的用户可访问相关页面。\n\n神秘 x86 CPU 已具备 APX，x86S 延续 Intel 未竟的免遗留 x86 之路\nNouveau 为 HDMI 2.1 DSC 做准备，AMD HDMI FreeSync 修复进入 Linux 7.4\nInputPlumber 0.79 增加对更多掌机的支持\nLinux 获得 ASUS ROG NVMe 硬盘盒 RGB 灯光的逆向工程驱动\nLinux 7.3 引入用于 Moxa PCIe 多串口板的 8250_mxpcie 驱动\nRTL8723BS 驱动继续主导 Linux 7.3 暂存区活动\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、显卡驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\nCERN 在长期作为 RHEL 机构后，将工业计算机过渡到 Debian\nAsahi Linux 现已正式支持 Apple M3 Mac——但有注意事项\nIkey Doherty 计划展示如何“正确”构建现代 Linux 发行版\nNetworkManager 通过诱骗 AI 代理添加金丝雀来执行 AI 政策\nAMD 致力于“将 Rust 深入推入 GPU 栈”\nWinBtrfs 1.10 发布，带来两年份的 Windows 上 Btrfs 改进\nWine 11.17 发布，初步支持显示模式仿真\nNVIDIA 发布用于开源 Nova 的 vGPU Manager 和 VFIO 变体驱动\n\n同时享受无广告浏览、单页文章查看。\n法律免责声明、隐私政策、Cookie。\n版权所有 © 2004 - 2026。\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "0fba4b9dcba70af2cce57bd52d330d04": {
+    "id": "0fba4b9dcba70af2cce57bd52d330d04",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/collabora-online-26-04-office-suite-released-with-optional-ai-assistant/",
+    "title_en": "Collabora Online 26.04 Office Suite Released with Optional AI Assistant",
+    "summary_en": "Collabora Online 26.04 introduces an optional AI assistant alongside new collaboration, productivity, and document editing improvements.\nThe post Collabora Online 26.04 Office Suite Released with Optional AI Assistant appeared first on Linux Today.",
+    "pub_date": "Wed, 09 Sep 2026 07:36:45 +0000",
+    "title_zh": "Collabora Online 26.04 办公套件发布，可选配 AI 助手",
+    "summary_zh": "Collabora Online 26.04 办公套件正式发布，新增可选的 AI 助手功能，并带来协作、生产力和文档编辑方面的多项改进。",
+    "fulltext_zh": "Collabora Online 26.04 引入了可选的 AI 助手，同时带来了新的协作、生产力和文档编辑改进。\n\n文章《Collabora Online 26.04 办公套件发布，可选配 AI 助手》最初发表于 Linux Today。"
+  },
+  "783fb46f73bb2658ddb1bf3255b66cf8": {
+    "id": "783fb46f73bb2658ddb1bf3255b66cf8",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/saw-build-structured-multi-agent-ai-workflows-on-linux/",
+    "title_en": "SAW: Build Structured Multi-Agent AI Workflows on Linux",
+    "summary_en": "SAW helps users build structured multi-agent AI workflows with coordinated agents, task orchestration, and flexible automation for complex projects.\nThe post SAW: Build Structured Multi-Agent AI Workflows on Linux appeared first on Linux Today.",
+    "pub_date": "Wed, 09 Sep 2026 07:35:48 +0000",
+    "title_zh": "SAW：在 Linux 上构建结构化多智能体 AI 工作流",
+    "summary_zh": "SAW 是一款帮助用户在 Linux 上构建结构化多智能体 AI 工作流的工具，支持协调多个智能体、任务编排以及面向复杂项目的灵活自动化。",
+    "fulltext_zh": "SAW 帮助用户构建结构化的多智能体 AI 工作流，通过协调的智能体、任务编排以及面向复杂项目的灵活自动化来实现。\n\n文章《SAW：在 Linux 上构建结构化多智能体 AI 工作流》首次发布于 Linux Today。"
+  },
+  "39bd94071b1f71958b14a25b0154b07a": {
+    "id": "39bd94071b1f71958b14a25b0154b07a",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/firedragon-v13-released-as-a-complete-rewrite-of-garuda-linuxs-browser/",
+    "title_en": "FireDragon v13 Released as a Complete Rewrite of Garuda Linux’s Browser",
+    "summary_en": "FireDragon v13 arrives as a complete rewrite of Garuda Linux’s browser, bringing a refreshed foundation, privacy features, and other improvements.\nThe post FireDragon v13 Released as a Complete Rewrite of Garuda Linux’s Browser appeared first on Linux Today.",
+    "pub_date": "Wed, 09 Sep 2026 07:34:50 +0000",
+    "title_zh": "FireDragon v13 发布：Garuda Linux 浏览器的完全重写版",
+    "summary_zh": "FireDragon v13 作为 Garuda Linux 浏览器的完全重写版本正式发布，带来了全新的基础架构、隐私功能以及其他多项改进。此次重写旨在提升浏览器性能与安全性，同时保持对隐私保护的高度重视。",
+    "fulltext_zh": "FireDragon v13 作为 Garuda Linux 浏览器的完全重写版本正式发布，带来了焕然一新的基础架构、隐私功能以及其他改进。\n\n该文章最初发布于 Linux Today。"
+  },
+  "e63a3f76870f4607093c5034a9dafc51": {
+    "id": "e63a3f76870f4607093c5034a9dafc51",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/fedoras-considering-a-conflict-of-interest-policy/",
+    "title_en": "Fedora’s Considering a Conflict-of-Interest Policy",
+    "summary_en": "Fedora is considering a formal conflict-of-interest policy to improve transparency and establish clearer guidelines for contributors and project governance.\nThe post Fedora’s Considering a Conflict-of-Interest Policy appeared first on Linux Today.",
+    "pub_date": "Wed, 09 Sep 2026 07:32:32 +0000",
+    "title_zh": "Fedora 正在考虑制定利益冲突政策",
+    "summary_zh": "Fedora 正在考虑制定一项正式的利益冲突政策，以提高透明度，并为贡献者和项目治理建立更清晰的指导方针。",
+    "fulltext_zh": "Fedora 正在考虑制定一项正式的利益冲突政策，以提高透明度，并为贡献者和项目治理建立更清晰的指导方针。\n\n这篇文章最初发布于 Linux Today。"
+  },
+  "c9ddcfc75919ebbd3bc11fe799ca8e65": {
+    "id": "c9ddcfc75919ebbd3bc11fe799ca8e65",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/libreoffice-26-2-4-demotes-skia-rendering-for-mac-and-windows/",
+    "title_en": "LibreOffice 26.2.4 Demotes Skia Rendering for Mac and Windows",
+    "summary_en": "LibreOffice 26.2.4 demotes Skia rendering on Windows and macOS, changing graphics defaults while delivering additional stability improvements and bug fixes.\nThe post LibreOffice 26.2.4 Demotes Skia Rendering for Mac and Windows appeared first on Linux Today.",
+    "pub_date": "Wed, 09 Sep 2026 07:30:29 +0000",
+    "title_zh": "LibreOffice 26.2.4 在 Mac 和 Windows 上降级 Skia 渲染",
+    "summary_zh": "LibreOffice 26.2.4 版本在 Windows 和 macOS 平台上将 Skia 渲染降级，更改了图形默认设置，同时带来了额外的稳定性改进和错误修复。",
+    "fulltext_zh": "LibreOffice 26.2.4 在 Windows 和 macOS 上降级了 Skia 渲染，更改了图形默认设置，同时提供了额外的稳定性改进和错误修复。\n\n文章《LibreOffice 26.2.4 在 Mac 和 Windows 上降级 Skia 渲染》首先出现在 Linux Today 上。"
   }
 }

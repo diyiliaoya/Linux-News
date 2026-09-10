@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BSD发布：NetBSD 9.5 — Linux 中文速报</title>
+<title>在首款可用的Ryzen AM5主板上运行AMD openSIL + Coreboot — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>BSD发布：NetBSD 9.5</h1>
+  <h1>在首款可用的Ryzen AM5主板上运行AMD openSIL + Coreboot</h1>
 
-  <div class="article-summary">NetBSD项目宣布了NetBSD 9.x系列的第五个也是最后一个更新版本9.5。该版本标志着netbsd-9稳定分支的终止，此后该分支将不再接收安全更新。项目强烈建议生产环境中的用户迁移到更新的版本系列，如netbsd-11或netbsd-10。9.5版本包含系统改进和硬件支持更新，包括对aarch64架构的线程本地存储修复、x86平台MSI/MSI-X配置修复、新增手册页、ACPI亮度控制修复，以及对多种USB适配器的支持。</div>
+  <div class="article-summary">3mdeb将AMD openSIL开源硅初始化库与Coreboot移植到微星PRO B850P WiFi桌面主板，这是首个面向零售主板的openSIL+Coreboot方案。测试使用Ryzen 7 8700G处理器，性能表现良好。由于openSIL概念验证目前仅支持Phoenix APU，兼容CPU限于Ryzen 8000系列。用户可通过MSI FlashBIOS轻松刷写，3mdeb还提供预装Dasharo固件的整机销售。</div>
 
-  <div class="article-body"><p>BSD发布：NetBSD 9.5（DistroWatch.com新闻）</p><p>项目已宣布NetBSD 9.x系列的第五个也是最终更新版本。NetBSD 9系列将不再接收安全更新。</p><p>“宣布NetBSD 9.5。注意：这将是netbsd-9稳定分支的最终版本，也标志着该分支的支持终止。此后将不再对此分支进行安全补丁更新！在生产环境中运行netbsd-9的用户强烈建议迁移到更新的版本系列，例如netbsd-11或netbsd-10。自9.4以来的变更：系统改进和硬件支持——build.sh——针对更新的编译器和非NetBSD平台的各种工具构建修复；aarch64——修复了线程本地存储支持；x86——修复了某些机器上的MSI/MSI-X配置；mbsnrtowcs(3)、wcsnrtombs(3)——新增手册页；acpiout(4)——修复了某些机器上的显示亮度控制；eap(4)——恢复了netbsd-7中支持的完整硬件编码集；uftdi(4)——新增对一系列Brainboxes USB转串口适配器的支持；urtwn(4)——新增对Mercusys MW150USV2 USB WiFi适配器的支持；urtwn(4)——新增对华硕USB-N10 Nano B1 WiFi适配器的支持；viaide(4)——对多个控制器的支持进行了多项改进。”</p><p>更多详细信息可在相关新闻和发布中找到。</p><p>近期相关新闻和发布：</p><p>BSD发布：NetBSD 9.5</p><p>BSD发布：NetBSD 11.0</p><p>开发版发布：NetBSD 11.0 RC3</p><p>开发版发布：NetBSD 11.0 RC1</p><p>BSD发布：NetBSD 10.1</p><p>BSD发布：NetBSD 9.4</p><p>NetBSD是一个免费、安全且高度可移植的类Unix开源操作系统，支持多种平台，从64位AlphaServer和桌面系统到手持和嵌入式设备。其简洁的设计和先进的功能使其在生产和研究环境中表现出色，并且由用户支持，提供完整源代码。许多应用程序可通过NetBSD软件包集合轻松获取。</p><p>https://www.netbsd.org/</p><p>https://www.netbsd.org/MailingLists/</p><p>替代用户论坛</p><p>https://www.netbsd.org/Documentation/</p><p>https://www.netbsd.org/mirrors/#iso</p><p>https://www.netbsd.org/mir</p></div>
+  <div class="article-body"><p>今年早些时候，固件咨询公司3mdeb将AMD openSIL CPU开源硅初始化库和Coreboot移植到了一块EPYC主板上。他们现在取得的下一项成就是，通过其下游Dasharo固件方案，将AMD openSIL和Coreboot带到了桌面级AMD Ryzen主板。我一直在微星PRO B850P WiFi主板上运行这个替代固件，作为封闭式主板固件的替代方案，它运行良好且性能出色。</p><p>3mdeb自今年年初以来一直在将其基于Coreboot和AMD openSIL的Dasharo固件移植到微星B850P WiFi主板，发布了首批Dasharo构建版本，并将支持上游到openSIL和Coreboot中。相比之下，AMD的openSIL概念验证移植迄今仅针对部分内部参考主板，而非任何面向最终用户/爱好者的零售可用方案。</p><p>为了使项目在财务上可持续，他们通过[链接]销售预装在微星PRO B850P上的Dasharo。你可以购买围绕该主板构建的整机系统，它将预先加载这个开源固件替代方案。鉴于许多人出于安全目的追求Dasharo/openSIL/Coreboot，3mdeb还提供防篡改密封等服务。</p><p>为本次测试目的，3mdeb慷慨提供了Dasharo发布版本，用于在我为测试而购买的微星PRO B850P主板上进行测试。对于3mdeb移植到技嘉MZ33-AR1的版本，你可以通过BMC网页界面刷写Dasharo固件。或者对于3mdeb之前的微星Intel主板移植，你可以在桌面上使用Flashrom。对于微星B850P WiFi，由于AMD ROM Armor保护阻止从主机操作系统写入BIOS，无法使用Flashrom。因此部署时，你需要外部编程器，或者至少可以使用MSI FlashBIOS。使用MSI FlashBIOS，你只需将镜像文件放入外部闪存盘并插入指定USB端口，然后在系统关机时按下FlashBIOS物理按钮。</p><p>因此，使用MSI FlashBIOS在这块主板上部署Dasharo相当容易。不过起初系统无法正常启动……3mdeb的大部分使用都是通过外部编程。但幸运的是，不到一天后，3mdeb就找出了导致刷写失败的问题。使用更新后的镜像，再次尝试MSI FlashBIOS后一切正常。因此，未来通过FlashBIOS刷写Dasharo的体验有望更加可靠。无论如何，能够使用MSI FlashBIOS刷写基于Coreboot的Dasharo，而无需取出外部编程器来编程BIOS芯片或跳过其他障碍，这非常方便。</p><p>从那时起，这块运行openSIL和Coreboot基础的微星AMD Ryzen AM5主板就一路顺畅！在报道AMD[链接]开发三年多之后，终于看到它在Ryzen消费级桌面主板上运行，尽管是非官方的，仍令人耳目一新。</p><p>但需要注意的是，虽然微星PRO B850P WiFi主板支持AMD Ryzen 7000/8000/9000系列CPU，但鉴于AMD openSIL概念验证目前针对Phoenix APU的限制，支持的CPU范围有限。基本上就是[链接]等Ryzen 8000系列基于Phoenix的部件。希望AMD能更新其PoC以支持Ryzen 9000系列处理器，但目前这遗憾地是openSIL的限制。</p><p>在我的测试中，我在这块微星主板上运行了Ryzen 7 8700G处理器，运行良好，就像在Dasharo上使用AMD第五代EPYC“Turin”的技嘉MZ33-AR1服务器测试一样。</p><p>微星PRO B850-P WiFi：一款特殊的AMD Ryzen AM5主板</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12947" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/review/msi-b850p-coreboot-opensil" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
