@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BSD发布：FreeBSD 14.5 — Linux 中文速报</title>
+<title>Intel Xeon 600 工作站性能对比 AMD Threadripper 9000：近 400 项基准测试 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>BSD发布：FreeBSD 14.5</h1>
+  <h1>Intel Xeon 600 工作站性能对比 AMD Threadripper 9000：近 400 项基准测试</h1>
 
-  <div class="article-summary">FreeBSD项目发布了14.x系列的新版本14.5，该版本包含多项修复和用户态工具的变化。主要更新包括：rc.firewall脚本支持从文件读取IP地址或子网；sh(1)的默认历史记录大小从100增加到128，符合POSIX.1-2024要求；mt(1)和libmt新增LTO-10和LTO-10P密度代码及磁带规格支持；pwd(1)默认行为从-P改为-L，与POSIX语义一致；ipfw(8)增加了回退机制以兼容FreeBSD 15.0+内核；daemon(8)新增-m选项以指定输出文件模式。</div>
+  <div class="article-summary">本文通过近400项基准测试，对比了Intel Xeon 678X（48核/96线程，Granite Rapids-WS）与AMD Ryzen Threadripper 9980X（64核/128线程，Zen 5）在工作站场景下的性能与能效。测试在Ubuntu 26.04 LTS、Linux 7.0内核、GCC 15.2环境下进行，Threadripper分别在64核和48核配置下与Xeon对比。结果显示两者在不同工作负载中互有胜负，功耗与频率表现也各有特点。</div>
 
-  <div class="article-body"><p>BSD发布：FreeBSD 14.5 (DistroWatch.com新闻)</p><p>DistroWatch.com由以下赞助商支持</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW周刊 / 评测存档</p><p>访客评分与评论</p><p>项目评分排名</p><p>播客、新闻通讯与评测</p><p>跨发行版软件包比较</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停止维护的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与提示专栏</p><p>常见误解专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>发行版家族树可视化</p><p>常见问题</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>Asahi Linux在M3芯片系统上运行</p><p>Debian将在CERN使用</p><p>Debian 11达到生命周期终点</p><p>Debian就LLM贡献进行投票</p><p>Asahi在多方面取得进展</p><p>新版COSMIC带来更多无障碍功能</p><p>Bazzite更新Deck镜像</p><p>RPM改进锁处理</p><p>Fairphone 6在美国销售</p><p>Kubuntu用户将受益于Plasma长期支持</p><p>易于使用的PBX - 托管或自管理</p><p>Linux电话系统</p><p>免费在线聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程办公应用：iOS或Android</p><p>免费视频会议</p><p>3CX提供的VoIP/PBX教程</p><p>不要措手不及，制定灾难恢复计划！</p><p>必备的在线聊天报告与统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business与3CX WhatsApp API集成</p><p>3CX StartUP的5大杀手级功能</p><p>不要成为“那种人”第1卷：保持复杂凭据</p><p>不要成为“那种人”第2卷：呼叫欺诈</p><p>不要成为“那种人”第3卷：4大安全提示</p><p>不要成为“那种人”第4卷：监控您的实例</p><p>Fluff Linux 2026.08.01</p><p>Red Hat周五五件事 - 2026年9月4日</p><p>PCLinuxOS杂志2026年9月</p><p>Tumbleweed月度更新 - 2026年8月</p><p>Full Circle每周新闻</p><p>最新新闻与更新</p><p>新闻过滤选项</p><p>BSD发布：FreeBSD 14.5</p><p>项目发布了FreeBSD 14.x系列的一个更新。新版本14.5提供了若干修复，并引入了一些用户态工具的变化。</p><p>“rc.firewall脚本现在支持从磁盘文件读取IP地址或子网，用于firewall_allowservices和firewall_trusted列表变量。看起来像绝对路径的元素会逐行读取，跳过注释和空行，每行的第一个单词被视为地址或子网。sh(1)中的默认历史记录大小已从100增加到128，符合POSIX.1-2024的最低要求。mt(1)和libmt中已添加LTO-10和LTO-10P密度代码及磁带规格，从而能够检测和报告新的磁带格式。pwd(1)的默认行为已从-P更改为-L，与POSIX语义保持一致。ipfw(8)二进制文件现在包含一个回退机制，以支持FreeBSD 15.0中引入的新内核接口。当在15.0+内核上运行时，ipfw(8)会自动调用捆绑的ipfw15二进制文件来加载防火墙规则，确保升级过程中的兼容性。daemon(8)工具现在支持-m选项来指定输出文件模式，允许非root日志收集器访问日志文件。”</p><p>更多信息可在FreeBSD-14.5-RELEASE-amd64-disc1.iso中找到。</p><p>近期相关新闻和发布</p><p>BSD发布：FreeBSD 14.5</p><p>BSD发布：FreeBSD 15.1</p><p>BSD发布：FreeBSD 14.4</p><p>BSD发布：FreeBSD 15.0</p><p>开发版发布：FreeBSD 15.0-RC1</p><p>开发版发布：FreeBSD 15.0-BETA1</p><p>FreeBSD是一个类UNIX操作系统，支持i386、amd64、IA-64、arm、MIPS、powerpc、ppc64、PC-98和UltraSPARC平台，基于加州大学伯克利分校的“4.4BSD-Lite”版本，并带有一些“4.4BSD-Lite2”增强。它间接基于William Jolitz将加州大学伯克利分校的“Net/2”移植到i386的版本，即“386BSD”，尽管386BSD的代码已所剩无几。FreeBSD被世界各地的公司、互联网服务提供商、研究人员、计算机专业人士、学生和家庭用户用于他们的工作、教育……</p></div>
+  <div class="article-body"><p>Intel Xeon 600 工作站性能对比 AMD Threadripper 9000：近 400 项基准测试 - Phoronix</p><p>Intel Xeon 600 工作站性能对比 AMD Threadripper 9000：近 400 项基准测试</p><p>2026年9月10日 下午12:43 EDT。</p><p>上个月，我有机会测试了这款工作站处理器，这是我首次接触 Xeon 600 “Granite Rapids WS” 系列。Intel Xeon 678X 搭载在 HP Z4 G6i 工作站中，我将其用于多项不同的基准测试。在那篇 HP 工作站评测中，也包含了一些与 AMD Ryzen Threadripper 的对比数据；而本文则更集中地对比了竞争中的 Xeon 600 系列与 AMD Ryzen Threadripper 9000 系列工作站处理器。近 400 项基准测试，外加功耗和频率对比。</p><p>在需要将那台 HP Z4 Gi 工作站评测机寄回之前，我在 Xeon 678X 上运行了大量基准测试，以便今天发布这篇更有针对性的 AMD Ryzen Threadripper 对比。提醒一下，Intel Xeon 678X 拥有 48 核 / 96 线程，全部由 Redwood Cove P 核组成。Xeon 678X 的基础频率为 2.4GHz，最大睿频频率为 4.9GHz，基础功耗为 300 瓦，最大睿频功耗为 360 瓦。Xeon 600 系列支持最多八通道 DDR5-6400 或 MRDIMM-8000 内存。不过在这台 HP Z4 G6i 工作站中，使用的是四通道 DDR5-6400 内存。</p><p>由于 Xeon 678X 是我目前唯一接触过的 Xeon 600 系列产品，在这近 400 项基准测试中，我将它与 AMD Ryzen Threadripper 9980X 64 核 CPU 进行了对比，分别在 64 核 / 128 线程和逐核对应的 48 核 / 96 线程配置下测试。AMD Ryzen Threadripper 9980X 拥有 64 个 Zen 5 核心，基础频率 3.2GHz，最大加速频率可达 5.4GHz，TDP 为 350 瓦。因此从功耗上看，它与 Xeon 678X 差别不大；基准测试分别在 64c/128t 和 48c/96t 下进行，以匹配 Xeon 678X。</p><p>在测试 AMD Ryzen Threadripper 9980X 的 48 核配置时，通过 BIOS 将八个 CCD 各自设置为六个核心在线、两个核心禁用。</p><p>Threadripper 9980X 在 System76 Thelio Major 中进行了测试。感谢 System76 允许 Phoronix 长期保留这台系统用于测试，使这样的对比成为可能。System76 Thelio Major 配备了四通道 32GB DDR5-5600 内存模块。内存通道数相同，但速度为 DDR5-5600，而非 DDR5-6400。实验室中还有 Threadripper PRO 9995WX 等产品，不过与这款唯一的 Xeon 600 系列工作站 CPU 对比已超出本文范围。</p><p>这两台工作站均运行 Ubuntu 26.04 LTS、Linux 7.0 内核和 GCC 15.2 编译器，软件栈相同。两台工作站均运行在性能缩放调节器和 EPP 模式下。除此之外，所有软件均保持默认设置，以便在广泛的工作负载中对比 Xeon 600 系列和 Threadripper 9000 系列工作站处理器的性能和能效。</p><p>感谢 System76 和 HP 提供硬件，使这次工作站对比得以实现。</p><p>Intel 超线程在 Xeon 678X “Granite Rapids-WS” 上的性能</p><p>Intel AMX 在 Xeon 678X 工作站 CPU 上的性能</p><p>AMD EPYC 9006 Venice 发布，看起来有望大获成功</p><p>AMD Ryzen 7 7700X3D Linux 性能</p><p>Graviton5 性能超越 Intel Xeon Granite Rapids，但不及 AMD EPYC Turin</p><p>NVIDIA GB10 CPU 性能与 Vera 的对比</p><p>享受无广告浏览，</p><p>单页文章视图</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12949" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/review/intel-xeon-600-amd-threadripper-9000" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

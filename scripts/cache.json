@@ -10481,5 +10481,181 @@
     "title_zh": "LibreOffice 26.2.4 在 Mac 和 Windows 上降级 Skia 渲染",
     "summary_zh": "LibreOffice 26.2.4 版本在 Windows 和 macOS 平台上将 Skia 渲染降级，更改了图形默认设置，同时带来了额外的稳定性改进和错误修复。",
     "fulltext_zh": "LibreOffice 26.2.4 在 Windows 和 macOS 上降级了 Skia 渲染，更改了图形默认设置，同时提供了额外的稳定性改进和错误修复。\n\n文章《LibreOffice 26.2.4 在 Mac 和 Windows 上降级 Skia 渲染》首先出现在 Linux Today 上。"
+  },
+  "faec38fcf8399f5e96598f78ac828a66": {
+    "id": "faec38fcf8399f5e96598f78ac828a66",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/gimp-3-2-6-wacom-rotation-input",
+    "title_en": "GIMP 3.2.6 released with faster font loading, Wacom barrel rotation",
+    "summary_en": "GIMP 3.2.6 has arrived, a new maintenance update in the 3.2.x series that made a splash earlier this year. You won&#8217;t find any major new features, but plenty of improvements – not least in font handling. GIMP say font loading is faster, with start-up times, Text tool typing and closing large font lists all nippier when lots of fonts are installed. The team note &#8220;some lag remains&#8221;, and solving that would require a GTK4 port – for which some initial prep has begun. On the editing ",
+    "pub_date": "Fri, 11 Sep 2026 01:05:58 +0000",
+    "title_zh": "GIMP 3.2.6 发布，字体加载更快，支持 Wacom 笔杆旋转",
+    "summary_zh": "GIMP 3.2.6 作为 3.2.x 系列维护更新发布，无重大新功能，但改进了字体处理，使字体加载、启动时间、文本工具输入及关闭大字体列表均更迅速。团队指出仍有延迟，需移植 GTK4 才能解决，相关准备工作已开始。此外还支持 Wacom 笔杆旋转。",
+    "fulltext_zh": "GIMP 3.2.6 已经发布，这是 3.2.x 系列中的一个新的维护更新，该系列在今年早些时候引起了不小的轰动。你不会发现任何重大的新功能，但有大量改进——尤其是在字体处理方面。GIMP 表示字体加载更快了，当安装了大量字体时，启动时间、文本工具输入和关闭大字体列表都变得更加迅速。团队指出“仍有一些延迟”，解决这个问题需要移植到 GTK4——为此一些初步准备工作已经开始。在编辑方面"
+  },
+  "69c0b3076f7d8b9c40584b9c3e5e5631": {
+    "id": "69c0b3076f7d8b9c40584b9c3e5e5631",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/ubuntu-2610-kernel-version",
+    "title_en": "Ubuntu 26.10 will ship with Linux kernel 7.3",
+    "summary_en": "Ubuntu 26.10 'Stonking Stingray' is getting a newer kernel than planned. Canonical has switched its target from Linux 7.2 to Linux 7.3.\nYou're reading Ubuntu 26.10 will ship with Linux kernel 7.3, a blog post from OMG! Ubuntu. Do not reproduce elsewhere without permission.",
+    "pub_date": "Fri, 11 Sep 2026 00:03:30 +0000",
+    "title_zh": "Ubuntu 26.10 将搭载 Linux 内核 7.3",
+    "summary_zh": "Canonical 将 Ubuntu 26.10 的目标内核从 Linux 7.2 调整为 Linux 7.3，原因是上游内核开发进度略早于预期。Linux 7.3 已发布第二个候选版本，预计10月底成为主线稳定版。Ubuntu 26.10 代号“Stonking Stingray”，将于10月15日发布，届时可能仍基于候选版本内核，后续通过软件更新完善。Ubuntu 26.04 LTS 用户可通过明年初的 HWE 更新获得同款内核。",
+    "fulltext_zh": "Ubuntu 26.10 将搭载 Linux 内核 7.3\n\nUbuntu 26.10 将获得比原计划更新的内核，因为 Canonical 已将其目标从 Linux 7.2 切换到了 Linux 7.3。\n\n这一重新考虑是由于八月初的进展略早于预期。那原本是 Ubuntu 工程师们为“Stonking Stingray”计划搭载的版本。\n\nUbuntu 的内核选择政策旨在每个 Ubuntu 版本发布时搭载正在开发中的上游内核，这可能意味着使用尚未“稳定”的内核——只要在内核选择截止日期时有候选版本构建可用即可。\n\nLinux 7.3 本周发布了第二个候选版本，有望在十月底成为下一个主线（稳定）内核版本。\n\n因此，Canonical 的内核团队表示，他们“重新评估”了 Ubuntu 26.10“Stonking Stingray”版本的目标内核，并正在“升级”将 Linux 7.3 作为首选候选。\n\nCanonical 的 Kleber Souza 补充道：“此次更新使我们与最新的上游能力保持一致，特别是在最新硬件支持方面，同时仍能按计划推进我们即将到来的发布里程碑。”\n\n截至撰稿时，Ubuntu 26.10 的每日构建仍运行在 Linux 7.2 上，但 Souza 表示团队正在“努力在 7.3-rc1 上游内核之上启用所有 Ubuntu 专属功能”。它应该可以通过 26.10 每日构建进行测试。\n\nLinux 7.3 不太可能在 10 月 15 日 Ubuntu 26.10 发布时已经稳定，但内核“候选版本”构建相当稳健。任何最终的修复或更改都将通过软件更新推送。\n\n更新的不一定总是更好，但就内核对新硬件的支持、更好的性能和安全性修复而言，嗯，它当然不会有坏处。\n\n如果你使用的是 Ubuntu 26.04 LTS，你将能够通过下一次 HWE 更新获得相同的内核，该更新预计在明年初（2027年）Ubuntu 26.04.2 点版本发布前后推出。"
+  },
+  "af71dd7d7e78d79a04ea545794df407e": {
+    "id": "af71dd7d7e78d79a04ea545794df407e",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/ubuntu-24-04-5-lts-released-with-linux-kernel-7-0",
+    "title_en": "Ubuntu 24.04.5 LTS released with Linux 7.0",
+    "summary_en": "The fifth (and final) point release of Ubuntu 24.04 LTS is available to download. Ubuntu 24.04.5 LTS delivers refreshed installation media (ISOs) that includes of the software updates, bug fixes and security patches released since the last ISO was produced. This cuts down on the number of updates that need to downloaded post-install. More important than that, this release runs on a new hardware enablement (HWE) stack, back-ported from Ubuntu 26.04 LTS. The 24.04.5 LTS HWE stack brings the Linux ",
+    "pub_date": "Thu, 10 Sep 2026 21:51:04 +0000",
+    "title_zh": "Ubuntu 24.04.5 LTS 发布，搭载 Linux 7.0 内核",
+    "summary_zh": "Ubuntu 24.04.5 LTS 作为该系列的第五个也是最后一个点版本正式发布，提供更新的安装镜像，包含自上次镜像发布以来的所有软件更新、错误修复和安全补丁。该版本采用从 Ubuntu 26.04 LTS 回溯移植的新硬件启用（HWE）堆栈，搭载 Linux 7.0 内核和更新的图形驱动，并改进了内核固件更新交付方式。现有用户无需重新安装即可获得这些更新。",
+    "fulltext_zh": "Ubuntu 24.04.5 发布，搭载 Linux 7.0\n\nUbuntu 24.04 LTS 的第五个（也是最后一个）点版本现已可供下载。\n\nUbuntu 24.04.5 LTS 提供了更新的安装介质（ISO），其中包含了自上次 ISO 制作以来发布的所有软件更新、错误修复和安全补丁。这减少了安装后需要下载的更新数量。\n\n更重要的是，此版本运行在从 Ubuntu 26.04 LTS 回溯移植的新硬件启用（HWE）堆栈上。\n\n24.04.5 LTS 的 HWE 堆栈带来了\n以及更新的图形驱动，外加其他一些关键的硬件相关软件包。现有用户已经拥有它；HWE 作为软件更新提供。\n\nUbuntu 24.04.4 LTS 版本\n于今年二月发布，启动时使用 Linux 6.17 内核。由于 Linux 7.0 更新，具有更好的硬件支持，建议在较新设备上使用此 ISO 启动。\n\n另一个变化是内核固件更新的交付方式：\n固件已被拆分\n为可在 24.04 上独立更新的厂商特定软件包，与 26.04 LTS 打包内核固件二进制文件的方式一致。\n\n如果您是运行 24.04 的现有用户，则无需下载并重新安装任何内容即可获得此处提到的任何更改。新 ISO 中的大部分内容已在过去六个月中安装到您的系统上。\n\n如果您在\n设置 > 系统 > 关于\n（或启动时的 GRUB 引导加载程序）中未看到“24.04.5 LTS”，可以轻松修复：\n\nbase-files 软件包会修改系统工具读取的版本号字符串。\n\n几周前发布。在大多数情况下，对于需要稳定、可靠的日常 Ubuntu 桌面体验的用户来说，这是推荐下载的 LTS 版本。\n\n但对于那些可能希望在 Ubuntu 基础上继续在 Xorg/X11 上运行 GNOME Shell，或需要\n软件仓库中特定软件包的用户，这些新 ISO 提供了更可靠的起点。\n\n与每个 LTS 一样，GA 内核（24.04 为 v6.14）仍然可供安装。\n\n下载 Ubuntu 24.04.5 LTS\n\n直接从 Ubuntu 网站下载适用于桌面、树莓派、服务器和其他设备的 Ubuntu 24.04.5 LTS\n\n发布页面、主\nUbuntu 网站下载页面\n（它们链接到相同的 ISO）。Ubuntu 各衍生版也发布了更新的介质。\n\nUbuntu 的长期支持（LTS）版本至少支持 5 年。在前 3 年期间，会定期发布“点版本”。这些版本刷新安装镜像（ISO），以便新用户无需在安装后下载长达 3 年的更新。\n\n因此，Ubuntu 24.04 LTS 将继续获得持续支持，直到 2029 年 4 月。此后，通过 Ubuntu Pro 再提供 5 年的安全覆盖（用户可免费注册并启用）。\n\nUbuntu 24.04 用户可在本月晚些时候正式升级到 Ubuntu 26.04 LTS。"
+  },
+  "4332707b735e2e1514ea7a74ed579e4f": {
+    "id": "4332707b735e2e1514ea7a74ed579e4f",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/liquid-glass-gnome-shell",
+    "title_en": "Liquid Glass GNOME Shell extension uses real refraction shaders",
+    "summary_en": "You can now give the Ubuntu desktop a &#8216;Liquid Glass&#8217; makeover using a new GNOME Shell Extension that written with &#8216;significant&#8217; help from AI. Its developer, Ryosuke Watanabe, said they loved the look of Liquid Glass – Apple&#8217;s new design material that gives UI elements light-bending surfaces with depth and motion – but, not owning an Apple device, wanted a way to enjoy it on their Linux desktop. So they created an extension to do it. &#8220;The design, the shader mat",
+    "pub_date": "Thu, 10 Sep 2026 20:19:14 +0000",
+    "title_zh": "Liquid Glass GNOME Shell 扩展使用真实折射着色器",
+    "summary_zh": "开发者 Ryosuke Watanabe 发布了一款新的 GNOME Shell 扩展，可为 Ubuntu 桌面带来苹果 Liquid Glass 设计风格。该扩展使用真实折射着色器实现光弯曲效果，开发过程中得到 AI 的“重要”帮助。开发者因没有苹果设备，希望在自己的 Linux 桌面上体验这种设计，于是创建了这款扩展。",
+    "fulltext_zh": "你现在可以使用一款新的 GNOME Shell 扩展为 Ubuntu 桌面换上“Liquid Glass”外观，该扩展在 AI 的“重要”帮助下编写而成。其开发者 Ryosuke Watanabe 表示，他们很喜欢 Liquid Glass 的外观——这是苹果新推出的设计材质，能让 UI 元素拥有弯曲光线的表面，并具备深度与动态效果——但由于没有苹果设备，他们希望能在自己的 Linux 桌面上享受这种效果。于是他们创建了一款扩展来实现这一点。“设计、着色器材质……”"
+  },
+  "be9f605207133d8e300647d8bd12593c": {
+    "id": "be9f605207133d8e300647d8bd12593c",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/linux-kernel-old-arm-code-removal/",
+    "title_en": "Linux Kernel is Getting Ready to Purge 55,00 Lines of Old 32-bit Arm Platform Code",
+    "summary_en": "These thirteen patches would delete the deprecated platform code, and the driver cleanup will follow later.",
+    "pub_date": "Thu, 10 Sep 2026 17:22:31 GMT",
+    "title_zh": "Linux 内核准备清除 55,000 行旧 32 位 Arm 平台代码",
+    "summary_zh": "Linux 内核开发者 Arnd Bergmann 提交了 13 个补丁，计划删除已弃用的 32 位 Arm 平台代码，涉及 SA1100、Acorn RiscPC、Footbridge、PXA、Orion、Dove、MV78xx0 等旧硬件，以及 OMAP24xx、i.MX31、STM32F4 等芯片。这些删除预计在 Linux 7.4 中完成，CPU 支持将在后续版本中移除。Linus Torvalds 历来支持清理旧代码，因此这些移除很可能被接受。",
+    "fulltext_zh": "Linux 内核准备清除 55,000 行旧 32 位 Arm 平台代码\n\nLinux 内核准备清除 55,000 行旧 32 位 Arm 平台代码\n\n这十三个补丁将删除已弃用的平台代码，驱动清理稍后跟进。\n\n这些补丁已发送到内核邮件列表，旨在删除一些 32 位 Arm 平台代码，这些代码已被即将到来的 Linux 7.3 发布周期标记为弃用。\n\n尽管这些补丁尚未被合并，但多年来一直试图淘汰这些代码的 Arnd Bergmann 终于取得了不错的进展。\n\n他建议在 Linux 7.4 中进行这些删除，该版本预计在 2026 年 12 月至 2027 年 1 月之间发布，CPU 支持将在其后的一个版本中移除。\n\n该计划已经存在一段时间；早先的提议是在匹配的 LTS 内核发布后，于 2025 年或 2026 年移除。Arnd 在开头为让早先的尝试闲置了近两年而道歉。\n\n他所说的清理弃用平台代码现在大约有 300 个补丁。这第一个系列只删除了代码以及依赖于它的 Kconfig 部分。\n\n这些听起来像是 1990 年代和 2000 年代曾经相关但如今已不再重要的一批硬件。\n\n失去支持的平台包括 SA1100 开发板、Acorn RiscPC、Footbridge、旧版 PXA 板级文件，以及 Orion、Dove 和 MV78xx0 开发板。\n\n同一系列还移除了 OMAP24xx、i.MX31 和无 i.MX 芯片、LPC18xx 和 Axxia，以及 STM32F4、F7 和 H7 微控制器、Versatile MPS2 和 AT91 SAMV7。\n\n这并不意味着这些开发板会突然停止工作（我知道这是显而易见的）。上述任何设备将无法运行 7.4 或 7.5 之后的主线内核，因为让它们启动的代码将被删除。\n\n另一件值得了解的事情是，在同一个 7.3 周期中，Linux 获得了对其他 Arm 芯片的支持，如苹果的 M3 Pro、Max 和 Ultra，三星的 Exynos 1580，以及高通的 Shikra。\n\n这显示了内核不断变化的本质，它必须定期适应新硬件，同时也要抛弃许多人不再使用的旧支持。\n\nLinus 以前也经历过这些\n\n如果你想一想，Linus Torvalds 一直是删除此类旧代码的坚定支持者。\n\n早在 2022 年，他就问是否是时候从 Linux 中删除 i486 系列 CPU 了，因为 2012 年就已经删除了。到 2025 年，Linus 表示没有任何真正的理由让任何人为该平台浪费时间开发。\n\n因此我预计他会接受这些移除，除非有任何未被检查到的缺陷。\n\n即便如此，旧硬件也有其拥护者。个人和企业确实会让这些机器继续运行，而 Arnd 为任何想在驱动被删除前反对移除的人留了窗口。\n\n喜欢这个更新吗？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无承诺\n\n一个热衷于开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性的极客。\n\nBroadcom 终止公开 VDDK 访问以加强对 VMware 的控制\n\nBottles 为 ARM 设备上的 Windows 专用软件带来希望\n\n一个 Clanker 让 Fedora 与 Windows 11 对决。Fedora 赢了，大部分情况下\n\nIkey Doherty 与 Omarchy：为什么他构建 Barney 而不是另一个发行版\n\n埃隆·马斯克的 X 试图杀死 Nitter。该项目刚刚表示它要回来了\n\n成为更好的 Linux 用户\n\n通过 FOSS 每周通讯，您将学习有用的 Linux 技巧、发现应用程序、探索新发行版并了解 Linux 世界的最新动态\n\n太好了！您已成功注册。\n\n欢迎回来！您已成功登录。\n\n您已成功订阅 It's FOSS。\n\n您的链接已过期。\n\n成功！请检查"
+  },
+  "437943c0010408f29b332715b3eb4267": {
+    "id": "437943c0010408f29b332715b3eb4267",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12951",
+    "title_en": "Distribution Release: Ubuntu 24.04.5",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Utkarsh Gupta has announced an update to the Ubuntu 24.04 long-term support (LTS) branch of Canonical's operating system. The new update, version 24.04.5, introduces fixes and improvements: \"Ubuntu 24.04.5 LTS, code-named 'Noble Numbat', is here. The team has been hard at work through this cycle, together with the....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Ubuntu 24.04.5",
+    "summary_zh": "Ubuntu 24.04.5 LTS（代号 Noble Numbat）正式发布，作为 24.04 长期支持分支的第五个点版本，该版本整合了安全更新与高严重性漏洞修复，并更新了安装介质，以减少安装后需下载的更新数量，重点保持系统稳定性与兼容性。同时提供了 Ubuntu 及 Kubuntu、Lubuntu、Xubuntu 等多个社区版本的下载镜像。",
+    "fulltext_zh": "发行版发布：Ubuntu 24.04.5\n\nUtkarsh Gupta 宣布了 Canonical 操作系统 24.04 长期支持（LTS）分支的更新。新版本 24.04.5 引入了修复和改进：“Ubuntu 24.04.5 LTS，代号‘Noble Numbat’，现已发布。团队在整个周期中与社区及合作伙伴共同努力，引入了新功能并修复了错误。一如既往，这个点版本包含许多更新，并提供了更新的安装介质，因此安装后需要下载的更新会更少。这些更新包括安全更新和其他高严重性错误的修正，重点在于保持 Ubuntu 24.04 LTS 的稳定性和兼容性。”\n\n为 Ubuntu 及其社区版本提供更多信息。下载：\nubuntu-24.04.5-desktop-amd64.iso\nkubuntu-24.04.5-desktop-amd64.iso\nlubuntu-24.04.5-desktop-amd64.iso\nubuntukylin-24.04.5-desktop-amd64.iso\nubuntu-mate-24.04.5-desktop-amd64.iso\nubuntu-budgie-24.04.5-desktop-amd64.iso\nubuntucinnamon-24.04.5-desktop-amd64.iso\nedubuntu-24.04.5-desktop-amd64.iso\nubuntu-unity-24.04.5-desktop-amd64.iso\nxubuntu-24.04.5-desktop-amd64.iso\n\n近期相关新闻与发布\n发行版发布：Ubuntu 24.04.5\n发行版发布：Ubuntu 26.04.1\n发行版发布：Ubuntu 26.04\n发行版发布：Ubuntu 24.04.4\n发行版发布：Ubuntu 25.10\n开发版发布：Ubuntu 25.10 Beta\n\nUbuntu 是一个完整的桌面 Linux 操作系统，可免费获取，并提供社区和专业支持。Ubuntu 社区建立在 Ubuntu 宣言所阐述的理念之上：软件应免费提供，软件工具应可供人们以本地语言使用，并无论是否有残疾都能使用，人们应有权以自己认为合适的方式定制和修改软件。“Ubuntu”是一个古老的非洲词语，意为“对他人的仁爱”。Ubuntu 发行版将 Ubuntu 的精神带入软件世界。"
+  },
+  "f4478db6e9011b54605f7162e25117e3": {
+    "id": "f4478db6e9011b54605f7162e25117e3",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Haiku-OS-August-2026",
+    "title_en": "BeOS-Inspired Haiku Now Supports Changing Audio Outputs Live, Other Improvements",
+    "summary_en": "In addition to August bringing the long-awaited Haiku R1 Beta 6 release, there was also a lot of development progress on this BeOS-inspired operating system too during the course of the past month...",
+    "pub_date": "Thu, 10 Sep 2026 20:55:29 -0400",
+    "title_zh": "受 BeOS 启发的 Haiku 现已支持实时切换音频输出及其他改进",
+    "summary_zh": "Haiku 项目发布 2026 年 8 月开发报告，亮点包括 Media Kit 和 media_server 支持实时切换音频输出，无需重启媒体服务即可更改默认系统输出；同时实现无音频播放时输出自动停止以降低资源占用。此外，蓝牙 HID 与音频支持持续推进，USB 支持、电源管理、x86 CPU 特性检测、内核修复及构建系统均有改进，PowerPC 和 ARM64 移植工作也在继续。",
+    "fulltext_zh": "受 BeOS 启发的 Haiku 现已支持实时切换音频输出及其他改进\n\n2026 年 9 月 10 日 20:55 EDT\n\n除了 8 月带来期待已久的 Haiku R1 Beta 6 版本外，这个受 BeOS 启发的操作系统在过去一个月里也取得了大量开发进展。\n\n今天，Haiku 项目发布了 2026 年 8 月报告，重点介绍了近期的开发工作，例如蓝牙 HID 支持和蓝牙音频支持的持续工作。\n\n过去一个月还加入了 Media Kit 和媒体服务器代码中对实时输出切换的支持。但 USB 音频设备等的热插拔仍不支持，除非重启媒体服务器。相关更新全文如下：\n\n“waddlesplash（以及 vighnesh-sawant 的一些补丁）在 Media Kit 和 media_server 中实现了对实时输出切换的支持。热插拔（例如 USB 音频设备）在重启媒体服务器之前仍无法被检测到，但在检测到之后，现在可以‘实时’更改默认系统输出，并且只需几秒钟即可生效，无需重启媒体服务。waddlesplash 还实现了在没有音频播放时对输出进行‘自动停止’，从而降低 CPU、功耗及其他资源占用。”\n\nHaiku 在 USB 支持方面也有各种改进，针对不同平台的电源管理持续得到改善，并且还支持仍使用 USB Audio 1 规范的 USB 2 音频设备。\n\nHaiku 还在 x86 CPU 特性检测代码、各种基础内核修复以及构建系统更新方面开展了工作。\n\n在不同 CPU 架构的 Haiku 支持方面，PowerPC 构建取得了进一步进展。此外，ARM64 支持工作也在继续。\n\n更多关于 Haiku OS 近期进展的详细信息，请见\n\nReactOS 开发者为 x86_64 游戏在这款“开源 Windows”操作系统上于 ARM 下运行 FEX\n\nSlackware 16 Alpha 1 在 GCC 16.2、Glibc 2.44 和 Binutils 2.47 升级后发布\n\n基于 Slackware 的 Zenwalk ISO 更新，搭载 Linux 7.1、集成 Flatpak 及 Xfce 4.20\n\nIkey Doherty 计划展示如何“正确”构建现代 Linux 发行版\n\nAmazon Linux 2027 现已进入预览：由 Linux 7.1 驱动，x86-64-v3，并使用 LTO 构建\n\nReactOS 0.4.16 发布，带来新的图形安装程序、更好的硬件支持\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nCERN 在长期作为 RHEL 机构后，正将工业计算机过渡到 Debian\n\nAsahi Linux 现已正式支持 Apple M3 Mac——但附带条件\n\nIkey Doherty 计划展示如何“正确”构建现代 Linux 发行版\n\nNetworkManager 通过诱骗 AI 代理添加金丝雀来努力执行 AI 政策\n\nAMD 正努力“将 Rust 深入推入 GPU 栈”\n\nLinux 内核计划移除约 55k 行旧 ARM 平台代码\n\nWine 11.17 发布，初步支持显示模式仿真\n\n神秘的 x86 CPU 已具备 APX、x86S，延续 Intel 在无遗留 x86 上未竟之处\n\n同时享有无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "da44b43488bed86b45d157b679836891": {
+    "id": "da44b43488bed86b45d157b679836891",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/GIMP-3.2.6-Released",
+    "title_en": "GIMP 3.2.6 Released With Some Early Preparations Toward Eventual GTK4 Port",
+    "summary_en": "The long-awaited GIMP 3.0 release for transitioning from GTK2 to GTK3 only saw its stable release last year. But with GTK4 already being out for years, GIMP developers have begun making some very early preparations toward an inevitable GTK4 port...",
+    "pub_date": "Thu, 10 Sep 2026 18:12:22 -0400",
+    "title_zh": "GIMP 3.2.6 发布，为最终移植 GTK4 做了一些早期准备",
+    "summary_zh": "GIMP 3.2.6 发布，包含为最终移植 GTK4 所做的早期准备工作，以及多项修复和改进。新版本提升了加载大量字体时的性能，开始清理代码库中已弃用的功能，为 GTK4 迁移铺路。此外还新增了图层组剪切、旋转动态输入等功能，并提供了新的 macOS 软件包。",
+    "fulltext_zh": "GIMP 3.2.6 发布，为最终移植 GTK4 做了一些早期准备\n2026年9月10日下午6:12（美国东部时间）。\n从 GTK2 过渡到 GTK3 的版本去年才发布稳定版。但 GTK4 已经推出多年，GIMP 开发者已开始为不可避免的 GTK4 移植做一些非常早期的准备。\nGIMP 3.2.6 现已发布，包含部分上述准备工作，以及针对这款 Adobe Photoshop 自由软件替代品的各种其他修复和改进。\n在性能方面，GIMP 3.2.6 进行了“改进”，以提升加载大量字体时的性能。仍存在一些明显的延迟，但总体而言，对于拥有大量字体文件的用户，以及在文本工具中输入和关闭字体列表时，启动速度有了更好的进展。预计在迁移到 GTK4 时还会有进一步的性能优化。\n可以说最引人关注的是，GIMP 3.2.6 已开始为最终的 GTK4 移植做准备！在 GIMP 3.0 中，他们终于从 GTK2 迁移到了 GTK3，而 GTK4 已经推出近六年。GIMP 开发者已开始对代码库进行一些修改，以避免使用已弃用的功能，并进行其他更改，以便更好地迎接最终的 GTK4 移植。从 GTK3 到 GTK4 的迁移比从 GTK2 到 GTK3 的侵入性更小，但可能还需要一段时间才能看到可能被称为“GIMP 4.0”的版本。\n在其他新功能方面，GIMP 3.2.6 增加了在图层组上使用剪切的功能。还新增了一个用于绘画的“旋转”（桶形旋转）动态输入，供较新的 Wacom 笔使用。\n对于 macOS 用户，现在有一个新的 macOS 软件包，与 Linux 和 Windows 软件包同时生成。\nGIMP 3.2.6 还包含多项安全修复以及较小的错误修复。\n下载和更多关于 GIMP 3.2.6 的详细信息，请访问\nFreeDesktop SDK 26.08 发布，放弃 Snap 支持，引导变更\nServo 0.5 发布：DuckDuckGo 正常渲染，文本渲染速度提升高达 10 倍\n加利福尼亚州通过 AB-1856，为开源提供年龄验证豁免\n主权科技机构对 Flatpak 进行大规模投资\nLibgcrypt 1.12.3 带来 Intel SM3 / SM4 / SHA512 优化\nNginx 错误页面的深色模式支持仍然难以实现\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\nCERN 在长期作为 RHEL 机构后，将工业计算机过渡到 Debian\nAsahi Linux 现在正式支持 Apple M3 Mac——但有注意事项\nIkey Doherty 计划展示如何“正确”构建现代 Linux 发行版\nNetworkManager 通过诱骗 AI 代理添加金丝雀来执行 AI 政策\nAMD 致力于“将 Rust 深入推入 GPU 栈”\nLinux 内核计划移除约 5.5 万行旧 ARM 平台代码\nWine 11.17 发布，初步支持显示模式模拟\n神秘的 x86 CPU 已具备 APX、x86S，接续 Intel 未竟的无传统 x86 之路\n同时拥有无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "c4b0f75a159280abaf81f734843c7fd1": {
+    "id": "c4b0f75a159280abaf81f734843c7fd1",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Mesa-26.3-GFX6-GFX8-Modifiers",
+    "title_en": "Mesa 26.3 RADV + RadeonSI Ready With DRM Format Modifiers For Older AMD GPUs",
+    "summary_en": "Coming with Linux 7.3 is DRM format modifiers for GFX6 through GFX8 era GPUs covering the original Raddeon HD 7000 (GCN 1.0) graphics cards up through the Polaris and Fiji series. This work by Valve's Timur Kristóf is necessary for these older GPUs to support Vulkan-based Wayland compositors, better interoperability between OpenGL and Vulkan or other APis, compositors running on the Zink OpenGL-on-Vulkan driver implementation, and other benefits. Now merged for Mesa 26.3 is the RadeonSI and RADV",
+    "pub_date": "Thu, 10 Sep 2026 17:19:11 -0400",
+    "title_zh": "Mesa 26.3 的 RADV 与 RadeonSI 已为旧款 AMD GPU 准备好 DRM 格式修饰符支持",
+    "summary_zh": "Linux 7.3 为 GFX6 至 GFX8 时代的 AMD GPU（从初代 Radeon HD 7000 到 Polaris、Fiji 系列）引入了 DRM 格式修饰符支持。如今 Mesa 26.3 已合并 RadeonSI 与 RADV 的用户空间补丁，使这些旧 GPU 能利用格式修饰符，从而支持基于 Vulkan 的 Wayland 合成器、改善 OpenGL 与 Vulkan 互操作性，并兼容 Zink 等实现。",
+    "fulltext_zh": "Mesa 26.3 的 RADV 与 RadeonSI 已为旧款 AMD GPU 准备好 DRM 格式修饰符支持\n\n发布于 2026 年 9 月 10 日下午 05:19（美国东部时间）。\n\n随 Linux 7.3 一同到来的是面向 GFX6 至 GFX8 时代 GPU 的 DRM 格式修饰符，涵盖从初代 Radeon HD 7000（GCN 1.0）显卡一直到 Polaris 和 Fiji 系列。Valve 的 Timur Kristóf 所做的这项工作，对于这些旧 GPU 支持基于 Vulkan 的 Wayland 合成器、改善 OpenGL 与 Vulkan 或其他 API 之间的互操作性、支持运行在 Zink（Vulkan 之上的 OpenGL 驱动实现）上的合成器，以及其他诸多好处而言，都是必要的。如今，Mesa 26.3 已合并了 RadeonSI 和 RADV 用户空间侧的支持，以便在这些旧 GPU 上使用格式修饰符。\n\n在 AMDGPU 的 GFX6 至 GFX8 DRM 格式修饰符已合并到当前 Linux 7.3 周期（将于 10 月作为稳定版首次亮相）之后，Mesa 侧的补丁也已合并到 Mesa 26.3 中，后者预计将于 11 月作为稳定版首次亮相。\n\nDRM 格式修饰符提供了有关图像缓冲区的平铺、压缩及其他属性的详细信息。根据布局的不同，它还可以帮助实现更好的性能以及其他更灵活的用例。\n\nTimur Kristóf 今天合入 Mesa Git 的补丁包含了针对 GFX6 至 GFX8 修饰符支持的所有 Mesa 侧更改。GFX9 及更新版本此前已由 AMDGPU 和 Mesa 支持。\n\n新补丁为 Linux 上的 AMD Radeon 显卡提供 HDMI 1.4 3D 模式支持\n\nAMDGPU Linux 驱动针对 HDMI 被动 VRR 支持的最新补丁\n\nAMD 准备为 Linux 默认启用 HDMI 2.1 FRL 支持\n\nAMD RDNA 4m 固件在发布前已为 Linux 发布\n\nMarek Olšák 的 19 个最新补丁进一步优化 RADV 与 ACO\n\nAMD 更新 HDMI 2.1 VRR 与 ALLM 补丁，但将错过 Linux 7.3\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nCERN 在长期作为 RHEL 机构后，正将工业计算机迁移至 Debian\n\nAsahi Linux 现已正式支持 Apple M3 Mac——但附带条件\n\nIkey Doherty 计划展示如何“正确”构建现代 Linux 发行版\n\nNetworkManager 通过诱骗 AI 代理添加金丝雀来执行 AI 政策\n\nAMD 致力于“将 Rust 深入 GPU 栈”\n\nLinux 内核计划移除约 5.5 万行旧 ARM 平台代码\n\nWine 11.17 发布，初步支持显示模式模拟\n\n神秘的 x86 CPU 已具备 APX、x86S，接续 Intel 在无遗留 x86 上的未竟事业\n\n在享受无广告浏览的同时，\n单页文章视图\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "1310febd40815aa1e21ad3a187460725": {
+    "id": "1310febd40815aa1e21ad3a187460725",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Ubuntu-24.04.5-LTS",
+    "title_en": "Ubuntu 24.04.5 LTS Released With Linux 7.0 HWE Stack",
+    "summary_en": "For those continuing to make use of the Ubuntu 24.04 Long Term Support \"LTS\" series, Ubuntu 24.04.5 LTS is out today as the newest point release...",
+    "pub_date": "Thu, 10 Sep 2026 13:49:03 -0400",
+    "title_zh": "Ubuntu 24.04.5 LTS 发布，搭载 Linux 7.0 HWE 堆栈",
+    "summary_zh": "Ubuntu 24.04.5 LTS 作为该长期支持系列的最新点版本正式发布，集成了过去数月的稳定版更新，并引入来自 Ubuntu 26.04 的硬件启用（HWE）堆栈，包含 Linux 7.0 内核与 Mesa 26.0 图形驱动。各官方衍生版本同步更新。",
+    "fulltext_zh": "对于继续使用 Ubuntu 24.04 长期支持“LTS”系列的用户来说，Ubuntu 24.04.5 LTS 于今日发布，成为最新的点版本。\n\nUbuntu 24.04.5 LTS 整合了过去几个月的所有稳定版更新，使得在新的 Ubuntu 24.04 安装中需要获取的软件包更新更少，从而实现更快的初始部署。此外，它继续提供新的硬件启用“HWE”堆栈，该堆栈现在是从 Ubuntu 26.04 中引入的关键软件包。\n\nUbuntu 24.04.5 LTS 的 HWE 堆栈提供了 Linux 7.0 内核和 Mesa 26.0 图形驱动及其他相关软件包更新，适合那些希望获得更好体验的用户，尤其是在较新硬件上运行时。但对于游戏玩家、爱好者和其他用户来说，通常值得升级以获得性能最强、功能最丰富的体验，尤其是在升级后的 GPU 驱动方面。\n\nKubuntu 24.04.5 LTS、Ubuntu Budgie 24.04.5 LTS、Ubuntu MATE 24.04.5 LTS、Lubuntu 24.04.5 LTS、Ubuntu Kylin 24.04.5 LTS、Ubuntu Studio 24.04.5 LTS、Xubuntu 24.04.5 LTS、Edubuntu 24.04.5 LTS、Ubuntu Cinnamon 24.04.5 LTS 和 Ubuntu Unity 24.04.5 LTS 等风味版本均与今日发布的官方 Ubuntu 24.04.5 LTS 安装介质相辅相成。\n\nUbuntu 24.04.5 LTS 的公告可在其网站上找到。"
+  },
+  "8da7d3e7a1c0d2cf555d2313fd522b64": {
+    "id": "8da7d3e7a1c0d2cf555d2313fd522b64",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/intel-xeon-600-amd-threadripper-9000",
+    "title_en": "Intel Xeon 600 Workstation Performance vs. AMD Threadripper 9000 In Nearly 400 Benchmarks",
+    "summary_en": "Last month I had the chance to test the Xeon 678X workstation processor as my first hands-on opportunity with the Xeon 600 \"Granite Rapids WS\" series. The Intel Xeon 678X was within the HP Z4 G6i workstation and used it for a number of different benchmarks. In that HP workstation review were also some comparison points to the likes of AMD Ryzen Threadripper while in this article are some much more concentrated benchmarks between the competing Xeon 600 series and AMD Ryzen Threadripper 9000 serie",
+    "pub_date": "Thu, 10 Sep 2026 12:43:00 -0400",
+    "title_zh": "Intel Xeon 600 工作站性能对比 AMD Threadripper 9000：近 400 项基准测试",
+    "summary_zh": "本文通过近400项基准测试，对比了Intel Xeon 678X（48核/96线程，Granite Rapids-WS）与AMD Ryzen Threadripper 9980X（64核/128线程，Zen 5）在工作站场景下的性能与能效。测试在Ubuntu 26.04 LTS、Linux 7.0内核、GCC 15.2环境下进行，Threadripper分别在64核和48核配置下与Xeon对比。结果显示两者在不同工作负载中互有胜负，功耗与频率表现也各有特点。",
+    "fulltext_zh": "Intel Xeon 600 工作站性能对比 AMD Threadripper 9000：近 400 项基准测试 - Phoronix\n\nIntel Xeon 600 工作站性能对比 AMD Threadripper 9000：近 400 项基准测试\n2026年9月10日 下午12:43 EDT。\n\n上个月，我有机会测试了这款工作站处理器，这是我首次接触 Xeon 600 “Granite Rapids WS” 系列。Intel Xeon 678X 搭载在 HP Z4 G6i 工作站中，我将其用于多项不同的基准测试。在那篇 HP 工作站评测中，也包含了一些与 AMD Ryzen Threadripper 的对比数据；而本文则更集中地对比了竞争中的 Xeon 600 系列与 AMD Ryzen Threadripper 9000 系列工作站处理器。近 400 项基准测试，外加功耗和频率对比。\n\n在需要将那台 HP Z4 Gi 工作站评测机寄回之前，我在 Xeon 678X 上运行了大量基准测试，以便今天发布这篇更有针对性的 AMD Ryzen Threadripper 对比。提醒一下，Intel Xeon 678X 拥有 48 核 / 96 线程，全部由 Redwood Cove P 核组成。Xeon 678X 的基础频率为 2.4GHz，最大睿频频率为 4.9GHz，基础功耗为 300 瓦，最大睿频功耗为 360 瓦。Xeon 600 系列支持最多八通道 DDR5-6400 或 MRDIMM-8000 内存。不过在这台 HP Z4 G6i 工作站中，使用的是四通道 DDR5-6400 内存。\n\n由于 Xeon 678X 是我目前唯一接触过的 Xeon 600 系列产品，在这近 400 项基准测试中，我将它与 AMD Ryzen Threadripper 9980X 64 核 CPU 进行了对比，分别在 64 核 / 128 线程和逐核对应的 48 核 / 96 线程配置下测试。AMD Ryzen Threadripper 9980X 拥有 64 个 Zen 5 核心，基础频率 3.2GHz，最大加速频率可达 5.4GHz，TDP 为 350 瓦。因此从功耗上看，它与 Xeon 678X 差别不大；基准测试分别在 64c/128t 和 48c/96t 下进行，以匹配 Xeon 678X。\n\n在测试 AMD Ryzen Threadripper 9980X 的 48 核配置时，通过 BIOS 将八个 CCD 各自设置为六个核心在线、两个核心禁用。\n\nThreadripper 9980X 在 System76 Thelio Major 中进行了测试。感谢 System76 允许 Phoronix 长期保留这台系统用于测试，使这样的对比成为可能。System76 Thelio Major 配备了四通道 32GB DDR5-5600 内存模块。内存通道数相同，但速度为 DDR5-5600，而非 DDR5-6400。实验室中还有 Threadripper PRO 9995WX 等产品，不过与这款唯一的 Xeon 600 系列工作站 CPU 对比已超出本文范围。\n\n这两台工作站均运行 Ubuntu 26.04 LTS、Linux 7.0 内核和 GCC 15.2 编译器，软件栈相同。两台工作站均运行在性能缩放调节器和 EPP 模式下。除此之外，所有软件均保持默认设置，以便在广泛的工作负载中对比 Xeon 600 系列和 Threadripper 9000 系列工作站处理器的性能和能效。\n\n感谢 System76 和 HP 提供硬件，使这次工作站对比得以实现。\n\nIntel 超线程在 Xeon 678X “Granite Rapids-WS” 上的性能\nIntel AMX 在 Xeon 678X 工作站 CPU 上的性能\nAMD EPYC 9006 Venice 发布，看起来有望大获成功\nAMD Ryzen 7 7700X3D Linux 性能\nGraviton5 性能超越 Intel Xeon Granite Rapids，但不及 AMD EPYC Turin\nNVIDIA GB10 CPU 性能与 Vera 的对比\n\n享受无广告浏览，\n单页文章视图\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "45c11fe870362e335db4adbbf4b2b701": {
+    "id": "45c11fe870362e335db4adbbf4b2b701",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/hyprland-0-56-1-released-with-monitor-rotation-and-mirroring-fixes/",
+    "title_en": "Hyprland 0.56.1 Released with Monitor Rotation and Mirroring Fixes",
+    "summary_en": "Hyprland 0.56.1 brings fixes for monitor rotation and mirroring, alongside additional stability and display improvements for the Wayland compositor.\nThe post Hyprland 0.56.1 Released with Monitor Rotation and Mirroring Fixes appeared first on Linux Today.",
+    "pub_date": "Thu, 10 Sep 2026 07:18:46 +0000",
+    "title_zh": "Hyprland 0.56.1 发布，修复显示器旋转与镜像问题",
+    "summary_zh": "Hyprland 0.56.1 已发布，主要修复了显示器旋转和镜像功能的问题，同时为这款 Wayland 合成器带来了额外的稳定性和显示改进。",
+    "fulltext_zh": "Hyprland 0.56.1 为显示器旋转和镜像带来了修复，同时为这款 Wayland 合成器提供了额外的稳定性和显示改进。\n\n文章《Hyprland 0.56.1 发布，修复显示器旋转与镜像问题》最初发表于 Linux Today。"
+  },
+  "0fa704fd89ff71cc18390955c68fc6a7": {
+    "id": "0fa704fd89ff71cc18390955c68fc6a7",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/netbird-securely-connect-linux-machines-with-a-wireguard-mesh-vpn/",
+    "title_en": "NetBird: Securely Connect Linux Machines with a WireGuard Mesh VPN",
+    "summary_en": "Learn how NetBird securely connects machines using a WireGuard-based mesh VPN, simplifying private networking, remote access, and device management.\nThe post NetBird: Securely Connect Linux Machines with a WireGuard Mesh VPN appeared first on Linux Today.",
+    "pub_date": "Thu, 10 Sep 2026 07:17:59 +0000",
+    "title_zh": "NetBird：使用 WireGuard 网状 VPN 安全连接 Linux 机器",
+    "summary_zh": "本文介绍 NetBird，一个基于 WireGuard 的网状 VPN 工具，用于安全连接 Linux 机器。它简化了私有网络、远程访问和设备管理，帮助用户轻松构建安全的点对点网络。",
+    "fulltext_zh": "了解 NetBird 如何使用基于 WireGuard 的网状 VPN 安全地连接机器，从而简化私有网络、远程访问和设备管理。\n\n文章《NetBird：使用 WireGuard 网状 VPN 安全连接 Linux 机器》首次出现在 Linux Today 上。"
+  },
+  "d442f4e508f390f30ce664d414f076ba": {
+    "id": "d442f4e508f390f30ce664d414f076ba",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/revisited-mpz-linux-music-player/",
+    "title_en": "Revisited: mpz – Linux Music Player",
+    "summary_en": "Revisit mpz, a lightweight music player focused on simple playback, playlist management, and an efficient desktop listening experience.\nThe post Revisited: mpz – Linux Music Player appeared first on Linux Today.",
+    "pub_date": "Thu, 10 Sep 2026 07:16:46 +0000",
+    "title_zh": "回顾：mpz – Linux 音乐播放器",
+    "summary_zh": "本文回顾了轻量级音乐播放器 mpz，它专注于简单播放、播放列表管理以及高效的桌面聆听体验。",
+    "fulltext_zh": "回顾 mpz，一款轻量级音乐播放器，专注于简单播放、播放列表管理以及高效的桌面聆听体验。\n\n文章《回顾：mpz – Linux 音乐播放器》首发于 Linux Today。"
+  },
+  "3787bd4974f80540117ea77d7de9b41b": {
+    "id": "3787bd4974f80540117ea77d7de9b41b",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/how-to-install-mattermost-on-ubuntu-26-04/",
+    "title_en": "How to Install Mattermost on Ubuntu 26.04",
+    "summary_en": "Learn how to install Mattermost on Ubuntu 26.04, configure PostgreSQL, set up the server, and secure your self-hosted team collaboration platform.\nThe post How to Install Mattermost on Ubuntu 26.04 appeared first on Linux Today.",
+    "pub_date": "Thu, 10 Sep 2026 07:15:33 +0000",
+    "title_zh": "如何在 Ubuntu 26.04 上安装 Mattermost",
+    "summary_zh": "本文介绍在 Ubuntu 26.04 上安装 Mattermost 的完整步骤，包括配置 PostgreSQL、设置服务器以及保护自托管团队协作平台的安全。",
+    "fulltext_zh": "了解如何在 Ubuntu 26.04 上安装 Mattermost、配置 PostgreSQL、设置服务器，并保护你的自托管团队协作平台。\n\n文章《如何在 Ubuntu 26.04 上安装 Mattermost》首次出现在 Linux Today 上。"
+  },
+  "9068b8ce0c2ce68ef8d04f6c3c6fb800": {
+    "id": "9068b8ce0c2ce68ef8d04f6c3c6fb800",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/first-look-at-firefoxs-brand-new-design-in-firefox-nightly/",
+    "title_en": "First Look at Firefox’s Brand-New Design in Firefox Nightly",
+    "summary_en": "Get a first look at Firefox’s brand-new design in Firefox Nightly, featuring refreshed interface elements and a more modern browsing experience.\nThe post First Look at Firefox’s Brand-New Design in Firefox Nightly appeared first on Linux Today.",
+    "pub_date": "Thu, 10 Sep 2026 07:14:40 +0000",
+    "title_zh": "抢先看 Firefox Nightly 中 Firefox 的全新设计",
+    "summary_zh": "Firefox Nightly 版本中展示了 Firefox 的全新设计，包括焕然一新的界面元素和更现代化的浏览体验。这是该新设计的首次亮相，让用户提前一窥未来 Firefox 的外观变化。",
+    "fulltext_zh": "在 Firefox Nightly 中抢先一睹 Firefox 的全新设计，其特色是焕然一新的界面元素和更加现代化的浏览体验。\n\n文章《抢先看 Firefox Nightly 中 Firefox 的全新设计》最先出现在 Linux Today 上。"
   }
 }

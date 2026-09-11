@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BSD发布：FreeBSD 14.5 — Linux 中文速报</title>
+<title>Linux 内核准备清除 55,000 行旧 32 位 Arm 平台代码 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>BSD发布：FreeBSD 14.5</h1>
+  <h1>Linux 内核准备清除 55,000 行旧 32 位 Arm 平台代码</h1>
 
-  <div class="article-summary">FreeBSD项目发布了14.x系列的新版本14.5，该版本包含多项修复和用户态工具的变化。主要更新包括：rc.firewall脚本支持从文件读取IP地址或子网；sh(1)的默认历史记录大小从100增加到128，符合POSIX.1-2024要求；mt(1)和libmt新增LTO-10和LTO-10P密度代码及磁带规格支持；pwd(1)默认行为从-P改为-L，与POSIX语义一致；ipfw(8)增加了回退机制以兼容FreeBSD 15.0+内核；daemon(8)新增-m选项以指定输出文件模式。</div>
+  <div class="article-summary">Linux 内核开发者 Arnd Bergmann 提交了 13 个补丁，计划删除已弃用的 32 位 Arm 平台代码，涉及 SA1100、Acorn RiscPC、Footbridge、PXA、Orion、Dove、MV78xx0 等旧硬件，以及 OMAP24xx、i.MX31、STM32F4 等芯片。这些删除预计在 Linux 7.4 中完成，CPU 支持将在后续版本中移除。Linus Torvalds 历来支持清理旧代码，因此这些移除很可能被接受。</div>
 
-  <div class="article-body"><p>BSD发布：FreeBSD 14.5 (DistroWatch.com新闻)</p><p>DistroWatch.com由以下赞助商支持</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW周刊 / 评测存档</p><p>访客评分与评论</p><p>项目评分排名</p><p>播客、新闻通讯与评测</p><p>跨发行版软件包比较</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停止维护的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与提示专栏</p><p>常见误解专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>发行版家族树可视化</p><p>常见问题</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>Asahi Linux在M3芯片系统上运行</p><p>Debian将在CERN使用</p><p>Debian 11达到生命周期终点</p><p>Debian就LLM贡献进行投票</p><p>Asahi在多方面取得进展</p><p>新版COSMIC带来更多无障碍功能</p><p>Bazzite更新Deck镜像</p><p>RPM改进锁处理</p><p>Fairphone 6在美国销售</p><p>Kubuntu用户将受益于Plasma长期支持</p><p>易于使用的PBX - 托管或自管理</p><p>Linux电话系统</p><p>免费在线聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程办公应用：iOS或Android</p><p>免费视频会议</p><p>3CX提供的VoIP/PBX教程</p><p>不要措手不及，制定灾难恢复计划！</p><p>必备的在线聊天报告与统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business与3CX WhatsApp API集成</p><p>3CX StartUP的5大杀手级功能</p><p>不要成为“那种人”第1卷：保持复杂凭据</p><p>不要成为“那种人”第2卷：呼叫欺诈</p><p>不要成为“那种人”第3卷：4大安全提示</p><p>不要成为“那种人”第4卷：监控您的实例</p><p>Fluff Linux 2026.08.01</p><p>Red Hat周五五件事 - 2026年9月4日</p><p>PCLinuxOS杂志2026年9月</p><p>Tumbleweed月度更新 - 2026年8月</p><p>Full Circle每周新闻</p><p>最新新闻与更新</p><p>新闻过滤选项</p><p>BSD发布：FreeBSD 14.5</p><p>项目发布了FreeBSD 14.x系列的一个更新。新版本14.5提供了若干修复，并引入了一些用户态工具的变化。</p><p>“rc.firewall脚本现在支持从磁盘文件读取IP地址或子网，用于firewall_allowservices和firewall_trusted列表变量。看起来像绝对路径的元素会逐行读取，跳过注释和空行，每行的第一个单词被视为地址或子网。sh(1)中的默认历史记录大小已从100增加到128，符合POSIX.1-2024的最低要求。mt(1)和libmt中已添加LTO-10和LTO-10P密度代码及磁带规格，从而能够检测和报告新的磁带格式。pwd(1)的默认行为已从-P更改为-L，与POSIX语义保持一致。ipfw(8)二进制文件现在包含一个回退机制，以支持FreeBSD 15.0中引入的新内核接口。当在15.0+内核上运行时，ipfw(8)会自动调用捆绑的ipfw15二进制文件来加载防火墙规则，确保升级过程中的兼容性。daemon(8)工具现在支持-m选项来指定输出文件模式，允许非root日志收集器访问日志文件。”</p><p>更多信息可在FreeBSD-14.5-RELEASE-amd64-disc1.iso中找到。</p><p>近期相关新闻和发布</p><p>BSD发布：FreeBSD 14.5</p><p>BSD发布：FreeBSD 15.1</p><p>BSD发布：FreeBSD 14.4</p><p>BSD发布：FreeBSD 15.0</p><p>开发版发布：FreeBSD 15.0-RC1</p><p>开发版发布：FreeBSD 15.0-BETA1</p><p>FreeBSD是一个类UNIX操作系统，支持i386、amd64、IA-64、arm、MIPS、powerpc、ppc64、PC-98和UltraSPARC平台，基于加州大学伯克利分校的“4.4BSD-Lite”版本，并带有一些“4.4BSD-Lite2”增强。它间接基于William Jolitz将加州大学伯克利分校的“Net/2”移植到i386的版本，即“386BSD”，尽管386BSD的代码已所剩无几。FreeBSD被世界各地的公司、互联网服务提供商、研究人员、计算机专业人士、学生和家庭用户用于他们的工作、教育……</p></div>
+  <div class="article-body"><p>Linux 内核准备清除 55,000 行旧 32 位 Arm 平台代码</p><p>Linux 内核准备清除 55,000 行旧 32 位 Arm 平台代码</p><p>这十三个补丁将删除已弃用的平台代码，驱动清理稍后跟进。</p><p>这些补丁已发送到内核邮件列表，旨在删除一些 32 位 Arm 平台代码，这些代码已被即将到来的 Linux 7.3 发布周期标记为弃用。</p><p>尽管这些补丁尚未被合并，但多年来一直试图淘汰这些代码的 Arnd Bergmann 终于取得了不错的进展。</p><p>他建议在 Linux 7.4 中进行这些删除，该版本预计在 2026 年 12 月至 2027 年 1 月之间发布，CPU 支持将在其后的一个版本中移除。</p><p>该计划已经存在一段时间；早先的提议是在匹配的 LTS 内核发布后，于 2025 年或 2026 年移除。Arnd 在开头为让早先的尝试闲置了近两年而道歉。</p><p>他所说的清理弃用平台代码现在大约有 300 个补丁。这第一个系列只删除了代码以及依赖于它的 Kconfig 部分。</p><p>这些听起来像是 1990 年代和 2000 年代曾经相关但如今已不再重要的一批硬件。</p><p>失去支持的平台包括 SA1100 开发板、Acorn RiscPC、Footbridge、旧版 PXA 板级文件，以及 Orion、Dove 和 MV78xx0 开发板。</p><p>同一系列还移除了 OMAP24xx、i.MX31 和无 i.MX 芯片、LPC18xx 和 Axxia，以及 STM32F4、F7 和 H7 微控制器、Versatile MPS2 和 AT91 SAMV7。</p><p>这并不意味着这些开发板会突然停止工作（我知道这是显而易见的）。上述任何设备将无法运行 7.4 或 7.5 之后的主线内核，因为让它们启动的代码将被删除。</p><p>另一件值得了解的事情是，在同一个 7.3 周期中，Linux 获得了对其他 Arm 芯片的支持，如苹果的 M3 Pro、Max 和 Ultra，三星的 Exynos 1580，以及高通的 Shikra。</p><p>这显示了内核不断变化的本质，它必须定期适应新硬件，同时也要抛弃许多人不再使用的旧支持。</p><p>Linus 以前也经历过这些</p><p>如果你想一想，Linus Torvalds 一直是删除此类旧代码的坚定支持者。</p><p>早在 2022 年，他就问是否是时候从 Linux 中删除 i486 系列 CPU 了，因为 2012 年就已经删除了。到 2025 年，Linus 表示没有任何真正的理由让任何人为该平台浪费时间开发。</p><p>因此我预计他会接受这些移除，除非有任何未被检查到的缺陷。</p><p>即便如此，旧硬件也有其拥护者。个人和企业确实会让这些机器继续运行，而 Arnd 为任何想在驱动被删除前反对移除的人留了窗口。</p><p>喜欢这个更新吗？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热衷于开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性的极客。</p><p>Broadcom 终止公开 VDDK 访问以加强对 VMware 的控制</p><p>Bottles 为 ARM 设备上的 Windows 专用软件带来希望</p><p>一个 Clanker 让 Fedora 与 Windows 11 对决。Fedora 赢了，大部分情况下</p><p>Ikey Doherty 与 Omarchy：为什么他构建 Barney 而不是另一个发行版</p><p>埃隆·马斯克的 X 试图杀死 Nitter。该项目刚刚表示它要回来了</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周通讯，您将学习有用的 Linux 技巧、发现应用程序、探索新发行版并了解 Linux 世界的最新动态</p><p>太好了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅 It's FOSS。</p><p>您的链接已过期。</p><p>成功！请检查</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12949" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/linux-kernel-old-arm-code-removal/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

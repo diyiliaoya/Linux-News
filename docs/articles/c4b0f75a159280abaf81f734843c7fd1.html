@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BSD发布：FreeBSD 14.5 — Linux 中文速报</title>
+<title>Mesa 26.3 的 RADV 与 RadeonSI 已为旧款 AMD GPU 准备好 DRM 格式修饰符支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>BSD发布：FreeBSD 14.5</h1>
+  <h1>Mesa 26.3 的 RADV 与 RadeonSI 已为旧款 AMD GPU 准备好 DRM 格式修饰符支持</h1>
 
-  <div class="article-summary">FreeBSD项目发布了14.x系列的新版本14.5，该版本包含多项修复和用户态工具的变化。主要更新包括：rc.firewall脚本支持从文件读取IP地址或子网；sh(1)的默认历史记录大小从100增加到128，符合POSIX.1-2024要求；mt(1)和libmt新增LTO-10和LTO-10P密度代码及磁带规格支持；pwd(1)默认行为从-P改为-L，与POSIX语义一致；ipfw(8)增加了回退机制以兼容FreeBSD 15.0+内核；daemon(8)新增-m选项以指定输出文件模式。</div>
+  <div class="article-summary">Linux 7.3 为 GFX6 至 GFX8 时代的 AMD GPU（从初代 Radeon HD 7000 到 Polaris、Fiji 系列）引入了 DRM 格式修饰符支持。如今 Mesa 26.3 已合并 RadeonSI 与 RADV 的用户空间补丁，使这些旧 GPU 能利用格式修饰符，从而支持基于 Vulkan 的 Wayland 合成器、改善 OpenGL 与 Vulkan 互操作性，并兼容 Zink 等实现。</div>
 
-  <div class="article-body"><p>BSD发布：FreeBSD 14.5 (DistroWatch.com新闻)</p><p>DistroWatch.com由以下赞助商支持</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW周刊 / 评测存档</p><p>访客评分与评论</p><p>项目评分排名</p><p>播客、新闻通讯与评测</p><p>跨发行版软件包比较</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停止维护的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与提示专栏</p><p>常见误解专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>发行版家族树可视化</p><p>常见问题</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>Asahi Linux在M3芯片系统上运行</p><p>Debian将在CERN使用</p><p>Debian 11达到生命周期终点</p><p>Debian就LLM贡献进行投票</p><p>Asahi在多方面取得进展</p><p>新版COSMIC带来更多无障碍功能</p><p>Bazzite更新Deck镜像</p><p>RPM改进锁处理</p><p>Fairphone 6在美国销售</p><p>Kubuntu用户将受益于Plasma长期支持</p><p>易于使用的PBX - 托管或自管理</p><p>Linux电话系统</p><p>免费在线聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程办公应用：iOS或Android</p><p>免费视频会议</p><p>3CX提供的VoIP/PBX教程</p><p>不要措手不及，制定灾难恢复计划！</p><p>必备的在线聊天报告与统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business与3CX WhatsApp API集成</p><p>3CX StartUP的5大杀手级功能</p><p>不要成为“那种人”第1卷：保持复杂凭据</p><p>不要成为“那种人”第2卷：呼叫欺诈</p><p>不要成为“那种人”第3卷：4大安全提示</p><p>不要成为“那种人”第4卷：监控您的实例</p><p>Fluff Linux 2026.08.01</p><p>Red Hat周五五件事 - 2026年9月4日</p><p>PCLinuxOS杂志2026年9月</p><p>Tumbleweed月度更新 - 2026年8月</p><p>Full Circle每周新闻</p><p>最新新闻与更新</p><p>新闻过滤选项</p><p>BSD发布：FreeBSD 14.5</p><p>项目发布了FreeBSD 14.x系列的一个更新。新版本14.5提供了若干修复，并引入了一些用户态工具的变化。</p><p>“rc.firewall脚本现在支持从磁盘文件读取IP地址或子网，用于firewall_allowservices和firewall_trusted列表变量。看起来像绝对路径的元素会逐行读取，跳过注释和空行，每行的第一个单词被视为地址或子网。sh(1)中的默认历史记录大小已从100增加到128，符合POSIX.1-2024的最低要求。mt(1)和libmt中已添加LTO-10和LTO-10P密度代码及磁带规格，从而能够检测和报告新的磁带格式。pwd(1)的默认行为已从-P更改为-L，与POSIX语义保持一致。ipfw(8)二进制文件现在包含一个回退机制，以支持FreeBSD 15.0中引入的新内核接口。当在15.0+内核上运行时，ipfw(8)会自动调用捆绑的ipfw15二进制文件来加载防火墙规则，确保升级过程中的兼容性。daemon(8)工具现在支持-m选项来指定输出文件模式，允许非root日志收集器访问日志文件。”</p><p>更多信息可在FreeBSD-14.5-RELEASE-amd64-disc1.iso中找到。</p><p>近期相关新闻和发布</p><p>BSD发布：FreeBSD 14.5</p><p>BSD发布：FreeBSD 15.1</p><p>BSD发布：FreeBSD 14.4</p><p>BSD发布：FreeBSD 15.0</p><p>开发版发布：FreeBSD 15.0-RC1</p><p>开发版发布：FreeBSD 15.0-BETA1</p><p>FreeBSD是一个类UNIX操作系统，支持i386、amd64、IA-64、arm、MIPS、powerpc、ppc64、PC-98和UltraSPARC平台，基于加州大学伯克利分校的“4.4BSD-Lite”版本，并带有一些“4.4BSD-Lite2”增强。它间接基于William Jolitz将加州大学伯克利分校的“Net/2”移植到i386的版本，即“386BSD”，尽管386BSD的代码已所剩无几。FreeBSD被世界各地的公司、互联网服务提供商、研究人员、计算机专业人士、学生和家庭用户用于他们的工作、教育……</p></div>
+  <div class="article-body"><p>Mesa 26.3 的 RADV 与 RadeonSI 已为旧款 AMD GPU 准备好 DRM 格式修饰符支持</p><p>发布于 2026 年 9 月 10 日下午 05:19（美国东部时间）。</p><p>随 Linux 7.3 一同到来的是面向 GFX6 至 GFX8 时代 GPU 的 DRM 格式修饰符，涵盖从初代 Radeon HD 7000（GCN 1.0）显卡一直到 Polaris 和 Fiji 系列。Valve 的 Timur Kristóf 所做的这项工作，对于这些旧 GPU 支持基于 Vulkan 的 Wayland 合成器、改善 OpenGL 与 Vulkan 或其他 API 之间的互操作性、支持运行在 Zink（Vulkan 之上的 OpenGL 驱动实现）上的合成器，以及其他诸多好处而言，都是必要的。如今，Mesa 26.3 已合并了 RadeonSI 和 RADV 用户空间侧的支持，以便在这些旧 GPU 上使用格式修饰符。</p><p>在 AMDGPU 的 GFX6 至 GFX8 DRM 格式修饰符已合并到当前 Linux 7.3 周期（将于 10 月作为稳定版首次亮相）之后，Mesa 侧的补丁也已合并到 Mesa 26.3 中，后者预计将于 11 月作为稳定版首次亮相。</p><p>DRM 格式修饰符提供了有关图像缓冲区的平铺、压缩及其他属性的详细信息。根据布局的不同，它还可以帮助实现更好的性能以及其他更灵活的用例。</p><p>Timur Kristóf 今天合入 Mesa Git 的补丁包含了针对 GFX6 至 GFX8 修饰符支持的所有 Mesa 侧更改。GFX9 及更新版本此前已由 AMDGPU 和 Mesa 支持。</p><p>新补丁为 Linux 上的 AMD Radeon 显卡提供 HDMI 1.4 3D 模式支持</p><p>AMDGPU Linux 驱动针对 HDMI 被动 VRR 支持的最新补丁</p><p>AMD 准备为 Linux 默认启用 HDMI 2.1 FRL 支持</p><p>AMD RDNA 4m 固件在发布前已为 Linux 发布</p><p>Marek Olšák 的 19 个最新补丁进一步优化 RADV 与 ACO</p><p>AMD 更新 HDMI 2.1 VRR 与 ALLM 补丁，但将错过 Linux 7.3</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>CERN 在长期作为 RHEL 机构后，正将工业计算机迁移至 Debian</p><p>Asahi Linux 现已正式支持 Apple M3 Mac——但附带条件</p><p>Ikey Doherty 计划展示如何“正确”构建现代 Linux 发行版</p><p>NetworkManager 通过诱骗 AI 代理添加金丝雀来执行 AI 政策</p><p>AMD 致力于“将 Rust 深入 GPU 栈”</p><p>Linux 内核计划移除约 5.5 万行旧 ARM 平台代码</p><p>Wine 11.17 发布，初步支持显示模式模拟</p><p>神秘的 x86 CPU 已具备 APX、x86S，接续 Intel 在无遗留 x86 上的未竟事业</p><p>在享受无广告浏览的同时，</p><p>单页文章视图</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026，</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12949" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Mesa-26.3-GFX6-GFX8-Modifiers" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
