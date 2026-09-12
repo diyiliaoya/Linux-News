@@ -10657,5 +10657,148 @@
     "title_zh": "抢先看 Firefox Nightly 中 Firefox 的全新设计",
     "summary_zh": "Firefox Nightly 版本中展示了 Firefox 的全新设计，包括焕然一新的界面元素和更现代化的浏览体验。这是该新设计的首次亮相，让用户提前一窥未来 Firefox 的外观变化。",
     "fulltext_zh": "在 Firefox Nightly 中抢先一睹 Firefox 的全新设计，其特色是焕然一新的界面元素和更加现代化的浏览体验。\n\n文章《抢先看 Firefox Nightly 中 Firefox 的全新设计》最先出现在 Linux Today 上。"
+  },
+  "b9501bc9846570be087d81096b23b30c": {
+    "id": "b9501bc9846570be087d81096b23b30c",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/default-terminal-gnome-settings",
+    "title_en": "Default terminal option is coming to GNOME Settings",
+    "summary_en": "An option pick a default terminal is to GNOME Settings, as the image above, teased by developer Ignacy Kuchciński last week, shows. Those of you who don&#8217;t use the command line often enough to care about what terminal is set as your system default, may be surprised to hear you can&#8217;t currently change it via a GUI. If you go to Settings > Apps > Default Apps you can pick your preferred web browser, email client, imager viewer and others apps, but you can&#8217;t set a terminal emulator ",
+    "pub_date": "Sat, 12 Sep 2026 01:17:04 +0000",
+    "title_zh": "GNOME 设置将迎来默认终端选项",
+    "summary_zh": "GNOME 正在开发一项新功能，允许用户在系统设置中选择默认终端模拟器。目前 GNOME 设置中无法更改默认终端，因为终端不处理文件类型或 URI 方案，无法像其他应用那样声明能力。开发者 Ignacy Kuchciński 正在推动基于 freedesktop 应用意图规范的新方案，让终端也能注册能力，从而在 GNOME 设置中提供默认终端选择。该功能可能随明年的 GNOME 52 发布。",
+    "fulltext_zh": "默认终端选项即将登陆 GNOME 设置\n\n正如上图所示，开发者 Ignacy Kuchciński 预告，一个选择默认终端的选项即将到来。\n\n如果你不经常使用命令行，以至于不关心系统默认终端是什么，那么听到目前无法更改它可能会感到惊讶。在“设置 > 应用 > 默认应用”中，你可以选择首选的网页浏览器、电子邮件客户端、图像查看器和其他应用，但无法将终端模拟器设置为系统默认。\n\n对于开发者来说，缺少这个选项可能很烦人。我安装过一些命令行应用，它们会添加启动器快捷方式，我心想：“太好了，这样我就不用打开终端运行命令了。”但当我点击启动器时，它却打开了一个终端窗口。这可不是我期望的。\n\n一个合适的、尊重系统且用户可配置的更改默认终端的方式早就该有了。\n\n为什么还没有这个设置？\n\n你可能会惊讶地发现这个选项还不存在——目前还没有。\n\n许多 Linux 桌面只能通过应用在其 .desktop 文件中声明来了解应用能处理什么，即列出 MIME 类型（一组用于文件和数据格式的标准化标签）或用于链接的 URI 方案处理器。\n\n图像查看器可以说“我打开 image/png 文件”，网页浏览器可以报告“我处理 https://”，电子邮件客户端可以说“我拦截 mailto:”。\n\n因为 GNOME 知道这些应用能做什么，所以当你想更改默认应用时，它可以显示一个应用列表供你选择。\n\n终端既不使用文件类型/MIME，也不处理 URI 方案，它们只是启动一个 shell。由于没有什么需要它们“处理”的，也就没有什么需要声明的，因此桌面环境无法整理出一份合适的“默认”应用列表供选择。\n\nfreedesktop 应用意图规范\n\nMIME 描述数据，而拟议的意图将声明能力，即应用可以说“我有这个功能”。\n\n注册这些能力后，像 GNOME 这样的 Linux 桌面就能知道哪些应用能做什么，并据此填充“默认”应用选项列表。除了终端，其他拟议的意图还包括文件管理器和计算器。\n\n以上是大致情况；在它出现在 GNOME 中之前还有更多工作要做，因为各个部分需要按正确顺序落地：规范发布、Glib 支持读取那些 .desktop 文件声明，当然还有应用开发者添加这些声明。\n\n之前解决这个问题的尝试要么停滞不前，要么需要重新思考。这一次进展迅速。\n\n虽然下周发布的 GNOME 51 不会包含让你选择默认终端的选项，但明年发布的 GNOME 52 可能会。\n\n如果你对发行版的默认设置满意，为什么要改呢？\n\nGNOME 以 GNOME Console（又名 kgx）作为其核心终端应用，而 Ptyxis 是我个人最近的首选——不过你没问！\n\n在 Ubuntu 上有多种方法更改默认终端应用，包括从终端运行命令（这很合适），或者卸载除你想要的那个之外的所有终端。如今终端可以说比以往任何时候都更有用，是时候解决这个问题了。"
+  },
+  "e0928054d78db4ed1bdfec8635afaf34": {
+    "id": "e0928054d78db4ed1bdfec8635afaf34",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/linux-mint-new-apps",
+    "title_en": "Linux Mint reveals two brand-new desktop apps",
+    "summary_en": "Two new apps are coming to Linux Mint later this year: a new calendar and eBook reader. Plus, the Ubuntu-based Linux distribution has redesigned its (overlooked) document hub, Library, to make it easier to find and manage documents scattered across you device from one place. Both new apps join the XApp Project, Linux Mint&#8217;s collection of home-grown, cross-desktop GTK apps (which now has a new website wearing the popular Claude design aesthetic). Clockenstien is Mint&#8217;s new Calendar ap",
+    "pub_date": "Fri, 11 Sep 2026 15:12:13 +0000",
+    "title_zh": "Linux Mint 发布两款全新桌面应用",
+    "summary_zh": "Linux Mint 将在今年晚些时候推出两款新应用：日历应用 Clockenstien 和电子书阅读器 Book Reader，同时重新设计了文档管理工具 Library。新日历支持本地与在线同步，电子书阅读器提供类似 Kindle 的阅读体验，Library 则按文件类型分组管理文档。这些应用将随 Linux Mint 23 正式亮相。",
+    "fulltext_zh": "Linux Mint 发布全新日历和电子书阅读器应用\n\n今年晚些时候，Linux Mint 将迎来两款新应用：一款全新的日历和一款电子书阅读器。此外，这个基于 Ubuntu 的 Linux 发行版还重新设计了其（此前被忽视的）文档中心，以便更轻松地从一处查找和管理散落在设备各处的文档。\n\n两款新应用均加入了 XApp 项目，这是 Linux Mint 自主开发的跨桌面 GTK 应用集合（目前带有 Claude 设计美学）。\n\nClockenstien 是 Mint 的新日历应用\n——输入时请小心。\n\nClockenstien 是 Linux Mint 的新日历应用，但为了避免有人被这个糟糕的名字吓到，面向用户的标签只是“日历”。它终于加入了 Linux Mint 默认软件阵容（早该如此——之前的版本还是基于 GTK4/libadwaita 之前的旧构建）。\n\n日历就是日历。它需要让你查看和浏览日期、添加事件、为不同任务创建日历——这些 Linux Mint 的旧日历也能做到。但与在线服务的集成很重要，因为我们大多数人白天会在不同设备间切换。因此，日历可以完全离线并保存在本地，也可以与 Google Calendar 等在线提供商同步，或通过 Nextcloud 等云服务使用 CalDAV 同步。\n\nClem 表示，目标是确保当远程日历无法工作或未同步时始终一目了然，这样用户就能知道是否出了问题。如果有一个重要事件你以为会收到提醒，却从未收到，静默失败是毫无帮助的。\n\n“在实验室里，还有更多事情在发生”，\n\n一个后台守护进程用于保持远程日历同步，并检查任何启用了提醒的即将到来的事件。如果出现问题，事件仍然可见，但会变为只读——你无法编辑或添加——直到连接恢复在线。\n\n提醒通过通知代理处理。它们会在适当的时间显示在桌面上，以便你采取行动、稍后提醒或推迟。后端接口允许其他桌面环境交互或替换通知代理。\n\nBook Reader 电子书阅读器\n——简洁的渲染体验\n\nBook Reader 应用是为打开 ePub 文件而设计的（意外吧）。它似乎提供了干净的阅读体验，Linux Mint 的 Clement Lefebvre 称其“类似于”Kindle 或 Kobo。它还会记录你在书中的位置，这样当你重新打开时，可以继续阅读。\n\n功能方面，它提供了你期望的一切：章节和页面导航、全文搜索和书签，以及可调节的页面缩放和字体选项。注释功能让你可以用颜色高亮选中的文本，并添加笔记。\n\n最后，一个内部查找系统让你可以选中一个词，并将其传送到搜索引擎（维基百科、词典等）以了解更多信息。\n\nLibrary 重获新生\n——个人文档中心\n\nLinux Mint 还重新设计了其 Library 文档管理器，你可能通过包名“gnome-documents”知道它。\n\n文档现在按文件类型分组，而不是按打开它们的应用分组。例如，你可以在一个视图中看到所有 PDF 文件，而不是在默认文档查看器打开的所有文件中四处寻找。\n\n常见文件类型列在侧边栏中，但你可以选择显示哪些以及以什么顺序显示。更有用的是，你可以创建自己的自定义分组，包含不同文件类型的混合，甚至可以从特定文件夹中指定它们。\n\n我什么时候能获得这些新应用？\n\n这些应用将在 Linux Mint 23 中正式亮相，预计今年年底发布。该版本还将附带新的改进版。此外，团队迄今已披露和预告的其他变化（无疑还有一些尚未到来）。\n\n如果你不想等待，源代码已在 GitHub 上（上面各段中均有链接）。你可以查看（双关语警报）以进行测试，并提交你发现的任何问题或你可能有的大功能请求。"
+  },
+  "0cc0892a18924f775a9033beb53ff247": {
+    "id": "0cc0892a18924f775a9033beb53ff247",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/bottles-microsoft-365-early-look/",
+    "title_en": "Bottles' Founder Has Managed to Run Microsoft 365 on Linux",
+    "summary_en": "As of now, he has the desktop app installing and signing in.",
+    "pub_date": "Fri, 11 Sep 2026 11:59:46 GMT",
+    "title_zh": "Bottles 创始人成功在 Linux 上运行 Microsoft 365",
+    "summary_zh": "Bottles 创始人 Mirko Brombin 成功在 Linux 上运行 Microsoft 365 桌面应用，实现了安装、登录、启动 Word 及 OneDrive 集成，内存占用低于 500MB。他使用了未发布的 Soda 版本和另一组件，目前尚无正式发布，Bottles 67.4 的组件目录也尚未包含。这一进展有望吸引更多用户转向 Linux，但仍需等待上游 Wine 补丁落地。",
+    "fulltext_zh": "Bottles 创始人成功在 Linux 上运行 Microsoft 365\n\n截至目前，他已实现桌面应用的安装和登录。\n\nBottles 的创造者 Mirko Brombin 已成功在 Linux 上运行 Microsoft 365。他在 X 上的帖子展示了一个在 Windows 10 或 11 前缀上完成安装、使用现有许可证登录并至少启动一个编辑器的过程。\n\n他通过两样东西实现了这一点：一个未发布的 Soda 版本和另一个组件。如果你还记得，Soda 是一个基于 Wine 的运行器，便于轻松运行 Windows 游戏和应用程序。\n\n乍一看，他发布的内容可能像是面向开发者的日志，但这些变化是未来通过 Bottles 实现完整 Microsoft 365 支持的基础。\n\n他的工作成果\n\nMirko 能够使用自己的凭据登录 MS 365 应用，并成功启动 MS Word 并使用它。当然，这并非他唯一实现的功能；由于双因素认证通过，套件检测到了他的许可证，OneDrive 集成也可正常工作。\n\n该办公套件的内存占用低于 500MB，因此对你的 Linux 系统来说应该很轻量。\n\n他目前测试的版本是某个构建，他说这是安装程序为 Windows 10 和 11 提供的最后一个构建。在你兴奋地想要在自己的电脑上尝试之前，要知道你必须等待——该组件尚未发布，Bottles 67.4 附带的组件目录止步于 Soda 11.0-10。甚至社区长期以来的请求——在 Bottles 中提供 Microsoft Office 安装程序——仍然开放。\n\n用于运行仅限 Windows 的软件\n\n我们需要 Linux 上的 Microsoft 365 吗？\n\n迄今为止，Microsoft 365 还没有官方的 Linux 桌面版本，鉴于微软目前的运作方式，我不预期短期内会出现。\n\n这里取得的成就是非凡的。一旦完全实现，这将有助于吸引人们转向 Linux，因为许多人一想到切换平台就不寒而栗，因为他们偏好的办公套件在这里无法运行。\n\n作为背景，CodeWeavers 销售一款付费 Wine 产品 CrossOver，并且仍将 Linux 上的 Microsoft Office 365 列为“可安装，无法运行”，最后一次测试是针对 CrossOver 26.3.0。\n\n这就是为什么我希望这个修复能传播到 Bottles 之外。Wine 位于所有这些项目之下，包括 Soda。因此，一个落地到上游的补丁会同时惠及所有项目，你就不需要特定的运行器来让 Office 工作。\n\n💬 如果 Mirko 让这一切都正常工作，你认为其他项目会开始整合他的工作吗？\n\n喜欢这个更新？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无承诺\n\n一个热衷于开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性的极客。\n\nLinux 内核正准备清除旧的 32 位 Arm 平台代码\n\nBroadcom 终止公开 VDDK 访问以加强对 VMware 的控制\n\nBottles 为 ARM 设备上的仅限 Windows 软件带来希望\n\n一个 Clanker 让 Fedora 与 Windows 11 对决。Fedora 赢了，大部分情况下\n\nIkey Doherty 对决 Omarchy：为什么他构建 Barney 而不是另一个发行版\n\n成为更好的 Linux 用户\n\n通过 FOSS 每周通讯，你学习有用的 Linux 技巧、发现应用程序、探索新发行版并了解 Linux 世界的最新动态\n\n太好了！你已成功注册。\n\n欢迎回来！你已成功登录。\n\n你已成功订阅 It's FOSS。\n\n你的链接已过期。\n\n成功！请检查你的电子邮件以获取登录魔法链接。\n\n成功！你的账单信息已更新。\n\n你的账单未更新。"
+  },
+  "1a41d83726a0e62780a591b44fc4f85e": {
+    "id": "1a41d83726a0e62780a591b44fc4f85e",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Gitte-0.10-Released",
+    "title_en": "Gitte As Git Client For GNOME Continues Maturing Quite Nicely",
+    "summary_en": "For those in pursuit of a graphical Git client for GNOME or the Linux desktop at large, the GTK4-powered Gitte continues advancing rather well and out this week is its v0.10 release...",
+    "pub_date": "Fri, 11 Sep 2026 20:35:39 -0400",
+    "title_zh": "GNOME 的 Git 客户端 Gitte 日趋成熟",
+    "summary_zh": "GTK4 驱动的图形化 Git 客户端 Gitte 发布 v0.10 版本，新增并排差异对比、Git LFS 与子模块支持、工作流快捷键及多项界面改进，并修复了若干错误。与此同时，GNOME 51 计划于 9 月 16 日发布，将带来自定义指针加速配置等更新。",
+    "fulltext_zh": "对于寻求 GNOME 或整个 Linux 桌面图形化 Git 客户端的用户来说，由 GTK4 驱动的 Gitte 持续发展得相当不错，本周发布了其 v0.10 版本。\n\nGitte 0.10 在其 GTK4 界面中新增了并排显示差异（diff）的功能，支持 Git LFS 和子模块，增加了用于增强工作流的新快捷键，以及各种界面改进。\n\n此外，Gitte 0.10 还包含错误修复和其他改进，详见最新一期的……\n\nGNOME 本周还推出了 GNOME 51 的自定义指针加速配置文件、GNOME 日历应用的许多近期改进以及其他工作。与此同时，GNOME 51 定于下周 9 月 16 日发布。\n\nGNOME 51 新增自定义指针加速配置文件支持\n\nGNOME 利益相关者讨论用于解决重大技术变更的 RFC 流程\n\nGNOME Mutter 51.rc 新增跨 GPU 缓冲区扫描输出支持及其他最后时刻的工作\n\nGNOME 激动人心的一周：从 Flatpak 资助到重置恢复以及应用\n\nGNOME Mutter 的 GPU 重置恢复合并请求已提交\n\nGNOME 51 Beta 发布，带来许多小改进\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nAsahi Linux 现已正式支持 Apple M3 Mac——但有附加条件\n\nIkey Doherty 计划展示如何“正确地”构建现代 Linux 发行版\n\nNetworkManager 致力于通过诱骗 AI 代理添加金丝雀来执行 AI 政策\n\nAMD 致力于“将 Rust 深入推入 GPU 栈”\n\nLinux 内核计划移除约 55,000 行旧 ARM 平台代码\n\n神秘的 x86 CPU 已具备 APX、x86S，接续 Intel 在无遗留 x86 上的未竟事业\n\nWine 11.17 发布，初步支持显示模式模拟\n\nAI 生成了大量“丑陋”代码，但发现了更快 Linux 编译的主要瓶颈\n\n同时享有无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "0a0022074613d5b380d78a77ce274fe1": {
+    "id": "0a0022074613d5b380d78a77ce274fe1",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Cache-Aware-Scheduling-4-Patch",
+    "title_en": "New Cache Aware Scheduling Fixes Out For Testing",
+    "summary_en": "Since being merged back during the Linux 7.2 cycle, the Cache Aware Scheduling code continues seeing more fixes as users test out this scheduling enhancement on different processors and system configurations...",
+    "pub_date": "Fri, 11 Sep 2026 14:00:14 -0400",
+    "title_zh": "新的缓存感知调度修复已发布供测试",
+    "summary_zh": "Linux 内核的缓存感知调度（Cache Aware Scheduling）在 7.2 开发周期合并后持续获得修复。本周由 Intel 工程师 Tim Chen 领衔发布了新的修复补丁，主要解决任务可能被孤立在外部或从其偏好的最后一级缓存（LLC）中被拉走的问题，并修复了一处释放后使用（use-after-free）缺陷。此外，缓存感知调度与 Intel Turbo Boost Max Technology（ITMT）的冲突问题尚未在此补丁系列中解决。",
+    "fulltext_zh": "新的缓存感知调度修复已发布供测试 - Phoronix\n新的缓存感知调度修复已发布供测试\n发布于 2026 年 9 月 11 日下午 02:00 EDT。\n自 Linux 7.2 开发周期合并以来，缓存感知调度（Cache Aware Scheduling）代码在用户于不同处理器和系统配置上测试这一调度增强功能的过程中，持续获得更多修复。\n继上周针对 Intel 混合 CPU 的缓存感知调度修复之后，本周有更多材料可供测试以完善该代码。提醒一下，缓存感知调度是 Linux 内核的一项功能，用于将相关任务分组到共享同一最后一级缓存（LLC）的 CPU 核心上。缓存感知调度可以通过避免潜在的缓存颠簸开销，带来更好的缓存局部性和更低的延迟。\n这些新修复处理了任务可能被孤立在外部或从其偏好的最后一级缓存中被拉走的问题。此外，调度代码中还有一处释放后使用（use-after-free）修复。\n一直领导 Linux 内核缓存感知调度工作的 Intel 工程师 Tim Chen 发出了收集这些近期修复的补丁系列。\n本补丁系列未解决的问题是，缓存感知调度与 Intel Turbo Boost Max Technology（ITMT）之间存在已知冲突。这些补丁并未处理该工作，但希望很快会有一些新的改进出现。\nAI 生成了大量“丑陋”代码，但发现了加速 Linux 编译的主要瓶颈\nLinux 7.3-rc2 发布，紧随又一个忙碌的一周\nLinux 7.3-rc2 调度器修复混合 CPU 上缓存感知负载调度不匹配问题\nLinux 7.3-rc2 将更多 kmalloc 调用转换为更优的 kmalloc_obj\n让 Linux 异步关闭设备的补丁第 21 次修订\nLinux 7.3 现在若存在 Rust 支持则默认禁用 RandStruct 安全功能\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\nAsahi Linux 现在正式支持 Apple M3 Mac - 但附带条件\nIkey Doherty 计划展示如何“正确”构建现代 Linux 发行版\nNetworkManager 通过诱骗 AI 代理添加金丝雀来执行 AI 政策\nAMD 致力于“将 Rust 深入推入 GPU 栈”\nLinux 内核计划移除约 55,000 行旧 ARM 平台代码\n神秘的 x86 CPU 已具备 APX、x86S，Intel 在无遗留 x86 上止步之处\nWine 11.17 发布，初步支持显示模式模拟\nAI 生成了大量“丑陋”代码，但发现了加速 Linux 编译的主要瓶颈\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "9ebebb191ff280a6a3cdc3a6ed9d5604": {
+    "id": "9ebebb191ff280a6a3cdc3a6ed9d5604",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-IO-uring-Crazy-Friday",
+    "title_en": "Linux's IO_uring Sees Some \"Crazy\" Patches That Deliver Very Nice Improvements",
+    "summary_en": "Linux block subsystem maintainer and IO_uring lead developer Jens Axboe continues to uncover new opportunities for making the wonderful IO_uring framework even more performant within the Linux kernel. For ending out the week he's posted some \"crazy\"  patches delivering some significant gains...",
+    "pub_date": "Fri, 11 Sep 2026 12:21:33 -0400",
+    "title_zh": "Linux 的 IO_uring 迎来一些“疯狂”补丁，带来非常不错的改进",
+    "summary_zh": "Linux 块子系统维护者兼 IO_uring 首席开发者 Jens Axboe 发布了一组“疯狂”补丁，旨在改进内核阻塞行为。该系列让原本因无阻塞路径而被无条件转交的请求以内联阻塞模式提交，仅在真正阻塞时才付出卸载代价，并通过转移提交任务的身份来避免额外开销。测试显示出显著性能提升，有望在 Linux v7.4 周期进入主线。",
+    "fulltext_zh": "Linux 的 IO_uring 迎来一些“疯狂”补丁，带来非常不错的改进\n2026 年 9 月 11 日东部时间下午 12:21。\nLinux 块子系统维护者兼 IO_uring 首席开发者继续发掘新机会，让出色的 IO_uring 框架在 Linux 内核中性能更上一层楼。为结束这一周，他发布了一些“疯狂”补丁，带来了显著提升。\nAxboe 的最新工作聚焦于改进内核阻塞行为。Axboe 在今天的文章中描述了这项工作：\n“io_uring 会以 IO_URING_F_NONBLOCK 内联发出请求，当无法非阻塞时则转交给 io-wq。对于一系列操作码，根本不可能非阻塞，因为内核中没有它们的非阻塞路径：fsync、statx、openat、*at 系列、xattr、fadvise、splice 等。这些请求被无条件转交，而每次转交都要付出线程唤醒、上下文切换和 task_work 完成往返的代价。io_uring 必须谨慎，防止内核中意外阻塞，即使这些操作绝大多数情况下从不阻塞。这很令人遗憾。例如不阻塞的 fdatasync、命中 dcache 的 statx、用于 O_TMPFILE 的 openat 等。所有这些本可以很好地内联完成，但 io_uring 就是不能依赖这一点。\n本系列改为以阻塞模式内联发出这些请求，仅当请求实际阻塞时才付出卸载代价。但等到它阻塞时，提交者已深入内核，请求就在其栈上，因此工作无法移到另一个线程。我们能转移的是身份。如果提交任务阻塞，一个空闲的 io-wq 工作线程会接管其用户可见身份（tid、信号状态、凭据、调度属性、cgroup、用户寄存器状态），完成 io_uring_enter() 调用并以提交者身份返回用户空间。原任务则作为 io-wq 工作线程完成请求并加入线程池。用户空间 hopefully 毫无察觉，系统调用返回了相同的 tid，只是位于不同的 task_struct 上。老资历的人可能还记得大约 20 年前对此的早期尝试。”\n关于这些“疯狂补丁”，他随后分享了一些新的“美味结果”图表，这对不关心此变更内部技术细节的用户来说最为激动：\n我们将看看这项工作走向何方，以及它是否能在 Linux v7.4 周期前准备好进入主线。\nBtrfs Zstd 解压加速迎来一项不错的改进\n用于 Linux 的 AVX-512 xor_gen 更新，在 RAID 阵列上表现非常出色\nWinBtrfs 1.10 发布，为 Windows 上的 Btrfs 带来两年份的改进\nF2FS 将在 Linux 7.3 中并行处理多设备刷新\nLinux 7.3 UBI 增加对每设备磨损均衡阈值的支持\nChris Mason 卸任 Btrfs 联合维护者，离开 Meta\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\nAsahi Linux 现已正式支持 Apple M3 Mac——但有注意事项\nIkey Doherty 计划展示如何“正确”构建现代 Linux 发行版\nNetworkManager 通过诱骗 AI 代理添加金丝雀来执行 AI 政策\nAMD 致力于“将 Rust 深入推入 GPU 栈”\nLinux 内核计划移除约 55,000 行旧 ARM 平台代码\n神秘的 x86 CPU 已具备 APX，x86S 延续 Intel 在无遗留 x86 上的未竟事业\nWine 11.17 发布，初步支持显示模式模拟\nAI 写了很多“丑陋”代码，但为更快的 Linux 编译找到了主要瓶颈\n同时享受无广告浏览，\n单页文章"
+  },
+  "adedf472c409ddbf72bad25c020cafc9": {
+    "id": "adedf472c409ddbf72bad25c020cafc9",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/wildcat-lake-windows-linux",
+    "title_en": "CachyOS vs. Windows 11 vs. Ubuntu 26.04 LTS On Intel Wildcat Lake + 8GB RAM",
+    "summary_en": "Often times when testing different Linux distributions or comparing Windows vs. Linux it's on leading flagship desktop or server hardware, but today we are looking at the Ubuntu vs. CachyOS vs. Windows performance at the opposite end of the spectrum. With the new CHUWI UniBook $449 laptop powered by Intel Core 3 Wildcat Lake and with 8GB of system memory, here is a look at how those three operating systems compare across a variety of workloads.",
+    "pub_date": "Fri, 11 Sep 2026 11:08:55 -0400",
+    "title_zh": "CachyOS 与 Windows 11 及 Ubuntu 26.04 LTS 在英特尔 Wildcat Lake + 8GB 内存上的对比",
+    "summary_zh": "本文在售价449美元的CHUWI UniBook笔记本上，对比了CachyOS、Windows 11和Ubuntu 26.04 LTS三款操作系统的性能。该笔记本搭载英特尔酷睿3 304 Wildcat Lake处理器（1个P核+4个LPE核）、8GB LPDDR5-6400内存和256GB NVMe固态硬盘。测试旨在考察低端硬件上Linux发行版与Windows的表现差异，所有系统均更新至最新并采用默认设置。",
+    "fulltext_zh": "CachyOS 与 Windows 11 及 Ubuntu 26.04 LTS 在英特尔 Wildcat Lake + 8GB 内存上的对比 - Phoronix\n\nCachyOS 与 Windows 11 及 Ubuntu 26.04 LTS 在英特尔 Wildcat Lake + 8GB 内存上的对比\n2026年9月11日上午11:08 EDT发布。\n\n通常，在测试不同的 Linux 发行版或比较 Windows 与 Linux 时，我们使用的是顶级的旗舰台式机或服务器硬件，但今天我们关注的是 Ubuntu、CachyOS 和 Windows 在性能光谱另一端的表现。我们使用全新的 CHUWI UniBook 449美元笔记本，搭载英特尔酷睿3处理器和8GB系统内存，来看看这三款操作系统在各种工作负载下的对比情况。\n\n由于 CHUWI UniBook 评测样机预装了微软 Windows 11 专业版，考虑到 CachyOS 和 Ubuntu 26.04 LTS 这两个 Linux 发行版的受欢迎程度，我决定将这台 Wildcat Lake 笔记本上预装的更新版 Windows 11 环境与滚动发布的 CachyOS 以及 Ubuntu 26.04 LTS 进行对比。在基准测试过程中，所有操作系统均已更新并保持默认设置。\n\n提醒一下，CHUWI UniBook 搭载的是英特尔酷睿3 304 Wildcat Lake 处理器，由1个P核和4个LPE核组成。配有8GB LPDDR5-6400内存和256GB NVMe 固态硬盘。这与我们通常用于测试高端 Linux 性能的硬件处于完全相反的光谱末端。\n\n让我们看看 Windows 和 Linux 在英特尔 Wildcat Lake 上如何一决高下。\n\n分析 Fedora 在搭载英特尔 Panther Lake 的 Framework Laptop 13 Pro 上的缓慢性能\n英特尔至强 678X 在 HP Z4 G6i 上 Windows 11 与 Ubuntu 26.04 的性能对比\n在 Framework Laptop 13 Pro 上对六款 Linux 发行版进行基准测试\nCachyOS 在 AMD Ryzen AI 9 HX 470 上表现优于 Windows 11，略胜 Ubuntu 和 Fedora\nUbuntu 26.04 LTS 与 Windows 11 及 CachyOS 在 5399 美元笔记本上的性能对比\nRyzen AI 开发者平台：AMD 基于 Debian 构建的自有 Linux 发行版\n\n同时提供无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "54f978f3488d56c9ba169dd9c0dd21e0": {
+    "id": "54f978f3488d56c9ba169dd9c0dd21e0",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Mold-Linker-In-Rust-Coming",
+    "title_en": "Mold High Speed Linker Being Rewritten In Rust, Hopes To Be The Default Linker On Linux",
+    "summary_en": "The Mold high performance linker that typically outperforms the likes of LLVM lld, GNU LD, Wild, and others is being rewritten in the Rust programming language and also has an ambitious goal of being adopted as the default linker on Linux systems...",
+    "pub_date": "Fri, 11 Sep 2026 09:21:42 -0400",
+    "title_zh": "Mold 高速链接器正在用 Rust 重写，有望成为 Linux 默认链接器",
+    "summary_zh": "高性能链接器 Mold 正在从 C++ 重写为 Rust，并计划在 3.0 版本中实现成为 Linux 系统默认链接器 /usr/bin/ld 的目标。主要开发者 Rui Ueyama 表示，将补齐链接脚本功能、进行广泛兼容性测试，并与发行版开发者合作推动采用。同时也在探索增量链接支持。",
+    "fulltext_zh": "Mold 高性能链接器通常性能优于 LLVM lld、GNU LD、Wild 等，目前正在用 Rust 编程语言重写，并设定了成为 Linux 系统默认链接器的雄心目标。\n\nMold 2.42.1 于今天发布，是该开源链接器的新补丁版本。但 Mold 2.42.1 公告中最引人关注的是关于其继任者 Mold 3.0 的计划。Mold 一直在从 C++ 重写为 Rust。如今 Rust 语言经过多年发展已足够成熟，Mold 计划利用其强大的安全保障以及其他特性，这些特性对首席开发者 Rui Ueyama 颇具吸引力。此前已有另一个性能导向的链接器是用 Rust 编写的。\n\nRui 希望用 Rust 编写的 Mold 3.0 在高速链接方面能与 Mold 2.xx 表现一样出色。除此之外，Rui 还希望看到 Mold 成为 Linux 系统上的默认链接器：\n\n“过去 20 年里，出现了多个快速链接器，包括 gold、lld 和 mold。然而，大多数 Linux 发行版上的系统链接器 /usr/bin/ld 仍然是 GNU ld。结果，mold 可以在几百毫秒内完成的链接任务，使用默认链接器仍可能需要几秒、几十秒甚至几分钟。我认为这对 Linux 社区来说是一种不幸的局面。\n\n作为 lld 和 mold 的原始作者，我认为我对这种情况负有一定责任。我花费了大量精力让链接器更快，但在兼容性工作上投入不够，而这是让快速链接器适合作为系统链接器直接替代品所必需的。通过 mold 3.0，我们打算改变这一点。mold 3.x 系列的主要目标之一，是让 mold 适合被 Linux 发行版采用为 /usr/bin/ld。\n\n为实现这一目标，我们首先需要实现缺失的链接脚本功能，使 mold 不仅能链接用户空间程序，还能链接内核和固件。然后我们将进行广泛的兼容性测试，并与 Linux 发行版开发者密切合作，使他们能够实际采用 mold 作为 /usr/bin/ld。实现这一目标是 mold 3.x 的最高优先级之一。”\n\nMold 也在考虑最终支持增量链接，这是该链接器迄今为止尚未支持的功能：\n\n“话虽如此，如果我们能找到一种简单的方法为 mold 添加增量链接，我们会很乐意去做。它仍可能显著改善某些工作负载。我们目前正在探索既能提供这些好处，又能保持 mold 简洁性和可靠性的设计。”\n\n有兴趣了解 Mold 链接器项目这一重大转变更多细节的人，可以在 Mold 2.42.1 公告中找到。"
+  },
+  "436f7bb67e5e5c031495ad4ec06e834c": {
+    "id": "436f7bb67e5e5c031495ad4ec06e834c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/krita-5-3-3-is-out-as-the-recommended-release-for-production-work/",
+    "title_en": "Krita 5.3.3 Is Out as the Recommended Release for Production Work",
+    "summary_en": "Krita 5.3.3 is now available as the recommended release for production work, delivering fixes and improvements for a more stable digital painting experience.\nThe post Krita 5.3.3 Is Out as the Recommended Release for Production Work appeared first on Linux Today.",
+    "pub_date": "Fri, 11 Sep 2026 07:12:27 +0000",
+    "title_zh": "Krita 5.3.3 发布，成为生产工作的推荐版本",
+    "summary_zh": "Krita 5.3.3 现已发布，并被推荐用于生产工作。该版本包含多项修复和改进，旨在提供更稳定的数字绘画体验。",
+    "fulltext_zh": "Krita 5.3.3 现已可用，作为生产工作的推荐版本，它带来了修复和改进，以实现更稳定的数字绘画体验。\n\n文章《Krita 5.3.3 发布，成为生产工作的推荐版本》首先出现在 Linux Today 上。"
+  },
+  "bfb42004fd7b3a8addab348b00ab65f9": {
+    "id": "bfb42004fd7b3a8addab348b00ab65f9",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/oopsies-freebsd-devs-say-theres-still-gpl-in-the-kernel/",
+    "title_en": "“Oopsies!” FreeBSD Devs Say There’s Still GPL in the Kernel",
+    "summary_en": "FreeBSD developers acknowledge that GPL-licensed code still remains in the kernel, revisiting earlier claims about removing GPL components from the base system.\nThe post “Oopsies!” FreeBSD Devs Say There’s Still GPL in the Kernel appeared first on Linux Today.",
+    "pub_date": "Fri, 11 Sep 2026 07:11:33 +0000",
+    "title_zh": "“哎呀！”FreeBSD 开发者承认内核中仍存在 GPL 代码",
+    "summary_zh": "FreeBSD 开发者承认内核中仍残留 GPL 许可代码，重新审视了此前关于从基础系统中移除 GPL 组件的说法。这一发现推翻了之前认为已彻底清除 GPL 代码的声明，引发对 FreeBSD 许可证合规性和未来开发方向的关注。",
+    "fulltext_zh": "FreeBSD 开发者承认，内核中仍然存在 GPL 许可的代码，这重新引发了此前关于从基础系统中移除 GPL 组件的讨论。\n\n这篇文章最初发布于 Linux Today，标题为“哎呀！”FreeBSD 开发者承认内核中仍存在 GPL 代码。"
+  },
+  "5e91afd103f3e49b4604e5218f7c5fdc": {
+    "id": "5e91afd103f3e49b4604e5218f7c5fdc",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/cosmic-1-5-desktop-environment-released-with-various-improvements/",
+    "title_en": "COSMIC 1.5 Desktop Environment Released with Various Improvements",
+    "summary_en": "COSMIC 1.5 desktop environment is now available with various improvements, refinements, and updates designed to enhance the overall user experience.\nThe post COSMIC 1.5 Desktop Environment Released with Various Improvements appeared first on Linux Today.",
+    "pub_date": "Fri, 11 Sep 2026 07:10:17 +0000",
+    "title_zh": "COSMIC 1.5 桌面环境发布，带来多项改进",
+    "summary_zh": "COSMIC 1.5 桌面环境现已发布，此次更新包含多项改进、优化和更新，旨在提升整体用户体验。",
+    "fulltext_zh": "COSMIC 1.5 桌面环境现已发布，带来了多项改进、优化和更新，旨在提升整体用户体验。\n\n文章《COSMIC 1.5 桌面环境发布，带来多项改进》最初发表于 Linux Today。"
+  },
+  "97d7b4136db670008585ab8efb58f630": {
+    "id": "97d7b4136db670008585ab8efb58f630",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/gcc-adopts-policy-rejecting-significant-ai-generated-code/",
+    "title_en": "GCC Adopts Policy Rejecting Significant AI-Generated Code",
+    "summary_en": "GCC adopts a new policy rejecting significant AI-generated code contributions, setting clearer expectations for contributors and code provenance.\nThe post GCC Adopts Policy Rejecting Significant AI-Generated Code appeared first on Linux Today.",
+    "pub_date": "Fri, 11 Sep 2026 07:09:23 +0000",
+    "title_zh": "GCC 通过政策，拒绝大量 AI 生成的代码",
+    "summary_zh": "GCC 项目通过了一项新政策，明确拒绝接受大量由 AI 生成的代码贡献，旨在为贡献者设定更清晰的期望，并加强代码来源的透明度与可追溯性。",
+    "fulltext_zh": "GCC 通过了一项新政策，拒绝大量由 AI 生成的代码贡献，为贡献者和代码来源设定了更清晰的期望。\n\n文章《GCC 通过政策，拒绝大量 AI 生成的代码》首先发表于 Linux Today。"
+  },
+  "119c2e44071964253958021836dcb549": {
+    "id": "119c2e44071964253958021836dcb549",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/fooyin-0-12-music-player-adds-audio-conversion-and-new-visualizations/",
+    "title_en": "Fooyin 0.12 Music Player Adds Audio Conversion and New Visualizations",
+    "summary_en": "Fooyin 0.12 adds built-in audio conversion and new visualizations, alongside playback improvements and refinements for the customizable music player.\nThe post Fooyin 0.12 Music Player Adds Audio Conversion and New Visualizations appeared first on Linux Today.",
+    "pub_date": "Fri, 11 Sep 2026 07:07:34 +0000",
+    "title_zh": "Fooyin 0.12 音乐播放器新增音频转换和新可视化效果",
+    "summary_zh": "Fooyin 0.12 版本为这款可定制音乐播放器带来了内置音频转换功能、全新可视化效果，以及播放性能的改进和细节优化。",
+    "fulltext_zh": "Fooyin 0.12 新增了内置音频转换和新可视化效果，同时为这款可定制的音乐播放器带来了播放改进和细节优化。\n\n文章《Fooyin 0.12 音乐播放器新增音频转换和新可视化效果》最初发布于 Linux Today。"
   }
 }

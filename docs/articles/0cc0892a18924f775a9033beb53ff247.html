@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bottles为ARM设备上的Windows专属软件带来希望 — Linux 中文速报</title>
+<title>Bottles 创始人成功在 Linux 上运行 Microsoft 365 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
+    <span class="tag">桌面环境</span>
     <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Bottles为ARM设备上的Windows专属软件带来希望</h1>
+  <h1>Bottles 创始人成功在 Linux 上运行 Microsoft 365</h1>
 
-  <div class="article-summary">Bottles项目发布了针对Linux ARM64架构的测试版本Bottles 67.4，通过实验性的cpak包提供原生ARM64支持，并包含Soda 11.0-10更新。该版本修复了Battle.net启动崩溃问题，并为VR应用提供了直接连接主机运行时的支持。ARM64支持从请求到发布仅用一周，速度惊人。用户可通过cpak命令在ARM64设备上安装测试版。</div>
+  <div class="article-summary">Bottles 创始人 Mirko Brombin 成功在 Linux 上运行 Microsoft 365 桌面应用，实现了安装、登录、启动 Word 及 OneDrive 集成，内存占用低于 500MB。他使用了未发布的 Soda 版本和另一组件，目前尚无正式发布，Bottles 67.4 的组件目录也尚未包含。这一进展有望吸引更多用户转向 Linux，但仍需等待上游 Wine 补丁落地。</div>
 
-  <div class="article-body"><p>Bottles为ARM设备上的Windows专属软件带来希望</p><p>虽然仍是测试版，cpak包带来了原生ARM64支持和Soda 11.0-10。</p><p>距离我上次写关于Bottles的文章已经有一段时间了。对于新用户来说，Bottles通过在直观界面背后隐藏Wine的大部分配置工作，在Linux上运行Windows软件。</p><p>其功能列表也在持续增长。你可以一键安装常见的Windows组件，如.NET，或者为每个容器管理多个Wine和Proton运行器。对Steam Proton的支持让你可以在Steam之外运行Proton游戏，而快照功能则为你的每次实验提供回滚点。</p><p>凭借其最新产品，Bottles突破了x86_64硬件的限制。Bottles 67.4是一个针对Linux ARM64架构的测试版本，通过实验性的cpak包发布。</p><p>需要注意的是，ARM64的推出实际上跨越了两个版本。Bottles 67.3添加了cpak包的首个ARM64构建，而Bottles 67.4在数小时后发布，包含了一些杂项修复和Soda 11.0-10。</p><p>（占位图片：Bottles 67.3在x86_64系统上运行的截图）</p><p>在ARM64系统上，cpak现在会获取适合该平台的正确构建，而Soda（Bottles基于Wine的运行器）则带有原生ARM64和ARM64EC支持。Wine也捆绑在其中，用于运行x86和x86_64的Windows软件。</p><p>所有这些使得Bottles在ARM64 Linux硬件上真正实用，无论是单板计算机还是搭载ARM芯片的笔记本电脑。</p><p>最让我惊讶的是这个功能的交付速度。添加ARM64支持的请求（编号为#123）在一周前才提出。三天之内，就有了测试候选版本，请求发布者（用户@example）确认Bottles在他们自己的ARM64硬件上成功启动，问题很快被关闭并标记为已完成。随后，标记的版本于9月7日发布。</p><p>如果你想知道为什么他们选择cpak进行测试运行，Bottles团队的Mirko Brombin表示：</p><p>“Cpak被用于此次测试，因为它是第一个应用程序、Wine基础和原生ARM CI能够同时可用的打包路径。”</p><p>该版本的另一个部分是包含了Soda 11.0-10，它带来了一系列更新。Battle.net启动时崩溃是你们中一些人会首先注意到的问题。这个问题已经修复，根本原因是XInput在没有Steam游戏ID的情况下启动。</p><p>对于VR工作负载，64位Windows VR应用现在可以直接连接到主机运行时（如Monado或WiVRn），无需保持Steam或SteamVR运行。你可以查看变更日志（链接）以了解更多关于此Soda版本的信息。</p><p>目前，ARM64测试构建仅以cpak格式发布，这是来自cpak项目的基于OCI的包格式。为这个平台准备Flatpak的工作正在进行中。</p><p>也就是说，你可以通过在ARM64设备上运行以下命令快速安装cpak测试版本：</p><p>cpak install github.com/bottlesdevs/bottles</p><p>如果你不知道，cpak是一种将应用视为OCI镜像的打包格式，每个镜像都配有一个小的清单文件，列出其权限和依赖项。</p><p>cpak与Flatpak的不同之处在于，它不像Flatpak那样依赖运行时和门户。cpak运行时直接挂载OCI镜像，清单决定应用可以访问什么，包从Git源安装，而不是从中央商店安装。</p><p>喜欢这次更新吗？支持独立的Linux新闻报道。</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受。</p><p>任何金额，无需承诺。</p><p>一位热爱开源软件、定制PC组装、赛车运动并探索这个世界无限可能的极客。</p><p>（以下为无关内容，已忽略）</p></div>
+  <div class="article-body"><p>Bottles 创始人成功在 Linux 上运行 Microsoft 365</p><p>截至目前，他已实现桌面应用的安装和登录。</p><p>Bottles 的创造者 Mirko Brombin 已成功在 Linux 上运行 Microsoft 365。他在 X 上的帖子展示了一个在 Windows 10 或 11 前缀上完成安装、使用现有许可证登录并至少启动一个编辑器的过程。</p><p>他通过两样东西实现了这一点：一个未发布的 Soda 版本和另一个组件。如果你还记得，Soda 是一个基于 Wine 的运行器，便于轻松运行 Windows 游戏和应用程序。</p><p>乍一看，他发布的内容可能像是面向开发者的日志，但这些变化是未来通过 Bottles 实现完整 Microsoft 365 支持的基础。</p><p>他的工作成果</p><p>Mirko 能够使用自己的凭据登录 MS 365 应用，并成功启动 MS Word 并使用它。当然，这并非他唯一实现的功能；由于双因素认证通过，套件检测到了他的许可证，OneDrive 集成也可正常工作。</p><p>该办公套件的内存占用低于 500MB，因此对你的 Linux 系统来说应该很轻量。</p><p>他目前测试的版本是某个构建，他说这是安装程序为 Windows 10 和 11 提供的最后一个构建。在你兴奋地想要在自己的电脑上尝试之前，要知道你必须等待——该组件尚未发布，Bottles 67.4 附带的组件目录止步于 Soda 11.0-10。甚至社区长期以来的请求——在 Bottles 中提供 Microsoft Office 安装程序——仍然开放。</p><p>用于运行仅限 Windows 的软件</p><p>我们需要 Linux 上的 Microsoft 365 吗？</p><p>迄今为止，Microsoft 365 还没有官方的 Linux 桌面版本，鉴于微软目前的运作方式，我不预期短期内会出现。</p><p>这里取得的成就是非凡的。一旦完全实现，这将有助于吸引人们转向 Linux，因为许多人一想到切换平台就不寒而栗，因为他们偏好的办公套件在这里无法运行。</p><p>作为背景，CodeWeavers 销售一款付费 Wine 产品 CrossOver，并且仍将 Linux 上的 Microsoft Office 365 列为“可安装，无法运行”，最后一次测试是针对 CrossOver 26.3.0。</p><p>这就是为什么我希望这个修复能传播到 Bottles 之外。Wine 位于所有这些项目之下，包括 Soda。因此，一个落地到上游的补丁会同时惠及所有项目，你就不需要特定的运行器来让 Office 工作。</p><p>💬 如果 Mirko 让这一切都正常工作，你认为其他项目会开始整合他的工作吗？</p><p>喜欢这个更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热衷于开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性的极客。</p><p>Linux 内核正准备清除旧的 32 位 Arm 平台代码</p><p>Broadcom 终止公开 VDDK 访问以加强对 VMware 的控制</p><p>Bottles 为 ARM 设备上的仅限 Windows 软件带来希望</p><p>一个 Clanker 让 Fedora 与 Windows 11 对决。Fedora 赢了，大部分情况下</p><p>Ikey Doherty 对决 Omarchy：为什么他构建 Barney 而不是另一个发行版</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周通讯，你学习有用的 Linux 技巧、发现应用程序、探索新发行版并了解 Linux 世界的最新动态</p><p>太好了！你已成功注册。</p><p>欢迎回来！你已成功登录。</p><p>你已成功订阅 It's FOSS。</p><p>你的链接已过期。</p><p>成功！请检查你的电子邮件以获取登录魔法链接。</p><p>成功！你的账单信息已更新。</p><p>你的账单未更新。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/bottles-arm64-support/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/bottles-microsoft-365-early-look/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

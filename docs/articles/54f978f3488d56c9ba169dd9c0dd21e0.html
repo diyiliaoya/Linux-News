@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bottles为ARM设备上的Windows专属软件带来希望 — Linux 中文速报</title>
+<title>Mold 高速链接器正在用 Rust 重写，有望成为 Linux 默认链接器 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Bottles为ARM设备上的Windows专属软件带来希望</h1>
+  <h1>Mold 高速链接器正在用 Rust 重写，有望成为 Linux 默认链接器</h1>
 
-  <div class="article-summary">Bottles项目发布了针对Linux ARM64架构的测试版本Bottles 67.4，通过实验性的cpak包提供原生ARM64支持，并包含Soda 11.0-10更新。该版本修复了Battle.net启动崩溃问题，并为VR应用提供了直接连接主机运行时的支持。ARM64支持从请求到发布仅用一周，速度惊人。用户可通过cpak命令在ARM64设备上安装测试版。</div>
+  <div class="article-summary">高性能链接器 Mold 正在从 C++ 重写为 Rust，并计划在 3.0 版本中实现成为 Linux 系统默认链接器 /usr/bin/ld 的目标。主要开发者 Rui Ueyama 表示，将补齐链接脚本功能、进行广泛兼容性测试，并与发行版开发者合作推动采用。同时也在探索增量链接支持。</div>
 
-  <div class="article-body"><p>Bottles为ARM设备上的Windows专属软件带来希望</p><p>虽然仍是测试版，cpak包带来了原生ARM64支持和Soda 11.0-10。</p><p>距离我上次写关于Bottles的文章已经有一段时间了。对于新用户来说，Bottles通过在直观界面背后隐藏Wine的大部分配置工作，在Linux上运行Windows软件。</p><p>其功能列表也在持续增长。你可以一键安装常见的Windows组件，如.NET，或者为每个容器管理多个Wine和Proton运行器。对Steam Proton的支持让你可以在Steam之外运行Proton游戏，而快照功能则为你的每次实验提供回滚点。</p><p>凭借其最新产品，Bottles突破了x86_64硬件的限制。Bottles 67.4是一个针对Linux ARM64架构的测试版本，通过实验性的cpak包发布。</p><p>需要注意的是，ARM64的推出实际上跨越了两个版本。Bottles 67.3添加了cpak包的首个ARM64构建，而Bottles 67.4在数小时后发布，包含了一些杂项修复和Soda 11.0-10。</p><p>（占位图片：Bottles 67.3在x86_64系统上运行的截图）</p><p>在ARM64系统上，cpak现在会获取适合该平台的正确构建，而Soda（Bottles基于Wine的运行器）则带有原生ARM64和ARM64EC支持。Wine也捆绑在其中，用于运行x86和x86_64的Windows软件。</p><p>所有这些使得Bottles在ARM64 Linux硬件上真正实用，无论是单板计算机还是搭载ARM芯片的笔记本电脑。</p><p>最让我惊讶的是这个功能的交付速度。添加ARM64支持的请求（编号为#123）在一周前才提出。三天之内，就有了测试候选版本，请求发布者（用户@example）确认Bottles在他们自己的ARM64硬件上成功启动，问题很快被关闭并标记为已完成。随后，标记的版本于9月7日发布。</p><p>如果你想知道为什么他们选择cpak进行测试运行，Bottles团队的Mirko Brombin表示：</p><p>“Cpak被用于此次测试，因为它是第一个应用程序、Wine基础和原生ARM CI能够同时可用的打包路径。”</p><p>该版本的另一个部分是包含了Soda 11.0-10，它带来了一系列更新。Battle.net启动时崩溃是你们中一些人会首先注意到的问题。这个问题已经修复，根本原因是XInput在没有Steam游戏ID的情况下启动。</p><p>对于VR工作负载，64位Windows VR应用现在可以直接连接到主机运行时（如Monado或WiVRn），无需保持Steam或SteamVR运行。你可以查看变更日志（链接）以了解更多关于此Soda版本的信息。</p><p>目前，ARM64测试构建仅以cpak格式发布，这是来自cpak项目的基于OCI的包格式。为这个平台准备Flatpak的工作正在进行中。</p><p>也就是说，你可以通过在ARM64设备上运行以下命令快速安装cpak测试版本：</p><p>cpak install github.com/bottlesdevs/bottles</p><p>如果你不知道，cpak是一种将应用视为OCI镜像的打包格式，每个镜像都配有一个小的清单文件，列出其权限和依赖项。</p><p>cpak与Flatpak的不同之处在于，它不像Flatpak那样依赖运行时和门户。cpak运行时直接挂载OCI镜像，清单决定应用可以访问什么，包从Git源安装，而不是从中央商店安装。</p><p>喜欢这次更新吗？支持独立的Linux新闻报道。</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受。</p><p>任何金额，无需承诺。</p><p>一位热爱开源软件、定制PC组装、赛车运动并探索这个世界无限可能的极客。</p><p>（以下为无关内容，已忽略）</p></div>
+  <div class="article-body"><p>Mold 高性能链接器通常性能优于 LLVM lld、GNU LD、Wild 等，目前正在用 Rust 编程语言重写，并设定了成为 Linux 系统默认链接器的雄心目标。</p><p>Mold 2.42.1 于今天发布，是该开源链接器的新补丁版本。但 Mold 2.42.1 公告中最引人关注的是关于其继任者 Mold 3.0 的计划。Mold 一直在从 C++ 重写为 Rust。如今 Rust 语言经过多年发展已足够成熟，Mold 计划利用其强大的安全保障以及其他特性，这些特性对首席开发者 Rui Ueyama 颇具吸引力。此前已有另一个性能导向的链接器是用 Rust 编写的。</p><p>Rui 希望用 Rust 编写的 Mold 3.0 在高速链接方面能与 Mold 2.xx 表现一样出色。除此之外，Rui 还希望看到 Mold 成为 Linux 系统上的默认链接器：</p><p>“过去 20 年里，出现了多个快速链接器，包括 gold、lld 和 mold。然而，大多数 Linux 发行版上的系统链接器 /usr/bin/ld 仍然是 GNU ld。结果，mold 可以在几百毫秒内完成的链接任务，使用默认链接器仍可能需要几秒、几十秒甚至几分钟。我认为这对 Linux 社区来说是一种不幸的局面。</p><p>作为 lld 和 mold 的原始作者，我认为我对这种情况负有一定责任。我花费了大量精力让链接器更快，但在兼容性工作上投入不够，而这是让快速链接器适合作为系统链接器直接替代品所必需的。通过 mold 3.0，我们打算改变这一点。mold 3.x 系列的主要目标之一，是让 mold 适合被 Linux 发行版采用为 /usr/bin/ld。</p><p>为实现这一目标，我们首先需要实现缺失的链接脚本功能，使 mold 不仅能链接用户空间程序，还能链接内核和固件。然后我们将进行广泛的兼容性测试，并与 Linux 发行版开发者密切合作，使他们能够实际采用 mold 作为 /usr/bin/ld。实现这一目标是 mold 3.x 的最高优先级之一。”</p><p>Mold 也在考虑最终支持增量链接，这是该链接器迄今为止尚未支持的功能：</p><p>“话虽如此，如果我们能找到一种简单的方法为 mold 添加增量链接，我们会很乐意去做。它仍可能显著改善某些工作负载。我们目前正在探索既能提供这些好处，又能保持 mold 简洁性和可靠性的设计。”</p><p>有兴趣了解 Mold 链接器项目这一重大转变更多细节的人，可以在 Mold 2.42.1 公告中找到。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/bottles-arm64-support/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Mold-Linker-In-Rust-Coming" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

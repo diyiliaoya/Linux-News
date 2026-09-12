@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bottles为ARM设备上的Windows专属软件带来希望 — Linux 中文速报</title>
+<title>GNOME 设置将迎来默认终端选项 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Bottles为ARM设备上的Windows专属软件带来希望</h1>
+  <h1>GNOME 设置将迎来默认终端选项</h1>
 
-  <div class="article-summary">Bottles项目发布了针对Linux ARM64架构的测试版本Bottles 67.4，通过实验性的cpak包提供原生ARM64支持，并包含Soda 11.0-10更新。该版本修复了Battle.net启动崩溃问题，并为VR应用提供了直接连接主机运行时的支持。ARM64支持从请求到发布仅用一周，速度惊人。用户可通过cpak命令在ARM64设备上安装测试版。</div>
+  <div class="article-summary">GNOME 正在开发一项新功能，允许用户在系统设置中选择默认终端模拟器。目前 GNOME 设置中无法更改默认终端，因为终端不处理文件类型或 URI 方案，无法像其他应用那样声明能力。开发者 Ignacy Kuchciński 正在推动基于 freedesktop 应用意图规范的新方案，让终端也能注册能力，从而在 GNOME 设置中提供默认终端选择。该功能可能随明年的 GNOME 52 发布。</div>
 
-  <div class="article-body"><p>Bottles为ARM设备上的Windows专属软件带来希望</p><p>虽然仍是测试版，cpak包带来了原生ARM64支持和Soda 11.0-10。</p><p>距离我上次写关于Bottles的文章已经有一段时间了。对于新用户来说，Bottles通过在直观界面背后隐藏Wine的大部分配置工作，在Linux上运行Windows软件。</p><p>其功能列表也在持续增长。你可以一键安装常见的Windows组件，如.NET，或者为每个容器管理多个Wine和Proton运行器。对Steam Proton的支持让你可以在Steam之外运行Proton游戏，而快照功能则为你的每次实验提供回滚点。</p><p>凭借其最新产品，Bottles突破了x86_64硬件的限制。Bottles 67.4是一个针对Linux ARM64架构的测试版本，通过实验性的cpak包发布。</p><p>需要注意的是，ARM64的推出实际上跨越了两个版本。Bottles 67.3添加了cpak包的首个ARM64构建，而Bottles 67.4在数小时后发布，包含了一些杂项修复和Soda 11.0-10。</p><p>（占位图片：Bottles 67.3在x86_64系统上运行的截图）</p><p>在ARM64系统上，cpak现在会获取适合该平台的正确构建，而Soda（Bottles基于Wine的运行器）则带有原生ARM64和ARM64EC支持。Wine也捆绑在其中，用于运行x86和x86_64的Windows软件。</p><p>所有这些使得Bottles在ARM64 Linux硬件上真正实用，无论是单板计算机还是搭载ARM芯片的笔记本电脑。</p><p>最让我惊讶的是这个功能的交付速度。添加ARM64支持的请求（编号为#123）在一周前才提出。三天之内，就有了测试候选版本，请求发布者（用户@example）确认Bottles在他们自己的ARM64硬件上成功启动，问题很快被关闭并标记为已完成。随后，标记的版本于9月7日发布。</p><p>如果你想知道为什么他们选择cpak进行测试运行，Bottles团队的Mirko Brombin表示：</p><p>“Cpak被用于此次测试，因为它是第一个应用程序、Wine基础和原生ARM CI能够同时可用的打包路径。”</p><p>该版本的另一个部分是包含了Soda 11.0-10，它带来了一系列更新。Battle.net启动时崩溃是你们中一些人会首先注意到的问题。这个问题已经修复，根本原因是XInput在没有Steam游戏ID的情况下启动。</p><p>对于VR工作负载，64位Windows VR应用现在可以直接连接到主机运行时（如Monado或WiVRn），无需保持Steam或SteamVR运行。你可以查看变更日志（链接）以了解更多关于此Soda版本的信息。</p><p>目前，ARM64测试构建仅以cpak格式发布，这是来自cpak项目的基于OCI的包格式。为这个平台准备Flatpak的工作正在进行中。</p><p>也就是说，你可以通过在ARM64设备上运行以下命令快速安装cpak测试版本：</p><p>cpak install github.com/bottlesdevs/bottles</p><p>如果你不知道，cpak是一种将应用视为OCI镜像的打包格式，每个镜像都配有一个小的清单文件，列出其权限和依赖项。</p><p>cpak与Flatpak的不同之处在于，它不像Flatpak那样依赖运行时和门户。cpak运行时直接挂载OCI镜像，清单决定应用可以访问什么，包从Git源安装，而不是从中央商店安装。</p><p>喜欢这次更新吗？支持独立的Linux新闻报道。</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受。</p><p>任何金额，无需承诺。</p><p>一位热爱开源软件、定制PC组装、赛车运动并探索这个世界无限可能的极客。</p><p>（以下为无关内容，已忽略）</p></div>
+  <div class="article-body"><p>默认终端选项即将登陆 GNOME 设置</p><p>正如上图所示，开发者 Ignacy Kuchciński 预告，一个选择默认终端的选项即将到来。</p><p>如果你不经常使用命令行，以至于不关心系统默认终端是什么，那么听到目前无法更改它可能会感到惊讶。在“设置 &gt; 应用 &gt; 默认应用”中，你可以选择首选的网页浏览器、电子邮件客户端、图像查看器和其他应用，但无法将终端模拟器设置为系统默认。</p><p>对于开发者来说，缺少这个选项可能很烦人。我安装过一些命令行应用，它们会添加启动器快捷方式，我心想：“太好了，这样我就不用打开终端运行命令了。”但当我点击启动器时，它却打开了一个终端窗口。这可不是我期望的。</p><p>一个合适的、尊重系统且用户可配置的更改默认终端的方式早就该有了。</p><p>为什么还没有这个设置？</p><p>你可能会惊讶地发现这个选项还不存在——目前还没有。</p><p>许多 Linux 桌面只能通过应用在其 .desktop 文件中声明来了解应用能处理什么，即列出 MIME 类型（一组用于文件和数据格式的标准化标签）或用于链接的 URI 方案处理器。</p><p>图像查看器可以说“我打开 image/png 文件”，网页浏览器可以报告“我处理 https://”，电子邮件客户端可以说“我拦截 mailto:”。</p><p>因为 GNOME 知道这些应用能做什么，所以当你想更改默认应用时，它可以显示一个应用列表供你选择。</p><p>终端既不使用文件类型/MIME，也不处理 URI 方案，它们只是启动一个 shell。由于没有什么需要它们“处理”的，也就没有什么需要声明的，因此桌面环境无法整理出一份合适的“默认”应用列表供选择。</p><p>freedesktop 应用意图规范</p><p>MIME 描述数据，而拟议的意图将声明能力，即应用可以说“我有这个功能”。</p><p>注册这些能力后，像 GNOME 这样的 Linux 桌面就能知道哪些应用能做什么，并据此填充“默认”应用选项列表。除了终端，其他拟议的意图还包括文件管理器和计算器。</p><p>以上是大致情况；在它出现在 GNOME 中之前还有更多工作要做，因为各个部分需要按正确顺序落地：规范发布、Glib 支持读取那些 .desktop 文件声明，当然还有应用开发者添加这些声明。</p><p>之前解决这个问题的尝试要么停滞不前，要么需要重新思考。这一次进展迅速。</p><p>虽然下周发布的 GNOME 51 不会包含让你选择默认终端的选项，但明年发布的 GNOME 52 可能会。</p><p>如果你对发行版的默认设置满意，为什么要改呢？</p><p>GNOME 以 GNOME Console（又名 kgx）作为其核心终端应用，而 Ptyxis 是我个人最近的首选——不过你没问！</p><p>在 Ubuntu 上有多种方法更改默认终端应用，包括从终端运行命令（这很合适），或者卸载除你想要的那个之外的所有终端。如今终端可以说比以往任何时候都更有用，是时候解决这个问题了。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/bottles-arm64-support/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/default-terminal-gnome-settings" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

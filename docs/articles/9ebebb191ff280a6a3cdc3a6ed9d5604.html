@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bottles为ARM设备上的Windows专属软件带来希望 — Linux 中文速报</title>
+<title>Linux 的 IO_uring 迎来一些“疯狂”补丁，带来非常不错的改进 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Bottles为ARM设备上的Windows专属软件带来希望</h1>
+  <h1>Linux 的 IO_uring 迎来一些“疯狂”补丁，带来非常不错的改进</h1>
 
-  <div class="article-summary">Bottles项目发布了针对Linux ARM64架构的测试版本Bottles 67.4，通过实验性的cpak包提供原生ARM64支持，并包含Soda 11.0-10更新。该版本修复了Battle.net启动崩溃问题，并为VR应用提供了直接连接主机运行时的支持。ARM64支持从请求到发布仅用一周，速度惊人。用户可通过cpak命令在ARM64设备上安装测试版。</div>
+  <div class="article-summary">Linux 块子系统维护者兼 IO_uring 首席开发者 Jens Axboe 发布了一组“疯狂”补丁，旨在改进内核阻塞行为。该系列让原本因无阻塞路径而被无条件转交的请求以内联阻塞模式提交，仅在真正阻塞时才付出卸载代价，并通过转移提交任务的身份来避免额外开销。测试显示出显著性能提升，有望在 Linux v7.4 周期进入主线。</div>
 
-  <div class="article-body"><p>Bottles为ARM设备上的Windows专属软件带来希望</p><p>虽然仍是测试版，cpak包带来了原生ARM64支持和Soda 11.0-10。</p><p>距离我上次写关于Bottles的文章已经有一段时间了。对于新用户来说，Bottles通过在直观界面背后隐藏Wine的大部分配置工作，在Linux上运行Windows软件。</p><p>其功能列表也在持续增长。你可以一键安装常见的Windows组件，如.NET，或者为每个容器管理多个Wine和Proton运行器。对Steam Proton的支持让你可以在Steam之外运行Proton游戏，而快照功能则为你的每次实验提供回滚点。</p><p>凭借其最新产品，Bottles突破了x86_64硬件的限制。Bottles 67.4是一个针对Linux ARM64架构的测试版本，通过实验性的cpak包发布。</p><p>需要注意的是，ARM64的推出实际上跨越了两个版本。Bottles 67.3添加了cpak包的首个ARM64构建，而Bottles 67.4在数小时后发布，包含了一些杂项修复和Soda 11.0-10。</p><p>（占位图片：Bottles 67.3在x86_64系统上运行的截图）</p><p>在ARM64系统上，cpak现在会获取适合该平台的正确构建，而Soda（Bottles基于Wine的运行器）则带有原生ARM64和ARM64EC支持。Wine也捆绑在其中，用于运行x86和x86_64的Windows软件。</p><p>所有这些使得Bottles在ARM64 Linux硬件上真正实用，无论是单板计算机还是搭载ARM芯片的笔记本电脑。</p><p>最让我惊讶的是这个功能的交付速度。添加ARM64支持的请求（编号为#123）在一周前才提出。三天之内，就有了测试候选版本，请求发布者（用户@example）确认Bottles在他们自己的ARM64硬件上成功启动，问题很快被关闭并标记为已完成。随后，标记的版本于9月7日发布。</p><p>如果你想知道为什么他们选择cpak进行测试运行，Bottles团队的Mirko Brombin表示：</p><p>“Cpak被用于此次测试，因为它是第一个应用程序、Wine基础和原生ARM CI能够同时可用的打包路径。”</p><p>该版本的另一个部分是包含了Soda 11.0-10，它带来了一系列更新。Battle.net启动时崩溃是你们中一些人会首先注意到的问题。这个问题已经修复，根本原因是XInput在没有Steam游戏ID的情况下启动。</p><p>对于VR工作负载，64位Windows VR应用现在可以直接连接到主机运行时（如Monado或WiVRn），无需保持Steam或SteamVR运行。你可以查看变更日志（链接）以了解更多关于此Soda版本的信息。</p><p>目前，ARM64测试构建仅以cpak格式发布，这是来自cpak项目的基于OCI的包格式。为这个平台准备Flatpak的工作正在进行中。</p><p>也就是说，你可以通过在ARM64设备上运行以下命令快速安装cpak测试版本：</p><p>cpak install github.com/bottlesdevs/bottles</p><p>如果你不知道，cpak是一种将应用视为OCI镜像的打包格式，每个镜像都配有一个小的清单文件，列出其权限和依赖项。</p><p>cpak与Flatpak的不同之处在于，它不像Flatpak那样依赖运行时和门户。cpak运行时直接挂载OCI镜像，清单决定应用可以访问什么，包从Git源安装，而不是从中央商店安装。</p><p>喜欢这次更新吗？支持独立的Linux新闻报道。</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受。</p><p>任何金额，无需承诺。</p><p>一位热爱开源软件、定制PC组装、赛车运动并探索这个世界无限可能的极客。</p><p>（以下为无关内容，已忽略）</p></div>
+  <div class="article-body"><p>Linux 的 IO_uring 迎来一些“疯狂”补丁，带来非常不错的改进</p><p>2026 年 9 月 11 日东部时间下午 12:21。</p><p>Linux 块子系统维护者兼 IO_uring 首席开发者继续发掘新机会，让出色的 IO_uring 框架在 Linux 内核中性能更上一层楼。为结束这一周，他发布了一些“疯狂”补丁，带来了显著提升。</p><p>Axboe 的最新工作聚焦于改进内核阻塞行为。Axboe 在今天的文章中描述了这项工作：</p><p>“io_uring 会以 IO_URING_F_NONBLOCK 内联发出请求，当无法非阻塞时则转交给 io-wq。对于一系列操作码，根本不可能非阻塞，因为内核中没有它们的非阻塞路径：fsync、statx、openat、*at 系列、xattr、fadvise、splice 等。这些请求被无条件转交，而每次转交都要付出线程唤醒、上下文切换和 task_work 完成往返的代价。io_uring 必须谨慎，防止内核中意外阻塞，即使这些操作绝大多数情况下从不阻塞。这很令人遗憾。例如不阻塞的 fdatasync、命中 dcache 的 statx、用于 O_TMPFILE 的 openat 等。所有这些本可以很好地内联完成，但 io_uring 就是不能依赖这一点。</p><p>本系列改为以阻塞模式内联发出这些请求，仅当请求实际阻塞时才付出卸载代价。但等到它阻塞时，提交者已深入内核，请求就在其栈上，因此工作无法移到另一个线程。我们能转移的是身份。如果提交任务阻塞，一个空闲的 io-wq 工作线程会接管其用户可见身份（tid、信号状态、凭据、调度属性、cgroup、用户寄存器状态），完成 io_uring_enter() 调用并以提交者身份返回用户空间。原任务则作为 io-wq 工作线程完成请求并加入线程池。用户空间 hopefully 毫无察觉，系统调用返回了相同的 tid，只是位于不同的 task_struct 上。老资历的人可能还记得大约 20 年前对此的早期尝试。”</p><p>关于这些“疯狂补丁”，他随后分享了一些新的“美味结果”图表，这对不关心此变更内部技术细节的用户来说最为激动：</p><p>我们将看看这项工作走向何方，以及它是否能在 Linux v7.4 周期前准备好进入主线。</p><p>Btrfs Zstd 解压加速迎来一项不错的改进</p><p>用于 Linux 的 AVX-512 xor_gen 更新，在 RAID 阵列上表现非常出色</p><p>WinBtrfs 1.10 发布，为 Windows 上的 Btrfs 带来两年份的改进</p><p>F2FS 将在 Linux 7.3 中并行处理多设备刷新</p><p>Linux 7.3 UBI 增加对每设备磨损均衡阈值的支持</p><p>Chris Mason 卸任 Btrfs 联合维护者，离开 Meta</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Asahi Linux 现已正式支持 Apple M3 Mac——但有注意事项</p><p>Ikey Doherty 计划展示如何“正确”构建现代 Linux 发行版</p><p>NetworkManager 通过诱骗 AI 代理添加金丝雀来执行 AI 政策</p><p>AMD 致力于“将 Rust 深入推入 GPU 栈”</p><p>Linux 内核计划移除约 55,000 行旧 ARM 平台代码</p><p>神秘的 x86 CPU 已具备 APX，x86S 延续 Intel 在无遗留 x86 上的未竟事业</p><p>Wine 11.17 发布，初步支持显示模式模拟</p><p>AI 写了很多“丑陋”代码，但为更快的 Linux 编译找到了主要瓶颈</p><p>同时享受无广告浏览，</p><p>单页文章</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/bottles-arm64-support/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-IO-uring-Crazy-Friday" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

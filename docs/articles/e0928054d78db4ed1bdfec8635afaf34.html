@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bottles为ARM设备上的Windows专属软件带来希望 — Linux 中文速报</title>
+<title>Linux Mint 发布两款全新桌面应用 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Bottles为ARM设备上的Windows专属软件带来希望</h1>
+  <h1>Linux Mint 发布两款全新桌面应用</h1>
 
-  <div class="article-summary">Bottles项目发布了针对Linux ARM64架构的测试版本Bottles 67.4，通过实验性的cpak包提供原生ARM64支持，并包含Soda 11.0-10更新。该版本修复了Battle.net启动崩溃问题，并为VR应用提供了直接连接主机运行时的支持。ARM64支持从请求到发布仅用一周，速度惊人。用户可通过cpak命令在ARM64设备上安装测试版。</div>
+  <div class="article-summary">Linux Mint 将在今年晚些时候推出两款新应用：日历应用 Clockenstien 和电子书阅读器 Book Reader，同时重新设计了文档管理工具 Library。新日历支持本地与在线同步，电子书阅读器提供类似 Kindle 的阅读体验，Library 则按文件类型分组管理文档。这些应用将随 Linux Mint 23 正式亮相。</div>
 
-  <div class="article-body"><p>Bottles为ARM设备上的Windows专属软件带来希望</p><p>虽然仍是测试版，cpak包带来了原生ARM64支持和Soda 11.0-10。</p><p>距离我上次写关于Bottles的文章已经有一段时间了。对于新用户来说，Bottles通过在直观界面背后隐藏Wine的大部分配置工作，在Linux上运行Windows软件。</p><p>其功能列表也在持续增长。你可以一键安装常见的Windows组件，如.NET，或者为每个容器管理多个Wine和Proton运行器。对Steam Proton的支持让你可以在Steam之外运行Proton游戏，而快照功能则为你的每次实验提供回滚点。</p><p>凭借其最新产品，Bottles突破了x86_64硬件的限制。Bottles 67.4是一个针对Linux ARM64架构的测试版本，通过实验性的cpak包发布。</p><p>需要注意的是，ARM64的推出实际上跨越了两个版本。Bottles 67.3添加了cpak包的首个ARM64构建，而Bottles 67.4在数小时后发布，包含了一些杂项修复和Soda 11.0-10。</p><p>（占位图片：Bottles 67.3在x86_64系统上运行的截图）</p><p>在ARM64系统上，cpak现在会获取适合该平台的正确构建，而Soda（Bottles基于Wine的运行器）则带有原生ARM64和ARM64EC支持。Wine也捆绑在其中，用于运行x86和x86_64的Windows软件。</p><p>所有这些使得Bottles在ARM64 Linux硬件上真正实用，无论是单板计算机还是搭载ARM芯片的笔记本电脑。</p><p>最让我惊讶的是这个功能的交付速度。添加ARM64支持的请求（编号为#123）在一周前才提出。三天之内，就有了测试候选版本，请求发布者（用户@example）确认Bottles在他们自己的ARM64硬件上成功启动，问题很快被关闭并标记为已完成。随后，标记的版本于9月7日发布。</p><p>如果你想知道为什么他们选择cpak进行测试运行，Bottles团队的Mirko Brombin表示：</p><p>“Cpak被用于此次测试，因为它是第一个应用程序、Wine基础和原生ARM CI能够同时可用的打包路径。”</p><p>该版本的另一个部分是包含了Soda 11.0-10，它带来了一系列更新。Battle.net启动时崩溃是你们中一些人会首先注意到的问题。这个问题已经修复，根本原因是XInput在没有Steam游戏ID的情况下启动。</p><p>对于VR工作负载，64位Windows VR应用现在可以直接连接到主机运行时（如Monado或WiVRn），无需保持Steam或SteamVR运行。你可以查看变更日志（链接）以了解更多关于此Soda版本的信息。</p><p>目前，ARM64测试构建仅以cpak格式发布，这是来自cpak项目的基于OCI的包格式。为这个平台准备Flatpak的工作正在进行中。</p><p>也就是说，你可以通过在ARM64设备上运行以下命令快速安装cpak测试版本：</p><p>cpak install github.com/bottlesdevs/bottles</p><p>如果你不知道，cpak是一种将应用视为OCI镜像的打包格式，每个镜像都配有一个小的清单文件，列出其权限和依赖项。</p><p>cpak与Flatpak的不同之处在于，它不像Flatpak那样依赖运行时和门户。cpak运行时直接挂载OCI镜像，清单决定应用可以访问什么，包从Git源安装，而不是从中央商店安装。</p><p>喜欢这次更新吗？支持独立的Linux新闻报道。</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受。</p><p>任何金额，无需承诺。</p><p>一位热爱开源软件、定制PC组装、赛车运动并探索这个世界无限可能的极客。</p><p>（以下为无关内容，已忽略）</p></div>
+  <div class="article-body"><p>Linux Mint 发布全新日历和电子书阅读器应用</p><p>今年晚些时候，Linux Mint 将迎来两款新应用：一款全新的日历和一款电子书阅读器。此外，这个基于 Ubuntu 的 Linux 发行版还重新设计了其（此前被忽视的）文档中心，以便更轻松地从一处查找和管理散落在设备各处的文档。</p><p>两款新应用均加入了 XApp 项目，这是 Linux Mint 自主开发的跨桌面 GTK 应用集合（目前带有 Claude 设计美学）。</p><p>Clockenstien 是 Mint 的新日历应用</p><p>——输入时请小心。</p><p>Clockenstien 是 Linux Mint 的新日历应用，但为了避免有人被这个糟糕的名字吓到，面向用户的标签只是“日历”。它终于加入了 Linux Mint 默认软件阵容（早该如此——之前的版本还是基于 GTK4/libadwaita 之前的旧构建）。</p><p>日历就是日历。它需要让你查看和浏览日期、添加事件、为不同任务创建日历——这些 Linux Mint 的旧日历也能做到。但与在线服务的集成很重要，因为我们大多数人白天会在不同设备间切换。因此，日历可以完全离线并保存在本地，也可以与 Google Calendar 等在线提供商同步，或通过 Nextcloud 等云服务使用 CalDAV 同步。</p><p>Clem 表示，目标是确保当远程日历无法工作或未同步时始终一目了然，这样用户就能知道是否出了问题。如果有一个重要事件你以为会收到提醒，却从未收到，静默失败是毫无帮助的。</p><p>“在实验室里，还有更多事情在发生”，</p><p>一个后台守护进程用于保持远程日历同步，并检查任何启用了提醒的即将到来的事件。如果出现问题，事件仍然可见，但会变为只读——你无法编辑或添加——直到连接恢复在线。</p><p>提醒通过通知代理处理。它们会在适当的时间显示在桌面上，以便你采取行动、稍后提醒或推迟。后端接口允许其他桌面环境交互或替换通知代理。</p><p>Book Reader 电子书阅读器</p><p>——简洁的渲染体验</p><p>Book Reader 应用是为打开 ePub 文件而设计的（意外吧）。它似乎提供了干净的阅读体验，Linux Mint 的 Clement Lefebvre 称其“类似于”Kindle 或 Kobo。它还会记录你在书中的位置，这样当你重新打开时，可以继续阅读。</p><p>功能方面，它提供了你期望的一切：章节和页面导航、全文搜索和书签，以及可调节的页面缩放和字体选项。注释功能让你可以用颜色高亮选中的文本，并添加笔记。</p><p>最后，一个内部查找系统让你可以选中一个词，并将其传送到搜索引擎（维基百科、词典等）以了解更多信息。</p><p>Library 重获新生</p><p>——个人文档中心</p><p>Linux Mint 还重新设计了其 Library 文档管理器，你可能通过包名“gnome-documents”知道它。</p><p>文档现在按文件类型分组，而不是按打开它们的应用分组。例如，你可以在一个视图中看到所有 PDF 文件，而不是在默认文档查看器打开的所有文件中四处寻找。</p><p>常见文件类型列在侧边栏中，但你可以选择显示哪些以及以什么顺序显示。更有用的是，你可以创建自己的自定义分组，包含不同文件类型的混合，甚至可以从特定文件夹中指定它们。</p><p>我什么时候能获得这些新应用？</p><p>这些应用将在 Linux Mint 23 中正式亮相，预计今年年底发布。该版本还将附带新的改进版。此外，团队迄今已披露和预告的其他变化（无疑还有一些尚未到来）。</p><p>如果你不想等待，源代码已在 GitHub 上（上面各段中均有链接）。你可以查看（双关语警报）以进行测试，并提交你发现的任何问题或你可能有的大功能请求。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/bottles-arm64-support/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/linux-mint-new-apps" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
