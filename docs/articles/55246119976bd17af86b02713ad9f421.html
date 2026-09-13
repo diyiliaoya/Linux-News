@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fooyin 0.12 音乐播放器新增音频转换和新可视化效果 — Linux 中文速报</title>
+<title>EROFS因数据损坏可能性禁用LZ4滚动解压缩 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">Linux Today</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Fooyin 0.12 音乐播放器新增音频转换和新可视化效果</h1>
+  <h1>EROFS因数据损坏可能性禁用LZ4滚动解压缩</h1>
 
-  <div class="article-summary">Fooyin 0.12 版本为这款可定制音乐播放器带来了内置音频转换功能、全新可视化效果，以及播放性能的改进和细节优化。</div>
+  <div class="article-summary">EROFS文件系统因发现LZ4滚动解压缩可能导致数据损坏，在Linux 7.3开发周期中临时禁用了该功能。问题源于上游LZ4实现中可能存在不受控的后向内存拷贝，破坏了滚动解压缩的优化假设。禁用后主要影响是运行时内存占用增加，但已有缓解措施。</div>
 
-  <div class="article-body"><p>Fooyin 0.12 新增了内置音频转换和新可视化效果，同时为这款可定制的音乐播放器带来了播放改进和细节优化。</p><p>文章《Fooyin 0.12 音乐播放器新增音频转换和新可视化效果》最初发布于 Linux Today。</p></div>
+  <div class="article-body"><p>EROFS因数据损坏可能性禁用LZ4滚动解压缩</p><p>2026年9月12日 晚上08:33 EDT。</p><p>EROFS只读文件系统在嵌入式系统、容器及其他用例中广受欢迎，由于数据损坏的担忧，它已暂时禁用了对LZ4滚动解压缩的支持。</p><p>在定于周日发布的Linux 7.3-rc3内核发布之前，EROFS在周期中途认为有必要禁用其所支持的LZ4滚动数据解压缩能力。今天的提交</p><p>“这里最具影响的修复是暂时禁用LZ4滚动解压缩。AWS的人员最近发现，他们的系统在某些罕见、特定的LZ4数据集上可能会得到损坏的数据，经过深入分析，我发现根本原因在于当前LZ4实现中可能存在不受控的后向内存拷贝，这破坏了滚动解压缩优化的假设。由于内核LZ4代码库不在我们的控制之下，需要更多时间来规划下一步，因此暂时禁用LZ4滚动解压缩，以确保在这些罕见情况下实际生产环境的数据正确性。”</p><p>禁用该功能的提交进一步解释了问题和影响：</p><p>“引入LZ4滚动解压缩是为了减少临时页面的内存占用：</p><p>在许多情况下，用户需要读取压缩区段（pcluster）内的小数据，这可能是由于随机小读取，或者是因为已更新的folio（通常为order-0）无法再次用于解压缩，因为解压缩算法会重新填充已更新的folio。</p><p>滚动解压缩之所以有效，是因为LZ4基于LZ77，仅引用最近64 KiB的解压缩数据，因此理论上解压缩时只需要一个有界的临时页面滚动窗口。</p><p>它可以节省大量临时内存，例如，601,960字节的数据可以压缩到一个256k的LZ4压缩区段中，这意味着如果禁用滚动解压缩，在最坏情况下每次请求需要额外146个页面。</p><p>然而，上游LZ4实现并不在EROFS的控制之下：例如，字面量拷贝memmove()在x86上即使源和目标范围不重叠，也可能基于地址比较而**向后拷贝长字面量**（换句话说，这里不需要考虑内联解压缩）。这破坏了滚动假设，使优化失效。</p><p>暂时禁用它以确保数据正确性优先，因为EROFS现在已被广泛使用：一旦我们确保官方LZ4代码对非重叠范围始终向前拷贝，或者在EROFS中维护自己的LZ4实现，滚动窗口方法就可以恢复。</p><p>主要影响是更高的运行时内存占用；然而，最近的提交0f6273ab4637（“erofs: add a reserved buffer pool for lz4 decompression”）在启用时有助于缓解这一问题，但仍不完美。”</p><p>因此，至少对于Linux 7.3，EROFS的LZ4滚动解压缩功能现已被禁用。</p><p>Linux的IO_uring迎来一些“疯狂”的补丁，带来非常好的改进</p><p>Btrfs Zstd解压缩将迎来一项不错的改进</p><p>面向Linux的AVX-512 xor_gen更新，在RAID阵列上表现非常出色</p><p>WinBtrfs 1.10发布，带来两年的改进，适用于Windows上的Btrfs</p><p>F2FS将在Linux 7.3中并行处理多设备刷新</p><p>Linux 7.3 UBI增加对每设备磨损均衡阈值的支持</p><p>Michael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他</p><p>Asahi Linux现在正式支持Apple M3 Mac——但有注意事项</p><p>Ikey Doherty计划展示</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/fooyin-0-12-music-player-adds-audio-conversion-and-new-visualizations/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/EROFS-Disabled-LZ4-Rolling" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

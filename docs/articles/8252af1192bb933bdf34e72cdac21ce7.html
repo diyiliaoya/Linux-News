@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fooyin 0.12 音乐播放器新增音频转换和新可视化效果 — Linux 中文速报</title>
+<title>GTK 4.24 发布：改进分数缩放，更精确的 GDK 帧时钟 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">Linux Today</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Fooyin 0.12 音乐播放器新增音频转换和新可视化效果</h1>
+  <h1>GTK 4.24 发布：改进分数缩放，更精确的 GDK 帧时钟</h1>
 
-  <div class="article-summary">Fooyin 0.12 版本为这款可定制音乐播放器带来了内置音频转换功能、全新可视化效果，以及播放性能的改进和细节优化。</div>
+  <div class="article-summary">GTK 4.24 作为 GTK4 工具包的最新稳定功能版本于周五发布，将与下周的 GNOME 51 桌面版搭配。该版本新增对 Wayland ext-background-effect 协议和文本输入 v3.2 协议的支持，通过将内容对齐到设备像素边界改进了分数缩放，并重做了 GDK 帧时钟以提高精度、减少掉帧。此外还大幅改进了 SVG 支持并修复了大量错误，但会话保存/恢复功能被推迟到 GTK 4.26。</div>
 
-  <div class="article-body"><p>Fooyin 0.12 新增了内置音频转换和新可视化效果，同时为这款可定制的音乐播放器带来了播放改进和细节优化。</p><p>文章《Fooyin 0.12 音乐播放器新增音频转换和新可视化效果》最初发布于 Linux Today。</p></div>
+  <div class="article-body"><p>GTK 4.24 于周五发布，作为 GTK4 工具包的最新稳定功能版本。对于搭配下周发布的 GNOME 51 桌面环境来说，这是一个相当不错的 GTK4 更新。</p><p>GTK 4.24 新增了对 Wayland ext-background-effect 协议的支持，该协议可用于在窗口背后提供模糊背景，例如模糊窗口终端效果。GTK 4.24 还支持 Wayland 的文本输入 v3.2 协议以及其他改进。</p><p>更好的分数缩放支持</p><p>GTK 4.24 通过将内容对齐到设备像素边界来改进分数缩放支持。当在设备上使用分数缩放时，这提供了对渲染的更强控制。</p><p>对于那些偏好减少动态效果以避免感官过载或类似情况的用户，GTK 4.24 在多个位置遵循减少动态效果设置，并在启用该设置时避免动画。</p><p>GDK 帧时钟已被重做，以提高精度，确保帧按时呈现，同时减少掉帧。Android 上的 GTK4 现在也将帧时序与垂直同步对齐。</p><p>GTK 的可缩放矢量图形（SVG）支持在 GTK 4.24 工具包中也得到了极大改进。</p><p>除了这些功能工作之外，GTK 4.24 还带来了大量错误修复。相当多。</p><p>遗憾的是，会话保存/恢复功能被推迟到了 GTK 4.26。GTK 开发者此前一直在</p><p>规划不错的会话保存支持</p><p>，但未能赶上 GTK 4.24。</p><p>GTK 4.24 可从以下地址下载：</p><p>对于那些希望在下周 GNOME 51 正式发布之前构建最新工具包的用户。</p><p>Gitte 作为 GNOME 的 Git 客户端继续成熟得相当不错</p><p>GNOME 51 新增对自定义指针加速配置文件的支持</p><p>GNOME 利益相关者讨论用于解决重大技术变更的 RFC 流程</p><p>GNOME Mutter 51.rc 新增跨 GPU 缓冲区扫描输出支持及其他最后时刻的工作</p><p>GNOME 非常激动人心的一周：从 Flatpak 资助到重置恢复以及应用</p><p>GNOME Mutter 的 GPU 重置恢复合并请求已提交</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他</p><p>Asahi Linux 现在正式支持 Apple M3 Mac——但有注意事项</p><p>Ikey Doherty 计划展示如何“正确”构建现代 Linux 发行版</p><p>NetworkManager 致力于通过诱骗 AI 代理添加金丝雀来执行 AI 政策</p><p>AMD 致力于“将 Rust 深入推入 GPU 栈”</p><p>Linux 内核计划移除约 55k 行旧 ARM 平台代码</p><p>神秘的 x86 CPU 已具备 APX、x86S，即 Intel 为无遗留 x86 留下的成果</p><p>AI 生成了大量“丑陋”代码，但发现了更快 Linux 编译的主要瓶颈</p><p>Wine 11.17 发布，初步支持显示模式仿真</p><p>同时拥有无广告浏览、</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026，</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/fooyin-0-12-music-player-adds-audio-conversion-and-new-visualizations/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/GTK-4.24-Released" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
