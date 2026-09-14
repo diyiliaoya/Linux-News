@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GNOME 设置将迎来默认终端选项 — Linux 中文速报</title>
+<title>Ubuntu 26.10 完成向基于 Rust 的 coreutils 的过渡 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #8b5cf61a; color: #8b5cf6;
-    border: 1px solid #8b5cf630;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">桌面环境</span>
+    <span class="tag">发行版</span>
     <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>GNOME 设置将迎来默认终端选项</h1>
+  <h1>Ubuntu 26.10 完成向基于 Rust 的 coreutils 的过渡</h1>
 
-  <div class="article-summary">GNOME 正在开发一项新功能，允许用户在系统设置中选择默认终端模拟器。目前 GNOME 设置中无法更改默认终端，因为终端不处理文件类型或 URI 方案，无法像其他应用那样声明能力。开发者 Ignacy Kuchciński 正在推动基于 freedesktop 应用意图规范的新方案，让终端也能注册能力，从而在 GNOME 设置中提供默认终端选择。该功能可能随明年的 GNOME 52 发布。</div>
+  <div class="article-summary">Ubuntu 26.10 完成了向基于 Rust 的核心工具的迁移，此前因 TOCTOU 安全问题而暂缓的三个命令现已改用内存安全版本。Canonical 自 2025 年起推动发行版“氧化”，Ubuntu 25.10 首次默认采用 Rust 版 sudo。Rust coreutils 追求与 GNU 版本完全兼容，旨在提升安全性。Ubuntu 26.10 测试版本月发布，稳定版定于 2026 年 10 月 15 日。</div>
 
-  <div class="article-body"><p>默认终端选项即将登陆 GNOME 设置</p><p>正如上图所示，开发者 Ignacy Kuchciński 预告，一个选择默认终端的选项即将到来。</p><p>如果你不经常使用命令行，以至于不关心系统默认终端是什么，那么听到目前无法更改它可能会感到惊讶。在“设置 &gt; 应用 &gt; 默认应用”中，你可以选择首选的网页浏览器、电子邮件客户端、图像查看器和其他应用，但无法将终端模拟器设置为系统默认。</p><p>对于开发者来说，缺少这个选项可能很烦人。我安装过一些命令行应用，它们会添加启动器快捷方式，我心想：“太好了，这样我就不用打开终端运行命令了。”但当我点击启动器时，它却打开了一个终端窗口。这可不是我期望的。</p><p>一个合适的、尊重系统且用户可配置的更改默认终端的方式早就该有了。</p><p>为什么还没有这个设置？</p><p>你可能会惊讶地发现这个选项还不存在——目前还没有。</p><p>许多 Linux 桌面只能通过应用在其 .desktop 文件中声明来了解应用能处理什么，即列出 MIME 类型（一组用于文件和数据格式的标准化标签）或用于链接的 URI 方案处理器。</p><p>图像查看器可以说“我打开 image/png 文件”，网页浏览器可以报告“我处理 https://”，电子邮件客户端可以说“我拦截 mailto:”。</p><p>因为 GNOME 知道这些应用能做什么，所以当你想更改默认应用时，它可以显示一个应用列表供你选择。</p><p>终端既不使用文件类型/MIME，也不处理 URI 方案，它们只是启动一个 shell。由于没有什么需要它们“处理”的，也就没有什么需要声明的，因此桌面环境无法整理出一份合适的“默认”应用列表供选择。</p><p>freedesktop 应用意图规范</p><p>MIME 描述数据，而拟议的意图将声明能力，即应用可以说“我有这个功能”。</p><p>注册这些能力后，像 GNOME 这样的 Linux 桌面就能知道哪些应用能做什么，并据此填充“默认”应用选项列表。除了终端，其他拟议的意图还包括文件管理器和计算器。</p><p>以上是大致情况；在它出现在 GNOME 中之前还有更多工作要做，因为各个部分需要按正确顺序落地：规范发布、Glib 支持读取那些 .desktop 文件声明，当然还有应用开发者添加这些声明。</p><p>之前解决这个问题的尝试要么停滞不前，要么需要重新思考。这一次进展迅速。</p><p>虽然下周发布的 GNOME 51 不会包含让你选择默认终端的选项，但明年发布的 GNOME 52 可能会。</p><p>如果你对发行版的默认设置满意，为什么要改呢？</p><p>GNOME 以 GNOME Console（又名 kgx）作为其核心终端应用，而 Ptyxis 是我个人最近的首选——不过你没问！</p><p>在 Ubuntu 上有多种方法更改默认终端应用，包括从终端运行命令（这很合适），或者卸载除你想要的那个之外的所有终端。如今终端可以说比以往任何时候都更有用，是时候解决这个问题了。</p></div>
+  <div class="article-body"><p>Ubuntu 26.10 完成了该发行版向基于 Rust 的核心工具的迁移，此前因安全问题而暂缓的命令现已迁移到内存安全版本。</p><p>由于一系列 TOCTOU（检查时间与使用时间）问题需要在 Ubuntu 26.04 LTS 中修复，这些命令当时仍保留在 GNU 版本上。</p><p>随着这些问题在上游得到解决，Ubuntu 26.10 完成了这项工作。该版本附带了一套完整的 Rust 核心工具，涵盖了常见的命令行工具，如……</p><p>Canonical 每年捐赠 4 万欧元资助 Rust 软件相关工作</p><p>Canonical 的工程师于 2025 年开始“氧化”该发行版——用 Rust 替代方案替换基础软件。他们认为这样做具有安全优势，因为 Rust 在编译时就能捕获内存错误，而 C 编译器则不能。</p><p>Ubuntu 25.10 是首个附带基于 Rust 工具的版本，并默认使用基于 Rust 的 sudo。这一过程并非一帆风顺，但 Canonical 一直很用心。他们在 26.04 之前委托进行了一次安全审计，发现了导致这三个命令保留 GNU 版本的问题。Canonical 还是 Trifecta Tech Foundation 的黄金赞助商，每年提供 4 万欧元资助其 Rust 软件工作。</p><p>该非营利基金会正在进行基于 Rust 的网络时间协议（NTP）重写，Ubuntu 计划在 27.10 中将其用作默认时间同步客户端。</p><p>在这里，coreutils 迁移的完成对最终用户没有功能上的差异。基于 Rust 的版本旨在与 GNU 版本实现即插即用兼容，并将任何偏差视为 bug。这是有意为之；关键在于提升安全性。</p><p>Ubuntu 26.10“Stonking Stingray”测试版将于本月晚些时候发布，稳定版则于 2026 年 10 月 15 日发布。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/default-terminal-gnome-settings" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/ubuntu-2610-rust-coreutils-complete" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GNOME 设置将迎来默认终端选项 — Linux 中文速报</title>
+<title>Linux 7.4 的 Zstd 改进：避免冗余初始化 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #8b5cf61a; color: #8b5cf6;
-    border: 1px solid #8b5cf630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">桌面环境</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>GNOME 设置将迎来默认终端选项</h1>
+  <h1>Linux 7.4 的 Zstd 改进：避免冗余初始化</h1>
 
-  <div class="article-summary">GNOME 正在开发一项新功能，允许用户在系统设置中选择默认终端模拟器。目前 GNOME 设置中无法更改默认终端，因为终端不处理文件类型或 URI 方案，无法像其他应用那样声明能力。开发者 Ignacy Kuchciński 正在推动基于 freedesktop 应用意图规范的新方案，让终端也能注册能力，从而在 GNOME 设置中提供默认终端选择。该功能可能随明年的 GNOME 52 发布。</div>
+  <div class="article-summary">Usama Arif 提交了针对 Linux 7.4 的 Zstd 压缩补丁，旨在通过避免冗余的 cstream 和 dstream 初始化来提升性能。他发现首次初始化被丢弃且未处理任何数据，新补丁将流初始化推迟到首次遍历迭代。在 4KB crypto_acomp 基准测试中，压缩速度有单位数提升，解压速度在裸机上提升 13%，在虚拟机中提升 35%。补丁已进入加密子系统开发分支，预计将在 Linux 7.4 合并窗口提交。</div>
 
-  <div class="article-body"><p>默认终端选项即将登陆 GNOME 设置</p><p>正如上图所示，开发者 Ignacy Kuchciński 预告，一个选择默认终端的选项即将到来。</p><p>如果你不经常使用命令行，以至于不关心系统默认终端是什么，那么听到目前无法更改它可能会感到惊讶。在“设置 &gt; 应用 &gt; 默认应用”中，你可以选择首选的网页浏览器、电子邮件客户端、图像查看器和其他应用，但无法将终端模拟器设置为系统默认。</p><p>对于开发者来说，缺少这个选项可能很烦人。我安装过一些命令行应用，它们会添加启动器快捷方式，我心想：“太好了，这样我就不用打开终端运行命令了。”但当我点击启动器时，它却打开了一个终端窗口。这可不是我期望的。</p><p>一个合适的、尊重系统且用户可配置的更改默认终端的方式早就该有了。</p><p>为什么还没有这个设置？</p><p>你可能会惊讶地发现这个选项还不存在——目前还没有。</p><p>许多 Linux 桌面只能通过应用在其 .desktop 文件中声明来了解应用能处理什么，即列出 MIME 类型（一组用于文件和数据格式的标准化标签）或用于链接的 URI 方案处理器。</p><p>图像查看器可以说“我打开 image/png 文件”，网页浏览器可以报告“我处理 https://”，电子邮件客户端可以说“我拦截 mailto:”。</p><p>因为 GNOME 知道这些应用能做什么，所以当你想更改默认应用时，它可以显示一个应用列表供你选择。</p><p>终端既不使用文件类型/MIME，也不处理 URI 方案，它们只是启动一个 shell。由于没有什么需要它们“处理”的，也就没有什么需要声明的，因此桌面环境无法整理出一份合适的“默认”应用列表供选择。</p><p>freedesktop 应用意图规范</p><p>MIME 描述数据，而拟议的意图将声明能力，即应用可以说“我有这个功能”。</p><p>注册这些能力后，像 GNOME 这样的 Linux 桌面就能知道哪些应用能做什么，并据此填充“默认”应用选项列表。除了终端，其他拟议的意图还包括文件管理器和计算器。</p><p>以上是大致情况；在它出现在 GNOME 中之前还有更多工作要做，因为各个部分需要按正确顺序落地：规范发布、Glib 支持读取那些 .desktop 文件声明，当然还有应用开发者添加这些声明。</p><p>之前解决这个问题的尝试要么停滞不前，要么需要重新思考。这一次进展迅速。</p><p>虽然下周发布的 GNOME 51 不会包含让你选择默认终端的选项，但明年发布的 GNOME 52 可能会。</p><p>如果你对发行版的默认设置满意，为什么要改呢？</p><p>GNOME 以 GNOME Console（又名 kgx）作为其核心终端应用，而 Ptyxis 是我个人最近的首选——不过你没问！</p><p>在 Ubuntu 上有多种方法更改默认终端应用，包括从终端运行命令（这很合适），或者卸载除你想要的那个之外的所有终端。如今终端可以说比以往任何时候都更有用，是时候解决这个问题了。</p></div>
+  <div class="article-body"><p>Linux 7.4 的 Zstd 改进：避免冗余初始化</p><p>2026 年 9 月 13 日上午 10:04 EDT。</p><p>除了 Usama Arif 最近针对 Linux 内核 Zstd 压缩代码中一个重大低效问题提交的 Linux 补丁外，他还有另一个独立的补丁系列，目标是为 Linux 7.4 进一步提升 Zstd 压缩/解压缩性能，方法是避免冗余初始化。</p><p>Usama 最近发布了避免冗余 cstream 和 dstream 初始化的补丁。他注意到存在一次额外的初始化，第一次初始化被丢弃，且从未处理任何数据。有了新补丁后，流初始化被推迟到第一次遍历迭代时进行。</p><p>通过这两个补丁，在 4KB crypto_acomp 基准测试中显示出显著改进。Zstd 压缩速度有单位数提升，解压速度在裸机上提升 13%，在虚拟机中提升 35%：</p><p>这两个补丁本周被纳入加密子系统。由于补丁现已进入加密子系统的开发分支，它们应该会被提交到即将到来的 Linux 7.4 合并窗口。</p><p>Linux 7.3-rc3 发布：“又一个相当大的 RC”</p><p>新的缓存感知调度修复已发布供测试</p><p>AI 生成了大量“丑陋”代码，但发现了主要瓶颈以加速 Linux 编译</p><p>Linux 7.3-rc2 发布，又经历了忙碌的一周</p><p>Linux 7.3-rc2 调度器修复混合 CPU 上缓存感知负载调度不匹配问题</p><p>Linux 7.3-rc2 将更多 kmalloc 调用转换为更优的 kmalloc_obj</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Asahi Linux 现已正式支持 Apple M3 Mac——但有注意事项</p><p>Void Linux 维护者因 AI 政策争议遗弃 100 多个软件包</p><p>Ikey Doherty 计划展示如何“正确”构建现代 Linux 发行版</p><p>神秘的 x86 CPU 已具备 APX、x86S，延续 Intel 未竟的无遗留 x86 之路</p><p>AMD 致力于“将 Rust 深入 GPU 栈”</p><p>Intel 逆转取消其开源字体项目的决定</p><p>Linux 内核计划移除约 55,000 行旧 ARM 平台代码</p><p>AI 生成了大量“丑陋”代码，但发现了主要瓶颈以加速 Linux 编译</p><p>同时享受无广告浏览、</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/default-terminal-gnome-settings" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Zstd-Linux-7.4-Avoid-Redundant" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

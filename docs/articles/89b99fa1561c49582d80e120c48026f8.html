@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GNOME 设置将迎来默认终端选项 — Linux 中文速报</title>
+<title>MAKERphone 2.0：让你亲手打造4G手机，还能用AI“氛围编程”开发应用 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #8b5cf61a; color: #8b5cf6;
-    border: 1px solid #8b5cf630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">桌面环境</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">软件应用</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>GNOME 设置将迎来默认终端选项</h1>
+  <h1>MAKERphone 2.0：让你亲手打造4G手机，还能用AI“氛围编程”开发应用</h1>
 
-  <div class="article-summary">GNOME 正在开发一项新功能，允许用户在系统设置中选择默认终端模拟器。目前 GNOME 设置中无法更改默认终端，因为终端不处理文件类型或 URI 方案，无法像其他应用那样声明能力。开发者 Ignacy Kuchciński 正在推动基于 freedesktop 应用意图规范的新方案，让终端也能注册能力，从而在 GNOME 设置中提供默认终端选择。该功能可能随明年的 GNOME 52 发布。</div>
+  <div class="article-summary">CircuitMess推出MAKERphone 2.0，一款无需焊接的DIY手机套件。它基于ESP32-S3，支持4G LTE通话和短信，配备1.77英寸彩屏、键盘和多种模块。用户可用MicroPython或Arduino C++编程，还能借助AI工具VibeBoy生成应用。套件早鸟价119美元，旨在让用户远离社交媒体，了解手机内部原理。</div>
 
-  <div class="article-body"><p>默认终端选项即将登陆 GNOME 设置</p><p>正如上图所示，开发者 Ignacy Kuchciński 预告，一个选择默认终端的选项即将到来。</p><p>如果你不经常使用命令行，以至于不关心系统默认终端是什么，那么听到目前无法更改它可能会感到惊讶。在“设置 &gt; 应用 &gt; 默认应用”中，你可以选择首选的网页浏览器、电子邮件客户端、图像查看器和其他应用，但无法将终端模拟器设置为系统默认。</p><p>对于开发者来说，缺少这个选项可能很烦人。我安装过一些命令行应用，它们会添加启动器快捷方式，我心想：“太好了，这样我就不用打开终端运行命令了。”但当我点击启动器时，它却打开了一个终端窗口。这可不是我期望的。</p><p>一个合适的、尊重系统且用户可配置的更改默认终端的方式早就该有了。</p><p>为什么还没有这个设置？</p><p>你可能会惊讶地发现这个选项还不存在——目前还没有。</p><p>许多 Linux 桌面只能通过应用在其 .desktop 文件中声明来了解应用能处理什么，即列出 MIME 类型（一组用于文件和数据格式的标准化标签）或用于链接的 URI 方案处理器。</p><p>图像查看器可以说“我打开 image/png 文件”，网页浏览器可以报告“我处理 https://”，电子邮件客户端可以说“我拦截 mailto:”。</p><p>因为 GNOME 知道这些应用能做什么，所以当你想更改默认应用时，它可以显示一个应用列表供你选择。</p><p>终端既不使用文件类型/MIME，也不处理 URI 方案，它们只是启动一个 shell。由于没有什么需要它们“处理”的，也就没有什么需要声明的，因此桌面环境无法整理出一份合适的“默认”应用列表供选择。</p><p>freedesktop 应用意图规范</p><p>MIME 描述数据，而拟议的意图将声明能力，即应用可以说“我有这个功能”。</p><p>注册这些能力后，像 GNOME 这样的 Linux 桌面就能知道哪些应用能做什么，并据此填充“默认”应用选项列表。除了终端，其他拟议的意图还包括文件管理器和计算器。</p><p>以上是大致情况；在它出现在 GNOME 中之前还有更多工作要做，因为各个部分需要按正确顺序落地：规范发布、Glib 支持读取那些 .desktop 文件声明，当然还有应用开发者添加这些声明。</p><p>之前解决这个问题的尝试要么停滞不前，要么需要重新思考。这一次进展迅速。</p><p>虽然下周发布的 GNOME 51 不会包含让你选择默认终端的选项，但明年发布的 GNOME 52 可能会。</p><p>如果你对发行版的默认设置满意，为什么要改呢？</p><p>GNOME 以 GNOME Console（又名 kgx）作为其核心终端应用，而 Ptyxis 是我个人最近的首选——不过你没问！</p><p>在 Ubuntu 上有多种方法更改默认终端应用，包括从终端运行命令（这很合适），或者卸载除你想要的那个之外的所有终端。如今终端可以说比以往任何时候都更有用，是时候解决这个问题了。</p></div>
+  <div class="article-body"><p>MAKERphone 2.0：让你亲手打造4G手机，还能用AI“氛围编程”开发应用</p><p>它基于ESP32-S3，插入真实SIM卡即可进行4G通话和短信，无需焊接即可拼装。你可以编写自己的应用，远离社交媒体。</p><p>我们大多数人每天都带着手机，但很少有人能说清楚手机内部到底是如何运作的。这个认知鸿沟正是CircuitMess试图填补的——或者说，一直在试图填补的。</p><p>由Albert Gajšak创立的CircuitMess，早在2018年就发起了首次MAKERphone众筹活动，这款自己动手组装的手机套件筹集了超过32.4万美元，最终向6000多人发货，名为“MAKERphone”。</p><p>现在，续作来了。MAKERphone 2.0已在Kickstarter上线（合作链接），距离众筹结束还有数周，但已经远超目标。</p><p>其理念与之前相同：你自己组装一部能用的手机，然后学习在它上面编程。这次最大的不同是，你不需要电烙铁。至少对我来说，这是个巨大的解脱，因为我焊接技术很糟糕。</p><p>本文包含合作推广链接。请阅读我们的相关说明。</p><p>📝 MAKERphone 2.0 主要规格</p><p>如你所见，MAKERphone看起来像普通的键盘手机。以下是主要细节：</p><p>- ESP32-S3，双核，4 MB闪存，4 MB PSRAM</p><p>- 4G LTE Cat-1，支持2G回退，Nano SIM</p><p>- 1.77英寸彩色屏幕，160×128分辨率</p><p>- 12键数字键盘，导航摇杆，4个功能键，音量键</p><p>- DAC，扬声器，I²S麦克风，3.5毫米耳机插孔</p><p>- 1000 mAh电池，USB-C充电</p><p>- Wi-Fi，蓝牙，USB</p><p>- UMAX模块化连接器</p><p>- 这次无需焊接</p><p>- MicroPython，Arduino C++，VibeBoy（AI辅助）</p><p>- 早鸟价119美元起，之后169美元</p><p>该套件超级早鸟价为119美元起，之后价格逐步上升，零售价为169美元。</p><p>这是一款DIY小工具，手机到手时是一盒零件和一份组装指南，你把它组装成能通过4G LTE打真实电话、发真实短信的东西。插入SIM卡，它就像一部真正的手机。</p><p>现在4G似乎比常见的5G低一档，但这款设备并非要取代你的智能手机。如果你不打算使用那些联网的社交媒体和应用，其实并不需要5G。我稍后会解释这个概念。</p><p>其核心是ESP32-S3，与无数爱好者开发板中使用的低功耗微控制器属于同一家族。所以，它不会与骁龙或苹果仿生芯片相比或竞争，他们甚至没有假装要这么做。</p><p>初代MAKERphone要求你把整个电路板焊接起来。2.0版本取消了这一要求，如果你从未碰过电烙铁，这大大降低了门槛。CircuitMess表示，它设计为11岁左右的孩子就能组装，所以一个正常的成年人应该能轻松搞定。</p><p>从官方组装视频来看，似乎只是把零件拼在一起。</p><p>它有一个1.77英寸彩色显示屏，一个耳机插孔（是的，2026年还有），以及模块化设计，可以加装额外硬件。更多内容见下文。</p><p>模块、编程和智能手环</p><p>让它不仅仅是一个怀旧套件的部分在于模块系统。MAKERphone 2.0支持扩展模块，改变手机的功能。其中几个模块随盒附赠。</p><p>有一个红外模块，用于控制老式电视；一个摄像头模块；一个2W扬声器；一个LED模块；以及一个温湿度传感器。还有一块洞洞板，可以接入你自己的传感器。</p><p>组装完成后，你就可以编程了。你可以用MicroPython或Arduino C++为它编写代码。CircuitMess还推出了一款AI辅助编程工具，名为VibeBoy，所以“氛围编程”的潮流正式蔓延到了DIY手机领域。</p><p>这并不完全是坏事。不是每个人都能用MicroPython编写代码或制作自定义应用。但大语言模型消除了这一障碍。你有硬件；你使用大语言模型，让它生成你想要的那种软件。这就是Seeed Studio和许多其他爱好者硬件制造商推广自家AI辅助平台的原因。它让硬件变得更有趣。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/default-terminal-gnome-settings" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/makerphone-2-annoucement/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
