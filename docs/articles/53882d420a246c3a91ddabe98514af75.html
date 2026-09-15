@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BSD发布：FreeBSD 14.5 — Linux 中文速报</title>
+<title>AMD 为 EPYC 虚拟机准备 Linux 增强型 SMT 保护 &quot;ESMTP&quot; — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>BSD发布：FreeBSD 14.5</h1>
+  <h1>AMD 为 EPYC 虚拟机准备 Linux 增强型 SMT 保护 &quot;ESMTP&quot;</h1>
 
-  <div class="article-summary">FreeBSD项目发布了14.x系列的新版本14.5，该版本包含多项修复和用户态工具的变化。主要更新包括：rc.firewall脚本支持从文件读取IP地址或子网；sh(1)的默认历史记录大小从100增加到128，符合POSIX.1-2024要求；mt(1)和libmt新增LTO-10和LTO-10P密度代码及磁带规格支持；pwd(1)默认行为从-P改为-L，与POSIX语义一致；ipfw(8)增加了回退机制以兼容FreeBSD 15.0+内核；daemon(8)新增-m选项以指定输出文件模式。</div>
+  <div class="article-summary">AMD 工程师向 Linux 内核邮件列表提交补丁，开始为 EPYC 服务器处理器上的 SEV-SNP 虚拟机启用增强型 SMT 保护（ESMTP）。该功能通过硬件强制确保 SMT 兄弟线程要么处于主机空闲状态，要么运行同一虚拟机的 vCPU，以缓解侧信道攻击风险。ESMTP 需配合 QEMU 和 OVMF 补丁，且因性能开销默认不启用，预计将用于 EPYC 9006 &quot;Venice&quot; 系列。</div>
 
-  <div class="article-body"><p>BSD发布：FreeBSD 14.5 (DistroWatch.com新闻)</p><p>DistroWatch.com由以下赞助商支持</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW周刊 / 评测存档</p><p>访客评分与评论</p><p>项目评分排名</p><p>播客、新闻通讯与评测</p><p>跨发行版软件包比较</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停止维护的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与提示专栏</p><p>常见误解专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>发行版家族树可视化</p><p>常见问题</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>Asahi Linux在M3芯片系统上运行</p><p>Debian将在CERN使用</p><p>Debian 11达到生命周期终点</p><p>Debian就LLM贡献进行投票</p><p>Asahi在多方面取得进展</p><p>新版COSMIC带来更多无障碍功能</p><p>Bazzite更新Deck镜像</p><p>RPM改进锁处理</p><p>Fairphone 6在美国销售</p><p>Kubuntu用户将受益于Plasma长期支持</p><p>易于使用的PBX - 托管或自管理</p><p>Linux电话系统</p><p>免费在线聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程办公应用：iOS或Android</p><p>免费视频会议</p><p>3CX提供的VoIP/PBX教程</p><p>不要措手不及，制定灾难恢复计划！</p><p>必备的在线聊天报告与统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business与3CX WhatsApp API集成</p><p>3CX StartUP的5大杀手级功能</p><p>不要成为“那种人”第1卷：保持复杂凭据</p><p>不要成为“那种人”第2卷：呼叫欺诈</p><p>不要成为“那种人”第3卷：4大安全提示</p><p>不要成为“那种人”第4卷：监控您的实例</p><p>Fluff Linux 2026.08.01</p><p>Red Hat周五五件事 - 2026年9月4日</p><p>PCLinuxOS杂志2026年9月</p><p>Tumbleweed月度更新 - 2026年8月</p><p>Full Circle每周新闻</p><p>最新新闻与更新</p><p>新闻过滤选项</p><p>BSD发布：FreeBSD 14.5</p><p>项目发布了FreeBSD 14.x系列的一个更新。新版本14.5提供了若干修复，并引入了一些用户态工具的变化。</p><p>“rc.firewall脚本现在支持从磁盘文件读取IP地址或子网，用于firewall_allowservices和firewall_trusted列表变量。看起来像绝对路径的元素会逐行读取，跳过注释和空行，每行的第一个单词被视为地址或子网。sh(1)中的默认历史记录大小已从100增加到128，符合POSIX.1-2024的最低要求。mt(1)和libmt中已添加LTO-10和LTO-10P密度代码及磁带规格，从而能够检测和报告新的磁带格式。pwd(1)的默认行为已从-P更改为-L，与POSIX语义保持一致。ipfw(8)二进制文件现在包含一个回退机制，以支持FreeBSD 15.0中引入的新内核接口。当在15.0+内核上运行时，ipfw(8)会自动调用捆绑的ipfw15二进制文件来加载防火墙规则，确保升级过程中的兼容性。daemon(8)工具现在支持-m选项来指定输出文件模式，允许非root日志收集器访问日志文件。”</p><p>更多信息可在FreeBSD-14.5-RELEASE-amd64-disc1.iso中找到。</p><p>近期相关新闻和发布</p><p>BSD发布：FreeBSD 14.5</p><p>BSD发布：FreeBSD 15.1</p><p>BSD发布：FreeBSD 14.4</p><p>BSD发布：FreeBSD 15.0</p><p>开发版发布：FreeBSD 15.0-RC1</p><p>开发版发布：FreeBSD 15.0-BETA1</p><p>FreeBSD是一个类UNIX操作系统，支持i386、amd64、IA-64、arm、MIPS、powerpc、ppc64、PC-98和UltraSPARC平台，基于加州大学伯克利分校的“4.4BSD-Lite”版本，并带有一些“4.4BSD-Lite2”增强。它间接基于William Jolitz将加州大学伯克利分校的“Net/2”移植到i386的版本，即“386BSD”，尽管386BSD的代码已所剩无几。FreeBSD被世界各地的公司、互联网服务提供商、研究人员、计算机专业人士、学生和家庭用户用于他们的工作、教育……</p></div>
+  <div class="article-body"><p>AMD 工程师今日在 Linux 内核邮件列表上发送了补丁，开始为在搭载 SEV-SNP 的 EPYC 服务器处理器上运行的虚拟机启用增强型 SMT 保护（ESMTP），以提升安全性。</p><p>这是 Linux 内核邮件列表上首次出现增强型 SMT 保护。搜索发现，今年早些时候 AMD.com 上发布了一份 ESMTP 白皮书，但并未引起太多关注。鉴于这项启用工作的时间点，增强型 SMT 保护大概是 AMD EPYC 9006 &quot;Venice&quot; 服务器处理器的一项功能。</p><p>虽然 Linux 上已有核心调度等机制来确保一个 CPU 核心及其兄弟线程属于同一虚拟机，但 ESMTP 相当于一种基于硬件的机制，确保 SMT 兄弟线程要么在主机模式下空闲，要么运行客户机自身的 vCPU。其目的是缓解过去几年围绕同时多线程/英特尔超线程出现的潜在侧信道攻击。</p><p>该文档将增强型 SMT 保护总结为：</p><p>“增强型 SMT 保护（ESMTP）允许 SEV-SNP 虚拟机要求：当其某个 vCPU 处于客户机模式时，该物理核心上的每个 SMT 兄弟线程要么在主机模式下空闲，要么运行客户机自身声明为合法兄弟的 vCPU。这缓解了与不可信主机线程或另一客户机共享核心资源的侧信道风险。</p><p>与核心调度不同——核心调度中的共驻留是主机内核策略，通过 cookie 表达——ESMTP 由硬件强制执行。兄弟掩码位于 VMSA 中。当某个 ESMTP vCPU 在该核心上活跃时，主机不被信任在兄弟线程上运行任意内核、用户空间或中断处理工作。</p><p>KVM 和客户机都完全设置 VCPU_SIBLING_MASK，将客户机的每个 vCPU 放入一个组，使其中任意两个可以共驻留。结合 ASID 检查，处于客户机模式的 vCPU 的兄弟线程便始终要么是同一客户机的另一个 vCPU，要么是主机模式下空闲的线程。”</p><p>除了 Linux 内核补丁外，还需要针对 QEMU 和 OVMF 的上游补丁。此 ESMTP 功能仅在启用安全加密虚拟化（SEV-SNP）功能时可用。</p><p>同样值得注意的是，ESMTP 会带来一定的性能开销，因此默认不启用，仅面向那些希望确保更好的 SMT 兄弟线程安全性的用户，例如公共云部署或运行不可信工作负载：</p><p>“ESMTP 是选择性启用的，因为它会带来性能开销，VMRUN 会停顿，直到兄弟线程运行来自可信 vCPU 的工作或处于主机空闲状态。”</p><p>该系列仅包含两个补丁。同样，这大概将成为 AMD EPYC 9006 系列产品线的一部分。</p><p>LLVM 合并对 AMD RMPCHKD、RMPREAD 和 RMPOPT 指令的支持</p><p>Linux 为新的 AMD Zen 6 BTB CTX 隔离安全功能做准备</p><p>AMD 致力于“将 Rust 深入推入 GPU 栈”</p><p>Lemonade 11.9 本地 AI 服务器发布，带来令人兴奋的 AMD ROCm HRX 后端</p><p>Zen 6 客户端 CPPC 的 Linux 变更——硬编码默认值将低功耗核心置于 0.47 倍</p><p>AMD 更新 UALink 补丁，为 Helios 上的 UALoE 准备 Linux 内核</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Asahi Linux 现已正式支持 Apple M3 Mac——但有注意事项</p><p>Void Linux 维护者因 AI 政策争议孤儿化 100 多个软件包</p><p>英特尔逆转取消其开源字体项目的决定</p><p>Myst</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12949" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/AMD-Enhanced-SMT-Protection" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

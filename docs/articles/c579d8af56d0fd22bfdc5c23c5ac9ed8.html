@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BSD发布：FreeBSD 14.5 — Linux 中文速报</title>
+<title>openEuler 与构建亚洲 AI 基础设施的竞赛 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>BSD发布：FreeBSD 14.5</h1>
+  <h1>openEuler 与构建亚洲 AI 基础设施的竞赛</h1>
 
-  <div class="article-summary">FreeBSD项目发布了14.x系列的新版本14.5，该版本包含多项修复和用户态工具的变化。主要更新包括：rc.firewall脚本支持从文件读取IP地址或子网；sh(1)的默认历史记录大小从100增加到128，符合POSIX.1-2024要求；mt(1)和libmt新增LTO-10和LTO-10P密度代码及磁带规格支持；pwd(1)默认行为从-P改为-L，与POSIX语义一致；ipfw(8)增加了回退机制以兼容FreeBSD 15.0+内核；daemon(8)新增-m选项以指定输出文件模式。</div>
+  <div class="article-summary">openEuler 是由开放原子开源基金会孵化和运营的开源项目，正通过本地用户组和行业合作扩展国际协作。其 SuperPoD OS 为基于 UnifiedBus 的超级集群提供引擎、内存、通信、I/O 和虚拟化五大系统服务，声称性能提升 30-50%。openEuler 还向 AgentOS 模式演进，在 24.03 LTS SP4 中内置 AI 助手，并成立了香港用户组。</div>
 
-  <div class="article-body"><p>BSD发布：FreeBSD 14.5 (DistroWatch.com新闻)</p><p>DistroWatch.com由以下赞助商支持</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW周刊 / 评测存档</p><p>访客评分与评论</p><p>项目评分排名</p><p>播客、新闻通讯与评测</p><p>跨发行版软件包比较</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停止维护的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与提示专栏</p><p>常见误解专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>发行版家族树可视化</p><p>常见问题</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>Asahi Linux在M3芯片系统上运行</p><p>Debian将在CERN使用</p><p>Debian 11达到生命周期终点</p><p>Debian就LLM贡献进行投票</p><p>Asahi在多方面取得进展</p><p>新版COSMIC带来更多无障碍功能</p><p>Bazzite更新Deck镜像</p><p>RPM改进锁处理</p><p>Fairphone 6在美国销售</p><p>Kubuntu用户将受益于Plasma长期支持</p><p>易于使用的PBX - 托管或自管理</p><p>Linux电话系统</p><p>免费在线聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程办公应用：iOS或Android</p><p>免费视频会议</p><p>3CX提供的VoIP/PBX教程</p><p>不要措手不及，制定灾难恢复计划！</p><p>必备的在线聊天报告与统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business与3CX WhatsApp API集成</p><p>3CX StartUP的5大杀手级功能</p><p>不要成为“那种人”第1卷：保持复杂凭据</p><p>不要成为“那种人”第2卷：呼叫欺诈</p><p>不要成为“那种人”第3卷：4大安全提示</p><p>不要成为“那种人”第4卷：监控您的实例</p><p>Fluff Linux 2026.08.01</p><p>Red Hat周五五件事 - 2026年9月4日</p><p>PCLinuxOS杂志2026年9月</p><p>Tumbleweed月度更新 - 2026年8月</p><p>Full Circle每周新闻</p><p>最新新闻与更新</p><p>新闻过滤选项</p><p>BSD发布：FreeBSD 14.5</p><p>项目发布了FreeBSD 14.x系列的一个更新。新版本14.5提供了若干修复，并引入了一些用户态工具的变化。</p><p>“rc.firewall脚本现在支持从磁盘文件读取IP地址或子网，用于firewall_allowservices和firewall_trusted列表变量。看起来像绝对路径的元素会逐行读取，跳过注释和空行，每行的第一个单词被视为地址或子网。sh(1)中的默认历史记录大小已从100增加到128，符合POSIX.1-2024的最低要求。mt(1)和libmt中已添加LTO-10和LTO-10P密度代码及磁带规格，从而能够检测和报告新的磁带格式。pwd(1)的默认行为已从-P更改为-L，与POSIX语义保持一致。ipfw(8)二进制文件现在包含一个回退机制，以支持FreeBSD 15.0中引入的新内核接口。当在15.0+内核上运行时，ipfw(8)会自动调用捆绑的ipfw15二进制文件来加载防火墙规则，确保升级过程中的兼容性。daemon(8)工具现在支持-m选项来指定输出文件模式，允许非root日志收集器访问日志文件。”</p><p>更多信息可在FreeBSD-14.5-RELEASE-amd64-disc1.iso中找到。</p><p>近期相关新闻和发布</p><p>BSD发布：FreeBSD 14.5</p><p>BSD发布：FreeBSD 15.1</p><p>BSD发布：FreeBSD 14.4</p><p>BSD发布：FreeBSD 15.0</p><p>开发版发布：FreeBSD 15.0-RC1</p><p>开发版发布：FreeBSD 15.0-BETA1</p><p>FreeBSD是一个类UNIX操作系统，支持i386、amd64、IA-64、arm、MIPS、powerpc、ppc64、PC-98和UltraSPARC平台，基于加州大学伯克利分校的“4.4BSD-Lite”版本，并带有一些“4.4BSD-Lite2”增强。它间接基于William Jolitz将加州大学伯克利分校的“Net/2”移植到i386的版本，即“386BSD”，尽管386BSD的代码已所剩无几。FreeBSD被世界各地的公司、互联网服务提供商、研究人员、计算机专业人士、学生和家庭用户用于他们的工作、教育……</p></div>
+  <div class="article-body"><p>openEuler 与构建亚洲 AI 基础设施的竞赛</p><p>openEuler 是由开放原子开源基金会孵化和运营的开源项目。该社区正通过本地用户组、行业合作伙伴关系以及参与全球开源活动来扩展国际合作。</p><p>谈到开源和 AI，我们几乎总是把目光投向西方。虽然美国发生了很多事情，欧洲也有一些，但东方也没有落后。</p><p>在最近结束的会议上，多家初创企业和公司齐聚一堂，展示他们的创新并分享他们正在构建的东西。</p><p>其中，openEuler 因其对开源 AI 的关注而引起了我们的注意。</p><p>展示了其 SuperPoD OS，该系统扩展了对基于 UnifiedBus 的 SuperPoD 计算系统的操作系统支持。</p><p>可以把 SuperPoD 看作是一组强大的计算机集群，它们需要像一台巨型机器一样运行。运行 AI 工作负载需要计算能力，而在数百台这样的机器上运行则非常混乱，因为它们需要共享内存、快速传递数据，并且不能相互冲突。</p><p>是 openEuler 生态系统中的开源软件层，它使这些机器之间的协调真正发挥作用。它为基于 UnifiedBus 的 SuperPoD 提供五个集群级系统服务：引擎、内存、通信、I/O 和虚拟化。</p><p>引擎在整个集群中池化内存和 DPU 资源，并动态调度它们。它还处理自动故障转移，以便在节点宕机时系统仍能继续运行。</p><p>内存组件允许基于 UnifiedBus 的 SuperPoD 内的机器使用统一内存编程来共享和池化内存，这意味着软件可以将分布式内存视为单个可寻址空间。</p><p>通信组件通过 UnifiedBus 提供高性能网络，同时保持与标准 Socket 和 Verbs 接口兼容，因此现有应用程序无需重写即可受益。</p><p>I/O 服务在高层处理全局数据读写缓存，这对于像 AI 推理这样反复访问大型共享数据集的工作负载很重要。</p><p>虚拟化组件涵盖虚拟化池化，决定实时迁移策略（何时以及如何将运行中的虚拟机移动到另一台机器），支持灾难恢复，并提高虚拟机和容器之间的通信效率。</p><p>这五项服务共同为 SuperPoD 集群提供了像单个组织良好的系统一样运行所需的协调能力，据称比传统架构性能提升 30-50%。</p><p>据 openEuler 称，UB Service Core 可以利用点对点 UnifiedBus 互连架构将应用程序性能提高 30-50%。</p><p>这个 SuperPod 或 UB Service Core 在 openEuler 旗下完全开源。</p><p>openEuler 正在向 AgentOS 模式演进。在 openEuler 24.03 LTS SP4 中，DevStation（openEuler 的桌面变体）包含 openEuler Intelligence，这是一个桌面 AI 助手，使用代理运行时和基于 MCP 的工具来支持开发和系统操作。</p><p>如今，操作系统中预构建的代理利用并不罕见。openEuler 24.03 的内置 AI 代理可用于控制 Linux 系统。</p><p>因此，无需手动通过鼠标点击来操作，你可以直接让代理调暗亮度、降低音量或更改壁纸。内置 AI 代理具有自定义技能，可以控制 openEuler 的 UKUI 桌面环境中的系统设置。</p><p>这项工作仍在进行中。但方向是明确的。AI 代理应该很快就能让你控制系统，而不是手动操作。</p><p>扩展为基于社区的生态系统</p><p>openEuler 已启动 openEuler 香港用户组，旨在汇聚香港的开发者、研究人员和组织，共同联系、分享经验并探索开源创新。</p><p>openEuler 是由 OpenA 孵化和运营的开源项目</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12949" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/openeuler-ai-race-leap-fest/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

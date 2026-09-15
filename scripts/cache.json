@@ -10965,5 +10965,148 @@
     "title_zh": "GNOME Shotwell 33 照片管理器发布，带来 GTK4 移植",
     "summary_zh": "GNOME Shotwell 照片管理器发布 Shotwell 33，这是自 2023 年 4 月 0.32 版以来的重大更新，最显著的变化是从 GTK3 移植到 GTK4。新版本还支持在查看器中打开 URI、重做打印功能、修复内存泄漏和潜在崩溃，并包含大量错误修复。该版本在 GNOME 51 桌面环境发布前一周推出。",
     "fulltext_zh": "GNOME Shotwell 33 照片管理器发布，带来 GTK4 移植\n\n距离上次听到 GNOME 的 Shotwell 照片管理器项目的消息已经过去相当长一段时间了，但今天发布的 Shotwell 33 带来了期待已久的 GTK4 移植。\n\n这是一次重大更新，Shotwell 0.32 于 2023 年 4 月发布，此后只有一些点版本发布，同时为这次重大的 Shotwell 33 发布做准备。\n\nShotwell 33 最显著的变化是从 GTK3 迁移到 GTK4 作为其用户界面。Shotwell 33 还增加了在查看器中打开 URI 的支持，重做了打印功能，解决了各种内存泄漏和潜在崩溃问题，以及贯穿始终的各种其他小改进。Shotwell 33 还包含许多错误修复。\n\nShotwell 33 的发布是在下周 GNOME 51 桌面版发布之前。\n\n对 Shotwell 33.0 照片管理器感兴趣的人可以在以下地址找到它\n\nGTK 4.24 发布，带来更好的分数缩放、更精确的 GDK 帧时钟\nGitte 作为 GNOME 的 Git 客户端继续成熟得相当不错\nGNOME 51 增加对自定义指针加速配置文件的支持\nGNOME 利益相关者讨论解决重大技术变更的 RFC 流程\nGNOME Mutter 51.rc 增加跨 GPU 缓冲区扫描输出支持，以及其他最后时刻的工作\nGNOME 非常激动人心的一周：从 Flatpak 资金到重置恢复以及应用\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动程序和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他\n\nAsahi Linux 现在正式支持 Apple M3 Mac——但有一些注意事项\nVoid Linux 维护者因 AI 政策争议孤儿化 100 多个软件包\nIkey Doherty 计划展示如何“正确”构建现代 Linux 发行版\n神秘的 x86 CPU 已经拥有 APX，x86S 是 Intel 为无遗留 x86 留下的地方\nAMD 致力于“将 Rust 深入推入 GPU 栈”\nIntel 逆转取消其开源字体项目的决定\nLinux 内核计划移除约 55k 行旧 ARM 平台代码\nAI 制造了大量“丑陋”代码，但发现了更快 Linux 编译的主要瓶颈\n\n同时拥有无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "eecbe83322c1edb3f53b2d6e8729cc99": {
+    "id": "eecbe83322c1edb3f53b2d6e8729cc99",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/firefox-156-released",
+    "title_en": "Firefox 156 reduces CPU usage when viewing JPGs",
+    "summary_en": "Firefox 156 is out with faster start-up times for its built-in PDF viewer and lower CPU usage when viewing large JPEG images. As you browse the web you (pretty much always) see images smaller than their native resolution. To wit, if I embed a 4K JPEG in this post, for example, you don&#8217;t see it at full size: it&#8217;s downscaled to fit on the page. Same amount of pixel data, but squeezed by CSS. In Firefox 156, the browser now uses libjpeg-turbo&#8217;s IDCT scaling to reduce images during",
+    "pub_date": "Mon, 14 Sep 2026 22:13:22 +0000",
+    "title_zh": "Firefox 156 降低了查看 JPG 时的 CPU 占用",
+    "summary_zh": "Firefox 156 发布，内置 PDF 阅读器启动速度提升最高 45%，查看大尺寸 JPEG 图片时内存占用最多减少 20 倍、解码速度提升一倍。地址栏赞助建议在法国、德国和意大利上线。此外修复了富文本编辑器拖拽图片、MP4 中 FLAC 音频播放、画中画字幕、书签拖拽、DoH 下 HTTP 加载及内置 VPN 导致断网等问题，并包含安全补丁。",
+    "fulltext_zh": "Firefox 156 发布，其内置 PDF 阅读器启动更快，查看大尺寸 JPEG 图片时 CPU 占用更低。\n\n浏览网页时，你（几乎总是）看到的图片都小于其原始分辨率。也就是说，如果我在这篇文章中嵌入一张 4K JPEG，你看到的并不是完整尺寸：它会被缩小以适应页面。像素数据量相同，但被 CSS 压缩了。\n\n在 Firefox 156 中，浏览器现在使用缩放技术在解码期间缩小图片，而不是先将完整尺寸的图片加载到内存中再缩小。\n\n来自该 bug 报告的基准测试显示，加载超大图片时内存占用最多减少 20 倍，解码速度最多提升一倍。由于这些速度本来就已经很快，用户不会察觉到差异。但在幕后，它更加高效。\n\nFirefox 内置 PDF 阅读器在此版本中启动速度最多提升 45%。浏览器现在会更早加载后台 PDF.js worker，而不是仅在需要时才启动它。\n\n地址栏中的赞助建议已在法国、德国和意大利面向用户上线（等等）。这些建议已在其他一些地区提供。不想要它们？可通过“设置 > 搜索 > Firefox Suggest > 来自赞助商的建议”禁用。\n\n除此之外，本版本其余内容主要是错误修复——一如既往地有价值且受欢迎。\n\n在富文本编辑器中拖动图片时，图片常被替换为文本\n\nMP4 中的 FLAC 音频在部分网站上无法播放\n\n如果在画中画打开后才启用字幕，字幕不会加载\n\n书签作为一组拖动时会被移出所在文件夹\n\n启用 DNS over HTTPS 时，HTTP 网站无法加载\n\n在 v155 中困扰我的一个问题已修复：如果启用内置免费 VPN，浏览器会失去所有网络连接。\n\n一组新的安全补丁\n\n这是 Mozilla 转向每月两次发布节奏以来的第二个版本。Firefox 157 将在两周后发布，如果一切按计划进行，将使 Firefox 新的 Nova 重新设计成为默认界面。\n\n升级到 Firefox 156\n\nFirefox 156 从今天（9 月 14 日星期一）起可从（如果你愿意直接下载）下载，并将于 9 月 15 日作为更新推送。\n\n现有用户？在 Windows 和 macOS 上，或使用 Linux Firefox 二进制版，你可以在应用内更新。否则，请等待更新通过软件源、软件管理器或应用商店推送。\n\nUbuntu 用户会收到此更新——以及所有其他更新——作为自动后台更新。无需四处寻找，当更新准备好时，通知会提示你重启以安装更新。"
+  },
+  "96598b538b0f054785824f21456a8363": {
+    "id": "96598b538b0f054785824f21456a8363",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/conflux-linux-icons",
+    "title_en": "Conflux icon set gives a modern look to Linux desktops",
+    "summary_en": "Conflux is a new Linux icon set that aims to be both beautiful but neutral – I think it succeeds at both. The author of Conflux said they struggled to find a &#8220;modern-looking&#8221; icon pack for their desktop, deigning many as overly stylistic, outdated or, in some cases, poorly designed. Another impetus to solve was the way un-themed icons look. &#8220;Conflux should blend seamlessly into your system&#8221;, reads the Github page, &#8220;so that you don&#8217;t even notice you&#8217;re us",
+    "pub_date": "Mon, 14 Sep 2026 15:29:48 +0000",
+    "title_zh": "Conflux 图标集为 Linux 桌面带来现代外观",
+    "summary_zh": "Conflux 是一款新的 Linux 图标集，旨在兼具美观与中性风格。它不强制固定形状，能更好地兼容未覆盖的第三方图标，避免视觉突兀。该图标集借鉴了其他流行图标集的元素，并持续更新覆盖范围。用户可通过命令行安装，并在 Ubuntu 上编辑 index.theme 文件以继承 Yaru、Adwaita 等主题。",
+    "fulltext_zh": "Conflux 图标集为 Linux 桌面带来现代外观 - OMG! Ubuntu\n\n这是一个新的 Linux 图标集，旨在既美观又中性——我认为它两者都做到了。\n\n许多人想为桌面找到一款“现代外观”的图标包，认为很多图标包过于风格化、过时，或者在某些情况下设计不佳。另一个要解决的动力是未主题化图标的外观。\n\n“Conflux 应该无缝融入你的系统”，\nGithub 页面写道，\n“以至于你甚至不会注意到你在使用图标主题。”\n\n我们中很少有人使用相同的应用集，也很少有图标集能覆盖所有内容（尤其是因为新应用不断出现）。当应用未被覆盖时，独特的设计往往更容易被破坏。持续更新有帮助——\n不断扩展其覆盖范围。\n\n有些图标集，如 GNOME 的 Adwaita 图标和 Ubuntu 的\n，有意不覆盖所有内容，也不改变第三方或品牌图标的外观（Yaru 做了一些，比如\n，但通常得到上游项目的许可）。\n\n相比之下，Conflux 旨在平衡好看与不显得半成品。它不强制固定形状或特定类型，因此该包未替换的任何应用不会显得那么突兀。\n\n它也有点像“精选集”包。许多图标取自或受其他流行 Linux 图标集启发，包括\n\n维护者也没有为一系列知名软件捆绑图标，因为他们认为这些软件本身设计良好，或者广为人知——例如 Firefox。\n\n但作为一个“多变形状”的图标集，未主题化的图标在视觉上与已主题化的图标保持兼容。\n\n我最近读到的一条评论指出，尽管我们拥有高密度显示屏，能够呈现比以往更多的颜色，但现代 UI 设计却没有什么有趣的东西可看：扁平统一的形状、块状颜色、简单化的设计\n\nConflux 正试图打破这一趋势。\n\n在 Ubuntu 上安装 Conflux 图标\n\nConflux 的文件夹图标，在 Ubuntu 上展示，令人愉悦\n\n你可以像安装大多数图标一样在 Ubuntu 上安装 Conflux：即，将解压的主题文件夹放入隐藏的 ~/.local/share/icons 目录。\n\n已安装，你可以通过命令行完成所有操作：\nmkdir -p ~/.local/share/icons\ncd ~/.local/share/icons\ngit clone --depth=1 https://github.com/MoshiurRahmanAdib/Conflux-Icon-Theme.git Conflux\n\n在 Ubuntu 上，你需要编辑\n，假设你不希望未主题化的图标依赖 Adwaita。\n\n在系统文本编辑器中打开 index.theme 文件（或在终端中使用\n）并编辑第 4 行如下：\nInherits=Yaru,Adwaita,breeze,hicolor\n\n最后，要在 Ubuntu 上更改图标主题（假设你使用 GNOME Shell），安装\n\n尽管苹果的 Liquid Design 受到诸多批评，但修订后的图标语言在多年越来越扁平的仿制图案之后，\n回归了渐变和细节。"
+  },
+  "c579d8af56d0fd22bfdc5c23c5ac9ed8": {
+    "id": "c579d8af56d0fd22bfdc5c23c5ac9ed8",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/openeuler-ai-race-leap-fest/",
+    "title_en": "openEuler and the Race to Build Asia's AI Infrastructure",
+    "summary_en": "openEuler is an open-source project incubated and operated by the OpenAtom Foundation. The community is expanding international collaboration through local user groups, industry partnerships, and participation in global open-source events.",
+    "pub_date": "Mon, 14 Sep 2026 11:48:37 GMT",
+    "title_zh": "openEuler 与构建亚洲 AI 基础设施的竞赛",
+    "summary_zh": "openEuler 是由开放原子开源基金会孵化和运营的开源项目，正通过本地用户组和行业合作扩展国际协作。其 SuperPoD OS 为基于 UnifiedBus 的超级集群提供引擎、内存、通信、I/O 和虚拟化五大系统服务，声称性能提升 30-50%。openEuler 还向 AgentOS 模式演进，在 24.03 LTS SP4 中内置 AI 助手，并成立了香港用户组。",
+    "fulltext_zh": "openEuler 与构建亚洲 AI 基础设施的竞赛\n\nopenEuler 是由开放原子开源基金会孵化和运营的开源项目。该社区正通过本地用户组、行业合作伙伴关系以及参与全球开源活动来扩展国际合作。\n\n谈到开源和 AI，我们几乎总是把目光投向西方。虽然美国发生了很多事情，欧洲也有一些，但东方也没有落后。\n\n在最近结束的会议上，多家初创企业和公司齐聚一堂，展示他们的创新并分享他们正在构建的东西。\n\n其中，openEuler 因其对开源 AI 的关注而引起了我们的注意。\n\n展示了其 SuperPoD OS，该系统扩展了对基于 UnifiedBus 的 SuperPoD 计算系统的操作系统支持。\n\n可以把 SuperPoD 看作是一组强大的计算机集群，它们需要像一台巨型机器一样运行。运行 AI 工作负载需要计算能力，而在数百台这样的机器上运行则非常混乱，因为它们需要共享内存、快速传递数据，并且不能相互冲突。\n\n是 openEuler 生态系统中的开源软件层，它使这些机器之间的协调真正发挥作用。它为基于 UnifiedBus 的 SuperPoD 提供五个集群级系统服务：引擎、内存、通信、I/O 和虚拟化。\n\n引擎在整个集群中池化内存和 DPU 资源，并动态调度它们。它还处理自动故障转移，以便在节点宕机时系统仍能继续运行。\n\n内存组件允许基于 UnifiedBus 的 SuperPoD 内的机器使用统一内存编程来共享和池化内存，这意味着软件可以将分布式内存视为单个可寻址空间。\n\n通信组件通过 UnifiedBus 提供高性能网络，同时保持与标准 Socket 和 Verbs 接口兼容，因此现有应用程序无需重写即可受益。\n\nI/O 服务在高层处理全局数据读写缓存，这对于像 AI 推理这样反复访问大型共享数据集的工作负载很重要。\n\n虚拟化组件涵盖虚拟化池化，决定实时迁移策略（何时以及如何将运行中的虚拟机移动到另一台机器），支持灾难恢复，并提高虚拟机和容器之间的通信效率。\n\n这五项服务共同为 SuperPoD 集群提供了像单个组织良好的系统一样运行所需的协调能力，据称比传统架构性能提升 30-50%。\n\n据 openEuler 称，UB Service Core 可以利用点对点 UnifiedBus 互连架构将应用程序性能提高 30-50%。\n\n这个 SuperPod 或 UB Service Core 在 openEuler 旗下完全开源。\n\nopenEuler 正在向 AgentOS 模式演进。在 openEuler 24.03 LTS SP4 中，DevStation（openEuler 的桌面变体）包含 openEuler Intelligence，这是一个桌面 AI 助手，使用代理运行时和基于 MCP 的工具来支持开发和系统操作。\n\n如今，操作系统中预构建的代理利用并不罕见。openEuler 24.03 的内置 AI 代理可用于控制 Linux 系统。\n\n因此，无需手动通过鼠标点击来操作，你可以直接让代理调暗亮度、降低音量或更改壁纸。内置 AI 代理具有自定义技能，可以控制 openEuler 的 UKUI 桌面环境中的系统设置。\n\n这项工作仍在进行中。但方向是明确的。AI 代理应该很快就能让你控制系统，而不是手动操作。\n\n扩展为基于社区的生态系统\n\nopenEuler 已启动 openEuler 香港用户组，旨在汇聚香港的开发者、研究人员和组织，共同联系、分享经验并探索开源创新。\n\nopenEuler 是由 OpenA 孵化和运营的开源项目"
+  },
+  "53882d420a246c3a91ddabe98514af75": {
+    "id": "53882d420a246c3a91ddabe98514af75",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-Enhanced-SMT-Protection",
+    "title_en": "AMD Preparing Linux For Enhanced SMT Protection \"ESMTP\" For EPYC VMs",
+    "summary_en": "AMD engineers today sent out patches on the Linux kernel mailing list for beginning to enable Enhanced SMT Protection \"ESMTP\" for better security with virtual machines running atop EPYC server processors with SEV-SNP...",
+    "pub_date": "Mon, 14 Sep 2026 14:03:38 -0400",
+    "title_zh": "AMD 为 EPYC 虚拟机准备 Linux 增强型 SMT 保护 \"ESMTP\"",
+    "summary_zh": "AMD 工程师向 Linux 内核邮件列表提交补丁，开始为 EPYC 服务器处理器上的 SEV-SNP 虚拟机启用增强型 SMT 保护（ESMTP）。该功能通过硬件强制确保 SMT 兄弟线程要么处于主机空闲状态，要么运行同一虚拟机的 vCPU，以缓解侧信道攻击风险。ESMTP 需配合 QEMU 和 OVMF 补丁，且因性能开销默认不启用，预计将用于 EPYC 9006 \"Venice\" 系列。",
+    "fulltext_zh": "AMD 工程师今日在 Linux 内核邮件列表上发送了补丁，开始为在搭载 SEV-SNP 的 EPYC 服务器处理器上运行的虚拟机启用增强型 SMT 保护（ESMTP），以提升安全性。\n\n这是 Linux 内核邮件列表上首次出现增强型 SMT 保护。搜索发现，今年早些时候 AMD.com 上发布了一份 ESMTP 白皮书，但并未引起太多关注。鉴于这项启用工作的时间点，增强型 SMT 保护大概是 AMD EPYC 9006 \"Venice\" 服务器处理器的一项功能。\n\n虽然 Linux 上已有核心调度等机制来确保一个 CPU 核心及其兄弟线程属于同一虚拟机，但 ESMTP 相当于一种基于硬件的机制，确保 SMT 兄弟线程要么在主机模式下空闲，要么运行客户机自身的 vCPU。其目的是缓解过去几年围绕同时多线程/英特尔超线程出现的潜在侧信道攻击。\n\n该文档将增强型 SMT 保护总结为：\n\n“增强型 SMT 保护（ESMTP）允许 SEV-SNP 虚拟机要求：当其某个 vCPU 处于客户机模式时，该物理核心上的每个 SMT 兄弟线程要么在主机模式下空闲，要么运行客户机自身声明为合法兄弟的 vCPU。这缓解了与不可信主机线程或另一客户机共享核心资源的侧信道风险。\n\n与核心调度不同——核心调度中的共驻留是主机内核策略，通过 cookie 表达——ESMTP 由硬件强制执行。兄弟掩码位于 VMSA 中。当某个 ESMTP vCPU 在该核心上活跃时，主机不被信任在兄弟线程上运行任意内核、用户空间或中断处理工作。\n\nKVM 和客户机都完全设置 VCPU_SIBLING_MASK，将客户机的每个 vCPU 放入一个组，使其中任意两个可以共驻留。结合 ASID 检查，处于客户机模式的 vCPU 的兄弟线程便始终要么是同一客户机的另一个 vCPU，要么是主机模式下空闲的线程。”\n\n除了 Linux 内核补丁外，还需要针对 QEMU 和 OVMF 的上游补丁。此 ESMTP 功能仅在启用安全加密虚拟化（SEV-SNP）功能时可用。\n\n同样值得注意的是，ESMTP 会带来一定的性能开销，因此默认不启用，仅面向那些希望确保更好的 SMT 兄弟线程安全性的用户，例如公共云部署或运行不可信工作负载：\n\n“ESMTP 是选择性启用的，因为它会带来性能开销，VMRUN 会停顿，直到兄弟线程运行来自可信 vCPU 的工作或处于主机空闲状态。”\n\n该系列仅包含两个补丁。同样，这大概将成为 AMD EPYC 9006 系列产品线的一部分。\n\nLLVM 合并对 AMD RMPCHKD、RMPREAD 和 RMPOPT 指令的支持\nLinux 为新的 AMD Zen 6 BTB CTX 隔离安全功能做准备\nAMD 致力于“将 Rust 深入推入 GPU 栈”\nLemonade 11.9 本地 AI 服务器发布，带来令人兴奋的 AMD ROCm HRX 后端\nZen 6 客户端 CPPC 的 Linux 变更——硬编码默认值将低功耗核心置于 0.47 倍\nAMD 更新 UALink 补丁，为 Helios 上的 UALoE 准备 Linux 内核\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nAsahi Linux 现已正式支持 Apple M3 Mac——但有注意事项\nVoid Linux 维护者因 AI 政策争议孤儿化 100 多个软件包\n英特尔逆转取消其开源字体项目的决定\nMyst"
+  },
+  "3b503fc391b18a2cc07897501cf7d216": {
+    "id": "3b503fc391b18a2cc07897501cf7d216",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/GNU-Coreutils-9.12",
+    "title_en": "GNU Coreutils 9.12 Released With Performance Optimizations, New uname Option",
+    "summary_en": "GNU Coreutils 9.12 released today with a mix of fixes, some new options, and various performance improvements to these widely-used set of core system utilities...",
+    "pub_date": "Mon, 14 Sep 2026 13:45:05 -0400",
+    "title_zh": "GNU Coreutils 9.12 发布：性能优化，新增 uname 选项",
+    "summary_zh": "GNU Coreutils 9.12 正式发布，带来多项性能优化与功能改进。新版本修复了 chcon、chgrp、chmod、chown、du 和 ls 在使用递归选项时因并行删除文件而失败的长期问题；stat 和 tail 支持新选项；uname 新增 -A 和 --all-labeled 选项；cut -w 吞吐量提升最高 4 倍，uniq -c 提速最高 2.5 倍；sort 在处理管道等未知大小输入时能更好地利用内存和并行操作；cp、install 和 mv 在 --reflink=auto 失败时回退到标准复制；mv 在复制扩展属性失败时发出警告。此外还修复了 factor 的缓冲区过度读取及 Solaris 相关问题。",
+    "fulltext_zh": "GNU Coreutils 9.12 于今日发布，带来了一系列修复、一些新选项以及多项性能改进，这些工具是广泛使用的核心系统实用程序集。\n\n首先，GNU Coreutils 9.12 修复了一个长期存在的 bug：当使用递归选项“-R”遍历目录层次结构，并且文件被并行删除时，chcon、chgrp、chmod、chown、du 和 ls 会失败。\n\n在 Coreutils 9.12 中，stat 和 tail 命令支持新的选项。\n\nuname 命令还新增了“-A”和“--all-labeled”选项，用于标记所有输出并每行显示一项。\n\n在新版本中，“cut -w”在典型输入下运行效率更高，吞吐量最高可提升 4 倍。另一项优化是“uniq -c”，在具有无锁 stdio 函数的系统上运行速度最高可提升 2.5 倍。sort 命令在从管道等未知大小的输入读取时，也能更好地利用可用内存和并行操作。\n\ncp、install 和 mv 命令现在会在“--reflink=auto”因各种错误而失败时回退到标准复制，例如在 XFS 上，如果克隆操作耗尽了分配组中的元数据空间。\n\nmv 命令现在还会在复制文件的扩展属性失败时发出警告，例如文件系统不支持扩展属性的情况。\n\n此外还有其他修复，例如避免 factor 可能出现的缓冲区过度读取、各种 Solaris 特有的 bug 以及其他修复。\n\nGNU Coreutils 9.12 可在其官网获取。"
+  },
+  "8e6751bdc34a6bd0d5efcd46723c0a95": {
+    "id": "8e6751bdc34a6bd0d5efcd46723c0a95",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Valve-Steam-Frame-1059",
+    "title_en": "Valve's Steam Frame Now Available At $1059+ USD",
+    "summary_en": "Valve just announced their long-awaited Steam Frame headset is now available...",
+    "pub_date": "Mon, 14 Sep 2026 13:05:37 -0400",
+    "title_zh": "Valve 的 Steam Frame 现已发售，售价 1059 美元起",
+    "summary_zh": "Valve 宣布其备受期待的 Steam Frame 头显正式发售。256GB 版本售价 1059 美元，1TB 版本售价 1299 美元。该设备搭载高通骁龙 8 芯片，包含无线 VR 头显和控制器，并附赠《半条命：爱莉克斯》，目前已有超过 100 款游戏通过 Steam Frame 独立验证。购买需通过预订系统进行，以限制转售。",
+    "fulltext_zh": "Valve 的 Steam Frame 现已发售，售价 1059 美元起\n\n2026 年 9 月 14 日 下午 01:05 EDT。\n\nValve 刚刚宣布，他们期待已久的 Steam Frame 头显现已发售。\n\nSteam Frame 256GB 版本首发价为 1059 美元，而 Steam Frame 1TB 型号零售价为 1299 美元。\n\nSteam Frame 256GB：1,059 美元 / 1,529 加元 / 1,049 欧元 / 889 英镑 / 1,609 澳元 / 4,539 波兰兹罗提\n\nSteam Frame 1TB：1,299 美元 / 1,859 加元 / 1,279 欧元 / 1,089 英镑 / 1,969 澳元 / 5,549 波兰兹罗提\n\nSteam Frame 包含无线 VR 头显和控制器。购买时附赠《半条命：爱莉克斯》，并且目前已有超过 100 款游戏通过 Steam Frame 独立验证。\n\nSteam Frame 搭载高通骁龙 8 SoC。\n\n订购 Steam Frame 需通过其预订系统进行，以帮助限制转售者。有关 Steam Frame 供货情况的更多详细信息，请访问\n\nSteam 客户端测试版改进大屏幕模式，带来多项 Linux 增强\n\nSteam 在 Linux 上的份额 8 月跌破 4%\n\nSteamOS 3.9 预览版迁移至 Linux 7.2、KDE Plasma 6.7 桌面\n\nDXVK 3.1 发布，带来 DXGI 增量呈现、D3D11 缓冲区渲染目标\n\nProton 11.0-2 通过 Steam Play / Linux 游戏启用更多游戏\n\nLinux 7.3 将修复原版 Steam 控制器原生驱动中长期存在的缺陷\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nAsahi Linux 现已正式支持 Apple M3 Mac——但附带条件\n\nVoid Linux 维护者因 AI 政策争议弃养 100 多个软件包\n\nIntel 逆转取消其开源字体项目的决定\n\n神秘的 x86 CPU 已具备 APX、x86S，接续 Intel 在无传统 x86 上的未竟事业\n\nLinux 内核计划移除约 5.5 万行旧 ARM 平台代码\n\nAI 生成了大量“丑陋”代码，但发现了加快 Linux 编译的主要瓶颈\n\nSteam 客户端测试版改进大屏幕模式，带来多项 Linux 增强\n\n补丁已就绪，AMDGPU HDMI 2.1 将在 Linux 7.4 中默认启用，支持 FreeSync、VRR 和 ALLM\n\n同时享受无广告浏览，\n\n单页文章视图\n\n法律免责声明、隐私政策、Cookie\n\n版权所有 © 2004 - 2026，\n\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "9cf550b16b7e7dbf789327ac213ba86a": {
+    "id": "9cf550b16b7e7dbf789327ac213ba86a",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Rustls-0.23.45-Released",
+    "title_en": "Rustls 0.23.45 Released To Fix Two Year Old Security Issue",
+    "summary_en": "While the Rustls modern TLS library is written in the Rust programming language with a focus on memory safety, as we've seen out of other Rust project re-implementations in the past, the new implementations can lead to other security bugs of their own. Out today is Rustls 0.23.45 to fix a security issue introduced back in 2024 with Rustls while the likes of OpenSSL, BoringSSL, and others are unaffected...",
+    "pub_date": "Mon, 14 Sep 2026 11:35:11 -0400",
+    "title_zh": "Rustls 0.23.45 发布，修复存在两年的安全问题",
+    "summary_zh": "Rustls 0.23.45 发布，修复了一个自 2024 年 9 月 v0.23.13 起存在的 TLS 1.3 安全漏洞。该漏洞允许在加密级别边界错误地接受握手消息，可能被中间人攻击者利用注入明文消息。问题源于 Rustls 的 TLS 1.3 实现偏离 RFC 8446 规范，OpenSSL、BoringSSL 等不受影响。",
+    "fulltext_zh": "Rustls 0.23.45 发布，修复存在两年的安全问题\n2026 年 9 月 14 日 11:35 EDT。\n尽管 Rustls 这一现代 TLS 库是用 Rust 编程语言编写的，并专注于内存安全，但正如我们过去在其他 Rust 项目重新实现中所见，新的实现可能带来自身的安全缺陷。今日发布的 Rustls 0.23.45 修复了一个 2024 年引入的 Rustls 安全问题，而 OpenSSL、BoringSSL 等则不受影响。\nRustls 0.23.45 的发布旨在修复一个错误：TLS 1.3 握手消息被错误地跨加密级别边界接受。现已公开的说明指出，这种对 TLS 1.3 握手消息跨加密级别边界的错误处理，可能导致路径上的攻击者注入明文消息，并被 Rustls 接受。归根结底，这源于 Rustls 的 TLS 1.3 实现与 RFC 8446 相比不符合规范。\n今日的 Rustls 0.23.45 说明：\n“当 TLS 1.3 握手消息在同一记录中跟随密钥更改消息之后发送时，Rustls 会在错误的加密级别接受这些消息。握手记录仍经过认证，因此网络位置攻击者无法利用此漏洞更改或完成握手；实际影响是，对端可以发送本应加密的明文握手消息，而 rustls 不会拒绝该连接。”\n该问题类似于 Go 的漏洞。Rustls 代码中的问题已于昨日修复，现通过 v0.23.45 提供。该问题自 2024 年 9 月发布的 v0.23.13 起就存在于 Rustls 中。\nMold 高速链接器正用 Rust 重写，希望成为 Linux 上的默认链接器\nGit 2.56-rc0 发布，更新贡献指南，改进 Swift 支持\nOpenSSL 4.1 Alpha 1 发布，带来 DTLS 1.3、GREASE 及更多 AVX-512 优化\nRustls 0.23.44 发布，默认启用 ML-DSA 证书\nRust Coreutils 0.11 发布，带来一些巧妙的调试辅助消息\nRust 1.98 新增类似“-ffast-math”的代数浮点方法\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\nAsahi Linux 现已正式支持 Apple M3 Mac——但附带条件\nVoid Linux 维护者因 AI 政策争议弃养 100 多个软件包\nIntel 逆转取消其开源字体项目的决定\n神秘的 x86 CPU 已具备 APX、x86S，接续 Intel 遗留的无传统 x86 方向\nLinux 内核计划移除约 5.5 万行旧 ARM 平台代码\nAI 生成了大量“丑陋”代码，但发现了加速 Linux 编译的主要瓶颈\nSteam 客户端 Beta 改进大画面模式，多项 Linux 增强\nAMDGPU HDMI 2.1 默认启用补丁已就绪，随 Linux 7.4 带来 FreeSync、VRR 和 ALLM\n享受无广告浏览，\n单页文章视图\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "589679f7b8df8ff4b97b860df4a1d606": {
+    "id": "589679f7b8df8ff4b97b860df4a1d606",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Firefox-156",
+    "title_en": "Firefox 156 Available With Its Built-In PDF Viewer Starting Up To 45% Faster",
+    "summary_en": "Mozilla today published their Firefox 156.0 release binaries ahead of the official Tuesday announcement...",
+    "pub_date": "Mon, 14 Sep 2026 11:09:09 -0400",
+    "title_zh": "Firefox 156 发布：内置 PDF 查看器启动速度提升高达 45%",
+    "summary_zh": "Mozilla 发布 Firefox 156.0 版本，内置 PDF 查看器启动速度最高提升 45%，并优化了大尺寸 JPEG 图片缩放时的内存和 CPU 占用。该版本还修复了 MP4 中高采样率 FLAC 音频播放失败等问题。Vulkan 视频解码功能仍仅限 Nightly 版本。",
+    "fulltext_zh": "Mozilla 今日在周二正式发布前提前放出了 Firefox 156.0 的发布二进制文件。\n\n在 Firefox 156 中，他们重点宣传其内置 PDF 查看器现在的启动速度最高提升了 45%。在性能方面，当 Firefox 显示大尺寸 JPEG 图片并将其缩小以适应网页时，内存和 CPU 占用也得到了改善。\n\nFirefox 156 还包含多项修复，例如修复了某些网站上 MP4 中高采样率 FLAC 音频播放失败的问题，修复了各种平台特定问题，以及其他一些细微调整。\n\n在 Firefox 156 的 Nightly 构建中，还曾为较新版本的 NVIDIA 驱动上的新款 NVIDIA GPU 启用 Vulkan 视频解码，但遗憾的是这一功能未能进入 Firefox 156 正式版，目前仍仅限于 Nightly 构建。\n\n对于 Linux 用户来说，这并不是近期历史上最令人兴奋的 Firefox 更新，但如果想要这个最新更新，你现在就可以获取 Firefox 156。"
+  },
+  "28263b6d7fa642cee5eb57e2bbd75840": {
+    "id": "28263b6d7fa642cee5eb57e2bbd75840",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/calibre-9-12-e-book-manager-adds-option-to-convert-gif-images-to-jpeg-webp/",
+    "title_en": "Calibre 9.12 E-Book Manager Adds Option to Convert GIF Images to JPEG/WebP",
+    "summary_en": "Calibre 9.12 adds an option to convert GIF images to JPEG or WebP, alongside additional improvements and fixes for the popular e-book management software.\nThe post Calibre 9.12 E-Book Manager Adds Option to Convert GIF Images to JPEG/WebP appeared first on Linux Today.",
+    "pub_date": "Mon, 14 Sep 2026 07:10:09 +0000",
+    "title_zh": "Calibre 9.12 电子书管理器新增将 GIF 图像转换为 JPEG/WebP 的选项",
+    "summary_zh": "Calibre 9.12 版本发布，新增将 GIF 图像转换为 JPEG 或 WebP 格式的选项，同时包含其他改进和修复。该更新面向这款流行的电子书管理软件的用户。",
+    "fulltext_zh": "Calibre 9.12 新增了一项将 GIF 图像转换为 JPEG 或 WebP 的选项，同时为这款流行的电子书管理软件带来了其他改进和修复。\n\n文章《Calibre 9.12 电子书管理器新增将 GIF 图像转换为 JPEG/WebP 的选项》最初发布于 Linux Today。"
+  },
+  "32c53c17211d5383f69e651f13e7b019": {
+    "id": "32c53c17211d5383f69e651f13e7b019",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/xen-4-22-hypervisor-brings-new-x86-features-and-better-arm-power-management/",
+    "title_en": "Xen 4.22 Hypervisor Brings New x86 Features and Better ARM Power Management",
+    "summary_en": "Xen 4.22 hypervisor introduces new x86 features and improved ARM power management, alongside updates that enhance virtualization performance and efficiency.\nThe post Xen 4.22 Hypervisor Brings New x86 Features and Better ARM Power Management appeared first on Linux Today.",
+    "pub_date": "Mon, 14 Sep 2026 07:09:10 +0000",
+    "title_zh": "Xen 4.22 虚拟机管理程序带来新的 x86 特性和更好的 ARM 电源管理",
+    "summary_zh": "Xen 4.22 虚拟机管理程序发布，引入了新的 x86 特性并改进了 ARM 电源管理，同时通过更新提升了虚拟化性能和效率。",
+    "fulltext_zh": "Xen 4.22 虚拟机管理程序引入了新的 x86 特性并改进了 ARM 电源管理，同时通过更新提升了虚拟化性能和效率。\n\n文章《Xen 4.22 虚拟机管理程序带来新的 x86 特性和更好的 ARM 电源管理》首次出现在 Linux Today 上。"
+  },
+  "fa70e89f260a194369d21e712f0f9d23": {
+    "id": "fa70e89f260a194369d21e712f0f9d23",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/kraid-is-a-now-a-real-compiler/",
+    "title_en": "Kraid Is a Now a Real Compiler",
+    "summary_en": "Kraid has evolved into a real compiler, marking a major development milestone with expanded capabilities for compiling and working with code.\nThe post Kraid Is a Now a Real Compiler appeared first on Linux Today.",
+    "pub_date": "Mon, 14 Sep 2026 07:08:13 +0000",
+    "title_zh": "Kraid 现在是一个真正的编译器",
+    "summary_zh": "Kraid 已发展成为一个真正的编译器，这标志着一个重要的开发里程碑，其在编译和处理代码方面的能力得到了扩展。",
+    "fulltext_zh": "Kraid 已发展成为一个真正的编译器，这标志着一个重要的开发里程碑，其在编译和处理代码方面的能力得到了扩展。\n\n文章《Kraid 现在是一个真正的编译器》首先出现在 Linux Today 上。"
+  },
+  "0370fa6e1f74d4acca7bbcd3c07526b0": {
+    "id": "0370fa6e1f74d4acca7bbcd3c07526b0",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/onyx-launcher-1-6-3-released-for-linux-with-modrinth-and-built-in-diagnostics/",
+    "title_en": "Onyx Launcher 1.6.3 Released for Linux with Modrinth and Built-In Diagnostics",
+    "summary_en": "Onyx Launcher 1.6.3 adds Modrinth integration and built-in diagnostics, making it easier to manage content and troubleshoot issues directly from the launcher.\nThe post Onyx Launcher 1.6.3 Released for Linux with Modrinth and Built-In Diagnostics appeared first on Linux Today.",
+    "pub_date": "Mon, 14 Sep 2026 07:07:02 +0000",
+    "title_zh": "Onyx Launcher 1.6.3 为 Linux 发布，带来 Modrinth 集成与内置诊断功能",
+    "summary_zh": "Onyx Launcher 1.6.3 版本面向 Linux 发布，新增 Modrinth 集成和内置诊断工具，使用户能直接在启动器中管理内容并排查问题，提升了使用便捷性。",
+    "fulltext_zh": "Onyx Launcher 1.6.3 新增了 Modrinth 集成和内置诊断功能，让用户可以直接在启动器中更轻松地管理内容并排查问题。\n\n文章《Onyx Launcher 1.6.3 为 Linux 发布，带来 Modrinth 集成与内置诊断功能》最初发布于 Linux Today。"
+  },
+  "63c9c146329ce0962355eda8557f7380": {
+    "id": "63c9c146329ce0962355eda8557f7380",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/fedora-45-introduces-a-minimal-grub-package-for-confidential-vms/",
+    "title_en": "Fedora 45 Introduces a Minimal GRUB Package for Confidential VMs",
+    "summary_en": "Fedora 45 introduces a minimal GRUB package designed for confidential virtual machines, reducing unnecessary components while supporting secure VM environments.\nThe post Fedora 45 Introduces a Minimal GRUB Package for Confidential VMs appeared first on Linux Today.",
+    "pub_date": "Mon, 14 Sep 2026 07:05:59 +0000",
+    "title_zh": "Fedora 45 为机密虚拟机引入最小化 GRUB 软件包",
+    "summary_zh": "Fedora 45 引入了一个专为机密虚拟机设计的最小化 GRUB 软件包，通过精简不必要的组件来支持安全的虚拟机环境，同时保持引导功能。",
+    "fulltext_zh": "Fedora 45 引入了一个专为机密虚拟机设计的最小化 GRUB 软件包，在支持安全虚拟机环境的同时减少了不必要的组件。\n\n文章《Fedora 45 为机密虚拟机引入最小化 GRUB 软件包》最初发布于 Linux Today。"
   }
 }

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BSD发布：FreeBSD 14.5 — Linux 中文速报</title>
+<title>GNU Coreutils 9.12 发布：性能优化，新增 uname 选项 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>BSD发布：FreeBSD 14.5</h1>
+  <h1>GNU Coreutils 9.12 发布：性能优化，新增 uname 选项</h1>
 
-  <div class="article-summary">FreeBSD项目发布了14.x系列的新版本14.5，该版本包含多项修复和用户态工具的变化。主要更新包括：rc.firewall脚本支持从文件读取IP地址或子网；sh(1)的默认历史记录大小从100增加到128，符合POSIX.1-2024要求；mt(1)和libmt新增LTO-10和LTO-10P密度代码及磁带规格支持；pwd(1)默认行为从-P改为-L，与POSIX语义一致；ipfw(8)增加了回退机制以兼容FreeBSD 15.0+内核；daemon(8)新增-m选项以指定输出文件模式。</div>
+  <div class="article-summary">GNU Coreutils 9.12 正式发布，带来多项性能优化与功能改进。新版本修复了 chcon、chgrp、chmod、chown、du 和 ls 在使用递归选项时因并行删除文件而失败的长期问题；stat 和 tail 支持新选项；uname 新增 -A 和 --all-labeled 选项；cut -w 吞吐量提升最高 4 倍，uniq -c 提速最高 2.5 倍；sort 在处理管道等未知大小输入时能更好地利用内存和并行操作；cp、install 和 mv 在 --reflink=auto 失败时回退到标准复制；mv 在复制扩展属性失败时发出警告。此外还修复了 factor 的缓冲区过度读取及 Solaris 相关问题。</div>
 
-  <div class="article-body"><p>BSD发布：FreeBSD 14.5 (DistroWatch.com新闻)</p><p>DistroWatch.com由以下赞助商支持</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW周刊 / 评测存档</p><p>访客评分与评论</p><p>项目评分排名</p><p>播客、新闻通讯与评测</p><p>跨发行版软件包比较</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停止维护的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与提示专栏</p><p>常见误解专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>发行版家族树可视化</p><p>常见问题</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>Asahi Linux在M3芯片系统上运行</p><p>Debian将在CERN使用</p><p>Debian 11达到生命周期终点</p><p>Debian就LLM贡献进行投票</p><p>Asahi在多方面取得进展</p><p>新版COSMIC带来更多无障碍功能</p><p>Bazzite更新Deck镜像</p><p>RPM改进锁处理</p><p>Fairphone 6在美国销售</p><p>Kubuntu用户将受益于Plasma长期支持</p><p>易于使用的PBX - 托管或自管理</p><p>Linux电话系统</p><p>免费在线聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程办公应用：iOS或Android</p><p>免费视频会议</p><p>3CX提供的VoIP/PBX教程</p><p>不要措手不及，制定灾难恢复计划！</p><p>必备的在线聊天报告与统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business与3CX WhatsApp API集成</p><p>3CX StartUP的5大杀手级功能</p><p>不要成为“那种人”第1卷：保持复杂凭据</p><p>不要成为“那种人”第2卷：呼叫欺诈</p><p>不要成为“那种人”第3卷：4大安全提示</p><p>不要成为“那种人”第4卷：监控您的实例</p><p>Fluff Linux 2026.08.01</p><p>Red Hat周五五件事 - 2026年9月4日</p><p>PCLinuxOS杂志2026年9月</p><p>Tumbleweed月度更新 - 2026年8月</p><p>Full Circle每周新闻</p><p>最新新闻与更新</p><p>新闻过滤选项</p><p>BSD发布：FreeBSD 14.5</p><p>项目发布了FreeBSD 14.x系列的一个更新。新版本14.5提供了若干修复，并引入了一些用户态工具的变化。</p><p>“rc.firewall脚本现在支持从磁盘文件读取IP地址或子网，用于firewall_allowservices和firewall_trusted列表变量。看起来像绝对路径的元素会逐行读取，跳过注释和空行，每行的第一个单词被视为地址或子网。sh(1)中的默认历史记录大小已从100增加到128，符合POSIX.1-2024的最低要求。mt(1)和libmt中已添加LTO-10和LTO-10P密度代码及磁带规格，从而能够检测和报告新的磁带格式。pwd(1)的默认行为已从-P更改为-L，与POSIX语义保持一致。ipfw(8)二进制文件现在包含一个回退机制，以支持FreeBSD 15.0中引入的新内核接口。当在15.0+内核上运行时，ipfw(8)会自动调用捆绑的ipfw15二进制文件来加载防火墙规则，确保升级过程中的兼容性。daemon(8)工具现在支持-m选项来指定输出文件模式，允许非root日志收集器访问日志文件。”</p><p>更多信息可在FreeBSD-14.5-RELEASE-amd64-disc1.iso中找到。</p><p>近期相关新闻和发布</p><p>BSD发布：FreeBSD 14.5</p><p>BSD发布：FreeBSD 15.1</p><p>BSD发布：FreeBSD 14.4</p><p>BSD发布：FreeBSD 15.0</p><p>开发版发布：FreeBSD 15.0-RC1</p><p>开发版发布：FreeBSD 15.0-BETA1</p><p>FreeBSD是一个类UNIX操作系统，支持i386、amd64、IA-64、arm、MIPS、powerpc、ppc64、PC-98和UltraSPARC平台，基于加州大学伯克利分校的“4.4BSD-Lite”版本，并带有一些“4.4BSD-Lite2”增强。它间接基于William Jolitz将加州大学伯克利分校的“Net/2”移植到i386的版本，即“386BSD”，尽管386BSD的代码已所剩无几。FreeBSD被世界各地的公司、互联网服务提供商、研究人员、计算机专业人士、学生和家庭用户用于他们的工作、教育……</p></div>
+  <div class="article-body"><p>GNU Coreutils 9.12 于今日发布，带来了一系列修复、一些新选项以及多项性能改进，这些工具是广泛使用的核心系统实用程序集。</p><p>首先，GNU Coreutils 9.12 修复了一个长期存在的 bug：当使用递归选项“-R”遍历目录层次结构，并且文件被并行删除时，chcon、chgrp、chmod、chown、du 和 ls 会失败。</p><p>在 Coreutils 9.12 中，stat 和 tail 命令支持新的选项。</p><p>uname 命令还新增了“-A”和“--all-labeled”选项，用于标记所有输出并每行显示一项。</p><p>在新版本中，“cut -w”在典型输入下运行效率更高，吞吐量最高可提升 4 倍。另一项优化是“uniq -c”，在具有无锁 stdio 函数的系统上运行速度最高可提升 2.5 倍。sort 命令在从管道等未知大小的输入读取时，也能更好地利用可用内存和并行操作。</p><p>cp、install 和 mv 命令现在会在“--reflink=auto”因各种错误而失败时回退到标准复制，例如在 XFS 上，如果克隆操作耗尽了分配组中的元数据空间。</p><p>mv 命令现在还会在复制文件的扩展属性失败时发出警告，例如文件系统不支持扩展属性的情况。</p><p>此外还有其他修复，例如避免 factor 可能出现的缓冲区过度读取、各种 Solaris 特有的 bug 以及其他修复。</p><p>GNU Coreutils 9.12 可在其官网获取。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12949" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/GNU-Coreutils-9.12" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
