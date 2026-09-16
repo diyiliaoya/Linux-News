@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MAKERphone 2.0：让你亲手打造4G手机，还能用AI“氛围编程”开发应用 — Linux 中文速报</title>
+<title>Rune 走向开源，寻求与贡献者分享收入 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
+    <span class="tag">其他</span>
     <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>MAKERphone 2.0：让你亲手打造4G手机，还能用AI“氛围编程”开发应用</h1>
+  <h1>Rune 走向开源，寻求与贡献者分享收入</h1>
 
-  <div class="article-summary">CircuitMess推出MAKERphone 2.0，一款无需焊接的DIY手机套件。它基于ESP32-S3，支持4G LTE通话和短信，配备1.77英寸彩屏、键盘和多种模块。用户可用MicroPython或Arduino C++编程，还能借助AI工具VibeBoy生成应用。套件早鸟价119美元，旨在让用户远离社交媒体，了解手机内部原理。</div>
+  <div class="article-summary">基于 Go 的 IDE Rune 现已根据 GPLv3 许可证开源，贡献者保留其作品的版权。项目方还推出可选的积分计划，将部分服务收入分配给贡献者，并公开账本记录。Rune 支持 Linux 和 macOS，未来计划扩展对 Rust、Zig 等语言的支持。</div>
 
-  <div class="article-body"><p>MAKERphone 2.0：让你亲手打造4G手机，还能用AI“氛围编程”开发应用</p><p>它基于ESP32-S3，插入真实SIM卡即可进行4G通话和短信，无需焊接即可拼装。你可以编写自己的应用，远离社交媒体。</p><p>我们大多数人每天都带着手机，但很少有人能说清楚手机内部到底是如何运作的。这个认知鸿沟正是CircuitMess试图填补的——或者说，一直在试图填补的。</p><p>由Albert Gajšak创立的CircuitMess，早在2018年就发起了首次MAKERphone众筹活动，这款自己动手组装的手机套件筹集了超过32.4万美元，最终向6000多人发货，名为“MAKERphone”。</p><p>现在，续作来了。MAKERphone 2.0已在Kickstarter上线（合作链接），距离众筹结束还有数周，但已经远超目标。</p><p>其理念与之前相同：你自己组装一部能用的手机，然后学习在它上面编程。这次最大的不同是，你不需要电烙铁。至少对我来说，这是个巨大的解脱，因为我焊接技术很糟糕。</p><p>本文包含合作推广链接。请阅读我们的相关说明。</p><p>📝 MAKERphone 2.0 主要规格</p><p>如你所见，MAKERphone看起来像普通的键盘手机。以下是主要细节：</p><p>- ESP32-S3，双核，4 MB闪存，4 MB PSRAM</p><p>- 4G LTE Cat-1，支持2G回退，Nano SIM</p><p>- 1.77英寸彩色屏幕，160×128分辨率</p><p>- 12键数字键盘，导航摇杆，4个功能键，音量键</p><p>- DAC，扬声器，I²S麦克风，3.5毫米耳机插孔</p><p>- 1000 mAh电池，USB-C充电</p><p>- Wi-Fi，蓝牙，USB</p><p>- UMAX模块化连接器</p><p>- 这次无需焊接</p><p>- MicroPython，Arduino C++，VibeBoy（AI辅助）</p><p>- 早鸟价119美元起，之后169美元</p><p>该套件超级早鸟价为119美元起，之后价格逐步上升，零售价为169美元。</p><p>这是一款DIY小工具，手机到手时是一盒零件和一份组装指南，你把它组装成能通过4G LTE打真实电话、发真实短信的东西。插入SIM卡，它就像一部真正的手机。</p><p>现在4G似乎比常见的5G低一档，但这款设备并非要取代你的智能手机。如果你不打算使用那些联网的社交媒体和应用，其实并不需要5G。我稍后会解释这个概念。</p><p>其核心是ESP32-S3，与无数爱好者开发板中使用的低功耗微控制器属于同一家族。所以，它不会与骁龙或苹果仿生芯片相比或竞争，他们甚至没有假装要这么做。</p><p>初代MAKERphone要求你把整个电路板焊接起来。2.0版本取消了这一要求，如果你从未碰过电烙铁，这大大降低了门槛。CircuitMess表示，它设计为11岁左右的孩子就能组装，所以一个正常的成年人应该能轻松搞定。</p><p>从官方组装视频来看，似乎只是把零件拼在一起。</p><p>它有一个1.77英寸彩色显示屏，一个耳机插孔（是的，2026年还有），以及模块化设计，可以加装额外硬件。更多内容见下文。</p><p>模块、编程和智能手环</p><p>让它不仅仅是一个怀旧套件的部分在于模块系统。MAKERphone 2.0支持扩展模块，改变手机的功能。其中几个模块随盒附赠。</p><p>有一个红外模块，用于控制老式电视；一个摄像头模块；一个2W扬声器；一个LED模块；以及一个温湿度传感器。还有一块洞洞板，可以接入你自己的传感器。</p><p>组装完成后，你就可以编程了。你可以用MicroPython或Arduino C++为它编写代码。CircuitMess还推出了一款AI辅助编程工具，名为VibeBoy，所以“氛围编程”的潮流正式蔓延到了DIY手机领域。</p><p>这并不完全是坏事。不是每个人都能用MicroPython编写代码或制作自定义应用。但大语言模型消除了这一障碍。你有硬件；你使用大语言模型，让它生成你想要的那种软件。这就是Seeed Studio和许多其他爱好者硬件制造商推广自家AI辅助平台的原因。它让硬件变得更有趣。</p></div>
+  <div class="article-body"><p>Rune 走向开源，寻求与贡献者分享收入</p><p>Rune 走向开源，寻求与贡献者分享收入</p><p>这款基于 Go 的 IDE 现已在 GPLv3 下提供，贡献者保留其作品的版权。</p><p>它从专有软件转变为新的开源身份，采用 GPLv3 许可证，让你可以从代码仓库克隆、阅读或基于它构建。这次重新许可通过一系列操作完成，其中之一是标记了项目许可证过渡的提交。</p><p>开发者还决定基本保持提交历史完整，尽管这里那里有一些缺口。我指出这一点是因为开源的项目通常会先压缩历史，这样旧的秘密和敏感提交就不会进入公共仓库。</p><p>提供一些背景：Rune 是一款适用于 Linux 和 macOS 的 IDE，可用于编写和调试代码，在同一窗口中运行终端和 CLI 工具，并让编码代理承担部分任务。</p><p>团队通过展示运行结果来为其使用辩护，显示 Go 终端在一组终端工作负载上与同类工具保持同步。请记住，这些不是语言基准测试；它们只展示了该 IDE 已经走了多远。</p><p>Rune 团队还希望将语言支持扩展到 Go 和 Python 之外，Rust 和 Zig 已在主分支上进入测试阶段，并公开呼吁开发者管理自己的语言。</p><p>虽然 IDE 本身免费使用，但人们可以选择付费计划来访问 P2P Rune 网络、高级支持，以及为企业提供的带有额外功能的定制方案。</p><p>走开源路线允许贡献者保留其提交内容的版权，公司（Rune）不保留重新许可其作品的特殊权利。此前，项目要求贡献者签署 CLA；现在不再如此。</p><p>Ernest Romero Climent 对开源其他地方发生的事情感到不满，即公司在开源中构建，多年来依赖社区，然后在项目有价值时更改许可证。</p><p>他们希望通过一个可选的积分计划向贡献者支付报酬，被接受的工作获得积分，符合条件的服务收入的一部分资金组成资金池，然后根据每位贡献者持有的积分进行分配。</p><p>所有授予的积分都将在公共账本中跟踪，显示资金池背后的收入、任何扣除、以及每笔付款如何分配——所有这些都是可选的。你仍然可以在不加入该计划的情况下发送补丁。</p><p>亚洲的 AI 基础设施。</p><p>openEuler 与建设亚洲 AI 基础设施的竞赛</p><p>openEuler 是由开放原子基金会孵化和运营的开源项目。社区正在通过本地用户组、行业合作伙伴关系以及参与全球开源活动来扩大国际合作。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年中一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热衷于开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的技术迷。</p><p>Ubuntu 的 Rust 化迎来新里程碑！Coreutils 迁移完成</p><p>openEuler 与建设亚洲 AI 基础设施的竞赛</p><p>MAKERphone 2.0 让你构建 4G 手机并为其应用进行氛围编程</p><p>Bottles 的创始人成功在 Linux 上运行 Microsoft 365</p><p>Linux 内核准备清除旧的 32 位 Arm 平台代码</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周通讯，你学习有用的 Linux 技巧，发现应用程序，探索不同的发行版，并了解 Linux 世界的最新动态</p><p>太好了！你已成功注册。</p><p>欢迎回来！你已成功登录。</p><p>你已成功订阅 It's FOSS。</p><p>你的链接已过期。</p><p>成功！请检查你的电子邮件以获取登录魔法链接。</p><p>成功！你的账单信息已更新。</p><p>你的账单未更新。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/makerphone-2-annoucement/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/rune-open-source-ide/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -11108,5 +11108,159 @@
     "title_zh": "Fedora 45 为机密虚拟机引入最小化 GRUB 软件包",
     "summary_zh": "Fedora 45 引入了一个专为机密虚拟机设计的最小化 GRUB 软件包，通过精简不必要的组件来支持安全的虚拟机环境，同时保持引导功能。",
     "fulltext_zh": "Fedora 45 引入了一个专为机密虚拟机设计的最小化 GRUB 软件包，在支持安全虚拟机环境的同时减少了不必要的组件。\n\n文章《Fedora 45 为机密虚拟机引入最小化 GRUB 软件包》最初发布于 Linux Today。"
+  },
+  "310e52170a6ef37458df74fdc8d7f020": {
+    "id": "310e52170a6ef37458df74fdc8d7f020",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/orion-browser-linux-043-update",
+    "title_en": "Orion for Linux beta update lets you customise the toolbar",
+    "summary_en": "A new beta of Orion for Linux, the native WebKitGTK port of Kagi&#8217;s iOS and Mac web browser, is out. Orion Beta v0.4.3 continues to flesh out the browser&#8217;s feature set to reach parity with its Apple kin. You can now customise the toolbar. A context menu option was present in earlier beta builds but opened a button picker that wasn&#8217;t functional – now it is. Drag items out of the &#8216;current toolbar&#8217; area on the palette to remove them, or drag ones from the palette to the",
+    "pub_date": "Tue, 15 Sep 2026 15:01:50 +0000",
+    "title_zh": "Orion for Linux 测试版更新，支持自定义工具栏",
+    "summary_zh": "Orion for Linux 测试版 v0.4.3 发布，新增工具栏自定义功能，用户可拖拽添加、移除和重新排列按钮，并支持重置。此外还加入了页面内查找、更新日志对话框和更多网站设置选项，并修复了大量错误。该浏览器基于 WebKitGTK，目前仅以 Flatpak 形式提供。",
+    "fulltext_zh": "Orion for Linux 测试版更新，支持自定义工具栏 - OMG! Ubuntu\n\niOS 和 Mac 网页浏览器的原生 WebKitGTK 移植版现已推出。\n\nOrion Beta v0.4.3 继续完善浏览器的功能集，以与其苹果平台版本保持一致。你现在可以自定义工具栏了。早期测试版中已有上下文菜单选项，但打开的是一个无法使用的按钮选择器——现在它可以正常工作了。\n\n从调色板的“当前工具栏”区域拖出项目即可移除它们，或者从调色板拖到顶部区域来添加。你也可以通过拖拽重新排列按钮。如果需要，还可以重置回默认工具栏布局：\n\n编辑 Orion 的工具栏就像使用 Firefox 一样\n\n我觉得默认工具栏对我来说太杂乱了，所以我一直在等这个功能。\n\nv0.4.3 测试版还新增了可用的页面内查找功能，可以快速跳转到网站上的特定文本；由于 Orion 的对话框中加入了发布说明，了解每次更新的新内容变得更加容易。还添加了更多“网站设置”选项。\n\n页面内查找在 v0.4.3 测试版中可用\n\nv0.4.2 测试版中加入了更多网站设置选项（我之前没来得及介绍）。你可以针对单个网站强制启用深色模式、调整字体大小、禁用粘性页眉，并使用“擦除元素”功能永久移除页面元素——非常方便。\n\n本次更新的其余部分，正如你所料，主要是错误修复。修复了很多。Kagi 团队解决了一系列问题，包括全屏模式下侧边栏和工具栏不隐藏的异常，以及地址栏中锁图标消失的问题。\n\nKagi 提到对 GTK4/libadwaita 界面进行了进一步改进，但没有详细说明。遗憾的是，驯服那个超大号汉堡菜单还不在其中，唉。\n\n一如既往，Orion for Linux 仍处于测试阶段。它会有错误，会崩溃，也不会给你做早餐。我建议将它作为稳定浏览器的辅助工具——Firefox 156 本周已发布——而不是完全依赖它。\n\n在 Ubuntu 上安装 Orion 测试版\n\nOrion 测试版仅以 Flatpak 应用形式提供。更新来自 Kagi 托管的专用 Orion Beta Flatpak 仓库——Orion Browser 是……\n\nOrion 共享 GNOME 50 运行时。如果这是你将安装的唯一 Flatpak 应用，你需要先添加……以便拉取运行时。\n\nsudo apt install flatpak\nflatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo\nflatpak remote-add --if-not-exists orion-beta https://flatpak.orionbrowser.com/orion-beta.flatpakrepo\nflatpak install orion-beta com.kagi.Orion\n\n从应用程序网格（或你使用的等效界面）中启动。"
+  },
+  "8b2b1f7753dce36591863bc3c6795faf": {
+    "id": "8b2b1f7753dce36591863bc3c6795faf",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/ubuntu-rustification-coreutils-migration/",
+    "title_en": "Ubuntu's Rustification Has a New Milestone! Coreutils Migration is Complete",
+    "summary_en": "The Ubuntu 26.10 release moves its last three GNU commands, cp, mv, and rm, to Rust.",
+    "pub_date": "Tue, 15 Sep 2026 16:21:36 GMT",
+    "title_zh": "Ubuntu的Rust化新里程碑！Coreutils迁移完成",
+    "summary_zh": "Ubuntu 26.10将最后三个GNU命令cp、mv和rm迁移至Rust实现的uutils coreutils，标志着Ubuntu默认工具链的Rust化基本完成。此前因uutils版本存在缺陷，这三个命令在26.04 LTS中被暂缓迁移。经过安全审计和修复，迁移最终在26.10落地。用户层面命令行为不变，但可选择安装GNU版本。此举是Canonical逐步推进内存安全系统软件战略的一部分。",
+    "fulltext_zh": "Ubuntu的Rust化新里程碑！Coreutils迁移完成\n\nUbuntu 26.10版本将其最后三个GNU命令——cp、mv和rm——迁移到了Rust。\n\nUbuntu成功在其默认工具链中淘汰了GNU coreutils。最后三个坚守者——cp、mv和rm——已迁移至uutils的coreutils；这是Canonical自2025年以来一直在向发行版中引入的Rust重新实现。\n\n由于uutils版本存在缺陷，它们曾被阻止进入26.04 LTS。其他所有命令，从ls到echo，都在更早的版本中完成了这一跳跃。\n\n这一变化虽然重大，却隐藏在Canonical进行中的工作文档中一个不起眼的提及里。\n\n这是一条漫长的道路\n\nCanonical去年开始对Ubuntu进行氧化，Ubuntu 25.10成为首个默认搭载uutils coreutils的版本。该版本还使sudo-rs成为默认权限工具，取代了一个已存在数十年的命令。\n\n26.04是计划明显放缓的版本，由于一系列阻碍全面实施的缺陷，Canonical在GNU版本上保留了cp、mv和rm。\n\n这些缺陷是在审计中发现的，当时Canonical委托Zellic在2025年12月至2026年3月期间进行审计，优先关注最安全敏感的实用工具。在两轮审计中，Zellic共提出了44个问题，其中44个被分配了CVE。Canonical表示绝大多数已解决。\n\n走到这一步经历了起起落落，最后一段路并不干净——rust-coreutils曾一度被重新纳入归档，又在破坏实时镜像构建后立即被移除。修复很快；开发者将其标记为“紧急”，修复进入上游，迁移赶在26.10前落地。\n\n对你有什么改变？\n\n在输入命令时，表面上没有任何变化。uutils coreutils被设计为基本GNU工具的即插即用替代品，该项目将任何与GNU的差异视为bug，并进一步指出某些选项可能仍然缺失或行为不同。\n\n因此，如果你更愿意继续使用GNU版本，你可以选择安装包含所有必要组件的coreutils-from-gnu包。\n\nCoreutils只是更广泛运动的一部分。今年早些时候，Canonical成为Trifecta Tech Foundation的金牌赞助商，每年出资4万欧元资助内存安全的系统软件。\n\n在此之下，他们当前的目标是chrony-rs，这是对Ubuntu用于保持时钟同步的工具的Rust重写。虽然工作仍在进行中，但已取得进展。其成为默认的目标是Ubuntu 27.04。\n\nCanonical逐步构建的是其Ubuntu氧化愿景的完成，这并不是盲目地包含新组件。相反，这看起来是一种经过深思熟虑的方法，一步一步地推进。\n\nLinux内核准备清除旧的32位Arm平台代码\n\n这十三个补丁将删除已弃用的平台代码，驱动程序清理将随后进行。\n\n喜欢这篇更新？支持独立的Linux新闻报道\n\nIt's FOSS在过去14年一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。\n\n一次付费，永久享受\n任意金额，无承诺\n\n一个对开源软件、定制PC组装、赛车运动以及探索这个世界无限可能性充满热情的书呆子。\n\nRune开源，寻求与贡献者分享收入\n\nopenEuler与构建亚洲AI基础设施的竞赛\n\nMAKERphone 2.0让你构建4G手机并为其应用进行氛围编程\n\nBottles的创始人成功在Linux上运行Microsoft 365\n\nLinux内核准备清除旧的32位Arm平台代码\n\n成为更好的Linux用户\n\n通过FOSS每周新闻通讯，学习有用的Linux技巧，发现应用程序，探索新发行版，并随时了解Linux世界的最新动态\n\n太好了！你已成功注册。\n\n欢迎回来！你已成功登录。\n\n你已成功订阅It's FOSS。\n\n你的链接已过期。\n\n成功！请查"
+  },
+  "1a135e14cdfb0fa56208fcf53972e8f8": {
+    "id": "1a135e14cdfb0fa56208fcf53972e8f8",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/rune-open-source-ide/",
+    "title_en": "Rune Goes Open Source, Looks to Share Revenue With Contributors",
+    "summary_en": "The Go-based IDE is now available under GPLv3, and contributors keep the rights to their work.",
+    "pub_date": "Tue, 15 Sep 2026 13:11:07 GMT",
+    "title_zh": "Rune 走向开源，寻求与贡献者分享收入",
+    "summary_zh": "基于 Go 的 IDE Rune 现已根据 GPLv3 许可证开源，贡献者保留其作品的版权。项目方还推出可选的积分计划，将部分服务收入分配给贡献者，并公开账本记录。Rune 支持 Linux 和 macOS，未来计划扩展对 Rust、Zig 等语言的支持。",
+    "fulltext_zh": "Rune 走向开源，寻求与贡献者分享收入\n\nRune 走向开源，寻求与贡献者分享收入\n\n这款基于 Go 的 IDE 现已在 GPLv3 下提供，贡献者保留其作品的版权。\n\n它从专有软件转变为新的开源身份，采用 GPLv3 许可证，让你可以从代码仓库克隆、阅读或基于它构建。这次重新许可通过一系列操作完成，其中之一是标记了项目许可证过渡的提交。\n\n开发者还决定基本保持提交历史完整，尽管这里那里有一些缺口。我指出这一点是因为开源的项目通常会先压缩历史，这样旧的秘密和敏感提交就不会进入公共仓库。\n\n提供一些背景：Rune 是一款适用于 Linux 和 macOS 的 IDE，可用于编写和调试代码，在同一窗口中运行终端和 CLI 工具，并让编码代理承担部分任务。\n\n团队通过展示运行结果来为其使用辩护，显示 Go 终端在一组终端工作负载上与同类工具保持同步。请记住，这些不是语言基准测试；它们只展示了该 IDE 已经走了多远。\n\nRune 团队还希望将语言支持扩展到 Go 和 Python 之外，Rust 和 Zig 已在主分支上进入测试阶段，并公开呼吁开发者管理自己的语言。\n\n虽然 IDE 本身免费使用，但人们可以选择付费计划来访问 P2P Rune 网络、高级支持，以及为企业提供的带有额外功能的定制方案。\n\n走开源路线允许贡献者保留其提交内容的版权，公司（Rune）不保留重新许可其作品的特殊权利。此前，项目要求贡献者签署 CLA；现在不再如此。\n\nErnest Romero Climent 对开源其他地方发生的事情感到不满，即公司在开源中构建，多年来依赖社区，然后在项目有价值时更改许可证。\n\n他们希望通过一个可选的积分计划向贡献者支付报酬，被接受的工作获得积分，符合条件的服务收入的一部分资金组成资金池，然后根据每位贡献者持有的积分进行分配。\n\n所有授予的积分都将在公共账本中跟踪，显示资金池背后的收入、任何扣除、以及每笔付款如何分配——所有这些都是可选的。你仍然可以在不加入该计划的情况下发送补丁。\n\n亚洲的 AI 基础设施。\n\nopenEuler 与建设亚洲 AI 基础设施的竞赛\n\nopenEuler 是由开放原子基金会孵化和运营的开源项目。社区正在通过本地用户组、行业合作伙伴关系以及参与全球开源活动来扩大国际合作。\n\n喜欢这篇更新？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年中一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无承诺\n\n一个热衷于开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的技术迷。\n\nUbuntu 的 Rust 化迎来新里程碑！Coreutils 迁移完成\n\nopenEuler 与建设亚洲 AI 基础设施的竞赛\n\nMAKERphone 2.0 让你构建 4G 手机并为其应用进行氛围编程\n\nBottles 的创始人成功在 Linux 上运行 Microsoft 365\n\nLinux 内核准备清除旧的 32 位 Arm 平台代码\n\n成为更好的 Linux 用户\n\n通过 FOSS 每周通讯，你学习有用的 Linux 技巧，发现应用程序，探索不同的发行版，并了解 Linux 世界的最新动态\n\n太好了！你已成功注册。\n\n欢迎回来！你已成功登录。\n\n你已成功订阅 It's FOSS。\n\n你的链接已过期。\n\n成功！请检查你的电子邮件以获取登录魔法链接。\n\n成功！你的账单信息已更新。\n\n你的账单未更新。"
+  },
+  "88644efe6c293729a0b4f33c124c9aeb": {
+    "id": "88644efe6c293729a0b4f33c124c9aeb",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12953",
+    "title_en": "Development Release: Fedora 45 Beta",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The Fedora project has announced the release of a development snapshot, Fedora 45 beta. The new release introduces new security features and package upgrades: \"Fedora Linux 45 replaces the legacy in-kernel console with kmscon, bringing smooth rendering, better Unicode/font support, and enhanced system stability. Fedora Linux 45 now....",
+    "pub_date": "",
+    "title_zh": "开发版本：Fedora 45 Beta",
+    "summary_zh": "Fedora 45 Beta 发布，引入多项新特性：用 kmscon 替换传统内核控制台，默认要求软件包签名验证，采用 oo7 统一桌面密钥管理。同时带来 Podman 6、Pandas 3、MySQL/MariaDB 等软件更新，并提前提供 Python 3.15、Go 1.27、GCC 16.2 和 glibc 2.44 等工具链与运行时。",
+    "fulltext_zh": "开发版本：Fedora 45 Beta（DistroWatch.com 新闻）\n\nFedora 项目宣布发布开发快照 Fedora 45 beta。新版本引入了新的安全功能和软件包升级：“\n\nFedora Linux 45 用 kmscon 替换了传统的内核控制台，带来流畅的渲染、更好的 Unicode/字体支持以及增强的系统稳定性。Fedora Linux 45 现在默认要求安装前具有有效的软件包签名，防止无意中安装未签名的软件包。桌面密钥管理也通过 oo7 在各环境间实现标准化，取代了 GNOME Keyring 和 KWallet 等旧后端实现。Fedora Linux 45 Beta 提供了许多新版本，包括 Podman 6、Pandas 3、MySQL 和 MariaDB 等等，并率先提供更新后的工具链和运行时，包括 Python 3.15、Go 1.27、GCC 16.2 和 glibc 2.44。\n\n”更多细节可在以下位置找到：\nFedora-Workstation-Live-45_Beta-1.3.x86_64.iso\nFedora-KDE-Desktop-Live-45_Beta-1.3.x86_64.iso\nFedora-Server-dvd-x86_64-45_Beta-1.3.iso\n\n近期相关新闻和发布\n开发版本：Fedora 45 Beta\n发行版本：Fedora 44\n开发版本：Fedora 44 Beta\n发行版本：Fedora 43\n开发版本：Fedora 43 Beta\n发行版本：Fedora 42\n\nFedora Linux（曾用名 Fedora，更早为 Fedora Core）是由社区支持的 Fedora 项目开发、Red Hat 所有的 Linux 发行版。Fedora Linux 包含在自由开源许可证下分发的软件，旨在引领此类技术的前沿。Fedora 以注重创新、早期集成新技术并与上游 Linux 社区紧密合作而闻名。Fedora Linux 的默认桌面是 GNOME 桌面环境，默认界面是 GNOME Shell。其他桌面环境，包括 KDE、Xfce、LXDE、MATE 和 Cinnamon，也可用。Fedora 项目还分发称为 Fedora spins 的定制变体。这些是用特定"
+  },
+  "f5d9f828eecdc0aec14652f4e32c96ff": {
+    "id": "f5d9f828eecdc0aec14652f4e32c96ff",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-Land-AVX-512-xor-gen",
+    "title_en": "Linux 7.4 Slated To Land The AVX-512 Optimized xor_gen For A Big Performance Win",
+    "summary_en": "Over the past few months there have been patches floating around for an AVX-512 optimized xor_gen() for the Linux kernel for that functuon used by the Linux software RAID code. It's been shhowing very nice performance gains with this function being used for generating and validating parity blocks such as for RAID5 and RAID6. The upcoming Linux 7.4 cycle is slated  to merge this nice enhancement for benefiting AMD Zen 4 and newer or current Intel server CPUs with AVX-512...",
+    "pub_date": "Tue, 15 Sep 2026 20:53:15 -0400",
+    "title_zh": "Linux 7.4 将引入 AVX-512 优化的 xor_gen，带来显著性能提升",
+    "summary_zh": "Linux 7.4 内核计划合并 AVX-512 优化的 xor_gen() 函数，该函数用于软件 RAID 的奇偶校验块生成与验证，在 AMD Zen 4 及更新架构和当前 Intel 服务器 CPU 上可带来显著性能提升。该补丁由 Google 的 Eric Biggers 主导，已进入 TIP 的 x86/fpu 分支，预计在 10 月下旬的合并窗口提交。",
+    "fulltext_zh": "Linux 7.4 将引入 AVX-512 优化的 xor_gen，带来显著性能提升\n2026 年 9 月 15 日 20:53 EDT。\n\n过去几个月里，针对 Linux 内核的 AVX-512 优化 xor_gen() 补丁一直在流传，该函数被 Linux 软件 RAID 代码使用。该函数用于生成和验证 RAID5 和 RAID6 等奇偶校验块，已展现出非常不错的性能提升。即将到来的 Linux 7.4 周期计划合并这一增强，以惠及 AMD Zen 4 及更新架构或当前支持 AVX-512 的 Intel 服务器 CPU。\n\nGoogle 的 Eric Biggers 一直主导这项工作，通过 AVX-512 为 xor_gen() 带来显著的性能提升，正如他近年来为许多其他 Linux 加密代码所做的那样，尤其是围绕 AVX-512 和其他现代 CPU ISA 能力，实现了出色的性能改进。\n\n最新版本的补丁现已排队，将在 10 月下旬的 Linux 7.4 合并窗口提交。上周通过 TIP 的 x86/fpu Git 分支排队，使 AVX-512 xor_gen() 在 AMD Ryzen 9 9950X 上展现出非常不错的性能提升：\n\n既然它已进入 TIP 分支，除非最后一刻出现意外，否则它将在令人兴奋的 Linux 7.4 内核中亮相。\n\nARCTIC 的 Linux 风扇控制器驱动将以 BSD-2-Clause 双许可\nSystem76 推出 Thelio Mira AI，搭载 AMD Ryzen + NVIDIA 或 AMD 显卡\n神秘的 x86 CPU 已具备 APX、x86S，Intel 在无遗留 x86 上止步之处\nNouveau 为 HDMI 2.1 DSC 做准备，AMD HDMI FreeSync 修复进入 Linux 7.4\nInputPlumber 0.79 增加对更多掌机的支持\nLinux 获得 ASUS ROG NVMe 硬盘盒 RGB 灯光的逆向工程驱动\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、显卡驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\nVoid Linux 维护者因 AI 政策争议放弃 100 多个软件包\nIntel 逆转取消其开源字体项目的决定\n神秘的 x86 CPU 已具备 APX、x86S，Intel 在无遗留 x86 上止步之处\nAI 生成了大量“丑陋”代码，但发现了更快 Linux 编译的主要瓶颈\nLinux 内核计划移除约 55,000 行旧 ARM 平台代码\nAMDGPU HDMI 2.1 默认启用补丁已就绪，随 Linux 7.4 带来 FreeSync、VRR 和 ALLM\nBFS 文件系统将在 Linux 7.4 中移除\nDebian 13.7 发布，包含大量错误修复\n在享受无广告浏览的同时，支持单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，保留所有权利。\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "106947b9abfff31dfe9a842b9e7c8b46": {
+    "id": "106947b9abfff31dfe9a842b9e7c8b46",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-AMD-P-State-Zen-6",
+    "title_en": "AMD P-State Driver For Linux 7.4 Will Tune For Zen 6 Client CPUs",
+    "summary_en": "Linux 7.4 looks like it will be a very exciting kernel update for AMD customers. On the AMD Radeon graphics side HDMI 2.1 is being enabled by default with the AMDGPU driver with the HDMI FreeSync, VRR, and ALLM features in tow. On the AMD Ryzen client CPU side, there will be Zen 6 tuning with the AMD P-State CPU frequency scaling driver...",
+    "pub_date": "Tue, 15 Sep 2026 15:03:22 -0400",
+    "title_zh": "Linux 7.4 的 AMD P-State 驱动将为 Zen 6 客户端 CPU 进行调优",
+    "summary_zh": "Linux 7.4 内核将为 AMD Zen 6 客户端 CPU 带来 AMD P-State 驱动的能效偏好（EPP）调优，针对性能核、密集/效率核以及新的低功耗核心类型采用不同设置，并改用频率值计算加速比。相关补丁已提交至 Linux 电源管理子系统，预计随 10 月开启的合并窗口进入 Linux 7.4。",
+    "fulltext_zh": "Linux 7.4 的 AMD P-State 驱动将为 Zen 6 客户端 CPU 进行调优\n\n发布于 2026 年 9 月 15 日 下午 03:03 EDT。\n\n对于 AMD 用户来说，Linux 7.4 看起来将是一个非常令人兴奋的内核更新。在 AMD Radeon 图形方面，AMDGPU 驱动将默认启用 HDMI 2.1，并带来 HDMI FreeSync、VRR 和 ALLM 功能。在 AMD Ryzen 客户端 CPU 方面，将通过 AMD P-State CPU 频率调节驱动进行 Zen 6 调优。\n\n在 Linux 7.4 合并窗口之前提交的是针对 Zen 6 客户端 CPU 的 AMD P-State 能效偏好（EPP）调整。ACPI EPP 在 Zen 6 客户端 CPU 上将表现不同，它包括针对性能核和密集/效率核的不同调优，以及新的 AMD 低功耗核心类型。\n\n除了为所有三种 Zen 6 核心类型设置不同值之外，AMD P-State 驱动还进行了调整，加速比现在根据频率值计算，而不是任意的性能标度。\n\nAMD Zen 6 客户端 EPP 调优补丁与其他一些 AMD P-State 修复一起，通过拉取请求发送到了 Linux 电源管理子系统的“-next”分支。该拉取请求明确标记为面向 Linux 7.4。\n\nLinux 7.4 合并窗口将在 10 月下半月开启，而稳定版内核可能会在 12 月底发布，具体取决于 v7.3 和 v7.4 周期剩余部分的进展。由于下一代 AMD Ryzen CPU 传闻将在 1 月 CES 前后或 2027 年上半年发布，Linux 7.4 看起来将正好及时发布，成为 AMD Linux 客户的一份美妙的圣诞礼物。\n\nLinux 补丁将修复 AMD Zen 5 TLB 大小低报问题\nAMD 为 EPYC 虚拟机准备增强型 SMT 保护“ESMTP”\nLLVM 合并对 AMD RMPCHKD、RMPREAD 和 RMPOPT 指令的支持\nLinux 为新的 AMD Zen 6 BTB CTX 隔离安全功能做准备\nAMD 致力于“将 Rust 深入推入 GPU 栈”\nLemonade 11.9 本地 AI 服务器发布，带来令人超级兴奋的 AMD ROCm HRX 后端\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nVoid Linux 维护者因 AI 政策争议弃管 100 多个软件包\nIntel 逆转取消其开源字体项目的决定\n神秘的 x86 CPU 已具备 APX、x86S，接续 Intel 留下的无遗留 x86\nAI 生成了大量“丑陋”代码，但发现了更快 Linux 编译的主要瓶颈\nLinux 内核计划移除约 5.5 万行旧 ARM 平台代码\nAMDGPU HDMI 2.1 默认启用补丁已就绪，随 Linux 7.4 带来 FreeSync、VRR 和 ALLM\nBFS 文件系统将在 Linux 7.4 中被移除\nDebian 13.7 发布，包含许多错误修复\n\n在享受无广告浏览、单页文章查看的同时，\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "f09d917ab5ac7dd9a6697edabf7e3e4c": {
+    "id": "f09d917ab5ac7dd9a6697edabf7e3e4c",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/SDL3-Ported--To-HarmonyOS",
+    "title_en": "SDL3 Ported To HarmonyOS / OpenHarmony",
+    "summary_en": "The SDL3 library commonly used for games and applications for cross-platform hardware and software abstractions now has upstream support for Huawei's HarmonyOS and OpenHarmony...",
+    "pub_date": "Tue, 15 Sep 2026 12:54:08 -0400",
+    "title_zh": "SDL3 移植至 HarmonyOS / OpenHarmony",
+    "summary_zh": "SDL3 库现已上游支持华为的 HarmonyOS 和 OpenHarmony。著名 Linux 游戏移植者 Ryan \"Icculus\" Gordon 受 Outfit7 游戏工作室赞助完成了这一移植，并已在真实硬件上测试，部分商业游戏已在使用。该支持已合并至上游 SDL Git。",
+    "fulltext_zh": "SDL3 库通常用于游戏和应用程序，提供跨平台硬件和软件抽象，现已获得对华为 HarmonyOS 和 OpenHarmony 的上游支持。\n\n著名 Linux 游戏移植者 Ryan \"Icculus\" Gordon 受 Outfit7 游戏工作室赞助，将 SDL3 库引入 HarmonyOS/OpenHarmony。HarmonyOS 是华为开发的专有分布式操作系统，用于智能手机、平板电脑、PC、智能设备等。HarmonyOS 采用微内核设计。OpenHarmony 是开源分布式操作系统，简单来说，是 HarmonyOS 的一个分支。\n\n据 Icculus 称，这个 SDL3 到 HarmonyOS/OpenHarmony 的移植已被一些商业游戏使用。它已在真实硬件上测试，并于今天合并到上游 SDL Git。\n\n详细介绍了 SDL3 在 HarmonyOS 上的所有细节。"
+  },
+  "7c5bda834eee6280fc2ec9ed45fe3e72": {
+    "id": "7c5bda834eee6280fc2ec9ed45fe3e72",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/ubuntu-2610-wildcat-lake",
+    "title_en": "Ubuntu 26.10 Set To Deliver Better Performance For Intel Core 3 Wildcat Lake",
+    "summary_en": "While Ubuntu 26.04 LTS is working fine out-of-the-box on new Intel Core 3 \"Wildcat Lake\" laptops like the CHUWI UniBook, next month's release of Ubuntu 26.10 will help deliver better performance out of these low-cost laptop options.",
+    "pub_date": "Tue, 15 Sep 2026 11:34:07 -0400",
+    "title_zh": "Ubuntu 26.10 将为 Intel Core 3 Wildcat Lake 带来更佳性能",
+    "summary_zh": "Ubuntu 26.10 将搭载 Linux 7.2 内核、Mesa 26.2 图形驱动等更新，相比 Ubuntu 26.04 LTS 在 Intel Core 3 Wildcat Lake 硬件上可提供更佳性能。测试基于 CHUWI UniBook（Core 3 304、8GB 内存、256GB NVMe SSD）对比 Ubuntu 26.04 与 26.10 开发版，正式版预计 10 月 15 日发布。",
+    "fulltext_zh": "Ubuntu 26.10 将为 Intel Core 3 Wildcat Lake 带来更佳性能\n\n2026 年 9 月 15 日 上午 11:34 EDT。\n\n虽然 Ubuntu 26.04 LTS 在新款 Intel Core 3 上开箱即用表现良好，但下个月发布的 Ubuntu 26.10 将有助于这些低成本笔记本选项发挥出更好的性能。\n\n即将发布的 Ubuntu 26.10 将内核从 Ubuntu 26.04 LTS 的 Linux 7.0 升级到 Linux 7.2，并带来更新的 Mesa 26.2 图形驱动栈及其他软件升级，从而让新的 Intel Wildcat Lake 硬件获得更高性能。Intel Panther Lake 同样有望受益，但本文重点关注低端市场，即 Core 3 Wildcat Lake 的性能表现。\n\n本次将包含所有稳定版更新的 Ubuntu 26.04 与截至 9 月 13 日处于当前开发状态的 Ubuntu 26.10 进行了性能对比。此时距离 9 月底的 Ubuntu 26.10 测试版以及 10 月 15 日的 Ubuntu 26.10 正式发布还有一段时间。\n\n对比在 CHUWI UniBook 上进行，该设备搭载 Intel Core 3 304 SoC、8GB 内存和 256GB NVMe SSD，运行 Ubuntu 26.04 LTS 与 Ubuntu 26.10 每日构建版。这是一次直接的对比，用于衡量 Ubuntu 26.10 升级及其新软件包带来的性能影响。后续文章还将探讨可选的 Ubuntu 26.10 amd64v3 二进制文件对 Wildcat Lake 的影响。\n\n相关文章：\nCachyOS 与其他 Linux 操作系统在 4.6 万美元工作站上的性能对比\n分析 Fedora 在搭载 Intel Panther Lake 的 Framework Laptop 13 Pro 上的缓慢性能\nIntel Xeon 678X 在 HP Z4 G6i 上 Windows 11 与 Ubuntu 26.04 的性能对比\n在 Framework Laptop 13 Pro 上对六种 Linux 发行版进行基准测试\nCachyOS 在 AMD Ryzen AI 9 HX 470 上超越 Windows 11，略优于 Ubuntu 与 Fedora\nUbuntu 26.04 LTS 与 Windows 11 及 CachyOS 在 5399 美元笔记本上的性能对比\n\n同时享受无广告浏览、单页文章视图。\n法律免责声明、隐私政策、Cookie。\n版权所有 © 2004 - 2026。所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "d5a3697ed087ddcdaa0a6cbb29815abd": {
+    "id": "d5a3697ed087ddcdaa0a6cbb29815abd",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Fedora-45-Beta",
+    "title_en": "Fedora 45 Beta Released With KMSCON Console, GNOME 51 & Other Updates",
+    "summary_en": "The beta release of Fedora 45 is out today and right on schedule for this wonderful Linux distribution...",
+    "pub_date": "Tue, 15 Sep 2026 10:30:08 -0400",
+    "title_zh": "Fedora 45 Beta 发布：采用 KMSCON 控制台、GNOME 51 及其他更新",
+    "summary_zh": "Fedora 45 Beta 已按计划发布，带来大量新特性：用 KMSCON 替代内核控制台、Anaconda 安装器支持 Stratis 存储、默认限制 ptrace 以增强安全、默认强制签名检查、软件包构建可复现，并引入 DRM Panic 前端。软件包更新包括 GNOME 51、Go 1.27、Python 3.15、GCC 16.2、Glibc 2.44、LLVM 23、RPM 6.1 等。正式版计划于 10 月 20 日发布，备用日期为 10 月 27 日。",
+    "fulltext_zh": "Fedora 45 Beta 发布：采用 KMSCON 控制台、GNOME 51 及其他更新\n2026 年 9 月 15 日 上午 10:30 EDT 发布。\n\n今天如期发布，这款出色的 Linux 发行版又迎来了新版本。\n\nFedora 45 是又一个功能丰富的更新，现在使用 KMSCON 替代内核控制台，Anaconda 安装器支持 Stratis 存储，默认限制 ptrace 以提升安全性，默认强制执行签名检查，并期望软件包构建可复现。Fedora 45 还引入了 DRM Panic 前端，以便在遇到内核问题时提供更便捷、友好的体验。\n\nFedora 45 还包含许多软件包更新，例如 Fedora Workstation 45 的 GNOME 51 桌面、Go 1.27、Python 3.15、GCC 16.2 编译器、Glibc 2.44、LLVM 23、RPM 6.1 以及许多其他更新。\n\nFedora 45 目前正朝着 10 月 20 日首次亮相的发布计划推进，应急备用日期为 10 月 27 日。\n\n下载及今日 Fedora 45 Beta 发布的更多详情，请访问：\n\nFedora 47 考虑使用 Thin LTO 编译器优化\nFedora 46 提案希望为 Crystal 编程语言提供官方支持\nFedora + Tuned-PPD 性能回归应随新 Linux 内核修复\nFedora x86-64-v3 优化软件包推迟到至少 Fedora 46\nFedora CoreOS 将默认启用 systemd-oomd 和 zRAM Swap\nx86_64 Shadow Stack 默认启用目标重新定为 Fedora 46\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nVoid Linux 维护者因 AI 政策争议弃养 100 多个软件包\nIntel 逆转取消其开源字体项目的决定\n神秘的 x86 CPU 已具备 APX，x86S 延续 Intel 未竟的无传统 x86 之路\nAI 生成了大量“丑陋”代码，但发现了加速 Linux 编译的主要瓶颈\nLinux 内核计划移除约 55,000 行旧 ARM 平台代码\nAMDGPU HDMI 2.1 默认启用补丁已就绪，将随 Linux 7.4 带来 FreeSync、VRR 和 ALLM\nBFS 文件系统将在 Linux 7.4 中被移除\nDebian 13.7 发布，包含许多错误修复\n\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "5322678e49b244aa83d019bd102ed9eb": {
+    "id": "5322678e49b244aa83d019bd102ed9eb",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/first-arch-linux-iso-powered-by-linux-kernel-7-1-is-now-available-for-download/",
+    "title_en": "First Arch Linux ISO Powered by Linux Kernel 7.1 Is Now Available for Download",
+    "summary_en": "The first Arch Linux ISO powered by kernel 7.1 is now available for download, bringing updated hardware support and the latest installation media.\nThe post First Arch Linux ISO Powered by Linux Kernel 7.1 Is Now Available for Download appeared first on Linux Today.",
+    "pub_date": "Tue, 15 Sep 2026 07:23:45 +0000",
+    "title_zh": "首个搭载 Linux 内核 7.1 的 Arch Linux ISO 现已开放下载",
+    "summary_zh": "首个由 Linux 内核 7.1 驱动的 Arch Linux ISO 镜像现已开放下载，带来更新的硬件支持和最新安装介质。",
+    "fulltext_zh": "首个由内核 7.1 驱动的 Arch Linux ISO 现已开放下载，带来更新的硬件支持以及最新的安装介质。\n\n文章《首个搭载 Linux 内核 7.1 的 Arch Linux ISO 现已开放下载》最初发布于 Linux Today。"
+  },
+  "0e03a5ddf398d1e9dfd86d6dc8c13dfb": {
+    "id": "0e03a5ddf398d1e9dfd86d6dc8c13dfb",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/kde-plasma-6-8-adds-resizable-virtual-screens-and-larger-emojis/",
+    "title_en": "KDE Plasma 6.8 Adds Resizable Virtual Screens and Larger Emojis",
+    "summary_en": "KDE Plasma 6.8 adds resizable virtual screens and larger emojis, alongside desktop improvements designed to enhance usability and the overall user experience.\nThe post KDE Plasma 6.8 Adds Resizable Virtual Screens and Larger Emojis appeared first on Linux Today.",
+    "pub_date": "Tue, 15 Sep 2026 07:21:14 +0000",
+    "title_zh": "KDE Plasma 6.8 新增可调整大小的虚拟屏幕和更大的表情符号",
+    "summary_zh": "KDE Plasma 6.8 带来可调整大小的虚拟屏幕和更大的表情符号，同时包含多项桌面改进，旨在提升易用性和整体用户体验。",
+    "fulltext_zh": "KDE Plasma 6.8 新增了可调整大小的虚拟屏幕和更大的表情符号，同时带来了一系列桌面改进，旨在提升易用性和整体用户体验。\n\n文章《KDE Plasma 6.8 新增可调整大小的虚拟屏幕和更大的表情符号》最初发布于 Linux Today。"
+  },
+  "5b38e5c8f5d2bc708b1ffbf88806a1ff": {
+    "id": "5b38e5c8f5d2bc708b1ffbf88806a1ff",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/incus-7-3-released-with-shared-gpu-acceleration-and-13-security-fixes/",
+    "title_en": "Incus 7.3 Released with Shared GPU Acceleration and 13 Security Fixes",
+    "summary_en": "Incus 7.3 introduces shared GPU acceleration alongside 13 security fixes, delivering improved hardware sharing, virtualization, and system security.\nThe post Incus 7.3 Released with Shared GPU Acceleration and 13 Security Fixes appeared first on Linux Today.",
+    "pub_date": "Tue, 15 Sep 2026 07:19:36 +0000",
+    "title_zh": "Incus 7.3 发布：支持共享 GPU 加速并修复 13 个安全问题",
+    "summary_zh": "Incus 7.3 正式发布，新增共享 GPU 加速功能，允许虚拟机之间共享 GPU 资源，提升硬件利用效率。同时该版本修复了 13 个安全漏洞，增强了虚拟化与系统安全性。",
+    "fulltext_zh": "Incus 7.3 引入了共享 GPU 加速功能，并修复了 13 个安全问题，带来更好的硬件共享、虚拟化与系统安全性。\n\n文章《Incus 7.3 发布：支持共享 GPU 加速并修复 13 个安全问题》最初出现在 Linux Today 上。"
+  },
+  "3c1659b26bf492412dc4c2d2577989e6": {
+    "id": "3c1659b26bf492412dc4c2d2577989e6",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/komodo-2-3-build-and-deploy-tool-released-with-faster-container-search/",
+    "title_en": "Komodo 2.3 Build and Deploy Tool Released with Faster Container Search",
+    "summary_en": "Komodo 2.3 improves container search performance, making it faster to find and manage containers while building, deploying, and managing infrastructure.\nThe post Komodo 2.3 Build and Deploy Tool Released with Faster Container Search appeared first on Linux Today.",
+    "pub_date": "Tue, 15 Sep 2026 07:16:49 +0000",
+    "title_zh": "Komodo 2.3 构建与部署工具发布，容器搜索速度更快",
+    "summary_zh": "Komodo 2.3 版本发布，主要改进了容器搜索性能，让用户在构建、部署和管理基础设施时能更快速地查找和管理容器。",
+    "fulltext_zh": "Komodo 2.3 改进了容器搜索性能，使得在构建、部署和管理基础设施时，查找和管理容器变得更加快速。\n\n文章《Komodo 2.3 构建与部署工具发布，容器搜索速度更快》最初出现在 Linux Today 上。"
+  },
+  "3b251673ca958fc806a7dc3c4a6f7d71": {
+    "id": "3b251673ca958fc806a7dc3c4a6f7d71",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/4mlinux-52-0-released-with-better-support-for-legacy-gpus-linux-kernel-6-18-lts/",
+    "title_en": "4MLinux 52.0 Released with Better Support for Legacy GPUs, Linux Kernel 6.18 LTS",
+    "summary_en": "4MLinux 52.0 arrives with improved support for legacy GPUs and the 6.18 LTS kernel, delivering updated hardware compatibility and system improvements.\nThe post 4MLinux 52.0 Released with Better Support for Legacy GPUs, Linux Kernel 6.18 LTS appeared first on Linux Today.",
+    "pub_date": "Tue, 15 Sep 2026 07:15:27 +0000",
+    "title_zh": "4MLinux 52.0 发布：更好支持旧款 GPU，搭载 Linux 6.18 LTS 内核",
+    "summary_zh": "4MLinux 52.0 正式发布，带来对旧款 GPU 的更好支持，并升级至 Linux 6.18 LTS 内核，提供更新的硬件兼容性和系统改进。",
+    "fulltext_zh": "4MLinux 52.0 发布，改进了对旧款 GPU 的支持，并搭载 6.18 LTS 内核，带来更新的硬件兼容性和系统改进。\n\n文章《4MLinux 52.0 发布：更好支持旧款 GPU，搭载 Linux 6.18 LTS 内核》最初出现在 Linux Today 上。"
   }
 }

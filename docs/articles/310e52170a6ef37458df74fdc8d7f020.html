@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MAKERphone 2.0：让你亲手打造4G手机，还能用AI“氛围编程”开发应用 — Linux 中文速报</title>
+<title>Orion for Linux 测试版更新，支持自定义工具栏 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>MAKERphone 2.0：让你亲手打造4G手机，还能用AI“氛围编程”开发应用</h1>
+  <h1>Orion for Linux 测试版更新，支持自定义工具栏</h1>
 
-  <div class="article-summary">CircuitMess推出MAKERphone 2.0，一款无需焊接的DIY手机套件。它基于ESP32-S3，支持4G LTE通话和短信，配备1.77英寸彩屏、键盘和多种模块。用户可用MicroPython或Arduino C++编程，还能借助AI工具VibeBoy生成应用。套件早鸟价119美元，旨在让用户远离社交媒体，了解手机内部原理。</div>
+  <div class="article-summary">Orion for Linux 测试版 v0.4.3 发布，新增工具栏自定义功能，用户可拖拽添加、移除和重新排列按钮，并支持重置。此外还加入了页面内查找、更新日志对话框和更多网站设置选项，并修复了大量错误。该浏览器基于 WebKitGTK，目前仅以 Flatpak 形式提供。</div>
 
-  <div class="article-body"><p>MAKERphone 2.0：让你亲手打造4G手机，还能用AI“氛围编程”开发应用</p><p>它基于ESP32-S3，插入真实SIM卡即可进行4G通话和短信，无需焊接即可拼装。你可以编写自己的应用，远离社交媒体。</p><p>我们大多数人每天都带着手机，但很少有人能说清楚手机内部到底是如何运作的。这个认知鸿沟正是CircuitMess试图填补的——或者说，一直在试图填补的。</p><p>由Albert Gajšak创立的CircuitMess，早在2018年就发起了首次MAKERphone众筹活动，这款自己动手组装的手机套件筹集了超过32.4万美元，最终向6000多人发货，名为“MAKERphone”。</p><p>现在，续作来了。MAKERphone 2.0已在Kickstarter上线（合作链接），距离众筹结束还有数周，但已经远超目标。</p><p>其理念与之前相同：你自己组装一部能用的手机，然后学习在它上面编程。这次最大的不同是，你不需要电烙铁。至少对我来说，这是个巨大的解脱，因为我焊接技术很糟糕。</p><p>本文包含合作推广链接。请阅读我们的相关说明。</p><p>📝 MAKERphone 2.0 主要规格</p><p>如你所见，MAKERphone看起来像普通的键盘手机。以下是主要细节：</p><p>- ESP32-S3，双核，4 MB闪存，4 MB PSRAM</p><p>- 4G LTE Cat-1，支持2G回退，Nano SIM</p><p>- 1.77英寸彩色屏幕，160×128分辨率</p><p>- 12键数字键盘，导航摇杆，4个功能键，音量键</p><p>- DAC，扬声器，I²S麦克风，3.5毫米耳机插孔</p><p>- 1000 mAh电池，USB-C充电</p><p>- Wi-Fi，蓝牙，USB</p><p>- UMAX模块化连接器</p><p>- 这次无需焊接</p><p>- MicroPython，Arduino C++，VibeBoy（AI辅助）</p><p>- 早鸟价119美元起，之后169美元</p><p>该套件超级早鸟价为119美元起，之后价格逐步上升，零售价为169美元。</p><p>这是一款DIY小工具，手机到手时是一盒零件和一份组装指南，你把它组装成能通过4G LTE打真实电话、发真实短信的东西。插入SIM卡，它就像一部真正的手机。</p><p>现在4G似乎比常见的5G低一档，但这款设备并非要取代你的智能手机。如果你不打算使用那些联网的社交媒体和应用，其实并不需要5G。我稍后会解释这个概念。</p><p>其核心是ESP32-S3，与无数爱好者开发板中使用的低功耗微控制器属于同一家族。所以，它不会与骁龙或苹果仿生芯片相比或竞争，他们甚至没有假装要这么做。</p><p>初代MAKERphone要求你把整个电路板焊接起来。2.0版本取消了这一要求，如果你从未碰过电烙铁，这大大降低了门槛。CircuitMess表示，它设计为11岁左右的孩子就能组装，所以一个正常的成年人应该能轻松搞定。</p><p>从官方组装视频来看，似乎只是把零件拼在一起。</p><p>它有一个1.77英寸彩色显示屏，一个耳机插孔（是的，2026年还有），以及模块化设计，可以加装额外硬件。更多内容见下文。</p><p>模块、编程和智能手环</p><p>让它不仅仅是一个怀旧套件的部分在于模块系统。MAKERphone 2.0支持扩展模块，改变手机的功能。其中几个模块随盒附赠。</p><p>有一个红外模块，用于控制老式电视；一个摄像头模块；一个2W扬声器；一个LED模块；以及一个温湿度传感器。还有一块洞洞板，可以接入你自己的传感器。</p><p>组装完成后，你就可以编程了。你可以用MicroPython或Arduino C++为它编写代码。CircuitMess还推出了一款AI辅助编程工具，名为VibeBoy，所以“氛围编程”的潮流正式蔓延到了DIY手机领域。</p><p>这并不完全是坏事。不是每个人都能用MicroPython编写代码或制作自定义应用。但大语言模型消除了这一障碍。你有硬件；你使用大语言模型，让它生成你想要的那种软件。这就是Seeed Studio和许多其他爱好者硬件制造商推广自家AI辅助平台的原因。它让硬件变得更有趣。</p></div>
+  <div class="article-body"><p>Orion for Linux 测试版更新，支持自定义工具栏 - OMG! Ubuntu</p><p>iOS 和 Mac 网页浏览器的原生 WebKitGTK 移植版现已推出。</p><p>Orion Beta v0.4.3 继续完善浏览器的功能集，以与其苹果平台版本保持一致。你现在可以自定义工具栏了。早期测试版中已有上下文菜单选项，但打开的是一个无法使用的按钮选择器——现在它可以正常工作了。</p><p>从调色板的“当前工具栏”区域拖出项目即可移除它们，或者从调色板拖到顶部区域来添加。你也可以通过拖拽重新排列按钮。如果需要，还可以重置回默认工具栏布局：</p><p>编辑 Orion 的工具栏就像使用 Firefox 一样</p><p>我觉得默认工具栏对我来说太杂乱了，所以我一直在等这个功能。</p><p>v0.4.3 测试版还新增了可用的页面内查找功能，可以快速跳转到网站上的特定文本；由于 Orion 的对话框中加入了发布说明，了解每次更新的新内容变得更加容易。还添加了更多“网站设置”选项。</p><p>页面内查找在 v0.4.3 测试版中可用</p><p>v0.4.2 测试版中加入了更多网站设置选项（我之前没来得及介绍）。你可以针对单个网站强制启用深色模式、调整字体大小、禁用粘性页眉，并使用“擦除元素”功能永久移除页面元素——非常方便。</p><p>本次更新的其余部分，正如你所料，主要是错误修复。修复了很多。Kagi 团队解决了一系列问题，包括全屏模式下侧边栏和工具栏不隐藏的异常，以及地址栏中锁图标消失的问题。</p><p>Kagi 提到对 GTK4/libadwaita 界面进行了进一步改进，但没有详细说明。遗憾的是，驯服那个超大号汉堡菜单还不在其中，唉。</p><p>一如既往，Orion for Linux 仍处于测试阶段。它会有错误，会崩溃，也不会给你做早餐。我建议将它作为稳定浏览器的辅助工具——Firefox 156 本周已发布——而不是完全依赖它。</p><p>在 Ubuntu 上安装 Orion 测试版</p><p>Orion 测试版仅以 Flatpak 应用形式提供。更新来自 Kagi 托管的专用 Orion Beta Flatpak 仓库——Orion Browser 是……</p><p>Orion 共享 GNOME 50 运行时。如果这是你将安装的唯一 Flatpak 应用，你需要先添加……以便拉取运行时。</p><p>sudo apt install flatpak</p><p>flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo</p><p>flatpak remote-add --if-not-exists orion-beta https://flatpak.orionbrowser.com/orion-beta.flatpakrepo</p><p>flatpak install orion-beta com.kagi.Orion</p><p>从应用程序网格（或你使用的等效界面）中启动。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/makerphone-2-annoucement/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/orion-browser-linux-043-update" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
