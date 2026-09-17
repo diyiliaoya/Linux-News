@@ -11262,5 +11262,137 @@
     "title_zh": "4MLinux 52.0 发布：更好支持旧款 GPU，搭载 Linux 6.18 LTS 内核",
     "summary_zh": "4MLinux 52.0 正式发布，带来对旧款 GPU 的更好支持，并升级至 Linux 6.18 LTS 内核，提供更新的硬件兼容性和系统改进。",
     "fulltext_zh": "4MLinux 52.0 发布，改进了对旧款 GPU 的支持，并搭载 6.18 LTS 内核，带来更新的硬件兼容性和系统改进。\n\n文章《4MLinux 52.0 发布：更好支持旧款 GPU，搭载 Linux 6.18 LTS 内核》最初出现在 Linux Today 上。"
+  },
+  "ce5c3267fb67b4b448e9743b1be66ea5": {
+    "id": "ce5c3267fb67b4b448e9743b1be66ea5",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/gnome-51-released",
+    "title_en": "GNOME 51 released with passkey login and smoother UX",
+    "summary_en": "GNOME 51 is out, bringing FIDO2 passkey login, a Reduced Motion option and frame scheduling changes that make UI animations and scrolling feel smoother. Core apps pick up improvements too. The desktop Maps app gains offline area downloads and live transit data, Papers now lets you add visual signatures and Nautilus speeds up the loading of large folders. While this is a more modest release than we&#8217;ve become accustomed to – some planned changes, like a GTK4 port of Disks and a slider to cha",
+    "pub_date": "Wed, 16 Sep 2026 15:32:34 +0000",
+    "title_zh": "GNOME 51 发布，支持通行密钥登录并带来更流畅的用户体验",
+    "summary_zh": "GNOME 51 正式发布，新增 FIDO2 通行密钥登录、截图区域键盘调整、显示器亮度记忆等功能。Mutter 合成器优化了帧调度和屏幕录制性能，使动画和滚动更流畅。核心应用也获得改进，如地图支持离线下载和实时公交数据、文档可添加手写签名等。Ubuntu 26.10 将于 10 月 15 日搭载该版本发布。",
+    "fulltext_zh": "GNOME 51 发布，带来 FIDO2 通行密钥登录、一个选项以及帧调度变更，使 UI 动画和滚动感觉更流畅。\n\n核心应用也有所改进。桌面地图应用获得离线区域下载和实时公交数据，文档现在允许你添加视觉签名，文件则加快了大文件夹的加载速度。\n\n尽管这是一个比我们习惯的更为温和的版本——一些计划中的变更，比如文档的 GTK4 移植和用于改变触摸板滚动速度的滑块，并未纳入——但仍有很多值得期待的内容。\n\nUbuntu 26.10 将于 10 月 15 日发布，搭载 GNOME 51，并在其之上加入自己的定制。新的 GNOME 版本不会被回溯移植，因此 Ubuntu 26.04 LTS 在其支持期内将保持在 GNOME 50。\n\nGNOME 51：新功能\n\nMutter 让帧更流畅\n\nMutter 是驱动 GNOME Shell 的合成器，其最新版本又进行了一系列后端变更，以优化内容在屏幕上的“绘制”方式。\n\n本周期的变更之一是对帧时钟估算渲染时间的方式进行了调整，这有助于减少在旧有固定估算过于严格或过于宽松的系统上出现丢帧的可能性，具体取决于硬件。\n\nMutter 51 还改进了屏幕录制和远程桌面会话，减少了抓取过程中在后台进行的不必要工作。降低总体开销（无论硬件还是软件渲染）意味着最终结果更流畅。\n\n那 GNOME 获得毛玻璃模糊效果呢？许多 Linux 博客大肆宣传，但这并不是面向用户的变更——至少现在还不是。Mutter 已获得对 Wayland 背景模糊效果协议的支持，但应用和表面必须主动请求——默认情况下没有应用这样做。\n\nGNOME Shell 默认没有背景模糊，所以不要去寻找开关，因为你找不到。\n\n使用键盘调整截图区域大小\n\n方向键调整区域大小\n\nGNOME Shell 的交互式截图工具现在支持键盘调整。\n\n使用键盘的方向键，你可以扩大、缩小或移动选择区域，无需使用鼠标。\n\n按一个方向键选择一条边，然后继续按击以使选定区域变大或变小。按住某个修饰键同时按方向键可以更大或更精细的增量移动，按住另一个修饰键同时按方向键可以移动整个选择区域。\n\n按某个键可以完全重置选择区域。与早期版本一样，当截图功能打开时，你可以按某个键进行抓拍——在这个版本中，不再使用相机快门音效，因为 Adwaita 现在有了自己的原生声音集。\n\nWeb 和 FIDO2/通行密钥登录支持\n\n更多登录和解锁方式（为需要的人）\n\nGNOME 显示管理器（GDM）改进了对认证机制的支持，包括智能卡和基于 Web 的登录，在登录和锁屏界面上。这些主要对拥有企业或远程设置的用户有用，而非家庭用户。\n\n智能卡登录并不新鲜，但 GDM 的统一认证框架增加了 Web 登录（二维码和 URL）以及 FIDO2/通行密钥支持。这项工作全部设计为可扩展的，以便将来可以轻松添加其他认证方法。\n\nGNOME Shell 保存显示器亮度\n\nGNOME Shell 现在为每个显示器保存亮度级别以及任何色彩模式设置（例如 HDR），并在重启时恢复。\n\n以前，内核 sysfs 背光接口被假定会记住它，但缺陷在于……亮度可能因省电模式（即调光）而改变。“调暗”的值会在下次启动时恢复——这并不总是你想要的。\n\n还有对更新的 HDR 设置的处理。亮度可能完全由软件（即 Mutter）控制，因此硬件不会保存任何内容；系统可能希望保持硬件背光以支持 HDR 高光，这意味着滑块值不准确。\n\n在 GNOME 51 中，Shell 改为存储和恢复亮度。显示器通过其 EDID 供应商、产品和序列号进行识别。"
+  },
+  "03136bded8aa7f7d131eb80ed2a854ad": {
+    "id": "03136bded8aa7f7d131eb80ed2a854ad",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12954",
+    "title_en": "Distribution Release: Raspberry Pi OS 2026-09-15",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Simon Long has announced the release of a new feature update of Raspberry Pi OS, a Debian-based Linux distribution designed for the Raspberry Pi range of single-board computers. The latest version brings an updated look for the Raspberry Pi Desktop and also introduces a new icon dock: \"Today....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Raspberry Pi OS 2026-09-15",
+    "summary_zh": "Raspberry Pi OS 发布 2026-09-15 功能更新，基于 Debian 并针对树莓派硬件优化。新版为 Raspberry Pi Desktop 带来焕然一新的外观，并引入全新的图标停靠栏，在保留简洁易用特性的同时增添现代功能。该桌面环境历经十余年演进，已从早期轻度定制的 LXDE 发展为基于 Wayland 和 labwc 的全新架构。",
+    "fulltext_zh": "发行版发布：Raspberry Pi OS 2026-09-15\n\nSimon Long 宣布发布 Raspberry Pi OS 的新功能更新，这是一个基于 Debian 的 Linux 发行版，专为 Raspberry Pi 系列单板计算机设计。最新版本为 Raspberry Pi Desktop 带来了更新的外观，并引入了新的图标停靠栏：\n\n“今天为你带来 Raspberry Pi Desktop 的一些可选更新，它在保持简洁性的同时获得了一些现代功能。目前被称为 Raspberry Pi Desktop 的桌面环境已经存在了十多年——它最初只是对原版 LXDE 桌面进行轻度定制，多年来逐渐演变成一个底层几乎完全不同的系统，基于 Wayland 和 labwc。其外观经过多次刷新，有了新的图标、主题和桌面背景，以至于如今的 Raspberry Pi Desktop 与最初的 LXDE 在视觉上几乎没有共同之处。但有一件事从未改变，那就是桌面的整体感觉——凭借其任务栏、状态图标和主菜单启动器，它让人想起大约 30 年前 Windows 95 和 Apple System 7 时代的桌面设计巅峰。”\n\n更多信息和截图请见相关页面。\n\n2026-09-15-raspios-trixie-arm64.img.xz\n2026-09-15-raspios-trixie-arm64-full.img.xz\n2026-09-15-raspios-trixie-arm64-lite.img.xz\n\n近期相关新闻与发布\n\n发行版发布：Raspberry Pi OS 2026-09-15\n发行版发布：Raspberry Pi OS 2026-04-13\n发行版发布：Raspberry Pi OS 2025-10-01\n发行版发布：Raspberry Pi OS 2025-05-06\n发行版发布：Raspberry Pi OS 2024-10-22\n发行版发布：Raspberry Pi OS 2023-10-10\n\n关于 Raspberry Pi OS\n\nRaspberry Pi OS（原名 Raspbian）是一个基于 Debian GNU/Linux 的免费操作系统，针对 Raspberry Pi 硬件（armhf 处理器架构）进行了优化。Raspberry Pi OS 附带超过 35,000 个软件包，即以良好格式打包的预编译软件，便于在 Raspberry Pi 上轻松安装。"
+  },
+  "89f90c0bb3ce9cf33a90e9c7312a43b6": {
+    "id": "89f90c0bb3ce9cf33a90e9c7312a43b6",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Miracle-WM-0.11",
+    "title_en": "Mir/Wayland-Powered Miracle-WM 0.11 Released With New Overview Mode, Window Urgency",
+    "summary_en": "Canonical engineer Matthew Kosarek rolled out Miracle-WM 0.11 today as an end-of-summer update to this Wayland compositor built atop the Mir library...",
+    "pub_date": "Wed, 16 Sep 2026 20:58:42 -0400",
+    "title_zh": "基于 Mir/Wayland 的 Miracle-WM 0.11 发布，新增概览模式和窗口紧急提示",
+    "summary_zh": "Canonical 工程师 Matthew Kosarek 发布了 Miracle-WM 0.11，这是基于 Mir 库构建的 Wayland 合成器的夏季末更新。主要新特性是“非常炫酷”的概览模式，可通过点击或双击主操作键访问，帮助选择不同窗口和工作区。此外还新增了窗口紧急提示支持，当窗口或非焦点工作区请求焦点时触发；插件现支持发布 IPC 事件和处理 IPC 命令。该版本还利用了 Mir 对多个新协议的支持。",
+    "fulltext_zh": "基于 Mir/Wayland 的 Miracle-WM 0.11 发布，新增概览模式和窗口紧急提示\n\n2026 年 9 月 16 日东部时间晚上 8:58 发布。\n\nCanonical 工程师 Matthew Kosarek 今天推出了 Miracle-WM 0.11，作为这个基于 Mir 库构建的 Wayland 合成器的夏季末更新。\n\nMiracle-WM 0.11 的主要特性是新的概览模式，被描述为“非常炫酷”，有助于选择不同的窗口和工作区。Miracle-WM 的“炫酷”概览模式可通过点击或双击主操作键来访问。\n\nMiracle-WM 0.11 还增加了对窗口紧急提示的支持，当某个窗口或非焦点工作区想要获得焦点时就会触发。Miracle-WM 插件现在也支持发布 IPC 事件和处理 IPC 命令。\n\nMiracle-WM 0.11 还利用了 Mir 对 ext_image_copy_capture_manager_v1、ext_output_image_capture_source_manager_v1、ext_foreign_toplevel_list_v1、ext_data_control_manager_v1、ext_input_trigger_action_manager_v1 和 ext_input_trigger_registration_manager_v1 等较新协议的支持。此版本基于\n\n希望从源代码构建 Miracle-WM 0.11 的用户可以在\n\nXWayland 26.1 RC2 发布测试，带来更多修复\nWayland 被发现“本质上比 X11 更快，但不一定更高效”\nDenial WM：直接嵌入 Flutter 的新 Wayland 合成器\nWayfire Wayland 合成器接近 v1.0 发布\nHyprland 0.56 发布，为这款 Wayland 合成器带来许多增强\nWayland 1.26 发布，新增指针扭曲事件\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nVoid Linux 维护者因 AI 政策争议遗弃 100 多个软件包\nIntel 逆转取消其开源字体项目的决定\nAI 生成了大量“丑陋”代码，但发现了加快 Linux 编译的主要瓶颈\nLinux 内核计划移除约 5.5 万行旧 ARM 平台代码\nBFS 文件系统将在 Linux 7.4 中被移除\nDebian 13.7 发布，带来许多错误修复\nAMDGPU HDMI 2.1 默认启用的补丁已为 Linux 7.4 准备就绪，支持 FreeSync、VRR 和 ALLM\nSteam 客户端测试版改进大画面模式，带来多项 Linux 增强\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "b990fbae0b035763ee2bab8806c1be9b": {
+    "id": "b990fbae0b035763ee2bab8806c1be9b",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Mesa-26.2.3-Released",
+    "title_en": "Mesa 26.2.3 Released With AMD GFX1171 Support, Other Fixes",
+    "summary_en": "Mesa 26.2.3 is out today as the newest stable point release in this quarter's Mesa 26.2 series...",
+    "pub_date": "Wed, 16 Sep 2026 17:18:50 -0400",
+    "title_zh": "Mesa 26.2.3 发布，新增 AMD GFX1171 支持及其他修复",
+    "summary_zh": "Mesa 26.2.3 作为本季度 Mesa 26.2 系列的最新稳定点版本发布，由 Eric Engestrom 每两周发布一次。该版本从 Mesa 26.3 开发代码中回移了大量错误修复，涵盖 AMD RadeonSI 和 RADV 驱动、高通 Adreno 的 Freedreno 和 Turnip 驱动、Intel ANV Vulkan 驱动（包括针对 X-Plane 12 的变通方案）、Asahi Gallium3D 驱动（将 Firefox 的变通方案扩展至 Zen 浏览器）、NVK 内存泄漏修复等，并新增了对 AMD GFX1171 GPU 目标的支持。",
+    "fulltext_zh": "Mesa 26.2.3 发布，新增 AMD GFX1171 支持及其他修复\n\n2026 年 9 月 16 日下午 5:18（美国东部时间）。\n\nMesa 26.2.3 于今日发布，是本季度 Mesa 26.2 系列的最新稳定点版本。\n\n这个由 Eric Engestrom 每两周发布一次的点版本带来了从当前 Mesa 26.3 开发代码中回移的各种错误修复。其中包括针对 AMD GPU 的多种 RadeonSI 和 RADV 驱动修复、针对高通 Adreno GPU 的若干 Freedreno 和 Turnip 驱动修复、各种 Intel ANV Vulkan 驱动修复（包括针对 X-Plane 12 飞行模拟器的变通方案）、Asahi Gallium3D 驱动现在将 Firefox 上使用的变通方案也应用于 Zen 浏览器以解决撕裂和渲染问题、NVK 内存泄漏修复以及其他错误修复。\n\nAMD GFX1171 GPU 目标也被回移至 Mesa 26.2.3。\n\nGFX1171 于上个月被添加到 Mesa 26.3，作为另一个 GFX117x“RDNA 4m”GPU 目标。关于这些即将推出的、并非完整 GFX12/RDNA4 实现的 GPU，目前所知仍然不多，但无论如何 Mesa 26.2.3 现在支持 GFX1171 变体。\n\n今日 Mesa 26.2.3 版本中的完整补丁列表可通过以下链接查看。\n\n相关文章：\n知名 Mesa 开发者现为 Arm 工作，负责 PanVK 和 Panfrost 代码\nMesa 26.2.2 默认启用 Intel Nova Lake 显卡\nMesa 26.3 Vulkan 驱动引入更快的归并排序以受益于光线追踪\n开源 Etnaviv 驱动现在能够运行 YOLOX\nMesa 26.2.1 发布，包含数十项修复\nIntel 的 Jay 图形着色器编译器现已在 Xe2/Xe3 硬件上通过 Vulkan CTS\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\n其他新闻：\nVoid Linux 维护者因 AI 政策争议弃管 100 多个软件包\nIntel 撤销取消其开源字体项目的决定\nAI 生成了大量“丑陋”代码，但发现了加快 Linux 编译的主要瓶颈\nLinux 内核计划移除约 55,000 行旧 ARM 平台代码\nBFS 文件系统将在 Linux 7.4 中被移除\nDebian 13.7 发布，包含许多错误修复\nAMDGPU HDMI 2.1 默认启用补丁已为 Linux 7.4 准备就绪，支持 FreeSync、VRR 和 ALLM\nSteam 客户端测试版改进大画面模式，带来多项 Linux 增强\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "31e4ef8d14a564d63393c06a82a44c49": {
+    "id": "31e4ef8d14a564d63393c06a82a44c49",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/ubuntu-2610-amd64v3-lowend",
+    "title_en": "Ubuntu 26.10 amd64v3 Can Provide A Nice Boost For Low-End/Budget Hardware",
+    "summary_en": "Canonical recently began producing Ubuntu 26.10 amd64v3 daily ISOs to complement their experimental amd64v3 package archive that they have been trialing the past few release cycles. While we still don't know what any official plans are for amd64v3 with Ubuntu 26.10, the performance gains can be very worthwhile over the generic amd64 binaries even for low-end/budget hardware.",
+    "pub_date": "Wed, 16 Sep 2026 13:37:00 -0400",
+    "title_zh": "Ubuntu 26.10 amd64v3 可为低端/预算硬件带来显著提升",
+    "summary_zh": "Canonical 近期开始制作 Ubuntu 26.10 amd64v3 每日 ISO，配合其试验性的 amd64v3 软件包档案。测试显示，在搭载 Intel Wildcat Lake 处理器和 8GB 内存的 449 美元 CHUWI UniBook 笔记本上，使用 amd64v3 二进制相比通用 amd64 版本能带来可观的性能提升，因为 amd64v3 可假定支持 AVX/AVX2、BMI2、MOVBE、FMA 等较新 CPU 指令集。",
+    "fulltext_zh": "Ubuntu 26.10 amd64v3 可为低端/预算硬件带来显著提升\n2026 年 9 月 16 日 下午 01:37 EDT\n\nCanonical 最近开始制作 Ubuntu 26.10 amd64v3 每日 ISO，以补充他们过去几个发布周期一直在试验的 amd64v3 软件包档案。虽然我们仍不清楚 Ubuntu 26.10 对 amd64v3 的官方计划是什么，但即使对于低端/预算硬件，相比通用 amd64 二进制文件，性能提升也非常值得。\n\n过去在 Phoronix 上的许多基准测试都是针对高端硬件进行的，因为那是目前实验室中最令人兴奋和有趣的硬件。在那里的性能提升相当不错，因为 amd64v3 / x86_64-v3 构建允许假定支持高级矢量扩展 AVX/AVX2、BMI2、MOVBE、FMA 以及其他较新的 CPU ISA 能力，这些能力自 Intel Haswell 或 AMD Excavator 以来的 CPU 中就已存在。\n\nCHUWI UniBook 是一台售价 449 美元的笔记本电脑，搭载 Intel Wildcat Lake 处理器和 8GB 内存，我在实验室中决定用这台非常入门的笔记本电脑来看看 Ubuntu amd64v3 在低端领域的影响。\n\n在这台 Intel Core 3 304（1 个 P 核 + 4 个 LPE 核）和 8GB 内存的设备上，我运行了 Ubuntu 26.10 amd64 每日版，然后在同一硬件上重复相同过程，但使用所有 Ubuntu 26.10 amd64v3 二进制文件，以查看这对预算型笔记本电脑带来的差异。\n\nCachyOS 与 Windows 11 与 Ubuntu 26.04 LTS 在 Intel Wildcat Lake + 8GB 内存上的对比\nCachyOS 与其他 Linux 操作系统在价值 46,000 美元工作站上的性能对比\n分析 Fedora 在搭载 Intel Panther Lake 的 Framework Laptop 13 Pro 上的缓慢性能\nIntel Xeon 678X 在 HP Z4 G6i 上 Windows 11 与 Ubuntu 26.04 的性能对比\n在 Framework Laptop 13 Pro 上对六种 Linux 发行版进行基准测试\nCachyOS 在 AMD Ryzen AI 9 HX 470 上超越 Windows 11，略优于 Ubuntu 和 Fedora\n\n同时享受无广告浏览、\n单页文章视图\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "8c188bd50bd07f8818eb7fbb787bb14e": {
+    "id": "8c188bd50bd07f8818eb7fbb787bb14e",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/GNOME-51-Released",
+    "title_en": "GNOME 51 Released With Improved Frame Scheduling, Many App Improvements",
+    "summary_en": "Right on schedule and in time for appearing in the likes of Ubuntu 26.10 and Fedora Workstation 45, the GNOME 51 desktop is officially released...",
+    "pub_date": "Wed, 16 Sep 2026 12:25:21 -0400",
+    "title_zh": "GNOME 51 发布：改进帧调度，众多应用优化",
+    "summary_zh": "GNOME 51 正式发布，将随 Ubuntu 26.10 和 Fedora Workstation 45 一同推出。本次更新重点改进了 Mutter 的帧调度，提升桌面响应速度和流畅度，新增 Wayland 协议支持，移除旧版 NVIDIA EGLStreams 驱动支持，并加入自定义指针加速配置。此外还带来设置改进、GNOME 地图离线支持、软件与日历启动加速，以及文件预览器全新界面。",
+    "fulltext_zh": "GNOME 51 发布：改进帧调度，众多应用优化 - Phoronix\n\nGNOME 51 发布：改进帧调度，众多应用优化\n2026年9月16日 下午12:25 EDT。\n\n如期而至，并赶在 Ubuntu 26.10 和 Fedora Workstation 45 等发行版采用之前，这款桌面环境正式发布了。\n\nGNOME 51 今日亮相，为 Mutter 带来了许多出色的改进，通过改进帧调度提升了桌面响应速度和更流畅的体验。同时还支持了新的 Wayland 协议（如 ext-background-effect-v1）以及其他优化，包括移除了对旧版 NVIDIA 驱动 EGLStreams 的支持。Mutter 现在还支持自定义指针加速配置文件。\n\nGNOME 51 还带来了多项设置改进、GNOME 地图的离线地图支持、GNOME 软件更快的启动速度，GNOME 日历现在也更快了，并且 GNOME 文件预览器进行了完整的界面改版。\n\n关于 GNOME 51 桌面所有有趣变化的更多细节，可以在今天的发布说明中找到。\n\nGNOME Shotwell 33 照片管理器发布，移植至 GTK4\nGTK 4.24 发布，带来更好的分数缩放和更精确的 GDK 帧时钟\nGitte 作为 GNOME 的 Git 客户端持续成熟完善\nGNOME 51 新增自定义指针加速配置文件支持\nGNOME 利益相关者讨论 RFC 流程以解决重大技术变更\nGNOME Mutter 51.rc 新增跨 GPU 缓冲区扫描输出支持及其他最后时刻的工作\n\nMichael Larabel 是 Phoronix.com 的主要作者，于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过20,000篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。\n\nVoid Linux 维护者因 AI 政策争议遗弃100多个软件包\nIntel 逆转取消其开源字体项目的决定\nAI 生成了大量“丑陋”代码，但发现了加快 Linux 编译的主要瓶颈\nLinux 内核计划移除约55,000行旧 ARM 平台代码\nBFS 文件系统将在 Linux 7.4 中被移除\nDebian 13.7 发布，包含大量错误修复\nAMDGPU HDMI 2.1 默认启用补丁已就绪，适用于 Linux 7.4，支持 FreeSync、VRR 和 ALLM\nSteam 客户端测试版改进大画面模式，多项 Linux 增强\n\n版权所有 © 2004 - 2026。所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "ed0d1122e0d05e53e0e7bdcf7a5d39b3": {
+    "id": "ed0d1122e0d05e53e0e7bdcf7a5d39b3",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/OpenBSD-GEFS-File-System",
+    "title_en": "Crash-Safe & Copy-On-Write GEFS As The \"Good Enough File-System\" For OpenBSD",
+    "summary_en": "Ori Bernstein announced an early preview of his Good Enough File-System \"GEFS\" for OpenBSD. GEFS is a crash-safe, snapshotting, copy-on-write file-system that he wrote  initially for 9front and now porting to OpenBSD...",
+    "pub_date": "Wed, 16 Sep 2026 09:42:00 -0400",
+    "title_zh": "崩溃安全且写时复制的GEFS：OpenBSD的“够用文件系统”",
+    "summary_zh": "Ori Bernstein宣布了为OpenBSD开发的“够用文件系统”GEFS的早期预览。GEFS是一个崩溃安全、支持快照、写时复制的文件系统，最初为9front编写，现正移植到OpenBSD。该移植尚未准备就绪，也未提交至OpenBSD代码树，目前状态被描述为“粗糙、有缺陷、问题多多的预览版”，但除少数例外，剩余问题已基本明确。",
+    "fulltext_zh": "崩溃安全且写时复制的GEFS：OpenBSD的“够用文件系统”\n2026年9月16日东部时间上午9:42。\nOri Bernstein宣布了他为OpenBSD开发的“够用文件系统”（GEFS）的早期预览。GEFS是一个崩溃安全、支持快照、写时复制的文件系统，他最初为9front编写，现在正移植到OpenBSD。\nOri在这份技术白皮书（PDF）中描述了最初的GEFS设计。他将GEFS总结为：\n“GEFS是为Plan 9构建的新文件系统。它的目标是成为一个崩溃安全、可检测损坏、简单且快速支持快照的文件系统，并按此优先级排序。GEFS通过在写时复制的Bµ树森林之上构建传统的9p文件系统接口来实现这些目标。它并不试图在所有方面都达到最优，但对日常使用来说足够好。”\nOpenBSD移植版尚未准备好用于生产环境，也尚未提交以纳入OpenBSD代码树。其当前状态被描述为“粗糙、有缺陷、问题多多的预览版”，但除了一些例外，剩余问题已得到合理理解。\n想要了解更多关于这个面向Plan 9和OpenBSD的GEFS文件系统的信息，可以通过OpenBSD技术邮件列表获取。\nFreeBSD 14.5发布，带来硬件支持改进、大量错误与安全修复\nNetBSD 9.5发布，为该系列画上句号\nFreeBSD 14.5-RC1发布，包含多项安全修复\nFreeBSD 14.5 Beta 1发布，包含各种向后移植和安全修复\nNetBSD 11.0发布，支持RISC-V，增强Linux系统调用兼容性\nFreeBSD内核仍含少量GPL代码，而其基础用户空间无GPL\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\nVoid Linux维护者因AI政策争议弃养100多个软件包\nIntel逆转取消其开源字体项目的决定\nAI生成了大量“丑陋”代码，但发现了加速Linux编译的主要瓶颈\nLinux内核计划移除约5.5万行旧ARM平台代码\nBFS文件系统将在Linux 7.4中被移除\nDebian 13.7发布，包含大量错误修复\nAMDGPU HDMI 2.1默认启用补丁已就绪，适用于Linux 7.4，支持FreeSync、VRR和ALLM\nSteam客户端测试版改进大画面模式，多项Linux增强\n在无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "0e911cde6ced604bc8eb3c7eb681a4b2": {
+    "id": "0e911cde6ced604bc8eb3c7eb681a4b2",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/proxmox-ve-officially-expands-beyond-x86-with-arm64-support/",
+    "title_en": "Proxmox VE Officially Expands Beyond x86 With Arm64 Support",
+    "summary_en": "Proxmox VE officially expands beyond x86 with Arm64 support, opening new virtualization and container deployment options across ARM-based hardware.\nThe post Proxmox VE Officially Expands Beyond x86 With Arm64 Support appeared first on Linux Today.",
+    "pub_date": "Wed, 16 Sep 2026 07:08:46 +0000",
+    "title_zh": "Proxmox VE 正式扩展至 x86 之外，新增 Arm64 支持",
+    "summary_zh": "Proxmox VE 正式宣布支持 Arm64 架构，不再局限于 x86 平台。这一扩展为基于 ARM 的硬件带来了新的虚拟化和容器部署选项，用户可以在更广泛的设备上运行 Proxmox VE。",
+    "fulltext_zh": "Proxmox VE 正式扩展至 x86 之外，新增 Arm64 支持，为基于 ARM 的硬件开辟了新的虚拟化和容器部署选项。\n\n文章《Proxmox VE 正式扩展至 x86 之外，新增 Arm64 支持》首发于 Linux Today。"
+  },
+  "2758f58caf41490552213e1b7921c1f5": {
+    "id": "2758f58caf41490552213e1b7921c1f5",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/hwall-is-a-promising-new-hardware-monitor-built-specifically-for-linux/",
+    "title_en": "HWall Is a Promising New Hardware Monitor Built Specifically for Linux",
+    "summary_en": "HWall is a promising new hardware monitoring tool designed specifically for Linux, offering a dedicated way to track system performance and hardware statistics.\nThe post HWall Is a Promising New Hardware Monitor Built Specifically for Linux appeared first on Linux Today.",
+    "pub_date": "Wed, 16 Sep 2026 07:07:43 +0000",
+    "title_zh": "HWall：一款专为Linux打造的前景广阔的新硬件监控工具",
+    "summary_zh": "HWall是一款专为Linux设计的新硬件监控工具，旨在提供专用的系统性能和硬件统计追踪方式。该工具致力于为Linux用户带来更专注的硬件监控体验。",
+    "fulltext_zh": "HWall是一款前景广阔的新硬件监控工具，专为Linux设计，提供了一种专用的方式来追踪系统性能和硬件统计数据。\n\n文章《HWall：一款专为Linux打造的前景广阔的新硬件监控工具》最初发布于Linux Today。"
+  },
+  "6c9bd309f17618c5de6e5f6632b53fe4": {
+    "id": "6c9bd309f17618c5de6e5f6632b53fe4",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/15-advanced-mysql-database-interview-questions-and-answers/",
+    "title_en": "15 Advanced MySQL Database Interview Questions and Answers",
+    "summary_en": "Prepare for advanced MySQL interviews with 15 questions and answers covering database optimization, indexing, transactions, replication, and performance.\nThe post 15 Advanced MySQL Database Interview Questions and Answers appeared first on Linux Today.",
+    "pub_date": "Wed, 16 Sep 2026 07:06:10 +0000",
+    "title_zh": "15个高级MySQL数据库面试问题与答案",
+    "summary_zh": "本文为准备高级MySQL面试的读者提供了15个问题与答案，涵盖数据库优化、索引、事务、复制和性能等核心主题，帮助求职者系统复习关键知识点，提升面试通过率。",
+    "fulltext_zh": "通过15个问题与答案，涵盖数据库优化、索引、事务、复制和性能，为高级MySQL面试做好准备。\n\n文章《15个高级MySQL数据库面试问题与答案》首次出现在Linux Today上。"
+  },
+  "8835c4136fa7222a664d75bf40e856e2": {
+    "id": "8835c4136fa7222a664d75bf40e856e2",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/openvpn-2-7-6-released-with-security-fixes-for-windows-and-mbedtls/",
+    "title_en": "OpenVPN 2.7.6 Released with Security Fixes for Windows and mbedTLS",
+    "summary_en": "OpenVPN 2.7.6 is now available with security fixes affecting Windows and mbedTLS, alongside additional bug fixes and stability improvements.\nThe post OpenVPN 2.7.6 Released with Security Fixes for Windows and mbedTLS appeared first on Linux Today.",
+    "pub_date": "Wed, 16 Sep 2026 07:05:14 +0000",
+    "title_zh": "OpenVPN 2.7.6 发布，修复 Windows 和 mbedTLS 安全问题",
+    "summary_zh": "OpenVPN 2.7.6 版本现已发布，主要针对 Windows 平台和 mbedTLS 加密库中的安全漏洞进行了修复，同时还包含其他错误修复和稳定性改进。建议用户尽快升级以确保安全。",
+    "fulltext_zh": "OpenVPN 2.7.6 现已发布，带来了影响 Windows 和 mbedTLS 的安全修复，以及额外的错误修复和稳定性改进。\n\n文章 OpenVPN 2.7.6 发布，修复 Windows 和 mbedTLS 安全问题 最早出现在 Linux Today 上。"
+  },
+  "3cb125337c01a360b073eaa2c326e75e": {
+    "id": "3cb125337c01a360b073eaa2c326e75e",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/rust-adopts-official-policy-for-ai-generated-contributions/",
+    "title_en": "Rust Adopts Official Policy for AI-Generated Contributions",
+    "summary_en": "Rust adopts an official policy for AI-generated contributions, establishing clearer rules and expectations for contributors using generative AI in development.\nThe post Rust Adopts Official Policy for AI-Generated Contributions appeared first on Linux Today.",
+    "pub_date": "Wed, 16 Sep 2026 07:02:59 +0000",
+    "title_zh": "Rust 采纳针对 AI 生成贡献的官方政策",
+    "summary_zh": "Rust 项目正式采纳了一项关于 AI 生成贡献的官方政策，为在开发中使用生成式 AI 的贡献者制定了更清晰的规则和期望。该政策旨在规范 AI 参与开源贡献的方式，确保透明度和质量。",
+    "fulltext_zh": "Rust 采纳了一项针对 AI 生成贡献的官方政策，为在开发中使用生成式 AI 的贡献者制定了更清晰的规则和期望。\n\n文章《Rust 采纳针对 AI 生成贡献的官方政策》最初发布于 Linux Today。"
   }
 }

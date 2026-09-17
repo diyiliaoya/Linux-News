@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shotwell 33 稳定版发布，带来期待已久的 GTK4 移植 — Linux 中文速报</title>
+<title>GNOME 51 发布，支持通行密钥登录并带来更流畅的用户体验 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #8b5cf61a; color: #8b5cf6;
-    border: 1px solid #8b5cf630;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">桌面环境</span>
+    <span class="tag">发行版</span>
     <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Shotwell 33 稳定版发布，带来期待已久的 GTK4 移植</h1>
+  <h1>GNOME 51 发布，支持通行密钥登录并带来更流畅的用户体验</h1>
 
-  <div class="article-summary">Shotwell 33 稳定版正式发布，这是 GNOME 桌面照片管理器首个采用 GTK4 的稳定版本。自 2025 年起开发的 GTK4 移植终于落地，但界面变化不大，主要收益在于底层技术更新，有助于在现代 GNOME 桌面上运行并减少对 GTK3 的依赖。此外还改进了打印、修复了内存泄漏和多个 bug。</div>
+  <div class="article-summary">GNOME 51 正式发布，新增 FIDO2 通行密钥登录、截图区域键盘调整、显示器亮度记忆等功能。Mutter 合成器优化了帧调度和屏幕录制性能，使动画和滚动更流畅。核心应用也获得改进，如地图支持离线下载和实时公交数据、文档可添加手写签名等。Ubuntu 26.10 将于 10 月 15 日搭载该版本发布。</div>
 
-  <div class="article-body"><p>Shotwell 33 稳定版发布，带来期待已久的 GTK4 移植 - OMG! Ubuntu</p><p>这是 GNOME 桌面照片管理器首个使用 GTK4 的稳定版本。</p><p>Shotwell 的 GTK4 移植自 2025 年就在进行中。这是该图像工具自 2012 年迁移到 GTK3（v0.12.0）以来的首次大型工具包移植。</p><p>然而尽管有这一飞跃，面向用户的结果只是一个普通的移植；它并不像 gThumb 的 GTK4/libadwaita 移植那样具有视觉上的变革性（后者看起来像是一个全新的应用）。</p><p>未来可能会使用 GTK4/libadwaita 进行更实质性的视觉改造。</p><p>目前，Shotwell 33 看起来和 Shotwell v32 一样——好处更多在于底层技术和软件包，有助于它在现代 GNOME 桌面上运行并保持同步。Linux 发行版正试图尽可能放弃残留的 GTK3 依赖。</p><p>Shotwell 33 的 GTK4 移植现已稳定</p><p>Shotwell v33 还有其他变化，尽管没有什么会让非用户急于尝试。打印功能得到改进，内存泄漏被修补，旧代码被清理，大量 bug 被修复——包括工具栏的怪癖、对话框间距和人脸检测。</p><p>桌面照片管理器不再像以前那样广泛使用，但 Shotwell 是 Ubuntu 的默认照片管理器和图像编辑器，包含在 live 镜像和扩展安装中（不包含在最小安装中）。自 Ubuntu 10.10 以来它一直担任这一角色。</p><p>目前尚不清楚 Ubuntu 26.10 能否及时打包并发布 Shotwell v33——它的发布在开发周期中相当晚。如果不能，也不用担心；请留意更新列表，这个更新肯定会很快出现在那里。</p></div>
+  <div class="article-body"><p>GNOME 51 发布，带来 FIDO2 通行密钥登录、一个选项以及帧调度变更，使 UI 动画和滚动感觉更流畅。</p><p>核心应用也有所改进。桌面地图应用获得离线区域下载和实时公交数据，文档现在允许你添加视觉签名，文件则加快了大文件夹的加载速度。</p><p>尽管这是一个比我们习惯的更为温和的版本——一些计划中的变更，比如文档的 GTK4 移植和用于改变触摸板滚动速度的滑块，并未纳入——但仍有很多值得期待的内容。</p><p>Ubuntu 26.10 将于 10 月 15 日发布，搭载 GNOME 51，并在其之上加入自己的定制。新的 GNOME 版本不会被回溯移植，因此 Ubuntu 26.04 LTS 在其支持期内将保持在 GNOME 50。</p><p>GNOME 51：新功能</p><p>Mutter 让帧更流畅</p><p>Mutter 是驱动 GNOME Shell 的合成器，其最新版本又进行了一系列后端变更，以优化内容在屏幕上的“绘制”方式。</p><p>本周期的变更之一是对帧时钟估算渲染时间的方式进行了调整，这有助于减少在旧有固定估算过于严格或过于宽松的系统上出现丢帧的可能性，具体取决于硬件。</p><p>Mutter 51 还改进了屏幕录制和远程桌面会话，减少了抓取过程中在后台进行的不必要工作。降低总体开销（无论硬件还是软件渲染）意味着最终结果更流畅。</p><p>那 GNOME 获得毛玻璃模糊效果呢？许多 Linux 博客大肆宣传，但这并不是面向用户的变更——至少现在还不是。Mutter 已获得对 Wayland 背景模糊效果协议的支持，但应用和表面必须主动请求——默认情况下没有应用这样做。</p><p>GNOME Shell 默认没有背景模糊，所以不要去寻找开关，因为你找不到。</p><p>使用键盘调整截图区域大小</p><p>方向键调整区域大小</p><p>GNOME Shell 的交互式截图工具现在支持键盘调整。</p><p>使用键盘的方向键，你可以扩大、缩小或移动选择区域，无需使用鼠标。</p><p>按一个方向键选择一条边，然后继续按击以使选定区域变大或变小。按住某个修饰键同时按方向键可以更大或更精细的增量移动，按住另一个修饰键同时按方向键可以移动整个选择区域。</p><p>按某个键可以完全重置选择区域。与早期版本一样，当截图功能打开时，你可以按某个键进行抓拍——在这个版本中，不再使用相机快门音效，因为 Adwaita 现在有了自己的原生声音集。</p><p>Web 和 FIDO2/通行密钥登录支持</p><p>更多登录和解锁方式（为需要的人）</p><p>GNOME 显示管理器（GDM）改进了对认证机制的支持，包括智能卡和基于 Web 的登录，在登录和锁屏界面上。这些主要对拥有企业或远程设置的用户有用，而非家庭用户。</p><p>智能卡登录并不新鲜，但 GDM 的统一认证框架增加了 Web 登录（二维码和 URL）以及 FIDO2/通行密钥支持。这项工作全部设计为可扩展的，以便将来可以轻松添加其他认证方法。</p><p>GNOME Shell 保存显示器亮度</p><p>GNOME Shell 现在为每个显示器保存亮度级别以及任何色彩模式设置（例如 HDR），并在重启时恢复。</p><p>以前，内核 sysfs 背光接口被假定会记住它，但缺陷在于……亮度可能因省电模式（即调光）而改变。“调暗”的值会在下次启动时恢复——这并不总是你想要的。</p><p>还有对更新的 HDR 设置的处理。亮度可能完全由软件（即 Mutter）控制，因此硬件不会保存任何内容；系统可能希望保持硬件背光以支持 HDR 高光，这意味着滑块值不准确。</p><p>在 GNOME 51 中，Shell 改为存储和恢复亮度。显示器通过其 EDID 供应商、产品和序列号进行识别。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/shotwell-gtk4-port-released" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/gnome-51-released" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
