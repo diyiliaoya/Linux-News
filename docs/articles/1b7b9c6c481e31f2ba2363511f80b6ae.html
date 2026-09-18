@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu的Rust化新里程碑！Coreutils迁移完成 — Linux 中文速报</title>
+<title>准时！GNOME 51 携一系列不容错过的改进登场 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
+    <span class="tag">桌面环境</span>
     <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Ubuntu的Rust化新里程碑！Coreutils迁移完成</h1>
+  <h1>准时！GNOME 51 携一系列不容错过的改进登场</h1>
 
-  <div class="article-summary">Ubuntu 26.10将最后三个GNU命令cp、mv和rm迁移至Rust实现的uutils coreutils，标志着Ubuntu默认工具链的Rust化基本完成。此前因uutils版本存在缺陷，这三个命令在26.04 LTS中被暂缓迁移。经过安全审计和修复，迁移最终在26.10落地。用户层面命令行为不变，但可选择安装GNU版本。此举是Canonical逐步推进内存安全系统软件战略的一部分。</div>
+  <div class="article-summary">GNOME 51 如期发布，带来离线地图、指纹管理器、更完善的 GNOME Shell、GDM 与 Mutter 修复，以及设置、软件、文件、日历、地图和网页等预装应用的升级。</div>
 
-  <div class="article-body"><p>Ubuntu的Rust化新里程碑！Coreutils迁移完成</p><p>Ubuntu 26.10版本将其最后三个GNU命令——cp、mv和rm——迁移到了Rust。</p><p>Ubuntu成功在其默认工具链中淘汰了GNU coreutils。最后三个坚守者——cp、mv和rm——已迁移至uutils的coreutils；这是Canonical自2025年以来一直在向发行版中引入的Rust重新实现。</p><p>由于uutils版本存在缺陷，它们曾被阻止进入26.04 LTS。其他所有命令，从ls到echo，都在更早的版本中完成了这一跳跃。</p><p>这一变化虽然重大，却隐藏在Canonical进行中的工作文档中一个不起眼的提及里。</p><p>这是一条漫长的道路</p><p>Canonical去年开始对Ubuntu进行氧化，Ubuntu 25.10成为首个默认搭载uutils coreutils的版本。该版本还使sudo-rs成为默认权限工具，取代了一个已存在数十年的命令。</p><p>26.04是计划明显放缓的版本，由于一系列阻碍全面实施的缺陷，Canonical在GNU版本上保留了cp、mv和rm。</p><p>这些缺陷是在审计中发现的，当时Canonical委托Zellic在2025年12月至2026年3月期间进行审计，优先关注最安全敏感的实用工具。在两轮审计中，Zellic共提出了44个问题，其中44个被分配了CVE。Canonical表示绝大多数已解决。</p><p>走到这一步经历了起起落落，最后一段路并不干净——rust-coreutils曾一度被重新纳入归档，又在破坏实时镜像构建后立即被移除。修复很快；开发者将其标记为“紧急”，修复进入上游，迁移赶在26.10前落地。</p><p>对你有什么改变？</p><p>在输入命令时，表面上没有任何变化。uutils coreutils被设计为基本GNU工具的即插即用替代品，该项目将任何与GNU的差异视为bug，并进一步指出某些选项可能仍然缺失或行为不同。</p><p>因此，如果你更愿意继续使用GNU版本，你可以选择安装包含所有必要组件的coreutils-from-gnu包。</p><p>Coreutils只是更广泛运动的一部分。今年早些时候，Canonical成为Trifecta Tech Foundation的金牌赞助商，每年出资4万欧元资助内存安全的系统软件。</p><p>在此之下，他们当前的目标是chrony-rs，这是对Ubuntu用于保持时钟同步的工具的Rust重写。虽然工作仍在进行中，但已取得进展。其成为默认的目标是Ubuntu 27.04。</p><p>Canonical逐步构建的是其Ubuntu氧化愿景的完成，这并不是盲目地包含新组件。相反，这看起来是一种经过深思熟虑的方法，一步一步地推进。</p><p>Linux内核准备清除旧的32位Arm平台代码</p><p>这十三个补丁将删除已弃用的平台代码，驱动程序清理将随后进行。</p><p>喜欢这篇更新？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个对开源软件、定制PC组装、赛车运动以及探索这个世界无限可能性充满热情的书呆子。</p><p>Rune开源，寻求与贡献者分享收入</p><p>openEuler与构建亚洲AI基础设施的竞赛</p><p>MAKERphone 2.0让你构建4G手机并为其应用进行氛围编程</p><p>Bottles的创始人成功在Linux上运行Microsoft 365</p><p>Linux内核准备清除旧的32位Arm平台代码</p><p>成为更好的Linux用户</p><p>通过FOSS每周新闻通讯，学习有用的Linux技巧，发现应用程序，探索新发行版，并随时了解Linux世界的最新动态</p><p>太好了！你已成功注册。</p><p>欢迎回来！你已成功登录。</p><p>你已成功订阅It's FOSS。</p><p>你的链接已过期。</p><p>成功！请查</p></div>
+  <div class="article-body"><p>准时！GNOME 51 携一系列不容错过的改进登场</p><p>离线地图、指纹管理器以及更完善的 Shell 是你可以期待的部分新增功能。</p><p>对于大多数踏入 Linux 世界、尝试第一个发行版的人来说，GNOME 仍然是初始桌面环境。我这么说是因为 Ubuntu 和 Fedora Workstation 等主流选择都默认搭载它，直接将新用户带入 GNOME 生态系统。</p><p>尽管我们看到像动态平铺窗口管理器这样的方案采用率在上升，但像 GNOME 这样的传统桌面环境仍然是许多人的日常主力选择。</p><p>现在，一个新版本 GNOME 51 已经到来，带来了许多升级，例如行为更完善的 Shell、看起来更时尚的新壁纸，以及一系列更新的预装应用。</p><p>继续阅读以了解完整细节。</p><p>这是 GNOME 中你直接交互却甚至没有意识到其存在的部分。GNOME Shell 代表顶栏、概览、应用网格、通知、锁屏，以及窗口在工作区之间移动的方式。</p><p>GNOME 51 清理了许多粗糙边缘，为你带来诸如显示器亮度在会话之间保存和恢复，以及更精细的截图取景，让你可以将选区一直拖到显示器边缘等好处。</p><p>应用网格中的屏幕阅读器导航也重新设计，两个较小的烦人问题——另一个工作区上最小化窗口的 bug 和损坏的德语日期格式——已修复。</p><p>同样，连接 USB 驱动器时出现的自动运行提示也得到了改进。</p><p>这两个也是 GNOME 技术栈的重要组成部分。GDM 是登录屏幕背后的显示管理器，在你通过身份验证后启动会话。Mutter 是绘制窗口、决定窗口位置并处理输入的合成器。</p><p>GNOME 51 为回退会话增加了一个设置。回退会话是用户没有首选会话或首选会话无法启动时使用的会话。管理员可以将从未登录过的账户指向他们选择的会话。</p><p>自动登录绕过也被关闭了。此前，被攻破的欢迎程序可以为任何本地账户请求自动登录；幸运的是，这不再有效。</p><p>在 Mutter 中，对旧版 NVIDIA 驱动的支持已移除，在 HDR 显示器上，SDR 内容不再看起来褪色。窗口处理本身也得到了一些修复。边缘平铺窗口现在可以正确全屏，最大化窗口可以从键盘移动到另一个显示器而不会出现问题。</p><p>它还停止了一次报告多个显示器为主显示器，并且在输入捕获会话运行时鼠标光标会隐藏自身——就像远程桌面工具打开的那种会话。</p><p>GNOME 51 设置、软件、文件。</p><p>捆绑应用也经历了各自的重要升级。我们首先从设置应用开始，它在网络页面添加了 DNS 域搜索选项，获得了各种翻译更新，并通过 GNOME 二维码小部件处理 Wi-Fi 共享。</p><p>关于页面得到了清理，移除了“检查更新”字段，并扩展了软件和硬件信息组，让用户可以快速访问重要的系统细节。</p><p>因此，专门的“检查更新”按钮已成为过去。</p><p>软件现在会在安装已达到生命周期结束状态的应用之前警告你，其 Flatpak 权限列表已扩展，应用评分使用不同的衡量方法来显示平均评分。</p><p>文件（文件管理器）在拖动多个项目时显示计数徽章，复制操作完成后复制的文件保持选中状态。从另一个应用打开的位置会显示在新标签页中，而预览器现在支持重命名和移到回收站操作。</p><p>你可以通过选择一个文件或文件夹并按“空格”键来访问预览器功能。它会显示所选项目的预览以及一些关键细节。</p><p>GNOME 51 日历、地图和网页。</p><p>日历应用的内部经过了大量重构，现在基于……</p><p>周、月</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/ubuntu-rustification-coreutils-migration/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/gnome-51-features/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu的Rust化新里程碑！Coreutils迁移完成 — Linux 中文速报</title>
+<title>著名PS5 Linux项目负责人因漏洞被过早报告给索尼而退出 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
+    <span class="tag">其他</span>
     <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Ubuntu的Rust化新里程碑！Coreutils迁移完成</h1>
+  <h1>著名PS5 Linux项目负责人因漏洞被过早报告给索尼而退出</h1>
 
-  <div class="article-summary">Ubuntu 26.10将最后三个GNU命令cp、mv和rm迁移至Rust实现的uutils coreutils，标志着Ubuntu默认工具链的Rust化基本完成。此前因uutils版本存在缺陷，这三个命令在26.04 LTS中被暂缓迁移。经过安全审计和修复，迁移最终在26.10落地。用户层面命令行为不变，但可选择安装GNU版本。此举是Canonical逐步推进内存安全系统软件战略的一部分。</div>
+  <div class="article-summary">PS5 Linux项目负责人Andy Nguyen宣布退出PS5破解社区，并停止将项目移植到PS5 Pro的工作。原因是一名研究人员在同意等待后不到一天就将一个未修复的虚拟机管理程序漏洞报告给了索尼，导致该漏洞可能被迅速修补。Nguyen曾请求至少等到《GTA 6》发布，以便人们能合法购买游戏并享受Linux。尽管他退出，项目代码仍在GitHub上，其他贡献者表示可以继续推进。</div>
 
-  <div class="article-body"><p>Ubuntu的Rust化新里程碑！Coreutils迁移完成</p><p>Ubuntu 26.10版本将其最后三个GNU命令——cp、mv和rm——迁移到了Rust。</p><p>Ubuntu成功在其默认工具链中淘汰了GNU coreutils。最后三个坚守者——cp、mv和rm——已迁移至uutils的coreutils；这是Canonical自2025年以来一直在向发行版中引入的Rust重新实现。</p><p>由于uutils版本存在缺陷，它们曾被阻止进入26.04 LTS。其他所有命令，从ls到echo，都在更早的版本中完成了这一跳跃。</p><p>这一变化虽然重大，却隐藏在Canonical进行中的工作文档中一个不起眼的提及里。</p><p>这是一条漫长的道路</p><p>Canonical去年开始对Ubuntu进行氧化，Ubuntu 25.10成为首个默认搭载uutils coreutils的版本。该版本还使sudo-rs成为默认权限工具，取代了一个已存在数十年的命令。</p><p>26.04是计划明显放缓的版本，由于一系列阻碍全面实施的缺陷，Canonical在GNU版本上保留了cp、mv和rm。</p><p>这些缺陷是在审计中发现的，当时Canonical委托Zellic在2025年12月至2026年3月期间进行审计，优先关注最安全敏感的实用工具。在两轮审计中，Zellic共提出了44个问题，其中44个被分配了CVE。Canonical表示绝大多数已解决。</p><p>走到这一步经历了起起落落，最后一段路并不干净——rust-coreutils曾一度被重新纳入归档，又在破坏实时镜像构建后立即被移除。修复很快；开发者将其标记为“紧急”，修复进入上游，迁移赶在26.10前落地。</p><p>对你有什么改变？</p><p>在输入命令时，表面上没有任何变化。uutils coreutils被设计为基本GNU工具的即插即用替代品，该项目将任何与GNU的差异视为bug，并进一步指出某些选项可能仍然缺失或行为不同。</p><p>因此，如果你更愿意继续使用GNU版本，你可以选择安装包含所有必要组件的coreutils-from-gnu包。</p><p>Coreutils只是更广泛运动的一部分。今年早些时候，Canonical成为Trifecta Tech Foundation的金牌赞助商，每年出资4万欧元资助内存安全的系统软件。</p><p>在此之下，他们当前的目标是chrony-rs，这是对Ubuntu用于保持时钟同步的工具的Rust重写。虽然工作仍在进行中，但已取得进展。其成为默认的目标是Ubuntu 27.04。</p><p>Canonical逐步构建的是其Ubuntu氧化愿景的完成，这并不是盲目地包含新组件。相反，这看起来是一种经过深思熟虑的方法，一步一步地推进。</p><p>Linux内核准备清除旧的32位Arm平台代码</p><p>这十三个补丁将删除已弃用的平台代码，驱动程序清理将随后进行。</p><p>喜欢这篇更新？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个对开源软件、定制PC组装、赛车运动以及探索这个世界无限可能性充满热情的书呆子。</p><p>Rune开源，寻求与贡献者分享收入</p><p>openEuler与构建亚洲AI基础设施的竞赛</p><p>MAKERphone 2.0让你构建4G手机并为其应用进行氛围编程</p><p>Bottles的创始人成功在Linux上运行Microsoft 365</p><p>Linux内核准备清除旧的32位Arm平台代码</p><p>成为更好的Linux用户</p><p>通过FOSS每周新闻通讯，学习有用的Linux技巧，发现应用程序，探索新发行版，并随时了解Linux世界的最新动态</p><p>太好了！你已成功注册。</p><p>欢迎回来！你已成功登录。</p><p>你已成功订阅It's FOSS。</p><p>你的链接已过期。</p><p>成功！请查</p></div>
+  <div class="article-body"><p>著名PS5 Linux项目负责人因漏洞被过早报告给索尼而退出</p><p>Andy Nguyen指责那些无视他请求的AI辅助漏洞报告者。</p><p>今年4月，我们看到Andy Nguyen将PS5变成了一台运行Linux的游戏PC，可以运行Steam游戏和模拟器，充分利用了硬件性能。</p><p>如今他宣布将彻底退出PS5破解社区，并停止将该项目的移植到PS5 Pro的工作，该移植原计划在2027年某个时候发布。</p><p>这一切都源于一个漏洞</p><p>我将退出PS5社区，并停止所有关于PS5 Linux的工作。</p><p>我倾注了心血和数月的时间，包括计划完成PS5 Pro支持并在2027年发布，现在一切都付诸东流。</p><p>—— Andy Nguyen (@theflow0)</p><p>你看，在PlayStation主机上运行Linux之所以可能，是因为该项目能够利用索尼已经修补的漏洞绕过虚拟机管理程序，覆盖了固件3.00到7.61。</p><p>问题始于Andy保留了一个在当前固件上仍然存在的虚拟机管理程序漏洞，他说他早前就发现了。在发现该漏洞的研究人员同意等待后不到一天，这个漏洞就被过早地泄露给了索尼。</p><p>他澄清了自己的立场，说道：</p><p>我要求他们至少等到《GTA 6》发布，这样人们就有机会合法购买游戏并享受Linux。</p><p>一旦索尼知道了这样的漏洞，它被修补只是时间问题，这就是PlayStation的漏洞赏金计划在HackerOne上的作用。</p><p>发现漏洞的人</p><p>为了让你了解PlayStation的HackerOne计划。</p><p>虽然Andy在他的帖子中没有点名任何人，但快速网络搜索就能找到报告者。Jordy发布了声明，阐述了他如何处理这个漏洞。</p><p>根据Jordy的说法，这个漏洞是他自己发现的，用的是“值得信赖的AI机器”，没有其他人的帮助。他甚至同意了Andy不披露发现的要求。</p><p>出乎意料的是，第三个仍未具名的人，在几小时后使用了AI。Jordy预计会有更多人发现同样的漏洞，于是决定在HackerOne上发布该漏洞。</p><p>代码仍在</p><p>该项目的GitHub页面和所有相关仓库仍然存在。截至今天，没有任何内容被归档，如果你愿意，你可以接手任何待完成的工作或提出新的改进，开始为PS5 Linux项目做贡献。</p><p>目前支持原版型号和Slim型号的固件3.00到7.61，所以你的测试设备需要是这些版本之一。Andy正在构建的PS5 Pro支持从未到达仓库，因此你必须从头开始。</p><p>这就是开源软件的美妙之处。即使首席开发者和关键核心维护者决定放弃项目，新人也可以轻松接手工作或分叉，并按照他们选择的方向发展。</p><p>虽然Andy的离开对支持更新PS5固件和PS5 Pro的计划是一个打击，但其他贡献者表示他们可以在没有他的情况下完成加载器的工作，我希望会有更多人跟进。</p><p>喜欢这个更新吗？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热衷于开源软件、定制PC构建、赛车运动和探索世界无限可能的技术迷。</p><p>准时！GNOME 51发布，带来一系列你不应错过的改进</p><p>Ubuntu的Rust化有了新的里程碑！Coreutils迁移完成</p><p>Rune走向开源，寻求与贡献者分享收入</p><p>openEuler与构建亚洲AI基础设施的竞赛</p><p>MAKERphone 2.0让你构建4G手机并为其应用进行氛围编程</p><p>成为更好的Linux用户</p><p>通过FOSS每周通讯，你学习有用的Linux技巧，发现</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/ubuntu-rustification-coreutils-migration/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/ps5-linux-lead-quits/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

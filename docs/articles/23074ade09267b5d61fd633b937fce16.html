@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu的Rust化新里程碑！Coreutils迁移完成 — Linux 中文速报</title>
+<title>Jemalloc 5.4 发布：可移植性改进与代码清理 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu的Rust化新里程碑！Coreutils迁移完成</h1>
+  <h1>Jemalloc 5.4 发布：可移植性改进与代码清理</h1>
 
-  <div class="article-summary">Ubuntu 26.10将最后三个GNU命令cp、mv和rm迁移至Rust实现的uutils coreutils，标志着Ubuntu默认工具链的Rust化基本完成。此前因uutils版本存在缺陷，这三个命令在26.04 LTS中被暂缓迁移。经过安全审计和修复，迁移最终在26.10落地。用户层面命令行为不变，但可选择安装GNU版本。此举是Canonical逐步推进内存安全系统软件战略的一部分。</div>
+  <div class="article-summary">Jemalloc 5.4 正式发布，这是 Meta 宣布重新投资该内存分配器后的最新进展。此版本致力于解决技术债务，包括代码重构、错误修复、增强测试覆盖率和代码清理，同时提升了可移植性。新特性包括用于自定义扩展分配钩子的 EXTENT_ALLOC_FLAG_PINNED 标志、通过 thread.arena 支持每 CPU arena 选择，以及多项优化。此外，还引入了操作系统抽象层，并修复了 GCC 16 警告。</div>
 
-  <div class="article-body"><p>Ubuntu的Rust化新里程碑！Coreutils迁移完成</p><p>Ubuntu 26.10版本将其最后三个GNU命令——cp、mv和rm——迁移到了Rust。</p><p>Ubuntu成功在其默认工具链中淘汰了GNU coreutils。最后三个坚守者——cp、mv和rm——已迁移至uutils的coreutils；这是Canonical自2025年以来一直在向发行版中引入的Rust重新实现。</p><p>由于uutils版本存在缺陷，它们曾被阻止进入26.04 LTS。其他所有命令，从ls到echo，都在更早的版本中完成了这一跳跃。</p><p>这一变化虽然重大，却隐藏在Canonical进行中的工作文档中一个不起眼的提及里。</p><p>这是一条漫长的道路</p><p>Canonical去年开始对Ubuntu进行氧化，Ubuntu 25.10成为首个默认搭载uutils coreutils的版本。该版本还使sudo-rs成为默认权限工具，取代了一个已存在数十年的命令。</p><p>26.04是计划明显放缓的版本，由于一系列阻碍全面实施的缺陷，Canonical在GNU版本上保留了cp、mv和rm。</p><p>这些缺陷是在审计中发现的，当时Canonical委托Zellic在2025年12月至2026年3月期间进行审计，优先关注最安全敏感的实用工具。在两轮审计中，Zellic共提出了44个问题，其中44个被分配了CVE。Canonical表示绝大多数已解决。</p><p>走到这一步经历了起起落落，最后一段路并不干净——rust-coreutils曾一度被重新纳入归档，又在破坏实时镜像构建后立即被移除。修复很快；开发者将其标记为“紧急”，修复进入上游，迁移赶在26.10前落地。</p><p>对你有什么改变？</p><p>在输入命令时，表面上没有任何变化。uutils coreutils被设计为基本GNU工具的即插即用替代品，该项目将任何与GNU的差异视为bug，并进一步指出某些选项可能仍然缺失或行为不同。</p><p>因此，如果你更愿意继续使用GNU版本，你可以选择安装包含所有必要组件的coreutils-from-gnu包。</p><p>Coreutils只是更广泛运动的一部分。今年早些时候，Canonical成为Trifecta Tech Foundation的金牌赞助商，每年出资4万欧元资助内存安全的系统软件。</p><p>在此之下，他们当前的目标是chrony-rs，这是对Ubuntu用于保持时钟同步的工具的Rust重写。虽然工作仍在进行中，但已取得进展。其成为默认的目标是Ubuntu 27.04。</p><p>Canonical逐步构建的是其Ubuntu氧化愿景的完成，这并不是盲目地包含新组件。相反，这看起来是一种经过深思熟虑的方法，一步一步地推进。</p><p>Linux内核准备清除旧的32位Arm平台代码</p><p>这十三个补丁将删除已弃用的平台代码，驱动程序清理将随后进行。</p><p>喜欢这篇更新？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个对开源软件、定制PC组装、赛车运动以及探索这个世界无限可能性充满热情的书呆子。</p><p>Rune开源，寻求与贡献者分享收入</p><p>openEuler与构建亚洲AI基础设施的竞赛</p><p>MAKERphone 2.0让你构建4G手机并为其应用进行氛围编程</p><p>Bottles的创始人成功在Linux上运行Microsoft 365</p><p>Linux内核准备清除旧的32位Arm平台代码</p><p>成为更好的Linux用户</p><p>通过FOSS每周新闻通讯，学习有用的Linux技巧，发现应用程序，探索新发行版，并随时了解Linux世界的最新动态</p><p>太好了！你已成功注册。</p><p>欢迎回来！你已成功登录。</p><p>你已成功订阅It's FOSS。</p><p>你的链接已过期。</p><p>成功！请查</p></div>
+  <div class="article-body"><p>Jemalloc 5.4 发布：可移植性改进与代码清理</p><p>2026年9月17日 下午6:37 EDT</p><p>Meta 宣布对 jemalloc 内存分配器进行新一轮投资，该分配器在服务器和 HPC 领域广受欢迎，在许多桌面用例中也有应用。在经历了几年的停滞之后，自 Meta 宣布以来，Jemalloc 已迎来新的发展，今天发布的 Jemalloc 5.4 是向前迈出的最新一步。</p><p>Jemalloc 5.4 致力于解决技术债务，包括代码重构、错误修复、增强测试覆盖率以及其他代码清理工作。此外还有可移植性方面的改进。</p><p>Jemalloc 5.4 的其他一些新特性包括：用于自定义扩展分配钩子的 &quot;EXTENT_ALLOC_FLAG_PINNED&quot;，以标记不可回收的映射；通过 thread.arena 支持每 CPU arena 选择；以及其他更改。此版本还包含一些新的优化。</p><p>作为可移植性工作的一部分，Jemalloc 现在拥有一个操作系统抽象层，用于处理围绕文件/进程 I/O、时间、同步、CPU、虚拟内存、atfork、错误处理、性能分析、线程让步和配置访问的平台相关代码。Jemalloc 5.4 中还修复了 GCC 16 的警告。</p><p>Jemalloc 5.4 内存分配器的下载和完整更改列表可通过以下链接获取</p><p>Rust 发布警告：关键开发者成为攻击目标</p><p>Mojo 1.1 发布，现接受社区对编译器的贡献</p><p>Rust Coreutils 0.12 发布，包含 Ubuntu 寻求的修复</p><p>Rustls 0.23.45 发布，修复存在两年的安全问题</p><p>Mold 高速链接器正用 Rust 重写，希望成为 Linux 上的默认链接器</p><p>Git 2.56-rc0 发布，更新贡献指南，改进 Swift 支持</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动程序等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他</p><p>Void Linux 维护者因 AI 政策争议遗弃 100 多个软件包</p><p>Intel 逆转取消其开源字体项目的决定</p><p>BFS 文件系统将从 Linux 7.4 中移除</p><p>AMDGPU HDMI 2.1 默认启用补丁已就绪，适用于 Linux 7.4，支持 FreeSync、VRR 和 ALLM</p><p>Debian 13.7 发布，包含许多错误修复</p><p>Steam 客户端测试版改进大屏幕模式，多项 Linux 增强</p><p>Mold 高速链接器正用 Rust 重写，希望成为 Linux 上的默认链接器</p><p>Linux 修复自 2023 年以来存在的静默用户空间数据丢失错误</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/ubuntu-rustification-coreutils-migration/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Jemalloc-5.4" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

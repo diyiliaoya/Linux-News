@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu的Rust化新里程碑！Coreutils迁移完成 — Linux 中文速报</title>
+<title>2026年20道Linux网络面试题与答案 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Linux Today</span>
   </div>
 
-  <h1>Ubuntu的Rust化新里程碑！Coreutils迁移完成</h1>
+  <h1>2026年20道Linux网络面试题与答案</h1>
 
-  <div class="article-summary">Ubuntu 26.10将最后三个GNU命令cp、mv和rm迁移至Rust实现的uutils coreutils，标志着Ubuntu默认工具链的Rust化基本完成。此前因uutils版本存在缺陷，这三个命令在26.04 LTS中被暂缓迁移。经过安全审计和修复，迁移最终在26.10落地。用户层面命令行为不变，但可选择安装GNU版本。此举是Canonical逐步推进内存安全系统软件战略的一部分。</div>
+  <div class="article-summary">本文为2026年网络面试准备，提供20道实用面试题与答案，涵盖TCP/IP、DNS、路由、端口、故障排除和网络命令等核心主题，帮助求职者系统复习Linux网络知识，提升面试通过率。</div>
 
-  <div class="article-body"><p>Ubuntu的Rust化新里程碑！Coreutils迁移完成</p><p>Ubuntu 26.10版本将其最后三个GNU命令——cp、mv和rm——迁移到了Rust。</p><p>Ubuntu成功在其默认工具链中淘汰了GNU coreutils。最后三个坚守者——cp、mv和rm——已迁移至uutils的coreutils；这是Canonical自2025年以来一直在向发行版中引入的Rust重新实现。</p><p>由于uutils版本存在缺陷，它们曾被阻止进入26.04 LTS。其他所有命令，从ls到echo，都在更早的版本中完成了这一跳跃。</p><p>这一变化虽然重大，却隐藏在Canonical进行中的工作文档中一个不起眼的提及里。</p><p>这是一条漫长的道路</p><p>Canonical去年开始对Ubuntu进行氧化，Ubuntu 25.10成为首个默认搭载uutils coreutils的版本。该版本还使sudo-rs成为默认权限工具，取代了一个已存在数十年的命令。</p><p>26.04是计划明显放缓的版本，由于一系列阻碍全面实施的缺陷，Canonical在GNU版本上保留了cp、mv和rm。</p><p>这些缺陷是在审计中发现的，当时Canonical委托Zellic在2025年12月至2026年3月期间进行审计，优先关注最安全敏感的实用工具。在两轮审计中，Zellic共提出了44个问题，其中44个被分配了CVE。Canonical表示绝大多数已解决。</p><p>走到这一步经历了起起落落，最后一段路并不干净——rust-coreutils曾一度被重新纳入归档，又在破坏实时镜像构建后立即被移除。修复很快；开发者将其标记为“紧急”，修复进入上游，迁移赶在26.10前落地。</p><p>对你有什么改变？</p><p>在输入命令时，表面上没有任何变化。uutils coreutils被设计为基本GNU工具的即插即用替代品，该项目将任何与GNU的差异视为bug，并进一步指出某些选项可能仍然缺失或行为不同。</p><p>因此，如果你更愿意继续使用GNU版本，你可以选择安装包含所有必要组件的coreutils-from-gnu包。</p><p>Coreutils只是更广泛运动的一部分。今年早些时候，Canonical成为Trifecta Tech Foundation的金牌赞助商，每年出资4万欧元资助内存安全的系统软件。</p><p>在此之下，他们当前的目标是chrony-rs，这是对Ubuntu用于保持时钟同步的工具的Rust重写。虽然工作仍在进行中，但已取得进展。其成为默认的目标是Ubuntu 27.04。</p><p>Canonical逐步构建的是其Ubuntu氧化愿景的完成，这并不是盲目地包含新组件。相反，这看起来是一种经过深思熟虑的方法，一步一步地推进。</p><p>Linux内核准备清除旧的32位Arm平台代码</p><p>这十三个补丁将删除已弃用的平台代码，驱动程序清理将随后进行。</p><p>喜欢这篇更新？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个对开源软件、定制PC组装、赛车运动以及探索这个世界无限可能性充满热情的书呆子。</p><p>Rune开源，寻求与贡献者分享收入</p><p>openEuler与构建亚洲AI基础设施的竞赛</p><p>MAKERphone 2.0让你构建4G手机并为其应用进行氛围编程</p><p>Bottles的创始人成功在Linux上运行Microsoft 365</p><p>Linux内核准备清除旧的32位Arm平台代码</p><p>成为更好的Linux用户</p><p>通过FOSS每周新闻通讯，学习有用的Linux技巧，发现应用程序，探索新发行版，并随时了解Linux世界的最新动态</p><p>太好了！你已成功注册。</p><p>欢迎回来！你已成功登录。</p><p>你已成功订阅It's FOSS。</p><p>你的链接已过期。</p><p>成功！请查</p></div>
+  <div class="article-body"><p>为2026年的网络面试做好准备，本文提供20道实用面试题与答案，涵盖TCP/IP、DNS、路由、端口、故障排除和网络命令。</p><p>文章《2026年20道Linux网络面试题与答案》首次发布于Linux Today。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/ubuntu-rustification-coreutils-migration/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.linuxtoday.com/blog/20-linux-networking-interview-questions-and-answers-for-2026/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

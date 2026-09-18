@@ -11394,5 +11394,192 @@
     "title_zh": "Rust 采纳针对 AI 生成贡献的官方政策",
     "summary_zh": "Rust 项目正式采纳了一项关于 AI 生成贡献的官方政策，为在开发中使用生成式 AI 的贡献者制定了更清晰的规则和期望。该政策旨在规范 AI 参与开源贡献的方式，确保透明度和质量。",
     "fulltext_zh": "Rust 采纳了一项针对 AI 生成贡献的官方政策，为在开发中使用生成式 AI 的贡献者制定了更清晰的规则和期望。\n\n文章《Rust 采纳针对 AI 生成贡献的官方政策》最初发布于 Linux Today。"
+  },
+  "5e4bed35772394e0f5f08207395b6f14": {
+    "id": "5e4bed35772394e0f5f08207395b6f14",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/microsoft-edit-2-0-update",
+    "title_en": "Microsoft’s CLI text editor now does syntax highlighting",
+    "summary_en": "Edit, Microsoft&#8217;s open-source command-line text editor, added syntax highlighting, improved regex handling in Find &#38; Replace and new editing shortcuts in its v2.0.0 update. Microsoft open-sourced Edit last year. It&#8217;s a small, cross-platform text editor with VS Code-style keybindings, mouse support, handles LF and CRLF line endings and lets you open multiple file. The clean terminal user interface (TUI) is super easy to use. The Edit v2.0.0 release came out earlier this year, but ",
+    "pub_date": "Thu, 17 Sep 2026 22:46:02 +0000",
+    "title_zh": "微软命令行文本编辑器现已支持语法高亮",
+    "summary_zh": "微软开源命令行文本编辑器 Edit 发布 v2.0.0 更新，新增语法高亮、改进正则表达式处理和编辑快捷键。其轻量级语法高亮器仅增加 40Kb 体积，支持 C、Rust、JavaScript 等十余种语言，处理速度超 100MB/s。此外还加入初始主题支持、多行缩进、自然排序文件选择器等改进。Ubuntu 用户可通过 snap 安装 msedit。",
+    "fulltext_zh": "微软的命令行文本编辑器现已支持语法高亮 - OMG! Ubuntu\n\n微软的开源命令行文本编辑器在 v2.0.0 更新中新增了语法高亮、改进的正则表达式处理以及新的编辑快捷键。\n\n它是一个小巧的跨平台文本编辑器，具有 VS Code 风格的键绑定、鼠标支持，可处理 LF 和 CRLF 行尾，并允许打开多个文件。简洁的终端用户界面（TUI）非常易于使用。\n\n该编辑器于今年早些时候发布，但非官方的 Linux snap 包（由 Canonical 的 Aaron Prisk 维护）直到 9 月 14 日才更新——正是通过那次更新我才得知有新版本发布。\n\n迟来地介绍一下新版本带来的内容。\n\nEdit 敏捷的语法高亮\n\nmsedit v2.0 中的 JavaScript 语法高亮\n\n语法高亮是本次的重大新增功能。开发者构建了一个自定义的轻量级语法高亮器，仅给二进制文件增加 40Kb 体积，却覆盖了十多种流行的编程语言，包括 C、Rust 和 JavaScript。\n\n根据发布说明，它以超过 100MB/s 的速度处理文本，这对于经常处理长文件的用户来说体验相当迅捷。\n\n更新日志中的其他改进：\n\n可在替换中复用匹配的文本\n\n可用于移动行\n\n缩进/取消缩进多个选中行\n\n选中当前行\n\n选区内的空白字符现在可见\n\n终端标题中的 • 表示文件有未保存的更改\n\n通过 CLI 打开目录会打开文件选择器\n\n文件选择器使用自然排序\n\n保存时自动创建缺失的父目录\n\n自发布以来一直有人要求提供自定义工具的方式。此版本带来了初步的主题支持，尽管仅限于此。\n\n修复了若干错误，该软件包现在可使用 Rust v1.93 或更高版本构建（此前需要 nightly 构建），并且 GitHub 仓库中添加了一个文件，为非官方 Snap 包提供了受支持的构建配置。\n\n（它缺乏两者的深度），但这是有意为之；Edit 面向的是那些希望在终端中处理文件、但并非特别重度使用、且不熟悉模态编辑模型——也不希望去了解的人。\n\n这或许解释了为什么我喜欢 Edit（在 Linux 上包名为 msedit），因为它非常容易上手。鉴于其使用场景，缺少语法高亮一直是个明显的缺陷，所以我很高兴看到这一问题得到解决。\n\n在 Ubuntu 上安装 Microsoft Edit\n\nEdit 已经推出一段时间了，但 Snap Store 上的软件包最近才更新到新版本。\n\n在 Ubuntu 上打开终端并运行\n\nsudo snap install msedit --classic\n\n完成后，你可以通过运行以下命令来访问它"
+  },
+  "d4a54535433cb0b9784359f84d215ea3": {
+    "id": "d4a54535433cb0b9784359f84d215ea3",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/ubuntu-2610-snapshot-4",
+    "title_en": "Ubuntu 26.10 snapshot 4 released ahead of next week’s beta",
+    "summary_en": "In the mood for testing? The fourth monthly snapshot of Ubuntu 26.10 is now available for download. It&#8217;s unusual for Ubuntu to produce a snapshot the same month a beta release is due, and this is also the second snapshot published this month: Ubuntu 26.10 Snapshot 3 arrived in early September. Strange times with the Stonking Stingray! &#8220;These should be very close to what the Beta candidates will look like next week, so don&#8217;t shy away from testing them&#8221;, said Canonical&#821",
+    "pub_date": "Thu, 17 Sep 2026 19:46:17 +0000",
+    "title_zh": "Ubuntu 26.10 快照 4 发布，下周 Beta 版即将到来",
+    "summary_zh": "Ubuntu 26.10 的第四个月度快照已开放下载，发布时间恰逢 Beta 版发布前夕，且为本月第二次发布快照。该快照基于 Linux 7.2 内核，包含 Rust 核心工具集更新及新壁纸等改动。Canonical 表示这些快照接近下周 Beta 候选版本，但并非生产就绪，仅供测试构建机制。普通用户建议等待 9 月 24 日的 Beta 版。",
+    "fulltext_zh": "想测试一下吗？Ubuntu 26.10 的第四个月度快照现已开放下载。\n\nUbuntu 在 Beta 版发布的同一个月还推出快照并不常见，而且这也是本月发布的第二个快照：Ubuntu 26.10 快照 3 已于九月初发布。时局真是奇怪。\n\nCanonical 的 Utkarsh Gupta 在邮件列表公告中表示：“这些应该非常接近下周 Beta 候选版本的样子，所以不要回避测试它们。”\n\n自快照 3 以来，更多软件包得到了更新：完整的 Rust 核心工具集以及一些细微的主题更改，包括一套以发布吉祥物为特色的新桌面壁纸。\n\n此快照运行在 Linux 7.2 内核上，但 Ubuntu 26.10 将使用 Linux 7.3 内核。\n\nUbuntu 的月度快照并非 alpha 版本，也未做好生产准备。团队表示应将其视为“一次性产物”。其目的是让 Canonical 测试和迭代更新的构建机制。\n\n如果您不是开发者或资深 bug 猎手，但想提前尝试这些更改，我建议您等到下周（9 月 24 日）Ubuntu 26.10 Beta 版发布。\n\n不想等待？请从 cdimage 服务器下载 Ubuntu 26.10 快照 4。您会找到 Ubuntu 26.10 及其各种风味版、衍生版和硬件变体的快照，包括 Raspberry Pi 和 Arm64，以及本周期新增的 Ubuntu Amd64-v3 构建。"
+  },
+  "fdbd2e28b73995acb18751304cc3b8b8": {
+    "id": "fdbd2e28b73995acb18751304cc3b8b8",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/miracle-wm-0-11-released",
+    "title_en": "Miracle-wm v0.11 gains a fancy new overview mode",
+    "summary_en": "Miracle-wm v0.11.0 gains a fancy new overview mode inspired by GNOME Shell. For those unfamiliar with miracle-wm, it&#8217;s a tiling window manager built around the Wayland compositor Mir, created to be a &#8220;hackable and flashy&#8221; alternative to other tiling WMs, like hyprland and sway. The overview mode gives users an easy way to select windows and workspaces. One tap of the action key (configured in the config file) enters a window selector, while a double tap of the action key will e",
+    "pub_date": "Thu, 17 Sep 2026 15:48:56 +0000",
+    "title_zh": "Miracle-wm v0.11 新增炫酷概览模式",
+    "summary_zh": "Miracle-wm v0.11.0 发布，新增受 GNOME Shell 启发的概览模式，支持窗口和工作区选择与导航，并加入自定义 GL 清屏颜色、屏幕共享、IPC 命令、窗口紧急状态支持及多项 Mir 协议扩展。该版本由 Canonical 的 Matthew Kosarek 开发，可通过 GitHub、Snap Store 或 Ubuntu PPA 安装。",
+    "fulltext_zh": "Miracle-wm v0.11 新增 GNOME 风格概览模式\n\nMiracle-wm v0.11.0 新增了一个受 GNOME Shell 启发的炫酷概览模式。\n\n对于不熟悉 Miracle-wm 的人来说，它是一个围绕 Wayland 合成器构建的平铺窗口管理器，旨在成为其他平铺窗口管理器（如 i3 和 Sway）的“可定制且炫酷”的替代品。\n\n概览模式让用户可以轻松选择窗口和工作区。单击操作键（在配置文件中配置）进入窗口选择器，双击操作键则进入工作区选择器。\n\n打开后，可以使用键盘快捷键、鼠标滚轮或直接点击来导航窗口和工作区。\n\n用户现在还可以为背景设置自定义 GL 清屏颜色。这很有用，因为新的概览模式会在工作区卡片后面显示背景。\n\nMiracle-wm v0.11 也支持屏幕共享\n\n向进程间通信（IPC）系统添加了命令。这会列出 miracle 会话中所有活动的键绑定，为用户提供一种“快捷键速查表”。\n\n还添加了对窗口紧急状态的支持。这使得像 Waybar 这样的状态栏能够向用户指示非焦点工作区中的窗口是否需要关注。\n\n现在可以发布 IPC 事件并处理 IPC 命令。\n\n本次更新扩展了 Mir 协议支持，包括：\n\next_image_copy_capture_manager_v1\next_output_image_capture_source_manager_v1\next_foreign_toplevel_list_v1\next_data_control_manager_v1\next_input_trigger_action_manager_v1\next_input_rigger_registration_manager_v1\n\n这使得屏幕共享和图像流媒体软件（如 xdg-desktop-portal-wlr）能够在 miracle 下开箱即用。\n\n一如既往，miracle-wm 的创造者、Canonical 的 Matthew Kosarek 在其 YouTube 频道上发布的视频中演示了许多新功能——包括那个“炫酷”的新概览：\n\n有关更改的更多详细信息以及如何使用或配置它们，请参阅更新后的 miracle-wm 文档。\n\n在 Ubuntu 上安装 miracle\n\nMiracle-wm 是免费的开源软件。从 GitHub 获取最新版本，从 Snap Store 安装（sudo snap install miracle-wm --classic），或使用 Ubuntu 26.04 LTS 的 PPA 中提供的 Deb 构建（请注意，PPA 的更新通常滞后）。\n\n如果您决定尝试一下，请记住 Miracle 是窗口管理器，而不是桌面环境。在登录屏幕通过 cog 菜单选择 miracle-wm 会话。\n\n但登录后您不会看到太多内容：您必须在文本编辑器中创建配置文件，以指定要与其一起使用的工具、实用程序和应用程序。如果您登录后没有加载任何内容，可以使用以下命令注销 miracle-wm。"
+  },
+  "2b6c048bcb2227b82923348534fe7da3": {
+    "id": "2b6c048bcb2227b82923348534fe7da3",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/ps5-linux-lead-quits/",
+    "title_en": "The Famed PS5 Linux Project Lead Quits Over a Premature Exploit Report to Sony",
+    "summary_en": "Andy Nguyen blames AI-assisted bug reporters who ignored his request.",
+    "pub_date": "Thu, 17 Sep 2026 09:11:44 GMT",
+    "title_zh": "著名PS5 Linux项目负责人因漏洞被过早报告给索尼而退出",
+    "summary_zh": "PS5 Linux项目负责人Andy Nguyen宣布退出PS5破解社区，并停止将项目移植到PS5 Pro的工作。原因是一名研究人员在同意等待后不到一天就将一个未修复的虚拟机管理程序漏洞报告给了索尼，导致该漏洞可能被迅速修补。Nguyen曾请求至少等到《GTA 6》发布，以便人们能合法购买游戏并享受Linux。尽管他退出，项目代码仍在GitHub上，其他贡献者表示可以继续推进。",
+    "fulltext_zh": "著名PS5 Linux项目负责人因漏洞被过早报告给索尼而退出\n\nAndy Nguyen指责那些无视他请求的AI辅助漏洞报告者。\n\n今年4月，我们看到Andy Nguyen将PS5变成了一台运行Linux的游戏PC，可以运行Steam游戏和模拟器，充分利用了硬件性能。\n\n如今他宣布将彻底退出PS5破解社区，并停止将该项目的移植到PS5 Pro的工作，该移植原计划在2027年某个时候发布。\n\n这一切都源于一个漏洞\n\n我将退出PS5社区，并停止所有关于PS5 Linux的工作。\n\n我倾注了心血和数月的时间，包括计划完成PS5 Pro支持并在2027年发布，现在一切都付诸东流。\n\n—— Andy Nguyen (@theflow0)\n\n你看，在PlayStation主机上运行Linux之所以可能，是因为该项目能够利用索尼已经修补的漏洞绕过虚拟机管理程序，覆盖了固件3.00到7.61。\n\n问题始于Andy保留了一个在当前固件上仍然存在的虚拟机管理程序漏洞，他说他早前就发现了。在发现该漏洞的研究人员同意等待后不到一天，这个漏洞就被过早地泄露给了索尼。\n\n他澄清了自己的立场，说道：\n\n我要求他们至少等到《GTA 6》发布，这样人们就有机会合法购买游戏并享受Linux。\n\n一旦索尼知道了这样的漏洞，它被修补只是时间问题，这就是PlayStation的漏洞赏金计划在HackerOne上的作用。\n\n发现漏洞的人\n\n为了让你了解PlayStation的HackerOne计划。\n\n虽然Andy在他的帖子中没有点名任何人，但快速网络搜索就能找到报告者。Jordy发布了声明，阐述了他如何处理这个漏洞。\n\n根据Jordy的说法，这个漏洞是他自己发现的，用的是“值得信赖的AI机器”，没有其他人的帮助。他甚至同意了Andy不披露发现的要求。\n\n出乎意料的是，第三个仍未具名的人，在几小时后使用了AI。Jordy预计会有更多人发现同样的漏洞，于是决定在HackerOne上发布该漏洞。\n\n代码仍在\n\n该项目的GitHub页面和所有相关仓库仍然存在。截至今天，没有任何内容被归档，如果你愿意，你可以接手任何待完成的工作或提出新的改进，开始为PS5 Linux项目做贡献。\n\n目前支持原版型号和Slim型号的固件3.00到7.61，所以你的测试设备需要是这些版本之一。Andy正在构建的PS5 Pro支持从未到达仓库，因此你必须从头开始。\n\n这就是开源软件的美妙之处。即使首席开发者和关键核心维护者决定放弃项目，新人也可以轻松接手工作或分叉，并按照他们选择的方向发展。\n\n虽然Andy的离开对支持更新PS5固件和PS5 Pro的计划是一个打击，但其他贡献者表示他们可以在没有他的情况下完成加载器的工作，我希望会有更多人跟进。\n\n喜欢这个更新吗？支持独立的Linux新闻报道\n\nIt's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。\n\n一次付费，永久享受\n\n任意金额，无承诺\n\n一个热衷于开源软件、定制PC构建、赛车运动和探索世界无限可能的技术迷。\n\n准时！GNOME 51发布，带来一系列你不应错过的改进\n\nUbuntu的Rust化有了新的里程碑！Coreutils迁移完成\n\nRune走向开源，寻求与贡献者分享收入\n\nopenEuler与构建亚洲AI基础设施的竞赛\n\nMAKERphone 2.0让你构建4G手机并为其应用进行氛围编程\n\n成为更好的Linux用户\n\n通过FOSS每周通讯，你学习有用的Linux技巧，发现"
+  },
+  "1b7b9c6c481e31f2ba2363511f80b6ae": {
+    "id": "1b7b9c6c481e31f2ba2363511f80b6ae",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/gnome-51-features/",
+    "title_en": "On Time! GNOME 51 Arrives With a Set of Improvements You Shouldn't Miss",
+    "summary_en": "Offline maps, a fingerprint manager, and a refined shell are some of the additions you can expect.",
+    "pub_date": "Thu, 17 Sep 2026 03:55:34 GMT",
+    "title_zh": "准时！GNOME 51 携一系列不容错过的改进登场",
+    "summary_zh": "GNOME 51 如期发布，带来离线地图、指纹管理器、更完善的 GNOME Shell、GDM 与 Mutter 修复，以及设置、软件、文件、日历、地图和网页等预装应用的升级。",
+    "fulltext_zh": "准时！GNOME 51 携一系列不容错过的改进登场\n\n离线地图、指纹管理器以及更完善的 Shell 是你可以期待的部分新增功能。\n\n对于大多数踏入 Linux 世界、尝试第一个发行版的人来说，GNOME 仍然是初始桌面环境。我这么说是因为 Ubuntu 和 Fedora Workstation 等主流选择都默认搭载它，直接将新用户带入 GNOME 生态系统。\n\n尽管我们看到像动态平铺窗口管理器这样的方案采用率在上升，但像 GNOME 这样的传统桌面环境仍然是许多人的日常主力选择。\n\n现在，一个新版本 GNOME 51 已经到来，带来了许多升级，例如行为更完善的 Shell、看起来更时尚的新壁纸，以及一系列更新的预装应用。\n\n继续阅读以了解完整细节。\n\n这是 GNOME 中你直接交互却甚至没有意识到其存在的部分。GNOME Shell 代表顶栏、概览、应用网格、通知、锁屏，以及窗口在工作区之间移动的方式。\n\nGNOME 51 清理了许多粗糙边缘，为你带来诸如显示器亮度在会话之间保存和恢复，以及更精细的截图取景，让你可以将选区一直拖到显示器边缘等好处。\n\n应用网格中的屏幕阅读器导航也重新设计，两个较小的烦人问题——另一个工作区上最小化窗口的 bug 和损坏的德语日期格式——已修复。\n\n同样，连接 USB 驱动器时出现的自动运行提示也得到了改进。\n\n这两个也是 GNOME 技术栈的重要组成部分。GDM 是登录屏幕背后的显示管理器，在你通过身份验证后启动会话。Mutter 是绘制窗口、决定窗口位置并处理输入的合成器。\n\nGNOME 51 为回退会话增加了一个设置。回退会话是用户没有首选会话或首选会话无法启动时使用的会话。管理员可以将从未登录过的账户指向他们选择的会话。\n\n自动登录绕过也被关闭了。此前，被攻破的欢迎程序可以为任何本地账户请求自动登录；幸运的是，这不再有效。\n\n在 Mutter 中，对旧版 NVIDIA 驱动的支持已移除，在 HDR 显示器上，SDR 内容不再看起来褪色。窗口处理本身也得到了一些修复。边缘平铺窗口现在可以正确全屏，最大化窗口可以从键盘移动到另一个显示器而不会出现问题。\n\n它还停止了一次报告多个显示器为主显示器，并且在输入捕获会话运行时鼠标光标会隐藏自身——就像远程桌面工具打开的那种会话。\n\nGNOME 51 设置、软件、文件。\n\n捆绑应用也经历了各自的重要升级。我们首先从设置应用开始，它在网络页面添加了 DNS 域搜索选项，获得了各种翻译更新，并通过 GNOME 二维码小部件处理 Wi-Fi 共享。\n\n关于页面得到了清理，移除了“检查更新”字段，并扩展了软件和硬件信息组，让用户可以快速访问重要的系统细节。\n\n因此，专门的“检查更新”按钮已成为过去。\n\n软件现在会在安装已达到生命周期结束状态的应用之前警告你，其 Flatpak 权限列表已扩展，应用评分使用不同的衡量方法来显示平均评分。\n\n文件（文件管理器）在拖动多个项目时显示计数徽章，复制操作完成后复制的文件保持选中状态。从另一个应用打开的位置会显示在新标签页中，而预览器现在支持重命名和移到回收站操作。\n\n你可以通过选择一个文件或文件夹并按“空格”键来访问预览器功能。它会显示所选项目的预览以及一些关键细节。\n\nGNOME 51 日历、地图和网页。\n\n日历应用的内部经过了大量重构，现在基于……\n\n周、月"
+  },
+  "2791608f129152ee73ab6350a5e700a1": {
+    "id": "2791608f129152ee73ab6350a5e700a1",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12956",
+    "title_en": "Distribution Release: Parted Magic 26.09",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The Parted Magic project has published a new release. The new version, 26.09, has moved its base from Slackware 15.0 to Slackware's development (Current) branch. The release announcement, available on the distribution's news page states: \"There is a new disk cloner in this release. Wipe Free Space has....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Parted Magic 26.09",
+    "summary_zh": "Parted Magic 26.09 发布，基础系统从 Slackware 15.0 迁移至 Slackware-current，桌面环境由 Xfce 4.16 升级至 4.20，并更换了十多年来首次更新的壁纸。新版本引入磁盘克隆工具 Parted Magic Clone，可复制磁盘、分区或镜像并验证副本正确性，且保证源盘只读不写入。Wipe Free Space 已重写，不再依赖外部工具。该发行版为商业产品，需付费购买。",
+    "fulltext_zh": "发行版发布：Parted Magic 26.09（DistroWatch.com 新闻）\n\n该项目发布了新版本。新版本 26.09 已将其基础从 Slackware 15.0 迁移至 Slackware 的开发（Current）分支。发布公告可在该发行版的网站上获取。\n\n此版本新增了一个磁盘克隆工具。Wipe Free Space 已被重写，不再依赖外部工具。我编写的其他每个程序都已逐行审查，并在专门为此保留的测试机上对真实硬盘运行，由此发现的错误均已修复。在这一切之下，基础系统已在 Slackware-current 上重建，桌面从 Xfce 4.16 迁移到 Xfce 4.20，壁纸也十多年来首次更换。此版本的命名方式也不同，并且已签名。这两点都在文末进行了解释。Parted Magic Clone 是新增功能。它可以复制磁盘、分区或两者的镜像，并生成副本正确的证据。其构建所围绕的规则是：源盘绝不被写入。无论何种情况，一个字节都不写。源盘以只读方式打开，所有纠正操作——无论是填充后续扇区、修复文件系统、扩展以填满更大的磁盘，还是重新指向引导加载程序——都在副本上执行，且在副本被读回并验证之后进行。\n\nParted Magic 是一款商业 Linux 发行版——可从该项目处购买。\n\n近期相关新闻与发布\n\n发行版发布：Parted Magic 26.09\n发行版发布：Parted Magic 2026_03_20\n发行版发布：Parted Magic 2024_11_03\n发行版发布：Parted Magic 2022_01_18\n发行版发布：Parted Magic 2021_05_12\n发行版发布：Parted Magic 2021_02_28\n更多 Parted Magic 新闻……\n\nParted Magic 是一个小型 live CD/USB/PXE，其基本用途是分区硬盘。尽管 GParted 和 Parted 是主要程序，该 CD/USB 还提供其他应用程序，如 Partition Image、TestDisk、fdisk、sfdisk、dd、ddrescue 等。2013 年 8 月，该发行版成为商业产品，不再提供免费下载。\n\nhttps://partedmagic."
+  },
+  "c1dc6c9e62d77de64d79d3687e7cb235": {
+    "id": "c1dc6c9e62d77de64d79d3687e7cb235",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12955",
+    "title_en": "Development Release: AlmaLinux OS 9.9 Beta 1",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The AlmaLinux project has published a new beta snapshot for the 9.x series. \"AlmaLinux 9.9 beta introduces new compiler toolsets, new module streams, and improved security. This release adds GCC Toolset 16 alongside updated LLVM and Rust toolsets and brings Node.js 26 and PHP 8.4 as new module....",
+    "pub_date": "",
+    "title_zh": "开发版本：AlmaLinux OS 9.9 Beta 1",
+    "summary_zh": "AlmaLinux 9.9 Beta 1 发布，引入 GCC Toolset 16、更新 LLVM 和 Rust 工具集，新增 Node.js 26 和 PHP 8.4 模块流。虚拟化支持更新至最新 libvirt 和 QEMU-KVM，图形栈刷新 Mesa。安全性通过 SSSD、SELinux 策略、crypto-policies、Keylime 和 Clevis 更新得到改进。fapolicyd 从 1.4.5 跃升至 2.0.1，属重大版本更新，建议在生产环境部署前仔细测试。",
+    "fulltext_zh": "开发版本：AlmaLinux OS 9.9 Beta 1\n\n该项目发布了 9.x 系列的新测试快照。\n\nAlmaLinux 9.9 beta 引入了新的编译器工具集、新的模块流，并改进了安全性。此版本新增 GCC Toolset 16，同时更新了 LLVM 和 Rust 工具集，并带来 Node.js 26 和 PHP 8.4 作为新的模块流。虚拟化支持更新至最新版本的 libvirt 和 QEMU-KVM，图形栈也通过 Mesa 进行了刷新。安全性通过 SSSD、SELinux 策略、crypto-policies、Keylime 和 Clevis 的更新得到改进，确保系统安全可靠。您可以在 wiki 上阅读此版本的完整发行说明：AlmaLinux OS 9.9 Beta 发行说明。\n\nfapolicyd 达到 2.0：文件访问策略守护进程在此版本中从 1.4.5 跃升至 2.0.1——这是一个主版本更新，而非通常的修订更新。在强化的系统上，fapolicyd 位于每个二进制文件的执行路径中，因此新主版本在进入生产主机之前值得仔细审视。如果您运行 fapolicyd，这是本次发布中我们最希望看到测试的部分。\n\n其他详细信息可在以下文件中找到：\nAlmaLinux-9.9-beta-1-x86_64-dvd.iso\nAlmaLinux-9.9-beta-1-x86_64-minimal.iso\nAlmaLinux-9.9-beta-1-x86_64-boot.iso\n\n近期相关新闻和发布：\n开发版本：AlmaLinux OS 9.9 Beta 1\n发行版本：AlmaLinux OS 10.2、9.8\n开发版本：AlmaLinux OS 9.8 Beta 1\n发行版本：AlmaLinux OS 10.1\n开发版本：AlmaLinux OS 9.7 Beta\n发行版本：AlmaLinux OS 10.0\n更多 AlmaLinux 新闻...\n\nAlmaLinux OS 是一个开源、社区驱动的项目，基于 Red Hat Enterprise Linux (RHEL) 的源代码构建。AlmaLinux 是 RHEL 的完全二进制兼容分支，由注册非营利组织 AlmaLinux OS 基金会维护。\n\nhttps://almalinux.org/\nhttps://lists.almalinux.org/mailman3/lists/\nhttps://wiki.almalinux.org/\nhttps://almalinux.org/get-almalinux\nhttps://bugs.almalinux.org/"
+  },
+  "22af1ae9fe5ae474a0eb33144764b43b": {
+    "id": "22af1ae9fe5ae474a0eb33144764b43b",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/OpenCL-3.1.2-Released",
+    "title_en": "OpenCL 3.1.2 Released With cl_khr_command_buffer Promoted",
+    "summary_en": "The Khronos Group today released the newest revision of the OpenCL specification with a handful of changes...",
+    "pub_date": "Thu, 17 Sep 2026 20:33:22 -0400",
+    "title_zh": "OpenCL 3.1.2 发布，cl_khr_command_buffer 正式转正",
+    "summary_zh": "Khronos Group 发布 OpenCL 3.1.2 规范更新，将 cl_khr_command_buffer 扩展从实验状态正式转正。该扩展支持录制和回放 OpenCL 命令缓冲区，旨在降低重复入队相同工作负载的开销，由 NVIDIA、Intel、Google、Codeplay、高通等共同开发。此外，新版本还改进了内存对象 API 错误码文档的一致性，并带来多项澄清。",
+    "fulltext_zh": "OpenCL 3.1.2 发布，cl_khr_command_buffer 正式转正\n\n2026 年 9 月 17 日晚上 08:33（美国东部时间）。\n\nKhronos Group 今日发布了 OpenCL 规范的最新修订版，带来了一些改动。\n\n随着今日 OpenCL 3.1.2 规范的发布，cl_khr_command_buffer 扩展已最终定稿，不再被视为实验性状态。cl_khr_command_buffer 带来了录制和回放 OpenCL 命令缓冲区的能力。其目的在于减少重复入队相同工作负载的开销。\n\ncl_khr_command_buffer 扩展由 NVIDIA、Intel、Google、Codeplay、高通及其他利益相关方共同开发。很高兴看到它如今已从实验状态转正。\n\nOpenCL 3.1.2 还改进了内存对象 API 错误码文档的一致性，并带来了各种澄清说明。\n\nOpenCL 3.1.2 规范更新可从以下地址获取：\n\nPoCL 7.2 发布，在 RISC-V 和 x86_64 CPU 上通过官方 OpenCL 3.0 一致性认证\nOPI 抽象 v0.1 发布，旨在标准化 DPU/IPU 生态系统\nKhronos 列出首个符合 OpenCL 3.1 的实现：Asahi Linux 上的 Apple M1/M2 配合 Rusticl\nKhronos 发布 glTF 2.1，使这一 3D 资产标准更好地适用于大型场景\nAV2 v1.0 规范发布，面向下一代视频编码\nOpenCL 3.1.1 发布，以解决可能的性能回归问题\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nVoid Linux 维护者因 AI 政策争议遗弃 100 多个软件包\nIntel 逆转取消其开源字体项目的决定\nBFS 文件系统将在 Linux 7.4 中被移除\nAMDGPU HDMI 2.1 默认启用补丁已就绪，将在 Linux 7.4 中支持 FreeSync、VRR 和 ALLM\nDebian 13.7 发布，带来大量错误修复\nSteam 客户端测试版改进大屏幕模式，并带来多项 Linux 增强\nMold 高速链接器正用 Rust 重写，希望成为 Linux 上的默认链接器\nLinux 修复了自 2023 年以来存在的静默用户空间数据丢失漏洞\n\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "23074ade09267b5d61fd633b937fce16": {
+    "id": "23074ade09267b5d61fd633b937fce16",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Jemalloc-5.4",
+    "title_en": "Jemalloc 5.4 Released With Portability Improvements, Code Cleanups",
+    "summary_en": "Earlier this year Meta announced a renewed investment into the jemalloc memory allocator that's been popular for server and HPC use among various desktop use-cases too. After stagnating a bit in recent years, Jemalloc has been off to seeing new developments since Meta's announcement and out today is Jemalloc 5.4 as the latest step forward...",
+    "pub_date": "Thu, 17 Sep 2026 18:37:11 -0400",
+    "title_zh": "Jemalloc 5.4 发布：可移植性改进与代码清理",
+    "summary_zh": "Jemalloc 5.4 正式发布，这是 Meta 宣布重新投资该内存分配器后的最新进展。此版本致力于解决技术债务，包括代码重构、错误修复、增强测试覆盖率和代码清理，同时提升了可移植性。新特性包括用于自定义扩展分配钩子的 EXTENT_ALLOC_FLAG_PINNED 标志、通过 thread.arena 支持每 CPU arena 选择，以及多项优化。此外，还引入了操作系统抽象层，并修复了 GCC 16 警告。",
+    "fulltext_zh": "Jemalloc 5.4 发布：可移植性改进与代码清理\n\n2026年9月17日 下午6:37 EDT\n\nMeta 宣布对 jemalloc 内存分配器进行新一轮投资，该分配器在服务器和 HPC 领域广受欢迎，在许多桌面用例中也有应用。在经历了几年的停滞之后，自 Meta 宣布以来，Jemalloc 已迎来新的发展，今天发布的 Jemalloc 5.4 是向前迈出的最新一步。\n\nJemalloc 5.4 致力于解决技术债务，包括代码重构、错误修复、增强测试覆盖率以及其他代码清理工作。此外还有可移植性方面的改进。\n\nJemalloc 5.4 的其他一些新特性包括：用于自定义扩展分配钩子的 \"EXTENT_ALLOC_FLAG_PINNED\"，以标记不可回收的映射；通过 thread.arena 支持每 CPU arena 选择；以及其他更改。此版本还包含一些新的优化。\n\n作为可移植性工作的一部分，Jemalloc 现在拥有一个操作系统抽象层，用于处理围绕文件/进程 I/O、时间、同步、CPU、虚拟内存、atfork、错误处理、性能分析、线程让步和配置访问的平台相关代码。Jemalloc 5.4 中还修复了 GCC 16 的警告。\n\nJemalloc 5.4 内存分配器的下载和完整更改列表可通过以下链接获取\n\nRust 发布警告：关键开发者成为攻击目标\nMojo 1.1 发布，现接受社区对编译器的贡献\nRust Coreutils 0.12 发布，包含 Ubuntu 寻求的修复\nRustls 0.23.45 发布，修复存在两年的安全问题\nMold 高速链接器正用 Rust 重写，希望成为 Linux 上的默认链接器\nGit 2.56-rc0 发布，更新贡献指南，改进 Swift 支持\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动程序等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nVoid Linux 维护者因 AI 政策争议遗弃 100 多个软件包\nIntel 逆转取消其开源字体项目的决定\nBFS 文件系统将从 Linux 7.4 中移除\nAMDGPU HDMI 2.1 默认启用补丁已就绪，适用于 Linux 7.4，支持 FreeSync、VRR 和 ALLM\nDebian 13.7 发布，包含许多错误修复\nSteam 客户端测试版改进大屏幕模式，多项 Linux 增强\nMold 高速链接器正用 Rust 重写，希望成为 Linux 上的默认链接器\nLinux 修复自 2023 年以来存在的静默用户空间数据丢失错误\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "44213b90ac39b5ef4787e5ca4fe9a635": {
+    "id": "44213b90ac39b5ef4787e5ca4fe9a635",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/amd-zen5-intel-gnr-ws-smt",
+    "title_en": "Intel Granite Rapids WS vs. AMD Threadripper Zen 5 SMT Performance",
+    "summary_en": "As a follow-up to the article earlier this month of the Intel Xeon 600 workstation performance against AMD Ryzen Threadripper 9000 series in over 400 benchmarks -- including when carried out at the same core count and memory configuration -- today's article is exploring the Hyper Threading / SMT impact on both the Intel Redwood Cove and AMD Zen 5 cores for workstations.",
+    "pub_date": "Thu, 17 Sep 2026 15:14:14 -0400",
+    "title_zh": "Intel Granite Rapids WS 与 AMD Threadripper Zen 5 的 SMT 性能对比",
+    "summary_zh": "本文对比了 Intel Xeon 678X（Granite Rapids WS）与 AMD Ryzen Threadripper 9980X（Zen 5）在开启和关闭超线程/SMT 时的性能差异。测试涵盖 48 核与 64 核配置，使用 Fedora Workstation 44、Linux 7.1 内核和 GCC 16.2 编译器，并监测功耗与温度。",
+    "fulltext_zh": "Intel Granite Rapids WS 与 AMD Threadripper Zen 5 的 SMT 性能对比 - Phoronix\nIntel Granite Rapids WS 与 AMD Threadripper Zen 5 的 SMT 性能对比\n发布于 2026 年 9 月 17 日下午 03:14 EDT。\n作为本月早些时候那篇关于 Intel Xeon 600 工作站性能对比 AMD Ryzen Threadripper 9000 系列、涵盖 400 多项基准测试（包括在相同核心数和内存配置下进行）的文章的后续，今天的文章将探讨超线程 / SMT 对 Intel Redwood Cove 和 AMD Zen 5 工作站核心的影响。\n本文是在 HP Z4 G6i 工作站“Granite Rapids WS”于 Phoronix 实验室进行评测和基准测试期间所进行的最后一轮基准测试。\n今天的基准测试针对 Xeon 678X，先在其默认配置 48 核 / 96 线程下进行，然后在禁用超线程（HT）后仅 48 核/线程下重复。在 AMD Zen 5 方面，使用的是 AMD Ryzen Threadripper 9980X 和 System76 Thelio Major 工作站。Threadripper 9980X 先在其默认 64 核 / 128 线程配置下测试，SMT 开启，然后关闭。此外，9980X 还在 48 核（通过 BIOS 启用每个 CCD 6 个核心）下测试，以匹配 Xeon 678X 的核心/线程数。\n在此基础上，运行了一系列与 SMT/HT 相关的不同工作负载，以比较这些 AMD 和 Intel 工作站处理器之间同时多线程的影响。同时还监测了 CPU 功耗和温度以供参考。这些 SMT 基准测试使用 Fedora Workstation 44，运行在 Linux 7.1 内核和 GCC 16.2 编译器上。\nIntel Granite Rapids WS 核心扩展性能与 Xeon 678X\nIntel 超线程性能在 Xeon 678X“Granite Rapids-WS”上\nIntel AMX 性能与 Xeon 678X 工作站 CPU\nAMD EPYC 9006 Venice 发布，看起来有望大获成功\nAMD Ryzen 7 7700X3D Linux 性能\nGraviton5 性能超过 Intel Xeon Granite Rapids，但不及 AMD EPYC Turin\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "a970eb81f195d37eec9fa4b93e6127ac": {
+    "id": "a970eb81f195d37eec9fa4b93e6127ac",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Rust-Developers-Targeted",
+    "title_en": "Rust Issues Warning Over Key Developers Being Targeted For Compromise",
+    "summary_en": "The Rust security response working group and Crates.io team have issued a warning that a targeted attack is underway against key Rust programming language developers...",
+    "pub_date": "Thu, 17 Sep 2026 14:11:30 -0400",
+    "title_zh": "Rust 发出警告：核心开发者成为攻击目标",
+    "summary_zh": "Rust 安全响应工作组和 Crates.io 团队警告称，针对 Rust 语言核心开发者及热门 crate 所有者的定向攻击正在进行。攻击者通过伪造 LinkedIn 资料，以招聘或项目合作为由诱导开发者安装恶意软件或执行恶意命令，以在 Rust 生态中传播恶意软件。团队呼吁开发者保持警惕，启用多因素认证等安全措施。",
+    "fulltext_zh": "Rust 安全响应工作组和 Crates.io 团队发出警告，称针对 Rust 编程语言核心开发者的定向攻击正在进行中。\n\n据报道，负责开发 Rust 编程语言的 Rust-Lang 团队关键成员以及热门 Rust crate 的所有者正成为攻击目标，攻击者试图入侵他们的设备和账户，以便在 Rust 生态系统中传播恶意软件。\n\n此次攻击手段似乎相当复杂，攻击者会建立虚假的 LinkedIn 个人资料，然后以招聘或合同机会为诱饵，诱导开发者安装恶意软件：\n\n“他们会安排一次视频通话，理由看起来很正面——可能是为了工作，可能是为了项目，也可能是为了合同机会——然后利用这一途径让目标在其计算机上安装某些东西（例如一个据称缺失的音频编解码器），或执行另一条命令（例如通过将命令放入剪贴板）。\n\n这些攻击者正在建立看似合法的新公司资料，包括看似可信的 LinkedIn 存在，以便通过粗略的审查。”\n\n他们鼓励 Rust 开发者保持警惕，确保其账户使用多因素认证和其他安全防护措施。"
+  },
+  "bb7b31c32e2f57112e2f6f2f9523c095": {
+    "id": "bb7b31c32e2f57112e2f6f2f9523c095",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Mojo-1.1-Released",
+    "title_en": "Mojo 1.1 Released, Now Accepting Community Contributions To The Compiler",
+    "summary_en": "Last month Modular's Mojo language was open-sourced following the acquisition of Modular by Qualcomm. Modular was the AI startup founded by Chris Lattner of LLVM and Swift fame. Released today was Mojo 1.1 and also marks the project recently now beginning code contributions from the community to its compiler...",
+    "pub_date": "Thu, 17 Sep 2026 12:26:41 -0400",
+    "title_zh": "Mojo 1.1 发布，现已接受社区对编译器的贡献",
+    "summary_zh": "Mojo 1.1 与 MAX 26.6 正式发布。MAX 26.6 新增对 MiniMax-Music3 音频生成的支持，并提升了 AMD 和 NVIDIA GPU 上的内核速度。Mojo 1.1 增加了推断成员引用支持，改进了编译时间和生成代码性能，标准库中更多 API（如 SIMD）被视为稳定。此外，Mojo 开发流程进一步开放，开始接受社区对 Mojo 编译器的代码贡献。",
+    "fulltext_zh": "Mojo 1.1 发布，现已接受社区对编译器的贡献\n2026年9月17日 下午12:26 EDT。\n\n在 Qualcomm 收购 Modular 之后，Modular 的 Mojo 语言已开源。Modular 是由 LLVM 和 Swift 创始人 Chris Lattner 创立的 AI 初创公司。今天发布的 Mojo 1.1 也标志着该项目最近开始接受社区对其编译器的代码贡献。\n\nMojo 1.1 和 MAX 26.6 于今日发布，MAX 26.6 带来了对 MiniMax-Music3 音频生成的支持。AMD 和 NVIDIA GPU 上的内核速度也得到了提升。\n\nMojo 1.1 增加了对推断成员引用的支持，改进了编译时间并提升了生成代码的性能，标准库中更多 API（如 SIMD）现在被视为稳定。此外，Mojo 开发流程进一步开放，现已接受社区对 Mojo 编译器的贡献。\n\n有关 Modular 的 MAX 26.6 和 Mojo 1.1 软件发布的更多详细信息，可通过以下链接查看。"
+  },
+  "d4ab52a029cd6e3cd8ea1c39e1aa7293": {
+    "id": "d4ab52a029cd6e3cd8ea1c39e1aa7293",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/new-debian-13-kernel-security-update-fixes-zapscape-and-sctphantom/",
+    "title_en": "New Debian 13 Kernel Security Update Fixes “Zapscape” and “SCTPhantom”",
+    "summary_en": "A new Debian 13 kernel security update addresses the “Zapscape” and “SCTPhantom” vulnerabilities, helping protect systems against potential security risks.\nThe post New Debian 13 Kernel Security Update Fixes “Zapscape” and “SCTPhantom” appeared first on Linux Today.",
+    "pub_date": "Thu, 17 Sep 2026 07:08:40 +0000",
+    "title_zh": "新的 Debian 13 内核安全更新修复 “Zapscape” 和 “SCTPhantom”",
+    "summary_zh": "Debian 13 发布新的内核安全更新，修复了被称为 “Zapscape” 和 “SCTPhantom” 的两个漏洞，以帮助保护系统免受潜在安全风险。",
+    "fulltext_zh": "新的 Debian 13 内核安全更新修复了 “Zapscape” 和 “SCTPhantom” 漏洞，有助于保护系统免受潜在的安全风险。\n\n文章《新的 Debian 13 内核安全更新修复 “Zapscape” 和 “SCTPhantom”》首先出现在 Linux Today 上。"
+  },
+  "be17b950caf6f96a4eac288d413d9d74": {
+    "id": "be17b950caf6f96a4eac288d413d9d74",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/gcc-16-2-released-with-more-than-100-bugs-fixed/",
+    "title_en": "GCC 16.2 Released With More Than 100 Bugs Fixed",
+    "summary_en": "GCC 16.2 is now available with more than 100 bug fixes, delivering improved compiler stability, reliability, and compatibility for developers.\nThe post GCC 16.2 Released With More Than 100 Bugs Fixed appeared first on Linux Today.",
+    "pub_date": "Thu, 17 Sep 2026 07:07:43 +0000",
+    "title_zh": "GCC 16.2 发布，修复超过 100 个错误",
+    "summary_zh": "GCC 16.2 现已发布，修复了超过 100 个错误，为开发者带来更高的编译器稳定性、可靠性和兼容性。",
+    "fulltext_zh": "GCC 16.2 现已发布，修复了超过 100 个错误，为开发者带来更高的编译器稳定性、可靠性和兼容性。\n\n文章《GCC 16.2 发布，修复超过 100 个错误》最初发表于 Linux Today。"
+  },
+  "189361f0050dc6a0e9092cf31456c38b": {
+    "id": "189361f0050dc6a0e9092cf31456c38b",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/how-to-install-owncloud-on-ubuntu-26-04/",
+    "title_en": "How to Install ownCloud on Ubuntu 26.04",
+    "summary_en": "Learn how to install ownCloud on Ubuntu 26.04 with step-by-step instructions for setting up a secure self-hosted cloud storage and file-sharing platform.\nThe post How to Install ownCloud on Ubuntu 26.04 appeared first on Linux Today.",
+    "pub_date": "Thu, 17 Sep 2026 07:06:42 +0000",
+    "title_zh": "如何在 Ubuntu 26.04 上安装 ownCloud",
+    "summary_zh": "本文提供在 Ubuntu 26.04 上安装 ownCloud 的分步指南，帮助用户搭建安全的自托管云存储与文件共享平台。内容涵盖安装前的环境准备、依赖配置、数据库设置以及 ownCloud 的部署与初始化，适合希望自主掌控数据的个人或团队参考。",
+    "fulltext_zh": "了解如何在 Ubuntu 26.04 上安装 ownCloud，通过分步说明搭建安全的自托管云存储和文件共享平台。\n\n文章《如何在 Ubuntu 26.04 上安装 ownCloud》首次发布于 Linux Today。"
+  },
+  "03800371ee97ce4bc6f2c4ed8c128cea": {
+    "id": "03800371ee97ce4bc6f2c4ed8c128cea",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/fastfetch-2-67-system-information-tool-adds-new-interactive-configuration-generator/",
+    "title_en": "Fastfetch 2.67 System Information Tool Adds New Interactive Configuration Generator",
+    "summary_en": "Fastfetch 2.67 adds a new interactive configuration generator, making it easier to customize system information displays alongside other improvements and fixes.\nThe post Fastfetch 2.67 System Information Tool Adds New Interactive Configuration Generator appeared first on Linux Today.",
+    "pub_date": "Thu, 17 Sep 2026 07:05:40 +0000",
+    "title_zh": "Fastfetch 2.67 系统信息工具新增交互式配置生成器",
+    "summary_zh": "Fastfetch 2.67 版本发布，新增交互式配置生成器，让用户能更轻松地自定义系统信息显示，同时还包含其他改进和修复。",
+    "fulltext_zh": "Fastfetch 2.67 新增了一个交互式配置生成器，使得自定义系统信息显示变得更加容易，同时还带来了其他改进和修复。\n\n文章《Fastfetch 2.67 系统信息工具新增交互式配置生成器》最初发布于 Linux Today。"
+  },
+  "01d137ac8323d53ebb1bdeacbbe44d98": {
+    "id": "01d137ac8323d53ebb1bdeacbbe44d98",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/20-linux-networking-interview-questions-and-answers-for-2026/",
+    "title_en": "20 Linux Networking Interview Questions and Answers for 2026",
+    "summary_en": "Prepare for 2026 networking interviews with 20 practical questions and answers covering TCP/IP, DNS, routing, ports, troubleshooting, and network commands.\nThe post 20 Linux Networking Interview Questions and Answers for 2026 appeared first on Linux Today.",
+    "pub_date": "Thu, 17 Sep 2026 07:03:57 +0000",
+    "title_zh": "2026年20道Linux网络面试题与答案",
+    "summary_zh": "本文为2026年网络面试准备，提供20道实用面试题与答案，涵盖TCP/IP、DNS、路由、端口、故障排除和网络命令等核心主题，帮助求职者系统复习Linux网络知识，提升面试通过率。",
+    "fulltext_zh": "为2026年的网络面试做好准备，本文提供20道实用面试题与答案，涵盖TCP/IP、DNS、路由、端口、故障排除和网络命令。\n\n文章《2026年20道Linux网络面试题与答案》首次发布于Linux Today。"
   }
 }
