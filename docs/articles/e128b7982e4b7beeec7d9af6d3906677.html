@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>著名PS5 Linux项目负责人因漏洞被过早报告给索尼而退出 — Linux 中文速报</title>
+<title>Wine 11.18 持续推进其 NTOSKRNL 实现 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>著名PS5 Linux项目负责人因漏洞被过早报告给索尼而退出</h1>
+  <h1>Wine 11.18 持续推进其 NTOSKRNL 实现</h1>
 
-  <div class="article-summary">PS5 Linux项目负责人Andy Nguyen宣布退出PS5破解社区，并停止将项目移植到PS5 Pro的工作。原因是一名研究人员在同意等待后不到一天就将一个未修复的虚拟机管理程序漏洞报告给了索尼，导致该漏洞可能被迅速修补。Nguyen曾请求至少等到《GTA 6》发布，以便人们能合法购买游戏并享受Linux。尽管他退出，项目代码仍在GitHub上，其他贡献者表示可以继续推进。</div>
+  <div class="article-summary">Wine 11.18 发布，这是该开源兼容层的双周开发版。本次更新继续完善 NTOSKRNL 实现，重点包括 PnP 设备启用、容器 ID 及多项必要函数，并同步加强测试覆盖。此外还包含代码正确性修复、标准 C 头文件兼容性改进以及 21 个已知错误修复，涉及 Adobe Creative Cloud 和《刺客信条：叛变》等游戏。</div>
 
-  <div class="article-body"><p>著名PS5 Linux项目负责人因漏洞被过早报告给索尼而退出</p><p>Andy Nguyen指责那些无视他请求的AI辅助漏洞报告者。</p><p>今年4月，我们看到Andy Nguyen将PS5变成了一台运行Linux的游戏PC，可以运行Steam游戏和模拟器，充分利用了硬件性能。</p><p>如今他宣布将彻底退出PS5破解社区，并停止将该项目的移植到PS5 Pro的工作，该移植原计划在2027年某个时候发布。</p><p>这一切都源于一个漏洞</p><p>我将退出PS5社区，并停止所有关于PS5 Linux的工作。</p><p>我倾注了心血和数月的时间，包括计划完成PS5 Pro支持并在2027年发布，现在一切都付诸东流。</p><p>—— Andy Nguyen (@theflow0)</p><p>你看，在PlayStation主机上运行Linux之所以可能，是因为该项目能够利用索尼已经修补的漏洞绕过虚拟机管理程序，覆盖了固件3.00到7.61。</p><p>问题始于Andy保留了一个在当前固件上仍然存在的虚拟机管理程序漏洞，他说他早前就发现了。在发现该漏洞的研究人员同意等待后不到一天，这个漏洞就被过早地泄露给了索尼。</p><p>他澄清了自己的立场，说道：</p><p>我要求他们至少等到《GTA 6》发布，这样人们就有机会合法购买游戏并享受Linux。</p><p>一旦索尼知道了这样的漏洞，它被修补只是时间问题，这就是PlayStation的漏洞赏金计划在HackerOne上的作用。</p><p>发现漏洞的人</p><p>为了让你了解PlayStation的HackerOne计划。</p><p>虽然Andy在他的帖子中没有点名任何人，但快速网络搜索就能找到报告者。Jordy发布了声明，阐述了他如何处理这个漏洞。</p><p>根据Jordy的说法，这个漏洞是他自己发现的，用的是“值得信赖的AI机器”，没有其他人的帮助。他甚至同意了Andy不披露发现的要求。</p><p>出乎意料的是，第三个仍未具名的人，在几小时后使用了AI。Jordy预计会有更多人发现同样的漏洞，于是决定在HackerOne上发布该漏洞。</p><p>代码仍在</p><p>该项目的GitHub页面和所有相关仓库仍然存在。截至今天，没有任何内容被归档，如果你愿意，你可以接手任何待完成的工作或提出新的改进，开始为PS5 Linux项目做贡献。</p><p>目前支持原版型号和Slim型号的固件3.00到7.61，所以你的测试设备需要是这些版本之一。Andy正在构建的PS5 Pro支持从未到达仓库，因此你必须从头开始。</p><p>这就是开源软件的美妙之处。即使首席开发者和关键核心维护者决定放弃项目，新人也可以轻松接手工作或分叉，并按照他们选择的方向发展。</p><p>虽然Andy的离开对支持更新PS5固件和PS5 Pro的计划是一个打击，但其他贡献者表示他们可以在没有他的情况下完成加载器的工作，我希望会有更多人跟进。</p><p>喜欢这个更新吗？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热衷于开源软件、定制PC构建、赛车运动和探索世界无限可能的技术迷。</p><p>准时！GNOME 51发布，带来一系列你不应错过的改进</p><p>Ubuntu的Rust化有了新的里程碑！Coreutils迁移完成</p><p>Rune走向开源，寻求与贡献者分享收入</p><p>openEuler与构建亚洲AI基础设施的竞赛</p><p>MAKERphone 2.0让你构建4G手机并为其应用进行氛围编程</p><p>成为更好的Linux用户</p><p>通过FOSS每周通讯，你学习有用的Linux技巧，发现</p></div>
+  <div class="article-body"><p>Wine 11.18 持续推进其 NTOSKRNL 实现</p><p>发布于 2026 年 9 月 18 日下午 05:24（美国东部时间）。</p><p>Wine 11.18 于今日发布，这是这款用于在 Linux、macOS 及其他平台上运行 Windows 游戏和应用程序的开源软件的最新双周开发版本。</p><p>在 Wine 11.18 中，大量补丁被合入，以进一步构建其面向内核驱动的 NTOSKRNL 实现支持。NTOSKRNL 是 Microsoft Windows 操作系统的主要内核可执行文件，是内核层与执行层的核心。NTOSKRNL 负责硬件抽象、进程处理、内存管理及相关基础功能。</p><p>在 Wine 11.18 中，围绕 NTOSKRNL 的工作涉及 PnP 设备启用、容器 ID，以及实现多种必要函数。Wine NTOSKRNL 代码的测试覆盖也在同步跟进。</p><p>Wine 11.18 还包含多种代码正确性修复、标准 C 头文件中的兼容性修复，以及 21 个已知错误修复。本次发布的错误修复范围从 Adobe Creative Cloud 的修复到《刺客信条：叛变》等游戏的修复。</p><p>Wine 11.18 下载及更多信息请见</p><p>Wine 11.17 发布，初步支持显示模式仿真</p><p>VKD3D 2.1 发布，为上游 Wine 中的 Direct3D 12 带来新功能</p><p>Wine 11.16 发布，带来 VA-API 硬件解码、更好的 ARM64 支持</p><p>Wine 11.15 发布，带来 Wayland 修复，修复一个 20 年历史的 MSXML3 错误</p><p>Wine 11.14 为 FreeBSD 带来 WoW64 模式，开始菜单支持图标</p><p>Wine 11.13 更好地支持输入指针，改进 X11 的键盘扫描码映射</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他</p><p>Void Linux 维护者因 AI 政策争议弃养 100 多个软件包</p><p>Intel 逆转取消其开源字体项目的决定</p><p>BFS 文件系统将在 Linux 7.4 中被移除</p><p>AMDGPU HDMI 2.1 默认启用补丁已就绪，随 Linux 7.4 带来 FreeSync、VRR 和 ALLM</p><p>Debian 13.7 发布，包含大量错误修复</p><p>Mold 高速链接器正用 Rust 重写，希望成为 Linux 上的默认链接器</p><p>Linux 修复自 2023 年以来存在的静默用户空间数据丢失错误</p><p>KDE Plasma 6.8 Beta 发布，带来许多出色改进、Kup 备份调度器</p><p>同时提供无广告浏览、</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026，由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/ps5-linux-lead-quits/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Wine-11.18-Released" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

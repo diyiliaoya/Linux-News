@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>著名PS5 Linux项目负责人因漏洞被过早报告给索尼而退出 — Linux 中文速报</title>
+<title>Ubuntu 26.10 切换至 Linux 7.3 内核 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>著名PS5 Linux项目负责人因漏洞被过早报告给索尼而退出</h1>
+  <h1>Ubuntu 26.10 切换至 Linux 7.3 内核</h1>
 
-  <div class="article-summary">PS5 Linux项目负责人Andy Nguyen宣布退出PS5破解社区，并停止将项目移植到PS5 Pro的工作。原因是一名研究人员在同意等待后不到一天就将一个未修复的虚拟机管理程序漏洞报告给了索尼，导致该漏洞可能被迅速修补。Nguyen曾请求至少等到《GTA 6》发布，以便人们能合法购买游戏并享受Linux。尽管他退出，项目代码仍在GitHub上，其他贡献者表示可以继续推进。</div>
+  <div class="article-summary">Ubuntu 26.10 原计划搭载 Linux 7.2 内核，但由于上游 Linux 7.1 和 7.2 开发周期未出现延迟，Canonical 内核团队重新评估后决定将目标内核提升至 Linux 7.3。目前该内核已进入 Ubuntu 26.10 的 proposed 仓库进行早期测试，并将在下周 Beta 版发布前推送至主归档。Ubuntu 26.10 正式版定于 10 月 15 日发布，内核冻结日期为 10 月 1 日。</div>
 
-  <div class="article-body"><p>著名PS5 Linux项目负责人因漏洞被过早报告给索尼而退出</p><p>Andy Nguyen指责那些无视他请求的AI辅助漏洞报告者。</p><p>今年4月，我们看到Andy Nguyen将PS5变成了一台运行Linux的游戏PC，可以运行Steam游戏和模拟器，充分利用了硬件性能。</p><p>如今他宣布将彻底退出PS5破解社区，并停止将该项目的移植到PS5 Pro的工作，该移植原计划在2027年某个时候发布。</p><p>这一切都源于一个漏洞</p><p>我将退出PS5社区，并停止所有关于PS5 Linux的工作。</p><p>我倾注了心血和数月的时间，包括计划完成PS5 Pro支持并在2027年发布，现在一切都付诸东流。</p><p>—— Andy Nguyen (@theflow0)</p><p>你看，在PlayStation主机上运行Linux之所以可能，是因为该项目能够利用索尼已经修补的漏洞绕过虚拟机管理程序，覆盖了固件3.00到7.61。</p><p>问题始于Andy保留了一个在当前固件上仍然存在的虚拟机管理程序漏洞，他说他早前就发现了。在发现该漏洞的研究人员同意等待后不到一天，这个漏洞就被过早地泄露给了索尼。</p><p>他澄清了自己的立场，说道：</p><p>我要求他们至少等到《GTA 6》发布，这样人们就有机会合法购买游戏并享受Linux。</p><p>一旦索尼知道了这样的漏洞，它被修补只是时间问题，这就是PlayStation的漏洞赏金计划在HackerOne上的作用。</p><p>发现漏洞的人</p><p>为了让你了解PlayStation的HackerOne计划。</p><p>虽然Andy在他的帖子中没有点名任何人，但快速网络搜索就能找到报告者。Jordy发布了声明，阐述了他如何处理这个漏洞。</p><p>根据Jordy的说法，这个漏洞是他自己发现的，用的是“值得信赖的AI机器”，没有其他人的帮助。他甚至同意了Andy不披露发现的要求。</p><p>出乎意料的是，第三个仍未具名的人，在几小时后使用了AI。Jordy预计会有更多人发现同样的漏洞，于是决定在HackerOne上发布该漏洞。</p><p>代码仍在</p><p>该项目的GitHub页面和所有相关仓库仍然存在。截至今天，没有任何内容被归档，如果你愿意，你可以接手任何待完成的工作或提出新的改进，开始为PS5 Linux项目做贡献。</p><p>目前支持原版型号和Slim型号的固件3.00到7.61，所以你的测试设备需要是这些版本之一。Andy正在构建的PS5 Pro支持从未到达仓库，因此你必须从头开始。</p><p>这就是开源软件的美妙之处。即使首席开发者和关键核心维护者决定放弃项目，新人也可以轻松接手工作或分叉，并按照他们选择的方向发展。</p><p>虽然Andy的离开对支持更新PS5固件和PS5 Pro的计划是一个打击，但其他贡献者表示他们可以在没有他的情况下完成加载器的工作，我希望会有更多人跟进。</p><p>喜欢这个更新吗？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热衷于开源软件、定制PC构建、赛车运动和探索世界无限可能的技术迷。</p><p>准时！GNOME 51发布，带来一系列你不应错过的改进</p><p>Ubuntu的Rust化有了新的里程碑！Coreutils迁移完成</p><p>Rune走向开源，寻求与贡献者分享收入</p><p>openEuler与构建亚洲AI基础设施的竞赛</p><p>MAKERphone 2.0让你构建4G手机并为其应用进行氛围编程</p><p>成为更好的Linux用户</p><p>通过FOSS每周通讯，你学习有用的Linux技巧，发现</p></div>
+  <div class="article-body"><p>Ubuntu 26.10 切换至 Linux 7.3 内核</p><p>2026 年 9 月 18 日 20:50 EDT。</p><p>令人非常惊喜的是，即将发布的版本现在将由 Linux 7.3 内核驱动，而非最初计划的 Linux 7.2 内核。</p><p>早在今年 5 月，Canonical 内核团队宣布 Ubuntu 26.10 将搭载 Linux 7.2，这是基于当时为在 Ubuntu Linux 十月更新中提供最新上游主要内核版本而制定的发布对齐计划。但今天，根据 Phoronix 读者邮件以及我在部分测试机器上执行 sudo apt dist-upgrade 的结果，Linux 7.3 现已出现，这是一个非常美妙的惊喜。</p><p>Linux 7.3 将为 Ubuntu 26.10 提供支持，而非 Linux 7.2。原来本月早些时候我错过了一则消息，他们宣布重新对齐至 Linux 7.3。由于 Linux 7.1 和 Linux 7.2 均未出现延迟，Canonical 内核团队对 Linux 7.3 而非 Linux 7.2 感到足够放心。</p><p>“继我们早前的公告之后，Canonical 内核团队重新评估了 Ubuntu 26.10（Stonking Stingray）版本的目标内核。得益于上游 Linux 开发日程在 7.1 和 7.2 发布周期中未出现延迟，并且 7.3-rc1 已经发布，我们很高兴地宣布我们正在提高目标：Ubuntu 26.10 现在将目标定为 Linux 7.3 内核，而非 7.2。这一更新使我们与最新的上游能力保持一致，特别是在最新硬件支持方面，同时仍能按计划推进即将到来的发布里程碑。团队目前正在基于 7.3-rc1 上游内核启用所有 Ubuntu 特定功能；它将很快在 -proposed 仓库中提供以供早期测试。”</p><p>考虑到 Linux 7.3 中的所有新功能和改进，这非常棒。</p><p>Linux 7.3 内核此前已在 Stonking Stingray 的 proposed 归档中，但现在正在下周 Beta 版发布前推送至 Ubuntu 26.10 “Stonking” 归档。</p><p>Ubuntu 26.10 计划于 10 月 15 日发布，内核冻结日期为 10 月 1 日。因此，在稳定版更新之前的官方 ISO 将最终处于预发布内核状态。如果 Linux 7.3 按时发布，将于 10 月 18 日推出；否则如果需要额外的候选版本，将推迟至 10 月 25 日。由于这不是 Ubuntu LTS 版本，他们正在积极追求最新的上游内核版本。</p><p>Ubuntu 26.10 桌面版调整内存压力下的行为</p><p>Ubuntu 26.10 Snapshot 4 ISO 已发布</p><p>Ubuntu 26.10 将 cp、mv 和 rm 迁移至 Rust Coreutils 以实现 100% 过渡</p><p>Ubuntu 开发者考虑 Linux 固件 HWE 包</p><p>Ubuntu 24.04.5 LTS 发布，搭载 Linux 7.0 HWE 栈</p><p>Ubuntu 26.10 amd64v3 每日 ISO 现已发布</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Void Linux 维护者因 AI 政策争议遗弃 100 多个软件包</p><p>Intel 逆转取消其开源字体项目的决定</p><p>BFS 文件系统将在 Linux 7.4 中被移除</p><p>AMDGPU HDMI 2.1 默认启用补丁已为 Linux 7.4 准备就绪，支持 FreeSync、VRR 和 ALLM</p><p>Debian 13.7 发布，包含许多错误修复</p><p>Mold 高速链接器正在用 Rust 重写，希望成为 Linux 上的默认链接器</p><p>Linux 修复了自 2023 年以来存在的静默用户空间数据丢失错误</p><p>KDE Plasma 6.8 Beta 发布，包含许多重大改进、Kup 备份调度器</p><p>同时享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/ps5-linux-lead-quits/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Ubuntu-26.10-With-Linux-7.3" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

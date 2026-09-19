@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>著名PS5 Linux项目负责人因漏洞被过早报告给索尼而退出 — Linux 中文速报</title>
+<title>18年前的Linux内核漏洞可实现Root访问与容器逃逸 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Linux Today</span>
   </div>
 
-  <h1>著名PS5 Linux项目负责人因漏洞被过早报告给索尼而退出</h1>
+  <h1>18年前的Linux内核漏洞可实现Root访问与容器逃逸</h1>
 
-  <div class="article-summary">PS5 Linux项目负责人Andy Nguyen宣布退出PS5破解社区，并停止将项目移植到PS5 Pro的工作。原因是一名研究人员在同意等待后不到一天就将一个未修复的虚拟机管理程序漏洞报告给了索尼，导致该漏洞可能被迅速修补。Nguyen曾请求至少等到《GTA 6》发布，以便人们能合法购买游戏并享受Linux。尽管他退出，项目代码仍在GitHub上，其他贡献者表示可以继续推进。</div>
+  <div class="article-summary">一个存在了18年的Linux内核漏洞允许本地攻击者获取Root权限，并可能逃逸容器，构成严重安全风险。该漏洞影响广泛，需尽快修复。</div>
 
-  <div class="article-body"><p>著名PS5 Linux项目负责人因漏洞被过早报告给索尼而退出</p><p>Andy Nguyen指责那些无视他请求的AI辅助漏洞报告者。</p><p>今年4月，我们看到Andy Nguyen将PS5变成了一台运行Linux的游戏PC，可以运行Steam游戏和模拟器，充分利用了硬件性能。</p><p>如今他宣布将彻底退出PS5破解社区，并停止将该项目的移植到PS5 Pro的工作，该移植原计划在2027年某个时候发布。</p><p>这一切都源于一个漏洞</p><p>我将退出PS5社区，并停止所有关于PS5 Linux的工作。</p><p>我倾注了心血和数月的时间，包括计划完成PS5 Pro支持并在2027年发布，现在一切都付诸东流。</p><p>—— Andy Nguyen (@theflow0)</p><p>你看，在PlayStation主机上运行Linux之所以可能，是因为该项目能够利用索尼已经修补的漏洞绕过虚拟机管理程序，覆盖了固件3.00到7.61。</p><p>问题始于Andy保留了一个在当前固件上仍然存在的虚拟机管理程序漏洞，他说他早前就发现了。在发现该漏洞的研究人员同意等待后不到一天，这个漏洞就被过早地泄露给了索尼。</p><p>他澄清了自己的立场，说道：</p><p>我要求他们至少等到《GTA 6》发布，这样人们就有机会合法购买游戏并享受Linux。</p><p>一旦索尼知道了这样的漏洞，它被修补只是时间问题，这就是PlayStation的漏洞赏金计划在HackerOne上的作用。</p><p>发现漏洞的人</p><p>为了让你了解PlayStation的HackerOne计划。</p><p>虽然Andy在他的帖子中没有点名任何人，但快速网络搜索就能找到报告者。Jordy发布了声明，阐述了他如何处理这个漏洞。</p><p>根据Jordy的说法，这个漏洞是他自己发现的，用的是“值得信赖的AI机器”，没有其他人的帮助。他甚至同意了Andy不披露发现的要求。</p><p>出乎意料的是，第三个仍未具名的人，在几小时后使用了AI。Jordy预计会有更多人发现同样的漏洞，于是决定在HackerOne上发布该漏洞。</p><p>代码仍在</p><p>该项目的GitHub页面和所有相关仓库仍然存在。截至今天，没有任何内容被归档，如果你愿意，你可以接手任何待完成的工作或提出新的改进，开始为PS5 Linux项目做贡献。</p><p>目前支持原版型号和Slim型号的固件3.00到7.61，所以你的测试设备需要是这些版本之一。Andy正在构建的PS5 Pro支持从未到达仓库，因此你必须从头开始。</p><p>这就是开源软件的美妙之处。即使首席开发者和关键核心维护者决定放弃项目，新人也可以轻松接手工作或分叉，并按照他们选择的方向发展。</p><p>虽然Andy的离开对支持更新PS5固件和PS5 Pro的计划是一个打击，但其他贡献者表示他们可以在没有他的情况下完成加载器的工作，我希望会有更多人跟进。</p><p>喜欢这个更新吗？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热衷于开源软件、定制PC构建、赛车运动和探索世界无限可能的技术迷。</p><p>准时！GNOME 51发布，带来一系列你不应错过的改进</p><p>Ubuntu的Rust化有了新的里程碑！Coreutils迁移完成</p><p>Rune走向开源，寻求与贡献者分享收入</p><p>openEuler与构建亚洲AI基础设施的竞赛</p><p>MAKERphone 2.0让你构建4G手机并为其应用进行氛围编程</p><p>成为更好的Linux用户</p><p>通过FOSS每周通讯，你学习有用的Linux技巧，发现</p></div>
+  <div class="article-body"><p>一个存在了18年的内核漏洞可能使本地攻击者获取Root权限，并可能逃逸容器，构成严重的安全风险。</p><p>文章《18年前的Linux内核漏洞可实现Root访问与容器逃逸》首次出现在Linux Today上。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/ps5-linux-lead-quits/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.linuxtoday.com/blog/18-year-old-linux-kernel-vulnerability-enables-root-access-and-container-escape/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

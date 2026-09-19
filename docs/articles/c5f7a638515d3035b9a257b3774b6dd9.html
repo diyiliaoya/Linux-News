@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>著名PS5 Linux项目负责人因漏洞被过早报告给索尼而退出 — Linux 中文速报</title>
+<title>Google 的“维护痛苦”的 Binder C Linux 驱动将被移除，改用 Rust — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>著名PS5 Linux项目负责人因漏洞被过早报告给索尼而退出</h1>
+  <h1>Google 的“维护痛苦”的 Binder C Linux 驱动将被移除，改用 Rust</h1>
 
-  <div class="article-summary">PS5 Linux项目负责人Andy Nguyen宣布退出PS5破解社区，并停止将项目移植到PS5 Pro的工作。原因是一名研究人员在同意等待后不到一天就将一个未修复的虚拟机管理程序漏洞报告给了索尼，导致该漏洞可能被迅速修补。Nguyen曾请求至少等到《GTA 6》发布，以便人们能合法购买游戏并享受Linux。尽管他退出，项目代码仍在GitHub上，其他贡献者表示可以继续推进。</div>
+  <div class="article-summary">Google 工程师 Carlos Llamas 提交补丁，计划在 Linux 7.4 内核周期中移除约 1.1 万行旧版 Binder C 驱动代码，全面转向已成熟的 Rust 实现。Rust Binder 驱动自 Linux 6.18 上游化后，已在 Android 设备上稳定运行，功能与性能均达到或超越 C 版本，维护更简单。该移除补丁已被 Greg Kroah-Hartman 收入 char-misc-next 分支，即将提交合并窗口。</div>
 
-  <div class="article-body"><p>著名PS5 Linux项目负责人因漏洞被过早报告给索尼而退出</p><p>Andy Nguyen指责那些无视他请求的AI辅助漏洞报告者。</p><p>今年4月，我们看到Andy Nguyen将PS5变成了一台运行Linux的游戏PC，可以运行Steam游戏和模拟器，充分利用了硬件性能。</p><p>如今他宣布将彻底退出PS5破解社区，并停止将该项目的移植到PS5 Pro的工作，该移植原计划在2027年某个时候发布。</p><p>这一切都源于一个漏洞</p><p>我将退出PS5社区，并停止所有关于PS5 Linux的工作。</p><p>我倾注了心血和数月的时间，包括计划完成PS5 Pro支持并在2027年发布，现在一切都付诸东流。</p><p>—— Andy Nguyen (@theflow0)</p><p>你看，在PlayStation主机上运行Linux之所以可能，是因为该项目能够利用索尼已经修补的漏洞绕过虚拟机管理程序，覆盖了固件3.00到7.61。</p><p>问题始于Andy保留了一个在当前固件上仍然存在的虚拟机管理程序漏洞，他说他早前就发现了。在发现该漏洞的研究人员同意等待后不到一天，这个漏洞就被过早地泄露给了索尼。</p><p>他澄清了自己的立场，说道：</p><p>我要求他们至少等到《GTA 6》发布，这样人们就有机会合法购买游戏并享受Linux。</p><p>一旦索尼知道了这样的漏洞，它被修补只是时间问题，这就是PlayStation的漏洞赏金计划在HackerOne上的作用。</p><p>发现漏洞的人</p><p>为了让你了解PlayStation的HackerOne计划。</p><p>虽然Andy在他的帖子中没有点名任何人，但快速网络搜索就能找到报告者。Jordy发布了声明，阐述了他如何处理这个漏洞。</p><p>根据Jordy的说法，这个漏洞是他自己发现的，用的是“值得信赖的AI机器”，没有其他人的帮助。他甚至同意了Andy不披露发现的要求。</p><p>出乎意料的是，第三个仍未具名的人，在几小时后使用了AI。Jordy预计会有更多人发现同样的漏洞，于是决定在HackerOne上发布该漏洞。</p><p>代码仍在</p><p>该项目的GitHub页面和所有相关仓库仍然存在。截至今天，没有任何内容被归档，如果你愿意，你可以接手任何待完成的工作或提出新的改进，开始为PS5 Linux项目做贡献。</p><p>目前支持原版型号和Slim型号的固件3.00到7.61，所以你的测试设备需要是这些版本之一。Andy正在构建的PS5 Pro支持从未到达仓库，因此你必须从头开始。</p><p>这就是开源软件的美妙之处。即使首席开发者和关键核心维护者决定放弃项目，新人也可以轻松接手工作或分叉，并按照他们选择的方向发展。</p><p>虽然Andy的离开对支持更新PS5固件和PS5 Pro的计划是一个打击，但其他贡献者表示他们可以在没有他的情况下完成加载器的工作，我希望会有更多人跟进。</p><p>喜欢这个更新吗？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热衷于开源软件、定制PC构建、赛车运动和探索世界无限可能的技术迷。</p><p>准时！GNOME 51发布，带来一系列你不应错过的改进</p><p>Ubuntu的Rust化有了新的里程碑！Coreutils迁移完成</p><p>Rune走向开源，寻求与贡献者分享收入</p><p>openEuler与构建亚洲AI基础设施的竞赛</p><p>MAKERphone 2.0让你构建4G手机并为其应用进行氛围编程</p><p>成为更好的Linux用户</p><p>通过FOSS每周通讯，你学习有用的Linux技巧，发现</p></div>
+  <div class="article-body"><p>Google 的“维护痛苦”的 Binder C Linux 驱动将被移除，改用 Rust</p><p>2026 年 9 月 18 日下午 12:26 EDT。</p><p>用 C 语言编写的驱动长期以来一直是主线内核的一部分，作为 Android 上使用的进程间通信（IPC）机制。过去几年，Binder 驱动被用 Rust 重写，成为 Rust 语言中首批“真正的”驱动之一。Rust Binder 驱动已在 Linux 6.18 中上游化，而现在对于即将到来的 Linux 7.4 内核周期，旧的基于 C 的 Binder 驱动将被淘汰。</p><p>如今 Rust Binder 驱动已经足够成熟，并证明了其更易于维护和扩展新功能的实用性，旧的 Binder C 代码将被移除。Rust Binder 驱动还证明其在性能上具有竞争力——甚至更快——与原始 Binder 驱动相比。</p><p>Google 工程师 Carlos Llamas 在移除 1.1 万行旧 Binder C 代码的补丁中写道：</p><p>“这一天终于来了。我们正在放弃 Binder IPC 驱动的旧 C 实现，转而采用其 Rust 版本。</p><p>15 年多来，C 驱动变得越来越复杂，维护起来极其痛苦，在不触发漏洞的情况下添加新功能更是难上加难。Rust 实现缓解了大部分这些问题，所以是时候做出改变了。</p><p>Alice Ryhl 在过去几年里为 Rust binder 付出了辛勤努力，不仅实现了完整的功能对等，还证明它可以匹配并经常超越 C 版本的性能。它已经在 Android 设备上成功运行了一段时间，我们不能再称之为‘实验’了。</p><p>是时候继续前进了，撤掉 C 代码，将所有新功能和优化集中在 Rust 驱动上。</p><p>新的 Rust Binder 王万岁！”</p><p>告别旧的 Binder 驱动。Greg Kroah-Hartman 将这个移除补丁收入了 char-misc-next Git 分支。由于他将其排入 char/misc 代码的“-next”队列，该补丁将被提交到 Linux 7.4 合并窗口。</p><p>Chrome/Chromium 试验 Flatpak 打包</p><p>许多激动人心的 Google Summer of Code 2026 项目及大量 AI</p><p>Chrome 147 稳定版发布，带来新限制、Web 打印 API</p><p>Google 现在使用 AutoFDO 增强 Android 的 Linux 内核性能</p><p>Google 终于将为 Linux 提供 Chrome ARM64 二进制文件</p><p>Google Chrome 转向双周发布周期</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Void Linux 维护者因 AI 政策争议放弃 100 多个软件包</p><p>Intel 逆转取消其开源字体项目的决定</p><p>BFS 文件系统将在 Linux 7.4 中被移除</p><p>AMDGPU HDMI 2.1 默认启用补丁已为 Linux 7.4 准备就绪，支持 FreeSync、VRR 和 ALLM</p><p>Debian 13.7 发布，包含许多错误修复</p><p>Mold 高速链接器正在用 Rust 重写，希望成为 Linux 上的默认链接器</p><p>Linux 修复了自 2023 年以来存在的静默用户空间数据丢失错误</p><p>KDE Plasma 6.8 Beta 发布，带来许多重大改进、Kup 备份调度器</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/ps5-linux-lead-quits/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Google-Binder-C-Goodbye" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

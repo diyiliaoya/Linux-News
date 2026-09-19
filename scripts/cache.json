@@ -11581,5 +11581,159 @@
     "title_zh": "2026年20道Linux网络面试题与答案",
     "summary_zh": "本文为2026年网络面试准备，提供20道实用面试题与答案，涵盖TCP/IP、DNS、路由、端口、故障排除和网络命令等核心主题，帮助求职者系统复习Linux网络知识，提升面试通过率。",
     "fulltext_zh": "为2026年的网络面试做好准备，本文提供20道实用面试题与答案，涵盖TCP/IP、DNS、路由、端口、故障排除和网络命令。\n\n文章《2026年20道Linux网络面试题与答案》首次发布于Linux Today。"
+  },
+  "2c8724f77840175b4988580464e43431": {
+    "id": "2c8724f77840175b4988580464e43431",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/calibre-ebook-app-ai-ficton-writing",
+    "title_en": "Calibre ebook manager adds AI-powered writing game",
+    "summary_en": "The latest update to Calibre, the popular open-source ebook manager, features an AI-powered writing game. Calibre v9.15&#8217;s &#8220;Create Your Own Adventure&#8221; mode, per the release notes, lets you build a fictional world and hand control of it to an AI who will manage it in real time based on your responses. A bit like old text-based RPGs, I guess. The changelog notes, with obvious understatement, that the feature is &#8220;a little different&#8221; from Calibre&#8217;s usual fare, addi",
+    "pub_date": "Fri, 18 Sep 2026 15:35:41 +0000",
+    "title_zh": "Calibre 电子书管理器新增 AI 驱动的写作游戏",
+    "summary_zh": "Calibre v9.15 新增“创建你自己的冒险”AI 互动小说功能，用户可构建虚构世界并交由 AI 实时管理。该功能完全可选，需配置兼容 LLM 的 API 密钥。此外更新还改进了电子书查看器的高亮面板、侧边栏自定义按钮和封面网格布局，并修复了朗读、拼写检查及加拿大艾伯塔省时区变更导致的启动问题。",
+    "fulltext_zh": "Calibre v9.15 新增了一款 AI 驱动的互动小说游戏。这款广受欢迎的开源电子书管理器，如今具备了一个 AI 驱动的写作游戏。\n\n根据发布说明，“创建你自己的冒险”功能让你构建一个虚构世界，并将控制权交给 AI，AI 会根据你的回应实时管理这个世界。我想，这有点像古老的文字角色扮演游戏。\n\n更新日志以明显的轻描淡写指出，该功能“偏离了 Calibre 的常规功能”，并补充说它最初是开发者测试工具 AI 后端的一种方式，后来发展成了“某种有趣的东西”。\n\n在 Calibre v9.15 中设置你的 AI 世界\n\n与 Calibre 中所有 AI 功能一样，它完全可选，因为它依赖于你添加兼容 LLM 的 API 密钥。要尝试它，请转到“首选项 > 工具栏”，将“创建你自己的冒险”按钮添加到工具栏。点击此按钮打开设置向导。\n\n这并不是 Calibre 获得的第一个令人费解的 AI 功能。上个月，它新增了使用 AI 提示和预设风格生成电子书封面的功能（如黑色电影风格；低俗科幻风格的芭芭拉·卡特兰小说，等等）。\n\nCalibre 用户大多是喜欢读书的人——大多数人都有大量读不完的书。喜欢用 LLM 生成小说的人可能不需要电子书管理器，反之亦然。\n\n我确实在想，Calibre 是否应该专注于添加有帮助而非分散注意力的 AI 功能：让用户整理电子书、修复元数据，或根据用户的图书馆和品味生成“接下来读什么”的播放列表。\n\n生成垃圾封面、总结书籍，以及现在的生成小说，感觉与其角色格格不入。\n\nCalibre 9.15 的其他变化\n\n此更新还带来了一些不会让人集体挠头的改进。\n\n电子书查看器中的面板让你可以选择多个高亮，并右键单击它们来更改样式；如果高亮有笔记，鼠标悬停时可以在提示框中看到该笔记（此行为可以禁用）。\n\n还有更多自定义选项。可以在侧边栏添加一个按钮，在保存的窗口大小之间切换；在封面网格中，你现在可以通过“首选项 > 外观 > 封面网格 > 布局”选择书目标志出现在哪个角落。\n\n修复了大量错误，包括朗读在大图片处停止的问题、拼写检查忽略带单个撇号的单词的怪癖，以及加拿大艾伯塔省用户因最近时区变更而无法启动的问题。\n\nCalibre 是适用于 Windows、macOS 和 Linux 的免费开源软件。\n\n从官方网站下载——在 Linux 上，Calibre 通过命令行脚本安装和更新，该脚本会下载二进制文件，将其解压到系统文件夹，并创建在应用菜单中找到和打开它所需的各种快捷方式等。\n\n或者，你可以获取未经验证的构建版本。\n\n“嘿，我读完了从古腾堡计划中摘录的 2000 本经典小说的积压，你呢？”\n\n也许这是我“老人对着云大喊大叫”——我不买 2023 年以后写的书。"
+  },
+  "fcbe02973832b426306581787e75d10b": {
+    "id": "fcbe02973832b426306581787e75d10b",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/grapheneos-android-17-qpr1-fiasco/",
+    "title_en": "GrapheneOS Isn't Happy With Google Over Pixel's Widening Head Start",
+    "summary_en": "GrapheneOS is calling out Google over its negligence in providing certain patches.",
+    "pub_date": "Fri, 18 Sep 2026 14:17:00 GMT",
+    "title_zh": "GrapheneOS 对 Google 在 Pixel 上日益扩大的领先优势感到不满",
+    "summary_zh": "GrapheneOS 公开批评 Google 在提供安全补丁方面存在疏忽，将标准 Android 平台代码的安全修复保留在 Pixel 更新中，导致非 Pixel 厂商需等到 Android 17 QPR2 才能获得。此外，Google 还暂停了向 AOSP 推送新 API，并延迟满足 GPL 源代码请求。GrapheneOS 认为这些行为表明 Google 正在收紧对 Android 生态系统的控制。",
+    "fulltext_zh": "GrapheneOS 对 Google 在 Pixel 上日益扩大的领先优势感到不满\n\nGrapheneOS 正在公开指责 Google 在提供某些补丁方面的疏忽。\n\nPixel 更新公告中包含的补丁超出了当月常规 Android 安全公告的范围，其中一些额外补丁涉及标准 Android 平台代码，这类代码不仅运行在 Pixel 品牌硬件上，也运行在非 Pixel 设备上。\n\n这些平台级代码都没有进入常规月度公告或其他制造商通常用来准备自己补丁的私有预览补丁中。\n\n按照目前的速度，这些补丁要到今年 12 月 Android 17 QPR2 发布时才会到达非 Pixel 的 OEM 厂商手中。\n\n有人将这种行为描述为\n\n将安全补丁把持在标准 Android 平台代码之外，不让 Android OEM 厂商获取\n\n发布了从未进入 AOSP 的新开发者 API。他们声称，这种情况自 Android Honeycomb 时代以来从未发生过。\n\n这一点得到了证实。将 Android 17 与 QPR1 进行比较，可以看到一个新软件包，\n\n以及另外十六个软件包中的变更，包括\n\nGrapheneOS 甚至在 Google 发布 QPR1 之前就已将其代码移植到 QPR1，但仍未获得发布该工作的许可。目前，该项目正将 Pixel 固件、内核驱动、用户空间驱动和 HAL 从 QPR1 反向移植到 Android 17 上。\n\n除此之外，还有一个似乎反复出现的合规问题。\n\nGoogle 在遵守 GPL 源代码请求方面行动迟缓。GrapheneOS 于 9 月 1 日请求某个构建（\n\n）的源代码，但直到两个多星期后才获得访问权限。\n\n这三个问题单独来看都不是灾难性的。三个月的补丁延迟、暂停的 API 推送、两周的源代码等待——每一个都像是可能的一次性事件。\n\n然而，综合来看，它们指向了一个反复出现的主题。Google 正在将安全修复扣留，不让更广泛的 Android 生态系统获取；十多年来首次将新 API 从 AOSP 中扣留；并拖延其必须满足的合规要求。\n\n更别提他们在 Android 应用生态系统上做的事情了。\n\nGoogle 正计划要求每一位 Android 应用开发者，无论是在 Play Store、F-Droid 还是其他地方，\n\n都必须向他们注册\n\n。到 2027 年，这意味着在应用能在任何认证设备上运行之前，必须提交法律身份证明和签名密钥证据。\n\n此后，侧载一个未经验证的应用将意味着要启用开发者设置、等待强制性的 24 小时冷却期，并点击跳过多个警告屏幕（\n\nGrapheneOS 是签署反对该计划的数十个组织之一，与 F-Droid、电子前沿基金会和自由软件基金会并肩。\n\n如果你问我，这家大型科技公司正在做对它来说可悲但自然的事情：收紧对事物的开放访问，以便其竞争对手无法从中受益。\n\n喜欢这篇更新吗？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无承诺\n\n一个热衷于开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性的极客。\n\nValve 悄然开源其 Android 兼容层\n\nBonjour！Firefox 智能窗口用户现在可以使用法国 AI 了\n\n著名的 PS5 Linux 项目负责人因过早向索尼报告漏洞而辞职\n\n准时！GNOME 51 发布，带来一系列你不应错过的改进\n\nUbuntu 的 Rust 化迎来新里程碑！Coreutils 迁移完成\n\n成为更好的 Linux 用户\n\n通过 FOSS 每周通讯，学习实用的 Linux 技巧，发现应用程序，探索新发行版，并随时了解 Linux 世界的最新动态\n\n太好了！您已成功注册。\n\n欢迎回来！您已成功登录。\n\n您已成功订阅 It's FOSS。\n\n您的链接已过期。"
+  },
+  "91247b4dd85ccb5fbade0ff1cb3a4390": {
+    "id": "91247b4dd85ccb5fbade0ff1cb3a4390",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/valve-lepton/",
+    "title_en": "Valve Quietly Open-Sources Its Android Compatibility Layer",
+    "summary_en": "The Lepton project is aimed at game developers who want to bring VR-focused Android titles over to Steam Frame.",
+    "pub_date": "Fri, 18 Sep 2026 10:47:55 GMT",
+    "title_zh": "Valve 悄然开源其 Android 兼容层",
+    "summary_zh": "Valve 悄然开源了为 Steam Frame 打造的 Android 兼容层项目 Lepton，该项目基于 Waydroid、LineageOS 和 AOSP 等开源项目构建，旨在帮助开发者将 VR 类 Android 游戏带到 Steam Frame。Lepton 采用双许可证模式，兼容工具部分使用 MIT 许可证，Android 根文件系统部分则因包含多个外部项目代码而采用 GPL 等许可证。该项目并非通用 Android on Linux 方案，而是经过精简，每个游戏运行在独立容器中。",
+    "fulltext_zh": "Valve 悄然开源其 Android 兼容层\n\nLepton 项目面向希望将 VR 类 Android 游戏带到 Steam Frame 的游戏开发者。\n\n是的，Valve 并没有为此发布正式公告。我是通过 [来源] 得知这一消息的，他们昨天简要报道了此事。这家游戏巨头已将其为最近发布的 [设备] 构建的 Android 兼容层开源。\n\nLepton 让用户能够在 Linux 上玩 Android 独占游戏，方式是在一个 [容器] 内启动这些游戏。Valve 表示，大多数用户不会直接与 Lepton 交互，因为 Steam 客户端本身会处理这项工作。\n\n该项目面向希望将 VR 类 Android 游戏带到 Steam Frame 的游戏开发者，不过代码仓库也指出其他使用场景也是可能的。\n\n两个许可证，一个代码库\n\n该兼容层并非以单一许可证发布，因为仓库的 [许可证] 文件将项目分为两部分，各自独立管理。\n\n兼容工具本身——即 Steam 调用以在容器内实际启动游戏的部分——以 [MIT 许可证] 发布。而在该容器内构建并运行的 Android 根文件系统则是另一回事。由于它包含了来自多个外部项目的代码，因此带有 [GPL 等许可证]。\n\nLepton 的 Android 镜像并非从零构建。它依赖若干现有的开源项目，每个项目负责解决不同的问题。\n\n[Waydroid] 承担了大部分繁重工作。它已经使用命名空间在 Linux 容器内运行完整的 Android 系统，Lepton 在构建过程中直接借用了它的补丁和组件。\n\n[LineageOS] 提供了 Waydroid（进而也是 Lepton）所定制化的实际 Android 系统镜像。Waydroid 的运行时附带一个基于 LineageOS 的最小化镜像。\n\n[Android 开源项目（AOSP）] 位于这一切的底层。它是 LineageOS、Waydroid 以及进而 Lepton 所构建的基础源代码树，其许可证条款贯穿整个技术栈。\n\n[另一个项目] 在同一许可证文件中与其他项目一起获得了较小的署名，不过 Valve 并未详细说明其具体贡献。你可以翻阅其仓库来做出合理推测。\n\n该项目并不试图成为在 Linux 上运行 Android 的通用方式。它经过了有意精简。\n\nLepton 内的每个应用都以同一用户身份运行，彼此之间没有隔离墙。相反，每个游戏都有自己独立的容器，启动时 Lepton 会关闭不需要的 Android 服务。\n\n还有比我讨论的更多内容，如果你想了解更多，请翻阅该仓库。\n\n[值得注意的是]，虽然 Steam Frame 尚未开始发货，但其软件栈的部分内容已经在开源。Lepton 加入了 [FEX-Emu]——Valve 为同一头显所依赖的 x86 到 ARM 翻译层——成为开发者现在可以阅读、检查并基于其构建的软件栈组件。\n\n各种兼容层\n\n喜欢这篇更新？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无承诺\n\n一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的书呆子。\n\nGrapheneOS 对 Google 在 Pixel 上日益扩大的先发优势感到不满\n\nBonjour！Firefox 智能窗口用户现在可以使用法国 AI 了\n\n著名的 PS5 Linux 项目负责人因过早向索尼报告漏洞而辞职\n\n准时！GNOME 51 带来了一系列你不应错过的改进\n\nUbuntu 的 Rust 化迎来新里程碑！Coreutils 迁移完成\n\n成为更好的 Linux 用户\n\n通过 FOSS 每周通讯，学习实用的 Linux 技巧，发现应用程序，探索新发行版，并随时了解 Linux 世界的最新动态\n\n太好了！你已成功注册。\n\n欢迎回来！你已成功"
+  },
+  "762aef4800f1f6afe534d5fd9e450aee": {
+    "id": "762aef4800f1f6afe534d5fd9e450aee",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/firefox-smart-window-mistral/",
+    "title_en": "Bonjour! Firefox Smart Window Users Now Get to Use a French AI",
+    "summary_en": "Mistral Small 4 is the latest in Smart Window's model lineup, available for users in France, Canada, and the US.",
+    "pub_date": "Fri, 18 Sep 2026 03:32:04 GMT",
+    "title_zh": "Bonjour！Firefox 智能窗口用户现在可以使用法国 AI",
+    "summary_zh": "Mozilla 与 Mistral 合作，将 Mistral Small 4 模型引入 Firefox 智能窗口，面向法国、加拿大和美国用户开放。此举被视为对浏览器生态被少数大公司主导的回应。Mistral Small 4 拥有 1190 亿参数，在多语言性能上表现优异，尤其强化了法语支持。Mozilla 表示今年晚些时候将支持更多欧洲国家，Mistral 已确认下一步是英国和德国。",
+    "fulltext_zh": "Bonjour！Firefox 智能窗口用户现在可以使用法国 AI\n\nBonjour！Firefox 智能窗口用户现在可以使用法国 AI\n\nMistral Small 4 是智能窗口模型阵容中的最新成员，面向法国、加拿大和美国的用户开放。\n\nMozilla 和 Mistral 宣布，将 Mistral Small 4 模型引入 Firefox 智能窗口，这是该浏览器由 AI 驱动的窗口，让用户可以在网页浏览会话中通过聊天进行操作。\n\n两家公司都将此举描述为对日益被少数大公司主导的浏览器生态系统的反击。人们的担忧在于，一家公司可能最终同时掌控浏览器、搜索结果以及回答你问题的 AI。\n\n随后，该功能在符合条件的地区扩大了测试版访问权限，并改进了法语语言支持。\n\n这次发布向位于法国的用户开放了该功能，不过测试版最初运行了三个 AI 模型：谷歌的 Gemini、阿里巴巴的 Qwen 和 OpenAI 的 gpt-oss-120B。\n\n这些模型没有一个来自欧洲实验室。Mozilla 表示，在将其加入“”类别、取代 OpenAI 的产品之前，他们评估了这个拥有 1190 亿参数的模型，特别是其多语言性能。\n\n当然，其他模型仍然可用。该公司只是将 Mistral 作为额外选择来推广，让用户有更多选择，而不是只能接受少数有限选项。\n\n而我之前谈到的语言支持并不是那种半吊子的工作，不是在以英语为先的模型上硬加一个翻译界面。Mistral 直接针对地区语言和方言对模型进行了调优，将多语言处理视为核心功能。\n\n该公司表示，今年晚些时候将支持更多欧洲国家，但没有点名具体是哪些；而 Mistral 已经确认，英国和德国是下一步。这是一个仅限美国和加拿大用户的测试版，我通过一个早期访问门户进入了该测试版。我发现它在总结页面、讨论某些选择以及就我的查询提出后续问题方面很有用。\n\n现在改变的是，它已经覆盖法国，而且其模型之一来自当地 AI 实验室。你可以从这两家公司如何描述这一举措中看出来。\n\n该公司将此宣传为主权 AI 触达消费者，而另一家公司则称这是一个独立浏览器与一家前沿欧洲 AI 公司的合作。\n\n回到问题本身，如果你想要一个 AI 驱动的助手来辅助你的研究过程，又不想经历手动设置的麻烦，那么你应该关心这件事。\n\n那你还在等什么？现在就下载最新 Firefox 版本开始使用吧。\n\nFirefox 155 为更快网页浏览引入了两项新变化。\n\nFirefox 155 为更快网页浏览新增两项变化\n\n除了更快之外，Firefox 155 还是唯一支持 uBlock Origin 的非 Chromium 浏览器，因为谷歌昨天将其移除了。\n\n喜欢这次更新吗？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无承诺\n\n一个热衷于开源软件、定制 PC 装机、赛车运动以及探索这个世界无尽可能性的极客。\n\nGrapheneOS 对谷歌让 Pixel 获得越来越大的先发优势感到不满\n\nValve 悄然开源其 Android 兼容层\n\n著名的 PS5 Linux 项目负责人因过早向索尼报告漏洞而退出\n\n准时！GNOME 51 发布，带来一系列你不应错过的改进\n\nUbuntu 的 Rust 化迎来新里程碑！Coreutils 迁移完成\n\n成为更好的 Linux 用户\n\n通过 FOSS 每周通讯，你可以学习实用的 Linux 技巧、发现应用程序、探索新发行版，并随时了解 Linux 世界的最新动态\n\n太好了！你已成功注册。\n\n欢迎回来！你已成功登录。\n\n你已成功订阅 It's FOSS。\n\n你的链接已过期"
+  },
+  "00d6df0380e72be11443b08a4bf17254": {
+    "id": "00d6df0380e72be11443b08a4bf17254",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Ubuntu-26.10-With-Linux-7.3",
+    "title_en": "Ubuntu 26.10 Switches To The Linux 7.3 Kernel",
+    "summary_en": "As a very pleasant surprise, the upcoming Ubuntu 26.10 release will now be powered by the Linux 7.3 kernel rather than their original plans and switch over to the Linux 7.2 kernel...",
+    "pub_date": "Fri, 18 Sep 2026 20:50:25 -0400",
+    "title_zh": "Ubuntu 26.10 切换至 Linux 7.3 内核",
+    "summary_zh": "Ubuntu 26.10 原计划搭载 Linux 7.2 内核，但由于上游 Linux 7.1 和 7.2 开发周期未出现延迟，Canonical 内核团队重新评估后决定将目标内核提升至 Linux 7.3。目前该内核已进入 Ubuntu 26.10 的 proposed 仓库进行早期测试，并将在下周 Beta 版发布前推送至主归档。Ubuntu 26.10 正式版定于 10 月 15 日发布，内核冻结日期为 10 月 1 日。",
+    "fulltext_zh": "Ubuntu 26.10 切换至 Linux 7.3 内核\n2026 年 9 月 18 日 20:50 EDT。\n\n令人非常惊喜的是，即将发布的版本现在将由 Linux 7.3 内核驱动，而非最初计划的 Linux 7.2 内核。\n\n早在今年 5 月，Canonical 内核团队宣布 Ubuntu 26.10 将搭载 Linux 7.2，这是基于当时为在 Ubuntu Linux 十月更新中提供最新上游主要内核版本而制定的发布对齐计划。但今天，根据 Phoronix 读者邮件以及我在部分测试机器上执行 sudo apt dist-upgrade 的结果，Linux 7.3 现已出现，这是一个非常美妙的惊喜。\n\nLinux 7.3 将为 Ubuntu 26.10 提供支持，而非 Linux 7.2。原来本月早些时候我错过了一则消息，他们宣布重新对齐至 Linux 7.3。由于 Linux 7.1 和 Linux 7.2 均未出现延迟，Canonical 内核团队对 Linux 7.3 而非 Linux 7.2 感到足够放心。\n\n“继我们早前的公告之后，Canonical 内核团队重新评估了 Ubuntu 26.10（Stonking Stingray）版本的目标内核。得益于上游 Linux 开发日程在 7.1 和 7.2 发布周期中未出现延迟，并且 7.3-rc1 已经发布，我们很高兴地宣布我们正在提高目标：Ubuntu 26.10 现在将目标定为 Linux 7.3 内核，而非 7.2。这一更新使我们与最新的上游能力保持一致，特别是在最新硬件支持方面，同时仍能按计划推进即将到来的发布里程碑。团队目前正在基于 7.3-rc1 上游内核启用所有 Ubuntu 特定功能；它将很快在 -proposed 仓库中提供以供早期测试。”\n\n考虑到 Linux 7.3 中的所有新功能和改进，这非常棒。\n\nLinux 7.3 内核此前已在 Stonking Stingray 的 proposed 归档中，但现在正在下周 Beta 版发布前推送至 Ubuntu 26.10 “Stonking” 归档。\n\nUbuntu 26.10 计划于 10 月 15 日发布，内核冻结日期为 10 月 1 日。因此，在稳定版更新之前的官方 ISO 将最终处于预发布内核状态。如果 Linux 7.3 按时发布，将于 10 月 18 日推出；否则如果需要额外的候选版本，将推迟至 10 月 25 日。由于这不是 Ubuntu LTS 版本，他们正在积极追求最新的上游内核版本。\n\nUbuntu 26.10 桌面版调整内存压力下的行为\nUbuntu 26.10 Snapshot 4 ISO 已发布\nUbuntu 26.10 将 cp、mv 和 rm 迁移至 Rust Coreutils 以实现 100% 过渡\nUbuntu 开发者考虑 Linux 固件 HWE 包\nUbuntu 24.04.5 LTS 发布，搭载 Linux 7.0 HWE 栈\nUbuntu 26.10 amd64v3 每日 ISO 现已发布\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nVoid Linux 维护者因 AI 政策争议遗弃 100 多个软件包\nIntel 逆转取消其开源字体项目的决定\nBFS 文件系统将在 Linux 7.4 中被移除\nAMDGPU HDMI 2.1 默认启用补丁已为 Linux 7.4 准备就绪，支持 FreeSync、VRR 和 ALLM\nDebian 13.7 发布，包含许多错误修复\nMold 高速链接器正在用 Rust 重写，希望成为 Linux 上的默认链接器\nLinux 修复了自 2023 年以来存在的静默用户空间数据丢失错误\nKDE Plasma 6.8 Beta 发布，包含许多重大改进、Kup 备份调度器\n\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产"
+  },
+  "e128b7982e4b7beeec7d9af6d3906677": {
+    "id": "e128b7982e4b7beeec7d9af6d3906677",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Wine-11.18-Released",
+    "title_en": "Wine 11.18 Continues Building Out Its NTOSKRNL Implementation",
+    "summary_en": "Wine 11.18 is out today as the newest bi-weekly development release of this open-source software for running Windows games and apps on Linux, macOS, and other platforms...",
+    "pub_date": "Fri, 18 Sep 2026 17:24:50 -0400",
+    "title_zh": "Wine 11.18 持续推进其 NTOSKRNL 实现",
+    "summary_zh": "Wine 11.18 发布，这是该开源兼容层的双周开发版。本次更新继续完善 NTOSKRNL 实现，重点包括 PnP 设备启用、容器 ID 及多项必要函数，并同步加强测试覆盖。此外还包含代码正确性修复、标准 C 头文件兼容性改进以及 21 个已知错误修复，涉及 Adobe Creative Cloud 和《刺客信条：叛变》等游戏。",
+    "fulltext_zh": "Wine 11.18 持续推进其 NTOSKRNL 实现\n\n发布于 2026 年 9 月 18 日下午 05:24（美国东部时间）。\n\nWine 11.18 于今日发布，这是这款用于在 Linux、macOS 及其他平台上运行 Windows 游戏和应用程序的开源软件的最新双周开发版本。\n\n在 Wine 11.18 中，大量补丁被合入，以进一步构建其面向内核驱动的 NTOSKRNL 实现支持。NTOSKRNL 是 Microsoft Windows 操作系统的主要内核可执行文件，是内核层与执行层的核心。NTOSKRNL 负责硬件抽象、进程处理、内存管理及相关基础功能。\n\n在 Wine 11.18 中，围绕 NTOSKRNL 的工作涉及 PnP 设备启用、容器 ID，以及实现多种必要函数。Wine NTOSKRNL 代码的测试覆盖也在同步跟进。\n\nWine 11.18 还包含多种代码正确性修复、标准 C 头文件中的兼容性修复，以及 21 个已知错误修复。本次发布的错误修复范围从 Adobe Creative Cloud 的修复到《刺客信条：叛变》等游戏的修复。\n\nWine 11.18 下载及更多信息请见\n\nWine 11.17 发布，初步支持显示模式仿真\nVKD3D 2.1 发布，为上游 Wine 中的 Direct3D 12 带来新功能\nWine 11.16 发布，带来 VA-API 硬件解码、更好的 ARM64 支持\nWine 11.15 发布，带来 Wayland 修复，修复一个 20 年历史的 MSXML3 错误\nWine 11.14 为 FreeBSD 带来 WoW64 模式，开始菜单支持图标\nWine 11.13 更好地支持输入指针，改进 X11 的键盘扫描码映射\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nVoid Linux 维护者因 AI 政策争议弃养 100 多个软件包\nIntel 逆转取消其开源字体项目的决定\nBFS 文件系统将在 Linux 7.4 中被移除\nAMDGPU HDMI 2.1 默认启用补丁已就绪，随 Linux 7.4 带来 FreeSync、VRR 和 ALLM\nDebian 13.7 发布，包含大量错误修复\nMold 高速链接器正用 Rust 重写，希望成为 Linux 上的默认链接器\nLinux 修复自 2023 年以来存在的静默用户空间数据丢失错误\nKDE Plasma 6.8 Beta 发布，带来许多出色改进、Kup 备份调度器\n\n同时提供无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "31fece87f9400c5b5dcc8fd11e8706b9": {
+    "id": "31fece87f9400c5b5dcc8fd11e8706b9",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Steam-Frame-Uses-Zink",
+    "title_en": "Steam Frame Making Use Of Zink For OpenGL On Vulkan",
+    "summary_en": "Valve's Steam Frame VR headset that makes use of a Qualcomm Snapdragon 8 Gen 3 SoC with Adreno graphics is using the open-source \"Turnip\" Vulkan driver from Mesa as reported last year. For OpenGL it turns out that the Mesa Zink driver is being used on the Steam Frame for OpenGL atop the Vulkan API...",
+    "pub_date": "Fri, 18 Sep 2026 16:13:08 -0400",
+    "title_zh": "Steam Frame 在 Vulkan 上使用 Zink 实现 OpenGL",
+    "summary_zh": "Valve 的 Steam Frame VR 头显采用高通骁龙 8 Gen 3 SoC 和 Adreno 显卡，此前已确认使用 Mesa 的开源 Turnip Vulkan 驱动。Valve Linux 图形团队确认，在 OpenGL 方面，Steam Frame 选择使用 Mesa 的 Zink 驱动，在 Vulkan API 之上实现 OpenGL，而非使用原生的 Freedreno Gallium3D 驱动。这体现了 OpenGL-on-Vulkan 实现的成熟。Steam Frame 本周已开售，起售价 1059 美元。",
+    "fulltext_zh": "Steam Frame 在 Vulkan 上使用 Zink 实现 OpenGL\n2026 年 9 月 18 日下午 4:13 EDT。\n\nValve 的 Steam Frame VR 头显采用高通骁龙 8 Gen 3 SoC 和 Adreno 显卡，正如去年报道的那样，它使用了 Mesa 的开源“Turnip”Vulkan 驱动。而在 OpenGL 方面，事实证明 Steam Frame 使用了 Mesa 的 Zink 驱动，在 Vulkan API 之上实现 OpenGL。\n\n虽然 Mesa 确实有 Freedreno Gallium3D 驱动作为高通 Adreno 显卡的原生 OpenGL 驱动，但 Valve 决定在 Steam Frame 上采用 Zink 来实现这种通用的 OpenGL-on-Vulkan 方案。\n\nValve Linux 图形团队的 Mike Blumenkrantz 是该方案的主要开发者之一，他今天在一篇博客文章中确认了这一驱动情况。\n\nBlumenkrantz 写道：“在 Android 和原生平台上，自始至终都是 Zink。”\n\n看到他们在 Steam Frame 上使用 Zink 很有意思，这也标志着这种 OpenGL-on-Vulkan 实现在过去几年里已经变得多么成熟。\n\nSteam Frame 本周已开售，起售价 1059 美元。\n\n相关报道：\nValve 的 Steam Frame 现已上市，售价 1059 美元起\nSteam 客户端测试版改进大屏幕模式，并带来多项 Linux 增强\nSteam 在 Linux 上的份额 8 月跌破 4%\nSteamOS 3.9 预览版升级至 Linux 7.2、KDE Plasma 6.7 桌面\nDXVK 3.1 发布，带来 DXGI 增量呈现、D3D11 缓冲区渲染目标\nProton 11.0-2 通过 Steam Play / Linux 游戏启用更多作品\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nVoid Linux 维护者因 AI 政策争议弃养 100 多个软件包\nIntel 逆转取消其开源字体项目的决定\nBFS 文件系统将在 Linux 7.4 中被移除\nAMDGPU HDMI 2.1 默认启用补丁已就绪，将在 Linux 7.4 中支持 FreeSync、VRR 和 ALLM\nDebian 13.7 发布，带来大量错误修复\nMold 高速链接器正用 Rust 重写，希望成为 Linux 上的默认链接器\nLinux 修复了自 2023 年以来存在的静默用户空间数据丢失错误\nKDE Plasma 6.8 Beta 发布，带来许多出色改进和 Kup 备份调度器\n\n在享受无广告浏览的同时，\n单页文章视图\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "c5f7a638515d3035b9a257b3774b6dd9": {
+    "id": "c5f7a638515d3035b9a257b3774b6dd9",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Google-Binder-C-Goodbye",
+    "title_en": "Google's \"Painful To Maintain\" Binder C Linux Driver Being Removed In Favor Of Rust",
+    "summary_en": "Google's Binder driver written in the C programming language has long been part of the mainline kernel as the inter-process communication (IPC) mechanism used on Android. The past few years the Binder driver was rewritten in Rust as one of the first \"real\" drivers in the Rust programming language. The Rust Binder driver was upstreamed in Linux 6.18 and now for the upcoming Linux 7.4 kernel cycle, the old Binder C-based driver is set to be retired...",
+    "pub_date": "Fri, 18 Sep 2026 12:26:32 -0400",
+    "title_zh": "Google 的“维护痛苦”的 Binder C Linux 驱动将被移除，改用 Rust",
+    "summary_zh": "Google 工程师 Carlos Llamas 提交补丁，计划在 Linux 7.4 内核周期中移除约 1.1 万行旧版 Binder C 驱动代码，全面转向已成熟的 Rust 实现。Rust Binder 驱动自 Linux 6.18 上游化后，已在 Android 设备上稳定运行，功能与性能均达到或超越 C 版本，维护更简单。该移除补丁已被 Greg Kroah-Hartman 收入 char-misc-next 分支，即将提交合并窗口。",
+    "fulltext_zh": "Google 的“维护痛苦”的 Binder C Linux 驱动将被移除，改用 Rust\n\n2026 年 9 月 18 日下午 12:26 EDT。\n\n用 C 语言编写的驱动长期以来一直是主线内核的一部分，作为 Android 上使用的进程间通信（IPC）机制。过去几年，Binder 驱动被用 Rust 重写，成为 Rust 语言中首批“真正的”驱动之一。Rust Binder 驱动已在 Linux 6.18 中上游化，而现在对于即将到来的 Linux 7.4 内核周期，旧的基于 C 的 Binder 驱动将被淘汰。\n\n如今 Rust Binder 驱动已经足够成熟，并证明了其更易于维护和扩展新功能的实用性，旧的 Binder C 代码将被移除。Rust Binder 驱动还证明其在性能上具有竞争力——甚至更快——与原始 Binder 驱动相比。\n\nGoogle 工程师 Carlos Llamas 在移除 1.1 万行旧 Binder C 代码的补丁中写道：\n\n“这一天终于来了。我们正在放弃 Binder IPC 驱动的旧 C 实现，转而采用其 Rust 版本。\n\n15 年多来，C 驱动变得越来越复杂，维护起来极其痛苦，在不触发漏洞的情况下添加新功能更是难上加难。Rust 实现缓解了大部分这些问题，所以是时候做出改变了。\n\nAlice Ryhl 在过去几年里为 Rust binder 付出了辛勤努力，不仅实现了完整的功能对等，还证明它可以匹配并经常超越 C 版本的性能。它已经在 Android 设备上成功运行了一段时间，我们不能再称之为‘实验’了。\n\n是时候继续前进了，撤掉 C 代码，将所有新功能和优化集中在 Rust 驱动上。\n\n新的 Rust Binder 王万岁！”\n\n告别旧的 Binder 驱动。Greg Kroah-Hartman 将这个移除补丁收入了 char-misc-next Git 分支。由于他将其排入 char/misc 代码的“-next”队列，该补丁将被提交到 Linux 7.4 合并窗口。\n\nChrome/Chromium 试验 Flatpak 打包\n\n许多激动人心的 Google Summer of Code 2026 项目及大量 AI\n\nChrome 147 稳定版发布，带来新限制、Web 打印 API\n\nGoogle 现在使用 AutoFDO 增强 Android 的 Linux 内核性能\n\nGoogle 终于将为 Linux 提供 Chrome ARM64 二进制文件\n\nGoogle Chrome 转向双周发布周期\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nVoid Linux 维护者因 AI 政策争议放弃 100 多个软件包\n\nIntel 逆转取消其开源字体项目的决定\n\nBFS 文件系统将在 Linux 7.4 中被移除\n\nAMDGPU HDMI 2.1 默认启用补丁已为 Linux 7.4 准备就绪，支持 FreeSync、VRR 和 ALLM\n\nDebian 13.7 发布，包含许多错误修复\n\nMold 高速链接器正在用 Rust 重写，希望成为 Linux 上的默认链接器\n\nLinux 修复了自 2023 年以来存在的静默用户空间数据丢失错误\n\nKDE Plasma 6.8 Beta 发布，带来许多重大改进、Kup 备份调度器\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "7af4ebdb61a791f46ebebb541407d0ce": {
+    "id": "7af4ebdb61a791f46ebebb541407d0ce",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Phoronix-Oktoberfest-2026",
+    "title_en": "Help Linux Hardware Testing & Reviews Continue While Enjoying Phoronix Without Ads",
+    "summary_en": "If you missed out on the Phoronix Premium special back during the 22nd birthday of Phoronix.com in June, there is another promotion now active for helping to support the site and allow for continued daily original content and relentless Linux performance benchmarking and other open-sourced focused hardware testing...",
+    "pub_date": "Fri, 18 Sep 2026 12:00:00 -0400",
+    "title_zh": "在无广告畅享 Phoronix 的同时，帮助 Linux 硬件测试与评测继续前行",
+    "summary_zh": "Phoronix 迎来 22 周年后再度推出 Phoronix Premium 促销，恰逢慕尼黑啤酒节开幕。由于网络广告仍是网站主要收入来源，而超过一半广告被拦截，订阅 Premium 可帮助网站持续运营，享受无广告、原生暗色模式、多页文章单页呈现等权益。本次秋季特惠年费 35 美元、终身 160 美元，活动持续至 9 月 27 日。",
+    "fulltext_zh": "在无广告畅享 Phoronix 的同时，帮助 Linux 硬件测试与评测继续前行\n\n2026 年 9 月 18 日中午 12:00（美国东部时间）。\n\n如果你错过了今年 6 月 Phoronix.com 22 岁生日时的特别优惠，现在又有新的促销活动上线，旨在帮助支持本站，让每日原创内容、持续的 Linux 性能基准测试以及其他聚焦开源的硬件测试得以延续。\n\n十多年前，每年都会有一次 Phoronix 的“朝圣”聚会，前往慕尼黑参加啤酒节，作为一年中唯一的假期（但即便如此，每天的内容也照常产出……）。遗憾的是，由于网络广告行业的惨淡现状以及广告拦截器的泛滥，这一切早已结束。但为了庆祝慕尼黑啤酒节明天再次开幕，Phoronix Premium 特别优惠再次推出，面向那些希望支持本站、让我能够继续每日进行 Linux 硬件测试和内容创作的人。这算是啤酒节促销，或者你也可以把它当作秋季特惠。\n\n遗憾的是，在 Phoronix 走过 22 年多之后，网络广告仍然是让网站得以继续的主要方式，而订阅 Phoronix Premium 的读者远不到 1%，同时超过一半的广告被广告拦截器屏蔽。通过订阅 Phoronix Premium，你可以帮助网站继续运营，同时享受无网页广告、原生暗色模式、多页文章合并为单页呈现以及其他权益。\n\nPhoronix Premium 的标准价格通常为每年 45 美元，终身订阅 250 美元。本次啤酒节/秋季特惠，你可以以每年 35 美元或终身 160 美元的价格升级为高级会员。从现在起至接下来两周（9 月 27 日结束，任何时区……并不特别严格）为本次高级会员特惠期。\n\n要享受此优惠，首先确保你已在论坛注册，因为订阅/用户管理方面的事务由论坛处理。论坛内没有集成的销售支持，因此那里列出的仍是高级订阅的正常价格。要获得每年 35 美元或终身 160 美元的折扣，请通过 PayPal 将相应金额支付至指定账户。对于不愿使用 PayPal 或想直接使用信用卡的用户，如果不愿处理 PayPal 账户，Stripe 是首选方式。或者如果只是想通过这些方式提供小费，也完全可以，非常感激。额外支付的任何金额都将被视为小费，或者如果需要，也可以续订多年，谢谢！随后我会尽快将你的论坛账户激活为高级状态。如果你的支付邮箱地址与论坛注册邮箱不同，请在付款时附上你的论坛用户名。\n\n定制企业/公司范围内的订阅等可通过联系我获取，也可咨询其他支持选项/考虑。\n\n感谢你们在过去 22 年多里的持续支持，期间完成了超过 5,600 篇 Linux 硬件评测和超过 51,200 篇原创新闻文章。希望明年还能再庆祝一次；干杯！\n\nLinux 内核 AI 洪流、Linux 7.2 发布及其他八月亮点\nMPEG-4 专利到期、Windows 上的 RADV、开源 AI 及其他七月亮点\nPhoronix Premium 夏季促销，助力支持 Linux 硬件测试\nArch Linux AUR 恶意软件、Linux 7.2 开发及其他六月亮点\n性能优化、NVIDIA Vera、Arc Pro B70 及其他第二季度 Linux 亮点\n今天标志着 Phoronix 致力于 Linux 硬件测试与基准测试 22 周年\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 也是"
+  },
+  "0f373d468e1fb0c72c2442bef4e462e3": {
+    "id": "0f373d468e1fb0c72c2442bef4e462e3",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/ubuntu-24-04-lts-users-get-linux-7-0-hwe-kernel-ahead-of-ubuntu-24-04-5-lts/",
+    "title_en": "Ubuntu 24.04 LTS Users Get Linux 7.0 HWE Kernel Ahead of Ubuntu 24.04.5 LTS",
+    "summary_en": "Ubuntu 24.04 LTS users receive the Linux 7.0 HWE kernel ahead of Ubuntu 24.04.5 LTS, bringing newer hardware support and updated kernel technologies.\nThe post Ubuntu 24.04 LTS Users Get Linux 7.0 HWE Kernel Ahead of Ubuntu 24.04.5 LTS appeared first on Linux Today.",
+    "pub_date": "Fri, 18 Sep 2026 07:26:45 +0000",
+    "title_zh": "Ubuntu 24.04 LTS 用户在 Ubuntu 24.04.5 LTS 之前获得 Linux 7.0 HWE 内核",
+    "summary_zh": "Ubuntu 24.04 LTS 用户现已可获取 Linux 7.0 HWE 内核，该内核在 Ubuntu 24.04.5 LTS 发布前推出，带来对新硬件的支持以及更新的内核技术。",
+    "fulltext_zh": "Ubuntu 24.04 LTS 用户在 Ubuntu 24.04.5 LTS 之前获得 Linux 7.0 HWE 内核，带来更新的硬件支持和更新的内核技术。\n\n文章《Ubuntu 24.04 LTS 用户在 Ubuntu 24.04.5 LTS 之前获得 Linux 7.0 HWE 内核》首次发布于 Linux Today。"
+  },
+  "773660ea866dd80b2a537fc988fe1a1d": {
+    "id": "773660ea866dd80b2a537fc988fe1a1d",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/debconf27-debian-developers-conference-to-be-held-in-asahikawa-japan/",
+    "title_en": "DebConf27 Debian Developers Conference to Be Held in Asahikawa, Japan",
+    "summary_en": "DebConf27, the annual Debian Developers Conference, will be held in Asahikawa, Japan, bringing contributors together for talks, collaboration, and development.\nThe post DebConf27 Debian Developers Conference to Be Held in Asahikawa, Japan appeared first on Linux Today.",
+    "pub_date": "Fri, 18 Sep 2026 07:25:11 +0000",
+    "title_zh": "DebConf27 Debian开发者大会将在日本旭川举行",
+    "summary_zh": "DebConf27，一年一度的Debian开发者大会，将在日本旭川举办，届时将汇聚众多贡献者，共同进行演讲、协作与开发活动。",
+    "fulltext_zh": "DebConf27，一年一度的Debian开发者大会，将在日本旭川举行，汇聚贡献者进行演讲、协作与开发。\n\n文章《DebConf27 Debian开发者大会将在日本旭川举行》首发于Linux Today。"
+  },
+  "3d8d890aedf7ded733b3c9bbb10e0ec0": {
+    "id": "3d8d890aedf7ded733b3c9bbb10e0ec0",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/cachyos-august-2026-release-rewrites-shelly-in-zig-prepares-server-edition/",
+    "title_en": "CachyOS August 2026 Release Rewrites Shelly in Zig, Prepares Server Edition",
+    "summary_en": "CachyOS August 2026 release rewrites the Shelly package manager in Zig and lays the groundwork for an upcoming Server Edition alongside other improvements.\nThe post CachyOS August 2026 Release Rewrites Shelly in Zig, Prepares Server Edition appeared first on Linux Today.",
+    "pub_date": "Fri, 18 Sep 2026 07:22:27 +0000",
+    "title_zh": "CachyOS 2026年8月版本用 Zig 重写 Shelly，并准备服务器版",
+    "summary_zh": "CachyOS 发布2026年8月版本，将 Shelly 包管理器用 Zig 语言重写，并为即将推出的服务器版奠定基础，同时带来其他改进。",
+    "fulltext_zh": "CachyOS 2026年8月版本用 Zig 重写了 Shelly 包管理器，并为即将推出的服务器版奠定基础，同时带来其他改进。\n\n文章《CachyOS 2026年8月版本用 Zig 重写 Shelly，并准备服务器版》首次发布于 Linux Today。"
+  },
+  "4ffc739624022f9ef3485f12a5fb7fe7": {
+    "id": "4ffc739624022f9ef3485f12a5fb7fe7",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/18-year-old-linux-kernel-vulnerability-enables-root-access-and-container-escape/",
+    "title_en": "18-Year-Old Linux Kernel Vulnerability Enables Root Access and Container Escape",
+    "summary_en": "An 18-year-old kernel vulnerability can enable local attackers to gain root privileges and potentially escape containers, posing a serious security risk.\nThe post 18-Year-Old Linux Kernel Vulnerability Enables Root Access and Container Escape appeared first on Linux Today.",
+    "pub_date": "Fri, 18 Sep 2026 07:18:07 +0000",
+    "title_zh": "18年前的Linux内核漏洞可实现Root访问与容器逃逸",
+    "summary_zh": "一个存在了18年的Linux内核漏洞允许本地攻击者获取Root权限，并可能逃逸容器，构成严重安全风险。该漏洞影响广泛，需尽快修复。",
+    "fulltext_zh": "一个存在了18年的内核漏洞可能使本地攻击者获取Root权限，并可能逃逸容器，构成严重的安全风险。\n\n文章《18年前的Linux内核漏洞可实现Root访问与容器逃逸》首次出现在Linux Today上。"
+  },
+  "2cf9c076f31c7358324779690b89e228": {
+    "id": "2cf9c076f31c7358324779690b89e228",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/dietpi-10-6-released-with-support-for-orange-pi-4-pro-and-orange-pi-zero-3w/",
+    "title_en": "DietPi 10.6 Released with Support for Orange Pi 4 Pro and Orange Pi Zero 3W",
+    "summary_en": "DietPi 10.6 adds support for the Orange Pi 4 Pro and Orange Pi Zero 3W, alongside system improvements, updates, and fixes for supported devices.\nThe post DietPi 10.6 Released with Support for Orange Pi 4 Pro and Orange Pi Zero 3W appeared first on Linux Today.",
+    "pub_date": "Fri, 18 Sep 2026 07:15:09 +0000",
+    "title_zh": "DietPi 10.6 发布，新增对 Orange Pi 4 Pro 和 Orange Pi Zero 3W 的支持",
+    "summary_zh": "DietPi 10.6 正式发布，新增对 Orange Pi 4 Pro 和 Orange Pi Zero 3W 的支持，同时为已支持的设备带来系统改进、更新和修复。",
+    "fulltext_zh": "DietPi 10.6 新增对 Orange Pi 4 Pro 和 Orange Pi Zero 3W 的支持，同时为已支持的设备带来系统改进、更新和修复。\n\n文章《DietPi 10.6 发布，新增对 Orange Pi 4 Pro 和 Orange Pi Zero 3W 的支持》最初发表于 Linux Today。"
   }
 }
