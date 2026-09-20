@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>开发版本：AlmaLinux OS 9.9 Beta 1 — Linux 中文速报</title>
+<title>Linux 7.4 的简单优化可使文件读取打开速度提升约 39% — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>开发版本：AlmaLinux OS 9.9 Beta 1</h1>
+  <h1>Linux 7.4 的简单优化可使文件读取打开速度提升约 39%</h1>
 
-  <div class="article-summary">AlmaLinux 9.9 Beta 1 发布，引入 GCC Toolset 16、更新 LLVM 和 Rust 工具集，新增 Node.js 26 和 PHP 8.4 模块流。虚拟化支持更新至最新 libvirt 和 QEMU-KVM，图形栈刷新 Mesa。安全性通过 SSSD、SELinux 策略、crypto-policies、Keylime 和 Clevis 更新得到改进。fapolicyd 从 1.4.5 跃升至 2.0.1，属重大版本更新，建议在生产环境部署前仔细测试。</div>
+  <div class="article-summary">Linux 7.4 将引入一项由 Mateusz Guzik 主导的简单优化，消除文件打开路径查找中重复的 dentry 引用操作。该补丁历经两年五次修订，在 20 核虚拟机上测试显示，以只读模式打开同一文件的每秒操作数提升 39%。补丁已进入 VFS.git 的 vfs-7.4.lookup 分支，预计将在 Linux 7.4 合并窗口提交。</div>
 
-  <div class="article-body"><p>开发版本：AlmaLinux OS 9.9 Beta 1</p><p>该项目发布了 9.x 系列的新测试快照。</p><p>AlmaLinux 9.9 beta 引入了新的编译器工具集、新的模块流，并改进了安全性。此版本新增 GCC Toolset 16，同时更新了 LLVM 和 Rust 工具集，并带来 Node.js 26 和 PHP 8.4 作为新的模块流。虚拟化支持更新至最新版本的 libvirt 和 QEMU-KVM，图形栈也通过 Mesa 进行了刷新。安全性通过 SSSD、SELinux 策略、crypto-policies、Keylime 和 Clevis 的更新得到改进，确保系统安全可靠。您可以在 wiki 上阅读此版本的完整发行说明：AlmaLinux OS 9.9 Beta 发行说明。</p><p>fapolicyd 达到 2.0：文件访问策略守护进程在此版本中从 1.4.5 跃升至 2.0.1——这是一个主版本更新，而非通常的修订更新。在强化的系统上，fapolicyd 位于每个二进制文件的执行路径中，因此新主版本在进入生产主机之前值得仔细审视。如果您运行 fapolicyd，这是本次发布中我们最希望看到测试的部分。</p><p>其他详细信息可在以下文件中找到：</p><p>AlmaLinux-9.9-beta-1-x86_64-dvd.iso</p><p>AlmaLinux-9.9-beta-1-x86_64-minimal.iso</p><p>AlmaLinux-9.9-beta-1-x86_64-boot.iso</p><p>近期相关新闻和发布：</p><p>开发版本：AlmaLinux OS 9.9 Beta 1</p><p>发行版本：AlmaLinux OS 10.2、9.8</p><p>开发版本：AlmaLinux OS 9.8 Beta 1</p><p>发行版本：AlmaLinux OS 10.1</p><p>开发版本：AlmaLinux OS 9.7 Beta</p><p>发行版本：AlmaLinux OS 10.0</p><p>更多 AlmaLinux 新闻...</p><p>AlmaLinux OS 是一个开源、社区驱动的项目，基于 Red Hat Enterprise Linux (RHEL) 的源代码构建。AlmaLinux 是 RHEL 的完全二进制兼容分支，由注册非营利组织 AlmaLinux OS 基金会维护。</p><p>https://almalinux.org/</p><p>https://lists.almalinux.org/mailman3/lists/</p><p>https://wiki.almalinux.org/</p><p>https://almalinux.org/get-almalinux</p><p>https://bugs.almalinux.org/</p></div>
+  <div class="article-body"><p>Linux 7.4 的简单优化可使文件读取打开速度提升约 39%</p><p>2026 年 9 月 19 日 下午 12:28 EDT。</p><p>经过两年多的努力，Linux 7.4 准备引入一个补丁，它实质上是一项相当简单的优化，用于避免不必要/重复的工作，从而在打开文件进行读取时带来可观的性能提升。</p><p>开源开发者 Mateusz Guzik 一直主导这项优化工作，目标是优化 Linux 内核中用于从路径名查找打开文件的 VFS 函数。目前，在文件打开过程中，将路径组件转换为磁盘 inode 时存在一个重复的目录项“dentry”，Guzik 正在优化掉这个重复的 dentry。</p><p>该补丁在过去两年中经历了五次修订：</p><p>“打开文件时，在 __legitimize_path() 中获取终端 dentry 的一个引用，然后在 do_dentry_open() 中再获取一个引用，最后在 terminate_walk() 中释放初始引用。</p><p>这是 2 次不必要的修改——do_dentry_open() 可以消费已经持有的引用。”</p><p>避免这种不必要的工作最终带来了相当显著的收益：在一台 20 核虚拟机上，以只读模式打开同一文件的基准测试中，每秒操作数增加了 39%。</p><p>令人有些惊讶的是，这样低垂的果实竟然在 Linux 内核中遗留了这么久。至少这一改进应该在 2026 年底前进入稳定内核。</p><p>这个约三打行的代码补丁已排入 VFS.git 的 vfs-7.4.lookup Git 分支。由于该补丁现已进入正式的 VFS 子系统 Git 分支，并被标记为“7.4”材料，预计这项优化将提交到即将到来的 Linux 7.4 合并窗口。</p><p>Linux 7.3-rc4 将解决 Btrfs 的两个不幸 bug</p><p>Dragonfly 2.0 为这个 Redis 和 Memcached 的现代替代品带来更多性能</p><p>BFS 文件系统将在 Linux 7.4 中被移除</p><p>EROFS 因可能的数据损坏而禁用 LZ4 滚动解压缩</p><p>Linux 的 IO_uring 迎来一些“疯狂”补丁，带来非常好的改进</p><p>更快的 Btrfs Zstd 解压缩即将到来的一项不错改进</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Void Linux 维护者因 AI 政策争议遗弃 100 多个软件包</p><p>Intel 逆转取消其开源字体项目的决定</p><p>BFS 文件系统将在 Linux 7.4 中被移除</p><p>AMDGPU HDMI 2.1 默认启用补丁已为 Linux 7.4 准备就绪，支持 FreeSync、VRR 和 ALLM</p><p>Debian 13.7 发布，包含许多 bug 修复</p><p>Linux 修复了自 2023 年以来存在的静默用户空间数据丢失 bug</p><p>Mold 高速链接器正在用 Rust 重写，希望成为 Linux 上的默认链接器</p><p>Ubuntu 26.10 将 cp、mv 和 rm 迁移到 Rust Coreutils，实现 100% 过渡</p><p>同时享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026，保留所有权利。</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12955" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.4-Faster-Do-Open" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>开发版本：AlmaLinux OS 9.9 Beta 1 — Linux 中文速报</title>
+<title>Laser：Linux 上全新的现代 CD 抓取工具 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>开发版本：AlmaLinux OS 9.9 Beta 1</h1>
+  <h1>Laser：Linux 上全新的现代 CD 抓取工具</h1>
 
-  <div class="article-summary">AlmaLinux 9.9 Beta 1 发布，引入 GCC Toolset 16、更新 LLVM 和 Rust 工具集，新增 Node.js 26 和 PHP 8.4 模块流。虚拟化支持更新至最新 libvirt 和 QEMU-KVM，图形栈刷新 Mesa。安全性通过 SSSD、SELinux 策略、crypto-policies、Keylime 和 Clevis 更新得到改进。fapolicyd 从 1.4.5 跃升至 2.0.1，属重大版本更新，建议在生产环境部署前仔细测试。</div>
+  <div class="article-summary">Laser 是一款面向 Linux 的现代 GTK4/libadwaita CD 抓取应用，可从 Flathub 安装。它能自动获取曲目元数据和封面，支持编辑曲目信息、自定义文件夹结构，并可一次性输出 FLAC、MP3、AAC、Opus、WAV 等多种格式，还能归档为镜像文件。不过它无法选择性地抓取部分曲目，只能整盘处理。</div>
 
-  <div class="article-body"><p>开发版本：AlmaLinux OS 9.9 Beta 1</p><p>该项目发布了 9.x 系列的新测试快照。</p><p>AlmaLinux 9.9 beta 引入了新的编译器工具集、新的模块流，并改进了安全性。此版本新增 GCC Toolset 16，同时更新了 LLVM 和 Rust 工具集，并带来 Node.js 26 和 PHP 8.4 作为新的模块流。虚拟化支持更新至最新版本的 libvirt 和 QEMU-KVM，图形栈也通过 Mesa 进行了刷新。安全性通过 SSSD、SELinux 策略、crypto-policies、Keylime 和 Clevis 的更新得到改进，确保系统安全可靠。您可以在 wiki 上阅读此版本的完整发行说明：AlmaLinux OS 9.9 Beta 发行说明。</p><p>fapolicyd 达到 2.0：文件访问策略守护进程在此版本中从 1.4.5 跃升至 2.0.1——这是一个主版本更新，而非通常的修订更新。在强化的系统上，fapolicyd 位于每个二进制文件的执行路径中，因此新主版本在进入生产主机之前值得仔细审视。如果您运行 fapolicyd，这是本次发布中我们最希望看到测试的部分。</p><p>其他详细信息可在以下文件中找到：</p><p>AlmaLinux-9.9-beta-1-x86_64-dvd.iso</p><p>AlmaLinux-9.9-beta-1-x86_64-minimal.iso</p><p>AlmaLinux-9.9-beta-1-x86_64-boot.iso</p><p>近期相关新闻和发布：</p><p>开发版本：AlmaLinux OS 9.9 Beta 1</p><p>发行版本：AlmaLinux OS 10.2、9.8</p><p>开发版本：AlmaLinux OS 9.8 Beta 1</p><p>发行版本：AlmaLinux OS 10.1</p><p>开发版本：AlmaLinux OS 9.7 Beta</p><p>发行版本：AlmaLinux OS 10.0</p><p>更多 AlmaLinux 新闻...</p><p>AlmaLinux OS 是一个开源、社区驱动的项目，基于 Red Hat Enterprise Linux (RHEL) 的源代码构建。AlmaLinux 是 RHEL 的完全二进制兼容分支，由注册非营利组织 AlmaLinux OS 基金会维护。</p><p>https://almalinux.org/</p><p>https://lists.almalinux.org/mailman3/lists/</p><p>https://wiki.almalinux.org/</p><p>https://almalinux.org/get-almalinux</p><p>https://bugs.almalinux.org/</p></div>
+  <div class="article-body"><p>Laser 是 Linux 上全新的现代 CD 抓取工具 - OMG! Ubuntu</p><p>我床底下有一大箱 CD，多年来我一直打算把它们抓取出来。有些不在 Spotify 上，有些在，但不是正确的版本，还有一张的艺术家我几乎怀疑只是民间记忆——也许正是 Laser 这款新的 GTK4/libadwaita CD 抓取应用，促使我开始动手完成这件事。</p><p>需要它的不只是老用户。英国的 CD 销量正在蓬勃发展，因为被黑胶唱片高昂价格劝退的年轻买家转向了更便宜的实体格式。只需一个便宜的外置 CD/DVD 光驱，就能在笔记本电脑或 PC 上收听。</p><p>也许正因如此，在光驱从笔记本电脑上消失十年后，Linux 如今有了新的 CD 抓取软件。</p><p>Laser 专注于一项任务</p><p>Laser 专注于单一任务，是一款现代 CD 抓取工具，其界面更符合现代桌面的风格——当然比 Asunder 等旧选项更好，后者虽然仍可用，但基于 GTK3。Sound Juicer 也能抓取音频 CD，但在 Ubuntu 上点击提取没有任何反应。</p><p>于是，我从 Flathub 安装了 Laser，放入一张光盘，它立即从在线来源获取了曲目元数据和封面艺术。它允许下载封面并将其嵌入抓取的文件中，以便在音乐应用中显示，你也可以选择本地图片文件。</p><p>单首曲目的标题也可以在抓取前编辑，如果数据库列表与你的副本不符（或者你对混音、特邀艺术家等的格式很挑剔），这会很方便。你还可以设置提取文件的文件夹结构。</p><p>在抓取方面，Laser 可以一次性提取为多种音频格式——FLAC、MP3、AAC、Opus 和 WAV。可以配置编码器质量和压缩率，你还可以将光盘归档为镜像文件，即一个带有 CUE 表的大文件。</p><p>最后，当提取完成时（但仅当光驱支持时），它会弹出 CD。</p><p>它做不到一件本应做到的事</p><p>Laser 不让你选择要抓取哪些曲目——它会抓取光盘上的每一首曲目，无论你是否全都想要。</p><p>我觉得这是一个奇怪的遗漏。</p><p>事后删除不需要的曲目当然很容易，但一开始就不抓取它们会加快速度。</p><p>Laser 运行良好。它产生了我想要的结果：一些 CD 的高质量抓取，我可以添加到我的 Linux 媒体服务器，然后在本地访问/流式传输到其他设备。任务完成。</p><p>我只处理了床底下箱子里 250 张光盘中的 10 张。怀旧是个陷阱！但在翻找它们的过程中，我确实发现我对 1990 年代女子组合的记忆是真实的，她们的单曲……</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12955" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/laser-cd-ripping-app-linux" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

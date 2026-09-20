@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>开发版本：AlmaLinux OS 9.9 Beta 1 — Linux 中文速报</title>
+<title>Wine-Staging 11.18 新增补丁进一步改进 WoW64 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>开发版本：AlmaLinux OS 9.9 Beta 1</h1>
+  <h1>Wine-Staging 11.18 新增补丁进一步改进 WoW64</h1>
 
-  <div class="article-summary">AlmaLinux 9.9 Beta 1 发布，引入 GCC Toolset 16、更新 LLVM 和 Rust 工具集，新增 Node.js 26 和 PHP 8.4 模块流。虚拟化支持更新至最新 libvirt 和 QEMU-KVM，图形栈刷新 Mesa。安全性通过 SSSD、SELinux 策略、crypto-policies、Keylime 和 Clevis 更新得到改进。fapolicyd 从 1.4.5 跃升至 2.0.1，属重大版本更新，建议在生产环境部署前仔细测试。</div>
+  <div class="article-summary">Wine-Staging 11.18 发布，基于 Wine 11.18 开发版，包含 273 个额外补丁。新增 WoW64 相关补丁，用于在设置 WoW64 入口前检查二进制文件，并避免为 64 位二进制写入 WoW64。还修复了内核服务代码问题，并加入将 YV12 转换为 RGB 的 Quartz 补丁，解决《Worms Forts: Under Siege》开场崩溃。此外同步了最新 VKD3D Git 代码。</div>
 
-  <div class="article-body"><p>开发版本：AlmaLinux OS 9.9 Beta 1</p><p>该项目发布了 9.x 系列的新测试快照。</p><p>AlmaLinux 9.9 beta 引入了新的编译器工具集、新的模块流，并改进了安全性。此版本新增 GCC Toolset 16，同时更新了 LLVM 和 Rust 工具集，并带来 Node.js 26 和 PHP 8.4 作为新的模块流。虚拟化支持更新至最新版本的 libvirt 和 QEMU-KVM，图形栈也通过 Mesa 进行了刷新。安全性通过 SSSD、SELinux 策略、crypto-policies、Keylime 和 Clevis 的更新得到改进，确保系统安全可靠。您可以在 wiki 上阅读此版本的完整发行说明：AlmaLinux OS 9.9 Beta 发行说明。</p><p>fapolicyd 达到 2.0：文件访问策略守护进程在此版本中从 1.4.5 跃升至 2.0.1——这是一个主版本更新，而非通常的修订更新。在强化的系统上，fapolicyd 位于每个二进制文件的执行路径中，因此新主版本在进入生产主机之前值得仔细审视。如果您运行 fapolicyd，这是本次发布中我们最希望看到测试的部分。</p><p>其他详细信息可在以下文件中找到：</p><p>AlmaLinux-9.9-beta-1-x86_64-dvd.iso</p><p>AlmaLinux-9.9-beta-1-x86_64-minimal.iso</p><p>AlmaLinux-9.9-beta-1-x86_64-boot.iso</p><p>近期相关新闻和发布：</p><p>开发版本：AlmaLinux OS 9.9 Beta 1</p><p>发行版本：AlmaLinux OS 10.2、9.8</p><p>开发版本：AlmaLinux OS 9.8 Beta 1</p><p>发行版本：AlmaLinux OS 10.1</p><p>开发版本：AlmaLinux OS 9.7 Beta</p><p>发行版本：AlmaLinux OS 10.0</p><p>更多 AlmaLinux 新闻...</p><p>AlmaLinux OS 是一个开源、社区驱动的项目，基于 Red Hat Enterprise Linux (RHEL) 的源代码构建。AlmaLinux 是 RHEL 的完全二进制兼容分支，由注册非营利组织 AlmaLinux OS 基金会维护。</p><p>https://almalinux.org/</p><p>https://lists.almalinux.org/mailman3/lists/</p><p>https://wiki.almalinux.org/</p><p>https://almalinux.org/get-almalinux</p><p>https://bugs.almalinux.org/</p></div>
+  <div class="article-body"><p>Wine-Staging 11.18 新增补丁进一步改进 WoW64</p><p>2026 年 9 月 19 日 09:22 EDT。</p><p>在昨天的双周开发版基础上，Wine-Staging 11.18 现已发布。这个 Wine 的实验性版本目前在上游 Git 状态之上携带了 273 个额外补丁，其中包括一些有助于增强 WoW64 支持的新补丁。</p><p>Wine-Staging 11.18 包含一些新的 WoW64 补丁，用于在设置 WoW64 入口之前检查二进制文件，以及不为 64 位二进制文件写入 WoW64。提醒一下，Wine WoW64 是在纯 64 位环境中运行 32 位 Windows 应用程序的方式。</p><p>这些暂存区中最新 WoW64 补丁的修复之一涉及内核服务代码。同样，2020 年的一个修复也存在于 WoW64 服务代码中。</p><p>Wine-Staging 11.18 还包含新补丁，用于在 Quartz 代码中渲染时将 YV12 转换为 RGB，以解决《Worms Forts: Under Siege》（GOG.com）在尝试播放开场动画时崩溃的问题。</p><p>除此之外，Wine-Staging 11.18 还引入了最新的 VKD3D Git 代码。</p><p>Wine-Staging 11.18 和 Wine 11.18 均可从以下地址获取：</p><p>Wine 11.18 继续构建其 NTOSKRNL 实现</p><p>Wine 11.17 发布，初步支持显示模式模拟</p><p>VKD3D 2.1 发布，为上游 Wine 中的 Direct3D 12 带来新功能</p><p>Wine 11.16 发布，支持 VA-API 硬件解码，改进 ARM64 支持</p><p>Wine 11.15 发布，修复 Wayland 问题，修复 20 年前的 MSXML3 错误</p><p>Wine 11.14 为 FreeBSD 带来 WoW64 模式，开始菜单支持图标</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Void Linux 维护者因 AI 政策争议弃养 100 多个软件包</p><p>Intel 逆转取消其开源字体项目的决定</p><p>BFS 文件系统将从 Linux 7.4 中移除</p><p>AMDGPU HDMI 2.1 默认启用补丁已就绪，适用于 Linux 7.4，支持 FreeSync、VRR 和 ALLM</p><p>Debian 13.7 发布，包含许多错误修复</p><p>Linux 修复自 2023 年以来存在的静默用户空间数据丢失错误</p><p>Mold 高速链接器正在用 Rust 重写，希望成为 Linux 上的默认链接器</p><p>Ubuntu 26.10 将 cp、mv 和 rm 迁移到 Rust Coreutils，实现 100% 过渡</p><p>同时享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12955" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Wine-Staging-11.18" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

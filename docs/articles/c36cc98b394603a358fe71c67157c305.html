@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>开发版本：AlmaLinux OS 9.9 Beta 1 — Linux 中文速报</title>
+<title>Convey：Linux 邮件应用 Geary 的 GTK4/libadwaita 分支 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>开发版本：AlmaLinux OS 9.9 Beta 1</h1>
+  <h1>Convey：Linux 邮件应用 Geary 的 GTK4/libadwaita 分支</h1>
 
-  <div class="article-summary">AlmaLinux 9.9 Beta 1 发布，引入 GCC Toolset 16、更新 LLVM 和 Rust 工具集，新增 Node.js 26 和 PHP 8.4 模块流。虚拟化支持更新至最新 libvirt 和 QEMU-KVM，图形栈刷新 Mesa。安全性通过 SSSD、SELinux 策略、crypto-policies、Keylime 和 Clevis 更新得到改进。fapolicyd 从 1.4.5 跃升至 2.0.1，属重大版本更新，建议在生产环境部署前仔细测试。</div>
+  <div class="article-summary">Convey 是一个基于 Geary 代码的新 Linux 邮件客户端，采用 GTK4/libadwaita 界面，并支持 Microsoft 365 账户。它保留了 Geary 的会话线程和标准三栏布局，更新了插件架构以使用新版 GNOME 安全与加密库，并新增 Microsoft Graph 后端。此外还改进了文件夹管理、键盘导航、深色模式适配和地址自动补全等功能。</div>
 
-  <div class="article-body"><p>开发版本：AlmaLinux OS 9.9 Beta 1</p><p>该项目发布了 9.x 系列的新测试快照。</p><p>AlmaLinux 9.9 beta 引入了新的编译器工具集、新的模块流，并改进了安全性。此版本新增 GCC Toolset 16，同时更新了 LLVM 和 Rust 工具集，并带来 Node.js 26 和 PHP 8.4 作为新的模块流。虚拟化支持更新至最新版本的 libvirt 和 QEMU-KVM，图形栈也通过 Mesa 进行了刷新。安全性通过 SSSD、SELinux 策略、crypto-policies、Keylime 和 Clevis 的更新得到改进，确保系统安全可靠。您可以在 wiki 上阅读此版本的完整发行说明：AlmaLinux OS 9.9 Beta 发行说明。</p><p>fapolicyd 达到 2.0：文件访问策略守护进程在此版本中从 1.4.5 跃升至 2.0.1——这是一个主版本更新，而非通常的修订更新。在强化的系统上，fapolicyd 位于每个二进制文件的执行路径中，因此新主版本在进入生产主机之前值得仔细审视。如果您运行 fapolicyd，这是本次发布中我们最希望看到测试的部分。</p><p>其他详细信息可在以下文件中找到：</p><p>AlmaLinux-9.9-beta-1-x86_64-dvd.iso</p><p>AlmaLinux-9.9-beta-1-x86_64-minimal.iso</p><p>AlmaLinux-9.9-beta-1-x86_64-boot.iso</p><p>近期相关新闻和发布：</p><p>开发版本：AlmaLinux OS 9.9 Beta 1</p><p>发行版本：AlmaLinux OS 10.2、9.8</p><p>开发版本：AlmaLinux OS 9.8 Beta 1</p><p>发行版本：AlmaLinux OS 10.1</p><p>开发版本：AlmaLinux OS 9.7 Beta</p><p>发行版本：AlmaLinux OS 10.0</p><p>更多 AlmaLinux 新闻...</p><p>AlmaLinux OS 是一个开源、社区驱动的项目，基于 Red Hat Enterprise Linux (RHEL) 的源代码构建。AlmaLinux 是 RHEL 的完全二进制兼容分支，由注册非营利组织 AlmaLinux OS 基金会维护。</p><p>https://almalinux.org/</p><p>https://lists.almalinux.org/mailman3/lists/</p><p>https://wiki.almalinux.org/</p><p>https://almalinux.org/get-almalinux</p><p>https://bugs.almalinux.org/</p></div>
+  <div class="article-body"><p>Convey 是一个基于 Geary 代码的新 Linux 邮件客户端，采用 GTK4/libadwaita 界面，并支持 Microsoft 365 账户。</p><p>有点类似传统邮件，它在我报道另一款新邮件客户端后不久出现，那款客户端也从 Geary 中汲取灵感——Geary 的源码深受 Linux 用户喜爱，但其最后一个稳定版本发布于 2024 年。</p><p>Convey 自称是 Geary 的硬分支，与其说是致敬，不如说是延续——尽管是非官方的：Flathub 页面明确表示它“不隶属于 GNOME 基金会，也未获得其认可”。</p><p>Geary 于 2012 年首次发布，我定期报道过它。发布时，它采用类似网页邮件的会话线程（将整个往返对话归为一组，而不是将每条回复显示为单独消息），这在当时的 Linux 邮件客户端中相当新颖。</p><p>Convey 保留了许多前身广受欢迎的功能。</p><p>显然，在 2026 年这已不那么独特，因为大多数邮件客户端现在都使用会话线程——Convey 继续坚持这一点并不意外，同时也保留了 Geary 标准的三栏布局。</p><p>Convey 将界面移植到了 GTK4/libadwaita。这看起来更符合现代桌面，当然，也更好地集成并遵循现代系统特性，键盘快捷键也更好用。</p><p>Convey 还更新了插件架构，以使用新版 GNOME 核心安全和加密库，并新增了 Microsoft Graph 后端以支持 Outlook 和 Microsoft 365 账户。</p><p>Convey v50.0 的其他改进：</p><p>- 从侧边栏添加、重命名和删除文件夹</p><p>- 窗格之间的键盘导航</p><p>- 消息颜色跟随系统深色模式偏好</p><p>- 地址补全现在是可导航的下拉菜单</p><p>总之，这是一个令人欢迎的旧爱复兴。</p><p>不得不提的是，Geary 并未消亡——它仍可安装并继续工作——但已不再积极维护。最后一个新的稳定版本是 2024 年 5 月的 v46。在此之前，开发已经放缓。</p><p>它能在其他新邮件应用中脱颖而出吗？</p><p>过去 12 个月里，Linux 桌面邮件客户端有所增加，AI 编码工具在其中发挥了作用。</p><p>Convey 的代码有 AI 辅助的迹象，尽管其 GitLab 仓库和 Flathub 页面都未提及。</p><p>无论如何，它因其血统而与众不同——但接下来呢？</p><p>Geary 之所以受欢迎，是因为在 Linux 桌面邮件仍被“群件”套件、过时界面和繁琐配置主导的时代，它提供了一款轻量、易用的邮件客户端。</p><p>自那以后，情况已大不相同，所以有趣的是，Convey 是在精神上还是仅仅在血统上硬分支了 Geary。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12955" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/convey-geary-email-client" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

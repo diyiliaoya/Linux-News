@@ -11735,5 +11735,82 @@
     "title_zh": "DietPi 10.6 发布，新增对 Orange Pi 4 Pro 和 Orange Pi Zero 3W 的支持",
     "summary_zh": "DietPi 10.6 正式发布，新增对 Orange Pi 4 Pro 和 Orange Pi Zero 3W 的支持，同时为已支持的设备带来系统改进、更新和修复。",
     "fulltext_zh": "DietPi 10.6 新增对 Orange Pi 4 Pro 和 Orange Pi Zero 3W 的支持，同时为已支持的设备带来系统改进、更新和修复。\n\n文章《DietPi 10.6 发布，新增对 Orange Pi 4 Pro 和 Orange Pi Zero 3W 的支持》最初发表于 Linux Today。"
+  },
+  "c36cc98b394603a358fe71c67157c305": {
+    "id": "c36cc98b394603a358fe71c67157c305",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/convey-geary-email-client",
+    "title_en": "Convey is a GTK4/libadwaita fork of Linux email app Geary",
+    "summary_en": "Convey is a new Linux email client based on the code of Geary, remade with a GTK4/libadwaita UI and support for Microsoft 365 accounts. Somewhat like traditional mail, it arrives not long after I wrote about another new Linux email client, Postcard, which also draws its inspiration from Geary – the source being much-loved by Linux users, but whose last stable release was in 2024. Convey is a self-described hard fork of Geary so, unlike Postcard, it isn&#8217;t a tribute so much as a continuation",
+    "pub_date": "Sun, 20 Sep 2026 01:31:44 +0000",
+    "title_zh": "Convey：Linux 邮件应用 Geary 的 GTK4/libadwaita 分支",
+    "summary_zh": "Convey 是一个基于 Geary 代码的新 Linux 邮件客户端，采用 GTK4/libadwaita 界面，并支持 Microsoft 365 账户。它保留了 Geary 的会话线程和标准三栏布局，更新了插件架构以使用新版 GNOME 安全与加密库，并新增 Microsoft Graph 后端。此外还改进了文件夹管理、键盘导航、深色模式适配和地址自动补全等功能。",
+    "fulltext_zh": "Convey 是一个基于 Geary 代码的新 Linux 邮件客户端，采用 GTK4/libadwaita 界面，并支持 Microsoft 365 账户。\n\n有点类似传统邮件，它在我报道另一款新邮件客户端后不久出现，那款客户端也从 Geary 中汲取灵感——Geary 的源码深受 Linux 用户喜爱，但其最后一个稳定版本发布于 2024 年。\n\nConvey 自称是 Geary 的硬分支，与其说是致敬，不如说是延续——尽管是非官方的：Flathub 页面明确表示它“不隶属于 GNOME 基金会，也未获得其认可”。\n\nGeary 于 2012 年首次发布，我定期报道过它。发布时，它采用类似网页邮件的会话线程（将整个往返对话归为一组，而不是将每条回复显示为单独消息），这在当时的 Linux 邮件客户端中相当新颖。\n\nConvey 保留了许多前身广受欢迎的功能。\n\n显然，在 2026 年这已不那么独特，因为大多数邮件客户端现在都使用会话线程——Convey 继续坚持这一点并不意外，同时也保留了 Geary 标准的三栏布局。\n\nConvey 将界面移植到了 GTK4/libadwaita。这看起来更符合现代桌面，当然，也更好地集成并遵循现代系统特性，键盘快捷键也更好用。\n\nConvey 还更新了插件架构，以使用新版 GNOME 核心安全和加密库，并新增了 Microsoft Graph 后端以支持 Outlook 和 Microsoft 365 账户。\n\nConvey v50.0 的其他改进：\n\n- 从侧边栏添加、重命名和删除文件夹\n- 窗格之间的键盘导航\n- 消息颜色跟随系统深色模式偏好\n- 地址补全现在是可导航的下拉菜单\n\n总之，这是一个令人欢迎的旧爱复兴。\n\n不得不提的是，Geary 并未消亡——它仍可安装并继续工作——但已不再积极维护。最后一个新的稳定版本是 2024 年 5 月的 v46。在此之前，开发已经放缓。\n\n它能在其他新邮件应用中脱颖而出吗？\n\n过去 12 个月里，Linux 桌面邮件客户端有所增加，AI 编码工具在其中发挥了作用。\n\nConvey 的代码有 AI 辅助的迹象，尽管其 GitLab 仓库和 Flathub 页面都未提及。\n\n无论如何，它因其血统而与众不同——但接下来呢？\n\nGeary 之所以受欢迎，是因为在 Linux 桌面邮件仍被“群件”套件、过时界面和繁琐配置主导的时代，它提供了一款轻量、易用的邮件客户端。\n\n自那以后，情况已大不相同，所以有趣的是，Convey 是在精神上还是仅仅在血统上硬分支了 Geary。"
+  },
+  "0caeda151054236b07127944b55c152f": {
+    "id": "0caeda151054236b07127944b55c152f",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/laser-cd-ripping-app-linux",
+    "title_en": "Laser is a new, modern CD ripper for Linux",
+    "summary_en": "Under my bed is a giant box of CDs that I&#8217;ve been meaning to rip for years. Some aren&#8217;t on Spotify, some are, but not the right version and one is by an artist I&#8217;m half convinced is a folk memory – perhaps the Mandela effect in action. Laser is a new GTK4/libadwatia CD ripping application for Linux that&#8217;s coaxed me into getting on with the job. It&#8217;s not just old timers who may have need. CD sales in the UK are booming as younger buyers put off by the gentrified pric",
+    "pub_date": "Sat, 19 Sep 2026 03:08:49 +0000",
+    "title_zh": "Laser：Linux 上全新的现代 CD 抓取工具",
+    "summary_zh": "Laser 是一款面向 Linux 的现代 GTK4/libadwaita CD 抓取应用，可从 Flathub 安装。它能自动获取曲目元数据和封面，支持编辑曲目信息、自定义文件夹结构，并可一次性输出 FLAC、MP3、AAC、Opus、WAV 等多种格式，还能归档为镜像文件。不过它无法选择性地抓取部分曲目，只能整盘处理。",
+    "fulltext_zh": "Laser 是 Linux 上全新的现代 CD 抓取工具 - OMG! Ubuntu\n\n我床底下有一大箱 CD，多年来我一直打算把它们抓取出来。有些不在 Spotify 上，有些在，但不是正确的版本，还有一张的艺术家我几乎怀疑只是民间记忆——也许正是 Laser 这款新的 GTK4/libadwaita CD 抓取应用，促使我开始动手完成这件事。\n\n需要它的不只是老用户。英国的 CD 销量正在蓬勃发展，因为被黑胶唱片高昂价格劝退的年轻买家转向了更便宜的实体格式。只需一个便宜的外置 CD/DVD 光驱，就能在笔记本电脑或 PC 上收听。\n\n也许正因如此，在光驱从笔记本电脑上消失十年后，Linux 如今有了新的 CD 抓取软件。\n\nLaser 专注于一项任务\n\nLaser 专注于单一任务，是一款现代 CD 抓取工具，其界面更符合现代桌面的风格——当然比 Asunder 等旧选项更好，后者虽然仍可用，但基于 GTK3。Sound Juicer 也能抓取音频 CD，但在 Ubuntu 上点击提取没有任何反应。\n\n于是，我从 Flathub 安装了 Laser，放入一张光盘，它立即从在线来源获取了曲目元数据和封面艺术。它允许下载封面并将其嵌入抓取的文件中，以便在音乐应用中显示，你也可以选择本地图片文件。\n\n单首曲目的标题也可以在抓取前编辑，如果数据库列表与你的副本不符（或者你对混音、特邀艺术家等的格式很挑剔），这会很方便。你还可以设置提取文件的文件夹结构。\n\n在抓取方面，Laser 可以一次性提取为多种音频格式——FLAC、MP3、AAC、Opus 和 WAV。可以配置编码器质量和压缩率，你还可以将光盘归档为镜像文件，即一个带有 CUE 表的大文件。\n\n最后，当提取完成时（但仅当光驱支持时），它会弹出 CD。\n\n它做不到一件本应做到的事\n\nLaser 不让你选择要抓取哪些曲目——它会抓取光盘上的每一首曲目，无论你是否全都想要。\n\n我觉得这是一个奇怪的遗漏。\n\n事后删除不需要的曲目当然很容易，但一开始就不抓取它们会加快速度。\n\nLaser 运行良好。它产生了我想要的结果：一些 CD 的高质量抓取，我可以添加到我的 Linux 媒体服务器，然后在本地访问/流式传输到其他设备。任务完成。\n\n我只处理了床底下箱子里 250 张光盘中的 10 张。怀旧是个陷阱！但在翻找它们的过程中，我确实发现我对 1990 年代女子组合的记忆是真实的，她们的单曲……"
+  },
+  "f1bc2f2ec380c069b65b04637b924e12": {
+    "id": "f1bc2f2ec380c069b65b04637b924e12",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Btrfs-Fixes-For-Linux-7.3-rc4",
+    "title_en": "Linux 7.3-rc4 To Address Two Unfortunate Bugs With Btrfs",
+    "summary_en": "Merged today were this week's set of Btrfs file-system fixes for the Linux 7.3-rc4 kernel, which include two notable bug fixes...",
+    "pub_date": "Sat, 19 Sep 2026 20:26:58 -0400",
+    "title_zh": "Linux 7.3-rc4 将修复 Btrfs 两个不幸的 Bug",
+    "summary_zh": "Linux 7.3-rc4 合并了本周的 Btrfs 文件系统修复，包含两个重要 Bug 修复。一是自 Linux 7.2-rc1 引入的 fs_fsid 标识符推导方式变更导致向后兼容性破坏，影响依赖稳定 FSID 的应用（如 NetworkManager OpenConnect 的 VPN 密钥文件加解密），现已恢复从文件系统 UUID 推导。二是修复了 Linux 7.3 开发周期中 Btrfs 根文件系统在无 initramfs 时 GRUB2 无法检测根设备的问题。",
+    "fulltext_zh": "Linux 7.3-rc4 将修复 Btrfs 两个不幸的 Bug\n\n2026 年 9 月 19 日 20:26 EDT。\n\n今天合并了本周针对 Linux 7.3-rc4 内核的 Btrfs 文件系统修复集，其中包含两个值得注意的 Bug 修复。\n\n首先是 Linux 7.2-rc1 中引入的一个回归问题，由于 fs_fsid 标识符推导方式的变更，该问题一直存在至今。但这反过来破坏了向后兼容性，包括对用户空间应用的影响，因为 f_fsid 在内核更新后可能发生变化，并在重启之间发生偏移。对于期望稳定 ID 的应用来说，这破坏了依赖 FSID 来加密/解密 VPN 密钥文件的程序。例如，当使用 Btrfs 的用户升级到 Linux 7.2 后，NetworkManager OpenConnect 因此无法再访问 VPN。因此在 Linux 7.3-rc4 中，FSID 恢复为从文件系统 UUID 推导。\n\n本周另一个主要的 Btrfs 修复仅存在于迄今为止的 Linux 7.3 开发周期中，它破坏了 GRUB2 对无 initramdisk 系统启动的处理检测。在 Linux 7.3 中，使用 Btrfs 根文件系统时，GRUB2 在没有 initramfs 的情况下无法检测到根文件系统设备。\n\n这些修复以及一些更常规的 Btrfs 文件系统修复已于今天合并，赶在周日 Linux 7.3-rc4 发布之前。\n\nLinux 7.4 的简单优化可使文件读取速度提升约 39%\nDragonfly 2.0 为这个 Redis 和 Memcached 的现代替代品带来更多性能\nBFS 文件系统将在 Linux 7.4 中被移除\nEROFS 因可能的数据损坏而禁用 LZ4 滚动解压缩\nLinux 的 IO_uring 迎来一些“疯狂”的补丁，带来非常好的改进\nBtrfs Zstd 解压缩将迎来一项不错的改进\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nVoid Linux 维护者因 AI 政策争议遗弃 100 多个软件包\nIntel 逆转取消其开源字体项目的决定\nBFS 文件系统将在 Linux 7.4 中被移除\nAMDGPU HDMI 2.1 默认启用补丁已为 Linux 7.4 准备就绪，支持 FreeSync、VRR 和 ALLM\nDebian 13.7 发布，包含许多 Bug 修复\nLinux 修复了自 2023 年以来存在的静默用户空间数据丢失 Bug\nMold 高速链接器正在用 Rust 重写，希望成为 Linux 上的默认链接器\nUbuntu 26.10 将 cp、mv 和 rm 迁移到 Rust Coreutils，实现 100% 过渡\n\n同时享受无广告浏览、\n单页文章视图\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "7b716e5e43629e1c9b80935792223a2a": {
+    "id": "7b716e5e43629e1c9b80935792223a2a",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-Faster-Do-Open",
+    "title_en": "Simple Optimization For Linux 7.4 Can Open Files For Reading ~39% Faster",
+    "summary_en": "More than two years in the making, Linux 7.4 is poised to introduce a patch that amounts to a rather simple optimization to avoid unnecessary/duplicative work that can net some nice gains when opening files for reading...",
+    "pub_date": "Sat, 19 Sep 2026 12:28:05 -0400",
+    "title_zh": "Linux 7.4 的简单优化可使文件读取打开速度提升约 39%",
+    "summary_zh": "Linux 7.4 将引入一项由 Mateusz Guzik 主导的简单优化，消除文件打开路径查找中重复的 dentry 引用操作。该补丁历经两年五次修订，在 20 核虚拟机上测试显示，以只读模式打开同一文件的每秒操作数提升 39%。补丁已进入 VFS.git 的 vfs-7.4.lookup 分支，预计将在 Linux 7.4 合并窗口提交。",
+    "fulltext_zh": "Linux 7.4 的简单优化可使文件读取打开速度提升约 39%\n\n2026 年 9 月 19 日 下午 12:28 EDT。\n\n经过两年多的努力，Linux 7.4 准备引入一个补丁，它实质上是一项相当简单的优化，用于避免不必要/重复的工作，从而在打开文件进行读取时带来可观的性能提升。\n\n开源开发者 Mateusz Guzik 一直主导这项优化工作，目标是优化 Linux 内核中用于从路径名查找打开文件的 VFS 函数。目前，在文件打开过程中，将路径组件转换为磁盘 inode 时存在一个重复的目录项“dentry”，Guzik 正在优化掉这个重复的 dentry。\n\n该补丁在过去两年中经历了五次修订：\n\n“打开文件时，在 __legitimize_path() 中获取终端 dentry 的一个引用，然后在 do_dentry_open() 中再获取一个引用，最后在 terminate_walk() 中释放初始引用。\n\n这是 2 次不必要的修改——do_dentry_open() 可以消费已经持有的引用。”\n\n避免这种不必要的工作最终带来了相当显著的收益：在一台 20 核虚拟机上，以只读模式打开同一文件的基准测试中，每秒操作数增加了 39%。\n\n令人有些惊讶的是，这样低垂的果实竟然在 Linux 内核中遗留了这么久。至少这一改进应该在 2026 年底前进入稳定内核。\n\n这个约三打行的代码补丁已排入 VFS.git 的 vfs-7.4.lookup Git 分支。由于该补丁现已进入正式的 VFS 子系统 Git 分支，并被标记为“7.4”材料，预计这项优化将提交到即将到来的 Linux 7.4 合并窗口。\n\nLinux 7.3-rc4 将解决 Btrfs 的两个不幸 bug\n\nDragonfly 2.0 为这个 Redis 和 Memcached 的现代替代品带来更多性能\n\nBFS 文件系统将在 Linux 7.4 中被移除\n\nEROFS 因可能的数据损坏而禁用 LZ4 滚动解压缩\n\nLinux 的 IO_uring 迎来一些“疯狂”补丁，带来非常好的改进\n\n更快的 Btrfs Zstd 解压缩即将到来的一项不错改进\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nVoid Linux 维护者因 AI 政策争议遗弃 100 多个软件包\n\nIntel 逆转取消其开源字体项目的决定\n\nBFS 文件系统将在 Linux 7.4 中被移除\n\nAMDGPU HDMI 2.1 默认启用补丁已为 Linux 7.4 准备就绪，支持 FreeSync、VRR 和 ALLM\n\nDebian 13.7 发布，包含许多 bug 修复\n\nLinux 修复了自 2023 年以来存在的静默用户空间数据丢失 bug\n\nMold 高速链接器正在用 Rust 重写，希望成为 Linux 上的默认链接器\n\nUbuntu 26.10 将 cp、mv 和 rm 迁移到 Rust Coreutils，实现 100% 过渡\n\n同时享受无广告浏览、单页文章查看\n\n法律免责声明、隐私政策、Cookie\n\n版权所有 © 2004 - 2026，保留所有权利。\n\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "75dfd7288c6dec25e5a6ae9fc085a74c": {
+    "id": "75dfd7288c6dec25e5a6ae9fc085a74c",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Wine-Staging-11.18",
+    "title_en": "Wine-Staging 11.18 Adds New Patches To Further Improve WoW64",
+    "summary_en": "Building off yesterday's Wine 11.18 bi-weekly development release is now Wine-Staging 11.18. This experimental flavor of Wine is presently carrying 273 extra patches over that upstream Git state, including some new patches for helping enhance the WoW64 support...",
+    "pub_date": "Sat, 19 Sep 2026 09:22:39 -0400",
+    "title_zh": "Wine-Staging 11.18 新增补丁进一步改进 WoW64",
+    "summary_zh": "Wine-Staging 11.18 发布，基于 Wine 11.18 开发版，包含 273 个额外补丁。新增 WoW64 相关补丁，用于在设置 WoW64 入口前检查二进制文件，并避免为 64 位二进制写入 WoW64。还修复了内核服务代码问题，并加入将 YV12 转换为 RGB 的 Quartz 补丁，解决《Worms Forts: Under Siege》开场崩溃。此外同步了最新 VKD3D Git 代码。",
+    "fulltext_zh": "Wine-Staging 11.18 新增补丁进一步改进 WoW64\n\n2026 年 9 月 19 日 09:22 EDT。\n\n在昨天的双周开发版基础上，Wine-Staging 11.18 现已发布。这个 Wine 的实验性版本目前在上游 Git 状态之上携带了 273 个额外补丁，其中包括一些有助于增强 WoW64 支持的新补丁。\n\nWine-Staging 11.18 包含一些新的 WoW64 补丁，用于在设置 WoW64 入口之前检查二进制文件，以及不为 64 位二进制文件写入 WoW64。提醒一下，Wine WoW64 是在纯 64 位环境中运行 32 位 Windows 应用程序的方式。\n\n这些暂存区中最新 WoW64 补丁的修复之一涉及内核服务代码。同样，2020 年的一个修复也存在于 WoW64 服务代码中。\n\nWine-Staging 11.18 还包含新补丁，用于在 Quartz 代码中渲染时将 YV12 转换为 RGB，以解决《Worms Forts: Under Siege》（GOG.com）在尝试播放开场动画时崩溃的问题。\n\n除此之外，Wine-Staging 11.18 还引入了最新的 VKD3D Git 代码。\n\nWine-Staging 11.18 和 Wine 11.18 均可从以下地址获取：\n\nWine 11.18 继续构建其 NTOSKRNL 实现\nWine 11.17 发布，初步支持显示模式模拟\nVKD3D 2.1 发布，为上游 Wine 中的 Direct3D 12 带来新功能\nWine 11.16 发布，支持 VA-API 硬件解码，改进 ARM64 支持\nWine 11.15 发布，修复 Wayland 问题，修复 20 年前的 MSXML3 错误\nWine 11.14 为 FreeBSD 带来 WoW64 模式，开始菜单支持图标\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nVoid Linux 维护者因 AI 政策争议弃养 100 多个软件包\nIntel 逆转取消其开源字体项目的决定\nBFS 文件系统将从 Linux 7.4 中移除\nAMDGPU HDMI 2.1 默认启用补丁已就绪，适用于 Linux 7.4，支持 FreeSync、VRR 和 ALLM\nDebian 13.7 发布，包含许多错误修复\nLinux 修复自 2023 年以来存在的静默用户空间数据丢失错误\nMold 高速链接器正在用 Rust 重写，希望成为 Linux 上的默认链接器\nUbuntu 26.10 将 cp、mv 和 rm 迁移到 Rust Coreutils，实现 100% 过渡\n\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "c702719def93f34ba51938647a91e743": {
+    "id": "c702719def93f34ba51938647a91e743",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/GNOME-OS-Goes-Zswap",
+    "title_en": "GNOME OS Turns To Zswap To Deal With OOM Issues, Progress On Geary Email Client Fork",
+    "summary_en": "In addition to this week's GNOME 51 release were several other exciting developments in the GNOME desktop space...",
+    "pub_date": "Sat, 19 Sep 2026 06:38:08 -0400",
+    "title_zh": "GNOME OS 转向 Zswap 以应对 OOM 问题，Geary 邮件客户端分支取得进展",
+    "summary_zh": "GNOME OS 现已默认启用 Zswap，以缓解内存不足问题并提升系统响应速度，同时推出了配套文档网站。第三方应用方面，Convey 作为 Geary 邮件客户端的分支亮相，新增 Microsoft 365 支持并移植至 GTK4。此外，GNOME 51、Shotwell 33、GTK 4.24 等也发布了重要更新。",
+    "fulltext_zh": "GNOME OS 转向 Zswap 以应对 OOM 问题，Geary 邮件客户端分支取得进展\n2026年9月19日上午06:38 EDT。\n\n除了本周的[GNOME 51 发布]之外，GNOME 桌面领域还有其他几项令人兴奋的进展。\n\nGNOME OS 现在有了一个文档网站，提供指南和其他信息，帮助用户试用 GNOME OS 并进行相关设置。\n\nGNOME OS 现在也采用了 Zswap，即使你的系统内存不太大，也能帮助保持系统快速响应。这一变化应该能帮助那些在 GNOME OS 上遇到过内存不足问题的用户，Zswap 将被默认使用。GNOME OS 依赖一个基于 Rust 的 zswap-generator 脚本来为 Zswap 创建正确的 systemd 配置。zswap-generator 将遵循内核命令行上的[参数]来禁用该功能。\n\n在第三方 GNOME 应用新闻中，Convey 已作为 Geary 邮件客户端的分支首次亮相。Convey 分叉了 Geary，添加了 Microsoft 365 支持，移植到 GTK4 工具包，并带来了其他修复和 UI/UX 增强。\n\n更多关于本周这些有趣的 GNOME 开发动态，请访问[链接]。\n\nGNOME 51 发布，改进了帧调度，众多应用改进\nGNOME Shotwell 33 照片管理器发布，移植到 GTK4\nGTK 4.24 发布，具有更好的分数缩放和更精确的 GDK 帧时钟\nGitte 作为 GNOME 的 Git 客户端继续成熟得相当不错\nGNOME 51 添加对自定义指针加速配置文件的支持\nGNOME 利益相关者讨论 RFC 流程以解决重大技术变更\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过[链接]关注他。\n\nVoid Linux 维护者因 AI 政策争议遗弃 100 多个软件包\nIntel 逆转取消其开源字体项目的决定\nBFS 文件系统将在 Linux 7.4 中被移除\nAMDGPU HDMI 2.1 默认启用的补丁已准备就绪，适用于 Linux 7.4，支持 FreeSync、VRR 和 ALLM\nDebian 13.7 发布，修复了许多错误\nLinux 修补了自 2023 年以来存在的静默用户空间数据丢失错误\nMold 高速链接器正在用 Rust 重写，希望成为 Linux 上的默认链接器\nUbuntu 26.10 将 cp、mv 和 rm 迁移到 Rust Coreutils，实现 100% 过渡\n\n在拥有无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "d0262bc1b4f5d0d896d692fc104554ad": {
+    "id": "d0262bc1b4f5d0d896d692fc104554ad",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Intel-Xe-vRAM-Health-Check",
+    "title_en": "Intel Xe Driver For Linux 7.4 Adds vRAM Health Check, Degraded Memory Handling",
+    "summary_en": "Sent out this week were more Intel Xe kernel graphics driver changes targeting the upcoming Linux 7.4 kernel cycle. The theme this week was around dealing with video memory health and also being able to better deal with hardware degraded video RAM...",
+    "pub_date": "Sat, 19 Sep 2026 06:24:15 -0400",
+    "title_zh": "Intel Xe 驱动为 Linux 7.4 添加 vRAM 健康检查与降级内存处理",
+    "summary_zh": "Intel 为即将到来的 Linux 7.4 内核周期提交了 Xe 图形驱动更新，重点围绕显存健康管理。新增基础 vRAM 健康检查，通过测试最后一个显存页来发现 BAR 尺寸、CCS 尺寸及恒等映射等问题，目前由调试选项控制。同时引入显存页离线支持，可永久隔离故障显存，避免被后续分配重用，并通过 DebugFS 向用户空间暴露故障区域。此外还通过 DebugFS 暴露了每个引擎的空闲状态。",
+    "fulltext_zh": "本周，Intel 为即将到来的内核周期提交了更多 Xe 内核图形驱动变更。本周的主题围绕显存健康处理，以及更好地应对硬件降级的显存。\n\nIntel Xe 驱动正在推出一项基础的 vRAM 健康检查例程，重点是对最后一个 vRAM 页进行健全性测试。Intel 工程师 Matthew Auld 在解释 Xe 驱动的这项 vRAM 健康检查时表示：\n\n“在早期探测期间，将最后一页用作 BAR 尺寸、CCS 尺寸、恒等映射设置等的金丝雀。如果有什么问题，最后一页很可能就是我们会发现它的地方。用我们所有的手段去测试它。目前，这被一个调试配置选项所限制，因此不应在生产环境中触发。\n\n主要动机与 CCS 尺寸有关：在某些 BMG 卡上，由于某种原因，CCS 偏移被编程为未对齐，而我们对它的处理是坏的，正如 Linus 所发现的那样，导致一定数量的 CCS 存储被当作普通 VRAM 拉入分配器。”\n\n目前至少这项 vRAM 健康检查选项由 CONFIG_DRM_XE_DEBUG_MEM 控制。\n\n另外，本周的 Xe 拉取请求还带来了内存页离线支持，该功能经过了 21 轮审查。这是让 Xe 内核驱动优雅地处理硬件内存降级方面“重要的一步”。通过这项工作，Xe 驱动可以永久划出有故障的显存，使其不会被后续分配重用。坏的 vRAM 页也会通过 DebugFS 暴露，以便用户空间了解有故障的内存区域。\n\n带有这些最新排队变更的 Intel Xe 驱动现在还通过 DebugFS 暴露每个引擎的空闲状态。\n\n本周提交给 DRM-Next、面向 Linux 7.4 的 Intel Xe 内核驱动变更完整列表可通过以下链接查看：\n\nLinux 已准备好修复 Intel FRED 导致某些游戏在 Wine / Steam Play 下崩溃的问题\nIntel 似乎要结束其漏洞赏金计划\nIntel 计算栈为 Nova Lake 启用 LEO，推出 Intel 便携式 ISA “PISA”\nIntel NPU Linux 驱动为 Linux 7.4 添加命令队列优先级 ioctl\nIntel 逆转取消其开源字体项目的决定\nIntel Linux NPU 驱动现在才正式支持 Ubuntu 26.04 LTS\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nVoid Linux 维护者因 AI 政策争议弃养 100 多个软件包\nIntel 逆转取消其开源字体项目的决定\nBFS 文件系统将在 Linux 7.4 中被移除\nAMDGPU HDMI 2.1 默认启用补丁已为 Linux 7.4 准备就绪，支持 FreeSync、VRR 和 ALLM\nDebian 13.7 发布，包含许多错误修复\nLinux 修复了自 2023 年以来存在的静默用户空间数据丢失错误\nMold 高速链接器正用 Rust 重写，希望成为 Linux 上的默认链接器\nUbuntu 26.10 将 cp、mv 和 rm 迁移到 Rust Coreutils，实现 100% 过渡\n\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
   }
 }
