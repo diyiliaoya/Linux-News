@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>18年前的Linux内核漏洞可实现Root访问与容器逃逸 — Linux 中文速报</title>
+<title>Ubuntu 26.10 防止低内存杀死桌面会话 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">Linux Today</span>
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>18年前的Linux内核漏洞可实现Root访问与容器逃逸</h1>
+  <h1>Ubuntu 26.10 防止低内存杀死桌面会话</h1>
 
-  <div class="article-summary">一个存在了18年的Linux内核漏洞允许本地攻击者获取Root权限，并可能逃逸容器，构成严重安全风险。该漏洞影响广泛，需尽快修复。</div>
+  <div class="article-summary">Ubuntu 26.10 调整了内存不足时系统的进程终止策略，降低桌面进程的 OOM 分数，并阻止 systemd-oomd 杀死用户会话，从而在内存紧张时优先终止应用而非 GNOME Shell 等核心服务，避免用户被踢回登录界面。该版本将于 2026 年 10 月 15 日发布。</div>
 
-  <div class="article-body"><p>一个存在了18年的内核漏洞可能使本地攻击者获取Root权限，并可能逃逸容器，构成严重的安全风险。</p><p>文章《18年前的Linux内核漏洞可实现Root访问与容器逃逸》首次出现在Linux Today上。</p></div>
+  <div class="article-body"><p>Ubuntu 26.10 改变了系统在内存不足时选择终止哪些进程的方式，使得一个失控的浏览器标签页不太可能把你踢回登录界面。</p><p>当系统内存耗尽时，内核的 out-of-memory（OOM）杀手会介入，终止进程以回收一些内存。</p><p>问题在于，OOM 杀手并不总是杀死正确的对象。</p><p>默认情况下，许多应用和关键桌面服务共享相同的优先级分数。当 OOM 杀手选择目标时，它看的是它们的 OOM 分数，而不是“谁占用了最多内存”。</p><p>例如，Firefox 和 GNOME Shell 共享相同的优先级状态。如果内存压力增加，OOM 杀手可能会决定终止 GNOME Shell 来释放内存，而不是那个导致内存需求失控的进程。</p><p>我自己在 Ubuntu 虚拟机中经常遇到这种情况：如果我尝试做太多事情（打开太多 Firefox 标签页），OOM 不是干掉某个应用，而是杀死 GNOME Shell——但我宁愿一个标签页崩溃，也不愿整个桌面会话崩溃。</p><p>Ubuntu 26.10 做出了改变来缓解这个问题。</p><p>Jean Baptiste Lallement 表示，“目标只是尽可能保留桌面会话”，办法是在核心会话服务之前终止应用。为此，它降低了桌面进程的 OOM 分数，使它们不太可能被干掉。</p><p>Ubuntu 26.10 还阻止了 systemd-oomd 杀死用户会话，因为它不使用与内核相同的 OOM 优先级分数，而重要的桌面服务仍可能根据内存压力需求被干掉。</p><p>这些改变将改善 Ubuntu 在内存耗尽时的应对方式，但 Lallement 称其为“第一步”，“并不能让 Ubuntu 对 OOM 情况免疫”。针对桌面服务和应用的更细粒度 OOM 策略正在计划中。</p><p>Ubuntu 26.10 将于 2026 年 10 月 15 日星期四发布，但如果你计划测试定于 9 月 24 日星期四发布的测试版，这些改变将会包含在内——希望你不会注意到它们！</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/18-year-old-linux-kernel-vulnerability-enables-root-access-and-container-escape/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/ubuntu-memory-oomd-changes" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

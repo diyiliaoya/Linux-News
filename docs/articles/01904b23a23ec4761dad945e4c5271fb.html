@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>18年前的Linux内核漏洞可实现Root访问与容器逃逸 — Linux 中文速报</title>
+<title>Linux 7.3-rc4 发布前合并重要 x86 修复 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">Linux Today</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>18年前的Linux内核漏洞可实现Root访问与容器逃逸</h1>
+  <h1>Linux 7.3-rc4 发布前合并重要 x86 修复</h1>
 
-  <div class="article-summary">一个存在了18年的Linux内核漏洞允许本地攻击者获取Root权限，并可能逃逸容器，构成严重安全风险。该漏洞影响广泛，需尽快修复。</div>
+  <div class="article-summary">在 Linux 7.3-rc4 发布前，一批重要的 x86/x86_64 修复被合并，主要解决 Intel Granite Rapids 服务器微码导致的机器检查异常、Panther Lake 上 Intel FRED 导致游戏崩溃或冻结，以及 CONFIG_X86_NATIVE_CPU 在支持 APX 的 Intel 平台上引发的问题。这些修复已进入 Linux 7.3 Git，并计划回移植到稳定版内核。</div>
 
-  <div class="article-body"><p>一个存在了18年的内核漏洞可能使本地攻击者获取Root权限，并可能逃逸容器，构成严重的安全风险。</p><p>文章《18年前的Linux内核漏洞可实现Root访问与容器逃逸》首次出现在Linux Today上。</p></div>
+  <div class="article-body"><p>在即将于数小时内发布的 Linux 7.3-rc4 内核之前，一批重要的 x86/x86_64 修复已被合并，以解决若干遗留问题。</p><p>首先是一项针对 Intel Xeon 6“Granite Rapids”服务器的修复，旨在避免可能引发机器检查异常的问题微码。Intel Granite Rapids 微码版本 0x1000405 带来了后续版本所需的内部变更。因此，Linux 内核中现在加入了代码，当系统尚未更新到 0x1000405 时，阻止加载 0x1000405 或更高版本，无论是微码的早期加载还是后期加载。这一已合并到 Linux 7.3 Git 的变更也被标记为回移植到现有的 Linux 内核稳定版本。</p><p>在规范更新页面上，针对受影响微码版本可能引发 MCE 的情况，它被列为 GNR98。披露将内部变更归因于微码间通信接口。此外还有 GNR101，原因是 Granite Rapids 的 0x1000423 微码版本中最小运行时微码更新版本不正确。</p><p>x86 修复的一部分还包括解决 Intel Panther Lake 上的 Intel FRED 导致某些游戏在 Wine / Steam Play 下运行崩溃或冻结的问题。</p><p>还有一项针对 CONFIG_X86_NATIVE_CPU 的修复，该配置用于“-march=native”编译器优化的内核构建，会在即将推出的支持高级性能扩展（APX）的 Intel 平台上引发问题。Linux 内核尚未准备好利用 APX 中的扩展通用寄存器（EGPR）。但原生优化的内核构建会导致 APX 指令使用 R16 到 R31 EGPR，进而对 Intel 工程系统造成破坏。因此，Linux 内核现在在进行原生优化内核构建时，会明确阻止 APX/EGPR 的使用，直到内核准备好利用内核内的 APX 功能。</p><p>关于这些现已合并到 Linux 7.3-rc4 的 x86 修复的更多细节，可通过以下链接了解：</p><p>Linux 7.3-rc4 发布：更多由 LLM 捕获的修复，但并不可怕</p><p>最新补丁有望显著减少 Linux 内核构建时间</p><p>提议终于标准化 Linux 下的显存统计报告</p><p>Linux 随机选择空闲 CPU 核心在高核心数系统上显示适度优势</p><p>2026 年改善休眠速度的新 Linux 补丁</p><p>Linux 7.4 可能会看到内核构建速度提高约 36%，增量构建提高约 70%</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Void Linux 维护者因 AI 政策争议遗弃 100 多个软件包</p><p>Intel 逆转取消其开源字体项目的决定</p><p>BFS 文件系统将在 Linux 7.4 中被移除</p><p>Linux 修补了自 2023 年以来存在的静默用户空间数据丢失漏洞</p><p>Debian 13.7 发布，包含许多错误修复</p><p>Ubuntu 26.10 将 cp、mv 和 rm 迁移到 Rust Coreutils，实现 100% 过渡</p><p>Intel Linux NPU 驱动现在仅正式支持 Ubuntu 26.04 LTS</p><p>Google“难以维护”的 Binder C Linux 驱动将被移除，转而使用 Rust</p><p>同时享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/18-year-old-linux-kernel-vulnerability-enables-root-access-and-container-escape/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-rc4-x86-Fixes" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

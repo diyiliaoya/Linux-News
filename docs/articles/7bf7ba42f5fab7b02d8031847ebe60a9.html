@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>18年前的Linux内核漏洞可实现Root访问与容器逃逸 — Linux 中文速报</title>
+<title>Gzip 1.15 发布，修复了大量自诞生以来就存在的错误 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">Linux Today</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>18年前的Linux内核漏洞可实现Root访问与容器逃逸</h1>
+  <h1>Gzip 1.15 发布，修复了大量自诞生以来就存在的错误</h1>
 
-  <div class="article-summary">一个存在了18年的Linux内核漏洞允许本地攻击者获取Root权限，并可能逃逸容器，构成严重安全风险。该漏洞影响广泛，需尽快修复。</div>
+  <div class="article-summary">Gzip 1.15 正式发布，包含超过一百个新提交，主要修复了过去一年半积累的错误，其中许多是自 Gzip 诞生以来就存在的问题，如错误删除文件、未初始化内存使用、LZH 解压缓冲区溢出等。此外，新版本不再假设 C 语言环境，而是遵循环境变量指定的区域设置，并终止了对 FreeBSD 4.11、HP-UX 11.00、Minix 3.1.8 及部分 Windows 平台的支持。</div>
 
-  <div class="article-body"><p>一个存在了18年的内核漏洞可能使本地攻击者获取Root权限，并可能逃逸容器，构成严重的安全风险。</p><p>文章《18年前的Linux内核漏洞可实现Root访问与容器逃逸》首次出现在Linux Today上。</p></div>
+  <div class="article-body"><p>Gzip 1.15 于今日发布，接替 2025 年 4 月的版本。此版本修复了大量自 Gzip 诞生以来就存在的错误。</p><p>Gzip 1.15 包含超过一百个新提交，主要集中修复过去一年半收集的错误。其中一些自诞生以来就存在的错误终于得到解决，包括：如果另一个进程同时重命名了 Gzip 目标文件的祖先目录，Gzip 会错误删除文件；使用未初始化内存；解压 LZH 文件时的缓冲区溢出；可能的数据损坏等。</p><p>具体修复列表如下：</p><p>- 如果其他进程同时重命名了 gzip 目标文件的祖先目录，gzip 不再会错误删除文件。[自诞生以来就存在的错误]</p><p>- gzip -d 不再拒绝 PKZIP 签名、本地头和数据描述符。这些可能出现在格式良好的流式 zip 文件中。[自诞生以来就存在的错误]</p><p>- gzip 诊断信息现在会对包含异常字符的文件名加引号。[自诞生以来就存在的错误]</p><p>- 修复了在某些畸形输入上使用未初始化内存的问题。[自诞生以来就存在的错误]</p><p>- 修复了在解压 .Z 文件后解压 .lzh 文件时的缓冲区溢出。[自诞生以来就存在的错误]</p><p>- 解压 .lzh 文件时，如果内部位缓冲区未正确清除，输出不再损坏。[自诞生以来就存在的错误]</p><p>- 在解压一个 .lzh 文件后再解压另一个 .lzh 文件时，输出不再因前一个文件的解码表而损坏。[自诞生以来就存在的错误]</p><p>- gzip --synchronous 不再无法在具有 O_PATH 的平台（如 GNU/Linux）上同步不可读的父目录，也不再无法在具有 O_SEARCH 但没有 O_PATH 的平台（如 FreeBSD）上同步任何父目录。[gzip-1.7 引入的错误]</p><p>- 在缺少 mktemp 的老式或受限平台上，gzexe、zdiff 和 znew 在创建临时文件时不再存在竞争条件。[自诞生以来就存在的错误]</p><p>Gzip 1.15 也不再仅仅假设使用 C 语言环境，而是遵循环境变量指定的区域设置，这会影响文件名引用等行为。Gzip 1.15 还终止了对 FreeBSD 4.11、HP-UX 11.00、Minix 3.1.8 以及通过 MinGW 但不带 UCRT 的 Microsoft Windows 8.1 的支持。</p><p>Gzip 1.15 可满足您的压缩/解压需求。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/18-year-old-linux-kernel-vulnerability-enables-root-access-and-container-escape/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Gzip-1.15-Released" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
