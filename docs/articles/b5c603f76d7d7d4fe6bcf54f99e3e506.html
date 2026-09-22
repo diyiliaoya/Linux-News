@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Valve 悄然开源其 Android 兼容层 — Linux 中文速报</title>
+<title>Ubuntu 云镜像再次意外移除软件包 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Valve 悄然开源其 Android 兼容层</h1>
+  <h1>Ubuntu 云镜像再次意外移除软件包</h1>
 
-  <div class="article-summary">Valve 悄然开源了为 Steam Frame 打造的 Android 兼容层项目 Lepton，该项目基于 Waydroid、LineageOS 和 AOSP 等开源项目构建，旨在帮助开发者将 VR 类 Android 游戏带到 Steam Frame。Lepton 采用双许可证模式，兼容工具部分使用 MIT 许可证，Android 根文件系统部分则因包含多个外部项目代码而采用 GPL 等许可证。该项目并非通用 Android on Linux 方案，而是经过精简，每个游戏运行在独立容器中。</div>
+  <div class="article-summary">Ubuntu 26.04 LTS 最小云镜像再次意外丢失软件包，这次是用于以十六进制查看文件的 CLI 工具 xxd。这是继 8 月 curl 被误删后的第二起同类事件，原因均为 Canonical 移除 systemd 的 random-seed 工具后调整依赖链所致。Canonical 已恢复 26.04 镜像中的 xxd 和 curl，但已在 26.10 最小镜像中移除 xxd。无头服务器环境使此类缺失更难被发现。</div>
 
-  <div class="article-body"><p>Valve 悄然开源其 Android 兼容层</p><p>Lepton 项目面向希望将 VR 类 Android 游戏带到 Steam Frame 的游戏开发者。</p><p>是的，Valve 并没有为此发布正式公告。我是通过 [来源] 得知这一消息的，他们昨天简要报道了此事。这家游戏巨头已将其为最近发布的 [设备] 构建的 Android 兼容层开源。</p><p>Lepton 让用户能够在 Linux 上玩 Android 独占游戏，方式是在一个 [容器] 内启动这些游戏。Valve 表示，大多数用户不会直接与 Lepton 交互，因为 Steam 客户端本身会处理这项工作。</p><p>该项目面向希望将 VR 类 Android 游戏带到 Steam Frame 的游戏开发者，不过代码仓库也指出其他使用场景也是可能的。</p><p>两个许可证，一个代码库</p><p>该兼容层并非以单一许可证发布，因为仓库的 [许可证] 文件将项目分为两部分，各自独立管理。</p><p>兼容工具本身——即 Steam 调用以在容器内实际启动游戏的部分——以 [MIT 许可证] 发布。而在该容器内构建并运行的 Android 根文件系统则是另一回事。由于它包含了来自多个外部项目的代码，因此带有 [GPL 等许可证]。</p><p>Lepton 的 Android 镜像并非从零构建。它依赖若干现有的开源项目，每个项目负责解决不同的问题。</p><p>[Waydroid] 承担了大部分繁重工作。它已经使用命名空间在 Linux 容器内运行完整的 Android 系统，Lepton 在构建过程中直接借用了它的补丁和组件。</p><p>[LineageOS] 提供了 Waydroid（进而也是 Lepton）所定制化的实际 Android 系统镜像。Waydroid 的运行时附带一个基于 LineageOS 的最小化镜像。</p><p>[Android 开源项目（AOSP）] 位于这一切的底层。它是 LineageOS、Waydroid 以及进而 Lepton 所构建的基础源代码树，其许可证条款贯穿整个技术栈。</p><p>[另一个项目] 在同一许可证文件中与其他项目一起获得了较小的署名，不过 Valve 并未详细说明其具体贡献。你可以翻阅其仓库来做出合理推测。</p><p>该项目并不试图成为在 Linux 上运行 Android 的通用方式。它经过了有意精简。</p><p>Lepton 内的每个应用都以同一用户身份运行，彼此之间没有隔离墙。相反，每个游戏都有自己独立的容器，启动时 Lepton 会关闭不需要的 Android 服务。</p><p>还有比我讨论的更多内容，如果你想了解更多，请翻阅该仓库。</p><p>[值得注意的是]，虽然 Steam Frame 尚未开始发货，但其软件栈的部分内容已经在开源。Lepton 加入了 [FEX-Emu]——Valve 为同一头显所依赖的 x86 到 ARM 翻译层——成为开发者现在可以阅读、检查并基于其构建的软件栈组件。</p><p>各种兼容层</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的书呆子。</p><p>GrapheneOS 对 Google 在 Pixel 上日益扩大的先发优势感到不满</p><p>Bonjour！Firefox 智能窗口用户现在可以使用法国 AI 了</p><p>著名的 PS5 Linux 项目负责人因过早向索尼报告漏洞而辞职</p><p>准时！GNOME 51 带来了一系列你不应错过的改进</p><p>Ubuntu 的 Rust 化迎来新里程碑！Coreutils 迁移完成</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周通讯，学习实用的 Linux 技巧，发现应用程序，探索新发行版，并随时了解 Linux 世界的最新动态</p><p>太好了！你已成功注册。</p><p>欢迎回来！你已成功</p></div>
+  <div class="article-body"><p>Ubuntu 云镜像再次意外移除软件包 - OMG! Ubuntu</p><p>又一个软件包从 Ubuntu 26.04 LTS 的最小云镜像中消失了，这次是 xxd，一个用于以十六进制查看文件的 CLI 工具。</p><p>这是继我 8 月报道的 curl 意外消失之后的第二次此类事件。</p><p>两个软件包因相同原因消失。</p><p>当 Canonical 移除 systemd 的 random-seed 工具（该工具用于在启动期间生成“随机性”）时，它重新调整了镜像“seed”中的依赖链。原本被它拉入的软件包不再被包含。</p><p>xxd 并未出现在最初的镜像集中，但仍可从 Ubuntu 的归档中安装。</p><p>Canonical 此后已将 xxd（以及 curl）恢复到 26.04 的最小云镜像中。虽然 xxd 软件包对操作系统的运行远非关键，但 Canonical 表示“不想让那些已经习惯依赖它存在的人感到退步”。</p><p>对 xxd 而言，这仅仅是缓刑。Canonical 此后已从 26.10 最小镜像中移除 xxd（并非从归档中移除；它仍可使用 apt 安装）。</p><p>与桌面环境不同——在桌面上缺失的软件包很容易被发现——无头服务器设置使得判断某个工具是否存在更加困难，在这里更是如此，因为它并非操作系统关键组件或常见用例。</p><p>但尽管这件事溜了过去可能令人不安，知道就连 Ubuntu 开发者也会被纠缠的依赖链意外移除东西所坑，让我感到一种释然。</p><p>这些镜像通常用于安全和软件包安装受到严格管控的场合。并非每个人都能直接安装，即使大多数会使用它的人可以。这其实是一个更广泛的问题。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/valve-lepton/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/ubuntu-server-xxd-missing" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

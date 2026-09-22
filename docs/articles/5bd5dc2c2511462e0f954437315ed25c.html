@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Valve 悄然开源其 Android 兼容层 — Linux 中文速报</title>
+<title>Linux Mint 22.3 获得由 Linux 内核 7.0 驱动的新 HWE ISO — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">Linux Today</span>
   </div>
 
-  <h1>Valve 悄然开源其 Android 兼容层</h1>
+  <h1>Linux Mint 22.3 获得由 Linux 内核 7.0 驱动的新 HWE ISO</h1>
 
-  <div class="article-summary">Valve 悄然开源了为 Steam Frame 打造的 Android 兼容层项目 Lepton，该项目基于 Waydroid、LineageOS 和 AOSP 等开源项目构建，旨在帮助开发者将 VR 类 Android 游戏带到 Steam Frame。Lepton 采用双许可证模式，兼容工具部分使用 MIT 许可证，Android 根文件系统部分则因包含多个外部项目代码而采用 GPL 等许可证。该项目并非通用 Android on Linux 方案，而是经过精简，每个游戏运行在独立容器中。</div>
+  <div class="article-summary">Linux Mint 22.3 发布了由 Linux 内核 7.0 驱动的新 HWE 安装镜像，为较新的系统和设备带来更新的硬件支持。</div>
 
-  <div class="article-body"><p>Valve 悄然开源其 Android 兼容层</p><p>Lepton 项目面向希望将 VR 类 Android 游戏带到 Steam Frame 的游戏开发者。</p><p>是的，Valve 并没有为此发布正式公告。我是通过 [来源] 得知这一消息的，他们昨天简要报道了此事。这家游戏巨头已将其为最近发布的 [设备] 构建的 Android 兼容层开源。</p><p>Lepton 让用户能够在 Linux 上玩 Android 独占游戏，方式是在一个 [容器] 内启动这些游戏。Valve 表示，大多数用户不会直接与 Lepton 交互，因为 Steam 客户端本身会处理这项工作。</p><p>该项目面向希望将 VR 类 Android 游戏带到 Steam Frame 的游戏开发者，不过代码仓库也指出其他使用场景也是可能的。</p><p>两个许可证，一个代码库</p><p>该兼容层并非以单一许可证发布，因为仓库的 [许可证] 文件将项目分为两部分，各自独立管理。</p><p>兼容工具本身——即 Steam 调用以在容器内实际启动游戏的部分——以 [MIT 许可证] 发布。而在该容器内构建并运行的 Android 根文件系统则是另一回事。由于它包含了来自多个外部项目的代码，因此带有 [GPL 等许可证]。</p><p>Lepton 的 Android 镜像并非从零构建。它依赖若干现有的开源项目，每个项目负责解决不同的问题。</p><p>[Waydroid] 承担了大部分繁重工作。它已经使用命名空间在 Linux 容器内运行完整的 Android 系统，Lepton 在构建过程中直接借用了它的补丁和组件。</p><p>[LineageOS] 提供了 Waydroid（进而也是 Lepton）所定制化的实际 Android 系统镜像。Waydroid 的运行时附带一个基于 LineageOS 的最小化镜像。</p><p>[Android 开源项目（AOSP）] 位于这一切的底层。它是 LineageOS、Waydroid 以及进而 Lepton 所构建的基础源代码树，其许可证条款贯穿整个技术栈。</p><p>[另一个项目] 在同一许可证文件中与其他项目一起获得了较小的署名，不过 Valve 并未详细说明其具体贡献。你可以翻阅其仓库来做出合理推测。</p><p>该项目并不试图成为在 Linux 上运行 Android 的通用方式。它经过了有意精简。</p><p>Lepton 内的每个应用都以同一用户身份运行，彼此之间没有隔离墙。相反，每个游戏都有自己独立的容器，启动时 Lepton 会关闭不需要的 Android 服务。</p><p>还有比我讨论的更多内容，如果你想了解更多，请翻阅该仓库。</p><p>[值得注意的是]，虽然 Steam Frame 尚未开始发货，但其软件栈的部分内容已经在开源。Lepton 加入了 [FEX-Emu]——Valve 为同一头显所依赖的 x86 到 ARM 翻译层——成为开发者现在可以阅读、检查并基于其构建的软件栈组件。</p><p>各种兼容层</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的书呆子。</p><p>GrapheneOS 对 Google 在 Pixel 上日益扩大的先发优势感到不满</p><p>Bonjour！Firefox 智能窗口用户现在可以使用法国 AI 了</p><p>著名的 PS5 Linux 项目负责人因过早向索尼报告漏洞而辞职</p><p>准时！GNOME 51 带来了一系列你不应错过的改进</p><p>Ubuntu 的 Rust 化迎来新里程碑！Coreutils 迁移完成</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周通讯，学习实用的 Linux 技巧，发现应用程序，探索新发行版，并随时了解 Linux 世界的最新动态</p><p>太好了！你已成功注册。</p><p>欢迎回来！你已成功</p></div>
+  <div class="article-body"><p>Linux Mint 22.3 发布了由内核 7.0 驱动的新 HWE 安装镜像，为较新的系统和设备带来更新的硬件支持。</p><p>文章《Linux Mint 22.3 获得由 Linux 内核 7.0 驱动的新 HWE ISO》首发于 Linux Today。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/valve-lepton/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.linuxtoday.com/blog/linux-mint-22-3-gets-new-hwe-isos-powered-by-linux-kernel-7-0/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

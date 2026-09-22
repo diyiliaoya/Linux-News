@@ -11922,5 +11922,192 @@
     "title_zh": "AI辅助的Starling桌面引入3D视图，包含“可漫步的3D滨水城市”",
     "summary_zh": "Starling是一款使用Swift语言编写、由AI辅助开发的新型Linux桌面，自带Wayland合成器。最新发布的Starling 0.5版本新增了可选的3D桌面模式，呈现一个可漫步的3D滨水城市，包含移动的船只、交通、云朵、钟楼和日落光照等元素。桌面应用仍以真实窗口形式存在，支持Alt+Tab切换和实时预览。此外，该版本还通过WSL2支持Windows系统。",
     "fulltext_zh": "AI辅助的Starling桌面引入3D视图，包含“可漫步的3D滨水城市”\n\n2026年9月20日 上午06:49 EDT\n\n几个月前你可能还记得Starling，它是用自有的Wayland合成器编写的新Linux桌面，使用Swift编程语言，并且大部分是通过Claude Code由AI编写的。今天发布的Starling 0.5为这个桌面带来了可选的3D桌面模式。\n\nStarling的可选3D桌面模式在今天的发布公告中自我描述为：\n\n“Starling保留了熟悉的2D桌面，并增加了一个可漫步的3D滨水城市。打开控制面板并选择3D桌面即可切换视角。这座城市包括移动的船只、交通和云朵、一座钟楼、日落光照，以及奶油色、青铜色和鼠尾草色的窗口边框。\n\nChrome、视频播放器、文件、终端和其他桌面应用仍然是真实的窗口。使用Alt + Tab在它们之间切换，或从侧栏将实时预览带到前面。双击窗口的外部标题栏可将视图居中到该窗口。弹出窗口在场景中跟随其父窗口。\n\n每个显示器都有自己的场景和相机。在一个显示器上行走、转身或指针驱动的视差不会改变另一个显示器的视图。场景渲染共享后端，同时保持每个输出的相机和渲染目标独立。”\n\nClaude Fable 5.1参与了这个新的Starling版本。\n\nStarling的这个3D桌面选项让我有点想起Sun Microsystems的Project Looking Glass，Phoronix在20年前曾报道过：看看Looking Glass的截图，那真是一个疯狂的怀旧之作。\n\nStarling 0.5现在还通过WSL2支持Windows，使用Ubuntu 26.04和RDP显示模式。\n\n有兴趣的人可以通过以下内容了解更多关于Starling 0.5桌面版本及其可选3D城市模式的信息：\n\nLinux Mint推出Xepub作为新的EPUB阅读器，以及Clockenstein日历应用\nCOSMIC Epoch 1.8为这个Rust桌面提供最新修复和 minor 改进\nCOSMIC Epoch 1.7发布：不再缓慢浏览网络文件系统\nCOSMIC Epoch 1.6发布，带来按应用音量控制、远程桌面准备\nOmarchy 4.0 Linux发行版发布，桌面外壳现通过Quickshell实现\nFlatpak 1.19发布，包含九个安全修复\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动和其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nVoid Linux维护者因AI政策争议遗弃100多个软件包\nIntel逆转取消其开源字体项目的决定\nBFS文件系统将从Linux 7.4中移除\nLinux修复了自2023年以来存在的静默用户空间数据丢失漏洞\nDebian 13.7发布，包含许多错误修复\nUbuntu 26.10将cp、mv和rm迁移到Rust Coreutils，实现100%转换\nIntel Linux NPU驱动现在才正式支持Ubuntu 26.04 LTS\nGoogle的“维护痛苦”的Binder C Linux驱动被移除，转而使用Rust\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "b5c603f76d7d7d4fe6bcf54f99e3e506": {
+    "id": "b5c603f76d7d7d4fe6bcf54f99e3e506",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/ubuntu-server-xxd-missing",
+    "title_en": "Ubuntu cloud images dropped another package by accident",
+    "summary_en": "Another package went missing from Ubuntu 26.04 LTS&#8217;s minimal cloud images, this time xxd , a CLI tool for viewing files as hexadecimals. It&#8217;s the second time this has happened, following the accidental removal of curl I reported on in August. Both packages vanished for the same reason. When Canonical dropped the pollinate tool, which was used to generate &#8216;randomness&#8217; during boot, it rejigged the dependency chain in the image &#8216;seed&#8217;. Packages that got pulled in",
+    "pub_date": "Tue, 22 Sep 2026 01:53:41 +0000",
+    "title_zh": "Ubuntu 云镜像再次意外移除软件包",
+    "summary_zh": "Ubuntu 26.04 LTS 最小云镜像再次意外丢失软件包，这次是用于以十六进制查看文件的 CLI 工具 xxd。这是继 8 月 curl 被误删后的第二起同类事件，原因均为 Canonical 移除 systemd 的 random-seed 工具后调整依赖链所致。Canonical 已恢复 26.04 镜像中的 xxd 和 curl，但已在 26.10 最小镜像中移除 xxd。无头服务器环境使此类缺失更难被发现。",
+    "fulltext_zh": "Ubuntu 云镜像再次意外移除软件包 - OMG! Ubuntu\n\n又一个软件包从 Ubuntu 26.04 LTS 的最小云镜像中消失了，这次是 xxd，一个用于以十六进制查看文件的 CLI 工具。\n\n这是继我 8 月报道的 curl 意外消失之后的第二次此类事件。\n\n两个软件包因相同原因消失。\n\n当 Canonical 移除 systemd 的 random-seed 工具（该工具用于在启动期间生成“随机性”）时，它重新调整了镜像“seed”中的依赖链。原本被它拉入的软件包不再被包含。\n\nxxd 并未出现在最初的镜像集中，但仍可从 Ubuntu 的归档中安装。\n\nCanonical 此后已将 xxd（以及 curl）恢复到 26.04 的最小云镜像中。虽然 xxd 软件包对操作系统的运行远非关键，但 Canonical 表示“不想让那些已经习惯依赖它存在的人感到退步”。\n\n对 xxd 而言，这仅仅是缓刑。Canonical 此后已从 26.10 最小镜像中移除 xxd（并非从归档中移除；它仍可使用 apt 安装）。\n\n与桌面环境不同——在桌面上缺失的软件包很容易被发现——无头服务器设置使得判断某个工具是否存在更加困难，在这里更是如此，因为它并非操作系统关键组件或常见用例。\n\n但尽管这件事溜了过去可能令人不安，知道就连 Ubuntu 开发者也会被纠缠的依赖链意外移除东西所坑，让我感到一种释然。\n\n这些镜像通常用于安全和软件包安装受到严格管控的场合。并非每个人都能直接安装，即使大多数会使用它的人可以。这其实是一个更广泛的问题。"
+  },
+  "e2db93ce45b0c25213069cbc4a1c4d22": {
+    "id": "e2db93ce45b0c25213069cbc4a1c4d22",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/wallpapi-wallpaper-gnome-extension",
+    "title_en": "Wallpapi gives you a cooler way to change wallpaper on GNOME",
+    "summary_en": "Wallpapi is an Omarchy-inspired wallpaper switcher for GNOME desktops that offers a slicker. When installed, it lets you &#8220;browse a folder of wallpapers as a full-screen carousel of parallelogram cards&#8221;. As you page through available options, the focused image is previewed as your wallpaper in the background, so you can see it larger, which is pretty cool. When you spot the drape you want, you hit Enter to set it as the desktop background. Choices are scheme-aware. If a light or dark ",
+    "pub_date": "Tue, 22 Sep 2026 00:28:08 +0000",
+    "title_zh": "Wallpapi 为 GNOME 带来更酷的壁纸更换方式",
+    "summary_zh": "Wallpapi 是一款受 Omarchy 启发的 GNOME 壁纸切换器，以全屏平行四边形卡片轮播方式浏览壁纸文件夹，聚焦的图片会实时预览为桌面背景，并支持根据系统深浅色模式自动选择对应版本。该扩展兼容 GNOME 50（Ubuntu 26.04 LTS），功能精简，无自动切换或模糊特效。",
+    "fulltext_zh": "Wallpapi 为 GNOME 带来更酷的壁纸更换方式 - OMG! Ubuntu\n\nWallpapi 是一款受 Omarchy 启发的 GNOME 桌面壁纸切换器，提供了更流畅的体验。\n\n安装后，它允许你\n“以全屏平行四边形卡片轮播的方式浏览壁纸文件夹”\n\n当你翻看可用选项时，聚焦的图片会在背景中预览为你的壁纸，这样你可以更大范围地看到它，非常酷。\n\n当你找到想要的壁纸时，按下\n即可将其设置为桌面背景。\n\nUbuntu 26.04 上的背景选择器实际效果\n\n选择是感知配色方案的。如果有浅色或深色变体可用，\n会根据你的系统深色模式偏好设置正确版本的图片。\n\n缓存也被用来让图片预览几乎即时显示。然而，我发现该扩展在充满高分辨率图片的文件夹中加载剪切卡片时很慢。这可能是一个 bug，也可能是“我的设备太菜”的问题。\n\nWallpapi 保持精简。你可以设置一个主背景图片文件夹作为来源，并选择是否也应包含其中任何子文件夹的图片。没有自动更换设置、模糊效果或其他任何东西。\n\n聚焦卡片（显示更大以表示聚焦）和相邻卡片之间没有动画，这确实感觉有点突兀。背景预览在翻页时确实使用了淡入淡出过渡。这有助于吸引视线焦点。\n\n我觉得这是一个有趣且新颖的做法。壁纸轮换器、切换器、获取器很常见，但这个做了不同的事情。我希望它能提供一个选项，让图片在“永无止境的轮播”中循环，而不是在第一张/最后一张图片处“硬停止”。\n\n准备好迎接争议吧：这个扩展声称其灵感来自\n中的壁纸选择器。对于没有静脉注射 Linux 社交媒体戏剧的人来说，这是一个越来越受欢迎的 Linux 发行版，最近获得了大量资金。\n\n其创始人的政治观点\n与\n无关，也不是 DHH 制作的。虽然风格新颖，但也并非该发行版独有。从视觉上看，我的第一反应是它借鉴了\n上使用的\n，比如\n\n如果你想尝试，你可以；\n适用于 GNOME 50（Ubuntu 26.04 LTS）。你可以从安装其他扩展的同一地方安装它……\n\n长期读者可能还记得\n很久以前。你可以在原版 Ubuntu 安装上运行它，将其变成面向开发者的设置。\n的作者后来为 Arch 重新改造了它，这成为了这个发行版的基础。"
+  },
+  "da1268680fa87358b0df85780e4982f8": {
+    "id": "da1268680fa87358b0df85780e4982f8",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/sublime-text-python-3-14-update",
+    "title_en": "Sublime Text gains new C# highlighter, file icon themes",
+    "summary_en": "A new version of Sublime Text is out – the first major update to the cross-platform (and closed-source) text editor since May 2025. Sublime Text v4213 makes Python 3.14 the default (replacing v3.8). The editor still ships Python 3.3 – ancient as it is – but disabled by default. It will be removed in a future update, but sticks around a little longer incase of plugin compatibility issues. New features in this update includes a rewritten C# syntax highlighter, alongside more general, if unspecifie",
+    "pub_date": "Mon, 21 Sep 2026 16:51:38 +0000",
+    "title_zh": "Sublime Text 获得新的 C# 高亮器和文件图标主题",
+    "summary_zh": "Sublime Text 发布 v4213 版本，这是自 2025 年 5 月以来的首个重大更新。新版本默认使用 Python 3.14，重写了 C# 语法高亮器，新增文件图标主题支持，并带来 Git reftables 支持、新的 io_workers 设置以及大量 Linux 平台修复。",
+    "fulltext_zh": "Sublime Text 获得新的 C# 高亮器和文件图标主题 - OMG! Ubuntu\n\n已发布——这是这款跨平台（且闭源）文本编辑器自 2025 年 5 月以来的首个重大更新。\n\nSublime Text v4213 将 Python 3.14 设为默认版本（取代 v3.8）。该编辑器仍然附带 Python 3.3——尽管它非常古老——但默认处于禁用状态。它将在未来的更新中被移除，但为了应对插件兼容性问题，还会再保留一段时间。\n\n本次更新的新功能包括重写的 C# 语法高亮器，以及对语法高亮的更普遍（但未具体说明）的“改进”。\n\n还引入了对文件图标主题的支持。这些主题让用户可以自定义侧边栏中文件旁边显示的小图标，通过一个 .json 文件定义，该文件将文件扩展名映射到包文件夹内 PNG 文件的名称。\n\n在 Ubuntu 上运行的 Sublime Text v4213\n\n其他变化包括一个新的命令，用于启动外部终端模拟器；作用域选择器可以使用某些语法来匹配子作用域；如果文件在编辑器之外被更改，该文件的撤销/重做历史将不再恢复。\n\n据说保存大量文件的速度更快，git status 也更快。标签页滚动开启时拖动标签页的问题得到了改进，模糊匹配在某些情况下排序更好。使用特定命令连接行时，括号闭合也更干净。\n\n支持 Git reftables\n使用比例字体时标尺位置更好\n新增“io_workers”设置\n为所有平台修复了 Sublime Text 的功能。\n\n本次更新解决的问题包括：关闭项目在某些情况下可能损坏工作区文件、在文件中查找不搜索以点开头的文件夹、点击内联差异外部时光标消失，以及侧边栏的各种小问题。\n\n一系列 Linux 专属修复，包括以下内容：\n\n模态对话框不再阻塞所有打开的窗口\n从某处拖动文本后，拖动状态不再卡住\n选择多个工作表时，选择剪贴板正确设置\n关闭窗口后修饰键不再保持按下状态\nKDE 的“替代字符”输入法可以正常工作\nWayland 下拖动标签页不再触发意外的空投\n\n请参阅发布公告。\n\n在 Ubuntu 上安装 Sublime Text 的方法\n\n从其官方网站下载，该网站提供 Windows、macOS 和 Linux 的安装程序——包括 DEB 包，以及可选的 APT 仓库。\n\nLinux 用户还可以在 Snap Store 上获取 Sublime Text，尽管这是由社区维护的非官方包。\n\nsudo snap install sublime-text --classic\n\nSublime Text 是一款专有文本编辑器，理论上需要付费许可证才能使用。然而，它可以在没有实质性限制的情况下免费使用。那些喜爱或依赖它的人可能想购买许可证密钥，以支持它的持续存在。\n\n为什么要为文本编辑器付费呢？许多（优秀的）免费开源文本编辑器确实存在，就像观点一样，每个人都认为自己的是“正确”的。\n\n但选择是双向的。人们喜欢他们熟悉的东西，许多跨操作系统和设备工作的开发者喜欢能够使用他们偏好的编辑器。\n\nSublime Text 并不时髦，也缺乏 AI 集成，但对忠实用户来说，它快速且熟悉。"
+  },
+  "83a27b9de35f6a1931311a06f02c8dc5": {
+    "id": "83a27b9de35f6a1931311a06f02c8dc5",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/gnome-screenshot-sound-change",
+    "title_en": "GNOME saves blushes by replacing ‘inappropriate’ screenshot sound",
+    "summary_en": "Say goodbye to people thinking you&#8217;re a creep next time you take a desktop screenshot in a public space, as GNOME 51 has changed the sound effect that plays when you do. For a while now, when you screen grab your desktop or an app window, the accompanying sound effect is a camera shutter, like the one you hear when you take a photo on a smartphone. Cute in the privacy of your own home, but less cute in a public setting like an office or café. The sound is the issue: how are people to know ",
+    "pub_date": "Mon, 21 Sep 2026 13:39:03 +0000",
+    "title_zh": "GNOME 替换“不恰当”的截图音效，避免尴尬",
+    "summary_zh": "GNOME 更换了截图时的相机快门音效，此前该音效在公共场合容易让人误以为是在偷拍，引发尴尬。新音效随 GNOME 51 提供，不再依赖 FreeDesktop 声音主题，同时更新了音量调节和设备插拔提示音。",
+    "fulltext_zh": "下次在公共场合截取桌面截图时，再也不用担心别人以为你是偷拍狂了，因为 GNOME 已经更换了截图时播放的音效。\n\n一段时间以来，当你截取桌面或应用窗口时，伴随的音效是相机快门声，就像智能手机拍照时听到的那样。在自己家里私下使用还算可爱，但在办公室或咖啡馆等公共场合就不那么可爱了。\n\n问题就出在这个声音上：别人怎么知道你在截取桌面截图，而不是在偷拍照片？\n\n为什么？因为那声音听起来相当令人毛骨悚然。\n\n2024 年提交的一份 bug 报告揭示了问题：一位在公共咖啡店工作的 UI/UX 设计师，坐在一桌女性后面，没有意识到笔记本电脑音量未静音。他做了设计师常做的事——开始截图。\n\n这位 bug 报告者面红耳赤地描述，截图声音如果脱离语境听，是“绝对不恰当的”，并警告说这可能给其他 Linux 桌面用户“带来极其尴尬甚至更糟的情况”。\n\n而且他不是唯一一个因为截图声音意外过大而默默想钻地缝的人。\n\nbug 报告的其他回复包括：“+1 支持‘这种默认行为让我在公共场合很尴尬’”，另一位则坦白：“是的，我也遇到过。”\n\n我也有过这种经历；那“相机快门”声让我面红耳赤、手心冒汗，希望周围的人能忘记他们以为听到的声音，而不是集体伸长脖子朝我这边瞪眼咂嘴。\n\n这个声音——点击下方播放可以听到——很有辨识度。如果你独自坐着，别人怎么知道你在截图而不是在偷拍：\n\n许多 Linux 桌面使用的 XDG 相机快门音效\n\n这不是 GNOME 的 bug，但他们还是修复了\n\n问题是，这本来不怪 GNOME。\n\nGNOME 并不提供这个音效。它来自 FreeDesktop 声音主题，许多 Linux 桌面和发行版（包括 Ubuntu 和 Fedora）都附带这个主题。\n\n截图时播放声音作为可听提示（无障碍功能）是有用的，但没有理由它必须听起来像真正的相机。\n\n所以，在测试 Ubuntu 26.10 时听到不同的声音，我很高兴。\n\n我把新的“屏幕捕获”音效嵌入在下面。它短促而快速，你可能想多回放几次。在我听来，它有点像旧扫描仪重置的声音——绝对不像相机：\n\nGNOME 新的屏幕捕获音效\n\nUbuntu 用户继续包含该声音主题，该主题继续链接到 FreeDesktop 声音集中的声音，用于某些效果，包括截图。\n\n但 GNOME 51 现在忽略这一点；它作为 GNOME Shell 本身的一部分附带了一个小型声音包，包括你在上面听到的新“屏幕捕获”效果。\n\n其他新声音——Ubuntu 可能会在最终发布前覆盖它们——包括调节音量时的新提示音，以及插入或拔出设备时的新钟声。\n\n启动、铃声和警报仍使用原有声音。\n\n虽然这是一个小改动，但做起来也很简单。它应该能帮助那些把笔记本电脑带到咖啡馆、共享办公空间、讲座办公室、公共场所的人避免尴尬——甚至当你的家人在房间里，你坐在沙发上时也一样。\n\n毕竟，截屏以引起别人对屏幕上某物的注意，不应该意味着要引起别人对自己的注意，尤其是当那个声音……"
+  },
+  "e53d0c56c569ca48cf22b6d34b4a4910": {
+    "id": "e53d0c56c569ca48cf22b6d34b4a4910",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/portainer-community-edition-freeze/",
+    "title_en": "Portainer Cuts the Cord Between Its Free and Paid Editions",
+    "summary_en": "The free CE build is frozen on 2.x, while all new development goes into a Kubernetes-first, closed-source implementation.",
+    "pub_date": "Mon, 21 Sep 2026 14:26:58 GMT",
+    "title_zh": "Portainer 切断免费版与付费版之间的纽带",
+    "summary_zh": "Portainer 宣布其免费社区版（CE）将冻结在 2.x 系列，基于 2.45 LTS 仅提供安全修复和部分功能回移。所有新开发将投入以 Kubernetes 为核心的闭源 3.x 版本，采用全新架构和五个独立控制台。现有 Docker 用户不受影响，但若想获得新功能且保持免费开源，则没有可行途径，只能转向节点数受限的闭源商业版。文章还推荐了 Dockge 和 Arcane 作为替代方案。",
+    "fulltext_zh": "Portainer 切断免费版与付费版之间的纽带\n\n免费社区版（CE）被冻结在 2.x，所有新开发都投入到一个 Kubernetes 优先的闭源实现中。\n\nPortainer 开源已有十年，如今这一历程遇到了瓶颈。\n\nPortainer 3.0——即将围绕 Kubernetes 从底层重建的平台——将不会成为 CE 的基础。\n\n这一消息由公司 CEO 宣布，他表示 CE 将继续基于 Portainer 2.45 LTS，即 2.x 系列的最后一个版本。而此后的一切，如新控制台、新架构等，都不会移植到 CE。\n\n相反，CE 将获得安全修复、错误修复以及 3.x 功能的后向移植，但仅限于存在匹配的 Docker API 可供对接的情况。功能对等无法保证，因为 3.x 中的一些功能依赖于 Kubernetes。\n\n这是一个维护问题，而非战略转向。每次团队想要添加策略或 API 能力时，都必须分别构建三次该功能，分别为 Kubernetes、Swarm 以及 Docker 和 Podman 各一次。\n\nPortainer 3.0 完全放弃了这种模式。取而代之的是五个独立的控制台，每个都围绕特定任务构建，而非一个界面处理所有事情。\n\n他接着表示，CE 根本不适合这种新方式，Portainer 3.x 的策略模型、操作 API 和面向企业的控制台从一开始就假定用户是企业用户，“将其作为 CE 发布将歪曲它的本质和面向对象”。\n\n这对你意味着什么\n\n如果你已经在运行 Docker，今天没有任何变化。2.x 继续如常工作并持续获得安全补丁；保持现状是完全受支持的选择。\n\n但如果转向 3.x，Docker、Swarm 和 Podman 环境仍可作为原生连接使用。对于希望在 Kubernetes 底层上继续使用 Docker 风格工具的用户，提供了兼容层，允许 Docker Compose 及类似工具在 Kubernetes 集群上部署和管理应用。\n\n无论 Portainer 接下来为可观测性、GitOps 或其策略工具构建什么，都会首先面向 Kubernetes 环境，而原生 Docker 设置在界面中位置更低，且无法获得这些功能。\n\n如果你想在不迁移到 Kubernetes 的情况下获得新功能，实际上没有办法免费获得并保持开源。唯一免费进入 3.x 的途径是通过 Portainer 现有的节点数受限的闭源商业版许可证，而非 CE 构建。\n\n如果你想切换，有哪些替代方案\n\n如果永远停留在 2.x 并不吸引你，以下是目前实际在开发中、可以考虑的方案：\n\nDockge，一个基于 Rust 的构建和部署平台，旨在管理多服务器工作负载。它没有人为的服务器数量限制，如果你习惯更偏向部署/自动化的方式，会特别感兴趣。\n\nArcane，一个使用 Go/SvelteKit 的 Docker 管理平台，具有现代 UI。它采用 BSD-3-Clause 许可证，提供容器、Compose、镜像、卷、网络、远程主机和 Swarm 管理等功能。\n\n两者都不是每个 Portainer 工作流的直接替代品，尤其是如果你严重依赖 Portainer 更广泛的 Kubernetes 功能。但对于家庭实验室或小型 Docker/Swarm 环境，主要想要一个功能强大的自托管 UI 而不需要付费功能层，两者都是值得研究的可靠替代方案。\n\n喜欢这篇更新？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无承诺\n\n一个热衷于开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的技术迷。\n\nGaruda Linux 通过推广其子系统开始 Nix 化\n\nUbuntu 宁愿先杀掉你的应用再关闭"
+  },
+  "d7c5f68cc098f4c5d8c2ce2766478047": {
+    "id": "d7c5f68cc098f4c5d8c2ce2766478047",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/garuda-linux-nixification/",
+    "title_en": "Garuda Linux Begins Nixification By Promoting Its Subsystem",
+    "summary_en": "The Nix subsystem now installs as a standalone distro and is available in the Dr460nized and Mokka flavors.",
+    "pub_date": "Mon, 21 Sep 2026 13:16:46 GMT",
+    "title_zh": "Garuda Linux 通过推广其子系统开启 Nix 化进程",
+    "summary_zh": "Garuda Linux 将其 Nix 子系统重新命名并提升为独立发行版，提供带 Calamares 图形界面的专用 ISO 和命令行工具，支持 Dr460nized 和 Mokka 两种版本。该子系统支持非持久化根文件系统、预设分区布局和多种硬件配置，现有 NixOS 用户可直接通过 flake 安装。",
+    "fulltext_zh": "Garuda Linux 通过推广其子系统开启 Nix 化进程\n\nNix 子系统现在可作为独立发行版安装，并提供 Dr460nized 和 Mokka 两种版本。\n\nGaruda Linux 已开始引导其用户群体转向 Nix。该发行版的维护者刚刚重新命名了该子系统，你会发现这一举措远比表面上的改名更为微妙。\n\n这个曾经用于双启动 NixOS 的副项目，如今也拥有了自己的可启动安装程序。它附带一个带有 Calamares 图形界面的专用 ISO，以及一个用于脚本化安装的命令行工具。\n\n这并非全新事物。作为子系统，它提供了一种在同一硬盘上 alongside Garuda 运行 NixOS 的方式，通过 BTRFS 子卷而非专用分区将两者隔离开来。\n\n那么它提供了什么？\n\nGaruda Nix 的“Mokka”和“Dr460nized”版本（来源：It's FOSS）。你会发现 Calamares 处理了大部分工作，要求你选择一个版本，然后让你选择额外组件以获得更好的游戏和打印支持。\n\n命令行工具才是真正有趣的地方；它涵盖了安装此类 Linux 发行版的基础功能，同时还提供了桌面、笔记本、服务器和掌机设置的预设，以及八种分区布局，涵盖 ext4 和 BTRFS，包括加密和非加密。\n\n不过，非持久化才是真正的亮点。开启后，每次机器重启时根文件系统都会被清空，要么通过 BTRFS 回滚到保存的快照，要么在 ext4 系统上从 tmpfs 运行根目录。\n\n别担心，这些清除操作不会触及登录凭据。两者在写入生成的配置之前都会进行哈希处理，这正是它们能在回滚后得以保留的原因。\n\nGaruda Nix 默认还会保留少量必要内容持久化，因此你的 Wi-Fi 凭据和每用户配置文件夹等都会安全保留。除此之外的任何内容都需要手动声明，否则会在下次重启时连同其他所有内容一起被删除。\n\n两个版本现已可用。已经在运行 NixOS 的用户可以完全跳过下载，直接通过一条命令从已发布的 flake 中拉取安装程序。\n\n无论你使用哪种安装方式进行设置，该 flake 引用默认都指向同一个稳定分支。在此基础上保持系统更新并不复杂，只需使用 NixOS 用户已经熟知的常规命令即可。\n\n如果你是 NixOS 新手，那么你需要花些时间学习如何操作，因为这里几乎所有内容都是通过文本文件而非设置面板来配置的。\n\n此外，这也不是 Garuda Linux 团队第一次做出如此规模的事情。他们提供的浏览器是从头重写以提供改进浏览体验的。\n\n喜欢这篇更新？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无承诺\n\n一个热衷于开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的技术宅。\n\nPortainer 切断了其免费版与付费版之间的联系\n\nUbuntu 宁愿先杀掉你的应用再关闭会话\n\nGrapheneOS 对 Google 在 Pixel 上日益扩大的先发优势感到不满\n\nValve 悄然开源了其 Android 兼容层\n\nBonjour！Firefox 智能窗口用户现在可以使用法国 AI 了\n\n成为更好的 Linux 用户\n\n通过 FOSS 每周通讯，你可以学习实用的 Linux 技巧、发现应用程序、探索新发行版，并随时了解 Linux 世界的最新动态\n\n太好了！你已成功注册。\n\n欢迎回来！你已成功登录。\n\n你已成功订阅 It's FOSS。\n\n你的链接已过期。\n\n成功！请查看你的电子邮件获取登录魔法链接。\n\n成功！你的账单信息已更新。\n\n你的账单未更新。"
+  },
+  "68bd831a759ff4579eeec608c968b6f0": {
+    "id": "68bd831a759ff4579eeec608c968b6f0",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/ubuntu-26-10-oom-policy/",
+    "title_en": "Ubuntu Would Rather Kill Your Apps Before It Takes Down The Session",
+    "summary_en": "Ubuntu 26.10 is shipping a change that should keep the desktop standing when your memory runs out.",
+    "pub_date": "Mon, 21 Sep 2026 10:04:56 GMT",
+    "title_zh": "Ubuntu 宁愿先杀掉你的应用，也不愿让会话崩溃",
+    "summary_zh": "Ubuntu 26.10 调整了内存耗尽时的处理策略：将 GNOME Shell 和两个 D-Bus 服务等 39 个维持会话的服务设置为 OOM 分数 -500，使其更不容易被内核杀死，而浏览器等占用大量内存的应用则更可能被优先终止。同时，Canonical 关闭了 systemd-oomd 中可能因内存压力直接终止整个会话的设置，改为在 50% 压力时仅作用于用户会话。该策略已随 ubuntu-settings 26.10.1 发布。",
+    "fulltext_zh": "Ubuntu 26.10 将带来一项改动，旨在内存耗尽时保持桌面环境存活。\n\nUbuntu 26.10 正在改变内存耗尽时系统会杀掉什么。应用程序应当首先被终止，而维持会话的服务现在则排在它们后面。其中 39 个服务被移至 OOM 分数 -500，包括 GNOME Shell 和两个 D-Bus 服务。\n\n这使得它们被 OOM killer 选中的可能性大大降低。相反，像浏览器这样占用机器大部分内存的程序，则更可能成为被清理的对象。\n\nCanonical 还关闭了仅因内存压力就可能终止整个会话的设置。不过这一改动附带一个限制：当内存耗尽时，应用仍可能被终止。\n\n该策略已通过 ubuntu-settings 26.10.1 实施，并已发布到相关仓库。\n\n内核看到了什么？\n\n在内存压力下，内核会列出每个进程的清单。它根据每个进程可计入的内存进行评分，然后再加上一个数字。这第二个数字就是 Ubuntu 可以为你设置的。它的范围从 -1000 到 1000，停留在该范围的最低端意味着进程会被踢出候选顺序。\n\nCanonical 引用的一份报告显示了 2024 年 Ubuntu 24.10 桌面上该列表的样子。GNOME Shell 为 100，Firefox 也是 100，它生成的每个内容进程同样是 100。\n\n系统守护进程的分数则低得多，为 -250。造成内存紧张的原因是报告者自己代码中的一个逻辑错误，它触发了一连串虚拟机，导致机器内存耗尽。\n\n结果，OOM killer 选择了一个小应用并将其杀死，而虚拟机则毫发无损。\n\n分数只是一半原因\n\n内核并不是桌面上唯一会执行终止操作的东西。systemd-oomd 会监控内存压力，并且比内核更早采取行动，而且完全不看这些分数。\n\nUbuntu 将其设置为在用户会话压力达到 50% 时采取行动，因此仅靠 -500 的数值本身并不能挽救任何东西。同一个 ubuntu-settings 补丁也处理了 oomd 方面。\n\nManagedOOMMemoryPressure 现在被设置为 50%，而之前是 systemd-oomd 的“默认”设置。在 Canonical 自己的测试中，没有该修复时，十个会话中有七个死亡；有了该修复后，一个都没有死亡。\n\n如果你想现在就查看新行为，该改动已经在相关仓库中。Canonical 正在请求人们在内存或交换空间不足的机器上，用消耗内存的工作负载来测试它。\n\n如果你遇到任何意外行为，例如突然终止或会话崩溃，可以通过相关渠道报告。\n\n喜欢这篇更新？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无承诺\n\n一个热衷于开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的技术迷。\n\nPortainer 切断了其免费版与付费版之间的联系\n\nGaruda Linux 通过推广其子系统开始 Nix 化\n\nGrapheneOS 对 Google 在 Pixel 上日益扩大的领先优势感到不满\n\nValve 悄然开源其 Android 兼容层\n\nBonjour! Firefox 智能窗口用户现在可以使用法国 AI\n\n成为更好的 Linux 用户\n\n通过 FOSS 每周通讯，你可以学习有用的 Linux 技巧、发现应用程序、探索新发行版，并随时了解 Linux 世界的最新动态\n\n太好了！你已成功注册。\n\n欢迎回来！你已成功登录。\n\n你已成功订阅 It's FOSS。\n\n你的链接已过期。\n\n成功！请检查你的电子邮件以获取登录魔法链接。\n\n成功！你的账单信息已更新。\n\n你的账单未更新。"
+  },
+  "f77148dadb95f6de4e849d3b6dddaa7b": {
+    "id": "f77148dadb95f6de4e849d3b6dddaa7b",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Valve-Steam-Beta-Pyrowave",
+    "title_en": "Valve Introduces Pyrowave Video Codec In Beta For Low Latency Streaming",
+    "summary_en": "Valve's Steam client beta today introduced Pyrowave as an experimental video codec for high bandwidth, low-latency video streaming...",
+    "pub_date": "Mon, 21 Sep 2026 21:00:00 -0400",
+    "title_zh": "Valve 在测试版中推出 Pyrowave 视频编解码器，实现低延迟流媒体传输",
+    "summary_zh": "Valve 在 Steam 客户端测试版中推出了名为 Pyrowave 的实验性视频编解码器，专为高带宽、低延迟流媒体设计。该编解码器由 VKD3D-Proton 的 Hans-Kristian Arntzen 开发，带宽消耗是其他流媒体编解码器的 5 至 10 倍，适用于千兆以太网局域网环境，基于 Vulkan API，支持 HDR 和 YUV 4:4:4。用户可通过 Steam Remote Play 高级客户端设置启用。",
+    "fulltext_zh": "Valve 在测试版中推出 Pyrowave 视频编解码器，实现低延迟流媒体传输\n\n2026 年 9 月 21 日晚上 09:00 EDT。\n\nValve 的 Steam 客户端测试版今天推出了 Pyrowave，作为一种用于高带宽、低延迟视频流媒体的实验性视频编解码器。\n\n继今年夏天有关 Valve 正在为 Steam Linux 开发一种新的“Pyrowave”视频编码方法的传闻之后，今天它以测试/实验形式推出用于流媒体传输。Pyrowave 随今天的 Steam 测试版在 Windows、macOS 以及 Linux 上提供，在 Linux 上需使用实验性的 SteamRT3 Steam 客户端。这种高带宽、低延迟视频编解码器由以 VKD3D-Proton 闻名的 Hans-Kristian Arntzen 开发。\n\n据说 Pyrowave 使用的带宽是其他流媒体编解码器的 5 至 10 倍，因此面向至少千兆以太网的局域网使用场景。Pyrowave 利用 Vulkan API，专为极低延迟设计，并支持 HDR 和 YUV 4:4:4。通过今天的 Steam 客户端测试版，可以通过 Steam Remote Play 高级客户端设置启用 Pyrowave。\n\n有兴趣了解今天 Steam 测试版中 Pyrowave 支持更多细节的人，可以通过以下信息了解\n\nSteam Frame 在 Vulkan 上使用 Zink 实现 OpenGL\nValve 的 Steam Frame 现已上市，售价 1059 美元以上\nSteam 客户端测试版改进 Big Picture 模式，并带来多项 Linux 增强\n8 月 Linux 上的 Steam 占比降至 4% 以下\nSteamOS 3.9 预览版转向 Linux 7.2、KDE Plasma 6.7 桌面\nDXVK 3.1 发布，带来 DXGI 增量呈现、D3D11 缓冲区渲染目标\n\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动以及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他\n\nBFS 文件系统将在 Linux 7.4 中被移除\nLinux 7.4 的一项简单优化可使文件读取速度提升约 39%\nLinux 修复了自 2023 年以来存在的静默用户空间数据丢失漏洞\nGoogle 的“难以维护”的 Binder C Linux 驱动将被移除，转而采用 Rust\nUbuntu 26.10 将 cp、mv 和 rm 迁移到 Rust Coreutils，实现 100% 过渡\nLinux 7.4 最终可能使内核构建速度提升约 36%，增量构建速度提升约 70%\nLinux 7.4 的 Zstd 改进可避免冗余初始化\nValve 的 Steam Frame 现已上市，售价 1059 美元以上\n在拥有无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "e8185316f39ae60f88de6dd84fd845c2": {
+    "id": "e8185316f39ae60f88de6dd84fd845c2",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMDGPU-Linux-Prep-GDDR7",
+    "title_en": "AMD Begins Preparing Open-Source Linux Driver For Graphics Cards With GDDR7",
+    "summary_en": "AMD sent out their latest Linux kernel graphics driver patches today for enabling some new hardware IP blocks. And as part of that, preparing for GDDR7 video memory with the AMDGPU driver...",
+    "pub_date": "Mon, 21 Sep 2026 16:52:36 -0400",
+    "title_zh": "AMD 开始为配备 GDDR7 的显卡准备开源 Linux 驱动",
+    "summary_zh": "AMD 发布了最新的 Linux 内核图形驱动补丁，开始为 GDDR7 显存提供支持，并添加了 GDDR7 标识符。这些补丁还涉及中断处理程序的新 IP 块和最新版 New Bus InterFace，可能对应下一代 RDNA5 显卡。此举延续了 AMD 在开源 GPU 驱动上的提前布局，预计 RDNA5 显卡将在 2027 至 2028 年推出。",
+    "fulltext_zh": "AMD 今天发布了最新的 Linux 内核图形驱动补丁，以启用一些新的硬件 IP 块。作为其中的一部分，AMD 正在为 AMDGPU 驱动准备 GDDR7 显存支持。\n\n有传言称，下一代 AMD RDNA5 显卡将配备 GDDR7 显存。当前一代 AMD RDNA4 显卡依赖 GDDR6，而 NVIDIA GeForce RTX 50 桌面显卡则使用 GDDR7。RDNA5 使用 GDDR7 并不令人意外，也在情理之中。\n\n作为明确围绕 GDDR7 的工作，今天发出的补丁添加了“GDDR7”标识符作为显存名称。这同样并不意外，只是确认了相关事项，并且现在将这些新的和近期的 AMDGPU 驱动补丁与可能属于 RDNA5 的 IP 块联系了起来。\n\n今天还发布了新的补丁，用于启用中断处理程序的 IP 块，以及最新版本的 New Bus InterFace。此外还发布了其他几个较小的补丁，为新 IP 做了更多常规性的准备工作。\n\n这延续了近期其他补丁的工作，例如引入 Display Core Next 6（DCN6）和其他 GFX 13.0.x 相关工作。\n\n很高兴看到 AMD 面向消费级 GPU 的开源 GPU 启用工作远早于产品发布。近期传言称，由于持续的行业供应限制，RDNA5 可能在 2027 年推出有限的 SKU，而其他 SKU 可能要到 2028 年才会推出。无论如何，希望到那时上游开源 Linux 内核驱动已经准备就绪，并为这些 GPU 做好充分准备。\n\nAMD 为 Linux 7.4 发送更多 HDMI FRL 更新，修复即将推出的硬件\n\nAMDGPU HDMI 2.1 默认启用补丁已为 Linux 7.4 准备就绪，支持 FreeSync、VRR 和 ALLM\n\nMesa 26.3 RADV + RadeonSI 已为较旧 AMD GPU 准备好 DRM 格式修饰符\n\n新补丁为 Linux 上的 AMD Radeon 显卡提供 HDMI 1.4 3D 模式支持\n\nAMDGPU Linux 驱动针对 HDMI 被动 VRR 支持的最新补丁\n\nAMD 准备为 Linux 默认启用 HDMI 2.1 FRL 支持\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nBFS 文件系统将在 Linux 7.4 中被移除\n\nLinux 7.4 的简单优化可使文件读取速度提高约 39%\n\nLinux 修复了自 2023 年以来存在的静默用户空间数据丢失漏洞\n\nGoogle“难以维护”的 Binder C Linux 驱动将被移除，改用 Rust\n\nUbuntu 26.10 将 cp、mv 和 rm 迁移到 Rust Coreutils，实现 100% 过渡\n\nLinux 7.4 的内核构建速度可能提高约 36%，增量构建提高约 70%\n\nLinux 7.4 的 Zstd 改进可避免冗余初始化\n\nValve 的 Steam Frame 现已上市，售价 1059 美元起\n\n同时提供无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "b40bc34757cbd5f44f743d9be970c225": {
+    "id": "b40bc34757cbd5f44f743d9be970c225",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Gravity-Linux-M4-Mac-Mini-Alpha",
+    "title_en": "Gravity Linux Aims To Provide A Nice Experience For Apple M4 & Newer",
+    "summary_en": "There's a new Linux distribution focused on supporting Linux on Apple Silicon Macs. Gravity Linux is this new distribution that is a spin of Fedora Remix and is catering to the still-experimentally-supported Apple M4 Macs and newer. In addition to leveraging Asahi Linux code and reverse engineering, Gravity Linux also leverages OpenAI Codex and Claude Code...",
+    "pub_date": "Mon, 21 Sep 2026 15:58:02 -0400",
+    "title_zh": "Gravity Linux 旨在为 Apple M4 及更新机型提供良好体验",
+    "summary_zh": "Gravity Linux 是一个基于 Fedora Remix 的新 Linux 发行版，专注于在 Apple Silicon Mac 上提供 Linux 支持，首个早期 Alpha 版本面向 Apple M4 Mac Mini，包含实验性 OpenGL 3.3/ES 3.0 GPU 加速和 KDE Plasma Wayland 桌面。该项目利用 Asahi Linux 代码和逆向工程，并借助 OpenAI Codex 和 Claude Code 辅助开发。目前暂停、USB-C 显示输出、Thunderbolt/USB4 等功能尚不可用，团队希望未来支持更多 M4 系列设备并将工作上游至 Linux 内核。",
+    "fulltext_zh": "Gravity Linux 旨在为 Apple M4 及更新机型提供良好体验\n\n2026年9月21日下午3:58 EDT。\n\n有一个新的 Linux 发行版专注于支持 Apple Silicon Mac 上的 Linux。Gravity Linux 是这个新发行版，它是 Fedora Remix 的一个衍生版，面向仍处于实验性支持阶段的 Apple M4 Mac 及更新机型。除了利用 Asahi Linux 代码和逆向工程外，Gravity Linux 还借助 OpenAI Codex 和 Claude Code。\n\nGravity Linux Early Alpha 现已作为该项目的首个版本发布，最初面向 Apple M4 Mac Mini。它还包括实验性的 OpenGL 3.3 / OpenGL ES 3.0 支持，带 GPU 加速，并运行 KDE Plasma 桌面与 Wayland。\n\n虽然 Mac Mini M4 的一些功能已经可用，但有一系列硬件功能已知目前不受支持：\n\n“以下功能已知无法工作：挂起、USB-C 端口上的显示输出（HDMI 可用）以及 Thunderbolt/USB4。此外，功耗可能高于预期（对台式机而言不太相关）；出于安全原因，我们为最大扬声器音量设置了保守限制；关机/重启不稳定（不过你随时可以使用电源按钮）。此处未列出的所有功能均可正常工作并已通过测试。”\n\n此版本仅适用于 M4 Mac Mini，接下来他们希望支持其他 M4 / M4 Pro / M4 Max 设备，并且也在关注 MacBook Neo。\n\n他们希望最终他们的所有工作都能进入上游 Linux 内核。希望了解更多信息的人可以通过 GravityLinux.org 的公告了解。\n\n尽管他们指出在开发此 M4 Linux 支持时只进行了净室逆向工程，但他们正在利用 OpenAI Codex（GPT-6 Astra）和 Claude Code（Claude Fable 5.1）作为工作的一部分。查看 gravity-m4 Git 分支可以看到近期由 OpenAI Codex 和 Claude Code 大语言模型协助的活动。\n\n为在 Linux 上启用 Apple Silicon Mac 扬声器和耳机插孔支持而发布的补丁\n\nApple 视频解码驱动已提交供上游 Linux 内核审查\n\nAsahi Linux 现已正式支持 Apple M3 Mac——但有注意事项\n\n为 Apple A18 Pro + MacBook Neo 初步启用而发布的 Linux 补丁\n\nLinux 7.4 将改进 Apple Silicon 音频支持及其“不可能”的电源管理\n\n为 Apple M1 / M2 / M3 启用 USB4/Thunderbolt 的 Linux 内核补丁已提交审查\n\nMichael Larabel 是 Phoronix.com 的主要作者，于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过20,000篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nBFS 文件系统将在 Linux 7.4 中被移除\n\nLinux 7.4 的简单优化可使文件读取速度提高约39%\n\nLinux 修复了自2023年以来存在的静默用户空间数据丢失漏洞\n\nGoogle“难以维护”的 Binder C Linux 驱动将被移除，改用 Rust\n\nUbuntu 26.10 将 cp、mv 和 rm 迁移到 Rust Coreutils，实现100%过渡\n\nLinux 7.4 可能实现内核构建速度提高约36%，增量构建提高约70%\n\nLinux 7.4 的 Zstd 改进将避免冗余初始化\n\nValve 的 Steam Frame 现已上市，售价1059美元以上\n\n同时提供无广告浏览、\n单页文章查看\n\n法律免责声明、隐私政策、Cookie\n\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "31b241206dbe36efeea8e73bef955bdf": {
+    "id": "31b241206dbe36efeea8e73bef955bdf",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Apple-Mac-Speaker-Headset-Linux",
+    "title_en": "Patches Posted For Enabling Apple Silicon Mac Speaker & Headset Jack Support On Linux",
+    "summary_en": "While the downstream Asahi Linux kernel has offered working speaker support and headset jack capabilities on Apple Silicon Macs, the mainline Linux kernel hasn't supported this functionality. But a set of 28 patches sent out today on the Linux kernel mailing list are working toward mainlining this important functionality for using Apple Macs on the upstream Linux desktop...",
+    "pub_date": "Mon, 21 Sep 2026 14:03:01 -0400",
+    "title_zh": "为在 Linux 上启用 Apple Silicon Mac 扬声器和耳机插孔支持而发布的补丁",
+    "summary_zh": "开发者 James Calligeros 向 Linux 内核邮件列表提交了 28 个补丁，旨在将 Apple Silicon Mac 的扬声器和耳机插孔支持合并到主线内核。该系列补丁引入了新的 macaudio 机器驱动，并包含针对 Apple M1 和 M2 系列 Mac 的设备树更改，M3 系列因缺少硬件节点将稍后支持。由于这些 Mac 的扬声器缺乏硬件保护，驱动还实现了故障保护机制，除非用户空间守护进程 speakersafetyd 运行，否则会静音并锁定所有扬声器的控件。",
+    "fulltext_zh": "虽然下游的 Asahi Linux 内核已在 Apple Silicon Mac 上提供了可用的扬声器支持和耳机插孔功能，但主线 Linux 内核尚未支持这一功能。不过，今天在 Linux 内核邮件列表上发出的一组 28 个补丁正致力于将这一重要功能主线化，以便在上游 Linux 桌面上使用 Apple Mac。\n\nJames Calligeros 发出了这一大批补丁，以最终确定对 Apple Silicon Mac 主音频子系统的支持。这引入了一个新的“macaudio”机器驱动，该驱动历经数年打造，旨在让近期 Mac 上的扬声器和耳机插孔正常工作。Calligeros 在今天的 Linux 内核补丁系列中解释道：\n\n“Apple Silicon Mac 上的音频子系统相当复杂。扬声器配置变化很大；有些机器只有一个单声道低音扬声器，而另一些则将多个低音扬声器和高音扬声器组合成一个立体声对。该驱动还暴露了耳机插孔的捕获 PCM。配备的 Apple Silicon Mac 上的内置麦克风不由该驱动处理，因为它们连接到常开处理器（实际上并非一直开启）。\n\n在其他平台上由固件处理的许多功能，必须由内核或用户空间处理。最值得注意的是，扬声器保护由用户空间守护进程 speakersafetyd 处理。macaudio 机器驱动通过暴露一个捕获 PCM 来促进这一点，从中可以读取每个扬声器音圈上的电压和电流。鉴于绝对没有硬件或固件级别的故障保护来防止这些机器上脆弱的扬声器受到永久性损坏，该驱动还实现了一个故障保护，除非 speakersafetyd 正在运行，否则将静音并锁定每个扬声器的 kcontrol。”\n\n与 macaudio 驱动一同提供的还有设备树更改，可在 Apple M1 和 M2 系列 Mac 上启用扬声器和耳机支持。Apple M3 系列 Mac 将稍后推出，因为缺少大多数先决硬件节点。Apple M3 系列是目前主线内核所支持的 Apple Silicon SoC 中最新的。\n\n总计约 3000 行新代码现已提交审查，有望在不久的将来将这一 Linux 音频支持主线化。"
+  },
+  "3cccb121acc32d9b3ee6464649df0ad3": {
+    "id": "3cccb121acc32d9b3ee6464649df0ad3",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Nebula-Matrix-NIC-Linux-7.4",
+    "title_en": "Nebula Matrix Network Driver Queued Ahead Of Linux 7.4",
+    "summary_en": "NBL is a new Ethernet networking driver destined to premiere in the upcoming Linux 7.4 kernel for supporting Nebula Matrix NICs...",
+    "pub_date": "Mon, 21 Sep 2026 13:23:27 -0400",
+    "title_zh": "Nebula Matrix 网络驱动已排队等待 Linux 7.4",
+    "summary_zh": "Nebula Matrix 自主研发的 NBL 以太网驱动已进入上游流程，预计将在 Linux 7.4 内核中首次亮相，用于支持其面向数据中心的 SNIC S1000 系列智能网卡。该系列为中国国产 100GE 网卡，采用 PCIe Gen4 x16 接口，每卡最高支持 2x100G。主线内核支持将带来更好的开箱即用体验和内核升级便利。",
+    "fulltext_zh": "Nebula Matrix 网络驱动已排队等待 Linux 7.4\n\n2026年9月21日下午1:23（美国东部时间）。\n\nNBL 是一款新的以太网网络驱动，将在即将到来的 Linux 7.4 内核中首次亮相，用于支持 Nebula Matrix 网卡。\n\nNebula Matrix 是一家中国公司，为数据中心开发智能网卡（SmartNIC）和数据处理单元（DPU）。从 Linux 7.4 开始，他们的 NBL 驱动应会进入上游，用于支持其 m18110-NIC/m18000-NIC（以 SNIC s1000 系列数据中心产品名义销售）。\n\nNebula Matrix SmartNIC S1000 系列是一款中国国产 100GE 网络适配器，面向云计算、HPC 及相关领域设计，每卡最高支持 2x100G 接口。S1000 系列采用 PCIe Gen4 x16 接口，具备高端 100G 网络适配器应有的全部典型功能。Nebula Matrix 为该硬件提供 Windows 和 Linux 驱动，而现在将获得主线内核支持，从而带来更好的开箱即用体验，并在进行内核升级时更加便利。\n\n有关 S1000 系列的更多详细信息，请访问\n\nNebula Matrix 自行开发了该驱动，并走完了上游流程以将其纳入 Linux 内核。初始驱动已于上周完成，因此预计将提交至即将到来的 Linux 7.4 合并窗口。\n\nLinux 7.4 将支持 Realtek RTL8127atf 与 RTL8116af 网络\n\nNetworkManager 通过诱骗 AI 代理添加金丝雀来执行 AI 政策\n\nLinux ath11k 驱动针对高通 WiFi 6 硬件的改进使延迟降低 7 倍\n\nLinux 7.3 因安全与维护噩梦而新增 AF_ALG 限制\n\nLinux 7.3 网络变更已合并，但开发者因 AI/LLM 而“完全不堪重负”\n\nNetworkManager 采用针对 AI 编码助手的政策\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nBFS 文件系统将在 Linux 7.4 中被移除\n\nLinux 7.4 的一项简单优化可使文件读取速度提升约 39%\n\nLinux 修复了自 2023 年以来存在的静默用户空间数据丢失漏洞\n\nGoogle“难以维护”的 Binder C Linux 驱动将被移除，改用 Rust\n\nUbuntu 26.10 将 cp、mv 和 rm 迁移至 Rust Coreutils，实现 100% 转换\n\nLinux 7.4 最终可能实现内核构建速度提升约 36%，增量构建提升约 70%\n\nLinux 7.4 的 Zstd 改进将避免冗余初始化\n\nValve 的 Steam Frame 现已上市，售价 1059 美元起\n\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "14203d784d532e14a45c034808800f1c": {
+    "id": "14203d784d532e14a45c034808800f1c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/sparkleshare-finds-funding-and-an-unintended-lesson-for-open-source/",
+    "title_en": "SparkleShare Finds Funding—and an Unintended Lesson for Open Source",
+    "summary_en": "SparkleShare secures new funding while highlighting an unintended lesson about the challenges of sustaining and supporting open-source software projects.\nThe post SparkleShare Finds Funding—and an Unintended Lesson for Open Source appeared first on Linux Today.",
+    "pub_date": "Mon, 21 Sep 2026 07:15:16 +0000",
+    "title_zh": "SparkleShare 获得资金——以及给开源的一个意外教训",
+    "summary_zh": "SparkleShare 获得新资金，同时凸显了关于维持和支持开源软件项目所面临挑战的一个意外教训。",
+    "fulltext_zh": "SparkleShare 获得新资金，同时凸显了关于维持和支持开源软件项目所面临挑战的一个意外教训。\n\n文章《SparkleShare 获得资金——以及给开源的一个意外教训》最初发表于 Linux Today。"
+  },
+  "4c62e1cf52c2093798534da0472baacc": {
+    "id": "4c62e1cf52c2093798534da0472baacc",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/blueferry-brings-imessage-and-sms-from-iphone-to-linux-over-bluetooth/",
+    "title_en": "BlueFerry Brings iMessage and SMS from iPhone to Linux Over Bluetooth",
+    "summary_en": "BlueFerry brings iMessage and SMS messaging from iPhone to Linux over Bluetooth, enabling users to send and receive messages directly from their desktop.\nThe post BlueFerry Brings iMessage and SMS from iPhone to Linux Over Bluetooth appeared first on Linux Today.",
+    "pub_date": "Mon, 21 Sep 2026 07:12:52 +0000",
+    "title_zh": "BlueFerry 通过蓝牙将 iPhone 的 iMessage 和短信带到 Linux",
+    "summary_zh": "BlueFerry 是一款新工具，可通过蓝牙将 iPhone 上的 iMessage 和 SMS 短信功能引入 Linux 桌面。用户无需拿起手机，即可直接在 Linux 电脑上发送和接收消息，实现了跨平台的消息互通。",
+    "fulltext_zh": "BlueFerry 通过蓝牙将 iPhone 的 iMessage 和 SMS 短信功能带到 Linux，使用户能够直接从桌面发送和接收消息。\n\n文章《BlueFerry 通过蓝牙将 iPhone 的 iMessage 和短信带到 Linux》首先发布于 Linux Today。"
+  },
+  "85903e3c4eeaed667c38f74b9962f8d2": {
+    "id": "85903e3c4eeaed667c38f74b9962f8d2",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/sparkylinux-8-4-brings-back-32-bit-support-for-older-pcs/",
+    "title_en": "SparkyLinux 8.4 Brings Back 32-Bit Support for Older PCs",
+    "summary_en": "SparkyLinux 8.4 restores 32-bit support, giving users of older PCs a lightweight option while delivering updated packages, fixes, and system improvements.\nThe post SparkyLinux 8.4 Brings Back 32-Bit Support for Older PCs appeared first on Linux Today.",
+    "pub_date": "Mon, 21 Sep 2026 07:11:03 +0000",
+    "title_zh": "SparkyLinux 8.4 为旧电脑重新带来 32 位支持",
+    "summary_zh": "SparkyLinux 8.4 恢复了对 32 位架构的支持，为使用旧电脑的用户提供了一个轻量级选择，同时带来了更新的软件包、修复和系统改进。",
+    "fulltext_zh": "SparkyLinux 8.4 恢复了 32 位支持，为旧电脑用户提供了一个轻量级选项，同时提供了更新的软件包、修复和系统改进。\n\n文章《SparkyLinux 8.4 为旧电脑重新带来 32 位支持》最初出现在 Linux Today 上。"
+  },
+  "200605568bd78900a35f7aec0890879a": {
+    "id": "200605568bd78900a35f7aec0890879a",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/cloudflare-releases-cloudflare-os-as-open-source-for-ai-agents-and-app-building/",
+    "title_en": "Cloudflare Releases Cloudflare OS as Open Source for AI Agents and App Building",
+    "summary_en": "Cloudflare releases Cloudflare OS as open source, providing a platform for building AI agents and applications with integrated tools and infrastructure.\nThe post Cloudflare Releases Cloudflare OS as Open Source for AI Agents and App Building appeared first on Linux Today.",
+    "pub_date": "Mon, 21 Sep 2026 07:08:33 +0000",
+    "title_zh": "Cloudflare 将 Cloudflare OS 开源，用于 AI 智能体与应用构建",
+    "summary_zh": "Cloudflare 宣布将 Cloudflare OS 开源，这是一个用于构建 AI 智能体和应用程序的平台，集成了相关工具与基础设施。该举措旨在为开发者提供更开放、灵活的环境，以加速 AI 应用的开发与部署。",
+    "fulltext_zh": "Cloudflare 将 Cloudflare OS 作为开源项目发布，为构建 AI 智能体和应用程序提供了一个平台，并集成了相关工具与基础设施。\n\n这篇文章《Cloudflare 将 Cloudflare OS 开源，用于 AI 智能体与应用构建》最初发布于 Linux Today。"
+  },
+  "5bd5dc2c2511462e0f954437315ed25c": {
+    "id": "5bd5dc2c2511462e0f954437315ed25c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/linux-mint-22-3-gets-new-hwe-isos-powered-by-linux-kernel-7-0/",
+    "title_en": "Linux Mint 22.3 Gets New HWE ISOs Powered by Linux Kernel 7.0",
+    "summary_en": "Linux Mint 22.3 releases new HWE installation images powered by kernel 7.0, bringing updated hardware support for newer systems and devices.\nThe post Linux Mint 22.3 Gets New HWE ISOs Powered by Linux Kernel 7.0 appeared first on Linux Today.",
+    "pub_date": "Mon, 21 Sep 2026 07:06:59 +0000",
+    "title_zh": "Linux Mint 22.3 获得由 Linux 内核 7.0 驱动的新 HWE ISO",
+    "summary_zh": "Linux Mint 22.3 发布了由 Linux 内核 7.0 驱动的新 HWE 安装镜像，为较新的系统和设备带来更新的硬件支持。",
+    "fulltext_zh": "Linux Mint 22.3 发布了由内核 7.0 驱动的新 HWE 安装镜像，为较新的系统和设备带来更新的硬件支持。\n\n文章《Linux Mint 22.3 获得由 Linux 内核 7.0 驱动的新 HWE ISO》首发于 Linux Today。"
   }
 }

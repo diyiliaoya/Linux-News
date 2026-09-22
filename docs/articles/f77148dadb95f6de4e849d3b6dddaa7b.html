@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Valve 悄然开源其 Android 兼容层 — Linux 中文速报</title>
+<title>Valve 在测试版中推出 Pyrowave 视频编解码器，实现低延迟流媒体传输 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Valve 悄然开源其 Android 兼容层</h1>
+  <h1>Valve 在测试版中推出 Pyrowave 视频编解码器，实现低延迟流媒体传输</h1>
 
-  <div class="article-summary">Valve 悄然开源了为 Steam Frame 打造的 Android 兼容层项目 Lepton，该项目基于 Waydroid、LineageOS 和 AOSP 等开源项目构建，旨在帮助开发者将 VR 类 Android 游戏带到 Steam Frame。Lepton 采用双许可证模式，兼容工具部分使用 MIT 许可证，Android 根文件系统部分则因包含多个外部项目代码而采用 GPL 等许可证。该项目并非通用 Android on Linux 方案，而是经过精简，每个游戏运行在独立容器中。</div>
+  <div class="article-summary">Valve 在 Steam 客户端测试版中推出了名为 Pyrowave 的实验性视频编解码器，专为高带宽、低延迟流媒体设计。该编解码器由 VKD3D-Proton 的 Hans-Kristian Arntzen 开发，带宽消耗是其他流媒体编解码器的 5 至 10 倍，适用于千兆以太网局域网环境，基于 Vulkan API，支持 HDR 和 YUV 4:4:4。用户可通过 Steam Remote Play 高级客户端设置启用。</div>
 
-  <div class="article-body"><p>Valve 悄然开源其 Android 兼容层</p><p>Lepton 项目面向希望将 VR 类 Android 游戏带到 Steam Frame 的游戏开发者。</p><p>是的，Valve 并没有为此发布正式公告。我是通过 [来源] 得知这一消息的，他们昨天简要报道了此事。这家游戏巨头已将其为最近发布的 [设备] 构建的 Android 兼容层开源。</p><p>Lepton 让用户能够在 Linux 上玩 Android 独占游戏，方式是在一个 [容器] 内启动这些游戏。Valve 表示，大多数用户不会直接与 Lepton 交互，因为 Steam 客户端本身会处理这项工作。</p><p>该项目面向希望将 VR 类 Android 游戏带到 Steam Frame 的游戏开发者，不过代码仓库也指出其他使用场景也是可能的。</p><p>两个许可证，一个代码库</p><p>该兼容层并非以单一许可证发布，因为仓库的 [许可证] 文件将项目分为两部分，各自独立管理。</p><p>兼容工具本身——即 Steam 调用以在容器内实际启动游戏的部分——以 [MIT 许可证] 发布。而在该容器内构建并运行的 Android 根文件系统则是另一回事。由于它包含了来自多个外部项目的代码，因此带有 [GPL 等许可证]。</p><p>Lepton 的 Android 镜像并非从零构建。它依赖若干现有的开源项目，每个项目负责解决不同的问题。</p><p>[Waydroid] 承担了大部分繁重工作。它已经使用命名空间在 Linux 容器内运行完整的 Android 系统，Lepton 在构建过程中直接借用了它的补丁和组件。</p><p>[LineageOS] 提供了 Waydroid（进而也是 Lepton）所定制化的实际 Android 系统镜像。Waydroid 的运行时附带一个基于 LineageOS 的最小化镜像。</p><p>[Android 开源项目（AOSP）] 位于这一切的底层。它是 LineageOS、Waydroid 以及进而 Lepton 所构建的基础源代码树，其许可证条款贯穿整个技术栈。</p><p>[另一个项目] 在同一许可证文件中与其他项目一起获得了较小的署名，不过 Valve 并未详细说明其具体贡献。你可以翻阅其仓库来做出合理推测。</p><p>该项目并不试图成为在 Linux 上运行 Android 的通用方式。它经过了有意精简。</p><p>Lepton 内的每个应用都以同一用户身份运行，彼此之间没有隔离墙。相反，每个游戏都有自己独立的容器，启动时 Lepton 会关闭不需要的 Android 服务。</p><p>还有比我讨论的更多内容，如果你想了解更多，请翻阅该仓库。</p><p>[值得注意的是]，虽然 Steam Frame 尚未开始发货，但其软件栈的部分内容已经在开源。Lepton 加入了 [FEX-Emu]——Valve 为同一头显所依赖的 x86 到 ARM 翻译层——成为开发者现在可以阅读、检查并基于其构建的软件栈组件。</p><p>各种兼容层</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的书呆子。</p><p>GrapheneOS 对 Google 在 Pixel 上日益扩大的先发优势感到不满</p><p>Bonjour！Firefox 智能窗口用户现在可以使用法国 AI 了</p><p>著名的 PS5 Linux 项目负责人因过早向索尼报告漏洞而辞职</p><p>准时！GNOME 51 带来了一系列你不应错过的改进</p><p>Ubuntu 的 Rust 化迎来新里程碑！Coreutils 迁移完成</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周通讯，学习实用的 Linux 技巧，发现应用程序，探索新发行版，并随时了解 Linux 世界的最新动态</p><p>太好了！你已成功注册。</p><p>欢迎回来！你已成功</p></div>
+  <div class="article-body"><p>Valve 在测试版中推出 Pyrowave 视频编解码器，实现低延迟流媒体传输</p><p>2026 年 9 月 21 日晚上 09:00 EDT。</p><p>Valve 的 Steam 客户端测试版今天推出了 Pyrowave，作为一种用于高带宽、低延迟视频流媒体的实验性视频编解码器。</p><p>继今年夏天有关 Valve 正在为 Steam Linux 开发一种新的“Pyrowave”视频编码方法的传闻之后，今天它以测试/实验形式推出用于流媒体传输。Pyrowave 随今天的 Steam 测试版在 Windows、macOS 以及 Linux 上提供，在 Linux 上需使用实验性的 SteamRT3 Steam 客户端。这种高带宽、低延迟视频编解码器由以 VKD3D-Proton 闻名的 Hans-Kristian Arntzen 开发。</p><p>据说 Pyrowave 使用的带宽是其他流媒体编解码器的 5 至 10 倍，因此面向至少千兆以太网的局域网使用场景。Pyrowave 利用 Vulkan API，专为极低延迟设计，并支持 HDR 和 YUV 4:4:4。通过今天的 Steam 客户端测试版，可以通过 Steam Remote Play 高级客户端设置启用 Pyrowave。</p><p>有兴趣了解今天 Steam 测试版中 Pyrowave 支持更多细节的人，可以通过以下信息了解</p><p>Steam Frame 在 Vulkan 上使用 Zink 实现 OpenGL</p><p>Valve 的 Steam Frame 现已上市，售价 1059 美元以上</p><p>Steam 客户端测试版改进 Big Picture 模式，并带来多项 Linux 增强</p><p>8 月 Linux 上的 Steam 占比降至 4% 以下</p><p>SteamOS 3.9 预览版转向 Linux 7.2、KDE Plasma 6.7 桌面</p><p>DXVK 3.1 发布，带来 DXGI 增量呈现、D3D11 缓冲区渲染目标</p><p>Michael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动以及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他</p><p>BFS 文件系统将在 Linux 7.4 中被移除</p><p>Linux 7.4 的一项简单优化可使文件读取速度提升约 39%</p><p>Linux 修复了自 2023 年以来存在的静默用户空间数据丢失漏洞</p><p>Google 的“难以维护”的 Binder C Linux 驱动将被移除，转而采用 Rust</p><p>Ubuntu 26.10 将 cp、mv 和 rm 迁移到 Rust Coreutils，实现 100% 过渡</p><p>Linux 7.4 最终可能使内核构建速度提升约 36%，增量构建速度提升约 70%</p><p>Linux 7.4 的 Zstd 改进可避免冗余初始化</p><p>Valve 的 Steam Frame 现已上市，售价 1059 美元以上</p><p>在拥有无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026，由</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/valve-lepton/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Valve-Steam-Beta-Pyrowave" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
