@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：MX Linux 25.3 — Linux 中文速报</title>
+<title>Linux 图形驱动拟引入可变刷新率“VRR”目标限制器 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：MX Linux 25.3</h1>
+  <h1>Linux 图形驱动拟引入可变刷新率“VRR”目标限制器</h1>
 
-  <div class="article-summary">MX Linux 25.3 发布，为 25.x 系列带来更新。该版本从 Debian 上游引入安全修复和固件，并更新了 MX-Welcome、MX-Tools 等工具界面，新增 ISO 签名验证工具和主题颜色定制工具，在软件包安装器中加入 siduction 7.X 内核，并默认启用 lazytime。现有用户无需重装，通过常规更新通道即可升级。</div>
+  <div class="article-summary">Collabora 的 Nicolas Frattaroli 提出了一套包含 25 个补丁的提案，旨在为 Linux 桌面引入可变刷新率（VRR）目标帧率限制的用户空间 API。该接口允许游戏、应用和合成器指定 VRR 的工作范围或固定目标，并新增了用于快速媒体切换（QMS）的连接器属性，以避免亮度闪烁并优化媒体播放。补丁已实现 HDMI 状态辅助和 Rockchip RK3588 驱动的“游戏模式”VRR。</div>
 
-  <div class="article-body"><p>发行版发布：MX Linux 25.3</p><p>该项目发布了 25.x 系列的新更新。除了从 Debian 上游引入新的安全修复和固件外，MX Linux 项目还包含多项新变化：</p><p>“在 MX 方面，我们在此过程中已推送了大部分更新，但这次有一些特别值得注意的更新。MX-Welcome、MX-Tools 和 custom-toolbox（供 Fluxbox 使用）获得了用户界面改版。Verify-iso-sig 是一个新工具，不仅可验证 MX ISO 的数字签名，还可验证许多流行发行版家族的 ISO。MX-Theme-Colors 是一个有趣的工具，可从现有 MX 主题（GTK）创建自定义高亮主题。在 mx-packageinstaller-&gt;popular apps-&gt;kernels 中引入 siduction 7.X 内核。mx-packageinstaller-&gt;popular apps 中第三方 VPN 安装器有许多更新。mx/gazelle-installer 将在新安装中默认在 fstab 中设置 lazytime。更新了手册和 FAQ 条目。</p><p>大多数 mx-tools 的翻译更新。自上次正式发布以来的所有错误修复、维护和功能版本。现有用户无需重新安装。所有更新均通过常规更新通道提供。”</p><p>提供更多详细信息。</p><p>MX-25.3_Xfce_ahs_x64.iso</p><p>近期相关新闻和发布</p><p>发行版发布：MX Linux 25.3</p><p>发行版发布：MX Linux 25.2</p><p>发行版发布：MX Linux 25.1</p><p>发行版发布：MX Linux 25</p><p>开发版发布：MX Linux 25 RC1</p><p>开发版发布：MX Linux 25 Beta 1</p><p>更多 MX Linux 新闻...</p><p>MX Linux 是一个面向桌面的 Linux 发行版，基于 Debian 的“Stable”分支，是 antiX 和前 MEPIS Linux 社区的合作项目。它使用 Xfce 作为默认桌面（也提供独立的 KDE Plasma 和 Fluxbox 版本），是一个中等重量的操作系统，旨在将优雅高效的桌面与简单配置、高稳定性、可靠性能和中等占用空间相结合。</p><p>https://forum.mxlinux.org/</p><p>替代用户论坛</p><p>https://mxlinux.org/manuals</p><p>https://www.mxlinux.org/wiki</p><p>https://mxlinux.org/screenshots</p><p>https://mxlinux.org/videos</p><p>https://mxlinux.org/download-links#Mirrors</p></div>
+  <div class="article-body"><p>可变刷新率“VRR”目标限制器提案面向 Linux 图形驱动</p><p>2026 年 9 月 22 日上午 11:29（美国东部时间）。</p><p>一项正在讨论的新提案拟引入一个 Linux 用户空间 API，以便在 Linux 桌面上为可变刷新率（VRR）处理指定帧率目标。</p><p>Collabora 的 Nicolas Frattaroli 撰写了一份提案和一组 25 个补丁，就 VRR 目标速率限制器接口征求意见。这将允许用户空间游戏/应用程序/合成器传达 VRR 应瞄准的受限范围或固定目标。此外，它还新增了一个快速媒体切换“QMS”目标。</p><p>Frattaroli 对 VRR 目标速率限制器功能的描述如下：</p><p>“本系列定义了一个拟议的新用户空间 API，用于为可变刷新率（VRR）机制指定帧率目标。这包括指定 VRR 应运行的受限范围，以及固定目标，并为 QMS（快速媒体切换）新增了一个连接器属性。</p><p>想要这样一个 uAPI 的原因主要是为了规避现实世界的不完美。通过将 VRR 限制在有限范围或完全固定点，我们可以在预期帧率范围内获得无抖动（或低延迟）呈现的好处，而不会陷入导致可见亮度闪烁的帧率。QMS 的加入进一步允许连接器在媒体播放场景中提前发出即将发生的速率变化信号，这样电视等设备中的高级处理算法就不必为了在无通知的情况下以全速率呈现而被禁用。”</p><p>这些补丁为 HDMI 状态辅助实现了“游戏模式”VRR，并为 Rockchip RK3588 驱动实现了该功能。</p><p>在今年 Display Next Hackfest 上。</p><p>有兴趣的人可以在</p><p>vrr-limiter Git 分支</p><p>上找到这些 RFC 内核补丁，其中包含针对 Wayland 参考合成器 Weston 的 VRR 限制器补丁。</p><p>Igalia 庆祝推进 Linux 与开源 25 周年</p><p>Linux 7.3-rc4 发布：更多由 LLM 发现的修复，但没什么太可怕的</p><p>重要的 x86 修复在 Linux 7.3-rc4 之前合并</p><p>Linux 内核构建时间有望通过最新补丁显著缩短</p><p>提案提出最终标准化 Linux 下的显存统计报告</p><p>Linux 随机选择空闲 CPU 核心在高核心数系统上显示出适度优势</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他</p><p>Linux 7.4 的简单优化可使文件读取速度提高约 39%</p><p>Google“难以维护”的 Binder C Linux 驱动将被移除，改用 Rust</p><p>Linux 修复了自 2023 年以来存在的静默用户空间数据丢失漏洞</p><p>Ubuntu 26.10 将 cp、mv 和 rm 迁移到 Rust Coreutils，实现 100% 过渡</p><p>帮助 Linux 硬件测试与评测继续，同时在无广告的情况下享受 Phoronix</p><p>Linux 7.4 最终可能实现内核构建速度提高约 36%，增量构建提高约 70%</p><p>Valve 的 Steam Frame 现已上市，售价 1059 美元以上</p><p>Firefox 156 发布，其内置 PDF 查看器启动速度提高高达 45%</p><p>同时享受无广告浏览，</p><p>单页文章视图</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12958" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/VRR-Target-Rate-Limiter-uAPI" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：MX Linux 25.3 — Linux 中文速报</title>
+<title>Obscura VPN 现已推出 Linux 桌面应用 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>发行版发布：MX Linux 25.3</h1>
+  <h1>Obscura VPN 现已推出 Linux 桌面应用</h1>
 
-  <div class="article-summary">MX Linux 25.3 发布，为 25.x 系列带来更新。该版本从 Debian 上游引入安全修复和固件，并更新了 MX-Welcome、MX-Tools 等工具界面，新增 ISO 签名验证工具和主题颜色定制工具，在软件包安装器中加入 siduction 7.X 内核，并默认启用 lazytime。现有用户无需重装，通过常规更新通道即可升级。</div>
+  <div class="article-summary">Obscura VPN 发布了原生 Linux 桌面应用，方便用户无需手动配置 WireGuard。该服务采用双跳中继架构，由 Obscura 作为入口节点、另一家 VPN 作为出口节点，避免单一公司掌握完整浏览记录。应用支持基于 QUIC 的隐蔽协议，可将 VPN 流量伪装成普通 HTTP/3 浏览。代码库已从 PolyForm 非商业许可证重新授权为 GPLv3。应用支持 Ubuntu 24.04 LTS 及更高版本，仅限 Intel/AMD 设备，需付费订阅，月费约 8 美元。</div>
 
-  <div class="article-body"><p>发行版发布：MX Linux 25.3</p><p>该项目发布了 25.x 系列的新更新。除了从 Debian 上游引入新的安全修复和固件外，MX Linux 项目还包含多项新变化：</p><p>“在 MX 方面，我们在此过程中已推送了大部分更新，但这次有一些特别值得注意的更新。MX-Welcome、MX-Tools 和 custom-toolbox（供 Fluxbox 使用）获得了用户界面改版。Verify-iso-sig 是一个新工具，不仅可验证 MX ISO 的数字签名，还可验证许多流行发行版家族的 ISO。MX-Theme-Colors 是一个有趣的工具，可从现有 MX 主题（GTK）创建自定义高亮主题。在 mx-packageinstaller-&gt;popular apps-&gt;kernels 中引入 siduction 7.X 内核。mx-packageinstaller-&gt;popular apps 中第三方 VPN 安装器有许多更新。mx/gazelle-installer 将在新安装中默认在 fstab 中设置 lazytime。更新了手册和 FAQ 条目。</p><p>大多数 mx-tools 的翻译更新。自上次正式发布以来的所有错误修复、维护和功能版本。现有用户无需重新安装。所有更新均通过常规更新通道提供。”</p><p>提供更多详细信息。</p><p>MX-25.3_Xfce_ahs_x64.iso</p><p>近期相关新闻和发布</p><p>发行版发布：MX Linux 25.3</p><p>发行版发布：MX Linux 25.2</p><p>发行版发布：MX Linux 25.1</p><p>发行版发布：MX Linux 25</p><p>开发版发布：MX Linux 25 RC1</p><p>开发版发布：MX Linux 25 Beta 1</p><p>更多 MX Linux 新闻...</p><p>MX Linux 是一个面向桌面的 Linux 发行版，基于 Debian 的“Stable”分支，是 antiX 和前 MEPIS Linux 社区的合作项目。它使用 Xfce 作为默认桌面（也提供独立的 KDE Plasma 和 Fluxbox 版本），是一个中等重量的操作系统，旨在将优雅高效的桌面与简单配置、高稳定性、可靠性能和中等占用空间相结合。</p><p>https://forum.mxlinux.org/</p><p>替代用户论坛</p><p>https://mxlinux.org/manuals</p><p>https://www.mxlinux.org/wiki</p><p>https://mxlinux.org/screenshots</p><p>https://mxlinux.org/videos</p><p>https://mxlinux.org/download-links#Mirrors</p></div>
+  <div class="article-body"><p>Obscura VPN 现已推出 Linux 桌面应用 - OMG! Ubuntu</p><p>Obscura VPN 已发布原生 Linux 应用，让桌面用户能更轻松地使用它（无需再费心处理 WireGuard 配置文件）。</p><p>Linux 平台并不缺少 VPN 提供商，但由前 Bitcoin Core 贡献者 Carl Dong 创立的 Obscura 有着与大多数服务不同的卖点。</p><p>你的流量不会通过单一提供商路由，而是采用两步中继：Obscura 充当“入口节点”（看到你的原始 IP 地址），而另一家 VPN 提供商则充当“出口节点”（你访问的网站）。</p><p>Obscura 的 Linux 应用还支持基于 QUIC 的隐蔽协议，可将你的 VPN 连接伪装成普通的 HTTP/3 网页浏览。这有助于流量绕过那些可能禁止 VPN 流量的严格网络和服务封锁。</p><p>但 Obscura 之所以能将自己宣传为“首个不记录你活动的 VPN”——强调是他们的原话——是因为两家公司都无法获得关于用户及其浏览习惯的完整信息。</p><p>一些商业 VPN 提供多跳功能，但所有流量仍然流经同一家公司，理论上如果该公司有需要或收到要求，就能拼凑出完整信息。</p><p>隐私保护延伸至注册环节；Obscura 不需要个人信息，你使用随机生成的账号登录，类似。付款通过门罗币（XMR）或比特币闪电网络完成，不过对隐私不太在意的人也可以通过 Stripe 用卡支付。</p><p>其他功能则是标准 VPN 配置：服务器位置、隧道功能。</p><p>除了新的 Linux 桌面应用，Obscura 还将代码库从 PolyForm 非商业许可证 1.0.0 重新授权为 GPLv3，进一步践行其“对开源软件的承诺”。</p><p>下载 Obscura VPN for Linux</p><p>Obscura VPN Linux 应用适用于一系列主流发行版。它官方支持 Ubuntu 24.04 LTS 及更高版本，因此也兼容 Pop!_OS 24.04、Linux Mint 22.3——但仅限 Intel/AMD 设备（尚无 ARM 版本）。</p><p>在 Ubuntu 上安装需要添加 Obscura Linux 仓库，但该公司通过一个 Deb 包简化了操作（它安装的是仓库，而非应用）：</p><p>curl -fsSLO https://linux-pkgs.obscura.com/deb/obscura-repository.deb</p><p>sudo apt install ./obscura-repository.deb</p><p>sudo apt update &amp;&amp; sudo apt install obscura</p><p>需要说明的是，这不是免费的 VPN 服务；你需要有效的付费订阅才能使用。</p><p>Obscura VPN 每月约 8 美元，比其他选项更贵，但你可能觉得为解耦路由和 QUIC 混淆支付溢价非常值得。</p><p>新订阅者可使用促销码享受 25% 折扣。</p><p>尽管 Obscura 在 VPN 提供商中有些默默无闻，因为它不在社交媒体上大力宣传，没有免费套餐，也没有用网页邮件、办公套件和云存储等附加服务来填充产品，但它可能值得研究。</p><p>这与 Apple 的 iCloud+ Private Relay 概念相同。在那里，Apple 是入口节点，Cloudflare、Fastly 或 Akama 被用作出口节点。是的，有些公司可能会对其隐私资质嗤之以鼻，但我这里只是在概念层面讨论。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12958" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/obscura-vpn-linux-app" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

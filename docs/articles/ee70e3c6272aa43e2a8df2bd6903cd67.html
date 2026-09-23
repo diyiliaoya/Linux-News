@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：MX Linux 25.3 — Linux 中文速报</title>
+<title>开源 NVIDIA &quot;Nouveau&quot; 驱动迎来 HDMI Deep Color 支持补丁 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：MX Linux 25.3</h1>
+  <h1>开源 NVIDIA &quot;Nouveau&quot; 驱动迎来 HDMI Deep Color 支持补丁</h1>
 
-  <div class="article-summary">MX Linux 25.3 发布，为 25.x 系列带来更新。该版本从 Debian 上游引入安全修复和固件，并更新了 MX-Welcome、MX-Tools 等工具界面，新增 ISO 签名验证工具和主题颜色定制工具，在软件包安装器中加入 siduction 7.X 内核，并默认启用 lazytime。现有用户无需重装，通过常规更新通道即可升级。</div>
+  <div class="article-summary">开源 NVIDIA 驱动 Nouveau 发布了新补丁，为其添加 HDMI Deep Color 支持，可实现每通道 10、12 或 16 位色深。目前补丁仅支持 RGB 格式，暂不支持 YCbCr，且 16 位色深尚未在支持的显示器上测试。这些补丁已发布在 dri-devel 邮件列表中，供有兴趣的用户测试。</div>
 
-  <div class="article-body"><p>发行版发布：MX Linux 25.3</p><p>该项目发布了 25.x 系列的新更新。除了从 Debian 上游引入新的安全修复和固件外，MX Linux 项目还包含多项新变化：</p><p>“在 MX 方面，我们在此过程中已推送了大部分更新，但这次有一些特别值得注意的更新。MX-Welcome、MX-Tools 和 custom-toolbox（供 Fluxbox 使用）获得了用户界面改版。Verify-iso-sig 是一个新工具，不仅可验证 MX ISO 的数字签名，还可验证许多流行发行版家族的 ISO。MX-Theme-Colors 是一个有趣的工具，可从现有 MX 主题（GTK）创建自定义高亮主题。在 mx-packageinstaller-&gt;popular apps-&gt;kernels 中引入 siduction 7.X 内核。mx-packageinstaller-&gt;popular apps 中第三方 VPN 安装器有许多更新。mx/gazelle-installer 将在新安装中默认在 fstab 中设置 lazytime。更新了手册和 FAQ 条目。</p><p>大多数 mx-tools 的翻译更新。自上次正式发布以来的所有错误修复、维护和功能版本。现有用户无需重新安装。所有更新均通过常规更新通道提供。”</p><p>提供更多详细信息。</p><p>MX-25.3_Xfce_ahs_x64.iso</p><p>近期相关新闻和发布</p><p>发行版发布：MX Linux 25.3</p><p>发行版发布：MX Linux 25.2</p><p>发行版发布：MX Linux 25.1</p><p>发行版发布：MX Linux 25</p><p>开发版发布：MX Linux 25 RC1</p><p>开发版发布：MX Linux 25 Beta 1</p><p>更多 MX Linux 新闻...</p><p>MX Linux 是一个面向桌面的 Linux 发行版，基于 Debian 的“Stable”分支，是 antiX 和前 MEPIS Linux 社区的合作项目。它使用 Xfce 作为默认桌面（也提供独立的 KDE Plasma 和 Fluxbox 版本），是一个中等重量的操作系统，旨在将优雅高效的桌面与简单配置、高稳定性、可靠性能和中等占用空间相结合。</p><p>https://forum.mxlinux.org/</p><p>替代用户论坛</p><p>https://mxlinux.org/manuals</p><p>https://www.mxlinux.org/wiki</p><p>https://mxlinux.org/screenshots</p><p>https://mxlinux.org/videos</p><p>https://mxlinux.org/download-links#Mirrors</p></div>
+  <div class="article-body"><p>开源 NVIDIA &quot;Nouveau&quot; 驱动迎来 HDMI Deep Color 支持补丁</p><p>2026 年 9 月 22 日 晚上 08:54 EDT。</p><p>用于开源 NVIDIA 驱动支持的 Nouveau Linux 内核图形驱动，近日发布了新的补丁，以启用 HDMI Deep Color 支持。</p><p>HDMI Deep Color 支持允许每颜色通道使用 10、12 或 16 位的更高色深。这些补丁是在“AI 合作伙伴”的帮助下创建的，使 HDMI Deep Color 支持能够在 Nouveau 上运行，作为主要的开源 NVIDIA Linux 驱动，直到 Nova 准备好投入主流使用。</p><p>目前，Nouveau 的 HDMI Deep Color 补丁仅支持 RGB，暂不支持 YCbCr。每通道 16 位的支持也尚未在具备相应能力的显示器上进行测试。</p><p>无论如何，对于那些拥有支持深色显示器并对此功能感兴趣的用户，现在可以在 dri-devel 邮件列表上找到 HDMI Deep Color 补丁。</p><p>NVIDIA NVK 驱动获得改进以帮助 Valve 的 Gamescope</p><p>实验性补丁让 Nouveau+NVK 在 NVIDIA DGX Spark GB10 上运行</p><p>Nouveau 为 NVIDIA Blackwell GPU 带来显示修复，并向 HDMI 2.1 迈进</p><p>NVK Vulkan Video 已合并至 Mesa 26.3</p><p>Nouveau 准备最终默认启用原子模式设置</p><p>Linux 7.3 的 Nouveau 补丁允许在 NVIDIA NVDEC 之上使用 NVK Vulkan Video</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。</p><p>Linux 7.4 的简单优化可使文件读取速度提升约 39%</p><p>Google 的“维护痛苦”的 Binder C Linux 驱动将被移除，转而使用 Rust</p><p>Linux 修复了自 2023 年以来存在的静默用户空间数据丢失漏洞</p><p>Ubuntu 26.10 将 cp、mv 和 rm 迁移至 Rust Coreutils，实现 100% 过渡</p><p>在享受无广告的 Phoronix 的同时，帮助 Linux 硬件测试与评测继续</p><p>Linux 7.4 最终可能实现内核构建速度提升约 36%，增量构建提升约 70%</p><p>Valve 的 Steam Frame 现已上市，售价 1059 美元起</p><p>Firefox 156 发布，其内置 PDF 查看器启动速度提升高达 45%</p><p>同时享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12958" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Nouveau-Deep-Color-Patches" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

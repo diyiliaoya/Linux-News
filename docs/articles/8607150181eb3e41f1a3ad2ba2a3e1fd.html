@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：MX Linux 25.3 — Linux 中文速报</title>
+<title>BSD 发行版：NetBSD 10.2 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -152,14 +152,14 @@
     <span class="source">DistroWatch</span>
   </div>
 
-  <h1>发行版发布：MX Linux 25.3</h1>
+  <h1>BSD 发行版：NetBSD 10.2</h1>
 
-  <div class="article-summary">MX Linux 25.3 发布，为 25.x 系列带来更新。该版本从 Debian 上游引入安全修复和固件，并更新了 MX-Welcome、MX-Tools 等工具界面，新增 ISO 签名验证工具和主题颜色定制工具，在软件包安装器中加入 siduction 7.X 内核，并默认启用 lazytime。现有用户无需重装，通过常规更新通道即可升级。</div>
+  <div class="article-summary">NetBSD 项目发布了 10.2 版本，为这个高度可移植的操作系统带来多项修复和小幅改进。主要更新包括：更新 2026 年移动假日日期、修复新版 GCC 编译问题、新增 build.sh 的 show-revisionid 操作、改进可重现构建、ftp 增加 connect 命令、rmdir 增加 -v 选项、修复 telnet 安全问题、fsck_ffs 支持超过 2^32 块的文件系统、httpd 以八位字节流提供 ISO 文件并修复内存泄漏、makefs 支持 -m 选项、showmount 输出格式调整以及 syslogd 可靠性修复。</div>
 
-  <div class="article-body"><p>发行版发布：MX Linux 25.3</p><p>该项目发布了 25.x 系列的新更新。除了从 Debian 上游引入新的安全修复和固件外，MX Linux 项目还包含多项新变化：</p><p>“在 MX 方面，我们在此过程中已推送了大部分更新，但这次有一些特别值得注意的更新。MX-Welcome、MX-Tools 和 custom-toolbox（供 Fluxbox 使用）获得了用户界面改版。Verify-iso-sig 是一个新工具，不仅可验证 MX ISO 的数字签名，还可验证许多流行发行版家族的 ISO。MX-Theme-Colors 是一个有趣的工具，可从现有 MX 主题（GTK）创建自定义高亮主题。在 mx-packageinstaller-&gt;popular apps-&gt;kernels 中引入 siduction 7.X 内核。mx-packageinstaller-&gt;popular apps 中第三方 VPN 安装器有许多更新。mx/gazelle-installer 将在新安装中默认在 fstab 中设置 lazytime。更新了手册和 FAQ 条目。</p><p>大多数 mx-tools 的翻译更新。自上次正式发布以来的所有错误修复、维护和功能版本。现有用户无需重新安装。所有更新均通过常规更新通道提供。”</p><p>提供更多详细信息。</p><p>MX-25.3_Xfce_ahs_x64.iso</p><p>近期相关新闻和发布</p><p>发行版发布：MX Linux 25.3</p><p>发行版发布：MX Linux 25.2</p><p>发行版发布：MX Linux 25.1</p><p>发行版发布：MX Linux 25</p><p>开发版发布：MX Linux 25 RC1</p><p>开发版发布：MX Linux 25 Beta 1</p><p>更多 MX Linux 新闻...</p><p>MX Linux 是一个面向桌面的 Linux 发行版，基于 Debian 的“Stable”分支，是 antiX 和前 MEPIS Linux 社区的合作项目。它使用 Xfce 作为默认桌面（也提供独立的 KDE Plasma 和 Fluxbox 版本），是一个中等重量的操作系统，旨在将优雅高效的桌面与简单配置、高稳定性、可靠性能和中等占用空间相结合。</p><p>https://forum.mxlinux.org/</p><p>替代用户论坛</p><p>https://mxlinux.org/manuals</p><p>https://www.mxlinux.org/wiki</p><p>https://mxlinux.org/screenshots</p><p>https://mxlinux.org/videos</p><p>https://mxlinux.org/download-links#Mirrors</p></div>
+  <div class="article-body"><p>BSD 发行版：NetBSD 10.2</p><p>该项目宣布发布 NetBSD 10.2，为这个高度可移植的操作系统引入了多项修复和小幅改进。</p><p>自 NetBSD 10.1 以来的变更 - 用户空间：</p><p>calendars：更新了 2026 年移动假日的日期。</p><p>build.sh：修复了使用较新 GCC 版本时的各种编译问题。</p><p>build.sh：新增一个操作 show-revisionid，用于提取一个可用于重建源代码的标记（取决于所使用的版本控制系统）。</p><p>build.sh：当在 build.sh 命令行上传递 -P 并通过 -V 手动设置 MKREPRO_TIMESTAMP 时，使可重现构建正常工作。</p><p>ftp(1)：添加 connect 命令，作为 open 的同义词。</p><p>ftp(1)：简化缓冲区处理以提高性能。</p><p>rmdir(1)：添加 -v 选项。</p><p>telnet(1)：修复了各种安全问题。</p><p>fsck_ffs(8)：允许检查块数超过 2^32 的文件系统。</p><p>httpd(8)：以 &quot;application/octet-stream&quot; 提供 .iso 文件，修复一些内存泄漏，增强文档。</p><p>makefs(8)：遵循 -m 选项以设置 cd9660 的最大光盘大小。</p><p>showmount(8)：在导出的目录后始终打印一个空格。</p><p>syslogd(8)：修复了各种可靠性问题。</p><p>提供了完整的变更列表。</p><p>NetBSD-10.2-amd64.iso</p><p>近期相关新闻和发布</p><p>BSD 发行版：NetBSD 10.2</p><p>BSD 发行版：NetBSD 9.5</p><p>BSD 发行版：NetBSD 11.0</p><p>开发版本：NetBSD 11.0 RC3</p><p>开发版本：NetBSD 11.0 RC1</p><p>BSD 发行版：NetBSD 10.1</p><p>NetBSD 是一个免费、安全且高度可移植的类 UNIX 开源操作系统，可用于多种平台，从 64 位 AlphaServer 和桌面系统到手持续端和嵌入式设备。其简洁的设计和先进的功能使其在生产环境和研究环境中都表现出色，并且由用户支持，提供完整源代码。许多应用程序可通过 NetBSD 软件包集合轻松获取。</p><p>https://www.netbsd.org/</p><p>https://www.netbsd.org/MailingLists/</p><p>替代用户论坛</p><p>https://www.netbsd.org/Documentation/</p><p>https://www.netbsd.org/mirrors/#iso</p><p>https://www.netbsd.org/mirrors/torrents/</p><p>DistroWatch 种子存档</p><p>https://www.netbsd.org/Misc/send-pr.html</p><p>超级用户的 BSD 交叉参考</p><p>在哪里捐赠、购买或试用</p><p>https://www.netb</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12958" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://distrowatch.com/12961" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
