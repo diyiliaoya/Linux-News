@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DistroWatch 周刊，第 1191 期 — Linux 中文速报</title>
+<title>有保质期的发行版？Gravity Linux 是面向 Apple Silicon 的新发行版 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>DistroWatch 周刊，第 1191 期</h1>
+  <h1>有保质期的发行版？Gravity Linux 是面向 Apple Silicon 的新发行版</h1>
 
-  <div class="article-summary">本期 DistroWatch 周刊评测了命令行 shell，并报道了多项开源动态：OpenBSD 引入新的写时复制文件系统，Ubuntu 完成向 Rust 版 Coreutils 的迁移，Void 有超过 100 个软件包急需新维护者，Debian 更新了 Trixie 安装介质，XApps 推出独立网站，Arch 招募志愿者协助分类错误报告，FreeBSD 新服务管理器进入测试阶段，以及 Asahi Linux 对 M3 设备的支持。问答栏目探讨了 Linux 文件名传统，并发布了 Raspberry Pi OS、Parted Magic、Clonezilla Live、MX Linux 等新版本。</div>
+  <div class="article-summary">Gravity Linux 发布了首个 alpha 版本，面向 M4 Mac mini，基于 Fedora 和 KDE Plasma on Wayland。其驱动通过逆向工程开发，目标是最终将所有驱动工作上游至 Linux 内核，届时该发行版将不再必要并计划终止。当前版本支持硬件加速图形，但暂不支持休眠、雷电/USB4 和 USB-C 显示输出，且升级到 beta 需完全重装。</div>
 
-  <div class="article-body"><p>DistroWatch 周刊，第 1191 期（DistroWatch.com 新闻）</p><p>DistroWatch.com 由以下赞助</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW 周刊 / 评测存档</p><p>访客评分与评论</p><p>按评分排列的项目排名</p><p>播客、新闻通讯与评测</p><p>跨发行版比较软件包</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停止的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与提示专栏</p><p>误区与误解专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>可视化发行版家族树</p><p>常见问题</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>OpenBSD 的新 CoW 文件系统</p><p>Ubuntu 完成向基于 Rust 的 Coreutils 迁移</p><p>超过 100 个 Void 软件包需要新维护者</p><p>Debian 更新 Trixie 安装介质</p><p>XApps 获得自己的网站</p><p>比较 openSUSE Leap 和 Tumbleweed 软件包</p><p>Arch 招募志愿者协助分类错误报告</p><p>FreeBSD 新服务管理器准备测试</p><p>Asahi Linux 在 M3 驱动的系统上</p><p>易于使用的 PBX - 托管或自管理</p><p>Linux 电话系统</p><p>免费实时聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程办公应用：iOS 或 Android</p><p>免费视频会议</p><p>3CX 的 VoIP / PBX 操作指南</p><p>别被打个措手不及，制定灾难恢复计划！</p><p>必要的实时聊天报告和统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成</p><p>3CX StartUP 的 5 大杀手级功能</p><p>别做“那种”人 第 1 卷：保管好复杂凭证</p><p>别做“那种”人 第 2 卷：呼叫欺诈</p><p>别做“那种”人 第 3 卷：四大安全提示</p><p>别做“那种”人 第 4 卷：监控你的实例</p><p>红帽周五五条 - 2026 年 9 月 18 日</p><p>Ubuntu 每周新闻通讯 961</p><p>Full Circle 每周新闻</p><p>Distrohoppers' Digest</p><p>最新新闻与更新</p><p>新闻过滤选项</p><p>DistroWatch 周刊，第 1191 期</p><p>评测：命令行 shell</p><p>新闻：被遗弃的 Void 软件包、Ubuntu 完成从 GNU 到 Rust Coreutils 的迁移、OpenBSD 新 CoW 文件系统、GNU Coreutils 新功能</p><p>问答：Linux 上文件名的传统</p><p>上周发布：Raspberry Pi OS 2026-09-15、Parted Magic 26.09、Clonezilla Live 3.3.3-37、MX Linux 25.3</p><p>种子角落：MX Linux、NetBSD、Raspberry Pi OS、TUXEDO OS</p><p>即将发布：Ubuntu 26.10 Beta</p><p>民意调查：命令行 shell 的风格</p><p>阅读本周 DistroWatch 周刊的更多内容……</p><p>Caos Linux NSA 是一个轻量、快速、高效、稳定且安全的 Linux 发行版，适用于服务器、计算节点、网络设备，甚至最新的台式机和笔记本电脑。它由一个拥有众多成熟技能的计算机科学专家团队维护和管理。他们将资源汇集在一起，创建了一个具有关键任务可靠性的多功能操作系统。Caos Linux 设计为可在所有 x86_64 和 i386 硬件上运行，从集群和服务器到生产级设备，再到个人台式机和笔记本电脑。Caos Linux 支持多种软件，基于 GNU/Linux 的最佳方面，并与最流行的企业级 Linux 发行版完全二进制兼容。</p><p>问答：使用编译器标志优化 64 位发行版</p><p>问答：Ubuntu 放弃 32 位软件包的计划</p><p>技巧与提示：使用 osquery 收集系统信息</p><p>技巧与提示：使用 Anbox 在 GNU/Linux 上运行 Android 应用</p><p>问答：远程擦除硬盘</p><p>技巧与提示：GRUB Customizer</p><p>问答：固态硬盘（SSD）的文件系统</p><p>技巧与提示：在 shell 中组合命令</p><p>技巧与提示：Bash 命令行快捷方式与技巧</p><p>技巧与提示：在安装发行版后更改 init 软件</p><p>版权所有 © 2001 - 2026 Atea Ataroa Limited。保留所有权利。所有商标均为其各自所有者的财产。</p><p>更改隐私设置</p><p>联系、更正和建议：</p><p>bc1qxes3k2wq3uqzr074tkwwjmwfe63z</p></div>
+  <div class="article-body"><p>有保质期的发行版？Gravity Linux 是面向 Apple Silicon 的新发行版</p><p>其首个 alpha 版本面向 M4 Mac mini，基于 Fedora，所有驱动工作都瞄准上游 Linux 内核。</p><p>与你对新发布的 Linux 发行版的预期相反，Gravity Linux 有一个长期目标：不再作为一个发行版存在。该项目是面向 Apple Silicon Mac 的发行版，默认搭载 KDE Plasma on Wayland 桌面。</p><p>其中的一切均通过逆向工程构建，确保没有 Apple 源代码、反汇编或泄露的技术信息进入该项目的代码。</p><p>Gravity Linux 的主要推动力来自……，它从……分叉而来，共同目标是将 Linux 带到 Apple Silicon。他们走上这条路是因为在 LLM 使用方面的贡献政策存在分歧。Gravity Linux 的立场在其提交历史中清晰可见，该项目的内核分支带有公开将 AI 编码工具与人类作者并列署名的提交。</p><p>首个版本提供了什么</p><p>工作与不工作内容的概述。</p><p>首个 alpha 版本运行在 M4 上，显示控制器和 GPU 均可工作，并包含 OpenGL ES 3.0 和 OpenGL 3.3 合规性，这意味着硬件加速图形可用。</p><p>这是一个面向开发者的 alpha 版本，存在一些使其不适合日常使用的缺点。休眠不可用，Thunderbolt 和 USB4 支持不存在，USB-C 显示输出不受支持，不过通过 HDMI 输出可以工作。</p><p>关机和重启被描述为不稳定，建议使用电源按钮作为获得可预测体验的变通方法。扬声器音量也被限制以确保硬件安全。</p><p>用户还应了解，当 beta 版本在稍后发布时，需要完全重新安装，因为 Gravity Linux 团队不保证从 alpha 版本的升级路径。</p><p>为你的机器获取它</p><p>curl -fsSL https://install.gravitylinux.org | sh</p><p>有保质期的发行版？</p><p>尽管 M4 Mac mini 是首个目标，但它并不是唯一的目标。当前计划涵盖以及其余的 M4、M4 Pro 和 M4 Max 产品线，一些新贡献者已经在其中几款设备上取得进展。</p><p>M5 则是另一回事。在 M5 Pro 和 M5 Max 硬件上，macOS 27.0 Beta 5 使设备在启动时配置错误，阻止次级 CPU 核心启动。Apple 据称已知晓此问题，但没有关于何时修复的消息。</p><p>Gravity Linux 还计划在发布支持之前将整个 M5 产品线保持在相同的固件版本上，因此在 Apple 解决该问题之前，M5 将一直搁置。</p><p>最终目标是将所有驱动工作上游至 Linux 内核和相关用户空间项目，同时公开记录其逆向工程方法的每一步。</p><p>已经反映了这一方向。除了发行版层脚本之外，该项目还维护 Linux 内核、Mesa 和 U-Boot 的分叉。这些正是这项工作最终需要落地的上游项目。</p><p>一旦上游工作落地，任何主流 Linux 发行版都可以在受支持的 Apple Silicon 硬件上运行，而无需像这样的单独重制版。到那时，Gravity Linux 这个发行版就不再必要，团队也计划在那时终止它。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热衷于开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性的极客。</p><p>PeppermintOS 正从 Xorg 转向 XLibre 以避开 Wayland</p><p>组织现在为 AI 而不仅仅是搜索而转向 OpenSearch</p><p>Signal 将允许你在没有电话号码的情况下注册——只需 3 美元</p><p>18 本编程电子书，1 个捆绑包，以及你的购买</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12959" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/gravity-linux-launch/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DistroWatch 周刊，第 1191 期 — Linux 中文速报</title>
+<title>Lemonade 修复 AMD APU 模型流式传输，因 OpenMOSS ROCm 比 Vulkan 慢约 40 倍而将其移除 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>DistroWatch 周刊，第 1191 期</h1>
+  <h1>Lemonade 修复 AMD APU 模型流式传输，因 OpenMOSS ROCm 比 Vulkan 慢约 40 倍而将其移除</h1>
 
-  <div class="article-summary">本期 DistroWatch 周刊评测了命令行 shell，并报道了多项开源动态：OpenBSD 引入新的写时复制文件系统，Ubuntu 完成向 Rust 版 Coreutils 的迁移，Void 有超过 100 个软件包急需新维护者，Debian 更新了 Trixie 安装介质，XApps 推出独立网站，Arch 招募志愿者协助分类错误报告，FreeBSD 新服务管理器进入测试阶段，以及 Asahi Linux 对 M3 设备的支持。问答栏目探讨了 Linux 文件名传统，并发布了 Raspberry Pi OS、Parted Magic、Clonezilla Live、MX Linux 等新版本。</div>
+  <div class="article-summary">Lemonade 项目发布 2026.39.1 稳定版及 2026.40 候选版，修复了 AMD APU 上模型流式传输的内存检查问题，改为依据 GTT 池而非固定显存划分，从而支持 DeepSeek-V4-Flash 等模型在 Strix Halo 上运行。同时，因 OpenMOSS 的 ROCm 后端性能比 Vulkan 慢约 40 倍，已从 Windows 和 Linux 平台移除。新版本还增加了 JetBrains Junie 启动代理及可配置显存自动驱逐等功能。</div>
 
-  <div class="article-body"><p>DistroWatch 周刊，第 1191 期（DistroWatch.com 新闻）</p><p>DistroWatch.com 由以下赞助</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW 周刊 / 评测存档</p><p>访客评分与评论</p><p>按评分排列的项目排名</p><p>播客、新闻通讯与评测</p><p>跨发行版比较软件包</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停止的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与提示专栏</p><p>误区与误解专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>可视化发行版家族树</p><p>常见问题</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>OpenBSD 的新 CoW 文件系统</p><p>Ubuntu 完成向基于 Rust 的 Coreutils 迁移</p><p>超过 100 个 Void 软件包需要新维护者</p><p>Debian 更新 Trixie 安装介质</p><p>XApps 获得自己的网站</p><p>比较 openSUSE Leap 和 Tumbleweed 软件包</p><p>Arch 招募志愿者协助分类错误报告</p><p>FreeBSD 新服务管理器准备测试</p><p>Asahi Linux 在 M3 驱动的系统上</p><p>易于使用的 PBX - 托管或自管理</p><p>Linux 电话系统</p><p>免费实时聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程办公应用：iOS 或 Android</p><p>免费视频会议</p><p>3CX 的 VoIP / PBX 操作指南</p><p>别被打个措手不及，制定灾难恢复计划！</p><p>必要的实时聊天报告和统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成</p><p>3CX StartUP 的 5 大杀手级功能</p><p>别做“那种”人 第 1 卷：保管好复杂凭证</p><p>别做“那种”人 第 2 卷：呼叫欺诈</p><p>别做“那种”人 第 3 卷：四大安全提示</p><p>别做“那种”人 第 4 卷：监控你的实例</p><p>红帽周五五条 - 2026 年 9 月 18 日</p><p>Ubuntu 每周新闻通讯 961</p><p>Full Circle 每周新闻</p><p>Distrohoppers' Digest</p><p>最新新闻与更新</p><p>新闻过滤选项</p><p>DistroWatch 周刊，第 1191 期</p><p>评测：命令行 shell</p><p>新闻：被遗弃的 Void 软件包、Ubuntu 完成从 GNU 到 Rust Coreutils 的迁移、OpenBSD 新 CoW 文件系统、GNU Coreutils 新功能</p><p>问答：Linux 上文件名的传统</p><p>上周发布：Raspberry Pi OS 2026-09-15、Parted Magic 26.09、Clonezilla Live 3.3.3-37、MX Linux 25.3</p><p>种子角落：MX Linux、NetBSD、Raspberry Pi OS、TUXEDO OS</p><p>即将发布：Ubuntu 26.10 Beta</p><p>民意调查：命令行 shell 的风格</p><p>阅读本周 DistroWatch 周刊的更多内容……</p><p>Caos Linux NSA 是一个轻量、快速、高效、稳定且安全的 Linux 发行版，适用于服务器、计算节点、网络设备，甚至最新的台式机和笔记本电脑。它由一个拥有众多成熟技能的计算机科学专家团队维护和管理。他们将资源汇集在一起，创建了一个具有关键任务可靠性的多功能操作系统。Caos Linux 设计为可在所有 x86_64 和 i386 硬件上运行，从集群和服务器到生产级设备，再到个人台式机和笔记本电脑。Caos Linux 支持多种软件，基于 GNU/Linux 的最佳方面，并与最流行的企业级 Linux 发行版完全二进制兼容。</p><p>问答：使用编译器标志优化 64 位发行版</p><p>问答：Ubuntu 放弃 32 位软件包的计划</p><p>技巧与提示：使用 osquery 收集系统信息</p><p>技巧与提示：使用 Anbox 在 GNU/Linux 上运行 Android 应用</p><p>问答：远程擦除硬盘</p><p>技巧与提示：GRUB Customizer</p><p>问答：固态硬盘（SSD）的文件系统</p><p>技巧与提示：在 shell 中组合命令</p><p>技巧与提示：Bash 命令行快捷方式与技巧</p><p>技巧与提示：在安装发行版后更改 init 软件</p><p>版权所有 © 2001 - 2026 Atea Ataroa Limited。保留所有权利。所有商标均为其各自所有者的财产。</p><p>更改隐私设置</p><p>联系、更正和建议：</p><p>bc1qxes3k2wq3uqzr074tkwwjmwfe63z</p></div>
+  <div class="article-body"><p>Lemonade 修复 AMD APU 模型流式传输，因 OpenMOSS ROCm 比 Vulkan 慢约 40 倍而将其移除</p><p>2026 年 9 月 23 日 03:41 PM EDT。</p><p>与 AMD 保持一致的 Lemonade 开源项目——用于充当本地 AI 服务器——今日发布了 2026.39.1 版本，并发布了下一个版本 2026.40 的候选版本。除了适应新的版本号方案外，今日的 Lemonade SDK 更新还带来了一些值得注意的变化。</p><p>Lemonade 2026.40 候选版现在支持在 AMD 集成 GPU（APU）上流式传输模型，其内存大小依据 APU 的 GTT 池而非固定的显存划分来确定。这是因为一些流式模型（如 DeepSeek-V4-Flash-IQ2XXS-DS4）此前无法在 AMD Ryzen AI Max（Strix Halo）上运行。虽然内存足以运行这些模型，但 Lemonade 之前检查的是较小的显存划分窗口，而不是可寻址的 GTT。因此，这一问题正在被修复，以便在 AMD 集成 GPU/APU 上更好地支持流式模型。</p><p>另一个有趣的变化是，针对 ROCm 的 OpenMOSS 后端在 Windows 和 Linux 上被移除。OpenMOSS 是来自中国的一个 AI 研究计划和模型生态系统。OpenMOSS 的 ROCm 后端被禁用，是因为在相同硬件上它们比使用 Vulkan 后端慢约 40 倍。看起来 OpenMOSS 的 AMD ROCm 代码路径至少存在一些 CPU 回退情况，这导致了巨大的性能差距。</p><p>Lemonade 采取了移除 OpenMOSS ROCm 支持的步骤，直到其能够被妥善修复，并分享了 OpenMOSS ROCm 糟糕的性能数据。</p><p>Lemonade 2026.40 RC 还新增了针对 JetBrains 的 Junie 的启动代理。此外还有其他增强功能，详见……</p><p>今日发布的版本带来了可配置的显存自动驱逐及其他较小改动。这是新版本号系统下的首个稳定版本，该系统依赖年份和周数。</p><p>NVIDIA 发起的开放安全 AI 联盟迁至 Linux 基金会</p><p>AI/LLM 使用正成为对开源项目维护者的“拒绝服务攻击”</p><p>Linus Torvalds 经历了一场地狱般的调试会话，AI“极大地帮助”了他</p><p>KTransformers 0.7 扩展 AVX-512 支持，惠及 AMD EPYC 服务器</p><p>Lemonade 11.6 集成 Muse-Glimmer 30B、实验性 TheNoise ROCm 图像生成</p><p>OpenAI 将 ChatGPT 桌面应用带到 Linux</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他……</p><p>Linux 7.4 的简单优化可使文件读取速度提高约 39%</p><p>Google“难以维护”的 Binder C Linux 驱动将被移除，转而使用 Rust</p><p>Ubuntu 26.10 将 cp、mv 和 rm 迁移至 Rust Coreutils，实现 100% 过渡</p><p>在享受无广告 Phoronix 的同时，帮助 Linux 硬件测试与评测继续</p><p>Ubuntu 26.10 切换至 Linux 7.3 内核</p><p>孤儿 VM：在主机内核离线进行重启/更新时保持 VM 不间断运行</p><p>阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的代理式操作系统</p><p>Valve 推出 Pyrowave 视频编解码器测试版，用于低延迟流媒体</p><p>同时享受无广告浏览、</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12959" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Lemonade-2026.40-RC" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

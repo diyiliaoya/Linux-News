@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DistroWatch 周刊，第 1191 期 — Linux 中文速报</title>
+<title>从 JDK 8 到 OpenJDK 27 的 Java 性能基准测试 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>DistroWatch 周刊，第 1191 期</h1>
+  <h1>从 JDK 8 到 OpenJDK 27 的 Java 性能基准测试</h1>
 
-  <div class="article-summary">本期 DistroWatch 周刊评测了命令行 shell，并报道了多项开源动态：OpenBSD 引入新的写时复制文件系统，Ubuntu 完成向 Rust 版 Coreutils 的迁移，Void 有超过 100 个软件包急需新维护者，Debian 更新了 Trixie 安装介质，XApps 推出独立网站，Arch 招募志愿者协助分类错误报告，FreeBSD 新服务管理器进入测试阶段，以及 Asahi Linux 对 M3 设备的支持。问答栏目探讨了 Linux 文件名传统，并发布了 Raspberry Pi OS、Parted Magic、Clonezilla Live、MX Linux 等新版本。</div>
+  <div class="article-summary">本文对从 JDK 8 到 OpenJDK 27 的主要 OpenJDK 版本进行了性能基准测试。测试在搭载 AMD Ryzen Threadripper 9980X 的 System76 Thelio Major 工作站上进行，运行 Fedora Workstation 44，使用官方 OpenJDK 二进制文件和默认配置，通过 DaCapoBench 和 Renaissance 基准测试评估了十多年来 Java 运行时性能的演变。</div>
 
-  <div class="article-body"><p>DistroWatch 周刊，第 1191 期（DistroWatch.com 新闻）</p><p>DistroWatch.com 由以下赞助</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW 周刊 / 评测存档</p><p>访客评分与评论</p><p>按评分排列的项目排名</p><p>播客、新闻通讯与评测</p><p>跨发行版比较软件包</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停止的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与提示专栏</p><p>误区与误解专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>可视化发行版家族树</p><p>常见问题</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>OpenBSD 的新 CoW 文件系统</p><p>Ubuntu 完成向基于 Rust 的 Coreutils 迁移</p><p>超过 100 个 Void 软件包需要新维护者</p><p>Debian 更新 Trixie 安装介质</p><p>XApps 获得自己的网站</p><p>比较 openSUSE Leap 和 Tumbleweed 软件包</p><p>Arch 招募志愿者协助分类错误报告</p><p>FreeBSD 新服务管理器准备测试</p><p>Asahi Linux 在 M3 驱动的系统上</p><p>易于使用的 PBX - 托管或自管理</p><p>Linux 电话系统</p><p>免费实时聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程办公应用：iOS 或 Android</p><p>免费视频会议</p><p>3CX 的 VoIP / PBX 操作指南</p><p>别被打个措手不及，制定灾难恢复计划！</p><p>必要的实时聊天报告和统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成</p><p>3CX StartUP 的 5 大杀手级功能</p><p>别做“那种”人 第 1 卷：保管好复杂凭证</p><p>别做“那种”人 第 2 卷：呼叫欺诈</p><p>别做“那种”人 第 3 卷：四大安全提示</p><p>别做“那种”人 第 4 卷：监控你的实例</p><p>红帽周五五条 - 2026 年 9 月 18 日</p><p>Ubuntu 每周新闻通讯 961</p><p>Full Circle 每周新闻</p><p>Distrohoppers' Digest</p><p>最新新闻与更新</p><p>新闻过滤选项</p><p>DistroWatch 周刊，第 1191 期</p><p>评测：命令行 shell</p><p>新闻：被遗弃的 Void 软件包、Ubuntu 完成从 GNU 到 Rust Coreutils 的迁移、OpenBSD 新 CoW 文件系统、GNU Coreutils 新功能</p><p>问答：Linux 上文件名的传统</p><p>上周发布：Raspberry Pi OS 2026-09-15、Parted Magic 26.09、Clonezilla Live 3.3.3-37、MX Linux 25.3</p><p>种子角落：MX Linux、NetBSD、Raspberry Pi OS、TUXEDO OS</p><p>即将发布：Ubuntu 26.10 Beta</p><p>民意调查：命令行 shell 的风格</p><p>阅读本周 DistroWatch 周刊的更多内容……</p><p>Caos Linux NSA 是一个轻量、快速、高效、稳定且安全的 Linux 发行版，适用于服务器、计算节点、网络设备，甚至最新的台式机和笔记本电脑。它由一个拥有众多成熟技能的计算机科学专家团队维护和管理。他们将资源汇集在一起，创建了一个具有关键任务可靠性的多功能操作系统。Caos Linux 设计为可在所有 x86_64 和 i386 硬件上运行，从集群和服务器到生产级设备，再到个人台式机和笔记本电脑。Caos Linux 支持多种软件，基于 GNU/Linux 的最佳方面，并与最流行的企业级 Linux 发行版完全二进制兼容。</p><p>问答：使用编译器标志优化 64 位发行版</p><p>问答：Ubuntu 放弃 32 位软件包的计划</p><p>技巧与提示：使用 osquery 收集系统信息</p><p>技巧与提示：使用 Anbox 在 GNU/Linux 上运行 Android 应用</p><p>问答：远程擦除硬盘</p><p>技巧与提示：GRUB Customizer</p><p>问答：固态硬盘（SSD）的文件系统</p><p>技巧与提示：在 shell 中组合命令</p><p>技巧与提示：Bash 命令行快捷方式与技巧</p><p>技巧与提示：在安装发行版后更改 init 软件</p><p>版权所有 © 2001 - 2026 Atea Ataroa Limited。保留所有权利。所有商标均为其各自所有者的财产。</p><p>更改隐私设置</p><p>联系、更正和建议：</p><p>bc1qxes3k2wq3uqzr074tkwwjmwfe63z</p></div>
+  <div class="article-body"><p>从 JDK 8 到 OpenJDK 27 的 Java 性能基准测试 - Phoronix</p><p>从 JDK 8 到 OpenJDK 27 的 Java 性能基准测试</p><p>发布于 2026 年 9 月 23 日美国东部时间上午 10:17。</p><p>随着最近的发布，由于已有几年没有关注 OpenJDK Java 性能，我开始进行一些新的基准测试。一发不可收拾，我最终重新测试了所有主要的 OpenJDK 版本，一直追溯到古老的 JDK 8。</p><p>使用搭载 AMD Ryzen Threadripper 9980X 的 System76 Thelio Major 工作站，运行 Fedora Workstation 44，我对从 Java 8 时代以来的所有 OpenJDK 版本进行了基准测试。不过，所使用的一些 Java 基准测试在 OpenJDK 11 之前的版本上最终出现了问题。</p><p>为了严谨性和可复现性，在这次 Java 运行时性能评估中，每个 OpenJDK 版本都使用默认配置/设置和官方 OpenJDK 二进制文件进行开箱即用的测试。</p><p>因此，对于那些好奇 OpenJDK Java 运行时性能从十多年前（2014 年）的 OpenJDK 8 时代以来如何演变的人，以下是各种 DaCapoBench 和 Renaissance Java 基准测试的结果。</p><p>Linux 7.3 在 Intel Panther Lake / Framework Laptop 13 Pro 上带来了一些性能提升</p><p>AMD EPYC 在 Linux 7.3 上的早期基准测试显示性能提升即将到来</p><p>Linux 7.3 包含许多令人兴奋的改进、新硬件支持以及更快的 Btrfs</p><p>Linux 7.2 与 Linux 7.3 上的 Btrfs、EXT4、F2FS 和 XFS 性能对比</p><p>在 Linux 7.3 上对 Btrfs 进行基准测试，性能提升令人难以置信</p><p>早期 Linux 7.3 内核基准测试显示了一些性能改进和一些退步</p><p>同时拥有无广告浏览、</p><p>单页文章视图</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026，</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12959" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/review/java-8-openjdk-27-benchmarks" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

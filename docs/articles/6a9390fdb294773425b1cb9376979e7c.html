@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PeppermintOS 从 Xorg 转向 XLibre 以避开 Wayland — Linux 中文速报</title>
+<title>高通大力宣传骁龙X2笔记本的Linux支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>PeppermintOS 从 Xorg 转向 XLibre 以避开 Wayland</h1>
+  <h1>高通大力宣传骁龙X2笔记本的Linux支持</h1>
 
-  <div class="article-summary">PeppermintOS 宣布在其即将更新的 Debian 和 Devuan ISO 中，将显示服务器从即将停止维护的 Xorg 切换到 XLibre，以继续支持 X11 并暂不转向 Wayland。XLibre 是 Xorg 的替代分支，旨在维护和现代化 X11 代码库。尽管 XLibre 在 Linux 社区存在争议，PeppermintOS 表示测试进展顺利，且用户界面和体验将保持不变。</div>
+  <div class="article-summary">在夏威夷骁龙峰会上，高通展示了骁龙X2系列笔记本的Linux bring-up，并发布了早期开发者预览版，采用定制Linux内核与Debian 13用户空间。大量初始支持已上游化，Hexagon NPU、Adreno GPU（Mesa Freedreno/Turnip及Rusticl）等仍在推进。高通表示HP、华硕和HUMAIN计划在2027年上半年推出搭载Linux的骁龙X2设备。</div>
 
-  <div class="article-body"><p>PeppermintOS 从 Xorg 转向 XLibre 以避开 Wayland</p><p>PeppermintOS 从 Xorg 转向 XLibre 以避开 Wayland</p><p>这个轻量级发行版将在其即将更新的 Debian 和 Devuan ISO 中搭载 XLibre 显示服务器，并表示在可预见的未来没有转向 Wayland 的计划。</p><p>如果你运行一个轻量级发行版，并且不喜欢 Wayland 很可能成为默认选择这一事实，那么 PeppermintOS 有一些你应该知道的消息。它将在下一轮 ISO 更新中，将其显示服务器从即将退役的 Xorg 切换到 XLibre。</p><p>这看起来可能是一个明智的决定，因为它让 X11 继续存活，并（暂时）跳过了 Wayland。然而，XLibre 是目前 Linux 世界中颇具争议的项目之一。至少，选择 XLibre 不会让某些人满意。</p><p>远离 Wayland 和 Xorg</p><p>PeppermintOS 宣布，将在其即将推出的版本中，将显示服务器从 xorg-server 迁移到 XLibre。</p><p>原因很简单。原始 Xorg 的开发已经停滞，大多数发行版已转向 Wayland。XLibre 的存在是为了继续维护、现代化和清理代码库，服务于那些仍然偏好 X11 的用户。</p><p>XLibre 被构建为 xorg 的直接替代品，旨在不破坏标准桌面环境、窗口管理器或旧版驱动，PeppermintOS 表示其迄今为止的测试进展符合预期。</p><p>PeppermintOS 表示没有立即转向 Wayland 的计划，并指出 XFCE 的路线图是原生支持 Xorg 和 Wayland 两者。XFCE 是 PeppermintOS 的默认桌面环境。</p><p>顺便提一下，这是该项目首个基于 Debian 的 ISO，未使用 Debian 传统的 live-build 工具构建，而是转向了新的构建方式，这与 PeppermintOS 已为其 Devuan 版本所做的类似。</p><p>那个 Devuan 构建也已更新为使用 XLibre，并已接近社区测试阶段。一个 64 位 Debian 旗舰每日构建版已可供测试，PeppermintOS 预计构建过程本身会有一些粗糙之处。</p><p>对现有 PeppermintOS 用户来说，重要的一点是界面和整体体验将与当前稳定版保持一致。变化是在底层进行的。</p><p>选择 XLibre 会招来一些白眼</p><p>为什么？因为批评者认为 XLibre 更像是一个政治分支，而非技术分支。此外，XLibre 也因一些不太正面的原因出现在新闻中。</p><p>XLibre 是 X.Org 服务器的一个分支，由 Enrico Weigelt 于 2025 年中期发起，他曾是 2024 年 Xorg 的最高提交贡献者。在该分支公开前后，Weigelt 被禁止使用 freedesktop.org 的 GitLab。</p><p>Arch Linux 在今年早些时候从官方 wiki 中删除了 XLibre 的页面，理由是行为准则中禁止诋毁其他 FOSS 项目。该软件包本身仍在 AUR 中可用。</p><p>Artix Linux 在 2026 年 4 月将 XLibre 设为默认 X 服务器，随后又逆转了决定。在其 2026 年 8 月的版本中，它切换回 Xorg 作为默认，并表示这一决定是在收到异常大量的 XLibre 相关错误报告后做出的。</p><p>Artix 随后更进一步，宣布将完全停止打包 XLibre。他们分享说，这一切换回退引来了 XLibre 的强烈反对，一位被称为“Artist”的资深 Artix 开发者遭到针对和骚扰，最终辞职。Artix 上现有的 XLibre 用户正被迁回相应的 Xorg 软件包。</p><p>XLibre 存在争议并不意味着它在技术上有问题。争议关乎项目的行为和政治，而非它是否能绘制窗口。PeppermintOS 正在测试它，并发现运行良好。让我们希望它能保持这种状态，并让我们在显示服务器领域继续拥有选择。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>13 年前创建 It's FOSS 来分享我的 Linux 冒险。拥有工程硕士学位和多年 IT 行业经验。</p></div>
+  <div class="article-body"><p>高通在夏威夷举行的骁龙峰会上，大力宣传即将为骁龙X2系列笔记本提供的Linux支持。</p><p>近几个月来，我注意到高通工程师在将骁龙X2 Elite Linux支持的各项内容上游化方面活动增多，包括为不同X2笔记本提供设备树支持等。看到高通围绕Linux/开源的活动如此活跃，令人耳目一新，而且相比X1系列明显增加。许多工作仍在落地，各种问题也在解决中，但这无疑是明显的进步。</p><p>高通今天在骁龙峰会上通过展示其Linux bring-up，进一步巩固了X2的Linux行动。他们发布了骁龙X2 Linux的早期开发者预览版。他们使用定制的Linux内核构建，搭配Debian 13用户空间。大量初始启用工作已经上游化，而围绕Hexagon NPU以及Mesa中Adreno GPU支持（Freedreno和Turnip驱动，甚至Rusticl支持）的更多工作仍在进行。电源、散热和可靠性方面也有更多工作有待开展。</p><p>今天他们还大力宣传了骁龙X2系列即将获得的Linux支持。该公告中引人注目的一句话是：</p><p>“Linux是整个行业都可以构建的基础——而这仅仅是开始。我们的合作伙伴HP、ASUS和HUMAIN计划在2027年上半年提供Linux支持，以便他们的设备在新操作系统上为用户带来骁龙X2系列所预期的出色体验。”</p><p>如果HP和ASUS等厂商能在2027年上半年正式支持骁龙X2硬件上的Linux，那将非常棒。</p><p>继续关注骁龙X2 Linux支持的进展，以及最终其支持程度和功耗/性能与Linux上AMD Ryzen和Intel Core Ultra笔记本竞品的对比，将令人兴奋。希望我们能在Phoronix获得骁龙X2系列笔记本的评测样机，用于Linux测试和性能基准测试。就最初的笔记本测试而言，我自购了硬件进行初步Linux测试，尽管如今硬件价格压力大、网络出版/广告领域艰难，遗憾的是，这种情况不会再发生了。</p><p>高通在发布次日即发布Adreno 850开源GPU驱动补丁</p><p>Linux 7.3在遇到太多bug后回退Logitech Bolt接收器HID++</p><p>SPEC发布面向Linux的SPECviewperf 15.0.1</p><p>Linux 7.3添加Logitech G502 X Lightspeed USB支持、ELECOM M-XT4DRBK</p><p>缓存感知调度修复已排队提交至Linux 7.3，并回移植到7.2</p><p>补丁发布，旨在将Linux内核支持主线化至Amazon Kindle 4</p><p>Michael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Linux 7.4的简单优化可使文件读取速度提高约39%</p><p>谷歌“维护痛苦”的Binder C Linux驱动将被移除，改用Rust</p><p>Ubuntu 26.10将cp、mv和rm迁移至Rust Coreutils，实现100%过渡</p><p>帮助Linux硬件测试与评测继续，同时享受无广告的Phoronix</p><p>Ubuntu 26.10切换至Linux 7.3内核</p><p>孤儿VM：在宿主内核离线重启/更新时保持VM不间断运行</p><p>阿里巴巴向Omarchy捐赠300万美元，致力于打造“理想”代理式操作系统</p><p>Valve在测试版中推出Pyrowave视频编解码器，用于低延迟流媒体</p><p>享受无广告浏览，</p><p>单页文章视图</p><p>法律免责声明、隐私</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/peppermintos-xlibre/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Qualcomm-Talks-Up-X2-Linux" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DistroWatch 周刊，第 1191 期 — Linux 中文速报</title>
+<title>Ubuntu因AI加速内核安全更新 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>DistroWatch 周刊，第 1191 期</h1>
+  <h1>Ubuntu因AI加速内核安全更新</h1>
 
-  <div class="article-summary">本期 DistroWatch 周刊评测了命令行 shell，并报道了多项开源动态：OpenBSD 引入新的写时复制文件系统，Ubuntu 完成向 Rust 版 Coreutils 的迁移，Void 有超过 100 个软件包急需新维护者，Debian 更新了 Trixie 安装介质，XApps 推出独立网站，Arch 招募志愿者协助分类错误报告，FreeBSD 新服务管理器进入测试阶段，以及 Asahi Linux 对 M3 设备的支持。问答栏目探讨了 Linux 文件名传统，并发布了 Raspberry Pi OS、Parted Magic、Clonezilla Live、MX Linux 等新版本。</div>
+  <div class="article-summary">Canonical因AI辅助发现的安全漏洞激增，将Ubuntu内核更新改为统一的每两周稳定版更新周期，实际每周都有内核修复推送。此前采用4/2更新节奏，现改为第一周准备补丁和构建供测试，第二周完成测试认证并推送稳定更新。用户可启用更新通道提前获取补丁，但存在风险。Canonical还计划在漏洞确认后24-48小时内提供或记录缓解措施。</div>
 
-  <div class="article-body"><p>DistroWatch 周刊，第 1191 期（DistroWatch.com 新闻）</p><p>DistroWatch.com 由以下赞助</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW 周刊 / 评测存档</p><p>访客评分与评论</p><p>按评分排列的项目排名</p><p>播客、新闻通讯与评测</p><p>跨发行版比较软件包</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停止的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与提示专栏</p><p>误区与误解专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>可视化发行版家族树</p><p>常见问题</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>OpenBSD 的新 CoW 文件系统</p><p>Ubuntu 完成向基于 Rust 的 Coreutils 迁移</p><p>超过 100 个 Void 软件包需要新维护者</p><p>Debian 更新 Trixie 安装介质</p><p>XApps 获得自己的网站</p><p>比较 openSUSE Leap 和 Tumbleweed 软件包</p><p>Arch 招募志愿者协助分类错误报告</p><p>FreeBSD 新服务管理器准备测试</p><p>Asahi Linux 在 M3 驱动的系统上</p><p>易于使用的 PBX - 托管或自管理</p><p>Linux 电话系统</p><p>免费实时聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程办公应用：iOS 或 Android</p><p>免费视频会议</p><p>3CX 的 VoIP / PBX 操作指南</p><p>别被打个措手不及，制定灾难恢复计划！</p><p>必要的实时聊天报告和统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成</p><p>3CX StartUP 的 5 大杀手级功能</p><p>别做“那种”人 第 1 卷：保管好复杂凭证</p><p>别做“那种”人 第 2 卷：呼叫欺诈</p><p>别做“那种”人 第 3 卷：四大安全提示</p><p>别做“那种”人 第 4 卷：监控你的实例</p><p>红帽周五五条 - 2026 年 9 月 18 日</p><p>Ubuntu 每周新闻通讯 961</p><p>Full Circle 每周新闻</p><p>Distrohoppers' Digest</p><p>最新新闻与更新</p><p>新闻过滤选项</p><p>DistroWatch 周刊，第 1191 期</p><p>评测：命令行 shell</p><p>新闻：被遗弃的 Void 软件包、Ubuntu 完成从 GNU 到 Rust Coreutils 的迁移、OpenBSD 新 CoW 文件系统、GNU Coreutils 新功能</p><p>问答：Linux 上文件名的传统</p><p>上周发布：Raspberry Pi OS 2026-09-15、Parted Magic 26.09、Clonezilla Live 3.3.3-37、MX Linux 25.3</p><p>种子角落：MX Linux、NetBSD、Raspberry Pi OS、TUXEDO OS</p><p>即将发布：Ubuntu 26.10 Beta</p><p>民意调查：命令行 shell 的风格</p><p>阅读本周 DistroWatch 周刊的更多内容……</p><p>Caos Linux NSA 是一个轻量、快速、高效、稳定且安全的 Linux 发行版，适用于服务器、计算节点、网络设备，甚至最新的台式机和笔记本电脑。它由一个拥有众多成熟技能的计算机科学专家团队维护和管理。他们将资源汇集在一起，创建了一个具有关键任务可靠性的多功能操作系统。Caos Linux 设计为可在所有 x86_64 和 i386 硬件上运行，从集群和服务器到生产级设备，再到个人台式机和笔记本电脑。Caos Linux 支持多种软件，基于 GNU/Linux 的最佳方面，并与最流行的企业级 Linux 发行版完全二进制兼容。</p><p>问答：使用编译器标志优化 64 位发行版</p><p>问答：Ubuntu 放弃 32 位软件包的计划</p><p>技巧与提示：使用 osquery 收集系统信息</p><p>技巧与提示：使用 Anbox 在 GNU/Linux 上运行 Android 应用</p><p>问答：远程擦除硬盘</p><p>技巧与提示：GRUB Customizer</p><p>问答：固态硬盘（SSD）的文件系统</p><p>技巧与提示：在 shell 中组合命令</p><p>技巧与提示：Bash 命令行快捷方式与技巧</p><p>技巧与提示：在安装发行版后更改 init 软件</p><p>版权所有 © 2001 - 2026 Atea Ataroa Limited。保留所有权利。所有商标均为其各自所有者的财产。</p><p>更改隐私设置</p><p>联系、更正和建议：</p><p>bc1qxes3k2wq3uqzr074tkwwjmwfe63z</p></div>
+  <div class="article-body"><p>Ubuntu加速内核安全更新，因AI发现更多CVE</p><p>由于Canonical试图跟上AI辅助发现的安全漏洞“爆炸式”增长，Ubuntu内核更新将变得更加频繁。</p><p>该公司正在采用一种“统一”的两周稳定版更新（SRU）周期来发布内核更新，这将加快补丁、测试和向用户发布修复的速度。</p><p>Ubuntu内核工程师此前遵循4/2更新计划，即每4周发布一次完整内核更新，并在2周后发布紧急更新（如有需要）。那是在因推出补丁耗时过长而受到批评之后。</p><p>现在，事情再次提速。</p><p>更新将遵循新的“两周”重复节奏，实际上意味着Ubuntu内核修复将每周推送一次，如下图所示：</p><p>新的内核SRU将如何运作</p><p>这一变化的原因显而易见。Canonical将漏洞和CVE的“爆炸式”增长——主要由研究人员使用AI模型和代理发现问题所驱动——描述为需要新方法。</p><p>这很合理。缺陷被发现的速度比以往任何时候都快，因此补丁也必须跟上。否则，依赖Ubuntu的用户——以及公司——可能面临攻击或利用的风险。</p><p>Canonical的内核工程师现在将遵循两周计划。第一周准备补丁和构建，并提供测试；第二周完成测试和认证，并向系统推送稳定更新。</p><p>那些认为自己需要更快覆盖、不希望等待Canonical完成测试的用户，可以启用更新通道以更快更新——但这本身并非没有风险。</p><p>对于那些可能觉得需要立即获得漏洞保护的用户，Canonical表示，其目标是在漏洞被确认后24-48小时内提供或记录变通方法，以“在补丁发布前……让环境进入可防御、更安全的状态”。</p><p>如果已知没有安全的变通方法，该公司表示将转而引导用户采取通用加固步骤。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12959" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/ubuntu-kernel-security-updates-faster" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

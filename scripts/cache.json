@@ -12318,5 +12318,148 @@
     "title_zh": "Kdenlive 26.08 视频编辑器新增轨道重排序与更佳时间线编辑功能",
     "summary_zh": "Kdenlive 26.08 版本发布，新增轨道重排序和改进的时间线编辑功能，同时带来工作流增强，使视频编辑更加灵活高效。",
     "fulltext_zh": "Kdenlive 26.08 新增轨道重排序和改进的时间线编辑功能，同时带来工作流增强，使视频编辑更加灵活高效。\n\n文章《Kdenlive 26.08 视频编辑器新增轨道重排序与更佳时间线编辑功能》首发于 Linux Today。"
+  },
+  "1dc3db3129f1aaf49bde009964180f02": {
+    "id": "1dc3db3129f1aaf49bde009964180f02",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/ubuntu-kernel-security-updates-faster",
+    "title_en": "Ubuntu speeds up kernel security updates because of AI",
+    "summary_en": "Ubuntu kernel security updates will arrive on a near-weekly basis, as Canonical tries to keep pace with an 'explosion' of issues being detected through AI.\nYou're reading Ubuntu speeds up kernel security updates because of AI, a blog post from OMG! Ubuntu. Do not reproduce elsewhere without permission.",
+    "pub_date": "Thu, 24 Sep 2026 01:01:42 +0000",
+    "title_zh": "Ubuntu因AI加速内核安全更新",
+    "summary_zh": "Canonical因AI辅助发现的安全漏洞激增，将Ubuntu内核更新改为统一的每两周稳定版更新周期，实际每周都有内核修复推送。此前采用4/2更新节奏，现改为第一周准备补丁和构建供测试，第二周完成测试认证并推送稳定更新。用户可启用更新通道提前获取补丁，但存在风险。Canonical还计划在漏洞确认后24-48小时内提供或记录缓解措施。",
+    "fulltext_zh": "Ubuntu加速内核安全更新，因AI发现更多CVE\n\n由于Canonical试图跟上AI辅助发现的安全漏洞“爆炸式”增长，Ubuntu内核更新将变得更加频繁。\n\n该公司正在采用一种“统一”的两周稳定版更新（SRU）周期来发布内核更新，这将加快补丁、测试和向用户发布修复的速度。\n\nUbuntu内核工程师此前遵循4/2更新计划，即每4周发布一次完整内核更新，并在2周后发布紧急更新（如有需要）。那是在因推出补丁耗时过长而受到批评之后。\n\n现在，事情再次提速。\n\n更新将遵循新的“两周”重复节奏，实际上意味着Ubuntu内核修复将每周推送一次，如下图所示：\n\n新的内核SRU将如何运作\n\n这一变化的原因显而易见。Canonical将漏洞和CVE的“爆炸式”增长——主要由研究人员使用AI模型和代理发现问题所驱动——描述为需要新方法。\n\n这很合理。缺陷被发现的速度比以往任何时候都快，因此补丁也必须跟上。否则，依赖Ubuntu的用户——以及公司——可能面临攻击或利用的风险。\n\nCanonical的内核工程师现在将遵循两周计划。第一周准备补丁和构建，并提供测试；第二周完成测试和认证，并向系统推送稳定更新。\n\n那些认为自己需要更快覆盖、不希望等待Canonical完成测试的用户，可以启用更新通道以更快更新——但这本身并非没有风险。\n\n对于那些可能觉得需要立即获得漏洞保护的用户，Canonical表示，其目标是在漏洞被确认后24-48小时内提供或记录变通方法，以“在补丁发布前……让环境进入可防御、更安全的状态”。\n\n如果已知没有安全的变通方法，该公司表示将转而引导用户采取通用加固步骤。"
+  },
+  "c3e8fded6f90b67a192e2839ec90d80e": {
+    "id": "c3e8fded6f90b67a192e2839ec90d80e",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/tmog-task-manager-linux-beta",
+    "title_en": "Ex-Microsoft dev builds a new task manager for Linux",
+    "summary_en": "TMOG is a cross-platform task manager for Windows, macOS and Linux created by ex-Microsoft developer Dave Plummer, who created Windows' first one.\nYou're reading Ex-Microsoft dev builds a new task manager for Linux, a blog post from OMG! Ubuntu. Do not reproduce elsewhere without permission.",
+    "pub_date": "Wed, 23 Sep 2026 21:56:33 +0000",
+    "title_zh": "前微软开发者打造全新Linux任务管理器",
+    "summary_zh": "前微软开发者Dave Plummer曾在上世纪90年代开发了Windows原版任务管理器，如今他用Claude Code辅助编写了一款名为TMOG的新系统监视器，支持Linux、macOS和Windows。该应用采用共享C++核心，Linux版基于Qt 6，提供实时系统仪表盘、弹出迷你模式及复古皮肤。其“飞行记录器”等高级功能需付费解锁，目前处于测试阶段。",
+    "fulltext_zh": "TMOG：前微软开发者新任务管理器支持Linux\n\n首款Windows应用背后的开发者用氛围编程打造了一款新的系统监视器应用——它也能在macOS和Linux上运行。\n\n（任务管理器OG）是Dave Plummer的作品，他在20世纪90年代开发了原版任务管理器。\n\n虽然它看起来像是廉价科幻电影背景屏幕上运行的东西——这种美学经过90年代美国电视多年的熏陶，让我觉得挺酷，抱歉——但它确实是一个真正的、功能性的任务管理器，可跨操作系统运行。\n\n从规格到软件，Plummer使用了Claude Code。他必须输入一份100多页的文档，详细说明他想要什么、如何实现以及为什么，然后从那里开始，并补充说，仅仅告诉Claude Code写一个系统监视器，肯定会导致“垃圾”。\n\n看起来花哨，但它是严肃的工具\n\n该应用的Linux版本使用Qt 6，macOS版本使用Swift/AppKit，Windows版本在Windows上使用Direct2D。所有版本都构建在共享的C++核心之上。\n\nTMOG提供系统使用数据的实时仪表盘，包括每个进程的资源使用、功耗、CPU速度、核心状态、网络连接、磁盘空间——所有你期望的东西。它有着明亮的霓虹氛围，外加一系列复古“配色主题”。\n\n它还有一个更小的弹出迷你模式——带有可选的复古风格皮肤，包括一个Winamp皮肤——如果你真的想随时掌握系统动态，可以将其浮动在其他窗口之上。\n\n弹出模式有可选皮肤\n\n尽管它做出了视觉上的宣言，但TMOG并非作为噱头而来；它的目的是改进系统诊断。\n\n我们大多数人只有在注意到系统出问题时才会打开系统监视器，但这往往是一个问题，使得更难将异常追溯到其原因（这就是日志有用的原因）。\n\nTMOG包含一个“飞行记录器”功能，使用户能够回放数据，帮助在问题发生时识别问题，而不是事后。\n\n但该功能以及其他功能，包括CPU基准测试工具，仅能通过39.95美元的“付费专业版”访问。\n\n想在Ubuntu上试用TMOG，可以：它可作为Deb安装包、AppImage或可执行二进制文件下载，支持64位Intel/AMD和Aarch/Arm64设备。\n\n由于它处于测试阶段，预计会有bug，虽然下载和使用实时监控是免费的，但如前所述，某些功能需要付费计划才能访问。\n\n我知道有些读者不喜欢心血来潮的小玩意，所以我添加了一个网站标签（需要一个更好的名字），用来表示AI辅助项目（至少是那些公开其AI来源或代码中有明显迹象的项目）。"
+  },
+  "179b05bbef1bc01307d6972982db9778": {
+    "id": "179b05bbef1bc01307d6972982db9778",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/gravity-linux-launch/",
+    "title_en": "Distro With an Expiry Date?Gravity Linux is a New Distro for Apple Silicon",
+    "summary_en": "Its first alpha targets the M4 Mac mini and runs on a Fedora base, with all driver work aimed at the upstream Linux kernel.",
+    "pub_date": "Wed, 23 Sep 2026 15:48:07 GMT",
+    "title_zh": "有保质期的发行版？Gravity Linux 是面向 Apple Silicon 的新发行版",
+    "summary_zh": "Gravity Linux 发布了首个 alpha 版本，面向 M4 Mac mini，基于 Fedora 和 KDE Plasma on Wayland。其驱动通过逆向工程开发，目标是最终将所有驱动工作上游至 Linux 内核，届时该发行版将不再必要并计划终止。当前版本支持硬件加速图形，但暂不支持休眠、雷电/USB4 和 USB-C 显示输出，且升级到 beta 需完全重装。",
+    "fulltext_zh": "有保质期的发行版？Gravity Linux 是面向 Apple Silicon 的新发行版\n\n其首个 alpha 版本面向 M4 Mac mini，基于 Fedora，所有驱动工作都瞄准上游 Linux 内核。\n\n与你对新发布的 Linux 发行版的预期相反，Gravity Linux 有一个长期目标：不再作为一个发行版存在。该项目是面向 Apple Silicon Mac 的发行版，默认搭载 KDE Plasma on Wayland 桌面。\n\n其中的一切均通过逆向工程构建，确保没有 Apple 源代码、反汇编或泄露的技术信息进入该项目的代码。\n\nGravity Linux 的主要推动力来自……，它从……分叉而来，共同目标是将 Linux 带到 Apple Silicon。他们走上这条路是因为在 LLM 使用方面的贡献政策存在分歧。Gravity Linux 的立场在其提交历史中清晰可见，该项目的内核分支带有公开将 AI 编码工具与人类作者并列署名的提交。\n\n首个版本提供了什么\n\n工作与不工作内容的概述。\n\n首个 alpha 版本运行在 M4 上，显示控制器和 GPU 均可工作，并包含 OpenGL ES 3.0 和 OpenGL 3.3 合规性，这意味着硬件加速图形可用。\n\n这是一个面向开发者的 alpha 版本，存在一些使其不适合日常使用的缺点。休眠不可用，Thunderbolt 和 USB4 支持不存在，USB-C 显示输出不受支持，不过通过 HDMI 输出可以工作。\n\n关机和重启被描述为不稳定，建议使用电源按钮作为获得可预测体验的变通方法。扬声器音量也被限制以确保硬件安全。\n\n用户还应了解，当 beta 版本在稍后发布时，需要完全重新安装，因为 Gravity Linux 团队不保证从 alpha 版本的升级路径。\n\n为你的机器获取它\n\ncurl -fsSL https://install.gravitylinux.org | sh\n\n有保质期的发行版？\n\n尽管 M4 Mac mini 是首个目标，但它并不是唯一的目标。当前计划涵盖以及其余的 M4、M4 Pro 和 M4 Max 产品线，一些新贡献者已经在其中几款设备上取得进展。\n\nM5 则是另一回事。在 M5 Pro 和 M5 Max 硬件上，macOS 27.0 Beta 5 使设备在启动时配置错误，阻止次级 CPU 核心启动。Apple 据称已知晓此问题，但没有关于何时修复的消息。\n\nGravity Linux 还计划在发布支持之前将整个 M5 产品线保持在相同的固件版本上，因此在 Apple 解决该问题之前，M5 将一直搁置。\n\n最终目标是将所有驱动工作上游至 Linux 内核和相关用户空间项目，同时公开记录其逆向工程方法的每一步。\n\n已经反映了这一方向。除了发行版层脚本之外，该项目还维护 Linux 内核、Mesa 和 U-Boot 的分叉。这些正是这项工作最终需要落地的上游项目。\n\n一旦上游工作落地，任何主流 Linux 发行版都可以在受支持的 Apple Silicon 硬件上运行，而无需像这样的单独重制版。到那时，Gravity Linux 这个发行版就不再必要，团队也计划在那时终止它。\n\n喜欢这篇更新？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无承诺\n\n一个热衷于开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性的极客。\n\nPeppermintOS 正从 Xorg 转向 XLibre 以避开 Wayland\n\n组织现在为 AI 而不仅仅是搜索而转向 OpenSearch\n\nSignal 将允许你在没有电话号码的情况下注册——只需 3 美元\n\n18 本编程电子书，1 个捆绑包，以及你的购买"
+  },
+  "3153594a3af9754bbe0d1082481ae710": {
+    "id": "3153594a3af9754bbe0d1082481ae710",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Debian-Inference-Portal",
+    "title_en": "Debian Inference Portal Launches To Provide Free AI/LLM Inferencing To Debian Developers",
+    "summary_en": "With Debian voting to allow the responsible use of generative AI, there is now a new initiative funded by Scaleway to make it easier for Debian contributors to leverage AI: the Debian Inference Portal...",
+    "pub_date": "Wed, 23 Sep 2026 17:08:01 -0400",
+    "title_zh": "Debian 推理门户上线，为 Debian 开发者提供免费 AI/LLM 推理服务",
+    "summary_zh": "Debian 推理门户正式上线，由 Scaleway 资助，为 Debian 贡献者提供自助式 AI/LLM 推理服务。初期可用模型为 DeepSeek V4 Flash 和 GLM-5.2，开发者可通过 API 密钥在常用代码编辑器中使用。该服务需 Debian Salsa 账户，Scaleway 提供每月固定额度，并按周为每位用户分配预算，可用于打包、缺陷分类、修复、工具和文档等任务。",
+    "fulltext_zh": "Debian 推理门户上线，为 Debian 开发者提供免费 AI/LLM 推理服务\n\n2026 年 9 月 23 日 下午 05:08 EDT。\n\n在 Debian 投票允许负责任地使用生成式 AI 之后，现在出现了一项由 Scaleway 资助的新计划，旨在让 Debian 贡献者更容易利用 AI：Debian 推理门户。\n\nDebian 推理门户已作为一项新服务上线，为 Debian 贡献者提供自助式 AI/LLM 推理访问。DeepSeek V4 Flash 和 GLM-5.2 是初期向 Debian 贡献者提供的模型。Debian 推理门户提供 API 支持，供开发者与其偏好的代码编辑器及其他 AI 工具配合使用。获取 Debian 推理门户 API 密钥需要 Debian 开发者或 Debian 维护者的 Debian Salsa 账户。\n\nScaleway 为该 Debian 推理门户赞助每月固定额度的积分，并按周为每位用户分配预算。Debian 推理门户可用于打包、缺陷分类、修复、工具、文档及相关任务。\n\nDebian 推理门户托管于\n\nDebian 13.7 发布，包含大量缺陷修复\nCERN 在长期作为 RHEL 机构后，将工业计算机迁移至 Debian\nDebian 投票允许“负责任地使用生成式 AI”\nDebian 迎来 33 岁生日，成为维护时间最长的 Linux 发行版之一\nDebian 开发者开始就项目内 LLM 使用进行投票\n关于 Debian AI/LLM 使用的五项提案正在审议中\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nLinux 7.4 的简单优化可使文件读取速度提升约 39%\nGoogle“维护痛苦”的 Binder C Linux 驱动将被移除，改用 Rust\nUbuntu 26.10 将 cp、mv 和 rm 迁移至 Rust Coreutils，实现 100% 过渡\n在享受无广告 Phoronix 的同时，帮助 Linux 硬件测试与评测继续\nUbuntu 26.10 切换至 Linux 7.3 内核\n孤儿 VM：在宿主机内核离线以进行重启/更新时，保持 VM 不间断运行\n阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的代理式操作系统\nValve 推出 Pyrowave 视频编解码器测试版，用于低延迟流媒体\n在拥有无广告浏览的同时，\n单页文章视图\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "6a9390fdb294773425b1cb9376979e7c": {
+    "id": "6a9390fdb294773425b1cb9376979e7c",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Qualcomm-Talks-Up-X2-Linux",
+    "title_en": "Qualcomm Talks Up Linux On Snapdragon X2 Laptops",
+    "summary_en": "Qualcomm at their Snapdragon Summit taking place in Hawaii are talking up the forthcoming Linux support for Snapdragon X2 series laptops...",
+    "pub_date": "Wed, 23 Sep 2026 16:49:30 -0400",
+    "title_zh": "高通大力宣传骁龙X2笔记本的Linux支持",
+    "summary_zh": "在夏威夷骁龙峰会上，高通展示了骁龙X2系列笔记本的Linux bring-up，并发布了早期开发者预览版，采用定制Linux内核与Debian 13用户空间。大量初始支持已上游化，Hexagon NPU、Adreno GPU（Mesa Freedreno/Turnip及Rusticl）等仍在推进。高通表示HP、华硕和HUMAIN计划在2027年上半年推出搭载Linux的骁龙X2设备。",
+    "fulltext_zh": "高通在夏威夷举行的骁龙峰会上，大力宣传即将为骁龙X2系列笔记本提供的Linux支持。\n\n近几个月来，我注意到高通工程师在将骁龙X2 Elite Linux支持的各项内容上游化方面活动增多，包括为不同X2笔记本提供设备树支持等。看到高通围绕Linux/开源的活动如此活跃，令人耳目一新，而且相比X1系列明显增加。许多工作仍在落地，各种问题也在解决中，但这无疑是明显的进步。\n\n高通今天在骁龙峰会上通过展示其Linux bring-up，进一步巩固了X2的Linux行动。他们发布了骁龙X2 Linux的早期开发者预览版。他们使用定制的Linux内核构建，搭配Debian 13用户空间。大量初始启用工作已经上游化，而围绕Hexagon NPU以及Mesa中Adreno GPU支持（Freedreno和Turnip驱动，甚至Rusticl支持）的更多工作仍在进行。电源、散热和可靠性方面也有更多工作有待开展。\n\n今天他们还大力宣传了骁龙X2系列即将获得的Linux支持。该公告中引人注目的一句话是：\n\n“Linux是整个行业都可以构建的基础——而这仅仅是开始。我们的合作伙伴HP、ASUS和HUMAIN计划在2027年上半年提供Linux支持，以便他们的设备在新操作系统上为用户带来骁龙X2系列所预期的出色体验。”\n\n如果HP和ASUS等厂商能在2027年上半年正式支持骁龙X2硬件上的Linux，那将非常棒。\n\n继续关注骁龙X2 Linux支持的进展，以及最终其支持程度和功耗/性能与Linux上AMD Ryzen和Intel Core Ultra笔记本竞品的对比，将令人兴奋。希望我们能在Phoronix获得骁龙X2系列笔记本的评测样机，用于Linux测试和性能基准测试。就最初的笔记本测试而言，我自购了硬件进行初步Linux测试，尽管如今硬件价格压力大、网络出版/广告领域艰难，遗憾的是，这种情况不会再发生了。\n\n高通在发布次日即发布Adreno 850开源GPU驱动补丁\nLinux 7.3在遇到太多bug后回退Logitech Bolt接收器HID++\nSPEC发布面向Linux的SPECviewperf 15.0.1\nLinux 7.3添加Logitech G502 X Lightspeed USB支持、ELECOM M-XT4DRBK\n缓存感知调度修复已排队提交至Linux 7.3，并回移植到7.2\n补丁发布，旨在将Linux内核支持主线化至Amazon Kindle 4\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nLinux 7.4的简单优化可使文件读取速度提高约39%\n谷歌“维护痛苦”的Binder C Linux驱动将被移除，改用Rust\nUbuntu 26.10将cp、mv和rm迁移至Rust Coreutils，实现100%过渡\n帮助Linux硬件测试与评测继续，同时享受无广告的Phoronix\nUbuntu 26.10切换至Linux 7.3内核\n孤儿VM：在宿主内核离线重启/更新时保持VM不间断运行\n阿里巴巴向Omarchy捐赠300万美元，致力于打造“理想”代理式操作系统\nValve在测试版中推出Pyrowave视频编解码器，用于低延迟流媒体\n\n享受无广告浏览，\n单页文章视图\n法律免责声明、隐私"
+  },
+  "fb16f15a8dc87d0033b3d3527583ced9": {
+    "id": "fb16f15a8dc87d0033b3d3527583ced9",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Lemonade-2026.40-RC",
+    "title_en": "Lemonade Fixes AMD APU Model Streaming, Drops OpenMOSS ROCm As ~40x Slower Than Vulkan",
+    "summary_en": "The AMD-aligned Lemonade open-source project for serving as a local AI server released 2026.39.1 today as well as issuing a release candidate of 2026.40 as their next release. Besides adapting to a new versioning scheme, the Lemonade SDK updates today bring a few notable changes...",
+    "pub_date": "Wed, 23 Sep 2026 15:41:24 -0400",
+    "title_zh": "Lemonade 修复 AMD APU 模型流式传输，因 OpenMOSS ROCm 比 Vulkan 慢约 40 倍而将其移除",
+    "summary_zh": "Lemonade 项目发布 2026.39.1 稳定版及 2026.40 候选版，修复了 AMD APU 上模型流式传输的内存检查问题，改为依据 GTT 池而非固定显存划分，从而支持 DeepSeek-V4-Flash 等模型在 Strix Halo 上运行。同时，因 OpenMOSS 的 ROCm 后端性能比 Vulkan 慢约 40 倍，已从 Windows 和 Linux 平台移除。新版本还增加了 JetBrains Junie 启动代理及可配置显存自动驱逐等功能。",
+    "fulltext_zh": "Lemonade 修复 AMD APU 模型流式传输，因 OpenMOSS ROCm 比 Vulkan 慢约 40 倍而将其移除\n\n2026 年 9 月 23 日 03:41 PM EDT。\n\n与 AMD 保持一致的 Lemonade 开源项目——用于充当本地 AI 服务器——今日发布了 2026.39.1 版本，并发布了下一个版本 2026.40 的候选版本。除了适应新的版本号方案外，今日的 Lemonade SDK 更新还带来了一些值得注意的变化。\n\nLemonade 2026.40 候选版现在支持在 AMD 集成 GPU（APU）上流式传输模型，其内存大小依据 APU 的 GTT 池而非固定的显存划分来确定。这是因为一些流式模型（如 DeepSeek-V4-Flash-IQ2XXS-DS4）此前无法在 AMD Ryzen AI Max（Strix Halo）上运行。虽然内存足以运行这些模型，但 Lemonade 之前检查的是较小的显存划分窗口，而不是可寻址的 GTT。因此，这一问题正在被修复，以便在 AMD 集成 GPU/APU 上更好地支持流式模型。\n\n另一个有趣的变化是，针对 ROCm 的 OpenMOSS 后端在 Windows 和 Linux 上被移除。OpenMOSS 是来自中国的一个 AI 研究计划和模型生态系统。OpenMOSS 的 ROCm 后端被禁用，是因为在相同硬件上它们比使用 Vulkan 后端慢约 40 倍。看起来 OpenMOSS 的 AMD ROCm 代码路径至少存在一些 CPU 回退情况，这导致了巨大的性能差距。\n\nLemonade 采取了移除 OpenMOSS ROCm 支持的步骤，直到其能够被妥善修复，并分享了 OpenMOSS ROCm 糟糕的性能数据。\n\nLemonade 2026.40 RC 还新增了针对 JetBrains 的 Junie 的启动代理。此外还有其他增强功能，详见……\n\n今日发布的版本带来了可配置的显存自动驱逐及其他较小改动。这是新版本号系统下的首个稳定版本，该系统依赖年份和周数。\n\nNVIDIA 发起的开放安全 AI 联盟迁至 Linux 基金会\n\nAI/LLM 使用正成为对开源项目维护者的“拒绝服务攻击”\n\nLinus Torvalds 经历了一场地狱般的调试会话，AI“极大地帮助”了他\n\nKTransformers 0.7 扩展 AVX-512 支持，惠及 AMD EPYC 服务器\n\nLemonade 11.6 集成 Muse-Glimmer 30B、实验性 TheNoise ROCm 图像生成\n\nOpenAI 将 ChatGPT 桌面应用带到 Linux\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他……\n\nLinux 7.4 的简单优化可使文件读取速度提高约 39%\n\nGoogle“难以维护”的 Binder C Linux 驱动将被移除，转而使用 Rust\n\nUbuntu 26.10 将 cp、mv 和 rm 迁移至 Rust Coreutils，实现 100% 过渡\n\n在享受无广告 Phoronix 的同时，帮助 Linux 硬件测试与评测继续\n\nUbuntu 26.10 切换至 Linux 7.3 内核\n\n孤儿 VM：在主机内核离线进行重启/更新时保持 VM 不间断运行\n\n阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的代理式操作系统\n\nValve 推出 Pyrowave 视频编解码器测试版，用于低延迟流媒体\n\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "e634e485c474982bf765fb39ed034a86": {
+    "id": "e634e485c474982bf765fb39ed034a86",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/DXVK-IGDEXT",
+    "title_en": "Intel Developing Their DXVK-IGDEXT For Improved Linux Gaming On Arc Graphics",
+    "summary_en": "Intel engineers have been quietly developing dxvk-igdext as their own component for DXVK Direct3D 8 / 9 / 10 / 11 atop the Vulkan API for leveraging Intel Direct3D 11 Graphics Extensions...",
+    "pub_date": "Wed, 23 Sep 2026 10:54:44 -0400",
+    "title_zh": "Intel 为提升 Arc 显卡上的 Linux 游戏体验开发 DXVK-IGDEXT",
+    "summary_zh": "Intel 工程师正在开发 dxvk-igdext 项目，作为 DXVK 的组件，让游戏在 Wine 下通过转发机制使用 Intel D3D11 图形扩展（如 UAV overlap、MultiDrawIndirect、深度边界），避免回退到较慢的默认 D3D11 行为。该 DLL 由 Valve 的 Proton 自动处理，旨在改善 Intel Arc 显卡在 Linux（Steam Play）上的游戏体验。项目目前仅限 Linux/Wine，已在 GitHub 开源。",
+    "fulltext_zh": "Intel 为提升 Arc 显卡上的 Linux 游戏体验开发 DXVK-IGDEXT\n\n2026 年 9 月 23 日上午 10:54（美国东部时间）。\n\nIntel 工程师一直在悄然开发 dxvk-igdext，作为他们自己的 DXVK 组件，用于在 Vulkan API 之上实现 Direct3D 8 / 9 / 10 / 11，以利用 Intel Direct3D 11 图形扩展。\n\nDXVK-IGDEXT 是 Intel 的一个新项目，它提供了相应的 DLL，让游戏能在 Wine 下使用 Intel D3D11 图形扩展。Valve 的 Proton 会自动处理这个 DLL，以改善 Intel Arc 显卡硬件上的 Linux（Steam Play）游戏体验。\n\n该项目的 GitHub 对 DXVK-IGDEXT 的总结如下：\n\n“用于 Wine/DXVK 的 igdext64.dll：让游戏在 Wine 下使用 Intel D3D11 图形扩展（UAV overlap、MultiDrawIndirect、深度边界），通过将它们转发到 DXVK 的原生实现，而不是在扩展不可用时让游戏静默回退到较慢的默认 D3D11 行为。\n\n注意：目前仅限 Linux/Wine，不适用于原生 Windows。”\n\n关于这项最近开源的工作的更多细节，可通过 GitHub 上的 GameTechDev/dxvk-igdext 查看。\n\n相关报道：\nIntel Xe 驱动为 Linux 7.4 添加 vRAM 健康检查、降级内存处理\nLinux 已准备好修复 Intel FRED 在 Wine / Steam Play 下导致部分游戏崩溃的问题\nIntel 似乎要终止其漏洞赏金计划\nIntel 计算栈为 Nova Lake 启用 LEO，推出 Intel 可移植 ISA “PISA”\nIntel NPU Linux 驱动为 Linux 7.4 添加命令队列优先级 ioctl\nIntel 逆转取消其开源字体项目的决定\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nLinux 7.4 的一项简单优化可将文件读取速度提升约 39%\nGoogle 的“难以维护”的 Binder C Linux 驱动将被移除，改用 Rust\nUbuntu 26.10 将 cp、mv 和 rm 迁移到 Rust Coreutils，实现 100% 过渡\n在享受无广告 Phoronix 的同时，帮助 Linux 硬件测试与评测继续\nUbuntu 26.10 切换到 Linux 7.3 内核\n孤儿 VM：在宿主内核离线以进行重启/更新时，运行中的 VM 不中断\n阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的代理式操作系统\nValve 推出 Pyrowave 视频编解码器测试版，用于低延迟流媒体\n\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "f58597ab9ccaf01f040d38f05bf6558e": {
+    "id": "f58597ab9ccaf01f040d38f05bf6558e",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/java-8-openjdk-27-benchmarks",
+    "title_en": "Benchmarking Java Performance Of JDK 8 Through OpenJDK 27",
+    "summary_en": "With the recent release of Java/OpenJDK 27 I began some fresh benchmarks in not having looked at the OpenJDK Java performance in a few years. Carried away, I ended up re-testing all the major OpenJDK versions going back to the venerable JDK 8.",
+    "pub_date": "Wed, 23 Sep 2026 10:17:09 -0400",
+    "title_zh": "从 JDK 8 到 OpenJDK 27 的 Java 性能基准测试",
+    "summary_zh": "本文对从 JDK 8 到 OpenJDK 27 的主要 OpenJDK 版本进行了性能基准测试。测试在搭载 AMD Ryzen Threadripper 9980X 的 System76 Thelio Major 工作站上进行，运行 Fedora Workstation 44，使用官方 OpenJDK 二进制文件和默认配置，通过 DaCapoBench 和 Renaissance 基准测试评估了十多年来 Java 运行时性能的演变。",
+    "fulltext_zh": "从 JDK 8 到 OpenJDK 27 的 Java 性能基准测试 - Phoronix\n\n从 JDK 8 到 OpenJDK 27 的 Java 性能基准测试\n发布于 2026 年 9 月 23 日美国东部时间上午 10:17。\n\n随着最近的发布，由于已有几年没有关注 OpenJDK Java 性能，我开始进行一些新的基准测试。一发不可收拾，我最终重新测试了所有主要的 OpenJDK 版本，一直追溯到古老的 JDK 8。\n\n使用搭载 AMD Ryzen Threadripper 9980X 的 System76 Thelio Major 工作站，运行 Fedora Workstation 44，我对从 Java 8 时代以来的所有 OpenJDK 版本进行了基准测试。不过，所使用的一些 Java 基准测试在 OpenJDK 11 之前的版本上最终出现了问题。\n\n为了严谨性和可复现性，在这次 Java 运行时性能评估中，每个 OpenJDK 版本都使用默认配置/设置和官方 OpenJDK 二进制文件进行开箱即用的测试。\n\n因此，对于那些好奇 OpenJDK Java 运行时性能从十多年前（2014 年）的 OpenJDK 8 时代以来如何演变的人，以下是各种 DaCapoBench 和 Renaissance Java 基准测试的结果。\n\nLinux 7.3 在 Intel Panther Lake / Framework Laptop 13 Pro 上带来了一些性能提升\nAMD EPYC 在 Linux 7.3 上的早期基准测试显示性能提升即将到来\nLinux 7.3 包含许多令人兴奋的改进、新硬件支持以及更快的 Btrfs\nLinux 7.2 与 Linux 7.3 上的 Btrfs、EXT4、F2FS 和 XFS 性能对比\n在 Linux 7.3 上对 Btrfs 进行基准测试，性能提升令人难以置信\n早期 Linux 7.3 内核基准测试显示了一些性能改进和一些退步\n\n同时拥有无广告浏览、\n单页文章视图\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "8763521d82d2828dc1b3485c62e16de2": {
+    "id": "8763521d82d2828dc1b3485c62e16de2",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/7-best-free-and-open-source-climate-weather-and-earth-science-data-analysis-tools/",
+    "title_en": "7 Best Free and Open Source Climate, Weather and Earth-Science Data Analysis Tools",
+    "summary_en": "Explore 7 of the best free and open-source tools for analyzing climate, weather, and Earth-science data, from visualization to scientific analysis.\nThe post 7 Best Free and Open Source Climate, Weather and Earth-Science Data Analysis Tools appeared first on Linux Today.",
+    "pub_date": "Wed, 23 Sep 2026 07:07:42 +0000",
+    "title_zh": "7款最佳免费开源气候、天气与地球科学数据分析工具",
+    "summary_zh": "本文介绍了7款用于分析气候、天气和地球科学数据的顶级免费开源工具，涵盖从数据可视化到科学分析的多种功能，帮助研究人员和爱好者高效处理地球科学数据。",
+    "fulltext_zh": "探索7款用于分析气候、天气和地球科学数据的最佳免费开源工具，涵盖从可视化到科学分析的多种功能。\n\n文章《7款最佳免费开源气候、天气与地球科学数据分析工具》首发于Linux Today。"
+  },
+  "23a890b1f872277d809b13703e9db321": {
+    "id": "23a890b1f872277d809b13703e9db321",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/another-comeback-another-linux-project-ikey-doherty-introduces-barney/",
+    "title_en": "Another Comeback, Another Linux Project: Ikey Doherty Introduces Barney",
+    "summary_en": "Ikey Doherty is back with Barney, a new project marking another chapter for the developer known for creating and contributing to major open-source projects.\nThe post Another Comeback, Another Linux Project: Ikey Doherty Introduces Barney appeared first on Linux Today.",
+    "pub_date": "Wed, 23 Sep 2026 07:06:06 +0000",
+    "title_zh": "又一次回归，又一个Linux项目：Ikey Doherty推出Barney",
+    "summary_zh": "知名开源开发者Ikey Doherty再次回归，推出新项目Barney。他曾创建并贡献于多个重要开源项目，此次新项目标志着其职业生涯的又一新篇章。",
+    "fulltext_zh": "Ikey Doherty带着新项目Barney回归，这标志着这位以创建和贡献重大开源项目而闻名的开发者的又一个新篇章。\n\n文章《又一次回归，又一个Linux项目：Ikey Doherty推出Barney》首次出现在Linux Today上。"
+  },
+  "b0afae74d771f9ee31a32012700c38df": {
+    "id": "b0afae74d771f9ee31a32012700c38df",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/omarchy-funding-climbs-to-13m-with-over-4m-a-year-set-for-spending/",
+    "title_en": "Omarchy Funding Climbs to $13M, With Over $4M a Year Set for Spending",
+    "summary_en": "Omarchy funding has climbed to $13 million, with more than $4 million a year earmarked for spending as the project expands its financial resources.\nThe post Omarchy Funding Climbs to $13M, With Over $4M a Year Set for Spending appeared first on Linux Today.",
+    "pub_date": "Wed, 23 Sep 2026 07:04:26 +0000",
+    "title_zh": "Omarchy 融资攀升至 1300 万美元，每年计划支出超 400 万美元",
+    "summary_zh": "Omarchy 项目的融资总额已攀升至 1300 万美元，随着项目财务资源不断扩大，每年计划支出超过 400 万美元。",
+    "fulltext_zh": "Omarchy 融资已攀升至 1300 万美元，随着项目扩大其财务资源，每年有超过 400 万美元被指定用于支出。\n\n文章《Omarchy 融资攀升至 1300 万美元，每年计划支出超 400 万美元》首次发布于 Linux Today。"
+  },
+  "ccc1d2024cabfc46b5a7eae783b666af": {
+    "id": "ccc1d2024cabfc46b5a7eae783b666af",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/6-best-free-and-open-source-linux-web-based-discord-tools/",
+    "title_en": "6 Best Free and Open Source Linux Web-Based Discord Tools",
+    "summary_en": "Explore 6 of the best free and open-source web-based Discord tools, offering alternative ways to access, manage, and enhance your Discord experience.\nThe post 6 Best Free and Open Source Linux Web-Based Discord Tools appeared first on Linux Today.",
+    "pub_date": "Wed, 23 Sep 2026 07:03:29 +0000",
+    "title_zh": "6款最佳免费开源Linux网页版Discord工具",
+    "summary_zh": "本文介绍了6款最佳的免费开源网页版Discord工具，这些工具提供了访问、管理和增强Discord体验的替代方式，适合Linux用户使用。",
+    "fulltext_zh": "探索6款最佳的免费开源网页版Discord工具，它们提供了访问、管理和增强Discord体验的替代方式。\n\n文章《6款最佳免费开源Linux网页版Discord工具》首次发布于Linux Today。"
+  },
+  "1a76863ce7efdfd69085e5cdc94d888c": {
+    "id": "1a76863ce7efdfd69085e5cdc94d888c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/slackware-based-zenwalk-current-milestone-2026-released-with-linux-7-1/",
+    "title_en": "Slackware-Based Zenwalk Current Milestone 2026 Released with Linux 7.1",
+    "summary_en": "Zenwalk Current Milestone 2026 is now available, bringing the Slackware-based distribution up to date with the Linux 7.1 kernel and other improvements.\nThe post Slackware-Based Zenwalk Current Milestone 2026 Released with Linux 7.1 appeared first on Linux Today.",
+    "pub_date": "Wed, 23 Sep 2026 07:02:35 +0000",
+    "title_zh": "基于Slackware的Zenwalk Current Milestone 2026发布，搭载Linux 7.1",
+    "summary_zh": "Zenwalk Current Milestone 2026正式发布，这款基于Slackware的发行版升级至Linux 7.1内核，并带来其他多项改进。",
+    "fulltext_zh": "Zenwalk Current Milestone 2026现已发布，这款基于Slackware的发行版已更新至Linux 7.1内核，并包含其他改进。\n\n文章《基于Slackware的Zenwalk Current Milestone 2026发布，搭载Linux 7.1》最初出现在Linux Today上。"
   }
 }
