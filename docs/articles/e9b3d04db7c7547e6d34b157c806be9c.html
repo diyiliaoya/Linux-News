@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Clonezilla Live 3.3.3-37 — Linux 中文速报</title>
+<title>ReactOS 从 Wine 引入重大 DirectX 栈更新，支持更多游戏 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Clonezilla Live 3.3.3-37</h1>
+  <h1>ReactOS 从 Wine 引入重大 DirectX 栈更新，支持更多游戏</h1>
 
-  <div class="article-summary">Clonezilla Live 3.3.3-37 是基于 Debian Sid（2026-09-13）的实时发行版，内核升级至 7.1.13，Partclone 更新至 0.3.50 并修复 Btrfs 问题。新增 PXEBoot 与 HTTPBoot 网络启动支持（含 Secure Boot），实现 LUKS2 仓库支持，用 iproute2 替代 net-tools、dhcpcd 替代 dhclient，并优化 GRUB 在 4K/HiDPI 屏幕下的显示效果。</div>
+  <div class="article-summary">ReactOS 项目合并了来自 Wine 10.0 的重大 DirectX 栈更新，新增 49.8 万行代码并移除 11.9 万行旧代码，由开发者 Justin Miller 耗时 230 多小时完成。此次更新使 ReactOS 能通过 OpenGL 和 Vulkan 转译 DirectX，并提升其在 Windows 上的兼容性，预计解锁数百款游戏，包括《龙腾世纪：起源》，未来还将支持 DirectX 10/11/12 游戏。</div>
 
-  <div class="article-body"><p>发行版发布：Clonezilla Live 3.3.3-37（DistroWatch.com 新闻）</p><p>Clonezilla Live 是一个基于 Debian 的实时发行版，内含 Clonezilla 这款分区与磁盘克隆软件。该项目的最新版本 3.3.3-37 包含了来自上游的多项更新，以及新的启动选项：</p><p>“底层 GNU/Linux 操作系统已升级，本版本基于 2026-09-13 的 Debian ‘Sid’ 仓库。Linux 内核已更新至 7.1.13；Partclone 已更新至 0.3.50 版本，其中包含针对 Btrfs 问题的修复；Clonezilla lite server 现在同时支持 PXEBoot 和 HTTPBoot 网络启动客户端，包括对 HTTPBoot 机制的 Secure Boot 支持；实现了 LUKS2 仓库支持；用 iproute2 替代了已弃用的 net-tools 命令，并放弃 dhclient 相关代码，改用 dhcpcd；配置 dhcpcd 使用 clientid 以实现稳定的 IP 保留；GRUB 显示增强——配置了首选分辨率和回退分辨率，以防止在 4K/HiDPI 屏幕上出现极小的启动菜单和文字变形；ocs-live-boot-menu——在安全启动锁定下有条件地运行 efitextmode，以避免‘被安全启动策略禁止’的错误信息……”</p><p>更多信息请参见 clonezilla-live-3.3.3-37-amd64.iso。</p><p>近期相关新闻与发布</p><p>发行版发布：Clonezilla Live 3.3.3-37</p><p>发行版发布：Clonezilla Live 3.3.2-31</p><p>发行版发布：Clonezilla Live 3.3.1-35</p><p>发行版发布：Clonezilla Live 3.3.0-33</p><p>发行版发布：Clonezilla Live 3.2.1-28</p><p>发行版发布：Clonezilla Live 3.2.1-9</p><p>更多 Clonezilla 新闻……</p><p>关于 Clonezilla Live</p><p>Clonezilla Live 是一个基于 Debian 的实时 CD，内含 Clonezilla，这是一款类似于 Norton Ghost 的分区和磁盘克隆软件。它仅保存和恢复硬盘中已使用的块。使用 Clonezilla，可以在大约 10 分钟内将 5 GB 的系统克隆到 40 个客户端。</p><p>https://clonezilla.org/</p><p>https://clonezilla.org/mailing-lists.php</p><p>https://sourceforge.net/p/clonezilla/discussion/</p><p>替代用户论坛</p><p>https://clonezilla.org/clonezilla-live/</p><p>https://clonezilla.org/screenshots/?in_path=/00_Clonezilla</p><p>https://</p></div>
+  <div class="article-body"><p>ReactOS 从 Wine 引入重大 DirectX 栈更新，支持更多游戏</p><p>2026 年 9 月 24 日 下午 05:43 EDT。</p><p>致力于提供与 Microsoft Windows 应用程序/游戏以及驱动程序二进制兼容性的开源 ReactOS 项目，今天迈出了一大步，从 Wine 项目引入的代码对其 DirectX 栈进行了重大更新。</p><p>一项艰巨的任务已经完成，将 Wine 10.0 状态的 DirectX 栈改进并引入 ReactOS。ReactOS 开发者 Justin Miller 为此投入了数百小时的工作。它还移除了 ReactOS 中许多先前的 DirectX 补丁。</p><p>现已合并的代码包含 49.8 万行新代码，并移除了 11.9 万行旧代码。这些新代码允许 ReactOS 使用 OpenGL 和 Vulkan 来转译 DirectX，同时也提升了 ReactOS 的 DirectX 栈在 Windows 本身上运行的能力。</p><p>据称此次更新有助于数百款游戏。Miller 在评论中表示：</p><p>“这真是来之不易，到目前为止已经耗费了我至少 230 多个小时。（而且还没完成，哇哦！）</p><p>这个 PR 的目标是将我们的 DirectX 栈更新到 WINE-10.0，同时移除我们大量的补丁。</p><p>这使得 ReactOS 能够使用 Vulkan 和 OpenGL 来转译 DirectX（尽管 Vulkan 仅能通过自定义分支或 mesa 软件渲染器实现），它也提升了我们的 DirectX 栈在 Windows 本身上运行的能力。</p><p>修复了一些测试，以及更多内容。</p><p>这个 PR 与其他已打开的 PR 结合后所解锁的游戏数量在数百款。</p><p>但即使仅针对 NT5.x，这也让诸如《龙腾世纪：起源》这样的游戏终于能够启动。”</p><p>ReactOS 开发者评论道，很快在 ReactOS 上实现 DirectX 10 / 11 / 12 游戏兼容性将成为可能。</p><p>激动人心的时刻仍在继续。</p><p>AlmaLinux 推出新的软件/硬件认证门户，可自行认证应用</p><p>阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的智能体操作系统</p><p>Void Linux 维护者因 AI 政策争议弃养 100 多个软件包</p><p>受 BeOS 启发的 Haiku 现已支持实时切换音频输出及其他改进</p><p>ReactOS 开发者让 FEX 在 ARM 下的这款“开源 Windows”操作系统上运行 x86_64 游戏</p><p>Slackware 16 Alpha 1 在升级 GCC 16.2、Glibc 2.44 和 Binutils 2.47 后发布</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。</p><p>Linux 7.4 的简单优化可使文件读取速度提升约 39%</p><p>谷歌“难以维护”的 Binder C Linux 驱动将被移除，改用 Rust</p><p>Ubuntu 26.10 将 cp、mv 和 rm 迁移至 Rust Coreutils，实现 100% 转换</p><p>在享受无广告 Phoronix 的同时，帮助 Linux 硬件测试与评测继续</p><p>阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的智能体操作系统</p><p>Valve 推出 Pyrowave 视频编解码器测试版，用于低延迟流媒体</p><p>孤儿虚拟机：在主机内核离线以进行重启/更新时保持虚拟机不间断运行</p><p>Ubuntu 26.10 切换至 Linux 7.3 内核</p><p>同时享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12957" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/ReactOS-Updated-Wine-DirectX" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

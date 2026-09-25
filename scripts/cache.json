@@ -12461,5 +12461,181 @@
     "title_zh": "基于Slackware的Zenwalk Current Milestone 2026发布，搭载Linux 7.1",
     "summary_zh": "Zenwalk Current Milestone 2026正式发布，这款基于Slackware的发行版升级至Linux 7.1内核，并带来其他多项改进。",
     "fulltext_zh": "Zenwalk Current Milestone 2026现已发布，这款基于Slackware的发行版已更新至Linux 7.1内核，并包含其他改进。\n\n文章《基于Slackware的Zenwalk Current Milestone 2026发布，搭载Linux 7.1》最初出现在Linux Today上。"
+  },
+  "c0d2ab3e059676914fcd0bcafd1bff95": {
+    "id": "c0d2ab3e059676914fcd0bcafd1bff95",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/ubuntu-2610-tiling",
+    "title_en": "Ubuntu 26.10 adds Windows-style snap layouts",
+    "summary_en": "Ubuntu 26.10 offers a new way to tile your apps, with a layout picker sliding in from the top of the screen when you move a window. This &#8220;dropzone&#8221; concept for quick tiling will be familiar to users of Windows 11 users or those who&#8217;ve tried the Tiling Shell extension for GNOME Shell – they do, broadly, the same thing. When you drag a window a layout picker with a small set of preset layouts drop zones moves in from the top of the display. You drag your window up over a layout z",
+    "pub_date": "Thu, 24 Sep 2026 22:01:28 +0000",
+    "title_zh": "Ubuntu 26.10 加入 Windows 风格贴靠布局",
+    "summary_zh": "Ubuntu 26.10 引入了一个新的窗口平铺方式：拖动窗口时，屏幕顶部会滑出布局选择器，提供预设的贴靠区域。这一“放置区”概念与 Windows 11 或 GNOME Shell 扩展类似。用户将窗口拖到某个区域即可平铺，系统还会建议其他窗口填充剩余空间。该功能在开发周期较晚阶段才合并，目前没有图形化关闭开关，但可通过扩展设置禁用。",
+    "fulltext_zh": "Ubuntu 26.10 提供了一种新的窗口平铺方式：当你移动窗口时，一个布局选择器会从屏幕顶部滑入。\n\n这种用于快速平铺的“放置区”概念，对于 Windows 11 用户或尝试过 GNOME Shell 扩展的用户来说会很熟悉——它们大体上做的是同一件事。\n\n当你拖动窗口时，一个带有少量预设布局放置区的布局选择器会从显示屏顶部移入。你将窗口向上拖到某个布局区域上方（会显示窗口将贴靠位置的“幽灵”预览），然后松开即可平铺：\n\nUbuntu 26.10 中的布局区域会（就像常规边缘贴靠那样）建议其他已打开的窗口并排平铺，填充其他空间。因此，如果你使用选择器并将窗口拖放到四分之一区域，平铺建议会填充剩余的象限。\n\n选择器中显示的布局与将窗口拖到屏幕边缘所支持的布局相同。你不能添加或编辑布局，某些工具提供了这种功能（混合大小、列和行），但那会增加额外的复杂性。\n\n在我的测试安装中看到这个功能让我有点惊讶。它似乎是在开发周期相当晚的时候才加入的，远远晚于该发行版的用户界面冻结期（此后不应再有重大的面向用户的更改）。\n\n查看 GitHub，新的布局选择器几天前才合并到扩展中（截至撰写本文时）。一个合并请求自六月以来一直处于开放状态，该功能的代码由一位参与 Yaru 图标主题工作的设计师贡献。\n\n我很高兴这个功能被加入了；Ubuntu 花了很长时间才支持四分之一平铺——那直到 2023 年才实现——虽然这个选择器并没有更好地划分屏幕空间（同样限于 2 列/行），但它对多任务处理是一个提升。\n\n只是……目前布局选择器没有关闭开关，在“设置 > Ubuntu 桌面”中也没有。我想不是每个人都会想用这个（移动窗口时看到选择器栏自身的手势在视觉上很分散注意力），所以希望会添加一个。\n\n不过，扩展的设置中有一个关闭开关——以及 Ubuntu 未暴露的其他设置，比如可配置的间隙——但你只能通过第三方工具访问，例如"
+  },
+  "99bac62d1a34fa66abc5e541aa2b603c": {
+    "id": "99bac62d1a34fa66abc5e541aa2b603c",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/ubuntu-2610-beta-release-delay",
+    "title_en": "Ubuntu 26.10 beta is delayed by a week",
+    "summary_en": "The Ubuntu 26.10 beta, which had been due on 24 September, has been pushed back to 1 October. Canonical&#8217;s Matthieu Clemenceau, announcing the delay, said &#8220;unforeseen infrastructure issues&#8221; require pushing the release back by one week. The exact issue isn&#8217;t detailed, but Clemenceau did add that the company expects to resolve the cause shortly and that it doesn&#8217;t expect any impact on the final, stable Ubuntu 26.10 release date. That&#8217;s still set for 15 October, 2",
+    "pub_date": "Thu, 24 Sep 2026 17:13:00 +0000",
+    "title_zh": "Ubuntu 26.10 Beta 版推迟一周发布",
+    "summary_zh": "Ubuntu 26.10 Beta 原定于9月24日发布，因“未预见的基础设施问题”推迟至10月1日。Canonical 表示问题将很快解决，不会影响最终稳定版于2026年10月15日发布。此次推迟使社区测试时间不足两周，该版本包含 Linux 7.3 内核、Rust 核心工具、GNOME 51 桌面、GTK4 版 DING 扩展及新窗口平铺功能等重大更新。",
+    "fulltext_zh": "Ubuntu 26.10 Beta 版发布推迟至10月1日\n\n原定于9月24日发布的 Ubuntu 26.10 Beta 版已推迟至10月1日。\n\nCanonical 的 Matthieu Clemenceau 宣布了这一延迟，表示“未预见的基础设施问题”需要将发布推迟一周。\n\n具体问题未详细说明，但 Clemenceau 补充说，公司预计很快就能解决原因，并且预计不会对最终的稳定版 Ubuntu 26.10 发布日期产生任何影响。该日期仍定于2026年10月15日。\n\n虽然只是推迟一周，但这意味着更广泛的 Ubuntu 社区只有不到两周的时间来测试该版本及其众多变化。\n\n其中包括：从 Linux 7.2 到 Linux 7.3 内核的后期切换、一整套 Rust 核心工具，以及一项内存不足处理机制的调整，旨在防止为了释放内存而牺牲桌面会话。\n\n该版本还包括 GNOME 51 桌面、更新的应用程序、桌面图标扩展（DING）的 GTK4 移植版（提升了 UI 一致性），以及一项新的窗口平铺功能，与 Windows 11 上的功能类似。\n\n所以，别再刷新 Ubuntu CD 镜像服务器了，关掉那个标签页吧——这个版本已被证明是个滑头货。\n\n如果你已经预留了周末来测试，也不必烦恼：Ubuntu 26.10 的每日构建版可供使用。虽然未被“祝福”为 Beta 版，但 ISO 包含相同的软件包集。可以在虚拟机、外部驱动器或备用分区中安装，并保持更新。\n\n下周这个时候，你就可以说“Beta 版？早就搞定了，伙计”。"
+  },
+  "335534fee0bcfa717bc538e47908044d": {
+    "id": "335534fee0bcfa717bc538e47908044d",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/ubuntu-myna-ai-install",
+    "title_en": "You can try Ubuntu’s new Myna AI dictation tool – here’s how",
+    "summary_en": "Ubuntu&#8217;s new AI-powered dictation tool Myna isn&#8217;t officially ready, but you can give it an early test. Canonical has added the Myna orchestrator snap and a pair of speech-recognition AI models to the Snap Store recently, and made its new desktop Myna Settings tool available to test from a PPA. Ubuntu 26.10 also comes with another component preinstalled, as the gnome-shell-ubuntu-extensions package has a GNOME Shell extension that triggers an on-screen HUD when the Myna local AI speec",
+    "pub_date": "Thu, 24 Sep 2026 03:34:13 +0000",
+    "title_zh": "你可以试用 Ubuntu 的新 Myna AI 听写工具——方法如下",
+    "summary_zh": "Canonical 已在 Snap Store 上架 Myna 编排器 snap 和两个语音识别 AI 模型，并通过 PPA 提供桌面应用，让用户提前测试 Ubuntu 的 AI 听写工具 Myna。该工具完全本地运行，需要手动安装组件并配置模型和快捷键，目前仍处于测试阶段，功能尚不完善。",
+    "fulltext_zh": "想试试 Ubuntu 的新 AI 听写工具 Myna 吗？方法如下\n\nUbuntu 的新 AI 驱动听写工具 Myna 尚未正式发布，但你可以提前测试。\n\nCanonical 最近在 Snap Store 中添加了 Myna 编排器 snap 和两个语音识别 AI 模型，并通过 PPA 提供了新的桌面应用供测试。\n\nUbuntu 26.10 还预装了另一个组件，因为 gnome-shell-ubuntu-extensions 包包含一个 GNOME Shell 扩展，当 Myna 本地 AI 语音转文字技术正在监听或转写时，会触发屏幕上的 HUD。\n\n虽然官方尚未正式征集测试，但测试 Myna 所需的所有组件都已可用——供那些愿意自己组装的人使用。自 8 月份我预览以来，该功能已经发生了很大变化。\n\n如果这包括你，请继续阅读操作方法——但请注意，目前不要期望一切都能完美运行。\n\n如何在 Ubuntu 上试用 Myna\n\nUbuntu 26.10 上的 Myna 运行效果\n\n要在 Ubuntu 26.04 LTS 或 Ubuntu 26.10 上测试 Myna，你需要：\n来自 PPA 的桌面应用\n来自 Snap Store 的 snap\n来自 Snap Store 的 AI 模型\n\n如果你使用的是 Ubuntu 26.10，你还有：\n\n截至撰写本文时，Myna Shell 扩展（触发屏幕 HUD 的那个）仅针对 GNOME 51 和 26.10 打包。在 Ubuntu 26.04 上，则使用桌面通知来传达状态。\n\n屏幕 HUD 仅在按下触发键激活 Myna 后、监听或转写时、或传达错误状态（如“背景噪音过高”或“焦点丢失”）时才会出现。\n\nHUD 有多种视觉样式可供选择：\n（使用系统强调色的普通条）；\n（但可惜不如原版那样有动画效果）以及\n（与默认相同，但在我的测试中缺少凹槽）：\n\n以下是安装每个组件的方法。\n\n安装 Myna 设置桌面应用\n\n通过添加以下 PPA（由一位参与 Myna 工作的 Canonical 工程师维护）来安装应用，该 PPA 为 Ubuntu 26.04 LTS 和 26.10 提供软件包：\n\nsudo add-apt-repository ppa:charles05/myna-config\nsudo apt install myna-config\n\n安装 Myna 客户端 snap\n\n在安装之前，启用 Myna 所需的一个实验性 snap 功能：\n\nsudo snap set system experimental.user-daemons=true\n\n安装 Myna 语音转文字客户端\n\nsudo snap install myna --edge\n\n安装文本转语音 AI 模型 snap\n\n首次运行向导（还）无法使用\n\n最后，要将所有内容整合在一起，你需要操作的“大脑”：一个能将你的音频实际转写为文字的 AI 模型。\n\n）应用有一个首次运行向导来安装各种组件，并会为你的硬件推荐合适的模型。但如果你点击“安装”按钮，它会抛出错误（这些东西都还在测试中）。\n\n目前你需要使用命令行安装你偏好的语音识别模型——但你应该选择哪一个呢？\n\nSnap Store 上有两个 AI 模型，不过\n很快也会加入。这些模型完全在本地设备上运行，但体积不小。你需要 1-2GB 的可用磁盘空间，具体取决于你选择的模型。\n\n我发现 在准确性方面更好（甚至能正确拼写我的姓氏，大多数都做不到），但 速度更快，尽管容易出现同音词错误。\n\n，NVIDIA 的快速、开放权重 ASR 模型，支持 25 种语言和标点：\n\nsudo snap install myna-parakeet --edge\n\n，OpenAI 的多语言开源模型：\n\nsudo snap install myna-whisper --edge\n\n然后它应该会跳过设置屏幕并显示选项。\n\n工具，设置模型大小（它使用的参数数量）以偏向速度或准确性：较小的变体在低端硬件上处理音频更快，而较大的变体则减少转写错误并更好地处理难词。\n\n一切就绪后，你就可以开始测试了。首先：确保你的麦克风已启用并正常工作（在设置 > 声音 > 输入中检查）。然后你需要在设置应用中分配一个热键快捷键，按下它将激活该功能。\n\n准备好后，打开一个应用并将焦点放在文本字段上（我倾向于使用），然后按下你的热键。\n\n当激活"
+  },
+  "ff66dcfedc03fb6ea833bbbc813b0933": {
+    "id": "ff66dcfedc03fb6ea833bbbc813b0933",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/ubuntu-kernel-sru-cycle-update/",
+    "title_en": "Ubuntu is Tightening its Kernel SRU Cycle to Two Weeks, and Clankers Are to Blame",
+    "summary_en": "Ubuntu users will get kernel security fixes faster thanks to this.",
+    "pub_date": "Thu, 24 Sep 2026 16:10:45 GMT",
+    "title_zh": "Ubuntu 将内核 SRU 周期缩短至两周，AI 自动化漏洞挖掘是主因",
+    "summary_zh": "Canonical 将 Ubuntu 内核的稳定版更新（SRU）从原有的双轨制（每四周完整更新、两周安全更新）合并为单一的两周周期，由于新周期每周启动，实际实现每周发布一次内核更新。此举旨在应对 AI 和 LLM 将漏洞挖掘自动化后带来的海量内核缺陷，目标是在 CVE 公开后 24 至 48 小时内发布缓解措施。",
+    "fulltext_zh": "Ubuntu 将内核 SRU 周期缩短至两周，AI 自动化漏洞挖掘是主因\n\nUbuntu 用户将因此更快获得内核安全修复。\n\n迄今为止，Canonical 对 Ubuntu 内核一直采用分轨的 SRU 周期，常规修复和安全补丁分属不同轨道，每四周进行一次完整更新，并在两周中点发布一次针对紧急问题的安全更新。\n\n如果你对这个概念还不熟悉，稳定版发布更新（Stable Release Update，简称 SRU）是 Canonical 在 Ubuntu 发布后向其推送缺陷修复和安全补丁的方式。内核在这方面拥有自己的专用轨道。\n\n现在，Canonical 将两条轨道合并为单一的 2 周周期，并且由于每个新周期都在当前周期进行到一周时启动，这导致每周都会有一个内核版本发布。\n\n每个周期从为期一周的补丁集成和准备工作开始。内核团队会挑选哪些修复进入每个内核，构建软件包，并运行基本冒烟测试，以便在构建继续推进之前发现任何明显问题。\n\n第一周结束后，这些构建会被推送到 Ubuntu 的 proposed 仓库。内核发布候选版本在被认证之前就存放在那里，知道去哪里找的人可以访问，但尚未向普通用户开放。\n\n第二周，Canonical 会让这些构建通过其硬件测试计划，在不同的机器类型上进行测试，以确保内核发布前在真实环境中不会出现问题。\n\n无论当前周期进展如何，每周都会启动一个新周期，因此总有一个内核在完成测试并推出。这就是 2 周周期最终实现每周发布一次的方式。\n\n而且，当某些东西不适合发布时，Canonical 表示他们会明确说明，并引导用户参考通用的系统加固建议。\n\n对于无法等待整整两周的团队，Canonical 明确指向 proposed 仓库作为快速通道。其思路是你自己对放在那里的构建运行验收测试，而不是等待认证完成。\n\nAI 自动化漏洞挖掘让这一变化不可避免\n\n这一变化并非凭空而来；他们之所以不得不做出如此全面的决定，是因为 AI 自动化漏洞挖掘。就在上个月，我们看到它们仅仅通过抓取 git.kernel.org 来获取训练数据，就消耗了大量计算资源。\n\n对 Canonical 而言，他们的决定是由 LLM 和 AI 代理推动的，这些技术将漏洞挖掘变成了一种自动化且不间断的行为，以个人类研究员无法复制的规模和速度发现内核缺陷。\n\n目标是在 CVE 公开后 24 至 48 小时内发布一个临时解决方案。不是补丁本身，而是在补丁构建期间让受影响系统进入更安全状态的措施。\n\nUbuntu 背后的公司所做的，是通过缩短 CVE 公开到补丁落地之间的窗口，来应对快速演变的局势。\n\n喜欢这篇更新？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受\n任意金额，无承诺\n\n一个热衷于开源软件、定制 PC 组装、赛车运动以及探索世界无限可能的技术爱好者。\n\nQualcomm 宣布 Snapdragon X2 Linux 开发者预览版\n\nopenKylin 3.0 发布，使其成为“AI 优先”的 Linux 桌面\n\n有保质期的发行版？Gravity Linux 是面向 Apple Silicon 的新发行版\n\nPeppermintOS 正从 Xorg 转向 XLibre 以避开 Wayland\n\n组织现在为了 AI 而选择 OpenSearch，而不仅仅是搜索\n\n成为更好的 Linux 用户\n\n通过 FOSS 每周新闻通讯，你可以学习实用的 Linux 技巧、发现应用程序、探索新发行版，并随时了解 Linux 世界的最新动态\n\n太好了！你已成功注册。\n\n欢迎回来！你已成功登录。\n\n你已成功订阅 It's FOSS。\n\n你的链接已过期。\n\n成功！请检查你的电子邮件以获取更"
+  },
+  "b10e50be22ab4ef299fa44c109b24006": {
+    "id": "b10e50be22ab4ef299fa44c109b24006",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/snapdragon-x2-linux-developer-preview/",
+    "title_en": "Qualcomm Announces Snapdragon X2 Linux Developer Preview",
+    "summary_en": "They have put out an early developer preview for Snapdragon X2 laptops, with Debian 13 as the reference environment.",
+    "pub_date": "Thu, 24 Sep 2026 09:13:16 GMT",
+    "title_zh": "高通发布骁龙 X2 Linux 开发者预览版",
+    "summary_zh": "高通发布了骁龙 X2 笔记本的 Linux 开发者预览版，以 Debian 13 为参考环境，面向内核开发者、发行版维护者和硬件适配工程师。该预览版包含自定义内核和用户空间，重点推动驱动进入主线而非维护树外补丁。系统通过 systemd-boot 启动，支持 USB、PCIe、UART、I2C、SPI 等接口，Mesa 开源驱动提供 OpenGL、Vulkan 1.3 和 OpenCL 支持，显示输出、浏览器加速和 GPU 计算已可用。高通还提供了官方文档，包含两条开发路径和预构建镜像。",
+    "fulltext_zh": "高通发布骁龙 X2 Linux 开发者预览版\n\n高通发布骁龙 X2 Linux 开发者预览版\n\n他们为骁龙 X2 笔记本发布了一个早期开发者预览版，以 Debian 13 作为参考环境。\n\n这是一个早期开发者预览版，面向笔记本，邀请内核开发者、发行版维护者和硬件适配工程师上手这些硬件并开始测试。\n\n自 2025 年骁龙峰会以来，他们一直在为此打基础，而今天的推进方向是让驱动进入主线，而不是发布只有少数人能维护的树外补丁。\n\n该预览版并非面向最终用户。\n\n当前预览版将一个用户空间与一个自定义内核配对，初期重点是在开发者能够在这类硬件上开展任何严肃工作之前，准备好他们所需的核心组件。\n\n系统启动通过 systemd-boot 作为 UEFI 管理器来处理，而驱动覆盖了 USB、PCIe 以及高通通用外设串行引擎，用于 UART、I2C 和 SPI 连接。\n\nMesa 的开源高通驱动负责图形任务，涵盖 OpenGL，Turnip 负责 Vulkan 1.3，另外还有驱动处理 OpenCL 计算。\n\n这三方面的工作都在进行中，但显示输出、浏览器加速和 GPU 计算工作负载已经可以实现。\n\n驱动——高通用于将计算任务从 CPU 路由到 DSP 的机制——正在被推向上游，以开放本地 AI 推理工作负载的能力。电源管理和热管理支持也是这一系列开发的一部分。\n\n骁龙 X2 Linux 软件的官方文档概述了开发者可以遵循的两条路径。\n\n第一条是未注册路径，你使用预构建的固件二进制文件来构建，无需高通账户即可开始。第二条需要账户，让你获得完整的固件源代码访问权限，从而从头构建一切。\n\n如果你想完全跳过构建直接刷机，也可以使用预构建的可刷写镜像。\n\n主机要求也因你构建的内容而异。Debian 层需要一台运行 Ubuntu 24.04 LTS 或更高版本，或 Debian Trixie 的机器。固件构建需要 Ubuntu 22.04 LTS 或更高版本的主机。\n\n如果你想亲眼看到 Linux 在骁龙 X2 硬件上运行的实操演示，那么今年在夏威夷毛伊岛举办的（活动）就是你要去的地方！\n\n分阶段的路线图、文档门户、公共仓库中的专用构建脚本，以及向开发者征求反馈——这是其他希望将工作上游化的芯片厂商应该注意的做法。\n\n每一个进入主线的驱动，都意味着发行版需要携带的补丁少一个，而这最终将使这些机器在早期采用者之外也能使用。\n\n并不打算长期停留。\n\n喜欢这篇更新？支持独立的 Linux 新闻报道。\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受。\n\n任意金额，无承诺。\n\n一个对开源软件、自定义 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的书呆子。\n\nUbuntu 正在将内核 SRU 周期收紧至两周，而 Clankers 是罪魁祸首。\n\nopenKylin 3.0 发布，使其成为“AI 优先”的 Linux 桌面。\n\n有保质期的发行版？Gravity Linux 是面向 Apple Silicon 的新发行版。\n\nPeppermintOS 正在从 Xorg 转向 XLibre，以避开 Wayland。\n\n组织现在转向 OpenSearch 是为了 AI，而不仅仅是搜索。\n\n成为更好的 Linux 用户。\n\n通过 FOSS 每周新闻通讯，你可以学习有用的 Linux 技巧、发现应用程序、探索新发行版，并随时了解 Linux 世界的最新动态。\n\n太好了！你已成功注册。\n\n欢迎回来！你已成功登录。\n\n你已成功订阅 It's FOSS。\n\n你的链接已过期。\n\n成功！请查看你的电子邮件以获取登录魔法链接。\n\n成功！你的账单信息已更新。\n\n你的账单未更新。"
+  },
+  "9004ef4857b08d9ae543a064455ed363": {
+    "id": "9004ef4857b08d9ae543a064455ed363",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/openkylin-3-0-released/",
+    "title_en": "openKylin 3.0 Release Makes it a \"AI first\" Linux Desktop",
+    "summary_en": "The built-in skills allow you to control and change system settings via AI agent. Is this the beginning of AI assistant for desktop computers?",
+    "pub_date": "Thu, 24 Sep 2026 02:51:40 GMT",
+    "title_zh": "openKylin 3.0 发布，打造“AI 优先”的 Linux 桌面",
+    "summary_zh": "openKylin 3.0 正式发布，基于 Linux 7.0 内核和 UKUI 4.24 桌面环境，深度集成 AI 能力。新版本引入 KylinBot AI 代理框架及助手“小 K”，支持通过自然语言或语音控制系统设置、网络、蓝牙、电源等，并可通过微信、飞书等应用交互。UKUI 4.24 新增屏幕阅读器、隔空手势、动态壁纸等功能，并采用 Rust 重写部分工具。",
+    "fulltext_zh": "openKylin 3.0 发布，打造“AI 优先”的 Linux 桌面\n\n内置技能允许你通过 AI 代理控制和更改系统设置。这是桌面计算机 AI 助手的开端吗？\n\nopenKylin 是中国自主研发的开源操作系统，由多家企业、研究机构和个人贡献者组成的联盟共同开发。\n\n我们过去曾报道过 openKylin，但那已是两年多前的事了。如今迎来了新的重大版本 openKylin 3.0，它带来了 Linux 7.0 内核、UKUI（桌面环境）4.24，并将 AI 深度集成到核心之中。\n\n让我们来看看新版本的亮点。\n\nAI 是 openKylin 3.0 的核心\n\n新版本最引人注目的变化之一是内置的全新 KylinBot AI 代理框架，以及基于它构建的 AI 助手“小 K”。\n\n小 K 基本上是一个类似于 Hermes Desktop 及其他同类 AI 工具的图形界面。底层的 KylinBot AI 代理框架将其与系统集成在一起。\n\n它附带多项预置的系统技能，例如：\n\n全面覆盖键盘、鼠标和触摸板。\n\n屏幕亮度和 OSD 显示调节。\n\n与 NetworkManager 命令行工具深度集成，通过单一命令管理 Wi-Fi、以太网和 VPN。\n\n外设管理：\n\n蓝牙开关、设备发现和音频设备自动配对。\n\n电源管理、任务栏操作、快捷键导航和系统应用控制。\n\n自定义技能，与你的桌面交互。\n\n这样，你可以在小 K 中要求代理关闭蓝牙或切换到其他网络、更改输入键盘布局等。你无需通过命令行或点击系统设置。代理会为你完成工作。\n\n看起来有些大材小用，对吧？但如果你使用语音输入，这就更合理了。如今人们用 Siri 免提呼叫特定联系人。所以，如果你能直接对电脑说话，让它连接你的蓝牙耳机，何乐而不为呢？\n\n请记住，Ubuntu 26.10 也在进行 AI 集成。Omarch 4.0 因 AI（及其外观）而人气骤增。所以，即使你不喜欢 AI，市场也有需求。迟早，大多数桌面操作系统都会内置这样的 AI 助手。openKylin 只是比同行领先了几步。\n\n更多技能可以在 openKylin 的代码仓库中找到。内容是中文的，我真希望他们也能开始提供英文版功能，以迎合更广泛的全球用户。\n\n与 Hermes、OpenClaw 及其他 AI 工具一样，小 K 不仅停留在你的桌面上。你可以通过微信、飞书、钉钉等消息工具与它交流。Telegram 和 Discord 支持也在计划中。\n\nUKUI（Ultimate Kylin User Interface）桌面环境升级到 4.24 版本。新版本带来以下更新：\n\nUKUI 各模块间实现标准化 API 封装，并与 KACP（Kylin Agent Control Protocol）集成，使 KylinBot 能够通过统一 API 调用底层桌面能力。\n\n新版本还以屏幕阅读器的形式带来了无障碍支持。它还具备隔空手势控制，这意味着你可以通过手部动作控制部分桌面功能，而无需触摸屏幕或使用鼠标键盘。\n\n这在 Android 设备上通过智能手机的距离传感器实现。在这里，Kylin 使用网络摄像头捕捉手势。\n\n还新增了动态壁纸功能，以增强视觉效果。在其他视觉变化中，新增了“三岛”任务栏布局模式选项。\n\n触摸板获得增强的多指手势交互，支持通过三指和四指手势进行多任务视图、音量控制及其他操作。\n\n由于 AI 和 Rust 如今都很流行，openKylin 3 新增了基于 Rust 的实用工具，以替代较旧的经典工具。\n\nkylin-time r"
+  },
+  "64a1c1804210b10bbb684206379887c1": {
+    "id": "64a1c1804210b10bbb684206379887c1",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-Considers-AGENTS-MD",
+    "title_en": "Linux Kernel Developers Consider Adding AGENTS.md To Help Guide AI/LLM Agents",
+    "summary_en": "While the Linux kernel continues to be bombarded with patches from AI/LLM agents, to date the kernel hasn't carried an AGENTS.md Markdown file with instructions catering to AI/LLM agents. But a patch set out today would finally introduce one...",
+    "pub_date": "Thu, 24 Sep 2026 20:53:14 -0400",
+    "title_zh": "Linux内核开发者考虑添加AGENTS.md以帮助指导AI/LLM代理",
+    "summary_zh": "Linux内核开发者正在讨论添加AGENTS.md文件，以规范AI/LLM代理在内核开发中的行为。该文件目前仅链接到内核README及相关文档。测试表明，没有该文件时，AI代理会错误添加Signed-off-by标签或使用自定义归属标签；添加后，代理行为更符合内核标准。但部分开发者反对，认为让AI读取整个README会增加token消耗，建议提供更针对性的文档。",
+    "fulltext_zh": "虽然Linux内核持续收到大量来自AI/LLM代理的补丁，但迄今为止，内核尚未包含一个面向AI/LLM代理的Markdown说明文件。不过，今天发布的一个补丁集将最终引入这样一个文件。\n\n长期担任Linux开发者、并为内核从事过其他AI相关工作的Sasha Levin——例如帮助确定向后移植到稳定内核树的补丁、AI驱动的合并冲突解决——现在希望在内核源码树中添加一个AGENTS.md文件。\n\n拟议的AGENTS.md只是链接到Linux内核的README文件。从那里，它指向有关编码助手的文档以及其他与内核开发者相关的信息。\n\n在内核树中添加AGENTS.md的理由是：在一个没有该文件的AI代理上进行测试时，该AI代理向拟议的内核补丁添加了“Signed-off-by”标签，尽管在没有用户明确自行签署的情况下它本不应这样做。它还使用了自身的归属标签，而不是内核标准化的Assisted-by标签。\n\n在第二个未具名的AI代理上测试时，没有AGENTS.md的情况下没有添加任何归属信息。但在添加AGENTS.md之后，两个代理的行为都符合内核标准，第二个代理更好地遵循了内核开发最佳实践。\n\n这个内核邮件列表线程列出了提议引入AGENTS.md的补丁。虽然它只是链接到README文件，但目前并非所有人都赞成。LKML上有人反对该补丁，因为让AI/LLM消费整个Linux内核README及相关文档会增加token消耗。提供更针对AI/LLM的最相关文档是帮助减少token消耗的一种方式，但我们将看看这个关于增强AI工作流的新Linux内核提案会有什么结果。\n\nLinux内核因模糊测试机器人产生不切实际的错误报告而引入新污染标记\n\n为内存极其有限的微型Linux系统提议“slab_tiny”启动选项\n\nLinux 7.4 DRM基础设施通过新助手更好地支持HDMI 2.0\n\n为Linux图形驱动提议可变刷新率“VRR”目标限制器\n\nIgalia庆祝推进Linux与开源25周年\n\nLinux 7.3-rc4发布：LLM发现更多修复，但没有什么太可怕的\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nLinux 7.4的简单优化可使文件读取速度提高约39%\n\n谷歌“难以维护”的Binder C Linux驱动将被移除，转而使用Rust\n\nUbuntu 26.10将cp、mv和rm迁移到Rust Coreutils，实现100%过渡\n\n帮助Linux硬件测试与评测继续，同时享受无广告的Phoronix\n\n阿里巴巴向Omarchy捐赠300万美元，致力于打造“理想”的代理式操作系统\n\nValve推出Pyrowave视频编解码器测试版，用于低延迟流媒体\n\n孤儿VM：在主机内核离线进行重启/更新时，让VM不间断运行\n\nUbuntu 26.10切换到Linux 7.3内核\n\n同时享受无广告浏览、单页文章查看\n\n法律免责声明、隐私政策、Cookies\n\n版权所有 © 2004 - 2026\n\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "1899477e98af9627e9aca955187eb0a1": {
+    "id": "1899477e98af9627e9aca955187eb0a1",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Qualcomm-Mahua-GPU-Support",
+    "title_en": "Qualcomm Posts Patches For Enabling GPU Support In Their Snapdragon X2 Mahua SoC",
+    "summary_en": "Yesterday Qualcomm posted open-source GPU driver patches for their Adreno 850 GPU one day after being announced with the Snapdragon 8 Elite Extreme Gen 6. Yesterday Qualcomm also announced their Snapdragon X2 Linux support plans. Today they have posted the GPU enablement patches for what's found in the Mahua SoC for lower-tier Snapdragon X2 SoCs...",
+    "pub_date": "Thu, 24 Sep 2026 20:25:01 -0400",
+    "title_zh": "高通发布补丁，为其骁龙 X2 Mahua SoC 启用 GPU 支持",
+    "summary_zh": "高通为骁龙 X2 系列中定位较低的 Mahua SoC 发布了开源 GPU 驱动补丁，以启用其 Adreno X2-85 GPU。相比 X2 Elite 所用的 Glymur，Mahua 的 GPU 切片更少、内部显存更小，因此仅需少量内核图形驱动代码即可支持。这些补丁已提交至 Linux 内核邮件列表并进入代码审查阶段。",
+    "fulltext_zh": "高通发布补丁，为其骁龙 X2 Mahua SoC 启用 GPU 支持\n2026年9月24日 晚上08:25 EDT。\n\n昨天，高通在骁龙 8 Elite Extreme Gen 6 发布一天后，为其 Adreno 850 GPU 发布了开源 GPU 驱动补丁。昨天高通还公布了其骁龙 X2 的 Linux 支持计划。今天，他们又发布了针对定位较低的骁龙 X2 SoC 中 Mahua SoC 的 GPU 启用补丁。\n\n高通此前已将其对骁龙 X2 Elite 的初步 GPU 支持上游化，现在这一支持正扩展至较低端的 X2 硬件。Mahua 是骁龙 X2 在较低 10 核和 12 核配置下的 SoC 代号，定位低于代号为 Glymur 的 X2 Elite。\n\n今天发布到 Linux 内核邮件列表的补丁启用了 Mahua 的 Adreno X2-85 GPU，并指出与 Glymur 相比，其切片更少、内部显存更小。最终，启用 Mahua 的 GPU 只需要几十行新的内核图形驱动代码。\n\n感兴趣的人可以在内核邮件列表中找到高通发布的这些 Mahua GPU 补丁，目前正在接受代码审查。\n\n高通大力宣传骁龙 X2 笔记本电脑上的 Linux 支持\n高通在发布一天后即推出 Adreno 850 开源 GPU 驱动补丁\nLinux 7.3 因遇到太多错误而回退罗技 Bolt 接收器 HID++ 支持\nSPEC 发布适用于 Linux 的 SPECviewperf 15.0.1\nLinux 7.3 添加罗技 G502 X Lightspeed USB 支持、ELECOM M-XT4DRBK\n缓存感知调度修复已排队提交至 Linux 7.3，并向后移植到 7.2\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nLinux 7.4 的一项简单优化可使文件读取速度提升约 39%\n谷歌“维护痛苦”的 Binder C Linux 驱动将被移除，改用 Rust\nUbuntu 26.10 将 cp、mv 和 rm 迁移至 Rust Coreutils，实现 100% 过渡\n在享受无广告 Phoronix 的同时，帮助 Linux 硬件测试与评测继续\n阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的智能体操作系统\nValve 推出 Pyrowave 视频编解码器测试版，用于低延迟流媒体\n孤儿虚拟机：在宿主内核离线重启/更新时保持虚拟机不间断运行\nUbuntu 26.10 切换至 Linux 7.3 内核\n\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "e9b3d04db7c7547e6d34b157c806be9c": {
+    "id": "e9b3d04db7c7547e6d34b157c806be9c",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/ReactOS-Updated-Wine-DirectX",
+    "title_en": "ReactOS Lands Significant DirectX Stack Update From Wine For Enabling More Games",
+    "summary_en": "The open-source ReactOS project striving to provide binary compatibility with Microsoft Windows applications/games as well as drivers took a huge step forward today with landing a significant update to its DirectX stack from code leveraged from the Wine project...",
+    "pub_date": "Thu, 24 Sep 2026 17:43:49 -0400",
+    "title_zh": "ReactOS 从 Wine 引入重大 DirectX 栈更新，支持更多游戏",
+    "summary_zh": "ReactOS 项目合并了来自 Wine 10.0 的重大 DirectX 栈更新，新增 49.8 万行代码并移除 11.9 万行旧代码，由开发者 Justin Miller 耗时 230 多小时完成。此次更新使 ReactOS 能通过 OpenGL 和 Vulkan 转译 DirectX，并提升其在 Windows 上的兼容性，预计解锁数百款游戏，包括《龙腾世纪：起源》，未来还将支持 DirectX 10/11/12 游戏。",
+    "fulltext_zh": "ReactOS 从 Wine 引入重大 DirectX 栈更新，支持更多游戏\n\n2026 年 9 月 24 日 下午 05:43 EDT。\n\n致力于提供与 Microsoft Windows 应用程序/游戏以及驱动程序二进制兼容性的开源 ReactOS 项目，今天迈出了一大步，从 Wine 项目引入的代码对其 DirectX 栈进行了重大更新。\n\n一项艰巨的任务已经完成，将 Wine 10.0 状态的 DirectX 栈改进并引入 ReactOS。ReactOS 开发者 Justin Miller 为此投入了数百小时的工作。它还移除了 ReactOS 中许多先前的 DirectX 补丁。\n\n现已合并的代码包含 49.8 万行新代码，并移除了 11.9 万行旧代码。这些新代码允许 ReactOS 使用 OpenGL 和 Vulkan 来转译 DirectX，同时也提升了 ReactOS 的 DirectX 栈在 Windows 本身上运行的能力。\n\n据称此次更新有助于数百款游戏。Miller 在评论中表示：\n\n“这真是来之不易，到目前为止已经耗费了我至少 230 多个小时。（而且还没完成，哇哦！）\n\n这个 PR 的目标是将我们的 DirectX 栈更新到 WINE-10.0，同时移除我们大量的补丁。\n\n这使得 ReactOS 能够使用 Vulkan 和 OpenGL 来转译 DirectX（尽管 Vulkan 仅能通过自定义分支或 mesa 软件渲染器实现），它也提升了我们的 DirectX 栈在 Windows 本身上运行的能力。\n\n修复了一些测试，以及更多内容。\n\n这个 PR 与其他已打开的 PR 结合后所解锁的游戏数量在数百款。\n\n但即使仅针对 NT5.x，这也让诸如《龙腾世纪：起源》这样的游戏终于能够启动。”\n\nReactOS 开发者评论道，很快在 ReactOS 上实现 DirectX 10 / 11 / 12 游戏兼容性将成为可能。\n\n激动人心的时刻仍在继续。\n\nAlmaLinux 推出新的软件/硬件认证门户，可自行认证应用\n阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的智能体操作系统\nVoid Linux 维护者因 AI 政策争议弃养 100 多个软件包\n受 BeOS 启发的 Haiku 现已支持实时切换音频输出及其他改进\nReactOS 开发者让 FEX 在 ARM 下的这款“开源 Windows”操作系统上运行 x86_64 游戏\nSlackware 16 Alpha 1 在升级 GCC 16.2、Glibc 2.44 和 Binutils 2.47 后发布\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\nLinux 7.4 的简单优化可使文件读取速度提升约 39%\n谷歌“难以维护”的 Binder C Linux 驱动将被移除，改用 Rust\nUbuntu 26.10 将 cp、mv 和 rm 迁移至 Rust Coreutils，实现 100% 转换\n在享受无广告 Phoronix 的同时，帮助 Linux 硬件测试与评测继续\n阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的智能体操作系统\nValve 推出 Pyrowave 视频编解码器测试版，用于低延迟流媒体\n孤儿虚拟机：在主机内核离线以进行重启/更新时保持虚拟机不间断运行\nUbuntu 26.10 切换至 Linux 7.3 内核\n\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "e52bab2fb3e7eb757abdcbb7b2c2e7fd": {
+    "id": "e52bab2fb3e7eb757abdcbb7b2c2e7fd",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/ubuntu-2610-panther-lake",
+    "title_en": "Ubuntu 26.10 Delivers Some Nice Gains For Intel Panther Lake / Framework Laptop 13 Pro",
+    "summary_en": "For those with a Framework Laptop 13 Pro or another Intel Core Ultra Series 3 \"Panther Lake\" laptop, the upcoming Ubuntu 26.10 release is delivering some nice out-of-the-box improvements over Ubuntu 26.04 LTS.",
+    "pub_date": "Thu, 24 Sep 2026 14:46:13 -0400",
+    "title_zh": "Ubuntu 26.10 为 Intel Panther Lake / Framework Laptop 13 Pro 带来显著提升",
+    "summary_zh": "Ubuntu 26.10 在 Intel Panther Lake 平台上展现出优于 Ubuntu 26.04 LTS 的开箱性能，测试机型为搭载 Core Ultra X9 388H 和 Arc B390 核显的 Framework Laptop 13 Pro。得益于 Linux 7.3 内核与新版 Mesa，Vulkan 工作负载提升尤为明显。",
+    "fulltext_zh": "Ubuntu 26.10 为 Intel Panther Lake / Framework Laptop 13 Pro 带来显著提升\n\n2026 年 9 月 24 日下午 2:46（美国东部时间）。\n\n对于 Framework Laptop 13 Pro 或其他搭载 Intel Core Ultra 系列 3 的笔记本电脑，即将发布的 Ubuntu 26.10 相比 Ubuntu 26.04 LTS 带来了一些不错的开箱即用改进。\n\n在 Phoronix 实验室的更多系统上，尤其是现代硬件平台上，持续取得不错的性能提升。随着 AMD Strix Halo Framework Desktop 等设备的加入，这个即将发布的 Ubuntu “Stonking Stingray” 版本由于更新的内核（现已升级到 Linux 7.3）以及其他软件升级，已经取得了一些不错的成果。Intel Panther Lake 的性能也得到了很好的改善，正如本文所示，尤其是在 Intel Arc B390 显卡方面，更新的 Mesa 对 Vulkan 工作负载特别有帮助。\n\n本轮测试中，我使用了搭载 Intel Core Ultra X9 388H、64GB LPDDR5-7467 内存、2TB WD_BLACK SN7100 NVMe SSD 以及集成 Arc B390 显卡的 Framework Laptop 13 Pro。将开箱即用并安装了所有稳定版更新的 Ubuntu 26.04 LTS 与截至 9 月 22 日的每日构建版 Ubuntu 26.10 进行了对比。\n\nUbuntu 26.10 amd64v3 可为低端/预算硬件提供不错的性能提升\n\nUbuntu 26.10 将为 Intel Core 3 Wildcat Lake 带来更好的性能\n\nCachyOS vs. Windows 11 vs. Ubuntu 26.04 LTS 在 Intel Wildcat Lake + 8GB 内存上的对比\n\nCachyOS 与其他 Linux 操作系统在价值 4.6 万美元工作站上的性能对比\n\n分析 Fedora 在搭载 Intel Panther Lake 的 Framework Laptop 13 Pro 上的缓慢性能\n\nIntel Xeon 678X 在 HP Z4 G6i 上 Windows 11 vs. Ubuntu 26.04 的性能对比\n\n同时享受无广告浏览、\n单页文章视图\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "f040d37d7bbef961c79ad5a503d6a258": {
+    "id": "f040d37d7bbef961c79ad5a503d6a258",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/COSMIC-Epoch-1.9-Released",
+    "title_en": "COSMIC Epoch 1.9 Brings New Image Viewer & On-Screen Keyboard",
+    "summary_en": "COSMIC Epoch 1.9 was released last night as the newest version of the System76-sponsored, Rust-based desktop environment. COSMIC Epoch 1.9 release notes only became available today and it's a big one with new apps and improvements to existing offerings...",
+    "pub_date": "Thu, 24 Sep 2026 13:11:51 -0400",
+    "title_zh": "COSMIC Epoch 1.9 带来全新图像查看器与屏幕键盘",
+    "summary_zh": "COSMIC Epoch 1.9 作为 System76 赞助、基于 Rust 的桌面环境最新版本发布，新增原生图像查看器 COSMIC Viewer（支持内置编辑和多种图像格式）以及屏幕键盘 COSMIC OSK，并对 COSMIC Store 进行了全面改造，同时带来合成器更新、COSMIC Files 修复、COSMIC Greeter 对 systemd-homed 的可选支持等多项改进。",
+    "fulltext_zh": "COSMIC Epoch 1.9 于昨晚发布，这是 System76 赞助、基于 Rust 的桌面环境的最新版本。COSMIC Epoch 1.9 的发布说明直到今天才公布，这是一个重大版本，包含新应用和对现有功能的改进。\n\nCOSMIC Epoch 1.9 引入了 COSMIC Viewer，作为该桌面环境自有的原生图像查看器，支持内置编辑和多种不同的图像格式。\n\nCOSMIC OSK 是 COSMIC 桌面环境新的屏幕键盘。\n\nCOSMIC Epoch 1.9 还对 COSMIC Store 进行了全面改造，带来了合成器更新、COSMIC Files 修复、COSMIC Greeter 对 systemd-homed 的可选支持，以及各种其他修复和优化。\n\nCOSMIC Epoch 1.9 的下载和其他详细信息请访问相关页面。"
+  },
+  "764dce43f3000caa3582f2bf2cb05fcf": {
+    "id": "764dce43f3000caa3582f2bf2cb05fcf",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/5-best-free-and-open-source-threat-intelligence-platforms/",
+    "title_en": "5 Best Free and Open Source Threat Intelligence Platforms",
+    "summary_en": "Explore 5 of the best free and open-source threat intelligence platforms for collecting, analyzing, and sharing data about cybersecurity threats.\nThe post 5 Best Free and Open Source Threat Intelligence Platforms appeared first on Linux Today.",
+    "pub_date": "Thu, 24 Sep 2026 07:26:23 +0000",
+    "title_zh": "5 个最佳免费开源威胁情报平台",
+    "summary_zh": "本文介绍了 5 个最佳的免费开源威胁情报平台，用于收集、分析和共享网络安全威胁数据。这些平台帮助安全团队提升威胁检测与响应能力。",
+    "fulltext_zh": "探索 5 个最佳的免费开源威胁情报平台，用于收集、分析和共享网络安全威胁数据。\n\n文章《5 个最佳免费开源威胁情报平台》首发于 Linux Today。"
+  },
+  "4f996db8a9d5850c418707c932c653df": {
+    "id": "4f996db8a9d5850c418707c932c653df",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/vlc-3-0-24-multimedia-player-upgrades-to-ffmpeg-8-1-2-adds-flatpak-support/",
+    "title_en": "VLC 3.0.24 Multimedia Player Upgrades to FFmpeg 8.1.2, Adds Flatpak Support",
+    "summary_en": "VLC 3.0.24 multimedia player upgrades to FFmpeg 8.1.2 and adds Flatpak support, alongside additional fixes and improvements.\nThe post VLC 3.0.24 Multimedia Player Upgrades to FFmpeg 8.1.2, Adds Flatpak Support appeared first on Linux Today.",
+    "pub_date": "Thu, 24 Sep 2026 07:25:25 +0000",
+    "title_zh": "VLC 3.0.24 多媒体播放器升级至 FFmpeg 8.1.2，新增 Flatpak 支持",
+    "summary_zh": "VLC 3.0.24 发布，将底层 FFmpeg 升级至 8.1.2 版本，并新增 Flatpak 打包支持，同时包含多项修复与改进。",
+    "fulltext_zh": "VLC 3.0.24 多媒体播放器升级至 FFmpeg 8.1.2，并新增 Flatpak 支持，同时带来其他修复与改进。\n\n文章《VLC 3.0.24 多媒体播放器升级至 FFmpeg 8.1.2，新增 Flatpak 支持》最初发布于 Linux Today。"
+  },
+  "03ea05b91a46c94e0eba8831dad29ca1": {
+    "id": "03ea05b91a46c94e0eba8831dad29ca1",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/unicode-18-0-released-with-13007-new-characters/",
+    "title_en": "Unicode 18.0 Released with 13,007 New Characters",
+    "summary_en": "Unicode 18.0 has been officially released with 13,007 new characters, expanding the standard used to represent text and symbols across digital platforms.\nThe post Unicode 18.0 Released with 13,007 New Characters appeared first on Linux Today.",
+    "pub_date": "Thu, 24 Sep 2026 07:24:32 +0000",
+    "title_zh": "Unicode 18.0 发布，新增 13,007 个字符",
+    "summary_zh": "Unicode 18.0 已正式发布，新增 13,007 个字符，进一步扩展了用于在数字平台上表示文本和符号的标准。",
+    "fulltext_zh": "Unicode 18.0 已正式发布，新增 13,007 个字符，扩展了用于在数字平台上表示文本和符号的标准。\n\n文章《Unicode 18.0 发布，新增 13,007 个字符》最初出现在 Linux Today 上。"
+  },
+  "f4d858a881c0bf61167163216f161c6e": {
+    "id": "f4d858a881c0bf61167163216f161c6e",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/voxiferi-wants-to-stop-bad-ai-data-at-the-door/",
+    "title_en": "Voxiferi Wants to Stop Bad AI Data at the Door",
+    "summary_en": "Voxiferi aims to stop bad AI data at the door, offering an approach designed to catch problematic data before it reaches AI systems and workflows.\nThe post Voxiferi Wants to Stop Bad AI Data at the Door appeared first on Linux Today.",
+    "pub_date": "Thu, 24 Sep 2026 07:14:20 +0000",
+    "title_zh": "Voxiferi 希望将不良 AI 数据拒之门外",
+    "summary_zh": "Voxiferi 旨在将不良 AI 数据拒之门外，提供一种在问题数据进入 AI 系统和工作流之前就将其拦截的方法。该方案强调在数据源头进行把关，而非事后补救，以提升 AI 系统的可靠性与安全性。",
+    "fulltext_zh": "Voxiferi 旨在将不良 AI 数据拒之门外，提供一种旨在问题数据进入 AI 系统和工作流之前就将其捕获的方法。\n\n文章《Voxiferi 希望将不良 AI 数据拒之门外》最初发表于 Linux Today。"
+  },
+  "2c29fe0ce876ea81dc233852a0657d2d": {
+    "id": "2c29fe0ce876ea81dc233852a0657d2d",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/best-free-and-open-source-alternatives-to-apple-icloud-drive/",
+    "title_en": "Best Free and Open Source Alternatives to Apple iCloud Drive",
+    "summary_en": "Discover the best free and open-source alternatives to Apple iCloud Drive for storing, syncing, and managing files across your devices.\nThe post Best Free and Open Source Alternatives to Apple iCloud Drive appeared first on Linux Today.",
+    "pub_date": "Thu, 24 Sep 2026 07:13:00 +0000",
+    "title_zh": "Apple iCloud Drive 的最佳免费开源替代品",
+    "summary_zh": "本文介绍了 Apple iCloud Drive 的最佳免费开源替代方案，帮助用户在不同设备间存储、同步和管理文件。这些替代品提供了类似云存储的功能，同时保持开源和免费的特性，适合寻求隐私保护和自主控制数据存储的用户。",
+    "fulltext_zh": "探索用于在您的设备之间存储、同步和管理文件的 Apple iCloud Drive 最佳免费开源替代品。\n\n文章《Apple iCloud Drive 的最佳免费开源替代品》最初发布于 Linux Today。"
   }
 }

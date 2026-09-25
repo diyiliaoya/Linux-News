@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Clonezilla Live 3.3.3-37 — Linux 中文速报</title>
+<title>高通发布骁龙 X2 Linux 开发者预览版 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>发行版发布：Clonezilla Live 3.3.3-37</h1>
+  <h1>高通发布骁龙 X2 Linux 开发者预览版</h1>
 
-  <div class="article-summary">Clonezilla Live 3.3.3-37 是基于 Debian Sid（2026-09-13）的实时发行版，内核升级至 7.1.13，Partclone 更新至 0.3.50 并修复 Btrfs 问题。新增 PXEBoot 与 HTTPBoot 网络启动支持（含 Secure Boot），实现 LUKS2 仓库支持，用 iproute2 替代 net-tools、dhcpcd 替代 dhclient，并优化 GRUB 在 4K/HiDPI 屏幕下的显示效果。</div>
+  <div class="article-summary">高通发布了骁龙 X2 笔记本的 Linux 开发者预览版，以 Debian 13 为参考环境，面向内核开发者、发行版维护者和硬件适配工程师。该预览版包含自定义内核和用户空间，重点推动驱动进入主线而非维护树外补丁。系统通过 systemd-boot 启动，支持 USB、PCIe、UART、I2C、SPI 等接口，Mesa 开源驱动提供 OpenGL、Vulkan 1.3 和 OpenCL 支持，显示输出、浏览器加速和 GPU 计算已可用。高通还提供了官方文档，包含两条开发路径和预构建镜像。</div>
 
-  <div class="article-body"><p>发行版发布：Clonezilla Live 3.3.3-37（DistroWatch.com 新闻）</p><p>Clonezilla Live 是一个基于 Debian 的实时发行版，内含 Clonezilla 这款分区与磁盘克隆软件。该项目的最新版本 3.3.3-37 包含了来自上游的多项更新，以及新的启动选项：</p><p>“底层 GNU/Linux 操作系统已升级，本版本基于 2026-09-13 的 Debian ‘Sid’ 仓库。Linux 内核已更新至 7.1.13；Partclone 已更新至 0.3.50 版本，其中包含针对 Btrfs 问题的修复；Clonezilla lite server 现在同时支持 PXEBoot 和 HTTPBoot 网络启动客户端，包括对 HTTPBoot 机制的 Secure Boot 支持；实现了 LUKS2 仓库支持；用 iproute2 替代了已弃用的 net-tools 命令，并放弃 dhclient 相关代码，改用 dhcpcd；配置 dhcpcd 使用 clientid 以实现稳定的 IP 保留；GRUB 显示增强——配置了首选分辨率和回退分辨率，以防止在 4K/HiDPI 屏幕上出现极小的启动菜单和文字变形；ocs-live-boot-menu——在安全启动锁定下有条件地运行 efitextmode，以避免‘被安全启动策略禁止’的错误信息……”</p><p>更多信息请参见 clonezilla-live-3.3.3-37-amd64.iso。</p><p>近期相关新闻与发布</p><p>发行版发布：Clonezilla Live 3.3.3-37</p><p>发行版发布：Clonezilla Live 3.3.2-31</p><p>发行版发布：Clonezilla Live 3.3.1-35</p><p>发行版发布：Clonezilla Live 3.3.0-33</p><p>发行版发布：Clonezilla Live 3.2.1-28</p><p>发行版发布：Clonezilla Live 3.2.1-9</p><p>更多 Clonezilla 新闻……</p><p>关于 Clonezilla Live</p><p>Clonezilla Live 是一个基于 Debian 的实时 CD，内含 Clonezilla，这是一款类似于 Norton Ghost 的分区和磁盘克隆软件。它仅保存和恢复硬盘中已使用的块。使用 Clonezilla，可以在大约 10 分钟内将 5 GB 的系统克隆到 40 个客户端。</p><p>https://clonezilla.org/</p><p>https://clonezilla.org/mailing-lists.php</p><p>https://sourceforge.net/p/clonezilla/discussion/</p><p>替代用户论坛</p><p>https://clonezilla.org/clonezilla-live/</p><p>https://clonezilla.org/screenshots/?in_path=/00_Clonezilla</p><p>https://</p></div>
+  <div class="article-body"><p>高通发布骁龙 X2 Linux 开发者预览版</p><p>高通发布骁龙 X2 Linux 开发者预览版</p><p>他们为骁龙 X2 笔记本发布了一个早期开发者预览版，以 Debian 13 作为参考环境。</p><p>这是一个早期开发者预览版，面向笔记本，邀请内核开发者、发行版维护者和硬件适配工程师上手这些硬件并开始测试。</p><p>自 2025 年骁龙峰会以来，他们一直在为此打基础，而今天的推进方向是让驱动进入主线，而不是发布只有少数人能维护的树外补丁。</p><p>该预览版并非面向最终用户。</p><p>当前预览版将一个用户空间与一个自定义内核配对，初期重点是在开发者能够在这类硬件上开展任何严肃工作之前，准备好他们所需的核心组件。</p><p>系统启动通过 systemd-boot 作为 UEFI 管理器来处理，而驱动覆盖了 USB、PCIe 以及高通通用外设串行引擎，用于 UART、I2C 和 SPI 连接。</p><p>Mesa 的开源高通驱动负责图形任务，涵盖 OpenGL，Turnip 负责 Vulkan 1.3，另外还有驱动处理 OpenCL 计算。</p><p>这三方面的工作都在进行中，但显示输出、浏览器加速和 GPU 计算工作负载已经可以实现。</p><p>驱动——高通用于将计算任务从 CPU 路由到 DSP 的机制——正在被推向上游，以开放本地 AI 推理工作负载的能力。电源管理和热管理支持也是这一系列开发的一部分。</p><p>骁龙 X2 Linux 软件的官方文档概述了开发者可以遵循的两条路径。</p><p>第一条是未注册路径，你使用预构建的固件二进制文件来构建，无需高通账户即可开始。第二条需要账户，让你获得完整的固件源代码访问权限，从而从头构建一切。</p><p>如果你想完全跳过构建直接刷机，也可以使用预构建的可刷写镜像。</p><p>主机要求也因你构建的内容而异。Debian 层需要一台运行 Ubuntu 24.04 LTS 或更高版本，或 Debian Trixie 的机器。固件构建需要 Ubuntu 22.04 LTS 或更高版本的主机。</p><p>如果你想亲眼看到 Linux 在骁龙 X2 硬件上运行的实操演示，那么今年在夏威夷毛伊岛举办的（活动）就是你要去的地方！</p><p>分阶段的路线图、文档门户、公共仓库中的专用构建脚本，以及向开发者征求反馈——这是其他希望将工作上游化的芯片厂商应该注意的做法。</p><p>每一个进入主线的驱动，都意味着发行版需要携带的补丁少一个，而这最终将使这些机器在早期采用者之外也能使用。</p><p>并不打算长期停留。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道。</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受。</p><p>任意金额，无承诺。</p><p>一个对开源软件、自定义 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的书呆子。</p><p>Ubuntu 正在将内核 SRU 周期收紧至两周，而 Clankers 是罪魁祸首。</p><p>openKylin 3.0 发布，使其成为“AI 优先”的 Linux 桌面。</p><p>有保质期的发行版？Gravity Linux 是面向 Apple Silicon 的新发行版。</p><p>PeppermintOS 正在从 Xorg 转向 XLibre，以避开 Wayland。</p><p>组织现在转向 OpenSearch 是为了 AI，而不仅仅是搜索。</p><p>成为更好的 Linux 用户。</p><p>通过 FOSS 每周新闻通讯，你可以学习有用的 Linux 技巧、发现应用程序、探索新发行版，并随时了解 Linux 世界的最新动态。</p><p>太好了！你已成功注册。</p><p>欢迎回来！你已成功登录。</p><p>你已成功订阅 It's FOSS。</p><p>你的链接已过期。</p><p>成功！请查看你的电子邮件以获取登录魔法链接。</p><p>成功！你的账单信息已更新。</p><p>你的账单未更新。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12957" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/snapdragon-x2-linux-developer-preview/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

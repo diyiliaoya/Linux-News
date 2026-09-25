@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Clonezilla Live 3.3.3-37 — Linux 中文速报</title>
+<title>openKylin 3.0 发布，打造“AI 优先”的 Linux 桌面 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>发行版发布：Clonezilla Live 3.3.3-37</h1>
+  <h1>openKylin 3.0 发布，打造“AI 优先”的 Linux 桌面</h1>
 
-  <div class="article-summary">Clonezilla Live 3.3.3-37 是基于 Debian Sid（2026-09-13）的实时发行版，内核升级至 7.1.13，Partclone 更新至 0.3.50 并修复 Btrfs 问题。新增 PXEBoot 与 HTTPBoot 网络启动支持（含 Secure Boot），实现 LUKS2 仓库支持，用 iproute2 替代 net-tools、dhcpcd 替代 dhclient，并优化 GRUB 在 4K/HiDPI 屏幕下的显示效果。</div>
+  <div class="article-summary">openKylin 3.0 正式发布，基于 Linux 7.0 内核和 UKUI 4.24 桌面环境，深度集成 AI 能力。新版本引入 KylinBot AI 代理框架及助手“小 K”，支持通过自然语言或语音控制系统设置、网络、蓝牙、电源等，并可通过微信、飞书等应用交互。UKUI 4.24 新增屏幕阅读器、隔空手势、动态壁纸等功能，并采用 Rust 重写部分工具。</div>
 
-  <div class="article-body"><p>发行版发布：Clonezilla Live 3.3.3-37（DistroWatch.com 新闻）</p><p>Clonezilla Live 是一个基于 Debian 的实时发行版，内含 Clonezilla 这款分区与磁盘克隆软件。该项目的最新版本 3.3.3-37 包含了来自上游的多项更新，以及新的启动选项：</p><p>“底层 GNU/Linux 操作系统已升级，本版本基于 2026-09-13 的 Debian ‘Sid’ 仓库。Linux 内核已更新至 7.1.13；Partclone 已更新至 0.3.50 版本，其中包含针对 Btrfs 问题的修复；Clonezilla lite server 现在同时支持 PXEBoot 和 HTTPBoot 网络启动客户端，包括对 HTTPBoot 机制的 Secure Boot 支持；实现了 LUKS2 仓库支持；用 iproute2 替代了已弃用的 net-tools 命令，并放弃 dhclient 相关代码，改用 dhcpcd；配置 dhcpcd 使用 clientid 以实现稳定的 IP 保留；GRUB 显示增强——配置了首选分辨率和回退分辨率，以防止在 4K/HiDPI 屏幕上出现极小的启动菜单和文字变形；ocs-live-boot-menu——在安全启动锁定下有条件地运行 efitextmode，以避免‘被安全启动策略禁止’的错误信息……”</p><p>更多信息请参见 clonezilla-live-3.3.3-37-amd64.iso。</p><p>近期相关新闻与发布</p><p>发行版发布：Clonezilla Live 3.3.3-37</p><p>发行版发布：Clonezilla Live 3.3.2-31</p><p>发行版发布：Clonezilla Live 3.3.1-35</p><p>发行版发布：Clonezilla Live 3.3.0-33</p><p>发行版发布：Clonezilla Live 3.2.1-28</p><p>发行版发布：Clonezilla Live 3.2.1-9</p><p>更多 Clonezilla 新闻……</p><p>关于 Clonezilla Live</p><p>Clonezilla Live 是一个基于 Debian 的实时 CD，内含 Clonezilla，这是一款类似于 Norton Ghost 的分区和磁盘克隆软件。它仅保存和恢复硬盘中已使用的块。使用 Clonezilla，可以在大约 10 分钟内将 5 GB 的系统克隆到 40 个客户端。</p><p>https://clonezilla.org/</p><p>https://clonezilla.org/mailing-lists.php</p><p>https://sourceforge.net/p/clonezilla/discussion/</p><p>替代用户论坛</p><p>https://clonezilla.org/clonezilla-live/</p><p>https://clonezilla.org/screenshots/?in_path=/00_Clonezilla</p><p>https://</p></div>
+  <div class="article-body"><p>openKylin 3.0 发布，打造“AI 优先”的 Linux 桌面</p><p>内置技能允许你通过 AI 代理控制和更改系统设置。这是桌面计算机 AI 助手的开端吗？</p><p>openKylin 是中国自主研发的开源操作系统，由多家企业、研究机构和个人贡献者组成的联盟共同开发。</p><p>我们过去曾报道过 openKylin，但那已是两年多前的事了。如今迎来了新的重大版本 openKylin 3.0，它带来了 Linux 7.0 内核、UKUI（桌面环境）4.24，并将 AI 深度集成到核心之中。</p><p>让我们来看看新版本的亮点。</p><p>AI 是 openKylin 3.0 的核心</p><p>新版本最引人注目的变化之一是内置的全新 KylinBot AI 代理框架，以及基于它构建的 AI 助手“小 K”。</p><p>小 K 基本上是一个类似于 Hermes Desktop 及其他同类 AI 工具的图形界面。底层的 KylinBot AI 代理框架将其与系统集成在一起。</p><p>它附带多项预置的系统技能，例如：</p><p>全面覆盖键盘、鼠标和触摸板。</p><p>屏幕亮度和 OSD 显示调节。</p><p>与 NetworkManager 命令行工具深度集成，通过单一命令管理 Wi-Fi、以太网和 VPN。</p><p>外设管理：</p><p>蓝牙开关、设备发现和音频设备自动配对。</p><p>电源管理、任务栏操作、快捷键导航和系统应用控制。</p><p>自定义技能，与你的桌面交互。</p><p>这样，你可以在小 K 中要求代理关闭蓝牙或切换到其他网络、更改输入键盘布局等。你无需通过命令行或点击系统设置。代理会为你完成工作。</p><p>看起来有些大材小用，对吧？但如果你使用语音输入，这就更合理了。如今人们用 Siri 免提呼叫特定联系人。所以，如果你能直接对电脑说话，让它连接你的蓝牙耳机，何乐而不为呢？</p><p>请记住，Ubuntu 26.10 也在进行 AI 集成。Omarch 4.0 因 AI（及其外观）而人气骤增。所以，即使你不喜欢 AI，市场也有需求。迟早，大多数桌面操作系统都会内置这样的 AI 助手。openKylin 只是比同行领先了几步。</p><p>更多技能可以在 openKylin 的代码仓库中找到。内容是中文的，我真希望他们也能开始提供英文版功能，以迎合更广泛的全球用户。</p><p>与 Hermes、OpenClaw 及其他 AI 工具一样，小 K 不仅停留在你的桌面上。你可以通过微信、飞书、钉钉等消息工具与它交流。Telegram 和 Discord 支持也在计划中。</p><p>UKUI（Ultimate Kylin User Interface）桌面环境升级到 4.24 版本。新版本带来以下更新：</p><p>UKUI 各模块间实现标准化 API 封装，并与 KACP（Kylin Agent Control Protocol）集成，使 KylinBot 能够通过统一 API 调用底层桌面能力。</p><p>新版本还以屏幕阅读器的形式带来了无障碍支持。它还具备隔空手势控制，这意味着你可以通过手部动作控制部分桌面功能，而无需触摸屏幕或使用鼠标键盘。</p><p>这在 Android 设备上通过智能手机的距离传感器实现。在这里，Kylin 使用网络摄像头捕捉手势。</p><p>还新增了动态壁纸功能，以增强视觉效果。在其他视觉变化中，新增了“三岛”任务栏布局模式选项。</p><p>触摸板获得增强的多指手势交互，支持通过三指和四指手势进行多任务视图、音量控制及其他操作。</p><p>由于 AI 和 Rust 如今都很流行，openKylin 3 新增了基于 Rust 的实用工具，以替代较旧的经典工具。</p><p>kylin-time r</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12957" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/openkylin-3-0-released/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

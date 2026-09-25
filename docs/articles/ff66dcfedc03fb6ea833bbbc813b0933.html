@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Clonezilla Live 3.3.3-37 — Linux 中文速报</title>
+<title>Ubuntu 将内核 SRU 周期缩短至两周，AI 自动化漏洞挖掘是主因 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>发行版发布：Clonezilla Live 3.3.3-37</h1>
+  <h1>Ubuntu 将内核 SRU 周期缩短至两周，AI 自动化漏洞挖掘是主因</h1>
 
-  <div class="article-summary">Clonezilla Live 3.3.3-37 是基于 Debian Sid（2026-09-13）的实时发行版，内核升级至 7.1.13，Partclone 更新至 0.3.50 并修复 Btrfs 问题。新增 PXEBoot 与 HTTPBoot 网络启动支持（含 Secure Boot），实现 LUKS2 仓库支持，用 iproute2 替代 net-tools、dhcpcd 替代 dhclient，并优化 GRUB 在 4K/HiDPI 屏幕下的显示效果。</div>
+  <div class="article-summary">Canonical 将 Ubuntu 内核的稳定版更新（SRU）从原有的双轨制（每四周完整更新、两周安全更新）合并为单一的两周周期，由于新周期每周启动，实际实现每周发布一次内核更新。此举旨在应对 AI 和 LLM 将漏洞挖掘自动化后带来的海量内核缺陷，目标是在 CVE 公开后 24 至 48 小时内发布缓解措施。</div>
 
-  <div class="article-body"><p>发行版发布：Clonezilla Live 3.3.3-37（DistroWatch.com 新闻）</p><p>Clonezilla Live 是一个基于 Debian 的实时发行版，内含 Clonezilla 这款分区与磁盘克隆软件。该项目的最新版本 3.3.3-37 包含了来自上游的多项更新，以及新的启动选项：</p><p>“底层 GNU/Linux 操作系统已升级，本版本基于 2026-09-13 的 Debian ‘Sid’ 仓库。Linux 内核已更新至 7.1.13；Partclone 已更新至 0.3.50 版本，其中包含针对 Btrfs 问题的修复；Clonezilla lite server 现在同时支持 PXEBoot 和 HTTPBoot 网络启动客户端，包括对 HTTPBoot 机制的 Secure Boot 支持；实现了 LUKS2 仓库支持；用 iproute2 替代了已弃用的 net-tools 命令，并放弃 dhclient 相关代码，改用 dhcpcd；配置 dhcpcd 使用 clientid 以实现稳定的 IP 保留；GRUB 显示增强——配置了首选分辨率和回退分辨率，以防止在 4K/HiDPI 屏幕上出现极小的启动菜单和文字变形；ocs-live-boot-menu——在安全启动锁定下有条件地运行 efitextmode，以避免‘被安全启动策略禁止’的错误信息……”</p><p>更多信息请参见 clonezilla-live-3.3.3-37-amd64.iso。</p><p>近期相关新闻与发布</p><p>发行版发布：Clonezilla Live 3.3.3-37</p><p>发行版发布：Clonezilla Live 3.3.2-31</p><p>发行版发布：Clonezilla Live 3.3.1-35</p><p>发行版发布：Clonezilla Live 3.3.0-33</p><p>发行版发布：Clonezilla Live 3.2.1-28</p><p>发行版发布：Clonezilla Live 3.2.1-9</p><p>更多 Clonezilla 新闻……</p><p>关于 Clonezilla Live</p><p>Clonezilla Live 是一个基于 Debian 的实时 CD，内含 Clonezilla，这是一款类似于 Norton Ghost 的分区和磁盘克隆软件。它仅保存和恢复硬盘中已使用的块。使用 Clonezilla，可以在大约 10 分钟内将 5 GB 的系统克隆到 40 个客户端。</p><p>https://clonezilla.org/</p><p>https://clonezilla.org/mailing-lists.php</p><p>https://sourceforge.net/p/clonezilla/discussion/</p><p>替代用户论坛</p><p>https://clonezilla.org/clonezilla-live/</p><p>https://clonezilla.org/screenshots/?in_path=/00_Clonezilla</p><p>https://</p></div>
+  <div class="article-body"><p>Ubuntu 将内核 SRU 周期缩短至两周，AI 自动化漏洞挖掘是主因</p><p>Ubuntu 用户将因此更快获得内核安全修复。</p><p>迄今为止，Canonical 对 Ubuntu 内核一直采用分轨的 SRU 周期，常规修复和安全补丁分属不同轨道，每四周进行一次完整更新，并在两周中点发布一次针对紧急问题的安全更新。</p><p>如果你对这个概念还不熟悉，稳定版发布更新（Stable Release Update，简称 SRU）是 Canonical 在 Ubuntu 发布后向其推送缺陷修复和安全补丁的方式。内核在这方面拥有自己的专用轨道。</p><p>现在，Canonical 将两条轨道合并为单一的 2 周周期，并且由于每个新周期都在当前周期进行到一周时启动，这导致每周都会有一个内核版本发布。</p><p>每个周期从为期一周的补丁集成和准备工作开始。内核团队会挑选哪些修复进入每个内核，构建软件包，并运行基本冒烟测试，以便在构建继续推进之前发现任何明显问题。</p><p>第一周结束后，这些构建会被推送到 Ubuntu 的 proposed 仓库。内核发布候选版本在被认证之前就存放在那里，知道去哪里找的人可以访问，但尚未向普通用户开放。</p><p>第二周，Canonical 会让这些构建通过其硬件测试计划，在不同的机器类型上进行测试，以确保内核发布前在真实环境中不会出现问题。</p><p>无论当前周期进展如何，每周都会启动一个新周期，因此总有一个内核在完成测试并推出。这就是 2 周周期最终实现每周发布一次的方式。</p><p>而且，当某些东西不适合发布时，Canonical 表示他们会明确说明，并引导用户参考通用的系统加固建议。</p><p>对于无法等待整整两周的团队，Canonical 明确指向 proposed 仓库作为快速通道。其思路是你自己对放在那里的构建运行验收测试，而不是等待认证完成。</p><p>AI 自动化漏洞挖掘让这一变化不可避免</p><p>这一变化并非凭空而来；他们之所以不得不做出如此全面的决定，是因为 AI 自动化漏洞挖掘。就在上个月，我们看到它们仅仅通过抓取 git.kernel.org 来获取训练数据，就消耗了大量计算资源。</p><p>对 Canonical 而言，他们的决定是由 LLM 和 AI 代理推动的，这些技术将漏洞挖掘变成了一种自动化且不间断的行为，以个人类研究员无法复制的规模和速度发现内核缺陷。</p><p>目标是在 CVE 公开后 24 至 48 小时内发布一个临时解决方案。不是补丁本身，而是在补丁构建期间让受影响系统进入更安全状态的措施。</p><p>Ubuntu 背后的公司所做的，是通过缩短 CVE 公开到补丁落地之间的窗口，来应对快速演变的局势。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热衷于开源软件、定制 PC 组装、赛车运动以及探索世界无限可能的技术爱好者。</p><p>Qualcomm 宣布 Snapdragon X2 Linux 开发者预览版</p><p>openKylin 3.0 发布，使其成为“AI 优先”的 Linux 桌面</p><p>有保质期的发行版？Gravity Linux 是面向 Apple Silicon 的新发行版</p><p>PeppermintOS 正从 Xorg 转向 XLibre 以避开 Wayland</p><p>组织现在为了 AI 而选择 OpenSearch，而不仅仅是搜索</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周新闻通讯，你可以学习实用的 Linux 技巧、发现应用程序、探索新发行版，并随时了解 Linux 世界的最新动态</p><p>太好了！你已成功注册。</p><p>欢迎回来！你已成功登录。</p><p>你已成功订阅 It's FOSS。</p><p>你的链接已过期。</p><p>成功！请检查你的电子邮件以获取更</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12957" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/ubuntu-kernel-sru-cycle-update/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

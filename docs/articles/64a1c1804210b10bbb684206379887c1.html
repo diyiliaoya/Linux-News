@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Clonezilla Live 3.3.3-37 — Linux 中文速报</title>
+<title>Linux内核开发者考虑添加AGENTS.md以帮助指导AI/LLM代理 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Clonezilla Live 3.3.3-37</h1>
+  <h1>Linux内核开发者考虑添加AGENTS.md以帮助指导AI/LLM代理</h1>
 
-  <div class="article-summary">Clonezilla Live 3.3.3-37 是基于 Debian Sid（2026-09-13）的实时发行版，内核升级至 7.1.13，Partclone 更新至 0.3.50 并修复 Btrfs 问题。新增 PXEBoot 与 HTTPBoot 网络启动支持（含 Secure Boot），实现 LUKS2 仓库支持，用 iproute2 替代 net-tools、dhcpcd 替代 dhclient，并优化 GRUB 在 4K/HiDPI 屏幕下的显示效果。</div>
+  <div class="article-summary">Linux内核开发者正在讨论添加AGENTS.md文件，以规范AI/LLM代理在内核开发中的行为。该文件目前仅链接到内核README及相关文档。测试表明，没有该文件时，AI代理会错误添加Signed-off-by标签或使用自定义归属标签；添加后，代理行为更符合内核标准。但部分开发者反对，认为让AI读取整个README会增加token消耗，建议提供更针对性的文档。</div>
 
-  <div class="article-body"><p>发行版发布：Clonezilla Live 3.3.3-37（DistroWatch.com 新闻）</p><p>Clonezilla Live 是一个基于 Debian 的实时发行版，内含 Clonezilla 这款分区与磁盘克隆软件。该项目的最新版本 3.3.3-37 包含了来自上游的多项更新，以及新的启动选项：</p><p>“底层 GNU/Linux 操作系统已升级，本版本基于 2026-09-13 的 Debian ‘Sid’ 仓库。Linux 内核已更新至 7.1.13；Partclone 已更新至 0.3.50 版本，其中包含针对 Btrfs 问题的修复；Clonezilla lite server 现在同时支持 PXEBoot 和 HTTPBoot 网络启动客户端，包括对 HTTPBoot 机制的 Secure Boot 支持；实现了 LUKS2 仓库支持；用 iproute2 替代了已弃用的 net-tools 命令，并放弃 dhclient 相关代码，改用 dhcpcd；配置 dhcpcd 使用 clientid 以实现稳定的 IP 保留；GRUB 显示增强——配置了首选分辨率和回退分辨率，以防止在 4K/HiDPI 屏幕上出现极小的启动菜单和文字变形；ocs-live-boot-menu——在安全启动锁定下有条件地运行 efitextmode，以避免‘被安全启动策略禁止’的错误信息……”</p><p>更多信息请参见 clonezilla-live-3.3.3-37-amd64.iso。</p><p>近期相关新闻与发布</p><p>发行版发布：Clonezilla Live 3.3.3-37</p><p>发行版发布：Clonezilla Live 3.3.2-31</p><p>发行版发布：Clonezilla Live 3.3.1-35</p><p>发行版发布：Clonezilla Live 3.3.0-33</p><p>发行版发布：Clonezilla Live 3.2.1-28</p><p>发行版发布：Clonezilla Live 3.2.1-9</p><p>更多 Clonezilla 新闻……</p><p>关于 Clonezilla Live</p><p>Clonezilla Live 是一个基于 Debian 的实时 CD，内含 Clonezilla，这是一款类似于 Norton Ghost 的分区和磁盘克隆软件。它仅保存和恢复硬盘中已使用的块。使用 Clonezilla，可以在大约 10 分钟内将 5 GB 的系统克隆到 40 个客户端。</p><p>https://clonezilla.org/</p><p>https://clonezilla.org/mailing-lists.php</p><p>https://sourceforge.net/p/clonezilla/discussion/</p><p>替代用户论坛</p><p>https://clonezilla.org/clonezilla-live/</p><p>https://clonezilla.org/screenshots/?in_path=/00_Clonezilla</p><p>https://</p></div>
+  <div class="article-body"><p>虽然Linux内核持续收到大量来自AI/LLM代理的补丁，但迄今为止，内核尚未包含一个面向AI/LLM代理的Markdown说明文件。不过，今天发布的一个补丁集将最终引入这样一个文件。</p><p>长期担任Linux开发者、并为内核从事过其他AI相关工作的Sasha Levin——例如帮助确定向后移植到稳定内核树的补丁、AI驱动的合并冲突解决——现在希望在内核源码树中添加一个AGENTS.md文件。</p><p>拟议的AGENTS.md只是链接到Linux内核的README文件。从那里，它指向有关编码助手的文档以及其他与内核开发者相关的信息。</p><p>在内核树中添加AGENTS.md的理由是：在一个没有该文件的AI代理上进行测试时，该AI代理向拟议的内核补丁添加了“Signed-off-by”标签，尽管在没有用户明确自行签署的情况下它本不应这样做。它还使用了自身的归属标签，而不是内核标准化的Assisted-by标签。</p><p>在第二个未具名的AI代理上测试时，没有AGENTS.md的情况下没有添加任何归属信息。但在添加AGENTS.md之后，两个代理的行为都符合内核标准，第二个代理更好地遵循了内核开发最佳实践。</p><p>这个内核邮件列表线程列出了提议引入AGENTS.md的补丁。虽然它只是链接到README文件，但目前并非所有人都赞成。LKML上有人反对该补丁，因为让AI/LLM消费整个Linux内核README及相关文档会增加token消耗。提供更针对AI/LLM的最相关文档是帮助减少token消耗的一种方式，但我们将看看这个关于增强AI工作流的新Linux内核提案会有什么结果。</p><p>Linux内核因模糊测试机器人产生不切实际的错误报告而引入新污染标记</p><p>为内存极其有限的微型Linux系统提议“slab_tiny”启动选项</p><p>Linux 7.4 DRM基础设施通过新助手更好地支持HDMI 2.0</p><p>为Linux图形驱动提议可变刷新率“VRR”目标限制器</p><p>Igalia庆祝推进Linux与开源25周年</p><p>Linux 7.3-rc4发布：LLM发现更多修复，但没有什么太可怕的</p><p>Michael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Linux 7.4的简单优化可使文件读取速度提高约39%</p><p>谷歌“难以维护”的Binder C Linux驱动将被移除，转而使用Rust</p><p>Ubuntu 26.10将cp、mv和rm迁移到Rust Coreutils，实现100%过渡</p><p>帮助Linux硬件测试与评测继续，同时享受无广告的Phoronix</p><p>阿里巴巴向Omarchy捐赠300万美元，致力于打造“理想”的代理式操作系统</p><p>Valve推出Pyrowave视频编解码器测试版，用于低延迟流媒体</p><p>孤儿VM：在主机内核离线进行重启/更新时，让VM不间断运行</p><p>Ubuntu 26.10切换到Linux 7.3内核</p><p>同时享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12957" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-Considers-AGENTS-MD" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

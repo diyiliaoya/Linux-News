@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Clonezilla Live 3.3.3-37 — Linux 中文速报</title>
+<title>高通发布补丁，为其骁龙 X2 Mahua SoC 启用 GPU 支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Clonezilla Live 3.3.3-37</h1>
+  <h1>高通发布补丁，为其骁龙 X2 Mahua SoC 启用 GPU 支持</h1>
 
-  <div class="article-summary">Clonezilla Live 3.3.3-37 是基于 Debian Sid（2026-09-13）的实时发行版，内核升级至 7.1.13，Partclone 更新至 0.3.50 并修复 Btrfs 问题。新增 PXEBoot 与 HTTPBoot 网络启动支持（含 Secure Boot），实现 LUKS2 仓库支持，用 iproute2 替代 net-tools、dhcpcd 替代 dhclient，并优化 GRUB 在 4K/HiDPI 屏幕下的显示效果。</div>
+  <div class="article-summary">高通为骁龙 X2 系列中定位较低的 Mahua SoC 发布了开源 GPU 驱动补丁，以启用其 Adreno X2-85 GPU。相比 X2 Elite 所用的 Glymur，Mahua 的 GPU 切片更少、内部显存更小，因此仅需少量内核图形驱动代码即可支持。这些补丁已提交至 Linux 内核邮件列表并进入代码审查阶段。</div>
 
-  <div class="article-body"><p>发行版发布：Clonezilla Live 3.3.3-37（DistroWatch.com 新闻）</p><p>Clonezilla Live 是一个基于 Debian 的实时发行版，内含 Clonezilla 这款分区与磁盘克隆软件。该项目的最新版本 3.3.3-37 包含了来自上游的多项更新，以及新的启动选项：</p><p>“底层 GNU/Linux 操作系统已升级，本版本基于 2026-09-13 的 Debian ‘Sid’ 仓库。Linux 内核已更新至 7.1.13；Partclone 已更新至 0.3.50 版本，其中包含针对 Btrfs 问题的修复；Clonezilla lite server 现在同时支持 PXEBoot 和 HTTPBoot 网络启动客户端，包括对 HTTPBoot 机制的 Secure Boot 支持；实现了 LUKS2 仓库支持；用 iproute2 替代了已弃用的 net-tools 命令，并放弃 dhclient 相关代码，改用 dhcpcd；配置 dhcpcd 使用 clientid 以实现稳定的 IP 保留；GRUB 显示增强——配置了首选分辨率和回退分辨率，以防止在 4K/HiDPI 屏幕上出现极小的启动菜单和文字变形；ocs-live-boot-menu——在安全启动锁定下有条件地运行 efitextmode，以避免‘被安全启动策略禁止’的错误信息……”</p><p>更多信息请参见 clonezilla-live-3.3.3-37-amd64.iso。</p><p>近期相关新闻与发布</p><p>发行版发布：Clonezilla Live 3.3.3-37</p><p>发行版发布：Clonezilla Live 3.3.2-31</p><p>发行版发布：Clonezilla Live 3.3.1-35</p><p>发行版发布：Clonezilla Live 3.3.0-33</p><p>发行版发布：Clonezilla Live 3.2.1-28</p><p>发行版发布：Clonezilla Live 3.2.1-9</p><p>更多 Clonezilla 新闻……</p><p>关于 Clonezilla Live</p><p>Clonezilla Live 是一个基于 Debian 的实时 CD，内含 Clonezilla，这是一款类似于 Norton Ghost 的分区和磁盘克隆软件。它仅保存和恢复硬盘中已使用的块。使用 Clonezilla，可以在大约 10 分钟内将 5 GB 的系统克隆到 40 个客户端。</p><p>https://clonezilla.org/</p><p>https://clonezilla.org/mailing-lists.php</p><p>https://sourceforge.net/p/clonezilla/discussion/</p><p>替代用户论坛</p><p>https://clonezilla.org/clonezilla-live/</p><p>https://clonezilla.org/screenshots/?in_path=/00_Clonezilla</p><p>https://</p></div>
+  <div class="article-body"><p>高通发布补丁，为其骁龙 X2 Mahua SoC 启用 GPU 支持</p><p>2026年9月24日 晚上08:25 EDT。</p><p>昨天，高通在骁龙 8 Elite Extreme Gen 6 发布一天后，为其 Adreno 850 GPU 发布了开源 GPU 驱动补丁。昨天高通还公布了其骁龙 X2 的 Linux 支持计划。今天，他们又发布了针对定位较低的骁龙 X2 SoC 中 Mahua SoC 的 GPU 启用补丁。</p><p>高通此前已将其对骁龙 X2 Elite 的初步 GPU 支持上游化，现在这一支持正扩展至较低端的 X2 硬件。Mahua 是骁龙 X2 在较低 10 核和 12 核配置下的 SoC 代号，定位低于代号为 Glymur 的 X2 Elite。</p><p>今天发布到 Linux 内核邮件列表的补丁启用了 Mahua 的 Adreno X2-85 GPU，并指出与 Glymur 相比，其切片更少、内部显存更小。最终，启用 Mahua 的 GPU 只需要几十行新的内核图形驱动代码。</p><p>感兴趣的人可以在内核邮件列表中找到高通发布的这些 Mahua GPU 补丁，目前正在接受代码审查。</p><p>高通大力宣传骁龙 X2 笔记本电脑上的 Linux 支持</p><p>高通在发布一天后即推出 Adreno 850 开源 GPU 驱动补丁</p><p>Linux 7.3 因遇到太多错误而回退罗技 Bolt 接收器 HID++ 支持</p><p>SPEC 发布适用于 Linux 的 SPECviewperf 15.0.1</p><p>Linux 7.3 添加罗技 G502 X Lightspeed USB 支持、ELECOM M-XT4DRBK</p><p>缓存感知调度修复已排队提交至 Linux 7.3，并向后移植到 7.2</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Linux 7.4 的一项简单优化可使文件读取速度提升约 39%</p><p>谷歌“维护痛苦”的 Binder C Linux 驱动将被移除，改用 Rust</p><p>Ubuntu 26.10 将 cp、mv 和 rm 迁移至 Rust Coreutils，实现 100% 过渡</p><p>在享受无广告 Phoronix 的同时，帮助 Linux 硬件测试与评测继续</p><p>阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的智能体操作系统</p><p>Valve 推出 Pyrowave 视频编解码器测试版，用于低延迟流媒体</p><p>孤儿虚拟机：在宿主内核离线重启/更新时保持虚拟机不间断运行</p><p>Ubuntu 26.10 切换至 Linux 7.3 内核</p><p>同时享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12957" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Qualcomm-Mahua-GPU-Support" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Clonezilla Live 3.3.3-37 — Linux 中文速报</title>
+<title>Ubuntu 26.10 为 Intel Panther Lake / Framework Laptop 13 Pro 带来显著提升 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Clonezilla Live 3.3.3-37</h1>
+  <h1>Ubuntu 26.10 为 Intel Panther Lake / Framework Laptop 13 Pro 带来显著提升</h1>
 
-  <div class="article-summary">Clonezilla Live 3.3.3-37 是基于 Debian Sid（2026-09-13）的实时发行版，内核升级至 7.1.13，Partclone 更新至 0.3.50 并修复 Btrfs 问题。新增 PXEBoot 与 HTTPBoot 网络启动支持（含 Secure Boot），实现 LUKS2 仓库支持，用 iproute2 替代 net-tools、dhcpcd 替代 dhclient，并优化 GRUB 在 4K/HiDPI 屏幕下的显示效果。</div>
+  <div class="article-summary">Ubuntu 26.10 在 Intel Panther Lake 平台上展现出优于 Ubuntu 26.04 LTS 的开箱性能，测试机型为搭载 Core Ultra X9 388H 和 Arc B390 核显的 Framework Laptop 13 Pro。得益于 Linux 7.3 内核与新版 Mesa，Vulkan 工作负载提升尤为明显。</div>
 
-  <div class="article-body"><p>发行版发布：Clonezilla Live 3.3.3-37（DistroWatch.com 新闻）</p><p>Clonezilla Live 是一个基于 Debian 的实时发行版，内含 Clonezilla 这款分区与磁盘克隆软件。该项目的最新版本 3.3.3-37 包含了来自上游的多项更新，以及新的启动选项：</p><p>“底层 GNU/Linux 操作系统已升级，本版本基于 2026-09-13 的 Debian ‘Sid’ 仓库。Linux 内核已更新至 7.1.13；Partclone 已更新至 0.3.50 版本，其中包含针对 Btrfs 问题的修复；Clonezilla lite server 现在同时支持 PXEBoot 和 HTTPBoot 网络启动客户端，包括对 HTTPBoot 机制的 Secure Boot 支持；实现了 LUKS2 仓库支持；用 iproute2 替代了已弃用的 net-tools 命令，并放弃 dhclient 相关代码，改用 dhcpcd；配置 dhcpcd 使用 clientid 以实现稳定的 IP 保留；GRUB 显示增强——配置了首选分辨率和回退分辨率，以防止在 4K/HiDPI 屏幕上出现极小的启动菜单和文字变形；ocs-live-boot-menu——在安全启动锁定下有条件地运行 efitextmode，以避免‘被安全启动策略禁止’的错误信息……”</p><p>更多信息请参见 clonezilla-live-3.3.3-37-amd64.iso。</p><p>近期相关新闻与发布</p><p>发行版发布：Clonezilla Live 3.3.3-37</p><p>发行版发布：Clonezilla Live 3.3.2-31</p><p>发行版发布：Clonezilla Live 3.3.1-35</p><p>发行版发布：Clonezilla Live 3.3.0-33</p><p>发行版发布：Clonezilla Live 3.2.1-28</p><p>发行版发布：Clonezilla Live 3.2.1-9</p><p>更多 Clonezilla 新闻……</p><p>关于 Clonezilla Live</p><p>Clonezilla Live 是一个基于 Debian 的实时 CD，内含 Clonezilla，这是一款类似于 Norton Ghost 的分区和磁盘克隆软件。它仅保存和恢复硬盘中已使用的块。使用 Clonezilla，可以在大约 10 分钟内将 5 GB 的系统克隆到 40 个客户端。</p><p>https://clonezilla.org/</p><p>https://clonezilla.org/mailing-lists.php</p><p>https://sourceforge.net/p/clonezilla/discussion/</p><p>替代用户论坛</p><p>https://clonezilla.org/clonezilla-live/</p><p>https://clonezilla.org/screenshots/?in_path=/00_Clonezilla</p><p>https://</p></div>
+  <div class="article-body"><p>Ubuntu 26.10 为 Intel Panther Lake / Framework Laptop 13 Pro 带来显著提升</p><p>2026 年 9 月 24 日下午 2:46（美国东部时间）。</p><p>对于 Framework Laptop 13 Pro 或其他搭载 Intel Core Ultra 系列 3 的笔记本电脑，即将发布的 Ubuntu 26.10 相比 Ubuntu 26.04 LTS 带来了一些不错的开箱即用改进。</p><p>在 Phoronix 实验室的更多系统上，尤其是现代硬件平台上，持续取得不错的性能提升。随着 AMD Strix Halo Framework Desktop 等设备的加入，这个即将发布的 Ubuntu “Stonking Stingray” 版本由于更新的内核（现已升级到 Linux 7.3）以及其他软件升级，已经取得了一些不错的成果。Intel Panther Lake 的性能也得到了很好的改善，正如本文所示，尤其是在 Intel Arc B390 显卡方面，更新的 Mesa 对 Vulkan 工作负载特别有帮助。</p><p>本轮测试中，我使用了搭载 Intel Core Ultra X9 388H、64GB LPDDR5-7467 内存、2TB WD_BLACK SN7100 NVMe SSD 以及集成 Arc B390 显卡的 Framework Laptop 13 Pro。将开箱即用并安装了所有稳定版更新的 Ubuntu 26.04 LTS 与截至 9 月 22 日的每日构建版 Ubuntu 26.10 进行了对比。</p><p>Ubuntu 26.10 amd64v3 可为低端/预算硬件提供不错的性能提升</p><p>Ubuntu 26.10 将为 Intel Core 3 Wildcat Lake 带来更好的性能</p><p>CachyOS vs. Windows 11 vs. Ubuntu 26.04 LTS 在 Intel Wildcat Lake + 8GB 内存上的对比</p><p>CachyOS 与其他 Linux 操作系统在价值 4.6 万美元工作站上的性能对比</p><p>分析 Fedora 在搭载 Intel Panther Lake 的 Framework Laptop 13 Pro 上的缓慢性能</p><p>Intel Xeon 678X 在 HP Z4 G6i 上 Windows 11 vs. Ubuntu 26.04 的性能对比</p><p>同时享受无广告浏览、</p><p>单页文章视图</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12957" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/review/ubuntu-2610-panther-lake" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
