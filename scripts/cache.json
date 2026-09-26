@@ -12637,5 +12637,159 @@
     "title_zh": "Apple iCloud Drive 的最佳免费开源替代品",
     "summary_zh": "本文介绍了 Apple iCloud Drive 的最佳免费开源替代方案，帮助用户在不同设备间存储、同步和管理文件。这些替代品提供了类似云存储的功能，同时保持开源和免费的特性，适合寻求隐私保护和自主控制数据存储的用户。",
     "fulltext_zh": "探索用于在您的设备之间存储、同步和管理文件的 Apple iCloud Drive 最佳免费开源替代品。\n\n文章《Apple iCloud Drive 的最佳免费开源替代品》最初发布于 Linux Today。"
+  },
+  "8843624d1305cb4eeb279cb60925455c": {
+    "id": "8843624d1305cb4eeb279cb60925455c",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/banshee-music-player-snap-ubuntu",
+    "title_en": "Banshee music player is back from the dead (well, kinda)",
+    "summary_en": "A revived Banshee music player is now available on the Snap store, making it possible to use it on modern Linux desktops decades after its last stable release. Packaged by Alan Pope (aka popey), the new Banshee snaps lets you now run Banshee 2.6.2, the final stable release from 2014, on model Linux desktops. Not merely a repack; the Snap Store description mentions this includes &#8216;compatibility fixes and restores selected online services&#8217;, but also notes that not all &#8216;historical&",
+    "pub_date": "Fri, 25 Sep 2026 15:53:50 +0000",
+    "title_zh": "Banshee 音乐播放器起死回生（好吧，算是吧）",
+    "summary_zh": "Banshee 音乐播放器的 Snap 包已上架 Snap 商店，让这款 2014 年发布最后一个稳定版的经典 Linux 音乐播放器得以在现代桌面运行。该包由 Alan Pope 打包，包含兼容性修复并恢复部分在线服务，但并非官方延续。实测可正常播放本地音乐、支持专辑封面和媒体键，但 Last.fm 登录和视频播放不可用。",
+    "fulltext_zh": "Banshee snap 包让老牌 Linux 音乐播放器重获新生，现已上架 Snap 商店，使其在最后一个稳定版发布十余年后仍可在现代 Linux 桌面上使用。\n\n由 Alan Pope（又名 popey）打包，新的 Banshee snap 让你现在就能在现代化 Linux 桌面上运行 2014 年的最终稳定版。这不仅仅是重新打包；Snap 商店的描述提到它包含“兼容性修复并恢复了部分在线服务”，但也指出并非所有“历史”服务都能正常工作。\n\nBanshee snap 在 Ubuntu 26.04 LTS 上播放音乐\n\n这是官方延续吗？不是。\n\n这更像是“复活的尸体”而非转世重生。Popey 的 snap 几乎像是一次软件保存行动。像 Snap 这样的容器格式非常适合“时间胶囊”式的努力，因为旧依赖可以打包在内而不影响宿主系统。\n\n抛开怀旧奇趣不谈，这个 snap 提供了一个真正可用的音乐播放器：指向一个装满曲目的文件夹即可加载、浏览、管理和播放。要读取存储在外置驱动器上的文件，你需要授予 snap 权限。\n\n连原始的指示器小程序也还在\n\n我在 Ubuntu 26.04 LTS 上试用了它。首次运行时它提示我选择音乐文件夹，并很快加载了曲目。我尝试的每种音乐格式它都能处理。专辑封面没有问题，MPRIS 和媒体键也能正常响应，这很棒。\n\n但我无法登录 Last.fm（Snap 商店列表确实说明并非所有功能都能用）。在尝试认证过程时，应用弹出了“无法启动 URL”的错误对话框。\n\n视频播放完全不行——但这我早有预料。自 2014 年以来，格式、分辨率和编解码器已经发生了很大变化。我没费心去测试 Banshee 的 DVD 播放，因为说实话，当年它也从来就不好用。\n\nBanshee 与 Ubuntu 渊源已久\n\nBanshee 运行在 Ubuntu 10.04 LTS 桌面上\n\nBanshee 曾在 2011 年至 2012 年间作为 Ubuntu 的默认音乐应用。它的入选在当时是件大事——不仅因为它取代了当时非常流行的 Rhythmbox，还因为它的编写语言：Mono。\n\nMono 是（现在仍然存在）微软 .NET 技术栈、C# 语言及相关库部分内容的开源重新实现。它由 GNOME 联合创始人 Miguel de Icaza 创建。\n\nLinux 社区中许多人讨厌 Mono，担心它的使用是捕获 Linux 的特洛伊木马，使用它的发行版和开发者可能会受到微软的法律威胁。\n\n微软确实曾成为 Mono 的管理者，但后来将其移交给了 Wine 项目。Ubuntu 最终确实放弃了基于 Mono 的应用，将其从默认安装中移除。然而，那是因为磁盘空间和依赖关系的考虑，而不是被专利妖怪吓到了。\n\n但 Ubuntu 用户最后一次听到 Banshee 的哀鸣是在 2018 年。该软件包被从 Debian 档案库中移除，因为它持续依赖 Debian 维护者正在淘汰的已弃用库。\n\n安装 Banshee Snap\n\nUbuntu 用户只需打开 Ubuntu 软件中心并搜索 Banshee 即可安装，或通过终端获取：\n\nsudo snap install banshee\n\nBanshee snap 依赖 Core22 运行时，因此如果你使用的是未预装该运行时的较新版本 Ubuntu（如 Ubuntu 26.04 LTS），它也会被一并拉取。\n\n值得用吗？作为一次回忆之旅，当然。我很想拉上窗帘，假装现在是 2012 年，我们又回到了美好的时间线——为了完全的复刻氛围，我甚至可能拿起干草叉去抱怨 Mono。\n\nBanshee 属于它的时代。它是一个 GTK2 应用。在 2026 年，这可能是个问题，因为 UI 在使用分数缩放的现代显示器上“缩放”得不太好——有些部分能适应，有些则不能。它在 2014 年有的任何 bug 现在依然存在。\n\n你还记得当年用过它吗？我很想听听你的想法。\n\nsudo snap connect banshee:removable-media"
+  },
+  "dd09191aeada2083ea0cff973e48bdca": {
+    "id": "dd09191aeada2083ea0cff973e48bdca",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/netherlands-dawo-initiative/",
+    "title_en": "The Netherlands Built a Nix-Basd Linux Desktop Because Microsoft Cut Off the ICC",
+    "summary_en": "Eight municipalities are already testing DAWO, the government's NixOS-powered work environment.",
+    "pub_date": "Fri, 25 Sep 2026 11:38:29 GMT",
+    "title_zh": "荷兰因微软切断ICC服务而打造基于Nix的Linux桌面",
+    "summary_zh": "因美国制裁国际刑事法院导致其首席检察官被切断微软服务，荷兰政府意识到数字主权的重要性，遂推出DAWO（政府数字自主工作环境）项目。该环境基于NixOS构建，涵盖操作系统、办公套件、协作应用等，旨在实现技术自主。目前已有八个市镇参与试点，首个稳定版计划明年发布。",
+    "fulltext_zh": "荷兰因微软切断ICC服务而打造基于Nix的Linux桌面\n\n八个市镇已在测试DAWO——政府基于NixOS的工作环境。\n\n当美国政府在2025年初对国际刑事法院（ICC）实施制裁时，其后果影响深远且迅速显现。限制措施切断了ICC首席检察官对微软服务的访问，包括电子邮件，随后其在受影响司法管辖区的个人和机构银行账户也被冻结。\n\n在此事发生之际，荷兰政府正在旁观，并痛苦地意识到，对基本服务的访问取决于美国的决定。因此，他们的回应是Digitaal Autonome Werkomgeving Overheid（政府数字自主工作环境），简称DAWO。这是一个旨在解决政府数字技术栈的框架，涵盖操作系统、办公套件、协作应用、云服务、IT管理工具和人工智能，所有这些都围绕Nix构建。\n\nDAWO计划在7月成为正式的政府指令，当时政府业务运营跨部门委员会（ICBR）发布了一项关于标准化、主权数字工作环境的指令。荷兰中央政府的三大IT服务提供商受命执行这一重大任务。开发工作由内政与王国关系部（BZK）相关的一个团队负责，其中提到了Victor Gevers、Rutger Putter和Bram Buijs等知名人士。\n\nNix是NixOS所基于的包管理器，通过其自身的函数式编程语言处理配置。每个包都安装在一个隔离目录中，内容不可变且经过签名。这使得工作设置可以在不同机器间复现。对于跨越数十个机构的推广而言，这大大减少了重复配置工作，从而节省了时间和金钱。Rutger估计，大约80%到90%的配置可以在不同部署之间沿用。\n\nNixOS还可以在Windows 11无法运行的硬件上运行，这就是为什么当前的试点项目正在退役的笔记本电脑上进行，否则这些电脑将停止服务。\n\n在处理代码方面，该计划遵循了该国早先类似的做法，即把代码托管从GitHub和GitLab迁移出去。DAWO的所有代码都托管在Codeberg上，作为贡献者的入口点。而且，回答之前提出的问题，选择NixOS是因为它是一个荷兰项目，没有公司拥有或控制其开发。\n\n在确定使用它之前，DAWO团队曾考虑过openSUSE和Fedora。两者都因商业关系而被排除，openSUSE与SUSE有关，Fedora与Red Hat有关，而Red Hat又归美国IBM所有。\n\n情况正在好转\n\n八个市镇正在通过荷兰市政协会（VNG）开展试点项目。\n\nICC事件使这一举措不同于其他政府层面的开源推进，因为荷兰官员亲身感受到了供应商依赖可能带来的代价。\n\n当然，他们并非唯一这样做的。德国的类似项目在离开微软后也经历了类似情况。过去用于许可证的部分支出现在用于支持开源项目。其他国家也采取了类似举措，一个国家的道路交通管理局正在放弃微软服务，另一个国家正在推动各部委转向Linux，已有8万名健康保险员工转向国内工具。\n\n至于DAWO的未来，他们打算在明年某个时候发布第一个稳定版本，并吸收所有相关方（例如市镇）的反馈。\n\n喜欢这篇更新？支持独立的Linux新闻报道\n\nIt's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员。"
+  },
+  "b08cea8026476a418d4239bcc572449e": {
+    "id": "b08cea8026476a418d4239bcc572449e",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/vicharak-axon-lite/",
+    "title_en": "This Tiny SBC Lets You Swap Interface Modules for Voice, Vision or Sensing",
+    "summary_en": "Vicharak's Axon-Lite packs a Rockchip RK3576, a 6 TOPS NPU and swappable modules into a tiny SBC.",
+    "pub_date": "Fri, 25 Sep 2026 07:32:45 GMT",
+    "title_zh": "这款微型单板计算机可让你为语音、视觉或传感更换接口模块",
+    "summary_zh": "Vicharak推出Axon-Lite，一款搭载Rockchip RK3576、6 TOPS NPU的微型ARM单板计算机，其最大特色是接口模块可更换，用户可根据项目需求更换语音处理、智能传感、AI数据枢纽或AI视觉模块，而非更换整块主板。该板支持LPDDR5、eMMC 5.1、UFS 3.1、Wi-Fi 6、蓝牙5.2、千兆以太网及树莓派兼容40针接头，面向学生、爱好者和边缘AI原型团队。",
+    "fulltext_zh": "这款微型单板计算机可让你为语音、视觉或传感更换接口模块\n\nVicharak的Axon-Lite将Rockchip RK3576、6 TOPS NPU和可更换模块塞进了一块微型单板计算机中。\n\n你拿到一块单板计算机，然后开始在上面构建项目。你先做一个视觉项目。接着下一个项目需要音频。再下一个可能需要一堆传感器。通常这意味着在GPIO接头上堆叠一堆HAT，或者买一块新的单板计算机。\n\nVicharak正通过Axon-Lite尝试一条不同的路线。这是一款微型ARM单板计算机，其接口模块可更换，因此你可以更换模块来匹配任务，而不是更换主板。\n\n这种“可重构计算”的卖点，正是这块ARM板与其他板略有不同的原因。\n\nVicharak已经推出了基于FPGA的[产品]和基于RAM的Axion系列。Axon-Lite是其Axon系列中最小的一员。所以他们在这一领域可能相对较新，但并非完全的新手。\n\nAxion Lite规格\n\n让我们看看这块单板计算机上有什么：\n\nRockchip RK3576（4× Cortex-A72 + 4× Cortex-A53）\n6 TOPS NPU、Mali-G52 MC3 GPU、16MP ISP\nLPDDR5（2GB-8GB）、eMMC 5.1（32GB-128GB）、UFS 3.1、SD卡\n可更换接口模块 + 板对板扩展\nWi-Fi 6、蓝牙5.2、千兆以太网\n树莓派兼容40针接头\n\n正如你已经看到的，这里的亮点是模块化。该板使用了Vicharak所称的模块化连接器接口，其理念是你可以按需扣上不同的接口模块。\n\n该公司目前展示了四种：语音处理、智能传感、AI数据枢纽和AI视觉。除此之外，还有板对板扩展，因此你可以堆叠子板而不是更换。\n\n板对板扩展值得记住。模块化连接器的价值，取决于实际为其出货的模块阵容。而且如果这是一个专有接口，而非标准接口，那么你将依赖Vicharak提供的任何扩展板。\n\n模块下方是一颗[芯片]。它是一颗八核芯片，定位高于入门级RK3566、低于旗舰级RK3588，这使其成为边缘工作的合理中间选择。\n\nVicharak同时列出了6 TOPS NPU，这与价格高得多的RK3588板上的NPU数字相同，对于在本地运行视觉和其他端侧AI模型来说绰绰有余。该公司还声称该SoC基于台积电5nm工艺制造。\n\n[内存]和存储也很灵活，[类型]和microSD插槽均受支持。在这样大小的板上加入更快的UFS是一个不错的细节。\n\n对于视觉构建，I/O很丰富。你有4通道CSI以及用于摄像头的额外2通道CSI路径、用于显示器的4通道DSI、16MP ISP、micro HDMI 2.1和支持显示输出的USB-C。网络覆盖Wi-Fi 6、蓝牙5.2和千兆以太网，并且有一个树莓派兼容的40针GPIO接头，因此现有扩展板和引脚定义可以沿用。\n\nVicharak还提到了板载电池充电电路，这暗示了便携、无绳构建的可能。\n\n软件和用户群\n\nVicharak将Axon-Lite定位为一款Linux优先的板，提供熟悉的Debian风格环境和常见的apt驱动工作流。换句话说，这里没有什么异乎寻常的东西需要学习。\n\n在工具方面，该公司列出了这类板你会期待的工具：用于通用开发的VS Code、Git、Python、Docker和Node.js，以及面向AI、机器人和视觉人群的ROS 2、OpenCV、GStreamer、FFmpeg、Jupyter、TensorFlow Lite和ONNX Runtime。\n\n再加上可更换模块，目标受众相当广泛，因为它对学生、爱好者和产品团队原型开发边缘AI和视觉项目都很有用。\n\n定价和可用性\n\nVicharak将Axon-Lite定位为一款Linux优先的板，提供熟悉的Debian风格环境和常见的apt驱动工作流。换句话说，这里没有什么异乎寻常的东西需要学习。\n\n从捣鼓AI和嵌入式系统的学生，到爱好者，再到原型开发边缘AI和视觉项目的产品团队，这块板的目标用户群……"
+  },
+  "350652f5fe6fdafc18e884ea540292e0": {
+    "id": "350652f5fe6fdafc18e884ea540292e0",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/openeuler-unifiedbus/",
+    "title_en": "How openEuler Is Reinventing the OS Foundation for the AI Era with SuperPoD and UnifiedBus",
+    "summary_en": "openEuler 24.03 LTS SP3 is the first version built for SuperPoD, and the project says its UnifiedBus interconnect can lift application performance by 30 to 50 percent.",
+    "pub_date": "Fri, 25 Sep 2026 04:08:59 GMT",
+    "title_zh": "openEuler如何借助SuperPoD和UnifiedBus重塑AI时代的操作系统基础",
+    "summary_zh": "openEuler 24.03 LTS SP3是首个为SuperPoD构建的版本，通过UnifiedBus高速互连技术，将多个计算节点紧密耦合，使软件能将整个集群视为一台巨型计算机。该版本打破了单机边界，可统一调度分布式内存和加速器资源，据称在大规模AI计算中可提升应用性能30%至50%。openEuler还推出了Intelligence BooM全栈AI解决方案，旨在提供开箱即用的大模型训练和运行环境。",
+    "fulltext_zh": "openEuler 24.03 LTS SP3是首个为SuperPoD构建的版本，该项目表示其UnifiedBus互连技术可将应用性能提升30%至50%。\n\nAI并不一定（尚未）运行在超级计算机上，而是运行在拼凑起来的硬件集群上。这正是SuperPoD发挥作用的地方。SuperPoD是一种紧密耦合的纵向扩展系统，连接众多计算节点，使软件能够跨节点使用资源，更像是在使用一个系统。\n\n到目前为止，将这些节点绑定为单台机器的操作系统在很大程度上是专有的。openEuler希望将其开源，其最新版本展示了这一推进。\n\nLinux为优秀的操作系统提供了基础。但大多数情况下，操作系统被限制在一台机器内。它调度单个机箱内的内存、CPU和设备，如果需要更多资源，就添加另一台机器并通过网络连接起来。\n\n到目前为止这种方法一直有效，但AI生态系统需要更多。模型现在跨机架运行，这些机器必须表现得像一台巨型计算机（再次提到SuperPOD），而中间的网络成为性能瓶颈。\n\nopenEuler是一个开源Linux发行版生态系统，其最新版本专注于将整个AI机器集群作为单一统一系统来运行。代码是开放的，社区也表现出采用它的兴趣。\n\nSuperPoD（也称为超级节点）是一个大型机器集群，通过紧密连接的方式使软件可以将整个集群视为一台巨型计算机，而不是数十台独立的服务器。\n\n为SuperPOD构建的Linux发行版\n\nopenEuler 24.03 LTS SP3于2025年12月发布，是首个为SuperPoD构建的openEuler版本。openEuler称其为世界上首个支持该架构的操作系统。\n\nopenEuler通过UnifiedBus及其操作系统软件栈支持SuperPoD。UnifiedBus提供高速互连，而UB OS组件则在其上提供操作系统和集群级服务。\n\n普通Linux系统在单个节点内调度内存和设备。UB让应用程序几乎可以像访问本地资源一样访问位于其他节点的内存和加速器。因此这个openEuler版本打破了单机边界，将这些分布式资源作为单一集合进行调度。\n\n如你所见，这对AI硬件最为重要。openEuler还进行了一些自己的测试，声称点对点UB设计在大规模AI计算中将应用性能提升了高达30%至50%。\n\nSuperPoD操作系统从何而来\n\n让我提供一些背景，解释为什么它被称为“世界首个SuperPoD操作系统”。\n\nopenEuler源自华为内部的EulerOS，现在是由开放原子基金会管理的开源发行版。它可运行在Arm（包括华为鲲鹏）、x86和RISC-V架构上，截至2025年底该项目已超过1600万次安装。\n\nSuperPoD和UnifiedBus是华为技术，用于多种计算系统，包括Atlas AI系统和面向通用计算的TaiShan 950 SuperPoD。\n\nUB OS组件在openEuler社区中开源，构成openEuler对UnifiedBus软件支持的一部分。\n\nIntelligence BooM，全栈AI层\n\nopenEuler推动的另一件有趣的事情是其开源全栈AI解决方案Intelligence BooM。这里的全栈意味着它不是作为工具运行，而是覆盖AI工作负载从操作系统向上所需的整个软件层。\n\n基本上，它为你提供了训练和运行大模型的开箱即用设置，用户无需完成所有“\n\n在底层，openEuler继续致力于使集群高效的低层管道：将不同芯片类型组合成一个可用池（异构计算融合），让CPU和NPU协同处理同一任务（协-"
+  },
+  "9fb46bde76e7672ea4b2d489d4f6b2dd": {
+    "id": "9fb46bde76e7672ea4b2d489d4f6b2dd",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/FUTEX-Robust-List2-Syscalls",
+    "title_en": "New FUTEX Syscalls Back To Being Worked On For Helping Valve's ARM64 Gaming Ambitions",
+    "summary_en": "Going back to last year the Igalia open-source consulting firm has been working on enhancing the Linux kernel to help Steam Play gaming on ARM64 and ensuring the FEX emulator is operating efficiently for x86/x86_64 games running on the likes of the Steam Frame. After other kernel work in recent months, there's finally an updated round of the FUTEX get_robust_list2 and set_robust_list2 system call patches...",
+    "pub_date": "Fri, 25 Sep 2026 18:42:16 -0400",
+    "title_zh": "新的 FUTEX 系统调用重新投入开发，助力 Valve 的 ARM64 游戏雄心",
+    "summary_zh": "Igalia 咨询公司发布了新版 FUTEX get_robust_list2 和 set_robust_list2 系统调用补丁，旨在优化 Linux 内核以支持 ARM64 上的 Steam Play 游戏，并确保 FEX 模拟器高效运行 x86/x86_64 游戏。此次更新基于最新主线内核，适配了 VDSO 变更并修复了竞态条件。",
+    "fulltext_zh": "新的 FUTEX 系统调用重新投入开发，助力 Valve 的 ARM64 游戏雄心\n2026 年 9 月 25 日 下午 06:42 EDT。\n\n自去年以来，Igalia 开源咨询公司一直在致力于增强 Linux 内核，以帮助在 ARM64 上实现 Steam Play 游戏，并确保 FEX 模拟器在 Steam Frame 等设备上运行 x86/x86_64 游戏时高效运作。在近几个月的其他内核工作之后，终于迎来了新一轮更新的 FUTEX get_robust_list2 和 set_robust_list2 系统调用补丁。\n\nIgalia 一直致力于解决现有 get_robust_list2 / set_robust_list2 的缺陷，通过这些新版本更好地满足 FEX-Emu 和其他模拟层的需求。\n\n作为自去年 11 月下旬以来补丁的首次更新，Igalia 的 André Almeida 今天发布了一个新版本，该版本基于最新主线内核进行了变基，适配了 VDSO 变更，并包含其他代码改进。这些补丁的更新因需要解决一个竞态条件而推迟。\n\n感兴趣的人可以通过以下内核补丁系列找到这些新的 FUTEX set_robust_list2 / get_robust_list2 补丁：\n此内核补丁系列\n\nValve 推出 Pyrowave 视频编解码器 Beta 版，用于低延迟流传输\nSteam Frame 利用 Zink 在 Vulkan 上实现 OpenGL\nValve 的 Steam Frame 现已上市，售价 1059 美元起\nSteam 客户端 Beta 版改进大屏幕模式，带来多项 Linux 增强\nSteam 在 Linux 上的份额 8 月跌破 4%\nSteamOS 3.9 预览版升级至 Linux 7.2、KDE Plasma 6.7 桌面\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nFedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法\nLinux 7.4 的简单优化可使文件读取速度提升约 39%\nGoogle 的“维护痛苦”的 Binder C Linux 驱动将被移除，转而使用 Rust\n阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的智能体操作系统\nValve 推出 Pyrowave 视频编解码器 Beta 版，用于低延迟流传输\n帮助 Linux 硬件测试与评测持续进行，同时享受无广告的 Phoronix\n孤儿虚拟机：在宿主机内核离线进行重启/更新时保持虚拟机不间断运行\nUbuntu 26.10 切换至 Linux 7.3 内核\n\n享受无广告浏览，\n单页文章视图\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "3e93926bc9304370ccbf5cd5b75e261c": {
+    "id": "3e93926bc9304370ccbf5cd5b75e261c",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/GNU-Debugger-GDB-18.1",
+    "title_en": "GDB 18.1 Debugger Brings Better Windows Support",
+    "summary_en": "GDB 18.1 is out today as the newest version of the GNU Debugger that works across C/C++, Fortran, Rust, and other languages like Go, Ada, and more...",
+    "pub_date": "Fri, 25 Sep 2026 12:47:52 -0400",
+    "title_zh": "GDB 18.1 调试器带来更好的 Windows 支持",
+    "summary_zh": "GDB 18.1 正式发布，为 Windows 平台带来原生线程本地存储变量支持、Windows 10 及以上版本的非停止模式、调度器锁定等功能，并改进 Windows Terminal 控制台支持和文件名显示一致性。此外还新增 AArch64 MinGW 目标，改进 inferior 参数处理、AArch64 浮点模式寄存器支持，以及新增多个命令和 Python API 改进。",
+    "fulltext_zh": "GDB 18.1 调试器带来更好的 Windows 支持\n\n2026 年 9 月 25 日 12:47 EDT。\n\nGDB 18.1 于今日发布，这是 GNU 调试器的最新版本，支持 C/C++、Fortran、Rust 以及 Go、Ada 等多种语言。\n\nMicrosoft Windows 在 GDB 18.1 调试器版本中获得了大量关注。Windows 上的 GDB 现在支持原生线程本地存储（TLS）变量，Windows 10 及更高版本支持非停止模式，调度器锁定现在可以正常工作，改进了对 Windows Terminal 控制台的支持，以及其他变更。在用户体验方面，Windows 上的文件名现在统一使用正斜杠显示，而不是正反斜杠混用。GDB 18.1 还新增了 AArch64 MinGW 目标。\n\nGDB 18.1 还改进了 inferior 参数的处理，增加了对 AArch64 上浮点模式寄存器（FPMR）的支持，并新增了 \"save history\"、\"set/show/unset local-environment\"、\"info proc environ\" 等命令。\n\nGDB 的 Python API 以及调试器的 GAP 协议支持也继续得到改进。\n\nGDB 18.1 的下载和此调试器功能版本的完整变更列表可通过以下链接获取\n\nAMD 发布针对 AVX10V1AUX ISA 支持的 GCC 编译器补丁\nGNU Wget 2.3 发布，带来 --progress=dot、OS/2 改进\nGzip 1.15 发布，修复了自诞生以来存在的许多错误\nGNU Coreutils 9.12 发布，带来性能优化和新的 uname 选项\nGCC 13.5 发布，包含 265+ 个错误修复\nGNU Automake 1.19 发布，包含超过一年的修复\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nFedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法\nLinux 7.4 的简单优化可使文件读取速度提高约 39%\nGoogle 的 \"难以维护\" 的 Binder C Linux 驱动将被移除，改用 Rust\n阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造 \"理想\" 的代理式操作系统\nValve 推出 Pyrowave 视频编解码器测试版，用于低延迟流媒体\n在享受无广告 Phoronix 的同时，帮助 Linux 硬件测试与评测继续\n孤儿虚拟机：在宿主机内核离线重启/更新时保持虚拟机不间断运行\nUbuntu 26.10 切换到 Linux 7.3 内核\n\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "38d8980a3d12c5d225076aea6e963015": {
+    "id": "38d8980a3d12c5d225076aea6e963015",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Redox-OS-August-2026",
+    "title_en": "Redox OS Adds IO_uring-Like API, NUMA & Gets QEMU Working",
+    "summary_en": "The Redox OS open-source, Rust-based operating system has seen a lot of activity in recent weeks with many notable improvements landing...",
+    "pub_date": "Fri, 25 Sep 2026 11:51:38 -0400",
+    "title_zh": "Redox OS 新增类 IO_uring API、NUMA 支持，QEMU 可运行",
+    "summary_zh": "Redox OS 发布八月进展：实现了类似 Linux IO_uring 的环形缓冲区通信 API，可提升 NVMe 等驱动性能；初步支持 NUMA；QEMU 模拟器现已可在 Redox 上运行，但缺少 KVM 类加速，速度很慢；支持从 Linux 双启动安装；AArch64 初步支持多核 CPU；IPC 开销降低约 5%，内核体积减小，并有多项驱动改进。",
+    "fulltext_zh": "Redox OS 新增类 IO_uring API、NUMA 支持，QEMU 可运行\n\n2026 年 9 月 25 日 11:51 EDT。\n\n这个基于 Rust 的开源操作系统 Redox OS 近几周活动频繁，许多值得注意的改进相继落地。\n\nRedox OS 今天发布了最新的月度状态更新，重点介绍了八月期间取得的所有有趣进展。\n\nRedox OS 在八月实现了一个类似 Linux IO_uring 的环形缓冲区通信 API。这可以在支持的驱动上带来更好的性能，例如 NVMe 存储的 I/O。\n\nRedox OS 还实现了初步的 NUMA 支持，这是该月的另一项不错的改进。\n\nQEMU 模拟器现在也能在 Redox 上运行，但目前缺少类似 KVM 的虚拟机加速。所以 QEMU 可以工作，但会非常慢。\n\n同样值得注意的是，Redox OS 现在支持从 Linux 进行双启动安装。\n\n在 ARM64 方面，AArch64 上的 Redox 已初步支持多核 CPU。该月 Redox 的其他变化包括将 IPC 开销降低约 5%、减小内核二进制体积，以及各种驱动改进。\n\n关于 Redox OS 这些近期改进的更多细节，可通过以下链接查看：\n\nReactOS 从 Wine 引入重大 DirectX 栈更新，以支持更多游戏\nAlmaLinux 推出新的软件/硬件认证门户，可自行认证应用\n阿里巴巴向 Omarchy 捐赠 300 万美元，用于打造“理想”的智能体操作系统\nVoid Linux 维护者因 AI 政策争议弃养 100 多个软件包\n受 BeOS 启发的 Haiku 现在支持实时切换音频输出，还有其他改进\nReactOS 开发者让 FEX 在 ARM 下的这款“开源 Windows”操作系统上运行 x86_64 游戏\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nFedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法\nLinux 7.4 的一项简单优化可将文件读取速度提升约 39%\n谷歌“维护痛苦”的 Binder C Linux 驱动将被移除，改用 Rust\n阿里巴巴向 Omarchy 捐赠 300 万美元，用于打造“理想”的智能体操作系统\nValve 推出 Pyrowave 视频编解码器测试版，用于低延迟流媒体\n在享受无广告 Phoronix 的同时，帮助 Linux 硬件测试与评测继续下去\n孤儿虚拟机：在宿主机内核离线以进行重启/更新时，让虚拟机不间断运行\nUbuntu 26.10 切换到 Linux 7.3 内核\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "69ff791043388a3d14b6e72b3c2409a4": {
+    "id": "69ff791043388a3d14b6e72b3c2409a4",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/near-10-sec-kernel-build",
+    "title_en": "Approaching A 10 Second Linux Kernel Build",
+    "summary_en": "The coffee window is closing. Going back many years with the time it's taken to compile the Linux kernel has been a well known opportunity for a coffee break or even eating a meal during the lengthy Linux kernel build process. Even when the Linux kernel was much smaller than it is today, with the hardware at the time it would often be a very time consuming process... Thus incredible to think that we are now on the horizon of a ten second clean, default kernel build on Linux x86_64.",
+    "pub_date": "Fri, 25 Sep 2026 10:46:26 -0400",
+    "title_zh": "接近10秒的Linux内核构建",
+    "summary_zh": "Linux内核编译时间正逼近10秒大关。得益于新一代处理器和内核构建优化补丁，x86_64默认配置构建已可缩短至约15秒，未来有望达到10秒。开发者Lorenzo Stoakes利用AI辅助优化Kbuild代码，消除了并行构建瓶颈，使内核构建速度提升约36%，增量构建提升约70%。这些改进将显著提升开发效率，尤其对内核回归测试和二分查找意义重大。",
+    "fulltext_zh": "咖啡时间即将结束。多年来，编译Linux内核所需的时间一直是众所周知的喝咖啡休息甚至吃顿饭的好机会。即使在Linux内核比现在小得多的时候，配合当时的硬件，这通常也是一个非常耗时的过程……因此，想到我们现在即将在Linux x86_64上实现10秒的干净默认内核构建，简直令人难以置信。\n\n配合非常强大的处理器和Linux内核中最新的软件创新，在现有硬件上构建最新的Linux内核现在大约只需15秒。不过，我敢打赌，下一代处理器将实现10秒。这对于能够从干净构建中更快地迭代（例如二分查找Linux内核回归）来说是惊人的。最新的待定内核构建软件改进也有助于按比例减少那些没有使用最前沿处理器的人的内核构建时间。\n\n想到在几秒钟内编译一个defconfig x86_64 Linux内核构建，简直令人难以置信——尤其是对于那些在Linux内核领域待了很长时间的人来说。或者对于包含所有可能内核模块的allmodconfig构建，现在每次构建降至两分钟以下，也大大加快了那里的内核构建时间。这是提高生产力的巨大胜利，考虑到Linux内核源代码树整体接近4100万行，这简直疯狂。\n\n编译Linux内核所需的时间一直是我在运行Phoronix 22年多来最喜欢的基准测试之一，每次评测新一代CPU时都充满兴奋，看到时间持续下降，即使Linux内核也在同步变得更大。\n\n在软件方面，使未来如此快速的构建成为可能的是Linux MM开发者Lorenzo Stoakes的一系列补丁，用于优化内核构建时间。Lorenzo在AI/LLM的协助下，着手解决Kbuild代码中许多降低内核构建过程并行潜力的瓶颈。过去一个月我一直在报道Lorenzo的进展，从“AI制造了大量‘丑陋’代码但发现了主要瓶颈以实现更快的Linux编译”开始，经过不断修订，看起来可能会登陆Linux 7.4，内核构建速度提高约36%，增量内核构建速度提高约70%。巨大的相对时间节省，并且不依赖于最新或最高端的处理器。\n\nLorenzo本周发布了他这些kbuild改进的最新版本。目前有22个补丁，其中一些已被kbuild-for-next采纳，该封面信中还有一些其他值得引入的补丁系列。\n\n该补丁系列指出，使用GCC的AMD EPYC服务器上，defconfig构建时间从28秒降至20秒。那是在双路AMD EPYC 9754服务器上……EPYC 9754 Bergamo是一款不错的Zen 4处理器，但我目前最喜欢的用于代码编译工作负载和许多HPC任务的CPU是AMD EPYC 9575F。\n\nEPYC 9575F每个插槽拥有64核/128线程，最高加速频率可达5.0GHz，全核加速频率为4.5GHz。配合256MB的L3缓存，AMD EPYC 9575F在发布两年后仍然是一款非常漂亮的芯片。（即将推出的是AMD EPYC 9686F高频Venice部件，拥有96核/192线程，最高加速频率5.0GHz，L3缓存384MB……配合MRDIMM-12800内存，我已经对它垂涎欲滴了。）\n\n至少在编译器实现单个源文件并行编译之前，最高的核心数不一定最适合构建服务器。过去有一些关于GCC并行编译单个文件的工作，但多年后那里还没有任何成果越过终点线。"
+  },
+  "0352ef5a172a6bb4d5adeef1637391a7": {
+    "id": "0352ef5a172a6bb4d5adeef1637391a7",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/NVMe-Apple-M3-Linux-Patches",
+    "title_en": "Patches Posted For Enabling NVMe On All Apple M3 Based SoCs With Linux",
+    "summary_en": "While Linux 7.2 brought initial Apple M3 support and Linux 7.3 brought M3 Pro / Max / Ultra support, the mainline Linux kernel support for the M3 series hardware remains very basic and not yet ready for daily driving. But more work continues to be upstreamed and today the patches were posted for getting NVMe storage up and running across all Apple M3 hardware...",
+    "pub_date": "Fri, 25 Sep 2026 06:27:51 -0400",
+    "title_zh": "为在Linux上为所有Apple M3系列SoC启用NVMe的补丁已发布",
+    "summary_zh": "开发者Janne Grunau发布了七补丁系列，旨在为所有Apple M3及M3 Pro/Max/Ultra设备启用NVMe存储支持。该支持与M2系列类似，但需添加约140行设备树和YAML代码。补丁已提交内核邮件列表审核，有望赶上10月的Linux 7.4合并窗口。目前M3硬件支持仍较基础，建议用户使用Asahi Linux下游版本。",
+    "fulltext_zh": "为在Linux上为所有Apple M3系列SoC启用NVMe的补丁已发布 - Phoronix\n为在Linux上为所有Apple M3系列SoC启用NVMe的补丁已发布\n发布于2026年9月25日 06:27 AM EDT。\nLinux 7.2带来了初步的Apple M3支持，Linux 7.3带来了M3 Pro / Max / Ultra支持，但主线Linux内核对于M3系列硬件的支持仍然非常基础，尚未准备好日常使用。不过更多工作仍在持续上游化，今天补丁被发布，旨在让NVMe存储在所有Apple M3硬件上运行起来。\nJanne Grunau发布了七补丁系列，用于在所有M3及M3 Pro / Max / Ultra设备上启用NVMe。M3系列的NVMe工作方式与之前的Apple M2 Pro / Max / Ultra设备相同。但由于设备树的原因，需要额外约140行YAML和设备树添加代码，才能为兼容的Apple M3系列实现这一NVMe支持。\n考虑到时间安排，且这仅仅是为在Apple M3硬件上启用NVMe而添加的设备树内容，希望它仍能赶上10月的Linux 7.4合并窗口。\n已在Linux内核邮件列表上发布以供审核。\n虽然Apple M3支持仍在主线内核中逐步铺开，但那些拥有Apple M3硬件并希望运行Linux的用户，目前最好使用最新的下游Asahi Linux及其Apple M3支持，以便在官方内核树正式支持之前就能获得最新工作成果。\nGravity Linux旨在为Apple M4及更新设备提供良好体验\n为在Linux上支持Apple Silicon Mac扬声器和耳机插孔而发布的补丁\nApple视频解码驱动已发布供上游Linux内核审核\nAsahi Linux现已正式支持Apple M3 Mac——但有限制条件\n为Apple A18 Pro + MacBook Neo初步启用而发布的Linux补丁\nLinux 7.4将改进Apple Silicon音频支持及其“不可能”的电源管理\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\nFedora讨论提出用Collabora Office替换LibreOffice的想法\nLinux 7.4的简单优化可使文件读取速度提高约39%\nGoogle“难以维护”的Binder C Linux驱动将被移除，改用Rust\n阿里巴巴向Omarchy捐赠300万美元，致力于打造“理想”的代理式操作系统\nValve在测试版中推出Pyrowave视频编解码器，用于低延迟流媒体\n在享受无广告Phoronix的同时，帮助Linux硬件测试与评测继续\n孤儿VM：在主机内核离线重启/更新时保持VM不间断运行\nUbuntu 26.10切换到Linux 7.3内核\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "e0c89aaa892300e0dc6d1516e68d878f": {
+    "id": "e0c89aaa892300e0dc6d1516e68d878f",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/nvidia-introduces-cuda-rust-for-writing-gpu-kernels/",
+    "title_en": "NVIDIA Introduces CUDA Rust for Writing GPU Kernels",
+    "summary_en": "NVIDIA introduces CUDA Rust, enabling developers to write GPU kernels in Rust and bringing the language’s safety features to CUDA development.\nThe post NVIDIA Introduces CUDA Rust for Writing GPU Kernels appeared first on Linux Today.",
+    "pub_date": "Fri, 25 Sep 2026 07:38:34 +0000",
+    "title_zh": "NVIDIA 推出 CUDA Rust，用于编写 GPU 内核",
+    "summary_zh": "NVIDIA 推出 CUDA Rust，允许开发者使用 Rust 语言编写 GPU 内核，并将 Rust 的安全特性引入 CUDA 开发。",
+    "fulltext_zh": "NVIDIA 推出 CUDA Rust，使开发者能够用 Rust 编写 GPU 内核，并将该语言的安全特性带入 CUDA 开发。\n\n文章《NVIDIA 推出 CUDA Rust，用于编写 GPU 内核》最初发布于 Linux Today。"
+  },
+  "72c64d8ccbaa5e45933aae5027712e6d": {
+    "id": "72c64d8ccbaa5e45933aae5027712e6d",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/mojo-1-1-programming-language-opens-its-compiler-to-external-contributions/",
+    "title_en": "Mojo 1.1 Programming Language Opens Its Compiler to External Contributions",
+    "summary_en": "Mojo 1.1 opens its compiler to external contributions, giving developers new opportunities to participate in the programming language’s development.\nThe post Mojo 1.1 Programming Language Opens Its Compiler to External Contributions appeared first on Linux Today.",
+    "pub_date": "Fri, 25 Sep 2026 07:35:27 +0000",
+    "title_zh": "Mojo 1.1 编程语言开放编译器，接受外部贡献",
+    "summary_zh": "Mojo 1.1 版本宣布其编译器现已开放外部贡献，开发者可以更直接地参与该编程语言的开发。此举为社区成员提供了新的机会，有望加速 Mojo 的演进与生态建设。",
+    "fulltext_zh": "Mojo 1.1 开放其编译器，接受外部贡献，为开发者提供了参与该编程语言开发的新机会。\n\n文章《Mojo 1.1 编程语言开放编译器，接受外部贡献》首次出现在 Linux Today 上。"
+  },
+  "9557a452a590adc1ccf75e3e99d0afec": {
+    "id": "9557a452a590adc1ccf75e3e99d0afec",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/java-27-released-with-g1-as-the-default-garbage-collector/",
+    "title_en": "Java 27 Released with G1 as the Default Garbage Collector",
+    "summary_en": "Java 27 is officially released with G1 as the default garbage collector, alongside platform updates and improvements for developers and applications.\nThe post Java 27 Released with G1 as the Default Garbage Collector appeared first on Linux Today.",
+    "pub_date": "Fri, 25 Sep 2026 07:34:02 +0000",
+    "title_zh": "Java 27 发布，G1 成为默认垃圾收集器",
+    "summary_zh": "Java 27 正式发布，将 G1 垃圾收集器设为默认选项，同时带来平台更新以及对开发者和应用程序的多项改进。",
+    "fulltext_zh": "Java 27 正式发布，G1 成为默认垃圾收集器，同时带来平台更新以及对开发者和应用程序的改进。\n\n文章《Java 27 发布，G1 成为默认垃圾收集器》最初出现在 Linux Today 上。"
+  },
+  "d9dee3f66714f8beb67c2cfe36797993": {
+    "id": "d9dee3f66714f8beb67c2cfe36797993",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/calibre-9-15-e-book-manager-released-with-new-ai-storytelling-feature/",
+    "title_en": "Calibre 9.15 E-Book Manager Released with New AI Storytelling Feature",
+    "summary_en": "Calibre 9.15 e-book manager is now available with a new AI storytelling feature, alongside additional improvements and fixes for managing digital books.\nThe post Calibre 9.15 E-Book Manager Released with New AI Storytelling Feature appeared first on Linux Today.",
+    "pub_date": "Fri, 25 Sep 2026 07:30:41 +0000",
+    "title_zh": "Calibre 9.15 电子书管理器发布，新增 AI 讲故事功能",
+    "summary_zh": "Calibre 9.15 电子书管理器现已发布，新增 AI 讲故事功能，并包含其他改进和修复，以提升数字图书管理体验。",
+    "fulltext_zh": "Calibre 9.15 电子书管理器现已发布，新增 AI 讲故事功能，并包含其他改进和修复，以提升数字图书管理体验。\n\n文章《Calibre 9.15 电子书管理器发布，新增 AI 讲故事功能》首先出现在 Linux Today 上。"
+  },
+  "a457aa5838bbe4e63e5ea132b564773d": {
+    "id": "a457aa5838bbe4e63e5ea132b564773d",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/talos-enterprise-linux-launches-for-kubernetes-infrastructure/",
+    "title_en": "Talos Enterprise Linux Launches for Kubernetes Infrastructure",
+    "summary_en": "Talos Enterprise Linux launches as a platform built for Kubernetes infrastructure, bringing an enterprise-focused option for running and managing clusters.\nThe post Talos Enterprise Linux Launches for Kubernetes Infrastructure appeared first on Linux Today.",
+    "pub_date": "Fri, 25 Sep 2026 07:29:19 +0000",
+    "title_zh": "Talos Enterprise Linux 面向 Kubernetes 基础设施发布",
+    "summary_zh": "Talos Enterprise Linux 正式发布，这是一个专为 Kubernetes 基础设施构建的平台，为企业提供运行和管理集群的企业级选项。",
+    "fulltext_zh": "Talos Enterprise Linux 作为一个专为 Kubernetes 基础设施构建的平台正式发布，为企业提供了运行和管理集群的企业级选择。\n\n文章《Talos Enterprise Linux 面向 Kubernetes 基础设施发布》最初发表于 Linux Today。"
   }
 }

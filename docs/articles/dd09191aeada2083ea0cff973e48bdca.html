@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 26.10 加入 Windows 风格贴靠布局 — Linux 中文速报</title>
+<title>荷兰因微软切断ICC服务而打造基于Nix的Linux桌面 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Ubuntu 26.10 加入 Windows 风格贴靠布局</h1>
+  <h1>荷兰因微软切断ICC服务而打造基于Nix的Linux桌面</h1>
 
-  <div class="article-summary">Ubuntu 26.10 引入了一个新的窗口平铺方式：拖动窗口时，屏幕顶部会滑出布局选择器，提供预设的贴靠区域。这一“放置区”概念与 Windows 11 或 GNOME Shell 扩展类似。用户将窗口拖到某个区域即可平铺，系统还会建议其他窗口填充剩余空间。该功能在开发周期较晚阶段才合并，目前没有图形化关闭开关，但可通过扩展设置禁用。</div>
+  <div class="article-summary">因美国制裁国际刑事法院导致其首席检察官被切断微软服务，荷兰政府意识到数字主权的重要性，遂推出DAWO（政府数字自主工作环境）项目。该环境基于NixOS构建，涵盖操作系统、办公套件、协作应用等，旨在实现技术自主。目前已有八个市镇参与试点，首个稳定版计划明年发布。</div>
 
-  <div class="article-body"><p>Ubuntu 26.10 提供了一种新的窗口平铺方式：当你移动窗口时，一个布局选择器会从屏幕顶部滑入。</p><p>这种用于快速平铺的“放置区”概念，对于 Windows 11 用户或尝试过 GNOME Shell 扩展的用户来说会很熟悉——它们大体上做的是同一件事。</p><p>当你拖动窗口时，一个带有少量预设布局放置区的布局选择器会从显示屏顶部移入。你将窗口向上拖到某个布局区域上方（会显示窗口将贴靠位置的“幽灵”预览），然后松开即可平铺：</p><p>Ubuntu 26.10 中的布局区域会（就像常规边缘贴靠那样）建议其他已打开的窗口并排平铺，填充其他空间。因此，如果你使用选择器并将窗口拖放到四分之一区域，平铺建议会填充剩余的象限。</p><p>选择器中显示的布局与将窗口拖到屏幕边缘所支持的布局相同。你不能添加或编辑布局，某些工具提供了这种功能（混合大小、列和行），但那会增加额外的复杂性。</p><p>在我的测试安装中看到这个功能让我有点惊讶。它似乎是在开发周期相当晚的时候才加入的，远远晚于该发行版的用户界面冻结期（此后不应再有重大的面向用户的更改）。</p><p>查看 GitHub，新的布局选择器几天前才合并到扩展中（截至撰写本文时）。一个合并请求自六月以来一直处于开放状态，该功能的代码由一位参与 Yaru 图标主题工作的设计师贡献。</p><p>我很高兴这个功能被加入了；Ubuntu 花了很长时间才支持四分之一平铺——那直到 2023 年才实现——虽然这个选择器并没有更好地划分屏幕空间（同样限于 2 列/行），但它对多任务处理是一个提升。</p><p>只是……目前布局选择器没有关闭开关，在“设置 &gt; Ubuntu 桌面”中也没有。我想不是每个人都会想用这个（移动窗口时看到选择器栏自身的手势在视觉上很分散注意力），所以希望会添加一个。</p><p>不过，扩展的设置中有一个关闭开关——以及 Ubuntu 未暴露的其他设置，比如可配置的间隙——但你只能通过第三方工具访问，例如</p></div>
+  <div class="article-body"><p>荷兰因微软切断ICC服务而打造基于Nix的Linux桌面</p><p>八个市镇已在测试DAWO——政府基于NixOS的工作环境。</p><p>当美国政府在2025年初对国际刑事法院（ICC）实施制裁时，其后果影响深远且迅速显现。限制措施切断了ICC首席检察官对微软服务的访问，包括电子邮件，随后其在受影响司法管辖区的个人和机构银行账户也被冻结。</p><p>在此事发生之际，荷兰政府正在旁观，并痛苦地意识到，对基本服务的访问取决于美国的决定。因此，他们的回应是Digitaal Autonome Werkomgeving Overheid（政府数字自主工作环境），简称DAWO。这是一个旨在解决政府数字技术栈的框架，涵盖操作系统、办公套件、协作应用、云服务、IT管理工具和人工智能，所有这些都围绕Nix构建。</p><p>DAWO计划在7月成为正式的政府指令，当时政府业务运营跨部门委员会（ICBR）发布了一项关于标准化、主权数字工作环境的指令。荷兰中央政府的三大IT服务提供商受命执行这一重大任务。开发工作由内政与王国关系部（BZK）相关的一个团队负责，其中提到了Victor Gevers、Rutger Putter和Bram Buijs等知名人士。</p><p>Nix是NixOS所基于的包管理器，通过其自身的函数式编程语言处理配置。每个包都安装在一个隔离目录中，内容不可变且经过签名。这使得工作设置可以在不同机器间复现。对于跨越数十个机构的推广而言，这大大减少了重复配置工作，从而节省了时间和金钱。Rutger估计，大约80%到90%的配置可以在不同部署之间沿用。</p><p>NixOS还可以在Windows 11无法运行的硬件上运行，这就是为什么当前的试点项目正在退役的笔记本电脑上进行，否则这些电脑将停止服务。</p><p>在处理代码方面，该计划遵循了该国早先类似的做法，即把代码托管从GitHub和GitLab迁移出去。DAWO的所有代码都托管在Codeberg上，作为贡献者的入口点。而且，回答之前提出的问题，选择NixOS是因为它是一个荷兰项目，没有公司拥有或控制其开发。</p><p>在确定使用它之前，DAWO团队曾考虑过openSUSE和Fedora。两者都因商业关系而被排除，openSUSE与SUSE有关，Fedora与Red Hat有关，而Red Hat又归美国IBM所有。</p><p>情况正在好转</p><p>八个市镇正在通过荷兰市政协会（VNG）开展试点项目。</p><p>ICC事件使这一举措不同于其他政府层面的开源推进，因为荷兰官员亲身感受到了供应商依赖可能带来的代价。</p><p>当然，他们并非唯一这样做的。德国的类似项目在离开微软后也经历了类似情况。过去用于许可证的部分支出现在用于支持开源项目。其他国家也采取了类似举措，一个国家的道路交通管理局正在放弃微软服务，另一个国家正在推动各部委转向Linux，已有8万名健康保险员工转向国内工具。</p><p>至于DAWO的未来，他们打算在明年某个时候发布第一个稳定版本，并吸收所有相关方（例如市镇）的反馈。</p><p>喜欢这篇更新？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/ubuntu-2610-tiling" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/netherlands-dawo-initiative/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

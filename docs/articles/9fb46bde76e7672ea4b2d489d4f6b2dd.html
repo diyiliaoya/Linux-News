@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 26.10 加入 Windows 风格贴靠布局 — Linux 中文速报</title>
+<title>新的 FUTEX 系统调用重新投入开发，助力 Valve 的 ARM64 游戏雄心 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 26.10 加入 Windows 风格贴靠布局</h1>
+  <h1>新的 FUTEX 系统调用重新投入开发，助力 Valve 的 ARM64 游戏雄心</h1>
 
-  <div class="article-summary">Ubuntu 26.10 引入了一个新的窗口平铺方式：拖动窗口时，屏幕顶部会滑出布局选择器，提供预设的贴靠区域。这一“放置区”概念与 Windows 11 或 GNOME Shell 扩展类似。用户将窗口拖到某个区域即可平铺，系统还会建议其他窗口填充剩余空间。该功能在开发周期较晚阶段才合并，目前没有图形化关闭开关，但可通过扩展设置禁用。</div>
+  <div class="article-summary">Igalia 咨询公司发布了新版 FUTEX get_robust_list2 和 set_robust_list2 系统调用补丁，旨在优化 Linux 内核以支持 ARM64 上的 Steam Play 游戏，并确保 FEX 模拟器高效运行 x86/x86_64 游戏。此次更新基于最新主线内核，适配了 VDSO 变更并修复了竞态条件。</div>
 
-  <div class="article-body"><p>Ubuntu 26.10 提供了一种新的窗口平铺方式：当你移动窗口时，一个布局选择器会从屏幕顶部滑入。</p><p>这种用于快速平铺的“放置区”概念，对于 Windows 11 用户或尝试过 GNOME Shell 扩展的用户来说会很熟悉——它们大体上做的是同一件事。</p><p>当你拖动窗口时，一个带有少量预设布局放置区的布局选择器会从显示屏顶部移入。你将窗口向上拖到某个布局区域上方（会显示窗口将贴靠位置的“幽灵”预览），然后松开即可平铺：</p><p>Ubuntu 26.10 中的布局区域会（就像常规边缘贴靠那样）建议其他已打开的窗口并排平铺，填充其他空间。因此，如果你使用选择器并将窗口拖放到四分之一区域，平铺建议会填充剩余的象限。</p><p>选择器中显示的布局与将窗口拖到屏幕边缘所支持的布局相同。你不能添加或编辑布局，某些工具提供了这种功能（混合大小、列和行），但那会增加额外的复杂性。</p><p>在我的测试安装中看到这个功能让我有点惊讶。它似乎是在开发周期相当晚的时候才加入的，远远晚于该发行版的用户界面冻结期（此后不应再有重大的面向用户的更改）。</p><p>查看 GitHub，新的布局选择器几天前才合并到扩展中（截至撰写本文时）。一个合并请求自六月以来一直处于开放状态，该功能的代码由一位参与 Yaru 图标主题工作的设计师贡献。</p><p>我很高兴这个功能被加入了；Ubuntu 花了很长时间才支持四分之一平铺——那直到 2023 年才实现——虽然这个选择器并没有更好地划分屏幕空间（同样限于 2 列/行），但它对多任务处理是一个提升。</p><p>只是……目前布局选择器没有关闭开关，在“设置 &gt; Ubuntu 桌面”中也没有。我想不是每个人都会想用这个（移动窗口时看到选择器栏自身的手势在视觉上很分散注意力），所以希望会添加一个。</p><p>不过，扩展的设置中有一个关闭开关——以及 Ubuntu 未暴露的其他设置，比如可配置的间隙——但你只能通过第三方工具访问，例如</p></div>
+  <div class="article-body"><p>新的 FUTEX 系统调用重新投入开发，助力 Valve 的 ARM64 游戏雄心</p><p>2026 年 9 月 25 日 下午 06:42 EDT。</p><p>自去年以来，Igalia 开源咨询公司一直在致力于增强 Linux 内核，以帮助在 ARM64 上实现 Steam Play 游戏，并确保 FEX 模拟器在 Steam Frame 等设备上运行 x86/x86_64 游戏时高效运作。在近几个月的其他内核工作之后，终于迎来了新一轮更新的 FUTEX get_robust_list2 和 set_robust_list2 系统调用补丁。</p><p>Igalia 一直致力于解决现有 get_robust_list2 / set_robust_list2 的缺陷，通过这些新版本更好地满足 FEX-Emu 和其他模拟层的需求。</p><p>作为自去年 11 月下旬以来补丁的首次更新，Igalia 的 André Almeida 今天发布了一个新版本，该版本基于最新主线内核进行了变基，适配了 VDSO 变更，并包含其他代码改进。这些补丁的更新因需要解决一个竞态条件而推迟。</p><p>感兴趣的人可以通过以下内核补丁系列找到这些新的 FUTEX set_robust_list2 / get_robust_list2 补丁：</p><p>此内核补丁系列</p><p>Valve 推出 Pyrowave 视频编解码器 Beta 版，用于低延迟流传输</p><p>Steam Frame 利用 Zink 在 Vulkan 上实现 OpenGL</p><p>Valve 的 Steam Frame 现已上市，售价 1059 美元起</p><p>Steam 客户端 Beta 版改进大屏幕模式，带来多项 Linux 增强</p><p>Steam 在 Linux 上的份额 8 月跌破 4%</p><p>SteamOS 3.9 预览版升级至 Linux 7.2、KDE Plasma 6.7 桌面</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Fedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法</p><p>Linux 7.4 的简单优化可使文件读取速度提升约 39%</p><p>Google 的“维护痛苦”的 Binder C Linux 驱动将被移除，转而使用 Rust</p><p>阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的智能体操作系统</p><p>Valve 推出 Pyrowave 视频编解码器 Beta 版，用于低延迟流传输</p><p>帮助 Linux 硬件测试与评测持续进行，同时享受无广告的 Phoronix</p><p>孤儿虚拟机：在宿主机内核离线进行重启/更新时保持虚拟机不间断运行</p><p>Ubuntu 26.10 切换至 Linux 7.3 内核</p><p>享受无广告浏览，</p><p>单页文章视图</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/ubuntu-2610-tiling" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/FUTEX-Robust-List2-Syscalls" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

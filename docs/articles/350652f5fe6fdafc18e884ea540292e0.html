@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 26.10 加入 Windows 风格贴靠布局 — Linux 中文速报</title>
+<title>openEuler如何借助SuperPoD和UnifiedBus重塑AI时代的操作系统基础 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">软件应用</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Ubuntu 26.10 加入 Windows 风格贴靠布局</h1>
+  <h1>openEuler如何借助SuperPoD和UnifiedBus重塑AI时代的操作系统基础</h1>
 
-  <div class="article-summary">Ubuntu 26.10 引入了一个新的窗口平铺方式：拖动窗口时，屏幕顶部会滑出布局选择器，提供预设的贴靠区域。这一“放置区”概念与 Windows 11 或 GNOME Shell 扩展类似。用户将窗口拖到某个区域即可平铺，系统还会建议其他窗口填充剩余空间。该功能在开发周期较晚阶段才合并，目前没有图形化关闭开关，但可通过扩展设置禁用。</div>
+  <div class="article-summary">openEuler 24.03 LTS SP3是首个为SuperPoD构建的版本，通过UnifiedBus高速互连技术，将多个计算节点紧密耦合，使软件能将整个集群视为一台巨型计算机。该版本打破了单机边界，可统一调度分布式内存和加速器资源，据称在大规模AI计算中可提升应用性能30%至50%。openEuler还推出了Intelligence BooM全栈AI解决方案，旨在提供开箱即用的大模型训练和运行环境。</div>
 
-  <div class="article-body"><p>Ubuntu 26.10 提供了一种新的窗口平铺方式：当你移动窗口时，一个布局选择器会从屏幕顶部滑入。</p><p>这种用于快速平铺的“放置区”概念，对于 Windows 11 用户或尝试过 GNOME Shell 扩展的用户来说会很熟悉——它们大体上做的是同一件事。</p><p>当你拖动窗口时，一个带有少量预设布局放置区的布局选择器会从显示屏顶部移入。你将窗口向上拖到某个布局区域上方（会显示窗口将贴靠位置的“幽灵”预览），然后松开即可平铺：</p><p>Ubuntu 26.10 中的布局区域会（就像常规边缘贴靠那样）建议其他已打开的窗口并排平铺，填充其他空间。因此，如果你使用选择器并将窗口拖放到四分之一区域，平铺建议会填充剩余的象限。</p><p>选择器中显示的布局与将窗口拖到屏幕边缘所支持的布局相同。你不能添加或编辑布局，某些工具提供了这种功能（混合大小、列和行），但那会增加额外的复杂性。</p><p>在我的测试安装中看到这个功能让我有点惊讶。它似乎是在开发周期相当晚的时候才加入的，远远晚于该发行版的用户界面冻结期（此后不应再有重大的面向用户的更改）。</p><p>查看 GitHub，新的布局选择器几天前才合并到扩展中（截至撰写本文时）。一个合并请求自六月以来一直处于开放状态，该功能的代码由一位参与 Yaru 图标主题工作的设计师贡献。</p><p>我很高兴这个功能被加入了；Ubuntu 花了很长时间才支持四分之一平铺——那直到 2023 年才实现——虽然这个选择器并没有更好地划分屏幕空间（同样限于 2 列/行），但它对多任务处理是一个提升。</p><p>只是……目前布局选择器没有关闭开关，在“设置 &gt; Ubuntu 桌面”中也没有。我想不是每个人都会想用这个（移动窗口时看到选择器栏自身的手势在视觉上很分散注意力），所以希望会添加一个。</p><p>不过，扩展的设置中有一个关闭开关——以及 Ubuntu 未暴露的其他设置，比如可配置的间隙——但你只能通过第三方工具访问，例如</p></div>
+  <div class="article-body"><p>openEuler 24.03 LTS SP3是首个为SuperPoD构建的版本，该项目表示其UnifiedBus互连技术可将应用性能提升30%至50%。</p><p>AI并不一定（尚未）运行在超级计算机上，而是运行在拼凑起来的硬件集群上。这正是SuperPoD发挥作用的地方。SuperPoD是一种紧密耦合的纵向扩展系统，连接众多计算节点，使软件能够跨节点使用资源，更像是在使用一个系统。</p><p>到目前为止，将这些节点绑定为单台机器的操作系统在很大程度上是专有的。openEuler希望将其开源，其最新版本展示了这一推进。</p><p>Linux为优秀的操作系统提供了基础。但大多数情况下，操作系统被限制在一台机器内。它调度单个机箱内的内存、CPU和设备，如果需要更多资源，就添加另一台机器并通过网络连接起来。</p><p>到目前为止这种方法一直有效，但AI生态系统需要更多。模型现在跨机架运行，这些机器必须表现得像一台巨型计算机（再次提到SuperPOD），而中间的网络成为性能瓶颈。</p><p>openEuler是一个开源Linux发行版生态系统，其最新版本专注于将整个AI机器集群作为单一统一系统来运行。代码是开放的，社区也表现出采用它的兴趣。</p><p>SuperPoD（也称为超级节点）是一个大型机器集群，通过紧密连接的方式使软件可以将整个集群视为一台巨型计算机，而不是数十台独立的服务器。</p><p>为SuperPOD构建的Linux发行版</p><p>openEuler 24.03 LTS SP3于2025年12月发布，是首个为SuperPoD构建的openEuler版本。openEuler称其为世界上首个支持该架构的操作系统。</p><p>openEuler通过UnifiedBus及其操作系统软件栈支持SuperPoD。UnifiedBus提供高速互连，而UB OS组件则在其上提供操作系统和集群级服务。</p><p>普通Linux系统在单个节点内调度内存和设备。UB让应用程序几乎可以像访问本地资源一样访问位于其他节点的内存和加速器。因此这个openEuler版本打破了单机边界，将这些分布式资源作为单一集合进行调度。</p><p>如你所见，这对AI硬件最为重要。openEuler还进行了一些自己的测试，声称点对点UB设计在大规模AI计算中将应用性能提升了高达30%至50%。</p><p>SuperPoD操作系统从何而来</p><p>让我提供一些背景，解释为什么它被称为“世界首个SuperPoD操作系统”。</p><p>openEuler源自华为内部的EulerOS，现在是由开放原子基金会管理的开源发行版。它可运行在Arm（包括华为鲲鹏）、x86和RISC-V架构上，截至2025年底该项目已超过1600万次安装。</p><p>SuperPoD和UnifiedBus是华为技术，用于多种计算系统，包括Atlas AI系统和面向通用计算的TaiShan 950 SuperPoD。</p><p>UB OS组件在openEuler社区中开源，构成openEuler对UnifiedBus软件支持的一部分。</p><p>Intelligence BooM，全栈AI层</p><p>openEuler推动的另一件有趣的事情是其开源全栈AI解决方案Intelligence BooM。这里的全栈意味着它不是作为工具运行，而是覆盖AI工作负载从操作系统向上所需的整个软件层。</p><p>基本上，它为你提供了训练和运行大模型的开箱即用设置，用户无需完成所有“</p><p>在底层，openEuler继续致力于使集群高效的低层管道：将不同芯片类型组合成一个可用池（异构计算融合），让CPU和NPU协同处理同一任务（协-</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/ubuntu-2610-tiling" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/openeuler-unifiedbus/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

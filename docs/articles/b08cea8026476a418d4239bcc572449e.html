@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 26.10 加入 Windows 风格贴靠布局 — Linux 中文速报</title>
+<title>这款微型单板计算机可让你为语音、视觉或传感更换接口模块 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">软件应用</span>
+    <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>Ubuntu 26.10 加入 Windows 风格贴靠布局</h1>
+  <h1>这款微型单板计算机可让你为语音、视觉或传感更换接口模块</h1>
 
-  <div class="article-summary">Ubuntu 26.10 引入了一个新的窗口平铺方式：拖动窗口时，屏幕顶部会滑出布局选择器，提供预设的贴靠区域。这一“放置区”概念与 Windows 11 或 GNOME Shell 扩展类似。用户将窗口拖到某个区域即可平铺，系统还会建议其他窗口填充剩余空间。该功能在开发周期较晚阶段才合并，目前没有图形化关闭开关，但可通过扩展设置禁用。</div>
+  <div class="article-summary">Vicharak推出Axon-Lite，一款搭载Rockchip RK3576、6 TOPS NPU的微型ARM单板计算机，其最大特色是接口模块可更换，用户可根据项目需求更换语音处理、智能传感、AI数据枢纽或AI视觉模块，而非更换整块主板。该板支持LPDDR5、eMMC 5.1、UFS 3.1、Wi-Fi 6、蓝牙5.2、千兆以太网及树莓派兼容40针接头，面向学生、爱好者和边缘AI原型团队。</div>
 
-  <div class="article-body"><p>Ubuntu 26.10 提供了一种新的窗口平铺方式：当你移动窗口时，一个布局选择器会从屏幕顶部滑入。</p><p>这种用于快速平铺的“放置区”概念，对于 Windows 11 用户或尝试过 GNOME Shell 扩展的用户来说会很熟悉——它们大体上做的是同一件事。</p><p>当你拖动窗口时，一个带有少量预设布局放置区的布局选择器会从显示屏顶部移入。你将窗口向上拖到某个布局区域上方（会显示窗口将贴靠位置的“幽灵”预览），然后松开即可平铺：</p><p>Ubuntu 26.10 中的布局区域会（就像常规边缘贴靠那样）建议其他已打开的窗口并排平铺，填充其他空间。因此，如果你使用选择器并将窗口拖放到四分之一区域，平铺建议会填充剩余的象限。</p><p>选择器中显示的布局与将窗口拖到屏幕边缘所支持的布局相同。你不能添加或编辑布局，某些工具提供了这种功能（混合大小、列和行），但那会增加额外的复杂性。</p><p>在我的测试安装中看到这个功能让我有点惊讶。它似乎是在开发周期相当晚的时候才加入的，远远晚于该发行版的用户界面冻结期（此后不应再有重大的面向用户的更改）。</p><p>查看 GitHub，新的布局选择器几天前才合并到扩展中（截至撰写本文时）。一个合并请求自六月以来一直处于开放状态，该功能的代码由一位参与 Yaru 图标主题工作的设计师贡献。</p><p>我很高兴这个功能被加入了；Ubuntu 花了很长时间才支持四分之一平铺——那直到 2023 年才实现——虽然这个选择器并没有更好地划分屏幕空间（同样限于 2 列/行），但它对多任务处理是一个提升。</p><p>只是……目前布局选择器没有关闭开关，在“设置 &gt; Ubuntu 桌面”中也没有。我想不是每个人都会想用这个（移动窗口时看到选择器栏自身的手势在视觉上很分散注意力），所以希望会添加一个。</p><p>不过，扩展的设置中有一个关闭开关——以及 Ubuntu 未暴露的其他设置，比如可配置的间隙——但你只能通过第三方工具访问，例如</p></div>
+  <div class="article-body"><p>这款微型单板计算机可让你为语音、视觉或传感更换接口模块</p><p>Vicharak的Axon-Lite将Rockchip RK3576、6 TOPS NPU和可更换模块塞进了一块微型单板计算机中。</p><p>你拿到一块单板计算机，然后开始在上面构建项目。你先做一个视觉项目。接着下一个项目需要音频。再下一个可能需要一堆传感器。通常这意味着在GPIO接头上堆叠一堆HAT，或者买一块新的单板计算机。</p><p>Vicharak正通过Axon-Lite尝试一条不同的路线。这是一款微型ARM单板计算机，其接口模块可更换，因此你可以更换模块来匹配任务，而不是更换主板。</p><p>这种“可重构计算”的卖点，正是这块ARM板与其他板略有不同的原因。</p><p>Vicharak已经推出了基于FPGA的[产品]和基于RAM的Axion系列。Axon-Lite是其Axon系列中最小的一员。所以他们在这一领域可能相对较新，但并非完全的新手。</p><p>Axion Lite规格</p><p>让我们看看这块单板计算机上有什么：</p><p>Rockchip RK3576（4× Cortex-A72 + 4× Cortex-A53）</p><p>6 TOPS NPU、Mali-G52 MC3 GPU、16MP ISP</p><p>LPDDR5（2GB-8GB）、eMMC 5.1（32GB-128GB）、UFS 3.1、SD卡</p><p>可更换接口模块 + 板对板扩展</p><p>Wi-Fi 6、蓝牙5.2、千兆以太网</p><p>树莓派兼容40针接头</p><p>正如你已经看到的，这里的亮点是模块化。该板使用了Vicharak所称的模块化连接器接口，其理念是你可以按需扣上不同的接口模块。</p><p>该公司目前展示了四种：语音处理、智能传感、AI数据枢纽和AI视觉。除此之外，还有板对板扩展，因此你可以堆叠子板而不是更换。</p><p>板对板扩展值得记住。模块化连接器的价值，取决于实际为其出货的模块阵容。而且如果这是一个专有接口，而非标准接口，那么你将依赖Vicharak提供的任何扩展板。</p><p>模块下方是一颗[芯片]。它是一颗八核芯片，定位高于入门级RK3566、低于旗舰级RK3588，这使其成为边缘工作的合理中间选择。</p><p>Vicharak同时列出了6 TOPS NPU，这与价格高得多的RK3588板上的NPU数字相同，对于在本地运行视觉和其他端侧AI模型来说绰绰有余。该公司还声称该SoC基于台积电5nm工艺制造。</p><p>[内存]和存储也很灵活，[类型]和microSD插槽均受支持。在这样大小的板上加入更快的UFS是一个不错的细节。</p><p>对于视觉构建，I/O很丰富。你有4通道CSI以及用于摄像头的额外2通道CSI路径、用于显示器的4通道DSI、16MP ISP、micro HDMI 2.1和支持显示输出的USB-C。网络覆盖Wi-Fi 6、蓝牙5.2和千兆以太网，并且有一个树莓派兼容的40针GPIO接头，因此现有扩展板和引脚定义可以沿用。</p><p>Vicharak还提到了板载电池充电电路，这暗示了便携、无绳构建的可能。</p><p>软件和用户群</p><p>Vicharak将Axon-Lite定位为一款Linux优先的板，提供熟悉的Debian风格环境和常见的apt驱动工作流。换句话说，这里没有什么异乎寻常的东西需要学习。</p><p>在工具方面，该公司列出了这类板你会期待的工具：用于通用开发的VS Code、Git、Python、Docker和Node.js，以及面向AI、机器人和视觉人群的ROS 2、OpenCV、GStreamer、FFmpeg、Jupyter、TensorFlow Lite和ONNX Runtime。</p><p>再加上可更换模块，目标受众相当广泛，因为它对学生、爱好者和产品团队原型开发边缘AI和视觉项目都很有用。</p><p>定价和可用性</p><p>Vicharak将Axon-Lite定位为一款Linux优先的板，提供熟悉的Debian风格环境和常见的apt驱动工作流。换句话说，这里没有什么异乎寻常的东西需要学习。</p><p>从捣鼓AI和嵌入式系统的学生，到爱好者，再到原型开发边缘AI和视觉项目的产品团队，这块板的目标用户群……</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/ubuntu-2610-tiling" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/vicharak-axon-lite/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
