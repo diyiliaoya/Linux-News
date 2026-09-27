@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>你可以试用 Ubuntu 的新 Myna AI 听写工具——方法如下 — Linux 中文速报</title>
+<title>Wisp 让在 GNOME 桌面管理 Btrfs 快照变得更轻松 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>你可以试用 Ubuntu 的新 Myna AI 听写工具——方法如下</h1>
+  <h1>Wisp 让在 GNOME 桌面管理 Btrfs 快照变得更轻松</h1>
 
-  <div class="article-summary">Canonical 已在 Snap Store 上架 Myna 编排器 snap 和两个语音识别 AI 模型，并通过 PPA 提供桌面应用，让用户提前测试 Ubuntu 的 AI 听写工具 Myna。该工具完全本地运行，需要手动安装组件并配置模型和快捷键，目前仍处于测试阶段，功能尚不完善。</div>
+  <div class="article-summary">Wisp 是一款新的 GNOME Shell 扩展，通过与 Snapper 集成，让用户无需命令行即可在 GNOME 桌面中图形化管理 Btrfs 文件系统快照。它支持查看快照间文件变化、调整保留策略、手动创建快照等操作，可从 GNOME 扩展网站获取。</div>
 
-  <div class="article-body"><p>想试试 Ubuntu 的新 AI 听写工具 Myna 吗？方法如下</p><p>Ubuntu 的新 AI 驱动听写工具 Myna 尚未正式发布，但你可以提前测试。</p><p>Canonical 最近在 Snap Store 中添加了 Myna 编排器 snap 和两个语音识别 AI 模型，并通过 PPA 提供了新的桌面应用供测试。</p><p>Ubuntu 26.10 还预装了另一个组件，因为 gnome-shell-ubuntu-extensions 包包含一个 GNOME Shell 扩展，当 Myna 本地 AI 语音转文字技术正在监听或转写时，会触发屏幕上的 HUD。</p><p>虽然官方尚未正式征集测试，但测试 Myna 所需的所有组件都已可用——供那些愿意自己组装的人使用。自 8 月份我预览以来，该功能已经发生了很大变化。</p><p>如果这包括你，请继续阅读操作方法——但请注意，目前不要期望一切都能完美运行。</p><p>如何在 Ubuntu 上试用 Myna</p><p>Ubuntu 26.10 上的 Myna 运行效果</p><p>要在 Ubuntu 26.04 LTS 或 Ubuntu 26.10 上测试 Myna，你需要：</p><p>来自 PPA 的桌面应用</p><p>来自 Snap Store 的 snap</p><p>来自 Snap Store 的 AI 模型</p><p>如果你使用的是 Ubuntu 26.10，你还有：</p><p>截至撰写本文时，Myna Shell 扩展（触发屏幕 HUD 的那个）仅针对 GNOME 51 和 26.10 打包。在 Ubuntu 26.04 上，则使用桌面通知来传达状态。</p><p>屏幕 HUD 仅在按下触发键激活 Myna 后、监听或转写时、或传达错误状态（如“背景噪音过高”或“焦点丢失”）时才会出现。</p><p>HUD 有多种视觉样式可供选择：</p><p>（使用系统强调色的普通条）；</p><p>（但可惜不如原版那样有动画效果）以及</p><p>（与默认相同，但在我的测试中缺少凹槽）：</p><p>以下是安装每个组件的方法。</p><p>安装 Myna 设置桌面应用</p><p>通过添加以下 PPA（由一位参与 Myna 工作的 Canonical 工程师维护）来安装应用，该 PPA 为 Ubuntu 26.04 LTS 和 26.10 提供软件包：</p><p>sudo add-apt-repository ppa:charles05/myna-config</p><p>sudo apt install myna-config</p><p>安装 Myna 客户端 snap</p><p>在安装之前，启用 Myna 所需的一个实验性 snap 功能：</p><p>sudo snap set system experimental.user-daemons=true</p><p>安装 Myna 语音转文字客户端</p><p>sudo snap install myna --edge</p><p>安装文本转语音 AI 模型 snap</p><p>首次运行向导（还）无法使用</p><p>最后，要将所有内容整合在一起，你需要操作的“大脑”：一个能将你的音频实际转写为文字的 AI 模型。</p><p>）应用有一个首次运行向导来安装各种组件，并会为你的硬件推荐合适的模型。但如果你点击“安装”按钮，它会抛出错误（这些东西都还在测试中）。</p><p>目前你需要使用命令行安装你偏好的语音识别模型——但你应该选择哪一个呢？</p><p>Snap Store 上有两个 AI 模型，不过</p><p>很快也会加入。这些模型完全在本地设备上运行，但体积不小。你需要 1-2GB 的可用磁盘空间，具体取决于你选择的模型。</p><p>我发现 在准确性方面更好（甚至能正确拼写我的姓氏，大多数都做不到），但 速度更快，尽管容易出现同音词错误。</p><p>，NVIDIA 的快速、开放权重 ASR 模型，支持 25 种语言和标点：</p><p>sudo snap install myna-parakeet --edge</p><p>，OpenAI 的多语言开源模型：</p><p>sudo snap install myna-whisper --edge</p><p>然后它应该会跳过设置屏幕并显示选项。</p><p>工具，设置模型大小（它使用的参数数量）以偏向速度或准确性：较小的变体在低端硬件上处理音频更快，而较大的变体则减少转写错误并更好地处理难词。</p><p>一切就绪后，你就可以开始测试了。首先：确保你的麦克风已启用并正常工作（在设置 &gt; 声音 &gt; 输入中检查）。然后你需要在设置应用中分配一个热键快捷键，按下它将激活该功能。</p><p>准备好后，打开一个应用并将焦点放在文本字段上（我倾向于使用），然后按下你的热键。</p><p>当激活</p></div>
+  <div class="article-body"><p>Wisp 让在 GNOME 桌面管理 Btrfs 快照变得更轻松</p><p>2026年9月26日 06:45 EDT。</p><p>Wisp 是一款新的 GNOME Shell 扩展，让以图形方式管理 Btrfs 文件系统快照变得更加容易。</p><p>在最新一期（主要关于 GNOME 51 发布后的应用更新）中，我觉得最有趣的是 Wisp 这个新的 GNOME Shell 扩展。Wisp 与 Snapper 对接，提供了一种在系统上管理 Btrfs 文件系统快照的便捷方式。</p><p>对于那些不想通过命令行与 Snapper 交互来管理其基于 Btrfs 的 Linux 系统的用户，Wisp 提供了一种在现代 GNOME 桌面中以图形方式轻松完成这些操作的方法。</p><p>通过 Wisp，用户可以轻松查看给定 Btrfs 快照之间哪些文件发生了变化、调整保留策略和其他 Snapper 相关设置、手动创建新的文件系统快照以及执行相关任务。</p><p>Wisp 可从 GNOME 扩展网站获取，也可以通过其他途径找到。</p><p>“Toolpak”正由 GNOME OS 开发者设计，类似于面向工具的 Flatpak</p><p>GNOME OS 转向 Zswap 以应对 OOM 问题，Geary 邮件客户端分支取得进展</p><p>GNOME 51 发布，改进了帧调度并带来大量应用改进</p><p>GNOME Shotwell 33 照片管理器发布，移植到 GTK4</p><p>GTK 4.24 发布，带来更好的分数缩放和更精确的 GDK 帧时钟</p><p>Gitte 作为 GNOME 的 Git 客户端继续成熟得相当不错</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。</p><p>Fedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法</p><p>Linux 7.4 的简单优化可使文件读取速度提高约 39%</p><p>Google“维护痛苦”的 Binder C Linux 驱动将被移除，改用 Rust</p><p>Valve 推出 Pyrowave 视频编解码器测试版，用于低延迟流媒体</p><p>阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的智能体操作系统</p><p>在享受无广告 Phoronix 的同时，帮助 Linux 硬件测试与评测继续</p><p>孤儿虚拟机：在主机内核离线重启/更新时保持虚拟机不间断运行</p><p>Ubuntu 26.10 切换到 Linux 7.3 内核</p><p>享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/ubuntu-myna-ai-install" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/GNOME-Wisp-Btrfs-Snapshots" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

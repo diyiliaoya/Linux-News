@@ -12791,5 +12791,71 @@
     "title_zh": "Talos Enterprise Linux 面向 Kubernetes 基础设施发布",
     "summary_zh": "Talos Enterprise Linux 正式发布，这是一个专为 Kubernetes 基础设施构建的平台，为企业提供运行和管理集群的企业级选项。",
     "fulltext_zh": "Talos Enterprise Linux 作为一个专为 Kubernetes 基础设施构建的平台正式发布，为企业提供了运行和管理集群的企业级选择。\n\n文章《Talos Enterprise Linux 面向 Kubernetes 基础设施发布》最初发表于 Linux Today。"
+  },
+  "f2c53f8bb704191f7090cbcc06582c22": {
+    "id": "f2c53f8bb704191f7090cbcc06582c22",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/era-rust-calendar-gnome-beta",
+    "title_en": "Era, the new Rust-based calendar for GNOME, is now in beta",
+    "summary_en": "Era is a new Rust-based calendar app for GNOME that describes itself as &#8220;beautiful and performant&#8221;. And you don&#8217;t need to schedule a date to try it; a beta release is available to install from Flathub. At first glance, Era looks like GNOME&#8217;s Calendar (which got a big update in the GNOME 51, notably in ways you feel rather than see). But then, how could it not? There are only so many ways to arrange a grid of numbers in boxes with room for coloured event labels. Functional",
+    "pub_date": "Sat, 26 Sep 2026 03:04:43 +0000",
+    "title_zh": "Era：GNOME 全新基于 Rust 的日历应用现已进入测试阶段",
+    "summary_zh": "Era 是一款基于 Rust 的新 GNOME 日历应用，现已发布测试版并可从 Flathub 安装。它采用 GTK4/libadwaita 界面，支持事件管理、搜索、多视图切换及在线同步。其后端通过中间层连接 Evolution Data Server，实现后端热插拔。",
+    "fulltext_zh": "Era 是 GNOME 的一款全新基于 Rust 的日历应用，被描述为“美观且高性能”。你无需预约日期就能试用它；测试版已可从 Flathub 安装。\n\n（GNOME 51 中的日历应用获得了重大更新，尤其是在你能感受到而非看到的方面）。但话说回来，这也在所难免？在方框中排列数字网格并留出彩色事件标签空间的方式本就有限。\n\nEra 覆盖了同样的功能：你可以浏览日期，添加、编辑和搜索事件，并与各种在线提供商同步。你可以在专用视图之间切换，并切换侧边栏来管理日历。\n\nEra v0.1 中的事件对话框\n\n事件编辑器也显示了你期望的所有字段和设置，让你可以为事件命名、精确设置时间/时长、选择重复或一次性事件，并且贴心地设置地点或会议场所。\n\nGTK4/libadwaita 界面非常简洁，高度自适应，堪称教科书般的 GNOME 风格。很容易让人误以为它是核心应用。窗口较宽时，主日历视图上的叠加按钮很不错，我也喜欢界面在较窄宽度下依然保持可用性。\n\n其后端也很有趣。Era 像 GNOME 日历一样使用 Evolution Data Server (EDS)，但并不直接连接 EDS。相反，它通过一个名为 EDS 中间层的组件来路由调用。这种方法允许后端热插拔（如果应用被移植到比如 Android，这会很有用）。\n\n你可以在本地使用它，导入事件，或同步到支持的提供商。\n\n由于这还处于测试阶段，我就不提出那个令人尴尬的假设性问题——它是否“标志着 Linux 日历应用的新时代”——因为说实话，日历通常很少是最令人兴奋的东西（除非每个月都展示一只不同的豚鼠坐在小篮子里）。\n\n它并不是唯一一款新的 Linux 日历应用。Linux Mint 在其 XApps 项目旗下开发了一款新日历应用，看起来已经相当能干。这令人鼓舞，并且可以测试——Flathub 描述称该应用“与你共同成长”，基于我自己的第一印象，我很想看到它确实如此。"
+  },
+  "6c174d63a2fe342c0b22f6717dfdfd84": {
+    "id": "6c174d63a2fe342c0b22f6717dfdfd84",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-Better-RPI-GPU-Reset",
+    "title_en": "Improved GPU Reset Coming For Raspberry Pi Boards With Linux 7.4",
+    "summary_en": "In addition to this week's DRM-Misc-Next pull request introducing some new HDMI 2.0 helpers for the DRM drivers, the pull request also introduced improved GPU reset support for the Broadcom V3D GPU with the VC4 kernel driver...",
+    "pub_date": "Sat, 26 Sep 2026 20:45:33 -0400",
+    "title_zh": "Linux 7.4 为树莓派带来改进的 GPU 重置支持",
+    "summary_zh": "Linux 7.4 内核将引入针对博通 V3D GPU 的改进重置支持。开发者利用 BCM2835 PM 模块的复位线，替代原先通过强制清零运行时 PM 引用计数来断电重启 GPU 的复杂方式，使树莓派等设备在 GPU 挂起时无需断电即可恢复，提升可靠性与体验。该补丁预计随 10 月合并窗口进入 Linux 7.4。",
+    "fulltext_zh": "Linux 7.4 为树莓派带来改进的 GPU 重置支持\n2026 年 9 月 26 日 20:45 EDT。\n\n除了本周的 DRM-Misc-Next 拉取请求为 DRM 驱动引入了一些新的 HDMI 2.0 辅助功能外，该拉取请求还为 VC4 内核驱动中的博通 V3D GPU 引入了改进的 GPU 重置支持。\n\n咨询公司 Igalia 的 Maíra Canal 通过正确利用 V3D 硬件模块的复位控制器，改进了其 GPU 重置支持。Canal 解释道：\n\n“vc4_reset() 通过将运行时 PM 使用计数降为零以使 V3D 电源域关闭，然后再重新获取，从而恢复挂起的 GPU。强制将计数归零仅在驱动确切知道自己持有多少引用时才有效，这就是为什么 vc4 非传统地将每个 pm_runtime_get_sync() 调用包装在私有的引用计数和互斥锁中，使代码变得笨重。\n\n自提交 670c672608a1（“soc: bcm: bcm2835-pm: 在新绑定下添加对电源域的支持”）以来，BCM2835 PM 模块就为 V3D 模块暴露了一条复位线，正是为此目的而添加，但 vc4 从未采用它。本系列将其切换为使用该复位线，并去掉了私有引用计数，使 vc4_v3d_pm_get/put() 成为普通的运行时 PM 包装器。\n\n复位线是可选的，因此未描述它的设备树仍可工作：它们会获得 vc4_irq_reset() 中的驱动侧恢复，而硬件保持不变。在两个树内平台中，\n1. BCM2835 在补丁 4 中获得该属性。\n2. Cygnus 根本没有 V3D 电源域，因此电源循环在那里仅门控其时钟。”\n\n这项工作使得树莓派板卡及其他相关博通硬件上的 GPU 现在无需对其电源域进行电源循环即可重置。最终，它应能带来更好、更可靠的 GPU 挂起恢复体验。\n\n该功能将作为 10 月 Linux 7.4 合并窗口的一部分落地。Linux 7.4 稳定版则有望在年底前发布。\n\n树莓派 OS 桌面大改，新增图标停靠栏\n树莓派计算模块 5 编程夹具发布\n树莓派 AXI PMU 驱动正在接受主线 Linux 内核审查\n树莓派触摸显示屏 2 10 英寸型号发布\n树莓派 5 IOMMU 驱动正在为上游 Linux 内核开发\n树莓派 OS 迁移至 Linux 6.18 LTS 内核，更新 LabWC 合成器\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nFedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法\nLinux 7.4 的简单优化可使读取文件速度提高约 39%\n谷歌“维护痛苦”的 Binder C Linux 驱动将被移除，转而使用 Rust\nValve 推出 Pyrowave 视频编解码器测试版，用于低延迟流媒体\n阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的代理式操作系统\n在享受无广告 Phoronix 的同时，帮助 Linux 硬件测试与评测继续\n孤儿虚拟机：在主机内核离线重启/更新时保持虚拟机不间断运行\nUbuntu 26.10 切换至 Linux 7.3 内核\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "fbbafd9be86e270bf09cba225dd9ea37": {
+    "id": "fbbafd9be86e270bf09cba225dd9ea37",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Toolpak",
+    "title_en": "\"Toolpak\" Being Devised By GNOME OS Developers, Akin To Flatpak For Tools",
+    "summary_en": "GNOME developer Jordan Petridis published a blog post today to introduce the world to the Toolpak plans for GNOME OS...",
+    "pub_date": "Sat, 26 Sep 2026 12:50:00 -0400",
+    "title_zh": "GNOME OS 开发者正在设计“Toolpak”，类似于面向工具的 Flatpak",
+    "summary_zh": "GNOME 开发者 Jordan Petridis 公布 GNOME OS 的 Toolpak 计划，旨在为开发工具提供类似 Flatpak 的现代打包方案。Toolpak 采用 UAPL3 可发现磁盘镜像格式，为二进制文件提供挂载命名空间，工具可无限制访问系统，并前置到 $PATH。它默认可复现，处理许可与 SBOM 要求，便于编排构建。目前正开发原型，未来几周将分享更多细节。",
+    "fulltext_zh": "GNOME 开发者 Jordan Petridis 今天发布了一篇博客文章，向世界介绍了 GNOME OS 的 Toolpak 计划。\n\n虽然 Flatpak 对于桌面 Linux 应用和其他针对不同应用的容器化软件解决方案效果很好，但对于为现代操作系统栈开发软件的开发者来说，它们往往不太适用。对于许多开发工具而言，目前还无法享受沙箱和隔离，但 GNOME OS 开发者目前正在将 Toolpak 作为一种现代替代方案来推进。\n\nToolpak 采取的设计思路是：QEMU、strace 等工具都独立于宿主操作系统，工具应当开箱即用，无需对它们全部进行修改。因此，他们在 Toolpak 上采取的方法是：利用 UAPL3 可发现磁盘镜像作为其镜像格式，为二进制文件使用挂载命名空间，工具对其他一切拥有不受限制的访问权限，工具被前置到 $PATH，工具对系统拥有完全且任意的访问权限，而可以用 Flatpak 打包的应用则应被排除在这个更自由的 Toolpak 概念之外。\n\nToolpak 还旨在默认实现可复现性，处理所有许可和 SBOM 要求，便于编排构建，以及满足其他现代开发需求和交付物。GNOME OS 开发者目前正在开发 Toolpak 的原型，并计划在未来几周内分享更多内容。\n\n关于他们 Toolpak 概念的早期细节可以通过以下内容找到：\n\nWisp 让从 GNOME 桌面管理 Btrfs 快照变得更容易\nGNOME OS 转向 Zswap 以应对 OOM 问题，Geary 电子邮件客户端分支取得进展\nGNOME 51 发布，改进了帧调度，并带来许多应用改进\nGNOME Shotwell 33 照片管理器发布，移植到 GTK4\nGTK 4.24 发布，带来更好的分数缩放和更精确的 GDK 帧时钟\nGNOME 的 Git 客户端 Gitte 继续相当不错地成熟\n\nMichael Larabel 是 Phoronix.com 的主要作者，他于 2004 年创立了该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nFedora 讨论提出了用 Collabora Office 替换 LibreOffice 的想法\nLinux 7.4 的简单优化可使文件读取速度提高约 39%\n谷歌“维护起来很痛苦”的 Binder C Linux 驱动将被移除，转而使用 Rust\nValve 在测试版中推出 Pyrowave 视频编解码器，用于低延迟流媒体\n阿里巴巴向 Omarchy 捐赠 300 万美元，用于打造“理想”的代理式操作系统\n帮助 Linux 硬件测试与评测继续，同时在无广告的情况下享受 Phoronix\n孤儿虚拟机：在宿主内核离线以进行重启/更新时，让虚拟机不间断运行\nUbuntu 26.10 切换到 Linux 7.3 内核\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，由\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "d6d5ac87896dc526d6d16ba00f480842": {
+    "id": "d6d5ac87896dc526d6d16ba00f480842",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-Refill-Sheaves-Barn",
+    "title_en": "MM Change Slated For Linux 7.4 Yields +22904539.81% In One Metric, More Modest Wins In Others",
+    "summary_en": "Queued this week into the slab/for-next Git branch ahead of next month's Linux 7.4 merge window is a memory management change for refilling pre-filled sheaves from the barn. In some cases this yields wild improvements to specific synthetic benchmarks...",
+    "pub_date": "Sat, 26 Sep 2026 11:07:42 -0400",
+    "title_zh": "Linux 7.4 内存管理变更：一项指标提升 22904539.81%，其他方面收益温和",
+    "summary_zh": "Linux 7.4 内核合并窗口将引入一项内存管理优化，允许预填充 sheaf 从 barn 中补充对象，避免 full 列表饱和。该改动仅新增 81 行代码，却在 will-it-scale mmap1 测试中带来 24% 的整体提升，其中 barn_get 性能暴增 22904539.81%，barn_put 提升 21422544.07%，其他指标也有两位数增长。",
+    "fulltext_zh": "MM Change Slated For Linux 7.4 Yields +22904539.81% In One Metric, More Modest Wins In Others\n\n2026年9月26日 11:07 AM EDT。\n\n本周已排队进入 slab/for-next Git 分支，为下个月的 Linux 7.4 合并窗口做准备。这是一项内存管理变更，用于从 barn 中重新填充预填充的 sheaf。在某些情况下，这为特定的合成基准测试带来了惊人的改进。\n\nsheaf 是 Linux 内核内存分配器的每 CPU、基于数组的缓存层。自去年引入内核以来，sheaf 已经经历了大量工作，而 Linux 7.4 还有更多优化工作正在进行。\n\nHao Li 解释了这项从 barn 重新填充预填充 sheaf 的内存管理代码变更：\n\n“目前，当预填充 API 重新填充一个非满的 sheaf 时，它从部分 slab 中获取对象，而从不从 barn 中的满 sheaf 获取，因此一旦 barn 的满列表饱和，它就会保持饱和。\n\n对于通过 kfree_rcu() 释放的对象，每个 RCU sheaf 随后都必须刷新到 slab，因为 barn 的满列表没有空间。\n\n为了解决这个问题，让 sheaf 首先从 barn 重新填充，并在 barn 中引入一个部分 sheaf，用于存放剩余的对象。\n\n只有预填充路径需要这个部分 sheaf。通用分配路径（__pcs_replace_empty_main()）用一个空 sheaf 从 barn 换一个满 sheaf，因此不会留下剩余对象。预填充路径重新填充的 sheaf 不一定是空的，因此从 barn 取对象通常会留下剩余对象，而部分 sheaf 就是存放它们的地方。refill_sheaf() 只从部分 slab 取对象，从不涉及部分 sheaf。\n\nsheaf 的重新填充方式是：先从部分 sheaf 复制对象，如果仍未满，再从 barn 中取一个满 sheaf 复制。被复制对象的 sheaf 如果仍然持有对象，就作为部分 sheaf 留在 barn 中；如果为空，则进入空列表。被重新填充的 sheaf 永远不会被替换。\n\n收益来自两个方面：每个取出的满 sheaf 都为未来的 RCU sheaf 在 barn 的满列表上腾出空间，而且在 list_lock 下从 barn 重新填充比从部分 slab 重新填充更便宜。”\n\n在 will-it-scale mmap1 测试中，整体提升了 24%。barn_get 性能的影响为 +22904539.81%，barn_put 为 +21422544.07%，其他指标相比基线往往有两位数的百分比提升。\n\n81 行新代码就能产生如此大的影响。\n\n该变更将进入 10 月下旬的 Linux 7.4 合并窗口。\n\nAI Bug 修复、Crescent Island 电源制动及 Nouveau 修复进入 Linux 7.3-rc5 DRM\n\nLinux 内核开发者考虑添加 AGENTS.md 以帮助指导 AI/LLM 代理\n\nLinux 内核因模糊测试机器人产生不切实际的错误报告而引入新污染标记\n\n为内存极其有限的微型 Linux 系统提出“slab_tiny”启动选项\n\nLinux 7.4 DRM 基础设施通过新辅助函数更好地支持 HDMI 2.0\n\n为 Linux 图形驱动提出可变刷新率“VRR”目标限制器\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nFedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法\n\nLinux 7.4 的简单优化可使文件读取速度提高约 39%\n\n谷歌“难以维护”的 Binder C Linux 驱动将被移除，转而使用 Rust\n\nValve 推出 Pyrowave 视频编解码器测试版，用于低延迟流媒体\n\n阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的代理操作系统\n\n在享受 Phoronix 的同时，帮助 Linux 硬件测试与评测继续"
+  },
+  "a530a3749ea191e39afb27c1f61a056b": {
+    "id": "a530a3749ea191e39afb27c1f61a056b",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.3-rc5-DRM",
+    "title_en": "AI Bug Fixes, Crescent Island Power Brake & Nouveau Fixes For Linux 7.3-rc5 DRM",
+    "summary_en": "The Direct Rendering Manager (DRM) subsystem fixes for the week are heavier on the side with many fixes to these kernel graphics/display drivers ahead of Sunday's Linux 7.3-rc5 release...",
+    "pub_date": "Sat, 26 Sep 2026 07:13:16 -0400",
+    "title_zh": "AI 错误修复、Crescent Island 功率制动及 Nouveau 修复登陆 Linux 7.3-rc5 DRM",
+    "summary_zh": "Linux 7.3-rc5 的 DRM 子系统修复已合并，本周更新以 AI 辅助修复错误处理路径、内存泄漏和释放后使用问题为主。Intel Xe 驱动为即将推出的 Crescent Island AI 加速器新增了功率制动节流原因；Nouveau 开源 NVIDIA 驱动在切换到 R570 固件后修复了挂起/恢复回归、vRAM 固定等问题。",
+    "fulltext_zh": "AI 错误修复、Crescent Island 功率制动及 Nouveau 修复登陆 Linux 7.3-rc5 DRM\n2026 年 9 月 26 日 07:13 EDT\n\n本周针对直接渲染管理器（DRM）子系统的修复数量较多，在周日 Linux 7.3-rc5 发布前，这些内核图形/显示驱动迎来了大量修复。\n\nDRM 联合维护者 David Airlie 指出，本周的拉取请求主要由“AI 辅助的错误处理路径、内存泄漏和释放后使用修复”构成，但也有一些更值得注意的修复。\n\n对于 Intel Xe 驱动，其能够报告显卡因内存或 VR 温度、SoC 平均温度等原因而降频，现在随着即将推出的 Crescent Island AI 加速器，新增了功率制动（power brake）作为新的节流原因。Crescent Island 具有一个功率制动“PWRBRK”硬件位，可作为新的节流原因由 Xe 驱动转发。\n\nNouveau 开源 NVIDIA 驱动在本次 Linux 7.3 的 DRM 更新中修复最多。在 Nouveau 从使用 NVIDIA R535 驱动固件二进制文件过渡到 NVIDIA R570 固件二进制文件后，挂起/恢复出现了回归以及其他问题。本周为 Linux 7.3 提交的拉取请求修复了使用较新 NVIDIA 固件时的挂起/恢复问题，修复了 vRAM 固定，并修复了其他各种驱动问题——其中一些是通过 AI/LLM 发现的。\n\n现已合并到 Linux 7.3 的 DRM 修复完整列表可通过以下链接查看：\n\nMM 变更计划登陆 Linux 7.4，一项指标提升 +22904539.81%，其他方面收益较为温和\nLinux 内核开发者考虑添加 AGENTS.md 以帮助指导 AI/LLM 代理\nLinux 内核因模糊测试机器人产生不切实际的错误报告而引入新污点\n针对内存极其有限的微型 Linux 系统提出“slab_tiny”启动选项\nLinux 7.4 DRM 基础设施通过新辅助函数更好地支持 HDMI 2.0\n为 Linux 图形驱动提出可变刷新率“VRR”目标限制器\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nFedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法\nLinux 7.4 的简单优化可使文件读取速度提升约 39%\nGoogle“难以维护”的 Binder C Linux 驱动将被移除，转而使用 Rust\nValve 推出 Pyrowave 视频编解码器测试版，用于低延迟流媒体\n阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的代理式操作系统\n在享受无广告 Phoronix 的同时，帮助 Linux 硬件测试与评测继续开展\n孤儿虚拟机：在主机内核离线进行重启/更新时保持虚拟机不间断运行\nUbuntu 26.10 切换到 Linux 7.3 内核\n\n享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "f2cba7d1178760af0d516ec69006b07d": {
+    "id": "f2cba7d1178760af0d516ec69006b07d",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/GNOME-Wisp-Btrfs-Snapshots",
+    "title_en": "Wisp Makes It Easier To Manage Btrfs Snapshots From The GNOME Desktop",
+    "summary_en": "Wisp is a new GNOME Shell extension making it easier to graphically manage Btrfs file-system snapshots...",
+    "pub_date": "Sat, 26 Sep 2026 06:45:13 -0400",
+    "title_zh": "Wisp 让在 GNOME 桌面管理 Btrfs 快照变得更轻松",
+    "summary_zh": "Wisp 是一款新的 GNOME Shell 扩展，通过与 Snapper 集成，让用户无需命令行即可在 GNOME 桌面中图形化管理 Btrfs 文件系统快照。它支持查看快照间文件变化、调整保留策略、手动创建快照等操作，可从 GNOME 扩展网站获取。",
+    "fulltext_zh": "Wisp 让在 GNOME 桌面管理 Btrfs 快照变得更轻松\n\n2026年9月26日 06:45 EDT。\n\nWisp 是一款新的 GNOME Shell 扩展，让以图形方式管理 Btrfs 文件系统快照变得更加容易。\n\n在最新一期（主要关于 GNOME 51 发布后的应用更新）中，我觉得最有趣的是 Wisp 这个新的 GNOME Shell 扩展。Wisp 与 Snapper 对接，提供了一种在系统上管理 Btrfs 文件系统快照的便捷方式。\n\n对于那些不想通过命令行与 Snapper 交互来管理其基于 Btrfs 的 Linux 系统的用户，Wisp 提供了一种在现代 GNOME 桌面中以图形方式轻松完成这些操作的方法。\n\n通过 Wisp，用户可以轻松查看给定 Btrfs 快照之间哪些文件发生了变化、调整保留策略和其他 Snapper 相关设置、手动创建新的文件系统快照以及执行相关任务。\n\nWisp 可从 GNOME 扩展网站获取，也可以通过其他途径找到。\n\n“Toolpak”正由 GNOME OS 开发者设计，类似于面向工具的 Flatpak\nGNOME OS 转向 Zswap 以应对 OOM 问题，Geary 邮件客户端分支取得进展\nGNOME 51 发布，改进了帧调度并带来大量应用改进\nGNOME Shotwell 33 照片管理器发布，移植到 GTK4\nGTK 4.24 发布，带来更好的分数缩放和更精确的 GDK 帧时钟\nGitte 作为 GNOME 的 Git 客户端继续成熟得相当不错\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。\n\nFedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法\nLinux 7.4 的简单优化可使文件读取速度提高约 39%\nGoogle“维护痛苦”的 Binder C Linux 驱动将被移除，改用 Rust\nValve 推出 Pyrowave 视频编解码器测试版，用于低延迟流媒体\n阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的智能体操作系统\n在享受无广告 Phoronix 的同时，帮助 Linux 硬件测试与评测继续\n孤儿虚拟机：在主机内核离线重启/更新时保持虚拟机不间断运行\nUbuntu 26.10 切换到 Linux 7.3 内核\n\n享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
   }
 }

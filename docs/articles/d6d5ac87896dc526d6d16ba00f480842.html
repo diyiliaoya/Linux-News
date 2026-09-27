@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>你可以试用 Ubuntu 的新 Myna AI 听写工具——方法如下 — Linux 中文速报</title>
+<title>Linux 7.4 内存管理变更：一项指标提升 22904539.81%，其他方面收益温和 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>你可以试用 Ubuntu 的新 Myna AI 听写工具——方法如下</h1>
+  <h1>Linux 7.4 内存管理变更：一项指标提升 22904539.81%，其他方面收益温和</h1>
 
-  <div class="article-summary">Canonical 已在 Snap Store 上架 Myna 编排器 snap 和两个语音识别 AI 模型，并通过 PPA 提供桌面应用，让用户提前测试 Ubuntu 的 AI 听写工具 Myna。该工具完全本地运行，需要手动安装组件并配置模型和快捷键，目前仍处于测试阶段，功能尚不完善。</div>
+  <div class="article-summary">Linux 7.4 内核合并窗口将引入一项内存管理优化，允许预填充 sheaf 从 barn 中补充对象，避免 full 列表饱和。该改动仅新增 81 行代码，却在 will-it-scale mmap1 测试中带来 24% 的整体提升，其中 barn_get 性能暴增 22904539.81%，barn_put 提升 21422544.07%，其他指标也有两位数增长。</div>
 
-  <div class="article-body"><p>想试试 Ubuntu 的新 AI 听写工具 Myna 吗？方法如下</p><p>Ubuntu 的新 AI 驱动听写工具 Myna 尚未正式发布，但你可以提前测试。</p><p>Canonical 最近在 Snap Store 中添加了 Myna 编排器 snap 和两个语音识别 AI 模型，并通过 PPA 提供了新的桌面应用供测试。</p><p>Ubuntu 26.10 还预装了另一个组件，因为 gnome-shell-ubuntu-extensions 包包含一个 GNOME Shell 扩展，当 Myna 本地 AI 语音转文字技术正在监听或转写时，会触发屏幕上的 HUD。</p><p>虽然官方尚未正式征集测试，但测试 Myna 所需的所有组件都已可用——供那些愿意自己组装的人使用。自 8 月份我预览以来，该功能已经发生了很大变化。</p><p>如果这包括你，请继续阅读操作方法——但请注意，目前不要期望一切都能完美运行。</p><p>如何在 Ubuntu 上试用 Myna</p><p>Ubuntu 26.10 上的 Myna 运行效果</p><p>要在 Ubuntu 26.04 LTS 或 Ubuntu 26.10 上测试 Myna，你需要：</p><p>来自 PPA 的桌面应用</p><p>来自 Snap Store 的 snap</p><p>来自 Snap Store 的 AI 模型</p><p>如果你使用的是 Ubuntu 26.10，你还有：</p><p>截至撰写本文时，Myna Shell 扩展（触发屏幕 HUD 的那个）仅针对 GNOME 51 和 26.10 打包。在 Ubuntu 26.04 上，则使用桌面通知来传达状态。</p><p>屏幕 HUD 仅在按下触发键激活 Myna 后、监听或转写时、或传达错误状态（如“背景噪音过高”或“焦点丢失”）时才会出现。</p><p>HUD 有多种视觉样式可供选择：</p><p>（使用系统强调色的普通条）；</p><p>（但可惜不如原版那样有动画效果）以及</p><p>（与默认相同，但在我的测试中缺少凹槽）：</p><p>以下是安装每个组件的方法。</p><p>安装 Myna 设置桌面应用</p><p>通过添加以下 PPA（由一位参与 Myna 工作的 Canonical 工程师维护）来安装应用，该 PPA 为 Ubuntu 26.04 LTS 和 26.10 提供软件包：</p><p>sudo add-apt-repository ppa:charles05/myna-config</p><p>sudo apt install myna-config</p><p>安装 Myna 客户端 snap</p><p>在安装之前，启用 Myna 所需的一个实验性 snap 功能：</p><p>sudo snap set system experimental.user-daemons=true</p><p>安装 Myna 语音转文字客户端</p><p>sudo snap install myna --edge</p><p>安装文本转语音 AI 模型 snap</p><p>首次运行向导（还）无法使用</p><p>最后，要将所有内容整合在一起，你需要操作的“大脑”：一个能将你的音频实际转写为文字的 AI 模型。</p><p>）应用有一个首次运行向导来安装各种组件，并会为你的硬件推荐合适的模型。但如果你点击“安装”按钮，它会抛出错误（这些东西都还在测试中）。</p><p>目前你需要使用命令行安装你偏好的语音识别模型——但你应该选择哪一个呢？</p><p>Snap Store 上有两个 AI 模型，不过</p><p>很快也会加入。这些模型完全在本地设备上运行，但体积不小。你需要 1-2GB 的可用磁盘空间，具体取决于你选择的模型。</p><p>我发现 在准确性方面更好（甚至能正确拼写我的姓氏，大多数都做不到），但 速度更快，尽管容易出现同音词错误。</p><p>，NVIDIA 的快速、开放权重 ASR 模型，支持 25 种语言和标点：</p><p>sudo snap install myna-parakeet --edge</p><p>，OpenAI 的多语言开源模型：</p><p>sudo snap install myna-whisper --edge</p><p>然后它应该会跳过设置屏幕并显示选项。</p><p>工具，设置模型大小（它使用的参数数量）以偏向速度或准确性：较小的变体在低端硬件上处理音频更快，而较大的变体则减少转写错误并更好地处理难词。</p><p>一切就绪后，你就可以开始测试了。首先：确保你的麦克风已启用并正常工作（在设置 &gt; 声音 &gt; 输入中检查）。然后你需要在设置应用中分配一个热键快捷键，按下它将激活该功能。</p><p>准备好后，打开一个应用并将焦点放在文本字段上（我倾向于使用），然后按下你的热键。</p><p>当激活</p></div>
+  <div class="article-body"><p>MM Change Slated For Linux 7.4 Yields +22904539.81% In One Metric, More Modest Wins In Others</p><p>2026年9月26日 11:07 AM EDT。</p><p>本周已排队进入 slab/for-next Git 分支，为下个月的 Linux 7.4 合并窗口做准备。这是一项内存管理变更，用于从 barn 中重新填充预填充的 sheaf。在某些情况下，这为特定的合成基准测试带来了惊人的改进。</p><p>sheaf 是 Linux 内核内存分配器的每 CPU、基于数组的缓存层。自去年引入内核以来，sheaf 已经经历了大量工作，而 Linux 7.4 还有更多优化工作正在进行。</p><p>Hao Li 解释了这项从 barn 重新填充预填充 sheaf 的内存管理代码变更：</p><p>“目前，当预填充 API 重新填充一个非满的 sheaf 时，它从部分 slab 中获取对象，而从不从 barn 中的满 sheaf 获取，因此一旦 barn 的满列表饱和，它就会保持饱和。</p><p>对于通过 kfree_rcu() 释放的对象，每个 RCU sheaf 随后都必须刷新到 slab，因为 barn 的满列表没有空间。</p><p>为了解决这个问题，让 sheaf 首先从 barn 重新填充，并在 barn 中引入一个部分 sheaf，用于存放剩余的对象。</p><p>只有预填充路径需要这个部分 sheaf。通用分配路径（__pcs_replace_empty_main()）用一个空 sheaf 从 barn 换一个满 sheaf，因此不会留下剩余对象。预填充路径重新填充的 sheaf 不一定是空的，因此从 barn 取对象通常会留下剩余对象，而部分 sheaf 就是存放它们的地方。refill_sheaf() 只从部分 slab 取对象，从不涉及部分 sheaf。</p><p>sheaf 的重新填充方式是：先从部分 sheaf 复制对象，如果仍未满，再从 barn 中取一个满 sheaf 复制。被复制对象的 sheaf 如果仍然持有对象，就作为部分 sheaf 留在 barn 中；如果为空，则进入空列表。被重新填充的 sheaf 永远不会被替换。</p><p>收益来自两个方面：每个取出的满 sheaf 都为未来的 RCU sheaf 在 barn 的满列表上腾出空间，而且在 list_lock 下从 barn 重新填充比从部分 slab 重新填充更便宜。”</p><p>在 will-it-scale mmap1 测试中，整体提升了 24%。barn_get 性能的影响为 +22904539.81%，barn_put 为 +21422544.07%，其他指标相比基线往往有两位数的百分比提升。</p><p>81 行新代码就能产生如此大的影响。</p><p>该变更将进入 10 月下旬的 Linux 7.4 合并窗口。</p><p>AI Bug 修复、Crescent Island 电源制动及 Nouveau 修复进入 Linux 7.3-rc5 DRM</p><p>Linux 内核开发者考虑添加 AGENTS.md 以帮助指导 AI/LLM 代理</p><p>Linux 内核因模糊测试机器人产生不切实际的错误报告而引入新污染标记</p><p>为内存极其有限的微型 Linux 系统提出“slab_tiny”启动选项</p><p>Linux 7.4 DRM 基础设施通过新辅助函数更好地支持 HDMI 2.0</p><p>为 Linux 图形驱动提出可变刷新率“VRR”目标限制器</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Fedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法</p><p>Linux 7.4 的简单优化可使文件读取速度提高约 39%</p><p>谷歌“难以维护”的 Binder C Linux 驱动将被移除，转而使用 Rust</p><p>Valve 推出 Pyrowave 视频编解码器测试版，用于低延迟流媒体</p><p>阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的代理操作系统</p><p>在享受 Phoronix 的同时，帮助 Linux 硬件测试与评测继续</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/ubuntu-myna-ai-install" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.4-Refill-Sheaves-Barn" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

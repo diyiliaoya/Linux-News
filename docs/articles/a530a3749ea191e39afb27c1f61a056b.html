@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>你可以试用 Ubuntu 的新 Myna AI 听写工具——方法如下 — Linux 中文速报</title>
+<title>AI 错误修复、Crescent Island 功率制动及 Nouveau 修复登陆 Linux 7.3-rc5 DRM — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>你可以试用 Ubuntu 的新 Myna AI 听写工具——方法如下</h1>
+  <h1>AI 错误修复、Crescent Island 功率制动及 Nouveau 修复登陆 Linux 7.3-rc5 DRM</h1>
 
-  <div class="article-summary">Canonical 已在 Snap Store 上架 Myna 编排器 snap 和两个语音识别 AI 模型，并通过 PPA 提供桌面应用，让用户提前测试 Ubuntu 的 AI 听写工具 Myna。该工具完全本地运行，需要手动安装组件并配置模型和快捷键，目前仍处于测试阶段，功能尚不完善。</div>
+  <div class="article-summary">Linux 7.3-rc5 的 DRM 子系统修复已合并，本周更新以 AI 辅助修复错误处理路径、内存泄漏和释放后使用问题为主。Intel Xe 驱动为即将推出的 Crescent Island AI 加速器新增了功率制动节流原因；Nouveau 开源 NVIDIA 驱动在切换到 R570 固件后修复了挂起/恢复回归、vRAM 固定等问题。</div>
 
-  <div class="article-body"><p>想试试 Ubuntu 的新 AI 听写工具 Myna 吗？方法如下</p><p>Ubuntu 的新 AI 驱动听写工具 Myna 尚未正式发布，但你可以提前测试。</p><p>Canonical 最近在 Snap Store 中添加了 Myna 编排器 snap 和两个语音识别 AI 模型，并通过 PPA 提供了新的桌面应用供测试。</p><p>Ubuntu 26.10 还预装了另一个组件，因为 gnome-shell-ubuntu-extensions 包包含一个 GNOME Shell 扩展，当 Myna 本地 AI 语音转文字技术正在监听或转写时，会触发屏幕上的 HUD。</p><p>虽然官方尚未正式征集测试，但测试 Myna 所需的所有组件都已可用——供那些愿意自己组装的人使用。自 8 月份我预览以来，该功能已经发生了很大变化。</p><p>如果这包括你，请继续阅读操作方法——但请注意，目前不要期望一切都能完美运行。</p><p>如何在 Ubuntu 上试用 Myna</p><p>Ubuntu 26.10 上的 Myna 运行效果</p><p>要在 Ubuntu 26.04 LTS 或 Ubuntu 26.10 上测试 Myna，你需要：</p><p>来自 PPA 的桌面应用</p><p>来自 Snap Store 的 snap</p><p>来自 Snap Store 的 AI 模型</p><p>如果你使用的是 Ubuntu 26.10，你还有：</p><p>截至撰写本文时，Myna Shell 扩展（触发屏幕 HUD 的那个）仅针对 GNOME 51 和 26.10 打包。在 Ubuntu 26.04 上，则使用桌面通知来传达状态。</p><p>屏幕 HUD 仅在按下触发键激活 Myna 后、监听或转写时、或传达错误状态（如“背景噪音过高”或“焦点丢失”）时才会出现。</p><p>HUD 有多种视觉样式可供选择：</p><p>（使用系统强调色的普通条）；</p><p>（但可惜不如原版那样有动画效果）以及</p><p>（与默认相同，但在我的测试中缺少凹槽）：</p><p>以下是安装每个组件的方法。</p><p>安装 Myna 设置桌面应用</p><p>通过添加以下 PPA（由一位参与 Myna 工作的 Canonical 工程师维护）来安装应用，该 PPA 为 Ubuntu 26.04 LTS 和 26.10 提供软件包：</p><p>sudo add-apt-repository ppa:charles05/myna-config</p><p>sudo apt install myna-config</p><p>安装 Myna 客户端 snap</p><p>在安装之前，启用 Myna 所需的一个实验性 snap 功能：</p><p>sudo snap set system experimental.user-daemons=true</p><p>安装 Myna 语音转文字客户端</p><p>sudo snap install myna --edge</p><p>安装文本转语音 AI 模型 snap</p><p>首次运行向导（还）无法使用</p><p>最后，要将所有内容整合在一起，你需要操作的“大脑”：一个能将你的音频实际转写为文字的 AI 模型。</p><p>）应用有一个首次运行向导来安装各种组件，并会为你的硬件推荐合适的模型。但如果你点击“安装”按钮，它会抛出错误（这些东西都还在测试中）。</p><p>目前你需要使用命令行安装你偏好的语音识别模型——但你应该选择哪一个呢？</p><p>Snap Store 上有两个 AI 模型，不过</p><p>很快也会加入。这些模型完全在本地设备上运行，但体积不小。你需要 1-2GB 的可用磁盘空间，具体取决于你选择的模型。</p><p>我发现 在准确性方面更好（甚至能正确拼写我的姓氏，大多数都做不到），但 速度更快，尽管容易出现同音词错误。</p><p>，NVIDIA 的快速、开放权重 ASR 模型，支持 25 种语言和标点：</p><p>sudo snap install myna-parakeet --edge</p><p>，OpenAI 的多语言开源模型：</p><p>sudo snap install myna-whisper --edge</p><p>然后它应该会跳过设置屏幕并显示选项。</p><p>工具，设置模型大小（它使用的参数数量）以偏向速度或准确性：较小的变体在低端硬件上处理音频更快，而较大的变体则减少转写错误并更好地处理难词。</p><p>一切就绪后，你就可以开始测试了。首先：确保你的麦克风已启用并正常工作（在设置 &gt; 声音 &gt; 输入中检查）。然后你需要在设置应用中分配一个热键快捷键，按下它将激活该功能。</p><p>准备好后，打开一个应用并将焦点放在文本字段上（我倾向于使用），然后按下你的热键。</p><p>当激活</p></div>
+  <div class="article-body"><p>AI 错误修复、Crescent Island 功率制动及 Nouveau 修复登陆 Linux 7.3-rc5 DRM</p><p>2026 年 9 月 26 日 07:13 EDT</p><p>本周针对直接渲染管理器（DRM）子系统的修复数量较多，在周日 Linux 7.3-rc5 发布前，这些内核图形/显示驱动迎来了大量修复。</p><p>DRM 联合维护者 David Airlie 指出，本周的拉取请求主要由“AI 辅助的错误处理路径、内存泄漏和释放后使用修复”构成，但也有一些更值得注意的修复。</p><p>对于 Intel Xe 驱动，其能够报告显卡因内存或 VR 温度、SoC 平均温度等原因而降频，现在随着即将推出的 Crescent Island AI 加速器，新增了功率制动（power brake）作为新的节流原因。Crescent Island 具有一个功率制动“PWRBRK”硬件位，可作为新的节流原因由 Xe 驱动转发。</p><p>Nouveau 开源 NVIDIA 驱动在本次 Linux 7.3 的 DRM 更新中修复最多。在 Nouveau 从使用 NVIDIA R535 驱动固件二进制文件过渡到 NVIDIA R570 固件二进制文件后，挂起/恢复出现了回归以及其他问题。本周为 Linux 7.3 提交的拉取请求修复了使用较新 NVIDIA 固件时的挂起/恢复问题，修复了 vRAM 固定，并修复了其他各种驱动问题——其中一些是通过 AI/LLM 发现的。</p><p>现已合并到 Linux 7.3 的 DRM 修复完整列表可通过以下链接查看：</p><p>MM 变更计划登陆 Linux 7.4，一项指标提升 +22904539.81%，其他方面收益较为温和</p><p>Linux 内核开发者考虑添加 AGENTS.md 以帮助指导 AI/LLM 代理</p><p>Linux 内核因模糊测试机器人产生不切实际的错误报告而引入新污点</p><p>针对内存极其有限的微型 Linux 系统提出“slab_tiny”启动选项</p><p>Linux 7.4 DRM 基础设施通过新辅助函数更好地支持 HDMI 2.0</p><p>为 Linux 图形驱动提出可变刷新率“VRR”目标限制器</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Fedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法</p><p>Linux 7.4 的简单优化可使文件读取速度提升约 39%</p><p>Google“难以维护”的 Binder C Linux 驱动将被移除，转而使用 Rust</p><p>Valve 推出 Pyrowave 视频编解码器测试版，用于低延迟流媒体</p><p>阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的代理式操作系统</p><p>在享受无广告 Phoronix 的同时，帮助 Linux 硬件测试与评测继续开展</p><p>孤儿虚拟机：在主机内核离线进行重启/更新时保持虚拟机不间断运行</p><p>Ubuntu 26.10 切换到 Linux 7.3 内核</p><p>享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/ubuntu-myna-ai-install" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-rc5-DRM" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

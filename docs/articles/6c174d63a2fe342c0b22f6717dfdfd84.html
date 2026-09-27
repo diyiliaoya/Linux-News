@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>你可以试用 Ubuntu 的新 Myna AI 听写工具——方法如下 — Linux 中文速报</title>
+<title>Linux 7.4 为树莓派带来改进的 GPU 重置支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>你可以试用 Ubuntu 的新 Myna AI 听写工具——方法如下</h1>
+  <h1>Linux 7.4 为树莓派带来改进的 GPU 重置支持</h1>
 
-  <div class="article-summary">Canonical 已在 Snap Store 上架 Myna 编排器 snap 和两个语音识别 AI 模型，并通过 PPA 提供桌面应用，让用户提前测试 Ubuntu 的 AI 听写工具 Myna。该工具完全本地运行，需要手动安装组件并配置模型和快捷键，目前仍处于测试阶段，功能尚不完善。</div>
+  <div class="article-summary">Linux 7.4 内核将引入针对博通 V3D GPU 的改进重置支持。开发者利用 BCM2835 PM 模块的复位线，替代原先通过强制清零运行时 PM 引用计数来断电重启 GPU 的复杂方式，使树莓派等设备在 GPU 挂起时无需断电即可恢复，提升可靠性与体验。该补丁预计随 10 月合并窗口进入 Linux 7.4。</div>
 
-  <div class="article-body"><p>想试试 Ubuntu 的新 AI 听写工具 Myna 吗？方法如下</p><p>Ubuntu 的新 AI 驱动听写工具 Myna 尚未正式发布，但你可以提前测试。</p><p>Canonical 最近在 Snap Store 中添加了 Myna 编排器 snap 和两个语音识别 AI 模型，并通过 PPA 提供了新的桌面应用供测试。</p><p>Ubuntu 26.10 还预装了另一个组件，因为 gnome-shell-ubuntu-extensions 包包含一个 GNOME Shell 扩展，当 Myna 本地 AI 语音转文字技术正在监听或转写时，会触发屏幕上的 HUD。</p><p>虽然官方尚未正式征集测试，但测试 Myna 所需的所有组件都已可用——供那些愿意自己组装的人使用。自 8 月份我预览以来，该功能已经发生了很大变化。</p><p>如果这包括你，请继续阅读操作方法——但请注意，目前不要期望一切都能完美运行。</p><p>如何在 Ubuntu 上试用 Myna</p><p>Ubuntu 26.10 上的 Myna 运行效果</p><p>要在 Ubuntu 26.04 LTS 或 Ubuntu 26.10 上测试 Myna，你需要：</p><p>来自 PPA 的桌面应用</p><p>来自 Snap Store 的 snap</p><p>来自 Snap Store 的 AI 模型</p><p>如果你使用的是 Ubuntu 26.10，你还有：</p><p>截至撰写本文时，Myna Shell 扩展（触发屏幕 HUD 的那个）仅针对 GNOME 51 和 26.10 打包。在 Ubuntu 26.04 上，则使用桌面通知来传达状态。</p><p>屏幕 HUD 仅在按下触发键激活 Myna 后、监听或转写时、或传达错误状态（如“背景噪音过高”或“焦点丢失”）时才会出现。</p><p>HUD 有多种视觉样式可供选择：</p><p>（使用系统强调色的普通条）；</p><p>（但可惜不如原版那样有动画效果）以及</p><p>（与默认相同，但在我的测试中缺少凹槽）：</p><p>以下是安装每个组件的方法。</p><p>安装 Myna 设置桌面应用</p><p>通过添加以下 PPA（由一位参与 Myna 工作的 Canonical 工程师维护）来安装应用，该 PPA 为 Ubuntu 26.04 LTS 和 26.10 提供软件包：</p><p>sudo add-apt-repository ppa:charles05/myna-config</p><p>sudo apt install myna-config</p><p>安装 Myna 客户端 snap</p><p>在安装之前，启用 Myna 所需的一个实验性 snap 功能：</p><p>sudo snap set system experimental.user-daemons=true</p><p>安装 Myna 语音转文字客户端</p><p>sudo snap install myna --edge</p><p>安装文本转语音 AI 模型 snap</p><p>首次运行向导（还）无法使用</p><p>最后，要将所有内容整合在一起，你需要操作的“大脑”：一个能将你的音频实际转写为文字的 AI 模型。</p><p>）应用有一个首次运行向导来安装各种组件，并会为你的硬件推荐合适的模型。但如果你点击“安装”按钮，它会抛出错误（这些东西都还在测试中）。</p><p>目前你需要使用命令行安装你偏好的语音识别模型——但你应该选择哪一个呢？</p><p>Snap Store 上有两个 AI 模型，不过</p><p>很快也会加入。这些模型完全在本地设备上运行，但体积不小。你需要 1-2GB 的可用磁盘空间，具体取决于你选择的模型。</p><p>我发现 在准确性方面更好（甚至能正确拼写我的姓氏，大多数都做不到），但 速度更快，尽管容易出现同音词错误。</p><p>，NVIDIA 的快速、开放权重 ASR 模型，支持 25 种语言和标点：</p><p>sudo snap install myna-parakeet --edge</p><p>，OpenAI 的多语言开源模型：</p><p>sudo snap install myna-whisper --edge</p><p>然后它应该会跳过设置屏幕并显示选项。</p><p>工具，设置模型大小（它使用的参数数量）以偏向速度或准确性：较小的变体在低端硬件上处理音频更快，而较大的变体则减少转写错误并更好地处理难词。</p><p>一切就绪后，你就可以开始测试了。首先：确保你的麦克风已启用并正常工作（在设置 &gt; 声音 &gt; 输入中检查）。然后你需要在设置应用中分配一个热键快捷键，按下它将激活该功能。</p><p>准备好后，打开一个应用并将焦点放在文本字段上（我倾向于使用），然后按下你的热键。</p><p>当激活</p></div>
+  <div class="article-body"><p>Linux 7.4 为树莓派带来改进的 GPU 重置支持</p><p>2026 年 9 月 26 日 20:45 EDT。</p><p>除了本周的 DRM-Misc-Next 拉取请求为 DRM 驱动引入了一些新的 HDMI 2.0 辅助功能外，该拉取请求还为 VC4 内核驱动中的博通 V3D GPU 引入了改进的 GPU 重置支持。</p><p>咨询公司 Igalia 的 Maíra Canal 通过正确利用 V3D 硬件模块的复位控制器，改进了其 GPU 重置支持。Canal 解释道：</p><p>“vc4_reset() 通过将运行时 PM 使用计数降为零以使 V3D 电源域关闭，然后再重新获取，从而恢复挂起的 GPU。强制将计数归零仅在驱动确切知道自己持有多少引用时才有效，这就是为什么 vc4 非传统地将每个 pm_runtime_get_sync() 调用包装在私有的引用计数和互斥锁中，使代码变得笨重。</p><p>自提交 670c672608a1（“soc: bcm: bcm2835-pm: 在新绑定下添加对电源域的支持”）以来，BCM2835 PM 模块就为 V3D 模块暴露了一条复位线，正是为此目的而添加，但 vc4 从未采用它。本系列将其切换为使用该复位线，并去掉了私有引用计数，使 vc4_v3d_pm_get/put() 成为普通的运行时 PM 包装器。</p><p>复位线是可选的，因此未描述它的设备树仍可工作：它们会获得 vc4_irq_reset() 中的驱动侧恢复，而硬件保持不变。在两个树内平台中，</p><p>1. BCM2835 在补丁 4 中获得该属性。</p><p>2. Cygnus 根本没有 V3D 电源域，因此电源循环在那里仅门控其时钟。”</p><p>这项工作使得树莓派板卡及其他相关博通硬件上的 GPU 现在无需对其电源域进行电源循环即可重置。最终，它应能带来更好、更可靠的 GPU 挂起恢复体验。</p><p>该功能将作为 10 月 Linux 7.4 合并窗口的一部分落地。Linux 7.4 稳定版则有望在年底前发布。</p><p>树莓派 OS 桌面大改，新增图标停靠栏</p><p>树莓派计算模块 5 编程夹具发布</p><p>树莓派 AXI PMU 驱动正在接受主线 Linux 内核审查</p><p>树莓派触摸显示屏 2 10 英寸型号发布</p><p>树莓派 5 IOMMU 驱动正在为上游 Linux 内核开发</p><p>树莓派 OS 迁移至 Linux 6.18 LTS 内核，更新 LabWC 合成器</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Fedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法</p><p>Linux 7.4 的简单优化可使读取文件速度提高约 39%</p><p>谷歌“维护痛苦”的 Binder C Linux 驱动将被移除，转而使用 Rust</p><p>Valve 推出 Pyrowave 视频编解码器测试版，用于低延迟流媒体</p><p>阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的代理式操作系统</p><p>在享受无广告 Phoronix 的同时，帮助 Linux 硬件测试与评测继续</p><p>孤儿虚拟机：在主机内核离线重启/更新时保持虚拟机不间断运行</p><p>Ubuntu 26.10 切换至 Linux 7.3 内核</p><p>同时享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/ubuntu-myna-ai-install" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.4-Better-RPI-GPU-Reset" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
