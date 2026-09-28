@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 将内核 SRU 周期缩短至两周，AI 自动化漏洞挖掘是主因 — Linux 中文速报</title>
+<title>Linux 7.3-rc5 发布：“又一周，又一个大版本候选” — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 将内核 SRU 周期缩短至两周，AI 自动化漏洞挖掘是主因</h1>
+  <h1>Linux 7.3-rc5 发布：“又一周，又一个大版本候选”</h1>
 
-  <div class="article-summary">Canonical 将 Ubuntu 内核的稳定版更新（SRU）从原有的双轨制（每四周完整更新、两周安全更新）合并为单一的两周周期，由于新周期每周启动，实际实现每周发布一次内核更新。此举旨在应对 AI 和 LLM 将漏洞挖掘自动化后带来的海量内核缺陷，目标是在 CVE 公开后 24 至 48 小时内发布缓解措施。</div>
+  <div class="article-summary">Linux 7.3-rc5 已发布，作为每周测试候选版本，目标是在10月18日左右推出稳定版。本次更新包含缓存感知调度修复、新HID设备支持、大量图形驱动修复等。Linus Torvalds 指出本次补丁统计有些不同寻常：驱动补丁不到三分之一，自测补丁占四分之一，但整体并无令人担忧之处。</div>
 
-  <div class="article-body"><p>Ubuntu 将内核 SRU 周期缩短至两周，AI 自动化漏洞挖掘是主因</p><p>Ubuntu 用户将因此更快获得内核安全修复。</p><p>迄今为止，Canonical 对 Ubuntu 内核一直采用分轨的 SRU 周期，常规修复和安全补丁分属不同轨道，每四周进行一次完整更新，并在两周中点发布一次针对紧急问题的安全更新。</p><p>如果你对这个概念还不熟悉，稳定版发布更新（Stable Release Update，简称 SRU）是 Canonical 在 Ubuntu 发布后向其推送缺陷修复和安全补丁的方式。内核在这方面拥有自己的专用轨道。</p><p>现在，Canonical 将两条轨道合并为单一的 2 周周期，并且由于每个新周期都在当前周期进行到一周时启动，这导致每周都会有一个内核版本发布。</p><p>每个周期从为期一周的补丁集成和准备工作开始。内核团队会挑选哪些修复进入每个内核，构建软件包，并运行基本冒烟测试，以便在构建继续推进之前发现任何明显问题。</p><p>第一周结束后，这些构建会被推送到 Ubuntu 的 proposed 仓库。内核发布候选版本在被认证之前就存放在那里，知道去哪里找的人可以访问，但尚未向普通用户开放。</p><p>第二周，Canonical 会让这些构建通过其硬件测试计划，在不同的机器类型上进行测试，以确保内核发布前在真实环境中不会出现问题。</p><p>无论当前周期进展如何，每周都会启动一个新周期，因此总有一个内核在完成测试并推出。这就是 2 周周期最终实现每周发布一次的方式。</p><p>而且，当某些东西不适合发布时，Canonical 表示他们会明确说明，并引导用户参考通用的系统加固建议。</p><p>对于无法等待整整两周的团队，Canonical 明确指向 proposed 仓库作为快速通道。其思路是你自己对放在那里的构建运行验收测试，而不是等待认证完成。</p><p>AI 自动化漏洞挖掘让这一变化不可避免</p><p>这一变化并非凭空而来；他们之所以不得不做出如此全面的决定，是因为 AI 自动化漏洞挖掘。就在上个月，我们看到它们仅仅通过抓取 git.kernel.org 来获取训练数据，就消耗了大量计算资源。</p><p>对 Canonical 而言，他们的决定是由 LLM 和 AI 代理推动的，这些技术将漏洞挖掘变成了一种自动化且不间断的行为，以个人类研究员无法复制的规模和速度发现内核缺陷。</p><p>目标是在 CVE 公开后 24 至 48 小时内发布一个临时解决方案。不是补丁本身，而是在补丁构建期间让受影响系统进入更安全状态的措施。</p><p>Ubuntu 背后的公司所做的，是通过缩短 CVE 公开到补丁落地之间的窗口，来应对快速演变的局势。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热衷于开源软件、定制 PC 组装、赛车运动以及探索世界无限可能的技术爱好者。</p><p>Qualcomm 宣布 Snapdragon X2 Linux 开发者预览版</p><p>openKylin 3.0 发布，使其成为“AI 优先”的 Linux 桌面</p><p>有保质期的发行版？Gravity Linux 是面向 Apple Silicon 的新发行版</p><p>PeppermintOS 正从 Xorg 转向 XLibre 以避开 Wayland</p><p>组织现在为了 AI 而选择 OpenSearch，而不仅仅是搜索</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周新闻通讯，你可以学习实用的 Linux 技巧、发现应用程序、探索新发行版，并随时了解 Linux 世界的最新动态</p><p>太好了！你已成功注册。</p><p>欢迎回来！你已成功登录。</p><p>你已成功订阅 It's FOSS。</p><p>你的链接已过期。</p><p>成功！请检查你的电子邮件以获取更</p></div>
+  <div class="article-body"><p>Linux 7.3-rc5 发布：“又一周，又一个大版本候选” - Phoronix</p><p>Linux 7.3-rc5 发布：“又一周，又一个大版本候选”</p><p>2026年9月27日下午5:17 EDT。</p><p>为了有望在10月18日发布稳定内核，今天推出了 Linux 7.3-rc5，这是最新的每周测试候选版本。</p><p>Linux 内核开发一如既往地繁忙，很大程度上是由 AI/LLM 代理持续在近4100万行代码库中发现新问题所推动。此外，新硬件不断上市，设备怪癖永无止境，以及更典型的错误/回归修复。Linux 7.3-rc5 合并的内容包括：</p><p>更多缓存感知调度修复</p><p>对一些新鼠标和其他 HID 设备的支持</p><p>回退罗技 Holt Receiver HID++ 支持</p><p>大量内核图形驱动修复</p><p>Linus Torvalds 在今天的公告中写道：</p><p>“又一周，又一个大版本候选。</p><p>差异统计看起来有点不寻常。补丁中不到三分之一是驱动，四分之一只是自测。当然，这有点误导：大多数驱动补丁相当小，而一些自测补丁要大得多（这里最大的补丁我认为是 arm64 kvm ITS 表测试）。所以按提交数量计算，分布会有很大不同。但差异统计仍然有点不寻常。</p><p>不是*坏*的不寻常，只是不是我通常看到的。</p><p>其余主要是架构修复（主要与 kvm 相关，一些 perf）和相当数量的核心内核（调度器和 bpf）。当然还有网络。驱动方面也大多是网络（drm 紧随其后）。这部分绝对*不*不寻常。</p><p>这里还有各种其他分散的修复——核心 vfs、一些 xfs。我认为除了‘大’之外没有任何真正的模式。但没有什么看起来特别令人担忧，我认为尽管差异统计如此，它只是老样子。”</p><p>Linux 7.3 功能概览，了解下一个内核版本的所有有趣功能。Linux 7.3 将在10月发布后驱动 Ubuntu 26.10 和其他秋季 Linux 发行版。</p><p>Linux 内核的 LZ4 压缩代码正在重新同步以获得更好的性能和整洁性</p><p>计划用于 Linux 7.4 的 MM 更改在一个指标上产生 +22904539.81% 的提升，在其他方面收益更温和</p><p>Linux 7.3-rc5 DRM 的 AI 错误修复、Crescent Island 电源制动和 Nouveau 修复</p><p>Linux 内核开发者考虑添加 AGENTS.md 以帮助指导 AI/LLM 代理</p><p>Linux 内核因模糊测试机器人产生不切实际的错误报告而引入新污染</p><p>为 RAM 非常有限的微型 Linux 系统提议“slab_tiny”启动选项</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了超过20,000篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他</p><p>Fedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法</p><p>Valve 在测试版中引入 Pyrowave 视频编解码器用于低延迟流媒体</p><p>Linux 7.4 的简单优化可使文件读取速度提高约39%</p><p>阿里巴巴向 Omarchy 捐赠300万美元用于打造“理想”代理操作系统</p><p>在享受无广告的 Phoronix 的同时帮助 Linux 硬件测试和评测继续</p><p>孤儿虚拟机：在主机内核离线进行重启/更新时保持虚拟机不间断运行</p><p>Linux 内核开发者考虑添加 AGENTS.md 以帮助指导 AI/LLM 代理</p><p>AMD 开始为配备 GDDR7 的显卡准备开源 Linux 驱动</p><p>享受无广告浏览，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/ubuntu-kernel-sru-cycle-update/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-rc5-Released" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

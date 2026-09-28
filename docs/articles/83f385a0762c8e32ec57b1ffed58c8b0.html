@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ubuntu 将内核 SRU 周期缩短至两周，AI 自动化漏洞挖掘是主因 — Linux 中文速报</title>
+<title>Intel 为 Linux 带来显著的内存热插拔性能优化 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Ubuntu 将内核 SRU 周期缩短至两周，AI 自动化漏洞挖掘是主因</h1>
+  <h1>Intel 为 Linux 带来显著的内存热插拔性能优化</h1>
 
-  <div class="article-summary">Canonical 将 Ubuntu 内核的稳定版更新（SRU）从原有的双轨制（每四周完整更新、两周安全更新）合并为单一的两周周期，由于新周期每周启动，实际实现每周发布一次内核更新。此举旨在应对 AI 和 LLM 将漏洞挖掘自动化后带来的海量内核缺陷，目标是在 CVE 公开后 24 至 48 小时内发布缓解措施。</div>
+  <div class="article-summary">Intel 工程师 Yuan Liu 主导优化了内存热插拔性能，通过避免对整个 zone 逐页块扫描来改进 zone 连续性检查。该优化已进入 mm/core.git 的 for-next 分支，预计随 Linux 7.4 合并窗口提交。测试显示虚拟机内存热插拔时间最多减少 81%，热移除时间最多减少 75%，三星测试也发现通过 CXL 热插拔内存有显著提升。</div>
 
-  <div class="article-body"><p>Ubuntu 将内核 SRU 周期缩短至两周，AI 自动化漏洞挖掘是主因</p><p>Ubuntu 用户将因此更快获得内核安全修复。</p><p>迄今为止，Canonical 对 Ubuntu 内核一直采用分轨的 SRU 周期，常规修复和安全补丁分属不同轨道，每四周进行一次完整更新，并在两周中点发布一次针对紧急问题的安全更新。</p><p>如果你对这个概念还不熟悉，稳定版发布更新（Stable Release Update，简称 SRU）是 Canonical 在 Ubuntu 发布后向其推送缺陷修复和安全补丁的方式。内核在这方面拥有自己的专用轨道。</p><p>现在，Canonical 将两条轨道合并为单一的 2 周周期，并且由于每个新周期都在当前周期进行到一周时启动，这导致每周都会有一个内核版本发布。</p><p>每个周期从为期一周的补丁集成和准备工作开始。内核团队会挑选哪些修复进入每个内核，构建软件包，并运行基本冒烟测试，以便在构建继续推进之前发现任何明显问题。</p><p>第一周结束后，这些构建会被推送到 Ubuntu 的 proposed 仓库。内核发布候选版本在被认证之前就存放在那里，知道去哪里找的人可以访问，但尚未向普通用户开放。</p><p>第二周，Canonical 会让这些构建通过其硬件测试计划，在不同的机器类型上进行测试，以确保内核发布前在真实环境中不会出现问题。</p><p>无论当前周期进展如何，每周都会启动一个新周期，因此总有一个内核在完成测试并推出。这就是 2 周周期最终实现每周发布一次的方式。</p><p>而且，当某些东西不适合发布时，Canonical 表示他们会明确说明，并引导用户参考通用的系统加固建议。</p><p>对于无法等待整整两周的团队，Canonical 明确指向 proposed 仓库作为快速通道。其思路是你自己对放在那里的构建运行验收测试，而不是等待认证完成。</p><p>AI 自动化漏洞挖掘让这一变化不可避免</p><p>这一变化并非凭空而来；他们之所以不得不做出如此全面的决定，是因为 AI 自动化漏洞挖掘。就在上个月，我们看到它们仅仅通过抓取 git.kernel.org 来获取训练数据，就消耗了大量计算资源。</p><p>对 Canonical 而言，他们的决定是由 LLM 和 AI 代理推动的，这些技术将漏洞挖掘变成了一种自动化且不间断的行为，以个人类研究员无法复制的规模和速度发现内核缺陷。</p><p>目标是在 CVE 公开后 24 至 48 小时内发布一个临时解决方案。不是补丁本身，而是在补丁构建期间让受影响系统进入更安全状态的措施。</p><p>Ubuntu 背后的公司所做的，是通过缩短 CVE 公开到补丁落地之间的窗口，来应对快速演变的局势。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热衷于开源软件、定制 PC 组装、赛车运动以及探索世界无限可能的技术爱好者。</p><p>Qualcomm 宣布 Snapdragon X2 Linux 开发者预览版</p><p>openKylin 3.0 发布，使其成为“AI 优先”的 Linux 桌面</p><p>有保质期的发行版？Gravity Linux 是面向 Apple Silicon 的新发行版</p><p>PeppermintOS 正从 Xorg 转向 XLibre 以避开 Wayland</p><p>组织现在为了 AI 而选择 OpenSearch，而不仅仅是搜索</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周新闻通讯，你可以学习实用的 Linux 技巧、发现应用程序、探索新发行版，并随时了解 Linux 世界的最新动态</p><p>太好了！你已成功注册。</p><p>欢迎回来！你已成功登录。</p><p>你已成功订阅 It's FOSS。</p><p>你的链接已过期。</p><p>成功！请检查你的电子邮件以获取更</p></div>
+  <div class="article-body"><p>Intel 为 Linux 带来显著的内存热插拔性能优化</p><p>2026 年 9 月 27 日 06:49 AM EDT。</p><p>在预计将登陆 Linux 7.4 的功能中，新增了一项针对增加额外 RAM 时内存热插拔速度的显著性能优化。特别是，内存热插拔最适用于为虚拟机扩展内存量，或在当今 CXL 世界中添加额外系统内存等场景。</p><p>Intel 的 Yuan Liu 一直主导这项工作，通过避免对整个 zone 逐页块扫描来优化 zone 连续性检查，从而提升内存热插拔性能。</p><p>这些补丁已排入 mm/core.git 的 &quot;for-next&quot; Git 分支，因此预计将在 10 月提交给 Linux 7.4 合并窗口。其 cover letter 详细介绍了这项内存热插拔优化的技术细节。</p><p>令人兴奋的是测试结果：虚拟机内存热插拔时间最多减少 81%，内存热移除时间最多减少 75%：</p><p>三星的测试也发现通过 CXL 热插拔内存有相当大的改进：</p><p>对于处理内存热插拔的人来说，Linux 7.4 带来了一些不错的加速。</p><p>Intel 正在为 Arc 显卡开发 DXVK-IGDEXT 以改善 Linux 游戏体验</p><p>Intel Xe 驱动为 Linux 7.4 添加 vRAM 健康检查、降级内存处理</p><p>Linux 已准备好修复 Intel FRED 导致部分游戏在 Wine / Steam Play 下崩溃的问题</p><p>Intel 似乎将终止其漏洞赏金计划</p><p>Intel 计算栈为 Nova Lake 启用 LEO，推出 Intel 便携式 ISA &quot;PISA&quot;</p><p>Intel NPU Linux 驱动为 Linux 7.4 添加命令队列优先级 ioctl</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、显卡驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Fedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法</p><p>Valve 推出 Pyrowave 视频编解码器测试版，用于低延迟流媒体</p><p>Linux 7.4 的简单优化可使文件读取速度提高约 39%</p><p>阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造 &quot;理想&quot; 代理式操作系统</p><p>在享受无广告 Phoronix 的同时，帮助 Linux 硬件测试与评测继续下去</p><p>孤儿 VM：在宿主内核离线重启/更新期间保持 VM 不间断运行</p><p>Linux 内核开发者考虑添加 AGENTS.md 以帮助指导 AI/LLM 代理</p><p>AMD 开始为配备 GDDR7 的显卡准备开源 Linux 驱动</p><p>享受无广告浏览，</p><p>单页文章视图</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/ubuntu-kernel-sru-cycle-update/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.4-Faster-RAM-Hotplug" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
