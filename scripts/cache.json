@@ -12945,5 +12945,192 @@
     "title_zh": "支持联想 ThinkPad X1 Carbon G14 第二摄像头的 Linux 新补丁",
     "summary_zh": "开发者 Ruslan Koreev 发布了新补丁，为搭载 Intel Panther Lake 处理器的联想 ThinkPad X1 Carbon Gen 14 笔记本电脑启用第二个 MIPI 红外摄像头（ST VD55G1 单色全局快门传感器），用于 Windows Hello 人脸认证。该补丁涉及 ACPI 配置、ipu-bridge 条目、vd55g1 驱动匹配以及 IPU7 ISYS 单色像素格式支持。测试显示传感器可正常探测，libcamera 能以 58fps 流式传输 804x704 分辨率，配合红外照明器可用于 howdy 人脸认证。若审核顺利，有望进入 Linux v7.4 周期。",
     "fulltext_zh": "对于考虑联想近期发布、工艺精美的 ThinkPad X1 Carbon Gen 14 笔记本电脑（搭载 Intel Core Ultra Series 3 \"Panther Lake\" 处理器）的用户来说，Linux 下一直缺失的功能之一有望很快得到解决：它的第二个网络摄像头。\n\nThinkPad X1 Carbon Gen 14 的主 RGB 网络摄像头已在 Linux 下正常工作，但该笔记本电脑还有一个专为 Windows Hello 使用而设计的第二个 MIPI 红外摄像头。Ruslan Koreev 于周四发出的补丁使这个辅助摄像头能够在 Linux 下工作。\n\nKoreev 在启用联想 ThinkPad X1 Carbon Gen 14 高端笔记本电脑第二个摄像头的补丁系列中解释道：\n\n“ThinkPad X1 Carbon Gen 14（Panther Lake，Intel IPU7）有一个用于 Windows Hello 的第二个 MIPI 摄像头：一个 ST VD55G1 单色全局快门传感器，在 ACPI 中枚举为 TBE20A1，具有一条 CSI-2 通道，通过一个 INT3472 分立器件供电，该器件提供电源使能 GPIO、复位 GPIO、隐私 LED 和 19.2 MHz 时钟。同一台笔记本电脑的 RGB 摄像头（Sony IMX471，TBE20A0）已经得到支持。\n\n补丁 1 至 3 在 ACPI 中连接该传感器：INT3472 电源映射、ipu-bridge 条目以及 vd55g1 驱动中的 ACPI 匹配，该驱动还必须在桥接器尚未附加端点时推迟其探测。补丁 4 为 IPU7 ISYS 添加了单色像素格式，此前它仅提供 Bayer、YUV 和 RGB 格式，以便单色传感器能够进行流式传输，并在 CSI-2 裁剪路径中将单色编码排除在 Bayer 顺序转换之外，否则会对此发出警告。\n\n在该笔记本电脑上使用 Fedora 44（内核 7.2.5，这些更改作为树外模块携带）进行了测试：传感器可探测，libcamera 协商 Y8 并以 58 fps 流式传输 804x704，Y10 和 Y10P 通过普通 V4L2 流式传输，开启红外照明器后，帧质量足以用于 howdy 的人脸认证。”\n\n已提交审核。如果补丁审核过程一切顺利且迅速，这项工作可能仍能及时进入即将到来的 Linux v7.4 周期。\n\nQualcomm 发布补丁为其 Snapdragon X2 Mahua SoC 启用 GPU 支持\nQualcomm 谈论 Snapdragon X2 笔记本电脑上的 Linux\nQualcomm 在发布次日即发布 Adreno 850 开源 GPU 驱动补丁\nLinux 7.3 因遇到太多错误而回退 Logitech Bolt 接收器 HID++\nSPEC 发布适用于 Linux 的 SPECviewperf 15.0.1\nLinux 7.3 添加 Logitech G502 X Lightspeed USB 支持、ELECOM M-XT4DRBK\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\nFedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法\nValve 推出 Pyrowave 视频编解码器测试版，用于低延迟流媒体\nLinux 7.4 的简单优化可使文件读取速度提高约 39%\n阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的代理式操作系统\n在享受无广告 Phoronix 的同时，帮助 Linux 硬件测试与评测继续\n孤儿 VM：在主机内核离线重启/更新时保持 VM 不间断运行\nLinux 内核开发者考虑添加 AGENTS.md 以帮助指导 AI/LLM 代理\nAMD 开始为配备 GDDR7 的显卡准备开源 Linux 驱动\n享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "7985383df5a9aa6fc6f8e99849ca0091": {
+    "id": "7985383df5a9aa6fc6f8e99849ca0091",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/gthumb-4-0-improved-ui",
+    "title_en": "gThumb 4.0 has been released, and it looks like a brand new app",
+    "summary_en": "gThumb&#8217;s big GTK4 and Vala rewrite is officially stable and available for download. I previewed the gThumb 4.0 alpha back in May, remarking on how much of a difference the UI refresh makes to the app – the long-serving photo manager looks like an entirely new app. Every part of gThumb&#8217;s interface benefits from the port to GTK4/libadwaita, backend performance is improved by using newer versions of libraries and desktop integration catches up – on GNOME, the modern file chooser with ic",
+    "pub_date": "Tue, 29 Sep 2026 03:13:57 +0000",
+    "title_zh": "gThumb 4.0 发布，看起来像一款全新应用",
+    "summary_zh": "gThumb 4.0 正式发布，基于 GTK4 和 Vala 重写，界面焕然一新。新版改进了图像查看器，支持触摸板手势、动画 WebP/PNG 和 JPEG XL 格式，新增审查工具。部分旧功能如网络相册、联系表和查找重复项被移除。Ubuntu 用户可通过源码或 PPA 安装，官方仓库尚未更新。",
+    "fulltext_zh": "gThumb 4.0 已发布，看起来像一款全新应用 - OMG! Ubuntu\n\ngThumb 基于 GTK4 和 Vala 的大规模重写已正式稳定并可供下载。\n\n早在五月，我们就曾评论过 UI 刷新给这款应用带来的巨大变化——这款长期存在的照片管理器看起来像一款全新的应用。\n\ngThumb 界面的每一部分都受益于向 GTK4/libadwaita 的移植，后端性能通过使用更新版本的库得到提升，桌面集成也跟上了步伐——在 GNOME 上，使用了带有图标缩略图的现代文件选择器。\n\n图像查看器大幅改进\n\n更多地使用内边距和间距，让一切——编辑工具、文件属性、设置等——都有更多呼吸空间。按钮、工具栏和标签更易于识别，而某些操作（如缩放）的叠加控件会显示在图像上方。\n\ngThumb 4.0 在其编辑套件中新增了一个审查工具（与应用的其余部分一样，它从 GTK4 的升级中受益匪浅）。现在支持动画 WebP 和 PNG 图像，同时图像可以保存为 JPEG XL 格式。\n\ngThumb 4.0 带来了新的审查工具\n\n图像查看器现在响应触摸板手势。水平滑动可在文件之间左右移动，而捏合缩放让你可以——捏合缩放。有带侧键的鼠标？你也可以用它们在图像之间导航。\n\ngThumb 4.0.0 的其他变化：\n\n幻灯片使用微妙的淡入动画\n元数据属性被缓存\n视频元数据现在显示帧率和采样率\n标签现在按名称排序\n大图像使用快速缩放算法\n使用上/下箭头键进行视频跳转\n\ngThumb 的一些旧功能已从此版本中移除。不包括网络相册，你找不到联系表，而且（巧妙的）‘查找重复项’工具也被去掉了。\n\n在 Ubuntu 上安装 gThumb 4.0\n\ngThumb 4.0 可作为源码从项目的 Gitlab 下载\n\nFlathub 上的 gThumb 列表尚未更新，非官方的 gThumb Snap 也没有更新。其他第三方打包包括一个为 Ubuntu 26.04 LTS 提供软件包的 PPA。\n\nUbuntu 26.10 的仓库中不包含 gThumb 4.0，sudo apt install gthumb 仍然会拉取基于 GTK3 的版本。\n\n最近也发布了另一个版本，尽管没有使用 libadwaita，因此看起来和以往一样——但这是现代化自身的重要第一步。与此同时，它被设定为与 Gwenview 竞争。"
+  },
+  "96e441e9c71c8bea0b6697451a528a83": {
+    "id": "96e441e9c71c8bea0b6697451a528a83",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/ubuntu-2704-codename-prediction",
+    "title_en": "What’s your Ubuntu 27.04 codename prediction?",
+    "summary_en": "I&#8217;ve only just gotten used to typing the Ubuntu 26.10 &#8216;Stonking Stingray&#8217; codename carefully – autocorrect always thinks I mean stinking – yet I&#8217;m already thinking about what the next release will be called. We know Ubuntu 27.04 will be a T.T. release since it follows an S, and tradition dictates the codename is made up of an adjective and an animal (real or mythical) that follows the alphabet in sequence. But, beyond that, we&#8217;re camped out in theoretical territory.",
+    "pub_date": "Mon, 28 Sep 2026 22:59:45 +0000",
+    "title_zh": "你对Ubuntu 27.04的代号有什么预测？",
+    "summary_zh": "Ubuntu 27.04将是一个T.T.代号版本，遵循字母顺序和“形容词+动物”的传统。文章回顾了历代代号规律，列举了以T开头的候选动物，并邀请读者猜测最终代号。",
+    "fulltext_zh": "我刚刚才习惯小心翼翼地输入Ubuntu 26.10“Stonking Stingray”这个代号——自动更正总以为我想打的是别的——可我已经开始琢磨下一个版本会叫什么了。\n\n我们知道Ubuntu 27.04将是一个T.T.版本，因为它紧跟在S之后，而传统规定代号由一个形容词和一个动物（真实的或神话中的）组成，并按字母顺序排列。\n\n但除此之外，我们就完全处于理论推测的领域了。还有什么比花五分钟梳理各种可能性，来猜一猜2027年4月Ubuntu版本可能采用的代号组合更好的消遣呢……\n\n即便现实中，开发者们会选择某个完全牵强或分类学上理论性的名字（过去我们有过狼人和牛头怪，那为什么不能有个……T.T.还是不T.T.，这是个问题）。\n\n上一个“T.T.”版本是，所以这两个我们都可以排除了。\n\n首先，让我们回顾一下最近的几个版本：\n\n这些告诉我们一件事：代号组合是\n\n在形容词方面，Ubuntu在搞怪（）和专业（LTS版本用过）之间摇摆，有时它们会“”，教给我们一些我们可能以为是拼写错误的词（）。\n\n我还对Ubuntu迄今为止使用的45个代号配对做了带引号的数学计算。\n\n37.8%的代号形容词以-y结尾\n62.2%的代号动物有2个音节\n75.6%的代号形容词有2个音节\n没有任何代号形容词是单音节\n\n可能需要翻遍同义词词典，找一个念起来顺口的词。\n\n以T开头的动物包括一些显而易见的选择——Ubuntu的大多数动物吉祥物都是我认为我们大多数人都能叫出名字的，所以熟悉并不妨碍被使用：\n\n——一种长鼻哺乳动物，分布于南美洲和东南亚\n——一种热带鸟类，喙色彩鲜艳\n*——一种原产于塔斯马尼亚岛的食肉有袋动物\n——小小的、可爱的——等等，是一只巨大的毛茸茸的蜘蛛\n*——一种以身体深色条纹闻名的海洋捕食者\n——不用我告诉你蟾蜍是什么吧，对吧\n\n而且，其中许多动物都有独特的形状或特征，可以做成独特的吉祥物图案。\n\n因为那会很奇怪：\n——一种流行的三明治馅料\n\n以T开头的、不太为人所知（至少对我来说）的动物包括：\n——一种古老的新西兰爬行动物\n——一种树栖食蚁兽，有能抓握的尾巴\n——鼬科中一种令人恐惧的成员\n*——一种树栖有袋动物\n——一种不会飞的“沼泽鸡”，产于新西兰\n——一种大型南美蜥蜴\n*Ubuntu迄今为止从未在代号中使用过双名动物，但凡事都有第一次。\n\n一个应景又及时的竞争者：（Leopardus tilcayo），一种原产于玻利维亚云雾森林的小型野猫。\n\n你对Ubuntu 27.04的代号有什么猜测？\n\n把它写在评论里，并附上你认为它是最佳选择的最有说服力的解释。或者也可以不写：承认你完全是瞎猜。\n\n遗憾的是，如果你猜对了也没有奖品，但你将赢得在下一个开发周期里得意洋洋的权利。谁不喜欢得意洋洋呢，对吧？\n\n我摇动魔法8号球得到的答案是……\n\n冲我来吧：我从8岁起就是素食者了。"
+  },
+  "aea997dc3a9b44f6ac579e74a9832605": {
+    "id": "aea997dc3a9b44f6ac579e74a9832605",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/firefox-157-released-nova-theme",
+    "title_en": "Firefox 157 released with ‘biggest visual refresh in years’",
+    "summary_en": "A new look Firefox 157 has arrived with what Mozilla describe as the browser&#8217;s &#8220;biggest visual refresh in years&#8221;. The latest stable update uses the new Nova theme by default. The &#8216;modernised&#8217; look makes core UI elements rounder and more colourful as subtle pastel gradients tint the window chrome on Windows, macOS and – albeit opt-in there – Linux. We got our first look at Nova back in March when tech blogger Söeren Hentzschel shared internal Mozilla mockups of the p",
+    "pub_date": "Mon, 28 Sep 2026 11:03:00 +0000",
+    "title_zh": "Firefox 157 发布，带来“多年来最大规模的视觉刷新”",
+    "summary_zh": "Firefox 157 正式发布，Mozilla 称其为浏览器“多年来最大规模的视觉刷新”。新版本默认启用 Nova 主题，界面元素更圆润、色彩更丰富，并重新引入紧凑模式。此外还改进了加密密钥日志警告、新增欧洲多国赞助内容建议、更新新标签页快捷方式图标、移除亚马逊内置搜索引擎，并支持 WebRTC 硬件 AV1 解码。用户可通过 about:config 禁用 Nova 主题。",
+    "fulltext_zh": "Firefox 157 发布，带来“多年来最大规模的视觉刷新” - OMG! Ubuntu\n\n全新的 Firefox 157 已经到来，Mozilla 将其描述为浏览器“多年来最大规模的视觉刷新”。\n\n最新稳定版更新默认启用。这种“现代化”外观使核心 UI 元素更加圆润、色彩更丰富，微妙的柔和渐变在 Windows、macOS 以及 Linux（尽管在 Linux 上为可选启用）上为窗口镶边增添了色彩。\n\nNova 使用 Linux 系统主题（后）与不使用（前）\n\n早在三月份，技术博主就分享了 Mozilla 内部关于计划变更的模型图。事情进展迅速；从想法到实现非常快。但计划中的变更数量被缩减了。\n\n在 Firefox 157 中，你会看到更圆润的标签页、菜单、地址栏、弹出窗口、侧边栏、搜索框和信息栏。拖动下方前后对比图片上的滑块，看看刷新在实际场景中显得多么温和：\n\n启用与未启用 Nova\n\n在 Firefox Nightly 版本中测试的某些变更更为醒目，因为元素周围有间隙，以创造“浮动岛屿”效果，最显著的是在工具栏、垂直标签栏和网页内容周围的框架上。\n\n最终这些间隙没有被采用。\n\nFirefox 还（正式）重新引入了紧凑模式选项，标准与紧凑模式的区别（动画 AVIF）\n\n如你所料，紧凑模式减少了工具栏、标签页和菜单项内的间距，为网页内容留出更多空间。Mozilla 表示，它“在较小屏幕和分屏布局中很有用”。\n\n“自动”设置会在其认为合适时启用它。\n\n如果你不喜欢 Nova 的外观，可以暂时禁用它——在新标签页中打开 about:config，搜索 Nova 主题开关，双击将其设为 false。无需重启；更改立即生效。\n\nFirefox 157 的其他变更\n\nTSL/SSL 日志记录有提示\n\n除了 Nova 主题工作外，Firefox 157 还带来了一些其他适度的变更。\n\n如果设置为通过 SSLKEYLOGFILE 记录加密密钥，Firefox 157 会在地址栏和站点信息面板（盾牌图标弹出窗口）中显示警告。这很重要；该日志文件中的密钥可能被设备上的其他应用查询，以读取任何加密的网络流量。\n\n包括奥地利、比利时、捷克共和国、丹麦、芬兰、匈牙利、爱尔兰、荷兰、挪威、波兰、葡萄牙、斯洛伐克、西班牙和瑞典在内的众多欧洲国家的 Firefox 用户可以看到赞助内容建议。嗯哼。如果赞助内容——无论是无害的体育比赛结果，还是令人讨厌的付费网站出现在地址栏下拉列表中你正在寻找的网站之上——这种杂乱想法不吸引你，你可以通过设置 > 搜索 > Firefox 建议将其关闭。\n\n新标签页列表图标和“添加快捷方式”现在可见\n\n新标签页使得更容易知道你可以添加自己的自定义快捷方式。现在，快捷方式行末尾始终可见一个“+”图标，之前仅在悬停时显示。和以前一样，它允许你添加标题、URL 和图像链接来创建自定义磁贴。\n\n并且窗口栏中的“列出所有标签页”小部件使用了新图标，之前是一个相当不起眼的“v”形。\n\n亚马逊不再作为内置搜索引擎包含在内\n\nWebRTC 视频通话可以使用硬件 AV1 解码（在支持的情况下）\n\n现在将焦点移到地址栏和搜索栏的文本字段\n\n对话框现在匹配页面主题\n\n此更新还包含一系列安全漏洞修复。\n\nFirefox 157 从今天（9 月 28 日星期一）起可从下载，该网站提供所有主要操作系统的二进制构建和安装程序（与官方网站将链接到的相同）。\n\nWindows、macOS 和 Linux（二进制构建）上的现有用户可以从明天（9 月 29 日星期二）起在应用内更新，届时 Linux 发行版仓库、软件商店（Flathub、Snap）和其他格式也将开始打包它。\n\n如果你使用的是 Ubuntu，只需等待；此更新将作为自动更新到达——如果浏览器正在运行，桌面通知会告诉你何时可以安装。\n\n是当之无愧的继任者。"
+  },
+  "d3bd6eed473da057d10c8d53b8615c86": {
+    "id": "d3bd6eed473da057d10c8d53b8615c86",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/postmarketos-nura-rebranding/",
+    "title_en": "postmarketOS is No More, At Least Under That Name",
+    "summary_en": "It took the project 1.5 years before settling on 'Nura' as its new identity.",
+    "pub_date": "Mon, 28 Sep 2026 13:45:56 GMT",
+    "title_zh": "postmarketOS 改名了，至少不再叫这个名字",
+    "summary_zh": "postmarketOS 项目在近期会议上宣布更名为 Nura，结束了始于去年的品牌重塑进程。旧名称因过长、跨语言发音困难、大小写无逻辑且难以商标化而成为负担。新名称源自撒丁岛努拉吉文明，寓意持久耐用，已提交商标申请。项目目前最新版本为 v25.06，推荐入门设备为二手骁龙845或410/412机型。",
+    "fulltext_zh": "postmarketOS 改名了，至少不再叫这个名字\n\n这个项目花了 1.5 年时间才最终确定以“Nura”作为新身份。\n\n许多用户用来复活旧智能手机的基于 Linux 的操作系统，已经经历了品牌重塑，现在它叫“Nura”。\n\n这一消息是在该项目最近的会议上宣布的，此次更名结束了一个始于去年的长期进程，期间收到了来自社区的 300 多个名称投稿。\n\n一个专门的选择团队和一次商标审查确保了新名称在不同文化中没有冒犯性含义，并兼顾了来自各大洲的语言。\n\npostmarketOS 不得不改名\n\n旧名称以多种方式对项目造成了不利影响，且这些影响随时间不断累积。\n\n它太长，在许多语言中难以发音，而且单词中间的大写字母对任何新接触的人来说都没有明显的逻辑。项目表示，人们将其错误地描述为“一个后市场操作系统”。最初，当项目专注于复活旧智能手机时，这是一个合适的炫耀性名称。但当 PINE64 开始预装 postmarketOS 出货手机时，它就成了一个负担，因为他们无法为一个描述性名称注册商标。\n\n这使得项目没有法律地位来保护其身份免受虚假陈述。\n\n商标申请已经提交，尽管目前尚未出现在公开商标数据库中。\n\n新名称的灵感来自努拉吉（Nuraghe），这是散布在意大利撒丁岛的花岗岩建筑，其中一些可以追溯到公元前 3000 年。许多建筑至今仍然屹立，让我们得以一窥努拉吉文明当年的建造。\n\n项目从中汲取灵感，认为持久性与自身目标——让智能手机保持有用十年或更长时间——直接契合。\n\n这个名字本身来自 Davide Depau，他在项目公开征集社区贡献时提交了该名称。\n\n由 Pablo C. Gómez、Pan Ortiz、Ranny Bergamotte 和 Sriram Ramkrishna 组成的选择团队处理了 300 多份投稿，并将范围缩小到四个决赛入围者。\n\n团队投票后，Nura 胜出。\n\n他们还特意选择了 .eco 域名，因为该域名保留给致力于积极环境变化的组织，并附带可执行的反对绿色washing的政策。\n\n项目的当前状态\n\n新网站非常直接地展示了项目现状，提到它最适合愿意学习其工作原理、参与测试或帮助开发的人。\n\n当前版本是 v25.06，对于刚开始在移动设备上使用 Linux 的人，项目指出二手骁龙 845 或骁龙 410/412 驱动的设备是最明智的入门选择。\n\n目前支持的设备包括 Fairphone 4、OnePlus 6 和 6T、PINE64 PinePhone 和 PinePhone Pro、Purism Librem 5，以及几款较旧的三星和小米设备。\n\n寻找 Linux 手机？\n\n正在寻找 Linux 手机？以下是你的选择\n\nLinux 手机可能是取代 Android 或 iOS 的未来，但你可以尝试哪些选择呢？\n\n喜欢这篇更新？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无承诺\n\n一个热衷于开源软件、定制 PC 组装、赛车运动以及探索世界无限可能的技术迷。\n\nGhostBSD 将用一款因拼写错误命名的新桌面取代 MATE\n\nAlmaLinux 将软件认证交到用户手中\n\n荷兰因微软切断 ICC 而构建了基于 Nix 的 Linux 桌面\n\n这款微型 SBC 让你可以更换语音、视觉或传感接口模块\n\nopenEuler 如何通过 SuperPoD 和 UnifiedBus 为 AI 时代重塑操作系统基础\n\n成为更好的 Linux 用户\n\n通过 FOSS 每周通讯，学习有用的 Linux 技巧"
+  },
+  "cc693ace0ecc9fdf9aec7104bf68d2e1": {
+    "id": "cc693ace0ecc9fdf9aec7104bf68d2e1",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/ghostbsd-new-desktop/",
+    "title_en": "GhostBSD is Replacing MATE With a New Desktop Named After a Typo",
+    "summary_en": "Eric Turgeon has shown off a new desktop environment that would ship with custom components in GhostBSD.",
+    "pub_date": "Mon, 28 Sep 2026 10:28:12 GMT",
+    "title_zh": "GhostBSD 将用一款因拼写错误命名的新桌面取代 MATE",
+    "summary_zh": "GhostBSD 开发者 Eric Turgeon 展示了一款名为 Mocka 的全新桌面环境，将逐步取代现有的 MATE 桌面。Mocka 的所有组件均从零构建，不依赖 MATE 代码，计划逐个替换组件直至功能对等。首个组件是一个任务栏风格的 Dock 小程序，已发布 Alpha 版供测试。项目还包含菜单、控制中心等规划，目前仍处于早期开发阶段。",
+    "fulltext_zh": "GhostBSD 将用一款因拼写错误命名的新桌面取代 MATE\n\nEric Turgeon 展示了一款将随 GhostBSD 一起发布的全新桌面环境，其中包含自定义组件。Eric Turgeon 提出了 Mocka，这是该 BSD 发行版的新桌面，最终将取代 MATE。他还展示了将纳入其中的组件，以及一些初步概念和规格说明，向我们展示了 Mocka 未来的发展方向。\n\nGhostBSD 的现有用户目前无需做任何操作，因为他们机器上的东西没有任何变化。毕竟这一切仍处于密集开发阶段。🤷\n\n语法纳粹不会喜欢这个\n\nEric 展示了 Mocka Dock 的演示。\n\n在寻找以“摩卡”（那种含咖啡因的饮料）命名的项目时，Eric 打了一个错字，最终将他的新创造命名为“Mocka”，其中每个组件都是从零构建的，没有从 MATE 项目中借鉴任何东西。\n\n计划一次替换一个组件，对 MATE 已提供的功能进行逆向工程，直到实现完整的功能对等。一旦完成，我推测 GhostBSD 将默认使用 Mocka。\n\n这也不是他第一次进行如此重大的变更。今年二月，他得出结论认为 MATE 尚未准备好支持 Wayland，于是 GhostBSD 将转向 XLibre，以保持其 X11 会话完好。\n\n这一思路也与 Eric 现在的做法相符。\n\n该桌面的第一个组件是一个用于 MATE 面板的任务栏风格 Dock 小程序，名为 Mocka Dock，现已作为 Alpha 版发布给早期测试者。它允许你打开应用、查看缩略图、将窗口带到前台聚焦，以及管理同一应用的多个窗口——基本上就是一个合格 Dock 该做的事。\n\n有技术能力的人现在就可以获取它，看看它提供了什么，而我们其他人则只能等待它作为 GhostBSD 软件包更新出现。不过它尚未成为默认体验，你需要通过任务栏上的“+”按钮手动设置。\n\n如果你查看 Mocka 的代码仓库，你会更好地了解除了 Dock 之外还在进行哪些工作。有一个文件列出了已完成的工作和待完成的工作。\n\n该文档向我们展示了 meson 构建和 schema 工作已经完成，还有一长串待执行的工作。这将使 Mocka 能够显示带有列表项的菜单、处理搜索和键盘输入、与 Dock 集成等等。\n\n还有控制中心。一旦完成，它将为用户提供一个单一入口点，用于管理 GhostBSD 机器的桌面外观、网络配置、电源管理、键盘布局以及其他以 UI 为中心的选项。\n\n还有一个托管 Mocka 代码的仓库。它的开发进度比我们之前看到的菜单组件要落后得多，在撰写本文时仅包含占位内容。\n\n该项目希望在向 GhostBSD 上的完整 Mocka 桌面过渡期间，确保这些新的 Mocka 组件与 MATE 保持兼容。\n\n喜欢这个更新吗？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无承诺\n\n一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的书呆子。\n\npostmarketOS 不再存在，至少不再以那个名字存在\n\nAlmaLinux 将软件认证交到用户手中\n\n荷兰因微软切断 ICC 而构建了基于 Nix 的 Linux 桌面\n\n这款微型 SBC 让你可以更换接口模块以实现语音、视觉或传感\n\nopenEuler 如何通过 SuperPoD 和 UnifiedBus 为 AI 时代重塑操作系统基础\n\n成为更好的 Linux 用户\n\n通过 FOSS 每周新闻通讯，你可以学习有用的 Linux 技巧、发现应用程序、探索新发行版，并随时了解 Linux 世界的最新动态\n\n太好了！你已成功注册。\n\n欢迎回来！你已"
+  },
+  "914282dcda8a02cc06b140710ecdcb4e": {
+    "id": "914282dcda8a02cc06b140710ecdcb4e",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12964",
+    "title_en": "Distribution Release: Emmabuntüs DE6-1.03",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The Emmabuntüs project has published a new update with a focus on improving accessibility options and features. \"Our goal was to preserve the spirit of this approach: making accessibility features immediately available without requiring users to memorize numerous keyboard shortcuts. Easy Menu: one key for simple access to....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Emmabuntüs DE6-1.03",
+    "summary_zh": "Emmabuntüs DE6-1.03 发布，重点改进无障碍功能。新版本引入“简易菜单”，用户只需按右Ctrl或F12键即可快速访问主要辅助功能，无需记忆大量快捷键。该功能对使用Orca屏幕阅读器的用户尤为实用，也让需要简化辅助功能访问的用户更易操作。Emmabuntüs 是基于 Debian 稳定分支的桌面 Linux 发行版，提供 Xfce 和 LXQt 桌面环境，主打对初学者友好、资源占用低，适合老旧电脑使用。",
+    "fulltext_zh": "发行版发布：Emmabuntüs DE6-1.03\n\n该项目发布了一个新更新，重点改进无障碍选项和功能。\n\n“我们的目标是保留这种方法的精髓：让无障碍功能立即可用，而无需用户记住大量键盘快捷键。简易菜单：一键简单访问无障碍功能：简易菜单通过专用键——右Ctrl或F12——提供对Emmabuntüs主要无障碍功能的快速访问。只需按下此键，就会打开一个包含主要可用功能的菜单。因此，用户可以更轻松地访问所需工具，而无需记住大量组合键。这种方法对使用Orca屏幕阅读器的用户尤其有用，但也能让任何需要简化访问辅助功能的人更轻松地使用计算机。从主菜单中，简易菜单还通过专用键提供对某些常用功能的直接访问。”\n\n更多信息和截图可在以下地址找到：\nemmabuntus-de6-full-amd64-13.7-1.03.iso\nemmabuntus-de6-core-amd64-13.7-1.03.iso\n\n近期相关新闻和发布：\n发行版发布：Emmabuntüs DE6-1.03\n发行版发布：Emmabuntüs DE6-1.02\n发行版发布：Emmabuntüs DE6-1.01\n发行版发布：Emmabuntüs DE5-1.05\n发行版发布：Emmabuntüs DE6-1.00\n开发版发布：Emmabuntüs DE6 RC1\n更多Emmabuntüs新闻……\n\nEmmabuntüs是一个桌面Linux发行版，其版本基于Debian稳定分支，提供Xfce和LXQt两种桌面环境。它力求对初学者友好，并且资源占用相当低，因此可用于较旧的计算机。它还包括许多现代功能，例如大量预配置的日常使用程序、用于启动应用程序的停靠栏、轻松安装非自由软件和媒体编解码器，以及通过自动化脚本快速设置。此外，该发行版还解决了安装和日常使用中的无障碍问题，并包含大量支持无障碍的应用程序。"
+  },
+  "5d653aa2aad8a402851b126768daf433": {
+    "id": "5d653aa2aad8a402851b126768daf433",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12963",
+    "title_en": "Development Release: openSUSE 16.1 RC",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The openSUSE project has published a new release candidate for the upcoming Leap 16.1 release. Among the various changes is a new immutable mode for Leap: \"Leap 16.1 is the first Leap release to offer an Immutable Mode, a transactionally updated system with a read-only root filesystem. This....",
+    "pub_date": "",
+    "title_zh": "开发版本：openSUSE 16.1 RC",
+    "summary_zh": "openSUSE 项目发布了 Leap 16.1 的候选版本，最大亮点是首次引入不可变模式（Immutable Mode），提供只读根文件系统和事务性更新，取代 Leap Micro。用户可通过安装器选择该模式，系统更新使用 transactional-update 创建快照并支持回滚，额外软件推荐通过容器或 Flatpak 安装。",
+    "fulltext_zh": "开发版本：openSUSE 16.1 RC（DistroWatch.com 新闻）\n\nopenSUSE 项目发布了即将到来的 Leap 16.1 版本的新候选版本。在众多变化中，包括为 Leap 引入的新不可变模式：\n\n“Leap 16.1 是首个提供不可变模式的 Leap 版本，这是一个具有只读根文件系统、事务性更新的系统。这本质上就是用户从 Leap Micro 所了解的内容，只是直接集成到了 Leap 中。不可变模式的 Leap 16.1 正在取代 Leap Micro。将不会有 Leap Micro 6.3 或 7.0；Leap 不可变版是容器和虚拟机主机、边缘设备以及任何偏好原子更新和轻松回滚的用户的前进方向。不可变模式是最近才添加到 Agama 中的，这正是我们希望您尝试它的原因。只需启动通常的 Leap 16.1 安装镜像，并在安装程序中选择不可变模式……安装后，系统通过 transactional-update 进行更新，每次更新都会创建一个新快照，如果出现问题可以回滚。额外软件最好通过 podman 或 distrobox 的容器方式使用，或者在桌面上通过 Flatpak 使用。”\n\n更多详细信息可在以下文件中找到：\nLeap-16.1-offline-installer-x86_64.install.iso\nLeap-16.1-online-installer-x86_64.install.iso\n\n近期相关新闻和发布：\n开发版本：openSUSE 16.1 RC\n发行版本：openSUSE 16.0\n开发版本：openSUSE 16.0 RC\n开发版本：openSUSE 16.0 Beta\n发行版本：openSUSE 15.6\n开发版本：openSUSE 15.6 RC\n更多 openSUSE 新闻……\n\nopenSUSE 项目是由 SUSE Linux 及其他公司赞助的社区项目。该项目旨在促进 Linux 在各处的使用，提供免费、便捷地获取 openSUSE 这一完整 Linux 发行版的途径。openSUSE 项目有三个主要目标：使 openSUSE 成为任何人都最容易获取、使用最广泛的 Linux 发行版；利用开源协作，使 openSUSE 成为对新手和有经验的 Linux 用户来说世界上最易用的 Linux 发行版和桌面环境；大幅简化和开放开发与打包流程，使 openSUSE……"
+  },
+  "12e6d540f48593b38caefcc728f7447c": {
+    "id": "12e6d540f48593b38caefcc728f7447c",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Mesa-Shiva-For-Vulkan",
+    "title_en": "\"Shiva\" Being Developed For Mesa Vulkan Drivers, Akin To Gallium3D",
+    "summary_en": "Shiva is entering development for Mesa Vulkan drivers as a new framework akin to Gallium3D but for Vulkan drivers rather than OpenGL. It's going to be some time before the work will come to fruition but should hopefully lead to more code sharing and a better Mesa Vulkan driver development experience in the future...",
+    "pub_date": "Mon, 28 Sep 2026 20:32:08 -0400",
+    "title_zh": "Mesa Vulkan 驱动将迎来类似 Gallium3D 的 \"Shiva\" 框架",
+    "summary_zh": "Collabora 的 Faith Ekstrand 在 XDC 2026 上提出为 Mesa Vulkan 驱动开发名为 Shiva 的新框架，其定位类似 Gallium3D 之于 OpenGL。随着 Vulkan API 日益复杂且碎片化加剧，Shiva 将作为 Vulkan API 的抽象层，让驱动面向 Shiva API 而非直接面向 Vulkan。计划先适配 Nouveau 和 Arm Mali Panfrost 驱动，预计约两年后可能惠及用户。",
+    "fulltext_zh": "\"Shiva\" 正在为 Mesa Vulkan 驱动开发，类似 Gallium3D\n\n2026 年 9 月 28 日晚上 08:32 EDT。\n\nShiva 正进入 Mesa Vulkan 驱动的开发阶段，作为一个类似 Gallium3D 的新框架，但面向 Vulkan 驱动而非 OpenGL。这项工作还需要一段时间才能见到成果，但有望在未来带来更多的代码共享以及更好的 Mesa Vulkan 驱动开发体验。\n\n来自 Collabora 的 Faith Ekstrand 今天在多伦多举行的 XDC 2026 上介绍了为 Vulkan 驱动引入 Gallium3D 式框架的想法。随着 Vulkan API 的不断增长，Ekstrand 承认现状已不再那么理想。Mesa Vulkan 驱动之间的碎片化日益加剧，各种转换/辅助工具层出不穷，开发 Vulkan 硬件驱动的复杂性也在不断增加。\n\nShiva 被提议作为 Mesa 内部一个待开发的框架/基础设施，以类似于 Gallium3D 为 OpenGL 驱动所做的出色工作的方式服务于 Vulkan 驱动。Shiva 将作为 Vulkan API 的抽象层，Ekstrand 指出：“Vulkan 在 2016 年实现起来既有趣又简单……而 2026 年的 Vulkan 充满了向后兼容的累赘。”更糟糕的是，Ekstrand 预测随着 Vulkan 的演进，其实现难度只会越来越大。\n\nMesa Vulkan 驱动将面向 Shiva API 而非直接面向 Vulkan API，以处理各种抽象。它也具有前瞻性，面向 Rust 驱动等更多方向。\n\n计划是在不久的将来开始开发 Shiva，最初将着手适配 Nouveau 和 Arm Mali Panfrost 驱动。不过估计大约需要两年时间，才可能为用户带来实际成果。\n\n希望了解更多信息的人可以查看上方嵌入的 XDC 演示文稿和视频录像。\n\nMesa 26.2.3 发布，带来 AMD GFX1171 支持及其他修复\n知名 Mesa 开发者现为 Arm 工作，负责 PanVK 与 Panfrost 代码\nMesa 26.2.2 默认启用 Intel Nova Lake 显卡\nMesa 26.3 Vulkan 驱动迎来更快的归并排序，利好光线追踪\n开源 Etnaviv 驱动现可运行 YOLOX\nMesa 26.2.1 发布，包含数十项修复\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创办该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、显卡驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nFedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法\nValve 在测试版中推出 Pyrowave 视频编解码器，用于低延迟流媒体\n阿里巴巴向 Omarchy 捐赠 300 万美元，用于打造“理想”的智能体操作系统\nLinux 内核开发者考虑添加 AGENTS.md 以帮助指导 AI/LLM 智能体\n孤儿虚拟机：在宿主内核离线重启/更新期间保持虚拟机不间断运行\nAMD 开始为配备 GDDR7 的显卡准备开源 Linux 驱动\nKDE 将专注于下一代样式、更好的文档以及面向企业的 KDE\n无广告浏览及单页多页文章提醒\n享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "6b410b9c7b7b2b432e178c7e4789c90f": {
+    "id": "6b410b9c7b7b2b432e178c7e4789c90f",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/NVIDIA-Display-Config-Server",
+    "title_en": "NVIDIA Developing \"Display Config Server\" To Improve Linux/Wayland On Display Walls",
+    "summary_en": "As an initiative from NVIDIA for improving the Linux ecosystem outside the world of AI, they have been developing Display-Config-Server as a new solution to help enhance the Linux capabilities for complex display walls...",
+    "pub_date": "Mon, 28 Sep 2026 15:22:08 -0400",
+    "title_zh": "NVIDIA 开发 \"Display Config Server\" 以改善 Linux/Wayland 在显示墙上的表现",
+    "summary_zh": "NVIDIA 正在开发 Display-Config-Server，旨在提升 Linux 在复杂显示墙场景下的能力。该方案基于 Vulkan Direct-to-Display 模型，通过集中管理显示器并租借给 Vulkan 客户端，避免每个应用自行处理显示校准与配置。目前代码计划在 GitHub 开源，但尚未公开。",
+    "fulltext_zh": "作为 NVIDIA 在 AI 领域之外改善 Linux 生态的一项举措，他们一直在开发 Display-Config-Server，作为一种新解决方案，帮助增强 Linux 在复杂显示墙方面的能力。\n\nNVIDIA 工程师 Austin Shafer 今天上午在 XDC 2026 上发表了关于下一代显示墙上 Linux 的演讲：这些复杂显示设置出现在电视制作、剧院等场景中。如今许多这类复杂显示墙运行在 Microsoft Windows 上，而 NVIDIA 希望改善 Linux 在此类视频/媒体墙上的使用。\n\n如今运行 Linux 的显示墙通常仍基于 X.Org Server，并利用 NVIDIA Mosaic 显示功能。对于这类显示墙，单独使用 Wayland 会变得更加困难，因为涉及不同的合成器和其他复杂性。不过，有一条前进路径：使用 Vulkan Direct 2 Display \"D2D\" 与 VK_KHR_display 扩展，让 Vulkan 交换链无需任何窗口系统即可驱动物理显示器。\n\nNVIDIA 决定设计 Display Config Server，通过“拥有”显示器并将其租借给 Vulkan 客户端，来改进 Vulkan 直接到显示器的模型，从而避免每个应用程序都需要包含处理显示校准和配置的逻辑。Display Config Server 实现了集中配置、客户端之间的无缝交接，并使应用程序更容易实现。\n\nXDC 2026 的演讲分享称，NVIDIA 正在努力支持 Display Config Server 与 Wayland 合成器嵌套运行。他们还在改进 Vulkan 直接到显示器 API 在显示墙上的呈现方式。\n\nDisplay Config Server 代码将通过这个 GitHub 仓库开源，但截至撰写本文时似乎尚未公开可用。\n\n希望了解更多信息的人可以查看相关视频和上方嵌入的视频。"
+  },
+  "2be6d680f9d7385d6676b55e6924d07b": {
+    "id": "2be6d680f9d7385d6676b55e6924d07b",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/SIMDjson-5.0",
+    "title_en": "SIMDjson 5.0 Released: Still Making JSON Parsing Even Faster",
+    "summary_en": "SIMDjson is the open-source, high performance JSON parser that surprisingly began making use of AVX-512 to deliver big performance gains years ago. SIMDjson has continued further refining itself to deliver even greater speeds and out today is SIMDjson 5.0...",
+    "pub_date": "Mon, 28 Sep 2026 15:01:16 -0400",
+    "title_zh": "SIMDjson 5.0 发布：持续让 JSON 解析更快",
+    "summary_zh": "SIMDjson 5.0 正式发布，将静态反射支持提升为官方特性，改进大整数处理，并包含大量性能优化。基准测试显示，相比 4.6.4 版本有显著提升。SIMDjson 是开源高性能 JSON 解析器，早年率先利用 AVX-512 指令集实现大幅性能飞跃，持续优化 JSON 解析速度。",
+    "fulltext_zh": "SIMDjson 5.0 发布：持续让 JSON 解析更快\n\n2026 年 9 月 28 日 下午 03:01 EDT。\n\nSIMDjson 是开源的高性能 JSON 解析器，多年前出人意料地开始利用 AVX-512 指令集来带来巨大的性能提升。SIMDjson 持续进一步优化自身，以实现更快的速度，今天发布的正是 SIMDjson 5.0。\n\nSIMDjson 5.0 将其静态反射支持提升为官方正式支持的特性，更好地处理大整数，以及许多较小的特性——包括性能优化。\n\nGitHub 上详细介绍了这些变更，以及一些比较 SIMDjson 4.0 和 SIMDjson 5.0 的基准测试。\n\n我在本地对 SIMDjson 5.0 与之前的 SIMDjson 4.6.4 版本进行了基准测试，确实在近年来 SIMDjson 的其他所有优化之上看到了可观的提升：\n\n有兴趣的可以查看更多的 SIMDjson CPU 基准测试。看到 SIMDjson 将 JSON 解析性能推到如此之快，真是令人惊叹。\n\nGo 正在改进 SIMD 支持，推出平台无关的 SIMD 接口\nLinux 的 Perf Script 命令经过大修后快得多，成为 Python 模块\nJemalloc 5.4 发布，带来可移植性改进和代码清理\nRust 发出警告：关键开发者成为攻击目标\nMojo 1.1 发布，现接受社区对编译器的贡献\nRust Coreutils 0.12 发布，包含 Ubuntu 寻求的修复\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nFedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法\nValve 推出 Pyrowave 视频编解码器测试版，用于低延迟流媒体\n阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的代理式操作系统\nLinux 内核开发者考虑添加 AGENTS.md 以帮助指导 AI/LLM 代理\n孤儿虚拟机：在宿主内核离线进行重启/更新时保持虚拟机不间断运行\nAMD 开始为配备 GDDR7 的显卡准备开源 Linux 驱动\nKDE 将专注于下一代样式、更好的文档及面向企业的 KDE\n无广告浏览推广提醒，多页文章合并为单页\n\n享受无广告浏览，\n单页文章查看\n\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "ef72f4fe7fa84a4bf2a84ff68e413e37": {
+    "id": "ef72f4fe7fa84a4bf2a84ff68e413e37",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Fedora-45-Snapdragon-X1",
+    "title_en": "Fedora 45 To Feature Smoother Experience For Snapdragon X1 Laptops",
+    "summary_en": "Qualcomm hiring one of Red Hat's top x86_64 Linux laptop experts last year, Hans de Goede, is indeed having a positive benefit on enhancing the Fedora Linux support for Qualcomm Snapdragon X powered hardware...",
+    "pub_date": "Mon, 28 Sep 2026 12:07:16 -0400",
+    "title_zh": "Fedora 45 将为骁龙 X1 笔记本带来更流畅的体验",
+    "summary_zh": "Fedora 45 计划于今年10月发布，将显著改善对高通骁龙 X1 笔记本的支持。得益于红帽资深工程师 Hans de Goede 的持续投入以及更多骁龙 X 支持进入主线内核，搭载骁龙 X1 的设备在使用 Fedora 45 AArch64 镜像时将获得更流畅的体验，不过部分硬件可能仍需少量变通方案。由于 Fedora 45 默认搭载 Linux 7.2 内核，骁龙 X2 的完善支持预计将在后续内核版本中逐步落地。",
+    "fulltext_zh": "Fedora 45 将为骁龙 X1 笔记本带来更流畅的体验\n\n2026年9月28日 下午12:07 EDT\n\n去年红帽招募了其顶尖的 x86_64 Linux 笔记本专家之一 Hans de Goede，这确实对增强 Fedora Linux 对高通骁龙 X 硬件的支持产生了积极影响。\n\nHans de Goede 今年早些时候最初致力于为 Fedora 44 改善高通骁龙 X1 的体验。如今随着 Fedora 45 定于10月发布，骁龙 X1 的体验将更加完善。\n\n由于更多高通骁龙 X 支持进入主线内核，以及 Hans 管理的各项发行版层面的改进，对于那些想用即将发布的 Fedora 45 AArch64 镜像尝试骁龙 X1 笔记本的用户来说，应该会获得“更加流畅的体验”。不过他指出，某些硬件可能仍需少量变通方案。\n\nHans 还在今天的发文中写道，虽然骁龙 X2 支持已开始进入主线内核，但 Fedora 45 开箱即用搭载 Linux 7.2 内核，意味着目前支持的重点仍是 X1 Plus/Elite 笔记本，X2 将在未来的内核版本中发挥更大作用。\n\n如果在我用于测试的 Acer Swift 14 AI 笔记本（SF14-11T-X3RZ）上运行良好，我很快会进行一些骁龙 X1 上 Fedora 45 的基准测试，并与 Ubuntu AArch64 镜像进行对比。\n\nFedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法\nFedora 45 Beta 发布，带来 KMSCON 控制台、GNOME 51 及其他更新\nFedora 47 考虑使用 Thin LTO 编译器优化\nFedora 46 提案希望为 Crystal 编程语言提供官方支持\nFedora + Tuned-PPD 性能退化问题应随新 Linux 内核修复\nFedora x86-64-v3 优化软件包至少推迟到 Fedora 46\n\nMichael Larabel 是 Phoronix.com 的主要作者，于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过20,000篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nFedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法\nValve 在测试版中推出 Pyrowave 视频编解码器，用于低延迟流媒体\n阿里巴巴向 Omarchy 捐赠300万美元，致力于打造“理想”的智能体操作系统\nLinux 内核开发者考虑添加 AGENTS.md 以帮助指导 AI/LLM 智能体\n孤儿虚拟机：在宿主内核离线重启/更新期间保持虚拟机不间断运行\nAMD 开始为配备 GDDR7 的显卡准备开源 Linux 驱动\nKDE 将专注于下一代样式、更好的文档及面向企业的 KDE\n无广告浏览、多页文章单页显示推广提醒\n享受无广告浏览，单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "f05ea932835a08b2275146cca464f771": {
+    "id": "f05ea932835a08b2275146cca464f771",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Firefox-157-Released",
+    "title_en": "Firefox 157 Now Available With Visual Refresh, WebRTC Hardware AV1 Decode",
+    "summary_en": "As part of the Mozilla Firefox bi-weekly release regiment, the Firefox 157 binaries are now available for this open-source web browser...",
+    "pub_date": "Mon, 28 Sep 2026 10:46:28 -0400",
+    "title_zh": "Firefox 157 发布：全新视觉刷新，WebRTC 硬件 AV1 解码",
+    "summary_zh": "Firefox 157 正式发布，带来被称为“多年来最大视觉刷新”的 Nova UI，更新了浏览器界面、侧边栏和菜单。该版本还新增 WebRTC 视频通话的硬件 AV1 解码支持，修复 HDR 视频问题，改进变速播放时的音视频同步，并移除了内置的 Amazon 搜索引擎。",
+    "fulltext_zh": "作为 Mozilla Firefox 双周发布计划的一部分，Firefox 157 的二进制版本现已面向这款开源网页浏览器提供。\n\nFirefox 157 最引人注目的是其 Nova UI，被称为该浏览器“多年来最大的视觉刷新”。Nova 界面旨在使浏览器外观、侧边栏和菜单更加现代化。\n\nFirefox 157 现在还支持在兼容设备上为 WebRTC 视频通话使用硬件 AV1 解码。此前，Firefox 在 WebRTC 的 AV1 视频中一直依赖软件解码。\n\nFirefox 157 版本还修复了 HDR 视频问题，改进了更改视频播放速度时的音频和视频同步，并移除了内置的 Amazon 搜索引擎。\n\nFirefox 157 二进制版本可从以下地址下载：\n\nFirefox 157 Beta 发布，带来最新增强功能\nFirefox 156 发布，内置 PDF 查看器启动速度提升最高 45%\nFirefox 155 发布，通过 Happy Eyeballs v3 加快页面加载，HTTP/3 支持 QUIC v2\nMozilla 公布在 Firefox 157 中提供 JPEG-XL 的计划\nFirefox 154 发布，带来“管理 AI”快捷操作\nFirefox 153 发布，支持 Vulkan 视频解码，实验性 JPEG-XL\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创办该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nFedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法\nValve 推出 Pyrowave 视频编解码器测试版，用于低延迟流媒体\n阿里巴巴向 Omarchy 捐赠 300 万美元，用于打造“理想”的智能体操作系统\nLinux 内核开发者考虑添加 AGENTS.md 以帮助指导 AI/LLM 智能体\n孤儿虚拟机：在宿主机内核离线重启/更新期间不间断运行虚拟机\nAMD 开始为配备 GDDR7 的显卡准备开源 Linux 驱动\nKDE 将专注于下一代样式、更好的文档和企业级 KDE\n无广告浏览、单页文章查看推广提醒\n\n享受无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "f56a12ebc7df02c57d30c3f4fdbcfd98": {
+    "id": "f56a12ebc7df02c57d30c3f4fdbcfd98",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/gzip-1-15-released-with-many-longtime-bugs-fixed/",
+    "title_en": "Gzip 1.15 Released With Many Longtime Bugs Fixed",
+    "summary_en": "Gzip 1.15 is now available with fixes for numerous longstanding bugs, bringing improved reliability and refinements to the widely used compression utility.\nThe post Gzip 1.15 Released With Many Longtime Bugs Fixed appeared first on Linux Today.",
+    "pub_date": "Mon, 28 Sep 2026 07:31:01 +0000",
+    "title_zh": "Gzip 1.15 发布，修复大量长期存在的错误",
+    "summary_zh": "Gzip 1.15 版本发布，修复了许多长期存在的错误，提升了这款广泛使用的压缩工具的可靠性和精细度。",
+    "fulltext_zh": "Gzip 1.15 现已发布，修复了大量长期存在的错误，为这款广泛使用的压缩工具带来了更高的可靠性和改进。\n\n文章 Gzip 1.15 发布，修复大量长期存在的错误 首次出现在 Linux Today。"
+  },
+  "4d32c5d13f80639650b3e42920b89545": {
+    "id": "4d32c5d13f80639650b3e42920b89545",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/tuxedo-os-debian-receives-new-beta-iso-with-key-improvements/",
+    "title_en": "TUXEDO OS Debian Receives New Beta ISO with Key Improvements",
+    "summary_en": "TUXEDO OS Debian receives a new beta ISO with key improvements, bringing updated components and refinements as development of the distribution continues.\nThe post TUXEDO OS Debian Receives New Beta ISO with Key Improvements appeared first on Linux Today.",
+    "pub_date": "Mon, 28 Sep 2026 07:29:39 +0000",
+    "title_zh": "TUXEDO OS Debian 发布新 Beta ISO，带来关键改进",
+    "summary_zh": "TUXEDO OS Debian 发布了新的 Beta ISO 镜像，包含更新组件和多项改进，标志着该发行版的开发持续推进。",
+    "fulltext_zh": "TUXEDO OS Debian 收到了一个新的 Beta ISO，带来了关键改进，随着该发行版的开发持续推进，引入了更新的组件和优化。\n\n文章《TUXEDO OS Debian 发布新 Beta ISO，带来关键改进》最初发表于 Linux Today。"
+  },
+  "449c116d86b4ebdb10d7c22ecc83cc9c": {
+    "id": "449c116d86b4ebdb10d7c22ecc83cc9c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/clonezilla-live-3-3-3-37-disk-imaging-tool-released-with-linux-kernel-7-1/",
+    "title_en": "Clonezilla Live 3.3.3-37 Disk Imaging Tool Released with Linux Kernel 7.1",
+    "summary_en": "Clonezilla Live 3.3.3-37 disk imaging tool is now available with Linux Kernel 7.1, bringing updated hardware support and other improvements.\nThe post Clonezilla Live 3.3.3-37 Disk Imaging Tool Released with Linux Kernel 7.1 appeared first on Linux Today.",
+    "pub_date": "Mon, 28 Sep 2026 07:24:14 +0000",
+    "title_zh": "Clonezilla Live 3.3.3-37 磁盘映像工具发布，搭载 Linux 内核 7.1",
+    "summary_zh": "Clonezilla Live 3.3.3-37 磁盘映像工具现已发布，搭载 Linux 内核 7.1，带来更新的硬件支持及其他改进。",
+    "fulltext_zh": "Clonezilla Live 3.3.3-37 磁盘映像工具现已发布，搭载 Linux 内核 7.1，带来更新的硬件支持及其他改进。\n\n文章《Clonezilla Live 3.3.3-37 磁盘映像工具发布，搭载 Linux 内核 7.1》最初发表于 Linux Today。"
+  },
+  "d56f1c872976a21bd02d567e478167dd": {
+    "id": "d56f1c872976a21bd02d567e478167dd",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/rustfs-1-0-s3-compatible-object-storage-reaches-ga/",
+    "title_en": "RustFS 1.0 S3-Compatible Object Storage Reaches GA",
+    "summary_en": "RustFS 1.0 reaches general availability, delivering an S3-compatible object storage platform built for scalable and modern data infrastructure.\nThe post RustFS 1.0 S3-Compatible Object Storage Reaches GA appeared first on Linux Today.",
+    "pub_date": "Mon, 28 Sep 2026 07:21:30 +0000",
+    "title_zh": "RustFS 1.0 兼容 S3 的对象存储正式发布",
+    "summary_zh": "RustFS 1.0 正式发布（GA），这是一个兼容 S3 的对象存储平台，专为可扩展的现代数据基础设施而构建。",
+    "fulltext_zh": "RustFS 1.0 正式发布，提供了一个兼容 S3 的对象存储平台，专为可扩展的现代数据基础设施而构建。\n\n文章《RustFS 1.0 兼容 S3 的对象存储正式发布》最初发布于 Linux Today。"
+  },
+  "9bcd72a0a81007ab1761bd7edb5654df": {
+    "id": "9bcd72a0a81007ab1761bd7edb5654df",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/pangolin-1-23-tunneled-reverse-proxy-makes-high-availability-easier-to-deploy/",
+    "title_en": "Pangolin 1.23 Tunneled Reverse Proxy Makes High Availability Easier to Deploy",
+    "summary_en": "Pangolin 1.23 tunneled reverse proxy makes high availability easier to deploy, alongside additional improvements for managing secure network access.\nThe post Pangolin 1.23 Tunneled Reverse Proxy Makes High Availability Easier to Deploy appeared first on Linux Today.",
+    "pub_date": "Mon, 28 Sep 2026 07:12:34 +0000",
+    "title_zh": "Pangolin 1.23 隧道反向代理让高可用性部署更轻松",
+    "summary_zh": "Pangolin 1.23 版本发布，这是一款隧道反向代理工具，新版本让高可用性部署变得更加容易，同时还改进了安全网络访问的管理功能。",
+    "fulltext_zh": "Pangolin 1.23 隧道反向代理让高可用性部署更轻松，同时还带来了管理安全网络访问的其他改进。\n\n文章《Pangolin 1.23 隧道反向代理让高可用性部署更轻松》最初发表于 Linux Today。"
   }
 }

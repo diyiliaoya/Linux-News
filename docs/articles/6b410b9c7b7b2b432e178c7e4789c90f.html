@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DistroWatch 周刊，第 1192 期 — Linux 中文速报</title>
+<title>NVIDIA 开发 &quot;Display Config Server&quot; 以改善 Linux/Wayland 在显示墙上的表现 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>DistroWatch 周刊，第 1192 期</h1>
+  <h1>NVIDIA 开发 &quot;Display Config Server&quot; 以改善 Linux/Wayland 在显示墙上的表现</h1>
 
-  <div class="article-summary">本期 DistroWatch 周刊报道了多项 Linux 及开源动态：postmarketOS 更名为 Nura，Ubuntu 加快内核补丁周期并完成向 Rust 版 Coreutils 的迁移，Q4OS 为 Trinity 桌面发布 Breeze 主题，NetBSD 的 Enlightenment 移植获得修复，Garuda 试验基于 NixOS 的版本，OpenBSD 引入新的写时复制文件系统，Void 有超过 100 个软件包需要新维护者。此外还包含 ReactOS 0.4.16 的评测、问答专栏以及上周发布和种子下载等内容。</div>
+  <div class="article-summary">NVIDIA 正在开发 Display-Config-Server，旨在提升 Linux 在复杂显示墙场景下的能力。该方案基于 Vulkan Direct-to-Display 模型，通过集中管理显示器并租借给 Vulkan 客户端，避免每个应用自行处理显示校准与配置。目前代码计划在 GitHub 开源，但尚未公开。</div>
 
-  <div class="article-body"><p>DistroWatch 周刊，第 1192 期（DistroWatch.com 新闻）</p><p>DistroWatch.com 由以下赞助</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW 周刊 / 评测存档</p><p>访客评分与评论</p><p>按评分排列的项目排名</p><p>播客、新闻通讯与评测</p><p>跨发行版比较软件包</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停止的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与提示专栏</p><p>迷思与误解专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>可视化发行版家族树</p><p>常见问题</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>postmarketOS 更名为 Nura</p><p>Ubuntu 加快内核补丁周期</p><p>Q4OS 为 Trinity 桌面发布 Breeze 主题</p><p>NetBSD 的 Enlightenment 移植获得修复</p><p>Garuda 试验基于 NixOS 的版本</p><p>OpenBSD 的新写时复制文件系统</p><p>Ubuntu 完成向基于 Rust 的 Coreutils 迁移</p><p>超过 100 个 Void 软件包需要新维护者</p><p>易于使用的 PBX - 托管或自管理</p><p>Linux 电话系统</p><p>免费实时聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程工作应用：iOS 或 Android</p><p>免费视频会议</p><p>3CX 的 VoIP / PBX 操作指南</p><p>不要措手不及，制定灾难恢复计划！</p><p>必要的实时聊天报告和统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成</p><p>3CX StartUP 的 5 大杀手级功能</p><p>不要成为“那种”人 第 1 卷：保管好复杂凭证</p><p>不要成为“那种”人 第 2 卷：呼叫欺诈</p><p>不要成为“那种”人 第 3 卷：四大安全提示</p><p>不要成为“那种”人 第 4 卷：监控你的实例</p><p>HardenedBSD 2026 年 9 月状态报告</p><p>Full Circle 杂志 233 期</p><p>红帽周五五件事 - 2026 年 9 月 25 日</p><p>Ubuntu 每周新闻通讯 962</p><p>Full Circle 每周新闻</p><p>Fedora 项目播客</p><p>最新新闻和更新</p><p>新闻过滤选项</p><p>DistroWatch 周刊，第 1192 期</p><p>评测：ReactOS 0.4.16</p><p>新闻：Garuda 提供基于 NixOS 的版本，KDE 迎来 30 周年，NetBSD 完善 Enlightenment 移植，Q4OS 为 Trinity 提供 Breeze 主题，Canonical 加快内核补丁，postmarketOS 更名为 Nura</p><p>问答：识别显卡</p><p>上周发布：Univention Corporate Server 5.2-7、NetBSD 10.2</p><p>种子角落：NetBSD、SparkyLinux</p><p>民意调查：ReactOS、Windows 还是 WINE？</p><p>网站新闻：捐赠与赞助</p><p>阅读本周 DistroWatch 周刊的更多内容……</p><p>Solus 是一个从零开始构建的 Linux 发行版。它使用 PiSi 包管理器的分支版本，在 Solus 内维护为“eopkg”，其旗舰版使用 Budgie 桌面环境。Budgie 最初是内部开发的，但现在由 Buddies of Budgie 团队作为独立项目维护。Solus 提供 GNOME、KDE Plasma 和 Xfce 版本。</p><p>问答：小型社区项目的生存</p><p>问答：Ubuntu Touch 能否回归？</p><p>技巧与提示：命令行技巧 - 使用 ffmpeg、awk 和 renice</p><p>技巧与提示：简单的 rsync 示例</p><p>问答：更新滚动发行版与固定发行版</p><p>技巧与提示：在 Android 手机上运行 Ubuntu Touch</p><p>问答：验证种子下载</p><p>问答：向多台服务器发送命令</p><p>技巧与提示：如何查找文件</p><p>迷思与误解：Unity、Mir 和 Ubuntu Touch</p><p>版权所有 © 2001 - 2026 Atea Ataroa Limited。保留所有权利。所有商标均为其各自所有者的财产。</p><p>更改隐私设置</p><p>联系、更正和建议：</p><p>bc1qxes3k2wq3uqzr074tkwwjmwfe63z70gwzfu4lx</p><p>lnurl1dp68gurn8ghj7ampd3kx2ar0veekzar0wd5xjtnrdakj7tnhv4kxctttdehhwm30d3h82unvwqhhxarpw3jkc7tzw4ex6cfexyfua2nr</p><p>86fA3qPTeQtNb2k1vLwEQaAp3XxkvvvXt69gSG5LGunXXikK9koPWZaRQgfFPBPWhMgXjPjccy9LA9xRFchPWQAnPvxh5Le</p><p>Patreon.com/distrowatch</p></div>
+  <div class="article-body"><p>作为 NVIDIA 在 AI 领域之外改善 Linux 生态的一项举措，他们一直在开发 Display-Config-Server，作为一种新解决方案，帮助增强 Linux 在复杂显示墙方面的能力。</p><p>NVIDIA 工程师 Austin Shafer 今天上午在 XDC 2026 上发表了关于下一代显示墙上 Linux 的演讲：这些复杂显示设置出现在电视制作、剧院等场景中。如今许多这类复杂显示墙运行在 Microsoft Windows 上，而 NVIDIA 希望改善 Linux 在此类视频/媒体墙上的使用。</p><p>如今运行 Linux 的显示墙通常仍基于 X.Org Server，并利用 NVIDIA Mosaic 显示功能。对于这类显示墙，单独使用 Wayland 会变得更加困难，因为涉及不同的合成器和其他复杂性。不过，有一条前进路径：使用 Vulkan Direct 2 Display &quot;D2D&quot; 与 VK_KHR_display 扩展，让 Vulkan 交换链无需任何窗口系统即可驱动物理显示器。</p><p>NVIDIA 决定设计 Display Config Server，通过“拥有”显示器并将其租借给 Vulkan 客户端，来改进 Vulkan 直接到显示器的模型，从而避免每个应用程序都需要包含处理显示校准和配置的逻辑。Display Config Server 实现了集中配置、客户端之间的无缝交接，并使应用程序更容易实现。</p><p>XDC 2026 的演讲分享称，NVIDIA 正在努力支持 Display Config Server 与 Wayland 合成器嵌套运行。他们还在改进 Vulkan 直接到显示器 API 在显示墙上的呈现方式。</p><p>Display Config Server 代码将通过这个 GitHub 仓库开源，但截至撰写本文时似乎尚未公开可用。</p><p>希望了解更多信息的人可以查看相关视频和上方嵌入的视频。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12962" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/NVIDIA-Display-Config-Server" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
