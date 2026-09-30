@@ -13132,5 +13132,170 @@
     "title_zh": "Pangolin 1.23 隧道反向代理让高可用性部署更轻松",
     "summary_zh": "Pangolin 1.23 版本发布，这是一款隧道反向代理工具，新版本让高可用性部署变得更加容易，同时还改进了安全网络访问的管理功能。",
     "fulltext_zh": "Pangolin 1.23 隧道反向代理让高可用性部署更轻松，同时还带来了管理安全网络访问的其他改进。\n\n文章《Pangolin 1.23 隧道反向代理让高可用性部署更轻松》最初发表于 Linux Today。"
+  },
+  "e8599520eb2f851f83213748bd762a36": {
+    "id": "e8599520eb2f851f83213748bd762a36",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/vlc-major-security-update",
+    "title_en": "VLC makes its ‘biggest security release ever’",
+    "summary_en": "VLC 3.0.24 is out, billed as the video player&#8217;s &#8216;biggest security release ever&#8217; with more than 130 fixes across the app and its bundled libraries. VideoLAN president&#160;Jean-Baptiste Kempf says&#160;the bulk of security flaws patched by the update are &#8220;hard to exploit in practice&#8221; but adds that not all of them are &#8216;harmless&#8217;. He encourages users to update. No major new user-facing features arrive in this update to the open-source media player, but impr",
+    "pub_date": "Tue, 29 Sep 2026 23:15:26 +0000",
+    "title_zh": "VLC 发布“史上最大安全更新”",
+    "summary_zh": "VLC 3.0.24 发布，被称为该视频播放器“史上最大安全更新”，修复了应用及其捆绑库中超过 130 个漏洞。虽然多数漏洞“在实际中难以利用”，但并非全部无害，官方建议用户尽快更新。本次更新无重大新功能，但改进了 ATRAC3/ATRAC9 解码、CEA-708 字幕、SFTP 公钥认证、WebVTT 处理等，并将 FFmpeg 从 4.4 升级至 8.1.2，移除了 NPAPI 插件。",
+    "fulltext_zh": "VLC 3.0.24 发布，被称为该视频播放器“史上最大安全更新”，修复了应用及其捆绑库中超过 130 个漏洞。\n\nJean-Baptiste Kempf 表示，本次更新修补的大部分安全漏洞“在实际中难以利用”，但他补充说并非所有漏洞都是“无害的”。他鼓励用户进行更新。\n\n本次更新没有为这款开源媒体播放器带来重大的面向用户的新功能，但有一些改进。\n\nVLC 3.0.24 支持 ATRAC3 和 ATRAC9 解码（前者用于索尼 MiniDisc，后者用于 PSP 时代的音频），支持 MP4 文件中的 CEA-708 隐藏字幕，并且通过 FFmpeg 的大版本跃升，支持三星的 APV 高质量视频文件。\n\nSFTP 公钥认证选项\nWebVTT（.vtt）处理改进\n通过文件名和元数据检测字幕语言\nlibrist 用于 RIST 输入输出，支持 Main 和 Simple 配置文件\n在 mDNS 渲染器名称中显示 Chromecast 型号\n为初代 Chromecast 设备禁用 HEVC\n超分辨率缩放\nFFmpeg 从 v4.4 更新至 8.1.2\n移除 NPAPI 浏览器插件\n更新验证现在使用 RSA-4096 密钥\n修复 Qt 默认打开对话框位置\n支持 Flatpak 构建\n\n此外还修复了一个奇怪的 bug，该问题会导致 VLC 在夏令时变更后首次启动时速度缓慢。\n\nVLC 持续的多功能性\nPowerVLC：让现代 VLC 运行在不太现代的的设备上\n\n最近还有一些关于 VLC 的“嘿，这挺酷”的消息。一个第三方分支将 VLC 3.x 系列移植回使用较旧 PPC 处理器的 Apple 设备，并添加了优化和调整，使其能在早在 2002 年的 Mac OS X 10.2 上良好运行。\n\nLinux 也从这项工作中受益。\n\nJeroen Diederen 是面向旧 PowerPC Mac 的基于 Debian 的 Linux Mint 版本的首席开发者，他决定将该分支移植到 Linux——而且成功了！我很想拂去旧 iBook G4 上的灰尘来试一试。\n\n从官方网站下载 VLC 3.0.24，该网站提供 Windows 和 macOS 安装程序，官方 snap 包为 Ubuntu 用户提供最新构建——可从应用中心获取，或运行\nsudo snap install vlc\n\n在 Linux 上获取它的其他方式包括非官方的 VLC Flathub 列表，你也可能在大量 VLC PPA 中找到它（不过大多数已过时）。\n\nVLC 3.0.24 是 Ubuntu 26.10 软件库中作为传统 Debian 包提供的版本。\n\n通常我会说“不必急于追更新”，但是，关键安全更新比通常的各种复用调整和解码器升级更为关键。\n\n即将到来的 VLC 4.0 系列才是发生更实质性变化的地方。如果你想了解该工作的进展，可以从 Ubuntu 的 edge 通道安装。"
+  },
+  "34b0adccf3501c13edf663a5ee433349": {
+    "id": "34b0adccf3501c13edf663a5ee433349",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/ubuntu-2604-upgrades-live-2404",
+    "title_en": "And we’re go – upgrades to Ubuntu 26.04 from 24.04 finally enabled",
+    "summary_en": "It&#8217;s taken longer than expected, but users can now upgrade to Ubuntu 26.04 from 24.04 directly, without command-line workarounds. Canonical has finally flipped the switch on in-place upgrades for LTS systems. A notification will let users know that a new LTS is available, which can be actioned right away, ignored or &#8216;remind me later&#8217;d. Ubuntu 26.04 LTS was released on 23 April 2026, and direct upgrades from Ubuntu 25.10 were enabled a few weeks after the ISO downloads went live",
+    "pub_date": "Tue, 29 Sep 2026 16:26:00 +0000",
+    "title_zh": "终于来了——从24.04升级到Ubuntu 26.04现已开放",
+    "summary_zh": "Canonical终于为LTS系统开启了从Ubuntu 24.04直接升级到26.04的通道，用户无需命令行操作即可通过更新管理器完成升级。由于需要修复bug并经过测试，此次LTS到LTS的升级比预期延迟。升级后系统将不再支持在X11/Xorg上运行默认GNOME桌面，但X11应用仍可通过XWayland运行。系统内存推荐要求也从4GB提升至6GB。用户可自行选择是否立即升级，24.04 LTS的支持将持续到2029年。",
+    "fulltext_zh": "终于来了——从24.04升级到Ubuntu 26.04现已开放 - OMG! Ubuntu\n\n虽然比预期花了更长时间，但用户现在可以直接从24.04升级到26.04，无需命令行变通方法。\n\nCanonical终于为LTS系统开启了原地升级的开关。系统会弹出通知告知用户有新的LTS版本可用，用户可以立即执行、忽略或选择“稍后提醒”。\n\nUbuntu 26.04 LTS于2026年4月23日发布，从Ubuntu 25.10的直接升级在ISO下载上线几周后便已启用。\n\nUbuntu 24.04 – 26.04：有哪些变化？\n\n然而，从24.04 LTS升级到26.04 LTS当时并未开放。Canonical只在新系列的第一个点版本发布后，才会批准LTS到LTS的升级。\n\nUbuntu 26.04.1 LTS于8月发布，但从24.04的升级因bug而延迟——这些bug需要修复；修复需要测试和打包，然后升级还需要重新测试。\n\n但现在升级已经上线。\n\n长期支持版本被大多数Ubuntu用户使用，而且有整整两年的变更需要迁移，额外的测试能确保更多人放心升级。\n\n用户的配置也各不相同。我怀疑没有哪个读者运行的是操作系统原封不动的状态——没有改过任何设置，也没有安装其他应用。这其中有大量边缘情况需要考虑。\n\n在升级到Ubuntu 26.04之前，请阅读本文\n\nUbuntu 26.04 LTS的新功能\n\nUbuntu 26.04 LTS不再支持在X11/Xorg上运行默认的GNOME桌面。\n\n如果你从Ubuntu 24.04升级，Xorg不会从系统中移除，但你在登录界面将无法选择Xorg GNOME会话登录。\n\nX11应用在Ubuntu的Wayland上仍然可以通过XWayland运行，后者仍然预装。\n\n如果你确实需要X11桌面会话，你并非没有选择。Xfce、LxQt、Cinnamon和MATE等替代桌面环境继续支持X11/Xorg——支持它的Linux桌面仍然多于不支持的。\n\nUbuntu 26.04的系统要求有所提高。该发行版现在建议6GB内存以保证流畅运行，而24.04仅建议4GB。这不是强制的最低要求，所以你可以升级，但如果你的设备内存较低，请留意这一点。\n\n其他变化包括——好的方面：新应用、重新设计的文件夹图标、性能改进、更新的驱动以及一系列额外设置。我的“有哪些变化”指南详细介绍了24.04到26.04之间最大的变化，可以查看了解更多。\n\n从24.04升级到26.04\n\n系统准备好后会提醒你\n\n在从24.04升级到Ubuntu 26.04之前，你需要安装待处理的更新。打开更新管理器，检查并应用列出的更新。\n\n完成后，更新工具会显示“Ubuntu 26.04.x现已可用（你当前是24.04）”，并提供一个“更新…”按钮。点击它即可执行。\n\n或者，你也可以从命令行启动升级：\n\nsudo do-release-upgrade\n\n两种方法都会触发GUI向导引导你完成整个过程。大部分内容不言自明：点击是、点击下一步、等待、点击下一步、等待，如此反复。\n\n有一件事会让一些人害怕，那就是“外部软件包”弹窗。如果你安装了来自Ubuntu主仓库之外的软件包，它就会出现。看起来吓人，但大多数情况下，你只需点击“是”就可以继续升级。\n\n我25.10升级文章中的逐屏操作指南在这里同样适用，因为从24.04升级和从25.10升级的界面和步骤是一样的。\n\n你不必立即升级\n\n尽管Ubuntu 26.04 LTS升级现已开放，但你不需要立即升级。如果你的系统运行良好，而且你并不迫切需要任何新功能，再等一段时间也无妨。\n\nUbuntu 24.04 LTS的标准支持将持续到2029年，期间会持续提供更新，之后你还可以选择启用Ubuntu Pro，再获得5年的高影响安全修复。"
+  },
+  "48f9bff0185fe9b9d021d57905cafde2": {
+    "id": "48f9bff0185fe9b9d021d57905cafde2",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/09/destroy-any-website-browser-game",
+    "title_en": "Destroy Any Website is a browser game that does what it says",
+    "summary_en": "Destroy Any Website is a browser-based run-and-gun that lets you run amok on any public-facing website – with an array of destructive weapons. You take command of a character and run, jump and jetpack around website site elements using traditional WASD controls, taking aim with your mouse to score points by blasting your chosen online target to literal tiny pieces. There&#8217;s even a competitive multiplayer mode that you pick a website, share a code with a pal and then race against each other ",
+    "pub_date": "Tue, 29 Sep 2026 16:03:36 +0000",
+    "title_zh": "《摧毁任何网站》是一款名副其实的浏览器游戏",
+    "summary_zh": "《摧毁任何网站》是一款浏览器射击游戏，玩家可使用WASD控制角色，用鼠标瞄准，在任意公开网站上大肆破坏。游戏由Hugo Duprez开发，基于网页快照，不会留下永久痕迹，还支持多人竞技模式。虽然与Linux无直接关联，但可在现代Linux桌面浏览器中运行，适合用来消遣或发泄情绪。",
+    "fulltext_zh": "《摧毁任何网站》是一款名副其实的浏览器游戏 - OMG! Ubuntu\n\n这是一款基于浏览器的跑轰游戏，让你可以在任何面向公众的网站上肆意妄为——使用各种破坏性武器。\n\n你操控一个角色，使用传统的WASD控制方式在网站元素间奔跑、跳跃和飞行，用鼠标瞄准，通过将你选定的在线目标炸成碎片来得分。\n\n甚至还有一个竞技多人模式，你可以选择一个网站，与朋友分享代码，然后互相竞赛以达到目标破坏分数，还配有记分板供你随时查看。\n\n这款游戏由Hugo Duprez制作，他是[某项目]的创造者，那是一个用于2D游戏的基于浏览器的像素艺术编辑器，而这个页面暴怒克隆版同时也展示了它的功能。\n\n以免有人恐慌，这款游戏释放的肆意破坏不会留下任何永久痕迹。它发生在相关网页的[快照]上。这可不是用来“提示”最新一批流氓OpenAI代理的可爱前端，没人会知道你炸了什么。\n\n与Linux相关吗？不，严格来说并不相关，但宣泄情绪是跨平台的，它可以在任何现代Linux桌面浏览器中运行。\n\n我喝咖啡时看到了它，觉得你可能会发现这是一种有趣——或者富有成效——的消磨5分钟的方式。用激光枪和火焰喷射器炸东西在我的书里算作“健康”（一本后来被一家空壳公司购买并运上[某处]的书）。\n\n它也让我想起了那些古老的“摧毁你的桌面”游戏/应用，在2000年代Windows上曾风靡一时（可能是作为木马和浏览器工具栏的载体）。那时我还没用Linux，所以不知道是否有类似的。\n\n我们中有些人有一个朋友的朋友，有一长串在线恩怨。这可能有助于他们解决与那家搞砸订单的在线零售商、那个变成[某内容]排污管的书签独立博客的问题……你们中有人可能会说，来点像素手枪鞭打可能会改善[某网站]的风格。我知道，我知道……"
+  },
+  "2b2ad546849a9fd78b9e58a45960dbab": {
+    "id": "2b2ad546849a9fd78b9e58a45960dbab",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/france-nixos-move/",
+    "title_en": "The Netherlands Picked NixOS. France Was Already Using It",
+    "summary_en": "France’s digital agency has been using NixOS on internal workstations for months through Sécurix, its open-source, security-hardened configuration.",
+    "pub_date": "Wed, 30 Sep 2026 02:33:37 GMT",
+    "title_zh": "荷兰选择了NixOS，而法国早已在用",
+    "summary_zh": "荷兰政府启动DAWO计划，用基于NixOS的平台替换公共机构中的外部软件。实际上，法国数字事务部际总局（DINUM）已通过开源安全加固配置Sécurix在内部工作站上使用NixOS数月，目标覆盖约250台员工工作站，此前已在70台机器上成功试点。该项目基于NixOS构建，遵循法国国家网络安全局ANSSI的安全指南，采用MIT许可证，目前处于alpha阶段。",
+    "fulltext_zh": "荷兰选择了NixOS，而法国早已在用\n\n法国的数字机构通过Sécurix——其开源、安全加固的配置——已在内部工作站上使用NixOS数月。\n\n当我们听说荷兰的DAWO计划，\n要用一个由NixOS驱动的平台替换荷兰公共机构中的外部软件时，我们问自己：\n法国怎么会错过这个？\n\n事实证明，他们并没有错过。\n该国数字事务部际总局（DINUM）已经在内部机器上运行自己的基于NixOS的工作站配置数月了。\n\nSécurix及其NixOS押注\nSécurix是一个面向系统管理员的安全加固NixOS配置。它构建在NixOS之上而不对其进行分叉，应用了法国国家网络安全局（ANSSI）发布的安全指南。\n\n该项目采用MIT许可证，托管在GitHub组织下，目前处于alpha阶段，最新版本v0.20.1在几小时前刚刚发布。\n\n据It's FOSS的Emilien Ercolani（他参加了4月的一场DINUM简报会）称，他们的目标是在约250台员工工作站上实施。此前已在70台机器上成功试点。\n\n在目前形态下，\nSécurix使用FIDO2硬件安全密钥作为主要登录方式，支持TPM2和YubiKey，并依赖NixOS的……\n这并非要成为一个Linux发行版，而是一个可以集中操作和管理工作站的基础。\n\n与此同时，DINUM还发布了……一个用于常规办公工作站的配套参考模板。它预装了KDE Plasma、LibreOffice、ONLYOFFICE和WPS Office。\n\n“……”组织应私下分叉和调整，而不是作为一个单独运行的系统。\n\n为什么NixOS成为首选？\n该项目本身就起源于欧洲。\n它在荷兰乌得勒支大学被创造出来，而……是一个荷兰非营利组织。对欧洲各国政府来说，吸引力显而易见。\n\n主流Linux发行版如……可追溯到Red Hat，后者由总部位于美国的IBM拥有；\n……与总部位于卢森堡的SUSE有关；而\n……来自英格兰的Canonical。\n\n这里的基本思路似乎是避免那些位于可能被迫服从其领导人意志的外国国家的项目。\n……荷兰和……各自走着不同的道路，却通往同一个地方。最终，如果想要控制自己的基础设施，供应商中立且可复现才是正确方向。\n\npostmarketOS不再叫这个名字了；不是那个意思！它……\npostmarketOS不再存在，至少不再以那个名字存在\n该项目花了1.5年才确定以“Nura”作为新身份。\n\n喜欢这篇更新？支持独立的Linux新闻报道\nIt's FOSS在过去14年里一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。\n一次付费，永久享受\n任意金额，无承诺\n\n一个热衷于开源软件、定制PC组装、赛车运动以及探索这个世界无限可能的技术迷。\n\nopenSUSE Leap现在成了不可变发行版，Leap Micro出局\npostmarketOS不再存在，至少不再以那个名字存在\nGhostBSD将用一款因拼写错误命名的新桌面替换MATE\nAlmaLinux将软件认证交到用户手中\n荷兰打造了基于Nix的Linux桌面，因为微软切断了ICC\n成为更好的Linux用户\n通过FOSS每周通讯，学习实用的Linux技巧、发现应用、探索新发行版，并随时了解Linux世界的最新动态\n太好了！你已成功注册。\n欢迎回来！你已成功登录。\n你已成功订阅It's FOSS。\n你的链接已过期。\n成功！请查看你的电子邮件以获取登录魔法链接。\n成功！你的账单信息已更新。\n你的账单未更新。"
+  },
+  "671bf10a39184cbc23cde4c039d3647c": {
+    "id": "671bf10a39184cbc23cde4c039d3647c",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/opensuse-leap-immutable/",
+    "title_en": "openSUSE Leap is The Immutable Distro Now, Leap Micro is Out",
+    "summary_en": "Starting with Leap 16.1, the separate immutable flavor will cease to exist.",
+    "pub_date": "Tue, 29 Sep 2026 16:05:38 GMT",
+    "title_zh": "openSUSE Leap 现在成为不可变发行版，Leap Micro 退出历史舞台",
+    "summary_zh": "openSUSE 项目宣布从 Leap 16.1 开始，独立的不可变版本 Leap Micro 将不再存在，其功能将作为安装器中的一个模式集成到主 Leap 发行版中。用户可在 Agama 安装器中启用不可变模式，获得只读根文件系统、事务更新和快照回滚。Leap 16.1 还将带来 KDE Plasma、GNOME 等组件升级，预计与 SLES 16.1 同日发布稳定版。",
+    "fulltext_zh": "openSUSE Leap 现在成为不可变发行版，Leap Micro 退出历史舞台\n\n从 Leap 16.1 开始，独立的不可变版本将不复存在。\n\nopenSUSE 以提供四种主要 Linux 发行版而闻名。\n\n是稳定的固定发布版本，与 SUSE Linux Enterprise 基于相同的源代码构建。\n\n是滚动发布版本，适合那些想要最新软件包的用户。\n\n是跟踪 Tumbleweed 的不可变滚动变体。\n\n是 Leap 的不可变固定发布对应版本，专为容器主机、边缘设备和虚拟机工作负载构建。它的任务是在不影响 Leap 本身的情况下，为 openSUSE 带来不可变性和稳定性。\n\n由于项目现在决定将其作为主 Leap 安装器中的一个独立模式来发布。\n\nLeap Micro 之所以作为独立产品存在，是因为不可变系统需要单独的安装路径。在 Leap 16.1 中，Agama 安装器增加了一个“不可变”模式选项，可在安装过程中启用。\n\n如果你选择该模式，系统将配置为具有只读根文件系统，并支持事务更新和基于快照的回滚。技术基础与 Leap Micro 提供的完全相同；区别在于它现在位于 Leap 内部，而不是与之并列。\n\n系统更新通过\n运行，它会在重启前将更改应用到新快照中，让你在不良更新导致问题时可以回滚。对于安装新软件，\n负责容器，而\n处理桌面应用。\n\n别担心，如果你选择“常规”模式，仍然可以选择通常的桌面体验。\n\n将不会有 Leap Micro 6.3 或 7.0 版本发布\n\n因为他们已决定 Leap Immutable 是运行容器工作负载、边缘部署或受益于原子更新的设置的用户的后继者。\n\n对于现有的 Leap Micro 6.2 用户，项目提供了实验性的\nopenSUSE 迁移工具\n\n由于这是一个新的 Leap 版本，除了新模式之外还包含了许多内容。你会获得一系列升级，包括\n及其 Spectacle 中的 OCR 支持和辅助功能升级，以及\n及其 HDR 支持和新默认音频播放器。\n\n后者与 Leap 16.0 附带的版本相同，但捆绑了一个错误修复补丁。openSUSE 开发者将在接下来的几个版本中逐步推进 GNOME 升级，而不是一次性跳转版本。\n\n你可以期待 Leap 16.1 的稳定版与 SLES 16.1 同一天发布。\n\n目前，只有候选发布版（\n）可用，项目承诺在达到金主候选版（\n）之前每周发布一个 RC 构建。\n\n你将找到 RC 镜像，适用于\n\n喜欢这次更新吗？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年中一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无承诺\n\n一个对开源软件、定制 PC 构建、赛车运动以及探索这个世界无限可能性充满热情的书呆子。\n\n荷兰选择了 NixOS。法国已经在使用它\n\npostmarketOS 不再存在，至少不再以那个名字存在\n\nGhostBSD 正在用一个新的桌面环境替换 MATE，该桌面以一个拼写错误命名\n\nAlmaLinux 将软件认证交到用户手中\n\n荷兰构建了基于 Nix 的 Linux 桌面，因为微软切断了 ICC\n\n成为更好的 Linux 用户\n\n通过 FOSS 每周通讯，学习有用的 Linux 技巧，发现应用程序，探索新发行版，并随时了解 Linux 世界的最新动态\n\n太好了！你已成功注册。\n\n欢迎回来！你已成功登录。\n\n你已成功订阅 It's FOSS。\n\n你的链接已过期。\n\n成功！请检查你的电子邮件以获取登录魔法链接。\n\n成功！你的账单信息已更新。\n\n你的账单未更新。"
+  },
+  "e101354c2031efb14b217e85e30a34a0": {
+    "id": "e101354c2031efb14b217e85e30a34a0",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Arch-Linux-Archinstall-4.5",
+    "title_en": "Archinstall 4.5 For Arch Linux Brings AArch64 Improvements, RT Kernel Options",
+    "summary_en": "Ahead of the October ISO refresh of the Arch Linux media, Archinstall 4.5 released today as the newest update to this convenient, text-based Arch Linux installer...",
+    "pub_date": "Tue, 29 Sep 2026 20:25:51 -0400",
+    "title_zh": "Arch Linux 的 Archinstall 4.5 带来 AArch64 改进和 RT 内核选项",
+    "summary_zh": "Archinstall 4.5 发布，为 Arch Linux 文本安装器新增 linux-rt 和 linux-rt-lts 实时内核选项，并加入 AArch64 架构下 GRUB 和 Limine EFI 安装支持及根分区类型 GUID 处理。此外，Hyprland、Labwc、Niri 和 Sway 桌面选项从 polkit 切换到 systemd-logind，还包含大量错误修复和改进。",
+    "fulltext_zh": "在 Arch Linux 十月份 ISO 更新之前，Archinstall 4.5 于今日发布，这是这款便捷的基于文本的 Arch Linux 安装器的最新更新。\n\nArchinstall 4.5 将 linux-rt 和 linux-rt-lts 内核实时选项添加到了安装器中。这补充了 Arch Linux 安装器提供的其他内核变体，对于希望在全新 Arch Linux 安装中立即部署上游实时内核的用户非常有用。\n\nArchinstall 4.5 还为 GRUB 和 Limine EFI 安装添加了 AArch64 支持，以及 AArch64 根分区类型 GUID 处理。\n\n更新后的安装器还将 Hyprland、Labwc、Niri 和 Sway 桌面选项从 polkit 切换到了 systemd-logind。此外还有大量错误修复和其他改进。\n\n有关 Archinstall 4.5 版本增强 Arch Linux 安装的更多细节，可通过以下链接查看。"
+  },
+  "43cf4b209cb9db69431a052a4f32dce9": {
+    "id": "43cf4b209cb9db69431a052a4f32dce9",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/amd-perfopt",
+    "title_en": "AMD Boosting AI/LLM Performance For Radeon iGPUs As Much As 18~23% With Linux 7.4",
+    "summary_en": "If you have an AMD Ryzen laptop/desktop and looking to leverage AI/LLM capabilities with the integrated graphics, Linux 7.4 is going to be a real treat especially for lower-end hardware. AMD's new PerfOpt feature being introduced in Linux 7.4 is set to provide some solid gains as shown in these benchmarks today across different AMD Ryzen/Radeon hardware.",
+    "pub_date": "Tue, 29 Sep 2026 14:57:00 -0400",
+    "title_zh": "AMD 在 Linux 7.4 中将 Radeon iGPU 的 AI/LLM 性能提升高达 18~23%",
+    "summary_zh": "AMD 将在 Linux 7.4 中引入 PerfOpt 功能，通过绕过 IOMMU 直接访问系统内存来降低开销，从而提升 Radeon 集成显卡的 AI/LLM 推理性能。测试显示，在 Strix Halo、Strix Point 和 Krackan 等 Ryzen AI 平台上，启用 PerfOpt 后性能提升可达 18~23%。该功能默认启用，可通过内核参数关闭。",
+    "fulltext_zh": "AMD 在 Linux 7.4 中将 Radeon iGPU 的 AI/LLM 性能提升高达 18~23%\n\n2026 年 9 月 29 日下午 2:57（美国东部时间）。\n\n如果你拥有一台 AMD Ryzen 笔记本或台式机，并希望利用集成显卡的 AI/LLM 能力，这将是一个真正的福音，尤其是对低端硬件而言。AMD 在 Linux 7.4 中引入的新 PerfOpt 功能将带来可观的性能提升，正如今天在不同 AMD Ryzen/Radeon 硬件上进行的这些基准测试所示。\n\n在 Linux 7.4 合并窗口于 10 月下旬开启之前，最近已排队进入 IOMMU 子系统 Git 树的是一个补丁，为 AMD 集成显卡系统启用新的 AMD PerfOpt 功能。\n\nAMD PerfOpt 是 AMD IOMMU 性能优化（Performance Optimization）的一部分，属于 AMD I/O 虚拟化技术（IOMMU）规范。借助 PerfOpt，你可以在直接访问系统内存时绕过 IOMMU，从而避免那部分开销。AMDGPU 驱动将在使用集成显卡时默认启用 AMD PerfOpt。随着这些补丁进入 Linux 7.4，PerfOpt 将在 AMD iGPU 配置上自动启用，同时也可以通过 amdgpu.iommu_perfopt=0 内核模块选项强制关闭，以便比较其影响。\n\n出于对 PerfOpt 影响的好奇，我从 IOMMU Git 树中为 Linux 7.4 准备的代码构建了一个测试内核。然后我在同一内核上测试了 PerfOpt 启用（默认）与禁用的情况。由于缺少 Strix Halo 笔记本进行持续实测，我在一台 AMD Strix Halo 台式机上进行了测试，另外还使用了 Strix Point 和 Krackan 笔记本，以更全面地了解对性能的影响。\n\n在这轮初步测试中，我使用了本地 AI 服务器，后端为 Llama.cpp，在这些 AMD Ryzen AI 系统上进行本地 AI/LLM 推理。未来几周在考察 Linux 7.4 内核整体性能时，我还会提供更多 AMD PerfOpt 基准测试。Linux 7.4 周期将于 10 月下旬启动，稳定版内核将在日历年年底左右发布。它也很可能成为今年的 LTS 内核版本。\n\nNouveau 与 NVIDIA R610 在 CachyOS 上搭配 GeForce RTX 5090 笔记本 GPU 的对比\nIntel Arc Pro B70 在 Linux 7.1 中展现了一些性能优势\nLinux 7.1 帮助 Intel Arc Battlemage 显卡实现更好性能\nROCm 7.0.0 与 ROCm 7.2.3 在 AMD Radeon AI PRO R9700 上的性能对比\nNouveau 与 NVIDIA R595 Linux 驱动在工作站图形性能上的对比\nIntel Xe2 Lunar Lake Linux 图形性能过去一年提升约 17%\n\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "30613d7da599777dc5809eed9cc97157": {
+    "id": "30613d7da599777dc5809eed9cc97157",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Microsoft-WSLC-Linux-Containers",
+    "title_en": "Microsoft Announces General Availability Of WSLC: Linux Containers On Windows",
+    "summary_en": "Following the public preview of Linux containers on WSL, Microsoft today announced the general availability of WSLC for supporting Linux containers on Windows...",
+    "pub_date": "Tue, 29 Sep 2026 13:09:12 -0400",
+    "title_zh": "微软宣布 WSLC 正式发布：Windows 上的 Linux 容器",
+    "summary_zh": "微软宣布 Windows Subsystem for Linux Containers（WSLC）正式可用，支持在 Windows 上无缝运行 Linux 容器。WSLC 提供会话/容器间的强隔离，每个会话拥有独立的存储 VHD，并采用与 WSL 不同的新网络模型。该项目通过 microsoft/wsl GitHub 仓库开源。",
+    "fulltext_zh": "微软宣布 WSLC 正式发布：Windows 上的 Linux 容器\n\n在 WSL 上 Linux 容器公开预览之后，微软今天宣布 WSLC 正式可用，以支持 Windows 上的 Linux 容器。\n\nWSLC 现已正式发布，通过新命令无缝支持 Windows 上的 Linux 容器。WSLC 旨在提供会话/容器之间的强隔离，每个会话都有自己的存储 VHD，并且相比 WSL 采用了新的网络模型。\n\n微软甚至通过 microsoft/wsl GitHub 仓库宣传 WSLC 是开源的。\n\n希望进一步了解用于 Windows 上 Linux 容器的 WSLC 的用户，可以通过今天的微软开发者博客了解详情。"
+  },
+  "74b9e452f57f7835e1b479b8e7e9bd79": {
+    "id": "74b9e452f57f7835e1b479b8e7e9bd79",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Branch-Target-Reuse-BTR",
+    "title_en": "Branch Target Reuse, BTR: New Spectre V2 Attack Targeting JIT Compilers",
+    "summary_en": "It's been a while since any new Spectre vulnerabilities have come to light but that's changing today. The embargo has now lifted on BTR, Branch Target Reuse as a new Spectre-V2 attack affecting just-in-time (JIT) compilers...",
+    "pub_date": "Tue, 29 Sep 2026 13:00:00 -0400",
+    "title_zh": "分支目标重用（BTR）：针对JIT编译器的新型Spectre V2攻击",
+    "summary_zh": "VUSec安全研究人员披露了一种名为“分支目标重用”（BTR）的新型Spectre-V2攻击，影响JIT编译器，波及Linux内核BPF、Oracle GraalVM和Mozilla SpiderMonkey。该攻击利用未失效的间接分支预测条目，形成推测性释放后执行原语，可在现代Intel CPU上绕过所有缓解措施泄露任意内存。Intel、AMD和Arm硬件均受影响。Linux内核已于7月合并相关BPF加固补丁，因此本次无新内核缓解措施发布。",
+    "fulltext_zh": "分支目标重用（BTR）：针对JIT编译器的新型Spectre V2攻击 - Phoronix\n\n分支目标重用（BTR）：针对JIT编译器的新型Spectre V2攻击\n发布于2026年9月29日美国东部时间下午1:00。\n\n已经有一段时间没有新的Spectre漏洞出现了，但今天情况发生了变化。针对BTR——即“分支目标重用”（Branch Target Reuse），一种影响即时（JIT）编译器的新型Spectre-V2攻击——的禁令现已解除。\n\nVUSec的安全研究人员今天宣布，分支目标重用是一种针对JIT引擎的Spectre-V2攻击，影响带有BPF的Linux内核、Oracle的GraalVM，以及Mozilla Firefox的SpiderMonkey JavaScript引擎。\n\n当JIT编译器未能使过时的间接分支预测条目失效时，BTR便构成了一种推测性“释放后执行”（execute-after-free）原语。VUSec开发的端到端漏洞利用之一，可在现代Intel CPU上绕过所有已启用的缓解措施，泄露任意内存。VUSec团队评估的所有处理器均被发现受分支目标重用影响，包括Intel、AMD和Arm硬件。\n\n硬件厂商正在鼓励采用现有的缓解机制。今年7月该问题被私下披露时，Linux内核已合入补丁，在BPF JIT分配时启用间接分支预测屏障（IBPB）刷新，并在BPF内核代码中支持针对JIT喷射的加固。早在7月，我就在《Linux 7.2-rc2 BPF代码正被加固以抵御JIT喷射攻击》一文中报道了当时的内核变更。因此，今天没有新的Linux内核缓解措施发布，因为BPF相关变更自7月起已主线化，并且已经向后移植到稳定内核版本。\n\n对于Oracle GraalVM，正在通过随机化JIT代码缓存位置来阻碍BTR。据称，Mozilla已评估了针对SpiderMonkey的基于IBPB的缓解措施，但转而优先推进站点隔离功能方面的工作。\n\n希望进一步了解BTR的读者可以访问\n\nLinux 7.3中的AppArmor新增对用户空间压缩策略的支持\nLinux修复安全RET中断漏洞\nLinux在锁定模式下意外遗留了传统I/O和内存处理程序\n高通QCE驱动面临淘汰，比Armv8加密扩展慢约48倍\n面向Linux的ML-KEM + X-Wing补丁发布，助力后量子安全\n出于安全考虑，Linux AF_ALG加密代码移除零拷贝支持\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nDebian推理门户上线，为Debian开发者提供免费AI/LLM推理服务\nFedora讨论提出用Collabora Office替换LibreOffice的想法\nValve推出Pyrowave视频编解码器测试版，用于低延迟流传输\n阿里巴巴向Omarchy捐赠300万美元，致力于打造“理想”的代理式操作系统\nLinux内核开发者考虑添加AGENTS.md以帮助指导AI/LLM代理\n孤儿虚拟机：在宿主内核离线重启/更新期间保持虚拟机不间断运行\nAMD开始为配备GDDR7的显卡准备开源Linux驱动\n无广告浏览及单页多页文章查看推广提醒\n\n享受无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "83f7489cfcf4322c49dfac72bf17f9aa": {
+    "id": "83f7489cfcf4322c49dfac72bf17f9aa",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Ubuntu-26.10-Snapdragon-Concept",
+    "title_en": "New Ubuntu Concept ISO For Snapdragon Laptops Brings First X2 Laptop Support",
+    "summary_en": "It's been a while since Canonical announced any new ISOs of their Ubuntu builds targeting Qualcomm Snapdragon X series laptops. But ahead of this week's Ubuntu 26.10 beta release, they shipped new Ubuntu 26.10 Snapdragon Concept images today with improved Snapdragon X1 laptop support as well as the initial Snapdragon X2 laptop support...",
+    "pub_date": "Tue, 29 Sep 2026 12:15:36 -0400",
+    "title_zh": "面向骁龙笔记本的新Ubuntu概念ISO带来首款X2笔记本支持",
+    "summary_zh": "Canonical发布Ubuntu 26.10骁龙概念镜像，基于Linux 7.3内核改进X1笔记本支持，新增联想IdeaPad Slim 3、IdeaCentre Mini及荣耀MagicBook Art 14等机型，并首次支持骁龙X2笔记本，包括华硕Zenbook A14/A16、联想Yoga Slim 7和惠普EliteBook X G2q。Canonical正与高通合作，计划2027年推出官方认证的X2 Ubuntu镜像。",
+    "fulltext_zh": "面向骁龙笔记本的新Ubuntu概念ISO带来首款X2笔记本支持\n\n2026年9月29日12:15 EDT。\n\n距离Canonical上次发布针对高通骁龙X系列笔记本的Ubuntu镜像已有一段时间。但在本周Ubuntu 26.10测试版发布之前，他们今天推出了新的Ubuntu 26.10骁龙概念镜像，改进了对骁龙X1笔记本的支持，并首次加入了对骁龙X2笔记本的支持。\n\nUbuntu 26.10骁龙版概念镜像通过迁移到最新的Linux 7.3内核，为现有X1笔记本带来了改进。此外，Ubuntu现在还支持一些新的X1系统，包括联想IdeaPad Slim 3、联想IdeaCentre Mini 01q8x10和荣耀MagicBook Art 14。\n\n这个Ubuntu概念26.10骁龙版构建最令人兴奋的是首次支持骁龙X2笔记本。Ubuntu Linux最初支持的X2笔记本包括华硕Zenbook A14/A16、联想Yoga Slim 7和惠普EliteBook X G2q。\n\n与此同时，Canonical正与高通合作，计划在2027年提供官方认证且完全优化的骁龙X2 Ubuntu镜像。上周在夏威夷举行的骁龙峰会上，高通大力宣传了他们对骁龙X2笔记本的前景展望。希望这一切能在2027年实现，我们也能拿到一些X2硬件进行Linux测试和基准测试。\n\n想要尝试今天发布的针对骁龙X1/X2硬件的Ubuntu 26.10概念构建的用户，可以通过相关页面找到详细信息。我很快会在我的宏碁Swift AI骁龙X1笔记本上试用这个新构建。\n\nUbuntu Linux制造商Canonical 2025年营收达3.45亿美元\nUbuntu 26.10切换至Linux 7.3内核\nUbuntu 26.10桌面调整内存压力下的行为\nUbuntu 26.10 Snapshot 4 ISO发布\nUbuntu 26.10将cp、mv和rm迁移至Rust Coreutils，实现100%转换\nUbuntu开发者考虑Linux固件HWE软件包\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nDebian推理门户启动，为Debian开发者提供免费AI/LLM推理\nFedora讨论提出用Collabora Office替换LibreOffice的想法\nValve在测试版中推出Pyrowave视频编解码器，用于低延迟流媒体\n阿里巴巴向Omarchy捐赠300万美元，致力于打造“理想”的代理式操作系统\nLinux内核开发者考虑添加AGENTS.md以帮助指导AI/LLM代理\n孤儿VM：在宿主内核离线重启/更新期间保持VM不间断运行\nAMD开始为配备GDDR7的显卡准备开源Linux驱动\n无广告浏览、多页文章单页显示推广提醒\n享受无广告浏览，单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "87db31cbd6ce6da84a6f9e9b5db77c62": {
+    "id": "87db31cbd6ce6da84a6f9e9b5db77c62",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/opensuse-tumbleweed-arm-updates-improve-raspberry-pi-support-add-linux-7-2/",
+    "title_en": "openSUSE Tumbleweed ARM Updates Improve Raspberry Pi Support, Add Linux 7.2",
+    "summary_en": "openSUSE Tumbleweed ARM updates improve Raspberry Pi support and introduce Linux Kernel 7.2, bringing refreshed hardware support and system improvements.\nThe post openSUSE Tumbleweed ARM Updates Improve Raspberry Pi Support, Add Linux 7.2 appeared first on Linux Today.",
+    "pub_date": "Tue, 29 Sep 2026 07:12:53 +0000",
+    "title_zh": "openSUSE Tumbleweed ARM 更新改善树莓派支持，引入 Linux 7.2",
+    "summary_zh": "openSUSE Tumbleweed 发布 ARM 架构更新，重点改善了对树莓派的支持，并引入 Linux 内核 7.2，带来硬件支持刷新和系统改进。",
+    "fulltext_zh": "openSUSE Tumbleweed 的 ARM 更新改善了树莓派支持，并引入 Linux 内核 7.2，带来焕然一新的硬件支持和系统改进。\n\n文章《openSUSE Tumbleweed ARM 更新改善树莓派支持，引入 Linux 7.2》最初发表于 Linux Today。"
+  },
+  "fbe6b60b65bf4bd03d1369d6f381969e": {
+    "id": "fbe6b60b65bf4bd03d1369d6f381969e",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/kitty-0-49-terminal-emulator-lands-with-custom-shaders-and-faster-performance/",
+    "title_en": "Kitty 0.49 Terminal Emulator Lands With Custom Shaders and Faster Performance",
+    "summary_en": "Kitty 0.49 terminal emulator adds custom shader support and performance improvements, delivering greater customization and a faster terminal experience.\nThe post Kitty 0.49 Terminal Emulator Lands With Custom Shaders and Faster Performance appeared first on Linux Today.",
+    "pub_date": "Tue, 29 Sep 2026 07:11:49 +0000",
+    "title_zh": "Kitty 0.49 终端模拟器发布：支持自定义着色器并提升性能",
+    "summary_zh": "Kitty 0.49 终端模拟器正式发布，新增自定义着色器支持，并带来性能改进，为用户提供更丰富的定制选项和更快的终端体验。",
+    "fulltext_zh": "Kitty 0.49 终端模拟器新增自定义着色器支持并改进性能，带来更强大的定制能力和更快的终端体验。\n\n文章《Kitty 0.49 终端模拟器发布：支持自定义着色器并提升性能》最初发表于 Linux Today。"
+  },
+  "f428eb7700c334ec3681f7ffa31e815c": {
+    "id": "f428eb7700c334ec3681f7ffa31e815c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/gnu-wget-2-3-released-with-new-features-improvements-and-bug-fixes/",
+    "title_en": "GNU Wget 2.3 Released with New Features, Improvements, and Bug Fixes",
+    "summary_en": "GNU Wget 2.3 is now available with new features, improvements, and bug fixes, bringing updates to the popular command-line file retrieval utility.\nThe post GNU Wget 2.3 Released with New Features, Improvements, and Bug Fixes appeared first on Linux Today.",
+    "pub_date": "Tue, 29 Sep 2026 07:10:43 +0000",
+    "title_zh": "GNU Wget 2.3 发布，带来新功能、改进和错误修复",
+    "summary_zh": "GNU Wget 2.3 现已发布，为这款流行的命令行文件下载工具带来了新功能、多项改进以及错误修复。",
+    "fulltext_zh": "GNU Wget 2.3 现已发布，带来了新功能、改进和错误修复，为这款流行的命令行文件检索工具带来了更新。\n\n文章《GNU Wget 2.3 发布，带来新功能、改进和错误修复》最初发表于 Linux Today。"
+  },
+  "6ec9e2bb4336b6a86073b73b1e73b615": {
+    "id": "6ec9e2bb4336b6a86073b73b1e73b615",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/rsync-3-5-1-fixes-path-regressions-adds-protocol-33/",
+    "title_en": "Rsync 3.5.1 Fixes Path Regressions, Adds Protocol 33",
+    "summary_en": "Rsync 3.5.1 fixes path-related regressions and adds protocol 33, bringing important reliability and compatibility improvements to the file transfer utility.\nThe post Rsync 3.5.1 Fixes Path Regressions, Adds Protocol 33 appeared first on Linux Today.",
+    "pub_date": "Tue, 29 Sep 2026 07:09:40 +0000",
+    "title_zh": "Rsync 3.5.1 修复路径回归问题，新增协议 33",
+    "summary_zh": "Rsync 3.5.1 版本发布，主要修复了与路径相关的回归问题，并新增协议 33，为这款文件传输工具带来了重要的可靠性和兼容性改进。",
+    "fulltext_zh": "Rsync 3.5.1 修复了与路径相关的回归问题，并新增协议 33，为这款文件传输工具带来了重要的可靠性和兼容性改进。\n\n文章《Rsync 3.5.1 修复路径回归问题，新增协议 33》最初发布于 Linux Today。"
+  },
+  "ddc90dcee9b57fd44eb56ed8fb0cbd35": {
+    "id": "ddc90dcee9b57fd44eb56ed8fb0cbd35",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/peppermint-os-starts-its-shift-from-x-org-to-xlibre/",
+    "title_en": "Peppermint OS Starts Its Shift from X.Org to XLibre",
+    "summary_en": "Peppermint OS begins its transition from X.Org to XLibre, marking a notable change to the display server technology used by the distribution.\nThe post Peppermint OS Starts Its Shift from X.Org to XLibre appeared first on Linux Today.",
+    "pub_date": "Tue, 29 Sep 2026 07:08:17 +0000",
+    "title_zh": "Peppermint OS 开始从 X.Org 转向 XLibre",
+    "summary_zh": "Peppermint OS 已开始从 X.Org 过渡到 XLibre，这标志着该发行版所使用的显示服务器技术发生了显著变化。",
+    "fulltext_zh": "Peppermint OS 开始从 X.Org 过渡到 XLibre，这标志着该发行版所使用的显示服务器技术发生了显著变化。\n\n文章《Peppermint OS 开始从 X.Org 转向 XLibre》最初发布于 Linux Today。"
   }
 }
