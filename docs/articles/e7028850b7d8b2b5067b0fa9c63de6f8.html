@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VLC 发布“史上最大安全更新” — Linux 中文速报</title>
+<title>OpenMandriva ROME 26.09 发布，带来更多 AI 应用、Snap 支持及 PGO + LTO 优化 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>VLC 发布“史上最大安全更新”</h1>
+  <h1>OpenMandriva ROME 26.09 发布，带来更多 AI 应用、Snap 支持及 PGO + LTO 优化</h1>
 
-  <div class="article-summary">VLC 3.0.24 发布，被称为该视频播放器“史上最大安全更新”，修复了应用及其捆绑库中超过 130 个漏洞。虽然多数漏洞“在实际中难以利用”，但并非全部无害，官方建议用户尽快更新。本次更新无重大新功能，但改进了 ATRAC3/ATRAC9 解码、CEA-708 字幕、SFTP 公钥认证、WebVTT 处理等，并将 FFmpeg 从 4.4 升级至 8.1.2，移除了 NPAPI 插件。</div>
+  <div class="article-summary">OpenMandriva ROME 26.09 正式发布，这是继 24.12 之后的一次重大更新。新版本默认采用 LLVM Clang 23 编译器，提供 GCC 16.2 和 RPM 6.1，并引入 %pgo 段以简化 PGO 优化，同时几乎所有软件包都启用了 LTO 优化。此外还升级了 Qt、GTK、ROCm 等组件，新增更多 AI 应用，并开始支持 Canonical 的 Snap 包格式。RISC-V 和 LoongArch 架构持续改进，开源 NVIDIA 内核模块也正式纳入官方内核。</div>
 
-  <div class="article-body"><p>VLC 3.0.24 发布，被称为该视频播放器“史上最大安全更新”，修复了应用及其捆绑库中超过 130 个漏洞。</p><p>Jean-Baptiste Kempf 表示，本次更新修补的大部分安全漏洞“在实际中难以利用”，但他补充说并非所有漏洞都是“无害的”。他鼓励用户进行更新。</p><p>本次更新没有为这款开源媒体播放器带来重大的面向用户的新功能，但有一些改进。</p><p>VLC 3.0.24 支持 ATRAC3 和 ATRAC9 解码（前者用于索尼 MiniDisc，后者用于 PSP 时代的音频），支持 MP4 文件中的 CEA-708 隐藏字幕，并且通过 FFmpeg 的大版本跃升，支持三星的 APV 高质量视频文件。</p><p>SFTP 公钥认证选项</p><p>WebVTT（.vtt）处理改进</p><p>通过文件名和元数据检测字幕语言</p><p>librist 用于 RIST 输入输出，支持 Main 和 Simple 配置文件</p><p>在 mDNS 渲染器名称中显示 Chromecast 型号</p><p>为初代 Chromecast 设备禁用 HEVC</p><p>超分辨率缩放</p><p>FFmpeg 从 v4.4 更新至 8.1.2</p><p>移除 NPAPI 浏览器插件</p><p>更新验证现在使用 RSA-4096 密钥</p><p>修复 Qt 默认打开对话框位置</p><p>支持 Flatpak 构建</p><p>此外还修复了一个奇怪的 bug，该问题会导致 VLC 在夏令时变更后首次启动时速度缓慢。</p><p>VLC 持续的多功能性</p><p>PowerVLC：让现代 VLC 运行在不太现代的的设备上</p><p>最近还有一些关于 VLC 的“嘿，这挺酷”的消息。一个第三方分支将 VLC 3.x 系列移植回使用较旧 PPC 处理器的 Apple 设备，并添加了优化和调整，使其能在早在 2002 年的 Mac OS X 10.2 上良好运行。</p><p>Linux 也从这项工作中受益。</p><p>Jeroen Diederen 是面向旧 PowerPC Mac 的基于 Debian 的 Linux Mint 版本的首席开发者，他决定将该分支移植到 Linux——而且成功了！我很想拂去旧 iBook G4 上的灰尘来试一试。</p><p>从官方网站下载 VLC 3.0.24，该网站提供 Windows 和 macOS 安装程序，官方 snap 包为 Ubuntu 用户提供最新构建——可从应用中心获取，或运行</p><p>sudo snap install vlc</p><p>在 Linux 上获取它的其他方式包括非官方的 VLC Flathub 列表，你也可能在大量 VLC PPA 中找到它（不过大多数已过时）。</p><p>VLC 3.0.24 是 Ubuntu 26.10 软件库中作为传统 Debian 包提供的版本。</p><p>通常我会说“不必急于追更新”，但是，关键安全更新比通常的各种复用调整和解码器升级更为关键。</p><p>即将到来的 VLC 4.0 系列才是发生更实质性变化的地方。如果你想了解该工作的进展，可以从 Ubuntu 的 edge 通道安装。</p></div>
+  <div class="article-body"><p>OpenMandriva ROME 26.09 发布，带来更多 AI 应用、Snap 支持及 PGO + LTO 优化</p><p>2026 年 9 月 30 日晚上 9:36（美国东部时间）。</p><p>在 9 月月末，OpenMandriva Linux 发行版团队发布了 OpenMandriva ROME 26.09，这是他们因各种技术问题以及据称对其平台的一次破坏企图而拖延已久的版本。上一个版本是 OpenMandriva ROME 24.12，因此这是一次相当大的更新。</p><p>OpenMandriva ROME 26.09 将默认编译器切换为 LLVM Clang 23，同时也提供 GCC 16.2，并由 RPM 6.1 满足软件包管理需求。此次 OpenMandriva 更新还在 RPM SPEC 文件中增加了 %pgo 段，以便更轻松、更快速地为那些能从中获得显著收益的软件包应用编译器配置文件引导优化（PGO）。此外，几乎所有 OpenMandriva ROME 软件包都使用链接时优化（LTO）构建，以进一步提升性能。</p><p>其他软件包升级包括 Qt 6.11.2、GTK 4.22.5 和 AMD ROCm 10.0。OpenMandriva ROME 26.09 还新增了更多 AI 应用程序。</p><p>一个相当有趣的举措是，OpenMandriva ROME 26.09 现在除了支持 Flatpak、AppImage 文件和原生 RPM 之外，还支持 Canonical 的 Snap 软件包。</p><p>在此次 OpenMandriva 发布中，RISC-V 和 LoongArch 64 位 CPU 架构也得到了持续改进。最后一项值得注意的升级是，开源 NVIDIA 内核模块现在作为正式 OpenMandriva 官方内核的一部分进行分发。</p><p>有关这个重大 OpenMandriva ROME 26.09 版本的下载和更多详细信息，请访问相关页面。</p><p>Redox OS 新增类 IO_uring API、NUMA 支持并让 QEMU 正常工作</p><p>ReactOS 从 Wine 获得重大 DirectX 堆栈更新，可启用更多游戏</p><p>AlmaLinux 推出新的软件/硬件认证门户，支持应用自认证</p><p>阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的智能体操作系统</p><p>Void Linux 维护者因 AI 政策争议放弃 100 多个软件包</p><p>受 BeOS 启发的 Haiku 现在支持实时切换音频输出及其他改进</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Debian 推理门户上线，为 Debian 开发者提供免费 AI/LLM 推理服务</p><p>Fedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法</p><p>阿里巴巴向 Omarchy 捐赠 300 万美元，致力于打造“理想”的智能体操作系统</p><p>Linux 内核开发者考虑添加 AGENTS.md 以帮助指导 AI/LLM 智能体</p><p>无广告浏览、多页文章单页显示推广提醒</p><p>systemd 262 发布，为未审查代码引入 AI/LLM 金丝雀，集成 LUO</p><p>Linux 7.3 因遇到太多错误而回退 Logitech Bolt 接收器 HID++</p><p>微软宣布 WSLC 正式可用：Windows 上的 Linux 容器</p><p>享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/vlc-major-security-update" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/OpenMandriva-ROME-26.09" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

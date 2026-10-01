@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VLC 发布“史上最大安全更新” — Linux 中文速报</title>
+<title>开源领域更多AI应用、CachyOS、Ryzen AI Halo、Framework Laptop 13 Pro及第三季度其他亮点 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>VLC 发布“史上最大安全更新”</h1>
+  <h1>开源领域更多AI应用、CachyOS、Ryzen AI Halo、Framework Laptop 13 Pro及第三季度其他亮点</h1>
 
-  <div class="article-summary">VLC 3.0.24 发布，被称为该视频播放器“史上最大安全更新”，修复了应用及其捆绑库中超过 130 个漏洞。虽然多数漏洞“在实际中难以利用”，但并非全部无害，官方建议用户尽快更新。本次更新无重大新功能，但改进了 ATRAC3/ATRAC9 解码、CEA-708 字幕、SFTP 公钥认证、WebVTT 处理等，并将 FFmpeg 从 4.4 升级至 8.1.2，移除了 NPAPI 插件。</div>
+  <div class="article-summary">本文回顾了Phoronix在2026年第三季度发布的热门内容，涵盖开源项目中的AI应用、Linux内核动态、硬件评测等。重点包括Debian推出免费AI推理门户、CERN转向Debian、Linus Torvalds重申Linux不反AI、MPEG-4专利到期、FreeBSD移除GPL代码、CIFS维护者卸任、ReactOS可运行《半条命2》等。同时CachyOS、AMD Ryzen AI Halo和Framework硬件也备受关注。</div>
 
-  <div class="article-body"><p>VLC 3.0.24 发布，被称为该视频播放器“史上最大安全更新”，修复了应用及其捆绑库中超过 130 个漏洞。</p><p>Jean-Baptiste Kempf 表示，本次更新修补的大部分安全漏洞“在实际中难以利用”，但他补充说并非所有漏洞都是“无害的”。他鼓励用户进行更新。</p><p>本次更新没有为这款开源媒体播放器带来重大的面向用户的新功能，但有一些改进。</p><p>VLC 3.0.24 支持 ATRAC3 和 ATRAC9 解码（前者用于索尼 MiniDisc，后者用于 PSP 时代的音频），支持 MP4 文件中的 CEA-708 隐藏字幕，并且通过 FFmpeg 的大版本跃升，支持三星的 APV 高质量视频文件。</p><p>SFTP 公钥认证选项</p><p>WebVTT（.vtt）处理改进</p><p>通过文件名和元数据检测字幕语言</p><p>librist 用于 RIST 输入输出，支持 Main 和 Simple 配置文件</p><p>在 mDNS 渲染器名称中显示 Chromecast 型号</p><p>为初代 Chromecast 设备禁用 HEVC</p><p>超分辨率缩放</p><p>FFmpeg 从 v4.4 更新至 8.1.2</p><p>移除 NPAPI 浏览器插件</p><p>更新验证现在使用 RSA-4096 密钥</p><p>修复 Qt 默认打开对话框位置</p><p>支持 Flatpak 构建</p><p>此外还修复了一个奇怪的 bug，该问题会导致 VLC 在夏令时变更后首次启动时速度缓慢。</p><p>VLC 持续的多功能性</p><p>PowerVLC：让现代 VLC 运行在不太现代的的设备上</p><p>最近还有一些关于 VLC 的“嘿，这挺酷”的消息。一个第三方分支将 VLC 3.x 系列移植回使用较旧 PPC 处理器的 Apple 设备，并添加了优化和调整，使其能在早在 2002 年的 Mac OS X 10.2 上良好运行。</p><p>Linux 也从这项工作中受益。</p><p>Jeroen Diederen 是面向旧 PowerPC Mac 的基于 Debian 的 Linux Mint 版本的首席开发者，他决定将该分支移植到 Linux——而且成功了！我很想拂去旧 iBook G4 上的灰尘来试一试。</p><p>从官方网站下载 VLC 3.0.24，该网站提供 Windows 和 macOS 安装程序，官方 snap 包为 Ubuntu 用户提供最新构建——可从应用中心获取，或运行</p><p>sudo snap install vlc</p><p>在 Linux 上获取它的其他方式包括非官方的 VLC Flathub 列表，你也可能在大量 VLC PPA 中找到它（不过大多数已过时）。</p><p>VLC 3.0.24 是 Ubuntu 26.10 软件库中作为传统 Debian 包提供的版本。</p><p>通常我会说“不必急于追更新”，但是，关键安全更新比通常的各种复用调整和解码器升级更为关键。</p><p>即将到来的 VLC 4.0 系列才是发生更实质性变化的地方。如果你想了解该工作的进展，可以从 Ubuntu 的 edge 通道安装。</p></div>
+  <div class="article-body"><p>随着第三季度结束，让我们回顾过去三个月Phoronix上最有趣的内容。</p><p>在第三季度，Phoronix共发布了852篇原创新闻文章和57篇特色Linux硬件评测/多页基准测试文章。所有这些均由我本人每日撰写。感谢那些订阅并在此网站浏览时未使用广告拦截器的读者。整个网络出版/广告领域仍处于艰难时期，而在这样一个细分领域，即使经过22年的精简运营，情况也令人沮丧地困难。</p><p>就2026年第三季度Phoronix上最受欢迎的新闻而言，人们对不同开源项目的AI行动持续保持浓厚兴趣。此外还有大量有趣的Linux内核活动、最后一个MPEG-4专利到期以及Linux桌面改进。在Linux硬件评测和基准测试方面，人们对CachyOS、AMD Ryzen AI Halo等新硬件以及Framework硬件持续关注。</p><p>第三季度最受欢迎的新闻包括：</p><p>Debian推理门户上线，为Debian开发者提供免费AI/LLM推理服务</p><p>随着Debian投票允许负责任地使用生成式AI，现在由Scaleway资助的一项新倡议使Debian贡献者更容易利用AI：Debian推理门户。</p><p>CERN在长期作为RHEL机构后，将工业计算机转向Debian</p><p>欧洲核子研究组织（CERN）除了以大型强子对撞机（LHC）闻名外，在长期Linux用户中也以RHEL/CentOS环境而著称。CERN过去甚至与其他教育/研究机构共同维护Scientific Linux这一RHEL衍生版。因此令人惊讶的是，CERN现在正将工业加速器控制计算机转向Debian Linux。</p><p>Linus Torvalds重申Linux不“反AI”，也不是“社会战士”项目</p><p>一夜之间，Linux创造者Linus Torvalds又写了一篇精心撰写的消息，重申Linux内核不反对AI的立场，并回击了一些反对在内核项目中使用AI/LLM的内核开发者。</p><p>最后一个MPEG-4 Visual专利已到期</p><p>如果你在寻找今天庆祝的理由，那么MPEG-4第2部分最后的专利今天到期了。</p><p>FreeBSD 16从基础系统中移除最后的GPL代码</p><p>截至上周，FreeBSD 16源代码树中，基础系统里最后一批GNU GPL许可代码已被移除。</p><p>长期Linux CIFS/SMB3维护者去世</p><p>随着Linux 7.3的到来，Linux内核中通用互联网文件系统（CIFS）/SMB3代码的维护者发生了更替。长期维护者、Linux CIFS主要作者、现任微软员工Steve French因健康原因卸任。</p><p>ReactOS“开源Windows”项目现在能够运行《半条命2》</p><p>一个月前，看到开源ReactOS操作系统运行Valve的《半条命》游戏令人兴奋。没想到不到30天后，它也能运行《半条命2》了。</p><p>Linus Torvalds经历地狱般的调试，AI“极大帮助”</p><p>很少看到Linus Torvalds亲自编写与开源Linux图形驱动相关的补丁，但今天早上醒来时，我惊讶地发现他亲自编写并提交了一个Intel Xe内核图形驱动的更改。这发生在他遭遇“地狱般的调试”之后，但最终在AI的帮助下修复了一个一直困扰他的bug。</p><p>Linux内核开发者再次讨论AI代理署名——可能放弃</p><p>当AI/LLM代理被用于创建Linux内核补丁时，一段时间以来的政策是应该……</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/vlc-major-security-update" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Q3-2026-Highlights" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

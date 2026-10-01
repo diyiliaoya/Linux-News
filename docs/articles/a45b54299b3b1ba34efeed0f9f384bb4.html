@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VLC 发布“史上最大安全更新” — Linux 中文速报</title>
+<title>Giada 1.6 循环机为采样通道新增时间拉伸播放模式 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Linux Today</span>
   </div>
 
-  <h1>VLC 发布“史上最大安全更新”</h1>
+  <h1>Giada 1.6 循环机为采样通道新增时间拉伸播放模式</h1>
 
-  <div class="article-summary">VLC 3.0.24 发布，被称为该视频播放器“史上最大安全更新”，修复了应用及其捆绑库中超过 130 个漏洞。虽然多数漏洞“在实际中难以利用”，但并非全部无害，官方建议用户尽快更新。本次更新无重大新功能，但改进了 ATRAC3/ATRAC9 解码、CEA-708 字幕、SFTP 公钥认证、WebVTT 处理等，并将 FFmpeg 从 4.4 升级至 8.1.2，移除了 NPAPI 插件。</div>
+  <div class="article-summary">Giada 1.6 循环机发布，为采样通道引入了时间拉伸播放模式，旨在为现场循环和音频工作流带来更大的灵活性。</div>
 
-  <div class="article-body"><p>VLC 3.0.24 发布，被称为该视频播放器“史上最大安全更新”，修复了应用及其捆绑库中超过 130 个漏洞。</p><p>Jean-Baptiste Kempf 表示，本次更新修补的大部分安全漏洞“在实际中难以利用”，但他补充说并非所有漏洞都是“无害的”。他鼓励用户进行更新。</p><p>本次更新没有为这款开源媒体播放器带来重大的面向用户的新功能，但有一些改进。</p><p>VLC 3.0.24 支持 ATRAC3 和 ATRAC9 解码（前者用于索尼 MiniDisc，后者用于 PSP 时代的音频），支持 MP4 文件中的 CEA-708 隐藏字幕，并且通过 FFmpeg 的大版本跃升，支持三星的 APV 高质量视频文件。</p><p>SFTP 公钥认证选项</p><p>WebVTT（.vtt）处理改进</p><p>通过文件名和元数据检测字幕语言</p><p>librist 用于 RIST 输入输出，支持 Main 和 Simple 配置文件</p><p>在 mDNS 渲染器名称中显示 Chromecast 型号</p><p>为初代 Chromecast 设备禁用 HEVC</p><p>超分辨率缩放</p><p>FFmpeg 从 v4.4 更新至 8.1.2</p><p>移除 NPAPI 浏览器插件</p><p>更新验证现在使用 RSA-4096 密钥</p><p>修复 Qt 默认打开对话框位置</p><p>支持 Flatpak 构建</p><p>此外还修复了一个奇怪的 bug，该问题会导致 VLC 在夏令时变更后首次启动时速度缓慢。</p><p>VLC 持续的多功能性</p><p>PowerVLC：让现代 VLC 运行在不太现代的的设备上</p><p>最近还有一些关于 VLC 的“嘿，这挺酷”的消息。一个第三方分支将 VLC 3.x 系列移植回使用较旧 PPC 处理器的 Apple 设备，并添加了优化和调整，使其能在早在 2002 年的 Mac OS X 10.2 上良好运行。</p><p>Linux 也从这项工作中受益。</p><p>Jeroen Diederen 是面向旧 PowerPC Mac 的基于 Debian 的 Linux Mint 版本的首席开发者，他决定将该分支移植到 Linux——而且成功了！我很想拂去旧 iBook G4 上的灰尘来试一试。</p><p>从官方网站下载 VLC 3.0.24，该网站提供 Windows 和 macOS 安装程序，官方 snap 包为 Ubuntu 用户提供最新构建——可从应用中心获取，或运行</p><p>sudo snap install vlc</p><p>在 Linux 上获取它的其他方式包括非官方的 VLC Flathub 列表，你也可能在大量 VLC PPA 中找到它（不过大多数已过时）。</p><p>VLC 3.0.24 是 Ubuntu 26.10 软件库中作为传统 Debian 包提供的版本。</p><p>通常我会说“不必急于追更新”，但是，关键安全更新比通常的各种复用调整和解码器升级更为关键。</p><p>即将到来的 VLC 4.0 系列才是发生更实质性变化的地方。如果你想了解该工作的进展，可以从 Ubuntu 的 edge 通道安装。</p></div>
+  <div class="article-body"><p>Giada 1.6 循环机为采样通道新增了时间拉伸播放模式，为现场循环和音频工作流带来了更大的灵活性。</p><p>文章《Giada 1.6 循环机为采样通道新增时间拉伸播放模式》首先出现在 Linux Today 上。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/09/vlc-major-security-update" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.linuxtoday.com/blog/giada-1-6-loop-machine-adds-time-stretching-playback-mode-for-sample-channels/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
