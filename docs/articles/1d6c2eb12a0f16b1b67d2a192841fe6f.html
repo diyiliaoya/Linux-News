@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>微软向所有人开放 WSL 容器 — Linux 中文速报</title>
+<title>F-Droid 的新应用表明它不会消失 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
+    <span class="tag">发行版</span>
     <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>微软向所有人开放 WSL 容器</h1>
+  <h1>F-Droid 的新应用表明它不会消失</h1>
 
-  <div class="article-summary">微软宣布 WSL 容器（WSLC）结束公开预览，正式向所有用户开放。新版本提供专用命令行工具 wslc、Windows API、Consommé 网络模型，以及 Intune 注册表控制。Defender for Endpoint 的 WSL 插件也扩展至覆盖容器活动。用户可通过 wsl --update 获取包含 WSLC 的最新 WSL 版本，并使用新命令管理容器。</div>
+  <div class="article-summary">F-Droid 发布了基于 Compose 的 2.0 版本，这是其历史上最大规模的更新。新版用 Kotlin 重写了原有 Java 代码库，界面全面现代化，底部导航分为探索、更新和设置三部分，搜索、筛选和后台更新检查等功能均得到改进。与此同时，F-Droid 正联合 70 多个组织反对谷歌 2027 年起强制开发者注册的政策，此次重大更新彰显了其不向谷歌压力妥协的立场。</div>
 
-  <div class="article-body"><p>微软向所有人开放 WSL 容器</p><p>此前处于公开预览阶段，现在它提供了新命令、Consommé 网络和 Intune 注册表控制。</p><p>微软通过两部分系列博客宣布，WSL 容器（WSLC）已从公开预览阶段转为正式发布。让我们来看看它提供了什么。</p><p>新版本附带了一个专用命令行工具，用于在 Windows 上进行 Linux 容器工作流。它内置了一个别名，供喜欢该语法的用户使用。</p><p>同时还附带了一个 Windows API，让原生 Windows 应用程序能够直接从代码中启动和管理容器，以及一些新命令，包括用于跟踪容器活动的命令。</p><p>网络通过一个名为 Consommé 的新模型处理，容器流量以特定形式离开虚拟机，并由在调用用户账户下运行的 Windows 进程接收。该进程处理 DNS、路由和端口映射，让流量像任何其他 Windows 进程一样通过 VPN 和防火墙。</p><p>此外，Microsoft Intune 新增了两项专门针对 WSL 容器的设置。第一项让管理员可以在受管设备上完全启用或禁用对 WSLC 功能的访问。第二项是容器注册表允许列表，将镜像拉取限制在定义的一组已批准来源中。</p><p>Microsoft Defender for Endpoint 的 WSL 插件也已扩展至覆盖容器活动。它可以从 WSLC 内部检索进程、文件和网络事件，并将它们连接回 Windows 主机。</p><p>首先你需要了解适用于 Linux 的 Windows 子系统（WSL），它让开发者可以直接在 Windows 上运行 Linux 环境，而无需分区硬盘或设置单独的 Linux 机器。</p><p>自 WSL 2 以来，它在受管理的虚拟机内附带了一个真正的 Linux 内核，让用户可以从 Windows 内部访问 Linux 工具、发行版和命令行工作流。</p><p>WSLC 进一步扩展了这一点，在同一 WSL 环境中添加了一个专用层，用于创建和管理 Linux 容器，使容器化工作流成为该设置的原生组成部分。</p><p>它还通过一个专用的子进程将容器操作与主 WSL 服务分离，该进程在当前用户账户下运行。这使每个会话保持隔离，并使容器操作处于比 WSL 服务本身更低的权限状态。</p><p>对于已经在 WSL 中工作的开发者来说，这意味着容器化应用程序可以在同一环境中运行，而无需借助单独的工具。Windows API 的暴露也意味着原生 Windows 应用程序可以以编程方式与容器交互。</p><p>如果你想了解更多，WSLC 架构深入解析是必读内容。</p><p>在终端中运行 wsl --update 会拉取最新的 WSL 版本，其中包含 WSL 容器。更新后，你可以使用这些新命令来管理你的容器。👇</p><p>wslc container restart</p><p>以 tar 归档形式在容器之间传输文件。</p><p>检查你的 WSLC 环境状态。</p><p>wslc network disconnect</p><p>将容器加入网络或从网络移除。</p><p>创建网络，支持自定义驱动选项。</p><p>如需完整变更日志和源代码访问，请前往 WSL 3.0.1 的发布页面。</p><p>喜欢这个更新吗？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的极客。</p><p>荷兰选择了 NixOS。法国已经在使用它</p><p>openSUSE Leap 现在是不可变发行版，Leap Micro 已退出</p><p>Firefox 换新装！Nova 重新设计已成为默认</p><p>postmarketOS 不再存在，至少在那个名字下</p><p>GhostBSD 正在用一个新的桌面环境替换 MATE，该桌面以一个拼写错误命名</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周新闻通讯</p></div>
+  <div class="article-body"><p>F-Droid 的新应用表明它不会消失</p><p>基于 Compose 的 2.0 应用发布标志着该应用商店历史上最大规模的更新。</p><p>F-Droid 一直是下载免费和开源 Android 应用的首选之地。其客户端应用是人们接触最多的部分，多年来经历了多次升级。</p><p>但现在，经过一年多的开发和众多测试版本的积累，一次大规模重写终于到来。</p><p>全面重新设计</p><p>Kotlin 取代了原来的 Java 代码库，界面也基于 Compose 重建。最终的应用全面遵循 Material Design 3 设计规范，外观和行为都像是一款属于现代 Android 设备的应用。</p><p>应用的底部栏现在有三个部分：探索，用于查询和快速访问分类；更新，用于跟踪已安装应用、更新和问题；以及设置。</p><p>你还会发现，设置菜单已移至右上角，与新的探索页面并列。探索页面经过配置，会突出显示新添加的应用、最近更新的应用以及仓库中下载量最多的应用。相关分类被归组在一起，使得浏览完整目录更加容易，不会在长长的列表中迷失方向。</p><p>搜索现在除了应用名称外，还能处理分类、应用描述和翻译内容，搜索查询的结果也有所改善。你的搜索历史也会被保存，以供将来查询使用。</p><p>筛选功能也经过了重新设计；结果可以同时按反特性、设备兼容性和分类进行缩小范围。</p><p>这是旧版 F-Droid 应用的对比外观。</p><p>默认情况下，应用会在后台检查更新，不再需要过去触发仓库扫描的下拉手势。当然，进入三点菜单后，仍可从更新页面手动检查。</p><p>同样，将 F-Droid 图标隐藏为计算器应用的功能已移至设置中。应用分享工具已被暂时移除。</p><p>在公告的结尾，F-Droid 表示：</p><p>F-Droid 2.0 代表着一个重要的里程碑，但并不是故事的终点。重建应用为我们提供了更坚实的基础，但前方仍有大量工作要做。</p><p>随着新版本推送给更多用户，我们期待从实际使用中学到很多。从最早的设计讨论到众多 alpha 和 RC 版本，社区反馈塑造了 F-Droid 2.0，它将继续指导未来的改进。</p><p>此前，谷歌宣布从 2027 年起，每个 Android 应用开发者都需要向该公司注册，提供政府颁发的身份证件、签名密钥证明以及一笔费用。</p><p>这样一来，来自未注册开发者的应用将被阻止在经过认证的 Android 设备上运行。</p><p>当然，F-Droid 并没有坐视不管；其董事会成员 Marc Prud'hommeaux 发起了 Keep Android Open 运动作为回应，该运动目前已汇集了来自 20 多个国家的 70 多个组织。</p><p>其签署者包括电子前沿基金会、自由软件基金会、KDE、Proton、Codeberg、VideoLAN、LineageOS、CryptPad 和 Tor Project 等知名组织。</p><p>距离这一荒谬的封锁措施生效已不足 90 天，F-Droid 推出如此重大的更新，只会更加坚定他们不向谷歌强权策略让步的立场。</p><p>F-Droid 2.0 将在未来几周内逐步推送，所以如果你现有的安装还没有收到更新，请耐心等待。对于新安装，情况类似，因为最新的稳定版本仍是 1.23.0。</p><p>另一方面，如果你不想练习耐心的美德，可以从 GitLab 下载最新的 2.0 beta 版本。</p><p>喜欢这篇更新吗？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个对开源软件、定制 PC 组装、赛车运动和探索尽头充满热情的书呆子</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/wslc-general-availability/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/f-droid-revamp/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

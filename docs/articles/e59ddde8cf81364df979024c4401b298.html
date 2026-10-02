@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>微软向所有人开放 WSL 容器 — Linux 中文速报</title>
+<title>Linux 应用发布汇总（2026年9月） — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>微软向所有人开放 WSL 容器</h1>
+  <h1>Linux 应用发布汇总（2026年9月）</h1>
 
-  <div class="article-summary">微软宣布 WSL 容器（WSLC）结束公开预览，正式向所有用户开放。新版本提供专用命令行工具 wslc、Windows API、Consommé 网络模型，以及 Intune 注册表控制。Defender for Endpoint 的 WSL 插件也扩展至覆盖容器活动。用户可通过 wsl --update 获取包含 WSLC 的最新 WSL 版本，并使用新命令管理容器。</div>
+  <div class="article-summary">2026年9月，Linux 应用生态迎来多项更新。Shotcut 26.9 新增调整剪辑功能和新标志；Audacity 4.0.1 修复了键盘快捷键、导出对话框等大量问题；Plank Reloaded 解决了重复图标等缺陷；PeaZip 11.3.0 为内置密码管理器增加了主密码保护。此外，Firefox、Vivaldi 8.2 和 Orion 测试版也带来了新特性。</div>
 
-  <div class="article-body"><p>微软向所有人开放 WSL 容器</p><p>此前处于公开预览阶段，现在它提供了新命令、Consommé 网络和 Intune 注册表控制。</p><p>微软通过两部分系列博客宣布，WSL 容器（WSLC）已从公开预览阶段转为正式发布。让我们来看看它提供了什么。</p><p>新版本附带了一个专用命令行工具，用于在 Windows 上进行 Linux 容器工作流。它内置了一个别名，供喜欢该语法的用户使用。</p><p>同时还附带了一个 Windows API，让原生 Windows 应用程序能够直接从代码中启动和管理容器，以及一些新命令，包括用于跟踪容器活动的命令。</p><p>网络通过一个名为 Consommé 的新模型处理，容器流量以特定形式离开虚拟机，并由在调用用户账户下运行的 Windows 进程接收。该进程处理 DNS、路由和端口映射，让流量像任何其他 Windows 进程一样通过 VPN 和防火墙。</p><p>此外，Microsoft Intune 新增了两项专门针对 WSL 容器的设置。第一项让管理员可以在受管设备上完全启用或禁用对 WSLC 功能的访问。第二项是容器注册表允许列表，将镜像拉取限制在定义的一组已批准来源中。</p><p>Microsoft Defender for Endpoint 的 WSL 插件也已扩展至覆盖容器活动。它可以从 WSLC 内部检索进程、文件和网络事件，并将它们连接回 Windows 主机。</p><p>首先你需要了解适用于 Linux 的 Windows 子系统（WSL），它让开发者可以直接在 Windows 上运行 Linux 环境，而无需分区硬盘或设置单独的 Linux 机器。</p><p>自 WSL 2 以来，它在受管理的虚拟机内附带了一个真正的 Linux 内核，让用户可以从 Windows 内部访问 Linux 工具、发行版和命令行工作流。</p><p>WSLC 进一步扩展了这一点，在同一 WSL 环境中添加了一个专用层，用于创建和管理 Linux 容器，使容器化工作流成为该设置的原生组成部分。</p><p>它还通过一个专用的子进程将容器操作与主 WSL 服务分离，该进程在当前用户账户下运行。这使每个会话保持隔离，并使容器操作处于比 WSL 服务本身更低的权限状态。</p><p>对于已经在 WSL 中工作的开发者来说，这意味着容器化应用程序可以在同一环境中运行，而无需借助单独的工具。Windows API 的暴露也意味着原生 Windows 应用程序可以以编程方式与容器交互。</p><p>如果你想了解更多，WSLC 架构深入解析是必读内容。</p><p>在终端中运行 wsl --update 会拉取最新的 WSL 版本，其中包含 WSL 容器。更新后，你可以使用这些新命令来管理你的容器。👇</p><p>wslc container restart</p><p>以 tar 归档形式在容器之间传输文件。</p><p>检查你的 WSLC 环境状态。</p><p>wslc network disconnect</p><p>将容器加入网络或从网络移除。</p><p>创建网络，支持自定义驱动选项。</p><p>如需完整变更日志和源代码访问，请前往 WSL 3.0.1 的发布页面。</p><p>喜欢这个更新吗？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的极客。</p><p>荷兰选择了 NixOS。法国已经在使用它</p><p>openSUSE Leap 现在是不可变发行版，Leap Micro 已退出</p><p>Firefox 换新装！Nova 重新设计已成为默认</p><p>postmarketOS 不再存在，至少在那个名字下</p><p>GhostBSD 正在用一个新的桌面环境替换 MATE，该桌面以一个拼写错误命名</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周新闻通讯</p></div>
+  <div class="article-body"><p>秋日气息或许正在吹来（至少对北半球而言），但 Linux 应用开发者们可没打算蜷缩起来。2026年9月，一批各式各样的 Linux 应用更新发布了。</p><p>值得专门撰文介绍的重大发布包括重新设计的版本（前者早该更新，后者看起来完全像一款新应用）。我还报道了 Calibre 那一波（奇特的）AI 功能集成——如果你不想读书的话。</p><p>Firefox 发布了两次更新（数一数），不过最受关注的还是某功能的推出。Vivaldi 8.2 新增了地址栏计算器，而 Linux 版 Orion 的新测试版则加入了工具栏编辑器。</p><p>本文汇总了那些我没有在本站专门撰文介绍的软件发布。</p><p>Shotcut 新增调整剪辑和新标志</p><p>Shotcut 的新版本于9月底亮相。</p><p>此次更新带来了全新应用标志，以及用户界面部分区域更圆润的边角（后者是为了与系统主题保持一致性，而非“搞个 Nova 风格”——参见 Firefox 157）。</p><p>在我看来，最大的新功能是调整剪辑。可以生成一个“哑”视频剪辑，它本身没有视频内容，但你可以对其应用滤镜，这些滤镜会影响其下方所有视频轨道的合成效果。</p><p>我爱死它们了；调整剪辑是懒人剪辑师的最佳伙伴。</p><p>此外，音频时间线轨道可以开启自动音频闪避功能。当上方轨道出现语音或其他音频时，它会尝试自动降低音量。即便永远做不到完美，也能让手动闪避这项（枯燥的）任务稍微快一点。</p><p>其他变化还包括升级至 FFmpeg v9.0、轨道头部新增音频混音控制，以及时间线性能提升。Linux 上的 VA-API HEVC 硬件编码在 v26.9 中得到修复，还有一堆其他 bug 也被解决。</p><p>Shotcut 26.9 现已可从 Snap Store 获取。</p><p>Audacity 重大版本迎来重大 bug 修复</p><p>Audacity 4.0 带来了现代化界面和更好的编辑工具，广受好评，但也并非没有一些小毛病。9月发布的版本修复了大量已发现的问题，并解决了一些未被注意到的回归问题。</p><p>一批 Audacity 3 时代的键盘快捷键（有些已深入工作流，比如分别用于跳到开头和结尾的快捷键）在 v4.0 中失效了，而“导出”对话框也丢失了将多轨导出为独立音频文件的选项。这两项都在 v4.0.1 中恢复。</p><p>bug 修复数量众多，涵盖从剪辑选中时闪烁、导出后文件名被随机缩短，到在 Linux 上运行时 WAV 文件无法被 Audacity 识别等各种问题。VST3 设置在不同会话之间被重置的问题也已解决。</p><p>如果你曾尝试在 Ubuntu 26.04 LTS 或非 systemd 的 Linux 发行版上打开 Audacity 4 AppImage 却无法运行，好消息是：这个版本可以了。</p><p>Audacity 是免费开源软件，可从官方 Github 下载，支持 Windows、macOS 和 Linux。</p><p>Plank 分支修复了重复图标问题</p><p>桌面 dock 的用户会想要更新到 v0.x。这是一个 bug 修复版本，解决了一系列小毛病，比如由 BAMF 类冲突导致的重复图标，并确保固定的启动器能正确匹配到运行中的应用。</p><p>最新更新还增加了对数据文件夹、子文件夹或名称中带空格的应用程序显示徽章和进度的支持，并防止 dock 图标使用来自 2x 主题文件夹中为其一半尺寸绘制的图像——也就是说，模糊图标更少了。</p><p>Plank Reloaded 可从项目页面下载。</p><p>PeaZip 让压缩包密码更安全</p><p>PeaZip 11.3.0 发布，但如果你将压缩包密码保存在内置的“密码管理器”中，你应该知道它现在需要主密码了。</p><p>开发者建议你在当前版本中——也就是更新到新版本之前——设置一个密码，然后右键点击密码列表并选择相应选项。之后你可以替换 PeaZip 配置文件夹中的文件。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/wslc-general-availability/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/linux-app-release-roundup-september-2026" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
