@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YT-DLP 被 IFPI 视为盗版工具 — Linux 中文速报</title>
+<title>Intel 为 Battlemage 在 Linux 7.4 中带来重大改进 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>YT-DLP 被 IFPI 视为盗版工具</h1>
+  <h1>Intel 为 Battlemage 在 Linux 7.4 中带来重大改进</h1>
 
-  <div class="article-summary">国际唱片业联合会（IFPI）向欧盟提交意见，将开源下载工具 yt-dlp 列入盗版观察名单，与非法下载网站归为同类。IFPI 称其为音乐产业的重大难题，并点名四位维护者的 GitHub 账号。yt-dlp 拥有超19.5万 GitHub 星标，支持数千平台，由全球社区维护。该观察名单由欧盟委员会编制，旨在施压境外服务商，不具法律约束力。</div>
+  <div class="article-summary">Intel 为即将进入 Linux 7.4 的 Xe 内核驱动提交了最后一批改进，核心是在迁移队列上实现 CPU binds 和 ULLS（超低延迟调度）。该改进可让 Battlemage 独显在持续处理 GPU 缺页时，拷贝任务快约 30–40µs，冷启动加速更明显，页错误基准测试持续提升数 GB/s。代价是功耗增加，但 ULLS 会在无缺页时自动退出以缓解。该补丁还修复了 Crescent Island 的 ULLS 并新增 Panther Lake 设备 ID。</div>
 
-  <div class="article-body"><p>YT-DLP 被 IFPI 视为盗版工具</p><p>他们向欧盟盗版观察名单提交的意见，将这款开源工具与非法下载网站归为同一类别。</p><p>它在 GitHub 上拥有超过 195,000 颗星，支持数千个平台，并由一个全球开发者社区积极维护。不幸的是，国际唱片业联合会（IFPI）希望将其列入欧盟的盗版观察名单。</p><p>需要说明的是，国际唱片业联合会（IFPI）代表着 70 个国家约 8,000 家唱片公司。</p><p>在向欧盟“假冒与盗版观察名单”磋商提交的意见中，该组织称 yt-dlp 是“音乐产业的重大难题”，并点名了四位维护者的 GitHub 账号。</p><p>该观察名单由欧盟委员会贸易与经济安全总司负责编制，旨在列出被举报参与或协助侵犯版权的欧盟以外在线服务和实体市场。</p><p>虽然听起来很严重，但这项工作并非为了收集法律结论，也不强制要求采取任何形式的直接行动。它更接近一种点名行为，意在向欧盟以外的运营商和政府施压，要求其处理被点名的服务。</p><p>2027 年版名单正在根据截至 2026 年 9 月收到的意见进行汇编，最终名单预计于 2027 年第二季度公布。</p><p>他们的意见说了什么？</p><p>这份意见涵盖了一系列版权执法关切，从 AI 音乐生成器和流媒体欺诈服务到域名注册商。yt-dlp 出现在“流媒体”部分，与 Y2mate 等商业网站归为一组。</p><p>他们将这款工具描述为一种通过解析网页数据并与平台播放端点交互来获取内容的应用程序，GitHub 是其源代码、预编译二进制文件和安装说明的主要分发渠道。</p><p>IFPI 点名了该项目四位维护者的 GitHub 账号：yt-dlp 的创始人，他在 2021 年至 2024 年间领导该项目，以及项目文档中提到的一些核心维护者。</p><p>同一份意见还指出，Y2mate 等平台在大规模协助版权侵权。</p><p>它是工具，不是服务</p><p>正如欧盟委员会所描述的那样，观察名单针对的是位于欧盟以外的在线服务提供商和实体市场。</p><p>从任何传统意义上讲，yt-dlp 都不符合这两种描述。</p><p>IFPI 也承认这一点，并指出该项目的开源性质、其 Unlicense 许可，以及庞大的国际开发者社区，使其“难以遏制和/或移除”。</p><p>从他们的角度来看，没有可封锁的中心域名，没有可切断的支付处理商，也没有可施压要求遵守下架请求的托管提供商。</p><p>源代码在全球分发，任何具备相应技能的人都可以编译它。但这并不意味着 yt-dlp 是一个盗版平台。</p><p>它是一个用于下载音频和视频内容的命令行工具，将其与专门的翻录或盗版网站归为一类，是把通用下载器与主要目的为协助未经授权复制的服务混为一谈。</p><p>观察名单此前曾被用于对商业流媒体翻录平台进行执法。</p><p>Y2mate 和其他十一个流媒体翻录网站于 2025 年在越南被关闭，Y2mate 此前也曾出现在名单上。</p><p>在此之前，2024 年，一家法院裁定托管提供商 Hosting Concepts 对协助规避行为负有责任。这表明，将一款开源命令行工具与那些商业服务相提并论，本身并不能使该工具成为那些服务之一。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热衷于开源软件、定制 PC 组装、赛车运动和探索无尽世界的极客</p></div>
+  <div class="article-body"><p>Intel 为 Battlemage 在 Linux 7.4 中带来重大改进 - Phoronix</p><p>Intel 为 Battlemage 在 Linux 7.4 中带来重大改进</p><p>发布于 2026 年 10 月 2 日下午 02:34（美国东部时间）。</p><p>周四发出了最后一批计划中的 Intel Xe 内核驱动改进，目标针对即将到来的 Linux 7.4 周期。其中有一项重大改进将惠及 Intel 独立 GPU，至少 Battlemage 会从中获得不错的收益。</p><p>本轮 Intel Xe 驱动的主要新增内容是在迁移队列上实现 CPU binds 和 ULLS。虽然听起来不像什么吸引人的功能，但它带来了相当可观的性能收益。Intel 工程师 Matthew Brost 解释道：</p><p>“在 BMG 上，测量显示当 GPU 持续处理缺页时，与在迁移队列上启用 SLPC 的传统 GuC 提交相比，使用 ULLS 的拷贝任务运行约快 30–40µs（取决于测试用例）。从冷 GPU 启动时加速幅度更大。鉴于缺页性能的关键性，ULLS 似乎是一项值得拥有的功能。</p><p>除了驱动遥测之外，UMD 计算基准测试一致显示，在启用 ULLS 后，页错误基准测试持续提升数 GB/s。</p><p>ULLS 会消耗更多功耗（尚未测量），因为分页引擎上会持续运行一个批次。然而，计算 UMD 已经在暴露给用户的引擎上这样做了，因此这似乎是一个值得的权衡。为缓解功耗问题，ULLS 会在一段时间内没有处理任何缺页后退出。</p><p>CPU binds 是 ULLS 正常工作所必需的，因为迁移队列需要对分页硬件引擎的独占访问。因此，这里包含了 CPU binds。</p><p>除了作为 ULLS 的必要条件之外，CPU binds 还应能降低 VM-bind 延迟，提供更清晰的多 tile 和 TLB 失效分层，在缺页风暴期间减轻 GuC 的压力（因为绕过了它），并将内核 bind 与无关的拷贝/清除任务解耦——在缺页被并行处理时尤其有益。在一个并行缺页测试用例中，平均 bind 时间减少了约 15µs。在最坏情况下，2MB 拷贝时间（约 60–140µs）×（页错误线程数 − 1）的延迟原本会加到单个缺页上。降低这一延迟可提高缺页处理程序的整体吞吐量。”</p><p>总体而言，迁移队列的 ULLS 加上 CPU binds 最终看来是一个不错的胜利。此处的 ULLS 指的是</p><p>超低延迟调度（Ultra Low Latency Scheduling）</p><p>这个新的 Xe pull request 还包括针对 Crescent Island 的 ULLS 修复。该 pull 还包含一个新的 Panther Lake 设备 ID 0xB0A1。</p><p>它正在前往 DRM-Next，以便在 10 月下旬 Linux 7.4 合并窗口之前排队。Linux 7.4 稳定版则应在 12 月下旬左右发布。</p><p>Intel Iris 开源驱动现已支持高效的 64 位寻址模式</p><p>Intel 优化专区 1.2 发布，带来新指南与建议</p><p>Intel 媒体驱动 2026Q3 引入 Crescent Island 支持</p><p>Intel 为 Linux 带来显著的内存热插拔性能优化</p><p>Intel 正在开发其 DXVK-IGDEXT，以改善 Arc 显卡上的 Linux 游戏体验</p><p>适用于 Linux 7.4 的 Intel Xe 驱动新增 vRAM 健康检查、降级内存处理</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他</p><p>Fedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法</p><p>Linux 内核开发者考虑添加 AGENTS.md 以帮助指导 AI/LLM 代理</p><p>微软宣布 WSLC 正式可用：Windows 上的 Linux 容器</p><p>西门子关上了有前景的开源 Radioss 项目的大门</p><p>计划用于 Linux 7.4 的 MM 变更带来 +22904539.81%</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/yt-dlp-ifpi-piracy-watchlist/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Intel-CPU-Binds-ULLS-Migration" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

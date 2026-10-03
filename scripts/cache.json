@@ -13671,5 +13671,159 @@
     "title_zh": "Orkas 1.7.2 更新其开源桌面 AI 工作团队",
     "summary_zh": "Orkas 1.7.2 对其开源桌面 AI 工作团队进行了更新，新增多项改进，旨在增强 AI 驱动的任务和本地桌面工作流。",
     "fulltext_zh": "Orkas 1.7.2 更新了其开源桌面 AI 工作团队，带来了新的改进，旨在增强 AI 驱动的任务和本地桌面工作流。\n\n文章《Orkas 1.7.2 更新其开源桌面 AI 工作团队》最初发布于 Linux Today。"
+  },
+  "2d194c113d80fc1355d1199f859f0642": {
+    "id": "2d194c113d80fc1355d1199f859f0642",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/raspberry-pi-2gb-costs-how-much-now",
+    "title_en": "A 2GB Raspberry Pi 4 now costs 50% more than it did at launch",
+    "summary_en": "Raspberry Pi has announced further price increases for its single-board computers driven, of course, by the ongoing cost of memory components. The cost of a 2GB Raspberry Pi 4 or Raspberry Pi 5 jumps by $12.50 (£12) from 1 October, 2026: Model Launch price Old price New price Raspberry Pi 4 (2GB) $45 $55 $67.50 (£64.80) Raspberry Pi 5 (2GB) $50 $65 $77.50 (£74.40) For context, the Raspberry Pi 4 2GB model launched at $45 in 2019. It was later reduced to $35, before increasing back to $45 in 2021",
+    "pub_date": "Fri, 02 Oct 2026 16:15:03 +0000",
+    "title_zh": "2GB Raspberry Pi 4 现价比首发价高出 50%",
+    "summary_zh": "受内存组件成本持续上涨影响，Raspberry Pi 宣布自2026年10月1日起，2GB版Raspberry Pi 4和Raspberry Pi 5价格上调12.50美元。2GB Pi 4首发价45美元，现价67.50美元，涨幅达50%。1GB版本暂未涨价，公司建议用户按需选购并尽量从授权经销商处购买，同时期待未来内存成本回落后能下调价格。",
+    "fulltext_zh": "2GB Raspberry Pi 4 现价比首发价高出 50% - OMG! Ubuntu\n\n当然，其单板计算机的进一步涨价是由内存组件的持续成本所推动的。\n\n自2026年10月1日起，2GB Raspberry Pi 4或Raspberry Pi 5的价格将上涨12.50美元（12英镑）：\n\n作为背景，2GB版Raspberry Pi 4于2019年以45美元首发。后来降至35美元，又在2021年回升至45美元。随后在2月上涨10美元至55美元。如今售价67.50美元的2GB Pi 4，比首发时贵了50%——令人震惊。\n\n过去几年，Raspberry Pi各型号已多次涨价。该公司推出了3GB版Pi 4，以提供更实惠的选择。\n\n尽管该公司表示，在前几轮涨价中它得以维持较低密度单板计算机的价格，但它补充说，持续的行业经济形势意味着这“已变得不可持续”。\n\n“过去两年内存价格急剧上涨，并且仍在继续攀升；与其他公司一样，我们不得不提高许多产品的价格，以跟上生产成本”，该公司在一篇博客文章中写道。\n\n由于内存和存储成本，Pine64也已停止其Linux硬件系列的生产。\n\n也不全是坏消息。Raspberry Pi 4和Raspberry Pi 5的1GB版本价格不变，而Compute Module 4和Compute Module 5的2GB版本同样受到影响——至少目前如此。\n\n鉴于持续的成本压力，Raspberry Pi为爱好者和开发者提供了一些建议。\n\n其一，“确保”他们为任务选择正确的产品，不要为不需要的余量多付钱（甚至指出较旧的型号，如Raspberry Pi 3，可能就足够了）。其二，尽可能只从授权经销商处购买，以确保最低价格。\n\n在最后一丝乐观中，他们认为内存组件的虚高成本将“最终回落”，并且他们期待逆转这些让全球爱好者钱包吃紧的涨价。\n\n阅读本文的各位有多少人拥有Raspberry Pi，你们用它做什么？\n\n数学不是我的强项，但（67.50 − 45）÷ 45 × 100 = 50%，对吧？"
+  },
+  "df614d28c16b07de5e1798ae6375f073": {
+    "id": "df614d28c16b07de5e1798ae6375f073",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12972",
+    "title_en": "Distribution Release: Qubes OS 4.3.2",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The Qubes team has announced the release of Qubes OS 4.3.2, an updated build of the project's security-oriented operating system for single-user desktop computing: \"We're pleased to announce the stable release of Qubes OS 4.3.2. This patch release aims to consolidate all the security updates and bug fixes....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Qubes OS 4.3.2",
+    "summary_zh": "Qubes OS 团队发布了 4.3.2 稳定版，这是一个整合了自上一稳定版以来所有安全更新和错误修复的补丁版本。新版本将默认 Fedora 模板升级至 Fedora 44，kernel-latest 升级至 Linux 7.2，并包含大量错误修复。已知问题涉及从 4.3 之前备份恢复的模板可能仍指向原版本仓库，但全新安装和从 4.2 就地升级的用户不受影响。",
+    "fulltext_zh": "发行版发布：Qubes OS 4.3.2\n\nQubes 团队宣布发布 Qubes OS 4.3.2，这是该项目面向单用户桌面计算的安全导向操作系统的一个更新版本：“我们很高兴地宣布 Qubes OS 4.3.2 稳定版发布。此补丁版本旨在整合自上一个稳定版发布以来发生的所有安全更新和错误修复。我们的目标是提供一种安全便捷的方式，让用户通过最新的 ISO 安装（或重新安装）最新的稳定版 Qubes。ISO 及相关验证文件可在下载页面获取。Qubes 4.3.2 有哪些新内容？默认 Fedora 模板升级至 Fedora 44；kernel-latest 升级至 Linux 7.2；安全更新；大量错误修复。Qubes 4.3.2 中的已知问题：在 4.3.2 中从 4.3 之前的备份恢复的模板，可能仍会指向其原始的 Qubes OS 发行版仓库。在全新 4.3.2 安装上的新模板不受影响。从 4.2 就地升级到 4.3（而非从备份恢复模板）的用户也不受影响，因为就地升级过程已在第 4 阶段包含了上述修复。”请阅读公告的其余部分以获取更多细节和相关链接。\n\nQubes-R4.3.2-x86_64.iso\n\n近期相关新闻和发布\n发行版发布：Qubes OS 4.3.2\n发行版发布：Qubes OS 4.3.0\n发行版发布：Qubes OS 4.2.4\n发行版发布：Qubes OS 4.2.2\n发行版发布：Qubes OS 4.2.0\n开发版发布：Qubes OS 4.2.0 RC5\n\nQubes OS 是一个免费开源、面向单用户桌面计算的安全导向操作系统。Qubes OS 利用基于 Xen 的虚拟化技术，允许创建和管理称为 qubes 的隔离隔间。这些 qubes 以虚拟机（VM）的形式实现。这使得操作系统的每个组件都能与其他部分隔离，防止入侵扩散或信息泄露。\n\nhttps://qubes-os.org/\nhttps://www.mail-archive.com/qubes-users@googlegroups.com/"
+  },
+  "7b4474e0d61373ede9582fab940a2530": {
+    "id": "7b4474e0d61373ede9582fab940a2530",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12971",
+    "title_en": "Distribution Release: Mainstream OS 3.0.0",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Greg Martin has announced the release of Mainstream OS 3.0.0, a milestone version of the project's Arch-derived desktop and gaming Linux distribution with a highly customised Hyprland-based desktop. The new release comes with a long list of improvements: \"A rebuilt Welcome app, smoother gaming with a new Gaming....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Mainstream OS 3.0.0",
+    "summary_zh": "Mainstream OS 3.0.0 发布，这是一个基于 Arch 的桌面与游戏 Linux 发行版，采用高度定制的 Hyprland 桌面。新版本重建了欢迎应用，新增游戏设置页面，改进游戏性能，加入船体式停靠栏和每显示器壁纸，并确保更新和关机时保护用户工作与更改。",
+    "fulltext_zh": "发行版发布：Mainstream OS 3.0.0（DistroWatch.com 新闻）\n\nGreg Martin 宣布发布 Mainstream OS 3.0.0，这是该项目基于 Arch 的桌面和游戏 Linux 发行版的一个里程碑版本，搭载高度定制的基于 Hyprland 的桌面。新版本带来了一长串改进：“重建的欢迎应用，通过新的游戏设置页面实现更流畅的游戏体验，船体式停靠栏和每显示器壁纸，更新和关机时会保护您的工作和更改安全。欢迎应用已重建——选择您的语言、窗口布局、热角和壁纸，然后为栏、停靠栏和窗口装饰设置样式，同时桌面实时预览会随之更新。欢迎应用的应用页面现在可在一屏内显示，按游戏、创作和工作分类，已安装的内容会被标记。游戏开箱即用运行更佳——GameMode（性能加速器）和 MangoHud（屏幕性能显示）已预装，从硬盘加载游戏时桌面保持响应。设置中新增游戏页面——一个开关可在后台运行繁重任务时保持游戏流畅，另外两个开关可帮助某些游戏减少卡顿或加快加载。”\n\n查看完整更改列表。\n\nmainstream-legacy-nvidia-3.0.0.iso\nmainstream-macbook-3.0.0.iso\n\n近期相关新闻和发布\n发行版发布：Mainstream OS 3.0.0\n发行版发布：Mainstream OS 1.3.0\n更多 Mainstream 新闻...\n\nMainstream Linux 是一个基于 Arch 的 Linux 发行版，使用高度定制的桌面，在 Hyprland 合成器之上采用 Quickshell 工具包。它包含多种用户友好的功能，如 Material You 桌面布局、每工作区布局切换、会话恢复选项、游戏模式，以及用于自定义显示器、主题、键绑定、网络和更新的图形化设置工具。该发行版使用 Calamares 系统安装程序，提供多种安装模式，并在每次更新前自动应用 Btrfs 快照。\n\nhttps://mainstreamos.org/\nhttps://github.com/MainstreamOS/dots-hyprland/discussions\n\nAlternat"
+  },
+  "9481ec7a33cd2fa67ce131146a35515e": {
+    "id": "9481ec7a33cd2fa67ce131146a35515e",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12970",
+    "title_en": "Distribution Release: Koozali SME Server 11.0",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Terry Fage has announced the release of Koozali SME Server 11.0. The latest release of the server distribution shifts its base from CentOS to Rocky Linux and introduces an overhaul of the web interface. \"The Koozali SME Server development team is pleased to announce the release of SME....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Koozali SME Server 11.0",
+    "summary_zh": "Koozali SME Server 11.0 正式发布，基础系统从 CentOS 迁移至 Rocky Linux 8.10，支持周期延长至 2029 年。本次更新重点包括现代化改造、硬件支持增强、管理工具改进，并保留长期使用的模板系统。邮件服务器引入 Postfix 处理邮件提交，同时保留 Qpsmtpd 确保向后兼容。软件包管理集成 Koji 构建系统和 Git 版本控制。",
+    "fulltext_zh": "Terry Fage 宣布发布 SME Server 11.0。这个服务器发行版的最新版本将其基础从 CentOS 迁移到 Rocky Linux，并对 Web 界面进行了全面改造。\n\n\"Koozali SME Server 开发团队很高兴地宣布发布 SME Server 11.0，这是 Koozali SME Server 的下一个主要版本。此版本基于 Rocky Linux 8.10。Rocky Linux 8.10 的 EOL（生命周期终止）日期为 2029 年 5 月 31 日。Koozali SME Server 11 标志着一个重大升级，从 CentOS 过渡到 Rocky Linux 8，以实现长期稳定性和安全性。此版本侧重于现代化、改进的硬件支持以及增强的管理工具，并保留了长期使用的模板系统，该系统使 SME Server 成为一款简单且健壮的服务器管理工具。主要功能和更新：基础操作系统升级——过渡到 Rocky Linux 8.10，取代 CentOS，确保持续的稳定性和支持；软件包管理增强——与 Koji 构建系统和 Git 版本控制集成，实现简化的 RPM 软件包构建和仓库管理；邮件服务器改进——引入 Postfix 用于邮件提交，同时保留 Qpsmtpd 用于最终投递，以确保向后兼容。\"\n\n更多信息可在以下文件中找到：\n\nsmeserver-11.0-x86_64.iso\nsmeserver-11.0-x86_64-netinstall.iso\n\n近期相关新闻和发布：\n发行版发布：Koozali SME Server 11.0\n开发版发布：Koozali SME Server 11.0 RC1\n开发版发布：SME Server 11.0 Beta 1\n开发版发布：SME Server 11 Alpha 1\n发行版发布：SME Server 10.1\n发行版发布：SME Server 10.0\n\nKoozali SME Server 是一款完整且多功能的开源 Linux 服务器发行版，适用于家庭以及中小型企业。自 2007 年以来，它一直基于 Red Hat Enterprise Linux、CentOS 和 Rocky Linux 的源代码构建。Koozali SME Server 对任何个人或商业组织均可免费使用，仅通过捐赠获得支持。它被认为可靠且易于使用。"
+  },
+  "35317c972dfaef326294a6f7bbef894c": {
+    "id": "35317c972dfaef326294a6f7bbef894c",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Wine-11.19-Released",
+    "title_en": "Wine 11.19 Released With Wayland Color Management For Vulkan, DNS Query Caching",
+    "summary_en": "We are nearing the point of the Wine 12.0 stable release coming up in early 2027 while for now the Wine 11.xx bi-weekly development releases continue. Out today is Wine 11.19 with a few new features and plenty of fixes...",
+    "pub_date": "Fri, 02 Oct 2026 20:29:10 -0400",
+    "title_zh": "Wine 11.19 发布：为 Vulkan 带来 Wayland 色彩管理，支持 DNS 查询缓存",
+    "summary_zh": "Wine 11.19 开发版发布，新增 GDIPlus 竖排文本支持、Unicode 18.0 字符、DNS 查询缓存和改进的 VBScript 解析器。值得关注的是，Wine Wayland 驱动现已为 Vulkan 色彩空间实现色彩管理协议，提升 Wayland 下 Windows 游戏和应用的色彩准确性。此外还包含 23 项已知错误修复。",
+    "fulltext_zh": "Wine 11.19 发布：为 Vulkan 带来 Wayland 色彩管理，DNS 查询缓存\n\n2026 年 10 月 2 日 20:29 EDT。\n\n随着 Wine 12.0 稳定版预计于 2027 年初发布，我们正日益临近这一节点，而目前 Wine 11.xx 双周开发版仍在持续推出。今日发布的 Wine 11.19 带来了一些新功能和大量修复。\n\nWine 11.19 在 GDIPlus 代码中引入了竖排文本支持。在字符方面，还增加了对 Unicode 18.0 字符的支持。\n\n这个新的开发版现在还支持 DNS 查询缓存，并改进了 VBScript 解析器。\n\n有一项变更未在 Wine 11.19 发布亮点中提及，但值得指出：Wine Wayland 驱动现已为 Vulkan 色彩空间实现色彩管理协议。这提升了在 Wayland 上运行的 Windows 游戏/应用的色彩准确性。更多详情见\n\n在修复方面，Wine 11.19 包含 23 项已知错误修复，涉及各类游戏和其他应用。下载地址及过去两周 Wine 11.19 完整变更列表见\n\nWine-Staging 11.18 新增补丁以进一步改进 WoW64\nWine 11.18 继续构建其 NTOSKRNL 实现\nWine 11.17 发布，初步支持显示模式模拟\nVKD3D 2.1 发布，为上游 Wine 中的 Direct3D 12 带来新功能\nWine 11.16 发布，支持 VA-API 硬件解码，改进 ARM64 支持\nWine 11.15 发布，修复 Wayland 问题及一个 20 年历史的 MSXML3 错误\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nFedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法\nLinux 内核开发者考虑添加 AGENTS.md 以帮助指导 AI/LLM 代理\n微软宣布 WSLC 正式可用：Windows 上的 Linux 容器\n西门子关闭了前景看好的开源 Radioss 项目大门\n计划用于 Linux 7.4 的 MM 变更在一项指标上带来 +22904539.81% 的提升，其他方面收益较为温和\nLinux 内核的 LZ4 压缩代码正在重新同步以获得更好性能和整洁性\n为在搭载 Linux 的所有 Apple M3 系列 SoC 上启用 NVMe 的补丁已发布\nEDG C/C++ 前端已开源\n\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "2bed98c7ee82d55705e0623bd58999e9": {
+    "id": "2bed98c7ee82d55705e0623bd58999e9",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-Apple-Device-Trees",
+    "title_en": "Linux 7.4 To Introduce Initial Device Trees For Apple M4, A18 Pro For MacBook Neo",
+    "summary_en": "Asahi Linux developer Sven Peter today sent out the pull requests of the Apple SoC Device Tree changes they are ready to upstream for the Linux 7.4 merge window happening later this month. Most notable is the initial Device Tree for Apple systems using the base M4 SoC model as well as for the MacBook Neo with the A18 Pro SoC...",
+    "pub_date": "Fri, 02 Oct 2026 16:32:41 -0400",
+    "title_zh": "Linux 7.4 将引入 Apple M4 和 MacBook Neo 所用 A18 Pro 的初始设备树",
+    "summary_zh": "Asahi Linux 开发者 Sven Peter 提交了面向 Linux 7.4 合并窗口的 Apple SoC 设备树更改，最引人注目的是为搭载基础版 M4 SoC 的 Apple 设备以及采用 A18 Pro SoC 的 MacBook Neo 引入初始设备树。这些设备树仅包含 M3 与 M4 之间基本未变的硬件模块，如 CPU 核心、中断控制器、电源状态、看门狗、串口、引脚控制器、i2c 和帧缓冲，尚不足以提供完整的 Linux 使用体验，GPU 等其余功能将在后续内核版本中启用。",
+    "fulltext_zh": "Asahi Linux 开发者 Sven Peter 今天发出了他们准备为本月晚些时候的 Linux 7.4 合并窗口向上游提交的 Apple SoC 设备树更改的拉取请求。最引人注目的是为使用基础版 M4 SoC 的 Apple 系统以及搭载 A18 Pro SoC 的 MacBook Neo 提供的初始设备树。\n\n使用基础版 M4 SoC 的 Apple Mac 以及搭载 A18 Pro 的 MacBook Neo 的初始设备树将在 Linux 7.4 中首次亮相。但正如近期内核中 Apple M3 初始设备树所显示的那样，这并不意味着想要在这些较新 Mac 上运行主线内核的 Linux 用户就能获得可用的体验。它足以开始引导 Linux 内核，但在 GPU 和其他仍有待启用的功能方面，仅此而已。\n\nM4 设备树包含“最少量的硬件”，其中所包含的是 M3 与 M4 两代之间基本未变的硬件模块。已启用的设备包括 CPU 核心、中断控制器、电源状态、看门狗、串口、引脚控制器、i2c 和帧缓冲。其余所有功能将留待 7.4 之后的未来 Linux 内核版本。\n\nM4 设备树适用于 MacBook Pro（14 英寸，M4，2024）、iMac（24 英寸，2x USB-C，M4，2024）、iMac（24 英寸，4x USB-C，M4，2024）、MacBook Air（13 英寸，M4，2025）、MacBook Air（15 英寸，M4，2025）和 Mac Mini（M4，2024）。\n\n对于 MacBook Neo，它与 Apple M4 系列设备相当相似，但使用的是 A 系列 SoC。与 M4 支持一样，它在 Linux 7.4 中的支持将非常有限，只是为了鼓励未来的开发。这一初始启用包括 CPU 核心、中断控制器、看门狗、串口和帧缓冲。\n\n这些初始设备树已在 Linux 7.4 合并窗口之前发布。Sven Peter 还为 Linux 7.4 发出了带有共享 GPIO 支持以及面向较旧 32 位协处理器的 RTKit 崩溃日志支持的补丁。\n\n为在所有基于 Apple M3 的 SoC 上启用 NVMe 的补丁已发布\nGravity Linux 旨在为 Apple M4 及更新设备提供良好体验\n为在 Linux 上启用 Apple Silicon Mac 扬声器和耳机插孔支持的补丁已发布\nApple 视频解码驱动已发布以供上游 Linux 内核审查\nAsahi Linux 现已正式支持 Apple M3 Mac——但附带条件\n为 Apple A18 Pro + MacBook Neo 初始启用而发布的 Linux 补丁\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nFedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法\nLinux 内核开发者考虑添加 AGENTS.md 以帮助指导 AI/LLM 代理\n微软宣布 WSLC 正式可用：Windows 上的 Linux 容器\n西门子关上了有前景的开源 Radioss 项目的大门\n计划用于 Linux 7.4 的 MM 更改在一项指标上带来 +22904539.81% 的提升，其他方面收益较为温和\nLinux 内核的 LZ4 压缩代码正在重新同步以获得更好的性能和整洁性\n为在所有基于 Apple M3 的 SoC 上启用 NVMe 的补丁已发布\nEDG C/C++ 前端已开源\n\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "0dc7608f8dd90dea5cc2555e321c91d7": {
+    "id": "0dc7608f8dd90dea5cc2555e321c91d7",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Intel-CPU-Binds-ULLS-Migration",
+    "title_en": "Intel Ready With A Big Improvement For Battlemage With Linux 7.4",
+    "summary_en": "Sent out on Thursday was the last round of planned Intel Xe kernel driver improvements targeting the upcoming Linux 7.4 cycle. There is one big improvement that is set to benefit Intel discrete GPUs with at least Battlemage benefiting nicely...",
+    "pub_date": "Fri, 02 Oct 2026 14:34:00 -0400",
+    "title_zh": "Intel 为 Battlemage 在 Linux 7.4 中带来重大改进",
+    "summary_zh": "Intel 为即将进入 Linux 7.4 的 Xe 内核驱动提交了最后一批改进，核心是在迁移队列上实现 CPU binds 和 ULLS（超低延迟调度）。该改进可让 Battlemage 独显在持续处理 GPU 缺页时，拷贝任务快约 30–40µs，冷启动加速更明显，页错误基准测试持续提升数 GB/s。代价是功耗增加，但 ULLS 会在无缺页时自动退出以缓解。该补丁还修复了 Crescent Island 的 ULLS 并新增 Panther Lake 设备 ID。",
+    "fulltext_zh": "Intel 为 Battlemage 在 Linux 7.4 中带来重大改进 - Phoronix\n\nIntel 为 Battlemage 在 Linux 7.4 中带来重大改进\n发布于 2026 年 10 月 2 日下午 02:34（美国东部时间）。\n\n周四发出了最后一批计划中的 Intel Xe 内核驱动改进，目标针对即将到来的 Linux 7.4 周期。其中有一项重大改进将惠及 Intel 独立 GPU，至少 Battlemage 会从中获得不错的收益。\n\n本轮 Intel Xe 驱动的主要新增内容是在迁移队列上实现 CPU binds 和 ULLS。虽然听起来不像什么吸引人的功能，但它带来了相当可观的性能收益。Intel 工程师 Matthew Brost 解释道：\n\n“在 BMG 上，测量显示当 GPU 持续处理缺页时，与在迁移队列上启用 SLPC 的传统 GuC 提交相比，使用 ULLS 的拷贝任务运行约快 30–40µs（取决于测试用例）。从冷 GPU 启动时加速幅度更大。鉴于缺页性能的关键性，ULLS 似乎是一项值得拥有的功能。\n\n除了驱动遥测之外，UMD 计算基准测试一致显示，在启用 ULLS 后，页错误基准测试持续提升数 GB/s。\n\nULLS 会消耗更多功耗（尚未测量），因为分页引擎上会持续运行一个批次。然而，计算 UMD 已经在暴露给用户的引擎上这样做了，因此这似乎是一个值得的权衡。为缓解功耗问题，ULLS 会在一段时间内没有处理任何缺页后退出。\n\nCPU binds 是 ULLS 正常工作所必需的，因为迁移队列需要对分页硬件引擎的独占访问。因此，这里包含了 CPU binds。\n\n除了作为 ULLS 的必要条件之外，CPU binds 还应能降低 VM-bind 延迟，提供更清晰的多 tile 和 TLB 失效分层，在缺页风暴期间减轻 GuC 的压力（因为绕过了它），并将内核 bind 与无关的拷贝/清除任务解耦——在缺页被并行处理时尤其有益。在一个并行缺页测试用例中，平均 bind 时间减少了约 15µs。在最坏情况下，2MB 拷贝时间（约 60–140µs）×（页错误线程数 − 1）的延迟原本会加到单个缺页上。降低这一延迟可提高缺页处理程序的整体吞吐量。”\n\n总体而言，迁移队列的 ULLS 加上 CPU binds 最终看来是一个不错的胜利。此处的 ULLS 指的是\n超低延迟调度（Ultra Low Latency Scheduling）\n\n这个新的 Xe pull request 还包括针对 Crescent Island 的 ULLS 修复。该 pull 还包含一个新的 Panther Lake 设备 ID 0xB0A1。\n\n它正在前往 DRM-Next，以便在 10 月下旬 Linux 7.4 合并窗口之前排队。Linux 7.4 稳定版则应在 12 月下旬左右发布。\n\nIntel Iris 开源驱动现已支持高效的 64 位寻址模式\nIntel 优化专区 1.2 发布，带来新指南与建议\nIntel 媒体驱动 2026Q3 引入 Crescent Island 支持\nIntel 为 Linux 带来显著的内存热插拔性能优化\nIntel 正在开发其 DXVK-IGDEXT，以改善 Arc 显卡上的 Linux 游戏体验\n适用于 Linux 7.4 的 Intel Xe 驱动新增 vRAM 健康检查、降级内存处理\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nFedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法\nLinux 内核开发者考虑添加 AGENTS.md 以帮助指导 AI/LLM 代理\n微软宣布 WSLC 正式可用：Windows 上的 Linux 容器\n西门子关上了有前景的开源 Radioss 项目的大门\n计划用于 Linux 7.4 的 MM 变更带来 +22904539.81%"
+  },
+  "407722b69c99669d499dc1ebff525373": {
+    "id": "407722b69c99669d499dc1ebff525373",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Ubuntu-SHA3-For-Debian-APT",
+    "title_en": "Ubuntu Working On SHA3 For Debian's APT For If/When SHA2 Is Broken",
+    "summary_en": "Ubuntu developer Gianpiero Carpinelli at Canonical has been working on introducing SHA3-256 and SHA3-384 support for Debian's APT packaging tool in preparing for if/when that SHA2 is broken...",
+    "pub_date": "Fri, 02 Oct 2026 14:10:00 -0400",
+    "title_zh": "Ubuntu 为 Debian 的 APT 开发 SHA3 支持，以备 SHA2 被破解之需",
+    "summary_zh": "Ubuntu 开发者 Gianpiero Carpinelli 正在为 Debian 的 APT 包管理工具添加 SHA3-256 和 SHA3-384 支持，以应对未来 SHA2 可能被破解的风险。相关代码已提交上游合并请求，SHA3 将作为 SHA2 的备选方案，但默认不启用。此举旨在确保 Ubuntu 24.04 LTS 在 2036 年支持结束前，若 SHA2 被攻破，系统能平滑迁移到更安全的哈希算法。",
+    "fulltext_zh": "Ubuntu 正在为 Debian 的 APT 开发 SHA3 支持，以备 SHA2 被破解之需\n2026 年 10 月 2 日下午 02:10 EDT。\n\nCanonical 的 Ubuntu 开发者 Gianpiero Carpinelli 一直在为 Debian 的 APT 包管理工具引入 SHA3-256 和 SHA3-384 支持，为 SHA2 可能被破解的情况做准备。\n\n最近在 Canonical 围绕 APT 的 SHA3 支持工作的各种开发者更新中，已多次提及此事，本周最终形成了一个开放的合并请求，旨在将 SHA3-256 和 SHA3-384 支持引入上游 APT。这允许在使用新的 SHA3 选项时，将 SHA3 作为 SHA2 的替代方案用于 Release、Packages 和 Sources 文件，但默认不启用。\n\n合并请求中解释了其动机，担心 SHA2 标准可能在 Ubuntu 24.04 LTS 于 2036 年结束支持之前被破解。因此，为了应对这种可能发生的情况，他们现在正努力推出 SHA3 支持，并将其向后移植到 Ubuntu 24.04 LTS，以便在需要为了更好的安全性而切换时做好准备：\n\n“动机：Ubuntu 24.04 的支持期为十到十二年。如果 SHA-2 在此期间被破解，已部署的客户端必须能够理解结构不同的哈希族，以便软件仓库可以迁移到该哈希族。OpenPGP 签名摘要不在范围内。”\n\n到目前为止，SHA2 尚未被破解，但已存在一些不适用于现实世界实现的理论攻击。\n\n有兴趣了解为 APT 开发的 SHA3 支持的人可以查看 Debian.org 的 APT 合并请求。\n\nDebian 推理门户上线，为 Debian 开发者提供免费的 AI/LLM 推理服务\nDebian 13.7 发布，包含大量错误修复\nCERN 在长期作为 RHEL 机构后，将工业计算机迁移至 Debian\nDebian 投票允许“负责任地使用生成式 AI”\nDebian 庆祝 33 岁生日，成为维护最久的 Linux 发行版之一\nDebian 开发者开始就项目内 LLM 使用进行投票\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nFedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法\nLinux 内核开发者考虑添加 AGENTS.md 以帮助指导 AI/LLM 代理\n微软宣布 WSLC 正式可用：Windows 上的 Linux 容器\n西门子关闭了前景看好的开源 Radioss 项目的大门\n计划用于 Linux 7.4 的 MM 变更在某一指标上带来 +22904539.81% 的提升，其他方面收益较为温和\nLinux 内核的 LZ4 压缩代码正在重新同步，以提高性能和整洁度\n为在 Linux 上启用所有基于 Apple M3 的 SoC 的 NVMe 而发布的补丁\nEDG C/C++ 前端已开源\n\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "72389a27a3232f0d1e51dbd4196efec6": {
+    "id": "72389a27a3232f0d1e51dbd4196efec6",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Ryzen-AI-Dev-Platform-Sep-2026",
+    "title_en": "AMD Ryzen AI Developer Platform OS Updated With ROCm 10.0, Linux 7.2",
+    "summary_en": "With the AMD Ryzen AI Halo mini PC that launched this summer that focused on local AI, one of the biggest surprises for me when reviewing the unit was finding that the Linux preload wasn't just a stock Ubuntu/Debian OS but rather a customized AMD Linux distribution known as AMD Ryzen AI Developer Platform. Yesterday the newest version of AMD Ryzen AI Developer Platform was released with some nice software updates...",
+    "pub_date": "Fri, 02 Oct 2026 10:25:45 -0400",
+    "title_zh": "AMD Ryzen AI 开发者平台操作系统更新，搭载 ROCm 10.0 与 Linux 7.2",
+    "summary_zh": "AMD 发布了 2026 年 9 月版的 Ryzen AI 开发者平台操作系统，这是一款基于 Debian 的定制 Linux 发行版。新版本将内核从 Linux 6.18 LTS 升级至 Linux 7.2，并引入 ROCm 10.0 作为 ROCm 7.14 的继任者。此外还包含新的 AMD 开发者中心软件包、面向 Ryzen AI Halo 的 4.00 BIOS 更新，以及用于展示 AMD 或 Debian 重要安全更新的安全板块。",
+    "fulltext_zh": "AMD Ryzen AI 开发者平台操作系统更新，搭载 ROCm 10.0 与 Linux 7.2\n2026 年 10 月 2 日上午 10:25（美国东部时间）。\n\n今年夏天推出的这款专注于本地 AI 的迷你 PC，在评测时最令我惊讶的是，其预装的 Linux 并非普通的 Ubuntu/Debian 系统，而是一个名为 AMD Ryzen AI 开发者平台的 AMD 定制 Linux 发行版。昨天，AMD Ryzen AI 开发者平台发布了最新版本，带来了一些不错的软件更新。\n\n看来 AMD 正以月度发布节奏推进其 Ryzen AI 开发者平台操作系统，这是一个基于 Debian 构建的优秀定制系统。在 2026 年 9 月的新版本中，AMD Ryzen AI 开发者平台从 Linux 6.18 LTS 内核升级到了 Linux 7.2，考虑到 AMDGPU 和 AMDKFD 上游驱动的改进，以及新版 Linux 内核中多项性能优化，这一升级合情合理。\n\n新发行版还运行在 ROCm 10.0 之上，作为此前 ROCm 7.14 的继任者。\n\n此版本还包含新的 AMD 开发者中心软件包，为 AMD Ryzen AI Halo 提供了新的 4.00 BIOS，以及其他更新。更新后的 AMD 开发者中心现在设有安全板块，用于显示来自 AMD 或 Debian 的任何重要安全更新。\n\n有关新版 AMD Ryzen AI 开发者平台 Linux 发行版更新的下载和更多详情，请访问相关链接。\n\nAMD RMPOPT 优化已排队，将在 Linux 7.4 之前推出\nLinux 7.4 将支持 AMD Ryzen AI Max 400 系列“Gorgon Halo”的 NPU\nAMD Ryzen Zen 6 CPU 功耗值正为 Linux 进一步调优\nAMD PerfOpt 将为 AMD iGPU 带来 Linux 7.4 的新性能优化\nAMDXDNA Linux 驱动正为当前 NPU3 硬件增强\nLinux 7.2 与 Linux 7.3 在 AMD Strix Halo 上显示出一些改进\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\nFedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法\nLinux 内核开发者考虑添加 AGENTS.md 以帮助指导 AI/LLM 代理\n微软宣布 WSLC 正式可用：Windows 上的 Linux 容器\n西门子关闭了有前景的开源 Radioss 项目的大门\n计划用于 Linux 7.4 的 MM 变更在一项指标上带来 +22904539.81% 的提升，其他方面收益较为温和\nLinux 内核的 LZ4 压缩代码正在重新同步，以获得更好的性能和整洁度\n为在所有基于 Apple M3 的 SoC 上启用 NVMe 而发布的补丁\nEDG C/C++ 前端已开源\n\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "2b96ff14465cf57c0016e78f21041280": {
+    "id": "2b96ff14465cf57c0016e78f21041280",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/best-free-and-open-source-alternatives-to-apple-journal/",
+    "title_en": "Best Free and Open Source Alternatives to Apple Journal",
+    "summary_en": "Discover the best free and open-source alternatives to Apple Journal for writing daily entries, organizing thoughts, and keeping a private digital journal.\nThe post Best Free and Open Source Alternatives to Apple Journal appeared first on Linux Today.",
+    "pub_date": "Fri, 02 Oct 2026 07:33:12 +0000",
+    "title_zh": "Apple Journal 的最佳免费开源替代品",
+    "summary_zh": "本文介绍了 Apple Journal 的免费开源替代方案，用于撰写每日条目、整理思绪并保存私密数字日记。文章推荐了多款开源日记应用，帮助用户在不依赖苹果生态的情况下实现类似的日记记录功能。",
+    "fulltext_zh": "探索 Apple Journal 的最佳免费开源替代品，用于撰写每日条目、整理思绪并保存私密数字日记。\n\n文章《Apple Journal 的最佳免费开源替代品》最早出现在 Linux Today 上。"
+  },
+  "eb3baa35dea83660dacada6c70909604": {
+    "id": "eb3baa35dea83660dacada6c70909604",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/gnome-50-5-released-with-numerous-bug-and-security-fixes/",
+    "title_en": "GNOME 50.5 Released With Numerous Bug and Security Fixes",
+    "summary_en": "GNOME 50.5 is now available with numerous bug and security fixes, delivering improved stability and reliability across the GNOME 50 desktop series.\nThe post GNOME 50.5 Released With Numerous Bug and Security Fixes appeared first on Linux Today.",
+    "pub_date": "Fri, 02 Oct 2026 07:29:29 +0000",
+    "title_zh": "GNOME 50.5 发布，包含大量错误和安全修复",
+    "summary_zh": "GNOME 50.5 现已发布，带来了大量错误和安全修复，提升了 GNOME 50 桌面系列的稳定性和可靠性。",
+    "fulltext_zh": "GNOME 50.5 现已发布，包含大量错误和安全修复，提升了 GNOME 50 桌面系列的稳定性和可靠性。\n\n文章《GNOME 50.5 发布，包含大量错误和安全修复》最初出现在 Linux Today 上。"
+  },
+  "b1b93de75168efcb0c09a6f6d0435523": {
+    "id": "b1b93de75168efcb0c09a6f6d0435523",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/wireshark-4-6-9-updates-protocol-and-capture-file-support-fixes-more-bugs/",
+    "title_en": "Wireshark 4.6.9 Updates Protocol and Capture File Support, Fixes More Bugs",
+    "summary_en": "Wireshark 4.6.9 updates protocol and capture file support while fixing additional bugs, improving reliability for network analysis and troubleshooting.\nThe post Wireshark 4.6.9 Updates Protocol and Capture File Support, Fixes More Bugs appeared first on Linux Today.",
+    "pub_date": "Fri, 02 Oct 2026 07:27:49 +0000",
+    "title_zh": "Wireshark 4.6.9 更新协议与捕获文件支持，修复更多错误",
+    "summary_zh": "Wireshark 4.6.9 发布，更新了协议和捕获文件支持，并修复了多个错误，提升了网络分析与故障排查的可靠性。",
+    "fulltext_zh": "Wireshark 4.6.9 更新了协议和捕获文件支持，同时修复了更多错误，提升了网络分析与故障排查的可靠性。\n\n文章《Wireshark 4.6.9 更新协议与捕获文件支持，修复更多错误》首次发布于 Linux Today。"
+  },
+  "2a8032a0d24e3de99bb1b19906900565": {
+    "id": "2a8032a0d24e3de99bb1b19906900565",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/sparkylinux-2026-09-released-with-kernel-7-2-and-new-labwc-edition/",
+    "title_en": "SparkyLinux 2026.09 Released With Kernel 7.2 and New Labwc Edition",
+    "summary_en": "SparkyLinux 2026.09 is now available with Linux Kernel 7.2 and a new Labwc edition, alongside updated packages and other system improvements.\nThe post SparkyLinux 2026.09 Released With Kernel 7.2 and New Labwc Edition appeared first on Linux Today.",
+    "pub_date": "Fri, 02 Oct 2026 07:23:40 +0000",
+    "title_zh": "SparkyLinux 2026.09 发布，搭载内核 7.2 和全新 Labwc 版本",
+    "summary_zh": "SparkyLinux 2026.09 正式发布，带来 Linux 内核 7.2 以及全新的 Labwc 桌面版本，同时更新了软件包并包含其他系统改进。",
+    "fulltext_zh": "SparkyLinux 2026.09 现已发布，搭载 Linux 内核 7.2 和全新的 Labwc 版本，同时更新了软件包并包含其他系统改进。\n\n文章《SparkyLinux 2026.09 发布，搭载内核 7.2 和全新 Labwc 版本》最初出现在 Linux Today 上。"
+  },
+  "e2f26c9971a5bfca815a26237c5be6ff": {
+    "id": "e2f26c9971a5bfca815a26237c5be6ff",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/ubuntu-kernels-move-to-weekly-releases-for-faster-cve-fixes/",
+    "title_en": "Ubuntu Kernels Move to Weekly Releases for Faster CVE Fixes",
+    "summary_en": "Ubuntu kernels are moving to a weekly release schedule, allowing Canonical to deliver CVE fixes and other security updates to users more quickly.\nThe post Ubuntu Kernels Move to Weekly Releases for Faster CVE Fixes appeared first on Linux Today.",
+    "pub_date": "Fri, 02 Oct 2026 07:21:53 +0000",
+    "title_zh": "Ubuntu内核改为每周发布，以加快CVE修复",
+    "summary_zh": "Ubuntu内核将改为每周发布一次，以便Canonical更快地向用户提供CVE修复和其他安全更新。",
+    "fulltext_zh": "Ubuntu内核正在转向每周发布计划，使Canonical能够更快地向用户提供CVE修复和其他安全更新。\n\n文章《Ubuntu内核改为每周发布，以加快CVE修复》首先出现在Linux Today上。"
   }
 }

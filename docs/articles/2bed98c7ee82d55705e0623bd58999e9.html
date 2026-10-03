@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YT-DLP 被 IFPI 视为盗版工具 — Linux 中文速报</title>
+<title>Linux 7.4 将引入 Apple M4 和 MacBook Neo 所用 A18 Pro 的初始设备树 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>YT-DLP 被 IFPI 视为盗版工具</h1>
+  <h1>Linux 7.4 将引入 Apple M4 和 MacBook Neo 所用 A18 Pro 的初始设备树</h1>
 
-  <div class="article-summary">国际唱片业联合会（IFPI）向欧盟提交意见，将开源下载工具 yt-dlp 列入盗版观察名单，与非法下载网站归为同类。IFPI 称其为音乐产业的重大难题，并点名四位维护者的 GitHub 账号。yt-dlp 拥有超19.5万 GitHub 星标，支持数千平台，由全球社区维护。该观察名单由欧盟委员会编制，旨在施压境外服务商，不具法律约束力。</div>
+  <div class="article-summary">Asahi Linux 开发者 Sven Peter 提交了面向 Linux 7.4 合并窗口的 Apple SoC 设备树更改，最引人注目的是为搭载基础版 M4 SoC 的 Apple 设备以及采用 A18 Pro SoC 的 MacBook Neo 引入初始设备树。这些设备树仅包含 M3 与 M4 之间基本未变的硬件模块，如 CPU 核心、中断控制器、电源状态、看门狗、串口、引脚控制器、i2c 和帧缓冲，尚不足以提供完整的 Linux 使用体验，GPU 等其余功能将在后续内核版本中启用。</div>
 
-  <div class="article-body"><p>YT-DLP 被 IFPI 视为盗版工具</p><p>他们向欧盟盗版观察名单提交的意见，将这款开源工具与非法下载网站归为同一类别。</p><p>它在 GitHub 上拥有超过 195,000 颗星，支持数千个平台，并由一个全球开发者社区积极维护。不幸的是，国际唱片业联合会（IFPI）希望将其列入欧盟的盗版观察名单。</p><p>需要说明的是，国际唱片业联合会（IFPI）代表着 70 个国家约 8,000 家唱片公司。</p><p>在向欧盟“假冒与盗版观察名单”磋商提交的意见中，该组织称 yt-dlp 是“音乐产业的重大难题”，并点名了四位维护者的 GitHub 账号。</p><p>该观察名单由欧盟委员会贸易与经济安全总司负责编制，旨在列出被举报参与或协助侵犯版权的欧盟以外在线服务和实体市场。</p><p>虽然听起来很严重，但这项工作并非为了收集法律结论，也不强制要求采取任何形式的直接行动。它更接近一种点名行为，意在向欧盟以外的运营商和政府施压，要求其处理被点名的服务。</p><p>2027 年版名单正在根据截至 2026 年 9 月收到的意见进行汇编，最终名单预计于 2027 年第二季度公布。</p><p>他们的意见说了什么？</p><p>这份意见涵盖了一系列版权执法关切，从 AI 音乐生成器和流媒体欺诈服务到域名注册商。yt-dlp 出现在“流媒体”部分，与 Y2mate 等商业网站归为一组。</p><p>他们将这款工具描述为一种通过解析网页数据并与平台播放端点交互来获取内容的应用程序，GitHub 是其源代码、预编译二进制文件和安装说明的主要分发渠道。</p><p>IFPI 点名了该项目四位维护者的 GitHub 账号：yt-dlp 的创始人，他在 2021 年至 2024 年间领导该项目，以及项目文档中提到的一些核心维护者。</p><p>同一份意见还指出，Y2mate 等平台在大规模协助版权侵权。</p><p>它是工具，不是服务</p><p>正如欧盟委员会所描述的那样，观察名单针对的是位于欧盟以外的在线服务提供商和实体市场。</p><p>从任何传统意义上讲，yt-dlp 都不符合这两种描述。</p><p>IFPI 也承认这一点，并指出该项目的开源性质、其 Unlicense 许可，以及庞大的国际开发者社区，使其“难以遏制和/或移除”。</p><p>从他们的角度来看，没有可封锁的中心域名，没有可切断的支付处理商，也没有可施压要求遵守下架请求的托管提供商。</p><p>源代码在全球分发，任何具备相应技能的人都可以编译它。但这并不意味着 yt-dlp 是一个盗版平台。</p><p>它是一个用于下载音频和视频内容的命令行工具，将其与专门的翻录或盗版网站归为一类，是把通用下载器与主要目的为协助未经授权复制的服务混为一谈。</p><p>观察名单此前曾被用于对商业流媒体翻录平台进行执法。</p><p>Y2mate 和其他十一个流媒体翻录网站于 2025 年在越南被关闭，Y2mate 此前也曾出现在名单上。</p><p>在此之前，2024 年，一家法院裁定托管提供商 Hosting Concepts 对协助规避行为负有责任。这表明，将一款开源命令行工具与那些商业服务相提并论，本身并不能使该工具成为那些服务之一。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热衷于开源软件、定制 PC 组装、赛车运动和探索无尽世界的极客</p></div>
+  <div class="article-body"><p>Asahi Linux 开发者 Sven Peter 今天发出了他们准备为本月晚些时候的 Linux 7.4 合并窗口向上游提交的 Apple SoC 设备树更改的拉取请求。最引人注目的是为使用基础版 M4 SoC 的 Apple 系统以及搭载 A18 Pro SoC 的 MacBook Neo 提供的初始设备树。</p><p>使用基础版 M4 SoC 的 Apple Mac 以及搭载 A18 Pro 的 MacBook Neo 的初始设备树将在 Linux 7.4 中首次亮相。但正如近期内核中 Apple M3 初始设备树所显示的那样，这并不意味着想要在这些较新 Mac 上运行主线内核的 Linux 用户就能获得可用的体验。它足以开始引导 Linux 内核，但在 GPU 和其他仍有待启用的功能方面，仅此而已。</p><p>M4 设备树包含“最少量的硬件”，其中所包含的是 M3 与 M4 两代之间基本未变的硬件模块。已启用的设备包括 CPU 核心、中断控制器、电源状态、看门狗、串口、引脚控制器、i2c 和帧缓冲。其余所有功能将留待 7.4 之后的未来 Linux 内核版本。</p><p>M4 设备树适用于 MacBook Pro（14 英寸，M4，2024）、iMac（24 英寸，2x USB-C，M4，2024）、iMac（24 英寸，4x USB-C，M4，2024）、MacBook Air（13 英寸，M4，2025）、MacBook Air（15 英寸，M4，2025）和 Mac Mini（M4，2024）。</p><p>对于 MacBook Neo，它与 Apple M4 系列设备相当相似，但使用的是 A 系列 SoC。与 M4 支持一样，它在 Linux 7.4 中的支持将非常有限，只是为了鼓励未来的开发。这一初始启用包括 CPU 核心、中断控制器、看门狗、串口和帧缓冲。</p><p>这些初始设备树已在 Linux 7.4 合并窗口之前发布。Sven Peter 还为 Linux 7.4 发出了带有共享 GPIO 支持以及面向较旧 32 位协处理器的 RTKit 崩溃日志支持的补丁。</p><p>为在所有基于 Apple M3 的 SoC 上启用 NVMe 的补丁已发布</p><p>Gravity Linux 旨在为 Apple M4 及更新设备提供良好体验</p><p>为在 Linux 上启用 Apple Silicon Mac 扬声器和耳机插孔支持的补丁已发布</p><p>Apple 视频解码驱动已发布以供上游 Linux 内核审查</p><p>Asahi Linux 现已正式支持 Apple M3 Mac——但附带条件</p><p>为 Apple A18 Pro + MacBook Neo 初始启用而发布的 Linux 补丁</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他</p><p>Fedora 讨论提出用 Collabora Office 替换 LibreOffice 的想法</p><p>Linux 内核开发者考虑添加 AGENTS.md 以帮助指导 AI/LLM 代理</p><p>微软宣布 WSLC 正式可用：Windows 上的 Linux 容器</p><p>西门子关上了有前景的开源 Radioss 项目的大门</p><p>计划用于 Linux 7.4 的 MM 更改在一项指标上带来 +22904539.81% 的提升，其他方面收益较为温和</p><p>Linux 内核的 LZ4 压缩代码正在重新同步以获得更好的性能和整洁性</p><p>为在所有基于 Apple M3 的 SoC 上启用 NVMe 的补丁已发布</p><p>EDG C/C++ 前端已开源</p><p>同时享受无广告浏览、</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/yt-dlp-ifpi-piracy-watchlist/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.4-Apple-Device-Trees" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
