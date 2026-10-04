@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wireshark 4.6.9 更新协议与捕获文件支持，修复更多错误 — Linux 中文速报</title>
+<title>Linux 补丁显示在降低短切片任务延迟方面取得可喜成果 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">Linux Today</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Wireshark 4.6.9 更新协议与捕获文件支持，修复更多错误</h1>
+  <h1>Linux 补丁显示在降低短切片任务延迟方面取得可喜成果</h1>
 
-  <div class="article-summary">Wireshark 4.6.9 发布，更新了协议和捕获文件支持，并修复了多个错误，提升了网络分析与故障排查的可靠性。</div>
+  <div class="article-summary">Linaro 工程师 Vincent Guittot 提交了一组 18 个补丁，旨在改进 Linux 内核调度器的延迟表现，尤其是在同一系统上并发运行多个短切片任务时。这些补丁基于其近几个月的工作，修复了调度器代码中的多个缺陷。通过 cyclictest 和 Hackbench 基准测试，峰值延迟等指标获得显著改善。补丁还包含正滞后衰减、选择 CPU 时考虑切片等多项调整。</div>
 
-  <div class="article-body"><p>Wireshark 4.6.9 更新了协议和捕获文件支持，同时修复了更多错误，提升了网络分析与故障排查的可靠性。</p><p>文章《Wireshark 4.6.9 更新协议与捕获文件支持，修复更多错误》首次发布于 Linux Today。</p></div>
+  <div class="article-body"><p>Linaro 工程师 Vincent Guittot 于周五发送了一组补丁，致力于改进调度延迟，尤其是在同一系统上并发运行多个短切片任务时。</p><p>这组 18 个补丁基于 Guittot 近几个月为解决 Linux 内核调度器代码中不同缺陷所开展的工作。</p><p>对最终用户简单来说，使用 cyclictest 和 Hackbench 基准测试对调度器施加压力时，Vincent 取得了非常不错的改进，尤其是在观察到的峰值延迟方面：</p><p>Vincent 还指出了这些调度器改进带来的其他各种提升，包括实现正滞后的衰减、在选择 CPU 时考虑切片以及其他调整。有兴趣了解更多数据和这项工作的所有细节的人，可以通过以下链接查看完整信息：</p><p>提议在启动时设置 ARM64 内核栈大小以减少内存消耗</p><p>Linux 7.3-rc5 发布：“又一周，又一个大型 RC”</p><p>Linux 内核的 LZ4 压缩代码正在重新同步以获得更好的性能和整洁性</p><p>计划用于 Linux 7.4 的 MM 变更在一项指标上带来 +22904539.81% 的提升，在其他方面收益较为温和</p><p>Linux 7.3-rc5 DRM 的 AI 错误修复、Crescent Island 功率制动与 Nouveau 修复</p><p>Linux 内核开发者考虑添加 AGENTS.md 以帮助指导 AI/LLM 代理</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>西门子关闭了有前景的开源 Radioss 项目的大门</p><p>Valve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面所做的出色工作</p><p>微软宣布 WSLC 正式可用：Windows 上的 Linux 容器</p><p>计划用于 Linux 7.4 的 MM 变更在一项指标上带来 +22904539.81% 的提升，在其他方面收益较为温和</p><p>EDG C/C++ 前端已开源</p><p>Linux 内核的 LZ4 压缩代码正在重新同步以获得更好的性能和整洁性</p><p>为在搭载 Linux 的所有 Apple M3 系列 SoC 上启用 NVMe 而发布的补丁</p><p>Firefox 157 现已发布，带来视觉刷新、WebRTC 硬件 AV1 解码</p><p>同时拥有无广告浏览、</p><p>单页文章视图</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026，</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/wireshark-4-6-9-updates-protocol-and-capture-file-support-fixes-more-bugs/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-Latency-Short-Slice-Tasks" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

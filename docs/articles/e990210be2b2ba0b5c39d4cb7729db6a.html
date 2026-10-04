@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wireshark 4.6.9 更新协议与捕获文件支持，修复更多错误 — Linux 中文速报</title>
+<title>Arm 为 Linux 开发 &quot;TLBID&quot; 以提升高核心数 CPU 性能 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #10b9811a; color: #10b981;
-    border: 1px solid #10b98130;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">软件应用</span>
-    <span class="source">Linux Today</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Wireshark 4.6.9 更新协议与捕获文件支持，修复更多错误</h1>
+  <h1>Arm 为 Linux 开发 &quot;TLBID&quot; 以提升高核心数 CPU 性能</h1>
 
-  <div class="article-summary">Wireshark 4.6.9 发布，更新了协议和捕获文件支持，并修复了多个错误，提升了网络分析与故障排查的可靠性。</div>
+  <div class="article-summary">Arm 本周发布了初始补丁集，为 Linux 内核添加 TLBI Domains（TLBID）支持。该功能允许仅对部分 CPU 核心执行 TLB 失效，而非全系统范围，从而降低高核心数 Arm 服务器处理器的开销。TLBID 尚未纳入 Arm 架构参考手册，且依赖 LLVM 23 或 GNU Binutils 2.46 以上版本，距离实际芯片应用尚需时日。</div>
 
-  <div class="article-body"><p>Wireshark 4.6.9 更新了协议和捕获文件支持，同时修复了更多错误，提升了网络分析与故障排查的可靠性。</p><p>文章《Wireshark 4.6.9 更新协议与捕获文件支持，修复更多错误》首次发布于 Linux Today。</p></div>
+  <div class="article-body"><p>Arm 本周发布了一组初始补丁，致力于在 Linux 内核中支持 TLBI Domains。这项 &quot;TLBID&quot; 功能是 Arm 架构即将推出的一项能力，旨在提升高核心数系统的性能。</p><p>借助 TLBID，可以仅对一部分 CPU 核心执行转译后备缓冲器（TLB）失效，而不必始终在全系统范围内执行 TLB 失效。</p><p>他们正在着手完善 Linux 内核支持，使 TLBI 命令仅发送到给定进程曾运行过的 CPU，从而避免为整个系统清除 TLB 所带来的开销。这对于高核心数的 Arm 服务器处理器尤为有益。</p><p>目前尚未分享任何性能数据，而且由于 TLBID 尚未成为 Arm 架构参考手册的一部分，距离在芯片中看到该功能可能还需要一段时间。</p><p>除了 Linux 内核补丁之外，ARM64 TLBID 支持还依赖于 LLVM 23 及更新版本，或 GNU Binutils 2.46 及更新版本，以提供必要的指令支持。</p><p>对面向未来 Arm 处理器设计的 TLBID 工作感兴趣的人，可以通过 Linux 内核邮件列表了解相关信息。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.linuxtoday.com/blog/wireshark-4-6-9-updates-protocol-and-capture-file-support-fixes-more-bugs/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/ARM64-Linux-TLBI-Domains" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
