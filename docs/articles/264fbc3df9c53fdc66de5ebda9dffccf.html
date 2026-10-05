@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>微软向所有人开放 WSL 容器 — Linux 中文速报</title>
+<title>Linux 开始为富士通 MONAKA CPU 缺陷引入规避措施 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>微软向所有人开放 WSL 容器</h1>
+  <h1>Linux 开始为富士通 MONAKA CPU 缺陷引入规避措施</h1>
 
-  <div class="article-summary">微软宣布 WSL 容器（WSLC）结束公开预览，正式向所有用户开放。新版本提供专用命令行工具 wslc、Windows API、Consommé 网络模型，以及 Intune 注册表控制。Defender for Endpoint 的 WSL 插件也扩展至覆盖容器活动。用户可通过 wsl --update 获取包含 WSLC 的最新 WSL 版本，并使用新命令管理容器。</div>
+  <div class="article-summary">富士通正式发布面向 AI 基础设施的 144 核 Arm 服务器处理器 MONAKA 后，Linux 内核本周出现多个针对该 CPU 缺陷的规避补丁。这些补丁引入了 MONAKA 的 CPU 类型检测，并分别解决 TLB 失效、PMU 溢出误判以及 CPU 核心挂起三类问题。</div>
 
-  <div class="article-body"><p>微软向所有人开放 WSL 容器</p><p>此前处于公开预览阶段，现在它提供了新命令、Consommé 网络和 Intune 注册表控制。</p><p>微软通过两部分系列博客宣布，WSL 容器（WSLC）已从公开预览阶段转为正式发布。让我们来看看它提供了什么。</p><p>新版本附带了一个专用命令行工具，用于在 Windows 上进行 Linux 容器工作流。它内置了一个别名，供喜欢该语法的用户使用。</p><p>同时还附带了一个 Windows API，让原生 Windows 应用程序能够直接从代码中启动和管理容器，以及一些新命令，包括用于跟踪容器活动的命令。</p><p>网络通过一个名为 Consommé 的新模型处理，容器流量以特定形式离开虚拟机，并由在调用用户账户下运行的 Windows 进程接收。该进程处理 DNS、路由和端口映射，让流量像任何其他 Windows 进程一样通过 VPN 和防火墙。</p><p>此外，Microsoft Intune 新增了两项专门针对 WSL 容器的设置。第一项让管理员可以在受管设备上完全启用或禁用对 WSLC 功能的访问。第二项是容器注册表允许列表，将镜像拉取限制在定义的一组已批准来源中。</p><p>Microsoft Defender for Endpoint 的 WSL 插件也已扩展至覆盖容器活动。它可以从 WSLC 内部检索进程、文件和网络事件，并将它们连接回 Windows 主机。</p><p>首先你需要了解适用于 Linux 的 Windows 子系统（WSL），它让开发者可以直接在 Windows 上运行 Linux 环境，而无需分区硬盘或设置单独的 Linux 机器。</p><p>自 WSL 2 以来，它在受管理的虚拟机内附带了一个真正的 Linux 内核，让用户可以从 Windows 内部访问 Linux 工具、发行版和命令行工作流。</p><p>WSLC 进一步扩展了这一点，在同一 WSL 环境中添加了一个专用层，用于创建和管理 Linux 容器，使容器化工作流成为该设置的原生组成部分。</p><p>它还通过一个专用的子进程将容器操作与主 WSL 服务分离，该进程在当前用户账户下运行。这使每个会话保持隔离，并使容器操作处于比 WSL 服务本身更低的权限状态。</p><p>对于已经在 WSL 中工作的开发者来说，这意味着容器化应用程序可以在同一环境中运行，而无需借助单独的工具。Windows API 的暴露也意味着原生 Windows 应用程序可以以编程方式与容器交互。</p><p>如果你想了解更多，WSLC 架构深入解析是必读内容。</p><p>在终端中运行 wsl --update 会拉取最新的 WSL 版本，其中包含 WSL 容器。更新后，你可以使用这些新命令来管理你的容器。👇</p><p>wslc container restart</p><p>以 tar 归档形式在容器之间传输文件。</p><p>检查你的 WSLC 环境状态。</p><p>wslc network disconnect</p><p>将容器加入网络或从网络移除。</p><p>创建网络，支持自定义驱动选项。</p><p>如需完整变更日志和源代码访问，请前往 WSL 3.0.1 的发布页面。</p><p>喜欢这个更新吗？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的极客。</p><p>荷兰选择了 NixOS。法国已经在使用它</p><p>openSUSE Leap 现在是不可变发行版，Leap Micro 已退出</p><p>Firefox 换新装！Nova 重新设计已成为默认</p><p>postmarketOS 不再存在，至少在那个名字下</p><p>GhostBSD 正在用一个新的桌面环境替换 MATE，该桌面以一个拼写错误命名</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周新闻通讯</p></div>
+  <div class="article-body"><p>Linux 开始为富士通 MONAKA CPU 缺陷引入规避措施</p><p>2026 年 10 月 4 日 06:31 EDT。</p><p>富士通正式宣布其 MONAKA CPU，这是一款面向 AI 基础设施的 144 核 Arm 服务器处理器。此前两年间，我们已经看到针对 GCC 编译器和其他开源组件的各种补丁。如今 MONAKA 正式发布，我们看到更多 Linux 内核补丁浮出水面，本周就出现了多个针对 MONAKA CPU 缺陷的规避措施。</p><p>作为一款 ARM64 CPU 设计，富士通 MONAKA 在 Linux 支持方面总体状况良好——尤其是在服务器领域符合标准，无需为 MONAKA 服务器处理系统设备树之类的问题。本周的补丁引入了 Linux 内核中的 MONAKA CPU 类型检测，以便为不同缺陷提供规避措施。</p><p>MONAKA 的第一个规避措施针对的是：基于范围的 TLBI 操作在针对 VA 或 IPA 时，在某些情况下可能无法使 TLB 条目失效。因此 Linux 内核需要发出额外的 TLBI 指令，以确保正确的 TLB 失效发生。这仅在 MONAKA 使用 64K 内核时存在，但出于性能原因，无论如何都推荐使用 64K 内核。</p><p>还有一个针对另一个缺陷的规避措施：PMU 溢出可能被错误检测。这反过来可能导致 MONAKA 上出现中断风暴。</p><p>本周针对 Linux 上 MONAKA 的第三个规避措施是处理可能的 CPU 核心挂起。问题在于，当 SGI 生成时，如果该操作与 CPU 处理更高优先级中断、更新待处理中断或 PE 转换到睡眠状态发生竞争，SGI 可能会丢失。在这种情况下，系统寄存器写入无法完成，可能导致发出请求的 CPU 核心挂起。</p><p>有兴趣的读者可以通过这个 MONAKA 补丁系列了解更多。</p><p>Linux 7.3 将更好地支持高端 Turtle Beach VelocityOne Race</p><p>高通继续为其开源 Linux 图形驱动做更多工作</p><p>新的 Linux 补丁尝试将瑞萨 SH7305 CPU 支持主线化</p><p>搭载 AMD Ryzen AI Max+ PRO 495 的 Framework Desktop 起售价为 6799 美元</p><p>基于 BPF 的显示面板驱动正在为 Linux 探索</p><p>支持联想 ThinkPad X1 Carbon G14 第二摄像头的新 Linux 补丁</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Valve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面的出色工作</p><p>西门子关上了有前景的开源 Radioss 项目的大门</p><p>Linux 7.4 将为 MacBook Neo 引入 Apple M4、A18 Pro 的初始设备树</p><p>NVIDIA 进行 Wayland 与 X.Org 延迟测试的结果</p><p>微软宣布 WSLC 正式可用：Windows 上的 Linux 容器</p><p>AMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0、Linux 7.2</p><p>Linux 7.4 将支持树莓派 10 英寸触摸显示屏 2</p><p>计划进入 Linux 7.4 的 MM 改动在一项指标上带来 +22904539.81% 的提升，其他方面收益较为温和</p><p>同时享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026，保留所有权利。所有使用的商标均为其各自所有者的财产。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/wslc-general-availability/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-MONAKA-CPU-Workarounds" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>微软向所有人开放 WSL 容器 — Linux 中文速报</title>
+<title>OpenCourant：Rocky Linux 开发者创建 OpenRadioss 社区分支 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>微软向所有人开放 WSL 容器</h1>
+  <h1>OpenCourant：Rocky Linux 开发者创建 OpenRadioss 社区分支</h1>
 
-  <div class="article-summary">微软宣布 WSL 容器（WSLC）结束公开预览，正式向所有用户开放。新版本提供专用命令行工具 wslc、Windows API、Consommé 网络模型，以及 Intune 注册表控制。Defender for Endpoint 的 WSL 插件也扩展至覆盖容器活动。用户可通过 wsl --update 获取包含 WSLC 的最新 WSL 版本，并使用新命令管理容器。</div>
+  <div class="article-summary">西门子关闭 OpenRadioss 项目并删除其 GitHub 仓库后，Rocky Linux 创始人 Brian Clemens 发起社区分支 OpenCourant，基于最后公开的开源快照继续开发。该项目沿用 AGPLv3 许可，由 Rocky 企业软件基金会运营，但面临部分二进制依赖缺失的问题，正寻求社区帮助。</div>
 
-  <div class="article-body"><p>微软向所有人开放 WSL 容器</p><p>此前处于公开预览阶段，现在它提供了新命令、Consommé 网络和 Intune 注册表控制。</p><p>微软通过两部分系列博客宣布，WSL 容器（WSLC）已从公开预览阶段转为正式发布。让我们来看看它提供了什么。</p><p>新版本附带了一个专用命令行工具，用于在 Windows 上进行 Linux 容器工作流。它内置了一个别名，供喜欢该语法的用户使用。</p><p>同时还附带了一个 Windows API，让原生 Windows 应用程序能够直接从代码中启动和管理容器，以及一些新命令，包括用于跟踪容器活动的命令。</p><p>网络通过一个名为 Consommé 的新模型处理，容器流量以特定形式离开虚拟机，并由在调用用户账户下运行的 Windows 进程接收。该进程处理 DNS、路由和端口映射，让流量像任何其他 Windows 进程一样通过 VPN 和防火墙。</p><p>此外，Microsoft Intune 新增了两项专门针对 WSL 容器的设置。第一项让管理员可以在受管设备上完全启用或禁用对 WSLC 功能的访问。第二项是容器注册表允许列表，将镜像拉取限制在定义的一组已批准来源中。</p><p>Microsoft Defender for Endpoint 的 WSL 插件也已扩展至覆盖容器活动。它可以从 WSLC 内部检索进程、文件和网络事件，并将它们连接回 Windows 主机。</p><p>首先你需要了解适用于 Linux 的 Windows 子系统（WSL），它让开发者可以直接在 Windows 上运行 Linux 环境，而无需分区硬盘或设置单独的 Linux 机器。</p><p>自 WSL 2 以来，它在受管理的虚拟机内附带了一个真正的 Linux 内核，让用户可以从 Windows 内部访问 Linux 工具、发行版和命令行工作流。</p><p>WSLC 进一步扩展了这一点，在同一 WSL 环境中添加了一个专用层，用于创建和管理 Linux 容器，使容器化工作流成为该设置的原生组成部分。</p><p>它还通过一个专用的子进程将容器操作与主 WSL 服务分离，该进程在当前用户账户下运行。这使每个会话保持隔离，并使容器操作处于比 WSL 服务本身更低的权限状态。</p><p>对于已经在 WSL 中工作的开发者来说，这意味着容器化应用程序可以在同一环境中运行，而无需借助单独的工具。Windows API 的暴露也意味着原生 Windows 应用程序可以以编程方式与容器交互。</p><p>如果你想了解更多，WSLC 架构深入解析是必读内容。</p><p>在终端中运行 wsl --update 会拉取最新的 WSL 版本，其中包含 WSL 容器。更新后，你可以使用这些新命令来管理你的容器。👇</p><p>wslc container restart</p><p>以 tar 归档形式在容器之间传输文件。</p><p>检查你的 WSLC 环境状态。</p><p>wslc network disconnect</p><p>将容器加入网络或从网络移除。</p><p>创建网络，支持自定义驱动选项。</p><p>如需完整变更日志和源代码访问，请前往 WSL 3.0.1 的发布页面。</p><p>喜欢这个更新吗？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的极客。</p><p>荷兰选择了 NixOS。法国已经在使用它</p><p>openSUSE Leap 现在是不可变发行版，Leap Micro 已退出</p><p>Firefox 换新装！Nova 重新设计已成为默认</p><p>postmarketOS 不再存在，至少在那个名字下</p><p>GhostBSD 正在用一个新的桌面环境替换 MATE，该桌面以一个拼写错误命名</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周新闻通讯</p></div>
+  <div class="article-body"><p>OpenCourant：Rocky Linux 开发者创建 OpenRadioss 社区分支</p><p>2026年10月4日下午01:51 EDT。</p><p>本周，西门子关闭 OpenRadioss 项目的决定令人意外且遗憾。该项目由 Altair Engineering 四年前创立，基于其著名的 Radioss 有限元求解器。西门子不仅终止了项目，还关闭了托管开源代码的 GitHub 仓库，并移除了围绕该项目建立的其他资源。幸运的是，OpenRadioss 有了一个新的社区分支——OpenCourant。</p><p>Rocky Linux 及 Rocky 企业软件基金会（RESF）的创始人兼副总裁 Brian Clemens 发起了 OpenCourant，作为 OpenRadioss 的社区分支。OpenCourant 基于西门子关闭并移除 Git 仓库访问权限之前最后一个公开已知的开源 OpenRadioss 快照。</p><p>OpenCourant 在其新项目页面上将自己描述为 OpenRadioss 的社区延续：</p><p>“OpenCourant 是一个开源有限元求解器，用于碰撞、冲击和高度非线性动力学仿真——在 GNU AGPL 许可下，公开地延续 OpenRadioss 代码库，这是它应有的归属。”</p><p>OpenCourant 继续沿用 OpenRadioss 的 AGPLv3 许可，并将作为 Rocky 企业软件基金会的一部分运营。</p><p>不过，他们遇到了一个小问题：OpenRadioss 的一部分由二进制依赖组成，且在西门子移除仓库之前并未获得最新版本。有关详情，请参见此讨论帖，如果有人恰好拥有较新的 OpenRadioss 二进制文件，欢迎提供。</p><p>希望 OpenCourant 能够顺利发展，延续 OpenRadioss 留下的成功。我期待在未来的基准测试文章中使用 OpenCourant。</p><p>西门子关上了有前途的开源 Radioss 项目的大门</p><p>Shotcut 26.9 视频编辑器带来界面改进和自动音频闪避</p><p>Samba 4.25 发布，包含实验性 SMB3 持久句柄</p><p>ZLUDA 现已通过 hipFFT 实现部分 NVIDIA cuFFT API</p><p>OpenVDB 引入 SIMD 框架，部分性能提升 2~4 倍</p><p>GIMP 3.2.6 发布，为最终 GTK4 移植做了一些早期准备</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Valve 的 Timur Kristóf 在改善 Linux 上旧款 AMD GPU 方面所做的出色工作</p><p>西门子关上了有前途的开源 Radioss 项目的大门</p><p>Linux 7.4 将为 Apple M4、A18 Pro 引入初始设备树，用于 MacBook Neo</p><p>NVIDIA 进行 Wayland 与 X.Org 延迟测试的结果</p><p>微软宣布 WSLC 正式可用：Windows 上的 Linux 容器</p><p>AMD Ryzen AI 开发者平台操作系统更新，包含 ROCm 10.0、Linux 7.2</p><p>Linux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2</p><p>计划在 Linux 7.4 中进行的 MM 变更在一项指标上带来 +22904539.81% 的提升，其他方面收益较为温和</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026，</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/wslc-general-availability/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/OpenRadioss-OpenCourant" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

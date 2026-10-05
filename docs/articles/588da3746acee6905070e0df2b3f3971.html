@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>微软向所有人开放 WSL 容器 — Linux 中文速报</title>
+<title>DigitalOcean悄然终止开源积分计划 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -152,14 +152,14 @@
     <span class="source">It's FOSS News</span>
   </div>
 
-  <h1>微软向所有人开放 WSL 容器</h1>
+  <h1>DigitalOcean悄然终止开源积分计划</h1>
 
-  <div class="article-summary">微软宣布 WSL 容器（WSLC）结束公开预览，正式向所有用户开放。新版本提供专用命令行工具 wslc、Windows API、Consommé 网络模型，以及 Intune 注册表控制。Defender for Endpoint 的 WSL 插件也扩展至覆盖容器活动。用户可通过 wsl --update 获取包含 WSLC 的最新 WSL 版本，并使用新命令管理容器。</div>
+  <div class="article-summary">DigitalOcean已悄然终止其开源积分计划，不再接受新申请或批准续期。Node.js等项目维护者收到通知邮件，确认该计划已停止。此前该计划为开源项目提供云积分以覆盖基础设施成本，项目方则在网站和文档中提及DigitalOcean作为回报。这是DigitalOcean近期削减社区项目的又一举措，此前还取消了GitHub学生包积分。</div>
 
-  <div class="article-body"><p>微软向所有人开放 WSL 容器</p><p>此前处于公开预览阶段，现在它提供了新命令、Consommé 网络和 Intune 注册表控制。</p><p>微软通过两部分系列博客宣布，WSL 容器（WSLC）已从公开预览阶段转为正式发布。让我们来看看它提供了什么。</p><p>新版本附带了一个专用命令行工具，用于在 Windows 上进行 Linux 容器工作流。它内置了一个别名，供喜欢该语法的用户使用。</p><p>同时还附带了一个 Windows API，让原生 Windows 应用程序能够直接从代码中启动和管理容器，以及一些新命令，包括用于跟踪容器活动的命令。</p><p>网络通过一个名为 Consommé 的新模型处理，容器流量以特定形式离开虚拟机，并由在调用用户账户下运行的 Windows 进程接收。该进程处理 DNS、路由和端口映射，让流量像任何其他 Windows 进程一样通过 VPN 和防火墙。</p><p>此外，Microsoft Intune 新增了两项专门针对 WSL 容器的设置。第一项让管理员可以在受管设备上完全启用或禁用对 WSLC 功能的访问。第二项是容器注册表允许列表，将镜像拉取限制在定义的一组已批准来源中。</p><p>Microsoft Defender for Endpoint 的 WSL 插件也已扩展至覆盖容器活动。它可以从 WSLC 内部检索进程、文件和网络事件，并将它们连接回 Windows 主机。</p><p>首先你需要了解适用于 Linux 的 Windows 子系统（WSL），它让开发者可以直接在 Windows 上运行 Linux 环境，而无需分区硬盘或设置单独的 Linux 机器。</p><p>自 WSL 2 以来，它在受管理的虚拟机内附带了一个真正的 Linux 内核，让用户可以从 Windows 内部访问 Linux 工具、发行版和命令行工作流。</p><p>WSLC 进一步扩展了这一点，在同一 WSL 环境中添加了一个专用层，用于创建和管理 Linux 容器，使容器化工作流成为该设置的原生组成部分。</p><p>它还通过一个专用的子进程将容器操作与主 WSL 服务分离，该进程在当前用户账户下运行。这使每个会话保持隔离，并使容器操作处于比 WSL 服务本身更低的权限状态。</p><p>对于已经在 WSL 中工作的开发者来说，这意味着容器化应用程序可以在同一环境中运行，而无需借助单独的工具。Windows API 的暴露也意味着原生 Windows 应用程序可以以编程方式与容器交互。</p><p>如果你想了解更多，WSLC 架构深入解析是必读内容。</p><p>在终端中运行 wsl --update 会拉取最新的 WSL 版本，其中包含 WSL 容器。更新后，你可以使用这些新命令来管理你的容器。👇</p><p>wslc container restart</p><p>以 tar 归档形式在容器之间传输文件。</p><p>检查你的 WSLC 环境状态。</p><p>wslc network disconnect</p><p>将容器加入网络或从网络移除。</p><p>创建网络，支持自定义驱动选项。</p><p>如需完整变更日志和源代码访问，请前往 WSL 3.0.1 的发布页面。</p><p>喜欢这个更新吗？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的极客。</p><p>荷兰选择了 NixOS。法国已经在使用它</p><p>openSUSE Leap 现在是不可变发行版，Leap Micro 已退出</p><p>Firefox 换新装！Nova 重新设计已成为默认</p><p>postmarketOS 不再存在，至少在那个名字下</p><p>GhostBSD 正在用一个新的桌面环境替换 MATE，该桌面以一个拼写错误命名</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周新闻通讯</p></div>
+  <div class="article-body"><p>DigitalOcean悄然终止开源积分计划</p><p>一些项目维护者已收到邮件，告知他们将不再从DigitalOcean获得任何免费积分。</p><p>DigitalOcean正在悄然终止其开源积分计划：</p><p>DigitalOcean已决定终止开源积分计划。作为这一变更的一部分，我们不再接受新的积分申请，也不再批准积分续期、延期或额外积分请求。</p><p>此事最初从一个GitHub issue中曝光，Node.js项目的维护者在其中收到了DigitalOcean的通知邮件，告知开源积分计划即将终止。</p><p>我们最初发布这篇报道时，这还只是推测。现在更多项目已确认他们收到了DigitalOcean的终止邮件。文章已据此进行了编辑，以反映这一事实。</p><p>什么是开源积分计划？</p><p>DigitalOcean是一家云服务器基础设施提供商。它运营着这个“开源积分”计划，根据该方案，他们向获批的开源项目提供云积分，以覆盖基础设施成本。这帮助项目维护者无需支付托管费用即可运行项目。</p><p>例如，Node.js使用DigitalOcean基础设施进行构建操作，包括虚拟服务器、存储、快照和备份。</p><p>多年来，DigitalOcean一直推广该计划，并通过opensource@digitalocean.com向项目发送消息，邀请他们申请。</p><p>现在看来，这种情况已经改变。</p><p>终止开源积分计划</p><p>需要注意的是，DigitalOcean的博客或社交媒体账号上没有任何官方公告。该计划正在被悄然终止。</p><p>问题最初从这个GitHub issue中曝光，Node.js维护者在其中进行了讨论，但原帖并未提及他们自己是否收到了邮件，或者他们维护的是哪个开源项目。</p><p>此前，我浏览了Reddit、X和其他一些社交媒体平台，但没有足够的讨论。不过，更多开发者已确认收到了这封邮件。</p><p>Pidgin即时通讯软件的首席开发者Gray分享了相关信息。</p><p>该计划中的项目将不会获得新积分。他们只能用目前已发放的积分来维持。之后，他们要么向DigitalOcean付费，要么将项目迁移到其他平台提供商。</p><p>邮件还提到，新项目将不再被该计划接受，专门用于此任务的邮箱（opensource@digitalocean.com）也将不再被监控。这为新申请者关上了大门。</p><p>此类计划是一种互惠互利的安排。当DigitalOcean提供积分时，这些项目在DigitalOcean基础设施上启动他们的CI运行器、文档站点、发布镜像和测试环境。</p><p>作为回报，他们在项目网站和文档中提及DigitalOcean。成千上万的开发者通过这些项目了解了DigitalOcean平台。有些人个人成为了付费客户，还有些人将其引入自己工作的公司。</p><p>在开源积分这类计划中，双方都能从中获得积极收益。</p><p>DigitalOcean一直在削减其免费服务</p><p>这并不是DigitalOcean第一次在没有明确公告的情况下削减面向社区的计划。</p><p>此前，GitHub学生包中的DigitalOcean积分也被移除。试图兑换标准200美元免费积分的学生发现他们不再收到积分。同样，没有正式公告（因为前景不佳）。所以你只能找到困惑用户提出的社区问题。</p><p>DigitalOcean向每个新用户提供100美元免费积分（我们的合作伙伴链接）。该计划目前仍在运行（到目前为止）。不过不确定这会持续多久。</p><p>Node重新获得了DigitalOcean的支持</p><p>Node开发者讨论了他们的退出策略。随后引发了从主页移除DigitalOcean的讨论，REA</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/wslc-general-availability/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://itsfoss.com/news/digitalocean-open-source-credits-end/" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

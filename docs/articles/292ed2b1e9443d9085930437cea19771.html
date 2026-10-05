@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>微软向所有人开放 WSL 容器 — Linux 中文速报</title>
+<title>使用 Sober 在 Linux 上无需 Wine 玩 Roblox — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">其他</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>微软向所有人开放 WSL 容器</h1>
+  <h1>使用 Sober 在 Linux 上无需 Wine 玩 Roblox</h1>
 
-  <div class="article-summary">微软宣布 WSL 容器（WSLC）结束公开预览，正式向所有用户开放。新版本提供专用命令行工具 wslc、Windows API、Consommé 网络模型，以及 Intune 注册表控制。Defender for Endpoint 的 WSL 插件也扩展至覆盖容器活动。用户可通过 wsl --update 获取包含 WSLC 的最新 WSL 版本，并使用新命令管理容器。</div>
+  <div class="article-summary">Sober 是 Vinegar 项目开发的第三方非官方运行时，让 Linux 用户无需 Wine 即可运行 Roblox。它不涉及模拟或虚拟机，支持所有 PC 专属功能，性能与 Windows 客户端相当或更好。Sober 非开源，仅通过 Flathub 分发，系统要求不高，但不受 Roblox 官方支持，服务器端更新可能导致功能失效。</div>
 
-  <div class="article-body"><p>微软向所有人开放 WSL 容器</p><p>此前处于公开预览阶段，现在它提供了新命令、Consommé 网络和 Intune 注册表控制。</p><p>微软通过两部分系列博客宣布，WSL 容器（WSLC）已从公开预览阶段转为正式发布。让我们来看看它提供了什么。</p><p>新版本附带了一个专用命令行工具，用于在 Windows 上进行 Linux 容器工作流。它内置了一个别名，供喜欢该语法的用户使用。</p><p>同时还附带了一个 Windows API，让原生 Windows 应用程序能够直接从代码中启动和管理容器，以及一些新命令，包括用于跟踪容器活动的命令。</p><p>网络通过一个名为 Consommé 的新模型处理，容器流量以特定形式离开虚拟机，并由在调用用户账户下运行的 Windows 进程接收。该进程处理 DNS、路由和端口映射，让流量像任何其他 Windows 进程一样通过 VPN 和防火墙。</p><p>此外，Microsoft Intune 新增了两项专门针对 WSL 容器的设置。第一项让管理员可以在受管设备上完全启用或禁用对 WSLC 功能的访问。第二项是容器注册表允许列表，将镜像拉取限制在定义的一组已批准来源中。</p><p>Microsoft Defender for Endpoint 的 WSL 插件也已扩展至覆盖容器活动。它可以从 WSLC 内部检索进程、文件和网络事件，并将它们连接回 Windows 主机。</p><p>首先你需要了解适用于 Linux 的 Windows 子系统（WSL），它让开发者可以直接在 Windows 上运行 Linux 环境，而无需分区硬盘或设置单独的 Linux 机器。</p><p>自 WSL 2 以来，它在受管理的虚拟机内附带了一个真正的 Linux 内核，让用户可以从 Windows 内部访问 Linux 工具、发行版和命令行工作流。</p><p>WSLC 进一步扩展了这一点，在同一 WSL 环境中添加了一个专用层，用于创建和管理 Linux 容器，使容器化工作流成为该设置的原生组成部分。</p><p>它还通过一个专用的子进程将容器操作与主 WSL 服务分离，该进程在当前用户账户下运行。这使每个会话保持隔离，并使容器操作处于比 WSL 服务本身更低的权限状态。</p><p>对于已经在 WSL 中工作的开发者来说，这意味着容器化应用程序可以在同一环境中运行，而无需借助单独的工具。Windows API 的暴露也意味着原生 Windows 应用程序可以以编程方式与容器交互。</p><p>如果你想了解更多，WSLC 架构深入解析是必读内容。</p><p>在终端中运行 wsl --update 会拉取最新的 WSL 版本，其中包含 WSL 容器。更新后，你可以使用这些新命令来管理你的容器。👇</p><p>wslc container restart</p><p>以 tar 归档形式在容器之间传输文件。</p><p>检查你的 WSLC 环境状态。</p><p>wslc network disconnect</p><p>将容器加入网络或从网络移除。</p><p>创建网络，支持自定义驱动选项。</p><p>如需完整变更日志和源代码访问，请前往 WSL 3.0.1 的发布页面。</p><p>喜欢这个更新吗？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的极客。</p><p>荷兰选择了 NixOS。法国已经在使用它</p><p>openSUSE Leap 现在是不可变发行版，Leap Micro 已退出</p><p>Firefox 换新装！Nova 重新设计已成为默认</p><p>postmarketOS 不再存在，至少在那个名字下</p><p>GhostBSD 正在用一个新的桌面环境替换 MATE，该桌面以一个拼写错误命名</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周新闻通讯</p></div>
+  <div class="article-body"><p>在 Linux 上无需 Wine 玩 Roblox，使用 Sober - OMG! Ubuntu</p><p>Roblox 官方并不支持 Linux，但 Linux 用户可以使用 Sober 来运行它，这是一个非官方的第三方“移植”，无需 Wine 即可工作。</p><p>我知道；这不是一款“游戏”——除非你正迫不及待想玩。大多数 Roblox 用户年龄在 16 岁以下，通过手机访问，并对 Robux（游戏内虚拟货币）有着不健康的兴趣。</p><p>但你可能——像我一样——有那些讨厌的亲戚，他们要求在你的 Linux 电脑上玩 Roblox，因为他们的平板电脑需要充电……</p><p>性能“与 Windows 相同或更好”</p><p>在 Roblox 世界里享受清醒体验，无需 Wine</p><p>Sober 是由 Vinegar 项目制作的“专为 Roblox 代码设计的专用运行时”。这里不涉及模拟或虚拟机。它提供对 Roblox 所有 PC 专属功能的访问，包括聊天、声音，当然还有浏览和加入“游戏”。</p><p>Roblox 上的游戏被称为“体验”。最常访问的之一：99 Nights in the Forest，这个标题深深烙印在我的交感神经系统中，因为我的一个侄子（7岁）连续两天每句话都要完整说它 20 遍。</p><p>游戏在官方服务器上运行，因此你需要在线才能玩，图形在本地渲染。据说在相同硬件上，Linux 上的性能“与 Windows 客户端相同或更好”。</p><p>非开源，且仅在 Flathub 上提供</p><p>Sober 未获得 Roblox Corporation 的支持或批准，服务器端的更改可能随时部分或完全破坏功能。你的账户不应因使用它而被封禁，因为 Vinegar 表示正常使用“很少”会导致 moderation 行动。</p><p>该项目也不是开源的。Vinegar 表示他们选择保持代码闭源，以“减少滥用的可能性”。此外，Sober 也只能通过 Flathub 安装，没有计划提供其他包格式。</p><p>好的一面是，它的系统要求不高；支持 SSE4.1 的 x86-64 CPU（推荐 SSE4.2）和处理 OpenGL ES 3.0 的 GPU（推荐 Vulkan 1.1）。充足的可用内存有帮助（所以关掉几个浏览器标签页）。</p><p>有一个实验性的 ARM 版本，但要访问安装程序，你需要加入该项目的 Discord。</p><p>还有其他努力和方法，例如，在 Linux 上运行 Android APK。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/wslc-general-availability/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/play-roblox-linux-sober" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
