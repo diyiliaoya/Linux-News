@@ -14001,5 +14001,148 @@
     "title_zh": "Linux 开始为富士通 MONAKA CPU 缺陷引入规避措施",
     "summary_zh": "富士通正式发布面向 AI 基础设施的 144 核 Arm 服务器处理器 MONAKA 后，Linux 内核本周出现多个针对该 CPU 缺陷的规避补丁。这些补丁引入了 MONAKA 的 CPU 类型检测，并分别解决 TLB 失效、PMU 溢出误判以及 CPU 核心挂起三类问题。",
     "fulltext_zh": "Linux 开始为富士通 MONAKA CPU 缺陷引入规避措施\n\n2026 年 10 月 4 日 06:31 EDT。\n\n富士通正式宣布其 MONAKA CPU，这是一款面向 AI 基础设施的 144 核 Arm 服务器处理器。此前两年间，我们已经看到针对 GCC 编译器和其他开源组件的各种补丁。如今 MONAKA 正式发布，我们看到更多 Linux 内核补丁浮出水面，本周就出现了多个针对 MONAKA CPU 缺陷的规避措施。\n\n作为一款 ARM64 CPU 设计，富士通 MONAKA 在 Linux 支持方面总体状况良好——尤其是在服务器领域符合标准，无需为 MONAKA 服务器处理系统设备树之类的问题。本周的补丁引入了 Linux 内核中的 MONAKA CPU 类型检测，以便为不同缺陷提供规避措施。\n\nMONAKA 的第一个规避措施针对的是：基于范围的 TLBI 操作在针对 VA 或 IPA 时，在某些情况下可能无法使 TLB 条目失效。因此 Linux 内核需要发出额外的 TLBI 指令，以确保正确的 TLB 失效发生。这仅在 MONAKA 使用 64K 内核时存在，但出于性能原因，无论如何都推荐使用 64K 内核。\n\n还有一个针对另一个缺陷的规避措施：PMU 溢出可能被错误检测。这反过来可能导致 MONAKA 上出现中断风暴。\n\n本周针对 Linux 上 MONAKA 的第三个规避措施是处理可能的 CPU 核心挂起。问题在于，当 SGI 生成时，如果该操作与 CPU 处理更高优先级中断、更新待处理中断或 PE 转换到睡眠状态发生竞争，SGI 可能会丢失。在这种情况下，系统寄存器写入无法完成，可能导致发出请求的 CPU 核心挂起。\n\n有兴趣的读者可以通过这个 MONAKA 补丁系列了解更多。\n\nLinux 7.3 将更好地支持高端 Turtle Beach VelocityOne Race\n\n高通继续为其开源 Linux 图形驱动做更多工作\n\n新的 Linux 补丁尝试将瑞萨 SH7305 CPU 支持主线化\n\n搭载 AMD Ryzen AI Max+ PRO 495 的 Framework Desktop 起售价为 6799 美元\n\n基于 BPF 的显示面板驱动正在为 Linux 探索\n\n支持联想 ThinkPad X1 Carbon G14 第二摄像头的新 Linux 补丁\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nValve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面的出色工作\n\n西门子关上了有前景的开源 Radioss 项目的大门\n\nLinux 7.4 将为 MacBook Neo 引入 Apple M4、A18 Pro 的初始设备树\n\nNVIDIA 进行 Wayland 与 X.Org 延迟测试的结果\n\n微软宣布 WSLC 正式可用：Windows 上的 Linux 容器\n\nAMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0、Linux 7.2\n\nLinux 7.4 将支持树莓派 10 英寸触摸显示屏 2\n\n计划进入 Linux 7.4 的 MM 改动在一项指标上带来 +22904539.81% 的提升，其他方面收益较为温和\n\n同时享受无广告浏览、单页文章查看\n\n法律免责声明、隐私政策、Cookie\n\n版权所有 © 2004 - 2026，保留所有权利。所有使用的商标均为其各自所有者的财产。"
+  },
+  "f08f7496d94af78bdc2d54320ebf3801": {
+    "id": "f08f7496d94af78bdc2d54320ebf3801",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/hylki-email-client-for-gnome",
+    "title_en": "Hylki is a modern, Rust-based email client for GNOME",
+    "summary_en": "Hylki is a Rust-based email client designed for the GNOME desktop with an incredibly amount of customisation packed in. Like Postcard, Convey and Letters, Hylki is part of the new(ish) Linux mail clients aiming to serve as a modern Geary-like alternative to more powerful email clients Thunderbird and Evolution. GTK4/libadwaita interface? Check. 3 column vertical layout? Built around conversations? Check. Oh, and &#8216;this wouldn&#8217;t exist without AI coding tools?&#8217; Check – I come to t",
+    "pub_date": "Mon, 05 Oct 2026 21:59:35 +0000",
+    "title_zh": "Hylki：一款面向 GNOME 的现代 Rust 电子邮件客户端",
+    "summary_zh": "Hylki 是一款基于 Rust 的 GNOME 桌面电子邮件客户端，支持多账户、会话线程、OpenPGP 加密、阅读模式等丰富功能，并提供大量自定义选项。其大部分 Rust 代码由 Anthropic 的 Claude 在人工指导下编写，但应用本身不含 AI 功能。可通过 Flatpak 安装，需 GNOME 50 运行时。",
+    "fulltext_zh": "Hylki 是一款面向 GNOME 桌面的基于 Rust 的电子邮件客户端，内置了极其丰富的自定义选项。\n\n它属于新近涌现的一批 Linux 邮件客户端，旨在作为现代、轻量级的替代方案，与功能更强大的邮件客户端竞争。\n\nGTK4/libadwaita 界面？有。三栏垂直布局？有。围绕会话构建？有。哦，还有“没有 AI 编码工具就不会存在”？也有——我稍后会谈到这一点。\n\n“打开迅速、阅读轻松、默认私密”\n\n面向 GNOME 的现代邮件客户端\n\nHylki 的引导流程是个不错的亮点\n\n你可以通过 GNOME 在线账户连接已设置的任何电子邮件账户，也可以使用手动 POP3/IMAP 账户配置来添加账户。它支持多账户，既可以单独访问每个账户，也可以通过统一收件箱访问。\n\n我很喜欢首次运行的引导流程。通常这类东西我会随便点几下跳过。但这里，它很好地混合了各种选项和偏好设置，让你提前完成配置——其中一些可以在上面的截图中看到。\n\n标准的邮件管理功能和操作都已涵盖，并且像 Geary 和现代网页邮件提供商一样，邮件使用会话线程（即它们会一起出现在同一视图中）。\n\n窗口内撰写和 GPG 设置\n\n新邮件可以内联撰写，也可以在弹出窗口中撰写，内容可以用富文本、Markdown、HTML 或纯文本编写。你甚至可以选择将邮件加入队列“稍后发送”，而不是立即发送。支持 OpenPGP（通过主机软件包）来阅读、签名和加密邮件。\n\n不急着发送？\n\n其他新颖功能包括“阅读模式”（将邮件内容精简为纯文本）、一组配色方案和替代应用图标、专用的附件视图、“专注模式”以隐藏图标和其他视觉杂物，以及与 GNOME 联系人的交互。\n\n舒适性功能包括单键快捷键（Gmail 风格）、后台应用模式、手势支持，以及以不同于系统默认语言运行应用的选项。\n\n而这还没有触及大量可用的自定义选项和配置设置。\n\n说真的，有很多——从配置内联邮件预览中显示的行数，到编辑工具栏中按钮的顺序，再到创建本地邮件过滤器和管理 LDAP 目录。\n\n由 LLM 制作，但在指导下完成\n\n开发者表示，Anthropic 的 Claude 被用于编写大部分代码，尽管是在指导下进行，并且每个输出都“由人工维护者审查和测试，该维护者对每个版本签字确认”。\n\n“其中绝大部分 Rust 代码是用 Anthropic 的 Claude 编写的”\n\n该应用本身不包含 AI 功能，无论是本地还是云端，因此不存在重要邮件或整个收件箱被 LLM 因过度关注错误 token 以完成设定任务而直接搞砸的风险（机器生成怪癖带来的焦虑仍然存在）。\n\n但 Hylki——一个冰岛语单词，意为“胶囊”——中的所有 artwork 据称都是人工制作的。主应用图标和标志由 Yiannis Ioannides 绘制。\n\n撇开 AI 来源不谈——不同的人对使用的红线划在不同的地方，并非所有都出于哲学考量，但推动者的意图和技巧……\n\n看起来还不错，运行得也很好，只是有点……\n\n可能是心理作用，但我总觉得 LLM 制作的 GTK 应用界面有点……我说不太清楚。就像在某些地方对小细节缺乏关注，而在另一些地方又过度关注细节，形成了一种并置。\n\n作为 Flatpak 提供，可下载\n\n或通过网站，或通过命令行以节省一点时间。\n\nUbuntu 不预装 Flatpak，所以先安装它：\n\nsudo apt install flatpak\n\n需要 GNOME 50 运行时，该运行时可在 Flathub 上获取。这是一个共享运行时，会随第一个需要它的应用一起下载：\n\nflatpak remote-add --if-not-exists flathub https://flathub.org/rep"
+  },
+  "bf7a656368d8d484f68c61b9bf7996ce": {
+    "id": "bf7a656368d8d484f68c61b9bf7996ce",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/siemens-openradioss-fork/",
+    "title_en": "Siemens Abruptly Takes Down OpenRadioss, But a Fork is Already Live",
+    "summary_en": "Another reminder of why open source saves software from being lost forever.",
+    "pub_date": "Mon, 05 Oct 2026 15:00:15 GMT",
+    "title_zh": "西门子突然下架 OpenRadioss，但分支版本已上线",
+    "summary_zh": "西门子本月突然删除 OpenRadioss 代码仓库，而非按惯例转为只读存档，引发开源社区不满。OpenRadioss 是 Altair 开发的有限元求解器 Radioss 的开源版本，被西门子收购后遭下架。得益于 AGPL 许可证，Rocky Linux 联合创始人已迅速创建分支 OpenCourant，保留完整提交历史，并已发布 Linux 和 Windows 构建版本，正寻求原贡献者加入。",
+    "fulltext_zh": "西门子突然下架 OpenRadioss，但分支版本已上线\n\n又一个提醒：开源为何能让软件免于永久消失。\n\n这家全球知名的科技与工程公司已于本月初悄然关闭 OpenRadioss 项目，保留了[网站]但完全删除了代码仓库。\n\n我听起来像是在抱怨，因为通常当一个开源项目被终止时，维护者会将其置于只读的公开存档状态，以便其他开发者学习和创建分支。\n\nOpenRadioss 是 [Radioss] 的开源版本，Radioss 是 Altair Engineering 开发的一款有限元求解器，用于碰撞测试、爆炸响应、冲击分析及其他结构载荷场景。\n\n他们于[某年]发布了它，吸引了一个由研究人员、软件开发者和行业贡献者组成的跨国社区，他们扩展了求解器并在此基础上构建代码。\n\n[西门子]去年收购了 Altair，在收购后的一年多时间里一直保持仓库及其内容公开可用，然后突然将其删除，并将人们重定向到其 [Simcenter Radioss 页面]。\n\nRocky Linux 的联合创始人[已]迅速搭建并运行了一个 OpenRadioss 分支，它保留了完整的 OpenRadioss 提交历史，以相同的[许可证]发布，名称源自数学家理查德·库朗以及 Courant-Friedrichs-Lewy（CFL）条件——这是此类求解器核心的稳定性判据。\n\n事实上，这个分支的存在要归功于 AGPL。你看，西门子从法律上有权下架该仓库，但适用于每个提交的许可证赋予了任何人创建分支、分发和基于代码构建的权利。\n\n只是看到下架如此突然，令人遗憾；让人觉得他们不想让人们提前得到通知。\n\n同样值得注意的是，OpenCourant 是一个独立的社区项目，它正在积极寻找过去的 OpenRadioss 贡献者参与其中。\n\n已经发布了什么？\n\n最初，依赖西门子专有基础设施的上游构建流水线无法转移。该流水线已从头重建，结果看起来很有希望。\n\n项目启动仅数天，就已经在分发 Linux 和 Windows [构建版本]。\n\n而在此之前，一个从未提交到 git 历史的闭源[某]二进制文件随着上游 OpenRadioss 仓库一起消失了。\n\n幸运的是，一位保留了副本的匿名社区成员站了出来，OpenCourant 团队独立验证了它，现在它已随每个构建版本发布。不过他们仍在寻找特定的发布存档，以开始 ARM64 支持的工作并改善当前平台兼容性。\n\n如果你对 OpenCourant 感兴趣，其软件包选项包括[单精度和双精度版本]、SMP 构建，以及动画文件和时间历程数据的转换器。\n\n你可以从[官方下载页面]下载最新构建版本。[某]文件可以作为一个不错的资源，但请记住它仍然是 OpenRadioss 版本，因为 OpenCourant 团队尚未更新它以反映新项目。\n\n喜欢这篇更新？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受\n任意金额，无承诺\n\n一个热衷于开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的技术迷。\n\nUbuntu 26.10 将采用基于 Rust 的 GnuPG 替代品\nDigitalOcean 悄然终止开源积分计划\nYT-DLP 被 IFPI 视为盗版工具\nF-Droid 的新应用表明它不会消失\n微软已向所有人开放 WSL 容器\n\n成为更好的 Linux 用户\n\n通过 FOSS 每周通讯，你可以学习实用的 Linux 技巧、发现应用程序、探索新发行版，并随时了解 Linux 世界的最新动态\n\n太好了！你已成功注册"
+  },
+  "39e4b61d7200f3cc002ca7bac73a3e0f": {
+    "id": "39e4b61d7200f3cc002ca7bac73a3e0f",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/ubuntu-sequoia-pgp-inclusion/",
+    "title_en": "Ubuntu 26.10 Will Have a Rust-based GnuPG Replacement",
+    "summary_en": "The Rust-based OpenPGP tool lands in Ubuntu 26.10's main archive, with sq and sqv available alongside gpg and gpgv.",
+    "pub_date": "Mon, 05 Oct 2026 09:50:08 GMT",
+    "title_zh": "Ubuntu 26.10 将采用基于 Rust 的 GnuPG 替代品",
+    "summary_zh": "Ubuntu 26.10 将预装基于 Rust 的 Sequoia PGP，提供 sq 和 sqv 命令，与现有的 gpg 和 gpgv 并存。Canonical 计划最终用其替换 GnuPG 作为默认 OpenPGP 工具链，但这一转变尚未发生。Sequoia PGP 由前 GnuPG 开发者于 2017 年创建，支持新的 RFC 9580 标准，目前仍处于早期阶段。",
+    "fulltext_zh": "Ubuntu 26.10 将采用基于 Rust 的 GnuPG 替代品\n\n基于 Rust 的 OpenPGP 工具进入 Ubuntu 26.10 的主归档，sq 和 sqv 将与 gpg 和 gpgv 一同提供。\n\n你已经知道，Canonical 一直在选择性地用 Rust 编写的等效组件替换 Ubuntu 中基于 C 的系统组件，且功能上毫不妥协。\n\n现在看起来，该发行版的 OpenPGP 实现将是下一个目标，Sequoia PGP 将在 Ubuntu 26.10 中预装。Canonical 希望它最终取代 GnuPG 成为默认工具链，不过这一转换尚未发生。\n\n在深入了解 Sequoia 之前，有必要知道 OpenPGP 究竟是什么。它不是工具，而是一个被广泛采用的标准。Phil Zimmermann 于 1991 年创建了最初的 PGP，如今 IETF 维护着这项工作的开放版本。该规范定义了软件应如何加密、解密、签名和验证数据，以便任何两个遵循该规范的实现都能互操作。\n\nGnuPG 一直是该标准的主导实现。它用 C 编写，在平台上实现了 gpg 和 gpgv 命令，处理从加密、密钥管理到独立签名验证的一切事务。\n\nSequoia PGP 则不同。\n\n它由三位前 GnuPG 开发者于 2017 年发起，他们选择用 Rust 构建新的 OpenPGP 实现，而不是继续演进 GnuPG 的现有代码库。\n\nSequoia 被设计为一个库，供其他软件直接使用，而非独立的命令行工具。sq 在其之上提供加密、解密、签名和密钥管理，sqv 处理签名验证，填补 gpgv 的角色。\n\nSequoia 还实现了 RFC 9580，即 2024 年修订的 OpenPGP 标准，而 GnuPG 则继续沿袭 RFC 4880 分支，追求自己的新扩展和 LibrePGP 规范，而非将 RFC 9580 作为主要标准。\n\nUbuntu 26.10 “Stonking Stingray” 已作为默认安装的一部分从 rust-sequoia-xx 拉入 Sequoia PGP。我在 Ubuntu 26.10 的开发版本上运行了 sq 和 sqv，两者均正常工作。sq 充当加密、解密、签名和密钥管理的主要接口，而 sqv 处理签名验证。输入 gpg 仍然路由到 GnuPG，因此这两个 OpenPGP 实现并存。\n\n如果 Sequoia PGP 成为默认，你可以预期这些命令和其他 GnuPG 命令将路由到 Sequoia，类似于我们在 sudo-rs 上看到的情况。\n\n仍有很长的路要走\n\n最近的一则公告明确提到，Sequoia PGP 成为 Ubuntu 默认 OpenPGP 工具链是一个未来目标，而非已经默认的体验。过渡始于 2025 年，直到 26.10 才达到 100%。切换在成为默认之前就已提前展示。每个组件都必须经过多个发布周期才能赢得自己的位置，然后才会对用户产生任何变化。\n\nSequoia PGP 正处于这一过程的起点。进入主归档是第一个里程碑。它最终能否取代 GnuPG 成为默认还有待观察。\n\nCanonical 尚未分享具体的纳入时间表。鉴于他们在其他所有 Rust 过渡上如此谨慎，对于像 OpenPGP 这样基础性的东西，这种谨慎不太可能消失。\n\n喜欢这篇更新？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无承诺\n\n一个热衷于开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的技术迷。\n\n西门子突然下架 OpenRadioss，但分支已上线\n\nDigitalOcean 悄然终止开源积分计划\n\nYT-DLP 被 IFPI 视为盗版工具\n\nF-Droid 的新应用表明它不会消失\n\n微软已向所有人提供 WSL 容器\n\n成为更好的 Linux 用户\n\n通过以下内容"
+  },
+  "ec211047c6781c9de4f493fc367d3182": {
+    "id": "ec211047c6781c9de4f493fc367d3182",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/TrueNAS-27-RC.1-Release",
+    "title_en": "TrueNAS 27 RC.1 Released: Linux 6.18 LTS + OpenZFS 2.4",
+    "summary_en": "TrueNAS 27 RC.1 released today in working toward the next major release of this Linux-based storage/NAS operating system from iXsystems...",
+    "pub_date": "Mon, 05 Oct 2026 20:25:45 -0400",
+    "title_zh": "TrueNAS 27 RC.1 发布：Linux 6.18 LTS + OpenZFS 2.4",
+    "summary_zh": "TrueNAS 27 RC.1 发布，该版本基于 Linux 6.18 LTS 内核并集成 OpenZFS 2.4，带来 AVX2 优化、性能提升和硬件支持改进。新增 TrueSearch、WebShare、Fusion Pools 2.0、有状态 SMB 故障转移及 TrueNAS 对象接口早期访问。版本号从 26 改为 27，因稳定版预计 2026 年 12 月发布，多数用户将在 2027 年部署。",
+    "fulltext_zh": "TrueNAS 27 RC.1 发布：Linux 6.18 LTS + OpenZFS 2.4\n\n2026 年 10 月 5 日 20:25 EDT。\n\nTrueNAS 27 RC.1 今日发布，这是 iXsystems 基于 Linux 的存储/NAS 操作系统下一个主要版本的候选发布版。\n\n最初该版本计划命名为 TrueNAS 26，但开发者决定将版本方案改为 TrueNAS 27。\n\n开发者解释称，从 TrueNAS 26 改为 TrueNAS 27 是因为大多数用户最终将在 2027 年而非 2026 年运行它，稳定版预计于 12 月发布。因此，为了反映大多数用户实际部署的年份而非首次亮相的年份，TrueNAS 27.0 将于 12 月作为下一个主要版本发布。\n\nTrueNAS 27 基于 Linux 6.18 LTS 内核构建，并引入了 OpenZFS 文件系统支持。除了更新核心操作系统组件外，TrueNAS 27 还新增了 TrueSearch 和 WebShare 以改进服务器端搜索、Fusion Pools 2.0、有状态 SMB 故障转移支持，以及 TrueNAS 对象接口的早期访问，用于对 ZFS 数据集进行原生 S3 访问。\n\n借助 Linux 6.18 LTS 内核和 OpenZFS 2.4 升级，TrueNAS 27.0 旨在提供比先前版本更强大的性能。新的 OpenZFS 更新带来了更多高级矢量扩展（AVX2）优化，新内核具有更好的性能并改进了硬件支持，还有各种其他改进。\n\n有关 TrueNAS 27 及今日 TrueNAS 27 RC.1 候选版本的更多详细信息，请访问相关链接。\n\n其他新闻：\nOpenMandriva ROME 26.09 发布，带来更多 AI 应用、Snaps 及 PGO + LTO 优化\nRedox OS 新增类 IO_uring API、NUMA 支持，并让 QEMU 正常工作\nReactOS 从 Wine 获得重大 DirectX 堆栈更新，可启用更多游戏\nAlmaLinux 推出新的软件/硬件认证门户，可自行认证应用\n阿里巴巴向 Omarchy 捐赠 300 万美元，用于打造“理想”的智能体操作系统\nVoid Linux 维护者因 AI 政策争议放弃 100 多个软件包\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。\n\n其他文章：\nValve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面的出色工作\n西门子关闭了有前景的开源 Radioss 项目的大门\nNVIDIA 进行 Wayland 与 X.Org 延迟测试的结果\nLinux 7.4 将为 Apple M4、A18 Pro 引入初始设备树，用于 MacBook Neo\n微软宣布 WSLC 正式可用：Windows 上的 Linux 容器\nLinux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2\nAMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0、Linux 7.2\nKDE Plasma 6.8 现在让平铺窗口更整齐地拼合\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "6631894332103fbe61fbdc1286de63a5": {
+    "id": "6631894332103fbe61fbdc1286de63a5",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-ROCm-10.1",
+    "title_en": "AMD ROCm 10.1 Released With Many Improvements",
+    "summary_en": "Following the ROCm 10.0 release from late August, ROCm 10.1 is now available in continuing with the ROCm six week release cycle...",
+    "pub_date": "Mon, 05 Oct 2026 18:08:56 -0400",
+    "title_zh": "AMD ROCm 10.1 发布，带来诸多改进",
+    "summary_zh": "AMD 发布 ROCm 10.1，延续六周发布周期。该版本为 AMD Infinity Storage 带来 hipFILE 异步快速路径后端、批量 I/O API 和多层 I/O 统计；新增 HIP 的 NUMA 感知主机内存分配、ROCm CLI 与 AMD 技能、ROCprofiler 内核重放测试版、升级至 LLVM 24 编译器栈、更快重建、持续改进 WSL2，并引入 hipThreads 以实现线程代码的增量 GPU 加速。",
+    "fulltext_zh": "AMD ROCm 10.1 发布，带来诸多改进\n2026 年 10 月 5 日 下午 06:08 EDT 发布。\n\n继 8 月底之后，ROCm 10.1 现已推出，延续 ROCm 六周发布周期。\n\nROCm 10.1 为 AMD Infinity Storage 带来 hipFILE 改进，包括异步快速路径后端、批量 I/O API 和多层 I/O 统计。\n\nROCm 10.1 还带来 HIP 的 NUMA 感知主机内存分配、新的 ROCm CLI 和 AMD 技能、ROCprofiler 的测试版内核重放支持、迁移至 LLVM 24 编译器栈、更快的重建、持续改进的 WSL2、用于线程代码增量 GPU 加速的 hipThreads，以及各种其他改进。\n\n有关今日 ROCm 10.1 发布的更多细节，可通过相关链接查看，其中包含 ROCm 10.1 各项变更的更多详情。"
+  },
+  "19a8b3bc0b6d89f3c31460532da3be6f": {
+    "id": "19a8b3bc0b6d89f3c31460532da3be6f",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-Zen-6-BTB-CTX-Linux-7.4",
+    "title_en": "Linux 7.4 To Land New BTB CTX Isolation Feature Of AMD Zen 6",
+    "summary_en": "The Linux 7.4 kernel is set to introduce support for a new AMD Zen 6 security feature...",
+    "pub_date": "Mon, 05 Oct 2026 14:47:01 -0400",
+    "title_zh": "Linux 7.4 将引入 AMD Zen 6 的全新 BTB CTX 隔离功能",
+    "summary_zh": "Linux 7.4 内核将支持 AMD Zen 6 的全新安全功能 BTB CTX 隔离，该功能通过隔离用户/内核及客户机/主机上下文，防御 SRSO 推测性返回栈溢出漏洞。相关补丁已进入 tip/tip.git 的 x86/bugs 分支，预计在 7.4 合并窗口提交。Linux 7.4 对 Zen 6 支持至关重要，涵盖 Ryzen 客户端及 EPYC 服务器。",
+    "fulltext_zh": "Linux 7.4 将引入 AMD Zen 6 的全新 BTB CTX 隔离功能\n2026年10月5日下午2:47（美国东部时间）。\n内核将引入对 AMD Zen 6 一项新安全功能的支持。\n在本月晚些时候 Linux 7.4 合并窗口开启前，相关补丁正在排队，以启用新的分支目标缓冲区上下文（Branch Target Buffer Context，简称“BTB CTX”）隔离功能。BTB CTX 隔离是针对 SRSO（推测性返回栈溢出漏洞）的新安全防御措施，该漏洞曾影响 Zen 1 至 Zen 4 CPU。BTB CTX 隔离将把不同的用户/内核以及客户机/主机上下文相互隔离开来。\n目前排队进入 tip/tip.git 的“x86/bugs” Git 分支的补丁，针对这一新的 Zen 6 能力调整了 AMD SRSO 缓解措施：\n“Zen6 具备 BTB 保护，可将不同上下文（用户/内核、客户机/主机）相互隔离。这使得 SafeRET 缓解措施不再必要，但用户/用户和客户机/客户机攻击向量仍然存在，其保护由 Spectre v2 缓解设置负责，在上下文切换时执行 IBPB。\n检测该设置并用新的缓解字符串报告。”\n由于该补丁已进入 TIP Git 分支，且 Linux 7.4 合并窗口将于本月晚些时候开启，它应会被提交到下一个内核版本。总体而言，Linux 7.4 对于 Zen 6 的启用将是一个重要内核，尤其是在 Ryzen 客户端方面，将有大量补丁落地；而对于第六代 EPYC“Venice”服务器，过去几个内核周期我们已经看到相关工作。\nAMD ROCm 10.1 发布，带来诸多改进\nLinux 7.4 的 AMD P-State 驱动将为 Ryzen Zen 6 CPU 做好准备\nAMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0 和 Linux 7.2\nAMD RMPOPT 优化在 Linux 7.4 之前排队\nLinux 7.4 将支持 AMD Ryzen AI Max 400 系列“Gorgon Halo”的 NPU\nAMD Ryzen Zen 6 CPU 功耗值正为 Linux 进一步调优\nMichael Larabel 是 Phoronix.com 的主要作者，于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过20,000篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\nValve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面的出色工作\n西门子关闭了前景看好的开源 Radioss 项目\nNVIDIA 进行 Wayland 与 X.Org 延迟测试的结果\nLinux 7.4 将为 MacBook Neo 引入 Apple M4、A18 Pro 的初始设备树\n微软宣布 WSLC 正式可用：Windows 上的 Linux 容器\nLinux 7.4 将支持树莓派 10 英寸触摸显示屏 2\nAMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0 和 Linux 7.2\nKDE Plasma 6.8 现在让平铺窗口更整齐地拼接\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "723aced9181c2dcd45825d2e3229241b": {
+    "id": "723aced9181c2dcd45825d2e3229241b",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Auto-CPUFreq-3.2",
+    "title_en": "Auto-CPUFreq 3.2 Adds Configurable HWP Dynamic Boost, Platform Profile Reporting",
+    "summary_en": "The open-source Auto-CPUFreq tool for active system monitoring and power optimizations is out with a new release for continuing to enhance battery life on Linux laptops...",
+    "pub_date": "Mon, 05 Oct 2026 11:36:12 -0400",
+    "title_zh": "Auto-CPUFreq 3.2 新增可配置 HWP 动态加速与平台配置文件报告功能",
+    "summary_zh": "Auto-CPUFreq 3.2 发布，新增可配置的 Intel HWP 动态加速支持，并默认在交流电模式下启用。该版本还引入更强大的 ACPI 平台配置文件报告功能，并统一了系统报告与 GTK 运行时状态，以提供一致视图，持续提升 Linux 笔记本电池续航。",
+    "fulltext_zh": "面向主动系统监控与电源优化的开源工具 Auto-CPUFreq 发布了新版本，以持续增强 Linux 笔记本电脑的电池续航能力。\n\nAuto-CPUFreq 3.2 新增了可配置的 Intel 硬件 P 状态（HWP）动态加速支持。现在，当使用交流电源而非电池供电时，Intel HWP 动态加速默认启用。\n\nAuto-CPUFreq 3.2 还引入了 ACPI 平台配置文件报告功能，相比此前版本提供的基础报告更加稳健：\n\nAuto-CPUFreq 3.2 还统一了系统报告与 GTK 运行时状态，以确保视图一致。\n\n下载及 Auto-CPUFreq 3.2 版本的更多详情，请访问"
+  },
+  "8960bc8b8ab1437eaa48deac8a6901d9": {
+    "id": "8960bc8b8ab1437eaa48deac8a6901d9",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/lemonade-vulkan-rocm",
+    "title_en": "AMD ROCm vs. Vulkan Performance For Lemonade Local AI Server With Llama.cpp",
+    "summary_en": "A Phoronix Premium reader recently inquired about seeing some new benchmarks of AI performance between Vulkan and AMD ROCm back-ends to see how the situation plays out today. Here are some fresh benchmarks on two separate systems with AMD Radeon graphics and using the Lemonade local AI server while exploring the difference between the ROCm and Vulkan Llama.cpp back-ends.",
+    "pub_date": "Mon, 05 Oct 2026 09:50:34 -0400",
+    "title_zh": "AMD ROCm 与 Vulkan 在 Lemonade 本地 AI 服务器配合 Llama.cpp 的性能对比",
+    "summary_zh": "本文通过两台搭载 AMD Radeon 显卡的系统，对比了 Lemonade 本地 AI 服务器中 Llama.cpp 的 ROCm 与 Vulkan 后端性能。测试使用 Lemonade 2026.39.1（内置 Llama.cpp b10825），硬件分别为 System76 Thelio Major 工作站（Radeon AI PRO R9700）和 Framework Desktop（Ryzen AI Max+ 395 Strix Halo）。这是继近一年前 RDNA4 测试后的再次评估，当时部分模型 Vulkan 后端更快，本次则呈现最新情况。",
+    "fulltext_zh": "AMD ROCm 与 Vulkan 在 Lemonade 本地 AI 服务器配合 Llama.cpp 的性能对比 - Phoronix\n\nAMD ROCm 与 Vulkan 在 Lemonade 本地 AI 服务器配合 Llama.cpp 的性能对比\n2026 年 10 月 5 日上午 09:50 EDT。\n\n一位读者最近询问，希望看到一些关于 Vulkan 与 AMD ROCm 后端之间 AI 性能的新基准测试，以了解如今的情况如何。以下是分别在两个搭载 AMD Radeon 显卡的系统上，使用 Lemonade 本地 AI 服务器，探索 ROCm 与 Vulkan Llama.cpp 后端差异的一些最新基准测试。\n\n距离上次在 AMD RDNA4 上查看 RADV Vulkan 与 AMD ROCm 配合 Llama.cpp 的性能已经过去近一年。回顾当时，有不少模型使用 Llama.cpp Vulkan 后端比使用当时的 AMD ROCm 更快。\n\n在今天的测试中，使用了 Lemonade 2026.39.1 本地 AI 服务器二进制文件，以便借助其内置基准测试支持实现轻松复现。Lemonade 2026.39.1 使用 Llama.cpp b10825。\n\n本次全新的 ROCm 与 Vulkan 测试使用了两套系统，一套是搭载 AMD Radeon AI PRO R9700 的 System76 Thelio Major 工作站，另一套是搭载 AMD Ryzen AI Max+ 395 Strix Halo 的 Framework Desktop。完全不同的硬件和略有不同的软件栈，为 Lemonade/Llama.cpp 下的 Vulkan 与 ROCm 提供了不同的观察视角。感谢支持者们，帮助 Phoronix 22 年多来持续实现所有日常 Linux 基准测试。\n\n在 Ubuntu Linux 上升级 Mesa 为 Intel Arc B390 带来的性能优势\n\n在 CachyOS 上使用 GeForce RTX 5090 笔记本 GPU 对比 Nouveau 与 NVIDIA R610\n\nIntel Arc Pro B70 在 Linux 7.1 上展现一些性能优势\n\nLinux 7.1 帮助 Intel Arc Battlemage 显卡获得更好性能\n\nAMD Radeon AI PRO R9700 上 ROCm 7.0.0 与 ROCm 7.2.3 的性能对比\n\n用于工作站图形性能的 Nouveau 与 NVIDIA R595 Linux 驱动对比\n\n同时享受无广告浏览、\n单页文章查看\n\n法律免责声明、隐私政策、Cookie\n\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "557a44e64a3b556f6c52947cfb22a867": {
+    "id": "557a44e64a3b556f6c52947cfb22a867",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/how-to-let-claude-code-read-reddit-youtube-and-x-with-agent-reach/",
+    "title_en": "How to Let Claude Code Read Reddit, YouTube, and X with Agent-Reach",
+    "summary_en": "Learn how to use Agent-Reach with Claude Code to read Reddit threads, YouTube transcripts, X posts, and other online sources from the terminal.\nThe post How to Let Claude Code Read Reddit, YouTube, and X with Agent-Reach appeared first on Linux Today.",
+    "pub_date": "Mon, 05 Oct 2026 07:39:07 +0000",
+    "title_zh": "如何使用 Agent-Reach 让 Claude Code 读取 Reddit、YouTube 和 X 的内容",
+    "summary_zh": "本文介绍如何将 Agent-Reach 与 Claude Code 结合使用，让开发者可以直接在终端中读取 Reddit 帖子、YouTube 字幕、X 推文以及其他在线来源的内容，从而提升信息获取效率。",
+    "fulltext_zh": "了解如何使用 Agent-Reach 配合 Claude Code，从终端读取 Reddit 帖子、YouTube 字幕、X 推文以及其他在线来源。\n\n文章《如何使用 Agent-Reach 让 Claude Code 读取 Reddit、YouTube 和 X 的内容》最初发布于 Linux Today。"
+  },
+  "cd7322db2efdb4c705408b3f88d8f21b": {
+    "id": "cd7322db2efdb4c705408b3f88d8f21b",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/samba-4-25-released-with-new-high-availability-and-clustering-features/",
+    "title_en": "Samba 4.25 Released With New High-Availability and Clustering Features",
+    "summary_en": "Samba 4.25 is now available with new high-availability and clustering features, alongside improvements for file sharing and network infrastructure.\nThe post Samba 4.25 Released With New High-Availability and Clustering Features appeared first on Linux Today.",
+    "pub_date": "Mon, 05 Oct 2026 07:31:13 +0000",
+    "title_zh": "Samba 4.25 发布，带来新的高可用性和集群功能",
+    "summary_zh": "Samba 4.25 正式发布，新增高可用性与集群功能，并改进了文件共享和网络基础设施。该版本旨在提升企业级部署的可靠性和扩展性，同时优化日常文件服务性能。",
+    "fulltext_zh": "Samba 4.25 现已发布，带来了新的高可用性和集群功能，同时改进了文件共享和网络基础设施。\n\n文章《Samba 4.25 发布，带来新的高可用性和集群功能》首先出现在 Linux Today 上。"
+  },
+  "2e7175047958c52217b2f3a3c9283db3": {
+    "id": "2e7175047958c52217b2f3a3c9283db3",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/firefox-smart-window-expands-in-beta-with-built-in-ai-assistant/",
+    "title_en": "Firefox Smart Window Expands in Beta With Built-In AI Assistant",
+    "summary_en": "Firefox Smart Window expands in beta with a built-in AI assistant, bringing AI-powered features directly into Mozilla’s experimental browsing experience.\nThe post Firefox Smart Window Expands in Beta With Built-In AI Assistant appeared first on Linux Today.",
+    "pub_date": "Mon, 05 Oct 2026 07:30:01 +0000",
+    "title_zh": "Firefox 智能窗口在测试版中扩展，内置 AI 助手",
+    "summary_zh": "Firefox 智能窗口在测试版中扩展，新增内置 AI 助手，将 AI 驱动的功能直接整合到 Mozilla 的实验性浏览体验中。",
+    "fulltext_zh": "Firefox 智能窗口在测试版中扩展，内置 AI 助手，将 AI 驱动的功能直接带入 Mozilla 的实验性浏览体验。\n\n文章《Firefox 智能窗口在测试版中扩展，内置 AI 助手》首次发布于 Linux Today。"
+  },
+  "b777900b9c320075e41e4d5c2fece60f": {
+    "id": "b777900b9c320075e41e4d5c2fece60f",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/cosmic-desktop-1-9-adds-cosmic-viewer-on-screen-keyboard/",
+    "title_en": "COSMIC Desktop 1.9 Adds COSMIC Viewer, On-Screen Keyboard",
+    "summary_en": "COSMIC Desktop 1.9 adds the new COSMIC Viewer and an on-screen keyboard, alongside additional improvements to System76’s desktop environment.\nThe post COSMIC Desktop 1.9 Adds COSMIC Viewer, On-Screen Keyboard appeared first on Linux Today.",
+    "pub_date": "Mon, 05 Oct 2026 07:27:41 +0000",
+    "title_zh": "COSMIC 桌面 1.9 新增 COSMIC 查看器与屏幕键盘",
+    "summary_zh": "COSMIC 桌面环境 1.9 版本发布，新增 COSMIC 查看器和屏幕键盘，并对 System76 的桌面环境进行了其他多项改进。",
+    "fulltext_zh": "COSMIC 桌面 1.9 新增了全新的 COSMIC 查看器和屏幕键盘，同时为 System76 的桌面环境带来了其他改进。\n\n文章《COSMIC 桌面 1.9 新增 COSMIC 查看器与屏幕键盘》首发于 Linux Today。"
+  },
+  "3fa1a0c34d062808b15d5e83172fd5c0": {
+    "id": "3fa1a0c34d062808b15d5e83172fd5c0",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/prismor-open-source-runtime-control-plane-for-ai-agents/",
+    "title_en": "Prismor: Open-source Runtime Control Plane for AI Agents",
+    "summary_en": "Prismor is an open-source runtime control plane designed to help manage, govern, and control AI agents as they operate across applications and workflows.\nThe post Prismor: Open-source Runtime Control Plane for AI Agents appeared first on Linux Today.",
+    "pub_date": "Mon, 05 Oct 2026 07:24:54 +0000",
+    "title_zh": "Prismor：面向AI代理的开源运行时控制平面",
+    "summary_zh": "Prismor是一个开源运行时控制平面，旨在帮助管理和治理AI代理在各类应用与工作流中的运行。它提供对AI代理行为的集中控制能力，确保其在跨应用场景下的可控性与合规性。",
+    "fulltext_zh": "Prismor是一个开源运行时控制平面，旨在帮助管理和治理AI代理，并在其跨应用和工作流运行时对其进行控制。\n\n文章《Prismor：面向AI代理的开源运行时控制平面》首次发布于Linux Today。"
   }
 }

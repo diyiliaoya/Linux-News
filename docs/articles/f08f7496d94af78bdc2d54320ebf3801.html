@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>使用 Sober 在 Linux 上无需 Wine 玩 Roblox — Linux 中文速报</title>
+<title>Hylki：一款面向 GNOME 的现代 Rust 电子邮件客户端 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
+    <span class="tag">桌面环境</span>
     <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>使用 Sober 在 Linux 上无需 Wine 玩 Roblox</h1>
+  <h1>Hylki：一款面向 GNOME 的现代 Rust 电子邮件客户端</h1>
 
-  <div class="article-summary">Sober 是 Vinegar 项目开发的第三方非官方运行时，让 Linux 用户无需 Wine 即可运行 Roblox。它不涉及模拟或虚拟机，支持所有 PC 专属功能，性能与 Windows 客户端相当或更好。Sober 非开源，仅通过 Flathub 分发，系统要求不高，但不受 Roblox 官方支持，服务器端更新可能导致功能失效。</div>
+  <div class="article-summary">Hylki 是一款基于 Rust 的 GNOME 桌面电子邮件客户端，支持多账户、会话线程、OpenPGP 加密、阅读模式等丰富功能，并提供大量自定义选项。其大部分 Rust 代码由 Anthropic 的 Claude 在人工指导下编写，但应用本身不含 AI 功能。可通过 Flatpak 安装，需 GNOME 50 运行时。</div>
 
-  <div class="article-body"><p>在 Linux 上无需 Wine 玩 Roblox，使用 Sober - OMG! Ubuntu</p><p>Roblox 官方并不支持 Linux，但 Linux 用户可以使用 Sober 来运行它，这是一个非官方的第三方“移植”，无需 Wine 即可工作。</p><p>我知道；这不是一款“游戏”——除非你正迫不及待想玩。大多数 Roblox 用户年龄在 16 岁以下，通过手机访问，并对 Robux（游戏内虚拟货币）有着不健康的兴趣。</p><p>但你可能——像我一样——有那些讨厌的亲戚，他们要求在你的 Linux 电脑上玩 Roblox，因为他们的平板电脑需要充电……</p><p>性能“与 Windows 相同或更好”</p><p>在 Roblox 世界里享受清醒体验，无需 Wine</p><p>Sober 是由 Vinegar 项目制作的“专为 Roblox 代码设计的专用运行时”。这里不涉及模拟或虚拟机。它提供对 Roblox 所有 PC 专属功能的访问，包括聊天、声音，当然还有浏览和加入“游戏”。</p><p>Roblox 上的游戏被称为“体验”。最常访问的之一：99 Nights in the Forest，这个标题深深烙印在我的交感神经系统中，因为我的一个侄子（7岁）连续两天每句话都要完整说它 20 遍。</p><p>游戏在官方服务器上运行，因此你需要在线才能玩，图形在本地渲染。据说在相同硬件上，Linux 上的性能“与 Windows 客户端相同或更好”。</p><p>非开源，且仅在 Flathub 上提供</p><p>Sober 未获得 Roblox Corporation 的支持或批准，服务器端的更改可能随时部分或完全破坏功能。你的账户不应因使用它而被封禁，因为 Vinegar 表示正常使用“很少”会导致 moderation 行动。</p><p>该项目也不是开源的。Vinegar 表示他们选择保持代码闭源，以“减少滥用的可能性”。此外，Sober 也只能通过 Flathub 安装，没有计划提供其他包格式。</p><p>好的一面是，它的系统要求不高；支持 SSE4.1 的 x86-64 CPU（推荐 SSE4.2）和处理 OpenGL ES 3.0 的 GPU（推荐 Vulkan 1.1）。充足的可用内存有帮助（所以关掉几个浏览器标签页）。</p><p>有一个实验性的 ARM 版本，但要访问安装程序，你需要加入该项目的 Discord。</p><p>还有其他努力和方法，例如，在 Linux 上运行 Android APK。</p></div>
+  <div class="article-body"><p>Hylki 是一款面向 GNOME 桌面的基于 Rust 的电子邮件客户端，内置了极其丰富的自定义选项。</p><p>它属于新近涌现的一批 Linux 邮件客户端，旨在作为现代、轻量级的替代方案，与功能更强大的邮件客户端竞争。</p><p>GTK4/libadwaita 界面？有。三栏垂直布局？有。围绕会话构建？有。哦，还有“没有 AI 编码工具就不会存在”？也有——我稍后会谈到这一点。</p><p>“打开迅速、阅读轻松、默认私密”</p><p>面向 GNOME 的现代邮件客户端</p><p>Hylki 的引导流程是个不错的亮点</p><p>你可以通过 GNOME 在线账户连接已设置的任何电子邮件账户，也可以使用手动 POP3/IMAP 账户配置来添加账户。它支持多账户，既可以单独访问每个账户，也可以通过统一收件箱访问。</p><p>我很喜欢首次运行的引导流程。通常这类东西我会随便点几下跳过。但这里，它很好地混合了各种选项和偏好设置，让你提前完成配置——其中一些可以在上面的截图中看到。</p><p>标准的邮件管理功能和操作都已涵盖，并且像 Geary 和现代网页邮件提供商一样，邮件使用会话线程（即它们会一起出现在同一视图中）。</p><p>窗口内撰写和 GPG 设置</p><p>新邮件可以内联撰写，也可以在弹出窗口中撰写，内容可以用富文本、Markdown、HTML 或纯文本编写。你甚至可以选择将邮件加入队列“稍后发送”，而不是立即发送。支持 OpenPGP（通过主机软件包）来阅读、签名和加密邮件。</p><p>不急着发送？</p><p>其他新颖功能包括“阅读模式”（将邮件内容精简为纯文本）、一组配色方案和替代应用图标、专用的附件视图、“专注模式”以隐藏图标和其他视觉杂物，以及与 GNOME 联系人的交互。</p><p>舒适性功能包括单键快捷键（Gmail 风格）、后台应用模式、手势支持，以及以不同于系统默认语言运行应用的选项。</p><p>而这还没有触及大量可用的自定义选项和配置设置。</p><p>说真的，有很多——从配置内联邮件预览中显示的行数，到编辑工具栏中按钮的顺序，再到创建本地邮件过滤器和管理 LDAP 目录。</p><p>由 LLM 制作，但在指导下完成</p><p>开发者表示，Anthropic 的 Claude 被用于编写大部分代码，尽管是在指导下进行，并且每个输出都“由人工维护者审查和测试，该维护者对每个版本签字确认”。</p><p>“其中绝大部分 Rust 代码是用 Anthropic 的 Claude 编写的”</p><p>该应用本身不包含 AI 功能，无论是本地还是云端，因此不存在重要邮件或整个收件箱被 LLM 因过度关注错误 token 以完成设定任务而直接搞砸的风险（机器生成怪癖带来的焦虑仍然存在）。</p><p>但 Hylki——一个冰岛语单词，意为“胶囊”——中的所有 artwork 据称都是人工制作的。主应用图标和标志由 Yiannis Ioannides 绘制。</p><p>撇开 AI 来源不谈——不同的人对使用的红线划在不同的地方，并非所有都出于哲学考量，但推动者的意图和技巧……</p><p>看起来还不错，运行得也很好，只是有点……</p><p>可能是心理作用，但我总觉得 LLM 制作的 GTK 应用界面有点……我说不太清楚。就像在某些地方对小细节缺乏关注，而在另一些地方又过度关注细节，形成了一种并置。</p><p>作为 Flatpak 提供，可下载</p><p>或通过网站，或通过命令行以节省一点时间。</p><p>Ubuntu 不预装 Flatpak，所以先安装它：</p><p>sudo apt install flatpak</p><p>需要 GNOME 50 运行时，该运行时可在 Flathub 上获取。这是一个共享运行时，会随第一个需要它的应用一起下载：</p><p>flatpak remote-add --if-not-exists flathub https://flathub.org/rep</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/play-roblox-linux-sober" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/hylki-email-client-for-gnome" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

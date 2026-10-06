@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>使用 Sober 在 Linux 上无需 Wine 玩 Roblox — Linux 中文速报</title>
+<title>TrueNAS 27 RC.1 发布：Linux 6.18 LTS + OpenZFS 2.4 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #a78bfa1a; color: #a78bfa;
-    border: 1px solid #a78bfa30;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">其他</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>使用 Sober 在 Linux 上无需 Wine 玩 Roblox</h1>
+  <h1>TrueNAS 27 RC.1 发布：Linux 6.18 LTS + OpenZFS 2.4</h1>
 
-  <div class="article-summary">Sober 是 Vinegar 项目开发的第三方非官方运行时，让 Linux 用户无需 Wine 即可运行 Roblox。它不涉及模拟或虚拟机，支持所有 PC 专属功能，性能与 Windows 客户端相当或更好。Sober 非开源，仅通过 Flathub 分发，系统要求不高，但不受 Roblox 官方支持，服务器端更新可能导致功能失效。</div>
+  <div class="article-summary">TrueNAS 27 RC.1 发布，该版本基于 Linux 6.18 LTS 内核并集成 OpenZFS 2.4，带来 AVX2 优化、性能提升和硬件支持改进。新增 TrueSearch、WebShare、Fusion Pools 2.0、有状态 SMB 故障转移及 TrueNAS 对象接口早期访问。版本号从 26 改为 27，因稳定版预计 2026 年 12 月发布，多数用户将在 2027 年部署。</div>
 
-  <div class="article-body"><p>在 Linux 上无需 Wine 玩 Roblox，使用 Sober - OMG! Ubuntu</p><p>Roblox 官方并不支持 Linux，但 Linux 用户可以使用 Sober 来运行它，这是一个非官方的第三方“移植”，无需 Wine 即可工作。</p><p>我知道；这不是一款“游戏”——除非你正迫不及待想玩。大多数 Roblox 用户年龄在 16 岁以下，通过手机访问，并对 Robux（游戏内虚拟货币）有着不健康的兴趣。</p><p>但你可能——像我一样——有那些讨厌的亲戚，他们要求在你的 Linux 电脑上玩 Roblox，因为他们的平板电脑需要充电……</p><p>性能“与 Windows 相同或更好”</p><p>在 Roblox 世界里享受清醒体验，无需 Wine</p><p>Sober 是由 Vinegar 项目制作的“专为 Roblox 代码设计的专用运行时”。这里不涉及模拟或虚拟机。它提供对 Roblox 所有 PC 专属功能的访问，包括聊天、声音，当然还有浏览和加入“游戏”。</p><p>Roblox 上的游戏被称为“体验”。最常访问的之一：99 Nights in the Forest，这个标题深深烙印在我的交感神经系统中，因为我的一个侄子（7岁）连续两天每句话都要完整说它 20 遍。</p><p>游戏在官方服务器上运行，因此你需要在线才能玩，图形在本地渲染。据说在相同硬件上，Linux 上的性能“与 Windows 客户端相同或更好”。</p><p>非开源，且仅在 Flathub 上提供</p><p>Sober 未获得 Roblox Corporation 的支持或批准，服务器端的更改可能随时部分或完全破坏功能。你的账户不应因使用它而被封禁，因为 Vinegar 表示正常使用“很少”会导致 moderation 行动。</p><p>该项目也不是开源的。Vinegar 表示他们选择保持代码闭源，以“减少滥用的可能性”。此外，Sober 也只能通过 Flathub 安装，没有计划提供其他包格式。</p><p>好的一面是，它的系统要求不高；支持 SSE4.1 的 x86-64 CPU（推荐 SSE4.2）和处理 OpenGL ES 3.0 的 GPU（推荐 Vulkan 1.1）。充足的可用内存有帮助（所以关掉几个浏览器标签页）。</p><p>有一个实验性的 ARM 版本，但要访问安装程序，你需要加入该项目的 Discord。</p><p>还有其他努力和方法，例如，在 Linux 上运行 Android APK。</p></div>
+  <div class="article-body"><p>TrueNAS 27 RC.1 发布：Linux 6.18 LTS + OpenZFS 2.4</p><p>2026 年 10 月 5 日 20:25 EDT。</p><p>TrueNAS 27 RC.1 今日发布，这是 iXsystems 基于 Linux 的存储/NAS 操作系统下一个主要版本的候选发布版。</p><p>最初该版本计划命名为 TrueNAS 26，但开发者决定将版本方案改为 TrueNAS 27。</p><p>开发者解释称，从 TrueNAS 26 改为 TrueNAS 27 是因为大多数用户最终将在 2027 年而非 2026 年运行它，稳定版预计于 12 月发布。因此，为了反映大多数用户实际部署的年份而非首次亮相的年份，TrueNAS 27.0 将于 12 月作为下一个主要版本发布。</p><p>TrueNAS 27 基于 Linux 6.18 LTS 内核构建，并引入了 OpenZFS 文件系统支持。除了更新核心操作系统组件外，TrueNAS 27 还新增了 TrueSearch 和 WebShare 以改进服务器端搜索、Fusion Pools 2.0、有状态 SMB 故障转移支持，以及 TrueNAS 对象接口的早期访问，用于对 ZFS 数据集进行原生 S3 访问。</p><p>借助 Linux 6.18 LTS 内核和 OpenZFS 2.4 升级，TrueNAS 27.0 旨在提供比先前版本更强大的性能。新的 OpenZFS 更新带来了更多高级矢量扩展（AVX2）优化，新内核具有更好的性能并改进了硬件支持，还有各种其他改进。</p><p>有关 TrueNAS 27 及今日 TrueNAS 27 RC.1 候选版本的更多详细信息，请访问相关链接。</p><p>其他新闻：</p><p>OpenMandriva ROME 26.09 发布，带来更多 AI 应用、Snaps 及 PGO + LTO 优化</p><p>Redox OS 新增类 IO_uring API、NUMA 支持，并让 QEMU 正常工作</p><p>ReactOS 从 Wine 获得重大 DirectX 堆栈更新，可启用更多游戏</p><p>AlmaLinux 推出新的软件/硬件认证门户，可自行认证应用</p><p>阿里巴巴向 Omarchy 捐赠 300 万美元，用于打造“理想”的智能体操作系统</p><p>Void Linux 维护者因 AI 政策争议放弃 100 多个软件包</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。</p><p>其他文章：</p><p>Valve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面的出色工作</p><p>西门子关闭了有前景的开源 Radioss 项目的大门</p><p>NVIDIA 进行 Wayland 与 X.Org 延迟测试的结果</p><p>Linux 7.4 将为 Apple M4、A18 Pro 引入初始设备树，用于 MacBook Neo</p><p>微软宣布 WSLC 正式可用：Windows 上的 Linux 容器</p><p>Linux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2</p><p>AMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0、Linux 7.2</p><p>KDE Plasma 6.8 现在让平铺窗口更整齐地拼合</p><p>在享受无广告浏览的同时，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/play-roblox-linux-sober" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/TrueNAS-27-RC.1-Release" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

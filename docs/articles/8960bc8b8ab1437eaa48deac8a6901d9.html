@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>使用 Sober 在 Linux 上无需 Wine 玩 Roblox — Linux 中文速报</title>
+<title>AMD ROCm 与 Vulkan 在 Lemonade 本地 AI 服务器配合 Llama.cpp 的性能对比 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">其他</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>使用 Sober 在 Linux 上无需 Wine 玩 Roblox</h1>
+  <h1>AMD ROCm 与 Vulkan 在 Lemonade 本地 AI 服务器配合 Llama.cpp 的性能对比</h1>
 
-  <div class="article-summary">Sober 是 Vinegar 项目开发的第三方非官方运行时，让 Linux 用户无需 Wine 即可运行 Roblox。它不涉及模拟或虚拟机，支持所有 PC 专属功能，性能与 Windows 客户端相当或更好。Sober 非开源，仅通过 Flathub 分发，系统要求不高，但不受 Roblox 官方支持，服务器端更新可能导致功能失效。</div>
+  <div class="article-summary">本文通过两台搭载 AMD Radeon 显卡的系统，对比了 Lemonade 本地 AI 服务器中 Llama.cpp 的 ROCm 与 Vulkan 后端性能。测试使用 Lemonade 2026.39.1（内置 Llama.cpp b10825），硬件分别为 System76 Thelio Major 工作站（Radeon AI PRO R9700）和 Framework Desktop（Ryzen AI Max+ 395 Strix Halo）。这是继近一年前 RDNA4 测试后的再次评估，当时部分模型 Vulkan 后端更快，本次则呈现最新情况。</div>
 
-  <div class="article-body"><p>在 Linux 上无需 Wine 玩 Roblox，使用 Sober - OMG! Ubuntu</p><p>Roblox 官方并不支持 Linux，但 Linux 用户可以使用 Sober 来运行它，这是一个非官方的第三方“移植”，无需 Wine 即可工作。</p><p>我知道；这不是一款“游戏”——除非你正迫不及待想玩。大多数 Roblox 用户年龄在 16 岁以下，通过手机访问，并对 Robux（游戏内虚拟货币）有着不健康的兴趣。</p><p>但你可能——像我一样——有那些讨厌的亲戚，他们要求在你的 Linux 电脑上玩 Roblox，因为他们的平板电脑需要充电……</p><p>性能“与 Windows 相同或更好”</p><p>在 Roblox 世界里享受清醒体验，无需 Wine</p><p>Sober 是由 Vinegar 项目制作的“专为 Roblox 代码设计的专用运行时”。这里不涉及模拟或虚拟机。它提供对 Roblox 所有 PC 专属功能的访问，包括聊天、声音，当然还有浏览和加入“游戏”。</p><p>Roblox 上的游戏被称为“体验”。最常访问的之一：99 Nights in the Forest，这个标题深深烙印在我的交感神经系统中，因为我的一个侄子（7岁）连续两天每句话都要完整说它 20 遍。</p><p>游戏在官方服务器上运行，因此你需要在线才能玩，图形在本地渲染。据说在相同硬件上，Linux 上的性能“与 Windows 客户端相同或更好”。</p><p>非开源，且仅在 Flathub 上提供</p><p>Sober 未获得 Roblox Corporation 的支持或批准，服务器端的更改可能随时部分或完全破坏功能。你的账户不应因使用它而被封禁，因为 Vinegar 表示正常使用“很少”会导致 moderation 行动。</p><p>该项目也不是开源的。Vinegar 表示他们选择保持代码闭源，以“减少滥用的可能性”。此外，Sober 也只能通过 Flathub 安装，没有计划提供其他包格式。</p><p>好的一面是，它的系统要求不高；支持 SSE4.1 的 x86-64 CPU（推荐 SSE4.2）和处理 OpenGL ES 3.0 的 GPU（推荐 Vulkan 1.1）。充足的可用内存有帮助（所以关掉几个浏览器标签页）。</p><p>有一个实验性的 ARM 版本，但要访问安装程序，你需要加入该项目的 Discord。</p><p>还有其他努力和方法，例如，在 Linux 上运行 Android APK。</p></div>
+  <div class="article-body"><p>AMD ROCm 与 Vulkan 在 Lemonade 本地 AI 服务器配合 Llama.cpp 的性能对比 - Phoronix</p><p>AMD ROCm 与 Vulkan 在 Lemonade 本地 AI 服务器配合 Llama.cpp 的性能对比</p><p>2026 年 10 月 5 日上午 09:50 EDT。</p><p>一位读者最近询问，希望看到一些关于 Vulkan 与 AMD ROCm 后端之间 AI 性能的新基准测试，以了解如今的情况如何。以下是分别在两个搭载 AMD Radeon 显卡的系统上，使用 Lemonade 本地 AI 服务器，探索 ROCm 与 Vulkan Llama.cpp 后端差异的一些最新基准测试。</p><p>距离上次在 AMD RDNA4 上查看 RADV Vulkan 与 AMD ROCm 配合 Llama.cpp 的性能已经过去近一年。回顾当时，有不少模型使用 Llama.cpp Vulkan 后端比使用当时的 AMD ROCm 更快。</p><p>在今天的测试中，使用了 Lemonade 2026.39.1 本地 AI 服务器二进制文件，以便借助其内置基准测试支持实现轻松复现。Lemonade 2026.39.1 使用 Llama.cpp b10825。</p><p>本次全新的 ROCm 与 Vulkan 测试使用了两套系统，一套是搭载 AMD Radeon AI PRO R9700 的 System76 Thelio Major 工作站，另一套是搭载 AMD Ryzen AI Max+ 395 Strix Halo 的 Framework Desktop。完全不同的硬件和略有不同的软件栈，为 Lemonade/Llama.cpp 下的 Vulkan 与 ROCm 提供了不同的观察视角。感谢支持者们，帮助 Phoronix 22 年多来持续实现所有日常 Linux 基准测试。</p><p>在 Ubuntu Linux 上升级 Mesa 为 Intel Arc B390 带来的性能优势</p><p>在 CachyOS 上使用 GeForce RTX 5090 笔记本 GPU 对比 Nouveau 与 NVIDIA R610</p><p>Intel Arc Pro B70 在 Linux 7.1 上展现一些性能优势</p><p>Linux 7.1 帮助 Intel Arc Battlemage 显卡获得更好性能</p><p>AMD Radeon AI PRO R9700 上 ROCm 7.0.0 与 ROCm 7.2.3 的性能对比</p><p>用于工作站图形性能的 Nouveau 与 NVIDIA R595 Linux 驱动对比</p><p>同时享受无广告浏览、</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/play-roblox-linux-sober" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/review/lemonade-vulkan-rocm" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
