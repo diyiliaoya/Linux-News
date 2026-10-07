@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot; — Linux 中文速报</title>
+<title>X.Org Server 与 XWayland 中又发现十余个漏洞 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">桌面环境</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</h1>
+  <h1>X.Org Server 与 XWayland 中又发现十余个漏洞</h1>
 
-  <div class="article-summary">Besgnulinux 团队发布了基于 Debian 的新版本 1.0，采用 Openbox 窗口管理器。开发者表示，Openbox 版本最初仅为测试目的而创建，但因系统表现出色而决定适配为通用版本，为用户提供 JWM 之外的第二选择。由于 Openbox 本身不包含独立运行所需的内置组件，团队通过多种工具和自定义配置构建了该系统，并最终选择 Tint2 作为面板。</div>
+  <div class="article-summary">TrendAI 零日计划在 X.Org Server 和 XWayland 中披露了 12 个新的安全漏洞，涉及释放后使用、缓冲区溢出和越界读写等问题，影响 xorg-server-21.1.25 和 xwayland-24.1.14 之前的版本。</div>
 
-  <div class="article-body"><p>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</p><p>Besgnulinux 团队宣布发布其基于 Debian 的 Linux 发行版的新版本——1.0，该版本采用 Openbox 窗口管理器：“我已经很久没有测试 Openbox 了。我最初创建这个版本是出于测试目的。然而，当它变成一个如此出色的系统后，我认为将其适配为通用用途并分享出来是个好主意。拥有另一个窗口管理器作为 JWM 的替代方案，为用户提供了第二种选择。让 Openbox 达到当前状态确实需要大量努力。毕竟，Openbox 本身并不附带可作为独立系统运行的内置组件；它是通过多种工具和自定义配置构建而成的。然而，只要配置得当，它就能成为一个极好的系统。这正是窗口管理器的美妙之处——它们允许用户根据自己的喜好定制体验。这个版本正是源于这种欣赏。Openbox 1.0 版本做了哪些工作？在尝试了各种面板之后，我决定 Tint2 最适合 Openbox。”</p><p>阅读余下内容以获取更多信息和截图。</p><p>besgnulinux-openbox-1.0.iso</p><p>近期相关新闻与发布</p><p>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</p><p>发行版发布：Besgnulinux 4-0</p><p>发行版发布：Besgnulinux 3-2</p><p>发行版发布：Besgnulinux 3-1</p><p>发行版发布：Besgnulinux 3-0</p><p>更多 Besgnulinux 新闻……</p><p>Besgnulinux 是一个基于 Debian“稳定”分支的轻量级桌面 Linux 发行版。它使用 JWM 窗口管理器，设计目标是快速、轻量且易于使用，适合老旧和低配置的计算机。Besgnulinux 附带 Calamares 系统安装程序、Brave 网页浏览器，以及 40 多个自定义构建的工具，用于控制系统设置以及桌面的外观和体验。</p><p>https://besgnulinux.blogspot.com/</p></div>
+  <div class="article-body"><p>在 AI 的协助下，今晚又公开了十几个影响传统 X.Org Server 以及 XWayland 的安全漏洞。</p><p>TrendAI 零日计划发现了另外 12 个影响传统 X.Org Server 代码库以及 XWayland 的安全漏洞。TrendAI 零日计划过去曾发现大量 X.Org 安全问题，并且进一步延续了十多年前由另一位安全研究员定下的基调——那位研究员早在 2013 年就曾表示，X.Org 的安全性甚至“比看起来还要糟糕”。</p><p>最新一轮 X.Org Server 和 XWayland 安全披露包括：</p><p>* CVE-2026-88812：XKB SetGeometry TextDoodad 双重释放</p><p>* CVE-2026-93515：Present 扩展跨窗口 Notify 释放后使用</p><p>* CVE-2026-93516：XInput 被动抓取 modifierDevice 释放后使用</p><p>* CVE-2026-93517：GLX RenderLarge 堆缓冲区溢出</p><p>* CVE-2026-93518：XKB ResizeKeyType 数值截断</p><p>* CVE-2026-93519：XFixes 指针屏障事件列表缓冲区溢出</p><p>* CVE-2026-93520：XKB ChangeKeycodeRange 堆越界写入</p><p>* CVE-2026-93521：RandR ChangeProviderProperty 堆缓冲区溢出</p><p>* CVE-2026-93522：Glamor CopyArea CPU-FBO 堆缓冲区溢出</p><p>* CVE-2026-93523：XInput2 PassiveUngrabDevice 修饰键越界写入</p><p>* CVE-2026-93524：XKB SetMap 键宽/动作计数不同步越界读取</p><p>* CVE-2026-93536：GestureBuildSprite 释放后使用</p><p>大量释放后使用、缓冲区溢出以及越界读写问题继续存在于 X.Org Server 代码库中。</p><p>这些问题存在于新的 xorg-server-21.1.25 和 xwayland-24.1.14 之前的版本中。</p><p>关于这些新安全披露的所有细节可通过以下邮件列表帖子查看。</p><p>YSERVER 1.7 Rust X11 服务器缩小了与 X.Org Server 的内存占用差距</p><p>Vibe Coded YSERVER 增加 XDMCP 支持，用于多用户共享桌面</p><p>X.Org Server 26.1 作为五年来的更新更接近发布</p><p>YSERVER 1.5 发布，带来反向 PRIME 支持及其他新功能</p><p>XDC 2026 将包含许多有趣的演讲：Vulkan Gallium、CUDA 上的 OpenCL 等</p><p>X.Org Server 26.1 RC1 为五年来首个功能版本做准备</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。</p><p>Valve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面所做的出色工作</p><p>西门子关上了有前景的开源 Radioss 项目的大门</p><p>NVIDIA 进行 Wayland 与 X.Org 延迟测试的结果</p><p>Linux 7.4 将为 Apple M4、A18 Pro 及 MacBook Neo 引入初始设备树</p><p>Linux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2</p><p>AMD Ryzen AI 开发者平台操作系统更新，加入 ROCm 10.0、Linux 7.2</p><p>微软宣布 WSLC 正式可用：Windows 上的 Linux 容器</p><p>Linux 7.3-rc6 发布：对新“AI 常态”而言属正常</p><p>同时享有无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12974" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/X.Org-12-New-Issues-2026" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

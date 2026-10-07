@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot; — Linux 中文速报</title>
+<title>Scrcpy 5.0 为 Android 镜像添加硬件解码支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</h1>
+  <h1>Scrcpy 5.0 为 Android 镜像添加硬件解码支持</h1>
 
-  <div class="article-summary">Besgnulinux 团队发布了基于 Debian 的新版本 1.0，采用 Openbox 窗口管理器。开发者表示，Openbox 版本最初仅为测试目的而创建，但因系统表现出色而决定适配为通用版本，为用户提供 JWM 之外的第二选择。由于 Openbox 本身不包含独立运行所需的内置组件，团队通过多种工具和自定义配置构建了该系统，并最终选择 Tint2 作为面板。</div>
+  <div class="article-summary">Scrcpy 5.0 发布，新增零拷贝硬件解码支持，默认启用并自动检测解码后端（如 Linux 上的 VA-API），可将主机 CPU 占用降低多达 10 倍。同时改进了音频捕获选项和视频色彩过滤，修复了 UHID 键盘模式及 OTG 模式下的若干问题。该工具免费开源，支持 Windows、macOS 和 Linux。</div>
 
-  <div class="article-body"><p>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</p><p>Besgnulinux 团队宣布发布其基于 Debian 的 Linux 发行版的新版本——1.0，该版本采用 Openbox 窗口管理器：“我已经很久没有测试 Openbox 了。我最初创建这个版本是出于测试目的。然而，当它变成一个如此出色的系统后，我认为将其适配为通用用途并分享出来是个好主意。拥有另一个窗口管理器作为 JWM 的替代方案，为用户提供了第二种选择。让 Openbox 达到当前状态确实需要大量努力。毕竟，Openbox 本身并不附带可作为独立系统运行的内置组件；它是通过多种工具和自定义配置构建而成的。然而，只要配置得当，它就能成为一个极好的系统。这正是窗口管理器的美妙之处——它们允许用户根据自己的喜好定制体验。这个版本正是源于这种欣赏。Openbox 1.0 版本做了哪些工作？在尝试了各种面板之后，我决定 Tint2 最适合 Openbox。”</p><p>阅读余下内容以获取更多信息和截图。</p><p>besgnulinux-openbox-1.0.iso</p><p>近期相关新闻与发布</p><p>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</p><p>发行版发布：Besgnulinux 4-0</p><p>发行版发布：Besgnulinux 3-2</p><p>发行版发布：Besgnulinux 3-1</p><p>发行版发布：Besgnulinux 3-0</p><p>更多 Besgnulinux 新闻……</p><p>Besgnulinux 是一个基于 Debian“稳定”分支的轻量级桌面 Linux 发行版。它使用 JWM 窗口管理器，设计目标是快速、轻量且易于使用，适合老旧和低配置的计算机。Besgnulinux 附带 Calamares 系统安装程序、Brave 网页浏览器，以及 40 多个自定义构建的工具，用于控制系统设置以及桌面的外观和体验。</p><p>https://besgnulinux.blogspot.com/</p></div>
+  <div class="article-body"><p>Scrcpy 5.0 为 Android 镜像添加硬件解码支持 - OMG! Ubuntu</p><p>这款用于从桌面查看和控制 Android 手机的开源工具，在其最新版本中新增了对零拷贝硬件解码的支持。</p><p>该功能是 v5.0 的新特性，利用你计算机的硬件来解码从 Android 屏幕发送的视频流，以便镜像到桌面（通过 USB 线缆或 IP/TCP）。它提升了性能；主机设备的 CPU 占用最多可下降 10 倍。</p><p>Scrcpy 默认启用硬件解码（无需传递标志），并自动检测可用的解码器后端，例如 Linux 上的 VA-API。</p><p>解码器可以通过标志手动选择，该功能支持</p><p>hwdec 使用更少的 CPU（截图：scrcpy）</p><p>在 Ubuntu 上，使用 VA-API hwdec 需要安装相应的软件包（如果尚未安装）。软件解码仍然可用，既可以强制选择，也可以在合适的 hwdec 不可用时作为回退方案。</p><p>Scrcpy 5.0 的其他改进包括：一个用于更广泛音频捕获的选项，以修复游戏音频缺失的问题（同时在未传递标志时保留现有的仅媒体行为），以及在缩放过程中对视频颜色进行一致的过滤。</p><p>错误修复解决了各种问题，包括在 UHID 键盘模式下使用按键时的异常行为，而 OTG 模式现在可以使用环境变量来选择特定设备。</p><p>Scrcpy 是适用于 Windows、macOS 和 Linux 的免费开源软件。请从项目 GitHub 下载最新版本。它本身没有“官方网站”，因此如果你使用 macOS 或 Windows，请仅从 GitHub 获取。</p><p>Linux 用户有更多选择，因为旧版本的 Scrcpy 可以从 Ubuntu 仓库安装。这些版本不具备上述硬件解码功能，但仍然可用。</p><p>Snap Store 上的非官方 Scrcpy snap 将很快更新到 v5.0。</p><p>音频转发仅在运行 Android 11 或更高版本的设备上可用。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12974" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/scrcpy-hardware-decoding-added" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

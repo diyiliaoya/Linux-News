@@ -14144,5 +14144,148 @@
     "title_zh": "Prismor：面向AI代理的开源运行时控制平面",
     "summary_zh": "Prismor是一个开源运行时控制平面，旨在帮助管理和治理AI代理在各类应用与工作流中的运行。它提供对AI代理行为的集中控制能力，确保其在跨应用场景下的可控性与合规性。",
     "fulltext_zh": "Prismor是一个开源运行时控制平面，旨在帮助管理和治理AI代理，并在其跨应用和工作流运行时对其进行控制。\n\n文章《Prismor：面向AI代理的开源运行时控制平面》首次发布于Linux Today。"
+  },
+  "bd7ea6d78a02da2687cab435983d63b3": {
+    "id": "bd7ea6d78a02da2687cab435983d63b3",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/scrcpy-hardware-decoding-added",
+    "title_en": "Scrcpy 5.0 adds hardware decoding for Android mirroring",
+    "summary_en": "Scrcpy, the open-source tool for mirroring your Android phone on your desktop, now supports zero-copy hardware decoding in its latest release.\nYou're reading Scrcpy 5.0 adds hardware decoding for Android mirroring, a blog post from OMG! Ubuntu. Do not reproduce elsewhere without permission.",
+    "pub_date": "Tue, 06 Oct 2026 15:24:29 +0000",
+    "title_zh": "Scrcpy 5.0 为 Android 镜像添加硬件解码支持",
+    "summary_zh": "Scrcpy 5.0 发布，新增零拷贝硬件解码支持，默认启用并自动检测解码后端（如 Linux 上的 VA-API），可将主机 CPU 占用降低多达 10 倍。同时改进了音频捕获选项和视频色彩过滤，修复了 UHID 键盘模式及 OTG 模式下的若干问题。该工具免费开源，支持 Windows、macOS 和 Linux。",
+    "fulltext_zh": "Scrcpy 5.0 为 Android 镜像添加硬件解码支持 - OMG! Ubuntu\n\n这款用于从桌面查看和控制 Android 手机的开源工具，在其最新版本中新增了对零拷贝硬件解码的支持。\n\n该功能是 v5.0 的新特性，利用你计算机的硬件来解码从 Android 屏幕发送的视频流，以便镜像到桌面（通过 USB 线缆或 IP/TCP）。它提升了性能；主机设备的 CPU 占用最多可下降 10 倍。\n\nScrcpy 默认启用硬件解码（无需传递标志），并自动检测可用的解码器后端，例如 Linux 上的 VA-API。\n\n解码器可以通过标志手动选择，该功能支持\n\nhwdec 使用更少的 CPU（截图：scrcpy）\n\n在 Ubuntu 上，使用 VA-API hwdec 需要安装相应的软件包（如果尚未安装）。软件解码仍然可用，既可以强制选择，也可以在合适的 hwdec 不可用时作为回退方案。\n\nScrcpy 5.0 的其他改进包括：一个用于更广泛音频捕获的选项，以修复游戏音频缺失的问题（同时在未传递标志时保留现有的仅媒体行为），以及在缩放过程中对视频颜色进行一致的过滤。\n\n错误修复解决了各种问题，包括在 UHID 键盘模式下使用按键时的异常行为，而 OTG 模式现在可以使用环境变量来选择特定设备。\n\nScrcpy 是适用于 Windows、macOS 和 Linux 的免费开源软件。请从项目 GitHub 下载最新版本。它本身没有“官方网站”，因此如果你使用 macOS 或 Windows，请仅从 GitHub 获取。\n\nLinux 用户有更多选择，因为旧版本的 Scrcpy 可以从 Ubuntu 仓库安装。这些版本不具备上述硬件解码功能，但仍然可用。\n\nSnap Store 上的非官方 Scrcpy snap 将很快更新到 v5.0。\n\n音频转发仅在运行 Android 11 或更高版本的设备上可用。"
+  },
+  "b407f973f9096b52741b58c2b7c50741": {
+    "id": "b407f973f9096b52741b58c2b7c50741",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/firefox-gnome-theme-nova-update",
+    "title_en": "Firefox GNOME theme updated to work with Nova",
+    "summary_en": "The unofficial GNOME theme for Firefox has been updated to work with the Firefox 157 release and its newer, rounder Nova theme. It is not a traditional Firefox theme (like the ones you can install from the Mozilla Add-ons site) but, to quote its GitHub page, a &#8220;bunch of CSS code to make Firefox look closer to GNOME&#8217;s native apps&#8221; – an excellent job it does at it too. With Nova now rolled out, the theme team working on the unofficial Adwaita-esque garb needed to update to accoun",
+    "pub_date": "Tue, 06 Oct 2026 04:27:31 +0000",
+    "title_zh": "Firefox GNOME 主题更新以适配 Nova",
+    "summary_zh": "非官方的 Firefox GNOME 主题已更新，以兼容新版 Firefox 及其更圆润的界面。该主题通过 CSS 代码让 Firefox 外观更接近 GNOME 原生应用。用户可通过一条 curl 命令快速安装，支持多种构建格式，安装后重启浏览器即可生效。部分功能需手动启用，卸载也较为简单。",
+    "fulltext_zh": "Firefox GNOME 主题更新以适配 Nova - OMG! Ubuntu\n\n非官方的 Firefox GNOME 主题已更新，以适配新版 Firefox 及其更圆润的界面。\n\n它并非传统的 Firefox 主题（如可从 Mozilla 附加组件网站安装的那些），而是引用其 GitHub 页面的话来说，“一堆 CSS 代码，让 Firefox 看起来更接近 GNOME 的原生应用”——而且它在这方面做得非常出色。\n\n随着新版 Firefox 的推出，负责这个非官方 Adwaita 风格外观的主题团队需要更新，以应对新版浏览器中 CSS 类变更和新的小部件样式。\n\n你无法直接看出其中有什么变化——这正是更新的目的。但需要打补丁和调整，以保持那种不可思议的 Adwaita 氛围。\n\n安装 GNOME Firefox 主题\n\n使用一条命令即可获取自动运行脚本（通常不建议运行网上找到的随机命令，尤其是那些还会执行脚本的命令，但如果你有疑虑，可以在 GitHub 上审查代码）。\n\ncurl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash\n\n上述命令会下载主题文件，解压并将各种样式表、图标和其他通知移动到你的（隐藏的）Firefox 配置文件文件夹中。该脚本适用于大多数构建版本，包括二进制、Flatpak、.deb、RPM 以及——万岁——Snap。\n\n它会一闪而过，很快完成。重启 Firefox 使更改生效。\n\n如果你更喜欢标签页在顶部，可以启用它们。\n\n某些功能，比如仅打开一个标签页时隐藏标签栏，或者——我个人最喜欢的——将标签页用作标题栏，确实需要通过手动启用。\n\n完整列表可在 Firefox GNOME 主题的 GitHub 页面上找到。\n\n卸载稍微复杂一些，但只需删除几个文件夹。你无需清空配置文件并重新开始。如需卸载详情，请参阅 GitHub。"
+  },
+  "5c5f876031b1d271c5187e0485884941": {
+    "id": "5c5f876031b1d271c5187e0485884941",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/red-hat-lightwell-status-update/",
+    "title_en": "Red Hat's Lightwell Doesn't Wait for Upstream Maintainers to Act",
+    "summary_en": "A status update shows it clearing 400 vulnerabilities from Java libraries and a key service now being generally available.",
+    "pub_date": "Tue, 06 Oct 2026 16:43:57 GMT",
+    "title_zh": "红帽的 Lightwell 不等待上游维护者行动",
+    "summary_zh": "红帽的 Lightwell 项目针对企业开源安全中上游维护者未修补的漏洞，通过直接向后移植修复来绕过等待时间。目前已清除 Java 库中 400 个漏洞，并宣布 Clearinghouse Premier 服务正式可用，向所有企业开放。该服务提供定制化漏洞管理和早期通知，是 IBM 和红帽 50 亿美元开源安全承诺的一部分。",
+    "fulltext_zh": "红帽的 Lightwell 不等待上游维护者行动\n\n红帽的 Lightwell 不等待上游维护者行动\n\n一份状态更新显示，它清除了 Java 库中的 400 个漏洞，并且一项关键服务现已正式可用。\n\n这是红帽和 IBM 针对企业开源安全中一个特定问题的回应。漏洞存在于生产库版本中，而上游维护者尚未修补，在某些情况下也不会修补。\n\n据数据显示，超过 90% 的企业应用程序代码可追溯到开源或第三方库，而典型的企业代码库包含超过 500 个已知漏洞。\n\n他们表示，针对已知漏洞的攻击平均在补丁存在前一周就会到来。\n\nLightwell 的方法是绕过这个时间线。它不等待上游维护者将修复推送到企业实际运行的库版本，而是直接向后移植这些修复，通过安全的软件包仓库交付。\n\n红帽最近联系我们，分享了其进展。\n\n已清除 400 个，还有更多\n\n迄今为止，Lightwell 已经成功清除了基础 Java 库中 400 个先前未知的漏洞，超越了已报告的漏洞，并按照负责任的披露协议向上游贡献修复。\n\n到目前为止，主要目标是那些运行 Java 环境且依赖版本被固定、无法安全更新的组织。Lightwell 就地修补这些漏洞，保持固定版本不变。\n\n路线图上还包括扩展到 Java 之外。每个都将遵循相同的方法，将修复向后移植到已投入生产的版本，并将适用的补丁贡献给上游。\n\nClearinghouse 开放\n\nClearinghouse Premier 此前一直在限制性条款下运营。在今天之前，它仅面向关键基础设施领域预先选定的组织群体。\n\n这一限制现已解除，因为它已达到正式可用状态，这意味着任何企业都可以直接注册 Clearinghouse，无需等待基础设施指定来清除访问权限。\n\n如你所见，Lightwell 分为两个访问层级。Clearinghouse 于 7 月正式可用，作为面向任何组织的自助订阅服务。它提供对向后移植补丁及其合规文档的访问。\n\nClearinghouse Premier 提供的服务更加定制化。组织可以指定哪些漏洞对其环境最重要，在问题公开前获得早期通知，并确切知道修复何时到达。\n\n总体而言，Lightwell 属于 IBM 和红帽对开源安全的 50 亿美元承诺的一部分，两家公司都指出 AI 辅助工具提高了较旧、未修补的开源依赖的风险。\n\n这一立场得到红帽 Lightwell 副总裁兼总经理的进一步强化，他表示：\n\nAI 代理在一夜之间改变了威胁格局，以机器速度利用旧依赖。它们不在乎代码库是十年前的还是被认为稳定的，因为一个小裂缝就足以串联起一次攻击。\n\n如果你对所提供的内容感兴趣，可以通过红帽的网站进一步了解，它将引导你完成修补工作流程。\n\n喜欢这个更新？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无承诺\n\n一个对开源软件、定制 PC 构建、赛车运动以及探索这个世界无限可能性充满热情的书呆子。\n\n西门子突然下架 OpenRadioss，但分支已经上线\n\nUbuntu 26.10 将采用基于 Rust 的 GnuPG 替代品\n\nDigitalOcean 悄然结束开源积分计划\n\nYT-DLP 被 IFPI 视为盗版工具\n\nF-Droid 的新应用表明它不会消失\n\n成为更好的 Linux 用户\n\n与"
+  },
+  "1d75b5323dabe5a8d198a217e5786a81": {
+    "id": "1d75b5323dabe5a8d198a217e5786a81",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/X.Org-12-New-Issues-2026",
+    "title_en": "Another Dozen Vulnerabilities Found In The X.Org Server & XWayland",
+    "summary_en": "With the assistance of AI, another dozen security vulnerabilities affecting both the conventional X.Org Server as well as XWayland were made public this evening...",
+    "pub_date": "Tue, 06 Oct 2026 21:31:11 -0400",
+    "title_zh": "X.Org Server 与 XWayland 中又发现十余个漏洞",
+    "summary_zh": "TrendAI 零日计划在 X.Org Server 和 XWayland 中披露了 12 个新的安全漏洞，涉及释放后使用、缓冲区溢出和越界读写等问题，影响 xorg-server-21.1.25 和 xwayland-24.1.14 之前的版本。",
+    "fulltext_zh": "在 AI 的协助下，今晚又公开了十几个影响传统 X.Org Server 以及 XWayland 的安全漏洞。\n\nTrendAI 零日计划发现了另外 12 个影响传统 X.Org Server 代码库以及 XWayland 的安全漏洞。TrendAI 零日计划过去曾发现大量 X.Org 安全问题，并且进一步延续了十多年前由另一位安全研究员定下的基调——那位研究员早在 2013 年就曾表示，X.Org 的安全性甚至“比看起来还要糟糕”。\n\n最新一轮 X.Org Server 和 XWayland 安全披露包括：\n\n* CVE-2026-88812：XKB SetGeometry TextDoodad 双重释放\n* CVE-2026-93515：Present 扩展跨窗口 Notify 释放后使用\n* CVE-2026-93516：XInput 被动抓取 modifierDevice 释放后使用\n* CVE-2026-93517：GLX RenderLarge 堆缓冲区溢出\n* CVE-2026-93518：XKB ResizeKeyType 数值截断\n* CVE-2026-93519：XFixes 指针屏障事件列表缓冲区溢出\n* CVE-2026-93520：XKB ChangeKeycodeRange 堆越界写入\n* CVE-2026-93521：RandR ChangeProviderProperty 堆缓冲区溢出\n* CVE-2026-93522：Glamor CopyArea CPU-FBO 堆缓冲区溢出\n* CVE-2026-93523：XInput2 PassiveUngrabDevice 修饰键越界写入\n* CVE-2026-93524：XKB SetMap 键宽/动作计数不同步越界读取\n* CVE-2026-93536：GestureBuildSprite 释放后使用\n\n大量释放后使用、缓冲区溢出以及越界读写问题继续存在于 X.Org Server 代码库中。\n\n这些问题存在于新的 xorg-server-21.1.25 和 xwayland-24.1.14 之前的版本中。\n\n关于这些新安全披露的所有细节可通过以下邮件列表帖子查看。\n\nYSERVER 1.7 Rust X11 服务器缩小了与 X.Org Server 的内存占用差距\nVibe Coded YSERVER 增加 XDMCP 支持，用于多用户共享桌面\nX.Org Server 26.1 作为五年来的更新更接近发布\nYSERVER 1.5 发布，带来反向 PRIME 支持及其他新功能\nXDC 2026 将包含许多有趣的演讲：Vulkan Gallium、CUDA 上的 OpenCL 等\nX.Org Server 26.1 RC1 为五年来首个功能版本做准备\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\nValve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面所做的出色工作\n西门子关上了有前景的开源 Radioss 项目的大门\nNVIDIA 进行 Wayland 与 X.Org 延迟测试的结果\nLinux 7.4 将为 Apple M4、A18 Pro 及 MacBook Neo 引入初始设备树\nLinux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2\nAMD Ryzen AI 开发者平台操作系统更新，加入 ROCm 10.0、Linux 7.2\n微软宣布 WSLC 正式可用：Windows 上的 Linux 容器\nLinux 7.3-rc6 发布：对新“AI 常态”而言属正常\n\n同时享有无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "3ad39f4a6fc29c993b851d4dc9b0f685": {
+    "id": "3ad39f4a6fc29c993b851d4dc9b0f685",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-Better-Zswap-Performance",
+    "title_en": "New Patches For Linux's Zswap Show Major Improvements",
+    "summary_en": "Amid multiple ongoing innovations being pursued in the Linux memory management space amid sky high RAM prices, a new patch series posted on Monday aim to enhance the Zswap performance for this compressed RAM cache for swap pages...",
+    "pub_date": "Tue, 06 Oct 2026 20:56:04 -0400",
+    "title_zh": "Linux Zswap 新补丁显示重大改进",
+    "summary_zh": "Linux 开发者 Usama Arif 提交了两项 Zswap 补丁，旨在减少加载请求争用。补丁将压缩与解压缩的请求、等待和互斥锁分离，并在同步算法下使用栈上请求进行解压缩，从而避免加载路径获取 Zswap 锁。测试显示，单 vCPU 下最慢读取从 22.3 毫秒降至 0.97 毫秒，8 vCPU 下从 314 毫秒降至 7.0 毫秒，超过 10 毫秒的读取几乎消失。",
+    "fulltext_zh": "在 RAM 价格高企之际，Linux 内存管理领域正在推进多项创新，周一发布的一组新补丁旨在提升 Zswap（用于交换页的压缩 RAM 缓存）的性能。\n\nLinux 开发者 Usama Arif 发布了两项 Zswap 补丁，致力于减少 Zswap 加载时的请求争用。继 zRAM 完成类似工作之后，Zswap 代码正在被调整，以解决当前存储和加载共享每 CPU acomp 请求和互斥锁的缺陷。当前这种处理方式最终被证明是瓶颈，而这两个补丁有助于减少加载时的争用。\n\nUsama Arif 进一步解释道：\n\n“存储和加载共享每 CPU acomp 请求和互斥锁。一个低优先级存储在压缩器释放其流锁之后、但仍持有 zswap 互斥锁时可能被抢占，而该 CPU 上更高优先级的加载随后会等待该存储再次运行。这延续了 Sergey Senozhatsky 的 zram 系列工作，后者出于相同原因进行了拆分。\n\n补丁 1 为压缩和解压缩提供了独立的请求、等待和互斥锁，因此加载不再等待存储，尽管它们仍可能互相等待。补丁 2 在算法为同步且不需要请求上下文时，使用栈上请求进行解压缩，这涵盖了所有树内软件压缩器，因此这些加载不会获取 zswap 锁。异步算法则保留每 CPU 请求和互斥锁。对于软件压缩器，该系列分配的请求数量与之前相同；每个每 CPU 上下文增加 72 字节，在 x86-64 上加载路径加深约 270 字节。”\n\n令人印象深刻的是最终结果：\n\nUsama 在补丁系列中进一步解释：\n\n“以下数字是每次运行中最慢的读取，取 5 次运行的中位数（最小值-最大值）。每次运行在 zstd 虚拟机中进行 12 秒，启用惰性抢占，vm.page-cluster=0，交换位于 /dev/ram0。在 1 个 vCPU 下，四个 nice +10 的工作进程将内存换出并读回，同时一个 nice 0 的任务空转。一个 nice -19 的读取者换出自己的缓冲区，并测量每次读取所需时间。在 8 个 vCPU 下，有 16 个工作进程、8 个空转任务和 8 个读取者。\n\n系列之前（毫秒）      系列之后（毫秒）\n1 vCPU      22.3 (21.6-22.6)        0.97 (0.72-1.4)\n8 vCPU     314 (97-2542)           7.0 (5.0-98)\n\n在 1 个 vCPU 下，超过 10 毫秒的读取从每次运行 26-35 次降至零；在 8 个 vCPU 下，从每次运行 3-18 次降至最多一次。基准测试和测试程序是在 LLM 的帮助下编写的。”\n\n总体而言，这看起来是对 Zswap 的一次非常好的改进，目前正在 Linux 内核邮件列表上接受审查。\n\nMeta 为 Linux 开发压缩 RAM“CRAM”：优于 ZRAM 和 Zswap\nLinux 7.3-rc6 发布：对新“AI 常态”而言属正常\nMGLRU-FG 在某些测试中为 Linux 带来高达 10~40% 的性能提升\nLinux 补丁显示短切片任务低延迟的乐观结果\n提议在启动时设置 ARM64 内核栈大小以减少内存消耗\nLinux 7.3-rc5 发布：“又一周，又一个大型 RC”\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nValve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面的惊人工作\n西门子关上了有前景的开源 Radioss 项目的大门\nNVIDIA 进行 Wayland 与 X.Org 延迟测试的结果\nLinux 7.4 将为 Apple M4、A18 Pro 引入 MacBook Neo 的初始设备树\nLinux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2\nAMD Ryzen AI 开发者平台"
+  },
+  "632b8d08ab1020872e50808f4844d21a": {
+    "id": "632b8d08ab1020872e50808f4844d21a",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Ubuntu-27.04-ntpd-rs-Plans",
+    "title_en": "Canonical Reaffirms Plans For Ubuntu 27.04 To Use ntpd-rs By Default",
+    "summary_en": "Back in March Canonical announced switching to ntpd-rs was its next target as part of transitioning more Ubuntu Linux system components to Rust-based implementations. This time synchronization package is available for testing in the upcoming Ubuntu 26.10 release while it aims to be the default for Ubuntu 27.04...",
+    "pub_date": "Tue, 06 Oct 2026 17:08:51 -0400",
+    "title_zh": "Canonical 重申计划：Ubuntu 27.04 将默认使用 ntpd-rs",
+    "summary_zh": "Canonical 重申了在 Ubuntu 27.04 中默认采用 Rust 编写的 ntpd-rs 时间同步守护进程的计划。ntpd-rs 是 Trifecta Tech Foundation 的项目，提供完整的 NTP 和 NTS 客户端与服务器实现，旨在提升安全性和稳定性。该软件包已在 Ubuntu 26.10 中提供测试，目标是在 27.04 中成为默认选项。",
+    "fulltext_zh": "Canonical 重申计划：Ubuntu 27.04 将默认使用 ntpd-rs\n2026年10月6日 下午5:08 EDT\n\n早在今年三月，Canonical 就宣布了其下一个目标，作为将更多 Ubuntu Linux 系统组件过渡到基于 Rust 实现的一部分。这个时间同步软件包已在即将发布的 Ubuntu 26.10 中提供测试，并计划在 Ubuntu 27.04 中成为默认选项。\n\nntpd-rs 项目是一个基于 Rust 的、功能完整的网络时间协议（NTP）和网络时间安全（NTS）实现，同时支持客户端和服务器功能。ntpd-rs 是 Trifecta Tech Foundation 的项目之一，该基金会专注于使用 Rust 来提高安全性和稳定性。\n\n在今天的一篇 Ubuntu 博客文章中，Canonical 总结了 Ubuntu 26.10 的一些亮点，其中提到 ntpd-rs 已在 Ubuntu 26.10 中提供测试，并重申了在 Ubuntu 27.04 中默认使用它的计划：\n\n“准确的时间是 TLS 证书验证、Kerberos、可靠的日志时间戳和审计追踪的基础。如果系统时钟严重错误，有效证书可能显示为已过期或尚未生效，Kerberos 身份验证可能因时钟偏差而失败，安全日志也难以在不同系统之间可靠地关联。Ubuntu 26.10 在归档中包含了一个更新版本的 ntpd-rs——一个内存安全的 NTP 实现——用于测试，目标是在 Ubuntu 27.04 中将其设为默认。”\n\n文章还重点介绍了 Ubuntu 26.10 更小的 Secure Boot 路径、Linux 7.3 内核的使用、在更多系统上基于 TPM 的加密、Rust Coreutils 的完全过渡、OpenSSL 4.0，以及 Dbus-Broker 取代经典的 Dbus 守护进程。Ubuntu 26.10 还实现了其目标，即通过本地 AI 提供 Myna 作为桌面语音转文字功能。\n\nUbuntu 的下一个 Rust 努力可能将 OpenPGP 替换为 Sequoia PGP\nUbuntu 26.10 Beta 发布，搭载 Linux 7.3 内核、GNOME 51 桌面\n面向骁龙笔记本电脑的新 Ubuntu Concept ISO 带来首款 X2 笔记本支持\nUbuntu Linux 制造商 Canonical 2025 年营收达 3.45 亿美元\nUbuntu 26.10 切换到 Linux 7.3 内核\nUbuntu 26.10 桌面调整其在内存压力下的行为\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nValve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面的出色工作\n西门子关闭了前景看好的开源 Radioss 项目\nNVIDIA 进行 Wayland 与 X.Org 延迟测试的结果\nLinux 7.4 将为 Apple M4、A18 Pro 及 MacBook Neo 引入初始设备树\nLinux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2\nAMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0、Linux 7.2\n微软宣布 WSLC 正式可用：Windows 上的 Linux 容器\nLinux 7.3-rc6 发布：新“AI 常态”下的常态\n\n同时享有无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "c7b3e4cadd9e5cc24e1f82df6ffe7172": {
+    "id": "c7b3e4cadd9e5cc24e1f82df6ffe7172",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Boost-Recently-Busy-CPUs",
+    "title_en": "Meta Engineer's Linux Patches For Boosting AMD P-State / Steam Deck Gaming Performance",
+    "summary_en": "Back in July I wrote about AMD P-State driver patches boosting 1%-low frame rates for gaming by as much as 31%. That work was done by David Vernet who is a Linux kernel engineer/hacker at Meta. This week Vernet presented on the topic at the Linux Plumbers Conference happening in Prague...",
+    "pub_date": "Tue, 06 Oct 2026 14:21:01 -0400",
+    "title_zh": "Meta 工程师为提升 AMD P-State / Steam Deck 游戏性能提交 Linux 补丁",
+    "summary_zh": "Meta 的 Linux 内核工程师 David Vernet 在布拉格 Linux Plumbers 大会上介绍了其 AMD P-State 驱动补丁工作，通过为近期繁忙的 CPU 核心建立每核能效偏好（EPP）提升启发式机制，显著改善 Steam Deck 等 AMD 平台的游戏帧时间尾部和加载时间。新方案改为由动态调速器驱动 EPP，并考虑结合 Wine/Proton 的线程提示，在功耗和性能上均有良好表现。",
+    "fulltext_zh": "Meta 工程师为提升 AMD P-State / Steam Deck 游戏性能提交 Linux 补丁\n2026 年 10 月 6 日下午 2:21（美国东部时间）。\n今年 7 月，我曾撰文介绍过 AMD P-State 驱动补丁可将游戏 1% 低帧率提升高达 31%。这项工作由 Meta 的 Linux 内核工程师/开发者 David Vernet 完成。本周，Vernet 在布拉格举行的 Linux Plumbers 大会上就该主题进行了演讲。\nVernet 昨天介绍了这项工作，它为近期繁忙的 CPU 核心建立了每核能效偏好（EPP）提升启发式机制。相较于 AMD P-State 驱动默认的 EPP 行为，这能在 Steam Deck 及其他 AMD 平台上带来更好的游戏性能，尤其是在帧时间尾部和加载时间方面。不过，今年夏天原始补丁的代码审查过程建议将其改为调速器级别的机制，而非驱动启发式，并做出其他一些设计变更。\n新提案是让动态调速器来驱动 EPP。同时还在考虑让 Wine / Proton 等设置线程提示的想法。\nVernet 分享的结果在功耗和性能方面都相当有前景。\n希望了解更多信息的人可以查看演讲资料，地址在\nAMD ROCm 10.1 发布，带来多项改进\nLinux 7.4 将引入 AMD Zen 6 的新 BTB CTX 隔离功能\nLinux 7.4 的 AMD P-State 驱动将为 Ryzen Zen 6 CPU 做好准备\nAMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0、Linux 7.2\nAMD RMPOPT 优化在 Linux 7.4 之前排队\nLinux 7.4 将支持 AMD Ryzen AI Max 400 系列“Gorgon Halo”上的 NPU\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\nValve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面所做的出色工作\n西门子关上了有前景的开源 Radioss 项目的大门\nNVIDIA 进行 Wayland 与 X.Org 延迟测试的结果\nLinux 7.4 将为 MacBook Neo 引入 Apple M4、A18 Pro 的初始设备树\nLinux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2\nAMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0、Linux 7.2\n微软宣布 WSLC 正式可用：Windows 上的 Linux 容器\nLinux 7.3-rc6 发布：对新“AI 常态”而言属正常\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "4651ac2210aa99e18a9eeb150704e484": {
+    "id": "4651ac2210aa99e18a9eeb150704e484",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/nvidia-vera-hpc",
+    "title_en": "NVIDIA Vera HPC Performance Benchmarks Take On AMD EPYC, Intel Xeon",
+    "summary_en": "While most everyone understandably likes to talk about AI these days, one of the areas of NVIDIA's Vera CPU I have been most eager to test has been for conventional high performance computing (HPC) workloads. HPC was talked up as one of Vera's strengths thanks to its 1.2TB/s LPDDR5x memory bandwidth and custom Olympus cores. Vera is seeing deployments at HPC labs like Los Alamos. With recently having unfettered remote access to a dual NVIDIA Vera server, I ran through a variety of HPC workloads ",
+    "pub_date": "Tue, 06 Oct 2026 12:00:08 -0400",
+    "title_zh": "NVIDIA Vera HPC性能基准测试挑战AMD EPYC与Intel Xeon",
+    "summary_zh": "本文对NVIDIA Vera CPU在传统高性能计算（HPC）工作负载中的性能进行了基准测试，并与AMD EPYC 9575F、EPYC 9755以及Intel Xeon 6980P进行了对比。Vera凭借1.2TB/s的LPDDR5x内存带宽和定制Olympus核心，在HPC领域备受期待。测试涵盖了双路Vera服务器（共176核/352线程）与竞品的性能、功耗及频率指标，展示了NVIDIA在HPC市场的竞争力。",
+    "fulltext_zh": "NVIDIA Vera HPC性能基准测试挑战AMD EPYC与Intel Xeon - Phoronix\nNVIDIA Vera HPC性能基准测试挑战AMD EPYC与Intel Xeon\n发布于2026年10月6日东部时间下午12:00。\n\n尽管如今大多数人都在谈论AI，这可以理解，但我最渴望测试NVIDIA Vera CPU的领域之一一直是传统高性能计算（HPC）工作负载。HPC被认为是Vera的优势之一，得益于其1.2TB/s的LPDDR5x内存带宽和定制的Olympus核心。Vera正在洛斯阿拉莫斯等HPC实验室部署。最近，我获得了对双路NVIDIA Vera服务器的无限制远程访问权限，运行了各种HPC工作负载和类似的性能基准测试。以下是NVIDIA Vera与AMD EPYC和Intel Xeon的性能对比，包括CPU功耗和频率指标。\n\nNVIDIA Vera SMT性能基准测试\n\n我的下一个好奇领域是Vera在HPC工作负载中的表现。由于两颗NVIDIA Vera CPU合计提供176个核心和352个线程，我将其性能与实验室中其他几款相关处理器进行了比较。其中包括AMD EPYC 9575F，作为HPC工作负载的热门选择，这是一款高频Turin SKU，双路共有128个核心/256个线程。还测试了AMD EPYC 9755 2P，作为顶级Zen 5（非5C/密集）处理器，合计256个核心和512个线程。在Intel方面，我唯一可用的Xeon 6 Granite Rapids评测配置是两颗旗舰Xeon 6980P处理器，合计256个核心和512个线程。实际上，这是对NVIDIA Vera、AMD EPYC和Intel Xeon当前代处理器在HPC领域的顶级审视。是的，AMD EPYC Zen 6“Venice”最近已发布，相关基准测试即将推出。\n\n在内存方面，双路Vera配备了16条96GB LPDDR5-9600三星M564K6LC3CL0-CCVS7内存。AMD EPYC 9575F 2P和EPYC 9755 2P的顶级配置为24条64GB DDR5-6400三星M321R8GA0PB1-CCPKC内存。Intel Xeon 6980P 2P配置为24条64GB MRDIMM-8800美光内存，作为其顶级配置。\n\n远程NVIDIA Vera服务器运行的是修改版的Ubuntu 24.04 LTS堆栈，带有基于Linux 6.17的内核补丁构建，默认使用64K内核和GCC 15.3编译器，这是NVIDIA为Vera推荐的Linux软件配置。经过这些修改，AMD EPYC和Intel Xeon服务器运行的是Ubuntu 26.04 LTS，其原厂环境提供了类似的基于GCC 15的编译器和其他现代默认设置，适用于这些x86_64服务器。\n\n除了查看原始HPC性能基准测试外，还按测试实时监控了CPU功耗。此外，还监控了峰值CPU频率。\n\nIntel Granite Rapids WS与AMD Threadripper Zen 5 SMT性能对比\nIntel Xeon 600工作站性能与AMD Threadripper 9000在近400项基准测试中的对比\nIntel Granite Rapids WS核心扩展性能与Xeon 678X\nIntel Xeon 678X“Granite Rapids-WS”上的超线程性能\nIntel Xeon 678X工作站CPU的AMX性能\nAMD EPYC 9006 Venice发布，有望成为大满贯\n\n享受无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "5fc98ea11614d1d8a202538faffcfe63": {
+    "id": "5fc98ea11614d1d8a202538faffcfe63",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/incus-7-5-adds-ovn-child-networks-live-instance-moves/",
+    "title_en": "Incus 7.5 Adds OVN Child Networks, Live Instance Moves",
+    "summary_en": "Incus 7.5 adds OVN child networks and live instance moves between projects, alongside performance, clustering, and infrastructure improvements.\nThe post Incus 7.5 Adds OVN Child Networks, Live Instance Moves appeared first on Linux Today.",
+    "pub_date": "Tue, 06 Oct 2026 07:16:37 +0000",
+    "title_zh": "Incus 7.5 新增 OVN 子网络与实例实时迁移功能",
+    "summary_zh": "Incus 7.5 版本发布，新增 OVN 子网络支持，并允许实例在项目之间进行实时迁移。此外，该版本还在性能、集群和基础设施方面进行了多项改进。",
+    "fulltext_zh": "Incus 7.5 新增了 OVN 子网络，并支持实例在项目之间进行实时迁移，同时还带来了性能、集群和基础设施方面的改进。\n\n文章《Incus 7.5 新增 OVN 子网络与实例实时迁移功能》最初发布于 Linux Today。"
+  },
+  "2f6d631b05e598295c80eadeb1d5727d": {
+    "id": "2f6d631b05e598295c80eadeb1d5727d",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/virtio-nvgpu-brings-shared-nvidia-gpu-access-to-linux-kvm-guests/",
+    "title_en": "virtio-nvgpu Brings Shared NVIDIA GPU Access to Linux KVM Guests",
+    "summary_en": "virtio-nvgpu enables Linux KVM guests to share an NVIDIA GPU, offering near-native graphics performance without traditional PCI passthrough.\nThe post virtio-nvgpu Brings Shared NVIDIA GPU Access to Linux KVM Guests appeared first on Linux Today.",
+    "pub_date": "Tue, 06 Oct 2026 07:15:07 +0000",
+    "title_zh": "virtio-nvgpu 为 Linux KVM 客户机带来共享 NVIDIA GPU 访问",
+    "summary_zh": "virtio-nvgpu 项目实现了 Linux KVM 客户机共享 NVIDIA GPU，无需传统 PCI 直通即可获得接近原生的图形性能。该方案通过 virtio 框架提供 GPU 虚拟化支持，有望简化虚拟化环境中的 GPU 资源分配。",
+    "fulltext_zh": "virtio-nvgpu 使 Linux KVM 客户机能够共享 NVIDIA GPU，无需传统 PCI 直通即可提供接近原生的图形性能。\n\n文章《virtio-nvgpu 为 Linux KVM 客户机带来共享 NVIDIA GPU 访问》首先出现在 Linux Today 上。"
+  },
+  "32b3cb356a27c4f57c77267614a198e8": {
+    "id": "32b3cb356a27c4f57c77267614a198e8",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/fastfetch-2-69-system-information-tool-adds-animated-logos-better-linux-support/",
+    "title_en": "Fastfetch 2.69 System Information Tool Adds Animated Logos, Better Linux Support",
+    "summary_en": "Fastfetch 2.69 system information tool adds animated logo support and improved Linux compatibility, alongside additional enhancements and fixes.\nThe post Fastfetch 2.69 System Information Tool Adds Animated Logos, Better Linux Support appeared first on Linux Today.",
+    "pub_date": "Tue, 06 Oct 2026 07:11:15 +0000",
+    "title_zh": "Fastfetch 2.69 系统信息工具新增动态 Logo，改进 Linux 支持",
+    "summary_zh": "Fastfetch 2.69 版本发布，为这款系统信息工具带来了动态 Logo 支持，并改进了 Linux 兼容性，同时还包含其他增强功能和修复。",
+    "fulltext_zh": "Fastfetch 2.69 系统信息工具新增动态 Logo 支持，并改进了 Linux 兼容性，同时还包含其他增强功能和修复。\n\n文章《Fastfetch 2.69 系统信息工具新增动态 Logo，改进 Linux 支持》最初发布于 Linux Today。"
+  },
+  "64d24aeca5a9ad52bc7110a4bbe0c62a": {
+    "id": "64d24aeca5a9ad52bc7110a4bbe0c62a",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/peazip-11-3-file-archiver-adds-safer-pea-extraction/",
+    "title_en": "PeaZip 11.3 File Archiver Adds Safer PEA Extraction",
+    "summary_en": "PeaZip 11.3 file archiver adds safer PEA extraction, alongside additional improvements and fixes for managing and extracting compressed archives.\nThe post PeaZip 11.3 File Archiver Adds Safer PEA Extraction appeared first on Linux Today.",
+    "pub_date": "Tue, 06 Oct 2026 07:09:04 +0000",
+    "title_zh": "PeaZip 11.3 文件归档器新增更安全的 PEA 提取功能",
+    "summary_zh": "PeaZip 11.3 版本发布，主要新增了更安全的 PEA 格式提取功能，同时包含多项改进和修复，以提升压缩档案的管理与提取体验。",
+    "fulltext_zh": "PeaZip 11.3 文件归档器新增了更安全的 PEA 提取功能，同时带来了用于管理和提取压缩档案的其他改进和修复。\n\n文章《PeaZip 11.3 文件归档器新增更安全的 PEA 提取功能》首次发布于 Linux Today。"
+  },
+  "3529caac4198a58d965f3adcc3674411": {
+    "id": "3529caac4198a58d965f3adcc3674411",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/obs-studio-33-promises-support-for-latest-nvidia-broadcast-sdks-beta-out-now/",
+    "title_en": "OBS Studio 33 Promises Support for Latest NVIDIA Broadcast SDKs, Beta Out Now",
+    "summary_en": "OBS Studio 33 enters beta with support for the latest NVIDIA Broadcast SDKs, NVENC on ARM64, and other improvements for streaming and recording.\nThe post OBS Studio 33 Promises Support for Latest NVIDIA Broadcast SDKs, Beta Out Now appeared first on Linux Today.",
+    "pub_date": "Tue, 06 Oct 2026 07:07:43 +0000",
+    "title_zh": "OBS Studio 33 承诺支持最新 NVIDIA Broadcast SDK，测试版现已发布",
+    "summary_zh": "OBS Studio 33 进入测试阶段，新增对最新 NVIDIA Broadcast SDK 的支持，并在 ARM64 架构上启用 NVENC 硬件编码，同时带来其他流媒体和录制改进。",
+    "fulltext_zh": "OBS Studio 33 进入测试阶段，支持最新的 NVIDIA Broadcast SDK、在 ARM64 上启用 NVENC，以及为流媒体和录制带来其他改进。\n\n文章《OBS Studio 33 承诺支持最新 NVIDIA Broadcast SDK，测试版现已发布》首次出现在 Linux Today。"
   }
 }

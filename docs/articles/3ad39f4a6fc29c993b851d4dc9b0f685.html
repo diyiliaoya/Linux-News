@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot; — Linux 中文速报</title>
+<title>Linux Zswap 新补丁显示重大改进 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</h1>
+  <h1>Linux Zswap 新补丁显示重大改进</h1>
 
-  <div class="article-summary">Besgnulinux 团队发布了基于 Debian 的新版本 1.0，采用 Openbox 窗口管理器。开发者表示，Openbox 版本最初仅为测试目的而创建，但因系统表现出色而决定适配为通用版本，为用户提供 JWM 之外的第二选择。由于 Openbox 本身不包含独立运行所需的内置组件，团队通过多种工具和自定义配置构建了该系统，并最终选择 Tint2 作为面板。</div>
+  <div class="article-summary">Linux 开发者 Usama Arif 提交了两项 Zswap 补丁，旨在减少加载请求争用。补丁将压缩与解压缩的请求、等待和互斥锁分离，并在同步算法下使用栈上请求进行解压缩，从而避免加载路径获取 Zswap 锁。测试显示，单 vCPU 下最慢读取从 22.3 毫秒降至 0.97 毫秒，8 vCPU 下从 314 毫秒降至 7.0 毫秒，超过 10 毫秒的读取几乎消失。</div>
 
-  <div class="article-body"><p>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</p><p>Besgnulinux 团队宣布发布其基于 Debian 的 Linux 发行版的新版本——1.0，该版本采用 Openbox 窗口管理器：“我已经很久没有测试 Openbox 了。我最初创建这个版本是出于测试目的。然而，当它变成一个如此出色的系统后，我认为将其适配为通用用途并分享出来是个好主意。拥有另一个窗口管理器作为 JWM 的替代方案，为用户提供了第二种选择。让 Openbox 达到当前状态确实需要大量努力。毕竟，Openbox 本身并不附带可作为独立系统运行的内置组件；它是通过多种工具和自定义配置构建而成的。然而，只要配置得当，它就能成为一个极好的系统。这正是窗口管理器的美妙之处——它们允许用户根据自己的喜好定制体验。这个版本正是源于这种欣赏。Openbox 1.0 版本做了哪些工作？在尝试了各种面板之后，我决定 Tint2 最适合 Openbox。”</p><p>阅读余下内容以获取更多信息和截图。</p><p>besgnulinux-openbox-1.0.iso</p><p>近期相关新闻与发布</p><p>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</p><p>发行版发布：Besgnulinux 4-0</p><p>发行版发布：Besgnulinux 3-2</p><p>发行版发布：Besgnulinux 3-1</p><p>发行版发布：Besgnulinux 3-0</p><p>更多 Besgnulinux 新闻……</p><p>Besgnulinux 是一个基于 Debian“稳定”分支的轻量级桌面 Linux 发行版。它使用 JWM 窗口管理器，设计目标是快速、轻量且易于使用，适合老旧和低配置的计算机。Besgnulinux 附带 Calamares 系统安装程序、Brave 网页浏览器，以及 40 多个自定义构建的工具，用于控制系统设置以及桌面的外观和体验。</p><p>https://besgnulinux.blogspot.com/</p></div>
+  <div class="article-body"><p>在 RAM 价格高企之际，Linux 内存管理领域正在推进多项创新，周一发布的一组新补丁旨在提升 Zswap（用于交换页的压缩 RAM 缓存）的性能。</p><p>Linux 开发者 Usama Arif 发布了两项 Zswap 补丁，致力于减少 Zswap 加载时的请求争用。继 zRAM 完成类似工作之后，Zswap 代码正在被调整，以解决当前存储和加载共享每 CPU acomp 请求和互斥锁的缺陷。当前这种处理方式最终被证明是瓶颈，而这两个补丁有助于减少加载时的争用。</p><p>Usama Arif 进一步解释道：</p><p>“存储和加载共享每 CPU acomp 请求和互斥锁。一个低优先级存储在压缩器释放其流锁之后、但仍持有 zswap 互斥锁时可能被抢占，而该 CPU 上更高优先级的加载随后会等待该存储再次运行。这延续了 Sergey Senozhatsky 的 zram 系列工作，后者出于相同原因进行了拆分。</p><p>补丁 1 为压缩和解压缩提供了独立的请求、等待和互斥锁，因此加载不再等待存储，尽管它们仍可能互相等待。补丁 2 在算法为同步且不需要请求上下文时，使用栈上请求进行解压缩，这涵盖了所有树内软件压缩器，因此这些加载不会获取 zswap 锁。异步算法则保留每 CPU 请求和互斥锁。对于软件压缩器，该系列分配的请求数量与之前相同；每个每 CPU 上下文增加 72 字节，在 x86-64 上加载路径加深约 270 字节。”</p><p>令人印象深刻的是最终结果：</p><p>Usama 在补丁系列中进一步解释：</p><p>“以下数字是每次运行中最慢的读取，取 5 次运行的中位数（最小值-最大值）。每次运行在 zstd 虚拟机中进行 12 秒，启用惰性抢占，vm.page-cluster=0，交换位于 /dev/ram0。在 1 个 vCPU 下，四个 nice +10 的工作进程将内存换出并读回，同时一个 nice 0 的任务空转。一个 nice -19 的读取者换出自己的缓冲区，并测量每次读取所需时间。在 8 个 vCPU 下，有 16 个工作进程、8 个空转任务和 8 个读取者。</p><p>系列之前（毫秒）      系列之后（毫秒）</p><p>1 vCPU      22.3 (21.6-22.6)        0.97 (0.72-1.4)</p><p>8 vCPU     314 (97-2542)           7.0 (5.0-98)</p><p>在 1 个 vCPU 下，超过 10 毫秒的读取从每次运行 26-35 次降至零；在 8 个 vCPU 下，从每次运行 3-18 次降至最多一次。基准测试和测试程序是在 LLM 的帮助下编写的。”</p><p>总体而言，这看起来是对 Zswap 的一次非常好的改进，目前正在 Linux 内核邮件列表上接受审查。</p><p>Meta 为 Linux 开发压缩 RAM“CRAM”：优于 ZRAM 和 Zswap</p><p>Linux 7.3-rc6 发布：对新“AI 常态”而言属正常</p><p>MGLRU-FG 在某些测试中为 Linux 带来高达 10~40% 的性能提升</p><p>Linux 补丁显示短切片任务低延迟的乐观结果</p><p>提议在启动时设置 ARM64 内核栈大小以减少内存消耗</p><p>Linux 7.3-rc5 发布：“又一周，又一个大型 RC”</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他</p><p>Valve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面的惊人工作</p><p>西门子关上了有前景的开源 Radioss 项目的大门</p><p>NVIDIA 进行 Wayland 与 X.Org 延迟测试的结果</p><p>Linux 7.4 将为 Apple M4、A18 Pro 引入 MacBook Neo 的初始设备树</p><p>Linux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2</p><p>AMD Ryzen AI 开发者平台</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12974" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-Better-Zswap-Performance" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

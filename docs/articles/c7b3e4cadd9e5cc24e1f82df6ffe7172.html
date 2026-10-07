@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot; — Linux 中文速报</title>
+<title>Meta 工程师为提升 AMD P-State / Steam Deck 游戏性能提交 Linux 补丁 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</h1>
+  <h1>Meta 工程师为提升 AMD P-State / Steam Deck 游戏性能提交 Linux 补丁</h1>
 
-  <div class="article-summary">Besgnulinux 团队发布了基于 Debian 的新版本 1.0，采用 Openbox 窗口管理器。开发者表示，Openbox 版本最初仅为测试目的而创建，但因系统表现出色而决定适配为通用版本，为用户提供 JWM 之外的第二选择。由于 Openbox 本身不包含独立运行所需的内置组件，团队通过多种工具和自定义配置构建了该系统，并最终选择 Tint2 作为面板。</div>
+  <div class="article-summary">Meta 的 Linux 内核工程师 David Vernet 在布拉格 Linux Plumbers 大会上介绍了其 AMD P-State 驱动补丁工作，通过为近期繁忙的 CPU 核心建立每核能效偏好（EPP）提升启发式机制，显著改善 Steam Deck 等 AMD 平台的游戏帧时间尾部和加载时间。新方案改为由动态调速器驱动 EPP，并考虑结合 Wine/Proton 的线程提示，在功耗和性能上均有良好表现。</div>
 
-  <div class="article-body"><p>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</p><p>Besgnulinux 团队宣布发布其基于 Debian 的 Linux 发行版的新版本——1.0，该版本采用 Openbox 窗口管理器：“我已经很久没有测试 Openbox 了。我最初创建这个版本是出于测试目的。然而，当它变成一个如此出色的系统后，我认为将其适配为通用用途并分享出来是个好主意。拥有另一个窗口管理器作为 JWM 的替代方案，为用户提供了第二种选择。让 Openbox 达到当前状态确实需要大量努力。毕竟，Openbox 本身并不附带可作为独立系统运行的内置组件；它是通过多种工具和自定义配置构建而成的。然而，只要配置得当，它就能成为一个极好的系统。这正是窗口管理器的美妙之处——它们允许用户根据自己的喜好定制体验。这个版本正是源于这种欣赏。Openbox 1.0 版本做了哪些工作？在尝试了各种面板之后，我决定 Tint2 最适合 Openbox。”</p><p>阅读余下内容以获取更多信息和截图。</p><p>besgnulinux-openbox-1.0.iso</p><p>近期相关新闻与发布</p><p>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</p><p>发行版发布：Besgnulinux 4-0</p><p>发行版发布：Besgnulinux 3-2</p><p>发行版发布：Besgnulinux 3-1</p><p>发行版发布：Besgnulinux 3-0</p><p>更多 Besgnulinux 新闻……</p><p>Besgnulinux 是一个基于 Debian“稳定”分支的轻量级桌面 Linux 发行版。它使用 JWM 窗口管理器，设计目标是快速、轻量且易于使用，适合老旧和低配置的计算机。Besgnulinux 附带 Calamares 系统安装程序、Brave 网页浏览器，以及 40 多个自定义构建的工具，用于控制系统设置以及桌面的外观和体验。</p><p>https://besgnulinux.blogspot.com/</p></div>
+  <div class="article-body"><p>Meta 工程师为提升 AMD P-State / Steam Deck 游戏性能提交 Linux 补丁</p><p>2026 年 10 月 6 日下午 2:21（美国东部时间）。</p><p>今年 7 月，我曾撰文介绍过 AMD P-State 驱动补丁可将游戏 1% 低帧率提升高达 31%。这项工作由 Meta 的 Linux 内核工程师/开发者 David Vernet 完成。本周，Vernet 在布拉格举行的 Linux Plumbers 大会上就该主题进行了演讲。</p><p>Vernet 昨天介绍了这项工作，它为近期繁忙的 CPU 核心建立了每核能效偏好（EPP）提升启发式机制。相较于 AMD P-State 驱动默认的 EPP 行为，这能在 Steam Deck 及其他 AMD 平台上带来更好的游戏性能，尤其是在帧时间尾部和加载时间方面。不过，今年夏天原始补丁的代码审查过程建议将其改为调速器级别的机制，而非驱动启发式，并做出其他一些设计变更。</p><p>新提案是让动态调速器来驱动 EPP。同时还在考虑让 Wine / Proton 等设置线程提示的想法。</p><p>Vernet 分享的结果在功耗和性能方面都相当有前景。</p><p>希望了解更多信息的人可以查看演讲资料，地址在</p><p>AMD ROCm 10.1 发布，带来多项改进</p><p>Linux 7.4 将引入 AMD Zen 6 的新 BTB CTX 隔离功能</p><p>Linux 7.4 的 AMD P-State 驱动将为 Ryzen Zen 6 CPU 做好准备</p><p>AMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0、Linux 7.2</p><p>AMD RMPOPT 优化在 Linux 7.4 之前排队</p><p>Linux 7.4 将支持 AMD Ryzen AI Max 400 系列“Gorgon Halo”上的 NPU</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他</p><p>Valve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面所做的出色工作</p><p>西门子关上了有前景的开源 Radioss 项目的大门</p><p>NVIDIA 进行 Wayland 与 X.Org 延迟测试的结果</p><p>Linux 7.4 将为 MacBook Neo 引入 Apple M4、A18 Pro 的初始设备树</p><p>Linux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2</p><p>AMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0、Linux 7.2</p><p>微软宣布 WSLC 正式可用：Windows 上的 Linux 容器</p><p>Linux 7.3-rc6 发布：对新“AI 常态”而言属正常</p><p>同时享受无广告浏览、</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12974" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Boost-Recently-Busy-CPUs" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

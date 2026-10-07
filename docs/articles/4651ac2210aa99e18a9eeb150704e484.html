@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot; — Linux 中文速报</title>
+<title>NVIDIA Vera HPC性能基准测试挑战AMD EPYC与Intel Xeon — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</h1>
+  <h1>NVIDIA Vera HPC性能基准测试挑战AMD EPYC与Intel Xeon</h1>
 
-  <div class="article-summary">Besgnulinux 团队发布了基于 Debian 的新版本 1.0，采用 Openbox 窗口管理器。开发者表示，Openbox 版本最初仅为测试目的而创建，但因系统表现出色而决定适配为通用版本，为用户提供 JWM 之外的第二选择。由于 Openbox 本身不包含独立运行所需的内置组件，团队通过多种工具和自定义配置构建了该系统，并最终选择 Tint2 作为面板。</div>
+  <div class="article-summary">本文对NVIDIA Vera CPU在传统高性能计算（HPC）工作负载中的性能进行了基准测试，并与AMD EPYC 9575F、EPYC 9755以及Intel Xeon 6980P进行了对比。Vera凭借1.2TB/s的LPDDR5x内存带宽和定制Olympus核心，在HPC领域备受期待。测试涵盖了双路Vera服务器（共176核/352线程）与竞品的性能、功耗及频率指标，展示了NVIDIA在HPC市场的竞争力。</div>
 
-  <div class="article-body"><p>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</p><p>Besgnulinux 团队宣布发布其基于 Debian 的 Linux 发行版的新版本——1.0，该版本采用 Openbox 窗口管理器：“我已经很久没有测试 Openbox 了。我最初创建这个版本是出于测试目的。然而，当它变成一个如此出色的系统后，我认为将其适配为通用用途并分享出来是个好主意。拥有另一个窗口管理器作为 JWM 的替代方案，为用户提供了第二种选择。让 Openbox 达到当前状态确实需要大量努力。毕竟，Openbox 本身并不附带可作为独立系统运行的内置组件；它是通过多种工具和自定义配置构建而成的。然而，只要配置得当，它就能成为一个极好的系统。这正是窗口管理器的美妙之处——它们允许用户根据自己的喜好定制体验。这个版本正是源于这种欣赏。Openbox 1.0 版本做了哪些工作？在尝试了各种面板之后，我决定 Tint2 最适合 Openbox。”</p><p>阅读余下内容以获取更多信息和截图。</p><p>besgnulinux-openbox-1.0.iso</p><p>近期相关新闻与发布</p><p>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</p><p>发行版发布：Besgnulinux 4-0</p><p>发行版发布：Besgnulinux 3-2</p><p>发行版发布：Besgnulinux 3-1</p><p>发行版发布：Besgnulinux 3-0</p><p>更多 Besgnulinux 新闻……</p><p>Besgnulinux 是一个基于 Debian“稳定”分支的轻量级桌面 Linux 发行版。它使用 JWM 窗口管理器，设计目标是快速、轻量且易于使用，适合老旧和低配置的计算机。Besgnulinux 附带 Calamares 系统安装程序、Brave 网页浏览器，以及 40 多个自定义构建的工具，用于控制系统设置以及桌面的外观和体验。</p><p>https://besgnulinux.blogspot.com/</p></div>
+  <div class="article-body"><p>NVIDIA Vera HPC性能基准测试挑战AMD EPYC与Intel Xeon - Phoronix</p><p>NVIDIA Vera HPC性能基准测试挑战AMD EPYC与Intel Xeon</p><p>发布于2026年10月6日东部时间下午12:00。</p><p>尽管如今大多数人都在谈论AI，这可以理解，但我最渴望测试NVIDIA Vera CPU的领域之一一直是传统高性能计算（HPC）工作负载。HPC被认为是Vera的优势之一，得益于其1.2TB/s的LPDDR5x内存带宽和定制的Olympus核心。Vera正在洛斯阿拉莫斯等HPC实验室部署。最近，我获得了对双路NVIDIA Vera服务器的无限制远程访问权限，运行了各种HPC工作负载和类似的性能基准测试。以下是NVIDIA Vera与AMD EPYC和Intel Xeon的性能对比，包括CPU功耗和频率指标。</p><p>NVIDIA Vera SMT性能基准测试</p><p>我的下一个好奇领域是Vera在HPC工作负载中的表现。由于两颗NVIDIA Vera CPU合计提供176个核心和352个线程，我将其性能与实验室中其他几款相关处理器进行了比较。其中包括AMD EPYC 9575F，作为HPC工作负载的热门选择，这是一款高频Turin SKU，双路共有128个核心/256个线程。还测试了AMD EPYC 9755 2P，作为顶级Zen 5（非5C/密集）处理器，合计256个核心和512个线程。在Intel方面，我唯一可用的Xeon 6 Granite Rapids评测配置是两颗旗舰Xeon 6980P处理器，合计256个核心和512个线程。实际上，这是对NVIDIA Vera、AMD EPYC和Intel Xeon当前代处理器在HPC领域的顶级审视。是的，AMD EPYC Zen 6“Venice”最近已发布，相关基准测试即将推出。</p><p>在内存方面，双路Vera配备了16条96GB LPDDR5-9600三星M564K6LC3CL0-CCVS7内存。AMD EPYC 9575F 2P和EPYC 9755 2P的顶级配置为24条64GB DDR5-6400三星M321R8GA0PB1-CCPKC内存。Intel Xeon 6980P 2P配置为24条64GB MRDIMM-8800美光内存，作为其顶级配置。</p><p>远程NVIDIA Vera服务器运行的是修改版的Ubuntu 24.04 LTS堆栈，带有基于Linux 6.17的内核补丁构建，默认使用64K内核和GCC 15.3编译器，这是NVIDIA为Vera推荐的Linux软件配置。经过这些修改，AMD EPYC和Intel Xeon服务器运行的是Ubuntu 26.04 LTS，其原厂环境提供了类似的基于GCC 15的编译器和其他现代默认设置，适用于这些x86_64服务器。</p><p>除了查看原始HPC性能基准测试外，还按测试实时监控了CPU功耗。此外，还监控了峰值CPU频率。</p><p>Intel Granite Rapids WS与AMD Threadripper Zen 5 SMT性能对比</p><p>Intel Xeon 600工作站性能与AMD Threadripper 9000在近400项基准测试中的对比</p><p>Intel Granite Rapids WS核心扩展性能与Xeon 678X</p><p>Intel Xeon 678X“Granite Rapids-WS”上的超线程性能</p><p>Intel Xeon 678X工作站CPU的AMX性能</p><p>AMD EPYC 9006 Venice发布，有望成为大满贯</p><p>享受无广告浏览，</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12974" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/review/nvidia-vera-hpc" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

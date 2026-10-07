@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot; — Linux 中文速报</title>
+<title>Firefox GNOME 主题更新以适配 Nova — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</h1>
+  <h1>Firefox GNOME 主题更新以适配 Nova</h1>
 
-  <div class="article-summary">Besgnulinux 团队发布了基于 Debian 的新版本 1.0，采用 Openbox 窗口管理器。开发者表示，Openbox 版本最初仅为测试目的而创建，但因系统表现出色而决定适配为通用版本，为用户提供 JWM 之外的第二选择。由于 Openbox 本身不包含独立运行所需的内置组件，团队通过多种工具和自定义配置构建了该系统，并最终选择 Tint2 作为面板。</div>
+  <div class="article-summary">非官方的 Firefox GNOME 主题已更新，以兼容新版 Firefox 及其更圆润的界面。该主题通过 CSS 代码让 Firefox 外观更接近 GNOME 原生应用。用户可通过一条 curl 命令快速安装，支持多种构建格式，安装后重启浏览器即可生效。部分功能需手动启用，卸载也较为简单。</div>
 
-  <div class="article-body"><p>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</p><p>Besgnulinux 团队宣布发布其基于 Debian 的 Linux 发行版的新版本——1.0，该版本采用 Openbox 窗口管理器：“我已经很久没有测试 Openbox 了。我最初创建这个版本是出于测试目的。然而，当它变成一个如此出色的系统后，我认为将其适配为通用用途并分享出来是个好主意。拥有另一个窗口管理器作为 JWM 的替代方案，为用户提供了第二种选择。让 Openbox 达到当前状态确实需要大量努力。毕竟，Openbox 本身并不附带可作为独立系统运行的内置组件；它是通过多种工具和自定义配置构建而成的。然而，只要配置得当，它就能成为一个极好的系统。这正是窗口管理器的美妙之处——它们允许用户根据自己的喜好定制体验。这个版本正是源于这种欣赏。Openbox 1.0 版本做了哪些工作？在尝试了各种面板之后，我决定 Tint2 最适合 Openbox。”</p><p>阅读余下内容以获取更多信息和截图。</p><p>besgnulinux-openbox-1.0.iso</p><p>近期相关新闻与发布</p><p>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</p><p>发行版发布：Besgnulinux 4-0</p><p>发行版发布：Besgnulinux 3-2</p><p>发行版发布：Besgnulinux 3-1</p><p>发行版发布：Besgnulinux 3-0</p><p>更多 Besgnulinux 新闻……</p><p>Besgnulinux 是一个基于 Debian“稳定”分支的轻量级桌面 Linux 发行版。它使用 JWM 窗口管理器，设计目标是快速、轻量且易于使用，适合老旧和低配置的计算机。Besgnulinux 附带 Calamares 系统安装程序、Brave 网页浏览器，以及 40 多个自定义构建的工具，用于控制系统设置以及桌面的外观和体验。</p><p>https://besgnulinux.blogspot.com/</p></div>
+  <div class="article-body"><p>Firefox GNOME 主题更新以适配 Nova - OMG! Ubuntu</p><p>非官方的 Firefox GNOME 主题已更新，以适配新版 Firefox 及其更圆润的界面。</p><p>它并非传统的 Firefox 主题（如可从 Mozilla 附加组件网站安装的那些），而是引用其 GitHub 页面的话来说，“一堆 CSS 代码，让 Firefox 看起来更接近 GNOME 的原生应用”——而且它在这方面做得非常出色。</p><p>随着新版 Firefox 的推出，负责这个非官方 Adwaita 风格外观的主题团队需要更新，以应对新版浏览器中 CSS 类变更和新的小部件样式。</p><p>你无法直接看出其中有什么变化——这正是更新的目的。但需要打补丁和调整，以保持那种不可思议的 Adwaita 氛围。</p><p>安装 GNOME Firefox 主题</p><p>使用一条命令即可获取自动运行脚本（通常不建议运行网上找到的随机命令，尤其是那些还会执行脚本的命令，但如果你有疑虑，可以在 GitHub 上审查代码）。</p><p>curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash</p><p>上述命令会下载主题文件，解压并将各种样式表、图标和其他通知移动到你的（隐藏的）Firefox 配置文件文件夹中。该脚本适用于大多数构建版本，包括二进制、Flatpak、.deb、RPM 以及——万岁——Snap。</p><p>它会一闪而过，很快完成。重启 Firefox 使更改生效。</p><p>如果你更喜欢标签页在顶部，可以启用它们。</p><p>某些功能，比如仅打开一个标签页时隐藏标签栏，或者——我个人最喜欢的——将标签页用作标题栏，确实需要通过手动启用。</p><p>完整列表可在 Firefox GNOME 主题的 GitHub 页面上找到。</p><p>卸载稍微复杂一些，但只需删除几个文件夹。你无需清空配置文件并重新开始。如需卸载详情，请参阅 GitHub。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12974" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/firefox-gnome-theme-nova-update" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

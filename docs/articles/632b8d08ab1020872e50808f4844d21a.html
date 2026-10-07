@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot; — Linux 中文速报</title>
+<title>Canonical 重申计划：Ubuntu 27.04 将默认使用 ntpd-rs — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</h1>
+  <h1>Canonical 重申计划：Ubuntu 27.04 将默认使用 ntpd-rs</h1>
 
-  <div class="article-summary">Besgnulinux 团队发布了基于 Debian 的新版本 1.0，采用 Openbox 窗口管理器。开发者表示，Openbox 版本最初仅为测试目的而创建，但因系统表现出色而决定适配为通用版本，为用户提供 JWM 之外的第二选择。由于 Openbox 本身不包含独立运行所需的内置组件，团队通过多种工具和自定义配置构建了该系统，并最终选择 Tint2 作为面板。</div>
+  <div class="article-summary">Canonical 重申了在 Ubuntu 27.04 中默认采用 Rust 编写的 ntpd-rs 时间同步守护进程的计划。ntpd-rs 是 Trifecta Tech Foundation 的项目，提供完整的 NTP 和 NTS 客户端与服务器实现，旨在提升安全性和稳定性。该软件包已在 Ubuntu 26.10 中提供测试，目标是在 27.04 中成为默认选项。</div>
 
-  <div class="article-body"><p>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</p><p>Besgnulinux 团队宣布发布其基于 Debian 的 Linux 发行版的新版本——1.0，该版本采用 Openbox 窗口管理器：“我已经很久没有测试 Openbox 了。我最初创建这个版本是出于测试目的。然而，当它变成一个如此出色的系统后，我认为将其适配为通用用途并分享出来是个好主意。拥有另一个窗口管理器作为 JWM 的替代方案，为用户提供了第二种选择。让 Openbox 达到当前状态确实需要大量努力。毕竟，Openbox 本身并不附带可作为独立系统运行的内置组件；它是通过多种工具和自定义配置构建而成的。然而，只要配置得当，它就能成为一个极好的系统。这正是窗口管理器的美妙之处——它们允许用户根据自己的喜好定制体验。这个版本正是源于这种欣赏。Openbox 1.0 版本做了哪些工作？在尝试了各种面板之后，我决定 Tint2 最适合 Openbox。”</p><p>阅读余下内容以获取更多信息和截图。</p><p>besgnulinux-openbox-1.0.iso</p><p>近期相关新闻与发布</p><p>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</p><p>发行版发布：Besgnulinux 4-0</p><p>发行版发布：Besgnulinux 3-2</p><p>发行版发布：Besgnulinux 3-1</p><p>发行版发布：Besgnulinux 3-0</p><p>更多 Besgnulinux 新闻……</p><p>Besgnulinux 是一个基于 Debian“稳定”分支的轻量级桌面 Linux 发行版。它使用 JWM 窗口管理器，设计目标是快速、轻量且易于使用，适合老旧和低配置的计算机。Besgnulinux 附带 Calamares 系统安装程序、Brave 网页浏览器，以及 40 多个自定义构建的工具，用于控制系统设置以及桌面的外观和体验。</p><p>https://besgnulinux.blogspot.com/</p></div>
+  <div class="article-body"><p>Canonical 重申计划：Ubuntu 27.04 将默认使用 ntpd-rs</p><p>2026年10月6日 下午5:08 EDT</p><p>早在今年三月，Canonical 就宣布了其下一个目标，作为将更多 Ubuntu Linux 系统组件过渡到基于 Rust 实现的一部分。这个时间同步软件包已在即将发布的 Ubuntu 26.10 中提供测试，并计划在 Ubuntu 27.04 中成为默认选项。</p><p>ntpd-rs 项目是一个基于 Rust 的、功能完整的网络时间协议（NTP）和网络时间安全（NTS）实现，同时支持客户端和服务器功能。ntpd-rs 是 Trifecta Tech Foundation 的项目之一，该基金会专注于使用 Rust 来提高安全性和稳定性。</p><p>在今天的一篇 Ubuntu 博客文章中，Canonical 总结了 Ubuntu 26.10 的一些亮点，其中提到 ntpd-rs 已在 Ubuntu 26.10 中提供测试，并重申了在 Ubuntu 27.04 中默认使用它的计划：</p><p>“准确的时间是 TLS 证书验证、Kerberos、可靠的日志时间戳和审计追踪的基础。如果系统时钟严重错误，有效证书可能显示为已过期或尚未生效，Kerberos 身份验证可能因时钟偏差而失败，安全日志也难以在不同系统之间可靠地关联。Ubuntu 26.10 在归档中包含了一个更新版本的 ntpd-rs——一个内存安全的 NTP 实现——用于测试，目标是在 Ubuntu 27.04 中将其设为默认。”</p><p>文章还重点介绍了 Ubuntu 26.10 更小的 Secure Boot 路径、Linux 7.3 内核的使用、在更多系统上基于 TPM 的加密、Rust Coreutils 的完全过渡、OpenSSL 4.0，以及 Dbus-Broker 取代经典的 Dbus 守护进程。Ubuntu 26.10 还实现了其目标，即通过本地 AI 提供 Myna 作为桌面语音转文字功能。</p><p>Ubuntu 的下一个 Rust 努力可能将 OpenPGP 替换为 Sequoia PGP</p><p>Ubuntu 26.10 Beta 发布，搭载 Linux 7.3 内核、GNOME 51 桌面</p><p>面向骁龙笔记本电脑的新 Ubuntu Concept ISO 带来首款 X2 笔记本支持</p><p>Ubuntu Linux 制造商 Canonical 2025 年营收达 3.45 亿美元</p><p>Ubuntu 26.10 切换到 Linux 7.3 内核</p><p>Ubuntu 26.10 桌面调整其在内存压力下的行为</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Valve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面的出色工作</p><p>西门子关闭了前景看好的开源 Radioss 项目</p><p>NVIDIA 进行 Wayland 与 X.Org 延迟测试的结果</p><p>Linux 7.4 将为 Apple M4、A18 Pro 及 MacBook Neo 引入初始设备树</p><p>Linux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2</p><p>AMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0、Linux 7.2</p><p>微软宣布 WSLC 正式可用：Windows 上的 Linux 容器</p><p>Linux 7.3-rc6 发布：新“AI 常态”下的常态</p><p>同时享有无广告浏览、</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12974" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Ubuntu-27.04-ntpd-rs-Plans" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
