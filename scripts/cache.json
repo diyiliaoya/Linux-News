@@ -14287,5 +14287,148 @@
     "title_zh": "OBS Studio 33 承诺支持最新 NVIDIA Broadcast SDK，测试版现已发布",
     "summary_zh": "OBS Studio 33 进入测试阶段，新增对最新 NVIDIA Broadcast SDK 的支持，并在 ARM64 架构上启用 NVENC 硬件编码，同时带来其他流媒体和录制改进。",
     "fulltext_zh": "OBS Studio 33 进入测试阶段，支持最新的 NVIDIA Broadcast SDK、在 ARM64 上启用 NVENC，以及为流媒体和录制带来其他改进。\n\n文章《OBS Studio 33 承诺支持最新 NVIDIA Broadcast SDK，测试版现已发布》首次出现在 Linux Today。"
+  },
+  "12c3bf33b178ca8940062f25c6ada868": {
+    "id": "12c3bf33b178ca8940062f25c6ada868",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/modern-gnome-weather-extensions",
+    "title_en": "A pair of flashy-looking weather extensions for GNOME Shell",
+    "summary_en": "I revised my list of the best Linux weather apps recently, but I know most people prefer to use panel applets to glean current conditions and future forecast data. There&#8217;s no drought in weather extensions for GNOME Shell. All kinds – some like Weather or Not show a simple label on panel, others dish out reams of meteorological data in a dropdown of varying designs (and, in a few cases, vertical length). I&#8217;ve seen a flurry of newer weather extensions for GNOME Shell emerge in recent m",
+    "pub_date": "Wed, 07 Oct 2026 23:33:22 +0000",
+    "title_zh": "两款外观炫酷的 GNOME Shell 天气扩展",
+    "summary_zh": "本文介绍了两款外观炫酷的 GNOME Shell 天气扩展。第一款以动画效果为特色，面板图标和预报卡片均带动态展示，支持多种天气后端和自动定位，但存在后台占用 CPU/GPU 过高的问题，目前仅支持 GNOME 50。第二款自称“全功能气象站”，采用图表和彩色图形展示数据，布局比传统表格更吸引人，但实际显示数据不如截图全面，缺少雷达图和天文信息，同样仅支持 GNOME 50。",
+    "fulltext_zh": "我最近修订了最佳 Linux 天气应用列表，但我知道大多数人更喜欢使用面板来获取当前天气状况和未来预报数据。\n\nGNOME Shell 的天气扩展并不匮乏。各种类型都有——有些像在面板上显示一个简单的标签，另一些则在下拉菜单中提供大量气象数据，设计各异（有些情况下，垂直长度也各不相同）。\n\n近几个月来，我看到一批较新的 GNOME Shell 天气扩展涌现出来。今年席卷全球的酷热热浪可能让开发者们比平时更关注（并为之汗流浃背）气温。\n\n我想我应该展示其中几款，因为它们比常见的天气预报类扩展要炫酷得多。\n\n**提供动画点缀**\n\n这款扩展无疑会吸引眼球。当然，它做了大多数同类附加组件所做的事，即在一个易于解析的管理器中展示预报数据，但它的实现方式完全不同。动画，宝贝！\n\n面板上的一个图标显示当前温度和天气状况的动画图标（循环动画）。点击它会显示一个带有动画背景的预报卡片，展示当前和逐小时天气状况，以及带有温度、降水量和风速图表的 8 天预报：\n\n动画效果展示（动作有点太多了）\n\n气象单位可以设置为公制或英制，但无法做到比如天气用英里/小时而温度用摄氏度。提供多种天气后端，包括 Open-Meteo、Met.no 和 NOAA NWS。还支持自动定位！\n\n该扩展的偏好设置中有动画预览，以及禁用动画的选项——你可能会想禁用。即使扩展没有打开，它也在后台持续占用我的 CPU 和 GPU（因此消耗更多电量）。\n\n它在我撰写本文时仅支持 GNOME 50，所以如果你最近升级到了 Ubuntu 26.04，你就可以试试看。\n\n希望它能更新以支持 GNOME 51——并修复其激进的 CPU 占用问题。\n\n**Weather Prime——看起来很美**\n\nWeather Prime 是一个数据丰富的小程序，自称是 GNOME 顶部面板的“全功能气象站”。\n\n商店截图承诺了很多\n\n顶部栏中的一个胶囊形图标显示你所在位置的当前天气状况。点击后，会打开一个下拉菜单，包含常见的大量预报数据，但以更吸引人的布局展示。\n\n图表、圆角卡片和少量彩色图形的使用，相比其他小程序提供的电子表格式表格，是一个不错的改变。\n\n——不知是我的位置还是后端的问题，显示给我的数据不如截图那么全面或炫酷。\n\n我也没有实时雷达图或“天文”详细信息（潮汐、月相、日落等）的选项（我当地的报纸过去在同一版面上刊登星座运势和天气，所以天文信息对我来说本来会很有意义）。\n\n令人愉快？当然，但并不完全像图片所暗示的那样，是面板上的迷你版（我最喜欢的 Linux 天气应用）。\n\n好的一面是，你不需要与 API 密钥纠缠；它使用 Open-Meteo 天气源，已预配置好，开箱即用。它也支持 WeatherAPI.com，但你需要注册、生成密钥并填入应用中——而且它可能无法工作（对我来说就没用）。\n\n它适用于 GNOME 50（Ubuntu 26.04 LTS）。也可以从该仓库安装，但由于该仓库已有 4 个月不活跃，它获得 GNOME 51 支持更新的机会，就像冬天的日光一样，转瞬即逝。"
+  },
+  "6a3486f75a56ddee8481c574367ca07e": {
+    "id": "6a3486f75a56ddee8481c574367ca07e",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/ubuntu-2610-secure-boot-grub-change",
+    "title_en": "Ubuntu 26.10 drops Btrfs, XFS & ZFS /boot with Secure Boot",
+    "summary_en": "Canonical has changed how Ubuntu 26.10 boots on system with Secure Boot enabled, in an effort to reduce the attack surface of the boot process.\nYou're reading Ubuntu 26.10 drops Btrfs, XFS &amp; ZFS /boot with Secure Boot, a blog post from OMG! Ubuntu. Do not reproduce elsewhere without permission.",
+    "pub_date": "Wed, 07 Oct 2026 16:15:54 +0000",
+    "title_zh": "Ubuntu 26.10 在安全启动下放弃 Btrfs、XFS 和 ZFS 的 /boot 支持",
+    "summary_zh": "Canonical 调整了 Ubuntu 26.10 在启用安全启动时的引导方式，其签名的 GRUB 不再支持从 Btrfs、XFS、ZFS、LVM、LUKS 加密或软件 RAID 等文件系统读取 /boot，仅保留 ext4、FAT、ISO9660 和 squashfs。此举旨在减少引导链中的解析器数量，降低安全启动绕过漏洞的风险。禁用安全启动则不受影响，普通用户通常也不会受影响。",
+    "fulltext_zh": "Ubuntu 在安全启动下放弃 Btrfs、XFS 和 ZFS 引导支持\n\nCanonical 改变了 Ubuntu 26.10 在启用安全启动的系统上的引导方式，目的是减少引导过程的攻击面。\n\nUbuntu 26.10 中签名的 GRUB 构建版本（仅在系统开启安全启动时使用）不再支持从 Btrfs、XFS、ZFS、LVM、LUKS 加密或软件 RAID（RAID1 除外）读取。HFS+、Apple 分区表支持以及 JPEG 和 PNG 图像加载也已被移除。\n\n由于 GRUB 需要读取 /boot 目录来加载内核并引导 Ubuntu，如果这些文件位于受影响的文件系统上，GRUB 将无法访问它们，系统也就无法启动。\n\nUbuntu 26.10 在启用安全启动时仍然支持从 ext4、FAT 和 ISO9660（用于从 CD/DVD 启动）读取 /boot，当然也支持用于 snap 的 squashfs。\n\n如果禁用安全启动，则会加载 GRUB 的完整功能集，这意味着特殊的 /boot 配置以及任何 GRUB 自定义调整（例如图像背景）都能正常工作。\n\nCanonical 为何做出这一改变？\n\nCanonical 今年早些时候分享了精简 GRUB 的计划。客气地说，反馈相当激烈，因为一些使用定制引导设置的用户——其中一些是通过操作系统安装程序中的“实验性”功能创建的——听说自己可能无法启动后并不高兴。\n\n这就是为什么 Canonical 在 LTS 版本之后才做出这一改变；那些需要安全启动下完整 GRUB 功能的用户可以继续使用 Ubuntu 26.04 LTS。该版本在 Ubuntu Pro 下支持到 2036 年，在 Ubuntu Pro 加 Legacy Add-on 下支持到 2041 年。\n\n安全是这里的目标。\n\nGRUB 是 Ubuntu 引导链中最早的部分。在标准的安全启动设置中，设备固件加载一个名为 shim 的程序，由它验证并加载 GRUB。随后解析器会探测文件系统和分区布局以进行读取，找到内核并加载它。\n\n但近年来，这些解析器已成为众多安全启动绕过漏洞的来源——LLM 正在使漏洞被发现乃至被利用的速度加快。\n\nCanonical 的理由是，在内核加载之前运行的解析器越少，破坏保障引导安全的“信任链”的机会就越少。\n\n大多数用户不会受到影响\n\n尽管这听起来变化很大，但它只影响在启用安全启动的设备上引导 Ubuntu 26.10，而且只影响引导路径本身。\n\n在启用安全启动的系统上，LVM、RAID、LUKS、Btrfs 和 ZFS 在 Ubuntu 26.10 中仍然可用和可访问——只是要在系统启动之后。\n\n如果你担心这会影响到你，请在下个月升级到 26.10 之前，检查任何自定义的 /boot 布局是否属于上述支持类型列表。\n\n然而，大多数 Ubuntu 用户不会受到影响，因为标准的操作系统安装程序会以标准且对安全启动友好的方式进行设置。"
+  },
+  "dbcc994d2e6a7cddac54fb53feb86719": {
+    "id": "dbcc994d2e6a7cddac54fb53feb86719",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/google-oss-vrp-product-reports-closed/",
+    "title_en": "Google Has Shut Down Part of its Open Source Bounty Program",
+    "summary_en": "Submitting product vulnerability reports is no longer possible. You can thank AI for that.",
+    "pub_date": "Wed, 07 Oct 2026 10:46:45 GMT",
+    "title_zh": "谷歌已关闭其部分开源漏洞赏金计划",
+    "summary_zh": "谷歌宣布暂时停止接受其开源软件漏洞奖励计划（OSS VRP）中与产品漏洞相关的报告，但供应链报告和10月1日前提交的报告不受影响。此举源于AI生成的低质量报告泛滥，谷歌此前已提高奖励门槛并降低部分奖励金额。产品漏洞报告何时恢复尚不确定，谷歌承诺2027年第一季度更新。",
+    "fulltext_zh": "谷歌已关闭其部分开源漏洞赏金计划\n\n提交产品漏洞报告已不再可能。这要归咎于AI。\n\n自2022年以来，谷歌的开源软件漏洞奖励计划（OSS VRP）一直是外部研究人员通过报告该公司开源代码（包括多个项目）中的安全漏洞来获得报酬的途径。\n\n通过一则公告，他们现已决定停止该计划中面向产品的部分。\n\n他们称这一变更是暂时的，同时供应链报告仍然开放，10月1日之前提交的任何报告都不受影响。\n\n什么关闭了，什么没有？\n\n📢 致开源漏洞猎人的公告\n\n我们暂时不再接受OSS VRP产品漏洞提交。这不会影响OSS VRP供应链报告或任何未决报告。作为替代，我们鼓励您在我们的其他VRP计划中寻找影响……\n\n—— Google VRP (Google Bug Hunters) (@GoogleVRP)\n\n产品漏洞是指项目本身的缺陷，例如HTML清理器失效、文件格式解析器中的内存损坏问题，或文档中的不安全代码示例。\n\n他们并未将这一变更限制在特定的项目层级，因为他们只是不再接受与此相关的任何报告。\n\n另一方面，供应链报告涵盖软件构建和交付方式中的漏洞。规则页面列出的一个案例是用于发布构建产物的包管理器凭据泄露。该类别不受此变更影响。\n\n此外，部分Google Cloud仓库也有例外。如果那里的漏洞影响Cloud产品，谷歌可能仍会接受报告，但需通过其渠道提交。\n\n为何走到这一步？\n\n今年3月，谷歌工程师的一篇文章表示，AI生成的报告正大量涌入该计划。有些提供了幻觉信息，而另一些则标记了合法的编码错误，但对目标项目的安全态势几乎没有影响。\n\n谷歌的第一反应是提高其两个顶级项目的内存损坏报告门槛。研究人员必须通过现有的模糊测试目标复现该漏洞，或指出维护者已合并的补丁。\n\n次月同一篇文章的更新更进一步。标准和低优先级层级停止为产品漏洞和其他安全问题提供奖励或积分。顶级供应链奖励对于某些项目也降至3,133.70美元。\n\n供应链报告仍有报酬，从OT2项目的500美元到旗舰项目的31,337美元不等。\n\n作为替代，谷歌指向补丁奖励计划，该计划支付100至15,000美元，但仅限那些在项目中保留一个月且未被回退的补丁。\n\n谷歌尚未说明产品漏洞报告何时或以何种形式回归。他们的公告仅承诺在2027年第一季度更新，同时他们继续重新设计该计划的那部分。\n\n还有一个未了结的问题。截至撰写本文时，相关页面仍列出产品漏洞的奖励范围，最高达7,500美元。不过，如您之前所见，其规则页面已经更新，因此这个问题应该很快会得到解决。\n\ncURL因AI垃圾报告泛滥而取消其漏洞赏金计划\n\nDaniel Stenberg表示，AI垃圾报告的涌入已让curl安全团队无法承受。\n\n喜欢这个更新？支持独立的Linux新闻报道\n\nIt's FOSS在过去14年中一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。\n\n一次付费，永久享受\n\n任意金额，无承诺\n\n一个对开源软件、定制PC组装、赛车运动以及探索这个世界无限可能性充满热情的书呆子。\n\n红帽的Lightwell不再等待上游维护者行动\n\n西门子突然下架OpenRadioss，但分支版本已经上线\n\nUbuntu 26.10将有一个Ru"
+  },
+  "068d8b4351ad7c5829509ae24c01bb2e": {
+    "id": "068d8b4351ad7c5829509ae24c01bb2e",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Steam-Beta-Use-Proton-Default",
+    "title_en": "Steam Beta Now Defaults Non-Steam Windows Binaries To Using Proton",
+    "summary_en": "Valve released tonight a new Steam client beta that includes some notable improvements for Linux users...",
+    "pub_date": "Wed, 07 Oct 2026 21:09:05 -0400",
+    "title_zh": "Steam Beta 版现在默认将非 Steam Windows 二进制文件使用 Proton 运行",
+    "summary_zh": "Valve 发布了新的 Steam 客户端 Beta 版，为 Linux 用户带来多项改进。最显著的是，注册为非 Steam 游戏的 Windows 二进制文件现在默认通过 Proton 运行，以提供更好的用户体验。此外还修复了非 Steam 游戏通过浏览按钮更改目标二进制文件后无法启动的问题，以及外部工具启动游戏时“停止”按钮无法关闭游戏的问题。Steam 大屏幕模式新增游戏内禁用屏幕保护程序的设置，Steam 输入也修复了一个 Linux 错误。",
+    "fulltext_zh": "Steam Beta 版现在默认将非 Steam Windows 二进制文件使用 Proton 运行\n\n发布于 2026 年 10 月 7 日东部时间晚上 09:09。\n\nValve 今晚发布了一个新的 Steam 客户端 Beta 版，其中包含一些针对 Linux 用户的重要改进。\n\n最值得注意的是，今天的 Steam Beta 更新现在将默认使用 Proton 来运行注册为非 Steam 游戏的 Windows 二进制文件。默认通过 Proton 运行最终应该会带来更好的用户体验。\n\n对于 Linux 游戏玩家，新 Beta 版还修复了一个问题：当通过浏览按钮更改目标二进制文件时，非 Steam 游戏会启动失败。\n\n另一个 Linux 修复涉及 Steam 的“停止”按钮在游戏由外部工具启动时无法关闭游戏的问题。\n\nSteam 大屏幕模式现在也有一个设置，可以在游戏过程中禁用屏幕保护程序。Steam 输入也有一个 Linux 错误修复。\n\n关于今天 Steam Beta 更新的更多详情，请通过\n\nSteam 在 Linux 上的份额在九月份降至 3.05%\n\nValve 为 Steam Frame 上的开源 Turnip 驱动进行注视点渲染的工作\n\nIgalia 改善 Valve Steam Deck 上的 Firefox 体验\n\n新的 FUTEX 系统调用重新开始开发，以帮助 Valve 的 ARM64 游戏雄心\n\nValve 在 Beta 版中引入 Pyrowave 视频编解码器，用于低延迟流传输\n\nSteam Frame 利用 Zink 在 Vulkan 上实现 OpenGL\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他\n\nValve 的 Timur Kristóf 在改善 Linux 上老旧 AMD GPU 方面所做的出色工作\n\n西门子关闭了有前景的开源 Radioss 项目的大门\n\nNVIDIA 进行 Wayland 与 X.Org 延迟测试的结果\n\nLinux 7.4 将为 Apple M4、A18 Pro 引入初始设备树，用于 MacBook Neo\n\nMeta 为 Linux 开发压缩内存“CRAM”：优于 ZRAM 和 Zswap\n\nLinux 7.3-rc6 发布：新的“AI 常态”下的正常版本\n\nLinux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2\n\nAMD Ryzen AI 开发者平台操作系统更新，包含 ROCm 10.0、Linux 7.2\n\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "0df696fbe7badae87421c5c06524b45f": {
+    "id": "0df696fbe7badae87421c5c06524b45f",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Microsoft-LiteBox-0.1",
+    "title_en": "Microsoft Issues First Release Of Their LiteBox Sandboxing Library OS",
+    "summary_en": "Back in February we featured LiteBox as a new Microsoft open-source project building out a Rust-based sandboxing Library OS. LiteBox leverages Linux virtualization security features and Rust language inherent benefits to provide the ability for sandboxing Linux apps on Linux, Linux programs on Windows, and other security-oriented deployments. Out today is the first tagged release of LiteBox for this open-source library operating system...",
+    "pub_date": "Wed, 07 Oct 2026 20:43:11 -0400",
+    "title_zh": "微软发布其 LiteBox 沙箱库操作系统的首个版本",
+    "summary_zh": "微软开源项目 LiteBox 发布了首个 v0.1 标签版本。该项目基于 Rust 构建，是一种沙箱库操作系统，利用 Linux 虚拟化安全特性和 Rust 语言优势，支持在 Linux 上沙箱化 Linux 应用、在 Windows 上运行 Linux 程序等安全部署场景。自今年年初代码出现以来，项目持续推进，首个正式版本发布表明该项目仍在积极开发中。",
+    "fulltext_zh": "微软发布其 LiteBox 沙箱库操作系统的首个版本\n\n2026年10月7日 20:43 EDT。\n\n今年二月，我们曾介绍过 LiteBox，这是微软一个新的开源项目，正在构建一个基于 Rust 的沙箱库操作系统。LiteBox 利用 Linux 虚拟化安全特性和 Rust 语言的固有优势，提供在 Linux 上沙箱化 Linux 应用、在 Windows 上运行 Linux 程序以及其他面向安全的部署能力。今天，这个开源库操作系统发布了首个标签版本。\n\n自从今年年初代码出现以来，坦率地说，我已经忘记了微软的这个 LiteBox 项目。但令人惊讶的是，今天这个仍在开发中的安全平台发布了首个“v0.1”标签版本。\n\nLiteBox 的设计目标自那时起保持不变，代码也在持续构建，逐渐成为一个功能更完善的解决方案。发布说明细节不多，但其中提到未来版本将提供更详细的变更日志。\n\n因此，LiteBox 作为微软的一个开源项目仍然活跃并继续推进。\n\n微软更新其 WSL2 Linux 内核，带来 DXGKRNL 改进及更多功能启用\n适用于 Linux 的 Windows 子系统现可运行在超大型服务器上，实验性稀疏 VHD\n微软宣布 WSLC 正式可用：Windows 上的 Linux 容器\n微软的 Azure Linux 3.0.20260809 发布，包含 233+ 个 CVE 修复\n微软在新开源发布中怀旧：Comic Chat 在 30 年后开源\n微软在 Mesa 26.2 中实现使用 DirectX 12 + HMFT 的初始 AV1 编码\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nValve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面的出色工作\n西门子关闭了有前景的开源 Radioss 项目的大门\nNVIDIA 进行 Wayland 与 X.Org 延迟测试的结果\nLinux 7.4 将为 MacBook Neo 引入 Apple M4、A18 Pro 的初始设备树\nMeta 为 Linux 开发压缩内存“CRAM”：优于 ZRAM 和 Zswap\nLinux 7.3-rc6 发布：新“AI 常态”下的正常版本\nLinux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2\nAMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0、Linux 7.2\n\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "f3b76fb6cf5e39500e5f1f9331c3d771": {
+    "id": "f3b76fb6cf5e39500e5f1f9331c3d771",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Photocraft-Filmcraft-AI",
+    "title_en": "AI Makes \"Open-Source, Clean Room\" Implementations Of Adobe Photoshop & Premier In Rust",
+    "summary_en": "As an interesting demonstrator for the power of AI and potentially pressing legal challenges, Claude Code and AI agents have created \"open-source, clean-room reimplementation\" versions of Adobe Photoshop, Adobe Premier, and Adobe Lightroom. These new creations from the ArtCraft project are implemented in the Rust programming language...",
+    "pub_date": "Wed, 07 Oct 2026 20:12:44 -0400",
+    "title_zh": "AI 用 Rust 打造 Adobe Photoshop 与 Premiere 的“开源、净室”实现",
+    "summary_zh": "ArtCraft 项目利用 Claude Code 和 AI 代理，以 Rust 语言创建了 Adobe Photoshop、Premiere 和 Lightroom 的“开源、净室重实现”版本。这些应用上周首次亮相，借助 AI 快速迭代已发布多个新版本，并提供 Linux、FreeBSD、macOS 和 Windows 原生二进制文件。此举展示了 AI 的强大能力，也可能引发法律挑战。",
+    "fulltext_zh": "AI 用 Rust 打造 Adobe Photoshop 与 Premiere 的“开源、净室”实现\n2026 年 10 月 7 日 20:12 EDT\n\n作为展示 AI 能力、并可能引发法律挑战的一个有趣示例，Claude Code 和 AI 代理创建了 Adobe Photoshop、Adobe Premiere 和 Adobe Lightroom 的“开源、净室重实现”版本。这些来自 ArtCraft 项目的新作品使用 Rust 编程语言实现。\n\n今天有几位 Phoronix 读者来信提到了 ArtCraft 项目的这些 AI“开源”作品，据称它们是对流行 Adobe 项目的净室实现。\n\n是 Adobe Photoshop 的重实现。\n\n是用于视频编辑的 Adobe Premiere 的重实现。\n\n是 Adobe Lightroom 的重实现。\n\n这个新的 ArtCraft 计划似乎主要依赖 AI 来构思这些程序的“净室重实现”。这些“开源”应用上周才首次亮相，并且由于使用 AI 快速迭代，已经发布了多个新版本。\n\n这些应用提供原生 Linux 二进制文件，甚至还有 FreeBSD 二进制文件，以及 macOS 和 Windows 版本。除了 GitHub 仓库之外，想要了解更多信息的人可以访问\n\nLemonade 修复 AMD APU 模型流式传输，放弃 OpenMOSS ROCm，因其比 Vulkan 慢约 40 倍\nNVIDIA 发起的开放安全 AI 联盟迁至 Linux 基金会\nAI/LLM 使用正成为对开源项目维护者的“拒绝服务攻击”\nLinus Torvalds 经历地狱级调试会话，AI“帮助巨大”\nKTransformers 0.7 扩展 AVX-512 支持以惠及 AMD EPYC 服务器\nLemonade 11.6 集成 Muse-Glimmer 30B、实验性 TheNoise ROCm 图像生成\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nValve 的 Timur Kristóf 在 Linux 上改进旧款 AMD GPU 的惊人工作\n西门子关闭了前景看好的开源 Radioss 项目的大门\nNVIDIA 进行 Wayland 与 X.Org 延迟测试的结果\nLinux 7.4 将为 MacBook Neo 引入 Apple M4、A18 Pro 的初始设备树\nMeta 为 Linux 开发压缩 RAM“CRAM”：优于 ZRAM 和 Zswap\nLinux 7.3-rc6 发布：对新“AI 常态”而言属正常\nLinux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2\nAMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0、Linux 7.2\n\n同时享受无广告浏览、\n单页文章视图\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "16207f77a50225780e9c1e064d4ab796": {
+    "id": "16207f77a50225780e9c1e064d4ab796",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/FEX-2610-Released",
+    "title_en": "FEX 2610 Released With Handling For AVX-VNNI, Disk Cache Improvements",
+    "summary_en": "FEX 2610 released today as the newest monthly release of this open-source emulator for running x86_64 games/apps on AArch64 for ARM64 Linux systems, including most notably by Valve's Steam Frame headset...",
+    "pub_date": "Wed, 07 Oct 2026 17:16:47 -0400",
+    "title_zh": "FEX 2610 发布：支持 AVX-VNNI，磁盘缓存改进",
+    "summary_zh": "FEX 2610 作为这款开源 x86_64 模拟器的最新月度版本发布，该模拟器可在 ARM64 Linux 系统上运行 x86_64 游戏和应用，尤其被 Valve 的 Steam Frame 头显采用。新版本带来更多 JIT 改进，包括对 AVX-VNNI 指令的支持、SSE4.2 优化、恢复 3DNow! 指令处理、新的 AVX gather 优化以及 RDRAND/RDSEED 软件回退。此外还改进了磁盘缓存，限制缓存大小、在 FEX 更新时刷新磁盘缓存，并修复了 Vulkan thunk 以帮助部分游戏在 NVIDIA DGX Spark 上运行。",
+    "fulltext_zh": "FEX 2610 发布：支持 AVX-VNNI，磁盘缓存改进\n\n2026 年 10 月 7 日 下午 05:16 EDT。\n\nFEX 2610 于今日发布，这是这款开源模拟器的最新月度版本，用于在 ARM64 Linux 系统上的 AArch64 架构运行 x86_64 游戏/应用，其中最引人注目的是被 Valve 的 Steam Frame 头显采用。\n\nFEX 2610 带来了更多 JIT 改进，包括对 AVX-VNNI 的支持。AVX 向量神经网络指令正开始被一些游戏库使用，因此对 FEX-Emu 来说支持它们非常重要。FEX JIT 还获得了一些 SSE4.2 优化，3DNow! 指令处理已恢复，新增了 AVX gather 优化，并为 RDRAND 和 RDSEED 指令提供了软件回退。\n\nFEX 2610 还改进了磁盘缓存，对缓存大小设置了限制，而不是无限增长；在 FEX 更新时刷新磁盘缓存，以及其他增强功能。\n\nFEX 2610 还修复了 Vulkan thunk，这可以帮助一些游戏在 NVIDIA DGX Spark 上运行。\n\nFEX 2610 版本的下载和更多详情请见\n\nD7VK 在 Vulkan 之上为旧版 Direct3D API 达到成熟\n\nLinux 7.3 增加对 Victrix Pro BFG 和 Azeron 控制器的支持\n\nSDL3 移植到 HarmonyOS / OpenHarmony\n\nFEX 2609 发布：JIT 性能更快，新增 JIT 磁盘缓存选项\n\nLinux 7.3 将修复搭载 Ryzen Z2 Extreme 的 MSI Claw 掌机的 M-Center 按键\n\n终于有一款由 Unigine 2 引擎驱动的新游戏了\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nValve 的 Timur Kristóf 在改进 Linux 上旧款 AMD GPU 方面的出色工作\n\n西门子关闭了前景看好的开源 Radioss 项目的大门\n\nNVIDIA 进行 Wayland 与 X.Org 延迟测试的结果\n\nLinux 7.4 将为 MacBook Neo 引入 Apple M4、A18 Pro 的初始设备树\n\nMeta 为 Linux 开发压缩内存“CRAM”：优于 ZRAM 和 Zswap\n\nLinux 7.3-rc6 发布：对新“AI Normal”来说很正常\n\nLinux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2\n\nAMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0、Linux 7.2\n\n同时享受无广告浏览，\n单页文章视图\n\n法律免责声明、隐私政策、Cookie\n\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "1beb12b384a5994e90df372defa8d3a4": {
+    "id": "1beb12b384a5994e90df372defa8d3a4",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/star-labs-starfighter",
+    "title_en": "Star Labs StarFighter Ultra: A Modern High-End Linux Laptop With Coreboot",
+    "summary_en": "When it comes to Linux pre-loaded laptops, I have looked at hardware from most of these vendors over the past 22+ years of Phoronix. One vendor I haven't had the chance to personally test until now is the UK-based Star Labs. That changed recently and over the past few weeks I have been testing out their new StarFighter laptop that offers great Linux support and comes pre-loaded with Coreboot and streamlined firmware updates via LVFS. For those after a high-end mobile workstation, the Star Labs S",
+    "pub_date": "Wed, 07 Oct 2026 12:00:00 -0400",
+    "title_zh": "Star Labs StarFighter Ultra：一款搭载Coreboot的现代高端Linux笔记本电脑",
+    "summary_zh": "Star Labs推出StarFighter Ultra高端Linux笔记本，搭载Intel Core Ultra 9 285H处理器、64GB内存和16英寸4K 120Hz屏幕，预装Coreboot并支持LVFS固件更新。该机采用镁合金机身，配备Thunderbolt 4、80Wh电池，专为Linux用户打造，兼顾性能与开源友好性。",
+    "fulltext_zh": "Star Labs StarFighter Ultra：一款搭载Coreboot的现代高端Linux笔记本电脑\n\n2026年10月7日中午12:00 EDT。\n\n在预装Linux的笔记本电脑领域，我在Phoronix过去22年多的时间里测试过大多数厂商的硬件。有一家厂商直到现在我才有机会亲自测试，那就是总部位于英国的Star Labs。最近情况发生了变化，在过去几周里，我一直在测试他们新款StarFighter笔记本电脑，它提供了出色的Linux支持，预装Coreboot，并通过LVFS实现简化的固件更新。对于那些追求高端移动工作站的人来说，Star Labs StarFighter提供了巨大的性能潜力，同时对开源友好，并搭载了Coreboot。\n\nStarFighter并非Star Labs首次涉足基于Coreboot的设备，但在过去六年里，我们报道了大量他们的Coreboot动态，以及他们拥抱Linux厂商固件服务（LVFS）和Fwupd来轻松部署新固件更新。Star Labs并不自己制造笔记本电脑，而是依赖Clevo作为原始设计制造商（ODM），但通过Coreboot实现了与市面上许多其他类似Linux笔记本电脑的显著差异化。\n\nStar Labs的StarFighter提供AMD Ryzen（Ryzen 7 8845HS）或Intel Core Ultra 5 / Core Ultra 9选项，Star Labs提供的评测机型基于Core Ultra 9 285H型号。Core Ultra 9 285H Arrow Lake SOC拥有16个核心，包括6个P核、8个E核和2个LPE核，最大睿频频率为5.4GHz。这款Arrow Lake移动SOC具有相当大的性能潜力，基础功耗为45瓦，睿频可达115瓦。Core Ultra 9 285H配备Intel Arc Pro 140T集成显卡。\n\nCore Ultra 9 285H版StarFighter笔记本电脑预装64GB LPDDR5X-7500内存，为当今大多数计算需求提供了足够的内存容量。\n\nStarFighter配备16英寸显示屏，分辨率为3840 x 2400，刷新率为120Hz，提供非常好的观看体验。在过去几周的使用中，这款磨砂IPS显示屏表现非常出色。\n\n虽然Intel Core Ultra 9 285H支持PCIe Gen 5，但StarFighter使用的是PCIe Gen4 M.2 NVMe SSD。Gen4驱动器有助于降低功耗和改善散热，而使用的1TB三星990 EVO Plus硬盘仍能提供良好的均衡性能。\n\nStarFighter笔记本电脑的机箱采用AZ91D镁合金制成，并经过微弧优化处理。连接性方面包括两个USB-C、一个HDMI 2.0输出和三个USB-A。Intel Core Ultra型号上的USB-C支持Thunderbolt 4。此外还有一个microSD插槽和3.5mm组合音频插孔。\n\nStarFighter依赖USB-C充电，随附一个65瓦USB-C充电器。考虑到Core Ultra 9 285H仅PL2就达到80瓦，这有点令人惊讶。因此，使用默认的65W充电器时，StarFighter的功耗可能会超过USB-C充电器所能提供的功率，或者如果升级到更大的充电器，则能提供更多余量。StarFighter笔记本电脑配备80Wh电池，根据使用条件和设置，额定续航时间最长可达18小时。\n\nStarFighter的所有硬件组件都经过挑选，以提供一流的Linux体验，包括Intel AX210 WiFi 6E支持。对于关注隐私的用户，1080p@60高清网络摄像头是可拆卸的。\n\nHP Z4 G6i：一款搭载Intel Xeon 600系列、对Linux友好的工作站\n\nFramework Laptop 16搭载GeForce RTX 5070 12GB、一体式键盘和触觉触摸板\n\nFramework Laptop 13 Pro：旨在成为最佳可升级Linux笔记本电脑之一\n\nSnapdragon X Elite笔记本在Ubuntu 26.04 LTS上的体验仍然平平\n\nBOSGAME VTA-439：一款出色的、对Linux友好的迷你PC，搭载AMD Ryzen AI 9 HX 470\n\nRazer为其首款Linux笔记本电脑进行认证：Razer Blade 18 RZ09-0"
+  },
+  "fac489510f19ace5f00fcda482568719": {
+    "id": "fac489510f19ace5f00fcda482568719",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/shotcut-26-9-video-editor-improves-the-va-api-hevc-hardware-encoder-on-linux/",
+    "title_en": "Shotcut 26.9 Video Editor Improves the VA-API HEVC Hardware Encoder on Linux",
+    "summary_en": "Shotcut 26.9 improves VA-API HEVC hardware encoding on Linux and adds automatic audio ducking, adjustment clips, and faster timeline editing.\nThe post Shotcut 26.9 Video Editor Improves the VA-API HEVC Hardware Encoder on Linux appeared first on Linux Today.",
+    "pub_date": "Wed, 07 Oct 2026 07:15:27 +0000",
+    "title_zh": "Shotcut 26.9 视频编辑器改进 Linux 上的 VA-API HEVC 硬件编码器",
+    "summary_zh": "Shotcut 26.9 版本发布，主要改进了 Linux 平台上的 VA-API HEVC 硬件编码性能，并新增自动音频闪避、调整剪辑以及更快速的时间线编辑功能，提升了视频编辑效率和用户体验。",
+    "fulltext_zh": "Shotcut 26.9 改进了 Linux 上的 VA-API HEVC 硬件编码，并新增了自动音频闪避、调整剪辑以及更快速的时间线编辑功能。\n\n文章《Shotcut 26.9 视频编辑器改进 Linux 上的 VA-API HEVC 硬件编码器》首先出现在 Linux Today 上。"
+  },
+  "915985fca07b88fd438c0339d32f64d5": {
+    "id": "915985fca07b88fd438c0339d32f64d5",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/openshot-4-0-1-video-editor-improves-razor-tool-timeline-editing-and-linux-support/",
+    "title_en": "OpenShot 4.0.1 Video Editor Improves Razor Tool, Timeline Editing, and Linux Support",
+    "summary_en": "OpenShot 4.0.1 improves the Razor tool and timeline editing, boosts performance and stability, and introduces official Snap support for Linux.\nThe post OpenShot 4.0.1 Video Editor Improves Razor Tool, Timeline Editing, and Linux Support appeared first on Linux Today.",
+    "pub_date": "Wed, 07 Oct 2026 07:12:23 +0000",
+    "title_zh": "OpenShot 4.0.1 视频编辑器改进 Razor 工具、时间线编辑和 Linux 支持",
+    "summary_zh": "OpenShot 4.0.1 版本发布，主要改进了 Razor 工具和时间线编辑功能，提升了性能和稳定性，并新增对 Linux 的官方 Snap 支持。",
+    "fulltext_zh": "OpenShot 4.0.1 改进了 Razor 工具和时间线编辑，提升了性能和稳定性，并引入了对 Linux 的官方 Snap 支持。\n\n文章 OpenShot 4.0.1 视频编辑器改进 Razor 工具、时间线编辑和 Linux 支持 首次出现在 Linux Today。"
+  },
+  "4e7aa1ca563a2b8d9466c8b289f55c9f": {
+    "id": "4e7aa1ca563a2b8d9466c8b289f55c9f",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/linuxiac-weekly-wrap-up-week-39-2026-september-21-27/",
+    "title_en": "Linuxiac Weekly Wrap-Up: Week 39, 2026 (September 21 – 27)",
+    "summary_en": "Catch up on Linux and open-source news from September 21–27, 2026, including SparkyLinux, systemd 262, COSMIC 1.9, Samba 4.25, and more.\nThe post Linuxiac Weekly Wrap-Up: Week 39, 2026 (September 21 – 27) appeared first on Linux Today.",
+    "pub_date": "Wed, 07 Oct 2026 07:09:08 +0000",
+    "title_zh": "Linuxiac 每周综述：2026 年第 39 周（9 月 21 日 – 27 日）",
+    "summary_zh": "本期 Linuxiac 周报汇总了 2026 年 9 月 21 日至 27 日的 Linux 与开源新闻，涵盖 SparkyLinux、systemd 262、COSMIC 1.9、Samba 4.25 等更新。",
+    "fulltext_zh": "了解 2026 年 9 月 21 日至 27 日的 Linux 和开源新闻，包括 SparkyLinux、systemd 262、COSMIC 1.9、Samba 4.25 等。\n\n文章《Linuxiac 每周综述：2026 年第 39 周（9 月 21 日 – 27 日）》首先出现在 Linux Today 上。"
+  },
+  "b08ea2881b7e73b2235340490485899d": {
+    "id": "b08ea2881b7e73b2235340490485899d",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/9to5linux-weekly-roundup-september-27th-2026/",
+    "title_en": "9to5Linux Weekly Roundup: September 27th, 2026",
+    "summary_en": "Catch up on the latest Linux news from the week ending September 27, 2026, including major software releases, distro updates, and upcoming features.\nThe post 9to5Linux Weekly Roundup: September 27th, 2026 appeared first on Linux Today.",
+    "pub_date": "Wed, 07 Oct 2026 07:08:08 +0000",
+    "title_zh": "9to5Linux 每周综述：2026年9月27日",
+    "summary_zh": "本期9to5Linux每周综述汇总了截至2026年9月27日这一周的Linux最新动态，涵盖重要软件发布、发行版更新以及即将推出的新功能，帮助读者快速了解本周Linux领域的关键进展。",
+    "fulltext_zh": "了解截至2026年9月27日这一周的Linux最新新闻，包括重要软件发布、发行版更新以及即将推出的功能。\n\n文章《9to5Linux 每周综述：2026年9月27日》首发于 Linux Today。"
+  },
+  "275aaebec76b3f2a07ccdf3210211803": {
+    "id": "275aaebec76b3f2a07ccdf3210211803",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/klassik-revives-the-kde-3-desktop-on-modern-plasma-6/",
+    "title_en": "Klassik Revives the KDE 3 Desktop on Modern Plasma 6",
+    "summary_en": "Klassik brings the classic KDE 3 desktop experience to modern Plasma 6 with recreated panels, applets, themes, and support for Wayland.\nThe post Klassik Revives the KDE 3 Desktop on Modern Plasma 6 appeared first on Linux Today.",
+    "pub_date": "Wed, 07 Oct 2026 07:07:02 +0000",
+    "title_zh": "Klassik 在现代 Plasma 6 上重现 KDE 3 桌面",
+    "summary_zh": "Klassik 项目将经典的 KDE 3 桌面体验带到了现代的 Plasma 6 上，通过重新制作的面板、小程序、主题以及对 Wayland 的支持，让用户在现代系统中重温 KDE 3 的经典界面。",
+    "fulltext_zh": "Klassik 通过重新制作的面板、小程序、主题以及对 Wayland 的支持，将经典的 KDE 3 桌面体验带到了现代的 Plasma 6 上。\n\n文章 Klassik 在现代 Plasma 6 上重现 KDE 3 桌面 首次出现在 Linux Today 上。"
   }
 }

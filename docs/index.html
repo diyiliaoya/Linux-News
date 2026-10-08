@@ -150,7 +150,7 @@
   <div class="header-inner">
     <a class="logo" href="index.html">$ linux<span>-news</span></a>
     <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
-    <div class="update-time">更新于 2026年10月07日</div>
+    <div class="update-time">更新于 2026年10月08日</div>
   </div>
 </header>
 
@@ -163,8 +163,72 @@
 <main>
 
       <section class="category-section">
-        <h2 class="section-title">发行版 <span class="count">11</span></h2>
+        <h2 class="section-title">桌面环境 <span class="count">3</span></h2>
         <div class="grid">
+        <article class="card">
+           <div class="card-meta">
+             <span class="tag" style="background:#8b5cf61a;color:#8b5cf6;border-color:#8b5cf630">桌面环境</span>
+             <span class="source">OMG! Ubuntu</span>
+           </div>
+          <h2 class="card-title">
+            <a href="articles/12c3bf33b178ca8940062f25c6ada868.html">两款外观炫酷的 GNOME Shell 天气扩展</a>
+          </h2>
+          <p class="card-summary">本文介绍了两款外观炫酷的 GNOME Shell 天气扩展。第一款以动画效果为特色，面板图标和预报卡片均带动态展示，支持多种天气后端和自动定位，但存在后台占用 CPU/GPU 过高的问题，目前仅支持 GNOME 50。第二款自称“全功能气象站”，采用图表和彩色图形展示数据，布局比传统表格更吸引人，但实际显示数据不如截图全面，缺少雷达图和天文信息，同样仅支持 GNOME 50。</p>
+          <div class="card-actions">
+            <a class="btn-detail" href="articles/12c3bf33b178ca8940062f25c6ada868.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.omgubuntu.co.uk/2026/10/modern-gnome-weather-extensions" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </article>
+
+        <article class="card">
+           <div class="card-meta">
+             <span class="tag" style="background:#8b5cf61a;color:#8b5cf6;border-color:#8b5cf630">桌面环境</span>
+             <span class="source">OMG! Ubuntu</span>
+           </div>
+          <h2 class="card-title">
+            <a href="articles/f08f7496d94af78bdc2d54320ebf3801.html">Hylki：一款面向 GNOME 的现代 Rust 电子邮件客户端</a>
+          </h2>
+          <p class="card-summary">Hylki 是一款基于 Rust 的 GNOME 桌面电子邮件客户端，支持多账户、会话线程、OpenPGP 加密、阅读模式等丰富功能，并提供大量自定义选项。其大部分 Rust 代码由 Anthropic 的 Claude 在人工指导下编写，但应用本身不含 AI 功能。可通过 Flatpak 安装，需 GNOME 50 运行时。</p>
+          <div class="card-actions">
+            <a class="btn-detail" href="articles/f08f7496d94af78bdc2d54320ebf3801.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.omgubuntu.co.uk/2026/10/hylki-email-client-for-gnome" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </article>
+
+        <article class="card">
+           <div class="card-meta">
+             <span class="tag" style="background:#8b5cf61a;color:#8b5cf6;border-color:#8b5cf630">桌面环境</span>
+             <span class="source">Linux Today</span>
+           </div>
+          <h2 class="card-title">
+            <a href="articles/275aaebec76b3f2a07ccdf3210211803.html">Klassik 在现代 Plasma 6 上重现 KDE 3 桌面</a>
+          </h2>
+          <p class="card-summary">Klassik 项目将经典的 KDE 3 桌面体验带到了现代的 Plasma 6 上，通过重新制作的面板、小程序、主题以及对 Wayland 的支持，让用户在现代系统中重温 KDE 3 的经典界面。</p>
+          <div class="card-actions">
+            <a class="btn-detail" href="articles/275aaebec76b3f2a07ccdf3210211803.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.linuxtoday.com/blog/klassik-revives-the-kde-3-desktop-on-modern-plasma-6/" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </article></div>
+      </section>
+
+      <section class="category-section">
+        <h2 class="section-title">发行版 <span class="count">13</span></h2>
+        <div class="grid">
+        <article class="card">
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">OMG! Ubuntu</span>
+           </div>
+          <h2 class="card-title">
+            <a href="articles/6a3486f75a56ddee8481c574367ca07e.html">Ubuntu 26.10 在安全启动下放弃 Btrfs、XFS 和 ZFS 的 /boot 支持</a>
+          </h2>
+          <p class="card-summary">Canonical 调整了 Ubuntu 26.10 在启用安全启动时的引导方式，其签名的 GRUB 不再支持从 Btrfs、XFS、ZFS、LVM、LUKS 加密或软件 RAID 等文件系统读取 /boot，仅保留 ext4、FAT、ISO9660 和 squashfs。此举旨在减少引导链中的解析器数量，降低安全启动绕过漏洞的风险。禁用安全启动则不受影响，普通用户通常也不会受影响。</p>
+          <div class="card-actions">
+            <a class="btn-detail" href="articles/6a3486f75a56ddee8481c574367ca07e.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.omgubuntu.co.uk/2026/10/ubuntu-2610-secure-boot-grub-change" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </article>
+
         <article class="card">
            <div class="card-meta">
              <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
@@ -192,21 +256,6 @@
           <div class="card-actions">
             <a class="btn-detail" href="articles/b407f973f9096b52741b58c2b7c50741.html">查看全文翻译</a>
             <a class="read-more" href="https://www.omgubuntu.co.uk/2026/10/firefox-gnome-theme-nova-update" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
-        </article>
-
-        <article class="card">
-           <div class="card-meta">
-             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
-             <span class="source">OMG! Ubuntu</span>
-           </div>
-          <h2 class="card-title">
-            <a href="articles/e54be4b32598540d803f743d73095b89.html">Orion 浏览器 Linux 版在测试版发布数月后遭砍</a>
-          </h2>
-          <p class="card-summary">Kagi 宣布终止 Orion 浏览器 Linux 版的开发，距其公开测试版发布仅数月。该原生 GTK 移植版于 2025 年公布，目标是与 macOS 版功能对齐，但未能实现。Kagi 计划将 Linux 版及 Windows 移植版代码开源，交由 FOSS 社区推进。macOS 和 iOS 版开发不受影响，Linux 测试版将不再更新，Kagi 不建议将其作为日常主力浏览器使用。</p>
-          <div class="card-actions">
-            <a class="btn-detail" href="articles/e54be4b32598540d803f743d73095b89.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.omgubuntu.co.uk/2026/10/orion-linux-browser-development-ended" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article>
 
@@ -306,12 +355,42 @@
              <span class="source">Phoronix</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/632b8d08ab1020872e50808f4844d21a.html">Canonical 重申计划：Ubuntu 27.04 将默认使用 ntpd-rs</a>
+            <a href="articles/068d8b4351ad7c5829509ae24c01bb2e.html">Steam Beta 版现在默认将非 Steam Windows 二进制文件使用 Proton 运行</a>
           </h2>
-          <p class="card-summary">Canonical 重申了在 Ubuntu 27.04 中默认采用 Rust 编写的 ntpd-rs 时间同步守护进程的计划。ntpd-rs 是 Trifecta Tech Foundation 的项目，提供完整的 NTP 和 NTS 客户端与服务器实现，旨在提升安全性和稳定性。该软件包已在 Ubuntu 26.10 中提供测试，目标是在 27.04 中成为默认选项。</p>
+          <p class="card-summary">Valve 发布了新的 Steam 客户端 Beta 版，为 Linux 用户带来多项改进。最显著的是，注册为非 Steam 游戏的 Windows 二进制文件现在默认通过 Proton 运行，以提供更好的用户体验。此外还修复了非 Steam 游戏通过浏览按钮更改目标二进制文件后无法启动的问题，以及外部工具启动游戏时“停止”按钮无法关闭游戏的问题。Steam 大屏幕模式新增游戏内禁用屏幕保护程序的设置，Steam 输入也修复了一个 Linux 错误。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/632b8d08ab1020872e50808f4844d21a.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.phoronix.com/news/Ubuntu-27.04-ntpd-rs-Plans" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/068d8b4351ad7c5829509ae24c01bb2e.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.phoronix.com/news/Steam-Beta-Use-Proton-Default" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </article>
+
+        <article class="card">
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">Phoronix</span>
+           </div>
+          <h2 class="card-title">
+            <a href="articles/0df696fbe7badae87421c5c06524b45f.html">微软发布其 LiteBox 沙箱库操作系统的首个版本</a>
+          </h2>
+          <p class="card-summary">微软开源项目 LiteBox 发布了首个 v0.1 标签版本。该项目基于 Rust 构建，是一种沙箱库操作系统，利用 Linux 虚拟化安全特性和 Rust 语言优势，支持在 Linux 上沙箱化 Linux 应用、在 Windows 上运行 Linux 程序等安全部署场景。自今年年初代码出现以来，项目持续推进，首个正式版本发布表明该项目仍在积极开发中。</p>
+          <div class="card-actions">
+            <a class="btn-detail" href="articles/0df696fbe7badae87421c5c06524b45f.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.phoronix.com/news/Microsoft-LiteBox-0.1" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </article>
+
+        <article class="card">
+           <div class="card-meta">
+             <span class="tag" style="background:#3b82f61a;color:#3b82f6;border-color:#3b82f630">发行版</span>
+             <span class="source">Phoronix</span>
+           </div>
+          <h2 class="card-title">
+            <a href="articles/16207f77a50225780e9c1e064d4ab796.html">FEX 2610 发布：支持 AVX-VNNI，磁盘缓存改进</a>
+          </h2>
+          <p class="card-summary">FEX 2610 作为这款开源 x86_64 模拟器的最新月度版本发布，该模拟器可在 ARM64 Linux 系统上运行 x86_64 游戏和应用，尤其被 Valve 的 Steam Frame 头显采用。新版本带来更多 JIT 改进，包括对 AVX-VNNI 指令的支持、SSE4.2 优化、恢复 3DNow! 指令处理、新的 AVX gather 优化以及 RDRAND/RDSEED 软件回退。此外还改进了磁盘缓存，限制缓存大小、在 FEX 更新时刷新磁盘缓存，并修复了 Vulkan thunk 以帮助部分游戏在 NVIDIA DGX Spark 上运行。</p>
+          <div class="card-actions">
+            <a class="btn-detail" href="articles/16207f77a50225780e9c1e064d4ab796.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.phoronix.com/news/FEX-2610-Released" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article>
 
@@ -321,65 +400,31 @@
              <span class="source">Linux Today</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/64d24aeca5a9ad52bc7110a4bbe0c62a.html">PeaZip 11.3 文件归档器新增更安全的 PEA 提取功能</a>
+            <a href="articles/b08ea2881b7e73b2235340490485899d.html">9to5Linux 每周综述：2026年9月27日</a>
           </h2>
-          <p class="card-summary">PeaZip 11.3 版本发布，主要新增了更安全的 PEA 格式提取功能，同时包含多项改进和修复，以提升压缩档案的管理与提取体验。</p>
+          <p class="card-summary">本期9to5Linux每周综述汇总了截至2026年9月27日这一周的Linux最新动态，涵盖重要软件发布、发行版更新以及即将推出的新功能，帮助读者快速了解本周Linux领域的关键进展。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/64d24aeca5a9ad52bc7110a4bbe0c62a.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.linuxtoday.com/blog/peazip-11-3-file-archiver-adds-safer-pea-extraction/" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/b08ea2881b7e73b2235340490485899d.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.linuxtoday.com/blog/9to5linux-weekly-roundup-september-27th-2026/" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article></div>
       </section>
 
       <section class="category-section">
-        <h2 class="section-title">桌面环境 <span class="count">2</span></h2>
-        <div class="grid">
-        <article class="card">
-           <div class="card-meta">
-             <span class="tag" style="background:#8b5cf61a;color:#8b5cf6;border-color:#8b5cf630">桌面环境</span>
-             <span class="source">OMG! Ubuntu</span>
-           </div>
-          <h2 class="card-title">
-            <a href="articles/f08f7496d94af78bdc2d54320ebf3801.html">Hylki：一款面向 GNOME 的现代 Rust 电子邮件客户端</a>
-          </h2>
-          <p class="card-summary">Hylki 是一款基于 Rust 的 GNOME 桌面电子邮件客户端，支持多账户、会话线程、OpenPGP 加密、阅读模式等丰富功能，并提供大量自定义选项。其大部分 Rust 代码由 Anthropic 的 Claude 在人工指导下编写，但应用本身不含 AI 功能。可通过 Flatpak 安装，需 GNOME 50 运行时。</p>
-          <div class="card-actions">
-            <a class="btn-detail" href="articles/f08f7496d94af78bdc2d54320ebf3801.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.omgubuntu.co.uk/2026/10/hylki-email-client-for-gnome" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
-        </article>
-
-        <article class="card">
-           <div class="card-meta">
-             <span class="tag" style="background:#8b5cf61a;color:#8b5cf6;border-color:#8b5cf630">桌面环境</span>
-             <span class="source">Phoronix</span>
-           </div>
-          <h2 class="card-title">
-            <a href="articles/1d75b5323dabe5a8d198a217e5786a81.html">X.Org Server 与 XWayland 中又发现十余个漏洞</a>
-          </h2>
-          <p class="card-summary">TrendAI 零日计划在 X.Org Server 和 XWayland 中披露了 12 个新的安全漏洞，涉及释放后使用、缓冲区溢出和越界读写等问题，影响 xorg-server-21.1.25 和 xwayland-24.1.14 之前的版本。</p>
-          <div class="card-actions">
-            <a class="btn-detail" href="articles/1d75b5323dabe5a8d198a217e5786a81.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.phoronix.com/news/X.Org-12-New-Issues-2026" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
-        </article></div>
-      </section>
-
-      <section class="category-section">
-        <h2 class="section-title">其他 <span class="count">5</span></h2>
+        <h2 class="section-title">其他 <span class="count">2</span></h2>
         <div class="grid">
         <article class="card">
            <div class="card-meta">
              <span class="tag" style="background:#a78bfa1a;color:#a78bfa;border-color:#a78bfa30">其他</span>
-             <span class="source">OMG! Ubuntu</span>
+             <span class="source">It's FOSS News</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/292ed2b1e9443d9085930437cea19771.html">使用 Sober 在 Linux 上无需 Wine 玩 Roblox</a>
+            <a href="articles/dbcc994d2e6a7cddac54fb53feb86719.html">谷歌已关闭其部分开源漏洞赏金计划</a>
           </h2>
-          <p class="card-summary">Sober 是 Vinegar 项目开发的第三方非官方运行时，让 Linux 用户无需 Wine 即可运行 Roblox。它不涉及模拟或虚拟机，支持所有 PC 专属功能，性能与 Windows 客户端相当或更好。Sober 非开源，仅通过 Flathub 分发，系统要求不高，但不受 Roblox 官方支持，服务器端更新可能导致功能失效。</p>
+          <p class="card-summary">谷歌宣布暂时停止接受其开源软件漏洞奖励计划（OSS VRP）中与产品漏洞相关的报告，但供应链报告和10月1日前提交的报告不受影响。此举源于AI生成的低质量报告泛滥，谷歌此前已提高奖励门槛并降低部分奖励金额。产品漏洞报告何时恢复尚不确定，谷歌承诺2027年第一季度更新。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/292ed2b1e9443d9085930437cea19771.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.omgubuntu.co.uk/2026/10/play-roblox-linux-sober" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/dbcc994d2e6a7cddac54fb53feb86719.html">查看全文翻译</a>
+            <a class="read-more" href="https://itsfoss.com/news/google-oss-vrp-product-reports-closed/" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article>
 
@@ -395,51 +440,6 @@
           <div class="card-actions">
             <a class="btn-detail" href="articles/588da3746acee6905070e0df2b3f3971.html">查看全文翻译</a>
             <a class="read-more" href="https://itsfoss.com/news/digitalocean-open-source-credits-end/" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
-        </article>
-
-        <article class="card">
-           <div class="card-meta">
-             <span class="tag" style="background:#a78bfa1a;color:#a78bfa;border-color:#a78bfa30">其他</span>
-             <span class="source">It's FOSS News</span>
-           </div>
-          <h2 class="card-title">
-            <a href="articles/f65dc6aedc4d796749807fafcbc688ca.html">YT-DLP 被 IFPI 视为盗版工具</a>
-          </h2>
-          <p class="card-summary">国际唱片业联合会（IFPI）向欧盟提交意见，将开源下载工具 yt-dlp 列入盗版观察名单，与非法下载网站归为同类。IFPI 称其为音乐产业的重大难题，并点名四位维护者的 GitHub 账号。yt-dlp 拥有超19.5万 GitHub 星标，支持数千平台，由全球社区维护。该观察名单由欧盟委员会编制，旨在施压境外服务商，不具法律约束力。</p>
-          <div class="card-actions">
-            <a class="btn-detail" href="articles/f65dc6aedc4d796749807fafcbc688ca.html">查看全文翻译</a>
-            <a class="read-more" href="https://itsfoss.com/news/yt-dlp-ifpi-piracy-watchlist/" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
-        </article>
-
-        <article class="card">
-           <div class="card-meta">
-             <span class="tag" style="background:#a78bfa1a;color:#a78bfa;border-color:#a78bfa30">其他</span>
-             <span class="source">Phoronix</span>
-           </div>
-          <h2 class="card-title">
-            <a href="articles/3ad39f4a6fc29c993b851d4dc9b0f685.html">Linux Zswap 新补丁显示重大改进</a>
-          </h2>
-          <p class="card-summary">Linux 开发者 Usama Arif 提交了两项 Zswap 补丁，旨在减少加载请求争用。补丁将压缩与解压缩的请求、等待和互斥锁分离，并在同步算法下使用栈上请求进行解压缩，从而避免加载路径获取 Zswap 锁。测试显示，单 vCPU 下最慢读取从 22.3 毫秒降至 0.97 毫秒，8 vCPU 下从 314 毫秒降至 7.0 毫秒，超过 10 毫秒的读取几乎消失。</p>
-          <div class="card-actions">
-            <a class="btn-detail" href="articles/3ad39f4a6fc29c993b851d4dc9b0f685.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.phoronix.com/news/Linux-Better-Zswap-Performance" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
-        </article>
-
-        <article class="card">
-           <div class="card-meta">
-             <span class="tag" style="background:#a78bfa1a;color:#a78bfa;border-color:#a78bfa30">其他</span>
-             <span class="source">Phoronix</span>
-           </div>
-          <h2 class="card-title">
-            <a href="articles/4651ac2210aa99e18a9eeb150704e484.html">NVIDIA Vera HPC性能基准测试挑战AMD EPYC与Intel Xeon</a>
-          </h2>
-          <p class="card-summary">本文对NVIDIA Vera CPU在传统高性能计算（HPC）工作负载中的性能进行了基准测试，并与AMD EPYC 9575F、EPYC 9755以及Intel Xeon 6980P进行了对比。Vera凭借1.2TB/s的LPDDR5x内存带宽和定制Olympus核心，在HPC领域备受期待。测试涵盖了双路Vera服务器（共176核/352线程）与竞品的性能、功耗及频率指标，展示了NVIDIA在HPC市场的竞争力。</p>
-          <div class="card-actions">
-            <a class="btn-detail" href="articles/4651ac2210aa99e18a9eeb150704e484.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.phoronix.com/review/nvidia-vera-hpc" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article></div>
       </section>
@@ -483,12 +483,27 @@
              <span class="source">Phoronix</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/c7b3e4cadd9e5cc24e1f82df6ffe7172.html">Meta 工程师为提升 AMD P-State / Steam Deck 游戏性能提交 Linux 补丁</a>
+            <a href="articles/f3b76fb6cf5e39500e5f1f9331c3d771.html">AI 用 Rust 打造 Adobe Photoshop 与 Premiere 的“开源、净室”实现</a>
           </h2>
-          <p class="card-summary">Meta 的 Linux 内核工程师 David Vernet 在布拉格 Linux Plumbers 大会上介绍了其 AMD P-State 驱动补丁工作，通过为近期繁忙的 CPU 核心建立每核能效偏好（EPP）提升启发式机制，显著改善 Steam Deck 等 AMD 平台的游戏帧时间尾部和加载时间。新方案改为由动态调速器驱动 EPP，并考虑结合 Wine/Proton 的线程提示，在功耗和性能上均有良好表现。</p>
+          <p class="card-summary">ArtCraft 项目利用 Claude Code 和 AI 代理，以 Rust 语言创建了 Adobe Photoshop、Premiere 和 Lightroom 的“开源、净室重实现”版本。这些应用上周首次亮相，借助 AI 快速迭代已发布多个新版本，并提供 Linux、FreeBSD、macOS 和 Windows 原生二进制文件。此举展示了 AI 的强大能力，也可能引发法律挑战。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/c7b3e4cadd9e5cc24e1f82df6ffe7172.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.phoronix.com/news/Boost-Recently-Busy-CPUs" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/f3b76fb6cf5e39500e5f1f9331c3d771.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.phoronix.com/news/Photocraft-Filmcraft-AI" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        </article>
+
+        <article class="card">
+           <div class="card-meta">
+             <span class="tag" style="background:#10b9811a;color:#10b981;border-color:#10b98130">软件应用</span>
+             <span class="source">Phoronix</span>
+           </div>
+          <h2 class="card-title">
+            <a href="articles/1beb12b384a5994e90df372defa8d3a4.html">Star Labs StarFighter Ultra：一款搭载Coreboot的现代高端Linux笔记本电脑</a>
+          </h2>
+          <p class="card-summary">Star Labs推出StarFighter Ultra高端Linux笔记本，搭载Intel Core Ultra 9 285H处理器、64GB内存和16英寸4K 120Hz屏幕，预装Coreboot并支持LVFS固件更新。该机采用镁合金机身，配备Thunderbolt 4、80Wh电池，专为Linux用户打造，兼顾性能与开源友好性。</p>
+          <div class="card-actions">
+            <a class="btn-detail" href="articles/1beb12b384a5994e90df372defa8d3a4.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.phoronix.com/review/star-labs-starfighter" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article>
 
@@ -498,12 +513,12 @@
              <span class="source">Linux Today</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/5fc98ea11614d1d8a202538faffcfe63.html">Incus 7.5 新增 OVN 子网络与实例实时迁移功能</a>
+            <a href="articles/fac489510f19ace5f00fcda482568719.html">Shotcut 26.9 视频编辑器改进 Linux 上的 VA-API HEVC 硬件编码器</a>
           </h2>
-          <p class="card-summary">Incus 7.5 版本发布，新增 OVN 子网络支持，并允许实例在项目之间进行实时迁移。此外，该版本还在性能、集群和基础设施方面进行了多项改进。</p>
+          <p class="card-summary">Shotcut 26.9 版本发布，主要改进了 Linux 平台上的 VA-API HEVC 硬件编码性能，并新增自动音频闪避、调整剪辑以及更快速的时间线编辑功能，提升了视频编辑效率和用户体验。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/5fc98ea11614d1d8a202538faffcfe63.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.linuxtoday.com/blog/incus-7-5-adds-ovn-child-networks-live-instance-moves/" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/fac489510f19ace5f00fcda482568719.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.linuxtoday.com/blog/shotcut-26-9-video-editor-improves-the-va-api-hevc-hardware-encoder-on-linux/" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article>
 
@@ -513,12 +528,12 @@
              <span class="source">Linux Today</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/2f6d631b05e598295c80eadeb1d5727d.html">virtio-nvgpu 为 Linux KVM 客户机带来共享 NVIDIA GPU 访问</a>
+            <a href="articles/915985fca07b88fd438c0339d32f64d5.html">OpenShot 4.0.1 视频编辑器改进 Razor 工具、时间线编辑和 Linux 支持</a>
           </h2>
-          <p class="card-summary">virtio-nvgpu 项目实现了 Linux KVM 客户机共享 NVIDIA GPU，无需传统 PCI 直通即可获得接近原生的图形性能。该方案通过 virtio 框架提供 GPU 虚拟化支持，有望简化虚拟化环境中的 GPU 资源分配。</p>
+          <p class="card-summary">OpenShot 4.0.1 版本发布，主要改进了 Razor 工具和时间线编辑功能，提升了性能和稳定性，并新增对 Linux 的官方 Snap 支持。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/2f6d631b05e598295c80eadeb1d5727d.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.linuxtoday.com/blog/virtio-nvgpu-brings-shared-nvidia-gpu-access-to-linux-kvm-guests/" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/915985fca07b88fd438c0339d32f64d5.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.linuxtoday.com/blog/openshot-4-0-1-video-editor-improves-razor-tool-timeline-editing-and-linux-support/" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article>
 
@@ -528,27 +543,12 @@
              <span class="source">Linux Today</span>
            </div>
           <h2 class="card-title">
-            <a href="articles/32b3cb356a27c4f57c77267614a198e8.html">Fastfetch 2.69 系统信息工具新增动态 Logo，改进 Linux 支持</a>
+            <a href="articles/4e7aa1ca563a2b8d9466c8b289f55c9f.html">Linuxiac 每周综述：2026 年第 39 周（9 月 21 日 – 27 日）</a>
           </h2>
-          <p class="card-summary">Fastfetch 2.69 版本发布，为这款系统信息工具带来了动态 Logo 支持，并改进了 Linux 兼容性，同时还包含其他增强功能和修复。</p>
+          <p class="card-summary">本期 Linuxiac 周报汇总了 2026 年 9 月 21 日至 27 日的 Linux 与开源新闻，涵盖 SparkyLinux、systemd 262、COSMIC 1.9、Samba 4.25 等更新。</p>
           <div class="card-actions">
-            <a class="btn-detail" href="articles/32b3cb356a27c4f57c77267614a198e8.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.linuxtoday.com/blog/fastfetch-2-69-system-information-tool-adds-animated-logos-better-linux-support/" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
-        </article>
-
-        <article class="card">
-           <div class="card-meta">
-             <span class="tag" style="background:#10b9811a;color:#10b981;border-color:#10b98130">软件应用</span>
-             <span class="source">Linux Today</span>
-           </div>
-          <h2 class="card-title">
-            <a href="articles/3529caac4198a58d965f3adcc3674411.html">OBS Studio 33 承诺支持最新 NVIDIA Broadcast SDK，测试版现已发布</a>
-          </h2>
-          <p class="card-summary">OBS Studio 33 进入测试阶段，新增对最新 NVIDIA Broadcast SDK 的支持，并在 ARM64 架构上启用 NVENC 硬件编码，同时带来其他流媒体和录制改进。</p>
-          <div class="card-actions">
-            <a class="btn-detail" href="articles/3529caac4198a58d965f3adcc3674411.html">查看全文翻译</a>
-            <a class="read-more" href="https://www.linuxtoday.com/blog/obs-studio-33-promises-support-for-latest-nvidia-broadcast-sdks-beta-out-now/" target="_blank" rel="noopener">阅读原文 →</a>
+            <a class="btn-detail" href="articles/4e7aa1ca563a2b8d9466c8b289f55c9f.html">查看全文翻译</a>
+            <a class="read-more" href="https://www.linuxtoday.com/blog/linuxiac-weekly-wrap-up-week-39-2026-september-21-27/" target="_blank" rel="noopener">阅读原文 →</a>
           </div>
         </article></div>
       </section>

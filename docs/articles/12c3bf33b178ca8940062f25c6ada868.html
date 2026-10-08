@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Firefox GNOME 主题更新以适配 Nova — Linux 中文速报</title>
+<title>两款外观炫酷的 GNOME Shell 天气扩展 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
+    <span class="tag">桌面环境</span>
     <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Firefox GNOME 主题更新以适配 Nova</h1>
+  <h1>两款外观炫酷的 GNOME Shell 天气扩展</h1>
 
-  <div class="article-summary">非官方的 Firefox GNOME 主题已更新，以兼容新版 Firefox 及其更圆润的界面。该主题通过 CSS 代码让 Firefox 外观更接近 GNOME 原生应用。用户可通过一条 curl 命令快速安装，支持多种构建格式，安装后重启浏览器即可生效。部分功能需手动启用，卸载也较为简单。</div>
+  <div class="article-summary">本文介绍了两款外观炫酷的 GNOME Shell 天气扩展。第一款以动画效果为特色，面板图标和预报卡片均带动态展示，支持多种天气后端和自动定位，但存在后台占用 CPU/GPU 过高的问题，目前仅支持 GNOME 50。第二款自称“全功能气象站”，采用图表和彩色图形展示数据，布局比传统表格更吸引人，但实际显示数据不如截图全面，缺少雷达图和天文信息，同样仅支持 GNOME 50。</div>
 
-  <div class="article-body"><p>Firefox GNOME 主题更新以适配 Nova - OMG! Ubuntu</p><p>非官方的 Firefox GNOME 主题已更新，以适配新版 Firefox 及其更圆润的界面。</p><p>它并非传统的 Firefox 主题（如可从 Mozilla 附加组件网站安装的那些），而是引用其 GitHub 页面的话来说，“一堆 CSS 代码，让 Firefox 看起来更接近 GNOME 的原生应用”——而且它在这方面做得非常出色。</p><p>随着新版 Firefox 的推出，负责这个非官方 Adwaita 风格外观的主题团队需要更新，以应对新版浏览器中 CSS 类变更和新的小部件样式。</p><p>你无法直接看出其中有什么变化——这正是更新的目的。但需要打补丁和调整，以保持那种不可思议的 Adwaita 氛围。</p><p>安装 GNOME Firefox 主题</p><p>使用一条命令即可获取自动运行脚本（通常不建议运行网上找到的随机命令，尤其是那些还会执行脚本的命令，但如果你有疑虑，可以在 GitHub 上审查代码）。</p><p>curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash</p><p>上述命令会下载主题文件，解压并将各种样式表、图标和其他通知移动到你的（隐藏的）Firefox 配置文件文件夹中。该脚本适用于大多数构建版本，包括二进制、Flatpak、.deb、RPM 以及——万岁——Snap。</p><p>它会一闪而过，很快完成。重启 Firefox 使更改生效。</p><p>如果你更喜欢标签页在顶部，可以启用它们。</p><p>某些功能，比如仅打开一个标签页时隐藏标签栏，或者——我个人最喜欢的——将标签页用作标题栏，确实需要通过手动启用。</p><p>完整列表可在 Firefox GNOME 主题的 GitHub 页面上找到。</p><p>卸载稍微复杂一些，但只需删除几个文件夹。你无需清空配置文件并重新开始。如需卸载详情，请参阅 GitHub。</p></div>
+  <div class="article-body"><p>我最近修订了最佳 Linux 天气应用列表，但我知道大多数人更喜欢使用面板来获取当前天气状况和未来预报数据。</p><p>GNOME Shell 的天气扩展并不匮乏。各种类型都有——有些像在面板上显示一个简单的标签，另一些则在下拉菜单中提供大量气象数据，设计各异（有些情况下，垂直长度也各不相同）。</p><p>近几个月来，我看到一批较新的 GNOME Shell 天气扩展涌现出来。今年席卷全球的酷热热浪可能让开发者们比平时更关注（并为之汗流浃背）气温。</p><p>我想我应该展示其中几款，因为它们比常见的天气预报类扩展要炫酷得多。</p><p>**提供动画点缀**</p><p>这款扩展无疑会吸引眼球。当然，它做了大多数同类附加组件所做的事，即在一个易于解析的管理器中展示预报数据，但它的实现方式完全不同。动画，宝贝！</p><p>面板上的一个图标显示当前温度和天气状况的动画图标（循环动画）。点击它会显示一个带有动画背景的预报卡片，展示当前和逐小时天气状况，以及带有温度、降水量和风速图表的 8 天预报：</p><p>动画效果展示（动作有点太多了）</p><p>气象单位可以设置为公制或英制，但无法做到比如天气用英里/小时而温度用摄氏度。提供多种天气后端，包括 Open-Meteo、Met.no 和 NOAA NWS。还支持自动定位！</p><p>该扩展的偏好设置中有动画预览，以及禁用动画的选项——你可能会想禁用。即使扩展没有打开，它也在后台持续占用我的 CPU 和 GPU（因此消耗更多电量）。</p><p>它在我撰写本文时仅支持 GNOME 50，所以如果你最近升级到了 Ubuntu 26.04，你就可以试试看。</p><p>希望它能更新以支持 GNOME 51——并修复其激进的 CPU 占用问题。</p><p>**Weather Prime——看起来很美**</p><p>Weather Prime 是一个数据丰富的小程序，自称是 GNOME 顶部面板的“全功能气象站”。</p><p>商店截图承诺了很多</p><p>顶部栏中的一个胶囊形图标显示你所在位置的当前天气状况。点击后，会打开一个下拉菜单，包含常见的大量预报数据，但以更吸引人的布局展示。</p><p>图表、圆角卡片和少量彩色图形的使用，相比其他小程序提供的电子表格式表格，是一个不错的改变。</p><p>——不知是我的位置还是后端的问题，显示给我的数据不如截图那么全面或炫酷。</p><p>我也没有实时雷达图或“天文”详细信息（潮汐、月相、日落等）的选项（我当地的报纸过去在同一版面上刊登星座运势和天气，所以天文信息对我来说本来会很有意义）。</p><p>令人愉快？当然，但并不完全像图片所暗示的那样，是面板上的迷你版（我最喜欢的 Linux 天气应用）。</p><p>好的一面是，你不需要与 API 密钥纠缠；它使用 Open-Meteo 天气源，已预配置好，开箱即用。它也支持 WeatherAPI.com，但你需要注册、生成密钥并填入应用中——而且它可能无法工作（对我来说就没用）。</p><p>它适用于 GNOME 50（Ubuntu 26.04 LTS）。也可以从该仓库安装，但由于该仓库已有 4 个月不活跃，它获得 GNOME 51 支持更新的机会，就像冬天的日光一样，转瞬即逝。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/firefox-gnome-theme-nova-update" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/modern-gnome-weather-extensions" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

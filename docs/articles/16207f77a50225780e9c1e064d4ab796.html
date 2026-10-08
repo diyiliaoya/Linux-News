@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Firefox GNOME 主题更新以适配 Nova — Linux 中文速报</title>
+<title>FEX 2610 发布：支持 AVX-VNNI，磁盘缓存改进 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">OMG! Ubuntu</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>Firefox GNOME 主题更新以适配 Nova</h1>
+  <h1>FEX 2610 发布：支持 AVX-VNNI，磁盘缓存改进</h1>
 
-  <div class="article-summary">非官方的 Firefox GNOME 主题已更新，以兼容新版 Firefox 及其更圆润的界面。该主题通过 CSS 代码让 Firefox 外观更接近 GNOME 原生应用。用户可通过一条 curl 命令快速安装，支持多种构建格式，安装后重启浏览器即可生效。部分功能需手动启用，卸载也较为简单。</div>
+  <div class="article-summary">FEX 2610 作为这款开源 x86_64 模拟器的最新月度版本发布，该模拟器可在 ARM64 Linux 系统上运行 x86_64 游戏和应用，尤其被 Valve 的 Steam Frame 头显采用。新版本带来更多 JIT 改进，包括对 AVX-VNNI 指令的支持、SSE4.2 优化、恢复 3DNow! 指令处理、新的 AVX gather 优化以及 RDRAND/RDSEED 软件回退。此外还改进了磁盘缓存，限制缓存大小、在 FEX 更新时刷新磁盘缓存，并修复了 Vulkan thunk 以帮助部分游戏在 NVIDIA DGX Spark 上运行。</div>
 
-  <div class="article-body"><p>Firefox GNOME 主题更新以适配 Nova - OMG! Ubuntu</p><p>非官方的 Firefox GNOME 主题已更新，以适配新版 Firefox 及其更圆润的界面。</p><p>它并非传统的 Firefox 主题（如可从 Mozilla 附加组件网站安装的那些），而是引用其 GitHub 页面的话来说，“一堆 CSS 代码，让 Firefox 看起来更接近 GNOME 的原生应用”——而且它在这方面做得非常出色。</p><p>随着新版 Firefox 的推出，负责这个非官方 Adwaita 风格外观的主题团队需要更新，以应对新版浏览器中 CSS 类变更和新的小部件样式。</p><p>你无法直接看出其中有什么变化——这正是更新的目的。但需要打补丁和调整，以保持那种不可思议的 Adwaita 氛围。</p><p>安装 GNOME Firefox 主题</p><p>使用一条命令即可获取自动运行脚本（通常不建议运行网上找到的随机命令，尤其是那些还会执行脚本的命令，但如果你有疑虑，可以在 GitHub 上审查代码）。</p><p>curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash</p><p>上述命令会下载主题文件，解压并将各种样式表、图标和其他通知移动到你的（隐藏的）Firefox 配置文件文件夹中。该脚本适用于大多数构建版本，包括二进制、Flatpak、.deb、RPM 以及——万岁——Snap。</p><p>它会一闪而过，很快完成。重启 Firefox 使更改生效。</p><p>如果你更喜欢标签页在顶部，可以启用它们。</p><p>某些功能，比如仅打开一个标签页时隐藏标签栏，或者——我个人最喜欢的——将标签页用作标题栏，确实需要通过手动启用。</p><p>完整列表可在 Firefox GNOME 主题的 GitHub 页面上找到。</p><p>卸载稍微复杂一些，但只需删除几个文件夹。你无需清空配置文件并重新开始。如需卸载详情，请参阅 GitHub。</p></div>
+  <div class="article-body"><p>FEX 2610 发布：支持 AVX-VNNI，磁盘缓存改进</p><p>2026 年 10 月 7 日 下午 05:16 EDT。</p><p>FEX 2610 于今日发布，这是这款开源模拟器的最新月度版本，用于在 ARM64 Linux 系统上的 AArch64 架构运行 x86_64 游戏/应用，其中最引人注目的是被 Valve 的 Steam Frame 头显采用。</p><p>FEX 2610 带来了更多 JIT 改进，包括对 AVX-VNNI 的支持。AVX 向量神经网络指令正开始被一些游戏库使用，因此对 FEX-Emu 来说支持它们非常重要。FEX JIT 还获得了一些 SSE4.2 优化，3DNow! 指令处理已恢复，新增了 AVX gather 优化，并为 RDRAND 和 RDSEED 指令提供了软件回退。</p><p>FEX 2610 还改进了磁盘缓存，对缓存大小设置了限制，而不是无限增长；在 FEX 更新时刷新磁盘缓存，以及其他增强功能。</p><p>FEX 2610 还修复了 Vulkan thunk，这可以帮助一些游戏在 NVIDIA DGX Spark 上运行。</p><p>FEX 2610 版本的下载和更多详情请见</p><p>D7VK 在 Vulkan 之上为旧版 Direct3D API 达到成熟</p><p>Linux 7.3 增加对 Victrix Pro BFG 和 Azeron 控制器的支持</p><p>SDL3 移植到 HarmonyOS / OpenHarmony</p><p>FEX 2609 发布：JIT 性能更快，新增 JIT 磁盘缓存选项</p><p>Linux 7.3 将修复搭载 Ryzen Z2 Extreme 的 MSI Claw 掌机的 M-Center 按键</p><p>终于有一款由 Unigine 2 引擎驱动的新游戏了</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他</p><p>Valve 的 Timur Kristóf 在改进 Linux 上旧款 AMD GPU 方面的出色工作</p><p>西门子关闭了前景看好的开源 Radioss 项目的大门</p><p>NVIDIA 进行 Wayland 与 X.Org 延迟测试的结果</p><p>Linux 7.4 将为 MacBook Neo 引入 Apple M4、A18 Pro 的初始设备树</p><p>Meta 为 Linux 开发压缩内存“CRAM”：优于 ZRAM 和 Zswap</p><p>Linux 7.3-rc6 发布：对新“AI Normal”来说很正常</p><p>Linux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2</p><p>AMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0、Linux 7.2</p><p>同时享受无广告浏览，</p><p>单页文章视图</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/firefox-gnome-theme-nova-update" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/FEX-2610-Released" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

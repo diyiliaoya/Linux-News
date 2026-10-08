@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Firefox GNOME 主题更新以适配 Nova — Linux 中文速报</title>
+<title>Ubuntu 26.10 在安全启动下放弃 Btrfs、XFS 和 ZFS 的 /boot 支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -152,14 +152,14 @@
     <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>Firefox GNOME 主题更新以适配 Nova</h1>
+  <h1>Ubuntu 26.10 在安全启动下放弃 Btrfs、XFS 和 ZFS 的 /boot 支持</h1>
 
-  <div class="article-summary">非官方的 Firefox GNOME 主题已更新，以兼容新版 Firefox 及其更圆润的界面。该主题通过 CSS 代码让 Firefox 外观更接近 GNOME 原生应用。用户可通过一条 curl 命令快速安装，支持多种构建格式，安装后重启浏览器即可生效。部分功能需手动启用，卸载也较为简单。</div>
+  <div class="article-summary">Canonical 调整了 Ubuntu 26.10 在启用安全启动时的引导方式，其签名的 GRUB 不再支持从 Btrfs、XFS、ZFS、LVM、LUKS 加密或软件 RAID 等文件系统读取 /boot，仅保留 ext4、FAT、ISO9660 和 squashfs。此举旨在减少引导链中的解析器数量，降低安全启动绕过漏洞的风险。禁用安全启动则不受影响，普通用户通常也不会受影响。</div>
 
-  <div class="article-body"><p>Firefox GNOME 主题更新以适配 Nova - OMG! Ubuntu</p><p>非官方的 Firefox GNOME 主题已更新，以适配新版 Firefox 及其更圆润的界面。</p><p>它并非传统的 Firefox 主题（如可从 Mozilla 附加组件网站安装的那些），而是引用其 GitHub 页面的话来说，“一堆 CSS 代码，让 Firefox 看起来更接近 GNOME 的原生应用”——而且它在这方面做得非常出色。</p><p>随着新版 Firefox 的推出，负责这个非官方 Adwaita 风格外观的主题团队需要更新，以应对新版浏览器中 CSS 类变更和新的小部件样式。</p><p>你无法直接看出其中有什么变化——这正是更新的目的。但需要打补丁和调整，以保持那种不可思议的 Adwaita 氛围。</p><p>安装 GNOME Firefox 主题</p><p>使用一条命令即可获取自动运行脚本（通常不建议运行网上找到的随机命令，尤其是那些还会执行脚本的命令，但如果你有疑虑，可以在 GitHub 上审查代码）。</p><p>curl -s -o- https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash</p><p>上述命令会下载主题文件，解压并将各种样式表、图标和其他通知移动到你的（隐藏的）Firefox 配置文件文件夹中。该脚本适用于大多数构建版本，包括二进制、Flatpak、.deb、RPM 以及——万岁——Snap。</p><p>它会一闪而过，很快完成。重启 Firefox 使更改生效。</p><p>如果你更喜欢标签页在顶部，可以启用它们。</p><p>某些功能，比如仅打开一个标签页时隐藏标签栏，或者——我个人最喜欢的——将标签页用作标题栏，确实需要通过手动启用。</p><p>完整列表可在 Firefox GNOME 主题的 GitHub 页面上找到。</p><p>卸载稍微复杂一些，但只需删除几个文件夹。你无需清空配置文件并重新开始。如需卸载详情，请参阅 GitHub。</p></div>
+  <div class="article-body"><p>Ubuntu 在安全启动下放弃 Btrfs、XFS 和 ZFS 引导支持</p><p>Canonical 改变了 Ubuntu 26.10 在启用安全启动的系统上的引导方式，目的是减少引导过程的攻击面。</p><p>Ubuntu 26.10 中签名的 GRUB 构建版本（仅在系统开启安全启动时使用）不再支持从 Btrfs、XFS、ZFS、LVM、LUKS 加密或软件 RAID（RAID1 除外）读取。HFS+、Apple 分区表支持以及 JPEG 和 PNG 图像加载也已被移除。</p><p>由于 GRUB 需要读取 /boot 目录来加载内核并引导 Ubuntu，如果这些文件位于受影响的文件系统上，GRUB 将无法访问它们，系统也就无法启动。</p><p>Ubuntu 26.10 在启用安全启动时仍然支持从 ext4、FAT 和 ISO9660（用于从 CD/DVD 启动）读取 /boot，当然也支持用于 snap 的 squashfs。</p><p>如果禁用安全启动，则会加载 GRUB 的完整功能集，这意味着特殊的 /boot 配置以及任何 GRUB 自定义调整（例如图像背景）都能正常工作。</p><p>Canonical 为何做出这一改变？</p><p>Canonical 今年早些时候分享了精简 GRUB 的计划。客气地说，反馈相当激烈，因为一些使用定制引导设置的用户——其中一些是通过操作系统安装程序中的“实验性”功能创建的——听说自己可能无法启动后并不高兴。</p><p>这就是为什么 Canonical 在 LTS 版本之后才做出这一改变；那些需要安全启动下完整 GRUB 功能的用户可以继续使用 Ubuntu 26.04 LTS。该版本在 Ubuntu Pro 下支持到 2036 年，在 Ubuntu Pro 加 Legacy Add-on 下支持到 2041 年。</p><p>安全是这里的目标。</p><p>GRUB 是 Ubuntu 引导链中最早的部分。在标准的安全启动设置中，设备固件加载一个名为 shim 的程序，由它验证并加载 GRUB。随后解析器会探测文件系统和分区布局以进行读取，找到内核并加载它。</p><p>但近年来，这些解析器已成为众多安全启动绕过漏洞的来源——LLM 正在使漏洞被发现乃至被利用的速度加快。</p><p>Canonical 的理由是，在内核加载之前运行的解析器越少，破坏保障引导安全的“信任链”的机会就越少。</p><p>大多数用户不会受到影响</p><p>尽管这听起来变化很大，但它只影响在启用安全启动的设备上引导 Ubuntu 26.10，而且只影响引导路径本身。</p><p>在启用安全启动的系统上，LVM、RAID、LUKS、Btrfs 和 ZFS 在 Ubuntu 26.10 中仍然可用和可访问——只是要在系统启动之后。</p><p>如果你担心这会影响到你，请在下个月升级到 26.10 之前，检查任何自定义的 /boot 布局是否属于上述支持类型列表。</p><p>然而，大多数 Ubuntu 用户不会受到影响，因为标准的操作系统安装程序会以标准且对安全启动友好的方式进行设置。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/firefox-gnome-theme-nova-update" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/ubuntu-2610-secure-boot-grub-change" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
