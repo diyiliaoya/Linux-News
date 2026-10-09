@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Qubes OS 4.3.2 — Linux 中文速报</title>
+<title>EXT4 弃用其日志式 &quot;data=journal&quot; 模式 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Qubes OS 4.3.2</h1>
+  <h1>EXT4 弃用其日志式 &quot;data=journal&quot; 模式</h1>
 
-  <div class="article-summary">Qubes OS 团队发布了 4.3.2 稳定版，这是一个整合了自上一稳定版以来所有安全更新和错误修复的补丁版本。新版本将默认 Fedora 模板升级至 Fedora 44，kernel-latest 升级至 Linux 7.2，并包含大量错误修复。已知问题涉及从 4.3 之前备份恢复的模板可能仍指向原版本仓库，但全新安装和从 4.2 就地升级的用户不受影响。</div>
+  <div class="article-summary">EXT4 文件系统正式弃用 &quot;data=journal&quot; 挂载选项的日志模式，该模式将所有文件数据和元数据先写入日志再提交，以提升数据完整性，但会显著降低写入性能并禁用延迟分配和直接 I/O。该功能将在 Linux 7.3 中标记为弃用，并计划在 2028 年初随 2027 年 LTS 内核版本后移除。</div>
 
-  <div class="article-body"><p>发行版发布：Qubes OS 4.3.2</p><p>Qubes 团队宣布发布 Qubes OS 4.3.2，这是该项目面向单用户桌面计算的安全导向操作系统的一个更新版本：“我们很高兴地宣布 Qubes OS 4.3.2 稳定版发布。此补丁版本旨在整合自上一个稳定版发布以来发生的所有安全更新和错误修复。我们的目标是提供一种安全便捷的方式，让用户通过最新的 ISO 安装（或重新安装）最新的稳定版 Qubes。ISO 及相关验证文件可在下载页面获取。Qubes 4.3.2 有哪些新内容？默认 Fedora 模板升级至 Fedora 44；kernel-latest 升级至 Linux 7.2；安全更新；大量错误修复。Qubes 4.3.2 中的已知问题：在 4.3.2 中从 4.3 之前的备份恢复的模板，可能仍会指向其原始的 Qubes OS 发行版仓库。在全新 4.3.2 安装上的新模板不受影响。从 4.2 就地升级到 4.3（而非从备份恢复模板）的用户也不受影响，因为就地升级过程已在第 4 阶段包含了上述修复。”请阅读公告的其余部分以获取更多细节和相关链接。</p><p>Qubes-R4.3.2-x86_64.iso</p><p>近期相关新闻和发布</p><p>发行版发布：Qubes OS 4.3.2</p><p>发行版发布：Qubes OS 4.3.0</p><p>发行版发布：Qubes OS 4.2.4</p><p>发行版发布：Qubes OS 4.2.2</p><p>发行版发布：Qubes OS 4.2.0</p><p>开发版发布：Qubes OS 4.2.0 RC5</p><p>Qubes OS 是一个免费开源、面向单用户桌面计算的安全导向操作系统。Qubes OS 利用基于 Xen 的虚拟化技术，允许创建和管理称为 qubes 的隔离隔间。这些 qubes 以虚拟机（VM）的形式实现。这使得操作系统的每个组件都能与其他部分隔离，防止入侵扩散或信息泄露。</p><p>https://qubes-os.org/</p><p>https://www.mail-archive.com/qubes-users@googlegroups.com/</p></div>
+  <div class="article-body"><p>EXT4 文件系统今日弃用了其 &quot;data=journal&quot; 挂载选项的日志模式。在弃用之后，该模式计划于 2028 年移除。</p><p>EXT4 的 data=journal 模式会将所有文件数据和元数据先写入文件系统的日志，然后再提交到主文件系统。在发生崩溃或断电时，可以通过重放日志来恢复数据。</p><p>对于非常关注数据完整性和安全性的人来说，EXT4 的 data=journal 模式非常出色，但与默认的 ordered（data=ordered）模式或 data=writeback 相比，它会显著影响写入性能。使用日志模式还会禁用延迟分配和直接 I/O 支持。</p><p>对于 Linux 7.3，EXT4 的 data=journal 功能已被弃用，其支持将在 2027 年 Linux LTS 内核版本之后的 2028 年初移除。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12972" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/EXT4-Deprecates-Journal-Mode" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Qubes OS 4.3.2 — Linux 中文速报</title>
+<title>Valve 为 Mesa 26.3 中的 AMD RADV 驱动添加 VK_AMD_anti_lag 支持 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Qubes OS 4.3.2</h1>
+  <h1>Valve 为 Mesa 26.3 中的 AMD RADV 驱动添加 VK_AMD_anti_lag 支持</h1>
 
-  <div class="article-summary">Qubes OS 团队发布了 4.3.2 稳定版，这是一个整合了自上一稳定版以来所有安全更新和错误修复的补丁版本。新版本将默认 Fedora 模板升级至 Fedora 44，kernel-latest 升级至 Linux 7.2，并包含大量错误修复。已知问题涉及从 4.3 之前备份恢复的模板可能仍指向原版本仓库，但全新安装和从 4.2 就地升级的用户不受影响。</div>
+  <div class="article-summary">Valve 工程师为 Mesa 26.3 的 AMD RADV 驱动合并了 VK_AMD_anti_lag 支持，引入通用 vk_frame_pacer 框架，替代此前的隐式 Vulkan 层实现，可降低游戏延迟，并便于未来实现 NVIDIA 的低延迟扩展。</div>
 
-  <div class="article-body"><p>发行版发布：Qubes OS 4.3.2</p><p>Qubes 团队宣布发布 Qubes OS 4.3.2，这是该项目面向单用户桌面计算的安全导向操作系统的一个更新版本：“我们很高兴地宣布 Qubes OS 4.3.2 稳定版发布。此补丁版本旨在整合自上一个稳定版发布以来发生的所有安全更新和错误修复。我们的目标是提供一种安全便捷的方式，让用户通过最新的 ISO 安装（或重新安装）最新的稳定版 Qubes。ISO 及相关验证文件可在下载页面获取。Qubes 4.3.2 有哪些新内容？默认 Fedora 模板升级至 Fedora 44；kernel-latest 升级至 Linux 7.2；安全更新；大量错误修复。Qubes 4.3.2 中的已知问题：在 4.3.2 中从 4.3 之前的备份恢复的模板，可能仍会指向其原始的 Qubes OS 发行版仓库。在全新 4.3.2 安装上的新模板不受影响。从 4.2 就地升级到 4.3（而非从备份恢复模板）的用户也不受影响，因为就地升级过程已在第 4 阶段包含了上述修复。”请阅读公告的其余部分以获取更多细节和相关链接。</p><p>Qubes-R4.3.2-x86_64.iso</p><p>近期相关新闻和发布</p><p>发行版发布：Qubes OS 4.3.2</p><p>发行版发布：Qubes OS 4.3.0</p><p>发行版发布：Qubes OS 4.2.4</p><p>发行版发布：Qubes OS 4.2.2</p><p>发行版发布：Qubes OS 4.2.0</p><p>开发版发布：Qubes OS 4.2.0 RC5</p><p>Qubes OS 是一个免费开源、面向单用户桌面计算的安全导向操作系统。Qubes OS 利用基于 Xen 的虚拟化技术，允许创建和管理称为 qubes 的隔离隔间。这些 qubes 以虚拟机（VM）的形式实现。这使得操作系统的每个组件都能与其他部分隔离，防止入侵扩散或信息泄露。</p><p>https://qubes-os.org/</p><p>https://www.mail-archive.com/qubes-users@googlegroups.com/</p></div>
+  <div class="article-body"><p>Valve 为 Mesa 26.3 中的 AMD RADV 驱动添加 VK_AMD_anti_lag 支持</p><p>2026 年 10 月 8 日 20:23 EDT。</p><p>本季度的发布又有了一项令人兴奋的新功能。经过数月开发，由 Valve 贡献的、面向 Radeon RADV 驱动的 VK_AMD_anti_lag 支持于今日合并，为 AMD Linux 游戏玩家带来相较此前实现的明显改进。</p><p>VK_AMD_anti_lag 于 2024 年 7 月首次亮相，作为 AMD Anti Lag 的 Vulkan 扩展，用于帮助降低游戏时的延迟。该扩展可自动调节 CPU 节奏，确保其不会过度领先 GPU，从而最大限度减少输入事件与屏幕更新之间的延迟。</p><p>2025 年，VK_AMD_anti_lag 支持作为隐式 Vulkan 层进入 Mesa，但今年早些时候，Valve 的软件工程师开始着手开发该 Mesa Anti-Lag 层的替代方案。</p><p>这项由开发者 Daniel Schürmann 领导的工作现已合并，引入了可在 Mesa Vulkan 驱动之间共享的通用“vk_frame_pacer”实用框架，以及 RADV 驱动的实际实现。新实现整体上应更优，并且还能在此基础上轻松实现 NVIDIA 的 VK_NV_low_latency_2 扩展。</p><p>相关链接包含现已并入 Mesa 26.3 的代码的全部细节，该版本将于 11 月作为稳定版发布。</p><p>Mesa 开发者正在考虑正式治理模型</p><p>Imagination 谈论其开源 Vulkan 驱动及 Volcanic 架构计划</p><p>Apex Compute 正在为其硬件开发开源 Mesa Vulkan 驱动</p><p>Mesa 放弃维护不善且很少使用的 Direct3D 10 用户模式驱动</p><p>Rusticl 在 Mesa 中的 Rust OpenCL 表现优异，支持 3.1 及更多驱动</p><p>Mesa 开发者将致力于消除 TGSI IR</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Valve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面的出色工作</p><p>西门子关闭了前景看好的开源 Radioss 项目</p><p>NVIDIA 进行 Wayland 与 X.Org 延迟测试的结果</p><p>Meta 为 Linux 开发压缩内存“CRAM”：优于 ZRAM 和 Zswap</p><p>Linux 7.4 将为 MacBook Neo 引入 Apple M4、A18 Pro 的初始设备树</p><p>Linux 7.3-rc6 发布：新“AI Normal”的常态</p><p>Linux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2</p><p>AMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0、Linux 7.2</p><p>同时享受无广告浏览、</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12972" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Mesa-26.3-RADV-VK_AMD_anti_lag" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>西门子突然下架 OpenRadioss，但分支版本已上线 — Linux 中文速报</title>
+<title>PhotoCraft：一款开源、由AI构建的Photoshop克隆 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">软件应用</span>
-    <span class="source">It's FOSS News</span>
+    <span class="source">OMG! Ubuntu</span>
   </div>
 
-  <h1>西门子突然下架 OpenRadioss，但分支版本已上线</h1>
+  <h1>PhotoCraft：一款开源、由AI构建的Photoshop克隆</h1>
 
-  <div class="article-summary">西门子本月突然删除 OpenRadioss 代码仓库，而非按惯例转为只读存档，引发开源社区不满。OpenRadioss 是 Altair 开发的有限元求解器 Radioss 的开源版本，被西门子收购后遭下架。得益于 AGPL 许可证，Rocky Linux 联合创始人已迅速创建分支 OpenCourant，保留完整提交历史，并已发布 Linux 和 Windows 构建版本，正寻求原贡献者加入。</div>
+  <div class="article-summary">PhotoCraft是一款用Rust编写的开源跨平台图像编辑器，由前storyteller.ai CEO Brandon Thomas领导的ArtCraft项目开发。它自称是Adobe Photoshop的“净室重实现”，拥有图层、蒙版、智能对象、34种工具和27种混合模式等丰富功能，并支持Vulkan、Metal和DX12 GPU加速。虽然界面和操作与Photoshop高度相似，但专业人士可能仍会注意到混合模式、滤镜等算法上的差异。该软件免费开源，支持Windows、macOS和Linux。</div>
 
-  <div class="article-body"><p>西门子突然下架 OpenRadioss，但分支版本已上线</p><p>又一个提醒：开源为何能让软件免于永久消失。</p><p>这家全球知名的科技与工程公司已于本月初悄然关闭 OpenRadioss 项目，保留了[网站]但完全删除了代码仓库。</p><p>我听起来像是在抱怨，因为通常当一个开源项目被终止时，维护者会将其置于只读的公开存档状态，以便其他开发者学习和创建分支。</p><p>OpenRadioss 是 [Radioss] 的开源版本，Radioss 是 Altair Engineering 开发的一款有限元求解器，用于碰撞测试、爆炸响应、冲击分析及其他结构载荷场景。</p><p>他们于[某年]发布了它，吸引了一个由研究人员、软件开发者和行业贡献者组成的跨国社区，他们扩展了求解器并在此基础上构建代码。</p><p>[西门子]去年收购了 Altair，在收购后的一年多时间里一直保持仓库及其内容公开可用，然后突然将其删除，并将人们重定向到其 [Simcenter Radioss 页面]。</p><p>Rocky Linux 的联合创始人[已]迅速搭建并运行了一个 OpenRadioss 分支，它保留了完整的 OpenRadioss 提交历史，以相同的[许可证]发布，名称源自数学家理查德·库朗以及 Courant-Friedrichs-Lewy（CFL）条件——这是此类求解器核心的稳定性判据。</p><p>事实上，这个分支的存在要归功于 AGPL。你看，西门子从法律上有权下架该仓库，但适用于每个提交的许可证赋予了任何人创建分支、分发和基于代码构建的权利。</p><p>只是看到下架如此突然，令人遗憾；让人觉得他们不想让人们提前得到通知。</p><p>同样值得注意的是，OpenCourant 是一个独立的社区项目，它正在积极寻找过去的 OpenRadioss 贡献者参与其中。</p><p>已经发布了什么？</p><p>最初，依赖西门子专有基础设施的上游构建流水线无法转移。该流水线已从头重建，结果看起来很有希望。</p><p>项目启动仅数天，就已经在分发 Linux 和 Windows [构建版本]。</p><p>而在此之前，一个从未提交到 git 历史的闭源[某]二进制文件随着上游 OpenRadioss 仓库一起消失了。</p><p>幸运的是，一位保留了副本的匿名社区成员站了出来，OpenCourant 团队独立验证了它，现在它已随每个构建版本发布。不过他们仍在寻找特定的发布存档，以开始 ARM64 支持的工作并改善当前平台兼容性。</p><p>如果你对 OpenCourant 感兴趣，其软件包选项包括[单精度和双精度版本]、SMP 构建，以及动画文件和时间历程数据的转换器。</p><p>你可以从[官方下载页面]下载最新构建版本。[某]文件可以作为一个不错的资源，但请记住它仍然是 OpenRadioss 版本，因为 OpenCourant 团队尚未更新它以反映新项目。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热衷于开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的技术迷。</p><p>Ubuntu 26.10 将采用基于 Rust 的 GnuPG 替代品</p><p>DigitalOcean 悄然终止开源积分计划</p><p>YT-DLP 被 IFPI 视为盗版工具</p><p>F-Droid 的新应用表明它不会消失</p><p>微软已向所有人开放 WSL 容器</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周通讯，你可以学习实用的 Linux 技巧、发现应用程序、探索新发行版，并随时了解 Linux 世界的最新动态</p><p>太好了！你已成功注册</p></div>
+  <div class="article-body"><p>PhotoCraft是一款开源、由AI构建的Photoshop克隆 - OMG! Ubuntu</p><p>有人将AI编码工具指向并让它构建一个副本，这只是时间问题。</p><p>这是一款用Rust编写的跨平台图像编辑器。该应用是由Brandon Thomas（前storyteller.ai CEO）领导的ArtCraft项目创建的多个创意工具之一。</p><p>ArtCraft将该应用宣传为“Adobe Photoshop的净室重实现”，从而避开了任何版权问题，因为它没有逆向工程任何东西（那些没有公开文档的东西）——FOSS粉丝们会为此欢呼。</p><p>尽管仍处于alpha阶段，它已经功能齐全。它具有图层、蒙版、图层样式、智能对象、画笔引擎等。它还拥有34种工具、27种混合模式和多种滤镜。它还可以打开/保存Adobe的PSD文件。</p><p>它还复制了真实Photoshop的菜单布局、键盘快捷键和工具位置，因为其理念是熟悉Photoshop的人可以切换到PhotoCraft。</p><p>GPU加速在Linux上通过Vulkan工作，在macOS上通过Metal，在Windows上通过DX12（或者在可自托管的WebAssembly构建中通过WebGPU）。该应用还为每个功能提供了大量的代理钩子，以便AI代理也可以“使用”该应用。</p><p>它启动速度极快——即使在我工作用的笔记本电脑上（搭载较弱的m3-8100y CPU、集成GPU和内存），它也感觉响应迅速。打开PSD几分钟后，内存膨胀到5GB，就像真正的Photoshop一样！</p><p>从他在Reddit上发布的内容来看，Thomas最初的动机是克隆Adobe的产品，因为取消Adobe订阅涉及费用、障碍和普遍的蔑视。此外，我想，作为一名有经验和AI背景的开发者，这是一个显而易见的目标。</p><p>它不会取代专业人士的Photoshop</p><p>一个带有明显缺陷的表面仿制品</p><p>我对真正的Photoshop相当熟悉，对“克隆”方面有点怀疑。尝试过PhotoCraft后，它在真实UI和UX方面确实很接近——比我过去写过的那些“让GIMP看起来像Photoshop”的努力要接近得多。</p><p>但这只是表面上的相似。在这方面，它让我想起了Photopea，那个已经存在多年的免费在线Photoshop克隆（前AI时代，由人类制作）。它与之相似。</p><p>在相似的位置拥有相似名称/图标的相似功能，并不等同于功能行为或输出相同。虽然这惊人地接近Photoshop的外观，但感觉上还远未达到Photoshop的体验。</p><p>Adobe几十年来对其混合模式、滤镜、内容感知工具、对象检测和污点修复算法进行了精细调整。克隆可以遵循公开规范并根据观察到的行为进行调整，但无法复制其魔力。</p><p>这取决于你对Photoshop的了解程度。</p><p>对于进行基本编辑的普通用户来说，不会注意到差异（直到他们尝试跟随YouTube上详细的Photoshop教程）。对于这部分人群，已经存在大量图像编辑器，其功能与PhotoCraft相当。</p><p>PhotoCraft通过Wine在Linux上运行良好</p><p>缺失的功能、bug、不同的输出和结果以及所有“看不见”的东西，单独听起来可能很小，但在日常工作流程中，它们确实会累积起来。</p><p>这可能是一个有真正最终目标而创建的克隆，也可能是一种开发上的炫耀，对某家公司竖起中指。</p><p>在Ubuntu上尝试PhotoCraft</p><p>PhotoCraft是免费、开源软件，支持Windows、macOS和Linux。该项目的GitHub有适用于所有主要操作系统的alpha构建，包括适用于Ubuntu的DEB安装程序（Intel/AMD和Arm64）。我选择了AppImage。</p><p>虽然免费使用，但ArtCraft网站列出了月度和年度订阅层级。付费可以获得AI积分，用于在应用内使用生成式AI功能——不过，目前这些功能尚未包含在此应用中。</p><p>与其他AI生成的应用一样，开发速度惊人：5天前发布了0.1.0版本，此后又有8个大小不一的版本发布。我在撰写本文时测试了v0.3.0，而v0.5.0已经发布。</p><p>鉴于人们对Adobe的厌恶，以及PhotoCraft的免费价格标签，毫不奇怪这项努力已经吸引了关注。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://itsfoss.com/news/siemens-openradioss-fork/" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/artcraft-free-photoshop-ai-clone" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

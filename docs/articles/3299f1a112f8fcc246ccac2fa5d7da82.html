@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Qubes OS 4.3.2 — Linux 中文速报</title>
+<title>COSMIC Epoch 1.10 发布：启动器现已采用 GPU 加速渲染 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Qubes OS 4.3.2</h1>
+  <h1>COSMIC Epoch 1.10 发布：启动器现已采用 GPU 加速渲染</h1>
 
-  <div class="article-summary">Qubes OS 团队发布了 4.3.2 稳定版，这是一个整合了自上一稳定版以来所有安全更新和错误修复的补丁版本。新版本将默认 Fedora 模板升级至 Fedora 44，kernel-latest 升级至 Linux 7.2，并包含大量错误修复。已知问题涉及从 4.3 之前备份恢复的模板可能仍指向原版本仓库，但全新安装和从 4.2 就地升级的用户不受影响。</div>
+  <div class="article-summary">System76 发布了基于 Rust 的 COSMIC 桌面环境最新增量更新 COSMIC Epoch 1.10。此版本最显著的改进是 COSMIC 启动器默认启用 GPU（WGPU）渲染路径，解决了此前因软件渲染器导致的严重卡顿问题。此外还新增了绘图板映射到指定显示器的功能，修复了合成器多项问题，并优化了初始设置中的 WiFi 页面显示逻辑。</div>
 
-  <div class="article-body"><p>发行版发布：Qubes OS 4.3.2</p><p>Qubes 团队宣布发布 Qubes OS 4.3.2，这是该项目面向单用户桌面计算的安全导向操作系统的一个更新版本：“我们很高兴地宣布 Qubes OS 4.3.2 稳定版发布。此补丁版本旨在整合自上一个稳定版发布以来发生的所有安全更新和错误修复。我们的目标是提供一种安全便捷的方式，让用户通过最新的 ISO 安装（或重新安装）最新的稳定版 Qubes。ISO 及相关验证文件可在下载页面获取。Qubes 4.3.2 有哪些新内容？默认 Fedora 模板升级至 Fedora 44；kernel-latest 升级至 Linux 7.2；安全更新；大量错误修复。Qubes 4.3.2 中的已知问题：在 4.3.2 中从 4.3 之前的备份恢复的模板，可能仍会指向其原始的 Qubes OS 发行版仓库。在全新 4.3.2 安装上的新模板不受影响。从 4.2 就地升级到 4.3（而非从备份恢复模板）的用户也不受影响，因为就地升级过程已在第 4 阶段包含了上述修复。”请阅读公告的其余部分以获取更多细节和相关链接。</p><p>Qubes-R4.3.2-x86_64.iso</p><p>近期相关新闻和发布</p><p>发行版发布：Qubes OS 4.3.2</p><p>发行版发布：Qubes OS 4.3.0</p><p>发行版发布：Qubes OS 4.2.4</p><p>发行版发布：Qubes OS 4.2.2</p><p>发行版发布：Qubes OS 4.2.0</p><p>开发版发布：Qubes OS 4.2.0 RC5</p><p>Qubes OS 是一个免费开源、面向单用户桌面计算的安全导向操作系统。Qubes OS 利用基于 Xen 的虚拟化技术，允许创建和管理称为 qubes 的隔离隔间。这些 qubes 以虚拟机（VM）的形式实现。这使得操作系统的每个组件都能与其他部分隔离，防止入侵扩散或信息泄露。</p><p>https://qubes-os.org/</p><p>https://www.mail-archive.com/qubes-users@googlegroups.com/</p></div>
+  <div class="article-body"><p>System76 今日发布了 COSMIC Epoch 1.10，这是这款基于 Rust 的桌面环境的最新增量更新，与其 Pop!_OS Linux 发行版同步开发。</p><p>COSMIC Epoch 1.10 的显著变化之一是 COSMIC 启动器默认使用 GPU &quot;WGPU&quot; 渲染代码路径。由于部分系统在使用软件渲染器时性能极差、感觉迟钝，现在默认启用了 GPU 渲染。这源于近期一则题为&quot;Cosmic 启动器仍是有史以来最慢的启动器&quot;的反馈：</p><p>&quot;我在 3 台不同的机器上试过，涵盖 Intel、AMD 到 Nvidia，不知为何，一旦你在搜索框里输入任何内容，列表滚动就变得慢得无法忍受（大约 1fps）。无论你是用鼠标滚动还是用方向键遍历列表，刷新都慢得离谱。而且你输入得越多，文本输入也变得越来越慢。</p><p>这种情况从第一天起就存在。据说曾经有人在某处写过这是 iced 的问题，更新到更新的 iced 后问题就会消失——但什么都没变。</p><p>一个像 Cosmic 这样流畅、快速的桌面环境，却在最基本、最基础的 UI 组件上卡顿，这实在令人非常沮丧。&quot;</p><p>现在，缓慢的 COSMIC 启动器应该能通过 GPU 渲染得到解决。</p><p>COSMIC Epoch 1.10 现在还允许将绘图板映射到特定显示器，对 COSMIC 合成器进行了多项修复，COSMIC 初始设置仅在存在 WiFi 适配器时才会显示其 WiFi 页面，以及大量其他修复。</p><p>COSMIC Epoch 1.10 的下载和更多详情请见</p><p>hw-monitor 0.6 发布，支持按进程报告 GPU 使用率和内存</p><p>Flatpak 1.18.4 发布，包含重要安全修复</p><p>Budgie 10.10.3 发布，Budgie 菜单新增收藏夹，Labwc 桥接改进</p><p>COSMIC Epoch 1.9 带来新的图像查看器和屏幕键盘</p><p>AI 辅助的 Starling 桌面推出 3D 视图，包含&quot;可行走的 3D 滨水城市&quot;</p><p>Linux Mint 推出 Xepub 作为新的 EPUB 阅读器，以及 Clockenstein 日历应用</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他</p><p>Valve 的 Timur Kristóf 在改善 Linux 上老旧 AMD GPU 方面所做的出色工作</p><p>西门子关闭了前景看好的开源 Radioss 项目的大门</p><p>NVIDIA 进行 Wayland 与 X.Org 延迟测试的结果</p><p>Meta 为 Linux 开发压缩内存 &quot;CRAM&quot;：优于 ZRAM 和 Zswap</p><p>Linux 7.4 将为 Apple M4、A18 Pro 引入初始设备树，用于 MacBook Neo</p><p>Linux 7.3-rc6 发布：新的&quot;AI Normal&quot;成为常态</p><p>Linux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2</p><p>AMD Ryzen AI 开发者平台操作系统更新，包含 ROCm 10.0、Linux 7.2</p><p>同时享受无广告浏览、</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12972" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/COSMIC-Epoch-1.10" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
