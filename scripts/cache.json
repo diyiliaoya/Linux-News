@@ -14573,5 +14573,159 @@
     "title_zh": "Git 2.56 发布：更安全的冲突解决与性能提升",
     "summary_zh": "Git 2.56 正式发布，重点改进了合并冲突解决流程，新增更安全的暂存选项，增强了分支管理功能，并针对大型仓库进行了性能优化。这些更新旨在提升开发者在复杂项目中的协作效率与操作安全性。",
     "fulltext_zh": "Git 2.56 改进了合并冲突解决，增加了更安全的暂存选项，增强了分支管理，并提升了大型仓库的性能。\n\n文章《Git 2.56 发布：更安全的冲突解决与性能提升》首次出现在 Linux Today 上。"
+  },
+  "9c51ce4275e7ec2209cab8effbaae5cc": {
+    "id": "9c51ce4275e7ec2209cab8effbaae5cc",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/ubuntu-desktop-riscv-iso",
+    "title_en": "Ubuntu now has official desktop images for RISC-V",
+    "summary_en": "Installing the Ubuntu desktop on RISC-V hardware is made easier with 26.10, as Canonical is now building official riscv64 desktop images. Experimental versions of the upcoming Ubuntu 26.10 release are out for testing on a SpacemiT K3 – the board Canonical has been working on with SpacemiT. One ISO ships the standard GNOME desktop, and the other is built around Xubuntu minimal. Canonical&#8217;s Valentin Haudiquet says both of the ISOs are &#8220;experimental&#8221; and &#8220;carry no official s",
+    "pub_date": "Sat, 10 Oct 2026 00:09:00 +0000",
+    "title_zh": "Ubuntu 现已提供 RISC-V 官方桌面镜像",
+    "summary_zh": "Canonical 开始为 RISC-V 架构构建官方 riscv64 桌面镜像，随 Ubuntu 26.10 一同推出。目前提供 GNOME 和 Xubuntu 两个实验性 ISO，面向 SpacemiT K3 开发板，尚无官方支持，正式版将于 2026 年 10 月 15 日发布。此举解决了此前 RISC-V 厂商需自行构建恢复镜像的问题，用户可从与 Intel/AMD、Arm64 相同渠道下载。",
+    "fulltext_zh": "随着 26.10 版本的推出，在 RISC-V 硬件上安装 Ubuntu 桌面变得更加容易，因为 Canonical 现在正在构建官方的 riscv64 桌面镜像。\n\n即将发布的 Ubuntu 26.10 版本的实验性版本已经可以在 SpacemiT K3 上进行测试——这是 Canonical 与 SpacemiT 合作开发的开发板。其中一个 ISO 搭载标准的 GNOME 桌面，另一个则基于 Xubuntu 最小化版本构建。\n\nCanonical 的 Valentin Haudiquet 表示，这两个 ISO 都是“实验性的”，且“尚未获得官方支持”。它们不会完美运行，确实存在一些问题，将在 2026 年 10 月 15 日发布的“最终”版本中解决。\n\n为什么有两个镜像？\n图片：Valentin Haudiquet\n\n符合 RVA23 基准的 RISC-V 硬件仍然相当新。许多想要测试 RISC-V 但缺乏硬件的软件开发者使用 QEMU——在 QEMU 中，GNOME 桌面可能需要长达 30 分钟才能加载，因此需要一个更轻量、更快速的选择。\n\n在真实硬件上，据称 GNOME 镜像能提供“不错的流畅桌面体验”，而随着近期 RISC-V 硬件能力的大幅提升，这无疑是个好消息。\n\n为 Flutter 添加 RISC-V 支持是达成这一目标的部分工作，因为许多 Ubuntu 应用（包括操作系统安装器）都使用 Flutter。一些桌面 snap 尚未准备好支持 RISC-V，包括……\n\n还需要处理设备树，Ubuntu 的构建流水线也需要能够生成新的 riscv64 ISO。\n\n但是，不是已经有搭载 Ubuntu 的 RISC-V 平板电脑在售吗？\n\n这并不是 Ubuntu 第一次拥有 RISC-V 安装器，因为服务器镜像已经存在多年，可以在其上安装 GUI 桌面（早在 Canonical 将 ISA 配置提升至 RVA23、仅支持较新且性能更强的开发板之前）。\n\n但 Canonical 并未提供预装桌面的安装镜像。\n\n那些与 Canonical 合作支持 Ubuntu RISC-V 的公司，其中许多销售预装 Ubuntu 的平板电脑、笔记本电脑和单板计算机，往往不得不自行构建和托管恢复镜像。\n\n这一消息解决了这个问题：面向现代 64 位 RISC-V（RVA23+）硬件的官方镜像，可从与 Intel/AMD 和 Arm64 镜像相同的地方下载。\n\n更喜欢 LTS？Ubuntu 26.04.1 LTS riscv64 桌面 ISO 也已提供，不过尚不支持 K3（Haudiquet 表示很快会支持）。\n\n你可以从 Ubuntu 的每日构建文件夹下载 Ubuntu 26.10 桌面（RISC-V）测试镜像，Xubuntu 26.10（RISC-V）镜像则在 Xubuntu 每日构建文件夹中。"
+  },
+  "bc1e0acc11fd622c4c5c1583b128f9ea": {
+    "id": "bc1e0acc11fd622c4c5c1583b128f9ea",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/document-foundation-new-logo",
+    "title_en": "The Document Foundation gets its own logo after 16 years",
+    "summary_en": "The Document Foundation, the non-profit steering the development of LibreOffice, has unveiled a new logo. The change means that, for the first time since its inception in 2010, TDF no longer shares the same logotype and wordmark as LibreOffice. &#8220;The Document Foundation&#8221; is now the sole wordmark, written in a different font, Inter, and a refreshed set of brand colours complement it. Unveiling the design, TDF&#8217;s Italo Vignoli made the case for a decoupling of the two brands, notin",
+    "pub_date": "Fri, 09 Oct 2026 20:04:59 +0000",
+    "title_zh": "文档基金会16年后启用全新独立标志",
+    "summary_zh": "文档基金会（TDF）在成立16年后首次推出独立于LibreOffice的全新标志与品牌形象。新标志采用Inter字体，由柏林设计机构操刀，旨在体现基金会作为机构而非软件项目的定位。此举不影响LibreOffice的品牌标识，新品牌资产将在未来数月逐步应用于官网、社交媒体及文档中。",
+    "fulltext_zh": "文档基金会（The Document Foundation）——负责指导LibreOffice开发的非营利组织——近日揭晓了全新标志。\n\n这意味着自2010年成立以来，TDF首次不再与LibreOffice共用相同的标志和文字标识。\n\n“文档基金会”现在成为唯一的文字标识，采用不同的字体Inter书写，并配以一套焕然一新的品牌色彩。\n\nTDF的Italo Vignoli阐述了将两个品牌解耦的理由，指出“基金会是作为机构发声，而非软件项目”，其影响力“远远超出”人们所熟知的LibreOffice这一产品。\n\n一家总部位于柏林的设计机构负责了此次重新设计，其前客户包括……该机构创始人也曾参与Ubuntu桌面安装程序的设计。\n\n趣闻：Canonical在最近一次品牌更新中走了相反的路，将Ubuntu标志融入Canonical文字标识中，取代了旧有的两个嵌套紫色圆圈的独立标志。\n\n打造属于自己的视觉形象，感觉多少有些迟来。\n\n除LibreOffice外，TDF还参与Open Document Format（ODF）标准的制定，并与公共组织、教育机构和政府一起倡导文档互操作性和数字主权。\n\n此次变更仅影响基金会的品牌形象。LibreOffice的品牌、标志等均保持不变。\n\n如果你有兴趣一探究竟，新品牌资产可供下载。TDF表示，将在未来数月内开始在其官方网站、社交媒体账号、文档等渠道使用新标志、字体和配色方案。"
+  },
+  "2f123738228a93f8d67439217a432705": {
+    "id": "2f123738228a93f8d67439217a432705",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/calibre-read-aloud-kokoro-voices",
+    "title_en": "Calibre can now read ebooks aloud without sounding like a robot",
+    "summary_en": "A new update to the Calibre ebook manager is out and it brings more natural sounding text-to-speech (TTS) voices, as well as AVIF image support and better handling of PDFs that put text in columns. Calibre v9.16 adds support for Kokoro, an open-weight TTS model, to its Read Aloud feature (which to state the bleedin&#8217; obvious, will read the content of books to you). The new voices are sound to sound &#8216;much more natural&#8217;, especially in English. Kokoro voices aren&#8217;t preinstall",
+    "pub_date": "Fri, 09 Oct 2026 16:27:21 +0000",
+    "title_zh": "Calibre 现在可以朗读电子书，不再像机器人",
+    "summary_zh": "Calibre 9.16 版本新增了对 Kokoro TTS 模型的支持，使文本转语音朗读更加自然，尤其英语发音。用户可在配置面板中选择语音并按需下载。此外，更新还增加了 AVIF 图像支持、改进 PDF 分栏和从右到左文本处理、新闻集成可绕过反爬机制、书籍可存储 1MB 持久数据等。Kobo 驱动更新，大书库启动更快。",
+    "fulltext_zh": "Calibre 现在可以朗读电子书，不再像机器人 - OMG! Ubuntu\n\n电子书管理器新版本发布，带来了更自然的文本转语音（TTS）声音，以及 AVIF 图像支持和更好的处理分栏文本 PDF 的能力。\n\nv9.16 版本在其朗读功能中增加了对 Kokoro 的支持，这是一个开放权重的 TTS 模型（显而易见，它会为你朗读书籍内容）。\n\n新声音听起来“更加自然”，尤其是在英语方面。\n\nKokoro 声音并非预装或包含在 Calibre 本身中。你可以在配置面板的后端选择器中选择一个，下次点击播放时，该声音会按需下载。\n\n如果你希望“先试后买”，可以在线试听新声音的音频样本，无需先下载。\n\n该软件的粉丝可能会高兴地看到，在一系列添加了生成式 AI 集成（可以说与人们安装此软件的原因——阅读和管理电子书——关系不大）的版本之后，焦点又回到了平凡的工作上。\n\nCalibre v9.16 中的新闻集成支持从阻止自动抓取内容的在线出版物下载内容，例如使用浏览器绕过反机器人机制。\n\n允许书籍持久存储最多 1MB 的数据。这应该能让自定义设置在会话之间保留，对于交互式标题，还可以保存进度等。从查看器打印为 PDF 时，允许以公制单位设置边距（万岁）。\n\nCalibre 的 PDF 支持通过更好地处理从右到左文本和多栏页面得到加强，而 DOCX 输出现在使链接内的图像可点击。\n\n其他变化涵盖方方面面：支持在文件中渲染 AVIF 图像；在标签浏览器中按层次排序带有子标签（但没有实际书籍）的空标签；以及一个按钮，用于在自定义调整破坏氛围时重置窗口布局。\n\n大量修复也包含在内，Kobo 驱动已更新以支持最新固件，并且据说对于拥有大型书库的用户，Calibre 现在启动更快。\n\n获取最新 Calibre 更新\n\nCalibre 是免费、开源软件，适用于 Windows、macOS 和 Linux，你可以从官方网站下载。\n\n在 Linux 上，Calibre 通过命令行脚本安装和更新，该脚本下载二进制文件，将其解压到系统位置，并创建与桌面环境集成所需的快捷方式，例如启动器快捷方式等。\n\n或者，你可以获取一个未经验证的构建版本。最近，一个同样非官方的版本被添加到了 Snap Store。\n\n朗读并不是新功能；Calibre 在 v7.18 中添加了神经 Piper TTS 引擎，在此之前，该应用提供了更基础的文本阅读功能。"
+  },
+  "a6b6dc389272598bedc43e9d3a393503": {
+    "id": "a6b6dc389272598bedc43e9d3a393503",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12976",
+    "title_en": "Distribution Release: ZEPHIX 9",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Robert Spiteri has announced the release of ZEPHIX 9, the latest stable version of the project's desktop Linux distribution based on Debian's \"Stable\" branch. Unlike ZEPHIX's ultra lightweight releases of the past, the new version, which features the LXDE desktop, is a 9.4 GB live ISO image containing....",
+    "pub_date": "",
+    "title_zh": "发行版发布：ZEPHIX 9",
+    "summary_zh": "ZEPHIX 9 是基于 Debian 稳定分支的桌面 Linux 发行版最新稳定版，采用 LXDE 桌面环境，提供 9.4 GB 的 live ISO 镜像，预装 4,372 款软件，搭载 Linux 内核 6.12.107，启动速度约 24 秒，并支持通过 Calamares 安装器安装到硬盘。",
+    "fulltext_zh": "发行版发布：ZEPHIX 9（DistroWatch.com 新闻）\n\nRobert Spiteri 宣布发布 ZEPHIX 9，这是该项目基于 Debian“稳定”分支的桌面 Linux 发行版的最新稳定版本。与 ZEPHIX 过去超轻量级的版本不同，新版本采用 LXDE 桌面环境，是一个 9.4 GB 的 live ISO 镜像，包含大量生产力、办公、互联网和多媒体应用程序。它还包含 Calamares 系统安装器，便于安装到硬盘：\n\n“ZEPHIX 9——我们迄今为止最精致的版本。ZEPHIX 9 带来了焕然一新的桌面外壳、更新的内核、更快的启动速度，以及针对 AMD 和 Intel 平台改进的硬件支持。9 版有什么新内容？Linux 内核 6.12.107——更广泛的硬件支持、改进的性能和电源管理、更新的 AMD/Intel 驱动，以及内置的实时能力；软件包满载——精选的 4,372 个预装软件应用程序、工具、库和实用程序，从 ZEPHIX 启动那一刻起即可使用；更快的启动——在虚拟化环境中启动时间缩短至约 24 秒，在真实硬件上启动更快；可安装——ZEPHIX 可在需要时安装到磁盘，同时主要设计为快速、便携的 live 系统。”\n\n上述发布公告由项目提供，可从 SourceForge 下载（MD5）\nZEPHIX-live-9-amd64.iso\n\n近期相关新闻和发布\n发行版发布：ZEPHIX 9\n发行版发布：Zephix 8\n发行版发布：Zephix 7\n发行版发布：Zephix 6\n发行版发布：Zephix 5\n\nZEPHIX 是一个基于 Debian 稳定分支的 live Linux 操作系统。它完全从可移动介质运行，不触碰用户系统磁盘上存储的任何文件。Zephix 的目标是提供一个免费的模块化操作系统，用户可以随身携带，并在任何有笔记本电脑或台式机系统的地方使用。默认 ISO 镜像过去不包含任何图形界面，多个桌面模块单独提供；然而，从版本 8 开始，该项目采用 i3 窗口管理器作为唯一的图形用户界面。"
+  },
+  "dc508160a4704584d435db0ce77bd58b": {
+    "id": "dc508160a4704584d435db0ce77bd58b",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/SQLite-3.54-Released",
+    "title_en": "SQLite 3.54 Released With Faster Performance, Drops Windows XP Support",
+    "summary_en": "SQLite 3.54 released today for this wildly popular embedded SQL database engine used by countless applications and other software. With SQLite 3.54, support for Microsoft Windows XP and older is finally removed...",
+    "pub_date": "Fri, 09 Oct 2026 20:41:04 -0400",
+    "title_zh": "SQLite 3.54 发布：性能更快，放弃 Windows XP 支持",
+    "summary_zh": "SQLite 3.54 正式发布，该版本终于移除了对 Windows XP 及更早版本（包括 Windows CE）的支持，仅保留 Windows Vista 及更新版本。Windows 平台上的 Slim Reader/Write Locks 性能得到改进。此外还带来 CLI 提示增强、新 mode 命令选项、查询规划器改进等。根据官方基准测试，在 Linux x64 上性能提升约 4%，比一年前的 SQLite 3.51 快约 7.5%。",
+    "fulltext_zh": "SQLite 3.54 于今日发布，这是被无数应用程序和其他软件广泛使用的超人气嵌入式 SQL 数据库引擎。在 SQLite 3.54 中，对 Microsoft Windows XP 及更早版本的支持终于被移除。\n\nSQLite 3.54 终于不再支持 Windows XP。Windows XP 及更早的 Windows 版本不再受支持，包括 Windows CE。Windows Vista 及更新版本仍被维护。在此过程中，Windows 上的 SQLite 现在对 Slim Reader/Write Locks 有了改进的性能，以及其他有利于更现代 Windows 版本的增强。\n\nSQLite 3.54 还带来了 CLI 提示增强、新的 mode 命令选项、查询规划器改进、在支持的系统上使用 [内容缺失] 生成临时文件的支持等。\n\n总体而言，SQLite 3.54 令人兴奋，根据他们在 Linux x64 上的 Speedtest 性能基准测试，其速度大约快了 4%。SQLite 3.54 也比一年前的 SQLite 3.51 快约 7.5%。\n\n下载及 SQLite 3.54 嵌入式数据库库的更多详情，请访问 [链接缺失]。"
+  },
+  "c7e01561384bcbd9d031d15cd8062d36": {
+    "id": "c7e01561384bcbd9d031d15cd8062d36",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Ubuntu-26.10-RISC-V-Desktop",
+    "title_en": "Ubuntu 26.10 To Include Desktop Images For RISC-V",
+    "summary_en": "Ubuntu Linux ISOs for RISC-V 64-bit to date have just been the server/CLI version without any desktop environment pre-seeded. But with next week's Ubuntu 26.10 release, there will now be Ubuntu 26.10 RISC-V desktop ISOs for both Ubuntu proper and a Xubuntu minimal ISO...",
+    "pub_date": "Fri, 09 Oct 2026 13:59:00 -0400",
+    "title_zh": "Ubuntu 26.10 将包含 RISC-V 桌面镜像",
+    "summary_zh": "Ubuntu 26.10 将首次为 RISC-V 64 位架构提供桌面 ISO 镜像，包括标准 Ubuntu 桌面版和 Xubuntu 最小化版。此前 RISC-V 仅有服务器/命令行版本。该版本将于 10 月 15 日正式发布，测试主要针对符合 RVA23 规范的硬件。在 QEMU 中推荐使用 Xubuntu 版本，因为 GNOME 桌面在模拟环境下加载可能超过 30 分钟。",
+    "fulltext_zh": "Ubuntu 26.10 将包含 RISC-V 桌面镜像\n\n发布于 2026 年 10 月 9 日东部时间下午 1:59。\n\n迄今为止，面向 RISC-V 64 位的 Ubuntu Linux ISO 仅提供服务器/命令行版本，未预置任何桌面环境。但随着下周 Ubuntu 26.10 的发布，将出现 Ubuntu 26.10 RISC-V 桌面 ISO，包括 Ubuntu 正式版和 Xubuntu 最小化版。\n\nValentin Haudiquet 宣布了 Ubuntu 26.10 RISC-V 桌面镜像的相关工作，这些镜像将随 10 月 15 日的正式版本一同提供。其中包括面向 RISC-V 的常规 Ubuntu 桌面镜像，以及一个非官方的 Xubuntu 最小化镜像，采用更轻量的 Xfce 桌面。测试主要集中在符合 RVA23 规范的硬件上。\n\n对于在 QEMU 中进行测试的用户，推荐使用 Xubuntu 版本，以避免极其缓慢的体验：\n\n“Xubuntu 变体的存在有一个实际原因：基于 XFCE 的最小化镜像在模拟环境下要容易管理得多（GNOME 桌面在 QEMU 下可能需要 30 多分钟才能加载）。”\n\n关于 Ubuntu 26.10 这些 RISC-V 桌面镜像的更多细节，可通过以下内容了解：\nUbuntu 26.10 坚持默认使用 GCC 15\nUbuntu 目前正遭受持续 DDoS 攻击\nCanonical 重申 Ubuntu 27.04 默认使用 ntpd-rs 的计划\nUbuntu 的下一个 Rust 努力可能将 OpenPGP 替换为 Sequoia PGP\nUbuntu 26.10 Beta 发布，搭载 Linux 7.3 内核、GNOME 51 桌面\n面向骁龙笔记本电脑的新 Ubuntu 概念 ISO 带来首款 X2 笔记本支持\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、显卡驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nValve 的 Timur Kristóf 在改善 Linux 上老旧 AMD GPU 方面所做的出色工作\n西门子关闭了前景看好的开源 Radioss 项目的大门\nNVIDIA 进行 Wayland 与 X.Org 延迟测试的结果\nMeta 为 Linux 开发压缩内存“CRAM”：优于 ZRAM 和 Zswap\nLinux 7.4 将为 MacBook Neo 引入 Apple M4、A18 Pro 的初始设备树\nLinux 7.3-rc6 发布：新的“AI Normal”成为常态\nAMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0、Linux 7.2\nLinux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2\n\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "d4d9685809ea9fee18360ac38657845f": {
+    "id": "d4d9685809ea9fee18360ac38657845f",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Steam-Play-Proton-11.0-2e",
+    "title_en": "Valve's Proton 11.0-2e Released To Fix EA App Issues",
+    "summary_en": "CodeWeavers working with Valve today released Proton 11.0-2e as their downstream of Wine that powers Steam Play for enjoying Windows games on Linux...",
+    "pub_date": "Fri, 09 Oct 2026 13:56:40 -0400",
+    "title_zh": "Valve 发布 Proton 11.0-2e，修复 EA App 相关问题",
+    "summary_zh": "Valve 与 CodeWeavers 联合发布 Proton 11.0-2e，这是为 Steam Play 提供 Windows 游戏兼容支持的 Wine 下游版本。本次更新主要修复 EA App 在 Steam Play 下的两个问题：Gamescope 下登录窗口无法正确聚焦，以及 EA App 游戏启动画面显示错误。该版本对在 Steam Deck 和 Steam Machines 上运行 EA App 的用户尤为有用。",
+    "fulltext_zh": "Valve 发布 Proton 11.0-2e，修复 EA App 相关问题\n2026 年 10 月 9 日下午 01:56 EDT。\n\nCodeWeavers 与 Valve 合作，今日发布了 Proton 11.0-2e，这是他们基于 Wine 的下游版本，为 Steam Play 提供支持，让用户在 Linux 上畅玩 Windows 游戏。\n\nProton 11.0-2e 版本仅带来少量改动，均与增强 Steam Play 下的 EA App 支持有关。EA App 是 Electronic Arts 的数字发行/游戏管理平台，取代了 Origin。\n\nProton 11.0-2e 列出的唯一改动包括：\n“- 修复了在 Gamescope 下 EA App 启动器登录窗口无法正确聚焦的问题。\n- 修复了 EA App 游戏无法显示正确启动画面图像的问题。”\n\n对于希望在 Steam Deck / Steam Machines 以及其他 Linux 硬件上运行 EA App 的用户来说，这很有用，尤其是 Gamescope 修复。Proton 11.0-2e 的发布资源可通过以下地址找到\n\nSteam 测试版现将非 Steam Windows 二进制文件默认使用 Proton\nSteam 在 Linux 上的份额 9 月降至 3.05%\nValve 为 Steam Frame 上开源 Turnip 驱动程序的注视点渲染所做的工作\nIgalia 改善 Valve Steam Deck 上的 Firefox 体验\n新的 FUTEX 系统调用重新投入开发，以助力 Valve 的 ARM64 游戏雄心\nValve 在测试版中推出 Pyrowave 视频编解码器，用于低延迟流传输\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动程序及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nValve 的 Timur Kristóf 在改善 Linux 上老旧 AMD GPU 方面所做的出色工作\n西门子关上了有前景的开源 Radioss 项目的大门\nNVIDIA 进行 Wayland 与 X.Org 延迟测试的结果\nMeta 为 Linux 开发压缩内存“CRAM”：优于 ZRAM 和 Zswap\nLinux 7.4 将为 MacBook Neo 引入 Apple M4、A18 Pro 的初始设备树\nLinux 7.3-rc6 发布：对新“AI Normal”而言属正常\nAMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0、Linux 7.2\nLinux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2\n\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "2d74d0187c5cfe57b17e005231f519d8": {
+    "id": "2d74d0187c5cfe57b17e005231f519d8",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Python-3.15-Released",
+    "title_en": "Python 3.15 Released With Experimental JIT Compiler Running Faster",
+    "summary_en": "Python 3.15 is out today as the newest annual feature release for the Python programming language...",
+    "pub_date": "Fri, 09 Oct 2026 10:58:00 -0400",
+    "title_zh": "Python 3.15 发布，实验性 JIT 编译器运行更快",
+    "summary_zh": "Python 3.15 正式发布，其实验性 JIT 编译器性能显著提升，在 Linux x86-64 上比标准解释器快 7~8%，在 AArch64 macOS 上比尾调用解释器快 11~12%。该版本还引入了 sentinel 内置类型、默认 UTF-8 编码、显式惰性导入、新的 frozendict 内置类型和包启动配置文件，并改进了错误消息、标准库和 C API，默认启用帧指针以提升系统级可观测性。",
+    "fulltext_zh": "Python 3.15 于今日发布，这是 Python 编程语言最新的年度功能版本。\n\nPython 的 JIT 编译器仍处于实验阶段，但在 Python 3.15 中它已经快了很多。在 Linux x86-64 上，JIT 编译器比 Python 的标准解释器几何平均快 7~8%。在 AArch64 macOS 上，据称 JIT 编译器比尾调用解释器快 11~12%。\n\nPython 3.15 还引入了 sentinel 内置类型，UTF-8 成为 Python 3.15 的默认编码，显式惰性导入可加快 Python 脚本启动时间，新增了 \"frozendict\" 内置类型，以及包启动配置文件。\n\nPython 3.15 还受益于改进的错误消息、标准库增强和 C API 改进。Python 3.15 还默认启用帧指针，以提升系统级可观测性。\n\n今日 Python 3.15 版本的下载和更多详细信息请访问"
+  },
+  "d3472b718289e6ac7e36ba020934b5c1": {
+    "id": "d3472b718289e6ac7e36ba020934b5c1",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/amd-perfopt-prior-gen",
+    "title_en": "AMD PerfOpt Boosting Prior-Gen Ryzen APU Performance For AI",
+    "summary_en": "Last week I ran benchmarks of the new AMD PerfOpt feature being introduced in Linux 7.4. In those PerfOpt benchmarks on current-gen AMD Ryzen AI APUs/SoCs the AI performance improved as much as 18~23%. Several Phoronix readers expressed interest in seeing how prior-gen AMD Ryzen hardware benefited or not from PerfOpt, so here are some additional benchmarks.",
+    "pub_date": "Fri, 09 Oct 2026 10:38:27 -0400",
+    "title_zh": "AMD PerfOpt 提升前代 Ryzen APU 的 AI 性能",
+    "summary_zh": "AMD 在 Linux 7.4 中引入的 PerfOpt 功能可让集成显卡绕过 IOMMU 直接访问系统内存，从而降低开销。此前测试显示，在当前代 Ryzen AI APU 上 AI 性能提升达 18~23%。本文针对前代硬件进行补充测试，使用搭载 Ryzen 7 PRO 7840U 和 Radeon 780M 的 ThinkPad P14s Gen 4，在 Ubuntu 26.04 LTS 上验证 PerfOpt 同样能为旧平台带来性能提升。",
+    "fulltext_zh": "AMD PerfOpt 提升前代 Ryzen APU 的 AI 性能 - Phoronix\n\nAMD PerfOpt 提升前代 Ryzen APU 的 AI 性能\n发布于 2026 年 10 月 9 日 EDT 上午 10:38。\n\n上周我针对 Linux 7.4 中引入的新 AMD PerfOpt 功能进行了基准测试。在那些针对当前代 AMD Ryzen AI APU/SoC 的 PerfOpt 测试中，AI 性能提升高达 18~23%。几位 Phoronix 读者表示有兴趣了解前代 AMD Ryzen 硬件是否能从 PerfOpt 中受益，因此这里提供一些额外的基准测试。\n\n这项 AMD IOMMU 性能优化功能允许 AMD 集成显卡在直接访问系统内存时绕过 IOMMU，以避免相关开销。在 Linux 7.4 中，当使用 Radeon 集成显卡时，PerfOpt 功能将默认启用。\n\n对于那些好奇 AMD PerfOpt 在前代硬件上如何工作的人，我拿出了一台较旧的联想 ThinkPad P14s Gen 4 笔记本电脑，搭载 AMD Ryzen 7 PRO 7840U 和 Radeon 780M 集成显卡。Radeon 780M 仍然相当常见，这款 Zen 4 笔记本 SoC 在 2026 年依然相当强劲。正如这些基准测试将展示的，借助 PerfOpt，那些仍在使用这类硬件的用户现在有了额外的性能潜力。\n\n这台 ThinkPad P14s G4 上的基准测试是在 Ubuntu 26.04 LTS 上完成的，使用的是基于 IOMMU next Git 树构建的内核，该内核早于本月晚些时候开放的 Linux 7.4 合并窗口。测试期间除了切换 PerfOpt 功能外，系统没有做其他更改。\n\n接近 10 秒的 Linux 内核构建\n\n对 JDK 8 至 OpenJDK 27 的 Java 性能进行基准测试\n\nAMD EPYC 服务器性能在 2026 年凭借 Linux 内核改进几何平均提升约 8%\n\nLinux 7.3 在 Intel Panther Lake / Framework Laptop 13 Pro 上带来一些性能提升\n\nAMD EPYC 在 Linux 7.3 上的早期基准测试显示性能提升即将到来\n\nLinux 7.3 包含许多令人兴奋的改进、新硬件支持以及更快的 Btrfs\n\n同时享受无广告浏览，\n单页文章查看\n\n法律免责声明、隐私政策、Cookie\n\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "9a1c87e6ef8922a66f4c072d59a2f99c": {
+    "id": "9a1c87e6ef8922a66f4c072d59a2f99c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/tails-7-14-anonymous-os-updates-tor-browser-tor-client-and-linux-kernel/",
+    "title_en": "Tails 7.14 Anonymous OS Updates Tor Browser, Tor Client, and Linux Kernel",
+    "summary_en": "Tails 7.14 updates Tor Browser, the Tor client, and Linux kernel, delivering security improvements and fixes for the privacy-focused operating system.\nThe post Tails 7.14 Anonymous OS Updates Tor Browser, Tor Client, and Linux Kernel appeared first on Linux Today.",
+    "pub_date": "Fri, 09 Oct 2026 07:24:12 +0000",
+    "title_zh": "Tails 7.14 匿名操作系统更新 Tor 浏览器、Tor 客户端和 Linux 内核",
+    "summary_zh": "Tails 7.14 版本发布，为这个注重隐私的操作系统更新了 Tor 浏览器、Tor 客户端和 Linux 内核，带来了安全改进和修复。",
+    "fulltext_zh": "Tails 7.14 更新了 Tor 浏览器、Tor 客户端和 Linux 内核，为这个注重隐私的操作系统带来了安全改进和修复。\n\n文章《Tails 7.14 匿名操作系统更新 Tor 浏览器、Tor 客户端和 Linux 内核》首次发布于 Linux Today。"
+  },
+  "e9d980c9c800b19d0defee5e3468caa6": {
+    "id": "e9d980c9c800b19d0defee5e3468caa6",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/owasp-noir-open-source-static-analysis-tool/",
+    "title_en": "OWASP Noir: Open-source Static Analysis Tool",
+    "summary_en": "Explore OWASP Noir, an open-source static analysis tool that discovers API endpoints in source code to support security testing and attack surface analysis.\nThe post OWASP Noir: Open-source Static Analysis Tool appeared first on Linux Today.",
+    "pub_date": "Fri, 09 Oct 2026 07:20:59 +0000",
+    "title_zh": "OWASP Noir：开源静态分析工具",
+    "summary_zh": "OWASP Noir 是一款开源静态分析工具，能够从源代码中发现 API 端点，从而支持安全测试和攻击面分析。该工具帮助安全人员识别应用程序的接口暴露情况，提升安全评估效率。",
+    "fulltext_zh": "探索 OWASP Noir，一款开源静态分析工具，可从源代码中发现 API 端点，以支持安全测试和攻击面分析。\n\n文章《OWASP Noir：开源静态分析工具》首次发布于 Linux Today。"
+  },
+  "4f36b93719c7ced979f8b8454a51dffa": {
+    "id": "4f36b93719c7ced979f8b8454a51dffa",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/microsoft-brings-native-linux-container-workflows-to-wsl/",
+    "title_en": "Microsoft Brings Native Linux Container Workflows to WSL",
+    "summary_en": "Microsoft adds native Linux container workflows to WSL, enabling developers to build, run, and manage containers on Windows without third-party tools.\nThe post Microsoft Brings Native Linux Container Workflows to WSL appeared first on Linux Today.",
+    "pub_date": "Fri, 09 Oct 2026 07:17:56 +0000",
+    "title_zh": "微软为 WSL 带来原生 Linux 容器工作流",
+    "summary_zh": "微软在 WSL 中新增原生 Linux 容器工作流，开发者现在可以直接在 Windows 上构建、运行和管理容器，无需依赖第三方工具。此举简化了跨平台开发流程，提升了 WSL 作为开发环境的实用性。",
+    "fulltext_zh": "微软为 WSL 添加了原生 Linux 容器工作流，使开发者能够在 Windows 上构建、运行和管理容器，而无需第三方工具。\n\n这篇文章《微软为 WSL 带来原生 Linux 容器工作流》最初发布于 Linux Today。"
+  },
+  "8c08fe0aa3e7f1736bc148dcad16c7c7": {
+    "id": "8c08fe0aa3e7f1736bc148dcad16c7c7",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/archinstall-4-5-arch-linux-installer-adds-aarch64-support-for-grub-and-limine/",
+    "title_en": "Archinstall 4.5 Arch Linux Installer Adds AArch64 Support for GRUB and Limine",
+    "summary_en": "Archinstall 4.5 expands Arch Linux installation support with AArch64 compatibility for GRUB and Limine bootloaders, plus installer improvements.\nThe post Archinstall 4.5 Arch Linux Installer Adds AArch64 Support for GRUB and Limine appeared first on Linux Today.",
+    "pub_date": "Fri, 09 Oct 2026 07:15:35 +0000",
+    "title_zh": "Archinstall 4.5 Arch Linux 安装器为 GRUB 和 Limine 添加 AArch64 支持",
+    "summary_zh": "Archinstall 4.5 版本发布，为 Arch Linux 安装器带来了对 AArch64 架构下 GRUB 和 Limine 引导加载程序的支持，同时包含多项安装器改进。",
+    "fulltext_zh": "Archinstall 4.5 扩展了 Arch Linux 安装支持，为 GRUB 和 Limine 引导加载程序增加了 AArch64 兼容性，并带来了安装器改进。\n\n这篇文章最初发布于 Linux Today。"
+  },
+  "4824592ee3f573bbadb4fa6760a7d01c": {
+    "id": "4824592ee3f573bbadb4fa6760a7d01c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/ubuntu-26-10-release-date-every-new-feature/",
+    "title_en": "Ubuntu 26.10: Release Date & Every New Feature",
+    "summary_en": "Explore Ubuntu 26.10's October 15 release date, GNOME 51, Linux kernel 7.3, Rust-based core utilities, security upgrades, and other new features.\nThe post Ubuntu 26.10: Release Date &amp; Every New Feature appeared first on Linux Today.",
+    "pub_date": "Fri, 09 Oct 2026 07:12:21 +0000",
+    "title_zh": "Ubuntu 26.10：发布日期及所有新功能",
+    "summary_zh": "Ubuntu 26.10 定于10月15日发布，将搭载 GNOME 51 桌面环境、Linux 7.3 内核，并引入基于 Rust 的核心工具集，同时带来安全升级及其他新特性。",
+    "fulltext_zh": "探索 Ubuntu 26.10 的10月15日发布日期、GNOME 51、Linux 7.3 内核、基于 Rust 的核心工具、安全升级以及其他新功能。\n\n文章《Ubuntu 26.10：发布日期及所有新功能》首次发布于 Linux Today。"
   }
 }
