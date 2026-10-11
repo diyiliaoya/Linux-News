@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot; — Linux 中文速报</title>
+<title>Linux 网络子系统将 50 多项修复推迟至下一内核，仍受 AI 驱动的变更洪流冲击 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</h1>
+  <h1>Linux 网络子系统将 50 多项修复推迟至下一内核，仍受 AI 驱动的变更洪流冲击</h1>
 
-  <div class="article-summary">Besgnulinux 团队发布了基于 Debian 的新版本 1.0，采用 Openbox 窗口管理器。开发者表示，Openbox 版本最初仅为测试目的而创建，但因系统表现出色而决定适配为通用版本，为用户提供 JWM 之外的第二选择。由于 Openbox 本身不包含独立运行所需的内置组件，团队通过多种工具和自定义配置构建了该系统，并最终选择 Tint2 作为面板。</div>
+  <div class="article-summary">在 Linux 7.3-rc7 发布前，网络子系统维护者将 50 多项修复推迟到 Linux 7.4，因为 AI/LLM 驱动的补丁和错误报告持续激增，导致维护者不堪重负。尽管已要求各子树大幅精简提交，本周的拉取请求规模依然庞大，包含以太网驱动回归修复、联发科 MT76 WiFi 驱动修复等。</div>
 
-  <div class="article-body"><p>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</p><p>Besgnulinux 团队宣布发布其基于 Debian 的 Linux 发行版的新版本——1.0，该版本采用 Openbox 窗口管理器：“我已经很久没有测试 Openbox 了。我最初创建这个版本是出于测试目的。然而，当它变成一个如此出色的系统后，我认为将其适配为通用用途并分享出来是个好主意。拥有另一个窗口管理器作为 JWM 的替代方案，为用户提供了第二种选择。让 Openbox 达到当前状态确实需要大量努力。毕竟，Openbox 本身并不附带可作为独立系统运行的内置组件；它是通过多种工具和自定义配置构建而成的。然而，只要配置得当，它就能成为一个极好的系统。这正是窗口管理器的美妙之处——它们允许用户根据自己的喜好定制体验。这个版本正是源于这种欣赏。Openbox 1.0 版本做了哪些工作？在尝试了各种面板之后，我决定 Tint2 最适合 Openbox。”</p><p>阅读余下内容以获取更多信息和截图。</p><p>besgnulinux-openbox-1.0.iso</p><p>近期相关新闻与发布</p><p>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</p><p>发行版发布：Besgnulinux 4-0</p><p>发行版发布：Besgnulinux 3-2</p><p>发行版发布：Besgnulinux 3-1</p><p>发行版发布：Besgnulinux 3-0</p><p>更多 Besgnulinux 新闻……</p><p>Besgnulinux 是一个基于 Debian“稳定”分支的轻量级桌面 Linux 发行版。它使用 JWM 窗口管理器，设计目标是快速、轻量且易于使用，适合老旧和低配置的计算机。Besgnulinux 附带 Calamares 系统安装程序、Brave 网页浏览器，以及 40 多个自定义构建的工具，用于控制系统设置以及桌面的外观和体验。</p><p>https://besgnulinux.blogspot.com/</p></div>
+  <div class="article-body"><p>在定于周日发布的 Linux 7.3-rc7 内核之前，本周的一批网络修复已提交并合并。有线和无线驱动以及各种其他网络功能组成的庞大网络子系统，由于 AI 驱动的错误报告和补丁，继续呈现出大量活动。</p><p>由于 Linux 7.3 周期已进入后期，且 AI/LLM 驱动的世界仍带来大量补丁活动，一些网络修复开始被推迟到 Linux 7.4。因此，那些并非特别紧迫的修复开始被排入 net-next，而不是匆忙塞进 Linux 7.3。Linux 网络维护者此前已经表示，他们被所有的 AI 活动“彻底淹没”。他们还一直面临着 AI 垃圾补丁带来的挑战。</p><p>在本周的网络拉取请求中，有人指出他们现在已将 50 多个补丁转移到 net-next 以供 Linux 7.4 使用，而不是硬塞进 Linux 7.3。然而，本周为 7.3-rc7 提交的内容仍然是一个巨大的拉取请求。Jakub Kicinski 评论道：“很确定你不会对这个 PR 的规模感到满意，但这是在我们削减了 50 个修复到 net-next 并要求各子树大幅精简其 PR 之后的结果。情况就是这样。”</p><p>在明天发布的 Linux 7.3-rc7 中，可以找到各种以太网驱动回归修复、联发科 MT76 WiFi 驱动修复，以及各种其他“类似 LLM”的修复。</p><p>KNOD 在 Linux 内核内 GPU 网络数据包处理卸载方面取得进展</p><p>部分网络修复被转移到 Linux 7.4，AI/LLM 活动仍在增加</p><p>Nebula Matrix 网络驱动在 Linux 7.4 之前排队</p><p>Linux 7.4 将支持 Realtek RTL8127atf 和 RTL8116af 网络</p><p>NetworkManager 通过诱骗 AI 代理添加金丝雀来执行 AI 政策</p><p>Linux ath11k 驱动对高通 WiFi 6 硬件的改进使延迟降低 7 倍</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Valve 的 Timur Kristóf 在 Linux 上改进旧款 AMD GPU 的出色工作</p><p>NVIDIA 进行 Wayland 与 X.Org 延迟测试的结果</p><p>Meta 为 Linux 开发压缩 RAM“CRAM”：优于 ZRAM 和 Zswap</p><p>Linux 7.4 将为 MacBook Neo 引入 Apple M4、A18 Pro 的初始设备树</p><p>AI 用 Rust 实现 Adobe Photoshop 和 Premier 的“开源、洁净室”版本</p><p>Linux 7.3-rc6 发布：新“AI 常态”下的正常情况</p><p>AMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0、Linux 7.2</p><p>Linux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2</p><p>同时享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12974" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.3-rc7-Networking" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

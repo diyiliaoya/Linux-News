@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot; — Linux 中文速报</title>
+<title>KDE Plasma 6.8 准备下周发布，迎来最后一刻的 NVIDIA 修复 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -149,17 +149,17 @@
 
   <div class="article-meta">
     <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</h1>
+  <h1>KDE Plasma 6.8 准备下周发布，迎来最后一刻的 NVIDIA 修复</h1>
 
-  <div class="article-summary">Besgnulinux 团队发布了基于 Debian 的新版本 1.0，采用 Openbox 窗口管理器。开发者表示，Openbox 版本最初仅为测试目的而创建，但因系统表现出色而决定适配为通用版本，为用户提供 JWM 之外的第二选择。由于 Openbox 本身不包含独立运行所需的内置组件，团队通过多种工具和自定义配置构建了该系统，并最终选择 Tint2 作为面板。</div>
+  <div class="article-summary">KDE Plasma 6.8 将于下周正式发布，恰逢 KDE 项目成立 30 周年。本次更新包含多项最后时刻的修复，如 KRunner 方向键导航改进、Discover 对 Flatpak 自动更新更可靠，以及针对使用专有驱动的 NVIDIA GPU 在平铺窗口时卡顿问题的修复。此外，KDE Frameworks 6.32 修复了模糊效果下工具提示消失导致崩溃的问题，Plasma 6.9 则带来设置调整和虚拟桌面缩略图优化。</div>
 
-  <div class="article-body"><p>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</p><p>Besgnulinux 团队宣布发布其基于 Debian 的 Linux 发行版的新版本——1.0，该版本采用 Openbox 窗口管理器：“我已经很久没有测试 Openbox 了。我最初创建这个版本是出于测试目的。然而，当它变成一个如此出色的系统后，我认为将其适配为通用用途并分享出来是个好主意。拥有另一个窗口管理器作为 JWM 的替代方案，为用户提供了第二种选择。让 Openbox 达到当前状态确实需要大量努力。毕竟，Openbox 本身并不附带可作为独立系统运行的内置组件；它是通过多种工具和自定义配置构建而成的。然而，只要配置得当，它就能成为一个极好的系统。这正是窗口管理器的美妙之处——它们允许用户根据自己的喜好定制体验。这个版本正是源于这种欣赏。Openbox 1.0 版本做了哪些工作？在尝试了各种面板之后，我决定 Tint2 最适合 Openbox。”</p><p>阅读余下内容以获取更多信息和截图。</p><p>besgnulinux-openbox-1.0.iso</p><p>近期相关新闻与发布</p><p>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</p><p>发行版发布：Besgnulinux 4-0</p><p>发行版发布：Besgnulinux 3-2</p><p>发行版发布：Besgnulinux 3-1</p><p>发行版发布：Besgnulinux 3-0</p><p>更多 Besgnulinux 新闻……</p><p>Besgnulinux 是一个基于 Debian“稳定”分支的轻量级桌面 Linux 发行版。它使用 JWM 窗口管理器，设计目标是快速、轻量且易于使用，适合老旧和低配置的计算机。Besgnulinux 附带 Calamares 系统安装程序、Brave 网页浏览器，以及 40 多个自定义构建的工具，用于控制系统设置以及桌面的外观和体验。</p><p>https://besgnulinux.blogspot.com/</p></div>
+  <div class="article-body"><p>KDE Plasma 6.8 准备下周发布，迎来最后一刻的 NVIDIA 修复</p><p>2026年10月10日 06:00 EDT。</p><p>KDE Plasma 6.8 正准备在下周正式亮相，恰逢 KDE 项目启动 30 周年。</p><p>最新一期的《This Week in Plasma》总结了在下周稳定版发布前的所有有趣进展——修复。Plasma 6.8 的最后时刻变更包括：改进了 KRunner 中方向键的键盘导航。Discover 自动应用更新的功能现在对 Flatpak 应用始终能正确工作，以及其他一些小修复。</p><p>Plasma 6.8 还针对一个问题进行了最后一刻的修复：在使用专有驱动栈的某些 NVIDIA GPU 上平铺窗口时，可能会导致延迟和卡顿。修复方法是让 Qt 使用单一的持久 OpenGL 上下文，避免每次打开 Qt Quick 效果时重新创建上下文，因为这会短暂阻塞主线程。该 NVIDIA 问题影响了所有近期 Plasma 版本。此修复也与 2024 年初的这个错误报告相关。</p><p>与此同时，KDE Frameworks 6.32 修复了一个问题：使用模糊效果的基于 Qt 的应用，在用户打字时工具提示消失可能导致崩溃。</p><p>对于 Plasma 6.9，有一些设置调整。Plasma 6.9 还使 KWin 概览效果中的虚拟桌面缩略图更加“和谐且视觉愉悦”。此外，Plasma 6.9 允许控制初始登录后连接的外接背光键盘的亮度。</p><p>有关下周 Plasma 6.9.0 稳定版发布前 KDE Plasma 变更的更多细节，可通过以下链接查看：</p><p>KDE Plasma 6.8 现在让平铺窗口更整齐地拼合</p><p>KDE 即将就基于 BuildStream 的 KDE Linux 做出决定</p><p>KDE Plasma 6.8 继续最后一刻的调整与修复</p><p>KDE Plasma 6.8 Beta 2 发布，Union 主题引擎日趋成熟</p><p>KDE 将专注于下一代样式、更好的文档及企业级 KDE</p><p>KDE Plasma 6.8 迎来更多打磨与修复，Plasma 6.9 开始有更多活动</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Valve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面的出色工作</p><p>NVIDIA 进行 Wayland 与 X.Org 延迟测试的结果</p><p>Meta 为 Linux 开发压缩内存“CRAM”：优于 ZRAM 和 Zswap</p><p>Linux 7.4 将为 Apple M4、A18 Pro 引入初始设备树，用于 MacBook Neo</p><p>AI 用 Rust 实现 Adobe Photoshop 和 Premier 的“开源、洁净室”版本</p><p>Linux 7.3-rc6 发布：新的“AI Normal”成为常态</p><p>AMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0、Linux 7.2</p><p>Linux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2</p><p>同时享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12974" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/KDE-Plasma-6.8-Next-Week" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>

@@ -14727,5 +14727,60 @@
     "title_zh": "Ubuntu 26.10：发布日期及所有新功能",
     "summary_zh": "Ubuntu 26.10 定于10月15日发布，将搭载 GNOME 51 桌面环境、Linux 7.3 内核，并引入基于 Rust 的核心工具集，同时带来安全升级及其他新特性。",
     "fulltext_zh": "探索 Ubuntu 26.10 的10月15日发布日期、GNOME 51、Linux 7.3 内核、基于 Rust 的核心工具、安全升级以及其他新功能。\n\n文章《Ubuntu 26.10：发布日期及所有新功能》首次发布于 Linux Today。"
+  },
+  "3d95fc27d7c8af72bd1f8ca82ca7bf04": {
+    "id": "3d95fc27d7c8af72bd1f8ca82ca7bf04",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Rolling-Releases-GenAI-Era",
+    "title_en": "Rolling Release Distros Superior To LTS Distros In The Patch-Heavy GenAI Era?",
+    "summary_en": "As some interesting food for thought and weekend forum discussions, this week at the Linux Plumbers Conference in Prague, Qualcomm engineer Khem Raj questioned the relevance of Linux Long Term Support (LTS) distributions in the era of generative AI with the constantly heavy patch flow and bug reports. Khem Raj argued the benefits of rolling release distributions in the GenAI era and the benefits it provides staying up-to-date with mainline...",
+    "pub_date": "Sat, 10 Oct 2026 11:27:12 -0400",
+    "title_zh": "在补丁密集的 GenAI 时代，滚动更新发行版优于 LTS 发行版？",
+    "summary_zh": "在布拉格 Linux Plumbers 大会上，高通工程师 Khem Raj 提出，在生成式 AI 带来大量补丁流的时代，Linux 长期支持（LTS）发行版的相关性值得质疑。他认为滚动更新发行版可减少向后移植补丁的需求、缩小与上游的差异并加快安全修复，但也面临认证与资质方面的挑战。",
+    "fulltext_zh": "在补丁密集的 GenAI 时代，滚动更新发行版优于 LTS 发行版？\n\n2026 年 10 月 10 日 上午 11:27 EDT。\n\n作为一些有趣的思考素材和周末论坛讨论话题，本周在布拉格举行的 Linux Plumbers 大会上，高通工程师 Khem Raj 质疑了在生成式 AI 时代、补丁流和错误报告持续繁重的情况下，Linux 长期支持（LTS）发行版的相关性。Khem Raj 论证了在 GenAI 时代滚动更新发行版的优势，以及它保持与主线同步所带来的好处。\n\n随着 AI 编码代理持续提高向 Linux 内核及周边开源项目提交补丁的速度，这不仅给开源维护者带来越来越大的负担，也给需要将补丁向后移植到各自内核树等的发行版厂商带来沉重压力。所有这些补丁负担正在从 CI/CD 到发布管理各个环节造成瓶颈。\n\nRaj 论证了滚动更新发行版的优势：更不需要向后移植所有这些补丁、与上游保持更小的差异、更快的安全修复等等。当然，滚动更新模式在认证和资质认定等方面也带来了挑战。\n\n该演讲确实提出了一些有道理的观点，即随着补丁向后移植和测试负担增加，Linux 发行版厂商维护 LTS 版本的下游负担也在加重。LTS 发行版将如何随时间演变，以及滚动更新是否会变得更容易被大型企业组织接受，这将值得关注。\n\n想要查看全部材料的人可以通过\nLPC 演讲页面\n进行了解。\n\nTrueNAS 27 RC.1 发布：Linux 6.18 LTS + OpenZFS 2.4\nOpenMandriva ROME 26.09 发布，带来更多 AI 应用、Snaps 以及 PGO + LTO 优化\nRedox OS 增加类 IO_uring API、NUMA，并让 QEMU 可运行\nReactOS 从 Wine 引入重大 DirectX 栈更新，以支持更多游戏\nAlmaLinux 推出新的软件/硬件认证门户，可自行认证应用\n阿里巴巴向 Omarchy 捐赠 300 万美元，用于打造“理想”的代理式操作系统\nMichael Larabel 是 Phoronix.com 的主要作者，并于 2004 年创办该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\nValve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面所做的出色工作\nNVIDIA 进行 Wayland 与 X.Org 延迟测试的结果\nMeta 为 Linux 开发压缩 RAM“CRAM”：优于 ZRAM 和 Zswap\nLinux 7.4 将为 MacBook Neo 引入 Apple M4、A18 Pro 的初始设备树\nAI 用 Rust 实现 Adobe Photoshop 和 Premier 的“开源、净室”版本\nLinux 7.3-rc6 发布：对新“AI 常态”而言属正常\nAMD Ryzen AI 开发者平台操作系统更新，加入 ROCm 10.0、Linux 7.2\nLinux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2\n同时享受无广告浏览、\n单页文章视图\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "e7b6a2239658eb99d9f2741515466de1": {
+    "id": "e7b6a2239658eb99d9f2741515466de1",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-Laptops-Handhelds",
+    "title_en": "Many Laptop & Gaming Handheld Support Improvements Coming For Linux 7.4",
+    "summary_en": "Many x86 platform driver improvements have been queuing ahead of the upcoming Linux 7.4 merge window to offer a variety of laptop and gaming handheld device improvements with this next kernel version...",
+    "pub_date": "Sat, 10 Oct 2026 09:40:51 -0400",
+    "title_zh": "Linux 7.4 将带来大量笔记本电脑与游戏掌机支持改进",
+    "summary_zh": "Linux 7.4 内核即将进入合并窗口，x86 平台驱动已积累大量针对笔记本电脑和游戏掌机的改进。包括华硕 ROG Flow X13 平板模式、华硕 ProArt 独显切换、微星 Katana 15 电池阈值、惠普 OMEN 17 热配置、TUXEDO 键盘背光、宏碁 Nitro ANV15-51 风扇控制、OneXPlayer 3 电池旁路以及 AYANEO 2S 充电控制等。稳定版预计 12 月底发布。",
+    "fulltext_zh": "大量 x86 平台驱动改进已在即将到来的 Linux 7.4 合并窗口前排队，旨在为下一个内核版本带来各种笔记本电脑和游戏掌机设备改进。\n\n近期，x86 平台驱动中积累了许多设备怪癖（quirk）和其他支持改进。即将在 Linux 7.4 中亮相的部分改进包括：\n\n- ASUS-NB-WMI 驱动为 2023 款华硕 ROG Flow X13（GV302X*）添加了平板模式怪癖，以便在 Linux 上正确地从笔记本模式转换到平板模式或反向转换。\n- 华硕 Armoury 驱动为较新的华硕笔记本（如 ProArt 系列，例如 H7606 系列）启用/禁用独立 GPU 增加了新的回退方案。\n- MSI EC 驱动在其较新固件上添加了 MSI Katana 15 B13VFK，以支持电池充电阈值控制。MSI GL65 Leopard 9SCXK 也获得了类似支持。\n- HP WMI 驱动为 HP OMEN 17-ck1xxx（主板 8A17）添加了热配置支持。\n- HP Victus 15-fb3xxx（主板 ID：8DD0）也新近获得 HP WMI 驱动支持。\n- Uniwill 笔记本驱动为 TUXEDO Computers 笔记本启用了键盘背光和灯条控制支持。\n- Acer WMI 驱动为 Acer Nitro ANV15-51 添加了热配置处理、硬件监控和风扇控制支持。\n- 面向 OneXPlayer 硬件的 OXPEC 驱动为新的英特尔平台 OneXPlayer 3 添加了一个怪癖，以支持电池旁路、容量限制、风扇曲线、风扇转速计、涡轮按钮覆盖及相关功能。\n- AYANEO EC 驱动为 AYANEO 2S 添加了电池充电控制支持。\n\nLinux 7.4 合并窗口将于本月晚些时候开启，而稳定的 v7.4 内核预计将在 12 月底左右发布。"
+  },
+  "43bf8a1115037cdfaddab607e31449ed": {
+    "id": "43bf8a1115037cdfaddab607e31449ed",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/KNOD-2026-GPU-Network-Process",
+    "title_en": "KNOD Progressing For Linux In-Kernel GPU Offloading For Network Packet Processing",
+    "summary_en": "A while back we covered KNOD as an experimental solution for in-kernel network offloading to AMD GPUs. The open-source KNOD project allows leveraging GPUs to handle packet processing in a very performant and energy efficient manner without needing any specialized hardware. KNOD has continued and a development update was shared this week at the Linux Plumbers Conference in Prague...",
+    "pub_date": "Sat, 10 Oct 2026 06:25:00 -0400",
+    "title_zh": "KNOD 在 Linux 内核 GPU 网络数据包处理卸载方面取得进展",
+    "summary_zh": "KNOD 是一个开源项目，旨在利用 GPU 进行内核网络数据包处理卸载。该项目通过将 XDP 程序 JIT 编译为 GPU 机器码，让网卡将数据包直接放入 GPU 可访问内存并由 GPU 处理，在消费级 GPU 上实现了每秒 7000 万包和 80 Gbit/s 的 RX IPsec 性能。在 2026 年 Linux Plumbers 大会上，开发者分享了最新进展，并计划扩展对 Intel Arc 显卡、AMD 集成显卡以及 Broadcom 和 Intel 网卡的支持。",
+    "fulltext_zh": "此前我们曾报道过 KNOD，这是一种将内核网络卸载到 AMD GPU 的实验性解决方案。这个开源的 KNOD 项目允许利用 GPU 以非常高性能且节能的方式处理数据包，而无需任何专用硬件。KNOD 一直在持续发展，本周在布拉格举行的 Linux Plumbers 大会上分享了开发进展。\n\nKNOD 继续展现出巨大的潜力，可以将 GPU 用作内核管理的网络数据包处理加速器。KNOD 会将 XDP 程序 JIT 编译为 GPU 机器码，网络适配器将数据包直接放入 GPU 可访问的内存，然后由 GPU 进行处理。最近除了最初的 XDP 程序外，还增加了 RX IPsec 功能。在消费级 GPU 硬件上，KNOD 已证明其性能可达 XDP 工作负载每秒 7000 万包，RX IPsec 达 80 Gbit/s。\n\nKNOD 背后的开发者发现，它不仅非常具有成本效益，而且比仅使用 CPU 进行数据包处理更加节能。\n\n虽然迄今为止 AMD GPU 一直是他们的主要目标，但在 LPC 2026 上提到，他们还将探索对 Intel Arc 显卡的支持，并且 KNOD 也将适用于 Broadcom 和 Intel 网卡。此外，还将探索 AMD 集成显卡，而不仅仅是独立 GPU。\n\n希望了解更多关于 KNOD 这一有趣概念的人，可以通过 LPC 演示材料进行了解。"
+  },
+  "ef0ec0d5039c696b495cf74fe44e6a4b": {
+    "id": "ef0ec0d5039c696b495cf74fe44e6a4b",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.3-rc7-Networking",
+    "title_en": "Linux Networking Diverts 50+ Fixes To Next Kernel, Still Bombarded With AI Fueled Churn",
+    "summary_en": "Ahead of the Linux 7.3-rc7 kernel due for release on Sunday, this week's batch of networking fixes were submitted and merged. The vast networking subsystem of wired and wireless drivers plus the various other networking features continues to see a lot of activity due to AI-driven bug reports and patches...",
+    "pub_date": "Sat, 10 Oct 2026 06:11:36 -0400",
+    "title_zh": "Linux 网络子系统将 50 多项修复推迟至下一内核，仍受 AI 驱动的变更洪流冲击",
+    "summary_zh": "在 Linux 7.3-rc7 发布前，网络子系统维护者将 50 多项修复推迟到 Linux 7.4，因为 AI/LLM 驱动的补丁和错误报告持续激增，导致维护者不堪重负。尽管已要求各子树大幅精简提交，本周的拉取请求规模依然庞大，包含以太网驱动回归修复、联发科 MT76 WiFi 驱动修复等。",
+    "fulltext_zh": "在定于周日发布的 Linux 7.3-rc7 内核之前，本周的一批网络修复已提交并合并。有线和无线驱动以及各种其他网络功能组成的庞大网络子系统，由于 AI 驱动的错误报告和补丁，继续呈现出大量活动。\n\n由于 Linux 7.3 周期已进入后期，且 AI/LLM 驱动的世界仍带来大量补丁活动，一些网络修复开始被推迟到 Linux 7.4。因此，那些并非特别紧迫的修复开始被排入 net-next，而不是匆忙塞进 Linux 7.3。Linux 网络维护者此前已经表示，他们被所有的 AI 活动“彻底淹没”。他们还一直面临着 AI 垃圾补丁带来的挑战。\n\n在本周的网络拉取请求中，有人指出他们现在已将 50 多个补丁转移到 net-next 以供 Linux 7.4 使用，而不是硬塞进 Linux 7.3。然而，本周为 7.3-rc7 提交的内容仍然是一个巨大的拉取请求。Jakub Kicinski 评论道：“很确定你不会对这个 PR 的规模感到满意，但这是在我们削减了 50 个修复到 net-next 并要求各子树大幅精简其 PR 之后的结果。情况就是这样。”\n\n在明天发布的 Linux 7.3-rc7 中，可以找到各种以太网驱动回归修复、联发科 MT76 WiFi 驱动修复，以及各种其他“类似 LLM”的修复。\n\nKNOD 在 Linux 内核内 GPU 网络数据包处理卸载方面取得进展\n部分网络修复被转移到 Linux 7.4，AI/LLM 活动仍在增加\nNebula Matrix 网络驱动在 Linux 7.4 之前排队\nLinux 7.4 将支持 Realtek RTL8127atf 和 RTL8116af 网络\nNetworkManager 通过诱骗 AI 代理添加金丝雀来执行 AI 政策\nLinux ath11k 驱动对高通 WiFi 6 硬件的改进使延迟降低 7 倍\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nValve 的 Timur Kristóf 在 Linux 上改进旧款 AMD GPU 的出色工作\nNVIDIA 进行 Wayland 与 X.Org 延迟测试的结果\nMeta 为 Linux 开发压缩 RAM“CRAM”：优于 ZRAM 和 Zswap\nLinux 7.4 将为 MacBook Neo 引入 Apple M4、A18 Pro 的初始设备树\nAI 用 Rust 实现 Adobe Photoshop 和 Premier 的“开源、洁净室”版本\nLinux 7.3-rc6 发布：新“AI 常态”下的正常情况\nAMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0、Linux 7.2\nLinux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2\n\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "5d12ce828d34dfe1d58710e9351842f7": {
+    "id": "5d12ce828d34dfe1d58710e9351842f7",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/KDE-Plasma-6.8-Next-Week",
+    "title_en": "KDE Plasma 6.8 Ready For Release Next Week, Sees Last Minute NVIDIA Fix",
+    "summary_en": "KDE Plasma 6.8 is gearing up for its official debut next week in coinciding with the 30th anniversary since the KDE project began...",
+    "pub_date": "Sat, 10 Oct 2026 06:00:51 -0400",
+    "title_zh": "KDE Plasma 6.8 准备下周发布，迎来最后一刻的 NVIDIA 修复",
+    "summary_zh": "KDE Plasma 6.8 将于下周正式发布，恰逢 KDE 项目成立 30 周年。本次更新包含多项最后时刻的修复，如 KRunner 方向键导航改进、Discover 对 Flatpak 自动更新更可靠，以及针对使用专有驱动的 NVIDIA GPU 在平铺窗口时卡顿问题的修复。此外，KDE Frameworks 6.32 修复了模糊效果下工具提示消失导致崩溃的问题，Plasma 6.9 则带来设置调整和虚拟桌面缩略图优化。",
+    "fulltext_zh": "KDE Plasma 6.8 准备下周发布，迎来最后一刻的 NVIDIA 修复\n\n2026年10月10日 06:00 EDT。\n\nKDE Plasma 6.8 正准备在下周正式亮相，恰逢 KDE 项目启动 30 周年。\n\n最新一期的《This Week in Plasma》总结了在下周稳定版发布前的所有有趣进展——修复。Plasma 6.8 的最后时刻变更包括：改进了 KRunner 中方向键的键盘导航。Discover 自动应用更新的功能现在对 Flatpak 应用始终能正确工作，以及其他一些小修复。\n\nPlasma 6.8 还针对一个问题进行了最后一刻的修复：在使用专有驱动栈的某些 NVIDIA GPU 上平铺窗口时，可能会导致延迟和卡顿。修复方法是让 Qt 使用单一的持久 OpenGL 上下文，避免每次打开 Qt Quick 效果时重新创建上下文，因为这会短暂阻塞主线程。该 NVIDIA 问题影响了所有近期 Plasma 版本。此修复也与 2024 年初的这个错误报告相关。\n\n与此同时，KDE Frameworks 6.32 修复了一个问题：使用模糊效果的基于 Qt 的应用，在用户打字时工具提示消失可能导致崩溃。\n\n对于 Plasma 6.9，有一些设置调整。Plasma 6.9 还使 KWin 概览效果中的虚拟桌面缩略图更加“和谐且视觉愉悦”。此外，Plasma 6.9 允许控制初始登录后连接的外接背光键盘的亮度。\n\n有关下周 Plasma 6.9.0 稳定版发布前 KDE Plasma 变更的更多细节，可通过以下链接查看：\n\nKDE Plasma 6.8 现在让平铺窗口更整齐地拼合\nKDE 即将就基于 BuildStream 的 KDE Linux 做出决定\nKDE Plasma 6.8 继续最后一刻的调整与修复\nKDE Plasma 6.8 Beta 2 发布，Union 主题引擎日趋成熟\nKDE 将专注于下一代样式、更好的文档及企业级 KDE\nKDE Plasma 6.8 迎来更多打磨与修复，Plasma 6.9 开始有更多活动\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nValve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面的出色工作\nNVIDIA 进行 Wayland 与 X.Org 延迟测试的结果\nMeta 为 Linux 开发压缩内存“CRAM”：优于 ZRAM 和 Zswap\nLinux 7.4 将为 Apple M4、A18 Pro 引入初始设备树，用于 MacBook Neo\nAI 用 Rust 实现 Adobe Photoshop 和 Premier 的“开源、洁净室”版本\nLinux 7.3-rc6 发布：新的“AI Normal”成为常态\nAMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0、Linux 7.2\nLinux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2\n\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
   }
 }

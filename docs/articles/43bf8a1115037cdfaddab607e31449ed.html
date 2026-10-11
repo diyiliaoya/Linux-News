@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot; — Linux 中文速报</title>
+<title>KNOD 在 Linux 内核 GPU 网络数据包处理卸载方面取得进展 — Linux 中文速报</title>
 <style>
 
   :root {{
@@ -85,8 +85,8 @@
   .tag {
     padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
     letter-spacing: .04em;
-    background: #3b82f61a; color: #3b82f6;
-    border: 1px solid #3b82f630;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
   }
   .source { color: var(--muted); font-family: var(--font-mono); }
 
@@ -148,18 +148,18 @@
   <a class="back-link" href="../index.html">← 返回首页</a>
 
   <div class="article-meta">
-    <span class="tag">发行版</span>
-    <span class="source">DistroWatch</span>
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
   </div>
 
-  <h1>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</h1>
+  <h1>KNOD 在 Linux 内核 GPU 网络数据包处理卸载方面取得进展</h1>
 
-  <div class="article-summary">Besgnulinux 团队发布了基于 Debian 的新版本 1.0，采用 Openbox 窗口管理器。开发者表示，Openbox 版本最初仅为测试目的而创建，但因系统表现出色而决定适配为通用版本，为用户提供 JWM 之外的第二选择。由于 Openbox 本身不包含独立运行所需的内置组件，团队通过多种工具和自定义配置构建了该系统，并最终选择 Tint2 作为面板。</div>
+  <div class="article-summary">KNOD 是一个开源项目，旨在利用 GPU 进行内核网络数据包处理卸载。该项目通过将 XDP 程序 JIT 编译为 GPU 机器码，让网卡将数据包直接放入 GPU 可访问内存并由 GPU 处理，在消费级 GPU 上实现了每秒 7000 万包和 80 Gbit/s 的 RX IPsec 性能。在 2026 年 Linux Plumbers 大会上，开发者分享了最新进展，并计划扩展对 Intel Arc 显卡、AMD 集成显卡以及 Broadcom 和 Intel 网卡的支持。</div>
 
-  <div class="article-body"><p>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</p><p>Besgnulinux 团队宣布发布其基于 Debian 的 Linux 发行版的新版本——1.0，该版本采用 Openbox 窗口管理器：“我已经很久没有测试 Openbox 了。我最初创建这个版本是出于测试目的。然而，当它变成一个如此出色的系统后，我认为将其适配为通用用途并分享出来是个好主意。拥有另一个窗口管理器作为 JWM 的替代方案，为用户提供了第二种选择。让 Openbox 达到当前状态确实需要大量努力。毕竟，Openbox 本身并不附带可作为独立系统运行的内置组件；它是通过多种工具和自定义配置构建而成的。然而，只要配置得当，它就能成为一个极好的系统。这正是窗口管理器的美妙之处——它们允许用户根据自己的喜好定制体验。这个版本正是源于这种欣赏。Openbox 1.0 版本做了哪些工作？在尝试了各种面板之后，我决定 Tint2 最适合 Openbox。”</p><p>阅读余下内容以获取更多信息和截图。</p><p>besgnulinux-openbox-1.0.iso</p><p>近期相关新闻与发布</p><p>发行版发布：Besgnulinux 1.0 &quot;Openbox&quot;</p><p>发行版发布：Besgnulinux 4-0</p><p>发行版发布：Besgnulinux 3-2</p><p>发行版发布：Besgnulinux 3-1</p><p>发行版发布：Besgnulinux 3-0</p><p>更多 Besgnulinux 新闻……</p><p>Besgnulinux 是一个基于 Debian“稳定”分支的轻量级桌面 Linux 发行版。它使用 JWM 窗口管理器，设计目标是快速、轻量且易于使用，适合老旧和低配置的计算机。Besgnulinux 附带 Calamares 系统安装程序、Brave 网页浏览器，以及 40 多个自定义构建的工具，用于控制系统设置以及桌面的外观和体验。</p><p>https://besgnulinux.blogspot.com/</p></div>
+  <div class="article-body"><p>此前我们曾报道过 KNOD，这是一种将内核网络卸载到 AMD GPU 的实验性解决方案。这个开源的 KNOD 项目允许利用 GPU 以非常高性能且节能的方式处理数据包，而无需任何专用硬件。KNOD 一直在持续发展，本周在布拉格举行的 Linux Plumbers 大会上分享了开发进展。</p><p>KNOD 继续展现出巨大的潜力，可以将 GPU 用作内核管理的网络数据包处理加速器。KNOD 会将 XDP 程序 JIT 编译为 GPU 机器码，网络适配器将数据包直接放入 GPU 可访问的内存，然后由 GPU 进行处理。最近除了最初的 XDP 程序外，还增加了 RX IPsec 功能。在消费级 GPU 硬件上，KNOD 已证明其性能可达 XDP 工作负载每秒 7000 万包，RX IPsec 达 80 Gbit/s。</p><p>KNOD 背后的开发者发现，它不仅非常具有成本效益，而且比仅使用 CPU 进行数据包处理更加节能。</p><p>虽然迄今为止 AMD GPU 一直是他们的主要目标，但在 LPC 2026 上提到，他们还将探索对 Intel Arc 显卡的支持，并且 KNOD 也将适用于 Broadcom 和 Intel 网卡。此外，还将探索 AMD 集成显卡，而不仅仅是独立 GPU。</p><p>希望了解更多关于 KNOD 这一有趣概念的人，可以通过 LPC 演示材料进行了解。</p></div>
 
   <div class="article-footer">
-    <a class="btn-original" href="https://distrowatch.com/12974" target="_blank" rel="noopener">
+    <a class="btn-original" href="https://www.phoronix.com/news/KNOD-2026-GPU-Network-Process" target="_blank" rel="noopener">
       阅读原文 →
     </a>
     <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
