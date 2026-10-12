@@ -14782,5 +14782,137 @@
     "title_zh": "KDE Plasma 6.8 准备下周发布，迎来最后一刻的 NVIDIA 修复",
     "summary_zh": "KDE Plasma 6.8 将于下周正式发布，恰逢 KDE 项目成立 30 周年。本次更新包含多项最后时刻的修复，如 KRunner 方向键导航改进、Discover 对 Flatpak 自动更新更可靠，以及针对使用专有驱动的 NVIDIA GPU 在平铺窗口时卡顿问题的修复。此外，KDE Frameworks 6.32 修复了模糊效果下工具提示消失导致崩溃的问题，Plasma 6.9 则带来设置调整和虚拟桌面缩略图优化。",
     "fulltext_zh": "KDE Plasma 6.8 准备下周发布，迎来最后一刻的 NVIDIA 修复\n\n2026年10月10日 06:00 EDT。\n\nKDE Plasma 6.8 正准备在下周正式亮相，恰逢 KDE 项目启动 30 周年。\n\n最新一期的《This Week in Plasma》总结了在下周稳定版发布前的所有有趣进展——修复。Plasma 6.8 的最后时刻变更包括：改进了 KRunner 中方向键的键盘导航。Discover 自动应用更新的功能现在对 Flatpak 应用始终能正确工作，以及其他一些小修复。\n\nPlasma 6.8 还针对一个问题进行了最后一刻的修复：在使用专有驱动栈的某些 NVIDIA GPU 上平铺窗口时，可能会导致延迟和卡顿。修复方法是让 Qt 使用单一的持久 OpenGL 上下文，避免每次打开 Qt Quick 效果时重新创建上下文，因为这会短暂阻塞主线程。该 NVIDIA 问题影响了所有近期 Plasma 版本。此修复也与 2024 年初的这个错误报告相关。\n\n与此同时，KDE Frameworks 6.32 修复了一个问题：使用模糊效果的基于 Qt 的应用，在用户打字时工具提示消失可能导致崩溃。\n\n对于 Plasma 6.9，有一些设置调整。Plasma 6.9 还使 KWin 概览效果中的虚拟桌面缩略图更加“和谐且视觉愉悦”。此外，Plasma 6.9 允许控制初始登录后连接的外接背光键盘的亮度。\n\n有关下周 Plasma 6.9.0 稳定版发布前 KDE Plasma 变更的更多细节，可通过以下链接查看：\n\nKDE Plasma 6.8 现在让平铺窗口更整齐地拼合\nKDE 即将就基于 BuildStream 的 KDE Linux 做出决定\nKDE Plasma 6.8 继续最后一刻的调整与修复\nKDE Plasma 6.8 Beta 2 发布，Union 主题引擎日趋成熟\nKDE 将专注于下一代样式、更好的文档及企业级 KDE\nKDE Plasma 6.8 迎来更多打磨与修复，Plasma 6.9 开始有更多活动\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nValve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面的出色工作\nNVIDIA 进行 Wayland 与 X.Org 延迟测试的结果\nMeta 为 Linux 开发压缩内存“CRAM”：优于 ZRAM 和 Zswap\nLinux 7.4 将为 Apple M4、A18 Pro 引入初始设备树，用于 MacBook Neo\nAI 用 Rust 实现 Adobe Photoshop 和 Premier 的“开源、洁净室”版本\nLinux 7.3-rc6 发布：新的“AI Normal”成为常态\nAMD Ryzen AI 开发者平台操作系统更新，带来 ROCm 10.0、Linux 7.2\nLinux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2\n\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "b4e2e83055005b01ba8ac7b448594289": {
+    "id": "b4e2e83055005b01ba8ac7b448594289",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/ubuntu-app-center-add-ons-media",
+    "title_en": "Ubuntu’s App Center makes it easy to install missing media codecs",
+    "summary_en": "Ubuntu 26.10&#8217;s new Add-ons page in App Center can now install restricted media codecs as well as hardware drivers. The new flow should make things simpler for those who don&#8217;t select the opt-in to &#8220;install restricted codecs&#8221; in the Ubuntu OS installer (not everyone thinks they need it) and for those who install without an active internet connection, as that box is greyed out. While apt makes it easy to get the relevant codecs if you know the right gstreamer-* , App Center ",
+    "pub_date": "Sun, 11 Oct 2026 19:41:15 +0000",
+    "title_zh": "Ubuntu 应用中心让安装缺失的媒体编解码器变得简单",
+    "summary_zh": "Ubuntu 应用中心新增功能，可安装受限媒体编解码器和硬件驱动。此前用户在系统安装时若未勾选“安装受限编解码器”或离线安装，后续获取编解码器较为麻烦。新流程在应用中心提供图形化安装入口，并新增驱动管理页面，方便安装 NVIDIA 等专有驱动。",
+    "fulltext_zh": "Ubuntu 的应用中心让安装缺失的媒体编解码器变得简单——OMG! Ubuntu\n\n现在可以安装受限媒体编解码器以及硬件驱动了。\n\n新的流程应该会让以下用户更省事：那些在 Ubuntu 操作系统安装程序中没有选择“安装受限编解码器”的用户（不是所有人都觉得自己需要它），以及那些在没有活跃互联网连接的情况下安装的用户，因为那个选项是灰显的。\n\n如果你知道正确的……就能轻松获取相关编解码器\n\n……不会在搜索结果中显示系统或库软件包（而且“媒体编解码器”这个词有点太笼统了）。\n\n增加一个图形化安装流程，让人们去他们自然会看的地方找，能让安装后的媒体设置稍微容易一点。\n\n我应该提一下，如果用户尝试播放需要某些编解码器的文件，……确实会触发一个安装对话框。这很有用，但有缺陷：那个界面既不够优雅，信息也不够充分，而且它并不涵盖所有缺失的编解码器。\n\n应用中心正在扩展\n\n在选定的硬件上，新的……页面也会出现在这个页面中，该页面将在 26.10 中推出。它旨在让安装和管理 NVIDIA GPU、某些 Wi-Fi 网卡/适配器以及其他特定硬件的专有驱动变得更容易。\n\nUbuntu 26.04 LTS 将……工具从其默认软件阵容中移除，该工具此前被用户用来检查并启用/禁用闭源硬件驱动（它有自己的应用快捷方式）。\n\n未来版本中，我们会不会看到 Ubuntu 在……页面添加更多选项？\n\n也许吧——欢迎在评论中告诉我你认为什么适合加入。"
+  },
+  "87f1b04373687c3dff9615533597410b": {
+    "id": "87f1b04373687c3dff9615533597410b",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12977",
+    "title_en": "DistroWatch Weekly, Issue 1194",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  This week in DistroWatch Weekly: \nReview: Abora OS 4.0 and Butterbian 0.5.0\nNews: Rocky launches OpenCourant, NetBSD surpasses funding goals, behind the curtain at Chimera Linux\nQuestions and answers: What causes an operating system to break?\nReleased last week: ZEPHIX 9\nUpcoming releases: Ubuntu 26.10, CalyxOS 8.0\nOpinion poll: Flavours of Fedora\nReader comments....",
+    "pub_date": "",
+    "title_zh": "DistroWatch 周刊，第 1194 期",
+    "summary_zh": "本期 DistroWatch 周刊评测了 Abora OS 4.0 和 Butterbian 0.5.0，报道了 Rocky 启动 OpenCourant、NetBSD 超额完成筹款目标、Chimera Linux 幕后进展等新闻，并解答了操作系统损坏原因等问题。此外还列出了上周发布的 ZEPHIX 9 和即将发布的 Ubuntu 26.10、CalyxOS 8.0，以及关于 Fedora 各版本的民意调查。",
+    "fulltext_zh": "DistroWatch 周刊，第 1194 期（DistroWatch.com 新闻）\n\nDistroWatch.com 由以下赞助\n\n新闻/观点/评测 ▼\n发布公告\nDW 周刊 / 评测存档\n访客评分与评论\n按评分排列的项目排名\n播客、新闻通讯与评测\n跨发行版比较软件包\n显示所有发行版的软件包版本\n搜索发行版 - 高级\n已停止的发行版\n教程与学习 ▼\n搜索文章\n问答专栏\n技巧与提示专栏\n误区与误解专栏\n简化手册页\n其他操作系统\n发行版验证密钥\n可视化发行版家族树\n常见问题\n我们的捐赠计划\n小型企业电话系统\n\nChimera 幕后\nNetBSD 超额完成筹款目标\nRocky 团队分叉 OpenRadioss\nopenSUSE 讨论大规模安全更新月\nGhostBSD 开始开发自己的桌面\nNixOS 将成为荷兰新操作系统的基础\npostmarketOS 更名为 Nura\nUbuntu 将加快内核补丁周期\nQ4OS 为 Trinity 桌面发布 Breeze 主题\nNetBSD 的 Enlightenment 移植获得修复\n易于使用的 PBX - 托管或自管理\nLinux 电话系统\n免费实时聊天解决方案\n集成呼叫中心软件\n联络中心软件\n远程工作应用：iOS 或 Android\n免费视频会议\n3CX 的 VoIP / PBX 操作指南\n别被打个措手不及，制定灾难恢复计划！\n必要的实时聊天报告和统计\n导致呼叫欺诈的常见错误\nWhatsApp Business 与 3CX WhatsApp API 集成\n3CX StartUP 的 5 大杀手级功能\n别做“那种”人 第 1 卷：保管好复杂凭证\n别做“那种”人 第 2 卷：呼叫欺诈\n别做“那种”人 第 3 卷：四大安全提示\n别做“那种”人 第 4 卷：监控你的实例\n红帽周五五件事 - 2026 年 10 月 9 日\nUbuntu 每周新闻通讯 964\nPCLinuxOS 杂志 2026 年 10 月\nFull Circle 每周新闻\n\n最新新闻与更新\n新闻过滤选项\n\nDistroWatch 周刊，第 1194 期\n评测：Abora OS 4.0 和 Butterbian 0.5.0\n新闻：Rocky 推出 OpenCourant，NetBSD 超额完成筹款目标，Chimera Linux 幕后\n问答：是什么导致操作系统损坏？\n上周发布：ZEPHIX 9\n即将发布：Ubuntu 26.10、CalyxOS 8.0\n民意调查：Fedora 的各版本\n阅读本周 DistroWatch 周刊的更多内容……\n\nElement 是一个基于 Ubuntu 的发行版，面向家庭影院或媒体中心个人电脑，具有十英尺用户界面，设计用于连接 HDTV，在客厅或娱乐区的舒适环境中提供数字媒体和互联网体验。Element 预装了数十个应用程序，可以收听、观看和管理音乐、视频、照片和互联网媒体。\n\n问答：Secure Boot 已经到来\n问答：为老旧设备和其他用途寻找发行版\n技巧与提示：编译 Linux 内核\n问答：改善软件性能\n问答：防止笔记本电脑进入睡眠\n问答：支持 Secure Boot 的 Linux 发行版\n误区与误解：巨大的内存误区\n问答：用 Wayland 工具替换 X.Org 工具\n技巧与提示：使用 Secure Shell\n问答：为 Linux 发布新软件\n\n版权所有 © 2001 - 2026 Atea Ataroa Limited。保留所有权利。所有商标均为其各自所有者的财产。\n更改隐私设置\n联系、更正和建议：\nbc1qxes3k2wq3uqzr074tkwwjmwfe63z70gwzfu4lx\nlnurl1dp68gurn8ghj7ampd3kx2ar0veekzar0wd5xjtnrdakj7tnhv4kxctttdehhwm30d3h82unvwqhhxarpw3jkc7tzw4ex6cfexyfua2nr\n86fA3qPTeQtNb2k1vLwEQaAp3XxkvvvXt69gSG5LGunXXikK9koPWZaRQgfFPBPWhMgXjPjccy9LA9xRFchPWQAnPvxh5Le\nPatreon.com/distrowatch"
+  },
+  "b9448855ad65e3472c32a0f0cec3df2a": {
+    "id": "b9448855ad65e3472c32a0f0cec3df2a",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linus-Torvalds-Claude-Code",
+    "title_en": "Linus Torvalds Working On A Hefty Linux Kernel Improvement With Claude Code",
+    "summary_en": "Linux creator Linus Torvalds has been known to use AI to help with kernel debugging and outside of the kernel tree has also done some vibe coding with Google's Antigravity. He has previously said he views AI as a useful tool. It turns out he's even now using Claude Code for working on new Linux kernel features...",
+    "pub_date": "Sun, 11 Oct 2026 20:16:25 -0400",
+    "title_zh": "Linus Torvalds 借助 Claude Code 进行大规模 Linux 内核改进",
+    "summary_zh": "Linux 创始人 Linus Torvalds 被发现使用 AI 编程助手 Claude Code 开发新的内核功能。他创建了一个名为 noref-filemap-read-with-llm 的分支，旨在改进内存管理代码，使页面缓存读取无需 folio 引用，从而解决多线程小文件读取时的引用计数争用问题。Torvalds 确认代码、测试及封面信初稿均由 Claude Code 协助完成，性能提升显著，该补丁可能进入 Linux 7.4 合并窗口。",
+    "fulltext_zh": "Linus Torvalds 正在借助 Claude Code 进行一项大规模的 Linux 内核改进\n2026 年 10 月 11 日晚上 08:16（美国东部时间）。\nLinux 创始人 Linus Torvalds 以使用 AI 协助内核调试而闻名，在内核树之外也曾用 Google 的 Antigravity 进行过一些“氛围编程”。他此前曾表示，他认为 AI 是一个有用的工具。事实证明，他现在甚至在使用 Claude Code 来开发新的 Linux 内核功能。\n在等待 Linux 7.3-rc7 内核发布并刷新他的仓库时，我惊讶地发现出现了一个新的内核分支。通常 Torvalds 不会在他的主仓库中做太多分支工作，通常只是托管……\n出现的新分支名为 noref-filemap-read-with-llm，正如“LLM”后缀所暗示的，这是他在 AI/LLM（特别是 Claude Code）帮助下进行的一些新内核改进。该分支的代码致力于调整内存管理代码，使其在读取页面缓存时无需 folio 引用。\n该代码正在解决 Linux 的一个问题：从多个线程对单个文件进行小读取时，会在 folio 引用计数上产生争用。因此，该分支/补丁系列的目标是在没有 folio 引用的情况下从页面缓存读取。\n对于那些热爱或憎恨 AI 的人来说，在主要……Linus Torvalds 确认他在创建这项工作及相关测试，甚至封面信的初稿中都使用了 AI：\n“代码、测试程序、上述列表背后的审查以及本文的初稿，都是在我指导下由 LLM 编码助手（Claude Code）完成的。测量是在我的机器上运行的。”\n对于解决多线程小文件读取瓶颈的影响，该系列补丁的效果显著：\n差异相当大。这些补丁目前位于 Torvalds 的 noref-filemap-read-with-llm Git 分支上。我们将看看他是否会在即将到来的 Linux 7.4 合并窗口合并他的分支。\n许多笔记本电脑和游戏掌机支持改进将进入 Linux 7.4\nLinux 补丁终于使安全启动/锁定模式下的休眠成为可能\n为 Linux 内核提议的新 AI 代理资源，AI 技能帮助开发者\n补丁更新以开始移除 Linux x32 ABI\n高通发布 QPaCE Linux 驱动代码，用于最新 SoC 上更快的 ZRAM\nLinux Zswap 的新补丁显示重大改进\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。他可以通过……关注\nValve 的 Timur Kristóf 在改进 Linux 上旧 AMD GPU 方面的惊人工作\nNVIDIA 进行 Wayland 与 X.Org 延迟测试的结果\nMeta 为 Linux 开发压缩 RAM“CRAM”：优于 ZRAM 和 Zswap\nAI 用 Rust 实现 Adobe Photoshop 和 Premier 的“开源、洁净室”版本\nLinux 7.3-rc6 发布：新“AI 常态”下的正常表现\nLinux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2\nSteam 测试版现在默认将非 Steam Windows 二进制文件使用 Proton\nLinux 的 ZRAM 重新设计以实现更大的内存节省和更好的性能\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "c3bcfb7600ef14bba3cde657974f7d10": {
+    "id": "c3bcfb7600ef14bba3cde657974f7d10",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-WA-TLBI-Erratum-1718",
+    "title_en": "Linux Landing Kernel Workaround For AMD TLBI Erratum #1718",
+    "summary_en": "AMD TLBI Erratum #1718 was worked around in CPU microcode for addressing a defect in certain Zen CPUs where the Translation Lookaside Buffer Invalidate Instruction use could lead to to stale translation entries. But for those on affected AMD CPUs and not running the updated microcode, a kernel workaround is being introduced with today's Linux 7.3-rc7 kernel and to be back-ported to prior kernel versions...",
+    "pub_date": "Sun, 11 Oct 2026 09:20:00 -0400",
+    "title_zh": "Linux 内核为 AMD TLBI 勘误 #1718 引入变通方案",
+    "summary_zh": "AMD TLBI 勘误 #1718 涉及部分 Zen CPU 在执行 TLB 失效指令时可能产生过时转换条目，此前已通过 CPU 微码修复。对于未更新微码的用户，Linux 7.3-rc7 内核引入了软件变通方案，强制使用 TLBSYNC 以确保 TLB 条目正确失效，并将向后移植至近两年的稳定内核分支。",
+    "fulltext_zh": "Linux 内核为 AMD TLBI 勘误 #1718 引入变通方案\n2026年10月11日上午09:20 EDT。\n\nAMD TLBI 勘误 #1718 此前已通过 CPU 微码解决，该缺陷存在于部分 Zen CPU 中，即转换后备缓冲器失效指令的使用可能导致过时的转换条目。但对于使用受影响 AMD CPU 且未运行更新微码的用户，随着今日 Linux 7.3-rc7 内核的发布，一项内核变通方案被引入，并将向后移植到先前内核版本。\n\n受此缺陷影响的 CPU 在较旧的 CPU 微码版本上执行 / TLBSYNC 指令对时，可能无法正确失效 TLB 条目。自 2024 年底以来，Linux 一直使用 AMD INVLPGB 进行内核 TLB 刷新以提升性能，正如之前 Phoronix 基准测试所示。随着该代码今日主线化，现在采用软件变通方案强制使用 TLBSYNC，以确保在未通过微码缓解的情况下正确失效 TLB 条目。\n\n这是今日拉取请求进入 Linux 7.3-rc7 的唯一修复，并将在未来几天内向后移植到过去两年支持的稳定内核分支。\n\nAMD 工程师谈论 Zen 6 上发现的新 IBS 内存分析器功能\nMeta 工程师的 Linux 补丁用于提升 AMD P-State / Steam Deck 游戏性能\nAMD ROCm 10.1 发布，带来多项改进\nLinux 7.4 将引入 AMD Zen 6 的新 BTB CTX 隔离功能\nLinux 7.4 的 AMD P-State 驱动将为 Ryzen Zen 6 CPU 做好准备\nAMD Ryzen AI 开发者平台操作系统更新，包含 ROCm 10.0、Linux 7.2\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nValve 的 Timur Kristóf 在改进 Linux 上旧 AMD GPU 方面的出色工作\nNVIDIA 进行 Wayland 与 X.Org 延迟测试的结果\nMeta 为 Linux 开发压缩 RAM“CRAM”：优于 ZRAM 和 Zswap\nAI 用 Rust 实现 Adobe Photoshop 和 Premier 的“开源、洁净室”版本\nLinux 7.3-rc6 发布：对新“AI 常态”而言属正常\nLinux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2\nSteam 测试版现在默认将非 Steam Windows 二进制文件使用 Proton\nLinux 的 ZRAM 重构以实现更大内存节省和更好性能\n\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "3ada428add84bf09d2fd93cf16e085c4": {
+    "id": "3ada428add84bf09d2fd93cf16e085c4",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/MS-Paravirt-Hyper-V-IOMMU",
+    "title_en": "Microsoft Contributes Para-Virtualized IOMMU Hyper-V Driver For Linux",
+    "summary_en": "Microsoft is contributing a new kernel driver for the upcoming Linux 7.4 cycle. Queued up into the IOMMU subsystem's \"-next\" branch is a new para-virtualized IOMMU driver for benefiting Linux guest VMs running on Microsoft's Hyper-V virtualization platform...",
+    "pub_date": "Sun, 11 Oct 2026 08:00:00 -0400",
+    "title_zh": "微软为 Linux 贡献半虚拟化 IOMMU Hyper-V 驱动",
+    "summary_zh": "微软为即将发布的 Linux 7.4 内核贡献了一款新的半虚拟化 IOMMU 驱动，用于 Hyper-V 平台上的 Linux 客户机。该驱动支持内核内 DMA 保护及通过 VFIO 进行设备直通，兼容 Intel VT-d 和 AMD IOMMU 系统，已通过 NVMe 和 Intel DSA 加速器设备测试。该驱动从 2023 年 12 月首次提出 RFC 补丁至今已历时约三年。",
+    "fulltext_zh": "微软为 Linux 贡献半虚拟化 IOMMU Hyper-V 驱动\n2026 年 10 月 11 日 上午 08:00 EDT\n\n微软正在为即将到来的 Linux 7.4 内核周期贡献一款新的内核驱动。已排队进入 IOMMU 子系统“-next”分支的是一款新的半虚拟化 IOMMU 驱动，旨在惠及运行在微软 Hyper-V 虚拟化平台上的 Linux 客户机虚拟机。\n\n除了 AMD 的 PerfOpt 功能进入 Linux 7.4 的 IOMMU next Git 分支带来的兴奋之外，为 Linux 7.4 的 IOMMU 增添乐趣的还有这款新的微软 Hyper-V 半虚拟化 IOMMU 驱动，它通过新的方式启用。\n\n微软的半虚拟化 IOMMU 驱动允许 Hyper-V 上的 Linux 客户机享受针对分配给客户机的设备的内核内 DMA 保护。该驱动还允许通过 VFIO 等方式将设备分配给客户机用户空间。\n\n这款用于 Hyper-V 的半虚拟化 IOMMU 可在启用 Intel VT-d 和 AMD IOMMU 的系统上工作。这已通过将 NVMe 设备分配给客户机进行验证，在 Intel 方面，其 DSA 加速器设备也经过了分配给 Linux 客户机虚拟机的测试。\n\n这款“hv-iommu-guest”驱动由来已久，关于此支持的原始征求意见（RFC）补丁可追溯到 2023 年 12 月。Linux 7.4 稳定版应于 12 月底左右发布，即这些补丁首次出现约三年后。\n\nGit 分支将一直保留到本月晚些时候 Linux 7.4 合并窗口开启。\n\n微软发布其 LiteBox 沙箱库操作系统首个版本\n微软更新其 WSL2 Linux 内核，带来 DXGKRNL 改进及更多功能启用\n适用于 Linux 的 Windows 子系统现可运行在超大型服务器上，实验性稀疏 VHD\n微软宣布 WSLC 正式可用：Windows 上的 Linux 容器\n微软的 Azure Linux 3.0.20260809 发布，包含 233+ CVE 修复\n微软在最新开源发布中怀旧：Comic Chat 在 30 年后开源\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nValve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面的惊人工作\nNVIDIA 进行 Wayland 与 X.Org 延迟测试的结果\nMeta 为 Linux 开发压缩 RAM“CRAM”：优于 ZRAM 和 Zswap\nAI 用 Rust 实现 Adobe Photoshop 和 Premier 的“开源、洁净室”版本\nLinux 7.3-rc6 发布：新“AI 常态”下的正常表现\nLinux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2\nSteam Beta 现在默认将非 Steam Windows 二进制文件使用 Proton\nLinux 的 ZRAM 重构以实现更大内存节省和更好性能\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "b5fcb0349b4f22338b0968e2c7028d2b": {
+    "id": "b5fcb0349b4f22338b0968e2c7028d2b",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Auto-Vectorize-RISC-V-Kernel",
+    "title_en": "Auto Vectorizing The RISC-V Linux Kernel Shows Promising Results",
+    "summary_en": "The Linux kernel build for RISC-V doesn't currently make use of the CPU ISA's Vector extension. but leveraging it with compiler auto vectorization is showing the ability to provide nice performance results for enhancing RISC-V Linux performance...",
+    "pub_date": "Sun, 11 Oct 2026 06:18:00 -0400",
+    "title_zh": "RISC-V Linux 内核自动向量化展现出可喜成果",
+    "summary_zh": "在 Linux Plumbers Conference 2026 上，Andy Chiu 展示了利用 RISC-V 向量扩展对 Linux 内核构建进行自动向量化的优化效果。实验显示，LZ4 性能提升高达 15%，Btrfs 提升 8.4%，XFS 提升 5%，Nginx 提升 2%。但启用向量需管理额外上下文，增加时间和内存开销，且内核空间使用 FPU/向量可能受限，最佳性能还需按 CPU 进行编译器调优。",
+    "fulltext_zh": "RISC-V 的 Linux 内核构建目前尚未利用 CPU ISA 的向量扩展，但通过编译器自动向量化来利用它，已显示出能够为提升 RISC-V Linux 性能带来良好结果。\n\nAndy Chiu 上周在 Linux Plumbers Conference 2026 上介绍了利用 RISC-V 向量优化 Linux 内核构建。对于加密、RAID、XOR 和用户拷贝等内核用例，RISC-V 向量能力有助于提升性能。尽管内核随后会依赖向量单元，构建的可移植性会降低。真正为最佳自动向量化性能量身定制，还需要按 CPU 进行编译器目标设定。\n\n但在所进行的实验中，RISC-V 向量优化 Linux 内核可以带来可观的收益：\n\nLZ4 提升高达 15%，Btrfs 提升高达 8.4%，XFS 提升高达 5%，而对 RISC-V Linux 系统上 Nginx 性能的影响最终高达 2%。不利之处在于，启用向量使用需要管理额外的上下文，进而增加时间和内存需求。此外，在内核空间使用 FPU/向量可能是个禁忌。再者，要让内核构建发挥最佳性能，还需要编译器按 CPU 进行调优。\n\n希望进一步了解 RISC-V 向量在内核模式下用于 Linux 的前景的人，可以通过以下内容了解：\n\nGCC 17 现在支持在 RISC-V 上使用 -mtune=native -mcpu=native\nLinux 7.3 添加对多个较新 RISC-V 扩展的支持\nLinux 7.2 在默认内核构建中启用 UltraRISC RISC-V 支持\nLinux 7.2-rc2 将默认 RISC-V 64 位 CPU 限制提升至 256 核\nLinux 7.2 RISC-V 降低内核启动开销，默认支持 Eswin SoC\nLinux 7.2 将为 RISC-V 内核构建默认启用 ESWIN SoC 支持\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nValve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面的出色工作\nNVIDIA 进行 Wayland 与 X.Org 延迟测试的结果\nMeta 为 Linux 开发压缩 RAM“CRAM”：优于 ZRAM 和 Zswap\nAI 用 Rust 实现 Adobe Photoshop 和 Premier 的“开源、洁净室”版本\nLinux 7.3-rc6 发布：新“AI 常态”下的正常版本\nLinux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2\nSteam 测试版现在默认将非 Steam Windows 二进制文件使用 Proton\nLinux 的 ZRAM 经过重构，实现更大内存节省和更好性能\n\n同时享有无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "cfde80508cf615aa3a45e5d5b51b86a4": {
+    "id": "cfde80508cf615aa3a45e5d5b51b86a4",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Drgn-0.3-Released",
+    "title_en": "Drgn 0.3 Released For This \"Natural\" Programmable Debugger From Meta",
+    "summary_en": "Drgn is the open-source project out of Meta developing a very versatile debugger with the intent being a debugger focused on programmability with it striving to \"make scripting as natural as possible so that debugging feels like coding.\" Drgn 0.3 released this weekend with the latest round of improvements...",
+    "pub_date": "Sun, 11 Oct 2026 06:07:17 -0400",
+    "title_zh": "Meta 的“自然”可编程调试器 Drgn 0.3 发布",
+    "summary_zh": "Meta 开源的可编程调试器 Drgn 发布 0.3 版本。该版本优化了 QEMU 虚拟机调试，可直接从 QEMU 进程读取内存；新增读取系统 IRQ 数量等函数、crash BPF 命令选项及 crash net 命令的部分实现，并支持 Linux 7.2/7.3 内核新特性。此外还正确识别 LoongArch64 架构，并包含大量修复与文档改进。",
+    "fulltext_zh": "Drgn 0.3 发布：Meta 出品的这款“自然”可编程调试器\n\n2026 年 10 月 11 日 06:07 EDT\n\nDrgn 是 Meta 开源的一个项目，正在开发一款用途非常广泛的调试器，其目标是专注于可编程性，力求“让脚本编写尽可能自然，使调试感觉就像写代码”。Drgn 0.3 于本周末发布，带来了最新一轮改进。\n\nMeta 的 Linux 内核开发者 Omar Sandoval 继续领导 Drgn 的开发。在这个新版本中，增加了更多功能，并强化了代码库以抵御不可信的调试信息和核心转储。Drgn 0.3 优化了 QEMU 客户机虚拟机调试，尽可能直接从 QEMU 进程读取内存。Drgn 还引入了一些有助于调试的新函数，例如轻松读取系统上的 IRQ 数量、新的 crash BPF 命令选项、crash net 命令的部分实现，并支持新的 Linux 7.2 和 Linux 7.3 内核特性。\n\nDrgn 0.3 现在也能正确检测 LoongArch64 架构。此外还有数十项修复以及一些文档改进。\n\nDrgn 0.3 调试器的下载和更多详情请见……\n\nSQLite 3.54 发布，性能更快，放弃 Windows XP 支持\nPython 3.15 发布，实验性 JIT 编译器运行更快\nMold 3.0 高速链接器在 Rust 重写后发布\nEDG C/C++ 前端开源\nMeta 发布 OpenZL 0.3，解压速度比 Zstd 快 144%\nSIMDjson 5.0 发布：让 JSON 解析更快\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他……\n\nValve 的 Timur Kristóf 在改进 Linux 上老旧 AMD GPU 方面所做的惊人工作\nNVIDIA 进行 Wayland 与 X.Org 延迟测试的结果\nMeta 为 Linux 开发压缩内存“CRAM”：优于 ZRAM 和 Zswap\nAI 用 Rust 实现 Adobe Photoshop 和 Premier 的“开源、净室”版本\nLinux 7.3-rc6 发布：新的“AI 常态”下的正常情况\nLinux 7.4 将支持 Raspberry Pi 10 英寸触摸显示屏 2\nSteam 测试版现在默认将非 Steam Windows 二进制文件使用 Proton 运行\nLinux 的 ZRAM 重构以实现更大内存节省和更好性能\n\n在享受无广告浏览的同时，\n单页文章视图\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "489b2a67aea6cbc3a550f95397022d3b": {
+    "id": "489b2a67aea6cbc3a550f95397022d3b",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/9to5linux-weekly-roundup-october-11th-2026",
+    "title_en": "9to5Linux Weekly Roundup: October 11th, 2026",
+    "summary_en": "9to5Linux Weekly Roundup for October 4th, 2026, brings news about COSMIC 1.10, Raspberry Pi Desktop, NVIDIA 615.78.08, Raspberry Pi Imager 2.0.12, Q4OS 6.10, Ventoy 1.1.18, KDE Gear 26.08.2, OpenVPN 2.7.8, Raspberry Pi OS, Calibre 9.16, GStreamer 1.28.8, GNOME 52 release date, KDE Frameworks 6.31, Ubuntu Summit 26.10, Blender 5.3 beta, Debian 14 artwork, and more.\nThe post 9to5Linux Weekly Roundup: October 11th, 2026 appeared first on 9to5Linux - do not reproduce this article without permission.",
+    "pub_date": "Sun, 11 Oct 2026 15:13:57 +0000",
+    "title_zh": "9to5Linux 每周综述：2026年10月11日",
+    "summary_zh": "本期9to5Linux周报汇总了2026年10月4日当周的重要开源与Linux新闻，涵盖COSMIC 1.10、树莓派桌面、NVIDIA 615.78.08驱动、树莓派Imager 2.0.12、Q4OS 6.10、Ventoy 1.1.18、KDE Gear 26.08.2、OpenVPN 2.7.8、树莓派OS、Calibre 9.16、GStreamer 1.28.8、GNOME 52发布日期、KDE Frameworks 6.31、Ubuntu峰会26.10、Blender 5.3测试版、Debian 14艺术设计等更新与动态。",
+    "fulltext_zh": "2026年10月4日当周的9to5Linux每周综述，带来了关于COSMIC 1.10、树莓派桌面、NVIDIA 615.78.08、树莓派Imager 2.0.12、Q4OS 6.10、Ventoy 1.1.18、KDE Gear 26.08.2、OpenVPN 2.7.8、树莓派OS、Calibre 9.16、GStreamer 1.28.8、GNOME 52发布日期、KDE Frameworks 6.31、Ubuntu峰会26.10、Blender 5.3测试版、Debian 14艺术设计等更多内容的新闻。\n\n文章《9to5Linux每周综述：2026年10月11日》首次发布于9to5Linux——未经许可请勿转载本文。"
+  },
+  "c16a04eadf5eb35a68835ef6699eb960": {
+    "id": "c16a04eadf5eb35a68835ef6699eb960",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/kde-releases-kde-frameworks-6-31-with-various-improvements-and-bug-fixes",
+    "title_en": "KDE Releases KDE Frameworks 6.31 with Various Improvements and Bug Fixes",
+    "summary_en": "KDE Frameworks 6.31 open-source software suite is out now with various improvements to System Settings and other KDE apps and core components.\nThe post KDE Releases KDE Frameworks 6.31 with Various Improvements and Bug Fixes appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Fri, 09 Oct 2026 16:58:05 +0000",
+    "title_zh": "KDE 发布 KDE Frameworks 6.31，带来多项改进与错误修复",
+    "summary_zh": "KDE 正式发布 KDE Frameworks 6.31 开源软件套件，为系统设置及其他 KDE 应用和核心组件带来多项改进与错误修复。",
+    "fulltext_zh": "KDE Frameworks 6.31 开源软件套件现已发布，为系统设置及其他 KDE 应用和核心组件带来多项改进。\n\n文章《KDE 发布 KDE Frameworks 6.31，带来多项改进与错误修复》最初发表于 9to5Linux——未经许可请勿转载本文。本 RSS 源仅供读者使用，而非抓取者。"
+  },
+  "3e9bfff7237556ff6f2cf19d1811df2f": {
+    "id": "3e9bfff7237556ff6f2cf19d1811df2f",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/canonical-announces-official-ubuntu-desktop-images-for-risc-v",
+    "title_en": "Canonical Announces Official Ubuntu Desktop Images for RISC-V",
+    "summary_en": "Canonical announces official Ubuntu Desktop images for RISC-V hardware, along with unofficial Xubuntu Minimal images for the Ubuntu 26.10 release.\nThe post Canonical Announces Official Ubuntu Desktop Images for RISC-V appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Fri, 09 Oct 2026 16:03:59 +0000",
+    "title_zh": "Canonical 宣布为 RISC-V 提供官方 Ubuntu 桌面镜像",
+    "summary_zh": "Canonical 宣布为 RISC-V 硬件推出官方 Ubuntu 桌面镜像，并随 Ubuntu 26.10 版本提供非官方的 Xubuntu Minimal 镜像。此举标志着 Ubuntu 对 RISC-V 架构的桌面支持进入新阶段。",
+    "fulltext_zh": "Canonical 宣布为 RISC-V 硬件推出官方 Ubuntu 桌面镜像，并随 Ubuntu 26.10 版本提供非官方的 Xubuntu Minimal 镜像。"
+  },
+  "1f341e62a58e74f26cdeb52f34846ca2": {
+    "id": "1f341e62a58e74f26cdeb52f34846ca2",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/ventoy-1-1-18-adds-experimental-support-for-steamos-recovery-images",
+    "title_en": "Ventoy 1.1.18 Adds Experimental Support for SteamOS Recovery Images",
+    "summary_en": "Ventoy 1.1.18 open-source bootable USB solution is now available for download with experimental support for SteamOS recovery images, improved Linux remount feature, and more.\nThe post Ventoy 1.1.18 Adds Experimental Support for SteamOS Recovery Images appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Fri, 09 Oct 2026 05:45:19 +0000",
+    "title_zh": "Ventoy 1.1.18 新增对 SteamOS 恢复镜像的实验性支持",
+    "summary_zh": "Ventoy 1.1.18 版本发布，新增对 SteamOS 恢复镜像的实验性支持，并改进了 Linux 重新挂载功能。这款开源可启动 USB 工具持续优化，为用户提供更便捷的多系统启动体验。",
+    "fulltext_zh": "Ventoy 1.1.18 开源可启动 USB 解决方案现已可供下载，新增对 SteamOS 恢复镜像的实验性支持、改进的 Linux 重新挂载功能等。\n\n文章《Ventoy 1.1.18 新增对 SteamOS 恢复镜像的实验性支持》首次发布于 9to5Linux——未经许可请勿转载本文。本 RSS 源仅供读者使用，而非抓取者。"
+  },
+  "32f85bf00122d08580fd41ec7521889d": {
+    "id": "32f85bf00122d08580fd41ec7521889d",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/calibre-9-16-e-book-manager-improves-read-aloud-pdf-input-and-kobo-support",
+    "title_en": "Calibre 9.16 E-Book Manager Improves Read Aloud, PDF Input, and Kobo Support",
+    "summary_en": "Calibre 9.16 open-source e-book manager is now available for download with support for high-quality Kokoro voices, support for reading images in the AVIF format, and many other changes.\nThe post Calibre 9.16 E-Book Manager Improves Read Aloud, PDF Input, and Kobo Support appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Fri, 09 Oct 2026 03:44:22 +0000",
+    "title_zh": "Calibre 9.16 电子书管理器改进朗读、PDF 输入和 Kobo 支持",
+    "summary_zh": "Calibre 9.16 开源电子书管理器现已开放下载，新增对高质量 Kokoro 语音的支持、支持读取 AVIF 格式图像，以及许多其他改进。",
+    "fulltext_zh": "Calibre 9.16 开源电子书管理器现已开放下载，新增对高质量 Kokoro 语音的支持、支持读取 AVIF 格式图像，以及许多其他改进。\n\n文章《Calibre 9.16 电子书管理器改进朗读、PDF 输入和 Kobo 支持》首次发布于 9to5Linux - 未经许可不得转载本文。本 RSS 源仅供读者使用，而非抓取者。"
   }
 }
