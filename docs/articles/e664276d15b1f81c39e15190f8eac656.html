@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROCm 10 OpenCL 与 Mesa 26.3-dev Rusticl 在 AMD Strix Halo 上的性能对比 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月13日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>ROCm 10 OpenCL 与 Mesa 26.3-dev Rusticl 在 AMD Strix Halo 上的性能对比</h1>
+
+  <div class="article-summary">本文对比了 Mesa 26.3 Git 中的 Rusticl 开源 OpenCL 驱动与 AMD ROCm 10 官方 OpenCL 驱动在 AMD Ryzen AI Max+ 395 &quot;Strix Halo&quot; 平台上的性能表现。Rusticl 支持最新的 OpenCL 3.1 API，而 ROCm 驱动仅支持 OpenCL 2.1。测试涵盖多种 OpenCL 基准，旨在评估通用 Rust 驱动与专用硬件驱动的差距。</div>
+
+  <div class="article-body"><p>ROCm 10 OpenCL 与 Mesa 26.3-dev Rusticl 在 AMD Strix Halo 上的性能对比 - Phoronix</p><p>ROCm 10 OpenCL 与 Mesa 26.3-dev Rusticl 在 AMD Strix Halo 上的性能对比</p><p>发布于 2026 年 10 月 12 日 下午 12:32 EDT。</p><p>鉴于 Mesa 的 Rusticl 驱动近期取得的进展——这是一个基于 Rust 的 OpenCL 驱动，可在不同的 Mesa Gallium3D 硬件驱动上运行——一位支持者询问能否看到这个开源 OpenCL 解决方案的一些最新基准测试。下面我们来看看 Mesa 26.3 Rusticl 驱动与 AMD 官方 ROCm 10 中的 OpenCL 驱动相比表现如何。</p><p>出于对这个通用 Rust OpenCL 驱动与专用 OpenCL 硬件驱动相比表现如何的好奇，我最近将 Mesa 26.3 Git 及其 Rusticl 驱动与 AMD 作为 ROCm 10 一部分提供的 OpenCL 驱动进行了对比。本轮 OpenCL 基准测试在广受欢迎的 AMD Ryzen AI Max+ 395 &quot;Strix Halo&quot; 平台上进行，使用了出色的硬件。</p><p>当前形式的 Rusticl 支持最新的 OpenCL 3.1 API，而 ROCm 驱动目前提供 OpenCL 2.1 合规性。在同一硬件上，对这两种 OpenCL 驱动实现进行了各种 OpenCL 基准测试。</p><p>AMD 通过 Linux 7.4 将 Radeon 集成显卡的 AI/LLM 性能提升高达 18~23%</p><p>在 Ubuntu Linux 上升级 Mesa 为 Intel Arc B390 带来的性能优势</p><p>在 CachyOS 上使用 GeForce RTX 5090 笔记本 GPU 对比 Nouveau 与 NVIDIA R610</p><p>Intel Arc Pro B70 在 Linux 7.1 上展现出一些性能优势</p><p>Linux 7.1 帮助 Intel Arc Battlemage 显卡实现更好性能</p><p>在 AMD Radeon AI PRO R9700 上对比 ROCm 7.0.0 与 ROCm 7.2.3 性能</p><p>同时享受无广告浏览、</p><p>单页文章视图</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/review/rocm-10-opencl-rusticl" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

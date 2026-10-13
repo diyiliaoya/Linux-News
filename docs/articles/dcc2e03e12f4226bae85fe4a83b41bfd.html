@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linus Torvalds 表示他喜欢使用 AI，而他的新内核分支致谢 Claude Code — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月13日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Linus Torvalds 表示他喜欢使用 AI，而他的新内核分支致谢 Claude Code</h1>
+
+  <div class="article-summary">Linus Torvalds 在其内核仓库中创建了一个名为 noref-filemap-read-with-llm 的新分支，包含八个补丁，旨在优化多线程读取同一文件时的性能。该补丁跳过了引用计数步骤，使八线程读取性能从约每秒1000万次提升至3000-3300万次。提交信息致谢了 Claude Code 在其指导下完成代码、测试及审查。Torvalds 在布拉格开源峰会上表示他喜欢使用 AI，认为将其视为工具时效果良好，并称 AI 让编程更有趣。</div>
+
+  <div class="article-body"><p>Linus Torvalds 表示他喜欢使用 AI，而他的新内核分支致谢 Claude Code</p><p>他的八补丁系列利用 AI 辅助，减少了内核在许多线程读取同一文件时所做的额外工作。</p><p>Linus Torvalds 在自己的内核仓库中有一个新分支，名为 noref-filemap-read-with-llm。</p><p>它包含一个基于 Linux 7.3-rc6 加修复的八补丁系列，并且没有给出合并的内核发布目标。</p><p>虽然提交信息很长且技术性强，但这一改动本身很容易描述。</p><p>当许多线程读取同一文件时，内核从页面缓存（最近读取数据的内存副本）中为它们提供服务。如今，每次读取都会持有缓存数据，然后释放它。</p><p>每个线程都为此更新同一个计数器，导致线程相互干扰。该问题可追溯到 2024 年，当时 Matthew Wilcox 标记了它，并引用了客户的工作负载。</p><p>Linus 的补丁系列跳过了这一步。为了确保安全，离开缓存的内存在一小段时间过去之前不会被分配用于重用，因此读取者可以直接复制数据而无需持有任何东西。</p><p>代价是更多内存会闲置片刻。</p><p>在他自己的笔记本电脑上，关闭一些安全保护后测得的收益是：八个线程读取一个文件从每秒约 1000 万次读取提升到 3000 万至 3300 万次之间。</p><p>Linus 亲自进行了测量，但其余部分，提交信息致谢了 Claude Code，在其指导下工作。这包括提交信息本身的草稿、代码和测试程序，以及其已知问题列表背后的审查。</p><p>这不是他第一次在内核工作中使用 AI。八月份，他在 Intel Xe 图形驱动中使用了它。</p><p>他在布拉格说了什么</p><p>Linus 在布拉格开源峰会上与他的老朋友、爱立信软件技术负责人 Dirk Hohndel 进行了交谈。</p><p>ZDNet 的 Steven Vaughan-Nichols 在场，他引用 Linus 的话说：“我实际上真的很喜欢使用 AI。”</p><p>他说他过去认为 AI 不太好，但已经改变了想法。在他看来，只要将其视为工具，它就能很好地工作，并且让编程对他来说更有趣。</p><p>他提到了一个吉他踏板项目，其界面是他用 C 语言编写的。他想要更现代的外观，并尝试用 AI 来实现，他说：“我用 AI 做我不擅长的事情。”</p><p>他还为 vibe coding 辩护，称其为“一种在编程中寻找乐趣的绝妙方式”，主要面向新手，并表示虽然 AI 正在改进代码库，但它给维护者带来的负担已成为一个真正的问题。</p><p>这再次表明 Linus 在 AI 问题上的立场发生了多大变化。2024 年，他称 AI 行业“90% 是营销，10% 是现实”。</p><p>他正在积极使用它。</p><p>Gentoo 需要你的帮助</p><p>为其基础设施提供赞助</p><p>Gentoo 需要你的帮助！几个赞助商已经退出</p><p>他们将接受虚拟机、物理服务器、机架空间、捐赠的机器或托管资金。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的极客。</p><p>openEuler 正在通过 AI 工具链改造开源社区的开发体验</p><p>Linux 可能为 AI 代理技能找到新家</p><p>Gentoo 需要你的帮助！几个赞助商已经退出</p><p>谷歌关闭了其部分开源赏金计划</p><p>红帽的 Lightwell 不等待上游维护者行动</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周通讯，您将学习有用的 Linux 技巧、发现应用程序、探索新发行版，并随时了解 Linux 世界的最新动态</p><p>太好了！您已成功注册。</p><p>欢迎回来！您已成功</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/linus-torvalds-claude-code-linux/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

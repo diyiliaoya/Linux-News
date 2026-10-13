@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Firefox 158 发布，支持 JPEG XL — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月13日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Firefox 158 发布，支持 JPEG XL</h1>
+
+  <div class="article-summary">Firefox 158 现已开放下载，原生支持 JPEG XL 图像格式，该格式压缩率优于 WebP、PNG 和 JPEG，并支持广色域、HDR、高比特深度、动画、Alpha 通道及无损与渐进式编码。此外，AI 浏览模式可自动填充表单，本地翻译新增三种语言，滚动更平滑，PDF 生成更易访问，并包含多项开发者功能与安全修复。</div>
+
+  <div class="article-body"><p>Firefox 158 现已开放下载，开箱即支持 JPEG XL 图像。</p><p>据称，JPEG XL 的压缩效果优于其他图像格式，包括 WebP、PNG 和普通的 JPEG。它支持更广的色域、HDR 和高比特深度，以及动画、Alpha 通道和无损与渐进式编码。</p><p>Mozilla 花了数月时间在 Firefox 中测试 JPEG XL 支持，此前通过浏览器的一个可选开关让用户试用。</p><p>其他变化与修复</p><p>AI 驱动的浏览模式（使用 OpenAI 和阿里巴巴等云服务提供商）现在可以为你填写表单字段，从你打开的其他标签页或已保存的自动填充数据中提取相关信息。</p><p>说到 Firefox 与 AI，浏览器的本地、私密翻译功能新增了对阿尔巴尼亚语、白俄罗斯语和菲律宾语的网页文本互译支持。</p><p>内置了一个 Ubuntu 主题修复，使得地址栏结果中网页图标上的小徽章在选中时不再与高亮颜色融为一体。以下是修复前后的对比：</p><p>上方显示徽章融入背景，下方显示问题已解决</p><p>Mozilla 表示，通过打印对话框从网页创建 PDF 会生成“更易访问”的文档，并补充说包括缺失数学符号在内的多个 PDF 渲染问题已得到解决。</p><p>有人问我为什么这么“推销”Firefox，因为它不是 Ubuntu 制造的，而且存在“更好的浏览器”。Firefox 是 Ubuntu 的默认浏览器；本博客关注的是在 Ubuntu 上运行、可用于 Ubuntu 或对 Ubuntu 有用的东西——而不仅仅是专为 Ubuntu 制造的东西。</p><p>据称，Firefox 158 中滚动网页“更平滑、更精确”，因为浏览器不再将滚动位置四舍五入到整个屏幕像素。在放大页面上或高分辨率显示器上滚动时，这一改进感受最为明显。</p><p>自定义标签页背景现在会被存储，你之前使用的自定义壁纸现在会列在页面上。</p><p>Firefox 158 也带来了 Web 开发方面的变化，包括支持：</p><p>CSS 中的类型化算术</p><p>带有 autocomplete 属性的输入的 WebAuthn 条件 UI</p><p>PerformanceResourceTiming.deliveryType</p><p>EXT_polygon_offset_clamp</p><p>在兼容设备上</p><p>一组新的安全修复</p><p>你可以从 10 月 12 日星期一起通过下载 Firefox 158。那里有适用于所有主流操作系统的二进制构建和安装程序，与官方网站将链接到的版本相同。</p><p>Windows、macOS 和 Linux（二进制构建）上的现有用户将能够从 10 月 13 日星期二起在应用内更新。Linux 发行版仓库、软件商店（Flathub、Snap）和其他格式将在此日期之后开始打包。</p><p>如果你使用的是 Ubuntu，无需急于下载任何东西。与所有其他更新一样，此更新将通过 Snap Store 的自动更新送达你。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/firefox-158-released-with-jpeg-xl-support" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

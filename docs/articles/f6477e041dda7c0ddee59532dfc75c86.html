@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linux 可能为 AI 代理技能设立新家 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月13日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Linux 可能为 AI 代理技能设立新家</h1>
+
+  <div class="article-summary">内核稳定版维护者 Sasha Levin 提议在内核源码树中新增 agents 目录，用于存放面向 AI 编码助手的技能、提示词等资源。首个技能将帮助验证内核补丁中 Fixes 标签所指的引入 bug 的提交，避免错误标签导致修复被应用到错误分支或遗漏。该提案仍在讨论中，文件存放位置尚未确定。</div>
+
+  <div class="article-body"><p>Linux 可能为 AI 代理技能设立新家</p><p>一个提议中的 agents 目录将存放面向编码助手的技能及其他资源，首个技能用于找出 bug 背后的提交。</p><p>内核补丁中的 Fixes 标签指向引入 bug 的提交，但最后触及有问题的代码行的提交可能只是把代码移到了新文件。</p><p>Sasha Levin 是稳定版和长期支持内核树的共同维护者，他希望 AI 编码助手在给 bug 分配 Fixes 标签之前，先验证是哪个提交引入了该 bug。上周他在邮件列表中提出了这一想法，建议在内核树中新增一个 agents 目录来存放实现该功能的技能。</p><p>该提案在内核源码树顶层新增一个目录，用于存放面向编码助手的技能、提示词及其他资源。同时还会新增一个 MAINTAINERS 条目来覆盖该目录。</p><p>每个技能在 agents 目录下拥有自己的文件夹，并以 SKILL.md 文件作为入口点，使用 Markdown 编写。助手被要求直接从仓库中的路径读取资源，技能内部的链接相对于该技能所在文件夹。内核编码助手文档中新增的一节将描述这一布局。</p><p>Fixes 标签验证技能随第二个补丁一起提交，将成为该目录中的第一个技能。</p><p>为什么 Fixes 标签会出错？</p><p>Levin 表示，这一系列补丁源于 Ted Ts'o 关于稳定树工作中不正确标签的提问。他提到了帮助找到正确提交的 LLM 工作流。</p><p>他还提到这一请求来自与 Hannes Reinecke 的一次交谈，后者估计有 15% 到 20% 的 Fixes 标签是错误的。</p><p>这不仅仅是记录问题，因为稳定版维护者和发行版正是通过该标签来确定哪些内核需要特定的修复。错误的标签可能导致修复被发送到错误的分支，或者让 bug 得不到修补。</p><p>该技能读取 Git 历史并返回一个带有证据的 Fixes 标签建议，同时不改动提交本身。</p><p>SKILL.md 文件指出，没有任何单一线索能确定 Fixes 标签应该指向哪个提交，即使是已有的标签也不行。该代理会解释 bug 是如何失败的，追踪候选提交，并将每个候选与其父提交进行比较。</p><p>它会区分添加代码的提交、使代码产生缺陷的提交，以及后来仅仅暴露该缺陷的变更。</p><p>对于向后移植的修复，它会检查 bug 是来自原始变更，还是来自该变更为适配旧内核所做的调整。合并、回滚和不完整的历史记录都有各自的处理方式。</p><p>当无法确定来源时，它不返回标签，而是列出候选提交和缺失的信息，修复保持草稿状态，直到有人解决为止。</p><p>仍在进行中</p><p>第二个补丁将在内核的编码助手文档中新增一节，说明助手在最终确定 bug 修复或其提交信息之前，以及在审查现有标签时，必须遵循该指南。</p><p>文档中提交修复的步骤将要求提供经过验证的标签，而目前只要求提供 Fixes 标签。请注意，该技能不会编写提交信息、应用标签，也不会决定修复是否应进入稳定版。</p><p>这一系列补丁延续了 Levin 此前推动内核 AI 编码助手政策的努力，该政策包括一项内核终止开关的提案。</p><p>文件应该放在哪里仍未确定。介绍性补丁信息中说他不确定它们应该放在 Documentation 下，还是放在根目录下单独的 agents 目录中。</p><p>Greg Kroah-Hartman 询问该系列补丁是否会修复因缺少 MAINTAINERS 文件而跳过内核指南的工具。Sasha 回复说这是另一个独立问题。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热衷于开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的技术爱好者。</p><p>Linus Torvalds 表示他喜欢使用 AI，同时他的新内核分支致谢 Claude Code</p><p>openEuler 正在革新开源社区的开发体验</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/linux-ai-agent-skills-directory-proposal/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

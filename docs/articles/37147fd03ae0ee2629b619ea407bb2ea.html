@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ubuntu 发布其 AI 语音听写工具 Myna 的技术预览版 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月13日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Ubuntu 发布其 AI 语音听写工具 Myna 的技术预览版</h1>
+
+  <div class="article-summary">Ubuntu 发布了 AI 语音转文字工具 Myna 的技术预览版，可在 Ubuntu 24.04 LTS、26.04 LTS 和 26.10 的 GNOME Wayland 桌面上安装测试。该工具使用本地 ASR 模型，支持在任意文本框中听写，音频仅在内存中处理，不会存储或上传。目前提供三种开源模型可选，Canonical 计划后续支持更多桌面环境。</div>
+
+  <div class="article-body"><p>Ubuntu 发布了其 AI 语音听写工具 Myna 的技术预览版</p><p>Ubuntu 桌面版全新的 AI 驱动语音转文字工具 Myna 现已作为技术预览版开放安装。</p><p>它使用本地自动语音识别（ASR）AI 模型，因此你可以在桌面上的任何文本框中听写，无论是文字处理器、网页浏览器、GNOME Shell 搜索框，甚至是终端。</p><p>该功能可在 Ubuntu 24.04 LTS、26.04 LTS 和 26.10 上测试，但仅限使用默认 GNOME 桌面和 Wayland 的情况。Canonical 计划在后续版本中增加对其他桌面环境的支持。</p><p>Jean Baptiste Lallement 表示，虽然该功能“仍处于早期阶段”，但现在已经“准备好让社区试用”。</p><p>它由主程序、一个 GUI 设置工具以及作为 snap 安装的 AI 模型组成。你分配一个键盘快捷键，在文本框获得焦点时按下它，说话，说完再按一次，文字就会显示出来。</p><p>所有音频都在内存中处理，随后被丢弃——没有任何内容会被留存、存储或发送出去用于训练任何东西。</p><p>如果目标文本框因为你点击了别处或另一个应用弹出而失去焦点，你的话语会丢失，而不会被意外粘贴到你可能并不想要的输入框中。</p><p>在技术预览版中，有三种开放权重的语音转文字模型可供选择：Nvidia 的……有些可以在 CPU 上运行，有些可以使用 GPU，有些更擅长非英语语言，等等。</p><p>帮助测试并改进它</p><p>它通过热键触发</p><p>自 6 月发布公告以来，我一直在跟踪 Myna 的开发，8 月发布了它的实操视频，9 月又向大家展示了它，为今天的技术预览做准备。</p><p>安装指南仍然适用，所以如果你想试用，请查看那篇文章。</p><p>好用吗？是的——它运行得出奇地好。它不如 Google 面向 Android 和 Googlebook 笔记本电脑的云端 STT 技术那么聪明，但 Myna 完全在设备端运行，音频不会被发送到任何地方，而且完全原生集成于 Ubuntu。</p><p>但它并不稳定；Canonical 表示它正在积极开发中，未来几个月功能可能会变化、损坏或演进，还会提供更多转录模型。</p><p>如果你试用它，请务必分享你对它工作效果的看法。</p><p>它会超越单纯的听写工具吗？它现在还不是语音助手，但按下热键（就像 macOS 上的 Siri 那样）让它做事情的想法听起来是可行的——有些人可能会说这是必然的。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/ubuntu-release-myna-tech-preview" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
