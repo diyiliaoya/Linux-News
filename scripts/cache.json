@@ -15145,5 +15145,203 @@
     "title_zh": "Mozilla Firefox 158 现已开放下载，以下是新增功能",
     "summary_zh": "Mozilla Firefox 158 开源网页浏览器现已开放下载，带来了改进的 PDF 处理、新标签页更新、智能窗口中的表单填写优化等功能。",
     "fulltext_zh": "Mozilla Firefox 158 开源网页浏览器现已开放下载，带来了改进的 PDF 处理、新标签页更新、智能窗口中的表单填写优化等功能。\n\n文章 Mozilla Firefox 158 现已开放下载，以下是新增功能 首次出现在 9to5Linux 上——未经许可请勿转载本文。此 RSS 源仅供读者使用，而非抓取者。"
+  },
+  "fedc39ee1422c404b02adeb980f504c7": {
+    "id": "fedc39ee1422c404b02adeb980f504c7",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/onlyoffice-10-expands-ai-tools",
+    "title_en": "ONLYOFFICE 10.0 is a ‘fully rebuilt app’ with expanded AI tools",
+    "summary_en": "A new version of free, open-source productivity suite ONLYOFFICE is out, bringing more than a thousand bug fixes and an expanded set of AI features. ONLYOFFICE Desktop Editors v10.0 is billed as a &#8220;fully rebuilt app&#8221;, and the developers warn those upgrading from earlier versions that not all of their settings and preferences will transfer over. Notably, its AI integrations are no longer included as a plugin that ships with the app. Inside, AI features in ONLYOFFICE 10.0 are provided ",
+    "pub_date": "Tue, 13 Oct 2026 18:16:11 +0000",
+    "title_zh": "ONLYOFFICE 10.0 是一个“完全重建的应用”，扩展了 AI 工具",
+    "summary_zh": "ONLYOFFICE 发布 10.0 版本，号称“完全重建”，带来超千项修复和扩展的 AI 功能。AI 不再作为内置插件，改为需单独下载安装的附加组件，支持摘要、问答、格式化等操作，并可连接网络和 MCP 服务器。此外还改进了文档编辑器、电子表格和演示文稿的诸多功能，如元数据清除、协同编辑跟随、公式优化等。该套件免费开源，支持 Windows、macOS 和 Linux。",
+    "fulltext_zh": "免费开源生产力套件 ONLYOFFICE 的新版本发布，带来了超过一千项错误修复和扩展的 AI 功能。\n\nONLYOFFICE 桌面编辑器 v10.0 被称为“完全重建的应用”，开发者警告从早期版本升级的用户，并非所有设置和偏好都会迁移过来。\n\n值得注意的是，其 AI 集成不再作为应用自带的插件提供。\n\n在 ONLYOFFICE 10.0 中，AI 功能通过一个单独的附加组件提供。该组件需要下载并安装（应用内有相应流程）。据开发者称，由于用户反馈，旧的 AI 插件已从开源构建中移除。\n\n安装并配置后（需要云服务商 API 或通过类似方式运行的本地 LLM），它可以在套件的所有文档编辑器中做更多事情。团队表示“AI 理解每个文件的上下文，其建议保持相关且有用”。\n\n不仅仅是摘要和生成，它可以生成打开文档的摘要或回答关于其内容的问题。在其他应用中，如电子表格，AI 可用于执行任务，例如改进文本格式、创建目录等。\n\n界面有适合常见用例的预设提示，但你可以创建一次性任务，或创建作为协作编辑器与你一起工作的代理，在文档上实时协作，在你编写、编辑和更新内容时同步进行。\n\nAI 现在还可以访问网络，并与多上下文协议（MCP）服务器交互，根据用例从其他地方拉取、收集或查询数据。\n\nv10.0 中的非 AI 变更\n\n本地文档模板不再包含在 ONLYOFFICE 中，仅保留基于云的选项。Linux 构建中窗口边框厚度减少，并且终于添加了窗口阴影。每个编辑器也有各自的改进。\n\n文档编辑器现在能够剥离文档元数据并移除注释。可以通过签名面板添加签名。注释面板现在提供所有注释的列表，并新增了注释设置面板。\n\n在文档中，将编号项目粘贴到已有列表的文档时，可以选择继续列表或重新开始编号。\n\n协同编辑时，你现在可以跳转到他人的光标并跟随其工作。具有精确行距的段落文本现在按行裁剪，从右到左的文档能如预期处理公式和其他内联对象。\n\n电子表格将在公式栏中高亮公式适用的范围，增加了单元格值自动完成的开关，并且现在可以保存为 XLSX 格式（对于需要将文件发送给使用旧版软件的人而言很方便）。\n\n引用整列或整行的数组公式的计算也变得更快速，计算时使用更少内存。\n\n演示文稿有各种新的打印模式（对应各种新的视图模式），以及设置隐藏幻灯片、幻灯片背景和边框、注释和幻灯片编号是否出现在打印页面上的选项。\n\nONLYOFFICE 桌面编辑器是适用于 Windows、macOS 或 Linux 的免费开源软件。\n\n从官方网站下载最新版本。每个版本的安装程序可以在下载页面找到，其中有适用于 Ubuntu、Linux Mint 等的 .Deb 包。\n\n在 Linux 上，独立版本不会自动更新到新版本，但如果你更喜欢自动更新，可以安装官方版本。"
+  },
+  "9649505a5a6bf39faa0c5b739cbf1e90": {
+    "id": "9649505a5a6bf39faa0c5b739cbf1e90",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/linux-mint-27-adrien-due-at-christmas",
+    "title_en": "Linux Mint 27 ‘Adrien’ due this Christmas with MORE new apps",
+    "summary_en": "Linux Mint shook up its release schedule this year and now it&#8217;s shaking up its versioning scheme as well – the next major release won&#8217;t be Linux Mint 23, but Linux Mint 27. Releases will now be numbered by year. Linux Mint 27 will be followed by v28, and so on. The release also sees the start of a new series of release codenames. Mint has traditionally used feminine first names, cycling through the alphabet from Linux Mint 1.0 &#8216;Ada&#8217; in 2006 through to Linux Mint 22.3 &#82",
+    "pub_date": "Tue, 13 Oct 2026 15:09:09 +0000",
+    "title_zh": "Linux Mint 27 'Adrien' 将于今年圣诞节发布，带来更多新应用",
+    "summary_zh": "Linux Mint 宣布改变版本编号方式，下一版本将命名为 Linux Mint 27 'Adrien'，预计2026年圣诞节发布，基于 Ubuntu 26.04 LTS。此次更新将带来大量新功能和应用程序，包括日历、闹钟、系统监视器、归档管理器和终端模拟器等，全部用 Python 编写，注重用户友好性。代号也从传统的女性名字改为男性名字。",
+    "fulltext_zh": "Linux Mint 27 'Adrien' 将于今年圣诞节发布，带来更多新应用 - OMG! Ubuntu\n\n今年早些时候，Linux Mint 调整了其发布计划，现在又改变了版本编号方式——下一个主要版本将不是 Linux Mint 23，而是 Linux Mint 27。\n\n版本号现在将按年份编号。Linux Mint 27 之后将是 v28，依此类推。\n\n此次发布也开启了一系列新的版本代号。Mint 传统上使用女性名字，从2006年的 Linux Mint 1.0 'Ada' 开始，按字母顺序循环，一直到2026年的 'Zena'。随着 Linux Mint 27，这一系列回到 'A'，代号已公布为 'Adrien'。\n\n是的，Linux Mint 正在转向男性名字——为什么呢？\n\n多年来，Linux 社区中一些人指责 Mint 使用女性代号作为装饰是性别歧视，甚至是物化。虽然该发行版没有明说，但我怀疑这一转变，也许是无意识地，是对那些批评的回应。\n\n计划中的一次内容丰富的发布\n\nLinux Mint 27 中即将推出的两个新应用\n\n名字、数字——随便吧，对吧？我们大多数人关心的是功能和改进。\n\n在一篇博客文章中，Mint 的 Clement Lefebvre 表示，在从事这个基于 Ubuntu 的 Linux 发行版工作的20多年里，他不确定自己是否曾“见过如此多的变化和新功能在单个版本中实现”。\n\nMint 的新日历应用。另一个新添加的是受 Android 启发的工具，用于设置带有自定义声音和通知的重复闹钟。\n\n它还在开发更多新应用，包括一个新的系统监视器、一个由 7zip 驱动的新归档管理器，以及一个新的终端模拟器。全部用 Python 编写，旨在用户友好。\n\nLinux Mint 27 'Adrien' 将于2026年圣诞节到来，基于 Ubuntu 26.04 LTS 构建。据目前所知——尽管还有更多细节尚未公布——听起来今年年底发布后会有很多东西可以拆箱。"
+  },
+  "fe7d2d26c35b26e34b9733e55bedb630": {
+    "id": "fe7d2d26c35b26e34b9733e55bedb630",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/firefox-enterprise/",
+    "title_en": "With an Eye on Europe, Mozilla Launches Firefox Enterprise With Self-Hosted Browser Management",
+    "summary_en": "Mozilla has announced Firefox Enterprise, a commercial offering for businesses and government agencies. It combines Firefox with a management console that organizations can run on their own servers.",
+    "pub_date": "Tue, 13 Oct 2026 17:16:28 GMT",
+    "title_zh": "着眼欧洲，Mozilla推出Firefox企业版，支持自托管浏览器管理",
+    "summary_zh": "Mozilla发布Firefox企业版，将Firefox浏览器与可自托管的管理控制台结合，面向企业和政府机构。该产品提供扩展管理、遥测控制、AI工具开关、数据防泄漏及锁定模式等安全功能，并兼容现有身份认证与设备管理工具。初期重点销售市场为法国、德国、奥地利和瑞士，契合欧洲数字主权需求。Mozilla还在开发Thunderbird企业版，此举也为Mozilla开辟了新的营收渠道。",
+    "fulltext_zh": "着眼欧洲，Mozilla推出Firefox企业版，支持自托管浏览器管理\n\nMozilla宣布推出Firefox企业版，这是一项面向企业和政府机构的商业产品。它将Firefox与一个组织可以在自己服务器上运行的管理控制台相结合。\n\nMozilla推出了一款名为Firefox企业版的新产品。它基本上就是Firefox，但围绕私营和政府组织的需求构建。\n\n思路很简单。如果员工在工作中使用浏览器，组织就应该能够控制其设置、保护公司数据，并决定其管理系统的运行位置。\n\n因为大量工作直接在浏览器中完成。而常见的安全问题也恰恰发生在那里。对组织而言，保障安全既是优先事项，也是挑战。这正是这款“本地部署”版Firefox的用武之地。\n\n什么是Firefox企业版？\n\n可以把它看作是为IT团队配备了中央控制面板的Firefox。管理员无需分别设置每个浏览器，而是可以跨员工设备管理浏览器规则和访问权限。\n\nFirefox多年来一直支持企业部署，包括策略管理和延长支持版（ESR）。这一新产品增加了自托管管理平台、额外的安全控制以及专业支持。\n\n例如，你的IT团队可以决定员工可以使用哪些扩展。它还可以控制浏览器连接和遥测，并允许、限制或禁用AI工具。\n\n还有一些控制措施，可以根据所访问的网站，对涉及敏感数据的某些操作发出警告或予以阻止。安全团队可以将浏览器事件导出到他们的监控工具中，而锁定模式则为高风险浏览增加了限制。\n\nMozilla表示，组织可以保留其现有的登录提供商、设备管理工具和安全监控系统。Firefox企业版旨在与它们协同工作。\n\n该浏览器仍然使用Mozilla的Gecko引擎。这为组织提供了基于谷歌Chromium技术构建的浏览器之外的替代选择。\n\nFirefox企业版包含专业支持。如果你的组织使用普通版Firefox，可以单独购买支持服务。Mozilla尚未在产品页面上列出公开价格，因此你需要联系其销售团队。\n\nThunderbird企业版也即将推出\n\nMozilla还在开发Thunderbird企业版。它计划让组织能够从同一个Firefox企业版控制台管理电子邮件、日历和联系人。\n\n如果组织已经在同时使用这两个应用，这可能会让它更有用。不过，Thunderbird企业版仍在开发中，公告并未给出发布日期。\n\n非常适合欧洲推动数字独立的努力\n\nMozilla最初的销售重点是法国、德国、奥地利和瑞士，并计划拓展更多市场。其公告将欧洲推动数字主权置于此次发布的核心位置。\n\n简而言之，这就是要对你的技术和数据拥有更多控制权，而不是依赖少数几家大型供应商。\n\n我认为该运动的支持者会欢迎这种做法。在自己的服务器上运行管理控制台，可以让你更好地控制管理数据和策略的存放位置。使用单独的浏览器引擎也有助于避免在所有地方都依赖同一种技术。\n\nMozilla表示该浏览器是开源的，但并未确认管理控制台是否也是开源的。自托管并不自动意味着开源。\n\nMozilla创收的另一种方式\n\n这也为Mozilla提供了另一种带来收入的方式：销售企业服务和支持。\n\nMozilla仍然通过搜索合作依赖谷歌。如果Firefox企业版吸引到付费客户，这部分收入可能有助于减少Mozilla对谷歌的依赖。\n\n当然，它不会在一夜之间取代搜索收入，而且我们尚不知道这款面向企业的产品能赚多少钱。"
+  },
+  "9ec4267530346cad6ae632123151b178": {
+    "id": "9ec4267530346cad6ae632123151b178",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/openeuler-oss-prague/",
+    "title_en": "openEuler Wants Linux to Treat an Entire AI Cluster Like One Single Machine",
+    "summary_en": "At Open Source Summit Europe 2026, openEuler laid out how SuperPoD OS and Agentic Scaling change what an operating system is expected to do.",
+    "pub_date": "Tue, 13 Oct 2026 14:02:19 GMT",
+    "title_zh": "openEuler 希望 Linux 将整个 AI 集群视为一台单一机器",
+    "summary_zh": "在2026年欧洲开源峰会上，openEuler提出SuperPoD OS和Agentic Scaling，旨在让Linux操作系统将整个AI集群当作一台单一计算机来管理。该方案基于UnifiedBus互连协议，通过UB OS组件和服务核心实现内存池化、跨节点通信与故障隔离，可将节点故障通知延迟控制在500毫秒以内，并降低RPC和远程内存访问延迟20%。",
+    "fulltext_zh": "openEuler 希望 Linux 将整个 AI 集群视为一台单一机器\n\n在2026年欧洲开源峰会上，openEuler阐述了SuperPoD OS和Agentic Scaling如何改变人们对操作系统的期望。\n\n在Linux生命的大部分时间里，它一直围绕一个简单的假设构建。有一个盒子；它有CPU、内存和设备，内核负责管理它们。集群当然存在，但它们主要是操作系统上层的问题，即调度器、编排器和分布式框架的问题。\n\nAI基础设施想要更多。当今的训练和推理设置将数十个CPU、NPU、GPU和内存池紧密绑定在一起，使它们的行为不再像一组服务器，而更像一台单一但非常庞大的计算机。然后是AI代理，它们不仅运行模型，还会动态启动工具、沙箱和长时间运行的会话。\n\n这正是openEuler技术委员会主席胡欣蔚在布拉格举行的2026年欧洲开源峰会上发表主题演讲的核心内容。\n\n让我们看看openEuler如何围绕代理扩展对Linux进行创新。\n\n问题：服务器不再是单元\n\nopenEuler的主题演讲幻灯片将这一转变描述为“超越盒子”，从单一主机转向SuperPoD。SuperPoD是一个紧密互连的系统，其中跨多个节点的计算、内存和加速器被连接起来，并期望作为一个资源池工作。\n\n这带来了经典操作系统从未设计应对的麻烦。你需要的内存可能位于另一个节点上，一台机器的故障可能波及到其他机器，而在主机和加速器之间移动数据会成为瓶颈。并且必须有人来管理整个系统。\n\n胡欣蔚将openEuler为此设定的目标分为三类：易用性、可靠性和性能。\n\nSuperPoD OS：让一个机架看起来像一台服务器\n\n易用性目标雄心勃勃。openEuler希望运行时和SDK能在SuperPoD硬件上开箱即用，并由代理辅助系统管理，以便你可以“像管理一台服务器一样”管理一个SuperPoD。\n\n可靠性在这里至关重要。据胡欣蔚介绍，openEuler能以500毫秒或更低的延迟通知其他节点某个节点发生故障，并且能在共享内存出现故障时通知各个线程。它还旨在隔离故障，使其不会在同一主机上的进程之间或跨节点传播。还有“故障风暴抑制”，即对远程内存故障的快速响应，以免大量故障导致系统挂起。\n\n在性能方面，胡欣蔚的主题演讲引用了两个数字。UMDK，openEuler将其描述为面向SuperPoD的统一异构互连基础设施，将RPC延迟降低了20%。异步流水线加上统一内存寻址，将KV缓存操作中的RH2D（远程主机到设备）延迟降低了20%。\n\n所有这些都建立在UnifiedBus之上，这是一种与NVLink、RDMA和CXL同族的硬件互连协议。openEuler的架构幻灯片展示了构建在其上的两层。UB OS组件为现有操作系统组件增加了设备管理、内存池化、节点间通信和虚拟化。UB服务核心增加了更高级别的服务（内存、通信、I/O、资源引擎、虚拟化、无服务器以及编译器和运行时）。\n\n我认为最实用的部分是如何让应用程序接入这些能力。通用应用程序继续使用标准POSIX API，通过透明调用实现，而AI应用程序可以直接使用UB服务核心API。如果应用程序需要内存池，UBS引擎会找到哪些服务器可以腾出内存，从这些服务器导出内存，并将其导入本地机器。\n\n如果你想了解背景，我们曾更深入地介绍过UnifiedBus的基础知识。\n\n主线Linux的现状\n\nopenEuler并不孤单。主线Linux多年来一直在研究同一问题的内存方面，主要是通过一个开放互连标准，该标准允许服务器附加或共享超出其本地内存的内存。"
+  },
+  "e21dd66aa963d3e20ad1e0c0d0f78aea": {
+    "id": "e21dd66aa963d3e20ad1e0c0d0f78aea",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/onlyoffice-docs-10-release/",
+    "title_en": "With 10.0 Release, ONLYOFFICE Goes All in on AI, Making it the Most Modern Office Choice for Team Collaboration",
+    "summary_en": "There are apps for workflows and then every editor gets AI tools and new upgrades of its own in the latest release of ONLYOFFICE.",
+    "pub_date": "Tue, 13 Oct 2026 05:02:18 GMT",
+    "title_zh": "ONLYOFFICE 10.0 发布：全面拥抱 AI，打造最现代化的团队协作办公选择",
+    "summary_zh": "ONLYOFFICE 发布 10.0 版本，在所有编辑器中引入 AI 工具，但开源版本需单独安装。新版本新增主页和四个模块化应用（文档空间、协作空间、表单、AI 代理），支持 MCP 服务器。各编辑器获得 AI 聊天功能，可摘要、改写、翻译、校对文档，生成演示大纲，分析表格数据等。此外还改进了协作、电子表格性能、演示导出和打印设置。",
+    "fulltext_zh": "ONLYOFFICE 10.0 发布：全面拥抱 AI，打造最现代化的团队协作办公选择\n\n在最新发布的 ONLYOFFICE 中，不仅有工作流应用，每个编辑器还获得了 AI 工具和各自的新升级。\n\nONLYOFFICE 正在为其套件中的每个编辑器推出 AI 工具，但开源版本并未内置这些功能。该公司表示，这一选择是对用户反馈的回应，因此这些版本需要单独安装 AI 工具。\n\n如果你还不了解，他们有几个主要产品。ONLYOFFICE Docs 是可自托管或集成到其他平台的编辑器套件，而桌面版将编辑器带到 Linux、Windows 和 macOS，协作空间促进基于房间的协作。此外还有一套适用于 iOS 和 Android 的 Web 应用和移动应用。\n\n随着 ONLYOFFICE Docs 10.0 的发布，他们引入了大量修复，以及模块化应用，应能帮助简化你的工作流程。\n\n🆕 ONLYOFFICE Docs 10.0：有哪些新功能？\n\nONLYOFFICE Docs 现在有一个主页，其中包含一个应用类别，列出了四个预装的免费应用。每个都是可选的模块化应用，在需要时使用。\n\n文档空间负责存储、组织和共享文件，协作空间用于与他人协作，表单用于构建表单和分析回复，AI 代理可用于部署代理以自动化任务和回答问题。\n\n最后一个支持 MCP 服务器，可用于扩展推理、搜索和个性化知识库用例。\n\n编辑器方面呢？\n\n新增了“移除隐藏信息”选项，可在共享文件前清除元数据，保护选项卡提供签名选项，表格自动识别可用于电子表格。段落高级设置中新增了“保持与下段同页”功能，可防止标题与其内容分离，包括在表格和块内容中。\n\n图形公式等内联对象在从右到左的文档中表现更可靠，基于行的裁剪会修剪超出行高的内容。随 8.1 版本引入的水平线现在也有了自己的设置窗口。\n\n对于协作会话，编辑文件的用户列表中出现了一个新的“跟随”选项。如果点击它，你的鼠标光标将跳转到该用户的光标处；点击“跳转到用户”可跳转到该用户的位置。\n\n电子表格功能加速、可用性调整和公式辅助。大型工作簿应该感觉更快，因为样式和数据现在分开存储，处理的单元格更少。\n\n复制和剪切操作现在会在所选单元格上绘制动态轮廓，便于快速验证，保存并重新打开文件时工作表背景保持不变，键入时会出现函数常量提示。\n\n在演示文稿中，你现在可以将演示文稿导出为 PDF 或视频文件，而演示者视图选项卡可让你访问一系列新视图，包括幻灯片、备注和计时器。\n\n打印设置也更广泛，备注、讲义和大纲都可以从打印菜单中打印。\n\n每个编辑器都有一个专用的 AI 选项卡，可启动 AI 聊天，常用操作作为提示预加载， alongside 你自己保存的提示。\n\n文本文档可以摘要、改写、翻译和校对，并根据请求添加目录、标题和格式。演示文稿可获得大纲、幻灯片标题、演讲者备注和视觉创意。\n\n在 PDF 中，AI 可以一键摘要、回答问题、起草电子邮件和编辑机密细节。在电子表格中，它可以整理杂乱数据、编写和解释公式、发现趋势，并构建预测和数据透视表。\n\n对于更改语气等一次性任务，有诸如 AI 工具这样的工具在编辑时持续运行。虽然这些仅在企业版中提供，但你需要充值钱包才能访问 ONLYOFFICE AI 服务，该服务为你处理模型配置和部署。\n\n对于自托管，你将能够使用任何流行的基于云的 AI 服务，或通过 Ollama 等工具使用本地服务。\n\n📥 下载 ONLYOFFICE Docs 10.0"
+  },
+  "cd7155a77b82431f0515be9c981b7d3b": {
+    "id": "cd7155a77b82431f0515be9c981b7d3b",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Mesa-Torx-YOLOX-PyTorch",
+    "title_en": "Mesa Expands NPU Capabilities With Support For YOLOX With PyTorch",
+    "summary_en": "While Mesa is predominantly used for GPU drivers, open-source developer Tomeu Vizoso continues advancing the capabilities of NPUs within the Mesa driver stack...",
+    "pub_date": "Tue, 13 Oct 2026 20:54:50 -0400",
+    "title_zh": "Mesa 扩展 NPU 能力，支持 PyTorch 的 YOLOX",
+    "summary_zh": "Mesa 开源开发者持续增强 NPU 驱动能力，近日合并了对 PyTorch ExecuTorch 下 YOLOX 模型的支持。该功能通过 Mesa 的 Torx 硬件后端实现，已在 NXP i.MX93 SoC 的 Arm EthosU NPU 上测试，Vivante NPU 的 Etnaviv 驱动虽支持所有操作但尚缺基础设施。此支持已纳入 Mesa 26.3。",
+    "fulltext_zh": "虽然 Mesa 主要用于 GPU 驱动，但开源开发者仍在持续推进 Mesa 驱动栈中 NPU 的能力。\n\nTomeu 今天在 Mesa 的 Torx 代码中合并了对 YOLOX 的支持。Torx 是 Mesa 中的硬件后端，作为 PyTorch ExecuTorch 机器学习模型的编译和执行路径。\n\n通过现已合并的代码，用户可以使用 Mesa 中的 NPU 驱动来运行 PyTorch 的 YOLOX。目前已在使用 NXP i.MX93 SoC 的 Arm EthosU NPU 上进行了测试。用于 Vivante NPU 的 Etnaviv 驱动应支持所有操作，但仍缺乏与 Torx 配合使用的基础设施工作。\n\n希望了解更多关于通过 Torx 为 Mesa NPU 驱动提供 YOLOX 支持的信息的人，可以通过以下链接了解：\n\n现已纳入 Mesa 26.3。\n\nValve 将 VK_AMD_anti_lag 支持引入 Mesa 26.3 中的 AMD RADV 驱动\n\nMesa 开发者正在考虑正式治理模型\n\nImagination 谈论其开源 Vulkan 驱动、Volcanic 架构计划\n\nApex Compute 为其硬件开发开源 Mesa Vulkan 驱动\n\nMesa 放弃维护不善且很少使用的 Direct3D 10 用户模式驱动\n\nRusticl 在 Mesa 中的 Rust OpenCL 度过了美好的一年，支持 3.1 及更多驱动\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了 20,000 多篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：\n\nLinus Torvalds 正在用 Claude Code 进行一项重大的 Linux 内核改进\n\nLinus Torvalds“践行了自己的主张”，用 AI 使代码更易理解并发现了更多错误\n\nMeta 为 Linux 开发压缩 RAM“CRAM”：比 ZRAM 和 Zswap 更好\n\nAI 用 Rust 实现了 Adobe Photoshop 和 Premier 的“开源、洁净室”版本\n\nLinux 的 ZRAM 重新设计以实现更大的内存节省和更好的性能\n\nSteam Beta 现在默认将非 Steam Windows 二进制文件使用 Proton\n\nUbuntu 目前正遭受持续 DDoS 攻击\n\nX.Org Server 和 XWayland 中又发现十几个漏洞\n\n同时拥有无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "096f4aed3c38eb35c5daab9c9e956c40": {
+    "id": "096f4aed3c38eb35c5daab9c9e956c40",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Intel-ISPC-1.32-Released",
+    "title_en": "Intel ISPC 1.32 Released With AVX10.2 & APX Support, Even AMD Zen 6 Too",
+    "summary_en": "Intel ISPC 1.32 released today as the newest version of this Intel Implicit SPMD Program Compiler built atop LLVM/Clang. ISPC is a variant of the C programming language with extensiosn catering to Single Program Multiple Data programming for both Intel CPUs and GPUs...",
+    "pub_date": "Tue, 13 Oct 2026 16:57:52 -0400",
+    "title_zh": "Intel ISPC 1.32 发布，支持 AVX10.2 与 APX，甚至兼容 AMD Zen 6",
+    "summary_zh": "Intel 发布了 ISPC 1.32，该版本基于 LLVM 23.1.2，新增对 AVX10.2 和 APX 的完整后端支持，面向未来的 Diamond Rapids 服务器和 Nova Lake 客户端处理器。同时标准库加入并行位 deposit/extract 函数，并新增 AMD Zen 6 的 --cpu=znver6 支持，由 Intel 工程师贡献。",
+    "fulltext_zh": "Intel ISPC 1.32 今日发布，这是基于 LLVM/Clang 构建的 Intel 隐式 SPMD 程序编译器的最新版本。ISPC 是 C 编程语言的一个变体，其扩展面向单程序多数据编程，同时支持 Intel CPU 和 GPU。\n\n在 ISPC 1.32 中，他们引入了 LLVM 23.1.2 作为基础编译器栈，该栈现在对 AVX10.2 以及高级性能扩展（APX）都提供了完整的后端支持。这些 APX 和 AVX10.2 新增功能对于即将推出的 Diamond Rapids 服务器处理器和 Nova Lake 客户端处理器非常重要。\n\nISPC 还向标准库添加了新的并行位 deposit 和 extract 函数，现在为 AMD Zen 6 处理器提供了“--cpu=znver6”选项，以及各种其他增强功能。出于好奇，我查了一下，是一位 Intel 工程师为 Intel ISPC 添加了 Zen 6 CPU 支持。\n\nISPC 1.32 的下载和更多详细信息请访问\nIntel 宣布面向 Crescent Island 的 GPU D 系列\nIntel 发布针对 Meteor Lake 及更新平台的 HDMI 2.1 FRL 的更新 Linux 驱动代码\nIntel LPMD 对 Linux 游戏性能和能效的重要性\nLinux 7.4 继续为 Intel 坚固的 Panther Lake 做准备\nIntel 准备在 Linux 7.4 中为 Battlemage 带来重大改进\nIntel Iris 开源驱动现已支持高效的 64 位寻址模式\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\nLinus Torvalds 正利用 Claude Code 对 Linux 内核进行重大改进\nLinus Torvalds“践行了自己的主张”，用 AI 使代码更易理解并发现了更多错误\nMeta 为 Linux 开发压缩内存“CRAM”：优于 ZRAM 和 Zswap\nAI 用 Rust 实现了 Adobe Photoshop 和 Premier 的“开源、洁净室”版本\nLinux 的 ZRAM 经过重新设计，以实现更大的内存节省和更好的性能\nSteam 测试版现在默认将非 Steam Windows 二进制文件使用 Proton 运行\nUbuntu 目前正遭受持续的 DDoS 攻击\nX.Org Server 和 XWayland 中又发现十几个漏洞\n同时享受无广告浏览，\n单页文章视图\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "2f6958b8847d0fbcfd6e8afdd061e953": {
+    "id": "2f6958b8847d0fbcfd6e8afdd061e953",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/framework-laptop-12-wildcat-lake",
+    "title_en": "Framework Laptop 12 Offers Improved Performance & Efficiency With Intel Core 3 Wildcat Lake",
+    "summary_en": "Last year Framework Computer launched the Framework Laptop 12 as a convertible, 2-in-1 laptop that was friendly with Linux and upgradeable inline with the beloved Framework Laptop 13 and 16 models. The initial Framework Laptop 12 was nice but the use of an Intel Raptor Lake U SoC in 2025 wasn't all that exciting. Now though Framework Laptop 12 is available with Intel Core 3 \"Wildcat Lake\" for offering better performance and power efficiency.",
+    "pub_date": "Tue, 13 Oct 2026 11:00:00 -0400",
+    "title_zh": "Framework Laptop 12 搭载 Intel Core 3 Wildcat Lake，性能与能效双双提升",
+    "summary_zh": "Framework Laptop 12 二合一笔记本现已升级至 Intel Core 3 Wildcat Lake 处理器，基于 Intel 18A 工艺，提供 Core 3 304、Core 5 230 和 Core 7 350 三种配置，最高 4.8GHz，显著提升性能与能效。评测机型为 Core 7 350，搭配 32GB DDR5-5600 内存。Framework 推荐使用 Fedora 44 或 Linux 7.1 以上内核以获得最佳体验，并新增 Fedora KDE Plasma 预装选项。",
+    "fulltext_zh": "Framework Laptop 12 搭载 Intel Core 3 Wildcat Lake，性能与能效双双提升\n\n2026 年 10 月 13 日 上午 11:00 EDT\n\n去年，Framework Computer 推出了 Framework Laptop 12，这是一款可翻转的二合一笔记本，对 Linux 友好，并且与备受喜爱的 Framework Laptop 13 和 16 型号一样支持升级。初代 Framework Laptop 12 不错，但 2025 年使用的 Intel Raptor Lake U SoC 并不那么令人兴奋。不过现在，Framework Laptop 12 已可选配 Intel Core 3 \"Wildcat Lake\"，带来更好的性能和能效。\n\n搭载 Intel Wildcat Lake 的 Framework Laptop 12 评测禁令于今日解除。过去几周我们一直在测试它，对于这款二合一笔记本来说，这是一次扎实的升级，提升了性能和能效。对于目前仍在使用初代 Raptor Lake U 硬件的用户来说，这未必太值得升级；但对于那些想要比初代型号性能更强、能效更高的用户来说，现在有了基于 Intel 18A 的 Wildcat Lake 选项。\n\n早在 8 月，Framework 就宣布了新的 Wildcat Lake 选项，并于 10 月开始发货。现在我们已经到了这个里程碑。随着新款 Framework Laptop 12 的推出，他们还引入了 Fedora Linux 搭配 KDE Plasma 作为预装选项。\n\nFramework Laptop 12 的 Wildcat Lake 选项包括：Core 3 304，配备 1 个 P 核和 4 个 LPE 核；Core 5 230，配备 2 个 P 核和 4 个 LPE 核；以及旗舰级 Core 7 350，配备 2 个 P 核和 4 个 LPE 核，最高频率可达 4.8GHz。幸运的是，我们的评测机是 Core 7 350 选项，得以体验顶级的 Wildcat Lake 性能。Core 7 350 的基础功耗为 15 瓦，最大睿频功耗为 35 瓦。\n\nWildcat Lake 仅支持单通道 DDR5 或 LPDDR5X 内存。Framework 目前为该笔记本提供一系列 DDR5-5600 DIMM，我们的评测机配备单条 32GB DDR5-5600 模块。\n\n因此，用于测试的更新版 Framework Laptop 12 配置为：Core 7 350、1 x 32GB DDR5-5600、WD_BLACK SN770M 500GB，以及集成 Intel 显卡。\n\n对于 Linux 使用，Framework 目前推荐 Fedora 44 以获得最流畅的体验。他们的主要建议是使用 Linux 7.1 或更新版本的内核发行版，因为 Intel BE213 WiFi 需要此支持。由于 Ubuntu 26.04 LTS 使用 Linux 7.0，这使得当前的 Ubuntu 版本陷入困境，除非手动升级内核。无论如何，Ubuntu 26.10 即将在几天内发布，Fedora 45 也即将到来，而像 CachyOS 这样的滚动发行版已经满足这一要求。\n\nCHUWI UniBook 搭载 Intel Wildcat Lake，售价 449 美元的 Linux 友好笔记本\nHP Z4 G6i：搭载 Intel Xeon 600 系列的 Linux 友好工作站\nFramework Laptop 16 搭载 GeForce RTX 5070 12GB、一体式键盘和触觉触摸板\nFramework Laptop 13 Pro：旨在成为最佳可升级 Linux 笔记本之一\nSnapdragon X Elite 笔记本在 Ubuntu 26.04 LTS 上的体验仍然不佳\nBOSGAME VTA-439：搭载 AMD Ryzen AI 9 HX 470 的优秀 Linux 友好迷你主机\n\n享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookies\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "06cde442bfb8eecd4a5cb153ca3d1187": {
+    "id": "06cde442bfb8eecd4a5cb153ca3d1187",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-Dropping-Assisted-By-Req",
+    "title_en": "Linux Kernel Developers Plan To Remove \"Assisted-By\" Tag Requirement For AI/LLM Usage",
+    "summary_en": "Currently there is a policy requirement for Linux kernel patches where AI tools contributed, they should be documented with an \"Assisted-by:\" tag to make clear AI was used in the creation of said patch. But Linux kernel developers are now looking at dropping this requirement amid the rampant use of AI/LLMs...",
+    "pub_date": "Tue, 13 Oct 2026 09:28:54 -0400",
+    "title_zh": "Linux内核开发者计划取消AI/LLM使用的“Assisted-By”标签要求",
+    "summary_zh": "Linux内核开发者计划取消在AI工具参与补丁创建时需添加“Assisted-by:”标签的政策要求。上周在布拉格举行的Linux维护者峰会上，主要维护者已就此达成共识，相关补丁已发布至内核邮件列表。尽管社区对此存在分歧，有人支持取消，也有人希望保留以明确AI参与情况，但该决定预计将按计划推进。",
+    "fulltext_zh": "Linux内核开发者计划取消AI/LLM使用的“Assisted-By”标签要求\n\n目前，对于AI工具参与贡献的Linux内核补丁，有一项政策要求：应使用“Assisted-by:”标签进行记录，以明确该补丁在创建过程中使用了AI。但随着AI/LLM的广泛使用，Linux内核开发者现在正考虑取消这一要求。\n\n取消Assisted-by要求的补丁最近已发布到Linux内核邮件列表。据报道，上周在布拉格举行的Linux维护者峰会上，与会者已就弃用该要求达成共识。因此，该补丁正在删除规定需要使用assisted-by标签的相关文档。\n\n并非所有人都支持Linux内核邮件列表上的这一决定。一些人表示希望取消该要求，而另一些人则希望保留，以便明确补丁是否得到了AI/LLM的帮助。因此，关于是否应取消该标签，各方意见不一。但由于上周峰会上主要维护者已达成一致，该计划很可能在不久的将来按计划推进。\n\n今年夏天也曾讨论过这一归属要求的话题，详见《Linux内核开发者再次讨论AI代理归属——可能取消该要求》，以获取更多背景信息。\n\nLinus Torvalds“践行了自己的主张”，使用AI使代码更易理解并发现了更多漏洞\nLinux 7.3-rc7发布，Linux 7.3有望下周末正式发布\nLinus Torvalds正使用Claude Code进行一项重大的Linux内核改进\nLinux 7.4将带来许多笔记本电脑和游戏掌机支持改进\nLinux补丁终于使安全启动/锁定模式下休眠成为可能\n为Linux内核提议新的AI代理资源，AI技能将帮助开发者\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nLinus Torvalds正使用Claude Code进行一项重大的Linux内核改进\nLinus Torvalds“践行了自己的主张”，使用AI使代码更易理解并发现了更多漏洞\nMeta为Linux开发压缩RAM“CRAM”：优于ZRAM和Zswap\nAI用Rust实现了Adobe Photoshop和Premier的“开源、洁净室”版本\nLinux的ZRAM经过重新设计，以实现更大的内存节省和更好的性能\nSteam Beta现在默认将非Steam Windows二进制文件使用Proton运行\nUbuntu目前正遭受持续DDoS攻击\nX.Org Server和XWayland中又发现十几个漏洞\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "b80b97276e3e59d86d39e9bc80601db4": {
+    "id": "b80b97276e3e59d86d39e9bc80601db4",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Firefox-159-Beta",
+    "title_en": "Firefox 159 Beta Released With Fix For Tabs On Wayland",
+    "summary_en": "With Firefox 158 released, Firefox 159 is now in beta ahead of its official release in two weeks...",
+    "pub_date": "Tue, 13 Oct 2026 09:14:11 -0400",
+    "title_zh": "Firefox 159 Beta 版发布，修复 Wayland 下标签页问题",
+    "summary_zh": "Firefox 159 已进入 Beta 测试阶段，预计两周后正式发布。该版本为 Linux 用户带来重要的 Wayland 修复，解决了点击标签页时有时会脱离成新窗口的问题。此外，保存的密码默认可从侧边栏访问，无需添加密码工具，并包含多项 Windows 和 macOS 修复。",
+    "fulltext_zh": "Firefox 159 Beta 版发布，修复 Wayland 下标签页问题\n\n2026年10月13日上午09:14 EDT\n\nFirefox 159 现已进入 Beta 测试阶段，距离正式发布还有两周。\n\n对于 Linux 用户，Firefox 159 带来了一个重要的 Wayland 修复。Firefox 159 修复了在使用 Wayland 时，点击标签页有时会脱离成新窗口的问题。\n\nFirefox 159 Beta 版还默认让保存的密码可从侧边栏访问，无需添加密码工具。\n\nFirefox 159 还包含各种 Windows 和 macOS 修复，修复了在关闭视频动画效果时 Windows 和 Linux 上菜单和面板淡入的问题，以及其他随机修复。\n\n今日 Firefox 159 Beta 版的下载和更多详情，请访问\n\nFirefox 158 现已发布，默认支持 JPEG-XL\nFirefox 157 现已发布，带来视觉刷新、WebRTC 硬件 AV1 解码\nFirefox 157 Beta 版发布，包含最新增强功能\nFirefox 156 发布，内置 PDF 查看器启动速度提升高达 45%\nFirefox 155 发布，通过 Happy Eyeballs v3 加快页面加载，HTTP/3 支持 QUIC v2\nMozilla 展示在 Firefox 157 中发布 JPEG-XL 的计划\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nLinus Torvalds 正在利用 Claude Code 进行一项重大的 Linux 内核改进\nLinus Torvalds “践行了自己的主张”，利用 AI 使代码更易理解并发现了更多错误\nMeta 为 Linux 开发压缩内存“CRAM”：优于 ZRAM 和 Zswap\nAI 用 Rust 实现了 Adobe Photoshop 和 Premier 的“开源、洁净室”版本\nLinux 的 ZRAM 经过重新设计，实现更大内存节省和更好性能\nSteam Beta 版现在默认将非 Steam Windows 二进制文件使用 Proton 运行\nUbuntu 目前正遭受持续 DDoS 攻击\nX.Org Server 和 XWayland 中又发现十几个漏洞\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "51bb274cb5ba9e94f6530d15d74c43e6": {
+    "id": "51bb274cb5ba9e94f6530d15d74c43e6",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/openwa-send-linux-server-alerts-to-whatsapp-with-a-free-self-hosted-api/",
+    "title_en": "OpenWA: Send Linux Server Alerts to WhatsApp with a Free Self-Hosted API",
+    "summary_en": "Learn how to send Linux server alerts to WhatsApp using OpenWA, a free, self-hosted API for automated notifications and server monitoring.\nThe post OpenWA: Send Linux Server Alerts to WhatsApp with a Free Self-Hosted API appeared first on Linux Today.",
+    "pub_date": "Tue, 13 Oct 2026 07:24:58 +0000",
+    "title_zh": "OpenWA：使用免费自托管 API 将 Linux 服务器警报发送到 WhatsApp",
+    "summary_zh": "本文介绍如何使用 OpenWA 这一免费自托管 API，将 Linux 服务器警报发送到 WhatsApp，实现自动化通知与服务器监控。",
+    "fulltext_zh": "了解如何使用 OpenWA 将 Linux 服务器警报发送到 WhatsApp，这是一个用于自动化通知和服务器监控的免费自托管 API。\n\n文章《OpenWA：使用免费自托管 API 将 Linux 服务器警报发送到 WhatsApp》首发于 Linux Today。"
+  },
+  "45d2a666c3a745df55f1f2ae3f32666d": {
+    "id": "45d2a666c3a745df55f1f2ae3f32666d",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/mozilla-thunderbird-is-finally-coming-to-iphone-and-ipad/",
+    "title_en": "Mozilla Thunderbird Is Finally Coming to iPhone and iPad",
+    "summary_en": "Mozilla Thunderbird is coming to iPhone and iPad with a native iOS email app, modern interface, and plans for community testing in the coming months.\nThe post Mozilla Thunderbird Is Finally Coming to iPhone and iPad appeared first on Linux Today.",
+    "pub_date": "Tue, 13 Oct 2026 07:22:29 +0000",
+    "title_zh": "Mozilla Thunderbird 终于登陆 iPhone 和 iPad",
+    "summary_zh": "Mozilla Thunderbird 即将推出原生 iOS 邮件应用，登陆 iPhone 和 iPad。该应用将采用现代化界面，并计划在未来几个月内开展社区测试。这标志着 Thunderbird 在移动端的重要扩展。",
+    "fulltext_zh": "Mozilla Thunderbird 即将登陆 iPhone 和 iPad，推出原生 iOS 邮件应用，采用现代化界面，并计划在未来几个月内进行社区测试。\n\n文章《Mozilla Thunderbird 终于登陆 iPhone 和 iPad》最初发布于 Linux Today。"
+  },
+  "798ad541703015221adbf60c88ef31db": {
+    "id": "798ad541703015221adbf60c88ef31db",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/new-spectre-v2-btr-attack-can-leak-linux-kernel-memory/",
+    "title_en": "New Spectre-v2 BTR Attack Can Leak Linux Kernel Memory",
+    "summary_en": "Researchers uncover a new Spectre-v2 BTR attack that can leak sensitive Linux kernel memory by exploiting stale CPU branch predictions.\nThe post New Spectre-v2 BTR Attack Can Leak Linux Kernel Memory appeared first on Linux Today.",
+    "pub_date": "Tue, 13 Oct 2026 07:19:37 +0000",
+    "title_zh": "新型 Spectre-v2 BTR 攻击可泄露 Linux 内核内存",
+    "summary_zh": "研究人员发现了一种新型 Spectre-v2 BTR 攻击，该攻击利用过时的 CPU 分支预测来泄露敏感的 Linux 内核内存。这一发现再次凸显了现代处理器推测执行机制中存在的安全隐患。",
+    "fulltext_zh": "研究人员揭示了一种新型 Spectre-v2 BTR 攻击，该攻击能够利用过时的 CPU 分支预测来泄露敏感的 Linux 内核内存。\n\n这篇文章《新型 Spectre-v2 BTR 攻击可泄露 Linux 内核内存》最初发表于 Linux Today。"
+  },
+  "54b1fb53a2cc85fe1b736c398d242fc0": {
+    "id": "54b1fb53a2cc85fe1b736c398d242fc0",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/rust-1-99-released-with-c-variadic-functions-new-stable-apis/",
+    "title_en": "Rust 1.99 Released With C Variadic Functions, New Stable APIs",
+    "summary_en": "Rust 1.99 adds support for C variadic functions, new raw-pointer layout APIs, and stabilized standard library features for developers.\nThe post Rust 1.99 Released With C Variadic Functions, New Stable APIs appeared first on Linux Today.",
+    "pub_date": "Tue, 13 Oct 2026 07:15:50 +0000",
+    "title_zh": "Rust 1.99 发布：支持 C 可变参数函数，新增稳定 API",
+    "summary_zh": "Rust 1.99 正式发布，新增对 C 可变参数函数的支持，使 Rust 代码能够定义和调用类似 C 语言的可变参数函数。同时引入新的裸指针布局 API，并稳定了多项标准库功能，为开发者提供更强大的底层操作能力和更完善的工具支持。",
+    "fulltext_zh": "Rust 1.99 新增了对 C 可变参数函数的支持、新的裸指针布局 API，并为开发者稳定了多项标准库功能。\n\n这篇文章《Rust 1.99 发布：支持 C 可变参数函数，新增稳定 API》最初出现在 Linux Today 上。"
+  },
+  "f5ec47b2dbfa5964217a5cbdff51bded": {
+    "id": "f5ec47b2dbfa5964217a5cbdff51bded",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/the-eu-is-about-to-make-linuxs-vulnerability-management-problem-harder-to-ignore/",
+    "title_en": "The EU Is About to Make Linux’s Vulnerability Management Problem Harder to Ignore",
+    "summary_en": "Explore how the EU Cyber Resilience Act raises the stakes for Linux vulnerability management, security reporting, and open-source compliance.\nThe post The EU Is About to Make Linux’s Vulnerability Management Problem Harder to Ignore appeared first on Linux Today.",
+    "pub_date": "Tue, 13 Oct 2026 07:14:09 +0000",
+    "title_zh": "欧盟即将让Linux的漏洞管理问题更难被忽视",
+    "summary_zh": "欧盟《网络弹性法案》即将出台，该法案将提高Linux漏洞管理、安全报告和开源合规的要求。文章探讨了该法案如何让Linux生态系统面临更大的安全合规压力，使漏洞管理问题变得更加紧迫和难以回避。",
+    "fulltext_zh": "探索欧盟《网络弹性法案》如何提高Linux漏洞管理、安全报告和开源合规的风险。\n\n文章《欧盟即将让Linux的漏洞管理问题更难被忽视》首先出现在Linux Today上。"
+  },
+  "6fba5cfc84f76a8504ca9da95e187196": {
+    "id": "6fba5cfc84f76a8504ca9da95e187196",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/mozilla-thunderbird-158-email-client-improves-quick-filter-responsiveness",
+    "title_en": "Mozilla Thunderbird 158 Email Client Improves Quick Filter Responsiveness",
+    "summary_en": "Mozilla Thunderbird 158 open-source email client is now available for download with updated ExtensionSettings policy, improved quick filter responsiveness, and numerous bug fixes.\nThe post Mozilla Thunderbird 158 Email Client Improves Quick Filter Responsiveness appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Tue, 13 Oct 2026 16:47:11 +0000",
+    "title_zh": "Mozilla Thunderbird 158 邮件客户端提升快速筛选响应速度",
+    "summary_zh": "Mozilla Thunderbird 158 开源邮件客户端现已开放下载，带来更新后的 ExtensionSettings 策略、更快的快速筛选响应速度以及大量错误修复。",
+    "fulltext_zh": "Mozilla Thunderbird 158 开源邮件客户端现已开放下载，带来更新后的 ExtensionSettings 策略、更快的快速筛选响应速度以及大量错误修复。\n\n文章 Mozilla Thunderbird 158 邮件客户端提升快速筛选响应速度 首发于 9to5Linux——未经许可请勿转载本文。本 RSS 源仅供读者使用，而非抓取者。"
+  },
+  "26d923a24d0c6c469dd23d2ecb63270d": {
+    "id": "26d923a24d0c6c469dd23d2ecb63270d",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/tuxedo-stellaris-16-gen8-linux-laptop-unveiled-with-intel-core-ultra-9-290hx-plus",
+    "title_en": "TUXEDO Stellaris 16 Gen8 Linux Laptop Unveiled with Intel Core Ultra 9 290HX Plus",
+    "summary_en": "TUXEDO Stellaris 16 Gen8 Linux laptop is now available with Intel Core Ultra 9 290HX Plus processors and NVIDIA GeForce RTX 5000 Series graphics.\nThe post TUXEDO Stellaris 16 Gen8 Linux Laptop Unveiled with Intel Core Ultra 9 290HX Plus appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Tue, 13 Oct 2026 13:49:57 +0000",
+    "title_zh": "TUXEDO Stellaris 16 Gen8 Linux 笔记本电脑发布，搭载 Intel Core Ultra 9 290HX Plus",
+    "summary_zh": "TUXEDO 推出 Stellaris 16 Gen8 Linux 笔记本电脑，最高可选 Intel Core Ultra 9 290HX Plus 处理器和 NVIDIA GeForce RTX 5000 系列显卡，面向高性能 Linux 用户。",
+    "fulltext_zh": "TUXEDO Stellaris 16 Gen8 Linux 笔记本电脑现已上市，搭载 Intel Core Ultra 9 290HX Plus 处理器和 NVIDIA GeForce RTX 5000 系列显卡。"
+  },
+  "d16c30fbc19fc43aab0aef856c025443": {
+    "id": "d16c30fbc19fc43aab0aef856c025443",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/linux-mint-27-adrien-slated-for-release-on-christmas-based-on-ubuntu-26-04-lts",
+    "title_en": "Linux Mint 27 “Adrien” Slated for Release on Christmas, Based on Ubuntu 26.04 LTS",
+    "summary_en": "Linux Mint 27 “Adrien” will be the next major version of the Ubuntu-based distribution, slated for release on Christmas 2026 and based on Ubuntu 26.04 LTS.\nThe post Linux Mint 27 “Adrien” Slated for Release on Christmas, Based on Ubuntu 26.04 LTS appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Tue, 13 Oct 2026 13:02:45 +0000",
+    "title_zh": "Linux Mint 27 “Adrien” 计划于圣诞节发布，基于 Ubuntu 26.04 LTS",
+    "summary_zh": "Linux Mint 27 代号“Adrien”将是该基于 Ubuntu 的发行版的下一个主要版本，计划于 2026 年圣诞节发布，并基于 Ubuntu 26.04 LTS。",
+    "fulltext_zh": "Linux Mint 27 “Adrien” 将是这个基于 Ubuntu 的发行版的下一个主要版本，计划于 2026 年圣诞节发布，并基于 Ubuntu 26.04 LTS。\n\n文章 Linux Mint 27 “Adrien” 计划于圣诞节发布，基于 Ubuntu 26.04 LTS 首次出现在 9to5Linux 上——未经许可请勿转载本文。此 RSS 源仅供读者使用，而非抓取者。"
   }
 }

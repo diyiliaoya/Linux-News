@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>openEuler 希望 Linux 将整个 AI 集群视为一台单一机器 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月14日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>openEuler 希望 Linux 将整个 AI 集群视为一台单一机器</h1>
+
+  <div class="article-summary">在2026年欧洲开源峰会上，openEuler提出SuperPoD OS和Agentic Scaling，旨在让Linux操作系统将整个AI集群当作一台单一计算机来管理。该方案基于UnifiedBus互连协议，通过UB OS组件和服务核心实现内存池化、跨节点通信与故障隔离，可将节点故障通知延迟控制在500毫秒以内，并降低RPC和远程内存访问延迟20%。</div>
+
+  <div class="article-body"><p>openEuler 希望 Linux 将整个 AI 集群视为一台单一机器</p><p>在2026年欧洲开源峰会上，openEuler阐述了SuperPoD OS和Agentic Scaling如何改变人们对操作系统的期望。</p><p>在Linux生命的大部分时间里，它一直围绕一个简单的假设构建。有一个盒子；它有CPU、内存和设备，内核负责管理它们。集群当然存在，但它们主要是操作系统上层的问题，即调度器、编排器和分布式框架的问题。</p><p>AI基础设施想要更多。当今的训练和推理设置将数十个CPU、NPU、GPU和内存池紧密绑定在一起，使它们的行为不再像一组服务器，而更像一台单一但非常庞大的计算机。然后是AI代理，它们不仅运行模型，还会动态启动工具、沙箱和长时间运行的会话。</p><p>这正是openEuler技术委员会主席胡欣蔚在布拉格举行的2026年欧洲开源峰会上发表主题演讲的核心内容。</p><p>让我们看看openEuler如何围绕代理扩展对Linux进行创新。</p><p>问题：服务器不再是单元</p><p>openEuler的主题演讲幻灯片将这一转变描述为“超越盒子”，从单一主机转向SuperPoD。SuperPoD是一个紧密互连的系统，其中跨多个节点的计算、内存和加速器被连接起来，并期望作为一个资源池工作。</p><p>这带来了经典操作系统从未设计应对的麻烦。你需要的内存可能位于另一个节点上，一台机器的故障可能波及到其他机器，而在主机和加速器之间移动数据会成为瓶颈。并且必须有人来管理整个系统。</p><p>胡欣蔚将openEuler为此设定的目标分为三类：易用性、可靠性和性能。</p><p>SuperPoD OS：让一个机架看起来像一台服务器</p><p>易用性目标雄心勃勃。openEuler希望运行时和SDK能在SuperPoD硬件上开箱即用，并由代理辅助系统管理，以便你可以“像管理一台服务器一样”管理一个SuperPoD。</p><p>可靠性在这里至关重要。据胡欣蔚介绍，openEuler能以500毫秒或更低的延迟通知其他节点某个节点发生故障，并且能在共享内存出现故障时通知各个线程。它还旨在隔离故障，使其不会在同一主机上的进程之间或跨节点传播。还有“故障风暴抑制”，即对远程内存故障的快速响应，以免大量故障导致系统挂起。</p><p>在性能方面，胡欣蔚的主题演讲引用了两个数字。UMDK，openEuler将其描述为面向SuperPoD的统一异构互连基础设施，将RPC延迟降低了20%。异步流水线加上统一内存寻址，将KV缓存操作中的RH2D（远程主机到设备）延迟降低了20%。</p><p>所有这些都建立在UnifiedBus之上，这是一种与NVLink、RDMA和CXL同族的硬件互连协议。openEuler的架构幻灯片展示了构建在其上的两层。UB OS组件为现有操作系统组件增加了设备管理、内存池化、节点间通信和虚拟化。UB服务核心增加了更高级别的服务（内存、通信、I/O、资源引擎、虚拟化、无服务器以及编译器和运行时）。</p><p>我认为最实用的部分是如何让应用程序接入这些能力。通用应用程序继续使用标准POSIX API，通过透明调用实现，而AI应用程序可以直接使用UB服务核心API。如果应用程序需要内存池，UBS引擎会找到哪些服务器可以腾出内存，从这些服务器导出内存，并将其导入本地机器。</p><p>如果你想了解背景，我们曾更深入地介绍过UnifiedBus的基础知识。</p><p>主线Linux的现状</p><p>openEuler并不孤单。主线Linux多年来一直在研究同一问题的内存方面，主要是通过一个开放互连标准，该标准允许服务器附加或共享超出其本地内存的内存。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/openeuler-oss-prague/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

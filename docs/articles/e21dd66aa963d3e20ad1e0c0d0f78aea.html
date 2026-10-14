@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ONLYOFFICE 10.0 发布：全面拥抱 AI，打造最现代化的团队协作办公选择 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月14日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>ONLYOFFICE 10.0 发布：全面拥抱 AI，打造最现代化的团队协作办公选择</h1>
+
+  <div class="article-summary">ONLYOFFICE 发布 10.0 版本，在所有编辑器中引入 AI 工具，但开源版本需单独安装。新版本新增主页和四个模块化应用（文档空间、协作空间、表单、AI 代理），支持 MCP 服务器。各编辑器获得 AI 聊天功能，可摘要、改写、翻译、校对文档，生成演示大纲，分析表格数据等。此外还改进了协作、电子表格性能、演示导出和打印设置。</div>
+
+  <div class="article-body"><p>ONLYOFFICE 10.0 发布：全面拥抱 AI，打造最现代化的团队协作办公选择</p><p>在最新发布的 ONLYOFFICE 中，不仅有工作流应用，每个编辑器还获得了 AI 工具和各自的新升级。</p><p>ONLYOFFICE 正在为其套件中的每个编辑器推出 AI 工具，但开源版本并未内置这些功能。该公司表示，这一选择是对用户反馈的回应，因此这些版本需要单独安装 AI 工具。</p><p>如果你还不了解，他们有几个主要产品。ONLYOFFICE Docs 是可自托管或集成到其他平台的编辑器套件，而桌面版将编辑器带到 Linux、Windows 和 macOS，协作空间促进基于房间的协作。此外还有一套适用于 iOS 和 Android 的 Web 应用和移动应用。</p><p>随着 ONLYOFFICE Docs 10.0 的发布，他们引入了大量修复，以及模块化应用，应能帮助简化你的工作流程。</p><p>🆕 ONLYOFFICE Docs 10.0：有哪些新功能？</p><p>ONLYOFFICE Docs 现在有一个主页，其中包含一个应用类别，列出了四个预装的免费应用。每个都是可选的模块化应用，在需要时使用。</p><p>文档空间负责存储、组织和共享文件，协作空间用于与他人协作，表单用于构建表单和分析回复，AI 代理可用于部署代理以自动化任务和回答问题。</p><p>最后一个支持 MCP 服务器，可用于扩展推理、搜索和个性化知识库用例。</p><p>编辑器方面呢？</p><p>新增了“移除隐藏信息”选项，可在共享文件前清除元数据，保护选项卡提供签名选项，表格自动识别可用于电子表格。段落高级设置中新增了“保持与下段同页”功能，可防止标题与其内容分离，包括在表格和块内容中。</p><p>图形公式等内联对象在从右到左的文档中表现更可靠，基于行的裁剪会修剪超出行高的内容。随 8.1 版本引入的水平线现在也有了自己的设置窗口。</p><p>对于协作会话，编辑文件的用户列表中出现了一个新的“跟随”选项。如果点击它，你的鼠标光标将跳转到该用户的光标处；点击“跳转到用户”可跳转到该用户的位置。</p><p>电子表格功能加速、可用性调整和公式辅助。大型工作簿应该感觉更快，因为样式和数据现在分开存储，处理的单元格更少。</p><p>复制和剪切操作现在会在所选单元格上绘制动态轮廓，便于快速验证，保存并重新打开文件时工作表背景保持不变，键入时会出现函数常量提示。</p><p>在演示文稿中，你现在可以将演示文稿导出为 PDF 或视频文件，而演示者视图选项卡可让你访问一系列新视图，包括幻灯片、备注和计时器。</p><p>打印设置也更广泛，备注、讲义和大纲都可以从打印菜单中打印。</p><p>每个编辑器都有一个专用的 AI 选项卡，可启动 AI 聊天，常用操作作为提示预加载， alongside 你自己保存的提示。</p><p>文本文档可以摘要、改写、翻译和校对，并根据请求添加目录、标题和格式。演示文稿可获得大纲、幻灯片标题、演讲者备注和视觉创意。</p><p>在 PDF 中，AI 可以一键摘要、回答问题、起草电子邮件和编辑机密细节。在电子表格中，它可以整理杂乱数据、编写和解释公式、发现趋势，并构建预测和数据透视表。</p><p>对于更改语气等一次性任务，有诸如 AI 工具这样的工具在编辑时持续运行。虽然这些仅在企业版中提供，但你需要充值钱包才能访问 ONLYOFFICE AI 服务，该服务为你处理模型配置和部署。</p><p>对于自托管，你将能够使用任何流行的基于云的 AI 服务，或通过 Ollama 等工具使用本地服务。</p><p>📥 下载 ONLYOFFICE Docs 10.0</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/onlyoffice-docs-10-release/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

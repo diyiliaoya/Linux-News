@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>着眼欧洲，Mozilla推出Firefox企业版，支持自托管浏览器管理 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月14日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">软件应用</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>着眼欧洲，Mozilla推出Firefox企业版，支持自托管浏览器管理</h1>
+
+  <div class="article-summary">Mozilla发布Firefox企业版，将Firefox浏览器与可自托管的管理控制台结合，面向企业和政府机构。该产品提供扩展管理、遥测控制、AI工具开关、数据防泄漏及锁定模式等安全功能，并兼容现有身份认证与设备管理工具。初期重点销售市场为法国、德国、奥地利和瑞士，契合欧洲数字主权需求。Mozilla还在开发Thunderbird企业版，此举也为Mozilla开辟了新的营收渠道。</div>
+
+  <div class="article-body"><p>着眼欧洲，Mozilla推出Firefox企业版，支持自托管浏览器管理</p><p>Mozilla宣布推出Firefox企业版，这是一项面向企业和政府机构的商业产品。它将Firefox与一个组织可以在自己服务器上运行的管理控制台相结合。</p><p>Mozilla推出了一款名为Firefox企业版的新产品。它基本上就是Firefox，但围绕私营和政府组织的需求构建。</p><p>思路很简单。如果员工在工作中使用浏览器，组织就应该能够控制其设置、保护公司数据，并决定其管理系统的运行位置。</p><p>因为大量工作直接在浏览器中完成。而常见的安全问题也恰恰发生在那里。对组织而言，保障安全既是优先事项，也是挑战。这正是这款“本地部署”版Firefox的用武之地。</p><p>什么是Firefox企业版？</p><p>可以把它看作是为IT团队配备了中央控制面板的Firefox。管理员无需分别设置每个浏览器，而是可以跨员工设备管理浏览器规则和访问权限。</p><p>Firefox多年来一直支持企业部署，包括策略管理和延长支持版（ESR）。这一新产品增加了自托管管理平台、额外的安全控制以及专业支持。</p><p>例如，你的IT团队可以决定员工可以使用哪些扩展。它还可以控制浏览器连接和遥测，并允许、限制或禁用AI工具。</p><p>还有一些控制措施，可以根据所访问的网站，对涉及敏感数据的某些操作发出警告或予以阻止。安全团队可以将浏览器事件导出到他们的监控工具中，而锁定模式则为高风险浏览增加了限制。</p><p>Mozilla表示，组织可以保留其现有的登录提供商、设备管理工具和安全监控系统。Firefox企业版旨在与它们协同工作。</p><p>该浏览器仍然使用Mozilla的Gecko引擎。这为组织提供了基于谷歌Chromium技术构建的浏览器之外的替代选择。</p><p>Firefox企业版包含专业支持。如果你的组织使用普通版Firefox，可以单独购买支持服务。Mozilla尚未在产品页面上列出公开价格，因此你需要联系其销售团队。</p><p>Thunderbird企业版也即将推出</p><p>Mozilla还在开发Thunderbird企业版。它计划让组织能够从同一个Firefox企业版控制台管理电子邮件、日历和联系人。</p><p>如果组织已经在同时使用这两个应用，这可能会让它更有用。不过，Thunderbird企业版仍在开发中，公告并未给出发布日期。</p><p>非常适合欧洲推动数字独立的努力</p><p>Mozilla最初的销售重点是法国、德国、奥地利和瑞士，并计划拓展更多市场。其公告将欧洲推动数字主权置于此次发布的核心位置。</p><p>简而言之，这就是要对你的技术和数据拥有更多控制权，而不是依赖少数几家大型供应商。</p><p>我认为该运动的支持者会欢迎这种做法。在自己的服务器上运行管理控制台，可以让你更好地控制管理数据和策略的存放位置。使用单独的浏览器引擎也有助于避免在所有地方都依赖同一种技术。</p><p>Mozilla表示该浏览器是开源的，但并未确认管理控制台是否也是开源的。自托管并不自动意味着开源。</p><p>Mozilla创收的另一种方式</p><p>这也为Mozilla提供了另一种带来收入的方式：销售企业服务和支持。</p><p>Mozilla仍然通过搜索合作依赖谷歌。如果Firefox企业版吸引到付费客户，这部分收入可能有助于减少Mozilla对谷歌的依赖。</p><p>当然，它不会在一夜之间取代搜索收入，而且我们尚不知道这款面向企业的产品能赚多少钱。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/firefox-enterprise/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

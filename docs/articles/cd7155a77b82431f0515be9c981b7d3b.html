@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mesa 扩展 NPU 能力，支持 PyTorch 的 YOLOX — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月14日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Mesa 扩展 NPU 能力，支持 PyTorch 的 YOLOX</h1>
+
+  <div class="article-summary">Mesa 开源开发者持续增强 NPU 驱动能力，近日合并了对 PyTorch ExecuTorch 下 YOLOX 模型的支持。该功能通过 Mesa 的 Torx 硬件后端实现，已在 NXP i.MX93 SoC 的 Arm EthosU NPU 上测试，Vivante NPU 的 Etnaviv 驱动虽支持所有操作但尚缺基础设施。此支持已纳入 Mesa 26.3。</div>
+
+  <div class="article-body"><p>虽然 Mesa 主要用于 GPU 驱动，但开源开发者仍在持续推进 Mesa 驱动栈中 NPU 的能力。</p><p>Tomeu 今天在 Mesa 的 Torx 代码中合并了对 YOLOX 的支持。Torx 是 Mesa 中的硬件后端，作为 PyTorch ExecuTorch 机器学习模型的编译和执行路径。</p><p>通过现已合并的代码，用户可以使用 Mesa 中的 NPU 驱动来运行 PyTorch 的 YOLOX。目前已在使用 NXP i.MX93 SoC 的 Arm EthosU NPU 上进行了测试。用于 Vivante NPU 的 Etnaviv 驱动应支持所有操作，但仍缺乏与 Torx 配合使用的基础设施工作。</p><p>希望了解更多关于通过 Torx 为 Mesa NPU 驱动提供 YOLOX 支持的信息的人，可以通过以下链接了解：</p><p>现已纳入 Mesa 26.3。</p><p>Valve 将 VK_AMD_anti_lag 支持引入 Mesa 26.3 中的 AMD RADV 驱动</p><p>Mesa 开发者正在考虑正式治理模型</p><p>Imagination 谈论其开源 Vulkan 驱动、Volcanic 架构计划</p><p>Apex Compute 为其硬件开发开源 Mesa Vulkan 驱动</p><p>Mesa 放弃维护不善且很少使用的 Direct3D 10 用户模式驱动</p><p>Rusticl 在 Mesa 中的 Rust OpenCL 度过了美好的一年，支持 3.1 及更多驱动</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了 20,000 多篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他：</p><p>Linus Torvalds 正在用 Claude Code 进行一项重大的 Linux 内核改进</p><p>Linus Torvalds“践行了自己的主张”，用 AI 使代码更易理解并发现了更多错误</p><p>Meta 为 Linux 开发压缩 RAM“CRAM”：比 ZRAM 和 Zswap 更好</p><p>AI 用 Rust 实现了 Adobe Photoshop 和 Premier 的“开源、洁净室”版本</p><p>Linux 的 ZRAM 重新设计以实现更大的内存节省和更好的性能</p><p>Steam Beta 现在默认将非 Steam Windows 二进制文件使用 Proton</p><p>Ubuntu 目前正遭受持续 DDoS 攻击</p><p>X.Org Server 和 XWayland 中又发现十几个漏洞</p><p>同时拥有无广告浏览、</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Mesa-Torx-YOLOX-PyTorch" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

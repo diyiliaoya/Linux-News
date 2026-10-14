@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linux Mint 27 'Adrien' 将于今年圣诞节发布，带来更多新应用 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月14日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Linux Mint 27 'Adrien' 将于今年圣诞节发布，带来更多新应用</h1>
+
+  <div class="article-summary">Linux Mint 宣布改变版本编号方式，下一版本将命名为 Linux Mint 27 'Adrien'，预计2026年圣诞节发布，基于 Ubuntu 26.04 LTS。此次更新将带来大量新功能和应用程序，包括日历、闹钟、系统监视器、归档管理器和终端模拟器等，全部用 Python 编写，注重用户友好性。代号也从传统的女性名字改为男性名字。</div>
+
+  <div class="article-body"><p>Linux Mint 27 'Adrien' 将于今年圣诞节发布，带来更多新应用 - OMG! Ubuntu</p><p>今年早些时候，Linux Mint 调整了其发布计划，现在又改变了版本编号方式——下一个主要版本将不是 Linux Mint 23，而是 Linux Mint 27。</p><p>版本号现在将按年份编号。Linux Mint 27 之后将是 v28，依此类推。</p><p>此次发布也开启了一系列新的版本代号。Mint 传统上使用女性名字，从2006年的 Linux Mint 1.0 'Ada' 开始，按字母顺序循环，一直到2026年的 'Zena'。随着 Linux Mint 27，这一系列回到 'A'，代号已公布为 'Adrien'。</p><p>是的，Linux Mint 正在转向男性名字——为什么呢？</p><p>多年来，Linux 社区中一些人指责 Mint 使用女性代号作为装饰是性别歧视，甚至是物化。虽然该发行版没有明说，但我怀疑这一转变，也许是无意识地，是对那些批评的回应。</p><p>计划中的一次内容丰富的发布</p><p>Linux Mint 27 中即将推出的两个新应用</p><p>名字、数字——随便吧，对吧？我们大多数人关心的是功能和改进。</p><p>在一篇博客文章中，Mint 的 Clement Lefebvre 表示，在从事这个基于 Ubuntu 的 Linux 发行版工作的20多年里，他不确定自己是否曾“见过如此多的变化和新功能在单个版本中实现”。</p><p>Mint 的新日历应用。另一个新添加的是受 Android 启发的工具，用于设置带有自定义声音和通知的重复闹钟。</p><p>它还在开发更多新应用，包括一个新的系统监视器、一个由 7zip 驱动的新归档管理器，以及一个新的终端模拟器。全部用 Python 编写，旨在用户友好。</p><p>Linux Mint 27 'Adrien' 将于2026年圣诞节到来，基于 Ubuntu 26.04 LTS 构建。据目前所知——尽管还有更多细节尚未公布——听起来今年年底发布后会有很多东西可以拆箱。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/linux-mint-27-adrien-due-at-christmas" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

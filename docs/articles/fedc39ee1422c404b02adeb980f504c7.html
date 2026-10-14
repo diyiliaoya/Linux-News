@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ONLYOFFICE 10.0 是一个“完全重建的应用”，扩展了 AI 工具 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月14日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">桌面环境</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>ONLYOFFICE 10.0 是一个“完全重建的应用”，扩展了 AI 工具</h1>
+
+  <div class="article-summary">ONLYOFFICE 发布 10.0 版本，号称“完全重建”，带来超千项修复和扩展的 AI 功能。AI 不再作为内置插件，改为需单独下载安装的附加组件，支持摘要、问答、格式化等操作，并可连接网络和 MCP 服务器。此外还改进了文档编辑器、电子表格和演示文稿的诸多功能，如元数据清除、协同编辑跟随、公式优化等。该套件免费开源，支持 Windows、macOS 和 Linux。</div>
+
+  <div class="article-body"><p>免费开源生产力套件 ONLYOFFICE 的新版本发布，带来了超过一千项错误修复和扩展的 AI 功能。</p><p>ONLYOFFICE 桌面编辑器 v10.0 被称为“完全重建的应用”，开发者警告从早期版本升级的用户，并非所有设置和偏好都会迁移过来。</p><p>值得注意的是，其 AI 集成不再作为应用自带的插件提供。</p><p>在 ONLYOFFICE 10.0 中，AI 功能通过一个单独的附加组件提供。该组件需要下载并安装（应用内有相应流程）。据开发者称，由于用户反馈，旧的 AI 插件已从开源构建中移除。</p><p>安装并配置后（需要云服务商 API 或通过类似方式运行的本地 LLM），它可以在套件的所有文档编辑器中做更多事情。团队表示“AI 理解每个文件的上下文，其建议保持相关且有用”。</p><p>不仅仅是摘要和生成，它可以生成打开文档的摘要或回答关于其内容的问题。在其他应用中，如电子表格，AI 可用于执行任务，例如改进文本格式、创建目录等。</p><p>界面有适合常见用例的预设提示，但你可以创建一次性任务，或创建作为协作编辑器与你一起工作的代理，在文档上实时协作，在你编写、编辑和更新内容时同步进行。</p><p>AI 现在还可以访问网络，并与多上下文协议（MCP）服务器交互，根据用例从其他地方拉取、收集或查询数据。</p><p>v10.0 中的非 AI 变更</p><p>本地文档模板不再包含在 ONLYOFFICE 中，仅保留基于云的选项。Linux 构建中窗口边框厚度减少，并且终于添加了窗口阴影。每个编辑器也有各自的改进。</p><p>文档编辑器现在能够剥离文档元数据并移除注释。可以通过签名面板添加签名。注释面板现在提供所有注释的列表，并新增了注释设置面板。</p><p>在文档中，将编号项目粘贴到已有列表的文档时，可以选择继续列表或重新开始编号。</p><p>协同编辑时，你现在可以跳转到他人的光标并跟随其工作。具有精确行距的段落文本现在按行裁剪，从右到左的文档能如预期处理公式和其他内联对象。</p><p>电子表格将在公式栏中高亮公式适用的范围，增加了单元格值自动完成的开关，并且现在可以保存为 XLSX 格式（对于需要将文件发送给使用旧版软件的人而言很方便）。</p><p>引用整列或整行的数组公式的计算也变得更快速，计算时使用更少内存。</p><p>演示文稿有各种新的打印模式（对应各种新的视图模式），以及设置隐藏幻灯片、幻灯片背景和边框、注释和幻灯片编号是否出现在打印页面上的选项。</p><p>ONLYOFFICE 桌面编辑器是适用于 Windows、macOS 或 Linux 的免费开源软件。</p><p>从官方网站下载最新版本。每个版本的安装程序可以在下载页面找到，其中有适用于 Ubuntu、Linux Mint 等的 .Deb 包。</p><p>在 Linux 上，独立版本不会自动更新到新版本，但如果你更喜欢自动更新，可以安装官方版本。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/onlyoffice-10-expands-ai-tools" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
