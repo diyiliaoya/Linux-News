@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Epic Games 将通过反作弊 systemd 服务与 eBPF 改进 Linux 上的 Easy Anti-Cheat — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月15日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Epic Games 将通过反作弊 systemd 服务与 eBPF 改进 Linux 上的 Easy Anti-Cheat</h1>
+
+  <div class="article-summary">Epic Games 宣布计划通过“EAC Linux v2”改进 Linux 平台上的 Easy Anti-Cheat 反作弊软件。新方案不再依赖 Linux 内核模块，而是采用反作弊 systemd 服务和 eBPF 内核程序，并依赖 UEFI 安全启动。同时 Epic 也在为《堡垒之夜》的官方 Linux 支持做准备，但 Steam Deck 目前尚不支持所需功能。</div>
+
+  <div class="article-body"><p>Epic Games 将通过反作弊 systemd 服务与 eBPF 改进 Linux 上的 Easy Anti-Cheat</p><p>2026 年 10 月 14 日 上午 11:39 EDT</p><p>除了 Epic Games 宣布其新版 Epic Games Launcher 预览（包括 Linux 支持）之外，他们还宣布了改进其 Easy Anti-Cheat（EAC）软件在 Linux 上的计划。伴随这一改进版 EAC，他们还在为热门游戏《堡垒之夜》的官方 Linux 支持而努力。</p><p>Epic Games 正在通过“EAC Linux v2”来增强 Linux 上的 Easy Anti-Cheat，这是对其游戏反作弊技术处理方式的一次全面改革。EAC Linux v2 不再依赖 Linux 内核模块，而是将利用反作弊 systemd 服务和 eBPF 内核程序来实现安全功能。该 systemd 服务需要在运行受保护游戏时启动，并可在运行受保护游戏后卸载。EAC Linux v2 还将依赖 UEFI 安全启动，其密钥由 Canonical、Fedora、Universal Blue、Debian、SUSE、Rocky Linux 或 Microsoft UEFI CA 等签署。</p><p>值得注意的是，Epic Games 表示 Steam Deck 不支持 EAC Linux v2 所需的功能，但他们正在与 Valve 合作，以便在未来解决这一问题。</p><p>有关 EAC Linux v2 的更多详细信息，请见</p><p>有关新版 Epic Games Launcher 预览以及《堡垒之夜》Linux 支持工作的详细信息，请见</p><p>FEX 2610 发布，支持 AVX-VNNI，改进磁盘缓存</p><p>D7VK 在 Vulkan 之上为旧版 Direct3D API 达到成熟</p><p>Linux 7.3 增加对 Victrix Pro BFG 和 Azeron 控制器的支持</p><p>SDL3 移植到 HarmonyOS / OpenHarmony</p><p>FEX 2609 发布，JIT 性能更快，新增 JIT 磁盘缓存选项</p><p>Linux 7.3 将修复搭载 Ryzen Z2 Extreme 的 MSI Claw 掌机的 M-Center 按键</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他</p><p>Linus Torvalds 正在用 Claude Code 进行一项重大的 Linux 内核改进</p><p>Linus Torvalds“践行了自己的主张”，用 AI 使代码更易理解并发现了更多错误</p><p>Meta 为 Linux 开发压缩内存“CRAM”：优于 ZRAM 和 Zswap</p><p>AI 用 Rust 实现了 Adobe Photoshop 和 Premier 的“开源、洁净室”版本</p><p>Steam 测试版现在默认将非 Steam Windows 二进制文件使用 Proton 运行</p><p>Ubuntu 目前正遭受持续 DDoS 攻击</p><p>X.Org Server 和 XWayland 中又发现十几个漏洞</p><p>Python 3.15 发布，实验性 JIT 编译器运行更快</p><p>同时享受无广告浏览、</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Easy-Anti-Cheat-Better-Linux" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

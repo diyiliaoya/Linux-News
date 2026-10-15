@@ -15343,5 +15343,148 @@
     "title_zh": "Linux Mint 27 “Adrien” 计划于圣诞节发布，基于 Ubuntu 26.04 LTS",
     "summary_zh": "Linux Mint 27 代号“Adrien”将是该基于 Ubuntu 的发行版的下一个主要版本，计划于 2026 年圣诞节发布，并基于 Ubuntu 26.04 LTS。",
     "fulltext_zh": "Linux Mint 27 “Adrien” 将是这个基于 Ubuntu 的发行版的下一个主要版本，计划于 2026 年圣诞节发布，并基于 Ubuntu 26.04 LTS。\n\n文章 Linux Mint 27 “Adrien” 计划于圣诞节发布，基于 Ubuntu 26.04 LTS 首次出现在 9to5Linux 上——未经许可请勿转载本文。此 RSS 源仅供读者使用，而非抓取者。"
+  },
+  "7d26b0ba6aa7864a3899473f61dc4391": {
+    "id": "7d26b0ba6aa7864a3899473f61dc4391",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Easy-Anti-Cheat-Better-Linux",
+    "title_en": "Epic Games To Improve Easy Anti-Cheat On Linux With Anti-Cheat Systemd Service & eBPF",
+    "summary_en": "In addition to Epic Games announced a preview of their new Epic Games Launcher, including Linux support, they also announced plans to improve their Easy Anti-Cheat (EAC) software on Linux. Along with this improved EAC they are also working on official Linux support for the popular Fortnite game...",
+    "pub_date": "Wed, 14 Oct 2026 11:39:04 -0400",
+    "title_zh": "Epic Games 将通过反作弊 systemd 服务与 eBPF 改进 Linux 上的 Easy Anti-Cheat",
+    "summary_zh": "Epic Games 宣布计划通过“EAC Linux v2”改进 Linux 平台上的 Easy Anti-Cheat 反作弊软件。新方案不再依赖 Linux 内核模块，而是采用反作弊 systemd 服务和 eBPF 内核程序，并依赖 UEFI 安全启动。同时 Epic 也在为《堡垒之夜》的官方 Linux 支持做准备，但 Steam Deck 目前尚不支持所需功能。",
+    "fulltext_zh": "Epic Games 将通过反作弊 systemd 服务与 eBPF 改进 Linux 上的 Easy Anti-Cheat\n\n2026 年 10 月 14 日 上午 11:39 EDT\n\n除了 Epic Games 宣布其新版 Epic Games Launcher 预览（包括 Linux 支持）之外，他们还宣布了改进其 Easy Anti-Cheat（EAC）软件在 Linux 上的计划。伴随这一改进版 EAC，他们还在为热门游戏《堡垒之夜》的官方 Linux 支持而努力。\n\nEpic Games 正在通过“EAC Linux v2”来增强 Linux 上的 Easy Anti-Cheat，这是对其游戏反作弊技术处理方式的一次全面改革。EAC Linux v2 不再依赖 Linux 内核模块，而是将利用反作弊 systemd 服务和 eBPF 内核程序来实现安全功能。该 systemd 服务需要在运行受保护游戏时启动，并可在运行受保护游戏后卸载。EAC Linux v2 还将依赖 UEFI 安全启动，其密钥由 Canonical、Fedora、Universal Blue、Debian、SUSE、Rocky Linux 或 Microsoft UEFI CA 等签署。\n\n值得注意的是，Epic Games 表示 Steam Deck 不支持 EAC Linux v2 所需的功能，但他们正在与 Valve 合作，以便在未来解决这一问题。\n\n有关 EAC Linux v2 的更多详细信息，请见\n有关新版 Epic Games Launcher 预览以及《堡垒之夜》Linux 支持工作的详细信息，请见\n\nFEX 2610 发布，支持 AVX-VNNI，改进磁盘缓存\nD7VK 在 Vulkan 之上为旧版 Direct3D API 达到成熟\nLinux 7.3 增加对 Victrix Pro BFG 和 Azeron 控制器的支持\nSDL3 移植到 HarmonyOS / OpenHarmony\nFEX 2609 发布，JIT 性能更快，新增 JIT 磁盘缓存选项\nLinux 7.3 将修复搭载 Ryzen Z2 Extreme 的 MSI Claw 掌机的 M-Center 按键\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nLinus Torvalds 正在用 Claude Code 进行一项重大的 Linux 内核改进\nLinus Torvalds“践行了自己的主张”，用 AI 使代码更易理解并发现了更多错误\nMeta 为 Linux 开发压缩内存“CRAM”：优于 ZRAM 和 Zswap\nAI 用 Rust 实现了 Adobe Photoshop 和 Premier 的“开源、洁净室”版本\nSteam 测试版现在默认将非 Steam Windows 二进制文件使用 Proton 运行\nUbuntu 目前正遭受持续 DDoS 攻击\nX.Org Server 和 XWayland 中又发现十几个漏洞\nPython 3.15 发布，实验性 JIT 编译器运行更快\n\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "e4629b2acf9cc3ecb7836132cbc0e898": {
+    "id": "e4629b2acf9cc3ecb7836132cbc0e898",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/ubuntu-2610-amd64v3-epyc",
+    "title_en": "Ubuntu 26.10 amd64v3 Packages Provide Some Additional Uplift On AMD EPYC",
+    "summary_en": "In addition to Ubuntu 26.10 itself delivering some nice performance gains on Ubuntu 26.10 for AMD EPYC servers and other hardware, the optional and currently-unofficial amd64v3 package archive also provides additional performance uplift. Here is a look quantifying the performance impact of amd64v3 packages on AMD EPYC 9005 series servers.",
+    "pub_date": "Wed, 14 Oct 2026 10:16:17 -0400",
+    "title_zh": "Ubuntu 26.10 amd64v3 软件包在 AMD EPYC 上带来额外性能提升",
+    "summary_zh": "Ubuntu 26.10 继续提供基于 x86_64-v3 微架构特性级别构建的 amd64v3 软件包归档，并已开始制作 amd64v3 ISO 以便安装，但 Canonical 尚未正式将其作为通用 amd64 二进制的替代方案。在搭载 AMD EPYC 9555P 64 核处理器的服务器上进行的基准测试显示，相比默认 amd64 软件包，amd64v3 软件包能带来额外的性能提升。",
+    "fulltext_zh": "Ubuntu 26.10 amd64v3 软件包在 AMD EPYC 上带来额外性能提升\n\n2026 年 10 月 14 日上午 10:16 EDT。\n\n除了 Ubuntu 26.10 在 AMD EPYC 服务器及其他硬件上带来的一些不错的性能提升外，目前可选且尚未正式支持的 amd64v3 软件包归档还提供了额外的性能提升。本文量化了 amd64v3 软件包在 AMD EPYC 9005 系列服务器上的性能影响。\n\nUbuntu 26.10 继续为其使用 x86_64-v3 微架构特性级别构建的软件包提供归档。Ubuntu 甚至已开始制作 amd64v3 ISO，以便更轻松地安装。但 Canonical 尚未正式认可 amd64v3 软件包作为通用 amd64 二进制的替代方案。\n\n我此前对 Ubuntu 26.10 amd64v3 的基准测试显示，它在低成本硬件以及高端台式机上都能带来不错的性能收益。对于那些好奇 amd64v3 对服务器影响的人，我最近使用接近最终版的 Ubuntu 26.10 进行了一些基准测试，先使用默认 amd64 软件包，然后在相同硬件上使用 amd64v3 软件包进行相同测试。\n\n本轮 amd64 与 amd64v3 性能基准测试使用了搭载 AMD EPYC 9555P 64 核处理器的系统。\n\nFedora 45 Beta 性能：令人满意地无聊的基准测试\nUbuntu 26.10 为 Intel Panther Lake / Framework Laptop 13 Pro 带来一些不错的提升\nAMD Strix Halo 在 Ubuntu 26.10 上获得一些性能提升，尤其是使用 amd64v3 时\nUbuntu 26.10 amd64v3 可为低端/预算硬件提供不错的加速\nUbuntu 26.10 将为 Intel Core 3 Wildcat Lake 带来更好的性能\nCachyOS vs. Windows 11 vs. Ubuntu 26.04 LTS 在 Intel Wildcat Lake + 8GB RAM 上的对比\n\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "54966f89cb0bc3e1ba80d6a2d9d3b99d": {
+    "id": "54966f89cb0bc3e1ba80d6a2d9d3b99d",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/HP-EliteBook-6-Q1q-Linux-Patch",
+    "title_en": "HP EliteBook 6 G1q Powered By Snapdragon X1 Plus Sees Linux Patches",
+    "summary_en": "Canonical engineer Juerg Haefliger posted a set of Device Tree patches in working to support the mainline Linux kernel on the HP EliteBook 6 G1q laptop that is powered by the Qualcomm Snapdragon X1 Plus SoC...",
+    "pub_date": "Wed, 14 Oct 2026 09:10:14 -0400",
+    "title_zh": "搭载骁龙 X1 Plus 的 HP EliteBook 6 G1q 迎来 Linux 补丁",
+    "summary_zh": "Canonical 工程师 Juerg Haefliger 发布了设备树补丁，旨在让主线 Linux 内核支持搭载高通骁龙 X1 Plus SoC 的 HP EliteBook 6 G1q 笔记本。该机型与已获支持的 HP OmniBook X14 类似，但增加了以太网口和指纹读取器。补丁已确认扬声器、麦克风等主要功能在真机上可用，eDP 显示面板和 WWAN 调制解调器补丁将另行发布。",
+    "fulltext_zh": "搭载骁龙 X1 Plus 的 HP EliteBook 6 G1q 迎来 Linux 补丁\n\n2026 年 10 月 14 日上午 09:10 EDT。\n\nCanonical 工程师 Juerg Haefliger 发布了一组设备树补丁，致力于让主线 Linux 内核支持搭载高通骁龙 X1 Plus SoC 的 HP EliteBook 6 G1q 笔记本。\n\n尽管近期围绕最新硬件有大量 Linux 适配工作在进行，但部分笔记本的骁龙 X1 支持仍存在缺口，尤其是 X1 Plus 层级——它比上一代旗舰 X1 Elite 低一档。\n\nHaefliger 于周二发布了这些补丁，用于启用搭载骁龙 X1P42100 的 EliteBook 6 G1q。该机型与主线内核已支持的 HP OmniBook X14 类似，但增加了一个以太网口和指纹读取器。\n\n有了这些补丁，主线内核至少在所有主要功能上应该能与该笔记本良好配合：\n\n已在真机上确认可用：\n- 内置扬声器和麦克风\n\neDP 显示面板和 WWAN 调制解调器的补丁将另行发布。\n\n将很快进入主线内核树。\n\nLinux 7.4 将上游支持三款骁龙 X2 Elite 笔记本\nCorsair Novablade Pro 与 8BitDo Pro 2 手柄将在 Linux 7.3-rc7 中获得支持\n高通 MSM 驱动将迎来 HDR 支持，惠及 Linux 上的骁龙 X 笔记本\n神秘 Rosaic Labs 聘用了传奇 Linux x86 开发者\nSpacemiT RISC-V SoC 将在 Linux 7.4 中获得更多改进\nLinux 的 ZRAM 经过重构，实现更高内存节省和更好性能\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nLinus Torvalds 正用 Claude Code 进行一项重大的 Linux 内核改进\nLinus Torvalds“践行了自己的说教”，用 AI 让代码更易理解并发现了更多 bug\nMeta 为 Linux 开发压缩内存“CRAM”：优于 ZRAM 和 Zswap\nAI 用 Rust 实现 Adobe Photoshop 和 Premier 的“开源、洁净室”版本\nSteam 测试版现将非 Steam Windows 二进制文件默认使用 Proton\nUbuntu 目前正遭受持续 DDoS 攻击\nX.Org Server 和 XWayland 中又发现十几个漏洞\nPython 3.15 发布，实验性 JIT 编译器运行更快\n\n享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "4eeec577bc63595e360ec41d68e9f191": {
+    "id": "4eeec577bc63595e360ec41d68e9f191",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/how-to-install-and-optimize-postgresql-on-ubuntu-26-04-for-high-performance-web-apps/",
+    "title_en": "How to Install and Optimize PostgreSQL on Ubuntu 26.04 for High Performance Web Apps",
+    "summary_en": "Learn how to install and optimize PostgreSQL on Ubuntu 26.04 for high-performance web applications with database tuning and configuration tips.\nThe post How to Install and Optimize PostgreSQL on Ubuntu 26.04 for High Performance Web Apps appeared first on Linux Today.",
+    "pub_date": "Wed, 14 Oct 2026 07:24:07 +0000",
+    "title_zh": "如何在Ubuntu 26.04上安装和优化PostgreSQL以实现高性能Web应用",
+    "summary_zh": "本文介绍在Ubuntu 26.04上安装和优化PostgreSQL的方法，面向高性能Web应用场景，提供数据库调优与配置技巧，帮助提升数据库性能。",
+    "fulltext_zh": "了解如何在Ubuntu 26.04上安装和优化PostgreSQL，通过数据库调优和配置技巧为高性能Web应用提供支持。\n\n文章《如何在Ubuntu 26.04上安装和优化PostgreSQL以实现高性能Web应用》首次发布于Linux Today。"
+  },
+  "e1e2f8518e6aa470485f3922013e2249": {
+    "id": "e1e2f8518e6aa470485f3922013e2249",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/how-to-install-mongodb-on-debian-13-and-configure-for-production-use/",
+    "title_en": "How to Install MongoDB on Debian 13 and Configure for Production Use",
+    "summary_en": "Learn how to install MongoDB on Debian 13, configure authentication, secure database connections, and prepare your server for production workloads.\nThe post How to Install MongoDB on Debian 13 and Configure for Production Use appeared first on Linux Today.",
+    "pub_date": "Wed, 14 Oct 2026 07:22:58 +0000",
+    "title_zh": "如何在 Debian 13 上安装 MongoDB 并配置用于生产环境",
+    "summary_zh": "本文介绍在 Debian 13 上安装 MongoDB 的完整流程，包括配置身份验证、保护数据库连接，以及为生产工作负载准备服务器。",
+    "fulltext_zh": "了解如何在 Debian 13 上安装 MongoDB，配置身份验证，保护数据库连接，并为生产工作负载准备服务器。\n\n文章《如何在 Debian 13 上安装 MongoDB 并配置用于生产环境》首次出现在 Linux Today 上。"
+  },
+  "4b8cacbc41abb7cfe86202e326c7892c": {
+    "id": "4b8cacbc41abb7cfe86202e326c7892c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/how-to-set-up-traefik-as-a-reverse-proxy-with-automatic-ssl/",
+    "title_en": "How to Set Up Traefik as a Reverse Proxy with Automatic SSL",
+    "summary_en": "Learn how to configure Traefik as a reverse proxy with automatic SSL certificates using Let's Encrypt to secure your websites and services.\nThe post How to Set Up Traefik as a Reverse Proxy with Automatic SSL appeared first on Linux Today.",
+    "pub_date": "Wed, 14 Oct 2026 07:22:03 +0000",
+    "title_zh": "如何将Traefik设置为具有自动SSL的反向代理",
+    "summary_zh": "本文介绍如何将Traefik配置为反向代理，并使用Let's Encrypt自动获取SSL证书，从而为网站和服务提供安全保护。",
+    "fulltext_zh": "了解如何使用Let's Encrypt将Traefik配置为具有自动SSL证书的反向代理，以保护您的网站和服务。\n\n文章《如何将Traefik设置为具有自动SSL的反向代理》首次出现在Linux Today上。"
+  },
+  "e44620a02c736b792540daf262fa9f75": {
+    "id": "e44620a02c736b792540daf262fa9f75",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/cosmic-stops-accepting-llm-generated-content-in-pull-requests/",
+    "title_en": "COSMIC Stops Accepting LLM-Generated Content in Pull Requests",
+    "summary_en": "COSMIC introduces restrictions on LLM-generated content in pull requests, raising questions about AI-assisted contributions to open-source projects.\nThe post COSMIC Stops Accepting LLM-Generated Content in Pull Requests appeared first on Linux Today.",
+    "pub_date": "Wed, 14 Oct 2026 07:20:41 +0000",
+    "title_zh": "COSMIC 停止在拉取请求中接受 LLM 生成的内容",
+    "summary_zh": "COSMIC 项目宣布对拉取请求中的 LLM 生成内容实施限制，不再接受此类贡献。此举引发了关于 AI 辅助贡献在开源项目中角色的讨论，涉及代码质量、版权和社区规范等问题。",
+    "fulltext_zh": "COSMIC 对拉取请求中的 LLM 生成内容引入限制，引发了关于 AI 辅助贡献对开源项目影响的疑问。\n\n文章《COSMIC 停止在拉取请求中接受 LLM 生成的内容》首先出现在 Linux Today 上。"
+  },
+  "61b0c6e08e830a3ff25c0d074fc7629b": {
+    "id": "61b0c6e08e830a3ff25c0d074fc7629b",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/nginx-ui-turns-nginx-management-into-a-modern-web-experience/",
+    "title_en": "Nginx UI Turns Nginx Management Into a Modern Web Experience",
+    "summary_en": "Discover how Nginx UI simplifies web server management with a modern interface for editing configurations, monitoring performance, and managing SSL certificates.\nThe post Nginx UI Turns Nginx Management Into a Modern Web Experience appeared first on Linux Today.",
+    "pub_date": "Wed, 14 Oct 2026 07:15:08 +0000",
+    "title_zh": "Nginx UI 将 Nginx 管理转变为现代 Web 体验",
+    "summary_zh": "Nginx UI 是一款为 Nginx 提供现代化 Web 管理界面的工具，它简化了 Web 服务器的管理流程。用户可以通过直观的界面编辑配置文件、监控服务器性能以及管理 SSL 证书，无需直接操作命令行或手动编辑配置文件，从而提升了运维效率。",
+    "fulltext_zh": "探索 Nginx UI 如何通过现代化界面简化 Web 服务器管理，实现配置编辑、性能监控和 SSL 证书管理。\n\n文章《Nginx UI 将 Nginx 管理转变为现代 Web 体验》首次发布于 Linux Today。"
+  },
+  "37e0584d4c26e90a9e317bbdb87f1e91": {
+    "id": "37e0584d4c26e90a9e317bbdb87f1e91",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/mesa-26-2-5-is-out-with-bug-fixes-for-radv-nvk-anv-panvk-freedreno-and-zink",
+    "title_en": "Mesa 26.2.5 Is Out with Bug Fixes for RADV, NVK, ANV, PanVK, Freedreno, and Zink",
+    "summary_en": "Mesa 26.2.5 is now available as the fifth bugfix update to the latest Mesa 26.2 stable series, bringing various improvements to the NVK, Freedreno, RADV, RadeonSI, Zink, ANV, PVR, and PanVK drivers.\nThe post Mesa 26.2.5 Is Out with Bug Fixes for RADV, NVK, ANV, PanVK, Freedreno, and Zink appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Wed, 14 Oct 2026 20:02:54 +0000",
+    "title_zh": "Mesa 26.2.5 发布，修复 RADV、NVK、ANV、PanVK、Freedreno 和 Zink 的漏洞",
+    "summary_zh": "Mesa 26.2.5 作为 Mesa 26.2 稳定系列的第五个漏洞修复版本正式发布，为 NVK、Freedreno、RADV、RadeonSI、Zink、ANV、PVR 和 PanVK 等多个驱动带来了多项改进和问题修复。",
+    "fulltext_zh": "Mesa 26.2.5 现已发布，作为最新 Mesa 26.2 稳定系列的第五个漏洞修复更新，为 NVK、Freedreno、RADV、RadeonSI、Zink、ANV、PVR 和 PanVK 驱动带来了各种改进。\n\n文章 Mesa 26.2.5 发布，修复 RADV、NVK、ANV、PanVK、Freedreno 和 Zink 的漏洞 首次出现在 9to5Linux 上——未经许可请勿转载本文。本 RSS 源仅供读者使用，而非爬虫。"
+  },
+  "3c7c635374b6a326966ae8593e1ea09a": {
+    "id": "3c7c635374b6a326966ae8593e1ea09a",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/kde-plasma-6-8-desktop-environment-officially-released-heres-whats-new",
+    "title_en": "KDE Plasma 6.8 Desktop Environment Officially Released, Here’s What’s New",
+    "summary_en": "KDE Plasma 6.8 desktop environment is now available with triple buffering for NVIDIA GPUs enabled by default, a Wayland-only session, and much more.\nThe post KDE Plasma 6.8 Desktop Environment Officially Released, Here&#8217;s What&#8217;s New appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Wed, 14 Oct 2026 10:23:20 +0000",
+    "title_zh": "KDE Plasma 6.8 桌面环境正式发布，以下是新特性",
+    "summary_zh": "KDE Plasma 6.8 桌面环境正式发布，默认启用 NVIDIA GPU 三重缓冲，仅支持 Wayland 会话，并带来大量其他改进。",
+    "fulltext_zh": "KDE Plasma 6.8 桌面环境现已发布，默认启用 NVIDIA GPU 三重缓冲，仅支持 Wayland 会话，以及更多其他改进。"
+  },
+  "1275b65035a545a6eedd6f1636ebd883": {
+    "id": "1275b65035a545a6eedd6f1636ebd883",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/ipfire-2-29-core-update-204-linux-firewall-distro-improves-the-knot-resolver",
+    "title_en": "IPFire 2.29 Core Update 204 Linux Firewall Distro Improves the Knot Resolver",
+    "summary_en": "IPFire 2.29 Core Update 204 hardened Linux firewall distro is now available for download with improvements to the Knot Resolver, Intrusion Prevention System, WireGuard support, and more.\nThe post IPFire 2.29 Core Update 204 Linux Firewall Distro Improves the Knot Resolver appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Wed, 14 Oct 2026 10:03:26 +0000",
+    "title_zh": "IPFire 2.29 Core Update 204 Linux 防火墙发行版改进 Knot Resolver",
+    "summary_zh": "IPFire 2.29 Core Update 204 已发布，这是一个强化安全的 Linux 防火墙发行版。本次更新主要改进了 Knot Resolver、入侵防御系统（IPS）、WireGuard 支持等，用户可下载升级。",
+    "fulltext_zh": "IPFire 2.29 Core Update 204 强化 Linux 防火墙发行版现已可供下载，该版本改进了 Knot Resolver、入侵防御系统、WireGuard 支持等。\n\n帖子 IPFire 2.29 Core Update 204 Linux 防火墙发行版改进 Knot Resolver 首次出现在 9to5Linux 上——未经许可不得转载本文。此 RSS 源仅供读者使用，而非爬虫。"
+  },
+  "50efabaebf90cfc83c2c36af390b7cf7": {
+    "id": "50efabaebf90cfc83c2c36af390b7cf7",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/happy-30th-birthday-kde",
+    "title_en": "Happy 30th Birthday, KDE!",
+    "summary_en": "The KDE project is celebrating 30 years since the first announcement of the KDE (Kool Desktop Environment) desktop environment on October 14th, 1996.\nThe post Happy 30th Birthday, KDE! appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Wed, 14 Oct 2026 07:01:30 +0000",
+    "title_zh": "KDE 30岁生日快乐！",
+    "summary_zh": "KDE项目庆祝自1996年10月14日首次发布KDE（Kool Desktop Environment）桌面环境以来的30周年。",
+    "fulltext_zh": "KDE项目正在庆祝自1996年10月14日首次发布KDE（Kool Desktop Environment）桌面环境以来的30周年。\n\n文章《KDE 30岁生日快乐！》首次出现在9to5Linux上——未经许可不得转载本文。此RSS源仅供读者使用，而非爬虫。"
+  },
+  "0eb46488985aea95026c02e3a544fcbe": {
+    "id": "0eb46488985aea95026c02e3a544fcbe",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/new-steam-client-update-adds-many-linux-improvements-big-picture-screensaver",
+    "title_en": "New Steam Client Update Adds Many Linux Improvements, Big Picture Screensaver",
+    "summary_en": "Valve released a new stable Steam Client update with many Linux improvements, as well as updates to the Big Picture Mode, Steam Input, in-game overlay, game recording, and more.\nThe post New Steam Client Update Adds Many Linux Improvements, Big Picture Screensaver appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Wed, 14 Oct 2026 03:38:58 +0000",
+    "title_zh": "新版 Steam 客户端更新带来大量 Linux 改进及大屏幕屏保",
+    "summary_zh": "Valve 发布了新的稳定版 Steam 客户端更新，为 Linux 平台带来多项改进，同时更新了大屏幕模式、Steam 输入、游戏内覆盖层和游戏录制等功能。",
+    "fulltext_zh": "Valve 发布了新的稳定版 Steam 客户端更新，包含大量 Linux 改进，以及对大屏幕模式、Steam 输入、游戏内覆盖层、游戏录制等的更新。"
   }
 }
