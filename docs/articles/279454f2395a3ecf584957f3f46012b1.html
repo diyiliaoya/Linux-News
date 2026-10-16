@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Microsoft Defender 现已登陆 Linux 桌面 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月16日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">桌面环境</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Microsoft Defender 现已登陆 Linux 桌面</h1>
+
+  <div class="article-summary">微软宣布 Microsoft Defender 进入 Linux 桌面公开预览阶段，支持 Ubuntu、Debian、Fedora、RHEL 等主流发行版。该产品面向企业用户，需搭配 Defender for Endpoint Plan 2 或 Microsoft 365 E5/E7 订阅，旨在帮助 IT 部门统一管理 Linux 工作站的安全可见性。</div>
+
+  <div class="article-body"><p>Microsoft Defender for Linux 桌面版进入公开预览</p><p>Microsoft Defender 现已可用于 Linux 桌面</p><p>震惊吗？在 2026 年，你不该震惊。微软如今和企鹅（Linux）走得很近：Windows 里有了 Linux 内核，它拥有 GitHub，还为 Linux 开发软件（虽然没多少人用）。</p><p>那为什么不在此基础上再加点能根除威胁、检测病毒、保护安全的软件呢，嗯？</p><p>本文属于我们的[某专栏]。一场想象中的闲聊，聊聊某条 Linux 新闻的来龙去脉、内容以及常常令人无语的地方，完全没有义务对它表现出兴奋。准备好迎接吐槽吧。</p><p>Microsoft Defender for Linux。</p><p>公开预览，所以，跳过？</p><p>E5 发票上的一行条目。</p><p>微软的安全套件，现已可用于 Linux 桌面（尽管只是公开预览）。</p><p>微软的安全套件。在 Linux 上……</p><p>自 2020 年起就已可用于 Linux 服务器。桌面版是必然的。</p><p>微软表示，随着“越来越多的开发者开始使用 Linux 桌面”（开始？！），他们的设备成为攻击者的目标——但公司 IT 人员很容易忽视这一点。因此他们提出要“弥合这一可见性缺口”。</p><p>说得过去。它能在 Ubuntu 上运行吗？</p><p>仅限 LTS 版本：在 Intel/AMD 桌面上支持 Ubuntu 16.04 LTS 到 26.04 LTS，在 Arm64 上支持 20.04 到 26.04。</p><p>任何 Linux 服务器和内核组合[已支持的内容]都在桌面支持名单上。Debian、Fedora、RHEL、SLES、Rocky，当然还有老牌的 Ubuntu LTS——各司其职，通过 Ubuntu Pro 的[某功能]维持支持。</p><p>你不需要。你的雇主需要。或者说，可以。要使用此功能，需要独立的 Defender for Endpoint Plan 2，或 Microsoft 365 E5 或 E7。如果读那句话让你一脸茫然，太好了：这证明这条新闻不会成为[某话题]的燃料。</p><p>假设我想要这个，我能为自己的笔记本电脑购买吗？</p><p>呃，你大概得联系微软销售人员才能了解更多。这不是面向家庭用户的盒装产品。</p><p>我的雇主如何获取？</p><p>这是预览版，所以他们可能不想用。如果他们够勇敢，可以——*戴上老花镜，切换成 LinkedIn 腔调*——</p><p>“使用任何现有部署方法，将符合条件的 Linux 工作站加入管理”</p><p>有实际的应用吗？</p><p>严格来说，没有。桌面设备会出现在公司的管理门户中，与他们的 Linux 机器并列，无论是服务器、数据中心堆栈，还是工程师桌上那台饱经风霜、贴满贴纸的[某设备]。</p><p>问题是，我听说 Linux 不需要杀毒软件。这是真的吗？</p><p>“Linux 桌面足够重要，值得列入企业安全路线图！”</p><p>“它现在有 snap 包了吗？”</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/microsoft-defender-linux-desktop" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

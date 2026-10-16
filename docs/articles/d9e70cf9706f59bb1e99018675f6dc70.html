@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LPDDR5 5467 vs. 6400 vs. 7467 MT/s 笔记本内存性能基准测试 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月16日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>LPDDR5 5467 vs. 6400 vs. 7467 MT/s 笔记本内存性能基准测试</h1>
+
+  <div class="article-summary">本文基于 Star Labs StarFighter Ultra Linux 笔记本，测试了 LPDDR5 内存在 5467、6400 和 7467 MT/s 三种速度下的性能与功耗表现。该笔记本搭载 Intel Core Ultra 9 285H 处理器，BIOS 允许调节内存频率，默认以 6400 MT/s 运行 7467 MT/s 规格内存以平衡能效。测试使用 WattsUp Pro 功耗计记录整体交流功耗，旨在量化不同内存速度对性能与功耗的影响。</div>
+
+  <div class="article-body"><p>LPDDR5 5467 vs. 6400 vs. 7467 MT/s 笔记本内存性能基准测试 - Phoronix</p><p>LPDDR5 5467 vs. 6400 vs. 7467 MT/s 笔记本内存性能基准测试</p><p>发布于 2026 年 10 月 15 日 下午 03:02 EDT。</p><p>在最近评测的 Star Labs StarFighter Ultra Linux 笔记本上，其 BIOS 允许配置内存速度，这与如今许多其他笔记本厂商的 BIOS 实现不同。Star Labs 还做出了默认设计决定，以平衡的电源/性能用户体验为由，将标称 LPDDR5-7467 的内存运行在 LPDDR5-6400 速度下。因此，我很好奇地运行了一些基准测试，量化 LPDDR5-6400 与 LPDDR5-7467 的功耗和性能影响，并加入了 LPDDR5-5467 测试，作为这款 StarFighter Ultra 笔记本提供的第三个选项。</p><p>提醒一下，所评测的 Star Labs StarFighter Ultra 配备 Intel Core Ultra 9 285H Arrow Lake 处理器、8 x 8GB LPDDR5-7467 内存、1TB Samsung 990 EVO Plus 1TB 以及集成 Intel Xe 显卡。这是这家专注于 Linux 的 PC 厂商推出的一款不错的全能 Linux 笔记本，系统固件还使用了 Coreboot。</p><p>我在这台笔记本上以 LPDDR5-5467/6400/7467 速度运行了各种基准测试，不仅观察性能影响，还关注功耗。使用外部 WattsUp Pro 功耗计来查看所有基准测试过程中的总交流功耗。</p><p>再次感谢 Star Labs 向 Phoronix 提供这台 StarFighter Ultra 评测机用于基准测试。</p><p>Intel Core Ultra 7 270K Plus 的单通道 vs. 双通道内存性能</p><p>Intel Xeon 6 Granite Rapids 从 6 到 12 个 MRDIMM 的内存扩展性能</p><p>AMD Ryzen 7 9850X3D 上 DDR5-4800 vs. DDR5-6000 在 300+ 项基准测试中的性能</p><p>Linux 6.18 LTS 上的透明大页性能：Madvise vs. Always</p><p>重新审视 Intel Xeon 6 Granite Rapids 的 SNC3 vs. HEX 模式性能</p><p>重新审视 Intel Xeon 6 “Granite Rapids” 的 DDR5-6400 vs. MRDIMM-8800 性能</p><p>同时享受无广告浏览，</p><p>单页文章视图</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026，</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/review/lpddr5-5467-6400-7467" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

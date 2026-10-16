@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ubuntu 26.10 发布：全面拥抱 Rust 的过渡版本 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月16日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Ubuntu 26.10 发布：全面拥抱 Rust 的过渡版本</h1>
+
+  <div class="article-summary">Ubuntu 26.10 作为过渡版本正式发布，搭载 Linux 7.3 内核、GNOME 51 桌面环境及改进的 App Center。该版本最大亮点是核心工具全面转向 Rust 实现的 uutils，并引入 Rust 版 OpenPGP 工具 Sequoia。此外还带来 NVIDIA 615 驱动、OpenSSL 4、TPM 全盘加密改进及 RISC-V 平台支持等更新，仅提供九个月支持至 2027 年 7 月。</div>
+
+  <div class="article-body"><p>Ubuntu 26.10 发布：全面拥抱 Rust 的过渡版本</p><p>Ubuntu 26.10 发布：全面拥抱 Rust 的过渡版本</p><p>它搭载 Linux 7.3、GNOME 51、改进的 App Center 以及许多其他升级。</p><p>标题之所以这么说，是因为直到现在，Ubuntu 中的核心工具还没有完全 Rust 化。由于兼容性问题，它们一直停留在 GNU 版本。此后它们已迁移到基于 Rust 的 uutils 实现，使该发行版在其“氧化”进程中更进一步。</p><p>Ubuntu 26.10，代号“”，是一个过渡版本，这意味着它比之前的 LTS 带来更新的软件，但只获得九个月的支持，将于 2027 年 7 月结束。</p><p>尽管我们的功能汇总已经覆盖了，但仍有一些变化被遗漏了。😅</p><p>⭐ Ubuntu 26.10：有哪些新内容？</p><p>好吧，我们从驱动这个过渡版本的内核开始，它支持最新的 Snapdragon X2 Elite 笔记本电脑，以及来自联想、惠普和宏碁的几款较旧的 Snapdragon X Elite 和 X Plus 机器。</p><p>游戏玩家会很高兴知道，Valve 工程师 Natalie Vock 的 VRAM 超额分配工作的也已合入此内核。显存过少的显卡上的游戏应该运行得更好，因为部分数据现在可以卸载到常规系统内存中。</p><p>你已经知道这个 Linux 版本正在成为 Ubuntu 最注重性能的版本之一。</p><p>Ubuntu 还转向 NVIDIA 615 驱动系列，它取代了 595 和 610，并且仅提供开放内核模块，支持 Turing 及更新的 GPU。</p><p>我们之前谈到的 Rust 化也扩展到了 OpenPGP，由前 GnuPG 开发者构建的基于 Rust 的实现已进入主归档。其工具现在与 GnuPG 的工具并存。</p><p>对于桌面环境，它带来了一系列升级，例如面板中的指纹管理器、设置中的 DNS 搜索域，以及当你拖动多个项目时在中的计数徽章。</p><p>Ubuntu Tiling Assistant 为内置的可吸附窗口布局提供了界面。</p><p>如果你希望有重新设计的安装程序和首次启动引导流程，这些计划在下一个长期支持版本 Ubuntu 28.04 LTS 中推出。</p><p>🛠️ 其他更改与改进</p><p>以下是此版本中其他一些值得注意的更改：</p><p>OpenSSL 4 带来加密客户端问候（ECH）和更好的 QUIC 支持。</p><p>如果设置了 PIN 或密码短语，TPM 支持的全盘加密现在无需硬件信任根即可工作。</p><p>RISC-V 平台获得对 SpacemiT K3 板和 SiFive 的 BigSky 平台的官方 RVA23 支持。</p><p>在评选中选出的十二张新壁纸。</p><p>工具链升级包括 GCC 15.2.0、LLVM 22.1.8、Python 3.14.7、Rust 1.97.1、Go 1.27 和 OpenJDK 25.0.4。</p><p>📥 下载 Ubuntu 26.10</p><p>此过渡版本的 ISO 可用于 -V 和其他版本，如果你是普通用户，请从“”ISO 下载。特定风味如</p><p>喜欢这个更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年中一直在帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>一个热衷于开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能的技术迷。</p><p>大型科技公司资助了 1150 亿欧元的警告，反对欧洲的数字独立</p><p>Epic Games 想要 Linux 游戏玩家。它正在为 Fortnite 重建 EAC</p><p>开源规模的合资企业！开放生产力来了</p><p>这位开发者构建了一个办公套件，因为他的妻子一直回到 Microsoft Office</p><p>Linux Mint 23 不再存在。一个新版本取代了它</p><p>成为更好的 Linux 用户</p><p>通过 FOSS 每周通讯，您将学习有用的 Linux 技巧、发现应用程序、探索新发行版并了解 Linux 世界的最新动态</p><p>太好了！您已成功注册。</p><p>欢迎回来！您已成功登录。</p><p>您已成功订阅 It's FOSS。</p><p>您的链接已过期。</p><p>成功！请检查您的电子邮件以获取登录魔法链接。</p><p>成功！您的账单信息已更新</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/ubuntu-26-10-release/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

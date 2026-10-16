@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ubuntu 26.10 发布：搭载 GNOME 51、Linux 7.3 及全新平铺技巧 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月16日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Ubuntu 26.10 发布：搭载 GNOME 51、Linux 7.3 及全新平铺技巧</h1>
+
+  <div class="article-summary">Ubuntu 26.10 正式发布，支持 9 个月，搭载 GNOME 51、Linux 7.3 内核和 Mesa 26.2。新特性包括拖拽窗口时弹出布局选择器、登录界面支持通行密钥、Rust 核心工具集、更强大的应用中心、RISC-V 桌面 ISO 以及扩展的 TPM 全盘加密。此外还改进了 PDF 签名、截图键盘控制、Nautilus 拖拽计数与标签页概览，并将桌面图标扩展移植至 GTK4。</div>
+
+  <div class="article-body"><p>Ubuntu 26.10：GNOME 51、Linux 7.3 及全新窗口平铺技巧</p><p>带来了更快的窗口平铺方式、登录界面通行密钥登录，以及一整套基于 Rust 的核心工具。</p><p>这个最新的过渡版本将获得 9 个月支持，搭载 Mesa 26.2 和 Linux 7.3 内核。此外还有功能更强大的应用中心、面向 RISC-V 硬件的新桌面 ISO，以及扩展的 TPM 支持全盘加密。</p><p>想了解更多？以下是新功能的概述，以及在你安装或升级到 26.10 之前值得了解的内容。</p><p>Ubuntu 26.10：有哪些新功能？</p><p>窗口平铺新增拖拽上移布局选择器</p><p>视频展示了新的布局选择器</p><p>Ubuntu 26.10 首次推出了一种更新、更快的拖拽中平铺窗口方式。</p><p>当你开始移动窗口时，布局选择器会从屏幕顶部探出。将窗口向上拖向它即可展开布局选择器。将窗口移到某个区域上方，就能看到窗口将落位置的幽灵预览。如果满意，松开即可将其吸附到位。</p><p>很巧妙？当然，但也可能很烦人。Ubuntu 默认没有提供简单的关闭方式，但如果你觉得每次拖动窗口时布局选择器忽隐忽现很分散注意力，可以用以下命令禁用这个弹窗：</p><p>gsettings set org.gnome.shell.extensions.tiling-assistant enable-layout-picker false</p><p>要重新开启，再次运行相同命令，但把</p><p>看看你的电脑是否通过 Ubuntu 认证（很可能没有）</p><p>在 26.10 中检查设备认证</p><p>检查你的笔记本或 PC 是否通过 Ubuntu 认证</p><p>状态检查通过 Ubuntu Hardware API 进行，经由</p><p>该组件在此版本中变成了 snap 包</p><p>如果你的电脑匹配某款认证设备，新的 Ubuntu 认证页面会显示匹配成功。如果不匹配，也会如实告知。如果是接近但不完全匹配，它同样会告诉你，并给出 Ubuntu 网站上设备列表页面的链接以供了解更多。</p><p>如果你的设备未获认证，不必担心：大多数都没有。该标签只授予那些 OEM 付费请 Canonical 测试并维护特定 Ubuntu 版本支持的设备。</p><p>用你的真实签名签署 PDF</p><p>在 PDF 上签下你的真实签名</p><p>）允许你向 PDF 添加手写签名并保存以供将来使用。你可以通过新的画布用鼠标、触控笔/数位板或触摸屏绘制签名，也可以导入签名照片并让应用移除背景。</p><p>签名会被保存，以便你快速再次使用，并且它们像其他注释一样工作，因此你可以在页面上重新定位和调整大小。</p><p>其他变化包括文档属性中纸张尺寸名称更具描述性，以及添加到文档中的自由文本注释现在默认会被打印出来。</p><p>截图支持键盘控制及新快门声</p><p>截图界面现在对键盘友好</p><p>截图选区可以通过键盘调整。</p><p>先画出一个区域，然后按键盘方向键选择选区的一侧——继续按可放大或缩小，或按住</p><p>以更大步长移动，或按住</p><p>以更小步长移动。按住</p><p>加方向键可移动整个选区。</p><p>如果你忘了自己在做什么，按</p><p>即可重置并重新开始。</p><p>截图时会播放新的声音。GNOME 选择替换</p><p>“不合适的”相机快门声</p><p>问题，并避免在公共场合截屏时招来异样目光的尴尬。</p><p>Nautilus 新增拖拽计数和标签页概览</p><p>默认文件管理器学会了一些新技巧</p><p>现在当你将多个文件拖到新文件夹或驱动器时，会显示文件数量。这样更容易知道你是否</p><p>用橡皮筋框选从文件夹中选对了文件数量。</p><p>后端变化还意味着大文件夹中的文件在刷新时加载更快。在较窄宽度下，会出现一个新的标签页概览按钮，便于查看和切换标签页——在平铺布局中很有用。</p><p>桌面图标移植到 GTK4</p><p>DING 在 26.10 中外观不再过时</p><p>DING 是 Ubuntu 默认预装的 GNOME Shell 桌面图标扩展，</p><p>今年早些时候。这一变化提升了上下文菜单和对话框的视觉风格，使其与其余部分保持一致</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/ubuntu-2610-new-features" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
