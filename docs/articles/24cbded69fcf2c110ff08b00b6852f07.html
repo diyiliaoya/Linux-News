@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>发行版发布：Asmi Linux 26.10 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月17日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">DistroWatch</span>
+  </div>
+
+  <h1>发行版发布：Asmi Linux 26.10</h1>
+
+  <div class="article-summary">Asmi Linux 26.10 已发布，基于 Ubuntu 26.10，采用定制 Xfce 4.20 桌面和 Linux 7.3 内核，支持九个月至 2027 年 7 月。新版本默认使用扩展布局，禁用不必要的 AI 功能，将 Ristretto 设为 AVIF 等新格式默认查看器，并以仅 700 KB 的汇编编写文本编辑器 Rhun 取代 Geany。</div>
+
+  <div class="article-body"><p>Tony George 宣布推出 Asmi Linux 的更新版本。这是一款基于 Ubuntu 的发行版，采用定制化的 Xfce 桌面和“Asmi 设置”——一个自行构建的系统配置工具。它基于新发布的 Ubuntu 26.10：“Asmi Linux 26.10 基于 Ubuntu 26.10‘Stonking Stingray’，现已可用。Asmi Linux 是 Debian/Ubuntu LTS 的再混合版本，配备现代 Xfce 桌面，既实用又易于使用。它精简轻量，适合偏好使用 X11 显示服务器的传统桌面的用户。亮点：基于 Ubuntu 26.10；Xfce 4.20 桌面；Linux 内核 7.3；支持九个月，将在 2027 年 7 月前从 Ubuntu 仓库接收更新。新特性？Xfce——默认使用扩展布局；全新编辑器——禁用不必要的 AI 功能和干扰；Ristretto——设为打开 AVIF 及更新图像格式的默认程序；Rhun 是新的默认文本编辑器，取代 Geany，Rhun 用汇编语言编写，速度非常快，大小仅 700 KB。该 Linux 发行版可免费下载。</p><p>获取更多信息、截图和系统需求。</p><p>asmi-linux-26.10-amd64.iso</p><p>近期相关新闻与发布</p><p>发行版发布：Asmi Linux 26.10</p><p>发行版发布：Asmi Linux 26.04</p><p>发行版发布：Asmi Linux 25.10</p><p>Asmi Linux 是一款面向桌面的 Linux 发行版，提供基于 Ubuntu 或 Debian 的版本。它使用高度定制化的 Xfce 桌面，并加入一些用户友好的细节。其他特性包括 Calamares 系统安装器、开箱即用支持多种流行虚拟机管理器、加载到内存的启动选项、最新的 Firefox 浏览器、用于更快 DNS 查询的 Cloudflare DNS，以及用于更快 SSH 连接的 SSH 多路复用。该项目还提供商业“终极”版，包含额外的软件和工具。</p><p>https://teejeetech.com/asmi/</p><p>替代用户论坛</p><p>https://teejeetech.com/asmi#download</p><p>DistroWatch Torrent 存档</p><p>捐赠渠道，</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://distrowatch.com/12992" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

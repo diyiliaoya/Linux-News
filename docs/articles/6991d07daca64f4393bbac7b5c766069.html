@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>发行版发布：Voyager Live 26.10 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月17日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">DistroWatch</span>
+  </div>
+
+  <h1>发行版发布：Voyager Live 26.10</h1>
+
+  <div class="article-summary">Voyager Live 26.10 发布，基于 Ubuntu 的中间版本，提供 Snap 和 Flatpak 两个标准版。默认版采用 Snap、Dracut 和 Rust，使用 Subiquity 安装器；Flatpak 版使用更轻量的 Ubiquity 安装器。系统搭载 GNOME 51 桌面和 Linux 7.3 内核，并集成终端 AI 聊天机器人 ChatGPT，可选移除。</div>
+
+  <div class="article-body"><p>发行版发布：Voyager Live 26.10（DistroWatch.com 新闻）</p><p>DistroWatch.com 由以下赞助商支持</p><p>新闻/观点/评论 ▼</p><p>发布公告</p><p>DW 周刊 / 评论存档</p><p>访客评分与评论</p><p>按评分项目排名</p><p>播客、新闻通讯与评论</p><p>跨发行版比较软件包</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停止的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与提示专栏</p><p>误区与误解专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>可视化发行版家族树</p><p>常见问题</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>GNOME OS 推出“预览”变体</p><p>Haiku 开发者打磨操作系统的诸多方面</p><p>Mint 更长开发周期的好处</p><p>Peppermint 团队更新 PepVoid</p><p>Chimera 幕后</p><p>NetBSD 超额完成筹资目标</p><p>Rocky 团队分叉 OpenRadioss</p><p>openSUSE 讨论大规模安全更新月</p><p>GhostBSD 开始开发自己的桌面</p><p>NixOS 将构成新的荷兰操作系统的基础</p><p>易于使用的 PBX - 托管或自管理</p><p>Linux 电话系统</p><p>免费实时聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程办公应用：iOS 或 Android</p><p>免费视频会议</p><p>3CX 的 VoIP / PBX 指南</p><p>未雨绸缪，制定灾难恢复计划！</p><p>必要的实时聊天报告和统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成</p><p>3CX StartUP 的 5 大杀手级功能</p><p>别做“那种”人 第1卷：保管好复杂凭证</p><p>别做“那种”人 第2卷：呼叫欺诈</p><p>别做“那种”人 第3卷：四大安全提示</p><p>别做“那种”人 第4卷：监控你的实例</p><p>Red Hat 周五五件事 - 2026年10月16日</p><p>Haiku 活动与合同报告，2026年9月</p><p>Linux Mint 月度新闻 - 2026年9月</p><p>Ubuntu 每周通讯 965</p><p>Fedora 项目播客</p><p>最新新闻与更新</p><p>新闻筛选选项</p><p>发行版发布：Voyager Live 26.10</p><p>该项目发布了新版本 26.10。新版本提供两个版本，一个支持 Flatpak，一个支持 Snap 软件包。</p><p>“我向您呈现 Voyager 26.10，基于 Ubuntu ‘Stonking Stingray’。提供两个标准版本——一个基于 Ubuntu，使用 Snap 和 deb 软件包；另一个基于 Flatpak 和 deb。请注意，这些是中间版本，提供九个月的更新，主要用于 LTS 版本的实验和测试。这些中间版本也可以毫无问题地安装。此版本将完全按照最新 Ubuntu 版本的结构构建，包括其环境和安全层。默认版本使用 Snap、Dracut 和 Rust，是完整的标准版，使用基于 Snap 的更大的 Subiquity 安装器。或者，还有 Flatpak 版，使用更轻量、更易用的 Ubiquity 安装器。软件包包含 GNOME 51，这是一个轻量、快速、现代、流畅、安全且高性能的混合环境，适用于 PC 和平板电脑。此版本基于 Linux 7.3 内核。终端中的 AI 聊天机器人 ChatGPT 已集成，无需双重 API 密钥，使用 GNOME 扩展，并可选移除 AI。”</p><p>更多细节和截图可在以下找到：</p><p>Voyager-26.10-amd64.iso</p><p>Voyager-26.10-flatpak-amd64.iso</p><p>近期相关新闻和发布</p><p>发行版发布：Voyager Live 26.10</p><p>发行版发布：Voyager Live 26.04</p><p>发行版发布：Voyager Live 25.10</p><p>发行版发布：Voyager Live 13</p><p>发行版发布：Voyager Live 25.04</p><p>发行版发布：Voyager Live 24.10</p><p>Voyager Live 是一个基于 Xubuntu 的发行版和 live DVD，展示 Xfce 桌面环境。其功能包括 Avant Window Navigator 或 AWN（类似 dock 的导航栏）、Conky（在桌面上显示有用信息的程序），以及 300 多张可用作桌面背景的照片和动画。该项目还开发其他几个版本。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://distrowatch.com/12990" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

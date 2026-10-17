@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valve 的 Linux 版 Steam 客户端测试版升级至 64 位并迁入容器 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月17日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Valve 的 Linux 版 Steam 客户端测试版升级至 64 位并迁入容器</h1>
+
+  <div class="article-summary">Valve 发布 10 月 15 日 Steam 客户端测试版更新，将 Linux 客户端改为 64 位构建并运行在 Steam Runtime 容器中，旨在让客户端在不同发行版上表现更一致。更新还修复了更新窗口不显示的问题。测试版仍要求 x86_64 系统安装 32 位和 64 位库及显卡驱动，仅支持 64 位的配置不受支持。</div>
+
+  <div class="article-body"><p>Valve 的 Linux 版 Steam 客户端升级至 64 位</p><p>Valve 的 Linux 版 Steam 客户端测试版升级至 64 位并迁入容器</p><p>他们表示，在与游戏所用相同类型的容器中运行 Steam，应能让客户端行为更加一致。</p><p>10 月 15 日的 Steam 客户端测试版改变了 Linux 客户端的构建和运行方式。它将客户端迁移到 64 位构建，并在 Steam Runtime 容器内运行。与此同时，还包含了一项针对更新窗口无法显示的修复，以及新的</p><p>据 Valve 称，该客户端一直在</p><p>库，而非主机系统上的库。</p><p>runtime 文档</p><p>补充说，这仅在主机比 runtime 更新时有效。</p><p>Steam 上的游戏已经可以在容器中运行，容器为应用程序提供自己的一套库，而不是与主机的库混合。这些容器背后的工具</p><p>，仍然从主机系统获取图形驱动。</p><p>Valve 表示，在容器中运行客户端</p><p>应使其在不同发行版上表现更一致</p><p>。其游戏已经运行在相同的技术上。</p><p>测试版客户端的发布说明没有提及容器名称，但其</p><p>runtime 发布说明</p><p>将 64 位客户端与一个名为</p><p>的容器联系起来，将其描述为</p><p>的一个变体，专为在 Steam 客户端内部使用而制作。</p><p>这一基础可以追溯到 3 月，当时 Valve 将容器和早期 64 位客户端作为</p><p>发布。</p><p>并且不要以为选择 64 位客户端</p><p>就消除了对 32 位库的需求</p><p>。测试版客户端的要求</p><p>仍然要求 x86_64 系统上同时具备所需库和图形驱动的 32 位和 64 位版本。</p><p>仅支持 64 位的配置不受支持</p><p>。早前的 steamrt3c README 指出，其容器附带 i386 库以兼容旧软件。</p><p>我在 Ubuntu 26.04 LTS 上切换到测试版，只用了四步。如果 Steam 尚未安装在你的系统上，你需要获取</p><p>官方 DEB 包</p><p>并安装。</p><p>接下来，按照以下步骤操作。👇</p><p>点击左上角的</p><p>，选择</p><p>客户端测试版参与</p><p>打开下拉菜单并选择</p><p>当 Steam 要求你重启时。</p><p>就这么简单，Steam 现在已处于测试版频道。Valve 欢迎测试者提交错误报告，因此如果你遇到问题，请使用“</p><p>正试图吸引 Linux 游戏玩家</p><p>，凭借其反作弊举措。</p><p>Epic Games 想要 Linux 玩家。它正在为《堡垒之夜》重建 EAC</p><p>该反作弊软件正在为该平台做准备，而原生客户端已作为预览版提供。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>跳过 Google 结果中的 AI 垃圾和 SEO 垃圾</p><p>告诉 Google 你更喜欢 It's FOSS，它会在你搜索时更频繁地显示我们由经验丰富的 Linux 用户创建的 Linux 新闻和教程。只需点击一下。</p><p>设为首选来源</p><p>在收件箱中获取 FOSS Weekly</p><p>一份健康的 Linux 新闻通讯，包含最新发布、相关新闻、技巧和教程、趣闻和梗图、测验以及面向桌面 Linux 用户的优惠。每周免费。</p><p>一个热衷于开源软件、定制 PC 装机、赛车运动以及探索世界无限可能的技术迷。</p><p>Ubuntu 26.10 已作为 Rust 丰富的临时版本发布</p><p>大型科技公司资助了一项 1150 亿欧元的警告，反对欧洲的数字独立</p><p>Epic Games 想要 Linux 玩家。它正在为《堡垒之夜》重建 EAC</p><p>开源比例的合作！开放生产力来了</p><p>这位开发者构建了一套办公套件，因为他的妻子总是回到 Microsoft Office</p><p>成为更好的 Linux 用户</p><p>通过 FOSS Weekly 新闻通讯，学习有用的 Linux 技巧，发现应用程序，探索新发行版，并随时了解 Linux 世界的最新动态</p><p>太好了！你已成功注册。</p><p>欢迎回来！你已成功登录。</p><p>你已成功订阅 It's FOSS。</p><p>你的链接已</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/steam-linux-64-bit-client/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
