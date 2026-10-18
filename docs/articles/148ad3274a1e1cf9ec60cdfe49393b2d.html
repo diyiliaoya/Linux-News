@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>发行版发布：Synex 26.10.17 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月18日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">DistroWatch</span>
+  </div>
+
+  <h1>发行版发布：Synex 26.10.17</h1>
+
+  <div class="article-summary">Synex 26.10.17 是基于 Debian Stable 的 GNU/Linux 发行版最新快照，更新了基础系统，并包含 COSMIC 桌面 1.10.0 版本。该版本引入 cosmic-viewer 图像查看器和 cosmic-osk 屏幕键盘，统一锁屏与桌面背景，并同步界面字体设置。提供 KDE、COSMIC 和 XFCE 等桌面版本的 ISO 镜像。</div>
+
+  <div class="article-body"><p>发行版发布：Synex 26.10.17（DistroWatch.com 新闻）</p><p>DistroWatch.com 由以下赞助商支持</p><p>新闻/观点/评测 ▼</p><p>发布公告</p><p>DW 周刊 / 评测存档</p><p>访客评分与评测</p><p>项目评分排名</p><p>播客、新闻通讯与评测</p><p>跨发行版比较软件包</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停止的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与提示专栏</p><p>误区与误解专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>可视化发行版家族树</p><p>常见问题</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>GNOME OS 推出“预览”变体</p><p>Haiku 开发者打磨操作系统的诸多方面</p><p>Mint 更长开发周期的好处</p><p>Peppermint 团队更新 PepVoid</p><p>Chimera 幕后</p><p>NetBSD 超额完成筹款目标</p><p>Rocky 团队分叉 OpenRadioss</p><p>openSUSE 讨论大规模安全更新月</p><p>GhostBSD 开始开发自己的桌面</p><p>NixOS 将组建新荷兰操作系统的基础</p><p>易于使用的 PBX - 托管或自管理</p><p>Linux 电话系统</p><p>免费实时聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程工作应用：iOS 或 Android</p><p>免费视频会议</p><p>3CX 的 VoIP / PBX 操作指南</p><p>未雨绸缪，制定灾难恢复计划！</p><p>必要的实时聊天报告和统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成</p><p>3CX StartUP 的 5 大杀手级功能</p><p>别做“那种”人 第1卷：保管好复杂凭证</p><p>别做“那种”人 第2卷：呼叫欺诈</p><p>别做“那种”人 第3卷：四大安全提示</p><p>别做“那种”人 第4卷：监控你的实例</p><p>Red Hat 周五五件事 - 2026年10月16日</p><p>Haiku 活动与合同报告，2026年9月</p><p>Linux Mint 月度新闻 - 2026年9月</p><p>Ubuntu 每周通讯 965</p><p>Fedora 项目播客</p><p>最新新闻与更新</p><p>新闻筛选选项</p><p>发行版发布：Synex 26.10.17</p><p>该发行版基于 Debian“Stable”，提供多个桌面版本。项目最新快照版本 26.10.17 更新了基础系统，并包含运行 COSMIC 桌面 1.10.0 版本的 COSMIC 风味。</p><p>“COSMIC 版本升级至 1.10.0，累积了 1.9.0 和 1.10.0 相对于上一版本的所有变更。此次更新覆盖完整技术栈：Wayland 合成器、面板及其小程序、设置中心、会话管理器、登录 greeter 以及环境自带应用。两个新组件加入其中。cosmic-viewer 是该环境的图像查看器，成为打开图像的默认应用，取代该版本此前一直使用的 GTK 查看器。cosmic-osk 增加了屏幕键盘，并配有独立小程序来启用和禁用它；环境会根据机器类型检测，因此不会出现在不该出现的地方。锁屏现在与桌面背景由同一组件绘制，使其外观与会话统一。界面字体现在从环境的设置守护进程同步，因此第三方 GTK 应用将采用与 COSMIC 应用相同的字体，包括字号。”</p><p>更多信息请参见</p><p>synex-kde-26.10.17-amd64.hybrid.iso</p><p>synex-cosmic-26.10.17-amd64.hybrid.iso</p><p>synex-xfce-26.10.17-amd64.hybrid.iso</p><p>近期相关新闻与发布</p><p>发行版发布：Synex 26.10.17</p><p>发行版发布：Synex 13 “Server”</p><p>Synex 是一个基于 Debian“Stable”分支的 GNU/Linux 发行版，使用官方 Debian Live Build 工具开发。它提供四种独立的桌面选项：GNOME、LXDE、KDE Plasma 和 Xfce，默认状态下均由相当精简的应用程序集组成，不包含任何开发工具或办公套件。该发行版的一些主要特性包括：支持 BIOS 和 UEFI 的 Calamares 安装程序、用于打印和网络的 CUPS 集成。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://distrowatch.com/12994" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
