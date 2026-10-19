@@ -16113,5 +16113,159 @@
     "title_zh": "PeaZip 11.4 开源压缩包管理器发布，带来多项改进",
     "summary_zh": "PeaZip 11.4 开源压缩包管理器现已开放下载，主要改进了脚本引擎多个阶段中对输入文件名的清理处理。",
     "fulltext_zh": "PeaZip 11.4 开源压缩包管理器现已可供下载，该版本改进了脚本引擎多个阶段中对输入文件名的清理处理。"
+  },
+  "5d20affed6ec64e01c29669991865672": {
+    "id": "5d20affed6ec64e01c29669991865672",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/linux-7-3-features",
+    "title_en": "Linux 7.3 released, this is what’s new",
+    "summary_en": "Linus Torvalds has announced the release of Linux 7.3, a new mainline kernel – the one Ubuntu 26.10 is running on. Linux 7.3 is another big update, improving gaming performance for AMD GPUs with low VRAM, boosting ext4 I/O and reworking how the kernel splits CPU time between groups of apps to improve efficiency. It&#8217;s expected to become the new Long Term Support version. Writing on the Linux Kernel mailing list, Torvalds said: &#8220;It&#8217;s Sunday afternoon, and this week I somehow kept",
+    "pub_date": "Mon, 19 Oct 2026 02:28:18 +0000",
+    "title_zh": "Linux 7.3 发布，以下是新特性",
+    "summary_zh": "Linus Torvalds 宣布发布 Linux 7.3 主线内核，预计将成为新的长期支持版本。该版本改进了低显存 AMD GPU 的游戏性能，提升了 ext4 文件系统的 I/O 速度，并重新设计了内核在应用组之间分配 CPU 时间的方式以提高效率。此外，还为旧款 AMD 硬件提供了修复，并增加了对 NTFS 备用数据流的基本支持。",
+    "fulltext_zh": "Linus Torvalds 宣布发布 Linux 7.3，这是一个新的主线内核——那个\nLinux 7.3 又是一个大更新，改善了低显存 AMD GPU 的游戏性能，提升了 ext4 I/O，并重新设计了内核在应用组之间分配 CPU 时间的方式以提高效率。\n预计它将成为新的长期支持版本。\n在 Linux 内核邮件列表上写道，\n“现在是周日下午，本周我不知怎么地保持了足够的理智，记住了今天是星期几，所以发布没有随机延迟。奇迹永远不会停止吗？”\n遗憾的是，它们可能会停止——所以这篇文章的引言也必须结束。接下来是回顾。\n低端 GPU 获得性能提升\n如果你的 AMD 显卡视频内存（VRAM）有限，Linux 7.3 通过一种新的资源分配方法更好地处理了内存紧张的情况。\n以前，如果在运行多个应用时 VRAM 被填满，内核会按照先到先得的原则分配空间。如果你晚打开一个游戏，它可能会被强制从显卡更快的 VRAM 中挤出，进入系统内存（GTT）。\n在 Linux 7.3 中，内核可以将其他应用未受保护的背景数据从 VRAM 中“驱逐”出去，为具有更高优先级的任务（如请求受保护内存的游戏）腾出空间。\n完成了这项工作。在测试中\n《夺宝奇兵：古老之圈》\n这一变化使得游戏即使在设置调整到内存需求接近 9GB VRAM 的情况下，也能在 8GB GPU 上良好运行。\n这只是工作的一部分；未来内核版本中还会有更多 VRAM 管理变更。\n旧款 AMD 硬件获得修复\n过去几个内核为旧显卡提供了修复和调优，这一趋势尚未停止。\nDRM 格式修饰符（实际上是描述图像缓冲区外观的标签）现在在 HD 7000 系列（GCN 1.0）及以上的 AMD Radeon GPU 上可用，在某些情况下提升了性能，并改善了对基于 Vulkan 的 Wayland 合成器的支持。\n同时，旧的 AMD Athlon XP 处理器（以及一些 Intel Pentium III/Celeron CPU）可以使用\n指令进行内存写排序，而无需 SSE2，解决了早期内核中的错误要求。\n当然，还有对开发中的新（Intel 和）AMD 硬件的支持。我更愿意关注对已经存在、正在使用的硬件的改进，而不是那些还要过几个内核版本才会上市的硬件。\nCgroup 调度重新思考\nLinux 7.3 重新调整了内核在应用和服务之间共享 CPU 时间的方式，旨在在后台任务竞争资源时保持系统响应性。\n调度器现在在占用 CPU 的进程组之间分配 CPU 时间，并将 cgroup 移至单个运行队列以减少延迟。一个新的\n模式成为默认，尽管可以选择恢复旧行为。\n封面说明称，选择新默认是希望它\n“服务的人多于伤害的人\n”。Cgroup 调度一直是抱怨延迟的焦点，因此这一领域的改变将受到欢迎。\n调度器维护者 Peter Zijlstra 今年早些时候的测试显示了有希望的结果，在 8 个后台进程下，一个游戏的最低帧率从 3.8fps 提升到 20.6fps，平均帧率从 48fps 提升到 57.2fps。\nExt4 速度提升和 NTFS 支持\nUbuntu 的默认文件系统 Ext4 获得了一系列受欢迎的性能提升。并行直接 I/O 写入（跳过页面缓存）更快，\n也是如此，并且修复了一个缓冲写入回归问题。\nExt4（和 XFS）还加快了从磁盘的小型直接读取。\n一位字节跳动工程师的测试\n，使用 PCIe Gen5 NVMe SSD，看到 4K 随机读取性能从每秒 192 万次操作跃升至 219 万次。使用\n一次处理更多读取时，增益更高。\n驱动获得了对 NTFS 备用数据流的基本支持，这是 Windows 的一项功能，允许文件在主内容之外存储额外数据。变更"
+  },
+  "087d86d48fba2f52d272b2b2e3b0fb40": {
+    "id": "087d86d48fba2f52d272b2b2e3b0fb40",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/tiling-shell-right-mouse-button-activation",
+    "title_en": "Tiling Shell now supports mouse button layout activation",
+    "summary_en": "A new version of the Tiling Shell GNOME extension is out, adding support for GNOME 51 and a faster way to tile app windows using nothing but your mouse. Tiling Shell v18.0 lets you use your right mouse button for tiling system activation. It&#8217;s feature fans of Tiling Shell had requested, many accustomed to it from Windows&#8217; PowerToys&#8217; FancyZones. You click your left button to grab and drag the window then, with it held, hold the right mouse button to trigger the on-screen tiling ",
+    "pub_date": "Sun, 18 Oct 2026 22:23:36 +0000",
+    "title_zh": "Tiling Shell 现已支持鼠标按键激活布局",
+    "summary_zh": "GNOME 扩展 Tiling Shell v18.0 新增鼠标右键激活平铺布局功能，用户可按住左键拖动窗口时按右键触发布局，松开左键即可吸附到区域，无需键盘。该功能默认关闭，需在设置中启用。此外更新还修复了分数缩放下的 UI 过大问题，新增一键取消所有窗口平铺的快捷键，并允许设置布局切换是否影响所有工作区。",
+    "fulltext_zh": "Tiling Shell 现已支持鼠标按键激活布局 - OMG! Ubuntu\nGNOME 扩展发布，新增对 GNOME 51 的支持，并提供一种仅用鼠标即可更快速平铺应用窗口的方式。\n\nTiling Shell v18.0 允许你使用鼠标右键来激活平铺系统。这是许多 Windows PowerToys FancyZones 用户所熟悉的功能。\n\n你点击左键抓取并拖动窗口，然后在按住左键的同时按住鼠标右键，触发屏幕上的平铺布局。在某个区域上松开左键，窗口就会吸附到该区域——无需按键。\n\n听起来比实际使用更费力，这里有一个快速视频演示：\n\n用一个按键拖动，按另一个键平铺，松开即吸附\n\n“鼠标右键”平铺选项默认未启用，因此如果你想尝试，需要打开扩展的设置对话框并启用它。\n\n这补充了 Tiling Shell 管理窗口的多种方式，包括拖放区域、键盘快捷键，以及右键单击 GTK 窗口并从上下文菜单中选择位置的能力——挑选适合你的方式。\n\nTiling Shell v18 的其他变化\n\n此更新还解决了缩放问题。如果你发现启用分数缩放后，吸附助手、菜单、布局编辑器和其他 UI 元素在桌面上显得过大，现在应该恢复正常了。\n\n你现在可以设置一个快捷键，一次性取消所有窗口的平铺布局，这很巧妙，并且可以决定在一个工作区更改活动布局是否会影响所有工作区。\n\n此外还有一个额外的（仍为可选的）“一起提升”行为，可将此行为限制在当前显示器，这样其他显示器上的平铺窗口就不会随之提升。\n\n安装扩展\n\n如果你想尝试，此更新已在 GNOME 扩展网站上提供，支持 GNOME 45 至 51（Ubuntu 24.04 LTS 或更高版本即可）。\n\n它有自己的布局选择器\n用于放置窗口，\n让你创建、编辑和切换自己的自定义布局。\n\n现有用户会自动获得此更新，但需要注销并重新登录后才会生效——如果你几天没这样做，会收到提醒。\n\n在 Ubuntu 上，请关闭内置的\n扩展。这将避免两种竞争方法之间的冲突。转到\n设置 > Ubuntu 桌面 > 增强平铺\n并将开关滑动关闭。"
+  },
+  "c5ecb5268e4c0c6d121e7e9da7bf9a70": {
+    "id": "c5ecb5268e4c0c6d121e7e9da7bf9a70",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/linux-mint-new-system-monitor",
+    "title_en": "Linux Mint’s new system monitor does more than you’d expect",
+    "summary_en": "December&#8217;s Linux Mint 27 release will include a brand new system monitor tool preinstalled. The app is called Superlight (well, that&#8217;s the project and package name; the user-facing label is just System Monitor). It shows hardware, app and process usage, relays battery stats and has an interactive storage page to find out what files and folders are using the most space. It&#8217;s still under active development, but I took it for a spin to see how it fares and what it offers. Keep in ",
+    "pub_date": "Sun, 18 Oct 2026 16:57:18 +0000",
+    "title_zh": "Linux Mint 的新系统监视器功能超乎你的想象",
+    "summary_zh": "Linux Mint 27 将于12月发布，预装全新系统监视器工具 Superlight。它提供硬件、应用和进程使用情况，电池统计，以及交互式存储页面，可查找占用空间最多的文件和文件夹。该工具仍在开发中，但已具备整体使用率图表、进程管理、电池详情和存储清理功能。Mint 还计划添加系统日志查看和基本配置选项。",
+    "fulltext_zh": "Linux Mint 的新系统监视器功能超乎你的想象 - OMG! Ubuntu\n12月的 Linux Mint 27 版本将预装一个全新的系统监视器工具。\n（好吧，这是项目和软件包的名称；面向用户的标签只是 Superlight）。它显示硬件、应用和进程使用情况，传递电池统计数据，并有一个交互式存储页面，用于找出哪些文件和文件夹占用了最多空间。\n它仍在积极开发中，但我试用了它，看看它的表现如何以及提供了什么。请记住，从现在到它首次稳定发布之间，可能会添加或更改更多功能。\nLinux Mint 的 Superlight 非常不错\n每次打开它时都会显示硬件资源使用页面。\n顶部是一个“整体使用率”图表。它在同一张图表上绘制了过去60秒内的 CPU、GPU、RAM 和交换空间使用情况。统一视图使得一眼就能轻松了解机器的整体运行情况。\n它还有单独的图表跟踪 CPU 核心使用情况、网络和存储活动，以及系统温度和风扇转速的图表。图表可以折叠；当只显示一个图表时，它会更大。\n查看和管理进程\n有单独的视图用于查看正在运行的应用及其各自的进程数、CPU 使用率和内存。单击列标题可按值排序项目，或拖动以将它们重新排列成你喜欢的顺序。\n页面有一个搜索栏，可按名称过滤。进程页面还允许你按所有、用户或系统进程进行过滤，并以树状显示它们以揭示父子关系。\n为你的电池统计数据费心\n在笔记本电脑上，Mint 的新系统监视器应用会在图表上显示电池和电源使用情况，以及预计充电/放电时间和信息，包括制造商、型号、技术、容量、充电循环次数和整体电池健康状况。\n还可以概览存储使用情况\n存储页面是我没想到会在这个应用中看到的，但说实话，它将是我最常用的页面，就像一个更快、更直观的磁盘使用分析器，更容易查看磁盘上（本地或外部）什么占用了空间。\n存储还兼作简单的系统清理工具。“清除缓存”按钮在我的测试设备内部32GB eMMC（这是一台改装过的 Chromebook）上释放了900MB的垃圾文件。\n在我对当前开发版本的测试中，Superlight 感觉并不比即将推出的系统监视器明显更重，但当资源页面显示大量图表时，它们确实会飙升。\n这是一个有希望的开始。\n系统监视器功能可用，但在更新、更现代的应用中看起来有些过时。Ubuntu 选择用 GNOME 系统监视器替换它，其他桌面环境也有用户友好的产品——甚至 KDE 的 Plasma 系统监视器。\nLinux Mint 的选择很有希望。\nMint 还计划在其新系统监视器中添加查看系统日志的功能，并且显然有空间添加一些基本配置选项（间隔时间是一个主要选项）。\n这个应用还没有做的一件事是列出组件详细信息，例如 CPU 型号、插槽、指令集或内存时序、内存条等，而其他现代系统监视器如 Mission Center 会这样做。\n但由于一些硬件规格细节已在 Linux Mint 的系统信息工具中呈现，有理由保持这里的重点。\n新的终端、归档和日历应用即将推出\nSuperlight 并不是 Linux Mint 正在开发的唯一全新应用。新的日历和时钟实用程序、电子书阅读器和归档管理器也在其中。而 Slick 是 Linux Mint 的新终端模拟器，灵感来自 Warp。\nMint 的所有新软件都是作为 XApp 项目的一部分开发的。Superlight 和 Slick 都是其中的一部分。目标是开发一套在任何 Linux 桌面环境下都能良好运行的软件，而不仅仅是 Cinnamon。\n运行任何系统监视器应用的一个小小的讽刺是，它使用系统资源来报告系统资源。所有那些实时探测、跟踪和图表渲染都不是凭空发生的。\n但 Mint 不打算像后者应用那样添加对终端配置文件、容器或链接的支持。"
+  },
+  "7b69fe5bbf64aae7e76729abe03386fb": {
+    "id": "7b69fe5bbf64aae7e76729abe03386fb",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/gnome-now-playing-card-extension",
+    "title_en": "Now Playing Card shows media info for multiple apps at a time",
+    "summary_en": "Now Playing Card is an extension for GNOME Shell that can show playback info and media controls from multiple sources at the same time.\nYou're reading Now Playing Card shows media info for multiple apps at a time, a blog post from OMG! Ubuntu. Do not reproduce elsewhere without permission.",
+    "pub_date": "Sun, 18 Oct 2026 02:55:48 +0000",
+    "title_zh": "Now Playing Card 可同时显示多个应用的媒体信息",
+    "summary_zh": "Now Playing Card 是一款 GNOME Shell 扩展，能在面板或通知区域集中显示所有音频应用和媒体标签的曲目信息与播放控制。它用卡片形式展示每个播放器，支持专辑封面、进度条拖动、循环和随机播放。通过手风琴效果节省空间，一次只展开一个播放器卡片。还提供动画声波图标、频谱分析仪等视觉自定义选项，并支持忽略列表过滤不需要的播放器。兼容 GNOME 45 至 51。",
+    "fulltext_zh": "Now Playing Card 可同时显示多个应用的媒体信息 - OMG! Ubuntu\n\n这是一款 GNOME Shell 扩展，能在同一处——面板或通知区域——显示每个音频应用和媒体标签的曲目信息与播放控制。GNOME 默认的媒体控制器（以及我过去写过的许多正在播放小程序和附加组件）对于你当时正在播放的内容来说还不错，但如果你一天中要同时处理多个音频应用，就不太方便了。\n\n暂停一个内容去播放另一个，并不意味着它会消失。所以，你为了在浏览器中查看 YouTube 视频而中途暂停的播客和 Spotify 曲目？它们会留在那里，随时可以继续播放。\n\n它为每个播放器使用“卡片”，包含专辑封面（大小可调）、播放器图标和一个可点击跳转的功能性进度条（如果播放器支持）。此外还有播放控制，包括循环和随机播放（如果可用）。\n\n由于多个播放器处于暂停状态可能会在小程序中占用大量空间，该扩展使用“手风琴”效果来充分利用空间。一次只有一个播放器卡片被放大，其余卡片保持紧凑，直到被点击。\n\n手风琴效果在打开 3 个音乐应用时的实际效果\n\n它还可以在面板上显示正在播放的曲目名称、艺术家和控制按钮，这是这类工具的主要用途（“这是什么曲目”——抬头就能看到）。你可以通过扩展的设置选择这些元素的位置、大小、行为等。\n\n为标签增添一点视觉点缀的是动画声波图标，或者如果你想更炫酷，还可以选择频谱分析仪，其条形会实时响应音频。幸运的是，如果你愿意，也可以选择完全不使用动画效果。\n\n提供了大量视觉自定义和行为设置。\n\n激活时会隐藏 GNOME 自带的媒体控制器（位于通知/日历弹出窗口中——我一直不确定大多数人怎么称呼它）。\n\n我确实发现小程序文本缩放与我打开的其他小程序相比有点“不对劲”，但也许是为了容纳多个播放器——它一次最多可显示 10 个——所以必须比标准尺寸小才能放得下。\n\n并非所有播放音频并通过 MPRIS 报告的内容都是你关心的（浏览器自动播放视频，说的就是你），因此设置中有一个“忽略”列表，帮助你的卡片列表不至于太杂乱。\n\n兼容 GNOME 45 到 51，这意味着如果你使用的是 Ubuntu 24.04 LTS 到 26.10，就可以直接使用。"
+  },
+  "ac32b73912a835152b738a6fbd28d326": {
+    "id": "ac32b73912a835152b738a6fbd28d326",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12996",
+    "title_en": "DistroWatch Weekly, Issue 1195",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  This week in DistroWatch Weekly: \nReview: FydeOS 23.0\nNews: Peppermint tests Void branch, Mint benefits from longer development cycle, Haiku's many incremental improvements, GNOME OS hits milestone\nQuestions and answers: Why are SELinux and AppArmor not enabled on more distros?\nReleased last week: Ubuntu 26.10, IPFire 2.29 Core 204, Voyager Live....",
+    "pub_date": "",
+    "title_zh": "DistroWatch周刊第1195期",
+    "summary_zh": "本期DistroWatch周刊报道了GNOME OS推出“Preview”变体、Haiku开发者打磨系统多方面、Linux Mint较长开发周期的优势、Peppermint团队更新PepVoid、Chimera幕后、NetBSD超额完成筹款目标、Rocky分叉OpenRadioss、openSUSE讨论大规模安全更新月、GhostBSD开发自有桌面、NixOS成为荷兰新操作系统基础。问答探讨为何SELinux和AppArmor未在更多发行版中启用。还回顾了Hybryde Linux等。",
+    "fulltext_zh": "DistroWatch周刊第1195期（DistroWatch.com新闻）\nDistroWatch.com由以下赞助商支持\n新闻/观点/评论 ▼\n发布公告\nDW周刊/评论存档\n访客评分与评论\n项目评分排名\n播客、新闻通讯与评论\n跨发行版比较软件包\n显示所有发行版的软件包版本\n搜索发行版 - 高级\n已停止的发行版\n教程与学习 ▼\n搜索文章\n问答专栏\n技巧与提示专栏\n误区与误解专栏\n简化手册页\n其他操作系统\n发行版验证密钥\n可视化发行版家族树\n常见问题\n我们的捐赠计划\n小型企业电话系统\nGNOME OS推出“Preview”变体\nHaiku开发者打磨操作系统的诸多方面\nMint较长开发周期的优势\nPeppermint团队更新PepVoid\nChimera幕后\nNetBSD超额完成筹款目标\nRocky分叉OpenRadioss\nopenSUSE讨论大规模安全更新月\nGhostBSD开始开发自有桌面\nNixOS将成为荷兰新操作系统的基础\n易于使用的PBX - 托管或自管理\nLinux电话系统\n免费实时聊天解决方案\n集成呼叫中心软件\n联络中心软件\n远程工作应用：iOS或Android\n免费视频会议\n3CX的VoIP/PBX指南\n不要措手不及，制定灾难恢复计划！\n essential实时聊天报告和统计\n导致呼叫欺诈的常见错误\nWhatsApp Business与3CX WhatsApp API集成\n3CX StartUP的5个杀手级功能\n别做“那种”人 第1卷：保管复杂凭证\n别做“那种”人 第2卷：呼叫欺诈\n别做“那种”人 第3卷：四大安全提示\n别做“那种”人 第4卷：监控你的实例\nRed Hat周五五件事 - 2026年10月16日\nHaiku活动与合同报告，2026年9月\nLinux Mint月度新闻 - 2026年9月\nUbuntu每周通讯965\nFull Circle每周新闻\nFedora项目播客\n最新新闻与更新\n新闻筛选选项\nDistroWatch周刊第1195期\n新闻：Peppermint测试Void分支，Mint受益于较长开发周期，Haiku的诸多渐进改进，GNOME OS达到里程碑\n问答：为什么SELinux和AppArmor没有在更多发行版上启用？\n上周发布：Ubuntu 26.10、IPFire 2.29 Core 204、Voyager Live 261.0、ZimaOS 1.8.0、Asmi Linux 26.10、FunOS 26.10、Synex 26.10.17、CobaltX 0.3\n种子角落：IPFire、Kicksecure、Ubuntu\n民意调查：你的发行版默认启用SELinux或AppArmor吗？\n网站新闻：在移动网站上选择语言\n阅读本周DistroWatch周刊的更多内容……\nHybryde Linux是一个基于Ubuntu的桌面发行版。其最不寻常的功能是可以在不注销的情况下在多个桌面环境和窗口管理器之间快速切换——列表包括Enlightenment 17、GNOME 3（GNOME Shell和GNOME 3“Fallback”模式）、KDE、LXDE、Openbox、Unity、Xfce和FVWM。这是通过高度可定制的Hy菜单实现的，该菜单还允许启动应用程序和配置系统。所有打开的应用程序都会带到任何可用的桌面。该系统提供了一种在多桌面环境中流畅工作的有趣方式。\n技巧与提示：选择好的密码\n技巧与提示：从各种发行版中提取软件包列表\n技巧与提示：让Falkon 3.1.0运行起来的历程以及便携软件包的问题\n问答：回答关于PinePhone的问题\n问答：给新Linux用户的建议\n问答：向多台服务器发送命令\n问答：了解谁运行了sudo并设置防火墙\n技巧与提示：编译Linux内核\n问答：为什么Ubuntu“未通过”Shields Up端口扫描以及如何修复\n版权所有 © 2001 - 2026 Atea Ataroa Limited。保留所有权利。所有商标均为其各自所有者的财产。\n更改隐私设置\n联系、更正和建议：\nbc1qxes3k2wq3u"
+  },
+  "6be1bea333112d9501668690574fceea": {
+    "id": "6be1bea333112d9501668690574fceea",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12995",
+    "title_en": "Distribution Release: CobaltX 0.3",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Anton Batishchev has announced the release of CobaltX 0.3, an updated build of the project's gaming-focused Linux distribution based on Arch Linux, with KDE Plasma 6, the Linux Zen kernel and a pre-installed gaming stack: \"What's new in 0.3 'Fullscreened'? X Mode — a full-screen, controller-first game launcher....",
+    "pub_date": "",
+    "title_zh": "发行版发布：CobaltX 0.3",
+    "summary_zh": "CobaltX 0.3 发布，这是一个基于 Arch Linux 的游戏专用发行版，搭载 KDE Plasma 6 和 Linux Zen 内核。新版本引入 X Mode 全屏游戏启动器、手持设备支持、快速设置与 TDP 控制、主题屏幕键盘、手柄光标等功能，并支持一键安装 NVIDIA 驱动。",
+    "fulltext_zh": "Anton Batishchev 宣布发布 CobaltX 0.3，这是该项目基于 Arch Linux 的游戏专用 Linux 发行版的更新版本，搭载 KDE Plasma 6、Linux Zen 内核和预装的游戏套件：\n\n“0.3 'Fullscreened' 版有什么新内容？X Mode——一个全屏、手柄优先的游戏启动器，拥有自己的登录会话——将 Steam、Heroic、Bottles、Lutris 和你自己的游戏集中在一处；启动进入 X Mode——在安装程序中选择 X Mode 或桌面，随时切换；手持设备支持——通过 Handheld Daemon 为 ROG Ally 系列、Legion Go、MSI Claw 等设备提供内置控制和背键；快速设置和 TDP——性能模式、以瓦为单位的功耗限制、亮度和音量，在 X Mode 和桌面上均可使用；CobaltX 键盘——主题化屏幕键盘，可输入到任何应用或游戏（手柄或触摸）；手柄光标——在桌面上使用摇杆作为鼠标；库 + 添加游戏——添加未自动找到的 AppImage、.exe 文件、脚本或 ROM；打开应用——恢复或关闭正在运行的应用，对冻结的应用强制关闭……”\n\n请访问 GitHub 查看完整的变更和更新列表。\n\ncobaltx-0.3-x86_64.iso\n\n近期相关新闻和发布\n\n发行版发布：CobaltX 0.3\n\nCobaltX 是一个专为游戏玩家构建的基于 Arch 的 Linux 发行版。它采用 KDE Plasma 桌面，并预装了完整的 Linux 游戏套件，即 Steam、Heroic Games Launcher、Bottles、Lutris、Wine、RetroArch、MangoHud 和 GameMode。它使用 Archiso 工具和自定义 Calamares 系统安装程序构建。在底层，该发行版部署 Linux Zen 内核以实现低延迟桌面性能。CobaltX 还通过发行版欢迎应用中的一键安装选项提供对 NVIDIA GPU 的支持。\n\nhttps://mrdomination.github.io/cobaltx/"
+  },
+  "257149ed8cba9db45459414665683817": {
+    "id": "257149ed8cba9db45459414665683817",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.3-Released",
+    "title_en": "Linux 7.3 Released With Faster I/O Performance, AMD Zen 6 Preparations & More",
+    "summary_en": "The Linux 7.3 kernel is out today for an on-time release of this next stable kernel version...",
+    "pub_date": "Sun, 18 Oct 2026 19:28:09 -0400",
+    "title_zh": "Linux 7.3 发布：I/O 性能更快，为 AMD Zen 6 做准备等",
+    "summary_zh": "Linux 7.3 稳定版于2026年10月18日按计划发布，带来更快的 I/O 性能、更多 AMD Zen 6 平台准备工作、Steam Controller 2026 内核驱动支持、旧款 AMD GPU 改进、有限显存系统的 vRAM 管理优化等。过去一周还合入了 SMP 启动挂起修复、三星 990 PRO/990 EVO Plus SSD 固件问题规避等。接下来将进入 Linux 7.4 合并窗口，7.4 有望在12月底前发布，可能成为今年 LTS 版本。",
+    "fulltext_zh": "Linux 7.3 发布：I/O 性能更快，为 AMD Zen 6 做准备等\n\n2026年10月18日 07:28 PM EDT 发布。\n\n今日发布了内核，这是下一个稳定内核版本的按时发布。\n\n过去一周，bug/回归修复持续涌入 Linux Git，包括持续的 AI/LLM 相关变动，直至此次稳定版亮相。过去一周合入的部分内容还包括：\n\n- 针对某些偶发、多变的 SMP 启动挂起的修复\n- 针对三星 990 PRO 和 990 EVO Plus SSD 在特定固件版本上虚报能力的规避措施\n- Darrick Wong 在深度参与 Linux 内核开发 23 年后卸任\n- 以及其他修复。\n\nLinux 7.3 带来了许多令人兴奋的改进，从现代系统上更快的 I/O，到更多 AMD Zen 6 平台准备工作、Steam Controller 2026 内核驱动支持、旧款 AMD GPU 的改进、为显存容量有限的系统改进 vRAM 管理，以及许多其他令人兴奋的工作。请参阅 Linux 7.3 功能列表，以更详尽地了解 Linux 7.3 的众多激动人心的变化。\n\n现在进入 Linux 7.4 合并窗口，预计 Linux 7.4 将带来许多很棒的功能。随着 Linux 7.3 按时发布，Linux 7.4 有可能在12月底之前发布。因此 Linux 7.4 可能成为今年的长期支持（LTS）版本，或者我们将看看 Greg KH 是否会稳妥行事，最终宣布 v7.3 为今年的 LTS 内核。\n\nLinux 7.4 功能非常令人兴奋：默认启用 Radeon HDMI 2.1、AMD PerfOpt、Apple M4\n\nLinux 修复了自2024年以来影响内核的罕见、多变的 SMP 启动挂起问题\n\nLinux 7.3 的最佳功能：性能改进，大量来自 Valve 的贡献\n\n23年后，长期 Linux 开发者将“暂时退后一步”\n\nLinux 内核开发者计划移除针对 AI/LLM 使用的“Assisted-By”标签要求\n\nLinus Torvalds“践行了我的说教”，使用 AI 使代码更易理解并发现更多 bug\n\nMichael Larabel 是 Phoronix.com 的主要作者，于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过20,000篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nLinus Torvalds 正使用 Claude Code 进行一项重大的 Linux 内核改进\n\nLinus Torvalds“践行了我的说教”，使用 AI 使代码更易理解并发现更多 bug\n\n微软发布面向 Linux 桌面的 Microsoft Defender\n\n今日的 Steam Beta 使 Linux 客户端成为64位应用\n\nClaude Code / AI 在逆向工程硬件以支持 Linux 方面展现出潜力\n\nLinux 内核开发者计划移除针对 AI/LLM 使用的“Assisted-By”标签要求\n\nEpic Games 将通过反作弊 systemd 服务和 eBPF 改进 Linux 上的 Easy Anti-Cheat\n\nWine 11.20 发布，带来 CD-ROM 支持变更\n\n同时享受无广告浏览、单页文章查看\n\n法律免责声明、隐私政策、Cookie\n\n版权所有 © 2004 - 2026\n\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "811c4b9abc3126620f151f6593c5c4a0": {
+    "id": "811c4b9abc3126620f151f6593c5c4a0",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Intel-TDX-Less-Cache-Flushing",
+    "title_en": "It Turns Out Intel TDX Doesn't Need So Much Cache Flushing",
+    "summary_en": "Intel Trust Domain Extensions (TDX) for confidential computing with VMs has assumed the need to perform cache flushing when transitioning memory between KeyIDs used by the total memory encryption (MKTME) for unique AES encryption keys. But it's turned out to be unneeded and the Linux kernel is working now to reduce the excessive cache flushing...",
+    "pub_date": "Sun, 18 Oct 2026 09:53:24 -0400",
+    "title_zh": "事实证明 Intel TDX 并不需要那么多缓存刷新",
+    "summary_zh": "Intel TDX 机密计算最初设计时假设在 KeyID 之间迁移内存需要软件辅助刷新缓存，但实际硬件已能自行处理。Linux 内核正在移除相关冗余代码，以简化内核并可能提升 TDX 虚拟机性能。Intel 文档也将在后续修订中更新。",
+    "fulltext_zh": "Intel 信任域扩展（TDX）用于虚拟机的机密计算，此前一直假设在总内存加密（MKTME）所使用的 KeyID 之间迁移内存时需要执行缓存刷新，以实现唯一的 AES 加密密钥。但事实证明这并不需要，Linux 内核正在着手减少过度的缓存刷新。\n\n这可能有助于通过消除不必要的缓存刷新来提升 Intel TDX 虚拟机性能。Linux 内核已有一组待合并的补丁，用于移除软件驱动的缓存刷新，因为 Intel Xeon 处理器硬件已能正确处理这些操作。\n\nIntel 软件工程师 Rick Edgecombe 在 Linux 内核邮件列表中解释了这组名为“移除不必要的缓存刷新”的补丁系列：\n\n“在 TDX 的早期，人们假设硬件在 KeyID 之间迁移内存时需要一些缓存刷新方面的帮助，因此 TDX 架构被设计为规定 VMM 需要如何帮助模块执行此操作。但事实证明，硬件无需软件帮助就能处理这些问题。由于某些原因，围绕执行刷新的 TDX 架构规定保留了下来。现在 TDX 架构正在得到修正，Linux 可以移除那些帮助执行不必要缓存刷新的代码。这些更改将出现在未来的文档更新中。”\n\n显然，所有最终定型的 TDX 硬件都不需要在 KeyID 周围进行额外的软件驱动缓存刷新，但 Intel 的文档从未更新以反映这一点，不过这些 Intel 文档将在下一修订版中更新。Intel TDX 最初出现在部分 Xeon Sapphire Rapids 处理器中，但自 Emerald Rapids 以来，所有 Xeon 处理器都已支持该技术。\n\n这使内核代码更简单，但补丁信息中并未提及任何预期的性能影响。\n\nLinux 7.4 将为 Intel 指令超时提供支持，以抵御 TDX 虚拟机 DoS 攻击\nIntel LLM-Scaler-vLLM PV 1.5 带来重大改进\nIntel Nova Lake S 与 Nova Lake P 将支持 Xe 显卡的 SR-IOV\nIntel ISPC 1.32 发布，支持 AVX10.2 与 APX，甚至也支持 AMD Zen 6\nIntel 宣布面向 Crescent Island 的 GPU D 系列\nIntel 发布适用于 Meteor Lake 及更新平台的 HDMI 2.1 FRL 的更新 Linux 驱动代码\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、显卡驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\nLinus Torvalds 正利用 Claude Code 进行一项重大的 Linux 内核改进\nLinus Torvalds“践行了自己的主张”，利用 AI 使代码更易理解并发现了更多漏洞\n微软为 Linux 桌面发布 Microsoft Defender\n今日的 Steam Beta 使 Linux 客户端成为 64 位应用\nClaude Code / AI 展示了逆向工程硬件以支持 Linux 的潜力\nLinux 内核开发者计划移除针对 AI/LLM 使用的“Assisted-By”标签要求\nEpic Games 将通过反作弊 systemd 服务和 eBPF 改进 Linux 上的 Easy Anti-Cheat\nWine 11.20 发布，带来 CD-ROM 支持变更\n\n享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "bfc65f61029ceb4a0d89678d50189eeb": {
+    "id": "bfc65f61029ceb4a0d89678d50189eeb",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-Features-Preview",
+    "title_en": "Linux 7.4 Features Very Exciting With Radeon HDMI 2.1 By Default, AMD PerfOpt, Apple M4",
+    "summary_en": "The Linux 7.3 kernel is expected to be released as stable later today and with that version there are many exciting changes and improvements. However, the Linux 7.4 kernel merge window will then open up and there are even more exciting changes expected to be merged for this follow-on kernel cycle. Here is a preview of some of the many exciting feature changes expected for Linux 7.4...",
+    "pub_date": "Sun, 18 Oct 2026 06:50:00 -0400",
+    "title_zh": "Linux 7.4 特性令人兴奋：Radeon HDMI 2.1 默认启用、AMD PerfOpt、Apple M4",
+    "summary_zh": "Linux 7.4 内核合并窗口即将开启，带来多项重要更新：AMDGPU 驱动默认启用 HDMI 2.1 支持，AMD PerfOpt IOMMU 特性默认开启可大幅提升 iGPU 的 AI/LLM 性能，新增 Zen 6 支持及 Ryzen AI Max 400 NPU 支持。Intel 方面为 Panther Lake 做准备并改进 Battlemage 显卡。此外还包含 Apple M4 初始设备树、高通 Snapdragon X2 笔记本支持、EXT4 IOmap 缓冲 I/O、FUSE 大 folio、Google Tensor G5/Pixel 10 主线支持等。",
+    "fulltext_zh": "Linux 7.3 内核预计将于今天晚些时候发布稳定版，该版本包含许多令人兴奋的变更和改进。然而，Linux 7.4 内核的合并窗口随后将开启，预计这个后续内核周期会有更多令人兴奋的变更被合并。以下是 Linux 7.4 预期的一些众多令人兴奋的特性变更预览。\n\n在 AMDGPU 图形驱动方面，AMDGPU 终于默认启用 HDMI 2.1 支持！既然 VRR 和 ALLM 支持也已就位，在那些补丁于今年晚些时候最终开源之后，AMDGPU 内核驱动的 HDMI 2.1 支持已处于良好状态。有了 Linux 7.4，现代 Radeon 显卡应能获得不错的 AMDGPU HDMI 2.1 体验。\n\n在 AMD iGPU 方面，AMD PerfOpt IOMMU 特性带来了非常好的改进。默认启用该 AMD PerfOpt 特性可为 AMD iGPU（包括前代硬件）带来巨大的 AI/LLM 性能提升。\n\nLinux 7.4 还带来了更多 AMD Zen 6 支持补充和改进，例如新的 BTB CTX 隔离特性、AMD RMPOPT 优化、针对 Ryzen Zen 6 CPU 的 AMD P-State 驱动改进。Linux 7.4 还新增了对 Ryzen AI Max 400 系列（Gorgon Halo）NPU 的支持，此前该设备 ID 被错误地从 AMDXDNA 加速器驱动中遗漏。\n\n在 Intel 方面，为 Rugged Panther Lake 做准备，合并了 Intel BFF 驱动。Intel 在图形方面也为 Battlemage 带来了不错的改进：迁移队列上的 CPU 绑定和 ULLS。Intel 图形驱动还引入了 vRAM 健康检查和降级内存处理。\n\n针对 NVIDIA Nova 驱动仍有大量工作在进行中。\n\n同样令人兴奋的是，Linux 7.4 将上游支持几款高通 Snapdragon X2 笔记本。高通方面还有更多工作持续落地。\n\n在 Apple 方面，Linux 7.4 计划为 MacBook Neo 添加 Apple M4 和 A18 Pro 的初始设备树。但与当前 Apple M3 的上游 Linux 内核支持一样，它尚未可供最终用户使用。Apple M3 及更新硬件的更多启用工作仍在进行中，在所有硬件功能接通并工作之前，但至少主线内核可以启动。Linux 7.4 的 Apple Silicon 支持还看到音频支持进入上游。\n\nLinux 7.4 预计还将主线支持 Google Tensor G5 SoC 和 Pixel 10 设备。\n\nLinux 7.4 还带来了其他硬件改进，例如多款笔记本和手持游戏设备的改进、对 Raspberry Pi 10 英寸 Touch Display 2 的支持。\n\n在文件系统方面，EXT4 引入了 IOmap 缓冲 I/O 路径，带来不错的性能提升。FUSE 的大 folio 是用户空间文件系统的另一个性能项目。\n\nLinux 7.4 预计还将引入 Intel Instruction Timeout（Notify VM Exit），以解决 TDX 虚拟机内可能的拒绝服务攻击向量。在虚拟化方面，微软还为 Linux 内核贡献了一个半虚拟化 IOMMU Hyper-V 驱动。Linux 7.4 的另一个虚拟化新增是……\n\n在网络方面是新的……\n\n在模糊测试机器人时代，还引入了新的内核污点标记。此外还有大量其他 AI/LLM 驱动的补丁活动。\n\n在代码移除方面，Google C Binder 驱动将被移除，转而使用基于 Rust 的 Binder 驱动。\n\n还有一些令人兴奋的 MM 性能优化，打开单个文件更快，内核内 Zstd 代码的不错改进，AVX-512 优化的 xor_gen，开始落地的显著加快内核构建时间的补丁，以及其他变更将在 Linux 7.4 为期两周的合并窗口期间在 Phoronix 上进一步报道。\n\n请继续关注 Linux 7.4 合并窗口期间的更多报道。"
+  },
+  "3ace1bad10c5b61d53348999b344c1fd": {
+    "id": "3ace1bad10c5b61d53348999b344c1fd",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Omarchy-Faster-Web-Browser",
+    "title_en": "Omarchy Gets The Web Browser Launching Faster By Avoiding XDG Overhead",
+    "summary_en": "Omarchy 4.0.5 released this weekend as the newest version of this Arch Linux based distribution built around the Hyprland desktop. Omarchy 4.0.5 pulls in the latest Linux 7.2 stable kernel with BORE scheduler, updates against the Qt 6.12 toolkit, and a variety of smaller improvements...",
+    "pub_date": "Sun, 18 Oct 2026 06:23:00 -0400",
+    "title_zh": "Omarchy 通过避免 XDG 开销让网页浏览器启动更快",
+    "summary_zh": "Omarchy 4.0.5 版本针对默认浏览器启动进行了毫秒级优化。原本使用 xdg-settings 查找默认浏览器耗时约 72 毫秒，现改用新的隐藏辅助工具 omarchy-cmd-default-browser，将耗时降至约 10 毫秒。该工具直接读取 mimeapps.list 配置文件，并优先检查 Hyprland 专用配置，同时保留原有回退机制。此外，该版本还更新了 Linux 7.2 内核、Qt 6.12 工具包，并优化了多显示器下状态栏性能。",
+    "fulltext_zh": "Omarchy 4.0.5 于本周末发布，这是基于 Arch Linux、围绕 Hyprland 桌面构建的发行版的最新版本。Omarchy 4.0.5 引入了最新的 Linux 7.2 稳定内核（含 BORE 调度器），针对 Qt 6.12 工具包进行了更新，并包含各种较小的改进。\n\n对于经常启动网页浏览器的用户，Omarchy 进行了毫秒级的优化工作，以查找并启动默认浏览器。对默认浏览器启动进行性能分析后发现，使用\nxdg-settings get default-web-browser\n每次大约耗时 72 毫秒，原因在于其各种相互纠缠的 POSIX shell 脚本。David Heinemeier Hansson 与 Claude Code 一起编写了一个新的替代辅助工具，可以完成相同的工作，耗时约 10 毫秒。\n\n为查找默认网页浏览器而引入的新替代辅助工具：\n“omarchy-cmd-default-browser 是一个新的隐藏辅助工具。它像 xdg-mime 一样，从配置目录的 mimeapps.list 文件中读取 x-scheme-handler/http 的默认值，首先检查桌面特定的 hyprland-mimeapps.list。它取第一个已安装的列出条目。与 xdg-mime 一样，找到的第一个条目副本决定结果，依据是其 Exec 命令是否仍能解析。因此，Omarchy 为已移除浏览器留下的条目会被跳过，即使存在同一系统副本的条目。它运行耗时约 10 毫秒。如果配置目录中未设置任何内容，它会回退到 xdg-settings；如果 BROWSER 未设置，则回退到 xdg-mime 处理 https，与之前一样。omarchy-launch-browser 和 omarchy-launch-webapp 现在使用它。”\n\n最终，通过这一微优化，网页浏览器启动体验变得更快：\n\n另外，还分别致力于改善 Omarchy shell 的状态栏性能，在六显示器、大量小部件的设置下，从约 20 秒降至约 15 秒。\n\n有关 Omarchy 4.0.5 变更和下载的更多详细信息，请访问\n\nReactOS 现在可以安装并使用其 NTFS 驱动\nFramework Computers 将其对 CachyOS 的财务支持增加两倍\n受 BeOS 启发的 Haiku 在九月带来了更多硬件改进和其他变更\nLinux Mint 27 继续朝着圣诞发布推进，包含许多功能\nAsterinas 0.19.0 为这个 Rust 编写的操作系统带来 X.Org 及其他改进\n在补丁繁重的 GenAI 时代，滚动发布发行版优于 LTS 发行版？\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。他可以通过以下方式关注\n\nLinus Torvalds 正与 Claude Code 合作进行一项重大的 Linux 内核改进\nLinus Torvalds “践行了我的说教”，使用 AI 使代码更易理解并发现了更多错误\n微软为 Linux 桌面发布 Microsoft Defender\n今天的 Steam Beta 使 Linux 客户端成为 64 位应用\nClaude Code / AI 展示了逆向工程硬件以支持 Linux 的潜力\nLinux 内核开发者计划移除针对 AI/LLM 使用的“Assisted-By”标签要求\nEpic Games 将通过反作弊 systemd 服务和 eBPF 改善 Linux 上的 Easy Anti-Cheat\nWine 11.20 发布，带来 CD-ROM 支持变更\n\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "8fe2e2ff041970b3fece181a057dec77": {
+    "id": "8fe2e2ff041970b3fece181a057dec77",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Servo-0.6-Changes",
+    "title_en": "Servo Gets CSS Grid Working, Threadboost Offering Big Speed-Ups",
+    "summary_en": "Servo's August status report has finally appeared for outlining progress made on this open-source, Rust-based browser engine. This follows the recent release of the Servo 0.6 software, including the Servoshell demo browser...",
+    "pub_date": "Sun, 18 Oct 2026 06:05:40 -0400",
+    "title_zh": "Servo 实现 CSS Grid 支持，Threadboost 带来大幅提速",
+    "summary_zh": "Servo 项目发布八月状态报告，基于 Rust 的浏览器引擎取得多项进展。最显著的是 CSS Grid 支持落地，使更多网站能正确渲染；同时新增 CSS color-scheme、animation-composition 等特性及多个 DOM API。JavaScript 方面升级至 SpiderMonkey 153，并引入可选的磁盘 HTTP 缓存。性能上，实验性 Threadboost 功能将 Speedometer 基准分数提升 50%。",
+    "fulltext_zh": "Servo 的八月状态报告终于发布，概述了这款基于 Rust 的开源浏览器引擎所取得的进展。此前不久，Servo 0.6 软件刚刚发布，其中包括 Servoshell 演示浏览器。\n\nServo 近期最引人注目的功能之一是 CSS Grid 支持。因此，现在有更多网站能在 Servo 上正确渲染。\n\nServo 还加入了其他新特性，如 CSS color-scheme、animation-composition、full-width、text-transform 等。多个新的 DOM API 也已就位。\n\n在 JavaScript 方面，Servo 引入了 SpiderMonkey 153，以修复安全和崩溃问题。Servo 现在还提供了一个可选的磁盘后端 HTTP 缓存，但目前尚无清除该缓存的方法。\n\nServo 在无障碍方面也有更多工作正在进行，并为 AudioWorklet 做前期准备等。该引擎的性能改进也在持续落地。一项名为“Threadboost”的实验性功能将 Speedometer 基准测试分数提升了 50%。\n\n关于 Servo 引擎近期改进的更多细节，请参阅相关链接。"
+  },
+  "ce4506d6e8c62f38f3b9758a47064f87": {
+    "id": "ce4506d6e8c62f38f3b9758a47064f87",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/linux-kernel-7-3-officially-released-this-is-whats-new",
+    "title_en": "Linux Kernel 7.3 Officially Released, This Is What’s New",
+    "summary_en": "Linux kernel 7.3 is now available for download with new features, new and updated drivers for better hardware support, improvements to filesystems, networking, and security, and more.\nThe post Linux Kernel 7.3 Officially Released, This Is What&#8217;s New appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Sun, 18 Oct 2026 23:24:57 +0000",
+    "title_zh": "Linux 内核 7.3 正式发布，新特性一览",
+    "summary_zh": "Linux 内核 7.3 现已开放下载，带来全新功能、新增及更新的驱动以提升硬件支持，并在文件系统、网络和安全方面进行了改进。",
+    "fulltext_zh": "Linux 内核 7.3 现已可供下载，带来全新功能、新增及更新的驱动以提供更好的硬件支持，并在文件系统、网络和安全等方面进行了改进。"
+  },
+  "5033ae14742156eb4e01965a775ba955": {
+    "id": "5033ae14742156eb4e01965a775ba955",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/9to5linux-weekly-roundup-october-18th-2026",
+    "title_en": "9to5Linux Weekly Roundup: October 18th, 2026",
+    "summary_en": "9to5Linux Weekly Roundup for October 18th, 2026, brings news about Ubuntu 26.10, KDE Plasma 6.8, Firefox 158, Linux Mint 27 and Ubuntu 27.04 release date, Thunderbird 158, IPFire 2.29 Core Update 204, Mesa 26.2.5, Libreboot 26.10, Shelly 3.1.7, KDE Plasma 6.6.7, GNOME OS Preview, PeaZip 11.4, Ubuntu Touch OTA 2.1, GNOME 51.1, and more.\nThe post 9to5Linux Weekly Roundup: October 18th, 2026 appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended fo",
+    "pub_date": "Sun, 18 Oct 2026 14:38:50 +0000",
+    "title_zh": "9to5Linux 每周综述：2026年10月18日",
+    "summary_zh": "本期9to5Linux周报汇总了2026年10月18日当周的重要Linux新闻，涵盖Ubuntu 26.10、KDE Plasma 6.8、Firefox 158、Linux Mint 27与Ubuntu 27.04发布日期、Thunderbird 158、IPFire 2.29 Core Update 204、Mesa 26.2.5、Libreboot 26.10、Shelly 3.1.7、KDE Plasma 6.6.7、GNOME OS预览、PeaZip 11.4、Ubuntu Touch OTA 2.1及GNOME 51.1等更新。",
+    "fulltext_zh": "9to5Linux 2026年10月18日每周综述，带来关于Ubuntu 26.10、KDE Plasma 6.8、Firefox 158、Linux Mint 27和Ubuntu 27.04发布日期、Thunderbird 158、IPFire 2.29 Core Update 204、Mesa 26.2.5、Libreboot 26.10、Shelly 3.1.7、KDE Plasma 6.6.7、GNOME OS预览、PeaZip 11.4、Ubuntu Touch OTA 2.1、GNOME 51.1等更多新闻。\n\n帖子“9to5Linux每周综述：2026年10月18日”首次出现在9to5Linux上——未经许可不得转载本文。本RSS源仅供"
+  },
+  "a28579b42a2305c2418d2b05df80b841": {
+    "id": "a28579b42a2305c2418d2b05df80b841",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/gnome-51-1-improves-drag-and-drop-between-wayland-and-xwayland-clients",
+    "title_en": "GNOME 51.1 Improves Drag and Drop Between Wayland and Xwayland Clients",
+    "summary_en": "GNOME 51.1 is now available as the first point release to the GNOME 51 desktop environment series with various bug fixes and improvements across several core components and default apps.\nThe post GNOME 51.1 Improves Drag and Drop Between Wayland and Xwayland Clients appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Sun, 18 Oct 2026 09:18:32 +0000",
+    "title_zh": "GNOME 51.1 改进 Wayland 与 Xwayland 客户端之间的拖放功能",
+    "summary_zh": "GNOME 51.1 作为 GNOME 51 桌面环境系列的首个点版本发布，修复了多个核心组件和默认应用中的错误，并改进了 Wayland 与 Xwayland 客户端之间的拖放功能。",
+    "fulltext_zh": "GNOME 51.1 现已发布，这是 GNOME 51 桌面环境系列的首个点版本，在多个核心组件和默认应用中带来了各种错误修复和改进。\n\n文章《GNOME 51.1 改进 Wayland 与 Xwayland 客户端之间的拖放功能》首发于 9to5Linux——未经许可请勿转载本文。此 RSS 源面向读者，而非抓取程序。"
   }
 }

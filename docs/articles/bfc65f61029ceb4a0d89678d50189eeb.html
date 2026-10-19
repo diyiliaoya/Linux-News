@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linux 7.4 特性令人兴奋：Radeon HDMI 2.1 默认启用、AMD PerfOpt、Apple M4 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月19日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Linux 7.4 特性令人兴奋：Radeon HDMI 2.1 默认启用、AMD PerfOpt、Apple M4</h1>
+
+  <div class="article-summary">Linux 7.4 内核合并窗口即将开启，带来多项重要更新：AMDGPU 驱动默认启用 HDMI 2.1 支持，AMD PerfOpt IOMMU 特性默认开启可大幅提升 iGPU 的 AI/LLM 性能，新增 Zen 6 支持及 Ryzen AI Max 400 NPU 支持。Intel 方面为 Panther Lake 做准备并改进 Battlemage 显卡。此外还包含 Apple M4 初始设备树、高通 Snapdragon X2 笔记本支持、EXT4 IOmap 缓冲 I/O、FUSE 大 folio、Google Tensor G5/Pixel 10 主线支持等。</div>
+
+  <div class="article-body"><p>Linux 7.3 内核预计将于今天晚些时候发布稳定版，该版本包含许多令人兴奋的变更和改进。然而，Linux 7.4 内核的合并窗口随后将开启，预计这个后续内核周期会有更多令人兴奋的变更被合并。以下是 Linux 7.4 预期的一些众多令人兴奋的特性变更预览。</p><p>在 AMDGPU 图形驱动方面，AMDGPU 终于默认启用 HDMI 2.1 支持！既然 VRR 和 ALLM 支持也已就位，在那些补丁于今年晚些时候最终开源之后，AMDGPU 内核驱动的 HDMI 2.1 支持已处于良好状态。有了 Linux 7.4，现代 Radeon 显卡应能获得不错的 AMDGPU HDMI 2.1 体验。</p><p>在 AMD iGPU 方面，AMD PerfOpt IOMMU 特性带来了非常好的改进。默认启用该 AMD PerfOpt 特性可为 AMD iGPU（包括前代硬件）带来巨大的 AI/LLM 性能提升。</p><p>Linux 7.4 还带来了更多 AMD Zen 6 支持补充和改进，例如新的 BTB CTX 隔离特性、AMD RMPOPT 优化、针对 Ryzen Zen 6 CPU 的 AMD P-State 驱动改进。Linux 7.4 还新增了对 Ryzen AI Max 400 系列（Gorgon Halo）NPU 的支持，此前该设备 ID 被错误地从 AMDXDNA 加速器驱动中遗漏。</p><p>在 Intel 方面，为 Rugged Panther Lake 做准备，合并了 Intel BFF 驱动。Intel 在图形方面也为 Battlemage 带来了不错的改进：迁移队列上的 CPU 绑定和 ULLS。Intel 图形驱动还引入了 vRAM 健康检查和降级内存处理。</p><p>针对 NVIDIA Nova 驱动仍有大量工作在进行中。</p><p>同样令人兴奋的是，Linux 7.4 将上游支持几款高通 Snapdragon X2 笔记本。高通方面还有更多工作持续落地。</p><p>在 Apple 方面，Linux 7.4 计划为 MacBook Neo 添加 Apple M4 和 A18 Pro 的初始设备树。但与当前 Apple M3 的上游 Linux 内核支持一样，它尚未可供最终用户使用。Apple M3 及更新硬件的更多启用工作仍在进行中，在所有硬件功能接通并工作之前，但至少主线内核可以启动。Linux 7.4 的 Apple Silicon 支持还看到音频支持进入上游。</p><p>Linux 7.4 预计还将主线支持 Google Tensor G5 SoC 和 Pixel 10 设备。</p><p>Linux 7.4 还带来了其他硬件改进，例如多款笔记本和手持游戏设备的改进、对 Raspberry Pi 10 英寸 Touch Display 2 的支持。</p><p>在文件系统方面，EXT4 引入了 IOmap 缓冲 I/O 路径，带来不错的性能提升。FUSE 的大 folio 是用户空间文件系统的另一个性能项目。</p><p>Linux 7.4 预计还将引入 Intel Instruction Timeout（Notify VM Exit），以解决 TDX 虚拟机内可能的拒绝服务攻击向量。在虚拟化方面，微软还为 Linux 内核贡献了一个半虚拟化 IOMMU Hyper-V 驱动。Linux 7.4 的另一个虚拟化新增是……</p><p>在网络方面是新的……</p><p>在模糊测试机器人时代，还引入了新的内核污点标记。此外还有大量其他 AI/LLM 驱动的补丁活动。</p><p>在代码移除方面，Google C Binder 驱动将被移除，转而使用基于 Rust 的 Binder 驱动。</p><p>还有一些令人兴奋的 MM 性能优化，打开单个文件更快，内核内 Zstd 代码的不错改进，AVX-512 优化的 xor_gen，开始落地的显著加快内核构建时间的补丁，以及其他变更将在 Linux 7.4 为期两周的合并窗口期间在 Phoronix 上进一步报道。</p><p>请继续关注 Linux 7.4 合并窗口期间的更多报道。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.4-Features-Preview" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

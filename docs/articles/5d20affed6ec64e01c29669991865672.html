@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linux 7.3 发布，以下是新特性 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月19日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Linux 7.3 发布，以下是新特性</h1>
+
+  <div class="article-summary">Linus Torvalds 宣布发布 Linux 7.3 主线内核，预计将成为新的长期支持版本。该版本改进了低显存 AMD GPU 的游戏性能，提升了 ext4 文件系统的 I/O 速度，并重新设计了内核在应用组之间分配 CPU 时间的方式以提高效率。此外，还为旧款 AMD 硬件提供了修复，并增加了对 NTFS 备用数据流的基本支持。</div>
+
+  <div class="article-body"><p>Linus Torvalds 宣布发布 Linux 7.3，这是一个新的主线内核——那个</p><p>Linux 7.3 又是一个大更新，改善了低显存 AMD GPU 的游戏性能，提升了 ext4 I/O，并重新设计了内核在应用组之间分配 CPU 时间的方式以提高效率。</p><p>预计它将成为新的长期支持版本。</p><p>在 Linux 内核邮件列表上写道，</p><p>“现在是周日下午，本周我不知怎么地保持了足够的理智，记住了今天是星期几，所以发布没有随机延迟。奇迹永远不会停止吗？”</p><p>遗憾的是，它们可能会停止——所以这篇文章的引言也必须结束。接下来是回顾。</p><p>低端 GPU 获得性能提升</p><p>如果你的 AMD 显卡视频内存（VRAM）有限，Linux 7.3 通过一种新的资源分配方法更好地处理了内存紧张的情况。</p><p>以前，如果在运行多个应用时 VRAM 被填满，内核会按照先到先得的原则分配空间。如果你晚打开一个游戏，它可能会被强制从显卡更快的 VRAM 中挤出，进入系统内存（GTT）。</p><p>在 Linux 7.3 中，内核可以将其他应用未受保护的背景数据从 VRAM 中“驱逐”出去，为具有更高优先级的任务（如请求受保护内存的游戏）腾出空间。</p><p>完成了这项工作。在测试中</p><p>《夺宝奇兵：古老之圈》</p><p>这一变化使得游戏即使在设置调整到内存需求接近 9GB VRAM 的情况下，也能在 8GB GPU 上良好运行。</p><p>这只是工作的一部分；未来内核版本中还会有更多 VRAM 管理变更。</p><p>旧款 AMD 硬件获得修复</p><p>过去几个内核为旧显卡提供了修复和调优，这一趋势尚未停止。</p><p>DRM 格式修饰符（实际上是描述图像缓冲区外观的标签）现在在 HD 7000 系列（GCN 1.0）及以上的 AMD Radeon GPU 上可用，在某些情况下提升了性能，并改善了对基于 Vulkan 的 Wayland 合成器的支持。</p><p>同时，旧的 AMD Athlon XP 处理器（以及一些 Intel Pentium III/Celeron CPU）可以使用</p><p>指令进行内存写排序，而无需 SSE2，解决了早期内核中的错误要求。</p><p>当然，还有对开发中的新（Intel 和）AMD 硬件的支持。我更愿意关注对已经存在、正在使用的硬件的改进，而不是那些还要过几个内核版本才会上市的硬件。</p><p>Cgroup 调度重新思考</p><p>Linux 7.3 重新调整了内核在应用和服务之间共享 CPU 时间的方式，旨在在后台任务竞争资源时保持系统响应性。</p><p>调度器现在在占用 CPU 的进程组之间分配 CPU 时间，并将 cgroup 移至单个运行队列以减少延迟。一个新的</p><p>模式成为默认，尽管可以选择恢复旧行为。</p><p>封面说明称，选择新默认是希望它</p><p>“服务的人多于伤害的人</p><p>”。Cgroup 调度一直是抱怨延迟的焦点，因此这一领域的改变将受到欢迎。</p><p>调度器维护者 Peter Zijlstra 今年早些时候的测试显示了有希望的结果，在 8 个后台进程下，一个游戏的最低帧率从 3.8fps 提升到 20.6fps，平均帧率从 48fps 提升到 57.2fps。</p><p>Ext4 速度提升和 NTFS 支持</p><p>Ubuntu 的默认文件系统 Ext4 获得了一系列受欢迎的性能提升。并行直接 I/O 写入（跳过页面缓存）更快，</p><p>也是如此，并且修复了一个缓冲写入回归问题。</p><p>Ext4（和 XFS）还加快了从磁盘的小型直接读取。</p><p>一位字节跳动工程师的测试</p><p>，使用 PCIe Gen5 NVMe SSD，看到 4K 随机读取性能从每秒 192 万次操作跃升至 219 万次。使用</p><p>一次处理更多读取时，增益更高。</p><p>驱动获得了对 NTFS 备用数据流的基本支持，这是 Windows 的一项功能，允许文件在主内容之外存储额外数据。变更</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/linux-7-3-features" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

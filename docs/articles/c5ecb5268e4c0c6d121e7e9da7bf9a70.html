@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linux Mint 的新系统监视器功能超乎你的想象 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月19日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Linux Mint 的新系统监视器功能超乎你的想象</h1>
+
+  <div class="article-summary">Linux Mint 27 将于12月发布，预装全新系统监视器工具 Superlight。它提供硬件、应用和进程使用情况，电池统计，以及交互式存储页面，可查找占用空间最多的文件和文件夹。该工具仍在开发中，但已具备整体使用率图表、进程管理、电池详情和存储清理功能。Mint 还计划添加系统日志查看和基本配置选项。</div>
+
+  <div class="article-body"><p>Linux Mint 的新系统监视器功能超乎你的想象 - OMG! Ubuntu</p><p>12月的 Linux Mint 27 版本将预装一个全新的系统监视器工具。</p><p>（好吧，这是项目和软件包的名称；面向用户的标签只是 Superlight）。它显示硬件、应用和进程使用情况，传递电池统计数据，并有一个交互式存储页面，用于找出哪些文件和文件夹占用了最多空间。</p><p>它仍在积极开发中，但我试用了它，看看它的表现如何以及提供了什么。请记住，从现在到它首次稳定发布之间，可能会添加或更改更多功能。</p><p>Linux Mint 的 Superlight 非常不错</p><p>每次打开它时都会显示硬件资源使用页面。</p><p>顶部是一个“整体使用率”图表。它在同一张图表上绘制了过去60秒内的 CPU、GPU、RAM 和交换空间使用情况。统一视图使得一眼就能轻松了解机器的整体运行情况。</p><p>它还有单独的图表跟踪 CPU 核心使用情况、网络和存储活动，以及系统温度和风扇转速的图表。图表可以折叠；当只显示一个图表时，它会更大。</p><p>查看和管理进程</p><p>有单独的视图用于查看正在运行的应用及其各自的进程数、CPU 使用率和内存。单击列标题可按值排序项目，或拖动以将它们重新排列成你喜欢的顺序。</p><p>页面有一个搜索栏，可按名称过滤。进程页面还允许你按所有、用户或系统进程进行过滤，并以树状显示它们以揭示父子关系。</p><p>为你的电池统计数据费心</p><p>在笔记本电脑上，Mint 的新系统监视器应用会在图表上显示电池和电源使用情况，以及预计充电/放电时间和信息，包括制造商、型号、技术、容量、充电循环次数和整体电池健康状况。</p><p>还可以概览存储使用情况</p><p>存储页面是我没想到会在这个应用中看到的，但说实话，它将是我最常用的页面，就像一个更快、更直观的磁盘使用分析器，更容易查看磁盘上（本地或外部）什么占用了空间。</p><p>存储还兼作简单的系统清理工具。“清除缓存”按钮在我的测试设备内部32GB eMMC（这是一台改装过的 Chromebook）上释放了900MB的垃圾文件。</p><p>在我对当前开发版本的测试中，Superlight 感觉并不比即将推出的系统监视器明显更重，但当资源页面显示大量图表时，它们确实会飙升。</p><p>这是一个有希望的开始。</p><p>系统监视器功能可用，但在更新、更现代的应用中看起来有些过时。Ubuntu 选择用 GNOME 系统监视器替换它，其他桌面环境也有用户友好的产品——甚至 KDE 的 Plasma 系统监视器。</p><p>Linux Mint 的选择很有希望。</p><p>Mint 还计划在其新系统监视器中添加查看系统日志的功能，并且显然有空间添加一些基本配置选项（间隔时间是一个主要选项）。</p><p>这个应用还没有做的一件事是列出组件详细信息，例如 CPU 型号、插槽、指令集或内存时序、内存条等，而其他现代系统监视器如 Mission Center 会这样做。</p><p>但由于一些硬件规格细节已在 Linux Mint 的系统信息工具中呈现，有理由保持这里的重点。</p><p>新的终端、归档和日历应用即将推出</p><p>Superlight 并不是 Linux Mint 正在开发的唯一全新应用。新的日历和时钟实用程序、电子书阅读器和归档管理器也在其中。而 Slick 是 Linux Mint 的新终端模拟器，灵感来自 Warp。</p><p>Mint 的所有新软件都是作为 XApp 项目的一部分开发的。Superlight 和 Slick 都是其中的一部分。目标是开发一套在任何 Linux 桌面环境下都能良好运行的软件，而不仅仅是 Cinnamon。</p><p>运行任何系统监视器应用的一个小小的讽刺是，它使用系统资源来报告系统资源。所有那些实时探测、跟踪和图表渲染都不是凭空发生的。</p><p>但 Mint 不打算像后者应用那样添加对终端配置文件、容器或链接的支持。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/linux-mint-new-system-monitor" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Now Playing Card 可同时显示多个应用的媒体信息 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月19日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Now Playing Card 可同时显示多个应用的媒体信息</h1>
+
+  <div class="article-summary">Now Playing Card 是一款 GNOME Shell 扩展，能在面板或通知区域集中显示所有音频应用和媒体标签的曲目信息与播放控制。它用卡片形式展示每个播放器，支持专辑封面、进度条拖动、循环和随机播放。通过手风琴效果节省空间，一次只展开一个播放器卡片。还提供动画声波图标、频谱分析仪等视觉自定义选项，并支持忽略列表过滤不需要的播放器。兼容 GNOME 45 至 51。</div>
+
+  <div class="article-body"><p>Now Playing Card 可同时显示多个应用的媒体信息 - OMG! Ubuntu</p><p>这是一款 GNOME Shell 扩展，能在同一处——面板或通知区域——显示每个音频应用和媒体标签的曲目信息与播放控制。GNOME 默认的媒体控制器（以及我过去写过的许多正在播放小程序和附加组件）对于你当时正在播放的内容来说还不错，但如果你一天中要同时处理多个音频应用，就不太方便了。</p><p>暂停一个内容去播放另一个，并不意味着它会消失。所以，你为了在浏览器中查看 YouTube 视频而中途暂停的播客和 Spotify 曲目？它们会留在那里，随时可以继续播放。</p><p>它为每个播放器使用“卡片”，包含专辑封面（大小可调）、播放器图标和一个可点击跳转的功能性进度条（如果播放器支持）。此外还有播放控制，包括循环和随机播放（如果可用）。</p><p>由于多个播放器处于暂停状态可能会在小程序中占用大量空间，该扩展使用“手风琴”效果来充分利用空间。一次只有一个播放器卡片被放大，其余卡片保持紧凑，直到被点击。</p><p>手风琴效果在打开 3 个音乐应用时的实际效果</p><p>它还可以在面板上显示正在播放的曲目名称、艺术家和控制按钮，这是这类工具的主要用途（“这是什么曲目”——抬头就能看到）。你可以通过扩展的设置选择这些元素的位置、大小、行为等。</p><p>为标签增添一点视觉点缀的是动画声波图标，或者如果你想更炫酷，还可以选择频谱分析仪，其条形会实时响应音频。幸运的是，如果你愿意，也可以选择完全不使用动画效果。</p><p>提供了大量视觉自定义和行为设置。</p><p>激活时会隐藏 GNOME 自带的媒体控制器（位于通知/日历弹出窗口中——我一直不确定大多数人怎么称呼它）。</p><p>我确实发现小程序文本缩放与我打开的其他小程序相比有点“不对劲”，但也许是为了容纳多个播放器——它一次最多可显示 10 个——所以必须比标准尺寸小才能放得下。</p><p>并非所有播放音频并通过 MPRIS 报告的内容都是你关心的（浏览器自动播放视频，说的就是你），因此设置中有一个“忽略”列表，帮助你的卡片列表不至于太杂乱。</p><p>兼容 GNOME 45 到 51，这意味着如果你使用的是 Ubuntu 24.04 LTS 到 26.10，就可以直接使用。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/gnome-now-playing-card-extension" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
