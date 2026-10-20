@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CutefishOS 携全新氛围编码桌面回归，不再使用 Qt 或 GTK — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月20日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">桌面环境</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>CutefishOS 携全新氛围编码桌面回归，不再使用 Qt 或 GTK</h1>
+
+  <div class="article-summary">CutefishOS 项目宣布回归，使用 Anthropic 的 Fable 5.1 和 Opus 5.5 AI 模型从零重写了整个桌面环境，包括系统应用。新桌面拥有自己的 Wayland 合成器和图形库，不基于 Qt 或 GTK，界面风格类似 macOS，应用启动迅速。目前尚无发布日期，代码仓库尚未公布。</div>
+
+  <div class="article-body"><p>CutefishOS 携全新氛围编码桌面回归</p><p>CutefishOS 携全新氛围编码桌面回归，不再使用 Qt 或 GTK</p><p>该项目称新桌面拥有自己的 Wayland 合成器和图形库。</p><p>CutefishOS 的创建者兼开发者（同时运营该项目的 X 账号）宣布了这款桌面，并用演示视频和一组截图进行了展示。他表示自己目前的工作流程主要是向 AI 代理发出提示，然后查看其产出。</p><p>真的是从零构建的吗？</p><p>以下是全新 Cutefish 桌面的首次亮相，从零重建、完全独立。每一行代码都用令人惊叹的 Fable 5.1 和 Opus 5.5 重写。</p><p>我们自己的 Wayland 合成器。我们自己的图形库。全新的系统应用。</p><p>应用瞬间启动。</p><p>pic.twitter.com/iqppJqpmlL</p><p>— CutefishOS (@cutefishos)</p><p>在上面的视频演示中，可以看到界面的整体观感模仿了 macOS，顶部栏包含一个[全局菜单]、标准状态小组件。</p><p>[控制中心]包含 Wi-Fi、蓝牙、深色模式、勿扰模式、摄像头和麦克风的开关，以及媒体控制和用于调节显示亮度和音量的滑块。</p><p>还有一个可配置的 Dock，可置于屏幕左侧、底部或右侧，带有调节其大小和玻璃效果的滑块，以及[多种模式]。</p><p>与 GNOME 类似，Cutefish 桌面的[概览]模式将打开的窗口铺展在网格中，允许用户通过顶部的一个便捷按钮添加新工作区（项目称之为“[&quot;空间&quot;]”）。</p><p>[系统应用]包括文件管理器、终端、日历、系统监视器、文本编辑器、视频播放器、截图工具和图像查看器，似乎都是为新的 CutefishOS 桌面体验专门打造的。</p><p>Chromium、Firefox、KeePassXC、Ghostty 和 LibreOffice 也作为可在该桌面上运行的应用出现在启动器中。</p><p>该项目称[整个桌面已从零重写]，包括系统应用，并且应用启动非常快。更进一步声称合成器和图形库均为自研。</p><p>[当被问及]桌面是否基于 GTK 构建时，项目方（即 Reion）澄清说它不基于 Qt 或 GTK。</p><p>回顾 CutefishOS</p><p>CutefishOS 于 2021 年作为基于 Debian 11 的测试版发行版问世，围绕一个受 macOS 启发的、名为 CutefishDE 的桌面构建。当时它就已经在状态栏中提供了全局应用菜单和若干捆绑应用。</p><p>2022 年，该项目网站停止加载，仓库活动几乎停滞。随后一位 Reddit 用户开始为社区分支招募人员。该分支计划[被搁置]，因为项目 GitHub 表示已回归并将推出新网站。</p><p>如果你今天想测试新桌面，请注意[尚未公布发布日期]。当一位 X 用户表示迫不及待想试用演示时，项目方回复称还需要一段时间才能测试。</p><p>翻查该项目的[GitHub]，你会发现没有列出新桌面的专用仓库。从 Reion 迄今为止开发 CutefishOS 的地方来看，那里是关注新代码的地方。</p><p>这并非唯一的氛围编码桌面；[Starling 是另一个实现]，可能也会让你感兴趣。</p><p>各位，我们有了一个氛围编码的 Linux 桌面！</p><p>别抱太高期望；还有许多粗糙之处和不完整的功能。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>跳过 Google 结果中的 AI 垃圾和 SEO  spam</p><p>告诉 Google 你更喜欢 It's FOSS，这样当你搜索时，它会更频繁地展示我们由经验丰富的 Linux 用户创建的 Linux 新闻和教程。只需点击一下。</p><p>设为首选来源</p><p>🐧 今天就来玩</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/cutefishos-vibe-coded-desktop/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

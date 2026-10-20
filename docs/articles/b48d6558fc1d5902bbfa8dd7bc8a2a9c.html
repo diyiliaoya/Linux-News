@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人们正用AI去除智能电视广告并提升电视速度 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月20日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>人们正用AI去除智能电视广告并提升电视速度</h1>
+
+  <div class="article-summary">Android TV用户通过ADB将Claude Code指向电视，以移除广告、遥测和臃肿软件。操作包括开启开发者选项和USB调试，让AI连接电视IP地址并禁用非必要应用。关键注意事项：禁用而非卸载系统包，完成后关闭调试端口。此方法适用于Android TV/Google TV，不适用于三星Tizen、LG webOS和Roku。</div>
+
+  <div class="article-body"><p>人们正用AI去除智能电视广告并提升电视速度</p><p>Android TV用户正通过ADB将Claude Code指向电视，以剥离广告、遥测和臃肿软件。以下是其工作原理及可能出错的地方。</p><p>上周，我们见证了一波决心用AI逆向工程一切的开发者。本周，又出现了新一波浪潮，说实话，我更喜欢这一波。</p><p>有些人找到了一种不寻常的方式，将AI用于对他们真正重要的事情。他们通过剥离操作系统中的广告和垃圾软件，让自己的智能电视重新变得好用。</p><p>如果你拥有一台廉价Android TV，你懂那种体验。开机，等待主屏幕加载，滚过赞助横幅，然后才能到达你想用的应用。现在人们正要求Claude帮他们解决这个问题。</p><p>一切始于一条推文，他使用Claude清理了自己的智能电视。随后他又跟进展示了电视变得快了多少，其他人也做了同样的事。“Gathin”更进一步，把所有内容放到了一个名为tv-vibehack的GitHub仓库中。里面有提示词、一个自定义启动器，以及他遇到的一系列坑。</p><p>根据README，这最初是他花一个下午修复父母的小米电视，那台电视在他们甚至还没到达Netflix之前就向他们展示广告。该仓库采用MIT许可证，截至撰写时已获得超过1300颗星和146次复刻。</p><p>这一切是如何工作的？</p><p>这里没有魔法。Android TV拥有与你的Android手机相同的Android调试桥（ADB），Claude只是替你完成更改。</p><p>你通过进入设置 -&gt; 设备偏好设置 -&gt; 关于，并在“版本号”上按七次OK来启用电视上的开发者选项。然后开启USB调试（如果你的电视支持，也可开启无线调试）。有些电视，比如小米，根本不显示无线调试开关，但仅USB调试就会在5555端口上打开网络ADB。</p><p>接下来，你在连接到同一Wi-Fi网络的电脑上运行Claude Code或Claude桌面应用。你让它连接到电视的IP地址，并建议哪些非必要应用可以移除。有些人也使用Codex或其他编码代理，但方法相同。</p><p>我遇到的所有可行示例几乎都遵循相同的模式。目标是Android TV或Google TV，涵盖索尼、TCL、小米、海信、一加等品牌。</p><p>三星（Tizen）、LG（webOS）和Roku运行完全不同的系统，因此调试技巧在这里不适用。也许有人也会找到解决办法。Amazon Fire TV需要额外小心（后文详述）。</p><p>Claude列出已安装的包，并使用pm disable-user禁用（而非卸载）广告、赞助行、遥测和预装臃肿软件。许多人还会安装一个极简的自定义启动器来替代充满广告的 stock 主屏幕，并调低动画效果。</p><p>一切都设计为可逆的。而且也应该如此。好的提示词坚持先备份包列表，并在触碰任何重要内容（如HDMI输入、固件更新或键盘）之前询问。例如，tv-vibehack的提示词会询问你使用哪些流媒体应用，以及是否保留语音助手、Chromecast和更新。</p><p>根据README，在一台1GB内存的小米电视上首次运行花了一个下午。以该仓库为上下文，人们报告大约十五分钟就能完成。</p><p>人们指出的坑</p><p>做过这件事的人分享了一些经验教训，在你让AI代理对你的电视放手之前值得一读。</p><p>第一个也是最大的一个：禁用，不要卸载。卸载系统包会导致Home键变砖或丢失HDMI输入切换。甚至顺序也很重要。tv-vibehack警告说，如果你在新启动器安装之前就禁用了 stock 启动器，Home键会让你落在一个工厂测试应用上。</p><p>完成后关闭USB或无线调试。你不会希望一个开放的ADB端口留在你的家庭网络上。</p><p>许多廉价Android TV出厂时只有1到2GB内存，所以你的电视能快多少……</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/debloat-smart-tv/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
