@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>为 Nautilus 文件管理器添加它缺失的“计算机”视图 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月21日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">桌面环境</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>为 Nautilus 文件管理器添加它缺失的“计算机”视图</h1>
+
+  <div class="article-summary">Nautilus 文件管理器缺少一个集中查看所有驱动器及剩余空间的专用视图。第三方扩展 nautilus-my-computer 填补了这一空白，提供驱动器列表、存储使用条、首选文件夹区域，并支持自定义显示哪些驱动器、使用条颜色以及启动时默认打开该视图。该扩展还附带可选的 Miller 列浏览功能。由于是第三方补丁，安装前需注意未来更新可能导致兼容性问题。</div>
+
+  <div class="article-body"><p>为 Nautilus 文件管理器添加它缺失的“计算机”视图 - OMG! Ubuntu</p><p>文件管理器非常适合浏览文件和文件夹，但它缺少一种专门的方式来查看所有驱动器以及每个驱动器上还剩多少空间——不过你可以添加一个。</p><p>这是一个面向 GNOME Files 的第三方视图，提供一个集中页面列出驱动器，并带有存储使用条，显示哪些挂载点、卷、分区等还有剩余空间，哪些即将装满。</p><p>驱动器可以像文件夹一样交互，因此双击其中一个即可进入，或右键单击以访问在新标签页、新窗口中打开，或卸载、弹出等选项，具体取决于驱动器/挂载类型。</p><p>视图顶部有一个“首选文件夹”区域，显示常用文件夹和位置。这可以管理；你可以将最常用的文件夹固定在这里以便快速访问，并移除你觉得没用的内容。</p><p>概览页面可以以大视图或紧凑视图呈现，区别在本文顶部的截图中可见。</p><p>可自定义的计算机视图</p><p>自定义和微调</p><p>点击侧边栏顶部的按钮打开该附加组件的设置。在那里，你可以自定义显示哪些驱动器，包括 EFI、boot 和 swap 等系统分区，以及是按类型分开显示驱动器还是合并在一起。</p><p>如果默认的系统强调色不合你的口味，你还可以更改驱动器下方显示的使用条颜色。如果你希望 Nautilus 每次启动时都打开</p><p>视图（而不是你的主文件夹），也有一个开关可以实现。</p><p>还让你对 Nautilus 的侧边栏有更大的控制权，允许你隐藏诸如</p><p>之类的条目，并更改书签和位置的侧边栏图标，这在添加自定义文件夹时非常有用。</p><p>Nautilus 中的 Miller 列？哦是的</p><p>包含一个经常被请求的功能</p><p>这个附加组件还提供一个可选的（测试版）</p><p>，提供 Miller 风格浏览。选择一个文件夹，在下一列中查看其内容，同时保持上面的文件夹可见，这样你就能看到自己所在的位置。</p><p>而且是的，你还可以在列之间拖放文件，这很有用。</p><p>在列视图中选择文件（而不是文件夹）会打开一个文件预览列，显示简单的文件统计信息。多个选中的文件会像 macOS 中的</p><p>一样呈现为堆叠，并显示所选内容的合并文件大小。</p><p>要使用它，你需要添加一个第三方仓库，并安装一个来自 Ubuntu 官方支持档案之外的软件包。</p><p>由开发者维护。它有一个针对 Ubuntu 26.04 LTS（</p><p>）与 GNOME 50 的预构建包，但对 26.10（</p><p>sudo add-apt-repository ppa:yannmasoch/nautilus-my-computer</p><p>sudo apt install nautilus-my-computer</p><p>安装后执行此操作以确保它正确就位。</p><p>Nautilus 过去有自己的传统</p><p>视图，但在 2012 年被移除，因为它与侧边栏中的条目重复。后来可以从</p><p>访问驱动器，但该视图在 GNOME 47 中被改造成了</p><p>由于挂载点/驱动器出现在侧边栏中，</p><p>对话框显示可用空间，而访问</p><p>需要点击路径栏并按一个键，因此可以说没有必要专门提供一个视图。</p><p>尽管如此，这并不意味着这样的视图对某些人不方便。这项工作为那些怀念它的人提供了拥有它的能力。</p><p>但作为一个将自己修补到 Nautilus 中的第三方集成（不是官方 GNOME 功能，也不使用官方 API），只有在你知道它可能因未来 Nautilus 的系统更新而损坏，并可能影响文件管理器稳定性时，才应安装它。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/nautilus-my-computer-view" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

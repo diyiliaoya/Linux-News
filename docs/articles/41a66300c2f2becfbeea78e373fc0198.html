@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intel Core Ultra 9 Arrow Lake 在 Star Labs StarFighter 上于 Ubuntu 26.10 展现良好性能提升 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月21日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Intel Core Ultra 9 Arrow Lake 在 Star Labs StarFighter 上于 Ubuntu 26.10 展现良好性能提升</h1>
+
+  <div class="article-summary">本文测试了搭载 Intel Core Ultra 9 285H 的 Star Labs StarFighter Ultra 笔记本在 Ubuntu 26.10 与 Ubuntu 26.04 LTS 上的性能差异。Ubuntu 26.10 采用 Linux 7.3 内核、Mesa 26.2 图形驱动和 GNOME 51，在数十项基准测试中相较 Ubuntu 26.04 LTS 带来明显性能提升。</div>
+
+  <div class="article-body"><p>Intel Core Ultra 9 Arrow Lake 在 Star Labs StarFighter 上于 Ubuntu 26.10 展现良好性能提升 - Phoronix</p><p>Intel Core Ultra 9 Arrow Lake 在 Star Labs StarFighter 上于 Ubuntu 26.10 展现良好性能提升</p><p>2026年10月20日上午10:25 EDT。</p><p>对于使用 Star Labs StarFighter Ultra 或其他 Intel Core Ultra Arrow Lake 笔记本电脑的用户来说，近期发布的 Ubuntu 26.10 相较于 Ubuntu 26.04 LTS 版本带来了一些不错的性能提升。以下是 Intel Core Ultra 9 285H 在数十项不同基准测试中，Ubuntu 26.04 LTS 与 Ubuntu 26.10 的性能对比。</p><p>Star Labs StarFighter Ultra 在我针对这款搭载 Coreboot、采用 Intel Arrow Lake H 的笔记本电脑的 Linux 测试中持续表现良好。提醒一下，评测机配备 Core Ultra 9 285H 与集成 Arc 140T 显卡、64GB LPDDR5-7467 内存、1TB 三星 990 EVO Plus NVMe SSD，以及一块出色的 3840 x 2400 显示屏。</p><p>今天的测试考察了 Ubuntu 26.04 LTS（搭载 Linux 7.0 内核、Mesa 26.0 图形驱动、GNOME 50 及其他默认组件）与 Ubuntu 26.10 的性能对比。新的 Ubuntu 26.10 版本使用 Linux 7.3、Mesa 26.2 图形驱动、GNOME 51 以及各种其他软件包更新。除升级 Ubuntu Linux 发行版及其默认软件包外，测试期间软件或硬件未做其他系统更改。</p><p>感谢 Star Labs 提供 StarFighter Ultra 硬件，供 Phoronix 持续测试。</p><p>Ubuntu 26.10 在 AMD EPYC 上相较 Ubuntu 26.04 带来不错的 I/O 性能提升</p><p>Fedora 45 Beta 性能：令人满意的平淡基准测试</p><p>Ubuntu 26.10 为 Intel Panther Lake / Framework Laptop 13 Pro 带来一些不错的提升</p><p>AMD Strix Halo 在 Ubuntu 26.10 上获得一些性能提升，尤其是使用 amd64v3 时</p><p>Ubuntu 26.10 amd64v3 可为低端/预算硬件提供不错的提升</p><p>Ubuntu 26.10 将为 Intel Core 3 Wildcat Lake 带来更好的性能</p><p>同时享受无广告浏览、</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/review/ubuntu-2610-arrow-lake" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

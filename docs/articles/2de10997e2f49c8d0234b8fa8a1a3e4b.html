@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>微软AI编码代理测试工具已开源 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月21日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>微软AI编码代理测试工具已开源</h1>
+
+  <div class="article-summary">微软开源了AI编码代理测试工具Scope，旨在帮助维护SDK、文档或MCP服务器的团队发现编码代理的失败点。Scope通过在不同代理上运行相同任务并评分，利用依赖图定义成功标准，记录日志和快照以便追溯。工具需本地部署，依赖Docker、Node等组件，默认使用GitHub Copilot。</div>
+
+  <div class="article-body"><p>微软的AI编码代理测试工具已开源</p><p>微软的AI编码代理测试工具已开源</p><p>Scope面向那些维护SDK、文档或MCP服务器，并希望了解编码代理在何处卡住的团队。</p><p>编码代理现在决定使用哪个SDK以及调用哪些工具，尽管对人类开发者来说顺畅运行的事情，仍可能让代理绊倒。</p><p>为了发现这些失败，它通过不同的代理运行相同的任务，并对每个代理产生的结果进行评分。其代码在</p><p>他们称之为现场开发者代理体验，或</p><p>，尽管其“范围”是评估现有的编码代理。</p><p>你给Scope一个任务、一个起始代码库（如果需要）以及一个代理设置。然后它驱动现有的代理，例如</p><p>成功通过形成依赖图的标准来定义。一个检查可以门控另一个。一个简单的例子是要求代理提供一个Node.js服务器，并检查一个返回JSON的/health路由。</p><p>服务根据这些标准对每次运行进行评分。请记住它可能会犯错，微软表示</p><p>重要的结论仍然需要人工审查</p><p>每次运行都会保留实时日志、生成的文件、工作区快照和工具调用。失败的 criterion 可以通过这些步骤追溯。版本化的配置文件保存代理、模型、技能、MCP服务器和扩展。</p><p>你还可以替换其中一个，重新运行相同的任务，并进行比较。结果每次尝试都会有所不同，重复任务有助于区分反复出现的问题和一次性问题。</p><p>然后是可配置的角色，允许你设置模拟用户的视角和语气。你可以在Web门户中查看结果，或使用</p><p>将它们输入脚本和管道。</p><p>你会在哪里使用它？</p><p>文档团队可以观察代理一次又一次错过的指令。修复页面，然后再次运行场景。</p><p>SDK维护者可以检查代理是否首先选择了他们的SDK。他们还可以测试新的示例代码或技能是否会改变这一点。</p><p>对于CLI和MCP服务器，跟踪显示代理在何处停滞。这可能指向模糊的工具描述或让代理猜测的错误消息。</p><p>你不能只是注册并开始测试。Scope没有托管版本，所以你需要自己运行它。</p><p>本地设置需要以下组件：Docker与Compose v2、Node 22、pnpm、mkcert和GitHub CLI。微软有一个</p><p>本地开发指南</p><p>来指导你完成这些。</p><p>默认工作器还需要有效的GitHub Copilot授权，而Judge需要模型提供商的凭据。希望共享部署的团队可以</p><p>在Kubernetes上部署它</p><p>。不过，如果你想贡献，你很可能需要同意微软贡献者许可协议。</p><p>使用AI摆脱广告</p><p>人们正在使用AI摆脱智能电视广告并让电视更快</p><p>Android TV用户正通过ADB将Claude Code指向他们的电视，以剥离广告、遥测和臃肿软件。以下是它的工作原理以及可能出错的地方。</p><p>喜欢这个更新？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年里一直在帮助人们使用Linux。帮助我们保持独立于大科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>跳过Google结果中的AI垃圾和SEO垃圾</p><p>告诉Google你更喜欢It's FOSS，它会在你搜索时更频繁地显示我们由经验丰富的Linux用户创建的Linux新闻和教程。只需点击一下。</p><p>设为首选来源</p><p>🐧 今天玩Tuxdle——每日Linux单词谜题 →</p><p>在收件箱中获取FOSS Weekly</p><p>一份健康的Linux通讯，包含最新版本、相关新闻、提示和教程、琐事和模因、测验和桌面Linux用户的优惠。每周免费。</p><p>一个热衷于开源软件、定制PC构建、赛车运动以及探索这个世界无限可能性的书呆子。</p><p>CutefishOS带着一个不使用Qt或GTK的Vibe-Coded桌面回归</p><p>人们正在使用AI来G</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/microsoft-scope-self-hosted-agent-testing/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
