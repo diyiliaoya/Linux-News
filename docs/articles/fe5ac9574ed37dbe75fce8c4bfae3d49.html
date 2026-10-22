@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snapdragon X2 在 Linux 上的性能在初步基准测试中超出预期 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月22日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Snapdragon X2 在 Linux 上的性能在初步基准测试中超出预期</h1>
+
+  <div class="article-summary">Phoronix 首次对高通 Snapdragon X2 Elite Extreme 在 Linux 下进行基准测试，使用 Ubuntu 26.10 X1E Concept ISO，在 ASUS Zenbook A16 上运行。初步结果显示性能超出预期，Adreno 显卡在开源驱动下正常工作。但部分测试未能运行，且缺乏功耗监控数据。测试对比了英特尔 Core Ultra 和 AMD Ryzen AI 等平台。</div>
+
+  <div class="article-body"><p>今天为您呈现的是高通 Elite Extreme 在 Linux 上的首批基准测试，使用新的 Ubuntu 26.10 X1E Concept ISO 为 Snapdragon X 笔记本电脑提供 Linux 支持。Snapdragon X2 Elite Extreme 旗舰 SoC 在 ASUS Zenbook A16 UX3607OA 笔记本电脑中进行了测试。</p><p>感谢 Phoronix 读者 David 提供 Snapdragon X2 Elite Extreme / ASUS Zenbook A16 的远程测试，今天发布的是新高通 Snapdragon X2 系列的首批数据。不幸的是，我没有收到高通或其硬件合作伙伴提供的任何 Snapdragon X2 系列评测样品，但感谢 Phoronix 读者 David 允许进行一些远程基准测试，以初步了解 X2 Elite Extreme 在 Linux 下非常新鲜的状态下的性能表现。话虽如此，这只是初步基准测试，一些基准测试未能在 X2 上成功运行，而且也没有功耗监控。由于在 Linux 下没有 PowerCap/RAPL 或其他 Snapdragon X 功耗指标的 Linux 报告，并且在此次远程测试期间没有通过 WattsUp Pro 等外部功耗监控，遗憾的是，本轮测试没有涵盖这一非常重要的方面。而且，遗憾的是，今年的硬件预算已耗尽。希望未来我们能获得一些评测硬件，以便对 Snapdragon X2 系列进行功耗测试和其他更广泛的 Linux 性能基准测试。</p><p>ASUS Zenbook A16 UX3607OA 搭载 Snapdragon X2 Elite Extreme X2E96100，配备 48GB LPDDR5-9523 MT/s 内存。18 核高通 X2 Elite Extreme X2E96100 的单核加速频率为 5.0GHz，多核最高频率可达 4.4GHz。据报道，Snapdragon X2 Elite Extreme 在标准设计下的 TDP 为 20W 至 40W，在持续工作负载下 CPU 最高可达 65W。再次说明，本轮远程测试无法进行功耗/每瓦性能测试。</p><p>该笔记本电脑使用 Ubuntu 26.10 X1E Concept ISO 进行标准功能测试。尚未开箱即支持的是 WiFi、音频和网络摄像头。随着未来 Linux 内核版本的发布，Snapdragon X2 的 Linux 驱动支持持续改进；X1E Concept ISO 目前使用 Linux 7.3，与上游 Ubuntu 26.10 相同。</p><p>令人高兴的是，即使在 Ubuntu 26.10 状态下，X2 Elite Extreme 的 Adreno 显卡也能在开源高通驱动栈下正常工作。</p><p>相比之下，我的 Snapdragon X1 Elite Acer Swift 14 AI 笔记本电脑在 Ubuntu 26.10 概念镜像上仍然存在显卡问题，并回退到 LLVMpipe……</p><p>为了了解 Snapdragon X2 Elite Extreme 的性能，我使用新的 Ubuntu 26.10 状态对几台现有笔记本电脑进行了新的基准测试。新重新测试用于与 X2 Elite Extreme 对比的笔记本电脑包括 Core Ultra 9 285H - StarFighter Ultra、Core Ultra X9 388H - Framework 13 Pro、Ryzen AI 9 365 - Zenbook S16、Ryzen AI 9 HX 370 - Framework 13 和 Snapdragon X1 Elite - Acer Swift 14 AI。这提供了 Snapdragon X2 Elite Extreme 在 Linux 上与当前 AMD Zen 5 Strix Point（遗憾的是没有 Strix Halo 笔记本电脑可供测试）以及英特尔 Arrow Lake 和 Panther Lake 的对比。再加上上一代 Snapdragon X1 Elite 进行对比。</p><p>NVIDIA Vera SMT 性能基准测试</p><p>英特尔 Granite Rapids WS 与 AMD Threadripper Zen 5 SMT 性能对比</p><p>英特尔 Xeon 600 工作站性能与 AMD Threadripper 9000 在近 400 项基准测试中的对比</p><p>英特尔 Granite Rapids WS 核心扩展性能与 Xeon 678X</p><p>英特尔 Xeon 678X &quot;Granite Rapids-WS&quot; 上的超线程性能</p><p>英特尔 Xeon 678X 工作站 CPU 的 AMX 性能</p><p>同时享受无广告浏览、</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有商标</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/review/snapdragon-x2-linux" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

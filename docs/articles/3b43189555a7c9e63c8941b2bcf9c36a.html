@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linux基金会Kubernetes安全认证最高可享40%折扣 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月22日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Linux基金会Kubernetes安全认证最高可享40%折扣</h1>
+
+  <div class="article-summary">Linux基金会推出网络安全月促销活动，Kubernetes安全认证最高可享40%折扣，其他认证享35%折扣。优惠截止至2026年10月23日。KCSA+CKS捆绑包可节省258美元，KCSA考试仅需150美元。购买后有一年时间参加考试，并提供3天退款保证。</div>
+
+  <div class="article-body"><p>Linux基金会Kubernetes安全认证最高可享40%折扣</p><p>计划获取认证？你可以以40%的折扣获得CKS和KCSA，其他大多数Linux基金会认证可享35%折扣。优惠截止至10月23日。</p><p>如果你一直计划获取认证，本周就是行动的时候。Linux基金会正在开展网络安全月促销活动，你可以享受网络安全认证、培训课程和THRIVE-ONE电子学习订阅最高40%的折扣。</p><p>Linux基金会是Linux、Kubernetes以及许多其他面向行业的项目背后的官方组织。他们的认证在各国和企业中广受认可。</p><p>2026年10月23日23:59 UTC。这给你只有几天时间来做决定。</p><p>Linux基金会网络安全优惠</p><p>好消息是你有整整一年的时间来参加认证考试。因此，你可以今天购买认证考试以节省费用，在几周/几个月内准备，然后参加考试。</p><p>还有3天退款保证，附带一些条件。请</p><p>本文包含联盟链接。请阅读我们的</p><p>以下是优惠码。它们专为It's FOSS读者提供，所以请使用这些代码，而不是促销页面上看到的通用代码。</p><p>网络安全认证、捆绑包和课程（</p><p>促销页面上的完整列表</p><p>讲师指导培训</p><p>按技术分类的课程</p><p>THRIVE-ONE年度订阅（仅限新订阅）</p><p>因此，如果你看中了CKA、LFCS或任何其他不在网络安全列表中的Linux基金会认证，你仍然可以使用第二个代码享受35%的折扣。</p><p>即使优惠结束，你始终可以使用我们的特殊优惠码享受30%的折扣：ITSFOSS。</p><p>在结账页面应用代码。折扣仅适用于新的个人购买，不能与其他优惠叠加使用。</p><p>Kubernetes安全认证</p><p>本次最大的节省在于Kubernetes安全认证。以下值得关注。</p><p>捆绑包将两项认证考试组合在一起</p><p>：Kubernetes和云原生安全助理（KCSA）和认证Kubernetes安全专家（CKS）。</p><p>相比常规捆绑价格，你可节省258美元</p><p>KCSA是入门级的多选题考试。CKS是实操的专业级考试。按此顺序参加是合理的，因为KCSA构建了CKS所期望的基础。</p><p>请记住，你必须先通过认证Kubernetes管理员（CKA）考试才能参加CKS</p><p>。如果你还没有CKA，可以使用35%折扣码获取</p><p>获取KCSA + CKS捆绑包</p><p>你也可以选择单独获取任一认证考试而非捆绑包。但如果你两个都要，捆绑包能为你节省额外费用。</p><p>认证Kubernetes安全专家（CKS）：</p><p>是一项2小时的、基于表现的考试。你需要在实时Kubernetes集群上从命令行解决真实任务，因此无法靠猜测多选题选项通过。</p><p>你还可获得两次Killer.sh考试模拟器的练习机会，在类似真实考试的环境中练习。认证有效期为2年。</p><p>如上所述，需要有效的CKA作为前提条件。</p><p>Kubernetes和云原生安全助理（KCSA）：</p><p>KCSA是面向云原生安全初学者的预专业认证。这是一项90分钟的在线监考多选题考试，无前提条件。</p><p>只需150美元，这是本月将Linux基金会安全认证添加到简历中最实惠的方式。你可节省100美元。</p><p>THRIVE-ONE年度订阅（电子学习）：</p><p>是Linux基金会的订阅服务。年度计划让你在一年内无限制访问整个电子学习目录，以及所有SkillCred考试。</p><p>你还可以获得任何认证或课程40%的优惠券，以及保证开课的讲师指导课程50%的折扣。</p><p>请注意，认证考试本身不包含在订阅中。</p><p>如果你想学习多种技术，这很合适</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/lf-cyber-security-26/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

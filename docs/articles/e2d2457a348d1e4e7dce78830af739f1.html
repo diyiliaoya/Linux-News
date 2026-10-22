@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ubuntu 推出 php2shell 和 eMudhra 证书修复更新 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月22日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Ubuntu 推出 php2shell 和 eMudhra 证书修复更新</h1>
+
+  <div class="article-summary">Ubuntu 发布了针对 php2shell PHP 漏洞和 eMudhra 证书颁发机构密钥泄露的安全更新。php2shell 包含两个严重漏洞（CVE-2026-109618 和 CVE-2026-109619），CVSS 评分 9.2，攻击者可未经登录通过任何 PHP 应用执行代码。Ubuntu 桌面版默认未安装 PHP，不受直接影响。证书问题方面，Ubuntu 移除了两个信任 eMudhra 的根证书。所有支持 PHP5 及以上版本的 Ubuntu 系统均受影响，建议运行 sudo apt update &amp;&amp; sudo apt upgrade 进行更新。</div>
+
+  <div class="article-body"><p>Ubuntu 已针对导致网站下线的 php2shell PHP 漏洞以及 eMudhra 证书颁发机构的密钥泄露发布了安全更新。</p><p>Ubuntu 桌面版不会直接受到 php2shell 的影响，因为默认情况下不安装 PHP。证书问题更多是浏览器层面的担忧，不过 Google、Apple 等公司已于 10 月 17 日屏蔽了这些不良证书。</p><p>Ubuntu 从信任列表中移除了两个根证书，这两个证书都为 eMudhra 提供了担保。这将有助于保护那些不使用自身列表的工具。</p><p>检查你的系统是否有可用更新。</p><p>你可能已经听说过这些安全漏洞，因为过去几天里两者都获得了主流媒体的报道，尤其是 php2shell。</p><p>php2shell 是两个漏洞的统称，即 CVE-2026-109618 和 CVE-2026-109619，它们影响 PHP 解释器。该漏洞可使具有网络访问权限的攻击者无需登录即可通过任何 PHP 应用程序执行代码。</p><p>PHP 被大约[数据缺失]的网站使用，包括像本站这样基于 WordPress 的网站，因此漏洞利用的规模可能非常巨大。许多遗留网站年复一年地以最少的维护运行着过时的 PHP 版本……</p><p>在 CVSS 4.0 严重性评分标准上，php2shell 得分为 9.2——严重级别。Cloudflare 已经观察到针对这些漏洞的攻击流量，但尚未说明是否有任何攻击成功。</p><p>eMudhra 安全密钥泄露如果被利用，将允许攻击者为网站创建虚假的安全证书并冒充合法服务器。</p><p>如果你在服务器、云环境或其他认为可能涉及 PHP 的地方运行 Ubuntu，最好努力去更新（或向你的托管提供商咨询他们何时更新的详细信息）以确保安全。</p><p>所有带有 php5 或更新版本的 Ubuntu 版本均受影响，但只有仍受 Canonical 支持的 Ubuntu 版本（14.04 LTS 至 26.04 LTS，以及 26.10）将收到修复——可随其他更新一起应用：</p><p>sudo apt update &amp;&amp; sudo apt upgrade</p><p>在服务器上，升级[数据缺失]并不总是可行的，因此可以单独升级该软件包。Canonical 表示，如果无法进行完整的系统重启，任何使用 PHP 解释器的应用或服务也应手动重启。</p><p>如果未安装 PHP，你不会获得 PHP 修复——你也不需要它——但是[数据缺失]。</p><p>虽然 PHP 仅支持 v8.1 及更新版本，但 Canonical 会为受支持的 Ubuntu 版本向后移植关键修复，因此 Ubuntu 14.04 LTS 上的 php5 也会得到修补。</p><p>Ubuntu 14.04、16.04 和 18.04 LTS 只有在启用 Ubuntu Pro 的情况下才能获得更新。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/ubuntu-php2shell-emudhra-security-fixes" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linus Torvalds 在 Linux 7.4 中移除不安全的 __get_user() 和 __put_user() 函数 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月22日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Linus Torvalds 在 Linux 7.4 中移除不安全的 __get_user() 和 __put_user() 函数</h1>
+
+  <div class="article-summary">Linus Torvalds 合并了移除内核中历史遗留且不安全的 __get_user() 和 __put_user() 函数的代码分支。这些函数因缺少指针验证检查而存在安全隐患，且性能不如现代替代方案。大部分使用点早已转换，此次清理完成了 x86/x86_64 架构的最终移除，其他架构仍有少量残留。Torvalds 透露在此过程中使用了 Claude 作为高级 Coccinelle 脚本辅助转换。</div>
+
+  <div class="article-body"><p>Linus Torvalds 继续他近期亲自提交内核补丁的趋势，部分工作借助了 Claude Code 的 AI 辅助。今天合并的补丁移除了历史遗留且不安全的 __get_user() 和 __put_user() 内核函数。</p><p>Linus Torvalds 合并了他的代码分支，移除了 Linux 内核中的 __get_user() 和 __put_user() 函数。这些函数是 get_user() 和 set_user() 的更快但安全性较低的版本，因为安全检查较少。__get_user() / get_user() 函数用于将单个简单变量从用户空间复制到内核空间，而 __put_user() / put_user() 用于将单个变量从内核空间写入用户空间。被移除的版本缺少指针验证检查，因此不安全。Linus 在 Git 合并中描述了移除原因：</p><p>“这早就该做了：__get_user() 和 __put_user() 函数完全是历史遗留产物，再也不是应该使用的东西。而且当被误用时（读作：所有情况），它们不仅比正确的做法更慢，而且不安全，因为它们不检查用户地址范围。</p><p>大多数使用点很久以前就已转换，但各种遗留仍然存在。所以这最初是我写的一个补丁，作为‘向人们展示如何将 __{get,put}_user() 转换为现代代码’的示例。</p><p>特别是，Thomas 去年实现了非常好的新作用域用户访问区域辅助函数（见提交 e497310b4ffb：‘uaccess: Provide scoped user access regions’），使得现代接口特别易于使用，真正消除了使用旧式恐怖接口的任何借口。”</p><p>Torvalds 接着描述了 __get_user() 和 __put_user() 的问题和恐怖之处。</p><p>这些函数已从所有通用 Linux 内核代码中移除，并完成了 x86/x86_64 整个接口的最终移除。由于一些非平凡的情况，其他一些 CPU 架构移植中仍有残留，或者像 ARM64 那样，其函数已经映射到 get_user() 和 put_user()。</p><p>对于那些想知道 Linus Torvalds 是否使用 AI 编码的人——考虑到他上周使用 AI 破译 bug、用 Claude Code 进行性能改进的工作——这次 __get_user() 和 __put_user() 的移除确实有一些 AI 活动。Torvalds 评论说，他使用 Claude 作为一种高级的 Coccinelle 脚本，Coccinelle 用于静态分析和源到源转换。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linus-Kills-Get-Put-User-Linux" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

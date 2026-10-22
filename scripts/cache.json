@@ -16718,5 +16718,203 @@
     "title_zh": "KDE Plasma 6.8.1 桌面环境发布，修复多项问题",
     "summary_zh": "KDE Plasma 6.8.1 作为 KDE Plasma 6.8 桌面环境系列的首个维护更新现已发布，包含多项问题修复和一些小幅改进。",
     "fulltext_zh": "KDE Plasma 6.8.1 现已发布，作为最新 KDE Plasma 6.8 桌面环境系列的首个维护更新，包含多项问题修复和一些小幅改进。"
+  },
+  "e2d2457a348d1e4e7dce78830af739f1": {
+    "id": "e2d2457a348d1e4e7dce78830af739f1",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/ubuntu-php2shell-emudhra-security-fixes",
+    "title_en": "Ubuntu rolls out php2shell, eMudhra certificate fixes",
+    "summary_en": "Ubuntu has released security updates for the php2shell PHP flaw that&#8217;s led to websites being taken offline, and a key compromise at the eMudhra certificate authority. Desktop Ubuntu isn&#8217;t directly affected by php2shell, since PHP isn&#8217;t installed by default. The certificate issue is more of a browser-based concern, though Google, Apple, Mozilla et al blocked the bad certificates on 17 October. Ubuntu&#8217;s&#160;ca-certificates&#160;package update removes two root certificates ",
+    "pub_date": "Wed, 21 Oct 2026 22:19:00 +0000",
+    "title_zh": "Ubuntu 推出 php2shell 和 eMudhra 证书修复更新",
+    "summary_zh": "Ubuntu 发布了针对 php2shell PHP 漏洞和 eMudhra 证书颁发机构密钥泄露的安全更新。php2shell 包含两个严重漏洞（CVE-2026-109618 和 CVE-2026-109619），CVSS 评分 9.2，攻击者可未经登录通过任何 PHP 应用执行代码。Ubuntu 桌面版默认未安装 PHP，不受直接影响。证书问题方面，Ubuntu 移除了两个信任 eMudhra 的根证书。所有支持 PHP5 及以上版本的 Ubuntu 系统均受影响，建议运行 sudo apt update && sudo apt upgrade 进行更新。",
+    "fulltext_zh": "Ubuntu 已针对导致网站下线的 php2shell PHP 漏洞以及 eMudhra 证书颁发机构的密钥泄露发布了安全更新。\n\nUbuntu 桌面版不会直接受到 php2shell 的影响，因为默认情况下不安装 PHP。证书问题更多是浏览器层面的担忧，不过 Google、Apple 等公司已于 10 月 17 日屏蔽了这些不良证书。\n\nUbuntu 从信任列表中移除了两个根证书，这两个证书都为 eMudhra 提供了担保。这将有助于保护那些不使用自身列表的工具。\n\n检查你的系统是否有可用更新。\n\n你可能已经听说过这些安全漏洞，因为过去几天里两者都获得了主流媒体的报道，尤其是 php2shell。\n\nphp2shell 是两个漏洞的统称，即 CVE-2026-109618 和 CVE-2026-109619，它们影响 PHP 解释器。该漏洞可使具有网络访问权限的攻击者无需登录即可通过任何 PHP 应用程序执行代码。\n\nPHP 被大约[数据缺失]的网站使用，包括像本站这样基于 WordPress 的网站，因此漏洞利用的规模可能非常巨大。许多遗留网站年复一年地以最少的维护运行着过时的 PHP 版本……\n\n在 CVSS 4.0 严重性评分标准上，php2shell 得分为 9.2——严重级别。Cloudflare 已经观察到针对这些漏洞的攻击流量，但尚未说明是否有任何攻击成功。\n\neMudhra 安全密钥泄露如果被利用，将允许攻击者为网站创建虚假的安全证书并冒充合法服务器。\n\n如果你在服务器、云环境或其他认为可能涉及 PHP 的地方运行 Ubuntu，最好努力去更新（或向你的托管提供商咨询他们何时更新的详细信息）以确保安全。\n\n所有带有 php5 或更新版本的 Ubuntu 版本均受影响，但只有仍受 Canonical 支持的 Ubuntu 版本（14.04 LTS 至 26.04 LTS，以及 26.10）将收到修复——可随其他更新一起应用：\n\nsudo apt update && sudo apt upgrade\n\n在服务器上，升级[数据缺失]并不总是可行的，因此可以单独升级该软件包。Canonical 表示，如果无法进行完整的系统重启，任何使用 PHP 解释器的应用或服务也应手动重启。\n\n如果未安装 PHP，你不会获得 PHP 修复——你也不需要它——但是[数据缺失]。\n\n虽然 PHP 仅支持 v8.1 及更新版本，但 Canonical 会为受支持的 Ubuntu 版本向后移植关键修复，因此 Ubuntu 14.04 LTS 上的 php5 也会得到修补。\n\nUbuntu 14.04、16.04 和 18.04 LTS 只有在启用 Ubuntu Pro 的情况下才能获得更新。"
+  },
+  "8fa36f2fb5d0840e50f4b36cb8f5aa2a": {
+    "id": "8fa36f2fb5d0840e50f4b36cb8f5aa2a",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/brax-wink-pre-order/",
+    "title_en": "You Can Reserve This Small-Factor, De-Googled Phone for $30",
+    "summary_en": "The Brax Wink is a 4-inch phone that runs BraxOS and has a keyboard that clips onto the back.",
+    "pub_date": "Wed, 21 Oct 2026 17:12:00 GMT",
+    "title_zh": "你可以花30美元预订这款小尺寸、去谷歌化的手机",
+    "summary_zh": "Brax Technologies 开放了 Brax Wink 的预购，这是一款4英寸手机，运行基于 Android 的 BraxOS，不含谷歌服务，并配有可夹在背面的物理键盘。设备顶部有物理开关，可切断摄像头、麦克风、位置、传感器或移动网络。预购分两批：全款599美元，2027年7月发货；或支付30美元定金锁定总价550美元，2027年9月发货。定金在支付尾款前可退。",
+    "fulltext_zh": "你可以花30美元预订这款去谷歌化的手机\n\n你可以花30美元预订这款小尺寸、去谷歌化的手机\n\nBrax Wink 是一款4英寸手机，运行 BraxOS，并配有一个可夹在背面的键盘。\n\nBrax Technologies 是 BraX3 智能手机和 open_slate 平板电脑背后的公司，现已开放 Wink 的预购，计划明年分两批发货。\n\n该公司联合创始人 Rob Braxman（在网上被称为“互联网隐私达人”）曾在某活动上展示了 Wink。它运行基于 Android 的操作系统 BraxOS，不包含谷歌服务。设备顶部有一个物理开关，可配置为关闭摄像头、麦克风、位置、传感器或移动网络。\n\n在设置过程中，你可以选择完整 Android 体验，或选择精简模式，仅限加密通讯、通话、短信和可选导航。\n\nBraxOS 不支持谷歌账号登录或 Google Play 服务，但大多数 Android 应用仍可正常运行。例外的是那些在启动前检查谷歌完整性服务的应用，包括少数银行应用。\n\nWink 还可以根据你预先设置的触发条件自动擦除数据，即每次重启、长时间关机状态、多次解锁失败尝试，以及……并表示任何人都可以从源代码构建 BraxOS，相关文件在其……中提供。\n\n回到驱动这一切的硬件，我们有：\n联发科 MT8875，八核 CPU（4个 Arm C1-Pro 和4个 Arm C1-Nano 核心，4纳米）和 Arm Mali-G625 MC2 GPU。\n8 GB 内存，以及128 GB 内置存储。\n4英寸 OLED 触摸屏\n5000万像素后置摄像头，传感器未披露。\n物理 QWERTY 按键，支持触摸感应和滑动滚动。\n全球 LTE 和 5G 频段，支持物理 SIM 和 eSIM。\nWi-Fi 6E 和蓝牙 5.4。\nUSB-C 3.2 Gen 1、3.5毫米耳机插孔，以及支持最高1 TB 卡的 microSD 插槽。\n预购分两批，每批上限为生产数量：\n面向在……全额付款的买家，价格为 Brax 保证的价格，这些设备将于2027年7月首批发货。\n以30美元定金开始，锁定总价……。剩余520美元将在2027年7月左右收取，这些设备于2027年9月发货。\n在支付尾款前，定金可退还，订单在仍为预订状态时可更改或取消。\n发货日期也可能变更……，预订持有者将在尾款到期前通过电子邮件收到任何变更通知。\n每台设备将随附键盘、USB-C 线和半透明保护壳。\n如果你对这类手机感兴趣，也可以探索 MAKERphone 2.0\nMAKERphone 2.0 让你打造4G手机并为其应用进行氛围编程\n它运行在 ESP32-S3 上，使用真实 SIM 卡进行4G通话和短信，无需焊接即可拼装。远离社交媒体，编写你自己的应用。\n喜欢这篇更新？支持独立的 Linux 新闻报道\nIt's FOSS 在过去14年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得5本电子书。\n一次付费，永久享受\n任意金额，无承诺\n跳过谷歌结果中的 AI 垃圾和 SEO  spam\n告诉谷歌你更喜欢 It's FOSS，它会在你搜索时更频繁地展示我们由经验丰富的 Linux 用户创建的 Linux 新闻和教程。只需点击一下。\n设为首选来源\n🐧 今天就来玩 Tuxdle——每日 Linux 单词谜题 →\n在收件箱中获取 FOSS Weekly\n一份健康的 Linux 新闻通讯，包含最新发布、相关新闻、技巧和教程、冷知识、梗图、测验和桌面 Linux 用户的优惠。每周免费。\n一个热衷于开源软件、定制 PC 装机、赛车运动以及探索这个世界无限可能的技术迷。\nDankMaterialShell 随着 Dank Linux 更名为 Dux Labs 而成为 Dux Shell\n从 Linux 基金会节省高达40%的 Kubernetes 安全认证费用\n微软的 AI 编码代理测试工具已开源\nCutefishOS 带着一个氛围编程的桌面回归，该桌面……"
+  },
+  "d2e87bd957e84bee9a63d23e4464fbb3": {
+    "id": "d2e87bd957e84bee9a63d23e4464fbb3",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/dank-linux-dux-labs-rebrand/",
+    "title_en": "DankMaterialShell Becomes Dux Shell as Dank Linux Rebrands to Dux Labs",
+    "summary_en": "The new name covers the shell, greeter, search, system monitor, calendar, and file manager, all released as part of DMS 2.0.",
+    "pub_date": "Wed, 21 Oct 2026 09:43:46 GMT",
+    "title_zh": "DankMaterialShell 更名为 Dux Shell，Dank Linux 品牌重塑为 Dux Labs",
+    "summary_zh": "Dank Linux 项目宣布全面品牌重塑，DankMaterialShell 更名为 Dux Shell，整个套件及项目本身统一采用 Dux 名称，并发布 DMS 2.0 版本。新版本包含 Material 3 Expressive 重新设计、插件系统、可自定义锁屏等，同时新增独立文件管理器 Dux。项目已迁移至新的 GitHub 组织 Dux Labs。",
+    "fulltext_zh": "DankMaterialShell 更名为 Dux Shell，Dank Linux 品牌重塑为 Dux Labs\n\n围绕 DankMaterialShell（DMS）构建的 Wayland 桌面套件已在 X 上以新名称发布，告别旧身份。与此同时，一个名为“DMS 2.0”的版本几小时前刚登陆 GitHub。\n\n如果你还不了解，这个 shell 是一个 Quickshell 和 Go 项目，用于替代类似工具。围绕它还有迎宾器、日历应用、系统监视器和搜索服务。\n\n它最初是一个业余项目，去年 12 月发布了 1.0 版本。此后，新版本增加了桌面小部件、新启动器和基于弹簧的动效等亮点。\n\n随着套件中组件增多，项目现在将所有组件统一更名。品牌重塑覆盖整个套件。DMS 现在更名为 Dux Shell，迎宾器、搜索工具、系统监视器和日历分别更名为 Dux Greeter、Dux Search、Dux Monitor 和 Dux Calendar。Dank Linux 更名为 Dux Labs，这也成为整个项目及套件中每个应用的新名称。\n\nDux Files 是一个独立文件管理器，是唯一新增而非更名的组件。它提供标签页、分屏视图、回收站和网络共享等功能。如果 shell 正在运行，它会自动采用你的 DMS 主题。\n\nDux 是套件的吉祥物，名字呼应 Linux 的企鹅吉祥物 Tux。以 D 开头也让 dux 系列命令得以保留原名。\n\n项目进行品牌重塑的理由是，围绕单一产品构建的名称已不再适合一个拥有独立应用集合和插件社区的套件。\n\n另一点值得注意的是，早先的版本仍带有 Dank 名称，其路线图列出了独立文件浏览器和手机集成，但从未真正提及更名。\n\n至于 DMS 2.0 版本，内容非常丰富，新增了 Material 3 Expressive 重新设计、仪表板和 dock 插件，以及可自行排列小部件的锁屏。还有 Dux Bar，一个自由浮动的栏伴侣或替代品，可转变为通知、天气、媒体和壁纸视图，以及控制中心、仪表板和启动器。\n\n项目已从旧 GitHub 组织迁移至名为 Dux Labs 的新组织。你会找到许多曾以 Dank 名称闻名的仓库，包括 dux-shell（原 DankMaterialShell）、dux-gop（dgop）、dux-search（danksearch）、dux-calendar（dankcalendar）和 dux-greeter（dank-greeter）。\n\n个人而言，我更喜欢 Dank 品牌。但如果开发者认为这是最佳方案且社区接受，那就没必要再讨论过去的事了。"
+  },
+  "3b43189555a7c9e63c8941b2bcf9c36a": {
+    "id": "3b43189555a7c9e63c8941b2bcf9c36a",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/lf-cyber-security-26/",
+    "title_en": "Save Upto 40% on Kubernetes Security Certifications From the Linux Foundation",
+    "summary_en": "Planning to get certified? You can get CKS and KCSA for 40% less and 35% off most other Linux Foundation certifications. Offer ends October 23.",
+    "pub_date": "Wed, 21 Oct 2026 08:42:20 GMT",
+    "title_zh": "Linux基金会Kubernetes安全认证最高可享40%折扣",
+    "summary_zh": "Linux基金会推出网络安全月促销活动，Kubernetes安全认证最高可享40%折扣，其他认证享35%折扣。优惠截止至2026年10月23日。KCSA+CKS捆绑包可节省258美元，KCSA考试仅需150美元。购买后有一年时间参加考试，并提供3天退款保证。",
+    "fulltext_zh": "Linux基金会Kubernetes安全认证最高可享40%折扣\n\n计划获取认证？你可以以40%的折扣获得CKS和KCSA，其他大多数Linux基金会认证可享35%折扣。优惠截止至10月23日。\n\n如果你一直计划获取认证，本周就是行动的时候。Linux基金会正在开展网络安全月促销活动，你可以享受网络安全认证、培训课程和THRIVE-ONE电子学习订阅最高40%的折扣。\n\nLinux基金会是Linux、Kubernetes以及许多其他面向行业的项目背后的官方组织。他们的认证在各国和企业中广受认可。\n\n2026年10月23日23:59 UTC。这给你只有几天时间来做决定。\n\nLinux基金会网络安全优惠\n\n好消息是你有整整一年的时间来参加认证考试。因此，你可以今天购买认证考试以节省费用，在几周/几个月内准备，然后参加考试。\n\n还有3天退款保证，附带一些条件。请\n\n本文包含联盟链接。请阅读我们的\n\n以下是优惠码。它们专为It's FOSS读者提供，所以请使用这些代码，而不是促销页面上看到的通用代码。\n\n网络安全认证、捆绑包和课程（\n促销页面上的完整列表\n\n讲师指导培训\n\n按技术分类的课程\n\nTHRIVE-ONE年度订阅（仅限新订阅）\n\n因此，如果你看中了CKA、LFCS或任何其他不在网络安全列表中的Linux基金会认证，你仍然可以使用第二个代码享受35%的折扣。\n\n即使优惠结束，你始终可以使用我们的特殊优惠码享受30%的折扣：ITSFOSS。\n\n在结账页面应用代码。折扣仅适用于新的个人购买，不能与其他优惠叠加使用。\n\nKubernetes安全认证\n\n本次最大的节省在于Kubernetes安全认证。以下值得关注。\n\n捆绑包将两项认证考试组合在一起\n：Kubernetes和云原生安全助理（KCSA）和认证Kubernetes安全专家（CKS）。\n\n相比常规捆绑价格，你可节省258美元\n\nKCSA是入门级的多选题考试。CKS是实操的专业级考试。按此顺序参加是合理的，因为KCSA构建了CKS所期望的基础。\n\n请记住，你必须先通过认证Kubernetes管理员（CKA）考试才能参加CKS\n。如果你还没有CKA，可以使用35%折扣码获取\n\n获取KCSA + CKS捆绑包\n\n你也可以选择单独获取任一认证考试而非捆绑包。但如果你两个都要，捆绑包能为你节省额外费用。\n\n认证Kubernetes安全专家（CKS）：\n是一项2小时的、基于表现的考试。你需要在实时Kubernetes集群上从命令行解决真实任务，因此无法靠猜测多选题选项通过。\n\n你还可获得两次Killer.sh考试模拟器的练习机会，在类似真实考试的环境中练习。认证有效期为2年。\n\n如上所述，需要有效的CKA作为前提条件。\n\nKubernetes和云原生安全助理（KCSA）：\nKCSA是面向云原生安全初学者的预专业认证。这是一项90分钟的在线监考多选题考试，无前提条件。\n\n只需150美元，这是本月将Linux基金会安全认证添加到简历中最实惠的方式。你可节省100美元。\n\nTHRIVE-ONE年度订阅（电子学习）：\n是Linux基金会的订阅服务。年度计划让你在一年内无限制访问整个电子学习目录，以及所有SkillCred考试。\n\n你还可以获得任何认证或课程40%的优惠券，以及保证开课的讲师指导课程50%的折扣。\n\n请注意，认证考试本身不包含在订阅中。\n\n如果你想学习多种技术，这很合适"
+  },
+  "41dedcfe1c199dc884c37b671ed8141c": {
+    "id": "41dedcfe1c199dc884c37b671ed8141c",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12999",
+    "title_en": "Distribution Release: Essora Eos 20261021",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The Essora project has announced the release of a new version (and edition) of Essora Eos, a Devuan-based desktop Linux distribution. The new build, labelled as 20261021, comes with the SonicDE desktop (a community fork of KDE Plasma 6), XLibre X window server and OpenRC init system. The....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Essora Eos 20261021",
+    "summary_zh": "Essora 项目发布了基于 Devuan 的桌面 Linux 发行版 Eos 的新版本 20261021，采用 SonicDE 桌面（KDE Plasma 6 的社区分支）、XLibre X 窗口服务器和 OpenRC 初始化系统。该版本用 ROX-Filer2-Qt 替换 Dolphin 文件管理器，并引入 Essora Browser、Essora Office 套件和 Essora 控制中心等自定义应用。",
+    "fulltext_zh": "发行版发布：Essora Eos 20261021（DistroWatch.com 新闻）\n\nDistroWatch.com 由以下赞助商支持\n新闻/观点/评论 ▼\n发布公告\nDW 周刊 / 评论存档\n访客评分与评论\n项目评分排名\n播客、新闻通讯与评论\n跨发行版比较软件包\n显示所有发行版的软件包版本\n搜索发行版 - 高级\n已停止的发行版\n教程与学习 ▼\n搜索文章\n问答专栏\n技巧与提示专栏\n误区与误解专栏\n简化手册页\n其他操作系统\n发行版验证密钥\n可视化发行版家族树\n常见问题\n我们的捐赠计划\n\n小型企业电话系统\nSparky 项目推出 SparkyOS\n使用 Sylve 安装 FreeBSD\nOpenBSD 获得 64 位 WINE 移植\nFedora 切换控制台驱动\nGNOME OS 推出“预览”变体\nHaiku 开发者完善操作系统的多个方面\nMint 更长开发周期的优势\nPeppermint 团队更新 PepVoid\nChimera 幕后\nNetBSD 超额完成筹资目标\n易于使用的 PBX - 托管或自管理\nLinux 电话系统\n免费实时聊天解决方案\n集成呼叫中心软件\n联络中心软件\n远程工作应用：iOS 或 Android\n免费视频会议\n3CX 的 VoIP / PBX 指南\n不要措手不及，制定灾难恢复计划！\n必要的实时聊天报告和统计\n导致呼叫欺诈的常见错误\nWhatsApp Business 与 3CX WhatsApp API 集成\n3CX StartUP 的 5 大杀手级功能\n别做“那种”人 第1卷：保管好复杂凭证\n别做“那种”人 第2卷：呼叫欺诈\n别做“那种”人 第3卷：四大安全提示\n别做“那种”人 第4卷：监控你的实例\nUbuntu 每周新闻 966\nRed Hat 周五五条 - 2026年10月16日\nHaiku 活动与合同报告，2026年9月\nFull Circle 每周新闻\nFedora 项目播客\n\n最新新闻与更新\n新闻过滤选项\n发行版发布：Essora Eos 20261021\n\nEssora 项目宣布发布 Eos 的新版本（及新版本变体），这是一个基于 Devuan 的桌面 Linux 发行版。新构建版本标记为 20261021，附带 SonicDE 桌面（KDE Plasma 6 的社区分支）、XLibre X 窗口服务器和 OpenRC 初始化系统。该发行版还用 ROX-Filer2-Qt 替换了 Dolphin 文件管理器，并引入了多个自定义应用，包括基于 Firefox 的 Essora Browser、Essora Office 套件和 Essora 控制中心。\n\n“Essora Linux SonicDE 将两个明确致力于 X11 桌面的项目结合在一起——SonicDE，一个源自 KDE Plasma 6 的社区驱动桌面环境，以及 XLibre，一个社区开发的 X11 服务器。Essora 在此基础上构建了自己的系统集成、内核、视觉标识和应用程序。结果是一个感觉完整的桌面，同时不放弃 Essora 的理念——选择正确的组件，避免不必要的重复，让用户保持控制。这个版本不是要做一个更小的模仿品。而是要做一个属于 Essora 的桌面。Essora Eos SonicDE 将一个功能强大的 Qt6 桌面与精心挑选的 Essora 工具集相结合，包括 Dolphin 的更轻量替代品和可选的、可配置的驱动器图标层。”\n\n阅读完整公告以获取更多信息和截图。\n\nEssora_xlibre_SonicDE-20261021_1930.iso\n\n近期相关新闻与发布\n发行版发布：Essora Eos 20261021\n\nEssora Eos 是一组基于 Devuan 的桌面 Linux 发行版，提供 JWM 或 Openbox 窗口管理器，或 KDE Plasma 或 LXDE 桌面环境。它使用 OpenRC 初始化系统和 Xlibre 显示服务器。该发行版旨在干净、极简、快速且可定制，默认只安装必要的工具。Essora Eos 使用 Calamares 系统安装程序，并提供一个名为“Essora 控制中心”的自定义图形配置工具。\n\nEssora Eos（也称为 Essora Linux 或 Essora Eos GNU/Linux）\nhttps://www.essora.org/\nhttps://source"
+  },
+  "81c032553d4f7d76d3b189afd784161f": {
+    "id": "81c032553d4f7d76d3b189afd784161f",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/12998",
+    "title_en": "Distribution Release: siduction 2026.1.0",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The siduction project has published a new snapshot, version 2026.1.0. The new release, which is built using packages from Debian's \"Unstable\" branch, offers Fluxbox, KDE Plasma and Xfce editions: \"The editions we offer with siduction 2026.1.0 are KDE Plasma 6.7.4, Xfce 4.20, X.Org and NOX. Unfortunately, GNOME, MATE....",
+    "pub_date": "",
+    "title_zh": "发行版发布：siduction 2026.1.0",
+    "summary_zh": "siduction 项目发布了 2026.1.0 快照版，基于 Debian Unstable（2026 年 10 月 18 日快照），提供 KDE Plasma 6.7.4、Xfce 4.20、X.Org 和 NOX 版本。由于缺乏维护者，GNOME、MATE 和 Cinnamon 未纳入本次发布，但仍可从仓库安装。LXQt 尚未就绪，将在准备完成后提供。新版本包含 Calamares 安装器、大幅修订的命令行安装器以及定制版 Linux 内核 7.2.11 和 systemd 262.1。",
+    "fulltext_zh": "发行版发布：siduction 2026.1.0（DistroWatch.com 新闻）\n\nsiduction 项目发布了一个新快照版本 2026.1.0。该新版本基于 Debian 的“Unstable”分支软件包构建，提供 Fluxbox、KDE Plasma 和 Xfce 版本：\n\n“siduction 2026.1.0 提供的版本包括 KDE Plasma 6.7.4、Xfce 4.20、X.Org 和 NOX。遗憾的是，GNOME、MATE 和 Cinnamon 未能进入本次选择，因为 siduction 内部没有它们的维护者。如果您感兴趣或认识可能感兴趣的人，请联系我们。也许它们有一天会回归。当然，它们仍然可以从仓库安装。LXQt 目前尚未达到可发布状态。我们将在其准备好发布后提供。发布的 siduction 2026.1.0 镜像是 Debian Unstable 2026 年 10 月 18 日的快照。它们包含若干实用软件包和脚本、基于 Calamares 的安装器、大幅修订的命令行安装器，以及定制版 Linux 内核 7.2.11，systemd 版本为 262.1。”\n\n更多信息可在以下文件中找到：\nsiduction-2026.1.0-Big_Crime-kde-amd64-202610181233.iso\nsiduction-2026.1.0-Big_Crime-xfce-amd64-202610121446.iso\nsiduction-2026.1.0-Big_Crime-nox-amd64-202610181341.iso\n\n近期相关新闻与发布\n发行版发布：siduction 2026.1.0\n发行版发布：siduction 2024.1.0\n发行版发布：siduction 2023.1.0\n发行版发布：siduction 22.1.1\n发行版发布：siduction 22.1\n发行版发布：siduction 21.3.0\n更多 siduction 新闻...\n\nsiduction 发行版是一个面向桌面的操作系统和 Live 介质，基于 Debian GNU/Linux 的“unstable”分支。它于 2011 年底从 aptosid 分叉而来，提供多种独立的 Live 介质，涵盖多种桌面环境。该项目还承诺定期发布、开放开发模式，并与开发者及用户社区保持友好关系。\n\nhttps://siduction.org/\nhttp://forum.siduction.org/\n替代用户论坛\nhttps://manual.siduction.org/welcome\nhttps://wiki.siduction.org/\nhttps://siduction.org/installation-media/"
+  },
+  "51f55656c47a9a6db983820fab28c2ee": {
+    "id": "51f55656c47a9a6db983820fab28c2ee",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-Kbuild",
+    "title_en": "Linux 7.4 Begins Landing Patches To Speed Up The Kernel Build Process",
+    "summary_en": "There are notable patches by Arm engineer Lorenzo Stoakes that have begun landing in Linux 7.4 for speeding up the Linux kernel build process. This work can provide some significant reductions in the Linux kernel build time...",
+    "pub_date": "Wed, 21 Oct 2026 20:52:38 -0400",
+    "title_zh": "Linux 7.4 开始合入加速内核构建过程的补丁",
+    "summary_zh": "Linux 7.4 内核开始合入由 Arm 工程师 Lorenzo Stoakes 提交的补丁，旨在加速 Linux 内核构建过程。这些补丁解决了大量单线程瓶颈等问题，完整应用后可使内核构建速度提升约 36%，增量构建速度提升约 70%。首批合入的改动包括避免在 vmlinux 中分配、加速 kallsyms、仅在最终 vmlinux 链接时生成重定位、用 C 重写 mksysmap、缓存更多 cc-option 和 ld-option 结果，以及使用 pigz 加速 Gzip 压缩等。",
+    "fulltext_zh": "Linux 7.4 开始合入加速内核构建过程的补丁\n2026 年 10 月 21 日 20:52 EDT。\n\n由 Arm 工程师 Lorenzo Stoakes 提交的一些值得注意的补丁已开始合入 Linux 7.4，用于加速 Linux 内核构建过程。这项工作可以显著减少 Linux 内核构建时间。\n\n自 9 月初以来，我们一直在报道这项加速 Linux 内核构建过程的努力。它始于\nAI 编写了大量“丑陋”代码，但发现了加速 Linux 编译的主要瓶颈\n，为 GCC 和 LLVM/Clang 编译器带来了一些不错的构建速度改进。这些补丁解决了许多单线程瓶颈和其他问题。完整应用这些补丁后，内核构建速度可提升约 36%，增量构建速度可提升约 70%。\n\n该补丁系列的完整内容在 Phoronix 专题\n接近 10 秒的 Linux 内核构建\n中得到了进一步评估。\n\n今天合入 Linux 7.4 内核的是加速内核构建过程的首批改动。这项工作包括避免在 vmlinux 中分配、加速 kallsyms、不必要的排序、仅在最终 vmlinux 链接时生成重定位、用 C 代码重新实现 mksysmap、缓存更多 cc-option 和 ld-option 结果，以及在可用时使用 pigz 实现更快的 Gzip 压缩。\n\n这些今天作为 Kbuild 改动的一部分合入的补丁可通过\n查看。一旦 Linux 7.4-rc1 被打上标签，我将运行一些新的内核构建基准测试，以查看迄今为止为加速 Linux 内核构建过程而合入的这些改动的影响。\n\nLinus Torvalds 在 Linux 7.4 中移除不安全的 __get_user() 和 __put_user() 函数\nLinux 7.4 内核加密库在 x86 和 RISC-V 上获得优化的 AES 实现\nLinux 7.4 将为 close_range、exec 和 exit 同步关闭文件\nMeta 在 Linux 7.4 中改进 Kernfs 可扩展性\n通过套接字的 Linux 核心转储现在借助稀疏支持可以小得多\nLinux 7.4 添加新的模拟功能，同时一些旧 CPU 可能很快被淘汰\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n微软发布适用于 Linux 桌面的 Microsoft Defender\nLinus Torvalds 的 AI 代码改进：重写代码带来巨大性能提升\nClaude Code / AI 展示逆向工程硬件以支持 Linux 的潜力\n今天的 Steam Beta 使 Linux 客户端成为 64 位应用\nOmarchy 通过避免 XDG 开销加快 Web 浏览器启动速度\nLinux 内核开发者计划移除 AI/LLM 使用的“Assisted-By”标签要求\nWine 11.20 发布，带来 CD-ROM 支持变更\nFedora 45 不会在下周发布\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "4b34b895edb47baf2bea27ba497f7134": {
+    "id": "4b34b895edb47baf2bea27ba497f7134",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linus-Kills-Get-Put-User-Linux",
+    "title_en": "Linus Torvalds Eliminates Unsafe __get_user() & __put_user() Functions In Linux 7.4",
+    "summary_en": "Linus Torvalds continues with his recent uptick in kernel patches himself, assisted in part by AI with Claude Code. Merged today was removing the historical and unsafe __get_user() and __put_user() kernel functions...",
+    "pub_date": "Wed, 21 Oct 2026 17:11:58 -0400",
+    "title_zh": "Linus Torvalds 在 Linux 7.4 中移除不安全的 __get_user() 和 __put_user() 函数",
+    "summary_zh": "Linus Torvalds 合并了移除内核中历史遗留且不安全的 __get_user() 和 __put_user() 函数的代码分支。这些函数因缺少指针验证检查而存在安全隐患，且性能不如现代替代方案。大部分使用点早已转换，此次清理完成了 x86/x86_64 架构的最终移除，其他架构仍有少量残留。Torvalds 透露在此过程中使用了 Claude 作为高级 Coccinelle 脚本辅助转换。",
+    "fulltext_zh": "Linus Torvalds 继续他近期亲自提交内核补丁的趋势，部分工作借助了 Claude Code 的 AI 辅助。今天合并的补丁移除了历史遗留且不安全的 __get_user() 和 __put_user() 内核函数。\n\nLinus Torvalds 合并了他的代码分支，移除了 Linux 内核中的 __get_user() 和 __put_user() 函数。这些函数是 get_user() 和 set_user() 的更快但安全性较低的版本，因为安全检查较少。__get_user() / get_user() 函数用于将单个简单变量从用户空间复制到内核空间，而 __put_user() / put_user() 用于将单个变量从内核空间写入用户空间。被移除的版本缺少指针验证检查，因此不安全。Linus 在 Git 合并中描述了移除原因：\n\n“这早就该做了：__get_user() 和 __put_user() 函数完全是历史遗留产物，再也不是应该使用的东西。而且当被误用时（读作：所有情况），它们不仅比正确的做法更慢，而且不安全，因为它们不检查用户地址范围。\n\n大多数使用点很久以前就已转换，但各种遗留仍然存在。所以这最初是我写的一个补丁，作为‘向人们展示如何将 __{get,put}_user() 转换为现代代码’的示例。\n\n特别是，Thomas 去年实现了非常好的新作用域用户访问区域辅助函数（见提交 e497310b4ffb：‘uaccess: Provide scoped user access regions’），使得现代接口特别易于使用，真正消除了使用旧式恐怖接口的任何借口。”\n\nTorvalds 接着描述了 __get_user() 和 __put_user() 的问题和恐怖之处。\n\n这些函数已从所有通用 Linux 内核代码中移除，并完成了 x86/x86_64 整个接口的最终移除。由于一些非平凡的情况，其他一些 CPU 架构移植中仍有残留，或者像 ARM64 那样，其函数已经映射到 get_user() 和 put_user()。\n\n对于那些想知道 Linus Torvalds 是否使用 AI 编码的人——考虑到他上周使用 AI 破译 bug、用 Claude Code 进行性能改进的工作——这次 __get_user() 和 __put_user() 的移除确实有一些 AI 活动。Torvalds 评论说，他使用 Claude 作为一种高级的 Coccinelle 脚本，Coccinelle 用于静态分析和源到源转换。"
+  },
+  "a80fadb0a0d7bdbdccdd54f146f98540": {
+    "id": "a80fadb0a0d7bdbdccdd54f146f98540",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-Crypto-Library",
+    "title_en": "Linux 7.4 Kernel Crypto Library Enjoying Optimized AES Implementations On x86 & RISC-V",
+    "summary_en": "The latest Linux kernel cryptographic subsystem performance work carried out by Google engineer Eric Biggers is migrating x86/x86_64 and RISC-V optimized implementations of different AES modes into the lib/crypto kernel crypto library to enjoy faster performance there...",
+    "pub_date": "Wed, 21 Oct 2026 16:11:03 -0400",
+    "title_zh": "Linux 7.4 内核加密库在 x86 与 RISC-V 上获得优化的 AES 实现",
+    "summary_zh": "Linux 7.4 内核加密库合并了由谷歌工程师 Eric Biggers 迁移的 x86/x86_64 和 RISC-V 优化 AES 模式实现，涵盖 ECB、CBC、CBC-CTS、CTR、XCTR、XTS，使库 API 在这些架构上获得加速，同时减少冗余胶水代码。此外，开发者还为 SPARC64 提交了利用加密操作码的优化 AES-XTS 实现。",
+    "fulltext_zh": "Linux 7.4 内核加密库在 x86 与 RISC-V 上获得优化的 AES 实现\n\n2026 年 10 月 21 日 下午 04:11 EDT。\n\n由谷歌工程师主导的最新 Linux 内核加密子系统性能工作，正在将不同 AES 模式的 x86/x86_64 和 RISC-V 优化实现迁移到内核加密库中，以在那里获得更快的性能。\n\n已为 Linux 7.4 内核合并，Biggers 将 AES 模式 ECB、CBC、CBC-CTS、CTR、XCTR、XTS 的 x86/x86_64 和 RISC-V 优化实现迁移到了内核加密库空间。相应地，库 API 现在在这些架构上得到了适当加速，同时也仍然加速 crypto_skcipher 的使用。在 Intel/AMD x86_64 CPU 上，这意味着利用 AVX 优化代码以及 AES-NI 指令。\n\n这位 Linux 内核加密专家解释说，除了这些优化实现带来的加速之外，它还移除了大量冗余的胶水代码和代码重复。\n\n另外，在 Linux 7.4 的加密库更新中，开源开发者 Stian Halseth 为 SPARC64 编写了一个优化的 AES-XTS 实现。新实现利用了 SPARC 的加密操作码。在 2026 年看到新的 SPARC 加密优化，并不是我预期会写到的内容……\n\n现已合并的 Linux 7.4 加密库更新完整列表可通过以下链接查看：\nLinux 7.4 开始合入加速内核构建过程的补丁\nLinus Torvalds 在 Linux 7.4 中移除不安全的 __get_user() 与 __put_user() 函数\nLinux 7.4 将为 close_range、exec 与 exit 同步关闭文件\nMeta 在 Linux 7.4 中改进 Kernfs 可扩展性\n借助稀疏支持，Linux 通过套接字生成的核心转储现在可以小得多\nLinux 7.4 添加新的仿真功能，同时一些旧 CPU 可能很快被淘汰\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\n微软发布面向 Linux 桌面的 Microsoft Defender\nLinus Torvalds 的 AI 代码改进：重构代码带来巨大性能提升\nClaude Code / AI 展示出为 Linux 支持逆向工程硬件的潜力\n今日的 Steam 测试版使 Linux 客户端成为 64 位应用\nOmarchy 通过避免 XDG 开销使 Web 浏览器启动更快\nLinux 内核开发者计划移除 AI/LLM 使用的“Assisted-By”标签要求\nWine 11.20 发布，带来 CD-ROM 支持变更\nFedora 45 不会在下周发布\n\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "fe5ac9574ed37dbe75fce8c4bfae3d49": {
+    "id": "fe5ac9574ed37dbe75fce8c4bfae3d49",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/snapdragon-x2-linux",
+    "title_en": "Snapdragon X2 Performance On Linux Exceeding Expectations In Initial Benchmarks",
+    "summary_en": "For your viewing pleasure today are the first Linux benchmarks of the Qualcomm Snapdragon X2 Elite Extreme on Linux using the new Ubuntu 26.10 X1E Concept ISO for Snapdragon X laptop support on Linux. The Snapdragon X2 Elite Extreme flagship SoC is tested within the ASUS Zenbook A16 UX3607OA laptop.",
+    "pub_date": "Wed, 21 Oct 2026 10:50:41 -0400",
+    "title_zh": "Snapdragon X2 在 Linux 上的性能在初步基准测试中超出预期",
+    "summary_zh": "Phoronix 首次对高通 Snapdragon X2 Elite Extreme 在 Linux 下进行基准测试，使用 Ubuntu 26.10 X1E Concept ISO，在 ASUS Zenbook A16 上运行。初步结果显示性能超出预期，Adreno 显卡在开源驱动下正常工作。但部分测试未能运行，且缺乏功耗监控数据。测试对比了英特尔 Core Ultra 和 AMD Ryzen AI 等平台。",
+    "fulltext_zh": "今天为您呈现的是高通 Elite Extreme 在 Linux 上的首批基准测试，使用新的 Ubuntu 26.10 X1E Concept ISO 为 Snapdragon X 笔记本电脑提供 Linux 支持。Snapdragon X2 Elite Extreme 旗舰 SoC 在 ASUS Zenbook A16 UX3607OA 笔记本电脑中进行了测试。\n\n感谢 Phoronix 读者 David 提供 Snapdragon X2 Elite Extreme / ASUS Zenbook A16 的远程测试，今天发布的是新高通 Snapdragon X2 系列的首批数据。不幸的是，我没有收到高通或其硬件合作伙伴提供的任何 Snapdragon X2 系列评测样品，但感谢 Phoronix 读者 David 允许进行一些远程基准测试，以初步了解 X2 Elite Extreme 在 Linux 下非常新鲜的状态下的性能表现。话虽如此，这只是初步基准测试，一些基准测试未能在 X2 上成功运行，而且也没有功耗监控。由于在 Linux 下没有 PowerCap/RAPL 或其他 Snapdragon X 功耗指标的 Linux 报告，并且在此次远程测试期间没有通过 WattsUp Pro 等外部功耗监控，遗憾的是，本轮测试没有涵盖这一非常重要的方面。而且，遗憾的是，今年的硬件预算已耗尽。希望未来我们能获得一些评测硬件，以便对 Snapdragon X2 系列进行功耗测试和其他更广泛的 Linux 性能基准测试。\n\nASUS Zenbook A16 UX3607OA 搭载 Snapdragon X2 Elite Extreme X2E96100，配备 48GB LPDDR5-9523 MT/s 内存。18 核高通 X2 Elite Extreme X2E96100 的单核加速频率为 5.0GHz，多核最高频率可达 4.4GHz。据报道，Snapdragon X2 Elite Extreme 在标准设计下的 TDP 为 20W 至 40W，在持续工作负载下 CPU 最高可达 65W。再次说明，本轮远程测试无法进行功耗/每瓦性能测试。\n\n该笔记本电脑使用 Ubuntu 26.10 X1E Concept ISO 进行标准功能测试。尚未开箱即支持的是 WiFi、音频和网络摄像头。随着未来 Linux 内核版本的发布，Snapdragon X2 的 Linux 驱动支持持续改进；X1E Concept ISO 目前使用 Linux 7.3，与上游 Ubuntu 26.10 相同。\n\n令人高兴的是，即使在 Ubuntu 26.10 状态下，X2 Elite Extreme 的 Adreno 显卡也能在开源高通驱动栈下正常工作。\n\n相比之下，我的 Snapdragon X1 Elite Acer Swift 14 AI 笔记本电脑在 Ubuntu 26.10 概念镜像上仍然存在显卡问题，并回退到 LLVMpipe……\n\n为了了解 Snapdragon X2 Elite Extreme 的性能，我使用新的 Ubuntu 26.10 状态对几台现有笔记本电脑进行了新的基准测试。新重新测试用于与 X2 Elite Extreme 对比的笔记本电脑包括 Core Ultra 9 285H - StarFighter Ultra、Core Ultra X9 388H - Framework 13 Pro、Ryzen AI 9 365 - Zenbook S16、Ryzen AI 9 HX 370 - Framework 13 和 Snapdragon X1 Elite - Acer Swift 14 AI。这提供了 Snapdragon X2 Elite Extreme 在 Linux 上与当前 AMD Zen 5 Strix Point（遗憾的是没有 Strix Halo 笔记本电脑可供测试）以及英特尔 Arrow Lake 和 Panther Lake 的对比。再加上上一代 Snapdragon X1 Elite 进行对比。\n\nNVIDIA Vera SMT 性能基准测试\n英特尔 Granite Rapids WS 与 AMD Threadripper Zen 5 SMT 性能对比\n英特尔 Xeon 600 工作站性能与 AMD Threadripper 9000 在近 400 项基准测试中的对比\n英特尔 Granite Rapids WS 核心扩展性能与 Xeon 678X\n英特尔 Xeon 678X \"Granite Rapids-WS\" 上的超线程性能\n英特尔 Xeon 678X 工作站 CPU 的 AMX 性能\n\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有商标"
+  },
+  "d057deaf459abacfb09075fe10777648": {
+    "id": "d057deaf459abacfb09075fe10777648",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/PHP-New-Critical-CVEs-October",
+    "title_en": "PHP Updates Released For Two Critical Code Execution Vulnerabilities",
+    "summary_en": "PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35 were just released to fix two critical vulnerabilities that can allow for unauthenticated remote code execution. Server administrators are advised to update immediately...",
+    "pub_date": "Wed, 21 Oct 2026 09:43:31 -0400",
+    "title_zh": "PHP 发布更新修复两个严重代码执行漏洞",
+    "summary_zh": "PHP 8.5.12、8.4.27、8.3.36 和 8.2.35 版本已发布，修复两个可导致未认证远程代码执行的严重漏洞。第一个漏洞涉及内存耗尽处理中断 PHP 引发 OOM 破坏和远程代码执行；第二个漏洞通过释放后残留的全局状态实现远程代码执行。两个漏洞均被评为 9.2 分严重级别，建议服务器管理员立即更新。",
+    "fulltext_zh": "PHP 8.5.12、8.4.27、8.3.36 和 8.2.35 刚刚发布，以修复两个可导致未认证远程代码执行的严重漏洞。建议服务器管理员立即更新。\n\n第一个漏洞是内存耗尽处理可能中断 PHP，导致 OOM 破坏和远程代码执行。第二个远程代码执行途径是通过在其底层内存被释放后仍存活的过期全局状态。\n\n这两个远程代码执行漏洞均被评为 9.2 分（满分 10 分）的严重级别。\n\n有关这些安全漏洞和更新版 PHP 的更多详细信息，请访问相关链接。"
+  },
+  "6cf512489d75227a7e63231b4f90b774": {
+    "id": "6cf512489d75227a7e63231b4f90b774",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/machine-learning-in-linux-local-ai-studio-local-ai-toolkit/",
+    "title_en": "Machine Learning in Linux: Local AI Studio – Local AI Toolkit",
+    "summary_en": "Explore Local AI Studio, a free Linux toolkit for running AI models locally, including image generation, LLM chat, speech recognition, and text-to-speech.\nThe post Machine Learning in Linux: Local AI Studio – Local AI Toolkit appeared first on Linux Today.",
+    "pub_date": "Wed, 21 Oct 2026 07:20:11 +0000",
+    "title_zh": "Linux 中的机器学习：Local AI Studio – 本地 AI 工具包",
+    "summary_zh": "Local AI Studio 是一款免费的 Linux 工具包，支持在本地运行 AI 模型，功能涵盖图像生成、大语言模型对话、语音识别和文本转语音，让用户无需依赖云端即可使用多种 AI 能力。",
+    "fulltext_zh": "探索 Local AI Studio，这是一款免费的 Linux 工具包，用于在本地运行 AI 模型，包括图像生成、LLM 对话、语音识别和文本转语音。\n\n文章《Linux 中的机器学习：Local AI Studio – 本地 AI 工具包》首次发布于 Linux Today。"
+  },
+  "3a4f3722c524a3ca792a9efc22f6b3a6": {
+    "id": "3a4f3722c524a3ca792a9efc22f6b3a6",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/how-to-set-up-a-firewall-with-ufw-on-debian-13/",
+    "title_en": "How To Set Up a Firewall with UFW on Debian 13",
+    "summary_en": "Learn how to install and configure UFW on Debian 13, set firewall rules, allow SSH connections, and secure your system against unwanted traffic.\nThe post How To Set Up a Firewall with UFW on Debian 13 appeared first on Linux Today.",
+    "pub_date": "Wed, 21 Oct 2026 07:18:31 +0000",
+    "title_zh": "如何在 Debian 13 上使用 UFW 设置防火墙",
+    "summary_zh": "本文介绍在 Debian 13 上安装和配置 UFW 防火墙的完整步骤，包括设置防火墙规则、允许 SSH 连接，以及保护系统免受不必要流量的侵扰。",
+    "fulltext_zh": "了解如何在 Debian 13 上安装和配置 UFW、设置防火墙规则、允许 SSH 连接，并保护你的系统免受不必要的流量侵扰。\n\n文章《如何在 Debian 13 上使用 UFW 设置防火墙》首次发表于 Linux Today。"
+  },
+  "ab2eebf706e892fed47efce542daf148": {
+    "id": "ab2eebf706e892fed47efce542daf148",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/kde-gear-26-08-2-released-with-kdenlive-neochat-and-dolphin-fixes/",
+    "title_en": "KDE Gear 26.08.2 Released with Kdenlive, NeoChat, and Dolphin Fixes",
+    "summary_en": "KDE Gear 26.08.2 delivers bug fixes and stability improvements for Kdenlive, NeoChat, Dolphin, and other KDE applications.\nThe post KDE Gear 26.08.2 Released with Kdenlive, NeoChat, and Dolphin Fixes appeared first on Linux Today.",
+    "pub_date": "Wed, 21 Oct 2026 07:17:02 +0000",
+    "title_zh": "KDE Gear 26.08.2 发布，修复 Kdenlive、NeoChat 和 Dolphin 问题",
+    "summary_zh": "KDE Gear 26.08.2 正式发布，为 Kdenlive、NeoChat、Dolphin 及其他 KDE 应用程序带来缺陷修复与稳定性改进。",
+    "fulltext_zh": "KDE Gear 26.08.2 为 Kdenlive、NeoChat、Dolphin 及其他 KDE 应用程序带来缺陷修复与稳定性改进。\n\n文章《KDE Gear 26.08.2 发布，修复 Kdenlive、NeoChat 和 Dolphin 问题》首发于 Linux Today。"
+  },
+  "b0780620d50dd971afc8860e5aea0a25": {
+    "id": "b0780620d50dd971afc8860e5aea0a25",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/gnu-guix-package-manager-improves-extension-loading-adds-new-commands/",
+    "title_en": "GNU Guix Package Manager Improves Extension Loading, Adds New Commands",
+    "summary_en": "GNU Guix improves extension loading with compiled Guile modules and adds commands for package searches, system configuration, and container workflows.\nThe post GNU Guix Package Manager Improves Extension Loading, Adds New Commands appeared first on Linux Today.",
+    "pub_date": "Wed, 21 Oct 2026 07:15:27 +0000",
+    "title_zh": "GNU Guix 包管理器改进扩展加载，新增多个命令",
+    "summary_zh": "GNU Guix 包管理器通过编译 Guile 模块改进了扩展加载机制，并新增了用于软件包搜索、系统配置和容器工作流的命令。",
+    "fulltext_zh": "GNU Guix 通过编译 Guile 模块改进了扩展加载，并新增了用于软件包搜索、系统配置和容器工作流的命令。\n\n文章《GNU Guix 包管理器改进扩展加载，新增多个命令》首发于 Linux Today。"
+  },
+  "b65de28176eb87d7b9ec97aa6ec6da98": {
+    "id": "b65de28176eb87d7b9ec97aa6ec6da98",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/mistrals-le-chonk-arrives-with-a-trillion-parameters-and-something-to-prove/",
+    "title_en": "Mistral’s Le Chonk Arrives With a Trillion Parameters—and Something to Prove",
+    "summary_en": "Mistral unveils Le Chonk, a trillion-parameter AI model with multimodal capabilities, strong coding benchmarks, and open weights planned for October.\nThe post Mistral’s Le Chonk Arrives With a Trillion Parameters—and Something to Prove appeared first on Linux Today.",
+    "pub_date": "Wed, 21 Oct 2026 07:11:57 +0000",
+    "title_zh": "Mistral的Le Chonk携万亿参数登场——还有待证明的实力",
+    "summary_zh": "Mistral发布Le Chonk，一款拥有万亿参数的人工智能模型，具备多模态能力、强劲的编码基准表现，并计划于10月开放权重。",
+    "fulltext_zh": "Mistral发布Le Chonk，一款拥有万亿参数的人工智能模型，具备多模态能力、强劲的编码基准表现，并计划于10月开放权重。\n\n文章《Mistral的Le Chonk携万亿参数登场——还有待证明的实力》首发于Linux Today。"
+  },
+  "08bb603f146e7e7bc0e658f58a83b265": {
+    "id": "08bb603f146e7e7bc0e658f58a83b265",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/keepassxc-2-8-released-with-arm64-and-wayland-auto-type-support-on-linux",
+    "title_en": "KeePassXC 2.8 Released with ARM64 and Wayland Auto-Type Support on Linux",
+    "summary_en": "KeePassXC 2.8 open-source password manager is now available for download with Qt 6 port, Auto-Type support on Linux/Wayland, quick unlock on Linux, and many other changes.\nThe post KeePassXC 2.8 Released with ARM64 and Wayland Auto-Type Support on Linux appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Wed, 21 Oct 2026 22:28:00 +0000",
+    "title_zh": "KeePassXC 2.8 发布：Linux 上支持 ARM64 和 Wayland 自动输入",
+    "summary_zh": "KeePassXC 2.8 开源密码管理器现已开放下载，带来 Qt 6 移植、Linux/Wayland 上的自动输入支持、Linux 快速解锁以及诸多其他改进。",
+    "fulltext_zh": "KeePassXC 2.8 开源密码管理器现已开放下载，带来 Qt 6 移植、Linux/Wayland 上的自动输入支持、Linux 快速解锁以及诸多其他改进。\n\n文章 KeePassXC 2.8 发布：Linux 上支持 ARM64 和 Wayland 自动输入 最早出现在 9to5Linux 上 - 未经许可不得转载本文。本 RSS 源面向读者，而非爬虫。"
+  },
+  "3957cbc712769f0d67eff574e1a5f893": {
+    "id": "3957cbc712769f0d67eff574e1a5f893",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/debian-based-siduction-2026-1-big-crime-released-with-linux-7-2-kde-plasma-6-7",
+    "title_en": "Debian-Based siduction 2026.1 “Big Crime” Released with Linux 7.2, KDE Plasma 6.7",
+    "summary_en": "siduction Linux 2026.1.0 distribution is now available for download featuring the Xfce 4.20 and KDE Plasma 6.7 desktop environments, based on Debian Unstable.\nThe post Debian-Based siduction 2026.1 &#8220;Big Crime&#8221; Released with Linux 7.2, KDE Plasma 6.7 appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Wed, 21 Oct 2026 11:14:12 +0000",
+    "title_zh": "基于 Debian 的 siduction 2026.1 \"Big Crime\" 发布，搭载 Linux 7.2 和 KDE Plasma 6.7",
+    "summary_zh": "siduction Linux 2026.1.0 发行版现已开放下载，基于 Debian Unstable，提供 Xfce 4.20 和 KDE Plasma 6.7 桌面环境，并搭载 Linux 7.2 内核。",
+    "fulltext_zh": "siduction Linux 2026.1.0 发行版现已开放下载，提供 Xfce 4.20 和 KDE Plasma 6.7 桌面环境，基于 Debian Unstable。\n\n文章《基于 Debian 的 siduction 2026.1 \"Big Crime\" 发布，搭载 Linux 7.2 和 KDE Plasma 6.7》首发于 9to5Linux——未经许可请勿转载本文。本 RSS 源面向读者，而非抓取程序。"
   }
 }
