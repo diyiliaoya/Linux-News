@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Epic的vibe-coded游戏启动器现可在Ubuntu上测试 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月23日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Epic的vibe-coded游戏启动器现可在Ubuntu上测试</h1>
+
+  <div class="article-summary">Epic Games为Linux带来了新的游戏启动器预览版，该启动器采用“vibe-coding”方式开发，并已在网上引发热议。同时，Epic宣布为Linux重建了反作弊技术Easy Anti-Cheat v2，但运行《堡垒之夜》需要满足严格系统要求，包括签名内核、TPM 2.0、Secure Boot等。目前Steam Deck尚不支持这些要求，Epic正与Valve合作。新启动器功能尚少，已有用户报告问题。</div>
+
+  <div class="article-body"><p>Epic的vibe-coded游戏启动器现可在Ubuntu上测试 - OMG! Ubuntu</p><p>《堡垒之夜》即将登陆Linux，而它将通过一个启动器到来，该启动器现已在Ubuntu上提供预览版——一个被网友狠狠吐槽的vibe-coded奇迹。</p><p>这家游戏公司还宣布了为其反作弊技术重建的Linux版本，运行《堡垒之夜》到Linux将需要此技术。</p><p>更严格的系统要求包括签名内核和TPM 2.0。</p><p>Easy Anti-Cheat已在Linux上可用一段时间，包括通过Proton运行的PC游戏。并非所有游戏开发者都信任或使用它，因为它被认为不如Windows版本健壮或防篡改。V2版本更为严格。</p><p>现在，反作弊的细微差别不是我能够深入探讨的（因为我不是游戏玩家）。Epic列出了其新版本工作所需的系统要求（以及任何依赖它的游戏），并说明了理由。</p><p>玩受保护的游戏（需要使用反作弊的游戏）将需要运行一个“由知名密钥签名”的Linux内核（Canonical的Ubuntu Linux内核就是）。添加的内核模块，如NVIDIA GPU驱动，也必须由信誉良好的机构签名。</p><p>这些还不是唯一的障碍。</p><p>Linux游戏设备必须开启Secure Boot并在BIOS中启用IOMMU支持；必须存在TPM 2.0；必须加载内核BPF LSM内核模块，并且必须禁用kexec。此外……还有相当多听起来</p><p>Epic正在联系Linux发行版，并请求Linux发行版联系它，以让它们支持EAC v2的要求。值得注意的是，Steam Deck目前不支持所需功能。Epic表示正在与Valve合作。</p><p>显然意识到这些麻烦，或许还有所需的支持，Epic建议游戏玩家可能希望维护自己的单独引导加载程序条目，启用强制内核功能和安全位，并从此启动来玩受保护的游戏。</p><p>Epic的vibe-coded新启动器</p><p>新启动器在网上被史诗级吐槽</p><p>Epic迄今尚未说明《堡垒之夜》Linux版何时发布，但它将通过新版Epic Games启动器提供，该启动器现处于预览阶段。</p><p>Epic指出“编程很难”，选择为其新游戏启动器进行vibe-coding，并对此相当自豪。它甚至吹嘘它比Valve的Steam客户端快多少。</p><p>Epic表示，初始预览版功能较少，但确实有购物车，因此取笑Valve的Steam客户端不是公平的比较（如果《堡垒之夜》Linux版将通过Proton运行，如一些人所说，那也不是善意的比较）。</p><p>对Epic自豪的vibe-coded启动器的反应</p><p>一些尝试它的Linux用户已经报告了一系列问题，包括无法下载虚幻引擎。</p><p>如果你想在Ubuntu上尝试一下，看看这些嘲笑是否应得，它已提供预览版，包含Linux的AppImage构建。</p><p>从以下地址下载AppImage，标记为可执行，然后双击打开。使用有效的账户登录，你的库和云存档应该会出现。这是预览版，所以不要期望奇迹，但确实期望它会改进。</p><p>如果你是运行Linux的Epic游戏玩家（我很抱歉），我很想知道你对新启动器的看法，以及它在Reddit和X上迄今受到的吐槽是否应得……</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/epic-confirm-fortnite-linux" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

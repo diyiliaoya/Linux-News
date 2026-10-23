@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>红帽资助的报告发现，四分之一的新提交拉取请求可能是AI垃圾 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月23日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>红帽资助的报告发现，四分之一的新提交拉取请求可能是AI垃圾</h1>
+
+  <div class="article-summary">Linux基金会研究调查了234名贡献者和维护者，估计约25%的传入拉取请求是低质量AI垃圾，大型项目达31%。仅35%项目有允许AI贡献的正式政策，26%项目无法验证AI辅助贡献。维护者担忧倦怠和贡献质量，但71%认为AI降低了新贡献者门槛。</div>
+
+  <div class="article-body"><p>红帽资助的一份报告估计，25%的PR是AI垃圾</p><p>Linux基金会研究调查还发现，只有35%的项目有允许AI贡献的正式政策。</p><p>LF Research是Linux基金会的研究部门，成立于2021年，通过调查和项目数据发布关于开源如何构建和使用的研究。</p><p>《在生成式AI时代导航开源软件开发》调查了234名贡献者和维护者，了解生成式AI如何影响开源的制作方式。</p><p>调查估计，约25%的传入拉取请求是低质量的AI垃圾，在大型项目中这一估计升至31%。</p><p>红帽赞助了该报告，OpenSSF、LF AI &amp; Data和Futurewei也提供了额外贡献。</p><p>大型项目（贡献者超过50人的项目）受影响最大。</p><p>在这些项目的维护者中，69%报告传入贡献增加（所有维护者中为59%），64%表示审查现在耗时更长。</p><p>倦怠是他们的首要担忧（63%），略高于贡献质量（60%）。</p><p>你还会发现，政策尚未跟上AI辅助编码和漏洞报告的趋势。</p><p>在回答该问题的119名受访者中，35%表示其项目有允许使用AI的正式政策。另有32%没有政策也没有计划，23%计划制定政策，10%完全禁止AI贡献。</p><p>你可能记得，有些项目允许有条件地使用AI生成的代码。另外，26%的项目完全无法验证AI辅助贡献。</p><p>报告呼吁贡献者致力于书面政策、披露AI使用以及测试和文档。</p><p>有趣的是，AI似乎确实节省了开发者的时间。受访者估计代码编写平均节省52%的时间，而在更复杂的任务上，21%的人表示使用AI后工作耗时更长。</p><p>大多数维护者（71%）表示AI使新贡献者更容易开始贡献。略超过一半（53%）表示它没有改善社区信任，只有13%表示有所改善。</p><p>有一些注意事项。</p><p>受访者通过Linux基金会新闻通讯和社交渠道，以及包括红帽在内的合作伙伴渠道招募。至于25%的垃圾比例，这是来自111名受访者的估计，而非实测计数。</p><p>这听起来合理，但目前披露主要留给个人选择，且四分之一的项目无法检查任何内容。只有当发送垃圾的人努力去做时，它才有效。</p><p>而且正如我们一再看到的，发送垃圾的人很少费心。</p><p>关于Kubernetes安全认证。</p><p>节省高达40%的Linux基金会Kubernetes安全认证费用</p><p>计划获得认证？你可以以低40%的价格获得CKS和KCSA，其他大多数Linux基金会认证享受35%折扣。优惠截止至10月23日。</p><p>喜欢这篇更新？支持独立的Linux新闻报道</p><p>It's FOSS过去14年一直在帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>跳过Google结果中的AI垃圾和SEO垃圾</p><p>告诉Google你更喜欢It's FOSS，当你在搜索时，它会更频繁地显示我们由经验丰富的Linux用户创建的Linux新闻和教程。只需点击一下。</p><p>设为首选来源</p><p>🐧 今天玩Tuxdle——每日Linux单词谜题 →</p><p>在收件箱中获取FOSS Weekly</p><p>一份健康的Linux新闻通讯，包含最新发布、相关新闻、提示和教程、琐事和模因、测验和桌面Linux用户的优惠。每周免费。</p><p>一个热衷于开源软件、定制PC组装、赛车运动以及探索世界无限可能的技术迷。</p><p>这个新提出的Linux文件系统可以修复损坏的数据</p><p>你可以以30美元预订这款小尺寸、去谷歌化的手机</p><p>DankMaterialShell成为</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/red-hat-lf-research-ai-slop-report/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

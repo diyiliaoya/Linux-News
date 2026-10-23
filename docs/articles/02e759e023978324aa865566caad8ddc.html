@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新提出的Linux文件系统可修复损坏数据 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月23日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>新提出的Linux文件系统可修复损坏数据</h1>
+
+  <div class="article-summary">开发者Aurelien在Linux内核文件系统邮件列表提交了18个补丁的BeamFS文件系统提案，旨在为卫星、放疗室等辐射环境下的硬件提供数据修复能力。BeamFS在每个数据块中存储纠错码，无需保留第二份副本，读取时校验并纠正小量损坏，无法修复时返回错误而非错误数据。目前尚未在真实辐射环境测试，仅为征求意见稿。</div>
+
+  <div class="article-body"><p>本周，内核文件系统邮件列表收到了一份包含18个补丁的提案，来自Aurelien。该提案取代了他四月份提出的早期文件系统FTRFS。</p><p>Aurelien表示，他使用Anthropic的Claude编写了代码、检查补丁的工具以及相关文档。他还指出，每个补丁都带有一个标签。你可能记得，这是内核AI编码助手政策所要求的披露信息。同一政策规定，人类提交者对代码负责。</p><p>它如何修复数据？</p><p>能够修复损坏的文件系统（如Btrfs）通常依靠数据的备用副本来实现。BeamFS跳过了这一点，而是在每个块中存储纠错码。</p><p>每次读取都会根据这些纠错码进行校验，少量损坏会在数据到达应用程序之前被纠正。如果文件系统能判断损坏无法修复，读取会返回错误，而不是返回错误的字节。</p><p>这个想法源于卫星计算机。它们将数据保存在单个驱动器上，无法容纳第二份副本。放疗室也有同样的需求。治疗机器产生的辐射可能会翻转那里计算机中的比特位，包括处理成像和记录的计算机。Aurelien认为，在这种环境下，一个静默错误的字节比一次读取失败造成的损害更大。</p><p>BeamFS尚未在真实辐射环境中测试。迄今为止的测试是通过在虚拟机和USB闪存驱动器上读取数据时翻转单个比特位来模拟损坏的。ext4返回了错误数据且没有任何错误提示，而Btrfs拒绝读取文件。BeamFS每次都能返回正确的文件，只有一次例外：当翻转命中指向文件数据的指针时，它拒绝了读取。</p><p>请记住，这种比较并不公平。每个文件系统收到的翻转次数不同，报告也明确说明了这一点。</p><p>它接近落地了吗？</p><p>不，这是一个征求意见稿（RFC）。Aurelien是在寻求反馈，而非请求合并，他向维护者提出了两个问题。</p><p>第一个问题是：它应该是一个独立的文件系统，还是应该提议并入现有文件系统。</p><p>第二个问题是日志——其他文件系统用来从崩溃中恢复的日志。BeamFS缺少日志，在非正常关机后依赖其fsck工具。Aurelien询问日志是否必须在进一步审查之前完成，还是可以之后再提交。</p><p>到目前为止，唯一的回复是按字母顺序排列的条目。</p><p>该提案本身也有警告。它列出了可能导致数据丢失、安全漏洞和内核崩溃的缺陷，建议不要将重要数据托付给该代码。</p><p>喜欢这篇更新？支持独立的Linux新闻报道</p><p>It's FOSS过去14年来一直在帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>跳过Google结果中的AI垃圾和SEO垃圾</p><p>告诉Google你更喜欢It's FOSS，搜索时它会更频繁地显示我们由经验丰富的Linux用户创建的Linux新闻和教程。只需点击一下。</p><p>设为首选来源</p><p>🐧 玩今天的Tuxdle——每日Linux单词谜题 →</p><p>在收件箱中获取FOSS Weekly</p><p>一份健康的Linux通讯，包含最新发布、相关新闻、技巧和教程、趣闻和模因、测验和桌面Linux用户的优惠。每周免费。</p><p>一个热衷于开源软件、定制PC装机、赛车运动以及探索世界无限可能的技术宅。</p><p>Red Hat资助了一份报告，发现四分之一的新传入拉取请求可能是AI垃圾</p><p>你可以以30美元预订这款小尺寸、去谷歌化的手机</p><p>DankMaterialShell更名为Dux Shell，Dank Linux更名为Dux Labs</p><p>节省高达40%的Linux基金会Kubernetes安全认证费用</p><p>微软的AI编码代理测试</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/beamfs-linux-filesystem-proposal/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

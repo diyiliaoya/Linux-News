@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KeePassXC 2.8 发布：采用 Qt6，支持 Wayland 自动输入 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月23日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>KeePassXC 2.8 发布：采用 Qt6，支持 Wayland 自动输入</h1>
+
+  <div class="article-summary">KeePassXC 2.8.0 版本发布，带来多项期待已久的新功能，包括主界面迁移至 Qt6、通过 XDG Desktop Portals 在 Wayland 下实现自动输入、指纹解锁以及实验性的 Aarch64 AppImage。此外还新增了快速解锁、远程数据库支持、可配置键盘快捷键等改进。</div>
+
+  <div class="article-body"><p>如果你在 Linux 上使用 KeePassXC 作为密码管理应用，那么新的 2.8.0 更新将会让你满意。</p><p>该版本带来了一些“期待已久的新功能”，包括主应用界面的 Qt6 移植、通过 XDG Desktop Portals 在 Wayland 上支持自动输入、指纹解锁以及一个新的实验性 Aarch64 AppImage。</p><p>Qt6 移植是一项长期酝酿的工作。KeePassXC 的外观和行为没有剧烈变化（在 HiDPI 屏幕上可能更清晰一些），但它也能受益于平台能力、安全性等方面的改进。</p><p>v2.8 中的 Wayland 自动输入和 Polkit 支持的指纹解锁</p><p>自动输入功能允许将保存的登录详细信息输入到其他应用的用户名、密码等字段中，而无需复制粘贴。Wayland 的安全协议意味着这不是一个容易添加的功能，但现在它已经存在。</p><p>KeePassXC 2.8.0 在 Linux 上增加了通过 PolKit 进行指纹解锁的快速解锁功能，省去了每次会话都需要输入主密码的麻烦。它还增加了对 WebDAV 或 SFT 等位置的远程数据库支持。</p><p>Linux AppImage 的用户受益于各种增强，其中包括 TLS 调整，以减少下载网站/提供商图标以及检查更新时的错误。</p><p>AppImage 会创建并刷新其桌面菜单项，并在可用时使用 [此处原文缺失工具名] 来使 Wayland 自动输入在使用 AppImage 的 GNOME 和 KDE 上工作。</p><p>其他值得注意的变化：</p><p>键盘快捷键现在可配置</p><p>解决了 CPU 核心数少于 2 的系统上的应用卡死问题</p><p>KeePassXC snap 中包含 [此处原文缺失组件名]</p><p>生成 RSA、ECDSA 和 Ed25519 密钥</p><p>导入现在支持 Wi-Fi 和 SSH 密钥</p><p>此外还有更多工作、修复和安全补丁。官方 [此处原文缺失链接文字] 提供了本次更新所有更改的详细列表。</p><p>在 Ubuntu 上安装 KeePassXC</p><p>KeePassXC 是免费的开源软件。可以从官方网站页面下载适用于所有主流操作系统。Ubuntu 用户也可以使用 [此处原文缺失包格式]，两种方法都得到完全支持。</p><p>虽然团队维护着一个官方 [此处原文缺失包格式]，但它并未得到完全支持，团队更希望寻求沙盒格式的用户改用 Flatpak。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/keepassxc-2-8-auto-type-wayland" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
