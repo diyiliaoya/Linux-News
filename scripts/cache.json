@@ -17125,5 +17125,203 @@
     "title_zh": "最新 Steam 客户端更新改善 Linux 上 Vulkan 游戏的支持",
     "summary_zh": "Valve 发布新的稳定版 Steam 客户端更新，修复若干错误，改善 Linux 上 Vulkan 游戏的支持、Steam 更新器界面，以及使用 NVENC 时的远程畅玩功能。",
     "fulltext_zh": "Valve 今天发布了新的稳定版 Steam 客户端更新，修复了一些错误，以改善 Linux 上 Vulkan 游戏的支持、Steam 更新器界面，以及使用 NVENC 时的远程畅玩功能。\n\n文章《最新 Steam 客户端更新改善 Linux 上 Vulkan 游戏的支持》首发于 9to5Linux——未经许可请勿转载本文。本 RSS 源面向读者，而非抓取者。"
+  },
+  "c8d58baba6b627d6bc4691d5048dd3cb": {
+    "id": "c8d58baba6b627d6bc4691d5048dd3cb",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/calibre-9-7-faster-conversion",
+    "title_en": "Calibre 9.7 touts faster ebook conversion speeds",
+    "summary_en": "Calibre 9.17 has been released with faster ebook conversion speeds and JPEG XL image support. The open-source ebook editor improves output compression speeds for MOBI, AZW3 and PDB files, which makes conversions to those formats quicker. Converting EPUB to MOBI is what I use Calibre for to read on my ancient Kindle. Calibre 9.17 can read JPEG XL images in eBooks and other supported documents during conversions. The format offers high image quality at smaller file sizes and supports features like",
+    "pub_date": "Fri, 23 Oct 2026 15:45:01 +0000",
+    "title_zh": "Calibre 9.7 宣称更快的电子书转换速度",
+    "summary_zh": "Calibre 9.17 版本发布，提升了 MOBI、AZW3 和 PDB 格式的转换速度，并新增对 JPEG XL 图像格式的支持。该版本还改进了无障碍功能，修复了 PDF 和 EPUB 3 转换的回归问题，优化了内容服务器和暗色模式，并增强了对《经济学人》等新闻源的支持。",
+    "fulltext_zh": "Calibre 9.7 宣称更快的电子书转换速度 - OMG! Ubuntu\n9.17 版本已发布，带来更快的电子书转换速度和 JPEG XL 图像支持。\n这款开源电子书编辑器提升了 MOBI、AZW3 和 PDB 文件的输出压缩速度，使得转换为这些格式更加快捷。将 EPUB 转换为 MOBI 正是我常用的功能。\nCalibre 9.17 可以在转换过程中读取电子书及其他支持文档中的 JPEG XL 图像。该格式以更小的文件体积提供高图像质量，并支持 HDR 等特性。JPEG XL 并非新事物，但其受欢迎程度（……）\n无障碍改进方面，应用现在遵循系统的“减少动态效果”设置，同时编辑器会检查无障碍标签（ARIA 引用），并在自动修复更改了 ID 时更新它们。\n其他改进包括对 Calibre 的 AI 驱动“自创冒险”游戏的角色选择进行了小幅调整；在创建目录时，“calibre”被设为创建者，生成日期被设为出版日期。\n此外还包含大量错误修复，包括：\n修复了 v9.16 中损坏的 PDF 和 EPUB 3 转换的回归问题\n元数据源现在使用 camoufox\n设置具有相同系列索引的自定义系列现在可以可靠保存\n全文搜索（再次）可以搜索没有书籍文件的书库\n解决了旧款 Tolino 固件上的 Kobo 封面处理问题\n暗色模式颜色更易读\nCalibre 内容服务器（可让你通过另一台设备的网页浏览器浏览 Calibre 书库）的修复包括：\n全文搜索操作现在仅影响当前查看的书库\n切换书库时现在显示正确的书籍\nCalibre 桌面应用会通知通过服务器完成的转换\n暗色模式和键盘焦点样式的小幅更改\n最后是新闻源处理/抓取方面的常规调整。此更新增强了对《经济学人》、美联社和《科学美国人》等来源的支持。\n如何获取最新 Calibre 版本\nCalibre 功能强大且全面，可从官方网站获取。它是免费的开源软件，可在 Windows、macOS 和 Linux 上运行。\n源代码在 GitHub 上，通过命令行脚本安装和更新。该脚本下载二进制文件，将其移动到系统位置，并生成快捷方式，以便你可以在应用启动器中找到它。\n如果觉得麻烦，你可以找到（……）——但那些是未经验证/非官方的构建版本，与官方支持的二进制文件相比可能存在一些特殊问题。"
+  },
+  "5404dce09da999f7e0ece6584173a1a2": {
+    "id": "5404dce09da999f7e0ece6584173a1a2",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/ubuntu-ai-launcher-prototype",
+    "title_en": "Canonical dev mocks up an Ubuntu launcher that uses AI",
+    "summary_en": "What would deeper AI integration on the Ubuntu desktop look like? Well, you don&#8217;t need to think too hard to find out. A Canonical engineer has published a prototype launcher that simulates how on-device AI could be used to enhance and aid users of the Ubuntu desktop. But the warty-prototype snap by Didier Roche-Tolomelli (aka didrocks) is not a real launcher. It&#8217;s a semi-interactive, automated mockup. It simulates things a user could do, and that includes interacting with a (theoreti",
+    "pub_date": "Fri, 23 Oct 2026 04:05:46 +0000",
+    "title_zh": "Canonical 工程师模拟了一款使用 AI 的 Ubuntu 启动器",
+    "summary_zh": "Canonical 工程师 Didier Roche-Tolomelli 发布了一款名为 warty-prototype 的 Ubuntu 启动器原型，模拟了设备端 AI 如何增强桌面体验。该原型是半交互式自动化演示，展示了通过 AI 查找文件、设置壁纸、匹配主题色、搜索应用以及从剪贴板历史创建日历行程等任务。它并非真实工具，而是设计讨论原型，旨在探索 AI 在 Ubuntu 桌面上的实际应用场景。",
+    "fulltext_zh": "Canonical 工程师模拟了一款使用 AI 的 Ubuntu 启动器\n\nUbuntu 桌面更深入的 AI 集成会是什么样子？嗯，你不需要想太多就能知道。\n\nCanonical 的一位工程师发布了一款原型启动器，模拟了设备端 AI 如何被用来增强和帮助 Ubuntu 桌面用户。\n\nDidier Roche-Tolomelli（又名 didrocks）开发的 snap 是一个真正的启动器。它是一个半交互式的自动化模拟。它模拟了用户可以做的事情，包括与一个（理论上的）设备端 AI 模型交互以完成任务。\n\n“下一代 Ubuntu 启动器的设计讨论原型”\n\n这个措辞很有意思——不过目前我只能理解到这个程度。这或许暗示了未来可能的功能，但并未承诺会发布或真正将其构建为现实产品。\n\n这个小盒子能做的事——如果它能用的话\n\n我安装了这个原型并运行了模拟任务，以了解它能做什么（有一个满是任务的菜单）。启动器本身由顶部面板上的一个小 Ubuntu 标志触发，而且只是表面上的交互。\n\n一个模拟任务展示了使用启动器查找本地图像文件（使用文件过滤器）。启动器的 AI 框被使用，模型被要求将图像设置为桌面壁纸，并调整系统强调色以匹配。\n\n用 AI 查找应用，却不用 AI 查找文件\n\n另一个任务使用 AI 查找用户可以安装以打开 ePub 的合适应用。来自 Snap Store 的匹配结果会过滤回启动器内，并带有安装按钮，点击即可触发安装。不错。\n\n还有一个在我看来更令人印象深刻的用例：AI 根据从剪贴板历史中选择的几项内容创建可添加的日历行程。点击下方嵌入的视频播放观看：\n\n“warty-launcher”的模拟演示\n\n它也旨在作为常规启动器使用，例如打开应用、查找文件、选择表情符号、剪贴板历史、查找打开的浏览器标签页以及查看最近的“任务”。\n\n在整个模拟过程中，结果会以各种图标和操作出现，以便在启动器内操作或管理它们，使其更像是一个主动工具而非被动工具。\n\n在这方面，很像苹果在近期 macOS 版本中（更强大的）Spotlight。不难想象这个启动器如何进一步扩展，以处理比简单的查找和检索更复杂的任务。\n\n这是一个演示，Jim。但不是我们所知道的那种。\n\n我们确实知道 Canonical 热衷于在 Ubuntu 中“加强”AI 功能。它本月发布了技术预览版的 Myna AI 听写工具，其工程师正在将 LLM 和代理编码工具用于各种工作、基础设施管理等。\n\n但该公司也表示，不会为了 AI 而强行加入 AI。它所探索的任何集成，即使在这个“模拟”中，也将基于实际用例并利用设备端 AI 模型。\n\n试试演示（记住这只是演示）\n\n你可以从 Snap Store 安装 warty-prototype 启动器演示。它将在大多数受支持的 Ubuntu 版本上运行：\n\nsudo snap install warty-prototype --edge\n\n安装后，从命令行启动它。点击顶部面板中的 Ubuntu 图标以显示启动器（以及可观看的模拟菜单）。\n\n请记住，你不能用它做任何事情。它是一个启动器模型，不是工具。它不会与你的系统集成、查找你的应用，也不会兼作你的治疗师兼精神病诱导器。\n\n对于那些想知道为什么叫“warty”的人，那是第一个 Ubuntu 版本的代号——之所以这样命名，是因为第一个版本可能有点不成熟。"
+  },
+  "767dc7360faf5a7f327a5a27109c25d1": {
+    "id": "767dc7360faf5a7f327a5a27109c25d1",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/armsom-sige7s/",
+    "title_en": "ArmSoM Sige7s Puts the RK3588S on a Raspberry Pi-Sized Board, and There's a Compute Module Too",
+    "summary_en": "The small SBC brings a 6 TOPS NPU, Wi-Fi 6, a Pi-compatible 40-pin header, and up to 32GB RAM, starting at $153.",
+    "pub_date": "Fri, 23 Oct 2026 13:04:57 GMT",
+    "title_zh": "ArmSoM Sige7s 将 RK3588S 放入树莓派尺寸的板子，还有计算模块版本",
+    "summary_zh": "ArmSoM 推出 Sige7s 单板计算机，采用 Rockchip RK3588S 芯片，尺寸与树莓派相同，配备 6 TOPS NPU、Wi-Fi 6、兼容树莓派的 40 针接头，最高 32GB 内存，起售价 153 美元。同时提供 CM7s 计算模块，规格相近但形态不同，适合嵌入式应用。",
+    "fulltext_zh": "这款小型单板计算机带来 6 TOPS NPU、Wi-Fi 6、兼容树莓派的 40 针接头，以及最高 32GB 内存，起售价 153 美元。\n\n如果你关注 It's FOSS 已有一段时间，你可能看过我们之前对 ArmSoM 设备的报道。我前段时间评测过一款，印象不错（标题有点俏皮，但整体如此）。今年早些时候，我们还报道了 Sige 系列首款从 Rockchip 换用 Allwinner 的板子。\n\n现在 Sige 系列重新回到 Rockchip，推出了 Sige7s。那么，有什么变化呢？\n\nSoC：Rockchip RK3588S，8nm 工艺，4 个 Cortex-A76 @ 2.4GHz + 4 个 Cortex-A55 @ 1.8GHz\nAI：6 TOPS NPU（INT4/INT8/INT16）\n内存：最高 32GB LPDDR4/4X\n存储：可拆卸 eMMC 模块（16GB 至 128GB）+ microSD\n网络：Wi-Fi 6 + 蓝牙 5.0，千兆以太网支持 PoE（需附加模块）\n2 个 USB 3.0 + 2 个 USB 2.0\n1 个 MIPI CSI（最高 500 万像素摄像头）\nCAN、SPI、PWM、3 个 UART、2 个 I2C、6 个 ADC\nRTC 电池接头\n电源和 Maskrom 按钮\n工作温度：0°C 至 80°C\n尺寸：85 x 56 x 17mm，与树莓派 footprint 相同\nSige7s 在 ArmSoM 商店起售价 153 美元。\n\n名字中的“s”来自芯片。RK3588S 是驱动 Sige7 的 RK3588 的精简版本。你获得相同的 CPU、相同的 Mali-G610 MP4 GPU 和相同的 6 TOPS NPU。失去的是外设带宽。没有 PCIe 3.0，只有一个 HDMI 输出而非两个，没有 HDMI 输入，且只有一个千兆以太网控制器。\n\n简单来说，这里注重的是计算性能，而非 I/O。如果你想要一块能快速连接 NVMe 硬盘或双网络的 Rockchip 单板计算机，这块板子不适合你。如果你想要以更低价格获得 RK3588 级别的性能且尺寸更小，那它正合适。\n\n这里还有一些针对用户的间接成本优化。Sige7s 接受宽泛的 5V 至 23V 输入，因此你不必局限于特定的 USB-C 电源适配器。它还使用了可拆卸 eMMC 模块，这意味着如果你要升级或在另一台机器上重新刷写，你宝贵的存储不会固定在板子上。\n\n显示方面，有最高 8K@60fps 的 HDMI 2.1、通过 USB-C 的 DisplayPort 1.4，以及 2 通道 MIPI DSI 接头。硬件视频引擎可解码 8K@60fps H.265/VP9，编码 8K@30fps，因此它也能充当严肃的媒体盒子。\n\n40 针接头兼容树莓派，ArmSoM 表示它可与树莓派 7 英寸显示屏、基于 IMX219 的树莓派摄像头以及树莓派 4 散热解决方案配合使用。如果你已有树莓派配件库存或想扩展板子，这是件好事。\n\n更喜欢计算模块？来认识 CM7s\n\n除了 Sige7s，ArmSoM 还提供 CM7s，一款围绕 RK3588S 构建的计算模块。我查看了两个规格页面，CPU、GPU、NPU 和视频引擎完全相同。只是形态不同。\n\n如果你不知道，计算模块仅包含处理器、内存、存储和电源管理。没有 USB、HDMI 和以太网等标准物理输入/输出端口。计算模块更适合需要嵌入的场景。\n\nCM7s 尺寸为 55 x 40mm，与树莓派 CM5 大小几乎相同。不过不确定能否放入 CM5 载板。\n\n它提供最高 32GB LPDDR4/4X 内存和最高 256GB eMMC。通过 100 针连接器，它引出 HDMI 2.1、DP 1.4、MIPI CSI/DSI、USB 3.0、PCIe 2.0/SATA 以及常见的 GPIO 总线。ArmSoM 还承诺至少生产到 2034 年 8 月，如果你围绕它构建产品，这令人安心。\n\n要开始使用，有 CM7s-IO 载板。它提供 HDMI、USB-C DisplayPort、4 个 USB 3.0、千兆以太网、40 针接头、用于 NVMe SSD 的 M.2 M-key 插槽、microSD 以及 MIPI 摄像头和显示接头。与 Sige7s 不同，它通过 12V DC 圆孔插头供电。\n\n价格与可用性\n\n两款板子现在均可从 ArmSoM 官方商店购买，也有速卖通和淘宝 listing。\n\nSige7s 起售价 153 美元。Wi-Fi 天线是单独..."
+  },
+  "c3ad8154b7fe7f47a413ad8abcef1e03": {
+    "id": "c3ad8154b7fe7f47a413ad8abcef1e03",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/KDE-Plasma-6.9-Wayland-PiP",
+    "title_en": "KDE Plasma 6.9 Stabilizes KWin's Wayland Picture-In-Picture Support",
+    "summary_en": "With the wonderful KDE Plasma 6.8 having shipped just more than one week ago, KDE developers are beginning to go heavy on new features for Plasma 6.9...",
+    "pub_date": "Fri, 23 Oct 2026 20:56:16 -0400",
+    "title_zh": "KDE Plasma 6.9 稳定 KWin 的 Wayland 画中画支持",
+    "summary_zh": "KDE Plasma 6.9 开发取得新进展，KWin 合成器对 Wayland 画中画协议的支持已宣告稳定并默认启用，浏览器等应用可开箱即用。同时 Plasma 浏览器集成新增对 Brave 浏览器的支持，即将发布的 Plasma 6.8.2 修复多显示器及其他回归问题。",
+    "fulltext_zh": "KDE Plasma 6.9 稳定 KWin 的 Wayland 画中画支持\n发布于 2026 年 10 月 23 日 20:56 EDT。\n距离上一个版本发布仅过去一周多，KDE 开发者已开始大力为 Plasma 6.9 添加新功能。\n本周最令人兴奋的消息是，KWin 合成器对 Wayland 画中画（PIP）协议的支持已被宣布为稳定，并在 Plasma 6.9 中默认启用。网页浏览器及其他使用 Wayland 画中画支持的用户现在可以在 Plasma 6.9 上享受开箱即用的良好体验：\n在其他 Plasma 开发方面，Plasma 浏览器集成现已支持 Brave 网页浏览器。\n与此同时，即将发布的 Plasma 6.8.2 点版本正在修复多显示器设置问题以及各种其他回归问题。\n有关这些最新 KDE Plasma 开发进展的更多详情，可通过以下内容了解：\nKDE Plasma 6.8.1 发布，包含数十项修复\nKDE Plasma 6.9 将推出新的天气小部件和屏幕键盘\nKDE Plasma 6.8 发布，标志着 KDE 项目成立 30 周年\nKDE Plasma 6.8 准备于下周发布，包含最后一刻的 NVIDIA 修复\nKDE Plasma 6.8 现在让平铺窗口更美观地贴合\nKDE 即将就基于 BuildStream 的 KDE Linux 做出决定\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n多个 Linux 内核漏洞被意外发布到公开内核邮件列表\n微软发布面向 Linux 桌面的 Microsoft Defender\nLinus Torvalds 的 AI 代码改进：重写代码带来巨大性能提升\nClaude Code / AI 在 Linux 支持的硬件逆向工程方面展现潜力\nLinus Torvalds 在 Linux 7.4 中移除不安全的 __get_user() 和 __put_user() 函数\n今日的 Steam Beta 使 Linux 客户端成为 64 位应用\nOmarchy 通过避免 XDG 开销加快网页浏览器启动速度\nWine 11.20 发布，更改 CD-ROM 支持\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "7e40410f21f9ddf415e4a18d5b0b2e20": {
+    "id": "7e40410f21f9ddf415e4a18d5b0b2e20",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/OBS-Studio-33.0",
+    "title_en": "OBS Studio 33.0 Released With Massive Update To CEF, Improved Plugin Loading",
+    "summary_en": "OBS Studio 33.0 is out tonight as the latest major update to this popular open-source and cross-platform video recording and live streaming application...",
+    "pub_date": "Fri, 23 Oct 2026 19:15:47 -0400",
+    "title_zh": "OBS Studio 33.0 发布：CEF 大规模更新，插件加载改进",
+    "summary_zh": "OBS Studio 33.0 正式发布，带来 Chromium Embedded Framework 从 127 到 150 的两年多累积更新，并重构插件加载代码以区分第一方和第三方插件。此外还改进了视频预览中的源吸附、数值微调框行为，在 ARM64 平台启用 NVIDIA NVENC 编码，支持最新 NVIDIA Broadcast SDK，改进游戏捕获全屏检测，并停止支持 Ubuntu 24.04 LTS。",
+    "fulltext_zh": "OBS Studio 33.0 于今晚发布，这是这款流行的开源跨平台视频录制和直播应用的最新重大更新。\n\nOBS Studio 33.0 为该录制/直播应用所使用的 Chromium Embedded Framework 带来了“大规模更新”。从 CEF 127 升级到 CEF 150，包含了超过两年的变更。\n\nOBS Studio 33.0 还提供了重构后的插件加载代码，重新组织了第一方/第三方插件，并带来了其他改进。\n\n此版本的其他一些变更包括：改进视频预览模式下源吸附的工作方式，改进数值微调框的行为，并在配备 NVIDIA GPU 的 ARM64 平台上启用 NVIDIA NVENC 视频编码支持。\n\nOBS Studio 33.0 还支持最新的 NVIDIA Broadcast SDK，改进了游戏捕获模式下对全屏游戏的检测，停止对 Ubuntu 24.04 LTS 的支持，以及各种其他更新。\n\nOBS Studio 33.0 版本的下载和更多详情可通过以下链接获取。"
+  },
+  "47ceea01490caddae61af94951eca975": {
+    "id": "47ceea01490caddae61af94951eca975",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-Slab-Updates",
+    "title_en": "Linux 7.4 Merges Slab Updates With A Nice Performance Improvement",
+    "summary_en": "The slab pull request was just merged for Linux 7.4. For end users nothing too incredibly exciting but there is one change that does yield a 24% throughput improvement in a benchmark exercising the kernel's memory management subsystem...",
+    "pub_date": "Fri, 23 Oct 2026 16:27:50 -0400",
+    "title_zh": "Linux 7.4 合并 Slab 更新，带来显著性能提升",
+    "summary_zh": "Linux 7.4 内核已合并 slab 更新，其中一项关键改进是优化了 sheaf 预填充 API 的性能，允许 barn 持有部分 sheaf 并从中补充 sheaf。在 will-it-scale 的 mmap1 基准测试中，该改动使 maple_node 缓存的吞吐量提升了 24%。这一性能优化由开发者 Hao Li 贡献。",
+    "fulltext_zh": "Linux 7.4 合并 Slab 更新，带来显著性能提升\n2026 年 10 月 23 日下午 04:27（美国东部时间）。\n\n针对 Linux 7.4 的 slab 拉取请求刚刚被合并。对最终用户来说，这并非特别令人兴奋，但其中一项改动在测试内核内存管理子系统的基准测试中带来了 24% 的吞吐量提升。\n\nLinux 7.4 slab 更新中最令人兴奋的一点是改进了内核 sheaf 预填充 API 的性能：\n\n“- 通过允许 barn 持有部分 sheaf 并从 barn 中补充 sheaf，改进了 sheaf 预填充 API 的性能。这使得 will-it-scale mmap1 在 maple_node 缓存上的吞吐量提升了 24%。（Hao Li）”\n\n这一改动此前已在我的关注范围内，并在《Linux 7.4 计划中的 MM 改动在一项指标上带来 +22904539.81% 提升，其他方面收益较为温和》一文中有所报道。总体而言，它为测试内核内存管理（MM）子系统的 will-it-scale 基准测试带来了 24% 的吞吐量提升。\n\n感谢 Linux 开发者 Hao Li 带来的这一不错成果。Linux 7.4 已合并的 slab 改动完整列表可通过以下链接查看：\n\nLinux 7.4 电源管理为 AMD Ryzen Zen 6 和 Intel 坚固型 Panther Lake 做准备\nLinux 7.4 工作队列改动带来“快 10 到 100 倍”的优化\nLinux 7.4 改善短切片任务的调度延迟，NVIDIA Vera SMT 偏好\nx86 内核影子栈正在为 Linux 开发，作为强大的控制流保护\nLinux 7.4 开始合入加速内核构建过程的补丁\nLinus Torvalds 在 Linux 7.4 中移除不安全的 __get_user() 和 __put_user() 函数\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\n多个 Linux 内核漏洞被意外发布到公开内核邮件列表\n微软发布面向 Linux 桌面的 Microsoft Defender\nLinus Torvalds 的 AI 代码改进：重构代码带来巨大性能提升\nClaude Code / AI 展示出逆向工程硬件以支持 Linux 的潜力\nLinus Torvalds 在 Linux 7.4 中移除不安全的 __get_user() 和 __put_user() 函数\n今日的 Steam Beta 使 Linux 客户端成为 64 位应用\nOmarchy 通过避免 XDG 开销加快网页浏览器启动速度\nWine 11.20 发布，带来 CD-ROM 支持改动\n\n享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "db9c5f2ea10d74e6986cd16c54f6a25d": {
+    "id": "db9c5f2ea10d74e6986cd16c54f6a25d",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/HPFS-For-Linux-Removal",
+    "title_en": "HPFS Is The Latest File-System Facing Possible Removal On Linux",
+    "summary_en": "HPFS is the latest file-system driver for the Linux kernel facing possible removal. The High Performance File-System (HPFS) was developed by IBM and Microsoft for OS/2...",
+    "pub_date": "Fri, 23 Oct 2026 12:27:08 -0400",
+    "title_zh": "HPFS 成为 Linux 上最新面临移除可能的文件系统",
+    "summary_zh": "IBM 与微软为 OS/2 开发的高性能文件系统 HPFS 的 Linux 驱动因长期无人维护、不支持 SMP 和 PREEMPT 内核配置，且存在 CVE-2026-97486 安全漏洞，现被提议从主线内核移除。补丁计划删除全部 6969 行 HPFS 代码，可能随 Linux 7.5 合并。此前 BFS 文件系统已在 Linux 7.4 中被移除。",
+    "fulltext_zh": "HPFS 成为 Linux 上最新面临移除可能的文件系统。高性能文件系统（HPFS）由 IBM 和微软为 OS/2 开发。\n\n继 Linux 7.4 中移除 BFS（用于启动分区的旧 UnixWare 文件系统）之后，HPFS 现在也进入了可能从 Linux 主线内核中移除的名单。HPFS 的开发始于近 40 年前，为 OS/2 而设计，多年来已不再具有实际相关性。\n\nHPFS 的 Linux 驱动已被孤立且长期无人维护，据信没有活跃用户。该驱动也无法在 SMP 内核构建、PREEMPT 内核配置下工作，并存在其他技术限制。\n\n此外，在 AI 时代，HPFS 代码受到了严格审视，例如针对它的 CVE-2026-97486 安全漏洞可能导致内核恐慌和拒绝服务。因此，与内核中其他鲜少获得维护和改进的领域一样，在 AI 代理扫描源码树每一个角落的背景下，维护负担进一步加重。\n\nLinux 内核邮件列表上的补丁将把 HPFS 文件系统的全部 6,969 行代码从内核中删除。我们将关注它是否会被纳入 Linux v7.5，以及 HPFS 在 Linux 上的故事将如何收场。"
+  },
+  "6bc8e3719dfe79bf6ccaeb362c48f5fb": {
+    "id": "6bc8e3719dfe79bf6ccaeb362c48f5fb",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Borealis-Vulkan-Driver",
+    "title_en": "Borealis: Asahi Linux's Apple Silicon Mesa Vulkan Driver Forked For Vibe Coding",
+    "summary_en": "Seeing a Vulkan API driver pull request this morning for introducing a new \"Borealis\" driver ID caught me by surprise as it was the first time I was hearing of such a driver. It turns out to be a fork of the Asahi Linux project's HoneyKrisp driver in Mesa for Apple Silicon hardware...",
+    "pub_date": "Fri, 23 Oct 2026 12:00:38 -0400",
+    "title_zh": "Borealis：Asahi Linux 的 Apple Silicon Mesa Vulkan 驱动被分叉用于 Vibe Coding",
+    "summary_zh": "Aurora Silicon 项目从 Asahi Linux 的 HoneyKrisp 驱动分叉出 Borealis Vulkan 驱动，专为 Apple GPU 设计，支持 M1 至 M5 及 A18 Pro。该驱动在自有 Mesa 分支中维护，并注册独立驱动 ID。分叉原因与允许 AI 贡献的“vibe coding”开发模式有关，其代码移除了 Mesa 的 AI 代理政策并替换为自有政策。",
+    "fulltext_zh": "今天上午看到一份引入新“Borealis”驱动 ID 的 Vulkan API 驱动拉取请求时，我感到很意外，因为这是我第一次听说这个驱动。原来它是 Asahi Linux 项目为 Apple Silicon 硬件在 Mesa 中的 HoneyKrisp 驱动的分叉。\n\nBorealis 在今天的描述中写道：“这为 Borealis 注册了 VK_DRIVER_ID_AURORA_BOREALIS (35)，Borealis 是 Aurora Silicon 为 Apple GPU 开发的开源 Vulkan 驱动。Borealis 源自 Asahi Linux 的 Honeykrisp，可在 M1 到 M5 以及 A18 Pro 上运行。它位于我们的 Mesa 分支而非上游 Mesa，现在报告自己的 driverName，因此需要自己的 ID 来与 Honeykrisp 区分。在此合并之前，它报告 VK_DRIVER_ID_MESA_HONEYKRISP。”\n\n而 Aurora Silicon 项目在自我介绍中表示：“我们的目标是在 Apple Silicon 上提供完整且精致的 Linux 体验，从安装到日常使用。我们的工作涵盖内核、图形驱动以及让一切协同工作的工具。我们还在努力将 Windows 移植到 Apple Silicon。”Aurora Silicon 最近才起步，似乎是 Asahi Linux 代码的一个分叉。\n\n好奇他们为何要分叉 HoneyKrisp 驱动并在 Mesa 主项目之外开发这个 Apple Silicon Vulkan 驱动，看来是出于一次 vibe coding 冒险的兴趣。到目前为止，Borealis 驱动分叉只是移除了 Mesa 的 AI 代理文档/政策，并替换为自己的 AI 代理/助手政策，该政策允许 AI 贡献。这一更改也由 Claude Opus 5.5 共同编写。\n\n我们将看看这个 Borealis 驱动以及更广泛的 Aurora Silicon 项目在这种 AI 驱动的开发下最终会产出什么。"
+  },
+  "efb3529982b433fab07906db86573bd9": {
+    "id": "efb3529982b433fab07906db86573bd9",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/python-3-15-released-with-faster-jit-lazy-imports-and-utf-8-by-default/",
+    "title_en": "Python 3.15 Released with Faster JIT, Lazy Imports, and UTF-8 by Default",
+    "summary_en": "Python 3.15 introduces a faster experimental JIT compiler, explicit lazy imports, UTF-8 encoding by default, and new built-in types.\nThe post Python 3.15 Released with Faster JIT, Lazy Imports, and UTF-8 by Default appeared first on Linux Today.",
+    "pub_date": "Fri, 23 Oct 2026 08:09:33 +0000",
+    "title_zh": "Python 3.15 发布：JIT 更快、惰性导入、默认 UTF-8",
+    "summary_zh": "Python 3.15 正式发布，带来更快的实验性 JIT 编译器、显式惰性导入、默认采用 UTF-8 编码以及新的内置类型。这些改进旨在提升运行性能、加快启动速度并简化编码处理。",
+    "fulltext_zh": "Python 3.15 引入了更快的实验性 JIT 编译器、显式惰性导入、默认采用 UTF-8 编码以及新的内置类型。\n\n文章《Python 3.15 发布：JIT 更快、惰性导入、默认 UTF-8》首发于 Linux Today。"
+  },
+  "6d902d3e2d74247dc245df0ca5f1a86c": {
+    "id": "6d902d3e2d74247dc245df0ca5f1a86c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/solus-works-to-remove-licensing-barriers-to-aerynos-collaboration/",
+    "title_en": "Solus Works to Remove Licensing Barriers to aerynOS Collaboration",
+    "summary_en": "Solus seeks contributor approval to relicense its package repository under MPL-2.0, paving the way for closer collaboration with aerynOS.\nThe post Solus Works to Remove Licensing Barriers to aerynOS Collaboration appeared first on Linux Today.",
+    "pub_date": "Fri, 23 Oct 2026 08:03:41 +0000",
+    "title_zh": "Solus 努力消除与 aerynOS 合作的许可障碍",
+    "summary_zh": "Solus 正寻求贡献者批准，将其软件包仓库重新授权为 MPL-2.0 许可证，此举旨在为与 aerynOS 的更紧密合作铺平道路。",
+    "fulltext_zh": "Solus 正寻求贡献者批准，将其软件包仓库重新授权为 MPL-2.0 许可证，为与 aerynOS 的更紧密合作铺平道路。\n\n文章《Solus 努力消除与 aerynOS 合作的许可障碍》首发于 Linux Today。"
+  },
+  "e18143a34868b7c0740586230b20fa0f": {
+    "id": "e18143a34868b7c0740586230b20fa0f",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/woodpecker-ci-3-19-adds-server-enforced-agent-labels/",
+    "title_en": "Woodpecker CI 3.19 Adds Server-Enforced Agent Labels",
+    "summary_en": "Woodpecker CI 3.19 adds server-enforced agent labels, strengthens pipeline security, improves secret handling, and fixes workflow reliability issues.\nThe post Woodpecker CI 3.19 Adds Server-Enforced Agent Labels appeared first on Linux Today.",
+    "pub_date": "Fri, 23 Oct 2026 08:00:36 +0000",
+    "title_zh": "Woodpecker CI 3.19 新增服务器强制代理标签",
+    "summary_zh": "Woodpecker CI 3.19 版本发布，新增服务器强制代理标签功能，增强流水线安全性，改进密钥处理方式，并修复了工作流可靠性问题。",
+    "fulltext_zh": "Woodpecker CI 3.19 新增服务器强制代理标签，增强流水线安全性，改进密钥处理，并修复工作流可靠性问题。\n\n文章 Woodpecker CI 3.19 新增服务器强制代理标签 首发于 Linux Today。"
+  },
+  "8d360698265f5fa8504f9dc65981850a": {
+    "id": "8d360698265f5fa8504f9dc65981850a",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/kde-releases-kde-frameworks-6-31-with-various-improvements-and-bug-fixes/",
+    "title_en": "KDE Releases KDE Frameworks 6.31 with Various Improvements and Bug Fixes",
+    "summary_en": "KDE Frameworks 6.31 improves file management, text encoding detection, desktop icons, and application stability with numerous bug fixes.\nThe post KDE Releases KDE Frameworks 6.31 with Various Improvements and Bug Fixes appeared first on Linux Today.",
+    "pub_date": "Fri, 23 Oct 2026 07:56:13 +0000",
+    "title_zh": "KDE 发布 KDE Frameworks 6.31，带来多项改进与错误修复",
+    "summary_zh": "KDE 发布 KDE Frameworks 6.31，改进了文件管理、文本编码检测、桌面图标和应用稳定性，并包含大量错误修复。",
+    "fulltext_zh": "KDE Frameworks 6.31 改进了文件管理、文本编码检测、桌面图标和应用稳定性，并包含大量错误修复。\n\n文章《KDE 发布 KDE Frameworks 6.31，带来多项改进与错误修复》首发于 Linux Today。"
+  },
+  "807f091376e32c89d22926605c5b6631": {
+    "id": "807f091376e32c89d22926605c5b6631",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/canonical-announces-official-ubuntu-desktop-images-for-risc-v/",
+    "title_en": "Canonical Announces Official Ubuntu Desktop Images for RISC-V",
+    "summary_en": "Canonical introduces official Ubuntu Desktop images for RISC-V with Ubuntu 26.10, expanding support for SpacemiT K3 hardware and desktop testing.\nThe post Canonical Announces Official Ubuntu Desktop Images for RISC-V appeared first on Linux Today.",
+    "pub_date": "Fri, 23 Oct 2026 07:32:00 +0000",
+    "title_zh": "Canonical 宣布为 RISC-V 提供官方 Ubuntu 桌面镜像",
+    "summary_zh": "Canonical 宣布随 Ubuntu 26.10 推出面向 RISC-V 的官方 Ubuntu 桌面镜像，扩展对 SpacemiT K3 硬件及桌面测试的支持。",
+    "fulltext_zh": "Canonical 随 Ubuntu 26.10 推出面向 RISC-V 的官方 Ubuntu 桌面镜像，扩展对 SpacemiT K3 硬件及桌面测试的支持。\n\n文章《Canonical 宣布为 RISC-V 提供官方 Ubuntu 桌面镜像》首发于 Linux Today。"
+  },
+  "c693321753ab7c08a1b72e9ad3843c26": {
+    "id": "c693321753ab7c08a1b72e9ad3843c26",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/transmission-4-1-4-open-source-bittorrent-client-released-with-various-fixes",
+    "title_en": "Transmission 4.1.4 Open-Source BitTorrent Client Released with Various Fixes",
+    "summary_en": "Transmission 4.1.4 open-source BitTorrent client is now available for download with various bug fixes and improvements for the Qt client, GTK client, macOS Client, and Web client.\nThe post Transmission 4.1.4 Open-Source BitTorrent Client Released with Various Fixes appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Sat, 24 Oct 2026 01:15:00 +0000",
+    "title_zh": "Transmission 4.1.4 开源 BitTorrent 客户端发布，带来多项修复",
+    "summary_zh": "Transmission 4.1.4 开源 BitTorrent 客户端现已开放下载，该版本为 Qt 客户端、GTK 客户端、macOS 客户端和 Web 客户端带来了多项错误修复与改进。",
+    "fulltext_zh": "Transmission 4.1.4 开源 BitTorrent 客户端现已可供下载，该版本为 Qt 客户端、GTK 客户端、macOS 客户端和 Web 客户端带来了多项错误修复与改进。\n\n文章《Transmission 4.1.4 开源 BitTorrent 客户端发布，带来多项修复》首发于 9to5Linux——未经许可不得转载本文。本 RSS 源面向读者，而非抓取程序。"
+  },
+  "e2fca0e687cc3d96afbaa1cff4f77029": {
+    "id": "e2fca0e687cc3d96afbaa1cff4f77029",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/obs-studio-33-officially-released-with-many-new-features-and-improvements",
+    "title_en": "OBS Studio 33 Officially Released with Many New Features and Improvements",
+    "summary_en": "OBS Studio 33 open-source video recording and live streaming software is now available for download with support for newest NVIDIA Broadcast SDKs for NVIDIA Audio Effects and Video Effects.\nThe post OBS Studio 33 Officially Released with Many New Features and Improvements appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Fri, 23 Oct 2026 23:51:09 +0000",
+    "title_zh": "OBS Studio 33 正式发布，带来众多新功能和改进",
+    "summary_zh": "OBS Studio 33 开源视频录制和直播软件现已可供下载，支持最新的 NVIDIA Broadcast SDK，用于 NVIDIA 音频效果和视频效果。",
+    "fulltext_zh": "OBS Studio 33 开源视频录制和直播软件现已可供下载，支持最新的 NVIDIA Broadcast SDK，用于 NVIDIA 音频效果和视频效果。\n\n文章《OBS Studio 33 正式发布，带来众多新功能和改进》首次发布于 9to5Linux——未经许可不得转载本文。本 RSS 源面向读者，而非抓取者。"
+  },
+  "7b9f1ebf6a0a3f31108ba395984517fd": {
+    "id": "7b9f1ebf6a0a3f31108ba395984517fd",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/fwupd-2-1-9-linux-firmware-updater-released-with-new-features",
+    "title_en": "Fwupd 2.1.9 Linux Firmware Updater Released with New Features",
+    "summary_en": "Fwupd 2.1.9 Linux firmware updater is now available for download with support for Pixart PID 38CA, new features, and bug fixes.\nThe post Fwupd 2.1.9 Linux Firmware Updater Released with New Features appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Fri, 23 Oct 2026 13:39:03 +0000",
+    "title_zh": "Fwupd 2.1.9 Linux 固件更新器发布，带来新功能",
+    "summary_zh": "Fwupd 2.1.9 Linux 固件更新器现已可供下载，新增对 Pixart PID 38CA 的支持，并包含新功能和错误修复。",
+    "fulltext_zh": "Fwupd 2.1.9 Linux 固件更新器现已可供下载，支持 Pixart PID 38CA，并带来新功能和错误修复。\n\n文章《Fwupd 2.1.9 Linux 固件更新器发布，带来新功能》首次出现在 9to5Linux 上——未经许可不得转载本文。本 RSS 源面向读者，而非抓取工具。"
+  },
+  "9768c02402d2ba86e5ce56c32258840b": {
+    "id": "9768c02402d2ba86e5ce56c32258840b",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/openssl-4-1-released-with-support-for-dtls-1-3-ikev2-kdf-and-grease",
+    "title_en": "OpenSSL 4.1 Released with Support for DTLS 1.3, IKEV2 KDF, and GREASE",
+    "summary_en": "OpenSSL 4.1 is now available for download with an alpha version adding support for DTLS 1.3, IKEV2 KDF, and GREASE, as well as other improvements.\nThe post OpenSSL 4.1 Released with Support for DTLS 1.3, IKEV2 KDF, and GREASE appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Fri, 23 Oct 2026 12:33:57 +0000",
+    "title_zh": "OpenSSL 4.1 发布，支持 DTLS 1.3、IKEV2 KDF 和 GREASE",
+    "summary_zh": "OpenSSL 4.1 现已开放下载，该 alpha 版本新增对 DTLS 1.3、IKEV2 KDF 和 GREASE 的支持，并包含其他改进。",
+    "fulltext_zh": "OpenSSL 4.1 现已可供下载，该 alpha 版本新增了对 DTLS 1.3、IKEV2 KDF 和 GREASE 的支持，以及其他改进。"
+  },
+  "5e2b9b46decbddeccec18f3d25a1c54f": {
+    "id": "5e2b9b46decbddeccec18f3d25a1c54f",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/calibre-9-17-e-book-manager-adds-jpeg-xl-support-and-performance-improvements",
+    "title_en": "Calibre 9.17 E-Book Manager Adds JPEG XL Support and Performance Improvements",
+    "summary_en": "Calibre 9.17 open-source e-book manager is now available for download with support for JPEG XL images for e-book cover conversion, faster MOBI/AZW3/PDB conversion, and more.\nThe post Calibre 9.17 E-Book Manager Adds JPEG XL Support and Performance Improvements appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Fri, 23 Oct 2026 04:35:26 +0000",
+    "title_zh": "Calibre 9.17 电子书管理器新增 JPEG XL 支持并提升性能",
+    "summary_zh": "Calibre 9.17 开源电子书管理器现已开放下载，新增对 JPEG XL 图像的支持，可用于电子书封面转换，同时提升了 MOBI/AZW3/PDB 格式的转换速度，并带来其他多项改进。",
+    "fulltext_zh": "Calibre 9.17 开源电子书管理器现已开放下载，新增对 JPEG XL 图像的支持，可用于电子书封面转换，同时提升了 MOBI/AZW3/PDB 格式的转换速度，并带来其他多项改进。\n\n文章《Calibre 9.17 电子书管理器新增 JPEG XL 支持并提升性能》首发于 9to5Linux——未经许可请勿转载本文。本 RSS 源面向读者，而非抓取程序。"
   }
 }
