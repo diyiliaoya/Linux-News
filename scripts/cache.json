@@ -17323,5 +17323,82 @@
     "title_zh": "Calibre 9.17 电子书管理器新增 JPEG XL 支持并提升性能",
     "summary_zh": "Calibre 9.17 开源电子书管理器现已开放下载，新增对 JPEG XL 图像的支持，可用于电子书封面转换，同时提升了 MOBI/AZW3/PDB 格式的转换速度，并带来其他多项改进。",
     "fulltext_zh": "Calibre 9.17 开源电子书管理器现已开放下载，新增对 JPEG XL 图像的支持，可用于电子书封面转换，同时提升了 MOBI/AZW3/PDB 格式的转换速度，并带来其他多项改进。\n\n文章《Calibre 9.17 电子书管理器新增 JPEG XL 支持并提升性能》首发于 9to5Linux——未经许可请勿转载本文。本 RSS 源面向读者，而非抓取程序。"
+  },
+  "a379c270c3cdd506f0c1bc829220d6e6": {
+    "id": "a379c270c3cdd506f0c1bc829220d6e6",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/shader-effect-gnome-extension",
+    "title_en": "Shader Effects is the coolest GNOME extension you’ll try this weekend",
+    "summary_en": "Ever wondered what your Ubuntu desktop would look like if you were watching it on a chewed up VHS tape or an old monochrome CRT monitor? You probably haven&#8217;t, but a new GNOME Shell extension lets you find out anyway. The Shader Effects extension applies GPU-accelerated filters, things like scan lines, NTSC RGB bloom and flickery green CRT glow, to your entire desktop or, if you&#8217;d rather, just a specific window(s). You can see three of the effects demoed in this video clip: The extens",
+    "pub_date": "Sat, 24 Oct 2026 03:29:18 +0000",
+    "title_zh": "Shader Effects 是你这个周末最该尝试的 GNOME 扩展",
+    "summary_zh": "Shader Effects 是一款新的 GNOME Shell 扩展，能为整个桌面或特定窗口添加 GPU 加速的复古滤镜效果，如扫描线、NTSC RGB 泛光和 CRT 绿光闪烁。用户可调节效果强度、动画速度和帧率，但高数值会增加 GPU 负担。该扩展适合短时间使用，让截图或录屏更具视觉趣味，支持 GNOME 48-51。",
+    "fulltext_zh": "你是否曾好奇，如果你的 Ubuntu 桌面看起来像是在一盘磨损的 VHS 录像带或老式单色 CRT 显示器上播放，会是什么样子？\n\n你大概没想过，但一个新的 GNOME Shell 扩展让你无论如何都能一探究竟。\n\n它会对整个桌面或（如果你愿意）仅对特定窗口应用 GPU 加速的滤镜，比如扫描线、NTSC RGB 泛光和闪烁的绿色 CRT 辉光。\n\n你可以在本视频片段中看到其中三种效果的演示：\n\nUbuntu 上演示的三种效果（均为动画）\n\n该扩展的偏好设置面板允许你微调所选效果的强度，还可以调节（甚至禁用）动画速度和帧率。数值越高，需要的 GPU 性能就越强（所以在便携设备上使用时请留意这一点）。\n\n目前提供的着色器包括：\n\n此外，还有一个独立的单色开关，可应用于所有内置效果。\n\n如果你想知道能否混合不同的着色器来创建叠加滤镜，答案是不能。\n\n以及一些跟踪失真和屏幕波纹效果，\n\n会把我带回到童年时坐在绿色单色 Amstrad CPC 464 前度过的那些时光。\n\n如果你愿意，也可以将效果应用于单个窗口\n\n但你可以通过面板快速开启和关闭整个效果，以及切换着色器，并选择将效果应用于特定的应用程序窗口而非整个桌面。后一个选项非常适合应用于运行 TUI 应用程序的终端模拟器。\n\n这有什么意义？\n\n这个扩展基本上没用吗？\n\n嗯，它不会加速你的工作流程，不会平铺你的窗口，也不会做任何直接实用的事情。\n\n所以，从这个意义上说，是的（不过我相信复古游戏玩家和技术爱好者会找到可调节扫描线或 NTSC RGB 泛光的用途）。\n\n这不是那种你应该 24/7 一直运行的东西（在开着这个着色器的情况下打这篇帖子让我感到晕动）。\n\n但在短时间使用中，这提供了一种万无一失的方法，让任何桌面截图或屏幕录制看起来在视觉上更有趣。\n\n对我来说，这就是尝试它的充分理由。\n\n可从 GNOME Extensions 网站获取（链接如下）。它支持 GNOME 48-51，所以如果你运行的是 Ubuntu 26.04 LTS 或更新版本，那就没问题。在评论中告诉我你的想法。"
+  },
+  "3c1529ff660cc48937ce8cd4ca74c9ab": {
+    "id": "3c1529ff660cc48937ce8cd4ca74c9ab",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/calibre-9-17-faster-conversion",
+    "title_en": "Calibre 9.17 release brings faster ebook conversions",
+    "summary_en": "Calibre 9.17 has been released with faster ebook conversion speeds and JPEG XL image support. The open-source ebook editor improves output compression speeds for MOBI, AZW3 and PDB files, which makes conversions to those formats quicker. Converting EPUB to MOBI is what I use Calibre for to read on my ancient Kindle. Calibre 9.17 can read JPEG XL images in eBooks and other supported documents during conversions. The format offers high image quality at smaller file sizes and supports features like",
+    "pub_date": "Fri, 23 Oct 2026 15:45:01 +0000",
+    "title_zh": "Calibre 9.17 发布，电子书转换速度更快",
+    "summary_zh": "Calibre 9.17 版本发布，提升了 MOBI、AZW3 和 PDB 格式的转换速度，并新增对 JPEG XL 图像格式的支持。该版本还改进了无障碍功能，修复了 PDF 和 EPUB 3 转换的回归问题，优化了内容服务器和暗色模式，并增强了对《经济学人》等新闻源的支持。",
+    "fulltext_zh": "Calibre 9.17 已发布，带来了更快的电子书转换速度和 JPEG XL 图像支持。\n\n这款开源电子书编辑器提升了 MOBI、AZW3 和 PDB 文件的输出压缩速度，使得转换为这些格式更加快捷。将 EPUB 转换为 MOBI 正是我常用的功能。\n\nCalibre 9.17 可以在转换过程中读取电子书及其他支持文档中的 JPEG XL 图像。该格式以更小的文件体积提供高图像质量，并支持 HDR 等特性。JPEG XL 并非新事物，但其受欢迎程度（……）\n\n无障碍改进方面，应用现在会遵循系统的“减少动态效果”设置，同时编辑器现在会检查无障碍标签（ARIA 引用），并在自动修复更改了 ID 时更新它们。\n\n其他改进包括对 Calibre 的 AI 驱动“创建你自己的冒险”游戏的角色选择进行了小幅调整；在目录创建过程中，“calibre”被设为创建者，生成日期被设为出版日期。\n\n还包含大量错误修复，包括：\n\n修复了 v9.16 中损坏的 PDF 和 EPUB 3 转换的回归问题\n元数据源现在使用 camoufox\n设置具有相同系列索引的自定义系列现在可以可靠保存\n全文搜索（再次）可以搜索没有书籍文件的库\n解决了旧款 Tolino 固件上的 Kobo 封面处理问题\n暗色模式颜色更易读\n\nCalibre 内容服务器（可让你通过另一台设备的网页浏览器浏览 Calibre 书库）的修复包括：\n\n全文搜索操作现在仅影响当前查看的库\n在库之间切换时现在会显示正确的书籍\nCalibre 桌面应用会通知通过服务器完成的转换\n暗色模式和键盘焦点样式的小幅更改\n\n最后，还有对新闻源处理/抓取的常规调整。此更新增强了对《经济学人》、美联社和《科学美国人》等的支持。\n\n如何获取最新的 Calibre 版本\n\nCalibre 功能强大且全面，可从官方网站获取。它是免费的开源软件，可在 Windows、macOS 和 Linux 上运行。\n\n源代码在 GitHub 上，通过命令行脚本安装和更新。该脚本会下载二进制文件，将其移动到系统位置，并生成一个快捷方式，以便你可以在应用启动器中找到它。\n\n如果这听起来很麻烦，你可以找到（……）——但那些是未经核实/非官方的构建版本，与官方支持的二进制文件相比可能存在一些特殊问题。"
+  },
+  "23a993b9a5711ed16b2f52fe51fca28e": {
+    "id": "23a993b9a5711ed16b2f52fe51fca28e",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-Block",
+    "title_en": "Linux 7.4 Block Updates Range From Floppy Disk Driver Fixes To Apple M4 NVMe Support",
+    "summary_en": "The Linux 7.4 block/storage and IO_uring updates were merged today for the ongoing merge window. With the breadth of Linux hardware support, the pull request varies from fixes to Linux's floppy driver to enabling support for NVMe storage on Apple M4 devices...",
+    "pub_date": "Sat, 24 Oct 2026 20:42:28 -0400",
+    "title_zh": "Linux 7.4 块层更新：从软盘驱动修复到 Apple M4 NVMe 支持",
+    "summary_zh": "Linux 7.4 的块/存储与 IO_uring 更新已合并，涵盖从老旧软盘驱动修复到 Apple M4 NVMe 存储支持。软盘驱动修复了栈越界和 2017 年重构引入的回归，SWIM 驱动获 33 项修复并在多款老 Mac 上测试通过；新硬件方面则加入 Apple M4 T8132 ANS2 NVMe 支持。",
+    "fulltext_zh": "Linux 7.4 的块/存储与 IO_uring 更新已于今日合并，进入当前合并窗口。鉴于 Linux 硬件支持的广度，该拉取请求涵盖从 Linux 软盘驱动修复到为 Apple M4 设备启用 NVMe 存储支持。\n\n在老硬件方面，Linux 软盘驱动仍偶尔收到缺陷修复……随着 Linux 7.4，又有一些修复陆续加入。Oracle 的 Denis Efremov 修复了内核地址消毒剂（KASAN）报告的软盘驱动可能的栈越界问题。他还修复了软盘驱动中一个可追溯至 2017 年代码重构的回归。现在软驱结构体的标志位应能被正确处理。\n\n另外，Cen Zhang 发现了软盘驱动中的一些数据竞争，由未指明的“我们的工具”发现，推测与 AI 工具链有关。\n\n该拉取请求还带来了对 SWIM（Sander Woz 集成机）驱动的修复，该驱动用于老式 Apple Macintosh 软盘控制器。这些 SWIM 驱动修复由 Linux m68k 社区的 Finn Thain 完成，此前他近期需要使用该驱动，但发现它“缺陷太多，无法用于”他的目的。总共处理了 33 项修复，并已在 Mac Quadra 650、Mac LC III、Mac Quadra 700 和 Mac IIvx 上成功测试。\n\n而在硬件谱系较新的一端，Linux 7.4 的块子系统拉取请求带来了 Apple M4 T8132 ANS2 NVMe 支持。详情见先前文章《Linux 补丁启用 Apple M4 NVMe 支持》。\n\nLinux 7.4 现已合并的更新中，新旧硬件内容相当多样。"
+  },
+  "c64c55524382ab46127b7a71205fd0e6": {
+    "id": "c64c55524382ab46127b7a71205fd0e6",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/SteamOS-3.9.5",
+    "title_en": "SteamOS 3.9.5 Released With Linux 7.2 Kernel, KDE Plasma 6.7 Desktop & Other Updates",
+    "summary_en": "On Friday Valve released SteamOS 3.9.5 as their first stable release in the SteamOS 3.9 series. This brings all the great improvements previously available in preview form with many package updates and other enhancements...",
+    "pub_date": "Sat, 24 Oct 2026 14:54:10 -0400",
+    "title_zh": "SteamOS 3.9.5 发布：搭载 Linux 7.2 内核、KDE Plasma 6.7 桌面及其他更新",
+    "summary_zh": "Valve 发布 SteamOS 3.9.5，这是 SteamOS 3.9 系列首个稳定版。该版本基于更新后的 Arch Linux，桌面模式从 KDE Plasma 6.4 升级至 6.7，内核为 Linux 7.2。其他更新包括支持 Steam Frame 无线适配器、改善 Steam Deck 无音频播放时的空闲功耗、更新引导加载程序、默认使用 WPA_Supplicant 管理 WiFi、初步支持休眠、改进作为虚拟机客户机运行的体验等。",
+    "fulltext_zh": "SteamOS 3.9.5 发布：搭载 Linux 7.2 内核、KDE Plasma 6.7 桌面及其他更新\n\n2026 年 10 月 24 日 14:54 EDT。\n\n周五，Valve 发布了 SteamOS 3.9.5，这是 SteamOS 3.9 系列的首个稳定版本。该版本带来了此前在预览版中提供的所有重大改进，并包含大量软件包更新和其他增强。\n\nSteamOS 3.9.5 为 SteamOS 引入了更新后的 Arch Linux 基础，其中一些显著升级包括桌面模式从 KDE Plasma 6.4 迁移至 Plasma 6.7。Linux 7.2 内核为 SteamOS 3.9 提供支持。\n\n其他一些值得注意的更新包括：支持 Steam Frame 无线适配器；改善 Steam Deck 在无音频播放时的空闲功耗；更新 SteamOS 引导加载程序；默认切换至 WPA_Supplicant 管理 WiFi；初步支持休眠；改进作为虚拟机客户机运行的体验；以及针对这个以 Steam 游戏为核心的 Linux 发行版的各种其他修复和增强。\n\n可通过以下链接下载并了解此稳定版 SteamOS 更新的更多详情。\n\n今日 Steam Beta 使 Linux 客户端成为 64 位应用\n\nValve 发布 Proton 11.0-2e 以修复 EA App 问题\n\nSteam Beta 现在默认让非 Steam Windows 二进制文件使用 Proton\n\n9 月 Linux 上 Steam 份额降至 3.05%\n\nValve 为 Steam Frame 上开源 Turnip 驱动开展注视点渲染工作\n\nIgalia 改善 Firefox 在 Valve Steam Deck 上的体验\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\n多个 Linux 内核漏洞被意外发布到公开内核邮件列表\n\nLinus Torvalds 的 AI 代码改进：重构代码带来巨大性能提升\n\nLinus Torvalds 在 Linux 7.4 中移除不安全的 __get_user() 和 __put_user() 函数\n\nOmarchy 通过避免 XDG 开销加快网页浏览器启动速度\n\nWine 11.20 发布，更改 CD-ROM 支持\n\nX.Org 库又有 17 个安全漏洞被公开\n\nLinux 7.3 的最佳特性：性能改进、大量来自 Valve 的贡献\n\nLinux 7.3 发布：更快的 I/O 性能、AMD Zen 6 准备工作等\n\n享受无广告浏览、单页文章查看\n\n法律免责声明、隐私政策、Cookie\n\n版权所有 © 2004 - 2026\n\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "66be6ce706b825fa69375c56c49f5a4b": {
+    "id": "66be6ce706b825fa69375c56c49f5a4b",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-memblock",
+    "title_en": "Linux's Early Boot-Time Physical Memory Allocator Sees Big Speed-Up: ~268s To ~50ms",
+    "summary_en": "Sent out today for the Linux 7.4 kernel were a set of memblock improvements. Most notable is a performance optimization within mm/memblock.c that implements the kernel's early boot-time physical memory allocator that is used prior to the bring-up of the full page allocator...",
+    "pub_date": "Sat, 24 Oct 2026 09:00:00 -0400",
+    "title_zh": "Linux早期启动阶段物理内存分配器大幅提速：从约268秒降至约50毫秒",
+    "summary_zh": "Linux 7.4内核的memblock改进中，Google工程师发现mm/memblock.c在查找候选区域时使用线性搜索而非二分搜索，在KHO功能导致严重碎片化时耗时极长。改用二分搜索后，最坏情况复杂度降至O(N log N)，KHO内存检索时间从约268秒缩短至约50毫秒。该优化已随Linux 7.4的memblock拉取请求提交。",
+    "fulltext_zh": "Linux早期启动阶段物理内存分配器大幅提速：从约268秒降至约50毫秒\n\n2026年10月24日东部时间上午09:00发布。\n\n今天为Linux 7.4内核发送了一组memblock改进。最值得注意的是其中一项性能优化，它实现了内核早期启动阶段的物理内存分配器，该分配器在完整页分配器启用之前使用。\n\n这项性能改进是在memblock_add_range()和memblock_isolate_range()函数中使用二分搜索。Google工程师Tarun Sahu发现mm/memblock.c代码在查找候选区域时使用的是线性搜索而非二分搜索。\n\n当处于严重碎片化状态时，例如使用“KHO”功能（该功能又被Live Update Orchestrator等使用）并伴随大量不相交的folio，这种线性搜索的扫描过程会耗费非常可观的时间。\n\n他指出，使用二分搜索将最坏情况复杂度降低，最终将KHO内存检索时间从约238秒缩短至约50毫秒！\n\n“使用二分搜索将最坏情况复杂度降至O(N log N)（顺序追加时为O(N)），将KHO内存检索时间从约268秒缩短至约50毫秒。”\n\n令人惊讶的是线性搜索在内核代码中存续了这么久，不过话说回来，这只影响早期启动阶段的内存分配器。\n\n该优化今天作为Linux 7.4内核的memblock拉取请求的一部分发送。\n\nLinux 7.4合并539个MM补丁：从优化到更多DAMON\nLinux 7.4合并Slab更新并带来不错的性能改进\nLinux 7.4电源管理为AMD Ryzen Zen 6和Intel Rugged Panther Lake做准备\nLinux 7.4工作队列变更带来“10到100倍更快”的优化\nLinux 7.4改善短切片任务的调度延迟，NVIDIA Vera SMT偏好\nx86内核影子栈正在为Linux开发，作为强大的控制流保护\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。\n\n多个Linux内核漏洞被意外发布到公开内核邮件列表\nLinus Torvalds的AI代码改进：重构代码带来巨大性能提升\nLinus Torvalds在Linux 7.4中移除不安全的__get_user()和__put_user()函数\nOmarchy通过避免XDG开销让Web浏览器启动更快\nWine 11.20发布，带来CD-ROM支持变更\nX.Org库又有17个安全漏洞被公开\nLinux 7.3的最佳特性：性能改进、大量来自Valve的贡献\nLinux 7.3发布，带来更快的I/O性能、AMD Zen 6准备等\n\n享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "7cef63079f5b25fdbb2e75264dfafe08": {
+    "id": "7cef63079f5b25fdbb2e75264dfafe08",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/systemd-Merges-Rust-Programs",
+    "title_en": "systemd Merges Support For Rust Programs",
+    "summary_en": "As of today in systemd Git it's now possible for the systemd programs to be written in the Rust programming language as an alternative to C...",
+    "pub_date": "Sat, 24 Oct 2026 07:11:00 -0400",
+    "title_zh": "systemd 合并对 Rust 程序的支持",
+    "summary_zh": "systemd Git 仓库现已支持用 Rust 编写 systemd 程序，作为 C 语言的替代方案。核心库暂不支持 Rust，但各叶组件已可使用 Rust（无需 Cargo）。首个 Rust 组件 systemd-keyring-setup 用于在启动时配置密钥环并注册 X.509 证书，其代码尚未合并但预计很快。现有 C 代码不会移植到 Rust，Rust 支持为可选，默认自动检测，预计随 systemd 263 发布。",
+    "fulltext_zh": "截至今日，在 systemd Git 中，systemd 程序现在可以用 Rust 编程语言编写，作为 C 语言的替代方案。\n\n像 systemd 库这样的核心 systemd 代码尚不支持 Rust 代码，但对于各种 systemd 程序/叶组件，现在已经支持使用 Rust。这是不使用 Cargo 的 Rust。对于核心 systemd 代码中的 Rust，还有一些 Rust 阻碍需要首先解决。\n\nsystemd 对 Rust 的支持始于一个新组件 systemd-keyring-setup，它是用 Rust 编程语言编写的。新的 Rust 版 systemd-keyring-setup 实用程序用于在启动过程中配置密钥环并将 X.509 证书注册到内核的 dm-verity / fs-verity / BPF 密钥环中，并在之后处理它们。\n\n这个 systemd-keyring-setup 代码尚未合并，但预计很快会合并，因为 Rust 基础设施已经落地。最初它全部是一个大提交的一部分，后来为了 Rust 启用、systemd-keyring-setup 以及这个新组件的其他准备工作而被拆分。\n\nsystemd 开发者不打算将现有的 C 代码移植到 Rust，所有 Rust 代码都用 Meson 构建，不使用 Cargo，并且只要求 C 链接。\n\nsystemd 的 Rust 组件比 C 版本略大，一个测试程序为 32KB，而其 C 版本为 20KB。至少目前，systemd 的 Rust 支持是可选的，由 Meson 选项切换，默认值为 auto。\n\n关于 systemd 中 Rust 程序支持的更多细节可以通过以下方式找到：已合并，最终将成为 systemd 263。\n\nsystemd-appd 已提交审查，以集中跟踪用户的应用程序\nsystemd 262 发布，带有针对未审查代码的 AI/LLM 金丝雀、LUO 集成\nsystemd 262-rc2 添加了一个 AI 金丝雀，用于检测未审查的 AI/LLM 代码贡献\nsystemd 262-rc1 发布，带有实时更新编排器集成及更多内容\nsystemd 261 发布，带有新的 systemd-sysinstall OS 安装程序、IMDSD 和 Storagectl\nsystemd 261-rc3 发布，单个二进制文件现在嵌入 dlopen ELF 元数据注释\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 撰写了 20,000 多篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动程序和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。他可以通过以下方式关注：\n\n几个 Linux 内核漏洞意外发布到公共内核邮件列表\nLinus Torvalds 的 AI 代码改进：重构代码带来巨大性能提升\nLinus Torvalds 在 Linux 7.4 中消除了不安全的 __get_user() 和 __put_user() 函数\nOmarchy 通过避免 XDG 开销使 Web 浏览器启动更快\nWine 11.20 发布，更改了 CD-ROM 支持\nX.Org 库又有 17 个安全漏洞被公开\nLinux 7.3 的最佳功能：性能改进、大量来自 Valve 的贡献\nLinux 7.3 发布，具有更快的 I/O 性能、AMD Zen 6 准备工作及更多内容\n同时拥有无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "a14c880c7201a8ebe9371c190e815203": {
+    "id": "a14c880c7201a8ebe9371c190e815203",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-MM",
+    "title_en": "539 MM Patches Merged For Linux 7.4 From Optimizations To More DAMON",
+    "summary_en": "Andrew Morton sent out the big set of memory management \"MM\" related patches for the Linux 7.4 merge window. This cycle it topped out at 539 total patches and a reviewed rate of 76%...",
+    "pub_date": "Sat, 24 Oct 2026 07:05:56 -0400",
+    "title_zh": "Linux 7.4 合并 539 个 MM 补丁：从优化到更多 DAMON 工作",
+    "summary_zh": "Linux 7.4 合并窗口已接收 539 个内存管理（MM）补丁，审核率为 76%。主要更新包括：DAMON 新增对 HugeTLB 内存的访问监控和自动调优的大页折叠机制；/proc/PID/smaps_rollup 使用 per-VMA 锁降低延迟；优化 zone-device 结构页初始化和 MGLRU 性能；交换代码修复与清理；以及更多 page-to-folio 转换。",
+    "fulltext_zh": "Andrew Morton 为 Linux 7.4 合并窗口发送了大量内存管理（MM）相关补丁。本周期补丁总数达到 539 个，审核率为 76%。\n\n与大多数周期一样，MM 补丁散布于性能优化、folio 转换以及围绕 DAMON 数据访问监控的持续工作之中。\n\nDAMON 在每个内核周期都持续获得大量工作。DAMON 的变更包括支持对 HugeTLB 支持的内存进行访问监控。DAMON 还新增了一种自动调优机制，用于折叠大页。\n\n/proc/PID/smaps_rollup 现在在可能的情况下使用 per-VMA 锁，以在另一个线程忙于更改其映射时“显著”降低延迟。\n\n本轮的 MM 优化包括通过避免冗余工作来加速 zone-device 结构页的初始化。多代 LRU（MGLRU）代码也有一些性能工作。\n\nLinux 交换代码进行了一些修复和代码清理。\n\nLinux 内核中继续发生更多向使用 folio 的转换。交换 I/O 和其他元素中进行了一些 page-to-folio 转换。\n\n有关 Linux 7.4 众多 MM 变更的更多细节，可通过已合并到 Linux Git 的内容查看。"
   }
 }
