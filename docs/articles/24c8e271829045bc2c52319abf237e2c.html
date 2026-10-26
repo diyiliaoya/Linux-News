@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DistroWatch 周刊，第1196期 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月26日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">DistroWatch</span>
+  </div>
+
+  <h1>DistroWatch 周刊，第1196期</h1>
+
+  <div class="article-summary">本期 DistroWatch 周刊报道了 Fedora 更新虚拟控制台驱动、OpenBSD 测试新的 WINE 移植、使用 Web 安装器安装 FreeBSD、SparkyLinux 发布新分支等新闻。此外，还包含上周发布的 OpenBSD 8.0、siduction 2026.1.0 等发行版，以及关于伦理源代码的民意调查、技巧文章和问答栏目。</div>
+
+  <div class="article-body"><p>DistroWatch 周刊，第1196期（DistroWatch.com 新闻）</p><p>DistroWatch.com 由以下赞助商支持</p><p>新闻/观点/评论 ▼</p><p>发布公告</p><p>DW 周刊 / 评论存档</p><p>访客评分与评论</p><p>项目评分排名</p><p>播客、新闻通讯与评论</p><p>跨发行版比较软件包</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停止的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与窍门专栏</p><p>误区与误解专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>可视化发行版家族树</p><p>常见问题</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>Sparky 项目推出 SparkyOS</p><p>使用 Sylve 安装 FreeBSD</p><p>OpenBSD 获得 64 位 WINE 移植</p><p>Fedora 切换控制台驱动</p><p>GNOME OS 引入“预览”变体</p><p>Haiku 开发者打磨操作系统的诸多方面</p><p>Mint 更长开发周期的好处</p><p>Peppermint 团队更新 PepVoid</p><p>Chimera 幕后</p><p>NetBSD 超额完成筹款目标</p><p>易于使用的 PBX - 托管或自管理</p><p>Linux 电话系统</p><p>免费实时聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程工作应用：iOS 或 Android</p><p>免费视频会议</p><p>3CX 的 VoIP / PBX 操作指南</p><p>不要措手不及，制定灾难恢复计划！</p><p>必要的实时聊天报告和统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成</p><p>3CX StartUP 的 5 大杀手级功能</p><p>别做“那种”人 第1卷：保管好复杂凭证</p><p>别做“那种”人 第2卷：呼叫欺诈</p><p>别做“那种”人 第3卷：四大安全提示</p><p>别做“那种”人 第4卷：监控你的实例</p><p>本月 Redox - 2026年9月</p><p>Red Hat 周五五条 - 2026年10月23日</p><p>Ubuntu 每周新闻 966</p><p>Full Circle 每周新闻</p><p>最新新闻与更新</p><p>新闻筛选选项</p><p>DistroWatch 周刊，第1196期</p><p>新闻：Fedora 更新虚拟控制台驱动，OpenBSD 测试新的 WINE 移植，使用基于 Web 的安装器安装 FreeBSD，SparkyLinux 发布新分支</p><p>问答：展望未来</p><p>上周发布：OpenBSD 8.0、siduction 2026.1.0、发行版发布：Essora Eos 20261021、UBports 24.04-2.2 和 24.04-1.6</p><p>种子角落：KDE Linux、Kicksecure、TUXEDO OS</p><p>民意调查：你如何看待伦理源代码的理念？</p><p>网站新闻：捐赠与赞助商</p><p>阅读本周 DistroWatch 周刊的更多内容....</p><p>Snøfrix 是一张演示 CD，面向所有想在 Linux 上尝试自由软件的人，重点在于教育、娱乐和多媒体。理想情况下，它应包含日常计算机使用所需的所有程序，并以吸引人且易于使用的格式呈现。Snøfrix 的主要特点是精选了大量游戏，包括 FreeCiv、Frozen Bubble 和 Tux Racer。Snøfrix 包含标准办公软件，邮件使用 Kontact/KMail，文字处理使用 OpenOffice.org，以及标准互联网软件，网页浏览使用 Firefox，即时通讯使用 Gaim。该项目提供支持多种欧洲语言的本地化 CD 镜像。</p><p>技巧与窍门：在安装发行版后更改 init 软件</p><p>问答：处理生成的大量日志文件</p><p>问答：Live 发行版与已安装发行版的性能对比</p><p>技巧与窍门：如何查找文件</p><p>问答：检测支持的架构</p><p>技巧与窍门：运行 Mandriva “Cooker”</p><p>问答：浏览手册页</p><p>问答：对驱动器进行映像并压缩</p><p>问答：使用 GPG 进行私人通信和备份</p><p>误区与误解：开源与中央权威</p><p>版权所有 © 2001 - 2026 Atea Ataroa Limited。保留所有权利。所有商标均为其各自所有者的财产。</p><p>更改隐私设置</p><p>联系、更正和建议：</p><p>bc1qxes3k2wq3uqzr074tkwwjmwfe63z70gwzfu4lx</p><p>lnurl1dp68gurn8ghj7ampd3kx2ar0veekzar0wd5xjtnrdakj7tnhv4kxctttdehhwm30d3h82unvwqhhxarpw3jkc7tz</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://distrowatch.com/13001" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

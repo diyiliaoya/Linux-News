@@ -17400,5 +17400,115 @@
     "title_zh": "Linux 7.4 合并 539 个 MM 补丁：从优化到更多 DAMON 工作",
     "summary_zh": "Linux 7.4 合并窗口已接收 539 个内存管理（MM）补丁，审核率为 76%。主要更新包括：DAMON 新增对 HugeTLB 内存的访问监控和自动调优的大页折叠机制；/proc/PID/smaps_rollup 使用 per-VMA 锁降低延迟；优化 zone-device 结构页初始化和 MGLRU 性能；交换代码修复与清理；以及更多 page-to-folio 转换。",
     "fulltext_zh": "Andrew Morton 为 Linux 7.4 合并窗口发送了大量内存管理（MM）相关补丁。本周期补丁总数达到 539 个，审核率为 76%。\n\n与大多数周期一样，MM 补丁散布于性能优化、folio 转换以及围绕 DAMON 数据访问监控的持续工作之中。\n\nDAMON 在每个内核周期都持续获得大量工作。DAMON 的变更包括支持对 HugeTLB 支持的内存进行访问监控。DAMON 还新增了一种自动调优机制，用于折叠大页。\n\n/proc/PID/smaps_rollup 现在在可能的情况下使用 per-VMA 锁，以在另一个线程忙于更改其映射时“显著”降低延迟。\n\n本轮的 MM 优化包括通过避免冗余工作来加速 zone-device 结构页的初始化。多代 LRU（MGLRU）代码也有一些性能工作。\n\nLinux 交换代码进行了一些修复和代码清理。\n\nLinux 内核中继续发生更多向使用 folio 的转换。交换 I/O 和其他元素中进行了一些 page-to-folio 转换。\n\n有关 Linux 7.4 众多 MM 变更的更多细节，可通过已合并到 Linux Git 的内容查看。"
+  },
+  "4195c6f3ff7ef7439516ca52f28bdb26": {
+    "id": "4195c6f3ff7ef7439516ca52f28bdb26",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/launchpad-ppa-dedicated-bug-tracker",
+    "title_en": "Ubuntu users can now file bugs against specific Launchpad PPAs",
+    "summary_en": "Launchpad now offers bug tracking for personal package archives (PPAs), making it easier for users to report issues specific to software within a PPA. Why does that matter? Well, not all PPAs are maintained by their upstream counterparts – folks who, frankly, aren&#8217;t always minded to care about quirks in their software that might be down to someone else&#8217;s packaging methods. Plus, PPAs are often used to provide newer or experimental versions of software that the version in the standard",
+    "pub_date": "Sun, 25 Oct 2026 23:41:00 +0000",
+    "title_zh": "Ubuntu 用户现在可以针对特定 Launchpad PPA 提交缺陷报告",
+    "summary_zh": "Launchpad 现已为个人软件包档案（PPA）提供缺陷跟踪功能，用户可针对 PPA 中的软件包提交问题报告。此举有助于区分标准 Ubuntu 仓库与 PPA 中的软件版本，减轻开发者和维护者分类修复缺陷的负担。用户可在 Launchpad 上进入相应 PPA 选择报告缺陷。此外，Launchpad 计划在 27.10 周期末淘汰蓝图功能，并考虑构建现代翻译平台。",
+    "fulltext_zh": "Ubuntu 用户现在可以针对特定 Launchpad PPA 提交缺陷报告 - OMG! Ubuntu\n\nLaunchpad 现已为个人软件包档案（PPA）提供缺陷跟踪功能，使用户更容易报告 PPA 内特定软件的问题。\n\n为什么这很重要？并非所有 PPA 都由其上游对应方维护——坦率地说，这些人并不总是关心其软件中可能由他人打包方式引起的特殊问题。\n\n此外，PPA 常用于提供比标准 Ubuntu 仓库中更新或实验性的软件版本，不同的 PPA 可以分发同一软件的不同版本。\n\n借助新的跟踪支持，用户终于可以针对从该 PPA 安装的软件包提交问题。缺陷可以涉及整个 PPA、其中的单个源码包，或针对特定 Ubuntu 版本的构建。\n\nCanonical 的 İlker Emre Koç 说明了这一好处：\n\n用户从测试 PPA 安装了较新版本的软件，然后遇到崩溃。现在可以针对测试 PPA 中的版本提交问题，而不是针对软件包报告问题（后者可能暗示 Ubuntu 仓库中的版本受到影响）。\n\n对于使用 PPA 分发自己软件的开发者以及为他人软件打包的维护者来说，这一期待已久的功能应能减轻分类和修复缺陷的负担。\n\nPPA 缺陷跟踪已在 Launchpad 上线。开发者可以前往其 PPA 并选择相应选项来探索可用功能——想要报告异常的用户也可以这样做。\n\n在其他 Launchpad 新闻中，这个代码托管站点将在 27.10 周期末（所以还有一年）淘汰其蓝图功能，原因是使用率低。它还在考虑在 Launchpad 之上创建一个“现代、专门构建的翻译平台”。"
+  },
+  "16b244a714c580a0e139c098fe35cc09": {
+    "id": "16b244a714c580a0e139c098fe35cc09",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/supertuxkart-goes-offline-php2shell",
+    "title_en": "PHP2Shell scare sees SuperTuxKart pull its online server",
+    "summary_en": "SuperTuxKart has taken several online services offline, having pulled the server that powers them rather than risk it being exploited by PHP2shell. The open-source karting game is not alone in &#8216;pitting&#8217; to patch, with Wikimedia, DeviantArt, government websites and many more taking various systems offline to harden against it. While offline, gamers can&#8217;t reset their online account passwords, check rankings or upload new add-ons. Offline components, like split-screen and LAN mult",
+    "pub_date": "Sun, 25 Oct 2026 05:05:13 +0000",
+    "title_zh": "PHP2Shell 恐慌导致 SuperTuxKart 下线在线服务器",
+    "summary_zh": "开源卡丁车游戏 SuperTuxKart 因 PHP2Shell 漏洞恐慌，主动下线其在线服务器以防被利用。玩家暂时无法重置密码、查看排名或上传新插件，但离线功能及注册用户的在线游戏和插件下载仍可用。项目决定用 Python 重写服务器，弃用 PHP，预计需数周工程时间，并需安全审计后才能迁移账户。项目已发起筹款，安全公司将匹配工程时间捐赠。",
+    "fulltext_zh": "PHP2Shell 恐慌导致 SuperTuxKart 下线在线服务器 - OMG! Ubuntu\n\n已下线多项在线服务，并撤下了支撑这些服务的服务器，而不是冒险让其被利用。\n\n这款开源卡丁车游戏并非唯一在“修补”上陷入困境的，政府网站及许多其他机构也纷纷下线各类系统以加强防护。\n\n离线期间，玩家无法重置在线账户密码、查看排名或上传新插件。离线组件（如分屏和局域网多人游戏）确实可用，在线插件下载和在线游戏也可用，但仅限注册用户。\n\n早在 10 月 17 日就记录到了试图利用 php2shell 的攻击，这距离该漏洞公开披露仅四天。其自己的服务器未被入侵，但建议任何在其他地方重复使用 SuperTuxKart Online 密码的人，去那里更改密码。\n\n由于旧服务器运行的是过时版本的 PHP，但迁移到新版本需要对十多年前的代码进行修改。一家审查了部分代码的安全公司告诉该项目，除非重写代码，否则不要将其重新上线。\n\n所以这就是它正在做的事情。\n\nSuperTuxKart 正在用 Python 重建服务器，像丢弃游戏内泡泡糖一样弃用 PHP。它不会使用 AI 编写代码（必须由人工测试、阅读并签字确认代码，以确保他们知道代码的功能）。\n\n在新服务器上启用完整功能集预计需要数周的工程时间，尽管开发已进行数月——功能足以维持注册用户的在线游戏和插件下载运行。\n\n但仍存在重大缺口（如账户创建），并且在任何账户迁移之前都需要进行安全审计。\n\n与许多开源项目一样，SuperTuxKart 依赖志愿者。为了帮助其新服务器工作冲过终点线，它发起了一项筹款活动。一家安全公司将匹配捐赠的工程时间。"
+  },
+  "24c8e271829045bc2c52319abf237e2c": {
+    "id": "24c8e271829045bc2c52319abf237e2c",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/13001",
+    "title_en": "DistroWatch Weekly, Issue 1196",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  This week in DistroWatch Weekly: \nReview: Ubuntu 26.10\nNews: Fedora updates virtual console driver, OpenBSD tests new WINE port, installing FreeBSD with web-based installer, SparkyLinux publishes new branch\nQuestions and answers: Gazing into the future\nReleased last week: OpenBSD 8.0, siduction 2026.1.0, Distribution Release: Essora Eos 20261021, UBports 24.04-2.2 and 24.04-1.6\nTorrent....",
+    "pub_date": "",
+    "title_zh": "DistroWatch 周刊，第1196期",
+    "summary_zh": "本期 DistroWatch 周刊报道了 Fedora 更新虚拟控制台驱动、OpenBSD 测试新的 WINE 移植、使用 Web 安装器安装 FreeBSD、SparkyLinux 发布新分支等新闻。此外，还包含上周发布的 OpenBSD 8.0、siduction 2026.1.0 等发行版，以及关于伦理源代码的民意调查、技巧文章和问答栏目。",
+    "fulltext_zh": "DistroWatch 周刊，第1196期（DistroWatch.com 新闻）\n\nDistroWatch.com 由以下赞助商支持\n\n新闻/观点/评论 ▼\n发布公告\nDW 周刊 / 评论存档\n访客评分与评论\n项目评分排名\n播客、新闻通讯与评论\n跨发行版比较软件包\n显示所有发行版的软件包版本\n搜索发行版 - 高级\n已停止的发行版\n教程与学习 ▼\n搜索文章\n问答专栏\n技巧与窍门专栏\n误区与误解专栏\n简化手册页\n其他操作系统\n发行版验证密钥\n可视化发行版家族树\n常见问题\n我们的捐赠计划\n\n小型企业电话系统\nSparky 项目推出 SparkyOS\n使用 Sylve 安装 FreeBSD\nOpenBSD 获得 64 位 WINE 移植\nFedora 切换控制台驱动\nGNOME OS 引入“预览”变体\nHaiku 开发者打磨操作系统的诸多方面\nMint 更长开发周期的好处\nPeppermint 团队更新 PepVoid\nChimera 幕后\nNetBSD 超额完成筹款目标\n易于使用的 PBX - 托管或自管理\nLinux 电话系统\n免费实时聊天解决方案\n集成呼叫中心软件\n联络中心软件\n远程工作应用：iOS 或 Android\n免费视频会议\n3CX 的 VoIP / PBX 操作指南\n不要措手不及，制定灾难恢复计划！\n必要的实时聊天报告和统计\n导致呼叫欺诈的常见错误\nWhatsApp Business 与 3CX WhatsApp API 集成\n3CX StartUP 的 5 大杀手级功能\n别做“那种”人 第1卷：保管好复杂凭证\n别做“那种”人 第2卷：呼叫欺诈\n别做“那种”人 第3卷：四大安全提示\n别做“那种”人 第4卷：监控你的实例\n本月 Redox - 2026年9月\nRed Hat 周五五条 - 2026年10月23日\nUbuntu 每周新闻 966\nFull Circle 每周新闻\n\n最新新闻与更新\n新闻筛选选项\nDistroWatch 周刊，第1196期\n新闻：Fedora 更新虚拟控制台驱动，OpenBSD 测试新的 WINE 移植，使用基于 Web 的安装器安装 FreeBSD，SparkyLinux 发布新分支\n问答：展望未来\n上周发布：OpenBSD 8.0、siduction 2026.1.0、发行版发布：Essora Eos 20261021、UBports 24.04-2.2 和 24.04-1.6\n种子角落：KDE Linux、Kicksecure、TUXEDO OS\n民意调查：你如何看待伦理源代码的理念？\n网站新闻：捐赠与赞助商\n阅读本周 DistroWatch 周刊的更多内容....\n\nSnøfrix 是一张演示 CD，面向所有想在 Linux 上尝试自由软件的人，重点在于教育、娱乐和多媒体。理想情况下，它应包含日常计算机使用所需的所有程序，并以吸引人且易于使用的格式呈现。Snøfrix 的主要特点是精选了大量游戏，包括 FreeCiv、Frozen Bubble 和 Tux Racer。Snøfrix 包含标准办公软件，邮件使用 Kontact/KMail，文字处理使用 OpenOffice.org，以及标准互联网软件，网页浏览使用 Firefox，即时通讯使用 Gaim。该项目提供支持多种欧洲语言的本地化 CD 镜像。\n\n技巧与窍门：在安装发行版后更改 init 软件\n问答：处理生成的大量日志文件\n问答：Live 发行版与已安装发行版的性能对比\n技巧与窍门：如何查找文件\n问答：检测支持的架构\n技巧与窍门：运行 Mandriva “Cooker”\n问答：浏览手册页\n问答：对驱动器进行映像并压缩\n问答：使用 GPG 进行私人通信和备份\n误区与误解：开源与中央权威\n\n版权所有 © 2001 - 2026 Atea Ataroa Limited。保留所有权利。所有商标均为其各自所有者的财产。\n更改隐私设置\n联系、更正和建议：\nbc1qxes3k2wq3uqzr074tkwwjmwfe63z70gwzfu4lx\nlnurl1dp68gurn8ghj7ampd3kx2ar0veekzar0wd5xjtnrdakj7tnhv4kxctttdehhwm30d3h82unvwqhhxarpw3jkc7tz"
+  },
+  "1e756842337666b20dd7bfab9f7f9aa1": {
+    "id": "1e756842337666b20dd7bfab9f7f9aa1",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/13000",
+    "title_en": "Mobile OS Releases: UBports 24.04-2.2, 24.04-1.6",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The UBports team has announced an update for their mobile operating system. The new releases focus on fixing certificate issues related to eMudhra, along with a number of small improvements and bug fixes. \"These releases are made in response to the eMudhra Intermediate CA Compromise incident. They include....",
+    "pub_date": "",
+    "title_zh": "移动操作系统发布：UBports 24.04-2.2、24.04-1.6",
+    "summary_zh": "UBports 发布了 24.04-2.2 和 24.04-1.6 两个版本，主要修复了与 eMudhra 相关的证书问题，并包含来自 Ubuntu 上游的更新及自身修改，以阻止链接到受损证书的根证书。此外还包含少量错误修复和改进，如修复 AppArmor 导致 Morph 浏览器无法启动的问题，以及为 VoLTE 做准备。已知问题是 Gallery 应用 3.2.0 存在无法打开相册的回归，将通过 Open-Store 尽快更新。",
+    "fulltext_zh": "移动操作系统发布：UBports 24.04-2.2、24.04-1.6（DistroWatch.com 新闻）\n\nDistroWatch.com 由以下赞助商支持\n新闻/观点/评论 ▼\n发布公告\nDW 周刊 / 评论存档\n访客评分与评论\n按评分项目排名\n播客、新闻通讯与评论\n跨发行版比较软件包\n显示所有发行版的软件包版本\n搜索发行版 - 高级\n已停止的发行版\n教程与学习 ▼\n搜索文章\n问答专栏\n技巧与窍门专栏\n误区与误解专栏\n简化手册页\n其他操作系统\n发行版验证密钥\n可视化发行版家族树\n常见问题\n我们的捐赠计划\n小型企业电话系统\nSparky 项目推出 SparkyOS\n使用 Sylve 安装 FreeBSD\nOpenBSD 获得 64 位 WINE 移植\nFedora 切换控制台驱动\nGNOME OS 推出“预览”变体\nHaiku 开发者打磨操作系统的诸多方面\nMint 更长开发周期的优势\nPeppermint 团队更新 PepVoid\nChimera 幕后\nNetBSD 超额完成筹款目标\n易于使用的 PBX - 托管或自管理\nLinux 电话系统\n免费实时聊天解决方案\n集成呼叫中心软件\n联络中心软件\n远程工作应用：iOS 或 Android\n免费视频会议\n3CX 的 VoIP / PBX 操作指南\n不要措手不及，制定灾难恢复计划！\n必要的实时聊天报告和统计\n导致呼叫欺诈的常见错误\nWhatsApp Business 与 3CX WhatsApp API 集成\n3CX StartUP 的 5 大杀手级功能\n别做“那种”人 第1卷：保管好复杂凭据\n别做“那种”人 第2卷：呼叫欺诈\n别做“那种”人 第3卷：四大安全提示\n别做“那种”人 第4卷：监控你的实例\n本月 Redox - 2026 年 9 月\nRed Hat 周五五条 - 2026 年 10 月 23 日\nUbuntu 每周通讯 966\nFull Circle 每周新闻\n最新新闻和更新\n新闻过滤选项\n移动操作系统发布：UBports 24.04-2.2、24.04-1.6\n团队已宣布其移动操作系统的更新。新版本侧重于修复与 eMudhra 相关的证书问题，以及一些小的改进和错误修复。“\n这些版本是针对 eMudhra 中间 CA 泄露事件而发布的\n。它们包含来自 Ubuntu 上游的更改以及我们自己的更改，这些更改阻止了链接到受损证书的根证书。除此之外，两个版本都包含少量错误修复和改进，这些在此期间已合并到各自的系列中。除此之外，两个版本都包含少量错误修复和改进，这些在此期间已合并到各自的系列中。最值得注意的是：修复了 AppArmor 相关问题，该问题导致用户从 24.04-1.5 升级到 24.04-2.0 或更高版本后无法启动 Morph 浏览器。为 VoLTE 协议栈做准备工作，以支持未来较新设备上的 VoLTE（仅 24.04-2.2）。不幸的是，两个版本都有一个已知问题——两个版本中包含的 Gallery 应用 3.2.0 存在一个回归，导致相册无法打开。鉴于重新构建新 RC 的成本相对较高，我们决定继续发布，然后尽快通过 Open-Store 发布 Gallery 应用的新更新。”\n更多细节可以在\n中找到。支持的设备列表和安装选项可以在项目的\n中找到。\n最近相关新闻和发布\n移动操作系统发布：UBports 24.04-2.2、24.04-1.6\n移动操作系统发布：UBports 24.04-2.0\n移动操作系统发布：UBports 24.04-1.3\n移动操作系统发布：UBports 24.04、20.04 OTA-12\n移动操作系统发布：UBports 24.04\n移动操作系统发布：UBports 20.04 OTA-9\nUBports 是 Canonical 的 Ubuntu Touch 移动设备操作系统的社区开发分支。UBports 致力于让该移动操作系统在新设备上运行，提供软件更新，并将新版本的 Ubuntu 移植到移动设备上。\nhttps://forums.ubports.com/\n替代用户论坛\nhttps://docs.ubports.com/\nhttps://ubports.com/communit"
+  },
+  "39b7a05ec82f1e5fdc3b554e227e8db7": {
+    "id": "39b7a05ec82f1e5fdc3b554e227e8db7",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Redox-OS-September-2026",
+    "title_en": "Redox OS Landed Nice Performance Improvements In September",
+    "summary_en": "The Rust-based open-source operating system Redox OS had a very eventful September as they outlined in a status update published this weekend...",
+    "pub_date": "Sun, 25 Oct 2026 20:24:45 -0400",
+    "title_zh": "Redox OS 在九月取得了不错的性能改进",
+    "summary_zh": "Redox OS 在2026年9月进行了多项性能优化，包括通过直接上下文切换绕过调度器，将IPC延迟降低24%，小缓冲区I/O性能提升约5%；减少内核TLB使用使TLB未命中降低75%；避免不必要的AVX寄存器保存/恢复再降IPC延迟14%。此外还改进了SDL2性能，并新增Intel Tiger Lake GPU外接显示器热插拔、启动修复、升级Rust uutils 0.11及构建系统LLVM Clang交叉编译支持等。",
+    "fulltext_zh": "基于Rust的开源操作系统Redox OS在九月非常忙碌，他们在本周末发布的状态更新中概述了相关情况。\n\nRedox OS开发者在这个从零开始构建的Rust操作系统上继续取得巨大进步。他们最新的开发动态吸引了我，尤其是多项性能优化。\n\nRedox OS现在支持直接上下文切换，当应用程序调用系统服务时可以绕过调度器。Redox的调度器此前在上下文切换时使用开销昂贵的BTreeMap数据结构，成本相当高。避免这一使用后，据报告IPC延迟降低了24%，小缓冲区的I/O性能提升了约5%。\n\nRedox OS还减少了内核TLB的使用，在多个方面带来了不错的收益，包括TLB未命中减少了75%。\n\n避免不必要的AVX寄存器保存/恢复又使IPC延迟降低了14%。\n\n性能方面还包括更好的SDL2性能。\n\nRedox OS近期其他工作包括：为Intel Tiger Lake GPU提供外接显示器热插拔支持、启动修复、升级至Rust uutils 0.11，以及在Redox构建系统中支持LLVM Clang以提供交叉编译支持。此版本还包含各种其他内核和驱动改进。\n\n关于Redox OS在2026年9月众多令人兴奋的变更的更多细节，可通过今天的报道了解。"
+  },
+  "f604d31b8110220b79650a17590596fd": {
+    "id": "f604d31b8110220b79650a17590596fd",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Wayland-ext-transient-output",
+    "title_en": "New Wayland Protocol Proposed For VNC/Remote Software",
+    "summary_en": "Prominent Wayland developer Simon Ser sent out a merge request today for introducing the new ext-transient-output protocol. With ext-transient-output, it's intent is for helping remoting software like VNC servers in a Wayland world...",
+    "pub_date": "Sun, 25 Oct 2026 11:05:18 -0400",
+    "title_zh": "新的Wayland协议提案：面向VNC/远程软件",
+    "summary_zh": "知名Wayland开发者Simon Ser提交了新的ext-transient-output协议合并请求，旨在帮助VNC服务器等远程软件在Wayland环境下工作。该协议类似于ext-transient-seat，但针对Wayland输出（wl_output），允许特权客户端动态创建独立的虚拟输出，这些输出在客户端销毁对象时从合成器中移除。虚拟输出可通过ext-image-copy-capture捕获并由远程客户端显示。目前wlroots合成器库已有实验性实现。",
+    "fulltext_zh": "知名Wayland开发者Simon Ser今日提交了一份合并请求，引入新的ext-transient-output协议。ext-transient-output旨在帮助VNC服务器等远程软件在Wayland世界中工作。\n\next-transient-output协议类似于ext-transient-seat，但针对的是Wayland输出（wl_output）。ext-transient-seat协议允许特权客户端动态创建独立的seat。这些临时seat与虚拟键盘/指针输入协议配合，可用于远程桌面/VNC软件，而ext-transient-output将负责为特权客户端提供动态输出支持。虚拟输出随后可通过ext-image-copy-capture捕获，并由远程客户端显示。\n\n今日发布的提案阐述了该协议。协议提案总结如下：\n\n“临时输出协议可供特权客户端创建独立的虚拟输出，当客户端销毁对象时，这些输出将从合成器中移除。\n\n该协议旨在与输出捕获协议（如“ext_output_image_capture_source_manager_v1”）配合用于远程用例。\n\n此协议创建的“wl_output”全局对象不绑定到特定硬件设备。”\n\n目前，wlroots合成器库已有ext-transient-output的实验性实现，见该草案合并请求。"
+  },
+  "2cb6151dee547e2777967a81bb26d3ce": {
+    "id": "2cb6151dee547e2777967a81bb26d3ce",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-Sound",
+    "title_en": "Linux 7.4 Sound Changes Merged: \"The AI Flood Continues\"",
+    "summary_en": "Linux sound subsystem maintainer Takashi Iwai of SUSE began the Linux 7.4 sound pull request by noting that \"the AI flood continues\" with there continuing to be a lot of new patches coming as a result of AI/LLM agents devising patches as well as uncovering new kernel bugs...",
+    "pub_date": "Sun, 25 Oct 2026 10:01:55 -0400",
+    "title_zh": "Linux 7.4 声音子系统变更合并：“AI 洪流仍在继续”",
+    "summary_zh": "Linux 7.4 声音子系统更新已合并，维护者 Takashi Iwai 称“AI 洪流仍在继续”，大量由 AI/LLM 代理生成的补丁持续涌入。本次更新包括 ALSA 核心代码加固、压缩卸载缓冲区泄漏修复、JACK 竞态修复，并弃用 OSS 音序器模拟。硬件方面新增 Intel Tigerlake 及更新平台的 SOF IPC4 压缩音频播放支持、AMD ACP 7.0/7.F 声音 IP 支持（面向 Zen 6），以及多款新编解码器驱动。",
+    "fulltext_zh": "Linux 7.4 声音子系统变更合并：“AI 洪流仍在继续”\n2026 年 10 月 25 日 上午 10:01 EDT。\n\nSUSE 的 Linux 声音子系统维护者 Takashi Iwai 在发起 Linux 7.4 声音拉取请求时指出，“AI 洪流仍在继续”，因为 AI/LLM 代理设计补丁并发现新的内核缺陷，导致大量新补丁持续涌入。\n\nTakashi 进一步解释说，这又是一个繁忙的周期，声音子系统经历了大量核心代码加固，以及新平台和编解码器的变更。核心 ALSA 代码针对一些竞态条件进行了加固，压缩卸载代码中修复了缓冲区泄漏，JACK 代码中修复了竞态问题，还有其他竞态条件和更典型的 C 语言缺陷修复。OSS 音序器模拟代码在 Linux 7.4 中已被标记为弃用。\n\n在硬件方面，Linux 7.4 声音更新包括对 Intel Tigerlake 及更新平台上 SOF IPC4 压缩音频播放的支持。还有对 AMD ACP 7.0/7.F 声音 IP 的支持，包含 SoundWire 和 PDM 控制器。新的 AMD ACP 7.0/7.F IP 出现在即将到来的 Ryzen Zen 6 平台上。\n\n此外，还为来自 Lenovo、ASUS、HP、Acer、HONOR、MSI 等厂商的许多不同 Intel/AMD 笔记本电脑添加了特例处理。\n\n新的编解码器驱动包括 ESS ES9039Q2M、Nuvoton NAU83G60 放大器、Senary SN624x SoundWire SDCA 编解码器。\n\n此外还有针对高通 Shikra 平台的 Qualcomm QAIF 驱动。\n\n关于 Linux 7.4 众多声音变更的更多细节，请参阅相关链接。\n\nAV2 视频编解码器采用获热议，SVT-AV2 正在开发\nFFmpeg 9.1 准备发布，包含 APV Vulkan 编码器、NVIDIA Optical Flow FRUC\nSound Open Firmware 2.15 发布，支持 AMD ACP 7.x、Intel UAOL\nOpenAPV 重大更新，推进高级专业视频编解码器\nDaVinci Resolve 21.1 发布——现已集成 AI 助手\nShotcut 26.9 视频编辑器测试版带来 UI 改进和更好的音频质量\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\n多个 Linux 内核漏洞被意外发布到公开内核邮件列表\nLinus Torvalds 的 AI 代码改进：重构代码带来巨大性能提升\nLinus Torvalds 在 Linux 7.4 中移除不安全的 __get_user() 和 __put_user() 函数\nOmarchy 通过避免 XDG 开销加快网页浏览器启动速度\nLinux 早期启动时物理内存分配器大幅提速：从约 268 秒降至约 50 毫秒\nFedora 45 第二次 NO-GO：推迟至 11 月发布\nLinux 7.3 发布，带来更快的 I/O 性能、AMD Zen 6 准备等\n1.7 万行新 Rust 内核代码将进入 Linux 7.4\n\n享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "f4080bb1b45fea150a133880daaa82ec": {
+    "id": "f4080bb1b45fea150a133880daaa82ec",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-Input",
+    "title_en": "Cheap GameSir Nova Lite Gaming Controller Supported By Linux 7.4",
+    "summary_en": "Following all the HID driver updates/additions in Linux 7.4, the input subsystem changes were merged this weekend for this new kernel version...",
+    "pub_date": "Sun, 25 Oct 2026 06:57:01 -0400",
+    "title_zh": "廉价 GameSir Nova Lite 游戏手柄获 Linux 7.4 支持",
+    "summary_zh": "Linux 7.4 内核的输入子系统更新已合并，XPad 驱动新增了对售价约 22 美元的 GameSir Nova Lite 无线游戏手柄的支持，仅添加设备 ID 即可实现力反馈震动等功能。此次更新还包含大量输入子系统修复，部分由 AI/LLM 代理完成。",
+    "fulltext_zh": "廉价 GameSir Nova Lite 游戏手柄获 Linux 7.4 支持\n2026 年 10 月 25 日 06:57 AM EDT。\n\n随着 Linux 7.4 的 HID 驱动更新/新增，输入子系统变更已于本周末合并至这个新内核版本。\n\nLinux 7.4 的输入子系统有许多不同的修复，其中一些是 AI/LLM 代理的成果。在输入硬件支持方面，常见的 XPad 驱动新增了对 GameSir Nova Lite 手柄的支持。\n\nGameSir Nova Lite 是一款无线游戏手柄，零售价约为 22 美元。虽然与市面上许多其他 PC 游戏手柄相比它很便宜，但它不一定是最好的。亚马逊产品页面指出，GameSir Nova Lite 是频繁退货的商品。\n\n为 Linux 7.4 合并的补丁只是在 XPad 驱动中现有 GameSir 手柄旁边添加了 GameSir Nova Lite 的设备 ID。至此，力反馈震动支持和其他功能在 Linux 上已处于良好状态。\n\nLinux 7.4 输入子系统变更的完整列表可通过以下链接查看。\n\nEpic Games 将通过反作弊 systemd 服务和 eBPF 改进 Linux 上的 Easy Anti-Cheat\nFEX 2610 发布，支持 AVX-VNNI，改进磁盘缓存\nD7VK 在 Vulkan 之上为旧版 Direct3D API 达到成熟\nLinux 7.3 新增对 Victrix Pro BFG 和 Azeron 手柄的支持\nSDL3 移植到 HarmonyOS / OpenHarmony\nFEX 2609 发布，JIT 性能更快，提供 JIT 磁盘缓存选项\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。\n\n多个 Linux 内核漏洞意外发布到公开内核邮件列表\nLinus Torvalds 的 AI 代码改进：重构代码带来巨大性能提升\nLinus Torvalds 在 Linux 7.4 中移除不安全的 __get_user() 和 __put_user() 函数\nOmarchy 通过避免 XDG 开销加快网页浏览器启动速度\nLinux 早期启动时物理内存分配器大幅提速：约 268 秒降至约 50 毫秒\nFedora 45 第二次 NO-GO：直到 11 月才发布\nLinux 7.3 发布，I/O 性能更快，为 AMD Zen 6 做准备等\n17k 行新 Rust 内核代码进入 Linux 7.4\n\n享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "23616c5fdfc0c77437d14a67bb682657": {
+    "id": "23616c5fdfc0c77437d14a67bb682657",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AV2-Adoption-Plus-SVT-AV2",
+    "title_en": "AV2 Video Codec Adoption Talked Up, SVT-AV2 Being Developed",
+    "summary_en": "Back in May the AV2 v1.0 specification was released for this next-generaton, royalty-free video codec. This week the Alliance For Open Media issued a press release talking up the early adoption of AV2...",
+    "pub_date": "Sun, 25 Oct 2026 06:42:00 -0400",
+    "title_zh": "AV2视频编解码器采用情况受热议，SVT-AV2正在开发中",
+    "summary_zh": "开放媒体联盟发布新闻稿，宣传AV2视频编解码器的早期采用势头，称其压缩效率比AV1提升约30%。谷歌已在YouTube和Chrome中试验AV2支持，Meta承诺在Facebook和Instagram视频中使用AV2，英特尔正在开发基于CPU的SVT-AV2编码器。",
+    "fulltext_zh": "AV2视频编解码器采用情况受热议，SVT-AV2正在开发中\n2026年10月25日 06:42 AM EDT。\n下一代免版税视频编解码器AV2 v1.0规范已发布。本周，开放媒体联盟发布新闻稿，宣传AV2的早期采用情况。\nAOMedia宣布AV2周围正出现“显著的生态系统势头”。他们指出，业界对这款免版税视频编解码器表现出浓厚兴趣，其支持者包括亚马逊、苹果、谷歌、英特尔、Netflix、三星等。据称，AV2的压缩效率比AV1高出约30%，同时改进了HDR性能和其他增强功能。\n谷歌一直在YouTube和Chrome网络浏览器中试验AV2支持。YouTube的AV2流媒体预计将于2027年初推出。\nMeta也承诺在Facebook和Instagram视频中使用AV2。\n据称，英特尔还在开发SVT-AV2，作为新的基于CPU的AV2视频编码器。此前，他们已在非常成功的SVT-AV1编码器上开展了其他可扩展视频技术（SVT）工作，以及SVT-HEVC和SVT-VP9等过往项目。\n更多关于AV2行业动态的详细信息，请参阅AOMedia新闻稿。"
+  },
+  "8a791cb8b73dc70a58c749796f1b4747": {
+    "id": "8a791cb8b73dc70a58c749796f1b4747",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/9to5linux-weekly-roundup-october-25th-2026",
+    "title_en": "9to5Linux Weekly Roundup: October 25th, 2026",
+    "summary_en": "9to5Linux Weekly Roundup for October 24th, 2026, brings news about Linux 7.3, GNU Linux-libre 7.3, SparkyOS, KDE Plasma 6.8.1, OpenSSL 4.1, siduction 2026.1, OBS Studio 33, COSMIC 1.11, KeePassXC 2.8, qBittorrent 5.3, MocaccinoOS 26.10, Audacious 4.6.2, DietPi 10.8, MKVToolNix 103, BleachBit 6.0.6, PipeWire 1.6.10, Shelly 3.1.9, Calibre 9.17, fwupd 2.1.9, Transmission 4.1.4, Agama 25, and more.\nThe post 9to5Linux Weekly Roundup: October 25th, 2026 appeared first on 9to5Linux - do not reproduce t",
+    "pub_date": "Sun, 25 Oct 2026 13:45:28 +0000",
+    "title_zh": "9to5Linux 每周综述：2026年10月25日",
+    "summary_zh": "本期9to5Linux周报汇总了2026年10月24日当周的重要Linux新闻，涵盖Linux 7.3内核、GNU Linux-libre 7.3、SparkyOS、KDE Plasma 6.8.1、OpenSSL 4.1、siduction 2026.1、OBS Studio 33、COSMIC 1.11、KeePassXC 2.8、qBittorrent 5.3、MocaccinoOS 26.10、Audacious 4.6.2、DietPi 10.8、MKVToolNix 103、BleachBit 6.0.6、PipeWire 1.6.10、Shelly 3.1.9、Calibre 9.17、fwupd 2.1.9、Transmission 4.1.4、Agama 25等众多软件更新。",
+    "fulltext_zh": "9to5Linux 2026年10月24日每周综述，带来关于Linux 7.3、GNU Linux-libre 7.3、SparkyOS、KDE Plasma 6.8.1、OpenSSL 4.1、siduction 2026.1、OBS Studio 33、COSMIC 1.11、KeePassXC 2.8、qBittorrent 5.3、MocaccinoOS 26.10、Audacious 4.6.2、DietPi 10.8、MKVToolNix 103、BleachBit 6.0.6、PipeWire 1.6.10、Shelly 3.1.9、Calibre 9.17、fwupd 2.1.9、Transmission 4.1.4、Agama 25等更多新闻。\n\n帖子《9to5Linux 每周综述：2026年10月25日》首次出现在9to5Linux上——请勿复制。"
   }
 }
