@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BSD 用户现在可以享受 Omarchy 风味了 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月27日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>BSD 用户现在可以享受 Omarchy 风味了</h1>
+
+  <div class="article-summary">Jordan Hubbard 借助 OpenAI 的 GPT 模型，在 FreeBSD 上构建了 Daemonarchy 项目，将 Omarchy 的安装程序和桌面外观移植到 FreeBSD 系统之上。该项目仅用不到两小时完成首版，现已发布多个版本，支持 ZFS 回滚、可选加密，并可通过现有 FreeBSD 系统安装。</div>
+
+  <div class="article-body"><p>Daemonarchy 保留了 Omarchy 的安装程序和外观，底层由 FreeBSD 处理系统。</p><p>Jordan Hubbard 于 1993 年与另外两人共同创立了 FreeBSD 项目，如今他在 OpenAI 的 GPT AI 模型的帮助下构建了 Daemonarchy。这个名字是对 Omarchy 的戏仿，用 BSD 守护进程取代了 Arch 作为基础。</p><p>至于 Omarchy，自从我们最初将其作为 Arch 的配置项目报道以来，它已经取得了长足发展。现在它可以从 ISO 安装，并成功吸引了大量资金。</p><p>无论如何，Daemonarchy 才诞生几周，就已经发布了多个版本，v1.3.1 于几小时前发布。</p><p>用户们一直在纠缠 Jordan，说 FreeBSD 应该像 Omarchy 一样易于设置且美观。这让他不禁思考：“为什么这还不存在？”他当时使用了 GPT，并用它来组建项目。</p><p>第一版耗时不到两小时。这个数字还不包括用于验证的构建时间。GPT 还为该项目挑选了名字。</p><p>该发行版所需的 ports 已上游到 FreeBSD 的 ports 树进行审查。安装程序还允许你在现有的 FreeBSD 系统之上安装 Daemonarchy。</p><p>Jordan 还将桌面所依赖的层归功于相关项目。</p><p>安装程序遵循 Omarchy 自身的安装程序，会询问键盘布局、账户详情、主机名和时区等常规基本信息。</p><p>Daemonarchy 可以占用整个磁盘，也可以安装到你选择的某个分区或空闲空间，最低需要 40 GB 存储空间。全盘安装会擦除驱动器，而分区模式只会覆盖你选择的分区。</p><p>由于安装程序不会缩小现有文件系统，任何双启动的用户都必须先从另一个操作系统腾出空间。所有内容都落在支持回滚的 ZFS 上，加密是可选的。</p><p>桌面就是 Omarchy 本身，仅做了 FreeBSD 所需的更改后移植过来，它运行在每日更新的快照上，每个镜像都固定到一个快照。</p><p>Wi-Fi 面板由相关组件支持，并使用 PipeWire 处理声音。蓝牙也可通过 FreeBSD 的蓝牙栈用于键盘和鼠标。</p><p>应用程序来自 FreeBSD 自己的软件包，使用 pkg 安装。Chromium 已预装。仅限 Linux 的应用暂时被搁置，直到特定版本在 FreeBSD 的 Linux 兼容层下经过测试。</p><p>Jails 为你提供携带自己软件包的隔离 FreeBSD 环境，而 bhyve 这个内置虚拟机监控程序则运行 Linux 和 Windows 等客户机虚拟机。</p><p>而且，如果你通过 Omarchy 的更新进行升级，它只会将更新应用于你的应用程序，而不动 FreeBSD 基础和内核。Daemonarchy 自己的软件包来自一个已签名的仓库，修复会在 ISO 版本之间发布。</p><p>壁纸、字标和登录主题都是项目自己的创作。</p><p>发布版略低于 2 GiB。使用 dd 将其写入 USB 驱动器，然后从中启动。</p><p>安装过程中需要互联网连接，因为安装程序会在进行过程中下载许多软件包。源代码位于 GitHub 上。</p><p>喜欢这次更新吗？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直在帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>跳过 Google 结果中的 AI 垃圾和 SEO 垃圾</p><p>告诉 Google 你更喜欢 It's FOSS，当你在搜索时，它会更频繁地显示我们由经验丰富的 Linux 用户创建的 Linux 新闻和教程。只需点击一下。</p><p>设为首选来源</p><p>🐧 玩今天的 Tuxdle——每日 Linux 单词谜题 →</p><p>在收件箱中获取 FOSS Weekly</p><p>一份健康的 Linux 新闻通讯，包含最新版本、相关新闻、技巧和教程、琐事和梗图、测验和桌面 Linux 用户的优惠。每周免费。</p><p>一个对开源软件、定制 PC 组装、赛车运动以及探索这个世界无限可能性充满热情的极客。</p><p>Systemd 创造者的初创公司为其 Linux 系统开放私人预览注册</p><p>ArmSoM Sige7s 将 RK3588S 放在树莓派大小的板上，</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/daemonarchy-overview/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

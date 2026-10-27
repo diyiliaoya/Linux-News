@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Systemd 创造者的初创公司开放其 Linux 系统私人预览报名 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月27日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Systemd 创造者的初创公司开放其 Linux 系统私人预览报名</h1>
+
+  <div class="article-summary">Systemd 创造者 Lennart Poettering 联合创立的 Amutable 公司推出 Amutable Foundations，这是一个只读、基于镜像的 Linux 系统，每台机器会生成自身状态的签名报告。系统采用不可变设计、签名统一内核镜像和测量启动，无包管理器和 SSH。公司同时提供镜像、更新仓库和控制平面服务，但未说明开源范围。现开放私人预览报名，首批合作伙伴将在未来几周内加入。</div>
+
+  <div class="article-body"><p>Systemd 创造者的初创公司开放其 Linux 系统私人预览报名</p><p>Amutable Foundations 是一个只读、基于镜像的系统，每台机器都会生成自身状态的签名报告。</p><p>在宣布这一基于 Linux 的实现之前，Amutable 已发布了两款开源工具：基于 Buck2 的构建系统，用于组合操作系统镜像，采用 MPL-2.0 许可；以及基于 TUF 的工具，用于将镜像分发到机器，采用 Apache-2.0 许可。</p><p>Amutable Foundations 带来的是一项服务：Amutable 为运营自有系统的组织和个人运行镜像、更新仓库、控制平面和漏洞修复。这些由公司运营的部分尚未声明许可证，且预览公告未说明 Foundations 除 tine 和 Quarry 之外有多少会开源。</p><p>系统包含什么？</p><p>该产品来自 Amutable，这家初创公司由 Lennart Poettering 今年早些时候与 Christian Brauner 和 Chris Kühl 共同创立。</p><p>该系统是不可变的，只读系统卷受保护，使用签名的统一内核镜像和测量启动。软件和配置均以签名镜像形式交付，机器只启动已签名的内容。</p><p>没有包管理器，也没有 SSH 或交互式 shell。变更意味着为集群中的每台机器提供新的签名镜像。</p><p>其镜像可复现，附带 SBOM，并从所选发行版的固定输入构建，tine 能够从 Fedora 或 CentOS Stream 导入软件包。</p><p>机器如何证明其状态</p><p>每台机器发送一份签名报告，记录其启动内容，从固件和引导加载程序到内核和操作系统，以及其运行的配置。</p><p>报告在启动时和定期发出，签名由 TPM 或支持机密计算的 CPU 支持。没有该硬件的机器可以回退到软件密钥。</p><p>Amutable 的控制平面验证来自 systemd 260 中一个实验性命令的报告，该公司帮助构建了该命令。它将每份报告与声明状态进行比较，并标记偏离的机器。</p><p>只有当机器能够证明处于良好状态时，部署才会继续。操作员通过结构化界面工作，而不是登录。</p><p>更新来自可相互链接的每机器仓库，下载会根据签名元数据检查篡改、重放和回滚尝试。</p><p>同样的证明旨在决定访问权限，例如集群加入和机密。Amutable 提供的示例是拒绝向运行过时配置的机器提供数据库凭据。</p><p>Amutable 正在寻找管理 Linux 集群并需要展示每台机器状态的团队。它预计在未来几周内开始引入首批“合作伙伴”。</p><p>这些合作伙伴将获得早期访问权、与开发者的直接联系渠道，以及对后续构建内容的发言权。申请需要填写姓名、工作邮箱、公司、角色、国家、行业和公司规模。</p><p>还计划下一步针对 Kubernetes，如果您想了解更多相关信息或 Foundations，团队将出席 KubeCon North America。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>跳过 Google 结果中的 AI 垃圾和 SEO 垃圾</p><p>告诉 Google 您更喜欢 It's FOSS，它会在您搜索时更频繁地显示我们由经验丰富的 Linux 用户创建的 Linux 新闻和教程。只需点击一下。</p><p>设为首选来源</p><p>🐧 今天玩 Tuxdle——每日 Linux 单词谜题 →</p><p>在您的收件箱中获取 FOSS Weekly</p><p>一份健康的 Linux 新闻通讯，包含最新版本、相关新闻、提示和教程、琐事和模因、测验和桌面 Linux 用户的优惠。每周免费。</p><p>一个书呆子 w</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/amutable-foundations-private-preview/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
