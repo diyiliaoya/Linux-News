@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KDE 修复 15 年旧 Bug：向 USB 驱动器复制文件时通知不准确 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月28日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>KDE 修复 15 年旧 Bug：向 USB 驱动器复制文件时通知不准确</h1>
+
+  <div class="article-summary">KDE 修复了一个存在 15 年的 Bug：向 USB 驱动器复制文件时，完成通知仅反映数据写入本地缓存，而非真正写入可移动存储。该问题自 2011 年报告以来获得 77 条评论和 17 个重复报告。KDE 开发者最终通过 sync_file_range() 调用解决，将在下月发布的 KDE Frameworks 6.32 中生效，届时完成对话框将准确反映数据已写入 USB 存储。</div>
+
+  <div class="article-body"><p>KDE 修复 15 年旧 Bug：向 USB 驱动器复制文件时通知不准确</p><p>一个长期存在的 KDE Bug 将在下个月的 KDE Frameworks 6.32 版本中得到解决。</p><p>该问题于 2011 年被提出，涉及 KDE 桌面在向可移动 USB 闪存驱动器复制文件时通知不准确。完成进度和完成通知仅反映复制到本地缓存，而非数据实际写入可移动存储。因此，KDE 桌面会暗示文件已复制到 USB 闪存驱动器，而实际上数据未必已写入。</p><p>KDE 开发者 Méven Car 今天在 KDE 博客上发表了一篇有趣的文章，讲述这个 15 年前的 Bug 报告，该报告获得了 77 条以上评论和 17 个以上重复 Bug 报告。即使是在当前的 KDE Plasma 稳定版本中，这些通知仍然不能准确报告成功完成复制到可移动存储的真实文件完成情况。</p><p>为准确传达文件复制到 USB 存储何时完成，KDE 最终发现了一个非常漫长且不简单的过程：</p><p>“正确的工具其实很早就出现了。报告提交两天后，Christoph Feck 询问是否有办法得知数据何时真正写入磁盘，‘而不会造成任何 sync 类型调用会导致的大幅减速’。两周后，报告者转达了 Alan Stern 的答案：sync_file_range()，Christoph 回复说这看起来‘正是我们需要的’。那是 2011 年 9 月，而这就是 KIO 现在使用的调用。</p><p>然后多年没有什么进展，除了用户确认该问题以及十七个重复报告。2021 年，Nate Graham 将其提升到最高优先级，因为移动操作会在副本仍在内存中时删除源文件。2022 年，他修改了磁盘与设备小程序，使得弹出设备时会说明仍在写入。2024 年，Christoph 测试了 Linux 6.5 的 cachestat() 调用，该调用报告文件在内存中还有多少脏数据，但一次只能针对一个文件。</p><p>这个 Bug 一直是我的白鲸。我自 2018 年以来一直为 KIO 做贡献，我仍在学习 Linux 存储栈在其底层的行为方式。我在 2024 年尝试了两次，都没有正确实现 sync_file_range()。在 MR 1718 中，sync_file_range() 路径被注释掉了。在 KIO MR 1764 和 Dolphin MR 862 中，工作线程等待刚刚写入的块的回写，但回写尚未开始，所以它根本没有等待。等待刚写入窗口之前的那个窗口才是使其工作的关键。我没有发现这个问题，任何审查者也没有发现。</p><p>此后，另一位贡献者在 MR 2162 中提议关闭复制的缓存，但该提议被关闭了。”</p><p>随着 KDE Frameworks 6.32 的发布，完成对话框将通过使用 sync_file_range() 调用来准确反映数据何时复制到 USB 存储。</p><p>那些对这个修复 15 年旧 Bug 报告的漫长冒险感兴趣的人，可以在 KDE 博客上找到所有技术细节。</p><p>KDE Plasma 6.8.2 发布，带来数十项额外 Bug 修复</p><p>KWin-Type 引入，以解决 KDE Wayland 自动输入文本的可用性差距</p><p>KDE Plasma 6.9 稳定 KWin 的 Wayland 画中画支持</p><p>KDE Plasma 6.8.1 发布，带来数十项修复</p><p>KDE Plasma 6.9 将首次亮相新的天气小部件和屏幕键盘</p><p>KDE Plasma 6.8 发布，标志着 KDE 项目 30 周年</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/KDE-Fixes-15-Year-Old-Bugs" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

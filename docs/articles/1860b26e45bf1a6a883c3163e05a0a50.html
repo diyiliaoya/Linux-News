@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rocky Linux 创始人借助 AI 在 11 天内构建全新“非 Linux”内核 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月28日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Rocky Linux 创始人借助 AI 在 11 天内构建全新“非 Linux”内核</h1>
+
+  <div class="article-summary">Rocky Linux 创始人 Gregory Kurtzer 利用 OpenAI Codex AI 代理，在 11 天内开发出一个名为 Ginux 的独立 Rust 优先 x86-64 内核。Ginux 并非 Linux 分支，但实现了 Linux 二进制接口，能启动 Rocky Linux 10 至 systemd。AI 生成了约 13.9 万行代码，项目采用“人类指导的代理工程”模式，目前仅为研究原型，仅支持 QEMU 虚拟机。</div>
+
+  <div class="article-body"><p>Rocky Linux 创始人借助 AI 在 11 天内构建全新“非 Linux”内核</p><p>Ginux 并非 Linux 分支，却能启动 Rocky Linux 10 直至 systemd。一个 OpenAI Codex 代理编写了约 13.9 万行代码。</p><p>Gregory Kurtzer 对 Linux 世界并不陌生。他创建了 CentOS，并在其转向后作为社区替代品出现。他还联合创立了 CIQ，这家公司围绕 Rocky 提供企业支持。</p><p>然而，他的最新项目与重建另一个 Linux 发行版无关。他构建了一个全新的操作系统内核，而且大部分代码并非他自己编写。一个 AI 代理完成了这些工作。</p><p>认识 Ginux：没有 Linux 底层的 Linux 用户空间</p><p>该项目名为 Ginux。它是一个独立的、Rust 优先的 x86-64 内核。这简单意味着它并非 Linux 内核的分支。</p><p>它拥有自己的内存管理、调度器、进程模型、文件系统、网络和设备支持，全部从零编写。</p><p>最有趣的部分是，尽管它不是 Linux，但它与 Linux 兼容。Ginux 实现了 Linux 二进制接口（编译程序与内核通信所用的二进制接口），因此现有的 Linux 二进制文件可以在其上未经修改地运行。</p><p>用项目自己的话说，Linux 是 Ginux 暴露的一种“个性”，而非底层运行的内核。</p><p>现在，Ginux 这个名字听起来像是 GNU 和 Linux 的混合。很遗憾让你失望了，这里并非如此。</p><p>Ginux 中的 G 代表 GPT。Greg Kurtzer 在 README 中开玩笑说，为了控制自己的自负，G 正式代表 GPT。为什么是 GPT？因为它完全由 (Chat) GPT 5.6 Sol 编写。</p><p>Kurtzer 在 X（原 Twitter）上宣布：</p><p>11 天内，我构建了一个新的 Linux 兼容操作系统内核，能启动带有 systemd 的 Rocky Linux 10，全部使用人类指导的代理工程（HDAE）。</p><p>我称之为 Ginux。它是一个独立的、Rust 优先的 x86-64 内核（非 Linux 分支），拥有自己的内存管理、启动……</p><p>—— Gregory M. Kurtzer (@gmkurtzer)</p><p>Ginux 目前能做什么</p><p>Ginux 构建为单个镜像，直接通过 UEFI 启动，不涉及 Linux 宿主内核。</p><p>它运行隔离的“域”，每个域有自己的进程、地址空间、文件系统和生命周期。该项目称这些边界比 OCI 容器或 Linux 命名空间更强。</p><p>它还能拉取并验证 OCI 容器镜像，并用它们组装域的根文件系统。这就是它让 Rocky Linux 10 启动至 systemd 的方式。选定的 Alpine Linux 程序（如 musl 和……）</p><p>不过别太兴奋。目前，Ginux 仅在 QEMU 虚拟机中运行，没有物理硬件配置文件，不支持 GPU 或 NVMe，也没有独立的安全审计。</p><p>Ginux 是一个根据 Apache 2.0 许可证发布的研究原型。它不适用于生产环境，也不作为 Linux 的替代品。</p><p>什么是人类指导的代理工程？</p><p>HDAE 是 Kurtzer 给这种开发方法起的名字，老实说，这才是真正的故事。他在 Zenodo 上的一份技术报告中记录了它。</p><p>其理念是明确分工。人类决定架构、约束、里程碑、验收标准以及何时停止。AI 代理运行实现循环：编写代码、启动、测试、诊断故障、修改，并针对这些可执行检查重复。</p><p>对于 Ginux，这意味着一个持续的 OpenAI Codex 任务运行 GPT-5.6 Sol 十一天。它产生了约 13.9 万行保留的实现和测试代码，跨越 1000 多次提交。架构文档让代理保持对齐，而像 Rocky Linux 这样的真实用户空间发现了合成测试遗漏的错误。</p><p>“人类指导”的部分很重要。这不像在聊天机器人中输入“给我写个内核，别出错”那么简单。这是一个拥有数十年系统经验的人在引导。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/ginux/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linux 7.4 为 IO_uring 的 I/O 路径引入 DMA-BUF 支持 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月28日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Linux 7.4 为 IO_uring 的 I/O 路径引入 DMA-BUF 支持</h1>
+
+  <div class="article-summary">Linux 7.4 内核合并窗口已合并一项基础设施，使 IO_uring 的 I/O 路径支持 DMA-BUF。该功能允许文件通过新的文件操作选择启用，目前仅支持 NVMe 块设备，用户 API 基于 io_uring 的注册缓冲区，DMA-BUF 缓冲区最大可达 4GB，可实现零拷贝共享硬件内存缓冲区，基准测试结果令人印象深刻。</div>
+
+  <div class="article-body"><p>Linux 7.4 为 IO_uring 的 I/O 路径引入 DMA-BUF 支持</p><p>2026 年 10 月 27 日 下午 05:09 EDT 发布。</p><p>今日为正在进行的 Linux 7.4 合并窗口合并了相关基础设施，以在内核的 I/O 路径中启用对出色 IO_uring 的支持。</p><p>这个概念已经讨论了一段时间，之前也有类似目标的补丁，而现在它终于在 Linux 7.4 主线中实现，通过 IO_uring 启用 DMA-BUF 读写支持。Linux 的 DMA-BUF 框架允许不同的设备驱动和子系统共享硬件内存缓冲区，而无需 CPU 进行拷贝。DMA-BUF 在 GPU 驱动中尤其流行，并且在媒体和网络驱动中也有工作，用于高效的零拷贝缓冲区共享。</p><p>主导这项工作并经历了十一轮补丁审查的 Pavel Begunkov 解释了这项新功能：</p><p>“这是文件的一项选择性启用功能，它们需要实现一个新的文件操作才能使用它。本系列仅支持 NVMe 块设备。用户 API 构建在 io_uring 的‘注册缓冲区’之上，其中 dmabuf 以特殊方式注册，但之后可以像任何其他‘注册缓冲区’一样与 IORING_OP_{READ,WRITE}_FIXED 请求一起使用。它通过一个新的文件操作创建，生成的结果映射随后以一种新的迭代器类型通过 I/O 栈传递。还有一些额外的基础设施将其粘合在一起，计数请求、管理生命周期并实现失效处理。”</p><p>该补丁系列中展示的一些基准测试数据相当令人印象深刻：</p><p>再次说明，目前这仅与原始 NVMe PCIe 块设备配合使用。块设备的 DMA-BUF 缓冲区大小可达 4GB。有关这项新功能的更多细节可通过以下链接找到。</p><p>Linux 的现代 NTFS 驱动现已支持备用数据流 (ADS)</p><p>EXT4 获得可选缓冲 IOmap，在大写入时带来显著性能提升</p><p>Linux 7.4 块层更新范围从软盘驱动修复到 Apple M4 NVMe 支持</p><p>HPFS 是最新面临在 Linux 上可能被移除的文件系统</p><p>XFS 在 Linux 7.4 中获得小幅性能优化和错误修复</p><p>Linux 7.4 中 XFS 校验和的性能和资源使用得到改进</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。</p><p>多个 Linux 内核漏洞被意外发布到公开内核邮件列表</p><p>Linus Torvalds 的 AI 代码改进：重构代码带来巨大性能提升</p><p>Linus Torvalds 在 Linux 7.4 中移除不安全的 __get_user() 和 __put_user() 函数</p><p>Linux 早期启动时物理内存分配器大幅提速：从约 268 秒到约 50 毫秒</p><p>为 VNC/远程软件提出新的 Wayland 协议</p><p>Linux 7.4 块层更新范围从软盘驱动修复到 Apple M4 NVMe 支持</p><p>Fedora 45 遭遇第二次 NO-GO：直到 11 月才发布</p><p>17k 行新 Rust 内核代码进入 Linux 7.4</p><p>同时享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/DMA-BUF-IO-uring-Linux-7.4" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
