@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GXVK：在现代 Vulkan 之上实现 3Dfx Glide API — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月29日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>GXVK：在现代 Vulkan 之上实现 3Dfx Glide API</h1>
+
+  <div class="article-summary">开源项目 D7VK 发布 2.4 版本，意外带来 GXVK 项目：将 1990 年代的 3Dfx Glide API 通过 Vulkan 在现代系统上实现。GXVK 由 D7VK 贡献者基于 DXVK 代码分叉开发，目标是实现 3Dfx 发布的所有三种 32 位 Glide API 变体，目前以 Wine/Linux 为重点。</div>
+
+  <div class="article-body"><p>开源项目 D7VK 实现了 Direct3D 7/6/5/3 API 在 Vulkan API 之上的运行，以获得更快、更现代的性能，现已发布新版本。D7VK 2.4 新版本的发布有些出人意料，因为就在上个月 D7VK 才宣布其成熟状态，并大致进入维护模式。但在今天的 D7VK 2.4 公告中带来了一个更大的惊喜：现在有了一个在 Vulkan 之上实现的 3Dfx Glide API。</p><p>D7VK 的一位贡献者分叉了 DXVK 代码（D7VK 也是从 DXVK 分叉而来），并实现了对 3Dfx Glide API 的支持。Glide API 最初是为 Voodoo 显卡开发的，在 OpenGL 和 Direct3D 兴起之前，如今它为一些经典游戏提供了 Vulkan 实现。</p><p>这个 1990 年代的图形 API 遗物现在得益于 GXVK 项目，可以在现代系统上通过 Vulkan 运行。GXVK 的希望是实现 3Dfx 发布的所有三种 32 位 API 变体。开发工作以 Wine/Linux 为重点。</p><p>想要了解更多关于 GXVK 项目的信息，可以通过其[链接]查看。</p><p>至于新的 DXVK 2.4 版本，详细信息可以在[链接]找到，包括一些额外的优化、Wayland 下改进的行为等。</p><p>廉价 GameSir Nova Lite 游戏手柄获得 Linux 7.4 支持</p><p>Epic Games 将通过反作弊 systemd 服务和 eBPF 改进 Linux 上的 Easy Anti-Cheat</p><p>FEX 2610 发布，支持 AVX-VNNI、磁盘缓存改进</p><p>D7VK 在 Vulkan 之上为旧版 Direct3D API 达到成熟</p><p>Linux 7.3 增加对 Victrix Pro BFG 和 Azeron 手柄的支持</p><p>SDL3 移植到 HarmonyOS / OpenHarmony</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过[链接]关注他。</p><p>多个 Linux 内核漏洞被意外发布到公开内核邮件列表</p><p>Linus Torvalds 在 Linux 7.4 中移除不安全的 __get_user() 和 __put_user() 函数</p><p>Linux 早期启动时物理内存分配器大幅提速：从约 268 秒到约 50 毫秒</p><p>为 VNC/远程软件提出新的 Wayland 协议</p><p>Fedora 45 遭遇第二次 NO-GO：直到 11 月才发布</p><p>Linux 7.4 块层更新范围从软盘驱动修复到 Apple M4 NVMe 支持</p><p>17k 行新 Rust 内核代码进入 Linux 7.4</p><p>PHP 发布更新修复两个严重代码执行漏洞</p><p>同时享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026，保留所有权利。所有使用的商标均为其各自所有者的财产。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/GXVK-3Dfx-Glide-Vulkan" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

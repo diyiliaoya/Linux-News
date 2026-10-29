@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ubuntu Core Desktop 在 27.04 之前“加速”开发 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月29日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Ubuntu Core Desktop 在 27.04 之前“加速”开发</h1>
+
+  <div class="article-summary">Canonical 宣布加速开发基于 snap 的不可变桌面系统 Ubuntu Core Desktop，并成立新团队，计划在明年 27.04 发布前提供每日构建。初期聚焦浏览器工作流、开发者工作站等用例，但面临桌面栈 snap 化、应用缺口及兼容替代打包系统等技术挑战。长期目标是使其成为 Linux 应用和 Ubuntu 桌面的默认体验。</div>
+
+  <div class="article-body"><p>Canonical 宣布正在“加速”开发 Ubuntu Core Desktop，这是其基于 snap 的不可变桌面操作系统版本。</p><p>Ubuntu Core Desktop 曾以预览形式供爱好者尝试。但缺乏明显进展和方向（更不用说最新的构建版本）让许多人怀疑 Canonical 是否对这个想法降温了。</p><p>现在，事情终于提速了，Canonical 工程副总裁表示。</p><p>公司内部新成立的 Ubuntu Core Desktop 团队将致力于完善 Ubuntu Core Desktop，并在明年 27.04 发布之前提供构建版本。Seager 表示，经典的基于 Deb 的 Ubuntu 桌面是……</p><p>在 Ubuntu 27.04 之前，将开始提供 Ubuntu Core Desktop 的每日构建，并朝着三个用例努力：</p><p>基于浏览器的工作流</p><p>开发者工作站</p><p>不要指望很快出现奇迹。</p><p>创建全 Snap 的 Ubuntu 体验并与经典的基于 Deb 的桌面相当并非易事。首先，整个桌面栈需要做成模块化的 snap，以便各部分可以替换（KDE Plasma 桌面也将可用）。</p><p>还有一个“应用缺口”问题。人们日常计算所依赖的大量流行 Linux 软件并未在 Snap Store 中提供——无论是官方还是非官方，或者提供了但并非所有功能都可用，等等。</p><p>这并不简单地是“制作 snap 版本”的问题，尤其是开发者会希望访问替代打包系统，甚至 Flatpak，虚拟化和容器化需要以用户不会感到困惑的方式加以考虑。</p><p>此外，标准桌面构建提供的其他功能，沙盒化、不可变的桌面不应该提供。</p><p>简而言之，许多技术挑战挡在路上——但有人称之为有趣的部分！</p><p>Ubuntu Core Desktop 默认？</p><p>Seager 表示，长期目标是让 Ubuntu Core（以及在一定程度上 snap）成为“Linux 应用程序和工作流的事实目标，以及桌面、数据中心和边缘的默认 Ubuntu 体验”。</p><p>Seager 说，Ubuntu Core Desktop 将提供“更安全、更有弹性、更可信且面向未来的 Ubuntu”，用户将“在使用中尽情享受”。</p><p>我呢？我很高兴又将有一个 Ubuntu 开发周期，充满许多……</p><p>为了在未来几个月内持续关注所有这些，为什么不收藏本站，将其加入你的阅读器，或在社交媒体上关注我们——让我们尽情享受吧</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/ubuntu-core-desktop-2704" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
