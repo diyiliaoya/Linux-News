@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ghostty 1.4 发布，Linux 平台大幅改进 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月30日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Ghostty 1.4 发布，Linux 平台大幅改进</h1>
+
+  <div class="article-summary">开源终端模拟器 Ghostty 发布 1.4.0 版本，经过七个月开发带来多项改进。Linux 和 macOS 性能优化，空闲时压缩回滚缓冲区可减少高达 90% 内存占用；完整支持 Kitty 图形协议（含动画和相对定位）；GTK 版本支持拖拽重新排列分屏；修复分数缩放下的文字模糊问题；新增独立 SSH 包装器、Kitty 剪贴板协议等。该版本要求 GTK 4.18 和 libadwaita 1.7，不再支持 Ubuntu 24.04 LTS。</div>
+
+  <div class="article-body"><p>开源终端模拟器 Ghostty 发布了一个重要的新版本。</p><p>Ghostty 1.4.0 经过七个月的开发，带来了多样化的变更。Linux 和 macOS 上都有令人欢迎的性能优化，更强大的 SSH 实现，以及更简单的重新排列标签分屏的方式——拖拽它们！</p><p>这个基于 Zig 的应用的更新提供了完整的 Kitty 图形协议支持（包括动画和相对定位）——这是除 Kitty 之外第一个做到这一点的终端。如果你使用 TUI 工具或脚本在终端中渲染图像，这是一个重大成就。</p><p>Kitty 协议支持已完整</p><p>开发者表示，此更新大幅提升了性能。值得注意的是，1.4.0 现在会在终端空闲时压缩离屏回滚缓冲区。这将大量文本历史记录使用的物理内存减少高达 90%。</p><p>如果你回滚或使用今年早些时候更新中添加的文本搜索功能，内容会被解压缩。</p><p>GTK 应用在 125% 和 150% 等分数显示缩放下渲染文字清晰，这应该能解决经常被提及的文字模糊问题。</p><p>此更新还将 OpenGL 替换为 EGL 渲染管线，该管线在独立线程上运行，并使用 DMA-BUF 将帧传递给 GTK。这需要系统 EGL 库；如果 GPU 无法导出 DMA-BUF，则使用较慢的基于 CPU 的复制。</p><p>拖拽终端分屏，放置区域高亮显示</p><p>GTK 版本中的终端分屏可以通过拖拽重新排列。当一个标签有两个或更多分屏时，每个分屏都有一个拖拽手柄，可以抓住分屏并将其拖放到另一个分屏上。</p><p>其他变更包括：</p><p>独立 SSH 包装器</p><p>更好的终端模拟准确性</p><p>Kitty 剪贴板协议</p><p>性能改进</p><p>值得注意的 Linux 变更：</p><p>终端获得焦点或关闭时，桌面通知会消失</p><p>Noto emoji 字体更新，使更新的 ZWJ 序列渲染为单个字形</p><p>Dolphin 的“在此处打开 Ghostty”在运行实例中打开新窗口</p><p>分屏调整大小不再闪烁，也不能再被调得太小</p><p>选择文本时鼠标光标保持文本形状</p><p>如果 window-theme = ghostty，命令面板使用终端颜色</p><p>URL 现在通过 XDG 桌面门户打开</p><p>GTK 版本的配置选项包括 gtk-horizontal-tab-scroll，可设置为 false 以禁用双指滚动切换标签，以及 tab-close-button-position，用于将关闭按钮移到每个标签的开头。</p><p>安装 Ghostty 1.4.0</p><p>Ubuntu 26.10 将包含 Ghostty，但不会是最新版本。要获得上述变更，你需要使用其他方法。</p><p>有很多可用的方法。在 Ubuntu 上通过非官方社区维护的 PPA 安装（该 PPA 有自己的 PPA 以便轻松更新）。还有 GitHub 提供官方二进制文件（推荐；支持应用内更新），也可以通过 Homebrew 和其他 CLI 包管理器获取。</p><p>Ghostty 放弃对 Ubuntu 24.04 LTS 的支持</p><p>根据终端的 GTK/Adwaita 版本政策，1.4.0 要求 GTK 4.18 和 libadwaita 1.7，Ubuntu 24.04 LTS 不再满足要求。这意味着 Ghostty 的 DEB 版本（例如来自上述 PPA）无法再安装。</p><p>另外，底层的终端模拟库将为未来版本的 GNOME Console 提供终端支持。Linux Mint 的新终端应用 Ptyxis 不使用该库，但据说其设计受到了 Ghostty 的启发。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/10/ghostty-1-4-released" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

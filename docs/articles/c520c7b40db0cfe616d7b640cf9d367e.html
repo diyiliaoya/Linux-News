@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RISC-V 在 Linux 7.4 中获得出色的可移植性能优化 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月30日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>RISC-V 在 Linux 7.4 中获得出色的可移植性能优化</h1>
+
+  <div class="article-summary">Linux 7.4 内核合并了 RISC-V 架构更新，其中一项关键优化是将原本在 Linux 7.3 中需编译时启用的非对齐访问优化改为运行时检测。这使得发行版和通用内核构建也能受益，在支持快速非对齐访问的 RISC-V 硬件上可跳过软件对齐，用户拷贝性能提升最高达 11%。此外还新增了崩溃热插拔支持、页表函数优化、上下文切换优化以及新的 ISA 扩展报告等功能。</div>
+
+  <div class="article-body"><p>RISC-V 在 Linux 7.4 中获得出色的可移植性能优化</p><p>发布于 2026 年 10 月 29 日 20:36 EDT。</p><p>RISC-V 架构的变更已于今日合并入内核，其中一项优化尤为亮眼。</p><p>在 Linux 7.3 内核中，Tenstorrent 合并了一项 RISC-V 优化：对于为原生支持快速非对齐内存拷贝的 RISC-V 硬件编译的内核，跳过软件对齐。在 Tenstorrent 进行的测试中，这带来了高达 11% 的带宽提升，效果显著：</p><p>但 Linux 7.3 内核要求该支持必须编译进内核，因此无法在混合硬件的 RISC-V 内核构建中通用，因为其中一些硬件可能不支持快速非对齐访问。</p><p>在 Linux 7.4 中，对于具有“HAVE_EFFICIENT_UNALIGNED_ACCESS”的 RISC-V 硬件，跳过软件对齐现在改为在运行时决定。这样一来，发行版的 RISC-V 内核构建和其他更通用的内核构建也能携带这项出色的优化。该优化现在可以在运行时检测到快速非对齐访问时，在用户拷贝中跳过软件对齐。</p><p>这一用户拷贝性能的改进是 Linux 7.4 中令人兴奋的变更之一，该代码已于不久前合并到 Git。Linux 7.4 中的 RISC-V 还新增了对崩溃热插拔的支持、优化了涉及某些页表函数的代码路径、优化了上下文切换、将“B”RISC-V ISA 扩展添加到 hwcap 和 hwprobe 报告中，并支持报告 RISC-V Zic64b ISA 扩展。</p><p>SpacemiT 发布 V100 服务器级 RISC-V 处理器</p><p>Linux 终于让回答“这个 RISC-V 系统是 RVA23 吗？”变得更容易</p><p>RISC-V Linux 内核的自动向量化显示出可喜成果</p><p>GCC 17 现在支持在 RISC-V 上使用 -mtune=native -mcpu=native</p><p>Linux 7.3 新增对多个较新 RISC-V 扩展的支持</p><p>Linux 7.2 在默认内核构建中启用 UltraRISC RISC-V 支持</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>多个 Linux 内核漏洞意外发布到公开内核邮件列表</p><p>Linus Torvalds 在 Linux 7.4 中移除不安全的 __get_user() 和 __put_user() 函数</p><p>Linux 早期启动时物理内存分配器大幅提速：约 268 秒缩短至约 50 毫秒</p><p>为 VNC/远程软件提出新的 Wayland 协议</p><p>Fedora 45 第二次未能通过：11 月前不会发布</p><p>Linux 7.4 块层更新涵盖软盘驱动修复到 Apple M4 NVMe 支持</p><p>PHP 发布更新修复两个严重代码执行漏洞</p><p>Linux 7.4 工作队列变更带来“快 10 到 100 倍”的优化</p><p>享受无广告浏览、</p><p>单页文章视图</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.4-RISC-V" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

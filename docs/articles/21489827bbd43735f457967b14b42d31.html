@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>openEuler新版本发布：深度集成AI与智能体 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月30日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>openEuler新版本发布：深度集成AI与智能体</h1>
+
+  <div class="article-summary">openEuler发布24.03 LTS SP4和26.09创新版，重点引入AI智能诊断与调优功能，通过Witty框架支持本地模型和OpenAI兼容API。SP4基于Linux 6.6内核，新增sched_ext调度框架、io_uring FUSE支持等底层改进，同时面向企业提供NPU切片、机密计算等特性。</div>
+
+  <div class="article-body"><p>openEuler正推动一个以AI为核心的开发者导向Linux发行版。从PolyMind到Witty，AI智能体已成为其组成部分。</p><p>openEuler有两个新版本发布。24.03 LTS SP4于2026年7月推出，短期26.09创新版随后于10月1日发布。</p><p>2024年发布时，该LTS版本仍在获得新功能，SP4是最新一轮。</p><p>这些版本包含各类丰富功能。部分针对SuperPoD基础设施和专用AI加速器，即企业级功能。因此本文聚焦于普通PC或虚拟机上可探索的功能。</p><p>我将检查AI工具、桌面部分和底层变更。我在GNOME Boxes中安装它们，以查看在普通机器上实际可用的功能。</p><p>LTS、服务包和创新版</p><p>openEuler有两条发布轨道：长期支持（LTS）和创新版。社区通过服务包继续开发24.03 LTS系列，下一个主要LTS版本预计在2028年发布。</p><p>LTS不采用新版本号，而是通过服务包（SP1、SP2等）获得功能更新。与Windows服务包（如果你还记得）不同，这些是真正的功能版本，而不仅仅是补丁包。</p><p>类似于Ubuntu的六个月发布周期，这些“创新版”在较短支持周期内引入新技术。openEuler 26.09计划支持至2027年3月。</p><p>openEuler 24.03 LTS SP4的新特性</p><p>SP4仍基于Linux内核6.6，但openEuler持续将更新的上游功能向后移植。</p><p>AI辅助诊断与调优</p><p>对普通用户最相关的AI新增功能是智能诊断与调优。智能诊断代理与已知问题分析代理协作，发现问题、确定根本原因并建议修复方案。</p><p>调优方面收集系统指标，发现性能瓶颈并提供优化建议。理论上，这能节省数小时盯着屏幕的时间。</p><p>AI功能通过openEuler的Witty框架提供，可使用软件包从发行版仓库安装。安装后，通过命令或opencode启动界面，用自然语言提示与诊断和调优代理交互。</p><p>与第一代EulerCopilot体验紧密绑定openEuler自有云AI服务不同，Witty同时支持本地模型和一系列OpenAI兼容API，使中国以外用户的部署更加灵活。</p><p>还有一个轻量级Agent沙箱，用于隔离运行AI代理的代码和工具调用。考虑到现在有多少人给AI代理shell访问权限，这是一个明智的补充。</p><p>值得了解的内核变更</p><p>底层变更你未必能看到。</p><p>最大的新增是sched_ext，这是基于eBPF的调度器框架，已在Linux 6.12上游合入。你可以在运行时加载自定义CPU调度器而无需重新编译内核。如果某个调度器行为异常，内核会静默回退到默认调度器。</p><p>FUSE文件系统现在可以通过io_uring与内核通信。这应有助于sshfs等基于FUSE的工具的性能。</p><p>还有一个可编程页面缓存，允许应用程序设置自己的文件缓存策略。旨在加速加载大型AI模型，这通常受磁盘I/O限制。</p><p>ARM用户现在可以在安装时选择64K页面大小的内核。4K内核仍为默认，除非主动选择，否则无变化。</p><p>SP4其余部分面向企业和数据中心。包括NPU计算切片、AI推理容器更快恢复、网络和可靠性功能，以及针对Arm CCA、TaiShan和海光系统的机密计算改进。openEuler自有的编译器构建（LLVM、Go和毕昇JDK）也获得更新。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/openeuler-24-03-sp4/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

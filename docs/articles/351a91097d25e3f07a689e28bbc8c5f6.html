@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ubuntu 要走向不可变吗？Canonical 重启 Core Desktop 并考虑为 LTS 更换固件 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年10月30日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Ubuntu 要走向不可变吗？Canonical 重启 Core Desktop 并考虑为 LTS 更换固件</h1>
+
+  <div class="article-summary">Canonical 重启了基于 Snap 的不可变 Ubuntu Core Desktop 开发，目标使其成为默认桌面体验，并计划通过 LXD 容器运行经典应用、引入权限提示。同时，工程师提议为 Ubuntu LTS 引入 linux-firmware-hwe 包，将 HWE 内核的固件与 GA 内核隔离，避免新固件导致旧内核出现回归问题。两项改动均处于早期阶段。</div>
+
+  <div class="article-body"><p>Ubuntu 要走向不可变吗？Canonical 重启 Core Desktop</p><p>Ubuntu 要走向不可变吗？Canonical 重启 Core Desktop 并考虑为 LTS 更换固件</p><p>Core Desktop 可以运行无法在沙箱中原生运行的应用，而 linux-firmware-hwe 被提议作为防止较新固件引发问题的保障。</p><p>Canonical 已重启 Ubuntu Core Desktop 的开发。这是一个基于 Snap 的不可变 Ubuntu 版本，在 2023 年开发者预览后曾陷入停滞。Canonical Ubuntu 工程副总裁 Jon Seager 表示，一个专门的团队……</p><p>目标是随着项目成熟，使其</p><p>成长为默认的 Ubuntu 桌面体验</p><p>。你所了解的 Ubuntu Desktop 不会改变，Jon 表示各个</p><p>没有压力去构建</p><p>自己的版本。</p><p>另外，Canonical 工程师 Juerg Haefliger</p><p>了一个面向 Ubuntu LTS 版本的固件包，该包将保护旧内核免受为较新内核编写的固件影响。</p><p>两者都处于开发早期，情况仍可能变化。</p><p>什么是 Ubuntu Core Desktop？</p><p>是 Canonical 面向物联网和嵌入式设备的操作系统，相关工作</p><p>。它是不可变的且严格受限，内核、操作系统镜像和应用彼此分离并独立更新。</p><p>在 Core Desktop 上，一切都是</p><p>，从引导加载程序和内核到桌面环境和你的应用。这使得系统更难被破坏，也更容易恢复。</p><p>2023 年的桌面预览未达预期，因为它将大部分桌面组件（包括 GNOME 及其登录屏幕）打包进一个庞大的 Snap 包中。新方法是将这些组件分离。</p><p>一个新指派的开发团队已经在将旧预览迁移到更新的</p><p>基础方面取得了良好进展。每日镜像构建的基础设施预计将在未来几周内就绪，工作将持续到 27.04 周期。</p><p>应用是一个重大障碍</p><p>，因为 Core Desktop 只运行严格受限的 Snap，而像 VS Code 这样的经典应用无法直接在其上运行。Jon 偏好的想法是将它们托管在</p><p>中——Canonical 的沙箱开发环境——并在主桌面上显示它们的窗口。</p><p>权限提示是他认为 Core 成功的另一个关键。在此机制下，系统会在受限应用访问摄像头、麦克风或主目录等资源前询问用户。</p><p>固件提案是什么？</p><p>Ubuntu LTS 版本发布时搭载一个内核，称为 GA，而</p><p>硬件启用（HWE）栈</p><p>随后为该版本推出更新的内核。Ubuntu 24.04 搭载内核 6.8 发布，其当前 HWE 内核为 7.0。</p><p>24.04 的桌面安装默认跟随 HWE，而服务器则停留在 GA，除非你选择加入。目前两个内核共享一个固件包，因此为较新内核向后移植的固件也会落到 GA 系统上，Juerg 指出供应商很少用新固件测试旧内核。</p><p>他指出了最近 24.04 向后移植后 GA 系统上出现的几个 AMD 回归问题。他对此问题的解决方案是一个</p><p>包，HWE 内核将依赖它。</p><p>它将携带 HWE 内核所来自的 Ubuntu 版本的完整固件集，取代向后移植到 LTS 的少量手工挑选文件。</p><p>GA 系统将停留在常规固件上，两套固件不能同时安装。同时拥有两个内核的机器即使在启动 GA 时也会加载 HWE 固件，而此更改的错误报告将变通方法留作可能考虑的事项。</p><p>至于何时落地，该报告还相当新，没有提到指派人，测试用例部分只写着 TBD。不过它正被跟踪针对 Ubuntu 27.04，该版本定于明年四月发布，代号为“</p><p>目前两项更改都不影响普通 Ubuntu 用户，一旦每日 Core Desktop 镜像开始出现，我们将看到该项目在追求不可变性的道路上能走多远。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年一直帮助人们使用 Linux</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/ubuntu-core-desktop-firmware-hwe/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
