@@ -18390,5 +18390,148 @@
     "title_zh": "PipeWire 1.6.11 发布，带来更多蓝牙与 ALSA 插件改进",
     "summary_zh": "PipeWire 1.6.11 音频/视频服务器现已开放下载，本次更新主要改进了蓝牙支持、ALSA 插件、SPA 以及各模块的功能，进一步提升 Linux 音频系统的稳定性和兼容性。",
     "fulltext_zh": "适用于 Linux 的 PipeWire 1.6.11 音频/视频服务器现已可供下载，本次更新改进了蓝牙、ALSA 插件、SPA 以及各模块。\n\n文章《PipeWire 1.6.11 发布，带来更多蓝牙与 ALSA 插件改进》首发于 9to5Linux——未经许可请勿转载本文。本 RSS 源面向读者，而非抓取程序。"
+  },
+  "f68cc3a5bf486e42bec324195366b11f": {
+    "id": "f68cc3a5bf486e42bec324195366b11f",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/ubuntu-2704-opens-for-development",
+    "title_en": "Ubuntu 27.04 ‘Tenacious T-Rex’ opens for development",
+    "summary_en": "Development on Ubuntu 27.04, codenamed &#8216;Tenacious T-Rex&#8217;, has officially begun. The tenacious archive is now open (30 October 2026), with auto-sync from Debian set to pull in a tranche of updated packages since the Ubuntu 26.10 release. Over the course of the next six months, those will be tested, set and form the basis of the final, stable release. Ubuntu 27.04 is scheduled for release on 22 April 2027, with a beta preceding it on 1 April (not a joke). Ubuntu 26.10 saw its beta dela",
+    "pub_date": "Fri, 30 Oct 2026 21:15:12 +0000",
+    "title_zh": "Ubuntu 27.04“Tenacious T-Rex”开放开发",
+    "summary_zh": "Ubuntu 27.04（代号“Tenacious T-Rex”）已开放开发，预计2027年4月22日发布，测试版4月1日推出。该版本将搭载GNOME 52桌面和Linux 7.6或更新内核，更多采用Rust，默认同步工具可能改为ntpd-rs，并加速Ubuntu Core Desktop开发。此外，TPM全盘加密支持将成熟，安全启动和打包工作推进，AI语音听写和启动器概念也在探索中。",
+    "fulltext_zh": "Ubuntu 27.04（代号“Tenacious T-Rex”）的开发工作已于2026年10月30日开放，从Debian自动同步将引入自上一版本发布以来的一批更新软件包。在接下来的六个月里，这些软件包将经过测试、确定，并构成最终稳定版的基础。\n\nUbuntu 27.04计划于2027年4月22日发布，测试版将于4月1日先行推出（不是玩笑）。Ubuntu 26.10的测试版曾推迟一周，但希望新的开发周期波折更少。\n\n期待什么\n\nUbuntu 27.04几乎肯定会搭载GNOME 52桌面，并视日程安排搭载Linux 7.6或更新内核。将融入更多Rust，Canonical已示意计划采用ntpd-rs作为默认同步工具。\n\n其工程师将“加速”Ubuntu Core Desktop的开发，这是Ubuntu的全snap版本。它不会成为默认下载，而是预览版，因为对于常规用例它还无法达到日常驱动就绪状态——工作总得从某处开始。\n\n此外，预计Ubuntu操作系统安装程序对TPM支持的全盘加密的支持将趋于成熟，围绕面向安全的系统启动和打包将有更多工作，为新的HWE固件计划做准备。\n\n更多AI集成呢？\n\n语音听写工具目前已在Ubuntu 26.04 LTS和26.10上处于技术预览阶段。为其提供支持的AI模型太大，无法默认随附，但可能会在桌面上引入面向用户的选入选项。\n\n我最近还报道了Canonical一位工程师在公司“设计讨论”后构建的新AI支持的Ubuntu启动器概念。这是一个模拟原型，不是真实工具，但它表明Canonical正在探索将设备端AI融入桌面的方式。\n\n你对下一个版本有什么期望和希望看到的功能？在评论中告诉我。"
+  },
+  "0ebfff2bf8826bb83cd3e45153ae4d21": {
+    "id": "0ebfff2bf8826bb83cd3e45153ae4d21",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/site-design-changes-2026-part-one",
+    "title_en": "We added a manual dark mode toggle to the site (cos you asked)",
+    "summary_en": "You may have noticed OMG! Ubuntu looking a little cleaner lately. Earlier this month, Sam and I finally rolled out a refreshed site backend, along with some changes to the bits you look at when you come here. Boring stuff to read about, I know. But a few of the changes were done because readers asked for them, so I wanted to quickly mention them. Firstly, the mobile homepage is now more info-dense. Recent posts appear in a compact list, so you can see more of the latest articles at a glance rath",
+    "pub_date": "Fri, 30 Oct 2026 01:01:00 +0000",
+    "title_zh": "我们为网站添加了手动深色模式切换（因为你们要求）",
+    "summary_zh": "OMG! Ubuntu 网站近期进行了后端刷新和界面调整，包括移动端首页信息更密集、新增手动深色模式切换、代码块添加复制按钮等。这些改进部分源于读者反馈。同时，Chrome 扩展也增加了深色模式支持。网站将继续优化，并建议使用 AVIF 图片格式以提升加载速度。",
+    "fulltext_zh": "我们为网站添加了手动深色模式切换（因为你们要求） - OMG! Ubuntu\n最近看起来更清爽了。本月早些时候，Sam 和我终于推出了 refreshed 网站后端，以及一些你访问时看到的界面变化。\n我知道这些是无聊的细节。但有些变化是因为读者要求而做的，所以我想快速提一下。\n首先，移动端首页现在信息更密集。\n最新文章以紧凑列表显示，这样你可以一眼看到更多最新文章，而不需要滚动（再滚动，再滚动）大缩略图。\n其次，页眉中有一个手动深色模式切换。网站仍然自动跟随你的操作系统深色模式偏好，但你可以用这个简单的两态开关覆盖：浅色或深色模式。\n一个用于切换的开关，仅此而已\n第三，我们更新了代码块，添加了一个简单的“复制”按钮，以\n帮助新手更快搞坏他们的系统\n让复制终端命令比手动选择文本更容易：\n这里有一个复制按钮 -->\n其余的变化？小修饰。\n混合了一些\n不同的东西（新的元栏处理、新的“强调”字体、重做的移动端断点）或只是更好的东西（更快的首页缓存加载、页面过渡、图片使用 AVIF\n以及不再有橘子头背景）。\n趁我还在推销模式：我还为\nOMG! Ubuntu Chrome 扩展\n添加了深色模式样式。当你的系统处于深色模式时，文章列表弹出层现在使用深色模式。该更新本周已在 Chrome 网上应用店推出。\n工作尚未完成。如果你特别眼尖，你会看到未来几周会有进一步的改进。还有一些粗糙的边缘需要打磨，并计划重新审视多年未变的组件，比如侧边栏小部件。\n我通常不喜欢在网站上谈论网站。但我使用它的方式与你不同，所以你的反馈帮助我知道什么有效、什么无效，老实说，还有我在哪里打错了字。\n我不打算回头转换旧文章中的旧图片，或存档中的图片。如果我使用存档中的内容，较新的文章可能会继续使用 WebP 图片。如果你有一个网站，AVIF 值得考虑。质量与大小的节省令人印象深刻。我的大多数 WebP 文件从约 400kb 降到 <100kb，质量没有明显下降（截图通常有很多文字，受压缩影响最大）。"
+  },
+  "9faa22ace4e9677cbb6c5871be9461c7": {
+    "id": "9faa22ace4e9677cbb6c5871be9461c7",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Wine-11.21-Released",
+    "title_en": "Wine 11.21 Released With Better WoW64 OpenGL Performance",
+    "summary_en": "Wine 11.21 is out as the newest bi-weekly development release of Wine and as we near Wine 12.0 stable release happenings getting underway in about one month with the official v12.0 release expected early in the new year...",
+    "pub_date": "Fri, 30 Oct 2026 20:29:01 -0400",
+    "title_zh": "Wine 11.21 发布，WoW64 OpenGL 性能更佳",
+    "summary_zh": "Wine 11.21 作为最新的双周开发版发布，最引人注目的是合并了对 MESA_map_buffer_client_pointer OpenGL 扩展的支持，可提升 WoW64 环境下 32 位 OpenGL 的性能。该版本还引入了 Voice Capture DSP 库的初始版本，改进了用户账户支持，并修复了 20 个已知问题，包括 Shift+Ctrl+Tab 失效、Cinebench 2026 问题以及《上古卷轴5：天际特别版》和《坦克世界》等游戏修复。",
+    "fulltext_zh": "Wine 11.21 发布，WoW64 OpenGL 性能更佳\n2026 年 10 月 30 日 20:29 EDT。\nWine 11.21 已发布，这是 Wine 最新的双周开发版本。随着我们距离 Wine 12.0 稳定版发布越来越近，相关事宜大约在一个月后启动，官方 v12.0 版本预计在新年年初发布。\nWine 11.21 最令人兴奋的是合并了对 MESA_map_buffer_client_pointer OpenGL 扩展的支持，以改进 WoW64 32 位 OpenGL。这最终应能提升在 WoW64 环境下使用 OpenGL 的性能。\nWine 11.21 还带来了 Voice Capture DSP 库的初始版本。该版本还改进了对用户账户的支持。\nWine 11.21 还包含 20 个已知错误修复，包括 Shift + Ctrl + Tab 不工作、Cinebench 2026 的问题，以及《上古卷轴5：天际特别版》和《坦克世界》等游戏的修复。\nWine 11.21 的完整变更列表可在以下网址找到：\nWine 合并对 MESA_map_buffer_client_pointer 的支持以改进 WoW64 32 位 OpenGL\nWine 11.20 发布，带来 CD-ROM 支持变更\nWine 11.19 发布，为 Vulkan 带来 Wayland 色彩管理、DNS 查询缓存\nWine-Staging 11.18 添加新补丁以进一步改进 WoW64\nWine 11.18 继续完善其 NTOSKRNL 实现\nWine 11.17 发布，初步支持显示模式模拟\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n多个 Linux 内核漏洞被意外发布到公开内核邮件列表\nLinux 早期启动时物理内存分配器大幅提速：约 268 秒降至约 50 毫秒\n为 VNC/远程软件提出新的 Wayland 协议\nFAT32 文件系统在 Linux 7.4 中最高提升 265 倍\nFedora 45 第二次 NO-GO：11 月前不发布\nLinux 7.4 块更新范围从软盘驱动修复到 Apple M4 NVMe 支持\nSystem76 推出 AMD 驱动的 Linux 小型 PC\nLinux 7.4 工作队列变更带来“快 10 到 100 倍”的优化\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "ddccf49d0db742cffff508f5aca8b9c2": {
+    "id": "ddccf49d0db742cffff508f5aca8b9c2",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/PostgreSQL-19-Late",
+    "title_en": "PostgreSQL 19 Running Behind Schedule Due To AI/LLM Burden",
+    "summary_en": "The PostgreSQL database server typically sees its annual feature release every September~October, but it's not coming until at least November if not longer this year. Due to the increased developer burden due to increased bug reporting and patches via AI/LLM activity, the PostgreSQL developers have been overwhelmed...",
+    "pub_date": "Fri, 30 Oct 2026 14:06:06 -0400",
+    "title_zh": "PostgreSQL 19 因 AI/LLM 负担而进度落后",
+    "summary_zh": "PostgreSQL 19 的发布因 AI/LLM 活动带来的开发者负担而推迟。大量由 AI 生成的错误报告和补丁涌入，修复这些错误需要更多时间，因为 LLM 生成的修复并不总是正确或符合 PostgreSQL 标准，仍需人工审查和提交。同时，原本用于审查发布内容的时间被转移到处理安全问题和回补分支的错误上，导致发布延迟。",
+    "fulltext_zh": "PostgreSQL 数据库服务器通常每年在 9 月至 10 月发布年度功能版本，但今年至少要等到 11 月，甚至更晚。由于 AI/LLM 活动导致错误报告和补丁增加，开发者负担加重，PostgreSQL 开发者们已不堪重负。\n\nPostgreSQL 开发者 Robert Haas 今天在一篇博客文章中概述了 PostgreSQL 19 如何落后于计划，并归咎于 AI。开发者们一直在应对来自 AI/LLM 代理的大量错误报告，同时还需要处理针对先前 PostgreSQL 版本的安全/错误回补。\n\n“我认为这也是为什么我们有这么多后期回退，以及为什么发布本身被延迟的原因。这里有两个因素在起作用。\n\n首先，因为现在发现了更多的错误，修复它们需要更多时间。LLM 可以起草修复方案，但这些修复并不总是正确或符合 PostgreSQL 标准。因此，它们仍然需要由人工审查和提交，而那些人在 2025 年到 2026 年间并没有变得更聪明。\n\n其次，原本用于审查发布内容的时间被转移到处理回补分支中的安全问题和其他错误上，因此在发布 v19 之前弄清楚需要回退什么花费了更长时间。”\n\n关于 PostgreSQL 19 因 AI 驱动而延迟的更多细节，可以通过以下链接找到。"
+  },
+  "3c445dadbe93ddffc9130e0e901b9e30": {
+    "id": "3c445dadbe93ddffc9130e0e901b9e30",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Ubuntu-27.04-Opens-For-Dev",
+    "title_en": "Ubuntu 27.04 \"Tenacious T-Rex\" Opens For Development",
+    "summary_en": "Following this month's release of Ubuntu 26.10, Ubuntu 27.04 development formally got underway today...",
+    "pub_date": "Fri, 30 Oct 2026 13:32:48 -0400",
+    "title_zh": "Ubuntu 27.04 \"Tenacious T-Rex\" 开放开发",
+    "summary_zh": "Ubuntu 27.04 代号 \"Tenacious T-Rex\" 已正式开放开发，T-Rex 仓库现已启用，并将很快启用从 Debian 的自动同步。根据发布计划，功能冻结定于 2 月 25 日，UI 冻结为 3 月 18 日，Beta 冻结为 3 月 29 日，Beta 版预计 4 月 1 日发布，正式版预计 4 月 22 日发布。该版本预计将推进更多 Rust 系统/基础设施迁移工作、重启 Ubuntu Core Desktop 不可变版本开发，并在桌面端增加更多 AI 相关工作。",
+    "fulltext_zh": "在本月发布 Ubuntu 26.10 之后，Ubuntu 27.04 的开发于今日正式启动。\n\nUbuntu 27.04 的开发代号为 \"Tenacious T-Rex\"。T-Rex 仓库现已开放，从 Debian 的自动同步也将很快启用，届时将引入大量新软件包。\n\nUbuntu 27.04 的日程安排为：功能冻结定于 2 月 25 日，UI 冻结定于 3 月 18 日，Beta 冻结定于 3 月 29 日。Ubuntu 27.04 Beta 预计于 4 月 1 日发布，而 Ubuntu 27.04 的正式发布预计于 4 月 22 日。\n\n对于 Ubuntu 27.04，我们预计将看到更多 Rust 系统/基础设施迁移工作、不可变版本 Ubuntu Core Desktop 的重启开发，以及桌面端更多 AI 相关工作。\n\nUbuntu 27.04 Tenacious T-Rex 现已开放开发的消息于今日在 Canonical 的邮件列表上公布。"
+  },
+  "df139e5d189a70a10ba32d5d4b7f294d": {
+    "id": "df139e5d189a70a10ba32d5d4b7f294d",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-x86-Platform-Driver",
+    "title_en": "AMD Ryzen Zen 6 Looks Like It Will Be In Good Shape With Linux 7.4, Laptop Improvements",
+    "summary_en": "The x86 platform driver changes were merged this week to the Linux 7.4 kernel ahead of the merge window closing this weekend...",
+    "pub_date": "Fri, 30 Oct 2026 11:24:46 -0400",
+    "title_zh": "AMD Ryzen Zen 6 在 Linux 7.4 中看起来状态良好，笔记本改进",
+    "summary_zh": "Linux 7.4 内核合并了 x86 平台驱动更新，重点包括为 AMD Ryzen Zen 6 客户端平台扩展 HSMP、PMC 和 PMF 驱动支持，同时带来大量笔记本改进，如 Acer、Alienware、MSI、HP、ASUS 等品牌的新型号支持，以及高通骁龙 X 笔记本和掌机设备的驱动增强。",
+    "fulltext_zh": "AMD Ryzen Zen 6 在 Linux 7.4 中看起来状态良好，笔记本改进 - Phoronix\nAMD Ryzen Zen 6 在 Linux 7.4 中看起来状态良好，笔记本改进\n2026 年 10 月 30 日 11:24 AM EDT。\n本周，x86 平台驱动变更已合并到 Linux 7.4 内核，赶在本周末合并窗口关闭之前。\n与往常一样，Linux 7.4 带来了大量新的笔记本支持改进以及其他平台驱动工作，其中 AMD Ryzen Zen 6 客户端新增支持在本周期尤为突出。此外，通过这个 x86 平台驱动树，我们继续看到更多针对基于 ARM 的高通骁龙 X 笔记本的驱动活动进入内核。\nLinux 7.4 中的 AMD 主机系统管理端口（HSMP）驱动已扩展，以支持即将推出的 AMD Ryzen Zen 6 客户端平台。AMD 平台管理控制器（PMC）也增加了对即将推出的 Zen 6 平台的支持。最后，面向 Ryzen 笔记本和台式机的 AMD 平台管理框架（PMF）驱动已扩展，新增了一个“AMDI0112”ID，推测也用于 Zen 6 系统。\nLinux 7.4 看起来将为即将推出的 Ryzen Zen 6 硬件提供良好的支持。\n在英特尔方面，英特尔 PMC 和 Uncore Freq 驱动为 Rugged Panther Lake SoC 添加了 ID。\nAcer WMI 驱动为 Aspire A315-58G 添加了硬件监控支持。同时，Acer Nitro ANV15-51 不仅支持 HWMON，还支持风扇控制和 ACPI 平台配置文件处理。\nLinux 7.4 的另一项 Acer 改进是引入了 acer-wmi-battery 驱动，用于支持 Acer 笔记本上的电池/充电控制。\nAlienware-WMI-WMAX 驱动现在支持 Alienware Area-51 AAT2250。\nMSI EC 驱动现在支持 MSI Creator Z16 A11UE、MSI GL65 Leopard 9SCXK 和 MSI Katana 15 B13VFK 型号。\n对于 HP 系统，其 WMI 驱动增加了对多个型号的支持：OMEN 16-am0xxx、OMEN 16-am2xxx、OMEN 17-ck1xxx、OMEN MAX 16-ah0xxx、OMEN Slim 16t-an000、OMEN Transcend 14-fb1xxx、HP Laptop 15-fd1xxx、Victus 15-fb3xxx、Victus 16-d1xxx (8A26) 和 Victus 16-e0xxx。\n在 ASUS 方面，ASUS WMI 驱动增加了静音 LED 支持，ASUS Armoury 驱动添加了独立 GPU 电源状态属性，并且现在为更多 ASUS 设备启用了可调参数。\n日趋成熟的 Uniwill 笔记本驱动在 Linux 7.4 中增加了对 PCSpecialist Recoil 16 AMD、LAPKC71E Intel NUC x15 的支持，并整合了各种修复。\n在手持设备方面，Ayaneo EC 驱动增加了对 AYANEO 2S 的支持。面向 OneXPlayer 硬件的 OXPEC 驱动增加了对 OneXPlayer 3 的支持。\n对于高通骁龙 X 笔记本，x86 平台驱动拉取请求添加了 ASUS Glymur EC 支持代码。还有 lenovo-yoga-slim7x-gen11-ec 作为另一项骁龙 X 笔记本改进。\n已合并到 Linux 7.4 的 x86 平台驱动变更完整列表可通过以下链接查看\nI3C Hub 与 HDR-DDR 支持已合并到 Linux 7.4\nSystem76 推出 AMD 驱动的 Linux 小型 PC\nLinux 7.4 扩展更多 ASUS 与 MSI 主板的传感器监控，新增 Minisforum 驱动\nApple M4 与 Apple A18 Pro 的初步支持进入 Linux 7.4\nLinux 7.4 为非常 neat 的动态容量设备“DCD”准备 CXL\nLinux 7.4 图形驱动变更以 AMDGPU HDMI 2.1 特性为首\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n多个 Linux 内核漏洞被意外发布到公开内核邮件列表\nLinux 早期启动时物理内存分配器大幅提速：约 268 秒降至约 50 毫秒\n新的 Wayland 协议被提议用于 VNC/远程软件\nFAT32 文件系统性能提升高达 265 倍"
+  },
+  "4fbf34d20ea586da32f6e4776ce94022": {
+    "id": "4fbf34d20ea586da32f6e4776ce94022",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/NULLos",
+    "title_en": "Another Week, Another Vibe Coded OS; Closed-Source In The Name Of Security",
+    "summary_en": "With today's AI/LLM capabilities, there is almost a new operating system heard about each week \"coded from scratch\" predominantly via AI agents. This week was no exception with another project hitting our email inbox. Though most of them are open-source, this one is closed-source in the name of security...",
+    "pub_date": "Fri, 30 Oct 2026 08:23:06 -0400",
+    "title_zh": "又一周又一个氛围编程操作系统；以安全之名闭源",
+    "summary_zh": "NULLos 是一个完全从零构建的操作系统，包含自研 UEFI 引导程序、内核和自托管 C 编译器。与多数氛围编程操作系统开源不同，该项目以安全为由选择闭源，开发者称单人开发可避免团队代码泄露或漏洞被提前利用。",
+    "fulltext_zh": "借助当今的 AI/LLM 能力，几乎每周都会听说一个主要由 AI 代理“从零编写”的新操作系统。本周也不例外，又一个项目进入了我们的邮箱。尽管大多数此类项目是开源的，但这一项目以安全之名选择了闭源。\n\nNULLos 是一个“完全从零构建的操作系统”，从自己的 UEFI 引导程序到内核，甚至包括自己的、具备自托管能力的 C 编译器。\n\n虽然许多这类氛围编程操作系统都是开源项目，但 NULLos 走了一条不寻常的闭源路线。NULLos 的开发者在一封给 Phoronix 的邮件中辩称这是出于安全考虑：\n\n“源代码保持闭源，系统由一个人开发。我认为这是一个安全决策：一个人无法被渗透，而不是一个团队——团队可能导致代码泄露，或者漏洞在被修复之前就被发现并利用。”\n\n对于这个最新作品感兴趣的人，NULLos 托管在\n\nPavee OS：Ikey Doherty 的新日常驱动桌面发行版正基于 Barney 构建\n\nMoxnox：运行于 Btrfs 之上的类 NT、兼容 POSIX 的业余操作系统\n\nRedox OS 在九月获得了不错的性能改进\n\nOmarchy 4.5 借助 Snapdragon X 和 NVIDIA N1X 笔记本电脑扩展到 AArch64 世界\n\nOmarchy 通过避免 XDG 开销让 Web 浏览器启动更快\n\nReactOS 现在可以配合其 NTFS 驱动安装和使用\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。他可以通过以下方式关注\n\n多个 Linux 内核漏洞被意外发布到公开内核邮件列表\n\nLinux 早期启动时物理内存分配器获得大幅提速：约 268 秒降至约 50 毫秒\n\n为 VNC/远程软件提出新的 Wayland 协议\n\nFAT32 文件系统在 Linux 7.4 中看到高达 265 倍的改进\n\nFedora 45 遭遇第二次 NO-GO：直到十一月才发布\n\nLinux 7.4 块层更新范围从软盘驱动修复到 Apple M4 NVMe 支持\n\nSystem76 推出 AMD 驱动的 Linux 小型 PC\n\nLinux 7.4 工作队列变更带来“快 10 到 100 倍”的优化\n\n同时享有无广告浏览、\n\n单页文章查看\n\n法律免责声明、隐私政策、Cookie\n\n版权所有 © 2004 - 2026\n\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "2712efeff03d8c614b567bd02cbb0e10": {
+    "id": "2712efeff03d8c614b567bd02cbb0e10",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/libernt-new-reactos-fork-aims-for-windows-11-compatibility/",
+    "title_en": "LiberNT: New ReactOS Fork Aims for Windows 11 Compatibility",
+    "summary_en": "LiberNT, a new ReactOS fork, targets Windows 11 compatibility with ARM64 support, modern hardware drivers, and experimental builds.\nThe post LiberNT: New ReactOS Fork Aims for Windows 11 Compatibility appeared first on Linux Today.",
+    "pub_date": "Fri, 30 Oct 2026 10:40:19 +0000",
+    "title_zh": "LiberNT：新的 ReactOS 分支旨在兼容 Windows 11",
+    "summary_zh": "LiberNT 是 ReactOS 的一个新分支，目标是兼容 Windows 11，支持 ARM64 架构、现代硬件驱动，并提供实验性构建版本。",
+    "fulltext_zh": "LiberNT 是 ReactOS 的一个新分支，目标是兼容 Windows 11，支持 ARM64、现代硬件驱动以及实验性构建版本。\n\n文章《LiberNT：新的 ReactOS 分支旨在兼容 Windows 11》首发于 Linux Today。"
+  },
+  "ff3413bf8594cb29a11cceb5c415823b": {
+    "id": "ff3413bf8594cb29a11cceb5c415823b",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/devguard-open-source-vulnerability-management-for-the-software-supply-chain/",
+    "title_en": "DevGuard: Open-source vulnerability management for the software supply chain",
+    "summary_en": "Explore DevGuard, an open-source vulnerability management platform offering security scanning, SBOM tracking, and software supply chain protection.\nThe post DevGuard: Open-source vulnerability management for the software supply chain appeared first on Linux Today.",
+    "pub_date": "Fri, 30 Oct 2026 10:38:23 +0000",
+    "title_zh": "DevGuard：面向软件供应链的开源漏洞管理平台",
+    "summary_zh": "DevGuard 是一款开源漏洞管理平台，提供安全扫描、SBOM 跟踪和软件供应链保护功能，帮助开发团队识别和管理软件依赖中的安全风险，保障软件供应链安全。",
+    "fulltext_zh": "探索 DevGuard，一个开源漏洞管理平台，提供安全扫描、SBOM 跟踪和软件供应链保护。\n\n文章《DevGuard：面向软件供应链的开源漏洞管理平台》首发于 Linux Today。"
+  },
+  "371d9eb8d47c185ab628048532040a16": {
+    "id": "371d9eb8d47c185ab628048532040a16",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/google-open-sourced-torchtpu-so-pytorch-on-tpus-just-got-a-lot-easier/",
+    "title_en": "Google open-sourced TorchTPU, so PyTorch on TPUs just got a lot easier",
+    "summary_en": "Google open-sources TorchTPU, enabling native PyTorch support on Google TPUs with easier AI model training, inference, and deployment.\nThe post Google open-sourced TorchTPU, so PyTorch on TPUs just got a lot easier appeared first on Linux Today.",
+    "pub_date": "Fri, 30 Oct 2026 10:36:42 +0000",
+    "title_zh": "Google开源TorchTPU，PyTorch在TPU上的使用变得容易多了",
+    "summary_zh": "Google开源了TorchTPU项目，为Google TPU提供原生PyTorch支持，使AI模型的训练、推理和部署更加简便。这一举措降低了开发者在TPU上使用PyTorch的门槛，有望促进AI开发效率的提升。",
+    "fulltext_zh": "Google开源了TorchTPU，为Google TPU提供原生PyTorch支持，使AI模型的训练、推理和部署更加简便。\n\n该文章“Google开源TorchTPU，PyTorch在TPU上的使用变得容易多了”首次出现在Linux Today上。"
+  },
+  "308b73157f7f4a10abedd214ff3cbfca": {
+    "id": "308b73157f7f4a10abedd214ff3cbfca",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/cosmic-1-11-desktop-environment-released-with-new-touchpad-settings/",
+    "title_en": "COSMIC 1.11 Desktop Environment Released with New Touchpad Settings",
+    "summary_en": "COSMIC 1.11 adds touchpad drag settings, improves hybrid GPU handling, fixes Wayland dialogs, and enhances desktop stability on Linux.\nThe post COSMIC 1.11 Desktop Environment Released with New Touchpad Settings appeared first on Linux Today.",
+    "pub_date": "Fri, 30 Oct 2026 10:30:00 +0000",
+    "title_zh": "COSMIC 1.11 桌面环境发布：新增触摸板设置",
+    "summary_zh": "COSMIC 1.11 桌面环境正式发布，新增触摸板拖拽设置，改进混合 GPU 处理，修复 Wayland 对话框问题，并提升 Linux 桌面稳定性。",
+    "fulltext_zh": "COSMIC 1.11 新增触摸板拖拽设置，改进混合 GPU 处理，修复 Wayland 对话框，并增强 Linux 桌面稳定性。\n\n文章《COSMIC 1.11 桌面环境发布：新增触摸板设置》首发于 Linux Today。"
+  },
+  "ea7009c3ca9cffd58aaae82e5a8c124d": {
+    "id": "ea7009c3ca9cffd58aaae82e5a8c124d",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/wine-on-openbsd-yes-and-it-can-already-run-the-witcher-3/",
+    "title_en": "Wine on OpenBSD? Yes, and It Can Already Run The Witcher 3",
+    "summary_en": "Wine now runs 64-bit Windows apps and games on OpenBSD, including The Witcher 3, marking a major compatibility milestone despite limitations.\nThe post Wine on OpenBSD? Yes, and It Can Already Run The Witcher 3 appeared first on Linux Today.",
+    "pub_date": "Fri, 30 Oct 2026 10:28:48 +0000",
+    "title_zh": "OpenBSD 上的 Wine？是的，而且已经能运行《巫师3》",
+    "summary_zh": "Wine 现已能在 OpenBSD 上运行 64 位 Windows 应用和游戏，包括《巫师3》，这标志着兼容性方面的重要里程碑，尽管仍存在一些限制。",
+    "fulltext_zh": "Wine 现在可以在 OpenBSD 上运行 64 位 Windows 应用和游戏，包括《巫师3》，尽管存在限制，但这标志着兼容性方面的一个重大里程碑。\n\n这篇文章《OpenBSD 上的 Wine？是的，而且已经能运行〈巫师3〉》首先出现在 Linux Today 上。"
+  },
+  "152592ce8350ff4d6203ccc1b6b12395": {
+    "id": "152592ce8350ff4d6203ccc1b6b12395",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/shelly-3-1-10-brings-more-reliable-aur-builds-and-a-new-shell-progress-bar",
+    "title_en": "Shelly 3.1.10 Brings More Reliable AUR Builds and a New “Shell” Progress Bar",
+    "summary_en": "Shelly 3.1.10 graphical package manager for Arch Linux distributions is now available for download with a new “Shell” progress bar for the command-line interface, AUR build improvements, and more.\nThe post Shelly 3.1.10 Brings More Reliable AUR Builds and a New “Shell” Progress Bar appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Fri, 30 Oct 2026 16:40:25 +0000",
+    "title_zh": "Shelly 3.1.10 带来更可靠的 AUR 构建和新的“Shell”进度条",
+    "summary_zh": "Shelly 3.1.10 是 Arch Linux 发行版的图形化包管理器，现已开放下载。该版本为命令行界面新增了“Shell”进度条，改进了 AUR 构建的可靠性，并包含其他多项改进。",
+    "fulltext_zh": "Shelly 3.1.10 是 Arch Linux 发行版的图形化包管理器，现已开放下载。该版本为命令行界面新增了“Shell”进度条，改进了 AUR 构建，并包含更多改进。\n\n文章“Shelly 3.1.10 带来更可靠的 AUR 构建和新的“Shell”进度条”首次出现在 9to5Linux 上——未经许可不得转载本文。本 RSS 源仅供读者使用，不得用于抓取。"
   }
 }
