@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>丹麦Collabora试点项目从来就不是微软的替代方案 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月01日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>丹麦Collabora试点项目从来就不是微软的替代方案</h1>
+
+  <div class="article-summary">丹麦数字化部与Collabora合作试点用开源办公套件替代微软Office，但该项目仅为志愿者测试，并非全面替换。试点因部委合并和选举而中断，未完成正式评估。Collabora称重组导致项目无归属，不应视为对套件的否定；部委则表示选举打断了项目。此前有报道误称丹麦将全面弃用Office 365，相关媒体已更正。</div>
+
+  <div class="article-body"><p>丹麦Collabora试点项目从来就不是微软的替代方案</p><p>丹麦Collabora试点项目从来就不是外界所描述的那种微软替代方案</p><p>Collabora表示部委合并暂停了测试，而部委称选举召集时测试被中断。</p><p>Collabora发布了丹麦部委试点项目的（文件），此前包括我们在内的报道曾将其描述为丹麦正在摆脱微软办公软件。</p><p>部委自己的启动新闻稿曾将其描述为一个部门内一组员工进行的测试。当时负责此事的部长Caroline Stage Olsen曾表示，科技巨头不会被一夜之间扫地出门。</p><p>志愿者测试，而非切换</p><p>该试点于2025年6月启动，当时丹麦数字化部本部门的志愿者开始使用（Collabora）而非微软的Word、Excel和PowerPoint编辑器编写文档。</p><p>（cBrain），这家丹麦公司负责该部的F2案件和文档管理系统，被委任将Collabora集成到其中。</p><p>从一开始就将其呈现为测试，并表示该部门更广泛的推广取决于结果。几天后，其（声明）称尚未做出淘汰微软的决定，且计划不是用Linux替换Windows。</p><p>（有报道称）测试人员抱怨来自其他政府机构的文档打开后空白、修订痕迹难以接受、行距看起来奇怪。</p><p>其报道基于通过记录请求获得的部委和cBrain的通信，涵盖了截至10月评估研讨会的几个月，会上测试人员将说明他们是否愿意继续使用Collabora。</p><p>（报道中）cBrain产品管理负责人Frejdie Søndergaard-Gudmandsen称这些漏洞对试点来说是正常的。还有报道称该部已决定继续到2026年。</p><p>关于停止原因的两种说法</p><p>部委新闻官10月（表示）选举召集中断了项目，项目未按计划评估，员工如今不使用Collabora且没有计划使用。</p><p>Collabora的声明给出了不同的原因。它表示6月的重组结束了数字化部作为独立部委的存在，使试点在评估完成前失去了归属，并且这不应被描述为对该套件的不利结论。</p><p>选举于2月召集，6月上任的（政府）将数字化部并入研究和教育部。</p><p>（Collabora表示）第一阶段奏效，其工程师解决了测试人员提出的工单，并且它自己支付了这项工作。它还表示经验正延续到与丹麦其他机构和cBrain的合作中，正式评估从未最终完成。</p><p>10月27日，研究、教育和数字化部长（表示）表明她几乎不了解项目为何未经过适当评估就结束，并指出决定是在前任部长任内做出的。</p><p>我们此前报道超前之处</p><p>（我们）援引《政治报》的报道称，该部正从Office 365转向LibreOffice，预计秋季全面采用。该部后来表示尚未做出淘汰微软的决定，并描述了一个规模较小的志愿者试点。</p><p>《政治报》很快更正了自己的文章，我们当时也修正了关于Linux的说法，但我们的标题和秋季时间表保持原样。</p><p>喜欢这篇更新？支持独立的Linux新闻报道</p><p>It's FOSS过去14年来一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>跳过Google结果中的AI垃圾和SEO垃圾</p><p>告诉Google你更喜欢It's FOSS，它会在你搜索时更频繁地展示我们由经验丰富的Linux用户创建的Linux新闻和教程。只需点击一下。</p><p>设为首选来源</p><p>🐧 今天就来玩Tuxdle——每日Linux单词谜题 →</p><p>获取FOSS Weekly到你的</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/denmark-collabora-pilot-update/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

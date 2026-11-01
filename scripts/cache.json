@@ -18533,5 +18533,148 @@
     "title_zh": "Shelly 3.1.10 带来更可靠的 AUR 构建和新的“Shell”进度条",
     "summary_zh": "Shelly 3.1.10 是 Arch Linux 发行版的图形化包管理器，现已开放下载。该版本为命令行界面新增了“Shell”进度条，改进了 AUR 构建的可靠性，并包含其他多项改进。",
     "fulltext_zh": "Shelly 3.1.10 是 Arch Linux 发行版的图形化包管理器，现已开放下载。该版本为命令行界面新增了“Shell”进度条，改进了 AUR 构建，并包含更多改进。\n\n文章“Shelly 3.1.10 带来更可靠的 AUR 构建和新的“Shell”进度条”首次出现在 9to5Linux 上——未经许可不得转载本文。本 RSS 源仅供读者使用，不得用于抓取。"
+  },
+  "4b8ad9e7f7a39cca2c83897996a02bc2": {
+    "id": "4b8ad9e7f7a39cca2c83897996a02bc2",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/10/sanket-rearrange-gnome-calendar-menus",
+    "title_en": "Sanket lets you redesign GNOME’s date menu and Quick Settings",
+    "summary_en": "Sanket is a GNOME Shell extension that lets you rejig how the desktop&#8217;s date menu, calendar, notifications and Quick Settings look and behave – and then some. It can put notifications beneath the Quick Settings menu in a floating island, or embedded inside of it. Quick Settings toggles can shrink to dots when space is tight, and expand again as and when needed, Android-style. As well as shrinking Quick Settings pills to dots, other menu tweaks let you show up two rows of controls and choos",
+    "pub_date": "Sat, 31 Oct 2026 20:51:16 +0000",
+    "title_zh": "Sanket 让你重新设计 GNOME 的日期菜单和快速设置",
+    "summary_zh": "Sanket 是一款 GNOME Shell 扩展，允许用户重新设计日期菜单、日历、通知和快速设置的外观与行为。它可以将通知放在浮动岛中或嵌入菜单内，将开关收缩为圆点，支持两行控件布局，并可拖拽调整控件顺序。该扩展兼容 GNOME Shell 45 至 51，用户可从 GNOME 扩展网站安装。",
+    "fulltext_zh": "Sanket 让你重新设计 GNOME 的日期菜单和快速设置 - OMG! Ubuntu\n\nSanket 是一款 GNOME Shell 扩展，让你可以重新调整桌面日期菜单、日历、通知以及快速设置的外观和行为——甚至更多。\n\n它可以将通知放在菜单下方的浮动岛中，或嵌入菜单内部。\n\n当空间紧张时，开关可以缩小为圆点，并在需要时再展开，类似 Android 风格。\n\n从药丸形变为圆点，其他菜单调整还允许你显示两行控件，并选择音量与亮度滑块在紧凑模式下是否保持可见。一个“编辑”模式还允许你拖放调整控件的顺序。\n\n由于通知不再必须位于日历弹出窗口内，它变得更像仪表盘而非大杂烩。通过 Sanket 的天气预报可压缩为单个动画图标，时区可以以模拟图标显示。\n\nSanket 确实改变了通知的管理方式，只显示最新的通知。这对我来说有点不适应，因为展开列表（无论它在哪里）比直接看到它们更费力。通知可以被固定，这很不错。\n\n但让它更有用的是，你不需要使用它提供的所有功能。\n\n通过 Sanket 你可以改变很多——或者不改变。你可以保留默认布局，只将它用于其他事情，比如隐藏日历标题或“即将发生的事件”列表。\n\n我喜欢它的设置中包含许多布局和选项的视觉预览，这样你就知道元素会移动到哪里，而不用经历“改点什么然后弄明白它做了什么”的常规操作。\n\n配置？这个扩展有\n\n如果你从未看过 GNOME Shell 的日历或快速设置菜单并想过“我希望我能改变那部分”，那么 Sanket 可能不那么吸引你。\n\n但如果你喜欢自定义桌面，或试图让 GNOME 看起来更像其他桌面环境或操作系统——结合 Just Perfection 等扩展，这可以创建一个更有 ChromeOS 灵感的设置——那么它非常值得一看。\n\nSanket 适用于 GNOME Shell 45 到 51。你可以从 GNOME 扩展网站安装它（GNOME 扩展应用让你无需网页浏览器即可浏览和安装扩展）。\n\n在其 GitHub 页面上了解更多信息。"
+  },
+  "653b325649bef52610db39756f14c007": {
+    "id": "653b325649bef52610db39756f14c007",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/denmark-collabora-pilot-update/",
+    "title_en": "Denmark’s Collabora Pilot Was Never The Microsoft Replacement it Was Made Out to Be",
+    "summary_en": "Collabora says a ministry merger paused the test, while the ministry says it was interrupted when the election was called.",
+    "pub_date": "Sat, 31 Oct 2026 12:03:47 GMT",
+    "title_zh": "丹麦Collabora试点项目从来就不是微软的替代方案",
+    "summary_zh": "丹麦数字化部与Collabora合作试点用开源办公套件替代微软Office，但该项目仅为志愿者测试，并非全面替换。试点因部委合并和选举而中断，未完成正式评估。Collabora称重组导致项目无归属，不应视为对套件的否定；部委则表示选举打断了项目。此前有报道误称丹麦将全面弃用Office 365，相关媒体已更正。",
+    "fulltext_zh": "丹麦Collabora试点项目从来就不是微软的替代方案\n丹麦Collabora试点项目从来就不是外界所描述的那种微软替代方案\nCollabora表示部委合并暂停了测试，而部委称选举召集时测试被中断。\nCollabora发布了丹麦部委试点项目的（文件），此前包括我们在内的报道曾将其描述为丹麦正在摆脱微软办公软件。\n部委自己的启动新闻稿曾将其描述为一个部门内一组员工进行的测试。当时负责此事的部长Caroline Stage Olsen曾表示，科技巨头不会被一夜之间扫地出门。\n志愿者测试，而非切换\n该试点于2025年6月启动，当时丹麦数字化部本部门的志愿者开始使用（Collabora）而非微软的Word、Excel和PowerPoint编辑器编写文档。\n（cBrain），这家丹麦公司负责该部的F2案件和文档管理系统，被委任将Collabora集成到其中。\n从一开始就将其呈现为测试，并表示该部门更广泛的推广取决于结果。几天后，其（声明）称尚未做出淘汰微软的决定，且计划不是用Linux替换Windows。\n（有报道称）测试人员抱怨来自其他政府机构的文档打开后空白、修订痕迹难以接受、行距看起来奇怪。\n其报道基于通过记录请求获得的部委和cBrain的通信，涵盖了截至10月评估研讨会的几个月，会上测试人员将说明他们是否愿意继续使用Collabora。\n（报道中）cBrain产品管理负责人Frejdie Søndergaard-Gudmandsen称这些漏洞对试点来说是正常的。还有报道称该部已决定继续到2026年。\n关于停止原因的两种说法\n部委新闻官10月（表示）选举召集中断了项目，项目未按计划评估，员工如今不使用Collabora且没有计划使用。\nCollabora的声明给出了不同的原因。它表示6月的重组结束了数字化部作为独立部委的存在，使试点在评估完成前失去了归属，并且这不应被描述为对该套件的不利结论。\n选举于2月召集，6月上任的（政府）将数字化部并入研究和教育部。\n（Collabora表示）第一阶段奏效，其工程师解决了测试人员提出的工单，并且它自己支付了这项工作。它还表示经验正延续到与丹麦其他机构和cBrain的合作中，正式评估从未最终完成。\n10月27日，研究、教育和数字化部长（表示）表明她几乎不了解项目为何未经过适当评估就结束，并指出决定是在前任部长任内做出的。\n我们此前报道超前之处\n（我们）援引《政治报》的报道称，该部正从Office 365转向LibreOffice，预计秋季全面采用。该部后来表示尚未做出淘汰微软的决定，并描述了一个规模较小的志愿者试点。\n《政治报》很快更正了自己的文章，我们当时也修正了关于Linux的说法，但我们的标题和秋季时间表保持原样。\n喜欢这篇更新？支持独立的Linux新闻报道\nIt's FOSS过去14年来一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。\n一次付费，永久享受\n任意金额，无承诺\n跳过Google结果中的AI垃圾和SEO垃圾\n告诉Google你更喜欢It's FOSS，它会在你搜索时更频繁地展示我们由经验丰富的Linux用户创建的Linux新闻和教程。只需点击一下。\n设为首选来源\n🐧 今天就来玩Tuxdle——每日Linux单词谜题 →\n获取FOSS Weekly到你的"
+  },
+  "ec70916ebb0efd2ef8f29b4f4e0c067a": {
+    "id": "ec70916ebb0efd2ef8f29b4f4e0c067a",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/13012",
+    "title_en": "Distribution Release: Linux Lite 8.2",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Jerry Bezencon has announced the release of Linux Lite 8.2, an updated build of the project's user-friendly, Ubuntu-based Linux distribution featuring the Xfce desktop. The new release updates the Linux kernel to the very latest version 7.3: \"Linux Lite 8.2 final is now available for download. This is....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Linux Lite 8.2",
+    "summary_zh": "Linux Lite 8.2 正式发布，这是一个基于 Ubuntu 的 Xfce 桌面发行版，主要面向 Windows 用户。本次更新将 Linux 内核升级至 7.3 版本，提供桌面和游戏两种内核变体，并修复了加密安装失败的问题。",
+    "fulltext_zh": "Jerry Bezencon 宣布发布 Linux Lite 8.2，这是该项目用户友好、基于 Ubuntu 的 Linux 发行版的更新版本，采用 Xfce 桌面环境。新版本将 Linux 内核更新至最新的 7.3 版本：\n\n“Linux Lite 8.2 最终版现已可供下载。这是一个次要版本，主要特性是 Linux 内核 7.3。在 8.0 系列中，Linux Lite 内核从主线 7.x 推进到 7.3，基于 kernel.org 主线 tarball（经 GPG 验证）加上精选的 CachyOS 补丁子集构建。提供两种变体——‘linuxlite’（桌面版，启用缓解措施）和‘linuxlite-gaming’（关闭缓解措施，在 7.3 上启用 ORC 和 BORE 调度器）。通过‘linuxlite-nvidia-kernel-patch’包在主线上内核上支持 NVIDIA 专有驱动。为 8.2 版本重新品牌化了安装程序。修复了加密安装在最后阶段失败并提示‘无法关闭目标系统上的加密分区’的问题。在 0110 中，安装现在可以完整运行——grub-install 成功，crypttab/initramfs 已写入，但 umount 作业在未先运行‘swapoff’的情况下对加密交换映射器调用‘cryptsetup close’，导致仍处于活动状态的交换设备繁忙，Calamares 报告整个安装失败，尽管磁盘上的系统已完整且可启动。”\n\n更多详情和截图请见。\n\nlinux-lite-8.2-64bit.iso\n\n近期相关新闻和发布\n发行版发布：Linux Lite 8.2\n发行版发布：Linux Lite 8.0\n开发版发布：Linux Lite 8.0 RC1\n发行版发布：Linux Lite 7.8\n发行版发布：Linux Lite 7.2\n发行版发布：Linux Lite 7.0\n\nLinux Lite 是一个适合初学者的 Linux 发行版，基于 Ubuntu 的长期支持（LTS）版本，采用 Xfce 桌面。Linux Lite 主要面向 Windows 用户，旨在提供一套完整的应用程序以帮助用户处理日常计算需求。"
+  },
+  "8964d68fb51afa8d0bc64c939a2cc9cc": {
+    "id": "8964d68fb51afa8d0bc64c939a2cc9cc",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/13011",
+    "title_en": "OS Release: Sculpt OS 26-10",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Genode has announced the release of Sculpt OS 26-10, the latest version of the project's minimalist, general-purpose, open-source operating system based on Genode's own microkernel: \"Sculpt OS release 26.10. Sculpt OS 26.10 uses Genode's custom microkernel by default, drops XML, hosts virtual machines in VirtualBox 7, and turns....",
+    "pub_date": "",
+    "title_zh": "操作系统发布：Sculpt OS 26-10",
+    "summary_zh": "Genode 项目发布了 Sculpt OS 26-10，这是基于 Genode 微内核的极简通用开源操作系统的最新版本。该版本默认使用 Genode 自研微内核，放弃 XML 配置，支持 VirtualBox 7 虚拟机，并将 USB 主机控制器驱动变为可插拔组件。此外还改进了鼠标指针、组件依赖可视化、网络摄像头灵活性和英国键盘支持。四大底层变化包括：首次采用自研微内核、完成从 XML 到 HID 配置格式的过渡等。",
+    "fulltext_zh": "Genode 宣布发布 Sculpt OS 26-10，这是该项目基于 Genode 自有微内核的极简、通用、开源操作系统的最新版本：“Sculpt OS 26.10 发布。Sculpt OS 26.10 默认使用 Genode 的自定义微内核，放弃 XML，在 VirtualBox 7 中托管虚拟机，并将 USB 主机控制器驱动转变为可插拔组件。尽管有一些用户便利性改进，例如可缩放且用户可自定义的鼠标指针、新增的依赖组件可视化概览、网络摄像头使用的更高灵活性，以及对英国键盘的新支持，但当前版本的四大主要转变都在表面之下。首先，Sculpt 26.10 是首个基于 Genode 自定义微内核而非依赖第三方内核的版本。该内核从头开始为 Genode 和 Sculpt OS 的特定需求而设计，不仅比 Genode 支持的任何其他微内核更加‘微’，还解决了长期存在的 CPU 调度和内核内存管理缺陷。Sculpt OS 终于站在了 Genode 自己的 footing 上。其次，该版本标志着从 XML 向 Genode 的 HID 配置格式过渡的终点，提升了系统文本用户界面的舒适度。”阅读其余内容。\n\nSculpt OS 是由 Genode 开发的一款独立开源操作系统。它结合了 Genode 的微内核架构、基于能力的安全机制、沙盒化设备驱动和虚拟机，为商用 PC 硬件和 PinePhone 提供了一种新颖的操作系统。Sculpt 使用名为“Leitzentrale”的管理用户界面。"
+  },
+  "5c1c440a7c5b2aa5a3b92bf57072354e": {
+    "id": "5c1c440a7c5b2aa5a3b92bf57072354e",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/RAID-Drive-Replacement-Tonight",
+    "title_en": "Brief Server Downtime Expected Tonight",
+    "summary_en": "Just a friendly heads up that Phoronix.com and associated sites will be down briefly at around midnight PST / 3AM EST on 1 November for a failed drive in the NVMe SSD RAID array...",
+    "pub_date": "Sat, 31 Oct 2026 20:32:00 -0400",
+    "title_zh": "今晚预计服务器短暂停机",
+    "summary_zh": "Phoronix.com及关联网站将于太平洋时间11月1日午夜（东部时间凌晨3点）短暂停机，原因是NVMe SSD RAID阵列中有一块硬盘故障。由于该硬盘不支持热插拔，需断电更换，预计停机时间很短。故障硬盘一年前刚更换过，作者推测可能与今年AI爬虫机器人对网站的高强度访问有关。",
+    "fulltext_zh": "今晚预计服务器短暂停机\n2026年10月31日 晚上08:32 EDT。\n\n友情提醒：Phoronix.com及关联网站将于太平洋时间11月1日午夜（东部时间凌晨3点）左右短暂停机，原因是NVMe SSD RAID阵列中有一块硬盘故障。\n\n遗憾的是，该硬盘无法热插拔，因此我们在[合作伙伴]的朋友需要关闭服务器电源。希望停机时间能尽可能短。\n\n今年AI爬虫机器人等对网站的冲击尤其严重……而这块故障硬盘一年前才刚刚更换过。\n\n距离10秒内核构建、Xeon 600及其他9月热点在Phoronix上\n开源领域更多AI、CachyOS、Ryzen AI Halo、Framework Laptop 13 Pro及其他Q3热门内容\n秋季特惠最后召唤：无广告浏览并支持Linux硬件测试\n无广告浏览、多页文章单页显示推广提醒\n在享受无广告Phoronix的同时帮助Linux硬件测试与评测继续\nLinux内核AI洪流、Linux 7.2发布及其他8月亮点\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、显卡驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过[链接]关注他。\n\nFAT32文件系统在Linux 7.4中最高获得265倍改进\nLinux早期启动时物理内存分配器大幅提速：约268秒降至约50毫秒\n为VNC/远程软件提出新的Wayland协议\nLinux 7.4块层更新涵盖软盘驱动修复到Apple M4 NVMe支持\nSystem76推出AMD平台Linux小型PC\nKDE修复15年前关于复制文件到USB驱动器时通知不准确的bug\nBorealis：Asahi Linux的Apple Silicon Mesa Vulkan驱动被fork用于Vibe Coding\nLinux 7.4为Nintendo Switch 2控制器引入新驱动——感谢Valve\n\n享受无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "9f73193e91540b92eefa0e7b7d977617": {
+    "id": "9f73193e91540b92eefa0e7b7d977617",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/OpenShot-4.1-Released",
+    "title_en": "OpenShot 4.1 Released With Auto-Optimize, CLI Automation & ARM64 Linux Builds",
+    "summary_en": "OpenShot is closing out the month of October by releasing OpenShot 4.1 as the latest major feature release for this useful open-source video editing solution...",
+    "pub_date": "Sat, 31 Oct 2026 19:28:50 -0400",
+    "title_zh": "OpenShot 4.1 发布：新增自动优化、CLI 自动化与 ARM64 Linux 构建",
+    "summary_zh": "OpenShot 4.1 作为这款开源视频编辑软件的最新重大功能版本发布，新增原生文本编辑功能，可直接在编辑器内添加和设置文字样式；引入自动优化功能，为高负载视频生成小型快速优化副本以实现即时预览，同时导出仍保持 4K+ 高画质；支持 CLI 自动化，便于脚本或 AI 代理编辑视频；此外还改进了导出、键盘编辑、预览、音频支持，并新增 ARM64 构建。",
+    "fulltext_zh": "OpenShot 4.1 发布：新增自动优化、CLI 自动化与 ARM64 Linux 构建\n\n2026 年 10 月 31 日 19:28 EDT。\n\nOpenShot 以发布 4.1 版本为十月画上句号，这是这款实用开源视频编辑解决方案的最新重大功能版本。\n\nOpenShot 4.1 终于为其视频编辑器带来原生文本编辑功能，允许直接添加和设置文字样式，无需任何外部编辑器。另一项重要新增是自动优化（Auto-Optimize），可为高负载视频提供小型、快速的优化副本以实现即时预览，同时导出仍保持更高的 4K+ 画质。\n\n一项令我兴奋的功能是 CLI 自动化。其目标是让脚本或 Claude Code、Codex 等 AI 代理能够使用 OpenShot 编辑视频。我对 OpenShot 的 CLI 自动化与脚本支持感到兴奋，希望借此能够为 OpenShot 制作自动化性能基准测试。\n\nOpenShot 4.1 还改进了导出、键盘编辑与预览增强、更快的编辑和更好的音频支持，以及各种其他改进。在打包方面，OpenShot 4.1 新增 ARM64 构建，以补充其 x86_64 二进制文件。\n\nOpenShot 4.1 下载及新版本更多详情请见\n\nLinux 7.4 声音变更已合并：“AI 洪流持续”\nAV2 视频编解码器采用被热议，SVT-AV2 正在开发\nFFmpeg 9.1 准备发布，包含 APV Vulkan 编码器、NVIDIA Optical Flow FRUC\nSound Open Firmware 2.15 发布，支持 AMD ACP 7.x、Intel UAOL\nOpenAPV 迎来重大更新，推进高级专业视频编解码器\nDaVinci Resolve 21.1 发布——现已集成 AI 助手\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创办该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\nFAT32 文件系统在 Linux 7.4 中最高获得 265 倍改进\nLinux 早期启动时物理内存分配器大幅提速：约 268 秒降至约 50 毫秒\n为 VNC/远程软件提出新的 Wayland 协议\nLinux 7.4 块层更新涵盖软盘驱动修复到 Apple M4 NVMe 支持\nSystem76 推出 AMD 驱动的 Linux 小型 PC\nKDE 修复 15 年前关于复制文件到 USB 驱动器时通知不准确的 bug\nBorealis：Asahi Linux 的 Apple Silicon Mesa Vulkan 驱动被分叉用于 Vibe Coding\nLinux 7.4 引入任天堂 Switch 2 控制器新驱动——感谢 Valve\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "1c2104fbc8ff6fb12a23ac733091fdb3": {
+    "id": "1c2104fbc8ff6fb12a23ac733091fdb3",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Enlightenment-0.28",
+    "title_en": "Enlightenment 0.28 Released With Many Improvements",
+    "summary_en": "Enlightenment 0.27 released at the beginning of 2025 and since then there's been no major feature update, falling off their roughly 12 month release cadence. But out this Halloween is Enlightenment 0.28 now with the better part of two years worth of changes...",
+    "pub_date": "Sat, 31 Oct 2026 10:46:26 -0400",
+    "title_zh": "Enlightenment 0.28 发布，带来诸多改进",
+    "summary_zh": "Enlightenment 0.28 于万圣节发布，距上一版本已近两年。新版本新增 NetBSD 系统支持、NetworkManager 模块（管理有线和无线网络及 VPN）、原生 PipeWire 混音器支持（同时保留 PulseAudio），并带来窗口操作、客户端装饰处理、显示模式排序、背光过滤、窗口切换等多方面改进，以及底层 pixmap 处理、X 连接恢复和嵌套 Wayland 合成器关闭的优化。",
+    "fulltext_zh": "Enlightenment 0.28 发布，带来诸多改进\n2026 年 10 月 31 日 上午 10:46 EDT 发布。\n\nEnlightenment 0.27 于 2025 年初发布，此后一直没有重大功能更新，偏离了其大约 12 个月的发布节奏。但今年万圣节推出的 Enlightenment 0.28 带来了近两年的变更。\n\nCarsten Haitzler 今日发布了 Enlightenment 0.28，它带来了初步的 NetBSD 操作系统支持、用于有线和无线网络管理以及 VPN 的 NetworkManager 模块，以及各种其他网络集成改进。\n\nEnlightenment 0.28 还带来了原生 PipeWire 混音器支持，同时保留对 PulseAudio 的支持。\n\n此次 Enlightenment 更新还包含各种其他音频相关增强。其他一些变化包括新的窗口操作、改进的客户端装饰处理、改进的显示模式排序、改进的背光过滤、改进的窗口切换，以及大量修复和代码清理。在底层方面，还改进了 pixmap 处理、X 连接恢复和嵌套 Wayland 合成器关闭。\n\nEnlightenment 0.28 继续同时支持 X11 和 Wayland。可通过以下链接下载并了解 Enlightenment 0.28 版本的更多详情。"
+  },
+  "78f1955520504d3f66f3e7ad53f14a6d": {
+    "id": "78f1955520504d3f66f3e7ad53f14a6d",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-Mint-October-2026",
+    "title_en": "Linux Mint Developing New Apps For Terminal & System Monitoring",
+    "summary_en": "Linux Mint is out with their October 2026 status report to outline various initiatives they have underway in their lead-up to the Linux Mint 27 stable release happening on/around Christmas...",
+    "pub_date": "Sat, 31 Oct 2026 10:36:11 -0400",
+    "title_zh": "Linux Mint 正在为终端和系统监控开发新应用",
+    "summary_zh": "Linux Mint 发布2026年10月状态报告，介绍Linux Mint 27稳定版（预计圣诞节前后发布）的多项新进展：恢复休眠支持、Nemo文件管理器新增图片预览窗格，并正在开发系统监控应用Superlight、终端模拟器Velocity和归档管理器Unfold。",
+    "fulltext_zh": "Linux Mint 发布了2026年10月的状态报告，概述了在Linux Mint 27稳定版（将于圣诞节前后发布）之前正在推进的各项计划。\n\n在上游Ubuntu从支持的睡眠模式中移除休眠后，Linux Mint开发者一直致力于为Linux Mint恢复休眠支持。通过Linux Mint的系统管理工具，希望以休眠替代挂起的用户将可以启用休眠支持。\n\nLinux Mint的Nemo文件管理器新增了图片预览窗格，这是Linux Mint 27的又一项桌面可用性增强。\n\nLinux Mint正在开发的一款全新应用是Superlight。Superlight应用用于系统监控，可监控CPU、RAM、GPU、网络和存储，以及温度和风扇转速等。这是Linux桌面上的又一款系统监控工具。\n\nLinux Mint还在开发Velocity，作为新的终端模拟器。\n\n最后是Unfold，一个小型归档管理器。\n\n有关休眠支持和新应用的更多细节，请参阅"
+  },
+  "ef49e25ce7e101e91a1c913bc34b3c40": {
+    "id": "ef49e25ce7e101e91a1c913bc34b3c40",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-Drops-Taint-Bind",
+    "title_en": "New Linux 7.4 Feature For Reducing AI Noise Already Reverted Due To A \"Crazy Beast\"",
+    "summary_en": "A new feature merged last week for Linux 7.4 to help reduce AI/LLM generated noise from invalid/irrelevant testing configurations is now reverted due to a \"crazy beast\" in the VFIO subsystem...",
+    "pub_date": "Sat, 31 Oct 2026 08:15:22 -0400",
+    "title_zh": "Linux 7.4 减少 AI 噪音的新功能因 VFIO 子系统中的“疯狂野兽”已被回退",
+    "summary_zh": "Linux 7.4 曾合并 TAINT_FORCED_BIND 功能，用于标记通过 sysfs 强制绑定/解绑驱动的内核，以减少 AI/LLM 模糊测试产生的无关错误报告。但随后发现 VFIO 子系统在合法场景中依赖该行为，Greg Kroah-Hartman 称 VFIO 为“疯狂野兽”，因此该功能被回退。未来可能采用 Uwe Kleine-König 的 driver_override 方案，但已赶不上 7.4 合并窗口。",
+    "fulltext_zh": "Linux 7.4 减少 AI 噪音的新功能因 VFIO 子系统中的“疯狂野兽”已被回退\n2026 年 10 月 31 日 08:15 AM EDT 发布。\n\n上周为 Linux 7.4 合并的一项新功能——旨在减少由无效/不相关测试配置产生的 AI/LLM 噪音——现已因 VFIO 子系统中的“疯狂野兽”而被回退。\n\nGreg Kroah-Hartman 早在 9 月就设计了 TAINT_FORCED_BIND 选项，用于在 Linux 的 bind/unbind sysfs 接口被使用时污染正在运行的内核。该接口允许将硬件任意绑定/解绑到给定驱动。在 AI/LLM 时代，该接口被 Syzbot 及其同类滥用，试图将硬件绑定到彼此不相关的驱动上。这导致这些工具/机器人提交的无关错误报告产生噪音，而这些报告并不匹配任何合法的内核使用场景。\n\n因此，有了 TAINT_FORCED_BIND，内核开发者就能在错误报告中清楚地看到使用了 sysfs bind/unbind，从而帮助快速推断这可能不是合法的错误报告。\n\n该功能上周为 Linux 7.4 合并，Greg KH 将其描述为针对内核的近期大规模模糊测试“攻击”。\n\n然而在 TAINT_FORCED_BIND 合并之后，人们才意识到 VFIO 代码在合法实践中依赖 bind/unbind 行为。Greg 在描述中称 VFIO 的用法为“疯狂野兽”：\n\n“事实证明，vfio 是一头疯狂野兽，人们一直‘依赖’bind/unbind 调试功能作为将设备透传给客户机实例的一种处理方式。正因如此（https://xkcd.com/1172/），我们暂时回退该功能，直到我们能找到一种更[可接受]的方式来处理，使得正常工作流不会污染内核。\n\n很可能 Uwe 在以下地址提出的方案：\nhttps://lore.kernel.org/lkml/\n将是最佳前进方向，并将在 7.4 之后重新审视。\n\n该功能最初旨在遏制不必要的模糊测试报告——即随机设备被绑定到随机驱动上、当然事情出了错、报告‘驱动损坏’。主要的 syzbot 工具现在已不再这样做，希望没有其他人再启动它（但在如今 LLM 的疯狂中，你无法确定。）”\n\nVFIO 依赖 bind/unbind 来将 PCIe 设备从 Linux 主机驱动分离，并附加到 vfio-pci 以便在虚拟机内使用。\n\nUwe Kleine-König 的提案是仅在 driver_override 的使用中使用 TAINT_DRIVER_OVERRIDE，并默认禁用 driver_override，同时允许 Linux 驱动选择允许自身进入。我们将看看这是否最终会被 Linux v7.5 采纳，但对 v7.4 来说已经太晚，合并窗口预计明天关闭。\n\n图形/NPU 驱动变更已开始为 Linux 7.5 排队\nLinux 内核开发者考虑移除 KGDB 调试功能\n利用内核内 eBPF 加速 HTTP Web 服务器可达 4.5 倍吞吐量\nLinux 7.4 开始采用新的“Core MM”树\nLinux 修复因缓存感知调度导致的 AMD Ryzen AI 9 HX 370 回归\nGoogle 的 C Binder 驱动被移除，Rust Binder 已为“数十亿设备”做好准备\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nFAT32 文件系统在 Linux 7.4 中最高获得 265 倍改进\nLinux 早期启动时物理内存分配器大幅提速：约 268 秒降至约 50 毫秒\n为 VNC/远程软件提出的新 Wayland 协议\nLinux 7.4 块层更新范围从软盘驱动修复到 Apple M4 NVMe 支持\nSystem76 推出 AMD 驱动的 Linux 小型 PC\nKDE 修复 15 年前关于 Cop 通知不准确的错误"
+  },
+  "470d93591e516656521e4b7aa8a86e02": {
+    "id": "470d93591e516656521e4b7aa8a86e02",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/openshot-4-1-video-editor-is-out-with-native-arm64-linux-builds-and-text-editing",
+    "title_en": "OpenShot 4.1 Video Editor Is Out with Native ARM64 Linux Builds and Text Editing",
+    "summary_en": "OpenShot 4.1 open-source video editor is now available for download with native text editing, native Linux ARM64 builds, CLI automation, and more.\nThe post OpenShot 4.1 Video Editor Is Out with Native ARM64 Linux Builds and Text Editing appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Sat, 31 Oct 2026 21:45:56 +0000",
+    "title_zh": "OpenShot 4.1 视频编辑器发布：原生 ARM64 Linux 构建与文本编辑功能",
+    "summary_zh": "OpenShot 4.1 开源视频编辑器现已开放下载，新增原生文本编辑功能、原生 Linux ARM64 构建、命令行自动化等特性。",
+    "fulltext_zh": "OpenShot 4.1 开源视频编辑器现已开放下载，带来原生文本编辑、原生 Linux ARM64 构建、命令行自动化等更多功能。\n\n文章 OpenShot 4.1 视频编辑器发布：原生 ARM64 Linux 构建与文本编辑 最早出现在 9to5Linux 上——未经许可不得转载本文。本 RSS 源面向读者，而非抓取工具。"
+  },
+  "5f88e61bc00d33d3c8701a9537a6e62b": {
+    "id": "5f88e61bc00d33d3c8701a9537a6e62b",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/linux-mint-devs-introduce-new-system-monitor-and-terminal-emulator-apps",
+    "title_en": "Linux Mint Devs Introduce New System Monitor and Terminal Emulator Apps",
+    "summary_en": "Linux Mint devs unveil new system monitor, archive manager, and terminal emulator apps for Linux Mint, along with a preview pane for Nemo and hibernation support.\nThe post Linux Mint Devs Introduce New System Monitor and Terminal Emulator Apps appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Sat, 31 Oct 2026 15:47:42 +0000",
+    "title_zh": "Linux Mint 开发者推出新的系统监视器和终端模拟器应用",
+    "summary_zh": "Linux Mint 开发者发布了新的系统监视器、归档管理器和终端模拟器应用，同时为 Nemo 文件管理器增加了预览窗格，并支持休眠功能。",
+    "fulltext_zh": "Linux Mint 开发者推出了新的系统监视器、归档管理器和终端模拟器应用，同时为 Nemo 增加了预览窗格，并支持休眠功能。\n\n该文章首次出现在 9to5Linux 上——未经许可不得转载本文。此 RSS 源面向读者，而非抓取工具。"
+  },
+  "a412c957dd9e2691f5dbc581fe7e4572": {
+    "id": "a412c957dd9e2691f5dbc581fe7e4572",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/enlightenment-0-28-desktop-adds-pipewire-support-networkmanager-module",
+    "title_en": "Enlightenment 0.28 Desktop Adds PipeWire Support, NetworkManager Module",
+    "summary_en": "Enlightenment 0.28 desktop environment arrives with PipeWire support, a NetworkManager module, initial NetBSD support, mixer actions, an integrated clipboard history module, and more.\nThe post Enlightenment 0.28 Desktop Adds PipeWire Support, NetworkManager Module appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Sat, 31 Oct 2026 15:05:02 +0000",
+    "title_zh": "Enlightenment 0.28 桌面环境新增 PipeWire 支持与 NetworkManager 模块",
+    "summary_zh": "Enlightenment 0.28 桌面环境正式发布，新增 PipeWire 支持、NetworkManager 模块、初步 NetBSD 支持、混音器操作、集成剪贴板历史模块等功能，进一步提升桌面体验与硬件兼容性。",
+    "fulltext_zh": "Enlightenment 0.28 桌面环境现已发布，带来 PipeWire 支持、NetworkManager 模块、初步的 NetBSD 支持、混音器操作、集成剪贴板历史模块等众多新特性。"
+  },
+  "686ba28b6fb08b212aedc51bece97e73": {
+    "id": "686ba28b6fb08b212aedc51bece97e73",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/linux-lite-8-2-released-with-linux-kernel-7-3-based-on-ubuntu-26-04-lts",
+    "title_en": "Linux Lite 8.2 Released with Linux Kernel 7.3, Based on Ubuntu 26.04 LTS",
+    "summary_en": "Linux Lite 8.2 distribution is now available for download based on Ubuntu 26.04 LTS (Resolute Raccoon) and powered by the Linux 7.3 kernel series, featuring the Xfce desktop environment.\nThe post Linux Lite 8.2 Released with Linux Kernel 7.3, Based on Ubuntu 26.04 LTS appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Sat, 31 Oct 2026 14:03:21 +0000",
+    "title_zh": "Linux Lite 8.2 发布：搭载 Linux 内核 7.3，基于 Ubuntu 26.04 LTS",
+    "summary_zh": "Linux Lite 8.2 发行版现已开放下载，基于 Ubuntu 26.04 LTS（Resolute Raccoon），搭载 Linux 7.3 内核系列，并采用 Xfce 桌面环境。",
+    "fulltext_zh": "Linux Lite 8.2 发行版现已开放下载，基于 Ubuntu 26.04 LTS（Resolute Raccoon），搭载 Linux 7.3 内核系列，并采用 Xfce 桌面环境。"
   }
 }
