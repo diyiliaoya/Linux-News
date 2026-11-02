@@ -18676,5 +18676,159 @@
     "title_zh": "Linux Lite 8.2 发布：搭载 Linux 内核 7.3，基于 Ubuntu 26.04 LTS",
     "summary_zh": "Linux Lite 8.2 发行版现已开放下载，基于 Ubuntu 26.04 LTS（Resolute Raccoon），搭载 Linux 7.3 内核系列，并采用 Xfce 桌面环境。",
     "fulltext_zh": "Linux Lite 8.2 发行版现已开放下载，基于 Ubuntu 26.04 LTS（Resolute Raccoon），搭载 Linux 7.3 内核系列，并采用 Xfce 桌面环境。"
+  },
+  "239df48b5ce0a88ea26a9ac7f82b3139": {
+    "id": "239df48b5ce0a88ea26a9ac7f82b3139",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/11/enlightenment-0-28-features",
+    "title_en": "Enlightenment desktop 0.28 released with better networking",
+    "summary_en": "Enlightenment 0.28 has been released, the first major update to the open-source desktop environment since early 2025. Given the time between this and the previous 0.27 release, the changelog is suitably lengthy. Networking and audio stack enhancements, UI and UX tweaks and, of course, plenty of bug fixes are listed – no jaw-dropping UI changes, though. v0.28 adds a new Network Manager module. This supports connecting to and managing wireless, wired and Bluetooth networking connections, as well a",
+    "pub_date": "Sun, 01 Nov 2026 19:18:50 +0000",
+    "title_zh": "Enlightenment 桌面环境 0.28 发布，网络功能增强",
+    "summary_zh": "Enlightenment 0.28 版本发布，这是该开源桌面环境的重大更新。新增网络管理器模块，支持有线和无线及蓝牙连接与 VPN；音频方面加入原生 PipeWire 混音器；集成剪贴板历史模块；改进便携设备支持，包括电池充电限制和 ACPI CPU 电源配置。此外还有大量窗口管理、指针处理和显示器检测方面的修复。该版本需 EFL 1.29.0 或更新版本，Ubuntu 用户可通过脚本自动化安装。",
+    "fulltext_zh": "Enlightenment 桌面环境 0.28 发布，网络功能增强 - OMG! Ubuntu\n\n这是该开源桌面环境的首个重大更新。鉴于距离上一个版本已有一段时间，更新日志相当长。列表包括网络和音频栈增强、UI 和 UX 调整，当然还有大量错误修复——不过没有令人瞠目结舌的 UI 变化。\n\nv0.28 新增了一个网络管理器模块。它支持连接和管理无线、有线和蓝牙网络连接，以及 VPN。它可以显示信号强度、安全性和其他连接详情。\n\n在音频方面，除了现有的 PulseAudio 混音器外，还提供了原生 PipeWire 混音器，混音器操作现在可以在不同的“接收器”之间循环切换，并在设备输出之间更改。\n\n经常复制粘贴？有一个集成的剪贴板历史模块，保留半持久日志。它可以控制跟踪哪些内容、跟踪多长时间，让你清除项目，并决定内容是否应在会话之间保留。\n\nEnlightenment 0.28 还改进了对便携设备的支持，增加了对启用和配置电池充电限制（有助于保护电池健康）、ACPI CPU 电源配置文件（内核提供）以及更好的资源轮询的支持。\n\n修复众多，包括一堆窗口管理增强、更好的指针处理和焦点选择、显示器 DDC 和 EDID 检测等。不过，按桌面和按屏幕的配置文件支持已被移除。\n\n在 Ubuntu 上安装 Enlightenment 0.28\n\nEnlightenment 网站提供了 E28 源代码的下载链接，你可以手动编译，不过 Enlightenment 0.28.0 依赖 EFL v1.29.0 或更新版本，所以你也需要下载并构建它。\n\n不需要最新变化？\n\nUbuntu 26.04 的归档中有较旧版本的 Enlightenment，你可以用以下命令安装：\n\n不想从源代码构建？根据你使用的 Ubuntu 版本，有脚本可以自动化整个过程：\n\n对于 Ubuntu 26.04 LTS，\n对于 Ubuntu 24.04 LTS，\n对于 Ubuntu 22.04 LTS，\n\n不要期待它像 GNOME 或 KDE 那样炫目或流畅。\n\n（又名“E”）是一个模块化桌面，其窗口管理器、合成器和核心桌面外壳使用 Enlightenment Foundation Libraries (EFL) 构建。它提供了一套基于 EFL 的原生应用，包括文件管理器、图片查看器和终端。\n\n其“美学”从来不是面向所有人的，整体用户体验也不是（模块化可能让人感觉不协调）。但由于它极其轻量且可配置，又不失基础功能，值得在雨天把玩一番。"
+  },
+  "6c470c8d468720d82872ac4ad6a82ce1": {
+    "id": "6c470c8d468720d82872ac4ad6a82ce1",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/13015",
+    "title_en": "DistroWatch Weekly, Issue 1197",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  This week in DistroWatch Weekly: \nReview: Super Lite Linux 24.6\nNews: Redox OS introduces performance improvements, NetBSD includes new text editor, Canonical resumes work on Ubuntu Core Desktop, Mint reintroduces hibernation, Linux patches exFAT flaw\nQuestions and answers: Running untrusted applications\nReleased last week: Kali Linux 2026.3, Maze Linux 2026.10.26, ZelixOS....",
+    "pub_date": "",
+    "title_zh": "DistroWatch周刊第1197期",
+    "summary_zh": "本期DistroWatch周刊评测了Super Lite Linux 24.6，报道了Redox OS性能改进、NetBSD引入新文本编辑器、Canonical恢复Ubuntu Core Desktop开发、Mint重新引入休眠功能以及Linux修补exFAT漏洞等新闻。此外还包含问答栏目关于运行不受信任应用的内容，并列出上周发布的多款发行版更新及即将发布的Fedora 45和FreeBSD 15.2-BETA1。",
+    "fulltext_zh": "DistroWatch周刊第1197期（DistroWatch.com新闻）\nDistroWatch.com由以下赞助商支持\n新闻/观点/评测 ▼\n发布公告\nDW周刊/评测存档\n访客评分与评测\n项目评分排名\n播客、新闻通讯与评测\n跨发行版比较软件包\n显示所有发行版的软件包版本\n搜索发行版 - 高级\n已停止的发行版\n教程与学习 ▼\n搜索文章\n问答专栏\n技巧与提示专栏\n误区与误解专栏\n简化手册页\n其他操作系统\n发行版验证密钥\n可视化发行版家族树\n常见问题\n我们的捐赠计划\n小型企业电话系统\nMint正在恢复休眠模式\nUbuntu Core Desktop恢复开发\nNetBSD在基础系统中采用新文本编辑器\nRedox引入性能改进、Clang编译\nSparky项目推出SparkyOS\n使用Sylve安装FreeBSD\nOpenBSD获得64位WINE移植\nFedora切换控制台驱动\nGNOME OS引入“预览”变体\nHaiku开发者打磨操作系统的诸多方面\n易于使用的PBX - 托管或自管理\nLinux电话系统\n免费实时聊天解决方案\n集成呼叫中心软件\n联络中心软件\n远程工作应用：iOS或Android\n免费视频会议\n3CX的VoIP/PBX操作指南\n不要措手不及，制定灾难恢复计划！\n必要的实时聊天报告和统计\n导致呼叫欺诈的常见错误\nWhatsApp Business与3CX WhatsApp API集成\n3CX StartUP的5大杀手级功能\n别做“那种”人 第1卷：保管复杂凭证\n别做“那种”人 第2卷：呼叫欺诈\n别做“那种”人 第3卷：四大安全提示\n别做“那种”人 第4卷：监控你的实例\nTumbleweed月度更新 - 2026年10月\nPCLinuxOS杂志2026年11月\nLinux Mint月度新闻 - 2026年10月\nFull Circle杂志第234期\nRed Hat周五五件事 - 2026年10月30日\nArmbian新闻通讯2026年10月\nUbuntu每周新闻通讯第967期\nRedox本月动态 - 2026年9月\nFull Circle每周新闻\nDistrohoppers' Digest\nFedora项目播客\nProjets Libres播客\n最新新闻与更新\n新闻筛选选项\nDistroWatch周刊第1197期\n评测：Super Lite Linux 24.6\n新闻：Redox OS引入性能改进，NetBSD包含新文本编辑器，Canonical恢复Ubuntu Core Desktop工作，Mint重新引入休眠，Linux修补exFAT漏洞\n问答：运行不受信任的应用程序\n上周发布：Kali Linux 2026.3、Maze Linux 2026.10.26、ZelixOS 2026.10.26、RefreshOS 3.1、GhostBSD 26.2、Equestria OS 2026.10.28、SweetPotatOs 2026.11、Gnoppix Linux 26_11、CarotOS 1.3、Sculpt OS 26-10、Linux Lite 8.2、PorteuX 2.9\n种子角落：GhostBSD、Linux Lite\n即将发布：Fedora 45、FreeBSD 15.2-BETA1\n民意调查：你是否有意使用本国开发的Linux发行版？\n阅读本周DistroWatch周刊的更多内容……\naptosid发行版是一个面向桌面的操作系统和Live CD，基于Debian GNU/Linux的不稳定分支。除了与父发行版完全兼容外，该发行版还提供支持多种现代硬件设备的定制内核、KDE作为默认桌面环境、滚动发布周期，并遵循Debian的自由软件准则。\n问答：在Linux上玩游戏\n技巧与提示：硬链接和软链接概述\n技巧与提示：使用at命令保持终端程序运行、反向OpenSSH连接\n技巧与提示：使用zedenv管理启动环境\n技巧与提示：使用Pi-hole过滤广告\n问答：为PC实现KDE Connect功能\n问答：数据包过滤器和传统技术\n技巧与提示：简单的rsync示例\n问答：Linux上的网页浏览器\n版权所有 © 2001 - 2026 Atea Ataroa Limited。保留所有权利。所有商标均为其各自所有者的财产。\n更改隐私设置\n联系、更正和建议"
+  },
+  "fb30147acba290392f9189f7e4138206": {
+    "id": "fb30147acba290392f9189f7e4138206",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/13014",
+    "title_en": "Distribution Release: LCOS 1.0.0",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Bryan Lunduke has announced the availability of the first stable release of LCOS (Lunduke Computer Operating System), a privacy-focused, minimalist desktop Linux distribution based on Devuan. It promises to provide a traditional operating system with no ID or age verification, no built-in artificial intelligence features and no software....",
+    "pub_date": "",
+    "title_zh": "发行版发布：LCOS 1.0.0",
+    "summary_zh": "Bryan Lunduke 宣布推出 LCOS（Lunduke Computer Operating System）1.0.0 首个稳定版，这是一个基于 Devuan 的隐私优先、极简桌面 Linux 发行版。它承诺不要求身份或年龄验证，不内置人工智能功能，也不包含用 Rust 编写的软件克隆或内核二进制块。该系统基于定制 Linux 内核分支，采用 XLibre X11 服务器、Brave Origin 浏览器等组件，强调速度、简洁和经典桌面体验。",
+    "fulltext_zh": "Bryan Lunduke 宣布推出 LCOS（Lunduke Computer Operating System）的首个稳定版本，这是一个注重隐私、极简的桌面 Linux 发行版，基于 Devuan。它承诺提供一个传统的操作系统，无需身份或年龄验证，不内置人工智能功能，也没有用 Rust 编写的软件克隆或内核二进制块。\n\n来自发布公告：\n\nLunduke Computer Operating System（LCOS）1.0 版，一个面向台式计算机的 Linux 兼容系统，已正式发布，可供所有人免费下载。LCOS 之王 Bryan Lunduke 表示：“LCOS 解决了当今操作系统面临的最大问题。台式计算机正遭受着我们谁都不想要的垃圾攻击——身份验证和数据收集。强制在线账户。臃肿、缓慢的软件。被硬塞进简单文本编辑器的人工智能功能。被武器化的行为准则。当然，还有奇怪的、觉醒的政治。LCOS 没有这些乱七八糟的东西。只有出色的软件。”\n\nLunduke Computer Operating System 1.0 由可用的最佳桌面软件构建而成：一个 LCOS 专用的 Linux 内核分支（构建时不含不必要的 Rust 模块）；来自非觉醒、非歧视、注重精英管理的开发者的高质量组件，例如：XLibre X11 服务器；Devuan 项目；Brave Origin 网络浏览器；专注于速度、简洁和经典台式计算机风格的自定义构建工具。\n\n近期相关新闻与发布\n\n发行版发布：LCOS 1.0.0\n\nLCOS（Lunduke Computer Operating System）是一个基于 Devuan 的极简桌面 Linux 发行版，采用 Xfce 桌面。该项目的目标是开发一个可用的操作系统，不需要任何在线账户、年龄验证或任何其他形式的认证。它也不包含……"
+  },
+  "ede1787f2dcdcfeadaa704690ff856db": {
+    "id": "ede1787f2dcdcfeadaa704690ff856db",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/13013",
+    "title_en": "Distribution Release: PorteuX 2.9",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  PorteuX is a Linux distribution based on Slackware Linux. The project offers several desktop editions, with the 2.9 version focusing on improved stability. \"This release is mostly about stability. All of our runtime code (initrd, rc scripts, porteux-scripts and installer) went through an in-depth review, fixing many bugs....",
+    "pub_date": "",
+    "title_zh": "发行版发布：PorteuX 2.9",
+    "summary_zh": "PorteuX 2.9 发布，这是一个基于 Slackware 的 Linux 发行版，提供多种桌面版本。本次更新主要聚焦稳定性，全面审查了运行时代码（initrd、rc 脚本、porteux-scripts 和安装程序），修复了大量错误并提升了安全性。内核也获得性能优化，包括更快的 zstd 解压、无锁页面缓存读取和更轻量的文件打开路径。Xfce 新增后台窗口间拖拽文件功能，并修复了 Chrome/LibreWolf 崩溃、Windows 编辑配置后 cheatcodes 失效、符号链接模块不释放 loop 设备等问题。",
+    "fulltext_zh": "发行版发布：PorteuX 2.9（DistroWatch.com 新闻）\n\nPorteuX 是一个基于 Slackware Linux 的 Linux 发行版。该项目提供多个桌面版本，2.9 版侧重于提升稳定性。\n\n“本次发布主要关注稳定性。我们所有的运行时代码（initrd、rc 脚本、porteux-scripts 和安装程序）都经过了深入审查，修复了许多错误并提高了安全性。内核也进行了一些性能优化：更快的 zstd 解压、无锁页面缓存读取以及更轻量的文件打开路径。这些改进有助于模块加载和一般磁盘访问。Xfce 新增功能：现在你可以将文件从后台窗口直接拖拽到另一个窗口，而无需切换焦点，就像在 Windows 上一样。修复了 Chrome 和 LibreWolf 崩溃的问题；修复了在 Windows 上编辑 porteux.cfg 后 cheatcodes 不工作的问题；修复了通过符号链接激活的模块不释放其 loop 设备的问题；修复了模块在 PorteuX Modules 应用程序的“其他”部分显示两次的问题；修复了关机时残留进程在卸载前未被杀死的问题；修复了虚拟机无法从 virtio 存储启动的问题……”\n\n更多详情可在以下文件中找到：\nporteux-2.9-current-cinnamon-6.6.9-x86_64.iso\nporteux-2.9-current-cosmic-1.11.0-x86_64.iso\nporteux-2.9-current-gnome-51.1-x86_64.iso\nporteux-2.9-current-kde-6.8.2-x86_64.iso\nporteux-2.9-current-lxde-0.11.1-x86_64.iso\nporteux-2.9-current-lxqt-2.4.0-x86_64.iso\nporteux-2.9-current-mate-1.28.2-x86_64.iso\nporteux-2.9-current-xfce-4.20-x86_64.iso\n\n近期相关新闻与发布\n发行版发布：PorteuX 2.9\n发行版发布：PorteuX 2.8\n发行版发布：PorteuX 2.7\n发行版发布：PorteuX 2.5\n发行版发布：PorteuX 2.4\n发行版发布：PorteuX 2.2\n\nPorteuX 是一个基于 Slackware Linux 的 Linux 发行版，受 Slax 和 Porteus 启发，免费向公众提供。其主要目标是"
+  },
+  "397341fc8bf4d6d619e5309cf6485768": {
+    "id": "397341fc8bf4d6d619e5309cf6485768",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Steam-Survey-October-2026",
+    "title_en": "Steam On Linux Just Under 4% For October 2026",
+    "summary_en": "Valve just published their Steam Survey results for October and point to a small uptick in Linux gaming use on a relative basis...",
+    "pub_date": "Sun, 01 Nov 2026 20:47:46 -0500",
+    "title_zh": "2026年10月Steam Linux份额略低于4%",
+    "summary_zh": "Valve公布2026年10月Steam调查结果，Linux游戏使用率环比上升0.05%至3.95%，macOS为2.35%，Windows为93.7%。此前9月数据曾因简体中文用户激增而大幅下滑，Valve已将9月数据修正为3.9%。基于Arch的CachyOS以16.3%领跑Linux发行版，超过SteamOS的13.89%。Linux玩家中AMD CPU使用率接近70%。",
+    "fulltext_zh": "Valve刚刚发布了10月的Steam调查结果，显示Linux游戏使用率在相对基础上略有上升。\n\n根据今天公布的Steam调查数据，2026年10月Steam Linux使用率上升了0.05%，总体达到3.95%。这与9月最初的Steam调查数据有很大不同，当时显示Linux下降至3.05%，较8月下降0.85%。但正如上个月那篇文章所指出的，这与简体中文使用率的强烈变化密切相关。当这种情况在Steam调查中发生时，微软Windows通常会相对Linux出现大幅上升。\n\n无论如何，Valve已将9月数据修正为3.9%，现在10月报告其整体Linux客户群为3.95%。苹果macOS为2.35%，Windows为93.7%。相比之下，去年这个时候我们还在庆祝Steam on Linux终于突破3%。\n\n在Linux发行版中，基于Arch Linux的CachyOS仍然最受欢迎，占16.3%，甚至超过了排名第二的SteamOS的13.89%。\n\nLinux游戏玩家的AMD CPU使用率仍略低于70%，部分原因是Steam Deck和Steam Machine使用了定制的AMD SoC。\n\n10月完整的Steam调查结果可在以下网址查看：\n\nVKD3D-Proton 3.1发布，在v3.2大版本发布前带来新功能\nSteam Frame VR头显在Linux 7.4中获得主线支持\nSteamOS 3.9.5发布，搭载Linux 7.2内核、KDE Plasma 6.7桌面及其他更新\n今天的Steam Beta使Linux客户端成为64位应用\nValve的Proton 11.0-2e发布以修复EA App问题\nSteam Beta现在默认将非Steam Windows二进制文件交由Proton运行\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nFAT32文件系统在Linux 7.4中看到高达265倍的改进\nLinux早期启动时物理内存分配器大幅提速：约268秒降至约50毫秒\n新的Wayland协议被提议用于VNC/远程软件\nLinux 7.4块更新范围从软盘驱动修复到Apple M4 NVMe支持\nEnlightenment 0.28发布，带来许多改进\nSystem76推出AMD驱动的Linux小型PC\nKDE修复了15年前关于复制文件到USB驱动器时通知不准确的bug\nAMD 600系列芯片组现在在Linux上获得温度监控支持\n\n在拥有无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "0479174d0630d634ea54a19f18cbdafc": {
+    "id": "0479174d0630d634ea54a19f18cbdafc",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-rc1",
+    "title_en": "Linux 7.4-rc1 Released With Nice Performance Improvements, AMD Ryzen Zen 6 Preparations & AMDGPU HDMI 2.1 Default",
+    "summary_en": "Even with Linus Torvalds having been on holiday, Linux 7.4-rc1 is out today on-schedule for capping off the Linux 7.4 merge window...",
+    "pub_date": "Sun, 01 Nov 2026 16:51:34 -0500",
+    "title_zh": "Linux 7.4-rc1 发布：性能改进亮眼，为 AMD Ryzen Zen 6 做准备，AMDGPU HDMI 2.1 默认启用",
+    "summary_zh": "Linux 7.4-rc1 已按计划发布，预计 12 月 20 日正式发布并可能成为年度 LTS 内核。该版本带来 AMD Radeon iGPU 的 PerfOpt 特性以提升 AI/LLM 性能、为 Ryzen Zen 6 提供支持、默认启用 AMDGPU HDMI 2.1、支持 Intel IPU8 和 Qualcomm Snapdragon X2 笔记本、EXT4 可选缓冲 IOmap、基础 Apple M4 支持、Google Tensor G5 与 Pixel 10 支持，并加快内核构建速度。合并窗口提交量近 2 万，创历史新高，主要受 AI 相关工作推动。",
+    "fulltext_zh": "Linux 7.4-rc1 发布：性能改进亮眼，为 AMD Ryzen Zen 6 做准备，AMDGPU HDMI 2.1 默认启用\n\n2026 年 11 月 1 日 下午 04:51 EST。\n\n尽管 Linus Torvalds 一直在休假，Linux 7.4-rc1 仍于今日按计划发布，为 Linux 7.4 画上句号。\n\nLinux 7.4 带来了许多令人兴奋的变化。v7.4-rc1 今日按计划发布，没有出现 Linus Torvalds 在 v7.3 公告中提到的可能延迟一周的情况，它仍有很大机会在 12 月底前发布。因此，Linux 7.4 很可能成为今年的长期支持（LTS）内核版本。前提是内核周期末尾没有出现可怕的延迟导致拖长。就目前情况来看，如果 Linux 7.4 按时发布，它很可能在 12 月 20 日到来。\n\nLinux 7.4 的众多变化包括：面向 Radeon iGPU 的新 AMD PerfOpt 特性，帮助提升 AI/LLM 性能；AMD Ryzen Zen 6 支持在下一代客户端 CPU 发布前全部就绪；大量笔记本怪癖/新增支持；AMDGPU HDMI 2.1 默认启用；为即将到来的 Nova Lake 笔记本提供 Intel IPU8 支持；更多 Qualcomm Snapdragon X2 笔记本支持；EXT4 可选缓冲 IOmap 支持；基础 Apple M4 支持启用（尚未面向最终用户）；Google Tensor G5 SoC 和 Pixel 10 设备的主线内核支持；更快的内核构建时间等等。\n\n未来一两天内，我将像往常一样发布功能概览，总结所有有趣的 Linux 7.4 内核特性/变化，此外还有我最近几周发布的数十篇单独文章。这是\n合并窗口期间提交量最多的一次\n；AI 在很大程度上推动了提交/补丁数量的巨大上升趋势。\n\n请关注 Phoronix 上的 Linux 7.4 功能概览，随后 Linux 7.4 内核基准测试也将开始。\n\nLinus Torvalds 现在发表了他惯常的\n“这是一个*巨大*的合并窗口。我认为原因现在已经很明显了，但我实际上把它视为一个好迹象：相比 AI 触发的工作主要作为 -rc 期间的额外修复出现，我对它们涌入合并窗口感到*高兴*得多。所以我希望这个合并窗口比平时更大，标志着 AI 修复正更多地成为‘正常开发’的一部分，而不是涌入整个稳定阶段的修复洪流。我认为这是一个健康得多的模式。但我们会看看 -rc 的情况如何。\n话虽如此，‘这是一个大合并窗口’的一小部分原因也可能是人们预期 7.4 将成为下一个 LTS 版本，这是某些版本比其他版本更大的另一个独立原因。所以这可能*不仅仅*是 AI 补丁的洪流。\n无论大版本的原因是什么，它在提交量上——近 2 万次提交，而常见约 1.5 万次——和差异上都很大。虽然差异大部分是因为另一个传统原因：又一次 AMD 硬件寄存器转储到巨大的头文件中。整个补丁的三分之一只是 AMD GPU 寄存器偏移和位掩码。我们以前来过这里，我相信未来还会多次看到。忽略噪音就好。”\n\nLinux 7.4 合并窗口轻松成为内核历史上最大的\nLinux 的 Perf Python 脚本在 Linux 7.4 中更健壮、更快速\nLinux 7.4 合并窗口提交近 2 万次，源码树接近 4200 万行\nLinux 7.4 减少 AI 噪音的新特性因“疯狂野兽”已被回退\n图形/NPU 驱动变更已开始为 Linux 7.5 排队\nLinux 内核开发者考虑移除 KGDB 调试功能\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他内容。"
+  },
+  "408ef5d76d190e83235d5bbf187a1289": {
+    "id": "408ef5d76d190e83235d5bbf187a1289",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/KDE-Kwi-Terminal-Emulator",
+    "title_en": "Kwi Being Developed As New KDE Terminal Emulator With 3x To 35x Performance",
+    "summary_en": "A new KDE terminal emulator is in development as a modern alternative to Konsole. Kwi is this new terminal app being built atop the Ghostty library...",
+    "pub_date": "Sun, 01 Nov 2026 08:41:39 -0500",
+    "title_zh": "Kwi 正在开发中：全新 KDE 终端模拟器，性能提升 3 至 35 倍",
+    "summary_zh": "KDE 开发者 Eike Hein 宣布正在开发全新终端模拟器 Kwi，基于 Ghostty 的 libghostty-vt 库构建，支持 OpenGL/Vulkan GPU 加速。官方称其整体性能比 Konsole 快 3 至 35 倍，并符合最新 KDE HIG 标准。目前 Kwi 仍处于实验阶段，尚未发布 v0.1.0 版本，也未被提议取代 Konsole。",
+    "fulltext_zh": "一款新的 KDE 终端模拟器正在开发中，作为 Konsole 的现代替代方案。Kwi 就是这款基于 Ghostty 库构建的新终端应用。\n\nKDE 开发者 Eike Hein 今日宣布了 Kwi 的开发，这是一款快速且现代的终端，符合 KDE HIG 和 UI 规范。Kwi 采用 Ghostty 的 libghostty-vt 库以及其他成熟的 KDE Frameworks。因此，Kwi 终端通过 Qt Scene Graph 支持基于 OpenGL 或 Vulkan 的 GPU 加速。\n\n“整体性能快 3 至 35 倍，具体取决于基准测试。例如在测试系统上运行 DOOM-fire-zig 达到 870 fps，而 Konsole 为 23 fps。”\n\nKwi 自称整体性能比 Konsole 快 3 至 35 倍，符合最新的 KDE HIG 标准，并且架构比 Konsole 更现代。\n\n目前 Kwi 被视为实验性项目，尚未被提议作为 Konsole 的替代品。当前状态总结如下：\n\n“Kwi 进展顺利，已在小范围朋友间进行了有限测试，但它也非常新，甚至还没有打上 v0.1.0 标签。因此，请大幅降低预期，并预料到明显且即时的 bug :-)。它完全无法与 Konsole 29 年持续开发工作相提并论，后者每天有数百万用户使用。”\n\n希望了解更多关于 Kwi 终端模拟器信息的用户可以通过以下方式获取。"
+  },
+  "c92abc2019260f22445afd5303ec778b": {
+    "id": "c92abc2019260f22445afd5303ec778b",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-Massive-Window",
+    "title_en": "The Linux 7.4 Merge Window Is Easily The Largest In Kernel History",
+    "summary_en": "After writing this morning with some stats about the size of the Linux 7.4 merge window and the kernel's source tree approaching 42 million lines, I was curious to run some numbers for putting the size of the merge window into perspective against the major kernel releases of the past 15 years. This shows the definite recent uptick due to AI/LLM activity...",
+    "pub_date": "Sun, 01 Nov 2026 07:00:11 -0500",
+    "title_zh": "Linux 7.4 合并窗口轻松成为内核历史上最大的一个",
+    "summary_zh": "Linux 7.4 合并窗口以近 2 万次 Git 提交成为内核历史上最大的合并窗口，远超以往 1.3 至 1.4 万次的水平。这一激增主要归因于 AI/LLM 活动导致的大量补丁和修复，内核维护者因此不堪重负。整个内核开发节奏持续加快，Linux 7.3 已是首个完整周期提交超 2 万次，而 7.4 仅合并窗口就接近该数字。",
+    "fulltext_zh": "Linux 7.4 合并窗口轻松成为内核历史上最大的一个\n2026 年 11 月 1 日东部时间上午 07:00。\n\n今天早上我写了一些关于 Linux 7.4 合并窗口规模以及内核源码树接近 4200 万行的统计数据后，我很好奇地跑了一些数字，以便将合并窗口的规模与过去 15 年的主要内核版本进行对比。这显示出近期因 AI/LLM 活动而出现的明显上升趋势。\n\n过去一年，Linux 内核的开发节奏明显处于上升轨道。诚然，从消费设备到数据中心的巨大增长，Linux 的受欢迎程度可能处于历史最高水平，但内核补丁的许多增长是由于 AI/LLM。由于 AI 生成的错误报告和补丁/修复，Linux 内核维护者“完全不堪重负”，Git 提交活动因此激增。\n\n为了直观展示影响，以下是回溯到 2011 年发布的 Linux 3.1 以来，每个版本 Linux 内核合并窗口的 Git 提交数量：\n\nLinux 7.4 合并窗口在提交/补丁数量上远远是有史以来最大的合并窗口。接近 2 万次！过去几个内核版本的上升趋势持续累积。通常合并窗口的提交量在 1.3 万至 1.4 万次或更少，而现在我们正逼近 2 万次。以下是每个合并窗口的所有原始数据，供好奇者参考：\n\n当然，在预计今天晚些时候发布 Linux 7.4-rc1 内核之前，Linux 7.4 今天仍可能有一些提交陆续加入。\n\n由于许多 AI/LLM 活动围绕修复进行，补丁的激增并不止于合并窗口。以下是每个内核周期从先前版本到标记稳定版本的 Git 提交总数：\n\nLinux 7.3 是整个内核周期首次突破 2 万次提交（从 v7.2 到 v7.3 共 20,260 次提交）。现在在 Linux 7.4 上，我们仅合并窗口就看到了接近这个数字。\n\nLinux 7.4-rc1 发布，带来良好的性能改进、AMD Ryzen Zen 6 准备以及 AMDGPU HDMI 2.1 默认启用\nLinux 的 Perf Python 脚本在 Linux 7.4 中更健壮、更快速\nLinux 7.4 合并窗口看到近 2 万次提交，源码树接近 4200 万行\nLinux 7.4 用于减少 AI 噪音的新功能因“疯狂野兽”已被回退\n图形/NPU 驱动变更已开始为 Linux 7.5 排队\nLinux 内核开发者考虑移除 KGDB 调试功能\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\nFAT32 文件系统在 Linux 7.4 中看到高达 265 倍的改进\nLinux 早期启动时物理内存分配器大幅提速：约 268 秒降至约 50 毫秒\n为 VNC/远程软件提议新的 Wayland 协议\nLinux 7.4 块更新范围从软盘驱动修复到 Apple M4 NVMe 支持\nEnlightenment 0.28 发布，带来许多改进\nSystem76 推出 AMD 驱动的 Linux 小型 PC\nKDE 修复了 15 年前关于复制文件到 USB 驱动器时通知不准确的错误\nAMD 600 系列芯片组现已在 Linux 上支持温度监控\n同时享有无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "2195474f81a9911c1d24b0cebb2d309e": {
+    "id": "2195474f81a9911c1d24b0cebb2d309e",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/OverlayFS-Many-Fixes",
+    "title_en": "OverlayFS Sees Many Fixes Thanks To AI Code Review",
+    "summary_en": "Merged this weekend for Linux 7.4 and also marked for back-porting to current stable kernel versions are a number of fixes to the OverlayFS union mount file-system...",
+    "pub_date": "Sun, 01 Nov 2026 06:37:07 -0500",
+    "title_zh": "OverlayFS 因 AI 代码审查获得大量修复",
+    "summary_zh": "在 Linux 7.4 合并窗口期间，OverlayFS 联合挂载文件系统获得了大量修复，这些修复由 Chris Mason 的 AI/LLM 驱动代码审查发现，包括信息泄露、释放后使用、空指针解引用等可由非特权用户触发的安全漏洞，以及 nfs_export 数据丢失等问题。相关补丁已合并并将回移植到稳定内核版本。",
+    "fulltext_zh": "本周末为 Linux 7.4 合并、并标记为回移植到当前稳定内核版本的是 OverlayFS 联合挂载文件系统的一系列修复。\n\nLinux 7.4 的 OverlayFS 变更仅由许多修复组成，其中一些涉及安全影响。这些修复也被标记为回移植到稳定的 Linux 内核版本。\n\n以 Btrfs 闻名的 Chris Mason 最近专注于\nAI/LLM 驱动的 Linux 内核代码审查\n，最终发现了多个 OverlayFS 缺陷。Amir Goldstein 在 OverlayFS 更新的拉取请求中解释道：\n“- 修复 Chris Mason 的 AI 审查发现的缺陷，其中几个可由非特权用户触发：信息泄露、释放后使用和空指针解引用缺陷、远程层导致的 RCU 遍历停滞以及 nfs_export 的数据丢失\n- 修复带有空 security.capability xattr 的文件的 copy up，任何用户都可以设置该属性来阻止 copy up\n- 修复 v6.16 中 override_creds 挂载选项的回归\n- 两个 casefold 修复”\n\n在过去一周中，Chris Mason 在代码中发现这些问题后，最终为 OverlayFS 提交了十几多个补丁。由于信息泄露、UAF 及相关缺陷可由非特权用户触发，因此存在安全考量。\n\n这些在 Linux 7.4-rc1 之前合并、并将在未来几天回移植到稳定分支的 OverlayFS 修复可通过以下链接查看\n\nLinux 7.4 中的 Ceph 为延迟 I/O 增加全局挂载选项\nF2FS 在 Linux 7.4 中增加可选的多粒度时间戳及其他改进\nFAT32 文件系统在 Linux 7.4 中性能提升高达 265 倍\nKSMBD 在 Linux 7.4 中增加新选项\nProvenance Time 被提议作为 Linux 的新时间戳\nNTFS3 在 Linux 7.4 中针对损坏或恶意构造的 NTFS 卷进行加固\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nFAT32 文件系统在 Linux 7.4 中性能提升高达 265 倍\nLinux 早期启动时物理内存分配器大幅提速：从约 268 秒到约 50 毫秒\n为 VNC/远程软件提议的新 Wayland 协议\nLinux 7.4 块层更新范围从软盘驱动修复到 Apple M4 NVMe 支持\nEnlightenment 0.28 发布，带来许多改进\nSystem76 推出 AMD 驱动的 Linux 小型 PC\nKDE 修复 15 年前关于复制文件到 USB 驱动器时通知不准确的 bug\nAMD 600 系列芯片组现已在 Linux 上支持温度监控\n\n同时享受无广告浏览、\n单页文章视图\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "975cb9a4a02da83dc1894ad18fd27e5b": {
+    "id": "975cb9a4a02da83dc1894ad18fd27e5b",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/linus-torvalds-announces-first-linux-kernel-7-4-release-candidate",
+    "title_en": "Linus Torvalds Announces First Linux Kernel 7.4 Release Candidate",
+    "summary_en": "Linus Torvalds announced today the general availability of the first Release Candidate (RC) of the upcoming Linux 7.4 kernel series for public testing and early adopters.\nThe post Linus Torvalds Announces First Linux Kernel 7.4 Release Candidate appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Sun, 01 Nov 2026 21:45:10 +0000",
+    "title_zh": "Linus Torvalds 宣布首个 Linux 内核 7.4 候选版本",
+    "summary_zh": "Linus Torvalds 宣布即将发布的 Linux 7.4 内核系列首个候选版本（RC）现已开放供公众测试和早期采用者使用。",
+    "fulltext_zh": "Linus Torvalds 今天宣布，即将发布的 Linux 7.4 内核系列的首个候选版本（RC）已正式发布，供公众测试和早期采用者使用。\n\n文章《Linus Torvalds 宣布首个 Linux 内核 7.4 候选版本》首发于 9to5Linux——未经许可请勿转载本文。本 RSS 源面向读者，而非抓取工具。"
+  },
+  "7a03030e8c864f4dfbb4c5982eee89a4": {
+    "id": "7a03030e8c864f4dfbb4c5982eee89a4",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/budgie-10-10-4-desktop-environment-released-with-more-improvements",
+    "title_en": "Budgie 10.10.4 Desktop Environment Released with More Improvements",
+    "summary_en": "Budgie 10.10.4 is now available as the fourth maintenance update to the Wayland-only Budgie 10.10 desktop environment series with various improvements and bug fixes.\nThe post Budgie 10.10.4 Desktop Environment Released with More Improvements appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Sun, 01 Nov 2026 16:58:53 +0000",
+    "title_zh": "Budgie 10.10.4 桌面环境发布，带来更多改进",
+    "summary_zh": "Budgie 10.10.4 作为仅支持 Wayland 的 Budgie 10.10 桌面环境系列的第四个维护更新现已发布，包含多项改进和错误修复。",
+    "fulltext_zh": "Budgie 10.10.4 现已发布，作为仅支持 Wayland 的 Budgie 10.10 桌面环境系列的第四个维护更新，带来了各种改进和错误修复。"
+  },
+  "c59484c3fab3ca2ad776b539f07d8494": {
+    "id": "c59484c3fab3ca2ad776b539f07d8494",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/trinity-desktop-environment-r14-1-7-is-out-with-support-for-ubuntu-26-10",
+    "title_en": "Trinity Desktop Environment R14.1.7 Is Out with Support for Ubuntu 26.10",
+    "summary_en": "Trinity Desktop Environment (TDE) R14.1.7 desktop environment is now available with support for new distributions, new features, and various enhancements for nostalgic KDE 3.5 fans.\nThe post Trinity Desktop Environment R14.1.7 Is Out with Support for Ubuntu 26.10 appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Sun, 01 Nov 2026 16:27:38 +0000",
+    "title_zh": "Trinity桌面环境R14.1.7发布，支持Ubuntu 26.10",
+    "summary_zh": "Trinity桌面环境（TDE）R14.1.7版本现已发布，新增对多个发行版的支持，并带来新功能与多项改进，面向怀念KDE 3.5风格的用户。",
+    "fulltext_zh": "Trinity桌面环境（TDE）R14.1.7桌面环境现已发布，新增对多个新发行版的支持，带来新功能，并为怀念KDE 3.5的用户提供多项增强。"
+  },
+  "ad3c6b31a46fe7e5100b8d3a121b0095": {
+    "id": "ad3c6b31a46fe7e5100b8d3a121b0095",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/9to5linux-weekly-roundup-november-1st-2026",
+    "title_en": "9to5Linux Weekly Roundup: November 1st, 2026",
+    "summary_en": "9to5Linux Weekly Roundup for November 1st, 2026, brings news about Kali Linux 2026.3, Firefox 159, KDE Plasma 6.8.2, Thunderbird 159, Scribus 1.6.7, Mesa 26.2.6, Armbian Imager 2.5, PipeWire 1.6.11, LibreOffice 26.8.2, Tor Browser 16.0, Shelly 3.1.10, Linux Lite 8.2, Enlightenment 0.28, OpenShot 4.1, PorteuX 2.9, and more.\nThe post 9to5Linux Weekly Roundup: November 1st, 2026 appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, no",
+    "pub_date": "Sun, 01 Nov 2026 16:04:28 +0000",
+    "title_zh": "9to5Linux 每周综述：2026年11月1日",
+    "summary_zh": "本期9to5Linux周报汇总了2026年11月1日当周的重要Linux新闻，涵盖Kali Linux 2026.3、Firefox 159、KDE Plasma 6.8.2、Thunderbird 159、Scribus 1.6.7、Mesa 26.2.6、Armbian Imager 2.5、PipeWire 1.6.11、LibreOffice 26.8.2、Tor Browser 16.0、Shelly 3.1.10、Linux Lite 8.2、Enlightenment 0.28、OpenShot 4.1、PorteuX 2.9等软件更新与发布动态。",
+    "fulltext_zh": "9to5Linux 2026年11月1日每周综述，带来关于Kali Linux 2026.3、Firefox 159、KDE Plasma 6.8.2、Thunderbird 159、Scribus 1.6.7、Mesa 26.2.6、Armbian Imager 2.5、PipeWire 1.6.11、LibreOffice 26.8.2、Tor Browser 16.0、Shelly 3.1.10、Linux Lite 8.2、Enlightenment 0.28、OpenShot 4.1、PorteuX 2.9等更多内容的新闻。\n\n帖子《9to5Linux 每周综述：2026年11月1日》首次出现在9to5Linux上——未经许可不得转载本文。本RSS源仅供读者使用，不"
+  },
+  "ead79db1e9a998d7e85a539b130ed2fd": {
+    "id": "ead79db1e9a998d7e85a539b130ed2fd",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/linux-kernel-7-2-reaches-end-of-life-its-time-to-upgrade-to-linux-kernel-7-3",
+    "title_en": "Linux Kernel 7.2 Reaches End of Life, It’s Time to Upgrade to Linux Kernel 7.3",
+    "summary_en": "Linux kernel 7.2 reached end of life and all users are now recommended to upgrade their systems to the latest Linux 7.3 kernel series as soon as possible.\nThe post Linux Kernel 7.2 Reaches End of Life, It’s Time to Upgrade to Linux Kernel 7.3 appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Sun, 01 Nov 2026 13:31:11 +0000",
+    "title_zh": "Linux 内核 7.2 停止支持，是时候升级到 Linux 内核 7.3 了",
+    "summary_zh": "Linux 内核 7.2 已到达生命周期终点，官方建议所有用户尽快将系统升级至最新的 Linux 7.3 内核系列，以继续获得安全更新与维护支持。",
+    "fulltext_zh": "Linux 内核 7.2 已到达生命周期终点，现在建议所有用户尽快将系统升级至最新的 Linux 7.3 内核系列。\n\n文章《Linux 内核 7.2 停止支持，是时候升级到 Linux 内核 7.3 了》首发于 9to5Linux——未经许可请勿转载本文。本 RSS 源面向读者，而非抓取程序。"
   }
 }
