@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KDE Linux 接近 Beta 里程碑，现默认搭载 NTSYNC — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月03日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">桌面环境</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>KDE Linux 接近 Beta 里程碑，现默认搭载 NTSYNC</h1>
+
+  <div class="article-summary">KDE 开发者 Nate Graham 发布月度博客，介绍 KDE Linux 在十月的进展。该发行版开发已超过一年，目前完成约 85% 的 Beta 里程碑。十月改进包括安装器新增基础幻灯片、内核默认启用 NTSYNC 模块以提升 Wine/Proton 游戏性能、基础镜像加入 wayland-protocols。仍需完成交换支持、Discover 更新体验、双启动体验、Flatpak 崩溃处理等。</div>
+
+  <div class="article-body"><p>KDE 开发者 Nate Graham 于周日发布月度博客，概述了 KDE Linux 的当前状态以及该内部 Linux 发行版在十月期间所做的一些更改。此外，KDE Linux 在作为 KDE 参考 Linux 发行版开发一年多后，正接近其 Beta 里程碑。</p><p>对于首次安装 KDE Linux 的用户，十月的一项改进是 KDE Linux 的安装器现在有了基础的幻灯片。KDE Linux 安装器幻灯片类似于其他 Linux 发行版的操作系统安装器。</p><p>在内核方面，KDE Linux 现在默认启用 NTSYNC 内核模块。默认启用 NTSYNC 增强了通过 Wine/Proton 在 Linux 上游戏的开箱即用体验和性能。</p><p>在桌面方面，wayland-protocols 被添加到 KDE Linux 基础镜像中，以扩大操作系统对一些依赖它的 KDE 项目的支持。</p><p>KDE Linux 正接近其 Beta 里程碑，截至十一月初大约完成了 85%。相关页面显示，在交换支持、改进 Discover 内的更新体验、KDE 基础设施更改、改进双启动体验、更好地处理 Flatpak 崩溃以及其他改进方面仍有工作要做。</p><p>更多关于 KDE Linux 近期更改的细节，请参阅 2026 年十月报告。</p><p>Kwi 正被开发为新的 KDE 终端模拟器，性能提升 3 倍至 35 倍</p><p>KDE Plasma 6.9 引入一些新的性能优化</p><p>KDE 修复了 15 年前关于复制文件到 USB 驱动器时通知不准确的 bug</p><p>KDE Plasma 6.8.2 发布，包含数十项额外 bug 修复</p><p>引入 KWin-Type 以解决 KDE Wayland 自动输入文本的可用性差距</p><p>KDE Plasma 6.9 稳定了 KWin 的 Wayland 画中画支持</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。</p><p>FAT32 文件系统在 Linux 7.4 中看到高达 265 倍的改进</p><p>为 VNC/远程软件提出新的 Wayland 协议</p><p>Enlightenment 0.28 发布，包含许多改进</p><p>Linux 7.4 合并窗口轻松成为内核历史上最大的</p><p>System76 推出 AMD 驱动的 Linux 小型 PC</p><p>KDE 修复了 15 年前关于复制文件到 USB 驱动器时通知不准确的 bug</p><p>AMD 600 系列芯片组现已在 Linux 上支持温度监控</p><p>通过内核内 eBPF 加速 HTTP Web 服务器，吞吐量提升高达 4.5 倍</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/KDE-Linux-October-2026" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

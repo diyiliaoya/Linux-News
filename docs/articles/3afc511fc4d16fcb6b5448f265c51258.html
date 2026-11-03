@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>被Ubuntu抛弃后，Linux Mint正将这一经典功能重新带回 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月03日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>被Ubuntu抛弃后，Linux Mint正将这一经典功能重新带回</h1>
+
+  <div class="article-summary">Linux Mint计划在12月发布的Mint 27中重新引入休眠功能，并新增睡眠模式页面，让用户无需手动编辑配置文件即可启用休眠。该功能提供传统休眠、混合睡眠和先挂起后休眠三种模式，但并未解决Ubuntu当年放弃休眠的根本问题，如速度慢、交换空间需求大以及Secure Boot限制等。</div>
+
+  <div class="article-body"><p>被Ubuntu抛弃后，Linux Mint正将这一经典功能重新带回</p><p>Linux Mint正在重新带回大多数Linux发行版多年前悄然放弃的一项功能：休眠。</p><p>说“被Ubuntu杀死”有些夸张，因为Ubuntu并不是唯一这样做的Linux发行版。</p><p>尽管如此，重大消息是Linux Mint正在恢复休眠功能。</p><p>Mint团队预览了系统管理工具中新的“睡眠模式”页面。其目的是让启用休眠并正确设置变得简单，无需手动编辑配置文件。该功能计划随12月即将发布的Mint 27版本推出。</p><p>Mint并没有神奇地解决导致Ubuntu放弃休眠的问题。它做的是给你选择权，并提供两种介于挂起和休眠之间的混合模式。</p><p>休眠与挂起：有什么区别？</p><p>这两个功能都是为了保存你的会话，也就是你打开的所有内容，比如应用程序、窗口和文档。</p><p>当你挂起（也称为睡眠）时，计算机将会话保存在RAM中，并关闭几乎其他所有设备的电源。唤醒只需几秒钟。问题在于RAM需要供电来保存这些数据，因此挂起的笔记本电脑会持续消耗电池。</p><p>如果电池在挂起期间耗尽，你的会话就会丢失，所有未保存的工作也会丢失。</p><p>休眠将会话从RAM复制到磁盘，然后完全关闭机器。它完全不耗电。当你重新打开计算机时，会话从磁盘加载回来，你的应用程序和窗口与你离开时完全一样。</p><p>简而言之，挂起速度快但需要供电。休眠速度慢但能在电池耗尽后幸存。</p><p>为什么Ubuntu和其他发行版放弃了休眠</p><p>我认为Ubuntu在12.04版本中默认禁用了休眠。原因是它不可靠、速度慢，而且有两种挂起模式让人困惑。</p><p>每个基于Ubuntu的发行版，包括Linux Mint，都继承了这个决定。实际上，不只是Ubuntu。许多其他Linux发行版也不再提供休眠选项。</p><p>速度确实是个问题。将数GB的RAM写入磁盘再读回来可能比完全重启花费更长时间，尤其是在较旧的硬盘上。</p><p>休眠还需要大量交换空间。你的交换空间必须至少与使用的RAM一样大，以便容纳整个会话。Ubuntu默认提供较小的交换空间，而Fedora使用zram，它位于RAM中，对休眠毫无用处。</p><p>然后是Secure Boot。启用Secure Boot后，Linux内核在锁定模式下运行，锁定模式会阻止休眠，因为磁盘上保存的镜像未签名，可能被篡改。</p><p>由于大多数新计算机出厂时都启用了Secure Boot，休眠对很大一部分用户来说根本无法工作。这也是许多发行版开箱即不提供休眠的主要原因之一。</p><p>Linux Mint中的三种睡眠模式</p><p>新的睡眠模式页面提供三个选项。你选择适合自己使用计算机方式的那个。你可以全部启用，并从电源菜单中选择使用哪一个（至少在我看来是这样）。</p><p>这是经典模式。你的会话保存到磁盘，计算机完全关闭，不耗电。它比挂起慢，休眠和恢复可能比重启花费更长时间。</p><p>混合睡眠会挂起计算机，同时将会话保存到磁盘。大多数时候，你可以获得挂起的快速唤醒。如果电池耗尽，你需要插上充电器，但你的会话仍然可以从磁盘恢复。</p><p>先挂起后休眠</p><p>这个模式先挂起，只有当电池电量变得危急时才切换到休眠。我认为这对笔记本电脑用户来说是最实用的选项。正常使用时可以快速恢复，电池即将耗尽时又有安全网。</p><p>Mint的新睡眠模式没有解决的问题</p><p>这些都没有消除旧的限制。你仍然需要大量交换空间，该工具会将交换空间不足标记为问题。如果Secure</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/linux-mint-new-sleep-modes/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

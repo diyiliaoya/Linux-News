@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>法国奇特的按GB数据税可能使VLC每年损失超100万欧元！ — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月03日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">软件应用</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>法国奇特的按GB数据税可能使VLC每年损失超100万欧元！</h1>
+
+  <div class="article-summary">法国国民议会投票通过一项新的“互联网税”，对向法国用户发送数据的公司按每GB收费0.055欧元，旨在让大型科技公司多付费。然而，该法律并未豁免非营利组织或开源项目。VLC媒体播放器的维护方VideoLAN表示，该税可能使其每年损失超过100万欧元，并批评政客不了解经济基本概念。税收收入直接进入国家预算，而非用于电信网络建设。</div>
+
+  <div class="article-body"><p>法国奇特的按GB数据税可能使VLC每年损失超100万欧元！</p><p>法国国民议会投票通过了一项新的“互联网税”，将向在法国向用户发送数据的公司按每GB数据收费。这可能比GDPR还要混乱。</p><p>至少VLC在抗议这项法国新法律时是这么认为的。</p><p>法国国民议会投票通过了一项新的“互联网税”，将向在法国向用户发送数据的公司按每GB数据收费。其想法是让Netflix、Google、Meta和其他大型科技公司支付更多费用。</p><p>对我们许多倾向于自己掌控数据的人来说，这听起来像是梦想成真，但不幸的是事情并没有那么简单。</p><p>按照这项法律的写法，它并不止于大型科技公司。甚至由非营利组织维护的免费开源媒体播放器VLC，最终也可能需要缴纳这项新税。</p><p>法国新互联网税的内容</p><p>该税项被纳入法国2027年财政法案，由议员提出。它对“数字数据生产者”征税，税率为每GB向法国互联网提供商订户传输的数据收取0.055欧元（5.5欧分）。</p><p>互联网提供商将测量每个发送者向其客户推送了多少数据，征收工作由电信监管机构Arcep和税务管理部门DGFiP监督。只计算数据量，不计算内容或去向。</p><p>税额上限为公司法国收入的15%或总收入的2%。请注意，是法国收入的15%，而不是总网络流量的15%。而且文本用“或”连接两个上限，却没有说明当两者不一致时适用哪一个。</p><p>我们在谈论多少钱？</p><p>修正案引用了Arcep的估计，即每年有2000亿GB数据流向法国互联网订户。它预计该税每年将带来100亿欧元收入。它还指出Google、Meta（Facebook、Instagram）、Amazon、Netflix和Akamai（云服务器提供商）是其中约一半流量的发送者。</p><p>你可能会以为这些钱会流向建设和维护网络的电信运营商。这正是欧洲电信公司多年来推动的“公平份额”论点。</p><p>但事实并非如此。收入直接进入国家预算，而修正案本身的理由谈的是本地企业与数字跨国公司之间的税收公平，以及压缩数据的生态效益。</p><p>一GB开源软件和一GB Netflix数据被同等计算。VLC背后的法国非营利组织VideoLAN表示，该税将使其每年损失超过100万欧元。</p><p>所以，法国社会党人和议会成员刚刚投票通过了一项他们并不理解的税收，这将使VideoLAN每年损失超过100万欧元。</p><p>他们可能是地球上最无知的政客？他们还声称想要技术主权……</p><p>https://t.co/JX7tW6iJrP</p><p>— VideoLAN (@videolan)</p><p>有人表示上限会保护VideoLAN。他还说，他不明白这项税如何能转嫁给Facebook、Instagram或TikTok的用户，因为这些服务是免费的。</p><p>VideoLAN对此并不买账：</p><p>你根本不知道你在说什么。你说Facebook和Insta等社交网络因为免费所以不是目标，这意味着你不懂经济学基础。你不懂收入和利润的区别。也不懂什么是……</p><p>https://t.co/09TSNbto5y</p><p>— VideoLAN (@videolan)</p><p>你根本不知道你在说什么。你说Facebook和Insta等社交网络因为免费所以不是目标，这意味着你不懂经济学基础。你不懂收入和利润的区别。</p><p>VideoLAN (@videolan)，2026年10月30日</p><p>上限可能会限制低收入的非营利组织应缴多少。但文本中没有任何地方明确豁免协会、自由软件或免费内容。VideoLAN的100万欧元是上限前的可能数字，目前没有人能说出确切数字。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/vlc-outrage-at-french-internet-tax/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
