@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GIMP 3.2.8 发布，改进文本工具与性能 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月04日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>GIMP 3.2.8 发布，改进文本工具与性能</h1>
+
+  <div class="article-summary">GIMP 3.2.8 作为当前稳定系列的第四个维护更新发布，主要聚焦于错误修复和细节优化，未引入全新功能。此次更新改进了对话框初始定位、页面加载速度，增强了文本工具对从右到左语言的支持，修复了链接图层文件编辑问题，并优化了大渐变缓存和“蚂蚁线”动画性能。此外还包含针对 macOS 和 Windows 的平台修复及若干安全更新。</div>
+
+  <div class="article-body"><p>GIMP 3.2.8 已发布，这是当前稳定系列的第四个维护更新，该系列最初于[某时]推出。</p><p>本次更新没有带来耀眼的新功能，因为修复和微调才是重点。重大工作正在与维护工作同步进行，但那些工作针对的是下一个大版本系列。</p><p>自[上一版本]以来的变化：</p><p>GIMP 3.2.8 提供了更好的对话框初始定位，使页面加载更快，并允许通过[某功能]创建色彩丰富的半透明边框。</p><p>此更新还增强了对文本工具对从右到左（RTL）语言的支持。方向键行为正确，画布界面会显示方向图标。如果未设置文本方向，Unicode 双向算法会根据输入的第一个字符选择方向。</p><p>修复了编辑链接图层文件（GIMP 对 Photoshop 智能对象的对应功能）时的一个“陷阱”。当链接文件正在添加过程中时，属性对话框不再允许点击“确定”。“取消”仍可选择，以备需要。</p><p>性能调整带来了对大型渐变（6000px）更好的缓存，以及更高效的“蚂蚁线”动画。HEIF 加载代码经过调整，允许加载更大的图像。</p><p>对于开发者，新增了一套 GUI 测试套件。团队[表示]这将帮助他们在开发过程中而非之后检查 GUI 的回归问题。计划很快分享更多细节。</p><p>除此之外，v3.2.8 更新还为 GIMP 的 macOS 和 Windows 版本带来了一些平台特定的修复，包括更好的主题匹配、打印和窗口行为。</p><p>除了整体上稍微更好之外，此更新也稍微更安全。包含了一小组安全更新，修补了 GIMP 使用的库中最近发现的几个漏洞。</p><p>一个平淡的版本？显然；这是维护更新。</p><p>随着 Affinity 计划中的 Linux 发布、AI 生成的 Adobe 克隆品和新兴项目层出不穷，人们很容易忘记 FOSS 工具已经存在，并且已经能够做出美妙的创造性工作。</p><p>从[官网]下载最新版本的 GIMP。它提供 Linux AppImage，以及 Windows 和 macOS 的官方安装程序。所有版本均适用于 64 位 Intel/AMD 和 64 位 ARM 设备。</p><p>或者，GIMP 也[可通过某渠道获取]。Windows 用户还可以从 Microsoft Store 获取。如果从供应商商店安装，此更新将在那里提供，所以记得检查。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/gimp-3-2-8-brings-bug-fixes-fixes-fixes" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

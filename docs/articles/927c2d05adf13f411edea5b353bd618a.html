@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fedora 45 有哪些新特性 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月04日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Fedora 45 有哪些新特性</h1>
+
+  <div class="article-summary">Fedora 45 虽未按原定 10 月 20 日发布，但带来了 Linux 7.2 内核、GNOME 51 和 Plasma 6.7 桌面环境。新版本改进了内核恐慌处理，扫描二维码可跳转至网页获取故障排查指引；用 userspace 程序替代 fbcon 虚拟控制台，恢复滚动和鼠标支持；AMD Radeon 驱动初步支持 HDMI 2.1，并增加多款笔记本硬件支持。GNOME 51 加入离线地图、指纹管理等功能，KDE Plasma 6.7 支持按屏幕设置虚拟桌面。</div>
+
+  <div class="article-body"><p>Fedora 45 有哪些新特性</p><p>尽管该版本错过了原定的 10 月 20 日发布目标，但它仍带来了 Linux 7.2、GNOME 51 和 Plasma 6.7。</p><p>构建一个 Fedora 版本意味着要跟踪每个发布周期计划的大量正式变更提案，这些提案列在一个公开页面上，每个条目都有负责人和状态。这些提案需经过社区审查，并需要 Fedora 工程指导委员会（FESCo）批准，根据范围大小可能批量或单独审批。但批准仅意味着变更被接受用于计划中的版本，并不保证一定发布。Fedora 45 的测试版以及若干原本计划进入稳定版的提案被推迟到了 Fedora 46。我们现在得到的是一个最初定于（某日期）发布、随后推迟到（另一日期）、又再次推迟到今天的版本，原因是后期出现了一些磨合问题。</p><p>更好的内核恐慌处理</p><p>如果你曾在 Fedora 上遇到内核恐慌，可能注意到屏幕上有一个二维码。自 Fedora 42 起，DRM Panic 组件默认显示该二维码，但扫描后只能得到原始跟踪信息，能读懂的人不多。现在有了 DRM Panic 的网页前端。用手机扫描二维码会跳转到 Fedora 托管的页面，引导你了解出了什么问题。在那里，你可以启动一份报告，系统详情和跟踪信息已自动填入。</p><p>同样，如果你按下（某组合键）进入全屏文本登录界面，你看到的是 Linux 虚拟控制台。该屏幕由内核的 fbcon 绘制，Fedora 45 将其替换为一个名为（某名称）的用户空间程序。这一切换恢复了滚动功能，增加了基本的鼠标支持，崩溃也不再导致内核恐慌。你还获得了可调整大小的字体、更好的 Unicode 支持，以及使用与桌面相同键盘布局的能力。不用担心会出问题。如果（该程序）启动失败，Fedora 会自动回退到旧的 getty 和 fbcon 设置，如果你愿意也可以自行切换回去。</p><p>（Linux 7.2 的）一些变化无需翻 changelog 就能轻松体会。Radeon 用户获得了初步的 HDMI 2.1 支持，此前 HDMI 论坛多年阻止开源驱动支持该标准；新的 ISP4 驱动完善了 HP ZBook Ultra G1a 及其他即将推出的 Ryzen 笔记本的摄像头支持。现有笔记本用户也获得更多硬件支持。ASUS ROG Strix G16、Zephyrus G14 和 TUF Gaming F16 现已支持，联想笔记本可以限制电池充电，微软 12 英寸 Surface Pro 获得了平台驱动。</p><p>看到 Fedora 跳过 Linux 7.3 有点奇怪，（但）它在内核正式发布前就拿到了。也许发布延迟与这次切换有关，但这只是我的猜测。</p><p>Linux 7.2 经过一年多的努力，带来了缓存感知调度</p><p>AMD 的 Radeon 驱动也获得了 HDMI 2.1 支持，Apple M3 MacBook 现在可以启动该内核。</p><p>桌面环境升级</p><p>Fedora 45 工作站和 KDE Plasma 桌面。</p><p>Fedora Workstation 45</p><p>其实用的几项升级包括：地图应用支持离线地图下载，设置面板中新增指纹管理器，显示器亮度可在会话间保存和恢复。文件应用在文件预览器中增加了重命名和回收站选项，Mutter 放弃了对旧版 NVIDIA 驱动的支持。</p><p>Fedora KDE Plasma Desktop 45</p><p>值得讨论的功能是按屏幕设置虚拟桌面。这对多显示器设置很有用，笔记本显示屏和外接显示器不再局限于同一组虚拟桌面。此外，KDE 4 时代的经典主题作为完整的全局主题回归，如果你设置了独立的日间和夜间主题，快速设置中的新开关可让你在两者间切换。</p><p>（Podman）是一个容器工具，允许你使用 Docker 风格的命令运行和管理容器及 Pod，而无需在后台运行守护进程。</p><p>借助这一 Fedo（原文截断）</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/fedora-45-features/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

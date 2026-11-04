@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>德国六州学校现可选择基于Nextcloud的开源云解决方案 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月04日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>德国六州学校现可选择基于Nextcloud的开源云解决方案</h1>
+
+  <div class="article-summary">德国六个联邦州的学校和教育机构现在可以选择使用基于Nextcloud的开源云服务KoDaS。该服务由IONOS作为主承包商，在德国数据中心运行，合同最高价值6750万欧元，期限最长48个月。服务包括文件托管、在线办公套件、日历联系人管理和集成邮件客户端，旨在保障数字主权和数据控制权。</div>
+
+  <div class="article-body"><p>德国六州的学校现在可以选择Nextcloud</p><p>德国六州的学校现在可以选择基于Nextcloud的开源云解决方案</p><p>IONOS被选为承包商，服务将在德国的数据中心内运行。</p><p>一份为期四年的框架合同</p><p>根据KoDaS（协作与文件存储系统的缩写），其下交付的服务基于Nextcloud构建，并以</p><p>该服务面向柏林、汉堡、不来梅、北莱茵-威斯特法伦、莱茵兰-普法尔茨和黑森州的学校及学校管理机构。其他德国州 later 可以加入，学校并非强制实施。</p><p>是主承包商。它负责交付和运营该服务，运行位于德国数据中心的云基础设施，并全部构建在Nextcloud的开源软件之上。</p><p>KoDaS的合同设定了最高价值6750万欧元，以及自授标起最长48个月的期限。Nextcloud的公告列出了六个州及其学校作为主要订购方，为 later 添加其他州留出了空间。</p><p>公告未说明合同的实际价值。</p><p>通知要求采购在</p><p>开源许可证下可用的软件， citing 数字主权、持久可用性和切换提供商的能力。</p><p>对投标人的要求包括ISO 27001认证、至少1000万欧元的营业额、至少500万欧元的责任保险，以及一个拥有至少10000名活跃用户和</p><p>完全分离的租户的参考项目，通知要求提供中央文件托管和共享、用于共同处理文档的基于浏览器的办公套件、日历和联系人管理以及集成的电子邮件客户端。</p><p>定价取决于有多少人积极使用该服务，并且</p><p>分为五个层级。没有学校管理机构必须预先承诺固定数量，因此每个机构可以从当前用户开始并逐步增长。</p><p>Nextcloud的主要论点是公共机构应该有专有平台的替代方案，以便他们保持对数据的控制。该公司还认为，从使用开源工具开始的学生 later 不太可能转向大供应商的产品。</p><p>我们已经看到这一点</p><p>其他德国机构也在重新调整其软件。去年，我们听说</p><p>石勒苏益格-荷尔斯泰因州政府工作场所已从微软切换。</p><p>梅克伦堡-前波美拉尼亚正在</p><p>使用自托管的Nextcloud，目前约有5000名员工使用，该州计划将其推广到公共部门的50000人。</p><p>然后是联邦</p><p>，由联邦数字转型和政府现代化部发布，涵盖各级公共行政，并仅允许使用</p><p>我预计会有更多此类举措</p><p>在欧洲各地，随着政府意识到将敏感数据交给受外国法律管辖的提供商可能会使其暴露于他们无法控制的访问，无论服务器位于何处。</p><p>正在进行的美国中期选举也可能根据谁胜出而改变对话。</p><p>可能使VLC每年损失超过100万欧元。</p><p>法国奇怪的每千兆字节数据税可能使VLC每年损失超过100万欧元！</p><p>法国国民议会投票赞成一项新的“互联网税”，该税将向公司收取每千兆字节数据发送给法国用户的费用。它可能比GDPR更混乱。</p><p>喜欢这个更新？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年一直帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>跳过Google结果中的AI垃圾和SEO垃圾</p><p>告诉Google你更喜欢It's FOSS，它会在你搜索时更频繁地显示我们由经验丰富的Linux用户创建的Linux新闻和教程。只需点击一下。</p><p>设为首选来源</p><p>🐧 今天玩Tuxdle——每日Linux单词谜题 →</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/ionos-nextcloud-school-cloud/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
