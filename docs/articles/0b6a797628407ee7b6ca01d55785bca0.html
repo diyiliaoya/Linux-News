@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linux 7.4 合并窗口规模巨大，Linus 称可能不只是 AI 的功劳 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月05日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Linux 7.4 合并窗口规模巨大，Linus 称可能不只是 AI 的功劳</h1>
+
+  <div class="article-summary">Linux 7.4 合并窗口引入近 2 万次提交，远超通常的 1.5 万次，创下自 2011 年 Linux 3.1 以来的最高纪录。Linus Torvalds 认为 AI 工具带来的大量修复和补丁是主因，同时指出社区对 7.4 成为下一个 LTS 版本的预期也有一定影响。AMD GPU 头文件约占补丁三分之一，驱动约占一半。源码树行数增至约 4160 万行。</div>
+
+  <div class="article-body"><p>Linux 7.4 合并窗口规模巨大，Linus 称可能不只是 AI 的功劳</p><p>另一个可能因素是，人们预期 7.4 将成为下一个 LTS 版本。</p><p>故事始于 Linus Torvalds 在即将开始一年一度的家庭度假时打开了 Linux 7.4 的合并窗口，这导致他的工作中出现了一些暂时的中断。他警告说自己的日程会不寻常，合并可能需要额外一周时间，但最终仍按照通常的两周时间表进行。</p><p>这一切并没有让窗口变小。据他统计，该窗口引入了近 20,000 次提交，而通常数量约为 15,000 次，仅 shortlog 就长达 24,000 行。Phoronix 回顾了自 2011 年 Linux 3.1 以来的每个合并窗口，并统计了每个窗口的提交数，结果 Linux 7.4 以最高数位居榜首，而 Linux 7.3 以次高数保持此前的纪录。</p><p>这并非凭空出现，因为 7.0 之后的每个窗口都超过了前一个，7.4 比 7.3 多出超过 3,400 次提交。各内核版本的开发周期也显示出相同趋势，Linux 7.3 是第一个突破 20,000 次提交大关的版本，而 7.4 窗口则非常接近这一数字。</p><p>Linus 认为 AI 是原因，指出 AI 工具引发了一波工作激增，包括错误修复和工具建议的越来越多的补丁，尽管这些补丁往往最终会被重写。他更倾向于在合并窗口前期就收到这些工作，而不是在发布候选阶段作为后期修复来处理。他还希望更大的窗口意味着 AI 修复正在成为开发中的普通组成部分。</p><p>AI 并非他唯一的解释。他表示，对 7.4 将成为下一个 LTS 版本的预期可能对其规模起到了次要作用，并将其视为一个独立的驱动因素。</p><p>AMD GPU 头文件（包含寄存器定义）约占补丁的三分之一，Linus 告诉大家忽略它们。驱动程序约占补丁的一半，若计入 AMD 头文件则约为三分之二。其余部分涵盖核心领域，例如……</p><p>源码树也随之增长。根据 Phoronix 的 cloc 统计，11 月 1 日 RC1 之前，源码树为 41,605,120 行，高于 Linux 7.3 发布时的 41,019,555 行。其中实际代码约占……行，其余为空白行和注释。</p><p>openEuler 最新版本携大量 AI 智能体而来</p><p>openEuler 新版本携大量 AI 与智能体而来</p><p>openEuler 正在推动一个以 AI 为核心的开发者导向 Linux 发行版。从 PolyMind 到 Witty，AI 智能体是其中的一部分。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>跳过 Google 结果中的 AI 垃圾和 SEO 垃圾</p><p>告诉 Google 你更喜欢 It's FOSS，它会在你搜索时更频繁地展示我们由经验丰富的 Linux 用户创建的 Linux 新闻和教程。只需点击一下。</p><p>设为首选来源</p><p>🐧 今天就来玩 Tuxdle——每日 Linux 单词谜题 →</p><p>在收件箱中获取 FOSS Weekly</p><p>一份健康的 Linux 新闻通讯，包含最新版本、相关新闻、技巧和教程、冷知识、梗图、测验和桌面 Linux 用户的优惠。每周免费。</p><p>一个热衷于开源软件、定制 PC 装机、赛车运动以及探索世界无限可能的技术迷。</p><p>对 Google AI 说不的学校也将对其搜索说再见</p><p>Fedora 45 有什么新内容？</p><p>德国六个州的学校现在可以选择基于 Nextcloud 的开源云解决方案</p><p>被 Ubuntu 扼杀，Linux Mint 正在带回这个经典功能</p><p>法国奇怪的按千兆字节数据税可能使 VLC 每年损失超过 100 万欧元！</p><p>成为更好的 Linux 用户</p><p>通过 FOSS Weekly 新闻通讯，您将学习有用的 Linux 技巧、发现应用程序、探索新的发行版……</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/linux-7-4-huge-merge-window/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

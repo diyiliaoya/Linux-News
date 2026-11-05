@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ubuntu用户抨击Canonical内核安全修复迟缓 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月05日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Ubuntu用户抨击Canonical内核安全修复迟缓</h1>
+
+  <div class="article-summary">Canonical因修复Ubuntu Linux内核严重漏洞迟缓而遭到用户批评。该漏洞（CVE评分9.8）为TCP处理中的释放后使用缺陷，可导致远程攻击者以root权限执行代码，自2016年起存在。Debian等发行版数周前已修复，而Ubuntu 22.04、24.04和26.04 LTS的补丁仍在测试中，未进入稳定更新。用户指责Canonical“数周来玩忽职守”，有开发者宣布将服务器迁离Ubuntu。Canonical称因内核安全测试周期导致延迟，建议启用更新口袋或安装更新。</div>
+
+  <div class="article-body"><p>Ubuntu用户抨击Canonical迟迟未修复Linux TCP漏洞</p><p>Canonical正在修复Ubuntu中的一个严重Linux内核缺陷，此时距Debian和其他发行版完成修复已过去数周——用户对如此漫长的等待感到不满。</p><p>截至11月3日，针对Ubuntu 22.04、24.04和26.04 LTS的修补内核仍在测试中，尚未进入稳定更新口袋。Canonical未给出预计何时发布的时间表。</p><p>问题是什么，严重吗，为什么人们因为尚未修补而怒不可遏？</p><p>一个9.8级的CVE存在于Ubuntu服务器上</p><p>该CVE涉及一种称为释放后使用的漏洞。它影响Linux内核中处理传入网络连接的部分，具体是IPv4上的TCP握手。</p><p>据Red Hat称，攻击者可以通过向易受攻击的计算机发送特制数据来利用该问题，使其崩溃、遭受DDoS攻击，或者更令人担忧的是，以root身份在其上运行代码。</p><p>最易受攻击的系统将是服务器，据信该漏洞自2016年以来一直存在。这意味着大量Linux服务器和云环境将易受攻击，其中许多运行Ubuntu。</p><p>内核CVE团队将该缺陷在CVSS 3.1严重性量表上评为9.8分（满分10分）。Oracle和SUSE评分为8.1，因为他们认为该漏洞较难利用……</p><p>Claude已制作出可用的漏洞利用程序</p><p>最初报告该漏洞的Anthropic研究员表示，一个未发布的Claude模型已创建了一个可用的漏洞利用程序，可使远程攻击者利用多路径TCP（MPTCP）获得对受影响服务器的root访问权限。</p><p>正是因为该缺陷的严重性以及据称修复的简单性——据报道只需两行代码的更改——让许多Ubuntu用户感到不安和愤怒——尤其是因为……</p><p>“数周来玩忽职守”</p><p>在社交媒体上，对Canonical拖延的指责铺天盖地、迅速且毫不留情。</p><p>“对Ubuntu为何数周来玩忽职守零解释”——回应Canonical关于正在测试修补内核的推文。</p><p>“RIP Ubuntu。你们都玩忽职守了”</p><p>一位开发者在题为“WTF Ubuntu”的病毒式博客文章中宣布，他将把所有服务器迁离Ubuntu，称他们现在对该发行版作为满足其需求的可靠、安全平台已“完全失去信任”。</p><p>保持冷静并apt update？</p><p>对安全的懈怠态度并非Canonical的一贯作风，该公司通过Ubuntu Pro、ESM和其他软件包以“及时的安全更新”为基础向企业、商业和云客户销售支持服务来盈利。</p><p>Canonical表示，在发布任何内容之前，它会在数千台认证服务器和设备上测试内核，并表示管理员如果愿意，可以启用并安装更新口袋以更快获得修补。</p><p>它还对禁用MPTCP作为变通方法不予理会，称安全更新是“唯一适当的缓解措施”，因为该漏洞并非该功能特有。</p><p>奇怪的是，可能正是该公司为提高安全修复发布速度而引入的新内核安全节奏导致了延迟。由于内核要经过固定的测试期，修复程序会尽可能快地发布。</p><p>但看起来，可能还不够快。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/ubuntu-fix-tcp-bug-criticism" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
