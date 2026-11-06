@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMDGPU 驱动为 Linux 7.4 带来 HDMI 2.2 FRL 修复 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月06日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>AMDGPU 驱动为 Linux 7.4 带来 HDMI 2.2 FRL 修复</h1>
+
+  <div class="article-summary">AMDGPU 驱动为 Linux 7.4 提交了一批修复，其中最引人注目的是对 HDMI 2.2 固定速率链路（FRL）的支持。此前代码仅支持到 HDMI 2.1 的每通道 12 Gbps 上限，导致支持 HDMI 2.2 的显示设备被误判为不支持 FRL。新补丁让 DRM EDID 解析器能够解码 HDMI 2.2 新增的 16、20、24 Gbps 三种速率，并映射到 DC 使用的 FRL 速率索引，同时扩展了 KUnit 测试覆盖。</div>
+
+  <div class="article-body"><p>AMDGPU 驱动为 Linux 7.4 带来 HDMI 2.2 FRL 修复</p><p>2026 年 11 月 5 日下午 5:07（美国东部时间）。</p><p>AMDGPU 驱动默认启用 HDMI 2.1 FRL 功能，以驱动更高刷新率和更高分辨率的显示器。这一默认启用伴随着 HDMI FreeSync/VRR 和 ALLM 功能也已在 Linux 7.4 中就位。现在，作为 Linux 7.4 的修复内容，还改进了对更新 HDMI 2.2 规范的固定速率链路（Fixed Rate Link）支持。</p><p>今天发出了一批针对 Linux 7.4 的 AMDGPU 驱动修复，包括修正 UALink、GPU 重置、SR-IOV、DCN、FreeSync/VRR 中的缺陷，以及贯穿各处的其他随机修复。可以说这个 AMDGPU 修复拉取请求中最令人兴奋的是提供了 HDMI 2.2 FRL 的修复。</p><p>AMD 工程师 Fangzhi Zuo 解释了支持来自接收端（sink）的 HDMI 2.2 FRL 速率的内容：</p><p>“HDMI 2.2 规范定义了三种新的 FRL 速率——每通道 16、20 和 24 Gbps，通过 4 个通道传输（HF-SCDB 中的 Max_FRL_Rate 值为 7、8 和 9）。当前代码止步于 HDMI 2.1 每通道 12 Gbps 的上限，因此宣称支持 HDMI 2.2 速率的接收端会被视为完全不支持 FRL，链路最终训练到的速率远低于接收端实际支持的水平。</p><p>补丁 1 让 DRM EDID 解析器能够解码这三种新速率。补丁 2 将它们映射回 amdgpu_dm 中 DC 使用的 FRL 速率索引，并扩展了 KUnit 测试覆盖。”</p><p>这项 HDMI 2.2 FRL 工作是发送到 DRM 修复区域的内容的一部分。如果一切顺利，本周的 DRM 修复拉取请求将在未来一两天内发送给 Linus Torvalds，并被纳入周日的 Linux 7.4-rc2 发布。</p><p>RadeonSI 与 RADV 现为 GFX8 时代 GPU 启用 D16 支持</p><p>Mesa RADV 变更让更多 Steam Play 游戏在老旧的 AMD GFX8 GPU 上流畅运行</p><p>AMD HIPRT 3.2 发布，支持 Medusa APU</p><p>RADV 将 VK_EXT_host_image_copy 提升为 RDNA1 GPU 的默认启用</p><p>AMD 以更多 HDMI 2.1 修复收官 Linux 7.4 图形驱动开发</p><p>Vulkan API 改进将随 Mesa RADV 登陆 AMD Polaris GPU</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Synaptics 似乎利用法律威胁阻止开源 DisplayLink 驱动</p><p>FAT32 文件系统在 Linux 7.4 中看到高达 265 倍的改进</p><p>Linux 7.4 合并窗口轻松成为内核历史上最大的</p><p>Enlightenment 0.28 发布，带来许多改进</p><p>System76 推出 AMD 驱动的 Linux 小型 PC</p><p>Linux 内核准备移除最后剩余的 MMX 优化代码</p><p>X.Org XCB 联合创始人赞扬 Wayland 的协议设计</p><p>Debian 的 APT 受到中间人攻击影响，可导致以 root 身份执行任意代码</p><p>同时享受无广告浏览、</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/AMDGPU-HDMI-2.2-FRL-Fixes" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

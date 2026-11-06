@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mpv 4.20 新增对 DVD 与蓝光菜单、Wayland HDR 的支持 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月06日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">桌面环境</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>mpv 4.20 新增对 DVD 与蓝光菜单、Wayland HDR 的支持</h1>
+
+  <div class="article-summary">开源命令行媒体播放器 mpv 发布 0.42 版本，新增 DVD 菜单导航、蓝光 HDMV 与 BD-J 菜单支持，可直接播放 DVD/蓝光 ISO 备份。同时加入 Wayland 会话管理、不依赖 Vulkan 的色彩管理、改进的 HDR 色彩空间信号，以及基于网络的 HTTP/2、HTTP/3 后端等多项改进。</div>
+
+  <div class="article-body"><p>mpv 4.20 新增对 DVD 与蓝光菜单、Wayland HDR 的支持 - OMG! Ubuntu</p><p>这款开源命令行媒体播放器现已发布</p><p>mpv v0.42 现在能够导航 DVD 菜单，以及蓝光光盘使用的两种菜单系统：HDMV 和 BD-J（后者需要 Java）。</p><p>还新增了对一种提供更高分辨率音频的 niche 格式的支持。</p><p>此外，如果你有 DVD 或蓝光光盘的 .iso 备份，mpv 0.42 可以直接播放它们——无需先挂载，这很方便。</p><p>新增了基于网络的网络后端，提供 HTTP/2、HTTP/3 和连接复用。根据流媒体源和类型的不同，流媒体可能启动更快或运行更流畅。</p><p>在 Ghostty 中通过 Kitty 运行 MPV</p><p>Wayland 会话管理已接入。在兼容的合成器上，mpv 会注册其窗口，窗口可以手动命名，后续窗口如果名称相同，可以替换现有会话。</p><p>此次更新还为 Wayland 带来了色彩管理，且不依赖 Vulkan API，并改进了 Linux DRM 输出（内核的图形和显示子系统，不是数字版权管理）的 HDR 色彩空间信号。</p><p>mpv 4.20.0 中的其他显著变化包括：</p><p>通过 subrandr 库支持 SRV3（YouTube）字幕</p><p>支持杜比视界 Profile 7 增强层</p><p>MPEG-TS 节目和 HLS 质量变体可作为版本选择</p><p>使用微软 Fluent 图标的浮动 OSC 布局</p><p>右键上下文菜单从新的</p><p>重做的终端视频输出，用于</p><p>libmpv 的 D3D11 渲染 API 后端</p><p>AMD 帧率转换滤镜</p><p>显示同步音频漂移补偿已重写</p><p>默认启用</p><p>除此之外，还包括修复、性能调整以及大量新命令和配置选项。更多细节以及各平台二进制下载链接可在</p><p>对于 Linux 打包者，mpv 4.20 需要 FFmpeg 6.1 和 libplacebo 7.387.0 或更新版本。如果你使用的是 Ubuntu 26.10，可以从 Fruit APT 仓库下载 DEB 安装程序</p><p>预计未来几个月内，许多新功能和能力将在 mpv 前端（如）的更新中暴露或呈现。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/mpv-4-20-released" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>发行版发布：Omarchy 4.5.0 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月06日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">DistroWatch</span>
+  </div>
+
+  <h1>发行版发布：Omarchy 4.5.0</h1>
+
+  <div class="article-summary">Omarchy 4.5.0 发布，这是基于 Arch 的 Linux 发行版，搭载定制的 Hyprland 平铺合成器。此版本是 Quattro 之后首个重大功能更新，合并了超过 740 个拉取请求，来自 180 多位贡献者。新增传统桌面模式、支持 M1/M2/M3/Neo MacBook 原生安装、支持 50 种语言。Super + L 可在平铺、滚动和浮动布局间切换工作区，浮动工作区提供标题栏和 dock。</div>
+
+  <div class="article-body"><p>发行版发布：Omarchy 4.5.0（DistroWatch.com 新闻）</p><p>David Heinemeier Hansson 宣布发布 4.5.0，这是该项目基于 Arch 的 Linux 发行版的更新版本，搭载定制的 Hyprland 平铺合成器。这是该发行版首个可安装在苹果 Silicon 系列处理器上的版本。</p><p>“Omarchy 4.5 是自 Quattro 以来的首个重大功能版本，而且是个大家伙——短短十二周内合并了来自 180 多位贡献者的超过 740 个拉取请求。它现在在默认平铺之外还提供传统桌面模式。你可以原生安装在 M1/M2/M3/Neo MacBook 上。它支持 50 种语言。还有无数其他功能、修复和改进。已经在用 Omarchy？运行 Update, Omarchy。新机器？在这里获取。Super + L 现在可在平铺、滚动和浮动之间循环切换任何工作区。在浮动工作区上，每个窗口都会获得主题颜色的标题栏，dock 显示你固定的应用、所有正在运行的应用以及所有已安装应用的网格。拖动可重新排序或固定，右键点击可获取更多选项，Super + M 可将窗口最小化到 dock。对于从 macOS 或 Windows 转来、尚未准备好完全投入平铺的用户来说，这是一个绝佳的入门方式。或者对于任何只是想要一个窗口可以随意铺开的工作区的人来说也是如此。按工作区混合搭配，状态栏会显示每个工作区使用的布局。”</p><p>更多信息和截图请见。</p><p>omarchy-4.5.0-x86.iso</p><p>omarchy-4.5.0-aarch64.iso</p><p>近期相关新闻和发布</p><p>发行版发布：Omarchy 4.5.0</p><p>发行版发布：Omarchy 4.0.0</p><p>发行版发布：Omarchy 3.7.0</p><p>发行版发布：Omarchy 3.3.0</p><p>发行版发布：Omarchy 3.0.1</p><p>Omarchy 是一个基于 Arch 的 Linux 发行版，采用 Hyprland 平铺窗口管理器。它预装了现代软件开发者立即投入工作所需的一切，包括 Neovim、Spotify、Chromium、Typora、Alacritty、LibreOffice 和 Zoom。该发行版启动</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://distrowatch.com/13028" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
