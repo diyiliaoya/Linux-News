@@ -19776,5 +19776,159 @@
     "title_zh": "KDE Gear 26.08.3 发布，成为 KDE Gear 26.08 系列的最后一个更新",
     "summary_zh": "KDE Gear 26.08.3 开源软件套件现已发布，作为 KDE Gear 26.08 系列的最后一个更新，为众多 KDE 应用程序带来多项错误修复。",
     "fulltext_zh": "KDE Gear 26.08.3 开源软件套件现已发布，作为 KDE Gear 26.08 系列的最后一个更新，为你喜爱的 KDE 应用程序带来多项错误修复。"
+  },
+  "a7d757536c8cc9d5c8662bce63ef4cd1": {
+    "id": "a7d757536c8cc9d5c8662bce63ef4cd1",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/11/global-menu-gnome-extension",
+    "title_en": "Global menu extension puts app menus in GNOME’s top panel",
+    "summary_en": "A new global menu extension for GNOME Shell was released this week, and unlike ones you may might tried (and given up on) in the past, this one seems to work well. Earlier global menu efforts have been scuppered by Wayland, API changes and the fact that many modern Linux apps no longer &#8216;export&#8217; menus, leaving the top panel empty for most apps. This one has menus for 292 well-known app and, by installing an optional companion tool, allows apps like GIMP and Shotwell to display their f",
+    "pub_date": "Fri, 06 Nov 2026 17:43:39 +0000",
+    "title_zh": "全局菜单扩展将应用菜单放入GNOME顶部面板",
+    "summary_zh": "一款新的GNOME Shell全局菜单扩展发布，为292款知名应用提供菜单支持。对于不导出传统菜单的应用，扩展利用键盘快捷键生成菜单；对于支持D-Bus菜单的应用，可通过可选伴生守护进程显示完整菜单。该扩展支持GNOME 48至51，在Ubuntu 26.04 LTS及更高版本上可用。",
+    "fulltext_zh": "本周发布了一款适用于GNOME Shell的全局菜单扩展，与你过去可能尝试过（并放弃）的扩展不同，这款似乎运行良好。\n\n早期的全局菜单尝试因Wayland、API变更以及许多现代Linux应用不再“导出”菜单而受阻，导致大多数应用在顶部面板中留下空白。\n\n这款扩展为292款知名应用提供了菜单，并且通过安装可选的伴生工具，允许像Firefox这样的应用也显示其完整的应用菜单。\n\n对于超过290款知名应用——那些在Linux（或Wayland）上不暴露传统应用菜单的应用——该扩展使用应用文档化的键盘快捷键来创建菜单：\n\n没有菜单的应用的应用菜单\n\n这是一种非常巧妙的方法，因为无论应用是什么类型（没错，甚至是Electron），只要应用有针对关键操作的键盘快捷键，它们就可以在菜单中暴露并通过点击触发。\n\n对于确实有传统应用菜单（并通过D-Bus导出）的软件，你可以安装一个可选的伴生守护进程包。它会将真实的完整应用菜单发送到全局菜单（并在可能的情况下从应用中移除菜单）。\n\n你可以看到安装伴生工具与不安装时方法的差异。后者提供完整菜单，并根据你正在进行的操作实时显示不可用（灰色；不可选择）的操作。\n\n在这些图片中查看两种方法的区别：\n\n已安装伴生守护进程\n\n已安装伴生守护进程\n\n伴生工具必须从源码构建。在Ubuntu上，这并不像听起来那么难。运行以下代码块，在需要时按提示操作，它会为你完成繁重的工作——之后你必须注销并重新登录，以便加载伴生工具。\n\nsudo apt install git make python3-setuptools\ngit clone https://github.com/Unmade760/orbit-global-menu.git\nsudo apt install ./global-menu_*.deb\n\n即使有伴生工具，事情也并不完美；有些应用，如Firefox，在显示完整菜单之前需要调整。该项目的文档涵盖了如何以及为何这样做——为了获得完整体验，值得一做。\n\n最后，如果当前聚焦的应用不被两种方法覆盖，它不会让你面对空白面板，因为它由简单的窗口、工作区和会话操作覆盖。\n\n菜单默认使用不透明背景（有一个模糊选项，但只在我启用某功能时才有效），并且当此功能激活时，工作区切换器圆点会从顶部栏消失，但你可以选择显示它们。\n\n聚焦应用的标题以粗体显示，但可以以常规字重显示或完全隐藏。\n\n如果你愿意，可以通过设置面板查看和编辑该扩展自带的292个现代菜单。也可以创建自己的快捷键映射，为未覆盖的应用提供更完整的菜单（预计覆盖范围会随着未来更新而扩大）。\n\n在Ubuntu上安装Global Menu\n\nGlobal Menu支持GNOME 48 – 51，因此如果你使用的是Ubuntu 26.04 LTS或更高版本，可以尝试一下。用它来唤起你对Ubuntu Unity桌面的回忆（Unity曾添加了一个全局菜单）。\n\n记住：要获得完整的应用菜单，你确实需要安装伴生守护进程。我在Ubuntu 26.10上没有遇到任何问题。\n\n试一试，让我知道你的想法——现在，要是有人能复活……就好了。"
+  },
+  "82054512f5514eb9cc68c440a8f91702": {
+    "id": "82054512f5514eb9cc68c440a8f91702",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/kitty-0-50-release/",
+    "title_en": "Kitty 0.50 Picks Up Where You Left Off After a System Restart",
+    "summary_en": "The release also adds docked windows, three new cursor trail shaders, and touchscreen support on Wayland.",
+    "pub_date": "Fri, 06 Nov 2026 12:17:21 GMT",
+    "title_zh": "Kitty 0.50 系统重启后可恢复上次会话",
+    "summary_zh": "Kitty 0.50 终端模拟器发布，新增系统重启后恢复会话功能，可保存并还原所有窗口、标签页及滚动缓冲内容。同时引入停靠窗口、三款光标轨迹着色器，以及 Wayland 下的触摸屏支持。此外修复了远程控制密码认证绕过漏洞和多个内存安全问题。",
+    "fulltext_zh": "Kitty 0.50 系统重启后可恢复上次会话\n\nKitty 0.50 系统重启后可恢复上次会话\n\n该版本还新增了停靠窗口、三款新的光标轨迹着色器，以及 Wayland 下的触摸屏支持。\n\nKitty 是一款基于 GPLv3 许可、面向 Linux 和 macOS 的 GPU 终端模拟器，使用 OpenGL 进行渲染，以 C、Python 和 Go 编写。它可以将工作组织为标签页和窗口，支持七种布局，支持称为 kittens 的小型终端程序来扩展功能，并可从 shell 进行控制。\n\n在 Linux 和 macOS 上注销后，它可以恢复你打开的窗口。\n\nkitty 现在会在会话结束时保存每个操作系统窗口、标签页和窗口及其滚动缓冲内容，并在下次启动时恢复它们。你可以在 kitty.conf 中通过 restore_session_after_logout 开启此功能。\n\n在 Linux 上，这需要一个支持 v3 接口的桌面门户，并且 Linux 以未加密、仅你可读的方式存储状态；而 macOS 系统会使用钥匙串中的专用密钥对其进行加密。\n\n停靠窗口也是新增功能，它们允许你将一个窗口固定到另一个窗口或标签页的边缘。它们位于布局之外，适用于状态栏或文件树等场景。窗口停靠会随其窗口移动，而标签页停靠会一直保留，直到该标签页中最后一个常规窗口关闭。\n\n三款新的光标轨迹着色器，包括 cursor-trail-pixiedust。使用时，它们会从移动的光标上发射粒子，产生类似 pixiedust 的轨迹。它们需要开启光标轨迹，现在也可以通过按键触发着色器。\n\nWayland 用户现在可以使用触摸屏，通过轻点点击、滑动滚动，以及按住手指不动然后拖动来选择其余文本。GNOME 及类似合成器上的窗口装饰也看起来原生，并使用桌面的标题栏字体和按钮布局。\n\n该版本还修复了一个允许恶意请求绕过远程控制密码认证的缺陷，以及多个内存安全错误。\n\n在 Wayland 上使用 GNOME 51，全部运行在虚拟机中。\n\n通过向我的配置添加两个键绑定：\nmap f1 launch --type=tab-dock --dock-edge=bottom --dock-size=1 --dock-skip-focus watch -n1 date\nmap f2 launch --type=window-dock --dock-edge=left --dock-size=25% top\n\n首先。窗口底部出现了一行条带，并停留在那里。我将其指向了……但只得到了一个 shell 提示符。\n\n接下来是 F2。它在左边缘打开了一个面板，shell 为其腾出了空间。我不断按下它，每次按下都会在第一个面板旁边添加另一个面板，总共三个。\n\n使用……打开新标签页给了我一个干净的状态，之前的视图转入后台。\n\n接下来，我测试了三种新光标轨迹之一，将 custom_shaders cursor-trail-pixiedust 添加到我的配置并重启 kitty。每当光标在窗口中跳跃时，它都会在身后留下一串白色小斑点。\n\n你可以使用以下 cURL 命令获取 kitty：\ncurl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin\n\n它也可在大多数主流 Linux 发行版的仓库中找到，但这些仓库在新版本方面往往滞后。以下列表可帮助你快速开始：\nsudo apt install kitty\nsudo dnf install kitty\n\n从源码构建也是一种可能的安装途径。\n\n在离开之前，请知悉你可以通过调整各种设置来随心定制 kitty。\n\n喜欢这次更新？支持独立的 Linux 新闻报道。\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受\n任意金额，无承诺\n\n跳过 Google 结果中的 AI 垃圾和 SEO 垃圾信息\n\n告诉 Google 你更喜欢 It's FOSS，它会在你搜索时更频繁地显示我们由经验丰富的 Linux 用户创建的 Linux 新闻和教程。只需点击一下。\n\n设为首选来源\n\n🐧 今天就来玩 Tuxdle——每日 Linux 单词谜题 →\n\n在收件箱中获取 FOSS Weekly\n\n一个健康的 Lin"
+  },
+  "d07807b75cf60ceee6dd556b746340c5": {
+    "id": "d07807b75cf60ceee6dd556b746340c5",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/13029",
+    "title_en": "Distribution Release: CapivaraOS 2.0.0",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  CapivaraOS, a Fedora-based Linux distribution with a choice of GNOME, KDE Plasma and Xfce desktop, has received a major update to version 2.0.0. Derived from Fedora 45, the new release promises continuous in-place upgrades and adds new custom applications: \"Marsh, Pup and Snout 2.0.0 are available for download.....",
+    "pub_date": "",
+    "title_zh": "发行版发布：CapivaraOS 2.0.0",
+    "summary_zh": "CapivaraOS 2.0.0 发布，这是一个基于 Fedora 的 Linux 发行版，提供 GNOME、KDE Plasma 和 Xfce 桌面选择。新版本基于 Fedora 45 重建，支持持续原地升级，并新增自定义应用程序。用户可通过 Discover、GNOME Software 或 dnf 进行升级，升级前 Snapper 会自动创建快照以便回滚。系列 1 用户需全新安装 2.0，这是最后一次需要重装。",
+    "fulltext_zh": "发行版发布：CapivaraOS 2.0.0（DistroWatch.com 新闻）\n\nDistroWatch.com 由以下赞助商支持\n新闻/观点/评论 ▼\n发布公告\nDW 周刊 / 评论存档\n访客评分与评论\n项目评分排名\n播客、新闻通讯与评论\n跨发行版比较软件包\n显示所有发行版的软件包版本\n搜索发行版 - 高级\n已停止的发行版\n教程与学习 ▼\n搜索文章\n问答专栏\n技巧与提示专栏\n误区与误解专栏\n简化手册页\n其他操作系统\n发行版验证密钥\n可视化发行版家族树\n常见问题\n我们的捐赠计划\n小型企业电话系统\n多个发行版警告 OpenSSH 漏洞\nGhostBSD 修复仓库缺陷\naerynOS 测试新系统安装器\nRocky Linux 创始人指导 LLM 创建新内核\nMint 正在恢复休眠模式\nUbuntu Core Desktop 将恢复开发\nNetBSD 在基础系统中采用新文本编辑器\nRedox 引入性能改进、Clang 编译\nSparky 项目推出 SparkyOS\n使用 Sylve 安装 FreeBSD\n易于使用的 PBX - 托管或自管理\nLinux 电话系统\n免费实时聊天解决方案\n集成呼叫中心软件\n联络中心软件\n远程工作应用：iOS 或 Android\n免费视频会议\n3CX 的 VoIP / PBX 操作指南\n不要措手不及，制定灾难恢复计划！\n essential 实时聊天报告和统计\n导致呼叫欺诈的常见错误\nWhatsApp Business 与 3CX WhatsApp API 集成\n3CX StartUP 的 5 大杀手级功能\n别做“那种”人 第1卷：保管复杂凭证\n别做“那种”人 第2卷：呼叫欺诈\n别做“那种”人 第3卷：四大安全提示\n别做“那种”人 第4卷：监控你的实例\nSuper Lite Linux 24.6\nRed Hat 周五五件事 - 2026年11月6日\nUbuntu 每周新闻通讯 968\nAerynOS 2026年11月项目更新\nTumbleweed 月度更新 - 2026年10月\nPCLinuxOS 杂志 2026年11月\nLinux Mint 月度新闻 - 2026年10月\nFull Circle 杂志 234\nFull Circle 每周新闻\nDistrohoppers' Digest\n最新新闻和更新\n新闻过滤选项\n发行版发布：CapivaraOS 2.0.0\n，一个基于 Fedora 的 Linux 发行版，提供 GNOME、KDE Plasma 和 Xfce 桌面选择，已获得重大更新至 2.0.0 版本。新版本衍生自 Fedora 45，承诺持续原地升级，并新增自定义应用程序：“\nMarsh、Pup 和 Snout 2.0.0 可供下载。系列 2 并非系列 1 加新软件包。它是在 Fedora 45 上的重建，你看到的几乎所有内容都已移动或重做。再也不用重装——这是最改变日常生活的变化。从系列 2 开始，CapivaraOS 原地升级——2.0 到 2.1，届时系列 2 到系列 3。无需格式化，无需重装，无需先将文件复制到另一磁盘。它通过 Discover、GNOME Software 或 dnf 工作，就像任何其他更新一样，因为它正是如此——我们的仓库已签名，升级经过与其他所有内容相同的验证。每次升级前 Snapper 会创建快照，因此回滚只需一条命令。系列 1 没有此路径。如果你在使用它，需要从头安装 2.0——这是最后一次。\nCapivaraOS-Snout-2.0.0-x86_64.iso\nCapivaraOS-Marsh-2.0.0-x86_64.iso\n（KDE Plasma，5,106MB，\nCapivaraOS-Pup-2.0.0-x86_64.iso\n近期相关新闻和发布\n发行版发布：CapivaraOS 2.0.0\n更多 CapivaraOS 新闻...\nCapivaraOS 是一个巴西桌面和服务器 Linux 发行版，基于 Fedora。它提供三个桌面版本——“Marsh”（KDE Plasma）、“Snout”（GNOME）和“Pup”（Xfce），以及一个名为“HERD”的独立家庭服务器变体。所有版本都本地化为巴西葡萄牙语。该发行版使用 Anaconda 系统安装器，并包含许多流行的网络、生产力和多媒体应用程序。\nhttps://www.capivaraos.org/\nhttps://capivaraos.discourse.group/\n替代用户论坛\nhttps://docs.capivaraos.org/\nhttps://www.capivar"
+  },
+  "969d5e769743117d3c3ed063289be443": {
+    "id": "969d5e769743117d3c3ed063289be443",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/FreeBSD-15.2-Beta-1",
+    "title_en": "FreeBSD 15.2 Beta 1 Allows Experimental Cross-Building Of Base Packages On Linux/macOS",
+    "summary_en": "FreeBSD 15.2 Beta 1 is out today as the release dance kicks off in working toward the next installment of FreeBSD 15...",
+    "pub_date": "Fri, 06 Nov 2026 19:04:20 -0500",
+    "title_zh": "FreeBSD 15.2 Beta 1 允许在 Linux/macOS 上实验性交叉构建基础包",
+    "summary_zh": "FreeBSD 15.2 Beta 1 发布，带来大量安全修复，并引入在 Linux 和 macOS 主机上交叉构建基础系统包的实验性支持。新版本还增加了笔记本背光保存/恢复选项，Clang 默认使用 LLVM 链接器 ld.lld，并更新了 OpenSSH、OpenZFS、XZ 等软件包。AWS EC2 桌面 AMI 现在可启动到启用 XRDP 的 KDE 桌面。正式版计划于12月8日发布。",
+    "fulltext_zh": "FreeBSD 15.2 Beta 1 今日发布，标志着迈向 FreeBSD 15 下一个版本的发布流程正式启动。\n\nFreeBSD 15.2 带来了近几个月来提出的数十项安全修复，涵盖释放后使用、堆溢出、缺失验证以及远程代码执行向量等问题。不幸的是，在 AI/LLM 时代，安全修复数量相当多。\n\nFreeBSD 15.2 引入了在 Linux 和 macOS 主机上交叉构建基础系统包的实验性支持。这依赖于在构建主机上手动设置 pkg 工具。\n\nFreeBSD 15.2 在笔记本电脑上新增了“backlight_enable” rc.conf 选项，允许在重启后保存和恢复背光亮度。\n\n在 FreeBSD 15.2 中，除非显式覆盖，Clang 现在默认使用 LLVM 链接器 ld.lld。FreeBSD 15.2 引入了 LLVM 21.1.8。\n\n还有许多其他软件包更新，如 OpenSSH 10.4p1、OpenZFS 2.4.4、XZ 5.8.4 等。\n\n对于在 Amazon AWS 云中使用 FreeBSD 的用户，FreeBSD 的 EC2 桌面 AMI 现在可启动到启用 XRDP 的 KDE 桌面。\n\n最后但同样重要的是各种硬件驱动修复和新增硬件 ID。\n\n关于 FreeBSD 15.2 整体变更的更多细节可通过以下链接查看。关于今日 beta 1 版本的详细信息可通过 FreeBSD-stable 邮件列表查看。\n\nFreeBSD 15.2 正朝着 12 月 8 日正式发布的目标推进，在此之前将每周发布 beta 版本，并在接下来一个月内至少发布一个候选版本。"
+  },
+  "067f2b129c164f6b67b8ff4b2b4d4310": {
+    "id": "067f2b129c164f6b67b8ff4b2b4d4310",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/ReactOS-Initial-USB-3.0",
+    "title_en": "ReactOS Lands Initial USB3 Driver Support",
+    "summary_en": "After years of work, ReactOS as the \"open-source Windows\" operating system striving for Windows program and driver compatibility now has an initial USB 3.0 driver stack in place...",
+    "pub_date": "Fri, 06 Nov 2026 16:49:46 -0500",
+    "title_zh": "ReactOS 初步支持 USB3 驱动",
+    "summary_zh": "ReactOS 作为追求 Windows 程序与驱动兼容性的“开源 Windows”操作系统，经过多年努力，现已初步集成 USB 3.0 驱动栈。开发者通过一个大型 PR 提交了 USB3 驱动代码，并已日常使用该驱动栈一段时间，稳定性良好。后续还有第二个 PR 将支持 USB4 主机路由器和设备路由器。这是该项目继 NTFS 驱动可用后的又一重要里程碑。",
+    "fulltext_zh": "经过多年的工作，ReactOS 这个致力于兼容 Windows 程序和驱动的“开源 Windows”操作系统，现在已初步具备了 USB 3.0 驱动栈。\n\n继上个月 ReactOS 现在可安装并使用其 NTFS 驱动的兴奋之后，这个开源项目的下一个重大里程碑是拥有可工作的 USB3 栈。\n\n该项目已初步导入 USB3 驱动代码，并且已经着眼于最终在 ReactOS 中支持 USB4：\n\n“这等待了非常长的时间，这个驱动的起源可以追溯到几年前，但我经历了许多许多次迭代。\n\n首先，因为我们正在举办黑客松！我在一个巨型 PR 中完成这个。我已经在 Windows 11 上日常使用这个 USB 栈一段时间了，并且我已经把几个版本的二进制文件给了几个人！它相当稳定。\n\n在这个之后还有第二个 PR，涉及 USB4 主机路由器和 USB4 设备路由器的 DeviceProperty 支持已经合并。当然，它们依赖于这个……”\n\nReactOS 团队继续推进这个平台，干得漂亮。"
+  },
+  "af47065b99f84db0d10f04be5967de8d": {
+    "id": "af47065b99f84db0d10f04be5967de8d",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-Zen-6-TEE-RISC-V-Based",
+    "title_en": "A RISC-V Based TEE With AMD Zen 6 CPUs",
+    "summary_en": "An interesting technical detail I noticed today from the latest AMD Linux activity is that Zen 6 processors apparently are featuring a RISC-V based Trusted Execution Environment (TEE) where in the past it was an ARM-based core...",
+    "pub_date": "Fri, 06 Nov 2026 14:30:49 -0500",
+    "title_zh": "AMD Zen 6 CPU 将采用基于 RISC-V 的 TEE",
+    "summary_zh": "最新 AMD Linux 固件提交显示，Zen 6 处理器（Family 1Ah M80h）将采用基于 RISC-V 的可信执行环境（TEE），取代此前基于 Arm Cortex-A5 和 TrustZone 的 AMD 安全处理器方案。该固件为 AMD 平台管理框架（PMF）可信应用 v4，使用更大共享内存布局并支持扩展策略条件，包括最多 20 个自定义 BIOS 输入。",
+    "fulltext_zh": "今天我注意到的最新 AMD Linux 活动中的一个有趣技术细节是，Zen 6 处理器显然将采用基于 RISC-V 的可信执行环境（TEE），而过去使用的是基于 ARM 的核心。\n\n今天在一个 Git 提交中透露了一个小信息，可能是 Zen 6 的新特性，或者是近期 Zen 5 处理器未曾广泛报道的内容，但至少现在 Zen 6 CPU 有了基于 RISC-V 的 TEE。我未能找到任何其他关于 AMD EPYC/Ryzen 处理器采用 RISC-V TEE/核心实现的引用，但今天提交到 linux-firmware.git 的内容提到了针对 Family 1Ah M80h（即即将推出的 AMD Ryzen Zen 6 客户端处理器）的基于 RISC-V 的 TEE：\n\n“amd_pmf: Add AMD PMF TA Firmware v4 for 1AH_M80H\n\nThis adds the PMF TA FW v4 for the 1AH_M80H platform. The TA now runs on the RISC-V based TEE, uses a larger shared memory layout and supports an extended set of policy conditions, including up to 20 custom BIOS inputs.”\n\n基于 RISC-V 的 TEE。传统上，AMD 安全处理器/平台安全处理器（PSP）基于 Arm Cortex-A5 核心与 Arm TrustZone 技术。现在，对于下一代 Ryzen 处理器而言似乎是新的，或者只是现有 SoC/APU 从未提及的，是基于 RISC-V 的可信执行环境。\n\n关于今天的固件更新，它是用于管理电源、散热和系统行为的 AMD 平台管理框架（PMF）可信应用（TA）。很高兴看到 AMD Ryzen Zen 6 的工作在产品正式发布前得到妥善处理。\n\nAMD 支持的 Lemonade 本地 AI 服务器发布重新设计的桌面应用和 Web UI\n“AMD 热爱 Omarchy”Linux 将有更多合作\nAMD 发布 ZenDNN 6.1，包含新内核和优化\nAMD PerfOpt 进入 Linux 7.4，为 AMD iGPU 带来不错的性能提升\nAMD 的 ROCm HRX Loom v0.1 发布，面向 AMD CPU、GPU 和 NPU\nAMD 600 系列芯片组现已在 Linux 上支持温度监控\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nSynaptics 似乎利用法律威胁阻止开源 DisplayLink 驱动\nFAT32 文件系统在 Linux 7.4 中看到高达 265 倍的改进\nLinux 7.4 合并窗口轻松成为内核历史上最大的\nEnlightenment 0.28 发布，包含许多改进\nOpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞\nDebian 的 APT 受到中间人攻击影响，可以 root 身份执行任意代码\nLinux 内核准备移除最后剩余的 MMX 优化代码\nFedora Linux 45 将于下周 11 月 3 日发布\n\n同时拥有无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "fadebde0f2714e545d6a253b45594fc7": {
+    "id": "fadebde0f2714e545d6a253b45594fc7",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-rc2-FAT32",
+    "title_en": "Linux 7.4-rc2 Change Yields As Much As 162x Improvement For FAT32",
+    "summary_en": "In addition to a FAT32 optimization yielding as much as a 265x improvement that was merged for the Linux 7.4 cycle and separately another big FAT32 improvement expected for Linux 7.5, merged this week as part of the non-MM fixes for Linux 7.4-rc2 was another big FAT32 performance optimization...",
+    "pub_date": "Fri, 06 Nov 2026 11:21:38 -0500",
+    "title_zh": "Linux 7.4-rc2 变更使 FAT32 性能提升高达 162 倍",
+    "summary_zh": "Linux 7.4-rc2 合入了一项 FAT32 性能优化，通过预分配簇空间避免大量小规模分配，在同步挂载且簇较小的 FAT32 文件系统上性能提升最高达 162 倍。该补丁由开发者 Matheus Alves de Almeida 提交，属于非 MM 热修复的一部分。",
+    "fulltext_zh": "Linux 7.4-rc2 变更使 FAT32 性能提升高达 162 倍\n2026 年 11 月 6 日上午 11:21（美国东部时间）。\n\n一项在 Linux 7.4 周期合入、可使性能提升高达 265 倍的 FAT32 优化，以及另一项预计随 Linux 7.5 到来的重大 FAT32 改进之外，本周作为 Linux 7.4-rc2 非 MM 修复的一部分合入的还有另一项重要的 FAT32 性能优化。\n\n开源开发者 Matheus Alves de Almeida 持续致力于通过 Linux FAT 驱动提升 FAT32 性能。本周合入的工作是在 fat_cont_expand() 函数中扩展前预分配空间。他在补丁中解释道：\n\n“fat_cont_expand() 的实现将新簇的分配留给 generic_cont_expand_simple()。该路径会执行大量小规模簇分配，损害性能。\n在 fat_cont_expand() 中预分配簇空间。将预分配移至新的 fat_preallocate() 辅助函数，供 fat_cont_expand() 和 fat_fallocate(FALLOC_FL_KEEP_SIZE) 共同使用。使用 FAT 专用的 fat_cont_expand_simple() 替代 generic_cont_expand_simple()，以避免在簇分配后重新检查新大小。”\n\n这项优化工作能带来相当可观的改进：\n\n该优化工作的最大影响体现在同步挂载且簇较小的 FAT32 文件系统上。\n\n“大部分是 OCFS2 修复。这些修复解决了扩展属性损坏、属性缺失和内核 BUG，以及集群配置、锁迁移、恢复和卸载期间的崩溃。还修复了 extent 移动，使其根据稳定的文件大小验证范围。\n三项 FAT 变更防止写入失败/FIBMAP 竞争条件错误地将文件系统置为只读，修正重命名后的目录链接计数，并加速文件扩展。报告的 QEMU 基准测试显示在同步挂载上改进尤为显著。\n一项污点字符串修复防止了越界读取，该读取可能在内核日志中暴露 slab 内容。此外还有针对无硬件乘法 CPU 上 OpenRISC 模块以及 Clang 24 的构建修复。”\n\n该工作通过非 MM 热修复拉取请求在周日 Linux 7.4-rc2 之前合入。\n\nLinux 准备在 2027 年实现更快的 FAT32 性能，提升高达 4.06 倍\nOverlayFS 因 AI 代码审查获得大量修复\nLinux 7.4 中的 Ceph 为惰性 I/O 增加全局挂载选项\nF2FS 在 Linux 7.4 中增加可选的多粒度时间戳及其他改进\nFAT32 文件系统在 Linux 7.4 中性能提升高达 265 倍\nKSMBD 在 Linux 7.4 中增加新选项\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nSynaptics 似乎利用法律威胁阻止开源 DisplayLink 驱动\nFAT32 文件系统在 Linux 7.4 中性能提升高达 265 倍\nLinux 7.4 合并窗口轻松成为内核历史上最大的\nEnlightenment 0.28 发布，带来许多改进\nOpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞\nDebian 的 APT 受到中间人攻击影响，可以 root 身份执行任意代码\nLinux 内核准备移除最后的 MMX 优化代码\nFedora Linux 45 将于下周 11 月 3 日发布\n\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "dc79083605805c3ffa48d4456404a777": {
+    "id": "dc79083605805c3ffa48d4456404a777",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/cachyos-omarchy-benchmarks",
+    "title_en": "Arch Linux vs. CachyOS vs. Omarchy 4.5 Performance Benchmarks",
+    "summary_en": "With CachyOS recently having rolled out its Linux 7.3 based kernel and various other improvements plus with Omarchy 4.5 having been released this week, this article provides a look at how CachyOS and Omarchy are competing on the performance front relative to upstream Arch Linux.",
+    "pub_date": "Fri, 06 Nov 2026 09:55:52 -0500",
+    "title_zh": "Arch Linux 与 CachyOS 及 Omarchy 4.5 性能基准对比",
+    "summary_zh": "本文在搭载 AMD Ryzen AI Max+ 395 \"Strix Halo\" 处理器、64GB 内存、Radeon 8060S 核显和 2TB WD_BLACK SN7100 NVMe SSD 的电脑上，对比了 Arch Linux、CachyOS 和 Omarchy 4.5 的性能表现。Arch Linux 使用通用 archinstall 搭配 KDE Plasma 安装，CachyOS 采用默认配置并更新，Omarchy 4.5 为原版安装。CachyOS 运行 Linux 7.3 内核，Omarchy 和 Arch Linux 仍为 Linux 7.2，三者均使用 GCC 16.2。Omarchy 默认启用性能模式，而 Arch Linux 和 CachyOS 默认为平衡模式。CachyOS 还包含针对 Zen 4+ 优化的软件包和其他调优。这是首次对比 Omarchy 与 Arch Linux、CachyOS 的性能。",
+    "fulltext_zh": "Arch Linux 与 CachyOS 及 Omarchy 4.5 性能基准对比 - Phoronix\nArch Linux 与 CachyOS 及 Omarchy 4.5 性能基准对比\n2026 年 11 月 6 日上午 09:55 EST 发布。\nCachyOS 最近推出了基于 Linux 7.3 的内核及其他多项改进，同时 Omarchy 4.5 于本周发布，本文旨在展示 CachyOS 和 Omarchy 相对于上游 Arch Linux 在性能方面的竞争表现。\n测试在一台搭载 AMD Ryzen AI Max+ 395 \"Strix Halo\" 处理器、64GB 内存、集成 Radeon 8060S 显卡和 2TB WD_BLACK SN7100 NVMe SSD 的电脑上进行，三个 Linux 发行版均在此系统上测试。\nArch Linux 使用通用 archinstall 配置并搭配 KDE Plasma 桌面安装，CachyOS 采用默认设置安装并更新，Omarchy 4.5 也使用其原版安装。\n测试时，CachyOS 运行 Linux 7.3 内核，而 Omarchy 和上游 Arch Linux 仍为 Linux 7.2。三者均使用 GCC 16.2。值得注意的是，Omarchy 默认开箱即用性能模式，而 Arch Linux 和 CachyOS 在此笔记本上默认为平衡性能模式。CachyOS 还包含大量开箱即用的优化，包括针对 Zen 4+ 优化的软件包和其他调优。\n这是我们首次观察 Omarchy 相对于 Arch Linux 和 CachyOS 的性能表现，让我们来看看。\nSnapdragon X1 Elite / Acer Swift 14 AI 在 Ubuntu 26.10 X1E 概念版上的性能\nIntel Core Ultra 9 Arrow Lake 在 Star Labs StarFighter 上于 Ubuntu 26.10 展现良好提升\nUbuntu 26.10 amd64v3 软件包在 AMD EPYC 上提供额外提升\nUbuntu 26.10 在 AMD EPYC 上相比 Ubuntu 26.04 带来出色的 I/O 性能优势\nFedora 45 Beta 性能：令人满意的平淡基准测试\nUbuntu 26.10 为 Intel Panther Lake / Framework Laptop 13 Pro 带来良好提升\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "ee51d285ca92ca98705419c63d731fb0": {
+    "id": "ee51d285ca92ca98705419c63d731fb0",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/moxnox-1-0-released-as-a-windows-nt-inspired-open-source-os/",
+    "title_en": "Moxnox 1.0 Released as a Windows NT-Inspired Open-Source OS",
+    "summary_en": "Moxnox 1.0 debuts as an experimental open-source OS combining Windows NT-inspired architecture, POSIX compatibility, and native Btrfs support.\nThe post Moxnox 1.0 Released as a Windows NT-Inspired Open-Source OS appeared first on Linux Today.",
+    "pub_date": "Fri, 06 Nov 2026 08:22:38 +0000",
+    "title_zh": "Moxnox 1.0 发布：一款受 Windows NT 启发的开源操作系统",
+    "summary_zh": "Moxnox 1.0 作为一款实验性开源操作系统正式亮相，融合了受 Windows NT 启发的架构、POSIX 兼容性以及原生 Btrfs 文件系统支持。",
+    "fulltext_zh": "Moxnox 1.0 首次亮相，是一款实验性开源操作系统，融合了受 Windows NT 启发的架构、POSIX 兼容性以及原生 Btrfs 支持。\n\n文章《Moxnox 1.0 发布：一款受 Windows NT 启发的开源操作系统》首发于 Linux Today。"
+  },
+  "57a2a3ddb7edf8784ad9a27efe868c2f": {
+    "id": "57a2a3ddb7edf8784ad9a27efe868c2f",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/httpie-a-modern-curl-alternative-to-test-rest-apis-in-linux/",
+    "title_en": "HTTPie – A Modern Curl Alternative to Test REST APIs in Linux",
+    "summary_en": "Learn how to use HTTPie, a user-friendly curl alternative for testing REST APIs, sending HTTP requests, and handling JSON responses on Linux.\nThe post HTTPie – A Modern Curl Alternative to Test REST APIs in Linux appeared first on Linux Today.",
+    "pub_date": "Fri, 06 Nov 2026 08:19:34 +0000",
+    "title_zh": "HTTPie – 在 Linux 中测试 REST API 的现代 Curl 替代方案",
+    "summary_zh": "本文介绍如何使用 HTTPie，一个用户友好的 curl 替代工具，用于在 Linux 上测试 REST API、发送 HTTP 请求以及处理 JSON 响应。",
+    "fulltext_zh": "了解如何使用 HTTPie，一个用户友好的 curl 替代工具，用于在 Linux 上测试 REST API、发送 HTTP 请求以及处理 JSON 响应。\n\n文章《HTTPie – 在 Linux 中测试 REST API 的现代 Curl 替代方案》首次发布于 Linux Today。"
+  },
+  "b6f3b971d2bdbd9547487c8d41816321": {
+    "id": "b6f3b971d2bdbd9547487c8d41816321",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/mozilla-firefox-160-enters-public-beta-testing-heres-what-to-expect/",
+    "title_en": "Mozilla Firefox 160 Enters Public Beta Testing, Here’s What to Expect",
+    "summary_en": "Firefox 160 enters beta testing with new browser features, performance improvements, and updates ahead of Mozilla's next stable release.\nThe post Mozilla Firefox 160 Enters Public Beta Testing, Here’s What to Expect appeared first on Linux Today.",
+    "pub_date": "Fri, 06 Nov 2026 08:18:04 +0000",
+    "title_zh": "Mozilla Firefox 160 进入公开测试阶段，以下是值得期待的内容",
+    "summary_zh": "Firefox 160 已进入公开测试阶段，带来新的浏览器功能、性能改进以及多项更新，为 Mozilla 下一个稳定版本的发布做准备。",
+    "fulltext_zh": "Firefox 160 进入测试阶段，带来新的浏览器功能、性能改进和更新，为 Mozilla 下一个稳定版本的发布做准备。\n\n文章《Mozilla Firefox 160 进入公开测试阶段，以下是值得期待的内容》首发于 Linux Today。"
+  },
+  "1084f076d3fbce37dd1928136615696b": {
+    "id": "1084f076d3fbce37dd1928136615696b",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/stalwart-1-0-open-source-mail-server-reaches-its-first-stable-release/",
+    "title_en": "Stalwart 1.0 Open-Source Mail Server Reaches Its First Stable Release",
+    "summary_en": "Stalwart 1.0 reaches its first stable release, offering an open-source mail server with integrated email protocols, security, and administration tools.\nThe post Stalwart 1.0 Open-Source Mail Server Reaches Its First Stable Release appeared first on Linux Today.",
+    "pub_date": "Fri, 06 Nov 2026 08:15:36 +0000",
+    "title_zh": "Stalwart 1.0 开源邮件服务器发布首个稳定版本",
+    "summary_zh": "Stalwart 1.0 正式发布首个稳定版本，这是一款开源邮件服务器，集成了多种电子邮件协议、安全防护和管理工具，为用户提供一体化的邮件服务解决方案。",
+    "fulltext_zh": "Stalwart 1.0 达成首个稳定版本发布，提供一款集成了电子邮件协议、安全防护和管理工具的开源邮件服务器。\n\n文章《Stalwart 1.0 开源邮件服务器发布首个稳定版本》首发于 Linux Today。"
+  },
+  "9c41f4be18f98f65c55dab60811dad6c": {
+    "id": "9c41f4be18f98f65c55dab60811dad6c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/openkrisp-beta-local-noise-reduction-for-microphone-and-incoming-call-audio/",
+    "title_en": "Openkrisp Beta: Local Noise Reduction for Microphone and Incoming Call Audio",
+    "summary_en": "OpenKrisp beta offers local noise reduction for microphones and incoming call audio, helping Linux users improve voice clarity without cloud processing.\nThe post Openkrisp Beta: Local Noise Reduction for Microphone and Incoming Call Audio appeared first on Linux Today.",
+    "pub_date": "Fri, 06 Nov 2026 08:11:57 +0000",
+    "title_zh": "Openkrisp Beta：为麦克风和来电音频提供本地降噪",
+    "summary_zh": "OpenKrisp beta 为麦克风和来电音频提供本地降噪功能，帮助 Linux 用户在不依赖云端处理的情况下提升语音清晰度。",
+    "fulltext_zh": "OpenKrisp beta 为麦克风和来电音频提供本地降噪，帮助 Linux 用户在不经过云端处理的情况下提升语音清晰度。\n\n文章 Openkrisp Beta：为麦克风和来电音频提供本地降噪 首发于 Linux Today。"
+  },
+  "cf0ffd7742aadaf63f853ce06839e60f": {
+    "id": "cf0ffd7742aadaf63f853ce06839e60f",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/gstreamer-1-28-9-multimedia-framework-adds-support-for-the-mpph264enc-encoder",
+    "title_en": "GStreamer 1.28.9 Multimedia Framework Adds Support for mpph264enc Encoder",
+    "summary_en": "GStreamer 1.28.9 open-source multimedia framework is now available for download with support for the mpph264enc encoder, 24-bit support to the level element, and more.\nThe post GStreamer 1.28.9 Multimedia Framework Adds Support for mpph264enc Encoder appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Fri, 06 Nov 2026 16:40:40 +0000",
+    "title_zh": "GStreamer 1.28.9 多媒体框架新增对 mpph264enc 编码器的支持",
+    "summary_zh": "GStreamer 1.28.9 开源多媒体框架现已发布，新增对 mpph264enc 编码器的支持，为 level 元素添加 24 位支持，并包含其他改进。",
+    "fulltext_zh": "GStreamer 1.28.9 开源多媒体框架现已可供下载，新增对 mpph264enc 编码器的支持，为 level 元素添加 24 位支持，以及更多改进。"
   }
 }

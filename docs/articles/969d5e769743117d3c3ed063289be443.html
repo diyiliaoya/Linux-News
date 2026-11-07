@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FreeBSD 15.2 Beta 1 允许在 Linux/macOS 上实验性交叉构建基础包 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月07日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>FreeBSD 15.2 Beta 1 允许在 Linux/macOS 上实验性交叉构建基础包</h1>
+
+  <div class="article-summary">FreeBSD 15.2 Beta 1 发布，带来大量安全修复，并引入在 Linux 和 macOS 主机上交叉构建基础系统包的实验性支持。新版本还增加了笔记本背光保存/恢复选项，Clang 默认使用 LLVM 链接器 ld.lld，并更新了 OpenSSH、OpenZFS、XZ 等软件包。AWS EC2 桌面 AMI 现在可启动到启用 XRDP 的 KDE 桌面。正式版计划于12月8日发布。</div>
+
+  <div class="article-body"><p>FreeBSD 15.2 Beta 1 今日发布，标志着迈向 FreeBSD 15 下一个版本的发布流程正式启动。</p><p>FreeBSD 15.2 带来了近几个月来提出的数十项安全修复，涵盖释放后使用、堆溢出、缺失验证以及远程代码执行向量等问题。不幸的是，在 AI/LLM 时代，安全修复数量相当多。</p><p>FreeBSD 15.2 引入了在 Linux 和 macOS 主机上交叉构建基础系统包的实验性支持。这依赖于在构建主机上手动设置 pkg 工具。</p><p>FreeBSD 15.2 在笔记本电脑上新增了“backlight_enable” rc.conf 选项，允许在重启后保存和恢复背光亮度。</p><p>在 FreeBSD 15.2 中，除非显式覆盖，Clang 现在默认使用 LLVM 链接器 ld.lld。FreeBSD 15.2 引入了 LLVM 21.1.8。</p><p>还有许多其他软件包更新，如 OpenSSH 10.4p1、OpenZFS 2.4.4、XZ 5.8.4 等。</p><p>对于在 Amazon AWS 云中使用 FreeBSD 的用户，FreeBSD 的 EC2 桌面 AMI 现在可启动到启用 XRDP 的 KDE 桌面。</p><p>最后但同样重要的是各种硬件驱动修复和新增硬件 ID。</p><p>关于 FreeBSD 15.2 整体变更的更多细节可通过以下链接查看。关于今日 beta 1 版本的详细信息可通过 FreeBSD-stable 邮件列表查看。</p><p>FreeBSD 15.2 正朝着 12 月 8 日正式发布的目标推进，在此之前将每周发布 beta 版本，并在接下来一个月内至少发布一个候选版本。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/FreeBSD-15.2-Beta-1" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全局菜单扩展将应用菜单放入GNOME顶部面板 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月07日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>全局菜单扩展将应用菜单放入GNOME顶部面板</h1>
+
+  <div class="article-summary">一款新的GNOME Shell全局菜单扩展发布，为292款知名应用提供菜单支持。对于不导出传统菜单的应用，扩展利用键盘快捷键生成菜单；对于支持D-Bus菜单的应用，可通过可选伴生守护进程显示完整菜单。该扩展支持GNOME 48至51，在Ubuntu 26.04 LTS及更高版本上可用。</div>
+
+  <div class="article-body"><p>本周发布了一款适用于GNOME Shell的全局菜单扩展，与你过去可能尝试过（并放弃）的扩展不同，这款似乎运行良好。</p><p>早期的全局菜单尝试因Wayland、API变更以及许多现代Linux应用不再“导出”菜单而受阻，导致大多数应用在顶部面板中留下空白。</p><p>这款扩展为292款知名应用提供了菜单，并且通过安装可选的伴生工具，允许像Firefox这样的应用也显示其完整的应用菜单。</p><p>对于超过290款知名应用——那些在Linux（或Wayland）上不暴露传统应用菜单的应用——该扩展使用应用文档化的键盘快捷键来创建菜单：</p><p>没有菜单的应用的应用菜单</p><p>这是一种非常巧妙的方法，因为无论应用是什么类型（没错，甚至是Electron），只要应用有针对关键操作的键盘快捷键，它们就可以在菜单中暴露并通过点击触发。</p><p>对于确实有传统应用菜单（并通过D-Bus导出）的软件，你可以安装一个可选的伴生守护进程包。它会将真实的完整应用菜单发送到全局菜单（并在可能的情况下从应用中移除菜单）。</p><p>你可以看到安装伴生工具与不安装时方法的差异。后者提供完整菜单，并根据你正在进行的操作实时显示不可用（灰色；不可选择）的操作。</p><p>在这些图片中查看两种方法的区别：</p><p>已安装伴生守护进程</p><p>已安装伴生守护进程</p><p>伴生工具必须从源码构建。在Ubuntu上，这并不像听起来那么难。运行以下代码块，在需要时按提示操作，它会为你完成繁重的工作——之后你必须注销并重新登录，以便加载伴生工具。</p><p>sudo apt install git make python3-setuptools</p><p>git clone https://github.com/Unmade760/orbit-global-menu.git</p><p>sudo apt install ./global-menu_*.deb</p><p>即使有伴生工具，事情也并不完美；有些应用，如Firefox，在显示完整菜单之前需要调整。该项目的文档涵盖了如何以及为何这样做——为了获得完整体验，值得一做。</p><p>最后，如果当前聚焦的应用不被两种方法覆盖，它不会让你面对空白面板，因为它由简单的窗口、工作区和会话操作覆盖。</p><p>菜单默认使用不透明背景（有一个模糊选项，但只在我启用某功能时才有效），并且当此功能激活时，工作区切换器圆点会从顶部栏消失，但你可以选择显示它们。</p><p>聚焦应用的标题以粗体显示，但可以以常规字重显示或完全隐藏。</p><p>如果你愿意，可以通过设置面板查看和编辑该扩展自带的292个现代菜单。也可以创建自己的快捷键映射，为未覆盖的应用提供更完整的菜单（预计覆盖范围会随着未来更新而扩大）。</p><p>在Ubuntu上安装Global Menu</p><p>Global Menu支持GNOME 48 – 51，因此如果你使用的是Ubuntu 26.04 LTS或更高版本，可以尝试一下。用它来唤起你对Ubuntu Unity桌面的回忆（Unity曾添加了一个全局菜单）。</p><p>记住：要获得完整的应用菜单，你确实需要安装伴生守护进程。我在Ubuntu 26.10上没有遇到任何问题。</p><p>试一试，让我知道你的想法——现在，要是有人能复活……就好了。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/global-menu-gnome-extension" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
