@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kmorph 旨在提供无需重启的 Linux 内核崩溃恢复 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月08日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Kmorph 旨在提供无需重启的 Linux 内核崩溃恢复</h1>
+
+  <div class="article-summary">Kmorph 是一个新的开源项目，旨在为 Linux 系统提供无需重启的内核崩溃恢复。它基于多内核（Multikernel）技术，通过预先启动一个备用内核，在主内核崩溃时快速接管，实现约 2 秒的 Nginx 等服务恢复。该系统支持 x86_64 和 ARM64，并计划支持 RISC-V。目前 Kmorph 无法在主线内核上运行，其广泛采用取决于多内核代码能否进入主线。</div>
+
+  <div class="article-body"><p>Kmorph 旨在为 Linux 系统提供无需重启的内核崩溃恢复，在内核崩溃的情况下，恢复 Nginx Web 服务器或其他重要服务可能仅需约 2 秒的停机时间。</p><p>这个名为 Kmorph 的开源项目于周五宣布，用于实现这种无需重启的内核崩溃恢复，它基于过去一年在树外进行的工作。因此，至少目前，Kmorph 无法在主线 Linux 内核上运行，多内核代码何时能进入主线还有待观察。</p><p>多内核（Multikernel）提供多个独立的内核实例在同一物理系统上共存，由此开辟的一个用例是：当一个内核崩溃时，能够快速过渡到另一个内核，实现相当快的恢复。借助 Kmorph，系统可以在不重启的情况下经受内核崩溃：</p><p>“使用多内核，每个内核拥有自己的 CPU、内存和设备，内核之间通过 vsock 通信。kmorph 利用这一点，用接管取代两次重启。第二个内核（后继者）提前在一个或两个 CPU 以及运行中的内核（前任者）旁边的一块内存上启动，并监视它。当前任者发生 panic 或挂起时，后继者隔离其 CPU，接管并重置其设备，恢复网络身份，可选地保存 kdump 兼容的 vmcore，然后热添加剩余的 CPU 和内存，成为机器的内核。检测到运行中的后继者大约需要一秒钟，无需重启、无需固件、无需操作员。</p><p>同样的接管也提供了实时内核更新：‘kmorph upgrade’ 将健康的机器移交给运行更新内核的后继者。无论哪种方式，新内核都可以武装自己的后继者，一代又一代。</p><p>所有新颖的工作都在多内核内核中：隔离、设备和 IOMMU 交接，以及从主机设备树热添加 CPU 和内存。kmorph 是其接口之上的纯 C 编排，并像 kdump 一样通过 dracut、initramfs-tools、kernel-install 和 systemd 服务与发行版集成。它目前可在 x86_64 和 ARM64 上运行，RISC-V 支持正在进行中。”</p><p>Kmorph 还支持在回退内核上以待机方式运行重要 systemd 服务的概念，以便服务恢复可以非常快。以 Nginx 为例，在内核崩溃时，它可以在短短两秒内恢复在线，随后其他不太重要的服务启动。</p><p>主线 Linux 内核确实具有 Kexec Handover (KHO) 和 Live Update Orchestrator (LUO) 功能，但目前不支持类似的内核崩溃恢复，内核更新仍然需要 Kexec 重启，也无法承受内核崩溃。</p><p>Kmorph 是一个有趣的概念，具有很大潜力，尽管其广泛采用取决于多内核进入主线的未来。</p><p>有关 Kmorph 的更多详细信息，可以通过 Linux 内核邮件列表公告找到。代码可在 [链接] 获取。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Kmorph-Linux-Crash-Recovery" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

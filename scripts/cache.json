@@ -19930,5 +19930,82 @@
     "title_zh": "GStreamer 1.28.9 多媒体框架新增对 mpph264enc 编码器的支持",
     "summary_zh": "GStreamer 1.28.9 开源多媒体框架现已发布，新增对 mpph264enc 编码器的支持，为 level 元素添加 24 位支持，并包含其他改进。",
     "fulltext_zh": "GStreamer 1.28.9 开源多媒体框架现已可供下载，新增对 mpph264enc 编码器的支持，为 level 元素添加 24 位支持，以及更多改进。"
+  },
+  "bcfab4e0bc912130d4ac0e5b4bd019e3": {
+    "id": "bcfab4e0bc912130d4ac0e5b4bd019e3",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/13030",
+    "title_en": "OS Release: OpenIndiana 2026.10",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The OpenIndiana project has published a new version of its open source operating system which evolved out of the OpenSolaris family. The new version, 2026.10, updates developer tools, virtual machine utilities and web browsers: \"The OpenIndiana Hipster 2026.10 snapshot is available, visit the Downloads page for the Live,....",
+    "pub_date": "",
+    "title_zh": "操作系统发布：OpenIndiana 2026.10",
+    "summary_zh": "OpenIndiana 项目发布了 2026.10 快照版，提供 Live、文本和最小安装镜像。该版本新增 UEFI 帧缓冲支持，启用 illumosfb X.Org 驱动，更新 Firefox 和 Thunderbird 至 159.0，升级 Python、Perl、Rust、Clang、GCC 等开发工具，更新 QEMU 和 VirtualBox，并加入 TeX Live 2026、Foliate 电子书阅读器和 zoxide 等新应用。",
+    "fulltext_zh": "OpenIndiana 项目发布了其开源操作系统的新版本，该系统由 OpenSolaris 家族演变而来。新版本 2026.10 更新了开发者工具、虚拟机实用程序和网页浏览器：\n\n“OpenIndiana Hipster 2026.10 快照已可用，请访问下载页面获取日期为 2026 年 10 月 30 日的 Live、文本和最小安装镜像。现有安装可继续通过 IPS 更新。值得注意的变化：Live 镜像支持 UEFI 帧缓冲；illumosfb X.Org 驱动现已启用，安装在 X 服务器的模块路径中并包含在 Live 镜像内，在 illumos 帧缓冲控制台上自动配置；浏览器和邮件客户端更新，Firefox 和 Thunderbird 达到 159.0 版本；开发工具——新增 Python 3.15.2 和 Perl 5.44.0，以及 Rust 1.99.0、Clang 23.1.4 和 GCC 15.3.0；解释器新增内容与下方众多模块更新分开列出；虚拟化更新——QEMU 达到 11.1.2，VirtualBox 7.2.22；QEMU 客户机代理拆分为独立软件包；新应用程序——TeX Live 2026 和 Foliate 3.2.1 电子书阅读器加入集合，还有 zoxide shell 导航工具；其他变化包括 OpenSSH 10.6p1、OpenSSL 3.5.9、MariaDB 12.3.3，以及包括 OpenJDK 11/17、ripgrep 和 Claws Mail 在内的应用程序获得更多 SPARC 构建支持。”\n\n更多细节可在以下文件中找到：\nOI-hipster-gui-20261030.iso\nOI-hipster-text-20261030.iso\n\n近期相关新闻和发布：\n操作系统发布：OpenIndiana 2026.10\n操作系统发布：OpenIndiana 2025.10\n操作系统发布：OpenIndiana 2022.10\n操作系统发布：OpenIndiana 2021.04\n操作系统发布：OpenIndiana 2020.10\n操作系统发布：OpenIndiana 2020.04\n更多 OpenIndiana 新闻...\n\nOpenIndiana 是 OpenSolaris 操作系统的延续。它是在 Oracle 收购 Sun Microsystems 后的一段不确定时期中构思的，几个月过去后……"
+  },
+  "75c73196368acc70afb45b004fc1fbec": {
+    "id": "75c73196368acc70afb45b004fc1fbec",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/OpenIndiana-2026.10",
+    "title_en": "OpenIndiana 2026.10 Released With Updated Tools & Compilers, New Apps",
+    "summary_en": "OpenIndiana Hipster 2026.10 is out today as the newest six-month update to this operating system based on Illumos and with the lineage tracing back to the fruitful Sun OpenSolaris days...",
+    "pub_date": "Sat, 07 Nov 2026 17:50:46 -0500",
+    "title_zh": "OpenIndiana 2026.10 发布：更新工具与编译器，新增应用",
+    "summary_zh": "OpenIndiana Hipster 2026.10 作为基于 Illumos 的操作系统的最新六个月更新现已发布。此版本为 live 镜像启用了 illumosfb X.Org 驱动以支持 UEFI 帧缓冲，并带来大量软件包更新，包括 Firefox 和 Thunderbird 159、GCC 15.3、LLVM Clang 23.1.4、Perl 5.44、Python 3.15.2，以及更新的 QEMU 和 VirtualBox、TeX Live 2026、Foliate 电子书阅读器和 zoxide 等新应用。该版本主要聚焦于更新这一社区驱动的 Solaris 生态系统中的开源软件包。",
+    "fulltext_zh": "OpenIndiana Hipster 2026.10 于今日发布，这是基于 Illumos、血统可追溯至成果丰硕的 Sun OpenSolaris 时代的操作系统的最新六个月更新。\n\nOpenIndiana 2026.10 现在为 OpenIndiana live 镜像启用了 \"illumosfb\" X.Org 驱动，以支持 UEFI 帧缓冲。此外还有大量软件包更新，从 Firefox 和 Thunderbird 159 到 GCC 15.3、LLVM Clang 23.1.4、Perl 5.44、Python 3.15.2 等。虚拟化支持也得到更新，包含更新的 QEMU 和 VirtualBox 版本，以及新的 TeX Live 2026、Foliate 电子书阅读器和 zoxide shell 导航工具。\n\n总体而言，OpenIndiana 2026.10 主要是在更新这个社区驱动、基于 Solaris 的生态系统中提供的所有捆绑开源软件包。\n\n由于我上次尝试 OpenIndiana 已有一段时间（根据 Phoronix 之前的文章，大约十年前……），我决定试用 OpenIndiana 2026.10 live。我使用的是搭载 Intel Panther Lake 的 Framework Laptop 13 Pro。它启动进入了 MATE 桌面，尽管大多数设备驱动支持缺失。外观与我多年前测试 OpenIndiana/OpenSolaris 时大致相同。\n\nOpenIndiana 2026.10 的完整软件包更新列表可通过以下链接查看。"
+  },
+  "2fb41bb8e949a9e8784fd6924dc71759": {
+    "id": "2fb41bb8e949a9e8784fd6924dc71759",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/GNU-Automake-1.20",
+    "title_en": "Automake 1.20 Brings New Features, Desires To Re-Establish GNU As Leading Build System",
+    "summary_en": "Out today is GNU Automake 1.20 with the new --enable-jobserver option and opting for GPLv3+ licensing...",
+    "pub_date": "Sat, 07 Nov 2026 10:22:00 -0500",
+    "title_zh": "Automake 1.20 带来新功能，希望重建 GNU 作为领先构建系统的地位",
+    "summary_zh": "GNU Automake 1.20 发布，新增 --enable-jobserver 选项让编译器和链接器继承 GNU make 的 jobserver，新增 delete-on-error 选项和 print-distfiles 目标，distcheck 默认不再需要 TeX，并修复多项长期存在的缺陷。许可证从 GPLv2+ 升级为 GPLv3+。维护者 Kamila Szewczyk 表示希望将 Automake 重新打造为新软件项目的首选构建系统。",
+    "fulltext_zh": "Automake 1.20 带来新功能，希望重建 GNU 作为领先构建系统的地位\n发布于 2026 年 11 月 7 日美国东部时间上午 10:22。\n\nGNU Automake 1.20 今日发布，带来新选项并改用 GPLv3+ 许可证。\n\n在此版本之前，Automake 一直采用 GPLv2 许可证。现在 Automake 采用 GPLv3 或更高版本（GPLv3）。这与 Autoconf 保持一致，也符合自由软件基金会推荐使用 GPLv3+ 许可证的建议。\n\n新选项用于让编译器和链接器继承 GNU make 的管道作业服务器，例如 GCC 的 -flto=jobserver 模式用于链接时优化。\n\nAutomake 1.20 还新增了“delete-on-error”选项。使用该选项会在生成的 Makefile.in 文件中发出一个特殊目标，指示 GNU Make 在其配方失败时删除该目标。\n\nAutomake 还新增了一个目标，用于列出相关文件。\n\nGNU Automake 1.20 还附带各种缺陷修复。\n\nKamila Szewczyk 在 GNU Automake 1.20 发布公告中表示，希望将 GNU 构建系统重新确立为新软件项目的“首选构建系统”。考虑到如今 CMake 和 Meson 的采用速度，这将是一个艰巨的目标。\n\n“新功能包括 `--enable-jobserver'，让编译器和链接器可以访问 GNU make 的 jobserver，delete-on-error 选项，以及 print-distfiles 目标。distcheck 默认不再需要 TeX。此版本还修复了一些长期存在的缺陷和限制，涉及依赖跟踪、VPATH 构建中的 lex/yacc 输出、Vala 构建、分发压缩和卸载检查。此外，GNU automake 已从 GNU GPLv2（或更高版本）许可证升级到 GNU GPL v3（或更高版本）许可证。\n\n我对整个 GNU 构建系统（`autotools'）有大量计划。我打算继续解决旧问题和限制，并在 GNU Automake 中添加新功能，慢慢将其拖向未来。我的最终目标是再次将其确立为新软件项目的首选构建系统，同时继续简化现有用户的维护和可移植性。希望即将发布的版本能让我们越来越接近这一目标。”\n\n今日 Automake 1.20 版本的下载和更多详细信息可通过以下链接找到。\n\nGCC 17 编译器合并对 AVX10V1AUX 的支持\nGNU Linux-libre 7.3-gnu 移除更多固件 blob\n英特尔编译器工程师分享 APX 的最新项目进展\nGDB 18.1 调试器带来更好的 Windows 支持\nAMD 发布针对 AVX10V1AUX ISA 支持的 GCC 编译器补丁\nGNU Wget 2.3 发布，带来 --progress=dot 和 OS/2 改进\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\nSynaptics 似乎利用法律威胁阻止开源 DisplayLink 驱动\nLinux 7.4 合并窗口轻松成为内核历史上最大的\nOpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞\nEnlightenment 0.28 发布，带来许多改进\nDebian 的 APT 受到中间人攻击影响，可以 root 身份执行任意代码\nLinux 内核准备移除最后一批 MMX 优化代码\nLinux 7.4 用于减少 AI 噪音的新功能因“疯狂野兽”已被回退\nFedora 45 发布，带来许多前沿 Linux 创新\n\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "a1754e1de34a490e9b3e1ca98c30a883": {
+    "id": "a1754e1de34a490e9b3e1ca98c30a883",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/HyprBSD",
+    "title_en": "HyprBSD Provides Wayland-Based Desktop Built Atop FreeBSD, Complete With Steam Gaming",
+    "summary_en": "While FreeBSD has been working to improve its desktop and laptop experience, that work isn't yet shipping in released form for the OS installer and other ongoing efforts. Now there's a new desktop FreeBSD distribution on the scene with HyprBSD providing a Wayland-based desktop experience and with the Linux binary compatibility layer even an easy route to gaming with Steam...",
+    "pub_date": "Sat, 07 Nov 2026 07:45:00 -0500",
+    "title_zh": "HyprBSD 提供基于 Wayland 的 FreeBSD 桌面，并支持 Steam 游戏",
+    "summary_zh": "HyprBSD 是一个基于 FreeBSD 15.1-RELEASE 的新桌面发行版，提供基于 Wayland 的 Hyprland 桌面环境，支持 AMD、Intel 和 NVIDIA 显卡，并附带图形安装器。它通过 FreeBSD 的 Linux 兼容层运行 Steam，已验证可运行多款游戏，包括受 BattlEye 保护的游戏。该项目由资深 FreeBSD 管理员 Sam Sheridan 创建，旨在提供开箱即用的流畅桌面体验，目前处于候选发布阶段。",
+    "fulltext_zh": "FreeBSD 一直在努力改善其桌面和笔记本电脑体验，但这项工作尚未以发布形式出现在操作系统安装程序和其他持续进行的努力中。现在，一个新的 FreeBSD 桌面发行版 HyprBSD 登场了，它提供基于 Wayland 的桌面体验，并借助 Linux 二进制兼容层，甚至为通过 Steam 玩游戏提供了一条便捷途径。\n\n在因 FreeBSD 开箱即用的桌面体验（尤其是围绕 NVIDIA 显卡驱动）感到沮丧之后，拥有 25 年以上经验的 FreeBSD 管理员、IT 顾问 Sam Sheridan 着手创建了 HyprBSD，以提供良好的开箱即用体验。多年来，也有其他一些旨在提供良好 FreeBSD 桌面体验的努力，例如……\n\nHyprBSD 目前基于 FreeBSD 15.1-RELEASE，附带一个图形安装程序，可在约三分钟内让系统启动并运行。支持 AMD、Intel 和 NVIDIA 显卡。对于基于 Wayland 的桌面体验，他们使用了 Hyprland 合成器。\n\nHyprBSD 通过 FreeBSD 的 Linux 兼容层让 Steam 运行起来，并已验证可与多种游戏兼容，包括受 BattlEye 保护的游戏。XWayland 也能正常工作，以支持依赖 X11 的软件。其中许多修改也可以对原版 FreeBSD 安装进行，但这里的意图是提供更顺畅、更精致的开箱即用用户体验。\n\n作为这项新计划的一部分，还对 FreeBSD 进行了各种修复，以进一步增强 FreeBSD 在桌面上的表现。\n\n那些对这种新 BSD 桌面选项感到好奇的人可以通过……了解更多信息。目前该操作系统被视为候选发布形式。"
+  },
+  "3c2e6e63c3fab1d714c87cdee7bdab1a": {
+    "id": "3c2e6e63c3fab1d714c87cdee7bdab1a",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Kmorph-Linux-Crash-Recovery",
+    "title_en": "Kmorph Aims To Provide Rebootless Linux Kernel Crash Recovery",
+    "summary_en": "Kmorph aims to provide reboot-less kernel crash recovery for Linux systems and can yield as little as ~2 second downtime for recovering the Nginx web server or other important services in the case of a kernel crash...",
+    "pub_date": "Sat, 07 Nov 2026 07:05:00 -0500",
+    "title_zh": "Kmorph 旨在提供无需重启的 Linux 内核崩溃恢复",
+    "summary_zh": "Kmorph 是一个新的开源项目，旨在为 Linux 系统提供无需重启的内核崩溃恢复。它基于多内核（Multikernel）技术，通过预先启动一个备用内核，在主内核崩溃时快速接管，实现约 2 秒的 Nginx 等服务恢复。该系统支持 x86_64 和 ARM64，并计划支持 RISC-V。目前 Kmorph 无法在主线内核上运行，其广泛采用取决于多内核代码能否进入主线。",
+    "fulltext_zh": "Kmorph 旨在为 Linux 系统提供无需重启的内核崩溃恢复，在内核崩溃的情况下，恢复 Nginx Web 服务器或其他重要服务可能仅需约 2 秒的停机时间。\n\n这个名为 Kmorph 的开源项目于周五宣布，用于实现这种无需重启的内核崩溃恢复，它基于过去一年在树外进行的工作。因此，至少目前，Kmorph 无法在主线 Linux 内核上运行，多内核代码何时能进入主线还有待观察。\n\n多内核（Multikernel）提供多个独立的内核实例在同一物理系统上共存，由此开辟的一个用例是：当一个内核崩溃时，能够快速过渡到另一个内核，实现相当快的恢复。借助 Kmorph，系统可以在不重启的情况下经受内核崩溃：\n\n“使用多内核，每个内核拥有自己的 CPU、内存和设备，内核之间通过 vsock 通信。kmorph 利用这一点，用接管取代两次重启。第二个内核（后继者）提前在一个或两个 CPU 以及运行中的内核（前任者）旁边的一块内存上启动，并监视它。当前任者发生 panic 或挂起时，后继者隔离其 CPU，接管并重置其设备，恢复网络身份，可选地保存 kdump 兼容的 vmcore，然后热添加剩余的 CPU 和内存，成为机器的内核。检测到运行中的后继者大约需要一秒钟，无需重启、无需固件、无需操作员。\n\n同样的接管也提供了实时内核更新：‘kmorph upgrade’ 将健康的机器移交给运行更新内核的后继者。无论哪种方式，新内核都可以武装自己的后继者，一代又一代。\n\n所有新颖的工作都在多内核内核中：隔离、设备和 IOMMU 交接，以及从主机设备树热添加 CPU 和内存。kmorph 是其接口之上的纯 C 编排，并像 kdump 一样通过 dracut、initramfs-tools、kernel-install 和 systemd 服务与发行版集成。它目前可在 x86_64 和 ARM64 上运行，RISC-V 支持正在进行中。”\n\nKmorph 还支持在回退内核上以待机方式运行重要 systemd 服务的概念，以便服务恢复可以非常快。以 Nginx 为例，在内核崩溃时，它可以在短短两秒内恢复在线，随后其他不太重要的服务启动。\n\n主线 Linux 内核确实具有 Kexec Handover (KHO) 和 Live Update Orchestrator (LUO) 功能，但目前不支持类似的内核崩溃恢复，内核更新仍然需要 Kexec 重启，也无法承受内核崩溃。\n\nKmorph 是一个有趣的概念，具有很大潜力，尽管其广泛采用取决于多内核进入主线的未来。\n\n有关 Kmorph 的更多详细信息，可以通过 Linux 内核邮件列表公告找到。代码可在 [链接] 获取。"
+  },
+  "30b0f7e1638ea1f2a994e2cfabc3c038": {
+    "id": "30b0f7e1638ea1f2a994e2cfabc3c038",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/KDE-Plasma-6.9-Leak-Desktop",
+    "title_en": "KDE Plasma 6.9 Will Stop Leaking Memory When Right Clicking Files/Folders On Desktop",
+    "summary_en": "With Plasma 6.8 stable approaching one month old, KDE developers continue ramping up work toward Plasma 6.9. Here is some of the interesting work they've been up to so far in November...",
+    "pub_date": "Sat, 07 Nov 2026 06:34:48 -0500",
+    "title_zh": "KDE Plasma 6.9 将修复桌面右键点击文件/文件夹时的内存泄漏问题",
+    "summary_zh": "KDE Plasma 6.9 开发持续推进，本周亮点包括：修复桌面右键点击文件或文件夹时每次操作泄漏少量内存（kB 级别）的问题；允许自定义屏幕显示弹窗位置；systemd 257+ 上 systemd-ask-password 显示 KDE 风格密码提示；支持 Glide 浏览器集成；桌面小部件尺寸优化避免内容截断。此外 Plasma 6.8.3 修复了连接 DisplayLink 屏幕时的 KWin 崩溃。",
+    "fulltext_zh": "随着 Plasma 6.8 稳定版发布即将满一个月，KDE 开发者继续加紧推进 Plasma 6.9 的工作。以下是他们 11 月迄今为止一些有趣的工作进展。\n\n《本周 Plasma》最新一期发布，重点介绍了过去七天 KDE Plasma 的变化。本周亮点包括：\n\n- Plasma 6.9 现在允许选择屏幕显示弹窗的位置，如果希望使用默认位置之外的替代位置：\n- 在 systemd 257 及更新版本上调用 \"systemd-ask-password --no-tty\" 时，现在会显示 KDE 风格的密码提示。\n- 针对 Glide 浏览器的 Plasma 浏览器集成。\n- 添加到桌面的小部件现在会调整尺寸，使其足够大而实用，且内容不会被截断。\n- Plasma 6.9 将不再在右键点击桌面上的文件或文件夹时泄漏少量内存（kB 级别）。该泄漏在每次使用 plasma-desktop 右键点击文件夹/文件时发生。\n- 对于 Plasma 6.8.3 点版本，修复了连接 DisplayLink 屏幕时 KWin 崩溃的问题。\n\n关于 11 月初这些 KDE Plasma 变化的更多细节，可通过以下内容了解：\n\nKDE Linux 接近 Beta 里程碑，现默认搭载 NTSYNC\nKwi 正被开发为新的 KDE 终端模拟器，性能提升 3 倍至 35 倍\nKDE Plasma 6.9 引入一些新的性能优化\nKDE 修复了 15 年前关于复制文件到 USB 驱动器时通知不准确的 bug\nKDE Plasma 6.8.2 发布，带来数十项额外 bug 修复\n引入 KWin-Type 以解决 KDE Wayland 在自动输入文本方面的可用性差距\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nSynaptics 似乎利用法律威胁阻止开源 DisplayLink 驱动\nLinux 7.4 合并窗口轻松成为内核历史上最大的\nOpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞\nEnlightenment 0.28 发布，带来许多改进\nDebian 的 APT 受到中间人攻击影响，可以 root 权限执行任意代码\nLinux 内核准备移除最后剩余的 MMX 优化代码\nLinux 7.4 用于减少 AI 噪声的新功能因“疯狂野兽”已被回退\nFedora 45 发布，带来许多前沿 Linux 创新\n\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "ba76a0fc984d7f9f0b4470123c9797d0": {
+    "id": "ba76a0fc984d7f9f0b4470123c9797d0",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/system76-teases-cosmic-theme-constellations-for-its-cosmic-desktop",
+    "title_en": "System76 Teases COSMIC Theme Constellations for Its COSMIC Desktop",
+    "summary_en": "System76 teases COSMIC Theme Constellations for their Rust-based COSMIC desktop environment bundled with wallpaper, colors, icons, and fonts.\nThe post System76 Teases COSMIC Theme Constellations for Its COSMIC Desktop appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Sat, 07 Nov 2026 06:03:53 +0000",
+    "title_zh": "System76 为其 COSMIC 桌面预告 COSMIC 主题星座",
+    "summary_zh": "System76 为其基于 Rust 的 COSMIC 桌面环境预告了 COSMIC 主题星座，每个主题包含壁纸、配色、图标和字体。",
+    "fulltext_zh": "System76 为其基于 Rust 的 COSMIC 桌面环境预告了 COSMIC 主题星座，每个主题包含壁纸、配色、图标和字体。"
   }
 }

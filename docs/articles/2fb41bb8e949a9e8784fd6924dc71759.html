@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automake 1.20 带来新功能，希望重建 GNU 作为领先构建系统的地位 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月08日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Automake 1.20 带来新功能，希望重建 GNU 作为领先构建系统的地位</h1>
+
+  <div class="article-summary">GNU Automake 1.20 发布，新增 --enable-jobserver 选项让编译器和链接器继承 GNU make 的 jobserver，新增 delete-on-error 选项和 print-distfiles 目标，distcheck 默认不再需要 TeX，并修复多项长期存在的缺陷。许可证从 GPLv2+ 升级为 GPLv3+。维护者 Kamila Szewczyk 表示希望将 Automake 重新打造为新软件项目的首选构建系统。</div>
+
+  <div class="article-body"><p>Automake 1.20 带来新功能，希望重建 GNU 作为领先构建系统的地位</p><p>发布于 2026 年 11 月 7 日美国东部时间上午 10:22。</p><p>GNU Automake 1.20 今日发布，带来新选项并改用 GPLv3+ 许可证。</p><p>在此版本之前，Automake 一直采用 GPLv2 许可证。现在 Automake 采用 GPLv3 或更高版本（GPLv3）。这与 Autoconf 保持一致，也符合自由软件基金会推荐使用 GPLv3+ 许可证的建议。</p><p>新选项用于让编译器和链接器继承 GNU make 的管道作业服务器，例如 GCC 的 -flto=jobserver 模式用于链接时优化。</p><p>Automake 1.20 还新增了“delete-on-error”选项。使用该选项会在生成的 Makefile.in 文件中发出一个特殊目标，指示 GNU Make 在其配方失败时删除该目标。</p><p>Automake 还新增了一个目标，用于列出相关文件。</p><p>GNU Automake 1.20 还附带各种缺陷修复。</p><p>Kamila Szewczyk 在 GNU Automake 1.20 发布公告中表示，希望将 GNU 构建系统重新确立为新软件项目的“首选构建系统”。考虑到如今 CMake 和 Meson 的采用速度，这将是一个艰巨的目标。</p><p>“新功能包括 `--enable-jobserver'，让编译器和链接器可以访问 GNU make 的 jobserver，delete-on-error 选项，以及 print-distfiles 目标。distcheck 默认不再需要 TeX。此版本还修复了一些长期存在的缺陷和限制，涉及依赖跟踪、VPATH 构建中的 lex/yacc 输出、Vala 构建、分发压缩和卸载检查。此外，GNU automake 已从 GNU GPLv2（或更高版本）许可证升级到 GNU GPL v3（或更高版本）许可证。</p><p>我对整个 GNU 构建系统（`autotools'）有大量计划。我打算继续解决旧问题和限制，并在 GNU Automake 中添加新功能，慢慢将其拖向未来。我的最终目标是再次将其确立为新软件项目的首选构建系统，同时继续简化现有用户的维护和可移植性。希望即将发布的版本能让我们越来越接近这一目标。”</p><p>今日 Automake 1.20 版本的下载和更多详细信息可通过以下链接找到。</p><p>GCC 17 编译器合并对 AVX10V1AUX 的支持</p><p>GNU Linux-libre 7.3-gnu 移除更多固件 blob</p><p>英特尔编译器工程师分享 APX 的最新项目进展</p><p>GDB 18.1 调试器带来更好的 Windows 支持</p><p>AMD 发布针对 AVX10V1AUX ISA 支持的 GCC 编译器补丁</p><p>GNU Wget 2.3 发布，带来 --progress=dot 和 OS/2 改进</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。</p><p>Synaptics 似乎利用法律威胁阻止开源 DisplayLink 驱动</p><p>Linux 7.4 合并窗口轻松成为内核历史上最大的</p><p>OpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞</p><p>Enlightenment 0.28 发布，带来许多改进</p><p>Debian 的 APT 受到中间人攻击影响，可以 root 身份执行任意代码</p><p>Linux 内核准备移除最后一批 MMX 优化代码</p><p>Linux 7.4 用于减少 AI 噪音的新功能因“疯狂野兽”已被回退</p><p>Fedora 45 发布，带来许多前沿 Linux 创新</p><p>同时享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/GNU-Automake-1.20" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
