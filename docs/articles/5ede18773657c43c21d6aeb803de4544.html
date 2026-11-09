@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linux 7.4-rc2 发布：FAT32 优化与 AMDGPU HDMI 2.2 改进 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月09日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Linux 7.4-rc2 发布：FAT32 优化与 AMDGPU HDMI 2.2 改进</h1>
+
+  <div class="article-summary">Linux 7.4-rc2 已发布，这是继史上最大 rc1 之后的又一个大型候选版本。主要更新包括：AMD PerfOpt 功能调整以提升 Radeon 核显性能、修复部分内核配置下 BHI 缓解措施选择错误、FAT32 尤其同步挂载场景的大幅优化、AMDGPU 驱动对 HDMI 2.2 FRL 的修复，以及核心内存管理代码中多个长期存在问题的修复。Linus 表示大量补丁由 AI 辅助生成，BPF 子系统的修复速度已开始超过新报告速度。</div>
+
+  <div class="article-body"><p>Linux 7.4-rc2 发布：FAT32 优化与 AMDGPU HDMI 2.2 改进</p><p>Linus Torvalds 刚刚发布了第二个每周候选版本，其中包含一些值得注意的错误修复和其他在合并窗口之后提交的变更。在 AI 时代，这又是一个大版本。</p><p>本周带来了一些调整：AMD PerfOpt 功能用于帮助提升 Radeon 核显性能；修复了某些内核配置下 BHI 缓解措施选择错误的问题；FAT32 获得重大改进，尤其是在同步挂载场景下；AMDGPU 驱动修复了 HDMI 2.2 FRL 相关问题；核心内存管理代码中多个“长期存在的顽固错误”得到修复。此外还有常规的错误修复，以及似乎永无止境的 AI/LLM 生成的补丁和错误报告流。</p><p>Linux 创始人 Linus Torvalds 在公告中写道：</p><p>“好吧，一个大的 -rc2 伴随着史上最大的 -rc1。但 diffstat 看起来相当温和，主要由一些自动化的 coccinelle 更新主导——这些更新我在合并窗口期间收到，但留到了 rc2，因为我在路上时不想处理它们（说实话，之后也很难找到处理它们的动力）。</p><p>话虽如此，脚本化更新大多只是一两行的改动，它们[确实]非常直接，所以它们‘主导’ diffstat 只是因为它们非常分散，确实增加了大量噪音。</p><p>当从 diffstat 中屏蔽掉这些噪音后，它的形状就变了——不再分散在数千个文件中。但看起来并不异常：三分之一是驱动（GPU、网络和声音占大部分，但各种都有一些），另外三分之一是网络和 BPF，最后三分之一是‘其余部分’（主要是文件系统、mm、架构更新）。</p><p>是的，其中大部分是由各种 AI 修复驱动的。我想我不再重复这一点了，我们可以把它当作理所当然。但这一次 Alexei 声称，至少在 BPF 方面，修复的速度现在已经超过新报告的速度，如果属实那真是太好了。</p><p>我认为其他大多数领域还没有达到那个程度，但这至少是一个迹象，表明我们_可能_开始看到潮水正在转向。</p><p>不要屏息以待，但也许可以交叉手指祈祷我们在不太遥远的未来能够达到那里。</p><p>与此同时，请继续测试。”</p><p>Linux 7.4 功能概览：查看这个目标在 12 月底左右稳定发布的内核的所有变更。</p><p>Linux 7.5 将提供更多 AMD Ryzen AI NPU AIE4 支持</p><p>Linux 修复 BHI 漏洞的错误缓解措施选择</p><p>Kmorph 旨在提供无需重启的 Linux 内核崩溃恢复</p><p>Linux x86 32 位补丁在最近移除老式 CPU 后清理旧内核代码</p><p>FEX 等待 Linux 内核在 ARM 寄存器使用上与 Windows 和 macOS 保持一致</p><p>Linux 开发者希望放弃 RT_GROUP_SCHED，因为它“损坏到无法修复”</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。</p><p>Synaptics 似乎利用法律威胁阻止开源 DisplayLink 驱动</p><p>Linux 7.4 合并窗口轻松成为内核史上最大</p><p>OpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞</p><p>Enlightenment 0.28 发布，带来许多改进</p><p>Debian 的 APT 受到中间人攻击影响，可以 root 身份执行任意代码</p><p>Linux 内核准备移除最后剩余的 MMX 优化代码</p><p>Linux 7.4 用于减少 AI 噪音的新功能因“疯狂野兽”已被回退</p><p>Fedora 45 发布，带来许多前沿 Linux 创新</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.4-rc2-Released" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

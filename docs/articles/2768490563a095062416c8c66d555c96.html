@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>发行版发布：Slax 2026.11 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月09日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">DistroWatch</span>
+  </div>
+
+  <h1>发行版发布：Slax 2026.11</h1>
+
+  <div class="article-summary">Slax 2026.11 发布，这是基于 Debian 的极简 live Linux 发行版的重要更新，采用定制 Fluxbox 窗口管理器。新版本带来全新的桌面外观和内置 AI 助手，改进了窗口切换、任务栏预览、工作区视图和桌面文件管理等功能，并统一了应用外观。</div>
+
+  <div class="article-body"><p>发行版发布：Slax 2026.11（DistroWatch.com 新闻）</p><p>DistroWatch.com 由以下赞助商支持</p><p>新闻/观点/评论 ▼</p><p>发布公告</p><p>DW 周刊 / 评论存档</p><p>访客评分与评论</p><p>按评分排列的项目排名</p><p>播客、新闻通讯与评论</p><p>比较各发行版的软件包</p><p>显示所有发行版的软件包版本</p><p>搜索发行版 - 高级</p><p>已停止的发行版</p><p>教程与学习 ▼</p><p>搜索文章</p><p>问答专栏</p><p>技巧与提示专栏</p><p>误区与误解专栏</p><p>简化手册页</p><p>其他操作系统</p><p>发行版验证密钥</p><p>可视化发行版家族树</p><p>常见问题</p><p>我们的捐赠计划</p><p>小型企业电话系统</p><p>多个发行版警告 OpenSSH 漏洞</p><p>GhostBSD 解决仓库错误</p><p>aerynOS 测试新系统安装器</p><p>Rocky Linux 创始人指导 LLM 创建新内核</p><p>Mint 正在恢复休眠模式</p><p>Ubuntu Core Desktop 将恢复开发</p><p>NetBSD 在基础系统中采用新文本编辑器</p><p>Redox 引入性能改进、Clang 编译</p><p>Sparky 项目推出 SparkyOS</p><p>使用 Sylve 安装 FreeBSD</p><p>易于使用的 PBX - 托管或自管理</p><p>Linux 电话系统</p><p>免费实时聊天解决方案</p><p>集成呼叫中心软件</p><p>联络中心软件</p><p>远程工作应用：iOS 或 Android</p><p>免费视频会议</p><p>3CX 的 VoIP / PBX 指南</p><p>不要措手不及，制定灾难恢复计划！</p><p>必要的实时聊天报告和统计</p><p>导致呼叫欺诈的常见错误</p><p>WhatsApp Business 与 3CX WhatsApp API 集成</p><p>3CX StartUP 的 5 个杀手级功能</p><p>别做“那种”人 第1卷：保管复杂凭据</p><p>别做“那种”人 第2卷：呼叫欺诈</p><p>别做“那种”人 第3卷：四大安全提示</p><p>别做“那种”人 第4卷：监控你的实例</p><p>Asahi 进展报告：Linux 7.3</p><p>Red Hat 周五五条 - 2026年11月6日</p><p>Ubuntu 每周通讯 968</p><p>aerynOS 2026年11月项目更新</p><p>Tumbleweed 月度更新 - 2026年10月</p><p>Full Circle 每周新闻</p><p>最新新闻与更新</p><p>新闻筛选选项</p><p>发行版发布：Slax 2026.11</p><p>Tomáš Matějíček 宣布发布 2026.11，这是该项目基于 Debian 的极简 live Linux 发行版的一次重大更新，采用定制的 Fluxbox 窗口管理器。这个新版本带来了焕然一新的桌面外观和内置 AI 助手：“Slax 2026.11 发布了。有一段时间我真的以为不会再有 Slax 新版本了。然而，我们又来了。我想要一个可以带到任何地方并真正享受使用的 Linux 桌面。这就是我想做的那个。桌面经过了彻底重建。按住 Alt 并轻按 Tab，你就能看到正在切换的窗口。将鼠标悬停在任务栏图标上，你会看到该应用所有窗口的实时预览。点击你想要的那个。Alt+F3 会同时显示所有四个工作区，这样你就能找到那个你确信就留在这里的窗口。你可以将文件和文件夹放在桌面上，从任务栏切换键盘布局，并通过在扬声器图标上滚动来调节音量。它终于看起来像一个统一的桌面了。Linux 应用常常看起来像是来自不同的年代，有时甚至就在同一个下午。在 Slax 中，应用共享一致的外观。打开文件管理器、一个较旧的工具和一个较新的应用并排放在一起。它们看起来像是属于同一台电脑。我对此感到无比高兴。”</p><p>查看所有详细信息和截图。下载：slax-2026.11-64bit.iso</p><p>近期相关新闻与发布</p><p>发行版发布：Slax 2026.11</p><p>发行版发布：Slax 15.0.2、12.1.0</p><p>发行版发布：Slax 15.0.1、11.6.0</p><p>发行版发布：Slax 11.2.0</p><p>开发版发布：Slax 11.2.0 RC1</p><p>发行版发布：Slax 9.6.0</p><p>Slax 是一个基于 Slackware Linux 的极简桌面 live CD。它使用 Fluxbox 窗口管理器启动到一个简单的桌面，提供少量应用程序，包括 Chromium 网页浏览器、文本编辑器和计算器。在 9.x 版本之前，Slax 是一个基于 Slackware 的 live CD，采用 KDE 桌面和广泛的应用程序集合。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://distrowatch.com/13033" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>云芯正在努力将其高性能Linux网络驱动上游化 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月09日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>云芯正在努力将其高性能Linux网络驱动上游化</h1>
+
+  <div class="article-summary">中国半导体初创公司云芯（Yunsilicon）正将其高性能网络适配器和DPU驱动提交至Linux内核邮件列表，推动主线支持。该驱动以GPLv2许可，包含PCI核心、以太网和RDMA三个驱动，共享资源集，自2021年开始开发，上月首次公开补丁。</div>
+
+  <div class="article-body"><p>云芯正在努力将其高性能Linux网络驱动上游化</p><p>云芯是一家成立于2021年的中国半导体初创公司，致力于生产高性能网络适配器和DPU。过去一个月里，他们首次尝试向Linux内核邮件列表提交补丁，并努力让其网络硬件获得主线Linux内核的支持。</p><p>上个月，他们发布了其云芯驱动的初始版本，而本周他们发布了该开源驱动更为整洁的版本，以及一份正式的补丁系列说明信。最终是三个补丁，同时提供以太网和RDMA支持。本周的说明信写道：</p><p>“这是云芯提交的新提案，旨在将我们的融合网络适配器驱动上游化。该硬件是一个双功能PCIe设备（PCI厂商ID 0x1f67），同时支持以太网和RDMA操作。</p><p>该系列增加了三个驱动，共享xsc前缀。一个共享的PCI核心驱动绑定到物理功能，启动命令队列、事件队列和中断处理，并为每个功能发布一个辅助设备。以太网和RDMA驱动绑定到该辅助设备，而不是直接驱动PCI功能，因此两种角色共享单一的探测和资源集。</p><p>1. xsc_pci——PCI核心驱动（CONFIG_YUNSILICON_XSC_PCI）。拥有PCI功能、命令队列、事件队列、中断向量、寄存器访问层以及CQ/QP/SRQ资源池。补丁02-06。</p><p>2. xsc_eth——以太网驱动（CONFIG_YUNSILICON_XSC_ETH）。注册netdev，使用NAPI和page_pool实现TX/RX数据包路径、RSS、校验和卸载及统计。补丁07-09，基于核心驱动。</p><p>3. xsc_ib——RDMA驱动（CONFIG_INFINIBAND_XSC）。注册ib_device并提供PD/MR、CQ/SRQ/AH和QP动词，包括发送/接收数据路径，以及RDMA计数器和sysfs属性。补丁10-15，基于核心驱动和以太网驱动（netdev提供端口状态和GID）。”</p><p>该驱动采用GPLv2许可，从补丁来看，自2021年以来一直在开发，但直到上个月这些补丁才出现在LKML上，以尝试进入主线Linux内核。</p><p>遗憾的是，云芯网站似乎访问受限，因此我无法获取其网络设备的其他详细信息，但看到更多半导体初创公司努力将开源驱动支持纳入主线Linux内核，仍然非常令人欣慰。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Yunsilicon-Linux-Network-Driver" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

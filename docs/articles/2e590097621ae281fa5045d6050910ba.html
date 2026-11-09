@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linux 7.5 将为 AMD Ryzen AI NPU 提供更多 AIE4 支持 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月09日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Linux 7.5 将为 AMD Ryzen AI NPU 提供更多 AIE4 支持</h1>
+
+  <div class="article-summary">Linux 7.5 内核将迎来更多 AMD Ryzen AI NPU 的 AIE4 硬件支持，包括新增 6.0 固件、NPU3 经典设备支持、电源模式管理、挂起/恢复、时钟与 DPM 频率查询、AIE4 命令提交等。同时，本周 drm-misc-next 拉取请求还加入了 Rockchip RK3568 显示驱动支持及多款新显示面板。AIE4 预计对应下一代 Zen 6 客户端平台的 Ryzen AI NPU。</div>
+
+  <div class="article-body"><p>Linux 7.5 将为 AMD Ryzen AI NPU 提供更多 AIE4 支持</p><p>2026 年 11 月 8 日 07:22 AM EST 发布。</p><p>甚至在 Linux v7.4 合并窗口结束之前，就已经有两个针对 Linux 7.5 的 drm-misc-next 材料拉取请求。本周又出现了第三个 drm-misc-next 拉取请求，包含更多针对下一个内核版本的功能补丁。</p><p>本周的 drm-misc-next 拉取为 Rockchip DRM 显示驱动带来了 Rockchip RK3568 支持。RK3568 是一款四核 Arm Cortex-A55 SoC，配备 Mali-G52 2EE GPU，以及一个小型 NPU 和 VPU。RK3568 见于一些工业/嵌入式 PC、部分 NAS 设备和单板计算机中。很高兴看到 Rockchip SoC 的主线内核支持持续改进。</p><p>另外，主线内核现在还支持多款新的显示面板，包括 DCLTek 300249 5.5 英寸、DLCTek 300248 10.5 英寸、Novetake NT37705、xiaomi-lavender、Tianma TL063FVMC43-02、Tianma TL063FVMCA01-00、Tianma TL060FVXS16-00、TXD TXDI600YANPA-43V3、AUO B101UAN01、Truly NT36850 WQHD、Novatek NT36850、Samsung AMS644VK04、Hitachi TX10D07VM0BAA、LG LH400WV3-SD04 和 Mingjun MJ070BI30IA2。</p><p>与此同时，用于 Ryzen AI NPU 的 AMDXDNA 加速器驱动新增了对新 6.0 固件版本的支持，增加了 NPU3 经典设备支持、新 AIE4 硬件的电源模式获取/设置处理，以及其他启用工作，如挂起和恢复、时钟/DPM 频率/资源信息查询、AIE4 命令提交等重要新增功能。在今年以及过去几个内核版本中，围绕 AIE4 硬件有大量启用工作，AIE4 推测是下一代 Ryzen AI NPU，将出现在明年推出的基于 Zen 6 的客户端平台中。希望到 Linux 7.5 时，AIE4 硬件支持能达到良好状态。</p><p>本周 drm-misc-next 功能补丁的完整列表可通过以下链接查看：</p><p>Linux 7.4-rc2 发布，包含 FAT32 优化、AMDGPU HDMI 2.2 改进</p><p>Linux 修复 BHI 漏洞的错误缓解措施选择</p><p>Kmorph 旨在提供无需重启的 Linux 内核崩溃恢复</p><p>Linux x86 32 位补丁在近期移除老式 CPU 后清理旧内核代码</p><p>FEX 等待 Linux 内核在 ARM 寄存器使用上与 Windows 和 macOS 保持一致</p><p>Linux 开发者希望放弃 RT_GROUP_SCHED，因其“已损坏到无法修复”</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Synaptics 似乎利用法律威胁阻止开源 DisplayLink 驱动</p><p>Linux 7.4 合并窗口轻松成为内核历史上最大的合并窗口</p><p>OpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞</p><p>Enlightenment 0.28 发布，带来许多改进</p><p>Debian 的 APT 受到中间人攻击影响，可以 root 权限执行任意代码</p><p>Linux 内核准备移除最后一批 MMX 优化代码</p><p>Linux 7.4 用于降低 AI 噪声的新功能因“疯狂野兽”已被回退</p><p>Fedora 45 发布，带来许多前沿 Linux 创新</p><p>同时提供无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.5-RK3568-AMD-AIE4" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

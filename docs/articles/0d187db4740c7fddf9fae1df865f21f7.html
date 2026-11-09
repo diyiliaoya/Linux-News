@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>讨厌Chromium？好吧，现在有一个基于它的Linux桌面了 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月09日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">桌面环境</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>讨厌Chromium？好吧，现在有一个基于它的Linux桌面了</h1>
+
+  <div class="article-summary">Domicile是一个基于Rust的新合成器，使用修补过的Chromium构建将整个桌面绘制为网页。应用仍原生运行，每个Wayland窗口直接进入Chromium渲染系统并作为元素显示在页面上。它并非开箱即用的桌面，需要用户自己编写shell网页。项目采用AI辅助开发，仅支持Wayland应用，不包含Xwayland。</div>
+
+  <div class="article-body"><p>讨厌Chromium？好吧，现在有一个基于它的Linux桌面了</p><p>在Linux圈子里大声说出这句话，你很快就会看到一群暴民的样子。许多人不喜欢网络如此依赖谷歌领导的一个引擎，他们更愿意让它远离自己的系统。</p><p>现在我们有了Domicile，一个基于Rust的新合成器，它使用修补过的Chromium构建将整个桌面绘制为网页。应用仍然原生运行，每个Wayland窗口直接进入Chromium的渲染系统，并作为元素显示在那个页面中。窗口和网站可以并排坐在一起，并以相同的方式排列。</p><p>Domicile主页上展示的一些模型图。</p><p>它不是像GNOME或KDE Plasma那样的即插即用桌面。它将栏、窗口布局和外观留给shell，而那个shell本身是一个你必须自己编写的网页。原生应用窗口和网站都位于那个页面上，因为CSS决定每个元素的位置，像平铺或浮动这样的布局只需要几行样式。</p><p>你甚至可以在不关闭任何窗口的情况下更换shell，因为加载新shell只会重置shell自己页面中持有的状态。单个页面可以跨越所有显示器，shell由任何人都可以在npm上发布的包构建，无论是整个桌面、一个栏还是一个启动器。</p><p>合成器仍然处理锁屏、托盘图标、通知和屏幕共享，而shell决定它们的外观。内置浏览器运行Manifest V3 Chrome扩展，但其中一些扩展的行为与在Chrome中不同。</p><p>应用需要Wayland支持才能运行。Electron、SDL和Qt应用以Wayland模式启动，但仅支持X11的应用将无法运行。Xwayland，这个让X11应用在Wayland桌面上工作的兼容层，是Domicile不包含的。</p><p>该项目在MIT许可证下提供，它修改的Chromium文件遵循Chromium的许可证。还有一件事，这对你们中的一些人来说可能是个 dealbreaker：该项目是AI辅助的。</p><p>Manganese，那个元素？</p><p>Manganese是Domicile附带的现成shell，它开箱即用，作为一个完整的平铺桌面。它的键绑定遵循i3键，你有十个工作区以及标签、堆栈、分割、浮动窗口和暂存器。</p><p>网站也作为窗口打开，与原生应用并排坐在相同的布局中，而来自Chrome Web Store的扩展显示在顶部栏中作为按钮。</p><p>它附带一个设置应用、剪贴板历史、启动器、截图工具、通知和锁屏。由于它的每个部分都是自己的包，你可以在其余部分保持不变的情况下向栏中添加新项目或替换启动器。</p><p>或者在任何发行版上使用Nix，你可以使用该项目的flake。</p><p>而且该项目没有ARM构建。</p><p>一个单体包包含Manganese、登录会话、domicile命令以及shell构建所针对的React包。安装后，你将配置文件指向你想要的shell，然后注销并在登录屏幕上选择“Domicile”。</p><p>喜欢这个更新？支持独立的Linux新闻报道</p><p>It's FOSS在过去14年里一直在帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>跳过Google结果中的AI垃圾和SEO垃圾</p><p>告诉Google你更喜欢It's FOSS，当你搜索时，它会更频繁地显示我们由经验丰富的Linux用户创建的Linux新闻和教程。只需点击一下。</p><p>设为首选来源</p><p>🐧 今天玩Tuxdle——每日Linux单词谜题 →</p><p>在收件箱中获取FOSS Weekly</p><p>一份健康的Linux新闻通讯，包含最新版本、相关新闻、提示和教程、琐事和模因、测验和桌面Linux用户的优惠。免费，每周。</p><p>一个对开源软件、定制PC构建、赛车运动和探索技术充满热情的极客。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/domicile-desktop-overview/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

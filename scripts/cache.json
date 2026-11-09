@@ -20007,5 +20007,159 @@
     "title_zh": "System76 为其 COSMIC 桌面预告 COSMIC 主题星座",
     "summary_zh": "System76 为其基于 Rust 的 COSMIC 桌面环境预告了 COSMIC 主题星座，每个主题包含壁纸、配色、图标和字体。",
     "fulltext_zh": "System76 为其基于 Rust 的 COSMIC 桌面环境预告了 COSMIC 主题星座，每个主题包含壁纸、配色、图标和字体。"
+  },
+  "f5486cf1dc2ffda04005773027924c3e": {
+    "id": "f5486cf1dc2ffda04005773027924c3e",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/11/gnome-extension-manager-0-7-released",
+    "title_en": "Extension Manager 0.7 released with new (and fixed) features",
+    "summary_en": "A new version of Extension Manager, the desktop app that makes it easier to browse, install and manage GNOME Shell extension without a web browser, has been released. Extension Manager 0.7.0 includes a number of welcome improvements, new features and restores a few nifty bits that had stopped working in earlier versions. With the new update, you can now find and open installed extension preferences from the Activities overview as the app now bundles a GNOME Search provider. Enable that (after in",
+    "pub_date": "Sun, 08 Nov 2026 18:45:20 +0000",
+    "title_zh": "Extension Manager 0.7 发布，带来新功能与修复",
+    "summary_zh": "Extension Manager 0.7 版本发布，新增 GNOME 搜索提供程序支持，可直接从概览打开扩展首选项；扩展详情页展示更多信息，支持动画 GIF 截图；已安装扩展列表新增批量卸载模式，并恢复了对不支持扩展的过滤功能。该应用免费开源，可通过 Flathub 安装。",
+    "fulltext_zh": "Extension Manager 0.7 发布，带来新功能与修复 - OMG! Ubuntu\n\n这款桌面应用让用户无需浏览器即可更轻松地浏览、安装和管理 GNOME Shell 扩展，现已发布。\n\n该版本包含多项受欢迎的改进、新功能，并恢复了一些在早期版本中失效的实用功能。\n\n通过新更新，你现在可以从概览中查找并打开已安装扩展的首选项，因为该应用现在捆绑了一个 GNOME 搜索提供程序。安装此版本后，如果你会用到该功能，可在设置中启用它。\n\n从概览跳转到扩展首选项\n\n扩展详情页显示更多细节，包括以前需要访问网页才能看到的信息，如版本和 GNOME 支持情况。已安装的扩展会显示卸载按钮和安装路径位置，并附带在文件管理器中打开的按钮。\n\n一些扩展使用动画 GIF 来展示其主要功能或特性，该应用利用 Glycin 来渲染动画截图。\n\n应用列表中的更多信息——包括动画 GIF\n\n在已安装扩展列表中，选择模式允许你一次性批量卸载扩展；如果在启用扩展后发生错误，新对话框会显示错误详情（以前显示在下拉列表中）。\n\n该应用再次默认仅显示支持你当前 GNOME 版本的扩展搜索结果。如果需要，可以选择显示所有（即不受支持的）结果。\n\n在 v0.7.0 中，过滤不受支持扩展的功能已恢复\n\n该应用还计划允许查看扩展作者页面，页面将列出该作者的其他扩展。支持该功能所需的部分代码已包含在此版本中，但实际功能本身被暂缓推出。\n\n该应用是专为 GNOME 设计的免费开源软件。你可以从 Flathub 安装最新版本，它依赖 GNOME 51 运行时（因此如果你没有其他应用使用该运行时，它也会被一并拉取）。\n\nUbuntu 仓库中提供的是较旧版本的 Extension Manager，但要享受此处提到的更改，你需要从 Flathub 安装，或等待 Ubuntu 27.04 发布。"
+  },
+  "d479e3f59ce9b7689c58d32a6efb3c6e": {
+    "id": "d479e3f59ce9b7689c58d32a6efb3c6e",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/11/calibre-update-new-sources",
+    "title_en": "Calibre adds new sources for finding free books & journals",
+    "summary_en": "Another week, another set of features added to Calibre, the open-source ebook reader, converter and manager. Calibre 9.18 adds more accessibility tools to its editor, with Tools > Accessibility now letting you set the language for books and HTML files. Image descriptions, including those of inline SVGs, can be edited and EPUB Accessibility metadata modified. The book check feature now catches common accessibility problems, including images that lack descriptions and skipped heading levels, and f",
+    "pub_date": "Sun, 08 Nov 2026 01:12:00 +0000",
+    "title_zh": "Calibre 新增免费书籍与期刊查找来源",
+    "summary_zh": "Calibre 9.18 版本更新，为编辑器增加了更多无障碍工具，包括设置书籍语言、编辑图片描述和修改 EPUB 无障碍元数据。书籍检查功能可发现并自动修复常见无障碍问题。内容源新增三个免费书籍与期刊查找渠道：公共领域书籍、开放获取图书目录和开放获取期刊目录。内容服务器支持 KOReader 同步阅读位置、提供 OPDS 2.0 订阅源、流式传输 CBZ 漫画及全文搜索。此外还改进了电子书查看器、PDF 处理、新闻抓取等多项功能。",
+    "fulltext_zh": "Calibre 新增免费书籍与期刊查找来源 - OMG! Ubuntu\n\n又一周过去，开源电子书阅读器、转换器和管理软件 Calibre 又增添了一系列新功能。\n\n9.18 版本为编辑器增加了更多无障碍工具，通过“工具 > 无障碍”菜单，现在可以为书籍和 HTML 文件设置语言。图片描述（包括内联 SVG 的描述）可以编辑，EPUB 无障碍元数据也可修改。\n\n书籍检查功能现在能捕获常见的无障碍问题，包括缺少描述的图片和跳过的标题层级，并标记出具有 aria-label 但无匹配 ARIA 角色的元素。有用的是，它可以自动修复发现的许多问题。\n\nCalibre 现在还新增了三个内容查找来源。\n\n提供公共领域书籍，并且为电子书阅读器改进了格式（在 Gutenberg 项目等地方找到的一些旧书排版可能很差）。\n\n你还可以浏览开放获取图书目录（Directory of Open Access Books）的年度内容，该目录提供可免费阅读的学术书籍，以及开放获取期刊目录（Directory of Open Access Journals），该目录展示开放获取的学术期刊。\n\n内容服务器更新\n\n如果你使用 KOReader（一款功能更强大的开源电子书查看器应用，可添加到包括 Amazon Kindle 在内的许多电子书设备上），现在可以通过 Calibre 内容服务器（在网页浏览器中访问）同步阅读位置。\n\n首先在 KOReader 中将自定义同步服务器设置为 http://server:port/kosync，然后使用你的内容服务器用户账户详细信息登录。\n\n此更新还为内容服务器增加了其他改进。它现在可以提供 OPDS 2.0 订阅源、流式传输 CBZ 漫画（具有正确的漫画阅读方向），并允许你使用 Calibre 的全文索引搜索书籍内容。\n\nCalibre 9.18 的其他变化：\n\n电子书查看器现在允许将搜索限制在当前章节\n\n新的搜索日期过滤器，包括\n\n中断的语音（朗读）模型下载可以恢复\n\n新的 calibredb 命令用于管理笔记、注释等\n\n改进 PDF 中的页码检测和大图像处理\n\nTXT 和 RTF 输出与输入修复\n\n读取某些损坏的 EPUB 文件时的错误已解决\n\n转换非常小的 PDF 文件不再导致崩溃\n\n按书中位置对合并的高亮进行排序\n\n使用 Gemini 生成“世界”的 AI 游戏修复\n\n此外，还有常见的调整以更好地抓取新闻来源。\n\nv9.18 更新修复了从英国报纸网站获取内容时的异常。它还改进了对来自书呆子辩论巢穴的内容的处理。\n\n从官方网站获取或从 GitHub 获取源代码。\n\n通过命令行脚本安装和更新。它会下载二进制文件并将其移动到系统位置，然后生成一个快捷方式，使你能够从应用启动器、上下文菜单等找到并打开它。\n\n但是，由于这两个构建版本均未经验证或非官方，使用它们时遇到的任何错误或问题应报告给软件包维护者而非上游。"
+  },
+  "ff1f42a2af2f8b18b96b041c33c661c2": {
+    "id": "ff1f42a2af2f8b18b96b041c33c661c2",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/asahi-linux-drops-mit-for-gpl/",
+    "title_en": "Asahi Linux Drops MIT and Goes Full GPL After AI Tools Were Used to Steal Unreleased Code",
+    "summary_en": "Every Asahi Linux repository is moving to GPL v2 or later, after bad actors lifted unreleased code and ran it through LLMs to hide where it came from.",
+    "pub_date": "Sun, 08 Nov 2026 12:56:22 GMT",
+    "title_zh": "Asahi Linux 放弃 MIT 许可证，在 AI 工具被用于窃取未发布代码后全面转向 GPL",
+    "summary_zh": "Asahi Linux 宣布将所有代码仓库从 MIT 许可证迁移至 GPL v2 或更高版本，原因是有人从开发者个人分支中窃取未发布代码，并通过 AI 工具改写以掩盖来源，甚至试图取代项目并商业化。此举效仿 WINE 当年的许可证变更，旨在以强 copyleft 防止代码洗白和恶意分叉。",
+    "fulltext_zh": "Asahi Linux 放弃 MIT 许可证，在 AI 工具被用于窃取未发布代码后全面转向 GPL\n\nAsahi Linux 的所有代码仓库都将迁移至 GPL v2 或更高版本，此前有不法分子窃取未发布代码并通过大语言模型处理以掩盖其来源。\n\n正是 Asahi Linux 让你今天能在 Apple Silicon Mac 上运行 Linux。多年来，该项目将其大部分自有代码置于 MIT 许可证下，以便任何人（包括 BSD 系统）都能按需复用。\n\n这种情况正在改变，因为 Asahi Linux 已厌倦了代码洗白。他们宣布 Asahi 将所有仓库迁移至 GNU 通用公共许可证第 2 版或更高版本。今后，所有 Asahi Linux 代码都将仅采用强 copyleft 许可证。\n\n这是因为有人直接从开发者的个人分支中取走开发中的代码，不加署名地发布，或用 AI 改写以掩盖其来源，目的是“取代该项目并 aggressively 将 Apple Silicon 上的 Linux 商业化”。\n\n什么是代码洗白？\n\n代码洗白（也称许可证洗白）是指取用他人代码并通过某种流程掩盖其来源，从而在不遵守原始许可证或不署名作者的情况下使用代码的行为。\n\n在 AI 出现之前，这通常意味着逐行手动重写代码、重命名变量等，并打乱函数顺序，直到代码不再像原版。\n\n当然，大语言模型让这件事变得容易得多、成本也低得多。\n\nMIT 许可证只要求你保留原始版权声明。它不要求你分享修改或保持版本开源。这正是它受欢迎的原因，也是它给 Asahi 带来问题的原因。\n\n以史为鉴\n\n这一举措是在 Asahi 团队“一段时间前”得知有多起试图利用其宽松许可证劫持其成果的行为之后做出的。\n\n在最极端的案例中，仍在开发中的功能代码甚至在公开发布之前就从开发者的个人分支中被取走。报告指出，MIT 许可证“明确允许这种行为，且没有任何条款防范恶意行为者”。\n\nAsahi 在报告中未点名任何人。报告也未说明现有贡献将如何重新许可，或是否所有过往贡献者都同意此举。\n\nAsahi 将其与二十年前 WINE 的处境相提并论。WINE 是让 Windows 应用在 Linux 上运行的兼容层，最初也采用 MIT 许可证。但在 90 年代末和 2000 年代初，一些公司取走代码，在其上构建专有分支并商业销售。因此，WINE 团队于 2002 年将许可证改为 LGPL，以阻止专有分支并推动公司向上游贡献。\n\n不吸取历史教训的人注定重蹈覆辙\n\nAsahi 近来颇为不满\n\nAsahi 未点名任何人，因此我们只能猜测此次许可证变更针对的是谁。\n\n近几个月来，至少有两个 Asahi 成果的公开分支，均与 AI 辅助开发有关。如果你还不知道，Asahi Linux 禁止 AI 生成的代码贡献，其 Vulkan 驱动 Borealis 也是如此。\n\n有一个分支是 Asahi 的 HoneyKrisp（Apple GPU 的 Vulkan 驱动）的分支。Aurora Silicon 向 Khronos 提交了注册自家 Vulkan 驱动 ID 的拉取请求（VK_DRIVER_ID_AURORA_BOREALIS），称该驱动可在 M1 到 M5 以及 A18 Pro 上运行，并将其保留在自己的 Mesa 分支中而非上游。\n\n另一个是基于 Fedora 的 Apple Silicon 发行版，因在 LLM 使用上的分歧而从 Asahi 分叉。\n\n公平地说，Gravity 是开源的，不销售任何东西，并公开说明其 AI 使用情况。它甚至表示计划在其驱动工作进入上游后停止该发行版。\n\n它并非进展报告所描述的那种恶意行为者。但它确实代表了 Asahi 一直反对的“拥抱 AI 的宽松分支”做法。\n\n需要澄清的是，Asahi 的进展报告并未……"
+  },
+  "0d187db4740c7fddf9fae1df865f21f7": {
+    "id": "0d187db4740c7fddf9fae1df865f21f7",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/domicile-desktop-overview/",
+    "title_en": "Hate Chromium? Well, There’s a Linux Desktop Based on it Now",
+    "summary_en": "Domicile lets you build your desktop in React and CSS, with Manganese being included as the ready-made tiling option.",
+    "pub_date": "Sun, 08 Nov 2026 04:26:51 GMT",
+    "title_zh": "讨厌Chromium？好吧，现在有一个基于它的Linux桌面了",
+    "summary_zh": "Domicile是一个基于Rust的新合成器，使用修补过的Chromium构建将整个桌面绘制为网页。应用仍原生运行，每个Wayland窗口直接进入Chromium渲染系统并作为元素显示在页面上。它并非开箱即用的桌面，需要用户自己编写shell网页。项目采用AI辅助开发，仅支持Wayland应用，不包含Xwayland。",
+    "fulltext_zh": "讨厌Chromium？好吧，现在有一个基于它的Linux桌面了\n\n在Linux圈子里大声说出这句话，你很快就会看到一群暴民的样子。许多人不喜欢网络如此依赖谷歌领导的一个引擎，他们更愿意让它远离自己的系统。\n\n现在我们有了Domicile，一个基于Rust的新合成器，它使用修补过的Chromium构建将整个桌面绘制为网页。应用仍然原生运行，每个Wayland窗口直接进入Chromium的渲染系统，并作为元素显示在那个页面中。窗口和网站可以并排坐在一起，并以相同的方式排列。\n\nDomicile主页上展示的一些模型图。\n\n它不是像GNOME或KDE Plasma那样的即插即用桌面。它将栏、窗口布局和外观留给shell，而那个shell本身是一个你必须自己编写的网页。原生应用窗口和网站都位于那个页面上，因为CSS决定每个元素的位置，像平铺或浮动这样的布局只需要几行样式。\n\n你甚至可以在不关闭任何窗口的情况下更换shell，因为加载新shell只会重置shell自己页面中持有的状态。单个页面可以跨越所有显示器，shell由任何人都可以在npm上发布的包构建，无论是整个桌面、一个栏还是一个启动器。\n\n合成器仍然处理锁屏、托盘图标、通知和屏幕共享，而shell决定它们的外观。内置浏览器运行Manifest V3 Chrome扩展，但其中一些扩展的行为与在Chrome中不同。\n\n应用需要Wayland支持才能运行。Electron、SDL和Qt应用以Wayland模式启动，但仅支持X11的应用将无法运行。Xwayland，这个让X11应用在Wayland桌面上工作的兼容层，是Domicile不包含的。\n\n该项目在MIT许可证下提供，它修改的Chromium文件遵循Chromium的许可证。还有一件事，这对你们中的一些人来说可能是个 dealbreaker：该项目是AI辅助的。\n\nManganese，那个元素？\n\nManganese是Domicile附带的现成shell，它开箱即用，作为一个完整的平铺桌面。它的键绑定遵循i3键，你有十个工作区以及标签、堆栈、分割、浮动窗口和暂存器。\n\n网站也作为窗口打开，与原生应用并排坐在相同的布局中，而来自Chrome Web Store的扩展显示在顶部栏中作为按钮。\n\n它附带一个设置应用、剪贴板历史、启动器、截图工具、通知和锁屏。由于它的每个部分都是自己的包，你可以在其余部分保持不变的情况下向栏中添加新项目或替换启动器。\n\n或者在任何发行版上使用Nix，你可以使用该项目的flake。\n\n而且该项目没有ARM构建。\n\n一个单体包包含Manganese、登录会话、domicile命令以及shell构建所针对的React包。安装后，你将配置文件指向你想要的shell，然后注销并在登录屏幕上选择“Domicile”。\n\n喜欢这个更新？支持独立的Linux新闻报道\n\nIt's FOSS在过去14年里一直在帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。\n\n一次付费，永久享受\n\n任意金额，无承诺\n\n跳过Google结果中的AI垃圾和SEO垃圾\n\n告诉Google你更喜欢It's FOSS，当你搜索时，它会更频繁地显示我们由经验丰富的Linux用户创建的Linux新闻和教程。只需点击一下。\n\n设为首选来源\n\n🐧 今天玩Tuxdle——每日Linux单词谜题 →\n\n在收件箱中获取FOSS Weekly\n\n一份健康的Linux新闻通讯，包含最新版本、相关新闻、提示和教程、琐事和模因、测验和桌面Linux用户的优惠。免费，每周。\n\n一个对开源软件、定制PC构建、赛车运动和探索技术充满热情的极客。"
+  },
+  "2768490563a095062416c8c66d555c96": {
+    "id": "2768490563a095062416c8c66d555c96",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/13033",
+    "title_en": "Distribution Releases: Slax 2026.11",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Tomáš Matějíček has announced the release of Slax 2026.11, a major new update of the project's minimalist, Debian-based live Linux distribution with a customised Fluxbox window manager. This new version comes with a refreshed desktop look and a built-int AI assistant: \"Slax 2026.11 is out. For a while....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Slax 2026.11",
+    "summary_zh": "Slax 2026.11 发布，这是基于 Debian 的极简 live Linux 发行版的重要更新，采用定制 Fluxbox 窗口管理器。新版本带来全新的桌面外观和内置 AI 助手，改进了窗口切换、任务栏预览、工作区视图和桌面文件管理等功能，并统一了应用外观。",
+    "fulltext_zh": "发行版发布：Slax 2026.11（DistroWatch.com 新闻）\n\nDistroWatch.com 由以下赞助商支持\n新闻/观点/评论 ▼\n发布公告\nDW 周刊 / 评论存档\n访客评分与评论\n按评分排列的项目排名\n播客、新闻通讯与评论\n比较各发行版的软件包\n显示所有发行版的软件包版本\n搜索发行版 - 高级\n已停止的发行版\n教程与学习 ▼\n搜索文章\n问答专栏\n技巧与提示专栏\n误区与误解专栏\n简化手册页\n其他操作系统\n发行版验证密钥\n可视化发行版家族树\n常见问题\n我们的捐赠计划\n\n小型企业电话系统\n多个发行版警告 OpenSSH 漏洞\nGhostBSD 解决仓库错误\naerynOS 测试新系统安装器\nRocky Linux 创始人指导 LLM 创建新内核\nMint 正在恢复休眠模式\nUbuntu Core Desktop 将恢复开发\nNetBSD 在基础系统中采用新文本编辑器\nRedox 引入性能改进、Clang 编译\nSparky 项目推出 SparkyOS\n使用 Sylve 安装 FreeBSD\n易于使用的 PBX - 托管或自管理\nLinux 电话系统\n免费实时聊天解决方案\n集成呼叫中心软件\n联络中心软件\n远程工作应用：iOS 或 Android\n免费视频会议\n3CX 的 VoIP / PBX 指南\n不要措手不及，制定灾难恢复计划！\n必要的实时聊天报告和统计\n导致呼叫欺诈的常见错误\nWhatsApp Business 与 3CX WhatsApp API 集成\n3CX StartUP 的 5 个杀手级功能\n别做“那种”人 第1卷：保管复杂凭据\n别做“那种”人 第2卷：呼叫欺诈\n别做“那种”人 第3卷：四大安全提示\n别做“那种”人 第4卷：监控你的实例\nAsahi 进展报告：Linux 7.3\nRed Hat 周五五条 - 2026年11月6日\nUbuntu 每周通讯 968\naerynOS 2026年11月项目更新\nTumbleweed 月度更新 - 2026年10月\nFull Circle 每周新闻\n最新新闻与更新\n新闻筛选选项\n\n发行版发布：Slax 2026.11\n\nTomáš Matějíček 宣布发布 2026.11，这是该项目基于 Debian 的极简 live Linux 发行版的一次重大更新，采用定制的 Fluxbox 窗口管理器。这个新版本带来了焕然一新的桌面外观和内置 AI 助手：“Slax 2026.11 发布了。有一段时间我真的以为不会再有 Slax 新版本了。然而，我们又来了。我想要一个可以带到任何地方并真正享受使用的 Linux 桌面。这就是我想做的那个。桌面经过了彻底重建。按住 Alt 并轻按 Tab，你就能看到正在切换的窗口。将鼠标悬停在任务栏图标上，你会看到该应用所有窗口的实时预览。点击你想要的那个。Alt+F3 会同时显示所有四个工作区，这样你就能找到那个你确信就留在这里的窗口。你可以将文件和文件夹放在桌面上，从任务栏切换键盘布局，并通过在扬声器图标上滚动来调节音量。它终于看起来像一个统一的桌面了。Linux 应用常常看起来像是来自不同的年代，有时甚至就在同一个下午。在 Slax 中，应用共享一致的外观。打开文件管理器、一个较旧的工具和一个较新的应用并排放在一起。它们看起来像是属于同一台电脑。我对此感到无比高兴。”\n\n查看所有详细信息和截图。下载：slax-2026.11-64bit.iso\n\n近期相关新闻与发布\n发行版发布：Slax 2026.11\n发行版发布：Slax 15.0.2、12.1.0\n发行版发布：Slax 15.0.1、11.6.0\n发行版发布：Slax 11.2.0\n开发版发布：Slax 11.2.0 RC1\n发行版发布：Slax 9.6.0\nSlax 是一个基于 Slackware Linux 的极简桌面 live CD。它使用 Fluxbox 窗口管理器启动到一个简单的桌面，提供少量应用程序，包括 Chromium 网页浏览器、文本编辑器和计算器。在 9.x 版本之前，Slax 是一个基于 Slackware 的 live CD，采用 KDE 桌面和广泛的应用程序集合。"
+  },
+  "d8f0e4c3dd39cdb83a47d37ad3bdac9c": {
+    "id": "d8f0e4c3dd39cdb83a47d37ad3bdac9c",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/13032",
+    "title_en": "DistroWatch Weekly, Issue 1198",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  This week in DistroWatch Weekly: \nReview: Fedora 45\nNews: Rocky Linux creator directs AI to make a Linux-compatible kernel, aerynOS trials new system installer, GhostBSD publishes fix for repository bug, Alpine explains new OpenSSH exploit\nQuestions and answers: Preventing users from browsing the Web\nReleased last week: aerynOS 2026.11. openSUSE 16.1,....",
+    "pub_date": "",
+    "title_zh": "DistroWatch周刊第1198期",
+    "summary_zh": "本期DistroWatch周刊报道了多个Linux发行版的安全警告与更新：多个发行版警告OpenSSH漏洞，GhostBSD修复仓库错误，aerynOS测试新系统安装器，Rocky Linux创始人指导LLM创建新内核，Mint恢复休眠模式，Ubuntu Core Desktop恢复开发，NetBSD采用新文本编辑器，Redox引入性能改进和Clang编译，Sparky项目推出SparkyOS。此外还介绍了MassOS发行版、使用Sylve安装FreeBSD的教程，以及问答和技巧栏目。",
+    "fulltext_zh": "DistroWatch周刊第1198期（DistroWatch.com新闻）\n\nDistroWatch.com由以下赞助商赞助\n\n新闻/观点/评论 ▼\n发布公告\nDW周刊/评论存档\n访客评分与评论\n项目评分排名\n播客、新闻通讯与评论\n跨发行版比较软件包\n显示所有发行版的软件包版本\n搜索发行版 - 高级\n已停止的发行版\n教程与学习 ▼\n搜索文章\n问答专栏\n技巧与窍门专栏\n误区与误解专栏\n简化手册页\n其他操作系统\n发行版验证密钥\n可视化发行版家族树\n常见问题\n我们的捐赠计划\n\n小型企业电话系统\n\n多个发行版警告OpenSSH漏洞\nGhostBSD解决仓库错误\naerynOS测试新系统安装器\nRocky Linux创始人指导LLM创建新内核\nMint正在恢复休眠模式\nUbuntu Core Desktop将恢复开发\nNetBSD在基础系统中采用新文本编辑器\nRedox引入性能改进、Clang编译\nSparky项目推出SparkyOS\n使用Sylve安装FreeBSD\n\n易于使用的PBX - 托管或自管理\nLinux电话系统\n免费实时聊天解决方案\n集成呼叫中心软件\n联络中心软件\n远程工作应用：iOS或Android\n免费视频会议\n3CX的VoIP/PBX操作指南\n不要措手不及，制定灾难恢复计划！\n必要的实时聊天报告和统计\n导致呼叫欺诈的常见错误\nWhatsApp Business与3CX WhatsApp API集成\n3CX StartUP的5大杀手级功能\n不要成为“那种”人 第1卷：保管复杂凭证\n不要成为“那种”人 第2卷：呼叫欺诈\n不要成为“那种”人 第3卷：四大安全提示\n不要成为“那种”人 第4卷：监控你的实例\n\nAsahi进展报告：Linux 7.3\n红帽周五五件事 - 2026年11月6日\nUbuntu每周新闻通讯968\nAerynOS 2026年11月项目更新\nTumbleweed月度更新 - 2026年10月\nFull Circle每周新闻\n\n最新新闻与更新\n新闻过滤选项\n\nDistroWatch周刊第1198期\n新闻：Rocky Linux创始人指导AI制作Linux兼容内核，aerynOS试用新系统安装器，GhostBSD发布仓库错误修复，Alpine解释新的OpenSSH漏洞\n问答：防止用户浏览网页\n上周发布：aerynOS 2026.11、openSUSE 16.1、Fedora 45、Asahi Linux 45、Chimera Linux 20261103、NetBSD 11.1、Ludora 45.0、Bazzite 45.20261104、RakuOS 2026.11.04、ML4W OS 2.17、NebiOS 10.3、Artix Linux 20261102、CapivaraOS 2.0.0、Parted Magic 26.11\n种子角落：CapivaraOS、Fedora、IPFire、NetBSD、openSUSE\n即将发布：FreeBSD 15.2-BETA2\n民意调查：你认为Fedora随时间推移是变好了还是变差了？\n阅读本周DistroWatch周刊的更多内容……\n\nMassOS是一个独立开发的轻量级Linux发行版，适用于笔记本电脑和台式机。它以Live ISO镜像形式分发，包含定制的Xfce桌面和图形化系统安装器，或者以rootfs tarball形式提供。该发行版不包含任何包管理工具，但可以通过第三方工具安装额外软件，例如flatpak、AppImage或Homebrew。已安装的系统可以使用新发布ISO镜像启动菜单中的“修复”选项进行升级，或者下载并运行“massos-upgrade”工具。MassOS旨在让Linux新手感到简单直观，同时也为更有经验的Linux用户提供灵活性和可配置性。\n\n技巧与窍门：在替代Linux发行版上使用Nix包管理器\n技巧与窍门：简单的rsync示例\n技巧与窍门：监控和记录用户活动\n问答：设置家庭服务器，尝试滚动发行版\n技巧与窍门：创建、删除、修改和忽略别名\n技巧与窍门：从命令行处理图像\n技巧与窍门：Linux下的数码相机、手机和音乐播放器\n问答：比较内核组件"
+  },
+  "1fa8d10df7235eae0b6cec04351b564c": {
+    "id": "1fa8d10df7235eae0b6cec04351b564c",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/13031",
+    "title_en": "Distribution Release: Parted Magic 26.11",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Parted Magic is a small live CD/USB/PXE with its elemental purpose being to partition hard drives. The project's latest version, 26.11, introduces support for computers running 64-bit ARM processors. \"This release adds a second edition of Parted Magic for ARM computers, six new programs and Linux kernel 7.3.....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Parted Magic 26.11",
+    "summary_zh": "Parted Magic 26.11 发布，新增对 64 位 ARM 计算机的支持，推出 ARM 版 ISO，包含六个新程序和 Linux 内核 7.3。Erase 工具验证驱动器速度更快，并按照 IEEE 2883 标准清除存储卡。ARM 版适用于 UEFI 启动的 ARM 服务器和 Snapdragon X 笔记本，支持安全启动，不适用于 Mac 或树莓派等开发板。",
+    "fulltext_zh": "发行版发布：Parted Magic 26.11（DistroWatch.com 新闻）\n\nDistroWatch.com 由以下赞助商支持\n新闻/观点/评论 ▼\n发布公告\nDW 周刊 / 评论存档\n访客评分与评论\n项目评分排名\n播客、新闻通讯与评论\n跨发行版比较软件包\n显示所有发行版的软件包版本\n搜索发行版 - 高级\n已停止的发行版\n教程与学习 ▼\n搜索文章\n问答专栏\n技巧与窍门专栏\n误区与误解专栏\n简化手册页\n其他操作系统\n发行版验证密钥\n可视化发行版家族树\n常见问题\n我们的捐赠计划\n小型企业电话系统\n多个发行版警告 OpenSSH 漏洞\nGhostBSD 修复仓库缺陷\naerynOS 测试新系统安装器\nRocky Linux 创始人指导 LLM 创建新内核\nMint 正在恢复休眠模式\nUbuntu Core Desktop 将恢复开发\nNetBSD 在基础系统中采用新文本编辑器\nRedox 引入性能改进和 Clang 编译\nSparky 项目推出 SparkyOS\n使用 Sylve 安装 FreeBSD\n易于使用的 PBX - 托管或自管理\nLinux 电话系统\n免费实时聊天解决方案\n集成呼叫中心软件\n联络中心软件\n远程工作应用：iOS 或 Android\n免费视频会议\n3CX 的 VoIP / PBX 指南\n不要措手不及，制定灾难恢复计划！\n essential 实时聊天报告和统计\n导致呼叫欺诈的常见错误\nWhatsApp Business 与 3CX WhatsApp API 集成\n3CX StartUP 的 5 大杀手级功能\n别做“那种”人 第1卷：保管复杂凭据\n别做“那种”人 第2卷：呼叫欺诈\n别做“那种”人 第3卷：四大安全提示\n别做“那种”人 第4卷：监控你的实例\nAsahi 进展报告：Linux 7.3\nRed Hat 周五五件事 - 2026年11月6日\nUbuntu 每周新闻通讯 968\nAerynOS 2026年11月项目更新\nTumbleweed 月度更新 - 2026年10月\nFull Circle 每周新闻\n最新新闻和更新\n新闻过滤选项\n发行版发布：Parted Magic 26.11\n是一个小型 live CD/USB/PXE，其主要目的是对硬盘进行分区。该项目的最新版本 26.11 引入了对运行 64 位 ARM 处理器的计算机的支持。\n“此版本为 ARM 计算机增加了 Parted Magic 的第二个版本，包含六个新程序和 Linux 内核 7.3。Erase 验证驱动器的速度大大提高，并按照 IEEE 2883 的要求清除存储卡。Parted Magic 现在推出了适用于 64 位 ARM 计算机的第二个版本。其 ISO 镜像与 PC ISO 一起放在下载页面中，无需额外费用——所有能下载此版本的人都可以下载两者。它专为从 UEFI 启动的 ARM 服务器和 Snapdragon X 笔记本电脑而设计，并且启动时开启安全启动。我在 Ampere Altra 服务器和联想 ThinkPad T14s Gen 6 上进行了测试。它不适用于 Mac 或树莓派等开发板。它包含 Erase、VisParted、Clone、Rescue、Boot Repair 以及下面的其他新程序，并以 Google Chrome 作为其网络浏览器。USB 安装器将其写入 USB 驱动器。ARM 版还内置了 USB 安装器，因此 ARM 计算机也可以为 PC 制作 Parted Magic 驱动器。”\n有关 26.11 版本的更多详细信息，请参见项目的\n。Parted Magic 可以通过\n购买和下载。\n最近相关新闻和发布\n发行版发布：Parted Magic 26.11\n发行版发布：Parted Magic 26.09\n发行版发布：Parted Magic 2026_03_20\n发行版发布：Parted Magic 2024_11_03\n发行版发布：Parted Magic 2022_01_18\n发行版发布：Parted Magic 2021_05_12\n更多 Parted Magic 新闻...\nParted Magic 是一个小型 live CD/USB/PXE，其主要目的是对硬盘进行分区。尽管 GParted 和 Parted 是主要程序，但 CD/USB 还提供其他应用程序，例如 Partition Image、TestDisk、fdisk、sfdisk、dd、ddrescue 等。2013 年 8 月，该发行版成为商业产品，不再提供免费下载。\nhttps://partedmagic.com/\nhttps://fo"
+  },
+  "5ede18773657c43c21d6aeb803de4544": {
+    "id": "5ede18773657c43c21d6aeb803de4544",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-rc2-Released",
+    "title_en": "Linux 7.4-rc2 Released With FAT32 Optimization, AMDGPU HDMI 2.2 Improvement",
+    "summary_en": "Linus Torvalds just released the second weekly release candidate of Linux 7.4 with some notable bug fixes and other changes routed in past the merge window. It's another big one in the AI era...",
+    "pub_date": "Sun, 08 Nov 2026 19:48:19 -0500",
+    "title_zh": "Linux 7.4-rc2 发布：FAT32 优化与 AMDGPU HDMI 2.2 改进",
+    "summary_zh": "Linux 7.4-rc2 已发布，这是继史上最大 rc1 之后的又一个大型候选版本。主要更新包括：AMD PerfOpt 功能调整以提升 Radeon 核显性能、修复部分内核配置下 BHI 缓解措施选择错误、FAT32 尤其同步挂载场景的大幅优化、AMDGPU 驱动对 HDMI 2.2 FRL 的修复，以及核心内存管理代码中多个长期存在问题的修复。Linus 表示大量补丁由 AI 辅助生成，BPF 子系统的修复速度已开始超过新报告速度。",
+    "fulltext_zh": "Linux 7.4-rc2 发布：FAT32 优化与 AMDGPU HDMI 2.2 改进\n\nLinus Torvalds 刚刚发布了第二个每周候选版本，其中包含一些值得注意的错误修复和其他在合并窗口之后提交的变更。在 AI 时代，这又是一个大版本。\n\n本周带来了一些调整：AMD PerfOpt 功能用于帮助提升 Radeon 核显性能；修复了某些内核配置下 BHI 缓解措施选择错误的问题；FAT32 获得重大改进，尤其是在同步挂载场景下；AMDGPU 驱动修复了 HDMI 2.2 FRL 相关问题；核心内存管理代码中多个“长期存在的顽固错误”得到修复。此外还有常规的错误修复，以及似乎永无止境的 AI/LLM 生成的补丁和错误报告流。\n\nLinux 创始人 Linus Torvalds 在公告中写道：\n\n“好吧，一个大的 -rc2 伴随着史上最大的 -rc1。但 diffstat 看起来相当温和，主要由一些自动化的 coccinelle 更新主导——这些更新我在合并窗口期间收到，但留到了 rc2，因为我在路上时不想处理它们（说实话，之后也很难找到处理它们的动力）。\n\n话虽如此，脚本化更新大多只是一两行的改动，它们[确实]非常直接，所以它们‘主导’ diffstat 只是因为它们非常分散，确实增加了大量噪音。\n\n当从 diffstat 中屏蔽掉这些噪音后，它的形状就变了——不再分散在数千个文件中。但看起来并不异常：三分之一是驱动（GPU、网络和声音占大部分，但各种都有一些），另外三分之一是网络和 BPF，最后三分之一是‘其余部分’（主要是文件系统、mm、架构更新）。\n\n是的，其中大部分是由各种 AI 修复驱动的。我想我不再重复这一点了，我们可以把它当作理所当然。但这一次 Alexei 声称，至少在 BPF 方面，修复的速度现在已经超过新报告的速度，如果属实那真是太好了。\n\n我认为其他大多数领域还没有达到那个程度，但这至少是一个迹象，表明我们_可能_开始看到潮水正在转向。\n\n不要屏息以待，但也许可以交叉手指祈祷我们在不太遥远的未来能够达到那里。\n\n与此同时，请继续测试。”\n\nLinux 7.4 功能概览：查看这个目标在 12 月底左右稳定发布的内核的所有变更。\n\nLinux 7.5 将提供更多 AMD Ryzen AI NPU AIE4 支持\nLinux 修复 BHI 漏洞的错误缓解措施选择\nKmorph 旨在提供无需重启的 Linux 内核崩溃恢复\nLinux x86 32 位补丁在最近移除老式 CPU 后清理旧内核代码\nFEX 等待 Linux 内核在 ARM 寄存器使用上与 Windows 和 macOS 保持一致\nLinux 开发者希望放弃 RT_GROUP_SCHED，因为它“损坏到无法修复”\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。\n\nSynaptics 似乎利用法律威胁阻止开源 DisplayLink 驱动\nLinux 7.4 合并窗口轻松成为内核史上最大\nOpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞\nEnlightenment 0.28 发布，带来许多改进\nDebian 的 APT 受到中间人攻击影响，可以 root 身份执行任意代码\nLinux 内核准备移除最后剩余的 MMX 优化代码\nLinux 7.4 用于减少 AI 噪音的新功能因“疯狂野兽”已被回退\nFedora 45 发布，带来许多前沿 Linux 创新"
+  },
+  "2e590097621ae281fa5045d6050910ba": {
+    "id": "2e590097621ae281fa5045d6050910ba",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.5-RK3568-AMD-AIE4",
+    "title_en": "Linux 7.5 To Provide More AMD Ryzen AI NPU AIE4 Enablement",
+    "summary_en": "Even before the Linux v7.4 merge window was over, there were already two pull requests of drm-misc-next material targeting for what will be Linux 7.5.  This week already saw the third drm-misc-next pull request of more feature patches targeting this next kernel version...",
+    "pub_date": "Sun, 08 Nov 2026 07:22:24 -0500",
+    "title_zh": "Linux 7.5 将为 AMD Ryzen AI NPU 提供更多 AIE4 支持",
+    "summary_zh": "Linux 7.5 内核将迎来更多 AMD Ryzen AI NPU 的 AIE4 硬件支持，包括新增 6.0 固件、NPU3 经典设备支持、电源模式管理、挂起/恢复、时钟与 DPM 频率查询、AIE4 命令提交等。同时，本周 drm-misc-next 拉取请求还加入了 Rockchip RK3568 显示驱动支持及多款新显示面板。AIE4 预计对应下一代 Zen 6 客户端平台的 Ryzen AI NPU。",
+    "fulltext_zh": "Linux 7.5 将为 AMD Ryzen AI NPU 提供更多 AIE4 支持\n2026 年 11 月 8 日 07:22 AM EST 发布。\n\n甚至在 Linux v7.4 合并窗口结束之前，就已经有两个针对 Linux 7.5 的 drm-misc-next 材料拉取请求。本周又出现了第三个 drm-misc-next 拉取请求，包含更多针对下一个内核版本的功能补丁。\n\n本周的 drm-misc-next 拉取为 Rockchip DRM 显示驱动带来了 Rockchip RK3568 支持。RK3568 是一款四核 Arm Cortex-A55 SoC，配备 Mali-G52 2EE GPU，以及一个小型 NPU 和 VPU。RK3568 见于一些工业/嵌入式 PC、部分 NAS 设备和单板计算机中。很高兴看到 Rockchip SoC 的主线内核支持持续改进。\n\n另外，主线内核现在还支持多款新的显示面板，包括 DCLTek 300249 5.5 英寸、DLCTek 300248 10.5 英寸、Novetake NT37705、xiaomi-lavender、Tianma TL063FVMC43-02、Tianma TL063FVMCA01-00、Tianma TL060FVXS16-00、TXD TXDI600YANPA-43V3、AUO B101UAN01、Truly NT36850 WQHD、Novatek NT36850、Samsung AMS644VK04、Hitachi TX10D07VM0BAA、LG LH400WV3-SD04 和 Mingjun MJ070BI30IA2。\n\n与此同时，用于 Ryzen AI NPU 的 AMDXDNA 加速器驱动新增了对新 6.0 固件版本的支持，增加了 NPU3 经典设备支持、新 AIE4 硬件的电源模式获取/设置处理，以及其他启用工作，如挂起和恢复、时钟/DPM 频率/资源信息查询、AIE4 命令提交等重要新增功能。在今年以及过去几个内核版本中，围绕 AIE4 硬件有大量启用工作，AIE4 推测是下一代 Ryzen AI NPU，将出现在明年推出的基于 Zen 6 的客户端平台中。希望到 Linux 7.5 时，AIE4 硬件支持能达到良好状态。\n\n本周 drm-misc-next 功能补丁的完整列表可通过以下链接查看：\nLinux 7.4-rc2 发布，包含 FAT32 优化、AMDGPU HDMI 2.2 改进\nLinux 修复 BHI 漏洞的错误缓解措施选择\nKmorph 旨在提供无需重启的 Linux 内核崩溃恢复\nLinux x86 32 位补丁在近期移除老式 CPU 后清理旧内核代码\nFEX 等待 Linux 内核在 ARM 寄存器使用上与 Windows 和 macOS 保持一致\nLinux 开发者希望放弃 RT_GROUP_SCHED，因其“已损坏到无法修复”\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nSynaptics 似乎利用法律威胁阻止开源 DisplayLink 驱动\nLinux 7.4 合并窗口轻松成为内核历史上最大的合并窗口\nOpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞\nEnlightenment 0.28 发布，带来许多改进\nDebian 的 APT 受到中间人攻击影响，可以 root 权限执行任意代码\nLinux 内核准备移除最后一批 MMX 优化代码\nLinux 7.4 用于降低 AI 噪声的新功能因“疯狂野兽”已被回退\nFedora 45 发布，带来许多前沿 Linux 创新\n\n同时提供无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "df9464dd510e4e4941f47cd8af87b1aa": {
+    "id": "df9464dd510e4e4941f47cd8af87b1aa",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-PerfOpt-Tweaks-Linux-7.4",
+    "title_en": "AMD PerfOpt Performance Boosting Code Tweaked For Linux 7.4-rc2",
+    "summary_en": "Of the many exciting changes in Linux 7.4, one of the exciting out-of-the-box performance improvements is the new \"PerfOpt\" functionality for AMD SoCs with integrated Radeon graphics. AMD PerfOpt can deliver some nice iGPU performance improvements especially for AI/LLM workloads. With today's Linux 7.4-rc2 kernel release there are a few tweaks to the PerfOpt code in the IOMMU area...",
+    "pub_date": "Sun, 08 Nov 2026 06:37:07 -0500",
+    "title_zh": "AMD PerfOpt 性能提升代码在 Linux 7.4-rc2 中调整",
+    "summary_zh": "Linux 7.4-rc2 对 AMD PerfOpt 功能进行了 IOMMU 相关代码调整。PerfOpt 允许集成 GPU 绕过 IOMMU 直接访问系统内存，默认在 AMDGPU 驱动中启用，可为 AI/LLM 等工作负载带来 iGPU 性能提升。此次修改将启用逻辑从 amdgpu 策略参数移至 IOMMU 驱动，并移除了 amdgpu.iommu_perfopt 模块参数。Linux 7.4 稳定版预计 12 月底发布。",
+    "fulltext_zh": "在 Linux 7.4 众多令人兴奋的变更中，一项值得关注的开箱即用性能改进是针对带有集成 Radeon 显卡的 AMD SoC 的新“PerfOpt”功能。AMD PerfOpt 可以带来不错的 iGPU 性能提升，尤其是对 AI/LLM 工作负载。随着今天 Linux 7.4-rc2 内核的发布，IOMMU 区域的 PerfOpt 代码有一些调整。\n\nAMD PerfOpt 允许集成 GPU 在直接访问系统内存时绕过 IOMMU。对于 iGPU，该功能在 AMDGPU 驱动中默认启用。该功能不仅限于最新最好的 Radeon iGPU，甚至能为前代硬件带来性能提升。\n\n在 IOMMU 修复拉取请求中，PerfOpt 代码有一些调整。AMD Linux 工程师 Mario Limonciello 解释了现已合并到 Linux Git 中的变更：\n\n“PerfOpt 可供集成 GPU 在 identity 模式下使用。从 IOMMU 驱动的域附加路径启用它，而不是要求 amdgpu 策略开关和导出的启用/禁用接口。\n\n在选择默认 identity 域时，将受支持的集成 GPU 标记为符合 PerfOpt 条件。对于这些 identity 附加，跳过 GCR3 设置和 ATS/PRI/PASID 启用，然后在安装 DTE 后启用 PerfOpt。在将符合条件的 GPU 附加到转换域或阻塞域（包括 VFIO 使用的非托管域）之前，清除 PerfOpt。传播清除绕过失败，但如果可选的 PerfOpt 启用失败，则保持已完成的 identity 附加成功。\n\n在初始化期间清除继承的 PerfOpt 状态，包括崩溃内核重用设备表时。直接从硬件读取功能支持，因为缓存的功能可能尚不可用，如果初始清除失败则停止初始化。\n\n每个 IOMMU 最多有一个符合 PerfOpt 条件的 GPU，因此在 IOMMU 锁下用布尔值跟踪激活状态。在挂起和关机时清除硬件时保留此状态，并在恢复时仅在曾激活的位置恢复该位。不要在早期 IOMMU 期间无条件启用 PerfOpt。\n\n移除 amdgpu 参数、驱动回调和导出接口。转换附加保留其正常的设备能力设置。”\n\n对于错过了直接比较 PerfOpt 在其硬件上性能影响机会的用户，amdgpu.iommu_perfopt= 模块参数现已被移除。无论如何，请关注 Linux 7.4 中的这项有用改进，稳定版预计在 12 月底左右发布。包含此代码的 Linux 7.4-rc2 预计今天晚些时候发布以供测试。"
+  },
+  "4069b28afc26b332433d54288a804fb0": {
+    "id": "4069b28afc26b332433d54288a804fb0",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Yunsilicon-Linux-Network-Driver",
+    "title_en": "Yunsilicon Working To Upstream Their High Performance Linux Network Driver",
+    "summary_en": "Yunsilicon is a Chinese semiconductor startup founded in 2021 that is working on producing high performance networking adapters and DPUs. Over the past month has been their first foray into posting patches to the Linux kernel mailing list and working to get their networking hardware supported by the mainline Linux kernel...",
+    "pub_date": "Sun, 08 Nov 2026 06:27:33 -0500",
+    "title_zh": "云芯正在努力将其高性能Linux网络驱动上游化",
+    "summary_zh": "中国半导体初创公司云芯（Yunsilicon）正将其高性能网络适配器和DPU驱动提交至Linux内核邮件列表，推动主线支持。该驱动以GPLv2许可，包含PCI核心、以太网和RDMA三个驱动，共享资源集，自2021年开始开发，上月首次公开补丁。",
+    "fulltext_zh": "云芯正在努力将其高性能Linux网络驱动上游化\n\n云芯是一家成立于2021年的中国半导体初创公司，致力于生产高性能网络适配器和DPU。过去一个月里，他们首次尝试向Linux内核邮件列表提交补丁，并努力让其网络硬件获得主线Linux内核的支持。\n\n上个月，他们发布了其云芯驱动的初始版本，而本周他们发布了该开源驱动更为整洁的版本，以及一份正式的补丁系列说明信。最终是三个补丁，同时提供以太网和RDMA支持。本周的说明信写道：\n\n“这是云芯提交的新提案，旨在将我们的融合网络适配器驱动上游化。该硬件是一个双功能PCIe设备（PCI厂商ID 0x1f67），同时支持以太网和RDMA操作。\n\n该系列增加了三个驱动，共享xsc前缀。一个共享的PCI核心驱动绑定到物理功能，启动命令队列、事件队列和中断处理，并为每个功能发布一个辅助设备。以太网和RDMA驱动绑定到该辅助设备，而不是直接驱动PCI功能，因此两种角色共享单一的探测和资源集。\n\n1. xsc_pci——PCI核心驱动（CONFIG_YUNSILICON_XSC_PCI）。拥有PCI功能、命令队列、事件队列、中断向量、寄存器访问层以及CQ/QP/SRQ资源池。补丁02-06。\n2. xsc_eth——以太网驱动（CONFIG_YUNSILICON_XSC_ETH）。注册netdev，使用NAPI和page_pool实现TX/RX数据包路径、RSS、校验和卸载及统计。补丁07-09，基于核心驱动。\n3. xsc_ib——RDMA驱动（CONFIG_INFINIBAND_XSC）。注册ib_device并提供PD/MR、CQ/SRQ/AH和QP动词，包括发送/接收数据路径，以及RDMA计数器和sysfs属性。补丁10-15，基于核心驱动和以太网驱动（netdev提供端口状态和GID）。”\n\n该驱动采用GPLv2许可，从补丁来看，自2021年以来一直在开发，但直到上个月这些补丁才出现在LKML上，以尝试进入主线Linux内核。\n\n遗憾的是，云芯网站似乎访问受限，因此我无法获取其网络设备的其他详细信息，但看到更多半导体初创公司努力将开源驱动支持纳入主线Linux内核，仍然非常令人欣慰。"
+  },
+  "93596f5b04aed39c721b178c8bf57bcb": {
+    "id": "93596f5b04aed39c721b178c8bf57bcb",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/GCC-17-Ends-Stage-1-Next-Week",
+    "title_en": "GCC 17 Feature Development Ends Next Week",
+    "summary_en": "How time flies with the GCC 17 feature development set to end next week and transitioning over to a bug fixing focus...",
+    "pub_date": "Sun, 08 Nov 2026 06:12:21 -0500",
+    "title_zh": "GCC 17 功能开发下周结束",
+    "summary_zh": "GCC 17 的功能开发将于 11 月 15 日结束，随后转入以修复 bug 为主的第三阶段，明年 1 月进入仅修复回归问题的第四阶段。GCC 17 已引入 RISC-V 原生调优、ACE 扩展初步支持、SpacemiT X100 核心、128 位原子操作、AVX10.2/APX 函数多版本化及 C++29 基础设施等变化，稳定版预计明年 4 月发布。",
+    "fulltext_zh": "GCC 17 功能开发下周结束\n发布于 2026 年 11 月 8 日东部时间上午 06:12。\n时间过得真快，功能开发定于下周结束，随后将转入以修复 bug 为重点的阶段。\n\n按照 11 月的惯例，GNU 编译器集合将从“第一阶段”开发过渡到第三阶段（第二阶段多年前已被取消），专注于修复 bug 或不涉及编译器其他区域的新移植。随后在 1 月左右，它将进入更严格的第四阶段模式，届时只针对回归问题进行修复。\n\n来自 SUSE 的 Richard Biener 表示，计划于 11 月 15 日下周退出第一阶段。\n\nGCC 17 已经发生了许多变化，例如：\n- 在 RISC-V 上支持 -mtune=native -mcpu=native\n- 初步支持 AI 计算扩展“ACE”\n- 针对 SpacemiT X100 核心\n- 128 位原子内存操作\n- 面向 AVX10.2 和 APX 的函数多版本化（FMV）\n- C++29 的初步基础设施\n\n如果一切顺利，GCC 17.1 稳定版应会在每年 GCC 编译器功能发布的典型 4 月时间框架左右首次亮相。GCC 17 基准测试将在 Phoronix 上发布。\n\nAutomake 1.20 带来新功能，希望重新确立 GNU 作为领先构建系统的地位\nGCC 17 编译器合并对 AVX10V1AUX 的支持\nGNU Linux-libre 7.3-gnu 移除更多固件 blob\n英特尔编译器工程师分享 APX 项目最新进展\nGDB 18.1 调试器带来更好的 Windows 支持\nAMD 发布面向 AVX10V1AUX ISA 支持的 GCC 编译器补丁\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nSynaptics 似乎利用法律威胁阻止开源 DisplayLink 驱动\nLinux 7.4 合并窗口轻松成为内核历史上最大的\nOpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞\nEnlightenment 0.28 发布，带来许多改进\nDebian 的 APT 受到中间人攻击影响，可以 root 身份执行任意代码\nLinux 内核准备移除最后剩余的 MMX 优化代码\nLinux 7.4 用于减少 AI 噪音的新功能因“疯狂野兽”已被回退\nFedora 45 发布，带来许多前沿 Linux 创新\n\n享受无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "ee2ec5eed8fff263664062ecf0ac4cdf": {
+    "id": "ee2ec5eed8fff263664062ecf0ac4cdf",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/slax-linux-is-back-with-a-revamped-desktop-new-tools-and-more",
+    "title_en": "Slax Linux Is Back with a Revamped Desktop, New Tools, and More",
+    "summary_en": "Slax Linux 2026.11 portable Linux distribution based on Debian is now available for download with a revamped look, new tools, and other changes.\nThe post Slax Linux Is Back with a Revamped Desktop, New Tools, and More appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Sun, 08 Nov 2026 23:55:37 +0000",
+    "title_zh": "Slax Linux 回归：全新桌面、新工具及更多改进",
+    "summary_zh": "基于 Debian 的便携式 Linux 发行版 Slax Linux 2026.11 现已开放下载，带来焕然一新的外观、新增工具及其他多项改进。",
+    "fulltext_zh": "基于 Debian 的便携式 Linux 发行版 Slax Linux 2026.11 现已可供下载，带来焕然一新的外观、新工具及其他多项改进。"
+  },
+  "c39fc4efbd3b9fc9d00306f8edb3347a": {
+    "id": "c39fc4efbd3b9fc9d00306f8edb3347a",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/9to5linux-weekly-roundup-november-8th-2026",
+    "title_en": "9to5Linux Weekly Roundup: November 8th, 2026",
+    "summary_en": "9to5Linux Weekly Roundup for November 8th, 2026, brings news about Fedora Linux 45, Cinnamon 6.8, openSUSE Leap 16.1, LXQt 2.5, Fedora Asahi Remix 45, Budgie 10.10.4, aerynOS 2026.11, Audacity 4.0.2, Artix Linux 2026.11, MPV 0.42, Calibre 9.18, GIMP 3.2.8, NVIDIA 620, KDE Gear 26.08.3, Shelly 3.2, OpenVPN 2.7.9, GStreamer 1.28.9, and more.\nThe post 9to5Linux Weekly Roundup: November 8th, 2026 appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intende",
+    "pub_date": "Sun, 08 Nov 2026 15:18:56 +0000",
+    "title_zh": "9to5Linux 每周综述：2026年11月8日",
+    "summary_zh": "本期9to5Linux周报汇总了2026年11月8日当周的重要Linux新闻，涵盖Fedora Linux 45、Cinnamon 6.8、openSUSE Leap 16.1、LXQt 2.5、Fedora Asahi Remix 45、Budgie 10.10.4、aerynOS 2026.11、Audacity 4.0.2、Artix Linux 2026.11、MPV 0.42、Calibre 9.18、GIMP 3.2.8、NVIDIA 620、KDE Gear 26.08.3、Shelly 3.2、OpenVPN 2.7.9、GStreamer 1.28.9等软件更新与发布动态。",
+    "fulltext_zh": "9to5Linux 2026年11月8日每周综述，带来关于Fedora Linux 45、Cinnamon 6.8、openSUSE Leap 16.1、LXQt 2.5、Fedora Asahi Remix 45、Budgie 10.10.4、aerynOS 2026.11、Audacity 4.0.2、Artix Linux 2026.11、MPV 0.42、Calibre 9.18、GIMP 3.2.8、NVIDIA 620、KDE Gear 26.08.3、Shelly 3.2、OpenVPN 2.7.9、GStreamer 1.28.9等更多内容的消息。\n\n文章《9to5Linux 每周综述：2026年11月8日》首次发布于9to5Linux——未经许可请勿转载本文。本RSS源旨在"
   }
 }

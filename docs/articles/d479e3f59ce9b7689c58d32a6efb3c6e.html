@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calibre 新增免费书籍与期刊查找来源 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月09日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Calibre 新增免费书籍与期刊查找来源</h1>
+
+  <div class="article-summary">Calibre 9.18 版本更新，为编辑器增加了更多无障碍工具，包括设置书籍语言、编辑图片描述和修改 EPUB 无障碍元数据。书籍检查功能可发现并自动修复常见无障碍问题。内容源新增三个免费书籍与期刊查找渠道：公共领域书籍、开放获取图书目录和开放获取期刊目录。内容服务器支持 KOReader 同步阅读位置、提供 OPDS 2.0 订阅源、流式传输 CBZ 漫画及全文搜索。此外还改进了电子书查看器、PDF 处理、新闻抓取等多项功能。</div>
+
+  <div class="article-body"><p>Calibre 新增免费书籍与期刊查找来源 - OMG! Ubuntu</p><p>又一周过去，开源电子书阅读器、转换器和管理软件 Calibre 又增添了一系列新功能。</p><p>9.18 版本为编辑器增加了更多无障碍工具，通过“工具 &gt; 无障碍”菜单，现在可以为书籍和 HTML 文件设置语言。图片描述（包括内联 SVG 的描述）可以编辑，EPUB 无障碍元数据也可修改。</p><p>书籍检查功能现在能捕获常见的无障碍问题，包括缺少描述的图片和跳过的标题层级，并标记出具有 aria-label 但无匹配 ARIA 角色的元素。有用的是，它可以自动修复发现的许多问题。</p><p>Calibre 现在还新增了三个内容查找来源。</p><p>提供公共领域书籍，并且为电子书阅读器改进了格式（在 Gutenberg 项目等地方找到的一些旧书排版可能很差）。</p><p>你还可以浏览开放获取图书目录（Directory of Open Access Books）的年度内容，该目录提供可免费阅读的学术书籍，以及开放获取期刊目录（Directory of Open Access Journals），该目录展示开放获取的学术期刊。</p><p>内容服务器更新</p><p>如果你使用 KOReader（一款功能更强大的开源电子书查看器应用，可添加到包括 Amazon Kindle 在内的许多电子书设备上），现在可以通过 Calibre 内容服务器（在网页浏览器中访问）同步阅读位置。</p><p>首先在 KOReader 中将自定义同步服务器设置为 http://server:port/kosync，然后使用你的内容服务器用户账户详细信息登录。</p><p>此更新还为内容服务器增加了其他改进。它现在可以提供 OPDS 2.0 订阅源、流式传输 CBZ 漫画（具有正确的漫画阅读方向），并允许你使用 Calibre 的全文索引搜索书籍内容。</p><p>Calibre 9.18 的其他变化：</p><p>电子书查看器现在允许将搜索限制在当前章节</p><p>新的搜索日期过滤器，包括</p><p>中断的语音（朗读）模型下载可以恢复</p><p>新的 calibredb 命令用于管理笔记、注释等</p><p>改进 PDF 中的页码检测和大图像处理</p><p>TXT 和 RTF 输出与输入修复</p><p>读取某些损坏的 EPUB 文件时的错误已解决</p><p>转换非常小的 PDF 文件不再导致崩溃</p><p>按书中位置对合并的高亮进行排序</p><p>使用 Gemini 生成“世界”的 AI 游戏修复</p><p>此外，还有常见的调整以更好地抓取新闻来源。</p><p>v9.18 更新修复了从英国报纸网站获取内容时的异常。它还改进了对来自书呆子辩论巢穴的内容的处理。</p><p>从官方网站获取或从 GitHub 获取源代码。</p><p>通过命令行脚本安装和更新。它会下载二进制文件并将其移动到系统位置，然后生成一个快捷方式，使你能够从应用启动器、上下文菜单等找到并打开它。</p><p>但是，由于这两个构建版本均未经验证或非官方，使用它们时遇到的任何错误或问题应报告给软件包维护者而非上游。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/calibre-update-new-sources" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asahi Linux 放弃 MIT 许可证，在 AI 工具被用于窃取未发布代码后全面转向 GPL — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月09日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Asahi Linux 放弃 MIT 许可证，在 AI 工具被用于窃取未发布代码后全面转向 GPL</h1>
+
+  <div class="article-summary">Asahi Linux 宣布将所有代码仓库从 MIT 许可证迁移至 GPL v2 或更高版本，原因是有人从开发者个人分支中窃取未发布代码，并通过 AI 工具改写以掩盖来源，甚至试图取代项目并商业化。此举效仿 WINE 当年的许可证变更，旨在以强 copyleft 防止代码洗白和恶意分叉。</div>
+
+  <div class="article-body"><p>Asahi Linux 放弃 MIT 许可证，在 AI 工具被用于窃取未发布代码后全面转向 GPL</p><p>Asahi Linux 的所有代码仓库都将迁移至 GPL v2 或更高版本，此前有不法分子窃取未发布代码并通过大语言模型处理以掩盖其来源。</p><p>正是 Asahi Linux 让你今天能在 Apple Silicon Mac 上运行 Linux。多年来，该项目将其大部分自有代码置于 MIT 许可证下，以便任何人（包括 BSD 系统）都能按需复用。</p><p>这种情况正在改变，因为 Asahi Linux 已厌倦了代码洗白。他们宣布 Asahi 将所有仓库迁移至 GNU 通用公共许可证第 2 版或更高版本。今后，所有 Asahi Linux 代码都将仅采用强 copyleft 许可证。</p><p>这是因为有人直接从开发者的个人分支中取走开发中的代码，不加署名地发布，或用 AI 改写以掩盖其来源，目的是“取代该项目并 aggressively 将 Apple Silicon 上的 Linux 商业化”。</p><p>什么是代码洗白？</p><p>代码洗白（也称许可证洗白）是指取用他人代码并通过某种流程掩盖其来源，从而在不遵守原始许可证或不署名作者的情况下使用代码的行为。</p><p>在 AI 出现之前，这通常意味着逐行手动重写代码、重命名变量等，并打乱函数顺序，直到代码不再像原版。</p><p>当然，大语言模型让这件事变得容易得多、成本也低得多。</p><p>MIT 许可证只要求你保留原始版权声明。它不要求你分享修改或保持版本开源。这正是它受欢迎的原因，也是它给 Asahi 带来问题的原因。</p><p>以史为鉴</p><p>这一举措是在 Asahi 团队“一段时间前”得知有多起试图利用其宽松许可证劫持其成果的行为之后做出的。</p><p>在最极端的案例中，仍在开发中的功能代码甚至在公开发布之前就从开发者的个人分支中被取走。报告指出，MIT 许可证“明确允许这种行为，且没有任何条款防范恶意行为者”。</p><p>Asahi 在报告中未点名任何人。报告也未说明现有贡献将如何重新许可，或是否所有过往贡献者都同意此举。</p><p>Asahi 将其与二十年前 WINE 的处境相提并论。WINE 是让 Windows 应用在 Linux 上运行的兼容层，最初也采用 MIT 许可证。但在 90 年代末和 2000 年代初，一些公司取走代码，在其上构建专有分支并商业销售。因此，WINE 团队于 2002 年将许可证改为 LGPL，以阻止专有分支并推动公司向上游贡献。</p><p>不吸取历史教训的人注定重蹈覆辙</p><p>Asahi 近来颇为不满</p><p>Asahi 未点名任何人，因此我们只能猜测此次许可证变更针对的是谁。</p><p>近几个月来，至少有两个 Asahi 成果的公开分支，均与 AI 辅助开发有关。如果你还不知道，Asahi Linux 禁止 AI 生成的代码贡献，其 Vulkan 驱动 Borealis 也是如此。</p><p>有一个分支是 Asahi 的 HoneyKrisp（Apple GPU 的 Vulkan 驱动）的分支。Aurora Silicon 向 Khronos 提交了注册自家 Vulkan 驱动 ID 的拉取请求（VK_DRIVER_ID_AURORA_BOREALIS），称该驱动可在 M1 到 M5 以及 A18 Pro 上运行，并将其保留在自己的 Mesa 分支中而非上游。</p><p>另一个是基于 Fedora 的 Apple Silicon 发行版，因在 LLM 使用上的分歧而从 Asahi 分叉。</p><p>公平地说，Gravity 是开源的，不销售任何东西，并公开说明其 AI 使用情况。它甚至表示计划在其驱动工作进入上游后停止该发行版。</p><p>它并非进展报告所描述的那种恶意行为者。但它确实代表了 Asahi 一直反对的“拥抱 AI 的宽松分支”做法。</p><p>需要澄清的是，Asahi 的进展报告并未……</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/asahi-linux-drops-mit-for-gpl/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

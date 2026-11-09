@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMD PerfOpt 性能提升代码在 Linux 7.4-rc2 中调整 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月09日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>AMD PerfOpt 性能提升代码在 Linux 7.4-rc2 中调整</h1>
+
+  <div class="article-summary">Linux 7.4-rc2 对 AMD PerfOpt 功能进行了 IOMMU 相关代码调整。PerfOpt 允许集成 GPU 绕过 IOMMU 直接访问系统内存，默认在 AMDGPU 驱动中启用，可为 AI/LLM 等工作负载带来 iGPU 性能提升。此次修改将启用逻辑从 amdgpu 策略参数移至 IOMMU 驱动，并移除了 amdgpu.iommu_perfopt 模块参数。Linux 7.4 稳定版预计 12 月底发布。</div>
+
+  <div class="article-body"><p>在 Linux 7.4 众多令人兴奋的变更中，一项值得关注的开箱即用性能改进是针对带有集成 Radeon 显卡的 AMD SoC 的新“PerfOpt”功能。AMD PerfOpt 可以带来不错的 iGPU 性能提升，尤其是对 AI/LLM 工作负载。随着今天 Linux 7.4-rc2 内核的发布，IOMMU 区域的 PerfOpt 代码有一些调整。</p><p>AMD PerfOpt 允许集成 GPU 在直接访问系统内存时绕过 IOMMU。对于 iGPU，该功能在 AMDGPU 驱动中默认启用。该功能不仅限于最新最好的 Radeon iGPU，甚至能为前代硬件带来性能提升。</p><p>在 IOMMU 修复拉取请求中，PerfOpt 代码有一些调整。AMD Linux 工程师 Mario Limonciello 解释了现已合并到 Linux Git 中的变更：</p><p>“PerfOpt 可供集成 GPU 在 identity 模式下使用。从 IOMMU 驱动的域附加路径启用它，而不是要求 amdgpu 策略开关和导出的启用/禁用接口。</p><p>在选择默认 identity 域时，将受支持的集成 GPU 标记为符合 PerfOpt 条件。对于这些 identity 附加，跳过 GCR3 设置和 ATS/PRI/PASID 启用，然后在安装 DTE 后启用 PerfOpt。在将符合条件的 GPU 附加到转换域或阻塞域（包括 VFIO 使用的非托管域）之前，清除 PerfOpt。传播清除绕过失败，但如果可选的 PerfOpt 启用失败，则保持已完成的 identity 附加成功。</p><p>在初始化期间清除继承的 PerfOpt 状态，包括崩溃内核重用设备表时。直接从硬件读取功能支持，因为缓存的功能可能尚不可用，如果初始清除失败则停止初始化。</p><p>每个 IOMMU 最多有一个符合 PerfOpt 条件的 GPU，因此在 IOMMU 锁下用布尔值跟踪激活状态。在挂起和关机时清除硬件时保留此状态，并在恢复时仅在曾激活的位置恢复该位。不要在早期 IOMMU 期间无条件启用 PerfOpt。</p><p>移除 amdgpu 参数、驱动回调和导出接口。转换附加保留其正常的设备能力设置。”</p><p>对于错过了直接比较 PerfOpt 在其硬件上性能影响机会的用户，amdgpu.iommu_perfopt= 模块参数现已被移除。无论如何，请关注 Linux 7.4 中的这项有用改进，稳定版预计在 12 月底左右发布。包含此代码的 Linux 7.4-rc2 预计今天晚些时候发布以供测试。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/AMD-PerfOpt-Tweaks-Linux-7.4" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
