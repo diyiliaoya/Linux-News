@@ -20161,5 +20161,181 @@
     "title_zh": "9to5Linux 每周综述：2026年11月8日",
     "summary_zh": "本期9to5Linux周报汇总了2026年11月8日当周的重要Linux新闻，涵盖Fedora Linux 45、Cinnamon 6.8、openSUSE Leap 16.1、LXQt 2.5、Fedora Asahi Remix 45、Budgie 10.10.4、aerynOS 2026.11、Audacity 4.0.2、Artix Linux 2026.11、MPV 0.42、Calibre 9.18、GIMP 3.2.8、NVIDIA 620、KDE Gear 26.08.3、Shelly 3.2、OpenVPN 2.7.9、GStreamer 1.28.9等软件更新与发布动态。",
     "fulltext_zh": "9to5Linux 2026年11月8日每周综述，带来关于Fedora Linux 45、Cinnamon 6.8、openSUSE Leap 16.1、LXQt 2.5、Fedora Asahi Remix 45、Budgie 10.10.4、aerynOS 2026.11、Audacity 4.0.2、Artix Linux 2026.11、MPV 0.42、Calibre 9.18、GIMP 3.2.8、NVIDIA 620、KDE Gear 26.08.3、Shelly 3.2、OpenVPN 2.7.9、GStreamer 1.28.9等更多内容的消息。\n\n文章《9to5Linux 每周综述：2026年11月8日》首次发布于9to5Linux——未经许可请勿转载本文。本RSS源旨在"
+  },
+  "40a9964d7d6c5a30f2de847a5313ba0c": {
+    "id": "40a9964d7d6c5a30f2de847a5313ba0c",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/11/firefox-160-released-mini-window",
+    "title_en": "Firefox 160 release brings new floating ‘mini window’ mode",
+    "summary_en": "Firefox 160 released today with some new features. A new &#8220;Mini Window&#8221; option lets you move a tab or select a portion of a web page to an always-on-top window, so you can keep an eye on it while browsing. The feature is in beta and Mozilla invite feedback on it. Mozilla say the feature is &#8220;useful when you&#8217;re multitasking and need to keep a few sources of information in view at once&#8221; – think Picture-in-Picture mode, but to see sections or entire web pages, basically.",
+    "pub_date": "Mon, 09 Nov 2026 23:59:00 +0000",
+    "title_zh": "Firefox 160 发布，带来全新浮动“迷你窗口”模式",
+    "summary_zh": "Firefox 160 正式发布，新增“迷你窗口”模式，可将标签页或网页局部内容弹出为始终置顶的浮动窗口，方便多任务时保持信息可见。画中画模式新增播放速度调节按钮，地址栏右键菜单区分“粘贴并搜索”与“粘贴并访问”。此外还支持从侧边栏拖拽历史记录到标签栏、MKV 格式支持、macOS 上 WebGL 使用 Metal API 等改进，并包含安全修复。",
+    "fulltext_zh": "Firefox 160 今日发布，带来一些新功能。\n\n新增的“迷你窗口”选项允许你将一个标签页或网页的选定部分移动到一个始终置顶的窗口中，以便在浏览时随时查看。该功能目前处于测试阶段，Mozilla 表示，该功能“在你进行多任务处理、需要同时保持多个信息来源可见时非常有用”——可以把它理解为画中画模式，但用于查看网页的局部或整个页面。\n\n使用起来很简单。你可以右键点击标签页，将鼠标移入“移动标签页”菜单，选择“移动到迷你窗口”，即可将整个页面放入一个专用的浮动、可调整大小且紧凑的窗口中，该窗口带有自动隐藏的地址栏和导航按钮。\n\n或者自定义工具栏并添加相应图标。在页面上按下该图标，你可以选择共享整个标签页或仅共享一部分。\n\n你也可以通过右键 >“移动区域到迷你窗口”来对页面的一部分进行“画中画”操作。这会提示你框选出想要弹出的区域，然后执行弹出。\n\nFirefox 160 中的次要变化\n\n画中画模式在此次更新中也得到增强。画中画窗口现在有一个按钮可调节播放速度，范围从 0.25 倍到 2.0 倍，具体取决于源。不过，速度按钮仅在播放器窗口足够大、能够显示该按钮时才会出现。\n\n如果你经常将文字复制到剪贴板以便搜索，Firefox 的地址栏右键菜单现在对纯文本显示“粘贴并搜索”，而“粘贴并访问”仅保留给 URL 使用。\n\nFirefox 160 中的其他变化：\n\n从侧边栏拖动历史记录条目到标签栏以打开它们\n将页面保存为 PDF 时使 MathLab 内容对屏幕阅读器友好\n阻止网站请求处理 mailto 等链接\n支持 Matroska（MKV）（含 FLAC、MP3 或 PCM 音频）\nmacOS 上的 WebGL 内容现在使用 Metal 图形 API\n智能窗口的“整理标签页”功能现已支持法语\n通过实时语音转文字\n美国用户现在可以在聊天机器人侧边栏中访问 Yahoo! Scout\n修复改进了域名与地址栏其余部分之间的视觉对比度，解决了使用触摸输入时文本选择和光标放置的小问题，并消除了一些影响使用 NTLM 或 Kerberos 的内网网站登录的小卡顿。\n一批新的安全修复\n\nFirefox 160 是免费的开源软件。你可以从 下载新版本，或等待 2026 年 11 月 10 日起相同构建版本的链接出现在 上。\n\n现有用户？在 Windows、macOS 和 Linux（二进制构建）上运行应用时，你将自动更新到最新版本，或通过你最初安装时使用的应用商店或软件包仓库进行更新。\n\n使用 Ubuntu？你将通过 Snap Store 获得自动后台更新。"
+  },
+  "e84401fb5ff8a122f327a232afdf7706": {
+    "id": "e84401fb5ff8a122f327a232afdf7706",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/openeuler-summit-2026/",
+    "title_en": "SuperPoD OS and Agentic Infra Take Center Stage at openEuler Summit 2026",
+    "summary_en": "The November 13-14 event in Beijing will focus on SuperPoD OS, infrastructure for AI agents, and industry deployment experiences. All this under the theme \"Building Agentic Infra from the OS Up.\"",
+    "pub_date": "Mon, 09 Nov 2026 17:07:00 GMT",
+    "title_zh": "SuperPoD OS 与 Agentic Infra 在 openEuler Summit 2026 上成为焦点",
+    "summary_zh": "openEuler Summit 2026 将于11月13-14日在北京中关村国际创新中心举行，主题为“从操作系统向上构建Agentic Infra”。大会聚焦SuperPoD OS和面向AI智能体的基础设施，首日举办Agentic Infra OS Conference，次日为openEuler Summit社区活动。议程包括京东、美团等企业的实践分享，以及超过30场主题演讲和1000平方米的演示互动区。",
+    "fulltext_zh": "SuperPoD OS 与 Agentic Infra 在 openEuler Summit 2026 上成为焦点\n\n11月13日至14日在北京举行的活动将聚焦 SuperPoD OS、面向 AI 智能体的基础设施以及行业部署经验。所有这些都围绕“从操作系统向上构建 Agentic Infra”这一主题展开。\n\nAgentic Infra OS Conference 与 openEuler Summit 2026 将于11月13日至14日在北京中关村国际创新中心举行。\n\n在“从操作系统向上构建 Agentic Infra”的主题下，本次活动将汇聚开发者、开源贡献者和行业合作伙伴，共同探讨操作系统如何支持大规模 AI 计算和 AI 智能体的部署。\n\n为期两天的活动将第一天设为面向行业的议程，以 Agentic Infra OS Conference 的主题演讲领衔；第二天则围绕 openEuler Summit 展开，面向社区。\n\nIt's FOSS 将远程关注此次活动，并在活动结束后再次报道其中的有趣内容。\n\n操作系统正成为 AI 基础设施的一部分\n\n随着 AI 应用日益复杂，基础设施团队面临的挑战已超出模型性能本身。这些挑战包括在紧密集成的系统间协调计算资源、安全地运行智能体工作负载，以及理解系统在生产环境中的行为。\n\n就在几个月前，openEuler 发布了 24.03 LTS SP4，这是一个基于 Linux 内核 6.6 的更新，为企业 AI 智能体增加了智能体沙箱运行时、可靠性和易用性增强、NPU 资源分区、推理服务的快速故障恢复，以及 AI 编译器和性能方面的工作。该版本反映了来自 39 个社区成员组织的 2,006 名开发者的贡献。\n\n我提到这一点的原因是，该版本框定了本次峰会的核心问题。\n\n随着智能体运行时间更长、执行多步骤任务循环并在系统间保持状态和内存，当今操作系统核心的进程和资源抽象正被拉伸。\n\n会议将通过两个相互关联的领域来审视这些挑战：SuperPoD OS 和智能体基础设施。\n\nSuperPoD OS 是 openEuler 面向 SuperPoD 计算集群的操作系统，旨在解决在大型、紧密集成的计算系统中协调资源所需的系统软件问题。\n\n在活动上，openEuler 将展示其在该领域的最新进展，这些进展建立在 24.03 LTS SP4 中引入的 UnifiedBus、内存池化和故障定位工作之上。\n\n已公布的议程包括京东使用基于 openEuler 的 SuperPoD 系统处理广告工作负载的经验，以及一场关于 Ubuntu 与 openEuler 合作发展 SuperPoD 生态的会议。京东是一家《财富》世界500强公司，也是中国最大的直销零售商。\n\n智能体基础设施\n\n智能体基础设施议程将聚焦于可靠、安全地运行 AI 智能体所需的基础——从沙箱化执行环境和操作系统级内存与 KV 缓存管理，到跨 AI 软件栈的集成。\n\n美团（一家外卖科技巨头）的预定演讲将探讨其使用 openEuler 进行智能体沙箱化的情况，为在生产环境中管理智能体执行环境提供实用视角。\n\n这些会议将共同把操作系统开发与构建和部署 AI 应用的组织需求联系起来。\n\n它们还将为开发者提供机会，与行业从业者和开源贡献者直接讨论工程挑战，并在活动的演示区亲身体验技术。\n\n为期两天的活动将包括 30 多场主题演讲和小组讨论，并辅以技术会议和 1000 平方米的大型演示互动区。\n\n还有大量分论坛，主题涵盖内核、AI 基础设施、开发工具、性能优化等。"
+  },
+  "fa884a437c9a35ca61dbd7a81858f307": {
+    "id": "fa884a437c9a35ca61dbd7a81858f307",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/linux-mint-27-features/",
+    "title_en": "Here's Everything New Coming to Linux Mint 27 This Christmas",
+    "summary_en": "It is a release that has taken a year to develop, with major changes like a Wayland session that is no longer experimental.",
+    "pub_date": "Mon, 09 Nov 2026 15:56:29 GMT",
+    "title_zh": "Linux Mint 27 圣诞季全新功能一览",
+    "summary_zh": "Linux Mint 27 将于今年圣诞节发布，这是采用年度发布周期和男孩名字命名新策略后的首个版本。最大亮点是 Cinnamon 的 Wayland 会话不再处于实验阶段，与 X11 几乎持平。此外还带来 Nemo 预览窗格、改进的输入搜索、专用截图工具、重新设计的桌面、基于 LMDE 的新安装器以及休眠功能回归等更新。",
+    "fulltext_zh": "这是一个历时一年开发的版本，带来了诸如 Wayland 会话不再处于实验阶段等重大变化。\n\nLinux Mint 是一个基于 Ubuntu 的发行版，配备了自己的桌面环境和一套工具，使其成为一个真正独特的软件包，既适合新手也适合高级用户。\n\n多年来，它遵循着熟悉的节奏，大约每六个月发布一个新版本，使用女孩的名字按字母顺序命名各个版本，从 2006 年的 Ada 到 22.3 的 Zena。\n\n此后，这一节奏发生了变化，开发者们确定了更长的开发周期，改为每年发布一个主要版本，中间不再有点版本发布。\n\n版本编号和命名也随着这一变化而改变，数字现在指向即将到来的年份，将用户从 27 带到 28 再到 29，并且男孩的名字取代了女孩的名字。\n\nLinux Mint 27 是新策略下的首个版本。它计划在圣诞节发布，基于五年的支持期构建。\n\n因此，通过这份功能概览，我们梳理了自一月份以来的每月新闻帖子，并专注于 Linux Mint 27 中的新变化。\n\n以下所有内容都是对预期变化的预览。在稳定版发布之前，这些内容仍可能发生变化。\n\nCinnamon 的 Wayland 会话不再处于实验阶段。下一个 Cinnamon 版本中 X11 和 Wayland 都得到完全支持，Wayland 几乎与 X11 持平。这使得 Linux Mint 的旗舰体验为 Wayland 做好了准备，使其达到 Fedora 和 Ubuntu 等其他主流发行版的水平。\n\n大部分基础工作围绕日常交互展开。窗口和菜单正确映射，防止焦点窃取，崩溃问题也得到处理。多显示器设置和 KVM 切换器也已覆盖。\n\n图形方面也受到关注。支持硬件加速，包括针对 NVIDIA 卡的 GBM over EGL，同时 HiDPI 缩放已覆盖光标和基于 Chromium 的应用，如 Slack 和 VS Code。\n\n确保 Wayland 支持的最后一块拼图是屏幕保护程序。新的屏幕保护程序由合成器渲染，由 Cinnamon 自身处理，取代了单独的进程，并且在 Wayland 和 X11 上都能工作。旧的屏幕保护程序将作为后备保留一个版本，然后被移除。\n\n默认文件管理器 Nemo 获得了一个预览窗格，可以通过 F3 或从状态栏打开。它可以处理音频文件、图片和视频，并能显示元数据详情，如拍摄日期和使用的相机。\n\n输入搜索功能——即打开文件夹并开始输入时触发的功能——变成了过滤视图，在你输入时缩小列表范围，取代了跳转到第一个匹配项并让你浏览其余项的方式。\n\nCinnamon 迎来了专用的截图工具。它可以捕获带或不带阴影的窗口，可以捕获所有显示器或仅一个显示器。\n\n你还可以在复制或保存之前裁剪截图，并且该工具对绘制自己标题栏的窗口和依赖系统标题栏的窗口采用不同的阴影处理方式。\n\n桌面出现在桌面上，并进行了重新设计，按类型而不是按打开它们的应用程序对最近文档进行分组。\n\n侧边栏包含预定义的组，你可以显示、隐藏和重新排序。你还可以根据文件类型添加自定义组，并可根据需要将其限制在单个目录中。单个项目可以移除，整个列表可以一次性清除。\n\n3. 系统和安装程序变更\n\nLinux Mint 切换到 Linux Mint Debian Edition (LMDE) 已经在使用的实时安装程序，取代了 Ubiquity。新安装程序支持 OEM 安装、BIOS 和 EFI 系统、安全启动以及 LVM 和 LUKS 设置。\n\n在 Ubuntu 放弃休眠功能后，休眠在 Linux Mint 27 中通过系统管理工具中新的“休眠”页面回归，使得再次设置变得容易。\n\n尽管它仍然需要较大的交换空间。\n\n该页面还增加了两个更多选项。\n\n挂起-then-Hibernate 在挂起机器的同时将会话写入磁盘，以及\n\n挂起-then-Hibernate"
+  },
+  "9087ef4505adcb00c2313b153ed49d21": {
+    "id": "9087ef4505adcb00c2313b153ed49d21",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Mesa-26.3-Released",
+    "title_en": "Mesa 26.3 Released With VK_AMD_anti_lag For RADV, Many Other Vulkan Improvements",
+    "summary_en": "Mesa 26.3 is out today as the fourth quarter Mesa3D feature release for this collection of open-source OpenGL and Vulkan drivers...",
+    "pub_date": "Mon, 09 Nov 2026 19:19:46 -0500",
+    "title_zh": "Mesa 26.3 发布：为 RADV 带来 VK_AMD_anti_lag 及众多 Vulkan 改进",
+    "summary_zh": "Mesa 26.3 作为 2026 年第四季度的功能版本正式发布，为开源 OpenGL 和 Vulkan 驱动合集带来大量更新。亮点包括 RADV 支持 VK_AMD_anti_lag、改进早期 GCN 架构 GPU 支持、默认启用 Intel Jay 着色器编译器、Intel Nova Lake 图形默认启用、NVK 驱动支持 Vulkan Video、Intel 为 DXVK 启用缓冲区压缩以提升游戏性能，以及 Panfrost/PanVK 新增多款 GPU 支持等。",
+    "fulltext_zh": "Mesa 26.3 于今日发布，这是该开源 OpenGL 与 Vulkan 驱动合集在 2026 年第四季度的功能版本。\n\nMesa 26.3 带来了许多令人兴奋的变更，例如 RADV 支持 VK_AMD_anti_lag、改进 RADV 对早期 GCN 时代 GPU 的支持、默认启用新的 Intel Jay 着色器编译器、Intel Nova Lake P 64 位 GPU 模式、Intel Nova Lake 图形默认启用（不再处于实验状态）、NVK 驱动支持 Vulkan Video、Intel 为 DXVK 启用缓冲区压缩以提升游戏性能、Intel Vulkan Video 改进、AND GFX1171 GPU 支持，以及各种其他变更。\n\n发布说明对 Mesa 26.3 的总结如下：\n- RADV 上的 VK_AMD_anti_lag\n- pvr 上的 VK_IMG_filter_linear_2d\n- pvr 上的 VK_KHR_maintenance7\n- panvk/v6-7 上的 Vulkan 1.3\n- panvk/v6-7 上的 VK_KHR_maintenance4\n- panvk/v6-7 上的 VK_KHR_maintenance5\n- panvk/v6-7 上的 VK_KHR_maintenance7\n- panvk/v6-7 上的 VK_KHR_maintenance8\n- panvk/v6-7 上的 VK_KHR_shader_float_controls2\n- panvk/v6-7 上的 VK_KHR_shader_subgroup_extended_types\n- panvk/v6-7 上的 VK_EXT_subgroup_size_control\n- panvk/v6-7 上的 VK_ARM_shader_core_builtins\n- panvk/v6-7 上的 VK_ARM_shader_core_properties\n- panvk/v6-7 上的 VK_ARM_scheduling_controls\n- panvk/v6-7 上的 shaderCoreBuiltins\n- panvk/v6-7 上的 schedulingControls\n- pvr 上的 VK_KHR_synchronization2\n- panvk 上的 VK_KHR_copy_memory_indirect\n- panvk/v6-7 上的 VK_KHR_maintenance6\n- panvk/v6-7 上的 VK_KHR_spirv_1_4\n- v3dv 上的 VK_EXT_device_memory_report\n- pvr 上的 shaderUniformBufferArrayDynamicIndexing\n- pvr 上的 shaderStorageBufferArrayDynamicIndexing\n- pvr 上的 shaderSampledImageArrayDynamicIndexing\n- pvr 上的 shaderStorageImageArrayDynamicIndexing\n- pvr 上的 shaderInputAttachmentArrayDynamicIndexing\n- pvr 上的 shaderUniformTexelBufferArrayDynamicIndexing\n- pvr 上的 shaderStorageTexelBufferArrayDynamicIndexing\n- RADV 上的 VK_KHR_video_encode_feedback2\n- pvr 上的 VK_EXT_global_priority\n- pvr 上的 VK_EXT_global_priority_query\n- pvr 上的 VK_KHR_global_priority\n- panvk 上的 VK_KHR_cooperative_matrix\n- Panfrost 对 Mali G68 GPU 的支持\n- iris、llvmpipe 和 zink 上的 cl_ext_float_atomics\n- iris 上的 cl_khr_semaphore\n- iris 上的 cl_khr_external_semaphore\n- iris 上的 cl_khr_external_semaphore_sync_fd\n- pvr 上的 VK_EXT_inline_uniform_block\n- pvr 上的 VK_KHR_shader_fma\n- pvr 上的 fragmentStoresAndAtomics\n- radv、lavapipe 上的 VK_EXT_cooperative_matrix_maintenance1\n- nvk 上的 VK_KHR_device_address_commands\n- Panfrost 和 PanVK 对 G715 和 G615 GPU 的支持\n- etnaviv/HALTI5 上的 GL_ARB_texture_multisample\n- panvk 上的 VK_KHR_shader_constant_data\n- pvr 对 BXM-4-64 (36.52.104.182) 的支持\n- pvr 上的 VK_KHR_shader_float_controls2\n- GFX12 上的 VK_KHR_performance_query\n- etnaviv/HALTI2 上的 GLSL 130\n- etnaviv/HALTI2 上的 GL_EXT_texture_integer\n- etnaviv/HALTI2 上的 GL_ARB_shader_bit_encoding\n- etnaviv/HALTI2 上的 GL_ARB_texture_rgb10_a2ui\n- pvr 上的 VK_EXT_primitive_topology_list_restart\n- panvk 上的 VK_KHR_incremental_present\n- panvk 上的 VK_EXT_swapchain_colorspace\n- pvr 上的 VK_KHR_push_descriptor\n- pvr 上的 VK_EXT_image_sliced_view_of_3d\n- panvk 上的 VK_EXT_image_compression_control\n- HK 上的 VK_KHR_shader_untyped_pointers\n- HK 上的 VK_KHR_maintenance10\n- HK 上的 VK_KHR_shader_fma\n- HK 上的 VK_EXT_primitive_restart_index\n- etnaviv/HALTI5 上的 GL_EXT_color_buffer_float\n- etnaviv/HALTI5 上的 GL_EXT_conservative_depth\n- etnaviv/HALTI5 上的 GL_EXT_draw_buffers_indexed\n- etnaviv/HALTI5 上的 GL_EXT_EGL_image_storage\n- etnaviv/HALTI5 上的 GL_EXT_EGL_image_storage_compression\n- etnaviv/HALTI5 上的 GL_EXT_shader_integer_mix\n- etnaviv/HALTI5 上的 GL_EXT_sRGB_write_control\n- etnaviv/HALTI5 上的 GL_EXT_texture_compression_rgtc\n- etnaviv/HALTI5 上的 GL_EXT_texture_sRGB_decode\n- etnaviv/HALTI5 上的 GL_EXT_texture_sRGB_R8\n- etnaviv/HALTI5 上的 GL_EXT_texture_sRGB_RG8\n- etnaviv/HALTI5 上的 GL_EXT_texture_storage_compression\n- etnaviv/HALTI5 上的 GL_MESA_framebuffer_flip_y"
+  },
+  "7b85d5b58a10fb850cfaf9f488f67fa5": {
+    "id": "7b85d5b58a10fb850cfaf9f488f67fa5",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Firefox-160-Released",
+    "title_en": "Firefox 160 Available With Speech-To-Text, MKV Files With FLAC / MP3 / PCM Audio",
+    "summary_en": "The Firefox 160.0 release builds are now available as the latest bi-weekly stable update to Mozilla's web browser...",
+    "pub_date": "Mon, 09 Nov 2026 18:12:33 -0500",
+    "title_zh": "Firefox 160 发布：支持语音转文字，可播放含 FLAC/MP3/PCM 音频的 MKV 文件",
+    "summary_zh": "Firefox 160 稳定版发布，新增对含 FLAC、MP3 或 PCM 音频的 Matroska（MKV）文件播放支持，并集成 Web Speech API 的语音识别功能，实现设备端实时语音转文字，支持 40 种语言。此外，画中画播放器新增 0.25 倍至 2.0 倍速的播放语音设置，地址栏域名对比度也有所提升。",
+    "fulltext_zh": "Firefox 160 发布：支持语音转文字，可播放含 FLAC/MP3/PCM 音频的 MKV 文件\n2026 年 11 月 9 日 06:12 PM EST 发布。\n\nFirefox 160.0 发布版本现已可用，这是 Mozilla 网络浏览器最新的双周稳定版更新。\n\nFirefox 160 现已支持播放带有 FLAC、MP3 或 PCM 音频的 Matroska（MKV）文件。一年前 Mozilla 曾表示，由于使用率低，支持 MP3 的 Matroska 不在其功能计划中，但最终他们决定在支持 FLAC 和 PCM 音频的同时也实现对 MP3 的支持。\n\nFirefox 160 的另一个显著变化是 Web Speech API 的语音识别部分，用于支持设备端实时语音转文字。Firefox 中集成的语音转文字支持可处理 40 种不同语言。\n\nFirefox 160 还为画中画播放器新增了播放语音设置，速度从 0.25 倍到 2.0 倍。\n\n此外还有一些界面优化，例如提高了地址栏中域名与其余地址之间的对比度。\n\nFirefox 160 发布二进制文件可在以下地址下载：\n\nFirefox 159 发布，修复 AMD Linux 图形过度内存使用问题\nFirefox 159 Beta 发布，修复 Wayland 上的标签页问题\nFirefox 158 现已可用，默认支持 JPEG-XL\nFirefox 157 现已可用，带来视觉刷新、WebRTC 硬件 AV1 解码\nFirefox 157 Beta 发布，包含最新增强功能\nFirefox 156 可用，内置 PDF 查看器启动速度提升高达 45%\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nSynaptics 似乎利用法律威胁阻止开源 DisplayLink 驱动\nLinux 7.4 合并窗口轻松成为内核历史上最大的合并窗口\nOpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞\nDebian 的 APT 受中间人攻击影响，可以 root 权限执行任意代码\nLinux 内核准备移除最后一批 MMX 优化代码\nFedora 45 发布，带来众多前沿 Linux 创新\n“AMD 爱 Omarchy” Linux 将有更多合作\nLinux 7.4-rc1 发布，性能改进出色，为 AMD Ryzen Zen 6 做准备，AMDGPU HDMI 2.1 默认启用\n\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "1c9817e7a88dc441698b2fbe94d603bc": {
+    "id": "1c9817e7a88dc441698b2fbe94d603bc",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMDGPU-Patches-GFX13",
+    "title_en": "AMDGPU Linux Driver Patches Posted For Enabling GFX13 Graphics IP - RDNA5",
+    "summary_en": "Since the beginning of the year there have been AMDGPU LLVM back-end patches for GFX13 as AMD's next-generation graphics IP. This is most likely for RDNA 5 graphics. Now out today are the GFX13 patches finally surfacing for the AMDGPU Linux kernel graphics driver...",
+    "pub_date": "Mon, 09 Nov 2026 14:11:37 -0500",
+    "title_zh": "AMDGPU Linux 驱动补丁发布，启用 GFX13 图形 IP（RDNA5）",
+    "summary_zh": "AMDGPU 维护者 Alex Deucher 发布了八组补丁，为开源 Linux 内核图形驱动启用 GFX 13 / GC 13.x 支持，代码超过 1.26 万行，包含 GFX 13.0.1 和 13.0.4 目标。GFX13 预计对应 RDNA 5 图形架构，补丁时机暗示该支持将随 Linux 7.5 内核引入。目前补丁尚未透露 RDNA 5 的具体新特性。",
+    "fulltext_zh": "自今年年初以来，AMD 已为 GFX13 发布 AMDGPU LLVM 后端补丁，GFX13 是 AMD 的下一代图形 IP，极有可能用于 RDNA 5 图形。如今，面向 AMDGPU Linux 内核图形驱动的 GFX13 补丁终于发布。\n\nAMDGPU 维护者 Alex Deucher 今日发布了补丁系列，为该开源内核驱动启用 GFX 13 / GC 13.x 支持。这组八个补丁的代码超过 1.26 万行（不计通常庞大的头文件），还包括对特定 GFX 13.0.1 和 GFX 13.0.4 目标的支持。\n\n目前正在细读这些补丁，但尚未发现有关 RDNA 5 预期能力或新特性的过多透露。\n\n感兴趣的读者可以在相关邮件列表中找到 AMDGPU 内核驱动的 GFX13 启用补丁。后续补丁将如何为任何新特性进行接线，值得关注。\n\n鉴于这些补丁的发布时间，GFX13 支持预计将随 Linux 7.5 内核引入。内核中已经包含 DCN6 和其他 IP 块，它们很可能也将构成 RDNA 5 GPU。"
+  },
+  "14b9c87fcdd2e9e08631e8fbe4c51e39": {
+    "id": "14b9c87fcdd2e9e08631e8fbe4c51e39",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Darling-Using-AI-macOS-Linux",
+    "title_en": "Darling Now Embraces AI For Running macOS Binaries On Linux",
+    "summary_en": "Darling is the software project more than a decade in development that is designed to run macOS binaries on Linux. This macOS compatibility layer for Linux is now gaining more brisk developments as it turns to AI/LLMs to assist in this creation...",
+    "pub_date": "Mon, 09 Nov 2026 08:02:13 -0500",
+    "title_zh": "Darling 项目拥抱 AI 以在 Linux 上运行 macOS 二进制文件",
+    "summary_zh": "Darling 是一个旨在 Linux 上运行 macOS 二进制文件的兼容层项目。该项目现已采纳 AI 辅助贡献规则，借助大语言模型弥补开发资源不足，甚至通过 AI 生成的补丁让《英雄联盟》macOS 版在 Linux 上运行。项目还初步支持了 ARM64 架构，并正将相关分支的补丁合并到上游。",
+    "fulltext_zh": "Darling 是一个正在开发中的软件项目，旨在 Linux 上运行 macOS 二进制文件。这个 Linux 的 macOS 兼容层如今正迎来更活跃的发展，因为它转向利用 AI/大语言模型来协助开发。\n\nDarling 已采纳了 AI 辅助贡献的规则。他们认为大语言模型可以成为非常强大的工具，鉴于其开发团队规模小、资源非常有限，这对他们很有益处。\n\n“AI 改变了局面。过去只有少数贡献者时无法解决的问题，现在在经济上变得可行，这让我们能在更接近平等的条件下与 Apple 竞争。\n\n该政策是我们如何负责任地使用这种力量的方式。它被写成给 AI 代理的指令，但也约束使用它们的人类。任何提交拉取请求的人都要对其中的每一行负责，并且必须能用自己的话解释它；维护者的问题由人来回答，而不是由机器人回答。其余部分体现了我们的净室规则：实现文档化的契约，而不是为单个应用打补丁；尊重 macOS 的分层；隔离并标记未文档化的怪癖；绝不使用泄露材料或 Apple 的受限源代码，例如 corecrypto。任何人都不应使用反汇编来生成匹配的代码。”\n\n通过 AI 生成的补丁，他们甚至让 macOS 版的游戏《英雄联盟》在 Linux 上运行起来。今年出现了各种拥抱 AI 生成代码的 Darling“分支”，现在他们正努力将这些补丁合并到上游 Darling 中。\n\nDarling 开发者还推出了对 ARM64 的初步支持。\n\n关于 AI 时代 Darling 项目在 Linux 上运行 macOS 软件的新进展的更多细节，可通过以下内容了解：\n\nServo 浏览器引擎继续拓宽 Web 兼容性，新增功能\nZlib 1.4 发布，包含十多个安全修复\nLZ4 1.11 为 liblz4 引入多线程压缩及其他性能提升\nFreeRDP 3.33 发布，支持 WebAssembly，因 AI 活动激增\noneDNN 3.14 发布，支持 ACE，初步 AMD Zen 优化\nOpenSSL 4.1 发布，更多 AVX-512 优化\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nSynaptics 似乎利用法律威胁阻止开源 DisplayLink 驱动\nLinux 7.4 合并窗口轻松成为内核历史上最大的\nOpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞\nDebian 的 APT 受中间人攻击影响，可以 root 身份执行任意代码\nLinux 内核准备移除最后一批 MMX 优化代码\nFedora 45 发布，带来许多前沿 Linux 创新\n“AMD 爱 Omarchy”Linux 将有更多合作\nLinux 7.4-rc1 发布，性能改进良好，为 AMD Ryzen Zen 6 做准备，AMDGPU HDMI 2.1 默认启用\n\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "dbb3c3e66aceebce8b447cc488d5fff0": {
+    "id": "dbb3c3e66aceebce8b447cc488d5fff0",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/ChaCha-AVX-512-Linux-7.5",
+    "title_en": "ChaCha AVX-512 Optimization For Linux 7.5 Yields Up To 99% Improvement On AMD Zen 5",
+    "summary_en": "The Linux kernel's ChaCha symmetric stream cipher code has long had an AVX-512 optimized code path but it was catering to the early generations of Intel CPUs with AVX-512 (Skylake) that suffered from down-clocking under use. But now slated for arrival with Linux 7.5 is tuning the code to perform better on today's AVX-512 Intel and AMD processors that don't suffer from this limitation. In turn the ChaCha performance is as much as 99% faster with current-generation AMD Zen 5 processors...",
+    "pub_date": "Mon, 09 Nov 2026 07:35:12 -0500",
+    "title_zh": "Linux 7.5 的 ChaCha AVX-512 优化在 AMD Zen 5 上带来高达 99% 的性能提升",
+    "summary_zh": "Linux 内核的 ChaCha 流密码代码针对现代 AVX-512 处理器进行了优化，新增 16 块 AVX-512 函数，在 AMD Zen 5 上性能提升高达 99%，Zen 4 上提升 39%。该补丁已进入 libcrypto-next 分支，预计随 Linux 7.5 合并窗口提交。",
+    "fulltext_zh": "Linux 内核的 ChaCha 对称流密码代码长期以来一直有一条优化代码路径，但它是为了迎合早期支持 AVX-512 的 Intel CPU（Skylake）而设计的，这些 CPU 在使用时会降频。但现在计划随 Linux 7.5 引入的调整将使代码在当今不会受此限制的 AVX-512 Intel 和 AMD 处理器上表现更好。相应地，在当前一代 AMD Zen 5 处理器上，ChaCha 性能提升高达 99%。\n\nStrongSwan 开发者 Martin Willi 为 libcrypto 中的 ChaCha 代码添加了一个 16 块 AVX-512 函数。这使得在现代 AVX-512 处理器上性能更佳，在 AMD Ryzen AI Max Strix Halo（Zen 5）上测试，完整的 AVX-512 512 位数据路径带来了高达 99% 的提升。即使在上一代 AMD Zen 4 的 256 位数据路径上，也仍显示出高达 39% 的提升。\n\nMartin 解释说：\n“AVX-512VL 代码在 256 位 ymm 寄存器中一次最多处理 8 个块。选择该宽度是为了避免 512 位 zmm 指令在 Skylake-X 上触发的严重核心降频。\n在更新的 AVX-512 部件上，这一惩罚已经消失，完整的 512 位寄存器每次调用可以加密 16 个块，对于批量流量大致将数据级并行度翻倍。因此，在 VL=64 时第二次实例化共享块宏，只有最后的跨通道转置不同。在 avx512vl 路径之上启用它，仅由 X86_FEATURE_PREFER_YMM 控制，并对大于 8 个块的输入分派到该路径。”\n\n该补丁已排入 Eric Biggers 的 libcrypto-next Git 分支，因此预计将在年底的 Linux 7.5 合并窗口提交。"
+  },
+  "c57903fa0f40ce81702cb4310a79f032": {
+    "id": "c57903fa0f40ce81702cb4310a79f032",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/centos-founder-builds-linux-compatible-rust-kernel-with-ai-in-just-11-days/",
+    "title_en": "CentOS Founder Builds Linux-Compatible Rust Kernel with AI in Just 11 Days",
+    "summary_en": "CentOS and Rocky Linux founder Gregory Kurtzer unveils Ginux, an experimental Rust-based, Linux-compatible kernel built with AI assistance in just 11 days.\nThe post CentOS Founder Builds Linux-Compatible Rust Kernel with AI in Just 11 Days appeared first on Linux Today.",
+    "pub_date": "Mon, 09 Nov 2026 08:15:39 +0000",
+    "title_zh": "CentOS创始人借助AI仅用11天构建Linux兼容的Rust内核",
+    "summary_zh": "CentOS与Rocky Linux创始人Gregory Kurtzer发布了Ginux，这是一个实验性的、基于Rust且兼容Linux的内核，在AI辅助下仅用11天完成开发。",
+    "fulltext_zh": "CentOS与Rocky Linux创始人Gregory Kurtzer发布了Ginux，这是一个实验性的、基于Rust且兼容Linux的内核，在AI辅助下仅用11天完成开发。\n\n该文章《CentOS创始人借助AI仅用11天构建Linux兼容的Rust内核》首发于Linux Today。"
+  },
+  "d3d10b2ad7ba2a8e5dbe1c417c4acade": {
+    "id": "d3d10b2ad7ba2a8e5dbe1c417c4acade",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/apprise-2-1-notification-tool-adds-12-new-services-supports-170-plugins/",
+    "title_en": "Apprise 2.1 Notification Tool Adds 12 New Services, Supports 170 Plugins",
+    "summary_en": "Apprise 2.1 adds 12 notification services, expands support to 170 plugins, and improves alert management, security, and integrations.\nThe post Apprise 2.1 Notification Tool Adds 12 New Services, Supports 170 Plugins appeared first on Linux Today.",
+    "pub_date": "Mon, 09 Nov 2026 08:14:46 +0000",
+    "title_zh": "Apprise 2.1 通知工具新增 12 项服务，支持 170 个插件",
+    "summary_zh": "Apprise 2.1 版本发布，新增 12 种通知服务，插件支持扩展至 170 个，并在告警管理、安全性和集成方面进行了改进。",
+    "fulltext_zh": "Apprise 2.1 新增 12 种通知服务，插件支持扩展至 170 个，并改进了告警管理、安全性和集成能力。\n\n文章《Apprise 2.1 通知工具新增 12 项服务，支持 170 个插件》首发于 Linux Today。"
+  },
+  "6df81b7f1e61347616aabc830aa1d2a9": {
+    "id": "6df81b7f1e61347616aabc830aa1d2a9",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/12-free-command-examples-to-check-memory-usage-in-linux/",
+    "title_en": "12 free Command Examples to Check Memory Usage in Linux",
+    "summary_en": "Learn 12 practical Linux commands to check RAM usage, monitor memory consumption, identify resource-heavy processes, and troubleshoot performance issues.\nThe post 12 free Command Examples to Check Memory Usage in Linux appeared first on Linux Today.",
+    "pub_date": "Mon, 09 Nov 2026 08:09:32 +0000",
+    "title_zh": "12个免费命令示例：在Linux中检查内存使用情况",
+    "summary_zh": "本文介绍了12个实用的Linux命令，用于检查RAM使用情况、监控内存消耗、识别占用资源较多的进程以及排查性能问题。这些命令可帮助系统管理员和用户更好地了解系统内存状态，及时发现并解决内存相关的性能瓶颈。",
+    "fulltext_zh": "学习12个实用的Linux命令，用于检查RAM使用情况、监控内存消耗、识别占用资源较多的进程，并排查性能问题。\n\n文章《12个免费命令示例：在Linux中检查内存使用情况》首次发布于Linux Today。"
+  },
+  "e3b32413d0cc145c18db537ee75ba44d": {
+    "id": "e3b32413d0cc145c18db537ee75ba44d",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/abusebox-open-source-monitor-for-blacklists-dns-ssl-and-email-records/",
+    "title_en": "AbuseBox: Open-source Monitor for Blacklists, DNS, SSL and Email Records",
+    "summary_en": "Discover AbuseBox, an open-source monitoring tool for checking IP blacklists, DNS records, SSL certificates, and email authentication security.\nThe post AbuseBox: Open-source Monitor for Blacklists, DNS, SSL and Email Records appeared first on Linux Today.",
+    "pub_date": "Mon, 09 Nov 2026 08:07:46 +0000",
+    "title_zh": "AbuseBox：开源的黑名单、DNS、SSL和电子邮件记录监控工具",
+    "summary_zh": "AbuseBox是一款开源监控工具，可用于检查IP黑名单、DNS记录、SSL证书以及电子邮件认证安全状况，帮助用户及时发现并处理相关安全问题。",
+    "fulltext_zh": "了解AbuseBox，这是一款开源监控工具，用于检查IP黑名单、DNS记录、SSL证书和电子邮件认证安全。\n\n文章《AbuseBox：开源的黑名单、DNS、SSL和电子邮件记录监控工具》首发于Linux Today。"
+  },
+  "cee9ab6cdfe9b28d4d0d24af82f44b78": {
+    "id": "cee9ab6cdfe9b28d4d0d24af82f44b78",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/scribus-1-6-7-open-source-desktop-publishing-app-released-with-improvements/",
+    "title_en": "Scribus 1.6.7 Open-Source Desktop Publishing App Released with Improvements",
+    "summary_en": "Scribus 1.6.7 fixes seven security vulnerabilities, improves text formatting, resolves crashes, and enhances stability in the open-source publishing app.\nThe post Scribus 1.6.7 Open-Source Desktop Publishing App Released with Improvements appeared first on Linux Today.",
+    "pub_date": "Mon, 09 Nov 2026 08:05:47 +0000",
+    "title_zh": "Scribus 1.6.7 开源桌面出版应用发布，带来多项改进",
+    "summary_zh": "Scribus 1.6.7 修复了七个安全漏洞，改进了文本格式化，解决了崩溃问题，并增强了这款开源出版应用的稳定性。",
+    "fulltext_zh": "Scribus 1.6.7 修复了七个安全漏洞，改进了文本格式化，解决了崩溃问题，并增强了这款开源出版应用的稳定性。\n\n文章《Scribus 1.6.7 开源桌面出版应用发布，带来多项改进》首次出现在 Linux Today。"
+  },
+  "a20ae89a97bf9c75912d5053ebea43ef": {
+    "id": "a20ae89a97bf9c75912d5053ebea43ef",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/mesa-26-3-open-source-graphics-stack-officially-released-heres-whats-new",
+    "title_en": "Mesa 26.3 Open-Source Graphics Stack Officially Released, Here’s What’s New",
+    "summary_en": "Mesa 26.3 open-source graphics stack is now available for download with new features and improvements across all supported drivers. Here’s what’s new!\nThe post Mesa 26.3 Open-Source Graphics Stack Officially Released, Here’s What’s New appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Tue, 10 Nov 2026 00:14:59 +0000",
+    "title_zh": "Mesa 26.3 开源图形栈正式发布，新特性一览",
+    "summary_zh": "Mesa 26.3 开源图形栈现已开放下载，为所有支持的驱动带来新功能和改进。该版本涵盖多项更新，具体新特性详见正文。",
+    "fulltext_zh": "Mesa 26.3 开源图形栈现已可供下载，在所有支持的驱动中带来了新功能和改进。以下是新特性一览！\n\n文章《Mesa 26.3 开源图形栈正式发布，新特性一览》首发于 9to5Linux——未经许可请勿转载本文。本 RSS 源面向读者，而非抓取程序。"
+  },
+  "84c28a6464eccd6ad41bdde6860899ca": {
+    "id": "84c28a6464eccd6ad41bdde6860899ca",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/mozilla-firefox-160-is-now-available-for-download-heres-whats-new",
+    "title_en": "Mozilla Firefox 160 Is Now Available for Download, Here’s What’s New",
+    "summary_en": "Mozilla Firefox 160 open-source web browser is now available for download with Mini Window, support for MathML content in PDFs, and Picture-in-Picture playback speed settings.\nThe post Mozilla Firefox 160 Is Now Available for Download, Here’s What&#8217;s New appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Mon, 09 Nov 2026 21:28:24 +0000",
+    "title_zh": "Mozilla Firefox 160 现已可供下载，以下是新功能",
+    "summary_zh": "Mozilla Firefox 160 开源网页浏览器现已可供下载，带来迷你窗口、PDF 中支持 MathML 内容以及画中画播放速度设置等新功能。",
+    "fulltext_zh": "Mozilla Firefox 160 开源网页浏览器现已可供下载，带来迷你窗口、PDF 中支持 MathML 内容以及画中画播放速度设置。\n\n文章《Mozilla Firefox 160 现已可供下载，以下是新功能》首发于 9to5Linux——未经许可请勿转载本文。本 RSS 源面向读者，而非抓取程序。"
+  },
+  "3eb07bd910009a7063043ed0dd4cbc3e": {
+    "id": "3eb07bd910009a7063043ed0dd4cbc3e",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/mozilla-firefox-161-enters-public-beta-testing-heres-what-to-expect",
+    "title_en": "Mozilla Firefox 161 Enters Public Beta Testing, Here’s What to Expect",
+    "summary_en": "Mozilla Firefox 161 open-source web browser is now available for public beta testing with various new features and improvements. Here’s what to expect!\nThe post Mozilla Firefox 161 Enters Public Beta Testing, Here’s What to Expect appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Mon, 09 Nov 2026 21:14:27 +0000",
+    "title_zh": "Mozilla Firefox 161 进入公开测试阶段，以下是值得期待的新特性",
+    "summary_zh": "Mozilla Firefox 161 开源网页浏览器现已开放公开测试，带来多项新功能与改进。本文介绍了该版本值得关注的变化，包括界面与性能方面的优化，帮助用户提前了解正式版将带来的体验提升。",
+    "fulltext_zh": "Mozilla Firefox 161 开源网页浏览器现已开放公开测试，带来多项新功能与改进。以下是值得期待的内容！\n\n文章《Mozilla Firefox 161 进入公开测试阶段，以下是值得期待的新特性》首发于 9to5Linux——未经许可请勿转载本文。本 RSS 源面向读者，而非抓取程序。"
   }
 }

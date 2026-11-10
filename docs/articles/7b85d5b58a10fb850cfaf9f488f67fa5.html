@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Firefox 160 发布：支持语音转文字，可播放含 FLAC/MP3/PCM 音频的 MKV 文件 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月10日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Firefox 160 发布：支持语音转文字，可播放含 FLAC/MP3/PCM 音频的 MKV 文件</h1>
+
+  <div class="article-summary">Firefox 160 稳定版发布，新增对含 FLAC、MP3 或 PCM 音频的 Matroska（MKV）文件播放支持，并集成 Web Speech API 的语音识别功能，实现设备端实时语音转文字，支持 40 种语言。此外，画中画播放器新增 0.25 倍至 2.0 倍速的播放语音设置，地址栏域名对比度也有所提升。</div>
+
+  <div class="article-body"><p>Firefox 160 发布：支持语音转文字，可播放含 FLAC/MP3/PCM 音频的 MKV 文件</p><p>2026 年 11 月 9 日 06:12 PM EST 发布。</p><p>Firefox 160.0 发布版本现已可用，这是 Mozilla 网络浏览器最新的双周稳定版更新。</p><p>Firefox 160 现已支持播放带有 FLAC、MP3 或 PCM 音频的 Matroska（MKV）文件。一年前 Mozilla 曾表示，由于使用率低，支持 MP3 的 Matroska 不在其功能计划中，但最终他们决定在支持 FLAC 和 PCM 音频的同时也实现对 MP3 的支持。</p><p>Firefox 160 的另一个显著变化是 Web Speech API 的语音识别部分，用于支持设备端实时语音转文字。Firefox 中集成的语音转文字支持可处理 40 种不同语言。</p><p>Firefox 160 还为画中画播放器新增了播放语音设置，速度从 0.25 倍到 2.0 倍。</p><p>此外还有一些界面优化，例如提高了地址栏中域名与其余地址之间的对比度。</p><p>Firefox 160 发布二进制文件可在以下地址下载：</p><p>Firefox 159 发布，修复 AMD Linux 图形过度内存使用问题</p><p>Firefox 159 Beta 发布，修复 Wayland 上的标签页问题</p><p>Firefox 158 现已可用，默认支持 JPEG-XL</p><p>Firefox 157 现已可用，带来视觉刷新、WebRTC 硬件 AV1 解码</p><p>Firefox 157 Beta 发布，包含最新增强功能</p><p>Firefox 156 可用，内置 PDF 查看器启动速度提升高达 45%</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Synaptics 似乎利用法律威胁阻止开源 DisplayLink 驱动</p><p>Linux 7.4 合并窗口轻松成为内核历史上最大的合并窗口</p><p>OpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞</p><p>Debian 的 APT 受中间人攻击影响，可以 root 权限执行任意代码</p><p>Linux 内核准备移除最后一批 MMX 优化代码</p><p>Fedora 45 发布，带来众多前沿 Linux 创新</p><p>“AMD 爱 Omarchy” Linux 将有更多合作</p><p>Linux 7.4-rc1 发布，性能改进出色，为 AMD Ryzen Zen 6 做准备，AMDGPU HDMI 2.1 默认启用</p><p>同时享受无广告浏览、</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Firefox-160-Released" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

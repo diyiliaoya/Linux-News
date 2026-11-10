@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SuperPoD OS 与 Agentic Infra 在 openEuler Summit 2026 上成为焦点 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月10日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">桌面环境</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>SuperPoD OS 与 Agentic Infra 在 openEuler Summit 2026 上成为焦点</h1>
+
+  <div class="article-summary">openEuler Summit 2026 将于11月13-14日在北京中关村国际创新中心举行，主题为“从操作系统向上构建Agentic Infra”。大会聚焦SuperPoD OS和面向AI智能体的基础设施，首日举办Agentic Infra OS Conference，次日为openEuler Summit社区活动。议程包括京东、美团等企业的实践分享，以及超过30场主题演讲和1000平方米的演示互动区。</div>
+
+  <div class="article-body"><p>SuperPoD OS 与 Agentic Infra 在 openEuler Summit 2026 上成为焦点</p><p>11月13日至14日在北京举行的活动将聚焦 SuperPoD OS、面向 AI 智能体的基础设施以及行业部署经验。所有这些都围绕“从操作系统向上构建 Agentic Infra”这一主题展开。</p><p>Agentic Infra OS Conference 与 openEuler Summit 2026 将于11月13日至14日在北京中关村国际创新中心举行。</p><p>在“从操作系统向上构建 Agentic Infra”的主题下，本次活动将汇聚开发者、开源贡献者和行业合作伙伴，共同探讨操作系统如何支持大规模 AI 计算和 AI 智能体的部署。</p><p>为期两天的活动将第一天设为面向行业的议程，以 Agentic Infra OS Conference 的主题演讲领衔；第二天则围绕 openEuler Summit 展开，面向社区。</p><p>It's FOSS 将远程关注此次活动，并在活动结束后再次报道其中的有趣内容。</p><p>操作系统正成为 AI 基础设施的一部分</p><p>随着 AI 应用日益复杂，基础设施团队面临的挑战已超出模型性能本身。这些挑战包括在紧密集成的系统间协调计算资源、安全地运行智能体工作负载，以及理解系统在生产环境中的行为。</p><p>就在几个月前，openEuler 发布了 24.03 LTS SP4，这是一个基于 Linux 内核 6.6 的更新，为企业 AI 智能体增加了智能体沙箱运行时、可靠性和易用性增强、NPU 资源分区、推理服务的快速故障恢复，以及 AI 编译器和性能方面的工作。该版本反映了来自 39 个社区成员组织的 2,006 名开发者的贡献。</p><p>我提到这一点的原因是，该版本框定了本次峰会的核心问题。</p><p>随着智能体运行时间更长、执行多步骤任务循环并在系统间保持状态和内存，当今操作系统核心的进程和资源抽象正被拉伸。</p><p>会议将通过两个相互关联的领域来审视这些挑战：SuperPoD OS 和智能体基础设施。</p><p>SuperPoD OS 是 openEuler 面向 SuperPoD 计算集群的操作系统，旨在解决在大型、紧密集成的计算系统中协调资源所需的系统软件问题。</p><p>在活动上，openEuler 将展示其在该领域的最新进展，这些进展建立在 24.03 LTS SP4 中引入的 UnifiedBus、内存池化和故障定位工作之上。</p><p>已公布的议程包括京东使用基于 openEuler 的 SuperPoD 系统处理广告工作负载的经验，以及一场关于 Ubuntu 与 openEuler 合作发展 SuperPoD 生态的会议。京东是一家《财富》世界500强公司，也是中国最大的直销零售商。</p><p>智能体基础设施</p><p>智能体基础设施议程将聚焦于可靠、安全地运行 AI 智能体所需的基础——从沙箱化执行环境和操作系统级内存与 KV 缓存管理，到跨 AI 软件栈的集成。</p><p>美团（一家外卖科技巨头）的预定演讲将探讨其使用 openEuler 进行智能体沙箱化的情况，为在生产环境中管理智能体执行环境提供实用视角。</p><p>这些会议将共同把操作系统开发与构建和部署 AI 应用的组织需求联系起来。</p><p>它们还将为开发者提供机会，与行业从业者和开源贡献者直接讨论工程挑战，并在活动的演示区亲身体验技术。</p><p>为期两天的活动将包括 30 多场主题演讲和小组讨论，并辅以技术会议和 1000 平方米的大型演示互动区。</p><p>还有大量分论坛，主题涵盖内核、AI 基础设施、开发工具、性能优化等。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/openeuler-summit-2026/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

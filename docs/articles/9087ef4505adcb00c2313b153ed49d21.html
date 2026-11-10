@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mesa 26.3 发布：为 RADV 带来 VK_AMD_anti_lag 及众多 Vulkan 改进 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月10日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Mesa 26.3 发布：为 RADV 带来 VK_AMD_anti_lag 及众多 Vulkan 改进</h1>
+
+  <div class="article-summary">Mesa 26.3 作为 2026 年第四季度的功能版本正式发布，为开源 OpenGL 和 Vulkan 驱动合集带来大量更新。亮点包括 RADV 支持 VK_AMD_anti_lag、改进早期 GCN 架构 GPU 支持、默认启用 Intel Jay 着色器编译器、Intel Nova Lake 图形默认启用、NVK 驱动支持 Vulkan Video、Intel 为 DXVK 启用缓冲区压缩以提升游戏性能，以及 Panfrost/PanVK 新增多款 GPU 支持等。</div>
+
+  <div class="article-body"><p>Mesa 26.3 于今日发布，这是该开源 OpenGL 与 Vulkan 驱动合集在 2026 年第四季度的功能版本。</p><p>Mesa 26.3 带来了许多令人兴奋的变更，例如 RADV 支持 VK_AMD_anti_lag、改进 RADV 对早期 GCN 时代 GPU 的支持、默认启用新的 Intel Jay 着色器编译器、Intel Nova Lake P 64 位 GPU 模式、Intel Nova Lake 图形默认启用（不再处于实验状态）、NVK 驱动支持 Vulkan Video、Intel 为 DXVK 启用缓冲区压缩以提升游戏性能、Intel Vulkan Video 改进、AND GFX1171 GPU 支持，以及各种其他变更。</p><p>发布说明对 Mesa 26.3 的总结如下：</p><p>- RADV 上的 VK_AMD_anti_lag</p><p>- pvr 上的 VK_IMG_filter_linear_2d</p><p>- pvr 上的 VK_KHR_maintenance7</p><p>- panvk/v6-7 上的 Vulkan 1.3</p><p>- panvk/v6-7 上的 VK_KHR_maintenance4</p><p>- panvk/v6-7 上的 VK_KHR_maintenance5</p><p>- panvk/v6-7 上的 VK_KHR_maintenance7</p><p>- panvk/v6-7 上的 VK_KHR_maintenance8</p><p>- panvk/v6-7 上的 VK_KHR_shader_float_controls2</p><p>- panvk/v6-7 上的 VK_KHR_shader_subgroup_extended_types</p><p>- panvk/v6-7 上的 VK_EXT_subgroup_size_control</p><p>- panvk/v6-7 上的 VK_ARM_shader_core_builtins</p><p>- panvk/v6-7 上的 VK_ARM_shader_core_properties</p><p>- panvk/v6-7 上的 VK_ARM_scheduling_controls</p><p>- panvk/v6-7 上的 shaderCoreBuiltins</p><p>- panvk/v6-7 上的 schedulingControls</p><p>- pvr 上的 VK_KHR_synchronization2</p><p>- panvk 上的 VK_KHR_copy_memory_indirect</p><p>- panvk/v6-7 上的 VK_KHR_maintenance6</p><p>- panvk/v6-7 上的 VK_KHR_spirv_1_4</p><p>- v3dv 上的 VK_EXT_device_memory_report</p><p>- pvr 上的 shaderUniformBufferArrayDynamicIndexing</p><p>- pvr 上的 shaderStorageBufferArrayDynamicIndexing</p><p>- pvr 上的 shaderSampledImageArrayDynamicIndexing</p><p>- pvr 上的 shaderStorageImageArrayDynamicIndexing</p><p>- pvr 上的 shaderInputAttachmentArrayDynamicIndexing</p><p>- pvr 上的 shaderUniformTexelBufferArrayDynamicIndexing</p><p>- pvr 上的 shaderStorageTexelBufferArrayDynamicIndexing</p><p>- RADV 上的 VK_KHR_video_encode_feedback2</p><p>- pvr 上的 VK_EXT_global_priority</p><p>- pvr 上的 VK_EXT_global_priority_query</p><p>- pvr 上的 VK_KHR_global_priority</p><p>- panvk 上的 VK_KHR_cooperative_matrix</p><p>- Panfrost 对 Mali G68 GPU 的支持</p><p>- iris、llvmpipe 和 zink 上的 cl_ext_float_atomics</p><p>- iris 上的 cl_khr_semaphore</p><p>- iris 上的 cl_khr_external_semaphore</p><p>- iris 上的 cl_khr_external_semaphore_sync_fd</p><p>- pvr 上的 VK_EXT_inline_uniform_block</p><p>- pvr 上的 VK_KHR_shader_fma</p><p>- pvr 上的 fragmentStoresAndAtomics</p><p>- radv、lavapipe 上的 VK_EXT_cooperative_matrix_maintenance1</p><p>- nvk 上的 VK_KHR_device_address_commands</p><p>- Panfrost 和 PanVK 对 G715 和 G615 GPU 的支持</p><p>- etnaviv/HALTI5 上的 GL_ARB_texture_multisample</p><p>- panvk 上的 VK_KHR_shader_constant_data</p><p>- pvr 对 BXM-4-64 (36.52.104.182) 的支持</p><p>- pvr 上的 VK_KHR_shader_float_controls2</p><p>- GFX12 上的 VK_KHR_performance_query</p><p>- etnaviv/HALTI2 上的 GLSL 130</p><p>- etnaviv/HALTI2 上的 GL_EXT_texture_integer</p><p>- etnaviv/HALTI2 上的 GL_ARB_shader_bit_encoding</p><p>- etnaviv/HALTI2 上的 GL_ARB_texture_rgb10_a2ui</p><p>- pvr 上的 VK_EXT_primitive_topology_list_restart</p><p>- panvk 上的 VK_KHR_incremental_present</p><p>- panvk 上的 VK_EXT_swapchain_colorspace</p><p>- pvr 上的 VK_KHR_push_descriptor</p><p>- pvr 上的 VK_EXT_image_sliced_view_of_3d</p><p>- panvk 上的 VK_EXT_image_compression_control</p><p>- HK 上的 VK_KHR_shader_untyped_pointers</p><p>- HK 上的 VK_KHR_maintenance10</p><p>- HK 上的 VK_KHR_shader_fma</p><p>- HK 上的 VK_EXT_primitive_restart_index</p><p>- etnaviv/HALTI5 上的 GL_EXT_color_buffer_float</p><p>- etnaviv/HALTI5 上的 GL_EXT_conservative_depth</p><p>- etnaviv/HALTI5 上的 GL_EXT_draw_buffers_indexed</p><p>- etnaviv/HALTI5 上的 GL_EXT_EGL_image_storage</p><p>- etnaviv/HALTI5 上的 GL_EXT_EGL_image_storage_compression</p><p>- etnaviv/HALTI5 上的 GL_EXT_shader_integer_mix</p><p>- etnaviv/HALTI5 上的 GL_EXT_sRGB_write_control</p><p>- etnaviv/HALTI5 上的 GL_EXT_texture_compression_rgtc</p><p>- etnaviv/HALTI5 上的 GL_EXT_texture_sRGB_decode</p><p>- etnaviv/HALTI5 上的 GL_EXT_texture_sRGB_R8</p><p>- etnaviv/HALTI5 上的 GL_EXT_texture_sRGB_RG8</p><p>- etnaviv/HALTI5 上的 GL_EXT_texture_storage_compression</p><p>- etnaviv/HALTI5 上的 GL_MESA_framebuffer_flip_y</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Mesa-26.3-Released" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
