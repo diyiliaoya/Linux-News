@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMD EPYC 9996 基准测试：256 个 Zen 6C 核心展现无与伦比的性能 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月11日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>AMD EPYC 9996 基准测试：256 个 Zen 6C 核心展现无与伦比的性能</h1>
+
+  <div class="article-summary">AMD 正式发布 EPYC 9006 &quot;Venice&quot; 系列 SP7 处理器并公布性能数据。旗舰型号 EPYC 9996 拥有 256 个 Zen 6C 核心，双路配置达 512 核/1024 线程，基准频率 2.55GHz，加速频率 4.1GHz，L3 缓存 1024MB，TDP 600W（可配置至 400W），支持 16 通道 DDR5-8000/MRDIMM-12800 和 96 条 PCIe 6.0 通道。Phoronix 独立测试显示其性能较上代 Turin 大幅提升，并远超 Intel Xeon 6980P。</div>
+
+  <div class="article-body"><p>AMD EPYC 9996 基准测试：256 个 Zen 6C 核心展现无与伦比的性能</p><p>2026 年 11 月 10 日东部时间下午 12:00。</p><p>AMD 在 Advancing AI 活动上宣布了 EPYC 9006 &quot;Venice&quot; 系列。今天，他们宣布 EPYC 9006 系列 Socket SP7 处理器开始供货，OEM/ODM 合作伙伴的系统也从今天开始发货。与此同时，我们也被允许开始分享 AMD EPYC 9006 的性能基准数据。早在 7 月，我就预计 EPYC 9006 将在性能上打出&quot;大满贯&quot;……在亲手测试第六代 EPYC 处理器之后，它确实是大满贯——超乎想象。</p><p>今天标志着 AMD EPYC 9006 SP7 硬件的实际上市，此前今年夏天已对整个 EPYC 9006 产品线进行了软发布。夏季发布时介绍了不同系列和关键特性，而本文则提供了更多关于 Zen 6 的细节以及 SKU 表格。</p><p>EPYC 9006 SP7 现已上市，而 EPYC 9006 SP8 将于 2027 年上半年推出，EPYC 9006X SP7 和 EPYC 9006LP Verano CPU 将于 2027 年下半年推出。</p><p>AMD 在简报中强调，Venice 在 HPC 工作负载上性能达到 Intel Xeon 6980P Granite Rapids 竞品的 2.2 倍，在 NAMD 等领域高达 3.2 倍。</p><p>相较于上一代 EPYC 9005 &quot;Turin&quot;，AMD 强调整数计算性能提升 2 倍，浮点计算性能提升 2.4 倍，内存带宽提升 2.7 倍，HPC 计算性能提升 1.4 倍，矩阵计算性能提升 1.3 倍。</p><p>Zen 6 ISA 的能力并不令人意外，因为 GCC 和 LLVM/Clang 中已存在 Znver6 支持，以及其他 Linux 内核补丁等暴露了 Zen 6 的其他特性。</p><p>Venice 支持多达 16 通道 DDR5-8000 或 MRDIMM-12800，可在内存带宽受限的工作负载中带来惊人的性能。</p><p>但营销幻灯片已经够多了……你来 Phoronix 是为了看独立基准测试。那么让我们从我们自己的测试中，在数百种不同基准下考察 AMD EPYC 9006 系列的性能和能效开始。</p><p>本文关注 EPYC 9996 双路性能。每插槽 256 核/512 线程，在 AMD Nigeria 服务器上测试的双路配置合计 512 核/1024 线程。256 个核心为 Zen 6C，基准频率 2.55GHz，加速频率最高 4.1GHz，L3 缓存 1024MB。EPYC 9996 默认功耗 600 瓦，但可根据需要配置低至 400 瓦。该处理器支持 96 条 PCIe 6.0 通道，以及 DDR5 RDIMM 或 MRDIMM，全部 16 个内存通道可用。该旗舰处理器 1KU 单价为 14,904 美元。</p><p>EPYC 9686F 基准测试也将发布。鉴于某些基准/工作负载在 1,024 线程下扩展性不佳，且 256 核 Zen 6C 与 96 核高频 Zen 6 核心的范围有所不同，因此分不同文章和重点。</p><p>为与新的 EPYC 9996 旗舰对比，本文测试的处理器包括：EPYC 9575F 双路作为上一代 Turin 高频旗舰部件，EPYC 9755 双路作为 128 核旗舰 Zen 5 服务器处理器配置，以及 EPYC 9965 双路 192 核 Zen 5C 服务器旗舰处理器。Intel 方面则是 Intel Xeon 6980P 双路旗舰配置。基于我重新测试现有服务器处理器等可用的时间。更多与其他现有 CPU 对比的基准测试将在后续文章中发布，同时还将展示 EPYC Venice 与我之前 NVIDIA Vera 基准的对比。</p><p>AMD EPYC Venice 应能在任何现代 Linux 发行版上正常运行，如 Ubuntu 26.04 LTS 和最新的 RHEL10 更新。本次评测我使用了 Ubuntu 26.10，在所有对比 CPU 上测试，以获得 Linux 7.3 和其他软件更新的最新体验。</p><p>感谢 AMD 提供 Venice CPU 和参考服务器，用于 Phoronix 持续的 Linux 硬件基准测试和评测。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/review/amd-epyc-9996" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>High Tide（Linux Tidal 客户端）新增播放列表编辑与艺术家屏蔽功能 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月11日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">桌面环境</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>High Tide（Linux Tidal 客户端）新增播放列表编辑与艺术家屏蔽功能</h1>
+
+  <div class="article-summary">High Tide 1.6.0 版本发布，新增播放列表编辑、艺术家和曲目屏蔽功能，并加入偏好设置面板管理屏蔽项。主页面封面新增播放按钮，专辑标题旁显示显式内容、Dolby Atmos、Hi-Res 或无损等标签。设置中可选择始终播放“干净”版本。新增专辑制作人员页面和月度最常听艺术家页面。其他改进包括使用系统强调色高亮正在播放、收藏排序、播放时保持电脑唤醒等，并修复了多个错误。该应用通过 Flathub 分发，需 TIDAL 订阅使用。</div>
+
+  <div class="article-body"><p>High Tide（Linux Tidal 客户端）新增播放列表编辑与艺术家屏蔽功能 - OMG! Ubuntu</p><p>一款非官方的 TIDAL 音乐流媒体 Linux 应用，使用 GTK4/libadwaita 构建，现已发布 1.6.0 版本。该版本加入了付费流媒体服务官方客户端中的更多功能支持，包括屏蔽艺术家和曲目使其不出现在播放列表或自动播放队列中，并新增偏好设置面板以查看和管理屏蔽项。</p><p>TIDAL 最近新增了一项整体屏蔽的选项。High Tide 中没有面向用户的设置，但相关功能已就绪，并将在未来更新中推出。</p><p>主页面封面现在显示播放按钮，与官方客户端一致。这些按钮意味着你可以直接从主页开始播放专辑或播放列表，无需点击进入后再按播放。</p><p>终于——可以编辑播放列表了。此前版本的播放器确实允许将新曲目添加到现有播放列表，但无法创建、编辑或删除播放列表，也无法移除曲目。很高兴看到这一功能落地。</p><p>现在专辑标题旁会显示标签，指示专辑是否为显式内容、是否提供 Dolby Atmos、Hi-Res 或无损。在设置中，还有一个选项可以始终播放专辑/曲目的“干净”版本（如果可用）。</p><p>新增了专辑制作人员（背面）和页面。该页面显示每月最常听的艺术家（与 TIDAL 自身创建的月度最常听播放列表分开）。现在你还可以查看专辑信息和曲目制作人员页面。</p><p>High Tide 1.6.0 的其他亮点：</p><p>- 专辑行中的正在播放高亮使用系统强调色</p><p>- 显示整个收藏，而不仅仅是前 1000 项</p><p>- 收藏可按排序</p><p>- 音乐播放期间保持电脑唤醒的选项</p><p>包含大量错误修复，包括长时间暂停后恢复播放的问题、保存的曲目无法离线播放，以及偶尔切换专辑后显示错误歌曲的问题。</p><p>High Tide 已在 Flathub 上架</p><p>由于这不是独立的音乐播放器，只有订阅 TIDAL 才有用（我也是如此，尽管是通过家庭计划免费获得访问权限）。TIDAL 不提供免费的广告支持计划。</p><p>TIDAL 不提供官方的 Linux 桌面应用，尽管官方网页应用在大多数浏览器中可用（存在非官方的桌面封装）。但没有什么能比得上一个可靠的本地桌面播放器。</p><p>虽然是非官方的且未得到 TIDAL 本身认可，但使用了 Tidal API 和适当的基于浏览器的身份验证。它是免费的，用 Python 编写，采用 GTK4/libadwaita 界面。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/high-tide-linux-update" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

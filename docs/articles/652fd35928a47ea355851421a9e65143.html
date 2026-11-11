@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>在Ubuntu上更轻松地输入带重音符号的字符 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月11日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>在Ubuntu上更轻松地输入带重音符号的字符</h1>
+
+  <div class="article-summary">本文介绍了一款名为Accent Hold的GNOME Shell扩展，它为Ubuntu带来了类似macOS的按住按键弹出重音字符选择器的功能。用户只需长按字母键，即可在光标旁的小弹窗中选择带重音变体，支持数字键、方向键或鼠标选择。扩展还允许自定义弹出延迟、字符列表，甚至添加表情符号。该扩展仅支持Wayland和GNOME输入法应用，目前兼容GNOME 45-50，并即将支持GNOME 51。</div>
+
+  <div class="article-body"><p>在Ubuntu上输入带重音符号的字符并不像在macOS（或现代智能手机键盘）上那么容易，在那些系统上，你只需按下一个键，可用字符就会出现在弹出窗口中，然后选择一个即可。</p><p>Accent Hold是一个GNOME Shell扩展，它添加了macOS风格的按住按键行为。</p><p>只需按住一个字母键（如e、c等），带重音的变体（如é è ê ë、ç ć č等）就会出现在文本光标旁边的小弹窗中。按下对应的数字键（如同在macOS上），或使用键盘方向键或鼠标来选择字符。</p><p>Ubuntu上的默认方法很费力。</p><p>假设我想输入å，输入魔法代码（00E5）然后按某个键得到å。或者我可以在设置中配置一个组合键，按下它，然后输入正确的（稍微更容易记住的）序列。</p><p>使用Accent Hold，我只需按住a键，然后选择正确的字符。</p><p>如果按住某个键足够长时间以显示选择器后，我决定毕竟不需要带重音的变体，那么像往常一样快速轻按该键就会输入普通字符。</p><p>它不应该干扰常规打字（尽管这意味着你可以按住某些字符来输入重复字母）。该扩展的开发者表示，它适用于所有键盘布局（QWERTY、AZERTY等）。</p><p>首选项隐藏了表情符号作弊功能</p><p>你可以在扩展的首选项面板中选择按住键多长时间后出现选择器，以及设置它消失前的等待时间。</p><p>你还可以编辑每个键出现的字符列表，删除不需要的字符，重新排序或添加自己的字符。例如，你可以为某个字母添加表情符号，并让它与重音字符一起出现在选择器中。</p><p>你可以编辑字符列表以满足你的需求</p><p>该扩展仅适用于使用GNOME输入法的Wayland应用程序（包括大多数应用，包括大多数Electron应用、Firefox等）。如果它在某些应用（如Qt应用）中不出现，快捷键将打开选择器。</p><p>一个小烦恼：它在顶部面板中添加了一个图标。虽然并非多余——它可以让你临时禁用选择器，并访问首选项对话框——但顶部栏中有一个随机的é有点分散注意力。</p><p>如果你使用的是GNOME 45 – 50，你可以从GNOME扩展网站安装它（或者省去麻烦，改用出色的应用）。一个添加对GNOME 51支持的更新正在等待审核。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/gnome-type-accents-press-and-hold" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
