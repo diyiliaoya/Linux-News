@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sprout Pi 让旧 iPod 运行 Linux 应用并串流 Spotify — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月12日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Sprout Pi 让旧 iPod 运行 Linux 应用并串流 Spotify</h1>
+
+  <div class="article-summary">Sprout Pi 是一个开源硬件项目，为旧 iPod 提供无需焊接的现代主板替换方案，保留原屏幕、点击轮和外壳，新增 Wi-Fi、蓝牙、USB-C DAC 及 Spotify 串流和 AirPlay/Google Cast 支持。项目提供两个版本，其中 Pi 版搭载树莓派 CM0 运行 Linux 应用，并保留经典 iPod 界面。</div>
+
+  <div class="article-body"><p>Sprout Pi 让旧 iPod 运行 Linux 应用并串流 Spotify - OMG! Ubuntu</p><p>一个新的硬件项目正在利用开源硬件和软件，为几十年前的 iPod 添加 Wi-Fi、蓝牙和音乐串流应用。</p><p>该项目由伦敦的 FOSS 人士开发，是“旧 iPod 的现代主板”，无需焊接。它甚至复用了 iPod 的所有原始部件，包括屏幕、点击轮和外壳。</p><p>其理念很简单：打开旧 iPod，移除原主板，换上新的主板，从而增加对蓝牙耳机（包括 Apple AirPods）、Wi-Fi 以及通过 USB-C 传输音频的 HiFi DAC 的支持。</p><p>图片：Certain Things</p><p>它甚至支持从 Spotify 串流音乐，以及通过 Apple AirPlay 和 Google Cast 从设备投送。</p><p>开源 iPod 软件修改并不新鲜——Rockbox 已经存在了几十年——但硬件修改通常是剧烈的或需要技术技能。这看起来很简单，而且升级是可逆的——我相信这对技术纯粹主义者来说是一种解脱！</p><p>Sprout 将提供兼容以下 iPod 型号的主板：</p><p>iPod mini 第一代和第二代</p><p>iPod 的存储焊接在主板上（通过这次替换被换掉），因此使用 microSD 卡作为存储，让你积满灰尘的旧 20GB iPod 容量提升 100 倍。</p><p>Sprout 将有两个版本：Sprout（基础版）和 Sprout Pi，后者将微控制器与 Raspberry Pi Compute Module Zero 配对。</p><p>开发者将后者描述为使用双架构，播放使用 RP2350 以获得更好的电池寿命，而资源密集型应用，如 3D 游戏甚至操作系统模拟器，则在运行基于 Linux 系统的 CM0 上运行。</p><p>iPod 是目的明确的设备，Sprout 的 UI 保留了标志性且易于使用的 iPod 界面，导航由点击轮和菜单按键驱动。</p><p>贴心的时代唤起细节包括 Coverflow、更好的播客 UI、用于配置硬件功能的 AirPods 应用。甚至还有旧 iPod 游戏的重制版（我在公交车后座输在 Vortex 上的那些小时）。</p><p>苹果尚未批准此项目，而且 Sprout 的 UI 所回应的某些界面元素可能正有专利在积累，尘封在大多数这款产品所针对的 iPod 所在的同款抽屉里。</p><p>在我看来，UI 足够接近以感觉正确，但又足够不同，不是一个毫无价值的克隆。</p><p>一台由 Raspberry Pi 驱动的 iPod</p><p>图片：Certain Things</p><p>Sprout 是开源硬件和软件。原理图、电路板布局；固件、软件和 Sprout Pi 运行时；以及关于让 iPod 显示屏、点击轮和耳机插孔工作所需的逆向工程的文档笔记。</p><p>一个极其酷的倡议，用现代内脏“混搭”旧技术。</p><p>价格或发布日期尚未公布，但如果你感兴趣，可以在项目网站上注册通知。</p><p>该项目有一个 iPod 模拟器，让你可以在浏览器中舒适地探索其 UI 和功能集（当然使用虚拟数据），而无需从你的“杂物抽屉”里挖出死掉的 iPod。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/sprout-upgrades-ipod-modern-features" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

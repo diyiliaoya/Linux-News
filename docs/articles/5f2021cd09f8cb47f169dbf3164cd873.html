@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI辅助的DisplayLink Linux驱动收到法律通知 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月12日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>AI辅助的DisplayLink Linux驱动收到法律通知</h1>
+
+  <div class="article-summary">开发者Mike Lothian利用AI辅助编写了开源DisplayLink驱动Vino，支持三代DisplayLink扩展坞。Synaptics声称该项目侵犯其DisplayLink专利，发出停止侵权函，要求停止开发并撤回提交的代码，并索要2.5万美元专利分析费用，逾期每周增加至少2.5万美元。Mike已下架Vino仓库，事件引发对开源社区专利风险的关注。</div>
+
+  <div class="article-body"><p>AI辅助的DisplayLink Linux驱动收到法律通知</p><p>Mike Lothian让Vino在三代DisplayLink扩展坞上运行，但Synaptics要求他下架。</p><p>在深入讨论此事之前，你首先需要了解什么是DisplayLink。它是一种专有的图形传输技术，允许计算机通过USB连接到一个或多个外部显示器，使用围绕DisplayLink芯片构建的扩展坞或适配器。</p><p>其工作原理是在主机上压缩显示数据，并将其发送到连接设备中的芯片。然后芯片解码数据，通过HDMI、DisplayPort等接口输出到显示器。</p><p>在Linux上，由于其闭源性质，这种支持可能会让一些人感到不满。这就是Vino作为开源替代方案出现的地方。</p><p>不幸的是，Synaptics拥有DisplayLink，并已向Mike发出停止侵权函，声称他的项目侵犯了其DisplayLink专利。</p><p>Vino是一个让Linux内核直接与DisplayLink扩展坞通信的驱动。它旨在取代DisplayLink的闭源软件以及与之并存的開源EVDI内核模块。</p><p>Mike在Claude Code的帮助下编写了它，Vino于六月出现在内核邮件列表中，尚未完成。他遇到了扩展坞和驱动之间的通信问题，并向其他开发者寻求帮助。</p><p>在某个时候，他给一位Synaptics员工发了邮件寻求指导，并提到了他对EVDI的Rust重写。大约两周后，另一位员工回复了。</p><p>该回复说，他对EVDI的Rust重写并不令人担忧。相反，令人担忧的是DisplayLink协议和编解码器，Synaptics认为这些受其专利保护。</p><p>随后在8月17日收到了一封停止侵权函。它告诉Mike停止开发，并撤回他提交给维护者和托管网站的任何内容，需在8月28日前签署确认。</p><p>附件列出了超过125项专利，但没有说明哪些适用。Mike在8月26日发布了一个可用的演示，并在第二天询问Synaptics他们指的是哪些权利要求。</p><p>答案在十月以权利要求对照表的形式到来。他们将两项专利中各一项权利要求映射到他的源代码。</p><p>10月5日的信中说，如果Mike错过10月11日的截止日期，Synaptics将寻求25,000美元作为准备这些图表的费用，并且该数字每周至少增加25,000美元。</p><p>Mike在10月6日回复，提出如果Synaptics暂停截止日期和每周收费，他愿意暂停图表所指编码代码的公开工作。他还询问了将该代码许可用于非商业用途的事宜。</p><p>10月7日，Synaptics表示不会授予任何专利许可或承诺不起诉，并将10月18日定为最终截止日期。</p><p>到目前为止，我所看到的是对一个非常愿意沟通的独立开源开发者进行的非常激进的专利侵权猎巫行动。</p><p>Synaptics花了大约三周时间回答他关于具体细节的请求，然后跟进了一项可能毁掉生活的25,000美元要求，且每周递增。</p><p>洁净室设计的特殊之处</p><p>Mike将Vino描述为一个洁净室驱动，并说他从捕获的USB流量和供应商程序中逆向工程了它。</p><p>如果你不知道，在洁净室再造中，一方研究原始实现，然后编写描述，另一方仅根据该描述构建新代码。</p><p>这是为了作为版权主张的防御，因为它表明没有复制任何东西。Synaptics七月的回复认为，洁净室或独立编写的代码仍然可能侵犯专利。🤷</p><p>Vino也恰逢AI辅助逆向工程的繁忙时期。法律压力也波及了其他AI构建的项目。</p><p>Mike已经响应要求下架了Vino仓库，Synaptics迄今尚未发表公开声明。</p><p>只有时间才能告诉我们这项工作会怎样，我希望有人在它下线之前fork了它，因为那将为其他人提供一个良好的起点。</p><p>喜欢这个更新？支持独立的Linux新闻报道</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/synaptics-vino-fiasco/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

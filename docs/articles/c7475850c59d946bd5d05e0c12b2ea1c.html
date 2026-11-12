@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMD EPYC 9006 Venice 与 NVIDIA Vera 的 HPC 性能基准对比 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月12日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>AMD EPYC 9006 Venice 与 NVIDIA Vera 的 HPC 性能基准对比</h1>
+
+  <div class="article-summary">本文对比了 AMD EPYC 9006 &quot;Venice&quot;（Zen 6 架构）与 NVIDIA Vera CPU 在多类 HPC 工作负载下的性能表现。由于无法持续访问 Vera 平台，Vera 的对比数据取自此前一轮测试，而 Venice 则使用 Ubuntu 26.10 与 Linux 7.3 内核重新运行，编译器统一为 GCC 15。测试同时监测了峰值频率与功耗，为关注两者在 HPC 领域竞争态势的读者提供参考。</div>
+
+  <div class="article-body"><p>AMD EPYC 9006 Venice 与 NVIDIA Vera 的 HPC 性能基准评测 - Phoronix</p><p>AMD EPYC 9006 Venice 与 NVIDIA Vera 的 HPC 性能基准对比</p><p>发布于 2026 年 11 月 11 日上午 10:44（美国东部时间）。</p><p>在昨日 AMD EPYC 9006 &quot;Venice&quot; SP7 平台的发布测试中，包含了针对 AMD EPYC 9996 256 核处理器以及高频型号的评测。当时有数百项基准测试，考察了从 EPYC Turin 到 EPYC Venice 的世代性能提升，以及与 Intel Xeon 6 Granite Rapids 的竞争情况。对于那些想知道 AMD EPYC Venice 如何与 NVIDIA Vera CPU 竞争的人来说，本文提供了一系列 HPC 工作负载下的对比结果。</p><p>由于无法持续远程或物理访问 NVIDIA Vera，在对比 Vera 与 Venice 的数据时，我不得不复用几周前上一轮 Vera 基准测试中的部分数字。具体来说，就是上个月的《NVIDIA Vera HPC 性能基准挑战 AMD EPYC 与 Intel Xeon》。由于软件栈存在差异，我不得不在 Venice 上单独进行额外测试，与昨日发布测试分开，使用前沿的 Ubuntu 26.10 搭配 Linux 7.3 内核。因此，这篇独立文章用于对比 Vera，而此前那篇文章中针对 EPYC/Xeon 的测试则是在 Ubuntu 26.04 LTS 上进行的。默认编译器使用 GCC 15，因为 Vera 也使用了该版本。GCC 16 才引入 Znver6 支持，若时间允许，我将发布更多针对 Venice / Zen 6 的专用编译器基准文章。</p><p>除了查看原始性能外，整个基准测试过程中还监测了峰值 CPU 频率和 CPU 功耗。</p><p>AMD EPYC 9686F Linux 基准测试：96 个 Zen 6 核心，最高 5.3GHz</p><p>NVIDIA Vera 单路与双路 CPU 性能</p><p>Snapdragon X2 在 Linux 上的性能在初步基准测试中超出预期</p><p>NVIDIA Vera HPC 性能基准挑战 AMD EPYC 与 Intel Xeon</p><p>NVIDIA Vera SMT 性能基准测试</p><p>Intel Granite Rapids WS 与 AMD Threadripper Zen 5 的 SMT 性能对比</p><p>享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026，保留所有权利。所有使用的商标均为其各自所有者的财产。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/review/amd-venice-nvidia-vera" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

@@ -20579,5 +20579,192 @@
     "title_zh": "KDE Plasma 6.8.3 发布，为多显示器配置带来更多改进",
     "summary_zh": "KDE Plasma 6.8.3 作为 KDE Plasma 6.8 桌面环境系列的第三个维护更新现已发布，主要包含更多错误修复和改进，尤其针对多显示器配置进行了优化。",
     "fulltext_zh": "KDE Plasma 6.8.3 现已发布，作为最新 KDE Plasma 6.8 桌面环境系列的第三个维护更新，带来了更多错误修复和改进。\n\n文章《KDE Plasma 6.8.3 发布，为多显示器配置带来更多改进》首发于 9to5Linux——未经许可请勿转载本文。本 RSS 源面向读者，而非抓取程序。"
+  },
+  "e3a080023ddaf421469f6ffd143fc90c": {
+    "id": "e3a080023ddaf421469f6ffd143fc90c",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/11/sprout-upgrades-ipod-modern-features",
+    "title_en": "Sprout Pi lets old iPods run Linux apps and stream Spotify",
+    "summary_en": "Sprout is an open source replacement motherboard for iPods that keeps the original screen and click wheel, but adds Wi-Fi, Bluetooth and streaming apps.\nYou're reading Sprout Pi lets old iPods run Linux apps and stream Spotify, a blog post from OMG! Ubuntu. Do not reproduce elsewhere without permission.",
+    "pub_date": "Wed, 11 Nov 2026 23:10:00 +0000",
+    "title_zh": "Sprout Pi 让旧 iPod 运行 Linux 应用并串流 Spotify",
+    "summary_zh": "Sprout Pi 是一个开源硬件项目，为旧 iPod 提供无需焊接的现代主板替换方案，保留原屏幕、点击轮和外壳，新增 Wi-Fi、蓝牙、USB-C DAC 及 Spotify 串流和 AirPlay/Google Cast 支持。项目提供两个版本，其中 Pi 版搭载树莓派 CM0 运行 Linux 应用，并保留经典 iPod 界面。",
+    "fulltext_zh": "Sprout Pi 让旧 iPod 运行 Linux 应用并串流 Spotify - OMG! Ubuntu\n\n一个新的硬件项目正在利用开源硬件和软件，为几十年前的 iPod 添加 Wi-Fi、蓝牙和音乐串流应用。\n\n该项目由伦敦的 FOSS 人士开发，是“旧 iPod 的现代主板”，无需焊接。它甚至复用了 iPod 的所有原始部件，包括屏幕、点击轮和外壳。\n\n其理念很简单：打开旧 iPod，移除原主板，换上新的主板，从而增加对蓝牙耳机（包括 Apple AirPods）、Wi-Fi 以及通过 USB-C 传输音频的 HiFi DAC 的支持。\n\n图片：Certain Things\n\n它甚至支持从 Spotify 串流音乐，以及通过 Apple AirPlay 和 Google Cast 从设备投送。\n\n开源 iPod 软件修改并不新鲜——Rockbox 已经存在了几十年——但硬件修改通常是剧烈的或需要技术技能。这看起来很简单，而且升级是可逆的——我相信这对技术纯粹主义者来说是一种解脱！\n\nSprout 将提供兼容以下 iPod 型号的主板：\niPod mini 第一代和第二代\n\niPod 的存储焊接在主板上（通过这次替换被换掉），因此使用 microSD 卡作为存储，让你积满灰尘的旧 20GB iPod 容量提升 100 倍。\n\nSprout 将有两个版本：Sprout（基础版）和 Sprout Pi，后者将微控制器与 Raspberry Pi Compute Module Zero 配对。\n\n开发者将后者描述为使用双架构，播放使用 RP2350 以获得更好的电池寿命，而资源密集型应用，如 3D 游戏甚至操作系统模拟器，则在运行基于 Linux 系统的 CM0 上运行。\n\niPod 是目的明确的设备，Sprout 的 UI 保留了标志性且易于使用的 iPod 界面，导航由点击轮和菜单按键驱动。\n\n贴心的时代唤起细节包括 Coverflow、更好的播客 UI、用于配置硬件功能的 AirPods 应用。甚至还有旧 iPod 游戏的重制版（我在公交车后座输在 Vortex 上的那些小时）。\n\n苹果尚未批准此项目，而且 Sprout 的 UI 所回应的某些界面元素可能正有专利在积累，尘封在大多数这款产品所针对的 iPod 所在的同款抽屉里。\n\n在我看来，UI 足够接近以感觉正确，但又足够不同，不是一个毫无价值的克隆。\n\n一台由 Raspberry Pi 驱动的 iPod\n图片：Certain Things\n\nSprout 是开源硬件和软件。原理图、电路板布局；固件、软件和 Sprout Pi 运行时；以及关于让 iPod 显示屏、点击轮和耳机插孔工作所需的逆向工程的文档笔记。\n\n一个极其酷的倡议，用现代内脏“混搭”旧技术。\n\n价格或发布日期尚未公布，但如果你感兴趣，可以在项目网站上注册通知。\n\n该项目有一个 iPod 模拟器，让你可以在浏览器中舒适地探索其 UI 和功能集（当然使用虚拟数据），而无需从你的“杂物抽屉”里挖出死掉的 iPod。"
+  },
+  "5f2021cd09f8cb47f169dbf3164cd873": {
+    "id": "5f2021cd09f8cb47f169dbf3164cd873",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/synaptics-vino-fiasco/",
+    "title_en": "The AI-Assisted Linux Driver for DisplayLink Gets Legal Notice",
+    "summary_en": "Mike Lothian got Vino working on three generations of DisplayLink docks, but Synaptics told him to take it down.",
+    "pub_date": "Wed, 11 Nov 2026 13:08:00 GMT",
+    "title_zh": "AI辅助的DisplayLink Linux驱动收到法律通知",
+    "summary_zh": "开发者Mike Lothian利用AI辅助编写了开源DisplayLink驱动Vino，支持三代DisplayLink扩展坞。Synaptics声称该项目侵犯其DisplayLink专利，发出停止侵权函，要求停止开发并撤回提交的代码，并索要2.5万美元专利分析费用，逾期每周增加至少2.5万美元。Mike已下架Vino仓库，事件引发对开源社区专利风险的关注。",
+    "fulltext_zh": "AI辅助的DisplayLink Linux驱动收到法律通知\n\nMike Lothian让Vino在三代DisplayLink扩展坞上运行，但Synaptics要求他下架。\n\n在深入讨论此事之前，你首先需要了解什么是DisplayLink。它是一种专有的图形传输技术，允许计算机通过USB连接到一个或多个外部显示器，使用围绕DisplayLink芯片构建的扩展坞或适配器。\n\n其工作原理是在主机上压缩显示数据，并将其发送到连接设备中的芯片。然后芯片解码数据，通过HDMI、DisplayPort等接口输出到显示器。\n\n在Linux上，由于其闭源性质，这种支持可能会让一些人感到不满。这就是Vino作为开源替代方案出现的地方。\n\n不幸的是，Synaptics拥有DisplayLink，并已向Mike发出停止侵权函，声称他的项目侵犯了其DisplayLink专利。\n\nVino是一个让Linux内核直接与DisplayLink扩展坞通信的驱动。它旨在取代DisplayLink的闭源软件以及与之并存的開源EVDI内核模块。\n\nMike在Claude Code的帮助下编写了它，Vino于六月出现在内核邮件列表中，尚未完成。他遇到了扩展坞和驱动之间的通信问题，并向其他开发者寻求帮助。\n\n在某个时候，他给一位Synaptics员工发了邮件寻求指导，并提到了他对EVDI的Rust重写。大约两周后，另一位员工回复了。\n\n该回复说，他对EVDI的Rust重写并不令人担忧。相反，令人担忧的是DisplayLink协议和编解码器，Synaptics认为这些受其专利保护。\n\n随后在8月17日收到了一封停止侵权函。它告诉Mike停止开发，并撤回他提交给维护者和托管网站的任何内容，需在8月28日前签署确认。\n\n附件列出了超过125项专利，但没有说明哪些适用。Mike在8月26日发布了一个可用的演示，并在第二天询问Synaptics他们指的是哪些权利要求。\n\n答案在十月以权利要求对照表的形式到来。他们将两项专利中各一项权利要求映射到他的源代码。\n\n10月5日的信中说，如果Mike错过10月11日的截止日期，Synaptics将寻求25,000美元作为准备这些图表的费用，并且该数字每周至少增加25,000美元。\n\nMike在10月6日回复，提出如果Synaptics暂停截止日期和每周收费，他愿意暂停图表所指编码代码的公开工作。他还询问了将该代码许可用于非商业用途的事宜。\n\n10月7日，Synaptics表示不会授予任何专利许可或承诺不起诉，并将10月18日定为最终截止日期。\n\n到目前为止，我所看到的是对一个非常愿意沟通的独立开源开发者进行的非常激进的专利侵权猎巫行动。\n\nSynaptics花了大约三周时间回答他关于具体细节的请求，然后跟进了一项可能毁掉生活的25,000美元要求，且每周递增。\n\n洁净室设计的特殊之处\n\nMike将Vino描述为一个洁净室驱动，并说他从捕获的USB流量和供应商程序中逆向工程了它。\n\n如果你不知道，在洁净室再造中，一方研究原始实现，然后编写描述，另一方仅根据该描述构建新代码。\n\n这是为了作为版权主张的防御，因为它表明没有复制任何东西。Synaptics七月的回复认为，洁净室或独立编写的代码仍然可能侵犯专利。🤷\n\nVino也恰逢AI辅助逆向工程的繁忙时期。法律压力也波及了其他AI构建的项目。\n\nMike已经响应要求下架了Vino仓库，Synaptics迄今尚未发表公开声明。\n\n只有时间才能告诉我们这项工作会怎样，我希望有人在它下线之前fork了它，因为那将为其他人提供一个良好的起点。\n\n喜欢这个更新？支持独立的Linux新闻报道"
+  },
+  "51d9b8514c829c84e13152f4d2a5deea": {
+    "id": "51d9b8514c829c84e13152f4d2a5deea",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/13037",
+    "title_en": "Distribution Release: Red Hat Enterprise Linux 10.3, 9.9",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  Red Hat, Inc. has announced the release of Red Hat Enterprise Linux (RHEL) 10.3 and 9.9. Besides the usual round of software application updates, these two new version also introduce new tools to combat the increasingly ominous AI-driven security threats: \"Today, we are proud to announce the availability....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Red Hat Enterprise Linux 10.3、9.9",
+    "summary_zh": "Red Hat 正式发布 RHEL 10.3 和 9.9，除常规软件更新外，重点引入零信任架构、增强数字主权，并提供 AI 增强的生产级诊断工具，以应对 AI 驱动的快速安全威胁。新版本强调主动韧性，通过 AI 预测漏洞并自动修复，在保持稳定性的同时强化基础设施安全。",
+    "fulltext_zh": "发行版发布：Red Hat Enterprise Linux 10.3、9.9（DistroWatch.com 新闻）\n\nRed Hat, Inc. 已宣布发布 Enterprise Linux（RHEL）10.3 和 9.9。除了常规的软件应用更新外，这两个新版本还引入了新工具，以应对日益严峻的 AI 驱动安全威胁：\n\n“今天，我们自豪地宣布 Red Hat Enterprise Linux（RHEL）10.3 和 RHEL 9.9 正式可用。此次发布旨在强化平台基础，以满足现代企业不断演变的安全、运营和 AI 驱动需求。RHEL 10.3 和 9.9 通过集成零信任架构、增强数字主权来满足这一必要性，同时提供 AI 增强的、生产就绪的诊断工具，并保持客户所期望的毫不妥协的稳定性。AI 驱动的威胁以前所未有的速度移动，这意味着传统安全已不再足够。Red Hat 已转向主动韧性模型，安全与智能从根本上融为一体。通过使用 AI 增强诊断来预测漏洞并实施自动化、智能化的修复，我们正在保护基础设施，同时积极加固它，以抵御下一代复杂威胁。”\n\n更多信息请参阅发布说明。RHEL 10.3 和 9.9 均可从 Red Hat 的网站下载。\n\n近期相关新闻和发布\n发行版发布：Red Hat Enterprise Linux 10.3、9.9\n发行版发布：Red Hat Enterprise Linux 10.2、9.8\n发行版发布：Red Hat Enterprise Linux 10.1、9.7\n发行版发布：Red Hat Enterprise Linux 10.0\n开发版发布：Red Hat Enterprise Linux 10.0 Beta\n发行版发布：Red Hat Enterprise Linux 9.5\n\n关于 Red Hat Enterprise Linux\nRed Hat Enterprise Linux（RHEL）是由 Red Hat 开发、面向商业市场的 Linux 发行版。Red Hat Enterprise Linux 以服务器版形式发布，支持 x86、x86_64、Itanium、PowerPC 和 IBM System z 架构。"
+  },
+  "8b85914a65897a2e608823ee27159372": {
+    "id": "8b85914a65897a2e608823ee27159372",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/13036",
+    "title_en": "Distribution Release: deepin 25.3.0",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The deepin project has published a new release with improved snapshot management, an updated kernel and an updated AI agent: \"UOS AI gets a major upgrade - system-level intelligence for the Agent OS, within easy reach. Retrieve anything from your entire disk with a single sentence - every....",
+    "pub_date": "",
+    "title_zh": "发行版发布：deepin 25.3.0",
+    "summary_zh": "deepin 25.3.0 发布，带来改进的快照管理、更新的内核和升级的 UOS AI 智能体。UOS AI 支持通过一句话检索全盘文档，统一 MCP、Skills 等能力入口；新增冻结保护机制提升系统稳定性，控制中心加载更快；快照可保存至本地磁盘、U 盘或移动硬盘并从指定位置恢复；镜像默认集成 PC Manager 系统维护工具。",
+    "fulltext_zh": "发行版发布：deepin 25.3.0（DistroWatch.com 新闻）\n\n该项目发布了一个新版本，改进了快照管理，更新了内核并升级了 AI 智能体：\n\n“UOS AI 迎来重大升级——面向 Agent OS 的系统级智能，触手可及。只需一句话即可检索整个磁盘中的任何内容——你电脑上的每一份文档都成为可随时调用的知识。MCP、Skills 和专用智能体能力现在共享统一入口，UOS AI 会自动调度任务所需的任何能力。系统主动出击，让你的工作更高效。稳定性和性能显著提升：新的冻结保护机制确保任务栏、启动器和系统监视器在系统严重卡顿时仍保持响应。控制中心首页加载速度大幅提升，常用应用即使在重负载下也能快速启动，使系统在长期使用中保持流畅。轻松的系统维护和数据保护——不可变系统中的快照与恢复更加直观——快照可保存到本地磁盘、USB 驱动器或便携硬盘，并可从选定位置启动恢复。PC Manager 现已默认包含在镜像中，将检测、清理和修复集于一处，让系统维护像健康检查一样简单。”\n\n更多信息可在 deepin-desktop-community-25.3.0-amd64.iso 中查看。\n\n近期相关新闻与发布\n发行版发布：deepin 25.3.0\n发行版发布：deepin 25.2.0\n发行版发布：deepin 25.1.0\n发行版发布：deepin 25.0.10\n发行版发布：deepin 25\n开发版发布：deepin 25 Beta\n\ndeepin（曾用名 Deepin、Linux Deepin、Hiweed GNU/Linux）是一个基于 Debian 的发行版（在 2015 年底发布 15 版之前基于 Ubuntu），旨在提供优雅、易用且可靠的操作系统。它不仅包含开源世界的最佳成果，还创建了自己的桌面环境。"
+  },
+  "b917d2b9dd376c12307ac774c7685b83": {
+    "id": "b917d2b9dd376c12307ac774c7685b83",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/More-Intel-D-Series-Linux-7.5",
+    "title_en": "Intel Continues Enabling The GPU D-Series \"Crescent Island\" Driver Support For Linux 7.5",
+    "summary_en": "Intel's intriguing Crescent Island Xe3P-based AI accelerator hardware now known as the Intel GPU D Series continues seeing a lot of Linux kernel driver activity. The upcoming Linux 7.5 kernel is continuing to build out the support for this upcoming hardware...",
+    "pub_date": "Wed, 11 Nov 2026 16:04:00 -0500",
+    "title_zh": "Intel 持续为 Linux 7.5 启用 GPU D 系列“Crescent Island”驱动支持",
+    "summary_zh": "Intel 正持续为基于 Xe3P 的 GPU D 系列（代号 Crescent Island）AI 加速器开发 Linux 内核驱动，最新 drm-xe-next 拉取请求为 Linux 7.5 加入了温度传感器处理、VRAM 热通道、PCIe 与内存控制器温度支持、CPER RAS 错误日志、OOBMSM 遥测延迟绑定及内存双位 ECC 错误处理等功能。",
+    "fulltext_zh": "Intel 持续为 Linux 7.5 启用 GPU D 系列“Crescent Island”驱动支持\n\n2026 年 11 月 11 日下午 4:04（美国东部时间）。\n\n基于 Xe3P 的 AI 加速器硬件——现称为 Intel GPU D 系列——持续迎来大量 Linux 内核驱动活动。即将到来的 Linux 7.5 内核正在继续为这款即将推出的硬件构建支持。\n\nIntel 软件工程师一直在为 Linux 推送 Crescent Island 驱动补丁，且是在 Intel 于当年 10 月宣布 Crescent Island 仅数周后便已开始。一年之后，作为面向 Linux 7.5（将是 2027 年首个稳定内核系列）的新工作，已有更多启用代码就位。\n\n最新提交至 DRM-Next 的 drm-xe-next 拉取请求加入了 Xe 硬件监控（HWMON）代码的温度传感器处理、平台上报的 VRAM 热通道、PCIe 与内存控制器温度支持以及其他传感器工作。\n\nLinux 7.5 中为 Intel GPU D 系列带来的还有对 RAS 错误的通用平台错误记录（CPER）日志支持。\n\n此外，还为 Crescent Island 添加了 OOBMSM 遥测“OCode”延迟绑定支持。同时还有对内存双位 ECC 错误的处理。\n\n关于这些最新的 Intel GPU D 系列 / Crescent Island 新增内容以及其他为 Linux 7.5 积累的 Xe 驱动变更的更多细节，可通过以下内容了解：\n\nIntel 发布新 CPU 微码以修复多种功能问题\nIntel ANV 为 AV1 编码加入码率控制\nIntel One Mono 字体系列更新，带来多项增强\n实验性项目让 Intel XeSS 在 XMX 上与 Valve 的 Steam Play（Proton）协同工作\nIntel Compute Runtime 持续为 GPU D 系列做准备，为 Nova Lake P 提供 OpenCL LEO\nIntel 将 RPL-M/RPL-P SoundWire 引入上游 Linux，面向搭载 Raptor Lake 的汽车\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nSynaptics 似乎利用法律威胁阻止开源 DisplayLink 驱动\nOpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞\nDebian 的 APT 受中间人攻击影响，可导致以 root 身份执行任意代码\n资深 Linux 开发者因 AI 引发的补丁洪流辞去部分职务\nLinux 内核准备移除最后一批 MMX 优化代码\n“AMD 喜爱 Omarchy”Linux 将有更多合作\nFedora 45 发布，带来众多前沿 Linux 创新\n面向 Linux 7.5 的 ChaCha AVX-512 优化在 AMD Zen 5 上带来高达 99% 的提升\n\n享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "c7475850c59d946bd5d05e0c12b2ea1c": {
+    "id": "c7475850c59d946bd5d05e0c12b2ea1c",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/amd-venice-nvidia-vera",
+    "title_en": "AMD EPYC 9006 Venice vs. NVIDIA Vera Benchmarks For HPC Performance",
+    "summary_en": "Yesterday in the AMD EPYC 9006 \"Venice\" SP7 launch testing were reviews of the AMD EPYC 9996 256-core processor as well as the EPYC 9686F 96-core high frequency part. There were hundreds of benchmarks looking at the gen-on-gen performance from EPYC Turin to EPYC Venice as well as against the Intel Xeon 6 Granite Rapids competition. For those wondering about how AMD EPYC Venice is competing with NVIDIA's Vera CPU, this article provides a look at those results for a range of HPC workloads.",
+    "pub_date": "Wed, 11 Nov 2026 10:44:41 -0500",
+    "title_zh": "AMD EPYC 9006 Venice 与 NVIDIA Vera 的 HPC 性能基准对比",
+    "summary_zh": "本文对比了 AMD EPYC 9006 \"Venice\"（Zen 6 架构）与 NVIDIA Vera CPU 在多类 HPC 工作负载下的性能表现。由于无法持续访问 Vera 平台，Vera 的对比数据取自此前一轮测试，而 Venice 则使用 Ubuntu 26.10 与 Linux 7.3 内核重新运行，编译器统一为 GCC 15。测试同时监测了峰值频率与功耗，为关注两者在 HPC 领域竞争态势的读者提供参考。",
+    "fulltext_zh": "AMD EPYC 9006 Venice 与 NVIDIA Vera 的 HPC 性能基准评测 - Phoronix\nAMD EPYC 9006 Venice 与 NVIDIA Vera 的 HPC 性能基准对比\n发布于 2026 年 11 月 11 日上午 10:44（美国东部时间）。\n在昨日 AMD EPYC 9006 \"Venice\" SP7 平台的发布测试中，包含了针对 AMD EPYC 9996 256 核处理器以及高频型号的评测。当时有数百项基准测试，考察了从 EPYC Turin 到 EPYC Venice 的世代性能提升，以及与 Intel Xeon 6 Granite Rapids 的竞争情况。对于那些想知道 AMD EPYC Venice 如何与 NVIDIA Vera CPU 竞争的人来说，本文提供了一系列 HPC 工作负载下的对比结果。\n由于无法持续远程或物理访问 NVIDIA Vera，在对比 Vera 与 Venice 的数据时，我不得不复用几周前上一轮 Vera 基准测试中的部分数字。具体来说，就是上个月的《NVIDIA Vera HPC 性能基准挑战 AMD EPYC 与 Intel Xeon》。由于软件栈存在差异，我不得不在 Venice 上单独进行额外测试，与昨日发布测试分开，使用前沿的 Ubuntu 26.10 搭配 Linux 7.3 内核。因此，这篇独立文章用于对比 Vera，而此前那篇文章中针对 EPYC/Xeon 的测试则是在 Ubuntu 26.04 LTS 上进行的。默认编译器使用 GCC 15，因为 Vera 也使用了该版本。GCC 16 才引入 Znver6 支持，若时间允许，我将发布更多针对 Venice / Zen 6 的专用编译器基准文章。\n除了查看原始性能外，整个基准测试过程中还监测了峰值 CPU 频率和 CPU 功耗。\nAMD EPYC 9686F Linux 基准测试：96 个 Zen 6 核心，最高 5.3GHz\nNVIDIA Vera 单路与双路 CPU 性能\nSnapdragon X2 在 Linux 上的性能在初步基准测试中超出预期\nNVIDIA Vera HPC 性能基准挑战 AMD EPYC 与 Intel Xeon\nNVIDIA Vera SMT 性能基准测试\nIntel Granite Rapids WS 与 AMD Threadripper Zen 5 的 SMT 性能对比\n享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，保留所有权利。所有使用的商标均为其各自所有者的财产。"
+  },
+  "2d46b45c83c767292ed90902a624d6f8": {
+    "id": "2d46b45c83c767292ed90902a624d6f8",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-GFX13-Initial-Mesa",
+    "title_en": "Initial AMD RDNA5/GFX13 Code Sent Out For Mesa RADV & RadeonSI Drivers",
+    "summary_en": "After AMD posted GFX13 patches for the AMDGPU Linux driver earlier in the week, today they opened the Mesa merge request for introducing the very primitive GFX13 support for the RADV Vulkan and RadeonSI Gallium3D/OpenGL drivers...",
+    "pub_date": "Wed, 11 Nov 2026 07:18:36 -0500",
+    "title_zh": "AMD RDNA5/GFX13 初始代码已提交至 Mesa RADV 和 RadeonSI 驱动",
+    "summary_zh": "AMD 本周初为 AMDGPU Linux 驱动发布了 GFX13 补丁，随后又为 RADV Vulkan 和 RadeonSI Gallium3D/OpenGL 驱动提交了引入初步 GFX13 支持的 Mesa 合并请求。GFX13 预计对应下一代 RDNA5 GPU，此次提交仅包含芯片 ID 和描述符变更，后续将逐步补充 ACO 编译器后端和寄存器支持等硬件启用工作。",
+    "fulltext_zh": "AMD 本周初为 AMDGPU Linux 驱动发布了 GFX13 补丁，今天他们又为 RADV Vulkan 和 RadeonSI Gallium3D/OpenGL 驱动提交了引入非常初步的 GFX13 支持的 Mesa 合并请求。\n\n这个合并请求只是为 RADV 和 RadeonSI 布局 GFX13 图形支持的开端。AMD GFX13 被认为是下一代 RDNA5 GPU 的代号。\n\n该请求包含了初步的 GFX13 支持，以及 RadeonSI 和 RADV 的芯片 ID 和描述符变更。未来数周/数月内的后续合并请求将补充更多硬件启用工作，包括 ACO 编译器后端变更和寄存器支持。\n\n无论如何，这是一个开始，很高兴看到 GFX13/RDNA5 的 Linux 驱动支持工作正在推进，早于预计 2027 年晚些时候开始出货的下一代 AMD Radeon 显卡。"
+  },
+  "00267aed2eb2f1cc1a6006b876f719f6": {
+    "id": "00267aed2eb2f1cc1a6006b876f719f6",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/FreeBSD-Q3-2026-Report",
+    "title_en": "FreeBSD Working To Establish An AI Policy After Polling Developers",
+    "summary_en": "The FreeBSD Project published its Q3'2026 status report on Tuesday that outlines a number of development initiatives to ongoing work around an AI policy for this BSD operating system...",
+    "pub_date": "Wed, 11 Nov 2026 06:30:00 -0500",
+    "title_zh": "FreeBSD 在征询开发者意见后着手制定 AI 政策",
+    "summary_zh": "FreeBSD 项目发布 2026 年第三季度状态报告，宣布在征询开发者意见后着手制定 AI 政策。调查显示 88% 的开发者希望项目采用 AI 政策，35% 要求披露 AI 辅助代码，65% 支持经人工审核的 AI 生成文档。项目已成立 AI 工作组，最终报告预计第四季度发布。报告还提及为欧盟《网络弹性法案》做准备、Bhyve 虚拟机 GUI 管理工具、Sylve 网页管理平台、桌面体验改进及调度器优化等工作。",
+    "fulltext_zh": "FreeBSD 项目于周二发布了 2026 年第三季度状态报告，概述了围绕该 BSD 操作系统 AI 政策的一系列开发举措。\n\nFreeBSD 就 AI 和大语言模型（LLM）的使用情况征询了开发者意见，这是本季度的热门话题。高达 88% 的受访者希望 FreeBSD 项目采用 AI 政策。35% 的受访者希望披露 AI 辅助编写的代码，22% 认为应将其视同其他代码贡献，仅 16% 希望直接拒绝 AI 生成的代码。65% 的受访者支持经人工审核的 AI 生成文档。\n\nFreeBSD 已成立 AI 工作组，负责起草 AI 政策，最终报告预计于第四季度发布。\n\nFreeBSD 开发者还不得不花费大量时间为欧盟《网络弹性法案》（CRA）做准备，例如围绕软件物料清单（SBOM）支持的工作。\n\nFreeBSD 还出现了用 Freepascal/Lazarus 编写的 Bhyve 虚拟机管理程序 GUI 方面的工作。这款 Bhyvemgr GUI 进展顺利，有助于管理 Bhyve 虚拟机。\n\n与此同时，在网页管理/UI 方面，Sylve 作为从浏览器管理 FreeBSD 的统一系统管理平台，外观依然相当出色。上一季度新增了存储选项、数据中心/集群功能等。\n\nFreeBSD 还持续致力于增强该操作系统的桌面安装，并进一步打磨桌面体验。相关的还有挂起/恢复和音频栈的改进。\n\nFreeBSD 的其他动态包括改进分区存储支持、调试增强、多种调度器改进以及增强引导加载程序。\n\n有关 FreeBSD 在第三季度所做改进的更多细节，可通过以下链接查看。\n\nHyprBSD 提供基于 Wayland 的桌面，构建于 FreeBSD 之上，并完整支持 Steam 游戏\nFreeBSD 15.2 Beta 1 允许在 Linux/macOS 上实验性交叉构建基础包\nNetBSD 11.1 发布，包含安全修复及其他改进\nNetBSD 为 vi 和 xedit 增加替代文本编辑器，方便新用户\nGhostBSD 26.2 发布，作为基于 FreeBSD 15.1 的操作系统，配备新安装程序\nOpenBSD 8.0 发布，支持 Intel Arc A 系列及其他硬件改进\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。\n\nSynaptics 似乎利用法律威胁阻止开源 DisplayLink 驱动\nOpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞\nDebian 的 APT 受中间人攻击影响，可导致以 root 身份执行任意代码\n资深 Linux 开发者因 AI 引发的补丁洪流辞去部分职务\nLinux 内核准备移除最后一批 MMX 优化代码\n“AMD 热爱 Omarchy” Linux 将有更多合作\nFedora 45 发布，带来众多前沿 Linux 创新\nLinux 7.5 的 ChaCha AVX-512 优化在 AMD Zen 5 上带来高达 99% 的提升\n\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "65307f51340a428449de992ffdf11c0e": {
+    "id": "65307f51340a428449de992ffdf11c0e",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-R300g-Better-Shaders-2026",
+    "title_en": "ATI/AMD R300 To R500 GPUs See New 2026 OpenGL Linux Driver Optimizations",
+    "summary_en": "Over 24 years old, the ATI (AMD) Radeon R300 graphics processors are still seeing improvements in the open-source Linux driver space. Merged to Mesa 27.0-devel this week were a number of shader compiler optimizations for the R300g driver that benefits not only the original R300 series graphics cards but also the R400 and R500 (Radeon X1000 series) too...",
+    "pub_date": "Wed, 11 Nov 2026 06:01:52 -0500",
+    "title_zh": "ATI/AMD R300 至 R500 GPU 在 2026 年获得新的 OpenGL Linux 驱动优化",
+    "summary_zh": "开源开发者 Pavel Ondračka 持续改进 Mesa R300g 驱动，为 ATI/AMD R300、R400 和 R500 系列 GPU 带来多项着色器编译器优化。通过分析旧版 Catalyst 驱动的转储，他在 RV370 上实现了约 3% 的指令数减少，并在 R420 和 RV530 上获得数个百分点的效率提升。这些优化已合并到 Mesa 27.0-devel。",
+    "fulltext_zh": "已有超过 24 年历史的 ATI（AMD）Radeon R300 图形处理器仍在开源 Linux 驱动领域获得改进。本周合并到 Mesa 27.0-devel 的多项着色器编译器优化不仅惠及最初的 R300 系列显卡，也惠及 R400 和 R500（Radeon X1000 系列）。\n\n开源开发者 Pavel Ondračka 几乎单枪匹马地持续改进 Mesa R300g 驱动——这是面向 R300/R400/R500 图形处理器的 Gallium3D/OpenGL 驱动，而 AMD 多年来早已不再关注这个遗留驱动。Pavel 今年开展了多项改进，例如修复 Power Mac 支持，以及对该驱动代码的其他重构，比如摆脱 TGSI 的使用。\n\n最新的成就是针对着色器编译器的“一批小型和较大的编译器改进”：\n\n“一批小型和较大的编译器改进。配对改进、omod 和 presubtract 调整、dp2 优化以及一系列其他改进。其中许多灵感来自检查 Catalyst（Radeon GPU 着色器分析器）转储，最值得注意的是 CMP movs 合并技巧。该系列大部分聚焦于 R300/R400，但 R500 也有一些不错的统计数据。”\n\n利用旧版 ATI/AMD Catalyst 驱动的转储，他在这批显卡首次出货近四分之一世纪后，成功实现了一些新的优化。\n\n在 ATI RV370 GPU 上，指令总数下降了约 3%，在减少周期数、temps 和 consts 等方面也看到了几个百分点的改进。R420 和 RV530 GPU 的分析也显示，生成的着色器效率提升高达几个百分点。\n\n那些对 2026 年仍在进行的 Mesa R300g 驱动工作感到好奇的人，可以查看着色器编译器改进的所有统计数据。\n\n初始 AMD RDNA5/GFX13 代码已发送用于 Mesa RADV 和 RadeonSI 驱动\nAMDGPU Linux 驱动补丁已发布，用于启用 GFX13 图形 IP - RDNA5\nAMDGPU 驱动为 Linux 7.4 带来 HDMI 2.2 FRL 修复\nRadeonSI 和 RADV 现为 GFX8 时代 GPU 启用 D16 支持\nMesa RADV 变更让更多 Steam Play 游戏在老旧的 AMD GFX8 GPU 上运行\nAMD HIPRT 3.2 发布，支持 Medusa APU\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nSynaptics 似乎利用法律威胁阻止开源 DisplayLink 驱动\nOpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞\nDebian 的 APT 受到中间人攻击影响，可以 root 权限执行任意代码\n资深 Linux 开发者因 AI 导致的补丁洪流辞去部分职务\nLinux 内核准备移除最后一批 MMX 优化代码\n“AMD 热爱 Omarchy” Linux 将有更多合作\nFedora 45 发布，带来众多前沿 Linux 创新\nLinux 7.5 的 ChaCha AVX-512 优化在 AMD Zen 5 上提升高达 99%\n\n享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "ba6e1240e5d7591f773c5ff782821dfd": {
+    "id": "ba6e1240e5d7591f773c5ff782821dfd",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/tails-7-16-privacy-focused-linux-distro-released-with-tor-browser-16/",
+    "title_en": "Tails 7.16 Privacy-Focused Linux Distro Released with Tor Browser 16",
+    "summary_en": "Tails 7.16 updates the privacy-focused Linux distribution with Tor Browser 16, delivering browser improvements and updated anonymity tools.\nThe post Tails 7.16 Privacy-Focused Linux Distro Released with Tor Browser 16 appeared first on Linux Today.",
+    "pub_date": "Wed, 11 Nov 2026 08:29:34 +0000",
+    "title_zh": "注重隐私的 Linux 发行版 Tails 7.16 发布，搭载 Tor Browser 16",
+    "summary_zh": "Tails 7.16 正式发布，这是一款注重隐私保护的 Linux 发行版。此次更新将 Tor Browser 升级至 16 版本，带来浏览器功能改进，并更新了多项匿名工具，进一步提升用户的隐私与匿名性体验。",
+    "fulltext_zh": "Tails 7.16 对这款注重隐私的 Linux 发行版进行了更新，搭载 Tor Browser 16，带来浏览器改进并更新了匿名工具。\n\n文章《注重隐私的 Linux 发行版 Tails 7.16 发布，搭载 Tor Browser 16》首发于 Linux Today。"
+  },
+  "67317764ca6fb1fa13c57c383ba14be3": {
+    "id": "67317764ca6fb1fa13c57c383ba14be3",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/10-useful-ls-command-tricks-for-linux-users/",
+    "title_en": "10 Useful ‘ls’ Command Tricks for Linux Users",
+    "summary_en": "Discover 10 useful ls command tricks to list files, sort directories, display hidden files, and navigate the Linux terminal more efficiently.\nThe post 10 Useful ‘ls’ Command Tricks for Linux Users appeared first on Linux Today.",
+    "pub_date": "Wed, 11 Nov 2026 08:26:08 +0000",
+    "title_zh": "Linux用户必知的10个实用'ls'命令技巧",
+    "summary_zh": "本文介绍了10个实用的ls命令技巧，帮助Linux用户更高效地列出文件、排序目录、显示隐藏文件以及在终端中导航。这些技巧能显著提升日常命令行操作的效率。",
+    "fulltext_zh": "探索10个实用的ls命令技巧，用于列出文件、排序目录、显示隐藏文件，并更高效地导航Linux终端。\n\n文章《Linux用户必知的10个实用'ls'命令技巧》首发于Linux Today。"
+  },
+  "52900c01a516ec20ed6722b3e64f56a9": {
+    "id": "52900c01a516ec20ed6722b3e64f56a9",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/myrlyn-1-1-package-manager-gui-adds-repository-protection-reboot-alerts/",
+    "title_en": "Myrlyn 1.1 Package Manager GUI Adds Repository Protection, Reboot Alerts",
+    "summary_en": "Myrlyn 1.1 improves package management on openSUSE with repository protection, reboot notifications, and a more convenient graphical interface.\nThe post Myrlyn 1.1 Package Manager GUI Adds Repository Protection, Reboot Alerts appeared first on Linux Today.",
+    "pub_date": "Wed, 11 Nov 2026 08:23:30 +0000",
+    "title_zh": "Myrlyn 1.1 软件包管理器图形界面新增软件源保护与重启提醒功能",
+    "summary_zh": "Myrlyn 1.1 版本为 openSUSE 的软件包管理带来改进，新增软件源保护、重启通知以及更便捷的图形界面，提升了整体使用体验。",
+    "fulltext_zh": "Myrlyn 1.1 通过软件源保护、重启通知以及更便捷的图形界面，改进了 openSUSE 上的软件包管理。\n\n文章《Myrlyn 1.1 软件包管理器图形界面新增软件源保护与重启提醒功能》首发于 Linux Today。"
+  },
+  "f062fb274d5aa855f4fb2bcb8a9fb07e": {
+    "id": "f062fb274d5aa855f4fb2bcb8a9fb07e",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/noctalia-5-4-1-wayland-shell-closes-security-holes-and-adds-new-features/",
+    "title_en": "Noctalia 5.4.1 Wayland Shell Closes Security Holes and Adds New Features",
+    "summary_en": "Noctalia 5.4.1 brings security fixes, stability improvements, and new features to the customizable Wayland desktop shell for Linux.\nThe post Noctalia 5.4.1 Wayland Shell Closes Security Holes and Adds New Features appeared first on Linux Today.",
+    "pub_date": "Wed, 11 Nov 2026 08:17:56 +0000",
+    "title_zh": "Noctalia 5.4.1 Wayland Shell 修复安全漏洞并新增功能",
+    "summary_zh": "Noctalia 5.4.1 为这款可定制的 Linux Wayland 桌面 Shell 带来安全修复、稳定性改进和新功能。",
+    "fulltext_zh": "Noctalia 5.4.1 为这款可定制的 Linux Wayland 桌面 Shell 带来安全修复、稳定性改进和新功能。\n\n文章《Noctalia 5.4.1 Wayland Shell 修复安全漏洞并新增功能》首发于 Linux Today。"
+  },
+  "601178ce1313844ca7bb65161cf1e81b": {
+    "id": "601178ce1313844ca7bb65161cf1e81b",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/tor-browser-16-0-released-with-linux-arm64-support-redesigned-settings/",
+    "title_en": "Tor Browser 16.0 Released with Linux ARM64 Support, Redesigned Settings",
+    "summary_en": "Tor Browser 16.0 introduces Linux ARM64 support, redesigned settings, and improvements to privacy-focused browsing across supported platforms.\nThe post Tor Browser 16.0 Released with Linux ARM64 Support, Redesigned Settings appeared first on Linux Today.",
+    "pub_date": "Wed, 11 Nov 2026 08:15:50 +0000",
+    "title_zh": "Tor Browser 16.0 发布，支持 Linux ARM64，重新设计设置界面",
+    "summary_zh": "Tor Browser 16.0 正式发布，新增 Linux ARM64 支持，并重新设计了设置界面，同时在所有支持的平台上改进了隐私浏览体验。",
+    "fulltext_zh": "Tor Browser 16.0 引入了 Linux ARM64 支持、重新设计的设置界面，并改进了所有支持平台上注重隐私的浏览体验。\n\n文章《Tor Browser 16.0 发布，支持 Linux ARM64，重新设计设置界面》首发于 Linux Today。"
+  },
+  "0b6ace542b9a19523000baeda9acaca3": {
+    "id": "0b6ace542b9a19523000baeda9acaca3",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/new-steam-client-update-introduces-linux-64-bit-support-steam-achievement-sets",
+    "title_en": "New Steam Client Update Introduces Linux 64-Bit Support, Steam Achievement Sets",
+    "summary_en": "Valve released a new stable Steam Client update today with a 64-bit build for Linux systems, Steam Achievement Sets, support for GameInput v4, and more.\nThe post New Steam Client Update Introduces Linux 64-Bit Support, Steam Achievement Sets appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Thu, 12 Nov 2026 02:16:46 +0000",
+    "title_zh": "新版 Steam 客户端更新引入 Linux 64 位支持与 Steam 成就集",
+    "summary_zh": "Valve 发布新版稳定版 Steam 客户端更新，为 Linux 系统带来 64 位构建，并新增 Steam 成就集功能、支持 GameInput v4 等多项改进。",
+    "fulltext_zh": "Valve 今日发布了新的稳定版 Steam 客户端更新，为 Linux 系统提供了 64 位构建，新增了 Steam 成就集，支持 GameInput v4，以及更多内容。"
+  },
+  "79c8315cca2c150e495b54f546938ab6": {
+    "id": "79c8315cca2c150e495b54f546938ab6",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/ardour-9-10-open-source-daw-is-out-with-live-gain-envelope-waveform-updates",
+    "title_en": "Ardour 9.10 Open-Source DAW Is Out with Live Gain Envelope Waveform Updates",
+    "summary_en": "Ardour 9.10 open-source digital audio workstation (DAW) software is now available for download with optional support for audio waveforms that reflect the region’s gain envelope.\nThe post Ardour 9.10 Open-Source DAW Is Out with Live Gain Envelope Waveform Updates appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Thu, 12 Nov 2026 01:34:21 +0000",
+    "title_zh": "Ardour 9.10 开源数字音频工作站发布，带来实时增益包络波形更新",
+    "summary_zh": "Ardour 9.10 开源数字音频工作站现已开放下载，新增可选功能：音频波形可实时反映所在区域的增益包络变化，让编辑更直观。",
+    "fulltext_zh": "Ardour 9.10 开源数字音频工作站（DAW）软件现已可供下载，新增可选支持：音频波形能够反映所在区域的增益包络。"
+  },
+  "60edfb09e1652bd3666cbcfb161325bd": {
+    "id": "60edfb09e1652bd3666cbcfb161325bd",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/red-hat-enterprise-linux-10-3-released-with-sealed-images-for-image-mode",
+    "title_en": "Red Hat Enterprise Linux 10.3 Released with Sealed Images for Image Mode",
+    "summary_en": "Red Hat Enterprise Linux 10.3 operating system is now available with sealed images for image mode, a model of proactive resilience, and updated components.\nThe post Red Hat Enterprise Linux 10.3 Released with Sealed Images for Image Mode appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Thu, 12 Nov 2026 01:11:52 +0000",
+    "title_zh": "红帽企业Linux 10.3发布，为镜像模式提供密封镜像",
+    "summary_zh": "红帽企业Linux 10.3操作系统现已发布，为镜像模式引入密封镜像，这是一种主动韧性模型，并更新了组件。",
+    "fulltext_zh": "红帽企业Linux 10.3操作系统现已发布，为镜像模式提供密封镜像，这是一种主动韧性模型，并更新了组件。"
   }
 }
