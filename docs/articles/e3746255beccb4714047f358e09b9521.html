@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PostgreSQL 发布新版本，修复 52 个安全漏洞及 140 多个 Bug — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月13日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>PostgreSQL 发布新版本，修复 52 个安全漏洞及 140 多个 Bug</h1>
+
+  <div class="article-summary">PostgreSQL 发布了 18.7、17.12、16.16、15.20、14.25 和 19 RC2 版本，修复了 52 个安全漏洞和 140 多个 Bug。这些漏洞中多个 CVSS 评分高达 8.8，涉及任意代码执行、SQL 注入、内存泄漏等严重问题。由于 AI/LLM 带来的大量漏洞报告，PostgreSQL 19 的发布已延迟数周。</div>
+
+  <div class="article-body"><p>PostgreSQL 18.7、17.12、16.16、15.20、14.25 和 19 RC2 于今日全部发布，原因是披露了 52 个新的安全问题。</p><p>与开源界的许多项目一样，PostgreSQL 开发者一直受到 AI/LLM 推动的 Bug 报告和安全发现的猛烈冲击。由于 AI/LLM 带来的负担，PostgreSQL 19 的发布已比计划延迟数周，而今天又发布了一系列新版本，以解决近期报告给他们的安全漏洞。</p><p>在这些新的 PostgreSQL 服务器数据库版本修复的 52 个 CVE 中，有几个的 CVSS 严重性评分在 8.8 左右。</p><p>CVE-2026-6460：ALTER ... SET DATA TYPE 执行后的类型混淆导致任意代码执行（CVSS v3.1：8.8）</p><p>CVE-2026-6467：扩展脚本 schema 处理不当执行任意 SQL（CVSS v3.1：7.2）</p><p>CVE-2026-14661：dblink 和订阅可向任意文件追加内容（CVSS v3.1：8.1）</p><p>CVE-2026-16237：INSERT ... ON CONFLICT 可绕过自动可更新视图的 WHERE 条件读取或修改行（CVSS v3.1：5.4）</p><p>CVE-2026-16240：pg_basebackup 可将备份清单内容用作格式字符串（CVSS v3.1：3.7）</p><p>CVE-2026-18447：输出参数类型混淆执行任意代码（CVSS v3.1：8.8）</p><p>CVE-2026-116303：外键和 JSON 转换绕过转换函数的 EXECUTE 权限（CVSS v3.1：3.1）</p><p>CVE-2026-116304：并行 RECORD typmod 释放后使用执行任意代码（CVSS v3.1：8.8）</p><p>CVE-2026-116306：字段赋值期间复合类型更改执行任意代码（CVSS v3.1：8.8）</p><p>CVE-2026-116307：plperl 预备查询释放后使用执行任意代码（CVSS v3.1：8.8）</p><p>CVE-2026-116308：dict_int 读取超出零长度令牌（CVSS v3.1：4.3）</p><p>CVE-2026-116309：plperl 受祝福引用类型混淆可能执行任意代码（CVSS v3.1：8.8）</p><p>CVE-2026-116310：COPY 错误上下文使用已释放的字段存储（CVSS v3.1：4.3）</p><p>CVE-2026-116311：DROP OWNED 可从非拥有表中移除限制性行安全策略（CVSS v3.1：5.4）</p><p>CVE-2026-116312：MERGE 可在触发器转换表中放置错误的行（CVSS v3.1：5.4）</p><p>CVE-2026-116313：vacuumdb --missing-stats-only 允许数据库所有者以 vacuumdb 用户身份执行代码（CVSS v3.1：7.2）</p><p>CVE-2026-116314：pg_restore 因缺少非纯文本归档验证执行任意代码（CVSS v3.1：8.8）</p><p>CVE-2026-116315：tsvector_delete() 堆缓冲区溢出执行任意代码（CVSS v3.1：8.8）</p><p>CVE-2026-116316：安全限制操作可在 pg_temp 中创建类型，会话后续查询会发现（CVSS v3.1：8.8）</p><p>CVE-2026-116317：ts_rank_cd() 堆缓冲区溢出可能执行任意代码（CVSS v3.1：8.8）</p><p>CVE-2026-116318：pg_dump 非空约束名称允许 SQL 注入（CVSS v3.1：8.8）</p><p>CVE-2026-116319：plperl 可重入 return_next() 释放后使用执行任意代码（CVSS v3.1：8.8）</p><p>CVE-2026-116320：plperl 数组和哈希转换释放后使用执行任意代码（CVSS v3.1：8.8）</p><p>CVE-2026-116321：未终止的名称值泄露服务器内存（CVSS v3.1：4.3）</p><p>CVE-2026-116322：预认证取消请求可泄露自旋锁（CVSS v3.1：5.3）</p><p>CVE-2026-116323：pltcl 可重入结果转换释放后使用执行任意代码（CVSS v3.1：8.8）</p><p>CVE-2026-116325：reindexdb 索引名称引用允许 SQL 注入（CVSS v3.1：8）</p><p>CVE-2026-116326：plperl 绑定对象异常跟随过期的 sigjmp_buf（CVSS v3.1：8.8）</p><p>CVE-2026-116327：security_barrier 分析可通过间接表达式暴露隐藏值（CVSS v3.1：4.3）</p><p>CVE-2026-116328：Generation 内存上下文整数回绕执行任意代码（CVSS v3.1：8.8）</p><p>CVE-2026-116329：统计导入类型混淆执行任意代码（CVSS v3.1：8.8）</p><p>CVE-2026-116330：pg_dump tar restore.sql 未能阻止 psql 命令注入（CVSS v3.1：8.8）</p><p>CVE-2026-116331：Min/max 聚合类型混淆执行</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/PostgreSQL-52-CVEs" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

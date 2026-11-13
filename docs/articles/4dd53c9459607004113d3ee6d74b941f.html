@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenAI Codex 协助发现并修复近 20 年历史的 Radeon Linux 驱动 Bug — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月13日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>OpenAI Codex 协助发现并修复近 20 年历史的 Radeon Linux 驱动 Bug</h1>
+
+  <div class="article-summary">AMD 为 Linux 7.5 提交的驱动补丁中，包含一项针对近 20 年前 Radeon HD 2000/3000 系列（R600 时代）GPU 的 UVD 视频解码修复。该问题由开源贡献者借助 OpenAI Codex 调查发现：解码器从系统内存读取压缩视频时会导致画面损坏，将缓冲区移至显存后解决。补丁已获接受并进入合并流程。</div>
+
+  <div class="article-body"><p>OpenAI Codex 协助发现并修复近 20 年历史的 Radeon Linux 驱动 Bug</p><p>发布于 2026 年 11 月 12 日 20:41 EST。</p><p>今天发出了最新一批 AMD 内核图形/计算驱动补丁，目标是在年底开放的 Linux 7.5 合并窗口。除了大量修复以及围绕即将推出的 GPU 的新 IP 启用工作外，甚至还有一项针对旧 ATI/AMD Radeon R600 时代硬件的修复，这得益于 OpenAI 的 Codex 的帮助。</p><p>在面向 Linux 7.5 的 AMD 内核图形驱动补丁中，有一项让我感到意外：该补丁旨在修复 R6xx 时代 GPU 上的统一视频解码（UVD）IP 块……这些是来自 Radeon HD 2000/3000 时代的近二十年历史的显卡。</p><p>AMD 多年来一直没有官方维护对 R600 GPU 的支持，但一位开源贡献者在遇到视频解码问题后，借助 AI 承担了这项任务。Ted Bullock 在解释扩展 UVD 处理检查以覆盖更多 RV6** GPU 时表示：</p><p>“我调查了我较旧的 iMac7,1（RV610/M74，设备 ID 1002:94c8）上的视频损坏问题。当解码器从系统内存读取压缩视频而 GPU 同时进行绘制时，会损坏视频帧。将输入移至 VRAM 后，帧可以正确解码。禁用图形绘制也停止了损坏。</p><p>这里提出一个建议：为这一系列设备将 UVD 缓冲区保留在 VRAM 中，正如驱动已经为其他一些芯片所做的那样。该补丁覆盖 RV610、RV620、RV630、RV635 和 RV670。这些芯片共享 RV6xx 解码器路径和旧版 R600 固件，因此我认为它们很可能有相同的硬件要求。拥有其他硬件的人需要验证这一点。</p><p>我在 Debian 上测试了这个补丁。</p><p>我使用 Codex 协助调查、测试和打补丁。”</p><p>果然，这位新开源贡献者的补丁被接受了，并通过今天的拉取请求正在前往 Linux 7.5 内核。</p><p>该拉取请求还带来了各种其他修复和更改，不过并不特别引人注目或令人兴奋：</p><p>- 错误处理修复</p><p>- IMU 固件清理修复</p><p>- TLB fence 处理修复</p><p>- 启用 JPEG type4 数据包支持</p><p>- CS IB 解析修复</p><p>- vcn/uvd/vce/jpeg 空闲工作处理程序清理</p><p>- MES 调试扩展支持</p><p>- 更多显示 KUNIT 测试</p><p>- 移除 fence ops-&gt;release()</p><p>- 文档修复</p><p>- DC PSP footer 大小修复</p><p>- 修复 WPTR BO 驱逐 fence 处理</p><p>- dma-buf 处理修复</p><p>- 添加对非连续和无 CPU 的 NUMA 拓扑的支持</p><p>- 在分析器活动时处理 perfmon 时钟</p><p>- 分析器锁定修复</p><p>- 从 SCDS 解析 HDMI 2.2 FRL 速率的 EDID 支持</p><p>- ATRM 边界检查</p><p>- 更新 KFD 分析器版本号以注明 perfmon 时钟修复”</p><p>我们将在未来几周看到更多面向 Linux 7.5 的 AMD 内核图形/计算驱动材料。本周拉取请求中未包含的是新的 AMD GFX13（RDNA5）补丁，所以也许下周会出现。</p><p>初始 AMD RDNA5/GFX13 代码已发送给 Mesa RADV 和 RadeonSI 驱动</p><p>ATI/AMD R300 至 R500 GPU 获得新的 2026 OpenGL Linux 驱动优化</p><p>AMDGPU Linux 驱动补丁已发布以启用 GFX13 图形 IP - RDNA5</p><p>AMDGPU 驱动为 Linux 7.4 带来 HDMI 2.2 FRL 修复</p><p>RadeonSI 和 RADV 现在为 GFX8 时代 GPU 启用 D16 支持</p><p>Mesa RADV 更改让更多 Steam Play 游戏在老旧的 AMD GFX8 GPU 上运行</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。他可以通过以下方式关注：</p><p>Synaptics 似乎利用法律威胁阻止开源 DisplayLink 驱动</p><p>OpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞</p><p>资深 Linux 开发者辞去部分职务</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Codex-R600-UVD-FIx-Linux-7.5" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

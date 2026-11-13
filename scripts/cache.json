@@ -20766,5 +20766,192 @@
     "title_zh": "红帽企业Linux 10.3发布，为镜像模式提供密封镜像",
     "summary_zh": "红帽企业Linux 10.3操作系统现已发布，为镜像模式引入密封镜像，这是一种主动韧性模型，并更新了组件。",
     "fulltext_zh": "红帽企业Linux 10.3操作系统现已发布，为镜像模式提供密封镜像，这是一种主动韧性模型，并更新了组件。"
+  },
+  "18950923382ec75b43677650eecbd155": {
+    "id": "18950923382ec75b43677650eecbd155",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/11/mate-wayland-compositor-polo",
+    "title_en": "Polo is a Wayland compositor for the MATE desktop",
+    "summary_en": "Polo is an unofficial Wayland compositor for MATE, inspired by Marco. It's early and needs testers, but the 3D cube and wobbly windows already work.\nYou're reading Polo is a Wayland compositor for the MATE desktop, a blog post from OMG! Ubuntu. Do not reproduce elsewhere without permission.",
+    "pub_date": "Fri, 13 Nov 2026 02:26:20 +0000",
+    "title_zh": "Polo：MATE 桌面的 Wayland 合成器",
+    "summary_zh": "Polo 是专为 MATE 桌面设计的新 Wayland 合成器，旨在让 MATE 在 Wayland 下的行为尽可能接近 X11。它已支持窗口管理、平铺、工作区、剪贴板、多显示器、缩放、屏幕共享和 MATE 会话管理，并包含经典桌面特效如 3D 立方体、摇晃窗口和神灯最小化。目前尚不完整且未经充分测试，开发者 Kerem Söke 正寻求志愿者测试。MATE 官方尚未有 Wayland 会话，但若 Polo 运行良好，未来可能被采纳。",
+    "fulltext_zh": "Polo 是 MATE 桌面的一个新 Wayland 合成器。\n\nMATE 可能有意保留着过去的一面，但这并不意味着它的粉丝们没有放眼未来——而未来将包括 Wayland。\n\nPolo 是一个新的 MATE 桌面 Wayland 合成器，模仿了该桌面现有的基于 X11 的窗口管理器 Marco（它源自 GNOME 的 Metacity）。\n\n“我们的想法是让 MATE 的行为尽可能接近它在 X11 上的表现，而不是为了适应不同的合成器而改变桌面，”独立于 MATE 项目开发 Polo 的 Kerem Söke 说道。\n\nPolo 已经支持窗口管理和平铺、工作区、剪贴板、多显示器设置、缩放、屏幕共享和 MATE 会话管理。它甚至包含经典的桌面特效，比如标志性的 3D 桌面立方体、摇晃窗口以及像神灯一样的窗口最小化效果。\n\nPolo 包含经典桌面特效和视觉亮点。\n\n它还不完整，也没有经过充分测试。因此，Söke 正在寻找志愿者在他们的硬件上以及日常使用的应用程序中尝试它。遗憾的是，测试并非易事。Polo 需要从源代码编译，最好还搭配最新的 MATE 桌面。\n\n许多 Linux 桌面在同时支持传统 X11/Xorg 显示服务器多年后，已经放弃或正在逐步放弃对其的支持。对于代码库较旧、志愿者较少的较小桌面环境来说，迁移到 Wayland 是一项艰巨的任务。\n\nMATE 的开发者们正在为 Wayland 做准备。最近的版本已经为桌面图标渲染等应用程序添加了 Wayland 支持。这项工作零敲碎打，而且通常只有在使用正确的编译标志构建时才会存在。\n\n目前还没有官方的 MATE 合成器或 Wayland 会话。虽然现在这还不是官方的，但如果它能工作，并且工作得很好，那么没有理由说它不能被采纳。\n\n在 [链接] 上找到代码和更多细节。"
+  },
+  "352c0624107b172544c6b4163a0ea6d0": {
+    "id": "352c0624107b172544c6b4163a0ea6d0",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/11/android-apps-on-ubuntu-waydroid",
+    "title_en": "Running Android apps on Ubuntu is now surprisingly easy",
+    "summary_en": "Waydroid is an apt install on Ubuntu 26.04 LTS and later. Here’s how to set it up, enable windowed mode and stop it eating your battery.\nYou're reading Running Android apps on Ubuntu is now surprisingly easy, a blog post from OMG! Ubuntu. Do not reproduce elsewhere without permission.",
+    "pub_date": "Thu, 12 Nov 2026 22:28:18 +0000",
+    "title_zh": "在Ubuntu上运行安卓应用现在出奇地简单",
+    "summary_zh": "Waydroid是一个开源项目，让Ubuntu用户无需虚拟机即可运行安卓应用和游戏。在Ubuntu 26.04 LTS及更高版本中，只需通过apt命令即可安装。它使用容器化LineageOS，支持应用与Linux应用并排运行并集成系统硬件。安装后需下载约1.1GB镜像，支持Google Play（可选），但仅限Wayland，NVIDIA用户需软件渲染。配置需命令行操作，可调整DPI、启用多窗口等。",
+    "fulltext_zh": "在Ubuntu上运行安卓应用现在出奇地简单\n\nUbuntu本身并不原生运行安卓应用和游戏，但Waydroid是一个开源项目，可以让你使用它们——而且在Ubuntu上设置起来非常简单。\n\n在Ubuntu 26.04 LTS及更高版本上，只需一条简单的命令即可完成。无需添加PPA、寻找第三方软件包或运行来自Reddit帖子的脚本。\n\n如果你有想在桌面上使用的安卓应用或游戏，Waydroid为你提供了实现的方法。\n\n它运行的是容器化的安卓版本（LineageOS），而非虚拟机，这使得安卓应用可以与Linux应用并排运行，并与系统硬件集成。\n\n它并不完美。它仅能在Wayland下工作，NVIDIA用户必须使用软件渲染（详情见下文）。运行效果取决于你的硬件，同样重要的是你同时打开了哪些其他程序，因为两个操作系统共享同一系统资源。\n\n在Ubuntu上安装Waydroid\n\n在Ubuntu 26.04 LTS（及更高版本）上，你可以安装Waydroid。打开终端并运行：\n\nsudo apt install waydroid\n\n它会拉取Waydroid v1.63版本以及运行所需的依赖项。\n\n解包后，你可以从应用程序网格中启动Waydroid。首次运行向导会要求你选择要下载的安卓类型。如果你想使用Google Play及相关的GAPPS功能，请选择带有该功能的镜像。\n\n选择你偏好的安卓版本\n\n完成后，再次打开Waydroid，它会运行安卓系统设置。这会引导你登录Google账户等。之后，一些应用快捷方式（包括设置）将出现在应用程序网格中。\n\n剪贴板是双向的，因此你可以在安卓应用和常规Linux应用之间复制/粘贴，应用通知会出现在GNOME中，这很不错。其他一切都会传递过去（我的蓝牙游戏手柄输入被传递了，这很烦人）。\n\n尽管Waydroid运行完整的安卓版本，但实际镜像下载本身并不大，大约1.1GB左右。在我的系统上（安装了几个简单游戏），Waydroid总共占用了约4GB磁盘空间。\n\nWaydroid在你的桌面上运行完整的安卓操作系统\n\n配置通过命令行完成。如果你想更改显示缩放或启用多窗口模式，需要运行命令来实现——官方文档有详细说明。\n\n更改仅在重启Waydroid会话后生效。右键单击应用网格或Ubuntu Dock中的Waydroid图标，可以找到包含停止和启动选项的上下文菜单。\n\n我降低了显示缩放（原始值225太大，所以我降低了）：\n\nsudo waydroid prop set persist.waydroid.dpi 180\n\n我希望能够调整安卓应用的大小和移动它们，所以我通过运行以下命令启用了多窗口模式：\n\nsudo waydroid prop set persist.waydroid.multi_windows true\n\n在安卓内部，我禁用了选择文本字段时弹出的屏幕键盘（OSK）。禁用该功能的开关位于安卓的“设置 > 系统 > 语言和输入法 > 物理键盘”中。\n\n根据你计划在Ubuntu上使用Waydroid做什么，你可能想设置一个共享文件夹，以便在系统之间传递文件更容易一些。\n\n而且，如果你真的想要，你甚至可以创建自己的专用会话，让你登录到全屏安卓体验。\n\n我可以在Waydroid上使用Google Play吗？\n\n可以，如果你在初始设置时选择了“带Google应用的安卓”镜像。不过，你需要一个Google账户才能安装任何东西。\n\n如果Google Play报告你的设备未通过Play Protect验证，网站文档页面有步骤说明如何（简单地）解决。\n\n我可以在没有Google Play的情况下安装应用吗？\n\nGoogle Play是可选的。你可以通过ADB或在安卓环境内安装APK，所以如果你更愿意使用像F-Droid这样的开源商店，你可以——替代或 alongside Google Play。\n\n性能如何？\n\n我有点好奇在Ubuntu上尝试Waydroid，现在它已进入归档。我记得过去尝试过……有点棘手。这个项目已经成熟了很多。"
+  },
+  "850448ff833e4954b8dd6b1a35b64e23": {
+    "id": "850448ff833e4954b8dd6b1a35b64e23",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/11/firefox-vpn-unlimited-data-temp",
+    "title_en": "Firefox’s free built-in VPN removes its data limit (until next year)",
+    "summary_en": "Mozilla has lifted its 50GB data cap on Firefox&#8217;s built-in VPN until 31 January 2027. From 10 November, you can enable the free VPN in Firefox and browse as much as you like, for as long as you like, without needing to worry about reaching the fixed monthly limit. &#8216;Whether you’re heading home to see family this winter or taking a well-earned break before the year wraps up, we want you to browse with a little more peace of mind&#8217;, Mozilla&#8217;s LLM-aided blog screed insincerely",
+    "pub_date": "Thu, 12 Nov 2026 16:59:33 +0000",
+    "title_zh": "Firefox 免费内置 VPN 取消数据限制（直至明年）",
+    "summary_zh": "Mozilla 宣布，从 11 月 10 日起至 2027 年 1 月 31 日，Firefox 内置免费 VPN 将取消每月 50GB 的数据上限，用户可无限浏览。该功能需登录 Mozilla 账户，支持按站点设置例外及隐私模式。2027 年 2 月 1 日起将恢复 50GB 限制。需注意该 VPN 仅保护浏览器内活动，不覆盖其他应用。",
+    "fulltext_zh": "Mozilla 已取消 Firefox 内置 VPN 的 50GB 数据上限，直至 2027 年 1 月 31 日。\n\n从 11 月 10 日起，你可以在 Firefox 中启用免费 VPN，随心所欲地浏览，无需担心触及每月固定限额。\n\n“无论你今年冬天是回家探亲，还是在年底前好好休息一下，我们都希望你能更安心地浏览，”Mozilla 在其 LLM 辅助的、言不由衷的热情声明中表示。\n\n今年 6 月（当时它还临时将用于代理浏览流量的服务器位置数量增加到了慷慨的 28 个）。2027 年 2 月 1 日，Firefox VPN 将恢复每月 50GB 的数据限制。\n\n使用免费 VPN 需要登录 Mozilla 账户（只需一个电子邮件地址即可）。可以设置按站点例外，这样访问某些网站时不会使用 VPN。该功能在隐私模式下也可用。\n\n它并非常规 VPN。它只掩盖你在浏览器内的活动。要隐藏其他应用、桌面服务等的连接，你需要一个真正的 VPN——Mozilla 恰好有售。\n\n无限数据意味着你可以为某个可用位置开启 VPN，而不必太担心在 YouTube 等数据密集型网站上的活动——设置后即可忘记（好吧，直到你厌倦了德语搜索结果）。"
+  },
+  "7a7efc9af7e807a4dbb51c2aa7b9d256": {
+    "id": "7a7efc9af7e807a4dbb51c2aa7b9d256",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/ans-joins-linux-foundation/",
+    "title_en": "Agent Name Service is Now Part of The Linux Foundation",
+    "summary_en": "ANS lets AI agents prove who they are, much like a domain name and its certificate do for a website.",
+    "pub_date": "Thu, 12 Nov 2026 12:15:54 GMT",
+    "title_zh": "Agent Name Service 现已加入 Linux 基金会",
+    "summary_zh": "Agent Name Service (ANS) 正式成为 Linux 基金会项目，旨在为 AI 代理提供可验证的身份标识，类似域名与证书之于网站。GoDaddy、Cloudflare、Salesforce 和 DigiCert 等 11 家组织参与其中。ANS 通过将代理与其运营者拥有的域名绑定，并颁发证书、公开注册日志，使接收系统能验证代理身份。项目设有技术指导委员会，首年内将举行选举，并规定代码许可从 MIT 过渡到 Apache 2.0。",
+    "fulltext_zh": "Agent Name Service 现已加入 Linux 基金会\n\nAgent Name Service (ANS) 现在在 Linux 基金会有了归宿。发布会在盐湖城举行的 KubeCon 北美站上举行，你可能还记得，基金会早在六月就为该项目的启动做了铺垫。\n\nGoDaddy、Cloudflare、Salesforce 和 DigiCert 等组织现已参与 ANS，使参与组织总数达到十一家。\n\nANS 的早期部署之一是在该基金会下的另一个项目中进行，其 AI 代理目录现在可以检查代理的 ANS 身份。\n\n在宣布这一变动时，Linux 基金会 CEO Jim Zemlin 分享了以下内容：\n\n自主 AI 代理正在全球系统中进行交易和操作，但如果没有可验证的身份，它们就无法成功。在 Linux 基金会的中立治理下，ANS 提供了一个整个行业可以共同采用、实施和改进的通用信任基础。\n\n各平台以自己的方式识别 AI 代理，而接收到某个代理请求的服务没有标准化的方式来确认该代理代表谁。ANS 通过将每个代理与其运营者拥有的域名关联来解决这个问题，就像网站与其域名绑定一样。每个版本的代理都有自己的名称，例如 ans://v1.4.2.travel.example.com\n\n要注册代理，运营者首先必须证明其控制该域名。然后为代理颁发证书，每次注册都会进入一个任何人都可以阅读的公开日志。\n\nANS 还在互联网的地址簿中发布每个代理的详细信息，其他系统则可以使用它们已有的工具进行查询。\n\n主要的 DNS 记录使用来自一个名为的独立项目的格式。ANS 添加了自己的一条记录，指向代理在公开日志中的条目。\n\n当代理发送请求时，接收系统可以检查其注册是否存在、是否未被撤销，以及代理是否确实持有与之关联的密钥。\n\nANS 只涵盖代理是谁。决定它能做什么则留给接收系统，平台必须自行添加检查。\n\n一个技术指导委员会现在。它最初有五个席位，由来自的三人和来自的 Michael Kantor 担任。\n\n这一阵容只是一个起点。首次选举必须在 12 个月内举行，之后，规定任何一家公司不得持有半数或以上席位（以确保供应商中立性）。\n\n章程还提到，会议应向公众开放，讨论和决定应对所有人可见。\n\n至于项目中的所有代码，Go、Rust 和 Java 库目前使用 MIT 许可证，但从现在起贡献的新代码必须使用 Apache 2.0 许可证。\n\nANS 始于 2025 年，当时是发送给互联网标准组织 IETF 的一份草案，十月份又有一份草案出台。此类草案在 IETF 没有正式地位，也不受其认可。\n\n目前，Linux 基金会称该规范已正式化。参考代码和本地演示在项目的上，规范在上。\n\n喜欢这篇更新？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无承诺\n\n跳过 Google 结果中的 AI 垃圾和 SEO 垃圾\n\n告诉 Google 你更喜欢 It's FOSS，它会在你搜索时更频繁地显示我们由经验丰富的 Linux 用户创建的 Linux 新闻和教程。只需点击一下。\n\n设为首选来源\n\n🐧 玩今天的 Tuxdle——每日 Linux 单词谜题 →\n\n在收件箱中获取 FOSS Weekly\n\n一份健康的 Linux 新闻通讯，包含最新版本、相关新闻、技巧和教程、琐事和模因、测验和桌面 Linux 用户的优惠。每周免费。\n\nA"
+  },
+  "2816ed7ca2f20e0c342c31b1baa3ada6": {
+    "id": "2816ed7ca2f20e0c342c31b1baa3ada6",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/13038",
+    "title_en": "Distribution Release: openKylin 3.0 SP1",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The openKylin project has published an update to its 3.0 release which introduces improved performance, updates the distribution's AI tools and fixes various bugs across the system. \"Added support for Arabic, Korean and Dai languages, further improving the input, display and interaction experience for these languages, bringing a....",
+    "pub_date": "",
+    "title_zh": "发行版发布：openKylin 3.0 SP1",
+    "summary_zh": "openKylin 3.0 SP1 发布，带来性能提升、AI 工具更新及大量缺陷修复。新增阿拉伯语、韩语和傣语支持，推出 AI 浏览器扩展，集成网页智能摘要、内容问答和划词翻译功能。增强飞腾 D3000M、金蝶时空 V100 等平台的适配能力，完成超过 200 项缺陷修复和细节优化，覆盖桌面交互、图形显示和设备管理等核心场景。",
+    "fulltext_zh": "openKylin 项目发布了 3.0 版本的更新，该版本引入了性能改进，更新了发行版的 AI 工具，并修复了系统中的各种缺陷。\n\n新增对阿拉伯语、韩语和傣语的支持，进一步改善这些语言的输入、显示和交互体验，为更多母语用户带来流畅的开箱即用体验。全新的 AI 浏览器扩展正式上线，集成网页智能摘要、内容问答和划词翻译能力，为用户打造轻量便捷的智能入口，全面提升浏览体验。持续增强对关键平台和重要外设的适配能力，提升飞腾 D3000M、金蝶时空 V100 等平台上的图形显示、网卡驱动、高性能计算等能力，进一步拓展 openKylin 在多架构、多设备场景下的兼容边界。围绕系统稳定性、硬件兼容性和用户体验进行迭代，完成超过 200 项缺陷修复和细节优化，覆盖桌面交互、图形显示、设备管理等核心场景，推动系统更加稳定、流畅、易用。\n\n更多详细信息可在发布公告中查看（中文）。\n\n下载：openKylin-Desktop-V3.0-SP1-20261110-x86_64.iso\n\nopenKylin 是一款中国桌面 Linux 发行版，运行 Kylin 和 UKUI 桌面环境，开箱即提供 Wayland 和 X11 会话。该项目是 Debian 家族的成员，可使用 APT 包管理工具，还提供自定义包格式并与软件中心相结合。openKylin 也是定制工具的试验场，这些工具用于辅助……"
+  },
+  "4dd53c9459607004113d3ee6d74b941f": {
+    "id": "4dd53c9459607004113d3ee6d74b941f",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Codex-R600-UVD-FIx-Linux-7.5",
+    "title_en": "OpenAI Codex Helps Uncover & Fix A Nearly 20 Year Old Radeon Linux Driver Bug",
+    "summary_en": "Sent out today was the latest batch of AMD kernel graphics/compute driver patches destined for the Linux 7.5 merge window opening up at year's end/ Besides a lot of fixes and continued work around new IP enablement for upcoming GPUs, there is even a fix for old ATI/AMD Radeon R600 era hardware after help from OpenAI's Codex...",
+    "pub_date": "Thu, 12 Nov 2026 20:41:27 -0500",
+    "title_zh": "OpenAI Codex 协助发现并修复近 20 年历史的 Radeon Linux 驱动 Bug",
+    "summary_zh": "AMD 为 Linux 7.5 提交的驱动补丁中，包含一项针对近 20 年前 Radeon HD 2000/3000 系列（R600 时代）GPU 的 UVD 视频解码修复。该问题由开源贡献者借助 OpenAI Codex 调查发现：解码器从系统内存读取压缩视频时会导致画面损坏，将缓冲区移至显存后解决。补丁已获接受并进入合并流程。",
+    "fulltext_zh": "OpenAI Codex 协助发现并修复近 20 年历史的 Radeon Linux 驱动 Bug\n\n发布于 2026 年 11 月 12 日 20:41 EST。\n\n今天发出了最新一批 AMD 内核图形/计算驱动补丁，目标是在年底开放的 Linux 7.5 合并窗口。除了大量修复以及围绕即将推出的 GPU 的新 IP 启用工作外，甚至还有一项针对旧 ATI/AMD Radeon R600 时代硬件的修复，这得益于 OpenAI 的 Codex 的帮助。\n\n在面向 Linux 7.5 的 AMD 内核图形驱动补丁中，有一项让我感到意外：该补丁旨在修复 R6xx 时代 GPU 上的统一视频解码（UVD）IP 块……这些是来自 Radeon HD 2000/3000 时代的近二十年历史的显卡。\n\nAMD 多年来一直没有官方维护对 R600 GPU 的支持，但一位开源贡献者在遇到视频解码问题后，借助 AI 承担了这项任务。Ted Bullock 在解释扩展 UVD 处理检查以覆盖更多 RV6** GPU 时表示：\n\n“我调查了我较旧的 iMac7,1（RV610/M74，设备 ID 1002:94c8）上的视频损坏问题。当解码器从系统内存读取压缩视频而 GPU 同时进行绘制时，会损坏视频帧。将输入移至 VRAM 后，帧可以正确解码。禁用图形绘制也停止了损坏。\n\n这里提出一个建议：为这一系列设备将 UVD 缓冲区保留在 VRAM 中，正如驱动已经为其他一些芯片所做的那样。该补丁覆盖 RV610、RV620、RV630、RV635 和 RV670。这些芯片共享 RV6xx 解码器路径和旧版 R600 固件，因此我认为它们很可能有相同的硬件要求。拥有其他硬件的人需要验证这一点。\n\n我在 Debian 上测试了这个补丁。\n\n我使用 Codex 协助调查、测试和打补丁。”\n\n果然，这位新开源贡献者的补丁被接受了，并通过今天的拉取请求正在前往 Linux 7.5 内核。\n\n该拉取请求还带来了各种其他修复和更改，不过并不特别引人注目或令人兴奋：\n- 错误处理修复\n- IMU 固件清理修复\n- TLB fence 处理修复\n- 启用 JPEG type4 数据包支持\n- CS IB 解析修复\n- vcn/uvd/vce/jpeg 空闲工作处理程序清理\n- MES 调试扩展支持\n- 更多显示 KUNIT 测试\n- 移除 fence ops->release()\n- 文档修复\n- DC PSP footer 大小修复\n- 修复 WPTR BO 驱逐 fence 处理\n- dma-buf 处理修复\n- 添加对非连续和无 CPU 的 NUMA 拓扑的支持\n- 在分析器活动时处理 perfmon 时钟\n- 分析器锁定修复\n- 从 SCDS 解析 HDMI 2.2 FRL 速率的 EDID 支持\n- ATRM 边界检查\n- 更新 KFD 分析器版本号以注明 perfmon 时钟修复”\n\n我们将在未来几周看到更多面向 Linux 7.5 的 AMD 内核图形/计算驱动材料。本周拉取请求中未包含的是新的 AMD GFX13（RDNA5）补丁，所以也许下周会出现。\n\n初始 AMD RDNA5/GFX13 代码已发送给 Mesa RADV 和 RadeonSI 驱动\nATI/AMD R300 至 R500 GPU 获得新的 2026 OpenGL Linux 驱动优化\nAMDGPU Linux 驱动补丁已发布以启用 GFX13 图形 IP - RDNA5\nAMDGPU 驱动为 Linux 7.4 带来 HDMI 2.2 FRL 修复\nRadeonSI 和 RADV 现在为 GFX8 时代 GPU 启用 D16 支持\nMesa RADV 更改让更多 Steam Play 游戏在老旧的 AMD GFX8 GPU 上运行\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。他可以通过以下方式关注：\n\nSynaptics 似乎利用法律威胁阻止开源 DisplayLink 驱动\nOpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞\n资深 Linux 开发者辞去部分职务"
+  },
+  "3304f30b74a050c7150eeccfbbd92ab4": {
+    "id": "3304f30b74a050c7150eeccfbbd92ab4",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Rust-1.100-Released",
+    "title_en": "Rust 1.100 Released With The \"Never\" Type Finally Stable",
+    "summary_en": "Rust 1.100 is out today as the newest version of this popular programming language...",
+    "pub_date": "Thu, 12 Nov 2026 13:51:12 -0500",
+    "title_zh": "Rust 1.100 发布：\"Never\" 类型终于稳定",
+    "summary_zh": "Rust 1.100 正式发布，历经十年和五次失败的稳定化尝试后，\"never\" 类型 \"!\" 终于稳定，用于表示永不返回的发散计算。此版本还稳定了 Allocator API 的核心部分，允许 Cargo 报告未使用的依赖，并减少缓存冲突。新增的 min-publish-age 功能可作为依赖冷却期，避免使用刚发布的可疑 crate。此外还包含其他稳定 API 和改进。",
+    "fulltext_zh": "Rust 1.100 今日发布，这是这一流行编程语言的最新版本。\n\n在 Rust 1.100 中，\"never\" 类型终于被认为稳定。历经十年和五次过去失败的稳定化尝试，Rust 的 never 类型现在被视为稳定。\n\nRust 的 never 类型 \"!\" 用于表示永不解析为任何值的发散计算。never 类型之后的任何代码都是不可达的。\n\nRust 1.100 还稳定了 Rust Allocator API 的核心部分。Rust 1.100 还允许在 Cargo 中报告未使用的依赖。此外还有减少 Cargo 缓存冲突的工作。\n\n一个新的 Cargo 功能是 \"min-publish-age\"，作为依赖冷却期。由于恶意包通常在发布后数小时或短时间内被捕获，设置 global-min-publish-age 现在可以用来避免例如过去 3 或 5 天内发布的 crate。\n\nRust 1.100 还带来了各种其他稳定的 API 和改进，详见发布说明。"
+  },
+  "a94bc8340a1a2f7969a29f22c1b67eeb": {
+    "id": "a94bc8340a1a2f7969a29f22c1b67eeb",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/amd-epyc-zen6-smt",
+    "title_en": "AMD Zen 6 SMT Proves Very Advantageous Even For 256 Core EPYC 9996",
+    "summary_en": "With the now-shipping AMD EPYC 9006 \"Venice\" SP7 server processors sporting up to 256 Zen 6(C) cores per socket, or 512 cores in a 2P configuration, you may be wondering if Simultaneous Multithreading (SMT) is still worthwhile on these increasingly high core count processors. Long story short, SMT on AMD Zen 6 is still definitely worthwhile from a performance and power perspective. I was curious myself and ran some benchmarks to explore the SMT impact on the 256-core EPYC 9996 as well as the 96-",
+    "pub_date": "Thu, 12 Nov 2026 11:40:00 -0500",
+    "title_zh": "AMD Zen 6 SMT 即使对 256 核 EPYC 9996 也证明非常有利",
+    "summary_zh": "随着 AMD EPYC 9006 \"Venice\" SP7 服务器处理器上市，单路最高 256 个 Zen 6(C) 核心，双路可达 512 核，Phoronix 测试了 SMT 在这些高核心数处理器上的影响。测试使用 96 核 EPYC 9686F 和 256 核 EPYC 9996 的双路配置，分别在 SMT 开启和关闭状态下运行多种基准测试，并监测功耗。结果表明，从性能和功耗角度看，Zen 6 上的 SMT 仍然非常值得启用。",
+    "fulltext_zh": "AMD Zen 6 SMT 即使对 256 核 EPYC 9996 也证明非常有利\n\n随着现已上市的 AMD EPYC 9006 \"Venice\" SP7 服务器处理器每路最高配备 256 个 Zen 6(C) 核心，双路配置可达 512 核，你可能想知道在这些核心数越来越高的处理器上，同时多线程（SMT）是否仍然值得。长话短说，从性能和功耗角度看，AMD Zen 6 上的 SMT 仍然绝对值得。我自己也很好奇，于是运行了一些基准测试来探究 SMT 对 96 核高频 EPYC 9686F 的影响。\n\n由于我自己对 Zen 6/6C 的 SMT 优势很好奇，尤其是 AMD 现在能够将 256 个物理核心塞进单个 SP7 插槽，我运行了一些 EPYC Venice 的 SMT 对比基准测试。96 核 EPYC 9686F 和 256 核 EPYC 9996 分别在双路配置下测试，即 192 核和 512 核，SMT 先保持默认开启状态，然后禁用，以观察对性能和功耗/每瓦性能的影响。\n\n这是一个相当直接的对比，类似于 Phoronix 过去进行的 SMT 基准测试对比，例如探索 NVIDIA Vera 的 SMT、Intel Granite Rapids WS 与 Threadripper Zen 5 的 SMT 对比、Xeon 6300 与 EPYC 4005 的 SMT/HT 对比，以及多年来许多其他 SMT 性能对比。\n\n随后针对那些传统上可扩展、并且能够扩展到约 1024 线程（对于 EPYC 9996 双路配置）的各种基准测试进行了运行，其中一些应用/工作负载存在 64~512 线程的静态硬限制或其他可扩展性挑战。在此基础上，观察了这两款第六代 AMD EPYC 处理器在 SMT 开启/关闭时的性能，并监测了双路 CPU 的总功耗。\n\n所有这些基准测试均在 Ubuntu 26.10 和 Linux 7.3 上完成，以获得非常新鲜的開源体验。\n\nAMD EPYC 9996 基准测试显示 256 个 Zen 6C 核心带来无与伦比的性能\nAMD EPYC 9686F Linux 基准测试：96 个 Zen 6 核心，最高 5.3GHz\nNVIDIA Vera 单路 vs. 双路 CPU 性能\nSnapdragon X2 在 Linux 上的性能初步基准测试超出预期\nNVIDIA Vera HPC 性能基准测试挑战 AMD EPYC、Intel Xeon\nNVIDIA Vera SMT 性能基准测试\n\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "e3746255beccb4714047f358e09b9521": {
+    "id": "e3746255beccb4714047f358e09b9521",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/PostgreSQL-52-CVEs",
+    "title_en": "PostgreSQL Sees New Releases For 52 Security Vulnerabilities, 140+ Bug Fixes",
+    "summary_en": "PostgreSQL 18.7, 17.12, 16.16, 15.20, 14.25, and 19 RC2 all released today due to 52 new security issues being disclosed...",
+    "pub_date": "Thu, 12 Nov 2026 10:56:44 -0500",
+    "title_zh": "PostgreSQL 发布新版本，修复 52 个安全漏洞及 140 多个 Bug",
+    "summary_zh": "PostgreSQL 发布了 18.7、17.12、16.16、15.20、14.25 和 19 RC2 版本，修复了 52 个安全漏洞和 140 多个 Bug。这些漏洞中多个 CVSS 评分高达 8.8，涉及任意代码执行、SQL 注入、内存泄漏等严重问题。由于 AI/LLM 带来的大量漏洞报告，PostgreSQL 19 的发布已延迟数周。",
+    "fulltext_zh": "PostgreSQL 18.7、17.12、16.16、15.20、14.25 和 19 RC2 于今日全部发布，原因是披露了 52 个新的安全问题。\n\n与开源界的许多项目一样，PostgreSQL 开发者一直受到 AI/LLM 推动的 Bug 报告和安全发现的猛烈冲击。由于 AI/LLM 带来的负担，PostgreSQL 19 的发布已比计划延迟数周，而今天又发布了一系列新版本，以解决近期报告给他们的安全漏洞。\n\n在这些新的 PostgreSQL 服务器数据库版本修复的 52 个 CVE 中，有几个的 CVSS 严重性评分在 8.8 左右。\n\nCVE-2026-6460：ALTER ... SET DATA TYPE 执行后的类型混淆导致任意代码执行（CVSS v3.1：8.8）\nCVE-2026-6467：扩展脚本 schema 处理不当执行任意 SQL（CVSS v3.1：7.2）\nCVE-2026-14661：dblink 和订阅可向任意文件追加内容（CVSS v3.1：8.1）\nCVE-2026-16237：INSERT ... ON CONFLICT 可绕过自动可更新视图的 WHERE 条件读取或修改行（CVSS v3.1：5.4）\nCVE-2026-16240：pg_basebackup 可将备份清单内容用作格式字符串（CVSS v3.1：3.7）\nCVE-2026-18447：输出参数类型混淆执行任意代码（CVSS v3.1：8.8）\nCVE-2026-116303：外键和 JSON 转换绕过转换函数的 EXECUTE 权限（CVSS v3.1：3.1）\nCVE-2026-116304：并行 RECORD typmod 释放后使用执行任意代码（CVSS v3.1：8.8）\nCVE-2026-116306：字段赋值期间复合类型更改执行任意代码（CVSS v3.1：8.8）\nCVE-2026-116307：plperl 预备查询释放后使用执行任意代码（CVSS v3.1：8.8）\nCVE-2026-116308：dict_int 读取超出零长度令牌（CVSS v3.1：4.3）\nCVE-2026-116309：plperl 受祝福引用类型混淆可能执行任意代码（CVSS v3.1：8.8）\nCVE-2026-116310：COPY 错误上下文使用已释放的字段存储（CVSS v3.1：4.3）\nCVE-2026-116311：DROP OWNED 可从非拥有表中移除限制性行安全策略（CVSS v3.1：5.4）\nCVE-2026-116312：MERGE 可在触发器转换表中放置错误的行（CVSS v3.1：5.4）\nCVE-2026-116313：vacuumdb --missing-stats-only 允许数据库所有者以 vacuumdb 用户身份执行代码（CVSS v3.1：7.2）\nCVE-2026-116314：pg_restore 因缺少非纯文本归档验证执行任意代码（CVSS v3.1：8.8）\nCVE-2026-116315：tsvector_delete() 堆缓冲区溢出执行任意代码（CVSS v3.1：8.8）\nCVE-2026-116316：安全限制操作可在 pg_temp 中创建类型，会话后续查询会发现（CVSS v3.1：8.8）\nCVE-2026-116317：ts_rank_cd() 堆缓冲区溢出可能执行任意代码（CVSS v3.1：8.8）\nCVE-2026-116318：pg_dump 非空约束名称允许 SQL 注入（CVSS v3.1：8.8）\nCVE-2026-116319：plperl 可重入 return_next() 释放后使用执行任意代码（CVSS v3.1：8.8）\nCVE-2026-116320：plperl 数组和哈希转换释放后使用执行任意代码（CVSS v3.1：8.8）\nCVE-2026-116321：未终止的名称值泄露服务器内存（CVSS v3.1：4.3）\nCVE-2026-116322：预认证取消请求可泄露自旋锁（CVSS v3.1：5.3）\nCVE-2026-116323：pltcl 可重入结果转换释放后使用执行任意代码（CVSS v3.1：8.8）\nCVE-2026-116325：reindexdb 索引名称引用允许 SQL 注入（CVSS v3.1：8）\nCVE-2026-116326：plperl 绑定对象异常跟随过期的 sigjmp_buf（CVSS v3.1：8.8）\nCVE-2026-116327：security_barrier 分析可通过间接表达式暴露隐藏值（CVSS v3.1：4.3）\nCVE-2026-116328：Generation 内存上下文整数回绕执行任意代码（CVSS v3.1：8.8）\nCVE-2026-116329：统计导入类型混淆执行任意代码（CVSS v3.1：8.8）\nCVE-2026-116330：pg_dump tar restore.sql 未能阻止 psql 命令注入（CVSS v3.1：8.8）\nCVE-2026-116331：Min/max 聚合类型混淆执行"
+  },
+  "c38d0ae460de80327ae179d825790594": {
+    "id": "c38d0ae460de80327ae179d825790594",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Khronos-Remote-Offloading-API",
+    "title_en": "Khronos To Explore New High Level API For Remote Offloading",
+    "summary_en": "The Khronos Group, the industry consortium responsible for OpenGL, OpenCL, Vulkan, and other industry standard APIs has formed an exploratory group to evaluate the possibility of a high-level remote offloading API...",
+    "pub_date": "Thu, 12 Nov 2026 10:17:31 -0500",
+    "title_zh": "Khronos 将探索用于远程卸载的新高级 API",
+    "summary_zh": "Khronos Group 成立了一个探索性小组，评估开发高级远程卸载 API 的可能性。该 API 旨在为云和边缘基础设施提供协议无关的高级接口，帮助智能眼镜、VR 头显和无人机等资源受限设备克服电池、散热和外形限制。现有卸载方案将应用绑定到特定连接层，开发者需重写应用并管理多种实时网络协议。新 API 将隐藏连接和传输复杂性，保持对协议、硬件平台、物理层和部署模型的独立性，并与 Khronos 生态系统及相关网络标准互补。",
+    "fulltext_zh": "Khronos 将探索用于远程卸载的新高级 API\n2026 年 11 月 12 日上午 10:17 EST。\n\n负责 OpenGL、OpenCL、Vulkan 及其他行业标准 API 的行业联盟 Khronos Group 已成立一个探索性小组，评估开发高级远程卸载 API 的可能性。\n\nKhronos Group 的下一个 API 可能用于远程卸载。这个潜在的 API 将是一个高级、协议无关的接口，用于向云和边缘基础设施进行远程卸载。鉴于当今从智能眼镜到 VR 头显和无人机等硬件的功耗和性能限制，业界正在评估一种行业标准的远程卸载 API。\n\nKhronos 在今天关于成立该探索性小组的公告中指出：\n\n“智能眼镜、VR 头显和无人机等资源受限设备受到电池寿命、散热和外形尺寸的限制。将计算任务卸载到云和边缘基础设施可以帮助克服这些限制，但如今每种卸载解决方案都将应用程序绑定到其自身的连接层。开发者必须为专有框架重写应用程序、管理多种实时网络协议并获取专门的网络专业知识，因此为一种网络或部署构建的应用程序无法轻松迁移到另一种。此外，许多卸载解决方案作为over-the-top服务运行，它们在网络之上运行而不与网络协调，因此无法充分利用现代网络能力。\n\n该探索性论坛将评估对高级 API 的需求，这些 API 向应用程序隐藏连接和传输的底层复杂性。任何由此产生的 API 都将设计为保持独立于特定协议、硬件平台、物理层和部署模型。这些 API 还将补充更广泛的 Khronos API 生态系统以及相关的连接和网络标准。”\n\n我们将看看这个可能的新 Khronos API 会带来什么结果。\n\nOpenCL 3.1.2 发布，cl_khr_command_buffer 晋升\nPoCL 7.2 发布，在 RISC-V 和 x86_64 CPU 上获得官方 OpenCL 3.0 一致性\nOPI 抽象 v0.1 发布，旨在标准化 DPU/IPU 生态系统\nKhronos 列出首个符合 OpenCL 3.1 的实现：Asahi Linux 上基于 Rusticl 的 Apple M1/M2\nKhronos 发布 glTF 2.1，使这一 3D 资产标准更好地适用于大型场景\nAV2 v1.0 规范发布，用于下一代视频编码\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nSynaptics 似乎利用法律威胁阻止开源 DisplayLink 驱动\nOpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞\n资深 Linux 开发者因 AI 导致的补丁洪流辞去部分职务\nDebian 的 APT 受到中间人攻击影响，可以 root 身份执行任意代码\n“AMD 喜爱 Omarchy” Linux，将有更多合作\nLinux 7.5 的 ChaCha AVX-512 优化在 AMD Zen 5 上提升高达 99%\nOpenIndiana 2026.10 发布，更新工具和编译器，新增应用\nLinux 7.4-rc2 发布，包含 FAT32 优化、AMDGPU HDMI 2.2 改进\n同时提供无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "25d05b52d4939feacb787185953962ef": {
+    "id": "25d05b52d4939feacb787185953962ef",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/haruna-1-9-media-player-improves-youtube-handling-and-playlist-management/",
+    "title_en": "Haruna 1.9 Media Player Improves YouTube Handling and Playlist Management",
+    "summary_en": "Haruna 1.9 improves YouTube video handling and playlist management, making the KDE-based media player more convenient for Linux users.\nThe post Haruna 1.9 Media Player Improves YouTube Handling and Playlist Management appeared first on Linux Today.",
+    "pub_date": "Thu, 12 Nov 2026 10:48:49 +0000",
+    "title_zh": "Haruna 1.9 媒体播放器改进 YouTube 处理与播放列表管理",
+    "summary_zh": "Haruna 1.9 版本改进了 YouTube 视频处理和播放列表管理功能，使这款基于 KDE 的媒体播放器对 Linux 用户更加便捷。",
+    "fulltext_zh": "Haruna 1.9 改进了 YouTube 视频处理和播放列表管理，使这款基于 KDE 的媒体播放器对 Linux 用户更加便捷。\n\n文章《Haruna 1.9 媒体播放器改进 YouTube 处理与播放列表管理》首发于 Linux Today。"
+  },
+  "5109392f782cd65c42beeeef7222d597": {
+    "id": "5109392f782cd65c42beeeef7222d597",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/enlightenment-0-28-desktop-adds-pipewire-support-networkmanager-module/",
+    "title_en": "Enlightenment 0.28 Desktop Adds PipeWire Support, NetworkManager Module",
+    "summary_en": "Enlightenment 0.28 introduces PipeWire audio support and a NetworkManager module, improving connectivity and desktop functionality.\nThe post Enlightenment 0.28 Desktop Adds PipeWire Support, NetworkManager Module appeared first on Linux Today.",
+    "pub_date": "Thu, 12 Nov 2026 10:46:45 +0000",
+    "title_zh": "Enlightenment 0.28 桌面环境新增 PipeWire 支持与 NetworkManager 模块",
+    "summary_zh": "Enlightenment 0.28 桌面环境正式发布，新增 PipeWire 音频支持与 NetworkManager 模块，进一步提升连接性与桌面功能体验。",
+    "fulltext_zh": "Enlightenment 0.28 引入了 PipeWire 音频支持以及一个 NetworkManager 模块，从而改善了连接性与桌面功能。\n\n文章《Enlightenment 0.28 桌面环境新增 PipeWire 支持与 NetworkManager 模块》首发于 Linux Today。"
+  },
+  "5d388d516ee31becedecea3a9cbaa901": {
+    "id": "5d388d516ee31becedecea3a9cbaa901",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/linux-mint-previews-new-terminal-system-monitor-and-hibernation-support/",
+    "title_en": "Linux Mint Previews New Terminal, System Monitor, and Hibernation Support",
+    "summary_en": "Linux Mint previews a new terminal, system monitor, and hibernation improvements as developers prepare upcoming desktop enhancements.\nThe post Linux Mint Previews New Terminal, System Monitor, and Hibernation Support appeared first on Linux Today.",
+    "pub_date": "Thu, 12 Nov 2026 10:42:08 +0000",
+    "title_zh": "Linux Mint 预览全新终端、系统监视器及休眠支持",
+    "summary_zh": "Linux Mint 预览了全新的终端应用、系统监视器以及休眠功能的改进，开发人员正在为即将到来的桌面增强功能做准备。",
+    "fulltext_zh": "Linux Mint 预览了全新的终端、系统监视器以及休眠改进，开发人员正在为即将到来的桌面增强功能做准备。\n\n该文章《Linux Mint 预览全新终端、系统监视器及休眠支持》首次发布于 Linux Today。"
+  },
+  "95cd131b664d1ce33fea2341b6dd3ab7": {
+    "id": "95cd131b664d1ce33fea2341b6dd3ab7",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/linux-lite-8-2-released-with-linux-kernel-7-3-gaming-optimizations/",
+    "title_en": "Linux Lite 8.2 Released with Linux Kernel 7.3, Gaming Optimizations",
+    "summary_en": "Linux Lite 8.2 introduces Linux kernel 7.3 and gaming optimizations, bringing performance improvements to the lightweight Ubuntu-based distribution.\nThe post Linux Lite 8.2 Released with Linux Kernel 7.3, Gaming Optimizations appeared first on Linux Today.",
+    "pub_date": "Thu, 12 Nov 2026 10:39:24 +0000",
+    "title_zh": "Linux Lite 8.2 发布，搭载 Linux 内核 7.3 与游戏优化",
+    "summary_zh": "Linux Lite 8.2 正式发布，引入 Linux 内核 7.3 并带来游戏优化，为这款基于 Ubuntu 的轻量级发行版提升了性能表现。",
+    "fulltext_zh": "Linux Lite 8.2 引入 Linux 内核 7.3 与游戏优化，为这款基于 Ubuntu 的轻量级发行版带来性能提升。\n\n文章《Linux Lite 8.2 发布，搭载 Linux 内核 7.3 与游戏优化》首发于 Linux Today。"
+  },
+  "4dcd15681aea003560db709343a9e76f": {
+    "id": "4dcd15681aea003560db709343a9e76f",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/wine-11-21-improves-wow64-opengl-performance-fixes-20-bugs/",
+    "title_en": "Wine 11.21 Improves WoW64 OpenGL Performance, Fixes 20 Bugs",
+    "summary_en": "Wine 11.21 improves WoW64 OpenGL performance and fixes 20 bugs, enhancing compatibility for Windows applications and games on Linux.\nThe post Wine 11.21 Improves WoW64 OpenGL Performance, Fixes 20 Bugs appeared first on Linux Today.",
+    "pub_date": "Thu, 12 Nov 2026 10:33:23 +0000",
+    "title_zh": "Wine 11.21 提升 WoW64 OpenGL 性能，修复 20 个缺陷",
+    "summary_zh": "Wine 11.21 版本发布，重点提升了 WoW64 环境下的 OpenGL 性能，并修复了 20 个缺陷，进一步增强了 Windows 应用程序和游戏在 Linux 上的兼容性。",
+    "fulltext_zh": "Wine 11.21 提升了 WoW64 OpenGL 性能，并修复了 20 个缺陷，增强了 Windows 应用程序和游戏在 Linux 上的兼容性。\n\n文章《Wine 11.21 提升 WoW64 OpenGL 性能，修复 20 个缺陷》首发于 Linux Today。"
+  },
+  "8851297ea213a5acd24c5263ceb7d941": {
+    "id": "8851297ea213a5acd24c5263ceb7d941",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/libreboot-26-11-open-source-bios-uefi-firmware-brings-various-improvements",
+    "title_en": "Libreboot 26.11 Open-Source BIOS/UEFI Firmware Brings Various Improvements",
+    "summary_en": "Libreboot 26.11 open-source BIOS/UEFI firmware is now available for download with TPM 2.0 by default for more devices, new naming scheme for ROMs, and other changes.\nThe post Libreboot 26.11 Open-Source BIOS/UEFI Firmware Brings Various Improvements appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Thu, 12 Nov 2026 19:12:18 +0000",
+    "title_zh": "Libreboot 26.11 开源 BIOS/UEFI 固件带来多项改进",
+    "summary_zh": "Libreboot 26.11 开源 BIOS/UEFI 固件现已开放下载，主要更新包括：为更多设备默认启用 TPM 2.0 支持，引入新的 ROM 命名方案，以及其他多项改进。",
+    "fulltext_zh": "Libreboot 26.11 开源 BIOS/UEFI 固件现已可供下载，该版本为更多设备默认启用 TPM 2.0，采用新的 ROM 命名方案，并带来其他变更。\n\n文章《Libreboot 26.11 开源 BIOS/UEFI 固件带来多项改进》首发于 9to5Linux——未经许可请勿转载本文。本 RSS 源面向读者，而非抓取程序。"
+  },
+  "db0e30c94e7e378d9531b9b27956b9fb": {
+    "id": "db0e30c94e7e378d9531b9b27956b9fb",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/libreoffice-26-8-3-open-source-office-suite-released-with-more-than-40-bug-fixes",
+    "title_en": "LibreOffice 26.8.3 Open-Source Office Suite Released with More Than 40 Bug Fixes",
+    "summary_en": "LibreOffice 26.8.3 open-source is now available for download as the third point release to the LibreOffice 26.2 office suite series with over 40 bug fixes.\nThe post LibreOffice 26.8.3 Open-Source Office Suite Released with More Than 40 Bug Fixes appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Thu, 12 Nov 2026 13:11:07 +0000",
+    "title_zh": "LibreOffice 26.8.3 开源办公套件发布，修复 40 多个错误",
+    "summary_zh": "LibreOffice 26.8.3 现已开放下载，这是 LibreOffice 26.2 办公套件系列的第三个点版本，包含 40 多个错误修复。",
+    "fulltext_zh": "LibreOffice 26.8.3 开源办公套件现已可供下载，这是 LibreOffice 26.2 办公套件系列的第三个点版本，包含 40 多个错误修复。\n\n该文章《LibreOffice 26.8.3 开源办公套件发布，修复 40 多个错误》首次发布于 9to5Linux——未经许可不得转载本文。此 RSS 源面向读者，而非抓取者。"
   }
 }

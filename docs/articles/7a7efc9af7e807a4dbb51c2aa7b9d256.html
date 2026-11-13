@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent Name Service 现已加入 Linux 基金会 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月13日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Agent Name Service 现已加入 Linux 基金会</h1>
+
+  <div class="article-summary">Agent Name Service (ANS) 正式成为 Linux 基金会项目，旨在为 AI 代理提供可验证的身份标识，类似域名与证书之于网站。GoDaddy、Cloudflare、Salesforce 和 DigiCert 等 11 家组织参与其中。ANS 通过将代理与其运营者拥有的域名绑定，并颁发证书、公开注册日志，使接收系统能验证代理身份。项目设有技术指导委员会，首年内将举行选举，并规定代码许可从 MIT 过渡到 Apache 2.0。</div>
+
+  <div class="article-body"><p>Agent Name Service 现已加入 Linux 基金会</p><p>Agent Name Service (ANS) 现在在 Linux 基金会有了归宿。发布会在盐湖城举行的 KubeCon 北美站上举行，你可能还记得，基金会早在六月就为该项目的启动做了铺垫。</p><p>GoDaddy、Cloudflare、Salesforce 和 DigiCert 等组织现已参与 ANS，使参与组织总数达到十一家。</p><p>ANS 的早期部署之一是在该基金会下的另一个项目中进行，其 AI 代理目录现在可以检查代理的 ANS 身份。</p><p>在宣布这一变动时，Linux 基金会 CEO Jim Zemlin 分享了以下内容：</p><p>自主 AI 代理正在全球系统中进行交易和操作，但如果没有可验证的身份，它们就无法成功。在 Linux 基金会的中立治理下，ANS 提供了一个整个行业可以共同采用、实施和改进的通用信任基础。</p><p>各平台以自己的方式识别 AI 代理，而接收到某个代理请求的服务没有标准化的方式来确认该代理代表谁。ANS 通过将每个代理与其运营者拥有的域名关联来解决这个问题，就像网站与其域名绑定一样。每个版本的代理都有自己的名称，例如 ans://v1.4.2.travel.example.com</p><p>要注册代理，运营者首先必须证明其控制该域名。然后为代理颁发证书，每次注册都会进入一个任何人都可以阅读的公开日志。</p><p>ANS 还在互联网的地址簿中发布每个代理的详细信息，其他系统则可以使用它们已有的工具进行查询。</p><p>主要的 DNS 记录使用来自一个名为的独立项目的格式。ANS 添加了自己的一条记录，指向代理在公开日志中的条目。</p><p>当代理发送请求时，接收系统可以检查其注册是否存在、是否未被撤销，以及代理是否确实持有与之关联的密钥。</p><p>ANS 只涵盖代理是谁。决定它能做什么则留给接收系统，平台必须自行添加检查。</p><p>一个技术指导委员会现在。它最初有五个席位，由来自的三人和来自的 Michael Kantor 担任。</p><p>这一阵容只是一个起点。首次选举必须在 12 个月内举行，之后，规定任何一家公司不得持有半数或以上席位（以确保供应商中立性）。</p><p>章程还提到，会议应向公众开放，讨论和决定应对所有人可见。</p><p>至于项目中的所有代码，Go、Rust 和 Java 库目前使用 MIT 许可证，但从现在起贡献的新代码必须使用 Apache 2.0 许可证。</p><p>ANS 始于 2025 年，当时是发送给互联网标准组织 IETF 的一份草案，十月份又有一份草案出台。此类草案在 IETF 没有正式地位，也不受其认可。</p><p>目前，Linux 基金会称该规范已正式化。参考代码和本地演示在项目的上，规范在上。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>跳过 Google 结果中的 AI 垃圾和 SEO 垃圾</p><p>告诉 Google 你更喜欢 It's FOSS，它会在你搜索时更频繁地显示我们由经验丰富的 Linux 用户创建的 Linux 新闻和教程。只需点击一下。</p><p>设为首选来源</p><p>🐧 玩今天的 Tuxdle——每日 Linux 单词谜题 →</p><p>在收件箱中获取 FOSS Weekly</p><p>一份健康的 Linux 新闻通讯，包含最新版本、相关新闻、技巧和教程、琐事和模因、测验和桌面 Linux 用户的优惠。每周免费。</p><p>A</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/ans-joins-linux-foundation/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

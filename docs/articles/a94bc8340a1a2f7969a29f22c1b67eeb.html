@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMD Zen 6 SMT 即使对 256 核 EPYC 9996 也证明非常有利 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月13日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>AMD Zen 6 SMT 即使对 256 核 EPYC 9996 也证明非常有利</h1>
+
+  <div class="article-summary">随着 AMD EPYC 9006 &quot;Venice&quot; SP7 服务器处理器上市，单路最高 256 个 Zen 6(C) 核心，双路可达 512 核，Phoronix 测试了 SMT 在这些高核心数处理器上的影响。测试使用 96 核 EPYC 9686F 和 256 核 EPYC 9996 的双路配置，分别在 SMT 开启和关闭状态下运行多种基准测试，并监测功耗。结果表明，从性能和功耗角度看，Zen 6 上的 SMT 仍然非常值得启用。</div>
+
+  <div class="article-body"><p>AMD Zen 6 SMT 即使对 256 核 EPYC 9996 也证明非常有利</p><p>随着现已上市的 AMD EPYC 9006 &quot;Venice&quot; SP7 服务器处理器每路最高配备 256 个 Zen 6(C) 核心，双路配置可达 512 核，你可能想知道在这些核心数越来越高的处理器上，同时多线程（SMT）是否仍然值得。长话短说，从性能和功耗角度看，AMD Zen 6 上的 SMT 仍然绝对值得。我自己也很好奇，于是运行了一些基准测试来探究 SMT 对 96 核高频 EPYC 9686F 的影响。</p><p>由于我自己对 Zen 6/6C 的 SMT 优势很好奇，尤其是 AMD 现在能够将 256 个物理核心塞进单个 SP7 插槽，我运行了一些 EPYC Venice 的 SMT 对比基准测试。96 核 EPYC 9686F 和 256 核 EPYC 9996 分别在双路配置下测试，即 192 核和 512 核，SMT 先保持默认开启状态，然后禁用，以观察对性能和功耗/每瓦性能的影响。</p><p>这是一个相当直接的对比，类似于 Phoronix 过去进行的 SMT 基准测试对比，例如探索 NVIDIA Vera 的 SMT、Intel Granite Rapids WS 与 Threadripper Zen 5 的 SMT 对比、Xeon 6300 与 EPYC 4005 的 SMT/HT 对比，以及多年来许多其他 SMT 性能对比。</p><p>随后针对那些传统上可扩展、并且能够扩展到约 1024 线程（对于 EPYC 9996 双路配置）的各种基准测试进行了运行，其中一些应用/工作负载存在 64~512 线程的静态硬限制或其他可扩展性挑战。在此基础上，观察了这两款第六代 AMD EPYC 处理器在 SMT 开启/关闭时的性能，并监测了双路 CPU 的总功耗。</p><p>所有这些基准测试均在 Ubuntu 26.10 和 Linux 7.3 上完成，以获得非常新鲜的開源体验。</p><p>AMD EPYC 9996 基准测试显示 256 个 Zen 6C 核心带来无与伦比的性能</p><p>AMD EPYC 9686F Linux 基准测试：96 个 Zen 6 核心，最高 5.3GHz</p><p>NVIDIA Vera 单路 vs. 双路 CPU 性能</p><p>Snapdragon X2 在 Linux 上的性能初步基准测试超出预期</p><p>NVIDIA Vera HPC 性能基准测试挑战 AMD EPYC、Intel Xeon</p><p>NVIDIA Vera SMT 性能基准测试</p><p>同时享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/review/amd-epyc-zen6-smt" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

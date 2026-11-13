@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>在Ubuntu上运行安卓应用现在出奇地简单 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月13日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>在Ubuntu上运行安卓应用现在出奇地简单</h1>
+
+  <div class="article-summary">Waydroid是一个开源项目，让Ubuntu用户无需虚拟机即可运行安卓应用和游戏。在Ubuntu 26.04 LTS及更高版本中，只需通过apt命令即可安装。它使用容器化LineageOS，支持应用与Linux应用并排运行并集成系统硬件。安装后需下载约1.1GB镜像，支持Google Play（可选），但仅限Wayland，NVIDIA用户需软件渲染。配置需命令行操作，可调整DPI、启用多窗口等。</div>
+
+  <div class="article-body"><p>在Ubuntu上运行安卓应用现在出奇地简单</p><p>Ubuntu本身并不原生运行安卓应用和游戏，但Waydroid是一个开源项目，可以让你使用它们——而且在Ubuntu上设置起来非常简单。</p><p>在Ubuntu 26.04 LTS及更高版本上，只需一条简单的命令即可完成。无需添加PPA、寻找第三方软件包或运行来自Reddit帖子的脚本。</p><p>如果你有想在桌面上使用的安卓应用或游戏，Waydroid为你提供了实现的方法。</p><p>它运行的是容器化的安卓版本（LineageOS），而非虚拟机，这使得安卓应用可以与Linux应用并排运行，并与系统硬件集成。</p><p>它并不完美。它仅能在Wayland下工作，NVIDIA用户必须使用软件渲染（详情见下文）。运行效果取决于你的硬件，同样重要的是你同时打开了哪些其他程序，因为两个操作系统共享同一系统资源。</p><p>在Ubuntu上安装Waydroid</p><p>在Ubuntu 26.04 LTS（及更高版本）上，你可以安装Waydroid。打开终端并运行：</p><p>sudo apt install waydroid</p><p>它会拉取Waydroid v1.63版本以及运行所需的依赖项。</p><p>解包后，你可以从应用程序网格中启动Waydroid。首次运行向导会要求你选择要下载的安卓类型。如果你想使用Google Play及相关的GAPPS功能，请选择带有该功能的镜像。</p><p>选择你偏好的安卓版本</p><p>完成后，再次打开Waydroid，它会运行安卓系统设置。这会引导你登录Google账户等。之后，一些应用快捷方式（包括设置）将出现在应用程序网格中。</p><p>剪贴板是双向的，因此你可以在安卓应用和常规Linux应用之间复制/粘贴，应用通知会出现在GNOME中，这很不错。其他一切都会传递过去（我的蓝牙游戏手柄输入被传递了，这很烦人）。</p><p>尽管Waydroid运行完整的安卓版本，但实际镜像下载本身并不大，大约1.1GB左右。在我的系统上（安装了几个简单游戏），Waydroid总共占用了约4GB磁盘空间。</p><p>Waydroid在你的桌面上运行完整的安卓操作系统</p><p>配置通过命令行完成。如果你想更改显示缩放或启用多窗口模式，需要运行命令来实现——官方文档有详细说明。</p><p>更改仅在重启Waydroid会话后生效。右键单击应用网格或Ubuntu Dock中的Waydroid图标，可以找到包含停止和启动选项的上下文菜单。</p><p>我降低了显示缩放（原始值225太大，所以我降低了）：</p><p>sudo waydroid prop set persist.waydroid.dpi 180</p><p>我希望能够调整安卓应用的大小和移动它们，所以我通过运行以下命令启用了多窗口模式：</p><p>sudo waydroid prop set persist.waydroid.multi_windows true</p><p>在安卓内部，我禁用了选择文本字段时弹出的屏幕键盘（OSK）。禁用该功能的开关位于安卓的“设置 &gt; 系统 &gt; 语言和输入法 &gt; 物理键盘”中。</p><p>根据你计划在Ubuntu上使用Waydroid做什么，你可能想设置一个共享文件夹，以便在系统之间传递文件更容易一些。</p><p>而且，如果你真的想要，你甚至可以创建自己的专用会话，让你登录到全屏安卓体验。</p><p>我可以在Waydroid上使用Google Play吗？</p><p>可以，如果你在初始设置时选择了“带Google应用的安卓”镜像。不过，你需要一个Google账户才能安装任何东西。</p><p>如果Google Play报告你的设备未通过Play Protect验证，网站文档页面有步骤说明如何（简单地）解决。</p><p>我可以在没有Google Play的情况下安装应用吗？</p><p>Google Play是可选的。你可以通过ADB或在安卓环境内安装APK，所以如果你更愿意使用像F-Droid这样的开源商店，你可以——替代或 alongside Google Play。</p><p>性能如何？</p><p>我有点好奇在Ubuntu上尝试Waydroid，现在它已进入归档。我记得过去尝试过……有点棘手。这个项目已经成熟了很多。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/android-apps-on-ubuntu-waydroid" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
