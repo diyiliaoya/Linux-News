@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMD利用AI与HRX Loom实验，快速将50个LLM移植到客户端GPU — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月14日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>AMD利用AI与HRX Loom实验，快速将50个LLM移植到客户端GPU</h1>
+
+  <div class="article-summary">AMD团队利用AI代理工作流和HRX Loom软件，在约三到四天内将50个热门Hugging Face模型（涵盖18种架构）移植到AMD客户端GPU，基于Ryzen AI Max &quot;Strix Halo&quot;硬件。实验显示，32K令牌提示处理相比Llama.cpp的ROCm后端提速1.5至2.1倍，相比Vulkan后端提速1.9倍。HRX Loom仍为实验项目，支持GPU、CPU和NPU执行。</div>
+
+  <div class="article-body"><p>在近期发布之后，并借助AI代理工作流，AMD的一个团队进行了一项实验，将50个热门的Hugging Face模型引入AMD客户端GPU。得益于他们的HRX软件工作与Ryzen AI Max &quot;Strix Halo&quot;硬件的强大性能，他们仅用了大约三天时间就完成了这一壮举。</p><p>AMD工程师Jeremy Fowers和Ben Vanik领导了一项实验，在短短三到四天内将50个流行的Hugging Face模型（涵盖18种架构）引入AMD客户端GPU。这项实验旨在展示，借助HRX Loom和代理式AI，能够更快地将新模型以及小众模型引入AMD硬件。</p><p>他们还发现，与Llama.cpp的ROCm后端相比，32K令牌提示处理有1.5至2.1倍的中等速度提升。与Llama.cpp的Vulkan后端相比，速度提升为1.9倍。HRX Loom目前仍是AMD的一个实验性项目，但鉴于这些结果，它展现出了巨大潜力。HRX Loom不仅适用于GPU，还支持CPU和NPU执行。</p><p>对这项AMD HRX Loom实验感兴趣的人可以通过Loom-Fun GitHub页面找到他们的结果。</p><p>作为这项工作的一部分，还有一个交付成果，即为Claude Code、Codex或Pi代理配备必要的组件，以便为AMD客户端GPU编写和提供优化的模型程序——目前重点测试的是出色的硬件，例如等。关于AMD Loom的更多背景信息可以通过以下内容找到。</p><p>AMD openSIL随着第6代EPYC &quot;Venice&quot;实现其生产目标</p><p>AMD AOCL 6.0引入新的RNG库，初步的Zen 6 CPU优化</p><p>Linux 7.5将为AMD Pensando NIC启用温度/电压/功率监控</p><p>AMD AOCC 6.0带来Zen 6优化、新的&quot;aof&quot; Fortran编译器、aoc / aoc++品牌</p><p>AMD在RAM危机中宣传其MEXT软件——支持Linux但非开源</p><p>AMD确认第7代EPYC &quot;Florence&quot;将搭载ACE，而第8代EPYC为&quot;Ravenna&quot;</p><p>Michael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。他可以通过以下方式关注。</p><p>OpenAI在Linux内核中发现948个本地权限提升漏洞</p><p>长期Linux开发者因AI导致的补丁洪流而辞去部分职务</p><p>Linux 7.5的ChaCha AVX-512优化在AMD Zen 5上带来高达99%的提升</p><p>OpenIndiana 2026.10发布，包含更新工具和编译器、新应用</p><p>Linux 7.4-rc2发布，包含FAT32优化、AMDGPU HDMI 2.2改进</p><p>基于RISC-V的TEE与AMD Zen 6 CPU</p><p>HyprBSD提供基于Wayland的桌面，构建于FreeBSD之上，并包含Steam游戏</p><p>KDE Plasma 6.9将停止在桌面上右键单击文件/文件夹时泄漏内存</p><p>在拥有无广告浏览、单页文章查看、法律免责声明、隐私政策、Cookie的同时，版权所有 © 2004 - 2026，所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/AMD-HRX-Loom-Experiment" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

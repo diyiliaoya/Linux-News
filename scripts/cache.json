@@ -20953,5 +20953,181 @@
     "title_zh": "LibreOffice 26.8.3 开源办公套件发布，修复 40 多个错误",
     "summary_zh": "LibreOffice 26.8.3 现已开放下载，这是 LibreOffice 26.2 办公套件系列的第三个点版本，包含 40 多个错误修复。",
     "fulltext_zh": "LibreOffice 26.8.3 开源办公套件现已可供下载，这是 LibreOffice 26.2 办公套件系列的第三个点版本，包含 40 多个错误修复。\n\n该文章《LibreOffice 26.8.3 开源办公套件发布，修复 40 多个错误》首次发布于 9to5Linux——未经许可不得转载本文。此 RSS 源面向读者，而非抓取者。"
+  },
+  "e6a242d6edb451c884e7d69bfd7e3a2d": {
+    "id": "e6a242d6edb451c884e7d69bfd7e3a2d",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/11/jottacloud-linux-app-coming-soon",
+    "title_en": "Norway’s Dropbox Rival Jottacloud is making a Linux app",
+    "summary_en": "Norwegian Dropbox rival Jottacloud is finally working on a desktop app for Linux. Jottacloud, run by Jotta Group AS, has been around since 2008, offering file and photo backup, syncing and sharing via official Windows, Apple and Android apps. What it hasn&#8217;t had is a &#8216;proper desktop app&#8217; on Linux. It does provide a CLI for creating automatic backups of folders, but the terminal-based tool doesn&#8217;t boast the full set of features the regular apps and web client do. Now, Jotta",
+    "pub_date": "Sat, 14 Nov 2026 03:55:34 +0000",
+    "title_zh": "挪威的Dropbox竞争对手Jottacloud正在开发Linux应用",
+    "summary_zh": "挪威云存储服务Jottacloud自2008年起提供文件备份、同步和分享功能，但一直缺乏Linux桌面应用。现在该公司宣布正在开发一款与其它平台同样安全、易用的Linux桌面应用，并开始招募测试者参与beta测试。Jottacloud提供5GB免费套餐及付费套餐，数据存储在挪威境内并受欧洲隐私法保护。",
+    "fulltext_zh": "挪威的Dropbox竞争对手Jottacloud正在开发Linux应用 - OMG! Ubuntu\n终于正在为Linux开发桌面应用了。\n由Jotta Group AS运营的Jottacloud自2008年以来一直存在，通过官方的Windows、Apple和Android应用提供文件和照片备份、同步及分享功能。\n它一直没有的是Linux上的“正经桌面应用”。它有一个用于创建文件夹自动备份的命令行工具，但这个基于终端的工具并不具备常规应用和网页客户端那样的完整功能。\n现在，Jotta表示这种情况即将改变。\n它正在开发一款“正经的”Linux桌面应用，该应用将“与其为其他平台提供的应用一样安全、一样用户友好”。\n与Dropbox等类似，Jottacloud为个人使用提供免费套餐（5GB），以及提供更多存储和功能的付费专业版和商业版套餐。甚至还有不限量套餐，供有需要的人使用。\n文件存储在挪威境内的服务器上（据说是“深山之中”），因此受挪威和欧洲隐私法管辖。数据在传输过程中以及存储在其服务器上时都经过加密。\n有意测试者被要求注册以获取Jottacloud for Linux的beta版本访问权限。注册表格询问Linux发行版和桌面环境设置，因为团队表示希望获得“多样化”的测试者群体。\n该公司尚未说明其Linux应用是否会开源，也没有透露他们瞄准的是哪个工具包、语言或分发方式（Flathub、DEB等）。预计未来几个月会有更多细节。\n与此同时，如果你是现有的Jottacloud用户，或者有动力注册免费套餐来测试Linux客户端，请前往jottacloud.com/en/linux-beta登记你的兴趣。"
+  },
+  "001752e730dd2acf557916c81294ba25": {
+    "id": "001752e730dd2acf557916c81294ba25",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/11/euro-office-desktop-apps-nextcloud",
+    "title_en": "Euro-Office, the ONLYOFFICE fork, now has a desktop app",
+    "summary_en": "Euro-Office, the Nextcloud-backed fork of ONLYOFFICE, is now available to download and install on desktops as Nextcloud Office Desktop. Announced in March 2026, Euro-Office is a European-based alternative to Microsoft 365 and a fork of ONLYOFFICE. It&#8217;s currently something users can run and host (or pay someone to host) on a server, and then access via a web browser or mobile app. Much like ONLYOFFICE Docs. That&#8217;s no longer needed, Nextcloud Office Desktop is Euro-Office desktop clien",
+    "pub_date": "Fri, 13 Nov 2026 20:14:18 +0000",
+    "title_zh": "Euro-Office（ONLYOFFICE 分支）现已推出桌面应用",
+    "summary_zh": "Euro-Office 是 Nextcloud 支持的 ONLYOFFICE 分支，现已推出名为 Nextcloud Office Desktop 的桌面客户端，用户无需自建服务器即可离线使用。该套件基于 ONLYOFFICE 桌面编辑器，提供文字处理、电子表格、演示和 PDF 工具，支持微软 OOXML 和开放文档格式，并可连接服务器协作。目前提供 Windows、macOS 和 Linux 安装包，但尚无 Flathub 或 Snap 版本。",
+    "fulltext_zh": "Euro-Office，这个由 Nextcloud 支持的 ONLYOFFICE 分支，现在可以作为 Nextcloud Office Desktop 下载并安装到桌面上了。\n\nEuro-Office 于 2026 年 3 月发布，是欧洲地区替代 Microsoft 365 的方案，也是 ONLYOFFICE 的一个分支。目前用户可以在服务器上运行和托管（或付费请人托管），然后通过网页浏览器或移动应用访问。\n\n现在不再需要这样做了，Nextcloud Office Desktop 是一个桌面客户端，安装和使用方式与传统桌面办公套件一样。你不需要托管服务器或保持在线就能使用；它是一个离线套件。\n\nNextcloud Office Desktop 基于 ONLYOFFICE 的桌面编辑器构建，所以如果你用过那个套件，就会熟悉这里提供的内容：功能丰富的文字处理器、电子表格、演示文稿和 PDF 工具。\n\n它可以打开 Microsoft Office 的 OOXML 文件（如 DOCX、XLSX 和 PPTX），以及开放格式（如 ODT、ODS 和 ODP），并能连接到 Nextcloud 或其他服务器进行协作编辑。它还支持插件和“自带”AI 功能。\n\n该套件在本地运行的一个好处是，可以选择已安装的字体。如果你需要用特定字体格式化文档，或确保文件在其他系统上对他人显示一致，都可以做到。\n\n并非所有人都对此满意\n\nONLYOFFICE 背后的公司 Ascensio System SIA 对 Euro-Office 的出现不太高兴，LibreOffice 也是如此，尽管原因不同。\n\n推出 Euro-Office 的欧洲公司发表了宏大的声明，宣称要促进数字主权和开源，减少欧洲对美国大型科技公司的依赖。他们能否在这款软件再包装上打上自己的印记？\n\n目前，这感觉很像是一个换了品牌的 ONLYOFFICE。这本身并不是坏事，Nextcloud 和 IONOS 选择它是因为其现代代码库和强大的功能集。围绕主权有如此多的营销，我希望这只是一个起点。\n\n更多选择从来不是坏事，但同样的选择换身衣服……更像是选择的幻觉——主权也需要实质内容。但愿如此。\n\n下载 Nextcloud Office Desktop\n\nNextcloud Office Desktop 可从 Nextcloud 网站下载。提供了适用于 Windows 和 macOS 的 Intel/AMD 及 ARM64 版本安装程序，以及适用于 Linux 的 Intel/AMD 版本（DEB 和 RPM）。\n\n目前还没有 Flathub 或 Snap Store 的上架信息。如果你比我先发现，请通过提示表单或我们的社交账号告诉我，谢谢！\n\n办公与生产力应用"
+  },
+  "ad79073cb6f16b2b59b01faf9ab4ca23": {
+    "id": "ad79073cb6f16b2b59b01faf9ab4ca23",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/slax-linux-returns/",
+    "title_en": "Slax Linux Makes a Comeback",
+    "summary_en": "Slax now runs on Debian 13 with a built-in AI assistant, and it can boot with Secure Boot on compatible PCs.",
+    "pub_date": "Fri, 13 Nov 2026 14:51:00 GMT",
+    "title_zh": "Slax Linux 重装上阵",
+    "summary_zh": "Slax Linux 在沉寂三年后发布 2026.11 版本，基于 Debian 13 和 Linux 6.12 LTS 内核，新增图形化安装器、支持安全启动、Fluxbox 桌面增强，并引入需联网登录的 AI 助手。该发行版仍以 U 盘便携运行和多重命名会话为特色，但官方未说明长期停更原因及 AI 服务的数据处理细节。",
+    "fulltext_zh": "Slax Linux 重装上阵\n\nSlax 现已基于 Debian 13 运行，内置 AI 助手，并可在兼容 PC 上启用安全启动。\n\n多年来，我们目睹了无数 Linux 发行版起起落落，通常结局不外乎维护者人手不足、项目负责人退休，或是缺乏关注度。\n\n如今，在这个 AI 驱动的时代，我们看到许多新发行版涌现，其中一些似乎在尝试不同的方向，而另一些则只是在试图成为 macOS 的克隆。\n\n这就是为什么我感到兴奋——在多年没有发布版本之后，它重新回归，并承担起 2026 年现代 Linux 发行版应有的样子。顺便说一句，它是一个从 U 盘运行的便携式发行版。\n\n一次我们未曾预料到的回归\n\nSlax 2026.11 版本基于 Linux 6.12 LTS，这是一个较旧的内核版本，也是当前长期支持选项之一，维护至 2028 年 12 月。\n\n上一个版本要追溯到 2023 年 10 月，当时它附带两个基础版本：Slackware 15.0 和 Debian 12，以及 Slackware 15.0.2-current。那大约是三年零一个月前的事了，而最近的发布公告并未解释这一巨大间隔的原因。\n\n它提供了适用于 Windows 和 Linux 的图形化安装器，你只需将下载的 ISO 作为文件夹打开，从那里启动安装器并选择驱动器。随后它会创建一个可启动 U 盘，或将 Slax 与现有系统并列安装。\n\n同样，一个 U 盘可以容纳多个命名会话，例如一个用于工作，另一个用于实验，你可以在启动时根据使用场景选择其中一个。\n\nFluxbox 桌面现在在按下 Super 键和任务栏图标时会显示窗口预览，Super+W 可一次性打开全部四个工作区。对于启动器，如果你点击带有向下箭头的应用图标，Slax 现在可以迅速下载任何缺失的应用。\n\n经过签名的引导程序和内核还让 Slax 能在兼容 PC 上启用安全启动后启动。\n\n它包含一个名为 Slax AI 的 AI 助手，可从启动器打开。你用自然语言告诉它你的需求，它便能检查系统、调查磁盘空间耗尽等问题，并执行命令来修复。\n\n不过，你需要联网并登录才能使用，登录选项包括邮箱、Google 和 GitHub。整个功能运行在一个在线 Slax 服务上，相关细节很少。\n\n登录界面提供 100 个免费积分供试用，Slax 既未说明其背后的 AI 提供商是谁，也未说明他们如何处理数据。\n\n这并非 Slax 第一次玩消失。2022 年，它带着基于 Debian 11 的 Slax 11 回归，此前自 2018 年以来除了 2019 年的 Debian 10.2 测试版外，并无重大进展。\n\n那年夏天推出了 Slackware 版本，随后是 2023 年 10 月的版本。那个月发布的帖子从未真正说明下一步计划。\n\n希望这次不会再有反复。🥂\n\n它提供实时 ISO 镜像，如果你更想在完整安装前测试，它在虚拟机中运行得相当不错。如果你确实将其安装到系统上，Slax 文档是一个值得放在手边的便捷资源。\n\n你希望我们做一次 Slax 评测吗？可以是文章或视频评测。在下方告诉我们你的想法。\n\n喜欢这篇更新？支持独立的 Linux 新闻报道\n\n过去 14 年来，It's FOSS 一直在帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。\n\n一次付费，永久享受\n\n任意金额，无承诺\n\n跳过 Google 结果中的 AI 垃圾和 SEO 垃圾\n\n告诉 Google 你偏好 It's FOSS，这样当你在搜索时，它会更频繁地展示我们由经验丰富的 Linux 用户创建的 Linux 新闻和教程。只需点击一下。\n\n设为偏好来源\n\n🐧 今天就来玩 Tuxdle——每日 Linux 单词谜题 →\n\n在收件箱中获取 FOSS Weekly\n\n一份健康的 Linux 新闻通讯，包含最新发布、相关新闻、技巧和教程、冷知识、梗图、测验和桌面 Linux 用户的优惠。每周免费。\n\n一个热衷于开源软件、定制 PC 装机、赛车运动以及探索这个世界无限可能的技术迷。\n\n开发者'"
+  },
+  "313aea23e8362b4a064af583d03e3d0b": {
+    "id": "313aea23e8362b4a064af583d03e3d0b",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/zigzag-embroidery-software/",
+    "title_en": "Developer's $300 Embroidery Machine Required a Subscription, So They Built This Open Source Tool",
+    "summary_en": "ZigZag turns SVG art into stitches, exports five file formats, and can send designs over Bluetooth to an app-controlled Brother embroidery machine.",
+    "pub_date": "Fri, 13 Nov 2026 12:50:00 GMT",
+    "title_zh": "开发者因300美元刺绣机需订阅制而自建开源工具",
+    "summary_zh": "一位开发者因购买的Brother Skitch刺绣机依赖付费订阅应用Artspira，自行开发了开源工具ZigZag。该工具可将SVG图形转为刺绣针迹，支持五种文件格式导出，并能通过蓝牙向刺绣机发送设计。ZigZag采用Apache 2.0许可证，整个应用借助ChatGPT构建，内置MCP服务器允许AI代理直接编辑设计。",
+    "fulltext_zh": "有人做了一个免费的刺绣编辑器\n开发者因300美元的刺绣机需要订阅制，于是自建了这个开源工具\nZigZag可将SVG图形转为针迹，导出五种文件格式，并能通过蓝牙将设计发送到应用控制的Brother刺绣机。\n\n她以Apache 2.0许可证发布了ZigZag。她表示整个应用都是用AI（ChatGPT）构建的，目标是获得符合自己规格的软件，类似Adobe套件，但内置了MCP支持。\n\n该MCP支持是一个内置服务器，允许AI代理在同一窗口中进行绘制和编辑。\n\n她关于此事的帖子在48小时内已获得超过[数字]的关注，她一直在那里回答关于构建方式和支持哪些机器的问题。\n\nZigZag：为何开发此工具？\n\n这是围绕一台她称花费约300美元的刺绣机而构建的。\n\n你看，Skitch需要Brother的[应用]才能操作。虽然该应用免费且可与机器配合使用，但一项名为[付费计划]的付费计划增加了实用附加功能，例如将图像数字化为刺绣图案和创建十字绣图案。\n\n免费版在颜色和工具方面有限制，她认为一些剪贴画是保留给订阅者的。她还猜测Brother最初亏本销售该机器是因为订阅制。\n\n最后一点符合许多硬件制造商正在做的事情。\n\n将图像转为形状。它涵盖11种针迹类型，编辑器中会显示针迹预览。\n\n至于MCP服务器，它允许AI代理检查打开的设计、添加和编辑对象与文本、描摹图像、预览针迹并导出文件。它还可以控制Skitch设备，每个操作都算作一个撤销步骤。\n\n这并非新事物。ZigZag之前就存在开源刺绣工具。人们提到过[项目]、一个Inkscape扩展，以及[项目]已经让人们无需Artspira即可将设计发送到Skitch。\n\n关于蓝牙协议和缝纫流程。Kathy说她自行逆向工程了协议，她的代理使用Respira进行了验证。\n\n目前，ZigZag可用于[平台]。你可以从[链接]获取最新版本，其中涵盖安装、蓝牙配对和MCP服务器，并建议不要对Skitch进行固件更新。\n\n用户可按照步骤使用Rust从源码构建ZigZag。\n\nBrother Skitch PP1是ZigZag唯一通过蓝牙发送设计的机器，需要先关闭Artspira，因为Skitch一次只能与一个应用通信。\n\n对于其他机器，ZigZag可以导出[格式]。\n\n[某公司]严厉打击了一位独立开源开发者，该开发者想让DisplayLink在Linux上工作。\n\nAI辅助的DisplayLink Linux驱动收到法律通知\n\nMike Lothian让Vino在三代DisplayLink扩展坞上工作，但Synaptics告诉他将其下架。\n\n喜欢这篇更新？支持独立的Linux新闻报道\n\nIt's FOSS过去14年一直在帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。\n\n一次付费，永久享受\n任意金额，无承诺\n\n跳过Google结果中的AI垃圾和SEO垃圾\n\n告诉Google你更喜欢It's FOSS，它会在你搜索时更频繁地显示我们由经验丰富的Linux用户创建的Linux新闻和教程。只需点击一下。\n\n设为首选来源\n\n🐧 今天就来玩Tuxdle——每日Linux单词谜题 →\n\n在收件箱中获取FOSS Weekly\n\n一份健康的Linux新闻通讯，包含最新发布、相关新闻、技巧和教程、冷知识、模因、测验和桌面Linux用户的优惠。每周免费。\n\n一个热衷于开源软件、定制PC装机、赛车运动以及探索这个世界无限可能的技术迷。\n\nSlax Linux回归\n\n超越AI应用：openEuler如何重新思考代理基础设施操作系统\n\n代理名称服务现已加入Linux基金会\n\nAI辅助的DisplayLink Linux驱动收到法律通知\n\nGameOS背后的公司现在正在构建"
+  },
+  "c4cd48ca41b3442d11b61a560545f6dd": {
+    "id": "c4cd48ca41b3442d11b61a560545f6dd",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/openeuler-agentic-infra-os/",
+    "title_en": "Beyond AI Applications: How openEuler Is Rethinking the Agentic Infra OS",
+    "summary_en": "From secure execution and intelligent caching to persistent memory and elastic data services, openEuler is building an infrastructure foundation for large-scale, production-ready AI agents.",
+    "pub_date": "Fri, 13 Nov 2026 10:30:23 GMT",
+    "title_zh": "超越AI应用：openEuler如何重新思考智能体基础设施操作系统",
+    "summary_zh": "openEuler正在构建面向大规模生产级AI智能体的基础设施基础，涵盖安全执行、智能缓存、持久内存和弹性数据服务。传统操作系统主要管理计算资源，而智能体AI要求基础设施支持智能体的全生命周期，包括部署、调度、隔离、上下文管理、记忆检索、工具调用、可观测性和恢复。openEuler的智能体操作系统架构以Agent Kernel和Agent Service为核心，结合分布式缓存和无服务器数据服务，并围绕沙箱、KV缓存等五大技术支柱展开。",
+    "fulltext_zh": "超越AI应用：openEuler如何重新思考智能体基础设施操作系统\n\n从安全执行和智能缓存到持久内存和弹性数据服务，openEuler正在为大规模、生产就绪的AI智能体构建基础设施基础。\n\n传统操作系统主要设计用于管理计算资源，包括CPU调度、内存分配、存储、网络和应用执行。\n\n智能体AI引入了另一层复杂性：基础设施还必须支持智能体的生命周期。\n\n这包括智能体部署、任务调度、执行隔离、上下文管理、记忆检索、工具调用、可观测性和恢复。\n\nopenEuler正在拥抱向智能体基础设施的转变，并不断演进其操作系统能力，以支持跨异构计算环境的智能体开发、部署、执行、协调和优化。\n\n这正是他们在目前正在进行的\nAgentic Infra OS Conference & openEuler Summit 2026\n上讨论的内容。\n\nAI智能体需要的不仅仅是计算能力\n\nAI智能体正在超越对话，执行代码、调用工具、与应用程序交互并协调多步骤工作流。随着这些工作负载的扩展，基础设施面临一系列新挑战：安全执行、快速环境供应、高效上下文重用、持久内存和弹性资源管理。\n\n传统基础设施并非围绕这些需求设计。操作系统的下一次演进必须超越管理进程和硬件资源，以支持智能体执行的完整生命周期。\n\n这就是openEuler智能体操作系统背后的方向：构建一个开放、安全、高效的软件栈，将操作系统能力与智能体运行时、AI框架、数据服务和异构计算资源连接起来。\n\n该基础设施设计为跨多种计算架构运行，包括x86、Arm、RISC-V和LoongArch等通用处理器，以及来自多个供应商的AI加速器。这种异构方法很重要，因为企业AI部署很少在单一硬件架构或加速器平台上运行。\n\n该架构以两层为中心：Agent Kernel提供基础系统级能力，Agent Service暴露可复用服务，如安全沙箱、内存、会话管理和Tool Gateway。围绕这一基础，互补的基础设施技术——包括分布式缓存和无服务器数据服务——帮助支持智能体工作负载的性能、可扩展性和数据需求。\n\n该方法不是将所有能力都放入操作系统内核，而是将系统级优化与可复用基础设施服务和开放生态系统相结合。五个技术支柱是该架构的核心。\n\n智能体基础设施的五大支柱\n\n1. 沙箱：安全、可扩展的智能体执行\n\n智能体需要隔离环境来执行生成的代码、调用工具并与外部系统交互。这些环境必须快速启动、扩展到高并发，并在任务中断时可靠恢复。\n\nopenEuler结合轻量级虚拟化、基于快照的恢复、资源预热和高密度调度来满足这些需求。StratoVirt和Conch运行时等技术帮助创建和管理沙箱环境，而编排能力支持大规模部署。\n\nopenEuler的性能测试\n，沙箱启动延迟可低至20毫秒，密度超过2,000个沙箱。在另一项大规模并发测试中，平台在10秒内启动了100,000个沙箱。这些结果展示了大规模快速供应和高密度智能体执行的潜力。\n\n2. KV缓存：让推理上下文"
+  },
+  "fa6cb1963c70f65b6d540c88d60c82ae": {
+    "id": "fa6cb1963c70f65b6d540c88d60c82ae",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Wine-11.22-Released",
+    "title_en": "Wine 11.22 Introduces x86 AVX Emulation On ARM64",
+    "summary_en": "Wine 11.22 is out today as the latest bi-weekly development release and inching quite closely toward the Wine 12.0 stable release preparations...",
+    "pub_date": "Fri, 13 Nov 2026 20:35:04 -0500",
+    "title_zh": "Wine 11.22 在 ARM64 上引入 x86 AVX 模拟",
+    "summary_zh": "Wine 11.22 作为最新双周开发版发布，最引人注目的是在 ARM64 平台的 x86 模拟路径中新增 AVX 支持，通过 ARM64EC 构建可模拟 AVX 以运行依赖该指令集的现代 Windows 软件。此外还更新了 Unicode CLDR 49 区域数据、增加地址空间随机化、改进 Tahoma 字体字形度量、在 XML 中重新实现 DTD 验证，并包含 34 项已知错误修复，涉及 Logos Bible Software、激战2、星际公民等应用和游戏。",
+    "fulltext_zh": "Wine 11.22 今日发布，作为最新的双周开发版本，正逐步接近 Wine 12.0 稳定版的发布准备工作。\n\nWine 11.22 最引人注目的变化是在 Wine ARM64 的 x86 模拟路径中增加了对高级矢量扩展（AVX）的支持。为了帮助运行假定支持 AVX 的现代 Windows 软件，现在可以通过 ARM64EC 构建很好地模拟该指令集。这延续了此前围绕 XState 处理为 ARM64EC 上的 AVX 引入初始 NTDLL 支持的工作。\n\nWine 11.22 还将区域数据更新至 Unicode CLDR 49，增加了地址空间随机化，改进了 Tahoma 字体的字形度量，在 XML 中重新实现了 DTD 验证，以及常规的一系列错误修复。\n\nWine 11.22 此版本包含 34 项已知错误修复，涵盖从 Logos Bible Software 到激战2、星际公民以及各种其他游戏和应用修复。\n\nWine 11.22 的所有发布详情可在以下网址找到：\nWine 11.21 发布，WoW64 OpenGL 性能更佳\nWine 合并对 MESA_map_buffer_client_pointer 的支持以改进 WoW64 32 位 OpenGL\nWine 11.20 发布，CD-ROM 支持变更\nWine 11.19 发布，为 Vulkan 带来 Wayland 色彩管理、DNS 查询缓存\nWine-Staging 11.18 新增补丁以进一步改进 WoW64\nWine 11.18 继续完善其 NTOSKRNL 实现\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\nOpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞\n资深 Linux 开发者因 AI 导致的补丁洪流辞去部分职务\nLinux 7.5 的 ChaCha AVX-512 优化在 AMD Zen 5 上带来高达 99% 的提升\nOpenIndiana 2026.10 发布，更新工具与编译器、新增应用\nLinux 7.4-rc2 发布，FAT32 优化、AMDGPU HDMI 2.2 改进\n基于 RISC-V 的 TEE 与 AMD Zen 6 CPU\nHyprBSD 提供基于 Wayland 的桌面，构建于 FreeBSD 之上，并完整支持 Steam 游戏\nKDE Plasma 6.9 将停止在桌面上右键单击文件/文件夹时泄漏内存\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "f809063a7e7c5210878cae8db560e12c": {
+    "id": "f809063a7e7c5210878cae8db560e12c",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Cloudflare-Kitesurf-Open-Source",
+    "title_en": "Cloudflare Open Sources Kitesurf: Their Web Browser For AI Agents",
+    "summary_en": "Earlier this year Cloudflare announced Kitesurf as a stateless web browser for AI agents. After building out its features, they have now made good on their word to open-source it...",
+    "pub_date": "Fri, 13 Nov 2026 16:07:09 -0500",
+    "title_zh": "Cloudflare 开源 Kitesurf：专为 AI 代理打造的网页浏览器",
+    "summary_zh": "Cloudflare 宣布将其专为 AI 代理设计的无状态网页浏览器 Kitesurf 以 Apache 2.0 许可证开源。Kitesurf 构建于 Cloudflare Workers 之上，无需浏览器容器即可解析 HTML、处理 CSS 并执行 JavaScript，旨在为 AI 代理提供比 Chromium 等完整浏览器更轻量、高效的网页加载与交互能力，并可在 Cloudflare 全球 Workers 网络上按需扩展。",
+    "fulltext_zh": "Cloudflare 开源 Kitesurf：专为 AI 代理打造的网页浏览器\n2026 年 11 月 13 日 下午 04:07 EST。\n\n今年早些时候，Cloudflare 宣布推出 Kitesurf，一款面向 AI 代理的无状态网页浏览器。在完善其功能后，他们如今兑现了将其开源的承诺。\n\nKitesurf 现以 Apache 2.0 许可证开源，这款浏览器专为代理构建。Kitesurf 构建于 Cloudflare Workers 之上，无需浏览器容器即可解析 HTML、处理 CSS 并执行 JavaScript。\n\n关于 Cloudflare 对 Kitesurf 的明确动机：\n\n“我们的主要目标是给 AI 代理一个轻量、高效的浏览器——它能够加载网站、执行 JavaScript 并与页面交互，同时比 Chromium 这样的完整浏览器使用更少的 CPU 和内存，并能在 Cloudflare 的全球 Workers 网络上按需扩展。”\n\n感兴趣的人可以阅读今天发布的 Kitesurf 开源公告。Kitesurf 代码可通过 获取。有关 Kitesurf 本身的更多细节可在项目站点 找到。\n\nPostgreSQL 针对 52 个安全漏洞发布新版本，修复 140+ 缺陷\nBlender 5.3 发布，支持 NVIDIA DLSS 4.5 光线重建，Vulkan 成为默认\nDarling 现已拥抱 AI 以在 Linux 上运行 macOS 二进制文件\nServo 浏览器引擎持续拓宽 Web 兼容性，新增功能\nZlib 1.4 发布，包含十多个安全修复\nLZ4 1.11 为 liblz4 引入多线程压缩及其他性能提升\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该站点，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过 关注他。\nOpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞\n资深 Linux 开发者因 AI 导致的补丁洪流辞去部分职务\nLinux 7.5 的 ChaCha AVX-512 优化在 AMD Zen 5 上带来高达 99% 的提升\nOpenIndiana 2026.10 发布，更新工具与编译器，新增应用\nLinux 7.4-rc2 发布，包含 FAT32 优化、AMDGPU HDMI 2.2 改进\n基于 RISC-V 的 TEE 与 AMD Zen 6 CPU\nHyprBSD 提供构建于 FreeBSD 之上的 Wayland 桌面，包含 Steam 游戏\nKDE Plasma 6.9 将停止在桌面右键点击文件/文件夹时泄漏内存\n在享受无广告浏览的同时，\n单页文章视图\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026，\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "4f85200d41b2497cb5b0c875e850721b": {
+    "id": "4f85200d41b2497cb5b0c875e850721b",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-openSIL-Venice-Goal",
+    "title_en": "AMD openSIL Achieves Its Production Goal With 6th Gen EPYC \"Venice\"",
+    "summary_en": "Since 2023 I and many open-source advocates have been very eager for AMD's openSIL project for delivering open-source CPU silicon initialization as a replacement to the traditional AGESA code. With Zen 5 there was proof-of-concept support that we have enjoyed with Coreboot on an MSI Ryzen motherboard and a Gigabyte EPYC server motherboard thanks to the Coreboot-based Dasharo ports by 3mdeb. The goal for production readiness was for Zen 6, but with this week's EPYC 9006 SP7 announcement the openS",
+    "pub_date": "Fri, 13 Nov 2026 13:20:29 -0500",
+    "title_zh": "AMD openSIL 随第六代 EPYC \"Venice\" 实现量产目标",
+    "summary_zh": "AMD 的 openSIL 开源 CPU 硅初始化项目已在第六代 EPYC \"Venice\" 处理器上达成量产目标，所有 Venice 平台均依赖 openSIL 启动。AMD 确认将在产品正式发布后一个季度内开源 Venice 的 openSIL 代码，预计约三个月内发布，与 2024 年设定的目标一致。",
+    "fulltext_zh": "自 2023 年以来，我和许多开源倡导者一直非常期待 AMD 的这个项目——提供开源 CPU 硅初始化，以替代传统的 AGESA 代码。在 Zen 5 上，我们已经通过 Coreboot 在微星 Ryzen 主板和技嘉 EPYC 服务器主板上享受到了概念验证支持，这得益于 3mdeb 基于 Coreboot 的 Dasharo 移植。量产就绪的目标原本是 Zen 6，但本周 EPYC 9006 SP7 的发布公告中并未提及 openSIL 话题。于是我去打听了一番。\n\n随着 AMD EPYC 9006 系列 SP7 处理器现已出货，占据头条的是 Zen 6 服务器性能的惊人表现，例如相关处理器。在媒体简报和幻灯片中，openSIL 并未被提及，这激起了我的好奇心：一切是否仍按他们早先的目标推进？Venice 的 CPU 硅初始化进展如何？\n\n我随后向 AMD 求证，幸运的是 openSIL 一切顺利。openSIL 已随第六代 EPYC \"Venice\" 实现了此前声明的量产目标。我想知道 openSIL 路径是否是可选方案，或许经典的 AGESA 路径是否仍被支持/使用，作为消息的一部分，我被告知：“没有任何 Venice 平台在没有 openSIL 的情况下启动过任何东西。”\n\n他们还重申，将在产品正式发布后一个季度内发布 Venice 的 openSIL 开源代码。因此 openSIL Venice 代码应在大约三个月内发布，与他们早先的 openSIL 演示一致。\n\n看起来他们在 2024 年制定的所有 openSIL 目标都状态良好，并正按计划随 Venice 实现：\n\n很高兴看到一切协调一致，在 EPYC 9006 SP7 出货前后缺乏 openSIL 消息之后，这让人松了一口气。\n\n至于任何基于 Coreboot 的 EPYC 9006 服务器，AMD 正在继续关注客户支持/兴趣。至少一旦 openSIL Venice 代码在一个季度内发布，就有可能像我们看到 3mdeb 的工作那样，独立地将基于 Coreboot 的 Dasharo 带到零售主板上。\n\n最后，对于那些好奇的人，AMD EPYC 9006 参考主板继续使用 OpenBMC。AMD 从 Genoa 开始在其参考板上使用 OpenBMC，看到它被使用而非专有 BMC 软件替代品，总是让人暖心。\n\nAMD 利用 AI + HRX Loom 进行实验，快速将 50 个 LLM 移植到客户端 GPU\nAMD AOCL 6.0 引入新的 RNG 库，初步 Zen 6 CPU 优化\nLinux 7.5 将为 AMD Pensando NIC 启用温度/电压/功率监控\nAMD AOCC 6.0 带来 Zen 6 优化、新的 \"aof\" Fortran 编译器、aoc / aoc++ 品牌\nAMD 在 RAM 危机中宣传其 MEXT 软件——有 Linux 支持但非开源\nAMD 确认第七代 EPYC \"Florence\" 搭载 ACE，而第八代 EPYC 为 \"Ravenna\"\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\nOpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞\n资深 Linux 开发者因 AI 导致的补丁洪流辞去部分职务\nLinux 7.5 的 ChaCha AVX-512 优化在 AMD Zen 5 上提升高达 99%\nOpenIndiana 2026.10 发布，更新工具与编译器、新增应用\nLinux 7.4-rc2 发布，包含 FAT32 优化、AMDGPU HDMI 2.2 改进\n基于 RISC-V 的 TEE 与 AMD Zen 6 CPU\nHyprBSD 提供基于 Wayland 的桌面，构建于 FreeBSD 之上，完整支持 Steam 游戏\nKDE Plasma"
+  },
+  "f505478968499939c402b414800c40dc": {
+    "id": "f505478968499939c402b414800c40dc",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/KDE-Frameworks-6.32",
+    "title_en": "KDE Frameworks 6.32 Released With That Fix For USB File Transfer Notifications",
+    "summary_en": "KDE Frameworks 6.32 shipped today as the newest monthly update to this set of KDE components. Notable this month is a fix for the previously-reported 15 year old bug around inaccurate notifications for USB file transfers...",
+    "pub_date": "Fri, 13 Nov 2026 12:02:33 -0500",
+    "title_zh": "KDE Frameworks 6.32 发布，修复 USB 文件传输通知问题",
+    "summary_zh": "KDE Frameworks 6.32 作为月度更新发布，重点修复了存在15年之久的 USB 文件传输通知不准确问题。此前复制文件到可移动 USB 闪存盘时，完成通知仅反映写入本地缓存，而非数据真正写入存储设备。新版本通过 sync_file_range 系统调用解决了该问题。此外还包含大量 Baloo、KArchive 修复、Kirigami 更新和语法高亮调整。",
+    "fulltext_zh": "KDE Frameworks 6.32 今日发布，这是该 KDE 组件集的最新月度更新。本月值得关注的是修复了此前报道的、存在15年之久的 USB 文件传输通知不准确问题。\n\nKDE Frameworks 6.32 中包含一项修复，解决了将文件复制到可移动 USB 闪存盘时通知不准确的问题。过去15年里，完成通知仅反映文件复制到本地缓存的时间，而非数据实际写入可移动存储设备的时间。随着今日 KDE Frameworks 6.32 的发布，该问题现已通过利用 sync_file_range 系统调用得到解决。\n\nKDE Frameworks 6.32 还带来了许多 Baloo 修复、KArchive 修复、Kirigami 更新、语法高亮调整以及其他更改。\n\n可通过以下链接下载并了解 KDE Frameworks 6.32 更新的更多详情。"
+  },
+  "4a9b8a0d02edfb3f986b3598b784d67e": {
+    "id": "4a9b8a0d02edfb3f986b3598b784d67e",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-HRX-Loom-Experiment",
+    "title_en": "AMD Leverages AI + HRX Loom In Experiment For Quickly Porting 50 LLMs To Client GPUs",
+    "summary_en": "Following the recent release of HRX Loom v0.1 and leveraging an AI agent workflow, a team at AMD experimented with bringing 50 trending Hugging Face models over to AMD client GPUs. They accomplished this feat in just around three days, thanks to their HRX software work paired with the power of Ryzen AI Max \"Strix Halo\" hardware...",
+    "pub_date": "Fri, 13 Nov 2026 10:53:00 -0500",
+    "title_zh": "AMD利用AI与HRX Loom实验，快速将50个LLM移植到客户端GPU",
+    "summary_zh": "AMD团队利用AI代理工作流和HRX Loom软件，在约三到四天内将50个热门Hugging Face模型（涵盖18种架构）移植到AMD客户端GPU，基于Ryzen AI Max \"Strix Halo\"硬件。实验显示，32K令牌提示处理相比Llama.cpp的ROCm后端提速1.5至2.1倍，相比Vulkan后端提速1.9倍。HRX Loom仍为实验项目，支持GPU、CPU和NPU执行。",
+    "fulltext_zh": "在近期发布之后，并借助AI代理工作流，AMD的一个团队进行了一项实验，将50个热门的Hugging Face模型引入AMD客户端GPU。得益于他们的HRX软件工作与Ryzen AI Max \"Strix Halo\"硬件的强大性能，他们仅用了大约三天时间就完成了这一壮举。\n\nAMD工程师Jeremy Fowers和Ben Vanik领导了一项实验，在短短三到四天内将50个流行的Hugging Face模型（涵盖18种架构）引入AMD客户端GPU。这项实验旨在展示，借助HRX Loom和代理式AI，能够更快地将新模型以及小众模型引入AMD硬件。\n\n他们还发现，与Llama.cpp的ROCm后端相比，32K令牌提示处理有1.5至2.1倍的中等速度提升。与Llama.cpp的Vulkan后端相比，速度提升为1.9倍。HRX Loom目前仍是AMD的一个实验性项目，但鉴于这些结果，它展现出了巨大潜力。HRX Loom不仅适用于GPU，还支持CPU和NPU执行。\n\n对这项AMD HRX Loom实验感兴趣的人可以通过Loom-Fun GitHub页面找到他们的结果。\n\n作为这项工作的一部分，还有一个交付成果，即为Claude Code、Codex或Pi代理配备必要的组件，以便为AMD客户端GPU编写和提供优化的模型程序——目前重点测试的是出色的硬件，例如等。关于AMD Loom的更多背景信息可以通过以下内容找到。\n\nAMD openSIL随着第6代EPYC \"Venice\"实现其生产目标\nAMD AOCL 6.0引入新的RNG库，初步的Zen 6 CPU优化\nLinux 7.5将为AMD Pensando NIC启用温度/电压/功率监控\nAMD AOCC 6.0带来Zen 6优化、新的\"aof\" Fortran编译器、aoc / aoc++品牌\nAMD在RAM危机中宣传其MEXT软件——支持Linux但非开源\nAMD确认第7代EPYC \"Florence\"将搭载ACE，而第8代EPYC为\"Ravenna\"\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。他可以通过以下方式关注。\n\nOpenAI在Linux内核中发现948个本地权限提升漏洞\n长期Linux开发者因AI导致的补丁洪流而辞去部分职务\nLinux 7.5的ChaCha AVX-512优化在AMD Zen 5上带来高达99%的提升\nOpenIndiana 2026.10发布，包含更新工具和编译器、新应用\nLinux 7.4-rc2发布，包含FAT32优化、AMDGPU HDMI 2.2改进\n基于RISC-V的TEE与AMD Zen 6 CPU\nHyprBSD提供基于Wayland的桌面，构建于FreeBSD之上，并包含Steam游戏\nKDE Plasma 6.9将停止在桌面上右键单击文件/文件夹时泄漏内存\n\n在拥有无广告浏览、单页文章查看、法律免责声明、隐私政策、Cookie的同时，版权所有 © 2004 - 2026，所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "193334abcf48823756823ac05cdfa4fc": {
+    "id": "193334abcf48823756823ac05cdfa4fc",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/chimera-linux-releases-new-isos-with-kernel-7-3-gnome-51-and-plasma-6-8/",
+    "title_en": "Chimera Linux Releases New ISOs with Kernel 7.3, GNOME 51, and Plasma 6.8",
+    "summary_en": "Chimera Linux refreshes its installation ISOs with Linux kernel 7.3, GNOME 51, and KDE Plasma 6.8, bringing updated desktop options.\nThe post Chimera Linux Releases New ISOs with Kernel 7.3, GNOME 51, and Plasma 6.8 appeared first on Linux Today.",
+    "pub_date": "Fri, 13 Nov 2026 12:42:04 +0000",
+    "title_zh": "Chimera Linux 发布新 ISO，搭载内核 7.3、GNOME 51 和 Plasma 6.8",
+    "summary_zh": "Chimera Linux 发布了全新的安装镜像，升级至 Linux 内核 7.3、GNOME 51 和 KDE Plasma 6.8，并用 NetworkManager 取代了 iwd 作为网络管理工具。",
+    "fulltext_zh": "Chimera Linux 发布了新的 ISO 镜像，搭载 Linux 内核 7.3、GNOME 51 和 Plasma 6.8。\n\nChimera Linux 更新了其安装镜像，包含 Linux 内核 7.3、GNOME 51、KDE Plasma 6.8，并以 NetworkManager 取代 iwd。"
+  },
+  "1f54ca24519917cc24e6c226ee13a260": {
+    "id": "1f54ca24519917cc24e6c226ee13a260",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/fedora-asahi-remix-45-released-for-apple-silicon-macs-with-kde-plasma-6-8/",
+    "title_en": "Fedora Asahi Remix 45 Released for Apple Silicon Macs with KDE Plasma 6.8",
+    "summary_en": "Fedora Asahi Remix 45 brings KDE Plasma 6.8 and Fedora 45 updates to supported Apple Silicon Macs, offering a Linux desktop experience.\nThe post Fedora Asahi Remix 45 Released for Apple Silicon Macs with KDE Plasma 6.8 appeared first on Linux Today.",
+    "pub_date": "Fri, 13 Nov 2026 12:41:21 +0000",
+    "title_zh": "Fedora Asahi Remix 45 为 Apple Silicon Mac 发布，搭载 KDE Plasma 6.8",
+    "summary_zh": "Fedora Asahi Remix 45 基于 Fedora Linux 45 发布，默认搭载仅支持 Wayland 的 KDE Plasma 6.8 桌面环境，并首次为 Apple M3、M3 Pro 和 M3 Max 机器提供开箱即用的初步支持。",
+    "fulltext_zh": "Fedora Asahi Remix 45 为 Apple Silicon Mac 发布，搭载 KDE Plasma 6.8\n\n基于近期发布的 Fedora Linux 45 版本，Fedora Asahi Remix 45 默认搭载仅支持 Wayland 的 KDE Plasma 6.8 桌面环境，并首次为 Apple M3、Apple M3 Pro 和 Apple M3 Max 机器提供开箱即用的初步支持。"
+  },
+  "817c17fc667590dad60131ce6ccd6524": {
+    "id": "817c17fc667590dad60131ce6ccd6524",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/fedora-45-officially-released-this-is-whats-new/",
+    "title_en": "Fedora 45 Officially Released, This Is What’s New",
+    "summary_en": "Discover what's new in Fedora 45, including GNOME 51, KDE Plasma 6.8, security enhancements, and improvements to the installation experience.\nThe post Fedora 45 Officially Released, This Is What’s New appeared first on Linux Today.",
+    "pub_date": "Fri, 13 Nov 2026 12:00:12 +0000",
+    "title_zh": "Fedora 45 正式发布，新特性一览",
+    "summary_zh": "Fedora Linux 45 正式发布，带来 GNOME 51、KDE Plasma 6.8 和 Linux 内核 7.2，并增强了安全性和安装体验改进。",
+    "fulltext_zh": "Fedora 45 正式发布，新特性一览\n\nFedora Linux 45 已发布，搭载 GNOME 51、KDE Plasma 6.8、Linux 内核 7.2，增强了安全性并改进了安装体验。"
+  },
+  "85e3b83569ad2dd0765694959c5f9634": {
+    "id": "85e3b83569ad2dd0765694959c5f9634",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/libreoffice-26-2-7-released-as-final-update-to-older-stable-branch/",
+    "title_en": "LibreOffice 26.2.7 Released as Final Update to Older Stable Branch",
+    "summary_en": "LibreOffice 26.2.7 delivers final maintenance fixes for the older 26.2 branch as users prepare to transition to a newer supported release.\nThe post LibreOffice 26.2.7 Released as Final Update to Older Stable Branch appeared first on Linux Today.",
+    "pub_date": "Fri, 13 Nov 2026 11:56:31 +0000",
+    "title_zh": "LibreOffice 26.2.7 发布，作为旧稳定分支的最终更新",
+    "summary_zh": "LibreOffice 26.2.7 作为旧稳定分支的最终更新发布，修复了 DOCX 兼容性、PDF 超链接、演示文稿音频以及 macOS 崩溃等问题。该版本发布后，此分支将正式结束支持。",
+    "fulltext_zh": "LibreOffice 26.2.7 发布，作为旧稳定分支的最终更新\n\nLibreOffice 26.2.7 在该分支支持结束前，修复了 DOCX 兼容性、PDF 超链接、演示文稿音频以及 macOS 崩溃问题。"
+  },
+  "58840a8d3313eb3d49bd5dd0ba120b67": {
+    "id": "58840a8d3313eb3d49bd5dd0ba120b67",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/ipfire-2-29-core-update-205-fixes-serious-linux-tcp-vulnerability/",
+    "title_en": "IPFire 2.29 Core Update 205 Fixes Serious Linux TCP Vulnerability",
+    "summary_en": "IPFire 2.29 Core Update 205 addresses a serious Linux TCP vulnerability, strengthening network security for users of the open-source firewall.\nThe post IPFire 2.29 Core Update 205 Fixes Serious Linux TCP Vulnerability appeared first on Linux Today.",
+    "pub_date": "Fri, 13 Nov 2026 11:50:44 +0000",
+    "title_zh": "IPFire 2.29 Core Update 205 修复严重的 Linux TCP 漏洞",
+    "summary_zh": "IPFire 发布 Core Update 205，修复 Linux 内核 TCP 协议栈中一个严重的释放后使用（use-after-free）漏洞 CVE-2026-98432。该漏洞可能被攻击者利用导致系统崩溃或远程代码执行，属于高风险安全问题。此次更新旨在提升 IPFire 防火墙系统的稳定性和安全性，建议用户尽快升级。",
+    "fulltext_zh": "IPFire 2.29 Core Update 205 修复严重的 Linux TCP 漏洞\n\nIPFire 发布 Core Update 205，以解决 CVE-2026-98432，这是 Linux 内核 TCP 协议栈中一个严重的释放后使用（use-after-free）漏洞。"
+  },
+  "a3bf9349e9de6170b07058abe2ebcc71": {
+    "id": "a3bf9349e9de6170b07058abe2ebcc71",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/kde-frameworks-6-32-is-out-now-to-fix-15-year-old-data-integrity-bug",
+    "title_en": "KDE Frameworks 6.32 Is Out Now to Fix 15-Year-Old Data Integrity Bug",
+    "summary_en": "KDE Frameworks 6.32 open-source software suite is out now to fix a major data integrity bug and make transfers faster over network shares.\nThe post KDE Frameworks 6.32 Is Out Now to Fix 15-Year-Old Data Integrity Bug appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Fri, 13 Nov 2026 16:32:13 +0000",
+    "title_zh": "KDE Frameworks 6.32 发布，修复存在15年的数据完整性缺陷",
+    "summary_zh": "KDE Frameworks 6.32 开源软件套件现已发布，主要修复了一个存在15年之久的重要数据完整性缺陷，并提升了网络共享传输速度。",
+    "fulltext_zh": "KDE Frameworks 6.32 开源软件套件现已发布，修复了一个重要的数据完整性缺陷，并使网络共享传输速度更快。\n\n文章《KDE Frameworks 6.32 发布，修复存在15年的数据完整性缺陷》首发于 9to5Linux——未经许可请勿转载本文。本 RSS 源面向读者，而非抓取程序。"
   }
 }

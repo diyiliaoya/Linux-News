@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slax Linux 重装上阵 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月14日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Slax Linux 重装上阵</h1>
+
+  <div class="article-summary">Slax Linux 在沉寂三年后发布 2026.11 版本，基于 Debian 13 和 Linux 6.12 LTS 内核，新增图形化安装器、支持安全启动、Fluxbox 桌面增强，并引入需联网登录的 AI 助手。该发行版仍以 U 盘便携运行和多重命名会话为特色，但官方未说明长期停更原因及 AI 服务的数据处理细节。</div>
+
+  <div class="article-body"><p>Slax Linux 重装上阵</p><p>Slax 现已基于 Debian 13 运行，内置 AI 助手，并可在兼容 PC 上启用安全启动。</p><p>多年来，我们目睹了无数 Linux 发行版起起落落，通常结局不外乎维护者人手不足、项目负责人退休，或是缺乏关注度。</p><p>如今，在这个 AI 驱动的时代，我们看到许多新发行版涌现，其中一些似乎在尝试不同的方向，而另一些则只是在试图成为 macOS 的克隆。</p><p>这就是为什么我感到兴奋——在多年没有发布版本之后，它重新回归，并承担起 2026 年现代 Linux 发行版应有的样子。顺便说一句，它是一个从 U 盘运行的便携式发行版。</p><p>一次我们未曾预料到的回归</p><p>Slax 2026.11 版本基于 Linux 6.12 LTS，这是一个较旧的内核版本，也是当前长期支持选项之一，维护至 2028 年 12 月。</p><p>上一个版本要追溯到 2023 年 10 月，当时它附带两个基础版本：Slackware 15.0 和 Debian 12，以及 Slackware 15.0.2-current。那大约是三年零一个月前的事了，而最近的发布公告并未解释这一巨大间隔的原因。</p><p>它提供了适用于 Windows 和 Linux 的图形化安装器，你只需将下载的 ISO 作为文件夹打开，从那里启动安装器并选择驱动器。随后它会创建一个可启动 U 盘，或将 Slax 与现有系统并列安装。</p><p>同样，一个 U 盘可以容纳多个命名会话，例如一个用于工作，另一个用于实验，你可以在启动时根据使用场景选择其中一个。</p><p>Fluxbox 桌面现在在按下 Super 键和任务栏图标时会显示窗口预览，Super+W 可一次性打开全部四个工作区。对于启动器，如果你点击带有向下箭头的应用图标，Slax 现在可以迅速下载任何缺失的应用。</p><p>经过签名的引导程序和内核还让 Slax 能在兼容 PC 上启用安全启动后启动。</p><p>它包含一个名为 Slax AI 的 AI 助手，可从启动器打开。你用自然语言告诉它你的需求，它便能检查系统、调查磁盘空间耗尽等问题，并执行命令来修复。</p><p>不过，你需要联网并登录才能使用，登录选项包括邮箱、Google 和 GitHub。整个功能运行在一个在线 Slax 服务上，相关细节很少。</p><p>登录界面提供 100 个免费积分供试用，Slax 既未说明其背后的 AI 提供商是谁，也未说明他们如何处理数据。</p><p>这并非 Slax 第一次玩消失。2022 年，它带着基于 Debian 11 的 Slax 11 回归，此前自 2018 年以来除了 2019 年的 Debian 10.2 测试版外，并无重大进展。</p><p>那年夏天推出了 Slackware 版本，随后是 2023 年 10 月的版本。那个月发布的帖子从未真正说明下一步计划。</p><p>希望这次不会再有反复。🥂</p><p>它提供实时 ISO 镜像，如果你更想在完整安装前测试，它在虚拟机中运行得相当不错。如果你确实将其安装到系统上，Slax 文档是一个值得放在手边的便捷资源。</p><p>你希望我们做一次 Slax 评测吗？可以是文章或视频评测。在下方告诉我们你的想法。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>过去 14 年来，It's FOSS 一直在帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获取 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>跳过 Google 结果中的 AI 垃圾和 SEO 垃圾</p><p>告诉 Google 你偏好 It's FOSS，这样当你在搜索时，它会更频繁地展示我们由经验丰富的 Linux 用户创建的 Linux 新闻和教程。只需点击一下。</p><p>设为偏好来源</p><p>🐧 今天就来玩 Tuxdle——每日 Linux 单词谜题 →</p><p>在收件箱中获取 FOSS Weekly</p><p>一份健康的 Linux 新闻通讯，包含最新发布、相关新闻、技巧和教程、冷知识、梗图、测验和桌面 Linux 用户的优惠。每周免费。</p><p>一个热衷于开源软件、定制 PC 装机、赛车运动以及探索这个世界无限可能的技术迷。</p><p>开发者'</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/slax-linux-returns/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

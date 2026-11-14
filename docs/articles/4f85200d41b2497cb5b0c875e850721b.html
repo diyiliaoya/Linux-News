@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMD openSIL 随第六代 EPYC &quot;Venice&quot; 实现量产目标 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月14日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>AMD openSIL 随第六代 EPYC &quot;Venice&quot; 实现量产目标</h1>
+
+  <div class="article-summary">AMD 的 openSIL 开源 CPU 硅初始化项目已在第六代 EPYC &quot;Venice&quot; 处理器上达成量产目标，所有 Venice 平台均依赖 openSIL 启动。AMD 确认将在产品正式发布后一个季度内开源 Venice 的 openSIL 代码，预计约三个月内发布，与 2024 年设定的目标一致。</div>
+
+  <div class="article-body"><p>自 2023 年以来，我和许多开源倡导者一直非常期待 AMD 的这个项目——提供开源 CPU 硅初始化，以替代传统的 AGESA 代码。在 Zen 5 上，我们已经通过 Coreboot 在微星 Ryzen 主板和技嘉 EPYC 服务器主板上享受到了概念验证支持，这得益于 3mdeb 基于 Coreboot 的 Dasharo 移植。量产就绪的目标原本是 Zen 6，但本周 EPYC 9006 SP7 的发布公告中并未提及 openSIL 话题。于是我去打听了一番。</p><p>随着 AMD EPYC 9006 系列 SP7 处理器现已出货，占据头条的是 Zen 6 服务器性能的惊人表现，例如相关处理器。在媒体简报和幻灯片中，openSIL 并未被提及，这激起了我的好奇心：一切是否仍按他们早先的目标推进？Venice 的 CPU 硅初始化进展如何？</p><p>我随后向 AMD 求证，幸运的是 openSIL 一切顺利。openSIL 已随第六代 EPYC &quot;Venice&quot; 实现了此前声明的量产目标。我想知道 openSIL 路径是否是可选方案，或许经典的 AGESA 路径是否仍被支持/使用，作为消息的一部分，我被告知：“没有任何 Venice 平台在没有 openSIL 的情况下启动过任何东西。”</p><p>他们还重申，将在产品正式发布后一个季度内发布 Venice 的 openSIL 开源代码。因此 openSIL Venice 代码应在大约三个月内发布，与他们早先的 openSIL 演示一致。</p><p>看起来他们在 2024 年制定的所有 openSIL 目标都状态良好，并正按计划随 Venice 实现：</p><p>很高兴看到一切协调一致，在 EPYC 9006 SP7 出货前后缺乏 openSIL 消息之后，这让人松了一口气。</p><p>至于任何基于 Coreboot 的 EPYC 9006 服务器，AMD 正在继续关注客户支持/兴趣。至少一旦 openSIL Venice 代码在一个季度内发布，就有可能像我们看到 3mdeb 的工作那样，独立地将基于 Coreboot 的 Dasharo 带到零售主板上。</p><p>最后，对于那些好奇的人，AMD EPYC 9006 参考主板继续使用 OpenBMC。AMD 从 Genoa 开始在其参考板上使用 OpenBMC，看到它被使用而非专有 BMC 软件替代品，总是让人暖心。</p><p>AMD 利用 AI + HRX Loom 进行实验，快速将 50 个 LLM 移植到客户端 GPU</p><p>AMD AOCL 6.0 引入新的 RNG 库，初步 Zen 6 CPU 优化</p><p>Linux 7.5 将为 AMD Pensando NIC 启用温度/电压/功率监控</p><p>AMD AOCC 6.0 带来 Zen 6 优化、新的 &quot;aof&quot; Fortran 编译器、aoc / aoc++ 品牌</p><p>AMD 在 RAM 危机中宣传其 MEXT 软件——有 Linux 支持但非开源</p><p>AMD 确认第七代 EPYC &quot;Florence&quot; 搭载 ACE，而第八代 EPYC 为 &quot;Ravenna&quot;</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>OpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞</p><p>资深 Linux 开发者因 AI 导致的补丁洪流辞去部分职务</p><p>Linux 7.5 的 ChaCha AVX-512 优化在 AMD Zen 5 上提升高达 99%</p><p>OpenIndiana 2026.10 发布，更新工具与编译器、新增应用</p><p>Linux 7.4-rc2 发布，包含 FAT32 优化、AMDGPU HDMI 2.2 改进</p><p>基于 RISC-V 的 TEE 与 AMD Zen 6 CPU</p><p>HyprBSD 提供基于 Wayland 的桌面，构建于 FreeBSD 之上，完整支持 Steam 游戏</p><p>KDE Plasma</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/AMD-openSIL-Venice-Goal" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

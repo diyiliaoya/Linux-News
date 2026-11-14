@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>开发者因300美元刺绣机需订阅制而自建开源工具 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月14日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">软件应用</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>开发者因300美元刺绣机需订阅制而自建开源工具</h1>
+
+  <div class="article-summary">一位开发者因购买的Brother Skitch刺绣机依赖付费订阅应用Artspira，自行开发了开源工具ZigZag。该工具可将SVG图形转为刺绣针迹，支持五种文件格式导出，并能通过蓝牙向刺绣机发送设计。ZigZag采用Apache 2.0许可证，整个应用借助ChatGPT构建，内置MCP服务器允许AI代理直接编辑设计。</div>
+
+  <div class="article-body"><p>有人做了一个免费的刺绣编辑器</p><p>开发者因300美元的刺绣机需要订阅制，于是自建了这个开源工具</p><p>ZigZag可将SVG图形转为针迹，导出五种文件格式，并能通过蓝牙将设计发送到应用控制的Brother刺绣机。</p><p>她以Apache 2.0许可证发布了ZigZag。她表示整个应用都是用AI（ChatGPT）构建的，目标是获得符合自己规格的软件，类似Adobe套件，但内置了MCP支持。</p><p>该MCP支持是一个内置服务器，允许AI代理在同一窗口中进行绘制和编辑。</p><p>她关于此事的帖子在48小时内已获得超过[数字]的关注，她一直在那里回答关于构建方式和支持哪些机器的问题。</p><p>ZigZag：为何开发此工具？</p><p>这是围绕一台她称花费约300美元的刺绣机而构建的。</p><p>你看，Skitch需要Brother的[应用]才能操作。虽然该应用免费且可与机器配合使用，但一项名为[付费计划]的付费计划增加了实用附加功能，例如将图像数字化为刺绣图案和创建十字绣图案。</p><p>免费版在颜色和工具方面有限制，她认为一些剪贴画是保留给订阅者的。她还猜测Brother最初亏本销售该机器是因为订阅制。</p><p>最后一点符合许多硬件制造商正在做的事情。</p><p>将图像转为形状。它涵盖11种针迹类型，编辑器中会显示针迹预览。</p><p>至于MCP服务器，它允许AI代理检查打开的设计、添加和编辑对象与文本、描摹图像、预览针迹并导出文件。它还可以控制Skitch设备，每个操作都算作一个撤销步骤。</p><p>这并非新事物。ZigZag之前就存在开源刺绣工具。人们提到过[项目]、一个Inkscape扩展，以及[项目]已经让人们无需Artspira即可将设计发送到Skitch。</p><p>关于蓝牙协议和缝纫流程。Kathy说她自行逆向工程了协议，她的代理使用Respira进行了验证。</p><p>目前，ZigZag可用于[平台]。你可以从[链接]获取最新版本，其中涵盖安装、蓝牙配对和MCP服务器，并建议不要对Skitch进行固件更新。</p><p>用户可按照步骤使用Rust从源码构建ZigZag。</p><p>Brother Skitch PP1是ZigZag唯一通过蓝牙发送设计的机器，需要先关闭Artspira，因为Skitch一次只能与一个应用通信。</p><p>对于其他机器，ZigZag可以导出[格式]。</p><p>[某公司]严厉打击了一位独立开源开发者，该开发者想让DisplayLink在Linux上工作。</p><p>AI辅助的DisplayLink Linux驱动收到法律通知</p><p>Mike Lothian让Vino在三代DisplayLink扩展坞上工作，但Synaptics告诉他将其下架。</p><p>喜欢这篇更新？支持独立的Linux新闻报道</p><p>It's FOSS过去14年一直在帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>跳过Google结果中的AI垃圾和SEO垃圾</p><p>告诉Google你更喜欢It's FOSS，它会在你搜索时更频繁地显示我们由经验丰富的Linux用户创建的Linux新闻和教程。只需点击一下。</p><p>设为首选来源</p><p>🐧 今天就来玩Tuxdle——每日Linux单词谜题 →</p><p>在收件箱中获取FOSS Weekly</p><p>一份健康的Linux新闻通讯，包含最新发布、相关新闻、技巧和教程、冷知识、模因、测验和桌面Linux用户的优惠。每周免费。</p><p>一个热衷于开源软件、定制PC装机、赛车运动以及探索这个世界无限可能的技术迷。</p><p>Slax Linux回归</p><p>超越AI应用：openEuler如何重新思考代理基础设施操作系统</p><p>代理名称服务现已加入Linux基金会</p><p>AI辅助的DisplayLink Linux驱动收到法律通知</p><p>GameOS背后的公司现在正在构建</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/zigzag-embroidery-software/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

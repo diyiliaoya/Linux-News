@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Euro-Office（ONLYOFFICE 分支）现已推出桌面应用 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月14日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Euro-Office（ONLYOFFICE 分支）现已推出桌面应用</h1>
+
+  <div class="article-summary">Euro-Office 是 Nextcloud 支持的 ONLYOFFICE 分支，现已推出名为 Nextcloud Office Desktop 的桌面客户端，用户无需自建服务器即可离线使用。该套件基于 ONLYOFFICE 桌面编辑器，提供文字处理、电子表格、演示和 PDF 工具，支持微软 OOXML 和开放文档格式，并可连接服务器协作。目前提供 Windows、macOS 和 Linux 安装包，但尚无 Flathub 或 Snap 版本。</div>
+
+  <div class="article-body"><p>Euro-Office，这个由 Nextcloud 支持的 ONLYOFFICE 分支，现在可以作为 Nextcloud Office Desktop 下载并安装到桌面上了。</p><p>Euro-Office 于 2026 年 3 月发布，是欧洲地区替代 Microsoft 365 的方案，也是 ONLYOFFICE 的一个分支。目前用户可以在服务器上运行和托管（或付费请人托管），然后通过网页浏览器或移动应用访问。</p><p>现在不再需要这样做了，Nextcloud Office Desktop 是一个桌面客户端，安装和使用方式与传统桌面办公套件一样。你不需要托管服务器或保持在线就能使用；它是一个离线套件。</p><p>Nextcloud Office Desktop 基于 ONLYOFFICE 的桌面编辑器构建，所以如果你用过那个套件，就会熟悉这里提供的内容：功能丰富的文字处理器、电子表格、演示文稿和 PDF 工具。</p><p>它可以打开 Microsoft Office 的 OOXML 文件（如 DOCX、XLSX 和 PPTX），以及开放格式（如 ODT、ODS 和 ODP），并能连接到 Nextcloud 或其他服务器进行协作编辑。它还支持插件和“自带”AI 功能。</p><p>该套件在本地运行的一个好处是，可以选择已安装的字体。如果你需要用特定字体格式化文档，或确保文件在其他系统上对他人显示一致，都可以做到。</p><p>并非所有人都对此满意</p><p>ONLYOFFICE 背后的公司 Ascensio System SIA 对 Euro-Office 的出现不太高兴，LibreOffice 也是如此，尽管原因不同。</p><p>推出 Euro-Office 的欧洲公司发表了宏大的声明，宣称要促进数字主权和开源，减少欧洲对美国大型科技公司的依赖。他们能否在这款软件再包装上打上自己的印记？</p><p>目前，这感觉很像是一个换了品牌的 ONLYOFFICE。这本身并不是坏事，Nextcloud 和 IONOS 选择它是因为其现代代码库和强大的功能集。围绕主权有如此多的营销，我希望这只是一个起点。</p><p>更多选择从来不是坏事，但同样的选择换身衣服……更像是选择的幻觉——主权也需要实质内容。但愿如此。</p><p>下载 Nextcloud Office Desktop</p><p>Nextcloud Office Desktop 可从 Nextcloud 网站下载。提供了适用于 Windows 和 macOS 的 Intel/AMD 及 ARM64 版本安装程序，以及适用于 Linux 的 Intel/AMD 版本（DEB 和 RPM）。</p><p>目前还没有 Flathub 或 Snap Store 的上架信息。如果你比我先发现，请通过提示表单或我们的社交账号告诉我，谢谢！</p><p>办公与生产力应用</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/euro-office-desktop-apps-nextcloud" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
