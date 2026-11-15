@@ -21129,5 +21129,93 @@
     "title_zh": "KDE Frameworks 6.32 发布，修复存在15年的数据完整性缺陷",
     "summary_zh": "KDE Frameworks 6.32 开源软件套件现已发布，主要修复了一个存在15年之久的重要数据完整性缺陷，并提升了网络共享传输速度。",
     "fulltext_zh": "KDE Frameworks 6.32 开源软件套件现已发布，修复了一个重要的数据完整性缺陷，并使网络共享传输速度更快。\n\n文章《KDE Frameworks 6.32 发布，修复存在15年的数据完整性缺陷》首发于 9to5Linux——未经许可请勿转载本文。本 RSS 源面向读者，而非抓取程序。"
+  },
+  "9a45a2c52904d88181b52c19cb0dcca6": {
+    "id": "9a45a2c52904d88181b52c19cb0dcca6",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/11/ubuntu-pro-ai-security-archive",
+    "title_en": "Ubuntu Pro users can get early access to AI-written security fixes",
+    "summary_en": "Canonical is giving Ubuntu Pro users early access to AI-generated patches for known security flaws, available through a new opt-in archive called Edge. To get fixes out faster to customers and users, the company has built a multi-agent system called Surge to backport fixes for vulnerabilities in &#8216;userspace&#8217; software packages. The machine-generated patches land in the Edge archive. This is opt-in and not enabled by default. Ubuntu Pro users who want fixes before they receive full test",
+    "pub_date": "Sun, 15 Nov 2026 01:55:38 +0000",
+    "title_zh": "Ubuntu Pro 用户可提前获取 AI 编写的安全修复",
+    "summary_zh": "Canonical 为 Ubuntu Pro 用户推出名为 Edge 的可选归档，提供 AI 生成的已知安全漏洞补丁。该公司构建了多智能体系统 Surge 来为“用户空间”软件包回移修复，机器生成的补丁进入 Edge 归档，需手动启用。这些修复不会自动推送到稳定版，常规更新渠道仍严格由人工验证。Edge 归档面向希望提前获取修复的用户，Ubuntu Pro 个人用户最多可在 5 台设备上免费使用。",
+    "fulltext_zh": "Ubuntu Pro 用户可提前获取 AI 编写的安全修复 - OMG! Ubuntu\n\nCanonical 正在向 Ubuntu Pro 用户提供针对已知安全漏洞的 AI 生成补丁的早期访问权限，这些补丁可通过一个名为 Edge 的新可选归档获取。\n\n为了更快地向客户和用户提供修复，该公司构建了一个名为 Surge 的多智能体系统，用于为“用户空间”软件包中的漏洞回移修复。\n\n机器生成的补丁会进入 Edge 归档。这是可选加入的，默认不启用。希望在修复经过完整测试或“资格认证”之前就获得它们的 Ubuntu Pro 用户，需要在受支持的系统上手动启用 Edge 归档。\n\nSurge 并未被用于修补内核漏洞（不过据一些人说，内核漏洞现在确实能获得更快的安全更新）。\n\nSurge 修复不会自动推送到稳定版本，现有的 Ubuntu 安全政策——即通过正常更新渠道发布更新前进行测试和审查——将继续执行，并保持“严格由人工验证”。\n\n其安全团队今年迄今发布的修复数量已是去年的两倍，需要应对 LLM 辅助的漏洞报告和 AI 智能体攻击的增加。\n\n但它指出，人工工程、审查和测试可能“比一些用户和客户所能容忍的耗时更长”。新的 Edge 归档正是为那些不愿等待的人准备的。\n\nCanonical 在公告中表示：“我们始终相信，最具韧性的软件是在开放环境中锻造出来的。”\n\n“通过 Ubuntu Pro […] 研究人员和高级用户可以在真实环境中评估机器生成的修复，帮助我们在将其认证为可推广到 Ubuntu LTS 通用可用性时验证稳定性。”\n\n在 Ubuntu 上启用 Edge 归档\n\nUbuntu Pro 在最多 5 台设备上个人使用免费，因此你不需要是企业或客户，就可以在 Ubuntu 18.04、20.04、22.04、24.04 或 26.04 LTS 上使用 Edge 归档（需承认相关注意事项）。\n\n首先，在 Ubuntu 26.04 LTS 上通过 Ubuntu Pro 应用设置 Ubuntu Pro（较旧版本可通过该工具或使用命令行工具完成）。你需要一个 Ubuntu One 账户来完成登录。\n\n然后，通过 CLI 启用新的 Edge 归档：\n\nsudo apt install pro-edge && sudo pro-enable-edge\n\n来自 Edge 归档的更新默认不会自动安装，但你可以手动选择想要的安全更新。\n\n太麻烦？你可以通过运行以下命令接收自动更新：\n\nsudo pro-enable-edge --automatic-updates\n\n要禁用/退出 Ubuntu Pro Edge 更新，请通过移除该归档来禁用它。\n\n如果你遇到新归档的任何问题，Canonical 要求你"
+  },
+  "d5b1415288a99e162df4232952bcb84d": {
+    "id": "d5b1415288a99e162df4232952bcb84d",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Redox-OS-Golang-GIMP",
+    "title_en": "Redox OS Gets Golang Working, GIMP Ported & Simplified AI Policy",
+    "summary_en": "The Rust-based Redox OS open-source operating system is now out with its October development summary that highlights recent software ports, progress on NUMA, and other enhancements made to this from-scratch platform...",
+    "pub_date": "Sat, 14 Nov 2026 11:06:43 -0500",
+    "title_zh": "Redox OS 实现 Golang 支持、GIMP 移植及简化 AI 政策",
+    "summary_zh": "Redox OS 发布十月开发进展：Go 语言编译器已可在该平台运行，支持交叉编译和自举编译；GIMP 图像编辑器经数月努力成功移植；Servo 浏览器引擎更新至 0.7；初步 NUMA 支持运行良好，修复 RISC-V 动态链接，并实现用户路径下的无根包安装。此外，AI 政策简化为不接受 LLM 生成的贡献。",
+    "fulltext_zh": "基于 Rust 的 Redox OS 开源操作系统现已发布十月开发摘要，重点介绍了近期的软件移植、NUMA 进展以及对这个从零构建的平台所做的其他改进。\n\nRedox OS 在十月成功让 Go 编程语言编译器在该平台上运行。Golang 在 Redox OS 上既支持交叉编译，也支持自举编译。Golang 已适配使用 Relibc。\n\nRedox OS 还经过数月努力成功让 GIMP 图像编辑器运行起来。Redox OS 还将其 Servo 浏览器引擎移植更新至较新的 Servo 0.7 代码状态。\n\nRedox OS 还确认其初步 NUMA 支持运行良好，修复了 RISC-V 动态链接，并在用户等效路径中实现了初步的无根包安装。\n\nRedox OS 在十月还将其 AI 政策简化为：\n“Redox OS 不接受由 LLM（大型语言模型，有时也称为‘AI’）生成的贡献。”\n\n更多关于这些改进以及驱动和内核改进等的详细信息，请访问\n\nReactOS 获得可用的软盘支持、VMware 3D 加速及 SMP 进展\nHaiku OS 现已拥有 UFS 驱动、两指和三指轻触手势\nKORA 宣布成为“智能时代”的 Linux 桌面操作系统\nOpenIndiana 2026.10 发布，更新工具与编译器、新增应用\nReactOS 初步支持 USB3 驱动\nOmarchy 4.5 发布，支持 Apple Silicon、更多桌面定制\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\n资深 Linux 开发者因 AI 引发的补丁洪流辞去部分职务\nLinux 7.5 的 ChaCha AVX-512 优化在 AMD Zen 5 上提升高达 99%\nOpenIndiana 2026.10 发布，更新工具与编译器、新增应用\nLinux 7.4-rc2 发布，包含 FAT32 优化、AMDGPU HDMI 2.2 改进\nNVIDIA CEO 黄仁勋辞职\n基于 RISC-V 的 TEE 与 AMD Zen 6 CPU\nHyprBSD 提供基于 FreeBSD 构建的 Wayland 桌面，包含 Steam 游戏\nKDE Plasma 6.9 将停止在桌面上右键单击文件/文件夹时泄漏内存\n在拥有无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "a949219b71d81438292946067bd232fd": {
+    "id": "a949219b71d81438292946067bd232fd",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Apple-M5-For-Linux-7.5",
+    "title_en": "Basic Support For The Apple M5 Expected To Land For Linux 7.5",
+    "summary_en": "Very basic support for the Apple M5 SoC base model is expected to be merged for the Linux 7.5 kernel now that it's been queued into the \"apple-soc/dt-7.5\" Git branch...",
+    "pub_date": "Sat, 14 Nov 2026 10:33:10 -0500",
+    "title_zh": "Apple M5 基础支持预计将登陆 Linux 7.5",
+    "summary_zh": "Apple M5 SoC 基础型号的初步支持已进入 apple-soc/dt-7.5 Git 分支，预计将随 Linux 7.5 内核合并。该支持仅提供极少量硬件支持，作为未来开发的基础，硬件与早期 Apple Silicon 代际基本一致。GPU 支持仍是主要障碍。此前 Linux 7.4 已引入 Apple M4 初步支持，7.2 引入 M3 支持。",
+    "fulltext_zh": "Apple M5 SoC 基础型号的非常基础的支持预计将被合并到 Linux 7.5 内核中，目前该支持已排入“apple-soc/dt-7.5”Git 分支。\n\n继 Linux 7.4 中引入 Apple M4 初步支持、Linux 7.2 中引入 Apple M3 支持之后，Linux 7.5 现在预计将提供 Apple M5 基础型号及使用该芯片的 Apple Mac 的初始设备树支持。但就像目前主线内核中的 M3/M4 支持一样，它将非常有限。\n\n参与 Apple M5 设备树工作的 Yureka Lilian 将其描述为“最少量的硬件”支持，但他们会在此基础上继续构建，并在未来的 Linux 内核版本中扩展：\n\n“本系列仅涵盖最少量的硬件，可作为未来开发的基础。这里添加的硬件与早期 Apple Silicon 代际相比基本保持不变。”\n\n仍然存在的最大障碍之一是为更新代际的 Apple Silicon M 系列 SoC 提供适当的 GPU 支持。\n\n该系列已由 Sven Peter 排入“apple-soc/dt-7.5”，因此请期待 Linux 7.5 中这一非常原始的 Apple M5 支持，以帮助推动后续开发工作。\n\n相关报道：\nAsahi Linux 在游戏方面取得进展，更多 Apple Silicon 上游化\n启用 Apple AirDrop 支持的 Linux 内核补丁已发布供审查\nApple Silicon Linux 驱动被适配以帮助较旧的 Intel 驱动 Mac\nBorealis：Asahi Linux 的 Apple Silicon Mesa Vulkan 驱动被分叉用于 Vibe Coding\nLinux 7.4 将为 MacBook Neo 引入 Apple M4、A18 Pro 的初始设备树\n在所有基于 Apple M3 的 SoC 上启用 NVMe 的 Linux 补丁已发布\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\n长期 Linux 开发者因 AI 导致的补丁洪流辞去部分职务\nLinux 7.5 的 ChaCha AVX-512 优化在 AMD Zen 5 上带来高达 99% 的提升\nOpenIndiana 2026.10 发布，更新工具与编译器、新增应用\nLinux 7.4-rc2 发布，包含 FAT32 优化、AMDGPU HDMI 2.2 改进\nNVIDIA CEO 黄仁勋辞职\n基于 RISC-V 的 TEE 与 AMD Zen 6 CPU\nHyprBSD 提供基于 FreeBSD 构建的 Wayland 桌面，包含 Steam 游戏\nKDE Plasma 6.9 将停止在桌面上右键单击文件/文件夹时泄漏内存\n同时拥有无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "ecd25f753652461e1ebbe3edd660cc6f": {
+    "id": "ecd25f753652461e1ebbe3edd660cc6f",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/QEMU-VM-Memory-Tiering",
+    "title_en": "Red Hat Working To Improve Memory Tiering For QEMU VMs To Save RAM",
+    "summary_en": "Red Hat engineers are working through a few possible approaches to enhance memory tiering for QEMU-based virtual machines to help in conserving memory. Ultimately they are after leveraging NVMe SSDs in more scenarios for QEMU VMs to save on RAM usage given today's sky high memory pricing...",
+    "pub_date": "Sat, 14 Nov 2026 08:12:22 -0500",
+    "title_zh": "红帽致力于改进 QEMU 虚拟机的内存分层以节省 RAM",
+    "summary_zh": "红帽工程师正在探索多种方案以改进 QEMU 虚拟机的内存分层，目标是在当前内存价格高企的情况下，让 QEMU 虚拟机在更多场景中利用 NVMe SSD 替代 DRAM 以节省内存。在 KVM Forum 2026 上，红帽虚拟化工程师 Peter Xu 介绍了相关评估方案，包括新的 maccess() 系统调用、QEMU 全用户空间分层以及利用现有内核 API 进行热页迁移。其中利用现有内核 API 的方案因无需修改内核且 QEMU 改动较小而成为当前主要候选，并可通过新内核补丁进一步改进 MADV_PAGEOUT 行为。",
+    "fulltext_zh": "红帽正在努力改进 QEMU 虚拟机的内存分层以节省 RAM\n2026 年 11 月 14 日上午 08:12 EST 发布。\n红帽工程师正在研究几种可能的方案，以增强基于 QEMU 的虚拟机的内存分层能力，从而帮助节省内存。鉴于当前内存价格高企，他们的最终目标是在更多场景中为 QEMU 虚拟机利用 NVMe SSD，以节省 RAM 使用量。\n红帽虚拟化工程师 Peter Xu 本周在加拿大温哥华举行的 KVM Forum 2026 上介绍了 QEMU 内存分层。目标是让 QEMU 虚拟机更好地与内存分层配合，以便在更多情况下使用相对更便宜的 NVMe SSD 替代 DRAM，同时仍能提供良好的性能。\n正在评估的途径包括：新的 maccess() 系统调用、由 QEMU 负责拥有慢速层的 QEMU 全用户空间分层，或使用现有内核 API 进行热页迁移。最后一种方案目前看来是主要候选，因为它无需修改内核，且 QEMU 改动较小。最后一种方案还可以通过新的内核补丁解决 MADV_PAGEOUT 行为的内核限制来进一步改进。\n希望了解更多信息的读者可以查看演讲页面以及下方嵌入的 KVM Forum 视频。\nAMD EPYC Zen 6 PML 支持、ARM64 在 s390 上合并进入 Linux 7.4 KVM\nVirtIO-FS 的同步队列展现出巨大的性能潜力\nCloud Hypervisor 54 发布，带来实时迁移改进\nLinux 7.4 将引入 Steal Governor 以帮助虚拟化工作负载\nLinux 为报告 AMD SEV 状态添加新接口\n孤儿虚拟机：在宿主内核离线进行重启/更新时保持虚拟机不间断运行\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n资深 Linux 开发者因 AI 导致的补丁洪流辞去部分职务\nLinux 7.5 的 ChaCha AVX-512 优化在 AMD Zen 5 上带来高达 99% 的提升\nOpenIndiana 2026.10 发布，更新工具与编译器，新增应用\nLinux 7.4-rc2 发布，包含 FAT32 优化、AMDGPU HDMI 2.2 改进\nNVIDIA CEO 黄仁勋辞职\n基于 RISC-V 的 TEE 与 AMD Zen 6 CPU\nHyprBSD 提供基于 Wayland 的桌面，构建于 FreeBSD 之上，并完整支持 Steam 游戏\nKDE Plasma 6.9 将停止在桌面上右键单击文件/文件夹时泄漏内存\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "411465897f6e4ff9c37dc5b415d42cc8": {
+    "id": "411465897f6e4ff9c37dc5b415d42cc8",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-Coral-Rapids-Razor-Lake",
+    "title_en": "Intel Begins Linux Kernel Enablement For Coral Rapids & Razor Lake",
+    "summary_en": "Along with Intel posting initial GCC compiler patches for Coral Rapids and Razor Lake processors, the first Linux kernel patch for these future Intel server and desktop/laptop processors have also arrived...",
+    "pub_date": "Sat, 14 Nov 2026 06:19:30 -0500",
+    "title_zh": "Intel 开始为 Coral Rapids 和 Razor Lake 提供 Linux 内核支持",
+    "summary_zh": "Intel 工程师发布了针对未来 Coral Rapids 服务器处理器和 Razor Lake 桌面/笔记本处理器的首批 Linux 内核补丁，主要添加了新的 CPU 家族和型号 ID 定义。Coral Rapids 是 Diamond Rapids 的继任者，Razor Lake 是 Nova Lake 的继任者，预计 2028 年发布。此举标志着开源社区对这些下一代 Intel 硬件的支持工作正式启动，后续技术启用补丁将陆续提交。",
+    "fulltext_zh": "Intel 开始为 Coral Rapids 和 Razor Lake 提供 Linux 内核支持\n2026 年 11 月 14 日 06:19 AM EST。\n在 Intel 发布针对 Coral Rapids 和 Razor Lake 处理器的初始 GCC 编译器补丁后，这些未来 Intel 服务器和桌面/笔记本处理器的首个 Linux 内核补丁也已到来。\nCoral Rapids 是明年 Xeon Diamond Rapids 服务器处理器的继任者。Razor Lake 是即将推出的 Nova Lake 处理器的继任者。这些将于 2028 年推出的 Intel CPU 应该会相当有趣，很高兴看到开源/Linux 支持现在开始推进。\n在发布 GCC 补丁的同一天，Intel 的 Tony Luck 发布了针对未来硬件的首个内核补丁。按照惯例，首个补丁只是列出新的 CPU 家族/型号 ID，以便后续利用这些定义的内核补丁可以随后发布。\nIntel Coral Rapids 使用 Family 19 Model 8 进行标识。对于 Razor Lake，它是 Family 18 Model 6，Razor Lake L 将是 Family 18 Model 7，Razor Lake U 将是 Family 18 Model 9，Razor Lake S 将是 Family 18 Model 10。\n在建立这些 Coral Rapids 和 Razor Lake 定义之后，预计未来几周内更多实际的技术启用补丁将开始出现在 Linux 内核邮件列表上。如果一切顺利，未来几个月内我们将看到 Linux 内核对这些处理器的支持全部就绪，远早于预计 2028 年实际硬件出货的时间。一如既往，我持续关注内核邮件列表和其他来源，以留意这些下一代 Intel 产品的任何揭示性功能细节或其他信息。\nIntel 发布 Razor Lake 和 Coral Rapids 的初始 GCC 编译器代码\nIntel Xe 驱动为 vGPU 配置文件准备 SR-IOV 配置\nIntel 继续为 Linux 7.5 启用 GPU D 系列“Crescent Island”驱动支持\nIntel 发布新 CPU 微码以修复各种功能问题\nIntel ANV 为 AV1 编码加入码率控制\nIntel One Mono 字体家族更新，带来多项增强\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n资深 Linux 开发者因 AI 导致的补丁洪流辞去部分职务\nLinux 7.5 的 ChaCha AVX-512 优化在 AMD Zen 5 上带来高达 99% 的提升\nOpenIndiana 2026.10 发布，更新工具和编译器，新增应用\nLinux 7.4-rc2 发布，包含 FAT32 优化、AMDGPU HDMI 2.2 改进\nNVIDIA CEO 黄仁勋辞职\n基于 RISC-V 的 TEE 与 AMD Zen 6 CPU\nHyprBSD 提供基于 Wayland 的桌面，构建于 FreeBSD 之上，完整支持 Steam 游戏\nKDE Plasma 6.9 将停止在桌面上右键单击文件/文件夹时泄漏内存\n同时拥有无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "e352b98b7bb094c462da350161fc6118": {
+    "id": "e352b98b7bb094c462da350161fc6118",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Emdoor-Linux-Platform-Driver",
+    "title_en": "Rugged Emdoor Laptops Beginning To See Improved Linux Support",
+    "summary_en": "Emdoor that is a leading manufacturer of rugged laptops and tablets used by various industries is beginning to see improved Linux support thanks to a new platform driver being developed...",
+    "pub_date": "Sat, 14 Nov 2026 06:03:49 -0500",
+    "title_zh": "坚固型Emdoor笔记本电脑的Linux支持开始改善",
+    "summary_zh": "Emdoor是工业用坚固型笔记本和平板电脑的领先制造商。近日开发者提交了针对Emdoor Intel EWMI平台驱动的初始RFC补丁，初期聚焦于搭载Intel Core Ultra Series 2 \"Lunar Lake\"处理器的硬件。该驱动支持Fn锁定、Windows键锁定、触摸板开关、自动开机模式、HWMON风扇和EC温度传感器、ACPI平台配置文件等。这标志着Emdoor硬件Linux支持的重要进展。",
+    "fulltext_zh": "坚固型Emdoor笔记本电脑的Linux支持开始改善\n2026年11月14日06:03 AM EST。\n\nEmdoor是各行业使用的坚固型笔记本电脑和平板电脑的领先制造商，由于正在开发的新平台驱动，其Linux支持开始得到改善。\n\n周五发布了Emdoor Intel EWMI平台驱动的初始征求意见（RFC）补丁。该驱动在初始原始状态下专注于支持搭载Emdoor Intel Core Ultra Series 2 \"Lunar Lake\"的硬件。过去曾有驱动工作改善对采用AMD SoC的Emdoor硬件以及其他无关Intel笔记本电脑的支持，而这个新的emdoor-intel-wmi驱动则专注于该公司最新的WMI实现。\n\n借助这个Emdoor Intel平台驱动，可以切换功能键（Fn）锁定、Windows键锁定状态、切换设备触摸板、设置自动开机模式、HWMON风扇和EC温度传感器、ACPI平台配置文件配置以及其他属性。\n\n使用Intel驱动的坚固型Emdoor笔记本电脑的用户可以通过以下链接了解更多关于这个初始RFC驱动提交的信息。"
+  },
+  "5c201e9c7c98da7e2ce737329b0393ef": {
+    "id": "5c201e9c7c98da7e2ce737329b0393ef",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/shelly-3-3-gui-package-manager-for-arch-linux-brings-new-built-in-theme",
+    "title_en": "Shelly 3.3 GUI Package Manager for Arch Linux Brings New Built-in Theme",
+    "summary_en": "Shelly 3.3 graphical package manager for Arch Linux distributions is now available for download with a new built-in theme, support for light or dark preferences, and other changes.\nThe post Shelly 3.3 GUI Package Manager for Arch Linux Brings New Built-in Theme appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Sat, 14 Nov 2026 07:43:34 +0000",
+    "title_zh": "Arch Linux 的 Shelly 3.3 GUI 包管理器带来全新内置主题",
+    "summary_zh": "Shelly 3.3 图形化包管理器现已发布，适用于 Arch Linux 发行版。新版本引入了全新的内置主题，支持浅色或深色偏好设置，并包含其他改进。用户可下载更新体验。",
+    "fulltext_zh": "Shelly 3.3 图形化包管理器 for Arch Linux 发行版现已可供下载，带来全新的内置主题、对浅色或深色偏好的支持以及其他更改。\n\n文章《Shelly 3.3 GUI 包管理器 for Arch Linux 带来全新内置主题》首次出现在 9to5Linux 上——未经许可不得转载本文。本 RSS 源旨在供读者使用，而非爬虫。"
+  },
+  "42ec405298af9c873642a416fb19709e": {
+    "id": "42ec405298af9c873642a416fb19709e",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/ubuntu-27-04-tenacious-t-rex-daily-builds-are-now-available-for-download",
+    "title_en": "Ubuntu 27.04 “Tenacious T-Rex” Daily Builds Are Now Available for Download",
+    "summary_en": "Ubuntu 27.04 (Tenacious T-Rex) daily build ISO images are now available for download for early adopters and application developers who want to test drive their apps against the new toolchain.\nThe post Ubuntu 27.04 “Tenacious T-Rex” Daily Builds Are Now Available for Download appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Sat, 14 Nov 2026 06:04:49 +0000",
+    "title_zh": "Ubuntu 27.04 “Tenacious T-Rex” 每日构建版现已开放下载",
+    "summary_zh": "Ubuntu 27.04（代号“Tenacious T-Rex”）的每日构建 ISO 镜像现已开放下载，面向早期采用者和应用开发者，便于他们针对新工具链测试应用。",
+    "fulltext_zh": "Ubuntu 27.04（Tenacious T-Rex）每日构建 ISO 镜像现已开放下载，面向希望针对新工具链测试其应用的早期采用者和应用开发者。"
   }
 }

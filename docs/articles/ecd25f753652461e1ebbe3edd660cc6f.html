@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>红帽致力于改进 QEMU 虚拟机的内存分层以节省 RAM — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月15日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>红帽致力于改进 QEMU 虚拟机的内存分层以节省 RAM</h1>
+
+  <div class="article-summary">红帽工程师正在探索多种方案以改进 QEMU 虚拟机的内存分层，目标是在当前内存价格高企的情况下，让 QEMU 虚拟机在更多场景中利用 NVMe SSD 替代 DRAM 以节省内存。在 KVM Forum 2026 上，红帽虚拟化工程师 Peter Xu 介绍了相关评估方案，包括新的 maccess() 系统调用、QEMU 全用户空间分层以及利用现有内核 API 进行热页迁移。其中利用现有内核 API 的方案因无需修改内核且 QEMU 改动较小而成为当前主要候选，并可通过新内核补丁进一步改进 MADV_PAGEOUT 行为。</div>
+
+  <div class="article-body"><p>红帽正在努力改进 QEMU 虚拟机的内存分层以节省 RAM</p><p>2026 年 11 月 14 日上午 08:12 EST 发布。</p><p>红帽工程师正在研究几种可能的方案，以增强基于 QEMU 的虚拟机的内存分层能力，从而帮助节省内存。鉴于当前内存价格高企，他们的最终目标是在更多场景中为 QEMU 虚拟机利用 NVMe SSD，以节省 RAM 使用量。</p><p>红帽虚拟化工程师 Peter Xu 本周在加拿大温哥华举行的 KVM Forum 2026 上介绍了 QEMU 内存分层。目标是让 QEMU 虚拟机更好地与内存分层配合，以便在更多情况下使用相对更便宜的 NVMe SSD 替代 DRAM，同时仍能提供良好的性能。</p><p>正在评估的途径包括：新的 maccess() 系统调用、由 QEMU 负责拥有慢速层的 QEMU 全用户空间分层，或使用现有内核 API 进行热页迁移。最后一种方案目前看来是主要候选，因为它无需修改内核，且 QEMU 改动较小。最后一种方案还可以通过新的内核补丁解决 MADV_PAGEOUT 行为的内核限制来进一步改进。</p><p>希望了解更多信息的读者可以查看演讲页面以及下方嵌入的 KVM Forum 视频。</p><p>AMD EPYC Zen 6 PML 支持、ARM64 在 s390 上合并进入 Linux 7.4 KVM</p><p>VirtIO-FS 的同步队列展现出巨大的性能潜力</p><p>Cloud Hypervisor 54 发布，带来实时迁移改进</p><p>Linux 7.4 将引入 Steal Governor 以帮助虚拟化工作负载</p><p>Linux 为报告 AMD SEV 状态添加新接口</p><p>孤儿虚拟机：在宿主内核离线进行重启/更新时保持虚拟机不间断运行</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>资深 Linux 开发者因 AI 导致的补丁洪流辞去部分职务</p><p>Linux 7.5 的 ChaCha AVX-512 优化在 AMD Zen 5 上带来高达 99% 的提升</p><p>OpenIndiana 2026.10 发布，更新工具与编译器，新增应用</p><p>Linux 7.4-rc2 发布，包含 FAT32 优化、AMDGPU HDMI 2.2 改进</p><p>NVIDIA CEO 黄仁勋辞职</p><p>基于 RISC-V 的 TEE 与 AMD Zen 6 CPU</p><p>HyprBSD 提供基于 Wayland 的桌面，构建于 FreeBSD 之上，并完整支持 Steam 游戏</p><p>KDE Plasma 6.9 将停止在桌面上右键单击文件/文件夹时泄漏内存</p><p>同时享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/QEMU-VM-Memory-Tiering" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

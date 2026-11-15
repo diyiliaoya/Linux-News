@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ubuntu Pro 用户可提前获取 AI 编写的安全修复 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月15日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Ubuntu Pro 用户可提前获取 AI 编写的安全修复</h1>
+
+  <div class="article-summary">Canonical 为 Ubuntu Pro 用户推出名为 Edge 的可选归档，提供 AI 生成的已知安全漏洞补丁。该公司构建了多智能体系统 Surge 来为“用户空间”软件包回移修复，机器生成的补丁进入 Edge 归档，需手动启用。这些修复不会自动推送到稳定版，常规更新渠道仍严格由人工验证。Edge 归档面向希望提前获取修复的用户，Ubuntu Pro 个人用户最多可在 5 台设备上免费使用。</div>
+
+  <div class="article-body"><p>Ubuntu Pro 用户可提前获取 AI 编写的安全修复 - OMG! Ubuntu</p><p>Canonical 正在向 Ubuntu Pro 用户提供针对已知安全漏洞的 AI 生成补丁的早期访问权限，这些补丁可通过一个名为 Edge 的新可选归档获取。</p><p>为了更快地向客户和用户提供修复，该公司构建了一个名为 Surge 的多智能体系统，用于为“用户空间”软件包中的漏洞回移修复。</p><p>机器生成的补丁会进入 Edge 归档。这是可选加入的，默认不启用。希望在修复经过完整测试或“资格认证”之前就获得它们的 Ubuntu Pro 用户，需要在受支持的系统上手动启用 Edge 归档。</p><p>Surge 并未被用于修补内核漏洞（不过据一些人说，内核漏洞现在确实能获得更快的安全更新）。</p><p>Surge 修复不会自动推送到稳定版本，现有的 Ubuntu 安全政策——即通过正常更新渠道发布更新前进行测试和审查——将继续执行，并保持“严格由人工验证”。</p><p>其安全团队今年迄今发布的修复数量已是去年的两倍，需要应对 LLM 辅助的漏洞报告和 AI 智能体攻击的增加。</p><p>但它指出，人工工程、审查和测试可能“比一些用户和客户所能容忍的耗时更长”。新的 Edge 归档正是为那些不愿等待的人准备的。</p><p>Canonical 在公告中表示：“我们始终相信，最具韧性的软件是在开放环境中锻造出来的。”</p><p>“通过 Ubuntu Pro […] 研究人员和高级用户可以在真实环境中评估机器生成的修复，帮助我们在将其认证为可推广到 Ubuntu LTS 通用可用性时验证稳定性。”</p><p>在 Ubuntu 上启用 Edge 归档</p><p>Ubuntu Pro 在最多 5 台设备上个人使用免费，因此你不需要是企业或客户，就可以在 Ubuntu 18.04、20.04、22.04、24.04 或 26.04 LTS 上使用 Edge 归档（需承认相关注意事项）。</p><p>首先，在 Ubuntu 26.04 LTS 上通过 Ubuntu Pro 应用设置 Ubuntu Pro（较旧版本可通过该工具或使用命令行工具完成）。你需要一个 Ubuntu One 账户来完成登录。</p><p>然后，通过 CLI 启用新的 Edge 归档：</p><p>sudo apt install pro-edge &amp;&amp; sudo pro-enable-edge</p><p>来自 Edge 归档的更新默认不会自动安装，但你可以手动选择想要的安全更新。</p><p>太麻烦？你可以通过运行以下命令接收自动更新：</p><p>sudo pro-enable-edge --automatic-updates</p><p>要禁用/退出 Ubuntu Pro Edge 更新，请通过移除该归档来禁用它。</p><p>如果你遇到新归档的任何问题，Canonical 要求你</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/ubuntu-pro-ai-security-archive" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
