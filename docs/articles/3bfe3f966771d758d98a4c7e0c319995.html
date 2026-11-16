@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI打造的浏览器Blanc放弃Electron，转向Chromium — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月16日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">软件应用</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>AI打造的浏览器Blanc放弃Electron，转向Chromium</h1>
+
+  <div class="article-summary">AI辅助开发的浏览器Blanc发布2.0测试版，从Electron迁移至Chromium内核，以复用标签页、历史记录等浏览器原生代码，提升Chrome扩展兼容性和桌面密码管理器支持。代价是开发者需跟上Chromium更快的发布节奏，但安全性将因更新更频繁而改善。目前仅提供macOS（Apple Silicon）测试版，Linux和Windows版本稍后推出。</div>
+
+  <div class="article-body"><p>Blanc，这款用AI打造的浏览器，将Electron换成了Chromium——OMG! Ubuntu</p><p>现已开放测试——而且这个版本直接构建在Chromium之上。</p><p>castLabs的Electron分支包含了Widevine，因此像某些网站才能正常工作。但Electron只包含足以显示网页的Chromium部分，并不包含让浏览器成为浏览器的许多组件。</p><p>2.0版本基于正统Chromium重构，使其能够复用标签页、历史记录和其他功能的代码，而非自定义代码。</p><p>缺点是开发者（以及他的token消耗）需要跟上Chromium更快的发布节奏。但这将提升安全性，因为castLabs的Electron每月才更新一次。</p><p>此次移植应能改善对Chrome扩展的支持，并允许桌面密码管理器（如某些产品）与之配合工作，因为它们通常只与能识别的浏览器集成。</p><p>Blanc 2.0测试版尚未登陆Linux——暂时没有</p><p>Blanc是用AI制作的。该浏览器的开发者Anthony Loria使用Claude和Codex来构建、编码和测试版本。Loria此前曾排除使用Chromium的可能性，理由是其快速发布节奏会给单人开发者带来太多工作量。</p><p>看来计划是开发这个Chromium版本，试图与Electron版本达到功能对等，然后决定哪个效果最好，并以此为基础继续开发。</p><p>Blanc 2.0 beta 6——相同的UI，更好的基础</p><p>v2.0目前是预发布软件，以测试版形式提供，不建议日常使用。它作为独立应用运行，可与现有的1.x版本并存而不重叠，因为各自拥有独立的数据文件夹、设置等。</p><p>根据说明，与常规版本相比有一些功能限制，包括不支持Widevine。</p><p>截至撰写本文时，尚无Linux或Windows测试版，只有macOS（仅Apple Silicon）的测试构建。开发者表示其他平台的构建将“很快”推出——如果你急于测试，请关注相关渠道。</p><p>我在macOS上试用了最新的2.0测试版（v6）。它的外观和行为与稳定版一致，这对熟悉它的用户来说是件好事。这包括浮动岛UI、极简设计以及 glances、工作区和分屏等功能。</p><p>顺便提一句，我最近确实看到一位Linux用户申请加入开发团队，以便造福未来的Linux版本。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/blanc-browser-chromium-port" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

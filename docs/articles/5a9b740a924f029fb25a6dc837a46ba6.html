@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Purism 发布第二代 Librem 5 Linux 手机 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月16日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Purism 发布第二代 Librem 5 Linux 手机</h1>
+
+  <div class="article-summary">Purism 正在众筹其 Linux 智能手机的新版本，该版本采用 RISC-V 架构而非 Arm。新机搭载八核 SpacemiT K1 RISC-V SoC，内存升至 8GB，存储升至 128GB，支持从 SD 卡启动第二系统，并首次支持 1300 万像素拍照和高清视频录制。外观、屏幕和电池与初代相同，保留物理开关。售价 1159 美元起，众筹持续至 2027 年 2 月。</div>
+
+  <div class="article-body"><p>Purism 正在众筹其 Linux 智能手机的新版本，该版本采用 RISC-V 架构而非 Arm。</p><p>新机将使用八核 SpacemiT K1 RISC-V SoC，取代四核 Arm64 NXP CPU。这一处理器转变将提供比初代 Librem 5 更好的性能和更长的电池续航，且使用时不会那么热。</p><p>内存提升至 8GB RAM（原为 3GB），存储从 32GB 跃升至 128GB。Librem 5 v2 将运行 PureOS，这是 Purism 基于 Debian 的操作系统，使用……</p><p>SD 卡读取速度更快，这很方便，因为设备可以从存储卡启动第二操作系统。板载硬件编码意味着 Librem 5 将首次能够拍摄 1300 万像素照片和录制高清视频。</p><p>Librem 5 v2 采用与初代手机相同的壳体设计、5.7 英寸（720×1440）IPS TFT 显示屏和可拆卸 4500mAh 电池。它保留了 USB-C 端口、音频插孔以及用于禁用摄像头、调制解调器和 GPS 的物理 kill 开关。</p><p>为何没有设计升级？这是有意为之；与初代机型的兼容性使代际间的维修和升级更加容易。</p><p>采用模块化无线板，v2 手机提供改进的 4G 调制解调器（计划推出可更换的 5G 模块）。但 v2 将支持双 SIM 卡，而 v1 为单 SIM 卡。</p><p>Librem 5 v2 售价 1159 美元起</p><p>“RISC-V 是未来，Librem 5 v2 是将它带给主流受众的完美产品，”Purism 首席技术官 Jonathon Hall 在发布时表示。</p><p>“将我们从大科技公司的控制中解放出来始于基础，而 RISC-V 的基础使我们摆脱寡头控制。Librem 5 v2 让你掌控自己的数据，并将其与我们在现代时代所期望的易用性相结合”。</p><p>鉴于对初代 Librem 5 的普遍反馈——饱受延迟、涨价和做工参差不齐的困扰——充其量是褒贬不一。但值得称赞的是，Purism 仍在制造、销售和支持这些手机（以及他们的其他设备和服务）。</p><p>不过，后续机型向 RISC-V 过渡并非易事。图形加速、新驱动和电源管理（在手机上相当关键）将是艰巨的任务。</p><p>还需要更多工作来使日常软件栈可编辑，比如浏览器性能（在最新最快的 RISC-V 芯片上仍然迟缓）以及提供 Arm 应用兼容层来运行非 RISC-V 原生软件。</p><p>众筹持续至 2027 年 2 月</p><p>如果你至少有 1599 美元——是的，再读一遍——并且口袋里的钱烧得慌，而且在 2028 年之前不需要任何东西来证明，你可以去支持该众筹活动。活动持续至 2027 年 2 月，所以不必急于决定。</p><p>这不是 RVA23 基线；那是 K3 及以上。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/librem-5-risc-v-new-linux-phone" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

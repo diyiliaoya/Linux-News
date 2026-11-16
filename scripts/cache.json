@@ -21217,5 +21217,104 @@
     "title_zh": "Ubuntu 27.04 “Tenacious T-Rex” 每日构建版现已开放下载",
     "summary_zh": "Ubuntu 27.04（代号“Tenacious T-Rex”）的每日构建 ISO 镜像现已开放下载，面向早期采用者和应用开发者，便于他们针对新工具链测试应用。",
     "fulltext_zh": "Ubuntu 27.04（Tenacious T-Rex）每日构建 ISO 镜像现已开放下载，面向希望针对新工具链测试其应用的早期采用者和应用开发者。"
+  },
+  "5a9b740a924f029fb25a6dc837a46ba6": {
+    "id": "5a9b740a924f029fb25a6dc837a46ba6",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/11/librem-5-risc-v-new-linux-phone",
+    "title_en": "Purism announce second-gen Librem 5 Linux phone",
+    "summary_en": "Purism is crowdfunding a new version of its Librem 5 Linux smartphone, this one powered by RISC-V rather than Arm. Librem 5 v2 will use an octa-core SpacemiT K1 RISC-V SoC, replacing the quad-core Arm64 NXP CPU. This processor shift will provide better performance and longer battery life than the original Librem 5 and not run as hot in use. Memory is bumped to 8 GB RAM, up from 3 GB, and storage leaps to 128 GB from 32 GB. Librem 5 v2 will run PureOS, Purism&#8217;s Debian-based operating system",
+    "pub_date": "Sun, 15 Nov 2026 18:39:16 +0000",
+    "title_zh": "Purism 发布第二代 Librem 5 Linux 手机",
+    "summary_zh": "Purism 正在众筹其 Linux 智能手机的新版本，该版本采用 RISC-V 架构而非 Arm。新机搭载八核 SpacemiT K1 RISC-V SoC，内存升至 8GB，存储升至 128GB，支持从 SD 卡启动第二系统，并首次支持 1300 万像素拍照和高清视频录制。外观、屏幕和电池与初代相同，保留物理开关。售价 1159 美元起，众筹持续至 2027 年 2 月。",
+    "fulltext_zh": "Purism 正在众筹其 Linux 智能手机的新版本，该版本采用 RISC-V 架构而非 Arm。\n\n新机将使用八核 SpacemiT K1 RISC-V SoC，取代四核 Arm64 NXP CPU。这一处理器转变将提供比初代 Librem 5 更好的性能和更长的电池续航，且使用时不会那么热。\n\n内存提升至 8GB RAM（原为 3GB），存储从 32GB 跃升至 128GB。Librem 5 v2 将运行 PureOS，这是 Purism 基于 Debian 的操作系统，使用……\n\nSD 卡读取速度更快，这很方便，因为设备可以从存储卡启动第二操作系统。板载硬件编码意味着 Librem 5 将首次能够拍摄 1300 万像素照片和录制高清视频。\n\nLibrem 5 v2 采用与初代手机相同的壳体设计、5.7 英寸（720×1440）IPS TFT 显示屏和可拆卸 4500mAh 电池。它保留了 USB-C 端口、音频插孔以及用于禁用摄像头、调制解调器和 GPS 的物理 kill 开关。\n\n为何没有设计升级？这是有意为之；与初代机型的兼容性使代际间的维修和升级更加容易。\n\n采用模块化无线板，v2 手机提供改进的 4G 调制解调器（计划推出可更换的 5G 模块）。但 v2 将支持双 SIM 卡，而 v1 为单 SIM 卡。\n\nLibrem 5 v2 售价 1159 美元起\n\n“RISC-V 是未来，Librem 5 v2 是将它带给主流受众的完美产品，”Purism 首席技术官 Jonathon Hall 在发布时表示。\n\n“将我们从大科技公司的控制中解放出来始于基础，而 RISC-V 的基础使我们摆脱寡头控制。Librem 5 v2 让你掌控自己的数据，并将其与我们在现代时代所期望的易用性相结合”。\n\n鉴于对初代 Librem 5 的普遍反馈——饱受延迟、涨价和做工参差不齐的困扰——充其量是褒贬不一。但值得称赞的是，Purism 仍在制造、销售和支持这些手机（以及他们的其他设备和服务）。\n\n不过，后续机型向 RISC-V 过渡并非易事。图形加速、新驱动和电源管理（在手机上相当关键）将是艰巨的任务。\n\n还需要更多工作来使日常软件栈可编辑，比如浏览器性能（在最新最快的 RISC-V 芯片上仍然迟缓）以及提供 Arm 应用兼容层来运行非 RISC-V 原生软件。\n\n众筹持续至 2027 年 2 月\n\n如果你至少有 1599 美元——是的，再读一遍——并且口袋里的钱烧得慌，而且在 2028 年之前不需要任何东西来证明，你可以去支持该众筹活动。活动持续至 2027 年 2 月，所以不必急于决定。\n\n这不是 RVA23 基线；那是 K3 及以上。"
+  },
+  "3bfe3f966771d758d98a4c7e0c319995": {
+    "id": "3bfe3f966771d758d98a4c7e0c319995",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/11/blanc-browser-chromium-port",
+    "title_en": "Blanc, the browser made with AI, swaps Electron for Chromium",
+    "summary_en": "A new beta of Blanc, the AI-built web browser, is available for testing – and this one is built directly on Chromium. Current versions of Blanc use castLabs&#8217; Electron fork, which includes Widevine so sites like Netflix work. But Electron only includes enough Chromium to display web pages, and not so many of the pieces that make a browser a browser. Blanc 2.0 rebases on Chromium proper, allowing it to reuse code for tabs, history and other features instead of custom code. The downside is th",
+    "pub_date": "Sun, 15 Nov 2026 16:51:40 +0000",
+    "title_zh": "AI打造的浏览器Blanc放弃Electron，转向Chromium",
+    "summary_zh": "AI辅助开发的浏览器Blanc发布2.0测试版，从Electron迁移至Chromium内核，以复用标签页、历史记录等浏览器原生代码，提升Chrome扩展兼容性和桌面密码管理器支持。代价是开发者需跟上Chromium更快的发布节奏，但安全性将因更新更频繁而改善。目前仅提供macOS（Apple Silicon）测试版，Linux和Windows版本稍后推出。",
+    "fulltext_zh": "Blanc，这款用AI打造的浏览器，将Electron换成了Chromium——OMG! Ubuntu\n\n现已开放测试——而且这个版本直接构建在Chromium之上。\n\ncastLabs的Electron分支包含了Widevine，因此像某些网站才能正常工作。但Electron只包含足以显示网页的Chromium部分，并不包含让浏览器成为浏览器的许多组件。\n\n2.0版本基于正统Chromium重构，使其能够复用标签页、历史记录和其他功能的代码，而非自定义代码。\n\n缺点是开发者（以及他的token消耗）需要跟上Chromium更快的发布节奏。但这将提升安全性，因为castLabs的Electron每月才更新一次。\n\n此次移植应能改善对Chrome扩展的支持，并允许桌面密码管理器（如某些产品）与之配合工作，因为它们通常只与能识别的浏览器集成。\n\nBlanc 2.0测试版尚未登陆Linux——暂时没有\n\nBlanc是用AI制作的。该浏览器的开发者Anthony Loria使用Claude和Codex来构建、编码和测试版本。Loria此前曾排除使用Chromium的可能性，理由是其快速发布节奏会给单人开发者带来太多工作量。\n\n看来计划是开发这个Chromium版本，试图与Electron版本达到功能对等，然后决定哪个效果最好，并以此为基础继续开发。\n\nBlanc 2.0 beta 6——相同的UI，更好的基础\n\nv2.0目前是预发布软件，以测试版形式提供，不建议日常使用。它作为独立应用运行，可与现有的1.x版本并存而不重叠，因为各自拥有独立的数据文件夹、设置等。\n\n根据说明，与常规版本相比有一些功能限制，包括不支持Widevine。\n\n截至撰写本文时，尚无Linux或Windows测试版，只有macOS（仅Apple Silicon）的测试构建。开发者表示其他平台的构建将“很快”推出——如果你急于测试，请关注相关渠道。\n\n我在macOS上试用了最新的2.0测试版（v6）。它的外观和行为与稳定版一致，这对熟悉它的用户来说是件好事。这包括浮动岛UI、极简设计以及 glances、工作区和分屏等功能。\n\n顺便提一句，我最近确实看到一位Linux用户申请加入开发团队，以便造福未来的Linux版本。"
+  },
+  "4dd8f7ae719d06e26bf7423e2545e730": {
+    "id": "4dd8f7ae719d06e26bf7423e2545e730",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/13039",
+    "title_en": "DistroWatch Weekly, Issue 1199",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  This week in DistroWatch Weekly: \nReview: ZimaOS 1.8.0\nNews: Asahi Linux relicenses code, Chimera Linux strives for better NVIDIA support on musl distributions, Hyprland runs on OpenBSD, Manjaro team creates non-profit, FreeBSD gains new application jail\nQuestions and answers: The best second distro\nReleased last week: Slax 2026.11, XXRI OS 2.7,....",
+    "pub_date": "",
+    "title_zh": "DistroWatch 周刊，第1199期",
+    "summary_zh": "本期 DistroWatch 周刊报道了 Asahi Linux 更改许可证、Chimera Linux 改善 musl 发行版上的 NVIDIA 支持、Hyprland 在 OpenBSD 上运行、Manjaro 团队成立非营利组织、FreeBSD 新增应用 jail 等新闻。此外还包含问答、上周发布、种子角落、即将发布和民意调查等栏目。",
+    "fulltext_zh": "DistroWatch 周刊，第1199期（DistroWatch.com 新闻）\n\nDistroWatch.com 由以下赞助商支持\n\n新闻/观点/评论 ▼\n发布公告\nDW 周刊 / 评论存档\n访客评分与评论\n项目评分排名\n播客、通讯与评论\n跨发行版比较软件包\n显示所有发行版的软件包版本\n搜索发行版 - 高级\n已停止的发行版\n教程与学习 ▼\n搜索文章\n问答专栏\n技巧与提示专栏\n误区与误解专栏\n简化手册页\n其他操作系统\n发行版验证密钥\n可视化发行版家族树\n常见问题\n我们的捐赠计划\n\n小型企业电话系统\nFreeBSD 讨论 AI，测试 x11appjail\nManjaro 创建非营利组织\nOpenBSD 运行 Hyprland\nChimera Linux 致力于在 musl 驱动的发行版上支持 NVIDIA\nAsahi Linux 更改许可证以降低宽松度\n多个发行版警告 OpenSSH 漏洞\nGhostBSD 修复仓库错误\naerynOS 测试新的系统安装器\nRocky Linux 创始人指导 LLM 创建新内核\nMint 正在恢复休眠模式\n\n易于使用的 PBX - 托管或自管理\nLinux 电话系统\n免费实时聊天解决方案\n集成呼叫中心软件\n联络中心软件\n远程工作应用：iOS 或 Android\n免费视频会议\n3CX 的 VoIP / PBX 操作指南\n不要措手不及，制定灾难恢复计划！\n必要的实时聊天报告和统计\n导致呼叫欺诈的常见错误\nWhatsApp Business 与 3CX WhatsApp API 集成\n3CX StartUP 的 5 大杀手级功能\n不要成为“那种”人 第1卷：保管复杂凭证\n不要成为“那种”人 第2卷：呼叫欺诈\n不要成为“那种”人 第3卷：四大安全提示\n不要成为“那种”人 第4卷：监控你的实例\nRed Hat 周五五条 - 2026年11月13日\nUbuntu 每周通讯 969\nHaiku 活动与合同报告，2026年10月\nFull Circle 每周新闻\nFedora 项目播客\n\n最新新闻与更新\n新闻过滤选项\n\nDistroWatch 周刊，第1199期\n新闻：Asahi Linux 重新许可代码，Chimera Linux 努力改善 musl 发行版上的 NVIDIA 支持，Hyprland 在 OpenBSD 上运行，Manjaro 团队创建非营利组织，FreeBSD 获得新的应用 jail\n问答：最好的第二发行版\n上周发布：Slax 2026.11、XXRI OS 2.7、Unraid OS 7.4.0、deepin 25.3.0、Red Hat Enterprise Linux 10.3 和 9.9、openKylin 3.0 SP1\n种子角落：deepin 25.3.0\n即将发布：FreeBSD 15.2-BETA3\n民意调查：你在哪里寻找下一个发行版？\n阅读本周 DistroWatch 周刊的更多内容....\n\nopenEuler 是由开放原子基金会运营的开源项目。它是一个数字基础设施发行版，可适应各种服务器、云计算、边缘计算和嵌入式部署。openEuler 兼容多种 CPU 架构（包括 x86_64 服务器、云环境、ARM 驱动的嵌入式设备和 RISC-V 板卡），适用于广泛的环境。该项目每两年发布一个长期支持（LTS）版本，为企业用户提供稳定的平台。每六个月发布一个新的 openEuler 临时版本，以提供更新的技术。虽然 openEuler 专注于服务器部署，但也提供桌面环境（包括 UKUI、Deepin、GNOME 和 Xfce）。\n\n问答：DistroWatch 不断演变的数据\n技巧与提示：Konqueror 与 Kate 组成出色的远程管理团队……以及一道杀手级砂锅菜\n问答：学习编程并改进 Linux\n技巧与提示：复制文本列、整理文件、创建种子\n误区与误解：sudo\n技巧与提示：文件加密与云备份\n问答：基于 Fedora 的发行版在哪里？\n技巧与提示：恢复加密主目录数据\n问答：Ubuntu Touch 会回归吗？\n问答：交换键盘布局中的按键\n\n版权所有 © 2001 - 2026 Atea Ataroa Limited。保留所有权利。所有商"
+  },
+  "6a3c66e337e5580fc1688f82a59db476": {
+    "id": "6a3c66e337e5580fc1688f82a59db476",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-rc3-Released",
+    "title_en": "Linux 7.4-rc3 Released: \"The Usual Noise All Over\"",
+    "summary_en": "The third weekly release candidate of Linux 7.4 is now available for testing...",
+    "pub_date": "Sun, 15 Nov 2026 17:55:19 -0500",
+    "title_zh": "Linux 7.4-rc3 发布：“一如既往的杂音”",
+    "summary_zh": "Linux 7.4-rc3 已发布，这是该内核版本的第三个每周候选版本。Linus Torvalds 表示本周改动量较大但多数补丁很小，驱动（网络和 GPU）是主要改动领域，文件系统因 iomap 调用约定变更和 SMB 客户端修复而出现在 diffstat 中，另有自测和文档更新。正式版预计 12 月底发布。",
+    "fulltext_zh": "Linux 7.4-rc3 发布：“一如既往的杂音”\n2026 年 11 月 15 日 下午 5:55（美国东部时间）。\n\n第三个每周发布的候选版本现已可供测试。在 AI 驱动的开源开发世界里，这又是忙碌的一周，修复 bug 和回归问题。每天仍有大量修复进入内核。\n\nLinus Torvalds 在今天的公告中写道：\n“..又一周，又一个大 -rc。\n看起来相当正常，驱动（网络和 GPU）领跑。改动非常多，但大多数实际补丁都很小。\n文件系统确实出现在 diffstat 中，因为那里有几个较大的补丁，特别是 iomap 的调用约定变更，最终相当琐碎但规模较大，还有一些 SMB 客户端修复。\n我们还有各种自测和一些文档更新。\n..以及一如既往的杂音。”\n\n查看 Linux 7.4 功能概览，了解这个预计 12 月底发布的下一内核版本的所有新功能。\n\nLinux 7.5 将包含新的 hwpoison-panic 工具，用于故意使系统崩溃\nLinux 7.5 将为新 Glanda GPU 上游驱动\n资深 Linux 开发者因 AI 导致的补丁洪流辞去部分职务\nLinux 7.5 的 ChaCha AVX-512 优化在 AMD Zen 5 上提升高达 99%\nLinux 7.4-rc2 发布，包含 FAT32 优化、AMDGPU HDMI 2.2 改进\nLinux 7.5 将提供更多 AMD Ryzen AI NPU AIE4 支持\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\n资深 Linux 开发者因 AI 导致的补丁洪流辞去部分职务\nLinux 7.5 的 ChaCha AVX-512 优化在 AMD Zen 5 上提升高达 99%\nCloudflare 开源 Kitesurf：其面向 AI 代理的网页浏览器\nOpenIndiana 2026.10 发布，更新工具与编译器、新增应用\nOpenAI Codex 帮助发现并修复近 20 年历史的 Radeon Linux 驱动 bug\nNVIDIA CEO 黄仁勋辞职\nLinux 7.4-rc2 发布，包含 FAT32 优化、AMDGPU HDMI 2.2 改进\nRust 1.100 发布，“Never”类型终于稳定\n\n享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "a4ac6ea43dbb39c9c774e158a8328b17": {
+    "id": "a4ac6ea43dbb39c9c774e158a8328b17",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-Hybrid-Capacity-Aware-Sched",
+    "title_en": "AMD Posts Linux Patches For Capacity Aware Scheduling On Hybrid CPUs",
+    "summary_en": "On Saturday a new set of Linux kernel driver patches were posted by AMD for enabling Capacity Aware Scheduling on AMD heterogeneous/hybrid processors...",
+    "pub_date": "Sun, 15 Nov 2026 09:20:01 -0500",
+    "title_zh": "AMD发布Linux补丁，为混合CPU实现容量感知调度",
+    "summary_zh": "AMD发布Linux内核补丁，为异构/混合处理器启用容量感知调度。当前AMD P-State驱动未导出每CPU容量指标，导致调度器将所有核心视为相同，影响性能和能效核心的任务分配。新补丁让amd-pstate发布非对称每CPU容量，并在支持的硬件上默认启用，也可通过启动参数禁用。补丁有望改善Zen 6等混合CPU的任务调度，目标进入Linux v7.5内核周期。",
+    "fulltext_zh": "AMD发布Linux补丁，为混合CPU实现容量感知调度\n2026年11月15日上午09:20 EST。\n周六，AMD发布了一套新的Linux内核驱动补丁，用于在AMD异构/混合处理器上启用容量感知调度。\nAMD P-State CPU频率调节驱动目前不导出每CPU容量指标，因此内核调度器将所有核心视为相同。在当前性能核与能效核存在差异的情况下，这种行为表现不佳，而对于即将推出的低功耗核心类型（据信用于某些Zen 6 Ryzen SKU）更是如此。\n本周末的补丁让AMD P-State发布非对称的每CPU容量，并在支持的硬件上默认启用。或者可以通过新的启动参数关闭AMD容量感知调度。\n“AMD异构处理器结合了多种核心类型（例如性能核和能效核），其最大持续性能和频率不同。在此类平台上，Linux调度器依赖每CPU容量值来跨核心放置和平衡任务。\n目前amd-pstate不导出任何每CPU容量信息。结果，调度器认为每个CPU具有相同的容量，并将性能核和能效核视为可互换。因此，任务的放置和平衡不考虑核心强弱，这损害了混合系统上的吞吐量和能效。”\n有兴趣的人可以查看在AMD混合处理器上实现容量感知调度的补丁。这应有助于在Ryzen性能核与能效核上更好地放置任务，时间允许时进行基准测试会很有趣。\n我们将看看这些补丁是否能及时通过审查并进入即将到来的Linux v7.5内核周期。\nAMD ARG“AMD Root Guest”Linux补丁将于2027年推出\nAMD openSIL随着第六代EPYC“Venice”实现其生产目标\nAMD在实验中利用AI + HRX Loom快速将50个LLM移植到客户端GPU\nAMD AOCL 6.0引入新的RNG库，初步的Zen 6 CPU优化\nLinux 7.5将为AMD Pensando NIC启用温度/电压/功率监控\nAMD AOCC 6.0带来Zen 6优化、新的“aof”Fortran编译器、aoc / aoc++品牌\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动和其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\n长期Linux开发者因AI导致的补丁洪流辞去部分职务\nLinux 7.5的ChaCha AVX-512优化在AMD Zen 5上提升高达99%\nCloudflare开源Kitesurf：其面向AI代理的Web浏览器\nOpenIndiana 2026.10发布，更新工具和编译器，新增应用\nOpenAI Codex帮助发现并修复近20年的Radeon Linux驱动漏洞\nNVIDIA CEO黄仁勋辞职\nLinux 7.4-rc2发布，包含FAT32优化、AMDGPU HDMI 2.2改进\nRust 1.100发布，“Never”类型终于稳定\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "d0538f05ab31aa4475f5b7744d6939a0": {
+    "id": "d0538f05ab31aa4475f5b7744d6939a0",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/IBM-VMs-ARM64-On-s390",
+    "title_en": "IBM Talks Up Their New Ability For Handling ARM64 Guest VMs on s390 Hardware",
+    "summary_en": "One of the biggest surprises this year was IBM collaborating with Arm for \"dual architecture\" hardware.  In addition to the IBM s390 hardware side, this \"dual architecture\" support for running ARM64 instructions on s390 also requires Linux KVM virtualization support with patches we've seen the past number of months and initial code merged for Linux 7.4...",
+    "pub_date": "Sun, 15 Nov 2026 06:42:22 -0500",
+    "title_zh": "IBM 力推在 s390 硬件上处理 ARM64 客户机 VM 的新能力",
+    "summary_zh": "IBM 与 Arm 合作实现“双架构”硬件，使 s390 硬件能够运行 ARM64 指令，这需要 Linux KVM 虚拟化支持，相关补丁已在 Linux 7.4 中初步合并。IBM 工程师 Steffen Eiden 在 KVM Forum 上介绍了这一硬件加速的跨架构 VM 方案，并讨论了未来扩展至更多架构及增强 ARM64 客户机能力的可能性。",
+    "fulltext_zh": "IBM 力推在 s390 硬件上处理 ARM64 客户机 VM 的新能力\n2026 年 11 月 15 日 06:42 AM EST。\n\n今年最大的惊喜之一是 IBM 与 Arm 合作开发“双架构”硬件。除了 IBM s390 硬件方面，这种在 s390 上运行 ARM64 指令的“双架构”支持还需要 Linux KVM 虚拟化支持补丁，过去几个月我们已经看到这些补丁，初始代码已合并到 Linux 7.4 中。\n\nIBM 工程师 Steffen Eiden 在本周于加拿大举行的 KVM Forum 上大力宣传了现在在 s390 上可行的硬件加速跨架构 VM。这是一个有趣的概念，其采用情况将值得关注。\n\n让这一技术实现正常工作绝非易事。除了介绍当前工作外，还讨论了未来可能将功能扩展到更多架构，以及进一步增强客户机 ARM64 能力和其他能力。\n\n对 IBM s390 上的 ARM64 感兴趣的人可以通过下面嵌入的 KVM Forum 2026 演示了解更多。\n\nRed Hat 致力于改进 QEMU VM 的内存分层以节省 RAM\nAMD EPYC Zen 6 PML 支持、s390 上的 ARM64 已合并到 Linux 7.4 KVM\nVirtIO-FS 的同步队列展现出巨大的性能潜力\nCloud Hypervisor 54 发布，带来实时迁移改进\nLinux 7.4 将引入 Steal Governor 以帮助虚拟化工作负载\nLinux 为报告 AMD SEV 状态添加新接口\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n资深 Linux 开发者因 AI 导致的补丁洪流辞去部分职务\nLinux 7.5 的 ChaCha AVX-512 优化在 AMD Zen 5 上带来高达 99% 的提升\nCloudflare 开源 Kitesurf：其面向 AI 代理的 Web 浏览器\nOpenIndiana 2026.10 发布，更新工具和编译器，新增应用\nOpenAI Codex 帮助发现并修复近 20 年历史的 Radeon Linux 驱动 bug\nNVIDIA CEO 黄仁勋辞职\nLinux 7.4-rc2 发布，带来 FAT32 优化、AMDGPU HDMI 2.2 改进\nRust 1.100 发布，“Never”类型终于稳定\n同时享受无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "9ab1304997275b4ad12d3a868b9643bc": {
+    "id": "9ab1304997275b4ad12d3a868b9643bc",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-Root-Guest-ARG-Linux",
+    "title_en": "AMD ARG \"AMD Root Guest\" Linux Patches Coming In 2027",
+    "summary_en": "A new feature of EPYC 9006 \"Venice\" server processors that isn't yet brought up in the public Linux software support is AMD Root Guest (ARG). The initial patches are expected in Q1'2027 for further enhancing the AMD SEV-SNP confidential computing experience...",
+    "pub_date": "Sun, 15 Nov 2026 06:24:06 -0500",
+    "title_zh": "AMD ARG“AMD Root Guest”Linux 补丁将于 2027 年推出",
+    "summary_zh": "AMD 在 KVM Forum 2026 上介绍了 EPYC 9006“Venice”服务器处理器的新特性 AMD Root Guest（ARG），旨在无需修改客户机镜像或操作系统即可改善 SEV-SNP 保护虚拟机的实时迁移体验。ARG 本质上是具有提升权限和信任根的签名 SEV-SNP 虚拟机，每系统仅一个活动 ARG。Linux 支持仍在原型阶段，尚无公开补丁，AMD 预计首批补丁于 2027 年第一季度发布。",
+    "fulltext_zh": "AMD ARG“AMD Root Guest”Linux 补丁将于 2027 年推出\n2026 年 11 月 15 日 06:24 AM EST。\n\nEPYC 9006“Venice”服务器处理器的一项新特性尚未在公开的 Linux 软件支持中实现，即 AMD Root Guest（ARG）。首批补丁预计于 2027 年第一季度发布，以进一步增强 AMD SEV-SNP 机密计算体验。\n\n本周在加拿大温哥华举行的 KVM Forum 2026 上，有一场关于 AMD Root Guest 功能的演讲。在那场演讲之前，我未曾看到 AMD Root Guest 在其他地方被提及，尽管事后搜索显示 AMD 上周也发布了其 AMD Root Guest（ARG）技术白皮书。从时间上看，一切似乎都吻合。\n\nAMD Root Guest 旨在帮助改善受 SEV-SNP 保护的客户机虚拟机的实时迁移体验，而无需对客户机 VM 镜像或客户机操作系统做任何更改。ARG 扩展了 SNP 能力以支持额外的平台服务。\n\nAMD 的 David Kaplan 和 Tom Lendacky 在 KVM Forum 上介绍了 AMD Root Guest 架构。\n\nARG 相当于一个签名的 SEV-SNP VM，具有提升的权限和信任根，每个系统只有一个活动 ARG。\n\nARG 的 Linux 支持仍在进行中，实现仍处于原型阶段，尚无公开补丁。AMD 预计首批 ARG Linux 补丁将于 2027 年第一季度左右发布。之后我们将看到需要多少轮审查才能将这一 AMD Root Guest 支持纳入主线内核，以简化由 EPYC Venice 上 SEV-SNP 支持的 AMD 机密计算客户机 VM 内的实时迁移和其他功能。\n\nKVM Forum 演讲嵌入如下。\n\nAMD 发布面向混合 CPU 的容量感知调度的 Linux 补丁\nAMD openSIL 随第六代 EPYC“Venice”达成其生产目标\nAMD 在实验中利用 AI + HRX Loom 快速将 50 个 LLM 移植到客户端 GPU\nAMD AOCL 6.0 引入新 RNG 库、初步 Zen 6 CPU 优化\nLinux 7.5 将为 AMD Pensando NIC 启用温度/电压/功率监控\nAMD AOCC 6.0 带来 Zen 6 优化、新的“aof”Fortran 编译器、aoc / aoc++ 品牌\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\n资深 Linux 开发者因 AI 引发的补丁洪流辞去部分职务\nLinux 7.5 的 ChaCha AVX-512 优化在 AMD Zen 5 上带来高达 99% 的提升\nCloudflare 开源 Kitesurf：其面向 AI 代理的网页浏览器\nOpenIndiana 2026.10 发布，更新工具与编译器、新增应用\nOpenAI Codex 帮助发现并修复近 20 年历史的 Radeon Linux 驱动缺陷\nNVIDIA CEO 黄仁勋辞职\nLinux 7.4-rc2 发布，包含 FAT32 优化、AMDGPU HDMI 2.2 改进\nRust 1.100 发布，“Never”类型终于稳定\n\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "6e8c6a05169d14b74651517efd027da6": {
+    "id": "6e8c6a05169d14b74651517efd027da6",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/ASUS-Ascent-QN10-Linux",
+    "title_en": "ASUS Ascent QN10 Mini PC Powered By Snapdragon X2 Elite Seeing Linux Support",
+    "summary_en": "In addition to a number of laptops powered by Qualcomm's Snapdragon X2 beginning to see Linux support, there's now a X2 Elite powered mini PC seeing Linux patches too...",
+    "pub_date": "Sun, 15 Nov 2026 06:01:55 -0500",
+    "title_zh": "搭载骁龙X2 Elite的华硕Ascent QN10迷你主机获得Linux支持",
+    "summary_zh": "高通工程师为搭载骁龙X2 Elite SoC的华硕Ascent QN10迷你主机提交了Linux内核补丁，使其能够启动Linux并启用主要功能。该主机配备18核Oryon CPU、Adreno X2-90 GPU和Hexagon NPU，支持最高32GB LPDDR5x内存、双SSD、四路4K输出，起售价1699美元。补丁有望进入Linux 7.5周期。",
+    "fulltext_zh": "除了多款搭载高通处理器的笔记本电脑开始获得Linux支持外，现在一款搭载X2 Elite的迷你主机也迎来了Linux补丁。\n\n如果你对搭载骁龙X2 Elite的迷你主机感兴趣，高通工程师本周末发布了补丁，用于在Linux上启用华硕Ascent QN10。\n\n华硕Ascent QN10搭载骁龙X2 Elite SoC和Adreno X2 GPU。该迷你主机支持最高32GB LPDDR5x-9600内存，可容纳两块SSD，同时驱动最多四台4K显示器，体积不足0.7升。\n\n按2026年定价，华硕Ascent QN10基础型号起售价为1699美元。\n\nAscent QN10现在可以启动Linux，并且能够启用所有关键功能。\n\n“华硕Ascent QN10是一款基于高通骁龙X2 Elite（Glymur）平台的紧凑型台式电脑，配备18核Oryon CPU、Adreno X2-90 GPU和Hexagon NPU。该系统配备16或32GB LPDDR5x内存、两个M.2 NVMe SSD插槽、Wi-Fi 7、蓝牙6.0、2.5Gb以太网、三个USB Type-C端口、四个USB Type-A端口和HDMI输出。\n\nHDMI输出通过PS195 HDMI转换器由eDP输出驱动。四个USB Type-A端口连接到一个GL3590 USB Hub，位于其中一个USB MP端口上。以太网控制器连接在PCIe上。”\n\n很高兴看到高通工程师继续努力在Linux下启用更多骁龙X2产品。希望这些补丁能及时通过审核并排队进入Linux v7.5周期。"
+  },
+  "a59e4cf64ec809fbba57741d4eca11bb": {
+    "id": "a59e4cf64ec809fbba57741d4eca11bb",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/9to5linux-weekly-roundup-november-15th-2026",
+    "title_en": "9to5Linux Weekly Roundup: November 15th, 2026",
+    "summary_en": "9to5Linux Weekly Roundup for November 15th, 2026, brings news about Mesa 26.3, Blender 5.3, Firefox 160, Thunderbird 160, KDE Plasma 6.8.3, Slax Linux 2026.11, Red Hat Enterprise Linux 10.3, Ardour 9.10, LibreOffice 26.8.3, Libreboot 26.11, KDE Frameworks 6.32, Shelly 3.3, Ubuntu 27.04 daily builds, exFAT Progs 1.4.4, and more.\nThe post 9to5Linux Weekly Roundup: November 15th, 2026 appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for reade",
+    "pub_date": "Mon, 16 Nov 2026 03:55:46 +0000",
+    "title_zh": "9to5Linux 每周综述：2026年11月15日",
+    "summary_zh": "本期9to5Linux周报汇总了2026年11月15日当周的重要Linux新闻，涵盖Mesa 26.3、Blender 5.3、Firefox 160、Thunderbird 160、KDE Plasma 6.8.3、Slax Linux 2026.11、Red Hat Enterprise Linux 10.3、Ardour 9.10、LibreOffice 26.8.3、Libreboot 26.11、KDE Frameworks 6.32、Shelly 3.3、Ubuntu 27.04每日构建、exFAT Progs 1.4.4等软件更新与发布动态。",
+    "fulltext_zh": "9to5Linux 2026年11月15日每周综述，带来关于 Mesa 26.3、Blender 5.3、Firefox 160、Thunderbird 160、KDE Plasma 6.8.3、Slax Linux 2026.11、Red Hat Enterprise Linux 10.3、Ardour 9.10、LibreOffice 26.8.3、Libreboot 26.11、KDE Frameworks 6.32、Shelly 3.3、Ubuntu 27.04 每日构建、exFAT Progs 1.4.4 等更多内容的消息。\n\n文章《9to5Linux 每周综述：2026年11月15日》首次出现在 9to5Linux 上——未经许可不得转载本文。本 RSS 源仅供读者使用。"
   }
 }

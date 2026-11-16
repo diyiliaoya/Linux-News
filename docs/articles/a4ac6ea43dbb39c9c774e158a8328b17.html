@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMD发布Linux补丁，为混合CPU实现容量感知调度 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月16日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>AMD发布Linux补丁，为混合CPU实现容量感知调度</h1>
+
+  <div class="article-summary">AMD发布Linux内核补丁，为异构/混合处理器启用容量感知调度。当前AMD P-State驱动未导出每CPU容量指标，导致调度器将所有核心视为相同，影响性能和能效核心的任务分配。新补丁让amd-pstate发布非对称每CPU容量，并在支持的硬件上默认启用，也可通过启动参数禁用。补丁有望改善Zen 6等混合CPU的任务调度，目标进入Linux v7.5内核周期。</div>
+
+  <div class="article-body"><p>AMD发布Linux补丁，为混合CPU实现容量感知调度</p><p>2026年11月15日上午09:20 EST。</p><p>周六，AMD发布了一套新的Linux内核驱动补丁，用于在AMD异构/混合处理器上启用容量感知调度。</p><p>AMD P-State CPU频率调节驱动目前不导出每CPU容量指标，因此内核调度器将所有核心视为相同。在当前性能核与能效核存在差异的情况下，这种行为表现不佳，而对于即将推出的低功耗核心类型（据信用于某些Zen 6 Ryzen SKU）更是如此。</p><p>本周末的补丁让AMD P-State发布非对称的每CPU容量，并在支持的硬件上默认启用。或者可以通过新的启动参数关闭AMD容量感知调度。</p><p>“AMD异构处理器结合了多种核心类型（例如性能核和能效核），其最大持续性能和频率不同。在此类平台上，Linux调度器依赖每CPU容量值来跨核心放置和平衡任务。</p><p>目前amd-pstate不导出任何每CPU容量信息。结果，调度器认为每个CPU具有相同的容量，并将性能核和能效核视为可互换。因此，任务的放置和平衡不考虑核心强弱，这损害了混合系统上的吞吐量和能效。”</p><p>有兴趣的人可以查看在AMD混合处理器上实现容量感知调度的补丁。这应有助于在Ryzen性能核与能效核上更好地放置任务，时间允许时进行基准测试会很有趣。</p><p>我们将看看这些补丁是否能及时通过审查并进入即将到来的Linux v7.5内核周期。</p><p>AMD ARG“AMD Root Guest”Linux补丁将于2027年推出</p><p>AMD openSIL随着第六代EPYC“Venice”实现其生产目标</p><p>AMD在实验中利用AI + HRX Loom快速将50个LLM移植到客户端GPU</p><p>AMD AOCL 6.0引入新的RNG库，初步的Zen 6 CPU优化</p><p>Linux 7.5将为AMD Pensando NIC启用温度/电压/功率监控</p><p>AMD AOCC 6.0带来Zen 6优化、新的“aof”Fortran编译器、aoc / aoc++品牌</p><p>Michael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动和其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>长期Linux开发者因AI导致的补丁洪流辞去部分职务</p><p>Linux 7.5的ChaCha AVX-512优化在AMD Zen 5上提升高达99%</p><p>Cloudflare开源Kitesurf：其面向AI代理的Web浏览器</p><p>OpenIndiana 2026.10发布，更新工具和编译器，新增应用</p><p>OpenAI Codex帮助发现并修复近20年的Radeon Linux驱动漏洞</p><p>NVIDIA CEO黄仁勋辞职</p><p>Linux 7.4-rc2发布，包含FAT32优化、AMDGPU HDMI 2.2改进</p><p>Rust 1.100发布，“Never”类型终于稳定</p><p>同时享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/AMD-Hybrid-Capacity-Aware-Sched" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

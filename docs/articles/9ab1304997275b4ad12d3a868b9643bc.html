@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMD ARG“AMD Root Guest”Linux 补丁将于 2027 年推出 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月16日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>AMD ARG“AMD Root Guest”Linux 补丁将于 2027 年推出</h1>
+
+  <div class="article-summary">AMD 在 KVM Forum 2026 上介绍了 EPYC 9006“Venice”服务器处理器的新特性 AMD Root Guest（ARG），旨在无需修改客户机镜像或操作系统即可改善 SEV-SNP 保护虚拟机的实时迁移体验。ARG 本质上是具有提升权限和信任根的签名 SEV-SNP 虚拟机，每系统仅一个活动 ARG。Linux 支持仍在原型阶段，尚无公开补丁，AMD 预计首批补丁于 2027 年第一季度发布。</div>
+
+  <div class="article-body"><p>AMD ARG“AMD Root Guest”Linux 补丁将于 2027 年推出</p><p>2026 年 11 月 15 日 06:24 AM EST。</p><p>EPYC 9006“Venice”服务器处理器的一项新特性尚未在公开的 Linux 软件支持中实现，即 AMD Root Guest（ARG）。首批补丁预计于 2027 年第一季度发布，以进一步增强 AMD SEV-SNP 机密计算体验。</p><p>本周在加拿大温哥华举行的 KVM Forum 2026 上，有一场关于 AMD Root Guest 功能的演讲。在那场演讲之前，我未曾看到 AMD Root Guest 在其他地方被提及，尽管事后搜索显示 AMD 上周也发布了其 AMD Root Guest（ARG）技术白皮书。从时间上看，一切似乎都吻合。</p><p>AMD Root Guest 旨在帮助改善受 SEV-SNP 保护的客户机虚拟机的实时迁移体验，而无需对客户机 VM 镜像或客户机操作系统做任何更改。ARG 扩展了 SNP 能力以支持额外的平台服务。</p><p>AMD 的 David Kaplan 和 Tom Lendacky 在 KVM Forum 上介绍了 AMD Root Guest 架构。</p><p>ARG 相当于一个签名的 SEV-SNP VM，具有提升的权限和信任根，每个系统只有一个活动 ARG。</p><p>ARG 的 Linux 支持仍在进行中，实现仍处于原型阶段，尚无公开补丁。AMD 预计首批 ARG Linux 补丁将于 2027 年第一季度左右发布。之后我们将看到需要多少轮审查才能将这一 AMD Root Guest 支持纳入主线内核，以简化由 EPYC Venice 上 SEV-SNP 支持的 AMD 机密计算客户机 VM 内的实时迁移和其他功能。</p><p>KVM Forum 演讲嵌入如下。</p><p>AMD 发布面向混合 CPU 的容量感知调度的 Linux 补丁</p><p>AMD openSIL 随第六代 EPYC“Venice”达成其生产目标</p><p>AMD 在实验中利用 AI + HRX Loom 快速将 50 个 LLM 移植到客户端 GPU</p><p>AMD AOCL 6.0 引入新 RNG 库、初步 Zen 6 CPU 优化</p><p>Linux 7.5 将为 AMD Pensando NIC 启用温度/电压/功率监控</p><p>AMD AOCC 6.0 带来 Zen 6 优化、新的“aof”Fortran 编译器、aoc / aoc++ 品牌</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>资深 Linux 开发者因 AI 引发的补丁洪流辞去部分职务</p><p>Linux 7.5 的 ChaCha AVX-512 优化在 AMD Zen 5 上带来高达 99% 的提升</p><p>Cloudflare 开源 Kitesurf：其面向 AI 代理的网页浏览器</p><p>OpenIndiana 2026.10 发布，更新工具与编译器、新增应用</p><p>OpenAI Codex 帮助发现并修复近 20 年历史的 Radeon Linux 驱动缺陷</p><p>NVIDIA CEO 黄仁勋辞职</p><p>Linux 7.4-rc2 发布，包含 FAT32 优化、AMDGPU HDMI 2.2 改进</p><p>Rust 1.100 发布，“Never”类型终于稳定</p><p>同时享受无广告浏览、</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/AMD-Root-Guest-ARG-Linux" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
