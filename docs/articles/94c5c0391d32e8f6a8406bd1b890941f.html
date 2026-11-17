@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discord的Linux应用今年确实进步很大 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月17日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">桌面环境</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Discord的Linux应用今年确实进步很大</h1>
+
+  <div class="article-summary">Discord的Linux应用在2024年取得了显著改进，包括更智能的更新机制、Wayland下更好的屏幕共享和可用的按键通话功能。安装包体积大幅减小，从约100MB降至4.6MB，并采用增量更新节省带宽。Wayland下的屏幕共享通过xdg-desktop-portal得到改善，按键通话借助GlobalShortcuts门户实现。Discord还在与GNOME/KDE合作开发按应用分享音频的功能，这将惠及整个Linux桌面生态。</div>
+
+  <div class="article-body"><p>Discord的Linux应用今年确实进步很大 - OMG! Ubuntu</p><p>Discord最近发布了一份关于其Linux应用今年所做改进的汇总，包括更智能的更新、Wayland下更好的屏幕共享以及可用的按键通话功能。</p><p>Discord &lt;3 Linux：升级之年</p><p>博客文章还透露，按应用分享音频的功能终于要登陆基于Wayland的桌面了，不过目前还不准备进行测试。</p><p>由于我个人并不经常使用它，这份汇总对我来说是一篇有趣的读物。</p><p>值得注意的是，Discord的Linux安装程序体积小了很多。我下载的新Deb包约为4.6 MB，而我找到链接的一个（非常）旧版本大约有100 MB——差别巨大！</p><p>安装程序的安装方式也有所不同，它会启动一个引导工具，将应用解压到你的主目录中。后续版本使用增量更新来减少获取的数据量，节省时间和带宽——而且不需要[原文此处不完整]。</p><p>Discord的Wayland支持得到改进</p><p>官方公告视频</p><p>在Wayland下，Discord的屏幕共享长期以来一直不稳定，但得益于与[开源咨询公司]的合作，现在状态好了很多。窗口共享权限通过[门户]请求和授予。</p><p>Discord的按键通话功能允许你按住一个键来传输语音，即使另一个应用（如游戏）处于焦点状态，现在在Wayland下也能正常工作。该功能通过GlobalShortcuts门户实现。</p><p>Wayland现在是大多数主流Linux发行版的默认选项，因此Discord表示这是“我们为之构建的未来”。视频编码现在支持更多GPU，其[功能]现在可以在Valve基于Linux的Steam Deck掌机上使用。</p><p>Discord Linux的按应用音频分享</p><p>目前，在Wayland下运行时，你只能将所有系统音频分享给Discord，或者完全不分享。如果你在直播游戏的同时听音乐，你必须同时分享两者——并不理想。</p><p>Discord表示正在与[合作方]合作，在[平台]中添加按应用音频分享功能，以便你可以选择哪个应用（或游戏）的声音通过。它甚至表示正在自行编写相关的GNOME和KDE部分，“以便更快地交付给用户”。</p><p>什么时候？嗯，不会特别快，因为相关部分需要先进入上游，然后被采纳并添加到Linux发行版中。Discord称这项工作是一项“长期投资”，旨在打造出色的Linux屏幕共享体验。</p><p>也不仅仅是为了他们的应用。这些改变将惠及任何希望在Wayland下安全访问、录制和分享Linux桌面屏幕及音频的软件。</p><p>在Ubuntu上安装Discord</p><p>仍然是Ubuntu上安装Discord（并保持更新）最简单的方式。在你喜欢的终端模拟器中找到它，运行：</p><p>sudo snap install discord</p><p>如果你更喜欢传统软件包，请从[网站]下载新的（更小）Debian包。如果你遇到任何问题，我有一份在Ubuntu上安装Discord的指南，详细介绍了这些步骤。</p><p>Discord在Ubuntu上对你来说变得更好了吗？按键通话在Wayland下能用吗？请在评论中告诉我。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/discord-linux-app-wayland-updates" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

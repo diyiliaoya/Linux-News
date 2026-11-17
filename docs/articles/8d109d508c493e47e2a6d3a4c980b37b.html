@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMD EPYC Venice 平台 MRDIMM 8800 MT/s 与 12800 MT/s 内存性能对比 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月17日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>AMD EPYC Venice 平台 MRDIMM 8800 MT/s 与 12800 MT/s 内存性能对比</h1>
+
+  <div class="article-summary">本文测试了 AMD EPYC 9686F 双路服务器在 MRDIMM 内存运行于 8800 MT/s 与 12800 MT/s 时的性能差异。由于 MRDIMM-12800 尚未上市且价格高昂，许多用户关心降速使用时的性能损失。测试通过 BIOS 将内存速度限制为 8800 MT/s，并与旗舰 12800 MT/s 配置对比，同时纳入其他 EPYC 和 Xeon 处理器作为参照。</div>
+
+  <div class="article-body"><p>MRDIMM 8800 MT/s 与 12800 MT/s 内存性能对比：AMD EPYC Venice 评测 - Phoronix</p><p>MRDIMM 8800 MT/s 与 12800 MT/s 内存性能对比：AMD EPYC Venice</p><p>发布于 2026 年 11 月 16 日美国东部时间上午 10:10。</p><p>在 SP7 平台上市及处理器评测期间，最常见的问题/评论之一是新款 MRDIMM-12800 内存对这些 Zen 6 服务器处理器的影响，以及与上一代和 Intel/NVIDIA 服务器竞品的对比。鉴于大家对 MRDIMM-12800 影响的好奇，以下是 EPYC 9686F 双路系统在 8800 MT/s 内存速度下重新测试的基准数据。</p><p>AMD EPYC 9006 SP7 处理器最高支持 DDR5 RDIMM 8000 MT/s 或 MRDIMM 12800 MT/s。相比 EPYC 9005 Turin 处理器支持的 DDR5-6400/6000 内存，或 Xeon 6 Granite Rapids 竞品最初仅限第一代 MRDIMM-8800 MT/s 模块，这是一个巨大的飞跃。</p><p>AMD EPYC 9006 SP7 评测服务器为每个插槽配备了 16 条 64GB MRDIMM-12800 内存模块（总共 32 条 SK 海力士 HMCG98CHJMAA0EN MRDIMM），以代表 EPYC 9006 SP7 平台的最佳内存配置。然而截至撰写本文时，MRDIMM-12800 内存尚未在任何互联网零售商处销售。即便是 MRDIMM-8800 内存，网上也有报价将这些初代多路复用秩双列直插内存模块每条 64GB 定价在 3000~4000 美元。MRDIMM-12800 上市后显然会更贵。因此，许多希望部署 EPYC Venice 的用户会非常关心：在内存价格降温、供应改善之前，选择 MRDIMM-8800 或更慢的 DDR5 RDIMM 内存会损失多少性能。</p><p>在本文中，我将 MRDIMM-12800 模块降至 8800 MT/s 后重新运行了 EPYC 9686F 双路基准测试。遗憾的是，我没有 32 条 MRDIMM-8800 内存，也没有 32 条相同的 DDR5 RDIMM 模块。因此目前无法在 EPYC Venice 上比较不同的内存模块，只能通过 BIOS 调整内存目标速度。</p><p>该 EPYC SP7 评测平台使用的 AMD Nigeria BIOS 确实列出了低于 8800 MT/s 的内存速度。然而，这样做之后，启动进入操作系统时内存速度最终会恢复为 MRDIMM-12800。因此我无法在比如 6400 MT/s 下进行任何对比。（推测是由于第一代以 8800 MT/s 为基线支持速度，与 BIOS 中宣传的更低数值相矛盾。）</p><p>希望未来我能找到更多内存模块进行对比，目前先看看 EPYC 9006 SP7 在 8800 MT/s 与 12800 MT/s 下的内存性能，供那些想知道与旗舰 MRDIMM-12800 配置相比会损失/获得多少性能的用户参考。</p><p>上周发布日评测中测试的其他 AMD EPYC 和 Intel Xeon 6980P 处理器数据在本文中保留，以帮助展示 EPYC 9686F 双路在 8800 MT/s 下的相对差异。再次感谢 AMD 为 Phoronix 上的 EPYC 9006 基准测试提供评测硬件。</p><p>AMD EPYC 9005 系列内存扩展性能：4 至 24 条 DDR5 RDIMM</p><p>Intel Core Ultra 7 270K Plus 单通道与双通道内存性能对比</p><p>Intel Xeon 6 Granite Rapids 内存扩展性能：6 至 12 条 MRDIMM</p><p>DDR5-4800 与 DDR5-6000 性能对比：AMD Ryzen 7 9850X3D 在 300+ 项基准测试中</p><p>Linux 6.18 LTS 上的透明大页性能：Madvise 与 Always</p><p>重新审视 Intel Xeon 6 Granite Rapids 的 SNC3 与 HEX 模式性能</p><p>享受无广告浏览、</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/review/mrdimm-8800-12800-amd-epyc" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

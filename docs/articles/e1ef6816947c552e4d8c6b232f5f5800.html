@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>微软宕机事件揭示单一供应商垄断一切的成本 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月17日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>微软宕机事件揭示单一供应商垄断一切的成本</h1>
+
+  <div class="article-summary">微软近期发生全球性邮件服务中断，影响74个国家和地区，持续超过一天。开源竞争对手借此指出，问题核心在于过度集中：当全球数百万用户依赖同一家公司的基础设施时，单一故障即可导致公共生活停摆。他们呼吁政府和企业分散关键工作负载，采用开源软件以保障数字主权和业务连续性。</div>
+
+  <div class="article-body"><p>微软宕机事件揭示单一供应商垄断一切的成本</p><p>微软全球邮件宕机后，开源竞争对手表示，真正的问题是把所有鸡蛋放在一个篮子里。</p><p>你可能已经知道最近微软的宕机事件。上周，全球很大一部分办公室员工超过一天无法可靠地发送或接收电子邮件。</p><p>故障始于11月12日下午，当时Outlook用户发现无法访问邮箱。大约一小时内，Downdetector就记录到来自74个国家和地区的报告。依赖Exchange Online的Teams和Copilot功能也中断了。新加坡和日本的政府系统受到影响，菲律宾最高法院的通信以及澳大利亚联邦警察和国家间谍机构也未能幸免。</p><p>微软表示此次宕机并非网络攻击。在初步解释中，它指出问题源于早先的网络容量升级，在最近一次网络变更后暴露出来。该公司于11月14日凌晨宣布服务完全恢复，并承诺提供完整的事后报告。</p><p>此次中断是今年Exchange Online一系列故障中的最新一起。8月31日，一个错误的身份验证配置波及Teams、SharePoint、OneDrive和Defender约12小时。有分析称，11月宕机造成的生产力损失可能接近70亿美元。</p><p>对于销售微软产品开源替代方案的公司来说，这次事件是推销他们多年来一直主张的观点的机会。It's FOSS询问了几家这样的公司，政府和企业在恢复过程中应该考虑什么。他们的回答大体上不是说他们的软件永远不会失败，而是说任何单一公司都不应能够同时让整个经济的电子邮件陷入瘫痪。</p><p>“任何提供商都可能出错，”德国开源身份管理软件公司Open-Xchange的首席执行官Peter Ganten说。“更重要的问题是集中度。”</p><p>“当全球数千个组织中的数亿人依赖同一基础设施、运行相同软件并由同一家公司管理时，错误位置的一个单一故障就可能让公共生活陷入停滞，”Ganten说。他指出，这次故障似乎是技术性的，但“外部攻击也可能造成同样严重的后果”。他还说，同样的依赖关系使整个经济体面临突然涨价或出于政治动机的服务限制。</p><p>他描述的规模是真实的。微软今年1月报告称，Microsoft 365拥有超过4.5亿个付费商业席位。Nextcloud是一家提供可自托管文件共享和协作套件的公司，在宕机仍在进行时语气较为温和。“IT行业难免犯错，”该公司联合创始人Jos Poortvliet在一份声明中说。“这对各种规模的公司都适用，包括我们。我们与今天所有的管理员感同身受。”</p><p>但他也指出了集中度问题。“尤其是在关键基础设施中，垄断正在增加发生事件时全球企业停摆的风险，”Poortvliet说。“当一切都依赖单一供应商时，企业无法快速切换提供商来恢复运行，也无法拥有第二套备份方案，或在遭受攻击时拔掉插头并保持气隙运行。”</p><p>Collabora Productivity的首席执行官Michael Meeks表示，此次宕机应该改变人们对主权的看法。该公司开发开源Collabora Office套件。“最近的宕机提醒我们，数字主权不仅仅关乎数据存储在哪里，”他说。“它还关乎对组织所依赖的服务和基础设施拥有选择权和控制权。”</p><p>他建议将关键工作负载分散到独立管理的基础设施上，并使用组织可以自行掌控的开源软件。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/microsofts-outage-reaction/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

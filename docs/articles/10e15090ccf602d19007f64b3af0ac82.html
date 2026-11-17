@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manjaro 开发者刚刚从拥有该发行版的公司手中夺回了控制权 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月17日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Manjaro 开发者刚刚从拥有该发行版的公司手中夺回了控制权</h1>
+
+  <div class="article-summary">Manjaro 团队在德国注册了非营利组织 Manjaro e.V.，有七名创始成员，独立于商业公司 Manjaro GmbH &amp; Co. KG。此举源于今年三月部分成员发布的宣言，要求项目与公司分离。目前公司资产尚未转移，e.V. 需先完善章程、招募成员并开设银行账户，之后才与公司谈判。捐赠去向暂不明确，Orange Pi Neo 等合作项目归属也待解答。</div>
+
+  <div class="article-body"><p>Manjaro Linux 现在有了非营利组织</p><p>Manjaro 开发者刚刚从拥有该发行版的公司手中夺回了控制权</p><p>Manjaro Linux 正在分裂。七名创始成员仍需最终确定章程并邀请更多人加入，之后才会开始与公司谈判。</p><p>Manjaro 团队已在德国注册了自己的非营利组织。该组织名为 Manjaro e.V.，有七名创始成员，独立于以商业为导向的 Manjaro GmbH &amp; Co. KG。</p><p>你可能还记得今年早些时候，三月份，一群团队成员发布了一份宣言，呼吁将项目与公司分离，随后不久便发生了罢工。</p><p>虽然这一消息是在 Manjaro Linux 论坛而非 Manjaro 网站上宣布的，但注册信息已经可以在德国注册门户网站上看到，隶属于柏林法院。</p><p>Eingetragener Verein（e.V.）是德国法律下的注册协会。它被登记在由地方法院保管的登记册中，其宗旨不能是经营商业业务。注册赋予它独立的法律身份，与其成员分离。</p><p>这种身份对开发者很重要，因为它让他们能够以团体名义持有资产。宣言要求成员之间平等所有权，并对重大决策进行公开投票，而不是一切以一个人为中心。现在这意味着有一个机构可以在资产移交时拥有它们。</p><p>Manjaro GmbH &amp; Co. KG 是另一种类型的机构。GmbH &amp; Co. KG 是一种有限合伙制，其中 GmbH 承担个人责任，由 GmbH 的董事总经理负责业务运营。</p><p>显而易见，Manjaro 现在背后有两个独立的机构，看看这个项目如何走到这一步很有意思。</p><p>Manjaro 自 2019 年以来一直是一家德国公司。早在 2024 年 4 月，该公司宣布了领导层变动，当时 Bernhard Landauer 离开公司专注于其他工作，一位新的 CTO 加入接替他的位置。</p><p>随后，三月份出现了 Manjaro 2.0 宣言，签署者表示领导层的优先事项与开发者和社区的期望不一致。</p><p>项目负责人 Philip Müller 回复说，他个人不反对成立协会，但不会帮助建立，任何资产转移都必须与公司密切讨论。</p><p>此后，团队在 Müller 未参与的情况下成功推出了最新的 Manjaro 更新。</p><p>宣言建议移交 Manjaro 域名、论坛和社区捐款等资产。据团队称，目前尚未发生公司资产转移。</p><p>在此之前，e.V. 还有一些基础工作要做，比如整理章程、引入更多成员并开设自己的银行账户。与公司的谈判在此之后进行。</p><p>对于普通用户，我不认为他们会受到重大影响。这感觉像是一次接管，但到目前为止是温和的。对于设置了定期付款的捐赠者来说，情况有点模糊。</p><p>你看，捐款仍然进入公司控制的账户，可能也包括 Müller 的账户，而 e.V. 尚未决定是开设新账户还是接管现有账户。</p><p>基本上，目前还没有新的接收方可以切换，团队也没有说明何时决定。我会关注第二份确认资产已转移的公告，因为那时分裂才不仅仅是登记条目。</p><p>然后是 Orange Pi Neo，一款由 Orange Pi 制造、搭载 Manjaro 的手持设备，由于内存和 SSD 价格飙升，于三月份被搁置。公告没有说明谁处理像它这样的硬件合作，所以这是一个悬而未决的问题。</p><p>你对 Manjaro Linux 的新方向感到兴奋吗？这能将它带回 CachyOS 和 Omarchy 的水平吗？</p><p>喜欢这个更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>跳过 Google 结果中的 AI 垃圾和 SEO 垃圾</p><p>告诉 Google 你更喜欢 It's FOSS，它就会显示我们的 Linux 新闻</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/manjaro-nonprofit-registered/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

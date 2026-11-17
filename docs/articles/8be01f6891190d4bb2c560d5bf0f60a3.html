@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年Linux用户最佳黑色星期五优惠 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月17日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>2026年Linux用户最佳黑色星期五优惠</h1>
+
+  <div class="article-summary">本文汇总了2026年黑色星期五面向Linux用户和开源爱好者的优惠，涵盖云存储、VPN、私密邮箱、Linux电脑、课程及家庭实验室硬件。作者建议购买前明确需求，核对全款预付金额与续费价格，阅读退款条款，并注意硬件运费和进口税。部分链接为联盟链接，购买不影响价格或退款权利。</div>
+
+  <div class="article-body"><p>2026年Linux用户最佳黑色星期五优惠</p><p>2026年黑色星期五的优惠涵盖云存储、VPN、私密邮箱、Linux电脑、课程和家庭实验室硬件。是时候挥霍一把并省钱了。</p><p>感恩节来得比《飞机、火车和汽车》里的旅程还快。因此，这是我为Linux用户和开源爱好者整理的优惠清单。</p><p>如果你一直在等待购买云存储、参加课程或搭建家庭服务器，可以看看这些优惠，看看哪里能既花钱又省钱。</p><p>价格和可用性可能因国家而异，折扣并不自动意味着值得购买。所以请根据你的需求和愿望来决定。</p><p>我遇到更多优惠时会添加到本页面。如果你知道其他对关注隐私、服务器、家庭实验室等的Linux用户感兴趣的优惠，请告诉我，我会添加到这里。</p><p>购买前的建议</p><p>我建议从你真正需要的东西开始。检查全额预付款，而不仅仅是月均费用，并在订阅前比较续费价格。宣传为每月多少的两年计划通常是提前支付的承诺。</p><p>付款前阅读退款条款。下面有几项折扣有除外条款，免费试用也不是退款保证。对于硬件，我还会检查运费、进口关税、退货运费，以及价格是否包含你需要的存储驱动器。</p><p>终身计划可以减少经常性账单，但它们仍然取决于提供商及其条款。保留重要文件的另一份副本，并确保如果你决定离开时可以导出数据。</p><p>我已尽量包含定价、退款和其他重要方面的信息。不过，购买前请自行核实。</p><p>这里有些链接是联盟链接。如果你通过它们购买，It's FOSS可能会在不增加你额外费用的情况下赚取佣金。这不会改变价格或你的退款权利。请阅读我们的</p><p>如果你宁愿一次性付款而不是增加另一个订阅，pCloud值得一看。你可以将文件存储在其位于瑞士的云中，并在你的设备上访问它们。</p><p>我会注意包含的内容：三合一捆绑包结合了存储、密码管理器和客户端加密，而普通存储计划不包含所有这些额外功能。</p><p>终身计划最高可享60%折扣。</p><p>14天书面请求窗口；促销购买可能被排除在外。</p><p>如果你想购买加密存储而不购买整个Proton捆绑包，我会看看Drive Plus。你可以获得文件和照片的空间，其加密设计旨在保持内容私密。</p><p>你也可以使用Proton的文档工具。付款前我会比较独立计划与Unlimited，特别是如果你已经需要或使用Proton Mail或其VPN。</p><p>1年60%折扣：预付23.88美元（每月1.99美元），然后每年47.88美元。</p><p>首次直接购买30天，每位用户一次。</p><p>当前公开着陆页显示83%折扣。请对照以下优惠检查合作伙伴结账页面。</p><p>提供加密云存储，有订阅和终身选项。如果你将其与pCloud比较，我会超越大幅折扣百分比，检查实际存储配额和包含的工具。你可以用它存储文件和备份，但我会保留任何重要内容的单独副本，而不是让一个提供商成为你唯一的备份。</p><p>选定计划87%折扣</p><p>首次通过信用卡或PayPal购买30天；不提供加密货币或续费退款。</p><p>如果你想在不花太多钱的情况下获得比VPN更多的功能，我会推荐Surfshark One。其两年黑色星期五计划每月2.49美元起，将VPN与防病毒、数据泄露警报和用于掩盖个人详细信息的Alternative ID相结合。</p><p>你还可获得无限的VPN设备连接。作为Linux用户，有一个注意事项：防病毒功能适用于Windows、macOS和Android，不适用于Linux。</p><p>Surfshark One两年计划每月2.49美元起，另加3个月。预付账单。</p><p>首次购买30天，每项服务一次；不适用于续费</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/black-friday-linux-2026/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

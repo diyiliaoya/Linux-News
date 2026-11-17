@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snap Store 在一个周末新增数百款应用 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月17日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">软件应用</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Snap Store 在一个周末新增数百款应用</h1>
+
+  <div class="article-summary">Snap Store 在11月13日后突然出现数百款新应用上传，来自4个疑似同一人运营的发布者账户，其中一账户24小时内发布114款。这些应用多为MIT许可的工具和游戏，但存在名称抢注、描述中提及知名软件以吸引搜索等问题。文章探讨了平台审核成本与AI生成内容泛滥的隐忧。</div>
+
+  <div class="article-body"><p>Snap Store 在过去几天里应用上传量激增——仅一个账户就在24小时内发布了超过114款新应用。</p><p>这是怎么回事？Snap Store 终于迎来第二春了吗？并非如此。</p><p>根据对 Alan Pope 的“新应用”图表数据的粗略估算，通常情况下，Snap Store 每天新增（非更新）应用数量在15到30款之间。但自11月13日以来，这一数字已攀升至数百款，仅来自4个发布者账户——而且在我撰写本文时，数字仍在攀升（另请注意：下方的 Snap Store 链接最多只显示100条结果）。</p><p>——227款 snap 包（6月上传了6款）</p><p>这4个账户似乎由同一个人运营。我无法证明它们是同一个人，但我有眼睛：4个发布者账户下的4款应用。</p><p>这4个账户下的所有商品都使用相似的设计模板。大多数包含相同的越南语-英语切换开关，并带有捐赠请求横幅（后者链接到一位名为……的开发者的捐赠页面）。</p><p>这些应用或游戏似乎没有任何恶意。它们涵盖从 PDF 编辑器和网络数据包检查工具，到《……》等街机游戏的重制版。我安装了几款进行查看，它们确实做到了声称的功能。</p><p>但这些有用吗？</p><p>可疑的 snap 名称抢注</p><p>许多应用似乎是同一款东西的细微变体。我数到多个标题中含“PDF”的上传，表面上看起来是同一个工具，尽管标题和描述围绕不同任务进行了包装。</p><p>更奇怪的是，一些列表使用了知名软件的名称。</p><p>Video Frame Upscaler Studio</p><p>Raster Vector Motion Studio</p><p>其他应用在描述中提及知名软件的名称，要么自称是其“替代品”，例如 Bandicam、Rufus、CPUZ，要么使用免责声明（尽管没有迹象表明人们会这么假设）称其“不隶属于”该软件。</p><p>大概是为了让在……中输入“Topaz”或“Creative Cloud”的人能找到他们的应用。</p><p>自由软件也有成本</p><p>现在，一个过度摄入咖啡因的开发者，要么两头烧蜡烛，要么消耗大量 LLM token，来批量产出数百款应用，这本身并不是坏事。</p><p>我查看的实用工具和游戏均采用 MIT 许可证，即开源（尽管在撰写本文时，没有一个链接到源代码、代码仓库或开发者网站）。</p><p>我强调这一点是因为：a) 这有点奇怪；b) 这与我之前报道过的事情如出一辙。</p><p>我之前报道过……的应用提交变更，以及代码托管平台……。这三家都采取了措施，保护其基础设施和志愿者免遭无目的的 AI 垃圾内容淹没——三家都因此受到抨击。</p><p>软件分发不是免费的——即使是对那些由提示词随意生成的东西也是如此。</p><p>平台有正当理由对提交过程进行把关。带宽、存储和人工审核都不是免费的，没有开发者有权在货架上占有一席之地——无论它是由提示词随意生成，还是由受人尊敬的代码工匠精心打造。</p><p>Canonical 能够应对，因为它是一家商业 Linux 供应商，拥有带薪的员工工程师、安全团队和分布式基础设施。其他中心和项目则没有，这正是关键所在。</p><p>应用上传量的突然激增在内部演示幻灯片上会很好看，但各方都涉及成本，尤其是用户，他们现在可能不得不在30多款差异极小的软件中艰难寻找值得安装的东西。</p><p>这些数字来自 SnapUpdates 的发布者页面，而非 Snapcraft 网站。后者在列表页面上每个发布者最多显示100款 snap 包，且没有分页可查看更多。发布者页面上的数字与“新应用”图表不符（据我所知），因此我在文中进行了取整。</p><p>npm、PyPI、GitHub、Docker Hub 和 Google Play 也在实施提交门槛，以防止自动化洪水……</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/snap-store-new-app-increase-ai" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
