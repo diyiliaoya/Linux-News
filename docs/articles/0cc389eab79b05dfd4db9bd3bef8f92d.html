@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>备受期待的 Linux 多功能工具 Flipper One 现已开放预购 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月18日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>备受期待的 Linux 多功能工具 Flipper One 现已开放预购</h1>
+
+  <div class="article-summary">Flipper Devices 正式发布 Linux 多功能工具 Flipper One，搭载 RK3576 芯片、8GB 内存、Wi-Fi 6E 和 M.2 扩展，Kickstarter 售价 399 美元且无利润销售。该设备定位为口袋大小的 Linux 计算机和网络工具，采用双处理器架构，运行基于 Debian 的 Flipper OS，支持多种配置文件切换，并与 Collabora 合作推动 RK3576 进入主线 Linux 内核。</div>
+
+  <div class="article-body"><p>备受期待的 Linux 多功能工具 Flipper One 现已开放预购</p><p>这款开源 Linux 多功能工具搭载 RK3576 芯片、8 GB 内存、Wi-Fi 6E 和 M.2 扩展，Flipper Devices 表示将以零利润销售。</p><p>我拥有一台 Flipper Zero。对于任何有黑客思维的人来说，这都是一个有趣的小设备，那种你用来碰触 NFC 标签、红外遥控器和 Sub-GHz 信号，只为看看会发生什么的小工具。</p><p>所以当 Flipper Devices 首次展示 Flipper One 时，我以为它只是规格升级。事实并非如此。</p><p>Flipper One 首次发布时，这是一台口袋大小的 Linux 计算机，同时也是一款严肃的网络工具。简而言之，它比前代产品能力强大得多。</p><p>现在它正式发布了。Flipper One 的 Kickstarter 众筹活动现已上线，定价为 399 美元。这是 Flipper Zero 价格的两倍，你可以把这大幅涨价归咎于 AI 时代的芯片短缺。</p><p>Rockchip RK3576（8 核）+ Raspberry Pi RP2350 协处理器</p><p>8 GB LPDDR5 内存，64 GB UFS 存储</p><p>Wi-Fi 6E、千兆以太网、内置 eSIM</p><p>M.2 和 GPIO 模块（5G、LoRa、SDR）</p><p>Flipper One 在 Kickstarter 上售价 399 美元。之前购买了 20 美元预购优惠券的用户被承诺可享受 379 美元的价格。</p><p>Flipper Devices 也明确表示，这不是 Flipper Zero 的继任者。Zero 离线工作，直接与 NFC、RFID、红外和 Sub-GHz 无线电等物理事物交互。Flipper One 则向上移动到网络计算层：高速连接、数据处理和真正的设备端计算。</p><p>在内部，它采用双处理器设置。八核芯片运行 Linux、网络、USB 3 和视频输出。一个低功耗的 256x144 灰度显示屏、按钮和电源。这意味着即使主 Linux 操作系统未使用，屏幕和按钮也能继续工作。</p><p>网络方面才是真正有趣的地方。它可以同时管理多达五个上行链路，充当热点，运行 VPN 和防火墙，扫描有线和无线网络，并分析 Wi-Fi 流量。内置的 eSIM 附带 Flipper SIM 数据套餐。</p><p>它还可以兼作电池监测器，跟踪自身电量以及你插入的任何设备。</p><p>通过 USB-C DisplayPort Alt Mode 将其连接到显示器，它就能变成台式计算机。或者将其连接到电视，用作媒体盒子。它是一款多功能设备。</p><p>Flipper OS 与主线内核</p><p>我喜欢他们投入精力开发了一个名为 Flipper OS 的自定义操作系统，这是一个基于 Debian 的系统，你可以在针对不同任务的预配置配置文件之间切换：网络路由器、无线电实验室、桌面、电视媒体盒子。</p><p>每个配置文件都有自己的设置、内核和应用程序。你在 Linux 加载之前从启动菜单中选择一个。你的更改保存在覆盖层中，因此如果你搞砸了，可以将配置文件擦除回默认状态。正如他们所说，自由实验。</p><p>Flipper Devices 还与 Collabora 合作，将 RK3576 纳入主线 Linux 内核。该设备已经运行在主线内核上，DisplayPort Alt Mode 补丁正在审核中。目标是打造一台没有二进制固件块的 ARM 计算机。任何在 ARM 板上与厂商 BSP 斗争过的人都会欣赏这一点。</p><p>还有一些工作要做。团队正在研究动态内存频率调节以提高能效，并移除启动过程中剩余的少数闭源部分。所有这些都在公开知识中，可在 Flipper 开发者门户上获取。</p><p>399 美元定价，零利润！</p><p>全球内存短缺使内存价格波动剧烈（或者我应该说是充满敌意）。Flipper 表示，内存和 UFS 存储现在占 Flipper One 总硬件成本的一半以上。</p><p>他们没有等待或提高价格，而是以成本价销售硬件，并押注社区来资助首次生产。大胆的举动，还是内存定价已经糟糕到何种程度的标志？可能两者兼有。</p><p>过往记录有所帮助。Flipper Zero 在 Kickstarter 上筹集了 480 万美元，八分钟内达成目标，并且</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/flipper-one-crowdfunding/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

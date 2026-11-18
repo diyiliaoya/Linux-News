@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GNOME 的 Dhruva Dock 扩展重现了老派桌面风格 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月18日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>GNOME 的 Dhruva Dock 扩展重现了老派桌面风格</h1>
+
+  <div class="article-summary">Dhruva Dock 是一款高度可定制的 GNOME Shell 扩展，提供浮动或边缘停靠样式，支持多种动画效果、模糊背景和预设主题（如 Ubuntu、macOS、Windows）。它包含应用启动器、窗口预览、媒体播放器等小部件，但存在一些 bug，如启用某项功能可能导致另一项失效。该扩展支持 GNOME 45 至 51，适合喜欢复古桌面特效的用户尝试。</div>
+
+  <div class="article-body"><p>自 2011 年 Unity 成为默认桌面以来，Ubuntu 就在屏幕左侧放置了一个 dock（或者叫启动器），2017 年切换回 GNOME 时也保留了这一设计。如果你想要一些不同的东西，比如带有炫酷效果的浮动 dock，或者集 dock 与面板于一体的设计，有很多替代方案可供选择——但通常你只能二选一。</p><p>最近引起我注意的是 Dhruva Dock。它被宣传为 GNOME Shell 的“可定制”dock，经过几天的试用，我可以肯定它确实名副其实。</p><p>Dhruva Dock 几乎无所不能</p><p>在这个扩展中，炫酷至上。它包含一键预设，可将 dock 塑造成知名桌面的风格，包括 Ubuntu、macOS 和 Windows。但这些只是调整的起点。就像过去的 Linux dock（以及其它类似工具）一样，这个 dock 非常注重定制化。</p><p>它有大量的动画效果，包括鼠标悬停在 dock 图标上时的放大缩放、点击图标启动应用时的可爱花式效果（弹跳、果冻等），以及最小化窗口时的视觉提示，比如必不可少的魔法灯效果。</p><p>我的截图都显示 dock 位于屏幕底部，但它可以放置在屏幕的任何边缘。</p><p>尽管这些效果很花哨（有些情况下还有点小故障），但很高兴看到一个 dock 倾向于有点张扬——不过那些更花哨的装饰并非强制。</p><p>dock 的外观也是可配置的，你可以设置透明度和颜色，并在静态模糊或动态模糊之间选择（前者允许你选择一张图片进行模糊，后者使用实时壁纸），从而调整出符合你品味的 dock 美学。</p><p>一个选项丰富的 GNOME 桌面 dock</p><p>喜欢小型浮动 dock，还是与顶栏集成的边缘到边缘 dock？这个扩展两者都能做到——或者介于两者之间。小部件包括一个类似仪表盘的部件和一个可选的图标等。</p><p>在某些模式（但不是所有模式）下，你可以启用一个替代的应用启动器：</p><p>提供替代应用启动器</p><p>常见的 dock 设置也一应俱全，包括大小、位置、自动隐藏和躲避行为。你还可以启用窗口预览、应用窥视和显示桌面按钮，并为运行中的应用选择指示器样式。</p><p>这里几乎没有什么是固定的（好吧，除了它的首选项窗口，该窗口无法从右侧优雅地调整大小，会截断选项和标签）。</p><p>内置媒体播放器？有。未检查：怪癖</p><p>如果这种可塑性有代价的话，那就是精细度。它有 bug，包括一些启用一项功能却莫名其妙禁用另一项的情况。</p><p>可以原谅也可以修复（毕竟这是开源软件）。这里展现的雄心？我很共鸣（这么说吧）——不过，我基本上是在直播博客记录那个黄金年代的人。</p><p>想自己试试吗？</p><p>支持 GNOME 45 到 GNOME 51。如果你使用的是 Ubuntu 24.04 LTS 或更高版本，可以去玩玩；记得先禁用（某个东西），否则你可能会迷失方向。</p><p>除了古怪的首选项窗口，我试用的版本中还有：一个设置组合意味着如果我启用了某个小部件，然后添加一个自定义文件夹，它就会消失。模糊设置一度完全消失，改变边缘偏移的控制也消失了。而且当存在小部件时，调整 dock 背景的缩放动画需要更长时间才能恢复到静止状态，就像它先吸附到一个值，然后才想起重新计算实时值。绝对是微不足道的 bug，但我还是提一下。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/dhruva-dock-gnome-extension-blingy" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

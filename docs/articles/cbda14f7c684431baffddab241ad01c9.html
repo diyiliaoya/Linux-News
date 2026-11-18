@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MNT Reform Next 超开放笔记本电脑开始发货 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月18日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>MNT Reform Next 超开放笔记本电脑开始发货</h1>
+
+  <div class="article-summary">MNT Research 已开始向 2025 年众筹支持者交付 MNT Reform Next 超开放笔记本电脑，首批 16 台已发出，11 月将再交付 25 台，预计 2027 年公开销售。该设备采用可更换 RCORE 处理器模块、八核 RK3588、最高 32GB 内存，并因存储成本上涨调整了 SSD 配置，同时新增 M.2 插槽。基础款售价 1249 美元，预计 2027 年 1 月到货。</div>
+
+  <div class="article-body"><p>MNT Reform Next 超开放笔记本电脑开始发货 - OMG! Ubuntu</p><p>如果说有一款产品让模块化、易于升级的笔记本电脑理念走向主流，那就是 MNT Reform——一款在设计每个环节都体现开放性的笔记本电脑。</p><p>我很高兴看到（通过 Crowd Supply）其笔记本电脑型号 MNT Reform Next 的配置已开始向 2025 年众筹活动的支持者发货。</p><p>这些产品比原计划（最初为 2025 年秋季）发货更晚，原因是设计、工程和制造一款真正开放的笔记本电脑（包括固件）过程中遇到的各种挫折和障碍。</p><p>MNT Research 上个月向支持者交付了 16 台笔记本电脑，并将在 11 月再交付 25 台。后续批次将跟进，如果一切顺利，2027 年将公开销售。</p><p>2025 年发布的 MNT Reform Next 宣传视频介绍了这款产品。如果你不熟悉它，这是一款 12.5 英寸笔记本电脑，使用可更换的 RCORE 处理器模块，搭载八核 RK3588 处理器、Mali-G610 GPU、16 或 32 GB 内存以及 256 eMMC 存储。</p><p>由于存储和内存成本（持续）上涨，高端配置减少了附加 SSD 的容量，2TB 选项被替换为 1TB，1TB 被替换为 500GB。作为补偿，主板上增加了一个额外的 M.2 插槽。</p><p>其他特性包括 RGB 背光机械键盘、玻璃触控板和两个可拆卸的 LiFePO4 电池组。</p><p>规格列表无法充分体现这些设备的独特之处。它们的设计（主观上）在优雅方面的不足，被实用性所弥补。甚至单个电池电芯也可以更换，而且与其他 MNT 设备一样，一切都是开放的，直至设计文件。</p><p>如果你最初没有支持这个项目，你也没有错过机会。基础型号（黑色）仍可通过 Crowd Supply 预购，售价 1249 美元，配备 16 GB 内存和 256 GB eMMC，但不含额外 NVMe。这些产品预计将于 2027 年 1 月到货。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/mnt-reform-next-begins-shipping-for-real" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

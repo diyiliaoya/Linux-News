@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canonical 开始向 Ubuntu Pro 用户推送 AI 编写的安全补丁 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月18日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Canonical 开始向 Ubuntu Pro 用户推送 AI 编写的安全补丁</h1>
+
+  <div class="article-summary">Canonical 推出名为 Surge 的多智能体 AI 系统，用于自动分类漏洞并编写 Ubuntu 软件包的安全回溯补丁。该系统采用多个竞争性 AI 模型生成候选补丁，再由评审模型达成共识，低置信度案例转交人工处理。生成的补丁不会自动进入常规更新，而是先发布到需用户主动选择的 Edge 归档库，经人工测试后才进入正式更新。此举旨在应对 AI 辅助漏洞发现导致的 CVE 数量激增问题。</div>
+
+  <div class="article-body"><p>Canonical 开始向 Ubuntu Pro 用户推送 AI 编写的安全补丁</p><p>Canonical 构建了一个 AI 系统来修补 Ubuntu 的 CVE。该系统名为 Surge，它使用相互竞争的 AI 模型编写并验证安全回溯补丁。修复补丁会进入一个单独的、需用户主动选择的“Edge”归档库，而不会进入你的常规 Ubuntu 更新。</p><p>如果你关注了今年的安全新闻，就会知道已报告漏洞的数量急剧上升。AI 辅助的漏洞挖掘意味着缺陷被发现的速度超过了维护者的修补速度，每个发行版都感受到了压力。</p><p>Canonical 的应对策略是以毒攻毒。他们打算用 AI 来修复 AI 发现的问题。在最近结束的 Ubuntu Summit 26.10 上，Canonical 介绍了 Surge——一个多智能体 AI 系统，用于对漏洞进行分类并为 Ubuntu 软件包编写回溯修复补丁。</p><p>别担心。这些都不会自动进入你的常规 Ubuntu 安全更新。Surge 的修复补丁会进入一个名为 Edge 归档库的新可选仓库，只有在经过人工主导的测试后才会进入常规更新。</p><p>Canonical 试图解决的 CVE 问题</p><p>这一消息是在峰会开幕致辞的安全环节中宣布的，由工程副总裁 Pierre Guillemin 介绍。</p><p>他从数字开始。根据幻灯片，Ubuntu 的“修复速度”在一年内提高了 119%。“按季度修复量”图表显示，2025 年初约有 1,400 个修复，到 2026 年中期每季度约有 3,100 个。</p><p>还不止这些。Canonical 表示，仅 2026 年 10 月的 CVE 数量就几乎与 2025 年全年相当。</p><p>而且 Canonical 预计这不会放缓。Guillemin 表示，公司预计 2027 年 CVE 将带来“又一个数量级的增长”。</p><p>如何在坚持稳定 Ubuntu 版本所著称的审查和测试标准的同时跟上这一步伐？招聘和更努力地工作实际上无法与这种速度竞争。</p><p>Surge 是“一个用于修复 Ubuntu 漏洞的多智能体编排框架”。</p><p>简而言之，它是一个流水线，多个专业化的 AI 智能体处理修复 CVE 的不同步骤，从确定 Ubuntu 是否受影响，到生成补丁。</p><p>Guillemin 表示，它建立在 Canonical 20 多年的 Ubuntu 安全工作基础上。既定目标是吸收大量涌入的 CVE 而不产生积压。或者，正如他所说，“用 AI 对抗 AI”。</p><p>Surge 仅覆盖 Ubuntu 用户空间软件包，即归档库中的应用程序和库。内核 CVE 不在其范围内，因为内核修复需要不同的回溯方法，并遵循自己的发布周期。</p><p>该流水线有六个阶段，有趣的是它不信任单一的 AI 模型。</p><p>它从接收和溯源开始，接收漏洞报告，将其映射到软件包，并检查受影响的软件包是否在 Ubuntu 中。然后代码取证获取上游补丁，分析源代码，并尝试复现漏洞以确认 Ubuntu 的版本确实受影响。</p><p>在回溯引擎中，不是由一个模型编写补丁，而是由多个竞争模型各自生成候选修复。</p><p>这些候选修复随后进入共识评审，由一个单独的“评审”模型小组进行评估，并且必须就正确的补丁达成一致。如果置信度低或评审陷入僵局，案例将转交人工升级处理，由 Ubuntu 安全工程师手动审查。</p><p>最后，补丁经过与其他 Ubuntu 软件包相同的构建、验证和发布流程，包括确定性测试，然后才发布。</p><p>Edge 归档库：AI 修复，但仅在你主动要求时提供</p><p>Surge 生成的修复不会通过常规安全更新推送到你的系统。相反，Canonical 正在推出 Edge 归档库，这是一个仍在开发中的修复的可选预览。</p><p>Edge 让你在机器生成的补丁经过 Canonical 全面通用可用性（GA）资格认证之前就能获得它们。因此你可以在“机器可……”阶段获得修复。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/canonical-surge-announcemengt/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

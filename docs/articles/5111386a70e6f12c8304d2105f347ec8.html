@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>两个独立项目希望将 MATE 引入 Wayland，各显其能 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月18日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>两个独立项目希望将 MATE 引入 Wayland，各显其能</h1>
+
+  <div class="article-summary">两个独立项目正以不同方式将 MATE 桌面环境引入 Wayland：Polo 项目为 MATE 构建全新的合成器、窗口管理器和会话管理器，基于 libweston 16，遵循 Marco 的窗口管理规则；MATE Wayland Desktop 项目则使用现有的 labwc 合成器替代 Marco，并基于 Ubuntu 提供可安装 ISO。两者都通过 XWayland 兼容仅支持 X11 的应用。</div>
+
+  <div class="article-body"><p>两个独立项目希望将 MATE 引入 Wayland，各显其能</p><p>Polo 为 MATE 构建新的合成器，而 MATE Wayland Desktop 则在基于 Ubuntu 的 ISO 上通过 labwc 运行 MATE。</p><p>大型 Linux 桌面环境大多已下定决心。GNOME 已完成从登录管理器中移除 X11，而上个月 KDE Plasma 也采取了行动，开始移除 X11 会话。Cinnamon 稍慢一步，但预计在圣诞节前后发布的版本将提供一个不再处于实验阶段的 Wayland 会话，不过 X11 仍是默认选项。</p><p>较小的桌面环境在这条路上处于不同阶段。Xfce 在 v2.3.0 中取消了其 Wayland 会话的实验标签，而 Budgie 在相应版本中随 labwc 转向仅支持 Wayland。另一方面，MATE 则零散推进。自 MATE 1.26 起，像这样的应用可以在 Wayland 上运行，而官方配置是一个简单的实验性设置，依赖 Wayfire。</p><p>仍然缺失的是 MATE 的原生 Wayland 窗口管理器。它自己的 Marco 没有 Wayland 模式，而以下两个项目现在旨在以不同方式取代它。</p><p>Polo 来自开发者，它是一个合成器、窗口管理器和会话管理器，面向希望 MATE 在 Wayland 上保持当前外观和行为的用户。它基于 libweston 16 构建，遵循 Marco 的窗口管理规则，并保留 MATE 用户已有的设置、主题和键绑定。仍需 X11 的应用在 XWayland 下拥有自己的窗口管理器。</p><p>Polo 也处理会话，使用 D-Bus 接口，面板、Caja 和屏幕保护程序可以像在 X11 上一样与之通信。11 月 12 日发布的版本支持平铺、工作区、通过 xdg-desktop-portal 进行屏幕共享，以及为兼容 layer shell。</p><p>DRM 后端负责处理多显示器和记住屏幕布局。还包括晃动窗口和桌面立方体等效果。</p><p>在 Fedora 44 或 45、Debian 14 或 Ubuntu 26.04 或 26.10 上从源码构建 Polo。安装后，LightDM 中应出现一个“”条目。</p><p>他表示，如果 Debian 和 Ubuntu 的 MATE 团队不提供支持 Wayland 的软件包，他可能会托管自己的仓库。</p><p>MATE Wayland Desktop 则使用现有合成器而非编写新合成器。它用 labwc 替换 Marco，并作为基于 Ubuntu 的可安装 ISO 发布，以 Linux 7.0 和 MATE 1.29 组件为基础。</p><p>其中八个 MATE 软件包从更新的上游代码重新构建，其中之一是启用了 Wayland 支持的 mate-panel 1.29.2。仅支持 X11 的应用通过 XWayland 运行。</p><p>安装由 Calamares 处理，并提供可选的 LUKS2 全盘加密。该项目也明确说明了其中的粗糙边缘。</p><p>控制中心中的键盘、鼠标和键盘快捷键面板在原生运行时崩溃，因此 MATE Wayland Desktop 通过 XWayland 打开它们。对话框在 Wayland 上也无法工作。启动器中的“”条目会打开。</p><p>在安装和使用过程中，必须关闭 Secure Boot，ISO 启动时使用开源 Nouveau GPU 驱动。之后可以用安装 NVIDIA 自己的驱动。</p><p>鉴于这是一个新事物，我强烈建议你在完整安装之前先在备用机器上测试。</p><p>你可以在 x86_64 系统上通过官方下载门户获取其 ISO 开始使用。</p><p>那么，你对 Wayland 进入 MATE 感到兴奋吗？还是无所谓？请在下方告诉我！</p><p>喜欢这个更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>跳过 Google 结果中的 AI 垃圾和 SEO 垃圾</p><p>告诉 Google 你更喜欢 It's FOSS，它会在你搜索时更频繁地显示我们由经验丰富的 Linux 用户创建的 Linux 新闻和教程。只需点击一下。</p><p>设为首选来源</p><p>🐧 玩今天的 Tuxdle——每日 Linux 单词谜题 →</p><p>获取 F</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/mate-desktop-third-party-wayland-efforts/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

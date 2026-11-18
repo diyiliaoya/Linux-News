@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NextCloud 推出面向桌面用户的办公套件 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月18日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">桌面环境</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>NextCloud 推出面向桌面用户的办公套件</h1>
+
+  <div class="article-summary">Nextcloud 发布了基于 Euro-Office 的开源桌面办公套件，支持离线编辑本地文件，并可连接 Nextcloud 实现协同编辑，覆盖 Linux、Windows 和 macOS。该套件包含文本、表格、演示和 PDF 四个编辑器，支持 Microsoft Office 和 OpenDocument 格式。Nextcloud 提供签名分发的 APT/DNF 包，适合生产环境，而 Euro-Office 社区版未签名，仅建议测试使用。</div>
+
+  <div class="article-body"><p>NextCloud 推出面向桌面用户的办公套件</p><p>由 Euro-Office 提供支持，该应用可离线处理本地文件，并连接 Nextcloud 在 Linux、Windows 和 macOS 上进行协同编辑。</p><p>Nextcloud 的办公编辑器早已能在浏览器中使用，而截至目前，又推出了一款开源桌面应用，应该会吸引更广泛、偏好本地处理文档的用户群体。</p><p>该应用基于 Euro-Office 的 DesktopEditors 代码，你可能还记得，Euro-Office 是一个欧洲公司联盟，其首要目标是提供开放且自主的文档编辑，首个生产就绪版本已于六月发布。此外，该代码是 ONLYOFFICE 的修改版本，后者背后也有自己的故事。</p><p>现在，让我们看看 Nextcloud 的应用提供了什么。</p><p>Nextcloud Office：适合你吗？</p><p>四个独立的编辑器：</p><p>文本编辑器用于报告和信件等文本文件，表格编辑器处理表格和计算，演示编辑器用于幻灯片，PDF 编辑器则用于打开和处理 PDF。</p><p>它们共同支持 Microsoft Office 和 OpenDocument 文件，涵盖以下格式：</p><p>你的文件可以存放在两个地方。你可以选择哪些保留在本机，哪些上传到云端，本地文件即使离线也保持可编辑。</p><p>通过侧边栏的“”条目连接 Nextcloud，你可以按 URL 添加实例并登录。这里需要了解的一个重要事项是，你并不限于一个实例；可以添加多个。</p><p>Euro-Office，但有所不同</p><p>Nextcloud Office 与 Euro-Office 构建的桌面编辑器并非完全不同的应用。它是 Nextcloud 对同一源代码的签名分发版本，但更面向生产使用。</p><p>Nextcloud 托管了签名的 APT 和 DNF 仓库。添加后，应用会随系统其余部分一起更新。</p><p>这些包经过签名，意味着它们经过完整性验证，适合受管设备批量部署。</p><p>Euro-Office 社区构建来自同一源代码，但未签名，项目宣传其用于测试和贡献。它们仅以 GitHub 发布形式提供，没有包仓库。</p><p>项目建议不要在受监管环境或受管设备批量部署中使用它们，那里的 Nextcloud 集成也仅以尽力而为的方式提供。</p><p>另一方面，Nextcloud Office 会针对 Nextcloud 版本进行集成测试和额外测试。</p><p>支持方式也类似。Nextcloud Office 有专门的企业订阅，提供社区和专属支持，而社区构建仅获得社区支持。</p><p>我短暂试用了这个办公套件，发现它支持多种界面主题，包括，还支持界面缩放和图形加速。</p><p>该应用还能利用我 Ubuntu 系统上已安装的字体，并且默认开启了 AI 功能。最后一点不偏好 AI 的人应注意；可以在以下位置找到：设置 &gt; 向下滚动 &gt; 使用 AI 功能。</p><p>桌面应用覆盖三大主要平台。</p><p>喜欢这次更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 过去 14 年一直在帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>跳过 Google 结果中的 AI 垃圾和 SEO 垃圾</p><p>告诉 Google 你偏好 It's FOSS，搜索时它会更频繁地显示我们由经验丰富的 Linux 用户创建的 Linux 新闻和教程。只需点击一下。</p><p>设为首选来源</p><p>🐧 今天就来玩 Tuxdle——每日 Linux 单词谜题 →</p><p>在收件箱获取 FOSS Weekly</p><p>一份健康的 Linux 新闻通讯，包含最新发布、相关新闻、技巧和教程、冷知识、模因、测验和桌面 Linux 优惠</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/nextcloud-office-desktop-launched/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
