@@ -21734,5 +21734,203 @@
     "title_zh": "AV Linux 25.3 多媒体制作发行版发布，默认搭载 Xfce",
     "summary_zh": "AV Linux 25.3 是一款专为音乐和视频制作设计的发行版，现已开放下载。该版本基于 MX Linux 25.3，并默认采用 Xfce 桌面环境。",
     "fulltext_zh": "专为音乐和视频制作设计的 AV Linux 25.3 发行版现已可供下载，它基于 MX Linux 25.3，并默认搭载 Xfce 桌面环境。"
+  },
+  "e00612972a463393aa984d1bed727916": {
+    "id": "e00612972a463393aa984d1bed727916",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/11/proton-lumo-ai-linux-desktop",
+    "title_en": "Proton’s Lumo AI chatbot is now available on Linux desktops",
+    "summary_en": "Proton has released desktop apps for its Lumo AI chatbot on all major desktop OSes, including Linux. Lumo is the Swiss privacy company&#8217;s own AI assistant, introduced last year and available to use on line. It offers the same sort of features as other generative AI chatbots, including text and image generation, memory, web searching and editable canvases. It runs on &#8216;open models&#8217;, touts better privacy safeguards and encrypts users&#8217; chat history. It&#8217;s free to use (wit",
+    "pub_date": "Wed, 18 Nov 2026 23:40:00 +0000",
+    "title_zh": "Proton 的 Lumo AI 聊天机器人现已登陆 Linux 桌面",
+    "summary_zh": "Proton 旗下 AI 助手 Lumo 现推出 Linux 桌面应用，支持 RPM 和 Debian 安装包。该应用开源，将 Lumo 网页版封装为原生外壳，并新增本地文件访问、定时任务和可复用提示文件等功能。用户需免费 Proton 账户方可使用，付费计划享有更高限额。",
+    "fulltext_zh": "Proton 的 Lumo AI 聊天机器人现已登陆 Linux 桌面 - OMG! Ubuntu\nAI 聊天机器人已覆盖所有主流桌面操作系统，包括 Linux。\n\n这是这家瑞士隐私公司自家的 AI 助手，于去年推出，可在线使用。它提供与其他生成式 AI 聊天机器人类似的功能，包括文本和图像生成、记忆、网络搜索和可编辑画布。\n\n它基于“开放模型”运行，标榜更好的隐私保护措施，并加密用户的聊天历史。使用免费 Proton 账户即可免费使用（有限制）。付费计划用户可使用附加功能，并享受更高的使用限额。\n\n模型的开放程度尚有争议。发布时，欧洲开源 AI 指数将其列为最不开放的“开放”AI 助手。\n\n桌面应用是开源的。它“将 Lumo 网页应用封装在原生外壳中，并在你批准的情况下，使其能够访问你的计算机和工具”。\n\nLumo 可以管理本地文件\n允许它探查本地内容（并远程解析）\n\n通过桌面应用，Proton 为 Lumo 增加了三项新功能，使其 AI 不再只是被动等待你的输入。\n\n允许你授予 Lumo 访问本地文件夹和运行命令的权限，并可控制其能否在有无你明确批准的情况下执行操作。你还可以连接各种在线服务以及任何 MCP 服务器。\n\n连接器扩展了 AI 助手的触达范围\n允许你创建按计划运行的任务，例如，将其连接到你的 Proton Mail 账户，它就能每周浏览一次你的收件箱，提供内容摘要（准确与否另当别论）。\n\n允许你定义包含指令/提示的文件，以便在对话中重复使用，而不必不断从文件或之前的对话中复制粘贴。\n\n如果你想试试——提醒：使用需免费 Proton 账户——你可以下载适用于 Windows、macOS 和 Linux 的 Lumo 桌面版。\n\n针对 Linux，提供了 RPM 和 Debian 安装包，前者支持 Ubuntu 24.04 LTS 及以上版本。\n\n如果你安装了它，可能不会注意到它在顶栏添加了托盘图标，因为图标是黑色的，面板也是黑色的。将鼠标悬停其上，可以更清楚地看到图标并访问一个简单的菜单。\n\nProton 希望借此发布挽回一些社区声誉。其 CEO Andy Yen 因在公司内部激进推动 AI 而招致批评，甚至将一名员工要求时间进行适当安全测试的请求称为‘"
+  },
+  "b1d951c16a411ec010b0529d4c758691": {
+    "id": "b1d951c16a411ec010b0529d4c758691",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/proton-lumo-desktop/",
+    "title_en": "Proton's Lumo is Finally Useful and Gives Us Hope for a Real Private AI",
+    "summary_en": "The privacy-focused AI assistant works with your desktop files and requires a paid offering to integrate Proton Mail.",
+    "pub_date": "Wed, 18 Nov 2026 13:22:34 GMT",
+    "title_zh": "Proton的Lumo终于变得实用，让我们对真正的隐私AI充满希望",
+    "summary_zh": "Proton推出了跨平台桌面版Lumo AI助手，支持访问本地文件、Shell以及Google Drive和Jira等应用，并新增了任务调度、自定义指令和MCP服务器支持。用户还可通过付费的Proton Mail Bridge连接邮箱，实现邮件摘要等功能。尽管存在一些小问题，但整体体验令人满意，为隐私优先的AI助手带来了实用价值。",
+    "fulltext_zh": "Proton的Lumo终于变得实用，让我们对真正的隐私AI充满希望\n\n这款注重隐私的AI助手可与你的桌面文件协作，并需要付费服务才能集成Proton Mail。\n\n如你所知，Lumo是Proton旗下以猫为主题的AI助手，定位为Gemini、ChatGPT和Claude等产品的隐私替代方案。\n\n你 already 可以在网页端以及Android和iOS应用中使用它。但现在，Proton为Lumo推出了一款跨平台桌面应用，覆盖大多数主流桌面平台。\n\n这款应用并非从零开始，而是将Lumo网页应用放入Tauri窗口，并加上了与你的计算机交互的部分。Proton以GPL-3.0许可证发布了这个封装程序，而网页应用则位于其独立的代码库中。\n\n无论如何，我进行了一次测试运行，看看它在Linux系统上的表现，具体来说是我日常使用的Fedora Workstation。\n\n迟来但受欢迎的登场\n\n首次打开应用的感觉就像使用[Proton Drive](https://www.proton.com/drive)桌面客户端。它有托盘图标、一些新设置，以及一个熟悉的方形按钮，可快速访问其他Proton服务，如[Proton Mail](https://www.proton.com/mail)和[Proton Calendar](https://www.proton.com/calendar)。\n\n桌面应用获得了许多实用功能，比如[Lumo工具](https://lumo.proton.me/tools)，Lumo可以访问你的文件和Shell，以及Google Drive和Jira等应用。\n\n通过[自定义指令](https://lumo.proton.me/custom-instructions)，你可以存储指令和支持文件供Lumo在后续聊天中使用，现有的[项目](https://lumo.proton.me/projects)会自动继承这些内容，而通过[任务](https://lumo.proton.me/tasks)，你可以让Lumo在设定时间处理重复性工作。\n\n还支持MCP服务器，让你可以将自己的本地/远程工具连接到Lumo。在下面的所有测试中，我使用了[Lumo桌面应用](https://lumo.proton.me/desktop)。\n\n调度一些任务\n\n“任务”标签页让你概览Lumo能为你处理哪些类型的任务。点击“新建任务”按钮可以手动设置，或让Lumo创建；我选择了第二种。\n\n我让它在一周的特定日期从开源、Linux及几个相关类别中获取新闻，Lumo通过几个选择题引导我完成了细节设置。\n\n调整参数也毫无阻力！\n\n然后我让它仅在工作日运行并保持摘要简短，这又生成了第二个任务。Lumo说它已替换了旧任务，但两个任务在任务页面上仍然都处于活动状态。\n\n不过执行测试运行效果非常好，Lumo给出了一些有用的线索。我问它摘要会发送到哪里；它说会以聊天形式出现。当我问新闻是否过时时，它说有几条可以追溯到10月下旬。\n\n连接Proton Mail\n\n接下来，我连接了Proton Mail，以便Lumo可以浏览我的收件箱。这需要先设置付费的[Proton Mail Bridge](https://proton.me/mail/bridge)，由于我有付费的Proton Mail套餐，我继续安装、登录，并将其邮箱详细信息复制到连接器中。\n\nBridge同步我的邮件花了很长时间，我不得不等待它完成。\n\n连接后，我问Lumo它能对我的收件箱做什么。它说可以列出和搜索邮件、起草和发送邮件，但无法读取附件或管理标签和文件夹。\n\n然后我让它总结过去两周收到的新闻稿，跳过线程回复。这花了一些时间，但摘要很好，还包括两篇我尚未读过的文章。\n\n如前所述，[Lumo桌面应用](https://lumo.proton.me/desktop)适用于Linux、macOS和Windows。如果你使用Linux，可以选择[DEB](https://proton.me/download/lumo/desktop/Lumo-Desktop-v1.0.0.deb)或[RPM](https://proton.me/download/lumo/desktop/Lumo-Desktop-v1.0.0.rpm)包。\n\n对于基于Debian/Ubuntu的发行版，安装包括以下步骤：\n\n下载DEB包。\n右键点击并通过[软件安装](https://help.ubuntu.com/stable/ubuntu-help/addremove-install.html.en)执行它。\n然后使用大绿色按钮安装并输入你的账户密码。\n\nUbuntu（左）和Fedora（右）安装。\n\n对于Fedora，安装包括以下步骤：\n\n下载RPM包。\n右键点击并通过[软件安装](https://docs.fedoraproject.org/en-US/fedora/latest/desktop/)执行它。\n然后验证详细信息并输入账户密码后，点击“安装”按钮进行安装。\n\n不过，请记住，你需要在默认网页浏览器中登录你的Proton账户，因为身份验证是通过该浏览器进行的。另外，确保及时完成验证，否则登录链接将过期。"
+  },
+  "796df3c919c450f362b6414728f0ec26": {
+    "id": "796df3c919c450f362b6414728f0ec26",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/soverin-suite-sovereignty-as-a-service/",
+    "title_en": "Soverin Suite Joins a Growing Wave of European Companies Selling \"Sovereignty as a Service\"",
+    "summary_en": "The Dutch email provider now bundles Nextcloud and Euro-Office into a managed Microsoft 365 alternative hosted entirely in the Netherlands.",
+    "pub_date": "Wed, 18 Nov 2026 07:49:08 GMT",
+    "title_zh": "Soverin Suite加入欧洲公司出售“主权即服务”的浪潮",
+    "summary_zh": "荷兰电子邮件提供商Soverin推出Soverin Suite，将Nextcloud和Euro-Office等欧洲开源软件打包成托管式Microsoft 365替代方案，数据完全托管在荷兰。该平台面向中小企业、自由职业者和家庭用户，提供邮箱、日历、文件、文档编辑、聊天和视频通话等功能，起价每许可证每月10欧元。Soverin强调其ISO认证和NIS2合规性，旨在降低用户从微软或谷歌迁移的门槛。",
+    "fulltext_zh": "Soverin Suite加入欧洲公司出售“主权即服务”的浪潮\n\n这家荷兰电子邮件提供商现在将Nextcloud和Euro-Office捆绑成一个完全托管在荷兰的托管式Microsoft 365替代方案。\n\n摆脱Microsoft 365或Google Workspace说起来容易。真正做起来完全是另一回事。有人得搭建服务器、保持补丁更新、迁移邮件，然后教人们使用新软件——这大概是最难的部分。\n\n这正是新一代欧洲公司试图填补的空白。他们不从零编写软件，而是采用Nextcloud和Euro-Office等开源工具，在欧洲硬件上运行，并将其作为即用型服务出售，套餐中包含支持。\n\n我想把它称为新的SaaS：主权即服务。\n\n最新加入这个新SaaS阵营的是Soverin，一家专注于隐私的荷兰电子邮件提供商，它刚刚推出了Soverin Suite：基于3款欧洲开源软件构建的协作平台。\n\nSoverin Suite是一个面向中小企业、自由职业者和家庭的数字工作空间。它将电子邮件、日历、文件、文档、电子表格、演示文稿、聊天和视频通话整合在一个登录入口之后。\n\n在底层，它是三款欧洲软件的结合体。Soverin负责电子邮件，自2014年以来一直在荷兰运营此项业务。\n\n提供协作平台。\n\n是文档编辑器。\n\nNextcloud部分由Greenhost运营，这是一家荷兰托管公司，也是Soverin的姊妹公司。因此数据留在荷兰。\n\nSoverin还指出其拥有ISO 27001（信息安全）、ISO 9001（质量管理）和ISO 14001（环境管理）认证，并符合NIS2——欧盟针对基本和重要组织的网络安全指令。考虑到欧盟在政策和法律方面的严格程度，这些徽章增加了一层额外的信任。\n\n每许可证每月10欧元（不含增值税，按年计费），每个许可证一个邮箱和1 TB共享文件存储（相比之下，仅电子邮件计划为50 GB）。如果您只需要电子邮件、日历和文件，而不需要Euro-Office和聊天，Mail Pro计划每许可证每月4欧元，您可以在一个账户中混合使用两种许可证类型。\n\n我联系了Soverin提出几个问题，Soverin首席执行官兼联合创始人Diana Krieger回答了这些问题。我问她Soverin Suite是Euro-Office的分支还是白标版本。答案都不是。她说Soverin完全按照社区构建的方式运行Euro-Office，因此安全修复和新功能会及时落地。\n\n“私人分支会分散欧洲试图汇聚的努力……”\n\nSoverin设计的是自定义皮肤，使编辑器看起来和感觉像其电子邮件客户端，并将一切连接到单点登录（SSO，一个账户登录所有服务）。当员工加入或离开时，管理员只需添加或删除一个账户，而不是五个。\n\n这听起来可能是小事，但并非如此。“主权只有在人们真正愿意使用时才有效，”Krieger说。熟悉的外观和一个密码降低了那些在Outlook中度过十年的人的门槛。\n\n为什么不直接自托管Nextcloud？\n\n这是很多读者会问的问题。Nextcloud是免费开源的，我们很多人已经在家庭服务器上运行它。\n\nKrieger的回答坦诚地说明了Soverin的客户是谁。大多数小企业、自由职业者和家庭没有IT部门来运行服务器、打补丁和保障电子邮件安全。用她的话说，\n\n“自托管只有在你具备相应技能时才能给你自主权。”\n\n这就是这里角度的核心。开源软件，特别是自托管软件，消除了许可证锁定，但它并没有消除有人部署、维护和支持使用者的需求。"
+  },
+  "fffb0388950a2b425d56dd2be322aa14": {
+    "id": "fffb0388950a2b425d56dd2be322aa14",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-ROCm-10.2",
+    "title_en": "AMD ROCm 10.2 Released With Latest Optimizations, Expanded Ryzen Laptop Support",
+    "summary_en": "AMD ROCm 10.2 is out today as the newest six-week feature release to this open-source AMD Radeon/Instinct GPU compute stack...",
+    "pub_date": "Wed, 18 Nov 2026 21:06:39 -0500",
+    "title_zh": "AMD ROCm 10.2 发布：带来最新优化并扩展 Ryzen 笔记本支持",
+    "summary_zh": "AMD 发布 ROCm 10.2，这是其开源 GPU 计算栈最新的六周功能更新。该版本升级了 SGLang 和 vLLM 支持，继续推进 Hyperloom、ROCm CLI 和 AMD Skills 相关工作，并新增针对 PCIe GPU 的 RCCL 性能优化。同时扩展了 Ryzen 笔记本官方支持范围，新增 18 款基于 gfx1103 架构的处理器，并增加对 RHEL 10.3、RHEL 9.9 和 SLES 16.1 的官方支持。",
+    "fulltext_zh": "AMD ROCm 10.2 今日发布，这是该开源 AMD Radeon/Instinct GPU 计算栈最新的六周功能版本。\n\nROCm 10.2 升级了其 SGLang 和 vLLM 支持，继续围绕 Hyperloom 开展工作，并持续推进 ROCm CLI 和 AMD Skills 的相关工作。此外还有新的性能优化，例如针对基于 PCIe 的 GPU 的 RCCL 改进。\n\nROCm 10.2 还扩展了官方支持的 Ryzen 笔记本范围，更多较旧的基于 RDNA3 的型号终于获得支持：\n\n“ROCm 通过支持 18 款新的 AMD Ryzen 处理器，拓宽了 Ryzen 笔记本上的本地 AI 支持，这些处理器与现有 Radeon 700M 系列处理器基于相同的 gfx1103 架构。开发者可在 Windows 和 Linux 上获得兼容性，无需自定义构建或特殊配置。这得益于 HIP、PyTorch 和 vLLM 中经过验证的 gfx1103 支持。”\n\n这些终于获得官方 ROCm 支持的较旧型号包括：\n\n此外还有 AMD Radeon PRO W7900D。\n\nROCm 10.2 还扩展了 AMD Infinity Storage “AIS” 和 hipFile 的平台兼容性。ROCm 10.2 还提供对 RHEL 10.3、RHEL 9.9 以及 SLES 16.1 的官方支持。\n\nROCm 10.2 还包含各种其他改进，详见今日的\n\nAMD 为 Linux 上即将到来的 RDNA 4m 核显准备好固件\nAMD ROCm HRX 的 Loom 0.2 扩展 C++ 支持，改进目标定位\nAMD 发布混合 CPU 上容量感知调度的 Linux 补丁\nAMD ARG “AMD Root Guest” Linux 补丁将于 2027 年推出\nAMD openSIL 随第六代 EPYC “Venice” 达成量产目标\nAMD 在实验中利用 AI + HRX Loom 快速将 50 个 LLM 移植到客户端 GPU\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、显卡驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\n\n资深 Linux 开发者因 AI 引发的补丁洪流辞去部分职务\nCloudflare 开源 Kitesurf：其面向 AI 代理的网页浏览器\nOpenAI Codex 帮助发现并修复近 20 年历史的 Radeon Linux 驱动漏洞\nNVIDIA CEO 黄仁勋辞职\nRedox OS 让 Golang 可用、移植 GIMP 并简化 AI 政策\nRust 1.100 发布，“Never” 类型终于稳定\nKDE Plasma 6.9 终于允许 XWayland 按需运行，新增摇晃窗口预设\nJava4Shell 漏洞影响 OpenJDK Java，可导致远程代码执行\n同时享受无广告浏览、\n单页文章视图\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "d6799497d26f80d2945316017bf711e5": {
+    "id": "d6799497d26f80d2945316017bf711e5",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/dell-xps-14-panther-lake",
+    "title_en": "Dell XPS 14 DA14260 Powered By Intel Panther Lake Delivers Nice Linux Experience",
+    "summary_en": "For those looking for a new laptop with Linux pre-loaded and have been eyeing the Intel Core Ultra Series 3 \"Panther Lake\" for its nice Xe3 Arc B390 graphics and overall power efficiency, Dell recently certified their XPS 14 (DA14260) laptop for Ubuntu 26.04 LTS Linux use. This latest Dell XPS 14 is well built and provides a nice and performant out-of-the-box Linux experience.",
+    "pub_date": "Wed, 18 Nov 2026 16:37:15 -0500",
+    "title_zh": "搭载Intel Panther Lake的Dell XPS 14 DA14260带来出色的Linux体验",
+    "summary_zh": "Dell XPS 14 DA14260笔记本通过Ubuntu 26.04 LTS认证，搭载Intel Core Ultra Series 3 \"Panther Lake\"处理器和Xe3 Arc B390显卡。该机型采用CNC加工铝材和Gorilla Glass 3，重量仅3磅多，厚度14.6毫米。评测显示其在Linux下开箱即用，性能与能效表现良好，电池续航可满足全天使用。",
+    "fulltext_zh": "Dell XPS 14 DA14260搭载Intel Panther Lake，带来出色的Linux体验——Phoronix评测\n\nDell XPS 14 DA14260搭载Intel Panther Lake，带来出色的Linux体验\n2026年11月18日 美国东部时间下午4:37。\n\n对于那些正在寻找预装Linux的新笔记本电脑，并且一直关注Intel Core Ultra Series 3 \"Panther Lake\"因其出色的Xe3 Arc B390显卡和整体能效的用户来说，Dell最近认证了其XPS 14（DA14260）笔记本电脑可用于Ubuntu 26.04 LTS Linux。这款最新的Dell XPS 14做工精良，提供了出色且性能优异的开箱即用Linux体验。\n\n距离Phoronix上次评测Dell XPS笔记本电脑已经过去几年了，因此当Dell最近联系我，告知其搭载Intel Panther Lake的Dell XPS 14已准备好预装Ubuntu 26.04 LTS时，我接受了这次评测机会来体验这款新机型。\n\n总体而言，它在Linux上运行和表现良好，尤其是今年将落地的一些性能优化。特别是从Arc B390集成显卡的角度以及整体能效/每瓦性能来看，迄今为止在Phoronix测试过的Panther Lake笔记本电脑表现都相当不错。\n\n新款Dell XPS 14采用CNC加工铝材和Gorilla Glass 3，做工非常出色。质量很棒，优于一些小型Linux笔记本电脑厂商依赖典型白牌OEM/ODM设计的做工质量。虽然做工精良，但Dell XPS 14 DA14260仍然非常轻，仅略超3磅，厚度也仅为14.6毫米。\n\nDell宣传这款XPS 14机型搭配2K显示屏可提供长达31小时的流媒体电池续航，不过实际表现可能因人而异。根据我的测试，可以放心地说在Linux下可满足全天电池续航，前提是你只是观看内容或进行轻度的浏览器/办公工作。\n\n这款Dell XPS 14的键盘非常出色，相比我多年前购买的XPS机型有所升级。基础显示屏型号为14英寸1920 x 1200显示屏，高级升级版为2880 x 1800 InfinityEdge OLED触摸显示屏，支持VESA DisplayHDR和120Hz刷新率。提供的评测机配置为Intel Core Ultra X7 358H、32GB LPDDR5x-9600内存、Kioxia 512GB NVMe和2.8K显示屏。\n\nDell XPS 14可从Core Ultra 5 325基础型号配置到Panther Lake的Core Ultra X9 388H旗舰型号。内存选项从16GB LPDDR5x-7467或32GB和64GB选项，也使用更快的LPDDR5x-9600内存。存储也从512GB PCIe Gen4 NVMe存储到最高4TB Gen5 NVMe存储不等。\n\nDell XPS 14有三个Thunderbolt 4 / USB Type-C端口，支持供电和DisplayPort 2.1功能。此外还有一个通用音频插孔。\n\nDell XPS 14 DA14260使用Dell提供的预装系统开箱即用表现良好。使用的是Ubuntu 26.04 LTS的原版Linux 7.0内核，无需任何OEM厂商内核。Linux 7.0对Panther Lake的支持状况良好，不过如果你不介意非官方途径，升级到更新的Linux内核版本可以带来更好的性能（尤其是显卡方面）和一些能效提升。Ubuntu 26.10 HWE堆栈搭配Linux 7.3将通过下一个点版本下放到Ubuntu 26.04 LTS，适合偏好官方支持途径的用户。同样，Arc B390显卡在Panther Lake上使用的是原版Mesa 26.0。\n\n网络摄像头、音频、触觉触摸板和其他典型功能在Dell预装的Ubuntu 26.04上均开箱即用。Dell XPS 14的扬声器值得特别称赞，其音频质量优于一些近期测试的Wildcat Lake硬件的低端笔记本电脑。\n\nStar Labs StarFighter Ultra：一款搭载Coreboot的现代高端Linux笔记本电脑\nCHUWI UniBook搭载Intel Wildcat Lake，售价449美元的Linux友好笔记本电脑\nHP Z4 G6i：一款搭载Intel的Linux友好工作站"
+  },
+  "7b58beff6bd97b97eb4cdcfe3d668447": {
+    "id": "7b58beff6bd97b97eb4cdcfe3d668447",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/NVIDIA-620.73.04-Linux",
+    "title_en": "NVIDIA 620.73.04 Linux Driver Released With Bug FIxes",
+    "summary_en": "Following the release of the NVIDIA 620.70.06 Linux driver from two weeks ago as their first public version in the R620 branch, the NVIDIA 620.73.04 is now the newest driver in that latest series...",
+    "pub_date": "Wed, 18 Nov 2026 12:10:40 -0500",
+    "title_zh": "NVIDIA 620.73.04 Linux 驱动发布，包含错误修复",
+    "summary_zh": "NVIDIA 发布了 R620 分支的最新驱动 620.73.04，距首个公开版本 620.70.06 发布仅两周。此次更新主要包含错误修复，更新日志仅提及“次要错误修复和改进”，未列出具体细节。新驱动已可从 NVIDIA 官网下载。",
+    "fulltext_zh": "在两周前发布 NVIDIA 620.70.06 Linux 驱动作为 R620 分支的首个公开版本之后，NVIDIA 620.73.04 现已成为该最新系列中的最新驱动。\n\nNVIDIA 620.73.04 驱动仅在前一版本基础上带来各种错误修复。事实上，似乎没有值得注意的内容，更新日志中唯一提及的是：\n\n“次要错误修复和改进”\n\n这个新的 NVIDIA Linux 驱动版本可从以下地址获取：\n\nNVIDIA 重点介绍其基于 Nova 构建的开源 vGPU 上游工作\nNVIDIA NvRoot 与 ForgePtr 漏洞针对 Linux 驱动公布，另有 25 个即将发布\nNVIDIA CEO 黄仁勋辞职\nNVIDIA CUDA 13.5 发布，为 Vera Rubin 提供生产支持\nNVIDIA 620.70.06 Linux 驱动发布，包含 Wayland 修复与性能优化工作\nCUDA Oxide 0.3 大幅改进对 NVIDIA CUDA 编程的 Rust 支持\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\n资深 Linux 开发者因 AI 引发的补丁洪流辞去部分职务\nCloudflare 开源 Kitesurf：其面向 AI 代理的网页浏览器\nOpenAI Codex 帮助发现并修复近 20 年历史的 Radeon Linux 驱动错误\nNVIDIA CEO 黄仁勋辞职\nRedox OS 实现 Golang 运行、GIMP 移植及简化 AI 政策\nRust 1.100 发布，“Never”类型终于稳定\nKDE Plasma 6.9 终于允许 XWayland 按需运行，新增晃动窗口预设\nJava4Shell 漏洞影响 OpenJDK Java，可导致远程代码执行\n\n同时享有无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "452fb43d4c9d701f7334306b0017a318": {
+    "id": "452fb43d4c9d701f7334306b0017a318",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Wine-OpenGL-Cross-Proc-Render",
+    "title_en": "Wine Merges Remote OpenGL Swapchain Image Presentation, CEF Now Works With Wayland",
+    "summary_en": "Merged for Wine 11.23 releasing next week is a big improvement and one that also improves the native Wayland driver support for Wine...",
+    "pub_date": "Wed, 18 Nov 2026 08:11:00 -0500",
+    "title_zh": "Wine 合并远程 OpenGL 交换链图像呈现，CEF 现可在 Wayland 下工作",
+    "summary_zh": "Wine 11.23 合并了远程 OpenGL 交换链图像呈现支持，在 WIN32U 代码中实现跨进程 OpenGL 渲染，同时适用于 X11 和 Wayland。该改进由 Rémi Bernon 主导，使基于 Chromium Embedded Framework 的应用能在原生 Wayland 驱动和 WineD3D 下正常渲染，缩小了 Wine on Wayland 与 X11 的差距。",
+    "fulltext_zh": "Wine 合并远程 OpenGL 交换链图像呈现，CEF 现可在 Wayland 下工作\n2026 年 11 月 18 日 08:11 AM EST 发布。\n\n为下周发布的 Wine 11.23 合并的一项重大改进，同时也改善了 Wine 的原生 Wayland 驱动支持。\n\n现在 Wine Git 中正在 WIN32U 代码里实现远程 OpenGL 交换链图像呈现。这在使用显示模拟时提供了 OpenGL 的跨进程渲染。\n\n这种在 Linux 上的 OpenGL 跨进程渲染同时适用于 X11 和 Wayland。但对于 Wayland 而言影响更为显著，因为它现在允许基于 Chromium Embedded Framework（CEF）的应用程序在原生 Wayland 驱动和 WineD3D 下正确渲染。\n\nWine 开发者 Rémi Bernon 主导了这项工作，经过过去两周的审查后，于周二进入 Wine Git。\n\n很高兴看到这些代码，尤其是考虑到 Wine 12.0 稳定版将于 2027 年初发布，进而 Valve Steam Play 的 Proton 12.0 也将随之推出。这使 Wine on Wayland 更接近与 X11 持平，鉴于 CEF 的广泛使用，这一点尤为重要。\n\n按照 Wine 的典型发布节奏，Wine 12.0 的候选版本应于 12 月开始。\n\nMesa 26.3 发布，为 RADV 带来 VK_AMD_anti_lag，以及许多其他 Vulkan 改进\nMesa 合并了一个通用 Vulkan 层，用于规避跨驱动游戏 bug\nRadeon RADV Vulkan 驱动采用 LLM 策略\nMesa 27.0 将默认对 Arm Mali GPU 切换到 Kraid 编译器\nMesa 放宽了关于 AI 代理在代码注释/提交信息中的规则\nAI 复活了 Mesa LLVMpipe 软件驱动的 AVX-512 支持\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\n资深 Linux 开发者因 AI 引发的补丁洪流辞去部分职务\nCloudflare 开源 Kitesurf：其面向 AI 代理的网页浏览器\nOpenAI Codex 帮助发现并修复近 20 年历史的 Radeon Linux 驱动 bug\nNVIDIA CEO 黄仁勋辞职\nRedox OS 让 Golang 可用，移植 GIMP 并简化 AI 政策\nRust 1.100 发布，“Never”类型终于稳定\nKDE Plasma 6.9 终于允许 XWayland 按需运行，新增晃动窗口预设\nOpenJDK Java 的 Java4Shell 漏洞可导致远程代码执行\n\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "9b742c2907fd6114c9d06a0bff7298e6": {
+    "id": "9b742c2907fd6114c9d06a0bff7298e6",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Multi-Kernel-mklinux-7.0-mk5",
+    "title_en": "Multikernel Linux Comes To ARM64, mklinux 7.0-mk5 Released",
+    "summary_en": "The out-of-tree Multikernel Linux patches for allowing multiple independent kernel instances to run on the same physical machine is out with a new version...",
+    "pub_date": "Wed, 18 Nov 2026 08:02:12 -0500",
+    "title_zh": "多内核 Linux 登陆 ARM64，mklinux 7.0-mk5 发布",
+    "summary_zh": "多内核 Linux 补丁发布 mklinux 7.0-mk5 版本，基于上游 Linux 7.0 内核。此次更新最大亮点是补丁扩展至 64 位 ARM（ARM64/AArch64）架构，此前仅支持 x86_64。新代码还改进了设备丢失与 DMA 限制处理、VT-d 集成、链式接管等方面。多内核架构可用于容错内核、在特定 CPU 核心上运行实时内核等非传统计算场景。",
+    "fulltext_zh": "多内核 Linux 补丁发布新版本，允许在同一物理机器上运行多个独立的内核实例。\n\n多内核架构对于容错内核用途、在特定 CPU 核心上运行实时（RT）内核以及其他非传统计算用途颇具吸引力。最近还通过 Kmorph 展示了多内核在无重启 Linux 内核崩溃恢复方面的应用。\n\n现已发布 mklinux 7.0-mk5，这是基于上游 Linux 7.0 内核的多内核补丁的最新迭代版本。此次多内核更新最值得注意的是，补丁已扩展至可在 64 位 ARM（ARM64 / AArch64）上运行。此前多内核仅能在 x86_64 硬件上工作，现在 ARM64 也可运行。\n\n更新后的多内核代码还在设备丢失与 DMA 限制、VT-d 集成工作、链式接管等方面有所改进。\n\n对多内核工作感兴趣的人可通过 7.0-mk5 公告了解更多信息。有关多内核工作本身的更多细节可在相关页面找到。"
+  },
+  "33a30107ddfa0d2aa7dafc1614ec42ce": {
+    "id": "33a30107ddfa0d2aa7dafc1614ec42ce",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/deepin-25-3-adds-freeze-protection-ai-improvements-and-better-recovery/",
+    "title_en": "Deepin 25.3 Adds Freeze Protection, AI Improvements, and Better Recovery",
+    "summary_en": "Deepin 25.3 introduces freeze protection, AI enhancements, and improved system recovery tools for a more reliable Linux desktop experience.\nThe post Deepin 25.3 Adds Freeze Protection, AI Improvements, and Better Recovery appeared first on Linux Today.",
+    "pub_date": "Wed, 18 Nov 2026 08:22:07 +0000",
+    "title_zh": "Deepin 25.3 新增冻结保护、AI 改进与更好的恢复功能",
+    "summary_zh": "Deepin 25.3 版本发布，引入冻结保护机制、AI 功能增强以及改进的系统恢复工具，旨在提供更可靠的 Linux 桌面体验。",
+    "fulltext_zh": "Deepin 25.3 引入了冻结保护、AI 增强功能以及改进的系统恢复工具，为用户带来更可靠的 Linux 桌面体验。\n\n文章《Deepin 25.3 新增冻结保护、AI 改进与更好的恢复功能》首发于 Linux Today。"
+  },
+  "e297272f3ad0bb69cc97251766fbd909": {
+    "id": "e297272f3ad0bb69cc97251766fbd909",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/linuxs-exfat-progs-1-4-4-adds-optional-i-o-statistics-collection-for-profiling/",
+    "title_en": "Linux’s exFAT Progs 1.4.4 Adds Optional I/O Statistics Collection for Profiling",
+    "summary_en": "exfatprogs 1.4.4 introduces optional I/O statistics collection for performance profiling, alongside improvements to Linux exFAT filesystem utilities.\nThe post Linux’s exFAT Progs 1.4.4 Adds Optional I/O Statistics Collection for Profiling appeared first on Linux Today.",
+    "pub_date": "Wed, 18 Nov 2026 08:20:15 +0000",
+    "title_zh": "Linux 的 exFAT Progs 1.4.4 新增可选的 I/O 统计收集功能以支持性能分析",
+    "summary_zh": "exfatprogs 1.4.4 版本发布，新增可选的 I/O 统计收集功能，用于性能分析，同时对 Linux exFAT 文件系统工具进行了多项改进。",
+    "fulltext_zh": "exfatprogs 1.4.4 引入了可选的 I/O 统计收集功能，用于性能分析，同时对 Linux exFAT 文件系统工具进行了改进。\n\n文章《Linux 的 exFAT Progs 1.4.4 新增可选的 I/O 统计收集功能以支持性能分析》首发于 Linux Today。"
+  },
+  "56d663027481276c9296e472d7ce2a40": {
+    "id": "56d663027481276c9296e472d7ce2a40",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/ardour-9-10-daw-released-with-waveform-and-automation-improvements/",
+    "title_en": "Ardour 9.10 DAW Released with Waveform and Automation Improvements",
+    "summary_en": "Ardour 9.10 brings waveform display improvements, refined automation controls, and bug fixes to the open-source digital audio workstation.\nThe post Ardour 9.10 DAW Released with Waveform and Automation Improvements appeared first on Linux Today.",
+    "pub_date": "Wed, 18 Nov 2026 08:16:31 +0000",
+    "title_zh": "Ardour 9.10 DAW 发布，带来波形与自动化改进",
+    "summary_zh": "开源数字音频工作站 Ardour 发布 9.10 版本，主要改进包括波形显示优化、自动化控制精细化以及多项错误修复，旨在提升音频编辑体验与工作流稳定性。",
+    "fulltext_zh": "Ardour 9.10 为这款开源数字音频工作站带来了波形显示改进、精细化的自动化控制以及错误修复。\n\n文章《Ardour 9.10 DAW 发布，带来波形与自动化改进》首发于 Linux Today。"
+  },
+  "17feae8f6a643ee14f3986d491e8e0e0": {
+    "id": "17feae8f6a643ee14f3986d491e8e0e0",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/ubuntu-core-26-now-available-for-testing-on-major-public-clouds/",
+    "title_en": "Ubuntu Core 26 Now Available for Testing on Major Public Clouds",
+    "summary_en": "Ubuntu Core 26 is available for testing on major public cloud platforms, giving developers early access to Canonical's immutable, snap-based operating system.\nThe post Ubuntu Core 26 Now Available for Testing on Major Public Clouds appeared first on Linux Today.",
+    "pub_date": "Wed, 18 Nov 2026 08:11:12 +0000",
+    "title_zh": "Ubuntu Core 26现已在主要公有云上开放测试",
+    "summary_zh": "Ubuntu Core 26现已在主要公有云平台开放测试，开发者可提前体验Canonical基于snap的不可变操作系统。",
+    "fulltext_zh": "Ubuntu Core 26现已在主要公有云平台开放测试，让开发者能够提前访问Canonical基于snap的不可变操作系统。\n\n文章《Ubuntu Core 26现已在主要公有云上开放测试》首发于Linux Today。"
+  },
+  "9abdc4cd238bffbe6fe87faa435ed632": {
+    "id": "9abdc4cd238bffbe6fe87faa435ed632",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/xorg-server-21-1-26-and-xwayland-24-1-15-are-out-to-patch-more-security-issues/",
+    "title_en": "XOrg Server 21.1.26 and Xwayland 24.1.15 Are Out to Patch More Security Issues",
+    "summary_en": "XOrg Server 21.1.26 and Xwayland 24.1.15 address security vulnerabilities, delivering important fixes for Linux desktop environments.\nThe post XOrg Server 21.1.26 and Xwayland 24.1.15 Are Out to Patch More Security Issues appeared first on Linux Today.",
+    "pub_date": "Wed, 18 Nov 2026 08:05:42 +0000",
+    "title_zh": "XOrg Server 21.1.26 与 Xwayland 24.1.15 发布，修复更多安全问题",
+    "summary_zh": "XOrg Server 21.1.26 和 Xwayland 24.1.15 已发布，主要针对安全漏洞进行修复，为 Linux 桌面环境提供重要更新。",
+    "fulltext_zh": "XOrg Server 21.1.26 和 Xwayland 24.1.15 修复了安全漏洞，为 Linux 桌面环境带来了重要修复。\n\n文章《XOrg Server 21.1.26 与 Xwayland 24.1.15 发布，修复更多安全问题》首先出现在 Linux Today。"
+  },
+  "b66617e70777108091169cdfb8c02395": {
+    "id": "b66617e70777108091169cdfb8c02395",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/debian-based-peppermint-os-updated-iso-now-available-with-xlibre",
+    "title_en": "Debian-Based Peppermint OS Updated ISO Now Available with XLibre",
+    "summary_en": "Debian-based Peppermint OS updated ISO images are now available for download with the latest Debian 13 \"Trixie\" updates and XLibre as default display server.\nThe post Debian-Based Peppermint OS Updated ISO Now Available with XLibre appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Wed, 18 Nov 2026 19:02:15 +0000",
+    "title_zh": "基于Debian的Peppermint OS更新ISO现已提供，默认搭载XLibre",
+    "summary_zh": "基于Debian的Peppermint OS发布了更新后的ISO镜像，包含最新的Debian 13 \"Trixie\"更新，并默认使用XLibre作为显示服务器。",
+    "fulltext_zh": "基于Debian的Peppermint OS更新ISO镜像现已可供下载，包含最新的Debian 13 \"Trixie\"更新，并默认使用XLibre作为显示服务器。\n\n文章《基于Debian的Peppermint OS更新ISO现已提供，默认搭载XLibre》首次出现在9to5Linux上——未经许可请勿转载本文。本RSS源旨在供读者使用，而非抓取者。"
+  },
+  "d402e2bf6ade426f4b8c62ad458544ea": {
+    "id": "d402e2bf6ade426f4b8c62ad458544ea",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/clamav-1-5-5-open-source-antivirus-engine-released-with-security-and-bug-fixes",
+    "title_en": "ClamAV 1.5.5 Open-Source Antivirus Engine Released with Security and Bug Fixes",
+    "summary_en": "ClamAV 1.5.5 open-source antivirus engine is now available for download as a patch release in the ClamAV 1.5 series that fixes several security issues and bugs.\nThe post ClamAV 1.5.5 Open-Source Antivirus Engine Released with Security and Bug Fixes appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Wed, 18 Nov 2026 17:30:02 +0000",
+    "title_zh": "ClamAV 1.5.5 开源杀毒引擎发布，包含安全与缺陷修复",
+    "summary_zh": "ClamAV 1.5.5 作为 1.5 系列的补丁版本现已开放下载，主要修复了若干安全问题与缺陷。",
+    "fulltext_zh": "ClamAV 1.5.5 开源杀毒引擎现已可供下载，这是 ClamAV 1.5 系列的一个补丁版本，修复了若干安全问题和缺陷。"
+  },
+  "7a07f3234666b9af3f0528462cdd880e": {
+    "id": "7a07f3234666b9af3f0528462cdd880e",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/system76s-thelio-prime-amd-linux-pc-is-here-with-pop_os-26-04-lts",
+    "title_en": "System76’s Thelio Prime AMD Linux PC Is Here with Pop!_OS 26.04 LTS",
+    "summary_en": "System76 unveils Thelio Prime as a Linux-powered mini PC running the Pop!_OS 26.04 LTS distribution with the COSMIC desktop environment.\nThe post System76&#8217;s Thelio Prime AMD Linux PC Is Here with Pop!_OS 26.04 LTS appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Wed, 18 Nov 2026 15:40:06 +0000",
+    "title_zh": "System76 推出搭载 Pop!_OS 26.04 LTS 的 Thelio Prime AMD Linux PC",
+    "summary_zh": "System76 发布 Thelio Prime，这是一款搭载 AMD 处理器的 Linux 迷你 PC，预装 Pop!_OS 26.04 LTS 发行版和 COSMIC 桌面环境。该产品面向 Linux 用户，提供完整的开源桌面体验。",
+    "fulltext_zh": "System76 发布 Thelio Prime，这是一款运行 Pop!_OS 26.04 LTS 发行版并搭载 COSMIC 桌面环境的 Linux 迷你 PC。"
+  },
+  "05b60b6135beb25d9916a9304aa767b4": {
+    "id": "05b60b6135beb25d9916a9304aa767b4",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/arch-linux-based-devario-os-sees-first-stable-release",
+    "title_en": "Arch Linux-Inspired Devario OS Sees First Stable Release",
+    "summary_en": "Devario OS Linux distribution sees its first stable release featuring the Aqueous dynamic tiling Wayland compositor, Pearl shell, and Shelly package manager.\nThe post Arch Linux-Inspired Devario OS Sees First Stable Release appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Wed, 18 Nov 2026 13:05:49 +0000",
+    "title_zh": "受 Arch Linux 启发的 Devario OS 迎来首个稳定版本",
+    "summary_zh": "Devario OS 是一个受 Arch Linux 启发的 Linux 发行版，现已发布首个稳定版本。该版本采用 Aqueous 动态平铺 Wayland 合成器、Pearl 桌面外壳以及 Shelly 包管理器，为用户提供全新的桌面体验。",
+    "fulltext_zh": "Devario OS Linux 发行版迎来首个稳定版本，采用 Aqueous 动态平铺 Wayland 合成器、Pearl 桌面外壳以及 Shelly 包管理器。\n\n文章《受 Arch Linux 启发的 Devario OS 迎来首个稳定版本》首发于 9to5Linux——未经许可请勿转载本文。本 RSS 源面向读者，而非抓取程序。"
+  },
+  "9103dc7e8efd04c8856a21b1dc494ca2": {
+    "id": "9103dc7e8efd04c8856a21b1dc494ca2",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/first-look-at-cachyos-package-installer-2-0-modern-ui-aur-flatpak-appimage-support",
+    "title_en": "First Look at CachyOS Package Installer 2.0: Modern UI, AUR, Flatpak, AppImage Support",
+    "summary_en": "A first look at CachyOS Package Installer 2.0 featuring a revamped and modern UI, as well as AUR, Flatpak, and AppImage support.\nThe post First Look at CachyOS Package Installer 2.0: Modern UI, AUR, Flatpak, AppImage Support appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Wed, 18 Nov 2026 07:59:56 +0000",
+    "title_zh": "CachyOS 软件包安装器 2.0 初探：现代 UI，支持 AUR、Flatpak、AppImage",
+    "summary_zh": "CachyOS 发布了软件包安装器 2.0 的首次预览，该版本带来了全新的现代化用户界面，并新增对 AUR、Flatpak 和 AppImage 的支持，旨在为用户提供更统一、便捷的软件安装体验。",
+    "fulltext_zh": "CachyOS 软件包安装器 2.0 初探，其特点是经过改进的现代化 UI，以及对 AUR、Flatpak 和 AppImage 的支持。\n\n文章《CachyOS 软件包安装器 2.0 初探：现代 UI，支持 AUR、Flatpak、AppImage》首先出现在 9to5Linux 上——未经许可不得转载本文。本 RSS 源面向读者，而非抓取者。"
   }
 }

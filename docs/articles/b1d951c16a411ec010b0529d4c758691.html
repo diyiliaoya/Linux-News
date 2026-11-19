@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proton的Lumo终于变得实用，让我们对真正的隐私AI充满希望 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月19日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">桌面环境</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Proton的Lumo终于变得实用，让我们对真正的隐私AI充满希望</h1>
+
+  <div class="article-summary">Proton推出了跨平台桌面版Lumo AI助手，支持访问本地文件、Shell以及Google Drive和Jira等应用，并新增了任务调度、自定义指令和MCP服务器支持。用户还可通过付费的Proton Mail Bridge连接邮箱，实现邮件摘要等功能。尽管存在一些小问题，但整体体验令人满意，为隐私优先的AI助手带来了实用价值。</div>
+
+  <div class="article-body"><p>Proton的Lumo终于变得实用，让我们对真正的隐私AI充满希望</p><p>这款注重隐私的AI助手可与你的桌面文件协作，并需要付费服务才能集成Proton Mail。</p><p>如你所知，Lumo是Proton旗下以猫为主题的AI助手，定位为Gemini、ChatGPT和Claude等产品的隐私替代方案。</p><p>你 already 可以在网页端以及Android和iOS应用中使用它。但现在，Proton为Lumo推出了一款跨平台桌面应用，覆盖大多数主流桌面平台。</p><p>这款应用并非从零开始，而是将Lumo网页应用放入Tauri窗口，并加上了与你的计算机交互的部分。Proton以GPL-3.0许可证发布了这个封装程序，而网页应用则位于其独立的代码库中。</p><p>无论如何，我进行了一次测试运行，看看它在Linux系统上的表现，具体来说是我日常使用的Fedora Workstation。</p><p>迟来但受欢迎的登场</p><p>首次打开应用的感觉就像使用[Proton Drive](https://www.proton.com/drive)桌面客户端。它有托盘图标、一些新设置，以及一个熟悉的方形按钮，可快速访问其他Proton服务，如[Proton Mail](https://www.proton.com/mail)和[Proton Calendar](https://www.proton.com/calendar)。</p><p>桌面应用获得了许多实用功能，比如[Lumo工具](https://lumo.proton.me/tools)，Lumo可以访问你的文件和Shell，以及Google Drive和Jira等应用。</p><p>通过[自定义指令](https://lumo.proton.me/custom-instructions)，你可以存储指令和支持文件供Lumo在后续聊天中使用，现有的[项目](https://lumo.proton.me/projects)会自动继承这些内容，而通过[任务](https://lumo.proton.me/tasks)，你可以让Lumo在设定时间处理重复性工作。</p><p>还支持MCP服务器，让你可以将自己的本地/远程工具连接到Lumo。在下面的所有测试中，我使用了[Lumo桌面应用](https://lumo.proton.me/desktop)。</p><p>调度一些任务</p><p>“任务”标签页让你概览Lumo能为你处理哪些类型的任务。点击“新建任务”按钮可以手动设置，或让Lumo创建；我选择了第二种。</p><p>我让它在一周的特定日期从开源、Linux及几个相关类别中获取新闻，Lumo通过几个选择题引导我完成了细节设置。</p><p>调整参数也毫无阻力！</p><p>然后我让它仅在工作日运行并保持摘要简短，这又生成了第二个任务。Lumo说它已替换了旧任务，但两个任务在任务页面上仍然都处于活动状态。</p><p>不过执行测试运行效果非常好，Lumo给出了一些有用的线索。我问它摘要会发送到哪里；它说会以聊天形式出现。当我问新闻是否过时时，它说有几条可以追溯到10月下旬。</p><p>连接Proton Mail</p><p>接下来，我连接了Proton Mail，以便Lumo可以浏览我的收件箱。这需要先设置付费的[Proton Mail Bridge](https://proton.me/mail/bridge)，由于我有付费的Proton Mail套餐，我继续安装、登录，并将其邮箱详细信息复制到连接器中。</p><p>Bridge同步我的邮件花了很长时间，我不得不等待它完成。</p><p>连接后，我问Lumo它能对我的收件箱做什么。它说可以列出和搜索邮件、起草和发送邮件，但无法读取附件或管理标签和文件夹。</p><p>然后我让它总结过去两周收到的新闻稿，跳过线程回复。这花了一些时间，但摘要很好，还包括两篇我尚未读过的文章。</p><p>如前所述，[Lumo桌面应用](https://lumo.proton.me/desktop)适用于Linux、macOS和Windows。如果你使用Linux，可以选择[DEB](https://proton.me/download/lumo/desktop/Lumo-Desktop-v1.0.0.deb)或[RPM](https://proton.me/download/lumo/desktop/Lumo-Desktop-v1.0.0.rpm)包。</p><p>对于基于Debian/Ubuntu的发行版，安装包括以下步骤：</p><p>下载DEB包。</p><p>右键点击并通过[软件安装](https://help.ubuntu.com/stable/ubuntu-help/addremove-install.html.en)执行它。</p><p>然后使用大绿色按钮安装并输入你的账户密码。</p><p>Ubuntu（左）和Fedora（右）安装。</p><p>对于Fedora，安装包括以下步骤：</p><p>下载RPM包。</p><p>右键点击并通过[软件安装](https://docs.fedoraproject.org/en-US/fedora/latest/desktop/)执行它。</p><p>然后验证详细信息并输入账户密码后，点击“安装”按钮进行安装。</p><p>不过，请记住，你需要在默认网页浏览器中登录你的Proton账户，因为身份验证是通过该浏览器进行的。另外，确保及时完成验证，否则登录链接将过期。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/proton-lumo-desktop/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

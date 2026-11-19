@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soverin Suite加入欧洲公司出售“主权即服务”的浪潮 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月19日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Soverin Suite加入欧洲公司出售“主权即服务”的浪潮</h1>
+
+  <div class="article-summary">荷兰电子邮件提供商Soverin推出Soverin Suite，将Nextcloud和Euro-Office等欧洲开源软件打包成托管式Microsoft 365替代方案，数据完全托管在荷兰。该平台面向中小企业、自由职业者和家庭用户，提供邮箱、日历、文件、文档编辑、聊天和视频通话等功能，起价每许可证每月10欧元。Soverin强调其ISO认证和NIS2合规性，旨在降低用户从微软或谷歌迁移的门槛。</div>
+
+  <div class="article-body"><p>Soverin Suite加入欧洲公司出售“主权即服务”的浪潮</p><p>这家荷兰电子邮件提供商现在将Nextcloud和Euro-Office捆绑成一个完全托管在荷兰的托管式Microsoft 365替代方案。</p><p>摆脱Microsoft 365或Google Workspace说起来容易。真正做起来完全是另一回事。有人得搭建服务器、保持补丁更新、迁移邮件，然后教人们使用新软件——这大概是最难的部分。</p><p>这正是新一代欧洲公司试图填补的空白。他们不从零编写软件，而是采用Nextcloud和Euro-Office等开源工具，在欧洲硬件上运行，并将其作为即用型服务出售，套餐中包含支持。</p><p>我想把它称为新的SaaS：主权即服务。</p><p>最新加入这个新SaaS阵营的是Soverin，一家专注于隐私的荷兰电子邮件提供商，它刚刚推出了Soverin Suite：基于3款欧洲开源软件构建的协作平台。</p><p>Soverin Suite是一个面向中小企业、自由职业者和家庭的数字工作空间。它将电子邮件、日历、文件、文档、电子表格、演示文稿、聊天和视频通话整合在一个登录入口之后。</p><p>在底层，它是三款欧洲软件的结合体。Soverin负责电子邮件，自2014年以来一直在荷兰运营此项业务。</p><p>提供协作平台。</p><p>是文档编辑器。</p><p>Nextcloud部分由Greenhost运营，这是一家荷兰托管公司，也是Soverin的姊妹公司。因此数据留在荷兰。</p><p>Soverin还指出其拥有ISO 27001（信息安全）、ISO 9001（质量管理）和ISO 14001（环境管理）认证，并符合NIS2——欧盟针对基本和重要组织的网络安全指令。考虑到欧盟在政策和法律方面的严格程度，这些徽章增加了一层额外的信任。</p><p>每许可证每月10欧元（不含增值税，按年计费），每个许可证一个邮箱和1 TB共享文件存储（相比之下，仅电子邮件计划为50 GB）。如果您只需要电子邮件、日历和文件，而不需要Euro-Office和聊天，Mail Pro计划每许可证每月4欧元，您可以在一个账户中混合使用两种许可证类型。</p><p>我联系了Soverin提出几个问题，Soverin首席执行官兼联合创始人Diana Krieger回答了这些问题。我问她Soverin Suite是Euro-Office的分支还是白标版本。答案都不是。她说Soverin完全按照社区构建的方式运行Euro-Office，因此安全修复和新功能会及时落地。</p><p>“私人分支会分散欧洲试图汇聚的努力……”</p><p>Soverin设计的是自定义皮肤，使编辑器看起来和感觉像其电子邮件客户端，并将一切连接到单点登录（SSO，一个账户登录所有服务）。当员工加入或离开时，管理员只需添加或删除一个账户，而不是五个。</p><p>这听起来可能是小事，但并非如此。“主权只有在人们真正愿意使用时才有效，”Krieger说。熟悉的外观和一个密码降低了那些在Outlook中度过十年的人的门槛。</p><p>为什么不直接自托管Nextcloud？</p><p>这是很多读者会问的问题。Nextcloud是免费开源的，我们很多人已经在家庭服务器上运行它。</p><p>Krieger的回答坦诚地说明了Soverin的客户是谁。大多数小企业、自由职业者和家庭没有IT部门来运行服务器、打补丁和保障电子邮件安全。用她的话说，</p><p>“自托管只有在你具备相应技能时才能给你自主权。”</p><p>这就是这里角度的核心。开源软件，特别是自托管软件，消除了许可证锁定，但它并没有消除有人部署、维护和支持使用者的需求。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/soverin-suite-sovereignty-as-a-service/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
