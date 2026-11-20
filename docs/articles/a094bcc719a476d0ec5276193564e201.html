@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>在Ubuntu上检查便宜SD卡或USB驱动器是否为假货 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月20日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>在Ubuntu上检查便宜SD卡或USB驱动器是否为假货</h1>
+
+  <div class="article-summary">本文介绍了在Ubuntu上使用开源工具F3（Fight Flash Fraud）检测USB驱动器或SD卡实际容量的方法。文章解释了假货通过篡改控制器虚标容量，导致数据丢失的风险，并详细说明了安装F3、使用f3probe快速检测以及f3write/f3read进行完整验证的步骤，提醒用户操作前备份数据并确认设备路径。</div>
+
+  <div class="article-body"><p>在Ubuntu上检查便宜SD卡或USB驱动器是否为假货 - OMG! Ubuntu</p><p>Fight Flash Fraud（F3）是一个开源工具，用于检查USB驱动器或SD卡是否具有标签上声称的容量。</p><p>随着存储卡和USB驱动器价格的下降，来自不熟悉品牌的廉价商品或二手网站上的赠品交易可能让人难以抗拒。但要小心便宜的假货，其容量远低于标签所示，也远低于你以为得到的。骗子会修改存储设备的控制器，使你的电脑报告一个伪造的值，例如512GB，即使实际只有32GB。</p><p>你可能只有在最糟糕的时候才会发现它有问题：当你以为已保存的文件无法打开时。大多数这些假驱动器即使没有足够空间容纳文件，也会继续接受文件传输。无法复制的文件会被静默丢弃，或者现有文件被覆盖。在向设备复制时，这些都不明显。</p><p>一位Windows开发者因为购买了无数假冒容量的设备而烦恼，于是创建了一个名为h2testw的工具来帮助他人检测假闪存设备。作为Linux上的h2testw替代品，F3在一个开源软件包中实现了相同的算法。</p><p>在Ubuntu上安装F3</p><p>F3可以通过apt从软件仓库安装在Ubuntu（Linux Mint、Zorin OS等）上：</p><p>F3是一组命令行实用程序，而不是带有GUI的桌面应用程序，因此你不会在应用程序启动器中找到它的快捷方式。不要因此退缩；只要你注意自己在做什么，从命令行使用它很容易。</p><p>有两个特定的工具用于检查驱动器是否为假货。f3write和f3read依次使用。第一个用测试文件填满驱动器的（剩余）可用空间，第二个验证所有应该存在的数据是否都在。这种方法总体上稍慢，并且会增加写入磨损。</p><p>f3probe更快。此模式直接测试驱动器，以不同的方式写入数据，告诉你控制器声称的容量是否合法。这个工具在较大的存储设备上更有用，例如，写入512个1GB测试文件需要一段时间。</p><p>无论你选择哪个工具，都要聪明一点。如果你正在测试一个包含你无法丢失内容的设备，请在开始之前复制出任何你想保留的内容——不要只是点头想着“当然”；以防万一，去做吧！</p><p>使用f3probe运行快速检查</p><p>在Linux上检查假USB驱动器</p><p>插入你的设备，并通过lsblk记下它的驱动器路径。绝对确保你使用的是正确的路径——通过df再次确认。不要盲目复制我下面命令中的任何示例驱动器路径，因为你的驱动器会在不同的路径上。</p><p>对于f3probe模式，你需要将完整设备路径传递给命令，而不是分区挂载点。例如，你会给它：</p><p>sudo f3probe /dev/xyz</p><p>在连接到高速端口的快速设备上，检查可能需要几分钟，但在较慢（或较便宜）的存储器上可能需要长达15分钟。让它自行运行，完成后它会告诉你它发现了什么。</p><p>如果你的设备是正品，一切正常，f3probe会用一个“好消息”字符串确认：</p><p>Good news: The device `/dev/xyz' is the real thing</p><p>如果情况不对，你会在终端中看到如下字符串：</p><p>Bad news: The device `/dev/xyz' is a counterfeit of type limbo</p><p>这个假货输出还会显示一个命令，你可以（可选地）运行来修复它。它将创建一个新分区，其大小为设备的实际大小，而不是重新编程的存储控制器报告的大小。</p><p>修复会擦除设备，所以……要小心。</p><p>运行更全面的检查以验证</p><p>读写较慢，但更彻底</p><p>要进行彻底的容量检查，请使用f3write和f3read。你需要给f3write你的驱动器的挂载点（它在文件管理器中显示的文件夹）。这通常是类似/media/username/DRIVE的路径。</p><p>一如既往，在输入任何内容之前检查lsblk的输出，并通过df再次确认是正确的设备。</p><p>打开终端并运行：</p><p>f3write /media/device/</p><p>设备的剩余可用空间将被1GB文件填满，文件名类似于0001.f3。CLI会显示进度条，以便你知道需要多长时间。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/check-fake-usb-drive-sd-card-ubuntu" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

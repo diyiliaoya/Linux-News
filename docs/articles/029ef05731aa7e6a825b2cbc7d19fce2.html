@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linux 7.5 将可选阻止 /proc/kcore 访问以增强安全性 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月20日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Linux 7.5 将可选阻止 /proc/kcore 访问以增强安全性</h1>
+
+  <div class="article-summary">Linux 7.5 内核将引入新的启动参数 kcore=，允许在启动时可选禁用 /proc/kcore 访问。该文件可暴露系统物理内存和内核虚拟地址空间，仅限 root 或拥有 CAP_SYS_RAWIO 的进程访问。新选项默认开启，旨在为需要更高安全性的主机提供灵活控制，同时保留同一内核镜像用于调试等合法用途。</div>
+
+  <div class="article-body"><p>Linux 7.5 将可选阻止 /proc/kcore 访问以增强安全性</p><p>2026年11月19日 下午5:03 EST 发布。</p><p>一项已排队等待 Linux 7.5 合并窗口的补丁允许在启动时可选禁用 /proc/kcore 访问。这可以提升系统安全性，但对于典型内核构建，该功能默认仍保持启用。这个虚拟只读文件能够以 ELF 核心转储格式提供系统物理内存和内核虚拟地址空间的全部内容。/proc/kcore 文件确实有合法用途，例如实时内核调试、内存取证、ELF 检查等。对 /proc/kcore 的访问仅限于 root 或 otherwise 拥有 CAP_SYS_RAWIO 的进程，因为访问整个物理内存和内核虚拟地址空间是一件相当重要的事情。在 Linux 7.5 中，/proc/kcore 的访问将在启动时可选地进一步受限。</p><p>Chris Down 编写了一个补丁，允许通过 kcore= 启动参数在启动时禁用 /proc/kcore（前提是内核构建首先启用了 CONFIG_PROC_KCORE）。默认值为开启。Chris 在补丁说明中提供了理由：</p><p>“/proc/kcore 允许任何拥有 CAP_SYS_RAWIO 的进程读取所有内核内存。对于任何获得 CAP_SYS_RAWIO 的人来说，这是一个相当大的读取原语（而且它还会泄露 KASLR 布局）。</p><p>因此，在某些主机上我们希望关闭 /proc/kcore。就可读取的内容而言，/proc/kcore 并不比其他读取内核内存的方式更令人担忧，比如使用 CAP_BPF 和 CAP_PERFMON 的 BPF。区别在于，拥有 CAP_SYS_RAWIO 的进程不一定拥有 CAP_BPF 和 CAP_PERFMON，因为可能需要 CAP_SYS_RAWIO 进行硬件访问，而不一定想要授予通用 RAM 访问权限。CONFIG_STRICT_DEVMEM 已经使 /dev/mem 可以实现这一点，但 /proc/kcore 无论如何都提供了相同的通用 RAM 读取能力。</p><p>然而，在使用 CONFIG_PROC_KCORE=y 构建的内核上，目前阻止它的唯一方法是 lockdown=confidentiality（这还会禁用许多我们可能不想禁用的其他功能，比如 kprobes 和 bpf_probe_read_kernel()），或者使用 LSM。这很烦人，因为在大多数主机上，我们确实希望为 drgn/crash 等工具保持启用，所以今天我们构建了两个独立的内核。</p><p>让我们添加一个 “kcore=” 启动参数，以便可以在启动时禁用它，这让我们在使用同一内核镜像的同时保留这些选择。”</p><p>该补丁昨天被纳入 vfs/vfs.git 的 vfs-7.5.procfs Git 分支。随着这个 kcore= 选项的补丁现已进入 VFS 7.5 分支，预计它将在仅一个多月后举行的 Linux 7.5 合并窗口中被提交。</p><p>多内核 Linux 登陆 ARM64，mklinux 7.0-mk5 发布</p><p>RBRD：用 Rust 编写的 RAM 支持型 Linux 块驱动，安全性更好但性能较慢</p><p>NVIDIA 工程师致力于新的用户空间 Linux 控制以指定首选 CPU 核心</p><p>Linux 7.4-rc3 发布：“到处都是常见的噪音”</p><p>Linux 7.5 将包含新的 hwpoison-panic 工具，用于故意使系统崩溃</p><p>Linux 7.5 将为新 Glanda GPU 上游驱动</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Cloudflare 开源 Kitesurf：其面向 AI 代理的网页浏览器</p><p>OpenAI Codex 帮助发现并修复近 20 年历史的 Radeon Linux 驱动漏洞</p><p>Redox OS 让 Golang 工作，GIMP 移植及简化 AI 政策</p><p>NVIDIA CEO 黄仁勋辞职</p><p>Rust 1.100 发布，“Never” 类型终于稳定</p><p>Java4Shell 漏洞影响 OpenJDK Java，可导致远程代码执行</p><p>Xfce 4.22 正在推进</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.5-Restrict-proc-kcore" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

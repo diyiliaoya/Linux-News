@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLVM 历经近十年努力，重新许可工作基本完成 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月20日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>LLVM 历经近十年努力，重新许可工作基本完成</h1>
+
+  <div class="article-summary">LLVM 项目自 2017 年起推动将代码重新许可为 Apache 2.0 with LLVM exception，以替代原有的类 BSD 许可证。经过近十年努力，超过 99.5% 的历史贡献代码已完成转换，1300 多名个人贡献者和约 100 家组织同意了重新许可。自 2019 年起新贡献已采用新许可证，LLVM 25 将更新许可证文件和相关文档。</div>
+
+  <div class="article-body"><p>LLVM 历经近十年努力，重新许可工作基本完成</p><p>发布于 2026 年 11 月 19 日下午 4:02（美国东部时间）。</p><p>大约在 2017 年，一项工作开始启动，旨在将所有 LLVM 代码重新许可为 Apache 2.0 许可证（含例外条款），从而摆脱此前类似 3 条款 BSD 的“LLVM 许可证”。此前的相关进展包括：</p><p>LLVM 开发者仍在推进其大规模的重新许可工作</p><p>LLVM 仍在进行重新许可，需要帮助寻找部分过往贡献者</p><p>（2021 年）……如今，随着 2026 年接近尾声，这项重新许可工作终于被认定基本完成。</p><p>Kristof Beyls 今天发文称，他们正在收尾 LLVM 重新许可工作。目前，曾贡献给 LLVM 的代码中超过 99.5% 已纳入 Apache 2.0 with LLVM exception 许可证的覆盖范围。</p><p>自 2019 年以来，新的 LLVM 贡献一直采用 Apache 2.0 with LLVM exception 许可证，但追踪所有 2019 年之前的贡献者以征求重新许可同意，最终成了一件耗时近十年的事情。</p><p>超过 1300 名个人贡献者和约 100 家组织同意对其历史贡献进行重新许可。</p><p>“LLVM 漫长的重新许可工作已接近完成：曾贡献给 LLVM 的所有代码中，超过 99.5% 现在已纳入 Apache-2.0 WITH LLVM-exception 许可证的覆盖范围，或已从代码库中移除，或规模太小不足以受版权保护。我们认为这是一个合适的时机宣布该工作完成。</p><p>自 2018 年起，我们一直在请求过往贡献者对其作品进行重新许可。自 2019 年 1 月 19 日起，新贡献均以 Apache-2.0 WITH LLVM-exception 许可证提交。该日期之前贡献的代码受 LLVM 早期许可证（UIUC/NCSA，部分运行时库为 MIT）约束，因此我们需要获得作者许可才能将其迁移过来。”</p><p>有关这项已完成工作的更多细节，请见相关链接。对于 2027 年的 LLVM 25，将更新 LICENSE 文件及其他文档，以指向统一的 Apache 2.0 with LLVM exception 许可证。</p><p>Apple 向 LLVM Clang 贡献 SSAF 驱动以进行源代码转换</p><p>AMD 向上游 LLVM Clang 24 提交 AVX10_V2_AUX 支持</p><p>DirectX 支持被提升为 LLVM 内的官方目标</p><p>LLVM 开发者讨论默认启用 ClangIR 构建</p><p>LLVM 开发者开始就帮助 AI 代理的 AGENTS.md 展开讨论</p><p>LLVM 改进 Zen 1 / Zen 2 支持以应对“出了名糟糕”的 PDEP/PEXT</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Cloudflare 开源 Kitesurf：其面向 AI 代理的网页浏览器</p><p>OpenAI Codex 帮助发现并修复近 20 年历史的 Radeon Linux 驱动漏洞</p><p>Redox OS 实现 Golang 运行、移植 GIMP 并简化 AI 政策</p><p>NVIDIA CEO 黄仁勋辞职</p><p>Rust 1.100 发布，“Never”类型终于稳定</p><p>OpenJDK Java 的 Java4Shell 漏洞可导致远程代码执行</p><p>Xfce 4.22 正朝着 2027 年初发布推进</p><p>KDE Plasma 6.9 终于允许 XWayland 按需运行，新增摇摆窗口预设</p><p>同时享受无广告浏览、</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/LLVM-Re-Licensing-Complete" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
