@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>System76 Thelio Prime：一款小巧但性能强劲的AMD平台Linux PC — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月21日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">桌面环境</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>System76 Thelio Prime：一款小巧但性能强劲的AMD平台Linux PC</h1>
+
+  <div class="article-summary">System76推出全新Thelio Prime迷你台式机，体积仅9.78升，最高搭载AMD Ryzen 9 9900X处理器、AMD或NVIDIA独立显卡、96GB DDR5内存及16TB NVMe存储。机箱由科罗拉多工厂以全铝和不锈钢打造，采用磁吸侧板与独立风道设计，兼顾散热与性能，延续开源硬件设计。</div>
+
+  <div class="article-body"><p>System76 Thelio Prime：一款小巧但性能强劲的AMD平台Linux PC评测 - Phoronix</p><p>System76 Thelio Prime：一款小巧但性能强劲的AMD平台Linux PC</p><p>2026年11月20日美国东部时间上午11:38发布。</p><p>在上个月预告了新款System76 Thelio Prime之后，本周他们正式推出了重新设计的Thelio Prime迷你台式机。这款由AMD Ryzen 9000系列驱动的产品体积非常小巧，内部容积仅为9.78升，但性能相当强悍，最高支持Ryzen 9 9900X，可选AMD或NVIDIA独立显卡，最高96GB内存，以及最高16TB的NVMe存储。过去几天我一直在测试新款Thelio Prime，到目前为止它表现优异，堪称他们迄今最好的紧凑型PC之一。</p><p>新款System76 Thelio Prime的体积约为原版Thelio Prime PC的一半，但在性能或品质上毫不妥协。新Thelio Prime机箱继续由他们在科罗拉多州的工厂自行制造，完全采用铝和不锈钢以及烟熏钢化玻璃前面板——没有任何塑料部件！它遵循了今年早些时候发布的、此前评测过的PC重新设计风格。虽然有些人可能会怀念原版Thelio机型的木质美学，但这些美国制造的机箱做工质量依然一流。</p><p>Thelio Prime可横向或纵向放置。</p><p>新款Thelio Prime最高可配备Ryzen 9 9900X——包括Zen 5架构的Ryzen X3D型号，显卡可选Radeon RX 9060 XT / GeForce RTX 5060 Ti / GeForce RTX 5070，最高96GB DDR5内存，以及最高16TB的NVMe SSD存储。</p><p>与System76其他自研硬件一样，新Thelio Prime机箱依然是开源硬件设计。</p><p>为了在这款小型PC上不牺牲性能/散热，System76采取了一种有趣的方式：显卡和CPU/主板区域在机箱两侧各有专用且独立的进气口。显卡最终通过PCIe延长线连接在主板后方。</p><p>与今年早些时候评测的重新设计的Thelio Major和Thelio Mira系统类似，新Thelio Prime利用磁铁实现侧板的快速拆装。</p><p>这是一款相当独特的紧凑型Linux PC，在设计上做了大量考量以不牺牲散热和性能。因此它也是Phoronix测试的一个有趣目标。</p><p>Framework Laptop 12搭载Intel Core 3 Wildcat Lake，性能与能效提升</p><p>Star Labs StarFighter Ultra：一款搭载Coreboot的现代高端Linux笔记本</p><p>CHUWI UniBook搭载Intel Wildcat Lake，售价449美元的Linux友好笔记本</p><p>HP Z4 G6i：搭载Intel Xeon 600系列的Linux友好工作站</p><p>Framework Laptop 16配备GeForce RTX 5070 12GB、一体式键盘与触觉触控板</p><p>Framework Laptop 13 Pro：旨在成为最佳可升级Linux笔记本之一</p><p>同时享受无广告浏览、</p><p>单页文章视图</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/review/system76-thelio-prime" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

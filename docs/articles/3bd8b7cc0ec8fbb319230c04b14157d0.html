@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intel 为 Linux 7.5 准备变更以更好地处理大显存多 GPU 配置 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月21日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Intel 为 Linux 7.5 准备变更以更好地处理大显存多 GPU 配置</h1>
+
+  <div class="article-summary">Intel 工程师提交变更，将内核图形驱动中 GEM/TTM 缓冲对象的 mmap 范围从 1TB 扩大到 8TB，以解决多 GPU 系统大显存下跨设备 dma-buf 导入耗尽 1TB 偏移空间导致缓冲创建失败的问题。该变更已进入 drm-misc-next 拉取请求，预计随 Linux 7.5 内核合入。</div>
+
+  <div class="article-body"><p>Intel 为 Linux 7.5 准备变更以更好地处理大显存多 GPU 配置</p><p>2026 年 11 月 20 日下午 2:41（美国东部时间）。</p><p>一项将随即将到来的 Linux 7.5 内核周期合入的变更集，将内核图形驱动中 GEM/TTM 缓冲对象的 mmap 范围大小从 1TB 扩大到最高 8TB。</p><p>将上限从 1TB 提高到 8TB 是为了支持拥有大量显存的多 GPU 配置。该变更由 Intel 完成，从补丁的时间点推测，可能是为每卡最高 160GB LPDDR5X 的配置做准备。</p><p>Intel Linux GPU 驱动工程师 Matthew Auld 解释称：</p><p>“每个 GEM/TTM 缓冲对象（包括导入的 dma-buf）都会从每设备的 drm_vma_offset_manager 分配一个伪造的 mmap 偏移。在拥有大显存的多 GPU 系统上，跨设备和跨进程的点对点 dma-buf 导入可能耗尽当前 1 TiB 的 64 位范围，导致缓冲对象创建或 PRIME 导入失败并返回 -ENOSPC。跳过为导入的 sg 缓冲分配 mmap 偏移并不简单，且可能带来用户空间回归风险，因为现有用户空间（如 Intel compute-runtime）在直接映射 dma-buf fd 时仍会查询导入的主机 dma-buf 的 mmap_offset。</p><p>在 64 位内核上增大 DRM_FILE_PAGE_OFFSET_SIZE，使伪造偏移范围最高可达 8 TiB（SZ_8T）。这仍严格低于 panthor 的 DRM_PANTHOR_USER_MMIO_OFFSET_32BIT（1ULL &lt;&lt; 43）保留区，并处于 32 位兼容 mmap2 的 pgoff 限制（4K 页时为 16 TiB）之内。”</p><p>将 DRM_FILE_PAGE_OFFSET_SIZE 上限提高到 8TB 的变更通过本周的 drm-misc-next 拉取请求进入 Linux 7.5。</p><p>相关报道：</p><p>Intel 介绍 GPU D270 性能与开源软件支持</p><p>Intel 开始为 Coral Rapids 和 Razor Lake 进行 Linux 内核适配</p><p>Intel 发布 Razor Lake 和 Coral Rapids 的初始 GCC 编译器代码</p><p>Intel Xe 驱动为 vGPU 配置准备 SR-IOV 供应</p><p>Intel 继续为 Linux 7.5 启用 GPU D 系列“Crescent Island”驱动支持</p><p>Intel 发布新 CPU 微码以修复多种功能问题</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。</p><p>其他新闻：</p><p>Cloudflare 开源 Kitesurf：其面向 AI 代理的网页浏览器</p><p>OpenAI Codex 帮助发现并修复近 20 年的 Radeon Linux 驱动漏洞</p><p>影响 OpenJDK Java 的 Java4Shell 漏洞可导致远程代码执行</p><p>Redox OS 让 Golang 可用、移植 GIMP 并简化 AI 政策</p><p>NVIDIA CEO 黄仁勋辞职</p><p>Rust 1.100 发布，“Never”类型终于稳定</p><p>Xfce 4.22 朝着 2027 年初发布推进</p><p>KDE Plasma 6.9 终于允许 XWayland 按需运行，新增摇摆窗口预设</p><p>享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-7.5-DRM-8TB-mmap" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

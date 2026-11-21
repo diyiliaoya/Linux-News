@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>挑战红帽？Ubuntu 现在有了官方系统管理员认证 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月21日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>挑战红帽？Ubuntu 现在有了官方系统管理员认证</h1>
+
+  <div class="article-summary">Canonical 宣布其 Ubuntu 系统管理员认证轨道的四门考试全部上线，涵盖 Linux 基础到 DevOps 原则。考试在线进行，包含选择题、场景题和实操任务，通过全部四门可获得官方认证。为庆祝发布，使用优惠码可享 10% 折扣，有效期至 1 月 10 日。</div>
+
+  <div class="article-body"><p>挑战红帽？Ubuntu 现在有了官方系统管理员认证</p><p>Ubuntu 现在提供认证考试，涵盖从 Linux 基础到 DevOps 的内容。学院启动还提供这些认证考试 10% 的折扣。</p><p>Canonical 于 2025 年 10 月推出了 Canonical Academy。当时，其系统管理员轨道只有一门考试对所有人开放，其余要么处于测试阶段，要么仍在建设中。</p><p>现在情况变了。Canonical 已通知 It's FOSS，系统管理员轨道的全部四门考试均已上线：</p><p>使用 DevOps 原则</p><p>通过全部四门考试，你将获得 Canonical Academy 系统管理员资格。</p><p>首门考试费用为 100 美元，之后每门考试费用为 125 美元。如果参加全部四门，整个轨道总计 475 美元。</p><p>为纪念发布，Canonical 提供任何考试 10% 的折扣，使用代码 [优惠码]，有效期至 1 月 10 日。你可以从 Ubuntu 认证考试页面支付考试费用。</p><p>每门考试均在线进行，在基于浏览器的 Ubuntu 环境中完成。根据 [描述]，考试混合了选择题、场景题和需要在实时系统上完成的动手任务。</p><p>考试环境中允许使用 man 手册和官方 Ubuntu 文档，但不能打开其他标签页。考试通过 [监考平台] 进行监考，因此你需要网络摄像头、麦克风和单显示器。</p><p>需要注意的一点是，考试推荐使用基于 Chromium 的浏览器，不支持 Firefox，这对于 Linux 认证来说有点讽刺。</p><p>你可以按任意顺序参加考试。每门考试时长在 75 到 120 分钟之间，一年内最多可重考两次。</p><p>Canonical 还整理了一份 [备考资源]，包含每门考试的准备材料，以及一份 [考生手册]，解释了考试形式和考试当天的规则。</p><p>这门 75 分钟的考试是轨道的基础，我建议你从这里开始。它也是所有考试中最简单的，尤其对初学者而言。它还能让你在花钱参加其他考试之前，很好地感受动手考试的形式。</p><p>考试涵盖从终端移动和操作文件、使用正则表达式搜索和修改文件、管道和重定向。你还会处理系统资源，如日志和日志轮转、cron 任务，以及使用 fdisk、fsck 和 parted 等工具修复分区和文件系统。</p><p>安全部分涵盖 SSH 密钥、用户和组、文件所有权和权限、密码规则和 sudo 策略。这是任何系统管理员绝对必须掌握的 Linux 知识，如果你每天使用 Linux，可能已经知道很大一部分。不过，认证考试仍然是测试知识的好方法，尤其是当你不能使用互联网或 AI 辅助时。</p><p>这门 90 分钟的考试更针对 Ubuntu。它涵盖安装 Ubuntu、创建可启动 USB、在 LTS 版本之间升级、安装专有 GPU 和 Wi-Fi 驱动，以及使用 GRUB2 和 initramfs 修复启动问题。LVM 卷和快照也在其中。</p><p>很大一部分是应用程序管理，从 apt 和无人值守升级到 deb 与 Snap 包的区别。你还会学到网络基础知识，如配置连接和第 2 层概念，如 MAC 地址和 ARP。</p><p>安全部分涉及 PKI、使用 ACL 的文件权限以及加入 Active Directory 域。甚至还有一小节关于开源社区，涵盖 LTS 发布周期和 Ubuntu 的治理。</p><p>这也是一门 90 分钟的考试，服务器端的内容在这里出现。你将接受关于使用 PXE 启动、autoinstall 和 cloud-init 部署 Ubuntu Server，以及启动到单用户模式的测试。</p><p>你还会使用 systemd 管理服务，使用 systemd 定时器或 cron 设置自动备份，使用 NFS 或 Samba 运行文件服务器，并使用 Apache 或 Nginx 和 MySQL 或 PostgreSQL 等数据库搭建一个基本的 Web 应用。在安全方面，有 SSH 访问和使用 ufw 或 iptables 设置防火墙。</p><p>使用 DevOps 原则</p><p>这是最新的考试，也是最长的，估计...</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/ubuntu-academy-certification-program/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

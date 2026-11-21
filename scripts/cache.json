@@ -22152,5 +22152,148 @@
     "title_zh": "BackBox Linux 10 发布，搭载 Linux 7.0、Xfce 4.20 和 Ubuntu 26.04 LTS 基础",
     "summary_zh": "BackBox Linux 10 渗透测试与安全评估发行版现已开放下载，基于 Ubuntu 26.04 LTS，并采用 Xfce 4.20 桌面环境。",
     "fulltext_zh": "面向渗透测试和安全评估的 BackBox Linux 10 发行版现已开放下载，它基于 Ubuntu 26.04 LTS，并采用 Xfce 4.20 桌面环境。"
+  },
+  "05714bd278801d35685be39a46af0709": {
+    "id": "05714bd278801d35685be39a46af0709",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/11/linux-7-3-lts-kernel-likely",
+    "title_en": "Linux 7.3 is likely to be the next LTS kernel",
+    "summary_en": "Linux 7.3 is looking like it&#8217;ll be the new long-term support (LTS) kernel. Greg Kroah-Hartman, one of the kernels&#8217; key maintainers, intimated this in early November in a reply on the Linux Kernel Mailing List, discussing the status of Linux 7.4 and when it&#8217;s likely to be released. In a reply to Linus Torvalds, who&#8217;d noted people were expecting Linux 7.4 to be designated an LTS (since it&#8217;s shaping up to a big release and longterm kernels are picked, partly, based on ",
+    "pub_date": "Fri, 20 Nov 2026 17:37:35 +0000",
+    "title_zh": "Linux 7.3 很可能成为下一个 LTS 内核",
+    "summary_zh": "Linux 内核关键维护者 Greg Kroah-Hartman 在 Linux 内核邮件列表中表示，计划将 Linux 7.3 作为下一个长期支持（LTS）内核，除非出现意外阻碍。他反对为了成为 LTS 而强行向 7.4 添加功能，并指出过去这样做曾给维护者带来很多麻烦。LTS 内核提供至少两年的维护和重要修复回移。Linux 7.3 已随 Ubuntu 26.10 发布，并将于今年晚些时候回移到 26.04。",
+    "fulltext_zh": "Linux 7.3 很可能成为下一个 LTS 内核 - OMG! Ubuntu\n看起来它将成为新的长期支持（LTS）内核。\n内核关键维护者之一 Greg Kroah-Hartman 在 11 月初于 Linux 内核邮件列表的一封回复中暗示了这一点，当时他正在讨论 Linux 7.4 的状态及其可能的发布时间。\n在回复 Linus Torvalds 时——Torvalds 指出人们期待 Linux 7.4 被指定为 LTS（因为它正发展成一个大版本，而长期内核的选择部分基于其功能丰富程度）——Kroah-Hartman 表示他计划让 7.3 成为 LTS。\n“如果人们只是为了让它成为 LTS 而试图把功能强行塞进 7.4，那恰恰是不应让它成为 LTS 的最佳理由”，他说，并指出过去发生这种情况时曾给维护者带来“很多麻烦”。\n相反，他表示，开发者应该“指望 7.3.y 成为下一个 LTS”，除非出现意外阻碍计划。\n这虽不是正式盖章的决定，但已足够明确，足以形成这样的印象。\nLTS 内核获得更长时间的修复\nLinux LTS 内核的维护时间比标准稳定版长得多（至少 2 年），并获得重要缺陷和安全修复的回移。\n由于 Linux 被广泛应用于企业、工业和云环境，许多人选择长期版本以确保可靠性。如果更广泛的社区有需求（并提供帮助），LTS 内核的支持窗口可以延长至最初的 2 年之后。\n内核发布表尚未将 v7.3 列入 LTS 表，但由于自 Kroah-Hartman 发消息以来还没有发布点版本，这大概就是原因。\nLinux 7.3 已随 Ubuntu 26.10 发布，并将于今年晚些时候回移到 26.04。其变化包括改善低显存 AMD GPU 上的游戏体验、更快的 ext4 I/O，以及重新设计内核在应用组之间分配 CPU 时间的方式。\nLinux 7.4(.0) 暂定于 2026 年 12 月 27 日发布。"
+  },
+  "cfd00d582a2bb183ab8435fd8153a8cd": {
+    "id": "cfd00d582a2bb183ab8435fd8153a8cd",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/grapheneos-google-oem-pressure/",
+    "title_en": "GrapheneOS Accuses Google of Kneecapping Android Partners With Pixel Exclusives",
+    "summary_en": "The project also wants to talk to the DoJ and says it expects Google to start locking Pixel bootloaders.",
+    "pub_date": "Fri, 20 Nov 2026 10:41:26 GMT",
+    "title_zh": "GrapheneOS 指责 Google 通过 Pixel 独占功能打压 Android 合作伙伴",
+    "summary_zh": "GrapheneOS 指控 Google 向手机制造商施压，要求它们不要支持该开源 Android 项目，并威胁其 Google 应用授权。GrapheneOS 认为 Google 希望将其限制在 Pixel 设备上，并预计 Pixel 引导加载程序最终会被锁定。该项目还表示希望与美国司法部对话，并称 Google 的部分行为违反美国刑法。",
+    "fulltext_zh": "GrapheneOS 指责 Google 通过 Pixel 独占功能打压 Android 合作伙伴\n\nGrapheneOS 指责 Google 通过 Pixel 独占功能打压 Android 合作伙伴\n\n该项目还希望与美国司法部对话，并表示预计 Google 将开始锁定 Pixel 引导加载程序。\n\nGrapheneOS 指责 Google 向手机制造商施压，要求它们远离该项目。这一指控是在今天提出的，项目称制造商被问及是否与该团队合作，随后因 Google 应用授权问题受到威胁。\n\n该项目补充说，法院已多次裁定此类授权条款非法。它认为 Google 希望 GrapheneOS 仅限于 Pixel 设备——这是该操作系统目前官方唯一支持的手机——其他品牌无法在其上构建。\n\n以下各节所述内容是该项目的说法，并与 Google 的文档、GrapheneOS 使用指南以及社区兼容银行应用列表进行了对照。\n\nGoogle 被点名\n\nGoogle 正在通过将越来越多的功能和更新设为 Pixel 独占来破坏其 OEM 合作伙伴。与此同时，Google 试图说服 OEM 合作伙伴不要支持 GrapheneOS，甚至不要支持引导加载程序解锁。他们还试图直接损害 GrapheneOS。\n\n— GrapheneOS (@GrapheneOS)\n\nGrapheneOS 将对手机制造商的压力描述为更广泛打击独立 Android 构建的一部分。\n\nGoogle 正在针对 GrapheneOS 本身\n\n并预计会进一步升级。它认为 Pixel 引导加载程序最终会被锁定，而它称之为非法的 API 将被更大力推行。如果这种情况发生，Android 分支将难以生存。\n\nGrapheneOS 认为 Google 的某些行为违反美国刑法，反垄断违规可导致个人入狱。它希望与美国司法部对话，并表示此前针对 Google 的案件基本上未触及最严重的违规行为。\n\n支持者被要求向检察官和监管机构引荐，并保证该项目拥有必要资源，无论发生什么都能继续推进。\n\nGrapheneOS 表示，现在更多 Android 功能和更新仅限 Pixel，将其他硬件合作伙伴甩在后面。其例子是每年四次主要版本更新中有两次仅面向 Pixel，以及 Android 17 QPR2 率先登陆 Pixel。\n\n同样的抱怨也出现在\n\n它补充说，合作伙伴被引导不要支持引导加载程序解锁。请记住，安装 Android 以外的其他操作系统需要可解锁的引导加载程序\n\n今年早些时候宣布\n\n正将 GrapheneOS 带出 Pixel 之外，预计很快会有更多摩托罗拉手机。但有一个问题。\n\nGoogle 将 Play Integrity API 宣传为应用检查其是否运行在真实、认证的 Android 手机上的方式。由于 GrapheneOS 的工作方式，它不可避免地会遇到麻烦。该操作系统未获得 Google 认证，而这正是该 API 所检查的。\n\nGrapheneOS 不会尝试伪造认证，因为这种方法很脆弱且需要不断修复。它更希望应用使用硬件认证，这是它完全支持的方法。\n\n该操作系统的另一个反复出现的问题是\n\n处理方式。许多依赖 Google Play 服务，有些会拒绝非 Google 认证的设备。\n\nGrapheneOS 一直在逐步解决这个问题。较早的版本添加了通知，显示哪些应用使用 Play Integrity，并提供了对可以在没有它的情况下运行的应用阻止它的选项。\n\n后来的修复让一些银行应用在更新破坏它们后再次正常工作。\n\n让人了解现状。它是众包的，涵盖许多国家的银行，并且最近更新过。\n\n作为一个开源项目，GrapheneOS 完全有权\n\n就其所认为的恶意行为点名像 Google 这样规模的公司。是否会有法律行动是另一回事。\n\n喜欢这个更新？支持独立的 Linux 新闻报道\n\nIt's FOSS 在过去 14 年一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n\n一次付费，永久享受"
+  },
+  "4c4d9f4d34203773c468d260c497f5e4": {
+    "id": "4c4d9f4d34203773c468d260c497f5e4",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/ubuntu-academy-certification-program/",
+    "title_en": "Taking On Red Hat? Ubuntu Now Has an Official SysAdmin Certification",
+    "summary_en": "Ubuntu is now offering certification exams, covering the basics of Linux to DevOps. The Academy launch also offers a 10% discount on these certification exams.",
+    "pub_date": "Fri, 20 Nov 2026 09:09:25 GMT",
+    "title_zh": "挑战红帽？Ubuntu 现在有了官方系统管理员认证",
+    "summary_zh": "Canonical 宣布其 Ubuntu 系统管理员认证轨道的四门考试全部上线，涵盖 Linux 基础到 DevOps 原则。考试在线进行，包含选择题、场景题和实操任务，通过全部四门可获得官方认证。为庆祝发布，使用优惠码可享 10% 折扣，有效期至 1 月 10 日。",
+    "fulltext_zh": "挑战红帽？Ubuntu 现在有了官方系统管理员认证\n\nUbuntu 现在提供认证考试，涵盖从 Linux 基础到 DevOps 的内容。学院启动还提供这些认证考试 10% 的折扣。\n\nCanonical 于 2025 年 10 月推出了 Canonical Academy。当时，其系统管理员轨道只有一门考试对所有人开放，其余要么处于测试阶段，要么仍在建设中。\n\n现在情况变了。Canonical 已通知 It's FOSS，系统管理员轨道的全部四门考试均已上线：\n\n使用 DevOps 原则\n\n通过全部四门考试，你将获得 Canonical Academy 系统管理员资格。\n\n首门考试费用为 100 美元，之后每门考试费用为 125 美元。如果参加全部四门，整个轨道总计 475 美元。\n\n为纪念发布，Canonical 提供任何考试 10% 的折扣，使用代码 [优惠码]，有效期至 1 月 10 日。你可以从 Ubuntu 认证考试页面支付考试费用。\n\n每门考试均在线进行，在基于浏览器的 Ubuntu 环境中完成。根据 [描述]，考试混合了选择题、场景题和需要在实时系统上完成的动手任务。\n\n考试环境中允许使用 man 手册和官方 Ubuntu 文档，但不能打开其他标签页。考试通过 [监考平台] 进行监考，因此你需要网络摄像头、麦克风和单显示器。\n\n需要注意的一点是，考试推荐使用基于 Chromium 的浏览器，不支持 Firefox，这对于 Linux 认证来说有点讽刺。\n\n你可以按任意顺序参加考试。每门考试时长在 75 到 120 分钟之间，一年内最多可重考两次。\n\nCanonical 还整理了一份 [备考资源]，包含每门考试的准备材料，以及一份 [考生手册]，解释了考试形式和考试当天的规则。\n\n这门 75 分钟的考试是轨道的基础，我建议你从这里开始。它也是所有考试中最简单的，尤其对初学者而言。它还能让你在花钱参加其他考试之前，很好地感受动手考试的形式。\n\n考试涵盖从终端移动和操作文件、使用正则表达式搜索和修改文件、管道和重定向。你还会处理系统资源，如日志和日志轮转、cron 任务，以及使用 fdisk、fsck 和 parted 等工具修复分区和文件系统。\n\n安全部分涵盖 SSH 密钥、用户和组、文件所有权和权限、密码规则和 sudo 策略。这是任何系统管理员绝对必须掌握的 Linux 知识，如果你每天使用 Linux，可能已经知道很大一部分。不过，认证考试仍然是测试知识的好方法，尤其是当你不能使用互联网或 AI 辅助时。\n\n这门 90 分钟的考试更针对 Ubuntu。它涵盖安装 Ubuntu、创建可启动 USB、在 LTS 版本之间升级、安装专有 GPU 和 Wi-Fi 驱动，以及使用 GRUB2 和 initramfs 修复启动问题。LVM 卷和快照也在其中。\n\n很大一部分是应用程序管理，从 apt 和无人值守升级到 deb 与 Snap 包的区别。你还会学到网络基础知识，如配置连接和第 2 层概念，如 MAC 地址和 ARP。\n\n安全部分涉及 PKI、使用 ACL 的文件权限以及加入 Active Directory 域。甚至还有一小节关于开源社区，涵盖 LTS 发布周期和 Ubuntu 的治理。\n\n这也是一门 90 分钟的考试，服务器端的内容在这里出现。你将接受关于使用 PXE 启动、autoinstall 和 cloud-init 部署 Ubuntu Server，以及启动到单用户模式的测试。\n\n你还会使用 systemd 管理服务，使用 systemd 定时器或 cron 设置自动备份，使用 NFS 或 Samba 运行文件服务器，并使用 Apache 或 Nginx 和 MySQL 或 PostgreSQL 等数据库搭建一个基本的 Web 应用。在安全方面，有 SSH 访问和使用 ufw 或 iptables 设置防火墙。\n\n使用 DevOps 原则\n\n这是最新的考试，也是最长的，估计..."
+  },
+  "c59e09f1b0a2cd27313d11e8549db5e5": {
+    "id": "c59e09f1b0a2cd27313d11e8549db5e5",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Libreboot-Drops-AI-Policy",
+    "title_en": "Libreboot Abandons Anti-AI Policy After One Month",
+    "summary_en": "Coreboot downstream Libreboot last month enacted an AI policy to forbid contributions made using AI/LLMs. Surprisingly, already, that anti-AI policy has been dropped with AI-based submissions now being permitted...",
+    "pub_date": "Fri, 20 Nov 2026 17:23:41 -0500",
+    "title_zh": "Libreboot 在一个月后放弃反 AI 政策",
+    "summary_zh": "Libreboot 上月出台政策禁止使用 AI/LLM 生成贡献，但仅三周后开发者 Leah Rowe 便彻底删除该政策。她坦言该政策无法执行，面对上游 Coreboot 代码及 AI 采用趋势，自己终将不断破例，不愿做伪君子，故删除不可靠的承诺。最新 Libreboot Git 已移除该政策。",
+    "fulltext_zh": "Libreboot 在一个月后放弃反 AI 政策\n2026 年 11 月 20 日 下午 05:23 EST。\n\nCoreboot 的下游项目 Libreboot 上个月制定了一项 AI 政策，禁止使用 AI/LLM 做出的贡献。令人意外的是，这项反 AI 政策已经被放弃，现在允许基于 AI 的提交。\n\n这项（反）AI 政策始于上个月，其中包含针对 AI 的脏话和严厉措辞。随着时间的推移，该政策被更新为更详细的解释，反对接受 AI 生成的贡献。那是三周前，由 Libreboot 开发者 Leah Rowe 做出的最新更新。\n\n截至今天，该 AI 政策已从 Libreboot 中彻底删除。Leah 在文件中指出，依赖 Coreboot 等上游代码是一场艰苦的战斗，而随着 AI/LLM 采用的方向发展，该政策最终无法执行。Leah 表示：\n\n“删除 AI 政策\ni'm never going to enforce it. recent observations of upstream code and the way things are going tells me that i'm going to make all kinds of exceptions to it over time, and not be able to fight against the tide\ni got too excited writing it. i believe everything in it. but it's an unenforceable policy.\ni will not promise what i cannot / will not reliably deliver. delete unreliable promise.\ni don't care if this gets me on a list. there is one thing i hate the most, and that's hypocrites. i'd rather not be one. hence the deletion.”\n\n该 AI 政策现已在最新的 Libreboot Git 中移除。\n\n3mdeb 更新老化 AMD Jaguar 平台 PC Engines APU2 的开源固件\nDasharo ACPI 风扇控制 Linux 驱动发布，用于调节风扇曲线\n3mdeb 为 ASRock Rack SPC741D8-2L2T 发布更新的 Dasharo/Coreboot 固件\nCoreboot 26.09 发布，支持 Framework Laptop 12，并引入 AI 审查评论政策\n3mdeb 改善开源固件的 UEFI 更新胶囊体验\nMSI PRO Z690-A / Z790-P 主板的 Coreboot/Dasharo 更新，增加超频功能\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nCloudflare 开源 Kitesurf：其面向 AI 代理的网页浏览器\nOpenAI Codex 帮助发现并修复近 20 年历史的 Radeon Linux 驱动漏洞\nJava4Shell 漏洞影响 OpenJDK Java，可导致远程代码执行\nRedox OS 让 Golang 可用，移植 GIMP 并简化 AI 政策\nNVIDIA CEO 黄仁勋辞职\nRust 1.100 发布，“Never”类型终于稳定\nXfce 4.22 正努力争取 2027 年初发布\nKDE Plasma 6.9 终于允许 XWayland 按需运行，新增摇摆窗口预设\n\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "9c8c44cd075a7fa6ea0068e338d657d7": {
+    "id": "9c8c44cd075a7fa6ea0068e338d657d7",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/GnuPG-GPGME-Critical",
+    "title_en": "GnuPG's GPGME Affected By Critical Security Bug In Turn Affecting Mail Clients, Flatpak",
+    "summary_en": "Werner Koch announced a late Friday afternoon \"critical security bug\" affecting GnuPG's GPGME library - GnuPG Made Easy. Unfortunately this in turn affects GPGME users like most email clients, most XMPP clients, Flatpak, Samba, and other software...",
+    "pub_date": "Fri, 20 Nov 2026 15:46:51 -0500",
+    "title_zh": "GnuPG 的 GPGME 受严重安全漏洞影响，进而波及邮件客户端与 Flatpak",
+    "summary_zh": "GnuPG 的 GPGME 库被曝存在严重安全漏洞，影响所有现有版本。攻击者可通过构造超长用户 ID 触发双重释放，进而从应用中窃取数据，甚至可能实现远程代码执行。该漏洞波及多数邮件客户端、XMPP 客户端、Flatpak、Samba 等软件。GPGME 2.3.1 是首个修复版本，建议用户立即升级。",
+    "fulltext_zh": "Werner Koch 在周五下午晚些时候宣布了一个影响 GnuPG 的 GPGME 库（GnuPG Made Easy）的“严重安全漏洞”。不幸的是，这反过来又影响了 GPGME 的用户，如大多数电子邮件客户端、大多数 XMPP 客户端、Flatpak、Samba 以及其他软件。\n\n今天公开的这个严重安全漏洞影响 GPGME 的所有现有版本。一个精心构造的超长用户 ID 可以触发双重释放，进而可通过发送例如已签名的数据来从应用程序中提取数据。该漏洞也有可能被利用来发动远程代码执行（RCE）攻击，但尚未得到确认。\n\nWener Koch 建议 GPGME 用户立即将其 GPGME 更新到今天的版本。\n\n“通过使用包含精心构造的超长用户 ID 的 OpenPGP 密钥，可以触发双重释放。这种双重释放可用于通过发送例如已签名的数据来从应用程序中窃取数据。不能排除利用此漏洞发动远程代码执行攻击（RCE）的可能性。因此强烈建议立即更新。\n\n该漏洞的根本原因是 GPGME 内部用于从 gpg 读取状态行和密钥列表的两个函数。最初分配一个 1024 字节的缓冲区，如果需要更多空间则重新分配。重新分配时，函数使用了指向新缓冲区的指针，但该指针仅在函数结束时才被赋值回上下文对象。因此，如果函数由于读取错误或其他事件而提前返回，上下文就不会被更新，并保留指向已释放内存的陈旧指针。最终上下文被释放，内存被第二次释放。由于其间存在其他分配，内存分配器的常见双重释放检查可能不会被触发。”\n\n所有使用现有 GPGME 版本的应用程序，无论是作为共享库、DLL 还是静态链接版本，都会受到影响。\n\n邮件列表公告。GPGME 2.3.1 是首个修复版本。"
+  },
+  "3bd8b7cc0ec8fbb319230c04b14157d0": {
+    "id": "3bd8b7cc0ec8fbb319230c04b14157d0",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.5-DRM-8TB-mmap",
+    "title_en": "Intel Preps Linux 7.5 Change To Better Handle Multiple GPUs With Lots Of VRAM",
+    "summary_en": "A change set to land for the upcoming Linux 7.5 kernel cycle expands the mmap range size for GEM/TTM buffer objects in the kernel graphics drivers from 1TB to now up to 8TB...",
+    "pub_date": "Fri, 20 Nov 2026 14:41:29 -0500",
+    "title_zh": "Intel 为 Linux 7.5 准备变更以更好地处理大显存多 GPU 配置",
+    "summary_zh": "Intel 工程师提交变更，将内核图形驱动中 GEM/TTM 缓冲对象的 mmap 范围从 1TB 扩大到 8TB，以解决多 GPU 系统大显存下跨设备 dma-buf 导入耗尽 1TB 偏移空间导致缓冲创建失败的问题。该变更已进入 drm-misc-next 拉取请求，预计随 Linux 7.5 内核合入。",
+    "fulltext_zh": "Intel 为 Linux 7.5 准备变更以更好地处理大显存多 GPU 配置\n\n2026 年 11 月 20 日下午 2:41（美国东部时间）。\n\n一项将随即将到来的 Linux 7.5 内核周期合入的变更集，将内核图形驱动中 GEM/TTM 缓冲对象的 mmap 范围大小从 1TB 扩大到最高 8TB。\n\n将上限从 1TB 提高到 8TB 是为了支持拥有大量显存的多 GPU 配置。该变更由 Intel 完成，从补丁的时间点推测，可能是为每卡最高 160GB LPDDR5X 的配置做准备。\n\nIntel Linux GPU 驱动工程师 Matthew Auld 解释称：\n\n“每个 GEM/TTM 缓冲对象（包括导入的 dma-buf）都会从每设备的 drm_vma_offset_manager 分配一个伪造的 mmap 偏移。在拥有大显存的多 GPU 系统上，跨设备和跨进程的点对点 dma-buf 导入可能耗尽当前 1 TiB 的 64 位范围，导致缓冲对象创建或 PRIME 导入失败并返回 -ENOSPC。跳过为导入的 sg 缓冲分配 mmap 偏移并不简单，且可能带来用户空间回归风险，因为现有用户空间（如 Intel compute-runtime）在直接映射 dma-buf fd 时仍会查询导入的主机 dma-buf 的 mmap_offset。\n\n在 64 位内核上增大 DRM_FILE_PAGE_OFFSET_SIZE，使伪造偏移范围最高可达 8 TiB（SZ_8T）。这仍严格低于 panthor 的 DRM_PANTHOR_USER_MMIO_OFFSET_32BIT（1ULL << 43）保留区，并处于 32 位兼容 mmap2 的 pgoff 限制（4K 页时为 16 TiB）之内。”\n\n将 DRM_FILE_PAGE_OFFSET_SIZE 上限提高到 8TB 的变更通过本周的 drm-misc-next 拉取请求进入 Linux 7.5。\n\n相关报道：\nIntel 介绍 GPU D270 性能与开源软件支持\nIntel 开始为 Coral Rapids 和 Razor Lake 进行 Linux 内核适配\nIntel 发布 Razor Lake 和 Coral Rapids 的初始 GCC 编译器代码\nIntel Xe 驱动为 vGPU 配置准备 SR-IOV 供应\nIntel 继续为 Linux 7.5 启用 GPU D 系列“Crescent Island”驱动支持\nIntel 发布新 CPU 微码以修复多种功能问题\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动等主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。\n\n其他新闻：\nCloudflare 开源 Kitesurf：其面向 AI 代理的网页浏览器\nOpenAI Codex 帮助发现并修复近 20 年的 Radeon Linux 驱动漏洞\n影响 OpenJDK Java 的 Java4Shell 漏洞可导致远程代码执行\nRedox OS 让 Golang 可用、移植 GIMP 并简化 AI 政策\nNVIDIA CEO 黄仁勋辞职\nRust 1.100 发布，“Never”类型终于稳定\nXfce 4.22 朝着 2027 年初发布推进\nKDE Plasma 6.9 终于允许 XWayland 按需运行，新增摇摆窗口预设\n\n享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "cce9b3695fac26976346053a492dfa4c": {
+    "id": "cce9b3695fac26976346053a492dfa4c",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/GNOME-AMD-Content-Adaptive",
+    "title_en": "AMD Contributes Integration For Content-Adaptive / Adaptive Backlight Modulation To GNOME",
+    "summary_en": "Merged today to GNOME's Mutter compositor is support for the Adaptive Backlight Modulation (ABM) DRM/KMS connector property and a \"content-adaptive\" API. This GNOME desktop improvement was contributed by AMD as part of modern AMD Ryzen AI laptops supporting Adaptive Backlight Modulation...",
+    "pub_date": "Fri, 20 Nov 2026 12:52:31 -0500",
+    "title_zh": "AMD 为 GNOME 贡献内容自适应/自适应背光调制集成",
+    "summary_zh": "AMD 向 GNOME 的 Mutter 合成器提交并合并了对自适应背光调制（ABM）DRM/KMS 连接器属性及“内容自适应”API 的支持。该功能可根据屏幕内容动态降低 eDP 面板背光亮度以节省功耗，主要面向搭载 Ryzen AI 的现代笔记本。Mutter 仅负责合成器侧实现，不决定具体级别，由 Shell 通过进程内 C API 调用，级别为 0 到最大值之间的索引，默认关闭。",
+    "fulltext_zh": "AMD 为 GNOME 贡献内容自适应/自适应背光调制集成 - Phoronix\nAMD 为 GNOME 贡献内容自适应/自适应背光调制集成\n2026 年 11 月 20 日美国东部时间下午 12:52。\n\n今日合并到 GNOME 的 Mutter 合成器中的是对自适应背光调制（ABM）DRM/KMS 连接器属性以及“内容自适应”API 的支持。这项 GNOME 桌面改进由 AMD 贡献，属于支持自适应背光调制的现代 AMD Ryzen AI 笔记本的一部分。\n\n自适应背光调制/内容自适应背光控制是一项节能显示功能，可根据屏幕上的内容（例如暗场景或低亮度场景）动态降低显示面板的背光亮度水平。这反过来有助于降低笔记本功耗，尤其有利于电池续航，但确实会对色彩准确性造成一定影响。\n\nAMDGPU Linux 驱动一段时间以来已经为支持的 eDP 面板暴露了自适应背光调制功能和连接器属性。\n\n“AMD eDP 面板暴露了一个‘自适应背光调制’连接器属性：面板调暗其背光并在图像中进行补偿，以色彩准确性换取功耗。本系列仅添加合成器侧：MetaBacklight 上的内容自适应级别，在下一帧应用于 KMS。\n\nMutter 不选择级别。Shell 应在进程内调用 C API；没有用于此的 D-Bus 接口。级别是 0..max 中的索引，默认为 0（关闭）。当连接器支持 ABM 时，第一帧会写入它，从而从驱动的 sysfs 接口接管该属性。关机时不会交还；这留给通用 DRM 重置处理。”\n\n对那些好奇 AMD 为 GNOME 贡献的这项旨在增强现代笔记本节能体验的工作的人，可以查看\nMutter 合并请求\nGNOME 现已建立 RFC 流程，GNOME OS 持续改进\nGNOME Mutter 获得减少节能模式下 GPU 工作的改进\nGNOME 新的本地/云端 AI 聊天应用获得更多功能\nGNOME OS 预览版发布，迈向稳定版本\nGNOME Mutter 改进次级 GPU 复制缓冲区的损坏跟踪\nMoose：GNOME 获得另一个本地 AI 应用选项\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\nCloudflare 开源 Kitesurf：其面向 AI 代理的网页浏览器\nOpenAI Codex 帮助发现并修复近 20 年历史的 Radeon Linux 驱动漏洞\nJava4Shell 漏洞影响 OpenJDK Java，可导致远程代码执行\nRedox OS 让 Golang 可用，移植 GIMP 并简化 AI 政策\nNVIDIA CEO 黄仁勋辞职\nRust 1.100 发布，“Never”类型终于稳定\nXfce 4.22 致力于 2027 年初发布\nKDE Plasma 6.9 终于允许 XWayland 按需运行，新增晃动窗口预设\n同时享受无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "d81d89023b8e7bd4411b849b45fa6235": {
+    "id": "d81d89023b8e7bd4411b849b45fa6235",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/system76-thelio-prime",
+    "title_en": "System76 Thelio Prime: A Petite But Performant AMD-Powered Linux PC",
+    "summary_en": "After teasing the new System76 Thelio Prime last month, this week officially launched their redesigned Thelio Prime mini desktop PC. This AMD Ryzen 9000 series powered creation is quite small with an internal volume of just 9.78 liters but quite capable with up to the Ryzen 9 9900X being supported, AMD or NVIDIA discrete graphics options, up to 96GB of RAM, and up to 16TB of NVMe storage. I have been testing out the new Thelio Prime for the past few days so far and it's been stacking up as well ",
+    "pub_date": "Fri, 20 Nov 2026 11:38:02 -0500",
+    "title_zh": "System76 Thelio Prime：一款小巧但性能强劲的AMD平台Linux PC",
+    "summary_zh": "System76推出全新Thelio Prime迷你台式机，体积仅9.78升，最高搭载AMD Ryzen 9 9900X处理器、AMD或NVIDIA独立显卡、96GB DDR5内存及16TB NVMe存储。机箱由科罗拉多工厂以全铝和不锈钢打造，采用磁吸侧板与独立风道设计，兼顾散热与性能，延续开源硬件设计。",
+    "fulltext_zh": "System76 Thelio Prime：一款小巧但性能强劲的AMD平台Linux PC评测 - Phoronix\nSystem76 Thelio Prime：一款小巧但性能强劲的AMD平台Linux PC\n2026年11月20日美国东部时间上午11:38发布。\n在上个月预告了新款System76 Thelio Prime之后，本周他们正式推出了重新设计的Thelio Prime迷你台式机。这款由AMD Ryzen 9000系列驱动的产品体积非常小巧，内部容积仅为9.78升，但性能相当强悍，最高支持Ryzen 9 9900X，可选AMD或NVIDIA独立显卡，最高96GB内存，以及最高16TB的NVMe存储。过去几天我一直在测试新款Thelio Prime，到目前为止它表现优异，堪称他们迄今最好的紧凑型PC之一。\n新款System76 Thelio Prime的体积约为原版Thelio Prime PC的一半，但在性能或品质上毫不妥协。新Thelio Prime机箱继续由他们在科罗拉多州的工厂自行制造，完全采用铝和不锈钢以及烟熏钢化玻璃前面板——没有任何塑料部件！它遵循了今年早些时候发布的、此前评测过的PC重新设计风格。虽然有些人可能会怀念原版Thelio机型的木质美学，但这些美国制造的机箱做工质量依然一流。\nThelio Prime可横向或纵向放置。\n新款Thelio Prime最高可配备Ryzen 9 9900X——包括Zen 5架构的Ryzen X3D型号，显卡可选Radeon RX 9060 XT / GeForce RTX 5060 Ti / GeForce RTX 5070，最高96GB DDR5内存，以及最高16TB的NVMe SSD存储。\n与System76其他自研硬件一样，新Thelio Prime机箱依然是开源硬件设计。\n为了在这款小型PC上不牺牲性能/散热，System76采取了一种有趣的方式：显卡和CPU/主板区域在机箱两侧各有专用且独立的进气口。显卡最终通过PCIe延长线连接在主板后方。\n与今年早些时候评测的重新设计的Thelio Major和Thelio Mira系统类似，新Thelio Prime利用磁铁实现侧板的快速拆装。\n这是一款相当独特的紧凑型Linux PC，在设计上做了大量考量以不牺牲散热和性能。因此它也是Phoronix测试的一个有趣目标。\nFramework Laptop 12搭载Intel Core 3 Wildcat Lake，性能与能效提升\nStar Labs StarFighter Ultra：一款搭载Coreboot的现代高端Linux笔记本\nCHUWI UniBook搭载Intel Wildcat Lake，售价449美元的Linux友好笔记本\nHP Z4 G6i：搭载Intel Xeon 600系列的Linux友好工作站\nFramework Laptop 16配备GeForce RTX 5070 12GB、一体式键盘与触觉触控板\nFramework Laptop 13 Pro：旨在成为最佳可升级Linux笔记本之一\n同时享受无广告浏览、\n单页文章视图\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "a0b1e95dd888e39e58dc7767c1dcaea0": {
+    "id": "a0b1e95dd888e39e58dc7767c1dcaea0",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/rust-1-100-stabilizes-never-type-after-a-decade-of-development/",
+    "title_en": "Rust 1.100 Stabilizes Never Type After a Decade of Development",
+    "summary_en": "Rust 1.100 stabilizes the never type (!) after a decade of development, bringing improvements to type handling and the Rust programming language.\nThe post Rust 1.100 Stabilizes Never Type After a Decade of Development appeared first on Linux Today.",
+    "pub_date": "Fri, 20 Nov 2026 11:48:10 +0000",
+    "title_zh": "Rust 1.100 历经十年开发后稳定 Never 类型",
+    "summary_zh": "Rust 1.100 在历经十年开发后正式稳定了 never 类型（!），改进了类型处理机制，进一步完善了 Rust 编程语言的类型系统。",
+    "fulltext_zh": "Rust 1.100 历经十年开发后稳定了 never 类型（!），为类型处理和 Rust 编程语言带来了改进。\n\n文章《Rust 1.100 历经十年开发后稳定 Never 类型》首发于 Linux Today。"
+  },
+  "0a22dade09ddbff95de8edc0ee20b685": {
+    "id": "0a22dade09ddbff95de8edc0ee20b685",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/mate-desktop-moves-closer-to-native-wayland-support-with-polo-1-0/",
+    "title_en": "MATE Desktop Moves Closer to Native Wayland Support with Polo 1.0",
+    "summary_en": "MATE Desktop moves closer to native Wayland support with Polo 1.0, a new compositor designed to modernize the traditional desktop experience.\nThe post MATE Desktop Moves Closer to Native Wayland Support with Polo 1.0 appeared first on Linux Today.",
+    "pub_date": "Fri, 20 Nov 2026 11:20:10 +0000",
+    "title_zh": "MATE桌面环境借助Polo 1.0向原生Wayland支持迈进",
+    "summary_zh": "MATE桌面环境通过推出Polo 1.0向原生Wayland支持更近一步。Polo 1.0是一款全新合成器，旨在让这一传统桌面体验实现现代化。",
+    "fulltext_zh": "MATE桌面环境借助Polo 1.0向原生Wayland支持迈进。Polo 1.0是一款全新合成器，旨在让传统桌面体验实现现代化。\n\n该文章《MATE桌面环境借助Polo 1.0向原生Wayland支持迈进》首次发布于Linux Today。"
+  },
+  "969a01a5f50c910094236e4074c27fbb": {
+    "id": "969a01a5f50c910094236e4074c27fbb",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/nvidia-opens-nvke-and-nvkr-to-manage-kubernetes-on-gpu-infrastructure/",
+    "title_en": "Nvidia Opens Nvke and Nvkr to Manage Kubernetes on GPU Infrastructure",
+    "summary_en": "NVIDIA open-sources NVKE and NVKR to simplify Kubernetes deployment and management across GPU-powered AI infrastructure.\nThe post Nvidia Opens Nvke and Nvkr to Manage Kubernetes on GPU Infrastructure appeared first on Linux Today.",
+    "pub_date": "Fri, 20 Nov 2026 11:17:38 +0000",
+    "title_zh": "Nvidia 开源 Nvke 和 Nvkr，用于管理 GPU 基础设施上的 Kubernetes",
+    "summary_zh": "NVIDIA 开源了 NVKE 和 NVKR 两个项目，旨在简化基于 GPU 的 AI 基础设施上 Kubernetes 的部署与管理，降低运维复杂度，方便用户在 GPU 集群中更高效地运行容器化工作负载。",
+    "fulltext_zh": "NVIDIA 开源了 NVKE 和 NVKR，以简化在由 GPU 驱动的 AI 基础设施上部署和管理 Kubernetes。\n\n文章《Nvidia 开源 Nvke 和 Nvkr，用于管理 GPU 基础设施上的 Kubernetes》首发于 Linux Today。"
+  },
+  "2624057c8b7fb542c748c890c025f2a9": {
+    "id": "2624057c8b7fb542c748c890c025f2a9",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/linuxs-biggest-problem-isnt-microsoft-its-linux-users/",
+    "title_en": "Linux’s Biggest Problem Isn’t Microsoft. It’s Linux Users.",
+    "summary_en": "Explore why Linux community attitudes, fragmentation, and resistance to change may be bigger obstacles to desktop adoption than Microsoft.\nThe post Linux’s Biggest Problem Isn’t Microsoft. It’s Linux Users. appeared first on Linux Today.",
+    "pub_date": "Fri, 20 Nov 2026 11:13:19 +0000",
+    "title_zh": "Linux最大的问题不是微软，而是Linux用户",
+    "summary_zh": "文章探讨了Linux社区的态度、碎片化以及对变革的抵触，认为这些因素可能比微软更能阻碍Linux在桌面端的普及。作者指出，社区内部的分歧和固守现状的心态，才是Linux桌面推广面临的主要障碍。",
+    "fulltext_zh": "探讨为何Linux社区的态度、碎片化以及对变革的抵触，可能比微软更能成为桌面端普及的更大障碍。\n\n文章《Linux最大的问题不是微软，而是Linux用户》首发于Linux Today。"
+  },
+  "9fe011b3c7dfd7b64f9bf642b8bea135": {
+    "id": "9fe011b3c7dfd7b64f9bf642b8bea135",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/libreboot-26-11-released-with-full-uefi-support-drops-grub-payload/",
+    "title_en": "Libreboot 26.11 Released with Full UEFI Support, Drops GRUB Payload",
+    "summary_en": "Libreboot 26.11 introduces full UEFI support and removes the GRUB payload, bringing major changes to the open-source firmware project.\nThe post Libreboot 26.11 Released with Full UEFI Support, Drops GRUB Payload appeared first on Linux Today.",
+    "pub_date": "Fri, 20 Nov 2026 11:02:07 +0000",
+    "title_zh": "Libreboot 26.11 发布：全面支持 UEFI，移除 GRUB 载荷",
+    "summary_zh": "Libreboot 26.11 版本发布，为这个开源固件项目带来重大变化：全面支持 UEFI，并移除了 GRUB 载荷。",
+    "fulltext_zh": "Libreboot 26.11 引入了全面的 UEFI 支持，并移除了 GRUB 载荷，为这个开源固件项目带来了重大变化。\n\n文章《Libreboot 26.11 发布：全面支持 UEFI，移除 GRUB 载荷》首先出现在 Linux Today。"
   }
 }

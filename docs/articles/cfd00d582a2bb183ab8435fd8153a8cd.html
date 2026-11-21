@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GrapheneOS 指责 Google 通过 Pixel 独占功能打压 Android 合作伙伴 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月21日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">软件应用</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>GrapheneOS 指责 Google 通过 Pixel 独占功能打压 Android 合作伙伴</h1>
+
+  <div class="article-summary">GrapheneOS 指控 Google 向手机制造商施压，要求它们不要支持该开源 Android 项目，并威胁其 Google 应用授权。GrapheneOS 认为 Google 希望将其限制在 Pixel 设备上，并预计 Pixel 引导加载程序最终会被锁定。该项目还表示希望与美国司法部对话，并称 Google 的部分行为违反美国刑法。</div>
+
+  <div class="article-body"><p>GrapheneOS 指责 Google 通过 Pixel 独占功能打压 Android 合作伙伴</p><p>GrapheneOS 指责 Google 通过 Pixel 独占功能打压 Android 合作伙伴</p><p>该项目还希望与美国司法部对话，并表示预计 Google 将开始锁定 Pixel 引导加载程序。</p><p>GrapheneOS 指责 Google 向手机制造商施压，要求它们远离该项目。这一指控是在今天提出的，项目称制造商被问及是否与该团队合作，随后因 Google 应用授权问题受到威胁。</p><p>该项目补充说，法院已多次裁定此类授权条款非法。它认为 Google 希望 GrapheneOS 仅限于 Pixel 设备——这是该操作系统目前官方唯一支持的手机——其他品牌无法在其上构建。</p><p>以下各节所述内容是该项目的说法，并与 Google 的文档、GrapheneOS 使用指南以及社区兼容银行应用列表进行了对照。</p><p>Google 被点名</p><p>Google 正在通过将越来越多的功能和更新设为 Pixel 独占来破坏其 OEM 合作伙伴。与此同时，Google 试图说服 OEM 合作伙伴不要支持 GrapheneOS，甚至不要支持引导加载程序解锁。他们还试图直接损害 GrapheneOS。</p><p>— GrapheneOS (@GrapheneOS)</p><p>GrapheneOS 将对手机制造商的压力描述为更广泛打击独立 Android 构建的一部分。</p><p>Google 正在针对 GrapheneOS 本身</p><p>并预计会进一步升级。它认为 Pixel 引导加载程序最终会被锁定，而它称之为非法的 API 将被更大力推行。如果这种情况发生，Android 分支将难以生存。</p><p>GrapheneOS 认为 Google 的某些行为违反美国刑法，反垄断违规可导致个人入狱。它希望与美国司法部对话，并表示此前针对 Google 的案件基本上未触及最严重的违规行为。</p><p>支持者被要求向检察官和监管机构引荐，并保证该项目拥有必要资源，无论发生什么都能继续推进。</p><p>GrapheneOS 表示，现在更多 Android 功能和更新仅限 Pixel，将其他硬件合作伙伴甩在后面。其例子是每年四次主要版本更新中有两次仅面向 Pixel，以及 Android 17 QPR2 率先登陆 Pixel。</p><p>同样的抱怨也出现在</p><p>它补充说，合作伙伴被引导不要支持引导加载程序解锁。请记住，安装 Android 以外的其他操作系统需要可解锁的引导加载程序</p><p>今年早些时候宣布</p><p>正将 GrapheneOS 带出 Pixel 之外，预计很快会有更多摩托罗拉手机。但有一个问题。</p><p>Google 将 Play Integrity API 宣传为应用检查其是否运行在真实、认证的 Android 手机上的方式。由于 GrapheneOS 的工作方式，它不可避免地会遇到麻烦。该操作系统未获得 Google 认证，而这正是该 API 所检查的。</p><p>GrapheneOS 不会尝试伪造认证，因为这种方法很脆弱且需要不断修复。它更希望应用使用硬件认证，这是它完全支持的方法。</p><p>该操作系统的另一个反复出现的问题是</p><p>处理方式。许多依赖 Google Play 服务，有些会拒绝非 Google 认证的设备。</p><p>GrapheneOS 一直在逐步解决这个问题。较早的版本添加了通知，显示哪些应用使用 Play Integrity，并提供了对可以在没有它的情况下运行的应用阻止它的选项。</p><p>后来的修复让一些银行应用在更新破坏它们后再次正常工作。</p><p>让人了解现状。它是众包的，涵盖许多国家的银行，并且最近更新过。</p><p>作为一个开源项目，GrapheneOS 完全有权</p><p>就其所认为的恶意行为点名像 Google 这样规模的公司。是否会有法律行动是另一回事。</p><p>喜欢这个更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 在过去 14 年一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/grapheneos-google-oem-pressure/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
