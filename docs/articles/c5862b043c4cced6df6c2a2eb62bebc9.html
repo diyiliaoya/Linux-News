@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debian 13.8 发布，包含 150 多项安全更新 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月22日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Debian 13.8 发布，包含 150 多项安全更新</h1>
+
+  <div class="article-summary">Debian 13.8 作为 Debian 13 &quot;Trixie&quot; 的最新 ISO 刷新版发布，包含 150 项安全公告修复，涉及 Chromium、Linux 内核、X.Org Server、LibreOffice、WordPress、Redis、Wireshark、Firefox ESR 等常用软件。此外还包含大量缺陷修复，如用更新版 Rust 编译器重建 Rust 软件包、修复 FreeType 拒绝服务问题、KDE KWin 的 Wayland 色彩管理问题、内存泄漏及 Thunderbird 153 兼容性更新等。</div>
+
+  <div class="article-body"><p>Debian 13.8 发布，包含 150 多项安全更新</p><p>2026 年 11 月 21 日 06:20 AM EST 发布。</p><p>Debian 13.8 今日发布，作为 Debian 13 &quot;Trixie&quot; 的最新 ISO 刷新版，包含 150 项安全更新以及大量缺陷修复。</p><p>Debian 13.8 紧随 150 项 Debian 安全公告（DSA）之后发布，这些公告影响从 Chromium 到 Linux 内核、X.Org Server、LibreOffice、WordPress、Redis、Wireshark、XZ-Utils、Firefox ESR、Apache HTTPD 及其他常用软件包。</p><p>除了在当前 AI/LLM 驱动的安全研究背景下产生的大量安全修复之外，许多缺陷修复也进入了 Debian 13.8。Debian 13.8 使用更新版 Rust 编译器重建了多个基于 Rust 的软件包，针对更新版 OpenSSL 和 Glibc 库重建了其他软件包，修复了 FreeType 的拒绝服务问题，修复了 KDE 的 KWin 中 Wayland 色彩管理处理问题，修复了内存泄漏，修复了不同软件包的构建失败问题，并为 Thunderbird 153 邮件客户端提供了兼容性更新。</p><p>今日 Debian 13.8 版本的下载和更多详情可通过以下链接获取：</p><p>Debian 的 APT 因 AI 安全发现的进展而移除部分功能</p><p>Debian 的 APT 受中间人攻击影响，可导致以 root 身份执行任意代码</p><p>Ubuntu 正在为 Debian 的 APT 开发 SHA3，以备 SHA2 被攻破时使用</p><p>Debian 推理门户上线，为 Debian 开发者提供免费 AI/LLM 推理服务</p><p>Debian 13.7 发布，包含大量缺陷修复</p><p>CERN 将工业计算机从长期使用的 RHEL 环境迁移至 Debian</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Cloudflare 开源 Kitesurf：其面向 AI 代理的网页浏览器</p><p>OpenJDK Java 的 Java4Shell 漏洞可导致远程代码执行</p><p>Redox OS 让 Golang 可用、移植 GIMP 并简化 AI 政策</p><p>Xfce 4.22 正朝着 2027 年初发布推进</p><p>KDE Plasma 6.9 终于允许 XWayland 按需运行，新增晃动窗口预设</p><p>Btrfs 寻求应对 AI 与“缺乏常识的新手”造成的更多伤害而非益处</p><p>Valve 提交的新 AMDGPU Linux 补丁旨在减少 Steam Play 游戏卡顿</p><p>Linux 7.4-rc3 发布：“到处都是常见的噪音”</p><p>享受无广告浏览、</p><p>单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Debian-13.8-Released" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

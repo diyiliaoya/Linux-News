@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kessler：一款开源、杂志风格的音乐播放器（支持iPod） — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月22日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">软件应用</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Kessler：一款开源、杂志风格的音乐播放器（支持iPod）</h1>
+
+  <div class="article-summary">Kessler是一款开源音乐播放器，采用独特的杂志风格设计，支持抖动专辑封面和iPod同步。开发者Felix来自德国，利用AI编程工具创建了这款应用，初衷是让旧iPod能播放FLAC文件。它具备完整的本地音乐管理功能，包括标签编辑、歌词同步、Last.fm记录等，界面可高度定制，并隐藏了一些艺术动画和游戏彩蛋。</div>
+
+  <div class="article-body"><p>Kessler是一款全新的开源音乐播放器，采用杂志风格设计、抖动专辑封面并支持iPod。它也是用AI编程工具制作的。</p><p>Kessler的开发者Felix是来自德国的艺术家和设计师，他在一封邮件中事先告诉我：“就像现在互联网上的每个人一样，我开始借助编程助手制作一个应用程序。”</p><p>他继承了一台旧iPod，发现现代音乐播放器对其支持匮乏。</p><p>我现在收到很多软件推介（比我16年博客生涯中任何时候都多）。AI代理不睡觉也不觉得羞耻，一盘接一盘地给我端上堆满形容词的词汇沙拉，希望我上钩（抱歉，我讨厌沙拉）。</p><p>Felix的邮件更接地气。他解释了制作它的原因——没有对“改变游戏规则”这个和“革命性”那个的夸夸其谈。原因很平淡：为了利用一些旧技术。</p><p>从朋友那里得到一台旧iPod后，他发现大多数现代音乐播放器对苹果旧音乐播放器的支持要么不确定要么根本没有（最近我翻出旧iPod nano，我同意这一点）。</p><p>此外，他的音乐库现在大多是FLAC文件，他的旧播放器原生不支持这些文件。</p><p>凭借他在Web开发、独立出版和设计方面的背景，他创建了一个工具的HTML模型，该工具可以转换FLAC文件并将它们同步到他的iPod。他把它喂给Claude，后者创建了一个可用的应用。</p><p>受到启发，它迅速成长为一个真正的音乐播放器/管理器。</p><p>kessler是一个音乐播放器（以及更多）</p><p>Kessler独特的外观掩盖了它的本质。Felix告诉我，kessler的设计看起来“有点像旧电话簿或终端窗口”。</p><p>诚然，这不是每个人都会喜欢的外观，但这是大多数人在过去一周内不会看到100种变体的外观——没有玻璃拟态、圆角卡片、深紫色渐变或其他“Claude设计”的套路。</p><p>它保持有意为之的低保真外观，辅以自定义字体（以及全程使用小写字母排版）。纯色（包含多种配色方案）和文本创建结构，而不是像分隔线和按钮那样的典型UI装饰。</p><p>The indie“氛围”延伸到专辑封面，默认情况下会进行抖动处理。抖动量的多少/风格可以配置，或者完全禁用该效果。关闭它会让应用少一些“刚传真过来”的调调。</p><p>Kessler彩色封面（以及显示EQ面板）</p><p>布局可适应，有很多方式可以自定义显示内容和时机。我更喜欢超紧凑的标题栏、艺术家+专辑组合视图，并利用可调整大小的窗格来减少空白区域。</p><p>Felix自己的一些艺术作品也隐藏在其中。空闲的搜索字段可以显示动画（有多种样式可选，包括一个游戏），并且可以在设定时间后启动音频可视化屏保选项（这仅在应用窗口上显示）。</p><p>它可能由LLM编码，但很多人性化的东西流露出来。这种快速是微妙的；我感觉自己在使用某种扎根于想法而非像许多氛围编码软件那样希望快速捞钱的东西。</p><p>它播放音乐和其他任何东西一样好</p><p>是一个完全成形的本地音乐播放器。你指向一个装满曲目的文件夹，然后按艺术家名称浏览它们，还可以选择显示合辑、所有艺术家和专辑。</p><p>你也可以通过查找或替换封面艺术以及编辑和修正曲目标签来整理你的音乐库。</p><p>在线集成包括支持来自MusicBrainz和Wikipedia的同步歌词和艺术家详情。作为一个长期的last.fm信徒，我总是很高兴看到scrobble支持。</p><p>编辑曲目详情</p><p>加上你期望找到的其他东西，比如无缝播放、均衡器（带有预设和保存两个自定义设置的位置）、播放列表和播放队列、随机播放和循环模式。</p><p>代码风格的键绑定还允许你仅使用键盘使用（尽管用鼠标也可以正常工作）。许多视图是面板，可以按需隐藏和显示，以帮助保持一个</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/kessler-music-player" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

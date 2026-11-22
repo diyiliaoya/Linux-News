@@ -22295,5 +22295,126 @@
     "title_zh": "Libreboot 26.11 发布：全面支持 UEFI，移除 GRUB 载荷",
     "summary_zh": "Libreboot 26.11 版本发布，为这个开源固件项目带来重大变化：全面支持 UEFI，并移除了 GRUB 载荷。",
     "fulltext_zh": "Libreboot 26.11 引入了全面的 UEFI 支持，并移除了 GRUB 载荷，为这个开源固件项目带来了重大变化。\n\n文章《Libreboot 26.11 发布：全面支持 UEFI，移除 GRUB 载荷》首先出现在 Linux Today。"
+  },
+  "c0d94e1b78befd2770336dcc488314db": {
+    "id": "c0d94e1b78befd2770336dcc488314db",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/11/kessler-music-player",
+    "title_en": "Kessler is an open-source, zine-style music player (with iPod support)",
+    "summary_en": "kessler is a new, open-source music player with a zine-style design, dithered album artwork and iPod support. It was also made with AI coding tools. Kessler&#8217;s developer, Felix, an artist and designer from Germany, told me this upfront in an email, saying &#8220;like everyone on the internet right now i started making an application with the help of a coding assistant&#8221;. He inherited an old iPod and found modern music player support for it was lacking I get a lot of software pitches no",
+    "pub_date": "Sat, 21 Nov 2026 05:30:13 +0000",
+    "title_zh": "Kessler：一款开源、杂志风格的音乐播放器（支持iPod）",
+    "summary_zh": "Kessler是一款开源音乐播放器，采用独特的杂志风格设计，支持抖动专辑封面和iPod同步。开发者Felix来自德国，利用AI编程工具创建了这款应用，初衷是让旧iPod能播放FLAC文件。它具备完整的本地音乐管理功能，包括标签编辑、歌词同步、Last.fm记录等，界面可高度定制，并隐藏了一些艺术动画和游戏彩蛋。",
+    "fulltext_zh": "Kessler是一款全新的开源音乐播放器，采用杂志风格设计、抖动专辑封面并支持iPod。它也是用AI编程工具制作的。\n\nKessler的开发者Felix是来自德国的艺术家和设计师，他在一封邮件中事先告诉我：“就像现在互联网上的每个人一样，我开始借助编程助手制作一个应用程序。”\n\n他继承了一台旧iPod，发现现代音乐播放器对其支持匮乏。\n\n我现在收到很多软件推介（比我16年博客生涯中任何时候都多）。AI代理不睡觉也不觉得羞耻，一盘接一盘地给我端上堆满形容词的词汇沙拉，希望我上钩（抱歉，我讨厌沙拉）。\n\nFelix的邮件更接地气。他解释了制作它的原因——没有对“改变游戏规则”这个和“革命性”那个的夸夸其谈。原因很平淡：为了利用一些旧技术。\n\n从朋友那里得到一台旧iPod后，他发现大多数现代音乐播放器对苹果旧音乐播放器的支持要么不确定要么根本没有（最近我翻出旧iPod nano，我同意这一点）。\n\n此外，他的音乐库现在大多是FLAC文件，他的旧播放器原生不支持这些文件。\n\n凭借他在Web开发、独立出版和设计方面的背景，他创建了一个工具的HTML模型，该工具可以转换FLAC文件并将它们同步到他的iPod。他把它喂给Claude，后者创建了一个可用的应用。\n\n受到启发，它迅速成长为一个真正的音乐播放器/管理器。\n\nkessler是一个音乐播放器（以及更多）\n\nKessler独特的外观掩盖了它的本质。Felix告诉我，kessler的设计看起来“有点像旧电话簿或终端窗口”。\n\n诚然，这不是每个人都会喜欢的外观，但这是大多数人在过去一周内不会看到100种变体的外观——没有玻璃拟态、圆角卡片、深紫色渐变或其他“Claude设计”的套路。\n\n它保持有意为之的低保真外观，辅以自定义字体（以及全程使用小写字母排版）。纯色（包含多种配色方案）和文本创建结构，而不是像分隔线和按钮那样的典型UI装饰。\n\nThe indie“氛围”延伸到专辑封面，默认情况下会进行抖动处理。抖动量的多少/风格可以配置，或者完全禁用该效果。关闭它会让应用少一些“刚传真过来”的调调。\n\nKessler彩色封面（以及显示EQ面板）\n\n布局可适应，有很多方式可以自定义显示内容和时机。我更喜欢超紧凑的标题栏、艺术家+专辑组合视图，并利用可调整大小的窗格来减少空白区域。\n\nFelix自己的一些艺术作品也隐藏在其中。空闲的搜索字段可以显示动画（有多种样式可选，包括一个游戏），并且可以在设定时间后启动音频可视化屏保选项（这仅在应用窗口上显示）。\n\n它可能由LLM编码，但很多人性化的东西流露出来。这种快速是微妙的；我感觉自己在使用某种扎根于想法而非像许多氛围编码软件那样希望快速捞钱的东西。\n\n它播放音乐和其他任何东西一样好\n\n是一个完全成形的本地音乐播放器。你指向一个装满曲目的文件夹，然后按艺术家名称浏览它们，还可以选择显示合辑、所有艺术家和专辑。\n\n你也可以通过查找或替换封面艺术以及编辑和修正曲目标签来整理你的音乐库。\n\n在线集成包括支持来自MusicBrainz和Wikipedia的同步歌词和艺术家详情。作为一个长期的last.fm信徒，我总是很高兴看到scrobble支持。\n\n编辑曲目详情\n\n加上你期望找到的其他东西，比如无缝播放、均衡器（带有预设和保存两个自定义设置的位置）、播放列表和播放队列、随机播放和循环模式。\n\n代码风格的键绑定还允许你仅使用键盘使用（尽管用鼠标也可以正常工作）。许多视图是面板，可以按需隐藏和显示，以帮助保持一个"
+  },
+  "83b3081316f25190b9963deb33cebfa5": {
+    "id": "83b3081316f25190b9963deb33cebfa5",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/owl-os-launch/",
+    "title_en": "Owl OS is a New Kali Linux Competitor",
+    "summary_en": "The ISO ships with a claimed 275+ tools, but the included README calls it proprietary.",
+    "pub_date": "Sat, 21 Nov 2026 17:01:00 GMT",
+    "title_zh": "Owl OS：Kali Linux 的新竞争者",
+    "summary_zh": "Owl OS 是一款基于 Debian 12 的渗透测试发行版，搭载 Cinnamon 桌面，声称包含 275 款以上安全工具，其中大部分为开发者自行编写。然而其 ISO 内的 README 声明该发行版为专有软件，保留所有权利，禁止未经许可的复制、分发、修改和逆向工程。该发行版目前提供三个版本，x86_64 版本已可下载。",
+    "fulltext_zh": "Owl OS 是 Kali Linux 的新竞争者\nOwl OS 是 Kali Linux 的新竞争者\n该 ISO 声称包含 275 款以上工具，但附带的 README 称其为专有软件。\n\n渗透测试，即安全专业人员在攻击者发现漏洞之前探测系统弱点，已成为保护任何在线运行系统的常规工作。\n专注于安全的 Linux 发行版，每一个都附带一套现成的安全工具。\n现在又有一个想要加入这个行列。\n的创作者联系我们介绍了其\n，我在虚拟机中进行了试用。\n该发行版并非开源，也不适合日常使用。项目的一些声明尚未得到验证。\n一个基于 Debian 12 的发行版\n桌面，包含大量用于渗透测试、取证和防御性安全工作的工具。我不理解为什么开发者没有采用更新的 Debian 13 版本。\n它自行编写了超过 275 款内置工具\n并从外部来源添加了 100 多款知名工具，相同的工具集可通过 Owl 提供给 Debian 和 Ubuntu 系统\nOwl OS 是\n的作品，这位来自约旦的开发者表示，这些工具大约花了三年时间手工编写，AI 在部分\n中提供了帮助。\n但有一个问题。🧐\nISO 中包含的 README 将 Owl OS 描述为\n保留所有权利。未经书面许可，禁止复制、分发、修改和逆向工程。\n我在一台配备 4 GB 内存和 40 GB 存储的虚拟机中测试了 Owl OS，使用\n安装通过熟悉的\n安装程序进行，引导您完成通常的时区、键盘布局、存储和用户步骤后完成。\n安装完成后，您将启动进入整洁的 Cinnamon 桌面，带有酷炫的 Owl OS 品牌壁纸，以及几个桌面快捷方式，分别指向 Firefox ESR、README 文件和可选的基于 Tor 的\n操作也非常简单，应用窗口和菜单打开迅速，没有任何故障。我甚至用\n检查了 Owl OS 在空闲时的内存占用，结果显示在未运行任何额外应用的情况下为 1.2 至 1.3 GB。\n工具库非常庞大\n。启动器将其分类为\n等类别，其中包括 Burp Suite、Ghidra、Hashcat、Metasploit Framework、Wireshark 和 Aircrack-ng 套件等选项。\n项目自己的工具集使用以 O 开头的名称，如 OBeacon、OAttack、OChronyX、OCipher 等。\n如果我有技能的话，我会测试这些渗透测试工具，但可惜那不是我的专长。我把它留给社区中的网络安全专业人士来评估 Owl OS 是否值得安装。\nOwl OS 有三个版本。\n现已提供 x86_64 版本（\n在\n上标记为即将推出。\n如果您想与其他 FOSS 爱好者一起参与讨论，请在我们的 It's FOSS 社区论坛上\n。\n制作了一个基于 Debian 的渗透测试发行版，希望得到反馈\n大家好，我是 Khaled，我从事红队工作，业余时间一直在构建 Owl OS。这是一个免费的基于 Debian 12 的发行版，采用 Cinnamon 桌面、内核 6.12，以及 275 款以上我自己的安全工具，外加常见的工具（Metasploit、nmap、sqlmap、Ghidra）。11 月 21 日发布。网站是 owlsec.org，部分工具在 github.com/owlsecx 上。欢迎任何反馈，特别是您希望这样的发行版包含什么。\n如果您感兴趣，我们有一些\n适合初学者的动手渗透测试实验练习\nPentora Box：面向 Linux 用户的动手道德黑客实验\n将教程转化为行动。选择一个实验，启动您的环境，逐步使用真实工具，毫无恐惧地挑战自己。专为自学者、安全爱好者和初露头角的渗透测试人员设计。\n喜欢这篇更新？支持独立的 Linux 新闻报道\nIt's FOSS 在过去 14 年里一直帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。\n一次付费，永久享受\n任意金额，无承诺\n跳过 Google 结果中的 AI 垃圾和 SEO 垃圾\n告诉 Google 您更喜欢 It's FOSS，它将"
+  },
+  "7af51d84d727beb10e89b724001a7378": {
+    "id": "7af51d84d727beb10e89b724001a7378",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/purism-5-v2-crowdfunding/",
+    "title_en": "Purism Is Crowdfunding the Librem 5 v2, a $1,599 RISC-V Linux Phone With Kill Switches",
+    "summary_en": "The privacy-focused Linux phone gets a RISC-V chip, 8 GB RAM, a removable battery. Purism's new $1,599 Linux Phone can't match an iPhone on specs but that's not the point.",
+    "pub_date": "Sat, 21 Nov 2026 08:26:17 GMT",
+    "title_zh": "Purism 众筹 Librem 5 v2：一款售价 1599 美元、带物理开关的 RISC-V Linux 手机",
+    "summary_zh": "Purism 为其第二款 Linux 手机 Librem 5 v2 发起众筹，售价 1599 美元。该手机采用八核 RISC-V 处理器、8GB 内存、可拆卸电池，并保留硬件级物理开关以切断摄像头、麦克风和无线模块。虽然配置无法与旗舰手机相比，但目标用户是重视隐私与数据安全的记者、外交官、活动人士等。Purism 还计划若达到 5000 订单，将主要电路板放在美国生产。",
+    "fulltext_zh": "Purism 众筹 Librem 5 v2：一款售价 1599 美元、带物理开关的 RISC-V Linux 手机\n\n专注于隐私的 Linux 手机迎来 RISC-V 芯片、8GB 内存和可拆卸电池。Purism 新款 1599 美元的 Linux 手机在规格上无法与 iPhone 匹敌，但这并非重点。\n\n如果你关注这个领域已有一段时间，肯定听说过 Purism。这是一家美国公司，以隐私和安全为唯一焦点来构建硬件和软件。\n\nPurism 生产 Linux 笔记本电脑、手机、安全密钥、VPN 服务以及自己的 Linux 发行版。其设备的一个标志性功能是物理开关。拨动这个开关，摄像头、麦克风或无线射频就会在硬件层面被切断。任何软件都无法将其重新打开。\n\nPurism 曾众筹初代 Librem 5。近十年后，它带着第二款智能手机 Librem 5 v2 的众筹活动回归。而这一次，它运行在 RISC-V 上。\n\nLibrem 5 V2 关键规格\n八核 RISC-V SpacemiT K1\n128 GB，外加 microSD（SDR104，80 MB/s），可启动\n4500 mAh，用户可拆卸\n改进的 4G 调制解调器（5G 计划后续推出），双 SIM 卡\nUSB Type-C（充电），3.5 毫米耳机插孔\n是，搭配自由固件（chopstx）\n硬件物理开关：\n蜂窝调制解调器、Wi-Fi/蓝牙、麦克风/摄像头\nPureOS（第四个版本）\n\n手机售价为预付 1599 美元，或现在支付 129 美元，之后 15 个月每月支付 99 美元。\n\n这里的主要变化是处理器。Librem 5 v2 用八核 RISC-V SpacemiT K1 芯片取代了 ARM。RISC-V 是一种开放指令集架构，符合 Purism 尽可能控制整个技术栈的理念。\n\n不过，Purism 自己也表示，RISC-V 尚未为 PureOS 做好“即插即用、开箱即启”的准备。图形、外设、ARM64 应用兼容性、浏览器性能和电源管理都被列为进行中的工作。你基本上是在资助这项工程工作，同时也在购买一部手机。\n\n其余硬件充其量只是中规中矩。你得到的是 5.7 英寸 720 x 1440 显示屏、8GB 内存和 128GB 存储，以及一个可启动 PureOS 的 microSD 插槽。摄像头配置为后置 1300 万像素和前置 800 万像素。\n\n说实话，1599 美元已经进入了 iPhone Pro 和 Galaxy S Ultra 的领域，而 Librem 5 v2 的规格并不在同一级别。屏幕、芯片性能，尤其是摄像头，都远不及旗舰手机。如果你想拍出精美的晚餐照片，这不是你的手机。\n\n但 Purism 本来也不是要打造通用旗舰。目标受众是那些更看重隐私和数据安全而非规格的人：记者、外交官、活动人士、技术高管以及从事敏感行业的人。基本上，任何负担得起高价以保持数据私有的人都行。\n\n在隐私方面，有三个硬件物理开关。一个用于蜂窝调制解调器，一个用于 Wi-Fi 和蓝牙，一个用于麦克风和摄像头。手机运行 PureOS，你不需要 Apple、Google、Microsoft、Amazon 或 Meta 账户即可使用。\n\n🇺🇸 如果 Purism 获得 5000 份订单，将在美国制造\nPurism 在美国的制造设施\n\nPurism 还向那些关心在最大全球供应链（读作中国）之外构建技术的人推销这次活动。\n\n只有众筹达到 5000 份订单的扩展目标，这才会实现。届时，Purism 表示主要的 PCBA（手机的主电路板）将在其美国自有设施中制造，也可能在欧盟制造。\n\n如果美国制造的电子产品对你来说是必须的，Purism 计划按照 Librem 5 v2 的时间表推出“美国制造电子产品的 Liberty Phone v2”。目前的 Liberty Phone 已经售价 1999 美元，所以预计“美国制造”的特权会让你支付更多。\n\n为什么要为此支付溢价？\n\n我向 Purism 团队提出了这个问题：“当类似的价格可以买到顶级产品时，为什么有人应该为 Purism 这样的手机支付溢价？”"
+  },
+  "8ce3e5cf470d4d6757934f2ce583b2ba": {
+    "id": "8ce3e5cf470d4d6757934f2ce583b2ba",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-NVMe-NS-Parallel",
+    "title_en": "Linux 7.4 To Remove NVMe Namespaces In Parallel For Faster Results",
+    "summary_en": "As part of this week's block subsystem fixes for the Linux 7.4-rc4 kernel release due out on Sunday are many bug fixes plus also a nice NVMe namespaces optimization...",
+    "pub_date": "Sat, 21 Nov 2026 20:24:33 -0500",
+    "title_zh": "Linux 7.4 将并行移除 NVMe 命名空间以提升速度",
+    "summary_zh": "Linux 7.4 内核将合并一项 NVMe 优化：移除命名空间时改为并行处理。此前逐个移除每个命名空间需等待约 20 毫秒的 RCU 宽限期，64 个命名空间耗时超过一秒。新方案通过异步域并行移除，使宽限期重叠，显著缩短控制器断开等场景的耗时。",
+    "fulltext_zh": "作为本周为 Linux 7.4-rc4 内核版本准备的块子系统修复的一部分，有许多错误修复，还有一项不错的 NVMe 命名空间优化。\n\n本周的块修复并不太令人兴奋，延续了 AI/LLM 驱动的内核活动流。我觉得最有趣的是 Linux NVMe 代码的改动，现在可以并行移除命名空间。对于那些通过 NVMe 命名空间将 NVMe 存储设备分割为逻辑隔离存储卷的用户来说，移除命名空间将比现有内核版本更快。NVMe 命名空间代码对于多租户环境、工作负载隔离、安全性等非常有用。\n\n到目前为止，Linux NVMe 命名空间移除代码只是一个接一个地移除命名空间，这在一些复杂的现代 Linux 服务器部署中可能成为瓶颈。\n\n软件工程师 Qiliang Yuan 解决了 NVMe 命名空间代码中的这个缺陷。Yuan 解释说：\n\n“nvme_remove_namespaces() 一个接一个地移除控制器的命名空间。每次移除都要在 del_gendisk() 中等待命名空间及其多路径头的 RCU 宽限期，总共约 20 毫秒。\n\n因此，删除控制器（例如从 fabrics 目标断开连接）所需时间与其命名空间数量成正比，64 个命名空间需要超过一秒。扫描也有同样的问题，直到提交 4e893ca81170（“nvme_core: scan namespaces asynchronously”）使命名空间并行添加。\n\n以同样的方式通过异步域移除命名空间，并在返回前等待所有命名空间。每次移除仍然等待约 20 毫秒，但等待现在重叠了：宽限期是系统范围的，因此同时等待的移除会被相同的宽限期释放，而不是每个都需要自己的宽限期。”\n\n最终，这对使用 NVMe 命名空间的用户来说是一项有用的优化。\n\n该变更已通过本周的合并进入 Linux 7.4 内核。"
+  },
+  "6b7c9a3158f51bdeb6f51ef5a3bf9b23": {
+    "id": "6b7c9a3158f51bdeb6f51ef5a3bf9b23",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Sashiko-AI-Performance-Review",
+    "title_en": "Sashiko AI Introducing Linux Performance Specialist Review Stage",
+    "summary_en": "The Google-developed Sashiko for agentic AI code review initially focused on the Linux kernel continues helping to uncover new bugs and issues as new patches hit the kernel mailing list as well as those manually running this open-source AI software. In addition to recently introducing an experimental patch series design assessment, they are introducing another new skill for helping with performance/benchmark evaluation of kernel changes...",
+    "pub_date": "Sat, 21 Nov 2026 12:49:14 -0500",
+    "title_zh": "Sashiko AI 引入 Linux 性能专家审查阶段",
+    "summary_zh": "Sashiko AI 代码审查工具在 0.9.5 版本中新增了可选的 Linux 性能专家审查阶段，旨在帮助识别内核补丁可能引入的性能回归。该阶段通过追踪调用者和外层结构体、排除推测性微优化等方式，在基准测试中将对上游性能回归的检测率从 15% 提升至 70%，同时保持中性提交的误报率基本不变，资源开销仅小幅增加。",
+    "fulltext_zh": "Sashiko AI 引入 Linux 性能专家审查阶段\n2026 年 11 月 21 日东部时间下午 12:49。\n\n专注于 Linux 内核的智能体 AI 代码审查工具，随着新补丁进入内核邮件列表以及用户手动运行这款开源 AI 软件，持续帮助发现新的缺陷和问题。除了最近推出实验性的补丁系列设计评估外，他们又引入了一项新技能，用于帮助对内核变更进行性能/基准评估。\n\n除了指出编码问题和其他直接问题外，Sashiko 现在还在探索一个有趣且重要的方向——性能方面。众所周知，Linux 内核性能回归 unfortunately 非常常见。\n\n周五发布的 Sashiko 0.9.5 版本新增了一个围绕性能和基准测试的审查阶段：\n\n“Linux 性能专家审查阶段与基准测试：\n为 linux_patch_review 添加可选的性能专家分析阶段（在守护进程和本地 sashiko review 中可用，包括 --stages performance 和 --cheap），具备二阶副作用追踪和抗噪护栏。添加 expect_clean 中性基准支持、按阶段误报跟踪，以及平衡的 40 提交 benchmark_performance.json 套件（20 个上游回归 + 20 个浸泡验证的干净提交）。”\n\n这很有趣，任何有助于防止 Linux 内核性能回归的努力无疑都非常受欢迎。\n\n进一步阐述了初始实现：\n将可选的性能专家阶段集成到 linux_patch_review.rs 的 ANALYSIS_STAGES 中，适用于本地（sashiko review，包括 --stages performance 和 --cheap）和守护进程审查模式，由 projects/linux/prompts/performance.md 支持，并与 false-positive-guide.md 和 severity.md 中的规则对齐。\n\n由于内核性能回归通常是普通缺陷修复、清理和结构体布局变更的意外副作用：\n- 对任何非平凡的 C、Rust 或结构体/头文件变更安排性能审查，同时跳过纯文档、注释或 ID 表。\n- 使用仓库工具向外追踪调用者和外层嵌入结构体 1-2 跳，禁止基于短临界区、冷拆卸合理化或将声明的正确性机制视为可接受的吞吐量/延迟悬崖而自行驳回。\n- 排除推测性微优化、零增量 guard(mutex) 清理以及无扇出的有界一次性控制路径。\n\n在 benchmark_performance.json（40 个提交：20 个上游回归 + 20 个中性 expect_clean 提交）上使用 gemini-4-argon 高努力模式进行受控 A/B 基准测试：\n- 正检测：3/20（15.0%）基线 -> 14/20（70.0%）（+55.0 个百分点，11 个净新增胜利中有 9 个仅来自性能阶段）。\n- 中性干净率：11/20（55.0%）基线 -> 12/20（60.0%）（0 个新的误报中性提交；52 -> 51 总未匹配发现）。\n- 资源开销：输入令牌中位数 +11.0%（91.4% 缓存），每提交持续时间中位数 -3.1%。\n\n还带来了各种其他改进。\n\nAI 驱动的 Sashiko 推出实验性补丁系列设计评估\nOpenAI 在 Linux 内核中发现 948 个本地权限提升漏洞\nPostgreSQL 19 因 AI/LLM 负担而进度落后\nModular 的 MAX 源代码现已完全开放，采用新的 MAX 许可证\nGoogle 的 Sashiko AI 已完成 19.1 万次补丁审查，被近 500 个内核 CVE 引用\nAI 用 Rust 实现 Adobe Photoshop 和 Premier 的“开源、净室”版本\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。"
+  },
+  "a5e4da4d1be694650da090663c4c60a5": {
+    "id": "a5e4da4d1be694650da090663c4c60a5",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Intel-LInux-NPU-Driver-1.39.1",
+    "title_en": "Intel Linux NPU Driver 1.39.1 Released With Nova Lake Support",
+    "summary_en": "Since last year there have been Linux patches for enabling the Intel Nova Lake NPU with its 6th Gen neural processing unit IP. Those patches were since mainlined with the Intel IVPU accelerator driver. Now the user-space Intel Linux NPU Driver was updated on Thursday with official Nova Lake support...",
+    "pub_date": "Sat, 21 Nov 2026 10:51:35 -0500",
+    "title_zh": "Intel Linux NPU 驱动 1.39.1 发布，新增 Nova Lake 支持",
+    "summary_zh": "Intel 发布 Linux NPU 驱动 v1.39.1，主要新增对 Nova Lake 平台的支持，该支持依赖已上游化的 IVPU 内核驱动。发布说明建议 Nova Lake NPU 用户搭配尚未发布的 OpenVINO 2026.5 AI 工具包使用。这是本次点版本更新的唯一主要变更，驱动可从 Intel 官方渠道下载。",
+    "fulltext_zh": "Intel Linux NPU 驱动 1.39.1 发布，新增 Nova Lake 支持\n\n自去年以来，一直有 Linux 补丁用于启用 Intel Nova Lake NPU 及其第六代神经处理单元 IP。这些补丁此后已通过 Intel IVPU 加速器驱动被主线化。现在，用户空间的 Intel Linux NPU 驱动于周四更新，正式加入 Nova Lake 支持。\n\nLinux NPU 驱动 v1.39.1 于本周发布，这些用户空间组件的主要新增内容是对 Nova Lake 平台的支持，该支持同样依赖于已上游化的 IVPU 内核驱动支持。发布说明提到，建议 Nova Lake NPU 用户使用尚未发布的 OpenVINO 2026.5 AI 工具包。\n\n这就是 v1.39.1 点版本更新的全部内容——Nova Lake 支持，可从以下地址下载："
+  },
+  "c5862b043c4cced6df6c2a2eb62bebc9": {
+    "id": "c5862b043c4cced6df6c2a2eb62bebc9",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Debian-13.8-Released",
+    "title_en": "Debian 13.8 Released With 150+ Security Updates",
+    "summary_en": "Debian 13.8 is out today as the newest ISO refresh for Debian 13 \"Trixie\" with 150 security updates noted along with many bug fixes...",
+    "pub_date": "Sat, 21 Nov 2026 06:20:00 -0500",
+    "title_zh": "Debian 13.8 发布，包含 150 多项安全更新",
+    "summary_zh": "Debian 13.8 作为 Debian 13 \"Trixie\" 的最新 ISO 刷新版发布，包含 150 项安全公告修复，涉及 Chromium、Linux 内核、X.Org Server、LibreOffice、WordPress、Redis、Wireshark、Firefox ESR 等常用软件。此外还包含大量缺陷修复，如用更新版 Rust 编译器重建 Rust 软件包、修复 FreeType 拒绝服务问题、KDE KWin 的 Wayland 色彩管理问题、内存泄漏及 Thunderbird 153 兼容性更新等。",
+    "fulltext_zh": "Debian 13.8 发布，包含 150 多项安全更新\n2026 年 11 月 21 日 06:20 AM EST 发布。\n\nDebian 13.8 今日发布，作为 Debian 13 \"Trixie\" 的最新 ISO 刷新版，包含 150 项安全更新以及大量缺陷修复。\n\nDebian 13.8 紧随 150 项 Debian 安全公告（DSA）之后发布，这些公告影响从 Chromium 到 Linux 内核、X.Org Server、LibreOffice、WordPress、Redis、Wireshark、XZ-Utils、Firefox ESR、Apache HTTPD 及其他常用软件包。\n\n除了在当前 AI/LLM 驱动的安全研究背景下产生的大量安全修复之外，许多缺陷修复也进入了 Debian 13.8。Debian 13.8 使用更新版 Rust 编译器重建了多个基于 Rust 的软件包，针对更新版 OpenSSL 和 Glibc 库重建了其他软件包，修复了 FreeType 的拒绝服务问题，修复了 KDE 的 KWin 中 Wayland 色彩管理处理问题，修复了内存泄漏，修复了不同软件包的构建失败问题，并为 Thunderbird 153 邮件客户端提供了兼容性更新。\n\n今日 Debian 13.8 版本的下载和更多详情可通过以下链接获取：\n\nDebian 的 APT 因 AI 安全发现的进展而移除部分功能\nDebian 的 APT 受中间人攻击影响，可导致以 root 身份执行任意代码\nUbuntu 正在为 Debian 的 APT 开发 SHA3，以备 SHA2 被攻破时使用\nDebian 推理门户上线，为 Debian 开发者提供免费 AI/LLM 推理服务\nDebian 13.7 发布，包含大量缺陷修复\nCERN 将工业计算机从长期使用的 RHEL 环境迁移至 Debian\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nCloudflare 开源 Kitesurf：其面向 AI 代理的网页浏览器\nOpenJDK Java 的 Java4Shell 漏洞可导致远程代码执行\nRedox OS 让 Golang 可用、移植 GIMP 并简化 AI 政策\nXfce 4.22 正朝着 2027 年初发布推进\nKDE Plasma 6.9 终于允许 XWayland 按需运行，新增晃动窗口预设\nBtrfs 寻求应对 AI 与“缺乏常识的新手”造成的更多伤害而非益处\nValve 提交的新 AMDGPU Linux 补丁旨在减少 Steam Play 游戏卡顿\nLinux 7.4-rc3 发布：“到处都是常见的噪音”\n\n享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "28f188aa14ca5acfbb8cb62d62337711": {
+    "id": "28f188aa14ca5acfbb8cb62d62337711",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/KDE-Plasma-6.9-Cursor-Blinking",
+    "title_en": "KDE Plasma 6.9 Allows Adjusting The Text Cursor Blinking Rate, Other Improvements",
+    "summary_en": "It has been another busy week in the KDE development space with more feature work and fixes piling up for the upcoming Plasma 6.9 desktop...",
+    "pub_date": "Sat, 21 Nov 2026 05:51:46 -0500",
+    "title_zh": "KDE Plasma 6.9 允许调整文本光标闪烁速率及其他改进",
+    "summary_zh": "KDE Plasma 6.9 开发周报显示，新版本将允许用户调整文本光标插入点的闪烁速率或完全禁用闪烁，屏幕键盘新增中文、日文和韩文文本合成器。多屏设置中右键桌面选择“显示配置”将直接打开对应屏幕的系统设置页面，并改进特定磁盘自动挂载的可靠性。Spectacle 截图速度提升，KWin 在 NVIDIA R615 及以上驱动中使用叠加平面。Plasma 6.8.4 将修复 GPU 重置后及登录时的 KWin 崩溃问题。",
+    "fulltext_zh": "又度过了繁忙的一周，KDE 开发领域为即将到来的 Plasma 6.9 桌面积累了更多功能工作和修复。\n\nKDE Plasma 6.9 的屏幕键盘现在包含中文、日文和韩文的文本合成器。Plasma 6.9 现在还允许控制文本光标插入点的闪烁速率——或完全禁用其闪烁。\n\n在 Plasma 6.9 的多屏设置中，当右键点击桌面并进入“显示配置”菜单选项时，现在将打开你所右键点击的特定屏幕对应的系统设置页面。\n\nPlasma 6.9 还提高了仅自动挂载特定磁盘的可靠性。\n\nPlasma 6.9 的其他一些增强包括：Spectacle 应用在 Plasma 6.9 中将能够比以往更快地截图，KWin 现在在搭载 R615 及更新驱动的 NVIDIA GPU 上使用叠加平面，以及其他修复。\n\n对于 Plasma 6.8.4 点版本，有一个针对 GPU 重置后 KWin 崩溃的修复，以及最近导致 KWin 在某些系统登录时崩溃的回归问题。此外 Plasma 6.8.4 还将带来其他修复。\n\n有关本周所有 KDE Plasma 变更的更多细节，可通过以下链接查看：\nKwi 作为 KDE 新终端模拟器首次发布\nKDE Plasma 6.9 终于允许 XWayland 按需运行，新增晃动窗口预设\nKDE Frameworks 6.32 发布，修复 USB 文件传输通知问题\nKDE Plasma 6.8.3 发布，包含数十项修复\nKDE Plasma 6.9 将停止在桌面右键点击文件/文件夹时的内存泄漏\nKDE Linux 接近 Beta 里程碑，现默认搭载 NTSYNC\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。他可以通过以下方式关注：\nCloudflare 开源 Kitesurf：其面向 AI 代理的网页浏览器\nOpenJDK Java 的 Java4Shell 漏洞可导致远程代码执行\nRedox OS 让 Golang 运行起来，移植 GIMP 并简化 AI 政策\nXfce 4.22 朝着 2027 年初发布努力\nKDE Plasma 6.9 终于允许 XWayland 按需运行，新增晃动窗口预设\nBtrfs 寻求应对 AI 和“没有常识的新手”造成更多伤害而非益处的问题\nValve 的新 AMDGPU Linux 补丁旨在减少 Steam Play 游戏的卡顿\nLinux 7.4-rc3 发布：“到处都是常见的噪音”\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "4a60ca9f851f4e2bd28b8b002ef4db3d": {
+    "id": "4a60ca9f851f4e2bd28b8b002ef4db3d",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/dietpi-10-9-released-with-support-for-odroid-c5-and-orange-pi-zero-4",
+    "title_en": "DietPi 10.9 Released with Support for Odroid C5 and Orange Pi Zero 4",
+    "summary_en": "DietPi 10.9 distribution for single-board computers is now available for download with support for Odroid C5, Orange Pi Zero 4, Orange Pi 6, and Orange Pi 6 Plus boards.\nThe post DietPi 10.9 Released with Support for Odroid C5 and Orange Pi Zero 4 appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Sat, 21 Nov 2026 23:50:53 +0000",
+    "title_zh": "DietPi 10.9 发布，支持 Odroid C5 和 Orange Pi Zero 4",
+    "summary_zh": "DietPi 10.9 单板计算机发行版现已开放下载，新增对 Odroid C5、Orange Pi Zero 4、Orange Pi 6 和 Orange Pi 6 Plus 开发板的支持。",
+    "fulltext_zh": "DietPi 10.9 单板计算机发行版现已开放下载，新增对 Odroid C5、Orange Pi Zero 4、Orange Pi 6 和 Orange Pi 6 Plus 开发板的支持。"
+  },
+  "624a773ad339280fbb2917a636466dc2": {
+    "id": "624a773ad339280fbb2917a636466dc2",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/debian-13-8-trixie-released-with-122-bug-fixes-and-150-security-updates",
+    "title_en": "Debian 13.8 “Trixie” Released with 122 Bug Fixes and 150 Security Updates",
+    "summary_en": "Debian 13.8 is now available for download as the eighth maintenance update to the Debian 13 “Trixie” operating system series with 122 bug fixes and 150 security updates.\nThe post Debian 13.8 “Trixie” Released with 122 Bug Fixes and 150 Security Updates appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Sat, 21 Nov 2026 10:51:08 +0000",
+    "title_zh": "Debian 13.8 \"Trixie\" 发布，包含 122 项错误修复和 150 项安全更新",
+    "summary_zh": "Debian 13.8 作为 Debian 13 \"Trixie\" 操作系统系列的第八次维护更新现已可供下载，本次更新包含 122 项错误修复和 150 项安全更新。",
+    "fulltext_zh": "Debian 13.8 现已可供下载，作为 Debian 13 \"Trixie\" 操作系统系列的第八次维护更新，包含 122 项错误修复和 150 项安全更新。"
+  },
+  "4187f796533f7616c91627035dd1a7d7": {
+    "id": "4187f796533f7616c91627035dd1a7d7",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/calibre-9-19-adds-grammar-checking-and-suggestions-to-the-book-editor",
+    "title_en": "Calibre 9.19 Adds Grammar Checking and Suggestions to the Book Editor",
+    "summary_en": "Calibre 9.19 open-source e-book manager is now available for download with grammar checking and suggestions for rewriting sentences and other changes.\nThe post Calibre 9.19 Adds Grammar Checking and Suggestions to the Book Editor appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Sat, 21 Nov 2026 10:35:17 +0000",
+    "title_zh": "Calibre 9.19为图书编辑器新增语法检查和修改建议功能",
+    "summary_zh": "Calibre 9.19开源电子书管理器现已开放下载，其图书编辑器新增语法检查功能，并提供句子改写及其他修改建议，帮助用户提升电子书文本质量。",
+    "fulltext_zh": "Calibre 9.19开源电子书管理器现已可供下载，为图书编辑器带来了语法检查以及句子改写和其他修改建议功能。\n\n文章《Calibre 9.19为图书编辑器新增语法检查和修改建议功能》首发于9to5Linux——未经许可请勿转载本文。本RSS源面向读者，而非抓取程序。"
   }
 }
