@@ -22416,5 +22416,148 @@
     "title_zh": "Calibre 9.19为图书编辑器新增语法检查和修改建议功能",
     "summary_zh": "Calibre 9.19开源电子书管理器现已开放下载，其图书编辑器新增语法检查功能，并提供句子改写及其他修改建议，帮助用户提升电子书文本质量。",
     "fulltext_zh": "Calibre 9.19开源电子书管理器现已可供下载，为图书编辑器带来了语法检查以及句子改写和其他修改建议功能。\n\n文章《Calibre 9.19为图书编辑器新增语法检查和修改建议功能》首发于9to5Linux——未经许可请勿转载本文。本RSS源面向读者，而非抓取程序。"
+  },
+  "9849dc9e0154f2694e6779d3217f7db7": {
+    "id": "9849dc9e0154f2694e6779d3217f7db7",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/11/high-tide-chromecast-dlna-support",
+    "title_en": "High Tide (Linux TIDAL client) adds support for DLNA, Chromecast",
+    "summary_en": "High Tide, the open-source TIDAL client for Linux, can now play to Chromecast and DLNA devices like TVs and smart speakers. The feature rolls out in v1.8.0, released this weekend with a variety of smaller bug fixes and minor bumps, including showing artist names over Discord RPC. But it&#8217;s the wireless streaming that&#8217;s the big ticket. Most people use High Tide to stream music to the same device, and if wanting to punt audio elsewhere, could do it via Bluetooth. I&#8217;d also wager th",
+    "pub_date": "Sun, 22 Nov 2026 21:17:14 +0000",
+    "title_zh": "High Tide（Linux TIDAL 客户端）新增 DLNA 和 Chromecast 支持",
+    "summary_zh": "开源 Linux TIDAL 客户端 High Tide 发布新版本，新增对 DLNA 和 Chromecast 设备的无线串流支持。用户可通过新增的“Play on”按钮将音乐投射到电视、智能音箱等设备，音频会转换为 FLAC 无损格式并通过内置 Web 服务器传输。该功能无需额外配置，但播放期间电脑需保持开机，且仅能通过电脑控制播放。",
+    "fulltext_zh": "High Tide（Linux TIDAL 客户端）新增 DLNA 和 Chromecast 支持 - OMG! Ubuntu\n\n这款面向 Linux 的开源 TIDAL 客户端现在可以将音乐播放到 Chromecast 和 DLNA 设备上，例如电视和智能音箱。\n\n该功能随本周末发布的版本推出，同时包含多项较小的错误修复和细微更新，包括在 Discord RPC 中显示艺术家名称。\n\n但无线串流才是重头戏。\n\n大多数人使用 High Tide 将音乐串流到同一设备上，如果想将音频推送到其他地方，可以通过蓝牙实现。\n\n我敢说大多数 TIDAL 订阅用户都拥有可以运行官方应用的设备。这些应用提供了服务原生的音频切换技术——TIDAL Connect。Connect 让应用可以指示音箱直接从 TIDAL 服务器串流音乐。\n\n但由于没有可供第三方应用使用的 Connect API，High Tide 的开发者想出了创造性的解决方案。\n\nHigh Tide 使用了许多智能音箱、电视和音频设备已经支持的标准：DLNA 和 Chromecast。\n\nDLNA 接收器内置于许多现代电视和智能电视盒子中，或以适配器形式存在。\n\n使用起来很直接。点击应用控制栏中新增的“Play on”按钮。这会列出 High Tide 在网络上找到的所有 DLNA 和 Chromecast 设备（以及一个“在此设备上播放”选项，用于将声音带回电脑）。\n\n如果你选择了目标设备，High Tide 会将曲目转换为 FLAC（无损）格式，并通过应用内运行的小型 Web 服务器提供。这意味着你的电脑自然需要保持开机才能播放。\n\n你也只能从电脑上暂停、跳过等，所以不要因为电视遥控器没反应而生气。曲目在播放前也会被缓存，因此音频启动可能需要一点时间（因此没有无缝播放）。\n\n由于使用该功能不需要任何额外设置或依赖，这是一种相对低摩擦的方式，可以将音乐推送到你可能经常路由到的设备上。\n\nHigh Tide 是免费的开源软件，不过最新版本尚未发布——可从其 GitHub 页面获取。"
+  },
+  "f50d7b1db10dc42fd0d3b96667534f3f": {
+    "id": "f50d7b1db10dc42fd0d3b96667534f3f",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/11/ubuntu-2704-daily-builds-are-out",
+    "title_en": "Ubuntu 27.04 daily builds are available to download",
+    "summary_en": "If you plan to track development of Ubuntu 27.04 &#8216;Tenacious T-Rex&#8217; up close, daily build images are now available for download. Daily builds are produced for the duration of a development cycle, right up until the final, stable release. They&#8217;re built from development code (obviously) and produced (almost) daily, to make testing changes easier. Those who don&#8217;t have specific need to test shouldn&#8217;t, but those who need or want to don&#8217;t need to wait for the public ",
+    "pub_date": "Sat, 21 Nov 2026 16:26:14 +0000",
+    "title_zh": "Ubuntu 27.04 每日构建版已开放下载",
+    "summary_zh": "Ubuntu 27.04 的每日构建镜像现已开放下载，供希望密切跟踪开发进展的用户测试。每日构建基于开发代码生成，将持续整个开发周期直至稳定版发布。Ubuntu 27.04 计划于2027年4月22日发布。建议在备用分区或虚拟机中运行，避免作为主力系统使用。",
+    "fulltext_zh": "如果你计划密切关注 Ubuntu 27.04 的开发进展，每日构建镜像现已可供下载。\n\n每日构建在整个开发周期内持续产出，直至最终的稳定版本发布。它们（显然）基于开发代码构建，并且（几乎）每天生成，以便于测试变更。\n\n没有特定测试需求的用户不应使用，但有需要或希望测试的用户无需等待公开测试版，也不必费心从早期版本升级（顺便说一句，这也是可行的）。\n\nUbuntu 27.04 计划于2027年4月22日发布。\n\nUbuntu 每日构建可以更新至稳定版本。持续安装更新，到四月份时你将与全新安装的用户处于相同的核心软件包集。\n\n尽管这些是开发构建版，并不打算被安装或用作日常主力系统（即你信任用于关键任务的主要操作系统）。\n\n有些人喜欢将它们作为主要系统并“驾驭”开发浪潮。\n\n在可能的情况下，请将 Ubuntu 开发版本安装在第二个分区（或第二个磁盘，如果可能），并能访问另一个操作系统以备出现问题。你也可以在虚拟机中运行它们，但这有其自身的注意事项。\n\n除非你有需要，否则不必急于下载。目前没有太多可看的内容；最初几个月涉及软件包同步、工具更新和底层管道。桌面上面向用户的变化要在几个月后才会到来。\n\n获取 Ubuntu 27.04 每日构建\n\nUbuntu 27.04 每日构建可从 Ubuntu CD 镜像服务器下载。目前提供常规 Intel/AMD64 和 Intel/AMD-v3（又名 x86-64-v3）的 ISO。\n\n“current”文件夹存放已通过一组（基本）自动化检查以确保安装和启动的镜像。\n\n“pending”文件夹包含下一组待检查的镜像，但尚未签署通过。除非你知道其中有某个修复或变更。\n\n你会测试 Ubuntu 27.04 吗？请在评论中告诉我，以及你最希望它添加或修复的一件事。"
+  },
+  "384a2e24a3259018d92f0d6f9e859b0b": {
+    "id": "384a2e24a3259018d92f0d6f9e859b0b",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/13046",
+    "title_en": "DistroWatch Weekly, Issue 1200",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  This week in DistroWatch Weekly: \nReview: Maple 1.4.7\nNews: Purism plans new RISC-V phone, KDE tests on-demand XWayland, Peppermint experiments with XLibre, Debian to trim old features from APT, publishes 13.8 media, CalyxOS highlights current and future features\nQuestions and answers: What is the biggest barrier for Linux adoption?\nReleased last....",
+    "pub_date": "",
+    "title_zh": "DistroWatch周刊第1200期",
+    "summary_zh": "本期DistroWatch周刊第1200期报道了Purism计划推出RISC-V手机、KDE测试按需启动XWayland、Peppermint尝试XLibre、Debian精简APT旧功能并发布13.8媒体、CalyxOS介绍当前与未来功能等新闻。此外还包含问答栏目讨论Linux普及的最大障碍，以及上周发布的AlmaLinux、Rocky Linux、BackBox、AnduinOS、CachyOS、KaOS等发行版更新。",
+    "fulltext_zh": "DistroWatch周刊第1200期（DistroWatch.com新闻）\nDistroWatch.com由以下赞助商支持\n新闻/观点/评论 ▼\n发布公告\nDW周刊/评论存档\n访客评分与评论\n项目评分排名\n播客、新闻通讯与评论\n跨发行版比较软件包\n显示所有发行版的软件包版本\n搜索发行版 - 高级\n已停止的发行版\n教程与学习 ▼\n搜索文章\n问答专栏\n技巧与窍门专栏\n误区与误解专栏\n简化手册页\n其他操作系统\n发行版验证密钥\n可视化发行版家族树\n常见问题\n我们的捐赠计划\n小型企业电话系统\nDebian发布13.8媒体\nCalyxOS概述当前和计划中的功能\nDebian的APT精简旧功能\nPeppermint迁移到XLibre\nPlasma按需运行XWayland\nPurism计划推出RISC-V驱动的手机\nFreeBSD讨论AI，测试x11appjail\nManjaro创建非营利组织\nOpenBSD运行Hyprland\nChimera Linux致力于在基于musl的发行版上支持NVIDIA\n易于使用的PBX - 托管或自管理\nLinux电话系统\n免费实时聊天解决方案\n集成呼叫中心软件\n联络中心软件\n远程工作应用：iOS或Android\n免费视频会议\n3CX的VoIP/PBX操作指南\n不要措手不及，制定灾难恢复计划！\n essential实时聊天报告和统计\n导致呼叫欺诈的常见错误\nWhatsApp Business与3CX WhatsApp API集成\n3CX StartUP的5个杀手级功能\n不要成为“那种”人 第1卷：保管复杂凭证\n不要成为“那种”人 第2卷：呼叫欺诈\n不要成为“那种”人 第3卷：四大安全提示\n不要成为“那种”人 第4卷：监控你的实例\nRed Hat周五五件事 - 2026年11月20日\nUbuntu每周通讯970\nProjets Libres播客\nFull Circle每周新闻\n最新新闻和更新\n新闻过滤选项\nDistroWatch周刊第1200期\n新闻：Purism计划新款RISC-V手机，KDE测试按需XWayland，Peppermint试验XLibre，Debian将精简APT旧功能，发布13.8媒体，CalyxOS强调当前和未来功能\n问答：Linux普及的最大障碍是什么？\n上周发布：AlmaLinux OS 10.3和9.9、Rocky Linux 10.3、BackBox 10、AnduinOS 2.1.0、CachyOS 261122、KaOS 2026.11\n种子角落：AnduinOS、Armbian、BackBox、CachyOS\n即将发布：FreeBSD 15.2-RC1\n民意调查：你是否运行非iOS或Google Android的移动操作系统？\n阅读本周DistroWatch周刊的更多内容……\ndeepin（曾用名Deepin、Linux Deepin、Hiweed GNU/Linux）是一个基于Debian的发行版（在2015年底发布的版本15之前基于Ubuntu），旨在提供优雅、用户友好且可靠的操作系统。它不仅包含开源世界的最佳成果，还创建了自己的桌面环境DDE（Deepin桌面环境），基于Qt 5工具包。Deepin非常注重直观设计。其自主开发的应用程序，如Deepin软件中心、DMusic和DPlayer，为普通用户量身定制。deepin易于安装和使用，可以作为办公和家庭使用的良好Windows替代品。\n技巧与窍门：Linux下的数码相机、手机和音乐播放器\n问答：处理生成的大量日志文件\n问答：内核恐慌和文件系统更改\n误区与误解：巨大的内存误区\n问答：在Linux上做奇怪、不寻常和有趣的事情\n问答：了解谁运行了sudo并设置防火墙\n问答：命令行文字处理器\n问答：安全启动和BSD\n误区与误解：物理访问是否意味着root访问？\n问答：固态硬盘（SSD）上的TRIM\n版权所有 © 2001 - 2026 Atea Ataroa Limited。保留所有权利。所有商标均为其各自所有者的财产。\n更改隐私设置\n联系、更正"
+  },
+  "c2bfadeaa786301d0ef97798c1a762be": {
+    "id": "c2bfadeaa786301d0ef97798c1a762be",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/13045",
+    "title_en": "Distribution Release: KaOS 2026.11",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The KaOS project, which develops a rolling-release Linux distribution with focus on integrating the Qt development platform and KDE applications into a complete desktop, has announced the release of KaOS 2026.11 live ISO images. This new version incorporates the Noctalia shell's recent improvements and new plugins: \"It is....",
+    "pub_date": "",
+    "title_zh": "发行版发布：KaOS 2026.11",
+    "summary_zh": "KaOS 项目发布了 2026.11 版 live ISO 镜像。新版本改进了 Plasma 之后的 niri/Noctalia 桌面配置，Noctalia 5 增加了大量插件。系统启动改用 dinit、turnstile 和 seatd，进一步减少对 systemd 组件的依赖，并新增 kss 图形工具用于调整 KConfig 模块。默认显示管理器为基于 greetd 的 Tuigreet。",
+    "fulltext_zh": "KaOS 项目致力于开发一个滚动发布的 Linux 发行版，专注于将 Qt 开发平台和 KDE 应用程序集成为完整的桌面环境，现已宣布发布 2026.11 版 live ISO 镜像。此新版本包含了 Noctalia shell 的最新改进和新插件：\n\n“非常荣幸向您呈现十一月发布的新稳定 ISO 镜像。KaOS 在 Plasma 之后的 niri/Noctalia 配置得到进一步改进。Noctalia 5 增加了一系列令人印象深刻的插件，大幅扩展了此 shell 的功能。在 niri 中为 xdg 自启动功能添加 dex 后，权限问题得到改善，因此屏幕录制等功能再次正常工作。KaOS 创建了一个新应用程序（kss），以便仍然能够通过图形界面调整 KConfig 模块。KaOS 使用 dinit、turnstile、seatd 进行系统启动、席位和服务管理。对 systemd 应用程序部分的使用进一步减少。仍在使用的部分主要用于 udev 和 tmpfiles。使用了 Elogind，但不是用于系统登录，纯粹是为了提供可用的 polkit。添加了 openrc-settingsd，以重新加入 localed、timedated 和 timesyncd 的独立组件。console-setup 的使用范围已扩展，现在也提供独立的 localectl 替代品。默认显示管理器是基于 greetd 的 Tuigreet。Greetd 与 seatd 完全集成，因此在新配置下更适合 KaOS。”\n\n更多详情和截图请见。\n\nKaOS-2026.11-x86_64.iso\n\n近期相关新闻与发布\n发行版发布：KaOS 2026.11\n发行版发布：KaOS 2026.06\n发行版发布：KaOS 2026.02\n发行版发布：KaOS 2025.09\n发行版发布：KaOS 2025.05\n发行版发布：KaOS 2025.01\n\nKaOS 是一个桌面 Linux 发行版，采用最新版本的 Noctalia 桌面环境、Calligra 办公套件以及其他使用 Qt 工具包的流行软件应用程序。它受 Arch Linux 启发，但开发者构建自己的软件包，可从内部仓库获取。KaOS 采用滚动发布开发模式，并"
+  },
+  "b2129e658f1858961a5ecd2f5ad49e71": {
+    "id": "b2129e658f1858961a5ecd2f5ad49e71",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/13044",
+    "title_en": "Distribution Release: CachyOS 261122",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The CachyOS team has announced the availability of the November 2026 ISO image of CachyOS, an Arch-based Linux distribution featuring custom Linux kernels optimised for performance and gaming. The project's latest version includes a new kernel variant designed to run certain games and a fully-revamped application installer: \"CachyOS....",
+    "pub_date": "",
+    "title_zh": "发行版发布：CachyOS 261122",
+    "summary_zh": "CachyOS 团队发布了 2026 年 11 月 ISO 镜像，这是基于 Arch 的 Linux 发行版，主打性能与游戏优化。新版本引入专用内核 linux-cachyos-eac 以支持 Easy Anti-Cheat Linux v2，并全面重构了软件包安装器 2.0.0，新增 AUR 构建、Flatpak 和 AppImage 支持。",
+    "fulltext_zh": "CachyOS 团队宣布推出 2026 年 11 月 ISO 镜像，这是一个基于 Arch 的 Linux 发行版，配备针对性能和游戏优化的定制 Linux 内核。该项目的最新版本包含一个旨在运行特定游戏的新内核变体，以及一个全面重构的应用程序安装器：“CachyOS 2026 年 11 月版本。这是我们今年的第六个版本。此版本带来了对 Easy Anti-Cheat Linux v2 的支持。EAC 仅在能够验证系统启动方式时才允许游戏启动——需要 Secure Boot 配合由 Epic 信任的密钥签名的内核、TPM 2.0、启用的 IOMMU，以及运行在锁定模式下仅加载已签名模块的内核。为此，我们提供了一个专用内核 linux-cachyos-eac，以及使用相同密钥签名的 systemd-boot。EAC 内核拥有自己的启动条目，您正常的启动条目会被保留，因此只有在您想玩使用 EAC 的游戏时才需要启动到该内核。……CachyOS 软件包安装器在 2.0.0 版本中进行了全面重构，采用了全新的用户界面。除了 CachyOS 和 Arch 仓库外，它现在还能从 AUR 构建软件包，并安装 Flatpak 应用和 AppImage，每一项均为可选启用。在构建 AUR 软件包之前，会显示 PKGBUILD 及其安装脚本以供审查，静态分析会标记出需要关注的行。”请阅读详细的发布公告以获取更多信息。\n\ncachyos-desktop-linux-261122.iso\n\n近期相关新闻与发布\n发行版发布：CachyOS 261122\n发行版发布：CachyOS 260809\n发行版发布：CachyOS 260426\n发行版发布：CachyOS 260308\n发行版发布：CachyOS 260124\n发行版发布：CachyOS 251129\nCachyOS 是一个基于 Arch Linux 的 Linux 发行版。它专注于速度和安全性优化——默认 Linux 内核使用 BORE（Burst-Oriented Response Enhancer）调度器进行了深度优化，而桌面软件包则使用 LTO、x86-64-v3 和 x86-64-v4、Zen 4 优化、安全标志和性能改进进行编译。可用的桌面环境、窗口管理器和 Wayland 合成器包括"
+  },
+  "54616eb49dc3ee5ddd2a217cb1bb105f": {
+    "id": "54616eb49dc3ee5ddd2a217cb1bb105f",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Black-Friday-Week-2026",
+    "title_en": "Black Friday / End Of Year Special & The Unfortunate Ad Network Situation This Year",
+    "summary_en": "If you have enjoyed the more than 3,125+ news articles so far this year and 200+ Linux hardware reviews this calendar year with a lot of interesting content, running this week is the annual Phoronix Premium end-of-year / \"Black Friday\" promotion to help support the site while enjoying ad-free access, multi-page articles on a single page, and other benefits while helping Phoronix continue as it approaches its 23rd birthday next June. Unfortunately, this year has been the toughest yet...",
+    "pub_date": "Sun, 22 Nov 2026 21:45:00 -0500",
+    "title_zh": "黑色星期五/年终特惠及今年不幸的广告网络状况",
+    "summary_zh": "Phoronix 网站推出年度黑色星期五/年终促销，Phoronix Premium 年费订阅优惠至30美元，终身订阅150美元。由于广告网络（如亚马逊广告）因脏话引用问题屏蔽网站，今年成为网站生存最艰难的一年，呼吁读者订阅以帮助网站减少对广告网络的依赖。",
+    "fulltext_zh": "黑色星期五/年终特惠及今年不幸的广告网络状况 - Phoronix\n黑色星期五/年终特惠及今年不幸的广告网络状况\n发布于2026年11月22日美国东部时间晚上09:45。\n\n如果您喜欢今年迄今为止超过3,125篇新闻文章和本日历年内200多篇Linux硬件评测以及许多有趣的内容，本周正在进行的是年度Phoronix Premium年终/“黑色星期五”促销活动，旨在支持网站，同时享受无广告访问、多页文章单页显示以及其他福利，帮助Phoronix在明年六月接近其23岁生日时继续运营。不幸的是，今年是迄今为止最艰难的一年。\n\n持续到下周12月1日结束（任何时区，不特别严格）的是年度Phoronix.com假日/黑色星期五/网络周促销。您可以以折扣价加入，帮助支持持续的Linux硬件评测/测试、开源新闻等，并加入实际订阅Phoronix Premium的读者中不到1%的俱乐部。自2004年以来，网络广告一直是运营Phoronix.com的主要广告来源，而近年来由于公司将更多广告支出投向社交网络、广告拦截增加等原因，压力越来越大。\n\n今年是Phoronix可持续性有记录以来最糟糕的一年，因为亚马逊广告及其同类（那些遵循亚马逊标准的）因关于脏话引用的新规则而屏蔽了网站……最常被引用的例子是之前关于Linux内核的Brain F***调度器的报道，大多是多年前引用Linus Torvalds在Linux内核邮件列表上关于他激情陈述的有趣评论的文章，以及其他类似陈述以及论坛中的读者评论。一个被广泛引用的例子是Linus Torvalds过去关于NVIDIA及其当时专有Linux驱动的评论：\n\n大多数引用是表达性词语，广告网络算法没有考虑任何上下文。因此，即使不得不删除内容并审查某些词语以试图解决该问题，他们的申诉流程仍在进行中，同时在此过程中扼杀了网站的可持续性。\n\n因此，如果您想提供帮助，并在此过程中使网站减少对——烦人的——广告网络的依赖，请考虑在这个假期季节加入Phoronix Premium，帮助网站生存。\n\n在接下来的一周内，您可以享受Phoronix Premium的折扣价：年度订阅30美元，而当前价格为每年45美元；终身订阅150美元，低于原价250美元。\n\n如果您想利用此促销：\n首先确保您需要在论坛上注册，因为他们处理订阅/用户管理方面。那里没有集成的销售支持，所以高级订阅的正常价格仍列在那里。要获得年度订阅30美元或终身订阅150美元的折扣优惠，请通过PayPal将金额发送至，以避免任何烦人的PayPal行为）。如果只想通过信用卡捐款和/或避免PayPal账户，通过Stripe也是最好的方式。发送任何额外金额将被视为小费，或可根据需要续订多年，谢谢！然后我会尽快将您的论坛账户激活为高级状态。如果您的付款电子邮件地址与论坛注册电子邮件地址不同，请在付款时附上您的论坛用户名。\n\n如有任何问题，请通过联系。我也总是乐于接受企业订阅/定制优惠或类似方式，以帮助支持网站及其持续运营。\n\n感谢您考虑支持，节日快乐。\n\nLinux内核中的人工智能使用、Linux上的Microsoft Defender及其他十月亮点\n今晚预计短暂服务器停机\n接近10秒内核构建，Xeon"
+  },
+  "414f865946f3d7f69a3c7ad106c208fb": {
+    "id": "414f865946f3d7f69a3c7ad106c208fb",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-7.4-rc4-Released",
+    "title_en": "Linux 7.4-rc4 Released: \"It's Huge. What A Surprise.\"",
+    "summary_en": "Linux 7.4-rc4 is out today as the newest weekly test candidate for Linux 7.4. Continuing to be fueled by AI/LLM generated bug reports and patches, the Linux 7.4 cycle remains quite active...",
+    "pub_date": "Sun, 22 Nov 2026 18:13:30 -0500",
+    "title_zh": "Linux 7.4-rc4 发布：“它很大。真是个惊喜。”",
+    "summary_zh": "Linux 7.4-rc4 作为最新一周的测试候选版本发布，开发周期依然活跃，主要由 AI/LLM 生成的错误报告和补丁推动。Linus Torvalds 表示本次更新规模巨大，包含大量小修复，其中驱动约占一半。值得注意的变更包括并行移除 NVMe 命名空间以提升性能，以及为 Intel Razor Lake 和 Coral Rapids 处理器添加 CPU 家族/型号 ID。稳定版预计于 12 月下旬发布。",
+    "fulltext_zh": "Linux 7.4-rc4 发布：“它很大。真是个惊喜。” - Phoronix\nLinux 7.4-rc4 发布：“它很大。真是个惊喜。”\n2026 年 11 月 22 日东部时间下午 06:13 发布。\nLinux 7.4-rc4 今日发布，这是最新的每周测试候选版本。在 AI/LLM 生成的错误报告和补丁的持续推动下，Linux 7.4 周期依然相当活跃。\nLinux 7.4-rc4 又是忙碌的一周，目前发布候选流程已过半，正朝着 12 月下旬发布稳定版 Linux 7.4 内核的目标推进。本周我注意到的一些显著变化包括：并行移除 NVMe 命名空间以提升性能；为 Intel Razor Lake 和 Coral Rapids 处理器添加 CPU 家族/型号 ID。此外还有大量较小的错误修复。\nLinus Torvalds 在今日的公告中写道：\n“现在是周日下午，-rc4 发布了。\n它很大。真是个惊喜。到处都是小修复，驱动差不多正好占一半（GPU 和网络照常出现，但也有 USB、IIO、NVMe、声音……你能想到的都有）。\n其余部分遍布各处：核心内核、内存管理、文件系统、网络、自测试、架构更新。我会希望看到更小的 rc 吗？当然。但那些日子已经过去了，尤其是这个非常庞大的 7.4 版本。\n请继续测试。”\nLinux 7.4 功能概览\n了解更多关于这个 2026 年最后一个主要内核版本将带来的内容。\nLinux 7.5 将可选阻止 /proc/kcore 访问以提升安全性\n多内核 Linux 登陆 ARM64，mklinux 7.0-mk5 发布\nRBRD：用 Rust 编写的 RAM 支持型 Linux 块驱动，安全性更好但性能较慢\nNVIDIA 工程师致力于新的用户空间 Linux 控制，用于首选 CPU 核心\nLinux 7.4-rc3 发布：“到处都是常见的噪音”\nLinux 7.5 将包含新的 hwpoison-panic 工具，用于故意使系统崩溃\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\nOpenJDK Java 的 Java4Shell 漏洞可能导致远程代码执行\nRedox OS 让 Golang 可用，GIMP 移植并简化 AI 政策\nXfce 4.22 正努力争取 2027 年初发布\nBtrfs 寻求应对 AI 和“没有常识的新手”造成的弊大于利\nKDE Plasma 6.9 终于允许 XWayland 按需运行，新增晃动窗口预设\nValve 的新 AMDGPU Linux 补丁旨在减少 Steam Play 游戏的卡顿\nLinux 7.4-rc3 发布：“到处都是常见的噪音”\nApple M5 的基本支持预计将登陆 Linux 7.5\n享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "df0efaa43591e5e471a01a3f06b1918e": {
+    "id": "df0efaa43591e5e471a01a3f06b1918e",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMDGPU-More-DCN6-Linux-7.5",
+    "title_en": "AMD Preps More Graphics Driver Fixes For Linux 7.5, More DCN6 Enablement",
+    "summary_en": "This week AMD sent out their latest batch of AMDGPU kernel graphics driver and AMDKFD kernel compute driver updates of work slated to land with the upcoming Linux 7.5 merge window...",
+    "pub_date": "Sun, 22 Nov 2026 12:40:25 -0500",
+    "title_zh": "AMD为Linux 7.5准备更多图形驱动修复，并增加DCN6支持",
+    "summary_zh": "AMD本周向DRM-Next提交了针对Linux 7.5的AMDGPU/AMDKFD驱动更新，以修复为主，同时增加了下一代RDNA 5显卡显示模块DCN6的IP支持，包括HDCP内容保护。此外还包含HDMI 2.1与VRR相关修复、模块加载失败处理、DC DRAM配置修复等。",
+    "fulltext_zh": "本周，AMD发布了最新一批AMDGPU内核图形驱动和AMDKFD内核计算驱动更新，这些工作计划随即将到来的Linux 7.5合并窗口进入主线。\n\n在已提交至DRM-Next、为Linux 7.5排队的其他代码之外，本周又出现了更多AMDGPU/AMDKFD（以及少量传统Radeon）驱动补丁。本周的代码变动更偏重于修复方面。不过，针对预计随下一代RDNA 5图形处理器出现的显示模块，也有更多“DCN6” IP工作。多项DCN6更新已就绪，包括启用HDCP内容保护支持。与此同时，DCN 4.6 IP也获得了一系列修复。\n\n在修复方面，围绕近期HDMI 2.1适配和VRR支持，仍有更多缺陷修复工作。\n\namd-drm-next-7.5-2026-11-19：\n- 修复模块加载失败时的回退处理\n- DC DRAM配置修复\n- DC预操作系统时钟处理修复\n- 多XCC部件的更清晰着色器修复\n- GPU复位时的垂直消隐修复\n- 正确处理具有不同信任权限的固件\n- 显示警告修复\n- 使用drm_gem_ttm_dumb_map_offset()\n- 为PCI ID使用命名初始化器\n- DC水位重构\n- 显示KUNIT修复\n- 移除非DC显示代码\n- vbios解析中的边界检查\n- drm_pciids.h清理\n- 为PCI ID使用命名初始化器\n\n本周AMD图形驱动补丁的完整列表可通过相关链接查看。距离新的Direct Rendering Manager补丁截止还有大约两周时间，这些补丁需在Linux 7.5合并窗口于12月底前后开启前排队。\n\n来自Valve的新AMDGPU Linux补丁旨在减少Steam Play游戏卡顿\nLLVM旧的AMD R600编译器后端计划移除\nOpenAI Codex帮助发现并修复近20年的Radeon Linux驱动缺陷\n首批AMD RDNA5/GFX13代码已发送至Mesa RADV和RadeonSI驱动\nATI/AMD R300至R500 GPU迎来2026年新的OpenGL Linux驱动优化\nAMDGPU Linux驱动补丁发布，启用GFX13图形IP——RDNA5\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过相关渠道关注他。\n\nOpenJDK Java的Java4Shell漏洞可能导致远程代码执行\nRedox OS让Golang可用，移植GIMP并简化AI政策\nXfce 4.22正努力争取2027年初发布\nBtrfs寻求应对AI和“缺乏常识的新手”造成更多伤害而非益处\nKDE Plasma 6.9终于允许XWayland按需运行，新增摇摆窗口预设\n来自Valve的新AMDGPU Linux补丁旨在减少Steam Play游戏卡顿\nLinux 7.4-rc3发布：“到处都是常见的噪音”\nApple M5的基本支持预计将登陆Linux 7.5\n\n在享受无广告浏览的同时，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "a7b0429e77d932a88c2f77ab91e75bd3": {
+    "id": "a7b0429e77d932a88c2f77ab91e75bd3",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/CachyOS-November-2026",
+    "title_en": "CachyOS November 2026 Released With EAC Linux v2 Support, New Recovery Tool",
+    "summary_en": "The latest ISO refresh for the Arch Linux powered CachyOS distribution is now available...",
+    "pub_date": "Sun, 22 Nov 2026 08:15:03 -0500",
+    "title_zh": "CachyOS 2026年11月版发布：支持EAC Linux v2，新增恢复工具",
+    "summary_zh": "CachyOS发布2026年11月ISO更新，搭载Linux 7.3.5内核，新增包安装器2.0图形界面，支持管理Arch软件包、AUR、Flatpak和AppImage。同时加入Easy Anti-Cheat Linux v2支持，需启用安全启动和IOMMU等功能。还引入cachyos-recovery独立恢复环境，并提供适用于Windows 11的WSL镜像。",
+    "fulltext_zh": "CachyOS 2026年11月版发布，支持EAC Linux v2，新增恢复工具\n2026年11月22日上午8:15（美国东部时间）。\n基于Arch Linux的CachyOS发行版的最新ISO刷新现已可用。\nCachyOS 2026年11月ISO刷新搭载了刚刚发布的CachyOS Package Installer 2.0，提供便捷的图形界面，用于管理Arch Linux软件包、AUR、Flatpak以及AppImage文件。\nCachyOS现在还支持Easy Anti-Cheat“EAC”Linux v2。要支持Epic Games的EAC Linux v2，需要具备安全启动、启用IOMMU和其他功能，而CachyOS现已全部就绪以提供支持。\nCachyOS还引入了cachyos-recovery作为其新的恢复环境，这是一个自包含镜像，用于帮助恢复CachyOS安装。\n此次11月ISO刷新还包含各种驱动程序增强、安装程序改进，并基于Linux 7.3.5内核。\n另一项新增内容是，CachyOS现在还提供了用于微软Windows 11上Windows Subsystem for Linux（WSL）的镜像。\n下载及CachyOS 2026年11月新版本的更多详情，请访问\nCachyOS发布包安装器2.0，提供便捷的AUR/Flatpak/AppImage支持\nFramework Computers将其对CachyOS的财务支持增加两倍\nCachyOS 2026年8月版为即将推出的服务器版做准备\nCachyOS 2026年6月版发布，带来更多性能优化\n在禁用Ananicy-CPP的情况下使用BORE调度器运行CachyOS\nCachyOS将Python切换为使用尾调用解释器，性能提升5~15%\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael撰写了超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动程序及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：\nOpenJDK Java的Java4Shell漏洞可能导致远程代码执行\nRedox OS让Golang工作，移植GIMP并简化AI政策\nXfce 4.22致力于2027年初发布\nBtrfs寻求应对AI和“没有常识的新手”造成的更多伤害而非益处\nKDE Plasma 6.9最终允许XWayland按需运行，新增摇晃窗口预设\nValve的新AMDGPU Linux补丁旨在减少Steam Play游戏卡顿\nLinux 7.4-rc3发布：“到处都是常见的噪音”\n对Apple M5的基本支持预计将登陆Linux 7.5\n同时享受无广告浏览、\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "376b0596065e6c3e1fadb2ddbb757ddc": {
+    "id": "376b0596065e6c3e1fadb2ddbb757ddc",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Coral-Rapids-Razor-Lake-7.4",
+    "title_en": "Intel Coral Rapids & Razor Lake Model IDs Submitted For Linux 7.4-rc4",
+    "summary_en": "Sent out today as part of the x86 fixes for the week going into Linux 7.4-rc4 are the model IDs for identifying upcoming Coral Rapids server processors and the Razor Lake client processors...",
+    "pub_date": "Sun, 22 Nov 2026 08:06:26 -0500",
+    "title_zh": "Intel Coral Rapids 与 Razor Lake 型号 ID 已提交至 Linux 7.4-rc4",
+    "summary_zh": "Intel 为即将推出的 Coral Rapids 服务器处理器和 Razor Lake 客户端处理器提交了型号 ID，作为 Linux 7.4-rc4 的 x86 修复的一部分。这些处理器预计最早 2028 年发布，此举旨在让后续 Linux 7.5 的依赖补丁能更顺利提交，避免回归风险。同时，Granite Rapids D 处理器也被加入支持 SNC 的 CPU 列表。",
+    "fulltext_zh": "今天作为进入 Linux 7.4-rc4 的每周 x86 修复的一部分，提交了用于识别即将推出的 Coral Rapids 服务器处理器和 Razor Lake 客户端处理器的型号 ID。\n\n正如本月早些时候我所写，Intel 已开始为 Coral Rapids 和 Razor Lake 启用 Linux 支持，这些处理器至少要到 2028 年才会亮相。启用的第一步是添加新的型号 ID，以便其他 Linux 驱动代码可以依赖它来检测这些 CPU。今天在 Linux 7.4-rc4 之前发出的正是这最初的基本步骤。\n\n这并不会神奇地让 Razor Lake 和 Coral Rapids 平台与 Linux 7.4 配合工作，但现在提交是作为一个“修复”，以便从 Linux 7.5 开始更容易提交依赖补丁。与其在合并窗口期间先等待 x86 拉取请求落地，然后再提交任何利用 INTEL_CORALRAPIDS_X 或 INTEL_RAZORLAKE / INTEL_RAZORLAKE_L / INTEL_RAZORLAKE_U / INTEL_RAZORLAKE_S 的其他 PR，不如现在就在当前 Linux 7.4 周期提交，因为它不会带来回归风险，并使流程更顺畅。\n\n这些 ID 将会就位。今天的 x86 修复还包括将 Granite Rapids D 处理器添加到支持子 NUMA 集群（SNC）的 Intel CPU 表中。\n\nPSR2 与 Panel Replay + Pipe Joiner 将在 Linux 7.5 中为 Intel 提供支持\nIntel Linux NPU 驱动 1.39.1 发布，支持 Nova Lake\nIntel 准备 Linux 7.5 变更以更好地处理具有大量 VRAM 的多 GPU\nIntel 谈论 GPU D270 性能与开源软件支持\nIntel 开始为 Coral Rapids 和 Razor Lake 启用 Linux 内核\nIntel 发布 Razor Lake 和 Coral Rapids 的初始 GCC 编译器代码\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nOpenJDK Java 的 Java4Shell 漏洞可能导致远程代码执行\nRedox OS 让 Golang 工作，移植 GIMP 并简化 AI 政策\nXfce 4.22 正努力在 2027 年初发布\nBtrfs 试图应对 AI 和“没有常识的新手”造成的更多伤害而非好处\nKDE Plasma 6.9 最终允许 XWayland 按需运行，新的晃动窗口预设\n来自 Valve 的新 AMDGPU Linux 补丁旨在减少 Steam Play 游戏的卡顿\nLinux 7.4-rc3 发布：“到处都是常见的噪音”\nApple M5 的基本支持预计将登陆 Linux 7.5\n\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "ed5656e4fa10787a53f1119d5754c03e": {
+    "id": "ed5656e4fa10787a53f1119d5754c03e",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/kaos-linux-2026-11-removes-kde-plasma-and-qt-5-adds-linux-7-2-and-noctalia-5-6",
+    "title_en": "KaOS Linux 2026.11 Removes KDE Plasma and Qt 5, Adds Linux 7.2 and Noctalia 5.6",
+    "summary_en": "KaOS Linux 2026.11 distribution is now available for download as the third ISO snapshot using Dinit as the default init system instead of systemd. Here’s what’s new!\nThe post KaOS Linux 2026.11 Removes KDE Plasma and Qt 5, Adds Linux 7.2 and Noctalia 5.6 appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Sun, 22 Nov 2026 20:04:42 +0000",
+    "title_zh": "KaOS Linux 2026.11 移除 KDE Plasma 和 Qt 5，新增 Linux 7.2 和 Noctalia 5.6",
+    "summary_zh": "KaOS Linux 2026.11 现已开放下载，这是第三个使用 Dinit 作为默认初始化系统（取代 systemd）的 ISO 快照。该版本移除了 KDE Plasma 和 Qt 5，新增 Linux 7.2 内核和 Noctalia 5.6。",
+    "fulltext_zh": "KaOS Linux 2026.11 发行版现已开放下载，这是第三个使用 Dinit 作为默认初始化系统（取代 systemd）的 ISO 快照。以下是新增内容！\n\n文章《KaOS Linux 2026.11 移除 KDE Plasma 和 Qt 5，新增 Linux 7.2 和 Noctalia 5.6》首发于 9to5Linux——未经许可不得转载本文。本 RSS 源面向读者，而非抓取者。"
+  },
+  "d71d60937b3d3de23710faf5a1f38f33": {
+    "id": "d71d60937b3d3de23710faf5a1f38f33",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/cachyos-november-2026-iso-release-brings-cachyos-package-installer-2-0",
+    "title_en": "CachyOS November 2026 ISO Release Brings CachyOS Package Installer 2.0",
+    "summary_en": "The CachyOS ISO snapshot for November 2026 is now available for download with Linux 6.18 LTS and Linux 7.3 kernels, CachyOS Package Installer 2.0, and other changes.\nThe post CachyOS November 2026 ISO Release Brings CachyOS Package Installer 2.0 appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Sun, 22 Nov 2026 12:52:13 +0000",
+    "title_zh": "CachyOS 2026年11月ISO版本发布，带来CachyOS软件包安装器2.0",
+    "summary_zh": "CachyOS发布2026年11月ISO快照，现已开放下载。该版本搭载Linux 6.18 LTS和Linux 7.3内核，并引入CachyOS软件包安装器2.0及其他多项改进。",
+    "fulltext_zh": "CachyOS 2026年11月的ISO快照现已开放下载，搭载Linux 6.18 LTS和Linux 7.3内核、CachyOS软件包安装器2.0以及其他变更。\n\n文章《CachyOS 2026年11月ISO版本发布，带来CachyOS软件包安装器2.0》首发于9to5Linux——未经许可请勿转载本文。本RSS源面向读者，而非爬虫。"
+  },
+  "da90c0148416bc7e61426cef91cde75e": {
+    "id": "da90c0148416bc7e61426cef91cde75e",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/9to5linux-weekly-roundup-november-22nd-2026",
+    "title_en": "9to5Linux Weekly Roundup: November 22nd, 2026",
+    "summary_en": "9to5Linux Weekly Roundup for November 22nd, 2026, brings news about AlmaLinux OS 10.3, FFmpeg 9.1, Rocky Linux 10.3, Shotcut 26.11, AV Linux 25.3, Wireshark 4.6.10, Peppermint OS Debian, Calibre 9.19, BackBox Linux 10, Shelly 3.4, Debian 13.8, ClamAV 1.5.5, DietPi 10.9, fwupd 2.1.10, CachyOS Package Installer 2.0, Mesa 26.3.1, PHP 8.6, and more.\nThe post 9to5Linux Weekly Roundup: November 22nd, 2026 appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is ",
+    "pub_date": "Sun, 22 Nov 2026 12:24:52 +0000",
+    "title_zh": "9to5Linux 每周综述：2026年11月22日",
+    "summary_zh": "本期9to5Linux周报汇总了2026年11月22日当周的重要Linux新闻，涵盖AlmaLinux OS 10.3、Rocky Linux 10.3、Debian 13.8等发行版更新，FFmpeg 9.1、Wireshark 4.6.10、Mesa 26.3.1等软件新版本，以及Shotcut 26.11、Calibre 9.19、CachyOS Package Installer 2.0等应用工具的动态。",
+    "fulltext_zh": "9to5Linux 2026年11月22日每周综述，带来关于 AlmaLinux OS 10.3、FFmpeg 9.1、Rocky Linux 10.3、Shotcut 26.11、AV Linux 25.3、Wireshark 4.6.10、Peppermint OS Debian、Calibre 9.19、BackBox Linux 10、Shelly 3.4、Debian 13.8、ClamAV 1.5.5、DietPi 10.9、fwupd 2.1.10、CachyOS Package Installer 2.0、Mesa 26.3.1、PHP 8.6 等更多内容的新闻。\n\n帖子《9to5Linux 每周综述：2026年11月22日》首次出现在 9to5Linux - 未经许可不得转载本文。本 RSS 源为"
   }
 }
