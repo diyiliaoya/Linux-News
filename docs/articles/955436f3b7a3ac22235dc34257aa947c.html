@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iPhone上没人用真正的Firefox浏览器（都怪苹果） — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月24日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">软件应用</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>iPhone上没人用真正的Firefox浏览器（都怪苹果）</h1>
+
+  <div class="article-summary">欧盟《数字市场法案》要求苹果开放iOS浏览器引擎，苹果虽表面遵守，却设置苛刻条件，导致Mozilla无法将Gecko引擎引入iPhone。目前iPhone上的Firefox仍基于WebKit，并非“真Firefox”。Mozilla指责苹果变相阻挠，近三年无任何开发者成功在iOS推出非WebKit浏览器。尽管Firefox在iOS使用量增长，但“真Firefox”仍无法登陆iOS。</div>
+
+  <div class="article-body"><p>欧盟要求苹果开放。苹果说“行”。然后它发布了自己的一套条件，使得Mozilla Firefox实际上几乎不可能合规。</p><p>如果你在iPhone上使用Firefox，你从未用过“真正的Firefox”。</p><p>我知道这听起来过于夸张，但技术上确实如此。你在iPhone或iPad上得到的Firefox，并不使用作为Firefox浏览器核心的Gecko引擎。</p><p>以下是原因。</p><p>Mozilla指责苹果玩阴的</p><p>欧盟《数字市场法案》（DMA）——迫使大型平台开放的法律——从2024年开始要求苹果允许人们选择默认浏览器。它还要求苹果允许iOS上使用替代浏览器引擎。</p><p>苹果为任何想要引入不同引擎的人发布了自己的一套条件，当时Mozilla就警告说，这些规则让Gecko“尽可能痛苦”。</p><p>基本上，苹果在纸面上遵守了规则，然后写了自己的细则，使得实际合规几乎不可能。</p><p>Mozilla表示，要引入自己的引擎Gecko（在其他所有平台上驱动真正Firefox的引擎），它不能简单地更新人们已经使用的Firefox应用。</p><p>这将迫使Mozilla构建第二个完全独立的Firefox应用。然后每个现有用户都必须下载那个新应用，迁移书签、密码和历史记录，并手动切换。没有用户会仅仅为了更新浏览器而费这么大麻烦。</p><p>所以Firefox无法使用自己的Gecko浏览器引擎——真正渲染网页的核心软件。而且不仅仅是Firefox。自苹果在欧盟推出这些条件近三年以来，没有一个开发者能够在iOS上推出非WebKit浏览器。</p><p>敞开的大门感觉更像是一个“活板门”。</p><p>苹果的恶作剧并不令人意外。就是这家公司，在欧洲两次拒绝了Epic Games Store应用，然后才批准，而且只有在监管机构关注时才会发生。</p><p>这比你想象的更重要</p><p>当你在iPhone上安装Firefox、Brave甚至Chrome时，你得到的是Safari核心使用的同一个WebKit引擎。iPhone和iPad是唯一发生这种情况的主要平台。甚至苹果自己的macOS也允许你运行真正的、由Gecko驱动的Firefox。</p><p>Mozilla表示，自DMA生效以来，它一直在幕后努力测试和改进苹果的条件，以便将Gecko浏览器引擎——从而将真正的Firefox——带给iOS用户。用Mozilla的话说，这些努力迄今为止基本失败了。</p><p>与此同时，iPhone上的Firefox持续增长。Mozilla表示，自2024年以来，已有数百万人在欧盟的选择屏幕上选择了Firefox，iOS上的日常使用量翻了一番。</p><p>这表明人们想要选择自己的浏览器，而不是依赖苹果的Safari。</p><p>Mozilla表示将继续推动真正的变革，因为苹果的条件仍然不可行，纸面上的合规只是规避监管的一种方式。</p><p>下一步可能属于欧盟监管机构，他们已经调查了苹果的浏览器选择屏幕设计，并对苹果附加在其欧盟让步上的条件提出了初步问题。</p><p>在那之前，“真正的Firefox”仍无法登陆iOS设备。</p><p>为什么iOS上仍然没有非WebKit浏览器 | Mozilla博客</p><p>Firefox在iPhone上全球增长迅速。在欧盟尤其如此，自2024年欧盟《数字市场法案》（DMA）开始要求A</p><p>喜欢这个更新？支持独立的Linux新闻报道</p><p>It's FOSS过去14年一直在帮助人们使用Linux。帮助我们保持独立于大型科技公司。成为Plus会员，享受无广告阅读并获得5本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>跳过Google结果中的AI垃圾和SEO垃圾</p><p>告诉Google你更喜欢It's FOSS，它会显示我们的Linux新闻和教程，创建于b</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/firefox-apple-dispute/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

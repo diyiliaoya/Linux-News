@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ladybird浏览器历经四年开发进入Alpha阶段 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月24日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Ladybird浏览器历经四年开发进入Alpha阶段</h1>
+
+  <div class="article-summary">Ladybird浏览器在历经四年开发后发布首个Alpha测试版，提供Linux和macOS版本。该浏览器采用完全独立、从零编写的渲染引擎，不基于Blink或WebKit，旨在提供不受商业利益左右的现代网络标准支持。Alpha版包含标签页、书签、历史记录、内容拦截器等基本功能，但团队警告部分网站可能无法正常工作或崩溃，不建议作为日常主力浏览器使用。</div>
+
+  <div class="article-body"><p>围绕从零编写的渲染引擎构建一款新的网络浏览器绝非易事，但经过四年的努力，Ladybird浏览器现已进入Alpha阶段，并提供Linux和macOS版本供测试。</p><p>该版本被描述为“适度但可用”的测试版。团队表示部分网站将无法正常工作，另一些可能崩溃，并且他们“对安全性不作任何承诺”。鉴于其雏形性质，任何人都不应将其作为全职日常浏览器依赖。</p><p>Ladybird的浏览器引擎完全独立，既非主流网络引擎Blink（Chrome等使用）的分支也非其衍生品。它同样不基于WebKit。据该项目介绍，“HTML、CSS、DOM、布局、JavaScript和WebAssembly均为从零实现”。</p><p>其目标是提供一个支持网络标准的现代引擎，但其开发与方向不受商业利益引导或依赖。相关工作由捐赠和赞助资助，而非搜索协议和用户变现。</p><p>今年早些时候，Ladybird宣布为内存安全而迁移，使用“人工指导”的AI编码工具从C++进行移植。</p><p>Ladybird Alpha涵盖基本功能</p><p>功能方面，初始Alpha版涵盖了核心浏览 essentials。</p><p>标签栏默认位于窗口顶部。也可启用垂直标签，将标签和地址栏置于侧边，或仅显示标签。外观设置相当丰富，甚至提供强制为缺少深色模式的网站启用深色模式的开关。</p><p>没有所谓的“新标签页”（没有快捷方式拨号盘、搜索框、背景壁纸、引战内容推荐等），但你可以设置新标签页打开特定网站。我越来越发现自己更喜欢不那么混乱的跳板。</p><p>书签、历史记录和搜索打开的标签等其他功能已接入并运行良好。你可以管理站点特定设置、通知，并从专用工具栏面板管理下载。</p><p>深色模式、侧边标签和橙色色调</p><p>如果你习惯直接从地址栏进行网络搜索，需要选择一个搜索引擎，因为Ladybird默认不设置。它提供了大量选项，包括Google、DuckDuckGo、Ecosia和Kagi Search。</p><p>内置内容拦截器，鉴于没有扩展系统，也没有从其他浏览器导入数据的选项，这很方便。那些还为时过早。别指望通过它流媒体播放。即使480p的YouTube对我来说也卡顿。</p><p>为网络开发者考虑，Ladybird Alpha支持WebDriver用于自动化测试和Firefox DevTools协议。</p><p>为什么要费心构建新浏览器？</p><p>在2026年，当一些人完全放弃，因为AI聊天机器人和代理工具取代了传统的人际连接时，构建新浏览器以对抗Chromium是否值得？</p><p>这当然不容易</p><p>上个月，经过一年多的开发努力。那是构建在……之上。Ladybird面临同样的挑战，但额外负担是开发、维护和保护自己的引擎。</p><p>但作为一个写了16年博客的人，即使每天打字时火焰舔舐手指，我仍愿意相信……聊天机器人阶层说……还有很长的路要走。它可能不会成为大多数人的默认浏览器。它不需要；与Chromium竞争意味着保持一种混乱、未经过滤的、为人类而非提取性AI生态系统的商品节点而存在的互联网概念。</p><p>它确实吸引了支持者。赞助名单包括Proton、Cloudflare和Shotify、Mitchell Hashimoto（因……闻名），以及更具争议的是，获得37signals（DHH共同拥有的公司）的资助。</p><p>在Ubuntu上安装Ladybird（Alpha）</p><p>标签搜索和上下文菜单，以及下载面板</p><p>从项目网站。它提供macOS（仅Apple Silicon）和Linux（x86-64和Arm64）安装程序，后者为Flatpak格式。</p><p>Ubuntu用户可以从24.04 LTS和26.04 LTS上的apt仓库安装Ladybird。这提供了传统的Debian包，以及……</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/ladybird-browser-enters-alpha" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

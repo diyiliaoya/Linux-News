@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Firefox 161 带来经典主题选项和更智能的 VPN — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月24日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">桌面环境</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Firefox 161 带来经典主题选项和更智能的 VPN</h1>
+
+  <div class="article-summary">Mozilla Firefox 161 现已开放下载，带来一系列小幅功能改进。新增经典主题安装选项，包括 Proton 主题、OLED 主题和纯色主题；可为复制当前标签页 URL 分配键盘快捷键；内置免费 VPN 支持针对特定站点开关；从 Chrome 导入历史记录时可同步访问频率以优化建议排序。此外还修复了 WebRTC 视频通话、标签组恢复等问题，并新增对 CSS Typed Object Model 等 Web 标准的支持。</div>
+
+  <div class="article-body"><p>Mozilla Firefox 161 现已开放下载，带来一系列小幅功能改进，应能让你的日常浏览更加顺畅。</p><p>本次更新对定制爱好者颇为友好。浏览器附加组件页面提供了一组“经典主题”可供安装。Mozilla 表示，其中包括“早期版本 Firefox 的 Proton 主题”、一款 OLED 主题以及纯色主题。</p><p>“Proton”主题只是配色方案（柔和的灰色），并非全面回退或重新换肤至旧版外观。本次更新移除了用于禁用它的（隐藏）标志。</p><p>你现在还可以为复制当前标签页的 URL 分配键盘快捷键。前往“辅助功能 &gt; 自定义键盘快捷键”进行设置，然后按下该快捷键即可将地址复制到剪贴板，以便粘贴到其他地方。</p><p>Firefox 内置的免费 VPN——其带宽限制已放宽至明年年初——现在可以“针对特定站点开启或关闭”。该功能此前已支持站点排除，但这次支持的是……</p><p>在隐私方面，如果你从 Chrome 导入浏览历史记录，Firefox 现在会同步每个页面的访问频率，从而能立即在其自身的建议和快捷方式中，将你频繁访问的站点排在更靠前的位置。</p><p>标签组出现在工具栏的标签页搜索菜单中</p><p>修复使用低分辨率 H.264 视频的 WebRTC 视频通话问题</p><p>修复删除标签组后重启时标签页无法恢复的问题</p><p>在 Web 兼容性方面，Firefox 161 支持：</p><p>CSS Typed Object Model</p><p>Async Clipboard API 中的自定义格式</p><p>主……中的嵌套替换</p><p>此外，还有新一轮……——如今比以往任何时候都更重要。</p><p>Firefox 161 是免费的开源软件。立即通过 2026 年 11 月 23 日的……下载新版本（从同一位置获取构建版本）。</p><p>已在运行 Firefox 160 或更早版本的用户，将在 Windows、macOS 和 Linux 上通过应用内更新（使用二进制构建版本），或通过最初安装时所用的应用商店或软件包仓库更新至最新版本。</p><p>在 Ubuntu 上，Firefox 以 snap 包形式预装，并从 Snap Store 获得自动后台更新。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/firefox-161-released-vpn-classic-themes" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
