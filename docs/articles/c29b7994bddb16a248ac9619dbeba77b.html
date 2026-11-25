@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ubuntu 详细计划：用 AI 智能启动器取代应用网格 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月25日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Ubuntu 详细计划：用 AI 智能启动器取代应用网格</h1>
+
+  <div class="article-summary">Canonical 分享了关于 AI 驱动的 Ubuntu 启动器的更多细节，旨在为用户提供与桌面交互的新方式。该启动器将成为一个统一入口，用于打开应用、查找文件，并在用户明确需要时访问本地运行的隐私友好型 AI 功能。设计遵循同意、隐私、安全和本地优先四项原则，AI 功能需用户主动选择启用。原型已于 2026 年 10 月展示，更多架构细节和可安装版本将于明年 1 月发布。</div>
+
+  <div class="article-body"><p>Canonical 分享了关于 AI 驱动的 Ubuntu 启动器的更多计划细节，希望为用户提供“一种与桌面交互的新方式”。</p><p>在 Ubuntu Discourse 的一篇帖子中，Canonical 桌面工程师表示，目标是创建一个统一的“入口点”，让用户能够打开应用和查找文件，同时也能在明确需要时访问 AI 功能。</p><p>这将超越仅仅提供应用网格的替代方案，支持使用本地运行的隐私友好型 AI 模型的“提示”式工作流。它将支持文本和语音输入，后者可能利用该发行版的语音转文字工具。</p><p>“过去几个月里，我们一直在讨论智能和现代工作流应如何融入 Ubuntu”，并补充说新启动器的构建遵循 4 项“不可妥协”的原则：同意、隐私、安全和本地优先。</p><p>因此，新启动器中的任何 AI 集成都将采用选择加入的方式，并且仅在明确请求时触发。对输入任务不感兴趣的人可以传统方式使用启动器，不会遇到任何“看起来您正在尝试……”的干扰。</p><p>原型到潜力</p><p>2026 年 10 月的一段原型视频</p><p>我们于 2026 年 10 月首次看到该启动器，当时 Roche 在 Snap 商店上传了一个半交互式原型。正如我在最初的文章中所指出的，该原型通过模拟展示了它如果真实存在所能做的事情。</p><p>该 snap 模拟任务中最令人印象深刻的一个是：要求它从系统剪贴板历史记录中选定的项目创建日历行程，并可立即添加到日历中（在我看来，这是一个更 compelling 的节省时间的用例，而不是像“把我的壁纸改成这个文件”这样的事情，后者需要更多的提示 effort 和计算执行 effort，而右键单击 &gt; 设为背景即可完成）。</p><p>模拟可以完美。将其变为真实、可工作的代码更难——但它即将到来。</p><p>Canonical 表示，将于 1 月分享有关新启动器架构的更多细节，同时发布一个安装版本，希望用户安装、破坏并提供反馈——并补充说，反馈将塑造整体愿景。</p><p>目前还没有什么可以尝试的，但有很多值得思考的地方——什么会让您使用这个而不是当前的应用菜单？请在评论中告诉我。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/ubuntu-ai-launcher-details" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

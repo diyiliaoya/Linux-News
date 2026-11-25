@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linus Torvalds：“告诉你的AI伙伴，让它规矩点” — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月25日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Linus Torvalds：“告诉你的AI伙伴，让它规矩点”</h1>
+
+  <div class="article-summary">Linus Torvalds对一份针对Linux 7.4-rc5内核的大型EXT4拉取请求表示强烈不满。该请求包含超过4.1万行新代码，其中大部分是AI生成的错误修复和扩展KUnit测试覆盖。Torvalds认为在发布周期后段提交如此庞大的“修复”并不合适，警告下次将直接忽略此类请求，并强调修复本身也可能引入新错误，要求将新开发和测试用例放在单独分支中，在合并窗口期间提交。</div>
+
+  <div class="article-body"><p>Linus Torvalds：“告诉你的AI伙伴，让它规矩点”</p><p>2026年11月24日 下午04:01 EST。</p><p>今天一份针对Linux 7.4-rc5内核的大型EXT4拉取请求激怒了Linus Torvalds。这份EXT4拉取请求包含超过4.1万行新代码，却作为“修复”提交……其中大部分是新的KUnit测试覆盖，旨在更安全地验证AI生成的补丁。此外还有大量针对EXT4文件系统的AI生成补丁本身。</p><p>今天提交的是当前Linux 7.4周期的最新EXT4更新。其中有一些有趣的性能改动，而这份大型“修复”拉取请求中的绝大多数代码是AI生成的错误修复，以及扩展EXT4驱动的KUnit测试覆盖，以帮助验证未来AI生成的补丁。</p><p>但这份在Linux 7.4周期后半段提交的庞大拉取请求让Linus Torvalds非常不满。他最终还是接受了该拉取请求并已合并，但他评论道：</p><p>“老实说，我认为这不适于当前阶段。你应该把测试放在单独的分支中进行测试，并在下一个合并窗口再做这个*巨大的*更新。</p><p>‘任何修复都可以进-rc’这种想法是荒谬的。</p><p>尽管有严重保留意见，并且由于这种愚蠢行为导致了一些糟糕的冲突，我还是接受了这个。</p><p>但下次再发生这种破事，我会直接忽略。</p><p>不要以为你——或者AI——在修复问题时永远不会引入错误。</p><p>我们之所以有发布候选版本和数周的冷静期，是有原因的。</p><p>是的，我很生气。为什么人们这么难理解这么简单的概念，这本身就很难理解。</p><p>如果你认为‘41197行插入’没问题，不会引入新问题，仅仅因为大部分代码不会被编译，或者因为它们是针对其他问题的修复，那你就是在胡说八道。</p><p>如果这些错误是存在了一段时间而未被AI检测到的微妙问题，那么这些修复按定义就是在修复某些微妙且罕见、此前无人注意到的东西。</p><p>这就使得这些*修复*本身可能有bug。</p><p>我本来想直接取消拉取，但我处理了这个问题，而是给你一个公平的警告。把你的破事收拾好，停止这种愚蠢行为。</p><p>并且告诉你的AI伙伴规矩点，把任何新开发和测试用例放在一个单独的该死的分支上，以便在合并窗口期间合并。</p><p>这有什么难理解的？</p><p>是的，这意味着*你*在运行那些测试时必须处理由此产生的冲突，但该死的，这也意味着我们不会在发布中途引入数万行乱七八糟的东西！”</p><p>因此EXT4的改动已进入周日发布的Linux 7.4-rc5内核，但Torvalds并不高兴。</p><p>在性能工作方面，一个有趣的条目是将同级目录中文件的inode分散到flex组的块组上。最终这有助于减少争用，并能显著加速并行文件创建。</p><p>来自三星的Daejun Park展示了一些非常好的改进：</p><p>另外还有一些性能补丁，用于改善没有孤儿文件功能的文件系统上的unlink性能，以及加速稀疏文件上的快速提交重放。</p><p>Linux 7.4将并行移除NVMe命名空间以获得更快结果</p><p>Btrfs试图应对AI和“没有常识的新手”造成的更多伤害而非好处</p><p>现代NTFS驱动在Linux 7.5中获得O_TMPFILE支持</p><p>XRAID作为XFS的新RAID实现公开发布</p><p>exfatprogs 1.4.4为创建新exFAT文件系统带来加速</p><p>Linux 7.5将向用户空间传达文件的多粒度时间戳使用情况</p><p>Michael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动等。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linus-Torvalds-EXT4-AI-Big" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

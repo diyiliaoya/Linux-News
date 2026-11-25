@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ubuntu 26.10 为戴尔 XPS 14 上的英特尔 Panther Lake 带来性能提升 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月25日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Ubuntu 26.10 为戴尔 XPS 14 上的英特尔 Panther Lake 带来性能提升</h1>
+
+  <div class="article-summary">本文测试了戴尔 XPS 14（搭载英特尔酷睿 Ultra X7 358H“Panther Lake”处理器）在 Ubuntu 26.04 LTS 与 Ubuntu 26.10 下的性能差异。Ubuntu 26.10 搭载 Linux 7.3 内核、GNOME Shell 51、Mesa 26.2 和 GCC 15.3，相比 Ubuntu 26.04 LTS 的 Linux 7.0、GNOME Shell 50、Mesa 26.0.8 和 GCC 15.2，可为 Panther Lake 带来额外的 CPU 和集成 GPU 性能提升。坚持使用 LTS 的用户也可在 2027 年 2 月发布的 Ubuntu 26.04.2 中获得硬件启用（HWE）栈的回移。</div>
+
+  <div class="article-body"><p>Ubuntu 26.10 为戴尔 XPS 14 上的英特尔 Panther Lake 带来性能提升</p><p>2026 年 11 月 24 日东部时间上午 10:35。</p><p>搭载英特尔酷睿 Ultra 系列 3“Panther Lake”的新款戴尔 XPS 14 现已预装 Ubuntu 26.04 LTS 发售。对于不介意使用官方支持或长期支持（LTS）版本的用户，升级到新的 Ubuntu 26.10 可为 Panther Lake 带来额外的 CPU 和集成 GPU 性能提升。</p><p>上周我们发布了戴尔 XPS 14 在 Ubuntu 26.04 LTS 下的评测（https://www.phoronix.com/review/dell-xps-14-panther-lake），并与其他笔记本在该 LTS 版本上进行了对比。对于想了解升级到 Ubuntu 26.10 能获得何种提升的用户，本文展示了这台 Panther Lake 笔记本上 Ubuntu 26.04 LTS 与 Ubuntu 26.10 的性能对比。对于坚持使用 Ubuntu 26.04 LTS 的用户，升级后的内核、Mesa 组件及其他构成硬件启用“HWE”栈的部分也将在 2027 年 2 月的 Ubuntu 26.04.2 LTS 中回移。</p><p>用于测试的戴尔 XPS 14 DA14260 评测机配备英特尔酷睿 Ultra X7 358H、32GB LPDDR5-9600 内存、铠侠 512GB NVMe SSD，以及驱动 2880 x 1800 显示面板的集成 Arc B390 显卡。</p><p>Ubuntu 26.04 LTS 默认搭载 Linux 7.0 内核、GNOME Shell 50、Mesa 26.0.8、GCC 15.2 以及今年早些时候的其他默认组件。上个月发布的 Ubuntu 26.10 则搭载 Linux 7.3 内核、GNOME Shell 51、Mesa 26.2 图形栈、GCC 15.3 及其他更新组件。让我们看看这一软件升级对戴尔 XPS 14 性能的影响。</p><p>Arch Linux vs. CachyOS vs. Omarchy 4.5 性能基准测试</p><p>CachyOS vs. Fedora 45 vs. Ubuntu 26.10 在 AMD Ryzen 9 上的性能</p><p>Snapdragon X1 Elite / 宏碁 Swift 14 AI 在 Ubuntu 26.10 X1E 概念版上的性能</p><p>英特尔酷睿 Ultra 9 Arrow Lake 在 Star Labs StarFighter 上于 Ubuntu 26.10 展现良好提升</p><p>Ubuntu 26.10 amd64v3 软件包在 AMD EPYC 上提供额外提升</p><p>Ubuntu 26.10 在 AMD EPYC 上较 Ubuntu 26.04 带来出色的 I/O 性能优势</p><p>同时享受无广告浏览、</p><p>单页文章视图</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/review/ubuntu-2610-dell-xps-14" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

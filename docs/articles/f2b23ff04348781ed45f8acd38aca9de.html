@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>发行版发布：Pop!_OS 26.04 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月25日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">DistroWatch</span>
+  </div>
+
+  <h1>发行版发布：Pop!_OS 26.04</h1>
+
+  <div class="article-summary">System76 发布了基于 Ubuntu 的 Pop!_OS 26.04 LTS，搭载 COSMIC 桌面环境。该版本经过近一年的功能开发，带来大量改进和新特性。最引人注目的是全新的主题管理器 Constellations，用户只需一键即可同时更改壁纸、强调色、图标和字体，实现桌面外观的整体切换，还可应用磨砂玻璃效果并深度自定义。</div>
+
+  <div class="article-body"><p>System76 公司宣布发布 26.04，这是该公司基于 Ubuntu 的 Linux 发行版的一个重要新版本，搭载 COSMIC 桌面。该产品的一个有趣新特性是 Constellations，一个全新的主题管理器：</p><p>“经过近一年的精心功能开发，Pop!_OS 26.04 LTS 来了。凭借大量改进、新功能和常规错误修复，Pop!_OS 26.04 LTS 从首次启动就让人感到得心应手。当你准备好将其打造成自己的风格时，你可以自定义它，直到它的外观和感觉完全符合你对桌面的期望。这一切都始于 Constellations。什么是 Constellations？Constellations 是 COSMIC 的一体化捆绑主题。只需单击一下，你就可以更改壁纸、强调色、图标和字体。这实际上是一键切换，实现桌面整体美学的全面改变。你不必再依次进入桌面、壁纸，然后桌面、外观，然后桌面面板，然后桌面 Dock，然后桌面窗口管理，你只需进入设置、桌面、外观，在深色或浅色模式之间选择，启用或禁用自动模式切换，然后选择你的主题。你还可以对 Constellation 应用磨砂玻璃效果，并编辑 Constellation 的几乎每一个方面。”</p><p>更多信息和截图。</p><p>pop-os_26.04_amd64_generic_8.iso</p><p>pop-os_26.04_amd64_nvidia_8.iso</p><p>pop-os_26.04_arm64_generic_1.iso</p><p>pop-os_26.04_arm64_nvidia_3.iso</p><p>近期相关新闻和发布</p><p>发行版发布：Pop!_OS 26.04</p><p>发行版发布：Pop!_OS 24.04</p><p>开发版发布：Pop!_OS 24.04 Beta</p><p>开发版发布：Pop!_OS 24.04 Alpha 5</p><p>开发版发布：Pop!_OS 24.04 Alpha 4</p><p>开发版发布：Pop!_OS 24.04 Alpha 1</p><p>Pop!_OS 是一个基于 Ubuntu 的 Linux 发行版，拥有自己的基于 GNOME 的桌面环境，称为 COSMIC。它以生产力为设计理念；具有流畅的窗口、通过 Super 键进行搜索导航、可隐藏杂乱内容的工作区以及高效的窗口自动平铺。该发行版由美国 Linux 电脑零售商 System76 开发。</p><p>https://system76.com/pop</p><p>https://chat.pop-os.org/</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://distrowatch.com/13047" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

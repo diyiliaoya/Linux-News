@@ -22768,5 +22768,192 @@
     "title_zh": "Mozilla Firefox 161 现已可供下载，以下是新功能",
     "summary_zh": "Mozilla Firefox 161 开源网页浏览器现已可供下载，新增了通过键盘快捷键复制当前标签页 URL 的功能以及全新主题。",
     "fulltext_zh": "Mozilla Firefox 161 开源网页浏览器现已可供下载，新增了通过键盘快捷键复制当前标签页 URL 的功能以及全新主题。\n\n文章《Mozilla Firefox 161 现已可供下载，以下是新功能》首发于 9to5Linux——未经许可请勿转载本文。本 RSS 源面向读者，而非抓取程序。"
+  },
+  "c29b7994bddb16a248ac9619dbeba77b": {
+    "id": "c29b7994bddb16a248ac9619dbeba77b",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/11/ubuntu-ai-launcher-details",
+    "title_en": "Ubuntu details plans to replace its app grid with an AI smart launcher",
+    "summary_en": "Canonical has shared more detail on plans for an AI-powered Ubuntu launcher, which it hopes will offer users &#8220;a new way to interact&#8221; with the desktop. In a post on Ubuntu Discourse, Canonical desktop engineer Didier Roche says the goal is to create a unified &#8216;entry point&#8217; that lets users open apps and find files, but also access AI features when they explicitly want it. This will go beyond providing an alternative to the app grid, allowing for &#8216;prompt&#8217; style w",
+    "pub_date": "Wed, 25 Nov 2026 04:37:45 +0000",
+    "title_zh": "Ubuntu 详细计划：用 AI 智能启动器取代应用网格",
+    "summary_zh": "Canonical 分享了关于 AI 驱动的 Ubuntu 启动器的更多细节，旨在为用户提供与桌面交互的新方式。该启动器将成为一个统一入口，用于打开应用、查找文件，并在用户明确需要时访问本地运行的隐私友好型 AI 功能。设计遵循同意、隐私、安全和本地优先四项原则，AI 功能需用户主动选择启用。原型已于 2026 年 10 月展示，更多架构细节和可安装版本将于明年 1 月发布。",
+    "fulltext_zh": "Canonical 分享了关于 AI 驱动的 Ubuntu 启动器的更多计划细节，希望为用户提供“一种与桌面交互的新方式”。\n\n在 Ubuntu Discourse 的一篇帖子中，Canonical 桌面工程师表示，目标是创建一个统一的“入口点”，让用户能够打开应用和查找文件，同时也能在明确需要时访问 AI 功能。\n\n这将超越仅仅提供应用网格的替代方案，支持使用本地运行的隐私友好型 AI 模型的“提示”式工作流。它将支持文本和语音输入，后者可能利用该发行版的语音转文字工具。\n\n“过去几个月里，我们一直在讨论智能和现代工作流应如何融入 Ubuntu”，并补充说新启动器的构建遵循 4 项“不可妥协”的原则：同意、隐私、安全和本地优先。\n\n因此，新启动器中的任何 AI 集成都将采用选择加入的方式，并且仅在明确请求时触发。对输入任务不感兴趣的人可以传统方式使用启动器，不会遇到任何“看起来您正在尝试……”的干扰。\n\n原型到潜力\n\n2026 年 10 月的一段原型视频\n\n我们于 2026 年 10 月首次看到该启动器，当时 Roche 在 Snap 商店上传了一个半交互式原型。正如我在最初的文章中所指出的，该原型通过模拟展示了它如果真实存在所能做的事情。\n\n该 snap 模拟任务中最令人印象深刻的一个是：要求它从系统剪贴板历史记录中选定的项目创建日历行程，并可立即添加到日历中（在我看来，这是一个更 compelling 的节省时间的用例，而不是像“把我的壁纸改成这个文件”这样的事情，后者需要更多的提示 effort 和计算执行 effort，而右键单击 > 设为背景即可完成）。\n\n模拟可以完美。将其变为真实、可工作的代码更难——但它即将到来。\n\nCanonical 表示，将于 1 月分享有关新启动器架构的更多细节，同时发布一个安装版本，希望用户安装、破坏并提供反馈——并补充说，反馈将塑造整体愿景。\n\n目前还没有什么可以尝试的，但有很多值得思考的地方——什么会让您使用这个而不是当前的应用菜单？请在评论中告诉我。"
+  },
+  "aae2c5e63055dd324e2e608e4436fc43": {
+    "id": "aae2c5e63055dd324e2e608e4436fc43",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/11/pop_os-26-04-lts-released",
+    "title_en": "Pop!_OS 26.04 LTS released with COSMIC theme updates",
+    "summary_en": "Pop!_OS 26.04 LTS is now available for download, a new version of System76&#8217;s Ubuntu-based distro that ships the COSMIC desktop by default. Now built on top of the latest Ubuntu LTS release, users who install or upgrade to this version will be able to access the majority of the underlying resolute package archives, whilst also benefitting from the fine-tuning and tweaks System76 apply on top. New features rolled up inside of Pop!_OS 26.04 LTS. Constellations are theme packs for COSMIC, maki",
+    "pub_date": "Tue, 24 Nov 2026 22:42:25 +0000",
+    "title_zh": "Pop!_OS 26.04 LTS 发布，带来 COSMIC 主题更新",
+    "summary_zh": "Pop!_OS 26.04 LTS 现已开放下载，基于最新 Ubuntu LTS 构建，默认搭载 COSMIC 桌面。新版本引入 COSMIC 主题包，可一键应用壁纸、图标、字体等整体外观变更，并支持数位板、屏幕键盘、辅助功能选项、工作区循环和混合显卡自动切换等改进。从 24.04 升级的通道将于 12 月开放。",
+    "fulltext_zh": "Pop!_OS 26.04 LTS 现已开放下载，这是 System76 基于 Ubuntu 的发行版的新版本，默认搭载 COSMIC 桌面。\n\n该版本现在构建于最新的 Ubuntu LTS 版本之上，安装或升级到此版本的用户将能够访问底层软件包档案库的大部分内容，同时受益于 System76 在其上所做的精细调整和优化。\n\nPop!_OS 26.04 LTS 中纳入的新功能包括 COSMIC 的主题包，使得应用整体变更（壁纸、图标、字体等）更加容易，无需手动在各个设置面板之间来回切换即可改变桌面的外观或布局。\n\n每个预设并非固定包，因此你可以将它们作为起点进行扩展，保存更改甚至与他人分享。而且，COSMIC 备受赞赏的[功能]可以应用于任何[主题]。\n\nPop!_OS 26.04 LTS 还新增了对数位板（又称绘图板，例如 Wacom）的支持，提供面向用户的设置来调整和控制倾斜、压力等。\n\n它还增加了支持触摸和游戏手柄输入的屏幕键盘，使该发行版在客厅的大电视上更加实用。\n\n其他值得注意的变化：\n- 新的辅助功能选项，包括摇动以查找光标\n- 可配置的工作区循环\n- 混合系统上的自动 GPU 选择\n\n对于“设置后即忘”的用户群体也有好消息：在“设置 > 系统与账户 > 系统与应用程序更新”中提供了自动更新选项。\n\n上一版本 Pop!_OS 24.04 LTS 的用户对大部分变化会感到熟悉，因为这些变化在过去几个月中已通过软件更新添加。在 Pop!_OS 26.04 LTS 中，一切均已开箱即用，随时可以体验。\n\n下载 Pop!_OS 26.04 LTS\n\nSystem76 表示，想要“完整 26.04 体验”的用户可以使用新的 ISO 下载进行全新安装。从 Pop!_OS 24.04 升级到 26.04 的通道将于 12 月上线。\n\n在[此处]下载 Pop!_OS 26.04 LTS。"
+  },
+  "f2b23ff04348781ed45f8acd38aca9de": {
+    "id": "f2b23ff04348781ed45f8acd38aca9de",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/13047",
+    "title_en": "Distribution Release: Pop!_OS 26.04",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  System76, Inc. has announced the release of Pop!_OS 26.04, a major new release of the company's Ubuntu-based Linux distribution featuring the COSMIC desktop. One of the interesting new features of the product is Constellations, a brand-new themes manager: \"Pop!_OS 26.04 LTS is here, after nearly a year of....",
+    "pub_date": "",
+    "title_zh": "发行版发布：Pop!_OS 26.04",
+    "summary_zh": "System76 发布了基于 Ubuntu 的 Pop!_OS 26.04 LTS，搭载 COSMIC 桌面环境。该版本经过近一年的功能开发，带来大量改进和新特性。最引人注目的是全新的主题管理器 Constellations，用户只需一键即可同时更改壁纸、强调色、图标和字体，实现桌面外观的整体切换，还可应用磨砂玻璃效果并深度自定义。",
+    "fulltext_zh": "System76 公司宣布发布 26.04，这是该公司基于 Ubuntu 的 Linux 发行版的一个重要新版本，搭载 COSMIC 桌面。该产品的一个有趣新特性是 Constellations，一个全新的主题管理器：\n\n“经过近一年的精心功能开发，Pop!_OS 26.04 LTS 来了。凭借大量改进、新功能和常规错误修复，Pop!_OS 26.04 LTS 从首次启动就让人感到得心应手。当你准备好将其打造成自己的风格时，你可以自定义它，直到它的外观和感觉完全符合你对桌面的期望。这一切都始于 Constellations。什么是 Constellations？Constellations 是 COSMIC 的一体化捆绑主题。只需单击一下，你就可以更改壁纸、强调色、图标和字体。这实际上是一键切换，实现桌面整体美学的全面改变。你不必再依次进入桌面、壁纸，然后桌面、外观，然后桌面面板，然后桌面 Dock，然后桌面窗口管理，你只需进入设置、桌面、外观，在深色或浅色模式之间选择，启用或禁用自动模式切换，然后选择你的主题。你还可以对 Constellation 应用磨砂玻璃效果，并编辑 Constellation 的几乎每一个方面。”\n\n更多信息和截图。\n\npop-os_26.04_amd64_generic_8.iso\npop-os_26.04_amd64_nvidia_8.iso\npop-os_26.04_arm64_generic_1.iso\npop-os_26.04_arm64_nvidia_3.iso\n\n近期相关新闻和发布\n发行版发布：Pop!_OS 26.04\n发行版发布：Pop!_OS 24.04\n开发版发布：Pop!_OS 24.04 Beta\n开发版发布：Pop!_OS 24.04 Alpha 5\n开发版发布：Pop!_OS 24.04 Alpha 4\n开发版发布：Pop!_OS 24.04 Alpha 1\n\nPop!_OS 是一个基于 Ubuntu 的 Linux 发行版，拥有自己的基于 GNOME 的桌面环境，称为 COSMIC。它以生产力为设计理念；具有流畅的窗口、通过 Super 键进行搜索导航、可隐藏杂乱内容的工作区以及高效的窗口自动平铺。该发行版由美国 Linux 电脑零售商 System76 开发。\n\nhttps://system76.com/pop\nhttps://chat.pop-os.org/"
+  },
+  "963f2ab4bd18f98c7ef17d22b09c0592": {
+    "id": "963f2ab4bd18f98c7ef17d22b09c0592",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/AMD-Zen-6-FRED-Benefits",
+    "title_en": "Benchmarking The Performance Benefit Of FRED On AMD Zen 6",
+    "summary_en": "With the new EPYC 9006 SP7 Venice processors now shipping, one of the curious follow-up benchmarks I have been wanting to pursue is around quantifying the performance impact of Flexible Return and Event Delivery \"FRED\". After all, FRED showed very nice gains for Intel Panther Lake for first featuring FRED. Since then the Linux kernel has enabled FRED usage by default with capable CPUs, so all the EPYC 9006 benchmarks on Phoronix have already been with FRED, so here are some numbers when going ah",
+    "pub_date": "Tue, 24 Nov 2026 20:55:19 -0500",
+    "title_zh": "在 AMD Zen 6 上对 FRED 性能优势的基准测试",
+    "summary_zh": "本文通过对比测试，量化了 AMD Zen 6 架构上 FRED（灵活返回与事件交付）带来的性能提升。测试使用 EPYC 9006 双路平台，在 Ubuntu 26.10 和 Linux 7.4 Git 内核下进行。结果显示，在 I/O 场景（网络或本地存储）中，FRED 默认启用可带来最高几个百分点的性能增益，是 EPYC 9006 出色表现的因素之一。",
+    "fulltext_zh": "SP7 Venice 处理器现已出货，我一直想跟进的一个有趣基准测试是量化灵活返回与事件交付（FRED）的性能影响。FRED 在英特尔 Panther Lake 上首次亮相时表现出非常好的性能提升。此后，Linux 内核在支持的 CPU 上默认启用了 FRED，因此 Phoronix 上所有 EPYC 9006 的基准测试都已经使用了 FRED，而这里给出的是在 Linux 内核中强制关闭 FRED 后的一些数据。\n\nFRED 是一种比传统 IDT 方法更高效、更现代的处理中断、异常和系统调用的方式。所有 AMD Zen 6 处理器都将支持 FRED，而针对已发布硬件的基准测试目前只能使用 EPYC 9006 SP7 处理器。\n\n我很好奇 FRED 的性能影响，因此通过切换 Linux 内核支持，我运行了一些基准测试来展示在 AMD Zen 6 上禁用 FRED 的影响。需要注意的是，FRED 在 Linux 7.1 及更新版本中默认启用。\n\n在 Ubuntu 26.10 上使用双路配置并运行 Linux 7.4 Git 内核构建进行测试时，鉴于时间限制，我运行了一些快速基准测试：\n\n在 I/O 方面，无论是网络还是本地存储，AMD 第六代 EPYC 上都有高达几个百分点的增益，这似乎归因于 Zen 6 上 FRED 的存在及其在 Linux 7.1 及更新版本中默认启用。这只是 EPYC 9006 突出性能的促成因素之一，此外还有 MRDIMM-12800 内存支持、出色的 SMT 性能，以及相对于 Zen 5 甚至回顾 Zen 6 与 Zen 1 服务器性能对比的其他架构改进。这是一段狂野的旅程。"
+  },
+  "74ee706f73f086623e68c6d69b300c7c": {
+    "id": "74ee706f73f086623e68c6d69b300c7c",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linus-Torvalds-EXT4-AI-Big",
+    "title_en": "Linus Torvalds: \"Tell Your AI Companion To Get Its Act Together\"",
+    "summary_en": "A big EXT4 pull request today intended for the Linux 7.4-rc5 kernel has set off Linus Torvalds. Over 41k lines of new code in this EXT4 pull request going in as \"fixes\".... Much of that being new KUnit test coverage to make it safer to validate AI-generated patches. And then a lot of AI generated patches themselves for the EXT4 file-system...",
+    "pub_date": "Tue, 24 Nov 2026 16:01:36 -0500",
+    "title_zh": "Linus Torvalds：“告诉你的AI伙伴，让它规矩点”",
+    "summary_zh": "Linus Torvalds对一份针对Linux 7.4-rc5内核的大型EXT4拉取请求表示强烈不满。该请求包含超过4.1万行新代码，其中大部分是AI生成的错误修复和扩展KUnit测试覆盖。Torvalds认为在发布周期后段提交如此庞大的“修复”并不合适，警告下次将直接忽略此类请求，并强调修复本身也可能引入新错误，要求将新开发和测试用例放在单独分支中，在合并窗口期间提交。",
+    "fulltext_zh": "Linus Torvalds：“告诉你的AI伙伴，让它规矩点”\n2026年11月24日 下午04:01 EST。\n\n今天一份针对Linux 7.4-rc5内核的大型EXT4拉取请求激怒了Linus Torvalds。这份EXT4拉取请求包含超过4.1万行新代码，却作为“修复”提交……其中大部分是新的KUnit测试覆盖，旨在更安全地验证AI生成的补丁。此外还有大量针对EXT4文件系统的AI生成补丁本身。\n\n今天提交的是当前Linux 7.4周期的最新EXT4更新。其中有一些有趣的性能改动，而这份大型“修复”拉取请求中的绝大多数代码是AI生成的错误修复，以及扩展EXT4驱动的KUnit测试覆盖，以帮助验证未来AI生成的补丁。\n\n但这份在Linux 7.4周期后半段提交的庞大拉取请求让Linus Torvalds非常不满。他最终还是接受了该拉取请求并已合并，但他评论道：\n\n“老实说，我认为这不适于当前阶段。你应该把测试放在单独的分支中进行测试，并在下一个合并窗口再做这个*巨大的*更新。\n\n‘任何修复都可以进-rc’这种想法是荒谬的。\n\n尽管有严重保留意见，并且由于这种愚蠢行为导致了一些糟糕的冲突，我还是接受了这个。\n\n但下次再发生这种破事，我会直接忽略。\n\n不要以为你——或者AI——在修复问题时永远不会引入错误。\n\n我们之所以有发布候选版本和数周的冷静期，是有原因的。\n\n是的，我很生气。为什么人们这么难理解这么简单的概念，这本身就很难理解。\n\n如果你认为‘41197行插入’没问题，不会引入新问题，仅仅因为大部分代码不会被编译，或者因为它们是针对其他问题的修复，那你就是在胡说八道。\n\n如果这些错误是存在了一段时间而未被AI检测到的微妙问题，那么这些修复按定义就是在修复某些微妙且罕见、此前无人注意到的东西。\n\n这就使得这些*修复*本身可能有bug。\n\n我本来想直接取消拉取，但我处理了这个问题，而是给你一个公平的警告。把你的破事收拾好，停止这种愚蠢行为。\n\n并且告诉你的AI伙伴规矩点，把任何新开发和测试用例放在一个单独的该死的分支上，以便在合并窗口期间合并。\n\n这有什么难理解的？\n\n是的，这意味着*你*在运行那些测试时必须处理由此产生的冲突，但该死的，这也意味着我们不会在发布中途引入数万行乱七八糟的东西！”\n\n因此EXT4的改动已进入周日发布的Linux 7.4-rc5内核，但Torvalds并不高兴。\n\n在性能工作方面，一个有趣的条目是将同级目录中文件的inode分散到flex组的块组上。最终这有助于减少争用，并能显著加速并行文件创建。\n\n来自三星的Daejun Park展示了一些非常好的改进：\n\n另外还有一些性能补丁，用于改善没有孤儿文件功能的文件系统上的unlink性能，以及加速稀疏文件上的快速提交重放。\n\nLinux 7.4将并行移除NVMe命名空间以获得更快结果\nBtrfs试图应对AI和“没有常识的新手”造成的更多伤害而非好处\n现代NTFS驱动在Linux 7.5中获得O_TMPFILE支持\nXRAID作为XFS的新RAID实现公开发布\nexfatprogs 1.4.4为创建新exFAT文件系统带来加速\nLinux 7.5将向用户空间传达文件的多粒度时间戳使用情况\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动等。"
+  },
+  "f99baf186086edc04a3e17688723f45f": {
+    "id": "f99baf186086edc04a3e17688723f45f",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Pop-OS-26.04-Released",
+    "title_en": "Pop!_OS 26.04 LTS Released With More COSMIC Apps, Remote Desktop & More",
+    "summary_en": "System76 has a wonderful surprise today with the release of Pop!_OS 26.04 LTS as the newest iteration of their in-house Linux distribution now built atop the Ubuntu 26.04 LTS package base and incorporating their latest enhancements to their COSMIC desktop...",
+    "pub_date": "Tue, 24 Nov 2026 16:00:00 -0500",
+    "title_zh": "Pop!_OS 26.04 LTS 发布：更多 COSMIC 应用、远程桌面等",
+    "summary_zh": "System76 发布 Pop!_OS 26.04 LTS，基于 Ubuntu 26.04 LTS，集成最新 COSMIC 桌面增强功能。新版本带来自动更新支持、COSMIC 系统监视器和新版 COSMIC 商店等原生应用、数位板支持、COSMIC 远程桌面、更好的屏幕放大和全屏改进、改进的混合/GPU 处理，以及 Ubuntu 基础的大量软件更新。",
+    "fulltext_zh": "Pop!_OS 26.04 LTS 发布：更多 COSMIC 应用、远程桌面等 - Phoronix\nPop!_OS 26.04 LTS 发布：更多 COSMIC 应用、远程桌面等\n2026年11月24日 美国东部时间下午4:00。\nSystem76 今天带来一个美妙的惊喜：Pop!_OS 26.04 LTS 正式发布。这是他们自研 Linux 发行版的最新版本，现构建于 Ubuntu 26.04 LTS 软件包基础之上，并融入了他们对 COSMIC 桌面的最新增强。\n实际上，过去一周我一直在使用 Pop!_OS 26.04 LTS，因为\n他们新的 Thelio Prime SFF PC 预装的就是 Pop!_OS 26.04\n。从目前的测试来看，Pop!_OS 26.04 LTS 运行得非常好，并且相比之前的 Pop!_OS 24.04 基础带来了一些不错的软件包更新。从明天开始，我将发布一些 Pop!_OS 26.04 LTS 的对比基准测试。\nPop!_OS 26.04 LTS 现在支持自动更新，拥有更多原生 COSMIC 应用，如 COSMIC 系统监视器和新的 COSMIC 商店，支持数位板，支持 COSMIC 远程桌面，更好的屏幕放大功能，全屏改进，更好的混合/GPU 处理，以及 Ubuntu 26.04 LTS 基础提供的众多软件更新。\n下载和今日 Pop!_OS 26.04 LTS 发布的更多详情，请访问\nLiberNT：一个由 AI 驱动的 ReactOS 分支，专注于 Windows 11 兼容性\nAlmaLinux 10.3 发布，恢复 ModSecurity，包含各种更新\nRedox OS 让 Golang 正常工作，移植 GIMP 并简化 AI 政策\nReactOS 获得可用的软盘支持、VMware 3D 加速和 SMP 进展\nHaiku OS 现在有 UFS 驱动、两指和三指轻触手势\nKORA 宣布为“智能时代”的 Linux 桌面操作系统\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可以通过以下方式关注他\nLinux 7.4-rc4 发布：“它很大。真是个惊喜。”\nOpenJDK Java 的 Java4Shell 漏洞可能导致远程代码执行\nXfce 4.22 正努力在 2027 年初发布\nCachyOS 2026 年 11 月版发布，支持 EAC Linux v2，新增恢复工具\nBtrfs 试图应对 AI 和“没有常识的新手”造成的更多伤害而非好处\nValve 的新 AMDGPU Linux 补丁旨在减少 Steam Play 游戏的卡顿\nLinus Torvalds：“告诉你的 AI 伙伴，让它振作起来”\nDebian 13.8 发布，包含 150 多项安全更新\n同时享受无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "4ff8dae41787f21427ebaabc7f9b5fc2": {
+    "id": "4ff8dae41787f21427ebaabc7f9b5fc2",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Ubuntu-AI-Desktop-Interact",
+    "title_en": "Ubuntu Outlines Plans For Its AI-Powered New Way To Interact With The Ubuntu Desktop",
+    "summary_en": "Following Ubuntu 26.10 offering the Myna speech-to-text AI powered functionality in tech preview form and then a Snap appearing recently as a new design mock-up for an AI-powered launcher, Canonical today shared more plans on their AI-embraced Ubuntu desktop...",
+    "pub_date": "Tue, 24 Nov 2026 11:12:00 -0500",
+    "title_zh": "Ubuntu 公布其 AI 驱动的新版 Ubuntu 桌面交互方式计划",
+    "summary_zh": "Canonical 公布了 Ubuntu 桌面 AI 交互新计划，以 warty-prototype Snap 形式展示设计原型。该方案旨在打造统一、支持键盘和语音的入口，连接应用、本地上下文与智能助手，而非分散的 AI 小部件。该功能严格可选、本地优先、隐私和安全优先。Canonical 寻求社区反馈，并计划于一月分享架构细节和首个版本。",
+    "fulltext_zh": "在 Ubuntu 26.10 以技术预览形式提供 Myna 语音转文本 AI 功能，以及最近作为 AI 驱动启动器的新设计原型出现 Snap 之后，Canonical 今天分享了更多关于其拥抱 AI 的 Ubuntu 桌面的计划。\n\nCanonical 的 Ubuntu 桌面团队成员 Didier Roche 分享了更多关于他们“与 Ubuntu 桌面交互的新方式”的细节。\n\n“warty-prototype” Snap 目前被描述为仅是一个设计原型，但这项工作的长期目标被描述为一种与 Ubuntu 桌面交互的新方式：\n\n“乍看之下，warty-prototype 看起来像一个经典的快速启动器——是的，即时查找文件和启动应用程序正是我们构建的核心。但我们的目标不止于取代应用网格：我们希望探索一种与 Ubuntu 桌面交互的新方式。\n\n我们不想在桌面上散布互不连接的 AI 小部件，而是希望提供一个统一的、支持键盘和语音的入口点，仅在您明确要求时，连接您的应用、您的本地上下文和智能助手。”\n\n正在开发的这一 AI 驱动解决方案被描述为严格可选/选择加入、本地优先的端侧推理、隐私优先和安全优先的立场。\n\nCanonical 正在寻求社区参与和反馈，以推进这种与 Ubuntu 桌面交互的新方式。一月份，他们将分享更多关于架构的细节以及这一 AI 驱动桌面解决方案的首个版本。目前分享了这一预告：\n\n更多细节，感兴趣者可通过此 Ubuntu Discourse 帖子了解。\n\nUbuntu 26.10 开始推出 upki 证书吊销支持\nUbuntu 推进拆分 Linux-Firmware 的计划，HWE 选项\nUbuntu 27.04 “Tenacious T-Rex” 开放开发\nCanonical 复兴其不可变 Ubuntu Core 桌面\nCanonical 的 Multipass 1.17 增加对非 Ubuntu Linux 发行版的直接支持\nUbuntu Touch 24.04-2.1 带来新硬件支持和重要安全修复\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动和其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\nLinux 7.4-rc4 发布：“它很大。真是个惊喜。”\nOpenJDK Java 的 Java4Shell 漏洞可导致远程代码执行\nXfce 4.22 正努力争取 2027 年初发布\nCachyOS 2026 年 11 月版发布，支持 EAC Linux v2，新增恢复工具\nBtrfs 寻求应对 AI 和“没有常识的新手”造成的弊大于利的问题\nValve 的新 AMDGPU Linux 补丁旨在减少 Steam Play 游戏的卡顿\nLinus Torvalds：“告诉你的 AI 伙伴，让它振作起来”\nDebian 13.8 发布，包含 150 多项安全更新\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "42d6f8fe2a8ee36b19b830eebd33fce6": {
+    "id": "42d6f8fe2a8ee36b19b830eebd33fce6",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/ubuntu-2610-dell-xps-14",
+    "title_en": "Ubuntu 26.10 Provides Some Performance Gains For Intel Panther Lake On The Dell XPS 14",
+    "summary_en": "The new Dell XPS 14 powered by Intel Core Ultra Series 3 (https://www.phoronix.com/review/dell-xps-14-panther-lake) \"Panther Lake\" is now available with Ubuntu 26.04 LTS pre-loaded. For those not concerned about sticking to an officially supported or Long Term Support (LTS) version, upgrading to the new Ubuntu 26.10 can help deliver some additional CPU and iGPU performance gains on Panther Lake.",
+    "pub_date": "Tue, 24 Nov 2026 10:35:30 -0500",
+    "title_zh": "Ubuntu 26.10 为戴尔 XPS 14 上的英特尔 Panther Lake 带来性能提升",
+    "summary_zh": "本文测试了戴尔 XPS 14（搭载英特尔酷睿 Ultra X7 358H“Panther Lake”处理器）在 Ubuntu 26.04 LTS 与 Ubuntu 26.10 下的性能差异。Ubuntu 26.10 搭载 Linux 7.3 内核、GNOME Shell 51、Mesa 26.2 和 GCC 15.3，相比 Ubuntu 26.04 LTS 的 Linux 7.0、GNOME Shell 50、Mesa 26.0.8 和 GCC 15.2，可为 Panther Lake 带来额外的 CPU 和集成 GPU 性能提升。坚持使用 LTS 的用户也可在 2027 年 2 月发布的 Ubuntu 26.04.2 中获得硬件启用（HWE）栈的回移。",
+    "fulltext_zh": "Ubuntu 26.10 为戴尔 XPS 14 上的英特尔 Panther Lake 带来性能提升\n2026 年 11 月 24 日东部时间上午 10:35。\n\n搭载英特尔酷睿 Ultra 系列 3“Panther Lake”的新款戴尔 XPS 14 现已预装 Ubuntu 26.04 LTS 发售。对于不介意使用官方支持或长期支持（LTS）版本的用户，升级到新的 Ubuntu 26.10 可为 Panther Lake 带来额外的 CPU 和集成 GPU 性能提升。\n\n上周我们发布了戴尔 XPS 14 在 Ubuntu 26.04 LTS 下的评测（https://www.phoronix.com/review/dell-xps-14-panther-lake），并与其他笔记本在该 LTS 版本上进行了对比。对于想了解升级到 Ubuntu 26.10 能获得何种提升的用户，本文展示了这台 Panther Lake 笔记本上 Ubuntu 26.04 LTS 与 Ubuntu 26.10 的性能对比。对于坚持使用 Ubuntu 26.04 LTS 的用户，升级后的内核、Mesa 组件及其他构成硬件启用“HWE”栈的部分也将在 2027 年 2 月的 Ubuntu 26.04.2 LTS 中回移。\n\n用于测试的戴尔 XPS 14 DA14260 评测机配备英特尔酷睿 Ultra X7 358H、32GB LPDDR5-9600 内存、铠侠 512GB NVMe SSD，以及驱动 2880 x 1800 显示面板的集成 Arc B390 显卡。\n\nUbuntu 26.04 LTS 默认搭载 Linux 7.0 内核、GNOME Shell 50、Mesa 26.0.8、GCC 15.2 以及今年早些时候的其他默认组件。上个月发布的 Ubuntu 26.10 则搭载 Linux 7.3 内核、GNOME Shell 51、Mesa 26.2 图形栈、GCC 15.3 及其他更新组件。让我们看看这一软件升级对戴尔 XPS 14 性能的影响。\n\nArch Linux vs. CachyOS vs. Omarchy 4.5 性能基准测试\nCachyOS vs. Fedora 45 vs. Ubuntu 26.10 在 AMD Ryzen 9 上的性能\nSnapdragon X1 Elite / 宏碁 Swift 14 AI 在 Ubuntu 26.10 X1E 概念版上的性能\n英特尔酷睿 Ultra 9 Arrow Lake 在 Star Labs StarFighter 上于 Ubuntu 26.10 展现良好提升\nUbuntu 26.10 amd64v3 软件包在 AMD EPYC 上提供额外提升\nUbuntu 26.10 在 AMD EPYC 上较 Ubuntu 26.04 带来出色的 I/O 性能优势\n\n同时享受无广告浏览、\n单页文章视图\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "df4e3d56117aced25ceed92fbaa81416": {
+    "id": "df4e3d56117aced25ceed92fbaa81416",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/aerynos-gets-linux-7-3-4-nvidia-620-drivers-and-systemd-262/",
+    "title_en": "aerynOS Gets Linux 7.3.4, NVIDIA 620 Drivers, and systemd 262",
+    "summary_en": "aerynOS updates its software stack with Linux kernel 7.3.4, NVIDIA 620 graphics drivers, and systemd 262, bringing updated hardware and system support.\nThe post aerynOS Gets Linux 7.3.4, NVIDIA 620 Drivers, and systemd 262 appeared first on Linux Today.",
+    "pub_date": "Tue, 24 Nov 2026 08:30:01 +0000",
+    "title_zh": "aerynOS 获得 Linux 7.3.4、NVIDIA 620 驱动和 systemd 262",
+    "summary_zh": "aerynOS 更新其软件栈，引入 Linux 内核 7.3.4、NVIDIA 620 图形驱动和 systemd 262，带来更新的硬件与系统支持。",
+    "fulltext_zh": "aerynOS 更新其软件栈，引入 Linux 内核 7.3.4、NVIDIA 620 图形驱动和 systemd 262，带来更新的硬件与系统支持。\n\n文章《aerynOS 获得 Linux 7.3.4、NVIDIA 620 驱动和 systemd 262》首次发布于 Linux Today。"
+  },
+  "3752aecefee5e94952e9fa28e4894b84": {
+    "id": "3752aecefee5e94952e9fa28e4894b84",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/epic-games-launcher-lands-on-flathub-as-an-unofficial-flatpak/",
+    "title_en": "Epic Games Launcher Lands on Flathub as an Unofficial Flatpak",
+    "summary_en": "Epic Games Launcher arrives on Flathub as an unofficial Flatpak, offering Linux gamers another way to access the Epic Games Store.\nThe post Epic Games Launcher Lands on Flathub as an Unofficial Flatpak appeared first on Linux Today.",
+    "pub_date": "Tue, 24 Nov 2026 08:22:07 +0000",
+    "title_zh": "Epic Games启动器以非官方Flatpak形式登陆Flathub",
+    "summary_zh": "Epic Games启动器以非官方Flatpak形式登陆Flathub，为Linux游戏玩家提供了访问Epic Games商店的另一种方式。",
+    "fulltext_zh": "Epic Games启动器以非官方Flatpak形式登陆Flathub，为Linux游戏玩家提供了访问Epic Games商店的另一种方式。\n\n该文章《Epic Games启动器以非官方Flatpak形式登陆Flathub》首发于Linux Today。"
+  },
+  "f1d3f2b6ef2a25343268f18e79a51fdd": {
+    "id": "f1d3f2b6ef2a25343268f18e79a51fdd",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/dictate-into-any-app-on-fedora-with-tuxtalk/",
+    "title_en": "Dictate Into Any App on Fedora With Tuxtalk",
+    "summary_en": "Discover how Tuxtalk enables voice dictation on Fedora, allowing users to enter text into applications using speech instead of typing.\nThe post Dictate Into Any App on Fedora With Tuxtalk appeared first on Linux Today.",
+    "pub_date": "Tue, 24 Nov 2026 08:14:30 +0000",
+    "title_zh": "在Fedora上使用Tuxtalk向任何应用口述输入",
+    "summary_zh": "本文介绍Tuxtalk如何在Fedora上实现语音听写功能，让用户通过语音而非键盘向应用程序输入文本。",
+    "fulltext_zh": "了解Tuxtalk如何在Fedora上实现语音听写，让用户通过语音而非打字向应用程序输入文本。\n\n文章《在Fedora上使用Tuxtalk向任何应用口述输入》最初发布于Linux Today。"
+  },
+  "b356fb564b8badc5c6058d14158f2cf0": {
+    "id": "b356fb564b8badc5c6058d14158f2cf0",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/fwupd-2-1-10-linux-firmware-updater-adds-support-for-synaptics-96f1-touchpads/",
+    "title_en": "Fwupd 2.1.10 Linux Firmware Updater Adds Support for Synaptics 96F1 Touchpads",
+    "summary_en": "Fwupd 2.1.10 expands firmware update support to Synaptics 96F1 touchpads, improving hardware compatibility for Linux users.\nThe post Fwupd 2.1.10 Linux Firmware Updater Adds Support for Synaptics 96F1 Touchpads appeared first on Linux Today.",
+    "pub_date": "Tue, 24 Nov 2026 08:07:56 +0000",
+    "title_zh": "Fwupd 2.1.10 Linux 固件更新器新增对 Synaptics 96F1 触摸板的支持",
+    "summary_zh": "Fwupd 2.1.10 版本发布，新增对 Synaptics 96F1 触摸板的固件更新支持，进一步提升了 Linux 用户的硬件兼容性。",
+    "fulltext_zh": "Fwupd 2.1.10 将固件更新支持扩展至 Synaptics 96F1 触摸板，提升了 Linux 用户的硬件兼容性。\n\n文章《Fwupd 2.1.10 Linux 固件更新器新增对 Synaptics 96F1 触摸板的支持》首发于 Linux Today。"
+  },
+  "3f1adc82c781308344466b19daa31cd8": {
+    "id": "3f1adc82c781308344466b19daa31cd8",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/gitea-28-4-patches-multiple-security-vulnerabilities/",
+    "title_en": "Gitea 28.4 Patches Multiple Security Vulnerabilities",
+    "summary_en": "Gitea 28.4 addresses multiple security vulnerabilities, helping administrators protect self-hosted Git repositories and software development environments.\nThe post Gitea 28.4 Patches Multiple Security Vulnerabilities appeared first on Linux Today.",
+    "pub_date": "Tue, 24 Nov 2026 07:58:51 +0000",
+    "title_zh": "Gitea 28.4 修复多个安全漏洞",
+    "summary_zh": "Gitea 28.4 版本修复了多个安全漏洞，帮助管理员保护自托管的 Git 仓库和软件开发环境。",
+    "fulltext_zh": "Gitea 28.4 修复了多个安全漏洞，帮助管理员保护自托管的 Git 仓库和软件开发环境。\n\n文章《Gitea 28.4 修复多个安全漏洞》首发于 Linux Today。"
+  },
+  "46a6b383af94c29b9b3e0cf04af1a96c": {
+    "id": "46a6b383af94c29b9b3e0cf04af1a96c",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/pop_os-26-04-lts-is-now-available-for-download-based-on-ubuntu-26-04-lts",
+    "title_en": "Pop!_OS 26.04 LTS Is Now Available for Download, Based on Ubuntu 26.04 LTS",
+    "summary_en": "Pop!_OS 26.04 LTS Linux distribution from System76 is now available for download based on Ubuntu 26.04 LTS and featuring the COSMIC desktop environment.\nThe post Pop!_OS 26.04 LTS Is Now Available for Download, Based on Ubuntu 26.04 LTS appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Wed, 25 Nov 2026 01:18:53 +0000",
+    "title_zh": "Pop!_OS 26.04 LTS 现已开放下载，基于 Ubuntu 26.04 LTS",
+    "summary_zh": "System76 的 Pop!_OS 26.04 LTS 现已开放下载，该版本基于 Ubuntu 26.04 LTS，并搭载 COSMIC 桌面环境。",
+    "fulltext_zh": "来自 System76 的 Pop!_OS 26.04 LTS Linux 发行版现已开放下载，它基于 Ubuntu 26.04 LTS，并搭载 COSMIC 桌面环境。"
+  },
+  "394e96cd3255f6a5abe6c0bd21ef3253": {
+    "id": "394e96cd3255f6a5abe6c0bd21ef3253",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/peppermint-os-void-launches-as-a-loaded-edition-based-on-void-linux",
+    "title_en": "Peppermint OS Void Launches as a Loaded Edition Based on Void Linux",
+    "summary_en": "Peppermint OS Void is now available for download as a new Peppermint OS edition based on the Void Linux distribution.\nThe post Peppermint OS Void Launches as a Loaded Edition Based on Void Linux appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Tue, 24 Nov 2026 14:57:14 +0000",
+    "title_zh": "Peppermint OS Void 发布：基于 Void Linux 的功能丰富版本",
+    "summary_zh": "Peppermint OS 推出全新版本 Peppermint OS Void，该版本基于 Void Linux 发行版构建，现已开放下载。这是 Peppermint OS 在原有版本之外新增的一个独立版本，为用户提供了基于 Void Linux 的新选择。",
+    "fulltext_zh": "Peppermint OS Void 现已开放下载，这是 Peppermint OS 的一个新版本，基于 Void Linux 发行版构建。\n\n文章 Peppermint OS Void 发布：基于 Void Linux 的功能丰富版本 最早出现在 9to5Linux 上——未经许可请勿转载本文。此 RSS 源面向读者，而非抓取工具。"
+  },
+  "647e67f08f9807b14ed80026abbae14a": {
+    "id": "647e67f08f9807b14ed80026abbae14a",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/ipfire-2-29-core-update-206-adds-loongarch64-support-updated-components",
+    "title_en": "IPFire 2.29 Core Update 206 Adds LoongArch64 Support, Updated Components",
+    "summary_en": "IPFire 2.29 Core Update 206 hardened Linux firewall distro is now available for download with support for new languages, updated installer, security fixes, and updated components.\nThe post IPFire 2.29 Core Update 206 Adds LoongArch64 Support, Updated Components appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Tue, 24 Nov 2026 11:01:53 +0000",
+    "title_zh": "IPFire 2.29 Core Update 206 新增 LoongArch64 支持并更新组件",
+    "summary_zh": "IPFire 2.29 Core Update 206 已发布，这是一款强化安全的 Linux 防火墙发行版。此次更新新增了对 LoongArch64 架构的支持，增加了新语言，更新了安装程序，并包含安全修复和组件更新。",
+    "fulltext_zh": "IPFire 2.29 Core Update 206 强化 Linux 防火墙发行版现已可供下载，支持新语言、更新安装程序、安全修复以及更新组件。\n\n文章 IPFire 2.29 Core Update 206 新增 LoongArch64 支持并更新组件 首次出现在 9to5Linux 上 - 未经许可不得转载本文。此 RSS 源面向读者，而非抓取者。"
+  },
+  "4384dcaf3d1396a24c0f48c2f10f1101": {
+    "id": "4384dcaf3d1396a24c0f48c2f10f1101",
+    "source": "9to5Linux",
+    "url": "https://9to5linux.com/qbittorrent-5-3-1-bittorrent-client-is-out-with-various-bug-fixes-and-improvements",
+    "title_en": "qBittorrent 5.3.1 BitTorrent Client Is Out with Various Bug Fixes and Improvements",
+    "summary_en": "qBittorrent 5.3.1 open-source BitTorrent client is now available for download addressing a number of bug fixes across the application, Web UI, and Web API.\nThe post qBittorrent 5.3.1 BitTorrent Client Is Out with Various Bug Fixes and Improvements appeared first on 9to5Linux - do not reproduce this article without permission. This RSS feed is intended for readers, not scrapers.",
+    "pub_date": "Tue, 24 Nov 2026 09:06:27 +0000",
+    "title_zh": "qBittorrent 5.3.1 BitTorrent 客户端发布，带来多项错误修复与改进",
+    "summary_zh": "qBittorrent 5.3.1 开源 BitTorrent 客户端现已开放下载，本次更新修复了应用程序、Web UI 和 Web API 中的多个错误，并带来若干改进。",
+    "fulltext_zh": "qBittorrent 5.3.1 开源 BitTorrent 客户端现已可供下载，修复了应用程序、Web UI 和 Web API 中的多个错误。"
   }
 }
