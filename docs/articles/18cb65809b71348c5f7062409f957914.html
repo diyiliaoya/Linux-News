@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>认识 Warty：Canonical 为 Ubuntu 打造的 AI 启动器 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月26日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>认识 Warty：Canonical 为 Ubuntu 打造的 AI 启动器</h1>
+
+  <div class="article-summary">Canonical 正在为 Ubuntu 开发名为 Warty 的 AI 启动器，预计明年一月推出。该启动器将文件查找、应用启动和 AI 助手整合于桌面单一入口，支持语音和文字输入。AI 功能严格遵循用户主动选择与本地优先原则，大型模型不随默认安装捆绑，用户数据不出本机。目前原型 Snap 包已可在 edge 频道试用，但功能尚不完整。</div>
+
+  <div class="article-body"><p>认识 Warty：Canonical 为 Ubuntu 打造的 AI 启动器</p><p>Ubuntu 的 AI 启动器预计将于一月推出。所引入的每项 AI 功能都严格遵循主动选择加入和本地优先的原则。</p><p>早在四月，Canonical 就分享了其在 Ubuntu 中引入 AI 的计划，倾向于使用在用户自有硬件上运行的模型和开放权重选项，而非云服务。该计划还将 AI 功能分为两类：一类是对操作系统现有部分的后台改进，另一类是用户主动选择加入的可见的、代理式功能。</p><p>随后推出的是运行在本地模型上的语音转文字工具。它作为可选预览版首次亮相，公司表示将随 Ubuntu 28.04 LTS 默认发布。</p><p>最近，Canonical 在 Ubuntu Summit 26.10 上推出了一个新系统。该 AI 系统为 Ubuntu 软件包编写并检查安全修复，这些修复通过一个需主动选择加入的归档提供给 Ubuntu Pro 用户，而不会自动进入稳定版本。</p><p>现在，这一方向上的最新进展是一个 AI 驱动的启动器。它于十月首次以模拟 Snap 的形式出现在 Snap Store 上，而负责该项目的开发者现已解释了项目的未来方向。</p><p>AI 驱动的启动器？</p><p>Warty 启动器当前状态。（来源：Didier Roche）</p><p>这个新启动器（Warty）的目标是在桌面上提供一个单一位置，用于查找文件、打开应用，并按需从 AI 模型获取帮助。</p><p>打字和说话都是计划支持的输入方式。⌨️🗣️</p><p>与十月的原型 Snap 不同，该启动器现在已能实际运行，并内置了一些功能，Canonical 已发布了其相关代码，开发者们期待收集关于其设计选择的反馈。</p><p>Didier 还提到，开启 AI 是用户的选择，传统的应用启动器仍是偏好传统体验的用户的默认选择。</p><p>此外，大型 AI 模型不会随 Warty 启动器的默认安装捆绑。</p><p>任何选择加入的用户都将优先在本机进行推理，而非依赖远程服务器，个人文件、会话上下文等不会离开本机。</p><p>为其提供支持的组件在 Ubuntu 的隔离工具下保持隔离，以保护宿主系统。</p><p>然而，公告并未提及具体模型或硬件要求，且一些基础性工作仍需首先完成。</p><p>在发布 Warty 启动器的原型 Snap 包后，屏幕右上角顶部面板内会出现一个小按钮，带有快捷方式。</p><p>如果你还记得之前的内容，Didier 的帖子展示了一个更新的构建版本，将启动器放置在顶部中央附近；我更喜欢这种新方案。</p><p>模式会列出最近的复制记录，包括来源应用和时间。示例条目包括餐厅预订、酒店地址和火车票截图，搜索框旁的一个后续按钮可将其中任意一项交给 AI。</p><p>Warty 启动器的最新构建版本。（来源：Didier Roche）</p><p>当我通过后续功能发送一个测试提示后，它显示了一条“正在此设备上处理”的消息，然后返回了填充内容作为答案。这是意料之中的，因为原型在 Snap 商店的列表说明中写道，操作是模拟的。</p><p>会显示最近选择的网格。</p><p>在提供打开匹配项或在文件管理器中显示之前，会等待三个字符，并保留启动器已执行操作的列表，例如打开文件。</p><p>如果你想亲自尝试，该 snap 仅在 edge 频道提供，可通过一条命令安装：</p><p>sudo snap install warty-prototype --edge</p><p>安装后，在终端中运行相应命令即可启动并打开启动器。</p><p>我的终端中出现了一些 GTK 和图形警告，但启动器仍然出现了。要关闭它，请从顶部面板的右键菜单中选择“退出”。</p><p>目前它包含模拟操作和演示数据。如果你希望使用它，请再等几周，待其成熟为可日常使用的功能。</p><p>Warty 启动器（原型）</p><p>喜欢这篇更新？支持 inde</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/ubuntu-ai-launcher-plans/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

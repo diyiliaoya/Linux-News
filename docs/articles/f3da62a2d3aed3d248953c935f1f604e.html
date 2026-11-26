@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XNULinux 让你无需虚拟机在 Linux 上运行 macOS — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月26日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">桌面环境</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>XNULinux 让你无需虚拟机在 Linux 上运行 macOS</h1>
+
+  <div class="article-summary">开源项目 XNULinux 将苹果的 XNU 内核作为模块加载到 Linux 内核中，使 macOS 桌面能在 ARM Linux 上原生运行，无需虚拟机。目前项目高度实验性，GPU 支持不完善，图形由 CPU 渲染，安装过程复杂，需要 ARM64 设备、至少 16GB 内存和 4KB 内存页的 Linux 内核，且需自行拥有 macOS 27 安装文件及装有 Xcode 的 Mac。</div>
+
+  <div class="article-body"><p>XNULinux 在 ARM Linux 上原生运行 macOS</p><p>一个新开源项目将苹果的 XNU 内核作为模块加载到 Linux 内核内部，使 macOS 桌面能够原生运行——无需虚拟机。</p><p>该项目是开源的、高度实验性的，苹果方面很可能不会乐见其成。不过他们倒不至于暴跳如雷，因为用户目前还不能轻易下载并自行运行——至少现在还不能。</p><p>在 GitHub 上，XNULinux 的开发者展示了 macOS 27 Golden Gate 桌面在 NVIDIA DGX Spark（其默认操作系统基于 Ubuntu 24.04 LTS）上运行的截图。</p><p>核心 Mac 应用和组件可以工作，网络功能也正常，但 GPU 支持尚未完善，因此图形由 CPU 渲染。它能在同一 CPU 上让 macOS 进程与 Linux 进程并肩运行。</p><p>面向大众？不，但很有趣</p><p>怎么做到的？它将苹果的 XNU 内核源代码构建为一个模块，加载到未经修改的 ARM64 Linux 内核中。第二个模块充当中间人，为苹果内核提供其所需的来自 Linux 的内存、CPU 时间和网络访问。</p><p>这不是兼容层，也没有任何系统间应用集成的迹象。它不会把 Mac 软件添加到 GNOME 应用选择器中，也不会在上下文菜单中显示 Linux 应用。不过，你可以从 macOS 内部通过 SSH 连接到 Linux 主机。</p><p>虽然已经可以在虚拟机中于 Linux 上运行 macOS，但 XNULinux 不依赖虚拟化或 hypervisor，这使得该功能更加令人印象深刻。</p><p>它是否会成为可用的东西，或许重振黑苹果社区，值得怀疑。该项目不得不修补或放宽 macOS 的一些安全功能才能工作，尽管开发者将其描述为“权宜之计”。</p><p>尝试 XNULinux 并不容易……</p><p>尝试这个项目不适合胆小的人，因为没有简单的下载双击安装程序或 bash 脚本。</p><p>你还需要一台 ARM64 设备、至少 16GB 内存以及使用 4KB 内存页的 Linux 内核。此外，你需拥有 macOS 27 安装文件、能访问一台装有 Xcode 的 Mac，以及耐心。实际上，需要极大的耐心。</p><p>最新的 macOS 仅支持苹果芯片（ARM64），因此这项工作无法在 Intel/AMD 硬件上运行。如果能的话会更有趣，而 macOS 26 是最后一个支持 x86-64 硬件的版本，目前仍受苹果支持——但愿如此。</p><p>如果你未被吓退，XNULinux 的 GitHub 上有大量（由 LLM 撰写的）细节，说明其工作原理、哪些部分尚不可用以及如何让它运行起来。如果你尝试了，记得回来告诉我你的看法。</p><p>如果你有 M1 Mac 或更新机型，也可以在虚拟机中安装合适的 Linux 发行版，然后努力进行设置来尝试。从这个意义上说，它确实使用了虚拟机，只是间接使用。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/xnulinux-runs-mac-desktop-on-linux-natively" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

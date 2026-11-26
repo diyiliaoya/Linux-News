@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude artifacts 现可作为桌面应用安装（Linux 除外） — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月26日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">桌面环境</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Claude artifacts 现可作为桌面应用安装（Linux 除外）</h1>
+
+  <div class="article-summary">Claude 现在允许用户将聊天中创建的小型交互工具（artifacts）作为独立桌面应用安装。这些应用拥有独立窗口和图标，可发送桌面通知、注册快捷键并添加面板小程序，还能获得完整系统权限。该功能处于测试阶段，面向 Windows 和 macOS 用户开放，但 Linux 平台暂不支持。</div>
+
+  <div class="article-body"><p>Claude 现在允许用户将 LLM 在聊天中创建的小型交互工具（即 artifacts）作为独立（近似）桌面应用安装。</p><p>通过“安装为应用”添加后，artifacts 会在自己的窗口中运行，并拥有自己的图标。它们还可以发送桌面通知、注册键盘快捷键，并向面板添加小程序。应用可获得完整的系统权限，从而读取、编辑和删除文件。</p><p>这项新功能处于测试阶段，但面向所有套餐（包括免费套餐）的用户开放，适用于最新版本的 Claude 桌面应用（Windows 和 macOS，截至 2026 年 11 月 24 日）。</p><p>然而，该功能在 Linux 上不可用，相关说明指出 Linux 在发布时不受支持。这可能意味着永远不支持，也可能意味着未来会支持。其他 Claude 功能也曾如此。我相信主流 Linux 发行版之间有足够的底层共性来支持它们。</p><p>即便如此，现阶段 Linux 支持并非板上钉钉。</p><p>Claude 桌面应用展示</p><p>为了演示这些应用能做什么，提供了一组演示应用（通过一个烦人又酷炫的模拟桌面访问，如上图所示）。</p><p>这些应用中包括一个功能齐全的多层图像编辑器，名为……一个终端（使用底层系统 shell）和一个文件管理器，据说看起来像是“为电影布景而造”（也许是低预算的那种）。</p><p>还有一个磁盘使用分析器和系统监视器、一个房间规划器、一个冥想园艺模拟器，以及一个待办事项应用，它本该做更多（明白吗）来脱颖而出。</p><p>是一个人体图谱，给我一种 2000 年代教育 CD-ROM 附赠品的感觉。我确实觉得用于检查太空垃圾的交互式地图很鼓舞人心——</p><p>“Claude，重做这个应用，但绘制感染率……”</p><p>这些应用都独立于主 Claude 桌面工具运行，但离开它就无法使用。它们也无法在不登录 Claude 账户的情况下使用，或离线工作。这些应用可以与他人共享，前提是他们也使用 Claude 并拥有账户。</p><p>听起来像围墙花园？但愿如此。</p><p>我不介意奇思妙想软件被限制在专有孤岛中。话说回来，我厌倦了 AI 代理每天给我发邮件，谈论某人的最新 GitHub 废话，其实际功能被层层溢美之词（外加订阅费）所掩盖。</p><p>但这确实印证了那个常被提及的理论：AI 公司会逐渐让我们依赖租用访问权，而“计算”的概念将日益受限。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/claude-artifact-apps-not-on-linux-yet" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

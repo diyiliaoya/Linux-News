@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GNU Linux-Libre 庆祝旧款 802.11 b/g WiFi 芯片组的逆向工程固件 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月26日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>GNU Linux-Libre 庆祝旧款 802.11 b/g WiFi 芯片组的逆向工程固件</h1>
+
+  <div class="article-summary">GNU Linux-libre 项目发布了基于旧版 Linux 6.12 LTS 内核的新版本 6.12.119-gnu，庆祝其为 VIA VT6656 802.11 b/g WiFi 芯片组实现了开源逆向工程固件。该固件由开发者 Jason Self 通过反汇编原始二进制文件完成，使该驱动符合 GNU Linux-libre 的自由软件标准。然而，由于该驱动在 Linux 6.13 中因缺乏维护被移除，此支持仅存在于 6.12 LTS 分支中。</div>
+
+  <div class="article-body"><p>GNU Linux-Libre 庆祝旧款 802.11 b/g WiFi 芯片组的逆向工程固件</p><p>2026 年 11 月 25 日 08:35 AM EST 发布。</p><p>今天令人意外的是，GNU Linux-libre 为较旧的 Linux 6.12 LTS 内核发布了一个新的内核版本。通常，该项目很少宣布针对旧版/LTS 内核的新更新，但今天他们庆祝一个 WiFi 芯片组现在可以在其经过清理的 Linux 内核版本上工作。如果你不介意使用传统的 802.11 b/g WiFi，那么有一个新近获得认可的驱动选项。</p><p>今天发布的 GNU Linux-libre 6.12.119-gnu 包含了对 VT6656 驱动的支持，即 VIA 802.11 b/g VT6656 WiFi 芯片组，支持 USB 2.0 和高达 54 Mbps 的传输速率。VT6656 的开源 Linux 驱动早已存在，但它依赖于闭源固件，因此不符合 GNU Linux-libre 的标准。开源开发者 Jason Self 为这款 802.11 b/g WiFi 芯片组逆向工程了固件。</p><p>因此，现在有了针对 VIA VT6656 的逆向工程开源固件，它获得了维护 GNU Linux-libre 内核的 FSFLA 组织的认可。可惜的是，这距离该 WiFi 芯片组首次亮相已经过去了二十年。</p><p>逆向工程是通过反汇编原始的 VIA 固件二进制文件完成的。该固件二进制文件曾作为 VIA 树外 VT6656 驱动的一部分分发，该驱动包含 GPL 许可证，但固件没有任何源代码。GPL 允许反汇编，因此固件被反汇编并转换为 C 代码。</p><p>至于今天在旧的 6.12 LTS 分支而非最新的 Linux 7.3/7.4 上游代码上发布 GNU Linux-libre 6.12.119-gnu 内核，是因为 VT6656 驱动在 Linux 6.13 中因无人维护而被移除……所以现在硬件有了开源固件，但由于驱动代码无人维护，该驱动甚至不再存在于主线内核中。</p><p>“现在，有一些不太好的消息：它并不是那么新的外设，而且它的驱动在上游 6.13 系列中被移除了，所以 6.12 是最后一个仍包含它的稳定长期支持版本系列。</p><p>（……截至本公告发布时。希望我们能改变这一点。有志愿者愿意推动其重新纳入上游，并在那里维护它吗？你自己怎么样？:-）</p><p>上游移除它的理由并不是那么充分。硬件仍然可用且被广泛使用，但似乎没有人有兴趣维护它。希望这一进展能改变这种情况？”</p><p>所以，如果你仍在使用任何 VT6656 WiFi USB 适配器，或者正在寻找一款具有开源固件且不介意 802.11 b/g 性能的无线芯片组，那么在 2026 年即将结束之际，这是一个意想不到的进展。至少这一进展赶上了假日购物季，FSF 已经认可了各种尊重你自由的旧硬件——2023 年的假日推荐包括 802.11n WiFi 和 USB 转并行打印机线缆，以及其他自由软件基金会认证的硬件。</p><p>Linux 7.4 禁用 LLVM Profi 使用以避免性能损失和病态构建时间</p><p>Linux 7.4-rc4 发布：“它很大。真是个惊喜。”</p><p>Linux 7.5 将可选阻止 /proc/kcore 访问以提升安全性</p><p>多内核 Linux 登陆 ARM64，mklinux 7.0-mk5 发布</p><p>RBRD：用 Rust 编写的 RAM 支持的 Linux 块驱动，安全性更好但性能较慢</p><p>NVIDIA 工程师致力于新的用户空间 Linux 控制以指定首选 CPU 核心</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Linus T</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/GNU-Linux-Libre-VIA-VT6656" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

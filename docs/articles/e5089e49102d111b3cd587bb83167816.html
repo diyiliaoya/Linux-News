@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PostgreSQL 19 带来显著性能提升，基于第六代 AMD EPYC Venice 的基准测试 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月26日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>PostgreSQL 19 带来显著性能提升，基于第六代 AMD EPYC Venice 的基准测试</h1>
+
+  <div class="article-summary">PostgreSQL 19.0 正式发布，虽因 AI/LLM 负担延迟，但性能提升显著。在第六代 AMD EPYC Venice 平台上，相同配置下从 PostgreSQL 18 升级到 19，无需任何调整即获得明显性能改进。新版本引入自动扩展异步 I/O 工作线程、更多 SIMD 加速、更快外键检查、并行自动清理等优化，并默认禁用性能不稳定的 JIT 编译。</div>
+
+  <div class="article-body"><p>PostgreSQL 19 带来显著性能提升，基于第六代 AMD EPYC Venice 的基准测试</p><p>2026年11月25日 美国东部时间上午11:31。</p><p>PostgreSQL 19.0 终于发布了，由于今年开源开发者面临 AI/LLM 负担而延迟。不过等待是值得的，在我的基准测试中，PostgreSQL 19 相比 PostgreSQL 18 展现出非常不错的性能提升。以下是在全新的第六代 AMD EPYC Venice 平台上进行的初步 PostgreSQL 19 与 18 数据库服务器基准测试。</p><p>本周我针对去年的 PostgreSQL 18 系列对 PostgreSQL 19.0 进行了一些基准测试。结果相当诱人，在未更改 PostgreSQL 数据库服务器配置或任何其他更改的情况下——相同的服务器配置、相同的 pgbench 用于促进基准测试，仅从 PostgreSQL 18 迁移到新的 PostgreSQL 19——就获得了非常好的性能改进。</p><p>PostgreSQL 19 带来了各种各样的变化以帮助提升性能，包括自动扩展异步 I/O 工作线程、针对现代 CPU 的更多 SIMD 加速、更快的外键检查、并行自动清理行为，以及各种其他优化和可扩展性改进。PostgreSQL 19 还最终默认禁用了其即时（JIT）编译，因为性能不可靠。</p><p>为了运行一些初步的 PostgreSQL 19 与 18 基准测试，我在实验室中最令人兴奋和强大的平台上运行了它们……全新的 AMD 第六代 EPYC 9006 &quot;Venice&quot; SP7 服务器。PostgreSQL 数据库服务器基准测试使用单个 AMD EPYC 9996 256 核 Zen 6C 处理器、十六通道内存和 PCIe Gen6 NVMe SSD 存储完成。存储是一块 Micron 9650 PRO（MTFDMBQ7T6THM-1BP1JABDC）PCIe Gen6 固态硬盘，容量 7.6TB。随着我们迈入 2027 年，凭借 Zen 6(C) 核心、MRDIMM-12800 内存和 PCIe Gen6 存储，这是一个无与伦比的数据库服务器平台（以及更多用途！）。感谢 AMD 提供评测硬件使这次测试得以进行。</p><p>两次运行之间唯一的改变是在其他相同配置下迁移到 PostgreSQL 19.0。</p><p>Linux 7.4 特性 Steam Frame VR 头显、更多 AMD Zen 6 支持及初始 Apple M4 / A18 Pro 支持</p><p>Intel Xeon 6980P Granite Rapids 在 Linux 上过去一年的性能</p><p>AMD PerfOpt 提升前代 Ryzen APU 的 AI 性能</p><p>OpenJDK vs. GraalVM vs. Eclipse Temurin vs. Semeru Java 性能</p><p>接近 10 秒的 Linux 内核构建</p><p>JDK 8 至 OpenJDK 27 的 Java 性能基准测试</p><p>享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookies</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/review/postgresql-19-benchmarks" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Konsole 走过 29 年，KDE 迎来全新终端 Kwi，我上手体验了一番 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #8b5cf61a; color: #8b5cf6;
+    border: 1px solid #8b5cf630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月26日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">桌面环境</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Konsole 走过 29 年，KDE 迎来全新终端 Kwi，我上手体验了一番</h1>
+
+  <div class="article-summary">KDE 推出全新终端 Kwi，基于 Ghostty 的 libghostty-vt 库构建，支持 GPU 加速渲染，专为 KDE Plasma 打造。它兼容 Konsole 配色方案，支持标签页、透明度与模糊效果，开发者称其比 Konsole 快 3 到 35 倍。本文在 CachyOS 虚拟机上对其功能进行了上手体验。</div>
+
+  <div class="article-body"><p>Konsole 走过 29 年，KDE 迎来全新终端 Kwi，我上手体验了一番</p><p>KDE 正在开发一款全新的现代终端。它与 Ghostty 有关联，并提供 GPU 加速。在这篇上手评测中来看看它吧。</p><p>KDE 有了一款新终端，而且，它不是 Konsole 的更新。它叫 Kwi（发音为“kwee”）。它基于 Ghostty 的终端库构建，在你的 GPU 上渲染，并且是从零开始为 KDE Plasma 打造的。</p><p>它已经发布，所以我进行了一次试驾。我在一台装有 KDE Plasma 的 CachyOS 虚拟机中运行了它（当然），所以请把这当作一次功能巡览，而非性能评测。</p><p>如果你更喜欢看视频，我在我们的 YouTube 频道上介绍了相同的功能：</p><p>订阅 It's FOSS YouTube 频道</p><p>KDE 已经有 Konsole 了，为什么还要另一个终端？</p><p>Kwi 有标签页和一个单一菜单按钮</p><p>Konsole 已经存在 29 年了。它也是你在 Linux 上能使用的最可定制的终端之一。那么，为什么要构建一个新的呢？</p><p>我认为速度是答案的一大部分。Konsole 基于 Qt Widgets 构建，在 CPU 上绘制。Kwi 使用了 [Ghostty]，这让他可以通过 Vulkan 或 OpenGL 在 GPU 上渲染。</p><p>它的开发者 Eike Hein [表示]，根据基准测试的不同，Kwi 比 Konsole 快 3 到 35 倍。我还没有验证这些数字，而且坦率地说，这些数字并不能说明日常使用的全部情况，但它们确实暗示了该项目的目标。</p><p>现在，Kwi 并不使用 Ghostty 应用本身。它使用 libghostty-vt，这是在幕后处理终端解析的库。</p><p>上层的界面是纯 KDE 的。它使用 [Kirigami] 构建，并遵循 KDE 的最新设计指南。它还会自动采用你的 Plasma 配色方案，因此能与你的 KDE Plasma 桌面其余部分很好地融合。</p><p>这个名字来自 귀신（gwisin 或 kwisin），韩语中“鬼”的意思。看看 Kwi 标志中的小终端幽灵，它与 Ghost 和 Ghostty 的联系就开始变得合理了。</p><p>探索 Kwi 及其功能</p><p>点击菜单按钮，你会看到“配置 Kwi”选项。在这里你可以调整终端的外观。</p><p>菜单 -&gt; 配置 Kwi</p><p>默认情况下，Kwi 使用系统的等宽字体。如果你想要别的，取消勾选“使用系统等宽字体”。然后选择你的字体及其大小。</p><p>设置窗口后面的终端会实时更新。这使得找到舒适的设置变得容易。</p><p>取消勾选系统字体选项以选择你自己的字体</p><p>在“颜色”部分，“窗口”选项控制应用本身的外观。你可以在 Breeze Light、Breeze Dark 和其他可用方案之间切换。</p><p>它下面的“终端”下拉菜单会更改终端内部的颜色。</p><p>窗口和终端颜色是分开设置的</p><p>你的 Konsole 配色方案在这里也能用</p><p>对长期使用 KDE 的用户来说有个好消息。Kwi 兼容 Konsole 配色方案，所以你最喜欢的主题不必留在身后。</p><p>从 [KDE Store] 下载一个 Konsole 配色方案。在 Kwi 的设置中，点击“终端”下拉菜单旁边的三点按钮，选择“导入”并选择下载的文件。</p><p>使用三点菜单导入配色方案</p><p>导入的方案现在会出现在“终端”下拉菜单中。我在这里测试时导入了 Gruvbox。</p><p>列表中导入的 Gruvbox 方案</p><p>让它透明，并带模糊效果</p><p>如果你喜欢透视终端，请使用“外观”页面上的背景不透明度滑块。旁边有一个“模糊”复选框。</p><p>背景不透明度和模糊选项</p><p>然而，如果 Plasma 自身的模糊效果被禁用，该复选框不会给你毛玻璃效果。要启用它，请打开系统设置 -&gt; 动画，然后点击“桌面效果”按钮。</p><p>从动画页面打开桌面效果</p><p>在此处启用模糊并点击应用。</p><p>启用 Plasma 的模糊效果</p><p>现在回到 Kwi 的外观设置，并在那里也启用模糊。你就得到了如今人人追捧的磨砂外观。</p><p>透明 Kwi 无模糊（左）和有模糊（右）</p><p>你可以将标签栏移动到窗口的顶部或底部。Konsole</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/kwi-terminal/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
