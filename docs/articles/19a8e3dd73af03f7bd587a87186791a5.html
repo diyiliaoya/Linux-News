@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omarchy 4.6-RC1 发布：更多本地 AI 集成，自带文件管理器 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月27日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>Omarchy 4.6-RC1 发布：更多本地 AI 集成，自带文件管理器</h1>
+
+  <div class="article-summary">基于 Arch Linux 的 Omarchy 发行版发布 4.6-RC1，继续强化 AI 功能，新增按系统内存/算力筛选本地 AI 模型的精选列表，并引入展示本地 AI 代理所制游戏的 Game Vibes 街机。该版本还推出自研 Qt6 文件管理器 Folio，改用 Omaview 看图/媒体播放、Omawrite 编辑 Markdown、Plain 编辑配置文件，默认浏览器由 Chromium 换成 Google Chrome，并扩展 ARM 笔记本硬件支持。</div>
+
+  <div class="article-body"><p>基于 Arch Linux 的 Omarchy 发行版持续获得业内知名厂商的支持，现已发布新版本。Omarchy 4.6 延续了该项目打造高度 AI 优先 Linux 发行版的目标，并在最初基于 Arch Linux 和 Hyprland 的定制基础上继续演进。</p><p>Omarchy 4.6 继续让在系统上运行本地 AI 模型变得更加容易。在 Omarchy 4.6 中，现在提供了一份精选的开放 AI 模型列表，这些模型与您系统的内存/算力相匹配，从而更便于选择理想的 AI 模型。</p><p>同样在 AI 方面，Omarchy 4.6 引入了 Game Vibes，作为一个街机来展示由本地 AI 代理制作的游戏。此外还有一些内置游戏，如国际象棋、纸牌等。</p><p>Omarchy 4.6 还推出了自己的文件管理器“Folio”，这是一个基于 Qt6 的文件管理器。迄今为止，Omarchy 一直提供 Nautilus 文件管理器。Omarchy 现在还将 Omaview 作为该发行版自己的图片查看器和媒体播放器，Omawrite 负责 Markdown 文件编辑，Plain 用于编辑配置文件。</p><p>Google Chrome 现在也是 Omarchy 的默认网络浏览器。Chrome 取代了该项目此前提供的 Chromium。现在使用 Chrome 是因为它通过 PGO 优化和各项 Google 集成而更快，并且支持 Netflix 及其他服务的 DRM 视频。</p><p>Omarchy 4.6 还继续扩展硬件支持，尤其是在 Omarchy 4.5 所奠定的工作基础上，进一步加强对 ARM 笔记本的支持。</p><p>想要了解更多关于 Omarchy 4.6 所有更改或下载信息的人，可以通过以下方式获取。</p><p>看起来他们的发布自动化失控了…… Omarchy 4.6 曾被标记并发布，但现在已被移除并替换为……</p><p>Pop!_OS 26.04 LTS 发布，带来更多 COSMIC 应用、远程桌面等</p><p>LiberNT：一个由 AI 驱动的 ReactOS 分支，专注于 Windows 11 兼容性</p><p>AlmaLinux 10.3 发布，恢复 ModSecurity，包含各种更新</p><p>Redox OS 让 Golang 可用，移植 GIMP 并简化 AI 政策</p><p>ReactOS 获得可用的软盘支持、VMware 3D 加速和 SMP 进展</p><p>Haiku OS 现在有 UFS 驱动，双指和三指轻点手势</p><p>Michael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他。</p><p>Linus Torvalds：“告诉你的 AI 伙伴，让它振作起来”</p><p>Linux 7.4-rc4 发布：“它很大。真是个惊喜。”</p><p>黑色星期五/年终特辑以及今年不幸的广告网络状况</p><p>CachyOS 2026 年 11 月版发布，支持 EAC Linux v2，新增恢复工具</p><p>XNU Linux 让 macOS 用户空间进程在 Linux 上运行</p><p>Ladybird 网络浏览器/引擎达到 Alpha 阶段</p><p>Debian 13.8 发布，包含 150 多项安全更新</p><p>Debian 的 APT 因 AI 安全发现的进步而移除部分功能</p><p>同时享受无广告浏览，</p><p>单页文章视图</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Omarchy-4.6-Released" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

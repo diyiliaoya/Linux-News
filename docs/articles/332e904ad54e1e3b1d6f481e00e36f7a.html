@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>在AI生成的补丁和错误报告泛滥之际，Linux迎来又一位网络维护者 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #10b9811a; color: #10b981;
+    border: 1px solid #10b98130;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月27日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">软件应用</span>
+    <span class="source">Phoronix</span>
+  </div>
+
+  <h1>在AI生成的补丁和错误报告泛滥之际，Linux迎来又一位网络维护者</h1>
+
+  <div class="article-summary">Linux网络开发者过去一年被AI/LLM驱动的大量错误报告和补丁“完全淹没”，部分修复被迫推迟到下一内核版本。在此背景下，资深开发者Willem de Bruijn被提升为Linux网络子系统核心维护者，与David Miller、Eric Dumazet、Jakub Kicinski和Paolo Abeni共同负责网络维护。该变更已随Linux 7.4网络拉取请求合并。</div>
+
+  <div class="article-body"><p>Linux网络开发者此前曾表示，过去一年里他们被AI/LLM驱动的大量活动——从错误报告到补丁——&quot;完全淹没&quot;。在越来越多的情况下，由于看似无穷无尽的活动，他们最终将修复转移到下一个Linux内核版本。围绕不常用驱动和其他网络领域的各种AI活动也导致了多个旧网络代码被移除。好消息是，另一位Linux开发者现已被提升为额外的Linux网络子系统维护者。</p><p>长期从事Linux网络开发的Willem de Bruijn现已被提升为主线Linux内核的核心网络维护者之一。Willem de Bruijn自2011年起在Google工作，已经维护网络树中的多个独立领域，现在他被正式认可为另一位网络维护者。</p><p>Willem de Bruijn加入David Miller、Eric Dumazet、Jakub Kicinski和Paolo Abeni，成为其他Linux网络维护者。Kicinski在正式认可Willem时表示：&quot;Willem是社区的支柱之一，已经维护了许多核心协议和协议栈的组成部分。让Willem成为整个网络的维护者。&quot;</p><p>该变更今天作为Linux 7.4网络拉取请求的一部分被合并，同时还有……许多错误修复。Linux内核庞大的网络领域仍然不乏AI生成的补丁。</p><p>Qualcomm Ath12k Linux驱动为新WiFi 8硬件做准备</p><p>Yunsilicon致力于将其高性能Linux网络驱动上游化</p><p>Linux 7.4网络带来硬件节奏卸载、新驱动及更多性能提升</p><p>提议为Linux PPP网络代码淘汰BSD-Compress</p><p>Realtek rtl8723bs驱动在Linux 7.4中从暂存区删除</p><p>KNOD在Linux内核内GPU网络数据包处理卸载方面取得进展</p><p>Michael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他：</p><p>Linus Torvalds：&quot;告诉你的AI伙伴，让它好好表现&quot;</p><p>Linux 7.4-rc4发布：&quot;它很大。真是个惊喜。&quot;</p><p>黑色星期五/年终特辑及今年不幸的广告网络状况</p><p>CachyOS 2026年11月版发布，支持EAC Linux v2、新恢复工具</p><p>XNU Linux让macOS用户空间进程在Linux上运行</p><p>Ladybird网页浏览器/引擎达到Alpha阶段</p><p>Debian 13.8发布，包含150多项安全更新</p><p>Debian的APT因AI安全发现的进步而移除部分功能</p><p>同时享受无广告浏览、单页文章查看</p><p>法律免责声明、隐私政策、Cookie</p><p>版权所有 © 2004 - 2026</p><p>所有使用的商标均为其各自所有者的财产。保留所有权利。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.phoronix.com/news/Linux-Another-Net-Maintainer" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

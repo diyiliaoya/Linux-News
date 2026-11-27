@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新的Linux内核补丁解锁4K/5K iMac原生分辨率 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #3b82f61a; color: #3b82f6;
+    border: 1px solid #3b82f630;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月27日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">发行版</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>新的Linux内核补丁解锁4K/5K iMac原生分辨率</h1>
+
+  <div class="article-summary">Linux内核社区提交了一系列AMDGPU驱动补丁，旨在让4K和5K Retina iMac的平铺显示屏在Linux下激活第二个DisplayPort流，从而支持4096×2304原生分辨率。目前补丁仍在审查中，GNOME Mutter也有相关合并请求待处理。</div>
+
+  <div class="article-body"><p>得益于一系列拟议的内核补丁，4K和5K iMac的用户可能很快就能在Linux上享受屏幕的完整原生分辨率。</p><p>我在一台2017年的21.5英寸4K显示屏iMac上运行Ubuntu。该发行版运行和看起来都很好，但有一个问题：它不使用面板的原生分辨率4096×2304（4K），而只使用3840×2160（4K UHD）。这是“4K就是4K”中显示的最大选项，所以这是个第一世界问题。像从GRUB启动时应用内核参数这样的变通方法可以让分辨率值可用，但质量不行：在更高分辨率下屏幕比更低分辨率时更模糊。</p><p>为什么？这完全与苹果Retina iMac显示屏（以及一些第三方显示器，如LG UltraFine 5K）的工作方式有关。这些一体机使用二合一屏幕。嗯，算是吧。</p><p>iMac中的平铺显示屏</p><p>梦想原生分辨率</p><p>21.5英寸4K（2017和2019年）和27英寸5K（2014至2019年）Retina iMac使用平铺显示屏，由独立的DisplayPort流驱动两个部分。苹果的EFI固件在启动时只初始化一个显示“管道”，使第二个“瓦片”处于非活动状态。</p><p>“平铺”并不意味着两个小屏幕并排，其中一个关闭。它是一个单一面板，分两半馈送。</p><p>显示器的时序控制器（这里请耐心听我说）以3840×2160（4K UHD）运行整个面板。激活第二个DisplayPort链路流是使其在双管道模式下运行、解锁4096×2304完整原生分辨率的关键。</p><p>你现在在Linux上仍然能看到完整的画面，只是分辨率略低，因为Linux的AMDGPU驱动目前难以检测和初始化第二个瓦片。</p><p>但值得庆幸的是，这离解决更近了。</p><p>补丁系列已提交</p><p>本周，Richard Lane向内核的AMDGPU驱动提交了他的“在苹果Retina iMac上启用2×1平铺显示支持”补丁系列。这些补丁旨在让显示驱动激活和检测第二个瓦片。</p><p>AMDGPU驱动的维护者Alex Deucher已经审查了三个补丁中的两个，但对剩下的一个有问题。因此，该修复尚未合并或发布，但事情正在进展。</p><p>还有其他补丁努力，有些是用LLM制作的，运行到数千行，有些是手工编码的，只有几百行。我尝试从GitHub编译一个针对Ubuntu主线内核的补丁。它没有成功。</p><p>但如果这个补丁集进入内核本身，那就不需要了。完整、清晰的分辨率将从一开始就可用。</p><p>其他地方还有更多工作要做</p><p>并非所有Linux桌面和合成器都能处理平铺显示屏。在GNOME的Mutter下，有一个合并请求待处理，旨在解决平铺显示屏下的屏幕撕裂问题。这也将有利于非苹果的平铺显示屏。</p><p>如果你想知道我为什么使用iMac，嗯：它快十年了但运行良好。我更喜欢光面显示器，色彩和亮度都很棒，而且作为一个经常盯着文字看的人，我欣赏高清晰度。</p><p>我计划把这台iMac转换成普通显示器。这将完全绕过这个问题。它确实需要拆解一台还能用的电脑，安装一块第三方驱动板，刷入适合我这款iMac面板的固件，然后粘回去。</p><p>这或许可以解释为什么我还没抽出时间来做。不过，能够将这台电脑重新利用为独立显示器将是值得努力的——而且比把它扔到堆里和其他电子垃圾一起要好。</p><p>video=eDP-1:4096x2304MR@60</p><p>其他一些品牌销售使用平铺显示屏的5K显示器，如LG UltraFine 5K。那些显示器的完整分辨率是可用的。内核补丁需要绕过的是苹果的EFI处理方式。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/linux-imac-tiled-display-support-coming" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

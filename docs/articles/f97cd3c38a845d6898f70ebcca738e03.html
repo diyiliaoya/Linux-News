@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linus Torvalds 又发火了，这次对象是 ext4 开发者 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月27日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>Linus Torvalds 又发火了，这次对象是 ext4 开发者</h1>
+
+  <div class="article-summary">ext4 维护者 Theodore Ts'o 在 Linux 7.4-rc5 阶段提交了包含 94 个提交的拉取请求，新增 41,204 行代码，其中大部分是用于验证 AI 生成补丁的 KUnit 测试。Linus Torvalds 对此在发布周期后期引入大量代码表示强烈不满，批评其将新开发和测试用例混入 rc 阶段，并警告称即使大部分是测试或修复，也可能引入新问题。尽管 Torvalds 部分反对，最终仍合并了该请求。</div>
+
+  <div class="article-body"><p>Linus Torvalds 又发火了，这次对象是 ext4 开发者</p><p>“你满嘴胡扯”。Linux 创始人 Linus Torvalds 对 ext4 维护者发火。</p><p>ext4 维护者 Theodore Ts'o 向 Linus Torvalds 发送了针对 Linux 7.4-rc5 的 94 个提交，随后的合并提交在 68 个文件中新增了 41,204 行代码。</p><p>Ts'o 表示，新增代码大部分是 KUnit 测试，用于帮助验证 AI 生成的补丁，而且该拉取请求中的大部分错误修复也是 AI 生成的。</p><p>到底是什么让 Torvalds 如此恼火？</p><p>在深入之前，需要知道 ext4 是从 ext3 发展而来，旨在提供可靠性并扩展到大型存储，包括超过 16TB 的文件系统。KUnit 是内核的单元测试框架，测试用 C 语言编写，在启动时或作为模块针对内核代码运行。</p><p>Ts'o 拉取请求中的测试占该合并中 68 个变更文件中的 22 个。其余是错误修复和三项轻微的性能改动。</p><p>一项性能改动将同级目录中文件的 inode 分散到文件系统的块组上，加速并行文件创建。另一项将孤儿列表字段移出共享缓存行，第三项在重放稀疏文件的快速提交时跳过空洞。</p><p>错误修复包括数据丢失情况，例如日志刷新后 fsync 的数据丢失，以及 ext3 inode 迁移期间的数据丢失。其他修复涵盖零化失败后的陈旧数据、释放后使用错误、损坏文件系统上的越界访问，以及 32 位内核上大目录的 readdir 问题。</p><p>Torvalds 反对在发布周期如此晚的阶段新增 41,197 行代码</p><p>内核开发按周期进行，新代码在约两周的合并窗口内进入。随后的每周候选版本称为“rc”构建，用于修复，一个周期通常达到七个 rc。Torvalds 认为这种规模的拉取请求应属于合并窗口，并称将某物称为修复并不能使其适合 rc。</p><p>他表示，超过 41,000 行新增代码即使大部分是测试或其他错误的修复，也可能导致新问题。对旧有细微错误的修复也可能带来自身的错误，无论作者是人还是 AI。</p><p>他在考虑放弃后还是接受了该拉取请求，并在回复结尾警告 Ts'o：</p><p>“把你的烂摊子收拾好，停止这种胡闹。告诉你的 AI 伙伴也规矩点，任何新开发和测试用例都放到一个单独的该死的分支上，以便在合并窗口期间合并。这有什么难理解的？”</p><p>Ts'o 回复称，测试已经在自己的分支上，并放在拉取请求末尾以便轻松丢弃。他提出可以发送一个不含这些测试的新拉取请求，并将测试推迟到下一个合并窗口开启。</p><p>Torvalds 回答说，他仍然部分反对，但保留了合并。测试变更带来的冲突不足以让他撤销。</p><p>Linus 此前曾抱怨过臃肿的 rc 和无意义的拉取请求（其中许多是 AI 辅助的），并承诺会更严格。但他也表示 Linux 不是那些反 AI 项目之一。</p><p>据他统计，7.4 合并窗口带来了近 20,000 个提交，而通常约为 15,000 个。他更愿意在合并窗口获得 AI 修复，而不是在 rc 后期，并希望这些变得司空见惯。</p><p>喜欢这篇更新？支持独立的 Linux 新闻报道</p><p>It's FOSS 过去 14 年一直在帮助人们使用 Linux。帮助我们保持独立于大型科技公司。成为 Plus 会员，享受无广告阅读并获得 5 本电子书。</p><p>一次付费，永久享受</p><p>任意金额，无承诺</p><p>跳过 Google 结果中的 AI 垃圾和 SEO 垃圾</p><p>告诉 Google 你更喜欢 It's FOSS，它会在你搜索时更频繁地展示我们由经验丰富的 Linux 用户创建的 Linux 新闻和教程。只需点击一下。</p><p>设为首选来源</p><p>🐧 今天就来玩 Tuxdle——每日 Linux 单词谜题 →</p><p>在收件箱获取 FOSS Weekly</p><p>一份健康的 Linux 新闻简报，包含最新发布、相关</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/linux-torvalds-scolds-ext4-maintainer/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>
