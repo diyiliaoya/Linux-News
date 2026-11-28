@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>更好的黑色星期五礼物：Linux基金会认证最高可享65%折扣 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月28日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">It's FOSS News</span>
+  </div>
+
+  <h1>更好的黑色星期五礼物：Linux基金会认证最高可享65%折扣</h1>
+
+  <div class="article-summary">Linux基金会推出黑色星期五和网络周促销，认证、捆绑包、培训课程和THRIVE-ONE订阅最高可享65%折扣，活动12月4日结束。使用促销代码购买还可获100美元代金券。文章介绍了适合Linux、云和DevOps职业发展的认证选择，包括LFCS、CKA等，并解释了Linux基金会认证的行业认可度。</div>
+
+  <div class="article-body"><p>更好的黑色星期五礼物：Linux基金会认证最高可享65%折扣</p><p>计划在Linux、云或DevOps领域发展职业生涯？LFCS、CKA、Kubestronaut和其他Linux基金会认证在网络星期一最高可享65%折扣。优惠12月4日结束。</p><p>如果你一直计划获得认证，这周就是行动的时候。Linux基金会正在开展黑色星期五和网络周促销，认证、捆绑包、培训课程和THRIVE-ONE在线学习订阅最高可享65%折扣。</p><p>这也是一个不错的礼物创意。如果你有朋友或家人想在Linux、云或DevOps领域建立职业生涯，认证考试比另一个小工具更有用。</p><p>获得认证也可以成为你的新年决心。今天锁定考试价格，2027年再参加考试。</p><p>2026年12月4日23:59 UTC截止。这是你在其他场合看不到的最大折扣。</p><p>Linux基金会网络周优惠</p><p>这次还有额外奖励。12月4日前使用任一促销代码购买的人将获得100美元代金券，可用于2027年1月1日至10月31日期间购买的在线课程、讲师指导培训或认证。Linux基金会将在2026年12月31日前通过电子邮件发送代金券详情。</p><p>本文包含联盟链接。请阅读我们的[链接]。</p><p>以下是代码。它们专为It's FOSS读者提供，请使用这些代码，而不是促销页面上看到的通用代码。</p><p>认证+THRIVE-ONE年度捆绑包</p><p>无需代码，结账时自动应用</p><p>超值捆绑包（认证+配套课程）</p><p>认证+课程和仅认证捆绑包</p><p>和在线课程</p><p>讲师指导培训（保证开班课程）</p><p>THRIVE-ONE年度（第一年）</p><p>THRIVE-ONE月度（前三个月）</p><p>MCPA+AGNTCon活动通行证捆绑包</p><p>所以本周Linux基金会目录中几乎每个认证都至少打五折。包括LFCS、CKA、CKAD、CKS和全新的认证Kubernetes网络工程师（CKNE），全部从445美元降至223美元。</p><p>即使优惠结束，你始终可以使用我们的特别优惠券代码享受30%折扣：ITSFOSS。在结账页面应用代码。折扣仅适用于新的个人购买，不能与其他优惠叠加。</p><p>为什么Linux基金会认证有分量</p><p>Linux基金会是许多最重要的开源项目的伞形组织。它雇佣了Linux的创造者Linus Torvalds，以便他能全职从事内核工作。它也是云原生计算基金会（CNCF）的所在地，后者又托管着Kubernetes、Prometheus、Argo和许多其他运行现代云基础设施的工具。</p><p>该基金会的成员包括科技界最知名的公司：Google、Microsoft、IBM、Intel、Oracle、Red Hat以及数百家其他公司。这些公司也正是雇佣运行Linux服务器和Kubernetes集群的人的公司。</p><p>因此，当Linux基金会提供认证时，它来自构建这些技术的行业。这就是为什么招聘人员认可简历上的CKA或LFCS。</p><p>65%折扣是Linux基金会在网络星期一提供的最大折扣。你在任何其他场合都不会得到比这更大的折扣。</p><p>Linux、云和DevOps职业的最佳选择</p><p>有超过一百种折扣产品，可能会让人不知所措。如果目标是在Linux管理、云或DevOps领域找到工作，以下是一些值得考虑的选择。</p><p>LFCS考试+THRIVE-ONE年度：这是我会为刚开始Linux职业生涯的人选择的交易。LFCS+THRIVE-ONE捆绑包让你获得Linux基金会认证系统管理员考试以及一整年的THRIVE-ONE在线学习订阅。LFCS考试本身打65%折扣，所以考试支付156美元，订阅支付360美元。与常规捆绑包价格相比节省109美元，与分别购买两者相比节省289美元。这里无需代码，[内容截断]</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://itsfoss.com/news/lf-cyber-monday-offer-26/" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

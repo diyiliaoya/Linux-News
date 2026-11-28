@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Framework 99美元无线触控板键盘开启预购 — Linux 中文速报</title>
+<style>
+
+  :root {{
+    --bg:        #0a0c14;
+    --surface:   #141822;
+    --border:    #1e2233;
+    --text:      #e8edf4;
+    --muted:     #8590a8;
+    --accent:    #4dc4f0;
+    --accent-dim:#2e6a88;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-body: -apple-system, 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }}
+  * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+  body {{
+    background: var(--bg); color: var(--text);
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }}
+  a {{ color: var(--accent); text-decoration: none; transition: color .2s; }}
+  a:hover {{ text-decoration: underline; }}
+
+  /* Header */
+  header {{
+    border-bottom: 1px solid var(--border);
+    padding: 24px 0;
+    background: linear-gradient(180deg, #0d1120 0%, var(--bg) 100%);
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(12px);
+  }}
+  .header-inner {{
+    max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap;
+  }}
+  .logo {{
+    font-family: var(--font-mono); font-size: 21px; font-weight: 700;
+    color: var(--accent); letter-spacing: -0.5px; text-decoration: none;
+    transition: text-shadow .2s;
+  }}
+  .logo:hover {{ text-decoration: none; text-shadow: 0 0 20px rgba(77,196,240,.25); }}
+  .logo span {{ color: var(--muted); font-weight: 400; }}
+  .tagline {{ color: var(--muted); font-size: 13px; flex: 1; }}
+  .update-time {{
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 5px 12px; border-radius: 6px;
+  }}
+
+  /* Footer */
+  footer {{
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; font-size: 12px; color: var(--muted);
+    background: var(--surface);
+  }}
+  footer a {{ color: var(--muted); }}
+  footer a:hover {{ color: var(--accent); }}
+
+  @media (max-width: 600px) {{
+    .header-inner {{ flex-direction: column; gap: 8px; }}
+  }}
+
+
+  /* Article page */
+  .article-wrap {
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 100px;
+  }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 13px; color: var(--muted);
+    margin-bottom: 36px;
+    transition: color .2s;
+  }
+  .back-link:hover { color: var(--accent); text-decoration: none; }
+
+  .article-meta {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12px; margin-bottom: 20px;
+  }
+  .tag {
+    padding: 3px 10px; border-radius: 6px; font-weight: 600; font-size: 11px;
+    letter-spacing: .04em;
+    background: #a78bfa1a; color: #a78bfa;
+    border: 1px solid #a78bfa30;
+  }
+  .source { color: var(--muted); font-family: var(--font-mono); }
+
+  h1 {
+    font-size: 28px; font-weight: 800; line-height: 1.4;
+    color: var(--text); margin-bottom: 28px;
+    letter-spacing: -.01em;
+  }
+
+  .article-summary {
+    background: var(--surface); border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 18px 22px;
+    font-size: 14px; color: #c4cee0; line-height: 1.8;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  }
+
+  .article-body {
+    font-size: 16px; line-height: 2; color: var(--text);
+    letter-spacing: .01em;
+  }
+  .article-body p {
+    margin-bottom: 22px;
+  }
+  .article-body p:first-child::first-letter {
+    font-size: 3em; font-weight: 700; float: left;
+    line-height: .8; margin-right: 10px; margin-top: 6px;
+    color: var(--accent);
+  }
+
+  .article-footer {
+    margin-top: 48px; padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-original {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--accent); color: #0a0c14;
+    font-weight: 600; font-size: 14px;
+    padding: 10px 22px; border-radius: 8px;
+    text-decoration: none; font-family: var(--font-mono);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn-original:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(77,196,240,.25); text-decoration: none; }
+  .note { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="../index.html">$ linux<span>-news</span></a>
+    <div class="tagline">每日聚合国外 Linux 资讯，自动翻译成中文</div>
+    <div class="update-time">更新于 2026年11月28日</div>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a class="back-link" href="../index.html">← 返回首页</a>
+
+  <div class="article-meta">
+    <span class="tag">其他</span>
+    <span class="source">OMG! Ubuntu</span>
+  </div>
+
+  <h1>Framework 99美元无线触控板键盘开启预购</h1>
+
+  <div class="article-summary">Framework推出售价99美元的无线触控板键盘，现已开启预购。该键盘支持蓝牙连接三台设备，并通过USB-A接收器连接第四台，也可通过USB-C有线使用并充电。内置1200mAh电池，日常使用续航超一个月，闲置超一年。键盘采用剪刀脚结构，键程1.5mm，触控板支持多指手势。目前仅提供美式ANSI布局，预计2027年第二季度发货。</div>
+
+  <div class="article-body"><p>Framework 以其易于维修的笔记本电脑而闻名，但现在它也拓展到了外设领域——无线触控板键盘现已开启预购。</p><p>该公司今年早些时候发布了一款紧凑型键盘。与它的笔记本电脑一样，这款产品在设计时也考虑到了可维修性，并提供了 CAD 设计图，因此用户可以使用基于浏览器的工具进行自定义和重新映射。</p><p>它还包含一些使其用途广泛的特性。</p><p>无线触控板键盘</p><p>在许多场景下都实用</p><p>Framework 将其无线触控板键盘宣传为“适用于你的媒体电脑、树莓派或房间另一头任何电脑的紧凑、坚固键盘”。</p><p>它可以通过低功耗蓝牙与最多三台设备配对，并通过 USB-A 接收器连接第四台设备。切换设备只需快速按键，无需使用组合键或执行开关机流程。</p><p>通过 USB-C 线缆连接时，它也可以有线工作，内置电池也通过这种方式充电。据说 1200mAh 的锂聚合物电池在日常使用下可续航一个多月，闲置时可超过一年。如果电池耗尽，也可以轻松更换。</p><p>便捷的连接与酷炫的设计</p><p>内置触控板在 Windows、macOS 和 Linux 上支持多指手势。其尺寸为纵向 68.8 × 85.6 毫米，如果你更习惯在全尺寸触控板上随意滑动手指，可能会觉得它作为主要输入设备有些受限。</p><p>对于挑剔的手指来说，按键采用剪刀脚结构，键程为 1.5 毫米。作为对比，这比苹果的妙控键盘多 0.5 毫米。</p><p>对于非美国用户来说，一个缺点是它仅提供美式 ANSI 布局，因此没有 ISO 选项（带有大型 L 形回车键和额外按键），也没有任何非英语或非 QWERTY 版本。</p><p>Framework 确实鼓励任何想要购买不同语言或布局版本的人通过产品信息页面上的表格登记兴趣——该页面也是可以预购的地方。</p><p>如果你感兴趣，Framework 无线触控板键盘已在美国、英国和其他国家开放预购，售价为 99 美元/99 英镑（定金 50 美元/50 英镑）。</p><p>新订单的发货时间预计为 2027 年第二季度，所以别指望这个圣诞节就能从圣诞老人那里收到它！</p><p>Framework 笔记本电脑用户可能会有兴趣听说，一款可 discreetly 容纳 USB-A 接收器的扩展卡正在计划中。</p></div>
+
+  <div class="article-footer">
+    <a class="btn-original" href="https://www.omgubuntu.co.uk/2026/11/frameworks-wireless-touchpad-keyboard-preorder" target="_blank" rel="noopener">
+      阅读原文 →
+    </a>
+    <span class="note">由 DeepSeek AI 翻译，内容仅供参考</span>
+  </div>
+</div>
+
+<footer>
+  <p>数据来自 OMG! Ubuntu · It's FOSS · DistroWatch · Phoronix · Linux Today · 9to5Linux ·
+     由 DeepSeek AI 翻译</p>
+</footer>
+
+</body>
+</html>

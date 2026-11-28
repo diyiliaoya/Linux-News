@@ -23395,5 +23395,148 @@
     "title_zh": "PipeWire 1.6.12 带来 Video4Linux2、ALSA、GStreamer 和 JACK 改进",
     "summary_zh": "PipeWire 1.6.12 音频/视频服务器现已开放下载，该版本对 Pulse Server、ALSA 插件、SPA、JACK 及多个模块进行了改进，并包含 Video4Linux2 和 GStreamer 相关优化。",
     "fulltext_zh": "PipeWire 1.6.12 音频/视频服务器现已可供下载，该版本对 Pulse Server、ALSA 插件、SPA、JACK 及多个模块进行了改进。\n\n帖子《PipeWire 1.6.12 带来 Video4Linux2、ALSA、GStreamer 和 JACK 改进》首次出现在 9to5Linux 上——未经许可不得转载本文。本 RSS 源面向读者，而非抓取程序。"
+  },
+  "9c302ea56fd75cbf327fb645eb922812": {
+    "id": "9c302ea56fd75cbf327fb645eb922812",
+    "source": "OMG! Ubuntu",
+    "url": "https://www.omgubuntu.co.uk/2026/11/frameworks-wireless-touchpad-keyboard-preorder",
+    "title_en": "Framework’s $99 Wireless Touchpad Keyboard is up for pre-order",
+    "summary_en": "Framework is better known for its repair-friendly laptops, but it&#8217;s branching out into peripherals too – the Wireless Touchpad Keyboard is now up for pre-order. The company announced a compact keyboard earlier this year. Like its laptops, this is made with repairability in mind, CAD designs available and open-source ZMK firmware, so owners customise and remap using the browser-based ZMK Studio tool. It also includes some touches that make it versatile. Wireless Touchpad Keyboard Framework ",
+    "pub_date": "Sat, 28 Nov 2026 04:10:59 +0000",
+    "title_zh": "Framework 99美元无线触控板键盘开启预购",
+    "summary_zh": "Framework推出售价99美元的无线触控板键盘，现已开启预购。该键盘支持蓝牙连接三台设备，并通过USB-A接收器连接第四台，也可通过USB-C有线使用并充电。内置1200mAh电池，日常使用续航超一个月，闲置超一年。键盘采用剪刀脚结构，键程1.5mm，触控板支持多指手势。目前仅提供美式ANSI布局，预计2027年第二季度发货。",
+    "fulltext_zh": "Framework 以其易于维修的笔记本电脑而闻名，但现在它也拓展到了外设领域——无线触控板键盘现已开启预购。\n\n该公司今年早些时候发布了一款紧凑型键盘。与它的笔记本电脑一样，这款产品在设计时也考虑到了可维修性，并提供了 CAD 设计图，因此用户可以使用基于浏览器的工具进行自定义和重新映射。\n\n它还包含一些使其用途广泛的特性。\n\n无线触控板键盘\n\n在许多场景下都实用\n\nFramework 将其无线触控板键盘宣传为“适用于你的媒体电脑、树莓派或房间另一头任何电脑的紧凑、坚固键盘”。\n\n它可以通过低功耗蓝牙与最多三台设备配对，并通过 USB-A 接收器连接第四台设备。切换设备只需快速按键，无需使用组合键或执行开关机流程。\n\n通过 USB-C 线缆连接时，它也可以有线工作，内置电池也通过这种方式充电。据说 1200mAh 的锂聚合物电池在日常使用下可续航一个多月，闲置时可超过一年。如果电池耗尽，也可以轻松更换。\n\n便捷的连接与酷炫的设计\n\n内置触控板在 Windows、macOS 和 Linux 上支持多指手势。其尺寸为纵向 68.8 × 85.6 毫米，如果你更习惯在全尺寸触控板上随意滑动手指，可能会觉得它作为主要输入设备有些受限。\n\n对于挑剔的手指来说，按键采用剪刀脚结构，键程为 1.5 毫米。作为对比，这比苹果的妙控键盘多 0.5 毫米。\n\n对于非美国用户来说，一个缺点是它仅提供美式 ANSI 布局，因此没有 ISO 选项（带有大型 L 形回车键和额外按键），也没有任何非英语或非 QWERTY 版本。\n\nFramework 确实鼓励任何想要购买不同语言或布局版本的人通过产品信息页面上的表格登记兴趣——该页面也是可以预购的地方。\n\n如果你感兴趣，Framework 无线触控板键盘已在美国、英国和其他国家开放预购，售价为 99 美元/99 英镑（定金 50 美元/50 英镑）。\n\n新订单的发货时间预计为 2027 年第二季度，所以别指望这个圣诞节就能从圣诞老人那里收到它！\n\nFramework 笔记本电脑用户可能会有兴趣听说，一款可 discreetly 容纳 USB-A 接收器的扩展卡正在计划中。"
+  },
+  "b3cc18515847f995b7f900f0c949410d": {
+    "id": "b3cc18515847f995b7f900f0c949410d",
+    "source": "It's FOSS News",
+    "url": "https://itsfoss.com/news/lf-cyber-monday-offer-26/",
+    "title_en": "A Better Black Friday Gift: Linux Foundation Certifications at Up to 65% Off",
+    "summary_en": "Planning a career in Linux, cloud or DevOps? LFCS, CKA, Kubestronaut and other Linux Foundation certifications are up to 65% off for Cyber Monday. Offer ends December 4.",
+    "pub_date": "Fri, 27 Nov 2026 12:22:28 GMT",
+    "title_zh": "更好的黑色星期五礼物：Linux基金会认证最高可享65%折扣",
+    "summary_zh": "Linux基金会推出黑色星期五和网络周促销，认证、捆绑包、培训课程和THRIVE-ONE订阅最高可享65%折扣，活动12月4日结束。使用促销代码购买还可获100美元代金券。文章介绍了适合Linux、云和DevOps职业发展的认证选择，包括LFCS、CKA等，并解释了Linux基金会认证的行业认可度。",
+    "fulltext_zh": "更好的黑色星期五礼物：Linux基金会认证最高可享65%折扣\n\n计划在Linux、云或DevOps领域发展职业生涯？LFCS、CKA、Kubestronaut和其他Linux基金会认证在网络星期一最高可享65%折扣。优惠12月4日结束。\n\n如果你一直计划获得认证，这周就是行动的时候。Linux基金会正在开展黑色星期五和网络周促销，认证、捆绑包、培训课程和THRIVE-ONE在线学习订阅最高可享65%折扣。\n\n这也是一个不错的礼物创意。如果你有朋友或家人想在Linux、云或DevOps领域建立职业生涯，认证考试比另一个小工具更有用。\n\n获得认证也可以成为你的新年决心。今天锁定考试价格，2027年再参加考试。\n\n2026年12月4日23:59 UTC截止。这是你在其他场合看不到的最大折扣。\n\nLinux基金会网络周优惠\n\n这次还有额外奖励。12月4日前使用任一促销代码购买的人将获得100美元代金券，可用于2027年1月1日至10月31日期间购买的在线课程、讲师指导培训或认证。Linux基金会将在2026年12月31日前通过电子邮件发送代金券详情。\n\n本文包含联盟链接。请阅读我们的[链接]。\n\n以下是代码。它们专为It's FOSS读者提供，请使用这些代码，而不是促销页面上看到的通用代码。\n\n认证+THRIVE-ONE年度捆绑包\n无需代码，结账时自动应用\n\n超值捆绑包（认证+配套课程）\n认证+课程和仅认证捆绑包\n和在线课程\n讲师指导培训（保证开班课程）\nTHRIVE-ONE年度（第一年）\nTHRIVE-ONE月度（前三个月）\nMCPA+AGNTCon活动通行证捆绑包\n\n所以本周Linux基金会目录中几乎每个认证都至少打五折。包括LFCS、CKA、CKAD、CKS和全新的认证Kubernetes网络工程师（CKNE），全部从445美元降至223美元。\n\n即使优惠结束，你始终可以使用我们的特别优惠券代码享受30%折扣：ITSFOSS。在结账页面应用代码。折扣仅适用于新的个人购买，不能与其他优惠叠加。\n\n为什么Linux基金会认证有分量\n\nLinux基金会是许多最重要的开源项目的伞形组织。它雇佣了Linux的创造者Linus Torvalds，以便他能全职从事内核工作。它也是云原生计算基金会（CNCF）的所在地，后者又托管着Kubernetes、Prometheus、Argo和许多其他运行现代云基础设施的工具。\n\n该基金会的成员包括科技界最知名的公司：Google、Microsoft、IBM、Intel、Oracle、Red Hat以及数百家其他公司。这些公司也正是雇佣运行Linux服务器和Kubernetes集群的人的公司。\n\n因此，当Linux基金会提供认证时，它来自构建这些技术的行业。这就是为什么招聘人员认可简历上的CKA或LFCS。\n\n65%折扣是Linux基金会在网络星期一提供的最大折扣。你在任何其他场合都不会得到比这更大的折扣。\n\nLinux、云和DevOps职业的最佳选择\n\n有超过一百种折扣产品，可能会让人不知所措。如果目标是在Linux管理、云或DevOps领域找到工作，以下是一些值得考虑的选择。\n\nLFCS考试+THRIVE-ONE年度：这是我会为刚开始Linux职业生涯的人选择的交易。LFCS+THRIVE-ONE捆绑包让你获得Linux基金会认证系统管理员考试以及一整年的THRIVE-ONE在线学习订阅。LFCS考试本身打65%折扣，所以考试支付156美元，订阅支付360美元。与常规捆绑包价格相比节省109美元，与分别购买两者相比节省289美元。这里无需代码，[内容截断]"
+  },
+  "4be3a28b74cd9b810f002c7239ada28a": {
+    "id": "4be3a28b74cd9b810f002c7239ada28a",
+    "source": "DistroWatch",
+    "url": "https://distrowatch.com/13052",
+    "title_en": "Development Release: Linux Mint 27 Beta",
+    "summary_en": "The DistroWatch news feed is brought to you by TUXEDO COMPUTERS.  The Linux Mint project has announced the availability of a beta snapshot for the distribution's upcoming version 27 release. The new beta introduces several new features and system administration tools. One of the highlights in the beta is a new calendar application: \"Clockenstein is a brand new calendar....",
+    "pub_date": "",
+    "title_zh": "开发版本：Linux Mint 27 Beta",
+    "summary_zh": "Linux Mint 项目宣布推出 27 版本 Beta 测试版，引入多项新功能和系统管理工具。亮点包括全新的 XApp 日历应用 Clockenstein，支持多日历、Google Calendar 和 CalDAV 服务，并具备独立守护进程和通知代理。Beta 提供 Cinnamon、Xfce 和 MATE 三个桌面环境的 ISO 镜像。",
+    "fulltext_zh": "Linux Mint 项目宣布推出该发行版即将到来的 27 版本的 Beta 快照。新 Beta 版引入了若干新功能和系统管理工具。Beta 版的一大亮点是一款新的日历应用：\n\n“Clockenstein 是一款全新的日历应用，也是 XApp 家族的最新成员。它支持多个日历，可与本地日历、Google Calendar 以及 Nextcloud 等 CalDAV 服务配合使用。您可以创建和编辑事件，并选择它们所属的日历。在实验室里，还有更多事情在进行。当我们开发 Clockenstein 时，我们真正想要的功能之一就是始终了解远程日历的状态。它们连接了吗？它们同步了吗？如果出了问题，原因是什么？Clockenstein 会跟踪每个远程日历的状态，并在应用中报告连接和同步问题。如果某个日历无法访问，您仍然可以看到它的事件，但它会变为只读，直到连接恢复。Clockenstein 有自己的守护进程和通知代理。因此，无论日历应用是否打开，都不影响其工作。”\n\n更多细节可在以下文件中找到：\nlinuxmint-27-cinnamon-64bit-beta.iso\nlinuxmint-27-xfce-64bit-beta.iso\nlinuxmint-27-mate-64bit-beta.iso\n\n近期相关新闻和发布：\n开发版本：Linux Mint 27 Beta\n发行版本：Linux Mint 22.3\n开发版本：Linux Mint 22.3 Beta\n发行版本：Linux Mint 7 “LMDE”\n开发版本：Linux Mint 7 Beta “LMDE”\n发行版本：Linux Mint 22.2\n\nLinux Mint 是一个基于 Ubuntu 的发行版，其目标是提供经典的桌面体验，附带许多便捷的自定义工具和可选的开箱即用多媒体支持。它还添加了自定义桌面和菜单、若干独特的配置工具以及基于 Web 的软件包安装界面。Linux Mint 与 Ubuntu 软件仓库兼容。除了基于 Ubuntu 的版本外，该项目还生产一个单独的“Debian”版本。"
+  },
+  "82ef061948992aa98ffdf11e75f45d83": {
+    "id": "82ef061948992aa98ffdf11e75f45d83",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Wine-11.23-Released",
+    "title_en": "Wine 11.23 Released With Support For ARM64 macOS, AVX In 32-bit Emulation On ARM64",
+    "summary_en": "We are getting close to the Wine 12.0 release candidate phase but out today is Wine 11.23 as the latest bi-weekly development release continuing to land new features into Wine...",
+    "pub_date": "Fri, 27 Nov 2026 20:31:43 -0500",
+    "title_zh": "Wine 11.23 发布：支持 ARM64 macOS，在 ARM64 上实现 32 位模拟的 AVX",
+    "summary_zh": "Wine 11.23 作为双周开发版发布，新增对 ARM64 macOS 的初步支持（需 macOS 27），并在 64 位 ARM 的 32 位模拟中引入 AVX 支持。该版本还集成了 VKD3D 2.2 对 Direct3D 12 的改进，改进了 WIDL 生成 C++ 头文件的能力，并支持远程 OpenGL 交换链图像呈现，使 Chromium 嵌入式框架在 Wayland 下运行更佳。此外包含 40 项已知错误修复。",
+    "fulltext_zh": "Wine 11.23 发布：支持 ARM64 macOS，在 ARM64 上实现 32 位模拟的 AVX\n2026 年 11 月 27 日 20:31 EST 发布。\n\n我们正接近 Wine 12.0 候选发布阶段，但今天发布的 Wine 11.23 是最新的双周开发版本，继续为 Wine 引入新功能。\n\nWine 11.23 新增了对 macOS 上 ARM64 的初步支持。终于来了。为支持 ARM64 macOS，需要进行多项 Wine 构建更改，以及一些 NTDLL 更改，以正确处理过去六年 Apple Silicon Mac 上的 ARM64 macOS。ARM64 支持依赖于 macOS 27。\n\n在 ARM64 方面，Wine 11.23 的另一个显著变化是在 64 位 ARM 上的 32 位模拟中增加了对高级矢量扩展（AVX）的支持。Wine 11.22 为 64 位（x86_64）引入了 ARM64 上的 AVX 模拟，而现在 32 位软件也能使用了。\n\nWine 11.23 还引入了新版本，通过 Vulkan API 为 Direct3D 12 带来许多改进。\n\nWine 11.23 版本还改进了 WIDL 中生成 C++ 头文件的支持。\n\n最后但同样重要的是，Wine 11.23 支持远程 OpenGL 交换链图像呈现，这也使得 Chromium 嵌入式框架（CEF）在 Wine 下的 Wayland 上能够良好运行。\n\nWine 11.23 还包含 40 项已知错误修复，有助于各种 Windows 游戏和应用程序。Wine 11.23 的完整修复和补丁列表可通过发布公告查看。\n\n相关报道：\nVKD3D 2.2 发布，为 Vulkan 上的 Direct3D 12 带来更多改进\nWine 11.22 在 ARM64 上引入 x86 AVX 模拟\nWine 11.21 发布，WoW64 OpenGL 性能更佳\nWine 合并对 MESA_map_buffer_client_pointer 的支持以改进 WoW64 32 位 OpenGL\nWine 11.20 发布，更改 CD-ROM 支持\nWine 11.19 发布，为 Vulkan 带来 Wayland 色彩管理、DNS 查询缓存\n\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\n\nLinus Torvalds：“告诉你的 AI 伙伴，让它振作起来”\nLinux 7.4-rc4 发布：“它很大。真是个惊喜。”\n提醒：黑色星期五优惠及今年不幸的广告网络状况\nCachyOS 2026 年 11 月版发布，支持 EAC Linux v2，新增恢复工具\nXNU Linux 让 macOS 用户空间进程在 Linux 上运行\nLadybird 网页浏览器/引擎达到 Alpha 阶段\nDebian 13.8 发布，包含 150+ 安全更新\nGNU Linux-Libre 庆祝为旧 802.11 b/g WiFi 芯片组逆向工程固件\n\n享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "ba4238efd07c36e7c3f0455d77d35692": {
+    "id": "ba4238efd07c36e7c3f0455d77d35692",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/review/gmktec-evo-x2",
+    "title_en": "GMKtec EVO-X2 AMD Ryzen AI Max+ Strix Halo Mini PC",
+    "summary_en": "For those in the market for an AMD Ryzen AI Max+ mini PC but not able to procure the likes of the Ryzen AI Halo or Framework Desktop in your region or with elevated pricing, another Strix Halo option that's been available is the GMKtec EVO-X2. I recently received a review sample of the GMKtec EVO-X2 and put it through a variety of benchmarks in seeing how the performance stacks up against the flagship Ryzen AI Halo and Framework Desktop offerings as well as the BOSGAME VTA-439 powered by the AMD",
+    "pub_date": "Fri, 27 Nov 2026 16:33:54 -0500",
+    "title_zh": "GMKtec EVO-X2 AMD Ryzen AI Max+ Strix Halo 迷你主机",
+    "summary_zh": "GMKtec EVO-X2 是一款搭载 AMD Ryzen AI Max+ 395 的 Strix Halo 迷你主机，提供 64GB 或 128GB LPDDR5X 内存及 1TB 或 2TB NVMe 存储选项，并支持双 M.2 2280 插槽扩展。接口丰富，包括双 USB4 Type-C、DisplayPort 1.4、HDMI 2.1 和 2.5G 以太网。Linux 支持良好，在 Ubuntu、Fedora 等现代发行版上运行稳定。Phoronix 对其进行了性能测试，并与 Ryzen AI Halo、Framework Desktop 等同类产品对比。",
+    "fulltext_zh": "GMKtec EVO-X2 AMD Ryzen AI Max+ Strix Halo 迷你主机评测 - Phoronix\nGMKtec EVO-X2 AMD Ryzen AI Max+ Strix Halo 迷你主机\n2026年11月27日 美国东部时间下午04:33。\n\n对于那些想购买 AMD Ryzen AI Max+ 迷你主机，但在所在地区无法购得类似产品，或面临高价的人而言，另一个可选的 Strix Halo 产品是 GMKtec EVO-X2。我最近收到了一台 GMKtec EVO-X2 评测样机，并对其进行了一系列基准测试，以了解其性能与旗舰级 Ryzen AI Halo 和 Framework Desktop 产品相比如何，同时参考了搭载 AMD Ryzen AI 9 HX 470 的 BOSGAME VTA-439，以及搭载 NVIDIA GB10 SoC 的 Dell Pro Max GB10。\n\nGMKtec EVO-X2 是一款采用 Ryzen AI Max+ 395 的 Strix Halo 迷你主机，可选 64GB 或 128GB LPDDR5X 内存，以及 1TB 或 2TB NVMe SSD 存储。EVO-X2 拥有两个 M.2 2280 插槽，如果需要大量存储或希望日后自行升级，最多可支持两块 NVMe SSD。通过移除底部的橡胶脚垫即可看到隐藏螺丝，从而打开迷你主机。\n\n这款 AMD Ryzen AI Max+ 迷你主机的前置 I/O 接口包括两个 USB-A 3.2 Gen 2、一个 3.5mm 组合音频插孔、一个 USB 4.0 Type-C 接口和一个 SD 读卡器。\n\nGMKtec EVO-X2 的后部有一个 DisplayPort 1.4 输出、一个 HDMI 2.1 输出、一个 USB-A 3.2 Gen 2、两个 USB-A 2.0、一个 USB 4.0 Type-C、一个音频插孔、直流电源输入和 2.5G 以太网 RJ45 接口。该迷你主机通过联发科 MT7925 芯片组支持 WiFi，并支持蓝牙 5.4。\n\n这台评测样机预装了 Microsoft Windows 11 专业版，而 GMKtec 也列出支持“Ubuntu”。我已经为感兴趣的人运行了一些对比基准测试，详见 Windows 11 与 Ubuntu 26.10 在 AMD Ryzen AI Max+ 上的 Linux 性能对比。\n\n自发布以来，Linux 支持一直良好，除了部分型号存在网络摄像头问题外，从 Strix Halo 迷你主机的角度来看，Linux 方面没有太多需要担心的。如果你运行的是过去一年内的任何现代 Linux 发行版，GMKtec EVO-X2 应该都能良好运行。我已用 Ubuntu 26.04、Ubuntu 26.10、Fedora Workstation 45、CachyOS 等测试过这台 Strix Halo 主机，均未遇到问题。\n\n为了评估 GMKtec EVO-X2 的性能，我将其与我手头的其他 Strix Halo 硬件以及一些类似的迷你主机进行了对比：\n- Ryzen AI Halo Ryzen AI Max+ 395\n- Framework Desktop Ryzen AI Max+ 395\n- BOSGAME VTA-439 Ryzen AI 9 HX 470\n- GMKtec EVO-X2S Ryzen AI Max+ 395\n\nDell Pro Max GB10 使用官方基于 Ubuntu 的 NVIDIA OS 进行测试，Ryzen AI Halo 运行官方 Ryzen AI 开发者平台 OS，其他设备则在干净的 Ubuntu 26.10 安装上测试。所有配置均在其“性能”平台配置文件下进行测试。\n\n除了查看原始性能外，测试过程中还记录了各种系统温度和功耗传感器数据。\n\nDell XPS 14 DA14260 搭载 Intel Panther Lake，带来良好的 Linux 体验\nFramework Laptop 12 搭载 Intel Core 3 Wildcat Lake，性能和能效均有提升\nStar Labs StarFighter Ultra：一款采用 Coreboot 的现代高端 Linux 笔记本电脑\nCHUWI UniBook 搭载 Intel Wildcat Lake，售价 449 美元的 Linux 友好型笔记本电脑\nHP Z4 G6i：搭载 Intel Xeon 600 系列的 Linux 友好型工作站\nFramework Laptop 16 配备 GeForce RTX 5070 12GB、一体式键盘和触觉触摸板\n\n同时享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "933040a47e4b34e12c4174ccfaad5c5e": {
+    "id": "933040a47e4b34e12c4174ccfaad5c5e",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Earthqaic-Gallium3D-Mesa-27.0",
+    "title_en": "New \"Earthqaic\" Gallium3D Driver Merged For Mesa 27.0",
+    "summary_en": "Merged today to Mesa Git is a brand new Gallium3D driver: Earthqaic...",
+    "pub_date": "Fri, 27 Nov 2026 15:21:00 -0500",
+    "title_zh": "全新的“Earthqaic”Gallium3D驱动已合并至Mesa 27.0",
+    "summary_zh": "高通为Cloud AI加速器设备开发的Earthqaic Gallium3D驱动已合并至Mesa Git，将随Mesa 27.0于2027年第一季度发布。该驱动面向Gallium3D的Teflon框架和Rusticl，目前处于实验阶段，仅支持张量加法和卷积，可编译执行简单OpenCL内核，稳定性问题可能发生。",
+    "fulltext_zh": "今日合并至Mesa Git的是一个全新的Gallium3D驱动：Earthqaic。\n\nEarthqaic Gallium3D驱动由高通为其Cloud AI加速器设备开发，即“QAIC”部分。\n\n针对高通Cloud AI加速器硬件，该Gallium3D驱动并非用于传统图形用例，而是专门面向Gallium3D的Teflon框架和Rusticl。\n\n提供一定的AI加速能力，而Rusticl是基于Rust的OpenCL驱动实现。\n\n如果你恰好拥有高通Cloud AI硬件，先别对Earthqaic过于兴奋，因为该Gallium3D代码目前非常实验性和原始：\n\n“对teflon和rusticl的支持有限。该驱动目前实现了张量加法和卷积，可以编译并执行一个简单的‘hello world’OpenCL内核……Earthqaic是一个实验性概念验证，可能会出现稳定性问题。”\n\n无论如何，很高兴看到高通为Mesa开发这个QAIC驱动。这补充了Linux主线树中几年前就已存在的QAIC内核驱动。\n\n这个Earthqaic驱动将包含在2027年第一季度发布的Mesa 27.0版本中。\n\nKosmicKrisp现已成为Mac上Vulkan的首选解决方案，取代MoltenVK\n\nMesa 27.0合并LLVMpipe AVX-512支持\n\nMesa 26.3.1发布，修复Intel Jay编译器和RADV驱动问题\n\nWine合并远程OpenGL交换链图像呈现，CEF现可在Wayland下工作\n\nMesa 26.3发布，为RADV带来VK_AMD_anti_lag及许多其他Vulkan改进\n\nMesa合并一个通用Vulkan层，用于规避跨驱动游戏bug\n\nMichael Larabel是Phoronix.com的主要作者，于2004年创立该网站，专注于丰富Linux硬件体验。Michael已撰写超过20,000篇文章，涵盖Linux硬件支持状况、Linux性能、图形驱动及其他主题。Michael还是Phoronix Test Suite、Phoromatic和OpenBenchmarking.org自动化基准测试软件的首席开发者。可通过以下方式关注他\n\nLinus Torvalds：“告诉你的AI伙伴，让它振作起来”\n\nLinux 7.4-rc4发布：“它很大。真是个惊喜。”\n\n提醒：今年黑色星期五优惠及不幸的广告网络状况\n\nCachyOS 2026年11月版发布，支持EAC Linux v2，新增恢复工具\n\nXNU Linux让macOS用户空间进程在Linux上运行\n\nLadybird网页浏览器/引擎达到Alpha阶段\n\nDebian 13.8发布，包含150多项安全更新\n\nGNU Linux-Libre庆祝为旧802.11 b/g WiFi芯片组逆向工程固件\n\n同时享受无广告浏览、单页文章查看\n\n法律免责声明、隐私政策、Cookie\n\n版权所有 © 2004 - 2026\n\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "c0b08d4c4c9281a20c72c136e2d4d9b5": {
+    "id": "c0b08d4c4c9281a20c72c136e2d4d9b5",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-Drops-VME-Bus-User",
+    "title_en": "Linux Dropping Last Of The 1980's VersaModular Eurocard \"VME\" vme_user Code Over AI/LLM Noise",
+    "summary_en": "The Linux kernel is removing more old driver code due to AI/LLMs generating more noise over this unused, obsolete code within the source tree. Following various old ISA and PCMCIA code removed, ham radio, ISDN, and other old network code, the latest vintage artifact set to be stripped out of the Linux kernel is around the VersaModular Eurocard \"VME\" bus vme_user driver from the 1980s...",
+    "pub_date": "Fri, 27 Nov 2026 10:50:44 -0500",
+    "title_zh": "Linux 因 AI/LLM 噪音移除最后一批 1980 年代 VersaModular Eurocard \"VME\" vme_user 代码",
+    "summary_zh": "Linux 内核因 AI/LLM 在邮件列表中产生大量噪音，决定移除已弃用的 1980 年代 VME 总线 vme_user 驱动。该驱动自 2022 年起被降级至 staging 区，无人维护且无其他内核代码依赖，移除将减少近 9000 行代码。Greg Kroah-Hartman 确认此变更已在 linux-next 中测试无问题，预计在 Linux 7.4-rc5 发布前合并。",
+    "fulltext_zh": "Linux 内核正在移除更多旧驱动代码，原因是 AI/LLM 在源码树中针对这些未使用、过时的代码产生了更多噪音。继移除各种旧 ISA 和 PCMCIA 代码、业余无线电、ISDN 及其他旧网络代码之后，最新被剥离的 Linux 内核老古董是 1980 年代的 VersaModular Eurocard \"VME\" 总线 vme_user 驱动。\n\n在明天 Linux 7.4-rc5 发布之前，Linux 内核收到了一份合并窗口后的拉取请求，要求移除最后一批 VersaModular Eurocard \"VME\" 并行计算机总线代码中用于用户空间访问的 vme_user 驱动。该 \"vme_user\" 驱动多年来一直位于 Linux 内核的 staging 区域——VME 代码于 2022 年被降级至 staging。内核树中已无其他代码依赖 vme_user 驱动，且该驱动无人维护、面向过时硬件，鉴于它一直在邮件列表中引发 AI/LLM 噪音，是时候将其移除了。\n\n移除该驱动将减少近 9000 行代码。移除补丁的理由如下：\n\n\"staging 中的 VME 用户空间驱动已无人维护，Greg KH 要求提交补丁将其移除，而不是继续修复仅存在于 staging 的问题。移除该驱动、其文档、Kconfig 和 Makefile 条目、VME MAINTAINERS 部分，以及 powerpc 86xx 配置中过时的 VME 选项。\"\n\nGreg Kroah-Hartman 证实了 AI/LLM 噪音问题：\n\n\"这是一个移除 vme_user 驱动的单一 staging 驱动补丁。该驱动已无用户，而 LLM 们正争先恐后地试图找出该驱动中所有的‘安全漏洞’，尽管实际上从未有人使用过它。所以直接移除它，以免浪费大家的时间。此移除已在 linux-next 中存在相当长一段时间，未报告任何问题。\"\n\n因此，除非最后一刻出现问题，vme_user 代码将在明天 Linux 7.4-rc5 内核发布前被移除。\n\n3mdeb 更新其面向 MSI PRO Z690-A/Z790-P 的开源 Coreboot 固件\nLinux 7.4-rc5 的 HID 补丁带来 AI 修复及新硬件支持\n首个 Rust WMI Linux 驱动正为 Clevo 笔记本电脑开发\nTUXEDO InfinityBook Pro 15 Gen11 AMD 搭载 Ryzen AI 9 HX 470，最高支持 128GB 内存\n更多华硕与华擎主板在 Linux 7.5 中获得传感器监控支持\nFramework 无线触控板键盘售价 99 美元，第一季度开始发货\nMichael Larabel 是 Phoronix.com 的主要作者，于 2004 年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过 20,000 篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他：\nLinus Torvalds：“告诉你的 AI 伙伴，让它端正态度”\nLinux 7.4-rc4 发布：“它很大。真是个惊喜。”\n提醒：黑色星期五优惠及今年不幸的广告网络状况\nCachyOS 2026 年 11 月版发布，支持 EAC Linux v2，新增恢复工具\nXNU Linux 让 macOS 用户空间进程在 Linux 上运行\nLadybird 网页浏览器/引擎进入 Alpha 阶段\nDebian 13.8 发布，包含 150 多项安全更新\nGNU Linux-Libre 庆祝旧 802.11 b/g WiFi 芯片组的逆向工程固件\n享受无广告浏览、单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "80e5b2e5c3e87f6c46c211f8bf2addb2": {
+    "id": "80e5b2e5c3e87f6c46c211f8bf2addb2",
+    "source": "Phoronix",
+    "url": "https://www.phoronix.com/news/Linux-Mint-27-Beta",
+    "title_en": "Linux Mint 27 Beta Released With New Apps, Full Wayland Support",
+    "summary_en": "Ahead of the official release expected around Christmas, the beta of Linux Mint 27 was announced today for testing...",
+    "pub_date": "Fri, 27 Nov 2026 10:37:29 -0500",
+    "title_zh": "Linux Mint 27 Beta 发布：全新应用与完整 Wayland 支持",
+    "summary_zh": "Linux Mint 27 Beta 已开放测试，正式版预计圣诞节前后发布。该版本基于 Ubuntu 26.04 LTS，搭载最新 Cinnamon 桌面环境，并引入多款原创应用，包括日历 Clockenstein、终端 Velocity、系统监视器 Superlight、归档管理器 Unfold 和 EPUB 阅读器 Xepub。同时恢复休眠支持，新增系统管理功能，并在 Cinnamon 6.9 中实现完整 Wayland 支持，3D 加速、HiDPI、分数缩放和键盘布局等功能均可在 Wayland 下正常工作。",
+    "fulltext_zh": "Linux Mint 27 Beta 发布：全新应用与完整 Wayland 支持 - Phoronix\n\nLinux Mint 27 Beta 发布：全新应用与完整 Wayland 支持\n2026年11月27日上午10:37（美国东部时间）。\n\n在预计于圣诞节前后发布的正式版之前，Linux Mint 27 的 Beta 版于今日宣布开放测试。\n\nLinux Mint 27 Beta 现已可供下载，这是这款基于 Ubuntu 的热门桌面 Linux 发行版的最新版本。Linux Mint 27 将过渡到 Ubuntu 26.04 LTS 基础。\n\nLinux Mint 27 Beta 带来最新的 Cinnamon 桌面环境，并包含多款 Linux Mint 原创应用，例如 Clockenstein 日历应用、作为新终端应用的 Velocity、作为新系统监视器的 Superlight、作为轻量级归档管理器的 Unfold、作为新 EPUB 阅读器的 Xepub，以及新的系统管理功能、恢复的休眠支持等。\n\nLinux Mint 27 Beta 还通过 Cinnamon 6.9 桌面实现了完整的 Wayland 支持，3D 加速、HiDPI、分数缩放、键盘布局及其他典型功能现在均可在 Wayland 下正常工作。\n\n今日 Linux Mint 27 Beta 版本的下载与更多详情请见\n\nOmarchy 4.6-RC1 发布，带来更多本地 AI 集成及自有文件管理器\nPop!_OS 26.04 LTS 发布，带来更多 COSMIC 应用、远程桌面等\nLiberNT：一个由 AI 驱动的 ReactOS 分支，专注于 Windows 11 兼容性\nAlmaLinux 10.3 发布，恢复 ModSecurity 及多项更新\nRedox OS 实现 Golang 运行、GIMP 移植及简化 AI 政策\nReactOS 获得可用的软盘支持、VMware 3D 加速及 SMP 进展\nMichael Larabel 是 Phoronix.com 的主要作者，于2004年创立该网站，专注于丰富 Linux 硬件体验。Michael 已撰写超过20,000篇文章，涵盖 Linux 硬件支持状况、Linux 性能、图形驱动及其他主题。Michael 还是 Phoronix Test Suite、Phoromatic 和 OpenBenchmarking.org 自动化基准测试软件的首席开发者。可通过以下方式关注他\nLinus Torvalds：“告诉你的 AI 伙伴，让它振作起来”\nLinux 7.4-rc4 发布：“它很大。真是个惊喜。”\n提醒：黑色星期五优惠及今年不幸的广告网络状况\nCachyOS 2026年11月版发布，支持 EAC Linux v2 及新恢复工具\nXNU Linux 让 macOS 用户空间进程在 Linux 上运行\nLadybird 网页浏览器/引擎达到 Alpha 阶段\nDebian 13.8 发布，包含150多项安全更新\nGNU Linux-Libre 庆祝为旧款 802.11 b/g WiFi 芯片组实现逆向工程固件\n同时享受无广告浏览，\n单页文章查看\n法律免责声明、隐私政策、Cookie\n版权所有 © 2004 - 2026\n所有使用的商标均为其各自所有者的财产。保留所有权利。"
+  },
+  "ae6d16bdff0cfcde734c00a65d33417d": {
+    "id": "ae6d16bdff0cfcde734c00a65d33417d",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/nginx-fixes-10-security-vulnerabilities-five-linked-to-nginx2shell/",
+    "title_en": "Nginx Fixes 10 Security Vulnerabilities, Five Linked to NGINX2Shell",
+    "summary_en": "Nginx patches 10 security vulnerabilities, including five linked to NGINX2Shell, addressing security risks affecting web server deployments.\nThe post Nginx Fixes 10 Security Vulnerabilities, Five Linked to NGINX2Shell appeared first on Linux Today.",
+    "pub_date": "Fri, 27 Nov 2026 08:37:11 +0000",
+    "title_zh": "Nginx 修复 10 个安全漏洞，其中五个与 NGINX2Shell 相关",
+    "summary_zh": "Nginx 发布了安全补丁，共修复 10 个安全漏洞，其中五个与 NGINX2Shell 相关。这些漏洞影响 Web 服务器部署的安全风险，建议用户尽快更新以防范潜在攻击。",
+    "fulltext_zh": "Nginx 修复了 10 个安全漏洞，其中包括五个与 NGINX2Shell 相关的漏洞，解决了影响 Web 服务器部署的安全风险。\n\n文章《Nginx 修复 10 个安全漏洞，其中五个与 NGINX2Shell 相关》首次发布于 Linux Today。"
+  },
+  "51b8725d728b995a68ba07507a43819c": {
+    "id": "51b8725d728b995a68ba07507a43819c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/chainguard-introduces-free-starter-and-500-team-plans/",
+    "title_en": "Chainguard Introduces Free Starter and $500 Team Plans",
+    "summary_en": "Chainguard introduces free Starter and $500 Team plans, expanding access to secure container images and software supply chain security tools.\nThe post Chainguard Introduces Free Starter and $500 Team Plans appeared first on Linux Today.",
+    "pub_date": "Fri, 27 Nov 2026 08:34:19 +0000",
+    "title_zh": "Chainguard推出免费Starter计划和500美元Team计划",
+    "summary_zh": "Chainguard宣布推出免费Starter计划和每月500美元的Team计划，旨在扩大安全容器镜像和软件供应链安全工具的获取渠道，降低企业采用安全容器技术的门槛。",
+    "fulltext_zh": "Chainguard推出免费Starter计划和500美元Team计划，扩大安全容器镜像和软件供应链安全工具的获取渠道。\n\n本文原文首发于Linux Today。"
+  },
+  "a0cf7668abe74c267a9a13578f7d8001": {
+    "id": "a0cf7668abe74c267a9a13578f7d8001",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/microsoft-releases-azure-linux-4-as-a-production-ready-distribution/",
+    "title_en": "Microsoft Releases Azure Linux 4 as a Production-Ready Distribution",
+    "summary_en": "Microsoft releases Azure Linux 4 as a production-ready distribution, targeting enterprise workloads and cloud-native infrastructure.\nThe post Microsoft Releases Azure Linux 4 as a Production-Ready Distribution appeared first on Linux Today.",
+    "pub_date": "Fri, 27 Nov 2026 08:31:03 +0000",
+    "title_zh": "微软发布 Azure Linux 4，定位为生产就绪的发行版",
+    "summary_zh": "微软发布了 Azure Linux 4，将其定位为生产就绪的发行版，面向企业工作负载和云原生基础设施。该消息由 Linux Today 首发报道。",
+    "fulltext_zh": "微软发布 Azure Linux 4，定位为生产就绪的发行版，面向企业工作负载和云原生基础设施。\n\n文章《微软发布 Azure Linux 4，定位为生产就绪的发行版》首发于 Linux Today。"
+  },
+  "5597924cad28b90c363a169f5d9427a1": {
+    "id": "5597924cad28b90c363a169f5d9427a1",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/canonical-academys-full-sysadmin-certification-track-is-now-available/",
+    "title_en": "Canonical Academy’s Full SysAdmin Certification Track Is Now Available",
+    "summary_en": "Canonical Academy launches its complete SysAdmin certification track, helping IT professionals develop and validate their Ubuntu system administration skills.\nThe post Canonical Academy’s Full SysAdmin Certification Track Is Now Available appeared first on Linux Today.",
+    "pub_date": "Fri, 27 Nov 2026 08:28:14 +0000",
+    "title_zh": "Canonical Academy 完整的系统管理员认证课程现已开放",
+    "summary_zh": "Canonical Academy 推出完整的系统管理员认证课程，旨在帮助 IT 专业人员培养并验证其 Ubuntu 系统管理技能。",
+    "fulltext_zh": "Canonical Academy 推出其完整的系统管理员认证课程，帮助 IT 专业人员培养并验证其 Ubuntu 系统管理技能。\n\n文章《Canonical Academy 完整的系统管理员认证课程现已开放》首发于 Linux Today。"
+  },
+  "050f87fc2d0ba233c8117e496edc2f9c": {
+    "id": "050f87fc2d0ba233c8117e496edc2f9c",
+    "source": "Linux Today",
+    "url": "https://www.linuxtoday.com/blog/debian-based-peppermint-os-updated-iso-now-available-with-xlibre/",
+    "title_en": "Debian-Based Peppermint OS Updated ISO Now Available with XLibre",
+    "summary_en": "Peppermint OS releases an updated Debian-based ISO featuring XLibre, offering users an alternative to the traditional X.Org display server.\nThe post Debian-Based Peppermint OS Updated ISO Now Available with XLibre appeared first on Linux Today.",
+    "pub_date": "Fri, 27 Nov 2026 08:25:30 +0000",
+    "title_zh": "基于Debian的Peppermint OS发布更新ISO，现已搭载XLibre",
+    "summary_zh": "Peppermint OS发布了基于Debian的更新版ISO镜像，其中引入了XLibre显示服务器，为用户提供了传统X.Org之外的替代选择。",
+    "fulltext_zh": "Peppermint OS发布了基于Debian的更新版ISO镜像，搭载XLibre，为用户提供传统X.Org显示服务器之外的替代方案。\n该文章《基于Debian的Peppermint OS发布更新ISO，现已搭载XLibre》首发于Linux Today。"
   }
 }
